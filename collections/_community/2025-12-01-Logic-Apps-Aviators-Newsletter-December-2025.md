@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-december-2025/ba-p/4474048
 title: Logic Apps Aviators Newsletter - December 2025
 author: WSilveira
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-december-2025/ba-p/4474048
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-01 16:00:00 +00:00
-permalink: /ai/community/Logic-Apps-Aviators-Newsletter-December-2025
 tags:
 - Agent Loop
 - API Management

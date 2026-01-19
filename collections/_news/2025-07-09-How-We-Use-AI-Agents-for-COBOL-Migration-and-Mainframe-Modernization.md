@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/all-things-azure/how-we-use-ai-agents-for-cobol-migration-and-mainframe-modernization/
 title: How We Use AI Agents for COBOL Migration and Mainframe Modernization
 author: jkordick, gkaleta
-canonical_url: https://devblogs.microsoft.com/all-things-azure/how-we-use-ai-agents-for-cobol-migration-and-mainframe-modernization/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-07-09 17:10:30 +00:00
-permalink: /ai/news/How-We-Use-AI-Agents-for-COBOL-Migration-and-Mainframe-Modernization
 tags:
 - Agent Orchestration
 - Agents

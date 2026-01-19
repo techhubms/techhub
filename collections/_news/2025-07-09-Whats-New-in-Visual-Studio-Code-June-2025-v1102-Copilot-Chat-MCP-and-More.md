@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/updates/v1_102
 title: "What's New in Visual Studio Code June 2025 (v1.102): Copilot Chat, MCP, and More"
 author: Visual Studio Code Team
-canonical_url: https://code.visualstudio.com/updates/v1_102
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-07-09 17:00:00 +00:00
-permalink: /github-copilot/news/Whats-New-in-Visual-Studio-Code-June-2025-v1102-Copilot-Chat-MCP-and-More
 tags:
 - Accessibility
 - Agent Mode

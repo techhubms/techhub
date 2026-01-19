@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/unlocking-gpt-5s-freeform-tool-calling-a-new-era-of-seamless-integration/
 title: Unlocking GPT-5’s Freeform Tool Calling in Azure AI Foundry
 author: Ananya Bishnoi
-canonical_url: https://devblogs.microsoft.com/foundry/unlocking-gpt-5s-freeform-tool-calling-a-new-era-of-seamless-integration/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-08-22 17:29:26 +00:00
-permalink: /ai/news/Unlocking-GPT-5s-Freeform-Tool-Calling-in-Azure-AI-Foundry
 tags:
 - API Key
 - Authentication

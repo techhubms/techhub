@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-the-http-and-mongodb-cdc-connectors-for-eventstream-inspired-by-you/
 title: Introducing HTTP and MongoDB CDC Connectors for Fabric Eventstream
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-the-http-and-mongodb-cdc-connectors-for-eventstream-inspired-by-you/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 12:00:00 +00:00
-permalink: /ml/news/Introducing-HTTP-and-MongoDB-CDC-Connectors-for-Fabric-Eventstream
 tags:
 - Change Data Capture
 - Community Feedback

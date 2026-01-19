@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/blogs/2025/09/15/autoModelSelection
 title: Auto Model Selection Preview for GitHub Copilot Chat in VS Code
 author: Isidor Nikolic
-canonical_url: https://code.visualstudio.com/blogs/2025/09/15/autoModelSelection
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-09-15 00:00:00 +00:00
-permalink: /github-copilot/news/Auto-Model-Selection-Preview-for-GitHub-Copilot-Chat-in-VS-Code
 tags:
 - AI Integration
 - AI Model Selection

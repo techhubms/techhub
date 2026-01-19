@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/writing-cleaner-code-with-github-copilot-suggestions/
 title: Writing Cleaner Code with GitHub Copilot Suggestions
 author: Dellenny
-canonical_url: https://dellenny.com/writing-cleaner-code-with-github-copilot-suggestions/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-28 08:42:12 +00:00
-permalink: /github-copilot/blogs/Writing-Cleaner-Code-with-GitHub-Copilot-Suggestions
 tags:
 - AI Assisted Development
 - Best Practices

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=6CjwS4V2AkU
 title: 'Hello GPT-5 & GPT-5 mini: New AI Features in VS Code Agent Mode'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=6CjwS4V2AkU
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-18 14:00:09 +00:00
-permalink: /github-copilot/videos/Hello-GPT-5-and-GPT-5-mini-New-AI-Features-in-VS-Code-Agent-Mode
 tags:
 - Agent Mode
 - AI Development

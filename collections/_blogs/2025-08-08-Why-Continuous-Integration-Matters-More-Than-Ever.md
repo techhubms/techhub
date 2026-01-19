@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/why-continuous-integration-matters-more-than-ever/?utm_source=rss&utm_medium=rss&utm_campaign=why-continuous-integration-matters-more-than-ever
 title: Why Continuous Integration Matters More Than Ever
 author: Michael Chukwube
-canonical_url: https://devops.com/why-continuous-integration-matters-more-than-ever/?utm_source=rss&utm_medium=rss&utm_campaign=why-continuous-integration-matters-more-than-ever
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-08 11:02:25 +00:00
-permalink: /devops/blogs/Why-Continuous-Integration-Matters-More-Than-Ever
 tags:
 - Agile Development
 - And CI/CD Pipeline

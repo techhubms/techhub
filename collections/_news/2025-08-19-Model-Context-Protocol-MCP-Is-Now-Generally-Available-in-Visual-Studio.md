@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/mcp-is-now-generally-available-in-visual-studio/
 title: Model Context Protocol (MCP) Is Now Generally Available in Visual Studio
 author: Allie Barry
-canonical_url: https://devblogs.microsoft.com/visualstudio/mcp-is-now-generally-available-in-visual-studio/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-08-19 18:23:21 +00:00
-permalink: /github-copilot/news/Model-Context-Protocol-MCP-Is-Now-Generally-Available-in-Visual-Studio
 tags:
 - Agent Mode
 - Agents

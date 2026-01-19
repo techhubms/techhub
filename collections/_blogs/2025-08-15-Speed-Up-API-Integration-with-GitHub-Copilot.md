@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/speed-up-api-integration.html
 title: Speed Up API Integration with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/speed-up-api-integration.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-08-15 00:00:00 +00:00
-permalink: /github-copilot/blogs/Speed-Up-API-Integration-with-GitHub-Copilot
 tags:
 - AI Development
 - API Documentation

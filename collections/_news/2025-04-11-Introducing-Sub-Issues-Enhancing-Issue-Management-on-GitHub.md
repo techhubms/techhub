@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/engineering/architecture-optimization/introducing-sub-issues-enhancing-issue-management-on-github/
 title: 'Introducing Sub-Issues: Enhancing Issue Management on GitHub'
 author: Shaun Wong
-canonical_url: https://github.blog/engineering/architecture-optimization/introducing-sub-issues-enhancing-issue-management-on-github/
 viewing_mode: external
 feed_name: GitHub Engineering Blog
-feed_url: https://github.blog/engineering/feed/
 date: 2025-04-11 22:33:30 +00:00
-permalink: /devops/news/Introducing-Sub-Issues-Enhancing-Issue-Management-on-GitHub
 tags:
 - Accessibility
 - Architecture

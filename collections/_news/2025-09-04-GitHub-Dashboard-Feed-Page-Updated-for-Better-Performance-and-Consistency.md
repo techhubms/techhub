@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-04-the-dashboard-feed-page-gets-a-refreshed-faster-experience
 title: GitHub Dashboard Feed Page Updated for Better Performance and Consistency
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-04-the-dashboard-feed-page-gets-a-refreshed-faster-experience
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-04 21:07:51 +00:00
-permalink: /devops/news/GitHub-Dashboard-Feed-Page-Updated-for-Better-Performance-and-Consistency
 tags:
 - Dashboard Feed
 - Event Feeds

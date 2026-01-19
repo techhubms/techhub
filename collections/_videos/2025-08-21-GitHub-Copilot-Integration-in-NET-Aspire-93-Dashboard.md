@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/oLF1Z8DcqaA
 title: GitHub Copilot Integration in .NET Aspire 9.3 Dashboard
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/shorts/oLF1Z8DcqaA
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-21 20:04:17 +00:00
-permalink: /github-copilot/videos/GitHub-Copilot-Integration-in-NET-Aspire-93-Dashboard
 tags:
 - .NET Aspire
 - Application Logs

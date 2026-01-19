@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure/how-college-students-can-claim-free-azure-credits-and-start/m-p/4471767#M22343
 title: How College Students Can Claim Free Azure Credits and Start Building in the Cloud
 author: KalpanaGupta-3282
-canonical_url: https://techcommunity.microsoft.com/t5/azure/how-college-students-can-claim-free-azure-credits-and-start/m-p/4471767#M22343
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 14:58:10 +00:00
-permalink: /azure/community/How-College-Students-Can-Claim-Free-Azure-Credits-and-Start-Building-in-the-Cloud
 tags:
 - Academic Cloud
 - AI

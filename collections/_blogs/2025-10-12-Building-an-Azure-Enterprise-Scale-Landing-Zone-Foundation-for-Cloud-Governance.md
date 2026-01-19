@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/azure-enterprise-scale-landing-zone-building-a-future-ready-cloud-foundation/
 title: 'Building an Azure Enterprise-Scale Landing Zone: Foundation for Cloud Governance'
 author: Dellenny
-canonical_url: https://dellenny.com/azure-enterprise-scale-landing-zone-building-a-future-ready-cloud-foundation/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-12 08:10:44 +00:00
-permalink: /azure/blogs/Building-an-Azure-Enterprise-Scale-Landing-Zone-Foundation-for-Cloud-Governance
 tags:
 - Azure Active Directory
 - Azure DevOps

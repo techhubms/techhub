@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-29-copilots-next-edit-suggestion-nes-in-public-preview-in-jetbrains
 title: 'Next Edit Suggestions (NES) with GitHub Copilot for JetBrains IDEs: Public Preview'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-29-copilots-next-edit-suggestion-nes-in-public-preview-in-jetbrains
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-29 17:32:16 +00:00
-permalink: /github-copilot/news/Next-Edit-Suggestions-NES-with-GitHub-Copilot-for-JetBrains-IDEs-Public-Preview
 tags:
 - AI Code Assistant
 - Code Quality

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-winners-of-the-microsoft-fabric-fabcon-global-hack/
 title: 'Microsoft Fabric FabCon Global Hackathon: AI Innovation Winners Announced'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-winners-of-the-microsoft-fabric-fabcon-global-hack/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 09:00:00 +00:00
-permalink: /ai/news/Microsoft-Fabric-FabCon-Global-Hackathon-AI-Innovation-Winners-Announced
 tags:
 - AI Applications
 - Azure Databases

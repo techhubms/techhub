@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/devops/comments/1mg1fl8/schemanest_where_schemas_grow_thrive_and_scale/
 title: 'SchemaNest: A Fast, Team-Friendly CI/CD-Ready JSON Schema Registry'
 author: R3ym4nn
-canonical_url: https://www.reddit.com/r/devops/comments/1mg1fl8/schemanest_where_schemas_grow_thrive_and_scale/
 viewing_mode: external
 feed_name: Reddit DevOps
-feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-02 21:12:15 +00:00
-permalink: /devops/community/SchemaNest-A-Fast-Team-Friendly-CICD-Ready-JSON-Schema-Registry
 tags:
 - API Keys
 - Authentication

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/mcp-csharp-sdk-2025-06-18-update/
 title: 'MCP C# SDK Updated: Protocol 2025-06-18 Brings Elicitation, Structured Output, and Enhanced Security'
 author: Mike Kistler
-canonical_url: https://devblogs.microsoft.com/dotnet/mcp-csharp-sdk-2025-06-18-update/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-07-22 17:00:00 +00:00
-permalink: /ai/news/MCP-C-SDK-Updated-Protocol-2025-06-18-Brings-Elicitation-Structured-Output-and-Enhanced-Security
 tags:
 - .NET
 - Authentication

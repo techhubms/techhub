@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/operational-excellence-in-ai-infrastructure-fleets-standardized/ba-p/4460754
 title: 'Operational Excellence in AI Infrastructure: Standardized Node Lifecycle Management'
 author: Rama_Bhimanadhuni
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/operational-excellence-in-ai-infrastructure-fleets-standardized/ba-p/4460754
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-14 00:03:37 +00:00
-permalink: /ai/community/Operational-Excellence-in-AI-Infrastructure-Standardized-Node-Lifecycle-Management
 tags:
 - AI Infrastructure
 - Compliance Tools

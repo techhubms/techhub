@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/automating-hpc-workflows-with-copilot-agents/ba-p/4472610
 title: Automating HPC Workflows with Copilot Agents
 author: xpillons
-canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/automating-hpc-workflows-with-copilot-agents/ba-p/4472610
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-03 10:43:26 +00:00
-permalink: /ai/community/Automating-HPC-Workflows-with-Copilot-Agents
 tags:
 - AI Powered Automation
 - AI Workflow

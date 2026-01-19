@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=OqzC9b3ueX0
 title: Unlocking the Power of VS Code's Simple Browser Feature
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=OqzC9b3ueX0
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-12-22 16:13:08 +00:00
-permalink: /ai/videos/Unlocking-the-Power-of-VS-Codes-Simple-Browser-Feature
 tags:
 - AI Integration
 - Browser Logs

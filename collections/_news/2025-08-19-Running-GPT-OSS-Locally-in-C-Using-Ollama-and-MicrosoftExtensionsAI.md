@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/gpt-oss-csharp-ollama/
 title: Running GPT-OSS Locally in C# Using Ollama and Microsoft.Extensions.AI
 author: Bruno Capuano
-canonical_url: https://devblogs.microsoft.com/dotnet/gpt-oss-csharp-ollama/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-08-19 17:05:00 +00:00
-permalink: /ai/news/Running-GPT-OSS-Locally-in-C-Using-Ollama-and-MicrosoftExtensionsAI
 tags:
 - .NET
 - .NET 8

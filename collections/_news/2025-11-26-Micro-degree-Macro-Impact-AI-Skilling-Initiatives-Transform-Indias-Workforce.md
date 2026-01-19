@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/asia/features/micro-degree-macro-impact-how-ai-is-transforming-skilling-in-india/
 title: 'Micro-degree, Macro Impact: AI Skilling Initiatives Transform India’s Workforce'
 author: stclarke
-canonical_url: https://news.microsoft.com/source/asia/features/micro-degree-macro-impact-how-ai-is-transforming-skilling-in-india/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-26 13:58:08 +00:00
-permalink: /ai/news/Micro-degree-Macro-Impact-AI-Skilling-Initiatives-Transform-Indias-Workforce
 tags:
 - AI Micro Degree
 - AI Powered Education

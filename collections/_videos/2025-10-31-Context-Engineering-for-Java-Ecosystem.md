@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=kSElHY8MWwc
 title: Context Engineering for Java Ecosystem
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=kSElHY8MWwc
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-31 16:01:27 +00:00
-permalink: /github-copilot/videos/Context-Engineering-for-Java-Ecosystem
 tags:
 - AI Assisted Development
 - AIAssisted

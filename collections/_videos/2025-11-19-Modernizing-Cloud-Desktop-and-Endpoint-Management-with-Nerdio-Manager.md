@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=J8esrUr6iDQ
 title: Modernizing Cloud Desktop and Endpoint Management with Nerdio Manager
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=J8esrUr6iDQ
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 08:27:24 +00:00
-permalink: /ai/videos/Modernizing-Cloud-Desktop-and-Endpoint-Management-with-Nerdio-Manager
 tags:
 - Azure Virtual Desktop
 - Cloud Management

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/Gm4TZukbu8s
 title: Application Gateway Network Isolation Explained
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/shorts/Gm4TZukbu8s
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-08 11:41:29 +00:00
-permalink: /azure/videos/Application-Gateway-Network-Isolation-Explained
 tags:
 - Application Gateway
 - Azure Application Gateway

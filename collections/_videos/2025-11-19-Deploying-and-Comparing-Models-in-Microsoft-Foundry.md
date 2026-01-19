@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=zPvEYmj8Mi4
 title: Deploying and Comparing Models in Microsoft Foundry
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=zPvEYmj8Mi4
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-19 23:05:52 +00:00
-permalink: /ai/videos/Deploying-and-Comparing-Models-in-Microsoft-Foundry
 tags:
 - AI Development
 - AI Model Deployment

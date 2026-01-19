@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-12-openai-gpt-5-is-now-available-in-public-preview-in-visual-studio-jetbrains-ides-xcode-and-eclipse
 title: OpenAI GPT-5 Now Available to GitHub Copilot Users in Major IDEs
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-12-openai-gpt-5-is-now-available-in-public-preview-in-visual-studio-jetbrains-ides-xcode-and-eclipse
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-12 17:30:37 +00:00
-permalink: /github-copilot/news/OpenAI-GPT-5-Now-Available-to-GitHub-Copilot-Users-in-Major-IDEs
 tags:
 - AI Coding Assistant
 - AI Model

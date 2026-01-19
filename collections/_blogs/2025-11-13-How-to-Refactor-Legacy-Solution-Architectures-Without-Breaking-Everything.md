@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-to-refactor-legacy-solution-architectures-without-breaking-everything/
 title: How to Refactor Legacy Solution Architectures Without Breaking Everything
 author: Dellenny
-canonical_url: https://dellenny.com/how-to-refactor-legacy-solution-architectures-without-breaking-everything/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-13 09:44:47 +00:00
-permalink: /coding/blogs/How-to-Refactor-Legacy-Solution-Architectures-Without-Breaking-Everything
 tags:
 - Architecture
 - CI/CD

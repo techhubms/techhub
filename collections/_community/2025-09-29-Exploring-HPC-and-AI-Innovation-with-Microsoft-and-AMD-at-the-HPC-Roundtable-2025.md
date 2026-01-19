@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/explore-hpc-ai-innovation-microsoft-amd-at-hpc-roundtable-2025/ba-p/4457974
 title: Exploring HPC and AI Innovation with Microsoft and AMD at the HPC Roundtable 2025
 author: Fernando_Aznar
-canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/explore-hpc-ai-innovation-microsoft-amd-at-hpc-roundtable-2025/ba-p/4457974
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-29 20:12:58 +00:00
-permalink: /ai/community/Exploring-HPC-and-AI-Innovation-with-Microsoft-and-AMD-at-the-HPC-Roundtable-2025
 tags:
 - AI Infrastructure
 - AMD

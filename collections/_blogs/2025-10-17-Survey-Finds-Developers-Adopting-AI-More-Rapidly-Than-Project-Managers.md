@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/survey-sees-developers-embracing-ai-faster-than-project-leaders/
 title: Survey Finds Developers Adopting AI More Rapidly Than Project Managers
 author: Mike Vizard
-canonical_url: https://devops.com/survey-sees-developers-embracing-ai-faster-than-project-leaders/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-17 12:45:40 +00:00
-permalink: /ai/blogs/Survey-Finds-Developers-Adopting-AI-More-Rapidly-Than-Project-Managers
 tags:
 - AI Adoption
 - AI Challenges

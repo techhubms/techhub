@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/revolutionizing-learning-with-immersive-ai/ba-p/4453680
 title: 'Revolutionizing Learning with Immersive AI: Avatar-Powered Education on Azure'
 author: Matt_Kazanowsky
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/revolutionizing-learning-with-immersive-ai/ba-p/4453680
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-12 20:31:23 +00:00
-permalink: /ai/community/Revolutionizing-Learning-with-Immersive-AI-Avatar-Powered-Education-on-Azure
 tags:
 - Avatar Engine
 - Azure Data Lake Storage

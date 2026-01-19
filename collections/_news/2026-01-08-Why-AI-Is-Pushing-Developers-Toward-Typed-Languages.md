@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/llms/why-ai-is-pushing-developers-toward-typed-languages/
 title: Why AI Is Pushing Developers Toward Typed Languages
 author: Cassidy Williams
-canonical_url: https://github.blog/ai-and-ml/llms/why-ai-is-pushing-developers-toward-typed-languages/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2026-01-08 22:25:54 +00:00
-permalink: /ai/news/Why-AI-Is-Pushing-Developers-Toward-Typed-Languages
 tags:
 - AI & ML
 - AI Assisted Development

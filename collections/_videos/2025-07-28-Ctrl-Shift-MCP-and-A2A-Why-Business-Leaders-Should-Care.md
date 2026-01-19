@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=s8xJTAu5icM
 title: 'Ctrl Shift - MCP & A2A: Why Business Leaders Should Care'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=s8xJTAu5icM
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-28 14:15:52 +00:00
-permalink: /ai/videos/Ctrl-Shift-MCP-and-A2A-Why-Business-Leaders-Should-Care
 tags:
 - A2A
 - Agent 2 Agent

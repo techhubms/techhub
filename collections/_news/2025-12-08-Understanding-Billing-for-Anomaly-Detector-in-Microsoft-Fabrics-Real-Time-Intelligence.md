@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/billing-for-anomaly-detector-in-real-time-intelligence/
 title: Understanding Billing for Anomaly Detector in Microsoft Fabric’s Real-Time Intelligence
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/billing-for-anomaly-detector-in-real-time-intelligence/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-08 10:00:00 +00:00
-permalink: /ml/news/Understanding-Billing-for-Anomaly-Detector-in-Microsoft-Fabrics-Real-Time-Intelligence
 tags:
 - Anomaly Detector
 - Billing

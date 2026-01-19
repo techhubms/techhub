@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-19-copilot-memory-early-access-for-pro-and-pro
 title: 'Early Access Release: Copilot Memory for GitHub Copilot Pro and Pro+'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-19-copilot-memory-early-access-for-pro-and-pro
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-19 17:05:54 +00:00
-permalink: /github-copilot/news/Early-Access-Release-Copilot-Memory-for-GitHub-Copilot-Pro-and-Pro
 tags:
 - AI Assistant
 - Code Review

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/signal/articles/4-ways-ai-is-reshaping-discovery-health-work-and-responsibility/
 title: 4 Ways AI is Reshaping Discovery, Health, Work, and Responsibility
 author: stclarke
-canonical_url: https://news.microsoft.com/signal/articles/4-ways-ai-is-reshaping-discovery-health-work-and-responsibility/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-14 17:15:11 +00:00
-permalink: /ai/news/4-Ways-AI-is-Reshaping-Discovery-Health-Work-and-Responsibility
 tags:
 - AI Accountability
 - AI Agents

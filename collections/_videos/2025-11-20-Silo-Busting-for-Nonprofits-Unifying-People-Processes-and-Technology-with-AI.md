@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=1vQ0JxoYYQw
 title: 'Silo Busting for Nonprofits: Unifying People, Processes, and Technology with AI'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=1vQ0JxoYYQw
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 11:21:09 +00:00
-permalink: /ai/videos/Silo-Busting-for-Nonprofits-Unifying-People-Processes-and-Technology-with-AI
 tags:
 - AI Adoption
 - Collaboration

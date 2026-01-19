@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/enhanced-security-is-here-with-the-new-trust-publishing-on-nuget-org/
 title: New Trusted Publishing Enhances Security on NuGet.org
 author: Evgeny Tvorun, Sean
-canonical_url: https://devblogs.microsoft.com/dotnet/enhanced-security-is-here-with-the-new-trust-publishing-on-nuget-org/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-09-22 15:40:00 +00:00
-permalink: /coding/news/New-Trusted-Publishing-Enhances-Security-on-NuGetorg
 tags:
 - .NET
 - API Key Rotation

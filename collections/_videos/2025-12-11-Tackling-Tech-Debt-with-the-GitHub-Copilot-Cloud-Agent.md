@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=gaejtW5dKsY
 title: Tackling Tech Debt with the GitHub Copilot Cloud Agent
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=gaejtW5dKsY
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-11 22:29:20 +00:00
-permalink: /github-copilot/videos/Tackling-Tech-Debt-with-the-GitHub-Copilot-Cloud-Agent
 tags:
 - AI Agents
 - AI Development

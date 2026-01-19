@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/scaling-physics-based-digital-twins-neural-concept-on-azure/ba-p/4483403
 title: Neural Concept Sets New Industrial AI Benchmark on Azure HPC for Automotive Aerodynamics
 author: lmiroslaw
-canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/scaling-physics-based-digital-twins-neural-concept-on-azure/ba-p/4483403
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-12 12:10:23 +00:00
-permalink: /ai/community/Neural-Concept-Sets-New-Industrial-AI-Benchmark-on-Azure-HPC-for-Automotive-Aerodynamics
 tags:
 - A100 GPU
 - Aerodynamics

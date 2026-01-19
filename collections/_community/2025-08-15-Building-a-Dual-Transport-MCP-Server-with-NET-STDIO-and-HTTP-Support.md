@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/one-mcp-server-two-transports-stdio-and-http/ba-p/4443915
 title: 'Building a Dual-Transport MCP Server with .NET: STDIO and HTTP Support'
 author: justinyoo
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/one-mcp-server-two-transports-stdio-and-http/ba-p/4443915
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-15 08:02:40 +00:00
-permalink: /coding/community/Building-a-Dual-Transport-MCP-Server-with-NET-STDIO-and-HTTP-Support
 tags:
 - .NET
 - .NET Builder Pattern

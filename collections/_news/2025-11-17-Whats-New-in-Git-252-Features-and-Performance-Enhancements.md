@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/open-source/git/highlights-from-git-2-52/
 title: "What's New in Git 2.52: Features and Performance Enhancements"
 author: Taylor Blau
-canonical_url: https://github.blog/open-source/git/highlights-from-git-2-52/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-11-17 17:54:31 +00:00
-permalink: /coding/news/Whats-New-in-Git-252-Features-and-Performance-Enhancements
 tags:
 - Bloom Filters
 - Branch Management

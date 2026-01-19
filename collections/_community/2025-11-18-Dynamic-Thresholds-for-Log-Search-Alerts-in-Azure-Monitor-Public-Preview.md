@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/public-preview-announcing-public-preview-of-dynamic-thresholds/ba-p/4467363
 title: 'Dynamic Thresholds for Log Search Alerts in Azure Monitor: Public Preview'
 author: Efrat_Ben_Porat
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/public-preview-announcing-public-preview-of-dynamic-thresholds/ba-p/4467363
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:00 +00:00
-permalink: /ai/community/Dynamic-Thresholds-for-Log-Search-Alerts-in-Azure-Monitor-Public-Preview
 tags:
 - AKS
 - AKS Monitoring

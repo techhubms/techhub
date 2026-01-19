@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=GWV7VXjYeFM
 title: Building Secure AI Agents with Microsoft’s Security Stack
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=GWV7VXjYeFM
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:40:30 +00:00
-permalink: /ai/videos/Building-Secure-AI-Agents-with-Microsofts-Security-Stack
 tags:
 - Agentic AI
 - AI Agents

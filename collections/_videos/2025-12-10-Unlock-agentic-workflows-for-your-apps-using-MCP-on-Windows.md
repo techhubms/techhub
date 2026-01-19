@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=PWELkVJbb7Y
 title: Unlock agentic workflows for your apps using MCP on Windows
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=PWELkVJbb7Y
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-10 22:07:54 +00:00
-permalink: /ai/videos/Unlock-agentic-workflows-for-your-apps-using-MCP-on-Windows
 tags:
 - Agentic Workflows
 - AI Agents

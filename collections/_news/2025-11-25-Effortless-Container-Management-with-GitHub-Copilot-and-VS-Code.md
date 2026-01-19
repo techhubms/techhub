@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/manage-containers-the-easy-way-copilot-vs-code
 title: Effortless Container Management with GitHub Copilot and VS Code
 author: Matt Hernandez
-canonical_url: https://devblogs.microsoft.com/blog/manage-containers-the-easy-way-copilot-vs-code
 viewing_mode: external
 feed_name: Microsoft Blog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-11-25 22:51:14 +00:00
-permalink: /github-copilot/news/Effortless-Container-Management-with-GitHub-Copilot-and-VS-Code
 tags:
 - CLI Replacement
 - Code Assistant

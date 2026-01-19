@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=dBu3il7db0o
 title: Create an AI Agent with File Search in Azure AI Foundry (Portal)
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=dBu3il7db0o
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-09 17:04:28 +00:00
-permalink: /ai/videos/Create-an-AI-Agent-with-File-Search-in-Azure-AI-Foundry-Portal
 tags:
 - Agent Configuration
 - Agent Playground

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/identity-in-azure-understanding-azure-ad-authentication-and-authorization/
 title: 'Identity in Azure: Understanding Azure AD, Authentication, and Authorization'
 author: Dellenny
-canonical_url: https://dellenny.com/identity-in-azure-understanding-azure-ad-authentication-and-authorization/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-05 10:44:47 +00:00
-permalink: /azure/blogs/Identity-in-Azure-Understanding-Azure-AD-Authentication-and-Authorization
 tags:
 - Authentication
 - Authorization

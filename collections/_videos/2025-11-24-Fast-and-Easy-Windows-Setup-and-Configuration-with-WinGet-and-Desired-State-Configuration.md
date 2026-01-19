@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=KnH7FHyEsbE
 title: Fast and Easy Windows Setup & Configuration with WinGet and Desired State Configuration
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=KnH7FHyEsbE
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:43:12 +00:00
-permalink: /coding/videos/Fast-and-Easy-Windows-Setup-and-Configuration-with-WinGet-and-Desired-State-Configuration
 tags:
 - Command Line Interface
 - Configuration as Code

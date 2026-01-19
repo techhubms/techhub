@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://weblog.west-wind.com/posts/2025/Jun/09/Adding-Runtime-NuGet-Package-Loading-to-an-Application
 title: Adding Runtime NuGet Package Loading to an Application
 author: Rick Strahl
-canonical_url: https://weblog.west-wind.com/posts/2025/Jun/09/Adding-Runtime-NuGet-Package-Loading-to-an-Application
 viewing_mode: external
 feed_name: Rick Strahl's Blog
-feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-06-10 04:40:37 +00:00
-permalink: /coding/blogs/Adding-Runtime-NuGet-Package-Loading-to-an-Application
 tags:
 - .NET
 - .NET ASP.NET

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/devops/comments/1mfshis/kubeseal_built_a_small_tool_to_make_bitnamis/
 title: "[kubeseal] Built a small tool to make bitnami's sealed-secrets less painful in GitOps"
 author: MrFr0z01
-canonical_url: https://www.reddit.com/r/devops/comments/1mfshis/kubeseal_built_a_small_tool_to_make_bitnamis/
 viewing_mode: external
 feed_name: Reddit DevOps
-feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-02 14:53:52 +00:00
-permalink: /devops/community/kubeseal-Built-a-small-tool-to-make-bitnamis-sealed-secrets-less-painful-in-GitOps
 tags:
 - Automation
 - Bitnami

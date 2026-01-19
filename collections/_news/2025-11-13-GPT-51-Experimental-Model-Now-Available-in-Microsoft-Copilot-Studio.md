@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/available-now-gpt-5-1-in-microsoft-copilot-studio/
 title: GPT-5.1 Experimental Model Now Available in Microsoft Copilot Studio
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/available-now-gpt-5-1-in-microsoft-copilot-studio/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-13 18:41:10 +00:00
-permalink: /ai/news/GPT-51-Experimental-Model-Now-Available-in-Microsoft-Copilot-Studio
 tags:
 - AI Development
 - AI Reasoning

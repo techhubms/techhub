@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/context-engineering-lessons-from-building-azure-sre-agent/ba-p/4481200
 title: Context Engineering Lessons from Building Azure SRE Agent
 author: sanchitmehta
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/context-engineering-lessons-from-building-azure-sre-agent/ba-p/4481200
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-27 20:07:30 +00:00
-permalink: /ai/community/Context-Engineering-Lessons-from-Building-Azure-SRE-Agent
 tags:
 - Azure CLI
 - Azure SRE Agent

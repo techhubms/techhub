@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/orchestrating-multi-agent-intelligence-mcp-driven-patterns-in/ba-p/4462150
 title: Orchestrating Multi-Agent Intelligence with Microsoft Agent Framework and MCP
 author: heenaugale
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/orchestrating-multi-agent-intelligence-mcp-driven-patterns-in/ba-p/4462150
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-22 17:59:16 +00:00
-permalink: /ai/community/Orchestrating-Multi-Agent-Intelligence-with-Microsoft-Agent-Framework-and-MCP
 tags:
 - AI Orchestration
 - Cosmos DB

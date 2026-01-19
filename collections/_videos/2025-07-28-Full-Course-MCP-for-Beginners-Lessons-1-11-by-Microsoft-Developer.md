@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=VfZlglOWWZw
 title: 'Full Course: MCP for Beginners (Lessons 1-11) by Microsoft Developer'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=VfZlglOWWZw
 viewing_mode: internal
 feed_name: Microsoft Build 2025 YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:00:51 +00:00
-permalink: /ai/videos/Full-Course-MCP-for-Beginners-Lessons-1-11-by-Microsoft-Developer
 tags:
 - AI Agents
 - AI Development

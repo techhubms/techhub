@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/ai-machine-learning/from-space-to-subsurface-using-azure-ai-to-predict-gold-rich/m-p/4441134#M258
 title: 'From Space to Subsurface: Predicting Gold Zones with Azure AI and Machine Learning'
 author: MeysamRouhnavaz
-canonical_url: https://techcommunity.microsoft.com/t5/ai-machine-learning/from-space-to-subsurface-using-azure-ai-to-predict-gold-rich/m-p/4441134#M258
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI
 date: 2025-08-07 15:26:36 +00:00
-permalink: /ai/community/From-Space-to-Subsurface-Predicting-Gold-Zones-with-Azure-AI-and-Machine-Learning
 tags:
 - AutoML
 - Azure AI

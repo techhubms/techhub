@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/devops/announcing-the-new-azure-devops-server-rc-release/
 title: 'Azure DevOps Server RC Release: New Features, Lifecycle Policy, and Branding Updates'
 author: Gloridel Morales
-canonical_url: https://devblogs.microsoft.com/devops/announcing-the-new-azure-devops-server-rc-release/
 viewing_mode: external
 feed_name: Microsoft DevOps Blog
-feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-10-07 20:14:45 +00:00
-permalink: /azure/news/Azure-DevOps-Server-RC-Release-New-Features-Lifecycle-Policy-and-Branding-Updates
 tags:
 - Azure DevOps Server
 - Continuous Delivery

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/software-architecture-frameworks-and-artificial-intelligence-building-smarter-systems/
 title: 'Software Architecture Frameworks and Artificial Intelligence: Building Smarter Systems'
 author: Dellenny
-canonical_url: https://dellenny.com/software-architecture-frameworks-and-artificial-intelligence-building-smarter-systems/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-26 16:33:15 +00:00
-permalink: /ai/blogs/Software-Architecture-Frameworks-and-Artificial-Intelligence-Building-Smarter-Systems
 tags:
 - AI Governance
 - Architecture

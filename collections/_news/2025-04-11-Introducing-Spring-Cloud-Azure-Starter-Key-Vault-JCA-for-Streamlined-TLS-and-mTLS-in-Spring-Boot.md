@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/introducing-spring-cloud-azure-starter-key-vault-jca-streamlined-tls-and-mtls-for-spring-boot/
 title: Introducing Spring Cloud Azure Starter Key Vault JCA for Streamlined TLS and mTLS in Spring Boot
 author: Moary Chen
-canonical_url: https://devblogs.microsoft.com/azure-sdk/introducing-spring-cloud-azure-starter-key-vault-jca-streamlined-tls-and-mtls-for-spring-boot/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-04-11 21:11:34 +00:00
-permalink: /coding/news/Introducing-Spring-Cloud-Azure-Starter-Key-Vault-JCA-for-Streamlined-TLS-and-mTLS-in-Spring-Boot
 tags:
 - Azure Key Vault
 - Azure SDK

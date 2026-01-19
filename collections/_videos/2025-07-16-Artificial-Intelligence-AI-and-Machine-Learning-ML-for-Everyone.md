@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=C7Iu2lcoAQ4
 title: Artificial Intelligence (AI) and Machine Learning (ML) for Everyone!
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=C7Iu2lcoAQ4
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-16 11:30:50 +00:00
-permalink: /ai/videos/Artificial-Intelligence-AI-and-Machine-Learning-ML-for-Everyone
 tags:
 - Agent
 - AI Agents

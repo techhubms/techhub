@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=wCI6Oqiv4KQ
 title: Microsoft GenAI for Energy Permitting Solution Accelerator
 author: Microsoft Cloud
-canonical_url: https://www.youtube.com/watch?v=wCI6Oqiv4KQ
 viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-10-16 14:01:36 +00:00
-permalink: /ai/videos/Microsoft-GenAI-for-Energy-Permitting-Solution-Accelerator
 tags:
 - Agentic AI
 - AI Workflows

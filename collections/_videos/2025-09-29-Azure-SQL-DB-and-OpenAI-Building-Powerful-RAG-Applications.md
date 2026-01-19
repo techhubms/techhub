@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=JXH_i5Eo_CA
 title: 'Azure SQL DB & OpenAI: Building Powerful RAG Applications'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=JXH_i5Eo_CA
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-29 16:00:36 +00:00
-permalink: /ai/videos/Azure-SQL-DB-and-OpenAI-Building-Powerful-RAG-Applications
 tags:
 - AI Integration
 - Application Development

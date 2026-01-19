@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/upcoming-live-stream-building-ai-agents-with-the-ai-toolkit/ba-p/4473350
 title: 'Building AI Agents with Microsoft AI Toolkit & Foundry: Live Stream Walkthrough'
 author: April_Gittens
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/upcoming-live-stream-building-ai-agents-with-the-ai-toolkit/ba-p/4473350
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-28 09:48:39 +00:00
-permalink: /ai/community/Building-AI-Agents-with-Microsoft-AI-Toolkit-and-Foundry-Live-Stream-Walkthrough
 tags:
 - Agent Development
 - AI Agents

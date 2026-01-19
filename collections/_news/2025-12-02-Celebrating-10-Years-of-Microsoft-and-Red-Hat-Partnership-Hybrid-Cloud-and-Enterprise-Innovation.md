@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/a-decade-of-open-innovation-celebrating-10-years-of-microsoft-and-red-hat-partnership/
 title: 'Celebrating 10 Years of Microsoft and Red Hat Partnership: Hybrid Cloud and Enterprise Innovation'
 author: Brendan Burns
-canonical_url: https://azure.microsoft.com/en-us/blog/a-decade-of-open-innovation-celebrating-10-years-of-microsoft-and-red-hat-partnership/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-02 16:00:00 +00:00
-permalink: /ai/news/Celebrating-10-Years-of-Microsoft-and-Red-Hat-Partnership-Hybrid-Cloud-and-Enterprise-Innovation
 tags:
 - AI + Machine Learning
 - AI Platform

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-06-29-github-copilot-in-xcode-explore-with-copilot-vision-custom-instructions-and-locale-response-support
 title: GitHub Copilot in Xcode - Explore with Copilot Vision, custom instructions, and locale response support
 author: Allison
-canonical_url: https://github.blog/changelog/2025-06-29-github-copilot-in-xcode-explore-with-copilot-vision-custom-instructions-and-locale-response-support
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-06-30 08:47:01 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-in-Xcode-Explore-with-Copilot-Vision-custom-instructions-and-locale-response-support
 tags:
 - Copilot Vision
 - Developer Tools

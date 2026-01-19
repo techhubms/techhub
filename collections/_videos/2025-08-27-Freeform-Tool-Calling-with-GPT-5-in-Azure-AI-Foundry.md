@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=y43sgs-Y8-U
 title: Freeform Tool Calling with GPT-5 in Azure AI Foundry
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=y43sgs-Y8-U
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-27 16:53:22 +00:00
-permalink: /ai/videos/Freeform-Tool-Calling-with-GPT-5-in-Azure-AI-Foundry
 tags:
 - AI Integration
 - AI Workflows

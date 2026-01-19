@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-11-post-as-admin-now-available-in-github-discussions
 title: Post as Admin Feature in GitHub Discussions
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-11-post-as-admin-now-available-in-github-discussions
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-11 16:45:28 +00:00
-permalink: /devops/news/Post-as-Admin-Feature-in-GitHub-Discussions
 tags:
 - Access Management
 - Admin Badge

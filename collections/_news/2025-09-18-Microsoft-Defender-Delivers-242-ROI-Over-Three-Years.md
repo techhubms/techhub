@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/09/18/microsoft-defender-delivered-242-return-on-investment-over-three-years/
 title: Microsoft Defender Delivers 242% ROI Over Three Years
 author: Scott Woodgate
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/09/18/microsoft-defender-delivered-242-return-on-investment-over-three-years/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-09-18 17:00:00 +00:00
-permalink: /ai/news/Microsoft-Defender-Delivers-242-ROI-Over-Three-Years
 tags:
 - AI Automation
 - Cybersecurity

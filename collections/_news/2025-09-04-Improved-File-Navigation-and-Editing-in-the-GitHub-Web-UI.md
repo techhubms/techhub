@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-04-improved-file-navigation-and-editing-in-the-web-ui
 title: Improved File Navigation and Editing in the GitHub Web UI
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-04-improved-file-navigation-and-editing-in-the-web-ui
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-04 18:41:12 +00:00
-permalink: /devops/news/Improved-File-Navigation-and-Editing-in-the-GitHub-Web-UI
 tags:
 - Branch Management
 - Contributor Workflow

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/12/manage-azure-local-updates/
 title: Manage Azure Local Updates
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/12/manage-azure-local-updates/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-12-02 12:34:53 +00:00
-permalink: /azure/blogs/Manage-Azure-Local-Updates
 tags:
 - Azure Arc
 - Azure Local

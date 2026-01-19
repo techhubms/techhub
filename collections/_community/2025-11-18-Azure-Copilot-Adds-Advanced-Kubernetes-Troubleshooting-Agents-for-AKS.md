@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-advanced-kubernetes-troubleshooting-agent/ba-p/4471066
 title: Azure Copilot Adds Advanced Kubernetes Troubleshooting Agents for AKS
 author: Samantha_Fernandez
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-advanced-kubernetes-troubleshooting-agent/ba-p/4471066
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 19:20:27 +00:00
-permalink: /ai/community/Azure-Copilot-Adds-Advanced-Kubernetes-Troubleshooting-Agents-for-AKS
 tags:
 - Agent Mode
 - Agentic Cloud Operations

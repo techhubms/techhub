@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=IxshWb2Az5w
 title: 'MCP in Action: Real-World Case Studies'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=IxshWb2Az5w
 viewing_mode: internal
 feed_name: Microsoft Build 2025 YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:00:25 +00:00
-permalink: /ai/videos/MCP-in-Action-Real-World-Case-Studies
 tags:
 - Azure AI Search
 - Azure API Management

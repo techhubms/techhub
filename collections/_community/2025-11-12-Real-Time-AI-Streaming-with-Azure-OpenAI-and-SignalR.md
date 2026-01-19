@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/real-time-ai-streaming-with-azure-openai-and-signalr/ba-p/4468833
 title: Real-Time AI Streaming with Azure OpenAI and SignalR
 author: pranav_pratik
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/real-time-ai-streaming-with-azure-openai-and-signalr/ba-p/4468833
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-12 09:38:46 +00:00
-permalink: /ai/community/Real-Time-AI-Streaming-with-Azure-OpenAI-and-SignalR
 tags:
 - .NET 8
 - AI Integration

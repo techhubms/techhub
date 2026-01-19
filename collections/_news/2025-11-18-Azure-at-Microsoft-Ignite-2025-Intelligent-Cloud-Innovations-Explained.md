@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/azure-at-microsoft-ignite-2025-all-the-intelligent-cloud-news-explained/
 title: 'Azure at Microsoft Ignite 2025: Intelligent Cloud Innovations Explained'
 author: Jessica Hawk
-canonical_url: https://azure.microsoft.com/en-us/blog/azure-at-microsoft-ignite-2025-all-the-intelligent-cloud-news-explained/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 16:00:00 +00:00
-permalink: /ai/news/Azure-at-Microsoft-Ignite-2025-Intelligent-Cloud-Innovations-Explained
 tags:
 - Agent Factory
 - AI + Machine Learning

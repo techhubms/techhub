@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=IB9U8dfyF1w
 title: 'Microsoft Security Experts: Enhancing Your SOC with Managed XDR and Incident Response'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=IB9U8dfyF1w
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 05:12:55 +00:00
-permalink: /security/videos/Microsoft-Security-Experts-Enhancing-Your-SOC-with-Managed-XDR-and-Incident-Response
 tags:
 - Cybersecurity
 - DART

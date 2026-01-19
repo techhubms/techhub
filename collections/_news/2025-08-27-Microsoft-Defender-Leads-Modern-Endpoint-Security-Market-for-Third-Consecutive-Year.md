@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/08/27/microsoft-ranked-number-one-in-modern-endpoint-security-market-share-third-year-in-a-row/
 title: Microsoft Defender Leads Modern Endpoint Security Market for Third Consecutive Year
 author: Rob Lefferts
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/08/27/microsoft-ranked-number-one-in-modern-endpoint-security-market-share-third-year-in-a-row/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-08-27 15:00:00 +00:00
-permalink: /security/news/Microsoft-Defender-Leads-Modern-Endpoint-Security-Market-for-Third-Consecutive-Year
 tags:
 - AI
 - AI Security

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/expose-avd-registration-status-on-azure-vm-objects/idi-p/4439107
 title: Expose AVD Registration Status on Azure VM Objects for Simplified Monitoring
 author: Vu_Hoang
-canonical_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/expose-avd-registration-status-on-azure-vm-objects/idi-p/4439107
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-01 18:00:09 +00:00
-permalink: /azure/community/Expose-AVD-Registration-Status-on-Azure-VM-Objects-for-Simplified-Monitoring
 tags:
 - Automation
 - AVD

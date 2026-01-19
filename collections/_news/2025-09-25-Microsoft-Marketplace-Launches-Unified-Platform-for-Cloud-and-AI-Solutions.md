@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/blog/2025/09/25/introducing-microsoft-marketplace-thousands-of-solutions-millions-of-customers-one-marketplace/
 title: Microsoft Marketplace Launches Unified Platform for Cloud and AI Solutions
 author: stclarke
-canonical_url: https://blogs.microsoft.com/blog/2025/09/25/introducing-microsoft-marketplace-thousands-of-solutions-millions-of-customers-one-marketplace/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-25 14:13:11 +00:00
-permalink: /ai/news/Microsoft-Marketplace-Launches-Unified-Platform-for-Cloud-and-AI-Solutions
 tags:
 - AI Agents
 - AI Apps

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/autogen/autogen-reimagined-launching-autogen-0-4/
 title: 'AutoGen Reimagined: Announcing the Launch of AutoGen 0.4'
 author: Friederike Niedtner
-canonical_url: https://devblogs.microsoft.com/autogen/autogen-reimagined-launching-autogen-0-4/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/autogen/feed/
 date: 2025-01-17 23:39:51 +00:00
-permalink: /ai/news/AutoGen-Reimagined-Announcing-the-Launch-of-AutoGen-04
 tags:
 - .NET
 - Agentic Workflows

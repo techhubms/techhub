@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://khalidabuhakmeh.com/add-a-property-to-the-top-level-statements-program-class
 title: Add a Property to the Top-level Statements Program Class
 author: Khalid Abuhakmeh
-canonical_url: https://khalidabuhakmeh.com/add-a-property-to-the-top-level-statements-program-class
 viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
-feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2024-08-06 00:00:00 +00:00
-permalink: /coding/blogs/Add-a-Property-to-the-Top-level-Statements-Program-Class
 tags:
 - .NET
 - C#

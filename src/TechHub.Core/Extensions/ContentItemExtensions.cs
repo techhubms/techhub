@@ -28,13 +28,11 @@ public static class ContentItemExtensions
             DateEpoch = item.DateEpoch,
             DateIso = item.DateIso,
             CollectionName = item.CollectionName,
-            AltCollection = item.AltCollection,
             SectionNames = item.SectionNames,
             PrimarySection = primarySectionName,
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
-            VideoId = item.VideoId,
             ViewingMode = item.ViewingMode,
             Url = item.GetUrlInSection(sectionUrl)
         };
@@ -59,14 +57,12 @@ public static class ContentItemExtensions
             DateEpoch = item.DateEpoch,
             DateIso = item.DateIso,
             CollectionName = item.CollectionName,
-            AltCollection = item.AltCollection,
             SectionNames = item.SectionNames,
             PrimarySection = primarySectionName,
             Tags = item.Tags,
             RenderedHtml = item.RenderedHtml,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
-            VideoId = item.VideoId,
             ViewingMode = item.ViewingMode,
             Url = item.GetUrlInSection(sectionUrl),
             SidebarInfo = item.SidebarInfo

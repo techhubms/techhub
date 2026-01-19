@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/empowering-secure-agentic-software-delivery/
 title: 'AI-Driven Security and Automation in Modern DevOps: Insights from JFrog swampUP 2025'
 author: Alan Shimel
-canonical_url: https://devops.com/empowering-secure-agentic-software-delivery/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-19 14:51:16 +00:00
-permalink: /ai/blogs/AI-Driven-Security-and-Automation-in-Modern-DevOps-Insights-from-JFrog-swampUP-2025
 tags:
 - Agentic Repositories
 - AI Agents

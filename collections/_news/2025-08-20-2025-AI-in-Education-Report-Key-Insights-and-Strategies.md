@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/education/blog/2025/08/ai-in-education-report-insights-to-support-teaching-and-learning/
 title: '2025 AI in Education Report: Key Insights and Strategies'
 author: sbaynes
-canonical_url: https://www.microsoft.com/en-us/education/blog/2025/08/ai-in-education-report-insights-to-support-teaching-and-learning/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-20 19:27:23 +00:00
-permalink: /ai/news/2025-AI-in-Education-Report-Key-Insights-and-Strategies
 tags:
 - AI Adoption
 - AI in Education

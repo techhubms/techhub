@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devclass.com/2025/12/11/research-ai-can-help-or-hinder-software-development-and-old-style-best-practices-make-the-difference/
 title: "Research: AI's Impact on Developer Productivity Hinges on Best Practices"
 author: Tim Anderson
-canonical_url: https://devclass.com/2025/12/11/research-ai-can-help-or-hinder-software-development-and-old-style-best-practices-make-the-difference/
 viewing_mode: external
 feed_name: DevClass
-feed_url: https://devclass.com/feed/
 date: 2025-12-11 11:32:34 +00:00
-permalink: /ai/blogs/Research-AIs-Impact-on-Developer-Productivity-Hinges-on-Best-Practices
 tags:
 - AI Assisted Coding
 - AI/ML

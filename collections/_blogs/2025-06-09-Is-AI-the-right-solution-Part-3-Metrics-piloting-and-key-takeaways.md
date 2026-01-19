@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://hiddedesmet.com/ai-project-validation-framework-part3
 title: 'Is AI the right solution? Part 3: Metrics, piloting, and key takeaways'
 author: Hidde de Smet
-canonical_url: https://hiddedesmet.com/ai-project-validation-framework-part3
 viewing_mode: external
 feed_name: Hidde de Smet's Blog
-feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-06-09 08:00:00 +00:00
-permalink: /ai/blogs/Is-AI-the-right-solution-Part-3-Metrics-piloting-and-key-takeaways
 tags:
 - Business Alignment
 - Ethical AI

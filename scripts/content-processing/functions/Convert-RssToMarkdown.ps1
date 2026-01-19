@@ -77,20 +77,20 @@ function Convert-RssToMarkdown {
                 throw "Collection could not be determined from OutputDir '$($item.OutputDir)'"
             }
 
-            # Remove old file if it already exists based on canonical_url, so we can update markdown files by removing their entries from the processed and/or skipped entries files
+            # Remove old file if it already exists based on external_url, so we can update markdown files by removing their entries from the processed and/or skipped entries files
             $existingFiles = Get-ChildItem -Path $item.OutputDir -Filter "*.md" -ErrorAction SilentlyContinue
             foreach ($existingFile in $existingFiles) {
                 try {
                     $existingContent = Get-Content -Path $existingFile.FullName -Raw -ErrorAction SilentlyContinue
-                    if ($existingContent -and $existingContent -match 'canonical_url:\s*"?([^"\s]+)"?') {
-                        $existingCanonicalUrl = $matches[1].Trim('"')
-                        if ($existingCanonicalUrl -eq $item.Link) {
+                    if ($existingContent -and $existingContent -match 'external_url:\s*"?([^"\s]+)"?') {
+                        $existingExternalUrl = $matches[1].Trim('"')
+                        if ($existingExternalUrl -eq $item.Link) {
                             if ($PSCmdlet.ShouldProcess($existingFile.FullName, "Remove existing markdown file")) {
                                 Remove-Item -Path $existingFile.FullName -Force
-                                Write-Host "Removing existing file with same canonical_url: $($existingFile.FullName)"
+                                Write-Host "Removing existing file with same external_url: $($existingFile.FullName)"
                             }
                             else {
-                                Write-Host "What if: Would remove existing file with same canonical_url: $($existingFile.FullName)"
+                                Write-Host "What if: Would remove existing file with same external_url: $($existingFile.FullName)"
                             }
                             break
                         }
@@ -269,13 +269,9 @@ function Convert-RssToMarkdown {
 
             # Select template based on output directory
             $templatePath = $genericTemplatePath
-            $youtubeId = ''
         
             if ($item.OutputDir -eq '_videos') {
                 $templatePath = $videoTemplatePath
-
-                # Extract YouTube video ID using the comprehensive function
-                $youtubeId = Get-YouTubeVideoId -Url $item.Link
             }
 
             # Format date and fix timezone format from +0000 to +00:00
@@ -286,26 +282,17 @@ function Convert-RssToMarkdown {
             $fileNamePubDate = $item.PubDate.ToString("yyyy-MM-dd")
             $fileNameTitle = (ConvertTo-SafeFilename -Title $response.title -MaxLength 200)
             $filename = "$fileNamePubDate-$fileNameTitle.md"
-            $permalink = "$fileNamePubDate-$fileNameTitle.html"
 
             # Build frontmatter hashtable
             $frontMatter = @{
-                layout        = "post"
                 title         = $response.title
                 author        = $item.Author
-                canonical_url = $item.Link
+                external_url  = $item.Link
                 viewing_mode  = if ($collection_value -eq "videos") { "internal" } else { "external" }
                 feed_name     = $item.FeedName
-                feed_url      = $item.FeedUrl
                 date          = $dateFormatted
-                permalink     = $permalink
                 tags          = @($tags)
                 section_names = @($section_names)
-            }
-            
-            # Add youtube_id for video content if available
-            if ($collection_value -eq "videos" -and $youtubeId) {
-                $frontMatter.youtube_id = $youtubeId
             }
             
             # Convert frontmatter to YAML using YamlDotNet (same library as ContentFixer)
@@ -314,11 +301,9 @@ function Convert-RssToMarkdown {
             # Load template and replace placeholders
             $markdownContent = Get-Content $templatePath -Raw
             $markdownContent = $markdownContent -replace '{{FRONTMATTER}}', $yamlFrontMatter
-            $markdownContent = $markdownContent -replace '{{CANONICAL_URL}}', $item.Link
-            $markdownContent = $markdownContent -replace '{{FEEDNAME}}', $item.FeedName
+            $markdownContent = $markdownContent -replace '{{EXTERNAL_URL}}', $item.Link
             $markdownContent = $markdownContent -replace '{{CONTENT}}', $response.content
             $markdownContent = $markdownContent -replace '{{EXCERPT}}', $response.excerpt
-            $markdownContent = $markdownContent -replace '{{YOUTUBE_ID}}', $youtubeId
 
             # Create the file
             $filePath = Join-Path $item.OutputDir $filename

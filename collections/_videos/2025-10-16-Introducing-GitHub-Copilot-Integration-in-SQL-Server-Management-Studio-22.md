@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=VvOWQQiSRxw
 title: Introducing GitHub Copilot Integration in SQL Server Management Studio 22
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=VvOWQQiSRxw
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-16 15:10:09 +00:00
-permalink: /github-copilot/videos/Introducing-GitHub-Copilot-Integration-in-SQL-Server-Management-Studio-22
 tags:
 - Azure SQL
 - Cloud Computing

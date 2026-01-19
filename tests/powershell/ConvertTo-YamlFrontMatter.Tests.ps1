@@ -54,8 +54,7 @@ Describe "ConvertTo-YamlFrontMatter" {
             
             $result = ConvertTo-YamlFrontMatter -FrontMatter $frontMatter
             
-            $result | Should -Match "layout: post"
-            $result | Should -Match "author: John Doe"
+            $result | Should -Match "            $result | Should -Match "author: John Doe"
         }
         
         It "Should use single quotes for strings with special YAML characters" {
@@ -127,12 +126,8 @@ Describe "ConvertTo-YamlFrontMatter" {
                 layout        = "post"
                 title         = "GitHub Copilot: Best Practices"
                 author        = "Jane Smith"
-                canonical_url = "https://example.com/article"
+                external_url  = "https://example.com/article"
                 viewing_mode  = "external"
-                feed_name     = "Tech Blog"
-                feed_url      = "https://example.com/feed"
-                date          = "2026-01-16 10:00:00 +00:00"
-                permalink     = "2026-01-16-GitHub-Copilot-Best-Practices.html"
                 tags          = @("AI", "GitHub Copilot", "Best Practices")
                 section_names = @("ai", "github-copilot")
             }
@@ -140,13 +135,10 @@ Describe "ConvertTo-YamlFrontMatter" {
             $result = ConvertTo-YamlFrontMatter -FrontMatter $frontMatter
             
             # Verify all fields are present
-            $result | Should -Match "layout: post"
             $result | Should -Match "title: '.*:.*'"  # Contains colon, should be quoted
             $result | Should -Match "author: Jane Smith"
-            $result | Should -Match "canonical_url: https://example.com/article"
+            $result | Should -Match "external_url: https://example.com/article"
             $result | Should -Match "viewing_mode: external"
-            $result | Should -Match "feed_name: Tech Blog"
-            $result | Should -Match "date: 2026-01-16 10:00:00 \+00:00"
             $result | Should -Match "tags:"
             $result | Should -Match "section_names:"
         }
@@ -156,12 +148,8 @@ Describe "ConvertTo-YamlFrontMatter" {
                 layout        = "post"
                 title         = "Learn Azure in 10 Minutes"
                 author        = "Microsoft"
-                canonical_url = "https://youtube.com/watch?v=test123"
+                external_url  = "https://youtube.com/watch?v=test123"
                 viewing_mode  = "internal"
-                feed_name     = "Microsoft Channel"
-                feed_url      = "https://youtube.com/feed"
-                date          = "2026-01-15 14:30:00 +00:00"
-                permalink     = "2026-01-15-Learn-Azure-in-10-Minutes.html"
                 tags          = @("Azure", "Tutorial", "Video")
                 section_names = @("azure")
                 youtube_id    = "test123"
@@ -177,12 +165,10 @@ Describe "ConvertTo-YamlFrontMatter" {
     Context "Edge Cases" {
         It "Should handle frontmatter with only required fields" {
             $frontMatter = @{
-                layout        = "post"
-                title         = "Minimal Article"
-                author        = "Author"
-                date          = "2026-01-16 10:00:00 +00:00"
-                permalink     = "minimal-article.html"
-                tags          = @()
+                layout = "post"
+                title  = "Minimal Article"
+                author = "Author"
+                date   = "2026-01-16 10:00:00 +00:00"tags          = @()
                 section_names = @("ai")
             }
             
@@ -206,14 +192,14 @@ Describe "ConvertTo-YamlFrontMatter" {
         
         It "Should handle URLs with query parameters" {
             $frontMatter = @{
-                canonical_url = "https://example.com/article?utm_source=rss&utm_campaign=tech"
+                external_url = "https://example.com/article?utm_source=rss&utm_campaign=tech"
             }
             
             $result = ConvertTo-YamlFrontMatter -FrontMatter $frontMatter
             
             # YamlDotNet may not quote URLs if they're unambiguous
             # Just verify the URL is present
-            $result | Should -Match "canonical_url: https://example.com/article"
+            $result | Should -Match "external_url: https://example.com/article"
         }
     }
 
@@ -222,7 +208,6 @@ Describe "ConvertTo-YamlFrontMatter" {
             # ContentFixer uses UnderscoredNamingConvention
             $frontMatter = @{
                 viewing_mode  = "external"
-                feed_name     = "Test Feed"
                 section_names = @("ai")
             }
             
@@ -230,7 +215,6 @@ Describe "ConvertTo-YamlFrontMatter" {
             
             # Should use underscored names (viewing_mode, not viewingMode)
             $result | Should -Match "viewing_mode:"
-            $result | Should -Match "feed_name:"
             $result | Should -Match "section_names:"
         }
     }

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-scheduled-actions-for-azure/ba-p/4470797
 title: Announcing General Availability of Scheduled Actions for Azure Virtual Machines
 author: TravisCragg_MSFT
-canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-scheduled-actions-for-azure/ba-p/4470797
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:35:21 +00:00
-permalink: /azure/community/Announcing-General-Availability-of-Scheduled-Actions-for-Azure-Virtual-Machines
 tags:
 - API Automation
 - Azure Compute

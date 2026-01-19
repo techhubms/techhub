@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/the-silent-technical-debt-why-manual-remediation-is-costing-you-more-than-you-think/
 title: 'The Silent Technical Debt: Why Manual Remediation Is Costing You More Than You Think'
 author: Bob Shaker
-canonical_url: https://devops.com/the-silent-technical-debt-why-manual-remediation-is-costing-you-more-than-you-think/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-23 07:30:29 +00:00
-permalink: /devops/blogs/The-Silent-Technical-Debt-Why-Manual-Remediation-Is-Costing-You-More-Than-You-Think
 tags:
 - ActiveState Report
 - Business Of DevOps

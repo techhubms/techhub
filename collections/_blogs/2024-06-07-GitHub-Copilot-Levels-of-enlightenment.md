@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devopsjournal.io/blog/2024/06/07/GitHub-Copilot-Levels-of-enlightenment
 title: GitHub Copilot - Levels of enlightenment
 author: Rob Bos
-canonical_url: https://devopsjournal.io/blog/2024/06/07/GitHub-Copilot-Levels-of-enlightenment
 viewing_mode: external
 feed_name: Rob Bos' Blog
-feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2024-06-07 00:00:00 +00:00
-permalink: /github-copilot/blogs/GitHub-Copilot-Levels-of-enlightenment
 tags:
 - Code Generation
 - Coding Tips

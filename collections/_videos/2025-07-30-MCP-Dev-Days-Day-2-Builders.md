@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=lHuxDMMkGJ8
 title: 'MCP Dev Days: Day 2 - Builders'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=lHuxDMMkGJ8
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-30 20:16:44 +00:00
-permalink: /ai/videos/MCP-Dev-Days-Day-2-Builders
 tags:
 - Agent Integration
 - AI Development

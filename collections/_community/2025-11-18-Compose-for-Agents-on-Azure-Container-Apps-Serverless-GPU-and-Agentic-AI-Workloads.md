@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/compose-for-agents-on-azure-container-apps-and-serverless-gpu/ba-p/4471061
 title: 'Compose for Agents on Azure Container Apps: Serverless GPU and Agentic AI Workloads'
 author: simonjj
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/compose-for-agents-on-azure-container-apps-and-serverless-gpu/ba-p/4471061
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:27:09 +00:00
-permalink: /ai/community/Compose-for-Agents-on-Azure-Container-Apps-Serverless-GPU-and-Agentic-AI-Workloads
 tags:
 - Agentic Applications
 - AI Frameworks

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=-yciYjpcG10
 title: Azure Update - 9th January 2026
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=-yciYjpcG10
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2026-01-09 15:57:42 +00:00
-permalink: /azure/videos/Azure-Update-9th-January-2026
 tags:
 - AKS
 - Azure Cloud

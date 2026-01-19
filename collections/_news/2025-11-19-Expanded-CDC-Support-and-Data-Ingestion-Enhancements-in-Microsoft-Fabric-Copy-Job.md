@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-expanded-cdc-support-for-more-sources-destinations/
 title: Expanded CDC Support and Data Ingestion Enhancements in Microsoft Fabric Copy Job
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-expanded-cdc-support-for-more-sources-destinations/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 12:30:00 +00:00
-permalink: /ml/news/Expanded-CDC-Support-and-Data-Ingestion-Enhancements-in-Microsoft-Fabric-Copy-Job
 tags:
 - Bulk Copy
 - Change Data Capture

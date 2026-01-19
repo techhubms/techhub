@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=DBrfh0vOBxY
 title: Building Agents and AI-Powered Apps for Software Companies (MS Ignite 2025 Breakout)
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=DBrfh0vOBxY
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 11:27:10 +00:00
-permalink: /github-copilot/videos/Building-Agents-and-AI-Powered-Apps-for-Software-Companies-MS-Ignite-2025-Breakout
 tags:
 - AI Agents
 - AI Infrastructure

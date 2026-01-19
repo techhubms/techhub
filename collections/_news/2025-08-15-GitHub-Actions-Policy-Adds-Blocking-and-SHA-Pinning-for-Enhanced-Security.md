@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-15-github-actions-policy-now-supports-blocking-and-sha-pinning-actions
 title: GitHub Actions Policy Adds Blocking and SHA Pinning for Enhanced Security
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-15-github-actions-policy-now-supports-blocking-and-sha-pinning-actions
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-15 15:05:08 +00:00
-permalink: /devops/news/GitHub-Actions-Policy-Adds-Blocking-and-SHA-Pinning-for-Enhanced-Security
 tags:
 - Action Blocking
 - Artifact Integrity

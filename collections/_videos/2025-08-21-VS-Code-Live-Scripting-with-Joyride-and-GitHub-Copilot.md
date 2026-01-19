@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Nt1p6yreAUU
 title: 'VS Code Live: Scripting with Joyride and GitHub Copilot'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=Nt1p6yreAUU
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-21 23:04:36 +00:00
-permalink: /github-copilot/videos/VS-Code-Live-Scripting-with-Joyride-and-GitHub-Copilot
 tags:
 - AI Coding Assistance
 - Code

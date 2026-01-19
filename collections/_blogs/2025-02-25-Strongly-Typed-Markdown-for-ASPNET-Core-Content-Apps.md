@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://khalidabuhakmeh.com/strongly-typed-markdown-for-aspnet-core-content-apps
 title: Strongly-Typed Markdown for ASP.NET Core Content Apps
 author: Khalid Abuhakmeh
-canonical_url: https://khalidabuhakmeh.com/strongly-typed-markdown-for-aspnet-core-content-apps
 viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
-feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2025-02-25 00:00:00 +00:00
-permalink: /coding/blogs/Strongly-Typed-Markdown-for-ASPNET-Core-Content-Apps
 tags:
 - ASP.NET
 - ASP.NET Core

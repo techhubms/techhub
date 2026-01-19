@@ -120,7 +120,6 @@ tags: [machine-learning, productivity, vscode]
 canonical_url: "https://example.com/original-article"
 viewing_mode: "external"
 video_id: "dQw4w9WgXcQ"
-alt_collection: "ghc-features"
 ---
 
 This is the excerpt that appears in content lists and RSS feeds.
@@ -144,7 +143,6 @@ The rest of the markdown content...
 | `canonical_url`             | `ExternalUrl`    | `string?`               | Original source URL                                                                     |
 | `viewing_mode`              | `ViewingMode`    | `string`                | "internal" or "external" (default: "external")                                          |
 | `video_id`                  | `VideoId`        | `string?`               | YouTube video identifier                                                                |
-| `alt_collection`            | `AltCollection`  | `string?`               | Subfolder categorization                                                                |
 | Filename                    | `Slug`           | `string`                | `2025-01-15-article.md` → `2025-01-15-article`                                          |
 | Before `<!--excerpt_end-->` | `Excerpt`        | `string`                | Plain text, max 200 words                                                               |
 | Full markdown               | `RenderedHtml`   | `string`                | Processed with Markdig                                                                  |

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/blog/2026/01/05/microsoft-announces-acquisition-of-osmos-to-accelerate-autonomous-data-engineering-in-fabric/
 title: Microsoft Announces Acquisition of Osmos to Advance Data Engineering in Fabric
 author: stclarke
-canonical_url: https://blogs.microsoft.com/blog/2026/01/05/microsoft-announces-acquisition-of-osmos-to-accelerate-autonomous-data-engineering-in-fabric/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-05 18:40:45 +00:00
-permalink: /ai/news/Microsoft-Announces-Acquisition-of-Osmos-to-Advance-Data-Engineering-in-Fabric
 tags:
 - Agentic AI
 - AI Infrastructure

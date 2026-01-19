@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-september-2025/
 title: Azure SDK Release Highlights – September 2025
 author: Ronnie Geraghty
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-september-2025/
 viewing_mode: external
 feed_name: Microsoft Azure SDK Blog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-10-02 15:00:17 +00:00
-permalink: /coding/news/Azure-SDK-Release-Highlights-September-2025
 tags:
 - .NET
 - API Changes

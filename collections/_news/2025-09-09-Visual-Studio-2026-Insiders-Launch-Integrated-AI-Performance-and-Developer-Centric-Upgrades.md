@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2026-insiders-is-here/
 title: 'Visual Studio 2026 Insiders Launch: Integrated AI, Performance, and Developer-Centric Upgrades'
 author: Mads Kristensen
-canonical_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2026-insiders-is-here/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-09-09 16:52:29 +00:00
-permalink: /ai/news/Visual-Studio-2026-Insiders-Launch-Integrated-AI-Performance-and-Developer-Centric-Upgrades
 tags:
 - AI Integration
 - Arm64 Support

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.stevejgordon.co.uk/how-dotnet-muxer-resolves-and-loads-the-hostfxr-library
 title: How dotnet.exe Resolves and Loads the hostfxr Library – Exploring the .NET Muxer
 author: Steve Gordon
-canonical_url: https://www.stevejgordon.co.uk/how-dotnet-muxer-resolves-and-loads-the-hostfxr-library
 viewing_mode: external
 feed_name: Steve Gordon's Blog
-feed_url: https://www.stevejgordon.co.uk/feed
 date: 2024-11-08 10:11:59 +00:00
-permalink: /coding/blogs/How-dotnetexe-resolves-and-loads-the-hostfxr-library-Exploring-the-NET-muxer
 tags:
 - .NET
 - CLR

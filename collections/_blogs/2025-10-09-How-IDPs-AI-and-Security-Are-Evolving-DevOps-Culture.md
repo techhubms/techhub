@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/whose-ops-is-it-anyway-how-idps-ai-and-security-are-evolving-developer-culture/
 title: How IDPs, AI, and Security Are Evolving DevOps Culture
 author: Olivier de Turckheim
-canonical_url: https://devops.com/whose-ops-is-it-anyway-how-idps-ai-and-security-are-evolving-developer-culture/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-09 10:16:52 +00:00
-permalink: /ai/blogs/How-IDPs-AI-and-Security-Are-Evolving-DevOps-Culture
 tags:
 - AI And ML Workloads
 - AI Driven Operations

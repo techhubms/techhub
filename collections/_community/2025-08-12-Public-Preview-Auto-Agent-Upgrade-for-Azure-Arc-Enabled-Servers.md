@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-auto-agent-upgrade-for-azure-arc-enabled-servers/ba-p/4442556
 title: 'Public Preview: Auto Agent Upgrade for Azure Arc-Enabled Servers'
 author: Aurnov_Chattopadhyay
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-auto-agent-upgrade-for-azure-arc-enabled-servers/ba-p/4442556
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 15:30:41 +00:00
-permalink: /azure/community/Public-Preview-Auto-Agent-Upgrade-for-Azure-Arc-Enabled-Servers
 tags:
 - Agent Lifecycle Management
 - Auto Agent Upgrade

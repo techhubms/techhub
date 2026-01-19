@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/whats-new-in-copilot-studio-july-2025/
 title: 'What’s New in Copilot Studio: July 2025 Feature Roundup'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/whats-new-in-copilot-studio-july-2025/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-05 15:42:51 +00:00
-permalink: /ai/news/Whats-New-in-Copilot-Studio-July-2025-Feature-Roundup
 tags:
 - Admin Center
 - Analytics

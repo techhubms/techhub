@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://weblog.west-wind.com/posts/2025/May/06/WebView2-Waiting-for-Document-Loaded
 title: 'WebView2: Simplifying Document Load Handling and Async Workflows in .NET Applications'
 author: Rick Strahl
-canonical_url: https://weblog.west-wind.com/posts/2025/May/06/WebView2-Waiting-for-Document-Loaded
 viewing_mode: external
 feed_name: Rick Strahl's Blog
-feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-05-06 21:50:16 +00:00
-permalink: /coding/blogs/WebView2-Simplifying-Document-Load-Handling-and-Async-Workflows-in-NET-Applications
 tags:
 - .NET
 - Async Programming

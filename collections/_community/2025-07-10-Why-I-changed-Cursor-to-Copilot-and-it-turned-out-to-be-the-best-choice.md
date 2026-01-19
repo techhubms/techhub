@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1lwosq7/why_i_changed_cursor_to_copilot_and_it_turned_out/
 title: Why I changed Cursor to Copilot and it turned out to be the best choice
 author: Cobuter_Man
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1lwosq7/why_i_changed_cursor_to_copilot_and_it_turned_out/
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-10 21:28:42 +00:00
-permalink: /github-copilot/community/Why-I-changed-Cursor-to-Copilot-and-it-turned-out-to-be-the-best-choice
 viewing_mode: external
 tags:
 - Agentic Behavior

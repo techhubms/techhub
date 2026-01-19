@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://khalidabuhakmeh.com/confirmation-dialogs-with-htmx-and-sweetalert
 title: Enhancing Htmx Confirmation Dialogs with SweetAlert for Better UX
 author: Khalid Abuhakmeh
-canonical_url: https://khalidabuhakmeh.com/confirmation-dialogs-with-htmx-and-sweetalert
 viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
-feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2024-08-20 00:00:00 +00:00
-permalink: /coding/blogs/Enhancing-Htmx-Confirmation-Dialogs-with-SweetAlert-for-Better-UX
 tags:
 - ASP.NET
 - Client Side Scripting

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/introducing-customizable-security-baselines-in-azure-policy-and/ba-p/4469678
 title: Customizable Security Baselines Now in Preview for Azure Policy and Machine Configuration
 author: mutemwamasheke
-canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/introducing-customizable-security-baselines-in-azure-policy-and/ba-p/4469678
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-13 16:44:41 +00:00
-permalink: /azure/community/Customizable-Security-Baselines-Now-in-Preview-for-Azure-Policy-and-Machine-Configuration
 tags:
 - ARM Templates
 - Azure Arc

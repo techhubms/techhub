@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Dwyx8GomVvQ
 title: 'Armchair Architects: Patterns and Best Practices for Multi-Agent AI Orchestration'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=Dwyx8GomVvQ
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2026-01-06 08:00:14 +00:00
-permalink: /ai/videos/Armchair-Architects-Patterns-and-Best-Practices-for-Multi-Agent-AI-Orchestration
 tags:
 - Agent Frameworks
 - AI Orchestration

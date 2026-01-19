@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=xRTgusuYm8k
 title: 'Blazor Internship Demo Fest: New Components and Enhanced Navigation'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=xRTgusuYm8k
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-09-04 18:35:48 +00:00
-permalink: /coding/videos/Blazor-Internship-Demo-Fest-New-Components-and-Enhanced-Navigation
 tags:
 - .NET
 - ASP.NET Core

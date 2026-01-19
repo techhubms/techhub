@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=u-YQ624i8qE
 title: 'VS Code Live: Highlights from GitHub Universe Announcements'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=u-YQ624i8qE
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-27 16:35:14 +00:00
-permalink: /devops/videos/VS-Code-Live-Highlights-from-GitHub-Universe-Announcements
 tags:
 - Code
 - Code Demos

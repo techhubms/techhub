@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=lXvHXA_vuro
 title: ASP.NET Community Standup - Why Aren't You Using Minimal APIs?
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=lXvHXA_vuro
 viewing_mode: internal
 feed_name: Dotnet's Youtube channel
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-15 17:09:35 +00:00
-permalink: /coding/videos/ASPNET-Community-Standup-Why-Arent-You-Using-Minimal-APIs
 tags:
 - .NET
 - API Architecture

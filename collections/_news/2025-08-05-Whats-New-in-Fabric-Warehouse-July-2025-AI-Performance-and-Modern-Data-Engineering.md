@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-july-2025/
 title: 'What’s New in Fabric Warehouse – July 2025: AI, Performance, and Modern Data Engineering'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-july-2025/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-05 11:00:00 +00:00
-permalink: /ai/news/Whats-New-in-Fabric-Warehouse-July-2025-AI-Performance-and-Modern-Data-Engineering
 tags:
 - Agentic AI
 - Audit Logging

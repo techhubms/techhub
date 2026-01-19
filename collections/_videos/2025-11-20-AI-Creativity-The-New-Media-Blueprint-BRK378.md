@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Cszz3XsAMAg
 title: 'AI + Creativity: The New Media Blueprint | BRK378'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=Cszz3XsAMAg
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 14:55:21 +00:00
-permalink: /ai/videos/AI-Creativity-The-New-Media-Blueprint-BRK378
 tags:
 - Agentic AI
 - AI Agents

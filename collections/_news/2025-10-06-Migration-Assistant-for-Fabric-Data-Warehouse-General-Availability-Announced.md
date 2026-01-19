@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-general-availability-of-migration-assistant-for-fabric-data-warehouse/
 title: 'Migration Assistant for Fabric Data Warehouse: General Availability Announced'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-general-availability-of-migration-assistant-for-fabric-data-warehouse/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-06 09:00:00 +00:00
-permalink: /ml/news/Migration-Assistant-for-Fabric-Data-Warehouse-General-Availability-Announced
 tags:
 - ACID Compliance
 - Analytics Platform

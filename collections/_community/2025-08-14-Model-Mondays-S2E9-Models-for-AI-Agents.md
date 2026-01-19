@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/model-mondays-s2e9-models-for-ai-agents/ba-p/4443162
 title: 'Model Mondays S2E9: Models for AI Agents'
 author: Sharda_Kaur
-canonical_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/model-mondays-s2e9-models-for-ai-agents/ba-p/4443162
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 10:01:06 +00:00
-permalink: /ai/community/Model-Mondays-S2E9-Models-for-AI-Agents
 tags:
 - Agent Catalog
 - Agent Workflow

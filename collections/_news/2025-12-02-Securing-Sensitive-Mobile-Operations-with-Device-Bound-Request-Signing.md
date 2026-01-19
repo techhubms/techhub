@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/securing-sensitive-mobile-operations-with-device-bound-request-signing
 title: Securing Sensitive Mobile Operations with Device-Bound Request Signing
 author: Fernando de Oliveira, Daiane Galvão, Wesley Rodrigues
-canonical_url: https://devblogs.microsoft.com/blog/securing-sensitive-mobile-operations-with-device-bound-request-signing
 viewing_mode: external
 feed_name: Microsoft Blog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-12-02 18:00:18 +00:00
-permalink: /security/news/Securing-Sensitive-Mobile-Operations-with-Device-Bound-Request-Signing
 tags:
 - Android Keystore
 - API Protection

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-1
 title: Encrypting Properties with System.Text.Json and a TypeInfoResolver Modifier (Part 1)
 author: Steve Gordon
-canonical_url: https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-1
 viewing_mode: external
 feed_name: Steve Gordon's Blog
-feed_url: https://www.stevejgordon.co.uk/feed
 date: 2026-01-14 15:09:54 +00:00
-permalink: /coding/blogs/Encrypting-Properties-with-SystemTextJson-and-a-TypeInfoResolver-Modifier-Part-1
 tags:
 - .NET
 - Attribute Based Encryption

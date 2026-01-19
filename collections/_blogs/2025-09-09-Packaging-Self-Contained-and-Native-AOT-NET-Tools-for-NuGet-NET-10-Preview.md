@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-7-packaging-self-contained-and-native-aot-dotnet-tools-for-nuget/
 title: 'Packaging Self-Contained and Native AOT .NET Tools for NuGet: .NET 10 Preview'
 author: Andrew Lock
-canonical_url: https://andrewlock.net/exploring-dotnet-10-preview-features-7-packaging-self-contained-and-native-aot-dotnet-tools-for-nuget/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-09-09 10:00:00 +00:00
-permalink: /coding/blogs/Packaging-Self-Contained-and-Native-AOT-NET-Tools-for-NuGet-NET-10-Preview
 tags:
 - .NET 10
 - .NET Tools

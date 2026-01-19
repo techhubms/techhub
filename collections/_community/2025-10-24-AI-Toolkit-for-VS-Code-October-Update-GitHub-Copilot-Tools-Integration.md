@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-for-vs-code-october-update/ba-p/4463365
 title: 'AI Toolkit for VS Code October Update: GitHub Copilot Tools Integration'
 author: junjieli
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-for-vs-code-october-update/ba-p/4463365
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-24 07:00:00 +00:00
-permalink: /github-copilot/community/AI-Toolkit-for-VS-Code-October-Update-GitHub-Copilot-Tools-Integration
 tags:
 - AI Agent Development
 - AI Evaluation

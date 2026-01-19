@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=FO9fcsti9Vs
 title: Nestlé's AI-Powered Digital Twins Transform Content Creation with Microsoft Azure
 author: Microsoft Cloud
-canonical_url: https://www.youtube.com/watch?v=FO9fcsti9Vs
 viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-06-27 14:00:32 +00:00
-permalink: /ai/videos/Nestles-AI-Powered-Digital-Twins-Transform-Content-Creation-with-Microsoft-Azure
 tags:
 - AI Powered Digital Twins
 - Consumer Goods

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=4-u6dUg6IJk
 title: "Octoverse 2025: AI, India, and TypeScript's Rise"
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=4-u6dUg6IJk
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-28 16:05:04 +00:00
-permalink: /ai/videos/Octoverse-2025-AI-India-and-TypeScripts-Rise
 tags:
 - AI Adoption
 - Developer

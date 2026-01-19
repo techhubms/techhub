@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/on-the-issues/2025/11/12/uplifting-and-empowering-young-people-for-an-ai-future/
 title: 'Empowering Youth in the Age of AI: Research, Policy, and the AI Futures Youth Council'
 author: stclarke
-canonical_url: https://blogs.microsoft.com/on-the-issues/2025/11/12/uplifting-and-empowering-young-people-for-an-ai-future/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-12 17:28:19 +00:00
-permalink: /ai/news/Empowering-Youth-in-the-Age-of-AI-Research-Policy-and-the-AI-Futures-Youth-Council
 tags:
 - Age Assurance
 - AI Companions

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=eQzfXKf1YfY
 title: Debugging Godot C# Games with Visual Studio Code (Godot Series, Part 6)
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=eQzfXKf1YfY
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-22 16:30:14 +00:00
-permalink: /coding/videos/Debugging-Godot-C-Games-with-Visual-Studio-Code-Godot-Series-Part-6
 tags:
 - .NET
 - Breakpoints

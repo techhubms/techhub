@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/lI_5yc7zrDo
 title: Multi-file Edits
 author: Randy Pagels
-canonical_url: https://youtu.be/lI_5yc7zrDo
 date: 2024-12-18 23:00:38 +00:00
-permalink: /github-copilot/videos/Multi-file-Edits
 viewing_mode: internal
-section: github-copilot
 ghes_support: false
 plans:
 - Free
-alt-collection: features
 tags:
 - Editing
 - Multi Feature

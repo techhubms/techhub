@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: Updates in Agent-Based AI, Secure Automation, and Developer Tools Modernization
 author: Tech Hub Team
 viewing_mode: internal
 date: 2025-11-24 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
 - AI Agents

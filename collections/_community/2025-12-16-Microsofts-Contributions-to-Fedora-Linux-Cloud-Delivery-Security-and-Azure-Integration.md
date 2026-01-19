@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/building-bridges-microsoft-s-participation-in-the-fedora-linux/ba-p/4478461
 title: 'Microsoft’s Contributions to Fedora Linux: Cloud Delivery, Security, and Azure Integration'
 author: bexelbie
-canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/building-bridges-microsoft-s-participation-in-the-fedora-linux/ba-p/4478461
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-16 19:01:32 +00:00
-permalink: /azure/community/Microsofts-Contributions-to-Fedora-Linux-Cloud-Delivery-Security-and-Azure-Integration
 tags:
 - ARM64
 - Azure Community Gallery

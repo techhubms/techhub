@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=MCKjBrvX68M
 title: What's New in SQL Server Management Studio 22 GA
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=MCKjBrvX68M
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-04 21:00:34 +00:00
-permalink: /coding/videos/Whats-New-in-SQL-Server-Management-Studio-22-GA
 tags:
 - Azure SQL
 - Cloud Computing

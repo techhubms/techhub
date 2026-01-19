@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-secure-your-pro-code-custom-engine-agent-of-microsoft-365/ba-p/4440495
 title: 'Securing Your Pro-Code Custom Engine Agent for Microsoft 365 Copilot: Endpoint Protection Guide'
 author: daisami
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-secure-your-pro-code-custom-engine-agent-of-microsoft-365/ba-p/4440495
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-08 17:44:53 +00:00
-permalink: /coding/community/Securing-Your-Pro-Code-Custom-Engine-Agent-for-Microsoft-365-Copilot-Endpoint-Protection-Guide
 tags:
 - Application Security
 - ASP.NET Core

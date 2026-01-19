@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=UKJE1eJYtkA
 title: Real-Time Analytics and AI Applications with Cosmos DB in Microsoft Fabric
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=UKJE1eJYtkA
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 16:45:53 +00:00
-permalink: /ai/videos/Real-Time-Analytics-and-AI-Applications-with-Cosmos-DB-in-Microsoft-Fabric
 tags:
 - AI Driven Applications
 - Apache Spark

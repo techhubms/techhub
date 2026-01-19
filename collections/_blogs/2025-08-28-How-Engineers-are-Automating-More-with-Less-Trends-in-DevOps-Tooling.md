@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/how-engineers-are-automating-more-with-less-trends-in-devops-tooling/?utm_source=rss&utm_medium=rss&utm_campaign=how-engineers-are-automating-more-with-less-trends-in-devops-tooling
 title: 'How Engineers are Automating More with Less: Trends in DevOps Tooling'
 author: Durojaye Olusegun
-canonical_url: https://devops.com/how-engineers-are-automating-more-with-less-trends-in-devops-tooling/?utm_source=rss&utm_medium=rss&utm_campaign=how-engineers-are-automating-more-with-less-trends-in-devops-tooling
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-28 05:45:55 +00:00
-permalink: /github-copilot/blogs/How-Engineers-are-Automating-More-with-Less-Trends-in-DevOps-Tooling
 tags:
 - AI in DevOps
 - AI Integration

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-06-copilot-code-review-copilot-instruction-md-support-is-now-generally-available
 title: 'Copilot code review: copilot-instruction.md support is now generally available'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-06-copilot-code-review-copilot-instruction-md-support-is-now-generally-available
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-06 17:31:54 +00:00
-permalink: /github-copilot/news/Copilot-code-review-copilot-instructionmd-support-is-now-generally-available
 tags:
 - AI Assisted Code Review
 - Code Review Automation

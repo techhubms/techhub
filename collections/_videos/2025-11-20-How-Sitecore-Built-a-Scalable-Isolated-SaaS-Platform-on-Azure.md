@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Ra8_emjhRD0
 title: How Sitecore Built a Scalable Isolated SaaS Platform on Azure
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=Ra8_emjhRD0
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 15:44:34 +00:00
-permalink: /coding/videos/How-Sitecore-Built-a-Scalable-Isolated-SaaS-Platform-on-Azure
 tags:
 - API Management
 - Autoscale Analysis

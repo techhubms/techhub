@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/news-insights/company-news/github-availability-report-december-2025/
 title: 'GitHub Availability Report: December 2025'
 author: Jakub Oleksy
-canonical_url: https://github.blog/news-insights/company-news/github-availability-report-december-2025/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2026-01-14 22:06:49 +00:00
-permalink: /github-copilot/news/GitHub-Availability-Report-December-2025
 tags:
 - API Reliability
 - Availability Engineering

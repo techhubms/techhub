@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/devops/comments/1mfq8ri/long_running_celery_tasks_with_zero_downtime/
 title: Long Running Celery Tasks with Zero Downtime Updates
 author: Lazy_Economy_6851
-canonical_url: https://www.reddit.com/r/devops/comments/1mfq8ri/long_running_celery_tasks_with_zero_downtime/
 viewing_mode: external
 feed_name: Reddit DevOps
-feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-02 13:13:29 +00:00
-permalink: /devops/community/Long-Running-Celery-Tasks-with-Zero-Downtime-Updates
 tags:
 - Background Jobs
 - Blue Green Deployment

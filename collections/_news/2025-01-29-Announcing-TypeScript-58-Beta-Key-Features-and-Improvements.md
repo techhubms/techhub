@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-beta/
 title: 'Announcing TypeScript 5.8 Beta: Key Features and Improvements'
 author: Daniel Rosenwasser
-canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-beta/
 viewing_mode: external
 feed_name: Microsoft TypeScript Blog
-feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-01-29 18:51:38 +00:00
-permalink: /coding/news/Announcing-TypeScript-58-Beta-Key-Features-and-Improvements
 tags:
 - Checked Return Types
 - CommonJS

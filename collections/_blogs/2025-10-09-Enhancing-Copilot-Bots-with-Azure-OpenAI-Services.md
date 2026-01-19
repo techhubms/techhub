@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/enhancing-copilot-bots-with-azure-openai-services/
 title: Enhancing Copilot Bots with Azure OpenAI Services
 author: Dellenny
-canonical_url: https://dellenny.com/enhancing-copilot-bots-with-azure-openai-services/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-09 07:08:29 +00:00
-permalink: /ai/blogs/Enhancing-Copilot-Bots-with-Azure-OpenAI-Services
 tags:
 - AI Security
 - Assistants API

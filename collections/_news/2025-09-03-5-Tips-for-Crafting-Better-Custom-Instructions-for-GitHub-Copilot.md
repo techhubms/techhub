@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/5-tips-for-writing-better-custom-instructions-for-copilot/
 title: 5 Tips for Crafting Better Custom Instructions for GitHub Copilot
 author: Christopher Harrison
-canonical_url: https://github.blog/ai-and-ml/github-copilot/5-tips-for-writing-better-custom-instructions-for-copilot/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-09-03 16:00:00 +00:00
-permalink: /github-copilot/news/5-Tips-for-Crafting-Better-Custom-Instructions-for-GitHub-Copilot
 tags:
 - Agentic Workflows
 - AI & ML

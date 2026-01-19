@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=gv5fRtBk8IM
 title: 'Exploring GraphRAG: AI-Powered Graph Search for Security Data Analysis'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=gv5fRtBk8IM
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-26 18:29:14 +00:00
-permalink: /ai/videos/Exploring-GraphRAG-AI-Powered-Graph-Search-for-Security-Data-Analysis
 tags:
 - API Setup
 - Azure AI Foundry

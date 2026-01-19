@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/09/30/empowering-defenders-in-the-era-of-agentic-ai-with-microsoft-sentinel/
 title: Empowering Defenders in the Era of Agentic AI with Microsoft Sentinel
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/09/30/empowering-defenders-in-the-era-of-agentic-ai-with-microsoft-sentinel/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-30 14:18:32 +00:00
-permalink: /ai/news/Empowering-Defenders-in-the-Era-of-Agentic-AI-with-Microsoft-Sentinel
 tags:
 - Agentic AI
 - Automation

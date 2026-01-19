@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=xG3py56UBUo
 title: 'Understanding AI Agents: Turning Plain Language into Code Execution'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=xG3py56UBUo
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-02 17:36:29 +00:00
-permalink: /ai/videos/Understanding-AI-Agents-Turning-Plain-Language-into-Code-Execution
 tags:
 - AI Agent
 - AI Architecture

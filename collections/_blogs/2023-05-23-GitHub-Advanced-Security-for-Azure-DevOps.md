@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devopsjournal.io/blog/2023/05/23/GitHub-Advanced-Security-Azure-DevOps
 title: GitHub Advanced Security for Azure DevOps
 author: Rob Bos
-canonical_url: https://devopsjournal.io/blog/2023/05/23/GitHub-Advanced-Security-Azure-DevOps
 viewing_mode: external
 feed_name: Rob Bos' Blog
-feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2023-05-23 00:00:00 +00:00
-permalink: /azure/blogs/GitHub-Advanced-Security-for-Azure-DevOps
 tags:
 - Azure DevOps
 - Code Scanning

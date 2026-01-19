@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-onelake-as-a-source-for-copy-into-and-openrowset/
 title: OneLake Integration with COPY INTO and OPENROWSET Now in Microsoft Fabric Preview
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-onelake-as-a-source-for-copy-into-and-openrowset/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-31 09:00:00 +00:00
-permalink: /ml/news/OneLake-Integration-with-COPY-INTO-and-OPENROWSET-Now-in-Microsoft-Fabric-Preview
 tags:
 - COPY INTO
 - Cross Workspace Data Loads

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/tackling-the-devsecops-gap-in-software-understanding/?utm_source=rss&utm_medium=rss&utm_campaign=tackling-the-devsecops-gap-in-software-understanding
 title: Tackling the DevSecOps Gap in Software Understanding
 author: Alan Shimel
-canonical_url: https://devops.com/tackling-the-devsecops-gap-in-software-understanding/?utm_source=rss&utm_medium=rss&utm_campaign=tackling-the-devsecops-gap-in-software-understanding
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-22 02:45:22 +00:00
-permalink: /devops/blogs/Tackling-the-DevSecOps-Gap-in-Software-Understanding
 tags:
 - Artifact Traceability
 - Build Pipeline

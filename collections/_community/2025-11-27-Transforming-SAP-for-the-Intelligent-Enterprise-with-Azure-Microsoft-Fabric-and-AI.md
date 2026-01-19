@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/transforming-sap-for-the-intelligent-enterprise-with-azure/ba-p/4473309
 title: Transforming SAP for the Intelligent Enterprise with Azure, Microsoft Fabric, and AI
 author: srhulsus
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/transforming-sap-for-the-intelligent-enterprise-with-azure/ba-p/4473309
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-27 15:51:55 +00:00
-permalink: /ai/community/Transforming-SAP-for-the-Intelligent-Enterprise-with-Azure-Microsoft-Fabric-and-AI
 tags:
 - Azure AD
 - Azure API Management

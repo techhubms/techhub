@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-langchain-azure-storage-azure-storage-integrations/ba-p/4465268
 title: 'Introducing langchain-azure-storage: Azure Storage Integration with LangChain'
 author: kyleknapp
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-langchain-azure-storage-azure-storage-integrations/ba-p/4465268
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-30 16:00:00 +00:00
-permalink: /ai/community/Introducing-langchain-azure-storage-Azure-Storage-Integration-with-LangChain
 tags:
 - Authentication
 - Azure AI Search

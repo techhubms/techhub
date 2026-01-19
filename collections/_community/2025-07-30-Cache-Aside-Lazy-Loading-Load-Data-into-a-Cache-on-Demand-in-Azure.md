@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture/cache-aside-lazy-loading-load-data-into-a-cache-on-demand-in/m-p/4438103#M775
 title: 'Cache-Aside (Lazy Loading): Load Data into a Cache on Demand in Azure'
 author: JohnNaguib
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture/cache-aside-lazy-loading-load-data-into-a-cache-on-demand-in/m-p/4438103#M775
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-07-30 07:45:07 +00:00
-permalink: /azure/community/Cache-Aside-Lazy-Loading-Load-Data-into-a-Cache-on-Demand-in-Azure
 tags:
 - Application Design
 - Azure Cache For Redis

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-ignite-2025-update/ba-p/4469815
 title: 'Azure Functions Ignite 2025: Flex Consumption, MCP Servers, Agents, OpenTelemetry, and More'
 author: paulyuk
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-ignite-2025-update/ba-p/4469815
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:01:52 +00:00
-permalink: /ai/community/Azure-Functions-Ignite-2025-Flex-Consumption-MCP-Servers-Agents-OpenTelemetry-and-More
 tags:
 - .NET 10
 - Agentic Workloads

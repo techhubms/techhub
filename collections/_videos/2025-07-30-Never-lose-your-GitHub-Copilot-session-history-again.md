@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/hzjkGgkI9H8
 title: Never lose your GitHub Copilot session history again
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/hzjkGgkI9H8
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-30 14:01:12 +00:00
-permalink: /github-copilot/videos/Never-lose-your-GitHub-Copilot-session-history-again
 tags:
 - Code Documentation
 - Copilot Deep Dive

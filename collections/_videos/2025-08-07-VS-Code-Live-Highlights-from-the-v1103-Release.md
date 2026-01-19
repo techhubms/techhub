@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=EYMiry0gYQA
 title: 'VS Code Live: Highlights from the v1.103 Release'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=EYMiry0gYQA
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-07 17:44:15 +00:00
-permalink: /coding/videos/VS-Code-Live-Highlights-from-the-v1103-Release
 tags:
 - Code
 - Code Demo

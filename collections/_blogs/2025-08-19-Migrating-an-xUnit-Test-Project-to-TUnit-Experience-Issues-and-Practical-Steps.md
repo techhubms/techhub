@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/converting-an-xunit-project-to-tunit/
 title: 'Migrating an xUnit Test Project to TUnit: Experience, Issues, and Practical Steps'
 author: Andrew Lock
-canonical_url: https://andrewlock.net/converting-an-xunit-project-to-tunit/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-08-19 10:00:00 +00:00
-permalink: /coding/blogs/Migrating-an-xUnit-Test-Project-to-TUnit-Experience-Issues-and-Practical-Steps
 tags:
 - .NET
 - .NET Core

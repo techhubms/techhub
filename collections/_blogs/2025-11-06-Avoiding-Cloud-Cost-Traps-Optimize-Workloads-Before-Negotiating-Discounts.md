@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/the-most-destructive-cloud-cost-pitfall-discounts-before-optimization/
 title: 'Avoiding Cloud Cost Traps: Optimize Workloads Before Negotiating Discounts'
 author: Andrew Hillier
-canonical_url: https://devops.com/the-most-destructive-cloud-cost-pitfall-discounts-before-optimization/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-06 14:43:11 +00:00
-permalink: /devops/blogs/Avoiding-Cloud-Cost-Traps-Optimize-Workloads-Before-Negotiating-Discounts
 tags:
 - Autoscaling
 - Cloud

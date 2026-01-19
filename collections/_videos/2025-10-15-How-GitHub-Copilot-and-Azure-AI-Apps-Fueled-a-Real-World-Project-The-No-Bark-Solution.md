@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=UUcdEfk2G7o
 title: "How GitHub Copilot and Azure AI Apps Fueled a Real-World Project: The 'No Bark' Solution"
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=UUcdEfk2G7o
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-15 15:01:52 +00:00
-permalink: /github-copilot/videos/How-GitHub-Copilot-and-Azure-AI-Apps-Fueled-a-Real-World-Project-The-No-Bark-Solution
 tags:
 - AI Apps
 - AI Solutions

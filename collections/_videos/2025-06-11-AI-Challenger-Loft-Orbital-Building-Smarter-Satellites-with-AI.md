@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=lGtTnFlI6yA
 title: 'AI Challenger | Loft Orbital: Building Smarter Satellites with AI'
 author: Microsoft Cloud
-canonical_url: https://www.youtube.com/watch?v=lGtTnFlI6yA
 viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-06-11 08:57:55 +00:00
-permalink: /ai/videos/AI-Challenger-Loft-Orbital-Building-Smarter-Satellites-with-AI
 tags:
 - AI For Aerospace
 - AI Transformation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/building-application-with-gpt-oss-20b-with-ai-toolkit/ba-p/4441486
 title: Building Applications Locally with gpt-oss-20b and the AI Toolkit for VS Code
 author: kinfey
-canonical_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/building-application-with-gpt-oss-20b-with-ai-toolkit/ba-p/4441486
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-11 18:12:15 +00:00
-permalink: /ai/community/Building-Applications-Locally-with-gpt-oss-20b-and-the-AI-Toolkit-for-VS-Code
 tags:
 - Agent Builder
 - AI Agents

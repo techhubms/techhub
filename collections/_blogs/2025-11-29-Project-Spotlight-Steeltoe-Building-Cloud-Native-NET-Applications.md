@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dotnetfoundation.org/news-events/detail/project-spotlight-steeltoe
 title: 'Project Spotlight: Steeltoe – Building Cloud-Native .NET Applications'
 author: .NET Foundation News and Blog
-canonical_url: https://dotnetfoundation.org/news-events/detail/project-spotlight-steeltoe
 viewing_mode: external
 feed_name: .NET Foundation's Blog
-feed_url: https://dotnetfoundation.org/feeds/blog
 date: 2025-11-29 13:46:22 +00:00
-permalink: /coding/blogs/Project-Spotlight-Steeltoe-Building-Cloud-Native-NET-Applications
 tags:
 - .NET
 - Application Management

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/agent-factory-from-prototype-to-production-developer-tools-and-rapid-agent-development/
 title: 'Agent Factory: From Prototype to Production—Developer Tools and Rapid Agent Development'
 author: Yina Arenas
-canonical_url: https://azure.microsoft.com/en-us/blog/agent-factory-from-prototype-to-production-developer-tools-and-rapid-agent-development/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-03 15:00:00 +00:00
-permalink: /ai/news/Agent-Factory-From-Prototype-to-ProductionDeveloper-Tools-and-Rapid-Agent-Development
 tags:
 - A2A Protocol
 - Agent Development

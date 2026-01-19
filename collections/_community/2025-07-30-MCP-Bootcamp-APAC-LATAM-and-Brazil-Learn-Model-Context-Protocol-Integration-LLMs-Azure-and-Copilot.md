@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/mcp-bootcamp-apac-latam-and-brazil/ba-p/4435966
 title: 'MCP Bootcamp: APAC, LATAM, and Brazil – Learn Model Context Protocol Integration, LLMs, Azure, and Copilot'
 author: cynthiazanoni
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/mcp-bootcamp-apac-latam-and-brazil/ba-p/4435966
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-07-30 19:00:00 +00:00
-permalink: /github-copilot/community/MCP-Bootcamp-APAC-LATAM-and-Brazil-Learn-Model-Context-Protocol-Integration-LLMs-Azure-and-Copilot
 tags:
 - AI Engineering
 - Azure Container Apps

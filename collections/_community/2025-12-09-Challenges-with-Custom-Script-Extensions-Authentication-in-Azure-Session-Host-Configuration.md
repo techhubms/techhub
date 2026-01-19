@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/custom-script-extensions-and-session-host-configuration/m-p/4476435#M13956
 title: Challenges with Custom Script Extensions Authentication in Azure Session Host Configuration
 author: kristokruuser
-canonical_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/custom-script-extensions-and-session-host-configuration/m-p/4476435#M13956
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-09 13:51:03 +00:00
-permalink: /azure/community/Challenges-with-Custom-Script-Extensions-Authentication-in-Azure-Session-Host-Configuration
 tags:
 - Authentication
 - Azure Key Vault

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=U20tVialbao
 title: AI-Powered Automation and Multi-Agent Orchestration in Microsoft Foundry
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=U20tVialbao
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 15:47:30 +00:00
-permalink: /ai/videos/AI-Powered-Automation-and-Multi-Agent-Orchestration-in-Microsoft-Foundry
 tags:
 - Activity Protocol
 - Agent Framework

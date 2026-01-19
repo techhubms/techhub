@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/announcing-computer-use-tool-preview-in-azure-ai-foundry-agent-service/
 title: Announcing Computer Use Tool (Preview) in Azure AI Foundry Agent Service
 author: Linda Li
-canonical_url: https://devblogs.microsoft.com/foundry/announcing-computer-use-tool-preview-in-azure-ai-foundry-agent-service/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-09-16 15:00:45 +00:00
-permalink: /ai/news/Announcing-Computer-Use-Tool-Preview-in-Azure-AI-Foundry-Agent-Service
 tags:
 - Agent Service
 - Automation

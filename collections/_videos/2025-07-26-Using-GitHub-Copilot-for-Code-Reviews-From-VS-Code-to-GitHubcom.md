@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=xf65vxjNWdk
 title: Using GitHub Copilot for Code Reviews - From VS Code to GitHub.com
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=xf65vxjNWdk
 viewing_mode: internal
 feed_name: GitHub's Youtube channel
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-26 14:01:31 +00:00
-permalink: /github-copilot/videos/Using-GitHub-Copilot-for-Code-Reviews-From-VS-Code-to-GitHubcom
 tags:
 - AI Powered Code Review
 - Code Review Automation

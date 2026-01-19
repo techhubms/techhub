@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/devops/azure-devops-mcp-server-public-preview/
 title: 'Azure DevOps MCP Server Now in Public Preview: Integrating GitHub Copilot with DevOps Context'
 author: Dan Hellem
-canonical_url: https://devblogs.microsoft.com/devops/azure-devops-mcp-server-public-preview/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-06-17 18:40:23 +00:00
-permalink: /github-copilot/news/Azure-DevOps-MCP-Server-Now-in-Public-Preview-Integrating-GitHub-Copilot-with-DevOps-Context
 tags:
 - Agentic AI
 - Agile

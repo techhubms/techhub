@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/github-copilot-coding-agent-101-getting-started-with-agentic-workflows-on-github/
 title: Getting Started with GitHub Copilot Coding Agent and Agentic Workflows
 author: Alexandra Lietzke
-canonical_url: https://github.blog/ai-and-ml/github-copilot/github-copilot-coding-agent-101-getting-started-with-agentic-workflows-on-github/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-09-11 16:00:00 +00:00
-permalink: /github-copilot/news/Getting-Started-with-GitHub-Copilot-Coding-Agent-and-Agentic-Workflows
 tags:
 - Agentic Workflows
 - AI & ML

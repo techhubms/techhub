@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/its-time-announcing-the-microsoft-sql-community-conference/
 title: 'Announcing SQLCon: The Microsoft SQL Community Conference'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/its-time-announcing-the-microsoft-sql-community-conference/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-10 14:16:58 +00:00
-permalink: /ai/news/Announcing-SQLCon-The-Microsoft-SQL-Community-Conference
 tags:
 - AI Model Management
 - Azure Arc

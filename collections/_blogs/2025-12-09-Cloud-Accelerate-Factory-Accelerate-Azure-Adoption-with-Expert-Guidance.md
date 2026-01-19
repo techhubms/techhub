@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/12/cloud-accelerate-factory-accelerate-cloud-adoption-with-expert-guidance/
 title: 'Cloud Accelerate Factory: Accelerate Azure Adoption with Expert Guidance'
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/12/cloud-accelerate-factory-accelerate-cloud-adoption-with-expert-guidance/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-12-09 08:44:07 +00:00
-permalink: /azure/blogs/Cloud-Accelerate-Factory-Accelerate-Azure-Adoption-with-Expert-Guidance
 tags:
 - Azure Deployment
 - Azure Essentials

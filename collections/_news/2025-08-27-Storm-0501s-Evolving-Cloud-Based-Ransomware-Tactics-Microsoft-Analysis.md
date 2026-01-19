@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/08/27/storm-0501s-evolving-techniques-lead-to-cloud-based-ransomware/
 title: 'Storm-0501’s Evolving Cloud-Based Ransomware Tactics: Microsoft Analysis'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/08/27/storm-0501s-evolving-techniques-lead-to-cloud-based-ransomware/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-27 17:43:23 +00:00
-permalink: /azure/news/Storm-0501s-Evolving-Cloud-Based-Ransomware-Tactics-Microsoft-Analysis
 tags:
 - AADInternals
 - Active Directory

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/understanding-ai-prompts-writing-better-requests-for-copilot/
 title: 'Understanding AI Prompt Engineering: Writing Better Requests for GitHub Copilot'
 author: Dellenny
-canonical_url: https://dellenny.com/understanding-ai-prompts-writing-better-requests-for-copilot/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-01 08:08:59 +00:00
-permalink: /github-copilot/blogs/Understanding-AI-Prompt-Engineering-Writing-Better-Requests-for-GitHub-Copilot
 tags:
 - AI Best Practices
 - AI Prompts

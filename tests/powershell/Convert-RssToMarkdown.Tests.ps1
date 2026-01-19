@@ -271,7 +271,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{CANON
             # Check that the item was added to skipped entries
             $skippedEntries = Get-Content $script:TestSkippedEntriesPath | ConvertFrom-Json
             $skippedEntries | Should -HaveCount 1
-            $skippedEntries[0].canonical_url | Should -Be "https://example.com/test-article"
+            $skippedEntries[0].external_url | Should -Be "https://example.com/test-article"
             $skippedEntries[0].reason | Should -Be "Content blocked by safety filters"
         }
         
@@ -405,7 +405,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{CANON
             
             # Check that the first item was added to skipped entries
             $skippedEntries = Get-Content $script:TestSkippedEntriesPath | ConvertFrom-Json
-            $filteredEntry = $skippedEntries | Where-Object { $_.canonical_url -eq "https://example.com/filtered-article" }
+            $filteredEntry = $skippedEntries | Where-Object { $_.external_url -eq "https://example.com/filtered-article" }
             $filteredEntry | Should -Not -BeNullOrEmpty
             $filteredEntry.reason | Should -Be "Content blocked by safety filters"
         }
@@ -511,7 +511,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{CANON
             # Check that the item was added to skipped entries
             $skippedEntries = Get-Content $script:TestSkippedEntriesPath | ConvertFrom-Json
             $skippedEntries | Should -HaveCount 1
-            $skippedEntries[0].canonical_url | Should -Be "https://example.com/test-article"
+            $skippedEntries[0].external_url | Should -Be "https://example.com/test-article"
             $skippedEntries[0].reason | Should -Be "AI model response could not be parsed as JSON"
             
             # Verify that Save-AiApiResult was called for debugging purposes
@@ -528,7 +528,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{CANON
 ---
 title: "Old Title"
 date: 2024-12-01 10:00:00 +00:00
-canonical_url: "https://example.com/test-article"
+external_url: "https://example.com/test-article"
 author: "Old Author"
 section_names: ["ai"]
 tags: ["Old", "Tags"]
@@ -588,7 +588,7 @@ This is old content that should be replaced.
             
             # Verify new file has correct canonical URL
             $newContent = Get-Content $newFiles[0].FullName -Raw
-            $newContent | Should -Match 'canonical_url:\s*"?https://example\.com/test-article"?'
+            $newContent | Should -Match 'external_url:\s*"?https://example\.com/test-article"?'
             $newContent | Should -Match 'title:\s*"?New Updated Title"?'
         }
         
@@ -598,7 +598,7 @@ This is old content that should be replaced.
 ---
 title: "File That Will Be Removed"
 date: 2024-12-01 10:00:00 +00:00
-canonical_url: "https://example.com/test-article"
+external_url: "https://example.com/test-article"
 author: "Test Author"
 section_names: ["ai"]
 tags: ["Test"]
@@ -646,7 +646,7 @@ This file should be removed even if AI processing fails.
             # Entry should be added to skipped entries
             $skippedEntries = Get-Content $script:TestSkippedEntriesPath | ConvertFrom-Json
             $skippedEntries | Should -HaveCount 1
-            $skippedEntries[0].canonical_url | Should -Be "https://example.com/test-article"
+            $skippedEntries[0].external_url | Should -Be "https://example.com/test-article"
         }
         
         It "Should remove existing file with same canonical_url before creating new one" {
@@ -672,7 +672,7 @@ This file should be removed even if AI processing fails.
 ---
 title: "Old Title"
 date: 2024-12-01 10:00:00 +00:00
-canonical_url: "https://example.com/test-article"
+external_url: "https://example.com/test-article"
 author: "Old Author"
 section_names: ["ai"]
 tags: ["Old", "Tags"]
@@ -715,7 +715,7 @@ This is old content that should be replaced.
             
             # Verify new file has correct canonical URL
             $newContent = Get-Content $newFiles[0].FullName -Raw
-            $newContent | Should -Match 'canonical_url:\s*"?https://example\.com/test-article"?'
+            $newContent | Should -Match 'external_url:\s*"?https://example\.com/test-article"?'
             $newContent | Should -Match 'title:\s*"?New Updated Title"?'
         }
         
@@ -742,7 +742,7 @@ This is old content that should be replaced.
 ---
 title: "Different Article"
 date: 2024-12-01 10:00:00 +00:00
-canonical_url: "https://example.com/different-article"
+external_url: "https://example.com/different-article"
 author: "Different Author"
 section_names: ["ai"]
 tags: ["Different"]
@@ -754,7 +754,7 @@ This is a different article.
 ---
 title: "Target Article"
 date: 2024-12-01 11:00:00 +00:00
-canonical_url: "https://example.com/test-article"
+external_url: "https://example.com/test-article"
 author: "Target Author"
 section_names: ["ai"]
 tags: ["Target"]
@@ -824,7 +824,7 @@ This is the target article that should be removed.
             $malformedContent = @'
 ---
 title: "Malformed File"
-canonical_url: https://example.com/different-malformed-url
+external_url: https://example.com/different-malformed-url
 date: 2024-12-01
 invalid yaml here!!!
 author: "Test"
@@ -881,7 +881,7 @@ This file has malformed YAML but contains a different URL so should not be remov
 ---
 title: "Quoted URL Article"
 date: 2024-12-01 10:00:00 +00:00
-canonical_url: "https://example.com/test-article"
+external_url: "https://example.com/test-article"
 author: "Quoted Author"
 section_names: ["ai"]
 tags: ["Quoted"]
@@ -918,7 +918,7 @@ This has a quoted canonical URL.
 ---
 title: "Unquoted URL Article"
 date: 2024-12-01 10:00:00 +00:00
-canonical_url: https://example.com/unquoted-test-article
+external_url: https://example.com/unquoted-test-article
 author: "Unquoted Author"
 section_names: ["ai"]
 tags: ["Unquoted"]
@@ -1094,7 +1094,7 @@ Content
             $existingContent = @'
 ---
 title: "File To Remove"
-canonical_url: "https://example.com/test-article"
+external_url: "https://example.com/test-article"
 ---
 Content
 '@
@@ -1191,7 +1191,7 @@ Content
             # Check that processed entries was updated
             $processedEntries = Get-Content $script:TestProcessedEntriesPath | ConvertFrom-Json
             $processedEntries | Should -HaveCount 1
-            $processedEntries[0].canonical_url | Should -Be "https://example.com/short-article"
+            $processedEntries[0].external_url | Should -Be "https://example.com/short-article"
         }
 
         It "Should not fetch content for YouTube feeds even if description is short" {
@@ -1283,7 +1283,7 @@ Content
             # Check that processed entries was updated
             $processedEntries = Get-Content $script:TestProcessedEntriesPath | ConvertFrom-Json
             $processedEntries | Should -HaveCount 1
-            $processedEntries[0].canonical_url | Should -Be "https://www.reddit.com/r/test/comments/123456/reddit_post_about_ai"
+            $processedEntries[0].external_url | Should -Be "https://www.reddit.com/r/test/comments/123456/reddit_post_about_ai"
         }
 
         It "Should handle errors during AI processing gracefully" {

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/increase-security-for-azure-vms-trusted-launch-in-place-upgrade/ba-p/4440584
 title: 'Upgrade Azure VMs with Trusted Launch: In-Place Security Enhancement Now Available'
 author: AjKundnani
-canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/increase-security-for-azure-vms-trusted-launch-in-place-upgrade/ba-p/4440584
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-04 05:50:05 +00:00
-permalink: /azure/community/Upgrade-Azure-VMs-with-Trusted-Launch-In-Place-Security-Enhancement-Now-Available
 tags:
 - Azure Security Benchmark
 - Azure Virtual Machines

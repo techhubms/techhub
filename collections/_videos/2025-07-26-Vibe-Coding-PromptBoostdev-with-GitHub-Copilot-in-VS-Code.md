@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=NrIc3ytJQU4
 title: Vibe Coding PromptBoost.dev with GitHub Copilot in VS Code
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=NrIc3ytJQU4
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-07-26 04:19:42 +00:00
-permalink: /github-copilot/videos/Vibe-Coding-PromptBoostdev-with-GitHub-Copilot-in-VS-Code
 tags:
 - AI Development
 - Code Collaboration

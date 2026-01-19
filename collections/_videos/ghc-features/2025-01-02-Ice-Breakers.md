@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/ri8EG4-rM9A
 title: Ice Breakers
 author: Randy Pagels
-canonical_url: https://youtu.be/ri8EG4-rM9A
 date: 2025-01-02 11:21:13 +00:00
-permalink: /github-copilot/videos/Ice-Breakers
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Code
 - Templates

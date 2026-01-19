@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-december-2025-servicing-updates/
 title: .NET and .NET Framework December 2025 Servicing Updates Recap
 author: .NET Team, Tara Overfield
-canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-december-2025-servicing-updates/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-12-09 18:48:25 +00:00
-permalink: /coding/news/NET-and-NET-Framework-December-2025-Servicing-Updates-Recap
 tags:
 - .NET
 - .NET 10.0

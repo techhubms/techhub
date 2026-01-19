@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/blogs/2025/06/30/openSourceAIEditorFirstMilestone
 title: 'GitHub Copilot Chat Extension Goes Open Source: First Milestone for AI in VS Code'
 author: The VS Code team
-canonical_url: https://code.visualstudio.com/blogs/2025/06/30/openSourceAIEditorFirstMilestone
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-06-30 00:00:00 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-Chat-Extension-Goes-Open-Source-First-Milestone-for-AI-in-VS-Code
 tags:
 - Agent Mode
 - AI Editor

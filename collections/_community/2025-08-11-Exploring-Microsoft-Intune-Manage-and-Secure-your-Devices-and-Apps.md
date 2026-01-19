@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/events/exploring-microsoft-intune-manage-and-secure-your-devices-and/ec-p/4441982#M9
 title: 'Exploring Microsoft Intune: Manage and Secure your Devices and Apps'
 author: Pouya
-canonical_url: https://techcommunity.microsoft.com/t5/events/exploring-microsoft-intune-manage-and-secure-your-devices-and/ec-p/4441982#M9
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-11 05:58:39 +00:00
-permalink: /azure/community/Exploring-Microsoft-Intune-Manage-and-Secure-your-Devices-and-Apps
 tags:
 - Access Control
 - App Management

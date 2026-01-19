@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=cZoOmcbsX-4
 title: 'Azure Update - August 8, 2025: Major AKS, AI, Storage, and Security Announcements'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=cZoOmcbsX-4
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-08 12:09:46 +00:00
-permalink: /ai/videos/Azure-Update-August-8-2025-Major-AKS-AI-Storage-and-Security-Announcements
 tags:
 - AI Shell
 - AKS

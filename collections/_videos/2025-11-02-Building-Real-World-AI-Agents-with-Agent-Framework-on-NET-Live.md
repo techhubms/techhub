@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=1k2jyvmx3i0
 title: Building Real-World AI Agents with Agent Framework on .NET Live
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=1k2jyvmx3i0
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-02 20:11:45 +00:00
-permalink: /ai/videos/Building-Real-World-AI-Agents-with-Agent-Framework-on-NET-Live
 tags:
 - .NET
 - Agent Framework

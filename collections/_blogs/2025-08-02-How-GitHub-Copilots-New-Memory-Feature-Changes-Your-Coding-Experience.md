@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/copilot-now-remembers-you-heres-why-that-matters/
 title: How GitHub Copilot's New Memory Feature Changes Your Coding Experience
 author: Dellenny
-canonical_url: https://dellenny.com/copilot-now-remembers-you-heres-why-that-matters/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-02 09:49:32 +00:00
-permalink: /github-copilot/blogs/How-GitHub-Copilots-New-Memory-Feature-Changes-Your-Coding-Experience
 tags:
 - AI Pair Programmer
 - Code Completion

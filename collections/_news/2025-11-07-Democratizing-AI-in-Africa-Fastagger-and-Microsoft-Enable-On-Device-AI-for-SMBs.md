@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/emea/features/connecting-africa-to-opportunities-by-closing-the-digital-divide/
 title: 'Democratizing AI in Africa: Fastagger and Microsoft Enable On-Device AI for SMBs'
 author: stclarke
-canonical_url: https://news.microsoft.com/source/emea/features/connecting-africa-to-opportunities-by-closing-the-digital-divide/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-07 14:02:38 +00:00
-permalink: /ai/news/Democratizing-AI-in-Africa-Fastagger-and-Microsoft-Enable-On-Device-AI-for-SMBs
 tags:
 - Africa Transformation Office
 - AUNI System

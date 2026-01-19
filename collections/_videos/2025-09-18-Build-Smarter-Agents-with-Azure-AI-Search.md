@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=uU0Fyde1yFo
 title: Build Smarter Agents with Azure AI Search
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=uU0Fyde1yFo
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-18 07:00:52 +00:00
-permalink: /ai/videos/Build-Smarter-Agents-with-Azure-AI-Search
 tags:
 - Agentic AI
 - Azure AI Foundry

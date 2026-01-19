@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/building-the-frontier-firm-with-microsoft-azure-the-business-case-for-cloud-and-ai-modernization/
 title: 'Building the Frontier Firm with Microsoft Azure: The Business Case for Cloud and AI Modernization'
 author: Mike Hulme
-canonical_url: https://azure.microsoft.com/en-us/blog/building-the-frontier-firm-with-microsoft-azure-the-business-case-for-cloud-and-ai-modernization/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-18 21:00:00 +00:00
-permalink: /ai/news/Building-the-Frontier-Firm-with-Microsoft-Azure-The-Business-Case-for-Cloud-and-AI-Modernization
 tags:
 - AI + Machine Learning
 - AI At Scale

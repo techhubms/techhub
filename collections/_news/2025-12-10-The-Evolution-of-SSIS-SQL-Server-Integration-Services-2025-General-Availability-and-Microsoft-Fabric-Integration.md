@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/the-evolution-of-sql-server-integration-services-ssis-ssis-2025-generally-available/
 title: 'The Evolution of SSIS: SQL Server Integration Services 2025 General Availability and Microsoft Fabric Integration'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/the-evolution-of-sql-server-integration-services-ssis-ssis-2025-generally-available/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-10 13:32:43 +00:00
-permalink: /ml/news/The-Evolution-of-SSIS-SQL-Server-Integration-Services-2025-General-Availability-and-Microsoft-Fabric-Integration
 tags:
 - Azure Data Factory
 - Change Data Capture

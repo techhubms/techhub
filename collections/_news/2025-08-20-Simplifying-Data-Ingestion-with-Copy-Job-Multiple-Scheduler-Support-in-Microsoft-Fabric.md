@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-multiple-scheduler-support/
 title: 'Simplifying Data Ingestion with Copy Job: Multiple Scheduler Support in Microsoft Fabric'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-multiple-scheduler-support/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-20 09:00:00 +00:00
-permalink: /ml/news/Simplifying-Data-Ingestion-with-Copy-Job-Multiple-Scheduler-Support-in-Microsoft-Fabric
 tags:
 - Bulk Copy
 - CI/CD

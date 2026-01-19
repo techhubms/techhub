@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dotnetfoundation.org/news-events/detail/license-compatibility-guide
 title: .NET Foundation License Compatibility Guide
 author: .NET Foundation News and Blog
-canonical_url: https://dotnetfoundation.org/news-events/detail/license-compatibility-guide
 viewing_mode: external
 feed_name: .NET Foundation's Blog
-feed_url: https://dotnetfoundation.org/feeds/blog
 date: 2025-10-12 02:22:03 +00:00
-permalink: /coding/blogs/NET-Foundation-License-Compatibility-Guide
 tags:
 - .NET Foundation
 - Apache License 2.0

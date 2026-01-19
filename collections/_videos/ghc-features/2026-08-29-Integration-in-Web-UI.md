@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: ''
 title: Integration in Web UI
 author: TBD
-canonical_url: ''
 date: 2026-08-29 09:39:31 +00:00
-permalink: /github-copilot/videos/Integration-in-Web-UI
 viewing_mode: internal
-section: github-copilot
 ghes_support: false
 plans:
 - Free
-alt-collection: features
 tags: []
 section_names:
 - ai

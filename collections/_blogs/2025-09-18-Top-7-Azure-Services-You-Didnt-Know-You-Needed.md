@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/top-7-azure-services-you-didnt-know-you-needed/
 title: Top 7 Azure Services You Didn’t Know You Needed
 author: Dellenny
-canonical_url: https://dellenny.com/top-7-azure-services-you-didnt-know-you-needed/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-18 10:55:59 +00:00
-permalink: /azure/blogs/Top-7-Azure-Services-You-Didnt-Know-You-Needed
 tags:
 - Application Insights
 - Azure App Configuration

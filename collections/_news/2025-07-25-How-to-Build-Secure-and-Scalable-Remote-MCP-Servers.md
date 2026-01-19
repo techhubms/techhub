@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/generative-ai/how-to-build-secure-and-scalable-remote-mcp-servers/
 title: How to Build Secure and Scalable Remote MCP Servers
 author: Den Delimarsky
-canonical_url: https://github.blog/ai-and-ml/generative-ai/how-to-build-secure-and-scalable-remote-mcp-servers/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-07-25 17:12:02 +00:00
-permalink: /ai/news/How-to-Build-Secure-and-Scalable-Remote-MCP-Servers
 tags:
 - AI & ML
 - AI Agents

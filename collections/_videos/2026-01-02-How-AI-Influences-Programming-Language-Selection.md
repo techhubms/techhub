@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/pzF4D7juXbM
 title: How AI Influences Programming Language Selection
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/pzF4D7juXbM
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2026-01-02 15:01:42 +00:00
-permalink: /ai/videos/How-AI-Influences-Programming-Language-Selection
 tags:
 - AI Assisted Development
 - Code Generation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/lets-learn-mcp-series-recap-8-languages-4-code-bases-full-resources
 title: 'Let’s Learn MCP Series Recap: 8 Languages, 4 Code Bases, Full Resources'
 author: Katie Savage
-canonical_url: https://devblogs.microsoft.com/blog/lets-learn-mcp-series-recap-8-languages-4-code-bases-full-resources
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-07-28 16:00:02 +00:00
-permalink: /ai/news/Lets-Learn-MCP-Series-Recap-8-Languages-4-Code-Bases-Full-Resources
 tags:
 - AI Agents
 - C#

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/11/commvault-shift-virtual-a-new-era-of-ai-driven-cyber-resilience-on-demand/
 title: 'Commvault SHIFT Virtual: AI and Cyber Resilience Insights for Microsoft Identity and Cloud'
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/11/commvault-shift-virtual-a-new-era-of-ai-driven-cyber-resilience-on-demand/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-11-24 08:29:00 +00:00
-permalink: /ai/blogs/Commvault-SHIFT-Virtual-AI-and-Cyber-Resilience-Insights-for-Microsoft-Identity-and-Cloud
 tags:
 - Active Directory Recovery
 - AI Driven Security

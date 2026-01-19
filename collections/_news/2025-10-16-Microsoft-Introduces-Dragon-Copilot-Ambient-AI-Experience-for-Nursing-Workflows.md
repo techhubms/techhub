@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.linkedin.com/posts/satyanadella_no-question-that-nurses-are-the-heartbeat-activity-7384590573808234496-aaYh
 title: Microsoft Introduces Dragon Copilot Ambient AI Experience for Nursing Workflows
 author: stclarke
-canonical_url: https://www.linkedin.com/posts/satyanadella_no-question-that-nurses-are-the-heartbeat-activity-7384590573808234496-aaYh
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-16 15:11:05 +00:00
-permalink: /ai/news/Microsoft-Introduces-Dragon-Copilot-Ambient-AI-Experience-for-Nursing-Workflows
 tags:
 - AI Automation
 - Ambient Clinical Documentation

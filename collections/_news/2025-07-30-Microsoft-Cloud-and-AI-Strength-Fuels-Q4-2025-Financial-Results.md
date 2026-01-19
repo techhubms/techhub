@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/Investor/earnings/FY-2025-Q4/press-release-webcast
 title: Microsoft Cloud and AI Strength Fuels Q4 2025 Financial Results
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/Investor/earnings/FY-2025-Q4/press-release-webcast
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-30 20:10:38 +00:00
-permalink: /ai/news/Microsoft-Cloud-and-AI-Strength-Fuels-Q4-2025-Financial-Results
 tags:
 - Cloud Revenue
 - Company News

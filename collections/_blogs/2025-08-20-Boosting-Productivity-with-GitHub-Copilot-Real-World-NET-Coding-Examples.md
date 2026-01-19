@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/boosting-productivity-with-github-copilot-real-world-net-coding-examples/
 title: 'Boosting Productivity with GitHub Copilot: Real-World .NET Coding Examples'
 author: Dellenny
-canonical_url: https://dellenny.com/boosting-productivity-with-github-copilot-real-world-net-coding-examples/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-20 07:58:07 +00:00
-permalink: /github-copilot/blogs/Boosting-Productivity-with-GitHub-Copilot-Real-World-NET-Coding-Examples
 tags:
 - .NET
 - AI Pair Programmer

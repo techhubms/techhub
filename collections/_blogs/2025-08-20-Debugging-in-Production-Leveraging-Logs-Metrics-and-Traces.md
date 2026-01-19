@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/debugging-in-production-leveraging-logs-metrics-and-traces/?utm_source=rss&utm_medium=rss&utm_campaign=debugging-in-production-leveraging-logs-metrics-and-traces
 title: 'Debugging in Production: Leveraging Logs, Metrics and Traces'
 author: Neel Shah
-canonical_url: https://devops.com/debugging-in-production-leveraging-logs-metrics-and-traces/?utm_source=rss&utm_medium=rss&utm_campaign=debugging-in-production-leveraging-logs-metrics-and-traces
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-20 06:00:17 +00:00
-permalink: /devops/blogs/Debugging-in-Production-Leveraging-Logs-Metrics-and-Traces
 tags:
 - Alerting
 - Automation

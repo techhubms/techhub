@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/connect-once-integrate-anywhere-with-mcps
 title: 'Connect Once, Integrate Anywhere: Model Context Protocol (MCP) for AI Integration'
 author: Maria Naggaga
-canonical_url: https://devblogs.microsoft.com/blog/connect-once-integrate-anywhere-with-mcps
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-05-21 17:00:09 +00:00
-permalink: /github-copilot/news/Connect-Once-Integrate-Anywhere-Model-Context-Protocol-MCP-for-AI-Integration
 tags:
 - Agent Mode
 - AI Integration

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-february-2025/
 title: Azure SDK Release Highlights and Notes for February 2025
 author: Hector Norzagaray
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-february-2025/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-02-26 19:09:17 +00:00
-permalink: /coding/news/Azure-SDK-Release-Highlights-and-Notes-for-February-2025
 tags:
 - .NET
 - Android

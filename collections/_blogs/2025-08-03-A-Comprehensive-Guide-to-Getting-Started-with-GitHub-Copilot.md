@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/a-comprehensive-guide-to-getting-started-with-github-copilot-for-end-users/
 title: A Comprehensive Guide to Getting Started with GitHub Copilot
 author: Dellenny
-canonical_url: https://dellenny.com/a-comprehensive-guide-to-getting-started-with-github-copilot-for-end-users/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-03 08:24:29 +00:00
-permalink: /github-copilot/blogs/A-Comprehensive-Guide-to-Getting-Started-with-GitHub-Copilot
 tags:
 - AI Coding Assistant
 - AI Programming

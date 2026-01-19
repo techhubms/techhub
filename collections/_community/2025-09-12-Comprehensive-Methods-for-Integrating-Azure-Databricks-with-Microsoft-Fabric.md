@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/approaches-to-integrating-azure-databricks-with-microsoft-fabric/ba-p/4453643
 title: Comprehensive Methods for Integrating Azure Databricks with Microsoft Fabric
 author: Rafia_Aqil
-canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/approaches-to-integrating-azure-databricks-with-microsoft-fabric/ba-p/4453643
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-12 21:43:27 +00:00
-permalink: /ml/community/Comprehensive-Methods-for-Integrating-Azure-Databricks-with-Microsoft-Fabric
 tags:
 - Azure Databricks
 - Data Engineering

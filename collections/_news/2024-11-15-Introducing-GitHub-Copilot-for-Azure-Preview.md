@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/blogs/2024/11/15/introducing-github-copilot-for-azure
 title: Introducing GitHub Copilot for Azure (Preview)
 author: Chris Harris
-canonical_url: https://code.visualstudio.com/blogs/2024/11/15/introducing-github-copilot-for-azure
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2024-11-15 00:00:00 +00:00
-permalink: /github-copilot/news/Introducing-GitHub-Copilot-for-Azure-Preview
 tags:
 - Application Deployment
 - Azure AI Search

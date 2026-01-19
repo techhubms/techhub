@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/09/24/retail-at-risk-how-one-alert-uncovered-a-persistent-cyberthreat/
 title: 'Retail at Risk: How a Single Alert Uncovered a Major Cyberthreat'
 author: Microsoft Incident Response
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/09/24/retail-at-risk-how-one-alert-uncovered-a-persistent-cyberthreat/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-09-24 17:00:00 +00:00
-permalink: /azure/news/Retail-at-Risk-How-a-Single-Alert-Uncovered-a-Major-Cyberthreat
 tags:
 - Attack Detection
 - Azure Virtual Desktop

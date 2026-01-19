@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/elevating-microsoft-fabric-with-new-isv-solutions/
 title: Partner Integrations Boost Microsoft Fabric for AI and Analytics
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/elevating-microsoft-fabric-with-new-isv-solutions/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
-permalink: /ai/news/Partner-Integrations-Boost-Microsoft-Fabric-for-AI-and-Analytics
 tags:
 - AI Agents
 - Apache Iceberg

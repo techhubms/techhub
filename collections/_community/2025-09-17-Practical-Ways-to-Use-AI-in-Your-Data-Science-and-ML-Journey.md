@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/practical-ways-to-use-ai-in-your-data-science-and-ml-journey/ba-p/4454764
 title: Practical Ways to Use AI in Your Data Science and ML Journey
 author: bethanyjep
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/practical-ways-to-use-ai-in-your-data-science-and-ml-journey/ba-p/4454764
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-17 12:52:18 +00:00
-permalink: /github-copilot/community/Practical-Ways-to-Use-AI-in-Your-Data-Science-and-ML-Journey
 tags:
 - AI Agents
 - Azure AI Foundry

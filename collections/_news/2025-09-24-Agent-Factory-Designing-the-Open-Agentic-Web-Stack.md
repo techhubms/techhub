@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/agent-factory-designing-the-open-agentic-web-stack/
 title: 'Agent Factory: Designing the Open Agentic Web Stack'
 author: Yina Arenas and Ulrich Homann
-canonical_url: https://azure.microsoft.com/en-us/blog/agent-factory-designing-the-open-agentic-web-stack/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-24 15:00:00 +00:00
-permalink: /ai/news/Agent-Factory-Designing-the-Open-Agentic-Web-Stack
 tags:
 - A2A Protocol
 - Agent Factory

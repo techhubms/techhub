@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=vsfbYJF2las
 title: 'From Building to Fine-Tuning: Coding Agents that Optimize AI Workflows'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=vsfbYJF2las
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-04 18:19:47 +00:00
-permalink: /ai/videos/From-Building-to-Fine-Tuning-Coding-Agents-that-Optimize-AI-Workflows
 tags:
 - Agent Orchestration
 - AI Engineering

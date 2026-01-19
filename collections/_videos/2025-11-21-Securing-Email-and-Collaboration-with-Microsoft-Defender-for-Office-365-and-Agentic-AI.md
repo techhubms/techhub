@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=VZiUn_Nwd5Q
 title: Securing Email and Collaboration with Microsoft Defender for Office 365 and Agentic AI
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=VZiUn_Nwd5Q
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 15:18:42 +00:00
-permalink: /ai/videos/Securing-Email-and-Collaboration-with-Microsoft-Defender-for-Office-365-and-Agentic-AI
 tags:
 - Agentic AI
 - Collaboration Security

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-25-secrets-in-unlisted-github-gists-are-now-reported-to-secret-scanning-partners
 title: GitHub Now Reports Leaked Secrets in Unlisted Gists to Scanning Partners
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-25-secrets-in-unlisted-github-gists-are-now-reported-to-secret-scanning-partners
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-25 17:50:17 +00:00
-permalink: /devops/news/GitHub-Now-Reports-Leaked-Secrets-in-Unlisted-Gists-to-Scanning-Partners
 tags:
 - Application Security
 - AWS

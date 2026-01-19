@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-preview-of-new-azure-dasv7-easv7-fasv7-series-vms/ba-p/4448360
 title: Announcing Preview of New Azure Dasv7, Easv7, and Fasv7-Series VMs Based on 5th Gen AMD EPYC™ ‘Turin’ Processors
 author: ArpitaChatterjee
-canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-preview-of-new-azure-dasv7-easv7-fasv7-series-vms/ba-p/4448360
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-09 13:36:43 +00:00
-permalink: /azure/community/Announcing-Preview-of-New-Azure-Dasv7-Easv7-and-Fasv7-Series-VMs-Based-on-5th-Gen-AMD-EPYC-Turin-Processors
 tags:
 - AMD EPYC
 - Azure Boost

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-cni-overlay-for-application-gateway-for-containers-and/ba-p/4449350
 title: 'General Availability: Azure CNI Overlay for Application Gateway for Containers and AGIC'
 author: jonw
-canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-cni-overlay-for-application-gateway-for-containers-and/ba-p/4449350
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-29 16:12:02 +00:00
-permalink: /azure/community/General-Availability-Azure-CNI-Overlay-for-Application-Gateway-for-Containers-and-AGIC
 tags:
 - AKS
 - Application Gateway For Containers

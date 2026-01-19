@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/jKViNM42u9M
 title: Building AI Agents with Semantic Kernel, MCP Servers, and Python
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/shorts/jKViNM42u9M
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-15 16:15:45 +00:00
-permalink: /ai/videos/Building-AI-Agents-with-Semantic-Kernel-MCP-Servers-and-Python
 tags:
 - Agent Workflows
 - AI Agents

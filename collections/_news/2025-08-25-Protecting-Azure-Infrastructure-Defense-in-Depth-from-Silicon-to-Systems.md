@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/protecting-azure-infrastructure-from-silicon-to-systems/
 title: 'Protecting Azure Infrastructure: Defense-in-Depth from Silicon to Systems'
 author: Mark Russinovich, Omar Khan and Bryan Kelly
-canonical_url: https://azure.microsoft.com/en-us/blog/protecting-azure-infrastructure-from-silicon-to-systems/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-25 15:00:00 +00:00
-permalink: /azure/news/Protecting-Azure-Infrastructure-Defense-in-Depth-from-Silicon-to-Systems
 tags:
 - AI
 - AI Infrastructure Security

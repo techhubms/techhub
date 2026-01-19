@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=AHgVlvPnpyk
 title: Supercharge Your SQL Development with Modern .NET | On .NET Live
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=AHgVlvPnpyk
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-04 17:33:57 +00:00
-permalink: /ml/videos/Supercharge-Your-SQL-Development-with-Modern-NET-On-NET-Live
 tags:
 - .NET
 - Build Validation

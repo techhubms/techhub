@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.arresteddevops.com/digging-into-security/
 title: Digging Into Security With Kat Cosgrove
 author: Arrested DevOps
-canonical_url: https://www.arresteddevops.com/digging-into-security/
 viewing_mode: external
 feed_name: Arrested DevOps
-feed_url: https://www.arresteddevops.com/episode/index.xml
 date: 2025-08-25 17:22:54 +00:00
-permalink: /devops/blogs/Digging-Into-Security-With-Kat-Cosgrove
 tags:
 - Cloud Native
 - Compliance

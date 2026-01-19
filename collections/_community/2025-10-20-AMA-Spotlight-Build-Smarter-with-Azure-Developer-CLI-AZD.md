@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ama-spotlight-build-smarter-with-azure-developer-cli-azd/ba-p/4462308
 title: "AMA Spotlight: Build Smarter with Azure Developer CLI 'AZD'"
 author: Lee_Stott
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ama-spotlight-build-smarter-with-azure-developer-cli-azd/ba-p/4462308
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-20 07:00:00 +00:00
-permalink: /ai/community/AMA-Spotlight-Build-Smarter-with-Azure-Developer-CLI-AZD
 tags:
 - Azd
 - Azure AI Foundry

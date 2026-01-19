@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-sql-blog/higher-log-rate-for-business-critical-service-tier-in-azure-sql/ba-p/4444127
 title: Higher Log Rate Enhancement in Azure SQL Managed Instance's Business Critical Tier
 author: UrosMilanovic
-canonical_url: https://techcommunity.microsoft.com/t5/azure-sql-blog/higher-log-rate-for-business-critical-service-tier-in-azure-sql/ba-p/4444127
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-15 12:49:40 +00:00
-permalink: /azure/community/Higher-Log-Rate-Enhancement-in-Azure-SQL-Managed-Instances-Business-Critical-Tier
 tags:
 - Azure SQL
 - Azure SQL Managed Instance

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-3-0-achieves-level-1-cis-benchmark-certification/ba-p/4450410
 title: Azure Linux 3.0 Achieves Level 1 CIS Benchmark Certification
 author: Sudhanva
-canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-3-0-achieves-level-1-cis-benchmark-certification/ba-p/4450410
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-02 16:28:04 +00:00
-permalink: /azure/community/Azure-Linux-30-Achieves-Level-1-CIS-Benchmark-Certification
 tags:
 - AKS
 - Azure Linux 3.0

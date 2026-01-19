@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/kong-adds-mcp-support-to-tool-for-designing-and-testing-apis/
 title: Kong Adds Model Context Protocol Support to Insomnia API Tool
 author: Mike Vizard
-canonical_url: https://devops.com/kong-adds-mcp-support-to-tool-for-designing-and-testing-apis/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-04 14:00:36 +00:00
-permalink: /ai/blogs/Kong-Adds-Model-Context-Protocol-Support-to-Insomnia-API-Tool
 tags:
 - AI APIs
 - AI Security

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=wc2y1HS2a4I
 title: 'The Download: Git 2.52, Gemini 3, GitHub Copilot Updates & Agent 365'
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=wc2y1HS2a4I
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-21 18:18:02 +00:00
-permalink: /github-copilot/videos/The-Download-Git-252-Gemini-3-GitHub-Copilot-Updates-and-Agent-365
 tags:
 - AI Integration
 - Developer Tools

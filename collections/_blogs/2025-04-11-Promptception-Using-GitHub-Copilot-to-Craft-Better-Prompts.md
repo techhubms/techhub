@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/promptception-improve-prompts-with-copilot.html
 title: 'Promptception: Using GitHub Copilot to Craft Better Prompts'
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/promptception-improve-prompts-with-copilot.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-04-11 00:00:00 +00:00
-permalink: /github-copilot/blogs/Promptception-Using-GitHub-Copilot-to-Craft-Better-Prompts
 tags:
 - Async Await
 - Code Review

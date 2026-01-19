@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/agent-factory-connecting-agents-apps-and-data-with-new-open-standards-like-mcp-and-a2a/
 title: 'Agent Factory: Connecting Agents, Apps, and Data with Open Standards (MCP, A2A)'
 author: Yina Arenas
-canonical_url: https://azure.microsoft.com/en-us/blog/agent-factory-connecting-agents-apps-and-data-with-new-open-standards-like-mcp-and-a2a/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-10 15:00:00 +00:00
-permalink: /ai/news/Agent-Factory-Connecting-Agents-Apps-and-Data-with-Open-Standards-MCP-A2A
 tags:
 - A2A
 - Agent Factory

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/ai-azure-ai-services/doc-intelligence-custom-extraction-model-confidence-score/m-p/4435860#M1270
 title: Confidence Score Decline in Document Intelligence Custom Extraction Models with New Layouts
 author: aristotelisc
-canonical_url: https://techcommunity.microsoft.com/t5/ai-azure-ai-services/doc-intelligence-custom-extraction-model-confidence-score/m-p/4435860#M1270
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI
 date: 2025-07-23 15:35:47 +00:00
-permalink: /ai/community/Confidence-Score-Decline-in-Document-Intelligence-Custom-Extraction-Models-with-New-Layouts
 tags:
 - Azure AI
 - Azure Document Intelligence

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/how-devops-is-evolving-for-the-age-of-intelligent-automation/
 title: How DevOps Is Evolving for the Age of Intelligent Automation
 author: Alan Shimel
-canonical_url: https://devops.com/how-devops-is-evolving-for-the-age-of-intelligent-automation/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-23 18:56:50 +00:00
-permalink: /ai/blogs/How-DevOps-Is-Evolving-for-the-Age-of-Intelligent-Automation
 tags:
 - AI Governance
 - AI Observability

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/the-open-source-paradox-how-microsoft-is-giving-back/ba-p/4458630
 title: "Microsoft's Role in Open-Source Sustainability: From Kernel to Copilot at All Things Open 2025"
 author: LachlanEvenson
-canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/the-open-source-paradox-how-microsoft-is-giving-back/ba-p/4458630
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-02 17:45:28 +00:00
-permalink: /github-copilot/community/Microsofts-Role-in-Open-Source-Sustainability-From-Kernel-to-Copilot-at-All-Things-Open-2025
 tags:
 - AI Agents
 - AKS Automatic

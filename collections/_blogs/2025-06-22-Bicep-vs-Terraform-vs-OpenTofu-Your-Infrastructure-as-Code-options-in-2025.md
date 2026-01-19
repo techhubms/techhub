@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://hiddedesmet.com/bicep-vs-terraform-the-iac-showdown
 title: 'Bicep vs Terraform vs OpenTofu: Your Infrastructure as Code Options in 2025'
 author: Hidde de Smet
-canonical_url: https://hiddedesmet.com/bicep-vs-terraform-the-iac-showdown
 viewing_mode: external
 feed_name: Hidde de Smet's Blog
-feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-06-22 09:00:00 +00:00
-permalink: /azure/blogs/Bicep-vs-Terraform-vs-OpenTofu-Your-Infrastructure-as-Code-options-in-2025
 tags:
 - ARM Templates
 - Bicep

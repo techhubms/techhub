@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/asia/features/with-microsoft-agent-365-one-startup-furthers-goal-of-making-ai-agents-more-intuitive/
 title: Integrating Genspark Agents with Microsoft Agent 365 for Secure Enterprise AI Workflows
 author: trith
-canonical_url: https://news.microsoft.com/source/asia/features/with-microsoft-agent-365-one-startup-furthers-goal-of-making-ai-agents-more-intuitive/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-18 16:13:42 +00:00
-permalink: /ai/news/Integrating-Genspark-Agents-with-Microsoft-Agent-365-for-Secure-Enterprise-AI-Workflows
 tags:
 - AI Agents
 - Automation

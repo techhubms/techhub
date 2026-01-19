@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=sNDZO9N4m9Y
 title: Build your first MCP server
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=sNDZO9N4m9Y
 viewing_mode: internal
 feed_name: Microsoft Build 2025 YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:01:25 +00:00
-permalink: /ai/videos/Build-your-first-MCP-server
 tags:
 - AI Toolkit
 - C#

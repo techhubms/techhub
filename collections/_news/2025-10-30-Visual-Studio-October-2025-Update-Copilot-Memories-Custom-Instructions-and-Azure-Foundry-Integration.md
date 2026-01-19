@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-october-update/
 title: 'Visual Studio October 2025 Update: Copilot Memories, Custom Instructions, and Azure Foundry Integration'
 author: Jessie Houghton
-canonical_url: https://devblogs.microsoft.com/visualstudio/visual-studio-october-update/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-10-30 12:00:36 +00:00
-permalink: /github-copilot/news/Visual-Studio-October-2025-Update-Copilot-Memories-Custom-Instructions-and-Azure-Foundry-Integration
 tags:
 - Agentic Workflows
 - AI Integration

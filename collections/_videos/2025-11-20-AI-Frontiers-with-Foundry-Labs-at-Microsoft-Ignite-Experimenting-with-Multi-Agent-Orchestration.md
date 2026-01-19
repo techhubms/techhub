@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=kyb-ZISRa48
 title: 'AI Frontiers with Foundry Labs at Microsoft Ignite: Experimenting with Multi-Agent Orchestration'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=kyb-ZISRa48
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 16:34:55 +00:00
-permalink: /ai/videos/AI-Frontiers-with-Foundry-Labs-at-Microsoft-Ignite-Experimenting-with-Multi-Agent-Orchestration
 tags:
 - 3D Object Generation
 - Agent Factory

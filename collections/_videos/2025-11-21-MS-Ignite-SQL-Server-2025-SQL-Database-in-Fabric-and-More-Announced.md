@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=-6RoQm6Wwyo
 title: 'MS Ignite: SQL Server 2025, SQL Database in Fabric, and More Announced'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=-6RoQm6Wwyo
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-21 20:06:07 +00:00
-permalink: /ml/videos/MS-Ignite-SQL-Server-2025-SQL-Database-in-Fabric-and-More-Announced
 tags:
 - Azure SQL
 - Azure SQL DB

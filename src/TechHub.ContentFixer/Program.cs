@@ -14,10 +14,16 @@ namespace TechHub.ContentFixer;
 /// - Rename 'categories' to 'section_names' and normalize values
 /// - Remove 'tags_normalized' frontmatter field
 /// - Remove 'excerpt_separator' frontmatter field
-/// - Fix permalinks to include /primarySection/collection/ prefix
+/// - Remove 'youtube_id' frontmatter field (obsolete - extracted from content at runtime)
+/// - Remove 'layout' frontmatter field (not used in .NET implementation)
+/// - Rename 'canonical_url' to 'external_url'
+/// - Remove 'feed_url' frontmatter field (dynamic)
+/// - Remove 'permalink' frontmatter field (built dynamically from collection + primary section + slug)
+/// - Remove 'alt_collection' and 'alt-collection' frontmatter fields (collection derived from directory path)
+/// - Remove 'section' frontmatter field (singular - replaced by section_names)
 /// - Remove 'description' field from frontmatter
 /// - Replace template variables ({{ page.variable }}) with actual values
-/// - Expand template variables inside tags ({% youtube page.youtube_id %} → {% youtube VIDEO_ID %})
+/// - Expand template variables inside tags ({% youtube page.variable %} → {% youtube VALUE %})
 /// - Remove {% raw %} and {% endraw %} tags
 /// - Process {{ "/path" | relative_url }} filters
 /// - Keep {% youtube VIDEO_ID %} tags intact (will be processed at runtime)
@@ -294,36 +300,73 @@ internal sealed class Program
             changed = true;
         }
 
-        // 5. Fix permalink to include /section/collection/ prefix
-        if (frontMatter.TryGetValue("permalink", out var permalinkObj))
+        // 4b. Remove youtube_id (obsolete - extracted from content at runtime)
+        if (frontMatter.Remove("youtube_id"))
         {
-            var permalink = permalinkObj?.ToString() ?? string.Empty;
-
-            // Check if already has section/collection prefix (idempotent)
-            if (!Regex.IsMatch(permalink, @"^/[^/]+/[^/]+/"))
-            {
-                var filename = permalink.TrimStart('/').Replace(".html", "", StringComparison.Ordinal);
-                var slug = Regex.Replace(filename, @"^\d{4}-\d{2}-\d{2}-", "");
-
-                var sectionNames = GetListValue(frontMatter, "section_names");
-                var primarySection = SectionPriorityHelper.GetPrimarySectionUrl(sectionNames, collection);
-
-                var newPermalink = $"/{primarySection}/{collection}/{slug}";
-                frontMatter["permalink"] = newPermalink;
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"  ✓ Fixed permalink: {permalink} → {newPermalink}");
-                Console.ResetColor();
-                changed = true;
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.WriteLine("  ℹ Permalink already has section/collection prefix");
-                Console.ResetColor();
-            }
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("  ✓ Removed youtube_id");
+            Console.ResetColor();
+            changed = true;
         }
 
-        // 6. Save description for variable replacement, then remove from frontmatter
+        // 4c. Remove layout (not used in .NET implementation)
+        if (frontMatter.Remove("layout"))
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("  ✓ Removed layout");
+            Console.ResetColor();
+            changed = true;
+        }
+
+        // 4d. Rename canonical_url to external_url
+        if (frontMatter.TryGetValue("canonical_url", out var canonicalUrlObj))
+        {
+            frontMatter["external_url"] = canonicalUrlObj;
+            frontMatter.Remove("canonical_url");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("  ✓ Renamed canonical_url → external_url");
+            Console.ResetColor();
+            changed = true;
+        }
+
+        // 4e. Remove feed_url (not needed - dynamic)
+        if (frontMatter.Remove("feed_url"))
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("  ✓ Removed feed_url");
+            Console.ResetColor();
+            changed = true;
+        }
+
+        // 4f. Remove permalink (built dynamically from collection + primary section + slug)
+        if (frontMatter.Remove("permalink"))
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("  ✓ Removed permalink");
+            Console.ResetColor();
+            changed = true;
+        }
+
+        // 4g. Remove alt_collection (collection derived from directory path)
+        // Handle both underscore and hyphen versions
+        if (frontMatter.Remove("alt_collection") | frontMatter.Remove("alt-collection"))
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("  ✓ Removed alt_collection");
+            Console.ResetColor();
+            changed = true;
+        }
+
+        // 4h. Remove section (singular - replaced by section_names)
+        if (frontMatter.Remove("section"))
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("  ✓ Removed section");
+            Console.ResetColor();
+            changed = true;
+        }
+
+        // 5. Save description for variable replacement, then remove from frontmatter
         var description = frontMatter.TryGetValue("description", out var descObj) ? descObj?.ToString() : null;
         if (frontMatter.Remove("description"))
         {

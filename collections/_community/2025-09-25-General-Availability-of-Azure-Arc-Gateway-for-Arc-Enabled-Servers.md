@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-the-azure-arc-gateway-for/ba-p/4456356
 title: General Availability of Azure Arc Gateway for Arc-Enabled Servers
 author: jalenmcg
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-the-azure-arc-gateway-for/ba-p/4456356
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 13:16:23 +00:00
-permalink: /azure/community/General-Availability-of-Azure-Arc-Gateway-for-Arc-Enabled-Servers
 tags:
 - Arc Enabled Servers
 - Arc Gateway

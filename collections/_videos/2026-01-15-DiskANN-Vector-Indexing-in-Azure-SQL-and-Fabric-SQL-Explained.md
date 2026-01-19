@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=NOPTkQcEew4
 title: 'DiskANN: Vector Indexing in Azure SQL and Fabric SQL Explained'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=NOPTkQcEew4
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2026-01-15 17:00:42 +00:00
-permalink: /ai/videos/DiskANN-Vector-Indexing-in-Azure-SQL-and-Fabric-SQL-Explained
 tags:
 - Azure SQL
 - Cloud Computing

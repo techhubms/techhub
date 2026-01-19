@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/31267/
 title: Optimizing Permissions with OneLake Security ReadWrite Access
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/31267/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-08 11:00:00 +00:00
-permalink: /azure/news/Optimizing-Permissions-with-OneLake-Security-ReadWrite-Access
 tags:
 - Access Control
 - Collaboration

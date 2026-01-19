@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-in-azure-container-apps-at-ignite-25/ba-p/4470391
 title: "What's New in Azure Container Apps: Ignite 2025 Feature Updates"
 author: vyomnagrani
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-in-azure-container-apps-at-ignite-25/ba-p/4470391
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:18:11 +00:00
-permalink: /github-copilot/community/Whats-New-in-Azure-Container-Apps-Ignite-2025-Feature-Updates
 tags:
 - .NET
 - A/B Testing

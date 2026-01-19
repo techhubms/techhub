@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/learning-from-the-past-what-automation-mistakes-can-teach-us-about-ai/
 title: 'Learning From the Past: What Automation Mistakes Can Teach Us About AI'
 author: Kurt Petersen
-canonical_url: https://devops.com/learning-from-the-past-what-automation-mistakes-can-teach-us-about-ai/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-10 23:59:47 +00:00
-permalink: /ai/blogs/Learning-From-the-Past-What-Automation-Mistakes-Can-Teach-Us-About-AI
 tags:
 - AI Agents
 - AI Orchestration

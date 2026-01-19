@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/devops/comments/1mj39oo/every_startup_wants_devops_until_they_realize/
 title: 'Why Startups Struggle with Real DevOps: Misconceptions and Consequences'
 author: Pichipaul
-canonical_url: https://www.reddit.com/r/devops/comments/1mj39oo/every_startup_wants_devops_until_they_realize/
 viewing_mode: external
 feed_name: Reddit DevOps
-feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-06 12:26:20 +00:00
-permalink: /devops/community/Why-Startups-Struggle-with-Real-DevOps-Misconceptions-and-Consequences
 tags:
 - Agile
 - Automation

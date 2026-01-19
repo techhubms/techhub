@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/implementing-a2a-protocol-in-net-a-practical-guide/ba-p/4480232
 title: 'Implementing the Agent-to-Agent (A2A) Protocol in .NET: A Practical Guide'
 author: MariyamAshai
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/implementing-a2a-protocol-in-net-a-practical-guide/ba-p/4480232
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-08 08:00:00 +00:00
-permalink: /ai/community/Implementing-the-Agent-to-Agent-A2A-Protocol-in-NET-A-Practical-Guide
 tags:
 - .NET 8
 - A2AClient

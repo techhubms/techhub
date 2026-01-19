@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/calling-logic-apps-mcp-server-from-copilot-studio/ba-p/4456277
 title: Connecting Azure Logic Apps MCP Server to Copilot Studio Securely
 author: KentWeareMSFT
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/calling-logic-apps-mcp-server-from-copilot-studio/ba-p/4456277
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-23 15:31:29 +00:00
-permalink: /ai/community/Connecting-Azure-Logic-Apps-MCP-Server-to-Copilot-Studio-Securely
 tags:
 - API Center
 - Azure Connectors

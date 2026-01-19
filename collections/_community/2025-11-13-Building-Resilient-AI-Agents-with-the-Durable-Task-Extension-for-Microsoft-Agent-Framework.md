@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bulletproof-agents-with-the-durable-task-extension-for-microsoft/ba-p/4467122
 title: Building Resilient AI Agents with the Durable Task Extension for Microsoft Agent Framework
 author: greenie-msft
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bulletproof-agents-with-the-durable-task-extension-for-microsoft/ba-p/4467122
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-13 20:33:42 +00:00
-permalink: /ai/community/Building-Resilient-AI-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework
 tags:
 - AI Agents
 - Azure Durable Functions

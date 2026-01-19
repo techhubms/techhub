@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/creator-improvements-in-the-data-agent/
 title: Enhancements for Data Agent Creators in Microsoft Fabric
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/creator-improvements-in-the-data-agent/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-04 11:00:00 +00:00
-permalink: /ai/news/Enhancements-for-Data-Agent-Creators-in-Microsoft-Fabric
 tags:
 - Agent Authoring
 - Agent Configuration

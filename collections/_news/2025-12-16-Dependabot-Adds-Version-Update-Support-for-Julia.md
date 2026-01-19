@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-julia
 title: Dependabot Adds Version Update Support for Julia
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-julia
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-16 16:49:19 +00:00
-permalink: /devops/news/Dependabot-Adds-Version-Update-Support-for-Julia
 tags:
 - Automated Updates
 - Continuous Integration

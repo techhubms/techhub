@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/event-driven-to-change-driven-low-cost-dependency-inversion/ba-p/4478948
 title: 'Event-Driven to Change-Driven: Low-cost Dependency Inversion'
 author: CollinBrian
-canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/event-driven-to-change-driven-low-cost-dependency-inversion/ba-p/4478948
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-17 22:22:37 +00:00
-permalink: /azure/community/Event-Driven-to-Change-Driven-Low-cost-Dependency-Inversion
 tags:
 - Anti Corruption Layer
 - Azure SQL

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/accelerating-open-source-infrastructure-development-for-frontier-ai-at-scale/
 title: Microsoft Advances Open-Source Infrastructure for Frontier-Scale AI
 author: Rani Borkar and Saurabh Dighe
-canonical_url: https://azure.microsoft.com/en-us/blog/accelerating-open-source-infrastructure-development-for-frontier-ai-at-scale/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-14 00:35:00 +00:00
-permalink: /ai/news/Microsoft-Advances-Open-Source-Infrastructure-for-Frontier-Scale-AI
 tags:
 - AI + Machine Learning
 - AI Infrastructure

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/determine-onboarding-methods-in-defender-for-endpoint-part-1/ba-p/4437782
 title: Determine Onboarding Methods in Defender for Endpoint - Part 1
 author: edgarus71
-canonical_url: https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/determine-onboarding-methods-in-defender-for-endpoint-part-1/ba-p/4437782
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-07-29 14:00:39 +00:00
-permalink: /azure/community/Determine-Onboarding-Methods-in-Defender-for-Endpoint-Part-1
 tags:
 - BKMK EPLog
 - Co Management

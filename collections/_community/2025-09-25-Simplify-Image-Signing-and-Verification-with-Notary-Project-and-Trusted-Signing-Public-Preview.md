@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/simplify-image-signing-and-verification-with-notary-project-and/ba-p/4455292
 title: Simplify Image Signing and Verification with Notary Project and Trusted Signing (Public Preview)
 author: YiZha
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/simplify-image-signing-and-verification-with-notary-project-and/ba-p/4455292
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 15:23:36 +00:00
-permalink: /azure/community/Simplify-Image-Signing-and-Verification-with-Notary-Project-and-Trusted-Signing-Public-Preview
 tags:
 - AKS
 - Artifact Signing

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/12/05/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-email-security/
 title: Microsoft Leads Gartner 2025 Email Security Quadrant with Defender for Office 365 and Agentic AI
 author: Ramya Chitrakar
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/05/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-email-security/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-05 20:00:00 +00:00
-permalink: /ai/news/Microsoft-Leads-Gartner-2025-Email-Security-Quadrant-with-Defender-for-Office-365-and-Agentic-AI
 tags:
 - Agentic AI
 - Benchmarking

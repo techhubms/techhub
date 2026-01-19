@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/11/strengthen-server-resilience-windows-recovery-environment-winre-for-windows-server-with-azure-arc/
 title: 'Strengthen Server Resilience: Enabling WinRE for Windows Server with Azure Arc'
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/11/strengthen-server-resilience-windows-recovery-environment-winre-for-windows-server-with-azure-arc/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-11-11 13:16:43 +00:00
-permalink: /azure/blogs/Strengthen-Server-Resilience-Enabling-WinRE-for-Windows-Server-with-Azure-Arc
 tags:
 - Adaptive Cloud
 - Azure Adaptive Cloud

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=4ljqB21s5L8
 title: Infrastructure as Code with Pulumi Using .NET Languages
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=4ljqB21s5L8
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-06 22:41:41 +00:00
-permalink: /coding/videos/Infrastructure-as-Code-with-Pulumi-Using-NET-Languages
 tags:
 - .NET
 - Beginner

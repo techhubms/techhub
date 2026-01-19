@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/preparing-for-dotnet-10-gc/
 title: 'Preparing for the .NET 10 GC: Understanding and Tuning DATAS'
 author: maoni
-canonical_url: https://devblogs.microsoft.com/dotnet/preparing-for-dotnet-10-gc/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-10-08 17:00:00 +00:00
-permalink: /coding/news/Preparing-for-the-NET-10-GC-Understanding-and-Tuning-DATAS
 tags:
 - .NET
 - .NET 10

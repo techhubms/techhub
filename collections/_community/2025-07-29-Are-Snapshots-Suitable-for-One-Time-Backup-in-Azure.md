@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mc7qn1/are_snapshots_suitable_for_a_one_time_backup/
 title: Are Snapshots Suitable for One-Time Backup in Azure?
 author: Izual_Rebirth
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mc7qn1/are_snapshots_suitable_for_a_one_time_backup/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-29 10:22:58 +00:00
-permalink: /azure/community/Are-Snapshots-Suitable-for-One-Time-Backup-in-Azure
 tags:
 - Archival
 - Azure Snapshot

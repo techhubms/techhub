@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/introducing-anthropics-claude-models-in-microsoft-foundry-bringing-frontier-intelligence-to-azure/
 title: 'Introducing Anthropic’s Claude Models in Microsoft Foundry: Expanding AI on Azure'
 author: Asha Sharma
-canonical_url: https://azure.microsoft.com/en-us/blog/introducing-anthropics-claude-models-in-microsoft-foundry-bringing-frontier-intelligence-to-azure/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 15:00:28 +00:00
-permalink: /ai/news/Introducing-Anthropics-Claude-Models-in-Microsoft-Foundry-Expanding-AI-on-Azure
 tags:
 - Agentic AI
 - AI + Machine Learning

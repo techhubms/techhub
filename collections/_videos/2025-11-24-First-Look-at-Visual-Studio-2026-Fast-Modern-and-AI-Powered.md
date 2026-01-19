@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=xSioblHhYL8
 title: 'First Look at Visual Studio 2026: Fast, Modern, and AI-Powered'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=xSioblHhYL8
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:17:17 +00:00
-permalink: /github-copilot/videos/First-Look-at-Visual-Studio-2026-Fast-Modern-and-AI-Powered
 tags:
 - AI Powered Development
 - Code Review

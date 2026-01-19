@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=VmPz_PIeAuc
 title: 'Azure Updates: Key Announcements for July 2025'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=VmPz_PIeAuc
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-04 14:16:55 +00:00
-permalink: /ml/videos/Azure-Updates-Key-Announcements-for-July-2025
 tags:
 - Audit
 - Azure App Service

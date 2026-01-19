@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.linkedin.com/posts/satyanadella_another-first-for-our-ai-fleet-a-supercomputing-activity-7382086397152858113-BlSd
 title: Microsoft Unveils Supercomputing Cluster with 4600+ NVIDIA GB300 GPUs for Next-Gen AI Workloads
 author: stclarke
-canonical_url: https://www.linkedin.com/posts/satyanadella_another-first-for-our-ai-fleet-a-supercomputing-activity-7382086397152858113-BlSd
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-09 17:57:56 +00:00
-permalink: /ai/news/Microsoft-Unveils-Supercomputing-Cluster-with-4600-NVIDIA-GB300-GPUs-for-Next-Gen-AI-Workloads
 tags:
 - AI Acceleration
 - AI Infrastructure

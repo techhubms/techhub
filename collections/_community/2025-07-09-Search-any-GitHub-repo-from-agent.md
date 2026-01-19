@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1lvx08d/search_any_github_repo_from_agent/
 title: Search any GitHub repo from agent
 author: digitarald
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1lvx08d/search_any_github_repo_from_agent/
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-09 22:57:13 +00:00
-permalink: /github-copilot/community/Search-any-GitHub-repo-from-agent
 viewing_mode: external
 tags:
 - API References

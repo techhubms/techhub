@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=1f7LZzGt79Q
 title: Use AI Agents to Scale Privacy Programs with Microsoft Sentinel
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=1f7LZzGt79Q
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 13:34:12 +00:00
-permalink: /ai/videos/Use-AI-Agents-to-Scale-Privacy-Programs-with-Microsoft-Sentinel
 tags:
 - AI Agents
 - Compliance

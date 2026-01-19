@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mjgiuq/tunit_test_orchestration/
 title: 'TUnit Test Orchestration: Advanced Setup and Parallel Dependency Injection'
 author: thomhurst
-canonical_url: https://www.reddit.com/r/csharp/comments/1mjgiuq/tunit_test_orchestration/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-06 20:59:12 +00:00
-permalink: /coding/community/TUnit-Test-Orchestration-Advanced-Setup-and-Parallel-Dependency-Injection
 tags:
 - .NET
 - C#

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=2EJR1xhTtBs
 title: 'Developing Social Media Commander: Real-World .NET App with GitHub Copilot and Agent Instructions'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=2EJR1xhTtBs
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-16 17:00:10 +00:00
-permalink: /github-copilot/videos/Developing-Social-Media-Commander-Real-World-NET-App-with-GitHub-Copilot-and-Agent-Instructions
 tags:
 - .NET
 - Agent Instructions

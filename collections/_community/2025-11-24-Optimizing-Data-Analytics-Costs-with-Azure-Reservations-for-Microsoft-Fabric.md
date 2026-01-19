@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/finops-blog/streamline-analytics-spend-on-microsoft-fabric-with-azure/ba-p/4472670
 title: Optimizing Data Analytics Costs with Azure Reservations for Microsoft Fabric
 author: kyleikeda
-canonical_url: https://techcommunity.microsoft.com/t5/finops-blog/streamline-analytics-spend-on-microsoft-fabric-with-azure/ba-p/4472670
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-24 19:13:50 +00:00
-permalink: /ml/community/Optimizing-Data-Analytics-Costs-with-Azure-Reservations-for-Microsoft-Fabric
 tags:
 - Azure Advisor
 - Azure Marketplace

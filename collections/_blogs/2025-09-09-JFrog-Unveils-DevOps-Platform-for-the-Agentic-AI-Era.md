@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/jfrog-unveils-devops-platform-for-the-agentic-ai-era/?utm_source=rss&utm_medium=rss&utm_campaign=jfrog-unveils-devops-platform-for-the-agentic-ai-era
 title: JFrog Unveils DevOps Platform for the Agentic AI Era
 author: Mike Vizard
-canonical_url: https://devops.com/jfrog-unveils-devops-platform-for-the-agentic-ai-era/?utm_source=rss&utm_medium=rss&utm_campaign=jfrog-unveils-devops-platform-for-the-agentic-ai-era
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-09 16:15:32 +00:00
-permalink: /github-copilot/blogs/JFrog-Unveils-DevOps-Platform-for-the-Agentic-AI-Era
 tags:
 - Agentic AI
 - AI Agents

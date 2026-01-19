@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=FBQRc-M18ws
 title: Browser Automation With Azure AI Foundry's Automation Tool and Playwright Workspaces
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=FBQRc-M18ws
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-14 15:59:53 +00:00
-permalink: /ai/videos/Browser-Automation-With-Azure-AI-Foundrys-Automation-Tool-and-Playwright-Workspaces
 tags:
 - AI Agents
 - Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-3-csharp-14-extensions-members/
 title: 'C# 14 Extension Members in .NET 10 Preview: How to Use Extension Everything'
 author: Andrew Lock
-canonical_url: https://andrewlock.net/exploring-dotnet-10-preview-features-3-csharp-14-extensions-members/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-07-15 10:00:00 +00:00
-permalink: /coding/blogs/C-14-Extension-Members-in-NET-10-Preview-How-to-Use-Extension-Everything
 tags:
 - .NET 10
 - C#

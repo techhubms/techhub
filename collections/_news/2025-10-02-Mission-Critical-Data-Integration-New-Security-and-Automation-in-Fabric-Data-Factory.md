@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/mission-critical-data-integration-whats-new-in-fabric-data-factory/
 title: 'Mission-Critical Data Integration: New Security and Automation in Fabric Data Factory'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/mission-critical-data-integration-whats-new-in-fabric-data-factory/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-02 17:00:00 +00:00
-permalink: /ml/news/Mission-Critical-Data-Integration-New-Security-and-Automation-in-Fabric-Data-Factory
 tags:
 - Azure Key Vault
 - Compliance

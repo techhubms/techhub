@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-25-upcoming-deprecation-of-gh-copilot-cli-extension
 title: GitHub Copilot CLI Extension Deprecation Announcement
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-25-upcoming-deprecation-of-gh-copilot-cli-extension
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-25 20:32:31 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-CLI-Extension-Deprecation-Announcement
 tags:
 - Agentic AI
 - AI Coding Assistant

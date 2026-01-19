@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-events/join-the-microsoft-ignite-2025-nyc-community-summit-in-times/ec-p/4459801#M661
 title: Join the Microsoft Ignite 2025 NYC Community Summit in Times Square
 author: MariselaC
-canonical_url: https://techcommunity.microsoft.com/t5/azure-events/join-the-microsoft-ignite-2025-nyc-community-summit-in-times/ec-p/4459801#M661
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-09 20:38:13 +00:00
-permalink: /ai/community/Join-the-Microsoft-Ignite-2025-NYC-Community-Summit-in-Times-Square
 tags:
 - .NET
 - Agentic AI

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/12/10/clarity-in-complexity-new-insights-for-transparent-email-security/
 title: Transparent Benchmarking and Layered Email Security with Microsoft Defender
 author: Scott Woodgate and Ramya Chitrakar
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/10/clarity-in-complexity-new-insights-for-transparent-email-security/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-10 17:00:00 +00:00
-permalink: /security/news/Transparent-Benchmarking-and-Layered-Email-Security-with-Microsoft-Defender
 tags:
 - Benchmarking
 - Cybersecurity

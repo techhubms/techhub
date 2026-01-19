@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/bxV3Fw8nh5M
 title: Using GitHub Copilot to Advance Sustainable City Design with Open Source
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/bxV3Fw8nh5M
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-06 18:15:16 +00:00
-permalink: /github-copilot/videos/Using-GitHub-Copilot-to-Advance-Sustainable-City-Design-with-Open-Source
 tags:
 - City Energy Analyst
 - Climate Change

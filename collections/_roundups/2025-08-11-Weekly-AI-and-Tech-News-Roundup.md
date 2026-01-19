@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: AI Agents and Automation Redefine Developer Workflows, Security, and Cloud Operations
 author: Tech Hub Team
 viewing_mode: internal
 date: 2025-08-11 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
 - AI Agents

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/empower-smarter-ai-agent-investments/ba-p/4466010
 title: 'Maximize the Cost Efficiency of AI Agents on Azure: Comprehensive Learning Path'
 author: Fernando_Vasconcellos
-canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/empower-smarter-ai-agent-investments/ba-p/4466010
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-05 14:46:02 +00:00
-permalink: /ai/community/Maximize-the-Cost-Efficiency-of-AI-Agents-on-Azure-Comprehensive-Learning-Path
 tags:
 - AI Agents
 - AI Center Of Excellence

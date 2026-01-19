@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/agentic-integration-with-sap-servicenow-and-salesforce/ba-p/4466049
 title: 'Agentic Integration Patterns: Microsoft Copilot Studio with SAP, ServiceNow, and Salesforce'
 author: pranabpaul
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/agentic-integration-with-sap-servicenow-and-salesforce/ba-p/4466049
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-31 20:41:25 +00:00
-permalink: /ai/community/Agentic-Integration-Patterns-Microsoft-Copilot-Studio-with-SAP-ServiceNow-and-Salesforce
 tags:
 - Agent To Agent (a2a)
 - Azure Agent Framework

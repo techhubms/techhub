@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=o63_MuktA78
 title: Impiger’s AI-First Enterprise Transformation at Microsoft Ignite
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=o63_MuktA78
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 12:02:39 +00:00
-permalink: /ai/videos/Impigers-AI-First-Enterprise-Transformation-at-Microsoft-Ignite
 tags:
 - AI Architecture
 - AI Ethics

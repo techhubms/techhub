@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-public-preview-asev3-outbound-network-segmentation/ba-p/4458398
 title: 'Announcing Public Preview: Outbound Network Segmentation for ASEv3'
 author: jordanselig
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-public-preview-asev3-outbound-network-segmentation/ba-p/4458398
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-01 16:12:36 +00:00
-permalink: /azure/community/Announcing-Public-Preview-Outbound-Network-Segmentation-for-ASEv3
 tags:
 - App Service Environment V3
 - ARM Template

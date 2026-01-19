@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-oct-nov-2025/
 title: "What's New in Microsoft Foundry: Agents, Models, and Enterprise-Grade AI (October–November 2025)"
 author: Jenn Cockrell
-canonical_url: https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-oct-nov-2025/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-12-19 04:55:08 +00:00
-permalink: /ai/news/Whats-New-in-Microsoft-Foundry-Agents-Models-and-Enterprise-Grade-AI-OctoberNovember-2025
 tags:
 - AI Agents
 - AI Tools

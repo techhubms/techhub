@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/04/video-windows-server-app-control-and-azure-arc/
 title: Enhancing Windows Server Security with App Control and Azure Arc Integration
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/04/video-windows-server-app-control-and-azure-arc/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-04-22 13:50:08 +00:00
-permalink: /azure/blogs/Enhancing-Windows-Server-Security-with-App-Control-and-Azure-Arc-Integration
 tags:
 - App Control
 - Application Whitelisting

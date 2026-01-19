@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/engineering-at-microsoft/enhancing-code-quality-at-scale-with-ai-powered-code-reviews/
 title: Enhancing Code Quality at Scale with AI-Powered Code Reviews
 author: Sneha Tuli
-canonical_url: https://devblogs.microsoft.com/engineering-at-microsoft/enhancing-code-quality-at-scale-with-ai-powered-code-reviews/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/engineering-at-microsoft/feed/
 date: 2025-07-14 15:21:05 +00:00
-permalink: /github-copilot/news/Enhancing-Code-Quality-at-Scale-with-AI-Powered-Code-Reviews
 tags:
 - AI Agent
 - AI Apps

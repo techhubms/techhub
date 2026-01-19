@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-16-track-organization-copilot-usage
 title: Track Organization Copilot Usage with Copilot Usage APIs
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-16-track-organization-copilot-usage
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-16 15:08:56 +00:00
-permalink: /github-copilot/news/Track-Organization-Copilot-Usage-with-Copilot-Usage-APIs
 tags:
 - Admin Tools
 - AI Controls

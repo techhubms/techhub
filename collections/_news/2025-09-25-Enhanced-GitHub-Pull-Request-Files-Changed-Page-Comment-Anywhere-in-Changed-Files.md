@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-25-pull-request-files-changed-public-preview-now-supports-commenting-on-unchanged-lines
 title: 'Enhanced GitHub Pull Request Files Changed Page: Comment Anywhere in Changed Files'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-25-pull-request-files-changed-public-preview-now-supports-commenting-on-unchanged-lines
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-25 21:23:24 +00:00
-permalink: /devops/news/Enhanced-GitHub-Pull-Request-Files-Changed-Page-Comment-Anywhere-in-Changed-Files
 tags:
 - API
 - Bug Fixes

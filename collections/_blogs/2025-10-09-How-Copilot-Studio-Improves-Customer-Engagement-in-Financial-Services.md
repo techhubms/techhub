@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-copilot-studio-improves-customer-engagement-in-financial-services/
 title: How Copilot Studio Improves Customer Engagement in Financial Services
 author: Dellenny
-canonical_url: https://dellenny.com/how-copilot-studio-improves-customer-engagement-in-financial-services/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-09 07:16:46 +00:00
-permalink: /ai/blogs/How-Copilot-Studio-Improves-Customer-Engagement-in-Financial-Services
 tags:
 - Automation
 - Chatbots

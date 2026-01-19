@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/openapi/kiota-dart-support/
 title: Announcing Public Preview of Kiota Dart Support
 author: Maisa Rissi
-canonical_url: https://devblogs.microsoft.com/openapi/kiota-dart-support/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/openapi/feed/
 date: 2025-02-04 16:12:50 +00:00
-permalink: /coding/news/Announcing-Public-Preview-of-Kiota-Dart-Support
 tags:
 - .NET Tools
 - API Automation

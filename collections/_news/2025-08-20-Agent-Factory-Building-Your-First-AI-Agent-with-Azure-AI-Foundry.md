@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/agent-factory-building-your-first-ai-agent-with-the-tools-to-deliver-real-world-outcomes/
 title: 'Agent Factory: Building Your First AI Agent with Azure AI Foundry'
 author: Yina Arenas
-canonical_url: https://azure.microsoft.com/en-us/blog/agent-factory-building-your-first-ai-agent-with-the-tools-to-deliver-real-world-outcomes/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-20 15:00:00 +00:00
-permalink: /ai/news/Agent-Factory-Building-Your-First-AI-Agent-with-Azure-AI-Foundry
 tags:
 - Agent Factory
 - Agentic AI

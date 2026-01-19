@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=fJ1qVlwfp1I
 title: Optimizing Azure Cloud Spend with Holistic FinOps Approaches
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=fJ1qVlwfp1I
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 15:21:41 +00:00
-permalink: /azure/videos/Optimizing-Azure-Cloud-Spend-with-Holistic-FinOps-Approaches
 tags:
 - Anomaly Detection
 - Cloud Cost Optimization

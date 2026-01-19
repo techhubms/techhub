@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/how-data-empathy-and-visibility-are-redefining-devops-maturity/
 title: How Data, Empathy and Visibility Are Redefining DevOps Maturity
 author: Alan Shimel
-canonical_url: https://devops.com/how-data-empathy-and-visibility-are-redefining-devops-maturity/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-31 15:08:58 +00:00
-permalink: /ai/blogs/How-Data-Empathy-and-Visibility-Are-Redefining-DevOps-Maturity
 tags:
 - AI Acceleration
 - Automation

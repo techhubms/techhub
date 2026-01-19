@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-20-enterprise-bring-your-own-key-byok-for-github-copilot-is-now-in-public-preview
 title: Enterprise BYOK for GitHub Copilot Now in Public Preview
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-20-enterprise-bring-your-own-key-byok-for-github-copilot-is-now-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-20 15:46:54 +00:00
-permalink: /github-copilot/news/Enterprise-BYOK-for-GitHub-Copilot-Now-in-Public-Preview
 tags:
 - Admin Controls
 - Anthropic

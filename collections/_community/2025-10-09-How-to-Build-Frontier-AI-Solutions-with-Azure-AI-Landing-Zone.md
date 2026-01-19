@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-to-build-frontier-ai-solutions-with-azure-ai-landing-zone/ba-p/4460199
 title: How to Build Frontier AI Solutions with Azure AI Landing Zone
 author: VimalVerma
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-to-build-frontier-ai-solutions-with-azure-ai-landing-zone/ba-p/4460199
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-09 00:09:13 +00:00
-permalink: /ai/community/How-to-Build-Frontier-AI-Solutions-with-Azure-AI-Landing-Zone
 tags:
 - AI Adoption
 - AKS

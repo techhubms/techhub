@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ThGXQlnS8Lo
 title: Building Connected Managed Agentic Apps with Microsoft Foundry (Ignite BRK113)
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=ThGXQlnS8Lo
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-12-02 20:30:27 +00:00
-permalink: /ai/videos/Building-Connected-Managed-Agentic-Apps-with-Microsoft-Foundry-Ignite-BRK113
 tags:
 - Agentic Applications
 - AI Agents

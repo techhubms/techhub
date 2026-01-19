@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-cloud-migration-with-wave-planning-in-azure-migrate/ba-p/4467959
 title: Accelerate Cloud Migration with Wave Planning in Azure Migrate
 author: ShubhamJain92
-canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-cloud-migration-with-wave-planning-in-azure-migrate/ba-p/4467959
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-11 16:46:02 +00:00
-permalink: /azure/community/Accelerate-Cloud-Migration-with-Wave-Planning-in-Azure-Migrate
 tags:
 - Application Grouping
 - Application Modernization

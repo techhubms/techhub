@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-06-25-improved-attachments-and-larger-context-in-copilot-chat-in-public-preview
 title: Improved attachments and larger context in Copilot Chat in public preview
 author: Allison
-canonical_url: https://github.blog/changelog/2025-06-25-improved-attachments-and-larger-context-in-copilot-chat-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-06-25 20:27:52 +00:00
-permalink: /github-copilot/news/Improved-attachments-and-larger-context-in-Copilot-Chat-in-public-preview
 tags:
 - Attachments
 - Collaboration

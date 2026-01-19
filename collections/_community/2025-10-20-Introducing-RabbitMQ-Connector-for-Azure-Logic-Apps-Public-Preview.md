@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-rabbitmq-connector-public-preview/ba-p/4462627
 title: Introducing RabbitMQ Connector for Azure Logic Apps (Public Preview)
 author: hcamposu
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-rabbitmq-connector-public-preview/ba-p/4462627
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-20 13:00:00 +00:00
-permalink: /azure/community/Introducing-RabbitMQ-Connector-for-Azure-Logic-Apps-Public-Preview
 tags:
 - Azure Logic Apps
 - Cloud Native

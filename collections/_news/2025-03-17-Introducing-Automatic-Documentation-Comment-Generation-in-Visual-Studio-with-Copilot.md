@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/introducing-automatic-documentation-comment-generation-in-visual-studio/
 title: Introducing Automatic Documentation Comment Generation in Visual Studio with Copilot
 author: Sinem Akinci, Allie Barry
-canonical_url: https://devblogs.microsoft.com/visualstudio/introducing-automatic-documentation-comment-generation-in-visual-studio/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-03-17 15:00:10 +00:00
-permalink: /github-copilot/news/Introducing-Automatic-Documentation-Comment-Generation-in-Visual-Studio-with-Copilot
 tags:
 - AI Generated Comments
 - Automatic Doc Comments

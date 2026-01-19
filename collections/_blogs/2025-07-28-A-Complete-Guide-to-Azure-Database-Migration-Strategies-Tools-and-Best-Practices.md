@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/a-complete-guide-to-azure-database-migration-strategies-tools-and-best-practices/
 title: A Complete Guide to Azure Database Migration Strategies, Tools, and Best Practices
 author: Dellenny
-canonical_url: https://dellenny.com/a-complete-guide-to-azure-database-migration-strategies-tools-and-best-practices/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-07-28 09:12:20 +00:00
-permalink: /azure/blogs/A-Complete-Guide-to-Azure-Database-Migration-Strategies-Tools-and-Best-Practices
 tags:
 - Azure Advisor
 - Azure Database Migration

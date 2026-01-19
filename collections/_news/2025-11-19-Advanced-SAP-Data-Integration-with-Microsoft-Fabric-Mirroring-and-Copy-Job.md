@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-sap-connectivity-with-mirroring-and-copy-job-in-microsoft-fabric/
 title: 'Advanced SAP Data Integration with Microsoft Fabric: Mirroring and Copy Job'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-sap-connectivity-with-mirroring-and-copy-job-in-microsoft-fabric/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 08:30:00 +00:00
-permalink: /ai/news/Advanced-SAP-Data-Integration-with-Microsoft-Fabric-Mirroring-and-Copy-Job
 tags:
 - AI Ready Data
 - BW OpenHub

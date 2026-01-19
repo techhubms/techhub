@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-data-warehouse-goes-all-in-on-enterprises-at-ignite/
 title: New Capabilities in Microsoft Fabric Data Warehouse Announced at Ignite
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-data-warehouse-goes-all-in-on-enterprises-at-ignite/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 11:00:00 +00:00
-permalink: /ml/news/New-Capabilities-in-Microsoft-Fabric-Data-Warehouse-Announced-at-Ignite
 tags:
 - Analytics
 - BI

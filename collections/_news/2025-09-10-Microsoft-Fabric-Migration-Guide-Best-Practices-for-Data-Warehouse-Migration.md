@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/migrating-to-fabric-data-warehouse-guide-now-available/
 title: 'Microsoft Fabric Migration Guide: Best Practices for Data Warehouse Migration'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/migrating-to-fabric-data-warehouse-guide-now-available/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-10 10:00:00 +00:00
-permalink: /ml/news/Microsoft-Fabric-Migration-Guide-Best-Practices-for-Data-Warehouse-Migration
 tags:
 - Azure Synapse
 - Data Engineering

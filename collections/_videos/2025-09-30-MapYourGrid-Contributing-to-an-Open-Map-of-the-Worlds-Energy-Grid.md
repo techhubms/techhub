@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/QHQ0GCyyAjo
 title: "MapYourGrid: Contributing to an Open Map of the World's Energy Grid"
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/QHQ0GCyyAjo
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-30 20:06:00 +00:00
-permalink: /devops/videos/MapYourGrid-Contributing-to-an-Open-Map-of-the-Worlds-Energy-Grid
 tags:
 - Climate Action
 - Code

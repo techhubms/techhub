@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Vm12PGJtQNs
 title: 'VS Code Live: Exploring Hidden Features in VS Code v1.104'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=Vm12PGJtQNs
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-11 21:17:09 +00:00
-permalink: /coding/videos/VS-Code-Live-Exploring-Hidden-Features-in-VS-Code-v1104
 tags:
 - Agentmode
 - Best Practices

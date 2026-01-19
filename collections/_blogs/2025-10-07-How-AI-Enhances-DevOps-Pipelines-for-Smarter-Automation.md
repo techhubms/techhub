@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/how-can-the-usage-of-ai-help-boost-devops-pipelines/
 title: How AI Enhances DevOps Pipelines for Smarter Automation
 author: Joydip Kanjilal
-canonical_url: https://devops.com/how-can-the-usage-of-ai-help-boost-devops-pipelines/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-07 08:59:47 +00:00
-permalink: /ai/blogs/How-AI-Enhances-DevOps-Pipelines-for-Smarter-Automation
 tags:
 - AI Based DevOps Tools
 - AI Driven CI/CD Pipelines

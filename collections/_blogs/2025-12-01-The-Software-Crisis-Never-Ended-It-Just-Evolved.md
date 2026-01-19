@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://roadtoalm.com/2025/12/01/the-software-crisis-never-ended-it-just-evolved/
 title: The Software Crisis Never Ended, It Just Evolved
 author: Rene van Osnabrugge
-canonical_url: https://roadtoalm.com/2025/12/01/the-software-crisis-never-ended-it-just-evolved/
 viewing_mode: external
 feed_name: René van Osnabrugge's Blog
-feed_url: https://roadtoalm.com/feed/
 date: 2025-12-01 13:45:01 +00:00
-permalink: /ai/blogs/The-Software-Crisis-Never-Ended-It-Just-Evolved
 tags:
 - Agile
 - AI in Software Development

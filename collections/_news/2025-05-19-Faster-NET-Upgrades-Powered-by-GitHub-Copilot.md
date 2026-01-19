@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/faster-net-upgrades-powered-by-github-copilot/
 title: Faster .NET Upgrades Powered by GitHub Copilot
 author: McKenna Barlow
-canonical_url: https://devblogs.microsoft.com/visualstudio/faster-net-upgrades-powered-by-github-copilot/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/
 date: 2025-05-19 16:00:43 +00:00
-permalink: /github-copilot/news/Faster-NET-Upgrades-Powered-by-GitHub-Copilot
 tags:
 - .NET
 - .NET Upgrade

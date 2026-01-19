@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/all-things-azure/claude-code-microsoft-foundry-enterprise-ai-coding-agent-setup/
 title: 'Enterprise AI Coding Agent Setup: Claude Code, Microsoft Foundry, Spec Kit, and GitHub Actions'
 author: Govind Kamtamneni
-canonical_url: https://devblogs.microsoft.com/all-things-azure/claude-code-microsoft-foundry-enterprise-ai-coding-agent-setup/
 viewing_mode: external
 feed_name: Microsoft All Things Azure Blog
-feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-12-02 01:37:40 +00:00
-permalink: /ai/news/Enterprise-AI-Coding-Agent-Setup-Claude-Code-Microsoft-Foundry-Spec-Kit-and-GitHub-Actions
 tags:
 - Agent Framework
 - All Things Azure

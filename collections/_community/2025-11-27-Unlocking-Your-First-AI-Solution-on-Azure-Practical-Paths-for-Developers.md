@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlocking-your-first-ai-solution-on-azure-practical-paths-for/ba-p/4472327
 title: 'Unlocking Your First AI Solution on Azure: Practical Paths for Developers'
 author: JoshuaHuang
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlocking-your-first-ai-solution-on-azure-practical-paths-for/ba-p/4472327
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-27 08:00:00 +00:00
-permalink: /ai/community/Unlocking-Your-First-AI-Solution-on-Azure-Practical-Paths-for-Developers
 tags:
 - AI Chatbot
 - AI Security

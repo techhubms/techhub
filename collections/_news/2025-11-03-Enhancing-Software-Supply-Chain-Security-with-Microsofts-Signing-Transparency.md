@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/enhancing-software-supply-chain-security-with-microsofts-signing-transparency/
 title: Enhancing Software Supply Chain Security with Microsoft’s Signing Transparency
 author: Mark Russinovich
-canonical_url: https://azure.microsoft.com/en-us/blog/enhancing-software-supply-chain-security-with-microsofts-signing-transparency/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-03 17:00:00 +00:00
-permalink: /azure/news/Enhancing-Software-Supply-Chain-Security-with-Microsofts-Signing-Transparency
 tags:
 - Auditing
 - Azure Built in Security

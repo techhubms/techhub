@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=jxHVy6y82pI
 title: 'Agentic AI Drives Innovation in Financial Services: Insights from Microsoft Ignite Panel'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=jxHVy6y82pI
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:52:25 +00:00
-permalink: /ai/videos/Agentic-AI-Drives-Innovation-in-Financial-Services-Insights-from-Microsoft-Ignite-Panel
 tags:
 - Agentic AI
 - AI Transformation

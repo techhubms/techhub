@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-06-23-github-desktop-3-5-github-copilot-commit-message-generation-now-generally-available
 title: GitHub Desktop 3.5 — GitHub Copilot commit message generation now generally available
 author: Allison
-canonical_url: https://github.blog/changelog/2025-06-23-github-desktop-3-5-github-copilot-commit-message-generation-now-generally-available
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-06-24 10:26:20 +00:00
-permalink: /github-copilot/news/GitHub-Desktop-35-GitHub-Copilot-commit-message-generation-now-generally-available
 tags:
 - GitHub Desktop
 - Improvements

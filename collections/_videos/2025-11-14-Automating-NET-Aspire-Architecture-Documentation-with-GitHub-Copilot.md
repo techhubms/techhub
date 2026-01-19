@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=8NoetLolw-0
 title: Automating .NET Aspire Architecture Documentation with GitHub Copilot
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=8NoetLolw-0
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 04:00:06 +00:00
-permalink: /github-copilot/videos/Automating-NET-Aspire-Architecture-Documentation-with-GitHub-Copilot
 tags:
 - .NET 10 Preview
 - .NET Aspire

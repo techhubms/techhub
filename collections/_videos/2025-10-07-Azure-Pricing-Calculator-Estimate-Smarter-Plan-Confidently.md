@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=7b84OrcATUQ
 title: 'Azure Pricing Calculator: Estimate Smarter, Plan Confidently'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=7b84OrcATUQ
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-07 07:00:05 +00:00
-permalink: /azure/videos/Azure-Pricing-Calculator-Estimate-Smarter-Plan-Confidently
 tags:
 - Azure Cost Management
 - Azure Essentials Show

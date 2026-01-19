@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mhb7xl/how_can_i_make_this_method_more_performant/
 title: Improving Performance of a C# Console App Processing Azure Service Bus Deadletter Queues
 author: TTwelveUnits
-canonical_url: https://www.reddit.com/r/csharp/comments/1mhb7xl/how_can_i_make_this_method_more_performant/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-04 11:47:42 +00:00
-permalink: /coding/community/Improving-Performance-of-a-C-Console-App-Processing-Azure-Service-Bus-Deadletter-Queues
 tags:
 - Async Programming
 - Azure Service Bus

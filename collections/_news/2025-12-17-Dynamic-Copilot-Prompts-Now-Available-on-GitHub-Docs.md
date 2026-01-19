@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-17-dynamic-copilot-prompts-on-github-docs
 title: Dynamic Copilot Prompts Now Available on GitHub Docs
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-17-dynamic-copilot-prompts-on-github-docs
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-17 15:19:18 +00:00
-permalink: /github-copilot/news/Dynamic-Copilot-Prompts-Now-Available-on-GitHub-Docs
 tags:
 - AI Integration
 - Code Readability

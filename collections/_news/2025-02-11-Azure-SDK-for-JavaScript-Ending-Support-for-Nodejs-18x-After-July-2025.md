@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/announcing-the-end-of-support-for-node-js-18-x-in-the-azure-sdk-for-javascript/
 title: Azure SDK for JavaScript Ending Support for Node.js 18.x After July 2025
 author: Maor Leger
-canonical_url: https://devblogs.microsoft.com/azure-sdk/announcing-the-end-of-support-for-node-js-18-x-in-the-azure-sdk-for-javascript/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-02-11 22:10:32 +00:00
-permalink: /coding/news/Azure-SDK-for-JavaScript-Ending-Support-for-Nodejs-18x-After-July-2025
 tags:
 - Azure SDK
 - JavaScript

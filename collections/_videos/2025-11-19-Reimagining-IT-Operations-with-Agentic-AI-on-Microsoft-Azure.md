@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=LO1fQDWt2iI
 title: Reimagining IT Operations with Agentic AI on Microsoft Azure
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=LO1fQDWt2iI
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 14:53:29 +00:00
-permalink: /ai/videos/Reimagining-IT-Operations-with-Agentic-AI-on-Microsoft-Azure
 tags:
 - Agentic AI
 - AI Agents

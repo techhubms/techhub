@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-automation-general-availability-of-powershell-7-4-python-3/ba-p/4437732
 title: Azure Automation Introduces PowerShell 7.4, Python 3.10, and New Runtime Environment
 author: Nikita_Bajaj
-canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-automation-general-availability-of-powershell-7-4-python-3/ba-p/4437732
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-07-29 11:34:41 +00:00
-permalink: /coding/community/Azure-Automation-Introduces-PowerShell-74-Python-310-and-New-Runtime-Environment
 tags:
 - Azure Automation
 - Azure CLI

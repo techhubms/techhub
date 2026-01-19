@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/enhancements-to-xaml-live-preview-in-visual-studio-for-net-maui/
 title: Enhancements to XAML Live Preview in Visual Studio for .NET MAUI
 author: Rachel Kang (SHE/HER)
-canonical_url: https://devblogs.microsoft.com/visualstudio/enhancements-to-xaml-live-preview-in-visual-studio-for-net-maui/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-09-22 17:26:51 +00:00
-permalink: /github-copilot/news/Enhancements-to-XAML-Live-Preview-in-Visual-Studio-for-NET-MAUI
 tags:
 - AI Assisted Coding
 - Android Emulator Support

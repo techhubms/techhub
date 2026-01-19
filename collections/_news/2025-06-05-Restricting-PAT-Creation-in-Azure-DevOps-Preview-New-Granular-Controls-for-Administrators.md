@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/devops/restricting-pat-creation-in-azure-devops-is-now-in-preview/
 title: 'Restricting PAT Creation in Azure DevOps Preview: New Granular Controls for Administrators'
 author: Angel Wong
-canonical_url: https://devblogs.microsoft.com/devops/restricting-pat-creation-in-azure-devops-is-now-in-preview/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-06-05 17:08:48 +00:00
-permalink: /azure/news/Restricting-PAT-Creation-in-Azure-DevOps-Preview-New-Granular-Controls-for-Administrators
 tags:
 - Access Controls
 - Azure & Cloud

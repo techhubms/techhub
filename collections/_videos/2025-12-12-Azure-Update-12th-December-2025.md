@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=tYKS34Wgf1w
 title: Azure Update - 12th December 2025
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=tYKS34Wgf1w
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-12-12 16:06:57 +00:00
-permalink: /azure/videos/Azure-Update-12th-December-2025
 tags:
 - App Gateway
 - Azure Batch

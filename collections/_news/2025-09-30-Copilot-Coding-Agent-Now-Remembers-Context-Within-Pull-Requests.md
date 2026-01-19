@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-30-copilot-coding-agent-remembers-context-within-the-same-pull-request
 title: Copilot Coding Agent Now Remembers Context Within Pull Requests
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-30-copilot-coding-agent-remembers-context-within-the-same-pull-request
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-30 16:50:47 +00:00
-permalink: /github-copilot/news/Copilot-Coding-Agent-Now-Remembers-Context-Within-Pull-Requests
 tags:
 - AI Automation
 - Code Collaboration

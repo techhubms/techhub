@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/blog/microsoft-security-blog/%E2%80%8B%E2%80%8Bmicrosoft-at-black-hat-usa-2025-a-unified-approach-to-modern-cyber-defense%E2%80%8B%E2%80%8B/4434292
 title: 'Microsoft at Black Hat USA 2025: A Unified Approach to Modern Cyber Defense'
 author: Elliot Volkman
-canonical_url: https://techcommunity.microsoft.com/blog/microsoft-security-blog/%E2%80%8B%E2%80%8Bmicrosoft-at-black-hat-usa-2025-a-unified-approach-to-modern-cyber-defense%E2%80%8B%E2%80%8B/4434292
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-07-18 16:00:00 +00:00
-permalink: /ai/news/Microsoft-at-Black-Hat-USA-2025-A-Unified-Approach-to-Modern-Cyber-Defense
 tags:
 - AI First Security
 - Black Hat USA

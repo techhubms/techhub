@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-12-secret-scanning-adds-12-validators-including-cockroach-labs-polar-and-yandex
 title: 'Secret Scanning Expands Support: 12 New Token Validators Added to GitHub'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-12-secret-scanning-adds-12-validators-including-cockroach-labs-polar-and-yandex
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-12 21:20:14 +00:00
-permalink: /devops/news/Secret-Scanning-Expands-Support-12-New-Token-Validators-Added-to-GitHub
 tags:
 - API Tokens
 - Apify

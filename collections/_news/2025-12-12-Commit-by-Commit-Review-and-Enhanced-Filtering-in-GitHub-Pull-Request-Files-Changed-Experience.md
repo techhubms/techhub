@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-11-review-commit-by-commit-improved-filtering-and-more-in-the-pull-request-files-changed-public-preview
 title: Commit-by-Commit Review and Enhanced Filtering in GitHub Pull Request Files Changed Experience
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-11-review-commit-by-commit-improved-filtering-and-more-in-the-pull-request-files-changed-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-12 02:59:42 +00:00
-permalink: /devops/news/Commit-by-Commit-Review-and-Enhanced-Filtering-in-GitHub-Pull-Request-Files-Changed-Experience
 tags:
 - Code Review
 - Collaboration

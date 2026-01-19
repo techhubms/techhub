@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=8hyvYP5PCks
 title: Accelerating Pull Request Reviews with GitHub Copilot Code Review
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=8hyvYP5PCks
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-02 15:00:17 +00:00
-permalink: /github-copilot/videos/Accelerating-Pull-Request-Reviews-with-GitHub-Copilot-Code-Review
 tags:
 - AI Assistant
 - Automatic Reviews

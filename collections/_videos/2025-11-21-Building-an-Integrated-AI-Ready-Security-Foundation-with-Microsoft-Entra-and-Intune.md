@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=tHnILyOs_8I
 title: Building an Integrated, AI-Ready Security Foundation with Microsoft Entra and Intune
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=tHnILyOs_8I
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 15:04:28 +00:00
-permalink: /ai/videos/Building-an-Integrated-AI-Ready-Security-Foundation-with-Microsoft-Entra-and-Intune
 tags:
 - AI Security
 - Authentication

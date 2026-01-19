@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=BbOsfkQRrik
 title: 'Powering Hybrid AI with Azure Local and Lenovo: Ignite 2025 Deep Dive'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=BbOsfkQRrik
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 10:34:29 +00:00
-permalink: /ai/videos/Powering-Hybrid-AI-with-Azure-Local-and-Lenovo-Ignite-2025-Deep-Dive
 tags:
 - AKS
 - Azure AI Foundry

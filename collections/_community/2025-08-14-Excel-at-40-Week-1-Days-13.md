@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/excel/excel-at-40-week-1-days-1-3/m-p/4443674#M254078
 title: 'Excel at 40 Week 1: Days 1–3'
 author: OlufemiO
-canonical_url: https://techcommunity.microsoft.com/t5/excel/excel-at-40-week-1-days-1-3/m-p/4443674#M254078
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 20:57:21 +00:00
-permalink: /ml/community/Excel-at-40-Week-1-Days-13
 tags:
 - Analytics
 - Audit Automation

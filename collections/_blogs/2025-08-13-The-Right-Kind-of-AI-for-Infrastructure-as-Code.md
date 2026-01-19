@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/the-right-kind-of-ai-for-infrastructure-as-code/?utm_source=rss&utm_medium=rss&utm_campaign=the-right-kind-of-ai-for-infrastructure-as-code
 title: The Right Kind of AI for Infrastructure as Code
 author: Ian Amit
-canonical_url: https://devops.com/the-right-kind-of-ai-for-infrastructure-as-code/?utm_source=rss&utm_medium=rss&utm_campaign=the-right-kind-of-ai-for-infrastructure-as-code
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-13 16:33:28 +00:00
-permalink: /ai/blogs/The-Right-Kind-of-AI-for-Infrastructure-as-Code
 tags:
 - Agentic AI
 - AI in DevOps

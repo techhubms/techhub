@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-18-plan-mode-in-github-copilot-now-in-public-preview-in-jetbrains-eclipse-and-xcode
 title: Plan Mode in GitHub Copilot Now Available in Public Preview for JetBrains, Eclipse, and Xcode
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-18-plan-mode-in-github-copilot-now-in-public-preview-in-jetbrains-eclipse-and-xcode
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:05 +00:00
-permalink: /github-copilot/news/Plan-Mode-in-GitHub-Copilot-Now-Available-in-Public-Preview-for-JetBrains-Eclipse-and-Xcode
 tags:
 - Code Review
 - Copilot

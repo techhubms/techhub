@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-file-access-in-openrowset-using-data-sources-and-relative-paths-preview/
 title: 'Simplifying File Access in OPENROWSET: Data Sources and Relative Paths (Preview)'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-file-access-in-openrowset-using-data-sources-and-relative-paths-preview/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-07 10:00:00 +00:00
-permalink: /ml/news/Simplifying-File-Access-in-OPENROWSET-Data-Sources-and-Relative-Paths-Preview
 tags:
 - ADLS
 - Azure Data Lake Storage

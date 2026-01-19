@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=kiGG4fUe4RI
 title: 'Enhancing .NET Code: Using Facet Instead of Traditional Mapping'
 author: Nick Chapsas
-canonical_url: https://www.youtube.com/watch?v=kiGG4fUe4RI
 viewing_mode: internal
 feed_name: Nick Chapsas YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-08-13 11:30:45 +00:00
-permalink: /coding/videos/Enhancing-NET-Code-Using-Facet-Instead-of-Traditional-Mapping
 tags:
 - .NET
 - C#

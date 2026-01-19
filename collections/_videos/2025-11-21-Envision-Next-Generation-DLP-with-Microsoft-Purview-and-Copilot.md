@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Zy_kxJSeYGo
 title: Envision Next Generation DLP with Microsoft Purview and Copilot
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=Zy_kxJSeYGo
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:47:15 +00:00
-permalink: /ai/videos/Envision-Next-Generation-DLP-with-Microsoft-Purview-and-Copilot
 tags:
 - Automated Security
 - Compliance

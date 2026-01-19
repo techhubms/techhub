@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/prompt-files-and-instructions-files-explained/
 title: Understanding Instruction and Prompt Files for GitHub Copilot in .NET Development
 author: Wendy Breiding (SHE/HER)
-canonical_url: https://devblogs.microsoft.com/dotnet/prompt-files-and-instructions-files-explained/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-09-17 17:05:00 +00:00
-permalink: /github-copilot/news/Understanding-Instruction-and-Prompt-Files-for-GitHub-Copilot-in-NET-Development
 tags:
 - .NET
 - AI Powered Development

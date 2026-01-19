@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/exploring-the-dotnet-boot-process-via-host-tracing/
 title: Exploring the .NET Boot Process via Host Tracing
 author: Andrew Lock
-canonical_url: https://andrewlock.net/exploring-the-dotnet-boot-process-via-host-tracing/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-11-25 10:00:00 +00:00
-permalink: /coding/blogs/Exploring-the-NET-Boot-Process-via-Host-Tracing
 tags:
 - .NET
 - .NET 10

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=qzZTCPiXJtY
 title: Showcasing a Quantum Computing Educational Platform with Custom Copilot
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=qzZTCPiXJtY
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-12 23:04:41 +00:00
-permalink: /ai/videos/Showcasing-a-Quantum-Computing-Educational-Platform-with-Custom-Copilot
 tags:
 - .NET
 - ASP.NET Blazor

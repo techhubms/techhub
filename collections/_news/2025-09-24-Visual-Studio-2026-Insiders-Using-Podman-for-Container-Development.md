@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/visual-studio-2026-insiders-using-podman-for-container-development
 title: 'Visual Studio 2026 Insiders: Using Podman for Container Development'
 author: Matt Hernandez
-canonical_url: https://devblogs.microsoft.com/blog/visual-studio-2026-insiders-using-podman-for-container-development
 viewing_mode: external
 feed_name: Microsoft Blog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-09-24 17:30:30 +00:00
-permalink: /coding/news/Visual-Studio-2026-Insiders-Using-Podman-for-Container-Development
 tags:
 - Cloud Native
 - Container Development

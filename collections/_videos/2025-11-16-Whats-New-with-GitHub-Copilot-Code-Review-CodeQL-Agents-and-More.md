@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ikIosF_iiz4
 title: "What's New with GitHub Copilot Code Review: CodeQL, Agents & More"
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=ikIosF_iiz4
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-16 14:01:16 +00:00
-permalink: /github-copilot/videos/Whats-New-with-GitHub-Copilot-Code-Review-CodeQL-Agents-and-More
 tags:
 - Actions Workflow
 - AI Agent

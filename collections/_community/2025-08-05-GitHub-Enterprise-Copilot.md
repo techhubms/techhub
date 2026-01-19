@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mhv5fq/github_enterprise_copilot/
 title: GitHub Enterprise + Copilot
 author: SalishSeaview
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mhv5fq/github_enterprise_copilot/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-05 00:50:53 +00:00
-permalink: /github-copilot/community/GitHub-Enterprise-Copilot
 tags:
 - Automation
 - CI/CD Pipelines

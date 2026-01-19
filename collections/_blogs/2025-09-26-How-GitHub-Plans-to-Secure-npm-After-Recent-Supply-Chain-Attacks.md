@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/how-github-plans-to-secure-npm-after-recent-supply-chain-attacks/
 title: How GitHub Plans to Secure npm After Recent Supply Chain Attacks
 author: Tom Smith
-canonical_url: https://devops.com/how-github-plans-to-secure-npm-after-recent-supply-chain-attacks/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-26 07:58:54 +00:00
-permalink: /devops/blogs/How-GitHub-Plans-to-Secure-npm-After-Recent-Supply-Chain-Attacks
 tags:
 - API Token Deprecation
 - Business Of DevOps

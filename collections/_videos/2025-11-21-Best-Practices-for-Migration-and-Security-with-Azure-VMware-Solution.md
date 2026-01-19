@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=BsVzhAT-1YQ
 title: Best Practices for Migration and Security with Azure VMware Solution
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=BsVzhAT-1YQ
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 08:12:56 +00:00
-permalink: /azure/videos/Best-Practices-for-Migration-and-Security-with-Azure-VMware-Solution
 tags:
 - AVS
 - Azure Security Tools

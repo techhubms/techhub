@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-master-github-copilot-build-prompt-deploy-smarter/ba-p/4456660
 title: 'How to Master GitHub Copilot: Build, Prompt, Deploy Smarter'
 author: AprilYoho
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-master-github-copilot-build-prompt-deploy-smarter/ba-p/4456660
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-30 05:00:00 +00:00
-permalink: /github-copilot/community/How-to-Master-GitHub-Copilot-Build-Prompt-Deploy-Smarter
 tags:
 - AI Assisted Development
 - Automation

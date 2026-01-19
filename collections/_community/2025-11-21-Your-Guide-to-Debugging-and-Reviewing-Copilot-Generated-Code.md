@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/tools/your-guide-to-debugging-and-reviewing-copilot-generated-code/m-p/4472116#M182
 title: Your Guide to Debugging and Reviewing Copilot-Generated Code
 author: JohnNaguib
-canonical_url: https://techcommunity.microsoft.com/t5/tools/your-guide-to-debugging-and-reviewing-copilot-generated-code/m-p/4472116#M182
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet
 date: 2025-11-21 16:19:58 +00:00
-permalink: /github-copilot/community/Your-Guide-to-Debugging-and-Reviewing-Copilot-Generated-Code
 tags:
 - AI Coding Assistant
 - AI in Development

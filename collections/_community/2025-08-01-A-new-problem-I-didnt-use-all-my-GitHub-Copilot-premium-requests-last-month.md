@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mev008/a_new_problem_i_didnt_use_all_my_github_copilot/
 title: A new problem - I didn't use all my GitHub Copilot premium requests last month
 author: thehashimwarren
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mev008/a_new_problem_i_didnt_use_all_my_github_copilot/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-01 12:20:43 +00:00
-permalink: /github-copilot/community/A-new-problem-I-didnt-use-all-my-GitHub-Copilot-premium-requests-last-month
 tags:
 - AI Productivity
 - Claude 4

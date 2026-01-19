@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-02-github-enterprise-server-3-19-release-candidate-is-now-available
 title: 'GitHub Enterprise Server 3.19: New Release Candidate Features and Enhancements'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-02-github-enterprise-server-3-19-release-candidate-is-now-available
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-02 20:55:34 +00:00
-permalink: /devops/news/GitHub-Enterprise-Server-319-New-Release-Candidate-Features-and-Enhancements
 tags:
 - App Manager
 - Collaboration Tools

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=SI6P5ljakrw
 title: 'Securing Private Wireless: From Design to Deployment'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=SI6P5ljakrw
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:17:15 +00:00
-permalink: /ai/videos/Securing-Private-Wireless-From-Design-to-Deployment
 tags:
 - 5G Security
 - AI Powered Defense

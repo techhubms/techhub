@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/blogs/2024/12/18/free-github-copilot
 title: Free GitHub Copilot Plan Now Available for Visual Studio Code
 author: Burke Holland
-canonical_url: https://code.visualstudio.com/blogs/2024/12/18/free-github-copilot
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2024-12-18 00:00:00 +00:00
-permalink: /github-copilot/news/Free-GitHub-Copilot-Plan-Now-Available-for-Visual-Studio-Code
 tags:
 - AI Code Completion
 - AI Models

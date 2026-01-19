@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/mit-researchers-propose-a-new-way-to-build-software-that-actually-makes-sense/
 title: MIT Researchers Propose a New Software Architecture with Concepts and Synchronizations
 author: Tom Smith
-canonical_url: https://devops.com/mit-researchers-propose-a-new-way-to-build-software-that-actually-makes-sense/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-07 14:19:41 +00:00
-permalink: /ai/blogs/MIT-Researchers-Propose-a-New-Software-Architecture-with-Concepts-and-Synchronizations
 tags:
 - AI Assisted Development
 - AI Coding Tools

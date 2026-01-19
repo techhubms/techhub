@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/upgrading-to-microsoft-agent-framework-in-your-dotnet-ai-chat-app/
 title: Upgrading to Microsoft Agent Framework in Your .NET AI Chat App
 author: Bruno Capuano
-canonical_url: https://devblogs.microsoft.com/dotnet/upgrading-to-microsoft-agent-framework-in-your-dotnet-ai-chat-app/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-10-23 17:00:00 +00:00
-permalink: /ai/news/Upgrading-to-Microsoft-Agent-Framework-in-Your-NET-AI-Chat-App
 tags:
 - .NET
 - .NET Aspire

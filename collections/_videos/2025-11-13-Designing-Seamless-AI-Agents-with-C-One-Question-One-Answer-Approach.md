@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=yKhaYLYK4Sg
 title: 'Designing Seamless AI Agents with C#: One Question, One Answer Approach'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=yKhaYLYK4Sg
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 23:36:11 +00:00
-permalink: /ai/videos/Designing-Seamless-AI-Agents-with-C-One-Question-One-Answer-Approach
 tags:
 - .NET
 - .NET Development

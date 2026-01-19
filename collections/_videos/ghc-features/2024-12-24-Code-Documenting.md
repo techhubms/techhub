@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/66epMMY-YUc
 title: Code Docs
 author: Fokko Veegens
-canonical_url: https://youtu.be/66epMMY-YUc
 date: 2024-12-24 07:37:44 +00:00
-permalink: /github-copilot/videos/Code-Documenting
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Code
 - Documentation

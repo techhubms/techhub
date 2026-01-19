@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure/unable-to-revert-azure-devops-user-access-level/m-p/4442871#M22102
 title: Persistent Visual Studio Enterprise Access Level in Azure DevOps After License Removal
 author: dbenson
-canonical_url: https://techcommunity.microsoft.com/t5/azure/unable-to-revert-azure-devops-user-access-level/m-p/4442871#M22102
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-13 12:05:29 +00:00
-permalink: /azure/community/Persistent-Visual-Studio-Enterprise-Access-Level-in-Azure-DevOps-After-License-Removal
 tags:
 - Access Levels
 - Azure Active Directory

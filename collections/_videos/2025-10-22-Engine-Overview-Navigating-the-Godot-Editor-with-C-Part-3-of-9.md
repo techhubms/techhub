@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=RdciTS7sRhw
 title: 'Engine Overview: Navigating the Godot Editor with C# (Part 3 of 9)'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=RdciTS7sRhw
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-22 16:30:11 +00:00
-permalink: /coding/videos/Engine-Overview-Navigating-the-Godot-Editor-with-C-Part-3-of-9
 tags:
 - .NET
 - Beginner Tutorial

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=7faSLQS501E
 title: AI Builder’s Guide to Agent Development with Foundry Agent Service
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=7faSLQS501E
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 16:13:07 +00:00
-permalink: /ai/videos/AI-Builders-Guide-to-Agent-Development-with-Foundry-Agent-Service
 tags:
 - Agent Development
 - Agent Memory

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-10-preview-6/
 title: '.NET 10 Preview 6: New Features Across Runtime, SDK, Libraries, ASP.NET Core, Blazor, and More'
 author: .NET Team
-canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-10-preview-6/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-07-15 17:22:00 +00:00
-permalink: /coding/news/NET-10-Preview-6-New-Features-Across-Runtime-SDK-Libraries-ASPNET-Core-Blazor-and-More
 tags:
 - .NET
 - .NET 10

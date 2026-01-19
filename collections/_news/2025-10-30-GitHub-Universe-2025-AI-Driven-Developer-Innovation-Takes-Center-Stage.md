@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/github-universe-2025-where-developer-innovation-took-center-stage/
 title: 'GitHub Universe 2025: AI-Driven Developer Innovation Takes Center Stage'
 author: stclarke
-canonical_url: https://azure.microsoft.com/en-us/blog/github-universe-2025-where-developer-innovation-took-center-stage/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-30 15:38:23 +00:00
-permalink: /github-copilot/news/GitHub-Universe-2025-AI-Driven-Developer-Innovation-Takes-Center-Stage
 tags:
 - Agent HQ
 - Agentic Development

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=KbsotdOgr5c
 title: 'Copilot Studio Innovations and Roadmap: Building Low-Code AI Agents (BRK313)'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=KbsotdOgr5c
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 06:26:53 +00:00
-permalink: /ai/videos/Copilot-Studio-Innovations-and-Roadmap-Building-Low-Code-AI-Agents-BRK313
 tags:
 - Agent Builder
 - Agent Creation

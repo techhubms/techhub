@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/decoding-on-premises-adc-rules-migration-to-azure-application/ba-p/4439156
 title: 'Decoding On-Premises ADC Rules: Migration to Azure Application Gateway'
 author: vnamani
-canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/decoding-on-premises-adc-rules-migration-to-azure-application/ba-p/4439156
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-06 18:41:57 +00:00
-permalink: /azure/community/Decoding-On-Premises-ADC-Rules-Migration-to-Azure-Application-Gateway
 tags:
 - ADC Migration
 - Application Security

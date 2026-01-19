@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=dxDqelvVc2U
 title: 'Hands-On Lab: The Power of GitHub Copilot in Visual Studio Code'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=dxDqelvVc2U
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2026-01-05 13:01:17 +00:00
-permalink: /github-copilot/videos/Hands-On-Lab-The-Power-of-GitHub-Copilot-in-Visual-Studio-Code
 tags:
 - Agentic Development
 - AI Coding Assistance

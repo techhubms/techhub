@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/EPXdLelATrE
 title: Code Completion
 author: Liuba Gonta
-canonical_url: https://youtu.be/EPXdLelATrE
 date: 2025-01-02 11:20:08 +00:00
-permalink: /github-copilot/videos/Code-Completion
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Code
 - Code Completion

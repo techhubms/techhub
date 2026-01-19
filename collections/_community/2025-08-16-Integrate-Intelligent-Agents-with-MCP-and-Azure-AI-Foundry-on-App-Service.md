@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/supercharge-your-app-service-apps-with-ai-foundry-agents/ba-p/4444310
 title: Integrate Intelligent Agents with MCP and Azure AI Foundry on App Service
 author: jordanselig
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/supercharge-your-app-service-apps-with-ai-foundry-agents/ba-p/4444310
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-16 01:15:20 +00:00
-permalink: /ai/community/Integrate-Intelligent-Agents-with-MCP-and-Azure-AI-Foundry-on-App-Service
 tags:
 - Agent Service
 - AI Agent Integration

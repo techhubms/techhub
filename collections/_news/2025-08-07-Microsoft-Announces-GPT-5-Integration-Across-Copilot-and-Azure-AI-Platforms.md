@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.linkedin.com/posts/satyanadella_microsoft-incorporates-openais-gpt-5-into-activity-7359268389866913793-jI2m
 title: Microsoft Announces GPT-5 Integration Across Copilot and Azure AI Platforms
 author: stclarke
-canonical_url: https://www.linkedin.com/posts/satyanadella_microsoft-incorporates-openais-gpt-5-into-activity-7359268389866913793-jI2m
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-07 17:50:58 +00:00
-permalink: /github-copilot/news/Microsoft-Announces-GPT-5-Integration-Across-Copilot-and-Azure-AI-Platforms
 tags:
 - AI Chat
 - AI Coding

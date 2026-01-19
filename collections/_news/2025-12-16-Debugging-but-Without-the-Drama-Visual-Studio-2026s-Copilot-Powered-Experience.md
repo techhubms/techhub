@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2026-debugging-with-copilot/
 title: 'Debugging, but Without the Drama: Visual Studio 2026’s Copilot-Powered Experience'
 author: Harshada Hole
-canonical_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2026-debugging-with-copilot/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-16 15:00:12 +00:00
-permalink: /github-copilot/news/Debugging-but-Without-the-Drama-Visual-Studio-2026s-Copilot-Powered-Experience
 tags:
 - AI Debugging
 - Bug Fixing

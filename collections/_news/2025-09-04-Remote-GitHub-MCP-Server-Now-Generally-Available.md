@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-04-remote-github-mcp-server-is-now-generally-available
 title: Remote GitHub MCP Server Now Generally Available
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-04-remote-github-mcp-server-is-now-generally-available
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-04 15:00:49 +00:00
-permalink: /github-copilot/news/Remote-GitHub-MCP-Server-Now-Generally-Available
 tags:
 - AI Workflow
 - Authentication

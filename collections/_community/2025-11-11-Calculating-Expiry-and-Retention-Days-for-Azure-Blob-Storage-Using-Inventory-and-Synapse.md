@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/deriving-expiry-days-and-remaining-retention-days-for-blobs/ba-p/4466586
 title: Calculating Expiry and Retention Days for Azure Blob Storage Using Inventory and Synapse
 author: Harshi_mrinal
-canonical_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/deriving-expiry-days-and-remaining-retention-days-for-blobs/ba-p/4466586
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-11 05:35:25 +00:00
-permalink: /azure/community/Calculating-Expiry-and-Retention-Days-for-Azure-Blob-Storage-Using-Inventory-and-Synapse
 tags:
 - Azure Blob Storage
 - Azure Data Lake Gen2

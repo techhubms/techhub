@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-08-defense-of-third-party-claims-added-for-volume-licensing-customers
 title: Indemnity and Liability Updates for GitHub Enterprise Pre-release Software
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-08-defense-of-third-party-claims-added-for-volume-licensing-customers
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-08 16:05:36 +00:00
-permalink: /devops/news/Indemnity-and-Liability-Updates-for-GitHub-Enterprise-Pre-release-Software
 tags:
 - Enterprise Licensing
 - GitHub

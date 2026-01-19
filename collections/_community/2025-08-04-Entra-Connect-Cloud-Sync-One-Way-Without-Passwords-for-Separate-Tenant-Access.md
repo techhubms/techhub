@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mhi4mz/entra_connect_cloud_sync_one_way_wo_passwords/
 title: Entra Connect Cloud Sync One Way Without Passwords for Separate Tenant Access
 author: SisqoEngineer
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mhi4mz/entra_connect_cloud_sync_one_way_wo_passwords/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-04 16:26:22 +00:00
-permalink: /azure/community/Entra-Connect-Cloud-Sync-One-Way-Without-Passwords-for-Separate-Tenant-Access
 tags:
 - Account Disablement
 - Account Provisioning

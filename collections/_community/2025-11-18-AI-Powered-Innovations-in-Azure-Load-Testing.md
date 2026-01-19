@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-powered-performance-testing/ba-p/4471029
 title: AI-Powered Innovations in Azure Load Testing
 author: Nikita_Nallamothu
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-powered-performance-testing/ba-p/4471029
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:22:26 +00:00
-permalink: /ai/community/AI-Powered-Innovations-in-Azure-Load-Testing
 tags:
 - AI Powered Insights
 - Application Reliability

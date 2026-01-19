@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/devops/comments/1mhho6n/best_practices_for_migrating_manually_created/
 title: Best Practices for Migrating Manually Created Monitors to Terraform
 author: JayDee2306
-canonical_url: https://www.reddit.com/r/devops/comments/1mhho6n/best_practices_for_migrating_manually_created/
 viewing_mode: external
 feed_name: Reddit DevOps
-feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-04 16:09:23 +00:00
-permalink: /devops/community/Best-Practices-for-Migrating-Manually-Created-Monitors-to-Terraform
 tags:
 - Automation
 - Best Practices

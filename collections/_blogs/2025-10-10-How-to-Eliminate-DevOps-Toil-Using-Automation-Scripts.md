@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/how-to-eliminate-devops-toil-using-automation-scripts/
 title: How to Eliminate DevOps Toil Using Automation Scripts
 author: Durojaye Olusegun
-canonical_url: https://devops.com/how-to-eliminate-devops-toil-using-automation-scripts/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-10 11:59:37 +00:00
-permalink: /devops/blogs/How-to-Eliminate-DevOps-Toil-Using-Automation-Scripts
 tags:
 - 15 Minute Rule
 - Ansible

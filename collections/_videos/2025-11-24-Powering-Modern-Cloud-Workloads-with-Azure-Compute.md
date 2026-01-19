@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=pMFnaPg3TTQ
 title: Powering Modern Cloud Workloads with Azure Compute
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=pMFnaPg3TTQ
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:12:27 +00:00
-permalink: /ai/videos/Powering-Modern-Cloud-Workloads-with-Azure-Compute
 tags:
 - AI Inference
 - Azure Compute

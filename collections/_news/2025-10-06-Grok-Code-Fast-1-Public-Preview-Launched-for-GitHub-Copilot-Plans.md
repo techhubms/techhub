@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-06-grok-code-fast-1-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
 title: Grok Code Fast 1 Public Preview Launched for GitHub Copilot Plans
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-06-grok-code-fast-1-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-06 16:11:26 +00:00
-permalink: /github-copilot/news/Grok-Code-Fast-1-Public-Preview-Launched-for-GitHub-Copilot-Plans
 tags:
 - Agent Mode
 - AI Model

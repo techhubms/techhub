@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-security-is-now-available-in-public-preview/
 title: 'Announcing OneLake Security (Preview): Fine-Grained Data Access Control in Microsoft Fabric'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-security-is-now-available-in-public-preview/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-08 08:00:00 +00:00
-permalink: /ml/news/Announcing-OneLake-Security-Preview-Fine-Grained-Data-Access-Control-in-Microsoft-Fabric
 tags:
 - Access Control
 - API

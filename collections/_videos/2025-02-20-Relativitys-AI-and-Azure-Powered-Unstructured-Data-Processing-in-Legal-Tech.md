@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=cr8I4Z2RsS0
 title: Relativity's AI and Azure-Powered Unstructured Data Processing in Legal Tech
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=cr8I4Z2RsS0
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-02-20 14:00:51 +00:00
-permalink: /ai/videos/Relativitys-AI-and-Azure-Powered-Unstructured-Data-Processing-in-Legal-Tech
 tags:
 - AI Innovation
 - Azure Data Lake Storage

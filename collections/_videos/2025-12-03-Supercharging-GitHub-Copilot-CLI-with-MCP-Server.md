@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/vYuuCiAYOP4
 title: Supercharging GitHub Copilot CLI with MCP Server
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/shorts/vYuuCiAYOP4
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-12-03 18:01:15 +00:00
-permalink: /github-copilot/videos/Supercharging-GitHub-Copilot-CLI-with-MCP-Server
 tags:
 - AST
 - CLI Tools

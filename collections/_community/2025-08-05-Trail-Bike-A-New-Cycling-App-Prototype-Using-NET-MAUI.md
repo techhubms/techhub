@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mib177/trail_bike_my_new_maui_app/
 title: 'Trail Bike: A New Cycling App Prototype Using .NET MAUI'
 author: Rywent
-canonical_url: https://www.reddit.com/r/csharp/comments/1mib177/trail_bike_my_new_maui_app/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-05 14:40:13 +00:00
-permalink: /coding/community/Trail-Bike-A-New-Cycling-App-Prototype-Using-NET-MAUI
 tags:
 - App Prototyping
 - C#

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/optimize-your-cloud-environment-using-agentic-ai/ba-p/4469772
 title: Optimize Your Cloud Environment with Azure Copilot's Agentic AI
 author: riteshkini
-canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/optimize-your-cloud-environment-using-agentic-ai/ba-p/4469772
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:20:32 +00:00
-permalink: /ai/community/Optimize-Your-Cloud-Environment-with-Azure-Copilots-Agentic-AI
 tags:
 - Agentic Workflows
 - Azure Copilot

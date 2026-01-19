@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=UAIic-vzcac
 title: Enhanced Performance Dashboard for SQL Databases in Microsoft Fabric
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=UAIic-vzcac
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-23 19:06:55 +00:00
-permalink: /ml/videos/Enhanced-Performance-Dashboard-for-SQL-Databases-in-Microsoft-Fabric
 tags:
 - Cloud Computing
 - Cloud Data Platform

@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-07-22-github-copilot-in-eclipse-smarter-faster-and-more-integrated
 title: GitHub Copilot in Eclipse—smarter, faster, and more integrated
 author: Allison
-canonical_url: https://github.blog/changelog/2025-07-22-github-copilot-in-eclipse-smarter-faster-and-more-integrated
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-22 17:41:06 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-in-Eclipsesmarter-faster-and-more-integrated
 viewing_mode: external
 page: news
 tags:

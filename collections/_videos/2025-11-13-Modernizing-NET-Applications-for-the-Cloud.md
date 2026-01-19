@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=vrxn-y0tFTI
 title: Modernizing .NET Applications for the Cloud
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=vrxn-y0tFTI
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:49 +00:00
-permalink: /coding/videos/Modernizing-NET-Applications-for-the-Cloud
 tags:
 - .NET
 - .NET 10

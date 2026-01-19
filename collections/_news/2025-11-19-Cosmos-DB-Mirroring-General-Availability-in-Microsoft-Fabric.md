@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-ga-of-cosmos-db-in-microsoft-fabric-and-cosmos-db-mirroring/
 title: Cosmos DB Mirroring General Availability in Microsoft Fabric
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-ga-of-cosmos-db-in-microsoft-fabric-and-cosmos-db-mirroring/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 09:30:00 +00:00
-permalink: /ai/news/Cosmos-DB-Mirroring-General-Availability-in-Microsoft-Fabric
 tags:
 - BM25
 - Cosmos DB

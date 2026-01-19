@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/devops/azure-devops-local-mcp-server-generally-available/
 title: Azure DevOps Local MCP Server Now Generally Available
 author: Dan Hellem
-canonical_url: https://devblogs.microsoft.com/devops/azure-devops-local-mcp-server-generally-available/
 viewing_mode: external
 feed_name: Microsoft DevOps Blog
-feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-10-13 11:00:46 +00:00
-permalink: /ai/news/Azure-DevOps-Local-MCP-Server-Now-Generally-Available
 tags:
 - Agile
 - Authorization

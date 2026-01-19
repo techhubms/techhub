@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ppaf8CZjRkI
 title: '.NET Data Community Standup: Practical Dapper vs Entity Framework Core Comparison'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=ppaf8CZjRkI
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-09-09 17:07:40 +00:00
-permalink: /coding/videos/NET-Data-Community-Standup-Practical-Dapper-vs-Entity-Framework-Core-Comparison
 tags:
 - .NET
 - Architecture

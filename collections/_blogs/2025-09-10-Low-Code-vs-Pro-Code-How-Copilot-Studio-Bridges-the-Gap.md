@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/low-code-vs-pro-code-how-copilot-studio-bridges-the-gap/
 title: 'Low-Code vs Pro-Code: How Copilot Studio Bridges the Gap'
 author: Dellenny
-canonical_url: https://dellenny.com/low-code-vs-pro-code-how-copilot-studio-bridges-the-gap/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-10 08:06:11 +00:00
-permalink: /ai/blogs/Low-Code-vs-Pro-Code-How-Copilot-Studio-Bridges-the-Gap
 tags:
 - AI Assistance
 - Application Development

@@ -59,7 +59,6 @@ Represents individual content (articles, videos, blogs, etc.) in API responses.
   "dateEpoch": 1705276800,
   "dateIso": "2024-01-15",
   "collectionName": "news",
-  "altCollection": null,
   "sectionNames": ["ai", "github-copilot"],
   "primarySectionName": "ai",
   "tags": ["copilot", "ai", "productivity"],
@@ -77,7 +76,6 @@ Represents individual content (articles, videos, blogs, etc.) in API responses.
 - `title`, `description`, `author`, `excerpt`: Content metadata
 - `dateEpoch`, `dateIso`: Publication date in both formats
 - `collectionName`: Collection this item belongs to (`"news"`, `"blogs"`, `"videos"`, `"community"`, `"roundups"`)
-- `altCollection`: Alternative collection for special content (e.g., `"features"` for ghc-features videos) - used for navigation highlighting
 - `sectionNames`: Array of lowercase section identifiers this content belongs to (e.g., `["ai", "github-copilot"]`) - mapped from frontmatter `categories` field (which contains Section Titles like "AI", "GitHub Copilot")
 - `primarySectionName`: Highest-priority section name (lowercase identifier) used for URL routing (e.g., `"ai"`). Calculated using section priority: github-copilot > ai > ml > azure > coding > devops > security
 - `tags`: Content tags for filtering

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-27-copilot-coding-agent-is-now-available-in-github-enterprise-cloud-with-data-residency
 title: Copilot Coding Agent Now in GitHub Enterprise Cloud with Data Residency
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-27-copilot-coding-agent-is-now-available-in-github-enterprise-cloud-with-data-residency
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-27 14:55:10 +00:00
-permalink: /github-copilot/news/Copilot-Coding-Agent-Now-in-GitHub-Enterprise-Cloud-with-Data-Residency
 tags:
 - Agent Automation
 - Autonomous Coding

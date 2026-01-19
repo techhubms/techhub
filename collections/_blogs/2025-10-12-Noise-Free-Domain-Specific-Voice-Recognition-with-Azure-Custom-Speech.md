@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/when-words-matter-noise-free-domain-specific-voice-recognition-with-azure-custom-speech/
 title: Noise-Free, Domain-Specific Voice Recognition with Azure Custom Speech
 author: Dellenny
-canonical_url: https://dellenny.com/when-words-matter-noise-free-domain-specific-voice-recognition-with-azure-custom-speech/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-12 08:14:12 +00:00
-permalink: /ai/blogs/Noise-Free-Domain-Specific-Voice-Recognition-with-Azure-Custom-Speech
 tags:
 - Acoustic Adaptation
 - Application Integration

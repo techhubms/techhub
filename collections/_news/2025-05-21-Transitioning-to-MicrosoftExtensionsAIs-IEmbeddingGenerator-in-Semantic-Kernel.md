@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/semantic-kernel/transitioning-to-new-iembeddinggenerator-interface/
 title: Transitioning to Microsoft.Extensions.AI’s IEmbeddingGenerator in Semantic Kernel
 author: Roger Barreto
-canonical_url: https://devblogs.microsoft.com/semantic-kernel/transitioning-to-new-iembeddinggenerator-interface/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-05-21 14:46:46 +00:00
-permalink: /ai/news/Transitioning-to-MicrosoftExtensionsAIs-IEmbeddingGenerator-in-Semantic-Kernel
 tags:
 - .NET
 - AI Services

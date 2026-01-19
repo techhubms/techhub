@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/reimagining-ai-at-scale-nvidia-gb300-nvl72-on-azure/ba-p/4464556
 title: 'Reimagining AI at Scale: Deploying NVIDIA GB300 NVL72 on Azure'
 author: gwaqar
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/reimagining-ai-at-scale-nvidia-gb300-nvl72-on-azure/ba-p/4464556
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-28 18:30:02 +00:00
-permalink: /ai/community/Reimagining-AI-at-Scale-Deploying-NVIDIA-GB300-NVL72-on-Azure
 tags:
 - AI Cluster
 - AI Infrastructure

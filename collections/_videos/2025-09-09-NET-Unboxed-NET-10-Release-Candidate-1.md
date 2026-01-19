@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=YuuWHkQAsFY
 title: .NET Unboxed - .NET 10 Release Candidate 1
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=YuuWHkQAsFY
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-09-09 17:26:23 +00:00
-permalink: /coding/videos/NET-Unboxed-NET-10-Release-Candidate-1
 tags:
 - .NET
 - .NET 10

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/microsoft-and-langchain-leading-the-way-in-ai-security-for-open-source-on-azure
 title: 'Microsoft and LangChain: Advancing AI Security for Open Source on Azure'
 author: Marlene Mhangami
-canonical_url: https://devblogs.microsoft.com/blog/microsoft-and-langchain-leading-the-way-in-ai-security-for-open-source-on-azure
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-06-05 17:05:24 +00:00
-permalink: /ai/news/Microsoft-and-LangChain-Advancing-AI-Security-for-Open-Source-on-Azure
 tags:
 - AI Security
 - Autogen

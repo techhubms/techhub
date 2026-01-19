@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-05-track-copilot-code-generation-metrics-in-a-dashboard
 title: Track Copilot Code Generation Metrics in GitHub Insights Dashboard
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-05-track-copilot-code-generation-metrics-in-a-dashboard
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-05 18:40:33 +00:00
-permalink: /github-copilot/news/Track-Copilot-Code-Generation-Metrics-in-GitHub-Insights-Dashboard
 tags:
 - Agent Actions
 - AI Insights

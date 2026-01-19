@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/top-10-things-you-can-do-with-github-copilot-as-a-new-developer/
 title: Top 10 Ways New Developers Can Benefit from GitHub Copilot
 author: Dellenny
-canonical_url: https://dellenny.com/top-10-things-you-can-do-with-github-copilot-as-a-new-developer/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-07 09:54:15 +00:00
-permalink: /github-copilot/blogs/Top-10-Ways-New-Developers-Can-Benefit-from-GitHub-Copilot
 tags:
 - AI Coding Assistant
 - Automated Code Suggestions

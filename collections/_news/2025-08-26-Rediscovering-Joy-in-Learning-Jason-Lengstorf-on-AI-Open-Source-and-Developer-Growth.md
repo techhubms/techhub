@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/developer-skills/career-growth/rediscovering-joy-in-learning-jason-lengstorf-on-the-state-of-development/
 title: 'Rediscovering Joy in Learning: Jason Lengstorf on AI, Open Source, and Developer Growth'
 author: Andrea Griffiths
-canonical_url: https://github.blog/developer-skills/career-growth/rediscovering-joy-in-learning-jason-lengstorf-on-the-state-of-development/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-08-26 16:10:14 +00:00
-permalink: /ai/news/Rediscovering-Joy-in-Learning-Jason-Lengstorf-on-AI-Open-Source-and-Developer-Growth
 tags:
 - AI in Development
 - Autonomous Agents

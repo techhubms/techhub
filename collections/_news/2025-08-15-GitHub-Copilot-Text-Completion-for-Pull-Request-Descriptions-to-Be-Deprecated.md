@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-15-deprecating-copilot-text-completion-for-pull-request-descriptions
 title: GitHub Copilot Text Completion for Pull Request Descriptions to Be Deprecated
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-15-deprecating-copilot-text-completion-for-pull-request-descriptions
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-15 22:52:35 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-Text-Completion-for-Pull-Request-Descriptions-to-Be-Deprecated
 tags:
 - AI Assistance
 - Beta Features

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/level-up-your-python-gen-ai-skills-from-our-free-nine-part/ba-p/4459464
 title: 'Level Up Your Python Gen AI Skills: Nine-Part YouTube Stream Series'
 author: Pamela_Fox
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/level-up-your-python-gen-ai-skills-from-our-free-nine-part/ba-p/4459464
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-06 17:46:34 +00:00
-permalink: /ai/community/Level-Up-Your-Python-Gen-AI-Skills-Nine-Part-YouTube-Stream-Series
 tags:
 - Agent Frameworks
 - AI Content Safety

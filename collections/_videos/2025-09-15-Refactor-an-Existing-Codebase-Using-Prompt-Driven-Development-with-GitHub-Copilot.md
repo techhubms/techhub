@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=1EBXoFZO6Kk
 title: Refactor an Existing Codebase Using Prompt-Driven Development with GitHub Copilot
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=1EBXoFZO6Kk
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-15 14:00:03 +00:00
-permalink: /github-copilot/videos/Refactor-an-Existing-Codebase-Using-Prompt-Driven-Development-with-GitHub-Copilot
 tags:
 - Agent Mode
 - Agentmode

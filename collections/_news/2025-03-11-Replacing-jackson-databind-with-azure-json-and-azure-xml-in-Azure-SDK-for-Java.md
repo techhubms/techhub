@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/replacing-jackson-databind-with-azure-json-and-azure-xml/
 title: Replacing jackson-databind with azure-json and azure-xml in Azure SDK for Java
 author: Alan Zimmer
-canonical_url: https://devblogs.microsoft.com/azure-sdk/replacing-jackson-databind-with-azure-json-and-azure-xml/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-03-11 20:38:45 +00:00
-permalink: /coding/news/Replacing-jackson-databind-with-azure-json-and-azure-xml-in-Azure-SDK-for-Java
 tags:
 - Azure Core
 - Azure JSON

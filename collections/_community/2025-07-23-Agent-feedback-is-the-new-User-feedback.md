@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AI_Agents/comments/1m7ldl2/agent_feedback_is_the_new_user_feedback/
 title: Agent feedback is the new User feedback
 author: lchoquel
-canonical_url: https://www.reddit.com/r/AI_Agents/comments/1m7ldl2/agent_feedback_is_the_new_user_feedback/
 feed_name: Reddit AI Agents
-feed_url: https://www.reddit.com/r/AI_Agents/.rss
 date: 2025-07-23 21:11:28 +00:00
-permalink: /ai/community/Agent-feedback-is-the-new-User-feedback
 viewing_mode: external
 page: community
 tags:

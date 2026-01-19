@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/azure-pricing-models-explained-pay-as-you-go-reserved-and-spot-instances/
 title: 'Azure Pricing Models Explained: Pay-As-You-Go, Reserved, and Spot Instances'
 author: Dellenny
-canonical_url: https://dellenny.com/azure-pricing-models-explained-pay-as-you-go-reserved-and-spot-instances/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-12 15:56:44 +00:00
-permalink: /azure/blogs/Azure-Pricing-Models-Explained-Pay-As-You-Go-Reserved-and-Spot-Instances
 tags:
 - Azure Advisor
 - Azure Cost Management

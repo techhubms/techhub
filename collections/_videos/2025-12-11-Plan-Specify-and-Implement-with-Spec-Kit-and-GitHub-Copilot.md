@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=VfBLlAN5zdQ
 title: Plan, Specify, and Implement with Spec Kit and GitHub Copilot
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=VfBLlAN5zdQ
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-11 21:53:48 +00:00
-permalink: /github-copilot/videos/Plan-Specify-and-Implement-with-Spec-Kit-and-GitHub-Copilot
 tags:
 - AI Development
 - Cloud Computing

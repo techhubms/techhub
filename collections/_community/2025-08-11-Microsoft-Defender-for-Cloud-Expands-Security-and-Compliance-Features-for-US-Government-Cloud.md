@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-cloud-expands-u-s-gov-cloud-support-for/ba-p/4441118
 title: Microsoft Defender for Cloud Expands Security and Compliance Features for U.S. Government Cloud
 author: lgoduti
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-cloud-expands-u-s-gov-cloud-support-for/ba-p/4441118
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-11 16:00:00 +00:00
-permalink: /azure/community/Microsoft-Defender-for-Cloud-Expands-Security-and-Compliance-Features-for-US-Government-Cloud
 tags:
 - Agentless Monitoring
 - Azure Government

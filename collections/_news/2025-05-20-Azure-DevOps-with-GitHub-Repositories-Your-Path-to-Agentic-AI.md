@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/azure-devops-with-github-repositories-your-path-to-agentic-ai
 title: Azure DevOps with GitHub Repositories – Your Path to Agentic AI
 author: Aaron Hallberg
-canonical_url: https://devblogs.microsoft.com/blog/azure-devops-with-github-repositories-your-path-to-agentic-ai
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-05-20 16:00:55 +00:00
-permalink: /github-copilot/news/Azure-DevOps-with-GitHub-Repositories-Your-Path-to-Agentic-AI
 tags:
 - Agentic AI
 - AI Teammate

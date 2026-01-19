@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=dI4H5ZyYOx0
 title: Assigning Linear Issues to GitHub Copilot Coding Agent
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=dI4H5ZyYOx0
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-01 14:58:19 +00:00
-permalink: /github-copilot/videos/Assigning-Linear-Issues-to-GitHub-Copilot-Coding-Agent
 tags:
 - AI Powered Development
 - Code Automation

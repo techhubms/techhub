@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=aP-kn76-emI
 title: 'Azure Database for PostgreSQL: Flexible Server Deep Dive'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=aP-kn76-emI
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-22 13:17:22 +00:00
-permalink: /azure/videos/Azure-Database-for-PostgreSQL-Flexible-Server-Deep-Dive
 tags:
 - Authentication
 - Azure Backup

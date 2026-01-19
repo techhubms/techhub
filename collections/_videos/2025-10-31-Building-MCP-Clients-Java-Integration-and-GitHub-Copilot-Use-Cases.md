@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=HQQavvdrAA0
 title: 'Building MCP Clients: Java Integration and GitHub Copilot Use Cases'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=HQQavvdrAA0
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-31 00:00:22 +00:00
-permalink: /github-copilot/videos/Building-MCP-Clients-Java-Integration-and-GitHub-Copilot-Use-Cases
 tags:
 - Agent Mode
 - AI Integration

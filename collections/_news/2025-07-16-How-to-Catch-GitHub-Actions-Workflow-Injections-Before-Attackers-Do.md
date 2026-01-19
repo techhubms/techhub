@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/security/vulnerability-research/how-to-catch-github-actions-workflow-injections-before-attackers-do/
 title: How to Catch GitHub Actions Workflow Injections Before Attackers Do
 author: Dylan Birtolo
-canonical_url: https://github.blog/security/vulnerability-research/how-to-catch-github-actions-workflow-injections-before-attackers-do/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-07-16 16:00:00 +00:00
-permalink: /devops/news/How-to-Catch-GitHub-Actions-Workflow-Injections-Before-Attackers-Do
 tags:
 - Attack Prevention
 - CI/CD

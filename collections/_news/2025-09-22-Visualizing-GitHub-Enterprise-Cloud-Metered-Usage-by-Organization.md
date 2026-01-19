@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-22-visualize-metered-usage-by-organization-in-github-enterprise-cloud
 title: Visualizing GitHub Enterprise Cloud Metered Usage by Organization
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-22-visualize-metered-usage-by-organization-in-github-enterprise-cloud
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-22 14:22:35 +00:00
-permalink: /devops/news/Visualizing-GitHub-Enterprise-Cloud-Metered-Usage-by-Organization
 tags:
 - Account Management
 - Billing

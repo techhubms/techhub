@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=GcEHiY6Vp-8
 title: 'Smatterings of F#: Integrating F# in a C#-Focused World'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=GcEHiY6Vp-8
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 01:40:06 +00:00
-permalink: /coding/videos/Smatterings-of-F-Integrating-F-in-a-C-Focused-World
 tags:
 - .NET
 - Astro

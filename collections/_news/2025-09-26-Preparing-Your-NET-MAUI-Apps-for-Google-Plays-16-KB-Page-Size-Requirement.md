@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/maui-google-play-16-kb-page-size-support/
 title: Preparing Your .NET MAUI Apps for Google Play’s 16 KB Page Size Requirement
 author: Gerald Versluis
-canonical_url: https://devblogs.microsoft.com/dotnet/maui-google-play-16-kb-page-size-support/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-09-26 17:05:00 +00:00
-permalink: /coding/news/Preparing-Your-NET-MAUI-Apps-for-Google-Plays-16-KB-Page-Size-Requirement
 tags:
 - .NET
 - .NET 9

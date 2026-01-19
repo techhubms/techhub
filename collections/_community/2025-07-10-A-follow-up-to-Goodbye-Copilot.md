@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1lwecec/a_followup_to_goodbye_copilot/
 title: A follow-up to 'Goodbye Copilot!'...
 author: UsualResult
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1lwecec/a_followup_to_goodbye_copilot/
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-10 14:36:36 +00:00
-permalink: /github-copilot/community/A-follow-up-to-Goodbye-Copilot
 viewing_mode: external
 tags:
 - AI Models

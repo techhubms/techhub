@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/introducing-microsoft-agent-framework/
 title: 'Introducing Microsoft Agent Framework: Streamlining Multi-Agent AI Systems with Azure AI Foundry'
 author: stclarke
-canonical_url: https://azure.microsoft.com/en-us/blog/introducing-microsoft-agent-framework/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-01 19:03:22 +00:00
-permalink: /ai/news/Introducing-Microsoft-Agent-Framework-Streamlining-Multi-Agent-AI-Systems-with-Azure-AI-Foundry
 tags:
 - Agent2Agent
 - AI Agents

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mbdd6h/lmao_did_i_do_something_wrong/
 title: LMAO Did I Do Something Wrong?
 author: Yourmelbguy
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mbdd6h/lmao_did_i_do_something_wrong/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-28 11:13:32 +00:00
-permalink: /github-copilot/community/LMAO-Did-I-Do-Something-Wrong
 tags:
 - AI Assistant
 - Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/powershell/microsoft-update-changes-for-powershell-7/
 title: 'Microsoft Update Changes for PowerShell 7: Expected Behavior and Update Rules'
 author: Steven Bucher
-canonical_url: https://devblogs.microsoft.com/powershell/microsoft-update-changes-for-powershell-7/
 viewing_mode: external
 feed_name: Microsoft PowerShell Blog
-feed_url: https://devblogs.microsoft.com/powershell/feed/
 date: 2025-02-27 22:28:17 +00:00
-permalink: /coding/news/Microsoft-Update-Changes-for-PowerShell-7-Expected-Behavior-and-Update-Rules
 tags:
 - Automation
 - LTS

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/smarter-ai-edits-in-visual-studio-copilot/
 title: Smarter AI Edits in Visual Studio Copilot
 author: Jessie Houghton, Oscar Obeso, Rhea Patel
-canonical_url: https://devblogs.microsoft.com/visualstudio/smarter-ai-edits-in-visual-studio-copilot/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-07-31 12:00:42 +00:00
-permalink: /github-copilot/news/Smarter-AI-Edits-in-Visual-Studio-Copilot
 tags:
 - Agent Mode
 - AI Agents

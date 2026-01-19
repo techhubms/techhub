@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/survey-traces-large-amount-of-breaches-back-to-vulnerable-code/?utm_source=rss&utm_medium=rss&utm_campaign=survey-traces-large-amount-of-breaches-back-to-vulnerable-code
 title: Most Organizations Face Breaches Caused by Vulnerable Code, Survey Finds
 author: Mike Vizard
-canonical_url: https://devops.com/survey-traces-large-amount-of-breaches-back-to-vulnerable-code/?utm_source=rss&utm_medium=rss&utm_campaign=survey-traces-large-amount-of-breaches-back-to-vulnerable-code
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-14 11:00:40 +00:00
-permalink: /ai/blogs/Most-Organizations-Face-Breaches-Caused-by-Vulnerable-Code-Survey-Finds
 tags:
 - AI Coding Tools
 - API Security

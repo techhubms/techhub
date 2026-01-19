@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=bhN_v449nVM
 title: Migration Lessons from Microsoft Federal's RISE with SAP Deployment
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=bhN_v449nVM
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:28:33 +00:00
-permalink: /ai/videos/Migration-Lessons-from-Microsoft-Federals-RISE-with-SAP-Deployment
 tags:
 - AI Powered Monitoring
 - Azure Government

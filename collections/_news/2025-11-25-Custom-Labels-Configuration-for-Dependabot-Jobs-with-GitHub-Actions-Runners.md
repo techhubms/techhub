@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-25-custom-labels-configuration-option-for-dependabot-self-hosted-and-larger-github-hosted-actions-runners-now-generally-available-at-the-organization-level
 title: Custom Labels Configuration for Dependabot Jobs with GitHub Actions Runners
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-25-custom-labels-configuration-option-for-dependabot-self-hosted-and-larger-github-hosted-actions-runners-now-generally-available-at-the-organization-level
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-25 16:07:42 +00:00
-permalink: /devops/news/Custom-Labels-Configuration-for-Dependabot-Jobs-with-GitHub-Actions-Runners
 tags:
 - CI/CD
 - Configuration

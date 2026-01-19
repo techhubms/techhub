@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=dXUy9evg1yo
 title: 'AI Fine-Tuning in Microsoft Foundry: Building Production-Ready Agents'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=dXUy9evg1yo
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 10:25:11 +00:00
-permalink: /ai/videos/AI-Fine-Tuning-in-Microsoft-Foundry-Building-Production-Ready-Agents
 tags:
 - AI Agents
 - AI Workflows

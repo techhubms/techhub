@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=sKW4LUVlOSo
 title: Converting a Web App to Mobile Using GitHub Copilot Prompts
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=sKW4LUVlOSo
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-24 14:01:37 +00:00
-permalink: /github-copilot/videos/Converting-a-Web-App-to-Mobile-Using-GitHub-Copilot-Prompts
 tags:
 - Code
 - Copilot

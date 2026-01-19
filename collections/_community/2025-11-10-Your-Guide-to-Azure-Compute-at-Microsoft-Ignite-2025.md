@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/your-guide-to-azure-compute-at-microsoft-ignite-2025/ba-p/4468633
 title: Your Guide to Azure Compute at Microsoft Ignite 2025
 author: melissahollingshed
-canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/your-guide-to-azure-compute-at-microsoft-ignite-2025/ba-p/4468633
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-10 20:41:35 +00:00
-permalink: /azure/community/Your-Guide-to-Azure-Compute-at-Microsoft-Ignite-2025
 tags:
 - Azure Backup
 - Azure Boost

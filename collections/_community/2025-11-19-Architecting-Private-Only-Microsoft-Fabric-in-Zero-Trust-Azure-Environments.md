@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-private-connectivity-for-microsoft-fabric-a-practical/ba-p/4471190
 title: Architecting Private-Only Microsoft Fabric in Zero-Trust Azure Environments
 author: mohit-kanojia
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-private-connectivity-for-microsoft-fabric-a-practical/ba-p/4471190
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 03:49:00 +00:00
-permalink: /ml/community/Architecting-Private-Only-Microsoft-Fabric-in-Zero-Trust-Azure-Environments
 tags:
 - ADLS
 - AzAPI Provider

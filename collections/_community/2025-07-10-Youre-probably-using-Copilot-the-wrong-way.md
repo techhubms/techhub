@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1lwg11b/youre_probably_using_copilot_the_wrong_way/
 title: You're probably using Copilot the wrong way
 author: Thershort
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1lwg11b/youre_probably_using_copilot_the_wrong_way/
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-10 15:43:52 +00:00
-permalink: /github-copilot/community/Youre-probably-using-Copilot-the-wrong-way
 viewing_mode: external
 tags:
 - AI Tools

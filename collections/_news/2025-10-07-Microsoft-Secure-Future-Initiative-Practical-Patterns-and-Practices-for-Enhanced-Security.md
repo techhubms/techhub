@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/10/07/new-microsoft-secure-future-initiative-sfi-patterns-and-practices-practical-guides-to-strengthen-security/
 title: 'Microsoft Secure Future Initiative: Practical Patterns and Practices for Enhanced Security'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/07/new-microsoft-secure-future-initiative-sfi-patterns-and-practices-practical-guides-to-strengthen-security/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-07 16:56:53 +00:00
-permalink: /security/news/Microsoft-Secure-Future-Initiative-Practical-Patterns-and-Practices-for-Enhanced-Security
 tags:
 - Azure AD
 - CI/CD Security

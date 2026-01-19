@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mipwjd/differentiating_between_physical_and_logical/
 title: Detecting Physical vs Logical Processors in Cross-Platform .NET Applications
 author: Eisenmonoxid1
-canonical_url: https://www.reddit.com/r/csharp/comments/1mipwjd/differentiating_between_physical_and_logical/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-06 00:12:38 +00:00
-permalink: /coding/community/Detecting-Physical-vs-Logical-Processors-in-Cross-Platform-NET-Applications
 tags:
 - .NET 9
 - C#

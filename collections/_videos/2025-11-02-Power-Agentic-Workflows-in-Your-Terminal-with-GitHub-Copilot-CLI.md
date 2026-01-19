@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=82jciNezDMY
 title: Power Agentic Workflows in Your Terminal with GitHub Copilot CLI
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=82jciNezDMY
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-02 14:00:11 +00:00
-permalink: /github-copilot/videos/Power-Agentic-Workflows-in-Your-Terminal-with-GitHub-Copilot-CLI
 tags:
 - Accessibility Review
 - AI Assistant

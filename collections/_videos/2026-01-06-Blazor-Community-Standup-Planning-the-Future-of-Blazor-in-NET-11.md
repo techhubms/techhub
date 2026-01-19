@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=aAZZD_sXNg8
 title: 'Blazor Community Standup: Planning the Future of Blazor in .NET 11'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=aAZZD_sXNg8
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2026-01-06 18:30:09 +00:00
-permalink: /coding/videos/Blazor-Community-Standup-Planning-the-Future-of-Blazor-in-NET-11
 tags:
 - .NET
 - .NET 11

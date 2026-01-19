@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/11/03/sesameop-novel-backdoor-uses-openai-assistants-api-for-command-and-control/
 title: 'SesameOp: Novel Backdoor Abuses OpenAI Assistants API for Stealth Command and Control'
 author: Microsoft Incident Response
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/11/03/sesameop-novel-backdoor-uses-openai-assistants-api-for-command-and-control/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-11-03 17:00:00 +00:00
-permalink: /ai/news/SesameOp-Novel-Backdoor-Abuses-OpenAI-Assistants-API-for-Stealth-Command-and-Control
 tags:
 - .NET
 - API Abuse

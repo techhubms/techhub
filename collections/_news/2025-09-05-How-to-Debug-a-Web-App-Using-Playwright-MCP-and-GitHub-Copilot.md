@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/how-to-debug-a-web-app-with-playwright-mcp-and-github-copilot/
 title: How to Debug a Web App Using Playwright MCP and GitHub Copilot
 author: Christopher Harrison
-canonical_url: https://github.blog/ai-and-ml/github-copilot/how-to-debug-a-web-app-with-playwright-mcp-and-github-copilot/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-09-05 16:00:00 +00:00
-permalink: /github-copilot/news/How-to-Debug-a-Web-App-Using-Playwright-MCP-and-GitHub-Copilot
 tags:
 - Agent Mode
 - AI & ML

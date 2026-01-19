@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=XjVj_qRwzVg
 title: 'Foundry Control Plane: Managing AI Agents at Scale'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=XjVj_qRwzVg
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 06:39:24 +00:00
-permalink: /ai/videos/Foundry-Control-Plane-Managing-AI-Agents-at-Scale
 tags:
 - AI Agents
 - AI Compliance

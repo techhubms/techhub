@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://jessehouwing.net/github-actions-improved-dependency-submission/
 title: Improved Dependency Submission for GitHub Actions
 author: Jesse Houwing
-canonical_url: https://jessehouwing.net/github-actions-improved-dependency-submission/
 viewing_mode: external
 feed_name: Jesse Houwing's Blog
-feed_url: https://jessehouwing.net/rss/
 date: 2025-12-27 18:47:09 +00:00
-permalink: /devops/blogs/Improved-Dependency-Submission-for-GitHub-Actions
 tags:
 - Actions Dependency Submission
 - Automated Security

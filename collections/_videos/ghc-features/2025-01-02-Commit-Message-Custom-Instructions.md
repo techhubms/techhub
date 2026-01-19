@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/eAh9qLmBgKg
 title: Commit Message Custom Instructions
 author: Randy Pagels
-canonical_url: https://youtu.be/eAh9qLmBgKg
 date: 2025-01-02 11:05:37 +00:00
-permalink: /github-copilot/videos/Commit-Message-Custom-Instructions
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Git
 - Instructions

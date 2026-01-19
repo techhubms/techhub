@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/announcing-msgraph-provider-public-preview-and-the-microsoft/ba-p/4443614
 title: Announcing Public Preview of the Terraform MSGraph Provider and Microsoft Terraform VSCode Extension
 author: stevenjma
-canonical_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/announcing-msgraph-provider-public-preview-and-the-microsoft/ba-p/4443614
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-14 17:56:30 +00:00
-permalink: /coding/community/Announcing-Public-Preview-of-the-Terraform-MSGraph-Provider-and-Microsoft-Terraform-VSCode-Extension
 tags:
 - AppRoleAssignment
 - AzAPI

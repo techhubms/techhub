@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=TaTPDLl0I-Q
 title: 'VS Code as an AI-Native Editor: Insights from GitHub Universe 2025'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=TaTPDLl0I-Q
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-11-10 08:00:41 +00:00
-permalink: /github-copilot/videos/VS-Code-as-an-AI-Native-Editor-Insights-from-GitHub-Universe-2025
 tags:
 - Agent Sessions
 - AI Agents

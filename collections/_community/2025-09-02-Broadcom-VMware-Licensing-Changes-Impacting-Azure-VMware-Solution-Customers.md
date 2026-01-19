@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/broadcom-vmware-licensing-changes-what-azure-vmware-solution/ba-p/4448784
 title: Broadcom VMware Licensing Changes Impacting Azure VMware Solution Customers
 author: christopheherrbach
-canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/broadcom-vmware-licensing-changes-what-azure-vmware-solution/ba-p/4448784
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-02 17:41:37 +00:00
-permalink: /azure/community/Broadcom-VMware-Licensing-Changes-Impacting-Azure-VMware-Solution-Customers
 tags:
 - AVS
 - Azure VMware Solution

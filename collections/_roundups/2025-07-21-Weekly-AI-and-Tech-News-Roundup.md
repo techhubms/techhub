@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: AI Developer Tools and Automation Advances
 author: Tech Hub Team
 viewing_mode: internal
 date: 2025-07-21 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET 10
 - Agentic AI

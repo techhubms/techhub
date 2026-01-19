@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-18-github-copilot-cli-new-models-enhanced-code-search-and-better-image-support
 title: GitHub Copilot CLI Introduces New AI Models, Enhanced Code Search, and Improved Image Support
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-18-github-copilot-cli-new-models-enhanced-code-search-and-better-image-support
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 22:07:34 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-CLI-Introduces-New-AI-Models-Enhanced-Code-Search-and-Improved-Image-Support
 tags:
 - Agent Configuration
 - AI Models

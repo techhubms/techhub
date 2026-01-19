@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/5-ways-to-integrate-github-copilot-coding-agent-into-your-workflow/
 title: 5 Powerful Ways to Integrate GitHub Copilot Coding Agent into Your Workflow
 author: Andrea Griffiths
-canonical_url: https://github.blog/ai-and-ml/github-copilot/5-ways-to-integrate-github-copilot-coding-agent-into-your-workflow/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-09-18 16:00:00 +00:00
-permalink: /github-copilot/news/5-Powerful-Ways-to-Integrate-GitHub-Copilot-Coding-Agent-into-Your-Workflow
 tags:
 - Agent Mode
 - Agents Panel

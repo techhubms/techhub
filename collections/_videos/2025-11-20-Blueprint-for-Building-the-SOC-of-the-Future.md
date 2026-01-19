@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=LZIRB-gu-gE
 title: Blueprint for Building the SOC of the Future
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=LZIRB-gu-gE
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 14:27:33 +00:00
-permalink: /ai/videos/Blueprint-for-Building-the-SOC-of-the-Future
 tags:
 - Agentic AI
 - AI Security

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-10-github-copilot-cli-faster-more-concise-and-prettier
 title: 'GitHub Copilot CLI: Faster, More Concise, Streamlined Developer Experience'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-10-github-copilot-cli-faster-more-concise-and-prettier
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-10 20:41:42 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-CLI-Faster-More-Concise-Streamlined-Developer-Experience
 tags:
 - AI Coding Assistant
 - Bugfixes

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/announcing-general-availability-of-geo-replication-for-azure/ba-p/4413164
 title: Announcing General Availability of Geo-Replication for Azure Service Bus Premium
 author: EldertGrootenboer
-canonical_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/announcing-general-availability-of-geo-replication-for-azure/ba-p/4413164
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-17 17:00:00 +00:00
-permalink: /azure/community/Announcing-General-Availability-of-Geo-Replication-for-Azure-Service-Bus-Premium
 tags:
 - Asynchronous Replication
 - Availability Zones

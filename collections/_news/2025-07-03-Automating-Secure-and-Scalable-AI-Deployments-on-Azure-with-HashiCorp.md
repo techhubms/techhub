@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/all-things-azure/automating-secure-and-scalable-ai-deployments-on-azure-with-hashicorp/
 title: Automating Secure and Scalable AI Deployments on Azure with HashiCorp
 author: cindywang, davidwright
-canonical_url: https://devblogs.microsoft.com/all-things-azure/automating-secure-and-scalable-ai-deployments-on-azure-with-hashicorp/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-07-03 23:03:35 +00:00
-permalink: /ai/news/Automating-Secure-and-Scalable-AI-Deployments-on-Azure-with-HashiCorp
 tags:
 - Agentic
 - Agentic Workloads

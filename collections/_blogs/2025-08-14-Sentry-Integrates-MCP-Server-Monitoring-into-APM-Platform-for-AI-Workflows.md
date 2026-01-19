@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/sentry-adds-tool-for-monitoring-mcp-servers-to-apm-platform/?utm_source=rss&utm_medium=rss&utm_campaign=sentry-adds-tool-for-monitoring-mcp-servers-to-apm-platform
 title: Sentry Integrates MCP Server Monitoring into APM Platform for AI Workflows
 author: Mike Vizard
-canonical_url: https://devops.com/sentry-adds-tool-for-monitoring-mcp-servers-to-apm-platform/?utm_source=rss&utm_medium=rss&utm_campaign=sentry-adds-tool-for-monitoring-mcp-servers-to-apm-platform
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-14 13:00:36 +00:00
-permalink: /ai/blogs/Sentry-Integrates-MCP-Server-Monitoring-into-APM-Platform-for-AI-Workflows
 tags:
 - AI Applications
 - API Monitoring

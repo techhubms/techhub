@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/open-source/social-impact/using-ai-to-map-hope-for-refugees-with-unhcr-the-un-refugee-agency/
 title: 'Using AI and Open Source to Map Refugee Settlements: The UNHCR and GitHub Story'
 author: Sidney Espinosa
-canonical_url: https://github.blog/open-source/social-impact/using-ai-to-map-hope-for-refugees-with-unhcr-the-un-refugee-agency/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-09-24 16:12:47 +00:00
-permalink: /github-copilot/news/Using-AI-and-Open-Source-to-Map-Refugee-Settlements-The-UNHCR-and-GitHub-Story
 tags:
 - Collaboration
 - Community Development

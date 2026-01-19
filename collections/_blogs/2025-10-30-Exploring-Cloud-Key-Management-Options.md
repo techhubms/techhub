@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/exploring-cloud-key-management-options/
 title: Exploring Cloud Key Management Options
 author: Alexander Williams
-canonical_url: https://devops.com/exploring-cloud-key-management-options/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-30 10:07:45 +00:00
-permalink: /azure/blogs/Exploring-Cloud-Key-Management-Options
 tags:
 - AWS KMS
 - Azure Key Vault

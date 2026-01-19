@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devopsjournal.io/blog/2023/04/24/how-Copilot-helps-me-in-my-daily-work
 title: How Copilot/AI helps me in my daily work
 author: Rob Bos
-canonical_url: https://devopsjournal.io/blog/2023/04/24/how-Copilot-helps-me-in-my-daily-work
 viewing_mode: external
 feed_name: Rob Bos' Blog
-feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2023-04-24 00:00:00 +00:00
-permalink: /github-copilot/blogs/How-CopilotAI-helps-me-in-my-daily-work
 tags:
 - AI Code Generation
 - Automation

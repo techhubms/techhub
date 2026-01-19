@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=NnltG78qREE
 title: 'Designing Empathetic AI Experiences: Trish Winter-Hunt on Content Design and Azure AI Foundry'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=NnltG78qREE
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-12 15:33:36 +00:00
-permalink: /ai/videos/Designing-Empathetic-AI-Experiences-Trish-Winter-Hunt-on-Content-Design-and-Azure-AI-Foundry
 tags:
 - AI Adoption
 - AI Agents

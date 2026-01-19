@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/troubleshooting-network-issues-with-retina/ba-p/4446071
 title: Troubleshooting Kubernetes Network Issues with Retina and eBPF
 author: kamilp
-canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/troubleshooting-network-issues-with-retina/ba-p/4446071
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-22 16:38:59 +00:00
-permalink: /azure/community/Troubleshooting-Kubernetes-Network-Issues-with-Retina-and-eBPF
 tags:
 - AKS
 - Bpftool

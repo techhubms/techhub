@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/the-digital-twin-employee-creating-hyper-personalized-copilot-prompts-with-copilot-studio/
 title: 'Digital Twin Employees: Hyper-Personalized AI Prompts with Copilot Studio'
 author: Dellenny
-canonical_url: https://dellenny.com/the-digital-twin-employee-creating-hyper-personalized-copilot-prompts-with-copilot-studio/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-15 08:38:47 +00:00
-permalink: /ai/blogs/Digital-Twin-Employees-Hyper-Personalized-AI-Prompts-with-Copilot-Studio
 tags:
 - AI Agent
 - Business Process Automation

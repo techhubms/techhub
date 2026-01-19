@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/announcing-sponsorship-on-nugetdotorg-for-maintainer-appreciation/
 title: Announcing Sponsorship on NuGet.org
 author: Sean
-canonical_url: https://devblogs.microsoft.com/dotnet/announcing-sponsorship-on-nugetdotorg-for-maintainer-appreciation/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-10-23 22:18:00 +00:00
-permalink: /coding/news/Announcing-Sponsorship-on-NuGetorg
 tags:
 - .NET
 - Developer Tools

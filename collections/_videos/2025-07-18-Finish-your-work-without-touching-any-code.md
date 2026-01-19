@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/VFv4YFCC1-4
 title: Finish your work without touching any code
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/shorts/VFv4YFCC1-4
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-07-18 20:19:41 +00:00
-permalink: /github-copilot/videos/Finish-your-work-without-touching-any-code
 tags:
 - AI Powered Automation
 - Code Automation

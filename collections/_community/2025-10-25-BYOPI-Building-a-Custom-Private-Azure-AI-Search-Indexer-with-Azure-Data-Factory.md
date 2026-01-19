@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure/byopi-design-your-own-custom-private-ai-search-indexer-with-no/m-p/4464205#M22283
 title: 'BYOPI: Building a Custom Private Azure AI Search Indexer with Azure Data Factory'
 author: ani_ms_emea
-canonical_url: https://techcommunity.microsoft.com/t5/azure/byopi-design-your-own-custom-private-ai-search-indexer-with-no/m-p/4464205#M22283
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-25 15:57:45 +00:00
-permalink: /ai/community/BYOPI-Building-a-Custom-Private-Azure-AI-Search-Indexer-with-Azure-Data-Factory
 tags:
 - ADF Pipeline
 - Azure AI Search

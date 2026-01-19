@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/global-expansion-now-available-in-west-europe-netherlands/ba-p/4479671
 title: Oracle Database@Azure Expands to West Europe and Brazil Southeast
 author: SparshAgrawat
-canonical_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/global-expansion-now-available-in-west-europe-netherlands/ba-p/4479671
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-08 00:06:13 +00:00
-permalink: /ai/community/Oracle-DatabaseAzure-Expands-to-West-Europe-and-Brazil-Southeast
 tags:
 - AI Ready Platform
 - Availability Zones

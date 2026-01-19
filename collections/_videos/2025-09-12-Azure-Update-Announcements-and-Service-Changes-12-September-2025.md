@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=6ZfVssHBvUw
 title: 'Azure Update: Announcements and Service Changes (12 September 2025)'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=6ZfVssHBvUw
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-12 14:44:04 +00:00
-permalink: /azure/videos/Azure-Update-Announcements-and-Service-Changes-12-September-2025
 tags:
 - Azure Cloud
 - Azure Databricks

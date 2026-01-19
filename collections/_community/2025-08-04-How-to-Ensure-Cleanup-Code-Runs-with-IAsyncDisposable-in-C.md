@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mhq5bl/how_to_make_sure_cleanup_code_gets_run/
 title: How to Ensure Cleanup Code Runs with IAsyncDisposable in C#
 author: detroitmatt
-canonical_url: https://www.reddit.com/r/csharp/comments/1mhq5bl/how_to_make_sure_cleanup_code_gets_run/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-04 21:20:25 +00:00
-permalink: /coding/community/How-to-Ensure-Cleanup-Code-Runs-with-IAsyncDisposable-in-C
 tags:
 - Async
 - Best Practices

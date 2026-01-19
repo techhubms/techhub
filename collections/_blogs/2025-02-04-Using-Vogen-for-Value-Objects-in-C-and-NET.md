@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://khalidabuhakmeh.com/vogen-and-value-objects-with-csharp-and-dotnet
 title: Using Vogen for Value Objects in C# and .NET
 author: Khalid Abuhakmeh
-canonical_url: https://khalidabuhakmeh.com/vogen-and-value-objects-with-csharp-and-dotnet
 viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
-feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2025-02-04 00:00:00 +00:00
-permalink: /coding/blogs/Using-Vogen-for-Value-Objects-in-C-and-NET
 tags:
 - .NET
 - C#

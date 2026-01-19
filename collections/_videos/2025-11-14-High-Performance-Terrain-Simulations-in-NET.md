@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=M98JKrUfyI4
 title: High-Performance Terrain Simulations in .NET
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=M98JKrUfyI4
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 04:30:06 +00:00
-permalink: /coding/videos/High-Performance-Terrain-Simulations-in-NET
 tags:
 - .NET
 - Architecture

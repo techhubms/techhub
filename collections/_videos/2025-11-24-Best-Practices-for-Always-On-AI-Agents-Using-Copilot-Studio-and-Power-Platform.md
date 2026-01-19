@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=_rCws3fowj8
 title: Best Practices for Always-On AI Agents Using Copilot Studio and Power Platform
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=_rCws3fowj8
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:32:17 +00:00
-permalink: /ai/videos/Best-Practices-for-Always-On-AI-Agents-Using-Copilot-Studio-and-Power-Platform
 tags:
 - AI Agents
 - Always On Agents

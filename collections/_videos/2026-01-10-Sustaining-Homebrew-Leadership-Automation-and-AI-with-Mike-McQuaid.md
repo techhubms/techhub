@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=mdxYnfPQrzU
 title: 'Sustaining Homebrew: Leadership, Automation, and AI with Mike McQuaid'
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=mdxYnfPQrzU
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2026-01-10 15:01:29 +00:00
-permalink: /github-copilot/videos/Sustaining-Homebrew-Leadership-Automation-and-AI-with-Mike-McQuaid
 tags:
 - AI in Development
 - Automation

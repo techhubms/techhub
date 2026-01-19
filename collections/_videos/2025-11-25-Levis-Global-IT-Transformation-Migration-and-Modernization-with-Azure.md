@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=UNJm-ipuQE8
 title: 'Levi’s Global IT Transformation: Migration and Modernization with Azure'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=UNJm-ipuQE8
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 12:08:40 +00:00
-permalink: /ai/videos/Levis-Global-IT-Transformation-Migration-and-Modernization-with-Azure
 tags:
 - AI Workflows
 - AKS

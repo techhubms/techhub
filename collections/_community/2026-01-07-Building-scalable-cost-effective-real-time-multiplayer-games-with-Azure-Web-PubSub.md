@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-scalable-cost-effective-real-time-multiplayer-games/ba-p/4483584
 title: Building scalable, cost-effective real-time multiplayer games with Azure Web PubSub
 author: kevinguo
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-scalable-cost-effective-real-time-multiplayer-games/ba-p/4483584
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-07 05:27:21 +00:00
-permalink: /coding/community/Building-scalable-cost-effective-real-time-multiplayer-games-with-Azure-Web-PubSub
 tags:
 - Auto Scaling
 - Azure Front Door

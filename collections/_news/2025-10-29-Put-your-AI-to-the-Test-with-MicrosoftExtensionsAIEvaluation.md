@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/put-your-ai-to-the-test-with-microsoft-extensions-ai-evaluation
 title: Put your AI to the Test with Microsoft.Extensions.AI.Evaluation
 author: McKenna Barlow, Shyam Namboodiripad
-canonical_url: https://devblogs.microsoft.com/blog/put-your-ai-to-the-test-with-microsoft-extensions-ai-evaluation
 viewing_mode: external
 feed_name: Microsoft Blog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-10-29 17:00:39 +00:00
-permalink: /ai/news/Put-your-AI-to-the-Test-with-MicrosoftExtensionsAIEvaluation
 tags:
 - .NET
 - AI Evaluation

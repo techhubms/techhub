@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/devops/upcoming-updates-for-azure-pipelines-agents-images/
 title: 'Upcoming Updates for Azure Pipelines Agent Images: Deprecation and Migration Guidance'
 author: Shubham Agarwal, Eric van Wijk
-canonical_url: https://devblogs.microsoft.com/devops/upcoming-updates-for-azure-pipelines-agents-images/
 viewing_mode: external
 feed_name: Microsoft DevOps Blog
-feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-10-18 18:40:30 +00:00
-permalink: /azure/news/Upcoming-Updates-for-Azure-Pipelines-Agent-Images-Deprecation-and-Migration-Guidance
 tags:
 - Agent Pools
 - Azure DevOps

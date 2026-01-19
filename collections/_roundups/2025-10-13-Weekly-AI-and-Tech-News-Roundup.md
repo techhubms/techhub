@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: AI Agents and Automated Workflows Update Developer Tools and Cloud Platforms
 author: Tech Hub Team
 viewing_mode: internal
 date: 2025-10-13 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - AI Agents
 - Azure AI

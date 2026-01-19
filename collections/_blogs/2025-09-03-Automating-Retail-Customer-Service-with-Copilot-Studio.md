@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-retail-businesses-are-automating-customer-service-with-copilot-studio/
 title: Automating Retail Customer Service with Copilot Studio
 author: Dellenny
-canonical_url: https://dellenny.com/how-retail-businesses-are-automating-customer-service-with-copilot-studio/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-03 07:44:29 +00:00
-permalink: /ai/blogs/Automating-Retail-Customer-Service-with-Copilot-Studio
 tags:
 - API Workflows
 - Bot Framework

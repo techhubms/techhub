@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/foundry-iq-agent-framework-integration/
 title: Building AI Agents with Foundry IQ and Microsoft Agent Framework
 author: Farzad Sunavala, Eduard van Valkenburg
-canonical_url: https://devblogs.microsoft.com/foundry/foundry-iq-agent-framework-integration/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-12-07 10:55:00 +00:00
-permalink: /ai/news/Building-AI-Agents-with-Foundry-IQ-and-Microsoft-Agent-Framework
 tags:
 - Agent Development
 - Agent Framework

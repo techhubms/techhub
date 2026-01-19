@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-07-09-delegate-tasks-to-copilot-coding-agent-from-the-github-mcp-server
 title: Delegate tasks to Copilot coding agent from the GitHub MCP server
 author: Allison
-canonical_url: https://github.blog/changelog/2025-07-09-delegate-tasks-to-copilot-coding-agent-from-the-github-mcp-server
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-09 19:58:14 +00:00
-permalink: /github-copilot/news/Delegate-tasks-to-Copilot-coding-agent-from-the-GitHub-MCP-server
 tags:
 - Background Processing
 - Coding Agent

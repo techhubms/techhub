@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deployment-and-build-from-azure-linux-based-web-app/ba-p/4461950
 title: Deployment and Build Strategies for Azure Linux Web Apps
 author: theringe
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deployment-and-build-from-azure-linux-based-web-app/ba-p/4461950
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-16 12:39:45 +00:00
-permalink: /coding/community/Deployment-and-Build-Strategies-for-Azure-Linux-Web-Apps
 tags:
 - Azure App Service
 - Azure DevOps

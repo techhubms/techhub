@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=z0R6JFHbyPc
 title: 'Advancing Confidential Computing: Bosch, Microsoft Azure, & Intel TDX'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=z0R6JFHbyPc
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 12:05:54 +00:00
-permalink: /ai/videos/Advancing-Confidential-Computing-Bosch-Microsoft-Azure-and-Intel-TDX
 tags:
 - Cloud Security
 - Confidential Computing

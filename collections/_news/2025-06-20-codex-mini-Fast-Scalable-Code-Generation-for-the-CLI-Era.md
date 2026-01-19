@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/codex-mini-fast-scalable-code-generation-for-the-cli-era/
 title: 'codex-mini: Fast, Scalable Code Generation for the CLI Era'
 author: Ananya Bishnoi, Anthony Mocny, Govind Kamtamneni
-canonical_url: https://devblogs.microsoft.com/foundry/codex-mini-fast-scalable-code-generation-for-the-cli-era/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-06-20 16:23:00 +00:00
-permalink: /ai/news/codex-mini-Fast-Scalable-Code-Generation-for-the-CLI-Era
 tags:
 - API Access
 - Azure AI Foundry

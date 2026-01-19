@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/github/comments/1mfuewy/releases_and_tags_disappearing/
 title: 'Releases and Tags Disappearing: Troubleshooting GitHub Branch and Tag Issues'
 author: Discommodian
-canonical_url: https://www.reddit.com/r/github/comments/1mfuewy/releases_and_tags_disappearing/
 viewing_mode: external
 feed_name: Reddit GitHub
-feed_url: https://www.reddit.com/r/github/.rss
 date: 2025-08-02 16:13:34 +00:00
-permalink: /devops/community/Releases-and-Tags-Disappearing-Troubleshooting-GitHub-Branch-and-Tag-Issues
 tags:
 - Actions
 - Branches

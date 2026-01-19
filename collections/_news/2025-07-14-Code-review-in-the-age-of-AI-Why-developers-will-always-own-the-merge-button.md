@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/generative-ai/code-review-in-the-age-of-ai-why-developers-will-always-own-the-merge-button/
 title: Code review in the age of AI - Why developers will always own the merge button
 author: Elle Shwer
-canonical_url: https://github.blog/ai-and-ml/generative-ai/code-review-in-the-age-of-ai-why-developers-will-always-own-the-merge-button/
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-07-14 16:38:03 +00:00
-permalink: /github-copilot/news/Code-review-in-the-age-of-AI-Why-developers-will-always-own-the-merge-button
 viewing_mode: external
 tags:
 - Agentic Workflows

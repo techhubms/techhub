@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/virtual-network-data-gateway-support-for-fabric-pipeline-dataflow-gen2-fast-copy-and-copy-job-is-now-generally-available/
 title: Virtual Network Data Gateway Now Generally Available for Fabric Pipeline, Dataflow Gen2, and Copy Job
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/virtual-network-data-gateway-support-for-fabric-pipeline-dataflow-gen2-fast-copy-and-copy-job-is-now-generally-available/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-29 13:00:00 +00:00
-permalink: /ml/news/Virtual-Network-Data-Gateway-Now-Generally-Available-for-Fabric-Pipeline-Dataflow-Gen2-and-Copy-Job
 tags:
 - Copy Job
 - Data Governance

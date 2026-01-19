@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=PAgLzv1Lp1o
 title: 'Agent HQ for VS Code: Unified Agent Experience with GitHub Copilot'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=PAgLzv1Lp1o
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-12-10 21:01:49 +00:00
-permalink: /github-copilot/videos/Agent-HQ-for-VS-Code-Unified-Agent-Experience-with-GitHub-Copilot
 tags:
 - Agent HQ
 - Agent Sessions

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/building-secure-scalable-ai-in-the-cloud-with-microsoft-azure/
 title: Building Secure, Scalable Generative AI in the Cloud with Microsoft Azure
 author: Maria Bledsoe
-canonical_url: https://azure.microsoft.com/en-us/blog/building-secure-scalable-ai-in-the-cloud-with-microsoft-azure/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-01 15:00:00 +00:00
-permalink: /ai/news/Building-Secure-Scalable-Generative-AI-in-the-Cloud-with-Microsoft-Azure
 tags:
 - AI + Machine Learning
 - AI Security

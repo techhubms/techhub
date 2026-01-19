@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/introducing-image-customizer-for-azure-linux/ba-p/4454859
 title: Introducing Image Customizer for Azure Linux
 author: Kavya_Nagalakunta
-canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/introducing-image-customizer-for-azure-linux/ba-p/4454859
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-18 15:00:00 +00:00
-permalink: /azure/community/Introducing-Image-Customizer-for-Azure-Linux
 tags:
 - Azure Linux
 - Base Images

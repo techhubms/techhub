@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/oL9wOFW4p9o
 title: Explaining the Open Sourcing of Windows Subsystem for Linux (WSL)
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/shorts/oL9wOFW4p9o
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-28 15:39:03 +00:00
-permalink: /coding/videos/Explaining-the-Open-Sourcing-of-Windows-Subsystem-for-Linux-WSL
 tags:
 - Codebase
 - Community Contributions

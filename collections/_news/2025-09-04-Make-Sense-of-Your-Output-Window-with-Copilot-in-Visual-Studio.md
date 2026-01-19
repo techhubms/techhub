@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/make-sense-of-your-output-window-with-copilot/
 title: Make Sense of Your Output Window with Copilot in Visual Studio
 author: Jessie Houghton
-canonical_url: https://devblogs.microsoft.com/visualstudio/make-sense-of-your-output-window-with-copilot/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-09-04 12:00:38 +00:00
-permalink: /github-copilot/news/Make-Sense-of-Your-Output-Window-with-Copilot-in-Visual-Studio
 tags:
 - Build Logs
 - Context

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html
 title: Draft Smarter Regex Without the Headaches
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-09-05 00:00:00 +00:00
-permalink: /github-copilot/blogs/Draft-Smarter-Regex-Without-the-Headaches
 tags:
 - AI Tools
 - Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-07-23-github-spark-in-public-preview-for-copilot-pro-subscribers
 title: GitHub Spark in Public Preview for Copilot Pro+ Subscribers
 author: Allison
-canonical_url: https://github.blog/changelog/2025-07-23-github-spark-in-public-preview-for-copilot-pro-subscribers
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-23 16:00:49 +00:00
-permalink: /github-copilot/news/GitHub-Spark-in-Public-Preview-for-Copilot-Pro-Subscribers
 tags:
 - AI Driven Workflows
 - Application Deployment

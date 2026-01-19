@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=88No8pw706o
 title: MCP Security Best Practices
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=88No8pw706o
 viewing_mode: internal
 feed_name: Microsoft Build 2025 YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:00:13 +00:00
-permalink: /ai/videos/MCP-Security-Best-Practices
 tags:
 - AI App Security
 - AI System Resilience

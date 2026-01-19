@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2026/01/azure-cost-estimation-your-strategic-guide-to-cloud-pricing/
 title: 'Azure Cost Estimation: Your Strategic Guide to Cloud Pricing'
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2026/01/azure-cost-estimation-your-strategic-guide-to-cloud-pricing/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2026-01-06 06:23:00 +00:00
-permalink: /azure/blogs/Azure-Cost-Estimation-Your-Strategic-Guide-to-Cloud-Pricing
 tags:
 - Azure Advisor
 - Azure Cost Estimation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2026-01-13-organization-custom-properties-now-generally-available
 title: 'GitHub Organization Custom Properties: General Availability'
 author: Allison
-canonical_url: https://github.blog/changelog/2026-01-13-organization-custom-properties-now-generally-available
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2026-01-13 20:48:28 +00:00
-permalink: /devops/news/GitHub-Organization-Custom-Properties-General-Availability
 tags:
 - Automation
 - Compliance

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=eHqBZOrx6ZI
 title: 'Decision Records: Understanding Why Those Decisions Were Made in .NET'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=eHqBZOrx6ZI
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:20:58 +00:00
-permalink: /coding/videos/Decision-Records-Understanding-Why-Those-Decisions-Were-Made-in-NET
 tags:
 - .NET
 - .NET Aspire

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/semantic-kernel/vector-data-extensions-are-now-generally-available-ga/
 title: Vector Data Extensions for .NET and Semantic Kernel Now Generally Available
 author: Wes Steyn, Shay Rojansky
-canonical_url: https://devblogs.microsoft.com/semantic-kernel/vector-data-extensions-are-now-generally-available-ga/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-05-21 14:41:49 +00:00
-permalink: /ai/news/Vector-Data-Extensions-for-NET-and-Semantic-Kernel-Now-Generally-Available
 tags:
 - .NET
 - Abstractions

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=DPYO8hxqCcs
 title: Azure Update - October 2025 Announcements and Retirements
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=DPYO8hxqCcs
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-10-03 10:51:11 +00:00
-permalink: /ai/videos/Azure-Update-October-2025-Announcements-and-Retirements
 tags:
 - ACA Connector
 - AKS

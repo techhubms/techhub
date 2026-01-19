@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://jessehouwing.net/github-copilot-picking-the-right-model/
 title: How to Choose the Best GitHub Copilot Model for Your Refactoring Tasks
 author: Jesse Houwing
-canonical_url: https://jessehouwing.net/github-copilot-picking-the-right-model/
 viewing_mode: external
 feed_name: Jesse Houwing's Blog
-feed_url: https://jessehouwing.net/rss/
 date: 2025-04-25 09:24:19 +00:00
-permalink: /github-copilot/blogs/How-to-Choose-the-Best-GitHub-Copilot-Model-for-Your-Refactoring-Tasks
 tags:
 - AI Models
 - Copilot Chat

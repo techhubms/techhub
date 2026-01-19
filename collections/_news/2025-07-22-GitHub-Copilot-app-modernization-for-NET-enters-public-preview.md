@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-07-21-github-copilot-app-modernization-for-net-enters-public-preview
 title: GitHub Copilot app modernization for .NET enters public preview
 author: Allison
-canonical_url: https://github.blog/changelog/2025-07-21-github-copilot-app-modernization-for-net-enters-public-preview
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-22 02:36:29 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-app-modernization-for-NET-enters-public-preview
 viewing_mode: external
 tags:
 - .NET

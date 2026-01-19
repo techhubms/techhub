@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/blogs/2025/08/27/vscode-dev-days
 title: 'VS Code Dev Days: Explore AI-Assisted Development with GitHub Copilot'
 author: Katie Savage, Cynthia Zanoni
-canonical_url: https://code.visualstudio.com/blogs/2025/08/27/vscode-dev-days
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-08-26 00:00:00 +00:00
-permalink: /github-copilot/news/VS-Code-Dev-Days-Explore-AI-Assisted-Development-with-GitHub-Copilot
 tags:
 - Agent Mode
 - AI Assisted Development

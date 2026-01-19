@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-costs-simplified-lowering-capacity-utilization-when-accessing-onelake/
 title: 'Simplified OneLake Capacity Costs: Updated Proxy Consumption Rates in Microsoft Fabric'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-costs-simplified-lowering-capacity-utilization-when-accessing-onelake/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-12 10:00:00 +00:00
-permalink: /ml/news/Simplified-OneLake-Capacity-Costs-Updated-Proxy-Consumption-Rates-in-Microsoft-Fabric
 tags:
 - ADLS
 - Analytics

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-25-copilot-coding-agent-is-now-generally-available
 title: GitHub Copilot Coding Agent Now Generally Available
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-25-copilot-coding-agent-is-now-generally-available
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-25 16:49:31 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-Coding-Agent-Now-Generally-Available
 tags:
 - AI Agent
 - Automation

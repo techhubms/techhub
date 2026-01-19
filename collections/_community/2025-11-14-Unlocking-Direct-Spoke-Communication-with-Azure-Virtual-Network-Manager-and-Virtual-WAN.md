@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-virtual-network-manager-azure-virtual-wan/ba-p/4469991
 title: Unlocking Direct Spoke Communication with Azure Virtual Network Manager and Virtual WAN
 author: SimonaTarantola
-canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-virtual-network-manager-azure-virtual-wan/ba-p/4469991
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-14 14:09:16 +00:00
-permalink: /azure/community/Unlocking-Direct-Spoke-Communication-with-Azure-Virtual-Network-Manager-and-Virtual-WAN
 tags:
 - AVNM
 - Azure Firewall

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/research/blog/mindjourney-enables-ai-to-explore-simulated-3d-worlds-to-improve-spatial-interpretation/
 title: 'MindJourney: AI Agents Navigate and Reason in Simulated 3D Worlds'
 author: sbaynes
-canonical_url: https://www.microsoft.com/en-us/research/blog/mindjourney-enables-ai-to-explore-simulated-3d-worlds-to-improve-spatial-interpretation/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-20 21:00:30 +00:00
-permalink: /ai/news/MindJourney-AI-Agents-Navigate-and-Reason-in-Simulated-3D-Worlds
 tags:
 - 3D Simulation
 - AI Agents

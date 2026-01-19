@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-28-a-mission-control-to-assign-steer-and-track-copilot-coding-agent-tasks
 title: A Mission Control for Managing Copilot Coding Agent Tasks on GitHub
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-28-a-mission-control-to-assign-steer-and-track-copilot-coding-agent-tasks
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:29:08 +00:00
-permalink: /github-copilot/news/A-Mission-Control-for-Managing-Copilot-Coding-Agent-Tasks-on-GitHub
 tags:
 - Agent Tasks
 - Centralized Dashboard

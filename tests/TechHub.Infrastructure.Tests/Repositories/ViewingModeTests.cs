@@ -69,7 +69,7 @@ title: "Internal Video"
 date: 2024-01-15
 section_names: ["ml"]
 tags: ["test"]
-canonical_url: "https://youtube.com/watch?v=abc123"
+external_url: "https://youtube.com/watch?v=abc123"
 viewing_mode: "internal"
 ---
 Test video content
@@ -101,7 +101,7 @@ title: "External Video"
 date: 2024-01-15
 section_names: ["ml"]
 tags: ["test"]
-canonical_url: "https://youtube.com/watch?v=xyz789"
+external_url: "https://youtube.com/watch?v=xyz789"
 viewing_mode: "external"
 ---
 Test video content
@@ -133,7 +133,7 @@ title: "Default Video"
 date: 2024-01-15
 section_names: ["ml"]
 tags: ["test"]
-canonical_url: "https://youtube.com/watch?v=def456"
+external_url: "https://youtube.com/watch?v=def456"
 ---
 Test video content
 """;

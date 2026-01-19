@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/typescript-7-native-preview-in-visual-studio-2026
 title: TypeScript 7 Native Preview Now Available in Visual Studio 2026 Insiders
 author: Sayed Ibrahim Hashimi
-canonical_url: https://devblogs.microsoft.com/blog/typescript-7-native-preview-in-visual-studio-2026
 viewing_mode: external
 feed_name: Microsoft Blog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-09-30 16:04:20 +00:00
-permalink: /coding/news/TypeScript-7-Native-Preview-Now-Available-in-Visual-Studio-2026-Insiders
 tags:
 - Compile Time
 - Developer Experience

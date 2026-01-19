@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-red-hat-openshift-confidential-containers-general/ba-p/4469089
 title: Confidential Containers Now Available on Azure Red Hat OpenShift (ARO)
 author: MelanieKraintz007
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-red-hat-openshift-confidential-containers-general/ba-p/4469089
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 14:06:03 +00:00
-permalink: /azure/community/Confidential-Containers-Now-Available-on-Azure-Red-Hat-OpenShift-ARO
 tags:
 - AMD SEV SNP
 - Azure Red Hat OpenShift

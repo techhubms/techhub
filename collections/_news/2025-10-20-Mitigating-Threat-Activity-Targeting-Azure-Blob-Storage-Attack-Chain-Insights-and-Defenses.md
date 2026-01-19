@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/10/20/inside-the-attack-chain-threat-activity-targeting-azure-blob-storage/
 title: 'Mitigating Threat Activity Targeting Azure Blob Storage: Attack Chain Insights and Defenses'
 author: Microsoft Threat Intelligence
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/20/inside-the-attack-chain-threat-activity-targeting-azure-blob-storage/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-20 16:00:00 +00:00
-permalink: /azure/news/Mitigating-Threat-Activity-Targeting-Azure-Blob-Storage-Attack-Chain-Insights-and-Defenses
 tags:
 - Attack Chain
 - Azure Blob Storage

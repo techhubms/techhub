@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/semantic-kernel-commitment-ai-innovation/
 title: 'The Future of Semantic Kernel: Microsoft’s Strategic Vision for Enterprise AI Orchestration'
 author: Evan Mattson, Mark Wallace, Nick Brady
-canonical_url: https://devblogs.microsoft.com/foundry/semantic-kernel-commitment-ai-innovation/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-05-30 13:15:06 +00:00
-permalink: /ai/news/The-Future-of-Semantic-Kernel-Microsofts-Strategic-Vision-for-Enterprise-AI-Orchestration
 tags:
 - .NET
 - AI Orchestration

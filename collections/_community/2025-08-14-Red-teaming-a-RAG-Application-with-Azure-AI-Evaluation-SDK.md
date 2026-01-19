@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/red-teaming-a-rag-app-with-the-azure-ai-evaluation-sdk/ba-p/4442682
 title: Red-teaming a RAG Application with Azure AI Evaluation SDK
 author: Pamela_Fox
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/red-teaming-a-rag-app-with-the-azure-ai-evaluation-sdk/ba-p/4442682
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-14 07:00:00 +00:00
-permalink: /ai/community/Red-teaming-a-RAG-Application-with-Azure-AI-Evaluation-SDK
 tags:
 - Adversarial Testing
 - AI Content Safety API

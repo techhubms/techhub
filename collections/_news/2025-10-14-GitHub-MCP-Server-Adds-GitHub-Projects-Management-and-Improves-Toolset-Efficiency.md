@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-14-github-mcp-server-now-supports-github-projects-and-more
 title: GitHub MCP Server Adds GitHub Projects Management and Improves Toolset Efficiency
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-14-github-mcp-server-now-supports-github-projects-and-more
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-14 15:22:40 +00:00
-permalink: /devops/news/GitHub-MCP-Server-Adds-GitHub-Projects-Management-and-Improves-Toolset-Efficiency
 tags:
 - Copilot
 - Default Toolset

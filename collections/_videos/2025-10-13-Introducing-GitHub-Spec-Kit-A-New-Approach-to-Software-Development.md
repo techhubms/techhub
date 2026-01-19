@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/AQwwrxyQfA0
 title: 'Introducing GitHub Spec Kit: A New Approach to Software Development'
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/AQwwrxyQfA0
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-13 14:00:12 +00:00
-permalink: /devops/videos/Introducing-GitHub-Spec-Kit-A-New-Approach-to-Software-Development
 tags:
 - /implement
 - /plan

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Hk1o8zMqPA8
 title: 'Lumen Defender and Microsoft Security: Enhancing SOC Threat Detection and Response'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=Hk1o8zMqPA8
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:05:46 +00:00
-permalink: /security/videos/Lumen-Defender-and-Microsoft-Security-Enhancing-SOC-Threat-Detection-and-Response
 tags:
 - Black Lotus Labs
 - Compliance

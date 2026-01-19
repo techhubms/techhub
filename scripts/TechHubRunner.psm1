@@ -211,7 +211,7 @@ function Run {
             Write-Host "  .NET SDK not found or not working properly" -ForegroundColor Yellow
             Write-Host "  Please install .NET 10 SDK" -ForegroundColor Yellow
             Write-Host ""
-            exit 1
+            return
         }
         
         # Check that solution file exists
@@ -226,7 +226,7 @@ function Run {
             Write-Host "  Expected: $solutionPath" -ForegroundColor Yellow
             Write-Host "  Make sure you're running from the workspace root" -ForegroundColor Yellow
             Write-Host ""
-            exit 1
+            return
         }
         
         Write-Success "Prerequisites validated"
@@ -248,7 +248,7 @@ function Run {
             Write-Host "  Clean failed with exit code $LASTEXITCODE" -ForegroundColor Yellow
             Write-Host "  This is unusual - check file permissions or disk space" -ForegroundColor Yellow
             Write-Host ""
-            exit 1
+            return
         }
         
         Write-Success "Clean completed"
@@ -270,7 +270,7 @@ function Run {
             Write-Host "  Build failed with exit code $LASTEXITCODE" -ForegroundColor Yellow
             Write-Host "  Fix the compilation errors above and try again" -ForegroundColor Yellow
             Write-Host ""
-            exit 1
+            return
         }
         
         Write-Success "Build completed"
@@ -321,7 +321,7 @@ function Run {
             Write-Host "  PowerShell tests failed with exit code $pwshExitCode" -ForegroundColor Yellow
             Write-Host "  Fix the failing tests above and try again" -ForegroundColor Yellow
             Write-Host ""
-            exit 1
+            return
         }
         
         Write-Success "PowerShell tests passed"
@@ -400,7 +400,7 @@ function Run {
                 Write-Host "  Tests failed with exit code $LASTEXITCODE" -ForegroundColor Yellow
                 Write-Host "  Fix the failing tests above and try again" -ForegroundColor Yellow
                 Write-Host ""
-                exit 1
+                return
             }
             
             Write-Host ""
@@ -482,7 +482,7 @@ function Run {
                     Write-Host "    3. Port conflicts (check ports 5029, 5184, 7153, 7190)" -ForegroundColor Gray
                     Write-Host ""
                     Stop-ExistingProcesses
-                    exit 1
+                    return
                 }
                 
                 if (-not $apiReady) {
@@ -559,7 +559,7 @@ function Run {
                     }
                 }
                 Stop-ExistingProcesses
-                exit 1
+                return
             }
             
             Write-Success "Services ready"
@@ -597,11 +597,9 @@ function Run {
             & dotnet @e2eTestArgs
             $e2eExitCode = $LASTEXITCODE
             
-            Write-Host ""
-            Write-Host "════════════════════════════════════════" -ForegroundColor Cyan
-            Write-Host ""
-            
             if ($e2eExitCode -ne 0) {
+                Write-Host ""
+                Write-Host "════════════════════════════════════════" -ForegroundColor Red
                 Write-Host ""
                 Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
                 Write-Host "║                                                              ║" -ForegroundColor Red
@@ -626,9 +624,12 @@ function Run {
                 }
                 Stop-ExistingProcesses
                 
-                exit 1
+                return
             }
             
+            Write-Host ""
+            Write-Host "════════════════════════════════════════" -ForegroundColor Green
+            Write-Host ""
             Write-Success "E2E tests passed - servers will remain running for development"
             
             # Mark that E2E tests already started the servers

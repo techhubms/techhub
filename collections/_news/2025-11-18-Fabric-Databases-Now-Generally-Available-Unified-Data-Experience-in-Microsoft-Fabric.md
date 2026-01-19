@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-databases-a-unified-saas-native-experience-for-modern-data-workloads-generally-available/
 title: 'Fabric Databases Now Generally Available: Unified Data Experience in Microsoft Fabric'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-databases-a-unified-saas-native-experience-for-modern-data-workloads-generally-available/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
-permalink: /ai/news/Fabric-Databases-Now-Generally-Available-Unified-Data-Experience-in-Microsoft-Fabric
 tags:
 - AI Integration
 - Azure OpenAI Service

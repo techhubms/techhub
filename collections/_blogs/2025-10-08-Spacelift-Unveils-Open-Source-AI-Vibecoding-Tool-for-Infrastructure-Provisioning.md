@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/spacelift-adds-open-source-ai-vibecoding-tool-to-provision-infrastructure/
 title: Spacelift Unveils Open Source AI Vibecoding Tool for Infrastructure Provisioning
 author: Mike Vizard
-canonical_url: https://devops.com/spacelift-adds-open-source-ai-vibecoding-tool-to-provision-infrastructure/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-08 15:25:41 +00:00
-permalink: /ai/blogs/Spacelift-Unveils-Open-Source-AI-Vibecoding-Tool-for-Infrastructure-Provisioning
 tags:
 - Agentic AI
 - AI Framework

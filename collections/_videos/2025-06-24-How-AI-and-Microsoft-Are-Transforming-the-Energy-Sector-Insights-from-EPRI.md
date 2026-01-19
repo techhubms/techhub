@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=janSWREvB3U
 title: 'How AI and Microsoft Are Transforming the Energy Sector: Insights from EPRI'
 author: Microsoft Cloud
-canonical_url: https://www.youtube.com/watch?v=janSWREvB3U
 viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-06-24 15:01:15 +00:00
-permalink: /ai/videos/How-AI-and-Microsoft-Are-Transforming-the-Energy-Sector-Insights-from-EPRI
 tags:
 - Collaboration
 - Digital Transformation

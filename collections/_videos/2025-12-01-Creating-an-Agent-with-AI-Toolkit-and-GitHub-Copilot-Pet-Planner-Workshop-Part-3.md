@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=6Dvfn2lfTnU
 title: 'Creating an Agent with AI Toolkit and GitHub Copilot: Pet Planner Workshop Part 3'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=6Dvfn2lfTnU
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-01 21:00:05 +00:00
-permalink: /github-copilot/videos/Creating-an-Agent-with-AI-Toolkit-and-GitHub-Copilot-Pet-Planner-Workshop-Part-3
 tags:
 - Agent Builder
 - AI Agent

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/preview-natural-language-to-generate-and-explain-pipeline-expressions-with-copilot/
 title: Natural Language to Generate and Explain Pipeline Expressions with Copilot (Preview)
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/preview-natural-language-to-generate-and-explain-pipeline-expressions-with-copilot/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 10:30:00 +00:00
-permalink: /ai/news/Natural-Language-to-Generate-and-Explain-Pipeline-Expressions-with-Copilot-Preview
 tags:
 - AI Productivity Tools
 - Automated Code Generation

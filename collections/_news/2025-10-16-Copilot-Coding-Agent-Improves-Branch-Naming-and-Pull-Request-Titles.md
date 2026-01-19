@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-16-copilot-coding-agent-uses-better-branch-names-and-pull-request-titles
 title: Copilot Coding Agent Improves Branch Naming and Pull Request Titles
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-16-copilot-coding-agent-uses-better-branch-names-and-pull-request-titles
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-16 20:32:39 +00:00
-permalink: /github-copilot/news/Copilot-Coding-Agent-Improves-Branch-Naming-and-Pull-Request-Titles
 tags:
 - Automation
 - Background Agent

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-24-copilot-spaces-is-now-generally-available
 title: 'Copilot Spaces: General Availability Announcement'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-24-copilot-spaces-is-now-generally-available
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-24 17:49:12 +00:00
-permalink: /github-copilot/news/Copilot-Spaces-General-Availability-Announcement
 tags:
 - Code Explanation
 - Code Generation

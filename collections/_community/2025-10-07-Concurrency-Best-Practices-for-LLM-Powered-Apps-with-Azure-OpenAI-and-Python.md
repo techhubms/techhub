@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/why-your-llm-powered-app-needs-concurrency/ba-p/4459584
 title: Concurrency Best Practices for LLM-Powered Apps with Azure OpenAI and Python
 author: Pamela_Fox
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/why-your-llm-powered-app-needs-concurrency/ba-p/4459584
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-07 16:05:02 +00:00
-permalink: /ai/community/Concurrency-Best-Practices-for-LLM-Powered-Apps-with-Azure-OpenAI-and-Python
 tags:
 - AI Application
 - API Integration

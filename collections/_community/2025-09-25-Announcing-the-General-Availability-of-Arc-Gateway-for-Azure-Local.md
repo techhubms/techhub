@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-arc-gateway-for-azure/ba-p/4456256
 title: Announcing the General Availability of Arc Gateway for Azure Local
 author: Cristian Edwards Sabathe
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-arc-gateway-for-azure/ba-p/4456256
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 13:15:23 +00:00
-permalink: /azure/community/Announcing-the-General-Availability-of-Arc-Gateway-for-Azure-Local
 tags:
 - AKS
 - Arc Gateway

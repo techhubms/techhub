@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-copilot-observability-agent-intelligent-investigations/ba-p/4469719
 title: Intelligent Troubleshooting with Azure Copilot Observability Agent
 author: EfratNauerman
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-copilot-observability-agent-intelligent-investigations/ba-p/4469719
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:02:34 +00:00
-permalink: /ai/community/Intelligent-Troubleshooting-with-Azure-Copilot-Observability-Agent
 tags:
 - AI Driven Investigations
 - AKS

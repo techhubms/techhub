@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=lhpQBp9I80w
 title: GPT-5 and Claude 4.1 Arrive in GitHub Copilot, TypeScript 5.9 Updates, and Community News
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=lhpQBp9I80w
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-15 16:12:57 +00:00
-permalink: /github-copilot/videos/GPT-5-and-Claude-41-Arrive-in-GitHub-Copilot-TypeScript-59-Updates-and-Community-News
 tags:
 - AI Integration
 - Anthropic

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/microsofts-ai-agents-target-technical-debt-crisis/
 title: Microsoft’s AI Agents Target Technical Debt Crisis
 author: Tom Smith
-canonical_url: https://devops.com/microsofts-ai-agents-target-technical-debt-crisis/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-26 13:32:42 +00:00
-permalink: /github-copilot/blogs/Microsofts-AI-Agents-Target-Technical-Debt-Crisis
 tags:
 - .NET Core
 - .NET Framework

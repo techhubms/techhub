@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/asia/2025/08/04/unsws-scout-simplifying-student-life-with-agentic-ai-technology/
 title: 'UNSW Simplifies Student Life with Agentic AI: Scout Powered by Microsoft Azure OpenAI and Copilot Studio'
 author: stclarke
-canonical_url: https://news.microsoft.com/source/asia/2025/08/04/unsws-scout-simplifying-student-life-with-agentic-ai-technology/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-04 15:03:28 +00:00
-permalink: /ai/news/UNSW-Simplifies-Student-Life-with-Agentic-AI-Scout-Powered-by-Microsoft-Azure-OpenAI-and-Copilot-Studio
 tags:
 - Agentic AI
 - AI in Education

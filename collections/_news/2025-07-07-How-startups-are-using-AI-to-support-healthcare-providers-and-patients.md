@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/startups/blog/catalysts-revolutionizing-healthcare-with-pangaea-data-microsoft-azure-and-nvidia/
 title: How startups are using AI to support healthcare providers and patients
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/startups/blog/catalysts-revolutionizing-healthcare-with-pangaea-data-microsoft-azure-and-nvidia/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-07 14:27:02 +00:00
-permalink: /ai/news/How-startups-are-using-AI-to-support-healthcare-providers-and-patients
 tags:
 - Company News
 - Health

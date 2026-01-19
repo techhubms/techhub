@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/08/13/connect-with-the-security-community-at-microsoft-ignite-2025/
 title: Connect with the Security Community at Microsoft Ignite 2025
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/08/13/connect-with-the-security-community-at-microsoft-ignite-2025/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-13 17:09:05 +00:00
-permalink: /ai/news/Connect-with-the-Security-Community-at-Microsoft-Ignite-2025
 tags:
 - AI Security
 - Career Growth

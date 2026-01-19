@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/11/introducing-the-digital-sovereignty-specialization-for-the-microsoft-ai-cloud-partner-program/
 title: Introducing the Digital Sovereignty Specialization for the Microsoft AI Cloud Partner Program
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/11/introducing-the-digital-sovereignty-specialization-for-the-microsoft-ai-cloud-partner-program/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-11-13 14:50:54 +00:00
-permalink: /ai/blogs/Introducing-the-Digital-Sovereignty-Specialization-for-the-Microsoft-AI-Cloud-Partner-Program
 tags:
 - Audit Requirements
 - Cloud

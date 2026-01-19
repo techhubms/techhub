@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devclass.com/2025/12/11/vs-code-update-brings-agent-overload-typescript-7-preview-and-the-end-of-intellicode/
 title: VS Code Update Introduces Agent HQ, TypeScript 7 Preview, and Deprecates IntelliCode
 author: Tim Anderson
-canonical_url: https://devclass.com/2025/12/11/vs-code-update-brings-agent-overload-typescript-7-preview-and-the-end-of-intellicode/
 viewing_mode: external
 feed_name: DevClass
-feed_url: https://devclass.com/feed/
 date: 2025-12-11 15:20:03 +00:00
-permalink: /github-copilot/blogs/VS-Code-Update-Introduces-Agent-HQ-TypeScript-7-Preview-and-Deprecates-IntelliCode
 tags:
 - Agent HQ
 - Agentci AI Foundation

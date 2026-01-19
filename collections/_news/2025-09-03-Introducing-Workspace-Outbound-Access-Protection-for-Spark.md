@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-workspace-outbound-access-protection-for-spark-preview/
 title: Introducing Workspace Outbound Access Protection for Spark
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-workspace-outbound-access-protection-for-spark-preview/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-03 10:04:16 +00:00
-permalink: /ml/news/Introducing-Workspace-Outbound-Access-Protection-for-Spark
 tags:
 - Compliance
 - Data Engineering

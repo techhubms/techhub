@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/mastering-declarative-data-transformations-with-materialized-lake-views/
 title: Mastering Declarative Data Transformations with Materialized Lake Views
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/mastering-declarative-data-transformations-with-materialized-lake-views/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-26 16:00:00 +00:00
-permalink: /ml/news/Mastering-Declarative-Data-Transformations-with-Materialized-Lake-Views
 tags:
 - Analytics
 - Azure SQL Database

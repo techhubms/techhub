@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=4zkIBMFdL2w
 title: "Let's Learn MCP: C#"
 author: Dotnet's Youtube channel
-canonical_url: https://www.youtube.com/watch?v=4zkIBMFdL2w
 viewing_mode: internal
 feed_name: dotnet
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-09 17:53:52 +00:00
-permalink: /ai/videos/Lets-Learn-MCP-CSharp
 tags:
 - .NET
 - Beginner

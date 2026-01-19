@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Y17b0rJ_psk
 title: 'Innovation in Microsoft Databases: AI-Ready Data and Modern Apps'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=Y17b0rJ_psk
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 07:12:58 +00:00
-permalink: /ai/videos/Innovation-in-Microsoft-Databases-AI-Ready-Data-and-Modern-Apps
 tags:
 - Adobe Platform AI Engineering
 - AI Integration

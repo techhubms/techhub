@@ -141,52 +141,48 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 Description = "AI news description",
                 Author = "John Doe",
                 DateEpoch = 1705276800, CollectionName = "news",
-                AltCollection = null,
                 SectionNames = ["ai"],
                 Tags = ["ai", "news", "github copilot", "azure"],
                 RenderedHtml = "<h1>AI News Article 1</h1><p>AI news content...</p>",
                 Excerpt = "AI news excerpt...",
                 ExternalUrl = "https://example.com/ai-news-1",
-                VideoId = null
+                ViewingMode = "external"
             },
             new()
             { Slug = "2024-01-16-ai-blog-1", Title = "AI Blog Article 1",
                 Description = "AI blog description",
                 Author = "Jane Smith",
                 DateEpoch = 1705363200, CollectionName = "blogs",
-                AltCollection = null,
                 SectionNames = ["ai"],
                 Tags = ["ai", "blogs", "machine learning"],
                 RenderedHtml = "<h1>AI Blog Article 1</h1><p>AI blog content...</p>",
                 Excerpt = "AI blog excerpt...",
                 ExternalUrl = null,
-                VideoId = null
+                ViewingMode = "external"
             },
             new()
             { Slug = "2024-01-17-copilot-video-1", Title = "GitHub Copilot Video 1",
                 Description = "Copilot video description",
                 Author = "Bob Johnson",
                 DateEpoch = 1705449600, CollectionName = "videos",
-                AltCollection = null,
                 SectionNames = ["github-copilot"],
                 Tags = ["github copilot", "videos", "vs code", "productivity"],
                 RenderedHtml = "<h1>GitHub Copilot Video 1</h1><p>Copilot video content...</p>",
                 Excerpt = "Copilot video excerpt...",
                 ExternalUrl = null,
-                VideoId = "abc123"
+                ViewingMode = "internal"
             },
             new()
             { Slug = "2024-01-18-copilot-news-1", Title = "GitHub Copilot News 1",
                 Description = "Copilot news description",
                 Author = "Alice Williams",
                 DateEpoch = 1705536000, CollectionName = "news",
-                AltCollection = null,
                 SectionNames = ["github-copilot"],
                 Tags = ["github copilot", "news", "github"],
                 RenderedHtml = "<h1>GitHub Copilot News 1</h1><p>Copilot news content...</p>",
                 Excerpt = "Copilot news excerpt...",
                 ExternalUrl = "https://example.com/copilot-news-1",
-                VideoId = null
+                ViewingMode = "external"
             }
         };
 

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-to-implement-azure-ad-conditional-access-policies-step-by-step/
 title: How to Implement Azure AD Conditional Access Policies Step-by-Step
 author: John Edward
-canonical_url: https://dellenny.com/how-to-implement-azure-ad-conditional-access-policies-step-by-step/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-26 11:17:16 +00:00
-permalink: /azure/blogs/How-to-Implement-Azure-AD-Conditional-Access-Policies-Step-by-Step
 tags:
 - Access Control
 - Azure AD

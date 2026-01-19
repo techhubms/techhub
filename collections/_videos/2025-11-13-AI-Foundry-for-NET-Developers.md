@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=eJfToDv8KH4
 title: AI Foundry for .NET Developers
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=eJfToDv8KH4
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:50 +00:00
-permalink: /ai/videos/AI-Foundry-for-NET-Developers
 tags:
 - .NET
 - .NET 10

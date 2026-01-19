@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=YL07NyBXC7M
 title: Getting Started with GraphQL in .NET
 author: Nick Chapsas
-canonical_url: https://www.youtube.com/watch?v=YL07NyBXC7M
 viewing_mode: internal
 feed_name: Nick Chapsas YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-08-06 11:00:58 +00:00
-permalink: /coding/videos/Getting-Started-with-GraphQL-in-NET
 tags:
 - .NET
 - API Development

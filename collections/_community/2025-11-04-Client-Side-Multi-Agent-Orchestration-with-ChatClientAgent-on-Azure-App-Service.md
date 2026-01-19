@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-3-client-side-multi-agent-orchestration-on-azure-app/ba-p/4466728
 title: Client-Side Multi-Agent Orchestration with ChatClientAgent on Azure App Service
 author: jordanselig
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-3-client-side-multi-agent-orchestration-on-azure-app/ba-p/4466728
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-04 15:35:47 +00:00
-permalink: /ai/community/Client-Side-Multi-Agent-Orchestration-with-ChatClientAgent-on-Azure-App-Service
 tags:
 - .NET 9
 - AIFunctionFactory

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-26-the-secret-risk-assessment-is-generally-available
 title: GitHub Introduces Free Secret Risk Assessment Tool for Organizations
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-26-the-secret-risk-assessment-is-generally-available
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-26 21:21:48 +00:00
-permalink: /devops/news/GitHub-Introduces-Free-Secret-Risk-Assessment-Tool-for-Organizations
 tags:
 - Continuous Monitoring
 - GitHub

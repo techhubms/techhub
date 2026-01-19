@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=eeTOToKnpCg
 title: 'ADHD, GitHub Copilot, and Neurodiversity: Real Talk with Mads Torgersen and Klaus Loffelmann'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=eeTOToKnpCg
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-08 16:01:18 +00:00
-permalink: /github-copilot/videos/ADHD-GitHub-Copilot-and-Neurodiversity-Real-Talk-with-Mads-Torgersen-and-Klaus-Loffelmann
 tags:
 - ADHD
 - AI Tools

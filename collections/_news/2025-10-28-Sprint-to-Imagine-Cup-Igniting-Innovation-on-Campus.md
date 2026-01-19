@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/blog/studentdeveloperblog/sprint-to-imagine-cup-igniting-innovation-on-campus/4463230
 title: 'Sprint to Imagine Cup: Igniting Innovation on Campus'
 author: stclarke
-canonical_url: https://techcommunity.microsoft.com/blog/studentdeveloperblog/sprint-to-imagine-cup-igniting-innovation-on-campus/4463230
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-28 16:55:08 +00:00
-permalink: /github-copilot/news/Sprint-to-Imagine-Cup-Igniting-Innovation-on-Campus
 tags:
 - AI Education
 - AI Solutions

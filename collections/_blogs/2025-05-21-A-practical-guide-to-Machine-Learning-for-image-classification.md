@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://hiddedesmet.com/iasa-ai-course
 title: A Practical Guide to Machine Learning for Image Classification
 author: Hidde de Smet
-canonical_url: https://hiddedesmet.com/iasa-ai-course
 viewing_mode: external
 feed_name: Hidde de Smet's Blog
-feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-05-21 07:00:00 +00:00
-permalink: /ai/blogs/A-practical-guide-to-Machine-Learning-for-image-classification
 tags:
 - Convolutional Neural Networks
 - Data Augmentation

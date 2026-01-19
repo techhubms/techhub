@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=e8mQhReST3s
 title: 'What’s New in Azure Local: Portfolio Enhancements & Edge AI Innovations'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=e8mQhReST3s
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:00:15 +00:00
-permalink: /ai/videos/Whats-New-in-Azure-Local-Portfolio-Enhancements-and-Edge-AI-Innovations
 tags:
 - AI Acceleration
 - Azure Local

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/devops/comments/1mgm77r/terraform_associate_003_exam_sharing_study/
 title: Terraform Associate (003) Exam – Sharing Study Resources That Helped Me Pass
 author: AndroCentauri
-canonical_url: https://www.reddit.com/r/devops/comments/1mgm77r/terraform_associate_003_exam_sharing_study/
 viewing_mode: external
 feed_name: Reddit DevOps
-feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-03 15:32:35 +00:00
-permalink: /devops/community/Terraform-Associate-003-Exam-Sharing-Study-Resources-That-Helped-Me-Pass
 tags:
 - AWS
 - Certification

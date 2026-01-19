@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=3ZEjxKwaKjQ
 title: Semantic Kernel Agent Orchestration
 author: Learn Microsoft AI
-canonical_url: https://www.youtube.com/watch?v=3ZEjxKwaKjQ
 viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-05-26 10:48:05 +00:00
-permalink: /ai/videos/Semantic-Kernel-Agent-Orchestration
 tags:
 - Adaptive Solutions
 - Agent Coordination

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=MUu9o8tDwi0
 title: Mistral Document AI Integration with Azure AI Foundry
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=MUu9o8tDwi0
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-20 20:45:25 +00:00
-permalink: /ai/videos/Mistral-Document-AI-Integration-with-Azure-AI-Foundry
 tags:
 - AI Agents
 - AI Model Deployment

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-private-preview-mirroring-for-google-bigquery-in-microsoft-fabric/
 title: Mirroring for Google BigQuery in Microsoft Fabric (Private Preview)
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-private-preview-mirroring-for-google-bigquery-in-microsoft-fabric/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-04 10:00:00 +00:00
-permalink: /ml/news/Mirroring-for-Google-BigQuery-in-Microsoft-Fabric-Private-Preview
 tags:
 - Cloud Data Platform
 - Cross Cloud Integration

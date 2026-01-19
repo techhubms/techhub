@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/beyond-basics-tracking-kafka-lag-in-azure-event-hubs/ba-p/4457797
 title: Advanced Kafka Lag Monitoring Techniques for Azure Event Hubs
 author: Sunip
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/beyond-basics-tracking-kafka-lag-in-azure-event-hubs/ba-p/4457797
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-06 06:37:46 +00:00
-permalink: /coding/community/Advanced-Kafka-Lag-Monitoring-Techniques-for-Azure-Event-Hubs
 tags:
 - Azure Event Hubs
 - Azure Monitor

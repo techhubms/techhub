@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://weblog.west-wind.com/posts/2025/Jul/15/Centering-a-WPF-TreeViewItem-in-the-TreeView-ScrollViewer
 title: Centering a WPF TreeViewItem in the TreeView ScrollViewer
 author: Rick Strahl
-canonical_url: https://weblog.west-wind.com/posts/2025/Jul/15/Centering-a-WPF-TreeViewItem-in-the-TreeView-ScrollViewer
 viewing_mode: external
 feed_name: Rick Strahl's Blog
-feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-07-16 04:23:03 +00:00
-permalink: /coding/blogs/Centering-a-WPF-TreeViewItem-in-the-TreeView-ScrollViewer
 tags:
 - .NET
 - Application Usability

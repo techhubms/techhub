@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/azuredevops/comments/1mj53qd/azure_pipeline_task_reverting_to_old_one/
 title: Reverting AzureRmWebAppDeployment Task Version in Azure Pipelines
 author: magielonczyk
-canonical_url: https://www.reddit.com/r/azuredevops/comments/1mj53qd/azure_pipeline_task_reverting_to_old_one/
 viewing_mode: external
 feed_name: Reddit Azure DevOps
-feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-08-06 13:45:43 +00:00
-permalink: /azure/community/Reverting-AzureRmWebAppDeployment-Task-Version-in-Azure-Pipelines
 tags:
 - Azure DevOps
 - Azure Pipelines

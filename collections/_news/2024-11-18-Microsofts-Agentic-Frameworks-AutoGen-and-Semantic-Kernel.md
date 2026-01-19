@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/autogen/microsofts-agentic-frameworks-autogen-and-semantic-kernel/
 title: 'Microsoft’s Agentic Frameworks: AutoGen and Semantic Kernel'
 author: Friederike Niedtner
-canonical_url: https://devblogs.microsoft.com/autogen/microsofts-agentic-frameworks-autogen-and-semantic-kernel/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/autogen/feed/
 date: 2024-11-18 15:50:54 +00:00
-permalink: /ai/news/Microsofts-Agentic-Frameworks-AutoGen-and-Semantic-Kernel
 tags:
 - Agentic Frameworks
 - AI Agents

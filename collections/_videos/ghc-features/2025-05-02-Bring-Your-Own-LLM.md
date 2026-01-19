@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/hFM9gtIzBMI
 title: Bring Your Own LLM
 author: Matt Olson
-canonical_url: https://youtu.be/hFM9gtIzBMI
 date: 2025-05-02 14:08:17 +00:00
-permalink: /github-copilot/videos/Bring-Your-Own-LLM
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - BYOLLM
 - Chat

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-13-model-context-protocol-mcp-support-for-jetbrains-eclipse-and-xcode-is-now-generally-available
 title: Model Context Protocol (MCP) Support for GitHub Copilot Now Available in JetBrains, Eclipse, and Xcode
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-13-model-context-protocol-mcp-support-for-jetbrains-eclipse-and-xcode-is-now-generally-available
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-14 10:35:58 +00:00
-permalink: /github-copilot/news/Model-Context-Protocol-MCP-Support-for-GitHub-Copilot-Now-Available-in-JetBrains-Eclipse-and-Xcode
 tags:
 - Agent Mode
 - Contextual Coding

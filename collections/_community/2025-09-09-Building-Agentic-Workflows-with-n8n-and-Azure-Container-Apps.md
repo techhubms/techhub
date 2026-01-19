@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-agentic-workflows-with-n8n-and-azure-container-apps/ba-p/4452362
 title: Building Agentic Workflows with n8n and Azure Container Apps
 author: simonjj
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-agentic-workflows-with-n8n-and-azure-container-apps/ba-p/4452362
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-09 05:55:41 +00:00
-permalink: /ai/community/Building-Agentic-Workflows-with-n8n-and-Azure-Container-Apps
 tags:
 - AI Integration
 - Automation Templates

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/
 title: Azure AI Foundry Launches Multimodal AI Models for Developers
 author: stclarke
-canonical_url: https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-06 20:20:36 +00:00
-permalink: /ai/news/Azure-AI-Foundry-Launches-Multimodal-AI-Models-for-Developers
 tags:
 - Agentic AI
 - Audio Generation

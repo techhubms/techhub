@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/terraform-provider-for-microsoft-fabric-2-using-the-terraform-mcp-server-and-fabric-cli-to-help-define-your-fabric-resources/
 title: 'Terraform Provider for Microsoft Fabric: Using MCP Servers and Fabric CLI'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/terraform-provider-for-microsoft-fabric-2-using-the-terraform-mcp-server-and-fabric-cli-to-help-define-your-fabric-resources/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-23 07:00:00 +00:00
-permalink: /azure/news/Terraform-Provider-for-Microsoft-Fabric-Using-MCP-Servers-and-Fabric-CLI
 tags:
 - Automation
 - Cloud Infrastructure

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/inference-performance-of-llama-3-1-8b-using-vllm-across-various/ba-p/4448420
 title: Benchmarking Llama 3.1 8B Inference with vLLM on Azure GPU and CPU VMs
 author: CormacGarvey
-canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/inference-performance-of-llama-3-1-8b-using-vllm-across-various/ba-p/4448420
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-26 22:22:59 +00:00
-permalink: /ai/community/Benchmarking-Llama-31-8B-Inference-with-vLLM-on-Azure-GPU-and-CPU-VMs
 tags:
 - A100
 - AI Infrastructure

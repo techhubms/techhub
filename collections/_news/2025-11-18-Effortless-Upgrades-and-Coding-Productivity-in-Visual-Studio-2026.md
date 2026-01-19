@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/spend-less-time-upgrading-more-time-coding-in-visual-studio-2026/
 title: Effortless Upgrades and Coding Productivity in Visual Studio 2026
 author: Jason Chlus
-canonical_url: https://devblogs.microsoft.com/visualstudio/spend-less-time-upgrading-more-time-coding-in-visual-studio-2026/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-11-18 17:00:27 +00:00
-permalink: /github-copilot/news/Effortless-Upgrades-and-Coding-Productivity-in-Visual-Studio-2026
 tags:
 - .NET Development
 - .vsconfig

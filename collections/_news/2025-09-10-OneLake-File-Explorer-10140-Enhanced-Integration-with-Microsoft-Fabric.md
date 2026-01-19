@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-file-explorer-smarter-more-reliable-and-seamlessly-integrated/
 title: 'OneLake File Explorer 1.0.14.0: Enhanced Integration with Microsoft Fabric'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-file-explorer-smarter-more-reliable-and-seamlessly-integrated/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-10 09:00:00 +00:00
-permalink: /ml/news/OneLake-File-Explorer-10140-Enhanced-Integration-with-Microsoft-Fabric
 tags:
 - .NET 8
 - Data Engineering

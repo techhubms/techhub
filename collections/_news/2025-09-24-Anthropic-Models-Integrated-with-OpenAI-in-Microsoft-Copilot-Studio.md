@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/anthropic-joins-the-multi-model-lineup-in-microsoft-copilot-studio/
 title: Anthropic Models Integrated with OpenAI in Microsoft Copilot Studio
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/anthropic-joins-the-multi-model-lineup-in-microsoft-copilot-studio/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-24 16:48:15 +00:00
-permalink: /ai/news/Anthropic-Models-Integrated-with-OpenAI-in-Microsoft-Copilot-Studio
 tags:
 - Admin Controls
 - Agent Deployment

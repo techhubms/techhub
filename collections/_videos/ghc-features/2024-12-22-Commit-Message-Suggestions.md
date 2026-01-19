@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/fO31a_OS2EA
 title: Commit Message Suggestions
 author: Rob Bos
-canonical_url: https://youtu.be/fO31a_OS2EA
 date: 2024-12-22 23:00:22 +00:00
-permalink: /github-copilot/videos/Commit-Message-Suggestions
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Code
 - Git

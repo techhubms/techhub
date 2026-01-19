@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-toolkit-publishing-workloads-announcements/
 title: 'Microsoft Fabric Extensibility Toolkit: Streamlining Workload Publishing for Partners'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-toolkit-publishing-workloads-announcements/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-09 14:22:51 +00:00
-permalink: /ml/news/Microsoft-Fabric-Extensibility-Toolkit-Streamlining-Workload-Publishing-for-Partners
 tags:
 - Attestation Template
 - Compliance Guidelines

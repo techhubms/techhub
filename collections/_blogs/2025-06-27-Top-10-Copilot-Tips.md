@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/top-10-copilot-tips.html
 title: Top 10 Copilot Tips
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/top-10-copilot-tips.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-06-27 00:00:00 +00:00
-permalink: /github-copilot/blogs/Top-10-Copilot-Tips
 tags:
 - AI Coding Assistant
 - Best Practices

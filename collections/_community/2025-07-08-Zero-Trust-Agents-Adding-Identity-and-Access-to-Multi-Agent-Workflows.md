@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/zero-trust-agents-adding-identity-and-access-to-multi-agent/ba-p/4427790
 title: 'Zero-Trust Agents: Adding Identity and Access to Multi-Agent Workflows'
 author: Thia
-canonical_url: https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/zero-trust-agents-adding-identity-and-access-to-multi-agent/ba-p/4427790
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI
 date: 2025-07-08 02:00:00 +00:00
-permalink: /ai/community/Zero-Trust-Agents-Adding-Identity-and-Access-to-Multi-Agent-Workflows
 tags:
 - Access Management
 - Agent Orchestration

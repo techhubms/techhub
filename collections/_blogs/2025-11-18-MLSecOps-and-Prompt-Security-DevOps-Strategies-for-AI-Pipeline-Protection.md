@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/the-mlsecops-era-why-devops-teams-must-care-about-prompt-security/
 title: 'MLSecOps and Prompt Security: DevOps Strategies for AI Pipeline Protection'
 author: Alex Vakulov
-canonical_url: https://devops.com/the-mlsecops-era-why-devops-teams-must-care-about-prompt-security/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-18 10:22:55 +00:00
-permalink: /ai/blogs/MLSecOps-and-Prompt-Security-DevOps-Strategies-for-AI-Pipeline-Protection
 tags:
 - AI Agent Security
 - AI Attack Surface

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/ZW-cO0Tj7LE
 title: Why Did the Cost of My AI Agent Exceed the Set Budget?
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/shorts/ZW-cO0Tj7LE
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-25 14:01:01 +00:00
-permalink: /ai/videos/Why-Did-the-Cost-of-My-AI-Agent-Exceed-the-Set-Budget
 tags:
 - AI Agent
 - AI Deployment

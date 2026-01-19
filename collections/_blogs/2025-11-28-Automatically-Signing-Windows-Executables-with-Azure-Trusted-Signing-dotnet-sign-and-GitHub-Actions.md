@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.hanselman.com/blog/automatically-signing-a-windows-exe-with-azure-trusted-signing-dotnet-sign-and-github-actions
 title: Automatically Signing Windows Executables with Azure Trusted Signing, dotnet sign, and GitHub Actions
 author: Scott Hanselman
-canonical_url: https://www.hanselman.com/blog/automatically-signing-a-windows-exe-with-azure-trusted-signing-dotnet-sign-and-github-actions
 viewing_mode: external
 feed_name: Scott Hanselman's Blog
-feed_url: https://www.hanselman.com/blog/SyndicationService.asmx/GetRss
 date: 2025-11-28 19:31:25 +00:00
-permalink: /coding/blogs/Automatically-Signing-Windows-Executables-with-Azure-Trusted-Signing-dotnet-sign-and-GitHub-Actions
 tags:
 - .NET
 - .NET Sign

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=HelG1r0GneA
 title: 'SQL Server 2025: Developer-First and AI-Integrated Data Platform'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=HelG1r0GneA
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:39:16 +00:00
-permalink: /ai/videos/SQL-Server-2025-Developer-First-and-AI-Integrated-Data-Platform
 tags:
 - AI Integration
 - Application Availability

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2022-v17-14-is-now-generally-available/
 title: 'Visual Studio 2022 v17.14 Now Generally Available: Copilot Agent Mode, C++ Debugging, Git Enhancements & More'
 author: Mads Kristensen
-canonical_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2022-v17-14-is-now-generally-available/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/
 date: 2025-05-13 17:24:25 +00:00
-permalink: /github-copilot/news/Visual-Studio-2022-v1714-Now-Generally-Available-Copilot-Agent-Mode-C-Debugging-Git-Enhancements-and-More
 tags:
 - Accessibility
 - Agent Mode

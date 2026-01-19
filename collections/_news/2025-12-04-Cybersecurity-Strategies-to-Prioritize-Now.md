@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/12/04/cybersecurity-strategies-to-prioritize-now/
 title: Cybersecurity Strategies to Prioritize Now
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/04/cybersecurity-strategies-to-prioritize-now/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-04 19:01:12 +00:00
-permalink: /azure/news/Cybersecurity-Strategies-to-Prioritize-Now
 tags:
 - Azure Front Door
 - Company News

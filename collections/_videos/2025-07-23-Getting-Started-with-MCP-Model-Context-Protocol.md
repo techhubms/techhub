@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=DpyjAKmNwpI
 title: Getting Started with MCP (Model Context Protocol)
 author: Nick Chapsas
-canonical_url: https://www.youtube.com/watch?v=DpyjAKmNwpI
 viewing_mode: internal
 feed_name: Nick Chapsas YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-07-23 12:30:14 +00:00
-permalink: /ai/videos/Getting-Started-with-MCP-Model-Context-Protocol
 tags:
 - .NET
 - AI Development

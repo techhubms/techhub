@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=jj9O5FR7v3A
 title: Enhancing SQL Development in VS Code with GitHub Copilot and Microsoft Fabric
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=jj9O5FR7v3A
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-24 16:01:28 +00:00
-permalink: /github-copilot/videos/Enhancing-SQL-Development-in-VS-Code-with-GitHub-Copilot-and-Microsoft-Fabric
 tags:
 - Agent Tools
 - AI Assisted Coding

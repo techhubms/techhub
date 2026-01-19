@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=AqM5WLq2VtY
 title: 'Microsoft Foundry Workflows - Pt. 1: Creating a Sequential Multi-Agent Workflow'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=AqM5WLq2VtY
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-24 19:12:00 +00:00
-permalink: /ai/videos/Microsoft-Foundry-Workflows-Pt-1-Creating-a-Sequential-Multi-Agent-Workflow
 tags:
 - Agent Orchestration
 - AI Workflow

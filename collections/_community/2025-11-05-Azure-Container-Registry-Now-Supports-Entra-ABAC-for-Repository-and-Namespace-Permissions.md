@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-registry-repository-permissions-with-attribute/ba-p/4467182
 title: Azure Container Registry Now Supports Entra ABAC for Repository and Namespace Permissions
 author: johshmsft
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-registry-repository-permissions-with-attribute/ba-p/4467182
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-05 00:31:02 +00:00
-permalink: /azure/community/Azure-Container-Registry-Now-Supports-Entra-ABAC-for-Repository-and-Namespace-Permissions
 tags:
 - ABAC
 - AKS

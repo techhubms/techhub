@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/announcing-new-hybrid-deployment-options-for-azure-virtual/ba-p/4468781
 title: Announcing Hybrid Deployment Options for Azure Virtual Desktop
 author: SteveDMSFT
-canonical_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/announcing-new-hybrid-deployment-options-for-azure-virtual/ba-p/4468781
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:00 +00:00
-permalink: /azure/community/Announcing-Hybrid-Deployment-Options-for-Azure-Virtual-Desktop
 tags:
 - Azure Arc
 - Azure Virtual Desktop

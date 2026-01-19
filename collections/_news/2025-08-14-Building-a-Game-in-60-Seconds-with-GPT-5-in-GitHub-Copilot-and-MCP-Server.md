@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/generative-ai/gpt-5-in-github-copilot-how-i-built-a-game-in-60-seconds/
 title: Building a Game in 60 Seconds with GPT-5 in GitHub Copilot and MCP Server
 author: Kedasha Kerr
-canonical_url: https://github.blog/ai-and-ml/generative-ai/gpt-5-in-github-copilot-how-i-built-a-game-in-60-seconds/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-08-14 16:30:00 +00:00
-permalink: /github-copilot/news/Building-a-Game-in-60-Seconds-with-GPT-5-in-GitHub-Copilot-and-MCP-Server
 tags:
 - AI & ML
 - AI Development

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/harness-extends-scope-and-reach-of-ai-platform-for-automating-devops-workflows/
 title: Harness Adds New AI Modules to Automate DevOps Pipelines and Maintenance
 author: Mike Vizard
-canonical_url: https://devops.com/harness-extends-scope-and-reach-of-ai-platform-for-automating-devops-workflows/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-23 13:00:11 +00:00
-permalink: /ai/blogs/Harness-Adds-New-AI-Modules-to-Automate-DevOps-Pipelines-and-Maintenance
 tags:
 - AI Agent
 - AI For DevOps

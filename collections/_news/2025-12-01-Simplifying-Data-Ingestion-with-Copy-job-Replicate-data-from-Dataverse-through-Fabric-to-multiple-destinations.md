@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-replicate-data-from-dataverse-through-fabric-to-multiple-destinations/
 title: Simplifying Data Ingestion with Copy job – Replicate data from Dataverse through Fabric to multiple destinations
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-replicate-data-from-dataverse-through-fabric-to-multiple-destinations/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-01 09:00:00 +00:00
-permalink: /ml/news/Simplifying-Data-Ingestion-with-Copy-job-Replicate-data-from-Dataverse-through-Fabric-to-multiple-destinations
 tags:
 - Azure SQL Database
 - Bulk Copy

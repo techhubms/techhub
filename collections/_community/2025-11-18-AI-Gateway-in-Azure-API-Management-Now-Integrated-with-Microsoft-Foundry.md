@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/ai-gateway-in-azure-api-management-is-now-available-in-microsoft/ba-p/4470676
 title: AI Gateway in Azure API Management Now Integrated with Microsoft Foundry
 author: vladvino
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/ai-gateway-in-azure-api-management-is-now-available-in-microsoft/ba-p/4470676
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:00:00 +00:00
-permalink: /ai/community/AI-Gateway-in-Azure-API-Management-Now-Integrated-with-Microsoft-Foundry
 tags:
 - Agent Management
 - AI Gateway

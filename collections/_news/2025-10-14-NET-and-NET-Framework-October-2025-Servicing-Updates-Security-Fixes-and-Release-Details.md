@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-october-2025-servicing-updates/
 title: '.NET and .NET Framework October 2025 Servicing Updates: Security Fixes and Release Details'
 author: Tara Overfield, Victor Israel-Bolarinwa
-canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-october-2025-servicing-updates/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-10-14 22:50:29 +00:00
-permalink: /coding/news/NET-and-NET-Framework-October-2025-Servicing-Updates-Security-Fixes-and-Release-Details
 tags:
 - .NET
 - .NET 8.0

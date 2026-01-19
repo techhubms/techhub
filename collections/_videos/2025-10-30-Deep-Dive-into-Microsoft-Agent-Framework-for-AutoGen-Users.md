@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=JlzteydCK_Q
 title: Deep Dive into Microsoft Agent Framework for AutoGen Users
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=JlzteydCK_Q
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-30 16:00:39 +00:00
-permalink: /ai/videos/Deep-Dive-into-Microsoft-Agent-Framework-for-AutoGen-Users
 tags:
 - Agent as A Tool
 - Agent Orchestration

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-at-kubecon-india-2025-hyderabad-india-6-7-august-2025/ba-p/4440439
 title: Azure Innovations and AKS Advancements Showcased at KubeCon India 2025
 author: coryskimming
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-at-kubecon-india-2025-hyderabad-india-6-7-august-2025/ba-p/4440439
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-06 02:30:00 +00:00
-permalink: /ai/community/Azure-Innovations-and-AKS-Advancements-Showcased-at-KubeCon-India-2025
 tags:
 - AI Model Context Protocol
 - AKS

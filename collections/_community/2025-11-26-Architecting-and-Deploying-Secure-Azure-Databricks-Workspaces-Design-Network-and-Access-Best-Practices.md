@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/guide-for-architecting-azure-databricks-design-to-deployment/ba-p/4473095
 title: 'Architecting and Deploying Secure Azure Databricks Workspaces: Design, Network, and Access Best Practices'
 author: Rafia_Aqil
-canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/guide-for-architecting-azure-databricks-design-to-deployment/ba-p/4473095
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-26 22:54:24 +00:00
-permalink: /ml/community/Architecting-and-Deploying-Secure-Azure-Databricks-Workspaces-Design-Network-and-Access-Best-Practices
 tags:
 - Access Connector
 - Azure Databricks

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/ai-powered-development-with-fabric-data-factory-ingest-transform-and-understand-your-data-with-copilot/
 title: AI-Powered Data Transformation and Insights with Copilot in Fabric Data Factory
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/ai-powered-development-with-fabric-data-factory-ingest-transform-and-understand-your-data-with-copilot/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-01 08:00:00 +00:00
-permalink: /ai/news/AI-Powered-Data-Transformation-and-Insights-with-Copilot-in-Fabric-Data-Factory
 tags:
 - AI Assistant
 - Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/data-security-azure-key-vault-in-data-bricks/ba-p/4479785
 title: Securely Managing Database Connection Strings in Azure Databricks with Key Vault
 author: bhramesh
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/data-security-azure-key-vault-in-data-bricks/ba-p/4479785
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-24 08:00:00 +00:00
-permalink: /ml/community/Securely-Managing-Database-Connection-Strings-in-Azure-Databricks-with-Key-Vault
 tags:
 - Access Policies
 - App Registration

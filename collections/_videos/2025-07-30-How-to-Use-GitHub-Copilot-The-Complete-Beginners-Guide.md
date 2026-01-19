@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=SJqGYwRq0uc
 title: "How to Use GitHub Copilot: The Complete Beginner's Guide"
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=SJqGYwRq0uc
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-30 17:00:40 +00:00
-permalink: /github-copilot/videos/How-to-Use-GitHub-Copilot-The-Complete-Beginners-Guide
 tags:
 - AI Pair Programming
 - Beginner Tutorial

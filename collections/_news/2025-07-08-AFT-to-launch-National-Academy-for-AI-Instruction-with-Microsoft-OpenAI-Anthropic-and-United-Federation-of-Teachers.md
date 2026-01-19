@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/2025/07/08/aft-to-launch-national-academy-for-ai-instruction-with-microsoft-openai-anthropic-and-united-federation-of-teachers/
 title: AFT to launch National Academy for AI Instruction with Microsoft, OpenAI, Anthropic and United Federation of Teachers
 author: stclarke
-canonical_url: https://news.microsoft.com/source/2025/07/08/aft-to-launch-national-academy-for-ai-instruction-with-microsoft-openai-anthropic-and-united-federation-of-teachers/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-08 14:00:11 +00:00
-permalink: /ai/news/AFT-to-launch-National-Academy-for-AI-Instruction-with-Microsoft-OpenAI-Anthropic-and-United-Federation-of-Teachers
 tags:
 - Academy
 - AFT

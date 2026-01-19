@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/the-hybrid-cloud-playbook-mastering-azure-stack/
 title: 'The Hybrid Cloud Playbook: Mastering Azure Stack'
 author: Dellenny
-canonical_url: https://dellenny.com/the-hybrid-cloud-playbook-mastering-azure-stack/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-04 09:14:50 +00:00
-permalink: /coding/blogs/The-Hybrid-Cloud-Playbook-Mastering-Azure-Stack
 tags:
 - Azure Active Directory
 - Azure Blueprints

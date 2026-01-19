@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/vibe-coding-vs-spec-driven-development-finding-balance-in-the-ai-era/
 title: 'Vibe Coding vs. Spec-Driven Development: Finding Balance in the AI Era'
 author: Alan Shimel
-canonical_url: https://devops.com/vibe-coding-vs-spec-driven-development-finding-balance-in-the-ai-era/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-12 19:24:36 +00:00
-permalink: /ai/blogs/Vibe-Coding-vs-Spec-Driven-Development-Finding-Balance-in-the-AI-Era
 tags:
 - AI Copilots
 - Automation

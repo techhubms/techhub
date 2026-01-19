@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability/dependency-agent-alternatives/m-p/4438361#M4649
 title: Dependency Agent Alternatives
 author: Cory_Matieyshen
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability/dependency-agent-alternatives/m-p/4438361#M4649
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-07-30 19:21:45 +00:00
-permalink: /azure/community/Dependency-Agent-Alternatives
 tags:
 - AppDynamics
 - Azure Dependency Agent

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/github/comments/1madm8p/i_finally_understand_what_are_github_environments/
 title: 'Understanding GitHub Environments and Deployments: A Practical Overview'
 author: NatoBoram
-canonical_url: https://www.reddit.com/r/github/comments/1madm8p/i_finally_understand_what_are_github_environments/
 viewing_mode: external
 feed_name: Reddit GitHub
-feed_url: https://www.reddit.com/r/github/.rss
 date: 2025-07-27 04:47:10 +00:00
-permalink: /devops/community/Understanding-GitHub-Environments-and-Deployments-A-Practical-Overview
 tags:
 - Action Secrets
 - Automation

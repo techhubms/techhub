@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-06-25-github-copilot-coding-agent-is-available-for-copilot-pro-users-in-public-preview
 title: GitHub Copilot coding agent is available for Copilot Pro users in public preview
 author: Allison
-canonical_url: https://github.blog/changelog/2025-06-25-github-copilot-coding-agent-is-available-for-copilot-pro-users-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-06-26 13:23:05 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-coding-agent-is-available-for-Copilot-Pro-users-in-public-preview
 tags:
 - Background Tasks
 - Coding Agent

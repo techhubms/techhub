@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=T8D1hDaCrKc
 title: Rubber Duck Thursdays - Building a Turn-Based Game MCP Server
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=T8D1hDaCrKc
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-06 09:04:39 +00:00
-permalink: /github-copilot/videos/Rubber-Duck-Thursdays-Building-a-Turn-Based-Game-MCP-Server
 tags:
 - AI Powered Coding
 - Code Collaboration

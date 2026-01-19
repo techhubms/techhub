@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/jH_ub5Trsi4
 title: 'GitHub Universe Day 1 Keynote Recap: Agent HQ, Mission Control, and Custom Agents'
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/jH_ub5Trsi4
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-28 22:06:09 +00:00
-permalink: /devops/videos/GitHub-Universe-Day-1-Keynote-Recap-Agent-HQ-Mission-Control-and-Custom-Agents
 tags:
 - Agent HQ
 - AgentHQ

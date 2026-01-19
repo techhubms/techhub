@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=hLBiJZT194A
 title: Build Secure Applications with Azure Policy and Service Groups
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=hLBiJZT194A
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:19:24 +00:00
-permalink: /ai/videos/Build-Secure-Applications-with-Azure-Policy-and-Service-Groups
 tags:
 - Azure Policy
 - Cloud Security

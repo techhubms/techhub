@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/08/implementing-a-center-of-excellence-for-generative-ai/
 title: Implementing a Center of Excellence for Generative AI
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/08/implementing-a-center-of-excellence-for-generative-ai/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-08-12 17:03:42 +00:00
-permalink: /ai/blogs/Implementing-a-Center-of-Excellence-for-Generative-AI
 tags:
 - AI Best Practices
 - AI Deployment

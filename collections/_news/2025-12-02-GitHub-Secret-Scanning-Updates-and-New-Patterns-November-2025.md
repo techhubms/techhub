@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-02-secret-scanning-updates-november-2025
 title: GitHub Secret Scanning Updates and New Patterns — November 2025
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-02-secret-scanning-updates-november-2025
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-02 16:50:31 +00:00
-permalink: /azure/news/GitHub-Secret-Scanning-Updates-and-New-Patterns-November-2025
 tags:
 - Application Security
 - AWS

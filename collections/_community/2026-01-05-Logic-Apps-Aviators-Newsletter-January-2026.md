@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-january-2026/ba-p/4482877
 title: Logic Apps Aviators Newsletter - January 2026
 author: WSilveira
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-january-2026/ba-p/4482877
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-05 16:00:00 +00:00
-permalink: /ai/community/Logic-Apps-Aviators-Newsletter-January-2026
 tags:
 - AI Integration
 - APIM

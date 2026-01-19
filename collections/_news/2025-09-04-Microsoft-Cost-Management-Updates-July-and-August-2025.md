@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/microsoft-cost-management-updates-july-august-2025/
 title: 'Microsoft Cost Management Updates: July & August 2025'
 author: Britt Henderson
-canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-cost-management-updates-july-august-2025/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-04 15:00:00 +00:00
-permalink: /azure/news/Microsoft-Cost-Management-Updates-July-and-August-2025
 tags:
 - Azure Documentation
 - Azure Firewall

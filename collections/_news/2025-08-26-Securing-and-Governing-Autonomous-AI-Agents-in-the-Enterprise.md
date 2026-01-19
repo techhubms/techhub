@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/08/26/securing-and-governing-the-rise-of-autonomous-agents/
 title: Securing and Governing Autonomous AI Agents in the Enterprise
 author: Igor Sakhnov
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/08/26/securing-and-governing-the-rise-of-autonomous-agents/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-08-26 16:00:00 +00:00
-permalink: /ai/news/Securing-and-Governing-Autonomous-AI-Agents-in-the-Enterprise
 tags:
 - Access Control
 - Agent Identity

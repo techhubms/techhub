@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/IsEXdeTbi1I
 title: User Instructions
 author: Rob Bos
-canonical_url: https://youtu.be/IsEXdeTbi1I
 date: 2024-08-15 14:57:39 +00:00
-permalink: /github-copilot/videos/User-Instructions
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Code
 - Instructions

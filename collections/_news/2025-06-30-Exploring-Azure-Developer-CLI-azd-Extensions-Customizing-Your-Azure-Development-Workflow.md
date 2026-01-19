@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azd-extension-framework/
 title: 'Exploring Azure Developer CLI (azd) Extensions: Customizing Your Azure Development Workflow'
 author: Kristen Womack
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azd-extension-framework/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-06-30 18:00:02 +00:00
-permalink: /coding/news/Exploring-Azure-Developer-CLI-azd-Extensions-Customizing-Your-Azure-Development-Workflow
 tags:
 - .NET
 - Azd Extensions

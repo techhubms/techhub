@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/bindplane-adds-ability-to-automate-deployment-of-opentelemetry-collectors/
 title: Bindplane Adds Ability to Automate Deployment of OpenTelemetry Collectors
 author: Mike Vizard
-canonical_url: https://devops.com/bindplane-adds-ability-to-automate-deployment-of-opentelemetry-collectors/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-12 13:21:21 +00:00
-permalink: /devops/blogs/Bindplane-Adds-Ability-to-Automate-Deployment-of-OpenTelemetry-Collectors
 tags:
 - AI
 - AI in Observability

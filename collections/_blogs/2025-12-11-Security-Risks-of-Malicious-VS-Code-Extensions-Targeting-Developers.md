@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/malicious-vs-code-extensions-take-screenshots-steal-info/
 title: Security Risks of Malicious VS Code Extensions Targeting Developers
 author: Jeff Burt
-canonical_url: https://devops.com/malicious-vs-code-extensions-take-screenshots-steal-info/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-12-11 01:03:47 +00:00
-permalink: /devops/blogs/Security-Risks-of-Malicious-VS-Code-Extensions-Targeting-Developers
 tags:
 - AI
 - AI Coding Assistant

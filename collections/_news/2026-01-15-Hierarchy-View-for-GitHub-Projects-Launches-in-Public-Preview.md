@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2026-01-15-hierarchy-view-now-available-in-github-projects
 title: Hierarchy View for GitHub Projects Launches in Public Preview
 author: Allison
-canonical_url: https://github.blog/changelog/2026-01-15-hierarchy-view-now-available-in-github-projects
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2026-01-15 20:19:53 +00:00
-permalink: /devops/news/Hierarchy-View-for-GitHub-Projects-Launches-in-Public-Preview
 tags:
 - GitHub Projects
 - Hierarchy View

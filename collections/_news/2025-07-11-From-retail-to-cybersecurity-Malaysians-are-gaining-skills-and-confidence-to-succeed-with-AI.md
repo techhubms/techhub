@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/asia/features/from-retail-to-cybersecurity-malaysians-are-gaining-skills-and-confidence-to-succeed-with-ai/
 title: From retail to cybersecurity, Malaysians are gaining skills and confidence to succeed with AI
 author: stclarke
-canonical_url: https://news.microsoft.com/source/asia/features/from-retail-to-cybersecurity-malaysians-are-gaining-skills-and-confidence-to-succeed-with-ai/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-11 14:12:30 +00:00
-permalink: /ai/news/From-retail-to-cybersecurity-Malaysians-are-gaining-skills-and-confidence-to-succeed-with-AI
 tags:
 - AI Skills
 - Company News

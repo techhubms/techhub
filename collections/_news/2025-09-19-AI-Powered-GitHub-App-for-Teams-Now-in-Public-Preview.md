@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/microsoft365dev/copilot-powered-github-app-for-teams-preview/
 title: AI-Powered GitHub App for Teams Now in Public Preview
 author: sbaynes
-canonical_url: https://devblogs.microsoft.com/microsoft365dev/copilot-powered-github-app-for-teams-preview/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-19 21:45:38 +00:00
-permalink: /github-copilot/news/AI-Powered-GitHub-App-for-Teams-Now-in-Public-Preview
 tags:
 - AI Assistant
 - AI Coding Agent

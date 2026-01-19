@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/ai-do-or-dont-believe-the-hype/?utm_source=rss&utm_medium=rss&utm_campaign=ai-do-or-dont-believe-the-hype
 title: 'AI: Do or Don’t Believe the Hype – A Balanced Look at AI in DevOps'
 author: Alan Shimel
-canonical_url: https://devops.com/ai-do-or-dont-believe-the-hype/?utm_source=rss&utm_medium=rss&utm_campaign=ai-do-or-dont-believe-the-hype
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-08 19:43:40 +00:00
-permalink: /ai/blogs/AI-Do-or-Dont-Believe-the-Hype-A-Balanced-Look-at-AI-in-DevOps
 tags:
 - AI Powered Development Tools
 - Claude Sonnet

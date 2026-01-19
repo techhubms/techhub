@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=_rPU590e1xA
 title: Azure Update - 22nd August 2025
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=_rPU590e1xA
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-22 14:50:10 +00:00
-permalink: /azure/videos/Azure-Update-22nd-August-2025
 tags:
 - AKS
 - Application Gateway

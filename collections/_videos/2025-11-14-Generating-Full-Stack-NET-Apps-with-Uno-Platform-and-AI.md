@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=g4A_3ZCwwWg
 title: Generating Full-Stack .NET Apps with Uno Platform and AI
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=g4A_3ZCwwWg
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:20:55 +00:00
-permalink: /ai/videos/Generating-Full-Stack-NET-Apps-with-Uno-Platform-and-AI
 tags:
 - .NET
 - .NET 10

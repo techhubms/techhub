@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=U0P_Js91VjQ
 title: 'Resilient by Design: New Windows Recovery Tools and Security Integrations'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=U0P_Js91VjQ
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 14:26:07 +00:00
-permalink: /security/videos/Resilient-by-Design-New-Windows-Recovery-Tools-and-Security-Integrations
 tags:
 - Device Rollback
 - Driver Ecosystem

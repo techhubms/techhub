@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mgx5uj/cleaning_up_a_project/
 title: 'Cleaning Up Projects with GitHub Copilot: Seeking Reliable Code Cleanup Methods'
 author: MaxellVideocassette
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mgx5uj/cleaning_up_a_project/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-03 22:55:20 +00:00
-permalink: /github-copilot/community/Cleaning-Up-Projects-with-GitHub-Copilot-Seeking-Reliable-Code-Cleanup-Methods
 tags:
 - AI Assistant
 - Automation Challenges

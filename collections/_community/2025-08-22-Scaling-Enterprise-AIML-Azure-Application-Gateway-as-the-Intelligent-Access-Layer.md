@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-enterprise-ai-ml-with-confidence-azure-application/ba-p/4445691
 title: 'Scaling Enterprise AI/ML: Azure Application Gateway as the Intelligent Access Layer'
 author: reyjordi
-canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-enterprise-ai-ml-with-confidence-azure-application/ba-p/4445691
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-22 14:18:34 +00:00
-permalink: /ai/community/Scaling-Enterprise-AIML-Azure-Application-Gateway-as-the-Intelligent-Access-Layer
 tags:
 - AI Security
 - API Security

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=BJxrSKAvCis
 title: 'Azure HorizonDB: Deep Dive into a New Enterprise-Scale PostgreSQL'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=BJxrSKAvCis
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:11:56 +00:00
-permalink: /ai/videos/Azure-HorizonDB-Deep-Dive-into-a-New-Enterprise-Scale-PostgreSQL
 tags:
 - AI Features
 - Azure HorizonDB

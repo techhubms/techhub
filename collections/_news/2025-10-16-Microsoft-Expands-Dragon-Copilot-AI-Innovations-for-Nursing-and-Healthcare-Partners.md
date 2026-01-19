@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/2025/10/16/microsoft-extends-ai-advancements-in-dragon-copilot-to-nurses-and-partners-to-enhance-patient-care/
 title: Microsoft Expands Dragon Copilot AI Innovations for Nursing and Healthcare Partners
 author: stclarke
-canonical_url: https://news.microsoft.com/source/2025/10/16/microsoft-extends-ai-advancements-in-dragon-copilot-to-nurses-and-partners-to-enhance-patient-care/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-16 14:06:15 +00:00
-permalink: /ai/news/Microsoft-Expands-Dragon-Copilot-AI-Innovations-for-Nursing-and-Healthcare-Partners
 tags:
 - AI Assistant
 - Ambient AI

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-the-preview-of-the-new-azure-ebsv6-vms-based-on-the/ba-p/4470139
 title: Announcing Preview of Azure Ebsv6 and Ebdsv6 VMs Powered by 5th Gen Intel Xeon Processors
 author: misha-bansal
-canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-the-preview-of-the-new-azure-ebsv6-vms-based-on-the/ba-p/4470139
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:35:49 +00:00
-permalink: /azure/community/Announcing-Preview-of-Azure-Ebsv6-and-Ebdsv6-VMs-Powered-by-5th-Gen-Intel-Xeon-Processors
 tags:
 - Azure Boost
 - Azure Virtual Machines

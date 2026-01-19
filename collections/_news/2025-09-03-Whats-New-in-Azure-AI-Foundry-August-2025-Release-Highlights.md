@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-august-2025/
 title: 'What’s New in Azure AI Foundry: August 2025 Release Highlights'
 author: Nick Brady
-canonical_url: https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-august-2025/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-09-03 15:00:50 +00:00
-permalink: /ai/news/Whats-New-in-Azure-AI-Foundry-August-2025-Release-Highlights
 tags:
 - .NET SDK
 - Agents

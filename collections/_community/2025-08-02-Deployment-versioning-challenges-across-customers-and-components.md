@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/devops/comments/1mfy3o0/deployment_versioning_problems/
 title: Deployment versioning challenges across customers and components
 author: wesleyada
-canonical_url: https://www.reddit.com/r/devops/comments/1mfy3o0/deployment_versioning_problems/
 viewing_mode: external
 feed_name: Reddit DevOps
-feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-02 18:48:29 +00:00
-permalink: /devops/community/Deployment-versioning-challenges-across-customers-and-components
 tags:
 - Appversions
 - Component Tracking

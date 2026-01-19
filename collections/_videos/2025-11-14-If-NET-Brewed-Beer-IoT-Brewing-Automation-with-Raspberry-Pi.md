@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Yi6Uf5DojaU
 title: 'If .NET Brewed Beer: IoT Brewing Automation with Raspberry Pi'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=Yi6Uf5DojaU
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 02:30:06 +00:00
-permalink: /coding/videos/If-NET-Brewed-Beer-IoT-Brewing-Automation-with-Raspberry-Pi
 tags:
 - .NET
 - .NET Conf

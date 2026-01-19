@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mgm401/introducing_net_aspire_event_hub_live_explorer/
 title: Introducing .NET Aspire Event Hub Live Explorer
 author: LupusOnFire
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mgm401/introducing_net_aspire_event_hub_live_explorer/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-03 15:28:59 +00:00
-permalink: /coding/community/Introducing-NET-Aspire-Event-Hub-Live-Explorer
 tags:
 - .NET
 - .NET Aspire

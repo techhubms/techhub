@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://medium.com/@davidfowl/bridging-the-gap-the-future-of-aspire-6eb421a92ab8?source=rss-8163234c98f0------2
 title: 'Bridging the Gap: The Future of Aspire'
 author: David Fowler
-canonical_url: https://medium.com/@davidfowl/bridging-the-gap-the-future-of-aspire-6eb421a92ab8?source=rss-8163234c98f0------2
 viewing_mode: external
 feed_name: David Fowler's Blog
-feed_url: https://medium.com/feed/@davidfowl
 date: 2025-03-28 01:13:30 +00:00
-permalink: /coding/blogs/Bridging-the-Gap-The-Future-of-Aspire
 tags:
 - Application Modeling
 - Aspire

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/defending-the-cloud-azure-neutralized-a-record-breaking-15-tbps/ba-p/4470422
 title: 'Defending the cloud: Azure neutralized a record-breaking 15 Tbps DDoS attack'
 author: Sean_Whalen
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/defending-the-cloud-azure-neutralized-a-record-breaking-15-tbps/ba-p/4470422
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-17 16:00:00 +00:00
-permalink: /azure/community/Defending-the-cloud-Azure-neutralized-a-record-breaking-15-Tbps-DDoS-attack
 tags:
 - Aisuru Botnet
 - Australia Endpoint

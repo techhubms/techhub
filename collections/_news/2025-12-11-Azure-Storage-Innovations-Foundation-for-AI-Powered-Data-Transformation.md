@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/azure-storage-innovations-unlocking-the-future-of-data/
 title: 'Azure Storage Innovations: Foundation for AI-Powered Data Transformation'
 author: Aung Oo
-canonical_url: https://azure.microsoft.com/en-us/blog/azure-storage-innovations-unlocking-the-future-of-data/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-11 16:00:00 +00:00
-permalink: /ai/news/Azure-Storage-Innovations-Foundation-for-AI-Powered-Data-Transformation
 tags:
 - AI Workloads
 - ANF Migration Assistant

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html
 title: Boost Code Quality Fast with GitHub Copilot Edit Mode
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-08-29 00:00:00 +00:00
-permalink: /github-copilot/blogs/Boost-Code-Quality-Fast-with-GitHub-Copilot-Edit-Mode
 tags:
 - Agent Mode
 - AI Code Generation

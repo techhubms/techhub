@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/2025/11/05/pantone-and-microsoft-unite-to-enhance-creative-exploration-through-ai/
 title: Pantone Collaborates with Microsoft to Launch AI-Powered Palette Generator
 author: stclarke
-canonical_url: https://news.microsoft.com/source/2025/11/05/pantone-and-microsoft-unite-to-enhance-creative-exploration-through-ai/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-05 11:00:11 +00:00
-permalink: /ai/news/Pantone-Collaborates-with-Microsoft-to-Launch-AI-Powered-Palette-Generator
 tags:
 - AI Integration
 - Azure AI Foundry

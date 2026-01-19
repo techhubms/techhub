@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=FWZvoFlChBs
 title: Top 5 Cloud Design Principles for Architects
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=FWZvoFlChBs
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-11-10 15:01:30 +00:00
-permalink: /azure/videos/Top-5-Cloud-Design-Principles-for-Architects
 tags:
 - Architect
 - AWS

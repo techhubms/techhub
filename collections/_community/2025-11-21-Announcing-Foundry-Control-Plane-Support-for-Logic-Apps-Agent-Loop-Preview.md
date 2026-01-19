@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-foundry-control-plane-support-for-logic-apps-agent/ba-p/4472182
 title: Announcing Foundry Control Plane Support for Logic Apps Agent Loop (Preview)
 author: KentWeareMSFT
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-foundry-control-plane-support-for-logic-apps-agent/ba-p/4472182
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-21 20:51:32 +00:00
-permalink: /ai/community/Announcing-Foundry-Control-Plane-Support-for-Logic-Apps-Agent-Loop-Preview
 tags:
 - Agent Loop
 - Agent Scalability

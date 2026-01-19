@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=biO3I2mFvV4
 title: 'Technical Deep Dive: Managed Instance for Azure App Service'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=biO3I2mFvV4
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 16:42:03 +00:00
-permalink: /github-copilot/videos/Technical-Deep-Dive-Managed-Instance-for-Azure-App-Service
 tags:
 - Agentic Framework
 - ASP.NET

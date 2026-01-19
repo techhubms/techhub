@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-03-github-copilot-in-visual-studio-november-update
 title: 'GitHub Copilot and Visual Studio 2026: November Update Highlights'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-03-github-copilot-in-visual-studio-november-update
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-03 22:06:59 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-and-Visual-Studio-2026-November-Update-Highlights
 tags:
 - AI Assisted Development
 - Cloud Coding Agent

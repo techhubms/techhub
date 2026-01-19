@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/devops/hunting-living-secrets-secret-validity-checks-arrive-in-github-advanced-security-for-azure-devops/
 title: Secret Validity Checks Launch in GitHub Advanced Security for Azure DevOps
 author: Michael Omokoh
-canonical_url: https://devblogs.microsoft.com/devops/hunting-living-secrets-secret-validity-checks-arrive-in-github-advanced-security-for-azure-devops/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-08-12 16:08:45 +00:00
-permalink: /azure/news/Secret-Validity-Checks-Launch-in-GitHub-Advanced-Security-for-Azure-DevOps
 tags:
 - Active Secrets
 - Alert Prioritization

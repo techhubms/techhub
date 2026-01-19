@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=I0yhGsozx8o
 title: Intro to Java and AI for Beginners
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=I0yhGsozx8o
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-28 16:00:28 +00:00
-permalink: /ai/videos/Intro-to-Java-and-AI-for-Beginners
 tags:
 - AI Fundamentals
 - AI Integration

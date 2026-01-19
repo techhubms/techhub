@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/service-mesh-architecture-pattern-in-azure-handling-service-to-service-communication-security-and-observability/
 title: 'Service Mesh Architecture Pattern in Azure: Managing Microservices Communication, Security, and Observability'
 author: Dellenny
-canonical_url: https://dellenny.com/service-mesh-architecture-pattern-in-azure-handling-service-to-service-communication-security-and-observability/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-27 07:40:16 +00:00
-permalink: /azure/blogs/Service-Mesh-Architecture-Pattern-in-Azure-Managing-Microservices-Communication-Security-and-Observability
 tags:
 - AKS
 - Application Insights

@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/z2_oa8nEw14
 title: Premium Requests
 author: Rob Bos
-canonical_url: https://youtu.be/z2_oa8nEw14
 date: 2025-04-10 12:17:24 +00:00
-permalink: /github-copilot/videos/Premium-Requests
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Documentation
 - GitHub

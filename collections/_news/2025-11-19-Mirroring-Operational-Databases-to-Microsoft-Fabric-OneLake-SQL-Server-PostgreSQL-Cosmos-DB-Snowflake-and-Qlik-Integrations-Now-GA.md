@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/mirroring-sql-server-postgres-db-cosmos-db-and-updates-to-snowflake-mirroring-now-ga/
 title: 'Mirroring Operational Databases to Microsoft Fabric OneLake: SQL Server, PostgreSQL, Cosmos DB, Snowflake & Qlik Integrations Now GA'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/mirroring-sql-server-postgres-db-cosmos-db-and-updates-to-snowflake-mirroring-now-ga/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 09:00:00 +00:00
-permalink: /ai/news/Mirroring-Operational-Databases-to-Microsoft-Fabric-OneLake-SQL-Server-PostgreSQL-Cosmos-DB-Snowflake-and-Qlik-Integrations-Now-GA
 tags:
 - Azure Cosmos DB
 - Azure PostgreSQL

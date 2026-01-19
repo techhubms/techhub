@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/on-the-issues/2026/01/13/community-first-ai-infrastructure/
 title: 'Building Community-First AI Infrastructure: Microsoft’s 5-Point Initiative'
 author: stclarke
-canonical_url: https://blogs.microsoft.com/on-the-issues/2026/01/13/community-first-ai-infrastructure/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-13 16:47:51 +00:00
-permalink: /ai/news/Building-Community-First-AI-Infrastructure-Microsofts-5-Point-Initiative
 tags:
 - AI Infrastructure
 - AI Literacy

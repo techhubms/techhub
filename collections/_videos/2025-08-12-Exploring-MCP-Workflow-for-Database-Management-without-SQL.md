@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=0iROrkufO3E
 title: Exploring MCP Workflow for Database Management without SQL
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=0iROrkufO3E
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-12 19:52:53 +00:00
-permalink: /ai/videos/Exploring-MCP-Workflow-for-Database-Management-without-SQL
 tags:
 - Azure AI Foundry
 - Cloud Computing

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=UhZE9sb-Odg
 title: Azure Update - 5th September 2025
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=UhZE9sb-Odg
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-05 14:51:22 +00:00
-permalink: /azure/videos/Azure-Update-5th-September-2025
 tags:
 - .NET 8
 - API Management V2

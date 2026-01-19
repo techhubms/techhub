@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-kubernetes-center-preview-on-azure-portal/ba-p/4471110
 title: Kubernetes Center (Preview) Launches on Azure Portal for Unified Cluster Management
 author: Harsha_Nair
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-kubernetes-center-preview-on-azure-portal/ba-p/4471110
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 20:45:45 +00:00
-permalink: /azure/community/Kubernetes-Center-Preview-Launches-on-Azure-Portal-for-Unified-Cluster-Management
 tags:
 - AKS
 - Azure Portal

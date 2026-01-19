@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/stack-overflow-survey-shows-ai-adoption-for-devs/?utm_source=rss&utm_medium=rss&utm_campaign=stack-overflow-survey-shows-ai-adoption-for-devs
 title: Stack Overflow Survey Reveals Developer Attitudes Toward AI Tools in 2025
 author: Alan Shimel
-canonical_url: https://devops.com/stack-overflow-survey-shows-ai-adoption-for-devs/?utm_source=rss&utm_medium=rss&utm_campaign=stack-overflow-survey-shows-ai-adoption-for-devs
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-12 09:37:44 +00:00
-permalink: /github-copilot/blogs/Stack-Overflow-Survey-Reveals-Developer-Attitudes-Toward-AI-Tools-in-2025
 tags:
 - Agentic AI
 - AI Adoption

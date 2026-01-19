@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/delegate-the-analysis-not-the-performance/
 title: Optimizing .NET Performance with Copilot Profiler Agent in Visual Studio 2026
 author: Nik Karpinsky
-canonical_url: https://devblogs.microsoft.com/visualstudio/delegate-the-analysis-not-the-performance/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-02 15:00:16 +00:00
-permalink: /github-copilot/news/Optimizing-NET-Performance-with-Copilot-Profiler-Agent-in-Visual-Studio-2026
 tags:
 - .NET Performance
 - Agent

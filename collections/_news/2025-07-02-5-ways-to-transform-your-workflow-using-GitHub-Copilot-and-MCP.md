@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/5-ways-to-transform-your-workflow-using-github-copilot-and-mcp/
 title: 5 ways to transform your workflow using GitHub Copilot and MCP
 author: Klint Finley
-canonical_url: https://github.blog/ai-and-ml/github-copilot/5-ways-to-transform-your-workflow-using-github-copilot-and-mcp/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-07-02 17:44:02 +00:00
-permalink: /github-copilot/news/5-ways-to-transform-your-workflow-using-GitHub-Copilot-and-MCP
 tags:
 - Agent Mode
 - AI & ML

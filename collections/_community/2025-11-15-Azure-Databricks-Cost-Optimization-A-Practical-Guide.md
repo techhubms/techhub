@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-cost-optimization-a-practical-guide/ba-p/4470235
 title: 'Azure Databricks Cost Optimization: A Practical Guide'
 author: Rafia_Aqil
-canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-cost-optimization-a-practical-guide/ba-p/4470235
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-15 08:01:17 +00:00
-permalink: /ml/community/Azure-Databricks-Cost-Optimization-A-Practical-Guide
 tags:
 - Adaptive Query Execution
 - Auto Scaling

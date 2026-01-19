@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-31-deprecated-models-in-github-models
 title: 'Deprecation Notice: Updates to GitHub Models and Migration Guidance'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-31-deprecated-models-in-github-models
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-31 15:49:41 +00:00
-permalink: /ai/news/Deprecation-Notice-Updates-to-GitHub-Models-and-Migration-Guidance
 tags:
 - AI Models
 - Azure Machine Learning

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devopsjournal.io/blog/2025/06/07/Copilot-and-productivity
 title: 'GitHub Copilot & Productivity: Rethinking Metrics and Value in Modern Development'
 author: Rob Bos
-canonical_url: https://devopsjournal.io/blog/2025/06/07/Copilot-and-productivity
 viewing_mode: external
 feed_name: Rob Bos' Blog
-feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2025-06-07 00:00:00 +00:00
-permalink: /github-copilot/blogs/GitHub-Copilot-and-Productivity-Rethinking-Metrics-and-Value-in-Modern-Development
 tags:
 - Agent Mode
 - Automation

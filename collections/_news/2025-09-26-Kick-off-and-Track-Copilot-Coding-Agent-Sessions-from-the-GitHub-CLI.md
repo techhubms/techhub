@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-25-kick-off-and-track-copilot-coding-agent-sessions-from-the-github-cli
 title: Kick off and Track Copilot Coding Agent Sessions from the GitHub CLI
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-25-kick-off-and-track-copilot-coding-agent-sessions-from-the-github-cli
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-26 09:00:02 +00:00
-permalink: /github-copilot/news/Kick-off-and-Track-Copilot-Coding-Agent-Sessions-from-the-GitHub-CLI
 tags:
 - Automation
 - Background Tasks

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/app-development/wpf-application-becomes-unresponsive-after-plugging-unplugging/m-p/4459751#M1274
 title: WPF Apps Becoming Unresponsive after USB Pen Device Hotplug
 author: shepburn
-canonical_url: https://techcommunity.microsoft.com/t5/app-development/wpf-application-becomes-unresponsive-after-plugging-unplugging/m-p/4459751#M1274
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet
 date: 2025-10-07 18:38:42 +00:00
-permalink: /coding/community/WPF-Apps-Becoming-Unresponsive-after-USB-Pen-Device-Hotplug
 tags:
 - .NET Framework
 - AppContext Switch

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-data-factory/help-with-partial-mongodb-update-via-azure-data-factory-data/m-p/4443596#M937
 title: 'Partial Updates in MongoDB via Azure Data Factory Data Flow: Nested Field Modification'
 author: leopoldinoex
-canonical_url: https://techcommunity.microsoft.com/t5/azure-data-factory/help-with-partial-mongodb-update-via-azure-data-factory-data/m-p/4443596#M937
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 16:29:48 +00:00
-permalink: /azure/community/Partial-Updates-in-MongoDB-via-Azure-Data-Factory-Data-Flow-Nested-Field-Modification
 tags:
 - Array Manipulation
 - Azure Data Factory

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/5-tips-for-using-github-copilot-with-issues-to-boost-your-productivity/
 title: 5 tips for using GitHub Copilot with issues to boost your productivity
 author: Klint Finley
-canonical_url: https://github.blog/ai-and-ml/github-copilot/5-tips-for-using-github-copilot-with-issues-to-boost-your-productivity/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-06-17 16:00:00 +00:00
-permalink: /github-copilot/news/5-tips-for-using-GitHub-Copilot-with-issues-to-boost-your-productivity
 tags:
 - AI & ML
 - AI Features

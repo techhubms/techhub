@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/top-10-azure-services-everyone-should-know-2025-edition/
 title: Top 10 Azure Services Everyone Should Know (2025 Edition)
 author: Dellenny
-canonical_url: https://dellenny.com/top-10-azure-services-everyone-should-know-2025-edition/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-29 07:52:42 +00:00
-permalink: /azure/blogs/Top-10-Azure-Services-Everyone-Should-Know-2025-Edition
 tags:
 - Azure Active Directory
 - Azure App Service

@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-07-16-support-for-issue-forms-in-chat-and-file-uploads-in-spaces
 title: Support for issue forms in chat and file uploads in spaces
 author: Allison
-canonical_url: https://github.blog/changelog/2025-07-16-support-for-issue-forms-in-chat-and-file-uploads-in-spaces
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-16 16:04:14 +00:00
-permalink: /github-copilot/news/Support-for-issue-forms-in-chat-and-file-uploads-in-spaces
 viewing_mode: external
 tags:
 - AI Assistance

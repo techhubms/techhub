@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-march-2025/
 title: 'Azure Developer CLI (azd) – March 2025 Release: New Features, Bug Fixes, and Updated Templates'
 author: Kristen Womack
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-march-2025/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-03-07 19:14:23 +00:00
-permalink: /ai/news/Azure-Developer-CLI-azd-March-2025-Release-New-Features-Bug-Fixes-and-Updated-Templates
 tags:
 - .NET
 - Azd

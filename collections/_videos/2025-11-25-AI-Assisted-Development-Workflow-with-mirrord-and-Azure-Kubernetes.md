@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=p43HWjZFycs
 title: AI-Assisted Development Workflow with mirrord and Azure Kubernetes
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=p43HWjZFycs
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-25 17:24:34 +00:00
-permalink: /ai/videos/AI-Assisted-Development-Workflow-with-mirrord-and-Azure-Kubernetes
 tags:
 - AI Code Editors
 - AKS

@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: XPRT Magazine 18
 date: 2025-05-01 00:00:00 +00:00
 author: Xebia
 viewing_mode: external
-permalink: /github-copilot/community/XPRT-Magazine-18
 tags:
 - .NET Aspire
 - Accessibility

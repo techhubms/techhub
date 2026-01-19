@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-8-supporting-platform-specific-dotnet-tools-on-old-sdks/
 title: 'Supporting Platform-Specific .NET Tools on Older SDKs: .NET 10 Preview Deep Dive'
 author: Andrew Lock
-canonical_url: https://andrewlock.net/exploring-dotnet-10-preview-features-8-supporting-platform-specific-dotnet-tools-on-old-sdks/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-09-16 10:00:00 +00:00
-permalink: /coding/blogs/Supporting-Platform-Specific-NET-Tools-on-Older-SDKs-NET-10-Preview-Deep-Dive
 tags:
 - .csproj
 - .NET 10

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mj3tz1/best_formattinglinting_solution_something_like/
 title: Recommended Code Formatting and Linting Solutions for .NET 4.7.1 in VS2022
 author: Efficient_Edge5500
-canonical_url: https://www.reddit.com/r/csharp/comments/1mj3tz1/best_formattinglinting_solution_something_like/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-06 12:51:50 +00:00
-permalink: /coding/community/Recommended-Code-Formatting-and-Linting-Solutions-for-NET-471-in-VS2022
 tags:
 - .NET
 - .NET 4.7.1

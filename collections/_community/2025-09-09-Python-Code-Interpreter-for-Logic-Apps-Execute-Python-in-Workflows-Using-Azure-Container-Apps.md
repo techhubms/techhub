@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcement-python-code-interpreter-in-logic-apps-is-now-in/ba-p/4452239
 title: 'Python Code Interpreter for Logic Apps: Execute Python in Workflows Using Azure Container Apps'
 author: DivSwa
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcement-python-code-interpreter-in-logic-apps-is-now-in/ba-p/4452239
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-09 18:10:15 +00:00
-permalink: /ai/community/Python-Code-Interpreter-for-Logic-Apps-Execute-Python-in-Workflows-Using-Azure-Container-Apps
 tags:
 - Agent Loop
 - AI Agents

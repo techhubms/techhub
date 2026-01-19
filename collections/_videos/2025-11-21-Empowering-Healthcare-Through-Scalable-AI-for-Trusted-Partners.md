@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=F4Alob9iYnQ
 title: Empowering Healthcare Through Scalable AI for Trusted Partners
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=F4Alob9iYnQ
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 13:04:53 +00:00
-permalink: /ai/videos/Empowering-Healthcare-Through-Scalable-AI-for-Trusted-Partners
 tags:
 - Agentic AI
 - AI in Healthcare

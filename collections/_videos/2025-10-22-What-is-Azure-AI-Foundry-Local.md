@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=N1paWARiUcI
 title: What is Azure AI Foundry Local?
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=N1paWARiUcI
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-22 16:49:13 +00:00
-permalink: /ai/videos/What-is-Azure-AI-Foundry-Local
 tags:
 - AI Infrastructure
 - AI Model Deployment

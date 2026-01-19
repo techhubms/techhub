@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/survey-surfaces-widespread-adoption-of-ai-to-improve-devsecops/
 title: Survey Reveals Rapid AI Adoption to Strengthen DevSecOps Practices
 author: Mike Vizard
-canonical_url: https://devops.com/survey-surfaces-widespread-adoption-of-ai-to-improve-devsecops/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-15 14:01:27 +00:00
-permalink: /ai/blogs/Survey-Reveals-Rapid-AI-Adoption-to-Strengthen-DevSecOps-Practices
 tags:
 - AI Adoption
 - Application Security

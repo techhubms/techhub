@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=hVDGQG1mw88
 title: 'AI Toolkit and GitHub Copilot: Model Recommendations Workshop'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=hVDGQG1mw88
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-01 21:00:21 +00:00
-permalink: /github-copilot/videos/AI-Toolkit-and-GitHub-Copilot-Model-Recommendations-Workshop
 tags:
 - Agent Mode
 - AI Development

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=EXu8QLEvulM
 title: Simplifying ASP.NET API Design with the REPR Pattern and FastEndpoints
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=EXu8QLEvulM
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-01 18:37:47 +00:00
-permalink: /coding/videos/Simplifying-ASPNET-API-Design-with-the-REPR-Pattern-and-FastEndpoints
 tags:
 - .NET
 - API

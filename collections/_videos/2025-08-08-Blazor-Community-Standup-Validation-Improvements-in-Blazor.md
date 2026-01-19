@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=REGwDgyLfNA
 title: 'Blazor Community Standup: Validation Improvements in Blazor'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=REGwDgyLfNA
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-08 23:02:43 +00:00
-permalink: /coding/videos/Blazor-Community-Standup-Validation-Improvements-in-Blazor
 tags:
 - .NET
 - .NET 10

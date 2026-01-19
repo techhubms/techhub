@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/container-networking-with-azure-application-gateway-for/ba-p/4449941
 title: 'Container Networking with Azure Application Gateway for Containers (AGC): Overlay vs. Flat AKS'
 author: lakshaymalik
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/container-networking-with-azure-application-gateway-for/ba-p/4449941
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-31 15:28:07 +00:00
-permalink: /coding/community/Container-Networking-with-Azure-Application-Gateway-for-Containers-AGC-Overlay-vs-Flat-AKS
 tags:
 - AKS
 - ALB Controller

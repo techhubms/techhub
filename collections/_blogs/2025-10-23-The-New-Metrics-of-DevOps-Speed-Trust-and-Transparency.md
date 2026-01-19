@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/the-new-metrics-of-devops-speed-trust-and-transparency/
 title: 'The New Metrics of DevOps: Speed, Trust and Transparency'
 author: Alan Shimel
-canonical_url: https://devops.com/the-new-metrics-of-devops-speed-trust-and-transparency/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-23 19:33:45 +00:00
-permalink: /ai/blogs/The-New-Metrics-of-DevOps-Speed-Trust-and-Transparency
 tags:
 - Agentic Development
 - Automation

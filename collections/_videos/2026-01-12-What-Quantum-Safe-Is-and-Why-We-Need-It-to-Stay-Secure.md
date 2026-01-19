@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=5--yBhgDrXM
 title: What Quantum Safe Is and Why We Need It to Stay Secure
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=5--yBhgDrXM
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2026-01-12 14:39:56 +00:00
-permalink: /ai/videos/What-Quantum-Safe-Is-and-Why-We-Need-It-to-Stay-Secure
 tags:
 - Azure Cloud
 - Cloud

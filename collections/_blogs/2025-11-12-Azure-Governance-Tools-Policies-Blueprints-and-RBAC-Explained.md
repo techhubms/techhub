@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/azure-governance-tools-policies-blueprints-and-role-based-access-control-rbac/
 title: 'Azure Governance Tools: Policies, Blueprints, and RBAC Explained'
 author: Dellenny
-canonical_url: https://dellenny.com/azure-governance-tools-policies-blueprints-and-role-based-access-control-rbac/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-12 15:50:33 +00:00
-permalink: /azure/blogs/Azure-Governance-Tools-Policies-Blueprints-and-RBAC-Explained
 tags:
 - Access Control
 - Azure Automation

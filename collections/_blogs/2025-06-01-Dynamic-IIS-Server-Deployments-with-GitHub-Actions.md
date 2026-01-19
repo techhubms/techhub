@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.mindbyte.nl/2025/06/02/dynamic-iis-server-deployments-github-actions.html
 title: Dynamic IIS Server Deployments with GitHub Actions
 author: Michiel van Oudheusden
-canonical_url: https://www.mindbyte.nl/2025/06/02/dynamic-iis-server-deployments-github-actions.html
 viewing_mode: external
 feed_name: Michiel van Oudheusden's Blog
-feed_url: https://mindbyte.nl/feed.xml
 date: 2025-06-01 22:00:00 +00:00
-permalink: /devops/blogs/Dynamic-IIS-Server-Deployments-with-GitHub-Actions
 tags:
 - Automation
 - AWS

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/use-copilot-in-vs-code-to-summarize-prs.html
 title: Use Copilot in VS Code to Summarize PRs
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/use-copilot-in-vs-code-to-summarize-prs.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-05-23 00:00:00 +00:00
-permalink: /github-copilot/blogs/Use-Copilot-in-VS-Code-to-Summarize-PRs
 tags:
 - AI Tools
 - Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/bridging-the-gap-automate-warehouse-sql-endpoint-deployment-in-microsoft-fabric/
 title: Automating Warehouse and SQL Endpoint Deployment in Microsoft Fabric
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/bridging-the-gap-automate-warehouse-sql-endpoint-deployment-in-microsoft-fabric/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-03 09:00:00 +00:00
-permalink: /ml/news/Automating-Warehouse-and-SQL-Endpoint-Deployment-in-Microsoft-Fabric
 tags:
 - Continuous Integration
 - DacFx

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/blog/2025/11/18/from-idea-to-deployment-the-complete-lifecycle-of-ai-on-display-at-ignite-2025/
 title: 'AI Agent Lifecycle, Security, and Observability: Highlights from Microsoft Ignite 2025'
 author: ryon
-canonical_url: https://blogs.microsoft.com/blog/2025/11/18/from-idea-to-deployment-the-complete-lifecycle-of-ai-on-display-at-ignite-2025/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-18 17:18:34 +00:00
-permalink: /ai/news/AI-Agent-Lifecycle-Security-and-Observability-Highlights-from-Microsoft-Ignite-2025
 tags:
 - Agent Lifecycle
 - Agent Observability

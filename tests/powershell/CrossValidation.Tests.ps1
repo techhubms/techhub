@@ -14,7 +14,6 @@ Describe "PowerShell and .NET ContentFixer Cross-Validation" {
         # Old-style content (what RSS pipeline produces before ContentFixer)
         $oldContent = @"
 ---
-layout: "post"
 title: "GitHub Copilot: Advanced Features and Best Practices"
 description: "A comprehensive guide to GitHub Copilot's advanced features"
 author: "Jane Doe"
@@ -69,9 +68,15 @@ Here's the full article content.
             $fixedContent | Should -Not -Match "tags_normalized:"
             $fixedContent | Should -Not -Match "excerpt_separator:"
             $fixedContent | Should -Not -Match "description:"
+            $fixedContent | Should -Not -Match "permalink:"
+            $fixedContent | Should -Not -Match "canonical_url:"
+            $fixedContent | Should -Not -Match "feed_url:"
+            $fixedContent | Should -Match "feed_name:"
+            $fixedContent | Should -Not -Match "alt_collection:"
             
-            # Should have fixed permalink
-            $fixedContent | Should -Match "permalink: /[^/]+/[^/]+/[^/\n]+"
+            # Should have new required fields
+            $fixedContent | Should -Match "external_url:"
+            $fixedContent | Should -Not -Match "collection:"
         }
     }
 
@@ -90,15 +95,12 @@ Here's the full article content.
             
             # Create equivalent frontmatter using PowerShell function
             $frontMatter = @{
-                layout        = "post"
                 title         = "GitHub Copilot: Advanced Features and Best Practices"
                 author        = "Jane Doe"
-                canonical_url = "https://example.com/copilot-guide"
+                external_url  = "https://example.com/copilot-guide"
                 viewing_mode  = "external"
                 feed_name     = "Tech Blog"
-                feed_url      = "https://example.com/feed"
                 date          = "2026-01-16 10:00:00 +00:00"
-                permalink     = "/github-copilot/blogs/GitHub-Copilot-Advanced-Features"
                 tags          = @("AI", "GitHub Copilot", "Best Practices", "Coding")
                 section_names = @("ai", "github-copilot", "coding")
             }
@@ -127,11 +129,6 @@ Here's the full article content.
         It "Should use same quoting rules as ContentFixer" {
             # Test various quoting scenarios
             $testCases = @(
-                @{ 
-                    Field           = "layout"
-                    Value           = "post"
-                    ExpectedPattern = "layout: post"  # No quotes for simple values
-                },
                 @{
                     Field           = "title"
                     Value           = "Test: Article"
@@ -141,6 +138,11 @@ Here's the full article content.
                     Field           = "author"
                     Value           = "John Doe"
                     ExpectedPattern = "author: John Doe"  # No quotes for simple names
+                },
+                @{
+                    Field           = "section_names"
+                    Value           = @("ai", "github_copilot")
+                    ExpectedPattern = "section_names:"  # Array field
                 }
             )
             
@@ -163,12 +165,8 @@ Here's the full article content.
                 layout        = "post"
                 title         = "New Article from RSS"
                 author        = "RSS Author"
-                canonical_url = "https://example.com/new-article"
+                external_url  = "https://example.com/new-article"
                 viewing_mode  = "external"
-                feed_name     = "Example Feed"
-                feed_url      = "https://example.com/feed"
-                date          = "2026-01-16 12:00:00 +00:00"
-                permalink     = "/ai/blogs/New-Article-from-RSS"
                 tags          = @("AI", "Machine Learning")
                 section_names = @("ai")
             }

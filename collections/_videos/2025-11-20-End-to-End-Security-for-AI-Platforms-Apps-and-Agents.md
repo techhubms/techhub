@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=R3zFGy8hluE
 title: End-to-End Security for AI Platforms, Apps, and Agents
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=R3zFGy8hluE
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 14:35:23 +00:00
-permalink: /ai/videos/End-to-End-Security-for-AI-Platforms-Apps-and-Agents
 tags:
 - Agent Monitoring
 - AI Management

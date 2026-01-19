@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=jcDhtVZONb4
 title: Build a Pizza Ordering Agent with Microsoft Foundry and MCP
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=jcDhtVZONb4
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-10 23:58:13 +00:00
-permalink: /ai/videos/Build-a-Pizza-Ordering-Agent-with-Microsoft-Foundry-and-MCP
 tags:
 - AI Agent
 - Azure Free Trial

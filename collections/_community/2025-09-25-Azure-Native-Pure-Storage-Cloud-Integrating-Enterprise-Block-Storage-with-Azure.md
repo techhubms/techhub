@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-native-pure-storage-cloud-brings-the-best-of-pure-and/ba-p/4456246
 title: 'Azure Native Pure Storage Cloud: Integrating Enterprise Block Storage with Azure'
 author: karautenMSFT
-canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-native-pure-storage-cloud-brings-the-best-of-pure-and/ba-p/4456246
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 16:00:00 +00:00
-permalink: /azure/community/Azure-Native-Pure-Storage-Cloud-Integrating-Enterprise-Block-Storage-with-Azure
 tags:
 - Azure Native Integration
 - Azure Storage

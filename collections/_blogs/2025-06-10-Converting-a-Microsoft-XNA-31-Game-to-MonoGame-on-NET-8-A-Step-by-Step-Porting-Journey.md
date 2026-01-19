@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/converting-an-xna-game-to-monogame/
 title: 'Converting a Microsoft XNA 3.1 Game to MonoGame on .NET 8: A Step-by-Step Porting Journey'
 author: Andrew Lock
-canonical_url: https://andrewlock.net/converting-an-xna-game-to-monogame/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-06-10 09:00:00 +00:00
-permalink: /coding/blogs/Converting-a-Microsoft-XNA-31-Game-to-MonoGame-on-NET-8-A-Step-by-Step-Porting-Journey
 tags:
 - .NET 8
 - Content Pipeline

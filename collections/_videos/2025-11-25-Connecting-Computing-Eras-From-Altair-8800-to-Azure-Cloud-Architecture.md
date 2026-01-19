@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=8ye90oY60Fg
 title: 'Connecting Computing Eras: From Altair 8800 to Azure Cloud Architecture'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=8ye90oY60Fg
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 12:07:51 +00:00
-permalink: /coding/videos/Connecting-Computing-Eras-From-Altair-8800-to-Azure-Cloud-Architecture
 tags:
 - Altair 8800
 - Assembler

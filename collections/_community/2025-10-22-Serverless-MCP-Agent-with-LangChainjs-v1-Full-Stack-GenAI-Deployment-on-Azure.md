@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/serverless-mcp-agent-with-langchain-js-v1-burgers-tools-and/ba-p/4463157
 title: 'Serverless MCP Agent with LangChain.js v1: Full-Stack GenAI Deployment on Azure'
 author: sinedied
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/serverless-mcp-agent-with-langchain-js-v1-burgers-tools-and/ba-p/4463157
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-22 07:29:14 +00:00
-permalink: /ai/community/Serverless-MCP-Agent-with-LangChainjs-v1-Full-Stack-GenAI-Deployment-on-Azure
 tags:
 - Authentication
 - Azure Developer CLI

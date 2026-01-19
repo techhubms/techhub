@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-28-ask-copilot-coding-agent-to-make-changes-in-any-pull-request-with-copilot
 title: Ask Copilot Coding Agent to Make Changes in Any Pull Request with @copilot
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-28-ask-copilot-coding-agent-to-make-changes-in-any-pull-request-with-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:20:57 +00:00
-permalink: /github-copilot/news/Ask-Copilot-Coding-Agent-to-Make-Changes-in-Any-Pull-Request-with-copilot
 tags:
 - '@copilot'
 - Automation

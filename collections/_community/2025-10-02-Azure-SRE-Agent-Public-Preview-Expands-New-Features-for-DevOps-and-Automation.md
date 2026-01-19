@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/expanding-the-public-preview-of-the-azure-sre-agent/ba-p/4458514
 title: 'Azure SRE Agent Public Preview Expands: New Features for DevOps and Automation'
 author: Mayunk_Jain
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/expanding-the-public-preview-of-the-azure-sre-agent/ba-p/4458514
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-02 02:24:40 +00:00
-permalink: /azure/community/Azure-SRE-Agent-Public-Preview-Expands-New-Features-for-DevOps-and-Automation
 tags:
 - AKS
 - AZ CLI

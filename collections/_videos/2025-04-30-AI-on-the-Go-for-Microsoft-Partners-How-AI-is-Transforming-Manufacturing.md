@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=aYsx-VibHW4
 title: 'AI on the Go for Microsoft Partners: How AI is Transforming Manufacturing'
 author: Microsoft Cloud
-canonical_url: https://www.youtube.com/watch?v=aYsx-VibHW4
 viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-04-30 16:00:03 +00:00
-permalink: /ai/videos/AI-on-the-Go-for-Microsoft-Partners-How-AI-is-Transforming-Manufacturing
 tags:
 - AI On The Go
 - AI Opportunities

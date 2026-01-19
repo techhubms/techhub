@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-17-gpt-4-1-copilot-code-completion-model-october-update
 title: GPT-4.1 Copilot Code Completion Model – October Update
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-17-gpt-4-1-copilot-code-completion-model-october-update
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-17 15:29:48 +00:00
-permalink: /github-copilot/news/GPT-41-Copilot-Code-Completion-Model-October-Update
 tags:
 - AI Code Suggestions
 - AI Models

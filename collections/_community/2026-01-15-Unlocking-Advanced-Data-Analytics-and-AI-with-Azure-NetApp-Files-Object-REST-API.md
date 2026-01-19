@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/unlocking-advanced-data-analytics-ai-with-azure-netapp-files/ba-p/4486098
 title: Unlocking Advanced Data Analytics & AI with Azure NetApp Files Object REST API
 author: GeertVanTeylingen
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/unlocking-advanced-data-analytics-ai-with-azure-netapp-files/ba-p/4486098
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-15 22:47:33 +00:00
-permalink: /ai/community/Unlocking-Advanced-Data-Analytics-and-AI-with-Azure-NetApp-Files-Object-REST-API
 tags:
 - AI Workloads
 - Analytics

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/gpt-5-in-azure-ai-foundry-the-future-of-ai-apps-and-agents-starts-here/
 title: 'GPT-5 Launches in Azure AI Foundry: New Era for AI Apps, Agents, and Developers'
 author: Steve Sweetman
-canonical_url: https://azure.microsoft.com/en-us/blog/gpt-5-in-azure-ai-foundry-the-future-of-ai-apps-and-agents-starts-here/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-07 17:00:00 +00:00
-permalink: /github-copilot/news/GPT-5-Launches-in-Azure-AI-Foundry-New-Era-for-AI-Apps-Agents-and-Developers
 tags:
 - Agentic Workflows
 - AI + Machine Learning

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/verifiying-tricky-git-rebases-with-range-diffs/
 title: Verifying Tricky Git Rebases with git range-diff
 author: Andrew Lock
-canonical_url: https://andrewlock.net/verifiying-tricky-git-rebases-with-range-diffs/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-04-08 09:00:00 +00:00
-permalink: /coding/blogs/Verifying-Tricky-Git-Rebases-with-git-range-diff
 tags:
 - Branch Management
 - Commit Comparison

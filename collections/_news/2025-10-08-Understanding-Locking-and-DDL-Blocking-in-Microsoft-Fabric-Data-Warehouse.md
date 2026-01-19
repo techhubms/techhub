@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/locking-and-ddl-blocking-behavior-in-microsoft-fabric-data-warehouse-what-you-need-to-know/
 title: Understanding Locking and DDL Blocking in Microsoft Fabric Data Warehouse
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/locking-and-ddl-blocking-behavior-in-microsoft-fabric-data-warehouse-what-you-need-to-know/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-08 07:03:26 +00:00
-permalink: /ml/news/Understanding-Locking-and-DDL-Blocking-in-Microsoft-Fabric-Data-Warehouse
 tags:
 - ACID Transactions
 - Concurrency

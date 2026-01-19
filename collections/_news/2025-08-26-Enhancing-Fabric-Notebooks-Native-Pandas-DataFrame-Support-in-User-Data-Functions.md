@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-fabric-notebook-udf-integration-with-native-support-for-pandas-dataframes-and-series-via-apache-arrow/
 title: 'Enhancing Fabric Notebooks: Native Pandas DataFrame Support in User Data Functions'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-fabric-notebook-udf-integration-with-native-support-for-pandas-dataframes-and-series-via-apache-arrow/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-26 11:45:35 +00:00
-permalink: /ml/news/Enhancing-Fabric-Notebooks-Native-Pandas-DataFrame-Support-in-User-Data-Functions
 tags:
 - Apache Arrow
 - Cross Language Support

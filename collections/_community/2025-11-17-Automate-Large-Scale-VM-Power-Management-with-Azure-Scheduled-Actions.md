@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/handle-scale-for-power-state-operations-using-scheduled-actions/ba-p/4470131
 title: Automate Large-Scale VM Power Management with Azure Scheduled Actions
 author: TravisCragg_MSFT
-canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/handle-scale-for-power-state-operations-using-scheduled-actions/ba-p/4470131
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-17 21:36:26 +00:00
-permalink: /azure/community/Automate-Large-Scale-VM-Power-Management-with-Azure-Scheduled-Actions
 tags:
 - API Automation
 - Batch Operations

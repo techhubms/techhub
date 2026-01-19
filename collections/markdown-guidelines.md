@@ -92,7 +92,7 @@ Follow this order for consistency (see [frontmatter-schema.md](frontmatter-schem
 9. `permalink`
 10. `tags`
 11. `section_names`
-12. Collection-specific fields (`alt_collection`, `plans`, `ghes_support`, `coming_soon`)
+12. Collection-specific fields (plans, `ghes_support`, `coming_soon`)
 
 ## Markdown Formatting Rules
 

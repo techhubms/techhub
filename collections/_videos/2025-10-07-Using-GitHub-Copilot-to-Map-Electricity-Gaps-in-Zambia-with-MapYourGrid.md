@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/AWvpFKOdGMg
 title: Using GitHub Copilot to Map Electricity Gaps in Zambia with MapYourGrid
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/AWvpFKOdGMg
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-07 14:00:15 +00:00
-permalink: /github-copilot/videos/Using-GitHub-Copilot-to-Map-Electricity-Gaps-in-Zambia-with-MapYourGrid
 tags:
 - AI For Good
 - Climate Action

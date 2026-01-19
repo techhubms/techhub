@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dotnetfoundation.org/news-events/detail/spotlight-on-json-everything-a-unified-toolkit-for-json-standards-in-.net
 title: 'Spotlight on JSON Everything: Unified JSON Standards Toolkit for .NET Developers'
 author: .NET Foundation News and Blog
-canonical_url: https://dotnetfoundation.org/news-events/detail/spotlight-on-json-everything-a-unified-toolkit-for-json-standards-in-.net
 viewing_mode: external
 feed_name: .NET Foundation's Blog
-feed_url: https://dotnetfoundation.org/feeds/blog
 date: 2025-04-23 18:55:14 +00:00
-permalink: /coding/blogs/Spotlight-on-JSON-Everything-Unified-JSON-Standards-Toolkit-for-NET-Developers
 tags:
 - .NET
 - Data Validation

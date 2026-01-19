@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/generative-ai-in-azure-a-practical-guide-to-getting-started/
 title: 'Generative AI in Azure: A Practical Guide to Getting Started'
 author: Dellenny
-canonical_url: https://dellenny.com/generative-ai-in-azure-a-practical-guide-to-getting-started/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-22 08:40:58 +00:00
-permalink: /ai/blogs/Generative-AI-in-Azure-A-Practical-Guide-to-Getting-Started
 tags:
 - AI Governance
 - API Integration

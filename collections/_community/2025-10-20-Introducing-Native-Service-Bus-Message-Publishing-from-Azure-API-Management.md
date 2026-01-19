@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-native-service-bus-message-publishing-from-azure-api/ba-p/4462644
 title: Introducing Native Service Bus Message Publishing from Azure API Management
 author: anishta
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-native-service-bus-message-publishing-from-azure-api/ba-p/4462644
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-20 01:22:49 +00:00
-permalink: /azure/community/Introducing-Native-Service-Bus-Message-Publishing-from-Azure-API-Management
 tags:
 - API Gateway
 - APIM

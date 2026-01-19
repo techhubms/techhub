@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/exploring-agent-quality-and-nlp-evaluators/
 title: Exploring New Agent Quality and NLP Evaluators for .NET AI Applications
 author: Shyam Namboodiripad
-canonical_url: https://devblogs.microsoft.com/dotnet/exploring-agent-quality-and-nlp-evaluators/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-08-05 17:05:00 +00:00
-permalink: /ai/news/Exploring-New-Agent-Quality-and-NLP-Evaluators-for-NET-AI-Applications
 tags:
 - .NET
 - Agent Quality

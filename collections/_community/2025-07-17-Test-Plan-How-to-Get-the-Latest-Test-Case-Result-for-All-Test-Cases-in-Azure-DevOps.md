@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/azuredevops/comments/1m26lp7/test_plan_or_test_suite_how_to_get_the_last_test/
 title: "Test Plan: How to Get the Latest 'Test Case Result' for All Test Cases in Azure DevOps"
 author: penelope77
-canonical_url: https://www.reddit.com/r/azuredevops/comments/1m26lp7/test_plan_or_test_suite_how_to_get_the_last_test/
 viewing_mode: external
 feed_name: Reddit Azure DevOps
-feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-17 12:46:30 +00:00
-permalink: /azure/community/Test-Plan-How-to-Get-the-Latest-Test-Case-Result-for-All-Test-Cases-in-Azure-DevOps
 tags:
 - Automation
 - Azure DevOps

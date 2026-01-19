@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=nPe4_ef8zFg
 title: 'Deploying Azure Local at Scale: Lessons from Coles Supermarket at Microsoft Ignite 2024'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=nPe4_ef8zFg
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-03-05 22:00:38 +00:00
-permalink: /ai/videos/Deploying-Azure-Local-at-Scale-Lessons-from-Coles-Supermarket-at-Microsoft-Ignite-2024
 tags:
 - AI Inferencing
 - Azure Local

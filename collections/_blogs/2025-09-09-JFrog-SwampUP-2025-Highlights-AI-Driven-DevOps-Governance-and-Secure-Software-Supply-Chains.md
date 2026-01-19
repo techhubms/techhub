@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/jfrog-continues-leaping-at-swampup/?utm_source=rss&utm_medium=rss&utm_campaign=jfrog-continues-leaping-at-swampup
 title: 'JFrog SwampUP 2025 Highlights: AI-Driven DevOps, Governance, and Secure Software Supply Chains'
 author: Alan Shimel
-canonical_url: https://devops.com/jfrog-continues-leaping-at-swampup/?utm_source=rss&utm_medium=rss&utm_campaign=jfrog-continues-leaping-at-swampup
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-09 15:02:04 +00:00
-permalink: /ai/blogs/JFrog-SwampUP-2025-Highlights-AI-Driven-DevOps-Governance-and-Secure-Software-Supply-Chains
 tags:
 - Agentic Repository
 - AI Catalog

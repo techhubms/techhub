@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/ai-powered-migration-modernization-secure-resilient-and-ready/ba-p/4454849
 title: AI-Powered Migration and Modernization with Azure Essentials, Azure Migrate, and GitHub Copilot
 author: GabiPacheco
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/ai-powered-migration-modernization-secure-resilient-and-ready/ba-p/4454849
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-17 17:45:09 +00:00
-permalink: /github-copilot/community/AI-Powered-Migration-and-Modernization-with-Azure-Essentials-Azure-Migrate-and-GitHub-Copilot
 tags:
 - Agentic Applications
 - AI Assisted Migration

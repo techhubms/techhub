@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/open-source/maintainers/we-need-a-european-sovereign-tech-fund/
 title: We Need a European Sovereign Tech Fund to Sustain Open Source Software
 author: Felix Reda
-canonical_url: https://github.blog/open-source/maintainers/we-need-a-european-sovereign-tech-fund/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-07-23 07:01:00 +00:00
-permalink: /devops/news/We-Need-a-European-Sovereign-Tech-Fund-to-Sustain-Open-Source-Software
 tags:
 - Digital Infrastructure
 - EU Budget

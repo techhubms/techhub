@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-ga-of-the-premium-v2-tier-of/ba-p/4471499
 title: Azure API Management Premium v2 Tier Now Generally Available
 author: Sreekanth_Thirthala
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-ga-of-the-premium-v2-tier-of/ba-p/4471499
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 21:10:17 +00:00
-permalink: /azure/community/Azure-API-Management-Premium-v2-Tier-Now-Generally-Available
 tags:
 - API Gateway
 - Authorization Credentials

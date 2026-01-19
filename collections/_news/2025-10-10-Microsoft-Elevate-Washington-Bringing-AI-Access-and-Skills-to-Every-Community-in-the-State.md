@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/on-the-issues/2025/10/09/microsoft-elevate-washington/
 title: 'Microsoft Elevate Washington: Bringing AI Access and Skills to Every Community in the State'
 author: stclarke
-canonical_url: https://blogs.microsoft.com/on-the-issues/2025/10/09/microsoft-elevate-washington/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-10 17:50:49 +00:00
-permalink: /ai/news/Microsoft-Elevate-Washington-Bringing-AI-Access-and-Skills-to-Every-Community-in-the-State
 tags:
 - AI For Good Lab
 - AI Training

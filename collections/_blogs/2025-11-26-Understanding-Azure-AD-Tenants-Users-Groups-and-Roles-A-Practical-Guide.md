@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/understanding-azure-ad-tenants-users-groups-and-roles-a-practical-guide/
 title: 'Understanding Azure AD Tenants, Users, Groups, and Roles: A Practical Guide'
 author: John Edward
-canonical_url: https://dellenny.com/understanding-azure-ad-tenants-users-groups-and-roles-a-practical-guide/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-26 08:25:56 +00:00
-permalink: /azure/blogs/Understanding-Azure-AD-Tenants-Users-Groups-and-Roles-A-Practical-Guide
 tags:
 - Access Control
 - Azure AD

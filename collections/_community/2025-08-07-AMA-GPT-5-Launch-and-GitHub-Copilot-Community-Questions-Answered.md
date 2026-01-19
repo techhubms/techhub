@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk5xc3/gpt5_is_here_ama_on_thursday_august_13th/
 title: 'AMA: GPT-5 Launch and GitHub Copilot – Community Questions Answered'
 author: hollandburke
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mk5xc3/gpt5_is_here_ama_on_thursday_august_13th/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-07 17:12:55 +00:00
-permalink: /github-copilot/community/AMA-GPT-5-Launch-and-GitHub-Copilot-Community-Questions-Answered
 tags:
 - Agent Mode
 - AI Integration

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot
 title: GPT-5.1 and GPT-5.1-Codex Now Available in GitHub Copilot
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-17 16:16:42 +00:00
-permalink: /github-copilot/news/GPT-51-and-GPT-51-Codex-Now-Available-in-GitHub-Copilot
 tags:
 - AI Code Completion
 - AI Models

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=OhXZa5NzJ5Y
 title: Level up Microsoft security for insider threats
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=OhXZa5NzJ5Y
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 14:45:42 +00:00
-permalink: /security/videos/Level-up-Microsoft-security-for-insider-threats
 tags:
 - Advanced Persistent Threats
 - Behavior Analytics

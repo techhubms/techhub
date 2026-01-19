@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure/azure-automation-feature-improvements-and-bugs/m-p/4456195#M22242
 title: 'Azure Automation: User Requests, Feature Suggestions, and Bug Reports'
 author: mynster
-canonical_url: https://techcommunity.microsoft.com/t5/azure/azure-automation-feature-improvements-and-bugs/m-p/4456195#M22242
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-23 10:12:56 +00:00
-permalink: /coding/community/Azure-Automation-User-Requests-Feature-Suggestions-and-Bug-Reports
 tags:
 - Automation Account
 - Azure Automation

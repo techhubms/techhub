@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://jessehouwing.net/repost-protect-the-repository-hosting-your-github-action/
 title: 'Repost: Protect the Repository Hosting Your GitHub Action'
 author: Jesse Houwing
-canonical_url: https://jessehouwing.net/repost-protect-the-repository-hosting-your-github-action/
 viewing_mode: external
 feed_name: Jesse Houwing's Blog
-feed_url: https://jessehouwing.net/rss/
 date: 2025-03-25 18:17:02 +00:00
-permalink: /devops/blogs/Repost-Protect-the-Repository-Hosting-Your-GitHub-Action
 tags:
 - Automation
 - Changed Files Hack

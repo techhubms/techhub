@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/cloud-as-a-war-against-entropy/ba-p/4474111
 title: 'Cloud as a War Against Entropy: Practical Reliability Patterns for Azure Architects'
 author: lavann320
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/cloud-as-a-war-against-entropy/ba-p/4474111
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-02 01:24:03 +00:00
-permalink: /azure/community/Cloud-as-a-War-Against-Entropy-Practical-Reliability-Patterns-for-Azure-Architects
 tags:
 - Architecture Review
 - Availability Zones

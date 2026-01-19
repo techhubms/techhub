@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/3Fh1A3KGk-I
 title: How to Use Git Branches for Beginners
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/3Fh1A3KGk-I
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2026-01-14 17:00:11 +00:00
-permalink: /devops/videos/How-to-Use-Git-Branches-for-Beginners
 tags:
 - Beginner Guide
 - Branches

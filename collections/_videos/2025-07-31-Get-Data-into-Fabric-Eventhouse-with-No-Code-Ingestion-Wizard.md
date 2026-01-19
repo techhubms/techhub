@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=pABc7L9hWjU
 title: Get Data into Fabric Eventhouse with No-Code Ingestion Wizard
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=pABc7L9hWjU
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-31 18:16:15 +00:00
-permalink: /ml/videos/Get-Data-into-Fabric-Eventhouse-with-No-Code-Ingestion-Wizard
 tags:
 - Amazon S3
 - Azure Storage

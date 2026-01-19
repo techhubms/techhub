@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=PWmLjg0HFT4
 title: Refactor C++ Code with C++ Code Editing Tools for GitHub Copilot in Visual Studio
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=PWmLjg0HFT4
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-12 17:00:47 +00:00
-permalink: /github-copilot/videos/Refactor-C-Code-with-C-Code-Editing-Tools-for-GitHub-Copilot-in-Visual-Studio
 tags:
 - Agent Mode
 - C++

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Ph-zrJNhl_M
 title: 'Accelerate Secure AI: Microsoft’s Security Advantage for Partners'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=Ph-zrJNhl_M
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 13:33:32 +00:00
-permalink: /ai/videos/Accelerate-Secure-AI-Microsofts-Security-Advantage-for-Partners
 tags:
 - Agent 365
 - AI Governance

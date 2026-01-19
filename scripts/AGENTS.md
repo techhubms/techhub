@@ -346,16 +346,20 @@ Transforms RSS feed items into markdown files with .NET Tech Hub frontmatter str
 
 - `{{TITLE}}` - Content title
 - `{{AUTHOR}}` - Author name
-- `{{CANONICAL_URL_FORMATTED}}` - Original URL (quoted)
-- `{{FEEDNAME}}` - RSS feed name
-- `{{FEEDURL}}` - RSS feed URL
+- `{{EXTERNAL_URL}}` - Original source URL
+- `{{COLLECTION}}` - Collection name (news, videos, blogs, community, roundups)
 - `{{DATE}}` - Publication date with timezone
-- `{{PERMALINK}}` - URL path
 - `{{TAGS}}` - Topic tags array
 - `{{SECTION_NAMES}}` - Normalized section identifiers array
 - `{{CONTENT}}` - Main content
 - `{{EXCERPT}}` - Summary excerpt
-- `{{YOUTUBE_ID}}` - YouTube video ID (videos only)
+
+**Note**: The following variables have been removed as they are no longer stored in frontmatter:
+
+- `{{CANONICAL_URL_FORMATTED}}` - Replaced by `{{EXTERNAL_URL}}`
+- `{{FEEDNAME}}` - Feed metadata not stored in frontmatter
+- `{{FEEDURL}}` - Feed metadata not stored in frontmatter
+- `{{PERMALINK}}` - Built dynamically from collection + section_names + slug
 
 ### Feed.ps1
 

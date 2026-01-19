@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=r3iTEqujO1s
 title: Modernizing Java Applications with GitHub Copilot and Azure Deployment
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=r3iTEqujO1s
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-23 13:01:50 +00:00
-permalink: /github-copilot/videos/Modernizing-Java-Applications-with-GitHub-Copilot-and-Azure-Deployment
 tags:
 - App Modernization
 - Automated Assessment

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=5FvIbLwRqzg
 title: AI-Powered Endpoint Security Updates in Microsoft Defender
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=5FvIbLwRqzg
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 15:28:56 +00:00
-permalink: /ai/videos/AI-Powered-Endpoint-Security-Updates-in-Microsoft-Defender
 tags:
 - AI Security
 - Autonomous Protection

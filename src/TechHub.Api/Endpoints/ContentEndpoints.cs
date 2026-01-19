@@ -130,14 +130,12 @@ internal static class ContentEndpoints
             DateEpoch = item.DateEpoch,
             DateIso = item.DateIso,
             CollectionName = item.CollectionName,
-            AltCollection = item.AltCollection,
             SectionNames = item.SectionNames,
             PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName),
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             RenderedHtml = item.RenderedHtml,
             ExternalUrl = item.ExternalUrl,
-            VideoId = item.VideoId,
             ViewingMode = item.ViewingMode,
             Url = $"/{sectionName}/{collectionName}/{slug}"
         };
@@ -223,13 +221,11 @@ internal static class ContentEndpoints
             DateEpoch = item.DateEpoch,
             DateIso = item.DateIso,
             CollectionName = item.CollectionName,
-            AltCollection = item.AltCollection,
             SectionNames = item.SectionNames,
             PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName),
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
-            VideoId = item.VideoId,
             ViewingMode = item.ViewingMode,
             Url = $"/{primarySectionUrl.ToLowerInvariant()}/{item.CollectionName.ToLowerInvariant()}/{item.Slug.ToLowerInvariant()}"
         };

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-12-secret-scanning-improves-private-key-detection
 title: 'Secret Scanning Enhancements: Improved Private Key Detection and Sentry Token Updates'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-12-secret-scanning-improves-private-key-detection
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-12 18:15:01 +00:00
-permalink: /devops/news/Secret-Scanning-Enhancements-Improved-Private-Key-Detection-and-Sentry-Token-Updates
 tags:
 - Application Security
 - Code Security

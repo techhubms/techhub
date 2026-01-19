@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/modernizing-legacy-java-project-using-github-copilot-app/ba-p/4440777
 title: Modernizing Legacy Java Applications with GitHub Copilot App Modernization Upgrade
 author: jorgebalderas
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/modernizing-legacy-java-project-using-github-copilot-app/ba-p/4440777
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 04:15:00 +00:00
-permalink: /github-copilot/community/Modernizing-Legacy-Java-Applications-with-GitHub-Copilot-App-Modernization-Upgrade
 tags:
 - AI Powered Refactoring
 - CI/CD

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=YZJCVtt0bwQ
 title: Building, Modernizing, and Securing AKS Workloads with Azure Linux
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=YZJCVtt0bwQ
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 11:13:59 +00:00
-permalink: /azure/videos/Building-Modernizing-and-Securing-AKS-Workloads-with-Azure-Linux
 tags:
 - AKS
 - Azure Linux

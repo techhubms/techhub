@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-your-first-ai-agent-with-azure-app-service/ba-p/4468725
 title: Build Your First AI Agent with Azure App Service
 author: jordanselig
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-your-first-ai-agent-with-azure-app-service/ba-p/4468725
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-13 17:43:25 +00:00
-permalink: /ai/community/Build-Your-First-AI-Agent-with-Azure-App-Service
 tags:
 - .NET
 - Agentic Applications

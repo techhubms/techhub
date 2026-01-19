@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/net-runtime/net-runtime-issues-application-not-starting-up/m-p/4466585#M773
 title: .NET 8 Windows Service Fails to Start Due to .NETCore.App Version Mismatch
 author: JY_2013
-canonical_url: https://techcommunity.microsoft.com/t5/net-runtime/net-runtime-issues-application-not-starting-up/m-p/4466585#M773
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet
 date: 2025-11-03 11:28:20 +00:00
-permalink: /coding/community/NET-8-Windows-Service-Fails-to-Start-Due-to-NETCoreApp-Version-Mismatch
 tags:
 - .NET
 - .NET 8

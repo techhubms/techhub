@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/emea/2025/12/microsoft-empowers-350000-more-nigerians-with-ai-skills/
 title: Microsoft Expands AI Skills Training to 350,000 More Nigerians
 author: stclarke
-canonical_url: https://news.microsoft.com/source/emea/2025/12/microsoft-empowers-350000-more-nigerians-with-ai-skills/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-19 14:23:41 +00:00
-permalink: /ai/news/Microsoft-Expands-AI-Skills-Training-to-350000-More-Nigerians
 tags:
 - AI Hackathon
 - AI National Skills Initiative

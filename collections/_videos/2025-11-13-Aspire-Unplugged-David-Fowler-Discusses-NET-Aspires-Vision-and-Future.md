@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=dJdXdRiIfDw
 title: 'Aspire Unplugged: David Fowler Discusses .NET Aspire’s Vision and Future'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=dJdXdRiIfDw
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:50 +00:00
-permalink: /coding/videos/Aspire-Unplugged-David-Fowler-Discusses-NET-Aspires-Vision-and-Future
 tags:
 - .NET
 - .NET 10

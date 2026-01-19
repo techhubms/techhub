@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/expanding-global-reach-and-enhancing-observability-with-oracle/ba-p/4443650
 title: Expanding Global Reach and Enhanced Observability with Oracle Database@Azure
 author: bhbandam
-canonical_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/expanding-global-reach-and-enhancing-observability-with-oracle/ba-p/4443650
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-14 22:42:37 +00:00
-permalink: /azure/community/Expanding-Global-Reach-and-Enhanced-Observability-with-Oracle-DatabaseAzure
 tags:
 - Azure Monitor
 - Azure Regions

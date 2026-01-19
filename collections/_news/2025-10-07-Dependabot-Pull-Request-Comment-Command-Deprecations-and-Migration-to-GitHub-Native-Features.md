@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-06-upcoming-changes-to-github-dependabot-pull-request-comment-commands
 title: Dependabot Pull Request Comment Command Deprecations and Migration to GitHub Native Features
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-06-upcoming-changes-to-github-dependabot-pull-request-comment-commands
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-07 13:14:05 +00:00
-permalink: /devops/news/Dependabot-Pull-Request-Comment-Command-Deprecations-and-Migration-to-GitHub-Native-Features
 tags:
 - Automation
 - CLI

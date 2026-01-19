@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/TorMsn9bjLY
 title: Chat in IDE
 author: Liuba Gonta
-canonical_url: https://youtu.be/TorMsn9bjLY
 date: 2025-01-02 11:19:40 +00:00
-permalink: /github-copilot/videos/Chat-in-IDE
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Chat
 - Code

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-11-bring-your-own-key-byok-support-for-jetbrains-ides-and-xcode-in-public-preview
 title: 'Public Preview: Bring Your Own Key (BYOK) for GitHub Copilot Chat in JetBrains and Xcode'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-11-bring-your-own-key-byok-support-for-jetbrains-ides-and-xcode-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-12 00:20:55 +00:00
-permalink: /github-copilot/news/Public-Preview-Bring-Your-Own-Key-BYOK-for-GitHub-Copilot-Chat-in-JetBrains-and-Xcode
 tags:
 - Anthropic
 - API Key

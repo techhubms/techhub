@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/project-pavilion-presence-at-kubecon-na-2025/ba-p/4472904
 title: "Microsoft's Project Pavilion Presence at KubeCon NA 2025: Supporting Open Source in Cloud Native Ecosystems"
 author: lexinadolski
-canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/project-pavilion-presence-at-kubecon-na-2025/ba-p/4472904
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-25 16:42:58 +00:00
-permalink: /ai/community/Microsofts-Project-Pavilion-Presence-at-KubeCon-NA-2025-Supporting-Open-Source-in-Cloud-Native-Ecosystems
 tags:
 - AKS
 - Artifact Signing

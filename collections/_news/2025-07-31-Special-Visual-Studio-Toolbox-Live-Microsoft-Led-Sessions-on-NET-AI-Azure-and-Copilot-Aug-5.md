@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/watch-live-visual-studio-toolbox-at-vs-live-redmond-2025/
 title: 'Special Visual Studio Toolbox Live: Microsoft-Led Sessions on .NET, AI, Azure, and Copilot – Aug 5'
 author: stclarke
-canonical_url: https://devblogs.microsoft.com/visualstudio/watch-live-visual-studio-toolbox-at-vs-live-redmond-2025/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-31 17:54:07 +00:00
-permalink: /github-copilot/news/Special-Visual-Studio-Toolbox-Live-Microsoft-Led-Sessions-on-NET-AI-Azure-and-Copilot-Aug-5
 tags:
 - .NET
 - AI Apps

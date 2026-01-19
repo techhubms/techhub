@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/explore-microsoft-fabric-data-agent-azure-ai-foundry-for-agentic/ba-p/4453709
 title: Building Multi-Agent Solutions with Microsoft Fabric Data Agent and Azure AI Foundry
 author: GISV-PSA-MSFT
-canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/explore-microsoft-fabric-data-agent-azure-ai-foundry-for-agentic/ba-p/4453709
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-15 14:49:18 +00:00
-permalink: /ai/community/Building-Multi-Agent-Solutions-with-Microsoft-Fabric-Data-Agent-and-Azure-AI-Foundry
 tags:
 - Agentic AI
 - Azure AI Foundry

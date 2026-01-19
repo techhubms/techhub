@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/understanding-azure-slas-what-99-9-really-means/
 title: 'Understanding Azure SLAs: What 99.9% Really Means'
 author: Dellenny
-canonical_url: https://dellenny.com/understanding-azure-slas-what-99-9-really-means/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-12 16:11:15 +00:00
-permalink: /azure/blogs/Understanding-Azure-SLAs-What-999-Really-Means
 tags:
 - Application Architecture
 - Application Insights

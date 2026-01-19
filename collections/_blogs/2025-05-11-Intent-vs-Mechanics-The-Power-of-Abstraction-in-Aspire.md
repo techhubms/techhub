@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://medium.com/@davidfowl/intent-vs-mechanics-the-power-of-abstraction-in-aspire-d14a33aab6bb?source=rss-8163234c98f0------2
 title: 'Intent vs. Mechanics: The Power of Abstraction in Aspire'
 author: David Fowler
-canonical_url: https://medium.com/@davidfowl/intent-vs-mechanics-the-power-of-abstraction-in-aspire-d14a33aab6bb?source=rss-8163234c98f0------2
 viewing_mode: external
 feed_name: David Fowler's Blog
-feed_url: https://medium.com/feed/@davidfowl
 date: 2025-05-11 19:33:22 +00:00
-permalink: /coding/blogs/Intent-vs-Mechanics-The-Power-of-Abstraction-in-Aspire
 tags:
 - App Service
 - Aspire

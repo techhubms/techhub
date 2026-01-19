@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-platform-at-ignite-2025-new-innovations-for-all-your/ba-p/4470759
 title: Azure Application Platform Innovations Announced at Ignite 2025
 author: NagaSurendran
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-platform-at-ignite-2025-new-innovations-for-all-your/ba-p/4470759
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:13:48 +00:00
-permalink: /github-copilot/community/Azure-Application-Platform-Innovations-Announced-at-Ignite-2025
 tags:
 - .NET Modernization
 - AI Gateway

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://roadtoalm.com/2025/05/28/is-devops-dead-or-just-evolving/
 title: Is DevOps Dead? Or Just Evolving?
 author: Rene van Osnabrugge
-canonical_url: https://roadtoalm.com/2025/05/28/is-devops-dead-or-just-evolving/
 viewing_mode: external
 feed_name: René van Osnabrugge's Blog
-feed_url: https://roadtoalm.com/feed/
 date: 2025-05-28 07:48:00 +00:00
-permalink: /devops/blogs/Is-DevOps-Dead-Or-just-evolving
 tags:
 - Automation
 - CI/CD Pipelines

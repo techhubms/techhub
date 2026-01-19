@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/
 title: Microsoft Azure Launches GB300 NVL72 Supercluster for OpenAI Workloads
 author: Rani Borkar and Nidhi Chappell
-canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-09 16:00:00 +00:00
-permalink: /ai/news/Microsoft-Azure-Launches-GB300-NVL72-Supercluster-for-OpenAI-Workloads
 tags:
 - AI Datacenter
 - AI Infrastructure

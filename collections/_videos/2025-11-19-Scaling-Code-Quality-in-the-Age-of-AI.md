@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Ptach9Ouzj8
 title: Scaling Code Quality in the Age of AI
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=Ptach9Ouzj8
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-19 15:00:51 +00:00
-permalink: /github-copilot/videos/Scaling-Code-Quality-in-the-Age-of-AI
 tags:
 - AI in Development
 - AI Powered Development

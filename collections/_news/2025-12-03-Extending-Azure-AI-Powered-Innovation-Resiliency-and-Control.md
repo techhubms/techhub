@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/new-options-for-ai-powered-innovation-resiliency-and-control-with-microsoft-azure/
 title: 'Extending Azure: AI-Powered Innovation, Resiliency, and Control'
 author: Douglas Phillips
-canonical_url: https://azure.microsoft.com/en-us/blog/new-options-for-ai-powered-innovation-resiliency-and-control-with-microsoft-azure/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-03 17:00:00 +00:00
-permalink: /ai/news/Extending-Azure-AI-Powered-Innovation-Resiliency-and-Control
 tags:
 - Advanced Analytics
 - AI Innovation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mfzryw/c_inheritance_puzzle/
 title: C# Inheritance Puzzle
 author: calorap99
-canonical_url: https://www.reddit.com/r/csharp/comments/1mfzryw/c_inheritance_puzzle/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-02 20:00:17 +00:00
-permalink: /coding/community/C-Inheritance-Puzzle
 tags:
 - Base Class
 - C#

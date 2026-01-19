@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mfw2yf/complete_functional_mvp_using_copilot/
 title: Complete functional MVP using Copilot.
 author: EasyProtectedHelp
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mfw2yf/complete_functional_mvp_using_copilot/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-02 17:23:43 +00:00
-permalink: /github-copilot/community/Complete-functional-MVP-using-Copilot
 tags:
 - AI Tools
 - Anthropic Claude Opus 4

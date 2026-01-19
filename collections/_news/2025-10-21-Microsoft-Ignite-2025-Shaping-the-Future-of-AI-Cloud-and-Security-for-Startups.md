@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/startups/blog/why-startups-shouldnt-miss-microsoft-ignite-2025-a-front-row-seat-to-the-future-of-ai-innovation/
 title: 'Microsoft Ignite 2025: Shaping the Future of AI, Cloud, and Security for Startups'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/startups/blog/why-startups-shouldnt-miss-microsoft-ignite-2025-a-front-row-seat-to-the-future-of-ai-innovation/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-21 14:32:59 +00:00
-permalink: /ai/news/Microsoft-Ignite-2025-Shaping-the-Future-of-AI-Cloud-and-Security-for-Startups
 tags:
 - AI Agents
 - AI Startups

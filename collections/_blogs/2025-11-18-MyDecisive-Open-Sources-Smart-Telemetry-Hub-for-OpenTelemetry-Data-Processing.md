@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/mydecisive-open-sources-platform-for-processing-opentelemetry-data/
 title: MyDecisive Open Sources Smart Telemetry Hub for OpenTelemetry Data Processing
 author: Mike Vizard
-canonical_url: https://devops.com/mydecisive-open-sources-platform-for-processing-opentelemetry-data/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-18 14:00:32 +00:00
-permalink: /devops/blogs/MyDecisive-Open-Sources-Smart-Telemetry-Hub-for-OpenTelemetry-Data-Processing
 tags:
 - Alerting
 - Backend Analysis

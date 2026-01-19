@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-visibility-flexibility-and-cost-efficiency-with/ba-p/4456707
 title: 'Enhanced Logging for Azure Application Gateway: Resource-Specific Tables, DCR, and Cost Optimization'
 author: vnamani
-canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-visibility-flexibility-and-cost-efficiency-with/ba-p/4456707
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 21:12:08 +00:00
-permalink: /azure/community/Enhanced-Logging-for-Azure-Application-Gateway-Resource-Specific-Tables-DCR-and-Cost-Optimization
 tags:
 - Azure Application Gateway
 - Azure Monitor

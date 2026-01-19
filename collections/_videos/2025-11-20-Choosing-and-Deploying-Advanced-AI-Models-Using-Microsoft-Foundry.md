@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=fyqDLhCnYio
 title: Choosing and Deploying Advanced AI Models Using Microsoft Foundry
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=fyqDLhCnYio
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:26:01 +00:00
-permalink: /ai/videos/Choosing-and-Deploying-Advanced-AI-Models-Using-Microsoft-Foundry
 tags:
 - Advanced AI
 - AI Agents

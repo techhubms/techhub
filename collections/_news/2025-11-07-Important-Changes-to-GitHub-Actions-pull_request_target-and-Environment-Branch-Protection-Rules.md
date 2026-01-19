@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-07-actions-pull_request_target-and-environment-branch-protections-changes
 title: 'Important Changes to GitHub Actions: pull_request_target and Environment Branch Protection Rules'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-07-actions-pull_request_target-and-environment-branch-protections-changes
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-07 16:18:15 +00:00
-permalink: /devops/news/Important-Changes-to-GitHub-Actions-pull_request_target-and-Environment-Branch-Protection-Rules
 tags:
 - Actions
 - Branch Protection Rules

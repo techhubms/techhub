@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-29-github-mcp-server-now-comes-with-server-instructions-better-tools-and-more
 title: 'Enhancements to GitHub MCP Server: Server Instructions and Multifunctional Tools'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-29-github-mcp-server-now-comes-with-server-instructions-better-tools-and-more
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-29 09:07:43 +00:00
-permalink: /ai/news/Enhancements-to-GitHub-MCP-Server-Server-Instructions-and-Multifunctional-Tools
 tags:
 - AI Assisted Development
 - Code Security

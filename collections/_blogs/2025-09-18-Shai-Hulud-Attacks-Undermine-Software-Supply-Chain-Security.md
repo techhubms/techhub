@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/shai-hulud-attacks-shake-software-supply-chain-security-confidence/
 title: Shai-Hulud Attacks Undermine Software Supply Chain Security
 author: Alan Shimel
-canonical_url: https://devops.com/shai-hulud-attacks-shake-software-supply-chain-security-confidence/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-18 16:41:29 +00:00
-permalink: /devops/blogs/Shai-Hulud-Attacks-Undermine-Software-Supply-Chain-Security
 tags:
 - CI/CD
 - Credential Theft

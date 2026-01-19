@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/branding-your-sharepoint-site-for-your-organization/
 title: Branding Your SharePoint Site for Your Organization
 author: Dellenny
-canonical_url: https://dellenny.com/branding-your-sharepoint-site-for-your-organization/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-25 10:06:56 +00:00
-permalink: /coding/blogs/Branding-Your-SharePoint-Site-for-Your-Organization
 tags:
 - Accessibility
 - Branding

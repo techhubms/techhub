@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-15-github-enterprise-license-history-tracking-now-available-in-public-preview
 title: GitHub Enterprise License History Tracking Public Preview
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-15-github-enterprise-license-history-tracking-now-available-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-15 15:29:58 +00:00
-permalink: /devops/news/GitHub-Enterprise-License-History-Tracking-Public-Preview
 tags:
 - Account Management
 - Admin Tools

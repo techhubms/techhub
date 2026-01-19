@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ix0kJMVI0tk
 title: Chatting with Microsoft Foundry AI Models Using Python in VS Code
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=ix0kJMVI0tk
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-19 23:05:59 +00:00
-permalink: /ai/videos/Chatting-with-Microsoft-Foundry-AI-Models-Using-Python-in-VS-Code
 tags:
 - AI Integration
 - Azure AI

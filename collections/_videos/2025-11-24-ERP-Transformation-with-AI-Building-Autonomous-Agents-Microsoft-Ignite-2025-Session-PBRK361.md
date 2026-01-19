@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=MUC0nVbeLKM
 title: 'ERP Transformation with AI: Building Autonomous Agents (Microsoft Ignite 2025 Session PBRK361)'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=MUC0nVbeLKM
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 13:44:32 +00:00
-permalink: /ai/videos/ERP-Transformation-with-AI-Building-Autonomous-Agents-Microsoft-Ignite-2025-Session-PBRK361
 tags:
 - Adaptive Experiences
 - Agent Framework

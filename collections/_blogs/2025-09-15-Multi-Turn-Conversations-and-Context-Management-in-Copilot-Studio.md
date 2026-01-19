@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/multi-turn-conversations-and-context-management-in-copilot-studio/
 title: Multi-Turn Conversations and Context Management in Copilot Studio
 author: Dellenny
-canonical_url: https://dellenny.com/multi-turn-conversations-and-context-management-in-copilot-studio/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-15 07:34:16 +00:00
-permalink: /ai/blogs/Multi-Turn-Conversations-and-Context-Management-in-Copilot-Studio
 tags:
 - Agent Handoff
 - Best Practices

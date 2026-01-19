@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devclass.com/2025/07/14/microsoft-shovels-extra-copilot-features-into-vs-code-amid-dev-complaints-of-more-ai-bloat/
 title: Microsoft Expands Copilot Features in Visual Studio Code 1.102
 author: Tim Anderson
-canonical_url: https://devclass.com/2025/07/14/microsoft-shovels-extra-copilot-features-into-vs-code-amid-dev-complaints-of-more-ai-bloat/
 viewing_mode: external
 feed_name: DevClass
-feed_url: https://devclass.com/feed/
 date: 2025-07-14 16:58:30 +00:00
-permalink: /github-copilot/blogs/Microsoft-Expands-Copilot-Features-in-Visual-Studio-Code-1102
 tags:
 - AI Agent Safety
 - AI Bloat

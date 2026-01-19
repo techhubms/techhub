@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/write-unit-tests-without-the-guesswork.html
 title: Write Unit Tests Without the Guesswork
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/write-unit-tests-without-the-guesswork.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-04-18 00:00:00 +00:00
-permalink: /github-copilot/blogs/Write-Unit-Tests-Without-the-Guesswork
 tags:
 - AI Tools
 - Automated Testing

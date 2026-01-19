@@ -25,7 +25,8 @@ if ($IsWindows -or ($PSVersionTable.Platform -eq "Win32NT")) {
     $Yellow = "`e[33m"
     $Blue = "`e[34m"
     $Reset = "`e[0m"
-} else {
+}
+else {
     # Linux/macOS PowerShell Core
     $Red = "`e[31m"
     $Green = "`e[32m"
@@ -38,17 +39,23 @@ if ($IsWindows -or ($PSVersionTable.Platform -eq "Win32NT")) {
 function Get-Environment {
     if ($env:GITHUB_ACTIONS -eq "true") {
         return "GitHubActions"
-    } elseif ($env:CODESPACES -eq "true") {
+    }
+    elseif ($env:CODESPACES -eq "true") {
         return "GitHubCodespaces"
-    } elseif ((Test-Path "/.devcontainer.json") -or $env:REMOTE_CONTAINERS -eq "true") {
+    }
+    elseif ((Test-Path "/.devcontainer.json") -or $env:REMOTE_CONTAINERS -eq "true") {
         return "DevContainer"
-    } elseif ($IsWindows -or ($PSVersionTable.Platform -eq "Win32NT")) {
+    }
+    elseif ($IsWindows -or ($PSVersionTable.Platform -eq "Win32NT")) {
         return "Windows"
-    } elseif ($IsLinux) {
+    }
+    elseif ($IsLinux) {
         return "Linux"
-    } elseif ($IsMacOS) {
+    }
+    elseif ($IsMacOS) {
         return "MacOS"
-    } else {
+    }
+    else {
         return "Unknown"
     }
 }
@@ -128,7 +135,8 @@ function Invoke-PowerShellTests {
         foreach ($file in $testFiles) {
             Write-ColoredOutput "  - $($file.Name)" $Green
         }
-    } else {
+    }
+    else {
         Write-ColoredOutput "❌ No PowerShell test files found in $testDirectory" $Red
         Write-ColoredOutput "💡 Looking for files matching pattern: *.Tests.ps1" $Yellow
         
@@ -146,7 +154,6 @@ function Invoke-PowerShellTests {
     Write-ColoredOutput "" $Reset
     Write-ColoredOutput "Starting PowerShell test execution..." $Blue
     Write-ColoredOutput "Command: Invoke-Pester -Configuration <PesterConfiguration>" $Yellow
-    Write-ColoredOutput "================================" $Blue
     Write-ColoredOutput "" $Reset
     
     # Set working directory to project root
@@ -165,7 +172,8 @@ function Invoke-PowerShellTests {
     # Use Pester 5.x configuration syntax
     if ($TestArgs["Path"]) {
         $pesterPath = $TestArgs["Path"]
-    } else {
+    }
+    else {
         $pesterPath = $testDirectory
     }
     
@@ -185,7 +193,8 @@ function Invoke-PowerShellTests {
     # Configure output
     if ($TestArgs["Output"] -eq "Detailed") {
         $pesterConfig.Output.Verbosity = 'Detailed'
-    } else {
+    }
+    else {
         $pesterConfig.Output.Verbosity = 'Normal'
     }
     
@@ -196,7 +205,8 @@ function Invoke-PowerShellTests {
         if (Test-Path (Split-Path $coveragePath -Parent)) {
             $pesterConfig.CodeCoverage.Enabled = $true
             $pesterConfig.CodeCoverage.Path = @($coveragePath)
-        } else {
+        }
+        else {
             Write-ColoredOutput "⚠️  Code coverage path not found: $coveragePath" $Yellow
         }
     }
@@ -229,17 +239,15 @@ function Invoke-PowerShellTests {
         return 1
     }
     
-    Write-ColoredOutput "" $Reset
-    Write-ColoredOutput "================================" $Blue
-    
     # Check for successful test execution - tests pass if no failures occurred and tests ran
     if ($result -and $result.TotalCount -gt 0) {
         $passedAllTests = ($result.FailedCount -eq 0)
         
         if ($passedAllTests) {
-            Write-ColoredOutput "✅ All PowerShell tests passed! ($($result.PassedCount)/$($result.TotalCount))" $Green
             return 0
-        } else {
+        }
+        else {
+            Write-ColoredOutput "" $Reset
             Write-ColoredOutput "❌ Some PowerShell tests failed. Failed: $($result.FailedCount), Total: $($result.TotalCount)" $Red
             Write-ColoredOutput "" $Reset
             Write-ColoredOutput "To debug failed tests, you can run:" $Yellow
@@ -248,11 +256,13 @@ function Invoke-PowerShellTests {
             Write-ColoredOutput "  $($MyInvocation.MyCommand.Name) -TestFile 'tests/powershell/Get-FilteredTags.Tests.ps1'" $Yellow
             return 1
         }
-    } else {
+    }
+    else {
         Write-ColoredOutput "❌ No tests were executed or result is invalid" $Red
         if ($result) {
             Write-ColoredOutput "Result details: TotalCount=$($result.TotalCount), PassedCount=$($result.PassedCount), FailedCount=$($result.FailedCount)" $Yellow
-        } else {
+        }
+        else {
             Write-ColoredOutput "Result object is null or invalid" $Yellow
         }
         return 1
@@ -279,7 +289,8 @@ function Invoke-PowerShellTestsRunner() {
             Write-ColoredOutput "❌ Pester 5.x not found" $Red
             Write-ColoredOutput "💡 Please ensure Pester is installed via post-create.sh or CI setup" $Yellow
             exit 1
-        } else {
+        }
+        else {
             Write-ColoredOutput "✅ Pester framework already installed" $Green
         }
         
@@ -291,11 +302,13 @@ function Invoke-PowerShellTestsRunner() {
             # Make test file path relative to project root if needed
             if ([System.IO.Path]::IsPathRooted($TestFile)) {
                 $testArgs.Path = $TestFile
-            } else {
+            }
+            else {
                 $testArgs.Path = Join-Path $projectRoot $TestFile
             }
             Write-ColoredOutput "🎯 Running specific file: $($testArgs.Path)" $Yellow
-        } else {
+        }
+        else {
             # Default to tests/powershell directory
             $testArgs.Path = Join-Path $projectRoot "tests/powershell"
             Write-ColoredOutput "🧪 Running all PowerShell tests in tests/powershell/ directory" $Yellow
@@ -311,7 +324,8 @@ function Invoke-PowerShellTestsRunner() {
         if ($Detailed -or $Verbose) {
             $testArgs.Output = "Detailed"
             Write-ColoredOutput "📋 Using detailed output format" $Yellow
-        } else {
+        }
+        else {
             $testArgs.Output = "Normal"
             Write-ColoredOutput "📋 Using normal output format" $Yellow
         }
@@ -328,16 +342,10 @@ function Invoke-PowerShellTestsRunner() {
         # Run the tests
         $result = Invoke-PowerShellTests $testArgs
         
-        Write-ColoredOutput "" $Reset
-        if ($result -eq 0) {
-            Write-ColoredOutput "🎉 PowerShell test execution completed successfully!" $Green
-        } else {
-            Write-ColoredOutput "💥 PowerShell test execution completed with failures!" $Red
-        }
-        
         exit $result
         
-    } catch {
+    }
+    catch {
         Write-ColoredOutput "💥 An error occurred: $($_.Exception.Message)" $Red
         Write-ColoredOutput "Stack trace: $($_.Exception.StackTrace)" $Red
         exit 1

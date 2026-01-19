@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/marketplace-blog/ai-data-governance-made-easy-how-microsoft-purview-tackles-genai/ba-p/4435237
 title: 'AI Data Governance Made Easy: How Microsoft Purview Tackles GenAI Risks and Builds Trust'
 author: vicperdana
-canonical_url: https://techcommunity.microsoft.com/t5/marketplace-blog/ai-data-governance-made-easy-how-microsoft-purview-tackles-genai/ba-p/4435237
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-04 21:26:39 +00:00
-permalink: /ai/community/AI-Data-Governance-Made-Easy-How-Microsoft-Purview-Tackles-GenAI-Risks-and-Builds-Trust
 tags:
 - AI Security
 - Audit Trails

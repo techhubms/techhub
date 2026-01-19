@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/open-source/social-impact/scaling-for-impact-how-github-copilot-supercharges-smallholder-farmers/
 title: 'Scaling for Impact: How GitHub Copilot Accelerates One Acre Fund’s Mission for African Farmers'
 author: Paull Young
-canonical_url: https://github.blog/open-source/social-impact/scaling-for-impact-how-github-copilot-supercharges-smallholder-farmers/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-07-28 19:53:32 +00:00
-permalink: /github-copilot/news/Scaling-for-Impact-How-GitHub-Copilot-Accelerates-One-Acre-Funds-Mission-for-African-Farmers
 tags:
 - Africa
 - Agricultural Empowerment

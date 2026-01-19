@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/transform-sensitive-text-into-ai-ready-data-on-microsoft-fabric/
 title: Transform Sensitive Text into AI-Ready Data on Microsoft Fabric
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/transform-sensitive-text-into-ai-ready-data-on-microsoft-fabric/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 10:00:00 +00:00
-permalink: /ai/news/Transform-Sensitive-Text-into-AI-Ready-Data-on-Microsoft-Fabric
 tags:
 - AI Development
 - Anonymization

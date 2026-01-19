@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/on-the-issues/2025/11/05/announcing-the-2026-microsoft-techspark-fellows/
 title: Microsoft Announces 2026 TechSpark Fellows to Drive Community AI Skilling
 author: stclarke
-canonical_url: https://blogs.microsoft.com/on-the-issues/2025/11/05/announcing-the-2026-microsoft-techspark-fellows/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-05 18:14:19 +00:00
-permalink: /ai/news/Microsoft-Announces-2026-TechSpark-Fellows-to-Drive-Community-AI-Skilling
 tags:
 - AI Adoption
 - AI Skilling

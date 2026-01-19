@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/hugging-face-opens-github-copilot-chat-to-open-source-models/
 title: Hugging Face Opens GitHub Copilot Chat to Open-Source Models
 author: Tom Smith
-canonical_url: https://devops.com/hugging-face-opens-github-copilot-chat-to-open-source-models/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-22 08:45:37 +00:00
-permalink: /github-copilot/blogs/Hugging-Face-Opens-GitHub-Copilot-Chat-to-Open-Source-Models
 tags:
 - AI Assisted Development
 - AI Coding Assistants

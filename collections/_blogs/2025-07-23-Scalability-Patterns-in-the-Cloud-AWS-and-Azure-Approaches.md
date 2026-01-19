@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/scalability-patterns-in-the-cloud-aws-azure-approaches/
 title: 'Scalability Patterns in the Cloud: AWS & Azure Approaches'
 author: Dellenny
-canonical_url: https://dellenny.com/scalability-patterns-in-the-cloud-aws-azure-approaches/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-07-23 08:34:05 +00:00
-permalink: /azure/blogs/Scalability-Patterns-in-the-Cloud-AWS-and-Azure-Approaches
 tags:
 - App Service Plan
 - Application Gateway

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=S022Q6oAftE
 title: 'Building Confident Application Systems with .NET Aspire: From Dev to Deployment'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=S022Q6oAftE
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-14 14:24:36 +00:00
-permalink: /coding/videos/Building-Confident-Application-Systems-with-NET-Aspire-From-Dev-to-Deployment
 tags:
 - .NET
 - .NET Aspire

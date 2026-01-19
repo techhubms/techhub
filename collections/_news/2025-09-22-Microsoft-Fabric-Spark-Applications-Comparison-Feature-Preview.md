@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/public-preview-announcement-fabric-spark-applications-comparison/
 title: Microsoft Fabric Spark Applications Comparison Feature (Preview)
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/public-preview-announcement-fabric-spark-applications-comparison/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-22 09:30:00 +00:00
-permalink: /ml/news/Microsoft-Fabric-Spark-Applications-Comparison-Feature-Preview
 tags:
 - Apache Spark
 - Application Comparison

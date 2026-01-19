@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-02-codeql-2-22-4-adds-support-for-go-1-25-and-accuracy-improvements
 title: CodeQL 2.22.4 Adds Go 1.25 Support and Security Enhancements
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-02-codeql-2-22-4-adds-support-for-go-1-25-and-accuracy-improvements
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-03 08:41:54 +00:00
-permalink: /devops/news/CodeQL-2224-Adds-Go-125-Support-and-Security-Enhancements
 tags:
 - C++
 - Code Scanning

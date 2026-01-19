@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.arresteddevops.com/using-ai/
 title: 'AI, Ethics, and Empathy: A Deep Dive With Kat Morgan on Arrested DevOps'
 author: Arrested DevOps
-canonical_url: https://www.arresteddevops.com/using-ai/
 viewing_mode: external
 feed_name: Arrested DevOps
-feed_url: https://www.arresteddevops.com/episode/index.xml
 date: 2025-06-03 10:18:43 +00:00
-permalink: /ai/blogs/AI-Ethics-and-Empathy-A-Deep-Dive-With-Kat-Morgan-on-Arrested-DevOps
 tags:
 - AI Ethics
 - Code Hygiene

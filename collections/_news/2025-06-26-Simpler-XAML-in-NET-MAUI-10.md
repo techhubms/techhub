@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/simpler-xaml-in-dotnet-maui-10/
 title: Simpler XAML in .NET MAUI 10
 author: David Ortinau
-canonical_url: https://devblogs.microsoft.com/dotnet/simpler-xaml-in-dotnet-maui-10/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-06-26 19:15:00 +00:00
-permalink: /coding/news/Simpler-XAML-in-NET-MAUI-10
 tags:
 - .NET
 - .NET 10

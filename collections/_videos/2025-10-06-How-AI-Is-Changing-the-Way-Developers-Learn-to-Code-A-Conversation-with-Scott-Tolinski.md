@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=q7YLP6e0kXA
 title: 'How AI Is Changing the Way Developers Learn to Code: A Conversation with Scott Tolinski'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=q7YLP6e0kXA
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-06 07:00:50 +00:00
-permalink: /github-copilot/videos/How-AI-Is-Changing-the-Way-Developers-Learn-to-Code-A-Conversation-with-Scott-Tolinski
 tags:
 - AI in Education
 - AI Powered Development

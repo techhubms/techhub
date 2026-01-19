@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/the-new-dependabot-nuget-updater/
 title: 'The new Dependabot NuGet updater: 65% faster with native .NET'
 author: Jamie Magee, Brett Forsgren
-canonical_url: https://devblogs.microsoft.com/dotnet/the-new-dependabot-nuget-updater/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-08-04 15:00:00 +00:00
-permalink: /coding/news/The-new-Dependabot-NuGet-updater-65-faster-with-native-NET
 tags:
 - .NET
 - Azure Artifacts

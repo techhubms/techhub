@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/how-copilot-helps-build-the-github-platform/
 title: How Copilot Helps Build the GitHub Platform
 author: Matt Nigh
-canonical_url: https://github.blog/ai-and-ml/github-copilot/how-copilot-helps-build-the-github-platform/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-11-12 17:00:00 +00:00
-permalink: /github-copilot/news/How-Copilot-Helps-Build-the-GitHub-Platform
 tags:
 - AI & ML
 - AI Assistant

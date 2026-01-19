@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/trying-out-the-zed-editor-on-windows-for-dotnet-and-markdown/
 title: Trying out the Zed editor on Windows for .NET and Markdown
 author: Andrew Lock
-canonical_url: https://andrewlock.net/trying-out-the-zed-editor-on-windows-for-dotnet-and-markdown/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-12-09 10:00:00 +00:00
-permalink: /coding/blogs/Trying-out-the-Zed-editor-on-Windows-for-NET-and-Markdown
 tags:
 - .NET
 - C#

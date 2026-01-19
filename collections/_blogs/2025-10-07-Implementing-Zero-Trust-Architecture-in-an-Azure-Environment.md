@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/implementing-zero-trust-architecture-in-an-azure-environment/
 title: Implementing Zero Trust Architecture in an Azure Environment
 author: Dellenny
-canonical_url: https://dellenny.com/implementing-zero-trust-architecture-in-an-azure-environment/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-07 08:16:33 +00:00
-permalink: /azure/blogs/Implementing-Zero-Trust-Architecture-in-an-Azure-Environment
 tags:
 - Access Reviews
 - Azure Key Vault

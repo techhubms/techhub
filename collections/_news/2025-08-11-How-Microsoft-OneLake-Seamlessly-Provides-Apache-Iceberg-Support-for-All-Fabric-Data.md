@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/how-to-access-your-microsoft-fabric-tables-in-apache-iceberg-format/
 title: How Microsoft OneLake Seamlessly Provides Apache Iceberg Support for All Fabric Data
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/how-to-access-your-microsoft-fabric-tables-in-apache-iceberg-format/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-11 09:00:00 +00:00
-permalink: /ml/news/How-Microsoft-OneLake-Seamlessly-Provides-Apache-Iceberg-Support-for-All-Fabric-Data
 tags:
 - Apache Iceberg
 - Apache XTable

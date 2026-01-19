@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://microsoft.ai/news/towards-humanist-superintelligence/
 title: Microsoft AI’s Vision for Humanist Superintelligence
 author: stclarke
-canonical_url: https://microsoft.ai/news/towards-humanist-superintelligence/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-06 14:07:20 +00:00
-permalink: /ai/news/Microsoft-AIs-Vision-for-Humanist-Superintelligence
 tags:
 - AGI
 - AI Alignment

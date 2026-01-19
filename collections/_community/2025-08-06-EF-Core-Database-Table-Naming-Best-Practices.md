@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mje247/ef_core_table_naming/
 title: EF Core Database Table Naming Best Practices
 author: jemofcourse
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mje247/ef_core_table_naming/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-06 19:24:20 +00:00
-permalink: /coding/community/EF-Core-Database-Table-Naming-Best-Practices
 tags:
 - .NET
 - Attributes

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-preview-of-async-scaling-for-app-service-plans/ba-p/4469680
 title: Introducing Preview of Async Scaling for Azure App Service Plans
 author: apwestgarth
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-preview-of-async-scaling-for-app-service-plans/ba-p/4469680
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:12:17 +00:00
-permalink: /azure/community/Introducing-Preview-of-Async-Scaling-for-Azure-App-Service-Plans
 tags:
 - App Service Plan
 - ARM

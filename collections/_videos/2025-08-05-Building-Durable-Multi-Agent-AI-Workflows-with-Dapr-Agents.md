@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=VLRg4TKtLBc
 title: Building Durable Multi-Agent AI Workflows with Dapr Agents
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=VLRg4TKtLBc
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-05 15:01:00 +00:00
-permalink: /ai/videos/Building-Durable-Multi-Agent-AI-Workflows-with-Dapr-Agents
 tags:
 - Agentic Systems
 - AI Agents

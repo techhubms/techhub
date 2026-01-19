@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/openrowset-and-external-tables-for-fabric-sql-databases/
 title: Data Virtualization and External Tables in Fabric SQL Databases (Preview)
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/openrowset-and-external-tables-for-fabric-sql-databases/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-24 10:00:00 +00:00
-permalink: /ai/news/Data-Virtualization-and-External-Tables-in-Fabric-SQL-Databases-Preview
 tags:
 - ABFS
 - Azure Data Lake Gen2

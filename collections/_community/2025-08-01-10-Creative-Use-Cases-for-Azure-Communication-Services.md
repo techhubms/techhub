@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-communication-services/10-things-you-might-not-know-you-could-do-with-azure/ba-p/4438775
 title: 10 Creative Use Cases for Azure Communication Services
 author: seankeegan
-canonical_url: https://techcommunity.microsoft.com/t5/azure-communication-services/10-things-you-might-not-know-you-could-do-with-azure/ba-p/4438775
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-01 13:06:56 +00:00
-permalink: /ai/community/10-Creative-Use-Cases-for-Azure-Communication-Services
 tags:
 - Azure Communication Services
 - Azure OpenAI

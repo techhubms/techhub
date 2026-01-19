@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/introducing-cross-resource-metrics-and-alerts-support-for-azure/ba-p/4459193
 title: Introducing Cross Resource Metrics and Alerts Support for Azure Storage
 author: dafalkne
-canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/introducing-cross-resource-metrics-and-alerts-support-for-azure/ba-p/4459193
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-06 12:38:16 +00:00
-permalink: /azure/community/Introducing-Cross-Resource-Metrics-and-Alerts-Support-for-Azure-Storage
 tags:
 - Action Groups
 - Azure Monitor

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=p-0ikIK3-l8
 title: Modernizing User Environment Management in Entra ID with ProfileUnity
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=p-0ikIK3-l8
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 07:57:38 +00:00
-permalink: /azure/videos/Modernizing-User-Environment-Management-in-Entra-ID-with-ProfileUnity
 tags:
 - Azure Blob Storage
 - Cloud Workspace

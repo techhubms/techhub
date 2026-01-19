@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/python-ia-resumen-y-recursos/ba-p/4465152
 title: 'Recapitulación de la Serie Python + IA: Técnicas, Modelos y Recursos'
 author: gwyneth-penas
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/python-ia-resumen-y-recursos/ba-p/4465152
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-03 14:44:57 +00:00
-permalink: /github-copilot/community/Recapitulacion-de-la-Serie-Python-IA-Tecnicas-Modelos-y-Recursos
 tags:
 - Agentes De IA
 - Aplicaciones Multimodales

@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/asia/2025/07/15/integrating-interactive-and-collaborative-learning-solutions-with-minecraft-education-a-fun-approach-to-learn-coding-and-ai/
 title: Integrating interactivity with Minecraft Education - A fun approach to learning coding and AI
 author: stclarke
-canonical_url: https://news.microsoft.com/source/asia/2025/07/15/integrating-interactive-and-collaborative-learning-solutions-with-minecraft-education-a-fun-approach-to-learn-coding-and-ai/
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-16 14:14:45 +00:00
-permalink: /ai/news/Integrating-interactivity-with-Minecraft-Education-A-fun-approach-to-learning-coding-and-AI
 viewing_mode: external
 tags:
 - Classroom Tools

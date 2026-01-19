@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-04-openais-gpt-5-1-codex-max-is-now-in-public-preview-for-github-copilot
 title: OpenAI’s GPT-5.1-Codex-Max Public Preview Release for GitHub Copilot
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-04-openais-gpt-5-1-codex-max-is-now-in-public-preview-for-github-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-04 16:47:03 +00:00
-permalink: /github-copilot/news/OpenAIs-GPT-51-Codex-Max-Public-Preview-Release-for-GitHub-Copilot
 tags:
 - AI Model Release
 - API Key Management

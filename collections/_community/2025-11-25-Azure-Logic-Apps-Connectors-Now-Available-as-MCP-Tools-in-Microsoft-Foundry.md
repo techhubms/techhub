@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/%EF%B8%8Fpublic-preview-azure-logic-apps-connectors-as-mcp-tools-in/ba-p/4473062
 title: Azure Logic Apps Connectors Now Available as MCP Tools in Microsoft Foundry
 author: DivSwa
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/%EF%B8%8Fpublic-preview-azure-logic-apps-connectors-as-mcp-tools-in/ba-p/4473062
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-25 21:19:33 +00:00
-permalink: /ai/community/Azure-Logic-Apps-Connectors-Now-Available-as-MCP-Tools-in-Microsoft-Foundry
 tags:
 - Agentic Apps
 - API Integration

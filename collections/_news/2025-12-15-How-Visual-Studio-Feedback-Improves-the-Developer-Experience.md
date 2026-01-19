@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/behind-the-scenes-of-the-visual-studio-feedback-system/
 title: How Visual Studio Feedback Improves the Developer Experience
 author: Mads Kristensen
-canonical_url: https://devblogs.microsoft.com/visualstudio/behind-the-scenes-of-the-visual-studio-feedback-system/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-15 15:00:33 +00:00
-permalink: /coding/news/How-Visual-Studio-Feedback-Improves-the-Developer-Experience
 tags:
 - Accessibility
 - Azure DevOps

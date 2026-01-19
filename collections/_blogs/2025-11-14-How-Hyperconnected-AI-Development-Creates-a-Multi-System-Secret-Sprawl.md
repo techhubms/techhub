@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/how-hyperconnected-ai-development-creates-a-multi-system-secret-sprawl/
 title: How Hyperconnected AI Development Creates a Multi-System Secret Sprawl
 author: Guillaume Valadon
-canonical_url: https://devops.com/how-hyperconnected-ai-development-creates-a-multi-system-secret-sprawl/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-14 10:17:05 +00:00
-permalink: /ai/blogs/How-Hyperconnected-AI-Development-Creates-a-Multi-System-Secret-Sprawl
 tags:
 - AI Development Security
 - AI Secret Leaks

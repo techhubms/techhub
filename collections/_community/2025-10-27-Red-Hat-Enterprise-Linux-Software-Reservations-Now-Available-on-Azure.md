@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/red-hat-enterprise-linux-software-reservations-now-available/ba-p/4463214
 title: Red Hat Enterprise Linux Software Reservations Now Available on Azure
 author: abbottkarl
-canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/red-hat-enterprise-linux-software-reservations-now-available/ba-p/4463214
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-27 16:00:00 +00:00
-permalink: /azure/community/Red-Hat-Enterprise-Linux-Software-Reservations-Now-Available-on-Azure
 tags:
 - Azure Reservations
 - Billing

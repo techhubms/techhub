@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=RsCz57M2SMc
 title: Explore Microsoft Agent 365 Security and Governance Capabilities
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=RsCz57M2SMc
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 06:28:51 +00:00
-permalink: /ai/videos/Explore-Microsoft-Agent-365-Security-and-Governance-Capabilities
 tags:
 - AI Agents
 - Audit Trail

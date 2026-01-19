@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/cycode-previews-ability-to-identify-ai-tools-and-platforms-used-to-write-code/
 title: Cycode Unveils AI Tool and Platform Detection for Application Security Teams
 author: Mike Vizard
-canonical_url: https://devops.com/cycode-previews-ability-to-identify-ai-tools-and-platforms-used-to-write-code/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-21 21:31:46 +00:00
-permalink: /ai/blogs/Cycode-Unveils-AI-Tool-and-Platform-Detection-for-Application-Security-Teams
 tags:
 - AI Bill Of Materials
 - AI Code Generation

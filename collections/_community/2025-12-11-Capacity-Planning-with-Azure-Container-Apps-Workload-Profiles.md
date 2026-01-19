@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/capacity-planning-with-azure-container-apps-workload-profiles/ba-p/4477085
 title: Capacity Planning with Azure Container Apps Workload Profiles
 author: nesubram
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/capacity-planning-with-azure-container-apps-workload-profiles/ba-p/4477085
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-11 05:23:42 +00:00
-permalink: /azure/community/Capacity-Planning-with-Azure-Container-Apps-Workload-Profiles
 tags:
 - Autoscaling
 - Azure Container Apps

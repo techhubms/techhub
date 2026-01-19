@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/bringing-trust-and-governance-to-ai-driven-devops/?utm_source=rss&utm_medium=rss&utm_campaign=bringing-trust-and-governance-to-ai-driven-devops
 title: Bringing Trust and Governance to AI-Driven DevOps
 author: Alan Shimel
-canonical_url: https://devops.com/bringing-trust-and-governance-to-ai-driven-devops/?utm_source=rss&utm_medium=rss&utm_campaign=bringing-trust-and-governance-to-ai-driven-devops
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-12 14:37:28 +00:00
-permalink: /ai/blogs/Bringing-Trust-and-Governance-to-AI-Driven-DevOps
 tags:
 - AI Agents
 - AI Driven DevOps

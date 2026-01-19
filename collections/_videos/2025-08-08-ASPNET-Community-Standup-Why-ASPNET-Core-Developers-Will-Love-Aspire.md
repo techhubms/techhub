@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=aHqw6mPpJSc
 title: 'ASP.NET Community Standup: Why ASP.NET Core Developers Will Love Aspire'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=aHqw6mPpJSc
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-08 23:12:24 +00:00
-permalink: /coding/videos/ASPNET-Community-Standup-Why-ASPNET-Core-Developers-Will-Love-Aspire
 tags:
 - .NET
 - Application Deployment

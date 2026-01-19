@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://khalidabuhakmeh.com/the-curious-case-of-dotnet-concurrentdictionary-and-closures
 title: 'Avoiding Closures in .NET ConcurrentDictionary: The Efficient GetOrAdd Overload'
 author: Khalid Abuhakmeh
-canonical_url: https://khalidabuhakmeh.com/the-curious-case-of-dotnet-concurrentdictionary-and-closures
 viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
-feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2025-02-18 00:00:00 +00:00
-permalink: /coding/blogs/Avoiding-Closures-in-NET-ConcurrentDictionary-The-Efficient-GetOrAdd-Overload
 tags:
 - .NET
 - Allocations

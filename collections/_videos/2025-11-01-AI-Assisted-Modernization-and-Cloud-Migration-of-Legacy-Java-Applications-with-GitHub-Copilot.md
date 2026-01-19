@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=9gmp_ADmRuE
 title: AI-Assisted Modernization and Cloud Migration of Legacy Java Applications with GitHub Copilot
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=9gmp_ADmRuE
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-01 00:00:14 +00:00
-permalink: /github-copilot/videos/AI-Assisted-Modernization-and-Cloud-Migration-of-Legacy-Java-Applications-with-GitHub-Copilot
 tags:
 - AI Assisted Modernization
 - AIAssisted

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/gpt-5-for-microsoft-developers
 title: 'GPT-5 Integrations for Microsoft Developers: GitHub Copilot, Azure AI, and VS Code'
 author: Jon Galloway, Pamela Fox, Dan Wahlin
-canonical_url: https://devblogs.microsoft.com/blog/gpt-5-for-microsoft-developers
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-08-14 17:00:24 +00:00
-permalink: /github-copilot/news/GPT-5-Integrations-for-Microsoft-Developers-GitHub-Copilot-Azure-AI-and-VS-Code
 tags:
 - AI Toolkit
 - API Integration

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/designing-and-creating-agentic-ai-in-azure/
 title: Designing and Creating Agentic AI Systems on Azure
 author: Dellenny
-canonical_url: https://dellenny.com/designing-and-creating-agentic-ai-in-azure/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-07-22 10:53:51 +00:00
-permalink: /ai/blogs/Designing-and-Creating-Agentic-AI-Systems-on-Azure
 tags:
 - Agentic AI
 - AI Architecture

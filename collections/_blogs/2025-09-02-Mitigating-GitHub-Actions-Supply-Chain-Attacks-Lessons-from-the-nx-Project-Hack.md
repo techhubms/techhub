@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://jessehouwing.net/github-actions-learnings-from-the-recent-nx-hack/
 title: 'Mitigating GitHub Actions Supply Chain Attacks: Lessons from the nx Project Hack'
 author: Jesse Houwing
-canonical_url: https://jessehouwing.net/github-actions-learnings-from-the-recent-nx-hack/
 viewing_mode: external
 feed_name: Jesse Houwing's Blog
-feed_url: https://jessehouwing.net/rss/
 date: 2025-09-02 21:05:46 +00:00
-permalink: /devops/blogs/Mitigating-GitHub-Actions-Supply-Chain-Attacks-Lessons-from-the-nx-Project-Hack
 tags:
 - Advanced Security Code Scanning
 - Branch Policies

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/QCHxTtHmtkU
 title: Microsoft Agent Framework WorkFlows Explained
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/shorts/QCHxTtHmtkU
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-22 22:55:56 +00:00
-permalink: /ai/videos/Microsoft-Agent-Framework-WorkFlows-Explained
 tags:
 - Agent Framework Demo
 - Agent Framework Workflows

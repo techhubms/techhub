@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-our-free-livestream-series-on-building-agents-in-python/ba-p/4485731
 title: 'Python + Agents: Livestream Series on Building AI Agents with Microsoft Agent Framework'
 author: Pamela_Fox
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-our-free-livestream-series-on-building-agents-in-python/ba-p/4485731
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-15 08:00:00 +00:00
-permalink: /ai/community/Python-Agents-Livestream-Series-on-Building-AI-Agents-with-Microsoft-Agent-Framework
 tags:
 - Agentic Workflows
 - AI Agents

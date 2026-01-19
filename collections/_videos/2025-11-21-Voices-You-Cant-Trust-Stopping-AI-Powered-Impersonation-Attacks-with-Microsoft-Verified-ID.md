@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=QHBc5hh4gKk
 title: "Voices You Can't Trust: Stopping AI-Powered Impersonation Attacks with Microsoft Verified ID"
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=QHBc5hh4gKk
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:53:42 +00:00
-permalink: /ai/videos/Voices-You-Cant-Trust-Stopping-AI-Powered-Impersonation-Attacks-with-Microsoft-Verified-ID
 tags:
 - AI Deepfakes
 - Decentralized Identity

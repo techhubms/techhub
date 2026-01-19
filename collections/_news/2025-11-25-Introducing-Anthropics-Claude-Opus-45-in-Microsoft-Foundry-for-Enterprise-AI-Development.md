@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/introducing-claude-opus-4-5-in-microsoft-foundry/
 title: Introducing Anthropic’s Claude Opus 4.5 in Microsoft Foundry for Enterprise AI Development
 author: stclarke
-canonical_url: https://azure.microsoft.com/en-us/blog/introducing-claude-opus-4-5-in-microsoft-foundry/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-25 16:10:35 +00:00
-permalink: /github-copilot/news/Introducing-Anthropics-Claude-Opus-45-in-Microsoft-Foundry-for-Enterprise-AI-Development
 tags:
 - Agentic Coding
 - AI Models

@@ -1,10 +1,8 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/simplified-code-refinement-and-debugging-with-github-copilot-chat/
 title: GitHub Copilot Debugging experience in Visual Studio
 author: Mark Wilson-Thomas and Mark Downie
-canonical_url: https://devblogs.microsoft.com/visualstudio/simplified-code-refinement-and-debugging-with-github-copilot-chat/
 viewing_mode: external
-permalink: /github-copilot/blogs/blogs/2024-08-22-GitHub-Copilot-Debugging-experience-in-Visual-Studio
 tags:
 - AI Assistance
 - Debugging

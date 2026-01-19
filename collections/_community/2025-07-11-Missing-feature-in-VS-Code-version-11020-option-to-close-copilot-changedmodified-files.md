@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1lwvfgs/missing_feature_in_vs_code_version_11020_option/
 title: Missing feature in VS Code version 1.102.0 - option to close copilot changed/modified files
 author: iammultiman
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1lwvfgs/missing_feature_in_vs_code_version_11020_option/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-11 02:30:28 +00:00
-permalink: /github-copilot/community/Missing-feature-in-VS-Code-version-11020-option-to-close-copilot-changedmodified-files
 tags:
 - Development Tools
 - Extension Updates

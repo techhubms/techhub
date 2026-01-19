@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/research/blog/magentic-marketplace-an-open-source-simulation-environment-for-studying-agentic-markets/
 title: 'Magentic Marketplace: Open-Source Simulation for Agentic Markets Research'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/research/blog/magentic-marketplace-an-open-source-simulation-environment-for-studying-agentic-markets/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-05 19:04:07 +00:00
-permalink: /ai/news/Magentic-Marketplace-Open-Source-Simulation-for-Agentic-Markets-Research
 tags:
 - Agent Based Simulation
 - Agentic Economy

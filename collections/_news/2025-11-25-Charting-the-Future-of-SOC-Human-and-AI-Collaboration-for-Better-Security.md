@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/blog/microsoftsecurityexperts/charting-the-future-of-soc-human-and-ai-collaboration-for-better-security/4470688
 title: 'Charting the Future of SOC: Human and AI Collaboration for Better Security'
 author: stclarke
-canonical_url: https://techcommunity.microsoft.com/blog/microsoftsecurityexperts/charting-the-future-of-soc-human-and-ai-collaboration-for-better-security/4470688
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-25 18:53:09 +00:00
-permalink: /ai/news/Charting-the-Future-of-SOC-Human-and-AI-Collaboration-for-Better-Security
 tags:
 - AI Engineering
 - Autonomous AI Agents

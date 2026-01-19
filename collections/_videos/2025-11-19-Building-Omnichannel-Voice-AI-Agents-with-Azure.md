@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/DYSBNLmtIfc
 title: Building Omnichannel Voice AI Agents with Azure
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/shorts/DYSBNLmtIfc
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-19 23:25:02 +00:00
-permalink: /ai/videos/Building-Omnichannel-Voice-AI-Agents-with-Azure
 tags:
 - AI Workflows
 - Azure Communication Services

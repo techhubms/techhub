@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://sswart.github.io/post/tdd-python-copilot/
 title: TDD with GitHub Copilot in Python
 author: Jesse Swart Coding Blog
-canonical_url: https://sswart.github.io/post/tdd-python-copilot/
 viewing_mode: external
 feed_name: Jesse Swart's Blog
-feed_url: https://blog.jesseswart.nl/index.xml
 date: 2024-06-24 14:06:14 +00:00
-permalink: /github-copilot/blogs/TDD-with-GitHub-Copilot-in-Python
 tags:
 - Personal Finance
 - Python

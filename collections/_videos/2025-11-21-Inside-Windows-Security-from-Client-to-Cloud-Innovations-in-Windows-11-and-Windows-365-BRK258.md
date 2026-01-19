@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=TY0uDOnFzPY
 title: 'Inside Windows Security from Client to Cloud: Innovations in Windows 11 and Windows 365 | BRK258'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=TY0uDOnFzPY
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:15:06 +00:00
-permalink: /security/videos/Inside-Windows-Security-from-Client-to-Cloud-Innovations-in-Windows-11-and-Windows-365-BRK258
 tags:
 - Clipboard Protection
 - Cloud PC

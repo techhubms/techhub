@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-to-migrate-legacy-applications-using-github-copilot/
 title: How to Migrate Legacy Applications Using GitHub Copilot
 author: Dellenny
-canonical_url: https://dellenny.com/how-to-migrate-legacy-applications-using-github-copilot/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-02 09:26:06 +00:00
-permalink: /github-copilot/blogs/How-to-Migrate-Legacy-Applications-Using-GitHub-Copilot
 tags:
 - .NET Modernization
 - AI Pair Programming

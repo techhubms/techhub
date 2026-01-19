@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=3swFQjBZDUA
 title: Model Context Protocol (MCP) for .NET Developers
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=3swFQjBZDUA
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:18 +00:00
-permalink: /ai/videos/Model-Context-Protocol-MCP-for-NET-Developers
 tags:
 - .NET
 - .NET 10

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=yy7M_O_z_wQ
 title: 'Microsoft Fabric IQ: Transforming Unified Data into Enterprise Intelligence'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=yy7M_O_z_wQ
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 07:28:24 +00:00
-permalink: /ai/videos/Microsoft-Fabric-IQ-Transforming-Unified-Data-into-Enterprise-Intelligence
 tags:
 - Agentic AI
 - AI Collaboration

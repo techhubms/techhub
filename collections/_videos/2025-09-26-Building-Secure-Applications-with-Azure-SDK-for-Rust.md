@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=2a94mcuzGQE
 title: Building Secure Applications with Azure SDK for Rust
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=2a94mcuzGQE
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-26 22:29:01 +00:00
-permalink: /coding/videos/Building-Secure-Applications-with-Azure-SDK-for-Rust
 tags:
 - Azure Key Vault
 - Azure SDK

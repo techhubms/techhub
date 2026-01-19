@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/all-things-azure/reinventing-legacy-app-modernization-crowdbotics-ai-native-platform-on-azure/
 title: Reinventing Legacy App Modernization with Crowdbotics’ AI-Native Platform on Azure
 author: Govind Kamtamneni
-canonical_url: https://devblogs.microsoft.com/all-things-azure/reinventing-legacy-app-modernization-crowdbotics-ai-native-platform-on-azure/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-05-06 09:15:41 +00:00
-permalink: /ai/news/Reinventing-Legacy-App-Modernization-with-Crowdbotics-AI-Native-Platform-on-Azure
 tags:
 - Agents
 - AI Apps

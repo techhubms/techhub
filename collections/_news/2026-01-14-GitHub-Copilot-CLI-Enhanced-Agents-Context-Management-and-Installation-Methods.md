@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2026-01-14-github-copilot-cli-enhanced-agents-context-management-and-new-ways-to-install
 title: 'GitHub Copilot CLI: Enhanced Agents, Context Management, and Installation Methods'
 author: Allison
-canonical_url: https://github.blog/changelog/2026-01-14-github-copilot-cli-enhanced-agents-context-management-and-new-ways-to-install
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2026-01-14 20:21:16 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-CLI-Enhanced-Agents-Context-Management-and-Installation-Methods
 tags:
 - AI Agents
 - Automation

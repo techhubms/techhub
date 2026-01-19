@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-dev-test-benefit-explained/
 title: Understanding the Azure Dev/Test Benefit for Visual Studio Subscribers
 author: Jim Harrer
-canonical_url: https://devblogs.microsoft.com/visualstudio/visual-studio-dev-test-benefit-explained/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-10-06 15:52:00 +00:00
-permalink: /azure/news/Understanding-the-Azure-DevTest-Benefit-for-Visual-Studio-Subscribers
 tags:
 - Azure Dev/Test Benefit
 - Cloud Cost Optimization

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-ii-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469576
 title: Elastic APM Setup with OTEL Sidecar Extension on Azure App Service for Linux
 author: TulikaC
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-ii-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469576
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-13 08:44:41 +00:00
-permalink: /coding/community/Elastic-APM-Setup-with-OTEL-Sidecar-Extension-on-Azure-App-Service-for-Linux
 tags:
 - .NET
 - APM Server

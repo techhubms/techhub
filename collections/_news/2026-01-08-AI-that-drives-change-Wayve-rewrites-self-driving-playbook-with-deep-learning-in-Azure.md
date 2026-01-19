@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/emea/features/ai-that-drives-change-wayve-rewrites-self-driving-playbook-with-deep-learning-in-azure/
 title: 'AI that drives change: Wayve rewrites self-driving playbook with deep learning in Azure'
 author: stclarke
-canonical_url: https://news.microsoft.com/source/emea/features/ai-that-drives-change-wayve-rewrites-self-driving-playbook-with-deep-learning-in-azure/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-08 14:36:51 +00:00
-permalink: /ai/news/AI-that-drives-change-Wayve-rewrites-self-driving-playbook-with-deep-learning-in-Azure
 tags:
 - Autonomous Vehicles
 - Azure AI

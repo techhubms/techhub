@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/updates/v1_96
 title: Visual Studio Code November 2024 (v1.96) Release Notes
 author: Visual Studio Code Team
-canonical_url: https://code.visualstudio.com/updates/v1_96
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2024-12-11 17:00:00 +00:00
-permalink: /github-copilot/news/Visual-Studio-Code-November-2024-v196-Release-Notes
 tags:
 - Accessibility
 - AI Assisted Development

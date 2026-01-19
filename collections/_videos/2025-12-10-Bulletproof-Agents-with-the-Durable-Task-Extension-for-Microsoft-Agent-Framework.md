@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=_UhRNW6HL6Y
 title: Bulletproof Agents with the Durable Task Extension for Microsoft Agent Framework
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=_UhRNW6HL6Y
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-10 00:00:52 +00:00
-permalink: /ai/videos/Bulletproof-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework
 tags:
 - .NET
 - Agentic Workflows

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/education/blog/2025/10/build-secure-future-ready-learning-experiences-with-windows-11/
 title: 'Securing Modern Education with Windows 11: AI, Intune, and Learning Zone'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/education/blog/2025/10/build-secure-future-ready-learning-experiences-with-windows-11/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-01 17:21:17 +00:00
-permalink: /ai/news/Securing-Modern-Education-with-Windows-11-AI-Intune-and-Learning-Zone
 tags:
 - Accessibility Tools
 - AI Powered Learning

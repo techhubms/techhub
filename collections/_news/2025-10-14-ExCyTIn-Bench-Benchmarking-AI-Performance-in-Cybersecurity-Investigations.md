@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/10/14/microsoft-raises-the-bar-a-smarter-way-to-measure-ai-for-cybersecurity/
 title: 'ExCyTIn-Bench: Benchmarking AI Performance in Cybersecurity Investigations'
 author: Anand Mudgerikar
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/14/microsoft-raises-the-bar-a-smarter-way-to-measure-ai-for-cybersecurity/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-14 16:00:00 +00:00
-permalink: /ai/news/ExCyTIn-Bench-Benchmarking-AI-Performance-in-Cybersecurity-Investigations
 tags:
 - AI Benchmarking
 - AI Security

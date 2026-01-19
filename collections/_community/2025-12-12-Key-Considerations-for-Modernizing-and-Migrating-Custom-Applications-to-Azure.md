@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/key-considerations-for-modernizing-and-migrating-custom/ba-p/4476580
 title: Key Considerations for Modernizing and Migrating Custom Applications to Azure
 author: srhulsus
-canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/key-considerations-for-modernizing-and-migrating-custom/ba-p/4476580
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-12 18:04:26 +00:00
-permalink: /github-copilot/community/Key-Considerations-for-Modernizing-and-Migrating-Custom-Applications-to-Azure
 tags:
 - AKS
 - App Modernization

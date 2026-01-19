@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-03-delegate-ai-controls-management-to-members-of-your-enterprise
 title: Delegating AI and Copilot Controls in GitHub Enterprises
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-03-delegate-ai-controls-management-to-members-of-your-enterprise
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-03 20:55:24 +00:00
-permalink: /github-copilot/news/Delegating-AI-and-Copilot-Controls-in-GitHub-Enterprises
 tags:
 - Agent Control Plane
 - AI Governance

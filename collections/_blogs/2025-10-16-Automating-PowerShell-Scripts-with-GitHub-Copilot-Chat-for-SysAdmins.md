@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/copilot-for-sysadmins-automating-powershell-script-generation-from-plain-english-prompts/
 title: Automating PowerShell Scripts with GitHub Copilot Chat for SysAdmins
 author: Dellenny
-canonical_url: https://dellenny.com/copilot-for-sysadmins-automating-powershell-script-generation-from-plain-english-prompts/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-16 06:12:17 +00:00
-permalink: /github-copilot/blogs/Automating-PowerShell-Scripts-with-GitHub-Copilot-Chat-for-SysAdmins
 tags:
 - Automation
 - Azure AD

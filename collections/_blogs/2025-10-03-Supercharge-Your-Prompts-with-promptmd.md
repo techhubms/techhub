@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/supercharge-your-prompts-with-prompt-md.html
 title: Supercharge Your Prompts with .prompt.md
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/supercharge-your-prompts-with-prompt-md.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-10-03 00:00:00 +00:00
-permalink: /github-copilot/blogs/Supercharge-Your-Prompts-with-promptmd
 tags:
 - .prompt.md
 - API Documentation

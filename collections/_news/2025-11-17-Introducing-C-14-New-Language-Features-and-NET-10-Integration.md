@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/introducing-csharp-14/
 title: 'Introducing C# 14: New Language Features and .NET 10 Integration'
 author: Bill Wagner
-canonical_url: https://devblogs.microsoft.com/dotnet/introducing-csharp-14/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-11-17 18:05:00 +00:00
-permalink: /coding/news/Introducing-C-14-New-Language-Features-and-NET-10-Integration
 tags:
 - .NET
 - .NET 10

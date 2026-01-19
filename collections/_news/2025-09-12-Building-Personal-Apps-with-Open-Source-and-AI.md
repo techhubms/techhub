@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/open-source/maintainers/building-personal-apps-with-open-source-and-ai/
 title: Building Personal Apps with Open Source and AI
 author: Kedasha Kerr
-canonical_url: https://github.blog/open-source/maintainers/building-personal-apps-with-open-source-and-ai/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-09-12 16:00:00 +00:00
-permalink: /github-copilot/news/Building-Personal-Apps-with-Open-Source-and-AI
 tags:
 - Automation
 - Community Collaboration

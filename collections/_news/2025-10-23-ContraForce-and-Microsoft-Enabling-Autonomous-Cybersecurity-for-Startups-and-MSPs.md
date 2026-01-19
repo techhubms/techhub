@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/startups/blog/contraforce-democratizing-cybersecurity-for-the-frontline/
 title: 'ContraForce and Microsoft: Enabling Autonomous Cybersecurity for Startups and MSPs'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/startups/blog/contraforce-democratizing-cybersecurity-for-the-frontline/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-23 13:46:00 +00:00
-permalink: /ai/news/ContraForce-and-Microsoft-Enabling-Autonomous-Cybersecurity-for-Startups-and-MSPs
 tags:
 - AI Agents
 - Automation

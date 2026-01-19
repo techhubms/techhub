@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/introducing-custom-agents-for-dotnet-developers-csharp-expert-winforms-expert/
 title: 'Custom Agents for .NET Developers: C# Expert and WinForms Expert'
 author: Wendy Breiding (SHE/HER)
-canonical_url: https://devblogs.microsoft.com/dotnet/introducing-custom-agents-for-dotnet-developers-csharp-expert-winforms-expert/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-10-28 22:05:00 +00:00
-permalink: /github-copilot/news/Custom-Agents-for-NET-Developers-C-Expert-and-WinForms-Expert
 tags:
 - .NET
 - Agents

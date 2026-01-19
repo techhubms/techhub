@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-connected-cache-for/mcc-phantom-install/m-p/4444201#M108
 title: Troubleshooting MCC Phantom Install Issues on Windows Server 2022 with WSL
 author: jjmehren
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-connected-cache-for/mcc-phantom-install/m-p/4444201#M108
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-15 13:49:08 +00:00
-permalink: /azure/community/Troubleshooting-MCC-Phantom-Install-Issues-on-Windows-Server-2022-with-WSL
 tags:
 - Azure Container Registry
 - Container Deployment

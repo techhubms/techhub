@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-mcp-works-in-microsofts-ai-ecosystem/
 title: How MCP Works in Microsoft’s AI Ecosystem
 author: Dellenny
-canonical_url: https://dellenny.com/how-mcp-works-in-microsofts-ai-ecosystem/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-15 07:41:15 +00:00
-permalink: /ai/blogs/How-MCP-Works-in-Microsofts-AI-Ecosystem
 tags:
 - Agentic Web
 - AI Agent

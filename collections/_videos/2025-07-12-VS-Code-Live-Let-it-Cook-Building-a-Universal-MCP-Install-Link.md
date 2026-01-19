@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=JybSsLEJ-hg
 title: 'VS Code Live - Let it Cook: Building a Universal MCP Install Link'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=JybSsLEJ-hg
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-07-12 04:27:01 +00:00
-permalink: /coding/videos/VS-Code-Live-Let-it-Cook-Building-a-Universal-MCP-Install-Link
 tags:
 - Burke Holland
 - Centralized Installation

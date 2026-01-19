@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/report-microsoft-aws-and-google-atop-software-development-platform-heap/
 title: Microsoft, AWS, and Google Lead as Top Software Development Platforms, Signal Report Finds
 author: Mike Vizard
-canonical_url: https://devops.com/report-microsoft-aws-and-google-atop-software-development-platform-heap/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-30 11:19:09 +00:00
-permalink: /devops/blogs/Microsoft-AWS-and-Google-Lead-as-Top-Software-Development-Platforms-Signal-Report-Finds
 tags:
 - AI
 - AI in Development

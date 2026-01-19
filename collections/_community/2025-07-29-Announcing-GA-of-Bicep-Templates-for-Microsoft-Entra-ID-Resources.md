@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-ga-of-bicep-templates-support-for-microsoft-entra-id/ba-p/4437163
 title: Announcing GA of Bicep Templates for Microsoft Entra ID Resources
 author: Dan_Kershaw
-canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-ga-of-bicep-templates-support-for-microsoft-entra-id/ba-p/4437163
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-07-29 15:00:00 +00:00
-permalink: /coding/community/Announcing-GA-of-Bicep-Templates-for-Microsoft-Entra-ID-Resources
 tags:
 - Azure Resource Manager
 - Bicep

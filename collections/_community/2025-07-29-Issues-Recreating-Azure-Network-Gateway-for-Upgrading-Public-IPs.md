@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mcaooo/azure_network_gateway_issue_recreating/
 title: Issues Recreating Azure Network Gateway for Upgrading Public IPs
 author: Dave_PW
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mcaooo/azure_network_gateway_issue_recreating/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-29 12:55:30 +00:00
-permalink: /azure/community/Issues-Recreating-Azure-Network-Gateway-for-Upgrading-Public-IPs
 tags:
 - Azure Network Gateway
 - Azure Networking

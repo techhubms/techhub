@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-sql-pool-insights-in-microsoft-fabric-data-warehouse/
 title: 'SQL Pool Insights: Monitoring Microsoft Fabric Data Warehouse Performance'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-sql-pool-insights-in-microsoft-fabric-data-warehouse/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 08:45:00 +00:00
-permalink: /ml/news/SQL-Pool-Insights-Monitoring-Microsoft-Fabric-Data-Warehouse-Performance
 tags:
 - Analytics Workloads
 - Capacity Planning

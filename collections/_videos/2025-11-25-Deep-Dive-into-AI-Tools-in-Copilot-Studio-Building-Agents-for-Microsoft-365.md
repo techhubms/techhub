@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=BLQ8XZ5PXF4
 title: 'Deep Dive into AI Tools in Copilot Studio: Building Agents for Microsoft 365'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=BLQ8XZ5PXF4
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 15:48:25 +00:00
-permalink: /ai/videos/Deep-Dive-into-AI-Tools-in-Copilot-Studio-Building-Agents-for-Microsoft-365
 tags:
 - Agent Demo
 - AI Agents

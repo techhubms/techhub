@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/getting-started-with-microsoft-playwright-testing-features-and-how-to-use-it/
 title: Getting Started with Microsoft Playwright Testing Features and How to Use It
 author: Dellenny
-canonical_url: https://dellenny.com/getting-started-with-microsoft-playwright-testing-features-and-how-to-use-it/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-25 08:31:29 +00:00
-permalink: /coding/blogs/Getting-Started-with-Microsoft-Playwright-Testing-Features-and-How-to-Use-It
 tags:
 - .NET
 - Application Insights

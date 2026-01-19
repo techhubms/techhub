@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=dlgYCpQI_lU
 title: How to Improve Code Health with GitHub Code Quality
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=dlgYCpQI_lU
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-04 15:01:18 +00:00
-permalink: /devops/videos/How-to-Improve-Code-Health-with-GitHub-Code-Quality
 tags:
 - Automated Fixes
 - Code Health

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/quantum%e2%80%91ready-cloud-devops-getting-ready-for-quantum-computing-integration/
 title: 'Quantum-Ready Cloud DevOps: Preparing for Quantum Computing Integration'
 author: Joydip Kanjilal
-canonical_url: https://devops.com/quantum%e2%80%91ready-cloud-devops-getting-ready-for-quantum-computing-integration/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-29 11:19:48 +00:00
-permalink: /ai/blogs/Quantum-Ready-Cloud-DevOps-Preparing-for-Quantum-Computing-Integration
 tags:
 - AI And Quantum
 - Azure Pipelines

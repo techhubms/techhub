@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/updates/v1_99
 title: Visual Studio Code March 2025 (v1.99) Release Notes
 author: Visual Studio Code Team
-canonical_url: https://code.visualstudio.com/updates/v1_99
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-04-03 17:00:00 +00:00
-permalink: /ai/news/Visual-Studio-Code-March-2025-v199-Release-Notes
 tags:
 - Accessibility
 - Agent Mode

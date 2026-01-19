@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=C-Rn-8MbXtA
 title: ASP.NET Core Server & APIs Roadmap Discussion for .NET 11
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=C-Rn-8MbXtA
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-19 17:34:57 +00:00
-permalink: /coding/videos/ASPNET-Core-Server-and-APIs-Roadmap-Discussion-for-NET-11
 tags:
 - .NET
 - .NET 11

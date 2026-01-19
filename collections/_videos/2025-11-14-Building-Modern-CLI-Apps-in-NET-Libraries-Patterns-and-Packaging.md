@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Z6e5ZP9y3_8
 title: 'Building Modern CLI Apps in .NET: Libraries, Patterns, and Packaging'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=Z6e5ZP9y3_8
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:21:02 +00:00
-permalink: /coding/videos/Building-Modern-CLI-Apps-in-NET-Libraries-Patterns-and-Packaging
 tags:
 - .NET
 - .NET 10

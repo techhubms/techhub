@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-15-anthropics-claude-haiku-4-5-is-in-public-preview-for-github-copilot
 title: Claude Haiku 4.5 Now Available in GitHub Copilot
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-15-anthropics-claude-haiku-4-5-is-in-public-preview-for-github-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-15 16:40:53 +00:00
-permalink: /github-copilot/news/Claude-Haiku-45-Now-Available-in-GitHub-Copilot
 tags:
 - AI Integration
 - AI Model

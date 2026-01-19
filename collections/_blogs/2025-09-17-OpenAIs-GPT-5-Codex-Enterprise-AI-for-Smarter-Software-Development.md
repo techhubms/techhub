@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/openais-gpt-5-codex-a-smarter-approach-to-enterprise-development/
 title: 'OpenAI’s GPT-5-Codex: Enterprise AI for Smarter Software Development'
 author: Tom Smith
-canonical_url: https://devops.com/openais-gpt-5-codex-a-smarter-approach-to-enterprise-development/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-17 07:26:00 +00:00
-permalink: /ai/blogs/OpenAIs-GPT-5-Codex-Enterprise-AI-for-Smarter-Software-Development
 tags:
 - AI Code Review
 - AI in DevOps

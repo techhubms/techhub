@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=OZYgy2XTuR4
 title: Accelerate Cloud Adoption with Expert Guidance
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=OZYgy2XTuR4
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-12 08:00:36 +00:00
-permalink: /azure/videos/Accelerate-Cloud-Adoption-with-Expert-Guidance
 tags:
 - Azure Adoption
 - Azure Essentials

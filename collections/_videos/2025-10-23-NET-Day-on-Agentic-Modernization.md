@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=JLCl5lh-tw8
 title: .NET Day on Agentic Modernization
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=JLCl5lh-tw8
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-23 03:55:17 +00:00
-permalink: /github-copilot/videos/NET-Day-on-Agentic-Modernization
 tags:
 - .NET
 - Agentic Applications

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/debugging-with-the-ai-powered-ienumerable-visualizer/
 title: Debugging with the AI-powered IEnumerable Visualizer in Visual Studio 2022
 author: Junyu Wang
-canonical_url: https://devblogs.microsoft.com/visualstudio/debugging-with-the-ai-powered-ienumerable-visualizer/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-03-26 15:00:31 +00:00
-permalink: /github-copilot/news/Debugging-with-the-AI-powered-IEnumerable-Visualizer-in-Visual-Studio-2022
 tags:
 - C#
 - Code Visualization

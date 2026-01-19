@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/open-source/git/how-the-github-cli-can-now-enable-triangular-workflows/
 title: How the GitHub CLI Enables Triangular Workflows for Advanced Git Collaboration
 author: Tyler McGoffin
-canonical_url: https://github.blog/open-source/git/how-the-github-cli-can-now-enable-triangular-workflows/
 viewing_mode: external
 feed_name: GitHub Engineering Blog
-feed_url: https://github.blog/engineering/feed/
 date: 2025-04-25 16:00:37 +00:00
-permalink: /devops/news/How-the-GitHub-CLI-Enables-Triangular-Workflows-for-Advanced-Git-Collaboration
 tags:
 - Branch Management
 - CLI Tools

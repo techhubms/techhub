@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=oCNqsEXKnoA
 title: 'Running GenAI in Containers: Dynamic Sessions with Azure Container Apps and LangChain4j'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=oCNqsEXKnoA
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-05 17:01:32 +00:00
-permalink: /ai/videos/Running-GenAI-in-Containers-Dynamic-Sessions-with-Azure-Container-Apps-and-LangChain4j
 tags:
 - AI Integration
 - AI Workloads

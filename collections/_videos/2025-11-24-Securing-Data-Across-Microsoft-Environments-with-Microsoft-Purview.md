@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=QhnYj80YdrE
 title: Securing Data Across Microsoft Environments with Microsoft Purview
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=QhnYj80YdrE
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 05:11:39 +00:00
-permalink: /azure/videos/Securing-Data-Across-Microsoft-Environments-with-Microsoft-Purview
 tags:
 - Agent Driven Security
 - Auto Labeling

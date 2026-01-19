@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=38ZPYhN5N8E
 title: 'Agentic AI for Creatives: Microsoft Foundry and Data Solutions at Ignite'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=38ZPYhN5N8E
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 12:10:15 +00:00
-permalink: /ai/videos/Agentic-AI-for-Creatives-Microsoft-Foundry-and-Data-Solutions-at-Ignite
 tags:
 - Agentic AI
 - Azure Cosmos DB

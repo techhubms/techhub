@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/introducing-new-tools-and-features-in-the-responses-api-in-azure-ai-foundry/
 title: Introducing New Tools and Features in the Responses API in Azure AI Foundry
 author: Rafal Rutyna
-canonical_url: https://devblogs.microsoft.com/foundry/introducing-new-tools-and-features-in-the-responses-api-in-azure-ai-foundry/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-05-27 21:51:00 +00:00
-permalink: /ai/news/Introducing-New-Tools-and-Features-in-the-Responses-API-in-Azure-AI-Foundry
 tags:
 - AI Development
 - Assistants API

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/chainguard-adds-curated-repository-to-secure-javascript-libraries/
 title: Chainguard Launches Curated JavaScript Libraries to Enhance Software Supply Chain Security
 author: Mike Vizard
-canonical_url: https://devops.com/chainguard-adds-curated-repository-to-secure-javascript-libraries/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-25 13:59:32 +00:00
-permalink: /devops/blogs/Chainguard-Launches-Curated-JavaScript-Libraries-to-Enhance-Software-Supply-Chain-Security
 tags:
 - Application Security
 - Chainguard

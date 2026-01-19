@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/all-things-azure/tutorial-videos-setting-up-github-copilot-for-your-company/
 title: 'Tutorial Videos: Setting up GitHub Copilot for Your Company'
 author: Eldrick Wega
-canonical_url: https://devblogs.microsoft.com/all-things-azure/tutorial-videos-setting-up-github-copilot-for-your-company/
 viewing_mode: external
 feed_name: Microsoft All Things Azure Blog
-feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-11-14 11:40:23 +00:00
-permalink: /github-copilot/news/Tutorial-Videos-Setting-up-GitHub-Copilot-for-Your-Company
 tags:
 - Agentic Platform
 - All Things Azure

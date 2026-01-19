@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/
 title: Microsoft Recognized as Leader in 2025 Gartner Magic Quadrant for Distributed Hybrid Infrastructure
 author: Dean Paron
-canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-22 16:00:00 +00:00
-permalink: /azure/news/Microsoft-Recognized-as-Leader-in-2025-Gartner-Magic-Quadrant-for-Distributed-Hybrid-Infrastructure
 tags:
 - AKS
 - Azure Arc

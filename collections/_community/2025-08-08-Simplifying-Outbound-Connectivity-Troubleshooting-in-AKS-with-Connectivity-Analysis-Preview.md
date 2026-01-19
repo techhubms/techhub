@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/simplifying-outbound-connectivity-troubleshooting-in-aks-with/ba-p/4441200
 title: Simplifying Outbound Connectivity Troubleshooting in AKS with Connectivity Analysis (Preview)
 author: juliayin
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/simplifying-outbound-connectivity-troubleshooting-in-aks-with/ba-p/4441200
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-08 18:14:42 +00:00
-permalink: /azure/community/Simplifying-Outbound-Connectivity-Troubleshooting-in-AKS-with-Connectivity-Analysis-Preview
 tags:
 - ACR
 - AKS

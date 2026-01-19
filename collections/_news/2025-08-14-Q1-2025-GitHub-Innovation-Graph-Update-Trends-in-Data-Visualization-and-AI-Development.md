@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/news-insights/policy-news-and-insights/q1-2025-innovation-graph-update-bar-chart-races-data-visualization-on-the-rise-and-key-research/
 title: 'Q1 2025 GitHub Innovation Graph Update: Trends in Data Visualization and AI Development'
 author: Kevin Xu
-canonical_url: https://github.blog/news-insights/policy-news-and-insights/q1-2025-innovation-graph-update-bar-chart-races-data-visualization-on-the-rise-and-key-research/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-08-14 16:00:00 +00:00
-permalink: /ai/news/Q1-2025-GitHub-Innovation-Graph-Update-Trends-in-Data-Visualization-and-AI-Development
 tags:
 - AI Development
 - AI Index Report

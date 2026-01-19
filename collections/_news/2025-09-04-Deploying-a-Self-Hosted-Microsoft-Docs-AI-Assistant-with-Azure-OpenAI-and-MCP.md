@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/all-things-azure/build-your-own-microsoft-docs-ai-assistant-with-azure-container-apps-and-azure-openai/
 title: Deploying a Self-Hosted Microsoft Docs AI Assistant with Azure OpenAI and MCP
 author: Ricardo Macedo Martins
-canonical_url: https://devblogs.microsoft.com/all-things-azure/build-your-own-microsoft-docs-ai-assistant-with-azure-container-apps-and-azure-openai/
 viewing_mode: external
 feed_name: Microsoft All Things Azure Blog
-feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-09-04 22:09:45 +00:00
-permalink: /ai/news/Deploying-a-Self-Hosted-Microsoft-Docs-AI-Assistant-with-Azure-OpenAI-and-MCP
 tags:
 - AI Apps
 - All Things Azure

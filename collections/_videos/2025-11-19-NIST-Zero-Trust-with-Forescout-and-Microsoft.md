@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=eKVJ-Rw8R0I
 title: NIST Zero Trust with Forescout and Microsoft
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=eKVJ-Rw8R0I
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 13:08:33 +00:00
-permalink: /security/videos/NIST-Zero-Trust-with-Forescout-and-Microsoft
 tags:
 - Attack Surface
 - Device Compliance

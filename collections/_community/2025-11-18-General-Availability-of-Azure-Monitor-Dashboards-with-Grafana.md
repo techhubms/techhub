@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-general-availability-azure-monitor-dashboards-with/ba-p/4468972
 title: General Availability of Azure Monitor Dashboards with Grafana
 author: KayodePrince
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-general-availability-azure-monitor-dashboards-with/ba-p/4468972
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:56:24 +00:00
-permalink: /azure/community/General-Availability-of-Azure-Monitor-Dashboards-with-Grafana
 tags:
 - AKS
 - Application Insights

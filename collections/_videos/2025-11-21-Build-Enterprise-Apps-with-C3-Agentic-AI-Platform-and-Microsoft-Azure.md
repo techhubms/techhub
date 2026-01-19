@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=xRApEkWYsq4
 title: Build Enterprise Apps with C3 Agentic AI Platform and Microsoft Azure
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=xRApEkWYsq4
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 12:49:52 +00:00
-permalink: /ai/videos/Build-Enterprise-Apps-with-C3-Agentic-AI-Platform-and-Microsoft-Azure
 tags:
 - AI Agents
 - App Deployment

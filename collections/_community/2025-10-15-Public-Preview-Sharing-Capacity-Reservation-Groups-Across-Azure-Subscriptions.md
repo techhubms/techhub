@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-for-sharing-capacity-reservation-groups-now/ba-p/4461834
 title: 'Public Preview: Sharing Capacity Reservation Groups Across Azure Subscriptions'
 author: Tarannum91
-canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-for-sharing-capacity-reservation-groups-now/ba-p/4461834
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-15 22:47:39 +00:00
-permalink: /azure/community/Public-Preview-Sharing-Capacity-Reservation-Groups-Across-Azure-Subscriptions
 tags:
 - Azure API
 - Azure Capacity Reservation Groups

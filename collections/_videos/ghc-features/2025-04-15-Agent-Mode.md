@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/JtJ3_ATBsTY
 title: Agent Mode
 author: Fokko Veegens
-canonical_url: https://youtu.be/JtJ3_ATBsTY
 date: 2025-04-15 14:14:07 +00:00
-permalink: /github-copilot/videos/Agent-Mode
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Agent Mode
 section_names:

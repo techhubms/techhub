@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/improving-operational-efficiency-with-operations-agents-in-real-time-intelligence/
 title: Improving Operational Efficiency with Operations Agents in Fabric Real-Time Intelligence
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/improving-operational-efficiency-with-operations-agents-in-real-time-intelligence/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-20 08:00:00 +00:00
-permalink: /ai/news/Improving-Operational-Efficiency-with-Operations-Agents-in-Fabric-Real-Time-Intelligence
 tags:
 - Agent Configuration
 - Agentic Systems

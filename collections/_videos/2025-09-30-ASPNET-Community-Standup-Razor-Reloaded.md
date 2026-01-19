@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=2r2SxVa70JQ
 title: ASP.NET Community Standup - Razor Reloaded
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=2r2SxVa70JQ
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-09-30 19:33:50 +00:00
-permalink: /coding/videos/ASPNET-Community-Standup-Razor-Reloaded
 tags:
 - .NET
 - .NET Developer

@@ -1,10 +1,8 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/playlist?list=PLXVVwOM8uv2y0Yo6H8qu9giWWWlZLzu8K
 title: 'GitHub Copilot video series: Levels of Enlightenment'
 author: Rob Bos
-canonical_url: https://www.youtube.com/playlist?list=PLXVVwOM8uv2y0Yo6H8qu9giWWWlZLzu8K
 viewing_mode: external
-permalink: /github-copilot/blogs/blogs/2024-06-01-GitHub-Copilot-video-series-Levels-of-Enlightenment
 tags:
 - Programming
 - Software Development

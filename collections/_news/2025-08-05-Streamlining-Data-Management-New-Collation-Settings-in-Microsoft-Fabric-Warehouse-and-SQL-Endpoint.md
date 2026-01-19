@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/streamlining-data-management-with-collation-settings-in-microsoft-fabric-warehouse-sql-analytics-endpoint/
 title: 'Streamlining Data Management: New Collation Settings in Microsoft Fabric Warehouse and SQL Endpoint'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/streamlining-data-management-with-collation-settings-in-microsoft-fabric-warehouse-sql-analytics-endpoint/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-05 10:30:00 +00:00
-permalink: /ml/news/Streamlining-Data-Management-New-Collation-Settings-in-Microsoft-Fabric-Warehouse-and-SQL-Endpoint
 tags:
 - Case Insensitive
 - Case Sensitive

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mh9139/navigation_property_best_practice/
 title: Navigation Property Best Practices in C#
 author: drld21
-canonical_url: https://www.reddit.com/r/csharp/comments/1mh9139/navigation_property_best_practice/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-04 09:43:05 +00:00
-permalink: /ml/community/Navigation-Property-Best-Practices-in-C
 tags:
 - .NET
 - Best Practices

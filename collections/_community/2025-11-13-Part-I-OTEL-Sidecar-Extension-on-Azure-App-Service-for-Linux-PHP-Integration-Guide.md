@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-i-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469514
 title: 'Part I: OTEL Sidecar Extension on Azure App Service for Linux – PHP Integration Guide'
 author: TulikaC
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-i-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469514
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-13 06:28:27 +00:00
-permalink: /coding/community/Part-I-OTEL-Sidecar-Extension-on-Azure-App-Service-for-Linux-PHP-Integration-Guide
 tags:
 - Application Insights
 - Azure App Service

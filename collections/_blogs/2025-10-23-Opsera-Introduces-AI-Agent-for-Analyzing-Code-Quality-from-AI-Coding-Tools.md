@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/opsera-adds-ai-agent-capable-of-analyzing-quality-of-code-generated-by-ai-tools/
 title: Opsera Introduces AI Agent for Analyzing Code Quality from AI Coding Tools
 author: Mike Vizard
-canonical_url: https://devops.com/opsera-adds-ai-agent-capable-of-analyzing-quality-of-code-generated-by-ai-tools/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-23 19:12:39 +00:00
-permalink: /ai/blogs/Opsera-Introduces-AI-Agent-for-Analyzing-Code-Quality-from-AI-Coding-Tools
 tags:
 - Agentic AI
 - AI Adoption

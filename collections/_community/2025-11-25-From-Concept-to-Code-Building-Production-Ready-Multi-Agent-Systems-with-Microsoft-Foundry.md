@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-concept-to-code-building-production-ready-multi-agent/ba-p/4472752
 title: 'From Concept to Code: Building Production-Ready Multi-Agent Systems with Microsoft Foundry'
 author: kinfey
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-concept-to-code-building-production-ready-multi-agent/ba-p/4472752
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-25 08:00:00 +00:00
-permalink: /ai/community/From-Concept-to-Code-Building-Production-Ready-Multi-Agent-Systems-with-Microsoft-Foundry
 tags:
 - Agent Framework
 - Agent V2 SDK

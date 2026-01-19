@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://zure.com/blog/securing-azure-networks-with-network-security-perimeter
 title: Securing Azure Networks with Network Security Perimeter
 author: jere.haavisto@zure.com (Jere Haavisto)
-canonical_url: https://zure.com/blog/securing-azure-networks-with-network-security-perimeter
 viewing_mode: external
 feed_name: Zure Data & AI Blog
-feed_url: https://zure.com/blog/rss.xml
 date: 2025-04-10 04:40:00 +00:00
-permalink: /azure/blogs/Securing-Azure-Networks-with-Network-Security-Perimeter
 tags:
 - Azure Key Vault
 - Azure Network Security Perimeter

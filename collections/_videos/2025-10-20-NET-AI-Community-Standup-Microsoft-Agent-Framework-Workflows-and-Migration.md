@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=2F8qDdqzClg
 title: '.NET AI Community Standup: Microsoft Agent Framework Workflows & Migration'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=2F8qDdqzClg
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-20 15:47:52 +00:00
-permalink: /ai/videos/NET-AI-Community-Standup-Microsoft-Agent-Framework-Workflows-and-Migration
 tags:
 - .NET
 - Agent Based Workflows

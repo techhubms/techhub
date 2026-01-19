@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=riTyEDJdpEw
 title: Eirini Kalliamvakou Discusses Copilot and AI Trends in the 2025 Octoverse Report
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=riTyEDJdpEw
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-12 15:01:50 +00:00
-permalink: /github-copilot/videos/Eirini-Kalliamvakou-Discusses-Copilot-and-AI-Trends-in-the-2025-Octoverse-Report
 tags:
 - AI Sentiment
 - AI Trends

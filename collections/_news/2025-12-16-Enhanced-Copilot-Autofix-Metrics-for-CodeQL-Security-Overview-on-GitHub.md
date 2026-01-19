@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-16-more-accurate-copilot-autofix-usage-metrics-on-security-overview
 title: Enhanced Copilot Autofix Metrics for CodeQL Security Overview on GitHub
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-16-more-accurate-copilot-autofix-usage-metrics-on-security-overview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-16 10:45:33 +00:00
-permalink: /github-copilot/news/Enhanced-Copilot-Autofix-Metrics-for-CodeQL-Security-Overview-on-GitHub
 tags:
 - Application Security
 - Code Scanning

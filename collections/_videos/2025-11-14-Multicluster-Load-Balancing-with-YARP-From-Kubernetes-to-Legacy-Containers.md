@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=VIroNVbY0qI
 title: 'Multicluster Load Balancing with YARP: From Kubernetes to Legacy Containers'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=VIroNVbY0qI
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:20:50 +00:00
-permalink: /coding/videos/Multicluster-Load-Balancing-with-YARP-From-Kubernetes-to-Legacy-Containers
 tags:
 - .NET
 - Architecture

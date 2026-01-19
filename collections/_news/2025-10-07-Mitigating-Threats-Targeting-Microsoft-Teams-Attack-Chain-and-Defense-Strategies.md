@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/10/07/disrupting-threats-targeting-microsoft-teams/
 title: 'Mitigating Threats Targeting Microsoft Teams: Attack Chain and Defense Strategies'
 author: Microsoft Threat Intelligence
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/07/disrupting-threats-targeting-microsoft-teams/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-07 17:00:00 +00:00
-permalink: /azure/news/Mitigating-Threats-Targeting-Microsoft-Teams-Attack-Chain-and-Defense-Strategies
 tags:
 - Attack Chain
 - Attack Surface Reduction

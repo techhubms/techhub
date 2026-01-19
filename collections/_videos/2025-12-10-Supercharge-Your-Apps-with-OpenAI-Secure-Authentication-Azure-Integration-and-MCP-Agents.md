@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=sCv_noSKIBw
 title: 'Supercharge Your Apps with OpenAI: Secure Authentication, Azure Integration, and MCP Agents'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=sCv_noSKIBw
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-10 23:42:25 +00:00
-permalink: /ai/videos/Supercharge-Your-Apps-with-OpenAI-Secure-Authentication-Azure-Integration-and-MCP-Agents
 tags:
 - .NET
 - Agentic Apps

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/what-vibe-coding-means-for-the-enterprise-fast-code-real-considerations/?utm_source=rss&utm_medium=rss&utm_campaign=what-vibe-coding-means-for-the-enterprise-fast-code-real-considerations
 title: 'What Vibe Coding Means for the Enterprise: Fast Code, Real Considerations'
 author: Tom Howlett
-canonical_url: https://devops.com/what-vibe-coding-means-for-the-enterprise-fast-code-real-considerations/?utm_source=rss&utm_medium=rss&utm_campaign=what-vibe-coding-means-for-the-enterprise-fast-code-real-considerations
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-07 08:15:41 +00:00
-permalink: /ai/blogs/What-Vibe-Coding-Means-for-the-Enterprise-Fast-Code-Real-Considerations
 tags:
 - Accountability
 - AI Coding Assistants

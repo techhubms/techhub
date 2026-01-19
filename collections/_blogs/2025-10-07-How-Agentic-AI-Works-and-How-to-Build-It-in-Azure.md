@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-agentic-ai-works-and-how-to-build-it-in-azure/
 title: How Agentic AI Works and How to Build It in Azure
 author: Dellenny
-canonical_url: https://dellenny.com/how-agentic-ai-works-and-how-to-build-it-in-azure/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-07 09:45:12 +00:00
-permalink: /ai/blogs/How-Agentic-AI-Works-and-How-to-Build-It-in-Azure
 tags:
 - Agentic AI
 - AI Architecture

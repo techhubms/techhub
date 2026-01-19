@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/microsoft-testing-platform-azure-retry/
 title: Azure DevOps Gains Full Support for Microsoft.Testing.Platform
 author: Youssef Fahmy
-canonical_url: https://devblogs.microsoft.com/dotnet/microsoft-testing-platform-azure-retry/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-12-16 18:05:00 +00:00
-permalink: /coding/news/Azure-DevOps-Gains-Full-Support-for-MicrosoftTestingPlatform
 tags:
 - .NET
 - .NET 10 SDK

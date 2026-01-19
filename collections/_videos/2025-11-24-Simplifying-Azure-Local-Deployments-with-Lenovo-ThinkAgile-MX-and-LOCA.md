@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=fMP9WV6_YLs
 title: Simplifying Azure Local Deployments with Lenovo ThinkAgile MX and LOCA
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=fMP9WV6_YLs
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 14:28:09 +00:00
-permalink: /azure/videos/Simplifying-Azure-Local-Deployments-with-Lenovo-ThinkAgile-MX-and-LOCA
 tags:
 - Automation
 - Azure Deployment

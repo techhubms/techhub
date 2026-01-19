@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-01-improved-notifications-in-security-campaigns
 title: Improved Notifications in GitHub Security Campaigns
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-01-improved-notifications-in-security-campaigns
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-02 09:29:30 +00:00
-permalink: /github-copilot/news/Improved-Notifications-in-GitHub-Security-Campaigns
 tags:
 - Application Security
 - Code Security

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/advancing-full-stack-observability-with-azure-monitor-at-ignite/ba-p/4469041
 title: Advancing Full-Stack Observability with Azure Monitor at Ignite 2025
 author: Shiva_Sivakumar
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/advancing-full-stack-observability-with-azure-monitor-at-ignite/ba-p/4469041
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:52 +00:00
-permalink: /ai/community/Advancing-Full-Stack-Observability-with-Azure-Monitor-at-Ignite-2025
 tags:
 - Agentic Workflows
 - AI Observability

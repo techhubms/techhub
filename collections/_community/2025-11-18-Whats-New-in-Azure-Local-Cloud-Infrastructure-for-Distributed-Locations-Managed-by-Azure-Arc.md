@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/what-s-new-in-azure-local-cloud-infrastructure-for-distributed/ba-p/4469773
 title: 'What’s New in Azure Local: Cloud Infrastructure for Distributed Locations Managed by Azure Arc'
 author: meenagowdar
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/what-s-new-in-azure-local-cloud-infrastructure-for-distributed/ba-p/4469773
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:05:17 +00:00
-permalink: /azure/community/Whats-New-in-Azure-Local-Cloud-Infrastructure-for-Distributed-Locations-Managed-by-Azure-Arc
 tags:
 - AKS
 - Azure Arc

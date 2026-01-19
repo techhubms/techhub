@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/upcoming-agentic-azure-logic-apps-workshops/ba-p/4484526
 title: 'Upcoming Free Workshops: Agentic Azure Logic Apps & Copilot Studio Integration'
 author: KentWeareMSFT
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/upcoming-agentic-azure-logic-apps-workshops/ba-p/4484526
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-09 21:52:15 +00:00
-permalink: /ai/community/Upcoming-Free-Workshops-Agentic-Azure-Logic-Apps-and-Copilot-Studio-Integration
 tags:
 - Agentic Workflows
 - Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-11-deprecated-microsoft-models-in-github-models
 title: Microsoft Phi-3 Model Deprecation and Transition in GitHub Models
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-11-deprecated-microsoft-models-in-github-models
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-11 20:06:02 +00:00
-permalink: /ai/news/Microsoft-Phi-3-Model-Deprecation-and-Transition-in-GitHub-Models
 tags:
 - AI Models
 - Cloud AI

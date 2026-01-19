@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=DBaFFYyUSl8
 title: 'Model Context Protocol: From Concept to Linux Foundation Agentic AI'
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=DBaFFYyUSl8
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-09 21:00:03 +00:00
-permalink: /ai/videos/Model-Context-Protocol-From-Concept-to-Linux-Foundation-Agentic-AI
 tags:
 - Agentic AI Foundation
 - AI Agents

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/survey-sees-ai-coding-creating-need-for-more-software-engineers/
 title: How AI Coding Is Shaping Software Engineering and DevOps Roles
 author: Mike Vizard
-canonical_url: https://devops.com/survey-sees-ai-coding-creating-need-for-more-software-engineers/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-14 12:33:41 +00:00
-permalink: /ai/blogs/How-AI-Coding-Is-Shaping-Software-Engineering-and-DevOps-Roles
 tags:
 - Agentic AI
 - AI Compliance Challenges

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-february-2025/
 title: 'Azure Developer CLI (azd) – February 2025: New Features, Bug Fixes, and AI Templates'
 author: Kristen Womack
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-february-2025/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-02-07 20:43:29 +00:00
-permalink: /ai/news/Azure-Developer-CLI-azd-February-2025-New-Features-Bug-Fixes-and-AI-Templates
 tags:
 - .NET
 - AI App Deployment

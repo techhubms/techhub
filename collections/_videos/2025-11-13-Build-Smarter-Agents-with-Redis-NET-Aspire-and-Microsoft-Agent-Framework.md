@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Pz3A3CCgEac
 title: Build Smarter Agents with Redis, .NET Aspire, and Microsoft Agent Framework
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=Pz3A3CCgEac
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:46 +00:00
-permalink: /ai/videos/Build-Smarter-Agents-with-Redis-NET-Aspire-and-Microsoft-Agent-Framework
 tags:
 - .NET
 - .NET 10

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-azure-d192-sizes-in-the-azure/ba-p/4451427
 title: Azure D192 Sizes Now Available in Dsv6 and Ddsv6-Series VMs
 author: sarah-zhou
-canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-azure-d192-sizes-in-the-azure/ba-p/4451427
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-08 23:49:26 +00:00
-permalink: /azure/community/Azure-D192-Sizes-Now-Available-in-Dsv6-and-Ddsv6-Series-VMs
 tags:
 - Azure Boost
 - Azure Ddsv6 Series

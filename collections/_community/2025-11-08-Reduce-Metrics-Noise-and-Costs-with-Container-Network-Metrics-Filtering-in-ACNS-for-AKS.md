@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/cut-the-noise-cost-with-container-network-metrics-filtering-in/ba-p/4468221
 title: Reduce Metrics Noise and Costs with Container Network Metrics Filtering in ACNS for AKS
 author: KhushbuP
-canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/cut-the-noise-cost-with-container-network-metrics-filtering-in/ba-p/4468221
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-08 04:16:56 +00:00
-permalink: /azure/community/Reduce-Metrics-Noise-and-Costs-with-Container-Network-Metrics-Filtering-in-ACNS-for-AKS
 tags:
 - ACNS
 - AKS

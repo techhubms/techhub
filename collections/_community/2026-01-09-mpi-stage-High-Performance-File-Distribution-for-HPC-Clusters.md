@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/mpi-stage-high-performance-file-distribution-for-hpc-clusters/ba-p/4484366
 title: 'mpi-stage: High-Performance File Distribution for HPC Clusters'
 author: pauledwards
-canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/mpi-stage-high-performance-file-distribution-for-hpc-clusters/ba-p/4484366
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-09 09:49:38 +00:00
-permalink: /azure/community/mpi-stage-High-Performance-File-Distribution-for-HPC-Clusters
 tags:
 - Azure CycleCloud
 - Blobfuse2

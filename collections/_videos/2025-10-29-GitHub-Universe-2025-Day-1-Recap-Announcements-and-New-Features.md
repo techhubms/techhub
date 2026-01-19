@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=nSwj2Ma0pnk
 title: 'GitHub Universe 2025 Day 1 Recap: Announcements and New Features'
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=nSwj2Ma0pnk
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-29 05:47:21 +00:00
-permalink: /devops/videos/GitHub-Universe-2025-Day-1-Recap-Announcements-and-New-Features
 tags:
 - Agent HQ
 - Anthropic

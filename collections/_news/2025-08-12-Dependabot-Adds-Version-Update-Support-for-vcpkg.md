@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-12-dependabot-version-updates-now-support-vcpkg
 title: Dependabot Adds Version Update Support for vcpkg
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-12-dependabot-version-updates-now-support-vcpkg
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-12 16:22:46 +00:00
-permalink: /coding/news/Dependabot-Adds-Version-Update-Support-for-vcpkg
 tags:
 - C++
 - Continuous Integration

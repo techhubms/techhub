@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=T58uRBMc9M8
 title: Enhancing Developer Workflows with MCP Servers and GitHub Copilot in VS Code
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=T58uRBMc9M8
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-10 21:30:06 +00:00
-permalink: /github-copilot/videos/Enhancing-Developer-Workflows-with-MCP-Servers-and-GitHub-Copilot-in-VS-Code
 tags:
 - Agent Mode
 - AI Coding

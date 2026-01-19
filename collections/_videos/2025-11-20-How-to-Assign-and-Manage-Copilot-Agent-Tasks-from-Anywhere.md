@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=__RLpdxThEE
 title: How to Assign and Manage Copilot Agent Tasks from Anywhere
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=__RLpdxThEE
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-20 15:01:12 +00:00
-permalink: /github-copilot/videos/How-to-Assign-and-Manage-Copilot-Agent-Tasks-from-Anywhere
 tags:
 - AI Tools
 - Autonomous Agents

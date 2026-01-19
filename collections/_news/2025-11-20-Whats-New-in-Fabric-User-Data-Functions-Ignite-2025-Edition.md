@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-user-data-functions-ignite-2025-edition/
 title: 'What’s New in Fabric User Data Functions: Ignite 2025 Edition'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-user-data-functions-ignite-2025-edition/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-20 11:00:00 +00:00
-permalink: /ml/news/Whats-New-in-Fabric-User-Data-Functions-Ignite-2025-Edition
 tags:
 - API Integration
 - Azure Key Vault

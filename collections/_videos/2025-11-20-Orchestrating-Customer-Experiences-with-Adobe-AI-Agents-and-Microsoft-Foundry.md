@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=bKnGc6g2NTA
 title: Orchestrating Customer Experiences with Adobe AI Agents and Microsoft Foundry
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=bKnGc6g2NTA
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 16:02:21 +00:00
-permalink: /ai/videos/Orchestrating-Customer-Experiences-with-Adobe-AI-Agents-and-Microsoft-Foundry
 tags:
 - Adobe
 - AI Agents

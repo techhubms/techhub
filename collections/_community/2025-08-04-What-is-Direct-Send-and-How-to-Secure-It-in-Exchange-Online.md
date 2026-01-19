@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/exchange-team-blog/what-is-direct-send-and-how-to-secure-it/ba-p/4439865
 title: What is Direct Send and How to Secure It in Exchange Online
 author: The_Exchange_Team
-canonical_url: https://techcommunity.microsoft.com/t5/exchange-team-blog/what-is-direct-send-and-how-to-secure-it/ba-p/4439865
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-04 16:06:17 +00:00
-permalink: /azure/community/What-is-Direct-Send-and-How-to-Secure-It-in-Exchange-Online
 tags:
 - Advanced Hunting
 - Defender For Office 365

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/azure-for-beginners-how-to-launch-your-first-cloud-project-in-30-minutes/
 title: 'Azure for Beginners: How to Launch Your First Cloud Project in 30 Minutes'
 author: Dellenny
-canonical_url: https://dellenny.com/azure-for-beginners-how-to-launch-your-first-cloud-project-in-30-minutes/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-17 10:07:13 +00:00
-permalink: /azure/blogs/Azure-for-Beginners-How-to-Launch-Your-First-Cloud-Project-in-30-Minutes
 tags:
 - Azure App Service
 - Azure Blob Storage

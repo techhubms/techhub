@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/using-entra-id-authentication-with-arc-enabled-sql-server-in-a/ba-p/4435168
 title: Using Entra ID Authentication with Arc-Enabled SQL Server in a .NET Windows Forms Application
 author: jpigott
-canonical_url: https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/using-entra-id-authentication-with-arc-enabled-sql-server-in-a/ba-p/4435168
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-15 14:31:39 +00:00
-permalink: /coding/community/Using-Entra-ID-Authentication-with-Arc-Enabled-SQL-Server-in-a-NET-Windows-Forms-Application
 tags:
 - .NET Framework
 - Access Tokens

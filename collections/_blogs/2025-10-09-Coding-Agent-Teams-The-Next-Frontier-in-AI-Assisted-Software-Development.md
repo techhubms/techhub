@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/coding-agent-teams-the-next-frontier-in-ai-assisted-software-development/
 title: 'Coding Agent Teams: The Next Frontier in AI-Assisted Software Development'
 author: Derek Ashmore
-canonical_url: https://devops.com/coding-agent-teams-the-next-frontier-in-ai-assisted-software-development/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-09 10:46:38 +00:00
-permalink: /ai/blogs/Coding-Agent-Teams-The-Next-Frontier-in-AI-Assisted-Software-Development
 tags:
 - Agent Based Programming
 - Agentic AI

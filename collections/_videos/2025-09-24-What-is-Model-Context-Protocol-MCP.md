@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=yVPmHIvJLYg
 title: What is Model Context Protocol (MCP)?
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=yVPmHIvJLYg
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-24 15:59:03 +00:00
-permalink: /github-copilot/videos/What-is-Model-Context-Protocol-MCP
 tags:
 - AI Development
 - Automation

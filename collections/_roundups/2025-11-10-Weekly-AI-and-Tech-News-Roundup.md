@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: Updates in AI-Enabled Development, DevOps Automation, and Cloud Security
 author: Tech Hub Team
 viewing_mode: internal
 date: 2025-11-10 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
 - AI Agents

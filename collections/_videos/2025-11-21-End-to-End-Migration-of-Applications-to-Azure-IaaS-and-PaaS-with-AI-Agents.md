@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=YXE880TLsfk
 title: End-to-End Migration of Applications to Azure IaaS and PaaS with AI Agents
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=YXE880TLsfk
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 07:14:34 +00:00
-permalink: /ai/videos/End-to-End-Migration-of-Applications-to-Azure-IaaS-and-PaaS-with-AI-Agents
 tags:
 - AI Agent
 - Application Discovery

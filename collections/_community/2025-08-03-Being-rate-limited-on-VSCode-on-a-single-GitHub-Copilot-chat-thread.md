@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mgh2oo/being_rate_limited_on_vscode_on_a_single_chat/
 title: Being rate limited on VSCode on a single GitHub Copilot chat thread
 author: matt_o_matic
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mgh2oo/being_rate_limited_on_vscode_on_a_single_chat/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-03 11:37:06 +00:00
-permalink: /github-copilot/community/Being-rate-limited-on-VSCode-on-a-single-GitHub-Copilot-chat-thread
 tags:
 - API Limits
 - Chat Thread

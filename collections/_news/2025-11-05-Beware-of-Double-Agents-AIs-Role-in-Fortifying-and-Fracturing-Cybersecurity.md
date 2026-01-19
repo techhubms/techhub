@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/blog/2025/11/05/beware-of-double-agents-how-ai-can-fortify-or-fracture-your-cybersecurity/
 title: 'Beware of Double Agents: AI’s Role in Fortifying and Fracturing Cybersecurity'
 author: stclarke
-canonical_url: https://blogs.microsoft.com/blog/2025/11/05/beware-of-double-agents-how-ai-can-fortify-or-fracture-your-cybersecurity/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-05 14:08:19 +00:00
-permalink: /ai/news/Beware-of-Double-Agents-AIs-Role-in-Fortifying-and-Fracturing-Cybersecurity
 tags:
 - Agentic Zero Trust
 - AI Agents

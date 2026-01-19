@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-10-github-enterprise-cloud-with-data-residency-now-supports-visual-studio-subscriptions
 title: GitHub Enterprise Cloud Data Residency Now Available for Visual Studio Subscribers
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-10-github-enterprise-cloud-with-data-residency-now-supports-visual-studio-subscriptions
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-10 17:04:15 +00:00
-permalink: /devops/news/GitHub-Enterprise-Cloud-Data-Residency-Now-Available-for-Visual-Studio-Subscribers
 tags:
 - Account Management
 - Cloud Governance

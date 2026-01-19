@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/unlocking-the-power-of-web-with-copilot-chats-new-url-context/
 title: Unlocking Developer Productivity with Copilot Chat’s New URL Context
 author: Jessie Houghton
-canonical_url: https://devblogs.microsoft.com/visualstudio/unlocking-the-power-of-web-with-copilot-chats-new-url-context/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-04 13:00:24 +00:00
-permalink: /github-copilot/news/Unlocking-Developer-Productivity-with-Copilot-Chats-New-URL-Context
 tags:
 - AI Assistant
 - Code Assistance

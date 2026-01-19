@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=JJJ6pbq7Aac
 title: Use Copilot and MCP to Query Microsoft Learn Docs
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=JJJ6pbq7Aac
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-22 14:00:26 +00:00
-permalink: /github-copilot/videos/Use-Copilot-and-MCP-to-Query-Microsoft-Learn-Docs
 tags:
 - API Integration
 - Demo

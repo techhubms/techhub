@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=FxwkjmKJdC0
 title: Deploying Local AI Models in Enterprise with Windows ML
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=FxwkjmKJdC0
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 11:43:02 +00:00
-permalink: /ai/videos/Deploying-Local-AI-Models-in-Enterprise-with-Windows-ML
 tags:
 - AI Framework
 - App Development

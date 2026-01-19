@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=2QXzxOLtCHM
 title: 'Building Three AI-Powered Applications: MCP, Browser LLMs, and Foundry Local'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=2QXzxOLtCHM
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-29 16:00:05 +00:00
-permalink: /ai/videos/Building-Three-AI-Powered-Applications-MCP-Browser-LLMs-and-Foundry-Local
 tags:
 - Agent Code Generation
 - AI Application Development

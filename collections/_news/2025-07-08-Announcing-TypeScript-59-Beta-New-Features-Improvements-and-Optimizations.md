@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-9-beta/
 title: 'Announcing TypeScript 5.9 Beta: New Features, Improvements, and Optimizations'
 author: Daniel Rosenwasser
-canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-9-beta/
 viewing_mode: external
 feed_name: Microsoft TypeScript Blog
-feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-07-08 17:38:54 +00:00
-permalink: /coding/news/Announcing-TypeScript-59-Beta-New-Features-Improvements-and-Optimizations
 tags:
 - Compiler
 - Developer Tools

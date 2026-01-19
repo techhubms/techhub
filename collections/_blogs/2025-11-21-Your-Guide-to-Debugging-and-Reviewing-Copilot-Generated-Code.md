@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/your-guide-to-debugging-and-reviewing-copilot-generated-code/
 title: Your Guide to Debugging and Reviewing Copilot-Generated Code
 author: John Edward
-canonical_url: https://dellenny.com/your-guide-to-debugging-and-reviewing-copilot-generated-code/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-21 16:03:25 +00:00
-permalink: /github-copilot/blogs/Your-Guide-to-Debugging-and-Reviewing-Copilot-Generated-Code
 tags:
 - AI Coding Assistant
 - Authentication

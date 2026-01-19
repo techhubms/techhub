@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-19-agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github-com
 title: 'Agents Panel: Easily Delegate Tasks to Copilot Coding Agent Across GitHub'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-19-agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github-com
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-19 17:52:31 +00:00
-permalink: /github-copilot/news/Agents-Panel-Easily-Delegate-Tasks-to-Copilot-Coding-Agent-Across-GitHub
 tags:
 - Agents Panel
 - AI Development Tools

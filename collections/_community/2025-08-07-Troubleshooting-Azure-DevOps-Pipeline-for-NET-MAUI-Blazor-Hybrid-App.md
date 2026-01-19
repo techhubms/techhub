@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/azuredevops/comments/1mjui7y/dotnet_maui_pipeline/
 title: Troubleshooting Azure DevOps Pipeline for .NET MAUI Blazor Hybrid App
 author: Background_March7229
-canonical_url: https://www.reddit.com/r/azuredevops/comments/1mjui7y/dotnet_maui_pipeline/
 viewing_mode: external
 feed_name: Reddit Azure DevOps
-feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-08-07 08:26:59 +00:00
-permalink: /coding/community/Troubleshooting-Azure-DevOps-Pipeline-for-NET-MAUI-Blazor-Hybrid-App
 tags:
 - .NET 9
 - .NET Workload

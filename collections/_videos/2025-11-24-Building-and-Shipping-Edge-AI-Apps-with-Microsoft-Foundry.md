@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=b88tJ0hdTSQ
 title: Building and Shipping Edge AI Apps with Microsoft Foundry
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=b88tJ0hdTSQ
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 06:33:59 +00:00
-permalink: /ai/videos/Building-and-Shipping-Edge-AI-Apps-with-Microsoft-Foundry
 tags:
 - AI Demonstrations
 - AI Workflow

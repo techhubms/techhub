@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=9G0B6xdn_4k
 title: 'Security Copilot: Empowering Security Teams with AI at Microsoft Ignite 2025'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=9G0B6xdn_4k
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:11:12 +00:00
-permalink: /ai/videos/Security-Copilot-Empowering-Security-Teams-with-AI-at-Microsoft-Ignite-2025
 tags:
 - ArcGIS Analytics
 - BRK244

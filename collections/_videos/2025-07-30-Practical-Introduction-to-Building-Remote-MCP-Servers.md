@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=w1N_XEtpu4E
 title: Practical Introduction to Building Remote MCP Servers
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=w1N_XEtpu4E
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-30 22:27:34 +00:00
-permalink: /ai/videos/Practical-Introduction-to-Building-Remote-MCP-Servers
 tags:
 - Agent Integration
 - Azure AI Foundry

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=aR7hAbrIlps
 title: 'Microsoft Foundry Workflows: Migrating to Code-First Development in VS Code'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=aR7hAbrIlps
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-24 19:12:14 +00:00
-permalink: /github-copilot/videos/Microsoft-Foundry-Workflows-Migrating-to-Code-First-Development-in-VS-Code
 tags:
 - Azure AI Foundry
 - Azure Cloud

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/_NnAGjBc64Y
 title: Installing the GitHub MCP Server in Visual Studio Code
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/shorts/_NnAGjBc64Y
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-28 00:00:43 +00:00
-permalink: /github-copilot/videos/Installing-the-GitHub-MCP-Server-in-Visual-Studio-Code
 tags:
 - AI Tools
 - Code Completion

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=yPlJf5DA5So
 title: 'Java and AI for Beginners: Full Series on Building and Modernizing AI-Powered Java Apps'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=yPlJf5DA5So
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-07 05:01:19 +00:00
-permalink: /ai/videos/Java-and-AI-for-Beginners-Full-Series-on-Building-and-Modernizing-AI-Powered-Java-Apps
 tags:
 - Agent
 - AI Integration

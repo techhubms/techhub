@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-at-oracle-ai-world-2025-powering-the-next/ba-p/4460749
 title: 'Oracle Database@Azure Advances at Oracle AI World 2025: Integration, AI, and Security Enhancements'
 author: KalyanKaki
-canonical_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-at-oracle-ai-world-2025-powering-the-next/ba-p/4460749
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-14 18:00:00 +00:00
-permalink: /ai/community/Oracle-DatabaseAzure-Advances-at-Oracle-AI-World-2025-Integration-AI-and-Security-Enhancements
 tags:
 - Autonomous Database
 - Azure AI Foundry

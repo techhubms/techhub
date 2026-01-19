@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/news-insights/company-news/github-availability-report-november-2025/
 title: 'GitHub Availability Report: November 2025'
 author: Jakub Oleksy
-canonical_url: https://github.blog/news-insights/company-news/github-availability-report-november-2025/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-12-11 16:03:53 +00:00
-permalink: /devops/news/GitHub-Availability-Report-November-2025
 tags:
 - Automation
 - Availability

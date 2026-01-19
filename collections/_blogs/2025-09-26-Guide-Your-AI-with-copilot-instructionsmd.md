@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/guide-your-ai-with-copilot-instructions-md.html
 title: Guide Your AI with copilot-instructions.md
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/guide-your-ai-with-copilot-instructions-md.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-09-26 00:00:00 +00:00
-permalink: /github-copilot/blogs/Guide-Your-AI-with-copilot-instructionsmd
 tags:
 - Async/await
 - Code Consistency

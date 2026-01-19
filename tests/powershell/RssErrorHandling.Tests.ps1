@@ -29,12 +29,12 @@ Describe "RSS Error Handling Integration" {
     Context "Add-TrackingEntry Function for Skipped Entries" {
         It "Should add content filter errors to skipped entries" {
             # Test adding a content filter error
-            Add-TrackingEntry -EntriesPath $script:TestSkippedEntriesPath -CanonicalUrl "https://example.com/filtered-content" -Reason "Content blocked by safety filters" -Collection "news"
+            Add-TrackingEntry -EntriesPath $script:TestSkippedEntriesPath -ExternalUrl "https://example.com/filtered-content" -Reason "Content blocked by safety filters" -Collection "news"
             
             # Verify entry was added
             $skippedEntries = Get-SkippedEntries -SkippedEntriesPath $script:TestSkippedEntriesPath
             $skippedEntries | Should -HaveCount 1
-            $skippedEntries[0].canonical_url | Should -Be "https://example.com/filtered-content"
+            $skippedEntries[0].external_url | Should -Be "https://example.com/filtered-content"
             $skippedEntries[0].reason | Should -Be "Content blocked by safety filters"
             $skippedEntries[0].collection | Should -Be "news"
             $skippedEntries[0].timestamp | Should -Not -BeNullOrEmpty
@@ -42,13 +42,13 @@ Describe "RSS Error Handling Integration" {
         
         It "Should add API call failures to skipped entries" {
             # Test adding an API failure error
-            Add-TrackingEntry -EntriesPath $script:TestSkippedEntriesPath -CanonicalUrl "https://example.com/api-failure" -Reason "API call failed: Network timeout" -Collection "community"
+            Add-TrackingEntry -EntriesPath $script:TestSkippedEntriesPath -ExternalUrl "https://example.com/api-failure" -Reason "API call failed: Network timeout" -Collection "community"
             
             # Verify entry was added (should have 1 entry in this isolated test)
             $skippedEntries = Get-SkippedEntries -SkippedEntriesPath $script:TestSkippedEntriesPath
             $skippedEntries | Should -HaveCount 1
             
-            $apiFailureEntry = $skippedEntries | Where-Object { $_.canonical_url -eq "https://example.com/api-failure" }
+            $apiFailureEntry = $skippedEntries | Where-Object { $_.external_url -eq "https://example.com/api-failure" }
             $apiFailureEntry | Should -Not -BeNullOrEmpty
             $apiFailureEntry.reason | Should -Be "API call failed: Network timeout"
         }
@@ -62,7 +62,7 @@ Describe "RSS Error Handling Integration" {
             )
             
             foreach ($entry in $testEntries) {
-                Add-TrackingEntry -EntriesPath $script:TestSkippedEntriesPath -CanonicalUrl $entry.url -Reason $entry.reason -Collection $entry.collection
+                Add-TrackingEntry -EntriesPath $script:TestSkippedEntriesPath -ExternalUrl $entry.url -Reason $entry.reason -Collection $entry.collection
             }
             
             # Verify all entries were added (should now have 3 total)
@@ -71,7 +71,7 @@ Describe "RSS Error Handling Integration" {
             
             # Verify specific entries exist
             foreach ($entry in $testEntries) {
-                $foundEntry = $skippedEntries | Where-Object { $_.canonical_url -eq $entry.url }
+                $foundEntry = $skippedEntries | Where-Object { $_.external_url -eq $entry.url }
                 $foundEntry | Should -Not -BeNullOrEmpty
                 $foundEntry.reason | Should -Be $entry.reason
                 $foundEntry.collection | Should -Be $entry.collection
@@ -102,7 +102,7 @@ Describe "RSS Error Handling Integration" {
             $skippedEntries = Get-SkippedEntries -SkippedEntriesPath $script:TestSkippedEntriesPath
             
             foreach ($entry in $skippedEntries) {
-                $entry.canonical_url | Should -Not -BeNullOrEmpty
+                $entry.external_url | Should -Not -BeNullOrEmpty
                 $entry.reason | Should -Not -BeNullOrEmpty
                 $entry.timestamp | Should -Not -BeNullOrEmpty
             }
@@ -120,10 +120,10 @@ Describe "RSS Error Handling Integration" {
             
             foreach ($pattern in $contentFilterPatterns) {
                 $testUrl = "https://example.com/test-$(Get-Random)"
-                Add-TrackingEntry -EntriesPath $script:TestSkippedEntriesPath -CanonicalUrl $testUrl -Reason $pattern -Collection "news"
+                Add-TrackingEntry -EntriesPath $script:TestSkippedEntriesPath -ExternalUrl $testUrl -Reason $pattern -Collection "news"
                 
                 $skippedEntries = Get-SkippedEntries -SkippedEntriesPath $script:TestSkippedEntriesPath
-                $addedEntry = $skippedEntries | Where-Object { $_.canonical_url -eq $testUrl }
+                $addedEntry = $skippedEntries | Where-Object { $_.external_url -eq $testUrl }
                 $addedEntry | Should -Not -BeNullOrEmpty
                 $addedEntry.reason | Should -Be $pattern
             }
@@ -139,10 +139,10 @@ Describe "RSS Error Handling Integration" {
             
             foreach ($pattern in $apiErrorPatterns) {
                 $testUrl = "https://example.com/api-test-$(Get-Random)"
-                Add-TrackingEntry -EntriesPath $script:TestSkippedEntriesPath -CanonicalUrl $testUrl -Reason $pattern -Collection "community"
+                Add-TrackingEntry -EntriesPath $script:TestSkippedEntriesPath -ExternalUrl $testUrl -Reason $pattern -Collection "community"
                 
                 $skippedEntries = Get-SkippedEntries -SkippedEntriesPath $script:TestSkippedEntriesPath
-                $addedEntry = $skippedEntries | Where-Object { $_.canonical_url -eq $testUrl }
+                $addedEntry = $skippedEntries | Where-Object { $_.external_url -eq $testUrl }
                 $addedEntry | Should -Not -BeNullOrEmpty
                 $addedEntry.reason | Should -Be $pattern
             }

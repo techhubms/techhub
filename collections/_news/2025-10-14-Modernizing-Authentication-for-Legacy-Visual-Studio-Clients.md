@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/devops/modernizing-authentication-for-legacy-visual-studio-clients/
 title: Modernizing Authentication for Legacy Visual Studio Clients
 author: Angel Wong
-canonical_url: https://devblogs.microsoft.com/devops/modernizing-authentication-for-legacy-visual-studio-clients/
 viewing_mode: external
 feed_name: Microsoft DevOps Blog
-feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-10-14 15:28:47 +00:00
-permalink: /azure/news/Modernizing-Authentication-for-Legacy-Visual-Studio-Clients
 tags:
 - Authentication
 - Azure & Cloud

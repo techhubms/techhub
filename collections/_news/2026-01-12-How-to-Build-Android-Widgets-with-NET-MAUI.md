@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/how-to-build-android-widgets-with-dotnet-maui/
 title: How to Build Android Widgets with .NET MAUI
 author: Toine de Boer
-canonical_url: https://devblogs.microsoft.com/dotnet/how-to-build-android-widgets-with-dotnet-maui/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2026-01-12 18:05:00 +00:00
-permalink: /coding/news/How-to-Build-Android-Widgets-with-NET-MAUI
 tags:
 - .NET
 - .NET For Android

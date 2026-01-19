@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/bringing-order-to-chaotic-software-engineering-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=bringing-order-to-chaotic-software-engineering-workflows
 title: Bringing Order to Chaotic Software Engineering Workflows
 author: Mike Vizard
-canonical_url: https://devops.com/bringing-order-to-chaotic-software-engineering-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=bringing-order-to-chaotic-software-engineering-workflows
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-29 16:16:47 +00:00
-permalink: /ai/blogs/Bringing-Order-to-Chaotic-Software-Engineering-Workflows
 tags:
 - AI in Software Development
 - Application Development

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ALNbqZzuBHg
 title: Maintain Regulatory Compliance with the Microsoft Sovereign Cloud
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=ALNbqZzuBHg
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:11:09 +00:00
-permalink: /ai/videos/Maintain-Regulatory-Compliance-with-the-Microsoft-Sovereign-Cloud
 tags:
 - AI Enablement
 - Compliance Auditing

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/rx_e9RDL1c8
 title: An Introduction to the New GitHub Copilot CLI
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/rx_e9RDL1c8
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-09 14:01:23 +00:00
-permalink: /github-copilot/videos/An-Introduction-to-the-New-GitHub-Copilot-CLI
 tags:
 - AI Assisted Coding
 - CLI Tools

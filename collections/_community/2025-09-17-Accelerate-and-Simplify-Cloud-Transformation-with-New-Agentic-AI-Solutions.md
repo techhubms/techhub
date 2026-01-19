@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-and-simplify-cloud-transformation-with-new-agentic-ai/ba-p/4454873
 title: Accelerate and Simplify Cloud Transformation with New Agentic AI Solutions
 author: PatWidjaja
-canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-and-simplify-cloud-transformation-with-new-agentic-ai/ba-p/4454873
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-17 21:32:31 +00:00
-permalink: /ai/community/Accelerate-and-Simplify-Cloud-Transformation-with-New-Agentic-AI-Solutions
 tags:
 - Agentic AI
 - AI Assisted Tooling

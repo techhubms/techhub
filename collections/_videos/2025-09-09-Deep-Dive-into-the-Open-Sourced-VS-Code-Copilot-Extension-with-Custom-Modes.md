@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/5Ffbk_hJWWI
 title: Deep Dive into the Open-Sourced VS Code Copilot Extension with Custom Modes
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/shorts/5Ffbk_hJWWI
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-09 13:00:20 +00:00
-permalink: /github-copilot/videos/Deep-Dive-into-the-Open-Sourced-VS-Code-Copilot-Extension-with-Custom-Modes
 tags:
 - AI Custom Modes
 - AI Prompt Engineering

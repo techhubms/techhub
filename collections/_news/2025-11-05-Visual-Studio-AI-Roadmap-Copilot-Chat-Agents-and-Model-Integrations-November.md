@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-november/
 title: 'Visual Studio AI Roadmap: Copilot Chat, Agents, and Model Integrations (November)'
 author: Rhea Patel
-canonical_url: https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-november/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-11-05 19:32:56 +00:00
-permalink: /github-copilot/news/Visual-Studio-AI-Roadmap-Copilot-Chat-Agents-and-Model-Integrations-November
 tags:
 - AI Agents
 - AI Models

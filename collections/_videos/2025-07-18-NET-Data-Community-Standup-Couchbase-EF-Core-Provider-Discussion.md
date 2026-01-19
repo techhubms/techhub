@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=0UDFJvMg5Wc
 title: '.NET Data Community Standup: Couchbase EF Core Provider Discussion'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=0UDFJvMg5Wc
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-18 06:11:11 +00:00
-permalink: /ml/videos/NET-Data-Community-Standup-Couchbase-EF-Core-Provider-Discussion
 tags:
 - .NET
 - .NET Data Community

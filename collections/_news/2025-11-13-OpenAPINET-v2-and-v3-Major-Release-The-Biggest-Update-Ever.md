@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/openapi/openapi-net-release-announcements/
 title: 'OpenAPI.NET v2 & v3 Major Release: The Biggest Update Ever'
 author: Darrel Miller, Rachit Kumar Malik
-canonical_url: https://devblogs.microsoft.com/openapi/openapi-net-release-announcements/
 viewing_mode: external
 feed_name: Microsoft OpenAPI Blog
-feed_url: https://devblogs.microsoft.com/openapi/feed/
 date: 2025-11-13 20:53:01 +00:00
-permalink: /coding/news/OpenAPINET-v2-and-v3-Major-Release-The-Biggest-Update-Ever
 tags:
 - .NET
 - API Documentation

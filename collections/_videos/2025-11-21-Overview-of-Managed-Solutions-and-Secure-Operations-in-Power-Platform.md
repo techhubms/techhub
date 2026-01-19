@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=3lIrMl2Y8f0
 title: Overview of Managed Solutions and Secure Operations in Power Platform
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=3lIrMl2Y8f0
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 13:29:26 +00:00
-permalink: /ai/videos/Overview-of-Managed-Solutions-and-Secure-Operations-in-Power-Platform
 tags:
 - AI Agents
 - Alerting

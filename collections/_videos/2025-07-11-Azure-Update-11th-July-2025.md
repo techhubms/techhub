@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=YggS0Ha-0rU
 title: Azure Update - 11th July 2025
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=YggS0Ha-0rU
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-11 13:43:48 +00:00
-permalink: /ai/videos/Azure-Update-11th-July-2025
 tags:
 - AFS
 - AVNM

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/aiops-for-sre-using-ai-to-reduce-on-call-fatigue-and-improve-reliability/
 title: 'AIOps for SRE: Leveraging AI to Combat On-Call Fatigue and Boost Reliability'
 author: Ankur Mahida
-canonical_url: https://devops.com/aiops-for-sre-using-ai-to-reduce-on-call-fatigue-and-improve-reliability/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-07 11:48:23 +00:00
-permalink: /ai/blogs/AIOps-for-SRE-Leveraging-AI-to-Combat-On-Call-Fatigue-and-Boost-Reliability
 tags:
 - AI Driven Operations
 - AI For IT Operations

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/introducing-deep-research-in-azure-ai-foundry-agent-service/
 title: Introducing Deep Research in Azure AI Foundry Agent Service
 author: Yina Arenas
-canonical_url: https://azure.microsoft.com/en-us/blog/introducing-deep-research-in-azure-ai-foundry-agent-service/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-07 17:00:00 +00:00
-permalink: /ai/news/Introducing-Deep-Research-in-Azure-AI-Foundry-Agent-Service
 tags:
 - Agents
 - AI + Machine Learning

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=sqvxKIPB8W4
 title: Building Autonomous Enterprise Agents with Reasoning in Microsoft Foundry
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=sqvxKIPB8W4
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:29:58 +00:00
-permalink: /ai/videos/Building-Autonomous-Enterprise-Agents-with-Reasoning-in-Microsoft-Foundry
 tags:
 - Advanced AI
 - Agentic Workflows

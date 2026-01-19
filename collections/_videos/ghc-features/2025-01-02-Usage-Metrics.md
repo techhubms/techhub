@@ -1,17 +1,13 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/43yFNFT8-R4
 title: Usage Metrics
 author: Rob Bos
-canonical_url: https://youtu.be/43yFNFT8-R4
 date: 2025-01-02 11:20:07 +00:00
-permalink: /github-copilot/videos/Usage-Metrics
 viewing_mode: internal
-section: github-copilot
 ghes_support: false
 plans:
 - Pro
 - Business
-alt-collection: features
 tags:
 - Analytics
 section_names:

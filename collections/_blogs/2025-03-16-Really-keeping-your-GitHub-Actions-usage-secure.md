@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devopsjournal.io/blog/2025/03/16/Really-keepingyour-GitHub-Actions-usage-secure
 title: Really Keeping Your GitHub Actions Usage Secure
 author: Rob Bos
-canonical_url: https://devopsjournal.io/blog/2025/03/16/Really-keepingyour-GitHub-Actions-usage-secure
 viewing_mode: external
 feed_name: Rob Bos' Blog
-feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2025-03-16 00:00:00 +00:00
-permalink: /devops/blogs/Really-keeping-your-GitHub-Actions-usage-secure
 tags:
 - Action Backups
 - CVE 30066

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/overload-to-optimal-tuning-microsoft-fabric-capacity/ba-p/4464639
 title: 'Overload to Optimal: Tuning Microsoft Fabric Capacity'
 author: Rafia_Aqil
-canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/overload-to-optimal-tuning-microsoft-fabric-capacity/ba-p/4464639
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-28 16:48:43 +00:00
-permalink: /ml/community/Overload-to-Optimal-Tuning-Microsoft-Fabric-Capacity
 tags:
 - Autotune
 - Azure Analytics

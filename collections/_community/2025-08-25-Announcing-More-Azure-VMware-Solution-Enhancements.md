@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/announcing-more-azure-vmware-solution-enhancements/ba-p/4447103
 title: Announcing More Azure VMware Solution Enhancements
 author: christopheherrbach
-canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/announcing-more-azure-vmware-solution-enhancements/ba-p/4447103
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-25 16:50:52 +00:00
-permalink: /azure/community/Announcing-More-Azure-VMware-Solution-Enhancements
 tags:
 - AVS
 - Azure Elastic SAN

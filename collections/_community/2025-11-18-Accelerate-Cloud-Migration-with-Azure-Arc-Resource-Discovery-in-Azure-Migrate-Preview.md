@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/accelerate-your-cloud-migration-journey-with-azure-arc-resource/ba-p/4469975
 title: Accelerate Cloud Migration with Azure Arc Resource Discovery in Azure Migrate (Preview)
 author: snehith
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/accelerate-your-cloud-migration-journey-with-azure-arc-resource/ba-p/4469975
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:23:18 +00:00
-permalink: /azure/community/Accelerate-Cloud-Migration-with-Azure-Arc-Resource-Discovery-in-Azure-Migrate-Preview
 tags:
 - Arc Enabled Resources
 - Azure Arc

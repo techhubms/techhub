@@ -1,14 +1,10 @@
-﻿---
-layout: post
+---
+external_url: https://www.youtube.com/watch?v=bLjFNi9_RUk
 title: Visual Studio Code and GitHub Copilot - What's new in 1.102
 author: Fokko Veegens
-canonical_url: https://www.youtube.com/watch?v=bLjFNi9_RUk
 viewing_mode: internal
-youtube_id: bLjFNi9_RUk
+feed_name: Fokko at Work
 date: 2025-07-17 00:00:00 +00:00
-permalink: /github-copilot/videos/Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1102
-section: github-copilot
-alt-collection: vscode-updates
 tags:
 - Coding Agent
 - Custom Chat Modes

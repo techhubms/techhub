@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-dev-days-2025-your-gateway-to-the-future-of-ai-development/ba-p/4476113
 title: 'AI Dev Days 2025: Your Gateway to the Future of AI Development'
 author: Lee_Stott
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-dev-days-2025-your-gateway-to-the-future-of-ai-development/ba-p/4476113
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-09 08:00:00 +00:00
-permalink: /github-copilot/community/AI-Dev-Days-2025-Your-Gateway-to-the-Future-of-AI-Development
 tags:
 - Agent HQ
 - Agentic DevOps

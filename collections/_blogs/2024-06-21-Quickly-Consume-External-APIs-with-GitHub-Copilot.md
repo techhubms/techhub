@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://sswart.github.io/post/consume-api-copilot/
 title: Quickly Consume External APIs with GitHub Copilot
 author: Jesse Swart Coding Blog
-canonical_url: https://sswart.github.io/post/consume-api-copilot/
 viewing_mode: external
 feed_name: Jesse Swart's Blog
-feed_url: https://blog.jesseswart.nl/index.xml
 date: 2024-06-21 07:51:32 +00:00
-permalink: /github-copilot/blogs/Quickly-Consume-External-APIs-with-GitHub-Copilot
 tags:
 - API Documentation
 - API Integration

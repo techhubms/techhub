@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devopsjournal.io/blog/2025/04/01/GitHub-Copilot-Change-the-Narrative
 title: 'GitHub Copilot: Changing the Narrative from Productivity to Strong DevOps Foundations'
 author: Rob Bos
-canonical_url: https://devopsjournal.io/blog/2025/04/01/GitHub-Copilot-Change-the-Narrative
 viewing_mode: external
 feed_name: Rob Bos' Blog
-feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2025-04-01 00:00:00 +00:00
-permalink: /github-copilot/blogs/GitHub-Copilot-Changing-the-Narrative-from-Productivity-to-Strong-DevOps-Foundations
 tags:
 - Application Delivery
 - Automation

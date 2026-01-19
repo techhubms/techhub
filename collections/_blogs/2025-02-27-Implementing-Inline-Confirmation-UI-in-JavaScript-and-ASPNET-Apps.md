@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://weblog.west-wind.com/posts/2025/Feb/26/Inline-Confirmations-in-JavaScript-UI
 title: Implementing Inline Confirmation UI in JavaScript and ASP.NET Apps
 author: Rick Strahl
-canonical_url: https://weblog.west-wind.com/posts/2025/Feb/26/Inline-Confirmations-in-JavaScript-UI
 viewing_mode: external
 feed_name: Rick Strahl's Blog
-feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-02-27 09:02:10 +00:00
-permalink: /coding/blogs/Implementing-Inline-Confirmation-UI-in-JavaScript-and-ASPNET-Apps
 tags:
 - ASP.NET
 - ASP.NET MVC

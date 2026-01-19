@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-modernize-your-vmware-platform-using-azure-vmware/ba-p/4467872
 title: Migrate & Modernize Your VMware Platform Using Azure VMware Solution Gen 2
 author: tredavis
-canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-modernize-your-vmware-platform-using-azure-vmware/ba-p/4467872
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-06 19:17:51 +00:00
-permalink: /azure/community/Migrate-and-Modernize-Your-VMware-Platform-Using-Azure-VMware-Solution-Gen-2
 tags:
 - Azure Migrate
 - Azure Native Integration

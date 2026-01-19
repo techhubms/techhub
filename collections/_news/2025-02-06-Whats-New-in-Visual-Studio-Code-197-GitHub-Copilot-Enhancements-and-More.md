@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/updates/v1_97
 title: "What's New in Visual Studio Code 1.97: GitHub Copilot Enhancements and More"
 author: Visual Studio Code Team
-canonical_url: https://code.visualstudio.com/updates/v1_97
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-02-06 17:00:00 +00:00
-permalink: /github-copilot/news/Whats-New-in-Visual-Studio-Code-197-GitHub-Copilot-Enhancements-and-More
 tags:
 - Accessibility
 - Agent Mode

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=gAmgPEj7JoU
 title: How AI Voice Agents Transform Medical Documentation in Real Time
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=gAmgPEj7JoU
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-04 00:00:52 +00:00
-permalink: /ai/videos/How-AI-Voice-Agents-Transform-Medical-Documentation-in-Real-Time
 tags:
 - AI in Healthcare
 - Clinical Workflow Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-28-github-copilot-in-visual-studio-august-update
 title: 'August 2025 Update: GitHub Copilot Advancements in Visual Studio 2022'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-28-github-copilot-in-visual-studio-august-update
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-28 17:18:55 +00:00
-permalink: /github-copilot/news/August-2025-Update-GitHub-Copilot-Advancements-in-Visual-Studio-2022
 tags:
 - AI Powered Development
 - API Keys

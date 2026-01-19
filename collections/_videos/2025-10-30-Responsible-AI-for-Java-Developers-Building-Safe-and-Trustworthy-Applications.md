@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=qXx1Ukw3MGs
 title: 'Responsible AI for Java Developers: Building Safe and Trustworthy Applications'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=qXx1Ukw3MGs
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-30 00:01:11 +00:00
-permalink: /ai/videos/Responsible-AI-for-Java-Developers-Building-Safe-and-Trustworthy-Applications
 tags:
 - AI Best Practices
 - AI Governance

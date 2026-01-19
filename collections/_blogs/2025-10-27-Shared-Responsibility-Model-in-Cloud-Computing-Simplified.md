@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/shared-responsibility-model-in-cloud-computing-simplified/
 title: Shared Responsibility Model in Cloud Computing Simplified
 author: Dellenny
-canonical_url: https://dellenny.com/shared-responsibility-model-in-cloud-computing-simplified/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-27 06:41:21 +00:00
-permalink: /azure/blogs/Shared-Responsibility-Model-in-Cloud-Computing-Simplified
 tags:
 - Azure App Service
 - Azure Key Vault

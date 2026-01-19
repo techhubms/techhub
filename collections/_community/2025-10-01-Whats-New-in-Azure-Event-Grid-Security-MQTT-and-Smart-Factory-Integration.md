@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/what-s-new-in-azure-event-grid/ba-p/4458299
 title: "What's New in Azure Event Grid: Security, MQTT, and Smart Factory Integration"
 author: Connected-Seth
-canonical_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/what-s-new-in-azure-event-grid/ba-p/4458299
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-01 23:22:50 +00:00
-permalink: /azure/community/Whats-New-in-Azure-Event-Grid-Security-MQTT-and-Smart-Factory-Integration
 tags:
 - API Security
 - Azure Event Grid

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=XDab1_fVntU
 title: 'Powering Financial Workflows with AI: Microsoft and LSEG Partnership at Ignite'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=XDab1_fVntU
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:40:28 +00:00
-permalink: /ai/videos/Powering-Financial-Workflows-with-AI-Microsoft-and-LSEG-Partnership-at-Ignite
 tags:
 - AI Integration
 - Collaboration

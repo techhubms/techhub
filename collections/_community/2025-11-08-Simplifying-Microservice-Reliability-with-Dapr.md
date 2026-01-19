@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/simplifying-microservice-reliability-with-dapr/ba-p/4468296
 title: Simplifying Microservice Reliability with Dapr
 author: riturajjana
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/simplifying-microservice-reliability-with-dapr/ba-p/4468296
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-08 14:39:53 +00:00
-permalink: /coding/community/Simplifying-Microservice-Reliability-with-Dapr
 tags:
 - .NET Core
 - Azure Container Apps

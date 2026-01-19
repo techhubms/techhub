@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/10/22/the-ciso-imperative-building-resilience-in-an-era-of-accelerated-cyberthreats/
 title: Building Resilience in an Era of Accelerated Cyberthreats
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/22/the-ciso-imperative-building-resilience-in-an-era-of-accelerated-cyberthreats/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-22 17:56:46 +00:00
-permalink: /ai/news/Building-Resilience-in-an-Era-of-Accelerated-Cyberthreats
 tags:
 - AI Enabled Attacks
 - Automation

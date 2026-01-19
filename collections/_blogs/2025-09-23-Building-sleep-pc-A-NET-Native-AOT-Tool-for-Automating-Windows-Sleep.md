@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/sleep-pc-a-dotnet-tool-to-make-windows-sleep-after-a-timeout/
 title: 'Building sleep-pc: A .NET Native AOT Tool for Automating Windows Sleep'
 author: Andrew Lock
-canonical_url: https://andrewlock.net/sleep-pc-a-dotnet-tool-to-make-windows-sleep-after-a-timeout/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-09-23 10:00:00 +00:00
-permalink: /coding/blogs/Building-sleep-pc-A-NET-Native-AOT-Tool-for-Automating-Windows-Sleep
 tags:
 - .NET
 - .NET 10

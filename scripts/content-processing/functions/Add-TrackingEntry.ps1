@@ -2,13 +2,13 @@ function Add-TrackingEntry {
     [CmdletBinding(SupportsShouldProcess)]
     param(
         [string]$EntriesPath,
-        [string]$CanonicalUrl,
+        [string]$ExternalUrl,
         [string]$Collection,
         [string]$Reason = ""
     )
     
     $entry = @{
-        canonical_url = $CanonicalUrl
+        canonical_url = $ExternalUrl
         collection    = $Collection
         timestamp     = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss zzz")
     }
@@ -26,7 +26,7 @@ function Add-TrackingEntry {
         Write-Host "🔍 DEBUG: Adding entry $hasReason to $(Split-Path $EntriesPath -Leaf): $($entry.canonical_url)" -ForegroundColor Cyan
         
         $entries | ConvertTo-Json -Depth 10 | Set-Content -Path $EntriesPath -Encoding UTF8 -Force
-        #Write-Host "Added entry to $($EntriesPath): $($entry.canonical_url)"
+        #Write-Host "Added entry to $($EntriesPath): $($entry.external_url)"
     }
     else {
         Write-Host "What if: Would add entry to $EntriesPath for $($entry.canonical_url)"

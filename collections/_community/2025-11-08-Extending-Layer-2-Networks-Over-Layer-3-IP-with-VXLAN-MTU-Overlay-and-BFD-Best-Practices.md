@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/extending-layer-2-vxlan-networks-over-layer-3-ip-network/ba-p/4466406
 title: 'Extending Layer-2 Networks Over Layer-3 IP with VXLAN: MTU, Overlay, and BFD Best Practices'
 author: SaravSubramanian
-canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/extending-layer-2-vxlan-networks-over-layer-3-ip-network/ba-p/4466406
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-08 17:44:18 +00:00
-permalink: /azure/community/Extending-Layer-2-Networks-Over-Layer-3-IP-with-VXLAN-MTU-Overlay-and-BFD-Best-Practices
 tags:
 - Azure Networking
 - Bidirectional Forwarding Detection

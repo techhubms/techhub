@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/updates/v1_106
 title: 'Visual Studio Code October 2025 Release (v1.106): New AI Agents, Copilot Chat, Terminal IntelliSense & More'
 author: Visual Studio Code Team
-canonical_url: https://code.visualstudio.com/updates/v1_106
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-11-12 17:00:00 +00:00
-permalink: /github-copilot/news/Visual-Studio-Code-October-2025-Release-v1106-New-AI-Agents-Copilot-Chat-Terminal-IntelliSense-and-More
 tags:
 - Agent HQ
 - AI Agents

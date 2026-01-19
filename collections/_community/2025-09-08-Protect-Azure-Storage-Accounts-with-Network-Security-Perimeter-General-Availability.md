@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/protect-your-storage-accounts-using-network-security-perimeter/ba-p/4449046
 title: 'Protect Azure Storage Accounts with Network Security Perimeter: General Availability'
 author: Vishnu Charan TJ
-canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/protect-your-storage-accounts-using-network-security-perimeter/ba-p/4449046
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-08 19:29:51 +00:00
-permalink: /azure/community/Protect-Azure-Storage-Accounts-with-Network-Security-Perimeter-General-Availability
 tags:
 - Access Management
 - Azure Key Vault

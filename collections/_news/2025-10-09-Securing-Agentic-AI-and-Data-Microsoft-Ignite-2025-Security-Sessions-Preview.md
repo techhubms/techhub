@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/10/09/securing-agentic-ai-your-guide-to-the-microsoft-ignite-sessions-catalog/
 title: 'Securing Agentic AI and Data: Microsoft Ignite 2025 Security Sessions Preview'
 author: Microsoft Security Team
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/09/securing-agentic-ai-your-guide-to-the-microsoft-ignite-sessions-catalog/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-09 16:00:00 +00:00
-permalink: /ai/news/Securing-Agentic-AI-and-Data-Microsoft-Ignite-2025-Security-Sessions-Preview
 tags:
 - Agentic AI
 - Certification

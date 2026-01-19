@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-16-copilot-coding-agent-can-now-search-the-web
 title: Copilot Coding Agent Can Now Search the Web
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-16-copilot-coding-agent-can-now-search-the-web
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-16 20:32:55 +00:00
-permalink: /github-copilot/news/Copilot-Coding-Agent-Can-Now-Search-the-Web
 tags:
 - AI Assistant
 - Asynchronous Automation

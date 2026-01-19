@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/devops/comments/1mjuehw/the_jira_use_or_misuse/
 title: Engineers' Perspectives on Jira Usage and Implementation Challenges
 author: jmch16
-canonical_url: https://www.reddit.com/r/devops/comments/1mjuehw/the_jira_use_or_misuse/
 viewing_mode: external
 feed_name: Reddit DevOps
-feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-07 08:20:19 +00:00
-permalink: /devops/community/Engineers-Perspectives-on-Jira-Usage-and-Implementation-Challenges
 tags:
 - Agile
 - Atlassian

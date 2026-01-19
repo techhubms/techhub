@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=YlbeQkTRbAY
 title: Building Multi-Agent AI Systems with LangChain4j and Java
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=YlbeQkTRbAY
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-04 17:00:57 +00:00
-permalink: /ai/videos/Building-Multi-Agent-AI-Systems-with-LangChain4j-and-Java
 tags:
 - Agent Orchestration
 - AgentOrchestration

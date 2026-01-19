@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://khalidabuhakmeh.com/update-html-elements-with-htmx-triggers-and-aspnet-core
 title: Update HTML Elements Dynamically with Htmx Triggers and ASP.NET Core
 author: Khalid Abuhakmeh
-canonical_url: https://khalidabuhakmeh.com/update-html-elements-with-htmx-triggers-and-aspnet-core
 viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
-feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2024-10-22 00:00:00 +00:00
-permalink: /coding/blogs/Update-HTML-Elements-Dynamically-with-Htmx-Triggers-and-ASPNET-Core
 tags:
 - .NET
 - ASP.NET

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-early-preview-byo-remote-mcp-server-on-azure/ba-p/4445317
 title: 'Early Preview: Host Your Own Remote MCP Server on Azure Functions'
 author: lily-ma
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-early-preview-byo-remote-mcp-server-on-azure/ba-p/4445317
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-19 02:35:21 +00:00
-permalink: /coding/community/Early-Preview-Host-Your-Own-Remote-MCP-Server-on-Azure-Functions
 tags:
 - .NET
 - API Management

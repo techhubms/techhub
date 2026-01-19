@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://jessehouwing.net/troubleshooting-github-copilot-keyboard-shortcuts-in-jetbrains-ides/
 title: Troubleshooting GitHub Copilot Keyboard Shortcuts in JetBrains IDEs
 author: Jesse Houwing
-canonical_url: https://jessehouwing.net/troubleshooting-github-copilot-keyboard-shortcuts-in-jetbrains-ides/
 viewing_mode: external
 feed_name: Jesse Houwing's Blog
-feed_url: https://jessehouwing.net/rss/
 date: 2025-01-22 18:39:29 +00:00
-permalink: /github-copilot/blogs/Troubleshooting-GitHub-Copilot-keyboard-shortcuts-in-Jetbrains-IDEs
 tags:
 - Codespaces
 - GitHub

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2026/01/07/explore-the-latest-microsoft-incident-response-proactive-services-for-enhanced-resilience/
 title: Introducing New Proactive Services from Microsoft Incident Response to Boost Cyber Resilience
 author: Andrew Rapp
-canonical_url: https://www.microsoft.com/en-us/security/blog/2026/01/07/explore-the-latest-microsoft-incident-response-proactive-services-for-enhanced-resilience/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2026-01-07 17:00:00 +00:00
-permalink: /security/news/Introducing-New-Proactive-Services-from-Microsoft-Incident-Response-to-Boost-Cyber-Resilience
 tags:
 - Compromise Assessment
 - Cyber Range

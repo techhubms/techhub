@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-reliable-ai-travel-agents-with-the-durable-task/ba-p/4478913
 title: Building Reliable AI Travel Agents with the Durable Task Extension for Microsoft Agent Framework
 author: greenie-msft
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-reliable-ai-travel-agents-with-the-durable-task/ba-p/4478913
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-18 18:35:34 +00:00
-permalink: /ai/community/Building-Reliable-AI-Travel-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework
 tags:
 - .NET 9
 - Agent Patterns

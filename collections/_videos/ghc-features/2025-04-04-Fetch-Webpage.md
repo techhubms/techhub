@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/UuIrbI-qX-0
 title: Fetch Webpage
 author: Fokko Veegens
-canonical_url: https://youtu.be/UuIrbI-qX-0
 date: 2025-04-04 11:28:40 +00:00
-permalink: /github-copilot/videos/Fetch-Webpage
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Web Scraping
 - Web UI

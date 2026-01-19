@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/research/articles/a-ladder-of-reasoning-testing-the-power-of-imagination-in-llms/
 title: How Microsoft Research is enhancing the ability of LLMs to handle more complex reasoning tasks
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/research/articles/a-ladder-of-reasoning-testing-the-power-of-imagination-in-llms/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-28 14:22:54 +00:00
-permalink: /ai/news/How-Microsoft-Research-is-enhancing-the-ability-of-LLMs-to-handle-more-complex-reasoning-tasks
 tags:
 - AI Research
 - Cognitive Abilities

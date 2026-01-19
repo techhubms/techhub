@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=l7q6w6eICgw
 title: Securing AI Deployments with HashiCorp Vault & Azure
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=l7q6w6eICgw
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-30 16:24:14 +00:00
-permalink: /ai/videos/Securing-AI-Deployments-with-HashiCorp-Vault-and-Azure
 tags:
 - AI Deployment
 - Auditability

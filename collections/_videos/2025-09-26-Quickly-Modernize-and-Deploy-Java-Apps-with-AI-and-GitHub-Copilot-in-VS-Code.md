@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=A_Uf_4jO43k
 title: Quickly Modernize and Deploy Java Apps with AI and GitHub Copilot in VS Code
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=A_Uf_4jO43k
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-26 20:19:30 +00:00
-permalink: /github-copilot/videos/Quickly-Modernize-and-Deploy-Java-Apps-with-AI-and-GitHub-Copilot-in-VS-Code
 tags:
 - AI Integration
 - App Modernization

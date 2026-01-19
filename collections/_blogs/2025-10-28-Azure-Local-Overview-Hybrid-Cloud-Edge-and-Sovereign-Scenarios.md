@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/10/new-video-azure-local-overview/
 title: 'Azure Local Overview: Hybrid Cloud, Edge, and Sovereign Scenarios'
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/10/new-video-azure-local-overview/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-10-28 13:57:29 +00:00
-permalink: /azure/blogs/Azure-Local-Overview-Hybrid-Cloud-Edge-and-Sovereign-Scenarios
 tags:
 - AKS
 - Azure Defender

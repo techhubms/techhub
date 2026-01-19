@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/fully-managed-cloud-to-cloud-transfers-with-azure-storage-mover/
 title: Fully Managed Cloud-to-Cloud Transfers with Azure Storage Mover
 author: Aung Oo
-canonical_url: https://azure.microsoft.com/en-us/blog/fully-managed-cloud-to-cloud-transfers-with-azure-storage-mover/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-23 16:00:00 +00:00
-permalink: /ai/news/Fully-Managed-Cloud-to-Cloud-Transfers-with-Azure-Storage-Mover
 tags:
 - AI Workloads
 - AWS S3

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-networking-2025-powering-cloud-innovation-and-ai-at-global/ba-p/4479390
 title: 'Azure Networking 2025: Powering Cloud Innovation and AI at Global Scale'
 author: Sudha_Mahajan
-canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-networking-2025-powering-cloud-innovation-and-ai-at-global/ba-p/4479390
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-18 23:20:29 +00:00
-permalink: /ai/community/Azure-Networking-2025-Powering-Cloud-Innovation-and-AI-at-Global-Scale
 tags:
 - AI Supercomputer
 - Azure Copilot

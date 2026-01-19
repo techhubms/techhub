@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=IJ8s5OvbFdg
 title: Modern Windows Development with .NET
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=IJ8s5OvbFdg
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:19 +00:00
-permalink: /coding/videos/Modern-Windows-Development-with-NET
 tags:
 - .NET
 - .NET 10

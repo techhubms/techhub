@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Cf-bZUnlBHc
 title: Orchestrating AI Agents in Blazor Using Microsoft Semantic Kernel
 author: Learn Microsoft AI
-canonical_url: https://www.youtube.com/watch?v=Cf-bZUnlBHc
 viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-06-30 03:47:16 +00:00
-permalink: /ai/videos/Orchestrating-AI-Agents-in-Blazor-Using-Microsoft-Semantic-Kernel
 tags:
 - .NET
 - Agent Resolver

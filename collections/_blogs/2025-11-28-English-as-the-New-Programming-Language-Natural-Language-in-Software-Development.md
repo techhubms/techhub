@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://roadtoalm.com/2025/11/28/english-as-the-new-programming-language/
 title: 'English as the New Programming Language: Natural Language in Software Development'
 author: Rene van Osnabrugge
-canonical_url: https://roadtoalm.com/2025/11/28/english-as-the-new-programming-language/
 viewing_mode: external
 feed_name: René van Osnabrugge's Blog
-feed_url: https://roadtoalm.com/feed/
 date: 2025-11-28 13:27:50 +00:00
-permalink: /github-copilot/blogs/English-as-the-New-Programming-Language-Natural-Language-in-Software-Development
 tags:
 - AI Coding Assistant
 - AI SDLC

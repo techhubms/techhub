@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.linkedin.com/posts/satyanadella_jobs-security-skills-how-indias-giant-activity-7404408432293969921-BJHX
 title: Microsoft and India’s Ministry of Labour Harness AI for Social Impact at Scale
 author: stclarke
-canonical_url: https://www.linkedin.com/posts/satyanadella_jobs-security-skills-how-indias-giant-activity-7404408432293969921-BJHX
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-10 02:11:00 +00:00
-permalink: /ai/news/Microsoft-and-Indias-Ministry-of-Labour-Harness-AI-for-Social-Impact-at-Scale
 tags:
 - AI Adoption
 - Azure Services

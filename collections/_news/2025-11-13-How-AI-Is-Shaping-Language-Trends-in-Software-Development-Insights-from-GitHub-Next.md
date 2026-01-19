@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/news-insights/octoverse/typescript-python-and-the-ai-feedback-loop-changing-software-development/
 title: 'How AI Is Shaping Language Trends in Software Development: Insights from GitHub Next'
 author: Alexandra Lietzke
-canonical_url: https://github.blog/news-insights/octoverse/typescript-python-and-the-ai-feedback-loop-changing-software-development/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-11-13 16:00:00 +00:00
-permalink: /ai/news/How-AI-Is-Shaping-Language-Trends-in-Software-Development-Insights-from-GitHub-Next
 tags:
 - Agents
 - AI Development Tools

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-azure-netapp-files-object-rest-api-powers-azure-and-isv-data/ba-p/4459545
 title: How Azure NetApp Files Object REST API Powers Azure Data and AI Solutions
 author: GeertVanTeylingen
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-azure-netapp-files-object-rest-api-powers-azure-and-isv-data/ba-p/4459545
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-14 15:00:00 +00:00
-permalink: /ai/community/How-Azure-NetApp-Files-Object-REST-API-Powers-Azure-Data-and-AI-Solutions
 tags:
 - Azure AI
 - Azure Databricks

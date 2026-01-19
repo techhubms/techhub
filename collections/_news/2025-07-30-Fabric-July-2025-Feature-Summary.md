@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-july-2025-feature-summary/
 title: Fabric July 2025 Feature Summary
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-july-2025-feature-summary/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-30 09:05:00 +00:00
-permalink: /ai/news/Fabric-July-2025-Feature-Summary
 tags:
 - Activator
 - Azure SQL Database

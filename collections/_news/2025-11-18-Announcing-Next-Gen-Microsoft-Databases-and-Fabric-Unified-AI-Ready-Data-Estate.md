@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/microsoft-databases-and-microsoft-fabric-your-unified-and-ai-powered-data-estate/
 title: 'Announcing Next-Gen Microsoft Databases and Fabric: Unified, AI-Ready Data Estate'
 author: Arun Ulagaratchagan
-canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-databases-and-microsoft-fabric-your-unified-and-ai-powered-data-estate/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 16:00:00 +00:00
-permalink: /ai/news/Announcing-Next-Gen-Microsoft-Databases-and-Fabric-Unified-AI-Ready-Data-Estate
 tags:
 - AI Integration
 - Azure DocumentDB

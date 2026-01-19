@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/powershell/powershell-openssh-and-dsc-team-investments-for-2025/
 title: 'PowerShell, OpenSSH, and DSC Team Investments for 2025: Security, Integrations, and Community Priorities'
 author: Steve Lee
-canonical_url: https://devblogs.microsoft.com/powershell/powershell-openssh-and-dsc-team-investments-for-2025/
 viewing_mode: external
 feed_name: Microsoft PowerShell Blog
-feed_url: https://devblogs.microsoft.com/powershell/feed/
 date: 2025-04-14 13:40:29 +00:00
-permalink: /ai/news/PowerShell-OpenSSH-and-DSC-Team-Investments-for-2025-Security-Integrations-and-Community-Priorities
 tags:
 - AI Shell
 - Community Contributions

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/jsts-modernizer-preview
 title: AI-Assisted JavaScript/TypeScript Modernizer Preview in VS Code Insiders
 author: Sayed Ibrahim Hashimi
-canonical_url: https://devblogs.microsoft.com/blog/jsts-modernizer-preview
 viewing_mode: external
 feed_name: Microsoft Blog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-12-09 17:41:29 +00:00
-permalink: /github-copilot/news/AI-Assisted-JavaScriptTypeScript-Modernizer-Preview-in-VS-Code-Insiders
 tags:
 - AI Assistance
 - App Modernization

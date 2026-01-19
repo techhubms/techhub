@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/microsoft-is-a-leader-in-the-2025-gartner-magic-quadrant-for-cloud-native-application-platforms/
 title: Microsoft Named Leader in 2025 Gartner Magic Quadrant for Cloud-Native Application Platforms
 author: Scott Hunter
-canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-is-a-leader-in-the-2025-gartner-magic-quadrant-for-cloud-native-application-platforms/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-21 15:00:00 +00:00
-permalink: /ai/news/Microsoft-Named-Leader-in-2025-Gartner-Magic-Quadrant-for-Cloud-Native-Application-Platforms
 tags:
 - Agentic DevOps
 - AI + Machine Learning

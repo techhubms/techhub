@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://cooknwithcopilot.com/blog/ask-better-questions-get-better-code.html
 title: Ask Better Questions, Get Better Code with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://cooknwithcopilot.com/blog/ask-better-questions-get-better-code.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-03-21 00:00:00 +00:00
-permalink: /github-copilot/blogs/Ask-Better-Questions-Get-Better-Code-with-GitHub-Copilot
 tags:
 - Clear Communication
 - Code Review

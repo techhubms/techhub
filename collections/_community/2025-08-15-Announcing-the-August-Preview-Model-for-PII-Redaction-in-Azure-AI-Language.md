@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-ai-foundry-blog/announcing-the-text-pii-august-preview-model-release-in-azure-ai/ba-p/4441705
 title: Announcing the August Preview Model for PII Redaction in Azure AI Language
 author: renaliu
-canonical_url: https://techcommunity.microsoft.com/t5/azure-ai-foundry-blog/announcing-the-text-pii-august-preview-model-release-in-azure-ai/ba-p/4441705
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-15 07:34:14 +00:00
-permalink: /ai/community/Announcing-the-August-Preview-Model-for-PII-Redaction-in-Azure-AI-Language
 tags:
 - AI Model Update
 - Azure AI Foundry

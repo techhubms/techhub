@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/bmc-extends-scope-and-reach-of-devops-mainframe-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=bmc-extends-scope-and-reach-of-devops-mainframe-workflows
 title: BMC Extends Scope and Reach of DevOps Mainframe Workflows
 author: Mike Vizard
-canonical_url: https://devops.com/bmc-extends-scope-and-reach-of-devops-mainframe-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=bmc-extends-scope-and-reach-of-devops-mainframe-workflows
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-07-31 12:58:31 +00:00
-permalink: /ai/blogs/BMC-Extends-Scope-and-Reach-of-DevOps-Mainframe-Workflows
 tags:
 - AI Assistant
 - Automation

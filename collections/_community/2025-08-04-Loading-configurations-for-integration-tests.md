@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mhmsj5/loading_configurations_for_integration_tests/
 title: Loading configurations for integration tests
 author: LazyChief_117
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mhmsj5/loading_configurations_for_integration_tests/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-04 19:14:27 +00:00
-permalink: /coding/community/Loading-configurations-for-integration-tests
 tags:
 - .NET
 - .NET 8

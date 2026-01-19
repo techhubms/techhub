@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/debugging-ui-with-ai-github-copilot-agent-mode-meets-mcp-servers/
 title: 'Debugging UI with AI: GitHub Copilot Agent Mode Meets MCP Servers'
 author: Chris Reddington
-canonical_url: https://github.blog/ai-and-ml/github-copilot/debugging-ui-with-ai-github-copilot-agent-mode-meets-mcp-servers/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-07-22 21:58:35 +00:00
-permalink: /github-copilot/news/Debugging-UI-with-AI-GitHub-Copilot-agent-mode-meets-MCP-servers
 tags:
 - Agent Mode
 - Agentic AI

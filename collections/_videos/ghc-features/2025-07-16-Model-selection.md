@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/xf6i-eOnQE4
 title: Model selection
 author: Liuba Gonta
-canonical_url: https://youtu.be/xf6i-eOnQE4
 date: 2025-07-16 12:45:13 +00:00
-permalink: /github-copilot/videos/Model-selection
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Chat Interface
 - Model Selection

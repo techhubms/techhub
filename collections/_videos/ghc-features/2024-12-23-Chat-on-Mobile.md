@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/EQH-V5jQ0aA
 title: Chat on Mobile
 author: Rob Bos
-canonical_url: https://youtu.be/EQH-V5jQ0aA
 date: 2024-12-23 23:00:10 +00:00
-permalink: /github-copilot/videos/Chat-on-Mobile
 viewing_mode: internal
-section: github-copilot
 ghes_support: false
 plans:
 - Free
-alt-collection: features
 tags:
 - Chat
 - Mobile

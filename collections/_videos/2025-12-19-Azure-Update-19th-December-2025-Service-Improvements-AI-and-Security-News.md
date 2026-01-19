@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=mk6vwol-Za0
 title: 'Azure Update - 19th December 2025: Service Improvements, AI, and Security News'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=mk6vwol-Za0
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-12-19 15:51:48 +00:00
-permalink: /ai/videos/Azure-Update-19th-December-2025-Service-Improvements-AI-and-Security-News
 tags:
 - ASM Blob Storage
 - Azure AI

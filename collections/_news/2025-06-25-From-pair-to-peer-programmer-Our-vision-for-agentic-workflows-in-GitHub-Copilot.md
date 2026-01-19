@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/news-insights/product-news/from-pair-to-peer-programmer-our-vision-for-agentic-workflows-in-github-copilot/
 title: From pair to peer programmer - Our vision for agentic workflows in GitHub Copilot
 author: Tim Rogers
-canonical_url: https://github.blog/news-insights/product-news/from-pair-to-peer-programmer-our-vision-for-agentic-workflows-in-github-copilot/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-06-25 16:00:00 +00:00
-permalink: /github-copilot/news/From-pair-to-peer-programmer-Our-vision-for-agentic-workflows-in-GitHub-Copilot
 tags:
 - Agentic AI
 - AI Agents

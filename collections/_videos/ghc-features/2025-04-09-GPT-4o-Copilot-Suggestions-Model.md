@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/zZI34xmoWbw
 title: GPT-4o Copilot Suggestions Model
 author: Fokko Veegens
-canonical_url: https://youtu.be/zZI34xmoWbw
 date: 2025-04-09 09:32:20 +00:00
-permalink: /github-copilot/videos/GPT-4o-Copilot-Suggestions-Model
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - GPT
 - LLM

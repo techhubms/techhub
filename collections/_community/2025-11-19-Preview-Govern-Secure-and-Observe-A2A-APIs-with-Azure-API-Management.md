@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/preview-govern-secure-and-observe-a2a-apis-with-azure-api/ba-p/4469800
 title: 'Preview: Govern, Secure, and Observe A2A APIs with Azure API Management'
 author: budzynski
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/preview-govern-secure-and-observe-a2a-apis-with-azure-api/ba-p/4469800
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 19:21:35 +00:00
-permalink: /ai/community/Preview-Govern-Secure-and-Observe-A2A-APIs-with-Azure-API-Management
 tags:
 - A2A API
 - Agent2Agent

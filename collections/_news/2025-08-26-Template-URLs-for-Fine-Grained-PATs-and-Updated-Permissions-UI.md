@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-26-template-urls-for-fine-grained-pats-and-updated-permissions-ui
 title: Template URLs for Fine-Grained PATs and Updated Permissions UI
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-26-template-urls-for-fine-grained-pats-and-updated-permissions-ui
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-26 21:33:06 +00:00
-permalink: /devops/news/Template-URLs-for-Fine-Grained-PATs-and-Updated-Permissions-UI
 tags:
 - API Integration
 - Automation

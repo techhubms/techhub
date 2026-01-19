@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/research/blog/when-industry-knowledge-meets-pike-rag-the-innovation-behind-signifys-customer-service-boost/
 title: Signify Boosts Customer Service Accuracy with Microsoft PIKE-RAG on Azure
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/research/blog/when-industry-knowledge-meets-pike-rag-the-innovation-behind-signifys-customer-service-boost/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-06 17:14:37 +00:00
-permalink: /ai/news/Signify-Boosts-Customer-Service-Accuracy-with-Microsoft-PIKE-RAG-on-Azure
 tags:
 - Algorithm Optimization
 - Company News

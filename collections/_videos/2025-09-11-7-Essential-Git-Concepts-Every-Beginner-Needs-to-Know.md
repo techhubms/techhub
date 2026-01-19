@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/0F8tFJncsxQ
 title: 7 Essential Git Concepts Every Beginner Needs to Know
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/0F8tFJncsxQ
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-11 14:00:01 +00:00
-permalink: /devops/videos/7-Essential-Git-Concepts-Every-Beginner-Needs-to-Know
 tags:
 - Branches
 - Collaboration

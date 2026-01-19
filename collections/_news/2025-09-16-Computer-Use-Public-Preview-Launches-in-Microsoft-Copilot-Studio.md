@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/computer-use-is-now-in-public-preview-in-microsoft-copilot-studio/
 title: Computer Use Public Preview Launches in Microsoft Copilot Studio
 author: sbaynes
-canonical_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/computer-use-is-now-in-public-preview-in-microsoft-copilot-studio/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-16 17:34:39 +00:00
-permalink: /ai/news/Computer-Use-Public-Preview-Launches-in-Microsoft-Copilot-Studio
 tags:
 - Allow List
 - Automation

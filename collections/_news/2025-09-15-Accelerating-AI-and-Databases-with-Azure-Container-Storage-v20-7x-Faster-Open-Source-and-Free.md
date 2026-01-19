@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/accelerating-ai-and-databases-with-azure-container-storage-now-7-times-faster-and-open-source/
 title: 'Accelerating AI and Databases with Azure Container Storage v2.0: 7x Faster, Open Source, and Free'
 author: Aung Oo
-canonical_url: https://azure.microsoft.com/en-us/blog/accelerating-ai-and-databases-with-azure-container-storage-now-7-times-faster-and-open-source/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-15 15:00:00 +00:00
-permalink: /ai/news/Accelerating-AI-and-Databases-with-Azure-Container-Storage-v20-7x-Faster-Open-Source-and-Free
 tags:
 - AKS
 - Azure Container Storage

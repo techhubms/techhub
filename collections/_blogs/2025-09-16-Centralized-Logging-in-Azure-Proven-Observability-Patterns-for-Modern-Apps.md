@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/centralized-logging-in-azure-proven-observability-patterns-for-modern-apps/
 title: 'Centralized Logging in Azure: Proven Observability Patterns for Modern Apps'
 author: Dellenny
-canonical_url: https://dellenny.com/centralized-logging-in-azure-proven-observability-patterns-for-modern-apps/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-16 08:49:07 +00:00
-permalink: /azure/blogs/Centralized-Logging-in-Azure-Proven-Observability-Patterns-for-Modern-Apps
 tags:
 - AKS
 - Application Insights

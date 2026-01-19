@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-fabric-mcp-public-preview/
 title: 'Introducing Fabric MCP (Preview): Developer-Focused AI Integration for Microsoft Fabric'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-fabric-mcp-public-preview/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-02 15:00:00 +00:00
-permalink: /ai/news/Introducing-Fabric-MCP-Preview-Developer-Focused-AI-Integration-for-Microsoft-Fabric
 tags:
 - .NET 9
 - AI Assisted Development

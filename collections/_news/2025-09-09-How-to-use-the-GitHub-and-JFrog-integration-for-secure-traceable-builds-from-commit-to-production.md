@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/enterprise-software/devsecops/how-to-use-the-github-and-jfrog-integration-for-secure-traceable-builds-from-commit-to-production/
 title: How to use the GitHub and JFrog integration for secure, traceable builds from commit to production
 author: April Yoho
-canonical_url: https://github.blog/enterprise-software/devsecops/how-to-use-the-github-and-jfrog-integration-for-secure-traceable-builds-from-commit-to-production/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-09-09 22:00:00 +00:00
-permalink: /devops/news/How-to-use-the-GitHub-and-JFrog-integration-for-secure-traceable-builds-from-commit-to-production
 tags:
 - Artifact Promotion
 - Artifactory

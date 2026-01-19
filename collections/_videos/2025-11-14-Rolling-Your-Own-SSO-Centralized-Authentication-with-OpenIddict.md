@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=q4NhguFDP5s
 title: 'Rolling Your Own SSO: Centralized Authentication with OpenIddict'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=q4NhguFDP5s
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 07:30:06 +00:00
-permalink: /coding/videos/Rolling-Your-Own-SSO-Centralized-Authentication-with-OpenIddict
 tags:
 - .NET
 - ADFS

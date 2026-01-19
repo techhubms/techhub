@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Lt63g-NeqBM
 title: What's New and Generally Available in SQL Database in Microsoft Fabric
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=Lt63g-NeqBM
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-11 18:26:07 +00:00
-permalink: /ml/videos/Whats-New-and-Generally-Available-in-SQL-Database-in-Microsoft-Fabric
 tags:
 - Azure SQL
 - Cloud Computing

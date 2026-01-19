@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-23-upcoming-changes-to-github-dependabot-alerts-rest-api-offset-based-pagination-parameters-page-first-and-last
 title: Upcoming Changes to GitHub Dependabot Alerts REST API Pagination
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-23-upcoming-changes-to-github-dependabot-alerts-rest-api-offset-based-pagination-parameters-page-first-and-last
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-23 15:35:24 +00:00
-permalink: /devops/news/Upcoming-Changes-to-GitHub-Dependabot-Alerts-REST-API-Pagination
 tags:
 - API Changes
 - API Documentation

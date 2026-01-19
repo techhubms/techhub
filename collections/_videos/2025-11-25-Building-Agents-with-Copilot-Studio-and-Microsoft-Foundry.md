@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=tGbcQZ4WeZ0
 title: Building Agents with Copilot Studio and Microsoft Foundry
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=tGbcQZ4WeZ0
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 15:52:27 +00:00
-permalink: /ai/videos/Building-Agents-with-Copilot-Studio-and-Microsoft-Foundry
 tags:
 - Agent Deployment
 - AI Integration

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/emerging-devops-trends-security-scalability-and-sustainability/?utm_source=rss&utm_medium=rss&utm_campaign=emerging-devops-trends-security-scalability-and-sustainability
 title: 'Emerging DevOps Trends: Security, Scalability and Sustainability'
 author: Harikrishna Kundariya
-canonical_url: https://devops.com/emerging-devops-trends-security-scalability-and-sustainability/?utm_source=rss&utm_medium=rss&utm_campaign=emerging-devops-trends-security-scalability-and-sustainability
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-07-30 10:46:10 +00:00
-permalink: /devops/blogs/Emerging-DevOps-Trends-Security-Scalability-and-Sustainability
 tags:
 - Application Modernization
 - Business Of DevOps

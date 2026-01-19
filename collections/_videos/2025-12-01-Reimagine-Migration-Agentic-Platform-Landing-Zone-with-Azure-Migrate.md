@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=aor0BCCEkks
 title: 'Reimagine Migration: Agentic Platform Landing Zone with Azure Migrate'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=aor0BCCEkks
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-01 08:00:07 +00:00
-permalink: /azure/videos/Reimagine-Migration-Agentic-Platform-Landing-Zone-with-Azure-Migrate
 tags:
 - Agentic Approach
 - Automation

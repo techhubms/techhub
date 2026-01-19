@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/work-smarter-across-multiple-files.html
 title: Work Smarter Across Multiple Files with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/work-smarter-across-multiple-files.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-08-22 00:00:00 +00:00
-permalink: /github-copilot/blogs/Work-Smarter-Across-Multiple-Files-with-GitHub-Copilot
 tags:
 - Agent Mode
 - Authentication

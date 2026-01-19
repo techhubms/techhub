@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/gain-even-more-trust-and-compliance-with-onelake-diagnostics-immutability-generally-available/
 title: Gain Even More Trust and Compliance with OneLake Diagnostics Immutability
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/gain-even-more-trust-and-compliance-with-onelake-diagnostics-immutability-generally-available/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2026-01-12 12:00:00 +00:00
-permalink: /azure/news/Gain-Even-More-Trust-and-Compliance-with-OneLake-Diagnostics-Immutability
 tags:
 - Audit Trails
 - Azure Blob Storage

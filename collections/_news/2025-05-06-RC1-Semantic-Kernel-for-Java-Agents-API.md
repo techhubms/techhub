@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/semantic-kernel/preview-release-semantic-kernel-for-java-agents-api/
 title: RC1 - Semantic Kernel for Java Agents API
 author: Derek Keeler
-canonical_url: https://devblogs.microsoft.com/semantic-kernel/preview-release-semantic-kernel-for-java-agents-api/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-05-06 09:11:34 +00:00
-permalink: /ai/news/RC1-Semantic-Kernel-for-Java-Agents-API
 tags:
 - Agents
 - API

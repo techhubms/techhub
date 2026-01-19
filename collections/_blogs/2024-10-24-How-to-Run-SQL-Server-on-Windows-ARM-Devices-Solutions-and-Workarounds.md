@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://weblog.west-wind.com/posts/2024/Oct/24/Using-Sql-Server-on-Windows-ARM
 title: 'How to Run SQL Server on Windows ARM Devices: Solutions and Workarounds'
 author: Rick Strahl
-canonical_url: https://weblog.west-wind.com/posts/2024/Oct/24/Using-Sql-Server-on-Windows-ARM
 viewing_mode: external
 feed_name: Rick Strahl's Blog
-feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2024-10-24 21:59:54 +00:00
-permalink: /coding/blogs/How-to-Run-SQL-Server-on-Windows-ARM-Devices-Solutions-and-Workarounds
 tags:
 - .NET
 - ARM64

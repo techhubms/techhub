@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/exciting-news-azure-ai-blogs-have-come-together-in-the-new-azure/ba-p/4443002
 title: Azure AI Blogs Consolidate into New Azure AI Foundry Blog
 author: GalimahB
-canonical_url: https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/exciting-news-azure-ai-blogs-have-come-together-in-the-new-azure/ba-p/4443002
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI
 date: 2025-08-13 19:05:27 +00:00
-permalink: /ai/community/Azure-AI-Blogs-Consolidate-into-New-Azure-AI-Foundry-Blog
 tags:
 - AI News
 - AI Platform Blog

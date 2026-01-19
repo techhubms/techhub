@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devclass.com/2026/01/14/code-signing-windows-apps-may-be-easier-and-more-secure-with-new-azure-artifact-service/
 title: Code Signing Windows Apps Easier and More Secure with Azure Artifact Signing
 author: Tim Anderson
-canonical_url: https://devclass.com/2026/01/14/code-signing-windows-apps-may-be-easier-and-more-secure-with-new-azure-artifact-service/
 viewing_mode: external
 feed_name: DevClass
-feed_url: https://devclass.com/feed/
 date: 2026-01-14 15:32:25 +00:00
-permalink: /azure/blogs/Code-Signing-Windows-Apps-Easier-and-More-Secure-with-Azure-Artifact-Signing
 tags:
 - AAS
 - Application Security

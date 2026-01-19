@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/chD-UE4DmJk
 title: PR Body Generation in WebUI
 author: Randy Pagels
-canonical_url: https://youtu.be/chD-UE4DmJk
 date: 2024-12-17 23:00:34 +00:00
-permalink: /github-copilot/videos/PR-Body-Generation-in-WebUI
 viewing_mode: internal
-section: github-copilot
 ghes_support: false
 plans:
 - Free
-alt-collection: features
 tags:
 - Pull Request
 - Web UI

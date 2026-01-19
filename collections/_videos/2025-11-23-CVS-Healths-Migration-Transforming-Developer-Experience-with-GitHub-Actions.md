@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=w2WRT2eXISU
 title: 'CVS Health’s Migration: Transforming Developer Experience with GitHub Actions'
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=w2WRT2eXISU
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-23 15:01:54 +00:00
-permalink: /devops/videos/CVS-Healths-Migration-Transforming-Developer-Experience-with-GitHub-Actions
 tags:
 - CI/CD
 - Collaboration

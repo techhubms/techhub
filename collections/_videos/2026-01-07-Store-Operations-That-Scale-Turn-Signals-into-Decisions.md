@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=0ccUfvqzalA
 title: 'Store Operations That Scale: Turn Signals into Decisions'
 author: Microsoft Cloud
-canonical_url: https://www.youtube.com/watch?v=0ccUfvqzalA
 viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2026-01-07 14:00:03 +00:00
-permalink: /ai/videos/Store-Operations-That-Scale-Turn-Signals-into-Decisions
 tags:
 - '#agenticai'
 - '#copilotstudio'

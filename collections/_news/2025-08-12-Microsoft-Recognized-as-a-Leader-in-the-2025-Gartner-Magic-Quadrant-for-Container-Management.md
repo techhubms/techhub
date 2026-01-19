@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/microsoft-is-a-leader-in-the-2025-gartner-magic-quadrant-for-container-management/
 title: Microsoft Recognized as a Leader in the 2025 Gartner Magic Quadrant for Container Management
 author: Sean McKenna
-canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-is-a-leader-in-the-2025-gartner-magic-quadrant-for-container-management/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-12 15:00:00 +00:00
-permalink: /ai/news/Microsoft-Recognized-as-a-Leader-in-the-2025-Gartner-Magic-Quadrant-for-Container-Management
 tags:
 - AI Workloads
 - AKS

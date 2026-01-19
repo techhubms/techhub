@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=SXo5EaXNJl0
 title: Modernizing Legacy Apps with GitHub Copilot and Azure
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=SXo5EaXNJl0
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-10 00:00:27 +00:00
-permalink: /github-copilot/videos/Modernizing-Legacy-Apps-with-GitHub-Copilot-and-Azure
 tags:
 - .NET
 - AI Development

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/enhancing-resiliency-in-azure-compute-gallery/ba-p/4470082
 title: 'Enhancing Resiliency in Azure Compute Gallery: Soft Delete and Zonal Redundant Storage'
 author: Sandeep-Raichura
-canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/enhancing-resiliency-in-azure-compute-gallery/ba-p/4470082
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:24:09 +00:00
-permalink: /azure/community/Enhancing-Resiliency-in-Azure-Compute-Gallery-Soft-Delete-and-Zonal-Redundant-Storage
 tags:
 - Access Control
 - Azure Compute Gallery

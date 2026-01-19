@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/from-firefighting-to-forward-thinking-my-real-world-lessons-in-devops-and-cloud-engineering/?utm_source=rss&utm_medium=rss&utm_campaign=from-firefighting-to-forward-thinking-my-real-world-lessons-in-devops-and-cloud-engineering
 title: 'From Firefighting to Forward-Thinking: Real-World Lessons in DevOps and Cloud Engineering'
 author: Bhanuteja Somarouthu
-canonical_url: https://devops.com/from-firefighting-to-forward-thinking-my-real-world-lessons-in-devops-and-cloud-engineering/?utm_source=rss&utm_medium=rss&utm_campaign=from-firefighting-to-forward-thinking-my-real-world-lessons-in-devops-and-cloud-engineering
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-13 08:48:58 +00:00
-permalink: /devops/blogs/From-Firefighting-to-Forward-Thinking-Real-World-Lessons-in-DevOps-and-Cloud-Engineering
 tags:
 - Business Of DevOps
 - Checkov

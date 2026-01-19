@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/working-with-stacked-branches-in-git-part-2/
 title: 'Working with Stacked Branches in Git: Rebasing, Pushing, and Handling Merges'
 author: Andrew Lock
-canonical_url: https://andrewlock.net/working-with-stacked-branches-in-git-part-2/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-06-24 09:00:00 +00:00
-permalink: /devops/blogs/Working-with-Stacked-Branches-in-Git-Rebasing-Pushing-and-Handling-Merges
 tags:
 - Branch Management
 - Continuous Integration

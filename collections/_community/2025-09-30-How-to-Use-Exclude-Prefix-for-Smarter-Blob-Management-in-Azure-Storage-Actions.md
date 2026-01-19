@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/exclude-prefix-in-azure-storage-action-smarter-blob-management/ba-p/4440075
 title: How to Use Exclude Prefix for Smarter Blob Management in Azure Storage Actions
 author: ManjunathS
-canonical_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/exclude-prefix-in-azure-storage-action-smarter-blob-management/ba-p/4440075
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-30 09:26:23 +00:00
-permalink: /azure/community/How-to-Use-Exclude-Prefix-for-Smarter-Blob-Management-in-Azure-Storage-Actions
 tags:
 - Automation
 - Azure Portal

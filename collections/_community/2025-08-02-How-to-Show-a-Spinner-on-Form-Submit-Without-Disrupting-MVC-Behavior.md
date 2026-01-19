@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mfpq2m/how_do_i_show_a_spinner_btn_on_form_submit/
 title: How to Show a Spinner on Form Submit Without Disrupting MVC Behavior
 author: Fragrant_Ride_29
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mfpq2m/how_do_i_show_a_spinner_btn_on_form_submit/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-02 12:47:54 +00:00
-permalink: /coding/community/How-to-Show-a-Spinner-on-Form-Submit-Without-Disrupting-MVC-Behavior
 tags:
 - .NET
 - AJAX

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=DcIlavh44bM
 title: Rubber Duck Thursdays - Build for the Love of Code
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=DcIlavh44bM
 viewing_mode: internal
 feed_name: GitHub's Youtube channel
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-24 23:35:30 +00:00
-permalink: /coding/videos/Rubber-Duck-Thursdays-Build-for-the-Love-of-Code
 tags:
 - Collaborative Coding
 - GitHub

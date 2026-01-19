@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ggyEFocbRiQ
 title: Azure Update - 15th August 2025
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=ggyEFocbRiQ
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-15 14:36:41 +00:00
-permalink: /azure/videos/Azure-Update-15th-August-2025
 tags:
 - ADF Upsert
 - App Service

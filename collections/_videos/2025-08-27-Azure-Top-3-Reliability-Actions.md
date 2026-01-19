@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=UDrjP8sBI94
 title: Azure Top 3 Reliability Actions
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=UDrjP8sBI94
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-27 21:22:32 +00:00
-permalink: /azure/videos/Azure-Top-3-Reliability-Actions
 tags:
 - Availability Zones
 - Azure Architect

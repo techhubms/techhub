@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mfsv2g/what_does_professional_code_look_like/
 title: What does professional code look like?
 author: RipeTide18
-canonical_url: https://www.reddit.com/r/csharp/comments/1mfsv2g/what_does_professional_code_look_like/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-02 15:09:10 +00:00
-permalink: /coding/community/What-does-professional-code-look-like
 tags:
 - Backend Development
 - Best Practices

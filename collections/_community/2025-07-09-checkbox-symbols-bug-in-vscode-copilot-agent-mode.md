@@ -1,11 +1,9 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1lvekgv/visual_studio_code_github_copilot_agent_mode/
 title: Checkbox Symbols Bug in VS Code Copilot Agent Mode
 author: ZomboBrain
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1lvekgv/visual_studio_code_github_copilot_agent_mode/
 viewing_mode: external
 date: 2025-07-09 09:41:14 +00:00
-permalink: /github-copilot/community/checkbox-symbols-bug-in-vscode-copilot-agent-mode
 tags:
 - Bug Report
 - Checkbox Issue

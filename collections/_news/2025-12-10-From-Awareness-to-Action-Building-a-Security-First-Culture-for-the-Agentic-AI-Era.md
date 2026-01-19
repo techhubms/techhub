@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/12/10/from-awareness-to-action-building-a-security-first-culture-for-the-agentic-ai-era/
 title: 'From Awareness to Action: Building a Security-First Culture for the Agentic AI Era'
 author: Mark Miller
-canonical_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/12/10/from-awareness-to-action-building-a-security-first-culture-for-the-agentic-ai-era/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-10 18:00:00 +00:00
-permalink: /ai/news/From-Awareness-to-Action-Building-a-Security-First-Culture-for-the-Agentic-AI-Era
 tags:
 - Agentic AI
 - AI Adoption

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/11/azure-local-well-architected-framework-and-review-assessment/
 title: Azure Local Well-Architected Framework and Review Assessment
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/11/azure-local-well-architected-framework-and-review-assessment/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-11-04 08:00:25 +00:00
-permalink: /azure/blogs/Azure-Local-Well-Architected-Framework-and-Review-Assessment
 tags:
 - AKS Arc
 - Assesement

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure/mine-your-azure-backup-data-it-could-save-you/m-p/4448003#M22143
 title: Mine Your Azure Backup Data to Identify Hidden Costs
 author: Adeelaziz
-canonical_url: https://techcommunity.microsoft.com/t5/azure/mine-your-azure-backup-data-it-could-save-you/m-p/4448003#M22143
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-25 19:13:57 +00:00
-permalink: /azure/community/Mine-Your-Azure-Backup-Data-to-Identify-Hidden-Costs
 tags:
 - Azure Backup
 - Backup Automation

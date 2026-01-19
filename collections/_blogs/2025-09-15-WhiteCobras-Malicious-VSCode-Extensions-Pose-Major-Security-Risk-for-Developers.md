@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/whitecobra-targets-developers-with-dozens-of-malicious-extensions/
 title: WhiteCobra’s Malicious VSCode Extensions Pose Major Security Risk for Developers
 author: Jeff Burt
-canonical_url: https://devops.com/whitecobra-targets-developers-with-dozens-of-malicious-extensions/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-15 16:56:48 +00:00
-permalink: /devops/blogs/WhiteCobras-Malicious-VSCode-Extensions-Pose-Major-Security-Risk-for-Developers
 tags:
 - Attack Chain
 - C2 Server

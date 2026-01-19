@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://thenewstack.io/from-vibe-coding-to-vibe-engineering-its-time-to-stop-riffing-with-ai/
 title: "From Vibe Coding to Vibe Engineering: It's Time to Stop Riffing with AI"
 author: Tammuz Dubnov
-canonical_url: https://thenewstack.io/from-vibe-coding-to-vibe-engineering-its-time-to-stop-riffing-with-ai/
 viewing_mode: external
 feed_name: The New Stack
-feed_url: https://thenewstack.io/feed/
 date: 2025-07-09 10:00:00 +00:00
-permalink: /ai/community/From-Vibe-Coding-to-Vibe-Engineering-Its-Time-to-Stop-Riffing-with-AI
 tags:
 - AI Assisted Development
 - Architecture

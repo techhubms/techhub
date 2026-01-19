@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ZpRsjGkwWbA
 title: Best Practices for Modernizing Apps and Databases at Scale with Azure
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=ZpRsjGkwWbA
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 15:42:31 +00:00
-permalink: /ai/videos/Best-Practices-for-Modernizing-Apps-and-Databases-at-Scale-with-Azure
 tags:
 - Accessibility
 - AI Readiness

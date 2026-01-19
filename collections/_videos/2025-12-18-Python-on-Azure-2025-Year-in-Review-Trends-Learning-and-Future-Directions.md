@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=FiAH8Lh1pxM
 title: 'Python on Azure: 2025 Year in Review – Trends, Learning, and Future Directions'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=FiAH8Lh1pxM
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-18 13:00:35 +00:00
-permalink: /coding/videos/Python-on-Azure-2025-Year-in-Review-Trends-Learning-and-Future-Directions
 tags:
 - AI
 - AI Trends

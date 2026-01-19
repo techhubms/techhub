@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk7764/copilot_making_edits_when_in_ask_mode_not_in/
 title: Unexpected Code Edits by Copilot in ASK Mode
 author: Nomadic_Dev
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mk7764/copilot_making_edits_when_in_ask_mode_not_in/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-07 18:00:25 +00:00
-permalink: /github-copilot/community/Unexpected-Code-Edits-by-Copilot-in-ASK-Mode
 tags:
 - AI Powered IDE
 - Automated Code Edits

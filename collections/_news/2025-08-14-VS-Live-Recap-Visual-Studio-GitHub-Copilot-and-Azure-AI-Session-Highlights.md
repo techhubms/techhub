@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/from-redmond-to-san-diego-vs-live-highlights-session-examples-and-whats-next/
 title: 'VS Live! Recap: Visual Studio, GitHub Copilot, and Azure AI Session Highlights'
 author: stclarke
-canonical_url: https://devblogs.microsoft.com/visualstudio/from-redmond-to-san-diego-vs-live-highlights-session-examples-and-whats-next/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-14 17:05:34 +00:00
-permalink: /github-copilot/news/VS-Live-Recap-Visual-Studio-GitHub-Copilot-and-Azure-AI-Session-Highlights
 tags:
 - .NET
 - AI Assisted Debugging

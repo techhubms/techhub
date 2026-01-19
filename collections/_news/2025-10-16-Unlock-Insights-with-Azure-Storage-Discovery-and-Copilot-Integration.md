@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/
 title: Unlock Insights with Azure Storage Discovery and Copilot Integration
 author: Maneesh Sah
-canonical_url: https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-16 15:00:00 +00:00
-permalink: /ai/news/Unlock-Insights-with-Azure-Storage-Discovery-and-Copilot-Integration
 tags:
 - Azure Blob Storage
 - Azure Data Lake Storage

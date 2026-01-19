@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/issuing-custom-claims-using-directory-extension-attributes-in/ba-p/4441980
 title: Issuing Custom Claims Using Directory Extension Attributes in Microsoft Entra ID
 author: Farooque
-canonical_url: https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/issuing-custom-claims-using-directory-extension-attributes-in/ba-p/4441980
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-11 05:54:53 +00:00
-permalink: /security/community/Issuing-Custom-Claims-Using-Directory-Extension-Attributes-in-Microsoft-Entra-ID
 tags:
 - Acceptmappedclaims
 - Azure Active Directory

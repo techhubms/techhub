@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/creating-your-first-sample-game-with-monogame/
 title: Creating your first sample game with MonoGame
 author: Andrew Lock
-canonical_url: https://andrewlock.net/creating-your-first-sample-game-with-monogame/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-06-03 09:00:00 +00:00
-permalink: /coding/blogs/Creating-your-first-sample-game-with-MonoGame
 tags:
 - .NET
 - .NET 8

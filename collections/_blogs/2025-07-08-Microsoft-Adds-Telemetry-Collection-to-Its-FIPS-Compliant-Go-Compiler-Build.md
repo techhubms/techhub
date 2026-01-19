@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devclass.com/2025/07/08/things-go-better-with-telemetry-microsoft-adds-phone-home-to-its-go-build/
 title: Microsoft Adds Telemetry Collection to Its FIPS-Compliant Go Compiler Build
 author: Tim Anderson
-canonical_url: https://devclass.com/2025/07/08/things-go-better-with-telemetry-microsoft-adds-phone-home-to-its-go-build/
 viewing_mode: external
 feed_name: DevClass
-feed_url: https://devclass.com/feed/
 date: 2025-07-08 15:55:00 +00:00
-permalink: /azure/blogs/Microsoft-Adds-Telemetry-Collection-to-Its-FIPS-Compliant-Go-Compiler-Build
 tags:
 - Azure Linux
 - BoringCrypto

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=i4hvn_Ns9kU
 title: Modernize on-premises VMware environments with Azure VMware Solution
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=i4hvn_Ns9kU
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:22:23 +00:00
-permalink: /ai/videos/Modernize-on-premises-VMware-environments-with-Azure-VMware-Solution
 tags:
 - AVS
 - Azure Arc

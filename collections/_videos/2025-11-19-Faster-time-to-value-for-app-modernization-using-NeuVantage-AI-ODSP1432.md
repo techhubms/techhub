@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=dTJD9krRln8
 title: Faster time-to-value for app modernization using NeuVantage AI | ODSP1432
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=dTJD9krRln8
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 12:53:00 +00:00
-permalink: /ai/videos/Faster-time-to-value-for-app-modernization-using-NeuVantage-AI-ODSP1432
 tags:
 - Agenticbusinessapplications
 - AI Driven Assessment

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/announcing-the-public-preview-of-amlfs-20-azure-managed-lustre/ba-p/4470665
 title: 'Announcing Public Preview of AMLFS 20: New Azure Managed Lustre SKU for AI and HPC'
 author: wolfgangdesalvador
-canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/announcing-the-public-preview-of-amlfs-20-azure-managed-lustre/ba-p/4470665
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:00:00 +00:00
-permalink: /ai/community/Announcing-Public-Preview-of-AMLFS-20-New-Azure-Managed-Lustre-SKU-for-AI-and-HPC
 tags:
 - AI Workloads
 - AMLFS 20

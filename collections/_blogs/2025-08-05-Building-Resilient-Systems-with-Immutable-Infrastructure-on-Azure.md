@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/building-resilient-systems-with-immutable-infrastructure-on-azure/
 title: Building Resilient Systems with Immutable Infrastructure on Azure
 author: Dellenny
-canonical_url: https://dellenny.com/building-resilient-systems-with-immutable-infrastructure-on-azure/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-05 09:46:27 +00:00
-permalink: /coding/blogs/Building-Resilient-Systems-with-Immutable-Infrastructure-on-Azure
 tags:
 - Architecture
 - ARM Templates

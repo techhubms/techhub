@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=PRGo-RH-sL4
 title: Optimize Azure Costs with Reserved VM Instances
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=PRGo-RH-sL4
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-28 07:00:24 +00:00
-permalink: /azure/videos/Optimize-Azure-Costs-with-Reserved-VM-Instances
 tags:
 - Auto Renewal
 - Azure Advisor

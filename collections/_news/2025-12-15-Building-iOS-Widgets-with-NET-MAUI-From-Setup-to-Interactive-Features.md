@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/how-to-build-ios-widgets-with-dotnet-maui/
 title: 'Building iOS Widgets with .NET MAUI: From Setup to Interactive Features'
 author: Toine de Boer
-canonical_url: https://devblogs.microsoft.com/dotnet/how-to-build-ios-widgets-with-dotnet-maui/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-12-15 18:05:00 +00:00
-permalink: /coding/news/Building-iOS-Widgets-with-NET-MAUI-From-Setup-to-Interactive-Features
 tags:
 - .NET
 - .NET For Ios

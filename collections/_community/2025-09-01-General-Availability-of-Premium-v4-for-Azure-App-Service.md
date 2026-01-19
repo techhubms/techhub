@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-premium-v4-for-azure-app/ba-p/4446204
 title: General Availability of Premium v4 for Azure App Service
 author: Stefan_Schackow
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-premium-v4-for-azure-app/ba-p/4446204
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-01 15:44:34 +00:00
-permalink: /azure/community/General-Availability-of-Premium-v4-for-Azure-App-Service
 tags:
 - App Modernization
 - ASP.NET

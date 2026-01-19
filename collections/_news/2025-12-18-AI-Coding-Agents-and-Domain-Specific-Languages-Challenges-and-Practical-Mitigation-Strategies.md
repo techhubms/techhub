@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/all-things-azure/ai-coding-agents-domain-specific-languages/
 title: 'AI Coding Agents and Domain-Specific Languages: Challenges and Practical Mitigation Strategies'
 author: Chris Romp
-canonical_url: https://devblogs.microsoft.com/all-things-azure/ai-coding-agents-domain-specific-languages/
 viewing_mode: external
 feed_name: Microsoft All Things Azure Blog
-feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-12-18 18:36:17 +00:00
-permalink: /github-copilot/news/AI-Coding-Agents-and-Domain-Specific-Languages-Challenges-and-Practical-Mitigation-Strategies
 tags:
 - AI Coding Assistants
 - Azure Bicep

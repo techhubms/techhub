@@ -14,14 +14,13 @@ public record ContentItemDetailDto
     public required long DateEpoch { get; init; }
     public required string DateIso { get; init; }
     public required string CollectionName { get; init; }
-    public string? AltCollection { get; init; }
+    public string? FeedName { get; init; }
     public required IReadOnlyList<string> SectionNames { get; init; }
     public required string PrimarySection { get; init; }
     public required IReadOnlyList<string> Tags { get; init; }
     public required string RenderedHtml { get; init; }
     public required string Excerpt { get; init; }
     public string? ExternalUrl { get; init; }
-    public string? VideoId { get; init; }
     public string? ViewingMode { get; init; }
     public required string Url { get; init; }
 

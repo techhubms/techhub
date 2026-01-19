@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/security/vulnerability-research/bugs-that-survive-the-heat-of-continuous-fuzzing/
 title: 'Why Bugs Survive Continuous Fuzzing: Lessons from OSS-Fuzz Research'
 author: Antonio Morales
-canonical_url: https://github.blog/security/vulnerability-research/bugs-that-survive-the-heat-of-continuous-fuzzing/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-12-29 22:01:14 +00:00
-permalink: /devops/news/Why-Bugs-Survive-Continuous-Fuzzing-Lessons-from-OSS-Fuzz-Research
 tags:
 - AFL++
 - CI/CD

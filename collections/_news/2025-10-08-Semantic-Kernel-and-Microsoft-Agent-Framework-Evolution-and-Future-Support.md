@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-and-microsoft-agent-framework/
 title: 'Semantic Kernel and Microsoft Agent Framework: Evolution and Future Support'
 author: Shawn Henry
-canonical_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-and-microsoft-agent-framework/
 viewing_mode: external
 feed_name: Microsoft Semantic Kernel Blog
-feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-10-08 06:51:06 +00:00
-permalink: /ai/news/Semantic-Kernel-and-Microsoft-Agent-Framework-Evolution-and-Future-Support
 tags:
 - .NET
 - Agentic AI

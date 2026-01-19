@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-small-language-modes/ba-p/4462827
 title: 'Understanding Small Language Models: The Role of SLMs and Microsoft Azure AI Foundry'
 author: Sherrylist
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-small-language-modes/ba-p/4462827
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-28 07:00:00 +00:00
-permalink: /ai/community/Understanding-Small-Language-Models-The-Role-of-SLMs-and-Microsoft-Azure-AI-Foundry
 tags:
 - AI Deployment
 - AI Privacy

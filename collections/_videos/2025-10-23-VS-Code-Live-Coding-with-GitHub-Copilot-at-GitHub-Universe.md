@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=EXURiXZ-8YU
 title: VS Code Live Coding with GitHub Copilot at GitHub Universe
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=EXURiXZ-8YU
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-23 18:10:19 +00:00
-permalink: /github-copilot/videos/VS-Code-Live-Coding-with-GitHub-Copilot-at-GitHub-Universe
 tags:
 - AI Powered Development
 - Code

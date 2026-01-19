@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/10/optimize-azure-costs-with-reserved-instances/
 title: Optimize Azure Costs with Reserved Instances
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/10/optimize-azure-costs-with-reserved-instances/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-10-31 12:57:06 +00:00
-permalink: /azure/blogs/Optimize-Azure-Costs-with-Reserved-Instances
 tags:
 - Auto Renewal
 - Azure Advisor

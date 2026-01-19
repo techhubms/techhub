@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-hits-the-road-with-oracle-ai-world-tour-2026/ba-p/4477598
 title: Modernizing Oracle Workloads with Oracle Database@Azure and AI Solutions
 author: NadineSalem
-canonical_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-hits-the-road-with-oracle-ai-world-tour-2026/ba-p/4477598
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-15 19:23:38 +00:00
-permalink: /ai/community/Modernizing-Oracle-Workloads-with-Oracle-DatabaseAzure-and-AI-Solutions
 tags:
 - AI Integration
 - Azure Defender

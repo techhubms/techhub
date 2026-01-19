@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ZtHjLHwgy68
 title: No-code Modernization for ASP.NET with Managed Instance on Azure App Service
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=ZtHjLHwgy68
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-10 00:00:42 +00:00
-permalink: /coding/videos/No-code-Modernization-for-ASPNET-with-Managed-Instance-on-Azure-App-Service
 tags:
 - .NET
 - Agentic Workflows

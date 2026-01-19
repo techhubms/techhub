@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-13-spark-resilience-improvements
 title: Spark Resilience Improvements Enhance Reliability and Iteration Experience
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-13-spark-resilience-improvements
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-13 20:53:55 +00:00
-permalink: /coding/news/Spark-Resilience-Improvements-Enhance-Reliability-and-Iteration-Experience
 tags:
 - API Failover
 - Application Development

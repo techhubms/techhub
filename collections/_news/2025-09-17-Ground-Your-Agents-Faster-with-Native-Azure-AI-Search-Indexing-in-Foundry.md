@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/ground-your-agents-faster-native-azure-ai-search-indexing-foundry/
 title: Ground Your Agents Faster with Native Azure AI Search Indexing in Foundry
 author: Farzad Sunavala
-canonical_url: https://devblogs.microsoft.com/foundry/ground-your-agents-faster-native-azure-ai-search-indexing-foundry/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-09-17 08:00:51 +00:00
-permalink: /ai/news/Ground-Your-Agents-Faster-with-Native-Azure-AI-Search-Indexing-in-Foundry
 tags:
 - ADLS Gen2
 - Agent Development

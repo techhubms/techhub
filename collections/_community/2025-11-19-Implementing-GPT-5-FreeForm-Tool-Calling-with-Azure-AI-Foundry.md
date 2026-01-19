@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/gpt-5-freeform-tool-calling-in-typescript-on-azure-ai-foundry/ba-p/4469682
 title: Implementing GPT-5 FreeForm Tool Calling with Azure AI Foundry
 author: Julia_Muiruri
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/gpt-5-freeform-tool-calling-in-typescript-on-azure-ai-foundry/ba-p/4469682
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 18:29:45 +00:00
-permalink: /ai/community/Implementing-GPT-5-FreeForm-Tool-Calling-with-Azure-AI-Foundry
 tags:
 - Agentic Workflow
 - API Integration

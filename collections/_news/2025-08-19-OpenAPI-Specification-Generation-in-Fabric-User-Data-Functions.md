@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/openapi-specification-code-generation-now-available-in-fabric-user-data-functions/
 title: OpenAPI Specification Generation in Fabric User Data Functions
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/openapi-specification-code-generation-now-available-in-fabric-user-data-functions/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-19 10:00:00 +00:00
-permalink: /ai/news/OpenAPI-Specification-Generation-in-Fabric-User-Data-Functions
 tags:
 - Agentic Use Cases
 - AI Agents

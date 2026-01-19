@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-21-pull-request-files-changed-public-preview-experience-august-21-updates
 title: "GitHub Pull Request 'Files Changed' Public Preview: August 21 Updates"
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-21-pull-request-files-changed-public-preview-experience-august-21-updates
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-21 19:44:25 +00:00
-permalink: /devops/news/GitHub-Pull-Request-Files-Changed-Public-Preview-August-21-Updates
 tags:
 - Bug Fixes
 - Code Review

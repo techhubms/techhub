@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/integrating-copilot-studio-with-power-automate-for-end-to-end-workflows/
 title: Integrating Copilot Studio with Power Automate for End-to-End Workflows
 author: Dellenny
-canonical_url: https://dellenny.com/integrating-copilot-studio-with-power-automate-for-end-to-end-workflows/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-19 09:15:44 +00:00
-permalink: /ai/blogs/Integrating-Copilot-Studio-with-Power-Automate-for-End-to-End-Workflows
 tags:
 - AI Workflows
 - Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=dxUsmfYqBAI
 title: 'Secure by Design: Upcoming CMK and Auditing Features in Fabric SQL Database'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=dxUsmfYqBAI
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-05 17:01:13 +00:00
-permalink: /azure/videos/Secure-by-Design-Upcoming-CMK-and-Auditing-Features-in-Fabric-SQL-Database
 tags:
 - Access Control
 - Auditing

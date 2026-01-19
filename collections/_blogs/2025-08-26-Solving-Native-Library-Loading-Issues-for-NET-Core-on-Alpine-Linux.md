@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/fixing-an-old-dotnet-core-native-library-loading-issue-on-alpine/
 title: Solving Native Library Loading Issues for .NET Core on Alpine Linux
 author: Andrew Lock
-canonical_url: https://andrewlock.net/fixing-an-old-dotnet-core-native-library-loading-issue-on-alpine/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-08-26 10:00:00 +00:00
-permalink: /coding/blogs/Solving-Native-Library-Loading-Issues-for-NET-Core-on-Alpine-Linux
 tags:
 - .NET 3.1
 - .NET 5

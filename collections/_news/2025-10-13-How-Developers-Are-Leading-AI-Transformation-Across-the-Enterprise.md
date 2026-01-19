@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/10/13/fyai-why-developers-will-lead-ai-transformation-across-the-enterprise/
 title: How Developers Are Leading AI Transformation Across the Enterprise
 author: Toby Bowers
-canonical_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/10/13/fyai-why-developers-will-lead-ai-transformation-across-the-enterprise/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-13 15:10:00 +00:00
-permalink: /github-copilot/news/How-Developers-Are-Leading-AI-Transformation-Across-the-Enterprise
 tags:
 - Agent Factory
 - Agentic DevOps

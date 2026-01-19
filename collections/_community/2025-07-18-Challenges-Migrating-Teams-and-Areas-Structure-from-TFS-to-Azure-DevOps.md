@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/azuredevops/comments/1m32qpm/teams_vs_areas/
 title: Challenges Migrating Teams and Areas Structure from TFS to Azure DevOps
 author: theguru1974
-canonical_url: https://www.reddit.com/r/azuredevops/comments/1m32qpm/teams_vs_areas/
 viewing_mode: external
 feed_name: Reddit Azure DevOps
-feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-18 13:45:18 +00:00
-permalink: /azure/community/Challenges-Migrating-Teams-and-Areas-Structure-from-TFS-to-Azure-DevOps
 tags:
 - Areas
 - Azure DevOps

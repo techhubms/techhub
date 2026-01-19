@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-17-gpt-5-2-is-now-generally-available-in-github-copilot
 title: GPT-5.2 is now generally available in GitHub Copilot
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-17-gpt-5-2-is-now-generally-available-in-github-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-17 18:12:19 +00:00
-permalink: /github-copilot/news/GPT-52-is-now-generally-available-in-GitHub-Copilot
 tags:
 - AI Model
 - Chat Model

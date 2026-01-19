@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://jessehouwing.net/authenticate-connect-mggraph-using-oidc-in-github-actions/
 title: How to Authenticate Connect-MgGraph Using OIDC in GitHub Actions
 author: Jesse Houwing
-canonical_url: https://jessehouwing.net/authenticate-connect-mggraph-using-oidc-in-github-actions/
 viewing_mode: external
 feed_name: Jesse Houwing's Blog
-feed_url: https://jessehouwing.net/rss/
 date: 2025-06-10 15:08:58 +00:00
-permalink: /azure/blogs/How-to-Authenticate-Connect-MgGraph-Using-OIDC-in-GitHub-Actions
 tags:
 - Access Token
 - Automation

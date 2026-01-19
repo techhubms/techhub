@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture/boosting-performance-with-the-materialized-view-pattern-in-azure/m-p/4438105#M776
 title: Boosting Performance with the Materialized View Pattern in Azure
 author: JohnNaguib
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture/boosting-performance-with-the-materialized-view-pattern-in-azure/m-p/4438105#M776
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-07-30 07:46:20 +00:00
-permalink: /ml/community/Boosting-Performance-with-the-Materialized-View-Pattern-in-Azure
 tags:
 - Analytical Dashboards
 - Cost Effective Processing

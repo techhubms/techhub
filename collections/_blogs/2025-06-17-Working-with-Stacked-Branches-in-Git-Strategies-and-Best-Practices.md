@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/working-with-stacked-branches-in-git-part-1/
 title: 'Working with Stacked Branches in Git: Strategies and Best Practices'
 author: Andrew Lock
-canonical_url: https://andrewlock.net/working-with-stacked-branches-in-git-part-1/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-06-17 09:00:00 +00:00
-permalink: /devops/blogs/Working-with-Stacked-Branches-in-Git-Strategies-and-Best-Practices
 tags:
 - Automation
 - Branch Management

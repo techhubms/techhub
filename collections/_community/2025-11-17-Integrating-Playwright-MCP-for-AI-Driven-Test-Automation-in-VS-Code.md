@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-integrate-playwright-mcp-for-ai-driven-test-automation/ba-p/4470372
 title: Integrating Playwright MCP for AI-Driven Test Automation in VS Code
 author: LeenaShaw
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-integrate-playwright-mcp-for-ai-driven-test-automation/ba-p/4470372
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-17 17:15:13 +00:00
-permalink: /ai/community/Integrating-Playwright-MCP-for-AI-Driven-Test-Automation-in-VS-Code
 tags:
 - Adaptive Testing
 - AI Assisted Testing

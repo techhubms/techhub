@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/azure-copilot-migration-agent-bringing-agentic-migration-and/ba-p/4471329
 title: Accelerate Cloud Migration with Azure Copilot Migration Agent
 author: shashban
-canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/azure-copilot-migration-agent-bringing-agentic-migration-and/ba-p/4471329
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 12:36:16 +00:00
-permalink: /ai/community/Accelerate-Cloud-Migration-with-Azure-Copilot-Migration-Agent
 tags:
 - AI Driven Automation
 - Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=SKQyfHBfvpY
 title: Enhancing Data Security Investigations with Microsoft Purview and AI
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=SKQyfHBfvpY
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 07:50:27 +00:00
-permalink: /ai/videos/Enhancing-Data-Security-Investigations-with-Microsoft-Purview-and-AI
 tags:
 - Advanced Threat Detection
 - AI Based Security

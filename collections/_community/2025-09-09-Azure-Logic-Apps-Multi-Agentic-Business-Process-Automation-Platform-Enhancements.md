@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-logic-apps-ushering-in-the-era-of-multi-agentic-business/ba-p/4452275
 title: 'Azure Logic Apps: Multi-Agentic Business Process Automation Platform Enhancements'
 author: DivSwa
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-logic-apps-ushering-in-the-era-of-multi-agentic-business/ba-p/4452275
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-09 18:11:58 +00:00
-permalink: /ai/community/Azure-Logic-Apps-Multi-Agentic-Business-Process-Automation-Platform-Enhancements
 tags:
 - A2A Standard
 - Agent Based Architecture

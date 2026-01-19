@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/mongodb-efcore-provider-queryable-encryption-vector-search/
 title: 'Secure and Intelligent: Queryable Encryption and Vector Search in MongoDB EF Core Provider'
 author: Rishit Bhatia, Luce Carter
-canonical_url: https://devblogs.microsoft.com/dotnet/mongodb-efcore-provider-queryable-encryption-vector-search/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2026-01-07 18:05:00 +00:00
-permalink: /ai/news/Secure-and-Intelligent-Queryable-Encryption-and-Vector-Search-in-MongoDB-EF-Core-Provider
 tags:
 - .NET
 - C#

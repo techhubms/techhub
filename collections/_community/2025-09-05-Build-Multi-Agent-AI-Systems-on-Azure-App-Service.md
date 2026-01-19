@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-multi-agent-ai-systems-on-azure-app-service/ba-p/4451373
 title: Build Multi-Agent AI Systems on Azure App Service
 author: jordanselig
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-multi-agent-ai-systems-on-azure-app-service/ba-p/4451373
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-05 16:37:30 +00:00
-permalink: /ai/community/Build-Multi-Agent-AI-Systems-on-Azure-App-Service
 tags:
 - .NET Aspire
 - Agent Orchestration

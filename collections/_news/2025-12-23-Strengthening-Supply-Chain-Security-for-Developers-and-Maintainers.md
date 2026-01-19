@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/security/supply-chain-security/strengthening-supply-chain-security-preparing-for-the-next-malware-campaign/
 title: Strengthening Supply Chain Security for Developers and Maintainers
 author: Madison Oliver
-canonical_url: https://github.blog/security/supply-chain-security/strengthening-supply-chain-security-preparing-for-the-next-malware-campaign/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-12-23 23:52:08 +00:00
-permalink: /devops/news/Strengthening-Supply-Chain-Security-for-Developers-and-Maintainers
 tags:
 - Artifact Validation
 - Branch Protection

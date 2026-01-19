@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-ai-apps-and-agents-for-the-new-frontier/ba-p/4470165
 title: Building AI Apps and Agents for the New Frontier
 author: Mike_Hulme
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-ai-apps-and-agents-for-the-new-frontier/ba-p/4470165
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:30:51 +00:00
-permalink: /github-copilot/community/Building-AI-Apps-and-Agents-for-the-New-Frontier
 tags:
 - Agentic DevOps
 - AI Agents

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=pZ2Nu8LqJvE
 title: Enhancing Code Security with GitHub Tools
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=pZ2Nu8LqJvE
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-19 14:01:23 +00:00
-permalink: /devops/videos/Enhancing-Code-Security-with-GitHub-Tools
 tags:
 - Code Vulnerability Detection
 - CodeQL

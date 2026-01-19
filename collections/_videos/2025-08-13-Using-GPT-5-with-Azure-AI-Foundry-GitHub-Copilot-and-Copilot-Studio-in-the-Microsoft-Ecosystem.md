@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=360I_jTLI_I
 title: Using GPT-5 with Azure AI Foundry, GitHub Copilot, and Copilot Studio in the Microsoft Ecosystem
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=360I_jTLI_I
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-13 17:48:44 +00:00
-permalink: /github-copilot/videos/Using-GPT-5-with-Azure-AI-Foundry-GitHub-Copilot-and-Copilot-Studio-in-the-Microsoft-Ecosystem
 tags:
 - Agent Development
 - Agents

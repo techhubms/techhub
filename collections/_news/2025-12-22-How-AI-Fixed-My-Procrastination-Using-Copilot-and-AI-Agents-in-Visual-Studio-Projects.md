@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/how-ai-fixed-my-procrastination/
 title: 'How AI Fixed My Procrastination: Using Copilot and AI Agents in Visual Studio Projects'
 author: Mads Kristensen
-canonical_url: https://devblogs.microsoft.com/visualstudio/how-ai-fixed-my-procrastination/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-22 15:00:38 +00:00
-permalink: /github-copilot/news/How-AI-Fixed-My-Procrastination-Using-Copilot-and-AI-Agents-in-Visual-Studio-Projects
 tags:
 - .NET 10
 - Agent Mode

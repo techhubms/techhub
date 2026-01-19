@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=-8sH0QFhvkQ
 title: 'Azure Updates: August 2025 Highlights'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=-8sH0QFhvkQ
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-01 14:54:51 +00:00
-permalink: /ml/videos/Azure-Updates-August-2025-Highlights
 tags:
 - AVNM
 - Azure Arc

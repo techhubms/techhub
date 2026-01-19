@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/a-modern-approach-to-multi-signal-optimization/
 title: A Modern Approach to Multi-Signal Optimization
 author: Nikhil Kurup
-canonical_url: https://devops.com/a-modern-approach-to-multi-signal-optimization/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-27 11:44:53 +00:00
-permalink: /devops/blogs/A-Modern-Approach-to-Multi-Signal-Optimization
 tags:
 - Application Performance Monitoring
 - ArgoCD

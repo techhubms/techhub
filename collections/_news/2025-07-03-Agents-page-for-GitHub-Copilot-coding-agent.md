@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-07-02-agents-page-for-copilot-coding-agent-in-public-preview
 title: Agents page for GitHub Copilot coding agent
 author: Allison
-canonical_url: https://github.blog/changelog/2025-07-02-agents-page-for-copilot-coding-agent-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-03 12:00:54 +00:00
-permalink: /github-copilot/news/Agents-page-for-GitHub-Copilot-coding-agent
 tags:
 - Bug Fixing
 - Coding Agents

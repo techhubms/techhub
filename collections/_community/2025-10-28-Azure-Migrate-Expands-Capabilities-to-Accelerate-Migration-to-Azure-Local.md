@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-migrate-expands-capabilities-to-accelerate-migration-to/ba-p/4464789
 title: Azure Migrate Expands Capabilities to Accelerate Migration to Azure Local
 author: trumanbrown
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-migrate-expands-capabilities-to-accelerate-migration-to/ba-p/4464789
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-28 20:23:03 +00:00
-permalink: /azure/community/Azure-Migrate-Expands-Capabilities-to-Accelerate-Migration-to-Azure-Local
 tags:
 - Agentless Migration
 - Azure Arc

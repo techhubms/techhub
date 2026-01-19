@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=4G2pOwGusGs
 title: 'Digital Defense 2025: Key Takeaways on AI and Security Threats'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=4G2pOwGusGs
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 07:56:55 +00:00
-permalink: /ai/videos/Digital-Defense-2025-Key-Takeaways-on-AI-and-Security-Threats
 tags:
 - AI Security
 - Business Email Compromise

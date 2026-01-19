@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ixhQyZEpwWk
 title: 'Agent: Concurrent Orchestration in Semantic Kernel'
 author: Learn Microsoft AI
-canonical_url: https://www.youtube.com/watch?v=ixhQyZEpwWk
 viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-06-02 06:45:23 +00:00
-permalink: /ai/videos/Agent-Concurrent-Orchestration-in-Semantic-Kernel
 tags:
 - Agent Aggregation
 - AI Agent Orchestration

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-07-secret-protection-expands-default-pattern-support-september-2025
 title: GitHub Secret Protection Expands Default Pattern Support – September 2025
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-07-secret-protection-expands-default-pattern-support-september-2025
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-07 16:13:11 +00:00
-permalink: /azure/news/GitHub-Secret-Protection-Expands-Default-Pattern-Support-September-2025
 tags:
 - API Keys
 - Application Security

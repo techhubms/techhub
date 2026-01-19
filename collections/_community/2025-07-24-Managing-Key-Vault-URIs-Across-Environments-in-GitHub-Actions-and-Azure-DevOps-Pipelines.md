@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/azuredevops/comments/1m886qz/pipeline_parameters/
 title: Managing Key Vault URIs Across Environments in GitHub Actions and Azure DevOps Pipelines
 author: Azure DevOps
-canonical_url: https://www.reddit.com/r/azuredevops/comments/1m886qz/pipeline_parameters/
 viewing_mode: external
 feed_name: Reddit Azure DevOps
-feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-24 15:56:04 +00:00
-permalink: /azure/community/Managing-Key-Vault-URIs-Across-Environments-in-GitHub-Actions-and-Azure-DevOps-Pipelines
 tags:
 - Access Policy
 - ARM Templates

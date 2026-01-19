@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/from-incidents-to-insights-the-power-of-blameless-postmortems/?utm_source=rss&utm_medium=rss&utm_campaign=from-incidents-to-insights-the-power-of-blameless-postmortems
 title: 'From Incidents to Insights: The Power of Blameless Postmortems'
 author: Jyostna Seelam
-canonical_url: https://devops.com/from-incidents-to-insights-the-power-of-blameless-postmortems/?utm_source=rss&utm_medium=rss&utm_campaign=from-incidents-to-insights-the-power-of-blameless-postmortems
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-06 08:55:38 +00:00
-permalink: /devops/blogs/From-Incidents-to-Insights-The-Power-of-Blameless-Postmortems
 tags:
 - Accountability
 - Blameless Post Mortem

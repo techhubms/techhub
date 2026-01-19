@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=9pMJdzHVaNE
 title: 'Extending VS Code with the Language Model Chat Provider (BYOK) API: Insights from Logan Ramos'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=9pMJdzHVaNE
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-08 07:00:18 +00:00
-permalink: /ai/videos/Extending-VS-Code-with-the-Language-Model-Chat-Provider-BYOK-API-Insights-from-Logan-Ramos
 tags:
 - Anthropic
 - API

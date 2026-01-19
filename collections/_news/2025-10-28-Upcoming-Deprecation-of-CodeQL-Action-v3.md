@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-28-upcoming-deprecation-of-codeql-action-v3
 title: Upcoming Deprecation of CodeQL Action v3
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-28-upcoming-deprecation-of-codeql-action-v3
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 18:05:01 +00:00
-permalink: /devops/news/Upcoming-Deprecation-of-CodeQL-Action-v3
 tags:
 - Action Deprecation
 - Actions

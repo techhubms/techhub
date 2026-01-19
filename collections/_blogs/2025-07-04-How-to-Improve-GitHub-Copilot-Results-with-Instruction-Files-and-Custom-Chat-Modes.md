@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://harrybin.de/posts/improve-github-copilot-results/
 title: How to Improve GitHub Copilot Results with Instruction Files and Custom Chat Modes
 author: Harald Binkle
-canonical_url: https://harrybin.de/posts/improve-github-copilot-results/
 viewing_mode: external
 feed_name: Harald Binkle's blog
-feed_url: https://harrybin.de/rss.xml
 date: 2025-07-04 17:00:00 +00:00
-permalink: /github-copilot/blogs/How-to-Improve-GitHub-Copilot-Results-with-Instruction-Files-and-Custom-Chat-Modes
 tags:
 - Astro
 - Coding Standards

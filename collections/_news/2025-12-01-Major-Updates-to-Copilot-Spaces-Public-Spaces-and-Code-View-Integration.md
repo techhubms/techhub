@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-01-copilot-spaces-public-spaces-and-code-view-support
 title: 'Major Updates to Copilot Spaces: Public Spaces and Code View Integration'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-01-copilot-spaces-public-spaces-and-code-view-support
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-01 23:35:29 +00:00
-permalink: /github-copilot/news/Major-Updates-to-Copilot-Spaces-Public-Spaces-and-Code-View-Integration
 tags:
 - Code Viewer
 - Collaboration

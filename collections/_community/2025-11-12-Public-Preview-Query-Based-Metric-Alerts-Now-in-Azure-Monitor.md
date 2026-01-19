@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-public-preview-of-query-based-metric-alerts-in-azure/ba-p/4469290
 title: 'Public Preview: Query-Based Metric Alerts Now in Azure Monitor'
 author: yairgil
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-public-preview-of-query-based-metric-alerts-in-azure/ba-p/4469290
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-12 17:43:31 +00:00
-permalink: /azure/community/Public-Preview-Query-Based-Metric-Alerts-Now-in-Azure-Monitor
 tags:
 - AKS
 - Alerting

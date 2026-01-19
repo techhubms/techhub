@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/10/21/the-new-microsoft-security-store-unites-partners-and-innovation/
 title: 'The New Microsoft Security Store: Unifying Partners and Innovation for Stronger Security'
 author: Dorothy Li
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/21/the-new-microsoft-security-store-unites-partners-and-innovation/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-21 16:00:00 +00:00
-permalink: /ai/news/The-New-Microsoft-Security-Store-Unifying-Partners-and-Innovation-for-Stronger-Security
 tags:
 - AI Agents
 - Automation

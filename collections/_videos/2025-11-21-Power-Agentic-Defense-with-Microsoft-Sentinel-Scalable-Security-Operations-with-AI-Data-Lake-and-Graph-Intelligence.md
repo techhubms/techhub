@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=3roUCNzZbwU
 title: 'Power Agentic Defense with Microsoft Sentinel: Scalable Security Operations with AI, Data Lake, and Graph Intelligence'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=3roUCNzZbwU
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 14:44:29 +00:00
-permalink: /ai/videos/Power-Agentic-Defense-with-Microsoft-Sentinel-Scalable-Security-Operations-with-AI-Data-Lake-and-Graph-Intelligence
 tags:
 - Agentic AI
 - Azure Data Lake

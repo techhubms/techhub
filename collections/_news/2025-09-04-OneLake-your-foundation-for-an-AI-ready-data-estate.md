@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-your-foundation-for-an-ai-ready-data-estate/
 title: 'OneLake: your foundation for an AI-ready data estate'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-your-foundation-for-an-ai-ready-data-estate/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-04 09:00:00 +00:00
-permalink: /ai/news/OneLake-your-foundation-for-an-AI-ready-data-estate
 tags:
 - Apache Iceberg
 - Azure AI Foundry

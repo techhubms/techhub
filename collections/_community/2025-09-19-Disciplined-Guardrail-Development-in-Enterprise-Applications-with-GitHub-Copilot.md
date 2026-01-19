@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/disciplined-guardrail-development-in-enterprise-application-with/ba-p/4455321
 title: Disciplined Guardrail Development in Enterprise Applications with GitHub Copilot
 author: daisami
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/disciplined-guardrail-development-in-enterprise-application-with/ba-p/4455321
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-19 20:06:44 +00:00
-permalink: /github-copilot/community/Disciplined-Guardrail-Development-in-Enterprise-Applications-with-GitHub-Copilot
 tags:
 - .NET
 - AI Assisted Development

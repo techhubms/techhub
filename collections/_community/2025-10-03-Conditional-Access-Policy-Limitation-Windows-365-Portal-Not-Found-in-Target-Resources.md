@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/ca-policy-application-not-found-in-target-resources/m-p/4458834#M13916
 title: 'Conditional Access Policy Limitation: Windows 365 Portal Not Found in Target Resources'
 author: WF-PHG
-canonical_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/ca-policy-application-not-found-in-target-resources/m-p/4458834#M13916
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-03 14:06:51 +00:00
-permalink: /azure/community/Conditional-Access-Policy-Limitation-Windows-365-Portal-Not-Found-in-Target-Resources
 tags:
 - Access Control
 - Application ID

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/global-infrastructure-101-understanding-data-centers-regions-availability-zones-in-azure/
 title: 'Global Infrastructure 101: Understanding Data Centers, Regions, and Availability Zones in Azure'
 author: Dellenny
-canonical_url: https://dellenny.com/global-infrastructure-101-understanding-data-centers-regions-availability-zones-in-azure/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-29 07:37:59 +00:00
-permalink: /azure/blogs/Global-Infrastructure-101-Understanding-Data-Centers-Regions-and-Availability-Zones-in-Azure
 tags:
 - Availability Zones
 - Azure Regions

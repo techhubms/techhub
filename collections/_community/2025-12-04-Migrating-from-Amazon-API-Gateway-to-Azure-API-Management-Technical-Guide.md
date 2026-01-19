@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-from-amazon-api-gateway-to-azure-api-management/ba-p/4471524
 title: 'Migrating from Amazon API Gateway to Azure API Management: Technical Guide'
 author: dan_lepow
-canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-from-amazon-api-gateway-to-azure-api-management/ba-p/4471524
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-04 21:23:07 +00:00
-permalink: /azure/community/Migrating-from-Amazon-API-Gateway-to-Azure-API-Management-Technical-Guide
 tags:
 - AKS
 - Amazon API Gateway

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/E_-t-YjR2fk
 title: Azure Service Groups Quick Overview
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/shorts/E_-t-YjR2fk
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-26 18:55:48 +00:00
-permalink: /azure/videos/Azure-Service-Groups-Quick-Overview
 tags:
 - Azure Cloud
 - Azure Resource Management

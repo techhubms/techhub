@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mft8nb/what_wpf_ui_library_can_i_use/
 title: Seeking Recommendations for WPF UI Libraries for a Windows Game Launcher
 author: kkassius_
-canonical_url: https://www.reddit.com/r/csharp/comments/1mft8nb/what_wpf_ui_library_can_i_use/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-02 15:24:41 +00:00
-permalink: /coding/community/Seeking-Recommendations-for-WPF-UI-Libraries-for-a-Windows-Game-Launcher
 tags:
 - Blazor Hybrid
 - C#

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/appomni-open-sources-heisenberg-tool-to-scan-pull-requests-for-dependencies/
 title: AppOmni Open Sources Heisenberg Tool for Dependency Scanning in PRs
 author: Mike Vizard
-canonical_url: https://devops.com/appomni-open-sources-heisenberg-tool-to-scan-pull-requests-for-dependencies/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-29 16:08:25 +00:00
-permalink: /devops/blogs/AppOmni-Open-Sources-Heisenberg-Tool-for-Dependency-Scanning-in-PRs
 tags:
 - AppOmni
 - CI/CD

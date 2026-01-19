@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=cR1AjFH2yLE
 title: Azure Update - 30th May 2025
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=cR1AjFH2yLE
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-05-30 14:11:15 +00:00
-permalink: /ai/videos/Azure-Update-30th-May-2025
 viewing_mode: internal
 tags:
 - AFD Container Apps

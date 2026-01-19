@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=9NKNNHCsykQ
 title: Live-Coding a DJ App with VS Code and GitHub Copilot
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=9NKNNHCsykQ
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-21 14:00:16 +00:00
-permalink: /github-copilot/videos/Live-Coding-a-DJ-App-with-VS-Code-and-GitHub-Copilot
 tags:
 - AI Powered Development
 - Browser Application

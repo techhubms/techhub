@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/open-source/maintainers/mcp-joins-the-linux-foundation-what-this-means-for-developers-building-the-next-era-of-ai-tools-and-agents/
 title: 'MCP Transitions to Linux Foundation: Impact on AI Tool and Agent Development'
 author: Martin Woodward
-canonical_url: https://github.blog/open-source/maintainers/mcp-joins-the-linux-foundation-what-this-means-for-developers-building-the-next-era-of-ai-tools-and-agents/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-12-09 21:00:13 +00:00
-permalink: /github-copilot/news/MCP-Transitions-to-Linux-Foundation-Impact-on-AI-Tool-and-Agent-Development
 tags:
 - Agentic AI
 - Agentic AI Foundation

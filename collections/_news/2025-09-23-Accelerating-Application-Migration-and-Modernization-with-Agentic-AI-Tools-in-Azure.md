@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/accelerate-migration-and-modernization-with-agentic-ai/
 title: Accelerating Application Migration and Modernization with Agentic AI Tools in Azure
 author: Amanda Silver and Ashish Babbar
-canonical_url: https://azure.microsoft.com/en-us/blog/accelerate-migration-and-modernization-with-agentic-ai/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-23 13:00:00 +00:00
-permalink: /github-copilot/news/Accelerating-Application-Migration-and-Modernization-with-Agentic-AI-Tools-in-Azure
 tags:
 - .NET
 - Agentic AI

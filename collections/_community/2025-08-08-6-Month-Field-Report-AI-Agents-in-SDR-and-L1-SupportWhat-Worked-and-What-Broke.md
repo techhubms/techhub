@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AI_Agents/comments/1mktrgm/from_hype_to_headcount_6month_field_report_ai/
 title: '6-Month Field Report: AI Agents in SDR & L1 Support—What Worked and What Broke'
 author: Wednesday_Inu
-canonical_url: https://www.reddit.com/r/AI_Agents/comments/1mktrgm/from_hype_to_headcount_6month_field_report_ai/
 viewing_mode: external
 feed_name: Reddit AI Agents
-feed_url: https://www.reddit.com/r/AI_Agents/.rss
 date: 2025-08-08 12:24:02 +00:00
-permalink: /ai/community/6-Month-Field-Report-AI-Agents-in-SDR-and-L1-SupportWhat-Worked-and-What-Broke
 tags:
 - A/B Testing
 - Agent Orchestration

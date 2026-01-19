@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mkicbg/wpf_help_needed_ui_xaml_does_not_show_design/
 title: WPF XAML Design Preview Issues with Dependency Injection in MVVM
 author: nile-code
-canonical_url: https://www.reddit.com/r/csharp/comments/1mkicbg/wpf_help_needed_ui_xaml_does_not_show_design/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-08 01:38:42 +00:00
-permalink: /coding/community/WPF-XAML-Design-Preview-Issues-with-Dependency-Injection-in-MVVM
 tags:
 - .NET
 - C#

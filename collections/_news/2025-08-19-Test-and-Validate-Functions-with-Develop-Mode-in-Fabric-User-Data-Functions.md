@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/test-and-validate-your-functions-with-develop-mode-in-fabric-user-data-functions-preview/
 title: Test and Validate Functions with Develop Mode in Fabric User Data Functions
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/test-and-validate-your-functions-with-develop-mode-in-fabric-user-data-functions-preview/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-19 11:00:00 +00:00
-permalink: /ml/news/Test-and-Validate-Functions-with-Develop-Mode-in-Fabric-User-Data-Functions
 tags:
 - Code Publishing
 - Data Engineering

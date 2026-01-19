@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/detect-human-faces-and-compare-similar-ones-with-face-api-in-azure/
 title: Detect Human Faces and Compare Similar Ones with Azure Face API
 author: Dellenny
-canonical_url: https://dellenny.com/detect-human-faces-and-compare-similar-ones-with-face-api-in-azure/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-17 10:07:04 +00:00
-permalink: /ai/blogs/Detect-Human-Faces-and-Compare-Similar-Ones-with-Azure-Face-API
 tags:
 - API Integration
 - Authentication

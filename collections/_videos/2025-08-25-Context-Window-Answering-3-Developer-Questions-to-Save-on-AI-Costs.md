@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=CdrXTcpTAhI
 title: 'Context Window: Answering 3 Developer Questions to Save on AI Costs'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=CdrXTcpTAhI
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-25 16:00:16 +00:00
-permalink: /ai/videos/Context-Window-Answering-3-Developer-Questions-to-Save-on-AI-Costs
 tags:
 - AI Best Practices
 - AI Cost Optimization

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/developer-tier-apim-self-hosted-gateway/ba-p/4457556
 title: Exploring Developer Tier APIM with Self-hosted Gateway for Greater Flexibility
 author: reve
-canonical_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/developer-tier-apim-self-hosted-gateway/ba-p/4457556
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-27 16:45:43 +00:00
-permalink: /azure/community/Exploring-Developer-Tier-APIM-with-Self-hosted-Gateway-for-Greater-Flexibility
 tags:
 - API Analytics
 - API Gateway

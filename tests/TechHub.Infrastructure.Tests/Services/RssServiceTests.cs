@@ -39,10 +39,7 @@ public class RssServiceTests
             RenderedHtml = "<p>Test content 1</p>",
             Excerpt = "Test excerpt 1",
             ViewingMode = null,
-            ExternalUrl = null,
-            AltCollection = null,
-            VideoId = null
-        },
+            ExternalUrl = null,        },
         new ContentItem
         {
             Slug = "2024-01-10-test-article-2",
@@ -56,10 +53,7 @@ public class RssServiceTests
             RenderedHtml = "<p>Test content 2</p>",
             Excerpt = "Test excerpt 2",
             ViewingMode = "external",
-            ExternalUrl = "https://example.com/article-2",
-            AltCollection = null,
-            VideoId = null
-        }
+            ExternalUrl = "https://example.com/article-2",        }
     ];
 
     [Fact]
@@ -113,10 +107,7 @@ public class RssServiceTests
                 SectionNames = ["AI"],
                 Tags = ["test"],
                 RenderedHtml = $"<p>Content {i}</p>",
-                Excerpt = $"Excerpt {i}",
-                AltCollection = null,
-                VideoId = null,
-                ViewingMode = null,
+                Excerpt = $"Excerpt {i}",                ViewingMode = null,
                 ExternalUrl = null
             })
             .ToList();
@@ -239,10 +230,7 @@ public class RssServiceTests
                 SectionNames = ["AI"],
                 Tags = [],
                 RenderedHtml = "<p>Content</p>",
-                Excerpt = "", // Empty excerpt
-                AltCollection = null,
-                VideoId = null,
-                ViewingMode = null,
+                Excerpt = "", // Empty excerpt                ViewingMode = null,
                 ExternalUrl = null,
                 Author = null
             }
@@ -377,10 +365,7 @@ public class RssServiceTests
                 SectionNames = ["AI"],
                 Tags = ["tag&special"],
                 RenderedHtml = "<p>Content</p>",
-                Excerpt = "Excerpt with 'quotes'",
-                AltCollection = null,
-                VideoId = null,
-                ViewingMode = null,
+                Excerpt = "Excerpt with 'quotes'",                ViewingMode = null,
                 ExternalUrl = null,
                 Author = null
             }

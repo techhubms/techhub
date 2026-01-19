@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/how-ai-created-code-will-strain-devops-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=how-ai-created-code-will-strain-devops-workflows
 title: How AI-Created Code Will Strain DevOps Workflows
 author: Mike Vizard
-canonical_url: https://devops.com/how-ai-created-code-will-strain-devops-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=how-ai-created-code-will-strain-devops-workflows
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-21 16:30:04 +00:00
-permalink: /ai/blogs/How-AI-Created-Code-Will-Strain-DevOps-Workflows
 tags:
 - AI Adoption
 - AI Code Generation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-for-vs-code-january-2026-update/ba-p/4485205
 title: 'AI Toolkit for VS Code: January 2026 Update — Copilot Skills, Foundry Integration, and Dev Enhancements'
 author: junjieli
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-for-vs-code-january-2026-update/ba-p/4485205
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-13 08:34:38 +00:00
-permalink: /github-copilot/community/AI-Toolkit-for-VS-Code-January-2026-Update-Copilot-Skills-Foundry-Integration-and-Dev-Enhancements
 tags:
 - Agent Framework
 - Agent Skills

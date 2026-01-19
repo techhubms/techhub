@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/secure-azure-stream-analytics-jobs-in-dedicated-clusters-using/ba-p/4470385
 title: Secure Azure Stream Analytics Jobs with Dedicated Clusters and Managed Private Endpoints
 author: PratibhaShenoy
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/secure-azure-stream-analytics-jobs-in-dedicated-clusters-using/ba-p/4470385
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-17 10:31:44 +00:00
-permalink: /coding/community/Secure-Azure-Stream-Analytics-Jobs-with-Dedicated-Clusters-and-Managed-Private-Endpoints
 tags:
 - Automation
 - Azure Portal

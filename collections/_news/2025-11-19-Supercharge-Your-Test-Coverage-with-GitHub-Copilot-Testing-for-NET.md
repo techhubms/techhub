@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/github-copilot-testing-for-dotnet/
 title: Supercharge Your Test Coverage with GitHub Copilot Testing for .NET
 author: McKenna Barlow
-canonical_url: https://devblogs.microsoft.com/dotnet/github-copilot-testing-for-dotnet/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-11-19 18:05:00 +00:00
-permalink: /github-copilot/news/Supercharge-Your-Test-Coverage-with-GitHub-Copilot-Testing-for-NET
 tags:
 - .NET
 - AI Testing

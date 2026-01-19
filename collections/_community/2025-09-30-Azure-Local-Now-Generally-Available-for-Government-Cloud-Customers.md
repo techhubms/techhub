@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-general-availability-of-azure-local-on-microsoft/ba-p/4458013
 title: Azure Local Now Generally Available for Government Cloud Customers
 author: meenagowdar
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-general-availability-of-azure-local-on-microsoft/ba-p/4458013
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-30 19:12:33 +00:00
-permalink: /azure/community/Azure-Local-Now-Generally-Available-for-Government-Cloud-Customers
 tags:
 - AKS
 - ARM Templates

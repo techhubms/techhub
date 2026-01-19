@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=JepVi1tBNEE
 title: Introducing Agent Skills in VS Code
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=JepVi1tBNEE
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2026-01-09 20:10:27 +00:00
-permalink: /ai/videos/Introducing-Agent-Skills-in-VS-Code
 tags:
 - Agent Skills
 - Agentskills

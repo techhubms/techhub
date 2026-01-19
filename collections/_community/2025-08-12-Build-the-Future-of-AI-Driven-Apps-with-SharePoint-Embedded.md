@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/build-the-future-of-ai-driven-apps-with-sharepoint-embedded/ba-p/4442595
 title: Build the Future of AI-Driven Apps with SharePoint Embedded
 author: wbaer
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/build-the-future-of-ai-driven-apps-with-sharepoint-embedded/ba-p/4442595
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 17:02:41 +00:00
-permalink: /ai/community/Build-the-Future-of-AI-Driven-Apps-with-SharePoint-Embedded
 tags:
 - AI Apps
 - API Development

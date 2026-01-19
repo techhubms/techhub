@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/databricks-runs-best-on-azure/
 title: 'Databricks Runs Best on Azure: Performance, Integration, and AI Synergy'
 author: Jason Pereira and Anavi Nahar
-canonical_url: https://azure.microsoft.com/en-us/blog/databricks-runs-best-on-azure/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-15 15:00:00 +00:00
-permalink: /ai/news/Databricks-Runs-Best-on-Azure-Performance-Integration-and-AI-Synergy
 tags:
 - AI + Machine Learning
 - AI Integration

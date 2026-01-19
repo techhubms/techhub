@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=LdCExagKS4Y
 title: 'AI-assisted Migration: Enhancing Performance on Azure Database for PostgreSQL'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=LdCExagKS4Y
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 16:23:57 +00:00
-permalink: /ai/videos/AI-assisted-Migration-Enhancing-Performance-on-Azure-Database-for-PostgreSQL
 tags:
 - AI Assisted Migration
 - Automated Tuning

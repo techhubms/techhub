@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=3L3ve-vuyes
 title: Elevate DevEx 2.0 with Continuous Security Across the SDLC
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=3L3ve-vuyes
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 12:22:05 +00:00
-permalink: /ai/videos/Elevate-DevEx-20-with-Continuous-Security-Across-the-SDLC
 tags:
 - AI Driven Triage
 - API Testing

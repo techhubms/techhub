@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/the-foundation-for-powering-ai-driven-operations-fabric-real-time-intelligence/
 title: AI-Driven Operations with Microsoft Fabric Real-Time Intelligence
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/the-foundation-for-powering-ai-driven-operations-fabric-real-time-intelligence/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-16 00:45:00 +00:00
-permalink: /ai/news/AI-Driven-Operations-with-Microsoft-Fabric-Real-Time-Intelligence
 tags:
 - Agentic AI
 - Anomaly Detection

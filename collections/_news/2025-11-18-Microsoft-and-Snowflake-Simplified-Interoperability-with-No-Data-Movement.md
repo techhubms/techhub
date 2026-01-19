@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-and-snowflake-simplified-interoperability-with-no-data-movement/
 title: 'Microsoft and Snowflake: Simplified Interoperability with No Data Movement'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-and-snowflake-simplified-interoperability-with-no-data-movement/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
-permalink: /ai/news/Microsoft-and-Snowflake-Simplified-Interoperability-with-No-Data-Movement
 tags:
 - AI Workloads
 - Analytics

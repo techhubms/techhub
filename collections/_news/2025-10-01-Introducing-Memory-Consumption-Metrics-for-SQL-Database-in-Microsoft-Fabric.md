@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/memory-consumption-metrics-now-available-for-fabric-sql-database/
 title: Introducing Memory Consumption Metrics for SQL Database in Microsoft Fabric
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/memory-consumption-metrics-now-available-for-fabric-sql-database/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-01 15:00:00 +00:00
-permalink: /ml/news/Introducing-Memory-Consumption-Metrics-for-SQL-Database-in-Microsoft-Fabric
 tags:
 - Automatic Index
 - CPU Usage

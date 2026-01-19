@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/assess-security-risks-with-insights-in-azure-migrate/ba-p/4470866
 title: Assess Security Risks with Insights in Azure Migrate
 author: Nikita_Bajaj
-canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/assess-security-risks-with-insights-in-azure-migrate/ba-p/4470866
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 08:22:12 +00:00
-permalink: /azure/community/Assess-Security-Risks-with-Insights-in-Azure-Migrate
 tags:
 - Azure Migrate
 - Azure Update Manager

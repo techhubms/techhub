@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure/issue-with-gmsa-when-installing-cloud-sync/m-p/4482486#M22398
 title: Troubleshooting gMSA Configuration Errors During Microsoft Cloud Sync Installation
 author: CheesePizza
-canonical_url: https://techcommunity.microsoft.com/t5/azure/issue-with-gmsa-when-installing-cloud-sync/m-p/4482486#M22398
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-02 13:05:17 +00:00
-permalink: /azure/community/Troubleshooting-gMSA-Configuration-Errors-During-Microsoft-Cloud-Sync-Installation
 tags:
 - Active Directory
 - AD Permissions

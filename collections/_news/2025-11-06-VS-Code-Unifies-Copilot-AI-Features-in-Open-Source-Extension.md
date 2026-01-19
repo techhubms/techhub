@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/blogs/2025/11/04/openSourceAIEditorSecondMilestone
 title: VS Code Unifies Copilot AI Features in Open Source Extension
 author: The VS Code team
-canonical_url: https://code.visualstudio.com/blogs/2025/11/04/openSourceAIEditorSecondMilestone
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-11-06 00:00:00 +00:00
-permalink: /github-copilot/news/VS-Code-Unifies-Copilot-AI-Features-in-Open-Source-Extension
 tags:
 - AI Code Suggestions
 - Copilot Chat

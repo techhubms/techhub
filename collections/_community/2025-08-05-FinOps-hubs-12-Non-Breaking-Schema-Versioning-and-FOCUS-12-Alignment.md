@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/finops-blog/introducing-non-breaking-breaking-changes-in-finops-hubs-12/ba-p/4438554
 title: 'FinOps hubs 12: Non-Breaking Schema Versioning and FOCUS 1.2 Alignment'
 author: Michael_Flanakin
-canonical_url: https://techcommunity.microsoft.com/t5/finops-blog/introducing-non-breaking-breaking-changes-in-finops-hubs-12/ba-p/4438554
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-05 23:27:17 +00:00
-permalink: /ml/community/FinOps-hubs-12-Non-Breaking-Schema-Versioning-and-FOCUS-12-Alignment
 tags:
 - Azure Advisor
 - Azure Cost Management

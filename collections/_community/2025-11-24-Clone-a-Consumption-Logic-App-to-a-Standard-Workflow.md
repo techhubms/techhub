@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/clone-a-consumption-logic-app-to-a-standard-workflow/ba-p/4471175
 title: Clone a Consumption Logic App to a Standard Workflow
 author: WSilveira
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/clone-a-consumption-logic-app-to-a-standard-workflow/ba-p/4471175
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-24 16:00:00 +00:00
-permalink: /azure/community/Clone-a-Consumption-Logic-App-to-a-Standard-Workflow
 tags:
 - Azure Functions
 - Azure Logic Apps

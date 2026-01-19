@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-rc/
 title: Announcing the Release Candidate (RC) of TypeScript 5.8
 author: Daniel Rosenwasser
-canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-rc/
 viewing_mode: external
 feed_name: Microsoft TypeScript Blog
-feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-02-13 22:27:05 +00:00
-permalink: /coding/news/Announcing-the-Release-Candidate-RC-of-TypeScript-58
 tags:
 - CommonJS
 - Compiler Flags

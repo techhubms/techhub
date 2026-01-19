@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/fix-it-before-they-feel-it-higher-reliability-with-proactive/ba-p/4480444
 title: 'Fix It Before They Feel It: Proactive Reliability with Azure SRE Agent'
 author: saziz_msft
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/fix-it-before-they-feel-it-higher-reliability-with-proactive/ba-p/4480444
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-22 23:54:37 +00:00
-permalink: /ai/community/Fix-It-Before-They-Feel-It-Proactive-Reliability-with-Azure-SRE-Agent
 tags:
 - Application Insights
 - ASP.NET Core 9.0

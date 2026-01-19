@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/news-insights/company-news/github-availability-report-july-2025/
 title: 'GitHub Enterprise Importer Incident and IP Range Update: July 2025 Availability Report'
 author: Jakub Oleksy
-canonical_url: https://github.blog/news-insights/company-news/github-availability-report-july-2025/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-08-13 21:00:00 +00:00
-permalink: /azure/news/GitHub-Enterprise-Importer-Incident-and-IP-Range-Update-July-2025-Availability-Report
 tags:
 - Availability Report
 - AWS S3

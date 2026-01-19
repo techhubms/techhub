@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AI_Agents/comments/1mjwc82/the_ultimate_ai_agent_directory_100_tools_beyond/
 title: 'The Ultimate AI Agent Directory: 100+ Tools Beyond ChatGPT Agent'
 author: NickNaskida
-canonical_url: https://www.reddit.com/r/AI_Agents/comments/1mjwc82/the_ultimate_ai_agent_directory_100_tools_beyond/
 viewing_mode: external
 feed_name: Reddit AI Agents
-feed_url: https://www.reddit.com/r/AI_Agents/.rss
 date: 2025-08-07 10:21:50 +00:00
-permalink: /github-copilot/community/The-Ultimate-AI-Agent-Directory-100-Tools-Beyond-ChatGPT-Agent
 tags:
 - Agent Frameworks
 - Agent Orchestration

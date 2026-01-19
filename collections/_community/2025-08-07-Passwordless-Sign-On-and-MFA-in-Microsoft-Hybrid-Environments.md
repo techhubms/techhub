@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/microsoft/comments/1mjyjre/passwordless_signons_mfa_app_hybrid_mode/
 title: Passwordless Sign-On and MFA in Microsoft Hybrid Environments
 author: SmoothRunnings
-canonical_url: https://www.reddit.com/r/microsoft/comments/1mjyjre/passwordless_signons_mfa_app_hybrid_mode/
 viewing_mode: external
 feed_name: Reddit Microsoft
-feed_url: https://www.reddit.com/r/microsoft/.rss
 date: 2025-08-07 12:19:51 +00:00
-permalink: /security/community/Passwordless-Sign-On-and-MFA-in-Microsoft-Hybrid-Environments
 tags:
 - Active Directory
 - Authenticator App

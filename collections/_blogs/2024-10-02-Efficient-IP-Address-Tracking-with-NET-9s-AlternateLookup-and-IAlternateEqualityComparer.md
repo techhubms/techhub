@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.stevejgordon.co.uk/efficient-dictionary-for-ipaddress-tracking-using-net-9-with-alternatelookup-and-ialternateequalitycomparer
 title: Efficient IP Address Tracking with .NET 9's AlternateLookup and IAlternateEqualityComparer
 author: Steve Gordon
-canonical_url: https://www.stevejgordon.co.uk/efficient-dictionary-for-ipaddress-tracking-using-net-9-with-alternatelookup-and-ialternateequalitycomparer
 viewing_mode: external
 feed_name: Steve Gordon's Blog
-feed_url: https://www.stevejgordon.co.uk/feed
 date: 2024-10-02 08:58:07 +00:00
-permalink: /coding/blogs/Efficient-IP-Address-Tracking-with-NET-9s-AlternateLookup-and-IAlternateEqualityComparer
 tags:
 - .NET
 - .NET 9

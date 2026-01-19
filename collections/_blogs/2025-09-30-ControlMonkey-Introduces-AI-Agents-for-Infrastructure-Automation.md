@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/controlmonkey-adds-ai-agents-to-infrastructure-automation-platform/
 title: ControlMonkey Introduces AI Agents for Infrastructure Automation
 author: Mike Vizard
-canonical_url: https://devops.com/controlmonkey-adds-ai-agents-to-infrastructure-automation-platform/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-30 18:48:35 +00:00
-permalink: /ai/blogs/ControlMonkey-Introduces-AI-Agents-for-Infrastructure-Automation
 tags:
 - AI Agents
 - Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-11-repository-dashboard-find-search-and-save-queries-in-preview
 title: 'Repository Dashboard Preview: Centralized Search, Filtering, and Saved Queries on GitHub'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-11-repository-dashboard-find-search-and-save-queries-in-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-11 16:10:17 +00:00
-permalink: /devops/news/Repository-Dashboard-Preview-Centralized-Search-Filtering-and-Saved-Queries-on-GitHub
 tags:
 - Collaboration Tools
 - Collaborative Development

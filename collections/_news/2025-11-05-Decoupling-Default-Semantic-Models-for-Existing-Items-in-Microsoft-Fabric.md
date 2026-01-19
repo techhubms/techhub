@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/decoupling-default-semantic-models-for-existing-in-microsoft-fabric/
 title: Decoupling Default Semantic Models for Existing Items in Microsoft Fabric
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/decoupling-default-semantic-models-for-existing-in-microsoft-fabric/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-05 10:00:00 +00:00
-permalink: /ml/news/Decoupling-Default-Semantic-Models-for-Existing-Items-in-Microsoft-Fabric
 tags:
 - API Integration
 - Automation

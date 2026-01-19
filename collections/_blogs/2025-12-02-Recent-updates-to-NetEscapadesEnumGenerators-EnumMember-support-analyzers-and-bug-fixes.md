@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/recent-updates-to-netescapaades-enumgenerators/
 title: 'Recent updates to NetEscapades.EnumGenerators: [EnumMember] support, analyzers, and bug fixes'
 author: Andrew Lock
-canonical_url: https://andrewlock.net/recent-updates-to-netescapaades-enumgenerators/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-12-02 09:00:00 +00:00
-permalink: /coding/blogs/Recent-updates-to-NetEscapadesEnumGenerators-EnumMember-support-analyzers-and-bug-fixes
 tags:
 - .NET
 - .NET Core

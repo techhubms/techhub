@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/rTW1eM0T_90
 title: Understanding Model Context Protocol (MCP) for Developers
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/shorts/rTW1eM0T_90
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-24 15:59:41 +00:00
-permalink: /github-copilot/videos/Understanding-Model-Context-Protocol-MCP-for-Developers
 tags:
 - AI Development
 - Automation

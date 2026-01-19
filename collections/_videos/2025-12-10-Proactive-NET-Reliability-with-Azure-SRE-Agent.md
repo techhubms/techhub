@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Kx_6SB-mhgg
 title: Proactive .NET Reliability with Azure SRE Agent
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=Kx_6SB-mhgg
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-10 00:00:37 +00:00
-permalink: /coding/videos/Proactive-NET-Reliability-with-Azure-SRE-Agent
 tags:
 - .NET
 - Application Insights

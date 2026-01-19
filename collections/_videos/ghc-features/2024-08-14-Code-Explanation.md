@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/1gyzoHTfxgQ
 title: Code Explanation
 author: Rob Bos
-canonical_url: https://youtu.be/1gyzoHTfxgQ
 date: 2024-08-14 19:59:33 +00:00
-permalink: /github-copilot/videos/Code-Explanation
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Code
 - Explanation

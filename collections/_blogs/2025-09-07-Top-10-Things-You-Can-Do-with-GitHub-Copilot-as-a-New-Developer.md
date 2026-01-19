@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/top-10-things-you-can-do-with-github-copilot-as-a-new-developer-2/
 title: Top 10 Things You Can Do with GitHub Copilot as a New Developer
 author: Dellenny
-canonical_url: https://dellenny.com/top-10-things-you-can-do-with-github-copilot-as-a-new-developer-2/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-07 07:03:54 +00:00
-permalink: /github-copilot/blogs/Top-10-Things-You-Can-Do-with-GitHub-Copilot-as-a-New-Developer
 tags:
 - Beginner Developer
 - Boilerplate Code

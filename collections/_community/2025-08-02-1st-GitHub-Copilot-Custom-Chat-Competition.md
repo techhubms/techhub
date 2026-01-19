@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mfjlie/1st_github_copilot_custom_chat_competition/
 title: 1st GitHub Copilot Custom Chat Competition
 author: Outrageous_Permit154
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mfjlie/1st_github_copilot_custom_chat_competition/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-02 06:29:17 +00:00
-permalink: /github-copilot/community/1st-GitHub-Copilot-Custom-Chat-Competition
 tags:
 - AI Competition
 - Coding Productivity

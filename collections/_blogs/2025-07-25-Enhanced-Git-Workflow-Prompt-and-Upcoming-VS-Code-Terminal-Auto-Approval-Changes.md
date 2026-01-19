@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://r-vm.com/improved-git-workflow-custom-prompt-upcoming-vscode-change-warning.html
 title: Enhanced Git Workflow Prompt and Upcoming VS Code Terminal Auto-Approval Changes
 author: Reinier van Maanen
-canonical_url: https://r-vm.com/improved-git-workflow-custom-prompt-upcoming-vscode-change-warning.html
 viewing_mode: external
 feed_name: Reinier van Maanen's blog
-feed_url: https://r-vm.com/feed.xml
 date: 2025-07-25 00:00:00 +00:00
-permalink: /github-copilot/blogs/Enhanced-Git-Workflow-Prompt-and-Upcoming-VS-Code-Terminal-Auto-Approval-Changes
 tags:
 - Automation
 - Branch Protection

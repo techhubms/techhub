@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/expanding-azure-arc-for-hybrid-and-multicloud-management/ba-p/4470656
 title: Expanding Azure Arc for Hybrid and Multicloud Management
 author: SatyaVel
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/expanding-azure-arc-for-hybrid-and-multicloud-management/ba-p/4470656
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:26:46 +00:00
-permalink: /azure/community/Expanding-Azure-Arc-for-Hybrid-and-Multicloud-Management
 tags:
 - Agentless Inventory
 - AWS

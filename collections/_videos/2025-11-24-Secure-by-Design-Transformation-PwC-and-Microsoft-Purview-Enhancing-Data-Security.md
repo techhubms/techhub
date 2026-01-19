@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=6nwhHh19_L0
 title: 'Secure-by-Design Transformation: PwC and Microsoft Purview Enhancing Data Security'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=6nwhHh19_L0
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 14:35:38 +00:00
-permalink: /security/videos/Secure-by-Design-Transformation-PwC-and-Microsoft-Purview-Enhancing-Data-Security
 tags:
 - Alert Management
 - Automation

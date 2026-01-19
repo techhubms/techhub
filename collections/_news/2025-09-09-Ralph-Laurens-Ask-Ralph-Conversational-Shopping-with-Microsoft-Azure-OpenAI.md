@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/industry/blog/retail/2025/09/09/ask-ralph-where-style-meets-ai-a-new-era-of-conversational-commerce/
 title: "Ralph Lauren's Ask Ralph: Conversational Shopping with Microsoft Azure OpenAI"
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/industry/blog/retail/2025/09/09/ask-ralph-where-style-meets-ai-a-new-era-of-conversational-commerce/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-09 13:20:25 +00:00
-permalink: /ai/news/Ralph-Laurens-Ask-Ralph-Conversational-Shopping-with-Microsoft-Azure-OpenAI
 tags:
 - AI Integration
 - Ask Ralph

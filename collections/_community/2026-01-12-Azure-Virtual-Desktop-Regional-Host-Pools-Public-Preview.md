@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/now-in-public-preview-azure-virtual-desktop-regional-host-pools/ba-p/4474598
 title: Azure Virtual Desktop Regional Host Pools Public Preview
 author: TomHickling
-canonical_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/now-in-public-preview-azure-virtual-desktop-regional-host-pools/ba-p/4474598
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-12 20:30:42 +00:00
-permalink: /azure/community/Azure-Virtual-Desktop-Regional-Host-Pools-Public-Preview
 tags:
 - Admin Preview
 - Azure Portal

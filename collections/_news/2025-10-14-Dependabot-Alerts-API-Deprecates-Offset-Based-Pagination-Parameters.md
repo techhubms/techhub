@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-14-dependabot-alerts-api-pagination-parameters-deprecated
 title: Dependabot Alerts API Deprecates Offset-Based Pagination Parameters
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-14-dependabot-alerts-api-pagination-parameters-deprecated
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-14 14:38:56 +00:00
-permalink: /devops/news/Dependabot-Alerts-API-Deprecates-Offset-Based-Pagination-Parameters
 tags:
 - API Changes
 - API Documentation

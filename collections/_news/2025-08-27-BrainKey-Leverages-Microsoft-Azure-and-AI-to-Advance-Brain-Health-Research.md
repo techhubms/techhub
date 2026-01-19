@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/startups/blog/from-personal-crisis-to-global-impact-how-brainkey-reimagines-brain-health-with-ai-and-microsoft-azure/
 title: BrainKey Leverages Microsoft Azure and AI to Advance Brain Health Research
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/startups/blog/from-personal-crisis-to-global-impact-how-brainkey-reimagines-brain-health-with-ai-and-microsoft-azure/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-27 17:48:20 +00:00
-permalink: /ai/news/BrainKey-Leverages-Microsoft-Azure-and-AI-to-Advance-Brain-Health-Research
 tags:
 - AI in Healthcare
 - AKS

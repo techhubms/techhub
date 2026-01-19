@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-extension-pack-for-visual-studio-code-ignite-2025/ba-p/4471050
 title: 'AI Toolkit Extension Pack for Visual Studio Code: Ignite 2025 Update'
 author: leoyao
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-extension-pack-for-visual-studio-code-ignite-2025/ba-p/4471050
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:09:41 +00:00
-permalink: /github-copilot/community/AI-Toolkit-Extension-Pack-for-Visual-Studio-Code-Ignite-2025-Update
 tags:
 - .NET
 - Agentic Applications

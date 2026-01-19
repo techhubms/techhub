@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/M_BNfo01YsQ
 title: '@github Chat Participant'
 author: Fokko Veegens
-canonical_url: https://youtu.be/M_BNfo01YsQ
 date: 2024-12-24 07:38:40 +00:00
-permalink: /github-copilot/videos/atgithub-Chat-Participant
 viewing_mode: internal
-section: github-copilot
 ghes_support: false
 plans:
 - Free
-alt-collection: features
 tags:
 - Chat
 - Chat Participant

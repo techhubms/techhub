@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/variable-library-support-in-notebook-now-generally-available/
 title: Variable Library Support Now Available in Microsoft Fabric Notebooks
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/variable-library-support-in-notebook-now-generally-available/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-11 10:00:00 +00:00
-permalink: /ml/news/Variable-Library-Support-Now-Available-in-Microsoft-Fabric-Notebooks
 tags:
 - CI/CD
 - Configuration Management

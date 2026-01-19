@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-the-microsoft-fabric-extensibility-toolkit/
 title: Introducing the Microsoft Fabric Extensibility Toolkit
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-the-microsoft-fabric-extensibility-toolkit/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-22 15:30:00 +00:00
-permalink: /ai/news/Introducing-the-Microsoft-Fabric-Extensibility-Toolkit
 tags:
 - API Integration
 - Authentication

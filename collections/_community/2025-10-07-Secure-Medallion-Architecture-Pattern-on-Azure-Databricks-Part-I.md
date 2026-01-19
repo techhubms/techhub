@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/secure-medallion-architecture-pattern-on-azure-databricks-part-i/ba-p/4459268
 title: Secure Medallion Architecture Pattern on Azure Databricks (Part I)
 author: mscagliola
-canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/secure-medallion-architecture-pattern-on-azure-databricks-part-i/ba-p/4459268
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-07 06:25:50 +00:00
-permalink: /ml/community/Secure-Medallion-Architecture-Pattern-on-Azure-Databricks-Part-I
 tags:
 - ADLS Gen2
 - Azure Databricks

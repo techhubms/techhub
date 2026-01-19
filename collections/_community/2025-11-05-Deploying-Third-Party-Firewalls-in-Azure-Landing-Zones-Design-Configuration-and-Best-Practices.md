@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/deploying-third-party-firewalls-in-azure-landing-zones-design/ba-p/4458972
 title: 'Deploying Third-Party Firewalls in Azure Landing Zones: Design, Configuration, and Best Practices'
 author: PramodPalukuru
-canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/deploying-third-party-firewalls-in-azure-landing-zones-design/ba-p/4458972
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-05 06:11:28 +00:00
-permalink: /azure/community/Deploying-Third-Party-Firewalls-in-Azure-Landing-Zones-Design-Configuration-and-Best-Practices
 tags:
 - Active Active Deployment
 - Active Passive Deployment

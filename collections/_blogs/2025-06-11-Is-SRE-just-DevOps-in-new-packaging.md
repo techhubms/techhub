@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://roadtoalm.com/2025/06/11/is-sre-just-devops-in-new-packaging/
 title: Is SRE Just DevOps in New Packaging?
 author: Rene van Osnabrugge
-canonical_url: https://roadtoalm.com/2025/06/11/is-sre-just-devops-in-new-packaging/
 viewing_mode: external
 feed_name: René van Osnabrugge's Blog
-feed_url: https://roadtoalm.com/feed/
 date: 2025-06-11 08:33:40 +00:00
-permalink: /devops/blogs/Is-SRE-just-DevOps-in-new-packaging
 tags:
 - Engineering Culture
 - Incident Management

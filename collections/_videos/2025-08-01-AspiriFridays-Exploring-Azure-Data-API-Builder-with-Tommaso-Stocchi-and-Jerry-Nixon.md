@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Def3zt5RFpA
 title: 'AspiriFridays: Exploring Azure Data API Builder with Tommaso Stocchi and Jerry Nixon'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=Def3zt5RFpA
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-01 21:43:53 +00:00
-permalink: /ml/videos/AspiriFridays-Exploring-Azure-Data-API-Builder-with-Tommaso-Stocchi-and-Jerry-Nixon
 tags:
 - .NET
 - Application Programming Interfaces

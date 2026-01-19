@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/now-generally-available-autoscale-billing-for-spark-in-microsoft-fabric/
 title: Autoscale Billing for Spark in Microsoft Fabric Now Generally Available
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/now-generally-available-autoscale-billing-for-spark-in-microsoft-fabric/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-30 10:00:00 +00:00
-permalink: /ml/news/Autoscale-Billing-for-Spark-in-Microsoft-Fabric-Now-Generally-Available
 tags:
 - Apache Spark
 - Autoscale Billing

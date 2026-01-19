@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/industry-wide-certificate-changes-impacting-azure-app-service/ba-p/4477924
 title: Preparing for Industry-wide TLS Certificate Changes in Azure App Service (2026 Update)
 author: YutangLin
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/industry-wide-certificate-changes-impacting-azure-app-service/ba-p/4477924
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-15 10:23:57 +00:00
-permalink: /azure/community/Preparing-for-Industry-wide-TLS-Certificate-Changes-in-Azure-App-Service-2026-Update
 tags:
 - Azure App Service
 - Azure Security

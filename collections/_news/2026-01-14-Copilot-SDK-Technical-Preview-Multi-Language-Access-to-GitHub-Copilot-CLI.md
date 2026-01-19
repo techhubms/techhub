@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2026-01-14-copilot-sdk-in-technical-preview
 title: 'Copilot SDK Technical Preview: Multi-Language Access to GitHub Copilot CLI'
 author: Allison
-canonical_url: https://github.blog/changelog/2026-01-14-copilot-sdk-in-technical-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2026-01-14 23:00:28 +00:00
-permalink: /github-copilot/news/Copilot-SDK-Technical-Preview-Multi-Language-Access-to-GitHub-Copilot-CLI
 tags:
 - .NET
 - API

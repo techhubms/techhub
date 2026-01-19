@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=fBjk4CQG6Hw
 title: Multi-Cloud Storage Migration with Azure Storage Mover
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=fBjk4CQG6Hw
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-07 13:45:44 +00:00
-permalink: /azure/videos/Multi-Cloud-Storage-Migration-with-Azure-Storage-Mover
 tags:
 - AWS
 - AWS S3

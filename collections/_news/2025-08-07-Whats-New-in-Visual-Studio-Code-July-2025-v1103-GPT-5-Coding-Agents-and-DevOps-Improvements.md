@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/updates/v1_103
 title: "What's New in Visual Studio Code July 2025 (v1.103): GPT-5, Coding Agents, and DevOps Improvements"
 author: Visual Studio Code Team
-canonical_url: https://code.visualstudio.com/updates/v1_103
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-08-07 17:00:00 +00:00
-permalink: /github-copilot/news/Whats-New-in-Visual-Studio-Code-July-2025-v1103-GPT-5-Coding-Agents-and-DevOps-Improvements
 tags:
 - Accessibility
 - Agent Mode

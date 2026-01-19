@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/creating-custom-microsoft-teams-apps-and-tabs/
 title: Creating Custom Microsoft Teams Apps and Tabs
 author: Dellenny
-canonical_url: https://dellenny.com/creating-custom-microsoft-teams-apps-and-tabs/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-01 08:33:00 +00:00
-permalink: /coding/blogs/Creating-Custom-Microsoft-Teams-Apps-and-Tabs
 tags:
 - Angular
 - App Manifest

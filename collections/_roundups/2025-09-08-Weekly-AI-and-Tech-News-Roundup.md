@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: Latest Updates in AI Development, Cloud Automation, and Enterprise Security
 author: Tech Hub Team
 viewing_mode: internal
 date: 2025-09-08 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
 - AI Agents

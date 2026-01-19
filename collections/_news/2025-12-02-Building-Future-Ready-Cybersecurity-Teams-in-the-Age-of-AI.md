@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/12/02/how-to-build-forward-thinking-cybersecurity-teams-for-tomorrow/
 title: Building Future-Ready Cybersecurity Teams in the Age of AI
 author: Ann Johnson
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/02/how-to-build-forward-thinking-cybersecurity-teams-for-tomorrow/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-02 17:00:00 +00:00
-permalink: /ai/news/Building-Future-Ready-Cybersecurity-Teams-in-the-Age-of-AI
 tags:
 - Adaptive Defenders
 - AI in Security

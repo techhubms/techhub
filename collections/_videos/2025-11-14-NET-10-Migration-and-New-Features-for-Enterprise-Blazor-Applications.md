@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=cBZopiZeuL8
 title: .NET 10 Migration and New Features for Enterprise Blazor Applications
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=cBZopiZeuL8
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:21:30 +00:00
-permalink: /coding/videos/NET-10-Migration-and-New-Features-for-Enterprise-Blazor-Applications
 tags:
 - .NET
 - .NET 10

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/11/06/new-idc-research-highlights-a-major-cloud-security-shift/
 title: IDC Research Reveals Cloud Security Trends and Microsoft’s Unified Approach
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/11/06/new-idc-research-highlights-a-major-cloud-security-shift/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-06 18:12:32 +00:00
-permalink: /ai/news/IDC-Research-Reveals-Cloud-Security-Trends-and-Microsofts-Unified-Approach
 tags:
 - Agentic AI
 - CISO

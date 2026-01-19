@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://blogs.windows.com/windowsexperience/2025/07/22/windows-11-is-the-home-for-ai-on-the-pc-with-even-more-experiences-available-today/
 title: Windows 11 is the home for AI on the PC, with more experiences available today
 author: stclarke
-canonical_url: https://blogs.windows.com/windowsexperience/2025/07/22/windows-11-is-the-home-for-ai-on-the-pc-with-even-more-experiences-available-today/
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-22 18:04:56 +00:00
-permalink: /ai/news/Windows-11-is-the-home-for-AI-on-the-PC-with-more-experiences-available-today
 viewing_mode: external
 page: news
 tags:

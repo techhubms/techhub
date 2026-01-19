@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: XPRT Magazine 05
 date: 2017-05-01 00:00:00 +00:00
 author: Xebia
 viewing_mode: external
-permalink: /azure/community/XPRT-Magazine-05
 tags:
 - ARM Templates
 - Automation

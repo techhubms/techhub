@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/oBW4Xt6c_Uo
 title: A First Look at the New Copilot Agents Panel on GitHub
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/oBW4Xt6c_Uo
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-01 14:01:20 +00:00
-permalink: /github-copilot/videos/A-First-Look-at-the-New-Copilot-Agents-Panel-on-GitHub
 tags:
 - Agents Panel
 - AI Assistance

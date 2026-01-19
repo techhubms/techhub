@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/azure-resource-manager-arm-streamline-and-secure-cloud-resource-management/
 title: 'Azure Resource Manager (ARM): The Backbone of Cloud Resource Management'
 author: Dellenny
-canonical_url: https://dellenny.com/azure-resource-manager-arm-streamline-and-secure-cloud-resource-management/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-29 07:59:57 +00:00
-permalink: /azure/blogs/Azure-Resource-Manager-ARM-The-Backbone-of-Cloud-Resource-Management
 tags:
 - ARM
 - ARM Templates

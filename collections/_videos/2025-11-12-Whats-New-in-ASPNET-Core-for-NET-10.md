@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=LgUZB_rhyX4
 title: What's New in ASP.NET Core for .NET 10
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=LgUZB_rhyX4
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:19 +00:00
-permalink: /coding/videos/Whats-New-in-ASPNET-Core-for-NET-10
 tags:
 - .NET
 - .NET 10

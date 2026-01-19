@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/open-source/inside-the-breach-that-broke-the-internet-the-untold-story-of-log4shell/
 title: 'Inside the Log4Shell Breach: Lessons in Open Source Security and Sustainability'
 author: Gregg Cochran
-canonical_url: https://github.blog/open-source/inside-the-breach-that-broke-the-internet-the-untold-story-of-log4shell/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-10-20 16:00:16 +00:00
-permalink: /security/news/Inside-the-Log4Shell-Breach-Lessons-in-Open-Source-Security-and-Sustainability
 tags:
 - CVSS
 - Dependabot

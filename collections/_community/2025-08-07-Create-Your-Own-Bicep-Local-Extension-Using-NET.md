@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/create-your-own-bicep-local-extension-using-net/ba-p/4439967
 title: Create Your Own Bicep Local Extension Using .NET
 author: Sydney Smith
-canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/create-your-own-bicep-local-extension-using-net/ba-p/4439967
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-07 14:50:37 +00:00
-permalink: /coding/community/Create-Your-Own-Bicep-Local-Extension-Using-NET
 tags:
 - .NET 9
 - ARM

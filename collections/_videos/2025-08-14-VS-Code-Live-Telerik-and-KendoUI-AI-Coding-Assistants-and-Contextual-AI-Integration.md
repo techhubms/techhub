@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=fAYMJpB8GYQ
 title: 'VS Code Live: Telerik & KendoUI AI Coding Assistants and Contextual AI Integration'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=fAYMJpB8GYQ
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-14 21:54:51 +00:00
-permalink: /github-copilot/videos/VS-Code-Live-Telerik-and-KendoUI-AI-Coding-Assistants-and-Contextual-AI-Integration
 tags:
 - AI Coding Assistant
 - AI Integration

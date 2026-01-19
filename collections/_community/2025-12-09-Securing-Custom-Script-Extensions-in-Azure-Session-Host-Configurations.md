@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/more-security-around-using-custom-script-extensions-and-session/idi-p/4476426
 title: Securing Custom Script Extensions in Azure Session Host Configurations
 author: kristokruuser
-canonical_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/more-security-around-using-custom-script-extensions-and-session/idi-p/4476426
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-09 13:01:13 +00:00
-permalink: /azure/community/Securing-Custom-Script-Extensions-in-Azure-Session-Host-Configurations
 tags:
 - Automation
 - Azure Key Vault

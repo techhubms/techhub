@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mjo656/is_hyperv_running_on_azure_host_os_or_azure_host/
 title: Understanding Hyper-V and Azure Host OS Architecture
 author: mogeko233
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mjo656/is_hyperv_running_on_azure_host_os_or_azure_host/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-07 02:26:59 +00:00
-permalink: /azure/community/Understanding-Hyper-V-and-Azure-Host-OS-Architecture
 tags:
 - Azure Host OS
 - Child Partition

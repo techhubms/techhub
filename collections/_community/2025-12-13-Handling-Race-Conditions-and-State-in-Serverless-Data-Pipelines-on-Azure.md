@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture/design-pattern-handling-race-conditions-and-state-in-serverless/m-p/4477664#M820
 title: Handling Race Conditions and State in Serverless Data Pipelines on Azure
 author: Chameseddine
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture/design-pattern-handling-race-conditions-and-state-in-serverless/m-p/4477664#M820
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-13 12:22:51 +00:00
-permalink: /ml/community/Handling-Race-Conditions-and-State-in-Serverless-Data-Pipelines-on-Azure
 tags:
 - Azure Data Factory
 - Azure Durable Functions

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/machine-learning-in-azure-a-beginners-guide-to-building-intelligent-solutions/
 title: 'Machine Learning in Azure: A Beginner’s Guide to Building Intelligent Solutions'
 author: Dellenny
-canonical_url: https://dellenny.com/machine-learning-in-azure-a-beginners-guide-to-building-intelligent-solutions/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-10 09:57:35 +00:00
-permalink: /ai/blogs/Machine-Learning-in-Azure-A-Beginners-Guide-to-Building-Intelligent-Solutions
 tags:
 - AI Development
 - AKS

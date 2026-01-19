@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/general-availability-enhanced-data-mapper-experience-in-logic/ba-p/4442296
 title: 'General Availability: Enhanced Data Mapper Experience in Logic Apps (Standard)'
 author: shahparth
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/general-availability-enhanced-data-mapper-experience-in-logic/ba-p/4442296
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 23:19:21 +00:00
-permalink: /coding/community/General-Availability-Enhanced-Data-Mapper-Experience-in-Logic-Apps-Standard
 tags:
 - Azure Integration Services
 - Azure Logic Apps

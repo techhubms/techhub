@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/public-preview-of-azure-native-dell-powerscale/ba-p/4470120
 title: 'Public Preview: Azure Native Dell PowerScale Now Available'
 author: Aung_Oo
-canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/public-preview-of-azure-native-dell-powerscale/ba-p/4470120
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-15 20:17:04 +00:00
-permalink: /azure/community/Public-Preview-Azure-Native-Dell-PowerScale-Now-Available
 tags:
 - AI
 - AI Workloads

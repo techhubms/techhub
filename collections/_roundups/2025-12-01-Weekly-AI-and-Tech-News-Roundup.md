@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: 'Ignite 2025: Updates in Agentic AI, Cloud, Developer Tools, and Security'
 author: Tech Hub Team
 viewing_mode: internal
 date: 2025-12-01 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - Agentic AI
 - Automation

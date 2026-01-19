@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-07-30-copilot-coding-agent-keeps-pull-request-titles-and-bodies-up-to-date
 title: 'GitHub Copilot Coding Agent: Automatic Updates for Pull Request Titles and Descriptions'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-07-30-copilot-coding-agent-keeps-pull-request-titles-and-bodies-up-to-date
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-30 17:16:52 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-Coding-Agent-Automatic-Updates-for-Pull-Request-Titles-and-Descriptions
 tags:
 - Automation
 - Coding Agent

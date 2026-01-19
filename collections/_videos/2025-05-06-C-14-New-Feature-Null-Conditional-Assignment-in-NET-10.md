@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=q0xyeA1xPng
 title: 'C# 14 New Feature: Null-Conditional Assignment in .NET 10'
 author: Learn Microsoft AI
-canonical_url: https://www.youtube.com/watch?v=q0xyeA1xPng
 viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-05-06 05:27:38 +00:00
-permalink: /coding/videos/C-14-New-Feature-Null-Conditional-Assignment-in-NET-10
 tags:
 - .NET 10
 - C# 14

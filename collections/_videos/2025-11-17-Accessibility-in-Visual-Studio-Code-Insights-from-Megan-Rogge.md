@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=THF85BT8J7c
 title: 'Accessibility in Visual Studio Code: Insights from Megan Rogge'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=THF85BT8J7c
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-11-17 08:00:38 +00:00
-permalink: /coding/videos/Accessibility-in-Visual-Studio-Code-Insights-from-Megan-Rogge
 tags:
 - Accessibility
 - Accessible Views

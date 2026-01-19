@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/ENFNweRg8SU
 title: "GitHub's Remote MCP Update: General Availability and Key Integrations"
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/ENFNweRg8SU
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-10 14:00:32 +00:00
-permalink: /github-copilot/videos/GitHubs-Remote-MCP-Update-General-Availability-and-Key-Integrations
 tags:
 - AI Integration
 - Automation

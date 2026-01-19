@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=BpOAxKzvrPA
 title: 'Exploring the New Microsoft Foundry Portal: A Guided Tour'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=BpOAxKzvrPA
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-19 23:05:48 +00:00
-permalink: /ai/videos/Exploring-the-New-Microsoft-Foundry-Portal-A-Guided-Tour
 tags:
 - Agent Building
 - AI Development

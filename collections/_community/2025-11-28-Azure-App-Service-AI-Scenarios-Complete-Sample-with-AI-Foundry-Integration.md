@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-service-ai-scenarios-complete-sample-with-ai-foundry/ba-p/4473142
 title: 'Azure App Service AI Scenarios: Complete Sample with AI Foundry Integration'
 author: Nitesh_Jain
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-service-ai-scenarios-complete-sample-with-ai-foundry/ba-p/4473142
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-28 10:42:08 +00:00
-permalink: /ai/community/Azure-App-Service-AI-Scenarios-Complete-Sample-with-AI-Foundry-Integration
 tags:
 - API Integration
 - Audio Transcription

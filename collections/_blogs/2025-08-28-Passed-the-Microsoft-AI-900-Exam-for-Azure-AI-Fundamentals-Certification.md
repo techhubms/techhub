@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/08/passed-the-microsoft-ai-900-exam-for-microsoft-certified-azure-ai-fundamentals-%f0%9f%8e%89/
 title: Passed the Microsoft AI-900 Exam for Azure AI Fundamentals Certification
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/08/passed-the-microsoft-ai-900-exam-for-microsoft-certified-azure-ai-fundamentals-%f0%9f%8e%89/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-08-28 14:48:56 +00:00
-permalink: /ai/blogs/Passed-the-Microsoft-AI-900-Exam-for-Azure-AI-Fundamentals-Certification
 tags:
 - AI 900
 - AI Workloads

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=kbW7qHMBM6A
 title: Welcome to .NET 10 & Visual Studio 2026!
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=kbW7qHMBM6A
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:28 +00:00
-permalink: /coding/videos/Welcome-to-NET-10-and-Visual-Studio-2026
 tags:
 - .NET
 - .NET 10

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/breaking-free-from-rising-observability-costs-with-open-cost-efficient-architectures/
 title: 'Open Cost-Efficient Architectures for Observability: Escaping Vendor Lock-In and Ballooning Costs'
 author: Mike Shi
-canonical_url: https://devops.com/breaking-free-from-rising-observability-costs-with-open-cost-efficient-architectures/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-23 14:10:49 +00:00
-permalink: /devops/blogs/Open-Cost-Efficient-Architectures-for-Observability-Escaping-Vendor-Lock-In-and-Ballooning-Costs
 tags:
 - Cloud Native
 - Columnar Databases

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=N0DzWMkEnzk
 title: Building Intelligent Apps with .NET
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=N0DzWMkEnzk
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:19 +00:00
-permalink: /ai/videos/Building-Intelligent-Apps-with-NET
 tags:
 - .NET
 - .NET Aspire

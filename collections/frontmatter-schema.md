@@ -98,15 +98,14 @@ These fields are optional but commonly used:
 | Field | Type | Description | Example |
 |-------|------|-------------|---------|
 | `youtube_id` | string | YouTube video ID (optional - can be extracted from content) | `"dQw4w9WgXcQ"` |
-| `alt_collection` | string | Subfolder collection name for special categorization | `"ghc-features"` or `"vscode-updates"` |
 
 **YouTube video ID**: The parser can extract YouTube IDs from `{% youtube VIDEO_ID %}` tags in content, so the frontmatter field is optional.
 
 **Alt-collection usage:**
 
 - Used for videos in subfolders with special categorization needs
-- Example: `_videos/ghc-features/` → `alt_collection: "ghc-features"`
-- Example: `_videos/vscode-updates/` → `alt_collection: "vscode-updates"`
+- Example: `_videos/ghc-features/` → `collection: "ghc-features"`
+- Example: `_videos/vscode-updates/` → `collection: "vscode-updates"`
 
 ### Features (_videos/ghc-features/)
 
@@ -114,7 +113,6 @@ GitHub Copilot features require additional fields:
 
 | Field | Type | Description | Example |
 |-------|------|-------------|---------|
-| `alt_collection` | string | Must be `"ghc-features"` | `"ghc-features"` |
 | `plans` | array | Supported subscription tiers | `["Free", "Business", "Enterprise"]` |
 | `ghes_support` | boolean | GitHub Enterprise Server support | `true` or `false` |
 
@@ -130,7 +128,6 @@ VS Code update videos require:
 
 | Field | Type | Description | Example |
 |-------|------|-------------|---------|
-| `alt_collection` | string | Must be `"vscode-updates"` | `"vscode-updates"` |
 
 ### News (_news/)
 
@@ -193,7 +190,7 @@ Follow this order for consistency:
 9. `permalink`
 10. `tags`
 11. `section_names`
-12. Collection-specific fields (`alt_collection`, `plans`, `ghes_support`, `coming_soon`)
+12. Collection-specific fields (plans, `ghes_support`, `coming_soon`)
 
 ### Quoting Rules
 
@@ -301,7 +298,7 @@ date: 2025-01-15 10:00:00 +00:00
 permalink: "/github-copilot/videos/Multi-File-Editing-with-GitHub-Copilot"
 tags: ["GitHub Copilot", "Features", "Multi-File Editing", "AI", "Videos"]
 section_names: ["ai", "github-copilot"]
-alt_collection: "ghc-features"
+collection: "ghc-features"
 plans: ["Business", "Enterprise"]
 ghes_support: false
 ---

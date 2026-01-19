@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=0x1Y9e6Vh7I
 title: Taming AI Assisted Coding Models with Eleanor Berger
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=0x1Y9e6Vh7I
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-11-24 08:00:01 +00:00
-permalink: /github-copilot/videos/Taming-AI-Assisted-Coding-Models-with-Eleanor-Berger
 tags:
 - Agentic Models
 - Agents.md Standard

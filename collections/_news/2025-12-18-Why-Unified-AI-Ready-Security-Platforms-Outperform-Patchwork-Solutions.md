@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/12/18/new-microsoft-e-book-3-reasons-point-solutions-are-holding-you-back/
 title: Why Unified, AI-Ready Security Platforms Outperform Patchwork Solutions
 author: Scott Woodgate
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/18/new-microsoft-e-book-3-reasons-point-solutions-are-holding-you-back/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-18 17:00:00 +00:00
-permalink: /ai/news/Why-Unified-AI-Ready-Security-Platforms-Outperform-Patchwork-Solutions
 tags:
 - AI Security
 - Cloud Security

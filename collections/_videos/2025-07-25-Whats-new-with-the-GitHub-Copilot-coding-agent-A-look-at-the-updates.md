@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=vgPl6sK6rQo
 title: "What's new with the GitHub Copilot coding agent: A look at the updates"
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=vgPl6sK6rQo
 viewing_mode: internal
 feed_name: GitHub's Youtube channel
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-25 14:01:34 +00:00
-permalink: /github-copilot/videos/Whats-new-with-the-GitHub-Copilot-coding-agent-A-look-at-the-updates
 tags:
 - Coding Agent
 - CodingAgent

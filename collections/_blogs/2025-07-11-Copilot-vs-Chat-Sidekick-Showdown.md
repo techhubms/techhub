@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html
 title: 'Copilot vs. Chat: Sidekick Showdown'
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-07-11 00:00:00 +00:00
-permalink: /github-copilot/blogs/Copilot-vs-Chat-Sidekick-Showdown
 tags:
 - AI Assistant
 - ChatGPT

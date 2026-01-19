@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=BkOcPQntsk4
 title: 'Nasdaq Boardvantage: AI-Driven Governance Architecture with Azure PostgreSQL and Microsoft Foundry'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=BkOcPQntsk4
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-12-09 18:08:55 +00:00
-permalink: /ai/videos/Nasdaq-Boardvantage-AI-Driven-Governance-Architecture-with-Azure-PostgreSQL-and-Microsoft-Foundry
 tags:
 - AI Governance
 - AI Meeting Minutes

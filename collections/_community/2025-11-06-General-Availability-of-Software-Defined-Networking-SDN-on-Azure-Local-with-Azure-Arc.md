@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-general-availability-of-software-defined-networking/ba-p/4467579
 title: General Availability of Software Defined Networking (SDN) on Azure Local with Azure Arc
 author: varunlakshmanan
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-general-availability-of-software-defined-networking/ba-p/4467579
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-06 16:24:37 +00:00
-permalink: /azure/community/General-Availability-of-Software-Defined-Networking-SDN-on-Azure-Local-with-Azure-Arc
 tags:
 - Azure Arc
 - Azure CLI

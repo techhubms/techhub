@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=mQ9iaTar9ew
 title: Turning AI Vision into Impact in UK Financial Services
 author: Microsoft Cloud
-canonical_url: https://www.youtube.com/watch?v=mQ9iaTar9ew
 viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-06-24 14:01:10 +00:00
-permalink: /ai/videos/Turning-AI-Vision-into-Impact-in-UK-Financial-Services
 tags:
 - AI Transformation
 - Banking

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-to-design-a-future-proof-sharepoint-information-architecture/
 title: Designing a Future-Proof SharePoint Information Architecture
 author: John Edward
-canonical_url: https://dellenny.com/how-to-design-a-future-proof-sharepoint-information-architecture/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2026-01-09 09:19:21 +00:00
-permalink: /coding/blogs/Designing-a-Future-Proof-SharePoint-Information-Architecture
 tags:
 - Azure AD
 - Content Types

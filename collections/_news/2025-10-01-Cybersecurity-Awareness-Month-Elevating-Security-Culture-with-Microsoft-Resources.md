@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/10/01/cybersecurity-awareness-month-security-starts-with-you/
 title: 'Cybersecurity Awareness Month: Elevating Security Culture with Microsoft Resources'
 author: Vasu Jakkal
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/01/cybersecurity-awareness-month-security-starts-with-you/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-01 16:00:00 +00:00
-permalink: /ai/news/Cybersecurity-Awareness-Month-Elevating-Security-Culture-with-Microsoft-Resources
 tags:
 - AI Governance
 - Be Cybersmart Kit

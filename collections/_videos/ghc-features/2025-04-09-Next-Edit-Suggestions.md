@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/OZKC2c9wD1Q
 title: Next Edit Suggestions
 author: Fokko Veegens
-canonical_url: https://youtu.be/OZKC2c9wD1Q
 date: 2025-04-09 09:37:02 +00:00
-permalink: /github-copilot/videos/Next-Edit-Suggestions
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Editing
 - Suggestions

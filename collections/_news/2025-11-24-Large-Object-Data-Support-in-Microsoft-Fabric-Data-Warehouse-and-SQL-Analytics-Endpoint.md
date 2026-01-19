@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/large-string-and-binary-values-in-fabric-data-warehouse-and-sql-analytics-endpoint-for-mirrored-items-general-availability/
 title: Large Object Data Support in Microsoft Fabric Data Warehouse and SQL Analytics Endpoint
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/large-string-and-binary-values-in-fabric-data-warehouse-and-sql-analytics-endpoint-for-mirrored-items-general-availability/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-24 09:00:00 +00:00
-permalink: /ml/news/Large-Object-Data-Support-in-Microsoft-Fabric-Data-Warehouse-and-SQL-Analytics-Endpoint
 tags:
 - Azure SQL Database
 - Binary Data

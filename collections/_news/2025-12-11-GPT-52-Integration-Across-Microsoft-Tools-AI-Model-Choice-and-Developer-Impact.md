@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.linkedin.com/posts/satyanadella_super-excited-about-gpt-52-from-our-partners-activity-7404949433819463680-VyMD
 title: 'GPT-5.2 Integration Across Microsoft Tools: AI Model Choice and Developer Impact'
 author: stclarke
-canonical_url: https://www.linkedin.com/posts/satyanadella_super-excited-about-gpt-52-from-our-partners-activity-7404949433819463680-VyMD
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-11 19:11:15 +00:00
-permalink: /github-copilot/news/GPT-52-Integration-Across-Microsoft-Tools-AI-Model-Choice-and-Developer-Impact
 tags:
 - AI Integration
 - AI Productivity

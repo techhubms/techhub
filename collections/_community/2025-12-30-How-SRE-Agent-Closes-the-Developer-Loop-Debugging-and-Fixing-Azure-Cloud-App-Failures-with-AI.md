@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-vibe-coding-to-working-app-how-sre-agent-completes-the/ba-p/4482000
 title: 'How SRE Agent Closes the Developer Loop: Debugging and Fixing Azure Cloud App Failures with AI'
 author: dchelupati
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-vibe-coding-to-working-app-how-sre-agent-completes-the/ba-p/4482000
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-30 16:22:54 +00:00
-permalink: /ai/community/How-SRE-Agent-Closes-the-Developer-Loop-Debugging-and-Fixing-Azure-Cloud-App-Failures-with-AI
 tags:
 - .NET 8
 - Application Debugging

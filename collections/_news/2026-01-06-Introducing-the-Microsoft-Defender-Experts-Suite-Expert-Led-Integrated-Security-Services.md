@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2026/01/06/introducing-the-microsoft-defender-experts-suite-elevate-your-security-with-expert-led-services/
 title: 'Introducing the Microsoft Defender Experts Suite: Expert-Led Integrated Security Services'
 author: Aarti Borkar and Andrew Conway
-canonical_url: https://www.microsoft.com/en-us/security/blog/2026/01/06/introducing-the-microsoft-defender-experts-suite-elevate-your-security-with-expert-led-services/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2026-01-06 17:00:00 +00:00
-permalink: /security/news/Introducing-the-Microsoft-Defender-Experts-Suite-Expert-Led-Integrated-Security-Services
 tags:
 - Cyber Resilience
 - Cyberthreats

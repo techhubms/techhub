@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=mJQxAKYkCBk
 title: 'Windows 11 Developer Productivity Tools: WSL, Terminal, PowerToys & Enterprise Security'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=mJQxAKYkCBk
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:56:18 +00:00
-permalink: /coding/videos/Windows-11-Developer-Productivity-Tools-WSL-Terminal-PowerToys-and-Enterprise-Security
 tags:
 - AI
 - AI Agent

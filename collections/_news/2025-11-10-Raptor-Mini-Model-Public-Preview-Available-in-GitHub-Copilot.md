@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-10-raptor-mini-is-rolling-out-in-public-preview-for-github-copilot
 title: Raptor Mini Model Public Preview Available in GitHub Copilot
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-10-raptor-mini-is-rolling-out-in-public-preview-for-github-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-10 16:15:49 +00:00
-permalink: /github-copilot/news/Raptor-Mini-Model-Public-Preview-Available-in-GitHub-Copilot
 tags:
 - AI Development
 - AI Model

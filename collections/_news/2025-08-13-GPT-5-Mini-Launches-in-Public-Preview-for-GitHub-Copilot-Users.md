@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-13-gpt-5-mini-now-available-in-github-copilot-in-public-preview
 title: GPT-5 Mini Launches in Public Preview for GitHub Copilot Users
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-13-gpt-5-mini-now-available-in-github-copilot-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-13 17:49:12 +00:00
-permalink: /github-copilot/news/GPT-5-Mini-Launches-in-Public-Preview-for-GitHub-Copilot-Users
 tags:
 - Admin Settings
 - AI Models

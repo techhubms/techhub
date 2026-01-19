@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/the-signals-loop-fine-tuning-for-world-class-ai-apps-and-agents/
 title: 'The Signals Loop: Fine-Tuning for World-Class AI Apps and Agents'
 author: Asha Sharma and Rolf Harms
-canonical_url: https://azure.microsoft.com/en-us/blog/the-signals-loop-fine-tuning-for-world-class-ai-apps-and-agents/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-21 15:00:00 +00:00
-permalink: /github-copilot/news/The-Signals-Loop-Fine-Tuning-for-World-Class-AI-Apps-and-Agents
 tags:
 - Agent Design
 - AI + Machine Learning

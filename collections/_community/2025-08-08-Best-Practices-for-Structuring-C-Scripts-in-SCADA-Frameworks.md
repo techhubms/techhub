@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mkiokh/c_script_best_practices/
 title: Best Practices for Structuring C# Scripts in SCADA Frameworks
 author: DouglasRoldan
-canonical_url: https://www.reddit.com/r/csharp/comments/1mkiokh/c_script_best_practices/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-08 01:55:00 +00:00
-permalink: /coding/community/Best-Practices-for-Structuring-C-Scripts-in-SCADA-Frameworks
 tags:
 - Algorithmic Complexity
 - Best Practices

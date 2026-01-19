@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-24-claude-opus-4-5-is-in-public-preview-for-github-copilot
 title: Claude Opus 4.5 Public Preview Launches for GitHub Copilot
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-24-claude-opus-4-5-is-in-public-preview-for-github-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-24 18:12:32 +00:00
-permalink: /github-copilot/news/Claude-Opus-45-Public-Preview-Launches-for-GitHub-Copilot
 tags:
 - AI Model
 - Anthropic

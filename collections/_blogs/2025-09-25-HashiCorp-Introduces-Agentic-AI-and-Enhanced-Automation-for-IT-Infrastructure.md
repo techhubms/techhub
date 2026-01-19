@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/hashicorp-embraces-agentic-ai-to-streamline-management-of-it/
 title: HashiCorp Introduces Agentic AI and Enhanced Automation for IT Infrastructure
 author: Mike Vizard
-canonical_url: https://devops.com/hashicorp-embraces-agentic-ai-to-streamline-management-of-it/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-25 16:00:10 +00:00
-permalink: /ai/blogs/HashiCorp-Introduces-Agentic-AI-and-Enhanced-Automation-for-IT-Infrastructure
 tags:
 - Agentic AI
 - Ansible

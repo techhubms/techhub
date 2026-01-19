@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-mcp-demos/ba-p/4452175
 title: 'Building MCP Servers with Azure Logic Apps: Demo Collection'
 author: KentWeareMSFT
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-mcp-demos/ba-p/4452175
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-08 20:32:48 +00:00
-permalink: /azure/community/Building-MCP-Servers-with-Azure-Logic-Apps-Demo-Collection
 tags:
 - API Center
 - API Management

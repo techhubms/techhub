@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://cooknwithcopilot.com/blog/use-github-copilot-chat-to-plan-before-you-code.html
 title: Use GitHub Copilot Chat to Plan Your Software Before Coding
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://cooknwithcopilot.com/blog/use-github-copilot-chat-to-plan-before-you-code.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-07-18 00:00:00 +00:00
-permalink: /github-copilot/blogs/Use-GitHub-Copilot-Chat-to-Plan-Your-Software-Before-Coding
 tags:
 - AI Assisted Development
 - Code Planning

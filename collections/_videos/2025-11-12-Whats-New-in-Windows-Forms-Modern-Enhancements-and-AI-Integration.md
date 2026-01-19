@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=f0971pImtlw
 title: "What's New in Windows Forms: Modern Enhancements and AI Integration"
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=f0971pImtlw
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:28 +00:00
-permalink: /github-copilot/videos/Whats-New-in-Windows-Forms-Modern-Enhancements-and-AI-Integration
 tags:
 - .NET
 - .NET 10

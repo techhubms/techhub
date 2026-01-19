@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=fHha3U_EDkM
 title: 'Migrating VMware Workloads to Azure: Tools, Best Practices, and Cloud Management'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=fHha3U_EDkM
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:58:45 +00:00
-permalink: /azure/videos/Migrating-VMware-Workloads-to-Azure-Tools-Best-Practices-and-Cloud-Management
 tags:
 - Application Tagging
 - Azure Arc

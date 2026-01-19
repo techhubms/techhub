@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mji0tp/i_just_released_my_first_real_open_source_project/
 title: "Open Source Avalonia/.NET Project 'Aniki': Feedback and Lessons Learned"
 author: Loiuy123_
-canonical_url: https://www.reddit.com/r/csharp/comments/1mji0tp/i_just_released_my_first_real_open_source_project/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-06 21:57:29 +00:00
-permalink: /coding/community/Open-Source-AvaloniaNET-Project-Aniki-Feedback-and-Lessons-Learned
 tags:
 - .NET
 - Application Development

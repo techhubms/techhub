@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure/implementing-zero-trust-network-security-for-azure-web-apps/m-p/4451649#M22190
 title: Implementing Zero-Trust Network Security for Azure Web Apps Using Private Endpoints
 author: SaiMinThu
-canonical_url: https://techcommunity.microsoft.com/t5/azure/implementing-zero-trust-network-security-for-azure-web-apps/m-p/4451649#M22190
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-07 08:45:14 +00:00
-permalink: /azure/community/Implementing-Zero-Trust-Network-Security-for-Azure-Web-Apps-Using-Private-Endpoints
 tags:
 - Access Restriction
 - App Service

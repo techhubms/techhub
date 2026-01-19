@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=e7hkKyQEcN8
 title: Orchestrating GitHub Actions Pipelines in C# with Cake SDK
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=e7hkKyQEcN8
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 08:00:06 +00:00
-permalink: /coding/videos/Orchestrating-GitHub-Actions-Pipelines-in-C-with-Cake-SDK
 tags:
 - .NET 10
 - Build Automation

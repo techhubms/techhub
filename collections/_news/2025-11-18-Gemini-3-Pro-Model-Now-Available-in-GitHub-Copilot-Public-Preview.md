@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot
 title: Gemini 3 Pro Model Now Available in GitHub Copilot Public Preview
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 16:15:31 +00:00
-permalink: /github-copilot/news/Gemini-3-Pro-Model-Now-Available-in-GitHub-Copilot-Public-Preview
 tags:
 - Agent Mode
 - AI Development

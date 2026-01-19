@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-bazel
 title: Dependabot Version Updates Now Support Bazel
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-bazel
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-16 16:45:50 +00:00
-permalink: /devops/news/Dependabot-Version-Updates-Now-Support-Bazel
 tags:
 - Automation
 - Bazel

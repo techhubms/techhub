@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/layer-7-network-policies-for-aks-now-generally-available-for/ba-p/4467598
 title: 'Layer 7 Network Policies for AKS: General Availability for Enterprise-Grade Security'
 author: KhushbuP
-canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/layer-7-network-policies-for-aks-now-generally-available-for/ba-p/4467598
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-08 03:12:57 +00:00
-permalink: /azure/community/Layer-7-Network-Policies-for-AKS-General-Availability-for-Enterprise-Grade-Security
 tags:
 - Advanced Container Networking
 - AKS

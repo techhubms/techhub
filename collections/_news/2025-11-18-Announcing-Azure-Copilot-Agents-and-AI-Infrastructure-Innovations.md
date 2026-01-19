@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/announcing-azure-copilot-agents-and-ai-infrastructure-innovations/
 title: Announcing Azure Copilot Agents and AI Infrastructure Innovations
 author: Jeremy Winter
-canonical_url: https://azure.microsoft.com/en-us/blog/announcing-azure-copilot-agents-and-ai-infrastructure-innovations/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 16:00:00 +00:00
-permalink: /ai/news/Announcing-Azure-Copilot-Agents-and-AI-Infrastructure-Innovations
 tags:
 - AI + Machine Learning
 - AI Agents

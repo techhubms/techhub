@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/engineering/infrastructure/when-protections-outlive-their-purpose-a-lesson-on-managing-defense-systems-at-scale/
 title: 'When Protections Outlive Their Purpose: Managing Defense Systems at Scale on GitHub'
 author: Thomas Kjær Aabo
-canonical_url: https://github.blog/engineering/infrastructure/when-protections-outlive-their-purpose-a-lesson-on-managing-defense-systems-at-scale/
 viewing_mode: external
 feed_name: GitHub Engineering Blog
-feed_url: https://github.blog/engineering/feed/
 date: 2026-01-15 20:54:32 +00:00
-permalink: /devops/news/When-Protections-Outlive-Their-Purpose-Managing-Defense-Systems-at-Scale-on-GitHub
 tags:
 - DDoS Protection
 - Defense Mechanisms

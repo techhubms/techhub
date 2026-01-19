@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/blogs/2025/05/12/agent-mode-meets-mcp
 title: Integrating Model Context Protocol (MCP) in VS Code Agent Mode
 author: Harald Kirschner
-canonical_url: https://code.visualstudio.com/blogs/2025/05/12/agent-mode-meets-mcp
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-05-14 00:00:00 +00:00
-permalink: /ai/news/Integrating-Model-Context-Protocol-MCP-in-VS-Code-Agent-Mode
 tags:
 - AI Agents
 - Developer Tools

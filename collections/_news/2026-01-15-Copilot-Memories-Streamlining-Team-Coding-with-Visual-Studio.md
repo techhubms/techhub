@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/copilot-memories/
 title: 'Copilot Memories: Streamlining Team Coding with Visual Studio'
 author: Jessie Houghton
-canonical_url: https://devblogs.microsoft.com/visualstudio/copilot-memories/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2026-01-15 13:00:33 +00:00
-permalink: /github-copilot/news/Copilot-Memories-Streamlining-Team-Coding-with-Visual-Studio
 tags:
 - AI Assisted Development
 - Code Consistency

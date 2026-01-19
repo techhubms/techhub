@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-18-actions-yaml-anchors-and-non-public-workflow-templates
 title: GitHub Actions Adds YAML Anchors and Workflow Templates from Non-Public Repositories
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-18-actions-yaml-anchors-and-non-public-workflow-templates
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-18 18:37:50 +00:00
-permalink: /devops/news/GitHub-Actions-Adds-YAML-Anchors-and-Workflow-Templates-from-Non-Public-Repositories
 tags:
 - .github Repositories
 - Actions

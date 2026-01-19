@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=kdk0Ye47tfE
 title: Azure Update - 31st October 2025
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=kdk0Ye47tfE
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-10-31 14:55:29 +00:00
-permalink: /ml/videos/Azure-Update-31st-October-2025
 tags:
 - AFD WAF
 - AFS Migration

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mhiqip/github_copilot_and_working_with_legacy_code/
 title: GitHub Copilot and Handling Context Limitations in Large Legacy Codebases
 author: LifeguardFar6851
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mhiqip/github_copilot_and_working_with_legacy_code/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-04 16:49:00 +00:00
-permalink: /github-copilot/community/GitHub-Copilot-and-Handling-Context-Limitations-in-Large-Legacy-Codebases
 tags:
 - AI Code Assistance
 - Code Review

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/automating-windows-11-virtual-desktop-management-via-scripting-command-line/
 title: Automating Virtual Desktops in Windows 11 with PowerShell and Command-Line Tools
 author: Dellenny
-canonical_url: https://dellenny.com/automating-windows-11-virtual-desktop-management-via-scripting-command-line/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-30 06:56:21 +00:00
-permalink: /coding/blogs/Automating-Virtual-Desktops-in-Windows-11-with-PowerShell-and-Command-Line-Tools
 tags:
 - AutoHotkey
 - Automation

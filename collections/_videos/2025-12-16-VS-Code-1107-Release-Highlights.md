@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=a7jj0PvvGMk
 title: VS Code 1.107 Release Highlights
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=a7jj0PvvGMk
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-12-16 22:09:59 +00:00
-permalink: /coding/videos/VS-Code-1107-Release-Highlights
 tags:
 - Code
 - Code Editor

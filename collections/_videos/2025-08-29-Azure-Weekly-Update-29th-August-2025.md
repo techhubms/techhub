@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=iXTnCccJEHU
 title: Azure Weekly Update – 29th August 2025
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=iXTnCccJEHU
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-29 14:45:05 +00:00
-permalink: /ai/videos/Azure-Weekly-Update-29th-August-2025
 tags:
 - AGC
 - AGIC

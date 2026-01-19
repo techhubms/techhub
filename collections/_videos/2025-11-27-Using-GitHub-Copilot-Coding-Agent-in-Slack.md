@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=l37u8FrdhY0
 title: Using GitHub Copilot Coding Agent in Slack
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=l37u8FrdhY0
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-27 16:48:43 +00:00
-permalink: /github-copilot/videos/Using-GitHub-Copilot-Coding-Agent-in-Slack
 tags:
 - AI Integration
 - ChatOps

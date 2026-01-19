@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-connection-parameterization-expanded-cdc-and-connectors/
 title: Enhancements to Copy Job for Data Ingestion in Microsoft Fabric Data Factory
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-connection-parameterization-expanded-cdc-and-connectors/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-30 17:00:00 +00:00
-permalink: /ml/news/Enhancements-to-Copy-Job-for-Data-Ingestion-in-Microsoft-Fabric-Data-Factory
 tags:
 - Amazon RDS
 - Amazon S3

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=kZqGsoeP0kU
 title: 'AI Dev Days: Building AI Applications with Azure and GitHub'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=kZqGsoeP0kU
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-04 01:05:19 +00:00
-permalink: /ai/videos/AI-Dev-Days-Building-AI-Applications-with-Azure-and-GitHub
 tags:
 - Agentic DevOps
 - AI Applications

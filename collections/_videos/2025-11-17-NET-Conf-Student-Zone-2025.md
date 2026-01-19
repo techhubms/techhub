@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=MYaFPDjbd3k
 title: .NET Conf Student Zone 2025
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=MYaFPDjbd3k
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-17 20:12:59 +00:00
-permalink: /github-copilot/videos/NET-Conf-Student-Zone-2025
 tags:
 - .NET
 - Aspire

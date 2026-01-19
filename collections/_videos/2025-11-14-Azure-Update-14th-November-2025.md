@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=zC9pEiIf46k
 title: Azure Update - 14th November 2025
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=zC9pEiIf46k
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-11-14 16:32:17 +00:00
-permalink: /ai/videos/Azure-Update-14th-November-2025
 tags:
 - .NET 10
 - AI Superfactory

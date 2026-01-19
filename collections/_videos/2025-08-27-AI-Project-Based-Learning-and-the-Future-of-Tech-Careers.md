@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/7_MaC7CabkM
 title: AI, Project-Based Learning, and the Future of Tech Careers
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/7_MaC7CabkM
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-27 14:00:09 +00:00
-permalink: /ai/videos/AI-Project-Based-Learning-and-the-Future-of-Tech-Careers
 tags:
 - Automation
 - Developer Skills

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=3TlDUaM1L1Q
 title: 'Introduction to Model Context Protocol (MCP) Servers: Building AI Integrations'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=3TlDUaM1L1Q
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-14 17:00:05 +00:00
-permalink: /ai/videos/Introduction-to-Model-Context-Protocol-MCP-Servers-Building-AI-Integrations
 tags:
 - AI Integration
 - AI Platforms

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/low-light-image-enhancer-python-opencv-on-azure-app-service/ba-p/4466837
 title: Deploying a Low-Light Image Enhancer (Python + OpenCV) on Azure App Service
 author: TulikaC
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/low-light-image-enhancer-python-opencv-on-azure-app-service/ba-p/4466837
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-04 07:33:04 +00:00
-permalink: /coding/community/Deploying-a-Low-Light-Image-Enhancer-Python-OpenCV-on-Azure-App-Service
 tags:
 - App Architecture
 - Azure App Service

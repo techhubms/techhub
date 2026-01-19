@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/send-signals-from-micronaut-native-image-applications-to-azure/ba-p/4443735
 title: Sending Metrics, Logs, and Traces from Micronaut Native Image Applications to Azure Monitor
 author: Logico_jp
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/send-signals-from-micronaut-native-image-applications-to-azure/ba-p/4443735
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-15 04:54:15 +00:00
-permalink: /azure/community/Sending-Metrics-Logs-and-Traces-from-Micronaut-Native-Image-Applications-to-Azure-Monitor
 tags:
 - Application Insights
 - Azure Container Apps

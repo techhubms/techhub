@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=8o3_cirYV2U
 title: Accelerating R&D and Scientific Breakthroughs with Microsoft Discovery
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=8o3_cirYV2U
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 14:57:10 +00:00
-permalink: /ai/videos/Accelerating-RandD-and-Scientific-Breakthroughs-with-Microsoft-Discovery
 tags:
 - Agentic AI
 - AI Agents

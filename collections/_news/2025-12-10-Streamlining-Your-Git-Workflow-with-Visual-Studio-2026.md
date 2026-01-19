@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/streamlining-your-git-workflow-with-visual-studio-2026/
 title: Streamlining Your Git Workflow with Visual Studio 2026
 author: Mads Kristensen
-canonical_url: https://devblogs.microsoft.com/visualstudio/streamlining-your-git-workflow-with-visual-studio-2026/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-10 15:00:47 +00:00
-permalink: /github-copilot/news/Streamlining-Your-Git-Workflow-with-Visual-Studio-2026
 tags:
 - .NET
 - Async Programming

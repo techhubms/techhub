@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-05-enterprise-qualifier-is-now-generally-available-in-github-code-search
 title: GitHub Introduces 'enterprise:' Qualifier for Enhanced Code Search
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-05-enterprise-qualifier-is-now-generally-available-in-github-code-search
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-05 19:49:17 +00:00
-permalink: /devops/news/GitHub-Introduces-enterprise-Qualifier-for-Enhanced-Code-Search
 tags:
 - Boolean Operators
 - Code Search

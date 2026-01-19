@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-10-secret-scanning-validity-checks-available-for-data-residency
 title: Secret Scanning Validity Checks Now Available for GitHub Enterprise Cloud with Data Residency
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-10-secret-scanning-validity-checks-available-for-data-residency
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-10 20:59:55 +00:00
-permalink: /devops/news/Secret-Scanning-Validity-Checks-Now-Available-for-GitHub-Enterprise-Cloud-with-Data-Residency
 tags:
 - Application Security
 - Data Residency

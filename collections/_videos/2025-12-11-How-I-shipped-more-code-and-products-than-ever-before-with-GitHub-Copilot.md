@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=g658oC4nuMQ
 title: How I shipped more code and products than ever before with GitHub Copilot
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=g658oC4nuMQ
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-11 23:09:57 +00:00
-permalink: /github-copilot/videos/How-I-shipped-more-code-and-products-than-ever-before-with-GitHub-Copilot
 tags:
 - AI Coding Assistant
 - App Development

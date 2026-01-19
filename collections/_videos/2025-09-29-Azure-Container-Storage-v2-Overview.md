@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=v6j0lJYdPU4
 title: Azure Container Storage v2 Overview
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=v6j0lJYdPU4
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-29 13:13:51 +00:00
-permalink: /azure/videos/Azure-Container-Storage-v2-Overview
 tags:
 - ACStor
 - AKS

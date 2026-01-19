@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=AiFB7jlmZ3E
 title: Secure Code to Cloud with AI-Infused DevSecOps
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=AiFB7jlmZ3E
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 15:36:04 +00:00
-permalink: /ai/videos/Secure-Code-to-Cloud-with-AI-Infused-DevSecOps
 tags:
 - Agentic Workflows
 - AI Powered Remediation

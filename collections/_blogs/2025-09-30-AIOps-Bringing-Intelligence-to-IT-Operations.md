@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/aiops-bringing-intelligence-to-it-operations/
 title: 'AIOps: Bringing Intelligence to IT Operations'
 author: Dellenny
-canonical_url: https://dellenny.com/aiops-bringing-intelligence-to-it-operations/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-30 08:30:48 +00:00
-permalink: /ai/blogs/AIOps-Bringing-Intelligence-to-IT-Operations
 tags:
 - AIOps
 - Anomaly Detection

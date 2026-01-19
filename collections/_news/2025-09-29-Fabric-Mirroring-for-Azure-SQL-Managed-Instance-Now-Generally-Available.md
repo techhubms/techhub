@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-mirroring-for-azure-sql-managed-instance-in-microsoft-fabric/
 title: Fabric Mirroring for Azure SQL Managed Instance Now Generally Available
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-mirroring-for-azure-sql-managed-instance-in-microsoft-fabric/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-29 11:00:00 +00:00
-permalink: /ml/news/Fabric-Mirroring-for-Azure-SQL-Managed-Instance-Now-Generally-Available
 tags:
 - Azure SQL Managed Instance
 - Data Engineering

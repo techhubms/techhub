@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/research/blog/bluecodeagent-a-blue-teaming-agent-enabled-by-automated-red-teaming-for-codegen-ai/
 title: 'BlueCodeAgent: AI-Powered Blue Teaming for Secure Code Generation'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/research/blog/bluecodeagent-a-blue-teaming-agent-enabled-by-automated-red-teaming-for-codegen-ai/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-14 16:48:52 +00:00
-permalink: /ai/news/BlueCodeAgent-AI-Powered-Blue-Teaming-for-Secure-Code-Generation
 tags:
 - AI Ethics
 - AI Governance

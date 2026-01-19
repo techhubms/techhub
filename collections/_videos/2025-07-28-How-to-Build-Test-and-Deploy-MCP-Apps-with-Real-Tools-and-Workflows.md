@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=vCN9-mKBDfQ
 title: How to Build, Test & Deploy MCP Apps with Real Tools and Workflows
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=vCN9-mKBDfQ
 viewing_mode: internal
 feed_name: Microsoft Build 2025 YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:01:33 +00:00
-permalink: /ai/videos/How-to-Build-Test-and-Deploy-MCP-Apps-with-Real-Tools-and-Workflows
 tags:
 - API Management
 - App Security

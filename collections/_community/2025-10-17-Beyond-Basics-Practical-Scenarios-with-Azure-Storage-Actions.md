@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/beyond-basics-practical-scenarios-with-azure-storage-actions/ba-p/4447151
 title: 'Beyond Basics: Practical Scenarios with Azure Storage Actions'
 author: ShashankKumarShankar
-canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/beyond-basics-practical-scenarios-with-azure-storage-actions/ba-p/4447151
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-17 17:00:29 +00:00
-permalink: /ai/community/Beyond-Basics-Practical-Scenarios-with-Azure-Storage-Actions
 tags:
 - AI Workflows
 - Audit Readiness

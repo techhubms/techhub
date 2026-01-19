@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/shared-responsibility-model-in-azure-explained-with-real-examples/
 title: Shared Responsibility Model in Azure Explained with Real Examples
 author: Dellenny
-canonical_url: https://dellenny.com/shared-responsibility-model-in-azure-explained-with-real-examples/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-05 11:06:55 +00:00
-permalink: /azure/blogs/Shared-Responsibility-Model-in-Azure-Explained-with-Real-Examples
 tags:
 - Azure Active Directory
 - Azure Key Vault

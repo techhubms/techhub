@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-07-14-model-context-protocol-mcp-support-in-vs-code-is-generally-available
 title: Model Context Protocol (MCP) support in VS Code is generally available
 author: Allison
-canonical_url: https://github.blog/changelog/2025-07-14-model-context-protocol-mcp-support-in-vs-code-is-generally-available
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-14 16:32:15 +00:00
-permalink: /github-copilot/news/Model-Context-Protocol-MCP-support-in-VS-Code-is-generally-available
 viewing_mode: external
 tags:
 - AI Assistant

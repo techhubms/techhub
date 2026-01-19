@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mc7ir4/is_azure_vision_studio_dead/
 title: Is Azure Vision Studio Dead?
 author: damianvandoom
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mc7ir4/is_azure_vision_studio_dead/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-29 10:09:33 +00:00
-permalink: /ai/community/Is-Azure-Vision-Studio-Dead
 tags:
 - API Deprecation
 - Azure Cognitive Services

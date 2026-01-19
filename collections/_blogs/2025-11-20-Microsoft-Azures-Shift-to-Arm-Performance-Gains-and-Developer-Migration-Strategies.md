@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devclass.com/2025/11/20/inside-the-clouds-shift-to-arm-why-hyperscalers-and-the-industry-are-making-the-switch/
 title: "Microsoft Azure's Shift to Arm: Performance Gains and Developer Migration Strategies"
 author: David Gordon
-canonical_url: https://devclass.com/2025/11/20/inside-the-clouds-shift-to-arm-why-hyperscalers-and-the-industry-are-making-the-switch/
 viewing_mode: external
 feed_name: DevClass
-feed_url: https://devclass.com/feed/
 date: 2025-11-20 09:00:00 +00:00
-permalink: /ai/blogs/Microsoft-Azures-Shift-to-Arm-Performance-Gains-and-Developer-Migration-Strategies
 tags:
 - AI Workloads
 - ARM 22824 Sp1

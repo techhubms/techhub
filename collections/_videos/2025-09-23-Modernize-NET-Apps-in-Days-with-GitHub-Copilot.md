@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=-YKguff5GY8
 title: Modernize .NET Apps in Days with GitHub Copilot
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=-YKguff5GY8
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-09-23 15:00:00 +00:00
-permalink: /github-copilot/videos/Modernize-NET-Apps-in-Days-with-GitHub-Copilot
 tags:
 - .NET
 - .NET Framework

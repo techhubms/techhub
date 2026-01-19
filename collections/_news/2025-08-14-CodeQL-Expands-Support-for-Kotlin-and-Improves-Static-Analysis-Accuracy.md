@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-14-codeql-expands-kotlin-support-and-additional-accuracy-improvements
 title: CodeQL Expands Support for Kotlin and Improves Static Analysis Accuracy
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-14-codeql-expands-kotlin-support-and-additional-accuracy-improvements
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-14 21:54:44 +00:00
-permalink: /devops/news/CodeQL-Expands-Support-for-Kotlin-and-Improves-Static-Analysis-Accuracy
 tags:
 - Application Security
 - CI/CD

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-security-experts-blog/how-microsoft-defender-experts-uses-ai-to-cut-through-the-noise/ba-p/4443601
 title: How Microsoft Defender Experts Uses AI to Cut Through the Noise
 author: ShailyGoel
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-security-experts-blog/how-microsoft-defender-experts-uses-ai-to-cut-through-the-noise/ba-p/4443601
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 17:33:20 +00:00
-permalink: /ai/community/How-Microsoft-Defender-Experts-Uses-AI-to-Cut-Through-the-Noise
 tags:
 - AI Based Incident Classification
 - Expert Guided AI

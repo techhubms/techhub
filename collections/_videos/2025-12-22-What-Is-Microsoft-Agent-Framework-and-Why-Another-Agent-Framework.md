@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=RM5LjmqKryA
 title: What Is Microsoft Agent Framework & Why Another Agent Framework?
 author: Learn Microsoft AI
-canonical_url: https://www.youtube.com/watch?v=RM5LjmqKryA
 viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-12-22 09:14:22 +00:00
-permalink: /ai/videos/What-Is-Microsoft-Agent-Framework-and-Why-Another-Agent-Framework
 tags:
 - .NET
 - Agent Orchestration

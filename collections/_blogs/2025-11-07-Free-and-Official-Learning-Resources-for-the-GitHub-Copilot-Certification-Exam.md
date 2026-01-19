@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/free-official-learning-resources-for-the-github-copilot-certification-exam/
 title: Free & Official Learning Resources for the GitHub Copilot Certification Exam
 author: Dellenny
-canonical_url: https://dellenny.com/free-official-learning-resources-for-the-github-copilot-certification-exam/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-07 09:47:43 +00:00
-permalink: /github-copilot/blogs/Free-and-Official-Learning-Resources-for-the-GitHub-Copilot-Certification-Exam
 tags:
 - AI Development
 - Certification Resources

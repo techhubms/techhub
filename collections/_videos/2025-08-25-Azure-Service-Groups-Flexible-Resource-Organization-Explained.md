@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=wurJ2LKmDs4
 title: 'Azure Service Groups: Flexible Resource Organization Explained'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=wurJ2LKmDs4
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-25 14:57:08 +00:00
-permalink: /azure/videos/Azure-Service-Groups-Flexible-Resource-Organization-Explained
 tags:
 - Azure AD
 - Azure Governance

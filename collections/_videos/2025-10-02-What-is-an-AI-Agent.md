@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/5ms4A7NELtw
 title: What is an AI Agent?
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/shorts/5ms4A7NELtw
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-02 17:35:52 +00:00
-permalink: /ai/videos/What-is-an-AI-Agent
 tags:
 - AI Agent
 - AI Development

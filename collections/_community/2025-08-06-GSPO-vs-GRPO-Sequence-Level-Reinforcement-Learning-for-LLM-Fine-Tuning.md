@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/MachineLearning/comments/1mj3t3r/d_gspo_qwen3s_sequencelevel_rlhf_method_vs_grpo/
 title: 'GSPO vs. GRPO: Sequence-Level Reinforcement Learning for LLM Fine-Tuning'
 author: MarketingNetMind
-canonical_url: https://www.reddit.com/r/MachineLearning/comments/1mj3t3r/d_gspo_qwen3s_sequencelevel_rlhf_method_vs_grpo/
 viewing_mode: external
 feed_name: Reddit Machine Learning
-feed_url: https://www.reddit.com/r/MachineLearning/.rss
 date: 2025-08-06 12:50:47 +00:00
-permalink: /ai/community/GSPO-vs-GRPO-Sequence-Level-Reinforcement-Learning-for-LLM-Fine-Tuning
 tags:
 - AIME’24
 - CodeForces

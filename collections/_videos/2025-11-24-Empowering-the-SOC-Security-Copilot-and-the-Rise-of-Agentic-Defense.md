@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=SiF5YDHaw6Y
 title: 'Empowering the SOC: Security Copilot and the Rise of Agentic Defense'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=SiF5YDHaw6Y
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 13:50:45 +00:00
-permalink: /ai/videos/Empowering-the-SOC-Security-Copilot-and-the-Rise-of-Agentic-Defense
 tags:
 - Agentic AI
 - AI Automation

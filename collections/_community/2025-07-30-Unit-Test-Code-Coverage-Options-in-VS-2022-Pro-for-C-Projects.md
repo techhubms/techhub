@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/VisualStudio/comments/1md4xq8/how_to_get_unit_test_code_coverage_using_vs_2022/
 title: Unit Test Code Coverage Options in VS 2022 Pro for C Projects
 author: jamawg
-canonical_url: https://www.reddit.com/r/VisualStudio/comments/1md4xq8/how_to_get_unit_test_code_coverage_using_vs_2022/
 viewing_mode: external
 feed_name: Reddit Visual Studio
-feed_url: https://www.reddit.com/r/VisualStudio/.rss
 date: 2025-07-30 12:12:49 +00:00
-permalink: /devops/community/Unit-Test-Code-Coverage-Options-in-VS-2022-Pro-for-C-Projects
 tags:
 - C Programming
 - Clang

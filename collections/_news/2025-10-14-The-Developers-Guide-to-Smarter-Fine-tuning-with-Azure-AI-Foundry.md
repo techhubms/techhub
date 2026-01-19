@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/the-developers-guide-to-smarter-fine-tuning/
 title: The Developer’s Guide to Smarter Fine-tuning with Azure AI Foundry
 author: Malena Lopez-Sotelo, Jacques Guibert de Bruet
-canonical_url: https://devblogs.microsoft.com/foundry/the-developers-guide-to-smarter-fine-tuning/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-10-14 19:01:20 +00:00
-permalink: /ai/news/The-Developers-Guide-to-Smarter-Fine-tuning-with-Azure-AI-Foundry
 tags:
 - Agentic AI
 - Azure AI Foundry

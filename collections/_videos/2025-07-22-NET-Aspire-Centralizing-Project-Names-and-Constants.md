@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Jt39GzYCRgo
 title: '.NET Aspire: Centralizing Project Names and Constants'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=Jt39GzYCRgo
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-22 18:49:25 +00:00
-permalink: /coding/videos/NET-Aspire-Centralizing-Project-Names-and-Constants
 tags:
 - .NET
 - AppHost

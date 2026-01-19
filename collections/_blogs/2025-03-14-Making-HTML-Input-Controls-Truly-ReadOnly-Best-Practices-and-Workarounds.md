@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://weblog.west-wind.com/posts/2025/Mar/14/Making-Html-Input-Controls-Truly-ReadOnly
 title: 'Making HTML Input Controls Truly ReadOnly: Best Practices and Workarounds'
 author: Rick Strahl
-canonical_url: https://weblog.west-wind.com/posts/2025/Mar/14/Making-Html-Input-Controls-Truly-ReadOnly
 viewing_mode: external
 feed_name: Rick Strahl's Blog
-feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-03-14 20:26:04 +00:00
-permalink: /coding/blogs/Making-HTML-Input-Controls-Truly-ReadOnly-Best-Practices-and-Workarounds
 tags:
 - Accessibility
 - Bootstrap

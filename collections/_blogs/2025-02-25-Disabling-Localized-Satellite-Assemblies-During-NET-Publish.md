@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/disabling-localized-satellite-assemblies-during-dotnet-publish/
 title: Disabling Localized Satellite Assemblies During .NET Publish
 author: Andrew Lock
-canonical_url: https://andrewlock.net/disabling-localized-satellite-assemblies-during-dotnet-publish/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-02-25 09:00:00 +00:00
-permalink: /coding/blogs/Disabling-Localized-Satellite-Assemblies-During-NET-Publish
 tags:
 - .NET
 - Configuration

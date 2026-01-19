@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/10/azure-pricing-calculator-estimate-smarter-plan-confidently/
 title: 'Azure Pricing Calculator: Estimate Smarter, Plan Confidently'
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/10/azure-pricing-calculator-estimate-smarter-plan-confidently/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-10-21 08:34:59 +00:00
-permalink: /azure/blogs/Azure-Pricing-Calculator-Estimate-Smarter-Plan-Confidently
 tags:
 - Azure Essentials Show
 - Azure Management

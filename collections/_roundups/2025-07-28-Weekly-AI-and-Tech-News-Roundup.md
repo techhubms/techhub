@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: GitHub Copilot Evolves, Multi-Agent AI Expands, and Enterprise Cloud Gets Smarter
 author: Tech Hub Team
 viewing_mode: internal
 date: 2025-07-28 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
 - AI Agents

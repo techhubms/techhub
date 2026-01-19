@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=tyiDMlKXLwU
 title: Building Event-Driven Apps with Fabric Real-Time Intelligence and SQL
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=tyiDMlKXLwU
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-30 16:01:35 +00:00
-permalink: /ai/videos/Building-Event-Driven-Apps-with-Fabric-Real-Time-Intelligence-and-SQL
 tags:
 - Azure SQL
 - Cloud Computing

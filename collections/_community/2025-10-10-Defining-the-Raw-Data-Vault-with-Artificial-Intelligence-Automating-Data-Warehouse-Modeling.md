@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/defining-the-raw-data-vault-with-artificial-intelligence/ba-p/4453557
 title: 'Defining the Raw Data Vault with Artificial Intelligence: Automating Data Warehouse Modeling'
 author: Naveed-Hussain
-canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/defining-the-raw-data-vault-with-artificial-intelligence/ba-p/4453557
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-10 12:33:30 +00:00
-permalink: /ai/community/Defining-the-Raw-Data-Vault-with-Artificial-Intelligence-Automating-Data-Warehouse-Modeling
 tags:
 - Azure Data Lake Storage
 - Cloud Analytics

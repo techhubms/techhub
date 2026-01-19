@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=EeaDXQEhy_o
 title: 'Modernizing DNS/DHCP: Micetro for Hybrid and Cloud Environments'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=EeaDXQEhy_o
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 08:41:16 +00:00
-permalink: /azure/videos/Modernizing-DNSDHCP-Micetro-for-Hybrid-and-Cloud-Environments
 tags:
 - Active Directory
 - API Gateway

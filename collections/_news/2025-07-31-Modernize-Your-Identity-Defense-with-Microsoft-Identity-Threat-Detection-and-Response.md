@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/07/31/modernize-your-identity-defense-with-microsoft-identity-threat-detection-and-response/
 title: Modernize Your Identity Defense with Microsoft Identity Threat Detection and Response
 author: Eric Sachs and Yaron Paryanty
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/07/31/modernize-your-identity-defense-with-microsoft-identity-threat-detection-and-response/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-07-31 17:00:00 +00:00
-permalink: /security/news/Modernize-Your-Identity-Defense-with-Microsoft-Identity-Threat-Detection-and-Response
 tags:
 - Adversary in The Middle Phishing
 - Cloud Security

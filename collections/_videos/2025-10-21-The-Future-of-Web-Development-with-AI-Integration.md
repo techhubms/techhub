@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/-LJYU75wwrw
 title: The Future of Web Development with AI Integration
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/-LJYU75wwrw
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-21 16:00:01 +00:00
-permalink: /ai/videos/The-Future-of-Web-Development-with-AI-Integration
 tags:
 - AI Agents
 - AI Integration

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/how-much-context-should-you-give.html
 title: Finding the Right Amount of Context for GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/how-much-context-should-you-give.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-10-10 00:00:00 +00:00
-permalink: /github-copilot/blogs/Finding-the-Right-Amount-of-Context-for-GitHub-Copilot
 tags:
 - AI Tools
 - Best Practices

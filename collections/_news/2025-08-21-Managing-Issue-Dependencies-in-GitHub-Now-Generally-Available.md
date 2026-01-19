@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-21-dependencies-on-issues
 title: Managing Issue Dependencies in GitHub Now Generally Available
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-21-dependencies-on-issues
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-21 16:32:58 +00:00
-permalink: /devops/news/Managing-Issue-Dependencies-in-GitHub-Now-Generally-Available
 tags:
 - Agile Practices
 - Blocked Issues

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mbuxp4/what_is_cost_and_how_do_have_cloud_space_for/
 title: Understanding Costs and Storage for Azure Cloud Shell and File Persistence
 author: smydsmith
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mbuxp4/what_is_cost_and_how_do_have_cloud_space_for/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-28 22:48:41 +00:00
-permalink: /azure/community/Understanding-Costs-and-Storage-for-Azure-Cloud-Shell-and-File-Persistence
 tags:
 - Admin.microsoft.com
 - Azure Cloud Shell

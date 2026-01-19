@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-10-github-spark-improvements-dpa-coverage-dedicated-sku
 title: 'GitHub Spark: Improvements, Dedicated SKU, and DPA Coverage'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-10-github-spark-improvements-dpa-coverage-dedicated-sku
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-10 17:10:52 +00:00
-permalink: /github-copilot/news/GitHub-Spark-Improvements-Dedicated-SKU-and-DPA-Coverage
 tags:
 - Accessibility
 - Agent Improvements

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/how-microsoft-azure-and-qumulo-deliver-a-truly-cloud-native-file/ba-p/4426321
 title: How Microsoft Azure and Qumulo Enable Cloud-Native File Systems for Enterprise Data Management
 author: dukicn
-canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/how-microsoft-azure-and-qumulo-deliver-a-truly-cloud-native-file/ba-p/4426321
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-05 21:25:58 +00:00
-permalink: /ai/community/How-Microsoft-Azure-and-Qumulo-Enable-Cloud-Native-File-Systems-for-Enterprise-Data-Management
 tags:
 - AI Workloads
 - Azure Blob Storage

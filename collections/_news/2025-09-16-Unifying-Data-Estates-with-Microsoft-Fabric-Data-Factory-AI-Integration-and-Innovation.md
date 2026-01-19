@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/unify-your-data-estate-for-the-era-of-ai-with-fabric-data-factory/
 title: 'Unifying Data Estates with Microsoft Fabric Data Factory: AI, Integration, and Innovation'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/unify-your-data-estate-for-the-era-of-ai-with-fabric-data-factory/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-16 01:00:00 +00:00
-permalink: /ai/news/Unifying-Data-Estates-with-Microsoft-Fabric-Data-Factory-AI-Integration-and-Innovation
 tags:
 - AI Copilot
 - Azure Key Vault

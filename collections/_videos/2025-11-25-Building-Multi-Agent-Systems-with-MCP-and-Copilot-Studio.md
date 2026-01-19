@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=vpJKxsolaGc
 title: Building Multi-Agent Systems with MCP and Copilot Studio
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=vpJKxsolaGc
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 15:49:32 +00:00
-permalink: /ai/videos/Building-Multi-Agent-Systems-with-MCP-and-Copilot-Studio
 tags:
 - A2A
 - Agent Integration

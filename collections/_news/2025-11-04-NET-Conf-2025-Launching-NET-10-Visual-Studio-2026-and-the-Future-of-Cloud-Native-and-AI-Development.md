@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/get-ready-for-dotnet-conf-2025/
 title: '.NET Conf 2025: Launching .NET 10, Visual Studio 2026, and the Future of Cloud-Native and AI Development'
 author: Jon Galloway
-canonical_url: https://devblogs.microsoft.com/dotnet/get-ready-for-dotnet-conf-2025/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-11-04 18:00:00 +00:00
-permalink: /github-copilot/news/NET-Conf-2025-Launching-NET-10-Visual-Studio-2026-and-the-Future-of-Cloud-Native-and-AI-Development
 tags:
 - .NET
 - .NET 10

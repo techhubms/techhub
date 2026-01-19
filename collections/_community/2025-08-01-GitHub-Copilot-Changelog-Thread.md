@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mezre9/github_copilot_changelog_thread/
 title: GitHub Copilot Changelog Thread
 author: AutoModerator
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mezre9/github_copilot_changelog_thread/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-01 15:37:50 +00:00
-permalink: /github-copilot/community/GitHub-Copilot-Changelog-Thread
 tags:
 - AI Powered Coding
 - Automation

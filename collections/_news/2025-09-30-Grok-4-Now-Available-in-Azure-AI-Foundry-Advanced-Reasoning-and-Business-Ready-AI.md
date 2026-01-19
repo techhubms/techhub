@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/grok-4-is-now-available-in-azure-ai-foundry-unlock-frontier-intelligence-and-business-ready-capabilities/
 title: 'Grok 4 Now Available in Azure AI Foundry: Advanced Reasoning and Business-Ready AI'
 author: stclarke
-canonical_url: https://azure.microsoft.com/en-us/blog/grok-4-is-now-available-in-azure-ai-foundry-unlock-frontier-intelligence-and-business-ready-capabilities/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-30 14:14:35 +00:00
-permalink: /ai/news/Grok-4-Now-Available-in-Azure-AI-Foundry-Advanced-Reasoning-and-Business-Ready-AI
 tags:
 - AI Benchmarking
 - AI Safety

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/ga-enhanced-audit-in-azure-security-baseline-for-linux/ba-p/4446170
 title: 'GA: Enhanced Audit in Azure Security Baseline for Linux'
 author: AmirB
-canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/ga-enhanced-audit-in-azure-security-baseline-for-linux/ba-p/4446170
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-02 16:00:00 +00:00
-permalink: /azure/community/GA-Enhanced-Audit-in-Azure-Security-Baseline-for-Linux
 tags:
 - Audit Only
 - Azure Arc

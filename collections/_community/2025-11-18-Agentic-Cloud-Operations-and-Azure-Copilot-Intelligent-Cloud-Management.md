@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ushering-in-the-era-of-agentic-cloud-operations-with-azure/ba-p/4469664
 title: 'Agentic Cloud Operations and Azure Copilot: Intelligent Cloud Management'
 author: anniepearl
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ushering-in-the-era-of-agentic-cloud-operations-with-azure/ba-p/4469664
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:02:38 +00:00
-permalink: /ai/community/Agentic-Cloud-Operations-and-Azure-Copilot-Intelligent-Cloud-Management
 tags:
 - Agentic Cloud Ops
 - AI Agents

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/0vjkCXWebe4
 title: The Role of Storytelling in Security Modeling
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/shorts/0vjkCXWebe4
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-12 18:38:32 +00:00
-permalink: /security/videos/The-Role-of-Storytelling-in-Security-Modeling
 tags:
 - Incident Response
 - Michael Howard

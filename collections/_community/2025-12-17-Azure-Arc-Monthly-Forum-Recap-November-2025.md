@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-monthly-forum-recap-november-2025/ba-p/4478127
 title: Azure Arc Monthly Forum Recap – November 2025
 author: yunishussein
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-monthly-forum-recap-november-2025/ba-p/4478127
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-17 17:55:17 +00:00
-permalink: /azure/community/Azure-Arc-Monthly-Forum-Recap-November-2025
 tags:
 - Auto Agent Upgrade
 - AZCM Agent

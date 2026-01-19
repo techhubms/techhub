@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=6sI5jrNVz70
 title: What’s New in Copilot Studio and Roadmap
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=6sI5jrNVz70
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-12-03 21:38:26 +00:00
-permalink: /ai/videos/Whats-New-in-Copilot-Studio-and-Roadmap
 tags:
 - Agent Builder
 - Agent Governance

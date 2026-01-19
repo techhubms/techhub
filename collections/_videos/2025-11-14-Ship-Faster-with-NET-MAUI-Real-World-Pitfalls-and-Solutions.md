@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=iaU3lsvB_Ig
 title: 'Ship Faster with .NET MAUI: Real-World Pitfalls and Solutions'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=iaU3lsvB_Ig
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:21:44 +00:00
-permalink: /coding/videos/Ship-Faster-with-NET-MAUI-Real-World-Pitfalls-and-Solutions
 tags:
 - .NET
 - .NET 10

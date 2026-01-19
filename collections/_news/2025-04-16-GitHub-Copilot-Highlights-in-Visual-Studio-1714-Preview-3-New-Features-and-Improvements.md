@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/github-copilot-highlights-in-visual-studio-17-14-preview-3-available-now/
 title: 'GitHub Copilot Highlights in Visual Studio 17.14 Preview 3: New Features and Improvements'
 author: Katie Savage
-canonical_url: https://devblogs.microsoft.com/visualstudio/github-copilot-highlights-in-visual-studio-17-14-preview-3-available-now/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-04-16 18:24:10 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-Highlights-in-Visual-Studio-1714-Preview-3-New-Features-and-Improvements
 tags:
 - Adaptive Paste
 - AI Assisted Development

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/microsoft-ignite-2025-the-dawn-of-the-ai-agent-era/
 title: 'Microsoft Ignite 2025: The Dawn of the AI-Agent Era'
 author: John Edward
-canonical_url: https://dellenny.com/microsoft-ignite-2025-the-dawn-of-the-ai-agent-era/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-26 08:32:12 +00:00
-permalink: /ai/blogs/Microsoft-Ignite-2025-The-Dawn-of-the-AI-Agent-Era
 tags:
 - Agent 365
 - AI Agents

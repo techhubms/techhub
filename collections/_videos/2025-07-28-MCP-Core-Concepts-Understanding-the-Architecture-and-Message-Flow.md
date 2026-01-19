@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=earDzWGtE84
 title: 'MCP Core Concepts: Understanding the Architecture and Message Flow'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=earDzWGtE84
 viewing_mode: internal
 feed_name: Microsoft Build 2025 YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:01:06 +00:00
-permalink: /ai/videos/MCP-Core-Concepts-Understanding-the-Architecture-and-Message-Flow
 tags:
 - Agents
 - AI Development

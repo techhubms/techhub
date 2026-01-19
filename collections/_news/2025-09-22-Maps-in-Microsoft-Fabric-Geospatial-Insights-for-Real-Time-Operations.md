@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-maps-in-fabric-geospatial-insights-for-everyone/
 title: Maps in Microsoft Fabric – Geospatial Insights for Real-Time Operations
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-maps-in-fabric-geospatial-insights-for-everyone/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-22 13:30:00 +00:00
-permalink: /ml/news/Maps-in-Microsoft-Fabric-Geospatial-Insights-for-Real-Time-Operations
 tags:
 - Business Intelligence
 - Data Integration

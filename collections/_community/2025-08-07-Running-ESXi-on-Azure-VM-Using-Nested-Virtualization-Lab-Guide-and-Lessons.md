@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mkatqa/esxi_on_azure_vm/
 title: 'Running ESXi on Azure VM Using Nested Virtualization: Lab Guide and Lessons'
 author: delecoute
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mkatqa/esxi_on_azure_vm/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-07 20:18:01 +00:00
-permalink: /azure/community/Running-ESXi-on-Azure-VM-Using-Nested-Virtualization-Lab-Guide-and-Lessons
 tags:
 - AVS
 - Azure Migrate

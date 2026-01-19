@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/opentelemetry-and-ai-are-unlocking-logs-as-the-essential-signal-for-why/
 title: OpenTelemetry and AI are Unlocking Logs as the Essential Signal for 'Why'
 author: Bahubali Shetti
-canonical_url: https://devops.com/opentelemetry-and-ai-are-unlocking-logs-as-the-essential-signal-for-why/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-23 08:57:16 +00:00
-permalink: /ai/blogs/OpenTelemetry-and-AI-are-Unlocking-Logs-as-the-Essential-Signal-for-Why
 tags:
 - Agentic AI
 - AI Driven Observability

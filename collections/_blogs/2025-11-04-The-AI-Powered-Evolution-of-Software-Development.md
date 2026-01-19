@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/the-ai-powered-evolution-of-software-development/
 title: The AI-Powered Evolution of Software Development
 author: Vishwanath Krishnamurthy
-canonical_url: https://devops.com/the-ai-powered-evolution-of-software-development/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-04 10:44:45 +00:00
-permalink: /github-copilot/blogs/The-AI-Powered-Evolution-of-Software-Development
 tags:
 - Agentic AI
 - AI Analytics

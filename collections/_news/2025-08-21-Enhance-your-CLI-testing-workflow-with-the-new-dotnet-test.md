@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-test-with-mtp/
 title: Enhance your CLI testing workflow with the new dotnet test
 author: Mariam Abdullah
-canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-test-with-mtp/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-08-21 17:05:00 +00:00
-permalink: /coding/news/Enhance-your-CLI-testing-workflow-with-the-new-dotnet-test
 tags:
 - .NET
 - .NET 10

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/09/protecting-identity-in-active-directory-microsoft-entra/
 title: Protecting Identity in Active Directory & Microsoft Entra
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/09/protecting-identity-in-active-directory-microsoft-entra/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-09-16 12:29:00 +00:00
-permalink: /azure/blogs/Protecting-Identity-in-Active-Directory-and-Microsoft-Entra
 tags:
 - Active Directory
 - Authentication

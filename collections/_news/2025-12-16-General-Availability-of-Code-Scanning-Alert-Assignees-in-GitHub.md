@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-16-code-scanning-alert-assignees-are-now-generally-available
 title: General Availability of Code Scanning Alert Assignees in GitHub
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-16-code-scanning-alert-assignees-are-now-generally-available
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-16 09:40:33 +00:00
-permalink: /github-copilot/news/General-Availability-of-Code-Scanning-Alert-Assignees-in-GitHub
 tags:
 - Alert Assignment
 - Alert Notifications

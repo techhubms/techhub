@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=5-HRDXO3iC0
 title: Mastering Chat Modes in VS Code with Burke Holland
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=5-HRDXO3iC0
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-20 07:00:04 +00:00
-permalink: /github-copilot/videos/Mastering-Chat-Modes-in-VS-Code-with-Burke-Holland
 tags:
 - AI Agents
 - AI Integration

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/microsoft-azure-ai-foundry-models-and-microsoft-security-copilot-achieve-iso-iec-420012023-certification/
 title: Microsoft Azure AI Foundry Models and Security Copilot Achieve ISO/IEC 42001:2023 Certification
 author: Molly Bostic
-canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-azure-ai-foundry-models-and-microsoft-security-copilot-achieve-iso-iec-420012023-certification/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-17 15:00:00 +00:00
-permalink: /ai/news/Microsoft-Azure-AI-Foundry-Models-and-Security-Copilot-Achieve-ISOIEC-420012023-Certification
 tags:
 - AI + Machine Learning
 - AI Compliance

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrating-application-load-balancer-from-aws-to-azure/ba-p/4439880
 title: Migrating from AWS Application Load Balancer to Azure Application Gateway
 author: Michael_Bender_MS
-canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrating-application-load-balancer-from-aws-to-azure/ba-p/4439880
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-03 22:43:07 +00:00
-permalink: /azure/community/Migrating-from-AWS-Application-Load-Balancer-to-Azure-Application-Gateway
 tags:
 - Automation
 - AWS Application Load Balancer

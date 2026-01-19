@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/vss-pluralsight-2025-2/
 title: New Pluralsight Learning Paths for Visual Studio Subscribers
 author: Jim Harrer
-canonical_url: https://devblogs.microsoft.com/visualstudio/vss-pluralsight-2025-2/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-07-22 14:00:40 +00:00
-permalink: /github-copilot/news/New-Pluralsight-Learning-Paths-for-Visual-Studio-Subscribers
 tags:
 - AI Powered Development
 - Azure Blob Storage

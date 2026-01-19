@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/12/11/imposter-for-hire-how-fake-people-can-gain-very-real-access/
 title: 'Imposter for Hire: How Fake Employees Breach Security'
 author: Microsoft Incident Response
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/11/imposter-for-hire-how-fake-people-can-gain-very-real-access/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-11 17:00:00 +00:00
-permalink: /azure/news/Imposter-for-Hire-How-Fake-Employees-Breach-Security
 tags:
 - Active Directory
 - Cloud Security

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/john-willis-the-true-north-of-devops-and-devsecops/?utm_source=rss&utm_medium=rss&utm_campaign=john-willis-the-true-north-of-devops-and-devsecops
 title: 'John Willis: The True North of DevOps and DevSecOps'
 author: Alan Shimel
-canonical_url: https://devops.com/john-willis-the-true-north-of-devops-and-devsecops/?utm_source=rss&utm_medium=rss&utm_campaign=john-willis-the-true-north-of-devops-and-devsecops
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-25 15:19:02 +00:00
-permalink: /devops/blogs/John-Willis-The-True-North-of-DevOps-and-DevSecOps
 tags:
 - Automation
 - Behavioral Change

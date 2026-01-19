@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://khalidabuhakmeh.com/checked-and-unchecked-arithmetic-operations-in-dotnet
 title: Checked and Unchecked Arithmetic Operations in .NET
 author: Khalid Abuhakmeh
-canonical_url: https://khalidabuhakmeh.com/checked-and-unchecked-arithmetic-operations-in-dotnet
 viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
-feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2024-08-27 00:00:00 +00:00
-permalink: /coding/blogs/Checked-and-Unchecked-Arithmetic-Operations-in-NET
 tags:
 - .NET
 - Arithmetic Overflow

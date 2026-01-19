@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/08/06/sharing-practical-guidance-launching-microsoft-secure-future-initiative-sfi-patterns-and-practices/
 title: 'Practical Guidance: Launching Microsoft Secure Future Initiative Patterns and Practices'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/08/06/sharing-practical-guidance-launching-microsoft-secure-future-initiative-sfi-patterns-and-practices/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-06 17:17:57 +00:00
-permalink: /security/news/Practical-Guidance-Launching-Microsoft-Secure-Future-Initiative-Patterns-and-Practices
 tags:
 - CI/CD Security
 - Engineering Practices

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-19-github-actions-macos-13-runner-image-is-closing-down
 title: Retirement of GitHub Actions macOS 13 Runner Image Announced
 author: Larissa Fortuna
-canonical_url: https://github.blog/changelog/2025-09-19-github-actions-macos-13-runner-image-is-closing-down
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-19 16:21:39 +00:00
-permalink: /devops/news/Retirement-of-GitHub-Actions-macOS-13-Runner-Image-Announced
 tags:
 - Actions
 - Apple Silicon

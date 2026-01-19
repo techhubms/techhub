@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=qXIVJ_ZLiIY
 title: Building Intelligent Agents with Microsoft Copilot Studio and Semantic Kernel
 author: Learn Microsoft AI
-canonical_url: https://www.youtube.com/watch?v=qXIVJ_ZLiIY
 viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-06-22 01:58:09 +00:00
-permalink: /ai/videos/Building-Intelligent-Agents-with-Microsoft-Copilot-Studio-and-Semantic-Kernel
 tags:
 - Agent Communication
 - Agent Development

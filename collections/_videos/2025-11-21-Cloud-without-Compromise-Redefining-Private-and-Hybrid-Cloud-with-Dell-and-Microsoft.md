@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Zi9oTBjqU70
 title: 'Cloud without Compromise: Redefining Private and Hybrid Cloud with Dell and Microsoft'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=Zi9oTBjqU70
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:50:59 +00:00
-permalink: /azure/videos/Cloud-without-Compromise-Redefining-Private-and-Hybrid-Cloud-with-Dell-and-Microsoft
 tags:
 - AI
 - AI Ops Monitoring

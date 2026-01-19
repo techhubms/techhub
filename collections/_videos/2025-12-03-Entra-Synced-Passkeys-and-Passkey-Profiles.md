@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=e0FPn-gJeO4
 title: Entra Synced Passkeys and Passkey Profiles
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=e0FPn-gJeO4
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-12-03 13:07:04 +00:00
-permalink: /azure/videos/Entra-Synced-Passkeys-and-Passkey-Profiles
 tags:
 - Apple Icloud Keychain
 - Authentication

@@ -1,17 +1,13 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/N64ozm3x88k
 title: Preview for Copilot Workspace
 author: Rob Bos
-canonical_url: https://youtu.be/N64ozm3x88k
 date: 2024-05-09 13:02:12 +00:00
-permalink: /github-copilot/videos/Preview-for-Copilot-Workspace
 viewing_mode: internal
-section: github-copilot
 ghes_support: false
 plans:
 - Pro+
 - Enterprise
-alt-collection: features
 tags:
 - Code Review
 - Pull Request

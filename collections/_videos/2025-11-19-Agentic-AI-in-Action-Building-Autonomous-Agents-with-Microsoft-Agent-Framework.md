@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=DJyIfUQ_OZQ
 title: 'Agentic AI in Action: Building Autonomous Agents with Microsoft Agent Framework'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=DJyIfUQ_OZQ
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 15:03:23 +00:00
-permalink: /ai/videos/Agentic-AI-in-Action-Building-Autonomous-Agents-with-Microsoft-Agent-Framework
 tags:
 - AI Agents
 - Audit Traceability

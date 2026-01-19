@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://roadtoalm.com/2025/06/03/how-a-2007-thriller-maximum-impact-predicted-agentic-ai-without-knowing-it/
 title: How the 2007 Thriller Maximum Impact Predicted Agentic AI
 author: Rene van Osnabrugge
-canonical_url: https://roadtoalm.com/2025/06/03/how-a-2007-thriller-maximum-impact-predicted-agentic-ai-without-knowing-it/
 viewing_mode: external
 feed_name: René van Osnabrugge's Blog
-feed_url: https://roadtoalm.com/feed/
 date: 2025-06-03 12:34:16 +00:00
-permalink: /ai/blogs/How-the-2007-Thriller-Maximum-Impact-Predicted-Agentic-AI
 tags:
 - 6Ds Of Exponential Organizations
 - Agentic AI

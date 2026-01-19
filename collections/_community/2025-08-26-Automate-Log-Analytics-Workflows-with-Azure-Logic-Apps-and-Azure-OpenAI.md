@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/automate-your-log-analytics-workflows-with-ai-and-logic-apps/ba-p/4442803
 title: Automate Log Analytics Workflows with Azure Logic Apps and Azure OpenAI
 author: NoyaBlanga
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/automate-your-log-analytics-workflows-with-ai-and-logic-apps/ba-p/4442803
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-26 13:19:57 +00:00
-permalink: /ai/community/Automate-Log-Analytics-Workflows-with-Azure-Logic-Apps-and-Azure-OpenAI
 tags:
 - Application Insights
 - Automation

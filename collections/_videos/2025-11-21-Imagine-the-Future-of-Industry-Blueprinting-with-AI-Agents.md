@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=mFgM0CtOtdw
 title: Imagine the Future of Industry Blueprinting with AI Agents
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=mFgM0CtOtdw
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 12:47:00 +00:00
-permalink: /ai/videos/Imagine-the-Future-of-Industry-Blueprinting-with-AI-Agents
 tags:
 - Agentification
 - AI Agents

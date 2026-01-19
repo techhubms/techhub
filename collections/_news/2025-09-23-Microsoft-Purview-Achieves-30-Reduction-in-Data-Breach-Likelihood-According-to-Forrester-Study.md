@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/09/23/microsoft-purview-delivered-30-reduction-in-data-breach-likelihood/
 title: Microsoft Purview Achieves 30% Reduction in Data Breach Likelihood, According to Forrester Study
 author: Herain Oberoi
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/09/23/microsoft-purview-delivered-30-reduction-in-data-breach-likelihood/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-09-23 16:00:00 +00:00
-permalink: /security/news/Microsoft-Purview-Achieves-30-Reduction-in-Data-Breach-Likelihood-According-to-Forrester-Study
 tags:
 - Audit Readiness
 - Cloud Security

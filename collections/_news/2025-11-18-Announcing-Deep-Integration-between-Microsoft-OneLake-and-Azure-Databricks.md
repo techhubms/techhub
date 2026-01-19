@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-and-databricks-advancing-openness-and-interoperability-with-onelake/
 title: Announcing Deep Integration between Microsoft OneLake and Azure Databricks
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-and-databricks-advancing-openness-and-interoperability-with-onelake/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
-permalink: /ai/news/Announcing-Deep-Integration-between-Microsoft-OneLake-and-Azure-Databricks
 tags:
 - Azure AI Foundry
 - Azure Databricks

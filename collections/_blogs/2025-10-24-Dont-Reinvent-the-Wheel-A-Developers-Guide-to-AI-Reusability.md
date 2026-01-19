@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/dont-reinvent-the-wheel-a-developers-guide-to-ai-reusability/
 title: 'Don’t Reinvent the Wheel: A Developer’s Guide to AI Reusability'
 author: Daniel Helfand
-canonical_url: https://devops.com/dont-reinvent-the-wheel-a-developers-guide-to-ai-reusability/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-24 08:02:18 +00:00
-permalink: /ai/blogs/Dont-Reinvent-the-Wheel-A-Developers-Guide-to-AI-Reusability
 tags:
 - Agentic AI
 - AI Driven Developer Productivity

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://roadtoalm.com/2025/06/18/startup-engineering-culture-in-action/
 title: Startup Engineering Culture in Action
 author: Rene van Osnabrugge
-canonical_url: https://roadtoalm.com/2025/06/18/startup-engineering-culture-in-action/
 viewing_mode: external
 feed_name: René van Osnabrugge's Blog
-feed_url: https://roadtoalm.com/feed/
 date: 2025-06-18 07:18:00 +00:00
-permalink: /devops/blogs/Startup-Engineering-Culture-in-Action
 tags:
 - Architecture
 - Atlas

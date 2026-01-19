@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/refactor-messy-code-in-seconds-with-github-copilot.html
 title: Refactor Messy Code in Seconds with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/refactor-messy-code-in-seconds-with-github-copilot.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-06-20 00:00:00 +00:00
-permalink: /github-copilot/blogs/Refactor-Messy-Code-in-Seconds-with-GitHub-Copilot
 tags:
 - AI Assisted Development
 - Automation

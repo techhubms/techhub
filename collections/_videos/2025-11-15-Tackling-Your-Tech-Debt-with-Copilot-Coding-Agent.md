@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=LafpndhNC_E
 title: Tackling Your Tech Debt with Copilot Coding Agent
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=LafpndhNC_E
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-15 14:12:13 +00:00
-permalink: /github-copilot/videos/Tackling-Your-Tech-Debt-with-Copilot-Coding-Agent
 tags:
 - AI Agent
 - Code Modernization

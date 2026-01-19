@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-ai-foundry-agent-service-connector-v2-preview/ba-p/4471082
 title: Announcing AI Foundry Agent Service Connector v2 (Preview)
 author: KentWeareMSFT
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-ai-foundry-agent-service-connector-v2-preview/ba-p/4471082
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-25 15:25:08 +00:00
-permalink: /ai/community/Announcing-AI-Foundry-Agent-Service-Connector-v2-Preview
 tags:
 - Agent Loop
 - Agent Orchestration

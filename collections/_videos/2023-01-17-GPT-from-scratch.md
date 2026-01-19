@@ -1,9 +1,7 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?reload=9&v=kCc8FmEb1nY
 title: Let's build GPT from scratch, in code, spelled out.
 author: Andrej Karpathy
-canonical_url: https://www.youtube.com/watch?reload=9&v=kCc8FmEb1nY
-permalink: /ml/videos/videos/2023-01-17-GPT-from-scratch
 viewing_mode: internal
 tags:
 - GPT

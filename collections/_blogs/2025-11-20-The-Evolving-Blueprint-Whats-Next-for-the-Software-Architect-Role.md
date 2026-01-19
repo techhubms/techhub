@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/the-evolving-blueprint-whats-next-for-the-software-architect-role/
 title: 'The Evolving Blueprint: What’s Next for the Software Architect Role?'
 author: John Edward
-canonical_url: https://dellenny.com/the-evolving-blueprint-whats-next-for-the-software-architect-role/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-20 17:34:19 +00:00
-permalink: /ai/blogs/The-Evolving-Blueprint-Whats-Next-for-the-Software-Architect-Role
 tags:
 - Architecture
 - Architecture as Code

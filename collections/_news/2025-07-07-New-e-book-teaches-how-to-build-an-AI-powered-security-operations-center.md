@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/07/07/learn-how-to-build-an-ai-powered-unified-soc-in-new-microsoft-e-book/
 title: New e-book teaches how to build an AI-powered security operations center
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/07/07/learn-how-to-build-an-ai-powered-unified-soc-in-new-microsoft-e-book/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-07 16:53:57 +00:00
-permalink: /ai/news/New-e-book-teaches-how-to-build-an-AI-powered-security-operations-center
 tags:
 - AI Powered
 - Company News

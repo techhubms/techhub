@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/top-5-use-cases-for-copilot-studio-in-your-business/
 title: Top 5 Use Cases for Copilot Studio in Your Business
 author: Dellenny
-canonical_url: https://dellenny.com/top-5-use-cases-for-copilot-studio-in-your-business/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-16 08:33:06 +00:00
-permalink: /ai/blogs/Top-5-Use-Cases-for-Copilot-Studio-in-Your-Business
 tags:
 - AI Copilots
 - Business Productivity

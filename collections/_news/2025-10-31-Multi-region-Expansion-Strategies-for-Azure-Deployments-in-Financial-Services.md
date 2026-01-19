@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/all-things-azure/multi-region-expansion-for-azure-deployments/
 title: Multi-region Expansion Strategies for Azure Deployments in Financial Services
 author: Julian Tanushi
-canonical_url: https://devblogs.microsoft.com/all-things-azure/multi-region-expansion-for-azure-deployments/
 viewing_mode: external
 feed_name: Microsoft All Things Azure Blog
-feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-10-31 16:11:13 +00:00
-permalink: /azure/news/Multi-region-Expansion-Strategies-for-Azure-Deployments-in-Financial-Services
 tags:
 - All Things Azure
 - Azure Landing Zones

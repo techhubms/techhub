@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-monitoring-coverage-assess-and-improve-your/ba-p/4470752
 title: 'Introducing Monitoring Coverage: Centralized Monitoring Enhancement in Azure Monitor'
 author: Nathan_Mangum
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-monitoring-coverage-assess-and-improve-your/ba-p/4470752
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:00 +00:00
-permalink: /azure/community/Introducing-Monitoring-Coverage-Centralized-Monitoring-Enhancement-in-Azure-Monitor
 tags:
 - AKS
 - Azure Advisor

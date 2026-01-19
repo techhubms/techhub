@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/azure-mcp-server-now-built-in-with-visual-studio-2026-a-new-era-for-agentic-workflows/
 title: 'Azure MCP Server Now Built-In with Visual Studio 2026: Agentic Cloud Automation for Developers'
 author: Yun Jung Choi
-canonical_url: https://devblogs.microsoft.com/visualstudio/azure-mcp-server-now-built-in-with-visual-studio-2026-a-new-era-for-agentic-workflows/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-11-14 14:00:14 +00:00
-permalink: /github-copilot/news/Azure-MCP-Server-Now-Built-In-with-Visual-Studio-2026-Agentic-Cloud-Automation-for-Developers
 tags:
 - Agentic Automation
 - AI Native IDE

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcement-hack-the-future-of-data-with-microsoft-fabric/
 title: 'Hack the Future of Data with Microsoft Fabric: Global AI & Data Hackathon'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcement-hack-the-future-of-data-with-microsoft-fabric/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-15 08:58:36 +00:00
-permalink: /ai/news/Hack-the-Future-of-Data-with-Microsoft-Fabric-Global-AI-and-Data-Hackathon
 tags:
 - Analytics
 - AutoML

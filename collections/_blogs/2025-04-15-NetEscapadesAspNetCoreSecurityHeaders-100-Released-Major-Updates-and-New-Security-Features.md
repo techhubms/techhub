@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/netescapades-aspnetcore-securityheaders-1-0-0-released/
 title: 'NetEscapades.AspNetCore.SecurityHeaders 1.0.0 Released: Major Updates and New Security Features'
 author: Andrew Lock
-canonical_url: https://andrewlock.net/netescapades-aspnetcore-securityheaders-1-0-0-released/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-04-15 09:00:00 +00:00
-permalink: /coding/blogs/NetEscapadesAspNetCoreSecurityHeaders-100-Released-Major-Updates-and-New-Security-Features
 tags:
 - .NET Core
 - API Security

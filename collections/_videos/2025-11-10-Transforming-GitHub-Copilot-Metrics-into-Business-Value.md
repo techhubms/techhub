@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=FWsAQpP6_kw
 title: Transforming GitHub Copilot Metrics into Business Value
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=FWsAQpP6_kw
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-10 15:00:34 +00:00
-permalink: /github-copilot/videos/Transforming-GitHub-Copilot-Metrics-into-Business-Value
 tags:
 - AI Adoption
 - Analytics

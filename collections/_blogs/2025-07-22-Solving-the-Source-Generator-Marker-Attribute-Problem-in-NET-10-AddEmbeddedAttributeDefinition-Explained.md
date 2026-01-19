@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-4-solving-the-source-generator-marker-attribute-problem-in-dotnet-10/
 title: "Solving the Source Generator 'Marker Attribute' Problem in .NET 10: AddEmbeddedAttributeDefinition() Explained"
 author: Andrew Lock
-canonical_url: https://andrewlock.net/exploring-dotnet-10-preview-features-4-solving-the-source-generator-marker-attribute-problem-in-dotnet-10/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-07-22 10:00:00 +00:00
-permalink: /coding/blogs/Solving-the-Source-Generator-Marker-Attribute-Problem-in-NET-10-AddEmbeddedAttributeDefinition-Explained
 tags:
 - .NET 10
 - AddEmbeddedAttributeDefinition

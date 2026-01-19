@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.linkedin.com/posts/satyanadella_strengthening-nucleic-acid-biosecurity-screening-activity-7379576230414753792-zB85
 title: Microsoft-Led Study Unveils AI Protein Design Biosecurity Research in Science Magazine
 author: stclarke
-canonical_url: https://www.linkedin.com/posts/satyanadella_strengthening-nucleic-acid-biosecurity-screening-activity-7379576230414753792-zB85
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-02 20:43:12 +00:00
-permalink: /ai/news/Microsoft-Led-Study-Unveils-AI-Protein-Design-Biosecurity-Research-in-Science-Magazine
 tags:
 - AI Ethics
 - AI Governance

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=AAkFNigV7OM
 title: Meet the Performance-Enhanced Next Gen Azure SQL Managed Instance
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=AAkFNigV7OM
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:16:24 +00:00
-permalink: /ai/videos/Meet-the-Performance-Enhanced-Next-Gen-Azure-SQL-Managed-Instance
 tags:
 - AI Assisted Migration
 - Azure App Service

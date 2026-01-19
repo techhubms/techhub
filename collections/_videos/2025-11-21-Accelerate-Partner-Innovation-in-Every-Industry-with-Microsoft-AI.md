@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=qeRDuU1XnwE
 title: Accelerate Partner Innovation in Every Industry with Microsoft AI
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=qeRDuU1XnwE
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 13:16:13 +00:00
-permalink: /ai/videos/Accelerate-Partner-Innovation-in-Every-Industry-with-Microsoft-AI
 tags:
 - AI Agents
 - Ask Ralph

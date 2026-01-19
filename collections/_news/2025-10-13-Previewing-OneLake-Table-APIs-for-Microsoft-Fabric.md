@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-preview-onelake-table-apis/
 title: Previewing OneLake Table APIs for Microsoft Fabric
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-preview-onelake-table-apis/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-13 07:00:00 +00:00
-permalink: /ml/news/Previewing-OneLake-Table-APIs-for-Microsoft-Fabric
 tags:
 - Analytics
 - Apache Iceberg

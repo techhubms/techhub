@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.linkedin.com/posts/satyanadella_we-just-wrapped-our-earnings-call-it-was-activity-7356452669235875840-A-0W
 title: 'Microsoft Fiscal Year Close: Azure and Copilot Milestones Announced'
 author: stclarke
-canonical_url: https://www.linkedin.com/posts/satyanadella_we-just-wrapped-our-earnings-call-it-was-activity-7356452669235875840-A-0W
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-31 01:44:00 +00:00
-permalink: /ai/news/Microsoft-Fiscal-Year-Close-Azure-and-Copilot-Milestones-Announced
 tags:
 - Azure AI
 - Azure Foundry

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/new-dataflow-gen2-data-destinations-and-experience-improvements/
 title: 'Enhancements to Dataflow Gen2 in Microsoft Fabric: Expanded Destinations and Schema Support'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/new-dataflow-gen2-data-destinations-and-experience-improvements/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-30 11:00:00 +00:00
-permalink: /ml/news/Enhancements-to-Dataflow-Gen2-in-Microsoft-Fabric-Expanded-Destinations-and-Schema-Support
 tags:
 - ADLS Gen2
 - Data Engineering

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=VKaribNs6MA
 title: 'Hybrid Cloud Networking: Connecting Azure, AWS, GCP, and More'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=VKaribNs6MA
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-10-06 14:11:52 +00:00
-permalink: /azure/videos/Hybrid-Cloud-Networking-Connecting-Azure-AWS-GCP-and-More
 tags:
 - AWS
 - Azure Cloud

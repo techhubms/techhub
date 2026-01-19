@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=hJsR0DOOVnE
 title: 'Azure Weekly Update: November 7, 2025'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=hJsR0DOOVnE
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-11-07 15:51:24 +00:00
-permalink: /coding/videos/Azure-Weekly-Update-November-7-2025
 tags:
 - ANF
 - Azure Cloud

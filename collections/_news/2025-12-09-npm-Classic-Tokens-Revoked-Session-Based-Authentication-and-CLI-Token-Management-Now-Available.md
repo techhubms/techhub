@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-09-npm-classic-tokens-revoked-session-based-auth-and-cli-token-management-now-available
 title: 'npm Classic Tokens Revoked: Session-Based Authentication and CLI Token Management Now Available'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-09-npm-classic-tokens-revoked-session-based-auth-and-cli-token-management-now-available
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-09 16:21:59 +00:00
-permalink: /devops/news/npm-Classic-Tokens-Revoked-Session-Based-Authentication-and-CLI-Token-Management-Now-Available
 tags:
 - Authentication
 - CI/CD

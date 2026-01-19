@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/all-things-azure/locking-down-mcp-create-a-private-registry-on-azure-api-center-and-enforce-it-in-github-copilot-and-vs-code/
 title: 'Locking Down MCP: Create a Private Registry on Azure API Center for GitHub Copilot and VS Code'
 author: tjsingh85
-canonical_url: https://devblogs.microsoft.com/all-things-azure/locking-down-mcp-create-a-private-registry-on-azure-api-center-and-enforce-it-in-github-copilot-and-vs-code/
 viewing_mode: external
 feed_name: Microsoft All Things Azure Blog
-feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-12-04 15:06:03 +00:00
-permalink: /github-copilot/news/Locking-Down-MCP-Create-a-Private-Registry-on-Azure-API-Center-for-GitHub-Copilot-and-VS-Code
 tags:
 - Anonymous Access
 - API Management

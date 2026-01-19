@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mfm25a/is_c_dying/
 title: Is C# Dying? A Perspective on Job Markets and Ecosystem Trends
 author: OnionDeluxe
-canonical_url: https://www.reddit.com/r/csharp/comments/1mfm25a/is_c_dying/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-02 09:07:59 +00:00
-permalink: /coding/community/Is-C-Dying-A-Perspective-on-Job-Markets-and-Ecosystem-Trends
 tags:
 - .NET
 - AWS

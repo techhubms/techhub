@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=j8tOnA7GcZw
 title: Modernize Your Apps in Days with AI Agents in GitHub Copilot
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=j8tOnA7GcZw
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 08:07:34 +00:00
-permalink: /github-copilot/videos/Modernize-Your-Apps-in-Days-with-AI-Agents-in-GitHub-Copilot
 tags:
 - .NET Framework
 - AI Agents

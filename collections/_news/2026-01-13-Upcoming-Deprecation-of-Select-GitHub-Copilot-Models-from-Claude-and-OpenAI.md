@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2026-01-13-upcoming-deprecation-of-select-github-copilot-models-from-claude-and-openai
 title: Upcoming Deprecation of Select GitHub Copilot Models from Claude and OpenAI
 author: Allison
-canonical_url: https://github.blog/changelog/2026-01-13-upcoming-deprecation-of-select-github-copilot-models-from-claude-and-openai
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2026-01-13 19:29:00 +00:00
-permalink: /github-copilot/news/Upcoming-Deprecation-of-Select-GitHub-Copilot-Models-from-Claude-and-OpenAI
 tags:
 - AI Models
 - Claude Opus

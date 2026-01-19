@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/10/how-microsoft-is-addressing-digital-sovereignty-in-switzerland/
 title: How Microsoft is Addressing Digital Sovereignty in Switzerland
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/10/how-microsoft-is-addressing-digital-sovereignty-in-switzerland/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-10-15 07:36:15 +00:00
-permalink: /azure/blogs/How-Microsoft-is-Addressing-Digital-Sovereignty-in-Switzerland
 tags:
 - Azure Arc
 - Azure Local

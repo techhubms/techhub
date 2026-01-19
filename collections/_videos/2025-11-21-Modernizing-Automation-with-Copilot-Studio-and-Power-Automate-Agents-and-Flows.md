@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=aMPfb6TVfA4
 title: 'Modernizing Automation with Copilot Studio and Power Automate: Agents and Flows'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=aMPfb6TVfA4
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 15:03:04 +00:00
-permalink: /ai/videos/Modernizing-Automation-with-Copilot-Studio-and-Power-Automate-Agents-and-Flows
 tags:
 - Agent Flows
 - Agentic Automation

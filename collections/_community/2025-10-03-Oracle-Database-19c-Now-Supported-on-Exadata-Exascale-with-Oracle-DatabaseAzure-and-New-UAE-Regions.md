@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-now-supports-oracle-database-19c-on/ba-p/4458643
 title: Oracle Database 19c Now Supported on Exadata Exascale with Oracle Database@Azure and New UAE Regions
 author: SparshAgrawat
-canonical_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-now-supports-oracle-database-19c-on/ba-p/4458643
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-03 17:02:27 +00:00
-permalink: /azure/community/Oracle-Database-19c-Now-Supported-on-Exadata-Exascale-with-Oracle-DatabaseAzure-and-New-UAE-Regions
 tags:
 - AI
 - Azure AI Foundry

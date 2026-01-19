@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-365-insider-blog/analyze-images-with-python-in-excel/ba-p/4440388
 title: 'Analyzing Images with Python in Excel: Now Natively Supported'
 author: ndeyanta
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-365-insider-blog/analyze-images-with-python-in-excel/ba-p/4440388
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 15:45:03 +00:00
-permalink: /coding/community/Analyzing-Images-with-Python-in-Excel-Now-Natively-Supported
 tags:
 - Computer Vision
 - Data Science

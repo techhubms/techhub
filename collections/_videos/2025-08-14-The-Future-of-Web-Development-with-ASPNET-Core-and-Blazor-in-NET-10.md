@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=xZ26KwGHWE0
 title: The Future of Web Development with ASP.NET Core & Blazor in .NET 10
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=xZ26KwGHWE0
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-14 14:31:21 +00:00
-permalink: /ai/videos/The-Future-of-Web-Development-with-ASPNET-Core-and-Blazor-in-NET-10
 tags:
 - .NET
 - .NET 10

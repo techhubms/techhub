@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-23-openai-gpt-5-codex-is-rolling-out-in-public-preview-for-github-copilot
 title: OpenAI GPT-5-Codex Now Available in GitHub Copilot Public Preview
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-23-openai-gpt-5-codex-is-rolling-out-in-public-preview-for-github-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-23 16:43:02 +00:00
-permalink: /github-copilot/news/OpenAI-GPT-5-Codex-Now-Available-in-GitHub-Copilot-Public-Preview
 tags:
 - Agentic Coding
 - AI Development

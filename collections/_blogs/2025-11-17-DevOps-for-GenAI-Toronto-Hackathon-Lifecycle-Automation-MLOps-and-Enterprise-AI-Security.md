@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/devops-for-genai-toronto-edition-hackathon-unlocking-new-ai-market-opportunities/
 title: 'DevOps for GenAI Toronto Hackathon: Lifecycle Automation, MLOps, and Enterprise AI Security'
 author: Garima Bajpai
-canonical_url: https://devops.com/devops-for-genai-toronto-edition-hackathon-unlocking-new-ai-market-opportunities/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-17 17:31:55 +00:00
-permalink: /ai/blogs/DevOps-for-GenAI-Toronto-Hackathon-Lifecycle-Automation-MLOps-and-Enterprise-AI-Security
 tags:
 - Agent Deployment
 - AI Observability

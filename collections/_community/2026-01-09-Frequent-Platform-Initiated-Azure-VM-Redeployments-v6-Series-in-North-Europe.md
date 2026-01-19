@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-compute/frequent-platform-initiated-vm-redeployments-v6-in-north-europe/m-p/4484455#M837
 title: Frequent Platform-Initiated Azure VM Redeployments (v6 Series) in North Europe
 author: Cans
-canonical_url: https://techcommunity.microsoft.com/t5/azure-compute/frequent-platform-initiated-vm-redeployments-v6-in-north-europe/m-p/4484455#M837
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-09 15:51:21 +00:00
-permalink: /azure/community/Frequent-Platform-Initiated-Azure-VM-Redeployments-v6-Series-in-North-Europe
 tags:
 - Auto Recovery
 - Azure Support

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mjtvuv/rxnet_packaging_plan_2025/
 title: 'Rx.NET Packaging Plan 2025: Progress, Testing, and Community Feedback'
 author: hm_vr
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mjtvuv/rxnet_packaging_plan_2025/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-07 07:47:10 +00:00
-permalink: /coding/community/RxNET-Packaging-Plan-2025-Progress-Testing-and-Community-Feedback
 tags:
 - .NET
 - .NET 10

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/generative-ai/how-to-find-install-and-manage-mcp-servers-with-the-github-mcp-registry/
 title: How to Find, Install, and Manage MCP Servers with the GitHub MCP Registry
 author: Andrea Griffiths
-canonical_url: https://github.blog/ai-and-ml/generative-ai/how-to-find-install-and-manage-mcp-servers-with-the-github-mcp-registry/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-10-24 16:00:00 +00:00
-permalink: /ai/news/How-to-Find-Install-and-Manage-MCP-Servers-with-the-GitHub-MCP-Registry
 tags:
 - Agentic Workflows
 - AI & ML

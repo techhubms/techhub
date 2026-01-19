@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.stevejgordon.co.uk/a-brief-introduction-to-the-dotnet-muxer
 title: A Brief Introduction to the .NET Muxer (aka dotnet.exe)
 author: Steve Gordon
-canonical_url: https://www.stevejgordon.co.uk/a-brief-introduction-to-the-dotnet-muxer
 viewing_mode: external
 feed_name: Steve Gordon's Blog
-feed_url: https://www.stevejgordon.co.uk/feed
 date: 2024-10-25 08:57:43 +00:00
-permalink: /coding/blogs/A-Brief-Introduction-to-the-NET-Muxer-aka-dotnetexe
 tags:
 - .NET
 - Apphost

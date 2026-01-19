@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/qScA4ypf-HM
 title: MCP Support Now Generally Available in Visual Studio Code
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/shorts/qScA4ypf-HM
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-07-10 21:30:10 +00:00
-permalink: /ai/videos/MCP-Support-Now-Generally-Available-in-Visual-Studio-Code
 tags:
 - Agent Mode
 - Developer Productivity

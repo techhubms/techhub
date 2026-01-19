@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/ZnZBxZC8WSA
 title: 'The Coding Buddy That Lives in Your Command Line: GitHub Copilot CLI'
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/ZnZBxZC8WSA
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-01 14:01:04 +00:00
-permalink: /github-copilot/videos/The-Coding-Buddy-That-Lives-in-Your-Command-Line-GitHub-Copilot-CLI
 tags:
 - Agentic AI
 - AI in Development

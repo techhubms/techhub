@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://msrc.microsoft.com/blog/2025/08/microsoft-bounty-program-year-in-review-17-million-in-rewards/
 title: 'Microsoft Bounty Program Year in Review: $17 Million Awarded to Security Researchers'
 author: stclarke
-canonical_url: https://msrc.microsoft.com/blog/2025/08/microsoft-bounty-program-year-in-review-17-million-in-rewards/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-06 17:21:40 +00:00
-permalink: /ai/news/Microsoft-Bounty-Program-Year-in-Review-17-Million-Awarded-to-Security-Researchers
 tags:
 - AI Security
 - Bug Bounty

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/asia/features/real-time-intelligence-how-indias-swiggy-serves-millions-with-microsoft-fabric/
 title: Real-time Intelligence with Microsoft Fabric at Swiggy
 author: stclarke
-canonical_url: https://news.microsoft.com/source/asia/features/real-time-intelligence-how-indias-swiggy-serves-millions-with-microsoft-fabric/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-11 14:03:29 +00:00
-permalink: /ai/news/Real-time-Intelligence-with-Microsoft-Fabric-at-Swiggy
 tags:
 - Cloud Data Platform
 - Data Analytics

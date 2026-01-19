@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-september/
 title: 'Roadmap for AI and GitHub Copilot in Visual Studio: September Update'
 author: Rhea Patel
-canonical_url: https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-september/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-08-27 18:02:11 +00:00
-permalink: /github-copilot/news/Roadmap-for-AI-and-GitHub-Copilot-in-Visual-Studio-September-Update
 tags:
 - .NET
 - Agent

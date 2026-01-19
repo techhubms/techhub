@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=zAM18jguoWM
 title: '"MCP is the new browser?" — Kent C. Dodds x Burke Holland, Live'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=zAM18jguoWM
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-04 23:12:20 +00:00
-permalink: /ai/videos/MCP-is-the-new-browser-Kent-C-Dodds-x-Burke-Holland-Live
 tags:
 - AI Tools
 - AI Workflows

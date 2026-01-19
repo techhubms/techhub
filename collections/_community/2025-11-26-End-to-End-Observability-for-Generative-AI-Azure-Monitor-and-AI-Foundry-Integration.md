@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/observability-for-the-age-of-generative-ai/ba-p/4473307
 title: 'End-to-End Observability for Generative AI: Azure Monitor and AI Foundry Integration'
 author: Hong Gao
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/observability-for-the-age-of-generative-ai/ba-p/4473307
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-26 18:35:59 +00:00
-permalink: /ai/community/End-to-End-Observability-for-Generative-AI-Azure-Monitor-and-AI-Foundry-Integration
 tags:
 - Agent Monitoring
 - Application Insights

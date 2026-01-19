@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-assisted-load-test-authoring-in-azure-app-testing/ba-p/4480652
 title: Streamline Load Testing with AI-Assisted Authoring in Azure App Testing
 author: Nikita_Nallamothu
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-assisted-load-test-authoring-in-azure-app-testing/ba-p/4480652
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-31 08:06:57 +00:00
-permalink: /ai/community/Streamline-Load-Testing-with-AI-Assisted-Authoring-in-Azure-App-Testing
 tags:
 - AI Assisted Testing
 - Azure Load Testing

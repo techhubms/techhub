@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=cFJH00a12lo
 title: 'From Code to Care: Empowering Healthcare with Agentic AI'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=cFJH00a12lo
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 16:37:26 +00:00
-permalink: /ai/videos/From-Code-to-Care-Empowering-Healthcare-with-Agentic-AI
 tags:
 - Agentic AI
 - AI Agents

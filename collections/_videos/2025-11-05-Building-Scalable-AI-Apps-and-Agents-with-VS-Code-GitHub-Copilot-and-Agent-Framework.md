@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ob-TOPfQmbk
 title: Building Scalable AI Apps and Agents with VS Code, GitHub Copilot, and Agent Framework
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=ob-TOPfQmbk
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-05 15:01:39 +00:00
-permalink: /github-copilot/videos/Building-Scalable-AI-Apps-and-Agents-with-VS-Code-GitHub-Copilot-and-Agent-Framework
 tags:
 - Agent Framework
 - AI Toolkit

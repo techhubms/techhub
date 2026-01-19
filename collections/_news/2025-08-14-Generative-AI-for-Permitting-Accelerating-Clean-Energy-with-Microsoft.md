@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/garage/wall-of-fame/generative-ai-for-permitting/
 title: 'Generative AI for Permitting: Accelerating Clean Energy with Microsoft'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/garage/wall-of-fame/generative-ai-for-permitting/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-14 14:25:12 +00:00
-permalink: /ai/news/Generative-AI-for-Permitting-Accelerating-Clean-Energy-with-Microsoft
 tags:
 - Agentic AI Workflows
 - AI in Government

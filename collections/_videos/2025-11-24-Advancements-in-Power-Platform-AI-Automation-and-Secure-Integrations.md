@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=A3twnNTBXvk
 title: 'Advancements in Power Platform: AI, Automation, and Secure Integrations'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=A3twnNTBXvk
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:20:28 +00:00
-permalink: /ai/videos/Advancements-in-Power-Platform-AI-Automation-and-Secure-Integrations
 tags:
 - AI Integration
 - Automation

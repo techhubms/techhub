@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=VC6nM0t-bUw
 title: 'From UX to AX: Why Agent Experience is the Next Frontier in Business AI'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=VC6nM0t-bUw
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-19 16:00:48 +00:00
-permalink: /ai/videos/From-UX-to-AX-Why-Agent-Experience-is-the-Next-Frontier-in-Business-AI
 tags:
 - Agent Automation
 - Agent Experience

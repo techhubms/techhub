@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/supercharge-your-tm-forum-open-api-development-with-github/ba-p/4451366
 title: Supercharge TM Forum Open API Development with GitHub Copilot
 author: 6192751
-canonical_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/supercharge-your-tm-forum-open-api-development-with-github/ba-p/4451366
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-09 13:42:07 +00:00
-permalink: /github-copilot/community/Supercharge-TM-Forum-Open-API-Development-with-GitHub-Copilot
 tags:
 - Agent Mode
 - AI Coding Assistant

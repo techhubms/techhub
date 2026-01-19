@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/azure-intel-tdx-confidential-vms-momentum/ba-p/4470736
 title: Momentum for Azure Confidential VMs with Intel® TDX
 author: simranparkhe
-canonical_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/azure-intel-tdx-confidential-vms-momentum/ba-p/4470736
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:00:00 +00:00
-permalink: /ai/community/Momentum-for-Azure-Confidential-VMs-with-Intel-TDX
 tags:
 - 5th Gen Intel Xeon
 - Azure Boost

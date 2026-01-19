@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/enabling-api-key-authentication-for-logic-apps-mcp-servers/ba-p/4470560
 title: Enabling API Key Authentication for Azure Logic Apps MCP Servers
 author: KentWeareMSFT
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/enabling-api-key-authentication-for-logic-apps-mcp-servers/ba-p/4470560
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 18:35:39 +00:00
-permalink: /ai/community/Enabling-API-Key-Authentication-for-Azure-Logic-Apps-MCP-Servers
 tags:
 - Access Token
 - Agent Loop

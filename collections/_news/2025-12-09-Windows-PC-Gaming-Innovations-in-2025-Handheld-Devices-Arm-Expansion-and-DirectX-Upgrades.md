@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.windows.com/windowsexperience/2025/12/09/windows-pc-gaming-in-2025-handheld-innovation-arm-progress-and-directx-advances/
 title: 'Windows PC Gaming Innovations in 2025: Handheld Devices, Arm Expansion, and DirectX Upgrades'
 author: stclarke
-canonical_url: https://blogs.windows.com/windowsexperience/2025/12/09/windows-pc-gaming-in-2025-handheld-innovation-arm-progress-and-directx-advances/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-09 19:17:58 +00:00
-permalink: /ai/news/Windows-PC-Gaming-Innovations-in-2025-Handheld-Devices-Arm-Expansion-and-DirectX-Upgrades
 tags:
 - Advanced Shader Delivery
 - Agility SDK

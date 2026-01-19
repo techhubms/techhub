@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=0dcenkOeKi4
 title: "AI-Powered Industry Solutions at Microsoft Ignite 2025: Capgemini's Multi-Channel Knowledge Innovations"
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=0dcenkOeKi4
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 14:34:52 +00:00
-permalink: /github-copilot/videos/AI-Powered-Industry-Solutions-at-Microsoft-Ignite-2025-Capgeminis-Multi-Channel-Knowledge-Innovations
 tags:
 - Agentic Industry Studio
 - AI Innovations

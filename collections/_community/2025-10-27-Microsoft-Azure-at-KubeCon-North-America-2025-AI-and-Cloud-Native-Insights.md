@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-azure-at-kubecon-north-america-2025-atlanta-ga-nov-10/ba-p/4464324
 title: 'Microsoft Azure at KubeCon North America 2025: AI and Cloud Native Insights'
 author: coryskimming
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-azure-at-kubecon-north-america-2025-atlanta-ga-nov-10/ba-p/4464324
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-27 18:00:00 +00:00
-permalink: /ai/community/Microsoft-Azure-at-KubeCon-North-America-2025-AI-and-Cloud-Native-Insights
 tags:
 - Agentic AI
 - AI Workloads

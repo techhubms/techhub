@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=OLKCfSNivXc
 title: 'Unified Digital Resilience: Integrating Cisco and Microsoft Security on Azure'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=OLKCfSNivXc
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 10:37:38 +00:00
-permalink: /ai/videos/Unified-Digital-Resilience-Integrating-Cisco-and-Microsoft-Security-on-Azure
 tags:
 - AI Security
 - Automation

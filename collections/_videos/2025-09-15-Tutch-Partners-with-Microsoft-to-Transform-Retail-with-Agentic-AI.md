@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=0BqIUtFL3KY
 title: Tutch Partners with Microsoft to Transform Retail with Agentic AI
 author: Microsoft Cloud
-canonical_url: https://www.youtube.com/watch?v=0BqIUtFL3KY
 viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-09-15 14:00:04 +00:00
-permalink: /ai/videos/Tutch-Partners-with-Microsoft-to-Transform-Retail-with-Agentic-AI
 tags:
 - Agentic AI
 - Azure AI

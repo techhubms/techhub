@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/oZR41osK57w
 title: Are You Using All 3 GitHub Copilot Modes?
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/oZR41osK57w
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-03 14:01:06 +00:00
-permalink: /github-copilot/videos/Are-you-using-all-3-GitHub-Copilot-modes
 tags:
 - AI Code Assistant
 - AI Programming

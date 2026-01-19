@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=dQz01rHnLW0
 title: Building Secure-By-Design Environments with Azure Capabilities
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=dQz01rHnLW0
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 08:05:37 +00:00
-permalink: /azure/videos/Building-Secure-By-Design-Environments-with-Azure-Capabilities
 tags:
 - AWS Security Hub
 - Azure Native Security

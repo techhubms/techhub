@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/tableau-to-power-bi-migration-semantic-layer-first-approach-for/ba-p/4481009
 title: 'Tableau to Power BI Migration: A Semantic Layer-First Architecture for Microsoft Fabric'
 author: Rafia_Aqil
-canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/tableau-to-power-bi-migration-semantic-layer-first-approach-for/ba-p/4481009
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-29 20:42:54 +00:00
-permalink: /ai/community/Tableau-to-Power-BI-Migration-A-Semantic-Layer-First-Architecture-for-Microsoft-Fabric
 tags:
 - Azure SQL Database
 - BI Architecture

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/json-structure-a-json-schema-language-you-ll-love/ba-p/4476852
 title: 'JSON Structure: A Next-Gen Schema Language for Messaging on Azure'
 author: clemensv
-canonical_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/json-structure-a-json-schema-language-you-ll-love/ba-p/4476852
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-17 08:03:09 +00:00
-permalink: /coding/community/JSON-Structure-A-Next-Gen-Schema-Language-for-Messaging-on-Azure
 tags:
 - .NET
 - Avro

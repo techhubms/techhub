@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/aks-enabled-by-azure-arc-powering-ai-applications-from-cloud-to/ba-p/4471511
 title: 'AKS Enabled by Azure Arc: Powering Hybrid AI Applications from Cloud to Edge'
 author: SchumannGE
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/aks-enabled-by-azure-arc-powering-ai-applications-from-cloud-to/ba-p/4471511
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 00:36:19 +00:00
-permalink: /ai/community/AKS-Enabled-by-Azure-Arc-Powering-Hybrid-AI-Applications-from-Cloud-to-Edge
 tags:
 - AI Foundry Local
 - AI Model Deployment

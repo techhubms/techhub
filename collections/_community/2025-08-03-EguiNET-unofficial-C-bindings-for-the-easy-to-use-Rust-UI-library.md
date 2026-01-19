@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mgwnvs/eguinet_unofficial_c_bindings_for_the_easytouse/
 title: 'Egui.NET: unofficial C# bindings for the easy-to-use Rust UI library'
 author: The-Douglas
-canonical_url: https://www.reddit.com/r/csharp/comments/1mgwnvs/eguinet_unofficial_c_bindings_for_the_easytouse/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-03 22:33:19 +00:00
-permalink: /coding/community/EguiNET-unofficial-C-bindings-for-the-easy-to-use-Rust-UI-library
 tags:
 - Bindings
 - C#

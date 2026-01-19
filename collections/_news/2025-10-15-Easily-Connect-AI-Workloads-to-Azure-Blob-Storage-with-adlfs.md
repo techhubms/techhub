@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/easily-connect-ai-workloads-to-azure-blob-storage-with-adlfs/
 title: Easily Connect AI Workloads to Azure Blob Storage with adlfs
 author: Vishnu Charan TJ
-canonical_url: https://devblogs.microsoft.com/azure-sdk/easily-connect-ai-workloads-to-azure-blob-storage-with-adlfs/
 viewing_mode: external
 feed_name: Microsoft Azure SDK Blog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-10-15 17:17:17 +00:00
-permalink: /ai/news/Easily-Connect-AI-Workloads-to-Azure-Blob-Storage-with-adlfs
 tags:
 - Adlfs
 - AI Workloads

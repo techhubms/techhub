@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-blue-green-aca-deployment/
 title: Blue-Green Deployment in Azure Container Apps with Azure Developer CLI
 author: PuiChee (PC) Chan
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-blue-green-aca-deployment/
 viewing_mode: external
 feed_name: Microsoft Azure SDK Blog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-12-09 18:34:22 +00:00
-permalink: /coding/news/Blue-Green-Deployment-in-Azure-Container-Apps-with-Azure-Developer-CLI
 tags:
 - Azd
 - Azure Container Apps

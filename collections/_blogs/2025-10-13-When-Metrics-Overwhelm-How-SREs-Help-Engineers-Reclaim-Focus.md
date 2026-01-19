@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/when-metrics-overwhelm-how-sres-help-engineers-reclaim-focus/
 title: 'When Metrics Overwhelm: How SREs Help Engineers Reclaim Focus'
 author: Neel Shah
-canonical_url: https://devops.com/when-metrics-overwhelm-how-sres-help-engineers-reclaim-focus/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-13 09:21:17 +00:00
-permalink: /devops/blogs/When-Metrics-Overwhelm-How-SREs-Help-Engineers-Reclaim-Focus
 tags:
 - Alert Fatigue
 - Business Of DevOps

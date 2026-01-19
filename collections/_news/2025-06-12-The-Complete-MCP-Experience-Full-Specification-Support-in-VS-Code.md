@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/blogs/2025/06/12/full-mcp-spec-support
 title: 'The Complete MCP Experience: Full Specification Support in VS Code'
 author: Harald Kirschner
-canonical_url: https://code.visualstudio.com/blogs/2025/06/12/full-mcp-spec-support
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-06-12 00:00:00 +00:00
-permalink: /ai/news/The-Complete-MCP-Experience-Full-Specification-Support-in-VS-Code
 tags:
 - AI Agent Integration
 - Authorization

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-9/
 title: 'Announcing TypeScript 5.9: New Features, Improvements, and What’s Next'
 author: Daniel Rosenwasser
-canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-9/
 viewing_mode: external
 feed_name: Microsoft TypeScript Blog
-feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-08-01 16:19:25 +00:00
-permalink: /coding/news/Announcing-TypeScript-59-New-Features-Improvements-and-Whats-Next
 tags:
 - ECMAScript
 - Expandable Hovers

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/all-things-azure/azure-container-options-matching-services-to-operational-responsibility/
 title: 'Azure Container Options: Operational Responsibility and Choosing the Right Service'
 author: Shree Chinnasamy, Priyanka Vergadia
-canonical_url: https://devblogs.microsoft.com/all-things-azure/azure-container-options-matching-services-to-operational-responsibility/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-07-25 21:01:29 +00:00
-permalink: /azure/news/Azure-Container-Options-Operational-Responsibility-and-Choosing-the-Right-Service
 tags:
 - ACI
 - AKS

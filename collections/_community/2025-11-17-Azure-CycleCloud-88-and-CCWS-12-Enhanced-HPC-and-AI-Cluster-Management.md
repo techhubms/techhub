@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-cyclecloud-8-8-and-ccws-1-2-at-sc25-and-ignite/ba-p/4468201
 title: 'Azure CycleCloud 8.8 and CCWS 1.2: Enhanced HPC and AI Cluster Management'
 author: anhoward
-canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-cyclecloud-8-8-and-ccws-1-2-at-sc25-and-ignite/ba-p/4468201
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-17 18:14:09 +00:00
-permalink: /ai/community/Azure-CycleCloud-88-and-CCWS-12-Enhanced-HPC-and-AI-Cluster-Management
 tags:
 - AI Workloads
 - ARM64

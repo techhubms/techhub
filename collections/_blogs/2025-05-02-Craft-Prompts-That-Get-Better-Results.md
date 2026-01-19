@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/craft-prompts-that-get-better-results.html
 title: Craft Prompts That Get Better Results
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/craft-prompts-that-get-better-results.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-05-02 00:00:00 +00:00
-permalink: /github-copilot/blogs/Craft-Prompts-That-Get-Better-Results
 tags:
 - Best Practices
 - Code Quality

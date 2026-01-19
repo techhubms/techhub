@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=9TH1EX_6FMk
 title: 'Major Innovations in Microsoft Fabric Data Warehousing: 2025 Overview'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=9TH1EX_6FMk
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2026-01-07 17:00:14 +00:00
-permalink: /ml/videos/Major-Innovations-in-Microsoft-Fabric-Data-Warehousing-2025-Overview
 tags:
 - Administration
 - Analytics

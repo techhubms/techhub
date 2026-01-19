@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/announcing-the-browser-automation-tool-preview-in-azure-ai-foundry-agent-service/
 title: Announcing the Browser Automation Tool (Preview) in Azure AI Foundry Agent Service
 author: Linda Li
-canonical_url: https://devblogs.microsoft.com/foundry/announcing-the-browser-automation-tool-preview-in-azure-ai-foundry-agent-service/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-08-06 15:00:56 +00:00
-permalink: /ai/news/Announcing-the-Browser-Automation-Tool-Preview-in-Azure-AI-Foundry-Agent-Service
 tags:
 - Agent Setup
 - Agentic AI

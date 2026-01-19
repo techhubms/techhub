@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-and-azure-powershell-ignite-2025-announcement/ba-p/4471182
 title: 'Azure CLI and Azure PowerShell: Quality, Security, and AI Updates Announced at Ignite 2025'
 author: Alex-wdy
-canonical_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-and-azure-powershell-ignite-2025-announcement/ba-p/4471182
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 19:13:15 +00:00
-permalink: /ai/community/Azure-CLI-and-Azure-PowerShell-Quality-Security-and-AI-Updates-Announced-at-Ignite-2025
 tags:
 - ArizeAI Extension
 - ARM API

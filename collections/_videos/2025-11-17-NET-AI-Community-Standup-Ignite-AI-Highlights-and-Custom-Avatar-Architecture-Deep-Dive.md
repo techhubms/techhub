@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=QLeFHFGLwa8
 title: '.NET AI Community Standup: Ignite AI Highlights and Custom Avatar Architecture Deep Dive'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=QLeFHFGLwa8
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-17 20:44:21 +00:00
-permalink: /ai/videos/NET-AI-Community-Standup-Ignite-AI-Highlights-and-Custom-Avatar-Architecture-Deep-Dive
 tags:
 - .NET
 - .NET Aspire

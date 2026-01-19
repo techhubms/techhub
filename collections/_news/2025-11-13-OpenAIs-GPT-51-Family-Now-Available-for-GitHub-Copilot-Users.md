@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot
 title: OpenAI’s GPT-5.1 Family Now Available for GitHub Copilot Users
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-13 17:10:39 +00:00
-permalink: /github-copilot/news/OpenAIs-GPT-51-Family-Now-Available-for-GitHub-Copilot-Users
 tags:
 - AI Models
 - API Key Integration

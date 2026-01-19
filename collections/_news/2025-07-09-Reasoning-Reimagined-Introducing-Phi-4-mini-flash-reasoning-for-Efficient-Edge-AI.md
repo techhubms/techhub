@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/reasoning-reimagined-introducing-phi-4-mini-flash-reasoning/
 title: 'Reasoning Reimagined: Introducing Phi-4-mini-flash-reasoning for Efficient Edge AI'
 author: Weizhu Chen, Jianfeng Gao and Liliang Ren
-canonical_url: https://azure.microsoft.com/en-us/blog/reasoning-reimagined-introducing-phi-4-mini-flash-reasoning/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-09 16:00:00 +00:00
-permalink: /ai/news/Reasoning-Reimagined-Introducing-Phi-4-mini-flash-reasoning-for-Efficient-Edge-AI
 tags:
 - AI + Machine Learning
 - Azure AI Foundry

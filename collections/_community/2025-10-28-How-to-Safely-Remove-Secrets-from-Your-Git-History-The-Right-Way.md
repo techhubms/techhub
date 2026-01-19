@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/how-to-safely-remove-secrets-from-your-git-history-the-right-way/ba-p/4464722
 title: How to Safely Remove Secrets from Your Git History (The Right Way)
 author: Sakshi_Gupta22
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/how-to-safely-remove-secrets-from-your-git-history-the-right-way/ba-p/4464722
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-28 11:05:12 +00:00
-permalink: /devops/community/How-to-Safely-Remove-Secrets-from-Your-Git-History-The-Right-Way
 tags:
 - .gitignore
 - API Keys

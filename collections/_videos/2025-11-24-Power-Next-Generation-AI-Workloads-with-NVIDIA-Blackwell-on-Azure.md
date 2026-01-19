@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=k3HASRvfpnE
 title: Power Next-Generation AI Workloads with NVIDIA Blackwell on Azure
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=k3HASRvfpnE
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:46:29 +00:00
-permalink: /ai/videos/Power-Next-Generation-AI-Workloads-with-NVIDIA-Blackwell-on-Azure
 tags:
 - Agentic AI
 - Agenticbusinessapplications

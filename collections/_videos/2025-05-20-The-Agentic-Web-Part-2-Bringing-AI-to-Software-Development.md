@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=EWs507ckJl4
 title: 'The Agentic Web [Part 2]: Bringing AI to Software Development'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=EWs507ckJl4
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-05-20 20:28:49 +00:00
-permalink: /ai/videos/The-Agentic-Web-Part-2-Bringing-AI-to-Software-Development
 tags:
 - Agentic AI
 - AI Agents

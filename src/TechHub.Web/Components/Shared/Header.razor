@@ -18,30 +18,32 @@
        <Header />
 *@
 
-<NavHeader />
+<header>
+    <NavHeader />
 
-@if (!string.IsNullOrEmpty(SectionName))
-{
-    var sectionData = SectionCache.GetSectionByName(SectionName);
-    if (sectionData != null)
+    @if (!string.IsNullOrEmpty(SectionName))
     {
-        <SectionBanner Section="@sectionData" />
-        <SubNav Section="@sectionData" />
+        var sectionData = SectionCache.GetSectionByName(SectionName);
+        if (sectionData != null)
+        {
+            <SectionBanner Section="@sectionData" />
+            <SubNav Section="@sectionData" />
+        }
+        else
+        {
+            <SubNav />
+        }
+    }
+    else if (ChildContent != null)
+    {
+        @ChildContent
+        <SubNav />
     }
     else
     {
         <SubNav />
     }
-}
-else if (ChildContent != null)
-{
-    @ChildContent
-    <SubNav />
-}
-else
-{
-    <SubNav />
-}
+</header>
 
 @code {
     [Parameter]

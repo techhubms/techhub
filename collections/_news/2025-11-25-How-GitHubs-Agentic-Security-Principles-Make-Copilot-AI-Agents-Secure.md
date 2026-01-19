@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/how-githubs-agentic-security-principles-make-our-ai-agents-as-secure-as-possible/
 title: How GitHub’s Agentic Security Principles Make Copilot AI Agents Secure
 author: Rahul Zhade
-canonical_url: https://github.blog/ai-and-ml/github-copilot/how-githubs-agentic-security-principles-make-our-ai-agents-as-secure-as-possible/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-11-25 16:00:00 +00:00
-permalink: /github-copilot/news/How-GitHubs-Agentic-Security-Principles-Make-Copilot-AI-Agents-Secure
 tags:
 - Action Attribution
 - Agentic AI

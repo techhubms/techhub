@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2026-01-06-gemini-3-flash-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
 title: Gemini 3 Flash Model Now Accessible in GitHub Copilot Across Major IDEs
 author: Allison
-canonical_url: https://github.blog/changelog/2026-01-06-gemini-3-flash-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2026-01-06 19:24:20 +00:00
-permalink: /github-copilot/news/Gemini-3-Flash-Model-Now-Accessible-in-GitHub-Copilot-Across-Major-IDEs
 tags:
 - Admins
 - AI Model

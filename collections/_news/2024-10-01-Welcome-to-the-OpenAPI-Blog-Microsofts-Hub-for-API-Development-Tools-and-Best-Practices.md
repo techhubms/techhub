@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/openapi/welcome-post/
 title: 'Welcome to the OpenAPI Blog: Microsoft’s Hub for API Development, Tools, and Best Practices'
 author: Darrel Miller
-canonical_url: https://devblogs.microsoft.com/openapi/welcome-post/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/openapi/feed/
 date: 2024-10-01 18:48:35 +00:00
-permalink: /github-copilot/news/Welcome-to-the-OpenAPI-Blog-Microsofts-Hub-for-API-Development-Tools-and-Best-Practices
 tags:
 - .NET
 - API Center

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7-rc/
 title: 'Announcing TypeScript 5.7 RC: Key Features and Updates'
 author: Daniel Rosenwasser
-canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7-rc/
 viewing_mode: external
 feed_name: Microsoft TypeScript Blog
-feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2024-11-08 21:01:44 +00:00
-permalink: /coding/news/Announcing-TypeScript-57-RC-Key-Features-and-Updates
 tags:
 - Composite Projects
 - ES2024

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure/understanding-storage-account-replication-downtime/m-p/4479787#M22386
 title: Minimizing Downtime When Migrating Azure Storage Account Replication
 author: LouisT
-canonical_url: https://techcommunity.microsoft.com/t5/azure/understanding-storage-account-replication-downtime/m-p/4479787#M22386
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-20 13:03:51 +00:00
-permalink: /azure/community/Minimizing-Downtime-When-Migrating-Azure-Storage-Account-Replication
 tags:
 - Availability Zones
 - Azure Storage

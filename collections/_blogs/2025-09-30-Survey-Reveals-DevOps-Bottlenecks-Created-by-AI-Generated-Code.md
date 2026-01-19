@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/survey-surfaces-downstream-devops-challenges-created-by-ai-code/
 title: Survey Reveals DevOps Bottlenecks Created by AI-Generated Code
 author: Mike Vizard
-canonical_url: https://devops.com/survey-surfaces-downstream-devops-challenges-created-by-ai-code/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-30 15:59:01 +00:00
-permalink: /ai/blogs/Survey-Reveals-DevOps-Bottlenecks-Created-by-AI-Generated-Code
 tags:
 - AI Adoption
 - AI Generated Code

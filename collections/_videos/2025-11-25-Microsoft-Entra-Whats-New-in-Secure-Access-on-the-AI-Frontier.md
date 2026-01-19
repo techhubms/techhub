@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ptMM56u6Ay0
 title: "Microsoft Entra: What's New in Secure Access on the AI Frontier"
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=ptMM56u6Ay0
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 23:30:22 +00:00
-permalink: /ai/videos/Microsoft-Entra-Whats-New-in-Secure-Access-on-the-AI-Frontier
 tags:
 - Access Policies
 - Admin Setup

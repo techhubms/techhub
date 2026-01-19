@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/open-source/social-impact/from-private-to-public-how-a-united-nations-organization-open-sourced-its-tech-in-four-steps/
 title: 'How the International Telecommunication Union Open Sourced Its Tech: A Four-Step Guide'
 author: Joshua Ku
-canonical_url: https://github.blog/open-source/social-impact/from-private-to-public-how-a-united-nations-organization-open-sourced-its-tech-in-four-steps/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-08-13 16:00:00 +00:00
-permalink: /devops/news/How-the-International-Telecommunication-Union-Open-Sourced-Its-Tech-A-Four-Step-Guide
 tags:
 - Azure DevOps
 - BSD 2 License

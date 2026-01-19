@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/exploring-the-new-ai-chat-template/
 title: 'Exploring the .NET AI Chat Web App Template: Setup, Features, and Architecture'
 author: Andrew Lock
-canonical_url: https://andrewlock.net/exploring-the-new-ai-chat-template/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-05-06 09:00:00 +00:00
-permalink: /ai/blogs/Exploring-the-NET-AI-Chat-Web-App-Template-Setup-Features-and-Architecture
 tags:
 - .NET
 - .NET Core

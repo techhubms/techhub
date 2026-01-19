@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/combining-generative-ai-and-business-logic-with-copilot-studio/
 title: Combining Generative AI and Business Logic with Copilot Studio
 author: Dellenny
-canonical_url: https://dellenny.com/combining-generative-ai-and-business-logic-with-copilot-studio/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-02 07:40:09 +00:00
-permalink: /ai/blogs/Combining-Generative-AI-and-Business-Logic-with-Copilot-Studio
 tags:
 - AI Assistant
 - API Integration

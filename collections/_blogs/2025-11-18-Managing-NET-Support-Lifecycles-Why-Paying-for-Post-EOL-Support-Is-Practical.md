@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/companies-using-dotnet-need-to-suck-it-up-and-pay-for-support/
 title: 'Managing .NET Support Lifecycles: Why Paying for Post-EOL Support Is Practical'
 author: Andrew Lock
-canonical_url: https://andrewlock.net/companies-using-dotnet-need-to-suck-it-up-and-pay-for-support/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-11-18 10:00:00 +00:00
-permalink: /coding/blogs/Managing-NET-Support-Lifecycles-Why-Paying-for-Post-EOL-Support-Is-Practical
 tags:
 - .NET
 - .NET 10

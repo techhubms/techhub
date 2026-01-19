@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/github-mcp-registry-launches-as-central-hub-for-ai-development-tools/
 title: GitHub MCP Registry Launches as Central Hub for AI Development Tools
 author: Tom Smith
-canonical_url: https://devops.com/github-mcp-registry-launches-as-central-hub-for-ai-development-tools/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-18 08:38:53 +00:00
-permalink: /ai/blogs/GitHub-MCP-Registry-Launches-as-Central-Hub-for-AI-Development-Tools
 tags:
 - Agentic Workflows
 - AI Agent Integrations

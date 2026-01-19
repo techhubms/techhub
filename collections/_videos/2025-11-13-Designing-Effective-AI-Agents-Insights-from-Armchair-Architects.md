@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=wTg9tFwjAOc
 title: 'Designing Effective AI Agents: Insights from Armchair Architects'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=wTg9tFwjAOc
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-13 08:01:10 +00:00
-permalink: /ai/videos/Designing-Effective-AI-Agents-Insights-from-Armchair-Architects
 tags:
 - Agent Autonomy
 - AI Agent Architecture

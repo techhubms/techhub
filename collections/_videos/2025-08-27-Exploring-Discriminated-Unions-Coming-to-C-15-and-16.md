@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=tD46WVJ2h9I
 title: Exploring Discriminated Unions Coming to C# 15 and 16
 author: Nick Chapsas
-canonical_url: https://www.youtube.com/watch?v=tD46WVJ2h9I
 viewing_mode: internal
 feed_name: Nick Chapsas YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-08-27 11:01:26 +00:00
-permalink: /coding/videos/Exploring-Discriminated-Unions-Coming-to-C-15-and-16
 tags:
 - .NET
 - C#

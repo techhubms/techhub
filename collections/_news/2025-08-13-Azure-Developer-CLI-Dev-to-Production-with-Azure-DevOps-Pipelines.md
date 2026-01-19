@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/devops/azure-developer-cli-from-dev-to-prod-with-azure-devops-pipelines/
 title: 'Azure Developer CLI: Dev to Production with Azure DevOps Pipelines'
 author: PuiChee (PC) Chan, Kristen Womack
-canonical_url: https://devblogs.microsoft.com/devops/azure-developer-cli-from-dev-to-prod-with-azure-devops-pipelines/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-08-13 18:29:24 +00:00
-permalink: /github-copilot/news/Azure-Developer-CLI-Dev-to-Production-with-Azure-DevOps-Pipelines
 tags:
 - AI Assisted Development
 - Artifact Management

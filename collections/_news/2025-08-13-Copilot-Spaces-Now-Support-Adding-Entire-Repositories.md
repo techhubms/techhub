@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-13-add-repositories-to-spaces
 title: Copilot Spaces Now Support Adding Entire Repositories
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-13-add-repositories-to-spaces
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-13 17:26:04 +00:00
-permalink: /github-copilot/news/Copilot-Spaces-Now-Support-Adding-Entire-Repositories
 tags:
 - AI Coding Assistant
 - AI Integration

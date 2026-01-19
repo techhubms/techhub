@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=xQRjb7V8OCg
 title: Using Foundry's Model Router to Simplify Optimal AI Model Selection
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=xQRjb7V8OCg
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-12-15 12:57:07 +00:00
-permalink: /ai/videos/Using-Foundrys-Model-Router-to-Simplify-Optimal-AI-Model-Selection
 tags:
 - Agents
 - AI Agents

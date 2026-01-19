@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/multi-file-edits-made-simple.html
 title: Multi-File Edits Made Simple
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/multi-file-edits-made-simple.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-09-12 00:00:00 +00:00
-permalink: /github-copilot/blogs/Multi-File-Edits-Made-Simple
 tags:
 - Async/Await
 - Automation

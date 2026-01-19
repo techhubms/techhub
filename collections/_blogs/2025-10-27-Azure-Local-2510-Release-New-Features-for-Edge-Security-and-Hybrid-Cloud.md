@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/10/azure-local-2510-release-and-new-preview-features/
 title: 'Azure Local 2510 Release: New Features for Edge, Security, and Hybrid Cloud'
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/10/azure-local-2510-release-and-new-preview-features/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-10-27 09:05:14 +00:00
-permalink: /azure/blogs/Azure-Local-2510-Release-New-Features-for-Edge-Security-and-Hybrid-Cloud
 tags:
 - Azure Arc
 - Azure Local

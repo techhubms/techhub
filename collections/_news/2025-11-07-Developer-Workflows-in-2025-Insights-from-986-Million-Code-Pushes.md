@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/news-insights/octoverse/what-986-million-code-pushes-say-about-the-developer-workflow-in-2025/
 title: 'Developer Workflows in 2025: Insights from 986 Million Code Pushes'
 author: Cassidy Williams
-canonical_url: https://github.blog/news-insights/octoverse/what-986-million-code-pushes-say-about-the-developer-workflow-in-2025/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-11-07 16:00:00 +00:00
-permalink: /devops/news/Developer-Workflows-in-2025-Insights-from-986-Million-Code-Pushes
 tags:
 - Agentic Workflows
 - Automation

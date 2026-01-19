@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: ''
 title: Security Advisory Summaries
 author: TBD
-canonical_url: ''
 date: 2026-08-29 09:39:32 +00:00
-permalink: /github-copilot/videos/Security-Advisory-Summaries
 viewing_mode: internal
-section: github-copilot
 ghes_support: false
 plans:
 - Business
-alt-collection: features
 tags: []
 section_names:
 - ai

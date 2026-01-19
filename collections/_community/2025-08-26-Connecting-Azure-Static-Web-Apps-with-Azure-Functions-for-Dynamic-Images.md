@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure/what-s-the-secret-sauce-for-getting-functions-api-to-work-with/m-p/4448430#M1359
 title: Connecting Azure Static Web Apps with Azure Functions for Dynamic Images
 author: fcc_archivist
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure/what-s-the-secret-sauce-for-getting-functions-api-to-work-with/m-p/4448430#M1359
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-26 21:18:41 +00:00
-permalink: /coding/community/Connecting-Azure-Static-Web-Apps-with-Azure-Functions-for-Dynamic-Images
 tags:
 - .NET
 - API Integration

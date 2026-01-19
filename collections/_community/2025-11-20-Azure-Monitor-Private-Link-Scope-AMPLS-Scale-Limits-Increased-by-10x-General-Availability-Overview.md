@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/generally-available-azure-monitor-private-link-scope-ampls-scale/ba-p/4471482
 title: 'Azure Monitor Private Link Scope (AMPLS) Scale Limits Increased by 10x: General Availability Overview'
 author: Mahesh_Sundaram
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/generally-available-azure-monitor-private-link-scope-ampls-scale/ba-p/4471482
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 17:22:02 +00:00
-permalink: /azure/community/Azure-Monitor-Private-Link-Scope-AMPLS-Scale-Limits-Increased-by-10x-General-Availability-Overview
 tags:
 - AMPLS
 - Application Insights

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=GjgmoN_m3T4
 title: 'CTERA in Action: Building Data Fabric for Enterprises at Microsoft Ignite'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=GjgmoN_m3T4
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 15:07:07 +00:00
-permalink: /ai/videos/CTERA-in-Action-Building-Data-Fabric-for-Enterprises-at-Microsoft-Ignite
 tags:
 - AI Readiness
 - CTERA

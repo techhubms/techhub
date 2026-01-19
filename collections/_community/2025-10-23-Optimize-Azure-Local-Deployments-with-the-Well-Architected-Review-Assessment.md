@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/optimize-azure-local-using-insights-from-a-well-architected/ba-p/4458433
 title: Optimize Azure Local Deployments with the Well-Architected Review Assessment
 author: Neil_Bird
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/optimize-azure-local-using-insights-from-a-well-architected/ba-p/4458433
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-23 16:01:35 +00:00
-permalink: /azure/community/Optimize-Azure-Local-Deployments-with-the-Well-Architected-Review-Assessment
 tags:
 - AKS
 - Architecture Assessment

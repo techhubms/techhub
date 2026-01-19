@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=oOO6OG4biEY
 title: 'AI Operations: Real-Time Monitoring and Governance with Microsoft Foundry Control Plane'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=oOO6OG4biEY
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 16:29:22 +00:00
-permalink: /ai/videos/AI-Operations-Real-Time-Monitoring-and-Governance-with-Microsoft-Foundry-Control-Plane
 tags:
 - AI Agent Operations
 - Azure AI

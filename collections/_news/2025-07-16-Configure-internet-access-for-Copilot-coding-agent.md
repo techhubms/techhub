@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-07-15-configure-internet-access-for-copilot-coding-agent
 title: Configure internet access for Copilot coding agent
 author: Allison
-canonical_url: https://github.blog/changelog/2025-07-15-configure-internet-access-for-copilot-coding-agent
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-16 12:00:38 +00:00
-permalink: /github-copilot/news/Configure-internet-access-for-Copilot-coding-agent
 viewing_mode: external
 tags:
 - Coding Assistant

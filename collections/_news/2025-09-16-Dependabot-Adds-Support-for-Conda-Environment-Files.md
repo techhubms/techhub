@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-16-conda-ecosystem-support-for-dependabot-now-generally-available
 title: Dependabot Adds Support for Conda Environment Files
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-16-conda-ecosystem-support-for-dependabot-now-generally-available
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-16 18:01:54 +00:00
-permalink: /devops/news/Dependabot-Adds-Support-for-Conda-Environment-Files
 tags:
 - Conda
 - Dependabot

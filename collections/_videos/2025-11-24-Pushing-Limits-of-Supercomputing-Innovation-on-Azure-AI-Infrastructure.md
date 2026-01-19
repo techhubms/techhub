@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=_NRldsqv__w
 title: Pushing Limits of Supercomputing Innovation on Azure AI Infrastructure
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=_NRldsqv__w
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 06:42:11 +00:00
-permalink: /ai/videos/Pushing-Limits-of-Supercomputing-Innovation-on-Azure-AI-Infrastructure
 tags:
 - AI Validation
 - Azure AI Infrastructure

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/engineering/user-experience/design-system-annotations-part-1-how-accessibility-gets-left-out-of-components/
 title: 'Design System Annotations, Part 1: Bridging Accessibility Gaps in Primer Components'
 author: Jan Maarten
-canonical_url: https://github.blog/engineering/user-experience/design-system-annotations-part-1-how-accessibility-gets-left-out-of-components/
 viewing_mode: external
 feed_name: GitHub Engineering Blog
-feed_url: https://github.blog/engineering/feed/
 date: 2025-05-09 16:56:41 +00:00
-permalink: /devops/news/Design-System-Annotations-Part-1-Bridging-Accessibility-Gaps-in-Primer-Components
 tags:
 - A11y
 - Accessibility

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/blogs/2025/12/03/introducing-vs-code-insiders-podcast
 title: Introducing the VS Code Insiders Podcast
 author: James Montemagno
-canonical_url: https://code.visualstudio.com/blogs/2025/12/03/introducing-vs-code-insiders-podcast
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-12-03 00:00:00 +00:00
-permalink: /coding/news/Introducing-the-VS-Code-Insiders-Podcast
 tags:
 - Accessibility
 - AI

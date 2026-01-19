@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=u79quQu4t_s
 title: Every Class Should Be Sealed in C#
 author: Nick Chapsas
-canonical_url: https://www.youtube.com/watch?v=u79quQu4t_s
 viewing_mode: internal
 feed_name: Nick Chapsas YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-11-24 12:01:57 +00:00
-permalink: /coding/videos/Every-Class-Should-Be-Sealed-in-C
 tags:
 - .NET
 - C#

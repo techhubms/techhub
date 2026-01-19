@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/jump-starting-quantum-computing-on-azure/ba-p/4459053
 title: Jump Starting Quantum Computing on Azure
 author: notanaha
-canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/jump-starting-quantum-computing-on-azure/ba-p/4459053
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-13 23:40:03 +00:00
-permalink: /ai/community/Jump-Starting-Quantum-Computing-on-Azure
 tags:
 - Azure Quantum
 - Azure Quantum Development Kit

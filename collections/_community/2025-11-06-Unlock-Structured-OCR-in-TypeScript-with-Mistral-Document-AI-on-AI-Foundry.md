@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlock-structured-ocr-in-typescript-with-mistral-document-ai-on/ba-p/4466039
 title: Unlock Structured OCR in TypeScript with Mistral Document AI on AI Foundry
 author: Julia_Muiruri
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlock-structured-ocr-in-typescript-with-mistral-document-ai-on/ba-p/4466039
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-06 14:15:35 +00:00
-permalink: /ai/community/Unlock-Structured-OCR-in-TypeScript-with-Mistral-Document-AI-on-AI-Foundry
 tags:
 - AI Agents
 - API Integration

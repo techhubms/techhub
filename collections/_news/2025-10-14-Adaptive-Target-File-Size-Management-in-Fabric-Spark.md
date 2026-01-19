@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/adaptive-target-file-size-management-in-fabric-spark/
 title: Adaptive Target File Size Management in Fabric Spark
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/adaptive-target-file-size-management-in-fabric-spark/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-14 08:00:00 +00:00
-permalink: /ml/news/Adaptive-Target-File-Size-Management-in-Fabric-Spark
 tags:
 - Adaptive Target File Size
 - Auto Compaction

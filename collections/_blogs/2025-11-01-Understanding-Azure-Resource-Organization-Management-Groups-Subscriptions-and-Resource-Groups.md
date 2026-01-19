@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-azure-organizes-resources-subscriptions-resource-groups-and-management-groups-explained/
 title: 'Understanding Azure Resource Organization: Management Groups, Subscriptions, and Resource Groups'
 author: Dellenny
-canonical_url: https://dellenny.com/how-azure-organizes-resources-subscriptions-resource-groups-and-management-groups-explained/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-01 08:12:56 +00:00
-permalink: /azure/blogs/Understanding-Azure-Resource-Organization-Management-Groups-Subscriptions-and-Resource-Groups
 tags:
 - Azure Policy
 - Billing Segmentation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-september-2025/
 title: September 2025 Microsoft Fabric Influencers Spotlight
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-september-2025/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-30 14:00:00 +00:00
-permalink: /ml/news/September-2025-Microsoft-Fabric-Influencers-Spotlight
 tags:
 - Administration
 - CI/CD

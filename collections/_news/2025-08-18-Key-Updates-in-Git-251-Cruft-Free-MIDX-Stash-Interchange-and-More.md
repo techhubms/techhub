@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/open-source/git/highlights-from-git-2-51/
 title: 'Key Updates in Git 2.51: Cruft-Free MIDX, Stash Interchange, and More'
 author: Taylor Blau
-canonical_url: https://github.blog/open-source/git/highlights-from-git-2-51/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-08-18 17:04:36 +00:00
-permalink: /coding/news/Key-Updates-in-Git-251-Cruft-Free-MIDX-Stash-Interchange-and-More
 tags:
 - Bloom Filter
 - Commit Graph

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=6kr3LIlocsI
 title: Transforming Enterprise Workflows with C3 AI Agentic Process Automation
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=6kr3LIlocsI
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:51:07 +00:00
-permalink: /ai/videos/Transforming-Enterprise-Workflows-with-C3-AI-Agentic-Process-Automation
 tags:
 - Agentic Process Automation
 - AI Integration

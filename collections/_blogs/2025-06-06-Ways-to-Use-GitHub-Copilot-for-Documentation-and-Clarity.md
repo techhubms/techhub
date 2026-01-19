@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/ways-to-use-github-copilot-for-documentation-clarity.html
 title: Ways to Use GitHub Copilot for Documentation & Clarity
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/ways-to-use-github-copilot-for-documentation-clarity.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-06-06 00:00:00 +00:00
-permalink: /github-copilot/blogs/Ways-to-Use-GitHub-Copilot-for-Documentation-and-Clarity
 tags:
 - API Documentation
 - Chain Of Thought Prompting

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/lower-costs-and-boost-flexibility-with-azure-files-provisioned/ba-p/4443621
 title: Lower Costs and Boost Flexibility with Azure Files Provisioned v2 for SSD
 author: wmgries
-canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/lower-costs-and-boost-flexibility-with-azure-files-provisioned/ba-p/4443621
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-14 18:55:15 +00:00
-permalink: /azure/community/Lower-Costs-and-Boost-Flexibility-with-Azure-Files-Provisioned-v2-for-SSD
 tags:
 - AKS
 - Azure Files

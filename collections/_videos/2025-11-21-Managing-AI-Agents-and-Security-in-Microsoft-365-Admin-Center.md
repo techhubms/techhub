@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=S6JHew4W3Ik
 title: Managing AI Agents and Security in Microsoft 365 Admin Center
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=S6JHew4W3Ik
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 13:28:16 +00:00
-permalink: /security/videos/Managing-AI-Agents-and-Security-in-Microsoft-365-Admin-Center
 tags:
 - Agent Permissions
 - AI

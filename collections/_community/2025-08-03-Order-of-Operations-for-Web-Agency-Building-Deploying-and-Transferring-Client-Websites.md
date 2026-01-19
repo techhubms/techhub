@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/github/comments/1mgba7n/need_help_web_ai_agency/
 title: 'Order of Operations for Web Agency: Building, Deploying, and Transferring Client Websites'
 author: DoodleMoodle542
-canonical_url: https://www.reddit.com/r/github/comments/1mgba7n/need_help_web_ai_agency/
 viewing_mode: external
 feed_name: Reddit GitHub
-feed_url: https://www.reddit.com/r/github/.rss
 date: 2025-08-03 05:28:12 +00:00
-permalink: /devops/community/Order-of-Operations-for-Web-Agency-Building-Deploying-and-Transferring-Client-Websites
 tags:
 - Client Handoff
 - DNS Configuration

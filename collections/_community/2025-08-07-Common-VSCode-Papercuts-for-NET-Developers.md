@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mk1592/vscode_paper_cuts_for_net_dev/
 title: Common VSCode Papercuts for .NET Developers
 author: Sure-Natural-9086
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mk1592/vscode_paper_cuts_for_net_dev/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-07 14:11:04 +00:00
-permalink: /coding/community/Common-VSCode-Papercuts-for-NET-Developers
 tags:
 - .NET
 - .NET Build

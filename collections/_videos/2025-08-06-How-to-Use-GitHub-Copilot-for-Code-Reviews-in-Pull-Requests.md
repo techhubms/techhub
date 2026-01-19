@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/jYW9MorrE_w
 title: How to Use GitHub Copilot for Code Reviews in Pull Requests
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/jYW9MorrE_w
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-06 14:01:17 +00:00
-permalink: /github-copilot/videos/How-to-Use-GitHub-Copilot-for-Code-Reviews-in-Pull-Requests
 tags:
 - AI Assistant
 - Automated Code Review

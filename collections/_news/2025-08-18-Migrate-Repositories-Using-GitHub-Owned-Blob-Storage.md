@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-18-migrate-repositories-with-github-owned-blob-storage
 title: Migrate Repositories Using GitHub-Owned Blob Storage
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-18-migrate-repositories-with-github-owned-blob-storage
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-18 17:35:15 +00:00
-permalink: /devops/news/Migrate-Repositories-Using-GitHub-Owned-Blob-Storage
 tags:
 - Bitbucket Migration
 - Cloud Storage

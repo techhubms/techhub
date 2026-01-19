@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=FKanhfIwK-0
 title: You open sourced WSL. What does that mean?
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=FKanhfIwK-0
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-28 15:35:34 +00:00
-permalink: /coding/videos/You-open-sourced-WSL-What-does-that-mean
 tags:
 - Developer Tools
 - File Systems

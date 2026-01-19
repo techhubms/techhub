@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7-beta/
 title: Announcing TypeScript 5.7 Beta
 author: Daniel Rosenwasser
-canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7-beta/
 viewing_mode: external
 feed_name: Microsoft TypeScript Blog
-feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2024-10-09 20:59:51 +00:00
-permalink: /coding/news/Announcing-TypeScript-57-Beta
 tags:
 - Beta Release
 - JavaScript

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/announcing-azure-cyclecloud-workspace-for-slurm-version-2025-12/ba-p/4481953
 title: 'Azure CycleCloud Workspace for Slurm 2025.12.01: Monitoring, Security, and HPC Enhancements'
 author: xpillons
-canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/announcing-azure-cyclecloud-workspace-for-slurm-version-2025-12/ba-p/4481953
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-07 09:22:19 +00:00
-permalink: /azure/community/Azure-CycleCloud-Workspace-for-Slurm-20251201-Monitoring-Security-and-HPC-Enhancements
 tags:
 - AlmaLinux 9
 - ARM64

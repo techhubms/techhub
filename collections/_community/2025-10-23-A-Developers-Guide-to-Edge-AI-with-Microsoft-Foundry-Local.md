@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/transform-your-ai-applications-with-local-llm-deployment/ba-p/4462829
 title: A Developer’s Guide to Edge AI with Microsoft Foundry Local
 author: Lee_Stott
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/transform-your-ai-applications-with-local-llm-deployment/ba-p/4462829
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-23 07:00:00 +00:00
-permalink: /ai/community/A-Developers-Guide-to-Edge-AI-with-Microsoft-Foundry-Local
 tags:
 - .NET
 - AI Cost Optimization

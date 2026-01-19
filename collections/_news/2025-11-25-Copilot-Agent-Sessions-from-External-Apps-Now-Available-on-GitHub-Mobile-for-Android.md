@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-25-copilot-agent-sessions-from-external-apps-are-now-available-on-github-mobile-for-android
 title: Copilot Agent Sessions from External Apps Now Available on GitHub Mobile for Android
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-25-copilot-agent-sessions-from-external-apps-are-now-available-on-github-mobile-for-android
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-25 18:10:22 +00:00
-permalink: /github-copilot/news/Copilot-Agent-Sessions-from-External-Apps-Now-Available-on-GitHub-Mobile-for-Android
 tags:
 - Agent Tasks
 - Android

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/win-more-bids-how-to-use-github-copilot-to-write-winning-rfp-responses-faster/
 title: How to Use GitHub Copilot to Write RFP Responses Faster
 author: Dellenny
-canonical_url: https://dellenny.com/win-more-bids-how-to-use-github-copilot-to-write-winning-rfp-responses-faster/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-07-28 13:21:42 +00:00
-permalink: /github-copilot/blogs/How-to-Use-GitHub-Copilot-to-Write-RFP-Responses-Faster
 tags:
 - .NET
 - Agile

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/context-engineering-recipes-recap.html
 title: 'Cook’n with GitHub Copilot: Recap of Context Engineering Prompt Patterns'
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/context-engineering-recipes-recap.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-12-19 00:00:00 +00:00
-permalink: /github-copilot/blogs/Cookn-with-GitHub-Copilot-Recap-of-Context-Engineering-Prompt-Patterns
 tags:
 - AI Code Assistants
 - API Security

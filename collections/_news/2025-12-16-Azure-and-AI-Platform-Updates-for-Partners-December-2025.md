@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://partner.microsoft.com/en-us/blog/article/azure-updates-december-2025
 title: 'Azure and AI Platform Updates for Partners: December 2025'
 author: Cyril Belikoff
-canonical_url: https://partner.microsoft.com/en-us/blog/article/azure-updates-december-2025
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-16 18:23:05 +00:00
-permalink: /ai/news/Azure-and-AI-Platform-Updates-for-Partners-December-2025
 tags:
 - AI + Machine Learning
 - AI Agent

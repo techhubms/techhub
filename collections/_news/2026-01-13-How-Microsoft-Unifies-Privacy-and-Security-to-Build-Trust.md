@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2026/01/13/how-microsoft-builds-privacy-and-security-to-work-hand-in-hand/
 title: How Microsoft Unifies Privacy and Security to Build Trust
 author: Terrell Cox
-canonical_url: https://www.microsoft.com/en-us/security/blog/2026/01/13/how-microsoft-builds-privacy-and-security-to-work-hand-in-hand/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2026-01-13 17:00:00 +00:00
-permalink: /azure/news/How-Microsoft-Unifies-Privacy-and-Security-to-Build-Trust
 tags:
 - AI
 - Cloud Security

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=HUZqoVeJ0uA
 title: How to Chat with Your Repo & Create PRs with Copilot on GitHub
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=HUZqoVeJ0uA
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-13 14:00:33 +00:00
-permalink: /github-copilot/videos/How-to-Chat-with-Your-Repo-and-Create-PRs-with-Copilot-on-GitHub
 tags:
 - AI Chat
 - AI Control Center

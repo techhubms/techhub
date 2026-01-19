@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/complete-beginners-guide-to-vibe-coding-an-app-in-5-minutes
 title: Vibe Coding a Podcast Analytics Dashboard with GitHub Copilot and AI
 author: James Montemagno
-canonical_url: https://devblogs.microsoft.com/blog/complete-beginners-guide-to-vibe-coding-an-app-in-5-minutes
 viewing_mode: external
 feed_name: Microsoft Blog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-10-09 18:00:49 +00:00
-permalink: /github-copilot/news/Vibe-Coding-a-Podcast-Analytics-Dashboard-with-GitHub-Copilot-and-AI
 tags:
 - AI Development
 - Claude Sonnet 4.5

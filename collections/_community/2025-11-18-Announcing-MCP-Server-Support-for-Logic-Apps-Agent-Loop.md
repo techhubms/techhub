@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-mcp-server-support-for-logic-apps-agent-loop/ba-p/4470778
 title: Announcing MCP Server Support for Logic Apps Agent Loop
 author: KentWeareMSFT
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-mcp-server-support-for-logic-apps-agent-loop/ba-p/4470778
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 18:35:43 +00:00
-permalink: /ai/community/Announcing-MCP-Server-Support-for-Logic-Apps-Agent-Loop
 tags:
 - Agent Loop
 - Azure Logic Apps Standard

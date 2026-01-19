@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-07-31-copilot-chat-unlocks-new-repository-management-skills
 title: Copilot Chat Unlocks Powerful Repository Management Skills in GitHub
 author: Allison
-canonical_url: https://github.blog/changelog/2025-07-31-copilot-chat-unlocks-new-repository-management-skills
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-31 20:38:46 +00:00
-permalink: /github-copilot/news/Copilot-Chat-Unlocks-Powerful-Repository-Management-Skills-in-GitHub
 tags:
 - Automation
 - Branching

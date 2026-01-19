@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/open-source/maintainers/securing-the-supply-chain-at-scale-starting-with-71-important-open-source-projects/
 title: 'Securing the Open Source Supply Chain: Impact of the GitHub Secure Open Source Fund'
 author: Kevin Crosby
-canonical_url: https://github.blog/open-source/maintainers/securing-the-supply-chain-at-scale-starting-with-71-important-open-source-projects/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-08-11 16:00:00 +00:00
-permalink: /ai/news/Securing-the-Open-Source-Supply-Chain-Impact-of-the-GitHub-Secure-Open-Source-Fund
 tags:
 - AI Security
 - AutoGPT

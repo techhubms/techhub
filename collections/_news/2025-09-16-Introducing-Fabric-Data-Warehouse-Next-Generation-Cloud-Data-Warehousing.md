@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/welcome-to-fabric-data-warehouse/
 title: 'Introducing Fabric Data Warehouse: Next-Generation Cloud Data Warehousing'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/welcome-to-fabric-data-warehouse/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-16 00:30:00 +00:00
-permalink: /ml/news/Introducing-Fabric-Data-Warehouse-Next-Generation-Cloud-Data-Warehousing
 tags:
 - Audit Logs
 - Copilot

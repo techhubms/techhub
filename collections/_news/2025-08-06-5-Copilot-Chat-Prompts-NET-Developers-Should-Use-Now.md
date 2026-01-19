@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/5-copilot-chat-prompts-dotnet-devs-should-steal-today/
 title: 5 Copilot Chat Prompts .NET Developers Should Use Now
 author: Wendy Breiding (SHE/HER)
-canonical_url: https://devblogs.microsoft.com/dotnet/5-copilot-chat-prompts-dotnet-devs-should-steal-today/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-08-06 17:05:00 +00:00
-permalink: /github-copilot/news/5-Copilot-Chat-Prompts-NET-Developers-Should-Use-Now
 tags:
 - .NET
 - .NET Fundamentals

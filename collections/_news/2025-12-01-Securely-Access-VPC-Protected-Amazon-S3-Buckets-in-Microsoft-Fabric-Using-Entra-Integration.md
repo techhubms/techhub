@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/securely-access-vpc-protected-amazon-s3-buckets-in-microsoft-fabric-with-entra-integration-preview/
 title: Securely Access VPC-Protected Amazon S3 Buckets in Microsoft Fabric Using Entra Integration
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/securely-access-vpc-protected-amazon-s3-buckets-in-microsoft-fabric-with-entra-integration-preview/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-01 09:00:00 +00:00
-permalink: /ml/news/Securely-Access-VPC-Protected-Amazon-S3-Buckets-in-Microsoft-Fabric-Using-Entra-Integration
 tags:
 - Amazon S3
 - AWS IAM

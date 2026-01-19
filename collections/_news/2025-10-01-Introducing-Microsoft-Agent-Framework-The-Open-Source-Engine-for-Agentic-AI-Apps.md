@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/
 title: 'Introducing Microsoft Agent Framework: The Open-Source Engine for Agentic AI Apps'
 author: Takuto Higuchi, Shawn Henry, Elijah Straight
-canonical_url: https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-10-01 13:57:12 +00:00
-permalink: /ai/news/Introducing-Microsoft-Agent-Framework-The-Open-Source-Engine-for-Agentic-AI-Apps
 tags:
 - .NET
 - A2A

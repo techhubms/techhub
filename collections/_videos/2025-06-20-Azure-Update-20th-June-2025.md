@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=2L4cSig9Y4Y
 title: Azure Update - 20th June 2025
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=2L4cSig9Y4Y
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-06-20 14:50:36 +00:00
-permalink: /ml/videos/Azure-Update-20th-June-2025
 tags:
 - .NET 9
 - AKS

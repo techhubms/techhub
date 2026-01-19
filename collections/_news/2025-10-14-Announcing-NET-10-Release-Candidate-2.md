@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-10-rc-2/
 title: Announcing .NET 10 Release Candidate 2
 author: .NET Team
-canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-10-rc-2/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-10-14 22:15:00 +00:00
-permalink: /coding/news/Announcing-NET-10-Release-Candidate-2
 tags:
 - .NET
 - .NET 10

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/securely-accessing-on-premises-data-with-fabric-data-engineering-workloads/
 title: Securely Accessing On-Premises Data with Microsoft Fabric Managed Private Endpoints
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/securely-accessing-on-premises-data-with-fabric-data-engineering-workloads/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-22 10:00:42 +00:00
-permalink: /ml/news/Securely-Accessing-On-Premises-Data-with-Microsoft-Fabric-Managed-Private-Endpoints
 tags:
 - Data Compliance
 - Data Connectivity

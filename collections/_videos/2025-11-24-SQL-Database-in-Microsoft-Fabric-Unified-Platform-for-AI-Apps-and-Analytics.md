@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ni4CZDbe15U
 title: 'SQL Database in Microsoft Fabric: Unified Platform for AI Apps and Analytics'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=ni4CZDbe15U
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:19:39 +00:00
-permalink: /ai/videos/SQL-Database-in-Microsoft-Fabric-Unified-Platform-for-AI-Apps-and-Analytics
 tags:
 - AI Driven Development
 - Analytical Workloads

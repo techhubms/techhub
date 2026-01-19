@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/onboarding-your-ai-peer-programmer-setting-up-github-copilot-coding-agent-for-success/
 title: 'Onboarding Your AI Peer Programmer: Success with GitHub Copilot Coding Agent'
 author: Christopher Harrison
-canonical_url: https://github.blog/ai-and-ml/github-copilot/onboarding-your-ai-peer-programmer-setting-up-github-copilot-coding-agent-for-success/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-07-31 17:12:43 +00:00
-permalink: /github-copilot/news/Onboarding-Your-AI-Peer-Programmer-Success-with-GitHub-Copilot-Coding-Agent
 tags:
 - Agentic Workflows
 - AI & ML

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/the-devsecops-career-path-what-no-one-tells-you-about-getting-started/
 title: 'The DevSecOps Career Path: What No One Tells You About Getting Started'
 author: Philip Piletic
-canonical_url: https://devops.com/the-devsecops-career-path-what-no-one-tells-you-about-getting-started/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-22 10:26:16 +00:00
-permalink: /devops/blogs/The-DevSecOps-Career-Path-What-No-One-Tells-You-About-Getting-Started
 tags:
 - Business Of DevOps
 - CI/CD

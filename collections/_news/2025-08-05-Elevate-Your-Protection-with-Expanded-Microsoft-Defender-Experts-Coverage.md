@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/blog/microsoftsecurityexperts/elevate-your-protection-with-expanded-microsoft-defender-experts-coverage/4439134
 title: Elevate Your Protection with Expanded Microsoft Defender Experts Coverage
 author: Henry Yan and Sylvie Liu
-canonical_url: https://techcommunity.microsoft.com/blog/microsoftsecurityexperts/elevate-your-protection-with-expanded-microsoft-defender-experts-coverage/4439134
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-08-05 16:00:00 +00:00
-permalink: /azure/news/Elevate-Your-Protection-with-Expanded-Microsoft-Defender-Experts-Coverage
 tags:
 - Cloud Security
 - Hybrid Cloud

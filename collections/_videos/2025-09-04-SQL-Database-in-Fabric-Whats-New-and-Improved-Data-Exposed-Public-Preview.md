@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=MLpGP_L7ZRU
 title: "SQL Database in Fabric: What's New and Improved (Data Exposed Public Preview)"
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=MLpGP_L7ZRU
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-04 21:03:39 +00:00
-permalink: /ml/videos/SQL-Database-in-Fabric-Whats-New-and-Improved-Data-Exposed-Public-Preview
 tags:
 - Analytics Platform
 - Azure SQL

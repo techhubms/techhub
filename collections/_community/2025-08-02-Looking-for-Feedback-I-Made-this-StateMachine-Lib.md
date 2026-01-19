@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mfzmdu/looking_for_feedback_i_made_this_statemachine_lib/
 title: '[Looking for Feedback]: I Made this StateMachine Lib!'
 author: UnityDever
-canonical_url: https://www.reddit.com/r/csharp/comments/1mfzmdu/looking_for_feedback_i_made_this_statemachine_lib/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-02 19:53:28 +00:00
-permalink: /coding/community/Looking-for-Feedback-I-Made-this-StateMachine-Lib
 tags:
 - Agent SDK
 - Architecture

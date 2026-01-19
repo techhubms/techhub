@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2026-01-01-reduced-pricing-for-github-hosted-runners-usage
 title: Reduced Pricing for GitHub-Hosted Runners Usage
 author: Allison
-canonical_url: https://github.blog/changelog/2026-01-01-reduced-pricing-for-github-hosted-runners-usage
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2026-01-01 17:00:03 +00:00
-permalink: /devops/news/Reduced-Pricing-for-GitHub-Hosted-Runners-Usage
 tags:
 - Action Runners
 - Actions

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-github-copilot-helps-with-test-driven-development-tdd/
 title: How GitHub Copilot Helps with Test-Driven Development (TDD)
 author: Dellenny
-canonical_url: https://dellenny.com/how-github-copilot-helps-with-test-driven-development-tdd/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-20 08:04:32 +00:00
-permalink: /github-copilot/blogs/How-GitHub-Copilot-Helps-with-Test-Driven-Development-TDD
 tags:
 - AI Coding Assistant
 - Assertion Generation

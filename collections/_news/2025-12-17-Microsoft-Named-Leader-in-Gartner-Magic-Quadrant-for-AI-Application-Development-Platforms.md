@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-gartner-magic-quadrant-for-ai-application-development-platforms/
 title: Microsoft Named Leader in Gartner Magic Quadrant for AI Application Development Platforms
 author: Don Scott
-canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-gartner-magic-quadrant-for-ai-application-development-platforms/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-17 19:00:00 +00:00
-permalink: /ai/news/Microsoft-Named-Leader-in-Gartner-Magic-Quadrant-for-AI-Application-Development-Platforms
 tags:
 - Agent Based Systems
 - Agent Framework

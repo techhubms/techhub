@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/ai-agent-onboarding-is-now-a-critical-devops-function/?utm_source=rss&utm_medium=rss&utm_campaign=ai-agent-onboarding-is-now-a-critical-devops-function
 title: AI Agent Onboarding as a Core DevOps Responsibility
 author: Alexander Williams
-canonical_url: https://devops.com/ai-agent-onboarding-is-now-a-critical-devops-function/?utm_source=rss&utm_medium=rss&utm_campaign=ai-agent-onboarding-is-now-a-critical-devops-function
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-28 05:00:39 +00:00
-permalink: /ai/blogs/AI-Agent-Onboarding-as-a-Core-DevOps-Responsibility
 tags:
 - Access Control
 - Agent Lifecycle Management

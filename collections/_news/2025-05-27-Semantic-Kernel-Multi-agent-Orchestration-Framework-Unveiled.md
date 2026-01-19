@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-multi-agent-orchestration/
 title: 'Semantic Kernel: Multi-agent Orchestration Framework Unveiled'
 author: Tao Chen, Chris Rickman
-canonical_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-multi-agent-orchestration/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-05-27 16:54:32 +00:00
-permalink: /ai/news/Semantic-Kernel-Multi-agent-Orchestration-Framework-Unveiled
 tags:
 - .NET
 - Agent Orchestration

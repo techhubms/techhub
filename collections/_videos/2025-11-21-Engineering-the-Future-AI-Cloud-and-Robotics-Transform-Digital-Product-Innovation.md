@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=_kkIFY0G9FE
 title: 'Engineering the Future: AI, Cloud, and Robotics Transform Digital Product Innovation'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=_kkIFY0G9FE
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 11:47:07 +00:00
-permalink: /ai/videos/Engineering-the-Future-AI-Cloud-and-Robotics-Transform-Digital-Product-Innovation
 tags:
 - Agentic AI
 - AI Agents

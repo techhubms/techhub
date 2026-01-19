@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/updates/v1_107
 title: What's New in Visual Studio Code November 2025 Insiders Release (v1.107)
 author: Visual Studio Code Team
-canonical_url: https://code.visualstudio.com/updates/v1_107
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-12-10 17:00:00 +00:00
-permalink: /github-copilot/news/Whats-New-in-Visual-Studio-Code-November-2025-Insiders-Release-v1107
 tags:
 - Accessibility
 - Code Chat

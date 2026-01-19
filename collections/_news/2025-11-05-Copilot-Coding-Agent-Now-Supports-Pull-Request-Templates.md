@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-05-copilot-coding-agent-now-supports-pull-request-templates
 title: Copilot Coding Agent Now Supports Pull Request Templates
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-05-copilot-coding-agent-now-supports-pull-request-templates
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-05 18:18:54 +00:00
-permalink: /github-copilot/news/Copilot-Coding-Agent-Now-Supports-Pull-Request-Templates
 tags:
 - Automation
 - Autonomous Agents

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code-maze.com/keycloak-authentication-with-asp-net-core-web-api-and-blazor-webassembly/
 title: Keycloak Authentication with ASP.NET Core Web API and Blazor WebAssembly
 author: Marinko Spasojević
-canonical_url: https://code-maze.com/keycloak-authentication-with-asp-net-core-web-api-and-blazor-webassembly/
 viewing_mode: external
 feed_name: Code Maze Blog
-feed_url: https://code-maze.com/feed/
 date: 2025-02-17 07:59:06 +00:00
-permalink: /coding/blogs/Keycloak-Authentication-With-ASPNET-Core-Web-API-and-Blazor-WebAssembly
 tags:
 - .NET
 - ASP.NET Core

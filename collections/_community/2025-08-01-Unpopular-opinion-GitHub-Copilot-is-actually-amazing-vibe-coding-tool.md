@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mf49un/unpopular_opinion_github_copilot_is_actually/
 title: Unpopular opinion == GitHub Copilot is actually amazing vibe coding tool
 author: EasyProtectedHelp
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mf49un/unpopular_opinion_github_copilot_is_actually/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-01 18:28:38 +00:00
-permalink: /github-copilot/community/Unpopular-opinion-GitHub-Copilot-is-actually-amazing-vibe-coding-tool
 tags:
 - Agent Workflows
 - AI Code Generation

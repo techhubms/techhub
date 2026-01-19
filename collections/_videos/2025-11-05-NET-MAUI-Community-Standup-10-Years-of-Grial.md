@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=bIl83DdhWoo
 title: '.NET MAUI Community Standup: 10 Years of Grial'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=bIl83DdhWoo
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-05 19:50:05 +00:00
-permalink: /coding/videos/NET-MAUI-Community-Standup-10-Years-of-Grial
 tags:
 - .NET
 - .NET 10

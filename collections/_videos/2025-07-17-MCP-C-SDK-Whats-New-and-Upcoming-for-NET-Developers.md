@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=DoezQYWzRBw
 title: 'MCP C# SDK: What’s New and Upcoming for .NET Developers'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=DoezQYWzRBw
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-17 06:05:33 +00:00
-permalink: /ai/videos/MCP-C-SDK-Whats-New-and-Upcoming-for-NET-Developers
 tags:
 - .NET
 - AI Integration

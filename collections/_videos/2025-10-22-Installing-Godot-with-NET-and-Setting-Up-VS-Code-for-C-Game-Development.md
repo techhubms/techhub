@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=MmuiwY_tiEo
 title: Installing Godot with .NET and Setting Up VS Code for C# Game Development
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=MmuiwY_tiEo
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-22 16:30:09 +00:00
-permalink: /coding/videos/Installing-Godot-with-NET-and-Setting-Up-VS-Code-for-C-Game-Development
 tags:
 - .NET
 - Beginner Tutorial

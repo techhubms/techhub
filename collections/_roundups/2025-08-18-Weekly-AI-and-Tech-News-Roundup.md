@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: This Week’s Key Developments in GitHub Copilot, Azure, and Cloud
 author: Tech Hub Team
 viewing_mode: internal
 date: 2025-08-18 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
 - Agentic AI

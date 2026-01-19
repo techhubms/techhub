@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/manage-azure-firewall-rules-nsg-rules-using-terraform-resource/ba-p/4467764
 title: Efficient Azure Firewall and NSG Rule Management with Terraform and CSV
 author: AbhishekShaw
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/manage-azure-firewall-rules-nsg-rules-using-terraform-resource/ba-p/4467764
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-07 02:53:43 +00:00
-permalink: /azure/community/Efficient-Azure-Firewall-and-NSG-Rule-Management-with-Terraform-and-CSV
 tags:
 - Azure Firewall
 - Azure Infrastructure

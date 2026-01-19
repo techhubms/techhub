@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/01/survey-azure-local-formerly-azure-stack-hci-users/
 title: Survey - Azure Local (formerly Azure Stack HCI) Users Invited to Share Feedback
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/01/survey-azure-local-formerly-azure-stack-hci-users/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-01-27 16:16:53 +00:00
-permalink: /azure/blogs/Survey-Azure-Local-formerly-Azure-Stack-HCI-Users-Invited-to-Share-Feedback
 tags:
 - AKS
 - AKS Arc

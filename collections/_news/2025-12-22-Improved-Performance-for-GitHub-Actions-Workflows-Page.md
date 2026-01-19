@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-22-improved-performance-for-github-actions-workflows-page
 title: Improved Performance for GitHub Actions Workflows Page
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-22-improved-performance-for-github-actions-workflows-page
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-22 21:40:47 +00:00
-permalink: /devops/news/Improved-Performance-for-GitHub-Actions-Workflows-Page
 tags:
 - Actions
 - Automation

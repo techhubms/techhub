@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://zure.com/blog/ignite-2025-how-fabric-iq-transforms-data-into-real-understanding
 title: 'Ignite 2025: How Fabric IQ Transforms Data Into Real Understanding'
 author: henri.vuorenpaa@zure.com (Henri Vuorenpää)
-canonical_url: https://zure.com/blog/ignite-2025-how-fabric-iq-transforms-data-into-real-understanding
 viewing_mode: external
 feed_name: Zure Data & AI Blog
-feed_url: https://zure.com/blog/rss.xml
 date: 2025-11-24 07:26:49 +00:00
-permalink: /ai/blogs/Ignite-2025-How-Fabric-IQ-Transforms-Data-Into-Real-Understanding
 tags:
 - Agent 365
 - AI Agents

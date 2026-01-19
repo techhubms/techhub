@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devopsjournal.io/blog/2024/09/14/GitHub-Copilot-Extensions
 title: 'GitHub Copilot Extensions: Building Custom Tools to Enhance Developer Productivity'
 author: Rob Bos
-canonical_url: https://devopsjournal.io/blog/2024/09/14/GitHub-Copilot-Extensions
 viewing_mode: external
 feed_name: Rob Bos' Blog
-feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2024-09-14 00:00:00 +00:00
-permalink: /github-copilot/blogs/GitHub-Copilot-Extensions-Building-Custom-Tools-to-Enhance-Developer-Productivity
 tags:
 - APIs
 - Codespaces

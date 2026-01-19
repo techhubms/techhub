@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://sswart.github.io/post/copilot-data-conversion/
 title: Copilot Data Conversion
 author: Jesse Swart Coding Blog
-canonical_url: https://sswart.github.io/post/copilot-data-conversion/
 viewing_mode: external
 feed_name: Jesse Swart's Blog
-feed_url: https://blog.jesseswart.nl/index.xml
 date: 2024-06-19 11:47:56 +00:00
-permalink: /github-copilot/blogs/Copilot-Data-Conversion
 tags:
 - CSV
 - Data Conversion

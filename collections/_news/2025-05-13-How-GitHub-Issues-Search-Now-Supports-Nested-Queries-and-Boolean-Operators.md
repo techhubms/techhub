@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/developer-skills/application-development/github-issues-search-now-supports-nested-queries-and-boolean-operators-heres-how-we-rebuilt-it/
 title: How GitHub Issues Search Now Supports Nested Queries and Boolean Operators
 author: Deborah Digges
-canonical_url: https://github.blog/developer-skills/application-development/github-issues-search-now-supports-nested-queries-and-boolean-operators-heres-how-we-rebuilt-it/
 viewing_mode: external
 feed_name: GitHub Engineering Blog
-feed_url: https://github.blog/engineering/feed/
 date: 2025-05-13 16:00:00 +00:00
-permalink: /devops/news/How-GitHub-Issues-Search-Now-Supports-Nested-Queries-and-Boolean-Operators
 tags:
 - Advanced Search
 - API

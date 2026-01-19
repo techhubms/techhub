@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/devops-meets-blazor-in-2025-streamlining-net-web-app-delivery-for-the-future/?utm_source=rss&utm_medium=rss&utm_campaign=devops-meets-blazor-in-2025-streamlining-net-web-app-delivery-for-the-future
 title: DevOps Meets Blazor in 2025 - Streamlining .NET Web App Delivery for the Future
 author: Amber Talavera
-canonical_url: https://devops.com/devops-meets-blazor-in-2025-streamlining-net-web-app-delivery-for-the-future/?utm_source=rss&utm_medium=rss&utm_campaign=devops-meets-blazor-in-2025-streamlining-net-web-app-delivery-for-the-future
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-07-31 08:08:53 +00:00
-permalink: /coding/blogs/DevOps-Meets-Blazor-in-2025-Streamlining-NET-Web-App-Delivery-for-the-Future
 tags:
 - .NET
 - Blazor

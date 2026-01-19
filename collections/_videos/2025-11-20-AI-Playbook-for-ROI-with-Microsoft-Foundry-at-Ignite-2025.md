@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=OU3yAhrB0To
 title: AI Playbook for ROI with Microsoft Foundry at Ignite 2025
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=OU3yAhrB0To
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 17:03:57 +00:00
-permalink: /ai/videos/AI-Playbook-for-ROI-with-Microsoft-Foundry-at-Ignite-2025
 tags:
 - Azure AI
 - Business Impact

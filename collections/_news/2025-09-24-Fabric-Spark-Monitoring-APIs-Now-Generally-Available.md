@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/general-availability-announcement-fabric-spark-monitoring-apis/
 title: Fabric Spark Monitoring APIs Now Generally Available
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/general-availability-announcement-fabric-spark-monitoring-apis/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-24 09:00:00 +00:00
-permalink: /ml/news/Fabric-Spark-Monitoring-APIs-Now-Generally-Available
 tags:
 - APIs
 - Application Diagnostics

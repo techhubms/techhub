@@ -1,14 +1,10 @@
-﻿---
-layout: post
+---
+external_url: https://www.youtube.com/watch?v=fwPFPJlw3w4
 title: Visual Studio Code and GitHub Copilot - What's new in 1.104
 author: Fokko Veegens
-canonical_url: https://www.youtube.com/watch?v=fwPFPJlw3w4
 viewing_mode: internal
-youtube_id: fwPFPJlw3w4
+feed_name: Fokko at Work
 date: 2025-09-18 00:00:00 +00:00
-permalink: /github-copilot/videos/Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1104
-section: github-copilot
-alt-collection: vscode-updates
 tags:
 - AGENTS.md
 - Auto Model Selection

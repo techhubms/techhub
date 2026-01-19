@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/VisualStudio/comments/1m81l7y/visual_studio_might_be_getting_its_biggest/
 title: Visual Studio might be getting its biggest upgrade in years, and it'll include AI
 author: thetechminer
-canonical_url: https://www.reddit.com/r/VisualStudio/comments/1m81l7y/visual_studio_might_be_getting_its_biggest/
 viewing_mode: external
 feed_name: Reddit Visual Studio
-feed_url: https://www.reddit.com/r/VisualStudio/.rss
 date: 2025-07-24 11:14:13 +00:00
-permalink: /ai/community/Visual-Studio-might-be-getting-its-biggest-upgrade-in-years-and-itll-include-AI
 tags:
 - AI Features
 - AI Integration

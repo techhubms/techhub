@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/mirroring-uploading-your-csvs-is-now-simpler-than-ever-before/
 title: 'Mirroring CSVs in Microsoft Fabric: Simplified Uploads and Automatic Sync'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/mirroring-uploading-your-csvs-is-now-simpler-than-ever-before/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 11:30:00 +00:00
-permalink: /ml/news/Mirroring-CSVs-in-Microsoft-Fabric-Simplified-Uploads-and-Automatic-Sync
 tags:
 - AI
 - AI Workflows

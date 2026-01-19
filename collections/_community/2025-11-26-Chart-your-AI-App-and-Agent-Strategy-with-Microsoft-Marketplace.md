@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-events/chart-your-ai-app-and-agent-strategy-with-microsoft-marketplace/ec-p/4473304#M662
 title: Chart your AI App and Agent Strategy with Microsoft Marketplace
 author: j_weller_nv
-canonical_url: https://techcommunity.microsoft.com/t5/azure-events/chart-your-ai-app-and-agent-strategy-with-microsoft-marketplace/ec-p/4473304#M662
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-26 18:19:58 +00:00
-permalink: /ai/community/Chart-your-AI-App-and-Agent-Strategy-with-Microsoft-Marketplace
 tags:
 - AI Agents
 - AI Applications

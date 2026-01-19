@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/blog/2025/07/28/how-microsofts-customers-and-partners-accelerated-ai-transformation-in-fy25-to-innovate-with-purpose-and-shape-their-future-success/
 title: How Microsoft’s customers and partners accelerated AI Transformation in FY25
 author: stclarke
-canonical_url: https://blogs.microsoft.com/blog/2025/07/28/how-microsofts-customers-and-partners-accelerated-ai-transformation-in-fy25-to-innovate-with-purpose-and-shape-their-future-success/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-28 14:11:23 +00:00
-permalink: /ai/news/How-Microsofts-customers-and-partners-accelerated-AI-Transformation-in-FY25
 tags:
 - AI Technologies
 - AI Transformation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/from-tool-to-teammate.html
 title: 'From Tool to Teammate: Using GitHub Copilot as a Collaborative Partner'
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/from-tool-to-teammate.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2026-01-02 00:00:00 +00:00
-permalink: /github-copilot/blogs/From-Tool-to-Teammate-Using-GitHub-Copilot-as-a-Collaborative-Partner
 tags:
 - AI Assisted Development
 - Code Review

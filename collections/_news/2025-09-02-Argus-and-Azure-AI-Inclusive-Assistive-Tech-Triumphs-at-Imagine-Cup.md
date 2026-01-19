@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/startups/blog/could-your-startup-be-the-next-imagine-cup-world-champion/
 title: 'Argus and Azure AI: Inclusive Assistive Tech Triumphs at Imagine Cup'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/startups/blog/could-your-startup-be-the-next-imagine-cup-world-champion/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-02 17:04:06 +00:00
-permalink: /ai/news/Argus-and-Azure-AI-Inclusive-Assistive-Tech-Triumphs-at-Imagine-Cup
 tags:
 - Accessibility
 - AI Development

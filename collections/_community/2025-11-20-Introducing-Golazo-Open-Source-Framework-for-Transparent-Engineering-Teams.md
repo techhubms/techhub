@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/golazo-a-framework-for-streamlined-engineering/ba-p/4471142
 title: 'Introducing Golazo: Open-Source Framework for Transparent Engineering Teams'
 author: Ben Martens
-canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/golazo-a-framework-for-streamlined-engineering/ba-p/4471142
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 16:37:24 +00:00
-permalink: /devops/community/Introducing-Golazo-Open-Source-Framework-for-Transparent-Engineering-Teams
 tags:
 - Agile Practices
 - Collaboration

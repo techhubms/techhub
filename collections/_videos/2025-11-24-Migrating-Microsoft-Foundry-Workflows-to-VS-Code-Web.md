@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=MYpW7aDbJQM
 title: Migrating Microsoft Foundry Workflows to VS Code Web
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=MYpW7aDbJQM
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-24 19:12:09 +00:00
-permalink: /ai/videos/Migrating-Microsoft-Foundry-Workflows-to-VS-Code-Web
 tags:
 - Agent Workflow
 - Azure AI

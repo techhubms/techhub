@@ -1,17 +1,13 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/J2qaVAaQzY8
 title: Content Exclusions
 author: Rob Bos
-canonical_url: https://youtu.be/J2qaVAaQzY8
 date: 2025-01-02 11:20:08 +00:00
-permalink: /github-copilot/videos/Content-Exclusions
 viewing_mode: internal
-section: github-copilot
 ghes_support: false
 plans:
 - Pro
 - Business
-alt-collection: features
 tags:
 - Code
 - Content Management

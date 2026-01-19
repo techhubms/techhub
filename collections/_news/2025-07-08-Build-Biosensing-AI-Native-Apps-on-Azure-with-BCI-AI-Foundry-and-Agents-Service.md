@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/all-things-azure/build-biosensing-ai-native-apps-on-azure-with-bci-ai-foundry-and-agents/
 title: Build Biosensing AI-Native Apps on Azure with BCI, AI Foundry, and Agents Service
 author: Govind Kamtamneni
-canonical_url: https://devblogs.microsoft.com/all-things-azure/build-biosensing-ai-native-apps-on-azure-with-bci-ai-foundry-and-agents/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-07-08 05:57:41 +00:00
-permalink: /ai/news/Build-Biosensing-AI-Native-Apps-on-Azure-with-BCI-AI-Foundry-and-Agents-Service
 tags:
 - Adaptive Systems
 - AI Agents Service

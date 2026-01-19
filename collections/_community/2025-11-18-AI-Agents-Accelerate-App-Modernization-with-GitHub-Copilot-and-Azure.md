@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-agents-are-rewriting-the-app-modernization-playbook/ba-p/4470162
 title: AI Agents Accelerate App Modernization with GitHub Copilot and Azure
 author: Scott Hunter
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-agents-are-rewriting-the-app-modernization-playbook/ba-p/4470162
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 14:41:47 +00:00
-permalink: /github-copilot/community/AI-Agents-Accelerate-App-Modernization-with-GitHub-Copilot-and-Azure
 tags:
 - .NET
 - .NET Framework

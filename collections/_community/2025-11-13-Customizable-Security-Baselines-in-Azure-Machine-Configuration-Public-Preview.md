@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/public-preview-introducing-customizable-security-baseline/ba-p/4469678
 title: 'Customizable Security Baselines in Azure Machine Configuration: Public Preview'
 author: mutemwamasheke
-canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/public-preview-introducing-customizable-security-baseline/ba-p/4469678
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-13 17:20:06 +00:00
-permalink: /azure/community/Customizable-Security-Baselines-in-Azure-Machine-Configuration-Public-Preview
 tags:
 - ARM Templates
 - Audit Policy

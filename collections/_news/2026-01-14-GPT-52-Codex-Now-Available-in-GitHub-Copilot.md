@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2026-01-14-gpt-5-2-codex-is-now-generally-available-in-github-copilot
 title: GPT-5.2-Codex Now Available in GitHub Copilot
 author: Allison
-canonical_url: https://github.blog/changelog/2026-01-14-gpt-5-2-codex-is-now-generally-available-in-github-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2026-01-14 17:04:31 +00:00
-permalink: /github-copilot/news/GPT-52-Codex-Now-Available-in-GitHub-Copilot
 tags:
 - Admin Settings
 - AI Model

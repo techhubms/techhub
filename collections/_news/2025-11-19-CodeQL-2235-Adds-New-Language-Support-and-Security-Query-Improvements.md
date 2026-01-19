@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-19-codeql-2-23-5-adds-support-for-swift-6-2-new-java-queries-and-improved-analysis-accuracy
 title: CodeQL 2.23.5 Adds New Language Support and Security Query Improvements
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-19-codeql-2-23-5-adds-support-for-swift-6-2-new-java-queries-and-improved-analysis-accuracy
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-19 19:43:03 +00:00
-permalink: /devops/news/CodeQL-2235-Adds-New-Language-Support-and-Security-Query-Improvements
 tags:
 - .NET
 - Actix Web

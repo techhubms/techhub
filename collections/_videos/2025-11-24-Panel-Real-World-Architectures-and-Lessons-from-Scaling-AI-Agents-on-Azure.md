@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=baPvHB27gwY
 title: 'Panel: Real-World Architectures and Lessons from Scaling AI Agents on Azure'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=baPvHB27gwY
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:37:46 +00:00
-permalink: /ai/videos/Panel-Real-World-Architectures-and-Lessons-from-Scaling-AI-Agents-on-Azure
 tags:
 - Agent Architecture
 - AI Agents

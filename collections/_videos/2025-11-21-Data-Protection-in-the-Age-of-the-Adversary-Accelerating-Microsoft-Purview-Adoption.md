@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=vuqgC2AiZgY
 title: 'Data Protection in the Age of the Adversary: Accelerating Microsoft Purview Adoption'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=vuqgC2AiZgY
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:38:55 +00:00
-permalink: /ai/videos/Data-Protection-in-the-Age-of-the-Adversary-Accelerating-Microsoft-Purview-Adoption
 tags:
 - AI Security
 - Compliance

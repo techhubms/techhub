@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=X2QmaEkiyZA
 title: 'The Download: GitHub Copilot Overtakes ChatGPT as Top Developer AI Tool'
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=X2QmaEkiyZA
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-01 16:31:47 +00:00
-permalink: /github-copilot/videos/The-Download-GitHub-Copilot-Overtakes-ChatGPT-as-Top-Developer-AI-Tool
 tags:
 - AI News
 - AI Security

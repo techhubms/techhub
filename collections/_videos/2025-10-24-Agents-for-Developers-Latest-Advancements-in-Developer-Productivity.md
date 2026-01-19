@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=2A7gO9Tf-Vg
 title: 'Agents for Developers: Latest Advancements in Developer Productivity'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=2A7gO9Tf-Vg
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-24 17:48:26 +00:00
-permalink: /ai/videos/Agents-for-Developers-Latest-Advancements-in-Developer-Productivity
 tags:
 - AI Developer Tools
 - Developer Agents

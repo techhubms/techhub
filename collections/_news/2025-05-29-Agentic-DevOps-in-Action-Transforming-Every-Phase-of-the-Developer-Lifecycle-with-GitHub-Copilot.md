@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/reimagining-every-phase-of-the-developer-lifecycle
 title: 'Agentic DevOps in Action: Transforming Every Phase of the Developer Lifecycle with GitHub Copilot'
 author: Amanda Silver, Mario Rodriguez, Den Delimarsky
-canonical_url: https://devblogs.microsoft.com/blog/reimagining-every-phase-of-the-developer-lifecycle
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-05-29 19:16:40 +00:00
-permalink: /github-copilot/news/Agentic-DevOps-in-Action-Transforming-Every-Phase-of-the-Developer-Lifecycle-with-GitHub-Copilot
 tags:
 - .NET
 - Agent Mode

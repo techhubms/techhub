@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/private-preview-azure-managed-prometheus-on-vm-vmss/ba-p/4473472
 title: 'Private Preview: Azure Managed Prometheus for VM & VMSS Monitoring'
 author: Daramfon
-canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/private-preview-azure-managed-prometheus-on-vm-vmss/ba-p/4473472
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-11 22:01:17 +00:00
-permalink: /azure/community/Private-Preview-Azure-Managed-Prometheus-for-VM-and-VMSS-Monitoring
 tags:
 - AKS
 - Alerting

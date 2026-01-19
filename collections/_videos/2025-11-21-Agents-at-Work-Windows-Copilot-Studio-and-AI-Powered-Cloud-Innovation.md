@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=KNA-o3oSxnA
 title: 'Agents at Work: Windows, Copilot Studio, and AI-Powered Cloud Innovation'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=KNA-o3oSxnA
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 06:28:36 +00:00
-permalink: /ai/videos/Agents-at-Work-Windows-Copilot-Studio-and-AI-Powered-Cloud-Innovation
 tags:
 - Accessibility
 - Advanced Session

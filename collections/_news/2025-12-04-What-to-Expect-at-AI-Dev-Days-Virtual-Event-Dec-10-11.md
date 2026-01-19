@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://developer.microsoft.com/blog/join-us-for-ai-devdays
 title: What to Expect at AI Dev Days Virtual Event Dec. 10-11
 author: stclarke
-canonical_url: https://developer.microsoft.com/blog/join-us-for-ai-devdays
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-04 19:05:59 +00:00
-permalink: /github-copilot/news/What-to-Expect-at-AI-Dev-Days-Virtual-Event-Dec-10-11
 tags:
 - Agentic Workflows
 - AI Dev Days

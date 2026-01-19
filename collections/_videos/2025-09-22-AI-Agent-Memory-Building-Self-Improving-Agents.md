@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=QrYbHesIxpw
 title: 'AI Agent Memory: Building Self-Improving Agents'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=QrYbHesIxpw
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-22 18:59:37 +00:00
-permalink: /ai/videos/AI-Agent-Memory-Building-Self-Improving-Agents
 tags:
 - Agent Design
 - AI Agents

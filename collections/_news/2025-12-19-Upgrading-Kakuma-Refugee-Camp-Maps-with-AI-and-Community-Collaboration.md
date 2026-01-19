@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://unlocked.microsoft.com/kakuma/
 title: Upgrading Kakuma Refugee Camp Maps with AI and Community Collaboration
 author: stclarke
-canonical_url: https://unlocked.microsoft.com/kakuma/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-19 20:04:02 +00:00
-permalink: /ai/news/Upgrading-Kakuma-Refugee-Camp-Maps-with-AI-and-Community-Collaboration
 tags:
 - Community Engagement
 - Company News

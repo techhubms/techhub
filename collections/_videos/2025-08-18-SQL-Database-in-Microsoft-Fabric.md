@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ycq7r-ngOBI
 title: SQL Database in Microsoft Fabric
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=ycq7r-ngOBI
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-18 15:06:40 +00:00
-permalink: /ml/videos/SQL-Database-in-Microsoft-Fabric
 tags:
 - AI
 - AI Integration

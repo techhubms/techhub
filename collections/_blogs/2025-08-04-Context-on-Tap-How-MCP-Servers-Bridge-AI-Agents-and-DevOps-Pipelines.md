@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/context-on-tap-how-mcp-servers-bridge-ai-agents-and-devops-pipelines/?utm_source=rss&utm_medium=rss&utm_campaign=context-on-tap-how-mcp-servers-bridge-ai-agents-and-devops-pipelines
 title: 'Context on Tap: How MCP Servers Bridge AI Agents and DevOps Pipelines'
 author: Mike Vizard
-canonical_url: https://devops.com/context-on-tap-how-mcp-servers-bridge-ai-agents-and-devops-pipelines/?utm_source=rss&utm_medium=rss&utm_campaign=context-on-tap-how-mcp-servers-bridge-ai-agents-and-devops-pipelines
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-04 14:47:46 +00:00
-permalink: /ai/blogs/Context-on-Tap-How-MCP-Servers-Bridge-AI-Agents-and-DevOps-Pipelines
 tags:
 - A2A
 - Agent To Agent Protocols

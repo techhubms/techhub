@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/new-portal-experience-for-feature-management/ba-p/4467748
 title: Scenario-Based Feature Flag Management in Azure App Configuration Portal
 author: nuzhat-minhaz
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/new-portal-experience-for-feature-management/ba-p/4467748
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 22:42:56 +00:00
-permalink: /ai/community/Scenario-Based-Feature-Flag-Management-in-Azure-App-Configuration-Portal
 tags:
 - A/B Testing
 - AI Deployment

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/what-s-new-with-azure-netapp-files-vs-code-extension/ba-p/4485989
 title: What's New with Azure NetApp Files VS Code Extension
 author: GeertVanTeylingen
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/what-s-new-with-azure-netapp-files-vs-code-extension/ba-p/4485989
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-15 21:04:04 +00:00
-permalink: /ai/community/Whats-New-with-Azure-NetApp-Files-VS-Code-Extension
 tags:
 - AI Powered Commands
 - ARM Templates

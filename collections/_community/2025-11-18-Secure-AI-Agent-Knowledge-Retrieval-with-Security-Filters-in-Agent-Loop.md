@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/secure-ai-agent-knowledge-retrieval-introducing-security-filters/ba-p/4467561
 title: Secure AI Agent Knowledge Retrieval with Security Filters in Agent Loop
 author: harimehta
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/secure-ai-agent-knowledge-retrieval-introducing-security-filters/ba-p/4467561
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:25:53 +00:00
-permalink: /ai/community/Secure-AI-Agent-Knowledge-Retrieval-with-Security-Filters-in-Agent-Loop
 tags:
 - Access Control
 - ACL Support

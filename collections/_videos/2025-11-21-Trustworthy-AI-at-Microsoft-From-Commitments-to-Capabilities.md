@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=QQCQyq48USM
 title: 'Trustworthy AI at Microsoft: From Commitments to Capabilities'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=QQCQyq48USM
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:17:57 +00:00
-permalink: /ai/videos/Trustworthy-AI-at-Microsoft-From-Commitments-to-Capabilities
 tags:
 - Agentic Workflow
 - AI Deployment

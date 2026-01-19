@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-07-08-copilot-code-review-now-generally-available-on-github-mobile
 title: Copilot code review now generally available on GitHub Mobile
 author: Allison
-canonical_url: https://github.blog/changelog/2025-07-08-copilot-code-review-now-generally-available-on-github-mobile
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-09 10:00:23 +00:00
-permalink: /github-copilot/news/Copilot-code-review-now-generally-available-on-GitHub-Mobile
 tags:
 - Code Review
 - Developer Productivity

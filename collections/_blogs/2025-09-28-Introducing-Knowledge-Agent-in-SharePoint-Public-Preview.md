@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/introducing-knowledge-agent-in-sharepoint-public-preview/
 title: Introducing Knowledge Agent in SharePoint (Public Preview)
 author: Dellenny
-canonical_url: https://dellenny.com/introducing-knowledge-agent-in-sharepoint-public-preview/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-28 12:33:12 +00:00
-permalink: /ai/blogs/Introducing-Knowledge-Agent-in-SharePoint-Public-Preview
 tags:
 - AI in SharePoint
 - Automation Rules

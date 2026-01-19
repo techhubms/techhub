@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=KQ09sMHeFQY
 title: 'Microsoft Agent Framework Workflows: Deep Dive and Advanced Concepts'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=KQ09sMHeFQY
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-22 22:52:22 +00:00
-permalink: /ai/videos/Microsoft-Agent-Framework-Workflows-Deep-Dive-and-Advanced-Concepts
 tags:
 - AI Agents
 - Automation Systems

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-11-a-rest-api-for-github-projects-sub-issues-improvements-and-more
 title: REST API Enhancements for GitHub Projects and Sub-Issues Improvements
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-11-a-rest-api-for-github-projects-sub-issues-improvements-and-more
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-11 18:42:31 +00:00
-permalink: /devops/news/REST-API-Enhancements-for-GitHub-Projects-and-Sub-Issues-Improvements
 tags:
 - API Integration
 - Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/vibe-coding-can-create-unseen-vulnerabilities/
 title: Vibe Coding Can Create Unseen Vulnerabilities
 author: Jeff Kuo
-canonical_url: https://devops.com/vibe-coding-can-create-unseen-vulnerabilities/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-11 09:30:29 +00:00
-permalink: /ai/blogs/Vibe-Coding-Can-Create-Unseen-Vulnerabilities
 tags:
 - AI And Cybersecurity
 - AI Automation

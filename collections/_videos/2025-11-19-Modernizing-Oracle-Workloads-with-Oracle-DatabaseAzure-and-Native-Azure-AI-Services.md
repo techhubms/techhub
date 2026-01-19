@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=LPbKU_rs-P0
 title: Modernizing Oracle Workloads with Oracle Database@Azure and Native Azure AI Services
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=LPbKU_rs-P0
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 11:21:00 +00:00
-permalink: /ai/videos/Modernizing-Oracle-Workloads-with-Oracle-DatabaseAzure-and-Native-Azure-AI-Services
 tags:
 - AI Driven Analytics
 - Autonomous Database

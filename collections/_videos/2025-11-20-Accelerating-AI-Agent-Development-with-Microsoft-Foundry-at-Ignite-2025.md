@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=hBpbKMEOVEw
 title: Accelerating AI Agent Development with Microsoft Foundry at Ignite 2025
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=hBpbKMEOVEw
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 14:49:27 +00:00
-permalink: /ai/videos/Accelerating-AI-Agent-Development-with-Microsoft-Foundry-at-Ignite-2025
 tags:
 - Agent Factory
 - Agentic Workflows

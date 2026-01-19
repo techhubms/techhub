@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-storage/differences-between-powershell-and-browser-when-upload-file/m-p/4458068#M574
 title: Resolving AuthorizationPermissionMismatch for Set-AzStorageBlobContent in PowerShell
 author: Petri-X
-canonical_url: https://techcommunity.microsoft.com/t5/azure-storage/differences-between-powershell-and-browser-when-upload-file/m-p/4458068#M574
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-30 08:04:55 +00:00
-permalink: /azure/community/Resolving-AuthorizationPermissionMismatch-for-Set-AzStorageBlobContent-in-PowerShell
 tags:
 - Access Control
 - AuthorizationPermissionMismatch

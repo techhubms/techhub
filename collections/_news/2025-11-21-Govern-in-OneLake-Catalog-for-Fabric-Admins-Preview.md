@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-catalog-govern-for-fabric-admins/
 title: Govern in OneLake Catalog for Fabric Admins (Preview)
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-catalog-govern-for-fabric-admins/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 09:30:00 +00:00
-permalink: /ml/news/Govern-in-OneLake-Catalog-for-Fabric-Admins-Preview
 tags:
 - Admin Tools
 - Capacity Management

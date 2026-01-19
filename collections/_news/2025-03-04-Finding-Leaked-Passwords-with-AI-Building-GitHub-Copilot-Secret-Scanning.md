@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/engineering/platform-security/finding-leaked-passwords-with-ai-how-we-built-copilot-secret-scanning/
 title: 'Finding Leaked Passwords with AI: Building GitHub Copilot Secret Scanning'
 author: Ashwin Mohan
-canonical_url: https://github.blog/engineering/platform-security/finding-leaked-passwords-with-ai-how-we-built-copilot-secret-scanning/
 viewing_mode: external
 feed_name: GitHub Engineering Blog
-feed_url: https://github.blog/engineering/feed/
 date: 2025-03-04 17:00:24 +00:00
-permalink: /github-copilot/news/Finding-Leaked-Passwords-with-AI-Building-GitHub-Copilot-Secret-Scanning
 tags:
 - Copilot Autofix
 - Engineering

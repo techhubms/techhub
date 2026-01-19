@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faster-python-on-azure-functions-with-uvloop/ba-p/4455323
 title: Boosting Python Performance on Azure Functions with uvloop
 author: eroman
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faster-python-on-azure-functions-with-uvloop/ba-p/4455323
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-01 21:11:10 +00:00
-permalink: /coding/community/Boosting-Python-Performance-on-Azure-Functions-with-uvloop
 tags:
 - Asynchronous Workloads
 - Asyncio

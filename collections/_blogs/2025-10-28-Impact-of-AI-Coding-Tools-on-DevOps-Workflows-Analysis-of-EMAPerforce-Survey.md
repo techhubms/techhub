@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/survey-surfaces-impact-ai-coding-tools-are-having-on-devops-workflows/
 title: 'Impact of AI Coding Tools on DevOps Workflows: Analysis of EMA/Perforce Survey'
 author: Mike Vizard
-canonical_url: https://devops.com/survey-surfaces-impact-ai-coding-tools-are-having-on-devops-workflows/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-28 15:21:04 +00:00
-permalink: /ai/blogs/Impact-of-AI-Coding-Tools-on-DevOps-Workflows-Analysis-of-EMAPerforce-Survey
 tags:
 - AI Benefits
 - AI Coding

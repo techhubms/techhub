@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/introducing-microsoft-s-network-operations-agent-a-telco/ba-p/4471185
 title: 'Introducing Microsoft’s Network Operations Agent: A Telco Framework for Autonomous Networks'
 author: bryangrimm
-canonical_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/introducing-microsoft-s-network-operations-agent-a-telco/ba-p/4471185
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 02:44:20 +00:00
-permalink: /ai/community/Introducing-Microsofts-Network-Operations-Agent-A-Telco-Framework-for-Autonomous-Networks
 tags:
 - AI Agents
 - AI Gateway

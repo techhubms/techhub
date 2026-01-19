@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-learn/microsoft-learning-rooms-weekly-round-up-8-7/m-p/4441646#M17145
 title: Weekly Microsoft Learning Rooms Community Roundup (8/7)
 author: JulieSirrine
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-learn/microsoft-learning-rooms-weekly-round-up-8-7/m-p/4441646#M17145
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-08 18:40:34 +00:00
-permalink: /ai/community/Weekly-Microsoft-Learning-Rooms-Community-Roundup-87
 tags:
 - Access Control
 - APIM Integration

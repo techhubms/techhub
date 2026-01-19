@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/MPA-dZBUTUQ
 title: How to Test Nonexistent Code with GitHub Copilot
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/MPA-dZBUTUQ
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-08-21 17:00:25 +00:00
-permalink: /github-copilot/videos/How-to-Test-Nonexistent-Code-with-GitHub-Copilot
 tags:
 - AI Assistant
 - AI Development

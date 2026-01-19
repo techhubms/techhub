@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=7nQCRRYp44k
 title: Aspire for AI Applications
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=7nQCRRYp44k
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-10 22:07:54 +00:00
-permalink: /ai/videos/Aspire-for-AI-Applications
 tags:
 - AI Application Development
 - API Management

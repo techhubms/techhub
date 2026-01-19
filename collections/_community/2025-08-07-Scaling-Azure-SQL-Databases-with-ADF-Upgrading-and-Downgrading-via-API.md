@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mjtpn1/adf_scale_up_and_scale_down_azure_sql_database/
 title: 'Scaling Azure SQL Databases with ADF: Upgrading and Downgrading via API'
 author: Relative_Wear2650
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mjtpn1/adf_scale_up_and_scale_down_azure_sql_database/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-07 07:35:40 +00:00
-permalink: /azure/community/Scaling-Azure-SQL-Databases-with-ADF-Upgrading-and-Downgrading-via-API
 tags:
 - ADF Pipelines
 - API Versioning

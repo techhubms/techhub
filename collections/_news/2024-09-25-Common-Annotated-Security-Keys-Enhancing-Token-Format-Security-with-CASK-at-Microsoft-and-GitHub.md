@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/engineering-at-microsoft/common-annotated-security-keys/
 title: 'Common Annotated Security Keys: Enhancing Token Format Security with CASK at Microsoft and GitHub'
 author: Michael C. Fanning
-canonical_url: https://devblogs.microsoft.com/engineering-at-microsoft/common-annotated-security-keys/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/engineering-at-microsoft/feed/
 date: 2024-09-25 18:50:15 +00:00
-permalink: /azure/news/Common-Annotated-Security-Keys-Enhancing-Token-Format-Security-with-CASK-at-Microsoft-and-GitHub
 tags:
 - 1ES
 - ADO Azure DevOps GHAS

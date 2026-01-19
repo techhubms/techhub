@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=X-Dh9R3Opn8
 title: Using Agentic Protocols (MCP, A2A, and NLWeb)
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=X-Dh9R3Opn8
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-27 16:00:56 +00:00
-permalink: /ai/videos/Using-Agentic-Protocols-MCP-A2A-and-NLWeb
 tags:
 - A2A
 - Agentic Protocols

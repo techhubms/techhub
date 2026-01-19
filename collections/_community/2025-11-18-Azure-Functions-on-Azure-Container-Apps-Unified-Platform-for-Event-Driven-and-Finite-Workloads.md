@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-on-azure-container-apps-the-unified-platform-for/ba-p/4470814
 title: 'Azure Functions on Azure Container Apps: Unified Platform for Event-Driven and Finite Workloads'
 author: DeepGanguly
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-on-azure-container-apps-the-unified-platform-for/ba-p/4470814
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 05:27:35 +00:00
-permalink: /ml/community/Azure-Functions-on-Azure-Container-Apps-Unified-Platform-for-Event-Driven-and-Finite-Workloads
 tags:
 - API
 - Azure Container Apps

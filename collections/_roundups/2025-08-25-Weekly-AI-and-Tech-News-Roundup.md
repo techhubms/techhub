@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: Updated AI DevOps, Copilot Personalization, and Secure Cloud Developments
 author: Tech Hub Team
 viewing_mode: internal
 date: 2025-08-25 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET Modernization
 - AI Agents

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-28-copilot-coding-agent-now-supports-self-hosted-runners
 title: Copilot Coding Agent Now Supports Self-Hosted Runners Using ARC
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-28-copilot-coding-agent-now-supports-self-hosted-runners
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:20:53 +00:00
-permalink: /github-copilot/news/Copilot-Coding-Agent-Now-Supports-Self-Hosted-Runners-Using-ARC
 tags:
 - Actions
 - Actions Runner Controller

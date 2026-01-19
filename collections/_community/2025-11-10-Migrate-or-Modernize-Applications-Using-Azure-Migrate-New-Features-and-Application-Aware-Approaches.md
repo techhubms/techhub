@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-or-modernize-your-applications-using-azure-migrate/ba-p/4468587
 title: 'Migrate or Modernize Applications Using Azure Migrate: New Features and Application-Aware Approaches'
 author: Shikher
-canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-or-modernize-your-applications-using-azure-migrate/ba-p/4468587
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-10 16:03:15 +00:00
-permalink: /github-copilot/community/Migrate-or-Modernize-Applications-Using-Azure-Migrate-New-Features-and-Application-Aware-Approaches
 tags:
 - .NET Migration
 - AKS

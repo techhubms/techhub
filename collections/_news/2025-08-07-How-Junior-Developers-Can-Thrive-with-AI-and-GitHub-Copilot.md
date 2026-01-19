@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/generative-ai/junior-developers-arent-obsolete-heres-how-to-thrive-in-the-age-of-ai/
 title: How Junior Developers Can Thrive with AI and GitHub Copilot
 author: Gwen Davis
-canonical_url: https://github.blog/ai-and-ml/generative-ai/junior-developers-arent-obsolete-heres-how-to-thrive-in-the-age-of-ai/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-08-07 21:05:55 +00:00
-permalink: /github-copilot/news/How-Junior-Developers-Can-Thrive-with-AI-and-GitHub-Copilot
 tags:
 - AI & ML
 - AI Career Skills

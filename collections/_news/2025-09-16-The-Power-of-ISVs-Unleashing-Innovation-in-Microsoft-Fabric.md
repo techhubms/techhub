@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/the-power-of-isvs-unleashing-innovation-in-microsoft-fabric/
 title: 'The Power of ISVs: Unleashing Innovation in Microsoft Fabric'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/the-power-of-isvs-unleashing-innovation-in-microsoft-fabric/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-16 09:27:34 +00:00
-permalink: /ai/news/The-Power-of-ISVs-Unleashing-Innovation-in-Microsoft-Fabric
 tags:
 - Agent Mart Studio
 - AI Agents

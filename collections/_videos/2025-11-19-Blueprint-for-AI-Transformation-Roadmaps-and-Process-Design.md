@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=looF4pizVps
 title: 'Blueprint for AI Transformation: Roadmaps and Process Design'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=looF4pizVps
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 15:14:30 +00:00
-permalink: /ai/videos/Blueprint-for-AI-Transformation-Roadmaps-and-Process-Design
 tags:
 - Agentic AI
 - Agenticbusinessapplications

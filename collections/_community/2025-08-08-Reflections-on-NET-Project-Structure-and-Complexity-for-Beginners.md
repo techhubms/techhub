@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mkujgo/starting_to_understand_the_differences_of_dotnet/
 title: Reflections on .NET Project Structure and Complexity for Beginners
 author: jeddthedoge
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mkujgo/starting_to_understand_the_differences_of_dotnet/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-08 12:59:42 +00:00
-permalink: /coding/community/Reflections-on-NET-Project-Structure-and-Complexity-for-Beginners
 tags:
 - .NET
 - ASP.NET Core

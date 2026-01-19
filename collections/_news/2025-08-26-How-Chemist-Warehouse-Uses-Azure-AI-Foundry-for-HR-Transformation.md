@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/asia/features/a-digital-colleague-how-chemist-warehouse-and-insurgence-ai-are-rewriting-the-hr-playbook/
 title: How Chemist Warehouse Uses Azure AI Foundry for HR Transformation
 author: stclarke
-canonical_url: https://news.microsoft.com/source/asia/features/a-digital-colleague-how-chemist-warehouse-and-insurgence-ai-are-rewriting-the-hr-playbook/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-26 16:00:00 +00:00
-permalink: /ai/news/How-Chemist-Warehouse-Uses-Azure-AI-Foundry-for-HR-Transformation
 tags:
 - AI Integration
 - AI Solutions

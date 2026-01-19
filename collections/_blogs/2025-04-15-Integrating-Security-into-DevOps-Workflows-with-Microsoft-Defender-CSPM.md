@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://zure.com/blog/integrating-security-into-devops-workflows-with-microsoft-defender-cspm
 title: Integrating Security into DevOps Workflows with Microsoft Defender CSPM
 author: petrus.vasenius@zure.com (Petrus Vasenius)
-canonical_url: https://zure.com/blog/integrating-security-into-devops-workflows-with-microsoft-defender-cspm
 viewing_mode: external
 feed_name: Zure Data & AI Blog
-feed_url: https://zure.com/blog/rss.xml
 date: 2025-04-15 06:15:25 +00:00
-permalink: /azure/blogs/Integrating-Security-into-DevOps-Workflows-with-Microsoft-Defender-CSPM
 tags:
 - ARM Templates
 - Automated Remediation

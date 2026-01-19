@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/foundry-fridays-your-front-row-seat-to-azure-ai-innovation/ba-p/4456956
 title: 'Foundry Fridays: Weekly Azure AI Foundry AMA Series'
 author: Lee_Stott
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/foundry-fridays-your-front-row-seat-to-azure-ai-innovation/ba-p/4456956
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-02 07:00:00 +00:00
-permalink: /ai/community/Foundry-Fridays-Weekly-Azure-AI-Foundry-AMA-Series
 tags:
 - Agentic Workflows
 - AI Agent Security

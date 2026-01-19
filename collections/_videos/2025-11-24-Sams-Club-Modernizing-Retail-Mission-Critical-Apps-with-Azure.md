@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=NDdYyolB-PA
 title: 'Sam’s Club: Modernizing Retail Mission-Critical Apps with Azure'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=NDdYyolB-PA
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:15:09 +00:00
-permalink: /ml/videos/Sams-Club-Modernizing-Retail-Mission-Critical-Apps-with-Azure
 tags:
 - AKS
 - Azure SQL

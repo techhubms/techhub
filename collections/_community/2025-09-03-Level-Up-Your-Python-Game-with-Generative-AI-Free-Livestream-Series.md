@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/level-up-your-python-game-with-generative-ai-free-livestream/ba-p/4450646
 title: 'Level Up Your Python Game with Generative AI: Free Livestream Series'
 author: Lee_Stott
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/level-up-your-python-game-with-generative-ai-free-livestream/ba-p/4450646
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-03 23:03:37 +00:00
-permalink: /ai/community/Level-Up-Your-Python-Game-with-Generative-AI-Free-Livestream-Series
 tags:
 - Agents
 - AI Discord

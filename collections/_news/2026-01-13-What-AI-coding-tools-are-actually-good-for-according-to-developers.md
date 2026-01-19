@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/generative-ai/what-ai-is-actually-good-for-according-to-developers/
 title: What AI coding tools are actually good for, according to developers
 author: Cassidy Williams
-canonical_url: https://github.blog/ai-and-ml/generative-ai/what-ai-is-actually-good-for-according-to-developers/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2026-01-13 18:39:24 +00:00
-permalink: /github-copilot/news/What-AI-coding-tools-are-actually-good-for-according-to-developers
 tags:
 - AI & ML
 - AI Coding Tools

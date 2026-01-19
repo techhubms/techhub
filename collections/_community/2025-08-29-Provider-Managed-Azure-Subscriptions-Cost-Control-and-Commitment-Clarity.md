@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/finops-blog/provider-managed-azure-subscriptions-cost-control-and-commitment/ba-p/4448688
 title: 'Provider-Managed Azure Subscriptions: Cost Control and Commitment Clarity'
 author: Dirk_Brinkmann
-canonical_url: https://techcommunity.microsoft.com/t5/finops-blog/provider-managed-azure-subscriptions-cost-control-and-commitment/ba-p/4448688
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-29 04:48:21 +00:00
-permalink: /azure/community/Provider-Managed-Azure-Subscriptions-Cost-Control-and-Commitment-Clarity
 tags:
 - Azure Billing
 - Azure Subscription Management

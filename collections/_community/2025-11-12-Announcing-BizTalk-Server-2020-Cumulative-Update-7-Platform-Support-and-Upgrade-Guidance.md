@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-biztalk-server-2020-cumulative-update-7/ba-p/4469100
 title: 'Announcing BizTalk Server 2020 Cumulative Update 7: Platform Support and Upgrade Guidance'
 author: hcamposu
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-biztalk-server-2020-cumulative-update-7/ba-p/4469100
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-12 16:42:12 +00:00
-permalink: /coding/community/Announcing-BizTalk-Server-2020-Cumulative-Update-7-Platform-Support-and-Upgrade-Guidance
 tags:
 - Azure Logic Apps
 - BizTalk Migration

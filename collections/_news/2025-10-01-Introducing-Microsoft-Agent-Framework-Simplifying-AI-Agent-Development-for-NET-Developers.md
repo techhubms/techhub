@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/introducing-microsoft-agent-framework-preview/
 title: 'Introducing Microsoft Agent Framework: Simplifying AI Agent Development for .NET Developers'
 author: Luis Quintanilla
-canonical_url: https://devblogs.microsoft.com/dotnet/introducing-microsoft-agent-framework-preview/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-10-01 14:05:00 +00:00
-permalink: /ai/news/Introducing-Microsoft-Agent-Framework-Simplifying-AI-Agent-Development-for-NET-Developers
 tags:
 - .NET
 - Agent Orchestration

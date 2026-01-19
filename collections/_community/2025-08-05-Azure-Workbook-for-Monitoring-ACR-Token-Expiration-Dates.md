@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/azure-workbook-for-acr-tokens-and-their-expiration-dates/ba-p/4438249
 title: Azure Workbook for Monitoring ACR Token Expiration Dates
 author: Jamesdld23
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/azure-workbook-for-acr-tokens-and-their-expiration-dates/ba-p/4438249
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-05 04:30:00 +00:00
-permalink: /azure/community/Azure-Workbook-for-Monitoring-ACR-Token-Expiration-Dates
 tags:
 - ACR
 - Authentication

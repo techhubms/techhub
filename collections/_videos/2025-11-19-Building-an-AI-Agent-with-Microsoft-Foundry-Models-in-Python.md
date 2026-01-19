@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=fUuTvoDPyzo
 title: Building an AI Agent with Microsoft Foundry Models in Python
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=fUuTvoDPyzo
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-19 23:05:55 +00:00
-permalink: /ai/videos/Building-an-AI-Agent-with-Microsoft-Foundry-Models-in-Python
 tags:
 - Agent Tracing
 - AI Agent

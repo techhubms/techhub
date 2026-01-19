@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/introducing-azure-accelerate-fueling-transformation-with-experts-and-investments-across-your-cloud-and-ai-journey/
 title: 'Introducing Azure Accelerate: Expert Support and Investments for Your Cloud and AI Transformation'
 author: Cyril Belikoff
-canonical_url: https://azure.microsoft.com/en-us/blog/introducing-azure-accelerate-fueling-transformation-with-experts-and-investments-across-your-cloud-and-ai-journey/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-07 15:00:00 +00:00
-permalink: /ai/news/Introducing-Azure-Accelerate-Expert-Support-and-Investments-for-Your-Cloud-and-AI-Transformation
 tags:
 - AI + Machine Learning
 - Azure Accelerate

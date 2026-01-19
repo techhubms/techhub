@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=dMPMqFmnJ4A
 title: 'Azure Update - 26th September 2025: Service Retirements, New Features, and GitHub Copilot Highlights'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=dMPMqFmnJ4A
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-26 15:14:46 +00:00
-permalink: /github-copilot/videos/Azure-Update-26th-September-2025-Service-Retirements-New-Features-and-GitHub-Copilot-Highlights
 tags:
 - AFD Signed Request
 - AKS Insights

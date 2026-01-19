@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/announcing-azure-mcp-server-stable-release/
 title: Announcing Azure MCP Server 1.0.0 Stable Release – A New Era for Agentic Workflows
 author: Sandeep Sen
-canonical_url: https://devblogs.microsoft.com/azure-sdk/announcing-azure-mcp-server-stable-release/
 viewing_mode: external
 feed_name: Microsoft Azure SDK Blog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-10-28 18:00:57 +00:00
-permalink: /ai/news/Announcing-Azure-MCP-Server-100-Stable-Release-A-New-Era-for-Agentic-Workflows
 tags:
 - .NET AOT
 - Agentic Automation

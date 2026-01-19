@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ptdNWGj8CN8
 title: '.NET AI Community Standup: High-Performance AI Inference on a Budget'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=ptdNWGj8CN8
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-06 20:46:02 +00:00
-permalink: /ai/videos/NET-AI-Community-Standup-High-Performance-AI-Inference-on-a-Budget
 tags:
 - .NET
 - .NET 10

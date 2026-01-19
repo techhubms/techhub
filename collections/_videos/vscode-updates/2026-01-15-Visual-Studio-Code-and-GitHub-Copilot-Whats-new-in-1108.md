@@ -1,14 +1,10 @@
 ---
-layout: post
+external_url: https://www.youtube.com/watch?v=d6IzQ2y3nuQ
 title: Visual Studio Code and GitHub Copilot - What's new in 1.108
 author: Fokko Veegens
-canonical_url: https://www.youtube.com/watch?v=d6IzQ2y3nuQ
 viewing_mode: internal
-youtube_id: d6IzQ2y3nuQ
+feed_name: Fokko at Work
 date: 2026-01-15 18:00:00 +00:00
-permalink: /github-copilot/videos/Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1108
-section: github-copilot
-alt-collection: vscode-updates
 tags:
 - Agent Skills
 - Agent Sessions

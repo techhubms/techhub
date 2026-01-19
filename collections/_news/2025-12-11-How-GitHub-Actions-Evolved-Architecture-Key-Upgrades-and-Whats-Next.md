@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/news-insights/product-news/lets-talk-about-github-actions/
 title: 'How GitHub Actions Evolved: Architecture, Key Upgrades & What’s Next'
 author: Ben De St Paer-Gotch
-canonical_url: https://github.blog/news-insights/product-news/lets-talk-about-github-actions/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-12-11 17:40:52 +00:00
-permalink: /devops/news/How-GitHub-Actions-Evolved-Architecture-Key-Upgrades-and-Whats-Next
 tags:
 - Architecture
 - Arm64 Hosted Runners

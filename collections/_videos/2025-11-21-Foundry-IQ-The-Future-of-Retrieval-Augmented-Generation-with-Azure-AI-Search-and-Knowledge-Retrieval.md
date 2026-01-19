@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=slDdNIQCJBQ
 title: 'Foundry IQ: The Future of Retrieval-Augmented Generation with Azure AI Search and Knowledge Retrieval'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=slDdNIQCJBQ
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 07:32:34 +00:00
-permalink: /ai/videos/Foundry-IQ-The-Future-of-Retrieval-Augmented-Generation-with-Azure-AI-Search-and-Knowledge-Retrieval
 tags:
 - Agentic RAG
 - AI Agents

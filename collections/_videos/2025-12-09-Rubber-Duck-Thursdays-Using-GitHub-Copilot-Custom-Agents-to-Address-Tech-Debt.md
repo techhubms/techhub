@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=OgFacJ6lIBc
 title: 'Rubber Duck Thursdays: Using GitHub Copilot Custom Agents to Address Tech Debt'
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=OgFacJ6lIBc
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-09 13:22:36 +00:00
-permalink: /github-copilot/videos/Rubber-Duck-Thursdays-Using-GitHub-Copilot-Custom-Agents-to-Address-Tech-Debt
 tags:
 - Automation
 - CI/CD

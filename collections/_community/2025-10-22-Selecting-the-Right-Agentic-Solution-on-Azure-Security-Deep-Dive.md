@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/selecting-the-right-agentic-solution-on-azure-part-2-security/ba-p/4461215
 title: Selecting the Right Agentic Solution on Azure – Security Deep Dive
 author: pranabpaul
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/selecting-the-right-agentic-solution-on-azure-part-2-security/ba-p/4461215
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-22 18:10:53 +00:00
-permalink: /ai/community/Selecting-the-Right-Agentic-Solution-on-Azure-Security-Deep-Dive
 tags:
 - Agent Framework
 - Agent Orchestration

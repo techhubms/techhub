@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/actioning-agentic-ai-5-ways-to-build-with-news-from-microsoft-ignite-2025/
 title: 'Agentic AI and Cloud Innovation: Key Takeaways from Microsoft Ignite 2025'
 author: Natalie Wossene
-canonical_url: https://azure.microsoft.com/en-us/blog/actioning-agentic-ai-5-ways-to-build-with-news-from-microsoft-ignite-2025/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-10 17:00:00 +00:00
-permalink: /ai/news/Agentic-AI-and-Cloud-Innovation-Key-Takeaways-from-Microsoft-Ignite-2025
 tags:
 - Agentic AI
 - AI + Machine Learning

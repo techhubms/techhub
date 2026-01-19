@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-may-2025/
 title: 'Azure Developer CLI (azd) May 2025 Release: New Features, Templates, and Docs'
 author: Kristen Womack
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-may-2025/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-05-07 17:30:53 +00:00
-permalink: /ai/news/Azure-Developer-CLI-azd-May-2025-Release-New-Features-Templates-and-Docs
 tags:
 - .NET
 - App Service

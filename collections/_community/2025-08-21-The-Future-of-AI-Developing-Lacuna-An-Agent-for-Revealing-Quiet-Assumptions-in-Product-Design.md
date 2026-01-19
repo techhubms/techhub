@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/the-future-of-ai-developing-lacuna-an-agent-for-revealing-quiet/ba-p/4434633
 title: 'The Future of AI: Developing Lacuna – An Agent for Revealing Quiet Assumptions in Product Design'
 author: skeske
-canonical_url: https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/the-future-of-ai-developing-lacuna-an-agent-for-revealing-quiet/ba-p/4434633
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI
 date: 2025-08-21 19:08:20 +00:00
-permalink: /ai/community/The-Future-of-AI-Developing-Lacuna-An-Agent-for-Revealing-Quiet-Assumptions-in-Product-Design
 tags:
 - AI Powered Tools
 - Assumption Analysis

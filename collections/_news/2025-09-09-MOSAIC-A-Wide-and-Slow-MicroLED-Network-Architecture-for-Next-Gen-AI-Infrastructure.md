@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/research/blog/breaking-the-networking-wall-in-ai-infrastructure/
 title: 'MOSAIC: A Wide-and-Slow MicroLED Network Architecture for Next-Gen AI Infrastructure'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/research/blog/breaking-the-networking-wall-in-ai-infrastructure/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-09 17:05:53 +00:00
-permalink: /ai/news/MOSAIC-A-Wide-and-Slow-MicroLED-Network-Architecture-for-Next-Gen-AI-Infrastructure
 tags:
 - AI Infrastructure
 - Company News

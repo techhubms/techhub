@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk63f2/understanding_usage_quotas_what_about_copilot/
 title: Understanding GitHub Copilot Usage Quotas and Agent Mode Requests
 author: ogpterodactyl
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mk63f2/understanding_usage_quotas_what_about_copilot/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-07 17:19:08 +00:00
-permalink: /github-copilot/community/Understanding-GitHub-Copilot-Usage-Quotas-and-Agent-Mode-Requests
 tags:
 - Billing
 - Codebase Tags

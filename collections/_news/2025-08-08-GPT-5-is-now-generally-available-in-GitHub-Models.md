@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-07-gpt-5-is-now-generally-available-in-github-models
 title: GPT-5 is now generally available in GitHub Models
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-07-gpt-5-is-now-generally-available-in-github-models
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-08 00:00:05 +00:00
-permalink: /ai/news/GPT-5-is-now-generally-available-in-GitHub-Models
 tags:
 - AI Collaboration
 - AI Models

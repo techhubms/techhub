@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/analysis-identifies-10-ai-coding-tool-behaviors-that-ignore-best-software-engineering-practices/
 title: 10 AI Coding Tool Behaviors That Ignore Software Engineering Best Practices
 author: Mike Vizard
-canonical_url: https://devops.com/analysis-identifies-10-ai-coding-tool-behaviors-that-ignore-best-software-engineering-practices/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-23 17:51:27 +00:00
-permalink: /ai/blogs/10-AI-Coding-Tool-Behaviors-That-Ignore-Software-Engineering-Best-Practices
 tags:
 - AI Coding Tools
 - Anti Patterns

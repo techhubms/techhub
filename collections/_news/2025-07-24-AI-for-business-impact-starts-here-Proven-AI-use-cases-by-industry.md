@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/07/21/ai-for-business-impact-starts-here-proven-ai-use-cases-by-industry/
 title: AI for business impact starts here - Proven AI use cases by industry
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/07/21/ai-for-business-impact-starts-here-proven-ai-use-cases-by-industry/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-24 13:46:56 +00:00
-permalink: /ai/news/AI-for-business-impact-starts-here-Proven-AI-use-cases-by-industry
 tags:
 - AI Adoption
 - AI Impact

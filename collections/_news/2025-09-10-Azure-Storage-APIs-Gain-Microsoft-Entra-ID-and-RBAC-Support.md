@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-storage-apis-gain-entra-id-and-rbac-support/
 title: Azure Storage APIs Gain Microsoft Entra ID and RBAC Support
 author: Christine Chen
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-storage-apis-gain-entra-id-and-rbac-support/
 viewing_mode: external
 feed_name: Microsoft Azure SDK Blog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-09-10 18:24:47 +00:00
-permalink: /coding/news/Azure-Storage-APIs-Gain-Microsoft-Entra-ID-and-RBAC-Support
 tags:
 - .NET
 - Access Control

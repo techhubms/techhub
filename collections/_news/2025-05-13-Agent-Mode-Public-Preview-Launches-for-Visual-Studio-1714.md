@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/agent-mode-has-arrived-in-preview-for-visual-studio/
 title: Agent Mode Public Preview Launches for Visual Studio 17.14
 author: Katie Savage, Aaron Yim
-canonical_url: https://devblogs.microsoft.com/visualstudio/agent-mode-has-arrived-in-preview-for-visual-studio/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/
 date: 2025-05-13 17:26:51 +00:00
-permalink: /github-copilot/news/Agent-Mode-Public-Preview-Launches-for-Visual-Studio-1714
 tags:
 - Agent Mode
 - AI Agents

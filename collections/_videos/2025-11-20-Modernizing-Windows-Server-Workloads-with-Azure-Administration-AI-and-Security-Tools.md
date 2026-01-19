@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=YK_MNYAmpVA
 title: Modernizing Windows Server Workloads with Azure Administration, AI, and Security Tools
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=YK_MNYAmpVA
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:43:53 +00:00
-permalink: /ai/videos/Modernizing-Windows-Server-Workloads-with-Azure-Administration-AI-and-Security-Tools
 tags:
 - AI Shell
 - Azure Administration

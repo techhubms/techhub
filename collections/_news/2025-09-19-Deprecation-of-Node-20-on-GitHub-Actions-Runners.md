@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners
 title: Deprecation of Node 20 on GitHub Actions Runners
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-19 18:29:59 +00:00
-permalink: /devops/news/Deprecation-of-Node-20-on-GitHub-Actions-Runners
 tags:
 - Actions
 - Actions Maintenance

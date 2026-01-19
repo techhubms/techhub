@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-small-language-modes/ba-p/4466170
 title: 'How Small Language Models Enable Edge AI: Hardware, Architecture, and Azure AI Foundry'
 author: Sherrylist
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-small-language-modes/ba-p/4466170
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 08:23:25 +00:00
-permalink: /ai/community/How-Small-Language-Models-Enable-Edge-AI-Hardware-Architecture-and-Azure-AI-Foundry
 tags:
 - AI Model Deployment
 - Azure AI Foundry

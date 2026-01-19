@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=6N2oFh6YTTc
 title: Writing and Running Python in .NET
 author: Nick Chapsas
-canonical_url: https://www.youtube.com/watch?v=6N2oFh6YTTc
 viewing_mode: internal
 feed_name: Nick Chapsas YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-07-16 11:00:23 +00:00
-permalink: /ml/videos/Writing-and-Running-Python-in-NET
 tags:
 - .NET
 - AI

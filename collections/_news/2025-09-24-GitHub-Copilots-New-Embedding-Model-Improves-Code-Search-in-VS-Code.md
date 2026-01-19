@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/news-insights/product-news/copilot-new-embedding-model-vs-code/
 title: GitHub Copilot’s New Embedding Model Improves Code Search in VS Code
 author: Shengyu Fu
-canonical_url: https://github.blog/news-insights/product-news/copilot-new-embedding-model-vs-code/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-09-24 20:24:18 +00:00
-permalink: /github-copilot/news/GitHub-Copilots-New-Embedding-Model-Improves-Code-Search-in-VS-Code
 tags:
 - Agent Mode
 - Agentic Search

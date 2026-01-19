@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://jessehouwing.net/azure-devops-say-goodbye-to-personal-access-tokens-pats/
 title: 'Say Goodbye to Personal Access Tokens (PATs) in Azure DevOps: Practical Migration Strategies'
 author: Michael Thomsen
-canonical_url: https://jessehouwing.net/azure-devops-say-goodbye-to-personal-access-tokens-pats/
 viewing_mode: external
 feed_name: Jesse Houwing's Blog
-feed_url: https://jessehouwing.net/rss/
 date: 2025-03-04 12:30:04 +00:00
-permalink: /azure/blogs/Say-Goodbye-to-Personal-Access-Tokens-PATs-in-Azure-DevOps-Practical-Migration-Strategies
 tags:
 - App Registration
 - Authentication

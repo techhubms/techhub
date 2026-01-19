@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: 'GitHub Copilot, Azure AI, and DevOps: Updates on Agentic Automation and Cloud Workflows'
 author: Tech Hub Team
 viewing_mode: internal
 date: 2025-09-29 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
 - Agentic Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/github-copilot-spaces-bring-the-right-context-to-every-suggestion/
 title: GitHub Copilot Spaces - Bring the right context to every suggestion
 author: Andrea Griffiths
-canonical_url: https://github.blog/ai-and-ml/github-copilot/github-copilot-spaces-bring-the-right-context-to-every-suggestion/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-06-18 16:00:00 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-Spaces-Bring-the-right-context-to-every-suggestion
 tags:
 - AI & ML
 - Code Style

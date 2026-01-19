@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/running-an-aspnetcore-app-behind-iis-in-a-windows-container/
 title: Running an ASP.NET Core App Inside IIS in a Windows Docker Container
 author: Andrew Lock
-canonical_url: https://andrewlock.net/running-an-aspnetcore-app-behind-iis-in-a-windows-container/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-03-11 09:00:00 +00:00
-permalink: /coding/blogs/Running-an-ASPNET-Core-App-Inside-IIS-in-a-Windows-Docker-Container
 tags:
 - App Pools
 - APPCMD

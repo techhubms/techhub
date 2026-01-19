@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/microsofts-open-source-journey-from-20000-lines-of-linux-code-to-ai-at-global-scale/
 title: 'Microsoft’s Open Source Journey: From Linux Contributions to AI at Scale'
 author: Ryan Waite
-canonical_url: https://azure.microsoft.com/en-us/blog/microsofts-open-source-journey-from-20000-lines-of-linux-code-to-ai-at-global-scale/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-22 15:00:00 +00:00
-permalink: /ai/news/Microsofts-Open-Source-Journey-From-Linux-Contributions-to-AI-at-Scale
 tags:
 - AKS
 - AutoGen

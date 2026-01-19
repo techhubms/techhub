@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/mlops-architectures-building-scalable-ai-systems/
 title: 'MLOps Architectures: Building Scalable AI Systems'
 author: Dellenny
-canonical_url: https://dellenny.com/mlops-architectures-building-scalable-ai-systems/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-26 16:38:28 +00:00
-permalink: /ai/blogs/MLOps-Architectures-Building-Scalable-AI-Systems
 tags:
 - AI Architecture
 - Architecture

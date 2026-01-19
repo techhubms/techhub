@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/setting-up-alerts-for-unusual-github-copilot-activity/
 title: Setting Up Security Alerts for Unusual GitHub Copilot Activity
 author: John Edward
-canonical_url: https://dellenny.com/setting-up-alerts-for-unusual-github-copilot-activity/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-18 15:28:44 +00:00
-permalink: /github-copilot/blogs/Setting-Up-Security-Alerts-for-Unusual-GitHub-Copilot-Activity
 tags:
 - AI Security
 - Audit Logging

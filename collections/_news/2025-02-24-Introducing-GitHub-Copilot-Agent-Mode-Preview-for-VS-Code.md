@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode
 title: Introducing GitHub Copilot Agent Mode (Preview) for VS Code
 author: Isidor Nikolic
-canonical_url: https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-02-24 00:00:00 +00:00
-permalink: /github-copilot/news/Introducing-GitHub-Copilot-Agent-Mode-Preview-for-VS-Code
 tags:
 - Agent Mode
 - AI Assisted Coding

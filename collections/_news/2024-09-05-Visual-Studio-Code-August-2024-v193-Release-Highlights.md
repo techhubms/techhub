@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/updates/v1_93
 title: Visual Studio Code August 2024 (v1.93) Release Highlights
 author: Visual Studio Code Team
-canonical_url: https://code.visualstudio.com/updates/v1_93
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2024-09-05 17:00:00 +00:00
-permalink: /github-copilot/news/Visual-Studio-Code-August-2024-v193-Release-Highlights
 tags:
 - Accessibility
 - August Release

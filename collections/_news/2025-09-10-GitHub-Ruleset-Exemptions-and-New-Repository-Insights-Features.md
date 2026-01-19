@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-10-github-ruleset-exemptions-and-repository-insights-updates
 title: GitHub Ruleset Exemptions and New Repository Insights Features
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-10-github-ruleset-exemptions-and-repository-insights-updates
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-10 17:25:36 +00:00
-permalink: /devops/news/GitHub-Ruleset-Exemptions-and-New-Repository-Insights-Features
 tags:
 - Accessibility
 - Automation

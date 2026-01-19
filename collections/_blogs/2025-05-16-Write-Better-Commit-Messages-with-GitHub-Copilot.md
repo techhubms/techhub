@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/write-better-commit-messages-with-github-copilot.html
 title: Write Better Commit Messages with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/write-better-commit-messages-with-github-copilot.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-05-16 00:00:00 +00:00
-permalink: /github-copilot/blogs/Write-Better-Commit-Messages-with-GitHub-Copilot
 tags:
 - AI Tools
 - Best Practices

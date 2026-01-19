@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/tabnine-adds-agents-capable-of-automating-workflows-to-ai-coding-platform/
 title: Tabnine Launches AI Agents for Automated DevOps Workflows
 author: Mike Vizard
-canonical_url: https://devops.com/tabnine-adds-agents-capable-of-automating-workflows-to-ai-coding-platform/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-05 14:00:03 +00:00
-permalink: /ai/blogs/Tabnine-Launches-AI-Agents-for-Automated-DevOps-Workflows
 tags:
 - Agentic AI
 - AI Agents

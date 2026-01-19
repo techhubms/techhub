@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/developer-skills/programming-languages-and-frameworks/typescripts-rise-in-the-ai-era-insights-from-lead-architect-anders-hejlsberg/
 title: 'TypeScript’s Dominance in the AI Era: Insights from Lead Architect Anders Hejlsberg'
 author: Aaron Winston
-canonical_url: https://github.blog/developer-skills/programming-languages-and-frameworks/typescripts-rise-in-the-ai-era-insights-from-lead-architect-anders-hejlsberg/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-11-06 17:00:00 +00:00
-permalink: /ai/news/TypeScripts-Dominance-in-the-AI-Era-Insights-from-Lead-Architect-Anders-Hejlsberg
 tags:
 - AI Assisted Coding
 - Code Reliability

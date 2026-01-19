@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=jXb9A20Ysdc
 title: How Premier League Scaled Data-Driven Fan Engagement with Microsoft Fabric and Azure
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=jXb9A20Ysdc
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 08:26:43 +00:00
-permalink: /ai/videos/How-Premier-League-Scaled-Data-Driven-Fan-Engagement-with-Microsoft-Fabric-and-Azure
 tags:
 - AI Orchestration
 - API Architecture

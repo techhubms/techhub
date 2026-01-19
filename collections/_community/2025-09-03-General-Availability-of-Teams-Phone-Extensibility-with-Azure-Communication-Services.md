@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-communication-services/general-availability-of-teams-phone-extensibility/ba-p/4446092
 title: General Availability of Teams Phone Extensibility with Azure Communication Services
 author: AnkurAgarwal
-canonical_url: https://techcommunity.microsoft.com/t5/azure-communication-services/general-availability-of-teams-phone-extensibility/ba-p/4446092
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-03 15:22:37 +00:00
-permalink: /ai/community/General-Availability-of-Teams-Phone-Extensibility-with-Azure-Communication-Services
 tags:
 - Azure Communication Services
 - Azure SDK

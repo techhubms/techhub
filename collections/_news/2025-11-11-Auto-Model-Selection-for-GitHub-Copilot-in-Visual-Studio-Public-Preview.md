@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-11-auto-model-selection-for-copilot-in-visual-studio-in-public-preview
 title: 'Auto Model Selection for GitHub Copilot in Visual Studio: Public Preview'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-11-auto-model-selection-for-copilot-in-visual-studio-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-11 19:22:02 +00:00
-permalink: /github-copilot/news/Auto-Model-Selection-for-GitHub-Copilot-in-Visual-Studio-Public-Preview
 tags:
 - Auto Model Selection
 - Business

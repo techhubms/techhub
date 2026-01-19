@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/blogs/2025/04/07/agentMode
 title: Agent Mode Now Available to All VS Code Users with MCP Support
 author: Isidor Nikolic
-canonical_url: https://code.visualstudio.com/blogs/2025/04/07/agentMode
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-04-07 00:00:00 +00:00
-permalink: /ai/news/Agent-Mode-Now-Available-to-All-VS-Code-Users-with-MCP-Support
 tags:
 - Agent Mode
 - AI Pair Programming

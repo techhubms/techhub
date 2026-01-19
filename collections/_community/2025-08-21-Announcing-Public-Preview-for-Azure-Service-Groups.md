@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-azure-service-groups/ba-p/4446572
 title: Announcing Public Preview for Azure Service Groups
 author: kenieva
-canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-azure-service-groups/ba-p/4446572
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-21 17:58:39 +00:00
-permalink: /azure/community/Announcing-Public-Preview-for-Azure-Service-Groups
 tags:
 - Azure Governance
 - Azure Monitor

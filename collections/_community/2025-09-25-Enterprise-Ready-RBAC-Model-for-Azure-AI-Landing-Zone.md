@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/access-governance-blueprint-for-ai-landing-zone/ba-p/4455910
 title: Enterprise-Ready RBAC Model for Azure AI Landing Zone
 author: Madhur_Shukla
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/access-governance-blueprint-for-ai-landing-zone/ba-p/4455910
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 18:29:20 +00:00
-permalink: /ai/community/Enterprise-Ready-RBAC-Model-for-Azure-AI-Landing-Zone
 tags:
 - Access Guardrails
 - Access Patterns

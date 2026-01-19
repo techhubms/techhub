@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/06/30/jasper-sleet-north-korean-remote-it-workers-evolving-tactics-to-infiltrate-organizations/
 title: Jasper Sleet - North Korean remote IT workers’ evolving tactics to infiltrate organizations
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/06/30/jasper-sleet-north-korean-remote-it-workers-evolving-tactics-to-infiltrate-organizations/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-01 16:30:34 +00:00
-permalink: /security/news/Jasper-Sleet-North-Korean-remote-IT-workers-evolving-tactics-to-infiltrate-organizations
 tags:
 - Company News
 - Cybersecurity

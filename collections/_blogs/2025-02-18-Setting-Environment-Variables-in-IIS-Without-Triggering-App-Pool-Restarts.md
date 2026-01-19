@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/setting-environment-variables-in-iis-and-avoiding-app-pool-restarts/
 title: Setting Environment Variables in IIS Without Triggering App Pool Restarts
 author: Andrew Lock
-canonical_url: https://andrewlock.net/setting-environment-variables-in-iis-and-avoiding-app-pool-restarts/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-02-18 09:00:00 +00:00
-permalink: /coding/blogs/Setting-Environment-Variables-in-IIS-Without-Triggering-App-Pool-Restarts
 tags:
 - .NET
 - Appcmd.exe

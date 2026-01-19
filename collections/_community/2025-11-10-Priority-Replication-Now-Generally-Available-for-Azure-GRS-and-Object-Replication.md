@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/priority-replication-for-geo-redundant-storage-and-object/ba-p/4468607
 title: Priority Replication Now Generally Available for Azure GRS and Object Replication
 author: imanihall
-canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/priority-replication-for-geo-redundant-storage-and-object/ba-p/4468607
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-10 20:21:17 +00:00
-permalink: /azure/community/Priority-Replication-Now-Generally-Available-for-Azure-GRS-and-Object-Replication
 tags:
 - Azure Portal
 - Azure Storage

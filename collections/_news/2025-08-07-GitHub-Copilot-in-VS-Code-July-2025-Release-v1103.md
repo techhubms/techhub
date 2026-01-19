@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-07-github-copilot-in-vs-code-july-release-v1-103
 title: GitHub Copilot in VS Code July 2025 Release (v1.103)
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-07-github-copilot-in-vs-code-july-release-v1-103
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-07 23:01:07 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-in-VS-Code-July-2025-Release-v1103
 tags:
 - Agent Sessions
 - AI Coding Assistant

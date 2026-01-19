@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/rust-in-time-announcing-the-azure-sdk-for-rust-beta/
 title: Announcing the First Beta Release of the Azure SDK for Rust
 author: Ronnie Geraghty
-canonical_url: https://devblogs.microsoft.com/azure-sdk/rust-in-time-announcing-the-azure-sdk-for-rust-beta/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-02-19 18:19:05 +00:00
-permalink: /coding/news/Announcing-the-First-Beta-Release-of-the-Azure-SDK-for-Rust
 tags:
 - Azure SDK
 - Beta Release

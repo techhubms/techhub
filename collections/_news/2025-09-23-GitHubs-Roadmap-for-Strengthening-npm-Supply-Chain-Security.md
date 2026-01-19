@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/security/supply-chain-security/our-plan-for-a-more-secure-npm-supply-chain/
 title: GitHub's Roadmap for Strengthening npm Supply Chain Security
 author: Xavier René-Corail
-canonical_url: https://github.blog/security/supply-chain-security/our-plan-for-a-more-secure-npm-supply-chain/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-09-23 00:29:50 +00:00
-permalink: /devops/news/GitHubs-Roadmap-for-Strengthening-npm-Supply-Chain-Security
 tags:
 - API Tokens
 - Authentication

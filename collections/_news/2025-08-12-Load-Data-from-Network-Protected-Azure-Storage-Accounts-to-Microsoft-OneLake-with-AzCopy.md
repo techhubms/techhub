@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/load-data-from-network-protected-azure-storage-accounts-to-microsoft-onelake-with-azcopy/
 title: Load Data from Network-Protected Azure Storage Accounts to Microsoft OneLake with AzCopy
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/load-data-from-network-protected-azure-storage-accounts-to-microsoft-onelake-with-azcopy/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-12 11:30:00 +00:00
-permalink: /azure/news/Load-Data-from-Network-Protected-Azure-Storage-Accounts-to-Microsoft-OneLake-with-AzCopy
 tags:
 - ARM Template
 - AzCopy

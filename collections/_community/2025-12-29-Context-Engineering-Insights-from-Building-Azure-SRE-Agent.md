@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-sre-agent/yearinreview-insights-from-the-last-few-months-building-azure/m-p/4481823#M2
 title: Context Engineering Insights from Building Azure SRE Agent
 author: Mayunk_Jain
-canonical_url: https://techcommunity.microsoft.com/t5/azure-sre-agent/yearinreview-insights-from-the-last-few-months-building-azure/m-p/4481823#M2
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-29 21:13:43 +00:00
-permalink: /ai/community/Context-Engineering-Insights-from-Building-Azure-SRE-Agent
 tags:
 - Agent Design
 - AI Agents

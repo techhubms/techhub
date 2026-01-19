@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-microsoft-keeps-your-data-safe-in-the-cloud-a-deep-dive-into-cloud-security-practices/
 title: How Microsoft Keeps Your Data Safe in the Cloud – A Deep Dive into Cloud Security Practices
 author: Dellenny
-canonical_url: https://dellenny.com/how-microsoft-keeps-your-data-safe-in-the-cloud-a-deep-dive-into-cloud-security-practices/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-10 10:49:25 +00:00
-permalink: /azure/blogs/How-Microsoft-Keeps-Your-Data-Safe-in-the-Cloud-A-Deep-Dive-into-Cloud-Security-Practices
 tags:
 - Cloud
 - Compliance

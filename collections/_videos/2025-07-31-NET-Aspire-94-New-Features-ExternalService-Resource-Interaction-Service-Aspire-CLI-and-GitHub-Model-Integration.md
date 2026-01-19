@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=9ODsNkpyVDM
 title: '.NET Aspire 9.4 New Features: ExternalService Resource, Interaction Service, Aspire CLI, and GitHub Model Integration'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=9ODsNkpyVDM
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-31 17:56:27 +00:00
-permalink: /coding/videos/NET-Aspire-94-New-Features-ExternalService-Resource-Interaction-Service-Aspire-CLI-and-GitHub-Model-Integration
 tags:
 - .NET
 - .NET 9.4

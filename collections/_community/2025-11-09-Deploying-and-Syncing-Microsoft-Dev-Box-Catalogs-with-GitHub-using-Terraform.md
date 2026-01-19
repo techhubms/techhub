@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deploying-dev-box-catalogs-and-synchronizing-with-github-using/ba-p/4467739
 title: Deploying and Syncing Microsoft Dev Box Catalogs with GitHub using Terraform
 author: singhshub
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deploying-dev-box-catalogs-and-synchronizing-with-github-using/ba-p/4467739
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-09 16:42:48 +00:00
-permalink: /coding/community/Deploying-and-Syncing-Microsoft-Dev-Box-Catalogs-with-GitHub-using-Terraform
 tags:
 - Azure CLI
 - Azure Dev Center

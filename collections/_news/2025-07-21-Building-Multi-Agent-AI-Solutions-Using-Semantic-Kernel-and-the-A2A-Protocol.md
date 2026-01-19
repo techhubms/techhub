@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/semantic-kernel/guest-blog-building-multi-agent-solutions-with-semantic-kernel-and-a2a-protocol/
 title: Building Multi-Agent AI Solutions Using Semantic Kernel and the A2A Protocol
 author: Kinfey Lo
-canonical_url: https://devblogs.microsoft.com/semantic-kernel/guest-blog-building-multi-agent-solutions-with-semantic-kernel-and-a2a-protocol/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-07-21 08:10:23 +00:00
-permalink: /ai/news/Building-Multi-Agent-AI-Solutions-Using-Semantic-Kernel-and-the-A2A-Protocol
 tags:
 - A2A
 - A2A Protocol

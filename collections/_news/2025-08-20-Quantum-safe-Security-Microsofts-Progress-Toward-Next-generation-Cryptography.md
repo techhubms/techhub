@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/08/20/quantum-safe-security-progress-towards-next-generation-cryptography/
 title: "Quantum-safe Security: Microsoft's Progress Toward Next-generation Cryptography"
 author: Mark Russinovich and Michal Braverman-Blumenstyk
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/08/20/quantum-safe-security-progress-towards-next-generation-cryptography/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-08-20 16:00:00 +00:00
-permalink: /azure/news/Quantum-safe-Security-Microsofts-Progress-Toward-Next-generation-Cryptography
 tags:
 - Adams Bridge Accelerator
 - Caliptra

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/startups/blog/building-effortless-events-how-inevent-and-microsoft-for-startups-are-transforming-event-management/
 title: Transforming Event Management with InEvent and Microsoft Azure
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/startups/blog/building-effortless-events-how-inevent-and-microsoft-for-startups-are-transforming-event-management/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-01 16:42:33 +00:00
-permalink: /ai/news/Transforming-Event-Management-with-InEvent-and-Microsoft-Azure
 tags:
 - AI Automation
 - AKS

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/creating-an-analyzer-to-detect-infinite-loops-caused-by-threadabortexception/
 title: Creating a Roslyn Analyzer to Detect Infinite Loops from ThreadAbortExceptions in .NET Framework
 author: Andrew Lock
-canonical_url: https://andrewlock.net/creating-an-analyzer-to-detect-infinite-loops-caused-by-threadabortexception/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-03-04 09:00:00 +00:00
-permalink: /coding/blogs/Creating-a-Roslyn-Analyzer-to-Detect-Infinite-Loops-from-ThreadAbortExceptions-in-NET-Framework
 tags:
 - .NET Framework
 - C#

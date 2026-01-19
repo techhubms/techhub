@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=tw8bnpQs0lY
 title: GPT-5 for Developers
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=tw8bnpQs0lY
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-14 22:41:29 +00:00
-permalink: /ai/videos/GPT-5-for-Developers
 tags:
 - .NET
 - AI APIs

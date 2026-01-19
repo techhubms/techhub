@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/demystifying-github-copilot-security-controls-easing-concerns/ba-p/4468193
 title: Demystifying GitHub Copilot Security Controls for Organizations
 author: jorgebalderas
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/demystifying-github-copilot-security-controls-easing-concerns/ba-p/4468193
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-13 08:00:00 +00:00
-permalink: /github-copilot/community/Demystifying-GitHub-Copilot-Security-Controls-for-Organizations
 tags:
 - AI Security
 - Application Security

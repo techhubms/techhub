@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mflnuk/net_aspire_start_resource_on_servicebus_message/
 title: .NET Aspire – Start Resource on Service Bus Message
 author: LeonardSpencer
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mflnuk/net_aspire_start_resource_on_servicebus_message/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-02 08:40:47 +00:00
-permalink: /coding/community/NET-Aspire-Start-Resource-on-Service-Bus-Message
 tags:
 - .NET
 - .NET Aspire

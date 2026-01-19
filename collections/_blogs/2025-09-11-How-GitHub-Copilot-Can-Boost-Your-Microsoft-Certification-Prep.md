@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/supercharge-your-it-certification-prep-how-github-copilot-can-be-your-study-buddy/
 title: How GitHub Copilot Can Boost Your Microsoft Certification Prep
 author: Dellenny
-canonical_url: https://dellenny.com/supercharge-your-it-certification-prep-how-github-copilot-can-be-your-study-buddy/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-11 13:22:14 +00:00
-permalink: /github-copilot/blogs/How-GitHub-Copilot-Can-Boost-Your-Microsoft-Certification-Prep
 tags:
 - AI Study Tools
 - AZ 500

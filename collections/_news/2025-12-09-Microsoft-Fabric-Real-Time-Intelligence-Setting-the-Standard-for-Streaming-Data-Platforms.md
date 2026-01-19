@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-real-time-intelligence-a-leader-in-the-2025-forrester-streaming-data-wave/
 title: 'Microsoft Fabric Real-Time Intelligence: Setting the Standard for Streaming Data Platforms'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-real-time-intelligence-a-leader-in-the-2025-forrester-streaming-data-wave/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-09 14:31:51 +00:00
-permalink: /ai/news/Microsoft-Fabric-Real-Time-Intelligence-Setting-the-Standard-for-Streaming-Data-Platforms
 tags:
 - Anomaly Detection
 - Data Explorer

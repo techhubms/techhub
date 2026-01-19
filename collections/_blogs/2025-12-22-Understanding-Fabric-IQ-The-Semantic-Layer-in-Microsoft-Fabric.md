@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://zure.com/blog/fabric-iq-the-new-semantic-layer-for-your-organizational-data
 title: 'Understanding Fabric IQ: The Semantic Layer in Microsoft Fabric'
 author: lauri.lehman@zure.com (Lauri Lehman)
-canonical_url: https://zure.com/blog/fabric-iq-the-new-semantic-layer-for-your-organizational-data
 viewing_mode: external
 feed_name: Zure Data & AI Blog
-feed_url: https://zure.com/blog/rss.xml
 date: 2025-12-22 08:26:46 +00:00
-permalink: /ai/blogs/Understanding-Fabric-IQ-The-Semantic-Layer-in-Microsoft-Fabric
 tags:
 - AI Agents
 - Business Logic

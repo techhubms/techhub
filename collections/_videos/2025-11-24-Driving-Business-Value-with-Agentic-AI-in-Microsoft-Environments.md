@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=tdF-_Qy7XDQ
 title: Driving Business Value with Agentic AI in Microsoft Environments
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=tdF-_Qy7XDQ
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 14:29:29 +00:00
-permalink: /ai/videos/Driving-Business-Value-with-Agentic-AI-in-Microsoft-Environments
 tags:
 - Agentic AI
 - AI Agents

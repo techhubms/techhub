@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/all-things-azure/azure-devops-to-github-migration-playbook-unlocking-agentic-devops/
 title: 'Azure DevOps to GitHub Migration Playbook: A Step-by-Step Guide for Agentic DevOps'
 author: Philippe Didiergeorges
-canonical_url: https://devblogs.microsoft.com/all-things-azure/azure-devops-to-github-migration-playbook-unlocking-agentic-devops/
 viewing_mode: external
 feed_name: Microsoft All Things Azure Blog
-feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-11-20 11:03:44 +00:00
-permalink: /github-copilot/news/Azure-DevOps-to-GitHub-Migration-Playbook-A-Step-by-Step-Guide-for-Agentic-DevOps
 tags:
 - Agentic DevOps
 - AI Developer Tools

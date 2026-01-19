@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://jessehouwing.net/vscode-running-mcp-using-node-version/
 title: Running Model Context Protocol Servers in a Specific Node Version in Visual Studio Code
 author: Jesse Houwing
-canonical_url: https://jessehouwing.net/vscode-running-mcp-using-node-version/
 viewing_mode: external
 feed_name: Jesse Houwing's Blog
-feed_url: https://jessehouwing.net/rss/
 date: 2025-04-02 17:56:59 +00:00
-permalink: /github-copilot/blogs/Running-Model-Context-Protocol-Servers-in-a-Specific-Node-Version-in-Visual-Studio-Code
 tags:
 - Azure Pipelines
 - Fast Node Manager

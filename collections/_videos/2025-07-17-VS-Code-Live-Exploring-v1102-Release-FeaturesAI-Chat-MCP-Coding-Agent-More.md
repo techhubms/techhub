@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=kleJ6i8k_9M
 title: VS Code Live - Exploring v1.102 Release Features—AI Chat, MCP, Coding Agent & More
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=kleJ6i8k_9M
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-07-17 16:48:30 +00:00
-permalink: /ai/videos/VS-Code-Live-Exploring-v1102-Release-FeaturesAI-Chat-MCP-Coding-Agent-More
 tags:
 - AI Editor
 - Chat Improvements

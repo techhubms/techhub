@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=nKN4QxPcFlA
 title: 'Beyond Chat: Building Smarter AI Agents in .NET with AiGen'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=nKN4QxPcFlA
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-05 20:28:35 +00:00
-permalink: /ai/videos/Beyond-Chat-Building-Smarter-AI-Agents-in-NET-with-AiGen
 tags:
 - .NET
 - Agents

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/itops-talk-blog/how-azure-storage-powers-ai-workloads-behind-the-scenes-with/ba-p/4442540
 title: 'How Azure Storage Powers AI Workloads: Behind the Scenes with OpenAI, Blobfuse & More'
 author: Pierre_Roman
-canonical_url: https://techcommunity.microsoft.com/t5/itops-talk-blog/how-azure-storage-powers-ai-workloads-behind-the-scenes-with/ba-p/4442540
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 14:33:42 +00:00
-permalink: /ai/community/How-Azure-Storage-Powers-AI-Workloads-Behind-the-Scenes-with-OpenAI-Blobfuse-and-More
 tags:
 - AI Infrastructure
 - AI Workloads

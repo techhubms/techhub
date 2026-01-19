@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/Kff78AQ7m9s
 title: 'Do you security check AI models you pull from online repos?: Developer Security Quick Fire Questions'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/shorts/Kff78AQ7m9s
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-30 16:09:52 +00:00
-permalink: /ai/videos/Do-you-security-check-AI-models-you-pull-from-online-repos-Developer-Security-Quick-Fire-Questions
 tags:
 - AI Models
 - Application Security

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/devops-meets-microsoft-ai-accelerating-innovation-in-the-cloud-era/
 title: 'DevOps Meets Microsoft AI: Accelerating Innovation in the Cloud Era'
 author: Dellenny
-canonical_url: https://dellenny.com/devops-meets-microsoft-ai-accelerating-innovation-in-the-cloud-era/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-04 12:13:52 +00:00
-permalink: /github-copilot/blogs/DevOps-Meets-Microsoft-AI-Accelerating-Innovation-in-the-Cloud-Era
 tags:
 - AIOps
 - Application Insights

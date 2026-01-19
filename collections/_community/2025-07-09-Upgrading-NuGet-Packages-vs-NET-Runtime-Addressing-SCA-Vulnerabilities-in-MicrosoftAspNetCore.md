@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/net-runtime/do-i-need-to-upgrade-microsoft-aspnetcore-nuget-packages-after/m-p/4431436#M752
 title: 'Upgrading NuGet Packages vs. .NET Runtime: Addressing SCA Vulnerabilities in Microsoft.AspNetCore.*'
 author: MahaauD
-canonical_url: https://techcommunity.microsoft.com/t5/net-runtime/do-i-need-to-upgrade-microsoft-aspnetcore-nuget-packages-after/m-p/4431436#M752
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet
 date: 2025-07-09 05:01:49 +00:00
-permalink: /coding/community/Upgrading-NuGet-Packages-vs-NET-Runtime-Addressing-SCA-Vulnerabilities-in-MicrosoftAspNetCore
 tags:
 - .NET
 - .NET 8

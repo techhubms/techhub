@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-26-secret-scanning-adds-10-new-validators-including-square-wakatime-and-yandex
 title: GitHub Secret Scanning Expands with New Validators and Validity Checks
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-26-secret-scanning-adds-10-new-validators-including-square-wakatime-and-yandex
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-26 17:49:15 +00:00
-permalink: /devops/news/GitHub-Secret-Scanning-Expands-with-New-Validators-and-Validity-Checks
 tags:
 - Bitrise
 - Credential Management

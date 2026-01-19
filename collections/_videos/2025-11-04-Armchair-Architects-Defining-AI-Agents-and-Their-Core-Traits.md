@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=S6zKiJSwgjE
 title: 'Armchair Architects: Defining AI Agents and Their Core Traits'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=S6zKiJSwgjE
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-04 08:00:39 +00:00
-permalink: /ai/videos/Armchair-Architects-Defining-AI-Agents-and-Their-Core-Traits
 tags:
 - Agentic Web Stack
 - AI Agents

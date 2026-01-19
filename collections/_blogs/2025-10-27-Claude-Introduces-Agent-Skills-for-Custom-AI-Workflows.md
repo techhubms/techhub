@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/claude-introduces-agent-skills-for-custom-ai-workflows/
 title: Claude Introduces Agent Skills for Custom AI Workflows
 author: Tom Smith
-canonical_url: https://devops.com/claude-introduces-agent-skills-for-custom-ai-workflows/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-27 09:23:33 +00:00
-permalink: /ai/blogs/Claude-Introduces-Agent-Skills-for-Custom-AI-Workflows
 tags:
 - Agent Skills
 - Agentic Development

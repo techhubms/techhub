@@ -1,17 +1,13 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/Yhu2xzId2U0
 title: CLI Assistance
 author: Rob Bos
-canonical_url: https://youtu.be/Yhu2xzId2U0
 date: 2024-08-14 19:53:21 +00:00
-permalink: /github-copilot/videos/CLI-Assistance
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Pro
 - Business
-alt-collection: features
 tags:
 - CLI
 - Commands

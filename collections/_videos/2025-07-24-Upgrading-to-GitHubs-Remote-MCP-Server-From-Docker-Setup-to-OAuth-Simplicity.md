@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ruxjC9rDYqI
 title: "Upgrading to GitHub's Remote MCP Server: From Docker Setup to OAuth Simplicity"
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=ruxjC9rDYqI
 viewing_mode: internal
 feed_name: GitHub's Youtube channel
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-24 16:37:37 +00:00
-permalink: /devops/videos/Upgrading-to-GitHubs-Remote-MCP-Server-From-Docker-Setup-to-OAuth-Simplicity
 tags:
 - DevOps Workflow
 - Dynamic Toolsets

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/developer-skills/agentic-ai-mcp-and-spec-driven-development-top-blog-posts-of-2025/
 title: 'Agentic AI, MCP, and Spec-Driven Development: The Biggest GitHub Dev Topics of 2025'
 author: Natalie Guevara
-canonical_url: https://github.blog/developer-skills/agentic-ai-mcp-and-spec-driven-development-top-blog-posts-of-2025/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-12-30 17:20:10 +00:00
-permalink: /github-copilot/news/Agentic-AI-MCP-and-Spec-Driven-Development-The-Biggest-GitHub-Dev-Topics-of-2025
 tags:
 - Agent Mode
 - Agentic AI

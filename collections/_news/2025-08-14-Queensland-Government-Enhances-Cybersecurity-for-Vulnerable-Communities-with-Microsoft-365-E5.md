@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/asia/2025/08/14/championing-safety-how-one-queensland-government-department-is-transforming-cybersecurity-to-better-support-vulnerable-communities/
 title: Queensland Government Enhances Cybersecurity for Vulnerable Communities with Microsoft 365 E5
 author: stclarke
-canonical_url: https://news.microsoft.com/source/asia/2025/08/14/championing-safety-how-one-queensland-government-department-is-transforming-cybersecurity-to-better-support-vulnerable-communities/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-14 14:15:40 +00:00
-permalink: /azure/news/Queensland-Government-Enhances-Cybersecurity-for-Vulnerable-Communities-with-Microsoft-365-E5
 tags:
 - Azure Security
 - Company News

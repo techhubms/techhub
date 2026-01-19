@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: Agentic AI, Context Engineering, and Secure Automation Power Tech Progress
 author: Tech Hub Team
 viewing_mode: internal
 date: 2026-01-05 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET 10
 - Account Recovery

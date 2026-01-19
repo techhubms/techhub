@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-28-github-copilot-for-linear-available-in-public-preview
 title: GitHub Copilot Coding Agent for Linear Enters Public Preview
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-28-github-copilot-for-linear-available-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:25:36 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-Coding-Agent-for-Linear-Enters-Public-Preview
 tags:
 - Agent Integration
 - Automation

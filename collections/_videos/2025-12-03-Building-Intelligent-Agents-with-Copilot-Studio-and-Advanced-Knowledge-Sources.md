@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=mY2qaeYN_CQ
 title: Building Intelligent Agents with Copilot Studio and Advanced Knowledge Sources
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=mY2qaeYN_CQ
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-12-03 21:30:48 +00:00
-permalink: /ai/videos/Building-Intelligent-Agents-with-Copilot-Studio-and-Advanced-Knowledge-Sources
 tags:
 - Active Directory
 - Agent Development

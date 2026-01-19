@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/github/comments/1mgrtc3/private_file_in_github_repo/
 title: How to Keep key.properties Private in a Public GitHub Repository
 author: el_psy_kongree
-canonical_url: https://www.reddit.com/r/github/comments/1mgrtc3/private_file_in_github_repo/
 viewing_mode: external
 feed_name: Reddit GitHub
-feed_url: https://www.reddit.com/r/github/.rss
 date: 2025-08-03 19:16:38 +00:00
-permalink: /devops/community/How-to-Keep-keyproperties-Private-in-a-Public-GitHub-Repository
 tags:
 - .gitignore
 - Android Development

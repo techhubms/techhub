@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=f-4NNlIQzQw
 title: Generate a Test Suite with GitHub Copilot and Prompt-Driven Development
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=f-4NNlIQzQw
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-14 16:30:26 +00:00
-permalink: /github-copilot/videos/Generate-a-Test-Suite-with-GitHub-Copilot-and-Prompt-Driven-Development
 tags:
 - API Testing
 - Demo

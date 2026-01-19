@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/minimus-adds-vex-support-to-managed-hardened-images-service/?utm_source=rss&utm_medium=rss&utm_campaign=minimus-adds-vex-support-to-managed-hardened-images-service
 title: Minimus Adds VEX Support and Microsoft SSO Integration to Hardened Images Service
 author: Mike Vizard
-canonical_url: https://devops.com/minimus-adds-vex-support-to-managed-hardened-images-service/?utm_source=rss&utm_medium=rss&utm_campaign=minimus-adds-vex-support-to-managed-hardened-images-service
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-11 19:34:46 +00:00
-permalink: /devops/blogs/Minimus-Adds-VEX-Support-and-Microsoft-SSO-Integration-to-Hardened-Images-Service
 tags:
 - Application Security
 - CIS Benchmarks

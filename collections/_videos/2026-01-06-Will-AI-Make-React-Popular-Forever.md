@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/m24psZGp_bA
 title: Will AI Make React Popular Forever?
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/m24psZGp_bA
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2026-01-06 17:01:29 +00:00
-permalink: /github-copilot/videos/Will-AI-Make-React-Popular-Forever
 tags:
 - Consolidation Effect
 - Developer Tools

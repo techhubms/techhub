@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-07-default-tab-size-changed-from-eight-to-four
 title: GitHub Changes Default Tab Size from Eight to Four Spaces
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-07-default-tab-size-changed-from-eight-to-four
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-07 19:40:45 +00:00
-permalink: /devops/news/GitHub-Changes-Default-Tab-Size-from-Eight-to-Four-Spaces
 tags:
 - Code Display
 - Code Formatting

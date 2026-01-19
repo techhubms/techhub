@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=jSlfqAb2HEw
 title: 'Innovate with AI at Enterprise Scale: Microsoft Ignite Session BRK410'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=jSlfqAb2HEw
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:55:10 +00:00
-permalink: /ai/videos/Innovate-with-AI-at-Enterprise-Scale-Microsoft-Ignite-Session-BRK410
 tags:
 - AI Agents
 - AI Deployment

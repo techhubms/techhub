@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/whats-new-in-copilot-studio-september-2025/
 title: 'September 2025 Updates: New Features and Enhancements in Microsoft Copilot Studio'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/whats-new-in-copilot-studio-september-2025/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-20 17:18:22 +00:00
-permalink: /ai/news/September-2025-Updates-New-Features-and-Enhancements-in-Microsoft-Copilot-Studio
 tags:
 - Advanced Automation
 - Agent Academy

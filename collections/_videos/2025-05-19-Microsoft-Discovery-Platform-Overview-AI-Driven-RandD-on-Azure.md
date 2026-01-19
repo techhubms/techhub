@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=R8d5JsJ9R64
 title: 'Microsoft Discovery Platform Overview: AI-Driven R&D on Azure'
 author: Microsoft Cloud
-canonical_url: https://www.youtube.com/watch?v=R8d5JsJ9R64
 viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-05-19 15:45:07 +00:00
-permalink: /ai/videos/Microsoft-Discovery-Platform-Overview-AI-Driven-RandD-on-Azure
 tags:
 - Agentic R&D
 - AI Agents

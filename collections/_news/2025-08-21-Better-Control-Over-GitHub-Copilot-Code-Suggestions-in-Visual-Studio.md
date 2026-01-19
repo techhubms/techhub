@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/better-control-over-your-copilot-code-suggestions/
 title: Better Control Over GitHub Copilot Code Suggestions in Visual Studio
 author: Simona Liao
-canonical_url: https://devblogs.microsoft.com/visualstudio/better-control-over-your-copilot-code-suggestions/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/
 date: 2025-08-21 16:00:37 +00:00
-permalink: /github-copilot/news/Better-Control-Over-GitHub-Copilot-Code-Suggestions-in-Visual-Studio
 tags:
 - Code Completions
 - Code Suggestions

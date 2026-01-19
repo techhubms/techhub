@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mhgbww/apimanagement_create_mcp_server_from_api_error/
 title: "ApiManagement MCP Server Creation Error: 'Error converting value mcp'"
 author: Competitive-Ad-5081
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mhgbww/apimanagement_create_mcp_server_from_api_error/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-04 15:19:58 +00:00
-permalink: /azure/community/ApiManagement-MCP-Server-Creation-Error-Error-converting-value-mcp
 tags:
 - API Exposure
 - API Gateway

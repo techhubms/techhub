@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/microsofts-commitment-to-supporting-cloud-infrastructure-demand-in-the-united-states/
 title: Microsoft Expands Azure Cloud and AI Infrastructure Across the United States
 author: Omar Khan
-canonical_url: https://azure.microsoft.com/en-us/blog/microsofts-commitment-to-supporting-cloud-infrastructure-demand-in-the-united-states/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-09 16:00:00 +00:00
-permalink: /ai/news/Microsoft-Expands-Azure-Cloud-and-AI-Infrastructure-Across-the-United-States
 tags:
 - AI + Machine Learning
 - AI Infrastructure

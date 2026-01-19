@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/copilot-assisted-real-time-data-exploration-preview/
 title: Copilot-Assisted Real-Time Data Exploration in Microsoft Fabric
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/copilot-assisted-real-time-data-exploration-preview/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-20 09:00:00 +00:00
-permalink: /ai/news/Copilot-Assisted-Real-Time-Data-Exploration-in-Microsoft-Fabric
 tags:
 - Analytics
 - Copilot

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-06-improved-onboarding-flow-for-github-projects
 title: Improved Onboarding Flow for GitHub Projects
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-06-improved-onboarding-flow-for-github-projects
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-06 17:50:59 +00:00
-permalink: /devops/news/Improved-Onboarding-Flow-for-GitHub-Projects
 tags:
 - DevOps Tools
 - GitHub Projects

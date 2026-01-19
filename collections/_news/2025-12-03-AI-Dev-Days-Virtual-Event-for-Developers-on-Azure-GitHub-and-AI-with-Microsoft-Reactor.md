@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/ai-dev-days-december-2025/
 title: 'AI Dev Days: Virtual Event for Developers on Azure, GitHub, and AI with Microsoft Reactor'
 author: Jenn Cockrell
-canonical_url: https://devblogs.microsoft.com/foundry/ai-dev-days-december-2025/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-12-03 03:15:13 +00:00
-permalink: /github-copilot/news/AI-Dev-Days-Virtual-Event-for-Developers-on-Azure-GitHub-and-AI-with-Microsoft-Reactor
 tags:
 - Agent HQ
 - Agentic DevOps

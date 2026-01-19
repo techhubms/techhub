@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unlocking-application-modernisation-with-github-copilot/ba-p/4454121
 title: Unlocking Application Modernisation with GitHub Copilot
 author: Richard_Healy
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unlocking-application-modernisation-with-github-copilot/ba-p/4454121
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-15 13:37:12 +00:00
-permalink: /github-copilot/community/Unlocking-Application-Modernisation-with-GitHub-Copilot
 tags:
 - .NET
 - Agentic AI

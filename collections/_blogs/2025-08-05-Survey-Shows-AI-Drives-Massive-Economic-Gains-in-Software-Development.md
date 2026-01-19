@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/survey-attributes-massive-economic-gains-to-rise-of-ai-in-software-development/?utm_source=rss&utm_medium=rss&utm_campaign=survey-attributes-massive-economic-gains-to-rise-of-ai-in-software-development
 title: Survey Shows AI Drives Massive Economic Gains in Software Development
 author: Mike Vizard
-canonical_url: https://devops.com/survey-attributes-massive-economic-gains-to-rise-of-ai-in-software-development/?utm_source=rss&utm_medium=rss&utm_campaign=survey-attributes-massive-economic-gains-to-rise-of-ai-in-software-development
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-05 19:37:15 +00:00
-permalink: /ai/blogs/Survey-Shows-AI-Drives-Massive-Economic-Gains-in-Software-Development
 tags:
 - Agentic AI
 - AI Adoption

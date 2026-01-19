@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/design-your-ai-and-agent-strategy-with-microsoft-marketplace/
 title: Chart Your AI and Agent Strategy with Microsoft Marketplace
 author: Cyril Belikoff
-canonical_url: https://azure.microsoft.com/en-us/blog/design-your-ai-and-agent-strategy-with-microsoft-marketplace/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2026-01-15 16:00:00 +00:00
-permalink: /ai/news/Chart-Your-AI-and-Agent-Strategy-with-Microsoft-Marketplace
 tags:
 - AI + Machine Learning
 - AI Agents

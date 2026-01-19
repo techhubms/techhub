@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/microsoft-strengthens-sovereign-cloud-capabilities-with-new-services/
 title: Microsoft Expands Sovereign Cloud Capabilities with New Services and AI Integration
 author: Douglas Phillips
-canonical_url: https://azure.microsoft.com/en-us/blog/microsoft-strengthens-sovereign-cloud-capabilities-with-new-services/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-05 07:00:00 +00:00
-permalink: /ai/news/Microsoft-Expands-Sovereign-Cloud-Capabilities-with-New-Services-and-AI-Integration
 tags:
 - AI Models
 - Azure Key Vault

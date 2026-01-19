@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=WYji1oV7GQI
 title: Account Recovery in Microsoft Entra ID Using Government IDs and Third-Party Identity Verification
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=WYji1oV7GQI
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-12-29 16:09:09 +00:00
-permalink: /azure/videos/Account-Recovery-in-Microsoft-Entra-ID-Using-Government-IDs-and-Third-Party-Identity-Verification
 tags:
 - Account Recovery
 - Au10tix

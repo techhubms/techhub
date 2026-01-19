@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/jfrog-adds-ability-to-track-usage-of-ai-coding-tools/
 title: JFrog Adds AI-Generated Code Detection to Secure Software Supply Chains
 author: Mike Vizard
-canonical_url: https://devops.com/jfrog-adds-ability-to-track-usage-of-ai-coding-tools/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-13 08:00:29 +00:00
-permalink: /ai/blogs/JFrog-Adds-AI-Generated-Code-Detection-to-Secure-Software-Supply-Chains
 tags:
 - AI API Management
 - AI Code Auditing

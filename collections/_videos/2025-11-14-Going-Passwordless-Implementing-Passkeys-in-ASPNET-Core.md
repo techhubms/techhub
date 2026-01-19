@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=U4_KcjJOxOE
 title: 'Going Passwordless: Implementing Passkeys in ASP.NET Core'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=U4_KcjJOxOE
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 09:00:06 +00:00
-permalink: /coding/videos/Going-Passwordless-Implementing-Passkeys-in-ASPNET-Core
 tags:
 - .NET
 - 1Password

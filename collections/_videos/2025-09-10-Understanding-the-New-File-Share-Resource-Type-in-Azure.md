@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=T5eKHDwZe3M
 title: Understanding the New File Share Resource Type in Azure
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=T5eKHDwZe3M
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-09-10 16:04:17 +00:00
-permalink: /azure/videos/Understanding-the-New-File-Share-Resource-Type-in-Azure
 tags:
 - Azure Cloud
 - Azure File Share

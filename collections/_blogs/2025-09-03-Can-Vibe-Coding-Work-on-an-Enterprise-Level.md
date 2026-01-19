@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/can-vibe-codingwork-on-an-enterprise-level/?utm_source=rss&utm_medium=rss&utm_campaign=can-vibe-codingwork-on-an-enterprise-level
 title: Can Vibe Coding Work on an Enterprise Level?
 author: Armelle Dawson
-canonical_url: https://devops.com/can-vibe-codingwork-on-an-enterprise-level/?utm_source=rss&utm_medium=rss&utm_campaign=can-vibe-codingwork-on-an-enterprise-level
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-03 10:12:37 +00:00
-permalink: /ai/blogs/Can-Vibe-Coding-Work-on-an-Enterprise-Level
 tags:
 - AI Coding Tools
 - AI Generated Code

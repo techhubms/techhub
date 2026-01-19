@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/azuredevops/comments/1m91urt/i_built_a_dynamic_azure_devops_mcp_server_for/
 title: Dynamic Azure DevOps MCP Server for Seamless Context Switching in Claude Code
 author: OkAdministration2514
-canonical_url: https://www.reddit.com/r/azuredevops/comments/1m91urt/i_built_a_dynamic_azure_devops_mcp_server_for/
 viewing_mode: external
 feed_name: Reddit Azure DevOps
-feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-25 15:14:49 +00:00
-permalink: /coding/community/Dynamic-Azure-DevOps-MCP-Server-for-Seamless-Context-Switching-in-Claude-Code
 tags:
 - .azure Devops.json
 - Authentication Context Switching

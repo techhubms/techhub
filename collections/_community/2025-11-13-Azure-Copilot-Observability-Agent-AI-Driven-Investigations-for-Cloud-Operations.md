@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-copilot-observability-agent-intelligent-investigations/ba-p/4467360
 title: 'Azure Copilot Observability Agent: AI-Driven Investigations for Cloud Operations'
 author: EfratNauerman
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-copilot-observability-agent-intelligent-investigations/ba-p/4467360
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-13 19:02:49 +00:00
-permalink: /ai/community/Azure-Copilot-Observability-Agent-AI-Driven-Investigations-for-Cloud-Operations
 tags:
 - Agentic Investigations
 - AI Operations

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=4KcpgQlFa58
 title: Setting Up AI Toolkit and GitHub Copilot for Microsoft Foundry Projects
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=4KcpgQlFa58
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-01 21:00:12 +00:00
-permalink: /github-copilot/videos/Setting-Up-AI-Toolkit-and-GitHub-Copilot-for-Microsoft-Foundry-Projects
 tags:
 - Agent Development
 - AI Toolkit

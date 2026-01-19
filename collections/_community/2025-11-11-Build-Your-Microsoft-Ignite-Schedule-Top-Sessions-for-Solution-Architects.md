@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-events/build-your-microsoft-ignite-schedule-top-sessions-for-solution/ba-p/4468770
 title: 'Build Your Microsoft Ignite Schedule: Top Sessions for Solution Architects'
 author: GalimahB
-canonical_url: https://techcommunity.microsoft.com/t5/azure-events/build-your-microsoft-ignite-schedule-top-sessions-for-solution/ba-p/4468770
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-11 00:19:08 +00:00
-permalink: /ai/community/Build-Your-Microsoft-Ignite-Schedule-Top-Sessions-for-Solution-Architects
 tags:
 - Agentic AI
 - AI Governance

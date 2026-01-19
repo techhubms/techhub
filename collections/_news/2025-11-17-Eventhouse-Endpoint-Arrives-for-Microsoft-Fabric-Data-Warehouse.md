@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-eventhouse-endpoint-for-fabric-data-warehouse-real-time-analytics-unified-architecture/
 title: Eventhouse Endpoint Arrives for Microsoft Fabric Data Warehouse
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-eventhouse-endpoint-for-fabric-data-warehouse-real-time-analytics-unified-architecture/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-17 09:00:00 +00:00
-permalink: /ml/news/Eventhouse-Endpoint-Arrives-for-Microsoft-Fabric-Data-Warehouse
 tags:
 - Anomaly Detection
 - Business KPIs

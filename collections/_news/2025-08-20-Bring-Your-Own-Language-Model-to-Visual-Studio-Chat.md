@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/bring-your-own-model-visual-studio-chat/
 title: Bring Your Own Language Model to Visual Studio Chat
 author: Rhea Patel, Samruddhi Khandale
-canonical_url: https://devblogs.microsoft.com/visualstudio/bring-your-own-model-visual-studio-chat/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-08-20 15:40:20 +00:00
-permalink: /ai/news/Bring-Your-Own-Language-Model-to-Visual-Studio-Chat
 tags:
 - AI Providers
 - Anthropic

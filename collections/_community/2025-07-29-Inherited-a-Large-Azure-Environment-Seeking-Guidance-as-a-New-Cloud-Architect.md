@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mc0vkl/inherited_a_large_azure_environment/
 title: 'Inherited a Large Azure Environment: Seeking Guidance as a New Cloud Architect'
 author: Cybertron2600
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mc0vkl/inherited_a_large_azure_environment/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-29 03:25:27 +00:00
-permalink: /azure/community/Inherited-a-Large-Azure-Environment-Seeking-Guidance-as-a-New-Cloud-Architect
 tags:
 - Azure Subscriptions
 - Cloud Adoption

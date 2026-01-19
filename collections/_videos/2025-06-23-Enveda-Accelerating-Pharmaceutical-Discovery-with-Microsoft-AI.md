@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=8JU5B4vTxsg
 title: 'Enveda: Accelerating Pharmaceutical Discovery with Microsoft AI'
 author: Microsoft Cloud
-canonical_url: https://www.youtube.com/watch?v=8JU5B4vTxsg
 viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-06-23 14:00:22 +00:00
-permalink: /ai/videos/Enveda-Accelerating-Pharmaceutical-Discovery-with-Microsoft-AI
 tags:
 - AI Applications
 - AI in Healthcare

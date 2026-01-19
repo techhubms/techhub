@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/from-policy-to-practice-built-in-cis-benchmarks-on-azure/ba-p/4467884
 title: 'Built-In CIS Benchmarks for Linux Security on Azure: Flexible and Hybrid-Ready Compliance'
 author: pallakatos
-canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/from-policy-to-practice-built-in-cis-benchmarks-on-azure/ba-p/4467884
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 08:00:00 +00:00
-permalink: /azure/community/Built-In-CIS-Benchmarks-for-Linux-Security-on-Azure-Flexible-and-Hybrid-Ready-Compliance
 tags:
 - Audit Automation
 - Azure Arc

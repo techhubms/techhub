@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=p_zslgBi06k
 title: 'Windows 365 Meets .NET Aspire: Boosting Multi-Repo Microservice Productivity'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=p_zslgBi06k
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 05:00:06 +00:00
-permalink: /coding/videos/Windows-365-Meets-NET-Aspire-Boosting-Multi-Repo-Microservice-Productivity
 tags:
 - .NET Aspire
 - AddMicroservice Extension

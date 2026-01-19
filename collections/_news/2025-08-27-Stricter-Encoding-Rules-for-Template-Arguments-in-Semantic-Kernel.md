@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/semantic-kernel/encoding-changes-for-template-arguments-in-semantic-kernel/
 title: Stricter Encoding Rules for Template Arguments in Semantic Kernel
 author: Dmytro Struk
-canonical_url: https://devblogs.microsoft.com/semantic-kernel/encoding-changes-for-template-arguments-in-semantic-kernel/
 viewing_mode: external
 feed_name: Microsoft Semantic Kernel Blog
-feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-08-27 05:17:18 +00:00
-permalink: /ai/news/Stricter-Encoding-Rules-for-Template-Arguments-in-Semantic-Kernel
 tags:
 - .NET
 - AllowDangerouslySetContent

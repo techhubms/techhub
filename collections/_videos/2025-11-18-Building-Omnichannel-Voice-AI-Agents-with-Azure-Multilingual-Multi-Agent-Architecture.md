@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=H_uAA5_h40E
 title: 'Building Omnichannel Voice AI Agents with Azure: Multilingual Multi-Agent Architecture'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=H_uAA5_h40E
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-18 19:13:32 +00:00
-permalink: /ai/videos/Building-Omnichannel-Voice-AI-Agents-with-Azure-Multilingual-Multi-Agent-Architecture
 tags:
 - Azure AI
 - Azure Communication Services

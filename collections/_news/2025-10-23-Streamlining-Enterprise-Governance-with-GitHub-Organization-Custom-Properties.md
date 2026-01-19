@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-23-organization-custom-properties-are-now-available-in-public-preview
 title: Streamlining Enterprise Governance with GitHub Organization Custom Properties
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-23-organization-custom-properties-are-now-available-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-23 16:58:12 +00:00
-permalink: /devops/news/Streamlining-Enterprise-Governance-with-GitHub-Organization-Custom-Properties
 tags:
 - Configuration
 - Custom Properties

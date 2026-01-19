@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/sonar-previews-service-to-improve-quality-of-ai-generated-code/
 title: 'SonarSweep: Improving AI-Generated Code Quality and Security'
 author: Mike Vizard
-canonical_url: https://devops.com/sonar-previews-service-to-improve-quality-of-ai-generated-code/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-21 13:00:47 +00:00
-permalink: /ai/blogs/SonarSweep-Improving-AI-Generated-Code-Quality-and-Security
 tags:
 - AI Code Quality
 - AI Code Review

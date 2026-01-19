@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/12/17/access-fabric-a-modern-approach-to-identity-and-network-access/
 title: 'Access Fabric: Modernizing Identity and Network Access Security with Microsoft Entra'
 author: Igor Sakhnov
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/17/access-fabric-a-modern-approach-to-identity-and-network-access/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-17 17:00:00 +00:00
-permalink: /ai/news/Access-Fabric-Modernizing-Identity-and-Network-Access-Security-with-Microsoft-Entra
 tags:
 - Access Fabric
 - Adaptive Security

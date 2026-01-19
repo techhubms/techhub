@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/how-to-use-custom-models-with-foundry-local-a-beginner-s-guide/ba-p/4428857
 title: 'Beginner’s Guide: Using Custom AI Models with Foundry Local and Microsoft Olive'
 author: kinfey
-canonical_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/how-to-use-custom-models-with-foundry-local-a-beginner-s-guide/ba-p/4428857
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-18 07:00:00 +00:00
-permalink: /ai/community/Beginners-Guide-Using-Custom-AI-Models-with-Foundry-Local-and-Microsoft-Olive
 tags:
 - AI Chatbot
 - CPU

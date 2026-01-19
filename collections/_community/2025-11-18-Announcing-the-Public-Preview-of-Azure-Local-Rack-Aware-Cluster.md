@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-preview-of-azure-local-rack-aware-cluster/ba-p/4469435
 title: Announcing the Public Preview of Azure Local Rack Aware Cluster
 author: mindydiep
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-preview-of-azure-local-rack-aware-cluster/ba-p/4469435
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:33:51 +00:00
-permalink: /azure/community/Announcing-the-Public-Preview-of-Azure-Local-Rack-Aware-Cluster
 tags:
 - ARM Templates
 - Availability Zones

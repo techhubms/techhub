@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/pushing-a-whole-stack-of-branches-with-a-single-git-command/
 title: Pushing a Whole Stack of Branches with a Single Git Command
 author: Andrew Lock
-canonical_url: https://andrewlock.net/pushing-a-whole-stack-of-branches-with-a-single-git-command/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-05-20 09:00:00 +00:00
-permalink: /devops/blogs/Pushing-a-Whole-Stack-of-Branches-with-a-Single-Git-Command
 tags:
 - Branch Management
 - Code Review

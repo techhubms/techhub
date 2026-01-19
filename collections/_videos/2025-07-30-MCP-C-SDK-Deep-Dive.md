@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=kTOXXvgyeUE
 title: MCP C# SDK Deep Dive
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=kTOXXvgyeUE
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-30 22:24:59 +00:00
-permalink: /ai/videos/MCP-C-SDK-Deep-Dive
 tags:
 - 06 18 Spec
 - Agent Integration

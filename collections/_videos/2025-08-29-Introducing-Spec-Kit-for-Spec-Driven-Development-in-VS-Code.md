@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=DTw9X7MtU5s
 title: Introducing Spec Kit for Spec-Driven Development in VS Code
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=DTw9X7MtU5s
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-29 19:51:24 +00:00
-permalink: /github-copilot/videos/Introducing-Spec-Kit-for-Spec-Driven-Development-in-VS-Code
 tags:
 - AI Tools
 - Automation

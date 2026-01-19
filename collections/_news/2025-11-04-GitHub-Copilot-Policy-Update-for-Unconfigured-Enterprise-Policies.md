@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-04-github-copilot-policy-update-for-unconfigured-policies
 title: GitHub Copilot Policy Update for Unconfigured Enterprise Policies
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-04-github-copilot-policy-update-for-unconfigured-policies
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-04 17:59:50 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-Policy-Update-for-Unconfigured-Enterprise-Policies
 tags:
 - Access Control
 - Admin Tools

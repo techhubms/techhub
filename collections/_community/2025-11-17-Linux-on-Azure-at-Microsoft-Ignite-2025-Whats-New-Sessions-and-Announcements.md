@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/linux-on-azure-at-microsoft-ignite-2025-what-s-new-what-to/ba-p/4470685
 title: "Linux on Azure at Microsoft Ignite 2025: What's New, Sessions, and Announcements"
 author: shreyabaheti
-canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/linux-on-azure-at-microsoft-ignite-2025-what-s-new-what-to/ba-p/4470685
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-17 18:55:08 +00:00
-permalink: /azure/community/Linux-on-Azure-at-Microsoft-Ignite-2025-Whats-New-Sessions-and-Announcements
 tags:
 - AKS
 - Azure Linux

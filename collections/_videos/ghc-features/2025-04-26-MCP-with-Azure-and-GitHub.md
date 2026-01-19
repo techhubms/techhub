@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/m6XBVRXfFN8
 title: MCP with Azure and GitHub
 author: Rob Bos
-canonical_url: https://youtu.be/m6XBVRXfFN8
 date: 2025-04-26 20:44:28 +00:00
-permalink: /github-copilot/videos/MCP-with-Azure-and-GitHub
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Agent Mode
 - GitHub

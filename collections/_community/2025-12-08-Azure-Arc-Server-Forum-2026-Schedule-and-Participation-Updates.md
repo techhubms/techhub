@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-forum-2026-updates/ba-p/4476227
 title: 'Azure Arc Server Forum: 2026 Schedule and Participation Updates'
 author: Aurnov_Chattopadhyay
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-forum-2026-updates/ba-p/4476227
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-08 22:58:42 +00:00
-permalink: /azure/community/Azure-Arc-Server-Forum-2026-Schedule-and-Participation-Updates
 tags:
 - Azure Arc
 - Cloud Operations

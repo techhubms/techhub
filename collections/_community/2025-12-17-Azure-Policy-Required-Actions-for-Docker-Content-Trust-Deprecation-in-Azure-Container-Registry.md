@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-policy-required-actions-for-docker-content-trust/ba-p/4478951
 title: 'Azure Policy: Required Actions for Docker Content Trust Deprecation in Azure Container Registry'
 author: ShannonHicks
-canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-policy-required-actions-for-docker-content-trust/ba-p/4478951
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-17 22:36:46 +00:00
-permalink: /azure/community/Azure-Policy-Required-Actions-for-Docker-Content-Trust-Deprecation-in-Azure-Container-Registry
 tags:
 - ACR
 - API Deprecation

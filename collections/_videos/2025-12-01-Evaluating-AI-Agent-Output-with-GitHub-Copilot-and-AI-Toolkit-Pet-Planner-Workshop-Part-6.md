@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=i_245SwkBAI
 title: Evaluating AI Agent Output with GitHub Copilot and AI Toolkit (Pet Planner Workshop, Part 6)
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=i_245SwkBAI
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-01 21:00:16 +00:00
-permalink: /github-copilot/videos/Evaluating-AI-Agent-Output-with-GitHub-Copilot-and-AI-Toolkit-Pet-Planner-Workshop-Part-6
 tags:
 - Agent Evaluation
 - Agent Mode

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=4yjmGvJzYdY
 title: 'Advanced MCP: Secure, Scalable, and Multi-Modal AI Agents'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=4yjmGvJzYdY
 viewing_mode: internal
 feed_name: Microsoft Build 2025 YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:00:13 +00:00
-permalink: /ai/videos/Advanced-MCP-Secure-Scalable-and-Multi-Modal-AI-Agents
 tags:
 - API Management
 - Azure OpenAI

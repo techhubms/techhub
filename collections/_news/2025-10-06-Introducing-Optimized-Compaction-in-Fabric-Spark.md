@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-optimized-compaction-in-fabric-spark/
 title: Introducing Optimized Compaction in Fabric Spark
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-optimized-compaction-in-fabric-spark/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-06 11:00:00 +00:00
-permalink: /ml/news/Introducing-Optimized-Compaction-in-Fabric-Spark
 tags:
 - Auto Compaction
 - Blob Storage

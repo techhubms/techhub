@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=v6GKH_JoGDw
 title: 'Reimagined Microsoft Marketplace: Unified Cloud and AI Solutions'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=v6GKH_JoGDw
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 17:05:21 +00:00
-permalink: /ai/videos/Reimagined-Microsoft-Marketplace-Unified-Cloud-and-AI-Solutions
 tags:
 - Agentic AI
 - AI Solutions

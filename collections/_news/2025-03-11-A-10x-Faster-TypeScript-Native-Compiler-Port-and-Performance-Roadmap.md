@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/typescript/typescript-native-port/
 title: 'A 10x Faster TypeScript: Native Compiler Port and Performance Roadmap'
 author: Anders Hejlsberg
-canonical_url: https://devblogs.microsoft.com/typescript/typescript-native-port/
 viewing_mode: external
 feed_name: Microsoft TypeScript Blog
-feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-03-11 14:31:27 +00:00
-permalink: /coding/news/A-10x-Faster-TypeScript-Native-Compiler-Port-and-Performance-Roadmap
 tags:
 - Developer Experience
 - Editor Responsiveness

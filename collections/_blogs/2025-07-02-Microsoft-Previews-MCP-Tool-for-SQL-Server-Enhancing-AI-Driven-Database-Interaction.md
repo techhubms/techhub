@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devclass.com/2025/07/02/microsoft-sql-server-mcp-tool-leap-in-data-interaction-or-limited-and-frustrating/
 title: 'Microsoft Previews MCP Tool for SQL Server: Enhancing AI-Driven Database Interaction'
 author: Tim Anderson
-canonical_url: https://devclass.com/2025/07/02/microsoft-sql-server-mcp-tool-leap-in-data-interaction-or-limited-and-frustrating/
 viewing_mode: external
 feed_name: DevClass
-feed_url: https://devclass.com/feed/
 date: 2025-07-02 16:00:20 +00:00
-permalink: /ai/blogs/Microsoft-Previews-MCP-Tool-for-SQL-Server-Enhancing-AI-Driven-Database-Interaction
 tags:
 - .NET
 - AI Agents

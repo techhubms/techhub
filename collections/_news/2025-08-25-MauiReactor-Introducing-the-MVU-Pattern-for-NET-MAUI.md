@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/mauireactor-mvu-for-dotnet-maui/
 title: 'MauiReactor: Introducing the MVU Pattern for .NET MAUI'
 author: David Ortinau
-canonical_url: https://devblogs.microsoft.com/dotnet/mauireactor-mvu-for-dotnet-maui/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-08-25 17:15:00 +00:00
-permalink: /coding/news/MauiReactor-Introducing-the-MVU-Pattern-for-NET-MAUI
 tags:
 - .NET
 - App Architecture

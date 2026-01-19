@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/Nj2c3qPJ1Ng
 title: How to Get the Most Out of Your AI with Vibe Coding
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/Nj2c3qPJ1Ng
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-02 14:00:38 +00:00
-permalink: /github-copilot/videos/How-to-Get-the-Most-Out-of-Your-AI-with-Vibe-Coding
 tags:
 - AI Assistant
 - AI Coding

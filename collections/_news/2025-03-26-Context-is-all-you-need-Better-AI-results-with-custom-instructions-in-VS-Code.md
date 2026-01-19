@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/blogs/2025/03/26/custom-instructions
 title: 'Context is all you need: Better AI results with custom instructions in VS Code'
 author: Rob Conery, Harald Kirschner
-canonical_url: https://code.visualstudio.com/blogs/2025/03/26/custom-instructions
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-03-26 00:00:00 +00:00
-permalink: /github-copilot/news/Context-is-all-you-need-Better-AI-results-with-custom-instructions-in-VS-Code
 tags:
 - Code Generation
 - Commit Message Generation

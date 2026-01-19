@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mjojrz/how_are_you_guys_upskilling/
 title: 'Community Insights: Upskilling Strategies for C# Developers'
 author: Ok_Finish_1661
-canonical_url: https://www.reddit.com/r/csharp/comments/1mjojrz/how_are_you_guys_upskilling/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-07 02:45:02 +00:00
-permalink: /coding/community/Community-Insights-Upskilling-Strategies-for-C-Developers
 tags:
 - .NET
 - .NET 8

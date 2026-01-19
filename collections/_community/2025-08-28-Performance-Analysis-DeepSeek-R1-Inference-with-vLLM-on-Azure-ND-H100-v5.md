@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/performance-analysis-of-deepseek-r1-ai-inference-using-vllm-on/ba-p/4449351
 title: 'Performance Analysis: DeepSeek R1 Inference with vLLM on Azure ND-H100-v5'
 author: CormacGarvey
-canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/performance-analysis-of-deepseek-r1-ai-inference-using-vllm-on/ba-p/4449351
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-28 22:13:32 +00:00
-permalink: /ai/community/Performance-Analysis-DeepSeek-R1-Inference-with-vLLM-on-Azure-ND-H100-v5
 tags:
 - AI Infrastructure
 - Azure ND H100 V5

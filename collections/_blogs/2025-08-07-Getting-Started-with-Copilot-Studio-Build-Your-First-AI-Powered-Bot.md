@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/getting-started-with-copilot-studio-build-your-first-ai-powered-bot/
 title: 'Getting Started with Copilot Studio: Build Your First AI-Powered Bot'
 author: Dellenny
-canonical_url: https://dellenny.com/getting-started-with-copilot-studio-build-your-first-ai-powered-bot/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-07 06:43:47 +00:00
-permalink: /ai/blogs/Getting-Started-with-Copilot-Studio-Build-Your-First-AI-Powered-Bot
 tags:
 - Azure OpenAI Service
 - Bot Development

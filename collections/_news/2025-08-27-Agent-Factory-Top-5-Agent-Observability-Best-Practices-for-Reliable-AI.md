@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/agent-factory-top-5-agent-observability-best-practices-for-reliable-ai/
 title: 'Agent Factory: Top 5 Agent Observability Best Practices for Reliable AI'
 author: Yina Arenas
-canonical_url: https://azure.microsoft.com/en-us/blog/agent-factory-top-5-agent-observability-best-practices-for-reliable-ai/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-27 15:00:00 +00:00
-permalink: /ai/news/Agent-Factory-Top-5-Agent-Observability-Best-Practices-for-Reliable-AI
 tags:
 - Agent Benchmarking
 - Agent Factory

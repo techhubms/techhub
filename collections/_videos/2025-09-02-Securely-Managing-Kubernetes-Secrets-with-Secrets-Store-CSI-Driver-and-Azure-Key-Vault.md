@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=O1nx8mve5RY
 title: Securely Managing Kubernetes Secrets with Secrets Store CSI Driver and Azure Key Vault
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=O1nx8mve5RY
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-02 16:39:25 +00:00
-permalink: /azure/videos/Securely-Managing-Kubernetes-Secrets-with-Secrets-Store-CSI-Driver-and-Azure-Key-Vault
 tags:
 - Azure Key Vault
 - Cloud Computing

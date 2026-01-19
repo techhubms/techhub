@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/powershell/enhanced-authoring-with-dsc-v3/
 title: Authoring Enhancements in Microsoft Desired State Configuration v3.0.0
 author: Jason Helmick
-canonical_url: https://devblogs.microsoft.com/powershell/enhanced-authoring-with-dsc-v3/
 viewing_mode: external
 feed_name: Microsoft PowerShell Blog
-feed_url: https://devblogs.microsoft.com/powershell/feed/
 date: 2025-03-12 18:00:43 +00:00
-permalink: /coding/news/Authoring-Enhancements-in-Microsoft-Desired-State-Configuration-v300
 tags:
 - Authoring
 - Azure Resource Manager

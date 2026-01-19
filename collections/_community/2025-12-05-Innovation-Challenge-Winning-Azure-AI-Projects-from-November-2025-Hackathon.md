@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure/the-november-innovation-challenge-winning-teams/m-p/4475579#M22360
 title: 'Innovation Challenge: Winning Azure AI Projects from November 2025 Hackathon'
 author: macalde
-canonical_url: https://techcommunity.microsoft.com/t5/azure/the-november-innovation-challenge-winning-teams/m-p/4475579#M22360
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-05 17:34:53 +00:00
-permalink: /ai/community/Innovation-Challenge-Winning-Azure-AI-Projects-from-November-2025-Hackathon
 tags:
 - A/B Testing
 - AI Agents

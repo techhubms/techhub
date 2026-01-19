@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-security-on-the-sql-analytics-endpoint/
 title: OneLake Security on the SQL Analytics Endpoint
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-security-on-the-sql-analytics-endpoint/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-06 12:00:00 +00:00
-permalink: /ml/news/OneLake-Security-on-the-SQL-Analytics-Endpoint
 tags:
 - Access Control
 - Column Level Security

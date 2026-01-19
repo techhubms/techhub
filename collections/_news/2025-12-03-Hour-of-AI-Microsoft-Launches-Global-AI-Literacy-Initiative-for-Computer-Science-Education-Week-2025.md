@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/education/blog/2025/12/unlock-ai-learning-with-hour-of-ai-for-computer-science-education-week/
 title: 'Hour of AI: Microsoft Launches Global AI Literacy Initiative for Computer Science Education Week 2025'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/education/blog/2025/12/unlock-ai-learning-with-hour-of-ai-for-computer-science-education-week/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-03 15:06:57 +00:00
-permalink: /ai/news/Hour-of-AI-Microsoft-Launches-Global-AI-Literacy-Initiative-for-Computer-Science-Education-Week-2025
 tags:
 - AI Coding
 - AI Literacy

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/curso-oficial-y-gratuito-de-genai-y-python/ba-p/4459466
 title: 'Curso gratuito: IA Generativa y Python - Serie de 9 transmisiones en vivo'
 author: gwyneth-penas
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/curso-oficial-y-gratuito-de-genai-y-python/ba-p/4459466
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-06 18:55:15 +00:00
-permalink: /ai/community/Curso-gratuito-IA-Generativa-y-Python-Serie-de-9-transmisiones-en-vivo
 tags:
 - Agentes De IA
 - Autogen

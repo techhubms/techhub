@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/supercharge-data-intelligence-build-teams-app-with-azure/ba-p/4442653
 title: Building a Teams App with Azure Databricks Genie and Azure AI Agent Service
 author: GISV-PSA-MSFT
-canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/supercharge-data-intelligence-build-teams-app-with-azure/ba-p/4442653
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 21:10:22 +00:00
-permalink: /ai/community/Building-a-Teams-App-with-Azure-Databricks-Genie-and-Azure-AI-Agent-Service
 tags:
 - AI Agents
 - Azure AI Agent Service

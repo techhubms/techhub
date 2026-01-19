@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/boosting-performance-with-the-materialized-view-pattern-in-azure/
 title: Boosting Performance with the Materialized View Pattern in Azure
 author: Dellenny
-canonical_url: https://dellenny.com/boosting-performance-with-the-materialized-view-pattern-in-azure/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-07-29 11:50:50 +00:00
-permalink: /ml/blogs/Boosting-Performance-with-the-Materialized-View-Pattern-in-Azure
 tags:
 - Analytical Dashboards
 - Architecture

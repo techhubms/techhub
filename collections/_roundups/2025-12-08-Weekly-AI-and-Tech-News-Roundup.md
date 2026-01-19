@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: GitHub Copilot Updates, Agent Tools, .NET 10 Release, and Azure Developments
 author: Tech Hub Team
 viewing_mode: internal
 date: 2025-12-08 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET 10
 - Agent Framework

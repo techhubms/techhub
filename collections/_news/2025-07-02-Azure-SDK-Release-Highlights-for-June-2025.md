@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-june-2025/
 title: Azure SDK Release Highlights for June 2025
 author: Ronnie Geraghty
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-june-2025/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-07-02 15:00:43 +00:00
-permalink: /ai/news/Azure-SDK-Release-Highlights-for-June-2025
 tags:
 - .NET
 - AI Agents

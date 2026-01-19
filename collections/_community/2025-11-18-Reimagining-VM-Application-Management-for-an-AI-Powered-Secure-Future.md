@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/reimagining-vm-application-management-for-an-ai-powered-secure/ba-p/4470127
 title: Reimagining VM Application Management for an AI-Powered, Secure Future
 author: tanmay-gore
-canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/reimagining-vm-application-management-for-an-ai-powered-secure/ba-p/4470127
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:00 +00:00
-permalink: /ai/community/Reimagining-VM-Application-Management-for-an-AI-Powered-Secure-Future
 tags:
 - AI Workflow
 - Application Lifecycle

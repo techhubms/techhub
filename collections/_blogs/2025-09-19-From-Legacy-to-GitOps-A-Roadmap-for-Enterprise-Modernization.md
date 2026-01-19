@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/from-legacy-to-gitops-a-roadmap-for-enterprise-modernization/
 title: 'From Legacy to GitOps: A Roadmap for Enterprise Modernization'
 author: Ekambar Kumar Singirikonda
-canonical_url: https://devops.com/from-legacy-to-gitops-a-roadmap-for-enterprise-modernization/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-19 10:59:49 +00:00
-permalink: /devops/blogs/From-Legacy-to-GitOps-A-Roadmap-for-Enterprise-Modernization
 tags:
 - Argo CD
 - Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/morgan-stanley-open-sources-calm-the-architecture-as-code-solution-transforming-enterprise-devops/?utm_source=rss&utm_medium=rss&utm_campaign=morgan-stanley-open-sources-calm-the-architecture-as-code-solution-transforming-enterprise-devops
 title: 'Morgan Stanley Open Sources CALM: Architecture as Code for Enterprise DevOps'
 author: Tom Smith
-canonical_url: https://devops.com/morgan-stanley-open-sources-calm-the-architecture-as-code-solution-transforming-enterprise-devops/?utm_source=rss&utm_medium=rss&utm_campaign=morgan-stanley-open-sources-calm-the-architecture-as-code-solution-transforming-enterprise-devops
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-25 22:03:46 +00:00
-permalink: /devops/blogs/Morgan-Stanley-Open-Sources-CALM-Architecture-as-Code-for-Enterprise-DevOps
 tags:
 - Architectural Compliance
 - Architecture as Code

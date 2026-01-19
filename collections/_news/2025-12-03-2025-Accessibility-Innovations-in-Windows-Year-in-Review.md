@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.windows.com/windowsexperience/2025/12/03/2025-a-year-in-recap-windows-accessibility/
 title: '2025 Accessibility Innovations in Windows: Year in Review'
 author: stclarke
-canonical_url: https://blogs.windows.com/windowsexperience/2025/12/03/2025-a-year-in-recap-windows-accessibility/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-03 14:23:49 +00:00
-permalink: /ai/news/2025-Accessibility-Innovations-in-Windows-Year-in-Review
 tags:
 - Accessibility
 - Chinese Language Support

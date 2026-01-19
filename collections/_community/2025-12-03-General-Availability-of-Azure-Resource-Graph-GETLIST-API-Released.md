@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-general-availability-for-azure-resource-graph-arg-get/ba-p/4474188
 title: General Availability of Azure Resource Graph GET/LIST API Released
 author: JaspreetKaur
-canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-general-availability-for-azure-resource-graph-arg-get/ba-p/4474188
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-03 04:39:28 +00:00
-permalink: /azure/community/General-Availability-of-Azure-Resource-Graph-GETLIST-API-Released
 tags:
 - API Contract
 - API Throttling

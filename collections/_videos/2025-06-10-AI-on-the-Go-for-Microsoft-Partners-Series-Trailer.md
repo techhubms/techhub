@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=cWIHcbOihY4
 title: 'AI on the Go for Microsoft Partners: Series Trailer'
 author: Microsoft Cloud
-canonical_url: https://www.youtube.com/watch?v=cWIHcbOihY4
 viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-06-10 14:01:04 +00:00
-permalink: /ai/videos/AI-on-the-Go-for-Microsoft-Partners-Series-Trailer
 tags:
 - Agentic AI
 - AI in Business

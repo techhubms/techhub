@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.linkedin.com/posts/satyanadella_openais-opensource-model-gptoss-on-azure-activity-7358643157602852867-kYFD
 title: OpenAI’s gpt-oss Models Now Available on Azure AI Foundry and Windows via Foundry Local
 author: stclarke
-canonical_url: https://www.linkedin.com/posts/satyanadella_openais-opensource-model-gptoss-on-azure-activity-7358643157602852867-kYFD
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-06 01:04:00 +00:00
-permalink: /ai/news/OpenAIs-gpt-oss-Models-Now-Available-on-Azure-AI-Foundry-and-Windows-via-Foundry-Local
 tags:
 - AI Integration
 - AI Models

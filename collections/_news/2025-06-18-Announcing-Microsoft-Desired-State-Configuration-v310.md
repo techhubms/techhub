@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/powershell/announcing-dsc-v3-1-0/
 title: Announcing Microsoft Desired State Configuration v3.1.0
 author: Jason Helmick
-canonical_url: https://devblogs.microsoft.com/powershell/announcing-dsc-v3-1-0/
 viewing_mode: external
 feed_name: Microsoft PowerShell Blog
-feed_url: https://devblogs.microsoft.com/powershell/feed/
 date: 2025-06-18 14:12:40 +00:00
-permalink: /coding/news/Announcing-Microsoft-Desired-State-Configuration-v310
 tags:
 - Automation
 - Configuration Management

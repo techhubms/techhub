@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://medium.com/@davidfowl/modeling-your-environment-with-aspire-24e986752485?source=rss-8163234c98f0------2
 title: Modeling Your Environment with Aspire
 author: David Fowler
-canonical_url: https://medium.com/@davidfowl/modeling-your-environment-with-aspire-24e986752485?source=rss-8163234c98f0------2
 viewing_mode: external
 feed_name: David Fowler's Blog
-feed_url: https://medium.com/feed/@davidfowl
 date: 2025-04-07 15:32:09 +00:00
-permalink: /coding/blogs/Modeling-Your-Environment-with-Aspire
 tags:
 - Application Modeling
 - Application Topology

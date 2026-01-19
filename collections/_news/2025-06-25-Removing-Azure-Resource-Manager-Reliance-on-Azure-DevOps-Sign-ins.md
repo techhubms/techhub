@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/devops/removing-azure-resource-manager-reliance-on-azure-devops-sign-ins/
 title: Removing Azure Resource Manager Reliance on Azure DevOps Sign-ins
 author: Angel Wong
-canonical_url: https://devblogs.microsoft.com/devops/removing-azure-resource-manager-reliance-on-azure-devops-sign-ins/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-06-25 18:24:26 +00:00
-permalink: /azure/news/Removing-Azure-Resource-Manager-Reliance-on-Azure-DevOps-Sign-ins
 tags:
 - Access Control
 - ARM

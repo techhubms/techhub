@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/survey-surfaces-multiple-mobile-application-release-management-headaches/?utm_source=rss&utm_medium=rss&utm_campaign=survey-surfaces-multiple-mobile-application-release-management-headaches
 title: Survey Reveals Major Challenges in Mobile Application Release Management
 author: Mike Vizard
-canonical_url: https://devops.com/survey-surfaces-multiple-mobile-application-release-management-headaches/?utm_source=rss&utm_medium=rss&utm_campaign=survey-surfaces-multiple-mobile-application-release-management-headaches
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-12 16:49:27 +00:00
-permalink: /devops/blogs/Survey-Reveals-Major-Challenges-in-Mobile-Application-Release-Management
 tags:
 - Asana
 - Automation

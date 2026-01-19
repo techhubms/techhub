@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-october-2025-release/
 title: On-Premises Data Gateway October 2025 Release Overview
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-october-2025-release/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-30 11:21:57 +00:00
-permalink: /ml/news/On-Premises-Data-Gateway-October-2025-Release-Overview
 tags:
 - Bug Fix
 - Connector Compatibility

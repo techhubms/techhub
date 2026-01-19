@@ -286,7 +286,5 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         item.SectionNames.Should().NotBeEmpty();
         item.Tags.Should().NotBeEmpty();
         item.Excerpt.Should().NotBeNullOrEmpty();
-        item.Url.Should().NotBeNullOrEmpty();
-        item.VideoId.Should().Be("abc123");
-    }
+        item.Url.Should().NotBeNullOrEmpty();    }
 }

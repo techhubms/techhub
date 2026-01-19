@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://weblog.west-wind.com/posts/2025/Dec/08/What-the-heck-is-a-nul-path-and-why-is-it-breaking-my-Directory-Files-Lookup
 title: Troubleshooting the `\.\nul` Path Error in Directory Files Lookup
 author: Rick Strahl
-canonical_url: https://weblog.west-wind.com/posts/2025/Dec/08/What-the-heck-is-a-nul-path-and-why-is-it-breaking-my-Directory-Files-Lookup
 viewing_mode: external
 feed_name: Rick Strahl's Blog
-feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2025-12-08 23:15:18 +00:00
-permalink: /coding/blogs/Troubleshooting-the-nul-Path-Error-in-Directory-Files-Lookup
 tags:
 - .NET
 - Application Insights

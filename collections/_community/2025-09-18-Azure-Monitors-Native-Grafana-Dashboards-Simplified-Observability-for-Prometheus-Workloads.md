@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-managed-service-for-prometheus-now-includes-native/ba-p/4454254
 title: 'Azure Monitor’s Native Grafana Dashboards: Simplified Observability for Prometheus Workloads'
 author: sunayanasingh
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-managed-service-for-prometheus-now-includes-native/ba-p/4454254
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-18 17:51:27 +00:00
-permalink: /azure/community/Azure-Monitors-Native-Grafana-Dashboards-Simplified-Observability-for-Prometheus-Workloads
 tags:
 - AKS
 - Application Insights

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/12/08/stronger-together-new-beazley-collaboration-enhances-cyber-resilience/
 title: Microsoft and Beazley Collaborate to Enhance Cyber Incident Response
 author: Aarti Borkar
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/12/08/stronger-together-new-beazley-collaboration-enhances-cyber-resilience/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-08 17:00:00 +00:00
-permalink: /security/news/Microsoft-and-Beazley-Collaborate-to-Enhance-Cyber-Incident-Response
 tags:
 - Beazley
 - Claims Process

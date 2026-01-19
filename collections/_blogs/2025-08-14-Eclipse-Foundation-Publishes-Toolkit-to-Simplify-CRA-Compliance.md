@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/eclipse-foundation-publishes-toolkit-to-simplify-cra-compliance/?utm_source=rss&utm_medium=rss&utm_campaign=eclipse-foundation-publishes-toolkit-to-simplify-cra-compliance
 title: Eclipse Foundation Publishes Toolkit to Simplify CRA Compliance
 author: Mike Vizard
-canonical_url: https://devops.com/eclipse-foundation-publishes-toolkit-to-simplify-cra-compliance/?utm_source=rss&utm_medium=rss&utm_campaign=eclipse-foundation-publishes-toolkit-to-simplify-cra-compliance
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-14 10:00:21 +00:00
-permalink: /devops/blogs/Eclipse-Foundation-Publishes-Toolkit-to-Simplify-CRA-Compliance
 tags:
 - Business Of DevOps
 - Compliance

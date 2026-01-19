@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mg49nf/model_validation_best_practices/
 title: Model Validation Best Practices in .NET Using FluentValidation
 author: ErfanBaghdadi
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mg49nf/model_validation_best_practices/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-02 23:20:30 +00:00
-permalink: /coding/community/Model-Validation-Best-Practices-in-NET-Using-FluentValidation
 tags:
 - .NET
 - Action Filters

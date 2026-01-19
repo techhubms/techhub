@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/capacity-usage-enabled-date-for-test-capability-in-user-data-functions/
 title: Capacity Usage Now Enabled for Test Capability in Fabric User Data Functions
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/capacity-usage-enabled-date-for-test-capability-in-user-data-functions/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-20 12:00:00 +00:00
-permalink: /ml/news/Capacity-Usage-Now-Enabled-for-Test-Capability-in-Fabric-User-Data-Functions
 tags:
 - Capacity Metrics
 - Data Architecture

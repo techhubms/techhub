@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-03-assign-issues-to-copilot-using-the-api
 title: Assign Issues to GitHub Copilot Using the API
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-03-assign-issues-to-copilot-using-the-api
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-03 19:21:25 +00:00
-permalink: /github-copilot/news/Assign-Issues-to-GitHub-Copilot-Using-the-API
 tags:
 - Addassigneestoassignable Mutation
 - API Integration

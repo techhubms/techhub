@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-stack/error-no-file/m-p/4443115#M277
 title: 'Troubleshooting Azure Stack HCI Local Cluster Deployment: Network Configuration Error'
 author: JensI
-canonical_url: https://techcommunity.microsoft.com/t5/azure-stack/error-no-file/m-p/4443115#M277
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-14 07:04:16 +00:00
-permalink: /azure/community/Troubleshooting-Azure-Stack-HCI-Local-Cluster-Deployment-Network-Configuration-Error
 tags:
 - Azure Stack HCI
 - CloudDeployment

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=NY_ESU6GKM0
 title: Build Powerful AI Apps for Under $25 with Azure SQL Database
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=NY_ESU6GKM0
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2026-01-15 20:00:20 +00:00
-permalink: /ai/videos/Build-Powerful-AI-Apps-for-Under-25-with-Azure-SQL-Database
 tags:
 - Agentic RAG
 - AI Apps

@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: 'Streamlining Development: Updates in Copilot, AI Platforms, and Secure Automation'
 author: Tech Hub Team
 viewing_mode: internal
 date: 2025-12-15 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - Agentic AI
 - AI Agents

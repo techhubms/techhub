@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=0k8OfUxmK4A
 title: 'Securing AI at Scale: Microsoft’s Latest Innovations in Agent, App, and Data Protection'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=0k8OfUxmK4A
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 14:26:49 +00:00
-permalink: /ai/videos/Securing-AI-at-Scale-Microsofts-Latest-Innovations-in-Agent-App-and-Data-Protection
 tags:
 - Agent 365
 - AI Agents

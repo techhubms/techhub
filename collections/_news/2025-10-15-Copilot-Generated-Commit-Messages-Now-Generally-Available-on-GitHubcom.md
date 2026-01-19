@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-15-copilot-generated-commit-messages-on-github-com-are-generally-available
 title: Copilot-Generated Commit Messages Now Generally Available on GitHub.com
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-15-copilot-generated-commit-messages-on-github-com-are-generally-available
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-15 16:47:01 +00:00
-permalink: /github-copilot/news/Copilot-Generated-Commit-Messages-Now-Generally-Available-on-GitHubcom
 tags:
 - AI Assistant
 - Automation

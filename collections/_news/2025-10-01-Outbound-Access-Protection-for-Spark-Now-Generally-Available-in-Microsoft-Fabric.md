@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/workspace-outbound-access-protection-for-spark-is-now-generally-available/
 title: Outbound Access Protection for Spark Now Generally Available in Microsoft Fabric
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/workspace-outbound-access-protection-for-spark-is-now-generally-available/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-01 14:00:00 +00:00
-permalink: /ml/news/Outbound-Access-Protection-for-Spark-Now-Generally-Available-in-Microsoft-Fabric
 tags:
 - Cloud Security
 - Connectivity Control

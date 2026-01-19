@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=_oqaVtuzy9E
 title: 'AI for Energy: From Advanced Operations to Emissions Management'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=_oqaVtuzy9E
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:18:13 +00:00
-permalink: /ai/videos/AI-for-Energy-From-Advanced-Operations-to-Emissions-Management
 tags:
 - Agentic AI
 - AI Adoption

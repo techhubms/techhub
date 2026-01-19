@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: XPRT Magazine 11
 date: 2021-05-01 00:00:00 +00:00
 author: Xebia
 viewing_mode: external
-permalink: /github-copilot/community/XPRT-Magazine-11
 tags:
 - Automation
 - Cloud Native

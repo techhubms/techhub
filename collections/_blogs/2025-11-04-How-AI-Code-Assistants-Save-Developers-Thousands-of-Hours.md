@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/how-ai-code-assistants-can-save-1000-years-of-developer-time/
 title: How AI Code Assistants Save Developers Thousands of Hours
 author: Dr. Michael Kwok
-canonical_url: https://devops.com/how-ai-code-assistants-can-save-1000-years-of-developer-time/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-04 11:15:51 +00:00
-permalink: /github-copilot/blogs/How-AI-Code-Assistants-Save-Developers-Thousands-of-Hours
 tags:
 - AI Assisted Programming
 - AI Code Assistants

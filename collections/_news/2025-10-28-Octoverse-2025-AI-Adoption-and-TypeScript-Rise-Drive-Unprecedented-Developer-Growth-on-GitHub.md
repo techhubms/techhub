@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/
 title: 'Octoverse 2025: AI Adoption and TypeScript Rise Drive Unprecedented Developer Growth on GitHub'
 author: GitHub Staff
-canonical_url: https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-10-28 16:07:06 +00:00
-permalink: /github-copilot/news/Octoverse-2025-AI-Adoption-and-TypeScript-Rise-Drive-Unprecedented-Developer-Growth-on-GitHub
 tags:
 - Agents
 - AI Adoption

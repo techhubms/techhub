@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-database-for-mysql-blog/announcing-extended-support-for-azure-database-for-mysql/ba-p/4442924
 title: 'Extended Support for Azure Database for MySQL: What You Need to Know'
 author: Elendil
-canonical_url: https://techcommunity.microsoft.com/t5/azure-database-for-mysql-blog/announcing-extended-support-for-azure-database-for-mysql/ba-p/4442924
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 15:15:15 +00:00
-permalink: /azure/community/Extended-Support-for-Azure-Database-for-MySQL-What-You-Need-to-Know
 tags:
 - ARM Templates
 - Azure CLI

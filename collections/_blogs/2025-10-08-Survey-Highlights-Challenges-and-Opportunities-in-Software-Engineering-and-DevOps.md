@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/survey-surfaces-lots-of-room-for-software-engineering-improvement/
 title: Survey Highlights Challenges and Opportunities in Software Engineering and DevOps
 author: Mike Vizard
-canonical_url: https://devops.com/survey-surfaces-lots-of-room-for-software-engineering-improvement/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-08 16:46:37 +00:00
-permalink: /ai/blogs/Survey-Highlights-Challenges-and-Opportunities-in-Software-Engineering-and-DevOps
 tags:
 - AI Productivity
 - Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/news-insights/product-news/agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github/
 title: 'Agents Panel: Delegate Copilot Coding Agent Tasks Anywhere on GitHub'
 author: Tim Rogers
-canonical_url: https://github.blog/news-insights/product-news/agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-08-19 19:53:14 +00:00
-permalink: /github-copilot/news/Agents-Panel-Delegate-Copilot-Coding-Agent-Tasks-Anywhere-on-GitHub
 tags:
 - Agentic Workflows
 - Agents Panel

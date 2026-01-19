@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=IfnVlYkC-c4
 title: Azure Update - 10th October 2025
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=IfnVlYkC-c4
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-10-10 15:15:12 +00:00
-permalink: /ai/videos/Azure-Update-10th-October-2025
 tags:
 - AKS
 - App Modernization

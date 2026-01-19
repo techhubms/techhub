@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/what-is-the-github-copilot-certification-and-why-it-matters-for-developers/
 title: What Is the GitHub Copilot Certification and Why It Matters for Developers
 author: Dellenny
-canonical_url: https://dellenny.com/what-is-the-github-copilot-certification-and-why-it-matters-for-developers/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-21 09:48:21 +00:00
-permalink: /github-copilot/blogs/What-Is-the-GitHub-Copilot-Certification-and-Why-It-Matters-for-Developers
 tags:
 - AI Certification
 - Copilot Features

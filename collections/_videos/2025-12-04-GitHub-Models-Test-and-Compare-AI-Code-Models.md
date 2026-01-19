@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/u7sEMJTIQCw
 title: 'GitHub Models: Test and Compare AI Code Models'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/shorts/u7sEMJTIQCw
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-04 16:00:27 +00:00
-permalink: /ai/videos/GitHub-Models-Test-and-Compare-AI-Code-Models
 tags:
 - AI Comparison
 - AI For Developers

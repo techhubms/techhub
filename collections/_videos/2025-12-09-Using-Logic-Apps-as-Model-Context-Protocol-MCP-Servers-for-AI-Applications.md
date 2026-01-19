@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=9z7x0u99J9s
 title: Using Logic Apps as Model Context Protocol (MCP) Servers for AI Applications
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=9z7x0u99J9s
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-12-09 16:58:26 +00:00
-permalink: /ai/videos/Using-Logic-Apps-as-Model-Context-Protocol-MCP-Servers-for-AI-Applications
 tags:
 - Agent Integration
 - Agents

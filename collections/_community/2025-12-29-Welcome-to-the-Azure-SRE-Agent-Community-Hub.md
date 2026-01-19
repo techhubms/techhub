@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-sre-agent/welcome-to-azure-sre-agent-community-hub/m-p/4481822#M1
 title: Welcome to the Azure SRE Agent Community Hub
 author: Mayunk_Jain
-canonical_url: https://techcommunity.microsoft.com/t5/azure-sre-agent/welcome-to-azure-sre-agent-community-hub/m-p/4481822#M1
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-29 21:05:14 +00:00
-permalink: /azure/community/Welcome-to-the-Azure-SRE-Agent-Community-Hub
 tags:
 - Azure SRE Agent
 - Engineering Best Practices

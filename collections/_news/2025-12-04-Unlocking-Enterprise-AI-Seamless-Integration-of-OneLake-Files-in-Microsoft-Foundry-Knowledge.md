@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-enterprise-ai-seamless-integration-of-onelake-files-in-microsoft-foundry-knowledge/
 title: 'Unlocking Enterprise AI: Seamless Integration of OneLake Files in Microsoft Foundry Knowledge'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-enterprise-ai-seamless-integration-of-onelake-files-in-microsoft-foundry-knowledge/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-04 09:00:00 +00:00
-permalink: /ai/news/Unlocking-Enterprise-AI-Seamless-Integration-of-OneLake-Files-in-Microsoft-Foundry-Knowledge
 tags:
 - AI Agents
 - AI Integration

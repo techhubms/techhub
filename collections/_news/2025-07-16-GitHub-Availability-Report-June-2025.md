@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/news-insights/company-news/github-availability-report-june-2025/
 title: 'GitHub Availability Report: June 2025'
 author: Jakub Oleksy
-canonical_url: https://github.blog/news-insights/company-news/github-availability-report-june-2025/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-07-16 21:06:17 +00:00
-permalink: /github-copilot/news/GitHub-Availability-Report-June-2025
 tags:
 - Claude Models
 - Company News

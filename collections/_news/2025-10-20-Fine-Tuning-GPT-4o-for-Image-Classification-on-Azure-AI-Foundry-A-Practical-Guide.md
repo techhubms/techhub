@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/a-developers-guide-to-fine-tuning-gpt-4o-for-image-classification-on-azure-ai-foundry/
 title: 'Fine-Tuning GPT-4o for Image Classification on Azure AI Foundry: A Practical Guide'
 author: Alexandre Levret
-canonical_url: https://devblogs.microsoft.com/foundry/a-developers-guide-to-fine-tuning-gpt-4o-for-image-classification-on-azure-ai-foundry/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-10-20 07:11:50 +00:00
-permalink: /ai/news/Fine-Tuning-GPT-4o-for-Image-Classification-on-Azure-AI-Foundry-A-Practical-Guide
 tags:
 - Azure AI Foundry
 - Azure Machine Learning

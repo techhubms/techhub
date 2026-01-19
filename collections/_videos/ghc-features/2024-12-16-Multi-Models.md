@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/EzEH3wg6GaI
 title: Multi-Models
 author: Randy Pagels
-canonical_url: https://youtu.be/EzEH3wg6GaI
 date: 2024-12-16 20:42:19 +00:00
-permalink: /github-copilot/videos/Multi-Models
 viewing_mode: internal
-section: github-copilot
 ghes_support: false
 plans:
 - Free
-alt-collection: features
 tags:
 - LLM
 - Multi Feature

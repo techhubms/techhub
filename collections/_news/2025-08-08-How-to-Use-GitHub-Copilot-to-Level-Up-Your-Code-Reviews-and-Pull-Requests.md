@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-to-level-up-your-code-reviews-and-pull-requests/
 title: How to Use GitHub Copilot to Level Up Your Code Reviews and Pull Requests
 author: Melissa Pastore
-canonical_url: https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-to-level-up-your-code-reviews-and-pull-requests/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-08-08 16:00:00 +00:00
-permalink: /github-copilot/news/How-to-Use-GitHub-Copilot-to-Level-Up-Your-Code-Reviews-and-Pull-Requests
 tags:
 - Agentic Workflows
 - AI & ML

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/asia/2025/12/19/nz-north-one-year-on-building-the-foundations-of-new-zealands-ai-future/
 title: "NZ North: One Year of Building New Zealand's AI Future with Microsoft Cloud"
 author: stclarke
-canonical_url: https://news.microsoft.com/source/asia/2025/12/19/nz-north-one-year-on-building-the-foundations-of-new-zealands-ai-future/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-19 14:34:22 +00:00
-permalink: /ai/news/NZ-North-One-Year-of-Building-New-Zealands-AI-Future-with-Microsoft-Cloud
 tags:
 - AI Adoption
 - AI Agents

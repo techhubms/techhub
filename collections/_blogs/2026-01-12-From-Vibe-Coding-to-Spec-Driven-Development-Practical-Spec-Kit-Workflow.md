@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development-part2
 title: 'From Vibe Coding to Spec-Driven Development: Practical Spec-Kit Workflow'
 author: Hidde de Smet
-canonical_url: https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development-part2
 viewing_mode: external
 feed_name: Hidde de Smet's Blog
-feed_url: https://hiddedesmet.com/feed.xml
 date: 2026-01-12 00:00:00 +00:00
-permalink: /github-copilot/blogs/From-Vibe-Coding-to-Spec-Driven-Development-Practical-Spec-Kit-Workflow
 tags:
 - .NET 9
 - AI Assisted Development

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/microsoft-biztalk-server-product-lifecycle-update/ba-p/4478559
 title: 'Microsoft BizTalk Server Product Lifecycle Update: Modernization and Migration Guidance'
 author: hcamposu
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/microsoft-biztalk-server-product-lifecycle-update/ba-p/4478559
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-17 15:02:12 +00:00
-permalink: /azure/community/Microsoft-BizTalk-Server-Product-Lifecycle-Update-Modernization-and-Migration-Guidance
 tags:
 - API Management
 - ARM Templates

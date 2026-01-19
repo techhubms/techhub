@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/is-the-future-of-devops-daas/
 title: Is the Future of DevOps DevOps-as-a-Service (DaaS)?
 author: Alexander Williams
-canonical_url: https://devops.com/is-the-future-of-devops-daas/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-19 12:42:52 +00:00
-permalink: /ai/blogs/Is-the-Future-of-DevOps-DevOps-as-a-Service-DaaS
 tags:
 - AI Driven DevOps
 - AI in DevOps

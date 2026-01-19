@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/unlock-vss-benefits-myvisualstudio/
 title: Unlocking the Hidden Value of Your Visual Studio Subscription
 author: Jim Harrer
-canonical_url: https://devblogs.microsoft.com/visualstudio/unlock-vss-benefits-myvisualstudio/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-10-01 16:27:11 +00:00
-permalink: /coding/news/Unlocking-the-Hidden-Value-of-Your-Visual-Studio-Subscription
 tags:
 - Azure Credits
 - Cloud Academy

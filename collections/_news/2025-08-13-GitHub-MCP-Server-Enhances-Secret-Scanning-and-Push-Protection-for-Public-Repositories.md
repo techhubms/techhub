@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-13-github-mcp-server-secret-scanning-push-protection-and-more
 title: GitHub MCP Server Enhances Secret Scanning and Push Protection for Public Repositories
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-13-github-mcp-server-secret-scanning-push-protection-and-more
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-13 17:31:10 +00:00
-permalink: /devops/news/GitHub-MCP-Server-Enhances-Secret-Scanning-and-Push-Protection-for-Public-Repositories
 tags:
 - Agentic Workflows
 - CI/CD

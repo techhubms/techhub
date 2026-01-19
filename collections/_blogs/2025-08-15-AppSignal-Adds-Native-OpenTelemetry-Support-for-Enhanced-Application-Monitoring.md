@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/appsignal-adds-opentelemetry-support-to-monitoring-platform/?utm_source=rss&utm_medium=rss&utm_campaign=appsignal-adds-opentelemetry-support-to-monitoring-platform
 title: AppSignal Adds Native OpenTelemetry Support for Enhanced Application Monitoring
 author: Mike Vizard
-canonical_url: https://devops.com/appsignal-adds-opentelemetry-support-to-monitoring-platform/?utm_source=rss&utm_medium=rss&utm_campaign=appsignal-adds-opentelemetry-support-to-monitoring-platform
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-15 15:57:54 +00:00
-permalink: /devops/blogs/AppSignal-Adds-Native-OpenTelemetry-Support-for-Enhanced-Application-Monitoring
 tags:
 - AI
 - AI in Software Development

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=xoUCZj4ZMRs
 title: 'Azure File Sync Managed Identity: Enhanced Security and Simplified Operations'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=xoUCZj4ZMRs
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-20 14:56:24 +00:00
-permalink: /azure/videos/Azure-File-Sync-Managed-Identity-Enhanced-Security-and-Simplified-Operations
 tags:
 - Access Keys
 - Azure AD

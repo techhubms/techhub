@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-modularized-libraries-for-javascript/
 title: Introducing Modularized Azure SDK Libraries for JavaScript
 author: Qiaoqiao Zhang
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-modularized-libraries-for-javascript/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-04-23 16:25:10 +00:00
-permalink: /coding/news/Introducing-Modularized-Azure-SDK-Libraries-for-JavaScript
 tags:
 - Azure SDK
 - Bundle Size

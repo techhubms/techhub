@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-refresh-announcement-site-manager/ba-p/4468929
 title: 'Azure Arc Site Manager Public Preview Refresh: Unified Management for Hybrid and Edge Environments'
 author: supriyobanerjee
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-refresh-announcement-site-manager/ba-p/4468929
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:00 +00:00
-permalink: /azure/community/Azure-Arc-Site-Manager-Public-Preview-Refresh-Unified-Management-for-Hybrid-and-Edge-Environments
 tags:
 - Aggregated Alerts
 - Azure Arc

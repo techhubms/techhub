@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-communication-services/from-call-transcripts-to-crm-gold-ai-powered-post-call/ba-p/4456337
 title: 'From Call Transcripts to CRM Gold: AI-Powered Post-Call Intelligence'
 author: seankeegan
-canonical_url: https://techcommunity.microsoft.com/t5/azure-communication-services/from-call-transcripts-to-crm-gold-ai-powered-post-call/ba-p/4456337
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-24 18:12:34 +00:00
-permalink: /ai/community/From-Call-Transcripts-to-CRM-Gold-AI-Powered-Post-Call-Intelligence
 tags:
 - AI Workflow
 - API Integration

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=J_PKZb6D_VE
 title: 'Identity Under Siege: Modern ITDR from Microsoft'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=J_PKZb6D_VE
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 15:59:31 +00:00
-permalink: /azure/videos/Identity-Under-Siege-Modern-ITDR-from-Microsoft
 tags:
 - Cloud Security
 - Conditional Access

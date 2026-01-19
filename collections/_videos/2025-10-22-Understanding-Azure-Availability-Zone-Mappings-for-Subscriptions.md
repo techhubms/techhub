@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=jBpxG2Fk2jA
 title: Understanding Azure Availability Zone Mappings for Subscriptions
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=jBpxG2Fk2jA
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-10-22 16:32:44 +00:00
-permalink: /azure/videos/Understanding-Azure-Availability-Zone-Mappings-for-Subscriptions
 tags:
 - Availability Zone
 - AZ Alignment

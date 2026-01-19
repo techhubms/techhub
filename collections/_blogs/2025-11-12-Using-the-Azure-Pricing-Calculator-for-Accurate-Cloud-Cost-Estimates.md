@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-to-use-the-azure-pricing-calculator-effectively-a-step-by%e2%80%90step-guide/
 title: Using the Azure Pricing Calculator for Accurate Cloud Cost Estimates
 author: Dellenny
-canonical_url: https://dellenny.com/how-to-use-the-azure-pricing-calculator-effectively-a-step-by%e2%80%90step-guide/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-12 16:05:06 +00:00
-permalink: /azure/blogs/Using-the-Azure-Pricing-Calculator-for-Accurate-Cloud-Cost-Estimates
 tags:
 - Azure Pricing Calculator
 - Azure Regions

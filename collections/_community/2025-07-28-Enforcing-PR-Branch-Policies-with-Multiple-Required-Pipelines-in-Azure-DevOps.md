@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/azuredevops/comments/1mbguxq/how_to_only_allow_prs_if_pipelines_x_y_both_run/
 title: Enforcing PR Branch Policies with Multiple Required Pipelines in Azure DevOps
 author: panzerbjrn
-canonical_url: https://www.reddit.com/r/azuredevops/comments/1mbguxq/how_to_only_allow_prs_if_pipelines_x_y_both_run/
 viewing_mode: external
 feed_name: Reddit Azure DevOps
-feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-28 13:56:17 +00:00
-permalink: /azure/community/Enforcing-PR-Branch-Policies-with-Multiple-Required-Pipelines-in-Azure-DevOps
 tags:
 - Azure DevOps
 - Azure Pipelines

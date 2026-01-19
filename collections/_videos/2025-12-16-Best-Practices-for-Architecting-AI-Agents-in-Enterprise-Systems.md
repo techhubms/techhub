@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=pwtY8O_YvSI
 title: Best Practices for Architecting AI Agents in Enterprise Systems
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=pwtY8O_YvSI
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-16 08:01:04 +00:00
-permalink: /ai/videos/Best-Practices-for-Architecting-AI-Agents-in-Enterprise-Systems
 tags:
 - A2A Communication
 - Agent Framework

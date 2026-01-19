@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/protecting-your-business-data-sensitivity-labels-dlp-and-conditional-access-explained-simply/
 title: 'Practical Data Protection in Microsoft 365: Sensitivity Labels, DLP, and Conditional Access for Small Businesses'
 author: Dellenny
-canonical_url: https://dellenny.com/protecting-your-business-data-sensitivity-labels-dlp-and-conditional-access-explained-simply/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-13 08:28:44 +00:00
-permalink: /security/blogs/Practical-Data-Protection-in-Microsoft-365-Sensitivity-Labels-DLP-and-Conditional-Access-for-Small-Businesses
 tags:
 - Access Control
 - Azure Active Directory

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=E7JJ8JLqlf8
 title: 'AI Enterprise Value: Real-World Applications with Microsoft Foundry and MCP'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=E7JJ8JLqlf8
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:08:44 +00:00
-permalink: /ai/videos/AI-Enterprise-Value-Real-World-Applications-with-Microsoft-Foundry-and-MCP
 tags:
 - Advanced AI Applications
 - Agentic AI

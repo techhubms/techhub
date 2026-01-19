@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/updates/v1_105
 title: 'Visual Studio Code September 2025 Release (v1.105): AI, MCP, and Developer Enhancements'
 author: Visual Studio Code Team
-canonical_url: https://code.visualstudio.com/updates/v1_105
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-10-09 17:00:00 +00:00
-permalink: /github-copilot/news/Visual-Studio-Code-September-2025-Release-v1105-AI-MCP-and-Developer-Enhancements
 tags:
 - Accessibility
 - Agent Tools

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=NUELGzIHT-I
 title: The Ultimate Beginner's Guide to GitHub in 2025
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=NUELGzIHT-I
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-22 17:00:35 +00:00
-permalink: /devops/videos/The-Ultimate-Beginners-Guide-to-GitHub-in-2025
 tags:
 - Beginner Tutorial
 - Collaboration

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=LnzvpisAkcs
 title: 'Ignite BRK1706: Build and Manage AI Apps with Microsoft Foundry'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=LnzvpisAkcs
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-10 22:07:54 +00:00
-permalink: /ai/videos/Ignite-BRK1706-Build-and-Manage-AI-Apps-with-Microsoft-Foundry
 tags:
 - Agent Factory
 - AI Agents

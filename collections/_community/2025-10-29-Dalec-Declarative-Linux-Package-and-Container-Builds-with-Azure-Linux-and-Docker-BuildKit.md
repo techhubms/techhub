@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dalec-declarative-package-and-container-builds/ba-p/4465290
 title: 'Dalec: Declarative Linux Package and Container Builds with Azure Linux and Docker BuildKit'
 author: SertacOzercan
-canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dalec-declarative-package-and-container-builds/ba-p/4465290
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-29 20:33:52 +00:00
-permalink: /azure/community/Dalec-Declarative-Linux-Package-and-Container-Builds-with-Azure-Linux-and-Docker-BuildKit
 tags:
 - Azure Linux
 - CI/CD

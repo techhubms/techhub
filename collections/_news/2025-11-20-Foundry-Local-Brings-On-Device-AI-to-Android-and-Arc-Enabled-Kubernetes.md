@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/foundry-local-comes-to-android/
 title: Foundry Local Brings On-Device AI to Android and Arc-Enabled Kubernetes
 author: Raji Rajagopalan
-canonical_url: https://devblogs.microsoft.com/foundry/foundry-local-comes-to-android/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-20 16:30:12 +00:00
-permalink: /ai/news/Foundry-Local-Brings-On-Device-AI-to-Android-and-Arc-Enabled-Kubernetes
 tags:
 - AI Development
 - AI Tools

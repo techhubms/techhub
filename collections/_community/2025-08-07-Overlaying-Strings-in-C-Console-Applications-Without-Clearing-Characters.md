@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mk7faj/non_printable_space/
 title: Overlaying Strings in C# Console Applications Without Clearing Characters
 author: 06Hexagram
-canonical_url: https://www.reddit.com/r/csharp/comments/1mk7faj/non_printable_space/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-07 18:08:40 +00:00
-permalink: /coding/community/Overlaying-Strings-in-C-Console-Applications-Without-Clearing-Characters
 tags:
 - .NET
 - ANSI Codes

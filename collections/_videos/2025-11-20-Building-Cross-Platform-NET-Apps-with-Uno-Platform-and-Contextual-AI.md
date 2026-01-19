@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=R7p_lGtNvMw
 title: Building Cross-Platform .NET Apps with Uno Platform and Contextual AI
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=R7p_lGtNvMw
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-20 17:46:59 +00:00
-permalink: /ai/videos/Building-Cross-Platform-NET-Apps-with-Uno-Platform-and-Contextual-AI
 tags:
 - .NET
 - Agentic Workflows

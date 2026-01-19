@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/03/windows-server-2025-security-baseline-and-app-control/
 title: 'Windows Server 2025 Security Baseline and App Control: Enhancing Windows Server Security'
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/03/windows-server-2025-security-baseline-and-app-control/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-03-17 10:33:20 +00:00
-permalink: /azure/blogs/Windows-Server-2025-Security-Baseline-and-App-Control-Enhancing-Windows-Server-Security
 tags:
 - App Control
 - Azure Arc

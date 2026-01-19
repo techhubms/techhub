@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-22-github-copilot-app-modernization-is-now-generally-available-for-java-and-net
 title: GitHub Copilot App Modernization Now Available for Java and .NET Projects
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-22-github-copilot-app-modernization-is-now-generally-available-for-java-and-net
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-23 13:00:35 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-App-Modernization-Now-Available-for-Java-and-NET-Projects
 tags:
 - .NET
 - App Modernization

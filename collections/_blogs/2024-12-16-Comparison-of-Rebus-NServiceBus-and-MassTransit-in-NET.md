@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code-maze.com/aspnetcore-comparison-of-rebus-nservicebus-and-masstransit/
 title: Comparison of Rebus, NServiceBus, and MassTransit in .NET
 author: Michal Kaminski
-canonical_url: https://code-maze.com/aspnetcore-comparison-of-rebus-nservicebus-and-masstransit/
 viewing_mode: external
 feed_name: Code Maze Blog
-feed_url: https://code-maze.com/feed/
 date: 2024-12-16 04:28:02 +00:00
-permalink: /coding/blogs/Comparison-of-Rebus-NServiceBus-and-MassTransit-in-NET
 tags:
 - .NET
 - ASP.NET Core

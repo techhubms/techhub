@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://khalidabuhakmeh.com/how-to-pick-the-right-constructor-when-using-activatorutilities-in-dotnet
 title: How To Pick The Right Constructor When Using ActivatorUtilities In .NET
 author: Khalid Abuhakmeh
-canonical_url: https://khalidabuhakmeh.com/how-to-pick-the-right-constructor-when-using-activatorutilities-in-dotnet
 viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
-feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2024-08-13 00:00:00 +00:00
-permalink: /coding/blogs/How-To-Pick-The-Right-Constructor-When-Using-ActivatorUtilities-In-NET
 tags:
 - .NET
 - ActivatorUtilities

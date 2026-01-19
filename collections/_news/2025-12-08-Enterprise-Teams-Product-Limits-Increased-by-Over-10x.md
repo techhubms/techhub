@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-08-enterprise-teams-product-limits-increased-by-over-10x
 title: Enterprise Teams Product Limits Increased by Over 10x
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-08-enterprise-teams-product-limits-increased-by-over-10x
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-08 19:40:44 +00:00
-permalink: /devops/news/Enterprise-Teams-Product-Limits-Increased-by-Over-10x
 tags:
 - Access Management
 - Enterprise Cloud

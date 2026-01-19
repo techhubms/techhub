@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=krjZfLqP4ZI
 title: 'Reinventing Manufacturing with Digital Twin: AI-Powered Advances'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=krjZfLqP4ZI
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 14:36:39 +00:00
-permalink: /ai/videos/Reinventing-Manufacturing-with-Digital-Twin-AI-Powered-Advances
 tags:
 - Advanced Manufacturing
 - Agents

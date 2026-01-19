@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=1LgV-kfnUAA
 title: Your Guide to Saving with Azure Hybrid Benefit
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=1LgV-kfnUAA
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-19 07:00:05 +00:00
-permalink: /azure/videos/Your-Guide-to-Saving-with-Azure-Hybrid-Benefit
 tags:
 - Azure Hybrid Benefit
 - Azure Reservations

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/generally-available-high-scale-mode-in-azure-monitor-container/ba-p/4452199
 title: General Availability of High Scale Mode in Azure Monitor Container Insights
 author: DalanMendonca
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/generally-available-high-scale-mode-in-azure-monitor-container/ba-p/4452199
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-08 20:32:11 +00:00
-permalink: /azure/community/General-Availability-of-High-Scale-Mode-in-Azure-Monitor-Container-Insights
 tags:
 - Agent Configuration
 - AKS

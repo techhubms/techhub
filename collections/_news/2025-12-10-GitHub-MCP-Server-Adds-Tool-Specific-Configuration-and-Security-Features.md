@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-10-the-github-mcp-server-adds-support-for-tool-specific-configuration-and-more
 title: GitHub MCP Server Adds Tool-Specific Configuration and Security Features
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-10-the-github-mcp-server-adds-support-for-tool-specific-configuration-and-more
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-10 11:01:02 +00:00
-permalink: /ai/news/GitHub-MCP-Server-Adds-Tool-Specific-Configuration-and-Security-Features
 tags:
 - AI Workflows
 - Content Sanitization

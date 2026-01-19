@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=3i6YASbyuHw
 title: Understanding Microsoft's LTS/STS Changes for .NET Support
 author: Nick Chapsas
-canonical_url: https://www.youtube.com/watch?v=3i6YASbyuHw
 viewing_mode: internal
 feed_name: Nick Chapsas YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-09-22 11:00:16 +00:00
-permalink: /coding/videos/Understanding-Microsofts-LTSSTS-Changes-for-NET-Support
 tags:
 - .NET
 - .NET Support Policy

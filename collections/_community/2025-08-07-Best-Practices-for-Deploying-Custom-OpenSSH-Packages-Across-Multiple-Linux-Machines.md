@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/devops/comments/1mk0byh/installing_packages_not_available_in_linux_repos/
 title: Best Practices for Deploying Custom OpenSSH Packages Across Multiple Linux Machines
 author: antonioefx
-canonical_url: https://www.reddit.com/r/devops/comments/1mk0byh/installing_packages_not_available_in_linux_repos/
 viewing_mode: external
 feed_name: Reddit DevOps
-feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-07 13:37:34 +00:00
-permalink: /devops/community/Best-Practices-for-Deploying-Custom-OpenSSH-Packages-Across-Multiple-Linux-Machines
 tags:
 - Almalinux
 - Artifactory

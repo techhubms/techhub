@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/rewriting-the-rules-of-software-quality-why-agentic-qa-is-the-future-cios-must-champion/
 title: 'Rewriting the Rules of Software Quality: Why Agentic QA is the Future CIOs Must Champion'
 author: Chirag Gandhi
-canonical_url: https://devops.com/rewriting-the-rules-of-software-quality-why-agentic-qa-is-the-future-cios-must-champion/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-24 08:15:17 +00:00
-permalink: /ai/blogs/Rewriting-the-Rules-of-Software-Quality-Why-Agentic-QA-is-the-Future-CIOs-Must-Champion
 tags:
 - Adaptive Testing
 - Agentic QA

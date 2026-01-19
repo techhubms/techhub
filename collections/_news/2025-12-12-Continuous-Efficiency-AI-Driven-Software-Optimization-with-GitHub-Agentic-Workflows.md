@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/news-insights/policy-news-and-insights/the-future-of-ai-powered-software-optimization-and-how-it-can-help-your-team/
 title: 'Continuous Efficiency: AI-Driven Software Optimization with GitHub Agentic Workflows'
 author: Paull Young
-canonical_url: https://github.blog/news-insights/policy-news-and-insights/the-future-of-ai-powered-software-optimization-and-how-it-can-help-your-team/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-12-12 20:43:37 +00:00
-permalink: /ai/news/Continuous-Efficiency-AI-Driven-Software-Optimization-with-GitHub-Agentic-Workflows
 tags:
 - Agentic Workflows
 - AI Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/azure-kubernetes-service-automatic-fast-and-frictionless-kubernetes-for-all/
 title: Announcing the General Availability of Azure Kubernetes Service (AKS) Automatic
 author: sbaynes
-canonical_url: https://azure.microsoft.com/en-us/blog/azure-kubernetes-service-automatic-fast-and-frictionless-kubernetes-for-all/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-16 18:00:02 +00:00
-permalink: /ai/news/Announcing-the-General-Availability-of-Azure-Kubernetes-Service-AKS-Automatic
 tags:
 - AKS
 - AKS Automatic

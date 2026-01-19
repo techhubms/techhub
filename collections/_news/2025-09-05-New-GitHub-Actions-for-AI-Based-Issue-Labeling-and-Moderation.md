@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-05-github-actions-ai-labeler-and-moderator-with-the-github-models-inference-api
 title: New GitHub Actions for AI-Based Issue Labeling and Moderation
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-05-github-actions-ai-labeler-and-moderator-with-the-github-models-inference-api
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-05 22:38:54 +00:00
-permalink: /ai/news/New-GitHub-Actions-for-AI-Based-Issue-Labeling-and-Moderation
 tags:
 - AI Models
 - Automation

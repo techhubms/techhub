@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-expanding-observability-and-multi-cloud/ba-p/4472719
 title: 'Azure SRE Agent: Enhancing Observability and Multi-Cloud Incident Management'
 author: dbandaru
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-expanding-observability-and-multi-cloud/ba-p/4472719
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-24 23:34:13 +00:00
-permalink: /azure/community/Azure-SRE-Agent-Enhancing-Observability-and-Multi-Cloud-Incident-Management
 tags:
 - Automation
 - Azure Monitor

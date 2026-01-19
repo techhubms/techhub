@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/latest-dora-report-from-google-surfaces-significant-ai-adoption/
 title: Latest DORA Report from Google Surfaces Significant AI Adoption
 author: Mike Vizard
-canonical_url: https://devops.com/latest-dora-report-from-google-surfaces-significant-ai-adoption/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-28 03:36:53 +00:00
-permalink: /ai/blogs/Latest-DORA-Report-from-Google-Surfaces-Significant-AI-Adoption
 tags:
 - AI Adoption
 - AI Tools

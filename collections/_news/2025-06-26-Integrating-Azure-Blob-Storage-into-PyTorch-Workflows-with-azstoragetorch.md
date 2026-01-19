@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/introducing-the-azure-storage-connector-for-pytorch/
 title: Integrating Azure Blob Storage into PyTorch Workflows with azstoragetorch
 author: Rohit Ganguly
-canonical_url: https://devblogs.microsoft.com/azure-sdk/introducing-the-azure-storage-connector-for-pytorch/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-06-26 15:00:12 +00:00
-permalink: /ml/news/Integrating-Azure-Blob-Storage-into-PyTorch-Workflows-with-azstoragetorch
 tags:
 - Azstoragetorch
 - Azure Blob Storage

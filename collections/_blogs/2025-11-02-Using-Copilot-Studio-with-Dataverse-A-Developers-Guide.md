@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/using-copilot-studio-with-dataverse-a-developers-guide/
 title: 'Using Copilot Studio with Dataverse: A Developer’s Guide'
 author: Dellenny
-canonical_url: https://dellenny.com/using-copilot-studio-with-dataverse-a-developers-guide/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-02 08:31:03 +00:00
-permalink: /ai/blogs/Using-Copilot-Studio-with-Dataverse-A-Developers-Guide
 tags:
 - AI Agent
 - Authentication

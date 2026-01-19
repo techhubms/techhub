@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-data-agent-now-supports-ci-cd-alm-flow-and-git-integration/
 title: 'Fabric Data Agent: CI/CD, ALM Flow, and Git Integration Enhancements'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-data-agent-now-supports-ci-cd-alm-flow-and-git-integration/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-07 10:00:00 +00:00
-permalink: /ml/news/Fabric-Data-Agent-CICD-ALM-Flow-and-Git-Integration-Enhancements
 tags:
 - ALM
 - Application Lifecycle Management

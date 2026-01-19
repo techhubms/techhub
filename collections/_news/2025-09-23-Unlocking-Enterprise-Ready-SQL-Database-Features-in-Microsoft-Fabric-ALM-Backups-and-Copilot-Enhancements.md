@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-enterprise-ready-sql-database-in-microsoft-fabric-auditing-backup-copilot-more/
 title: 'Unlocking Enterprise-Ready SQL Database Features in Microsoft Fabric: ALM, Backups, and Copilot Enhancements'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-enterprise-ready-sql-database-in-microsoft-fabric-auditing-backup-copilot-more/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-23 13:00:00 +00:00
-permalink: /ai/news/Unlocking-Enterprise-Ready-SQL-Database-Features-in-Microsoft-Fabric-ALM-Backups-and-Copilot-Enhancements
 tags:
 - ALM
 - Application Lifecycle Management

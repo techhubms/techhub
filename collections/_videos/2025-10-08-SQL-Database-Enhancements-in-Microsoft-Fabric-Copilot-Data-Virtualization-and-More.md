@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=h7DhCqFArtc
 title: 'SQL Database Enhancements in Microsoft Fabric: Copilot, Data Virtualization, and More'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=h7DhCqFArtc
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-08 16:01:29 +00:00
-permalink: /ai/videos/SQL-Database-Enhancements-in-Microsoft-Fabric-Copilot-Data-Virtualization-and-More
 tags:
 - Backup
 - Cloud Computing

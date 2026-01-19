@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/transforming-data-migration-using-azure-copilot/ba-p/4476610
 title: Transforming Data Migration Decisions with Azure Copilot's Storage Migration Solutions Advisor
 author: madhurinrao
-canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/transforming-data-migration-using-azure-copilot/ba-p/4476610
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-11 18:57:02 +00:00
-permalink: /ai/community/Transforming-Data-Migration-Decisions-with-Azure-Copilots-Storage-Migration-Solutions-Advisor
 tags:
 - AI Driven Workflow
 - AWS S3

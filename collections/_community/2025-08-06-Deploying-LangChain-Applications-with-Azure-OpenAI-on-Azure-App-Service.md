@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploy-langchain-applications-to-azure-app-service/ba-p/4440640
 title: Deploying LangChain Applications with Azure OpenAI on Azure App Service
 author: TulikaC
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploy-langchain-applications-to-azure-app-service/ba-p/4440640
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-06 11:42:32 +00:00
-permalink: /ai/community/Deploying-LangChain-Applications-with-Azure-OpenAI-on-Azure-App-Service
 tags:
 - AI Application Deployment
 - App Service

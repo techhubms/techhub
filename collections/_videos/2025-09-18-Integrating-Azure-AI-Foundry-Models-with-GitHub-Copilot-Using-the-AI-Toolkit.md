@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=pG6d6Wwl9gU
 title: Integrating Azure AI Foundry Models with GitHub Copilot Using the AI Toolkit
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=pG6d6Wwl9gU
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-18 17:45:00 +00:00
-permalink: /github-copilot/videos/Integrating-Azure-AI-Foundry-Models-with-GitHub-Copilot-Using-the-AI-Toolkit
 tags:
 - AI Integration
 - AI Toolkit

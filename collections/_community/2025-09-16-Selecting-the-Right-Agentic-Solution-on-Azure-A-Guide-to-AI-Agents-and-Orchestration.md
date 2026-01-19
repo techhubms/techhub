@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/selecting-the-right-agentic-solution-on-azure/ba-p/4453955
 title: 'Selecting the Right Agentic Solution on Azure: A Guide to AI Agents and Orchestration'
 author: pranabpaul
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/selecting-the-right-agentic-solution-on-azure/ba-p/4453955
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-16 00:07:04 +00:00
-permalink: /ai/community/Selecting-the-Right-Agentic-Solution-on-Azure-A-Guide-to-AI-Agents-and-Orchestration
 tags:
 - Agent Infrastructure
 - Agent Orchestration

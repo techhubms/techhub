@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=xWA0xYttWMo
 title: 'Modernizing Legacy: COBOL to Cloud with GitHub Copilot'
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=xWA0xYttWMo
 viewing_mode: internal
 feed_name: GitHub's Youtube channel
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-22 14:14:11 +00:00
-permalink: /github-copilot/videos/Modernizing-Legacy-COBOL-to-Cloud-with-GitHub-Copilot
 tags:
 - AI Assisted Tools
 - Automated Documentation

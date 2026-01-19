@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/introducing-multi-agent-workflows-in-foundry-agent-service/
 title: Introducing Multi-Agent Workflows in Foundry Agent Service
 author: Mona Whalin
-canonical_url: https://devblogs.microsoft.com/foundry/introducing-multi-agent-workflows-in-foundry-agent-service/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-25 16:00:37 +00:00
-permalink: /ai/news/Introducing-Multi-Agent-Workflows-in-Foundry-Agent-Service
 tags:
 - Agent Evaluation
 - Agent Framework

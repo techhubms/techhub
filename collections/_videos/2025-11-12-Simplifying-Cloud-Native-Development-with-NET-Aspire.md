@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=aXouOsBh4ro
 title: Simplifying Cloud-Native Development with .NET Aspire
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=aXouOsBh4ro
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 22:51:40 +00:00
-permalink: /coding/videos/Simplifying-Cloud-Native-Development-with-NET-Aspire
 tags:
 - .NET
 - .NET 10

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=2srbflqimJQ
 title: 'Leading with Trust: Building & Deploying Agents in a Regulated World'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=2srbflqimJQ
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 13:52:17 +00:00
-permalink: /ai/videos/Leading-with-Trust-Building-and-Deploying-Agents-in-a-Regulated-World
 tags:
 - Agent Lifecycle
 - AI Security

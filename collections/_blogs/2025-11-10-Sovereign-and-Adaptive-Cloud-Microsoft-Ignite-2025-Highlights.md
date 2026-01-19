@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/11/driving-impact-in-the-era-of-ai-sovereign-cloud-adaptive-cloud-at-microsoft-ignite-2025/
 title: 'Sovereign and Adaptive Cloud: Microsoft Ignite 2025 Highlights'
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/11/driving-impact-in-the-era-of-ai-sovereign-cloud-adaptive-cloud-at-microsoft-ignite-2025/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-11-10 14:53:03 +00:00
-permalink: /ai/blogs/Sovereign-and-Adaptive-Cloud-Microsoft-Ignite-2025-Highlights
 tags:
 - Adaptive Cloud
 - Agentic Intelligence

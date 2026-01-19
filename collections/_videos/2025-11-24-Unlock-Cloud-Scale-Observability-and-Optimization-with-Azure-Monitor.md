@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=-IZ-PLSvDgU
 title: Unlock Cloud-Scale Observability and Optimization with Azure Monitor
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=-IZ-PLSvDgU
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 07:42:13 +00:00
-permalink: /ai/videos/Unlock-Cloud-Scale-Observability-and-Optimization-with-Azure-Monitor
 tags:
 - Agentic AI
 - AI Operations

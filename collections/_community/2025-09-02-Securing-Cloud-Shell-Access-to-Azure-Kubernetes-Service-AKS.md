@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/securing-cloud-shell-access-to-aks/ba-p/4450299
 title: Securing Cloud Shell Access to Azure Kubernetes Service (AKS)
 author: samcogan
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/securing-cloud-shell-access-to-aks/ba-p/4450299
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-02 15:13:03 +00:00
-permalink: /azure/community/Securing-Cloud-Shell-Access-to-Azure-Kubernetes-Service-AKS
 tags:
 - Access Control
 - AKS

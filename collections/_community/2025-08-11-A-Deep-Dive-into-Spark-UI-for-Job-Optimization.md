@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-mission-critical-blog/a-deep-dive-into-spark-ui-for-job-optimization/ba-p/4442229
 title: A Deep Dive into Spark UI for Job Optimization
 author: anishekkamal
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-mission-critical-blog/a-deep-dive-into-spark-ui-for-job-optimization/ba-p/4442229
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-11 18:59:33 +00:00
-permalink: /ml/community/A-Deep-Dive-into-Spark-UI-for-Job-Optimization
 tags:
 - Adaptive Query Execution
 - Apache Spark

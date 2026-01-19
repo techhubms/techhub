@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=JilqJR1aZLs
 title: 'VS Code 2025: Year in Review with Burke Holland & Pierce Boggan'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=JilqJR1aZLs
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-12-23 08:00:28 +00:00
-permalink: /github-copilot/videos/VS-Code-2025-Year-in-Review-with-Burke-Holland-and-Pierce-Boggan
 tags:
 - Agent Mode
 - AI Integration

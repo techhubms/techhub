@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/app-service-easy-mcp-add-ai-agent-capabilities-to-your-existing/ba-p/4484513
 title: 'Easy MCP: Exposing REST APIs to AI Agents with Azure App Service'
 author: jordanselig
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/app-service-easy-mcp-add-ai-agent-capabilities-to-your-existing/ba-p/4484513
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-14 19:41:29 +00:00
-permalink: /ai/community/Easy-MCP-Exposing-REST-APIs-to-AI-Agents-with-Azure-App-Service
 tags:
 - AI Agents
 - API Gateway

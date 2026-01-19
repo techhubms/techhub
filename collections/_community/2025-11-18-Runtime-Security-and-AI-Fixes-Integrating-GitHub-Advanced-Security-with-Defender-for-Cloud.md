@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/security-where-it-matters-runtime-context-and-ai-fixes-now/ba-p/4470794
 title: 'Runtime Security and AI Fixes: Integrating GitHub Advanced Security with Defender for Cloud'
 author: AndrewMFlick
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/security-where-it-matters-runtime-context-and-ai-fixes-now/ba-p/4470794
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:04:11 +00:00
-permalink: /github-copilot/community/Runtime-Security-and-AI-Fixes-Integrating-GitHub-Advanced-Security-with-Defender-for-Cloud
 tags:
 - Agentic Remediation
 - AI Suggested Fix

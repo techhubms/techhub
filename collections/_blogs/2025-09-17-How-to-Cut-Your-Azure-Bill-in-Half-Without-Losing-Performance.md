@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-to-cut-your-azure-bill-in-half-without-losing-performance/
 title: How to Cut Your Azure Bill in Half Without Losing Performance
 author: Dellenny
-canonical_url: https://dellenny.com/how-to-cut-your-azure-bill-in-half-without-losing-performance/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-17 10:19:24 +00:00
-permalink: /azure/blogs/How-to-Cut-Your-Azure-Bill-in-Half-Without-Losing-Performance
 tags:
 - Azure Advisor
 - Azure Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-public-preview-of-managed-instance-on-azure-app/ba-p/4469930
 title: 'Managed Instance on Azure App Service: Public Preview Announcement and Technical Overview'
 author: apwestgarth
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-public-preview-of-managed-instance-on-azure-app/ba-p/4469930
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:00 +00:00
-permalink: /coding/community/Managed-Instance-on-Azure-App-Service-Public-Preview-Announcement-and-Technical-Overview
 tags:
 - .NET Framework
 - Azure App Service

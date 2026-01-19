@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ayWSbRDQ1ds
 title: Azure Update - Ignite Special Coverage (21st November 2025)
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=ayWSbRDQ1ds
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-11-21 17:57:53 +00:00
-permalink: /ai/videos/Azure-Update-Ignite-Special-Coverage-21st-November-2025
 tags:
 - AKS
 - App Service

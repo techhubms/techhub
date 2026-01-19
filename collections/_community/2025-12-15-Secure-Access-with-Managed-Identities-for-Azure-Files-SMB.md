@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/secure-seamless-access-using-managed-identities-with-azure-files/ba-p/4477565
 title: Secure Access with Managed Identities for Azure Files SMB
 author: Priyanka-Gangal
-canonical_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/secure-seamless-access-using-managed-identities-with-azure-files/ba-p/4477565
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-15 17:46:43 +00:00
-permalink: /azure/community/Secure-Access-with-Managed-Identities-for-Azure-Files-SMB
 tags:
 - AKS
 - Azure DevOps

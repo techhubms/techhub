@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-events/ignite-nyc-join-the-microsoft-ignite-2026-watch-party-in-times/ec-p/4459801#M661
 title: 'Microsoft Ignite 2025 NYC Watch Party: Keynotes, AI, Azure, and Community Sessions'
 author: MariselaC
-canonical_url: https://techcommunity.microsoft.com/t5/azure-events/ignite-nyc-join-the-microsoft-ignite-2026-watch-party-in-times/ec-p/4459801#M661
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-07 23:00:00 +00:00
-permalink: /ai/community/Microsoft-Ignite-2025-NYC-Watch-Party-Keynotes-AI-Azure-and-Community-Sessions
 tags:
 - .NET
 - Agentic Orchestration

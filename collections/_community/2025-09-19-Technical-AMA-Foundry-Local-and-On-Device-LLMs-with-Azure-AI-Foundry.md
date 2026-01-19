@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-us-for-a-technical-deep-dive-and-q-a-on-foundry-local-llms/ba-p/4455060
 title: 'Technical AMA: Foundry Local and On-Device LLMs with Azure AI Foundry'
 author: Lee_Stott
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-us-for-a-technical-deep-dive-and-q-a-on-foundry-local-llms/ba-p/4455060
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-19 07:00:00 +00:00
-permalink: /ai/community/Technical-AMA-Foundry-Local-and-On-Device-LLMs-with-Azure-AI-Foundry
 tags:
 - AI Frameworks
 - AI Workflow

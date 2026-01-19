@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=_cqJzFxLorE
 title: Building Intelligent AI Applications with Java, Spring Boot, and LangChain4j
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=_cqJzFxLorE
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-04 01:00:50 +00:00
-permalink: /github-copilot/videos/Building-Intelligent-AI-Applications-with-Java-Spring-Boot-and-LangChain4j
 tags:
 - AI Integration
 - AIApplications

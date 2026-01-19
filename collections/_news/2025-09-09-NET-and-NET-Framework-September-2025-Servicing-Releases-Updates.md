@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-september-2025-servicing-updates/
 title: .NET and .NET Framework September 2025 Servicing Releases Updates
 author: Tara Overfield, Victor Israel-Bolarinwa
-canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-september-2025-servicing-updates/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-09-09 17:45:00 +00:00
-permalink: /coding/news/NET-and-NET-Framework-September-2025-Servicing-Releases-Updates
 tags:
 - .NET
 - .NET 8.0

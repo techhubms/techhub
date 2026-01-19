@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/gpt-5-now-available-in-visual-studio/
 title: GPT-5 Comes to GitHub Copilot in Visual Studio
 author: Rhea Patel
-canonical_url: https://devblogs.microsoft.com/visualstudio/gpt-5-now-available-in-visual-studio/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-08-12 17:10:52 +00:00
-permalink: /github-copilot/news/GPT-5-Comes-to-GitHub-Copilot-in-Visual-Studio
 tags:
 - Agent Mode
 - AI Code Completion

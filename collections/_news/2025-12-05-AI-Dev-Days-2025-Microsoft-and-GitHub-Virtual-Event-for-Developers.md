@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/join-us-for-ai-devdays
 title: 'AI Dev Days 2025: Microsoft & GitHub Virtual Event for Developers'
 author: James Montemagno
-canonical_url: https://devblogs.microsoft.com/blog/join-us-for-ai-devdays
 viewing_mode: external
 feed_name: Microsoft Blog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-12-05 19:30:22 +00:00
-permalink: /github-copilot/news/AI-Dev-Days-2025-Microsoft-and-GitHub-Virtual-Event-for-Developers
 tags:
 - Agent Framework
 - AI Agents

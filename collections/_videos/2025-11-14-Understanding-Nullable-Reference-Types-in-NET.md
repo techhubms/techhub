@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=7Sz4heIk_lM
 title: Understanding Nullable Reference Types in .NET
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=7Sz4heIk_lM
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 08:30:06 +00:00
-permalink: /coding/videos/Understanding-Nullable-Reference-Types-in-NET
 tags:
 - .NET
 - .NET Conf

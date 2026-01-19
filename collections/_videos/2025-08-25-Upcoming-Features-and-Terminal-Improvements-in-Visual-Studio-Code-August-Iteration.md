@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=UB6QNYKStVI
 title: 'Upcoming Features and Terminal Improvements in Visual Studio Code: August Iteration'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=UB6QNYKStVI
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-25 07:00:26 +00:00
-permalink: /coding/videos/Upcoming-Features-and-Terminal-Improvements-in-Visual-Studio-Code-August-Iteration
 tags:
 - Agent Mode
 - Automation

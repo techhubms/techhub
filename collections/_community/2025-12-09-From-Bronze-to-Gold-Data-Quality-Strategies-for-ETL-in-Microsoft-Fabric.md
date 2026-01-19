@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/from-bronze-to-gold-data-quality-strategies-for-etl-in-microsoft/ba-p/4476303
 title: 'From Bronze to Gold: Data Quality Strategies for ETL in Microsoft Fabric'
 author: Sally_Dabbah
-canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/from-bronze-to-gold-data-quality-strategies-for-etl-in-microsoft/ba-p/4476303
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-09 08:12:15 +00:00
-permalink: /ml/community/From-Bronze-to-Gold-Data-Quality-Strategies-for-ETL-in-Microsoft-Fabric
 tags:
 - Automated Testing
 - Bronze Layer

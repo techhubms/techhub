@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-06-spark-improvements-enhanced-reliability-seed-data-and-performance-updates
 title: 'Spark Updates: Enhanced Reliability, Seed Data, and Improved Performance'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-06-spark-improvements-enhanced-reliability-seed-data-and-performance-updates
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-06 15:15:39 +00:00
-permalink: /devops/news/Spark-Updates-Enhanced-Reliability-Seed-Data-and-Improved-Performance
 tags:
 - Agent Iterations
 - App Development

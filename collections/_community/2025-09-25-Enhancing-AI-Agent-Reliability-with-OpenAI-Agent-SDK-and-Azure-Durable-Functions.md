@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/openai-agent-sdk-integration-with-azure-durable-functions/ba-p/4453402
 title: Enhancing AI Agent Reliability with OpenAI Agent SDK and Azure Durable Functions
 author: greenie-msft
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/openai-agent-sdk-integration-with-azure-durable-functions/ba-p/4453402
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 12:00:00 +00:00
-permalink: /ai/community/Enhancing-AI-Agent-Reliability-with-OpenAI-Agent-SDK-and-Azure-Durable-Functions
 tags:
 - AI Agents
 - Application Scalability

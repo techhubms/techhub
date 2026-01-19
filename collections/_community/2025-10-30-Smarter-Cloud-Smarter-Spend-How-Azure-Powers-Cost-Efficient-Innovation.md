@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/finops-blog/smarter-cloud-smarter-spend-how-azure-powers-cost-efficient/ba-p/4465687
 title: 'Smarter Cloud, Smarter Spend: How Azure Powers Cost-Efficient Innovation'
 author: kyleikeda
-canonical_url: https://techcommunity.microsoft.com/t5/finops-blog/smarter-cloud-smarter-spend-how-azure-powers-cost-efficient/ba-p/4465687
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-30 17:05:07 +00:00
-permalink: /ai/community/Smarter-Cloud-Smarter-Spend-How-Azure-Powers-Cost-Efficient-Innovation
 tags:
 - AI Cost Optimization
 - Azure Advisor

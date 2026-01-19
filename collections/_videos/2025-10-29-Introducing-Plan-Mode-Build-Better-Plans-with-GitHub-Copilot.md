@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/rxIjBKM-XvU
 title: 'Introducing Plan Mode: Build Better Plans with GitHub Copilot'
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/rxIjBKM-XvU
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-29 18:40:44 +00:00
-permalink: /github-copilot/videos/Introducing-Plan-Mode-Build-Better-Plans-with-GitHub-Copilot
 tags:
 - AI Assistant
 - Clarifying Questions

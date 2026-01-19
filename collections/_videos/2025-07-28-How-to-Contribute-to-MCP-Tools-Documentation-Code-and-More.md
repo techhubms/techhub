@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=v1pvCYAWpRE
 title: 'How to Contribute to MCP: Tools, Documentation, Code & More'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=v1pvCYAWpRE
 viewing_mode: internal
 feed_name: Microsoft Build 2025 YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-28 16:01:33 +00:00
-permalink: /coding/videos/How-to-Contribute-to-MCP-Tools-Documentation-Code-and-More
 tags:
 - .NET
 - Best Practices

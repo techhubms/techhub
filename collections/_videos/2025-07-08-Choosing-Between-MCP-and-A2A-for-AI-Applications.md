@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=IMcDEvXRBkY
 title: Choosing Between MCP and A2A for AI Applications
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=IMcDEvXRBkY
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-08 15:19:43 +00:00
-permalink: /ai/videos/Choosing-Between-MCP-and-A2A-for-AI-Applications
 tags:
 - A2A
 - Agent Card

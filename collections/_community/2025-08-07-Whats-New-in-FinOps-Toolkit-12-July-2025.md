@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/finops-blog/what-s-new-in-finops-toolkit-12-july-2025/ba-p/4438562
 title: What’s New in FinOps Toolkit 12 – July 2025
 author: Michael_Flanakin
-canonical_url: https://techcommunity.microsoft.com/t5/finops-blog/what-s-new-in-finops-toolkit-12-july-2025/ba-p/4438562
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-07 17:00:00 +00:00
-permalink: /azure/community/Whats-New-in-FinOps-Toolkit-12-July-2025
 tags:
 - Azure Data Explorer
 - Azure Optimization Engine

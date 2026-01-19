@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/research/blog/mmctagent-enabling-multimodal-reasoning-over-large-video-and-image-collections/
 title: 'MMCTAgent: Microsoft’s Multimodal Critical Thinking Agent for Image and Video Reasoning'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/research/blog/mmctagent-enabling-multimodal-reasoning-over-large-video-and-image-collections/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-12 16:23:01 +00:00
-permalink: /ai/news/MMCTAgent-Microsofts-Multimodal-Critical-Thinking-Agent-for-Image-and-Video-Reasoning
 tags:
 - AutoGen
 - Azure AI Foundry Labs

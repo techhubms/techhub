@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-to-enable-ransomware-protection-in-windows-11/
 title: How to Enable Ransomware Protection in Windows 11
 author: Dellenny
-canonical_url: https://dellenny.com/how-to-enable-ransomware-protection-in-windows-11/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-30 10:50:23 +00:00
-permalink: /security/blogs/How-to-Enable-Ransomware-Protection-in-Windows-11
 tags:
 - Controlled Folder Access
 - Cybersecurity

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=CV1SP3VN_dA
 title: From VMs and Containers to AI Apps with Azure Red Hat OpenShift
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=CV1SP3VN_dA
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 15:54:09 +00:00
-permalink: /ai/videos/From-VMs-and-Containers-to-AI-Apps-with-Azure-Red-Hat-OpenShift
 tags:
 - AI Strategy
 - ARO

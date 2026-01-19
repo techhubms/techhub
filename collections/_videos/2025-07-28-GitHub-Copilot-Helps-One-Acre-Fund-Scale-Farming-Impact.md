@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ol_un2Nam2E
 title: GitHub Copilot Helps One Acre Fund Scale Farming Impact
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=ol_un2Nam2E
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-28 19:14:13 +00:00
-permalink: /github-copilot/videos/GitHub-Copilot-Helps-One-Acre-Fund-Scale-Farming-Impact
 tags:
 - Agricultural Innovation
 - AI in Development

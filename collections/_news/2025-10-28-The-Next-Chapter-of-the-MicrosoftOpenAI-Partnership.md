@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/
 title: The Next Chapter of the Microsoft–OpenAI Partnership
 author: stclarke
-canonical_url: https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-28 15:12:03 +00:00
-permalink: /ai/news/The-Next-Chapter-of-the-MicrosoftOpenAI-Partnership
 tags:
 - AGI
 - Agreement

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/how-gemini-cli-github-actions-is-changing-developer-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=how-gemini-cli-github-actions-is-changing-developer-workflows
 title: How Gemini CLI GitHub Actions is Changing Developer Workflows
 author: Tom Smith
-canonical_url: https://devops.com/how-gemini-cli-github-actions-is-changing-developer-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=how-gemini-cli-github-actions-is-changing-developer-workflows
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-11 12:09:24 +00:00
-permalink: /ai/blogs/How-Gemini-CLI-GitHub-Actions-is-Changing-Developer-Workflows
 tags:
 - Agentic DevOps
 - AI Assisted Development

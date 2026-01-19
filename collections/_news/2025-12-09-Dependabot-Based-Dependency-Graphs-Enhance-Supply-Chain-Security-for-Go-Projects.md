@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-09-dependabot-dgs-for-go
 title: Dependabot-Based Dependency Graphs Enhance Supply Chain Security for Go Projects
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-09-dependabot-dgs-for-go
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-09 15:54:48 +00:00
-permalink: /devops/news/Dependabot-Based-Dependency-Graphs-Enhance-Supply-Chain-Security-for-Go-Projects
 tags:
 - Configuration
 - Dependabot

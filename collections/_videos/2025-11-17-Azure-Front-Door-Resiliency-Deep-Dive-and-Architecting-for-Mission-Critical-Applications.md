@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ufxFlmjS9dU
 title: Azure Front Door Resiliency Deep Dive and Architecting for Mission Critical Applications
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=ufxFlmjS9dU
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-11-17 10:53:28 +00:00
-permalink: /azure/videos/Azure-Front-Door-Resiliency-Deep-Dive-and-Architecting-for-Mission-Critical-Applications
 tags:
 - Application Acceleration
 - Azure Cloud

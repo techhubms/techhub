@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/static-egress-gateway-in-aks-the-native-way-to-control-multiple/ba-p/4484179
 title: 'Static Egress Gateway in AKS: The Native Way to Control Multiple Outbound IPs'
 author: pjlewis
-canonical_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/static-egress-gateway-in-aks-the-native-way-to-control-multiple/ba-p/4484179
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-13 00:22:15 +00:00
-permalink: /coding/community/Static-Egress-Gateway-in-AKS-The-Native-Way-to-Control-Multiple-Outbound-IPs
 tags:
 - AKS
 - Az CLI

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-13-added-last_authenticated_at-to-the-copilot-user-management-api
 title: GitHub Copilot User Management API Adds last_authenticated_at Field
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-13-added-last_authenticated_at-to-the-copilot-user-management-api
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-13 21:51:19 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-User-Management-API-Adds-last_authenticated_at-Field
 tags:
 - Admin Tools
 - API Schema

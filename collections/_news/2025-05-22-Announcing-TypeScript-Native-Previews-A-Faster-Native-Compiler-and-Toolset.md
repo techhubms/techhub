@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-native-previews/
 title: 'Announcing TypeScript Native Previews: A Faster, Native Compiler and Toolset'
 author: Daniel Rosenwasser
-canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-native-previews/
 viewing_mode: external
 feed_name: Microsoft TypeScript Blog
-feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-05-22 15:04:21 +00:00
-permalink: /coding/news/Announcing-TypeScript-Native-Previews-A-Faster-Native-Compiler-and-Toolset
 tags:
 - API
 - Go

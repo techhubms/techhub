@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-named-a-leader-in-the-forrester-wave-data-fabric-platforms-q4-2025/
 title: 'Microsoft Recognized as a Leader in Forrester Wave™: Data Fabric Platforms, Q4 2025'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-named-a-leader-in-the-forrester-wave-data-fabric-platforms-q4-2025/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-03 08:00:00 +00:00
-permalink: /ai/news/Microsoft-Recognized-as-a-Leader-in-Forrester-Wave-Data-Fabric-Platforms-Q4-2025
 tags:
 - Agentic AI
 - AI Integration

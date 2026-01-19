@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=t3Y3Kg4BU3w
 title: Securely Unleashing AI Agents on Azure SQL and SQL Server
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=t3Y3Kg4BU3w
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-10 00:00:56 +00:00
-permalink: /ai/videos/Securely-Unleashing-AI-Agents-on-Azure-SQL-and-SQL-Server
 tags:
 - .NET
 - Agent Errors

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/revolutionizing-reliability-introducing-the-azure-failure/ba-p/4464883
 title: 'Azure Failure Prediction & Detection (AFPD): Preventing Downtime with Proactive Reliability'
 author: andrewb710
-canonical_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/revolutionizing-reliability-introducing-the-azure-failure/ba-p/4464883
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-31 19:02:54 +00:00
-permalink: /azure/community/Azure-Failure-Prediction-and-Detection-AFPD-Preventing-Downtime-with-Proactive-Reliability
 tags:
 - A/B Testing
 - AFPD

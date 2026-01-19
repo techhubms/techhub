@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=uutyZeRddiQ
 title: 'Partner: Benefits for Accelerating Software Company Success | PBRK418'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=uutyZeRddiQ
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 13:03:14 +00:00
-permalink: /ai/videos/Partner-Benefits-for-Accelerating-Software-Company-Success-PBRK418
 tags:
 - AI Apps
 - API Pilot

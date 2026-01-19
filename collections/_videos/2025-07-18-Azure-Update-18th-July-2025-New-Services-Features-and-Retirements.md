@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=b65KgVInTNo
 title: 'Azure Update – 18th July 2025: New Services, Features & Retirements'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=b65KgVInTNo
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-18 14:55:42 +00:00
-permalink: /ai/videos/Azure-Update-18th-July-2025-New-Services-Features-and-Retirements
 tags:
 - AFD Classic
 - AKS Extension Manager

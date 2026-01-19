@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/microsoft-entra-suite-the-future-of-identity-and-access-security/
 title: 'Microsoft Entra Suite: The Future of Identity and Access Security'
 author: Dellenny
-canonical_url: https://dellenny.com/microsoft-entra-suite-the-future-of-identity-and-access-security/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-27 08:09:33 +00:00
-permalink: /security/blogs/Microsoft-Entra-Suite-The-Future-of-Identity-and-Access-Security
 tags:
 - Access Governance
 - Authentication

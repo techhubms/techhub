@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Zaew1UDiOPs
 title: Securing AI Agents in Microsoft Foundry with Microsoft Security
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=Zaew1UDiOPs
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 07:11:07 +00:00
-permalink: /ai/videos/Securing-AI-Agents-in-Microsoft-Foundry-with-Microsoft-Security
 tags:
 - Advanced Security
 - Agent ID

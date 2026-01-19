@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Az4GawqnXHA
 title: 'Understanding Agent Flows in Microsoft Copilot Studio: A Simple Demo'
 author: Learn Microsoft AI
-canonical_url: https://www.youtube.com/watch?v=Az4GawqnXHA
 viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-06-10 06:11:02 +00:00
-permalink: /ai/videos/Understanding-Agent-Flows-in-Microsoft-Copilot-Studio-A-Simple-Demo
 tags:
 - Agent Flows
 - AgentFlows

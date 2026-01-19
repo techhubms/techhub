@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/devops/comments/1mgx0a4/transitioning_from_backend_developer_to_devops/
 title: Transitioning from Backend Developer to DevOps
 author: DemiladeDee
-canonical_url: https://www.reddit.com/r/devops/comments/1mgx0a4/transitioning_from_backend_developer_to_devops/
 viewing_mode: external
 feed_name: Reddit DevOps
-feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-03 22:48:15 +00:00
-permalink: /devops/community/Transitioning-from-Backend-Developer-to-DevOps
 tags:
 - Automation
 - Backend Development

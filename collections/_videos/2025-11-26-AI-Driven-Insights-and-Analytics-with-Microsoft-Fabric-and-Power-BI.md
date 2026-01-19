@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=O4grrA_xqhc
 title: AI-Driven Insights and Analytics with Microsoft Fabric and Power BI
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=O4grrA_xqhc
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 00:48:16 +00:00
-permalink: /ai/videos/AI-Driven-Insights-and-Analytics-with-Microsoft-Fabric-and-Power-BI
 tags:
 - AI First Organization
 - AI Powered Analytics

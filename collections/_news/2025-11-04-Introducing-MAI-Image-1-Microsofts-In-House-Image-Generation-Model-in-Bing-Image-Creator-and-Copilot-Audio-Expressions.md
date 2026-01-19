@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://microsoft.ai/news/introducing-mai-image-1-debuting-in-the-top-10-on-lmarena/
 title: 'Introducing MAI-Image-1: Microsoft’s In-House Image Generation Model in Bing Image Creator and Copilot Audio Expressions'
 author: stclarke
-canonical_url: https://microsoft.ai/news/introducing-mai-image-1-debuting-in-the-top-10-on-lmarena/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-04 19:08:50 +00:00
-permalink: /ai/news/Introducing-MAI-Image-1-Microsofts-In-House-Image-Generation-Model-in-Bing-Image-Creator-and-Copilot-Audio-Expressions
 tags:
 - AI Model Evaluation
 - AI Product Integration

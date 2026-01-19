@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=QnY-D5bdh4Y
 title: Changing User Source of Authority from AD to Entra ID
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=QnY-D5bdh4Y
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-10-29 12:47:36 +00:00
-permalink: /azure/videos/Changing-User-Source-of-Authority-from-AD-to-Entra-ID
 tags:
 - Access Management
 - Active Directory

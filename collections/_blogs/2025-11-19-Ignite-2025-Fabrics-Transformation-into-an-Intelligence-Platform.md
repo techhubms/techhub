@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://zure.com/blog/ignite-2025-fabrics-evolution-from-data-platform-to-intelligence-platform
 title: 'Ignite 2025: Fabric’s Transformation into an Intelligence Platform'
 author: markus.lehtola@zure.com (Markus Lehtola)
-canonical_url: https://zure.com/blog/ignite-2025-fabrics-evolution-from-data-platform-to-intelligence-platform
 viewing_mode: external
 feed_name: Zure Data & AI Blog
-feed_url: https://zure.com/blog/rss.xml
 date: 2025-11-19 08:32:01 +00:00
-permalink: /ai/blogs/Ignite-2025-Fabrics-Transformation-into-an-Intelligence-Platform
 tags:
 - Agent 365
 - AI Agents

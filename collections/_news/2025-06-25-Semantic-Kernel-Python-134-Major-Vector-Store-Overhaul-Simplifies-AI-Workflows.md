@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-python-gets-a-major-vector-store-upgrade/
 title: 'Semantic Kernel Python 1.34: Major Vector Store Overhaul Simplifies AI Workflows'
 author: Eduard van Valkenburg
-canonical_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-python-gets-a-major-vector-store-upgrade/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-06-25 00:40:21 +00:00
-permalink: /ai/news/Semantic-Kernel-Python-134-Major-Vector-Store-Overhaul-Simplifies-AI-Workflows
 tags:
 - API
 - Automatic Embedding

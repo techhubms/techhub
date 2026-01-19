@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://hiddedesmet.com/model-context-protocol-mcp
 title: Understanding the Model Context Protocol (MCP)
 author: Hidde de Smet
-canonical_url: https://hiddedesmet.com/model-context-protocol-mcp
 viewing_mode: external
 feed_name: Hidde de Smet's Blog
-feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-05-08 07:00:00 +00:00
-permalink: /ai/blogs/Understanding-the-Model-Context-Protocol-MCP
 tags:
 - Agentic AI
 - AI Integration

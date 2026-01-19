@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/
 title: 'Adopting Spec-Driven Development with AI: Introducing Spec Kit'
 author: Den Delimarsky
-canonical_url: https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-09-02 16:48:03 +00:00
-permalink: /github-copilot/news/Adopting-Spec-Driven-Development-with-AI-Introducing-Spec-Kit
 tags:
 - AI & ML
 - AI Tooling

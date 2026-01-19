@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/open-source/git/20-years-of-git-2-days-at-github-hq-git-merge-2025-highlights-%f0%9f%8e%89/
 title: 'Git Merge 2025: Celebrating 20 Years of Git at GitHub HQ'
 author: Lee Reilly
-canonical_url: https://github.blog/open-source/git/20-years-of-git-2-days-at-github-hq-git-merge-2025-highlights-%f0%9f%8e%89/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-10-09 08:00:00 +00:00
-permalink: /devops/news/Git-Merge-2025-Celebrating-20-Years-of-Git-at-GitHub-HQ
 tags:
 - Branching Strategies
 - Collaboration

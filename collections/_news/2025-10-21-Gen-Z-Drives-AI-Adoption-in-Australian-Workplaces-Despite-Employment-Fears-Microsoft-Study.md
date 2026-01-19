@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/asia/features/gen-z-staff-lead-workplace-ai-adoption-despite-job-fears-microsoft-australia-study/
 title: 'Gen Z Drives AI Adoption in Australian Workplaces Despite Employment Fears: Microsoft Study'
 author: stclarke
-canonical_url: https://news.microsoft.com/source/asia/features/gen-z-staff-lead-workplace-ai-adoption-despite-job-fears-microsoft-australia-study/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-21 13:05:08 +00:00
-permalink: /ai/news/Gen-Z-Drives-AI-Adoption-in-Australian-Workplaces-Despite-Employment-Fears-Microsoft-Study
 tags:
 - AI Adoption
 - AI Skills

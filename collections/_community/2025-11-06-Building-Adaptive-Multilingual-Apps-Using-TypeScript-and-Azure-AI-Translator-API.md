@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-adaptive-multilingual-apps-using-typescript-and-azure/ba-p/4465267
 title: Building Adaptive Multilingual Apps Using TypeScript and Azure AI Translator API
 author: Julia_Muiruri
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-adaptive-multilingual-apps-using-typescript-and-azure/ba-p/4465267
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-06 14:45:00 +00:00
-permalink: /ai/community/Building-Adaptive-Multilingual-Apps-Using-TypeScript-and-Azure-AI-Translator-API
 tags:
 - API Version 05 01 Preview
 - Azure AI Foundry

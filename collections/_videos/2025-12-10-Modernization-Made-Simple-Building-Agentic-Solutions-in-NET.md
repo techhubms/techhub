@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=xFi_MtLlYpk
 title: 'Modernization Made Simple: Building Agentic Solutions in .NET'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=xFi_MtLlYpk
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-10 00:00:47 +00:00
-permalink: /ai/videos/Modernization-Made-Simple-Building-Agentic-Solutions-in-NET
 tags:
 - .NET
 - Agent Framework

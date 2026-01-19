@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=31zDPcvZLRI
 title: .NET MAUI Community Standup - Blazor for Mobile with AI? Here's how.
 author: Dotnet's Youtube channel
-canonical_url: https://www.youtube.com/watch?v=31zDPcvZLRI
 feed_name: dotnet
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-04 06:10:58 +00:00
-permalink: /ai/videos/NET-MAUI-Community-Standup-Blazor-for-Mobile-with-AI-Heres-how
 viewing_mode: internal
 tags:
 - .NET

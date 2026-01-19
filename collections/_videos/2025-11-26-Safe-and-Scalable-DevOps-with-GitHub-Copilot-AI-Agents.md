@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=16_x7e0d_SY
 title: Safe and Scalable DevOps with GitHub Copilot AI Agents
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=16_x7e0d_SY
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 00:45:29 +00:00
-permalink: /github-copilot/videos/Safe-and-Scalable-DevOps-with-GitHub-Copilot-AI-Agents
 tags:
 - Agentic Tasks
 - AI Agents

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/architecture-as-code-what-it-means-and-how-to-apply-it/
 title: 'Architecture as Code: Practical Approaches and Benefits'
 author: Dellenny
-canonical_url: https://dellenny.com/architecture-as-code-what-it-means-and-how-to-apply-it/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-13 08:34:16 +00:00
-permalink: /coding/blogs/Architecture-as-Code-Practical-Approaches-and-Benefits
 tags:
 - Architecture
 - Architecture as Code

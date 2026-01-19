@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/07/09/choosing-the-right-ai-path-for-your-business-a-practical-guide-for-business-leaders/
 title: Choosing the right AI path for your business - A practical guide for leaders
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/07/09/choosing-the-right-ai-path-for-your-business-a-practical-guide-for-business-leaders/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-09 21:48:06 +00:00
-permalink: /ai/news/Choosing-the-right-AI-path-for-your-business-A-practical-guide-for-leaders
 tags:
 - AI Strategy
 - Business

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/end-to-end-confidence-in-the-cloud-a-walkthrough-of-azure-playwright-testing-preview/
 title: Scaling Playwright End-to-End Tests with Azure Playwright Testing
 author: Dellenny
-canonical_url: https://dellenny.com/end-to-end-confidence-in-the-cloud-a-walkthrough-of-azure-playwright-testing-preview/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-25 08:36:33 +00:00
-permalink: /coding/blogs/Scaling-Playwright-End-to-End-Tests-with-Azure-Playwright-Testing
 tags:
 - Automation
 - Azure CLI

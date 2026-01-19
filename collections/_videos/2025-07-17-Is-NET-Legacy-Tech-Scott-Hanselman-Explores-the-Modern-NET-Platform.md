@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=CIuLieYAGcA
 title: Is .NET Legacy Tech? Scott Hanselman Explores the Modern .NET Platform
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=CIuLieYAGcA
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-17 15:53:10 +00:00
-permalink: /coding/videos/Is-NET-Legacy-Tech-Scott-Hanselman-Explores-the-Modern-NET-Platform
 tags:
 - .NET
 - .NET 9

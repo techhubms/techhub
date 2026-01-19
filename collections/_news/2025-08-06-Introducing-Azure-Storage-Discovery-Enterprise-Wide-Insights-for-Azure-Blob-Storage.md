@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/introducing-azure-storage-discovery-transform-data-management-with-storage-insights/
 title: 'Introducing Azure Storage Discovery: Enterprise-Wide Insights for Azure Blob Storage'
 author: Aung Oo
-canonical_url: https://azure.microsoft.com/en-us/blog/introducing-azure-storage-discovery-transform-data-management-with-storage-insights/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-06 15:00:00 +00:00
-permalink: /ai/news/Introducing-Azure-Storage-Discovery-Enterprise-Wide-Insights-for-Azure-Blob-Storage
 tags:
 - Azure Blob Storage
 - Azure Copilot

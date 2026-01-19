@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=h1GvSPaRQ-U
 title: Deep Dive into Cancellation Tokens in .NET with Stephen Toub
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=h1GvSPaRQ-U
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-05 00:20:57 +00:00
-permalink: /coding/videos/Deep-Dive-into-Cancellation-Tokens-in-NET-with-Stephen-Toub
 tags:
 - .NET
 - AMPM

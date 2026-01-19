@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/pagerduty-adds-suite-of-ai-agents-to-it-management-platform/
 title: PagerDuty Introduces Suite of AI Agents to Enhance IT Management and DevOps Workflows
 author: Mike Vizard
-canonical_url: https://devops.com/pagerduty-adds-suite-of-ai-agents-to-it-management-platform/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-08 13:00:42 +00:00
-permalink: /ai/blogs/PagerDuty-Introduces-Suite-of-AI-Agents-to-Enhance-IT-Management-and-DevOps-Workflows
 tags:
 - AI Agents
 - AI Automation in IT Operations

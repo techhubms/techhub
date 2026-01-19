@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: XPRT Magazine 12
 date: 2022-05-01 00:00:00 +00:00
 author: Xebia
 viewing_mode: external
-permalink: /github-copilot/community/XPRT-Magazine-12
 tags:
 - ARM Templates
 - Automation

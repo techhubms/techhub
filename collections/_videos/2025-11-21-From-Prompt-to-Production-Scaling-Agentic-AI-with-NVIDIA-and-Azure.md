@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=roRh0p1HsYg
 title: 'From Prompt to Production: Scaling Agentic AI with NVIDIA and Azure'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=roRh0p1HsYg
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:20:19 +00:00
-permalink: /ai/videos/From-Prompt-to-Production-Scaling-Agentic-AI-with-NVIDIA-and-Azure
 tags:
 - Agentic AI
 - Agenticbusinessapplications

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-runtime-2-0-experimental-public-preview/
 title: 'Fabric Runtime 2.0 Experimental Preview: Scalable Data Engineering with Spark'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-runtime-2-0-experimental-public-preview/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-15 09:00:00 +00:00
-permalink: /ml/news/Fabric-Runtime-20-Experimental-Preview-Scalable-Data-Engineering-with-Spark
 tags:
 - Apache Spark 4.0
 - Azure Linux 3.0

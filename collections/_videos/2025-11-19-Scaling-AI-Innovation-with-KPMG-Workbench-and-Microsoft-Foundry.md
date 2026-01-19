@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Benn2rBdZwA
 title: Scaling AI Innovation with KPMG Workbench and Microsoft Foundry
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=Benn2rBdZwA
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 11:48:33 +00:00
-permalink: /ai/videos/Scaling-AI-Innovation-with-KPMG-Workbench-and-Microsoft-Foundry
 tags:
 - Agenticbusinessapplications
 - AI Agents

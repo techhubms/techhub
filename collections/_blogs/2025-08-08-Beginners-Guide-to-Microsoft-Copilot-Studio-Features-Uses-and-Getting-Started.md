@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/what-is-microsoft-copilot-studio-a-beginners-guide/
 title: 'Beginner’s Guide to Microsoft Copilot Studio: Features, Uses, and Getting Started'
 author: Dellenny
-canonical_url: https://dellenny.com/what-is-microsoft-copilot-studio-a-beginners-guide/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-08 10:18:44 +00:00
-permalink: /ai/blogs/Beginners-Guide-to-Microsoft-Copilot-Studio-Features-Uses-and-Getting-Started
 tags:
 - AI Chatbots
 - Azure AI

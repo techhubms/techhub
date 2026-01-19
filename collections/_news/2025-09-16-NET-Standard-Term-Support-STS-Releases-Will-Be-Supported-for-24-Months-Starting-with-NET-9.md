@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-sts-releases-supported-for-24-months/
 title: .NET Standard Term Support (STS) Releases Will Be Supported for 24 Months Starting with .NET 9
 author: Jamshed Damkewala
-canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-sts-releases-supported-for-24-months/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-09-16 17:00:00 +00:00
-permalink: /coding/news/NET-Standard-Term-Support-STS-Releases-Will-Be-Supported-for-24-Months-Starting-with-NET-9
 tags:
 - .NET
 - .NET 8

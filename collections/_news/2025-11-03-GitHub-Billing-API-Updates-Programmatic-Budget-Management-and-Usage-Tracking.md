@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-03-manage-budgets-and-track-usage-with-new-billing-api-updates
 title: 'GitHub Billing API Updates: Programmatic Budget Management and Usage Tracking'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-03-manage-budgets-and-track-usage-with-new-billing-api-updates
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-03 18:24:44 +00:00
-permalink: /devops/news/GitHub-Billing-API-Updates-Programmatic-Budget-Management-and-Usage-Tracking
 tags:
 - Account Management
 - Account Usage

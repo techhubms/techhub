@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/blog/2025/11/11/bridging-the-ai-divide-how-frontier-firms-are-transforming-business/
 title: How Frontier Firms Drive Business Transformation with Microsoft AI
 author: stclarke
-canonical_url: https://blogs.microsoft.com/blog/2025/11/11/bridging-the-ai-divide-how-frontier-firms-are-transforming-business/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-11 15:22:57 +00:00
-permalink: /ai/news/How-Frontier-Firms-Drive-Business-Transformation-with-Microsoft-AI
 tags:
 - Agentic AI
 - AI Budgets

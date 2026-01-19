@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/on-the-issues/2025/11/03/microsofts-15-2-billion-usd-investment-in-the-uae/
 title: Microsoft’s $15.2 Billion USD Investment in AI and Cloud Innovation in the UAE
 author: stclarke
-canonical_url: https://blogs.microsoft.com/on-the-issues/2025/11/03/microsofts-15-2-billion-usd-investment-in-the-uae/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-03 18:35:28 +00:00
-permalink: /ai/news/Microsofts-152-Billion-USD-Investment-in-AI-and-Cloud-Innovation-in-the-UAE
 tags:
 - AI Diffusion Report
 - AI For Good Lab

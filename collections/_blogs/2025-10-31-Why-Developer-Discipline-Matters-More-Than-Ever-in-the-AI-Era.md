@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/why-developer-discipline-matters-more-than-ever-in-the-ai-era/
 title: Why Developer Discipline Matters More Than Ever in the AI Era
 author: Mike Vizard
-canonical_url: https://devops.com/why-developer-discipline-matters-more-than-ever-in-the-ai-era/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-31 14:53:20 +00:00
-permalink: /ai/blogs/Why-Developer-Discipline-Matters-More-Than-Ever-in-the-AI-Era
 tags:
 - AI Assistants
 - Automated Testing

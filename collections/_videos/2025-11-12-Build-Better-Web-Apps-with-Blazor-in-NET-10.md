@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=V0Af7y7aMBE
 title: Build Better Web Apps with Blazor in .NET 10
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=V0Af7y7aMBE
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:18 +00:00
-permalink: /coding/videos/Build-Better-Web-Apps-with-Blazor-in-NET-10
 tags:
 - .NET
 - .NET 10

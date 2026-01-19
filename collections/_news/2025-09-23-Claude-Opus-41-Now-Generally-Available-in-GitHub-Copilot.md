@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-23-claude-opus-4-1-is-now-generally-available-in-github-copilot
 title: Claude Opus 4.1 Now Generally Available in GitHub Copilot
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-23-claude-opus-4-1-is-now-generally-available-in-github-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-23 20:42:15 +00:00
-permalink: /github-copilot/news/Claude-Opus-41-Now-Generally-Available-in-GitHub-Copilot
 tags:
 - AI Models
 - Claude Opus 4.1

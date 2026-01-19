@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/devops-workflow-the-key-elements-and-tools-involved/
 title: 'DevOps Workflow: The Key Elements and Tools Involved'
 author: Peter Baker
-canonical_url: https://devops.com/devops-workflow-the-key-elements-and-tools-involved/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-04 09:46:20 +00:00
-permalink: /devops/blogs/DevOps-Workflow-The-Key-Elements-and-Tools-Involved
 tags:
 - Agile Methodology
 - Automated Testing

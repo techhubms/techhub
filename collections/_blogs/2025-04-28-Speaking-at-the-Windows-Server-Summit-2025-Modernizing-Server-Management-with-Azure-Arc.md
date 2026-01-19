@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/04/speaking-at-the-windows-server-summit-2025/
 title: 'Speaking at the Windows Server Summit 2025: Modernizing Server Management with Azure Arc'
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/04/speaking-at-the-windows-server-summit-2025/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-04-28 13:56:14 +00:00
-permalink: /azure/blogs/Speaking-at-the-Windows-Server-Summit-2025-Modernizing-Server-Management-with-Azure-Arc
 tags:
 - Azure Adaptive Cloud
 - Azure Arc

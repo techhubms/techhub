@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=wsLgjpQZx6U
 title: Modern Data Analytics and AI with SAP Databricks on Azure
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=wsLgjpQZx6U
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 14:03:01 +00:00
-permalink: /ai/videos/Modern-Data-Analytics-and-AI-with-SAP-Databricks-on-Azure
 tags:
 - AI Applications
 - Automated Forecasting

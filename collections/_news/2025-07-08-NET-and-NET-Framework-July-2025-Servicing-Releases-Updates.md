@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-july-2025-servicing-updates/
 title: .NET and .NET Framework July 2025 Servicing Releases Updates
 author: Tara Overfield, Victor Israel-Bolarinwa
-canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-july-2025-servicing-updates/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-07-08 19:00:00 +00:00
-permalink: /coding/news/NET-and-NET-Framework-July-2025-Servicing-Releases-Updates
 tags:
 - .NET
 - .NET Framework

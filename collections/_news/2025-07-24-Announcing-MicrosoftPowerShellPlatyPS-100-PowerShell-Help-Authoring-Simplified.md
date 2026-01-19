@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/powershell/announcing-platyps-100/
 title: 'Announcing Microsoft.PowerShell.PlatyPS 1.0.0: PowerShell Help Authoring Simplified'
 author: Jason Helmick, Sean Wheeler
-canonical_url: https://devblogs.microsoft.com/powershell/announcing-platyps-100/
 viewing_mode: external
 feed_name: Microsoft PowerShell Blog
-feed_url: https://devblogs.microsoft.com/powershell/feed/
 date: 2025-07-24 21:35:14 +00:00
-permalink: /coding/news/Announcing-MicrosoftPowerShellPlatyPS-100-PowerShell-Help-Authoring-Simplified
 tags:
 - C#
 - Cmdlets

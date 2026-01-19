@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/UfQGauPcAgE
 title: Code Translation
 author: Fokko Veegens
-canonical_url: https://youtu.be/UfQGauPcAgE
 date: 2024-12-24 07:39:09 +00:00
-permalink: /github-copilot/videos/Code-Translation
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Code
 - Translation

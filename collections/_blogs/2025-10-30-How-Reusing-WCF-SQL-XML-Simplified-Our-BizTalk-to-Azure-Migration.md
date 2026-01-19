@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://zure.com/blog/how-reusing-wcf-sql-xml-simplified-our-biztalk-to-azure-migration
 title: How Reusing WCF-SQL XML Simplified Our BizTalk to Azure Migration
 author: tim.dhaeyer@zure.com (Tim D'haeyer)
-canonical_url: https://zure.com/blog/how-reusing-wcf-sql-xml-simplified-our-biztalk-to-azure-migration
 viewing_mode: external
 feed_name: Zure Data & AI Blog
-feed_url: https://zure.com/blog/rss.xml
 date: 2025-10-30 12:50:02 +00:00
-permalink: /coding/blogs/How-Reusing-WCF-SQL-XML-Simplified-Our-BizTalk-to-Azure-Migration
 tags:
 - Azure Functions
 - Azure Key Vault

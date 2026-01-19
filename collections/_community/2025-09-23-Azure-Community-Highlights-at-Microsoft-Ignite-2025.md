@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-events/your-guide-to-azure-community-activations-at-microsoft-ignite/ba-p/4455501
 title: Azure Community Highlights at Microsoft Ignite 2025
 author: GalimahB
-canonical_url: https://techcommunity.microsoft.com/t5/azure-events/your-guide-to-azure-community-activations-at-microsoft-ignite/ba-p/4455501
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-23 19:59:06 +00:00
-permalink: /ai/community/Azure-Community-Highlights-at-Microsoft-Ignite-2025
 tags:
 - AI Community
 - AKS

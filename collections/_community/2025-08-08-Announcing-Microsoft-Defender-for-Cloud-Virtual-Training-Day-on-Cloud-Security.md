@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-security-community/announcing-a-new-microsoft-security-virtual-training-day/ba-p/4440347
 title: 'Announcing Microsoft Defender for Cloud: Virtual Training Day on Cloud Security'
 author: ShirleyseHaley
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-security-community/announcing-a-new-microsoft-security-virtual-training-day/ba-p/4440347
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-08 19:50:59 +00:00
-permalink: /azure/community/Announcing-Microsoft-Defender-for-Cloud-Virtual-Training-Day-on-Cloud-Security
 tags:
 - Cloud Native Application Protection
 - Cloud Security

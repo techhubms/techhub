@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=k3S4lPbUWng
 title: 'Introducing Microsoft Discovery: An Agentic AI Platform for Scientific Research'
 author: Microsoft Cloud
-canonical_url: https://www.youtube.com/watch?v=k3S4lPbUWng
 viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw
 date: 2025-05-19 15:45:06 +00:00
-permalink: /ai/videos/Introducing-Microsoft-Discovery-An-Agentic-AI-Platform-for-Scientific-Research
 tags:
 - Adaptive AI
 - Agentic R&D

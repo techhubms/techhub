@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devopsjournal.io/blog/2024/10/30/GitHub-Universe-slides
 title: 'GitHub Universe 2024: Successfully Scaling GitHub Copilot to Thousands of Developers'
 author: Rob Bos
-canonical_url: https://devopsjournal.io/blog/2024/10/30/GitHub-Universe-slides
 viewing_mode: external
 feed_name: Rob Bos' Blog
-feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2024-10-30 00:00:00 +00:00
-permalink: /github-copilot/blogs/GitHub-Universe-2024-Successfully-scaling-GitHub-Copilot-to-thousands-of-developers
 tags:
 - Conference
 - Copilot Adoption

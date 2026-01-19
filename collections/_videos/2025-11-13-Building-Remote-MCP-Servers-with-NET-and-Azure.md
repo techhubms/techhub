@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=b9cwTqr1cKo
 title: Building Remote MCP Servers with .NET and Azure
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=b9cwTqr1cKo
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:46 +00:00
-permalink: /ai/videos/Building-Remote-MCP-Servers-with-NET-and-Azure
 tags:
 - .NET
 - .NET 10

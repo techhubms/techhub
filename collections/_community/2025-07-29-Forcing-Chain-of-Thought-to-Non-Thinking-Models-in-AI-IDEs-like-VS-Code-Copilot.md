@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mcbkb8/forcing_cot_to_nonthinking_models_within_an_ai/
 title: Forcing Chain-of-Thought to Non-Thinking Models in AI IDEs like VS Code & Copilot
 author: Cobuter_Man
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mcbkb8/forcing_cot_to_nonthinking_models_within_an_ai/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-29 13:33:13 +00:00
-permalink: /github-copilot/community/Forcing-Chain-of-Thought-to-Non-Thinking-Models-in-AI-IDEs-like-VS-Code-Copilot
 tags:
 - AI IDE
 - APM Agent

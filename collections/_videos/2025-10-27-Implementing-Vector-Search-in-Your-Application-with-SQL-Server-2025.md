@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=WBPFjYLIhsA
 title: Implementing Vector Search in Your Application with SQL Server 2025
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=WBPFjYLIhsA
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-27 15:57:28 +00:00
-permalink: /ai/videos/Implementing-Vector-Search-in-Your-Application-with-SQL-Server-2025
 tags:
 - AI Applications
 - Azure SQL

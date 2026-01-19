@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code-maze.com/efcore-testing-database-connectivity/
 title: Testing Database Connectivity with EF Core
 author: Georgi Georgiev
-canonical_url: https://code-maze.com/efcore-testing-database-connectivity/
 viewing_mode: external
 feed_name: Code Maze Blog
-feed_url: https://code-maze.com/feed/
 date: 2025-01-23 11:08:23 +00:00
-permalink: /coding/blogs/Testing-Database-Connectivity-with-EF-Core
 tags:
 - .NET
 - ASP.NET Core

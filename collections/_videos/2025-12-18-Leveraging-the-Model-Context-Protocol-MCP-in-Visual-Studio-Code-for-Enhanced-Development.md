@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=lHWKy2GFWi0
 title: Leveraging the Model Context Protocol (MCP) in Visual Studio Code for Enhanced Development
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=lHWKy2GFWi0
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-12-18 13:01:34 +00:00
-permalink: /ai/videos/Leveraging-the-Model-Context-Protocol-MCP-in-Visual-Studio-Code-for-Enhanced-Development
 tags:
 - AI Assisted Development
 - AI Integration

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2026/01/14/microsoft-named-a-leader-in-idc-marketscape-for-unified-ai-governance-platforms/
 title: Microsoft Named a Leader in IDC MarketScape for Unified AI Governance Platforms
 author: Herain Oberoi and Don Scott
-canonical_url: https://www.microsoft.com/en-us/security/blog/2026/01/14/microsoft-named-a-leader-in-idc-marketscape-for-unified-ai-governance-platforms/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2026-01-14 17:00:00 +00:00
-permalink: /ai/news/Microsoft-Named-a-Leader-in-IDC-MarketScape-for-Unified-AI-Governance-Platforms
 tags:
 - Agent 365
 - AI Governance

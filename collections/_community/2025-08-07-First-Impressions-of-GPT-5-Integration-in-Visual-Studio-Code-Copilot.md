@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mkftq0/gpt5_already_in_vsc_copilot/
 title: First Impressions of GPT-5 Integration in Visual Studio Code Copilot
 author: Jazzlike_Course_9895
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mkftq0/gpt5_already_in_vsc_copilot/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-07 23:41:48 +00:00
-permalink: /github-copilot/community/First-Impressions-of-GPT-5-Integration-in-Visual-Studio-Code-Copilot
 tags:
 - AI Assistant
 - AI Integration

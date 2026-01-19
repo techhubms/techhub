@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/sourcing-schema-driven-events-from-eventhub-into-fabric-eventstreams-preview/
 title: Sourcing Schema-Driven Events from EventHub into Fabric Eventstreams (Preview)
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/sourcing-schema-driven-events-from-eventhub-into-fabric-eventstreams-preview/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-14 10:00:00 +00:00
-permalink: /ml/news/Sourcing-Schema-Driven-Events-from-EventHub-into-Fabric-Eventstreams-Preview
 tags:
 - Analytics
 - Avro Schema

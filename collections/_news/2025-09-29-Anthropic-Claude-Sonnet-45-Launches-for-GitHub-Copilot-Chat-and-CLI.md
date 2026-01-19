@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-29-anthropic-claude-sonnet-4-5-is-in-public-preview-for-github-copilot
 title: Anthropic Claude Sonnet 4.5 Launches for GitHub Copilot Chat and CLI
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-29-anthropic-claude-sonnet-4-5-is-in-public-preview-for-github-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-29 16:37:42 +00:00
-permalink: /github-copilot/news/Anthropic-Claude-Sonnet-45-Launches-for-GitHub-Copilot-Chat-and-CLI
 tags:
 - Agent Mode
 - AI Models

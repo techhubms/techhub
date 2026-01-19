@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-11-verified-answers-generally-available-in-github-discussions
 title: Verified Answers Launched in GitHub Discussions for Reliable Community Solutions
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-11-verified-answers-generally-available-in-github-discussions
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-11 20:32:02 +00:00
-permalink: /devops/news/Verified-Answers-Launched-in-GitHub-Discussions-for-Reliable-Community-Solutions
 tags:
 - AI
 - AI Standards

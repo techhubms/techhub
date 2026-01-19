@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mhbukq/c_14_extension_members_also_known_as_extension/
 title: 'C# 14 Extension Members: Also Known as Extension Everything - NDepend Blog'
 author: PatrickSmacchia
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mhbukq/c_14_extension_members_also_known_as_extension/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-04 12:18:27 +00:00
-permalink: /coding/community/C-14-Extension-Members-Also-Known-as-Extension-Everything-NDepend-Blog
 tags:
 - .NET
 - C# 14

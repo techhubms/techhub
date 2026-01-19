@@ -31,15 +31,16 @@ public class ContentItem
     public required long DateEpoch { get; init; }
 
     /// <summary>
-    /// Collection name this item belongs to (e.g., "news", "blogs", "videos")
+    /// Collection name derived from directory path
+    /// (e.g., \"videos\" for _videos/, \"ghc-features\" for _videos/ghc-features/)
     /// </summary>
     public required string CollectionName { get; init; }
 
     /// <summary>
-    /// Optional alt-collection for content organized in subfolders
-    /// (e.g., "ghc-features" for _videos/ghc-features/)
+    /// Optional RSS feed name this content was sourced from (e.g., "Microsoft Tech Community", "Azure Updates")
+    /// Used for attribution and potential sidebar display
     /// </summary>
-    public string? AltCollection { get; init; }
+    public string? FeedName { get; init; }
 
     /// <summary>
     /// Section names (lowercase identifiers) this content belongs to (e.g., "ai", "github-copilot", "coding").
@@ -68,11 +69,6 @@ public class ContentItem
     /// Optional external link URL
     /// </summary>
     public string? ExternalUrl { get; init; }
-
-    /// <summary>
-    /// Optional YouTube video ID for video content
-    /// </summary>
-    public string? VideoId { get; init; }
 
     /// <summary>
     /// Viewing mode for content (internal or external)

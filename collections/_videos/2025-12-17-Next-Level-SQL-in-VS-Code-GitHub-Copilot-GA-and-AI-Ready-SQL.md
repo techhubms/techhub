@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Sd-3KpSNJzo
 title: 'Next-Level SQL in VS Code: GitHub Copilot GA and AI-Ready SQL'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=Sd-3KpSNJzo
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-17 17:00:47 +00:00
-permalink: /github-copilot/videos/Next-Level-SQL-in-VS-Code-GitHub-Copilot-GA-and-AI-Ready-SQL
 tags:
 - AI Ready Schema
 - Ask And Agent Mode

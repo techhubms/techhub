@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=8Z0dCQWApg8
 title: 'App Modernization Automation: Migrating Windows, Intune, and Azure Virtual Desktop'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=8Z0dCQWApg8
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 14:44:36 +00:00
-permalink: /azure/videos/App-Modernization-Automation-Migrating-Windows-Intune-and-Azure-Virtual-Desktop
 tags:
 - App Testing
 - Application Readiness

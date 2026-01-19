@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://khalidabuhakmeh.com/dynamic-htmx-islands-with-aspnet-core
 title: 'Dynamic Htmx Islands with ASP.NET Core: Island TagHelpers and Response Caching'
 author: Khalid Abuhakmeh
-canonical_url: https://khalidabuhakmeh.com/dynamic-htmx-islands-with-aspnet-core
 viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
-feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2024-11-19 00:00:00 +00:00
-permalink: /coding/blogs/Dynamic-Htmx-Islands-with-ASPNET-Core-Island-TagHelpers-and-Response-Caching
 tags:
 - ASP.NET
 - ASP.NET Core

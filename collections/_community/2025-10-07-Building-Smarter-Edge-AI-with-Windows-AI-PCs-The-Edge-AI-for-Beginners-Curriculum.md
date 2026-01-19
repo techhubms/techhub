@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-cloud-to-chip-building-smarter-ai-at-the-edge-with-windows/ba-p/4459582
 title: 'Building Smarter Edge AI with Windows AI PCs: The Edge AI for Beginners Curriculum'
 author: Lee_Stott
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-cloud-to-chip-building-smarter-ai-at-the-edge-with-windows/ba-p/4459582
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-07 07:13:47 +00:00
-permalink: /ai/community/Building-Smarter-Edge-AI-with-Windows-AI-PCs-The-Edge-AI-for-Beginners-Curriculum
 tags:
 - AI Agent Framework
 - Azure AI Foundry

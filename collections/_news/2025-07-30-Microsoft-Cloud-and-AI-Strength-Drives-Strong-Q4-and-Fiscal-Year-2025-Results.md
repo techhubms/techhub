@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/2025/07/30/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results/
 title: Microsoft Cloud and AI Strength Drives Strong Q4 and Fiscal Year 2025 Results
 author: stclarke
-canonical_url: https://news.microsoft.com/source/2025/07/30/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-30 20:09:51 +00:00
-permalink: /ai/news/Microsoft-Cloud-and-AI-Strength-Drives-Strong-Q4-and-Fiscal-Year-2025-Results
 tags:
 - Amy Hood
 - Cloud Computing

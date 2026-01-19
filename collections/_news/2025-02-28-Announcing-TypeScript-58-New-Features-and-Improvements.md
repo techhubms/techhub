@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8/
 title: 'Announcing TypeScript 5.8: New Features and Improvements'
 author: Daniel Rosenwasser
-canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8/
 viewing_mode: external
 feed_name: Microsoft TypeScript Blog
-feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-02-28 19:35:56 +00:00
-permalink: /coding/news/Announcing-TypeScript-58-New-Features-and-Improvements
 tags:
 - Compiler Options
 - Declaration Files

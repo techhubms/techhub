@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/stop-running-runbooks-at-3-am-let-azure-sre-agent-do-your-on/ba-p/4479811
 title: Automating On-Call Runbooks with Azure SRE Agent for Incident Response
 author: dchelupati
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/stop-running-runbooks-at-3-am-let-azure-sre-agent-do-your-on/ba-p/4479811
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-20 15:52:24 +00:00
-permalink: /ai/community/Automating-On-Call-Runbooks-with-Azure-SRE-Agent-for-Incident-Response
 tags:
 - Application Insights
 - Automated Diagnostics

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mex14a/aspnetcoresecuritykey_security_api_key/
 title: 'AspNetCore.SecurityKey: API Key Authentication for ASP.NET Core Applications'
 author: pwelter34
-canonical_url: https://www.reddit.com/r/csharp/comments/1mex14a/aspnetcoresecuritykey_security_api_key/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-01 13:50:31 +00:00
-permalink: /coding/community/AspNetCoreSecurityKey-API-Key-Authentication-for-ASPNET-Core-Applications
 tags:
 - API Key Authentication
 - ASP.NET Core

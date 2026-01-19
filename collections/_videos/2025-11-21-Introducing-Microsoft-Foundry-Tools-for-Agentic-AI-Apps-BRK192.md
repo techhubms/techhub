@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=JDXRDgnQ8Ko
 title: Introducing Microsoft Foundry Tools for Agentic AI Apps | BRK192
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=JDXRDgnQ8Ko
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:17:10 +00:00
-permalink: /ai/videos/Introducing-Microsoft-Foundry-Tools-for-Agentic-AI-Apps-BRK192
 tags:
 - AI Agents
 - APIs

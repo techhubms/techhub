@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=OhmtV7-djMk
 title: Azure Update - 6th June 2025
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=OhmtV7-djMk
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-06-06 14:35:12 +00:00
-permalink: /ai/videos/Azure-Update-6th-June-2025
 viewing_mode: internal
 tags:
 - AI Managed Network

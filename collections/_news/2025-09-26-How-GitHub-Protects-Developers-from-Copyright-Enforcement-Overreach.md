@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/news-insights/policy-news-and-insights/how-github-protects-developers-from-copyright-enforcement-overreach/
 title: How GitHub Protects Developers from Copyright Enforcement Overreach
 author: Margaret Tucker
-canonical_url: https://github.blog/news-insights/policy-news-and-insights/how-github-protects-developers-from-copyright-enforcement-overreach/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-09-26 17:06:17 +00:00
-permalink: /devops/news/How-GitHub-Protects-Developers-from-Copyright-Enforcement-Overreach
 tags:
 - Acceptable Use Policy
 - Content Moderation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/devops/retirement-of-global-personal-access-tokens-in-azure-devops/
 title: 'Azure DevOps Retires Global Personal Access Tokens: Key Dates and Security Impact'
 author: Angel Wong
-canonical_url: https://devblogs.microsoft.com/devops/retirement-of-global-personal-access-tokens-in-azure-devops/
 viewing_mode: external
 feed_name: Microsoft DevOps Blog
-feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-12-12 14:15:06 +00:00
-permalink: /azure/news/Azure-DevOps-Retires-Global-Personal-Access-Tokens-Key-Dates-and-Security-Impact
 tags:
 - Authentication
 - Azure DevOps

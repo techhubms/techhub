@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/converting-page-or-append-blobs-to-block-blobs-with-adf/ba-p/4433723
 title: Converting Page or Append Blobs to Block Blobs with Azure Data Factory
 author: SaikumarMandepudi
-canonical_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/converting-page-or-append-blobs-to-block-blobs-with-adf/ba-p/4433723
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-01 10:57:37 +00:00
-permalink: /ml/community/Converting-Page-or-Append-Blobs-to-Block-Blobs-with-Azure-Data-Factory
 tags:
 - Access Tiers
 - Append Blobs

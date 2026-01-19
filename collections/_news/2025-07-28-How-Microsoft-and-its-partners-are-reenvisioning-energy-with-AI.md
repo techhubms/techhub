@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/industry/blog/energy-and-resources/2025/07/28/driving-the-grid-of-the-future-how-microsoft-and-our-partners-are-reenvisioning-energy-with-ai/
 title: How Microsoft and its partners are reenvisioning energy with AI
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/industry/blog/energy-and-resources/2025/07/28/driving-the-grid-of-the-future-how-microsoft-and-our-partners-are-reenvisioning-energy-with-ai/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-28 18:04:45 +00:00
-permalink: /ai/news/How-Microsoft-and-its-partners-are-reenvisioning-energy-with-AI
 tags:
 - Company News
 - Energy Infrastructure

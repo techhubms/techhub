@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=fcdA1iVrrYw
 title: 'Azure Update – 25th July 2025: Latest Service Announcements and Enhancements'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=fcdA1iVrrYw
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-25 14:27:36 +00:00
-permalink: /ml/videos/Azure-Update-25th-July-2025-Latest-Service-Announcements-and-Enhancements
 tags:
 - App Gateway For Containers
 - Azure Cloud

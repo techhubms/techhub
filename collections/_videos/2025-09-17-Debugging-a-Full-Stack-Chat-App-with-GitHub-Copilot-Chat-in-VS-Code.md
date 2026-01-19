@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=QLAIww-Vhqo
 title: Debugging a Full-Stack Chat App with GitHub Copilot Chat in VS Code
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=QLAIww-Vhqo
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-17 14:00:51 +00:00
-permalink: /github-copilot/videos/Debugging-a-Full-Stack-Chat-App-with-GitHub-Copilot-Chat-in-VS-Code
 tags:
 - Agent Mode
 - AI Pair Programming

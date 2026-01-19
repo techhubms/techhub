@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=utOalOGsRXc
 title: 'Godot for C# Developers: Leveraging AI and GitHub Copilot for Prototyping'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=utOalOGsRXc
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:21:50 +00:00
-permalink: /github-copilot/videos/Godot-for-C-Developers-Leveraging-AI-and-GitHub-Copilot-for-Prototyping
 tags:
 - .NET
 - .NET 10

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://r-vm.com/new-website-tech-hub-ms.html
 title: 'Announcing tech.hub.ms: Curated Microsoft Tech Content Platform'
 author: Reinier van Maanen
-canonical_url: https://r-vm.com/new-website-tech-hub-ms.html
 viewing_mode: external
 feed_name: Reinier van Maanen's blog
-feed_url: https://r-vm.com/feed.xml
 date: 2025-08-19 00:00:00 +00:00
-permalink: /github-copilot/blogs/Announcing-techhubms-Curated-Microsoft-Tech-Content-Platform
 tags:
 - .NET
 - AI Powered Tagging

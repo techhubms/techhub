@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.linkedin.com/posts/satyanadella_10-print-anthropic-microsoft-nvidia-activity-7396565254328995840-i9JX
 title: Microsoft, Anthropic, and NVIDIA Announce Strategic AI Partnership
 author: stclarke
-canonical_url: https://www.linkedin.com/posts/satyanadella_10-print-anthropic-microsoft-nvidia-activity-7396565254328995840-i9JX
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-18 16:53:27 +00:00
-permalink: /ai/news/Microsoft-Anthropic-and-NVIDIA-Announce-Strategic-AI-Partnership
 tags:
 - AI Capacity
 - AI Infrastructure

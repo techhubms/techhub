@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mkt2tk/azure_vpn_p2s_and_expressroute_coexistence/
 title: Architecting Azure VPN P2S and ExpressRoute Coexistence in a Hub & Spoke Topology
 author: tampasmix
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mkt2tk/azure_vpn_p2s_and_expressroute_coexistence/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-08 11:50:57 +00:00
-permalink: /azure/community/Architecting-Azure-VPN-P2S-and-ExpressRoute-Coexistence-in-a-Hub-and-Spoke-Topology
 tags:
 - Azure Firewall
 - Azure Route Server

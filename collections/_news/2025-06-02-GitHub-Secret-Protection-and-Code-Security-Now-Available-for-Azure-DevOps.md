@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/devops/github-secret-protection-and-github-code-security-for-azure-devops/
 title: GitHub Secret Protection and Code Security Now Available for Azure DevOps
 author: Laura Jiang
-canonical_url: https://devblogs.microsoft.com/devops/github-secret-protection-and-github-code-security-for-azure-devops/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-06-02 14:30:55 +00:00
-permalink: /azure/news/GitHub-Secret-Protection-and-Code-Security-Now-Available-for-Azure-DevOps
 tags:
 - Azure DevOps
 - Code Security

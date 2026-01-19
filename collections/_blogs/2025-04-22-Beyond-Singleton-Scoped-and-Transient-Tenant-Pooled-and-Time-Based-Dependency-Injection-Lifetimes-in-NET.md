@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/going-beyond-singleton-scoped-and-transient-lifetimes/
 title: 'Beyond Singleton, Scoped, and Transient: Tenant, Pooled, and Time-Based Dependency Injection Lifetimes in .NET'
 author: Andrew Lock
-canonical_url: https://andrewlock.net/going-beyond-singleton-scoped-and-transient-lifetimes/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-04-22 09:00:00 +00:00
-permalink: /coding/blogs/Beyond-Singleton-Scoped-and-Transient-Tenant-Pooled-and-Time-Based-Dependency-Injection-Lifetimes-in-NET
 tags:
 - .NET
 - ASP.NET Core

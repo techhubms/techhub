@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=4fYXcmyZH3U
 title: AI-Powered Enhancements in Microsoft Learn Developer Docs with Copilot Highlights
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=4fYXcmyZH3U
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-21 15:41:25 +00:00
-permalink: /github-copilot/videos/AI-Powered-Enhancements-in-Microsoft-Learn-Developer-Docs-with-Copilot-Highlights
 tags:
 - .NET
 - AI Integration

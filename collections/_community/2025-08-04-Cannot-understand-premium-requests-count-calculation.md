@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mha6xk/cannot_understand_premium_requests_count/
 title: Cannot understand premium requests count calculation
 author: FeelingResolution806
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mha6xk/cannot_understand_premium_requests_count/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-04 10:53:30 +00:00
-permalink: /github-copilot/community/Cannot-understand-premium-requests-count-calculation
 tags:
 - AI Models
 - Copilot Usage

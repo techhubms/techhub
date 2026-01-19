@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2026-01-15-secret-scanning-extended-metadata-to-be-automatically-enabled-for-certain-repositories
 title: 'GitHub Secret Scanning: Automatic Extended Metadata Checks for Security'
 author: Allison
-canonical_url: https://github.blog/changelog/2026-01-15-secret-scanning-extended-metadata-to-be-automatically-enabled-for-certain-repositories
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2026-01-15 21:59:35 +00:00
-permalink: /devops/news/GitHub-Secret-Scanning-Automatic-Extended-Metadata-Checks-for-Security
 tags:
 - Application Security
 - Developer Security

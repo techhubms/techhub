@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracledatabase-azure-expands-footprint-to-31-regions-and/ba-p/4471109
 title: Oracle Database@Azure Now Available in 31 Regions With Enhanced Security and AI Integration
 author: KalyanKaki
-canonical_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracledatabase-azure-expands-footprint-to-31-regions-and/ba-p/4471109
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 20:29:14 +00:00
-permalink: /ai/community/Oracle-DatabaseAzure-Now-Available-in-31-Regions-With-Enhanced-Security-and-AI-Integration
 tags:
 - AI Integration
 - Apache Iceberg

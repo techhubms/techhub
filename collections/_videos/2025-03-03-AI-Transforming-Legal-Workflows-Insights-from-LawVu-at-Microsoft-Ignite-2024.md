@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=zqllWICJ35s
 title: 'AI Transforming Legal Workflows: Insights from LawVu at Microsoft Ignite 2024'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=zqllWICJ35s
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-03-03 22:00:45 +00:00
-permalink: /ai/videos/AI-Transforming-Legal-Workflows-Insights-from-LawVu-at-Microsoft-Ignite-2024
 tags:
 - AI in Legal
 - AI Integration

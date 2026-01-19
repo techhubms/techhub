@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=KDxi3NG3nfU
 title: Getting Started with the Microsoft Agent Framework in .NET
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=KDxi3NG3nfU
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-06 16:35:53 +00:00
-permalink: /ai/videos/Getting-Started-with-the-Microsoft-Agent-Framework-in-NET
 tags:
 - .NET
 - .NET Developer

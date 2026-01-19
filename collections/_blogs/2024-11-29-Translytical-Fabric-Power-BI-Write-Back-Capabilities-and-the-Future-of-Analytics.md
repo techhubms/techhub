@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://zure.com/blog/translytical-fabric-ie-power-bi-write-back/
 title: 'Translytical Fabric: Power BI Write-Back Capabilities and the Future of Analytics'
 author: Antti Suanto
-canonical_url: https://zure.com/blog/translytical-fabric-ie-power-bi-write-back/
 viewing_mode: external
 feed_name: Zure Data & AI Blog
-feed_url: https://zure.com/category/blog/feed/?tag=dataai
 date: 2024-11-29 12:30:19 +00:00
-permalink: /ml/blogs/Translytical-Fabric-Power-BI-Write-Back-Capabilities-and-the-Future-of-Analytics
 tags:
 - AI
 - Business Intelligence

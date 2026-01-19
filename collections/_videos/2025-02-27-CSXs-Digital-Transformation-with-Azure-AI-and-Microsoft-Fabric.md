@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=e86IqIkxVhU
 title: CSX's Digital Transformation with Azure, AI, and Microsoft Fabric
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=e86IqIkxVhU
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-02-27 14:00:47 +00:00
-permalink: /ai/videos/CSXs-Digital-Transformation-with-Azure-AI-and-Microsoft-Fabric
 tags:
 - Cloud Innovation
 - Cloud Migration

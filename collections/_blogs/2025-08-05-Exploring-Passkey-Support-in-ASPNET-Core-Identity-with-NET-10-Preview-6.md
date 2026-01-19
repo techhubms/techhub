@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-6-passkey-support-for-aspnetcore-identity/
 title: Exploring Passkey Support in ASP.NET Core Identity with .NET 10 Preview 6
 author: Andrew Lock
-canonical_url: https://andrewlock.net/exploring-dotnet-10-preview-features-6-passkey-support-for-aspnetcore-identity/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-08-05 10:00:00 +00:00
-permalink: /coding/blogs/Exploring-Passkey-Support-in-ASPNET-Core-Identity-with-NET-10-Preview-6
 tags:
 - .NET 10
 - ASP.NET Core

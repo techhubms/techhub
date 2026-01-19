@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/making-observability-actionable-turning-metrics-logs-and-traces-into-better-business-outcomes/?utm_source=rss&utm_medium=rss&utm_campaign=making-observability-actionable-turning-metrics-logs-and-traces-into-better-business-outcomes
 title: 'Making Observability Actionable: Turning Metrics, Logs, and Traces into Better Business Outcomes'
 author: Neel Shah
-canonical_url: https://devops.com/making-observability-actionable-turning-metrics-logs-and-traces-into-better-business-outcomes/?utm_source=rss&utm_medium=rss&utm_campaign=making-observability-actionable-turning-metrics-logs-and-traces-into-better-business-outcomes
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-05 06:16:01 +00:00
-permalink: /devops/blogs/Making-Observability-Actionable-Turning-Metrics-Logs-and-Traces-into-Better-Business-Outcomes
 tags:
 - Actionable Observability
 - AI

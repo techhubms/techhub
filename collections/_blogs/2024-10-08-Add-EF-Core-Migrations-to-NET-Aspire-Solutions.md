@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://khalidabuhakmeh.com/add-ef-core-migrations-to-dotnet-aspire-solutions
 title: Add EF Core Migrations to .NET Aspire Solutions
 author: Khalid Abuhakmeh
-canonical_url: https://khalidabuhakmeh.com/add-ef-core-migrations-to-dotnet-aspire-solutions
 viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
-feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2024-10-08 00:00:00 +00:00
-permalink: /coding/blogs/Add-EF-Core-Migrations-to-NET-Aspire-Solutions
 tags:
 - .NET
 - .NET Aspire

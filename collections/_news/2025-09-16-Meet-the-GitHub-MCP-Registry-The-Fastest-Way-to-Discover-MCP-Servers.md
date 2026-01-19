@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/meet-the-github-mcp-registry-the-fastest-way-to-discover-mcp-servers/
 title: 'Meet the GitHub MCP Registry: The Fastest Way to Discover MCP Servers'
 author: Toby Padilla
-canonical_url: https://github.blog/ai-and-ml/github-copilot/meet-the-github-mcp-registry-the-fastest-way-to-discover-mcp-servers/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-09-16 16:27:54 +00:00
-permalink: /github-copilot/news/Meet-the-GitHub-MCP-Registry-The-Fastest-Way-to-Discover-MCP-Servers
 tags:
 - Agentic Workflows
 - AI & ML

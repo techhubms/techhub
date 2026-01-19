@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-12-github-copilot-in-vs-code-august-release-v1-104
 title: 'GitHub Copilot in Visual Studio Code August 2025 Update (v1.104): New Features and Security Enhancements'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-12-github-copilot-in-vs-code-august-release-v1-104
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-12 19:01:40 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-in-Visual-Studio-Code-August-2025-Update-v1104-New-Features-and-Security-Enhancements
 tags:
 - Agent Mode
 - AGENTS.md

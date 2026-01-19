@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-to-register-and-prepare-for-the-github-copilot-exam-step-by-step-guide/
 title: How to Register and Prepare for the GitHub Copilot Certification Exam
 author: Dellenny
-canonical_url: https://dellenny.com/how-to-register-and-prepare-for-the-github-copilot-exam-step-by-step-guide/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-28 08:45:55 +00:00
-permalink: /github-copilot/blogs/How-to-Register-and-Prepare-for-the-GitHub-Copilot-Certification-Exam
 tags:
 - AI Assisted Development
 - Certification Exam

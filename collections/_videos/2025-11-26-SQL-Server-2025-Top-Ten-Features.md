@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=45I_m50kInE
 title: SQL Server 2025 Top Ten Features
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=45I_m50kInE
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-11-26 16:52:12 +00:00
-permalink: /ai/videos/SQL-Server-2025-Top-Ten-Features
 tags:
 - AI Integration
 - Azure Arc

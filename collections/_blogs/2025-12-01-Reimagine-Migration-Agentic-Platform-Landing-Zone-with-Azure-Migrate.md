@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.thomasmaurer.ch/2025/12/reimagine-migration-agentic-platform-landing-zone-with-azure-migrate/
 title: 'Reimagine Migration: Agentic Platform Landing Zone with Azure Migrate'
 author: Thomas Maurer
-canonical_url: https://www.thomasmaurer.ch/2025/12/reimagine-migration-agentic-platform-landing-zone-with-azure-migrate/
 viewing_mode: external
 feed_name: Thomas Maurer's Blog
-feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-12-01 13:31:20 +00:00
-permalink: /azure/blogs/Reimagine-Migration-Agentic-Platform-Landing-Zone-with-Azure-Migrate
 tags:
 - Agentic
 - Agentic Approach

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Yujyvez1fVA
 title: Integrating Copilot Studio and Azure AI Foundry for Accelerated AI Development
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=Yujyvez1fVA
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 15:12:00 +00:00
-permalink: /ai/videos/Integrating-Copilot-Studio-and-Azure-AI-Foundry-for-Accelerated-AI-Development
 tags:
 - Activity Explorer
 - Agent Orchestration

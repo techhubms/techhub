@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-18-assign-azure-boards-work-items-to-copilot-coding-agent-in-public-preview
 title: Assign Azure Boards Work Items to GitHub Copilot Coding Agent in Public Preview
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-18-assign-azure-boards-work-items-to-copilot-coding-agent-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-18 19:43:27 +00:00
-permalink: /github-copilot/news/Assign-Azure-Boards-Work-Items-to-GitHub-Copilot-Coding-Agent-in-Public-Preview
 tags:
 - AI Agent
 - Azure Boards

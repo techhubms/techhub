@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/unlocking-the-power-of-ai-with-azure-cognitive-services/
 title: Unlocking the Power of AI with Azure Cognitive Services
 author: Dellenny
-canonical_url: https://dellenny.com/unlocking-the-power-of-ai-with-azure-cognitive-services/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-16 18:18:45 +00:00
-permalink: /ai/blogs/Unlocking-the-Power-of-AI-with-Azure-Cognitive-Services
 tags:
 - AI Integration
 - Anomaly Detector

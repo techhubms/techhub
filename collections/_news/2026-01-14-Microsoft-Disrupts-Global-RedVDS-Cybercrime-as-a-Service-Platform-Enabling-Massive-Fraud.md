@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/on-the-issues/2026/01/14/microsoft-disrupts-cybercrime/
 title: Microsoft Disrupts Global RedVDS Cybercrime-as-a-Service Platform Enabling Massive Fraud
 author: stclarke
-canonical_url: https://blogs.microsoft.com/on-the-issues/2026/01/14/microsoft-disrupts-cybercrime/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-14 15:49:33 +00:00
-permalink: /ai/news/Microsoft-Disrupts-Global-RedVDS-Cybercrime-as-a-Service-Platform-Enabling-Massive-Fraud
 tags:
 - AI Enabled Fraud
 - Business Email Compromise

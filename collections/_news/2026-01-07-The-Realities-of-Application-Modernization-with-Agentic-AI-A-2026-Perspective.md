@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/all-things-azure/the-realities-of-application-modernization-with-agentic-ai-early-2026/
 title: 'The Realities of Application Modernization with Agentic AI: A 2026 Perspective'
 author: jkordick
-canonical_url: https://devblogs.microsoft.com/all-things-azure/the-realities-of-application-modernization-with-agentic-ai-early-2026/
 viewing_mode: external
 feed_name: Microsoft All Things Azure Blog
-feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2026-01-07 16:06:35 +00:00
-permalink: /ai/news/The-Realities-of-Application-Modernization-with-Agentic-AI-A-2026-Perspective
 tags:
 - Agentic AI
 - Agents

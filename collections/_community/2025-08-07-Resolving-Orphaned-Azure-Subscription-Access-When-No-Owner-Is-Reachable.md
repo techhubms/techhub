@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mk81h8/orphaned_azure_subscription_no_owner_access/
 title: Resolving Orphaned Azure Subscription Access When No Owner Is Reachable
 author: GelatinousCubeZantar
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mk81h8/orphaned_azure_subscription_no_owner_access/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-07 18:31:50 +00:00
-permalink: /azure/community/Resolving-Orphaned-Azure-Subscription-Access-When-No-Owner-Is-Reachable
 tags:
 - Access Recovery
 - Azure Portal

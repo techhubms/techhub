@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-to-set-up-basic-security-policies-in-a-microsoft-365-trial-tenant/
 title: Setting Up Security Policies in Microsoft 365 Trial Tenants
 author: Dellenny
-canonical_url: https://dellenny.com/how-to-set-up-basic-security-policies-in-a-microsoft-365-trial-tenant/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-17 09:17:43 +00:00
-permalink: /security/blogs/Setting-Up-Security-Policies-in-Microsoft-365-Trial-Tenants
 tags:
 - Admin Roles
 - Audit Logs

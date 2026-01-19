@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/node-js-24-is-now-available-on-azure-app-service-for-linux/ba-p/4468801
 title: Node.js 24 Now Available on Azure App Service for Linux
 author: TulikaC
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/node-js-24-is-now-available-on-azure-app-service-for-linux/ba-p/4468801
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-11 04:10:13 +00:00
-permalink: /coding/community/Nodejs-24-Now-Available-on-Azure-App-Service-for-Linux
 tags:
 - App Service Deployment
 - ARM Templates

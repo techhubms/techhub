@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/beyond-the-chat-window-how-change-driven-architecture-enables/ba-p/4475026
 title: 'Beyond the Chat Window: How Change-Driven Architecture Enables Ambient AI Agents'
 author: CollinBrian
-canonical_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/beyond-the-chat-window-how-change-driven-architecture-enables/ba-p/4475026
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-03 23:09:40 +00:00
-permalink: /ai/community/Beyond-the-Chat-Window-How-Change-Driven-Architecture-Enables-Ambient-AI-Agents
 tags:
 - AI Agents
 - Ambient Agents

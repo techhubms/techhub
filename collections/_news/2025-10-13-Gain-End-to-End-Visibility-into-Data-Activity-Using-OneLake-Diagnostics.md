@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/gain-end-to-end-visibility-into-data-activity-using-onelake-diagnostics/
 title: Gain End-to-End Visibility into Data Activity Using OneLake Diagnostics
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/gain-end-to-end-visibility-into-data-activity-using-onelake-diagnostics/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-13 11:00:00 +00:00
-permalink: /ml/news/Gain-End-to-End-Visibility-into-Data-Activity-Using-OneLake-Diagnostics
 tags:
 - Azure Blob Storage
 - Compliance

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-26-releases-now-support-immutability-in-public-preview
 title: GitHub Releases Introduce Immutability for Enhanced Supply Chain Security
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-26-releases-now-support-immutability-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-26 20:33:53 +00:00
-permalink: /devops/news/GitHub-Releases-Introduce-Immutability-for-Enhanced-Supply-Chain-Security
 tags:
 - Artifact Verification
 - CI/CD

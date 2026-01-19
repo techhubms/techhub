@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mkqa37/stop_allocating_strings_i_built_a_spanpowered/
 title: 'ZaString: A Zero-Allocation Span-Based String Builder for .NET'
 author: typicalyume
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mkqa37/stop_allocating_strings_i_built_a_spanpowered/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-08 09:05:50 +00:00
-permalink: /coding/community/ZaString-A-Zero-Allocation-Span-Based-String-Builder-for-NET
 tags:
 - .NET
 - API Design

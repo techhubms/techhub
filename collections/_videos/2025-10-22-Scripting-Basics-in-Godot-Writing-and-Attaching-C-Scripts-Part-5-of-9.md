@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=iEMbetxAwvA
 title: 'Scripting Basics in Godot: Writing and Attaching C# Scripts (Part 5 of 9)'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=iEMbetxAwvA
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-22 16:30:16 +00:00
-permalink: /coding/videos/Scripting-Basics-in-Godot-Writing-and-Attaching-C-Scripts-Part-5-of-9
 tags:
 - .NET
 - Beginner Tutorial

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=u4ksAXEx0R4
 title: 'Creating Multi-Agent Workflows in Microsoft Foundry: Adding Agents with Tools'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=u4ksAXEx0R4
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-24 19:12:06 +00:00
-permalink: /ai/videos/Creating-Multi-Agent-Workflows-in-Microsoft-Foundry-Adding-Agents-with-Tools
 tags:
 - Agent Creation
 - Agent Tools

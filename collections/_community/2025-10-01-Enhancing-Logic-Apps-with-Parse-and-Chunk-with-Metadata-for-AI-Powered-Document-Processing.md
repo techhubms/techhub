@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-parse-chunk-with-metadata-in-logic-apps-build-context/ba-p/4458438
 title: Enhancing Logic Apps with Parse & Chunk with Metadata for AI-Powered Document Processing
 author: shahparth
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-parse-chunk-with-metadata-in-logic-apps-build-context/ba-p/4458438
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-01 23:25:57 +00:00
-permalink: /ai/community/Enhancing-Logic-Apps-with-Parse-and-Chunk-with-Metadata-for-AI-Powered-Document-Processing
 tags:
 - Agent Loop
 - Azure AI Search

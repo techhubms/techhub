@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/10/16/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-siem/
 title: Microsoft Sentinel Recognized as a Leader in the 2025 Gartner Magic Quadrant for SIEM
 author: Rob Lefferts
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/16/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-siem/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-16 18:00:00 +00:00
-permalink: /ai/news/Microsoft-Sentinel-Recognized-as-a-Leader-in-the-2025-Gartner-Magic-Quadrant-for-SIEM
 tags:
 - Agentic AI
 - AI Powered Security

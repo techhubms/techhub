@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-14-github-enterprise-server-3-18-is-now-generally-available
 title: GitHub Enterprise Server 3.18 Release Overview
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-14-github-enterprise-server-3-18-is-now-generally-available
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-14 17:28:22 +00:00
-permalink: /devops/news/GitHub-Enterprise-Server-318-Release-Overview
 tags:
 - Advanced Security
 - Code Security

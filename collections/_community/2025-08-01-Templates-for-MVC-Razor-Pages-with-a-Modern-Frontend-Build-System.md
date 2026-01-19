@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mf10vc/templates_for_mvc_razor_pages_with_a_modern/
 title: Templates for MVC / Razor Pages with a Modern Frontend Build System
 author: baunegaard
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mf10vc/templates_for_mvc_razor_pages_with_a_modern/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-01 16:25:32 +00:00
-permalink: /coding/community/Templates-for-MVC-Razor-Pages-with-a-Modern-Frontend-Build-System
 tags:
 - .NET
 - ASP.NET

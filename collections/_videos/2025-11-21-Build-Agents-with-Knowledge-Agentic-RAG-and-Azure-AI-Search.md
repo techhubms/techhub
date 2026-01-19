@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=lW47o2ss3Yg
 title: Build Agents with Knowledge, Agentic RAG, and Azure AI Search
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=lW47o2ss3Yg
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:21:54 +00:00
-permalink: /ai/videos/Build-Agents-with-Knowledge-Agentic-RAG-and-Azure-AI-Search
 tags:
 - Agent Development
 - Azure AI Search

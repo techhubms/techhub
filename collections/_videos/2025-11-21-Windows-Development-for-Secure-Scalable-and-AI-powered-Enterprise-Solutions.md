@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=zOy-tA1Zb0g
 title: Windows Development for Secure, Scalable, & AI-powered Enterprise Solutions
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=zOy-tA1Zb0g
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 06:32:50 +00:00
-permalink: /ai/videos/Windows-Development-for-Secure-Scalable-and-AI-powered-Enterprise-Solutions
 tags:
 - Agent Connectors
 - Agent ID

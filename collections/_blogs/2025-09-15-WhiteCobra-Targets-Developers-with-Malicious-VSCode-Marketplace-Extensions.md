@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/whitecobra-targets-developers-with-dozens-of-malicious-extensions/?utm_source=rss&utm_medium=rss&utm_campaign=whitecobra-targets-developers-with-dozens-of-malicious-extensions
 title: WhiteCobra Targets Developers with Malicious VSCode Marketplace Extensions
 author: Jeff Burt
-canonical_url: https://devops.com/whitecobra-targets-developers-with-dozens-of-malicious-extensions/?utm_source=rss&utm_medium=rss&utm_campaign=whitecobra-targets-developers-with-dozens-of-malicious-extensions
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-15 16:56:48 +00:00
-permalink: /devops/blogs/WhiteCobra-Targets-Developers-with-Malicious-VSCode-Marketplace-Extensions
 tags:
 - Attack Chain
 - C2 Servers

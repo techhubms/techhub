@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=IfhxdKKd4GU
 title: What's New in Containers for .NET 10
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=IfhxdKKd4GU
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:46 +00:00
-permalink: /coding/videos/Whats-New-in-Containers-for-NET-10
 tags:
 - .NET
 - .NET 10

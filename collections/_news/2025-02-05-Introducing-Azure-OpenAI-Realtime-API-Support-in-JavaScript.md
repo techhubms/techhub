@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/introducing-azure-openai-realtime-api-support-in-javascript/
 title: Introducing Azure OpenAI Realtime API Support in JavaScript
 author: Deyaaeldeen Almahallawi
-canonical_url: https://devblogs.microsoft.com/azure-sdk/introducing-azure-openai-realtime-api-support-in-javascript/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-02-05 05:35:07 +00:00
-permalink: /ai/news/Introducing-Azure-OpenAI-Realtime-API-Support-in-JavaScript
 tags:
 - Authentication
 - Azure OpenAI

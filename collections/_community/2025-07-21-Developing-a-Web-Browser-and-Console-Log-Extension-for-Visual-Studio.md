@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/VisualStudio/comments/1m5pxx2/possible_new_web_browserconsole_extension/
 title: Developing a Web Browser and Console Log Extension for Visual Studio
 author: ggobrien
-canonical_url: https://www.reddit.com/r/VisualStudio/comments/1m5pxx2/possible_new_web_browserconsole_extension/
 viewing_mode: external
 feed_name: Reddit Visual Studio
-feed_url: https://www.reddit.com/r/VisualStudio/.rss
 date: 2025-07-21 17:55:22 +00:00
-permalink: /coding/community/Developing-a-Web-Browser-and-Console-Log-Extension-for-Visual-Studio
 tags:
 - Browser Panel
 - Console Log

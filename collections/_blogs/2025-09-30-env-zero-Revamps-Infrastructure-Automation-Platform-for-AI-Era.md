@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/env-zero-revamps-infrastructure-automation-platform-for-ai-era/
 title: env zero Revamps Infrastructure Automation Platform for AI Era
 author: Mike Vizard
-canonical_url: https://devops.com/env-zero-revamps-infrastructure-automation-platform-for-ai-era/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-30 14:06:39 +00:00
-permalink: /ai/blogs/env-zero-Revamps-Infrastructure-Automation-Platform-for-AI-Era
 tags:
 - AI Agents
 - Anthropic

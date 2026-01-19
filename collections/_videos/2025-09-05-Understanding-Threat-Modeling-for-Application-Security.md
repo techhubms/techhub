@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=sDLrub3WyG4
 title: Understanding Threat Modeling for Application Security
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=sDLrub3WyG4
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-05 16:54:20 +00:00
-permalink: /security/videos/Understanding-Threat-Modeling-for-Application-Security
 tags:
 - Application Security
 - Authentication

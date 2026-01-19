@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/on-the-issues/2025/07/20/eudigitalunlock/
 title: Microsoft supports making Europe’s languages and cultures more accessible in the digital realm
 author: stclarke
-canonical_url: https://blogs.microsoft.com/on-the-issues/2025/07/20/eudigitalunlock/
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-21 16:42:58 +00:00
-permalink: /ai/news/Microsoft-supports-making-Europes-languages-and-cultures-more-accessible-in-the-digital-realm
 viewing_mode: external
 tags:
 - Company News

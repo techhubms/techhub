@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=x0dfj95Cj0U
 title: 'Introducing TickerQ: A Modern .NET Scheduling Library for C# Developers'
 author: Nick Chapsas
-canonical_url: https://www.youtube.com/watch?v=x0dfj95Cj0U
 viewing_mode: internal
 feed_name: Nick Chapsas YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-07-30 11:15:06 +00:00
-permalink: /coding/videos/Introducing-TickerQ-A-Modern-NET-Scheduling-Library-for-C-Developers
 tags:
 - .NET
 - C#

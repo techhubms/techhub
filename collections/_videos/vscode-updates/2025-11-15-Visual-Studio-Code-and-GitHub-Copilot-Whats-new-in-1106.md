@@ -1,14 +1,10 @@
-﻿---
-layout: post
+---
+external_url: https://www.youtube.com/watch?v=zsCBEVCQ98I
 title: Visual Studio Code and GitHub Copilot - What's new in 1.106
 author: Fokko Veegens
-canonical_url: https://www.youtube.com/watch?v=zsCBEVCQ98I
 viewing_mode: internal
-youtube_id: 8za-H1fWjaM
+feed_name: Fokko at Work
 date: 2025-11-15 23:00:00 +00:00
-permalink: /github-copilot/videos/Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1106
-section: github-copilot
-alt-collection: vscode-updates
 tags:
 - Chain Of Thought
 - Chat Terminal

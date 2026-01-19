@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2025/
 title: 'Azure Developer CLI (azd) October 2025: Layered Provisioning, Service Dependencies, and More'
 author: PuiChee (PC) Chan
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2025/
 viewing_mode: external
 feed_name: Microsoft Azure SDK Blog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-10-14 21:54:15 +00:00
-permalink: /coding/news/Azure-Developer-CLI-azd-October-2025-Layered-Provisioning-Service-Dependencies-and-More
 tags:
 - .NET
 - AKS

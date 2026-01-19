@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/observe-adds-two-ai-agents-to-improve-observability/
 title: Observe Integrates AI Agents to Enhance Observability for DevOps Teams
 author: Mike Vizard
-canonical_url: https://devops.com/observe-adds-two-ai-agents-to-improve-observability/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-04 14:00:41 +00:00
-permalink: /ai/blogs/Observe-Integrates-AI-Agents-to-Enhance-Observability-for-DevOps-Teams
 tags:
 - AI Debugging
 - AI in DevOps

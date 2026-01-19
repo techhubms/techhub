@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=0Epo_gRJJ1s
 title: 'Let it Cook with GPT-5: Using GPT-5 in Visual Studio Code and GitHub Copilot'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=0Epo_gRJJ1s
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-07 23:16:05 +00:00
-permalink: /github-copilot/videos/Let-it-Cook-with-GPT-5-Using-GPT-5-in-Visual-Studio-Code-and-GitHub-Copilot
 tags:
 - AI Integration
 - AI Models

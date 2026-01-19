@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/token-based-authentication-in-azure-using-jwt-for-stateless-security/
 title: Token-Based Authentication in Azure Using JWT for Stateless Security
 author: Dellenny
-canonical_url: https://dellenny.com/token-based-authentication-in-azure-using-jwt-for-stateless-security/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-01 17:58:18 +00:00
-permalink: /coding/blogs/Token-Based-Authentication-in-Azure-Using-JWT-for-Stateless-Security
 tags:
 - APIM
 - Architecture

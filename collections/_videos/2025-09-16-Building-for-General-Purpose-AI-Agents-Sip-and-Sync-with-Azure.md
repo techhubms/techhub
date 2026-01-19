@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=fvx4QtDMlGo
 title: Building for General Purpose AI Agents | Sip and Sync with Azure
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=fvx4QtDMlGo
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-16 14:16:02 +00:00
-permalink: /ai/videos/Building-for-General-Purpose-AI-Agents-Sip-and-Sync-with-Azure
 tags:
 - Agent Integration
 - Agent Optimization

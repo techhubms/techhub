@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-10-codeql-2-23-0-adds-support-for-rust-log-injection-and-other-security-detection-improvements
 title: 'CodeQL 2.23.0: New Rust Log Injection Detection and Security Improvements'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-10-codeql-2-23-0-adds-support-for-rust-log-injection-and-other-security-detection-improvements
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-10 18:04:45 +00:00
-permalink: /coding/news/CodeQL-2230-New-Rust-Log-Injection-Detection-and-Security-Improvements
 tags:
 - Application Security
 - C#

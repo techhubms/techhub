@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=I8acOcHuE_I
 title: Open Source and AI Special with @francescociulla
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=I8acOcHuE_I
 viewing_mode: internal
 feed_name: GitHub's Youtube channel
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-25 04:06:27 +00:00
-permalink: /ai/videos/Open-Source-and-AI-Special-with-francescociulla
 tags:
 - AI Implementation
 - AI Tools

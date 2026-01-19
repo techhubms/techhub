@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-live-orlando-2025/
 title: 'VS Live! Orlando 2025: Deep Dive into Visual Studio, AI, DevOps, and Beyond'
 author: Jim Harrer
-canonical_url: https://devblogs.microsoft.com/visualstudio/visual-studio-live-orlando-2025/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-10-02 16:00:38 +00:00
-permalink: /github-copilot/news/VS-Live-Orlando-2025-Deep-Dive-into-Visual-Studio-AI-DevOps-and-Beyond
 tags:
 - .NET Aspire
 - Agentic DevOps

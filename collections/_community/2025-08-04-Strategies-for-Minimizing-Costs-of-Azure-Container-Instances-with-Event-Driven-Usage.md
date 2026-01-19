@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mhdius/lowest_costing_for_a_container_instance/
 title: Strategies for Minimizing Costs of Azure Container Instances with Event-Driven Usage
 author: smallstar3377
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mhdius/lowest_costing_for_a_container_instance/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-04 13:31:23 +00:00
-permalink: /azure/community/Strategies-for-Minimizing-Costs-of-Azure-Container-Instances-with-Event-Driven-Usage
 tags:
 - AZ CLI
 - Azure Container Instances

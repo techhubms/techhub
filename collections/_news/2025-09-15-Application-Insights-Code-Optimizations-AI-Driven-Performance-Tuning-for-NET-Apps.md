@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/application-insights-code-optimizations/
 title: 'Application Insights Code Optimizations: AI-Driven Performance Tuning for .NET Apps'
 author: Chuck Weininger
-canonical_url: https://devblogs.microsoft.com/dotnet/application-insights-code-optimizations/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-09-15 17:05:00 +00:00
-permalink: /github-copilot/news/Application-Insights-Code-Optimizations-AI-Driven-Performance-Tuning-for-NET-Apps
 tags:
 - .NET
 - Application Insights

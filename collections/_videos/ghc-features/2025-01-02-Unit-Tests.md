@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/RDpAJAjXkqo
 title: Unit Tests
 author: Randy Pagels
-canonical_url: https://youtu.be/RDpAJAjXkqo
 date: 2025-01-02 11:05:46 +00:00
-permalink: /github-copilot/videos/Unit-Tests
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Testing
 section_names:

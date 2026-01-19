@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/mirroring-for-oracle-in-microsoft-fabric-preview/
 title: 'Mirroring Oracle Data into Microsoft Fabric: Real-Time Integration without ETL'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/mirroring-for-oracle-in-microsoft-fabric-preview/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-29 17:00:00 +00:00
-permalink: /ml/news/Mirroring-Oracle-Data-into-Microsoft-Fabric-Real-Time-Integration-without-ETL
 tags:
 - Cross Cloud Analytics
 - Data Integration

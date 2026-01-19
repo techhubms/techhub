@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=-TsOdhaO7m4
 title: 'Agent Orchestration: Strongly-Typed Inputs and Results in Semantic Kernel'
 author: Learn Microsoft AI
-canonical_url: https://www.youtube.com/watch?v=-TsOdhaO7m4
 viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-06-06 08:34:23 +00:00
-permalink: /ai/videos/Agent-Orchestration-Strongly-Typed-Inputs-and-Results-in-Semantic-Kernel
 tags:
 - Agent Orchestration
 - AI Agent Workflow

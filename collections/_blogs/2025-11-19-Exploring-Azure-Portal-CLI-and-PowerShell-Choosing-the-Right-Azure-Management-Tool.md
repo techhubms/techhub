@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/exploring-azure-portal-cli-and-powershell-which-one-should-you-use/
 title: 'Exploring Azure Portal, CLI, and PowerShell: Choosing the Right Azure Management Tool'
 author: John Edward
-canonical_url: https://dellenny.com/exploring-azure-portal-cli-and-powershell-which-one-should-you-use/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-19 10:14:24 +00:00
-permalink: /coding/blogs/Exploring-Azure-Portal-CLI-and-PowerShell-Choosing-the-Right-Azure-Management-Tool
 tags:
 - Azure CLI
 - Azure Portal

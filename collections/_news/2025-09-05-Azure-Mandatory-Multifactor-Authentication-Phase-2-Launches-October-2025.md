@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/azure-mandatory-multifactor-authentication-phase-2-starting-in-october-2025/
 title: 'Azure Mandatory Multifactor Authentication: Phase 2 Launches October 2025'
 author: Joy Shah and Neha Kulkarni
-canonical_url: https://azure.microsoft.com/en-us/blog/azure-mandatory-multifactor-authentication-phase-2-starting-in-october-2025/
 viewing_mode: external
 feed_name: Microsoft Security Blog
-feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-09-05 15:00:00 +00:00
-permalink: /azure/news/Azure-Mandatory-Multifactor-Authentication-Phase-2-Launches-October-2025
 tags:
 - Azure CLI
 - Azure Policy

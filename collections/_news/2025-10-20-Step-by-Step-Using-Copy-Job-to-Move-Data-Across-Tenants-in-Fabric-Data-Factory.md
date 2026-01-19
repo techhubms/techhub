@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-copy-data-across-tenants-using-copy-job-in-fabric-data-factory/
 title: 'Step-by-Step: Using Copy Job to Move Data Across Tenants in Fabric Data Factory'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-copy-data-across-tenants-using-copy-job-in-fabric-data-factory/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-20 12:00:00 +00:00
-permalink: /ml/news/Step-by-Step-Using-Copy-Job-to-Move-Data-Across-Tenants-in-Fabric-Data-Factory
 tags:
 - Access Control
 - Authentication

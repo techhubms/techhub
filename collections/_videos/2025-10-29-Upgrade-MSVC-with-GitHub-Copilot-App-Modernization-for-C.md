@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=eCFb_VyNMWU
 title: Upgrade MSVC with GitHub Copilot App Modernization for C++
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=eCFb_VyNMWU
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-29 16:01:19 +00:00
-permalink: /github-copilot/videos/Upgrade-MSVC-with-GitHub-Copilot-App-Modernization-for-C
 tags:
 - App Modernization
 - C++

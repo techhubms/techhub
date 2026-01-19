@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=1l6bTK5iyoE
 title: On .NET Live | Supercharge your SQL Development with Modern .NET
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=1l6bTK5iyoE
 viewing_mode: internal
 feed_name: Dotnet's Youtube channel
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-29 16:35:03 +00:00
-permalink: /ml/videos/On-NET-Live-Supercharge-your-SQL-Development-with-Modern-NET
 tags:
 - .NET
 - .NET Build SDK

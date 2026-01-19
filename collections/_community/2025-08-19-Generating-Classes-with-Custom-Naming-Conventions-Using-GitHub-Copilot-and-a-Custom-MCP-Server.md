@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/generating-classes-with-custom-naming-conventions-using-github/ba-p/4444837
 title: Generating Classes with Custom Naming Conventions Using GitHub Copilot and a Custom MCP Server
 author: daisami
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/generating-classes-with-custom-naming-conventions-using-github/ba-p/4444837
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-19 16:26:20 +00:00
-permalink: /github-copilot/community/Generating-Classes-with-Custom-Naming-Conventions-Using-GitHub-Copilot-and-a-Custom-MCP-Server
 tags:
 - .NET
 - ASP.NET Core

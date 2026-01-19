@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/5-azure-mistakes-that-are-costing-businesses-thousands/
 title: 5 Azure Mistakes That Are Costing Businesses Thousands
 author: Dellenny
-canonical_url: https://dellenny.com/5-azure-mistakes-that-are-costing-businesses-thousands/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-08 07:25:16 +00:00
-permalink: /azure/blogs/5-Azure-Mistakes-That-Are-Costing-Businesses-Thousands
 tags:
 - Azure Advisor
 - Azure Automation

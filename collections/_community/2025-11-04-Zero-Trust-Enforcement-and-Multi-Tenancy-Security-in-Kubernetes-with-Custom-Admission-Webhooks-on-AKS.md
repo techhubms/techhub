@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/zero-trust-kubernetes-enforcing-security-multi-tenancy-with/ba-p/4466646
 title: Zero-Trust Enforcement and Multi-Tenancy Security in Kubernetes with Custom Admission Webhooks on AKS
 author: divyaan
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/zero-trust-kubernetes-enforcing-security-multi-tenancy-with/ba-p/4466646
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-04 16:22:40 +00:00
-permalink: /azure/community/Zero-Trust-Enforcement-and-Multi-Tenancy-Security-in-Kubernetes-with-Custom-Admission-Webhooks-on-AKS
 tags:
 - Admission Controller
 - AKS

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mbebfh/how_i_levelled_up_my_github_copilot_prompts_with/
 title: How I Levelled Up My GitHub Copilot Prompts with Instruction Files and Context Engineering
 author: Neat-Huckleberry-407
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mbebfh/how_i_levelled_up_my_github_copilot_prompts_with/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-28 12:03:27 +00:00
-permalink: /github-copilot/community/How-I-Levelled-Up-My-GitHub-Copilot-Prompts-with-Instruction-Files-and-Context-Engineering
 tags:
 - AI Assisted Coding
 - Code Generation

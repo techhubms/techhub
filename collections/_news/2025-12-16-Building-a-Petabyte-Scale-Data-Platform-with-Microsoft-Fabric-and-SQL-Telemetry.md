@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/sql-telemetry-intelligence-how-we-built-a-petabyte-scale-data-platform-with-fabric/
 title: Building a Petabyte-Scale Data Platform with Microsoft Fabric and SQL Telemetry
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/sql-telemetry-intelligence-how-we-built-a-petabyte-scale-data-platform-with-fabric/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-16 10:00:00 +00:00
-permalink: /ml/news/Building-a-Petabyte-Scale-Data-Platform-with-Microsoft-Fabric-and-SQL-Telemetry
 tags:
 - AKS
 - Anomaly Detection

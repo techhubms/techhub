@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/08/25/fyai-explore-the-microsoft-ai-for-good-lab-with-juan-m-lavista-ferres/
 title: 'Inside the Microsoft AI for Good Lab: Innovations and Global Impact with Juan M. Lavista Ferres'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/08/25/fyai-explore-the-microsoft-ai-for-good-lab-with-juan-m-lavista-ferres/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-05 13:53:45 +00:00
-permalink: /ai/news/Inside-the-Microsoft-AI-for-Good-Lab-Innovations-and-Global-Impact-with-Juan-M-Lavista-Ferres
 tags:
 - AI Ethics
 - AI For Good Lab

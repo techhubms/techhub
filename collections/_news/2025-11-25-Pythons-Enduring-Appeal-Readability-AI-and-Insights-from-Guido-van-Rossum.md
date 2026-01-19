@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/developer-skills/programming-languages-and-frameworks/why-developers-still-flock-to-python-guido-van-rossum-on-readability-ai-and-the-future-of-programming/
 title: 'Python’s Enduring Appeal: Readability, AI, and Insights from Guido van Rossum'
 author: Natalie Guevara
-canonical_url: https://github.blog/developer-skills/programming-languages-and-frameworks/why-developers-still-flock-to-python-guido-van-rossum-on-readability-ai-and-the-future-of-programming/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-11-25 17:00:00 +00:00
-permalink: /ai/news/Pythons-Enduring-Appeal-Readability-AI-and-Insights-from-Guido-van-Rossum
 tags:
 - AI Development
 - Code Clarity

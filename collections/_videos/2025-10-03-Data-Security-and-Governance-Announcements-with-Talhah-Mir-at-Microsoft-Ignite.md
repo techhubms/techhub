@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=MGQegwNKRS4
 title: Data Security and Governance Announcements with Talhah Mir at Microsoft Ignite
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=MGQegwNKRS4
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-10-03 17:00:26 +00:00
-permalink: /security/videos/Data-Security-and-Governance-Announcements-with-Talhah-Mir-at-Microsoft-Ignite
 tags:
 - AI
 - Compliance

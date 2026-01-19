@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=LwqUp4Dc1mQ
 title: 'Extending AI Agents: Live Demo of GitHub MCP Server Integration'
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=LwqUp4Dc1mQ
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-11-30 15:00:40 +00:00
-permalink: /github-copilot/videos/Extending-AI-Agents-Live-Demo-of-GitHub-MCP-Server-Integration
 tags:
 - Agent Architecture
 - AI Agents

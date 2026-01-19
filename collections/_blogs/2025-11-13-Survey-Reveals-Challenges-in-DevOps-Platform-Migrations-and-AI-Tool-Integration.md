@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/survey-surfaces-multiple-devops-platform-migration-challenges/
 title: Survey Reveals Challenges in DevOps Platform Migrations and AI Tool Integration
 author: Mike Vizard
-canonical_url: https://devops.com/survey-surfaces-multiple-devops-platform-migration-challenges/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-13 02:44:52 +00:00
-permalink: /ai/blogs/Survey-Reveals-Challenges-in-DevOps-Platform-Migrations-and-AI-Tool-Integration
 tags:
 - AI Tool Integration
 - Cloudbees

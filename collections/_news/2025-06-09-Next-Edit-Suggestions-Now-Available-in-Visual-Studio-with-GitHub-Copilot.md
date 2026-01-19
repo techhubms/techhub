@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/next-edit-suggestions-available-in-visual-studio-github-copilot/
 title: Next Edit Suggestions Now Available in Visual Studio with GitHub Copilot
 author: Simona Liao
-canonical_url: https://devblogs.microsoft.com/visualstudio/next-edit-suggestions-available-in-visual-studio-github-copilot/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/
 date: 2025-06-09 15:00:39 +00:00
-permalink: /github-copilot/news/Next-Edit-Suggestions-Now-Available-in-Visual-Studio-with-GitHub-Copilot
 tags:
 - AI Assisted Coding
 - Code Editing

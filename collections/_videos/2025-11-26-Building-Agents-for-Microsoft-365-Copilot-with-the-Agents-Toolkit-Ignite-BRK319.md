@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=z6gIaCYmvos
 title: Building Agents for Microsoft 365 Copilot with the Agents Toolkit – Ignite BRK319
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=z6gIaCYmvos
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 10:02:56 +00:00
-permalink: /ai/videos/Building-Agents-for-Microsoft-365-Copilot-with-the-Agents-Toolkit-Ignite-BRK319
 tags:
 - Agent Integration
 - Agents Toolkit

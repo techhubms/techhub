@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/translation-customization-a-developers-guide-to-adaptive-custom-translation/
 title: 'Translation Customization: A Developer’s Guide to Adaptive Custom Translation with Microsoft Foundry'
 author: Mohamed Elghazali
-canonical_url: https://devblogs.microsoft.com/foundry/translation-customization-a-developers-guide-to-adaptive-custom-translation/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-25 16:00:37 +00:00
-permalink: /ai/news/Translation-Customization-A-Developers-Guide-to-Adaptive-Custom-Translation-with-Microsoft-Foundry
 tags:
 - Adaptive Custom Translation
 - AI Development

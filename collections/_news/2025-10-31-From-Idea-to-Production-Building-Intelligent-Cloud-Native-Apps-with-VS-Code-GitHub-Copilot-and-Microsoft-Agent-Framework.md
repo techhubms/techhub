@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/behind-the-universe-demo-with-vs-code-copilot-and-agent-framework
 title: 'From Idea to Production: Building Intelligent Cloud-Native Apps with VS Code, GitHub Copilot, and Microsoft Agent Framework'
 author: Amanda Silver, Rong Lu, Shayne Boyer
-canonical_url: https://devblogs.microsoft.com/blog/behind-the-universe-demo-with-vs-code-copilot-and-agent-framework
 viewing_mode: external
 feed_name: Microsoft Blog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-10-31 19:00:45 +00:00
-permalink: /github-copilot/news/From-Idea-to-Production-Building-Intelligent-Cloud-Native-Apps-with-VS-Code-GitHub-Copilot-and-Microsoft-Agent-Framework
 tags:
 - Agent Orchestration
 - Agentic DevOps

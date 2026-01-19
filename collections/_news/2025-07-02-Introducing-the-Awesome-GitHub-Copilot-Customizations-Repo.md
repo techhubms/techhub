@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/introducing-awesome-github-copilot-customizations-repo
 title: Introducing the Awesome GitHub Copilot Customizations Repo
 author: Matt Soucoup, Aaron Powell
-canonical_url: https://devblogs.microsoft.com/blog/introducing-awesome-github-copilot-customizations-repo
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-07-02 17:30:59 +00:00
-permalink: /github-copilot/news/Introducing-the-Awesome-GitHub-Copilot-Customizations-Repo
 tags:
 - Agent Mode
 - Code Review

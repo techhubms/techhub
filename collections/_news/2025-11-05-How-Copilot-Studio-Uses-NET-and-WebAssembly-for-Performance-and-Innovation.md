@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/copilot-studio-dotnet-wasm/
 title: How Copilot Studio Uses .NET and WebAssembly for Performance and Innovation
 author: Daniel Roth
-canonical_url: https://devblogs.microsoft.com/dotnet/copilot-studio-dotnet-wasm/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-11-05 18:05:00 +00:00
-permalink: /ai/news/How-Copilot-Studio-Uses-NET-and-WebAssembly-for-Performance-and-Innovation
 tags:
 - .NET
 - .NET 8

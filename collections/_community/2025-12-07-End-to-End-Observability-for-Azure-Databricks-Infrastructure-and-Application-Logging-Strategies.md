@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/end-to-end-observability-for-azure-databricks-from/ba-p/4475692
 title: 'End-to-End Observability for Azure Databricks: Infrastructure and Application Logging Strategies'
 author: Rafia_Aqil
-canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/end-to-end-observability-for-azure-databricks-from/ba-p/4475692
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-07 09:46:09 +00:00
-permalink: /ml/community/End-to-End-Observability-for-Azure-Databricks-Infrastructure-and-Application-Logging-Strategies
 tags:
 - Activity Logs
 - Azure Databricks

@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: Agentic AI Advancements, GitHub Copilot Progress, Hybrid DevOps, and Secure Cloud Updates
 author: Tech Hub Team
 viewing_mode: internal
 date: 2025-10-27 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
 - Agent Framework

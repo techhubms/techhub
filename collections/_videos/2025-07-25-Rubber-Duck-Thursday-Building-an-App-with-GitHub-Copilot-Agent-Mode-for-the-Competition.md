@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=W4Zik7qcnz0
 title: Rubber Duck Thursday - Building an App with GitHub Copilot Agent Mode for the Competition
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=W4Zik7qcnz0
 viewing_mode: internal
 feed_name: GitHub's Youtube channel
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-07-25 07:09:39 +00:00
-permalink: /github-copilot/videos/Rubber-Duck-Thursday-Building-an-App-with-GitHub-Copilot-Agent-Mode-for-the-Competition
 tags:
 - Agent Mode
 - AI Powered Development

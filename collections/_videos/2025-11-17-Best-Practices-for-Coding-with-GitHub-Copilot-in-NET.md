@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=umRy69br51E
 title: Best Practices for Coding with GitHub Copilot in .NET
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=umRy69br51E
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-17 20:39:34 +00:00
-permalink: /github-copilot/videos/Best-Practices-for-Coding-with-GitHub-Copilot-in-NET
 tags:
 - .NET
 - .NET Conf

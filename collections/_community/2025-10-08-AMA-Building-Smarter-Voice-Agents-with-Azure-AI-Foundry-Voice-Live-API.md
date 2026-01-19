@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ama-azure-ai-foundry-voice-live-api-build-smarter-faster-voice/ba-p/4460118
 title: 'AMA: Building Smarter Voice Agents with Azure AI Foundry Voice Live API'
 author: Lee_Stott
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ama-azure-ai-foundry-voice-live-api-build-smarter-faster-voice/ba-p/4460118
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-08 17:54:26 +00:00
-permalink: /ai/community/AMA-Building-Smarter-Voice-Agents-with-Azure-AI-Foundry-Voice-Live-API
 tags:
 - AI Agent Development
 - AMA Event

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-17-copilot-code-review-now-available-for-organization-members-without-a-license
 title: Copilot Code Review Now Available for Organization Members Without a License
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-17-copilot-code-review-now-available-for-organization-members-without-a-license
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-17 15:30:47 +00:00
-permalink: /github-copilot/news/Copilot-Code-Review-Now-Available-for-Organization-Members-Without-a-License
 tags:
 - Admin Policy
 - Analytics Dashboard

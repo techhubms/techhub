@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=0Ly34nFESQk
 title: Choosing Your First AI Application
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=0Ly34nFESQk
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-21 08:20:00 +00:00
-permalink: /ai/videos/Choosing-Your-First-AI-Application
 tags:
 - Agent
 - Agents

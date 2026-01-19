@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=wm1yjcTk50w
 title: A Deep Dive into the GitHub MCP Registry for AI Agents
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=wm1yjcTk50w
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-24 20:33:32 +00:00
-permalink: /ai/videos/A-Deep-Dive-into-the-GitHub-MCP-Registry-for-AI-Agents
 tags:
 - AI Agents
 - Community Driven

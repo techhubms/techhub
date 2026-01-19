@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://roadtoalm.com/2025/06/27/growing-a-devops-mindset/
 title: Growing a DevOps Mindset
 author: Rene van Osnabrugge
-canonical_url: https://roadtoalm.com/2025/06/27/growing-a-devops-mindset/
 viewing_mode: external
 feed_name: René van Osnabrugge's Blog
-feed_url: https://roadtoalm.com/feed/
 date: 2025-06-27 07:05:44 +00:00
-permalink: /devops/blogs/Growing-a-DevOps-Mindset
 tags:
 - ADKAR
 - Collaboration

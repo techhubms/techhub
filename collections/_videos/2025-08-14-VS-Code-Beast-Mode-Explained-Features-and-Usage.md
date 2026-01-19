@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=0Muxg3xhRLo
 title: 'VS Code Beast Mode Explained: Features and Usage'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=0Muxg3xhRLo
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-08-14 20:17:42 +00:00
-permalink: /coding/videos/VS-Code-Beast-Mode-Explained-Features-and-Usage
 tags:
 - Beast Mode
 - Beastmode

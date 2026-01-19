@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1lvt549/hot_take_copilot_is_amazing_youre_probably_just/
 title: Hot take - Copilot is amazing! You're probably just lazy.
 author: shifty303
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1lvt549/hot_take_copilot_is_amazing_youre_probably_just/
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-09 20:18:19 +00:00
-permalink: /github-copilot/community/Hot-take-Copilot-is-amazing-Youre-probably-just-lazy
 viewing_mode: external
 tags:
 - .NET

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/generative-ai-with-large-language-models-in-dotnet-and-csharp/
 title: Generative AI with Large Language Models in C# in 2026
 author: Jeremy Likness
-canonical_url: https://devblogs.microsoft.com/dotnet/generative-ai-with-large-language-models-in-dotnet-and-csharp/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2026-01-05 18:05:00 +00:00
-permalink: /ai/news/Generative-AI-with-Large-Language-Models-in-C-in-2026
 tags:
 - .NET
 - Agentic Workflows

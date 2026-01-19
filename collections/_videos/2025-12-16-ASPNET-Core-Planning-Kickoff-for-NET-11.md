@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=N7MZdRjDD4c
 title: ASP.NET Core Planning Kickoff for .NET 11
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=N7MZdRjDD4c
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-16 03:08:00 +00:00
-permalink: /coding/videos/ASPNET-Core-Planning-Kickoff-for-NET-11
 tags:
 - .NET
 - .NET 11

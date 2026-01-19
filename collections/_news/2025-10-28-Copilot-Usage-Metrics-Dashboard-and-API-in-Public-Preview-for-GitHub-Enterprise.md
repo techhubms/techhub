@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-28-copilot-usage-metrics-dashboard-and-api-in-public-preview
 title: Copilot Usage Metrics Dashboard and API in Public Preview for GitHub Enterprise
 author: Allison
-canonical_url: https://github.blog/changelog/2025-10-28-copilot-usage-metrics-dashboard-and-api-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:23:43 +00:00
-permalink: /github-copilot/news/Copilot-Usage-Metrics-Dashboard-and-API-in-Public-Preview-for-GitHub-Enterprise
 tags:
 - AI Adoption
 - API

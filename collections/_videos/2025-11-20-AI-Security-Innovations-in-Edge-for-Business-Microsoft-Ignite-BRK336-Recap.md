@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ek-xc4PyCxo
 title: 'AI Security Innovations in Edge for Business: Microsoft Ignite BRK336 Recap'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=ek-xc4PyCxo
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 07:23:25 +00:00
-permalink: /ai/videos/AI-Security-Innovations-in-Edge-for-Business-Microsoft-Ignite-BRK336-Recap
 tags:
 - Agentic AI
 - AI Productivity

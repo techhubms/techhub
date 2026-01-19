@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-new-innovations-for-fabric-data-factory-orchestration-at-fabric-conference-europe-2025/
 title: Innovations in Fabric Data Factory Orchestration Announced at Fabric Conference Europe 2025
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-new-innovations-for-fabric-data-factory-orchestration-at-fabric-conference-europe-2025/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-25 09:00:00 +00:00
-permalink: /ai/news/Innovations-in-Fabric-Data-Factory-Orchestration-Announced-at-Fabric-Conference-Europe-2025
 tags:
 - AI Assistant
 - Airflow

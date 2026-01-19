@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-networking/spoke-hub-hub-traffic-with-vpn-gateway-bgp-and-firewall-issue/m-p/4471878#M750
 title: Troubleshooting Azure Firewall and VPN Gateway Routing in Hub-Spoke Topology
 author: CUrti300
-canonical_url: https://techcommunity.microsoft.com/t5/azure-networking/spoke-hub-hub-traffic-with-vpn-gateway-bgp-and-firewall-issue/m-p/4471878#M750
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 18:04:09 +00:00
-permalink: /azure/community/Troubleshooting-Azure-Firewall-and-VPN-Gateway-Routing-in-Hub-Spoke-Topology
 tags:
 - Azure Firewall
 - Azure Hybrid Connectivity

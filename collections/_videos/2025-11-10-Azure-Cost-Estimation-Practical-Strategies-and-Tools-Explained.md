@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=36bbMNatZHI
 title: 'Azure Cost Estimation: Practical Strategies and Tools Explained'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=36bbMNatZHI
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-10 18:23:11 +00:00
-permalink: /azure/videos/Azure-Cost-Estimation-Practical-Strategies-and-Tools-Explained
 tags:
 - Azure Advisor
 - Azure Architecture

@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=pt4CJKm-2ZI
 title: .NET AI Community Standup - AI in .NET - What’s New, What’s Next
 author: Dotnet's Youtube channel
-canonical_url: https://www.youtube.com/watch?v=pt4CJKm-2ZI
 feed_name: dotnet
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-03 06:07:04 +00:00
-permalink: /ai/videos/NET-AI-Community-Standup-AI-in-NET-Whats-New-Whats-Next
 viewing_mode: internal
 tags:
 - .NET

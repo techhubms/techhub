@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-azure-ai-is-revolutionizing-supply-chain-forecasting-and-inventory/
 title: How Azure AI is Revolutionizing Supply Chain Forecasting and Inventory
 author: Dellenny
-canonical_url: https://dellenny.com/how-azure-ai-is-revolutionizing-supply-chain-forecasting-and-inventory/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-29 09:10:39 +00:00
-permalink: /ai/blogs/How-Azure-AI-is-Revolutionizing-Supply-Chain-Forecasting-and-Inventory
 tags:
 - AutoML
 - Azure AI

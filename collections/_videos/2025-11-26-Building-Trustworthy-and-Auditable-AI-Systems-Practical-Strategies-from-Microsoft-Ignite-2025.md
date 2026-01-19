@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=kV3yjDYC8Hg
 title: 'Building Trustworthy and Auditable AI Systems: Practical Strategies from Microsoft Ignite 2025'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=kV3yjDYC8Hg
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 20:02:48 +00:00
-permalink: /ai/videos/Building-Trustworthy-and-Auditable-AI-Systems-Practical-Strategies-from-Microsoft-Ignite-2025
 tags:
 - Accountability
 - AI Adoption

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/create-embeddings-in-fabric-eventhouse-with-built-in-small-language-models-slms/
 title: Create Embeddings in Fabric Eventhouse with Built-in Small Language Models (SLMs)
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/create-embeddings-in-fabric-eventhouse-with-built-in-small-language-models-slms/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2026-01-08 11:00:00 +00:00
-permalink: /ai/news/Create-Embeddings-in-Fabric-Eventhouse-with-Built-in-Small-Language-Models-SLMs
 tags:
 - Azure Data Explorer
 - E5 Small V2

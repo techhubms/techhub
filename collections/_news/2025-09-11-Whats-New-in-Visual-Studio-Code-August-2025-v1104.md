@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/updates/v1_104
 title: What's New in Visual Studio Code August 2025 (v1.104)
 author: Visual Studio Code Team
-canonical_url: https://code.visualstudio.com/updates/v1_104
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-09-11 17:00:00 +00:00
-permalink: /github-copilot/news/Whats-New-in-Visual-Studio-Code-August-2025-v1104
 tags:
 - AI Powered Development
 - Chat Features

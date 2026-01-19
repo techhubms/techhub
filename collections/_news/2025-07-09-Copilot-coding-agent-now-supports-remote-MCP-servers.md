@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-07-09-copilot-coding-agent-now-supports-remote-mcp-servers
 title: Copilot coding agent now supports remote MCP servers
 author: Allison
-canonical_url: https://github.blog/changelog/2025-07-09-copilot-coding-agent-now-supports-remote-mcp-servers
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-09 16:13:17 +00:00
-permalink: /github-copilot/news/Copilot-coding-agent-now-supports-remote-MCP-servers
 tags:
 - Coding Agent
 - Context Expansion

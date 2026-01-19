@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/ff80HElVHAI
 title: Getting Started with Azure AI Foundry
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/shorts/ff80HElVHAI
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-15 17:30:03 +00:00
-permalink: /ai/videos/Getting-Started-with-Azure-AI-Foundry
 tags:
 - Agent Building
 - AI Agents

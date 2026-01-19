@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-07-02-copilot-code-review-better-handling-of-large-pull-requests
 title: Copilot code review - Better handling of large pull requests
 author: Allison
-canonical_url: https://github.blog/changelog/2025-07-02-copilot-code-review-better-handling-of-large-pull-requests
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-02 18:02:20 +00:00
-permalink: /github-copilot/news/Copilot-code-review-Better-handling-of-large-pull-requests
 tags:
 - Code Review
 - Copilot Improvements

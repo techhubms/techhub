@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/troubleshoot-with-otlp-signals-in-azure-monitor-limited-public/ba-p/4469668
 title: Troubleshoot with OTLP Signals in Azure Monitor (Limited Public Preview)
 author: SoubhagyaDash
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/troubleshoot-with-otlp-signals-in-azure-monitor-limited-public/ba-p/4469668
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:09:25 +00:00
-permalink: /coding/community/Troubleshoot-with-OTLP-Signals-in-Azure-Monitor-Limited-Public-Preview
 tags:
 - .NET
 - AKS

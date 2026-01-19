@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-larger-container-sizes-on/ba-p/4463863
 title: General Availability of Larger Container Sizes on Azure Container Instances
 author: tysonfreeman
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-larger-container-sizes-on/ba-p/4463863
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-05 15:17:40 +00:00
-permalink: /azure/community/General-Availability-of-Larger-Container-Sizes-on-Azure-Container-Instances
 tags:
 - AKS
 - ARM Templates

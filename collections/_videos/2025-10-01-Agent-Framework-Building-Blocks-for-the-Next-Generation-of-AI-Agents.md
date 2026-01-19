@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=AAgdMhftj8w
 title: 'Agent Framework: Building Blocks for the Next Generation of AI Agents'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=AAgdMhftj8w
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-01 14:00:15 +00:00
-permalink: /ai/videos/Agent-Framework-Building-Blocks-for-the-Next-Generation-of-AI-Agents
 tags:
 - Agent Framework
 - AI Agents

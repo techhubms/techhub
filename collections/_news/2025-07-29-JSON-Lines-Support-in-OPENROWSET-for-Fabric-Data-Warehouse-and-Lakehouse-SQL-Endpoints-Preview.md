@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/public-preview-json-lines-support-in-openrowset-for-fabric-data-warehouse-and-lakehouse-sql-endpoints/
 title: JSON Lines Support in OPENROWSET for Fabric Data Warehouse and Lakehouse SQL Endpoints (Preview)
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/public-preview-json-lines-support-in-openrowset-for-fabric-data-warehouse-and-lakehouse-sql-endpoints/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-29 11:30:00 +00:00
-permalink: /ml/news/JSON-Lines-Support-in-OPENROWSET-for-Fabric-Data-Warehouse-and-Lakehouse-SQL-Endpoints-Preview
 tags:
 - Data Analytics
 - Data Lake

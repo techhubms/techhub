@@ -1,17 +1,13 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/t74rlukNevM
 title: Local In-Editor Code Reviews
 author: Randy Pagels
-canonical_url: https://youtu.be/t74rlukNevM
 date: 2024-12-16 22:13:51 +00:00
-permalink: /github-copilot/videos/Local-In-Editor-Code-Reviews
 viewing_mode: internal
-section: github-copilot
 ghes_support: false
 plans:
 - Pro
 - Business
-alt-collection: features
 tags:
 - Code
 - Code Review

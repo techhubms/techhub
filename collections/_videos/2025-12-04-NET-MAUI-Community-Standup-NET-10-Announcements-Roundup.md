@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=LuA4WbZY7tw
 title: .NET MAUI Community Standup - .NET 10 Announcements Roundup
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=LuA4WbZY7tw
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-12-04 16:48:58 +00:00
-permalink: /coding/videos/NET-MAUI-Community-Standup-NET-10-Announcements-Roundup
 tags:
 - .NET
 - .NET 10

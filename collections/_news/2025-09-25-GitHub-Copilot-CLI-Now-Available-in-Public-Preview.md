@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview
 title: GitHub Copilot CLI Now Available in Public Preview
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-25 19:22:27 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-CLI-Now-Available-in-Public-Preview
 tags:
 - AI Coding Agent
 - Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/accelerate-data-transformation-with-ai-functions-in-data-wrangler/
 title: Accelerate Data Transformation with AI in Data Wrangler
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/accelerate-data-transformation-with-ai-functions-in-data-wrangler/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-01 13:00:00 +00:00
-permalink: /ai/news/Accelerate-Data-Transformation-with-AI-in-Data-Wrangler
 tags:
 - AI Functions
 - Big Data

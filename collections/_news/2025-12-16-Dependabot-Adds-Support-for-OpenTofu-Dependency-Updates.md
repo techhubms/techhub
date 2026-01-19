@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-opentofu
 title: Dependabot Adds Support for OpenTofu Dependency Updates
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-opentofu
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-16 16:44:18 +00:00
-permalink: /devops/news/Dependabot-Adds-Support-for-OpenTofu-Dependency-Updates
 tags:
 - Automation
 - Continuous Integration

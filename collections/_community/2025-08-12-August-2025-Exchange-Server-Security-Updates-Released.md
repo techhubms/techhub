@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/exchange-team-blog/released-august-2025-exchange-server-security-updates/ba-p/4441596
 title: August 2025 Exchange Server Security Updates Released
 author: The_Exchange_Team
-canonical_url: https://techcommunity.microsoft.com/t5/exchange-team-blog/released-august-2025-exchange-server-security-updates/ba-p/4441596
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 17:48:04 +00:00
-permalink: /security/community/August-2025-Exchange-Server-Security-Updates-Released
 tags:
 - AMSI Integration
 - August Update

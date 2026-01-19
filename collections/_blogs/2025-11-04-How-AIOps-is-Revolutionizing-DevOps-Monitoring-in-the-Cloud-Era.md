@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/how-aiops-is-revolutionizing-devops-monitoring-in-the-cloud-era/
 title: How AIOps is Revolutionizing DevOps Monitoring in the Cloud Era
 author: Joydip Kanjilal
-canonical_url: https://devops.com/how-aiops-is-revolutionizing-devops-monitoring-in-the-cloud-era/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-04 10:55:16 +00:00
-permalink: /ai/blogs/How-AIOps-is-Revolutionizing-DevOps-Monitoring-in-the-Cloud-Era
 tags:
 - AI Driven DevOps
 - AI in IT Operations

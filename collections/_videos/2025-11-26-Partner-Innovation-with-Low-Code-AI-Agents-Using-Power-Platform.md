@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=a5zof3lPOBE
 title: Partner Innovation with Low-Code AI Agents Using Power Platform
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=a5zof3lPOBE
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 20:02:33 +00:00
-permalink: /ai/videos/Partner-Innovation-with-Low-Code-AI-Agents-Using-Power-Platform
 tags:
 - Agility
 - AI Agents

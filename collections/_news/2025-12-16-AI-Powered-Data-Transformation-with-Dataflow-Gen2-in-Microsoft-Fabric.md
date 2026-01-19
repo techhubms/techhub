@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/from-simple-prompts-to-complex-insights-ai-expands-the-boundaries-of-data-transformation/
 title: AI-Powered Data Transformation with Dataflow Gen2 in Microsoft Fabric
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/from-simple-prompts-to-complex-insights-ai-expands-the-boundaries-of-data-transformation/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-16 09:00:00 +00:00
-permalink: /ai/news/AI-Powered-Data-Transformation-with-Dataflow-Gen2-in-Microsoft-Fabric
 tags:
 - AI Prompt
 - Analytics

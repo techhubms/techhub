@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=s2DGC7NMKxo
 title: Rapid Database Integration in VS Code with Microsoft Learn MCP Server and GitHub Copilot
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=s2DGC7NMKxo
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-22 14:01:34 +00:00
-permalink: /github-copilot/videos/Rapid-Database-Integration-in-VS-Code-with-Microsoft-Learn-MCP-Server-and-GitHub-Copilot
 tags:
 - Automation
 - Beginner

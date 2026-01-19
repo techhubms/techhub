@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-05-new-spark-sharing-option-and-improved-local-dev-experience
 title: New Organization Sharing and Local Development Improvements in GitHub Spark
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-05-new-spark-sharing-option-and-improved-local-dev-experience
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-05 18:14:35 +00:00
-permalink: /coding/news/New-Organization-Sharing-and-Local-Development-Improvements-in-GitHub-Spark
 tags:
 - App Deployment
 - Bug Fixes

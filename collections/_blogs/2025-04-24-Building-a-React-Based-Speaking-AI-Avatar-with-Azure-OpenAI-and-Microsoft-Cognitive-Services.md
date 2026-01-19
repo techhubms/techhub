@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://harrybin.de/posts/give-it-a-face-to-talk-to/
 title: Building a React-Based Speaking AI Avatar with Azure OpenAI and Microsoft Cognitive Services
 author: Harald Binkle
-canonical_url: https://harrybin.de/posts/give-it-a-face-to-talk-to/
 viewing_mode: external
 feed_name: Harald Binkle's blog
-feed_url: https://harrybin.de/rss.xml
 date: 2025-04-24 22:00:00 +00:00
-permalink: /ai/blogs/Building-a-React-Based-Speaking-AI-Avatar-with-Azure-OpenAI-and-Microsoft-Cognitive-Services
 tags:
 - AnimationMixer
 - Avatar

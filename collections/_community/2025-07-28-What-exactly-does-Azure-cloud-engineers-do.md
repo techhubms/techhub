@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mbp183/what_exactly_does_azure_cloud_engineers_do/
 title: What exactly does Azure cloud engineers do?
 author: curious_monk77
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mbp183/what_exactly_does_azure_cloud_engineers_do/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-28 18:59:43 +00:00
-permalink: /coding/community/What-exactly-does-Azure-cloud-engineers-do
 tags:
 - .NET
 - APIs

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=rWkLRkN3yvI
 title: 'Authentic DevOps with AI Foundry and GitHub: Enhancing Security Automation'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=rWkLRkN3yvI
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-31 16:12:32 +00:00
-permalink: /github-copilot/videos/Authentic-DevOps-with-AI-Foundry-and-GitHub-Enhancing-Security-Automation
 tags:
 - Agent Development
 - Azure AI Foundry

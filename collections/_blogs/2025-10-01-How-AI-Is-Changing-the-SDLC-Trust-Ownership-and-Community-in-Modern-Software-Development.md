@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.arresteddevops.com/ai-sdlc/
 title: 'How AI Is Changing the SDLC: Trust, Ownership, and Community in Modern Software Development'
 author: Arrested DevOps
-canonical_url: https://www.arresteddevops.com/ai-sdlc/
 viewing_mode: external
 feed_name: Arrested DevOps
-feed_url: https://www.arresteddevops.com/episode/index.xml
 date: 2025-10-01 13:36:13 +00:00
-permalink: /ai/blogs/How-AI-Is-Changing-the-SDLC-Trust-Ownership-and-Community-in-Modern-Software-Development
 tags:
 - AI Agents
 - AI Fluency

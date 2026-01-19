@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=21HSDwtkHNk
 title: AI-Powered Email Sorting with n8n and OpenAI
 author: Alireza Chegini | AI Skills for Your Career
-canonical_url: https://www.youtube.com/watch?v=21HSDwtkHNk
 viewing_mode: internal
 feed_name: Alireza Chegini's YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA
 date: 2025-06-04 19:00:03 +00:00
-permalink: /ai/videos/AI-Powered-Email-Sorting-with-n8n-and-OpenAI
 tags:
 - AI Agent
 - Automation

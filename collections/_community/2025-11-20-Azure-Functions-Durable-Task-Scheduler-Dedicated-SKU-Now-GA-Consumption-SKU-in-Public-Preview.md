@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-azure-functions-durable-task-scheduler-dedicated-sku/ba-p/4465328
 title: Azure Functions Durable Task Scheduler Dedicated SKU Now GA, Consumption SKU in Public Preview
 author: greenie-msft
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-azure-functions-durable-task-scheduler-dedicated-sku/ba-p/4465328
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 16:00:00 +00:00
-permalink: /azure/community/Azure-Functions-Durable-Task-Scheduler-Dedicated-SKU-Now-GA-Consumption-SKU-in-Public-Preview
 tags:
 - Autoscaling
 - Azure Functions

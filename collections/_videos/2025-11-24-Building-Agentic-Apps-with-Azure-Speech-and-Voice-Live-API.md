@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=mQHsytPpHmU
 title: Building Agentic Apps with Azure Speech and Voice Live API
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=mQHsytPpHmU
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 10:30:56 +00:00
-permalink: /ai/videos/Building-Agentic-Apps-with-Azure-Speech-and-Voice-Live-API
 tags:
 - Adaptive Conversation
 - AI Agents

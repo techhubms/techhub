@@ -102,7 +102,7 @@
             {
                 var allVideos = await ApiClient.GetContentAsync(null, "videos");
                 videoItems = (allVideos ?? Enumerable.Empty<ContentItemDto>())
-                .Where(v => v.AltCollection == pageData.VideoCollection)
+                .Where(v => v.CollectionName == pageData.VideoCollection)
                 .OrderByDescending(v => v.DateEpoch)
                 .ToList();
 
@@ -132,8 +132,8 @@
         }
 
         selectedVideoDetail = await ApiClient.GetContentDetailAsync(
-                                                                                                            "github-copilot",
-                                                                                                            "videos",
+        "github-copilot",
+        "videos",
         selectedVideoSlug);
     }
 

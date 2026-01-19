@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=GfVnJO8fwwk
 title: 'VS Code Copilot Extension Goes Open Source: Deep Dive with Burke Holland'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=GfVnJO8fwwk
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-09 13:00:35 +00:00
-permalink: /github-copilot/videos/VS-Code-Copilot-Extension-Goes-Open-Source-Deep-Dive-with-Burke-Holland
 tags:
 - AI Assistance
 - Beast Mode

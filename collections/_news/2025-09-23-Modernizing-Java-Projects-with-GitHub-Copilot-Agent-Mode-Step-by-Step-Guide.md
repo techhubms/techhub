@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/a-step-by-step-guide-to-modernizing-java-projects-with-github-copilot-agent-mode/
 title: 'Modernizing Java Projects with GitHub Copilot Agent Mode: Step-by-Step Guide'
 author: Andrea Griffiths
-canonical_url: https://github.blog/ai-and-ml/github-copilot/a-step-by-step-guide-to-modernizing-java-projects-with-github-copilot-agent-mode/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-09-23 13:00:00 +00:00
-permalink: /github-copilot/news/Modernizing-Java-Projects-with-GitHub-Copilot-Agent-Mode-Step-by-Step-Guide
 tags:
 - Agent Mode
 - AI & ML

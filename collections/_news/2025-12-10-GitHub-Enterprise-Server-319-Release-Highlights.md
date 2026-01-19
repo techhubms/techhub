@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-10-github-enterprise-server-3-19-is-now-generally-available
 title: GitHub Enterprise Server 3.19 Release Highlights
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-10-github-enterprise-server-3-19-is-now-generally-available
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-10 16:20:41 +00:00
-permalink: /devops/news/GitHub-Enterprise-Server-319-Release-Highlights
 tags:
 - App Managers
 - Collaboration Tools

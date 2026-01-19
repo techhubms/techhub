@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/join-us-at-net-conf-dive-into-the-future-of-development-with-visual-studio-2026/
 title: Join .NET Conf to Explore Visual Studio 2026 and .NET Innovation
 author: Mads Kristensen
-canonical_url: https://devblogs.microsoft.com/visualstudio/join-us-at-net-conf-dive-into-the-future-of-development-with-visual-studio-2026/
 viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
-feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-10-31 14:00:54 +00:00
-permalink: /ai/news/Join-NET-Conf-to-Explore-Visual-Studio-2026-and-NET-Innovation
 tags:
 - .NET
 - .NET 10

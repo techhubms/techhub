@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-open-source-release-of-microsoft-fabric-extension-for-vs-code/
 title: Announcing the Open-Source Release of Microsoft Fabric Extension for Visual Studio Code
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-open-source-release-of-microsoft-fabric-extension-for-vs-code/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-28 10:00:00 +00:00
-permalink: /coding/news/Announcing-the-Open-Source-Release-of-Microsoft-Fabric-Extension-for-Visual-Studio-Code
 tags:
 - Community Collaboration
 - CRUD Operations

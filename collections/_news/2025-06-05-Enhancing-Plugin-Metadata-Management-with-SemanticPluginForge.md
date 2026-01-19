@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/semantic-kernel/enhancing-plugin-metadata-management-with-semanticpluginforge/
 title: Enhancing Plugin Metadata Management with SemanticPluginForge
 author: Likhan Siddiquee
-canonical_url: https://devblogs.microsoft.com/semantic-kernel/enhancing-plugin-metadata-management-with-semanticpluginforge/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/semantic-kernel/feed/
 date: 2025-06-05 09:44:38 +00:00
-permalink: /ai/news/Enhancing-Plugin-Metadata-Management-with-SemanticPluginForge
 tags:
 - .NET
 - Dynamic Metadata

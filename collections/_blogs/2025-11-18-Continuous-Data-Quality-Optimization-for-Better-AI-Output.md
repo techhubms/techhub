@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/continuous-data-quality-optimization-for-ai-the-essential-guide/
 title: Continuous Data Quality Optimization for Better AI Output
 author: John Edward
-canonical_url: https://dellenny.com/continuous-data-quality-optimization-for-ai-the-essential-guide/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-18 15:40:33 +00:00
-permalink: /ai/blogs/Continuous-Data-Quality-Optimization-for-Better-AI-Output
 tags:
 - AI Models
 - Anomaly Detection

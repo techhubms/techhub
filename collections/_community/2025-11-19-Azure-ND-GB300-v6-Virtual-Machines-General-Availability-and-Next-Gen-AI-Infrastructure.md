@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-nd-gb300-v6-now-generally-available-hyper-optimized-for/ba-p/4469475
 title: 'Azure ND GB300 v6 Virtual Machines: General Availability and Next-Gen AI Infrastructure'
 author: Nitin_Nagarkatte
-canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-nd-gb300-v6-now-generally-available-hyper-optimized-for/ba-p/4469475
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 01:13:53 +00:00
-permalink: /ai/community/Azure-ND-GB300-v6-Virtual-Machines-General-Availability-and-Next-Gen-AI-Infrastructure
 tags:
 - Agentic AI
 - AI Infrastructure

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=S_GhJn8O-4E
 title: Optimizing Manufacturing at Kraft Heinz with AI, Azure Arc, and Microsoft Foundry
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=S_GhJn8O-4E
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 12:16:40 +00:00
-permalink: /ai/videos/Optimizing-Manufacturing-at-Kraft-Heinz-with-AI-Azure-Arc-and-Microsoft-Foundry
 tags:
 - Autonomous Systems
 - Azure Arc

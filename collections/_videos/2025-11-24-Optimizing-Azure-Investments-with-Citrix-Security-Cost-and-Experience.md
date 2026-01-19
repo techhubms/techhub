@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=mgChCdqRxLw
 title: 'Optimizing Azure Investments with Citrix: Security, Cost, and Experience'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=mgChCdqRxLw
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 11:18:51 +00:00
-permalink: /azure/videos/Optimizing-Azure-Investments-with-Citrix-Security-Cost-and-Experience
 tags:
 - Capture Prevention
 - Citrix

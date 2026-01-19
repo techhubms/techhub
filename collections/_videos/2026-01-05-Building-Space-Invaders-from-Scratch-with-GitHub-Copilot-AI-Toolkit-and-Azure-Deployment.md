@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=_0SQuGw9JgE
 title: Building Space Invaders from Scratch with GitHub Copilot, AI Toolkit, and Azure Deployment
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=_0SQuGw9JgE
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2026-01-05 22:53:34 +00:00
-permalink: /github-copilot/videos/Building-Space-Invaders-from-Scratch-with-GitHub-Copilot-AI-Toolkit-and-Azure-Deployment
 tags:
 - AI Toolkit
 - Azure CLI

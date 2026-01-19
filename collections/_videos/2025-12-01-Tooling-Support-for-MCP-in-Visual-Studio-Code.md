@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/TGICP4NS5tc
 title: Tooling Support for MCP in Visual Studio Code
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/shorts/TGICP4NS5tc
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-12-01 18:00:38 +00:00
-permalink: /coding/videos/Tooling-Support-for-MCP-in-Visual-Studio-Code
 tags:
 - Command Palette
 - Development Tools

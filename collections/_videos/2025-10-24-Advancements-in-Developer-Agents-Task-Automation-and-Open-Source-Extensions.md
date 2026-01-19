@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/F8CFwNnr10s
 title: 'Advancements in Developer Agents: Task Automation and Open Source Extensions'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/shorts/F8CFwNnr10s
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-24 17:49:02 +00:00
-permalink: /ai/videos/Advancements-in-Developer-Agents-Task-Automation-and-Open-Source-Extensions
 tags:
 - Agent Architecture
 - AI Agents

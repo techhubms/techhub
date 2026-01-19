@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/customer-managed-keys-for-fabric-workspaces-available-in-all-public-regions-now-preview/
 title: Customer-Managed Keys for Microsoft Fabric Workspaces Now in Public Preview
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/customer-managed-keys-for-fabric-workspaces-available-in-all-public-regions-now-preview/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-11 11:57:18 +00:00
-permalink: /ml/news/Customer-Managed-Keys-for-Microsoft-Fabric-Workspaces-Now-in-Public-Preview
 tags:
 - Azure Key Vault
 - Azure Managed HSM

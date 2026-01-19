@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mhgwae/github_copilot_is_great_but_do_you_ever_wish_it/
 title: GitHub Copilot is great, but do you ever wish it actually coded like you?
 author: Comfortable-Fish690
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mhgwae/github_copilot_is_great_but_do_you_ever_wish_it/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-04 15:40:53 +00:00
-permalink: /github-copilot/community/GitHub-Copilot-is-great-but-do-you-ever-wish-it-actually-coded-like-you
 tags:
 - AI Assistant
 - Automation

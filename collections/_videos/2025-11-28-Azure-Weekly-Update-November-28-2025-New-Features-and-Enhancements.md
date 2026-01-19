@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=HxO4aWyHmdE
 title: 'Azure Weekly Update: November 28, 2025 - New Features and Enhancements'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=HxO4aWyHmdE
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-11-28 15:44:35 +00:00
-permalink: /ml/videos/Azure-Weekly-Update-November-28-2025-New-Features-and-Enhancements
 tags:
 - API Management
 - APIC

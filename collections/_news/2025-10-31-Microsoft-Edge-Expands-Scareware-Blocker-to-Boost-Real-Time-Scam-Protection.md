@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.windows.com/msedgedev/2025/10/31/protecting-more-edge-users-with-expanded-scareware-blocker-availability-and-real-time-protection/
 title: Microsoft Edge Expands Scareware Blocker to Boost Real-Time Scam Protection
 author: stclarke
-canonical_url: https://blogs.windows.com/msedgedev/2025/10/31/protecting-more-edge-users-with-expanded-scareware-blocker-availability-and-real-time-protection/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-31 16:40:39 +00:00
-permalink: /security/news/Microsoft-Edge-Expands-Scareware-Blocker-to-Boost-Real-Time-Scam-Protection
 tags:
 - AI
 - AI Powered Security

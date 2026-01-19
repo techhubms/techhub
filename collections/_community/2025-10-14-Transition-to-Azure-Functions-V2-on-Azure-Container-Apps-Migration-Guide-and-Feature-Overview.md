@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/transition-to-azure-functions-v2-on-azure-container-apps/ba-p/4457258
 title: 'Transition to Azure Functions V2 on Azure Container Apps: Migration Guide and Feature Overview'
 author: DeepGanguly
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/transition-to-azure-functions-v2-on-azure-container-apps/ba-p/4457258
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-14 04:39:47 +00:00
-permalink: /coding/community/Transition-to-Azure-Functions-V2-on-Azure-Container-Apps-Migration-Guide-and-Feature-Overview
 tags:
 - Alerting
 - Application Insights

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devopsjournal.io/blog/2024/06/19/GitHub-Copilot-Chat-Power-User
 title: GitHub Copilot Chat - Power User example
 author: Rob Bos
-canonical_url: https://devopsjournal.io/blog/2024/06/19/GitHub-Copilot-Chat-Power-User
 viewing_mode: external
 feed_name: Rob Bos' Blog
-feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2024-06-19 00:00:00 +00:00
-permalink: /github-copilot/blogs/GitHub-Copilot-Chat-Power-User-example
 tags:
 - API Scripting
 - Automation

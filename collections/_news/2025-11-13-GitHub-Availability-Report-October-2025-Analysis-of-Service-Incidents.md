@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/news-insights/company-news/github-availability-report-october-2025/
 title: 'GitHub Availability Report: October 2025 – Analysis of Service Incidents'
 author: Jakub Oleksy
-canonical_url: https://github.blog/news-insights/company-news/github-availability-report-october-2025/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-11-13 17:28:48 +00:00
-permalink: /devops/news/GitHub-Availability-Report-October-2025-Analysis-of-Service-Incidents
 tags:
 - Availability
 - CI/CD

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/generative-ai/measuring-what-matters-how-offline-evaluation-of-github-mcp-server-works/
 title: 'Measuring What Matters: Offline Evaluation of GitHub MCP Server'
 author: Ksenia Bobrova
-canonical_url: https://github.blog/ai-and-ml/generative-ai/measuring-what-matters-how-offline-evaluation-of-github-mcp-server-works/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-10-30 21:46:07 +00:00
-permalink: /github-copilot/news/Measuring-What-Matters-Offline-Evaluation-of-GitHub-MCP-Server
 tags:
 - AI & ML
 - Argument Validation

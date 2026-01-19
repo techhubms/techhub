@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/how-to-use-hyper-v-with-bitlocker-without-constant-recovery-prompts/
 title: How to Use Hyper-V with BitLocker Without Constant Recovery Prompts
 author: Dellenny
-canonical_url: https://dellenny.com/how-to-use-hyper-v-with-bitlocker-without-constant-recovery-prompts/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-07 11:36:30 +00:00
-permalink: /security/blogs/How-to-Use-Hyper-V-with-BitLocker-Without-Constant-Recovery-Prompts
 tags:
 - BitLocker
 - Credential Guard

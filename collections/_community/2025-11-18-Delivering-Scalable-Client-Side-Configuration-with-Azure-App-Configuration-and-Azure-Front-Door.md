@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unlocking-client-side-configuration-at-scale-with-azure-app/ba-p/4470781
 title: Delivering Scalable Client-Side Configuration with Azure App Configuration and Azure Front Door
 author: mukta
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unlocking-client-side-configuration-at-scale-with-azure-app/ba-p/4470781
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 23:02:36 +00:00
-permalink: /ai/community/Delivering-Scalable-Client-Side-Configuration-with-Azure-App-Configuration-and-Azure-Front-Door
 tags:
 - A/B Testing
 - Agentic Applications

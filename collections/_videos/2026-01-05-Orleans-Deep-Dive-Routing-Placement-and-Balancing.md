@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=87AlzE53bxA
 title: 'Orleans Deep Dive: Routing, Placement & Balancing'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=87AlzE53bxA
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2026-01-05 22:35:41 +00:00
-permalink: /coding/videos/Orleans-Deep-Dive-Routing-Placement-and-Balancing
 tags:
 - .NET
 - Actor Model

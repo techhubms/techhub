@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=MB5uMCCGpMY
 title: "What's New: GitHub MCP Registry, Copilot CLI Public Preview, and Beast Mode for Copilot"
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=MB5uMCCGpMY
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-26 23:13:32 +00:00
-permalink: /github-copilot/videos/Whats-New-GitHub-MCP-Registry-Copilot-CLI-Public-Preview-and-Beast-Mode-for-Copilot
 tags:
 - Beast Mode
 - Claude Opus 4.1

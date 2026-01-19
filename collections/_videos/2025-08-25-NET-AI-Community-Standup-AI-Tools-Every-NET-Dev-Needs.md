@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=dASHCBVyrnQ
 title: '.NET AI Community Standup: AI Tools Every .NET Dev Needs'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=dASHCBVyrnQ
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-25 22:38:30 +00:00
-permalink: /github-copilot/videos/NET-AI-Community-Standup-AI-Tools-Every-NET-Dev-Needs
 tags:
 - .NET
 - AI Powered Development

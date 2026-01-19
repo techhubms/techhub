@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/26307/
 title: Preview of Item History Page in Microsoft Fabric Capacity Metrics App
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/26307/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-21 09:00:00 +00:00
-permalink: /ml/news/Preview-of-Item-History-Page-in-Microsoft-Fabric-Capacity-Metrics-App
 tags:
 - Analytics
 - Capacity Metrics App

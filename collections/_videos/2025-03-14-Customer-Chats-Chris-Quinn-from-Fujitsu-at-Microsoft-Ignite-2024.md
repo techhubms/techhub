@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=sCg7oSTiW1M
 title: 'Customer Chats: Chris Quinn from Fujitsu at Microsoft Ignite 2024'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=sCg7oSTiW1M
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-03-14 15:01:17 +00:00
-permalink: /ai/videos/Customer-Chats-Chris-Quinn-from-Fujitsu-at-Microsoft-Ignite-2024
 tags:
 - AI Innovations
 - Automation

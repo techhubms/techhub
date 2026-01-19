@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mgipey/made_me_chuckle_trying_to_stop_artifact_files/
 title: Made me chuckle - trying to stop artifact files being added
 author: okiokio
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mgipey/made_me_chuckle_trying_to_stop_artifact_files/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-03 13:02:28 +00:00
-permalink: /github-copilot/community/Made-me-chuckle-trying-to-stop-artifact-files-being-added
 tags:
 - Artifact Files
 - Automation

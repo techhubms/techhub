@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=AtaehXB4hPQ
 title: 'Orchestrating Multiple AI Agents in VS Code: Insights from Ben & Peng'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=AtaehXB4hPQ
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2026-01-12 08:00:18 +00:00
-permalink: /github-copilot/videos/Orchestrating-Multiple-AI-Agents-in-VS-Code-Insights-from-Ben-and-Peng
 tags:
 - Agent Sessions
 - Agent UX

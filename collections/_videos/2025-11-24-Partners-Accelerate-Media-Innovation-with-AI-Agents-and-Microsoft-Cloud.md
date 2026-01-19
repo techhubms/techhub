@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=_4DACLSHtFg
 title: Partners Accelerate Media Innovation with AI Agents and Microsoft Cloud
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=_4DACLSHtFg
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 13:29:35 +00:00
-permalink: /ai/videos/Partners-Accelerate-Media-Innovation-with-AI-Agents-and-Microsoft-Cloud
 tags:
 - AI Agents
 - Audience Engagement

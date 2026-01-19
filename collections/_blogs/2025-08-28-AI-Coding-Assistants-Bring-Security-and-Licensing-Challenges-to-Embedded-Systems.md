@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/survey-surfaces-raft-of-ai-coding-issues-involving-embedded-systems/?utm_source=rss&utm_medium=rss&utm_campaign=survey-surfaces-raft-of-ai-coding-issues-involving-embedded-systems
 title: AI Coding Assistants Bring Security and Licensing Challenges to Embedded Systems
 author: Mike Vizard
-canonical_url: https://devops.com/survey-surfaces-raft-of-ai-coding-issues-involving-embedded-systems/?utm_source=rss&utm_medium=rss&utm_campaign=survey-surfaces-raft-of-ai-coding-issues-involving-embedded-systems
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-28 06:11:13 +00:00
-permalink: /ai/blogs/AI-Coding-Assistants-Bring-Security-and-Licensing-Challenges-to-Embedded-Systems
 tags:
 - AI Coding Assistants
 - AI Generated Code Vulnerabilities

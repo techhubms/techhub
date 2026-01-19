@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/from-chaos-to-clarity-using-github-copilot-agents-to-improve-developer-workflows/
 title: From chaos to clarity - Using GitHub Copilot agents to improve developer workflows
 author: Chris Reddington
-canonical_url: https://github.blog/ai-and-ml/github-copilot/from-chaos-to-clarity-using-github-copilot-agents-to-improve-developer-workflows/
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-07-15 16:00:00 +00:00
-permalink: /github-copilot/news/From-chaos-to-clarity-Using-GitHub-Copilot-agents-to-improve-developer-workflows
 viewing_mode: external
 tags:
 - AI & ML

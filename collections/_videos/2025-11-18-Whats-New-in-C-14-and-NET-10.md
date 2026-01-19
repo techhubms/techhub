@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=M5BOO35688A
 title: What's New in C# 14 and .NET 10
 author: Nick Chapsas
-canonical_url: https://www.youtube.com/watch?v=M5BOO35688A
 viewing_mode: internal
 feed_name: Nick Chapsas YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-11-18 12:01:01 +00:00
-permalink: /coding/videos/Whats-New-in-C-14-and-NET-10
 tags:
 - .NET
 - .NET 10

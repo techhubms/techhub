@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-18-custom-agents-available-in-github-copilot-for-jetbrains-eclipse-and-xcode-now-in-public-preview
 title: Custom Agents in GitHub Copilot for JetBrains, Eclipse, and Xcode Now in Public Preview
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-18-custom-agents-available-in-github-copilot-for-jetbrains-eclipse-and-xcode-now-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:51 +00:00
-permalink: /github-copilot/news/Custom-Agents-in-GitHub-Copilot-for-JetBrains-Eclipse-and-Xcode-Now-in-Public-Preview
 tags:
 - AI Agents
 - Coding Standards

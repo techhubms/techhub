@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=te_om7KPb8k
 title: 'Armchair Architects: Governance Strategies for AI Agents'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=te_om7KPb8k
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-02 08:01:12 +00:00
-permalink: /ai/videos/Armchair-Architects-Governance-Strategies-for-AI-Agents
 tags:
 - Agent Deployment
 - Agent Observability

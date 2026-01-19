@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/supercharge-your-debugging-with-remote-tools-for-microsoft-edge/
 title: Supercharge Your Debugging with Remote Tools for Microsoft Edge
 author: Dellenny
-canonical_url: https://dellenny.com/supercharge-your-debugging-with-remote-tools-for-microsoft-edge/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-08-01 18:10:17 +00:00
-permalink: /coding/blogs/Supercharge-Your-Debugging-with-Remote-Tools-for-Microsoft-Edge
 tags:
 - Chromium
 - Cross Device Debugging

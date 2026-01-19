@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=VEuoNhFvegQ
 title: Upgrading eShop with Blazor in .NET 10 Using GitHub Copilot
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=VEuoNhFvegQ
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-10-11 00:09:22 +00:00
-permalink: /github-copilot/videos/Upgrading-eShop-with-Blazor-in-NET-10-Using-GitHub-Copilot
 tags:
 - .NET
 - .NET 10

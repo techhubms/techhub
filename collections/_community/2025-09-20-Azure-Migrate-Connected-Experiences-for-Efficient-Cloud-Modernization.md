@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/azure-migrate-connected-experiences/ba-p/4454927
 title: 'Azure Migrate: Connected Experiences for Efficient Cloud Modernization'
 author: SShastri
-canonical_url: https://techcommunity.microsoft.com/t5/azure-migration-and/azure-migrate-connected-experiences/ba-p/4454927
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-20 22:15:06 +00:00
-permalink: /ai/community/Azure-Migrate-Connected-Experiences-for-Efficient-Cloud-Modernization
 tags:
 - 6R Analysis
 - AI Assistance

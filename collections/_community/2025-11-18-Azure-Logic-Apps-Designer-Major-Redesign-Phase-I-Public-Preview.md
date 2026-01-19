@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/moving-the-logic-apps-designer-forward/ba-p/4469835
 title: 'Azure Logic Apps Designer Major Redesign: Phase I Public Preview'
 author: travisvu
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/moving-the-logic-apps-designer-forward/ba-p/4469835
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 08:24:37 +00:00
-permalink: /coding/community/Azure-Logic-Apps-Designer-Major-Redesign-Phase-I-Public-Preview
 tags:
 - Auto Save
 - Azure Integration

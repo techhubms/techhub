@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-recognized-as-a-leader-in-the-2025-gartner-magic-quadrant-for-data-integration-tools-2/
 title: Microsoft Named a Leader in 2025 Gartner Magic Quadrant for Data Integration Tools
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-recognized-as-a-leader-in-the-2025-gartner-magic-quadrant-for-data-integration-tools-2/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-11 11:30:00 +00:00
-permalink: /ai/news/Microsoft-Named-a-Leader-in-2025-Gartner-Magic-Quadrant-for-Data-Integration-Tools
 tags:
 - AI Powered Analytics
 - Apache Iceberg

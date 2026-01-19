@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/protecting-your-fabric-data-using-purview-is-now-generally-available/
 title: Protecting Microsoft Fabric Data with Purview DLP and Sensitivity Labels
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/protecting-your-fabric-data-using-purview-is-now-generally-available/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-24 13:00:00 +00:00
-permalink: /azure/news/Protecting-Microsoft-Fabric-Data-with-Purview-DLP-and-Sensitivity-Labels
 tags:
 - Access Controls
 - Auditing

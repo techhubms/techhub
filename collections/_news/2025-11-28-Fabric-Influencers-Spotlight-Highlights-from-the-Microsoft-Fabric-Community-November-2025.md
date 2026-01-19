@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-november-2025/
 title: 'Fabric Influencers Spotlight: Highlights from the Microsoft Fabric Community, November 2025'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-november-2025/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-28 10:00:00 +00:00
-permalink: /ml/news/Fabric-Influencers-Spotlight-Highlights-from-the-Microsoft-Fabric-Community-November-2025
 tags:
 - Advanced Pipelines
 - Azure Tenants

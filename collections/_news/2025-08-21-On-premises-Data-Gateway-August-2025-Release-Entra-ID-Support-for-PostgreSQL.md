@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-august-2025-release/
 title: 'On-premises Data Gateway August 2025 Release: Entra ID Support for PostgreSQL'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-august-2025-release/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-21 10:00:00 +00:00
-permalink: /ml/news/On-premises-Data-Gateway-August-2025-Release-Entra-ID-Support-for-PostgreSQL
 tags:
 - August
 - Authentication

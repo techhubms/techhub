@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=6JAurnFr5e4
 title: 'Migration & Modernization Strategies for Partners: Azure-Focused Growth at MS Ignite 2025'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=6JAurnFr5e4
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 12:13:05 +00:00
-permalink: /ai/videos/Migration-and-Modernization-Strategies-for-Partners-Azure-Focused-Growth-at-MS-Ignite-2025
 tags:
 - Agentic Capabilities
 - AI Transformation

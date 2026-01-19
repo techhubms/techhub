@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-importance-of-streaming-for-llm-powered-chat-applications/ba-p/4459574
 title: How to Implement Streaming in Azure LLM-Powered Chat Applications
 author: Pamela_Fox
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-importance-of-streaming-for-llm-powered-chat-applications/ba-p/4459574
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-07 05:57:30 +00:00
-permalink: /ai/community/How-to-Implement-Streaming-in-Azure-LLM-Powered-Chat-Applications
 tags:
 - API Integration
 - Azure AI Search

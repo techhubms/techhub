@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure/kickstart-conditional-access-in-microsoft-entra-free-starter/m-p/4447413#M22136
 title: 'Kickstart Conditional Access in Microsoft Entra: Free Starter Pack with Policies & Automation'
 author: SoaebRathod
-canonical_url: https://techcommunity.microsoft.com/t5/azure/kickstart-conditional-access-in-microsoft-entra-free-starter/m-p/4447413#M22136
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-23 14:13:11 +00:00
-permalink: /azure/community/Kickstart-Conditional-Access-in-Microsoft-Entra-Free-Starter-Pack-with-Policies-and-Automation
 tags:
 - Automation
 - Azure AD

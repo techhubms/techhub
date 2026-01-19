@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/blogs/2025/02/12/next-edit-suggestions
 title: Previewing Copilot Next Edit Suggestions and Agent Mode in VS Code
 author: Brigit Murtaugh, Burke Holland
-canonical_url: https://code.visualstudio.com/blogs/2025/02/12/next-edit-suggestions
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-02-12 00:00:00 +00:00
-permalink: /github-copilot/news/Previewing-Copilot-Next-Edit-Suggestions-and-Agent-Mode-in-VS-Code
 tags:
 - Agent Mode
 - AI Code Completion

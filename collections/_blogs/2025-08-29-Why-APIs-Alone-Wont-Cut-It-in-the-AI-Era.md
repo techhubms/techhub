@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/why-apis-alone-wont-cut-it-in-the-ai-era/?utm_source=rss&utm_medium=rss&utm_campaign=why-apis-alone-wont-cut-it-in-the-ai-era
 title: Why APIs Alone Won’t Cut It in the AI Era
 author: Alan Shimel
-canonical_url: https://devops.com/why-apis-alone-wont-cut-it-in-the-ai-era/?utm_source=rss&utm_medium=rss&utm_campaign=why-apis-alone-wont-cut-it-in-the-ai-era
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-29 16:03:12 +00:00
-permalink: /ai/blogs/Why-APIs-Alone-Wont-Cut-It-in-the-AI-Era
 tags:
 - AI Integration
 - API Lifecycle

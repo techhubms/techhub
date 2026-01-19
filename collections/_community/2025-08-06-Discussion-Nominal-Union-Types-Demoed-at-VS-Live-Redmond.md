@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mj96yf/nominal_union_types_were_demoted_at_vs_live_at/
 title: 'Discussion: Nominal Union Types Demoed at VS Live, Redmond'
 author: ThinksAboutTooMuch
-canonical_url: https://www.reddit.com/r/csharp/comments/1mj96yf/nominal_union_types_were_demoted_at_vs_live_at/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-06 16:22:18 +00:00
-permalink: /coding/community/Discussion-Nominal-Union-Types-Demoed-at-VS-Live-Redmond
 tags:
 - .NET
 - .NET 11

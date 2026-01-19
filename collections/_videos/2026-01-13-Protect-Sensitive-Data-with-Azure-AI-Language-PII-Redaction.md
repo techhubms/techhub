@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ZDaog_MJGS8
 title: Protect Sensitive Data with Azure AI Language PII Redaction
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=ZDaog_MJGS8
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2026-01-13 17:10:44 +00:00
-permalink: /ai/videos/Protect-Sensitive-Data-with-Azure-AI-Language-PII-Redaction
 tags:
 - AI Compliance
 - AI For Developers

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=zjfWn4_xSV4
 title: 'Azure Arc: Unified Hybrid and Multi-Cloud Management from Microsoft Ignite 2025'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=zjfWn4_xSV4
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 16:58:22 +00:00
-permalink: /azure/videos/Azure-Arc-Unified-Hybrid-and-Multi-Cloud-Management-from-Microsoft-Ignite-2025
 tags:
 - Application Deployment
 - AWS Integration

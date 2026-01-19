@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/improve-your-resiliency-posture-with-new-capabilities-and/ba-p/4469771
 title: Enhance Your Azure Resiliency with Intelligent Agent and Copilot Innovations
 author: rochakm
-canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/improve-your-resiliency-posture-with-new-capabilities-and/ba-p/4469771
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:03:51 +00:00
-permalink: /ai/community/Enhance-Your-Azure-Resiliency-with-Intelligent-Agent-and-Copilot-Innovations
 tags:
 - Azure Backup
 - Azure Copilot

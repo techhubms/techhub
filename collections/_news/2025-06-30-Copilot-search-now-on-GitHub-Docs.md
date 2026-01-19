@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-06-30-copilot-search-now-on-github-docs
 title: Copilot search now on GitHub Docs
 author: Allison
-canonical_url: https://github.blog/changelog/2025-06-30-copilot-search-now-on-github-docs
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-06-30 17:30:46 +00:00
-permalink: /github-copilot/news/Copilot-search-now-on-GitHub-Docs
 tags:
 - Documentation
 - GitHub

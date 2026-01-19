@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=8HTsYLNX7Sk
 title: 'From DEV to PROD: Building Agentic Memory with Azure Cosmos DB'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=8HTsYLNX7Sk
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 17:16:03 +00:00
-permalink: /ai/videos/From-DEV-to-PROD-Building-Agentic-Memory-with-Azure-Cosmos-DB
 tags:
 - Agentic Memory
 - AI Applications

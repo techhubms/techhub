@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/integrating-azure-application-gateway-v2-with-azure-api/ba-p/4470804
 title: Integrating Azure Application Gateway v2 with Azure API Management for Secure and Scalable API Delivery
 author: ranjsharma
-canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/integrating-azure-application-gateway-v2-with-azure-api/ba-p/4470804
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 17:33:43 +00:00
-permalink: /coding/community/Integrating-Azure-Application-Gateway-v2-with-Azure-API-Management-for-Secure-and-Scalable-API-Delivery
 tags:
 - API Security
 - Azure API Management

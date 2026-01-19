@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-customer-innovation-blog/pantone-s-palette-generator-enhances-creative-exploration-with/ba-p/4469830
 title: Pantone’s Palette Generator enhances creative exploration with agentic AI on Azure
 author: mtoiba
-canonical_url: https://techcommunity.microsoft.com/t5/azure-customer-innovation-blog/pantone-s-palette-generator-enhances-creative-exploration-with/ba-p/4469830
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:54:22 +00:00
-permalink: /github-copilot/community/Pantones-Palette-Generator-enhances-creative-exploration-with-agentic-AI-on-Azure
 tags:
 - Agentic RAG
 - AI Orchestration

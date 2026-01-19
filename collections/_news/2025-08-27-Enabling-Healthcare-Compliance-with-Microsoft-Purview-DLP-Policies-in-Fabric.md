@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/meet-your-healthcare-regulation-and-compliance-requirements-with-purview-data-loss-prevention-dlp-policies/
 title: Enabling Healthcare Compliance with Microsoft Purview DLP Policies in Fabric
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/meet-your-healthcare-regulation-and-compliance-requirements-with-purview-data-loss-prevention-dlp-policies/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-27 10:30:00 +00:00
-permalink: /azure/news/Enabling-Healthcare-Compliance-with-Microsoft-Purview-DLP-Policies-in-Fabric
 tags:
 - Access Monitoring
 - Audit Trails

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/azuredevops/comments/1m30btw/workaround_for_azure_arm_800_resource_limit_while/
 title: Workaround for Azure ARM 800 Resource Limit When Deploying Data Factory
 author: jessred99
-canonical_url: https://www.reddit.com/r/azuredevops/comments/1m30btw/workaround_for_azure_arm_800_resource_limit_while/
 viewing_mode: external
 feed_name: Reddit Azure DevOps
-feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-18 11:55:43 +00:00
-permalink: /ml/community/Workaround-for-Azure-ARM-800-Resource-Limit-When-Deploying-Data-Factory
 tags:
 - ARM Deployment
 - ARM Template

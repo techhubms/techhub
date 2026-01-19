@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/how-we-synchronize-dotnets-virtual-monorepo/
 title: 'How .NET’s Virtual Monorepo Synchronization Works: Technical Challenges and Solutions'
 author: Přemek Vysoký
-canonical_url: https://devblogs.microsoft.com/dotnet/how-we-synchronize-dotnets-virtual-monorepo/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2026-01-12 17:00:00 +00:00
-permalink: /coding/news/How-NETs-Virtual-Monorepo-Synchronization-Works-Technical-Challenges-and-Solutions
 tags:
 - .NET
 - .NET Internals

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/gain-deeper-insights-into-spark-jobs-with-jobinsight-in-microsoft-fabric/
 title: Gain Deeper Insights into Spark Jobs with JobInsight in Microsoft Fabric
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/gain-deeper-insights-into-spark-jobs-with-jobinsight-in-microsoft-fabric/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-26 12:20:07 +00:00
-permalink: /ml/news/Gain-Deeper-Insights-into-Spark-Jobs-with-JobInsight-in-Microsoft-Fabric
 tags:
 - ADLS Gen2
 - Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=6afeRSFQiw0
 title: 'Visual Studio Debugger: Advanced Techniques'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=6afeRSFQiw0
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-12 19:18:18 +00:00
-permalink: /ai/videos/Visual-Studio-Debugger-Advanced-Techniques
 tags:
 - .NET
 - .NET 10

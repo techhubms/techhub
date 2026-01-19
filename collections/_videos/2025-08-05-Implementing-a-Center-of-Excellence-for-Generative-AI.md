@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=SwNcZbc2UAM
 title: Implementing a Center of Excellence for Generative AI
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=SwNcZbc2UAM
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-05 07:00:27 +00:00
-permalink: /ai/videos/Implementing-a-Center-of-Excellence-for-Generative-AI
 tags:
 - AI Center Of Excellence
 - AI Governance

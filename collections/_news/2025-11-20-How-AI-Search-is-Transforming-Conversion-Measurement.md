@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.bing.com/webmaster/November-2025/How-AI-Search-Is-Changing%E2%80%AFthe%E2%80%AFWay%E2%80%AFConversions%E2%80%AFare-Measured
 title: How AI Search is Transforming Conversion Measurement
 author: stclarke
-canonical_url: https://blogs.bing.com/webmaster/November-2025/How-AI-Search-Is-Changing%E2%80%AFthe%E2%80%AFWay%E2%80%AFConversions%E2%80%AFare-Measured
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-20 18:05:30 +00:00
-permalink: /ai/news/How-AI-Search-is-Transforming-Conversion-Measurement
 tags:
 - AI Powered Experiences
 - AI Search

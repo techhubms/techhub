@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=DKEo7LqpVAM
 title: From Zero to Kubernetes with AKS Automatic
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=DKEo7LqpVAM
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 15:40:19 +00:00
-permalink: /azure/videos/From-Zero-to-Kubernetes-with-AKS-Automatic
 tags:
 - AKS
 - AKS Automatic

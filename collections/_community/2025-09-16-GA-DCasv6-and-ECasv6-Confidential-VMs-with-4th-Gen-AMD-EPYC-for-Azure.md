@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/ga-dcasv6-and-ecasv6-confidential-vms-based-on-4th-generation/ba-p/4451460
 title: 'GA: DCasv6 and ECasv6 Confidential VMs with 4th Gen AMD EPYC for Azure'
 author: Rakeshginjupalli
-canonical_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/ga-dcasv6-and-ecasv6-confidential-vms-based-on-4th-generation/ba-p/4451460
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-16 23:00:00 +00:00
-permalink: /azure/community/GA-DCasv6-and-ECasv6-Confidential-VMs-with-4th-Gen-AMD-EPYC-for-Azure
 tags:
 - AES 256
 - AKS

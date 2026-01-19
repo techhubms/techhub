@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-the-microsoft-agent-framework/ba-p/4458377
 title: 'Introducing the Microsoft Agent Framework: Unified SDK for AI Agents and Workflows'
 author: Lee_Stott
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-the-microsoft-agent-framework/ba-p/4458377
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-01 14:14:57 +00:00
-permalink: /ai/community/Introducing-the-Microsoft-Agent-Framework-Unified-SDK-for-AI-Agents-and-Workflows
 tags:
 - .NET
 - A2A SDK

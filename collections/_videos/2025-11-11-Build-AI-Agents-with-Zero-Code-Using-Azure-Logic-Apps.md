@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=6YFN25o9jn4
 title: Build AI Agents with Zero Code Using Azure Logic Apps
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=6YFN25o9jn4
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-11 21:47:17 +00:00
-permalink: /ai/videos/Build-AI-Agents-with-Zero-Code-Using-Azure-Logic-Apps
 tags:
 - AI Agents
 - Authentication

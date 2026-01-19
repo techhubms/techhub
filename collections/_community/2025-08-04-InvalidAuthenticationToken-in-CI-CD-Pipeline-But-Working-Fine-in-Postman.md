@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mhac2s/invalidauthenticationtoken_in_cicd_pipeline_but/
 title: InvalidAuthenticationToken in CI-CD Pipeline But Working Fine in Postman
 author: sayytoabhishekkumar
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mhac2s/invalidauthenticationtoken_in_cicd_pipeline_but/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-04 11:01:26 +00:00
-permalink: /azure/community/InvalidAuthenticationToken-in-CI-CD-Pipeline-But-Working-Fine-in-Postman
 tags:
 - Access Token
 - Authentication

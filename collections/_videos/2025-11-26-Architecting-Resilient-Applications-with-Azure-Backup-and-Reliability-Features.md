@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=UQRAs0k978k
 title: Architecting Resilient Applications with Azure Backup and Reliability Features
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=UQRAs0k978k
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 17:47:15 +00:00
-permalink: /azure/videos/Architecting-Resilient-Applications-with-Azure-Backup-and-Reliability-Features
 tags:
 - AKS
 - Application Protection

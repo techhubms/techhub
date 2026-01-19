@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/beyond-the-desktop-the-future-of-development-with-microsoft-dev/ba-p/4459483
 title: 'Beyond the Desktop: The Future of Development with Microsoft Dev Box and GitHub Codespaces'
 author: owaino
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/beyond-the-desktop-the-future-of-development-with-microsoft-dev/ba-p/4459483
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-17 17:58:05 +00:00
-permalink: /coding/community/Beyond-the-Desktop-The-Future-of-Development-with-Microsoft-Dev-Box-and-GitHub-Codespaces
 tags:
 - Best Practices
 - CI/CD

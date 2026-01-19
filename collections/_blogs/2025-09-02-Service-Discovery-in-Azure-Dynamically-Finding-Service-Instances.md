@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/service-discovery-in-azure-dynamically-finding-service-instances/
 title: 'Service Discovery in Azure: Dynamically Finding Service Instances'
 author: Dellenny
-canonical_url: https://dellenny.com/service-discovery-in-azure-dynamically-finding-service-instances/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-02 07:45:25 +00:00
-permalink: /coding/blogs/Service-Discovery-in-Azure-Dynamically-Finding-Service-Instances
 tags:
 - AKS
 - API Gateway

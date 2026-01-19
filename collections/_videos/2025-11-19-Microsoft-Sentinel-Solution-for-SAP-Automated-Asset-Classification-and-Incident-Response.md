@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ySUeiUmv-ak
 title: 'Microsoft Sentinel Solution for SAP: Automated Asset Classification and Incident Response'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=ySUeiUmv-ak
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 13:11:38 +00:00
-permalink: /security/videos/Microsoft-Sentinel-Solution-for-SAP-Automated-Asset-Classification-and-Incident-Response
 tags:
 - Asset Categories
 - Automated Asset Classification

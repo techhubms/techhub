@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/shadow-how-ai-coding-agents-are-transforming-devops-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=shadow-how-ai-coding-agents-are-transforming-devops-workflows
 title: 'Shadow: How AI Coding Agents are Transforming DevOps Workflows'
 author: Tom Smith
-canonical_url: https://devops.com/shadow-how-ai-coding-agents-are-transforming-devops-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=shadow-how-ai-coding-agents-are-transforming-devops-workflows
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-14 07:38:39 +00:00
-permalink: /ai/blogs/Shadow-How-AI-Coding-Agents-are-Transforming-DevOps-Workflows
 tags:
 - AI Agents
 - AI Assisted Workflows

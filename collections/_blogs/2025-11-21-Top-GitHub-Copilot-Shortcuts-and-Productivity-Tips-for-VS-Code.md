@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/turbocharge-your-coding-top-github-copilot-shortcuts-and-productivity-tips-for-vs-code/
 title: Top GitHub Copilot Shortcuts and Productivity Tips for VS Code
 author: John Edward
-canonical_url: https://dellenny.com/turbocharge-your-coding-top-github-copilot-shortcuts-and-productivity-tips-for-vs-code/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-21 15:39:36 +00:00
-permalink: /github-copilot/blogs/Top-GitHub-Copilot-Shortcuts-and-Productivity-Tips-for-VS-Code
 tags:
 - AI Pair Programming
 - Code Review

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=asqAei6gw1s
 title: Building Agent-Ready Tools with API Center and API Management
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=asqAei6gw1s
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-30 22:30:19 +00:00
-permalink: /ai/videos/Building-agent-ready-tools-with-API-Center-and-API-Management
 tags:
 - Agent Service
 - API Discovery

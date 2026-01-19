@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=FwMIgQ2e17A
 title: 'Migrating to Microsoft Fabric: Unifying Your Data Journey'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=FwMIgQ2e17A
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:28:39 +00:00
-permalink: /ml/videos/Migrating-to-Microsoft-Fabric-Unifying-Your-Data-Journey
 tags:
 - Azure Data Factory
 - Azure Synapse Gen 2

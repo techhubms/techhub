@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/MachineLearning/comments/1miev16/p_from_business_processes_to_gnn_for_next/
 title: Structuring a GNN-Based Next Activity Prediction for Business Process Mining
 author: Street_Car_1297
-canonical_url: https://www.reddit.com/r/MachineLearning/comments/1miev16/p_from_business_processes_to_gnn_for_next/
 viewing_mode: external
 feed_name: Reddit Machine Learning
-feed_url: https://www.reddit.com/r/MachineLearning/.rss
 date: 2025-08-05 17:05:11 +00:00
-permalink: /ml/community/Structuring-a-GNN-Based-Next-Activity-Prediction-for-Business-Process-Mining
 tags:
 - Batch Processing
 - Business Process Analysis

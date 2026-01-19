@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-maps-blog/azure-maps-understanding-view-vs-routing-coordinates/ba-p/4483532
 title: 'Azure Maps: Understanding View vs. Routing Coordinates'
 author: IoTGirl
-canonical_url: https://techcommunity.microsoft.com/t5/azure-maps-blog/azure-maps-understanding-view-vs-routing-coordinates/ba-p/4483532
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-06 20:27:42 +00:00
-permalink: /azure/community/Azure-Maps-Understanding-View-vs-Routing-Coordinates
 tags:
 - Access Points
 - API Usage

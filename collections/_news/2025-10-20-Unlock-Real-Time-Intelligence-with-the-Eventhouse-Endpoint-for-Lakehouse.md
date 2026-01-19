@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/unlock-real-time-intelligence-with-the-eventhouse-endpoint-for-lakehouse/
 title: Unlock Real-Time Intelligence with the Eventhouse Endpoint for Lakehouse
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/unlock-real-time-intelligence-with-the-eventhouse-endpoint-for-lakehouse/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-20 11:00:00 +00:00
-permalink: /ml/news/Unlock-Real-Time-Intelligence-with-the-Eventhouse-Endpoint-for-Lakehouse
 tags:
 - Advanced Analytics
 - Anomaly Detection

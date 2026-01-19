@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/VisualStudio/comments/1mb6app/weird_unhandled_exception_errors_after_windows_11/
 title: Weird Unhandled Exception Errors in Visual Studio After Windows 11 Update
 author: Quiet_Equivalent_569
-canonical_url: https://www.reddit.com/r/VisualStudio/comments/1mb6app/weird_unhandled_exception_errors_after_windows_11/
 viewing_mode: external
 feed_name: Reddit Visual Studio
-feed_url: https://www.reddit.com/r/VisualStudio/.rss
 date: 2025-07-28 03:59:23 +00:00
-permalink: /coding/community/Weird-Unhandled-Exception-Errors-in-Visual-Studio-After-Windows-11-Update
 tags:
 - .NET
 - Build Error

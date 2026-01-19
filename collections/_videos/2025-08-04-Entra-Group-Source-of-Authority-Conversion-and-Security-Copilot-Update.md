@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=VpRDtulXcUw
 title: Entra Group Source of Authority Conversion and Security Copilot Update
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=VpRDtulXcUw
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-04 13:59:18 +00:00
-permalink: /azure/videos/Entra-Group-Source-of-Authority-Conversion-and-Security-Copilot-Update
 tags:
 - Access Management
 - Active Directory

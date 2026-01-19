@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/devops/new-test-run-hub/
 title: Introducing the New Test Run Hub in Azure Test Plans
 author: Panagiotis Liaros
-canonical_url: https://devblogs.microsoft.com/devops/new-test-run-hub/
 viewing_mode: external
 feed_name: Microsoft DevOps Blog
-feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-09-04 09:58:58 +00:00
-permalink: /azure/news/Introducing-the-New-Test-Run-Hub-in-Azure-Test-Plans
 tags:
 - Analytics Dashboard
 - Azure DevOps

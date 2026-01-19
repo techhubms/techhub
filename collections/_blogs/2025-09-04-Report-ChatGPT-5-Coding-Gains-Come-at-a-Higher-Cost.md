@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/report-chatgpt-5-coding-gains-come-at-a-higher-cost/?utm_source=rss&utm_medium=rss&utm_campaign=report-chatgpt-5-coding-gains-come-at-a-higher-cost
 title: 'Report: ChatGPT-5 Coding Gains Come at a Higher Cost'
 author: Mike Vizard
-canonical_url: https://devops.com/report-chatgpt-5-coding-gains-come-at-a-higher-cost/?utm_source=rss&utm_medium=rss&utm_campaign=report-chatgpt-5-coding-gains-come-at-a-higher-cost
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-04 17:51:34 +00:00
-permalink: /ai/blogs/Report-ChatGPT-5-Coding-Gains-Come-at-a-Higher-Cost
 tags:
 - AI Coding Tools
 - ChatGPT

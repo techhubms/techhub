@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-in-a-real-life-scenario/
 title: Practical Insights on Using Azure Developer CLI (azd) for Migration Projects
 author: Frank Boucher
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-in-a-real-life-scenario/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-04-24 17:20:06 +00:00
-permalink: /coding/news/Practical-Insights-on-Using-Azure-Developer-CLI-azd-for-Migration-Projects
 tags:
 - .NET
 - Azd

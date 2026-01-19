@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-the-job-level-bursting-switch-in-microsoft-fabric/
 title: Introducing the Job-Level Bursting Switch in Microsoft Fabric
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-the-job-level-bursting-switch-in-microsoft-fabric/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-14 07:00:00 +00:00
-permalink: /ml/news/Introducing-the-Job-Level-Bursting-Switch-in-Microsoft-Fabric
 tags:
 - Autoscale Billing
 - Burst Capacity

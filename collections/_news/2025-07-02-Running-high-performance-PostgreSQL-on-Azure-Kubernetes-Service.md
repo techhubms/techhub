@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/running-high-performance-postgresql-on-azure-kubernetes-service/
 title: Running High-Performance PostgreSQL on Azure Kubernetes Service
 author: Qi Ke
-canonical_url: https://azure.microsoft.com/en-us/blog/running-high-performance-postgresql-on-azure-kubernetes-service/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-02 15:00:00 +00:00
-permalink: /ml/news/Running-high-performance-PostgreSQL-on-Azure-Kubernetes-Service
 tags:
 - AKS
 - Azure Blob Storage

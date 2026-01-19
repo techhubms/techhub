@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-27-create-sub-issues-with-copilot-in-public-preview
 title: 'Managing Sub-Issues with GitHub Copilot: Public Preview Update'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-27-create-sub-issues-with-copilot-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-27 23:37:22 +00:00
-permalink: /github-copilot/news/Managing-Sub-Issues-with-GitHub-Copilot-Public-Preview-Update
 tags:
 - Copilot Chat
 - Developer Workflow

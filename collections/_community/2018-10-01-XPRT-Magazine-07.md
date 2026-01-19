@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: XPRT Magazine 07
 date: 2018-10-01 00:00:00 +00:00
 author: Xebia
 viewing_mode: external
-permalink: /ai/community/XPRT-Magazine-07
 tags:
 - Automation
 - Azure Security

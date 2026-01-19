@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-toolkit-for-intellij-introducing-the-enhanced-java-code-quality-analyzer/
 title: Azure Toolkit for IntelliJ Brings Enhanced Java Code Quality Analyzer for Azure SDK Development
 author: Sameeksha Vaity
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-toolkit-for-intellij-introducing-the-enhanced-java-code-quality-analyzer/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-04-18 17:49:56 +00:00
-permalink: /coding/news/Azure-Toolkit-for-IntelliJ-Brings-Enhanced-Java-Code-Quality-Analyzer-for-Azure-SDK-Development
 tags:
 - Asynchronous Programming
 - Authentication

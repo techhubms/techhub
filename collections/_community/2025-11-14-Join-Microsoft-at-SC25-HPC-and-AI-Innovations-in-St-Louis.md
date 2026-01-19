@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/join-microsoft-sc25-experience-hpc-and-ai-innovation/ba-p/4467935
 title: 'Join Microsoft at SC25: HPC and AI Innovations in St. Louis'
 author: Fernando_Aznar
-canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/join-microsoft-sc25-experience-hpc-and-ai-innovation/ba-p/4467935
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-14 20:46:40 +00:00
-permalink: /ai/community/Join-Microsoft-at-SC25-HPC-and-AI-Innovations-in-St-Louis
 tags:
 - Agentic AI
 - AI Infrastructure

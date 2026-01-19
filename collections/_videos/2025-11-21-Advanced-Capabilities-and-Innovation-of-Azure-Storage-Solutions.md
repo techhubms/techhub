@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=yFFMGDNVMZ8
 title: Advanced Capabilities and Innovation of Azure Storage Solutions
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=yFFMGDNVMZ8
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 08:28:54 +00:00
-permalink: /ai/videos/Advanced-Capabilities-and-Innovation-of-Azure-Storage-Solutions
 tags:
 - AI Inference
 - Azure Files

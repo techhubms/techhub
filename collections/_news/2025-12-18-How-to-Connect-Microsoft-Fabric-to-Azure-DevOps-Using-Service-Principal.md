@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/how-to-connect-microsoft-fabric-to-azure-devops-using-service-principal/
 title: How to Connect Microsoft Fabric to Azure DevOps Using Service Principal
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/how-to-connect-microsoft-fabric-to-azure-devops-using-service-principal/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-18 10:30:00 +00:00
-permalink: /ml/news/How-to-Connect-Microsoft-Fabric-to-Azure-DevOps-Using-Service-Principal
 tags:
 - Azure DevOps
 - CI/CD

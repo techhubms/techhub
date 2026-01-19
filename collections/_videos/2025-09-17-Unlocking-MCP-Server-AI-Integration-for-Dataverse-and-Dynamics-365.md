@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=bjMdBPLl4Kc
 title: 'Unlocking MCP Server: AI Integration for Dataverse & Dynamics 365'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=bjMdBPLl4Kc
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-17 07:00:41 +00:00
-permalink: /ai/videos/Unlocking-MCP-Server-AI-Integration-for-Dataverse-and-Dynamics-365
 tags:
 - Agentic AI
 - AI Integration

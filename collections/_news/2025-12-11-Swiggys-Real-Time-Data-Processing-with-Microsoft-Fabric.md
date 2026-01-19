@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.linkedin.com/posts/satyanadella_real-time-intelligence-how-indias-swiggy-activity-7404753089972535299-0NPA
 title: Swiggy's Real-Time Data Processing with Microsoft Fabric
 author: stclarke
-canonical_url: https://www.linkedin.com/posts/satyanadella_real-time-intelligence-how-indias-swiggy-activity-7404753089972535299-0NPA
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-11 04:10:00 +00:00
-permalink: /ml/news/Swiggys-Real-Time-Data-Processing-with-Microsoft-Fabric
 tags:
 - Azure Data
 - Batch Processing

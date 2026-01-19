@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/malicious-nx-packages-used-in-two-waves-of-supply-chain-attack/?utm_source=rss&utm_medium=rss&utm_campaign=malicious-nx-packages-used-in-two-waves-of-supply-chain-attack
 title: Malicious Nx Packages Used in Two Waves of Supply Chain Attack
 author: Jeff Burt
-canonical_url: https://devops.com/malicious-nx-packages-used-in-two-waves-of-supply-chain-attack/?utm_source=rss&utm_medium=rss&utm_campaign=malicious-nx-packages-used-in-two-waves-of-supply-chain-attack
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-29 17:15:10 +00:00
-permalink: /ai/blogs/Malicious-Nx-Packages-Used-in-Two-Waves-of-Supply-Chain-Attack
 tags:
 - AI CLI Tools
 - Automation

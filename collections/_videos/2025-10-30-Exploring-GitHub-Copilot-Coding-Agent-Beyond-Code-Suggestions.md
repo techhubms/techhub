@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/KgY5OQqMGms
 title: 'Exploring GitHub Copilot Coding Agent: Beyond Code Suggestions'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/shorts/KgY5OQqMGms
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-30 18:08:46 +00:00
-permalink: /github-copilot/videos/Exploring-GitHub-Copilot-Coding-Agent-Beyond-Code-Suggestions
 tags:
 - AI Powered Development
 - Autonomous Agent

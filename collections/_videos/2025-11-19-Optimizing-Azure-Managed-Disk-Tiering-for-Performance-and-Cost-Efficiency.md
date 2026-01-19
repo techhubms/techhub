@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=0PVcB1u_ZV4
 title: Optimizing Azure Managed Disk Tiering for Performance and Cost Efficiency
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=0PVcB1u_ZV4
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-19 11:47:25 +00:00
-permalink: /azure/videos/Optimizing-Azure-Managed-Disk-Tiering-for-Performance-and-Cost-Efficiency
 tags:
 - AutoScaler
 - Azure Managed Disks

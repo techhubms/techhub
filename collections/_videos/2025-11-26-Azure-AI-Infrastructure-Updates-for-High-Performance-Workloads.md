@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=MWid8VX6PZ4
 title: Azure AI Infrastructure Updates for High-Performance Workloads
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=MWid8VX6PZ4
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 21:27:24 +00:00
-permalink: /ai/videos/Azure-AI-Infrastructure-Updates-for-High-Performance-Workloads
 tags:
 - Agent Mode
 - Anthropic Models

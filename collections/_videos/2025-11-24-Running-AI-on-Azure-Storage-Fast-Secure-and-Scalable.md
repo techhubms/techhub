@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=6-UKEiqm53c
 title: 'Running AI on Azure Storage: Fast, Secure, and Scalable'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=6-UKEiqm53c
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 10:26:37 +00:00
-permalink: /ai/videos/Running-AI-on-Azure-Storage-Fast-Secure-and-Scalable
 tags:
 - AI Fine Tuning
 - AI Training

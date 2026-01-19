@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/managing-context-retention-in-agentic-ai/ba-p/4458586
 title: Managing Context Retention in Agentic AI with Python and LangChain
 author: RavinderGupta
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/managing-context-retention-in-agentic-ai/ba-p/4458586
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-03 05:09:48 +00:00
-permalink: /ai/community/Managing-Context-Retention-in-Agentic-AI-with-Python-and-LangChain
 tags:
 - Agentic AI
 - AI Development

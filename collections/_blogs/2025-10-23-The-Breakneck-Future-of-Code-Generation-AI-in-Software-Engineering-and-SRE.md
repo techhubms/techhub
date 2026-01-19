@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/the-breakneck-future-of-codegen-why-ai-swe-must-be-matched-with-ai-sre/
 title: 'The Breakneck Future of Code Generation: AI in Software Engineering and SRE'
 author: Anish Agarwal
-canonical_url: https://devops.com/the-breakneck-future-of-codegen-why-ai-swe-must-be-matched-with-ai-sre/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-23 06:30:46 +00:00
-permalink: /github-copilot/blogs/The-Breakneck-Future-of-Code-Generation-AI-in-Software-Engineering-and-SRE
 tags:
 - AI Automation
 - AI Code Generation

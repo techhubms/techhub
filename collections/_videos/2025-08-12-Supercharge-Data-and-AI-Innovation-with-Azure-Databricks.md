@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=wktreLtv_5w
 title: Supercharge Data and AI Innovation with Azure Databricks
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=wktreLtv_5w
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-12 07:00:58 +00:00
-permalink: /ai/videos/Supercharge-Data-and-AI-Innovation-with-Azure-Databricks
 tags:
 - Analytics Platform
 - Azure AI Foundry

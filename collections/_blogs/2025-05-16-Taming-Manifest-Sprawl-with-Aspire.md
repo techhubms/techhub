@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://medium.com/@davidfowl/taming-manifest-sprawl-with-aspire-1ad938379433?source=rss-8163234c98f0------2
 title: Taming Manifest Sprawl with Aspire
 author: David Fowler
-canonical_url: https://medium.com/@davidfowl/taming-manifest-sprawl-with-aspire-1ad938379433?source=rss-8163234c98f0------2
 viewing_mode: external
 feed_name: David Fowler's Blog
-feed_url: https://medium.com/feed/@davidfowl
 date: 2025-05-16 15:15:55 +00:00
-permalink: /coding/blogs/Taming-Manifest-Sprawl-with-Aspire
 tags:
 - .NET
 - Aspire

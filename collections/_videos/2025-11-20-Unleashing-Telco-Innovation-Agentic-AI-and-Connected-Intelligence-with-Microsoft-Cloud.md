@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=mTfjrZbUkts
 title: 'Unleashing Telco Innovation: Agentic AI & Connected Intelligence with Microsoft Cloud'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=mTfjrZbUkts
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 17:01:31 +00:00
-permalink: /ai/videos/Unleashing-Telco-Innovation-Agentic-AI-and-Connected-Intelligence-with-Microsoft-Cloud
 tags:
 - Agentic AI
 - Autonomous Networks

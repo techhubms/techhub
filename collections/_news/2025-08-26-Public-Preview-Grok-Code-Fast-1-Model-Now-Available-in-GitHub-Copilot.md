@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-26-grok-code-fast-1-is-rolling-out-in-public-preview-for-github-copilot
 title: 'Public Preview: Grok Code Fast 1 Model Now Available in GitHub Copilot'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-26-grok-code-fast-1-is-rolling-out-in-public-preview-for-github-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-26 21:00:52 +00:00
-permalink: /github-copilot/news/Public-Preview-Grok-Code-Fast-1-Model-Now-Available-in-GitHub-Copilot
 tags:
 - AI Models
 - Bring Your Own Key

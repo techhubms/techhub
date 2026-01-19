@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/general-availability-azure-synapse-runtime-for-apache-spark-3-5/
 title: Azure Synapse Runtime for Apache Spark 3.5 Now Generally Available
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/general-availability-azure-synapse-runtime-for-apache-spark-3-5/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-14 10:29:13 +00:00
-permalink: /ml/news/Azure-Synapse-Runtime-for-Apache-Spark-35-Now-Generally-Available
 tags:
 - Apache Spark 3.5
 - Azure Synapse

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-llm-powered-through-data-agent-from-your-mirrored-databases-in-microsoft-fabric/
 title: Unlocking LLM-Powered Analytics with Fabric Data Agent and Mirrored Databases
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-llm-powered-through-data-agent-from-your-mirrored-databases-in-microsoft-fabric/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-24 17:00:00 +00:00
-permalink: /ai/news/Unlocking-LLM-Powered-Analytics-with-Fabric-Data-Agent-and-Mirrored-Databases
 tags:
 - AI Integration
 - Azure Cosmos DB

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/on-the-issues/2025/09/16/microsoft-30-billion-uk-ai-future/
 title: Microsoft Announces $30 Billion Investment in UK for AI Infrastructure
 author: sbaynes
-canonical_url: https://blogs.microsoft.com/on-the-issues/2025/09/16/microsoft-30-billion-uk-ai-future/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-17 16:50:37 +00:00
-permalink: /ai/news/Microsoft-Announces-30-Billion-Investment-in-UK-for-AI-Infrastructure
 tags:
 - AI Development
 - AI Infrastructure

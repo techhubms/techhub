@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=blGOP6adqa4
 title: "What's New in NuGet: Security, AI, and Modern Package Management for .NET"
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=blGOP6adqa4
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:49 +00:00
-permalink: /ai/videos/Whats-New-in-NuGet-Security-AI-and-Modern-Package-Management-for-NET
 tags:
 - .NET
 - AI Productivity

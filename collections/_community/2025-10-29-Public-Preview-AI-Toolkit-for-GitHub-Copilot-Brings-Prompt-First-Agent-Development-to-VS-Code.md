@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/announcing-public-preview-ai-toolkit-for-github-copilot-prompt/ba-p/4465069
 title: 'Public Preview: AI Toolkit for GitHub Copilot Brings Prompt-First Agent Development to VS Code'
 author: Lee_Stott
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/announcing-public-preview-ai-toolkit-for-github-copilot-prompt/ba-p/4465069
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-29 17:48:03 +00:00
-permalink: /github-copilot/community/Public-Preview-AI-Toolkit-for-GitHub-Copilot-Brings-Prompt-First-Agent-Development-to-VS-Code
 tags:
 - Agent Development
 - Agent Evaluation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Mz5iSGA6L4g
 title: Boost Your Productivity with Visual Studio & Model Context Protocol (MCP) Servers
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=Mz5iSGA6L4g
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-08-15 20:17:18 +00:00
-permalink: /ai/videos/Boost-Your-Productivity-with-Visual-Studio-and-Model-Context-Protocol-MCP-Servers
 tags:
 - Agent Ready APIs
 - AI Development

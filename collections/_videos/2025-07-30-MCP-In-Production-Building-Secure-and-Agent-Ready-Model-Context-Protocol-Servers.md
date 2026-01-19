@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=hTV5jgjvYiY
 title: 'MCP In Production: Building Secure and Agent-Ready Model Context Protocol Servers'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=hTV5jgjvYiY
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-30 22:32:10 +00:00
-permalink: /ai/videos/MCP-In-Production-Building-Secure-and-Agent-Ready-Model-Context-Protocol-Servers
 tags:
 - Agentic AI
 - AI Security

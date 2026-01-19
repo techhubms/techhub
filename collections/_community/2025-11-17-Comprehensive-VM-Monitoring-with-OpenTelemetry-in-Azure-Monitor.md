@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/comprehensive-vm-monitoring-with-opentelemetry-performance/ba-p/4470122
 title: Comprehensive VM Monitoring with OpenTelemetry in Azure Monitor
 author: viviandiec
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/comprehensive-vm-monitoring-with-opentelemetry-performance/ba-p/4470122
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-17 23:17:57 +00:00
-permalink: /azure/community/Comprehensive-VM-Monitoring-with-OpenTelemetry-in-Azure-Monitor
 tags:
 - Arc Servers
 - Azure Monitor

@@ -1,10 +1,8 @@
 ﻿---
-layout: post
 title: 'From Copilot Agents to AI-Driven Security: Key Platform and Productivity Advances'
 author: Tech Hub Team
 viewing_mode: internal
 date: 2025-07-14 09:00:00 +00:00
-permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
 - AI Agents

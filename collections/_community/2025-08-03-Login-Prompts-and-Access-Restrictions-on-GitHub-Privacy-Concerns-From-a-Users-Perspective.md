@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/github/comments/1mgvust/promting_to_login_circumventing_that_leaves_me/
 title: "Login Prompts and Access Restrictions on GitHub: Privacy Concerns From a User's Perspective"
 author: Mabymaster
-canonical_url: https://www.reddit.com/r/github/comments/1mgvust/promting_to_login_circumventing_that_leaves_me/
 viewing_mode: external
 feed_name: Reddit GitHub
-feed_url: https://www.reddit.com/r/github/.rss
 date: 2025-08-03 21:58:23 +00:00
-permalink: /devops/community/Login-Prompts-and-Access-Restrictions-on-GitHub-Privacy-Concerns-From-a-Users-Perspective
 tags:
 - Browser Fingerprinting
 - GitHub

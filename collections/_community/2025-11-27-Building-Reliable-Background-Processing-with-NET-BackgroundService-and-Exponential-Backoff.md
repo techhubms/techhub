@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/background-tasks-in-net/ba-p/4472341
 title: Building Reliable Background Processing with .NET BackgroundService and Exponential Backoff
 author: riturajjana
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/background-tasks-in-net/ba-p/4472341
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-27 08:00:00 +00:00
-permalink: /coding/community/Building-Reliable-Background-Processing-with-NET-BackgroundService-and-Exponential-Backoff
 tags:
 - .NET
 - API Reliability

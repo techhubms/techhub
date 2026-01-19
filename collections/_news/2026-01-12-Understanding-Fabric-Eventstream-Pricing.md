@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/understanding-fabric-eventstream-pricing/
 title: Understanding Fabric Eventstream Pricing
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/understanding-fabric-eventstream-pricing/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2026-01-12 14:00:00 +00:00
-permalink: /ml/news/Understanding-Fabric-Eventstream-Pricing
 tags:
 - Azure Data Services
 - Capacity Metrics

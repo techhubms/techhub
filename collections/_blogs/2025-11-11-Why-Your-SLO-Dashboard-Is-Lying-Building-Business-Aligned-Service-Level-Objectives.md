@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/why-your-slo-dashboard-is-lying-moving-beyond-vanity-metrics-in-production/
 title: 'Why Your SLO Dashboard Is Lying: Building Business-Aligned Service Level Objectives'
 author: Muhammad Yawar Malik
-canonical_url: https://devops.com/why-your-slo-dashboard-is-lying-moving-beyond-vanity-metrics-in-production/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-11 12:41:30 +00:00
-permalink: /devops/blogs/Why-Your-SLO-Dashboard-Is-Lying-Building-Business-Aligned-Service-Level-Objectives
 tags:
 - API Latency
 - Application Performance Management

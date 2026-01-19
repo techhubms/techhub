@@ -1,12 +1,9 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/07/14/improving-it-efficiency-with-microsoft-security-copilot-in-microsoft-intune-and-microsoft-entra/
 title: Security Copilot capabilities in Microsoft Intune and Entra now generally available
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/07/14/improving-it-efficiency-with-microsoft-security-copilot-in-microsoft-intune-and-microsoft-entra/
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-14 17:23:42 +00:00
-permalink: /ai/news/Security-Copilot-capabilities-in-Microsoft-Intune-and-Entra-now-generally-available
 viewing_mode: external
 tags:
 - AI Driven Security

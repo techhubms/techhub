@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://khalidabuhakmeh.com/writing-a-string-numeric-comparer-with-dotnet-9
 title: 'Writing a String Numeric Comparer in .NET: Handling Numeric Sorting with Spans'
 author: Khalid Abuhakmeh
-canonical_url: https://khalidabuhakmeh.com/writing-a-string-numeric-comparer-with-dotnet-9
 viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
-feed_url: https://khalidabuhakmeh.com/feed.xml
 date: 2025-01-07 00:00:00 +00:00
-permalink: /coding/blogs/Writing-a-String-Numeric-Comparer-in-NET-Handling-Numeric-Sorting-with-Spans
 tags:
 - .NET
 - Alphanumeric Ordering

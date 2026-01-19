@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/what-is-microsoft-azure-a-beginners-guide-to-the-azure-ecosystem/
 title: What Is Microsoft Azure? A Beginner’s Guide to the Azure Ecosystem
 author: Dellenny
-canonical_url: https://dellenny.com/what-is-microsoft-azure-a-beginners-guide-to-the-azure-ecosystem/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-10-29 07:46:39 +00:00
-permalink: /ai/blogs/What-Is-Microsoft-Azure-A-Beginners-Guide-to-the-Azure-Ecosystem
 tags:
 - AKS
 - Azure Arc

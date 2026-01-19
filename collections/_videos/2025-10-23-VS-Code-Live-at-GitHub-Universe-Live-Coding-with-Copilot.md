@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=pZenafOYtfI
 title: 'VS Code Live at GitHub Universe: Live Coding with Copilot'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=pZenafOYtfI
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-10-23 18:14:40 +00:00
-permalink: /github-copilot/videos/VS-Code-Live-at-GitHub-Universe-Live-Coding-with-Copilot
 tags:
 - Code
 - Code Collaboration

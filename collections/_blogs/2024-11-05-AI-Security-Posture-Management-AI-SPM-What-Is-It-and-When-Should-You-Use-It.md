@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://zure.com/blog/ai-security-posture-management-what-it-is/
 title: 'AI Security Posture Management (AI-SPM): What Is It and When Should You Use It?'
 author: Kim Grönberg
-canonical_url: https://zure.com/blog/ai-security-posture-management-what-it-is/
 viewing_mode: external
 feed_name: Zure Data & AI Blog
-feed_url: https://zure.com/category/blog/feed/?tag=dataai
 date: 2024-11-05 07:14:57 +00:00
-permalink: /ai/blogs/AI-Security-Posture-Management-AI-SPM-What-Is-It-and-When-Should-You-Use-It
 tags:
 - AI Model Security
 - AI Risk Management

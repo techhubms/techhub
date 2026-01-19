@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/azure-content-understanding-is-now-generally-available/
 title: Azure Content Understanding Now Generally Available in Foundry Tools
 author: Joe Filcik
-canonical_url: https://devblogs.microsoft.com/foundry/azure-content-understanding-is-now-generally-available/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-25 16:00:24 +00:00
-permalink: /ai/news/Azure-Content-Understanding-Now-Generally-Available-in-Foundry-Tools
 tags:
 - Agent Ecosystem
 - Audit Automation

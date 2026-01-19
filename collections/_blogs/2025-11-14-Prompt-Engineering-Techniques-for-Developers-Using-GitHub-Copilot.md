@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/prompt-engineering-for-developers-getting-the-best-out-of-copilot/
 title: Prompt Engineering Techniques for Developers Using GitHub Copilot
 author: Dellenny
-canonical_url: https://dellenny.com/prompt-engineering-for-developers-getting-the-best-out-of-copilot/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-14 08:50:07 +00:00
-permalink: /github-copilot/blogs/Prompt-Engineering-Techniques-for-Developers-Using-GitHub-Copilot
 tags:
 - AI Coding Assistant
 - Best Practices

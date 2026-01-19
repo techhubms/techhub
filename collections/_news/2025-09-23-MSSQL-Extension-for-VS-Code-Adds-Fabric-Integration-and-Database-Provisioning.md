@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/mssql-extension-for-vs-code-fabric-integration-public-preview/
 title: MSSQL Extension for VS Code Adds Fabric Integration and Database Provisioning
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/mssql-extension-for-vs-code-fabric-integration-public-preview/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-23 11:00:00 +00:00
-permalink: /coding/news/MSSQL-Extension-for-VS-Code-Adds-Fabric-Integration-and-Database-Provisioning
 tags:
 - Azure SQL
 - Context Switching

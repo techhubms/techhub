@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-november-2025/
 title: 'Azure SDK November 2025 Release: Storage, Identity, Cosmos DB, and New Libraries'
 author: Ronnie Geraghty
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-november-2025/
 viewing_mode: external
 feed_name: Microsoft Azure SDK Blog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-11-25 22:56:34 +00:00
-permalink: /coding/news/Azure-SDK-November-2025-Release-Storage-Identity-Cosmos-DB-and-New-Libraries
 tags:
 - .NET
 - Agent Server

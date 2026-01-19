@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/how-observability-improves-user-experience-and-digital-performance/
 title: How Observability Improves User Experience and Digital Performance
 author: Neel Shah
-canonical_url: https://devops.com/how-observability-improves-user-experience-and-digital-performance/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-27 11:13:55 +00:00
-permalink: /devops/blogs/How-Observability-Improves-User-Experience-and-Digital-Performance
 tags:
 - Airbnb Observability
 - Application Monitoring

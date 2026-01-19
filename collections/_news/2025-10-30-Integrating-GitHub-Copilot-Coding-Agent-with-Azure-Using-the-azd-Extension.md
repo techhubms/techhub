@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-copilot-coding-agent-config/
 title: Integrating GitHub Copilot Coding Agent with Azure Using the azd Extension
 author: Kristen Womack
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-copilot-coding-agent-config/
 viewing_mode: external
 feed_name: Microsoft Azure SDK Blog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-10-30 18:29:56 +00:00
-permalink: /github-copilot/news/Integrating-GitHub-Copilot-Coding-Agent-with-Azure-Using-the-azd-Extension
 tags:
 - .NET
 - Azd

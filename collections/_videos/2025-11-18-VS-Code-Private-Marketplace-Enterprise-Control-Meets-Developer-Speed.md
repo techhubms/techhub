@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=nQLdmy50cb0
 title: 'VS Code Private Marketplace: Enterprise Control Meets Developer Speed'
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=nQLdmy50cb0
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-11-18 16:15:06 +00:00
-permalink: /coding/videos/VS-Code-Private-Marketplace-Enterprise-Control-Meets-Developer-Speed
 tags:
 - Azure Deployment
 - CI/CD

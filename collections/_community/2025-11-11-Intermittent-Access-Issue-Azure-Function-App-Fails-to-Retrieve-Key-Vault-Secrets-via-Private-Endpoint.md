@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure/intermittent-access-issue-between-azure-function-app-and-key/m-p/4468948#M316
 title: 'Intermittent Access Issue: Azure Function App Fails to Retrieve Key Vault Secrets via Private Endpoint'
 author: Manan_Choksi
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure/intermittent-access-issue-between-azure-function-app-and-key/m-p/4468948#M316
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-11 14:08:54 +00:00
-permalink: /azure/community/Intermittent-Access-Issue-Azure-Function-App-Fails-to-Retrieve-Key-Vault-Secrets-via-Private-Endpoint
 tags:
 - AccessToKeyVaultDenied
 - Authentication Errors

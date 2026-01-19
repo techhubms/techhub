@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=3K9kKLMU9rs
 title: Visual Studio Code Deployment and AI Governance for IT Pros
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=3K9kKLMU9rs
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 16:48:24 +00:00
-permalink: /ai/videos/Visual-Studio-Code-Deployment-and-AI-Governance-for-IT-Pros
 tags:
 - AI Tools
 - Compliance

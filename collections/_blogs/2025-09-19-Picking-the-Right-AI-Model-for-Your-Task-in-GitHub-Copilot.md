@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://cooknwithcopilot.com/blog/picking-the-right-ai-model-for-your-task.html
 title: Picking the Right AI Model for Your Task in GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://cooknwithcopilot.com/blog/picking-the-right-ai-model-for-your-task.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-09-19 00:00:00 +00:00
-permalink: /github-copilot/blogs/Picking-the-Right-AI-Model-for-Your-Task-in-GitHub-Copilot
 tags:
 - AI Coding Assistant
 - AI Models

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=GFZtSDvOS-w
 title: 'Partners and Agentic AI: Transforming Energy and Resources at Microsoft Ignite'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=GFZtSDvOS-w
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 13:25:12 +00:00
-permalink: /ai/videos/Partners-and-Agentic-AI-Transforming-Energy-and-Resources-at-Microsoft-Ignite
 tags:
 - Agent 365
 - Agentic AI

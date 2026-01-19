@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/the-evolution-of-conversational-ai-in-microsofts-ecosystem/
 title: The Evolution of Conversational AI in Microsoft’s Ecosystem
 author: John Edward
-canonical_url: https://dellenny.com/the-evolution-of-conversational-ai-in-microsofts-ecosystem/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-11-28 17:06:32 +00:00
-permalink: /ai/blogs/The-Evolution-of-Conversational-AI-in-Microsofts-Ecosystem
 tags:
 - AI Assistants
 - Azure Bot Framework

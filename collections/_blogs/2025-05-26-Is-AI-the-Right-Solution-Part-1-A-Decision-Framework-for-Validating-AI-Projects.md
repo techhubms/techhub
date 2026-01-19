@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://hiddedesmet.com/ai-project-validation-framework-part1
 title: 'Is AI the Right Solution? Part 1: A Decision Framework for Validating AI Projects'
 author: Hidde de Smet
-canonical_url: https://hiddedesmet.com/ai-project-validation-framework-part1
 viewing_mode: external
 feed_name: Hidde de Smet's Blog
-feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-05-26 07:00:00 +00:00
-permalink: /ai/blogs/Is-AI-the-Right-Solution-Part-1-A-Decision-Framework-for-Validating-AI-Projects
 tags:
 - AI Feasibility
 - AI Operational Costs

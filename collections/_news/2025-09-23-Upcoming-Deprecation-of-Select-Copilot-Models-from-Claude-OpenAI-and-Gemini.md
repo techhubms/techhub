@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-23-upcoming-deprecation-of-select-copilot-models-from-claude-openai-and-gemini
 title: Upcoming Deprecation of Select Copilot Models from Claude, OpenAI, and Gemini
 author: Kate Catlin
-canonical_url: https://github.blog/changelog/2025-09-23-upcoming-deprecation-of-select-copilot-models-from-claude-openai-and-gemini
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-23 23:09:51 +00:00
-permalink: /github-copilot/news/Upcoming-Deprecation-of-Select-Copilot-Models-from-Claude-OpenAI-and-Gemini
 tags:
 - Admin Policies
 - AI Integration

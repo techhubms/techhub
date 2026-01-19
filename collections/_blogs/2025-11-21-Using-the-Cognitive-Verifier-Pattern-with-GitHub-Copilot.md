@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/context-engineering-recipes-the-cognitive-verifier-pattern.html
 title: Using the Cognitive Verifier Pattern with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/context-engineering-recipes-the-cognitive-verifier-pattern.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-11-21 00:00:00 +00:00
-permalink: /github-copilot/blogs/Using-the-Cognitive-Verifier-Pattern-with-GitHub-Copilot
 tags:
 - AI Assisted Development
 - Clarifying Questions

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-public-preview-copy-job-activity-in-pipelines/
 title: Copy Job Activity Now in Preview for Microsoft Fabric Data Factory Pipelines
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-public-preview-copy-job-activity-in-pipelines/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-25 08:00:00 +00:00
-permalink: /ml/news/Copy-Job-Activity-Now-in-Preview-for-Microsoft-Fabric-Data-Factory-Pipelines
 tags:
 - Copy Job Activity
 - Data Factory

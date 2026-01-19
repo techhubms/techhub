@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-20-pull-request-files-changed-public-preview-november-20-updates
 title: 'Pull Request “Files Changed” Public Preview: November 20 Updates'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-20-pull-request-files-changed-public-preview-november-20-updates
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-20 21:29:04 +00:00
-permalink: /devops/news/Pull-Request-Files-Changed-Public-Preview-November-20-Updates
 tags:
 - Code Review
 - Collaboration Tools

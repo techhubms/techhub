@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/10-microsoft-mcp-servers-to-accelerate-your-development-workflow
 title: 10 Microsoft MCP Servers to Accelerate Your Development Workflow
 author: Jon Galloway
-canonical_url: https://devblogs.microsoft.com/blog/10-microsoft-mcp-servers-to-accelerate-your-development-workflow
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-07-16 19:30:32 +00:00
-permalink: /ai/news/10-Microsoft-MCP-Servers-to-Accelerate-Your-Development-Workflow
 tags:
 - AI Integration
 - Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=j1xslVn_dMU
 title: 'Copilot Studio Innovations and Roadmap: Building Agents and Future Features (BRK313)'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=j1xslVn_dMU
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 21:58:57 +00:00
-permalink: /ai/videos/Copilot-Studio-Innovations-and-Roadmap-Building-Agents-and-Future-Features-BRK313
 tags:
 - Agent Development
 - Agent Identity

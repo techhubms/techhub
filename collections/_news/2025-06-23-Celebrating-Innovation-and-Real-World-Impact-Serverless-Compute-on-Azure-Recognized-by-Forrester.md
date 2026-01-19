@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://azure.microsoft.com/en-us/blog/celebrating-innovation-scale-and-real-world-impact-with-serverless-compute-on-azure/
 title: 'Celebrating Innovation and Real-World Impact: Serverless Compute on Azure Recognized by Forrester'
 author: Scott Hunter
-canonical_url: https://azure.microsoft.com/en-us/blog/celebrating-innovation-scale-and-real-world-impact-with-serverless-compute-on-azure/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-06-23 15:00:00 +00:00
-permalink: /ai/news/Celebrating-Innovation-and-Real-World-Impact-Serverless-Compute-on-Azure-Recognized-by-Forrester
 tags:
 - AI Integration
 - Azure AI Foundry

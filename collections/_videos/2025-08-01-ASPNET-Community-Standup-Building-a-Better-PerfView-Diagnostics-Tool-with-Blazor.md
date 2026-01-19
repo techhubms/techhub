@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=H_gOSliozjM
 title: 'ASP.NET Community Standup: Building a Better PerfView Diagnostics Tool with Blazor'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=H_gOSliozjM
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-08-01 21:55:53 +00:00
-permalink: /coding/videos/ASPNET-Community-Standup-Building-a-Better-PerfView-Diagnostics-Tool-with-Blazor
 tags:
 - .NET
 - .NET Events Viewer

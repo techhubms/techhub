@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mfuefu/full_stack_visual_studio_or_vscode/
 title: 'Full Stack: Is It Better to Use Visual Studio or VSCode for Back-End and Front-End Development?'
 author: RankedMan
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mfuefu/full_stack_visual_studio_or_vscode/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-02 16:12:59 +00:00
-permalink: /coding/community/Full-Stack-Is-It-Better-to-Use-Visual-Studio-or-VSCode-for-Back-End-and-Front-End-Development
 tags:
 - .NET
 - ASP.NET

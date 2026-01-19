@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-18-unified-code-to-cloud-artifact-risk-visibility-with-microsoft-defender-for-cloud-now-in-public-preview
 title: Unified Code-to-Cloud Artifact Risk Visibility with Microsoft Defender for Cloud in GitHub
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-18-unified-code-to-cloud-artifact-risk-visibility-with-microsoft-defender-for-cloud-now-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:32 +00:00
-permalink: /azure/news/Unified-Code-to-Cloud-Artifact-Risk-Visibility-with-Microsoft-Defender-for-Cloud-in-GitHub
 tags:
 - Application Security
 - AppSec

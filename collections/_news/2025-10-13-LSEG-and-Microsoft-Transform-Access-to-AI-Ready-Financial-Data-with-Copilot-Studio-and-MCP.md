@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/2025/10/12/lseg-and-microsoft-transform-access-to-ai-ready-financial-data-in-customer-workflows/
 title: LSEG and Microsoft Transform Access to AI-Ready Financial Data with Copilot Studio and MCP
 author: stclarke
-canonical_url: https://news.microsoft.com/source/2025/10/12/lseg-and-microsoft-transform-access-to-ai-ready-financial-data-in-customer-workflows/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-13 06:59:27 +00:00
-permalink: /ai/news/LSEG-and-Microsoft-Transform-Access-to-AI-Ready-Financial-Data-with-Copilot-Studio-and-MCP
 tags:
 - AI Agents
 - Cloud Platform

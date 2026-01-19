@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-general-availability-of-agent-loop-in-azure-logic/ba-p/4470739
 title: 'Agent Loop in Azure Logic Apps: General Availability and New Capabilities'
 author: DivSwa
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-general-availability-of-agent-loop-in-azure-logic/ba-p/4470739
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 18:40:38 +00:00
-permalink: /ai/community/Agent-Loop-in-Azure-Logic-Apps-General-Availability-and-New-Capabilities
 tags:
 - Access Control Lists (acl)
 - Agent Loop

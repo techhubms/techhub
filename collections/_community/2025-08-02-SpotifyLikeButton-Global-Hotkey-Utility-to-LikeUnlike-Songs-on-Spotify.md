@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mfyig0/spotifylikebutton/
 title: 'SpotifyLikeButton: Global Hotkey Utility to Like/Unlike Songs on Spotify'
 author: BuildBazaar
-canonical_url: https://www.reddit.com/r/csharp/comments/1mfyig0/spotifylikebutton/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-02 19:05:44 +00:00
-permalink: /coding/community/SpotifyLikeButton-Global-Hotkey-Utility-to-LikeUnlike-Songs-on-Spotify
 tags:
 - C#
 - Dotfiles

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure/integrating-azure-devops-with-jira-service-management-real-world/m-p/4471605#M22340
 title: 'Integrating Azure DevOps with Jira Service Management: Practical Approaches and Real-World Scenarios'
 author: tejabhutada
-canonical_url: https://techcommunity.microsoft.com/t5/azure/integrating-azure-devops-with-jira-service-management-real-world/m-p/4471605#M22340
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 08:22:54 +00:00
-permalink: /azure/community/Integrating-Azure-DevOps-with-Jira-Service-Management-Practical-Approaches-and-Real-World-Scenarios
 tags:
 - Audit Logging
 - Azure DevOps

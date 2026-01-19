@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=qhEj-1ZolLs
 title: 'What’s New and Next for Azure Virtual Desktop: Ignite 2025 Recap'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=qhEj-1ZolLs
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 14:29:12 +00:00
-permalink: /azure/videos/Whats-New-and-Next-for-Azure-Virtual-Desktop-Ignite-2025-Recap
 tags:
 - App Attach
 - Azure Virtual Desktop

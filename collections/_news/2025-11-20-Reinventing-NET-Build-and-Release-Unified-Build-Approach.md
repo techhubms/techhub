@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/reinventing-how-dotnet-builds-and-ships-again/
 title: 'Reinventing .NET Build and Release: Unified Build Approach'
 author: Matt Mitchell
-canonical_url: https://devblogs.microsoft.com/dotnet/reinventing-how-dotnet-builds-and-ships-again/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-11-20 18:05:00 +00:00
-permalink: /coding/news/Reinventing-NET-Build-and-Release-Unified-Build-Approach
 tags:
 - .NET
 - .NET VMR

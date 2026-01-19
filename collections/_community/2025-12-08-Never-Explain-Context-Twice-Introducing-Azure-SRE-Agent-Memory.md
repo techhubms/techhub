@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/never-explain-context-twice-introducing-azure-sre-agent-memory/ba-p/4473059
 title: 'Never Explain Context Twice: Introducing Azure SRE Agent Memory'
 author: Dalibor_Kovacevic
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/never-explain-context-twice-introducing-azure-sre-agent-memory/ba-p/4473059
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-08 19:51:45 +00:00
-permalink: /ai/community/Never-Explain-Context-Twice-Introducing-Azure-SRE-Agent-Memory
 tags:
 - AI Ops
 - Automation

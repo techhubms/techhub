@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=rafl28faFec
 title: The Origins & Evolution of the GitHub MCP Registry with Toby Padilla
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=rafl28faFec
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-09-29 07:01:00 +00:00
-permalink: /github-copilot/videos/The-Origins-and-Evolution-of-the-GitHub-MCP-Registry-with-Toby-Padilla
 tags:
 - AI Tooling
 - Cross Company Collaboration

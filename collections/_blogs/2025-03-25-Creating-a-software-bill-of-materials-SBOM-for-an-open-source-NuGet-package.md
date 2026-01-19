@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/creating-a-software-bill-of-materials-sbom-for-an-open-source-nuget-package/
 title: Creating a Software Bill of Materials (SBOM) for an Open-Source NuGet Package
 author: Andrew Lock
-canonical_url: https://andrewlock.net/creating-a-software-bill-of-materials-sbom-for-an-open-source-nuget-package/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-03-25 09:00:00 +00:00
-permalink: /coding/blogs/Creating-a-software-bill-of-materials-SBOM-for-an-open-source-NuGet-package
 tags:
 - .NET
 - Application Security

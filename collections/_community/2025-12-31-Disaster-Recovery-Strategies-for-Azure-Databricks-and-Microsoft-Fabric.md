@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-fabric-disaster-recovery-the-better-together/ba-p/4481323
 title: Disaster Recovery Strategies for Azure Databricks and Microsoft Fabric
 author: Rafia_Aqil
-canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-fabric-disaster-recovery-the-better-together/ba-p/4481323
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-31 18:59:48 +00:00
-permalink: /ml/community/Disaster-Recovery-Strategies-for-Azure-Databricks-and-Microsoft-Fabric
 tags:
 - Azure Databricks
 - Azure Managed Identity

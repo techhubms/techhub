@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-20-sunset-notice-copilot-knowledge-bases
 title: 'GitHub Copilot Knowledge Bases Retiring: Transition to Copilot Spaces'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-20-sunset-notice-copilot-knowledge-bases
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-20 21:43:40 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-Knowledge-Bases-Retiring-Transition-to-Copilot-Spaces
 tags:
 - AI Powered Development
 - AI Tools

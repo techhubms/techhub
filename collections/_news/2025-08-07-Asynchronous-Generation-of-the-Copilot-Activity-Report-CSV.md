@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-07-asynchronous-generation-of-the-copilot-activity-report-csv
 title: Asynchronous Generation of the Copilot Activity Report CSV
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-07-asynchronous-generation-of-the-copilot-activity-report-csv
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-07 23:17:25 +00:00
-permalink: /github-copilot/news/Asynchronous-Generation-of-the-Copilot-Activity-Report-CSV
 tags:
 - Admin Tools
 - Asynchronous Processing

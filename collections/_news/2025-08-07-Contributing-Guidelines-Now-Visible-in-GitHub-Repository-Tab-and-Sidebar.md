@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-07-contributing-guidelines-now-visible-in-repository-tab-and-sidebar
 title: Contributing Guidelines Now Visible in GitHub Repository Tab and Sidebar
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-07-contributing-guidelines-now-visible-in-repository-tab-and-sidebar
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-07 19:22:34 +00:00
-permalink: /devops/news/Contributing-Guidelines-Now-Visible-in-GitHub-Repository-Tab-and-Sidebar
 tags:
 - Collaboration Tools
 - Community Growth

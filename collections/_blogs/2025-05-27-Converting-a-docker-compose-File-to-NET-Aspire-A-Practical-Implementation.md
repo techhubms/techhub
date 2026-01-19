@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://andrewlock.net/converting-a-docker-compose-file-to-aspire/
 title: 'Converting a docker-compose File to .NET Aspire: A Practical Implementation'
 author: Andrew Lock
-canonical_url: https://andrewlock.net/converting-a-docker-compose-file-to-aspire/
 viewing_mode: external
 feed_name: Andrew Lock's Blog
-feed_url: https://andrewlock.net/rss.xml
 date: 2025-05-27 09:00:00 +00:00
-permalink: /coding/blogs/Converting-a-docker-compose-File-to-NET-Aspire-A-Practical-Implementation
 tags:
 - .NET Aspire
 - .NET Core

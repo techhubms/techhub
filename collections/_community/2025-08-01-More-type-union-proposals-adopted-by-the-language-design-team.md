@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mf2xll/more_type_union_proposals_adopted_by_the_language/
 title: More type union proposals adopted by the language design team!
 author: DayYam
-canonical_url: https://www.reddit.com/r/csharp/comments/1mf2xll/more_type_union_proposals_adopted_by_the_language/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-01 17:38:03 +00:00
-permalink: /coding/community/More-type-union-proposals-adopted-by-the-language-design-team
 tags:
 - .NET
 - C#

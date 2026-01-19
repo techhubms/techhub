@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/powershell/announcing-powershell-7-5-ga/
 title: PowerShell 7.5 GA is now available
 author: Jason Helmick
-canonical_url: https://devblogs.microsoft.com/powershell/announcing-powershell-7-5-ga/
 viewing_mode: external
 feed_name: Microsoft PowerShell Blog
-feed_url: https://devblogs.microsoft.com/powershell/feed/
 date: 2025-02-12 21:34:13 +00:00
-permalink: /coding/news/PowerShell-75-GA-is-now-available
 tags:
 - Automation
 - Cmdlets

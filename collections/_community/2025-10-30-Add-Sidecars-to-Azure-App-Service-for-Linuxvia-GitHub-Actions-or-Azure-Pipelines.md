@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/add-sidecars-to-azure-app-service-for-linux-via-github-actions/ba-p/4465419
 title: Add Sidecars to Azure App Service for Linux—via GitHub Actions or Azure Pipelines
 author: TulikaC
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/add-sidecars-to-azure-app-service-for-linux-via-github-actions/ba-p/4465419
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-30 04:08:13 +00:00
-permalink: /coding/community/Add-Sidecars-to-Azure-App-Service-for-Linuxvia-GitHub-Actions-or-Azure-Pipelines
 tags:
 - .NET
 - App Service Runtime

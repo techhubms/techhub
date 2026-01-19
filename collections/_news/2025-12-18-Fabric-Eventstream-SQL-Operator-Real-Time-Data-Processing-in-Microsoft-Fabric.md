@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-eventstream-sql-operator-your-tool-kit-to-real-time-data-processing-in-fabric-real-time-intelligence/
 title: 'Fabric Eventstream SQL Operator: Real-Time Data Processing in Microsoft Fabric'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-eventstream-sql-operator-your-tool-kit-to-real-time-data-processing-in-fabric-real-time-intelligence/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-18 09:59:11 +00:00
-permalink: /ml/news/Fabric-Eventstream-SQL-Operator-Real-Time-Data-Processing-in-Microsoft-Fabric
 tags:
 - Aggregation
 - Anomaly Detection

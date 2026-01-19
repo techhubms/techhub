@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure/optimizing-azure-devops-jira-integration-5-practical-use-cases/m-p/4445837#M22123
 title: 'Optimizing Azure DevOps and Jira Integration: 5 Real-World Use Cases for DevOps Teams'
 author: tejabhutada
-canonical_url: https://techcommunity.microsoft.com/t5/azure/optimizing-azure-devops-jira-integration-5-practical-use-cases/m-p/4445837#M22123
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-20 04:52:51 +00:00
-permalink: /azure/community/Optimizing-Azure-DevOps-and-Jira-Integration-5-Real-World-Use-Cases-for-DevOps-Teams
 tags:
 - Agile Tools
 - Automated Ticket Creation

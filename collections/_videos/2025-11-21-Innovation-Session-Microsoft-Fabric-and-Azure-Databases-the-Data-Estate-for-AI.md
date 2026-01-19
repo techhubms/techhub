@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=wXeHChqpxDo
 title: 'Innovation Session: Microsoft Fabric and Azure Databases - the Data Estate for AI'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=wXeHChqpxDo
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 12:58:10 +00:00
-permalink: /ai/videos/Innovation-Session-Microsoft-Fabric-and-Azure-Databases-the-Data-Estate-for-AI
 tags:
 - AI Transformation
 - Azure PostgreSQL

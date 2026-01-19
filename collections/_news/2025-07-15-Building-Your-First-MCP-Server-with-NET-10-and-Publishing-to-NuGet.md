@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/mcp-server-dotnet-nuget-quickstart/
 title: Building Your First MCP Server with .NET 10 and Publishing to NuGet
 author: Jon Douglas, Joel Verhagen, Jon Galloway
-canonical_url: https://devblogs.microsoft.com/dotnet/mcp-server-dotnet-nuget-quickstart/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-07-15 20:00:00 +00:00
-permalink: /github-copilot/news/Building-Your-First-MCP-Server-with-NET-10-and-Publishing-to-NuGet
 tags:
 - .NET
 - .NET 10

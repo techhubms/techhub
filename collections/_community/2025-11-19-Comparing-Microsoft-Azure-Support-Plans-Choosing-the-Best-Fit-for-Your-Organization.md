@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure/azure-support-plans-compared-choosing-the-right-one-for-your/m-p/4471451#M22338
 title: 'Comparing Microsoft Azure Support Plans: Choosing the Best Fit for Your Organization'
 author: JohnNaguib
-canonical_url: https://techcommunity.microsoft.com/t5/azure/azure-support-plans-compared-choosing-the-right-one-for-your/m-p/4471451#M22338
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 18:01:29 +00:00
-permalink: /azure/community/Comparing-Microsoft-Azure-Support-Plans-Choosing-the-Best-Fit-for-Your-Organization
 tags:
 - Azure Support Plans
 - Business Continuity

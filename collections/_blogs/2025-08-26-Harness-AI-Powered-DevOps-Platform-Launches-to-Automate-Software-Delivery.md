@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/harness-delivers-on-ai-promise-for-devops/?utm_source=rss&utm_medium=rss&utm_campaign=harness-delivers-on-ai-promise-for-devops
 title: Harness AI-Powered DevOps Platform Launches to Automate Software Delivery
 author: Mike Vizard
-canonical_url: https://devops.com/harness-delivers-on-ai-promise-for-devops/?utm_source=rss&utm_medium=rss&utm_campaign=harness-delivers-on-ai-promise-for-devops
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-26 14:00:07 +00:00
-permalink: /ai/blogs/Harness-AI-Powered-DevOps-Platform-Launches-to-Automate-Software-Delivery
 tags:
 - AI Agents
 - AI Platforms

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=uRL3_PMFM7Q
 title: Integrating GraphQL APIs with Fabric SQL Databases
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=uRL3_PMFM7Q
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-25 17:20:49 +00:00
-permalink: /ml/videos/Integrating-GraphQL-APIs-with-Fabric-SQL-Databases
 tags:
 - API Integration
 - Authentication

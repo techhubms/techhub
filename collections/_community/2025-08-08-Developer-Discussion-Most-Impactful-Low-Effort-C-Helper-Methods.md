@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/csharp/comments/1mkrlcc/what_is_the_lowest_effort_highest_impact_helper/
 title: 'Developer Discussion: Most Impactful Low-Effort C# Helper Methods'
 author: zigs
-canonical_url: https://www.reddit.com/r/csharp/comments/1mkrlcc/what_is_the_lowest_effort_highest_impact_helper/
 viewing_mode: external
 feed_name: Reddit CSharp
-feed_url: https://www.reddit.com/r/csharp/.rss
 date: 2025-08-08 10:28:57 +00:00
-permalink: /coding/community/Developer-Discussion-Most-Impactful-Low-Effort-C-Helper-Methods
 tags:
 - .NET
 - Async/await

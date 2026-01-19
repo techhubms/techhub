@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-apis-bring-your-apps-and-build-new-ones-with-familiar-blob-and-adls-apis/
 title: 'OneLake APIs: Bring Your Apps and Build New Ones with Familiar Blob and ADLS APIs'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-apis-bring-your-apps-and-build-new-ones-with-familiar-blob-and-adls-apis/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-22 09:00:00 +00:00
-permalink: /ml/news/OneLake-APIs-Bring-Your-Apps-and-Build-New-Ones-with-Familiar-Blob-and-ADLS-APIs
 tags:
 - API Compatibility
 - Azure Blob Storage

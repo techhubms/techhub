@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-data-agents-microsoft-copilot-studio-a-new-era-of-multi-agent-orchestration/
 title: 'Fabric Data Agents + Microsoft Copilot Studio: Multi-Agent Orchestration Preview Released'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-data-agents-microsoft-copilot-studio-a-new-era-of-multi-agent-orchestration/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-23 10:00:00 +00:00
-permalink: /ai/news/Fabric-Data-Agents-Microsoft-Copilot-Studio-Multi-Agent-Orchestration-Preview-Released
 tags:
 - Agent Interoperability
 - Automation

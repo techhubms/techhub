@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/multi-agent-orchestration-with-azure-ai-foundry-from-idea-to/ba-p/4449925
 title: 'Multi-Agent Orchestration with Azure AI Foundry: From Idea to Production'
 author: lakshaymalik
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/multi-agent-orchestration-with-azure-ai-foundry-from-idea-to/ba-p/4449925
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-31 14:59:26 +00:00
-permalink: /ai/community/Multi-Agent-Orchestration-with-Azure-AI-Foundry-From-Idea-to-Production
 tags:
 - A2A
 - Agent Orchestration

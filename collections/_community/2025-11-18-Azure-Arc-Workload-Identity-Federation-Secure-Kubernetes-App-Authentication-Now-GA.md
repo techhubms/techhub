@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/workload-identity-support-for-azure-arc-enabled-kubernetes/ba-p/4467851
 title: 'Azure Arc Workload Identity Federation: Secure Kubernetes App Authentication Now GA'
 author: Poornima99
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/workload-identity-support-for-azure-arc-enabled-kubernetes/ba-p/4467851
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:00 +00:00
-permalink: /azure/community/Azure-Arc-Workload-Identity-Federation-Secure-Kubernetes-App-Authentication-Now-GA
 tags:
 - Azure Arc
 - Azure CLI

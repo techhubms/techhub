@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/all-things-azure/accelerate-ai-applications-with-semantic-caching-on-azure-managed-redis/
 title: Accelerate AI Applications with Semantic Caching on Azure Managed Redis
 author: Satish
-canonical_url: https://devblogs.microsoft.com/all-things-azure/accelerate-ai-applications-with-semantic-caching-on-azure-managed-redis/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-05-13 21:18:06 +00:00
-permalink: /ai/news/Accelerate-AI-Applications-with-Semantic-Caching-on-Azure-Managed-Redis
 tags:
 - Active Geo Replication
 - AI Apps

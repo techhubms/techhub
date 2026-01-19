@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/ai-driven-software-development-fast-context-rich-mcp-servers/?utm_source=rss&utm_medium=rss&utm_campaign=ai-driven-software-development-fast-context-rich-mcp-servers
 title: 'AI-Driven Observability: Fast, Context-Rich MCP Servers'
 author: Alan Shimel
-canonical_url: https://devops.com/ai-driven-software-development-fast-context-rich-mcp-servers/?utm_source=rss&utm_medium=rss&utm_campaign=ai-driven-software-development-fast-context-rich-mcp-servers
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-04 15:11:20 +00:00
-permalink: /ai/blogs/AI-Driven-Observability-Fast-Context-Rich-MCP-Servers
 tags:
 - Agentic AI
 - AI Agents

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=GeRsZAc0lNA
 title: "ASP.NET Community Standup: What's Next for Orleans?"
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=GeRsZAc0lNA
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2026-01-09 18:04:43 +00:00
-permalink: /coding/videos/ASPNET-Community-Standup-Whats-Next-for-Orleans
 tags:
 - .NET
 - Actor Model

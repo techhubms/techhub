@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/microsoft-morphs-fusion-developers-to-full-stack-builders/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-morphs-fusion-developers-to-full-stack-builders
 title: Microsoft Morphs Fusion Developers To Full Stack Builders
 author: Adrian Bridgwater
-canonical_url: https://devops.com/microsoft-morphs-fusion-developers-to-full-stack-builders/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-morphs-fusion-developers-to-full-stack-builders
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-18 11:47:55 +00:00
-permalink: /ai/blogs/Microsoft-Morphs-Fusion-Developers-To-Full-Stack-Builders
 tags:
 - Agentic AI
 - Agentic AI in Development

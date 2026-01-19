@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/11/20/from-legacy-to-frontier-how-100-year-brands-are-leading-ai-innovation/
 title: How Centennial Brands Accelerate AI Innovation with Microsoft
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/11/20/from-legacy-to-frontier-how-100-year-brands-are-leading-ai-innovation/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-20 16:56:02 +00:00
-permalink: /ai/news/How-Centennial-Brands-Accelerate-AI-Innovation-with-Microsoft
 tags:
 - Agribusiness Technology
 - AI Agent

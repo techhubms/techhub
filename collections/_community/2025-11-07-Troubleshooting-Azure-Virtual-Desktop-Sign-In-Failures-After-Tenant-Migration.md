@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/troubleshooting-azure-virtual-desktop-sign-in-failures-after/ba-p/4467953
 title: Troubleshooting Azure Virtual Desktop Sign-In Failures After Tenant Migration
 author: psundars
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/troubleshooting-azure-virtual-desktop-sign-in-failures-after/ba-p/4467953
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-07 05:32:56 +00:00
-permalink: /azure/community/Troubleshooting-Azure-Virtual-Desktop-Sign-In-Failures-After-Tenant-Migration
 tags:
 - Access Control
 - Application Group

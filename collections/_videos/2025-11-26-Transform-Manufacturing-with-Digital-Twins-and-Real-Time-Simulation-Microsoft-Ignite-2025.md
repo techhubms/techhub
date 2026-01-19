@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=G29pCOwteb4
 title: Transform Manufacturing with Digital Twins and Real-Time Simulation | Microsoft Ignite 2025
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=G29pCOwteb4
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 20:19:12 +00:00
-permalink: /ai/videos/Transform-Manufacturing-with-Digital-Twins-and-Real-Time-Simulation-Microsoft-Ignite-2025
 tags:
 - 3D Visualization
 - AI Models

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=_kYXkZxSTHc
 title: Scaling Innovation in Smart Eyewear and Connected Retail with Azure and AI
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=_kYXkZxSTHc
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:47:53 +00:00
-permalink: /ai/videos/Scaling-Innovation-in-Smart-Eyewear-and-Connected-Retail-with-Azure-and-AI
 tags:
 - Beamforming
 - Cloud Connectivity

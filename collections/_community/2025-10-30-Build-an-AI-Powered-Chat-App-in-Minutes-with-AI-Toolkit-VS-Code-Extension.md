@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-an-ai-powered-chat-app-in-minutes-with-ai-toolkit/ba-p/4464967
 title: Build an AI-Powered Chat App in Minutes with AI Toolkit VS Code Extension
 author: kevinguo
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-an-ai-powered-chat-app-in-minutes-with-ai-toolkit/ba-p/4464967
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-30 04:56:45 +00:00
-permalink: /github-copilot/community/Build-an-AI-Powered-Chat-App-in-Minutes-with-AI-Toolkit-VS-Code-Extension
 tags:
 - AI Toolkit
 - Azure App Service

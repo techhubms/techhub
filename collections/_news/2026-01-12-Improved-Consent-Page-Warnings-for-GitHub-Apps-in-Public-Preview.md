@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2026-01-12-selectively-showing-act-on-your-behalf-warning-for-github-apps-is-in-public-preview
 title: Improved Consent Page Warnings for GitHub Apps in Public Preview
 author: Allison
-canonical_url: https://github.blog/changelog/2026-01-12-selectively-showing-act-on-your-behalf-warning-for-github-apps-is-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2026-01-12 22:16:06 +00:00
-permalink: /devops/news/Improved-Consent-Page-Warnings-for-GitHub-Apps-in-Public-Preview
 tags:
 - Application Security
 - Authentication

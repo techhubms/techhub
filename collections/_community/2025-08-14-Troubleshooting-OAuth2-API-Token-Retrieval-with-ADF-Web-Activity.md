@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-data-factory/getting-an-oauth2-api-access-token-using-client-id-and-client/m-p/4443568#M936
 title: Troubleshooting OAuth2 API Token Retrieval with ADF Web Activity
 author: AzureNewbie1
-canonical_url: https://techcommunity.microsoft.com/t5/azure-data-factory/getting-an-oauth2-api-access-token-using-client-id-and-client/m-p/4443568#M936
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 15:42:48 +00:00
-permalink: /azure/community/Troubleshooting-OAuth2-API-Token-Retrieval-with-ADF-Web-Activity
 tags:
 - Access Token
 - API Authentication

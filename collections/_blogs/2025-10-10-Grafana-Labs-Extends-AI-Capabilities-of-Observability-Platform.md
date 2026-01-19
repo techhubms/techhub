@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/grafana-labs-extends-ai-capabilities-of-observability-platform/
 title: Grafana Labs Extends AI Capabilities of Observability Platform
 author: Mike Vizard
-canonical_url: https://devops.com/grafana-labs-extends-ai-capabilities-of-observability-platform/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-10 10:02:58 +00:00
-permalink: /ai/blogs/Grafana-Labs-Extends-AI-Capabilities-of-Observability-Platform
 tags:
 - Adaptive Profiles
 - Adaptive Traces

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=lQrr1M7AeiY
 title: Manage All GitHub Copilot Agents with Mission Control
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=lQrr1M7AeiY
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-16 20:49:53 +00:00
-permalink: /github-copilot/videos/Manage-All-GitHub-Copilot-Agents-with-Mission-Control
 tags:
 - Agent Management
 - Coding Automation

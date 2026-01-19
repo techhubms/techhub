@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/devops/automate-your-open-source-dependency-scanning-with-advanced-security/
 title: Automate Open-Source Dependency Scanning in Azure DevOps with Advanced Security
 author: Laura Jiang
-canonical_url: https://devblogs.microsoft.com/devops/automate-your-open-source-dependency-scanning-with-advanced-security/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-08-04 17:17:37 +00:00
-permalink: /azure/news/Automate-Open-Source-Dependency-Scanning-in-Azure-DevOps-with-Advanced-Security
 tags:
 - Advanced Security
 - Azure DevOps

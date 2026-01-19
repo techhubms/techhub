@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/engineering-at-microsoft/ai-in-action-how-to-build-scalable-rag-enabled-ai-apps/
 title: 'How Microsoft Engineers Build AI: Insights into Scalable RAG-Enabled Applications'
 author: Krezzia Noelle Basilio, Samit Jhaveri
-canonical_url: https://devblogs.microsoft.com/engineering-at-microsoft/ai-in-action-how-to-build-scalable-rag-enabled-ai-apps/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/engineering-at-microsoft/feed/
 date: 2025-03-03 17:00:44 +00:00
-permalink: /ai/news/How-Microsoft-Engineers-Build-AI-Insights-into-Scalable-RAG-Enabled-Applications
 tags:
 - AI Applications
 - AI Apps

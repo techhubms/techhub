@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=_fZZz_gIE8A
 title: Scaling Context-Aware Workflows with GitHub Copilot in VS Code
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=_fZZz_gIE8A
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-12-29 13:01:10 +00:00
-permalink: /github-copilot/videos/Scaling-Context-Aware-Workflows-with-GitHub-Copilot-in-VS-Code
 tags:
 - AI Development
 - AI Pair Programming

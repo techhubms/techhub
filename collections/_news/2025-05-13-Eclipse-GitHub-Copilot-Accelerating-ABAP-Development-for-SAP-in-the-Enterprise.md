@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/all-things-azure/eclipse-github-copilot-lightspeed-sap-abap-development/
 title: 'Eclipse + GitHub Copilot: Accelerating ABAP Development for SAP in the Enterprise'
 author: Amit Lal
-canonical_url: https://devblogs.microsoft.com/all-things-azure/eclipse-github-copilot-lightspeed-sap-abap-development/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-05-13 21:17:28 +00:00
-permalink: /github-copilot/news/Eclipse-GitHub-Copilot-Accelerating-ABAP-Development-for-SAP-in-the-Enterprise
 tags:
 - ABAP
 - AI Integration

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-18-github-copilot-coding-agent-for-eclipse-now-in-public-preview
 title: GitHub Copilot Coding Agent for Eclipse Now in Public Preview
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-18-github-copilot-coding-agent-for-eclipse-now-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:05 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-Coding-Agent-for-Eclipse-Now-in-Public-Preview
 tags:
 - AI Code Assistant
 - Copilot

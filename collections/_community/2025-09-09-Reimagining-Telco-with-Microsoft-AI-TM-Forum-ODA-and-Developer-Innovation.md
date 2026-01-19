@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/reimagining-telco-with-microsoft-ai-tm-forum-oda-and-developer/ba-p/4451724
 title: 'Reimagining Telco with Microsoft: AI, TM Forum ODA, and Developer Innovation'
 author: rickliev
-canonical_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/reimagining-telco-with-microsoft-ai-tm-forum-oda-and-developer/ba-p/4451724
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-09 16:54:57 +00:00
-permalink: /github-copilot/community/Reimagining-Telco-with-Microsoft-AI-TM-Forum-ODA-and-Developer-Innovation
 tags:
 - Agent Mode
 - Agentic AI

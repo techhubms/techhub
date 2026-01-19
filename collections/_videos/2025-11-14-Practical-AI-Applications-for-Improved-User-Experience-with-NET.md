@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=liYDDda6bac
 title: Practical AI Applications for Improved User Experience with .NET
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=liYDDda6bac
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 19:21:39 +00:00
-permalink: /ai/videos/Practical-AI-Applications-for-Improved-User-Experience-with-NET
 tags:
 - .NET
 - .NET 10

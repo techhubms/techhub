@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/updates/v1_109
 title: 'Visual Studio Code January 2026 Insiders Update (v1.109): Terminal and Chat Improvements'
 author: Visual Studio Code Team
-canonical_url: https://code.visualstudio.com/updates/v1_109
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2026-02-04 17:00:00 +00:00
-permalink: /coding/news/Visual-Studio-Code-January-2026-Insiders-Update-v1109-Terminal-and-Chat-Improvements
 tags:
 - Chat View
 - Developer Tooling

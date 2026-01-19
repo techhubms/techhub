@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=W2qusd0gtTE
 title: 'Innovating with MongoDB-Compatible Azure DocumentDB: AI, Multicloud, and Cost Efficiency'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=W2qusd0gtTE
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 17:12:14 +00:00
-permalink: /ai/videos/Innovating-with-MongoDB-Compatible-Azure-DocumentDB-AI-Multicloud-and-Cost-Efficiency
 tags:
 - AI Query Optimization
 - Azure Cosmos DB

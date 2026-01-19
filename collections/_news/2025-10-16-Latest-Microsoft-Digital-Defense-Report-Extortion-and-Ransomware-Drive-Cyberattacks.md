@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/on-the-issues/2025/10/16/mddr-2025/
 title: 'Latest Microsoft Digital Defense Report: Extortion and Ransomware Drive Cyberattacks'
 author: stclarke
-canonical_url: https://blogs.microsoft.com/on-the-issues/2025/10/16/mddr-2025/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-16 15:48:34 +00:00
-permalink: /ai/news/Latest-Microsoft-Digital-Defense-Report-Extortion-and-Ransomware-Drive-Cyberattacks
 tags:
 - AI Security
 - Automation

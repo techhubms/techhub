@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/ef-core-visualizer-view-entity-framework-core-query-plan-inside-visual-studio/
 title: 'EFCore.Visualizer: Analyze Entity Framework Core Query Plans in Visual Studio'
 author: Giorgi Dalakishvili
-canonical_url: https://devblogs.microsoft.com/dotnet/ef-core-visualizer-view-entity-framework-core-query-plan-inside-visual-studio/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-08-27 17:05:00 +00:00
-permalink: /coding/news/EFCoreVisualizer-Analyze-Entity-Framework-Core-Query-Plans-in-Visual-Studio
 tags:
 - .NET
 - .NET Data

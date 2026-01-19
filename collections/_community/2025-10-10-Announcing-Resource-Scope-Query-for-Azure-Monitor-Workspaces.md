@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-resource-scope-query-for-azure-monitor-workspaces/ba-p/4460567
 title: Announcing Resource-Scope Query for Azure Monitor Workspaces
 author: Tyler_Kight
-canonical_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-resource-scope-query-for-azure-monitor-workspaces/ba-p/4460567
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-10 01:32:21 +00:00
-permalink: /azure/community/Announcing-Resource-Scope-Query-for-Azure-Monitor-Workspaces
 tags:
 - Access Control
 - Application Insights

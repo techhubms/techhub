@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=JLGj9CMXDsk
 title: 'Semantic Kernel Group Orchestration: How to Coordinate Multiple AI Agents'
 author: Learn Microsoft AI
-canonical_url: https://www.youtube.com/watch?v=JLGj9CMXDsk
 viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA
 date: 2025-05-29 13:30:25 +00:00
-permalink: /ai/videos/Semantic-Kernel-Group-Orchestration-How-to-Coordinate-Multiple-AI-Agents
 tags:
 - AI Agents
 - AI Collaboration

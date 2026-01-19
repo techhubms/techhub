@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/devops/announcing-azure-devops-server-general-availability/
 title: Azure DevOps Server Now Generally Available for Self-Hosted Enterprises
 author: Gloridel Morales
-canonical_url: https://devblogs.microsoft.com/devops/announcing-azure-devops-server-general-availability/
 viewing_mode: external
 feed_name: Microsoft DevOps Blog
-feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-12-09 20:39:17 +00:00
-permalink: /devops/news/Azure-DevOps-Server-Now-Generally-Available-for-Self-Hosted-Enterprises
 tags:
 - Azure DevOps Server
 - Enterprise Software

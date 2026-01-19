@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=enDEOSAr9YA
 title: .NET 10 Preview 6 Unboxed - Blazor State Persistence, Passkey, & What is DNX?
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=enDEOSAr9YA
 viewing_mode: internal
 feed_name: Dotnet's Youtube channel
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-15 21:09:16 +00:00
-permalink: /coding/videos/NET-10-Preview-6-Unboxed-Blazor-State-Persistence-Passkey-and-What-is-DNX
 tags:
 - .NET
 - .NET 10

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-microsoft-fabric-extension-for-vs-code/
 title: 'Microsoft Fabric VS Code Extension: New Features and General Availability'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-microsoft-fabric-extension-for-vs-code/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-22 10:30:00 +00:00
-permalink: /ml/news/Microsoft-Fabric-VS-Code-Extension-New-Features-and-General-Availability
 tags:
 - API
 - Automation

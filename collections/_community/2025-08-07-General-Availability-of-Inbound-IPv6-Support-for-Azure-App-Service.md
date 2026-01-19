@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-app-service-inbound-ipv6/ba-p/4423358
 title: General Availability of Inbound IPv6 Support for Azure App Service
 author: jordanselig
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-app-service-inbound-ipv6/ba-p/4423358
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-07 15:04:17 +00:00
-permalink: /azure/community/General-Availability-of-Inbound-IPv6-Support-for-Azure-App-Service
 tags:
 - Azure App Service
 - Azure Government

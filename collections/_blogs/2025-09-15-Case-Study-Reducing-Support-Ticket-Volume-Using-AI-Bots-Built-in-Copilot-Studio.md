@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/case-study-reducing-support-ticket-volume-using-ai-bots-built-in-copilot-studio/
 title: 'Case Study: Reducing Support Ticket Volume Using AI Bots Built in Copilot Studio'
 author: Dellenny
-canonical_url: https://dellenny.com/case-study-reducing-support-ticket-volume-using-ai-bots-built-in-copilot-studio/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-15 07:23:11 +00:00
-permalink: /ai/blogs/Case-Study-Reducing-Support-Ticket-Volume-Using-AI-Bots-Built-in-Copilot-Studio
 tags:
 - AI Bots
 - AI Implementation

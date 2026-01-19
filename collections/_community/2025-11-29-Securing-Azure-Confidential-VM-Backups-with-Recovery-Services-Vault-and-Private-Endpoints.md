@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/securing-confidential-vm-backups-with-azure-recovery-services/ba-p/4458965
 title: Securing Azure Confidential VM Backups with Recovery Services Vault and Private Endpoints
 author: PramodPalukuru
-canonical_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/securing-confidential-vm-backups-with-azure-recovery-services/ba-p/4458965
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-29 08:26:10 +00:00
-permalink: /azure/community/Securing-Azure-Confidential-VM-Backups-with-Recovery-Services-Vault-and-Private-Endpoints
 tags:
 - Attestation
 - Azure Confidential VM

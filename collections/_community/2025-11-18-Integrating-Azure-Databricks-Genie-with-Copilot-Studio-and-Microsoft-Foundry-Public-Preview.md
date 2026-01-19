@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-genie-integration-with-copilot-studio-and/ba-p/4471087
 title: 'Integrating Azure Databricks Genie with Copilot Studio and Microsoft Foundry: Public Preview'
 author: AnaviNahar
-canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-genie-integration-with-copilot-studio-and/ba-p/4471087
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 18:48:18 +00:00
-permalink: /ai/community/Integrating-Azure-Databricks-Genie-with-Copilot-Studio-and-Microsoft-Foundry-Public-Preview
 tags:
 - Azure Databricks
 - Conversational Analytics

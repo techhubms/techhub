@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/terraform-provider-for-microsoft-fabric-4-deploying-a-fabric-config-with-terraform-in-github-actions/
 title: 'Terraform Provider for Microsoft Fabric: Deploying Fabric Configs with GitHub Actions'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/terraform-provider-for-microsoft-fabric-4-deploying-a-fabric-config-with-terraform-in-github-actions/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-07 07:00:00 +00:00
-permalink: /ml/news/Terraform-Provider-for-Microsoft-Fabric-Deploying-Fabric-Configs-with-GitHub-Actions
 tags:
 - Automation
 - Azure AD

@@ -19,13 +19,11 @@ public class ContentItemExtensionsTests
             Author = "Test Author",
             DateEpoch = 1705305600, // 2024-01-15 00:00:00 UTC
             CollectionName = "news",
-            AltCollection = null,
             SectionNames = ["ai", "azure"],
             Tags = ["AI", "Azure", "News", "Machine Learning", "Cloud"],
             RenderedHtml = "<p>Test content</p>",
             Excerpt = "Test excerpt",
             ExternalUrl = "https://example.com",
-            VideoId = null,
             ViewingMode = null
         };
     }
@@ -48,14 +46,11 @@ public class ContentItemExtensionsTests
         dto.DateEpoch.Should().Be(1705305600);
         dto.DateIso.Should().Be("2024-01-15");
         dto.CollectionName.Should().Be("news");
-        dto.AltCollection.Should().BeNull();
         dto.SectionNames.Should().BeEquivalentTo(["ai", "azure"]);
         dto.PrimarySection.Should().Be("ai"); // First section in priority order
         dto.Tags.Should().BeEquivalentTo(["AI", "Azure", "News", "Machine Learning", "Cloud"]);
         dto.Excerpt.Should().Be("Test excerpt");
-        dto.ExternalUrl.Should().Be("https://example.com");
-        dto.VideoId.Should().BeNull();
-        dto.Url.Should().Be("/ai/news/2024-01-15-test-article");
+        dto.ExternalUrl.Should().Be("https://example.com"); dto.Url.Should().Be("/ai/news/2024-01-15-test-article");
     }
 
     [Fact]
@@ -70,62 +65,6 @@ public class ContentItemExtensionsTests
 
         // Assert
         act.Should().Throw<ArgumentNullException>();
-    }
-
-    [Fact]
-    public void ToDto_IncludesVideoId_WhenPresent()
-    {
-        // Arrange
-        var item = new ContentItem
-        {
-            Slug = "2024-01-15-test-article",
-            Title = "Test Article",
-            Description = "Test description",
-            Author = "Test Author",
-            DateEpoch = 1705305600,
-            CollectionName = "news",
-            SectionNames = ["github-copilot"],
-            Tags = ["GitHub Copilot", "News", "demo"],
-            RenderedHtml = "<p>Test</p>",
-            Excerpt = "Test excerpt",
-            VideoId = "abc123"
-        };
-        var sectionUrl = "/github-copilot";
-
-        // Act
-        var dto = item.ToDto(sectionUrl);
-
-        // Assert
-        dto.VideoId.Should().Be("abc123");
-        dto.PrimarySection.Should().Be("github-copilot");
-    }
-
-    [Fact]
-    public void ToDto_IncludesAltCollection_WhenPresent()
-    {
-        // Arrange
-        var item = new ContentItem
-        {
-            Slug = "2024-01-15-test-article",
-            Title = "Test Article",
-            Description = "Test description",
-            Author = "Test Author",
-            DateEpoch = 1705305600,
-            CollectionName = "news",
-            AltCollection = "ghc-features",
-            SectionNames = ["github-copilot"],
-            Tags = ["GitHub Copilot", "News", "features"],
-            RenderedHtml = "<p>Test</p>",
-            Excerpt = "Test excerpt"
-        };
-        var sectionUrl = "/github-copilot";
-
-        // Act
-        var dto = item.ToDto(sectionUrl);
-
-        // Assert
-        dto.AltCollection.Should().Be("ghc-features");
-        dto.PrimarySection.Should().Be("github-copilot");
     }
 
     [Fact]
@@ -151,9 +90,7 @@ public class ContentItemExtensionsTests
         dto.Tags.Should().BeEquivalentTo(["AI", "Azure", "News", "Machine Learning", "Cloud"]);
         dto.RenderedHtml.Should().Be("<p>Test content</p>");
         dto.Excerpt.Should().Be("Test excerpt");
-        dto.ExternalUrl.Should().Be("https://example.com");
-        dto.VideoId.Should().BeNull();
-        dto.Url.Should().Be("/ai/news/2024-01-15-test-article");
+        dto.ExternalUrl.Should().Be("https://example.com"); dto.Url.Should().Be("/ai/news/2024-01-15-test-article");
     }
 
     [Fact]

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-foundry-agent-extension/
 title: How to Use Azure Developer CLI AI Agent Extension with Microsoft Foundry
 author: Kristen Womack, Jeff Omhover
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-foundry-agent-extension/
 viewing_mode: external
 feed_name: Microsoft Azure SDK Blog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-11-19 17:22:31 +00:00
-permalink: /ai/news/How-to-Use-Azure-Developer-CLI-AI-Agent-Extension-with-Microsoft-Foundry
 tags:
 - .NET
 - Agent Initialization

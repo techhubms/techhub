@@ -1,16 +1,12 @@
 ﻿---
-layout: post
+external_url: https://youtu.be/_L8MdrswPV0
 title: PR Body Generation in VS Code
 author: Rob Bos
-canonical_url: https://youtu.be/_L8MdrswPV0
 date: 2024-09-26 17:42:50 +00:00
-permalink: /github-copilot/videos/PR-Body-Generation-in-VS-Code
 viewing_mode: internal
-section: github-copilot
 ghes_support: true
 plans:
 - Free
-alt-collection: features
 tags:
 - Code
 - Pull Request

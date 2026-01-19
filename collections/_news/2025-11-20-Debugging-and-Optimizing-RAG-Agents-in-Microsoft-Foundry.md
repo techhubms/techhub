@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/how-to-debug-and-optimize-rag-agents-in-azure-ai-foundry/
 title: Debugging and Optimizing RAG Agents in Microsoft Foundry
 author: Chang Liu
-canonical_url: https://devblogs.microsoft.com/foundry/how-to-debug-and-optimize-rag-agents-in-azure-ai-foundry/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-20 16:00:28 +00:00
-permalink: /ai/news/Debugging-and-Optimizing-RAG-Agents-in-Microsoft-Foundry
 tags:
 - A/B Testing
 - Agent Workflow

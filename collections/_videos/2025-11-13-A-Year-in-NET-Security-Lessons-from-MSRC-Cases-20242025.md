@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=8lFm4wI1bPo
 title: 'A Year in .NET Security: Lessons from MSRC Cases (2024–2025)'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=8lFm4wI1bPo
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-13 17:40:46 +00:00
-permalink: /coding/videos/A-Year-in-NET-Security-Lessons-from-MSRC-Cases-20242025
 tags:
 - .NET
 - .NET 10

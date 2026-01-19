@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=Wex4ONr1P2I
 title: Introduction to GitHub Copilot Coding Agent
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=Wex4ONr1P2I
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-30 18:08:01 +00:00
-permalink: /github-copilot/videos/Introduction-to-GitHub-Copilot-Coding-Agent
 tags:
 - AI Code Automation
 - Code Suggestions

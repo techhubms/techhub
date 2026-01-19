@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/visualstudio/attach-images-in-github-copilot-chat/
 title: Leverage Image Attachments in GitHub Copilot Chat for Visual Studio Preview
 author: Jessie Houghton
-canonical_url: https://devblogs.microsoft.com/visualstudio/attach-images-in-github-copilot-chat/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-02-24 17:33:16 +00:00
-permalink: /github-copilot/news/Leverage-Image-Attachments-in-GitHub-Copilot-Chat-for-Visual-Studio-Preview
 tags:
 - Code Generation
 - Copilot

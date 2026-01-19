@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/implementing-security-headers-in-azure-app-service-and-azure/ba-p/4464250
 title: Implementing Security Headers in Azure App Service and Azure Container Apps
 author: AmritpalSinghNaroo
-canonical_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/implementing-security-headers-in-azure-app-service-and-azure/ba-p/4464250
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-27 07:52:59 +00:00
-permalink: /azure/community/Implementing-Security-Headers-in-Azure-App-Service-and-Azure-Container-Apps
 tags:
 - .NET
 - App Security

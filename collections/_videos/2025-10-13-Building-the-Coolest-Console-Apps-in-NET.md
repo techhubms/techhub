@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=1C1gTRm7BB4
 title: Building the Coolest Console Apps in .NET
 author: Nick Chapsas
-canonical_url: https://www.youtube.com/watch?v=1C1gTRm7BB4
 viewing_mode: internal
 feed_name: Nick Chapsas YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrkPsvLGln62OMZRO6K-llg
 date: 2025-10-13 10:45:00 +00:00
-permalink: /coding/videos/Building-the-Coolest-Console-Apps-in-NET
 tags:
 - .NET
 - Application Development

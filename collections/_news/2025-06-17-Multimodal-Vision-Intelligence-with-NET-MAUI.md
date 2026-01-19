@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/multimodal-vision-intelligence-with-dotnet-maui/
 title: Multimodal Vision Intelligence with .NET MAUI
 author: David Ortinau
-canonical_url: https://devblogs.microsoft.com/dotnet/multimodal-vision-intelligence-with-dotnet-maui/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-06-17 19:30:00 +00:00
-permalink: /ai/news/Multimodal-Vision-Intelligence-with-NET-MAUI
 tags:
 - .NET
 - Azure AI Foundry

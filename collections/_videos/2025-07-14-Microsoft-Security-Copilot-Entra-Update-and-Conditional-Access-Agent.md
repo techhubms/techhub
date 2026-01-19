@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=MaOGP2JNs2E
 title: Microsoft Security Copilot Entra Update and Conditional Access Agent
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=MaOGP2JNs2E
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-07-14 14:12:06 +00:00
-permalink: /ai/videos/Microsoft-Security-Copilot-Entra-Update-and-Conditional-Access-Agent
 tags:
 - A2A
 - AI Security

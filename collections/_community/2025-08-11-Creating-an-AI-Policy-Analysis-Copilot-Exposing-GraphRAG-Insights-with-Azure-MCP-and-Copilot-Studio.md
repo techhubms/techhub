@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/public-sector-blog/creating-an-ai-policy-analysis-copilot/ba-p/4438393
 title: 'Creating an AI Policy Analysis Copilot: Exposing GraphRAG Insights with Azure, MCP, and Copilot Studio'
 author: TimMeyers
-canonical_url: https://techcommunity.microsoft.com/t5/public-sector-blog/creating-an-ai-policy-analysis-copilot/ba-p/4438393
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-11 15:16:46 +00:00
-permalink: /ai/community/Creating-an-AI-Policy-Analysis-Copilot-Exposing-GraphRAG-Insights-with-Azure-MCP-and-Copilot-Studio
 tags:
 - AI Policy Analysis
 - Azd

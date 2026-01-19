@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=opq5Y3QyXmY
 title: Inside Microsoft's AI Transformation Across the Software Lifecycle
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=opq5Y3QyXmY
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-25 15:37:51 +00:00
-permalink: /github-copilot/videos/Inside-Microsofts-AI-Transformation-Across-the-Software-Lifecycle
 tags:
 - Agentic DevOps
 - AI Powered Tools

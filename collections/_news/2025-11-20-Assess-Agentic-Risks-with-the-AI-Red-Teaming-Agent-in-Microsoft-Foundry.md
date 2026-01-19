@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/assess-agentic-risks-with-the-ai-red-teaming-agent-in-microsoft-foundry/
 title: Assess Agentic Risks with the AI Red Teaming Agent in Microsoft Foundry
 author: Laurel Geisbush, Jenn Cockrell
-canonical_url: https://devblogs.microsoft.com/foundry/assess-agentic-risks-with-the-ai-red-teaming-agent-in-microsoft-foundry/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-20 16:00:05 +00:00
-permalink: /ai/news/Assess-Agentic-Risks-with-the-AI-Red-Teaming-Agent-in-Microsoft-Foundry
 tags:
 - Adversarial Testing
 - Agentic Pipelines

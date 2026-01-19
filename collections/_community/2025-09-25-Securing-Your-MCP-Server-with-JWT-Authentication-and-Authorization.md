@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/it-s-time-to-secure-your-mcp-servers-here-s-how/ba-p/4434308
 title: Securing Your MCP Server with JWT Authentication and Authorization
 author: wassimchegham
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/it-s-time-to-secure-your-mcp-servers-here-s-how/ba-p/4434308
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-25 07:00:00 +00:00
-permalink: /coding/community/Securing-Your-MCP-Server-with-JWT-Authentication-and-Authorization
 tags:
 - API Security
 - Authentication

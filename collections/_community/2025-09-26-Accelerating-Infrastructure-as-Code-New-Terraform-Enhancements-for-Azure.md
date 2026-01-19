@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/accelerating-infrastructure-as-code-introducing-game-changing/ba-p/4457341
 title: 'Accelerating Infrastructure as Code: New Terraform Enhancements for Azure'
 author: stevenjma
-canonical_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/accelerating-infrastructure-as-code-introducing-game-changing/ba-p/4457341
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-26 15:53:50 +00:00
-permalink: /ai/community/Accelerating-Infrastructure-as-Code-New-Terraform-Enhancements-for-Azure
 tags:
 - Azure Portal
 - CI/CD

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-support-for-workspace-identity-authentication-in-new-fabric-connectors-and-for-dataflow-gen2/
 title: Introducing Support for Workspace Identity Authentication in Fabric Connectors
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-support-for-workspace-identity-authentication-in-new-fabric-connectors-and-for-dataflow-gen2/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-11 10:00:00 +00:00
-permalink: /ml/news/Introducing-Support-for-Workspace-Identity-Authentication-in-Fabric-Connectors
 tags:
 - Authentication
 - Azure Active Directory

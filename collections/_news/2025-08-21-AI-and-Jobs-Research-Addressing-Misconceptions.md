@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/research/blog/applicability-vs-job-displacement-further-notes-on-our-recent-research-on-ai-and-occupations/
 title: 'AI and Jobs Research: Addressing Misconceptions'
 author: sbaynes
-canonical_url: https://www.microsoft.com/en-us/research/blog/applicability-vs-job-displacement-further-notes-on-our-recent-research-on-ai-and-occupations/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-21 22:06:16 +00:00
-permalink: /ai/news/AI-and-Jobs-Research-Addressing-Misconceptions
 tags:
 - AI Chatbot
 - AI Limitations

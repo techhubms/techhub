@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/announcing-azure-dns-security-policy-with-threat-intelligence/ba-p/4470183
 title: Azure DNS Security Policy with Threat Intelligence Feed Now Generally Available
 author: Sergio Figueiredo
-canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/announcing-azure-dns-security-policy-with-threat-intelligence/ba-p/4470183
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-20 20:22:48 +00:00
-permalink: /azure/community/Azure-DNS-Security-Policy-with-Threat-Intelligence-Feed-Now-Generally-Available
 tags:
 - ARM
 - Azure DNS

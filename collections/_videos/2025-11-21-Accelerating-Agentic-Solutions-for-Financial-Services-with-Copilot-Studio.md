@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=oG2oJP0fpg0
 title: Accelerating Agentic Solutions for Financial Services with Copilot Studio
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=oG2oJP0fpg0
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 07:25:32 +00:00
-permalink: /ai/videos/Accelerating-Agentic-Solutions-for-Financial-Services-with-Copilot-Studio
 tags:
 - Agentic Solutions
 - AI Agents

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=9_ELo9f9hXk
 title: Preventing Data Exfiltration with Microsoft Purview's Layered Protection Strategy
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=9_ELo9f9hXk
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 15:23:41 +00:00
-permalink: /ai/videos/Preventing-Data-Exfiltration-with-Microsoft-Purviews-Layered-Protection-Strategy
 tags:
 - Adaptive Application Scopes
 - AI Driven Protection

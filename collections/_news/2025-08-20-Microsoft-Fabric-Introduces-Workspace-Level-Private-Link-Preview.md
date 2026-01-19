@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-workspace-level-private-link-preview/
 title: Microsoft Fabric Introduces Workspace-Level Private Link (Preview)
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-workspace-level-private-link-preview/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-20 16:11:57 +00:00
-permalink: /azure/news/Microsoft-Fabric-Introduces-Workspace-Level-Private-Link-Preview
 tags:
 - Azure Portal
 - Azure Private Link

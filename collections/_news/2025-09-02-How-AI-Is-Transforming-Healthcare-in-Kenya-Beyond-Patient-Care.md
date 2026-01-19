@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/emea/features/the-benefits-of-ai-in-healthcare-extend-far-beyond-improved-patient-care/
 title: 'How AI Is Transforming Healthcare in Kenya: Beyond Patient Care'
 author: stclarke
-canonical_url: https://news.microsoft.com/source/emea/features/the-benefits-of-ai-in-healthcare-extend-far-beyond-improved-patient-care/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-02 14:37:57 +00:00
-permalink: /ai/news/How-AI-Is-Transforming-Healthcare-in-Kenya-Beyond-Patient-Care
 tags:
 - Africa
 - AI Adoption

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=bKFp2w2O6fM
 title: Generating Agent Code Using AI Toolkit and GitHub Copilot
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=bKFp2w2O6fM
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-01 21:00:26 +00:00
-permalink: /github-copilot/videos/Generating-Agent-Code-Using-AI-Toolkit-and-GitHub-Copilot
 tags:
 - Agent Builder
 - Agent Code Generation

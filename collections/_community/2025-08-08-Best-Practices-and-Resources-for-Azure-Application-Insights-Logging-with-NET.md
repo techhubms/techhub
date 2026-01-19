@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/AZURE/comments/1mkk5rp/best_resources_to_learn_azure_application/
 title: Best Practices and Resources for Azure Application Insights Logging with .NET
 author: BiteDowntown3294
-canonical_url: https://www.reddit.com/r/AZURE/comments/1mkk5rp/best_resources_to_learn_azure_application/
 viewing_mode: external
 feed_name: Reddit Azure
-feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-08 03:06:44 +00:00
-permalink: /coding/community/Best-Practices-and-Resources-for-Azure-Application-Insights-Logging-with-NET
 tags:
 - .NET
 - Aspire Dashboard

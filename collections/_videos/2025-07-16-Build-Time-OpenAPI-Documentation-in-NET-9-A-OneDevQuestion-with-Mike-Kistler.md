@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=xBTrFRtBj_0
 title: 'Build-Time OpenAPI Documentation in .NET 9: A OneDevQuestion with Mike Kistler'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=xBTrFRtBj_0
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-07-16 15:20:20 +00:00
-permalink: /coding/videos/Build-Time-OpenAPI-Documentation-in-NET-9-A-OneDevQuestion-with-Mike-Kistler
 tags:
 - .NET
 - .NET 9

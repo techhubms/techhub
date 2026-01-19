@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free
 title: Claude Sonnet 3.5 Deprecated, Claude Haiku 4.5 Now Available in GitHub Copilot Free
 author: Allison
-canonical_url: https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-11-10 17:19:46 +00:00
-permalink: /github-copilot/news/Claude-Sonnet-35-Deprecated-Claude-Haiku-45-Now-Available-in-GitHub-Copilot-Free
 tags:
 - AI Models
 - Anthropic

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=I39PSkDmfHQ
 title: Understanding Azure Monitor Health Models
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=I39PSkDmfHQ
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-09-18 15:35:24 +00:00
-permalink: /azure/videos/Understanding-Azure-Monitor-Health-Models
 tags:
 - Alerts Management
 - Azure Monitor

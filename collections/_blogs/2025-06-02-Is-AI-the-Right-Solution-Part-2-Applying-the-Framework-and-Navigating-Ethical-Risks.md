@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://hiddedesmet.com/ai-project-validation-framework-part2
 title: 'Is AI the Right Solution? Part 2: Applying the Framework and Navigating Ethical Risks'
 author: Hidde de Smet
-canonical_url: https://hiddedesmet.com/ai-project-validation-framework-part2
 viewing_mode: external
 feed_name: Hidde de Smet's Blog
-feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-06-02 04:00:00 +00:00
-permalink: /ai/blogs/Is-AI-the-Right-Solution-Part-2-Applying-the-Framework-and-Navigating-Ethical-Risks
 tags:
 - AI Bias
 - AI Project Validation

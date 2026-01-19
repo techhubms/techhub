@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/azure-skilling-at-microsoft-ignite-2025/ba-p/4472678
 title: 'Azure Skilling at Microsoft Ignite 2025: Elevate Your Cloud and AI Expertise'
 author: AaronStark
-canonical_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/azure-skilling-at-microsoft-ignite-2025/ba-p/4472678
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-26 22:14:11 +00:00
-permalink: /ai/community/Azure-Skilling-at-Microsoft-Ignite-2025-Elevate-Your-Cloud-and-AI-Expertise
 tags:
 - AI Skills Navigator
 - Applied Learning

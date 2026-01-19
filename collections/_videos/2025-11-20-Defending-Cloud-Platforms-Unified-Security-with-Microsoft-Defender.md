@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=v3i5v9deZvI
 title: 'Defending Cloud Platforms: Unified Security with Microsoft Defender'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=v3i5v9deZvI
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 14:36:50 +00:00
-permalink: /ai/videos/Defending-Cloud-Platforms-Unified-Security-with-Microsoft-Defender
 tags:
 - Adversary Detection
 - AI Threats

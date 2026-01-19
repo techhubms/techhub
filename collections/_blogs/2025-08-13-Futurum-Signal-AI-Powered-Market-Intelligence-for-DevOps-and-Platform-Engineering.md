@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/futurum-signal-ai-powered-market-intelligence-for-devops-and-platform-engineering/?utm_source=rss&utm_medium=rss&utm_campaign=futurum-signal-ai-powered-market-intelligence-for-devops-and-platform-engineering
 title: 'Futurum Signal: AI-Powered Market Intelligence for DevOps and Platform Engineering'
 author: Alan Shimel
-canonical_url: https://devops.com/futurum-signal-ai-powered-market-intelligence-for-devops-and-platform-engineering/?utm_source=rss&utm_medium=rss&utm_campaign=futurum-signal-ai-powered-market-intelligence-for-devops-and-platform-engineering
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-13 17:49:16 +00:00
-permalink: /ai/blogs/Futurum-Signal-AI-Powered-Market-Intelligence-for-DevOps-and-Platform-Engineering
 tags:
 - Agentic AI
 - AI Powered Analytics

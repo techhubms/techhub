@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-on-linux-now-supports-cgroup-v2/ba-p/4433523
 title: SQL Server on Linux Now Supports cgroup v2
 author: Attinder_Pal_Singh
-canonical_url: https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-on-linux-now-supports-cgroup-v2/ba-p/4433523
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 12:30:37 +00:00
-permalink: /azure/community/SQL-Server-on-Linux-Now-Supports-cgroup-v2
 tags:
 - AKS
 - Cgroup

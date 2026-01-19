@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/sonar-surfaces-multiple-caveats-when-relying-on-llms-to-write-code/?utm_source=rss&utm_medium=rss&utm_campaign=sonar-surfaces-multiple-caveats-when-relying-on-llms-to-write-code
 title: SonarSource Research Highlights Security Risks in LLM-Generated Code
 author: Mike Vizard
-canonical_url: https://devops.com/sonar-surfaces-multiple-caveats-when-relying-on-llms-to-write-code/?utm_source=rss&utm_medium=rss&utm_campaign=sonar-surfaces-multiple-caveats-when-relying-on-llms-to-write-code
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-08-13 13:43:07 +00:00
-permalink: /ai/blogs/SonarSource-Research-Highlights-Security-Risks-in-LLM-Generated-Code
 tags:
 - AI Coding Tools
 - Analysis

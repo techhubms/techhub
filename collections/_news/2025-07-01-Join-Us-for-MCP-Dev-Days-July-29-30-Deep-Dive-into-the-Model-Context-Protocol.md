@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/blog/join-us-for-mcp-dev-days-july-29-30
 title: 'Join Us for MCP Dev Days – July 29-30: Deep Dive into the Model Context Protocol'
 author: Katie Savage, Marc Baiza
-canonical_url: https://devblogs.microsoft.com/blog/join-us-for-mcp-dev-days-july-29-30
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/feed
 date: 2025-07-01 22:00:46 +00:00
-permalink: /github-copilot/news/Join-Us-for-MCP-Dev-Days-July-29-30-Deep-Dive-into-the-Model-Context-Protocol
 tags:
 - Agent Experiences
 - AI Models

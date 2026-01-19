@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7/
 title: 'Announcing TypeScript 5.7: Key Features and Improvements'
 author: Daniel Rosenwasser
-canonical_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7/
 viewing_mode: external
 feed_name: Microsoft TypeScript Blog
-feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2024-11-22 18:15:19 +00:00
-permalink: /coding/news/Announcing-TypeScript-57-Key-Features-and-Improvements
 tags:
 - Code Editor Tools
 - Compiler Options

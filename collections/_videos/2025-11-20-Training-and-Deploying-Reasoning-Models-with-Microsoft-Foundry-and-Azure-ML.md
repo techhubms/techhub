@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=9TmsRYmb9NE
 title: Training and Deploying Reasoning Models with Microsoft Foundry and Azure ML
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=9TmsRYmb9NE
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:21:15 +00:00
-permalink: /ai/videos/Training-and-Deploying-Reasoning-Models-with-Microsoft-Foundry-and-Azure-ML
 tags:
 - Agent Applications
 - AI Production

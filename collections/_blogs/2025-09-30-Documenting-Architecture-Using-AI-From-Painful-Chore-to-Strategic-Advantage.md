@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/documenting-architecture-using-ai-from-painful-chore-to-strategic-advantage/
 title: 'Documenting Architecture Using AI: From Painful Chore to Strategic Advantage'
 author: Dellenny
-canonical_url: https://dellenny.com/documenting-architecture-using-ai-from-painful-chore-to-strategic-advantage/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-30 08:03:16 +00:00
-permalink: /ai/blogs/Documenting-Architecture-Using-AI-From-Painful-Chore-to-Strategic-Advantage
 tags:
 - ADR Automation
 - AI in Documentation

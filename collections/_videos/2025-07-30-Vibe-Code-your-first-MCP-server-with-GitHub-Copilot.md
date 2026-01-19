@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=hCb1NY2c05k
 title: Vibe Code Your First MCP Server with GitHub Copilot
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=hCb1NY2c05k
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-07-30 22:23:12 +00:00
-permalink: /github-copilot/videos/Vibe-Code-your-first-MCP-server-with-GitHub-Copilot
 tags:
 - Agent Development
 - AI Agent

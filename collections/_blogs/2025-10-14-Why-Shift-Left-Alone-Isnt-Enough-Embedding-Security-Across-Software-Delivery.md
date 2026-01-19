@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/secure-by-design-secure-by-default/
 title: "Why 'Shift Left' Alone Isn't Enough: Embedding Security Across Software Delivery"
 author: Julian Browne
-canonical_url: https://devops.com/secure-by-design-secure-by-default/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-14 11:31:30 +00:00
-permalink: /devops/blogs/Why-Shift-Left-Alone-Isnt-Enough-Embedding-Security-Across-Software-Delivery
 tags:
 - Adaptive Security
 - Continuous Improvement

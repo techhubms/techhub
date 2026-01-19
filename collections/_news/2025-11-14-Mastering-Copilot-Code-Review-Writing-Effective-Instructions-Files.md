@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/unlocking-the-full-power-of-copilot-code-review-master-your-instructions-files/
 title: 'Mastering Copilot Code Review: Writing Effective Instructions Files'
 author: Ria Gopu
-canonical_url: https://github.blog/ai-and-ml/unlocking-the-full-power-of-copilot-code-review-master-your-instructions-files/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-11-14 17:00:00 +00:00
-permalink: /github-copilot/news/Mastering-Copilot-Code-Review-Writing-Effective-Instructions-Files
 tags:
 - AI & ML
 - Applyto Frontmatter

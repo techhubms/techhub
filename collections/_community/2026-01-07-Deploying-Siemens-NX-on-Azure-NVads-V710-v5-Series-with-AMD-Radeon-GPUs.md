@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-v710-v5-series-amd-radeon-gpu-validation-of-siemens-cad-nx/ba-p/4483791
 title: Deploying Siemens NX on Azure NVads V710 v5-Series with AMD Radeon GPUs
 author: Sunita_AZ0708
-canonical_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-v710-v5-series-amd-radeon-gpu-validation-of-siemens-cad-nx/ba-p/4483791
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2026-01-07 16:38:08 +00:00
-permalink: /azure/community/Deploying-Siemens-NX-on-Azure-NVads-V710-v5-Series-with-AMD-Radeon-GPUs
 tags:
 - Accelerated Networking
 - AMD Radeon Pro V710

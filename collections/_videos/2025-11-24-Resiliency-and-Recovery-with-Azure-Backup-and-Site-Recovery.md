@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=IJDL7c2dHXc
 title: Resiliency and Recovery with Azure Backup and Site Recovery
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=IJDL7c2dHXc
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 06:32:15 +00:00
-permalink: /azure/videos/Resiliency-and-Recovery-with-Azure-Backup-and-Site-Recovery
 tags:
 - AKS
 - Azure Backup

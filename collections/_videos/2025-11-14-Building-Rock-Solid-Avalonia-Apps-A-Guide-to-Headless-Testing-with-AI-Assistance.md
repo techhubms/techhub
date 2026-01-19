@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=0Z1plDp_rvI
 title: 'Building Rock-Solid Avalonia Apps: A Guide to Headless Testing with AI Assistance'
 author: dotnet
-canonical_url: https://www.youtube.com/watch?v=0Z1plDp_rvI
 viewing_mode: internal
 feed_name: DotNet YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw
 date: 2025-11-14 06:30:06 +00:00
-permalink: /github-copilot/videos/Building-Rock-Solid-Avalonia-Apps-A-Guide-to-Headless-Testing-with-AI-Assistance
 tags:
 - .NET
 - AI Pair Programming

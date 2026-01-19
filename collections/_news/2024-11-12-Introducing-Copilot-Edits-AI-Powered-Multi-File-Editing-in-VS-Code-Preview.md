@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://code.visualstudio.com/blogs/2024/11/12/introducing-copilot-edits
 title: 'Introducing Copilot Edits: AI-Powered Multi-File Editing in VS Code (Preview)'
 author: Isidor Nikolic
-canonical_url: https://code.visualstudio.com/blogs/2024/11/12/introducing-copilot-edits
 viewing_mode: external
 feed_name: Visual Studio Code Releases
-feed_url: https://code.visualstudio.com/feed.xml
 date: 2024-11-12 00:00:00 +00:00
-permalink: /github-copilot/news/Introducing-Copilot-Edits-AI-Powered-Multi-File-Editing-in-VS-Code-Preview
 tags:
 - AI in Code Review
 - AI Powered Editing

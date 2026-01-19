@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=CSD1qQN2R2k
 title: 'App Gateway for Containers: Web Application Firewall (WAF) Overview'
 author: John Savill's Technical Training
-canonical_url: https://www.youtube.com/watch?v=CSD1qQN2R2k
 viewing_mode: internal
 feed_name: John Savill's Technical Training
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ
 date: 2025-08-06 13:27:43 +00:00
-permalink: /azure/videos/App-Gateway-for-Containers-Web-Application-Firewall-WAF-Overview
 tags:
 - AKS
 - App Gateway For Containers

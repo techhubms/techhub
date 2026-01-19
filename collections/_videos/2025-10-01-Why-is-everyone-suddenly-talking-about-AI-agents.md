@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=vewSU9egocs
 title: Why is everyone suddenly talking about AI agents?
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=vewSU9egocs
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-01 15:52:33 +00:00
-permalink: /ai/videos/Why-is-everyone-suddenly-talking-about-AI-agents
 tags:
 - AI Agents
 - AI Development

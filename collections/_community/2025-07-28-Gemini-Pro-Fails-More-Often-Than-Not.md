@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mbfeiw/gemini_pro_fails_more_often_than_not/
 title: Gemini Pro Fails More Often Than Not
 author: ChomsGP
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mbfeiw/gemini_pro_fails_more_often_than_not/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-28 12:55:30 +00:00
-permalink: /github-copilot/community/Gemini-Pro-Fails-More-Often-Than-Not
 tags:
 - Agent Mode
 - Gemini Pro

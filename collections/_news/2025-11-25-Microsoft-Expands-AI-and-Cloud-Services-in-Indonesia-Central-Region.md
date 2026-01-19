@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/asia/2025/11/25/microsoft-expands-ai-infrastructure-and-cloud-services-in-indonesia-empowering-more-organizations-to-innovate-locally/
 title: Microsoft Expands AI and Cloud Services in Indonesia Central Region
 author: stclarke
-canonical_url: https://news.microsoft.com/source/asia/2025/11/25/microsoft-expands-ai-infrastructure-and-cloud-services-in-indonesia-empowering-more-organizations-to-innovate-locally/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-25 16:03:02 +00:00
-permalink: /github-copilot/news/Microsoft-Expands-AI-and-Cloud-Services-in-Indonesia-Central-Region
 tags:
 - Agentic AI
 - AI Infrastructure

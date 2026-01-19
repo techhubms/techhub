@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-april-2025/
 title: 'Azure SDK Release Highlights for April 2025: New Features, Platform Support, and Key Updates'
 author: Hector Norzagaray
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-april-2025/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-04-25 17:55:05 +00:00
-permalink: /coding/news/Azure-SDK-Release-Highlights-for-April-2025-New-Features-Platform-Support-and-Key-Updates
 tags:
 - .NET
 - Azure SDK

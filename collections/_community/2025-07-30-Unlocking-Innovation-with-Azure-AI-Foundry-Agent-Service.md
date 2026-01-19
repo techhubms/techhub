@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure/unlocking-innovation-with-azure-ai-foundry-agent-service/m-p/4438322#M22030
 title: Unlocking Innovation with Azure AI Foundry Agent Service
 author: JohnNaguib
-canonical_url: https://techcommunity.microsoft.com/t5/azure/unlocking-innovation-with-azure-ai-foundry-agent-service/m-p/4438322#M22030
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-07-30 17:41:02 +00:00
-permalink: /ai/community/Unlocking-Innovation-with-Azure-AI-Foundry-Agent-Service
 tags:
 - Agent Orchestration
 - AI Operationalization

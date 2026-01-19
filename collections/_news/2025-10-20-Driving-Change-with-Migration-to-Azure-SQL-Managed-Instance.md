@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/sql-server/blog/2025/10/20/innovation-spotlight-how-3-customers-are-driving-change-with-migration-to-azure-sql/
 title: Driving Change with Migration to Azure SQL Managed Instance
 author: Debbi Lyons
-canonical_url: https://www.microsoft.com/en-us/sql-server/blog/2025/10/20/innovation-spotlight-how-3-customers-are-driving-change-with-migration-to-azure-sql/
 viewing_mode: external
 feed_name: The Azure Blog
-feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-20 16:00:00 +00:00
-permalink: /azure/news/Driving-Change-with-Migration-to-Azure-SQL-Managed-Instance
 tags:
 - AI
 - AI Ready Infrastructure

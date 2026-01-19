@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-27-copilot-code-completion-now-uses-the-gpt-4-1-copilot-model
 title: GitHub Copilot Code Completion Now Powered by GPT-4.1 Model
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-27-copilot-code-completion-now-uses-the-gpt-4-1-copilot-model
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-08-27 15:59:03 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-Code-Completion-Now-Powered-by-GPT-41-Model
 tags:
 - AI Models
 - AI Updates

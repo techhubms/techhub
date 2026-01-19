@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/azuredevops/comments/1mfmw05/how_to_structure_cicd_pipelines_across_two_repos/
 title: Structuring CI/CD Pipelines Across Code and Helm Chart Repositories in Azure DevOps
 author: machosalade
-canonical_url: https://www.reddit.com/r/azuredevops/comments/1mfmw05/how_to_structure_cicd_pipelines_across_two_repos/
 viewing_mode: external
 feed_name: Reddit Azure DevOps
-feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-08-02 10:03:38 +00:00
-permalink: /coding/community/Structuring-CICD-Pipelines-Across-Code-and-Helm-Chart-Repositories-in-Azure-DevOps
 tags:
 - AKS
 - Artifact Handoff

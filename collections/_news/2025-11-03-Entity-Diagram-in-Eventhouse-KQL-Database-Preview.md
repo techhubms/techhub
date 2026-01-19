@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/entity-diagram-in-eventhouse-kql-database-preview/
 title: Entity Diagram in Eventhouse KQL Database (Preview)
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/entity-diagram-in-eventhouse-kql-database-preview/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-03 09:00:00 +00:00
-permalink: /ml/news/Entity-Diagram-in-Eventhouse-KQL-Database-Preview
 tags:
 - Cross Database Relationships
 - Data Engineering

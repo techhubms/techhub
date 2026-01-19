@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-maps-blog/transforming-dynamics-365-customer-data-with-azure-maps-inogic/ba-p/4441187
 title: Transforming Dynamics 365 Customer Data with Azure Maps Integration
 author: IoTGirl
-canonical_url: https://techcommunity.microsoft.com/t5/azure-maps-blog/transforming-dynamics-365-customer-data-with-azure-maps-inogic/ba-p/4441187
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-08-07 17:20:42 +00:00
-permalink: /azure/community/Transforming-Dynamics-365-Customer-Data-with-Azure-Maps-Integration
 tags:
 - API
 - Azure Maps

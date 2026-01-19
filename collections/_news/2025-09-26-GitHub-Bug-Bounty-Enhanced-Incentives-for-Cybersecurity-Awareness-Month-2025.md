@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/security/vulnerability-research/kicking-off-cybersecurity-awareness-month-2025-researcher-spotlights-and-enhanced-incentives/
 title: 'GitHub Bug Bounty: Enhanced Incentives for Cybersecurity Awareness Month 2025'
 author: Shilpa Kumari
-canonical_url: https://github.blog/security/vulnerability-research/kicking-off-cybersecurity-awareness-month-2025-researcher-spotlights-and-enhanced-incentives/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-09-26 15:00:00 +00:00
-permalink: /github-copilot/news/GitHub-Bug-Bounty-Enhanced-Incentives-for-Cybersecurity-Awareness-Month-2025
 tags:
 - Bug Bounty
 - Bug Bounty Program

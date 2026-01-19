@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-on-github-com-a-power-users-guide/
 title: 'How to Use GitHub Copilot on github.com: A Power User’s Guide'
 author: Andrea Griffiths
-canonical_url: https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-on-github-com-a-power-users-guide/
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/feed/
 date: 2025-08-27 16:00:00 +00:00
-permalink: /github-copilot/news/How-to-Use-GitHub-Copilot-on-githubcom-A-Power-Users-Guide
 tags:
 - AI & ML
 - AI Agent

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-april-2025/
 title: 'Azure Developer CLI (azd) – April 2025 Release: New Features, Templates, and Enhancements'
 author: Kristen Womack
-canonical_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-april-2025/
 viewing_mode: external
 feed_name: Microsoft DevBlog
-feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-04-03 18:38:43 +00:00
-permalink: /ai/news/Azure-Developer-CLI-azd-April-2025-Release-New-Features-Templates-and-Enhancements
 tags:
 - .NET
 - .NET Aspire

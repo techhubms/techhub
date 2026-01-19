@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/cloud-and-ai-cost-efficiency-a-strategic-imperative-for-long/ba-p/4455955
 title: Maximizing Cost Efficiency with Azure Essentials for Cloud and AI Investments
 author: Fernando_Vasconcellos
-canonical_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/cloud-and-ai-cost-efficiency-a-strategic-imperative-for-long/ba-p/4455955
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-29 17:37:37 +00:00
-permalink: /ai/community/Maximizing-Cost-Efficiency-with-Azure-Essentials-for-Cloud-and-AI-Investments
 tags:
 - AI Center Of Excellence
 - AI Ops

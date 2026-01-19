@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/building-environmental-aware-api-platforms-with-azure-api/ba-p/4458308
 title: 'Environmental Sustainability Features in Azure API Management: Minimizing API Infrastructure Carbon Impact'
 author: tomkerkhovemicrosoft
-canonical_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/building-environmental-aware-api-platforms-with-azure-api/ba-p/4458308
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-10-13 10:00:00 +00:00
-permalink: /ai/community/Environmental-Sustainability-Features-in-Azure-API-Management-Minimizing-API-Infrastructure-Carbon-Impact
 tags:
 - AI Infrastructure
 - API Infrastructure

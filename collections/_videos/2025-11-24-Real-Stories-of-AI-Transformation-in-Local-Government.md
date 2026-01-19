@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=WgBC8M3ixt8
 title: Real Stories of AI Transformation in Local Government
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=WgBC8M3ixt8
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 08:27:45 +00:00
-permalink: /ai/videos/Real-Stories-of-AI-Transformation-in-Local-Government
 tags:
 - AI Adoption
 - Citizen Services

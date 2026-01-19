@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://roadtoalm.com/2025/06/05/developer-experience-more-than-a-buzzword/
 title: 'Developer Experience: More Than a Buzzword'
 author: Rene van Osnabrugge
-canonical_url: https://roadtoalm.com/2025/06/05/developer-experience-more-than-a-buzzword/
 viewing_mode: external
 feed_name: René van Osnabrugge's Blog
-feed_url: https://roadtoalm.com/feed/
 date: 2025-06-05 08:31:00 +00:00
-permalink: /devops/blogs/Developer-Experience-More-Than-a-Buzzword
 tags:
 - AI
 - Developer Experience

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/architecting-the-next-generation-customer-tiering-system/ba-p/4475326
 title: KPI-Driven, AI-Enabled Tiering Architecture for Microsoft’s Global B2B Business
 author: BonnieAo
-canonical_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/architecting-the-next-generation-customer-tiering-system/ba-p/4475326
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-12-04 21:00:36 +00:00
-permalink: /ai/community/KPI-Driven-AI-Enabled-Tiering-Architecture-for-Microsofts-Global-B2B-Business
 tags:
 - Azure Stream Analytics
 - Azure Synapse Analytics

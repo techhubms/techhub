@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/outages-and-security-threats-in-devops-tooling-cracks-in-the-foundation/
 title: 'Outages and Security Threats in DevOps Tooling: Cracks in the Foundation'
 author: Alan Shimel
-canonical_url: https://devops.com/outages-and-security-threats-in-devops-tooling-cracks-in-the-foundation/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-16 08:13:33 +00:00
-permalink: /devops/blogs/Outages-and-Security-Threats-in-DevOps-Tooling-Cracks-in-the-Foundation
 tags:
 - AI
 - AI in DevOps

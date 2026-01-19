@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blogs.microsoft.com/blog/2025/11/12/infinite-scale-the-architecture-behind-the-azure-ai-superfactory/
 title: 'Infinite Scale: The Architecture Behind the Azure AI Superfactory'
 author: Vanessa Ho
-canonical_url: https://blogs.microsoft.com/blog/2025/11/12/infinite-scale-the-architecture-behind-the-azure-ai-superfactory/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-19 21:19:14 +00:00
-permalink: /ai/news/Infinite-Scale-The-Architecture-Behind-the-Azure-AI-Superfactory
 tags:
 - AI Workload Management
 - Azure AI

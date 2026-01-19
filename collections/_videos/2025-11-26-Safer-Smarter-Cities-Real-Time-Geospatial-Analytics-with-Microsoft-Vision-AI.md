@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=ih-2UjQGwZw
 title: 'Safer, Smarter Cities: Real-Time Geospatial Analytics with Microsoft Vision AI'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=ih-2UjQGwZw
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-26 20:17:43 +00:00
-permalink: /ai/videos/Safer-Smarter-Cities-Real-Time-Geospatial-Analytics-with-Microsoft-Vision-AI
 tags:
 - Andrew Hester
 - Automated Alerts

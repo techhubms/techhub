@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/29826/
 title: 'Microsoft Fabric AI Functions: Enhanced Features Now Generally Available'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/29826/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 01:30:00 +00:00
-permalink: /ai/news/Microsoft-Fabric-AI-Functions-Enhanced-Features-Now-Generally-Available
 tags:
 - AI Functions
 - Ai.analyze Sentiment

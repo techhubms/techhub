@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/automate-repetitive-code-with-github-copilot.html
 title: Automate Repetitive Code with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/automate-repetitive-code-with-github-copilot.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-06-13 00:00:00 +00:00
-permalink: /github-copilot/blogs/Automate-Repetitive-Code-with-GitHub-Copilot
 tags:
 - AI Powered Coding
 - API Calls

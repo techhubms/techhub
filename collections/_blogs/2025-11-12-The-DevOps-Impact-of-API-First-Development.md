@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/the-devops-impact-of-api-first-development/
 title: The DevOps Impact of API-First Development
 author: Alan Shimel
-canonical_url: https://devops.com/the-devops-impact-of-api-first-development/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-12 20:06:30 +00:00
-permalink: /devops/blogs/The-DevOps-Impact-of-API-First-Development
 tags:
 - AI
 - AI in APIs

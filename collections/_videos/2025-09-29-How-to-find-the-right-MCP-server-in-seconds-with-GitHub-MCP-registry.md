@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/shorts/A2ERvKTml98
 title: How to find the right MCP server in seconds with GitHub MCP registry
 author: GitHub
-canonical_url: https://www.youtube.com/shorts/A2ERvKTml98
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-09-29 19:11:52 +00:00
-permalink: /ai/videos/How-to-find-the-right-MCP-server-in-seconds-with-GitHub-MCP-registry
 tags:
 - AI Agents
 - Automation

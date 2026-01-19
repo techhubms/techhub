@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mfja7z/want_to_save_on_your_premium_request_well/
 title: Save on GitHub Copilot Premium Requests with Extensive Mode Inspired by Beast Mode
 author: cyb3rofficial
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mfja7z/want_to_save_on_your_premium_request_well/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-02 06:09:33 +00:00
-permalink: /github-copilot/community/Save-on-GitHub-Copilot-Premium-Requests-with-Extensive-Mode-Inspired-by-Beast-Mode
 tags:
 - Automation
 - Beast Mode

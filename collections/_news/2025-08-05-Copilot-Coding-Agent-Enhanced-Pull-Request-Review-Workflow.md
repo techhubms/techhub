@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-05-copilot-coding-agent-improved-pull-request-review-experience
 title: 'Copilot Coding Agent: Enhanced Pull Request Review Workflow'
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-05-copilot-coding-agent-improved-pull-request-review-experience
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-05 20:05:53 +00:00
-permalink: /github-copilot/news/Copilot-Coding-Agent-Enhanced-Pull-Request-Review-Workflow
 tags:
 - Automation
 - Change Requests

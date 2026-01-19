@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/common-iac-security-issues-and-how-to-fix-them/
 title: Common IaC Security Issues and How to Fix Them
 author: Durojaye Olusegun
-canonical_url: https://devops.com/common-iac-security-issues-and-how-to-fix-them/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-08 08:55:21 +00:00
-permalink: /azure/blogs/Common-IaC-Security-Issues-and-How-to-Fix-Them
 tags:
 - Audit Logging
 - Automated Compliance

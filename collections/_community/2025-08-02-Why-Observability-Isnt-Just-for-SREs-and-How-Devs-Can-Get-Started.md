@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/devops/comments/1mfsvq8/why_observability_isnt_just_for_sres_and_how_devs/
 title: Why Observability Isn’t Just for SREs (and How Devs Can Get Started)
 author: elizObserves
-canonical_url: https://www.reddit.com/r/devops/comments/1mfsvq8/why_observability_isnt_just_for_sres_and_how_devs/
 viewing_mode: external
 feed_name: Reddit DevOps
-feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-02 15:09:58 +00:00
-permalink: /devops/community/Why-Observability-Isnt-Just-for-SREs-and-How-Devs-Can-Get-Started
 tags:
 - Application Performance
 - Developer Practices

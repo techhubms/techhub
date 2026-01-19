@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/managing-multiple-deployment-stacks-in-azure-bicep-patterns-and/ba-p/4471392
 title: 'Managing Multiple Deployment Stacks in Azure Bicep: Patterns and Best Practices'
 author: Roslin_Nivetha
-canonical_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/managing-multiple-deployment-stacks-in-azure-bicep-patterns-and/ba-p/4471392
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 15:56:34 +00:00
-permalink: /azure/community/Managing-Multiple-Deployment-Stacks-in-Azure-Bicep-Patterns-and-Best-Practices
 tags:
 - Actiononunmanage
 - ARM Templates

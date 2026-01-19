@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-events/build-your-ignite-schedule-top-sessions-for-developers/ba-p/4469064
 title: 'Top Microsoft Ignite 2025 Sessions for Azure Developers: AI, Copilot, and Fabric'
 author: GalimahB
-canonical_url: https://techcommunity.microsoft.com/t5/azure-events/build-your-ignite-schedule-top-sessions-for-developers/ba-p/4469064
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-11 21:32:57 +00:00
-permalink: /github-copilot/community/Top-Microsoft-Ignite-2025-Sessions-for-Azure-Developers-AI-Copilot-and-Fabric
 tags:
 - Agent Framework
 - AI Agents

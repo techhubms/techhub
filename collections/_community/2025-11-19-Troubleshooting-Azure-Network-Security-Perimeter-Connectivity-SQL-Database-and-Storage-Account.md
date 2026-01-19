@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-networking/what-would-be-the-expected-behavior-for-an-nsp/m-p/4471260#M748
 title: 'Troubleshooting Azure Network Security Perimeter Connectivity: SQL Database and Storage Account'
 author: Antonio Buonaiuto
-canonical_url: https://techcommunity.microsoft.com/t5/azure-networking/what-would-be-the-expected-behavior-for-an-nsp/m-p/4471260#M748
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 08:57:53 +00:00
-permalink: /azure/community/Troubleshooting-Azure-Network-Security-Perimeter-Connectivity-SQL-Database-and-Storage-Account
 tags:
 - Azure Networking
 - Azure Platform

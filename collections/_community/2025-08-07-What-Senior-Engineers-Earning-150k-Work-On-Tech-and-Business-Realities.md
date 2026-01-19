@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mkfsxw/those_of_you_who_are_making_150k_what_are_you/
 title: 'What Senior Engineers Earning 150k+ Work On: Tech and Business Realities'
 author: Legitimate-School-59
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mkfsxw/those_of_you_who_are_making_150k_what_are_you/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-07 23:40:52 +00:00
-permalink: /coding/community/What-Senior-Engineers-Earning-150k-Work-On-Tech-and-Business-Realities
 tags:
 - .NET
 - .NET 9

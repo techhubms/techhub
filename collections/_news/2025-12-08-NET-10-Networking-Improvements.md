@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-10-networking-improvements/
 title: .NET 10 Networking Improvements
 author: Máňa
-canonical_url: https://devblogs.microsoft.com/dotnet/dotnet-10-networking-improvements/
 viewing_mode: external
 feed_name: Microsoft .NET Blog
-feed_url: https://devblogs.microsoft.com/dotnet/feed/
 date: 2025-12-08 18:05:00 +00:00
-permalink: /coding/news/NET-10-Networking-Improvements
 tags:
 - .NET
 - .NET 10

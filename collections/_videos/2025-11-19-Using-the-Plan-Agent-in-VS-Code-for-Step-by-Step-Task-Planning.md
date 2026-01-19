@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=xR3fuKtWGN0
 title: Using the Plan Agent in VS Code for Step-by-Step Task Planning
 author: Visual Studio Code
-canonical_url: https://www.youtube.com/watch?v=xR3fuKtWGN0
 viewing_mode: internal
 feed_name: Visual Studio Code YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w
 date: 2025-11-19 19:14:53 +00:00
-permalink: /ai/videos/Using-the-Plan-Agent-in-VS-Code-for-Step-by-Step-Task-Planning
 tags:
 - AI Tools
 - Copilot Chat

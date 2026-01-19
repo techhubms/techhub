@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/technical-debt-make-developers-happier-now-or-pay-more-later/
 title: 'Technical Debt: Make Developers Happier Now or Pay More Later'
 author: Ernesto Tagwerker
-canonical_url: https://devops.com/technical-debt-make-developers-happier-now-or-pay-more-later/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-10 20:18:35 +00:00
-permalink: /ai/blogs/Technical-Debt-Make-Developers-Happier-Now-or-Pay-More-Later
 tags:
 - Agentic AI
 - AI Agents

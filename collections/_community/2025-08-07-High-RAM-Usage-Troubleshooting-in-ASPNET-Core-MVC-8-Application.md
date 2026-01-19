@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mk4hp1/high_ram_usage_aspnet_core_mvc/
 title: High RAM Usage Troubleshooting in ASP.NET Core MVC 8 Application
 author: scartus
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mk4hp1/high_ram_usage_aspnet_core_mvc/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-07 16:19:11 +00:00
-permalink: /coding/community/High-RAM-Usage-Troubleshooting-in-ASPNET-Core-MVC-8-Application
 tags:
 - .NET
 - .NET 8

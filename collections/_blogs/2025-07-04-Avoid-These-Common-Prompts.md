@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/avoid-these-common-prompts.html
 title: Avoid These Common Prompts
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/avoid-these-common-prompts.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-07-04 00:00:00 +00:00
-permalink: /github-copilot/blogs/Avoid-These-Common-Prompts
 tags:
 - AI Assisted Development
 - Bug Fixing

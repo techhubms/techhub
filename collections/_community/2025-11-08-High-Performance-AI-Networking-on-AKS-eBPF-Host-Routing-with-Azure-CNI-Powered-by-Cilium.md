@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/introducing-ebpf-host-routing-high-performance-ai-networking/ba-p/4468216
 title: 'High-Performance AI Networking on AKS: eBPF Host Routing with Azure CNI Powered by Cilium'
 author: Sam_Foo
-canonical_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/introducing-ebpf-host-routing-high-performance-ai-networking/ba-p/4468216
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-08 00:45:49 +00:00
-permalink: /ai/community/High-Performance-AI-Networking-on-AKS-eBPF-Host-Routing-with-Azure-CNI-Powered-by-Cilium
 tags:
 - Advanced Container Networking Services
 - AKS

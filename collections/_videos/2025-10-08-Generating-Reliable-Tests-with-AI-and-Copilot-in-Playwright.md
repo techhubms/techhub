@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=2p9kRRcrv80
 title: Generating Reliable Tests with AI and Copilot in Playwright
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=2p9kRRcrv80
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-10-08 14:05:44 +00:00
-permalink: /github-copilot/videos/Generating-Reliable-Tests-with-AI-and-Copilot-in-Playwright
 tags:
 - AI Testing
 - Automated Testing

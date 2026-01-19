@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/qovery-adds-multiple-ai-agents-to-devops-automation-platform/
 title: Qovery Introduces AI Agents to Enhance DevOps Automation
 author: Mike Vizard
-canonical_url: https://devops.com/qovery-adds-multiple-ai-agents-to-devops-automation-platform/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-11-06 17:16:24 +00:00
-permalink: /ai/blogs/Qovery-Introduces-AI-Agents-to-Enhance-DevOps-Automation
 tags:
 - AI Agent
 - Automation

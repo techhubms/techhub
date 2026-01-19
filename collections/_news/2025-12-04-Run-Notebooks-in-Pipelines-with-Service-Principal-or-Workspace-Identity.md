@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/run-notebooks-in-pipelines-with-service-principal-or-workspace-identity/
 title: Run Notebooks in Pipelines with Service Principal or Workspace Identity
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/run-notebooks-in-pipelines-with-service-principal-or-workspace-identity/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-04 11:00:00 +00:00
-permalink: /ml/news/Run-Notebooks-in-Pipelines-with-Service-Principal-or-Workspace-Identity
 tags:
 - Connection Property
 - Data Factory

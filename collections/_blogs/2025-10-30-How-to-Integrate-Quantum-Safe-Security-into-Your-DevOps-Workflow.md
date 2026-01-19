@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/how-to-integrate-quantum-safe-security-into-your-devops-workflow/
 title: How to Integrate Quantum-Safe Security into Your DevOps Workflow
 author: Carl Torrence
-canonical_url: https://devops.com/how-to-integrate-quantum-safe-security-into-your-devops-workflow/
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-10-30 11:50:54 +00:00
-permalink: /devops/blogs/How-to-Integrate-Quantum-Safe-Security-into-Your-DevOps-Workflow
 tags:
 - Business Of DevOps
 - CI/CD Pipeline Security

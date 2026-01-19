@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://dellenny.com/what-to-do-when-sharepoint-search-doesnt-return-the-right-results/
 title: Troubleshooting SharePoint Search Result Issues
 author: Dellenny
-canonical_url: https://dellenny.com/what-to-do-when-sharepoint-search-doesnt-return-the-right-results/
 viewing_mode: external
 feed_name: Dellenny's Blog
-feed_url: https://dellenny.com/feed/
 date: 2025-09-04 13:48:28 +00:00
-permalink: /coding/blogs/Troubleshooting-SharePoint-Search-Result-Issues
 tags:
 - Crawling
 - Indexing

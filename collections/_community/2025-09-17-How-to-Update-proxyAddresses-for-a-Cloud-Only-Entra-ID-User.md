@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure/how-to-update-the-proxyaddresses-of-a-cloud-only-entra-id-user/m-p/4454763#M22217
 title: How to Update proxyAddresses for a Cloud-Only Entra ID User
 author: JMSHW0420
-canonical_url: https://techcommunity.microsoft.com/t5/azure/how-to-update-the-proxyaddresses-of-a-cloud-only-entra-id-user/m-p/4454763#M22217
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-09-17 12:42:16 +00:00
-permalink: /security/community/How-to-Update-proxyAddresses-for-a-Cloud-Only-Entra-ID-User
 tags:
 - Azure Active Directory
 - Cloud Identity

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=scrkmm03K88
 title: 'Optimizing Linux Deployments: Performance and Security on Azure'
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=scrkmm03K88
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-24 12:01:44 +00:00
-permalink: /azure/videos/Optimizing-Linux-Deployments-Performance-and-Security-on-Azure
 tags:
 - Azure Best Practices
 - Azure Monitor

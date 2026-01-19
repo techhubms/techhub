@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/modernization-best-practices-and/sap-sybase-ase-to-azure-sql-migration-using-ssma-and-bcp/ba-p/4436624
 title: Accelerating SAP Sybase ASE to Azure SQL Migration Using SSMA and Parallel BCP
 author: Manish_Kumar_Pandey
-canonical_url: https://techcommunity.microsoft.com/t5/modernization-best-practices-and/sap-sybase-ase-to-azure-sql-migration-using-ssma-and-bcp/ba-p/4436624
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 01:25:53 +00:00
-permalink: /azure/community/Accelerating-SAP-Sybase-ASE-to-Azure-SQL-Migration-Using-SSMA-and-Parallel-BCP
 tags:
 - Azure Data Migration
 - Azure SQL Database

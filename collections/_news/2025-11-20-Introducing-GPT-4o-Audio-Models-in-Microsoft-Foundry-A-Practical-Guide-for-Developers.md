@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/foundry/azure-openai-gpt4o-audio-models-developer-guide/
 title: 'Introducing GPT-4o Audio Models in Microsoft Foundry: A Practical Guide for Developers'
 author: Allan Carranza
-canonical_url: https://devblogs.microsoft.com/foundry/azure-openai-gpt4o-audio-models-developer-guide/
 viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
-feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-20 16:00:21 +00:00
-permalink: /ai/news/Introducing-GPT-4o-Audio-Models-in-Microsoft-Foundry-A-Practical-Guide-for-Developers
 tags:
 - API Integration
 - Audio Models

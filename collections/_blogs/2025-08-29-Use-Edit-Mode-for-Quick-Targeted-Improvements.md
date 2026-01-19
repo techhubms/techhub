@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html
 title: Use Edit Mode for Quick, Targeted Improvements
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-08-29 00:00:00 +00:00
-permalink: /github-copilot/blogs/Use-Edit-Mode-for-Quick-Targeted-Improvements
 tags:
 - Agent Mode
 - AI Pair Programmer

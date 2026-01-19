@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=twQTixBZen8
 title: GitHub Copilot Build Performance Analysis in Visual Studio 2026
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=twQTixBZen8
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-11-12 16:01:32 +00:00
-permalink: /github-copilot/videos/GitHub-Copilot-Build-Performance-Analysis-in-Visual-Studio-2026
 tags:
 - Build Bottlenecks
 - Build Optimization

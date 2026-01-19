@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/jfrog-ceo-ai-agents-require-practices-beyond-security-traceability/?utm_source=rss&utm_medium=rss&utm_campaign=jfrog-ceo-ai-agents-require-practices-beyond-security-traceability
 title: 'JFrog CEO: AI Agents Require Practices Beyond Security, Traceability'
 author: Jon Swartz
-canonical_url: https://devops.com/jfrog-ceo-ai-agents-require-practices-beyond-security-traceability/?utm_source=rss&utm_medium=rss&utm_campaign=jfrog-ceo-ai-agents-require-practices-beyond-security-traceability
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-09 18:52:25 +00:00
-permalink: /github-copilot/blogs/JFrog-CEO-AI-Agents-Require-Practices-Beyond-Security-Traceability
 tags:
 - AI Agents
 - Anthropic

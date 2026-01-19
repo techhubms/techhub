@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=jV570EFcC9o
 title: 'The Human Side of Octoverse 2025: Insights on Open Source, AI, and Collaboration'
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=jV570EFcC9o
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-12-08 17:12:15 +00:00
-permalink: /ai/videos/The-Human-Side-of-Octoverse-2025-Insights-on-Open-Source-AI-and-Collaboration
 tags:
 - Code Standards
 - Community Growth

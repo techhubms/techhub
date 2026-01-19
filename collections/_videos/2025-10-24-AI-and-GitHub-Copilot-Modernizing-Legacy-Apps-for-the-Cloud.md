@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=a9glyQs6cbE
 title: 'AI & GitHub Copilot: Modernizing Legacy Apps for the Cloud'
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=a9glyQs6cbE
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-24 23:58:52 +00:00
-permalink: /github-copilot/videos/AI-and-GitHub-Copilot-Modernizing-Legacy-Apps-for-the-Cloud
 tags:
 - .NET Modernization
 - AI Powered Modernization

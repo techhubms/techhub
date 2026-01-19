@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-events/build-your-microsoft-ignite-schedule-top-sessions-for-it-pros/ba-p/4468165
 title: 'Build Your Microsoft Ignite Schedule: Top Sessions for IT Pros'
 author: GalimahB
-canonical_url: https://techcommunity.microsoft.com/t5/azure-events/build-your-microsoft-ignite-schedule-top-sessions-for-it-pros/ba-p/4468165
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-07 18:46:27 +00:00
-permalink: /ai/community/Build-Your-Microsoft-Ignite-Schedule-Top-Sessions-for-IT-Pros
 tags:
 - AI Agents
 - Automation

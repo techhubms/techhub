@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/reimagining-network-operations-how-microsoft-netai-tackles/ba-p/4470572
 title: 'Reimagining Network Operations with Microsoft NetAI: Hyperscale AI-Driven Automation'
 author: rickliev
-canonical_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/reimagining-network-operations-how-microsoft-netai-tackles/ba-p/4470572
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-19 01:45:22 +00:00
-permalink: /ai/community/Reimagining-Network-Operations-with-Microsoft-NetAI-Hyperscale-AI-Driven-Automation
 tags:
 - Agent Collaboration
 - AI Automation

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.cooknwithcopilot.com/blog/use-github-copilot-chat-to-plan-before-you-code.html
 title: Use GitHub Copilot Chat to Plan Before You Code
 author: randy.pagels@xebia.com (Randy Pagels)
-canonical_url: https://www.cooknwithcopilot.com/blog/use-github-copilot-chat-to-plan-before-you-code.html
 viewing_mode: external
 feed_name: Randy Pagels's Blog
-feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-07-18 00:00:00 +00:00
-permalink: /github-copilot/blogs/Use-GitHub-Copilot-Chat-to-Plan-Before-You-Code
 tags:
 - Code Design
 - Code Outline

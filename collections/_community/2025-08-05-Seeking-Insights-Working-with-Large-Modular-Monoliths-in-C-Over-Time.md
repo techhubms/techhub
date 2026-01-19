@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/dotnet/comments/1mhzuoj/long_term_experience_with_large_modular_monolith/
 title: 'Seeking Insights: Working with Large Modular Monoliths in C# Over Time'
 author: Background-Brick-157
-canonical_url: https://www.reddit.com/r/dotnet/comments/1mhzuoj/long_term_experience_with_large_modular_monolith/
 viewing_mode: external
 feed_name: Reddit DotNet
-feed_url: https://www.reddit.com/r/dotnet/.rss
 date: 2025-08-05 04:38:09 +00:00
-permalink: /coding/community/Seeking-Insights-Working-with-Large-Modular-Monoliths-in-C-Over-Time
 tags:
 - .NET
 - C#

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=fPSHFYyN-Do
 title: 'Ship Faster: End-to-End Azure App Development with GitHub Copilot and Intelligent Agents'
 author: Microsoft Developer
-canonical_url: https://www.youtube.com/watch?v=fPSHFYyN-Do
 viewing_mode: internal
 feed_name: Microsoft Developer YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g
 date: 2025-12-10 22:07:54 +00:00
-permalink: /github-copilot/videos/Ship-Faster-End-to-End-Azure-App-Development-with-GitHub-Copilot-and-Intelligent-Agents
 tags:
 - AI Agents
 - App Modernization

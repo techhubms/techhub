@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devblogs.microsoft.com/devops/azure-boards-integration-with-github-copilot-private-preview/
 title: 'Azure Boards Integration with GitHub Copilot: Private Preview Announced'
 author: Dan Hellem
-canonical_url: https://devblogs.microsoft.com/devops/azure-boards-integration-with-github-copilot-private-preview/
 viewing_mode: external
 feed_name: Microsoft DevOps Blog
-feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-09-16 11:45:27 +00:00
-permalink: /github-copilot/news/Azure-Boards-Integration-with-GitHub-Copilot-Private-Preview-Announced
 tags:
 - Agile
 - Azure Boards

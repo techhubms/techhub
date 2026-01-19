@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/transforming-city-operations-how-villa-park-and-dataon-deliver/ba-p/4470360
 title: 'Transforming City Operations: Edge RAG and Azure Arc in Villa Park'
 author: moran_assaf
-canonical_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/transforming-city-operations-how-villa-park-and-dataon-deliver/ba-p/4470360
 viewing_mode: external
 feed_name: Microsoft Tech Community
-feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure
 date: 2025-11-18 16:00:44 +00:00
-permalink: /ai/community/Transforming-City-Operations-Edge-RAG-and-Azure-Arc-in-Villa-Park
 tags:
 - Adaptive Cloud
 - Agentic Workflow

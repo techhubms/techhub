@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://news.microsoft.com/source/asia/features/a-deaf-writers-journey-with-ai-discovering-new-creative-paths/?lang=ko
 title: "Empowering Deaf Creators: Min-ji So's Journey with Microsoft Copilot and AI"
 author: stclarke
-canonical_url: https://news.microsoft.com/source/asia/features/a-deaf-writers-journey-with-ai-discovering-new-creative-paths/?lang=ko
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-06 15:13:38 +00:00
-permalink: /ai/news/Empowering-Deaf-Creators-Min-ji-Sos-Journey-with-Microsoft-Copilot-and-AI
 tags:
 - Accessibility
 - AI For Impact

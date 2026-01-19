@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=SkmluS-xzmM
 title: 'Open Source Friday: Archestra – Secure Platform for Enterprise Agents with MCP'
 author: GitHub
-canonical_url: https://www.youtube.com/watch?v=SkmluS-xzmM
 viewing_mode: internal
 feed_name: GitHub YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ
 date: 2025-10-14 21:10:06 +00:00
-permalink: /ai/videos/Open-Source-Friday-Archestra-Secure-Platform-for-Enterprise-Agents-with-MCP
 tags:
 - Access Control
 - AI Orchestration

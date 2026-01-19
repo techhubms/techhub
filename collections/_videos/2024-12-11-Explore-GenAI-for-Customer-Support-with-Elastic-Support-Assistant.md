@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=5Y0ohd4gKxA
 title: Explore GenAI for Customer Support with Elastic Support Assistant
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=5Y0ohd4gKxA
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2024-12-11 18:06:10 +00:00
-permalink: /ai/videos/Explore-GenAI-for-Customer-Support-with-Elastic-Support-Assistant
 tags:
 - AI Driven Support
 - Azure OpenAI

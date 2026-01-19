@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-09-14-auto-model-selection-for-copilot-in-vs-code-in-public-preview
 title: Auto Model Selection for GitHub Copilot in VS Code Public Preview
 author: Allison
-canonical_url: https://github.blog/changelog/2025-09-14-auto-model-selection-for-copilot-in-vs-code-in-public-preview
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-09-15 12:53:46 +00:00
-permalink: /github-copilot/news/Auto-Model-Selection-for-GitHub-Copilot-in-VS-Code-Public-Preview
 tags:
 - AI Models
 - Auto Model Selection

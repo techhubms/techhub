@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-september-2025-release/
 title: 'On-premises Data Gateway September 2025 Release: New Features & Power BI Desktop Compatibility'
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-september-2025-release/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-30 13:30:00 +00:00
-permalink: /ml/news/On-premises-Data-Gateway-September-2025-Release-New-Features-and-Power-BI-Desktop-Compatibility
 tags:
 - Analytics
 - BigQuery

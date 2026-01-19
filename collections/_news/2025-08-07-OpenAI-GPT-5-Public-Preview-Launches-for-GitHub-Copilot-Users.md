@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-08-07-openai-gpt-5-is-now-in-public-preview-for-github-copilot
 title: OpenAI GPT-5 Public Preview Launches for GitHub Copilot Users
 author: Allison
-canonical_url: https://github.blog/changelog/2025-08-07-openai-gpt-5-is-now-in-public-preview-for-github-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-07 17:00:02 +00:00
-permalink: /github-copilot/news/OpenAI-GPT-5-Public-Preview-Launches-for-GitHub-Copilot-Users
 tags:
 - Agentic AI
 - AI Collaboration

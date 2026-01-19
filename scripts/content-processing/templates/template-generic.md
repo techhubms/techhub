@@ -3,4 +3,4 @@
 
 {{CONTENT}}
 
-This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{CANONICAL_URL}})
+[Read the entire article]({{EXTERNAL_URL}})

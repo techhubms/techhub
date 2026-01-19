@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://devops.com/perforce-adds-small-language-model-to-create-synthetic-data-for-app-testing/?utm_source=rss&utm_medium=rss&utm_campaign=perforce-adds-small-language-model-to-create-synthetic-data-for-app-testing
 title: Perforce Adds AI-Driven Synthetic Data Generation to Delphix Platform for DevOps Testing
 author: Mike Vizard
-canonical_url: https://devops.com/perforce-adds-small-language-model-to-create-synthetic-data-for-app-testing/?utm_source=rss&utm_medium=rss&utm_campaign=perforce-adds-small-language-model-to-create-synthetic-data-for-app-testing
 viewing_mode: external
 feed_name: DevOps Blog
-feed_url: https://devops.com/feed/
 date: 2025-09-09 12:00:08 +00:00
-permalink: /ai/blogs/Perforce-Adds-AI-Driven-Synthetic-Data-Generation-to-Delphix-Platform-for-DevOps-Testing
 tags:
 - AI Automation
 - AI in DevOps

@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-12-17-gemini-3-flash-is-now-in-public-preview-for-github-copilot
 title: Gemini 3 Flash Public Preview Released for GitHub Copilot Users
 author: Allison
-canonical_url: https://github.blog/changelog/2025-12-17-gemini-3-flash-is-now-in-public-preview-for-github-copilot
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-12-17 15:04:53 +00:00
-permalink: /github-copilot/news/Gemini-3-Flash-Public-Preview-Released-for-GitHub-Copilot-Users
 tags:
 - AI Models
 - API Key

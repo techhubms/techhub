@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-copy-job-activity-now-general-available-in-data-factory-pipeline/
 title: Copy Job Activity Now Generally Available in Microsoft Fabric Data Factory Pipelines
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-copy-job-activity-now-general-available-in-data-factory-pipeline/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-24 11:00:00 +00:00
-permalink: /ml/news/Copy-Job-Activity-Now-Generally-Available-in-Microsoft-Fabric-Data-Factory-Pipelines
 tags:
 - Bulk Data Transfer
 - Change Data Capture

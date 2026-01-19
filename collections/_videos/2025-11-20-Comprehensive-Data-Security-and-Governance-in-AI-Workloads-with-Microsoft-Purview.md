@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=7FpeYx0f1ck
 title: Comprehensive Data Security and Governance in AI Workloads with Microsoft Purview
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=7FpeYx0f1ck
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-20 10:41:43 +00:00
-permalink: /ai/videos/Comprehensive-Data-Security-and-Governance-in-AI-Workloads-with-Microsoft-Purview
 tags:
 - AI Risk Management
 - Audit Logs

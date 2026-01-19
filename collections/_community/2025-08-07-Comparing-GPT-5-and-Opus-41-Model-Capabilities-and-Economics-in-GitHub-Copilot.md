@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk8f03/gpt5_only_matches_opus_41/
 title: Comparing GPT-5 and Opus 4.1 Model Capabilities and Economics in GitHub Copilot
 author: fishchar
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mk8f03/gpt5_only_matches_opus_41/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-07 18:46:10 +00:00
-permalink: /github-copilot/community/Comparing-GPT-5-and-Opus-41-Model-Capabilities-and-Economics-in-GitHub-Copilot
 tags:
 - AI Evaluation
 - AI Model Comparison

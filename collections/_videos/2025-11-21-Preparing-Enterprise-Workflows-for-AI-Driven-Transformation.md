@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.youtube.com/watch?v=wh8xquMkVOE
 title: Preparing Enterprise Workflows for AI-Driven Transformation
 author: Microsoft Events
-canonical_url: https://www.youtube.com/watch?v=wh8xquMkVOE
 viewing_mode: internal
 feed_name: Microsoft Events YouTube
-feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg
 date: 2025-11-21 10:52:21 +00:00
-permalink: /ai/videos/Preparing-Enterprise-Workflows-for-AI-Driven-Transformation
 tags:
 - Agent Orchestration
 - AI Agents

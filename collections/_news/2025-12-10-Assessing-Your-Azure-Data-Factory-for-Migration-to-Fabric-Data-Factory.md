@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/assessing-your-azure-data-factory-for-migration-to-fabric-data-factory/
 title: Assessing Your Azure Data Factory for Migration to Fabric Data Factory
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/assessing-your-azure-data-factory-for-migration-to-fabric-data-factory/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-10 16:30:00 +00:00
-permalink: /ml/news/Assessing-Your-Azure-Data-Factory-for-Migration-to-Fabric-Data-Factory
 tags:
 - Azure Data Factory
 - Cloud Data Platform

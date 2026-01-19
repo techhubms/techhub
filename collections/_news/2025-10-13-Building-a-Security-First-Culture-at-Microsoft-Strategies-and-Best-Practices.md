@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.microsoft.com/en-us/security/blog/2025/10/13/building-a-lasting-security-culture-at-microsoft/
 title: 'Building a Security-First Culture at Microsoft: Strategies and Best Practices'
 author: stclarke
-canonical_url: https://www.microsoft.com/en-us/security/blog/2025/10/13/building-a-lasting-security-culture-at-microsoft/
 viewing_mode: external
 feed_name: Microsoft News
-feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-13 16:48:07 +00:00
-permalink: /azure/news/Building-a-Security-First-Culture-at-Microsoft-Strategies-and-Best-Practices
 tags:
 - AI
 - AI Cyberthreats

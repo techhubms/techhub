@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://blog.fabric.microsoft.com/en-US/blog/bringing-customer-managed-keys-to-fabric-warehouse-and-sql-analytics-endpoint/
 title: Customer-Managed Keys Now Available for Fabric Warehouse and SQL Analytics Endpoint
 author: Microsoft Fabric Blog
-canonical_url: https://blog.fabric.microsoft.com/en-US/blog/bringing-customer-managed-keys-to-fabric-warehouse-and-sql-analytics-endpoint/
 viewing_mode: external
 feed_name: Microsoft Fabric Blog
-feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-15 09:00:00 +00:00
-permalink: /azure/news/Customer-Managed-Keys-Now-Available-for-Fabric-Warehouse-and-SQL-Analytics-Endpoint
 tags:
 - Azure Key Vault
 - BYOK

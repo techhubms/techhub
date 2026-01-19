@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mkdvmj/gpt5_github_premium_requests_vs_free_gpt5_at/
 title: Differences Between GitHub Copilot GPT-5 Premium and Free Copilot Microsoft GPT-5
 author: Worth_Word_1314
-canonical_url: https://www.reddit.com/r/GithubCopilot/comments/1mkdvmj/gpt5_github_premium_requests_vs_free_gpt5_at/
 viewing_mode: external
 feed_name: Reddit Github Copilot
-feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-07 22:18:20 +00:00
-permalink: /github-copilot/community/Differences-Between-GitHub-Copilot-GPT-5-Premium-and-Free-Copilot-Microsoft-GPT-5
 tags:
 - Code Generation
 - Coding Productivity

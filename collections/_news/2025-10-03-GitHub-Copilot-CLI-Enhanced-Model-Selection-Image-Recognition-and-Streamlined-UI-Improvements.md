@@ -1,13 +1,10 @@
 ﻿---
-layout: post
+external_url: https://github.blog/changelog/2025-10-03-github-copilot-cli-enhanced-model-selection-image-support-and-streamlined-ui
 title: 'GitHub Copilot CLI: Enhanced Model Selection, Image Recognition, and Streamlined UI Improvements'
 author: Dylan Birtolo
-canonical_url: https://github.blog/changelog/2025-10-03-github-copilot-cli-enhanced-model-selection-image-support-and-streamlined-ui
 viewing_mode: external
 feed_name: The GitHub Blog
-feed_url: https://github.blog/changelog/feed/
 date: 2025-10-03 16:23:18 +00:00
-permalink: /github-copilot/news/GitHub-Copilot-CLI-Enhanced-Model-Selection-Image-Recognition-and-Streamlined-UI-Improvements
 tags:
 - AI Coding Assistant
 - Anthropic Claude Sonnet
