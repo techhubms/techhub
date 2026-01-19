@@ -289,4 +289,10 @@
     "outputDir": "_videos",
     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA"
   }
+  // ,
+  // {
+  //   "name": "Fokko at Work YouTube",
+  //   "outputDir": "_videos",
+  //   "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCemYJar_AE5cF_dkCoag02A"
+  // }
 ]
