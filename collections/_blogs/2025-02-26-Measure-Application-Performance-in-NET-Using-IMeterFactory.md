@@ -12,9 +12,7 @@ tags:
 - .NET
 - .NET Counters
 - ASP.NET Core
-- Blogs
 - C#
-- Coding
 - Dependency Injection
 - IMeterFactory
 - MetricCollector

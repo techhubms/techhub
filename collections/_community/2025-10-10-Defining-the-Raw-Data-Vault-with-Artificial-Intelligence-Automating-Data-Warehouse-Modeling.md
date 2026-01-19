@@ -9,11 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-10 12:33:30 +00:00
 permalink: /ai/community/Defining-the-Raw-Data-Vault-with-Artificial-Intelligence-Automating-Data-Warehouse-Modeling
 tags:
-- AI
-- Azure
 - Azure Data Lake Storage
 - Cloud Analytics
-- Community
 - Data Engineering
 - Data Integration
 - Data Modeling
@@ -22,11 +19,9 @@ tags:
 - Data Warehouse Automation
 - Enterprise Data Model
 - Flow.BI
-- Machine Learning
 - Metadata Driven
 - Microsoft Fabric
 - Microsoft SQL Server
-- ML
 - Multilingual Metadata
 - Neural Networks
 - Raw Data Vault

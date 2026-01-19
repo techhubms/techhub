@@ -9,17 +9,13 @@ feed_url: https://zure.com/blog/rss.xml
 date: 2025-11-07 04:45:01 +00:00
 permalink: /coding/blogs/Explaining-Coding-to-Non-Developers-A-Developers-WFH-Reflections
 tags:
-- Azure
 - Azure DevOps
 - Bicep
-- Blogs
 - Build Errors
 - CI/CD
-- Coding
 - Collaboration
 - Debugging
 - Developer Life
-- DevOps
 - People
 - Software Deployment
 - Teamwork

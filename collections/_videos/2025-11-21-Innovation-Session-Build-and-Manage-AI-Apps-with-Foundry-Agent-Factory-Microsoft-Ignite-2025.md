@@ -12,14 +12,10 @@ tags:
 - Agent Evaluation
 - Agent Factory
 - Agent Orchestration
-- AI
 - AI Agents
-- Azure
 - CI/CD
 - Developer Tools
-- DevOps
 - Enterprise Security
-- GitHub Copilot
 - Human in The Loop
 - InnovatewithAzureAIappsandagents
 - Intelligent Agents
@@ -29,7 +25,6 @@ tags:
 - MS Ignite
 - MSIgnite
 - Observability
-- Videos
 - Workflow Automation
 section_names:
 - ai

@@ -9,13 +9,11 @@ feed_url: https://github.blog/feed/
 date: 2025-06-24 17:04:47 +00:00
 permalink: /ai/news/Why-developer-expertise-matters-more-than-ever-in-the-age-of-AI
 tags:
-- AI
 - AI Assisted Coding
 - Career Growth
 - Code Quality
 - Developer Skills
 - Human in The Loop
-- News
 - Productivity
 section_names:
 - ai

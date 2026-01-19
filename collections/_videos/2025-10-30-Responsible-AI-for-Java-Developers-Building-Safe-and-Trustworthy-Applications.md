@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-30 00:01:11 +00:00
 permalink: /ai/videos/Responsible-AI-for-Java-Developers-Building-Safe-and-Trustworthy-Applications
 tags:
-- AI
 - AI Best Practices
 - AI Governance
 - AI Security
@@ -17,7 +16,6 @@ tags:
 - AIFiltering
 - AIGovernance
 - AISecurity
-- Azure
 - Azure AI
 - Azure AI Content Safety
 - Azure Search
@@ -37,9 +35,7 @@ tags:
 - ResponsibleAI
 - Safe AI
 - SafeAI
-- Security
 - Soft Blocks
-- Videos
 section_names:
 - ai
 - azure

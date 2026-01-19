@@ -9,10 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-21 00:53:23 +00:00
 permalink: /azure/community/Audit-and-Enable-Windows-Recovery-Environment-WinRE-via-Azure-Arc-Policies
 tags:
-- Azure
 - Azure Arc
 - Azure Policy
-- Community
 - Compliance
 - Configuration Management
 - Connected Machine Agent
@@ -21,7 +19,6 @@ tags:
 - Hybrid Cloud
 - Machine Configuration
 - Policy Enforcement
-- Security
 - Server Resiliency
 - Windows Recovery Environment
 - Windows Server

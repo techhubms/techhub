@@ -10,11 +10,9 @@ date: 2025-08-11 18:12:15 +00:00
 permalink: /ai/community/Building-Applications-Locally-with-gpt-oss-20b-and-the-AI-Toolkit-for-VS-Code
 tags:
 - Agent Builder
-- AI
 - AI Agents
 - AI Toolkit
 - Azure AI Foundry
-- Community
 - Edge AI
 - Gpt Oss 120b
 - Gpt Oss 20b

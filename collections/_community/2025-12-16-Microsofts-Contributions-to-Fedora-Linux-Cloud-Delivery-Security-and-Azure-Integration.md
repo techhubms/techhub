@@ -10,14 +10,11 @@ date: 2025-12-16 19:01:32 +00:00
 permalink: /azure/community/Microsofts-Contributions-to-Fedora-Linux-Cloud-Delivery-Security-and-Azure-Integration
 tags:
 - ARM64
-- Azure
 - Azure Community Gallery
 - Azure Linux Team
 - Azure VM Utils
 - Cloud Image Delivery
 - Cloud Infrastructure
-- Community
-- DevOps
 - Ebpf
 - Fedora Linux
 - Fedora SIGs
@@ -29,7 +26,6 @@ tags:
 - OpenShift Automation
 - Rust Client
 - Secure Boot
-- Security
 - Sigul
 - UEFI Signing
 - WSL

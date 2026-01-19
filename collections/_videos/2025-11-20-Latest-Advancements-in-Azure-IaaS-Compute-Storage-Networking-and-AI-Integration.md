@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-20 10:13:27 +00:00
 permalink: /ai/videos/Latest-Advancements-in-Azure-IaaS-Compute-Storage-Networking-and-AI-Integration
 tags:
-- AI
 - AI Transformation
 - AKS
 - Automation
-- Azure
 - Azure Cobalt 100
 - Azure Copilot
 - Azure IaaS
@@ -29,10 +27,8 @@ tags:
 - MSIgnite
 - Networking
 - Resiliency
-- Security
 - Snapshots
 - Storage
-- Videos
 - Workload Optimization
 section_names:
 - ai

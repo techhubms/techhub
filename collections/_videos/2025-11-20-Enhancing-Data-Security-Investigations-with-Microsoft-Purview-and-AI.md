@@ -10,7 +10,6 @@ date: 2025-11-20 07:50:27 +00:00
 permalink: /ai/videos/Enhancing-Data-Security-Investigations-with-Microsoft-Purview-and-AI
 tags:
 - Advanced Threat Detection
-- AI
 - AI Based Security
 - AI Integration
 - Customer Story
@@ -26,10 +25,8 @@ tags:
 - MSIgnite
 - Risk Assessment
 - Secureyourdata
-- Security
 - Security Operations Center
 - Vector Search
-- Videos
 section_names:
 - ai
 - security

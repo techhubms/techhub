@@ -11,7 +11,6 @@ permalink: /ml/news/Mirroring-for-SQL-Server-in-Microsoft-Fabric-Generally-Avail
 tags:
 - Analytics
 - Arc Agent
-- Azure
 - Azure SQL
 - Change Data Capture
 - Change Feed
@@ -23,8 +22,6 @@ tags:
 - Lakehouse
 - Microsoft Fabric
 - Mirroring
-- ML
-- News
 - On Premises Data Gateway
 - OneLake
 - Power BI

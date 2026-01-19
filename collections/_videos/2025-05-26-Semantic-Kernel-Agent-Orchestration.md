@@ -12,19 +12,16 @@ tags:
 - Adaptive Solutions
 - Agent Coordination
 - Agent Orchestration
-- AI
 - AI Development
 - AI Frameworks
 - AI Orchestration
 - AI Systems
-- Coding
 - Collaboration Patterns
 - Intelligent Agents
 - Microsoft
 - Microsoft AI
 - Multi Agent Systems
 - Semantic Kernel
-- Videos
 section_names:
 - ai
 - coding

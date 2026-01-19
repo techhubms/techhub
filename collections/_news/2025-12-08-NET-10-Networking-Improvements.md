@@ -11,7 +11,6 @@ permalink: /coding/news/NET-10-Networking-Improvements
 tags:
 - .NET
 - .NET 10
-- Coding
 - Cookies
 - HTTP
 - IP Address
@@ -19,11 +18,9 @@ tags:
 - NegotiatedCipherSuite
 - Net Security
 - Networking
-- News
 - Performance Optimization
 - Query Verb
 - QuicConnection
-- Security
 - Server Sent Events
 - ServerCertificateValidationCallback
 - SslStream

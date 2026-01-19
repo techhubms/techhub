@@ -9,10 +9,8 @@ feed_url: https://devblogs.microsoft.com/feed
 date: 2025-06-05 17:05:24 +00:00
 permalink: /ai/news/Microsoft-and-LangChain-Advancing-AI-Security-for-Open-Source-on-Azure
 tags:
-- AI
 - AI Security
 - Autogen
-- Azure
 - Azure AI Foundry
 - Continuous Integration
 - Information Leakage
@@ -20,11 +18,9 @@ tags:
 - LangChain4J
 - LangGraph
 - Large Language Models
-- News
 - Open Source
 - Privilege Escalation
 - Python
-- Security
 - Semantic Kernel
 - Trust
 section_names:

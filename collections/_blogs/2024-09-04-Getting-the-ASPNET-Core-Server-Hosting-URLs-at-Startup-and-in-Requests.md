@@ -13,8 +13,6 @@ tags:
 - Application Development
 - Asp.net
 - Asp.net Core
-- Blogs
-- Coding
 - Dependency Injection
 - Host Configuration
 - Iservaddressesfeature

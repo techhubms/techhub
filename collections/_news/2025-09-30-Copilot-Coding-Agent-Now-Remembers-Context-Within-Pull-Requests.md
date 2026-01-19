@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-30 16:50:47 +00:00
 permalink: /github-copilot/news/Copilot-Coding-Agent-Now-Remembers-Context-Within-Pull-Requests
 tags:
-- AI
 - AI Automation
 - Code Collaboration
 - Code Review
@@ -19,9 +18,7 @@ tags:
 - Copilot Enterprise
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Improvement
-- News
 - Pro+
 - Pull Request
 - Session Context

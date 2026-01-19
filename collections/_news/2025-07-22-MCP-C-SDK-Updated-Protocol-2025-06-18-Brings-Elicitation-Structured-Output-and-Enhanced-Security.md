@@ -10,20 +10,16 @@ date: 2025-07-22 17:00:00 +00:00
 permalink: /ai/news/MCP-C-SDK-Updated-Protocol-2025-06-18-Brings-Elicitation-Structured-Output-and-Enhanced-Security
 tags:
 - .NET
-- AI
 - Authentication
 - C#
-- Coding
 - Dependency Injection
 - Elicitation
 - MCP
-- News
 - OAuth2
 - OpenID Connect
 - Resource Links
 - Schema
 - SDK
-- Security
 - Structured Output
 - Tool Metadata
 section_names:

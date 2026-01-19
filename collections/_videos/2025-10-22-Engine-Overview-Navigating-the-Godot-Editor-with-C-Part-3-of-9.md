@@ -12,7 +12,6 @@ tags:
 - .NET
 - Beginner Tutorial
 - C#
-- Coding
 - Debugging
 - Editor Views
 - File System
@@ -23,7 +22,6 @@ tags:
 - Inspector
 - Microsoft Developer
 - Scene Panel
-- Videos
 - VS Code
 section_names:
 - coding

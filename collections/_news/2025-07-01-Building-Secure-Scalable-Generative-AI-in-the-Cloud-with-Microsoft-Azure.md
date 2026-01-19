@@ -9,11 +9,9 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-01 15:00:00 +00:00
 permalink: /ai/news/Building-Secure-Scalable-Generative-AI-in-the-Cloud-with-Microsoft-Azure
 tags:
-- AI
 - AI + Machine Learning
 - AI Security
 - Analytics
-- Azure
 - Azure Databricks
 - Azure Key Vault
 - Azure Synapse Analytics
@@ -26,15 +24,11 @@ tags:
 - Generative AI
 - Hybrid + Multicloud
 - Hybrid Cloud
-- Machine Learning
 - Management And Governance
 - Microsoft Azure
 - Microsoft Defender For Cloud
 - Microsoft Fabric
 - Microsoft Sentinel
-- ML
-- News
-- Security
 section_names:
 - ai
 - azure

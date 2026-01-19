@@ -14,8 +14,6 @@ tags:
 - C++
 - Code Cleanup
 - Code Quality
-- Coding
-- Community
 - Developer Experience
 - Documentation
 - Feature Request

@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7
 date: 2025-10-10 15:15:12 +00:00
 permalink: /ai/videos/Azure-Update-10th-October-2025
 tags:
-- AI
 - AKS
 - App Modernization
 - App Service On Arc
-- Azure
 - Azure Backup
 - Azure Cloud
 - Azure Files Premium
@@ -22,7 +20,6 @@ tags:
 - Cloud
 - Cloud Infrastructure
 - Container Insights
-- DevOps
 - Kubernetes Fleet Manager
 - Marketplace
 - Microsoft
@@ -30,7 +27,6 @@ tags:
 - Monitoring
 - MySQL
 - PostgreSQL
-- Videos
 section_names:
 - ai
 - azure

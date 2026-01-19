@@ -12,7 +12,6 @@ tags:
 - AFD WAF
 - AFS Migration
 - ASM NFS
-- Azure
 - Azure Cloud
 - Azure Front Door
 - Azure Functions
@@ -21,16 +20,13 @@ tags:
 - Azure Update
 - Cloud
 - Cloud Infrastructure
-- DevOps
 - Incident Management
 - Microsoft
 - Microsoft Azure
-- ML
 - Node.js 20
 - PgBouncer
 - PostgreSQL Flexible Server
 - Private Endpoints
-- Videos
 - Zero Downtime Deployment
 section_names:
 - azure

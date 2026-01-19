@@ -12,7 +12,6 @@ tags:
 - Agile Development
 - And CI/CD Pipeline
 - Automation
-- Blogs
 - Business Of DevOps
 - CI/CD
 - CI/CD Pipelines
@@ -20,7 +19,6 @@ tags:
 - Continuous Integration
 - Contributed Content
 - Deployment Automation
-- DevOps
 - DevOps Practices
 - Release Engineering
 - SDLC

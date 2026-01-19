@@ -11,13 +11,11 @@ permalink: /ai/news/Microsoft-Named-Leader-in-Gartner-Magic-Quadrant-for-AI-Appl
 tags:
 - Agent Based Systems
 - Agent Framework
-- AI
 - AI + Machine Learning
 - AI Application Development
 - AI Governance
 - AI Models
 - AI Workflow Integration
-- Azure
 - Cloud To Edge AI
 - Developer Tools
 - Distributed AI
@@ -27,7 +25,6 @@ tags:
 - Gartner® Magic Quadrant™
 - GenAI Ops
 - Microsoft Foundry
-- News
 - Observability
 - Orchestration
 section_names:

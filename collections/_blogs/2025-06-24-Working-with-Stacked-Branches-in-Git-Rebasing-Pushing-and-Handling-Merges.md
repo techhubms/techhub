@@ -9,10 +9,8 @@ feed_url: https://andrewlock.net/rss.xml
 date: 2025-06-24 09:00:00 +00:00
 permalink: /devops/blogs/Working-with-Stacked-Branches-in-Git-Rebasing-Pushing-and-Handling-Merges
 tags:
-- Blogs
 - Branch Management
 - Continuous Integration
-- DevOps
 - Feature Branches
 - Git
 - Git Alias

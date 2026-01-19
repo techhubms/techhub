@@ -9,14 +9,12 @@ feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-12-02 17:31:32 +00:00
 permalink: /coding/news/Progress-on-TypeScript-7-Native-Compiler-and-Language-Service-Updates
 tags:
-- Coding
 - Compiler
 - Editor Integration
 - JavaScript
 - Language Service
 - Migration
 - Native Port
-- News
 - Performance
 - Project Corsa
 - Tooling

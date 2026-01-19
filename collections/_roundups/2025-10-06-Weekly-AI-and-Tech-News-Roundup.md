@@ -6,23 +6,14 @@ viewing_mode: internal
 date: 2025-10-06 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
-- AI
 - AI Agents
 - Automation
-- Azure
-- Coding
 - Coding Agents
 - Data Transformation
-- DevOps
 - Enterprise Cloud
-- GitHub Copilot
-- Machine Learning
 - MCP
 - Microsoft Fabric
-- ML
 - Multicloud
-- Roundups
-- Security
 - VS
 - Workflow Orchestration
 section_names:

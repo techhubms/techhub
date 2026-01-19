@@ -14,8 +14,6 @@ tags:
 - API Monitor
 - AutoHotkey
 - C#
-- Coding
-- Community
 - Computer Vision
 - Database Access
 - FlaUI

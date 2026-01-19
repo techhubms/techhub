@@ -10,17 +10,13 @@ date: 2025-07-30 22:27:34 +00:00
 permalink: /ai/videos/Practical-Introduction-to-Building-Remote-MCP-Servers
 tags:
 - Agent Integration
-- AI
-- Azure
 - Azure AI Foundry
 - Cloud Computing
 - Cloud Platforms
-- Coding
 - Custom Agents
 - Dev
 - Developer Tools
 - Development
-- DevOps
 - GitHub
 - Live Demo
 - MCP
@@ -29,7 +25,6 @@ tags:
 - Remote Server
 - Tech
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

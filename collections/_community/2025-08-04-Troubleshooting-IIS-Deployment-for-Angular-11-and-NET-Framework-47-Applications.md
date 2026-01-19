@@ -14,9 +14,6 @@ tags:
 - 404 Error
 - Angular 11
 - Backend Deployment
-- Coding
-- Community
-- DevOps
 - Frontend Deployment
 - IIS Deployment
 - MSBuild

@@ -11,18 +11,14 @@ permalink: /coding/news/Spring-Cloud-Azure-Latest-Updates-and-Troubleshooting-Ti
 tags:
 - AKS
 - Authentication
-- Azure
 - Azure Identity Extensions
 - Azure SDK
-- Coding
 - Database
-- DevOps
 - Diagnostics
 - Java
 - JCA
 - Key Vault
 - Monitoring
-- News
 - Passwordless Connections
 - Service Bus
 - Spring

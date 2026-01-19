@@ -15,8 +15,6 @@ tags:
 - Async/await
 - Books
 - C#
-- Coding
-- Community
 - Event Driven Architecture
 - Framework Design Guide
 - Functional Programming

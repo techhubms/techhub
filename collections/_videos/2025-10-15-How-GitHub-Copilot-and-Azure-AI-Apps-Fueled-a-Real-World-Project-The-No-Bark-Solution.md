@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-15 15:01:52 +00:00
 permalink: /github-copilot/videos/How-GitHub-Copilot-and-Azure-AI-Apps-Fueled-a-Real-World-Project-The-No-Bark-Solution
 tags:
-- AI
 - AI Apps
 - AI Solutions
-- Azure
 - Azure AI
 - Azure Machine Learning
 - Cloud Computing
@@ -22,18 +20,14 @@ tags:
 - Dev
 - Development
 - Dog Bark Detection
-- GitHub Copilot
 - GPU Training
-- Machine Learning
 - Microsoft
 - Microsoft Developer
-- ML
 - Non Coder Development
 - Open Source Project
 - Tech
 - Technology
 - Ultrasonic Signals
-- Videos
 section_names:
 - ai
 - azure

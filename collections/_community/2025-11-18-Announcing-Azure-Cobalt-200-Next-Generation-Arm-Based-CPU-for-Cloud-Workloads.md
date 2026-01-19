@@ -10,13 +10,11 @@ date: 2025-11-18 16:00:05 +00:00
 permalink: /azure/community/Announcing-Azure-Cobalt-200-Next-Generation-Arm-Based-CPU-for-Cloud-Workloads
 tags:
 - ARM Neoverse CSS V3
-- Azure
 - Azure Boost
 - Azure Cobalt 200
 - Azure Infrastructure
 - Azure Integrated HSM
 - Cloud Native Compute
-- Community
 - Confidential Compute Architecture
 - Cryptography Accelerator
 - Data Analytics
@@ -26,7 +24,6 @@ tags:
 - Key Vault
 - Memory Encryption
 - Performance Benchmarking
-- Security
 - Server Architecture
 - System On Chip
 - TSMC 3nm

@@ -16,7 +16,6 @@ tags:
 - ASP.NET Core
 - C#
 - Cloud Native
-- Coding
 - Diagnostics
 - F#
 - Image Processing
@@ -30,7 +29,6 @@ tags:
 - Telemetry
 - Third Party Controls
 - Troubleshooting
-- Videos
 - VS
 section_names:
 - coding

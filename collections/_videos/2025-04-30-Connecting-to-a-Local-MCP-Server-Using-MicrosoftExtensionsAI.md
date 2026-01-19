@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt
 date: 2025-04-30 02:30:13 +00:00
 permalink: /ai/videos/Connecting-to-a-Local-MCP-Server-Using-MicrosoftExtensionsAI
 tags:
-- AI
 - AI Integration
 - Application Integration
 - Client Configuration
@@ -19,7 +18,6 @@ tags:
 - Model Context
 - Real Time Processing
 - Semantic Kernel
-- Videos
 section_names:
 - ai
 ---

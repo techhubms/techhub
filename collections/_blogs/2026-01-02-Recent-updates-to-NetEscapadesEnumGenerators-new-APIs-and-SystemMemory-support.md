@@ -11,9 +11,7 @@ permalink: /coding/blogs/Recent-updates-to-NetEscapadesEnumGenerators-new-APIs-a
 tags:
 - .NET Core
 - API Design
-- Blogs
 - C#
-- Coding
 - Enum
 - NetEscapades.EnumGenerators
 - NuGet

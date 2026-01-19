@@ -11,10 +11,8 @@ permalink: /ai/videos/Create-an-AI-Agent-with-File-Search-in-Azure-AI-Foundry-Po
 tags:
 - Agent Configuration
 - Agent Playground
-- AI
 - AI Agent
 - AI Development
-- Azure
 - Azure AI Foundry
 - Cloud AI
 - Cloud Computing
@@ -29,7 +27,6 @@ tags:
 - Portal Tools
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

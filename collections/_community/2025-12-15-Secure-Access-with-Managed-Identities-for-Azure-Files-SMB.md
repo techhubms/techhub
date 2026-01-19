@@ -10,13 +10,10 @@ date: 2025-12-15 17:46:43 +00:00
 permalink: /azure/community/Secure-Access-with-Managed-Identities-for-Azure-Files-SMB
 tags:
 - AKS
-- Azure
 - Azure DevOps
 - Azure Files
 - CI/CD
 - Cloud Native
-- Community
-- DevOps
 - FIPS Compliance
 - Kerberos
 - Linux Clients
@@ -26,7 +23,6 @@ tags:
 - Persistent Storage
 - RBAC
 - Role Based Access Control
-- Security
 - SMB Shares
 - Windows Clients
 - Zero Trust

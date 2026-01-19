@@ -11,13 +11,11 @@ permalink: /ai/news/Agent-Factory-Building-Your-First-AI-Agent-with-Azure-AI-Fou
 tags:
 - Agent Factory
 - Agentic AI
-- AI
 - AI + Machine Learning
 - AI Agents
 - API Governance
 - APIM
 - APIs
-- Azure
 - Azure AI Foundry
 - Azure API Management
 - Azure Logic Apps
@@ -29,10 +27,8 @@ tags:
 - Large Language Models (llms)
 - MCP
 - Microsoft Entra ID
-- News
 - Observability
 - OpenAPI
-- Security
 - Security Best Practices
 section_names:
 - ai

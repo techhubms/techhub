@@ -11,9 +11,7 @@ permalink: /coding/blogs/Comparison-of-Rebus-NServiceBus-and-MassTransit-in-NET
 tags:
 - .NET
 - ASP.NET Core
-- Blogs
 - C#
-- Coding
 - Community Support
 - Distributed Systems
 - Encryption
@@ -28,7 +26,6 @@ tags:
 - Open Source
 - Rebus
 - Saga Patterns
-- Security
 - Service Bus
 section_names:
 - coding

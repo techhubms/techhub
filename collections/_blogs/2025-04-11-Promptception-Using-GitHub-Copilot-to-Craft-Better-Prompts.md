@@ -9,16 +9,12 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-04-11 00:00:00 +00:00
 permalink: /github-copilot/blogs/Promptception-Using-GitHub-Copilot-to-Craft-Better-Prompts
 tags:
-- AI
 - Async Await
-- Blogs
 - Code Review
-- Coding
 - Copilot Agent Mode
 - Copilot Chat
 - Copilot Edit
 - Developer Tools
-- GitHub Copilot
 - IDE Tools
 - Meta Prompt
 - Playwright

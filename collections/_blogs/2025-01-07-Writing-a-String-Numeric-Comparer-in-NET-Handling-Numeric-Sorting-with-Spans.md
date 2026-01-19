@@ -11,9 +11,7 @@ permalink: /coding/blogs/Writing-a-String-Numeric-Comparer-in-NET-Handling-Numer
 tags:
 - .NET
 - Alphanumeric Ordering
-- Blogs
 - C#
-- Coding
 - Data Structures
 - IComparer
 - Numeric Comparer

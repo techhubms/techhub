@@ -9,24 +9,20 @@ feed_url: https://devops.com/feed/
 date: 2025-09-16 13:00:03 +00:00
 permalink: /ai/blogs/CodeRabbit-Expands-AI-Code-Review-Platform-with-CLI-and-MCP-Support
 tags:
-- AI
 - AI Code Review
 - AI Coding Tools
 - AI in DevOps
 - AI Tooling
 - AI Trust Layer
 - AST Patterns
-- Blogs
 - CLI Support
 - Code Dependencies
 - Code Graph Analysis
 - Code Quality
 - CodeRabbit
-- Coding
 - Continuous Integration
 - Custom Pre Merge Checks
 - Developer Productivity
-- DevOps
 - DevOps Workflows
 - Git Repositories
 - MCP

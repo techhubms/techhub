@@ -10,18 +10,15 @@ date: 2025-08-07 18:31:50 +00:00
 permalink: /azure/community/Resolving-Orphaned-Azure-Subscription-Access-When-No-Owner-Is-Reachable
 tags:
 - Access Recovery
-- Azure
 - Azure Portal
 - Azure Subscription
 - Azure Support
-- Community
 - Entra ID
 - Global Admin
 - Identity Management
 - Management Groups
 - Microsoft Documentation
 - Role Based Access Control
-- Security
 - Subscription Ownership
 - Subscription Transfer
 section_names:

@@ -11,7 +11,6 @@ permalink: /ml/news/Announcing-OneLake-Security-Preview-Fine-Grained-Data-Access
 tags:
 - Access Control
 - API
-- Azure
 - CLS
 - Column Level Security
 - Data Democratization
@@ -19,14 +18,11 @@ tags:
 - Data Lake Security
 - Fabric Lakehouse
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Power BI
 - RLS
 - Role Based Access
 - Row Level Security
-- Security
 - Security Roles
 - Shortcuts
 - Spark

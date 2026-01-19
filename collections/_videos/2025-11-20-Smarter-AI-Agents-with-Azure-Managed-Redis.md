@@ -10,9 +10,7 @@ date: 2025-11-20 15:58:08 +00:00
 permalink: /ai/videos/Smarter-AI-Agents-with-Azure-Managed-Redis
 tags:
 - Agent Framework
-- AI
 - AI Agents
-- Azure
 - Azure Managed Redis
 - Cache Management
 - Knowledge Management
@@ -26,7 +24,6 @@ tags:
 - Semantic Routing
 - Session Persistence
 - Unifyyourdataplatform
-- Videos
 section_names:
 - ai
 - azure

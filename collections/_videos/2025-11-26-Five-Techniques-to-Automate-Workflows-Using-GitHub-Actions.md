@@ -14,7 +14,6 @@ tags:
 - CI/CD
 - Community Management
 - Dependency Management
-- DevOps
 - DevOps Best Practices
 - GitHub
 - GitHub Actions
@@ -24,7 +23,6 @@ tags:
 - Project Organization
 - Reusable Workflows
 - Security Automation
-- Videos
 - Workflow Automation
 section_names:
 - devops

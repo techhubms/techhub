@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 12:23:59 +00:00
 permalink: /ai/videos/Live-Platform-Cloud-Based-Unified-Communications-with-Microsoft-Teams-Integration
 tags:
-- AI
 - AI Powered Voice Apps
 - AudioCodes Live Platform
 - Automated Onboarding
-- Azure
 - Azure AI
 - Centralized Platform
 - Cloud Services
@@ -28,7 +26,6 @@ tags:
 - PSTN Connectivity
 - Service Provisioning
 - Unified Communications
-- Videos
 section_names:
 - ai
 - azure

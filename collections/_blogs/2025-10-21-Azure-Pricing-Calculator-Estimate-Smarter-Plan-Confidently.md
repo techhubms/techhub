@@ -9,12 +9,10 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-10-21 08:34:59 +00:00
 permalink: /azure/blogs/Azure-Pricing-Calculator-Estimate-Smarter-Plan-Confidently
 tags:
-- Azure
 - Azure Essentials Show
 - Azure Management
 - Azure Pricing Calculator
 - Azure Workloads
-- Blogs
 - Budgeting
 - Cloud
 - Cloud Cost Estimation

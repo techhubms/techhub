@@ -16,7 +16,6 @@ tags:
 - '#microsoftcloud'
 - Academic Research
 - Auto Scaling
-- Azure
 - Azure CycleCloud
 - CCWS
 - Cloud Computing
@@ -30,7 +29,6 @@ tags:
 - Scheduler Integration
 - Slurm
 - ThinLinc
-- Videos
 section_names:
 - azure
 ---

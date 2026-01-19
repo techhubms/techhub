@@ -10,12 +10,10 @@ date: 2025-07-30 07:45:07 +00:00
 permalink: /azure/community/Cache-Aside-Lazy-Loading-Load-Data-into-a-Cache-on-Demand-in-Azure
 tags:
 - Application Design
-- Azure
 - Azure Cache For Redis
 - Cache Aside
 - Caching Patterns
 - Cloud Architecture
-- Community
 - Database Optimization
 - Lazy Loading
 - Performance

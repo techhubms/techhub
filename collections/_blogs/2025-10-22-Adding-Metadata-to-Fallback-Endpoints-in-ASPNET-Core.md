@@ -14,8 +14,6 @@ tags:
 - AllowAnonymous
 - ASP.NET Core
 - Authorization
-- Blogs
-- Coding
 - Endpoint Metadata
 - Fallback Endpoints
 - MapFallback

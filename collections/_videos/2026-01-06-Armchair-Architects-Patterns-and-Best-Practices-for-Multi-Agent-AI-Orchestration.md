@@ -10,10 +10,8 @@ date: 2026-01-06 08:00:14 +00:00
 permalink: /ai/videos/Armchair-Architects-Patterns-and-Best-Practices-for-Multi-Agent-AI-Orchestration
 tags:
 - Agent Frameworks
-- AI
 - AI Orchestration
 - AutoGen
-- Azure
 - Azure Architecture
 - Cost Management
 - Data Governance
@@ -24,9 +22,7 @@ tags:
 - Multi Agent Systems
 - Pattern Selection
 - Scalability
-- Security
 - Semantic Kernel
-- Videos
 section_names:
 - ai
 - azure

@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-09-22 10:26:16 +00:00
 permalink: /devops/blogs/The-DevSecOps-Career-Path-What-No-One-Tells-You-About-Getting-Started
 tags:
-- Blogs
 - Business Of DevOps
 - CI/CD
 - CI/CD Security
@@ -19,7 +18,6 @@ tags:
 - Contributed Content
 - DAST
 - Developer Security Skills
-- DevOps
 - DevOps Security
 - DevOps To DevSecOps
 - Devsecops
@@ -36,7 +34,6 @@ tags:
 - SAST
 - SCA Tools
 - Secure Software Delivery
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

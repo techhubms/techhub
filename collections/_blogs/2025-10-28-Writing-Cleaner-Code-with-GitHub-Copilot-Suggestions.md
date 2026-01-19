@@ -9,18 +9,14 @@ feed_url: https://dellenny.com/feed/
 date: 2025-10-28 08:42:12 +00:00
 permalink: /github-copilot/blogs/Writing-Cleaner-Code-with-GitHub-Copilot-Suggestions
 tags:
-- AI
 - AI Assisted Development
 - Best Practices
-- Blogs
 - Clean Code
 - Code Quality
 - Code Review
 - Code Suggestions
-- Coding
 - Developer Productivity
 - GitHib Copilot
-- GitHub Copilot
 - Maintainability
 - Refactoring
 - Software Development

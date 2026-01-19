@@ -9,18 +9,13 @@ date: 2025-07-10 15:43:52 +00:00
 permalink: /github-copilot/community/Youre-probably-using-Copilot-the-wrong-way
 viewing_mode: external
 tags:
-- AI
 - AI Tools
 - Code Generation
-- Coding
 - Coding Productivity
-- Community
 - Comparing
 - Developer Workflows
 - Development Planning
-- DevOps
 - File Level Planning
-- GitHub Copilot
 - Software Development
 - Sonnet 4
 - Traycer

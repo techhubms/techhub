@@ -9,15 +9,12 @@ feed_url: https://devops.com/feed/
 date: 2025-08-26 14:00:07 +00:00
 permalink: /ai/blogs/Harness-AI-Powered-DevOps-Platform-Launches-to-Automate-Software-Delivery
 tags:
-- AI
 - AI Agents
 - AI Platforms
-- Blogs
 - Business Of DevOps
 - Chaos Engineering
 - Cloud Cost Optimization
 - Cloud Operations
-- DevOps
 - DevOps Automation
 - DevOps Innovation
 - Harness AI

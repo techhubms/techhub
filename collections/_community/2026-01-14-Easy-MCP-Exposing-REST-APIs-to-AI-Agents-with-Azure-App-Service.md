@@ -9,17 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2026-01-14 19:41:29 +00:00
 permalink: /ai/community/Easy-MCP-Exposing-REST-APIs-to-AI-Agents-with-Azure-App-Service
 tags:
-- AI
 - AI Agents
 - API Gateway
 - API Integration
 - App Modernization
-- Azure
 - Azure API Management
 - Azure App Service
 - Azure Developer CLI
 - Cloud Migration
-- Community
 - Easy MCP
 - Legacy Modernization
 - MCP

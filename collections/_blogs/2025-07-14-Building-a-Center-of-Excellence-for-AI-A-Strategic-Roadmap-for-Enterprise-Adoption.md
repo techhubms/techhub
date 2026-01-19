@@ -9,7 +9,6 @@ feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-07-14 09:00:00 +00:00
 permalink: /ai/blogs/Building-a-Center-of-Excellence-for-AI-A-Strategic-Roadmap-for-Enterprise-Adoption
 tags:
-- AI
 - AI Adoption
 - AI Best Practices
 - AI Center Of Excellence
@@ -20,7 +19,6 @@ tags:
 - AI Risk Management
 - AI Strategy
 - AI Talent
-- Blogs
 - Ccoe
 - Cross Functional Teams
 - Data Governance

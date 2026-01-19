@@ -10,7 +10,6 @@ date: 2025-06-10 14:01:04 +00:00
 permalink: /ai/videos/AI-on-the-Go-for-Microsoft-Partners-Series-Trailer
 tags:
 - Agentic AI
-- AI
 - AI in Business
 - AI Trends
 - Brand Experience
@@ -22,7 +21,6 @@ tags:
 - Microsoft Cloud Partner Program
 - Microsoft Leaders
 - Partner Opportunities
-- Videos
 section_names:
 - ai
 ---

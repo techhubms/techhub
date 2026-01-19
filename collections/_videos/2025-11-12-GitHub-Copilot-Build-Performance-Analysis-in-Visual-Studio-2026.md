@@ -9,18 +9,15 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-12 16:01:32 +00:00
 permalink: /github-copilot/videos/GitHub-Copilot-Build-Performance-Analysis-in-Visual-Studio-2026
 tags:
-- AI
 - Build Bottlenecks
 - Build Optimization
 - C++ Development
 - Cloud Computing
 - Code Automation
-- Coding
 - Copilot
 - Dev
 - Development
 - GitHub
-- GitHub Copilot
 - Header Files
 - Microsoft
 - MSVC
@@ -30,7 +27,6 @@ tags:
 - Technology
 - Template Instantiation
 - Trace Capture
-- Videos
 - VS
 - Windows Development
 section_names:

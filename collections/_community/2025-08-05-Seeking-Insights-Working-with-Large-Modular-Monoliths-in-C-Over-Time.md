@@ -11,8 +11,6 @@ permalink: /coding/community/Seeking-Insights-Working-with-Large-Modular-Monolit
 tags:
 - .NET
 - C#
-- Coding
-- Community
 - Modular Architecture
 - Modular Monolith
 - Module Communication

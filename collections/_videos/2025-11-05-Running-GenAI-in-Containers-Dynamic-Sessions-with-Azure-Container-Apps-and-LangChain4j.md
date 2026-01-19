@@ -9,19 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-05 17:01:32 +00:00
 permalink: /ai/videos/Running-GenAI-in-Containers-Dynamic-Sessions-with-Azure-Container-Apps-and-LangChain4j
 tags:
-- AI
 - AI Integration
 - AI Workloads
 - AIIntegration
 - AIWorkloads
-- Azure
 - Azure Container Apps
 - AzureContainerApps
 - Cloud Native
 - CloudNative
 - Code Execution
 - CodeExecution
-- Coding
 - Containerized AI
 - ContainerizedAI
 - Dynamic Sessions
@@ -37,7 +34,6 @@ tags:
 - Session Pools
 - Stateful Containers
 - StatefulContainers
-- Videos
 section_names:
 - ai
 - azure

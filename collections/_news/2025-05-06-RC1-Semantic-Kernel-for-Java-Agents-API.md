@@ -10,13 +10,11 @@ date: 2025-05-06 09:11:34 +00:00
 permalink: /ai/news/RC1-Semantic-Kernel-for-Java-Agents-API
 tags:
 - Agents
-- AI
 - API
 - Framework
 - Intelligent Agents
 - Java
 - Microsoft Semantic Kernel
-- News
 - Semantic Kernel
 section_names:
 - ai

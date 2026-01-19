@@ -10,20 +10,15 @@ date: 2025-09-11 16:00:00 +00:00
 permalink: /github-copilot/news/Getting-Started-with-GitHub-Copilot-Coding-Agent-and-Agentic-Workflows
 tags:
 - Agentic Workflows
-- AI
 - AI & ML
 - AI Automation
 - Branch Protection
 - CI/CD
-- Coding
 - Coding Agent
 - Continuous Integration
-- DevOps
 - DevOps Workflows
 - GitHub Actions
-- GitHub Copilot
 - MCP
-- News
 - Pull Request Automation
 - Test Automation
 - VS Code

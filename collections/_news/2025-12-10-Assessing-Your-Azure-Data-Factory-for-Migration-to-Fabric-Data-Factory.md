@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-10 16:30:00 +00:00
 permalink: /ml/news/Assessing-Your-Azure-Data-Factory-for-Migration-to-Fabric-Data-Factory
 tags:
-- Azure
 - Azure Data Factory
 - Cloud Data Platform
 - Data Compatibility
@@ -23,8 +22,6 @@ tags:
 - Microsoft Fabric
 - Migration Assessment
 - Migration Tools
-- ML
-- News
 - Pipeline Migration
 - PowerShell
 section_names:

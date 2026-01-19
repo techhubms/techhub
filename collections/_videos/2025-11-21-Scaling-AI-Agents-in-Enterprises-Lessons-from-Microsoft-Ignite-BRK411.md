@@ -11,10 +11,8 @@ permalink: /ai/videos/Scaling-AI-Agents-in-Enterprises-Lessons-from-Microsoft-Ig
 tags:
 - Agent Scaling
 - Agentic Stack
-- AI
 - AI Agents
 - AI Democratization
-- Azure
 - Azure AI Foundry
 - Business Value
 - Compliance
@@ -27,7 +25,6 @@ tags:
 - MSIgnite
 - Other
 - User Trust
-- Videos
 section_names:
 - ai
 - azure

@@ -21,11 +21,9 @@ tags:
 - Incident Response
 - Microsoft Security
 - Multifactor Authentication
-- News
 - NIS2
 - Operational Technology
 - Risk Management
-- Security
 - Threat Intelligence
 section_names:
 - security

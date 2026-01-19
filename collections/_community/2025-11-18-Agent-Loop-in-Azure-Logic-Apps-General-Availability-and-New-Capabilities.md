@@ -11,16 +11,12 @@ permalink: /ai/community/Agent-Loop-in-Azure-Logic-Apps-General-Availability-and
 tags:
 - Access Control Lists (acl)
 - Agent Loop
-- AI
 - AI Automation
 - AI Gateway
-- Azure
 - Azure AI Search
 - Azure Logic Apps
-- Community
 - Conversational Agents
 - Data Residency
-- DevOps
 - DevOps Automation
 - Enterprise Security
 - Incident Management
@@ -32,7 +28,6 @@ tags:
 - On Behalf Of Authentication
 - Public Preview Features
 - Python Integration
-- Security
 - Teams Integration
 - VNET Integration
 - Workflow Orchestration

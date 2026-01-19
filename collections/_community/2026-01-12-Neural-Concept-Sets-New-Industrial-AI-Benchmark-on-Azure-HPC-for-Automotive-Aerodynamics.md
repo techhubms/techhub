@@ -11,18 +11,14 @@ permalink: /ai/community/Neural-Concept-Sets-New-Industrial-AI-Benchmark-on-Azur
 tags:
 - A100 GPU
 - Aerodynamics
-- AI
 - AI Infrastructure
 - Automotive Design
-- Azure
 - Azure HPC
-- Community
 - Data Engineering
 - DrivAerNet++
 - Geometric Deep Learning
 - High Performance Computing
 - Industrial AI
-- ML
 - ML Benchmark
 - Model Training
 - Neural Concept

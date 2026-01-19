@@ -11,16 +11,13 @@ permalink: /ml/news/Microsoft-Fabric-Influencers-Spotlight-December-2025-Highlig
 tags:
 - Administration
 - Autoencoder
-- Azure
 - Azure DevOps
 - CI/CD
-- Coding
 - Data Engineering
 - Data Science
 - Data Warehouse
 - DAX
 - Delta Tables
-- DevOps
 - Eventhouse
 - Eventstream
 - Fabric Platform
@@ -28,9 +25,7 @@ tags:
 - Governance
 - Lakehouse
 - Microsoft Fabric
-- ML
 - MVP
-- News
 - Power BI
 - Real Time Analytics
 - Semantic Models

@@ -10,15 +10,12 @@ date: 2025-11-20 16:00:00 +00:00
 permalink: /azure/community/Azure-Functions-Durable-Task-Scheduler-Dedicated-SKU-Now-GA-Consumption-SKU-in-Public-Preview
 tags:
 - Autoscaling
-- Azure
 - Azure Functions
 - Azure Resource Management
 - Capacity Units
 - Cloud Native
-- Community
 - Consumption SKU
 - Dedicated SKU
-- DevOps
 - Durable Functions
 - Durable Task Scheduler
 - Fault Tolerance

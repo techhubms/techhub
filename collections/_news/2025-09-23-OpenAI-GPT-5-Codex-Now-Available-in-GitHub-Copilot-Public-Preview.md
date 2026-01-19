@@ -10,17 +10,14 @@ date: 2025-09-23 16:43:02 +00:00
 permalink: /github-copilot/news/OpenAI-GPT-5-Codex-Now-Available-in-GitHub-Copilot-Public-Preview
 tags:
 - Agentic Coding
-- AI
 - AI Development
 - Copilot
 - Copilot Chat
 - Copilot Enterprise
 - Copilot Pro
 - Developer Tools
-- GitHub Copilot
 - GPT 5 Codex
 - Model Rollout
-- News
 - OpenAI
 - Software Release
 - VS Code

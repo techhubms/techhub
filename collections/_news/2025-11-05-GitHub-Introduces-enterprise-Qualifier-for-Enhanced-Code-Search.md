@@ -13,13 +13,11 @@ tags:
 - Code Search
 - Codebase Management
 - Collaboration Tools
-- DevOps
 - Documentation
 - Enterprise Qualifier
 - GitHub
 - GitHub Enterprise Cloud
 - Improvement
-- News
 - Query Operators
 - Search Syntax
 section_names:

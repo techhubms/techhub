@@ -10,24 +10,18 @@ date: 2025-08-05 11:00:00 +00:00
 permalink: /ai/news/Whats-New-in-Fabric-Warehouse-July-2025-AI-Performance-and-Modern-Data-Engineering
 tags:
 - Agentic AI
-- AI
 - Audit Logging
-- Azure
 - Azure AI Foundry
 - Copilot Studio
 - Cosmos DB
 - Data Warehouse
 - Databricks
-- DevOps
 - Governance
 - Microsoft Fabric
-- ML
 - MSSQL Extension
-- News
 - OneLake
 - Performance Tuning
 - Python Notebooks
-- Security
 - SQL Analytics
 - Synapse Migration
 - Terraform

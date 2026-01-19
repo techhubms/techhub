@@ -9,18 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 16:00:00 +00:00
 permalink: /ai/community/Reimagining-VM-Application-Management-for-an-AI-Powered-Secure-Future
 tags:
-- AI
 - AI Workflow
 - Application Lifecycle
 - Application Packaging
 - ARM Templates
-- Azure
 - Azure DevOps
 - Azure Policy
 - Azure Resource Graph
 - Azure VM Applications
-- Community
-- DevOps
 - DevOps CI/CD
 - GitHub Actions
 - Governance
@@ -28,7 +24,6 @@ tags:
 - PowerShell Automation
 - Regional Resiliency
 - Secure Deployment
-- Security
 - Version Control
 - Virtual Machines
 - VM Scale Sets

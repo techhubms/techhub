@@ -10,8 +10,6 @@ date: 2026-01-09 09:19:21 +00:00
 permalink: /coding/blogs/Designing-a-Future-Proof-SharePoint-Information-Architecture
 tags:
 - Azure AD
-- Blogs
-- Coding
 - Content Types
 - Governance
 - Information Architecture

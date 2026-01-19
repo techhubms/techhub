@@ -10,11 +10,9 @@ date: 2025-10-01 14:00:15 +00:00
 permalink: /ai/videos/Agent-Framework-Building-Blocks-for-the-Next-Generation-of-AI-Agents
 tags:
 - Agent Framework
-- AI
 - AI Agents
 - AutoGen
 - Cloud Computing
-- Coding
 - Community Standards
 - Cross Cloud Orchestration
 - Dev
@@ -30,7 +28,6 @@ tags:
 - Semantic Kernel
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - coding

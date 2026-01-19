@@ -9,13 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-23 15:31:29 +00:00
 permalink: /ai/community/Connecting-Azure-Logic-Apps-MCP-Server-to-Copilot-Studio-Securely
 tags:
-- AI
 - API Center
-- Azure
 - Azure Connectors
 - Azure Logic Apps
 - Azure Security
-- Community
 - Copilot Studio
 - EasyAuth
 - Enterprise Authentication
@@ -24,7 +21,6 @@ tags:
 - MCP Server
 - Microsoft Entra ID
 - Secure Integration
-- Security
 - Workflow Automation
 section_names:
 - ai

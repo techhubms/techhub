@@ -10,9 +10,7 @@ date: 2025-09-18 15:00:00 +00:00
 permalink: /ai/news/Microsoft-Recognized-as-Leader-in-2025-Gartner-Magic-Quadrant-for-Global-Industrial-IoT-Platforms
 tags:
 - Adaptive Cloud
-- AI
 - AI Integration
-- Azure
 - Azure Arc
 - Azure Digital Twins
 - Azure IoT
@@ -30,10 +28,8 @@ tags:
 - Microsoft Entra
 - Microsoft Fabric
 - Microsoft Sentinel
-- News
 - Operational Technology
 - Real Time Intelligence
-- Security
 section_names:
 - ai
 - azure

@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-09 15:19:04 +00:00
 permalink: /ai/videos/Blending-AI-Agents-and-Spreadsheets-No-Code-Solutions-in-the-Cozy-AI-Kitchen
 tags:
-- AI
 - AI Agents
 - Automation
-- Azure
 - Azure OpenAI
 - CalcLM
 - Cloud Computing
@@ -31,7 +29,6 @@ tags:
 - Spreadsheets
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

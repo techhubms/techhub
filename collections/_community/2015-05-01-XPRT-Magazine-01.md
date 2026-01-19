@@ -8,16 +8,11 @@ permalink: /coding/community/XPRT-Magazine-01
 tags:
 - API Management
 - Application Insights
-- Azure
-- Coding
-- Community
-- DevOps
 - HoloLens
 - Ionic
 - Magazines
 - Microservices
 - Mobile Apps
-- Security
 - Service Fabric
 - Version Control
 - VS

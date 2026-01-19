@@ -11,8 +11,6 @@ permalink: /coding/community/Detecting-Physical-vs-Logical-Processors-in-Cross-P
 tags:
 - .NET 9
 - C#
-- Coding
-- Community
 - Cross Platform Development
 - Environment.ProcessorCount
 - HT

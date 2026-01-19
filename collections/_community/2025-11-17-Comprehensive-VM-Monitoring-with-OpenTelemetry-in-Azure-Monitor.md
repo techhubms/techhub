@@ -10,12 +10,9 @@ date: 2025-11-17 23:17:57 +00:00
 permalink: /azure/community/Comprehensive-VM-Monitoring-with-OpenTelemetry-in-Azure-Monitor
 tags:
 - Arc Servers
-- Azure
 - Azure Monitor
 - Azure Monitor Workspace
-- Community
 - Data Collection Rules
-- DevOps
 - Grafana
 - Guest OS
 - Linux

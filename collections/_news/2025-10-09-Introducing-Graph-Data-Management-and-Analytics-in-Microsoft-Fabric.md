@@ -9,9 +9,7 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-09 08:00:00 +00:00
 permalink: /ai/news/Introducing-Graph-Data-Management-and-Analytics-in-Microsoft-Fabric
 tags:
-- AI
 - AI Reasoning
-- Azure
 - Data Integration
 - Data Modeling
 - Data Visualization
@@ -22,9 +20,7 @@ tags:
 - Graph Analytics
 - Graph Databases
 - Microsoft Fabric
-- ML
 - Multi Hop Queries
-- News
 - No Code Tools
 - OneLake
 - Real Time Analytics

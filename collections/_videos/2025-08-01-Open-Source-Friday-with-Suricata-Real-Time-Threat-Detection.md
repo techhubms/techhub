@@ -10,7 +10,6 @@ date: 2025-08-01 20:29:23 +00:00
 permalink: /devops/videos/Open-Source-Friday-with-Suricata-Real-Time-Threat-Detection
 tags:
 - Config Tuning
-- DevOps
 - ELK Stack
 - EVE JSON
 - IDS
@@ -22,12 +21,10 @@ tags:
 - Packet Inspection
 - Real Time Monitoring
 - Rule Management
-- Security
 - Security Tools
 - Suricata
 - Suricata Update
 - Threat Detection
-- Videos
 section_names:
 - devops
 - security

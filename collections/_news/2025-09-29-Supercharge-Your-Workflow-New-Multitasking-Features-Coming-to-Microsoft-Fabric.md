@@ -15,9 +15,7 @@ tags:
 - Horizontal Tabs
 - IDE Experience
 - Microsoft Fabric
-- ML
 - Multitasking
-- News
 - Notebooks
 - Object Explorer
 - Open Workspaces

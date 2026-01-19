@@ -9,23 +9,19 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-25 19:22:27 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-CLI-Now-Available-in-Public-Preview
 tags:
-- AI
 - AI Coding Agent
 - Automation
 - CLI Tools
 - Client Apps
 - Code Assistance
-- Coding
 - Command Line Interface
 - Copilot
 - Debugging
 - Developer Productivity
 - GitHub
-- GitHub Copilot
 - GitHub Copilot CLI
 - GitHub Integration
 - MCP Server
-- News
 - npm
 - Pro Plan
 - Refactoring

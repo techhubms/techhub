@@ -11,14 +11,12 @@ permalink: /azure/news/GitHub-Enterprise-Importer-Incident-and-IP-Range-Update-J
 tags:
 - Availability Report
 - AWS S3
-- Azure
 - Azure Blob Storage
 - Azure DevOps
 - Bitbucket
 - Change Management
 - Cloud Storage
 - Company News
-- DevOps
 - GitHub Availability Report
 - GitHub Enterprise Importer
 - Incident Response
@@ -26,9 +24,7 @@ tags:
 - IP Allow List
 - Migration
 - Network Security
-- News
 - News & Insights
-- Security
 - Service Incident
 - Unit Testing
 - Validation

@@ -11,18 +11,15 @@ permalink: /github-copilot/videos/Introducing-Agent-HQ-Mission-Control-for-GitHu
 tags:
 - Agent HQ
 - AgentHQ
-- AI
 - AI Agents
 - AI Driven Workflow
 - Automation
 - CLI
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Mission Control
 - Parallel Tasks
 - Software Development
-- Videos
 - VS Code
 section_names:
 - ai

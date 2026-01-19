@@ -9,24 +9,20 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-26 14:01:29 +00:00
 permalink: /github-copilot/videos/End-to-End-Agentic-Development-with-GitHub-Copilot-A-Developer-Workflow-Demo
 tags:
-- AI
 - AI Development
 - Cloud Development Environment
 - Code Generation
-- Coding
 - Coding Tools
 - CodingAgent
 - Copilot Coding Agent
 - CopilotCodingAgent
 - Debugging
 - Developer Workflow
-- GitHub Copilot
 - Instruction Files
 - Issue Triaging
 - Pull Requests
 - Software Development
 - Test Automation
-- Videos
 section_names:
 - ai
 - coding

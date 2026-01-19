@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-20 11:21:09 +00:00
 permalink: /ai/videos/Silo-Busting-for-Nonprofits-Unifying-People-Processes-and-Technology-with-AI
 tags:
-- AI
 - AI Adoption
 - Collaboration
 - Copilot Integration
@@ -22,7 +21,6 @@ tags:
 - Process Automation
 - Secureyourdata
 - Skilling
-- Videos
 section_names:
 - ai
 ---

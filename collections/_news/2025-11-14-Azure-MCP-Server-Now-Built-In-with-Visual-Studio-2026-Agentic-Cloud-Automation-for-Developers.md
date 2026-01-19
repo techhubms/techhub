@@ -10,10 +10,8 @@ date: 2025-11-14 14:00:14 +00:00
 permalink: /github-copilot/news/Azure-MCP-Server-Now-Built-In-with-Visual-Studio-2026-Agentic-Cloud-Automation-for-Developers
 tags:
 - Agentic Automation
-- AI
 - AI Native IDE
 - AKS
-- Azure
 - Azure CLI
 - Azure Container Apps
 - Azure Development
@@ -23,17 +21,12 @@ tags:
 - CI/CD Workflows
 - Cloud
 - Cloud Resource Management
-- Coding
 - Copilot
 - Cosmos DB
-- DevOps
 - Diagnostics
-- GitHub Copilot
 - IaC
 - MCP
 - Natural Language Query
-- News
-- Security
 - Security Best Practices
 - Telemetry
 - VS

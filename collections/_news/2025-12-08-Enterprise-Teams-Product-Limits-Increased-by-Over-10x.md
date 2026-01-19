@@ -10,7 +10,6 @@ date: 2025-12-08 19:40:44 +00:00
 permalink: /devops/news/Enterprise-Teams-Product-Limits-Increased-by-Over-10x
 tags:
 - Access Management
-- DevOps
 - Enterprise Cloud
 - Enterprise Management Tools
 - Enterprise Server
@@ -18,7 +17,6 @@ tags:
 - GitHub Enterprise
 - Improvement
 - Licensing
-- News
 - Organizational Management
 - Public Preview
 - Team Scalability

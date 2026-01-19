@@ -23,11 +23,9 @@ tags:
 - John Savill
 - MFA
 - On Premises Integration
-- Security
 - Single Sign On
 - Technical Training
 - User Management
-- Videos
 section_names:
 - security
 ---

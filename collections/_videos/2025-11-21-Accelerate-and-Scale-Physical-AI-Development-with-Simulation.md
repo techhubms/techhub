@@ -10,9 +10,7 @@ date: 2025-11-21 10:21:47 +00:00
 permalink: /ai/videos/Accelerate-and-Scale-Physical-AI-Development-with-Simulation
 tags:
 - Agentic AI
-- AI
 - AI For Robotics
-- Azure
 - Azure ARC
 - Continuous Integration
 - Digital Twins
@@ -28,7 +26,6 @@ tags:
 - Robotics Development
 - Simulation
 - Synthetic Data
-- Videos
 section_names:
 - ai
 - azure

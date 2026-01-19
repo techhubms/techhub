@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-26 18:29:14 +00:00
 permalink: /ai/videos/Exploring-GraphRAG-AI-Powered-Graph-Search-for-Security-Data-Analysis
 tags:
-- AI
 - API Setup
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
 - Chunking Strategies
@@ -27,12 +25,10 @@ tags:
 - Open Source
 - Prompt Engineering
 - Retrieval Augmented Generation
-- Security
 - Security Data Analysis
 - Semantic Search
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

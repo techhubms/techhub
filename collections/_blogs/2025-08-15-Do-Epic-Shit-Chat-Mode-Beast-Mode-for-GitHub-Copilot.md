@@ -9,18 +9,14 @@ feed_url: https://harrybin.de/rss.xml
 date: 2025-08-15 10:30:00 +00:00
 permalink: /github-copilot/blogs/Do-Epic-Shit-Chat-Mode-Beast-Mode-for-GitHub-Copilot
 tags:
-- AI
 - AI Development Tools
 - Automation
 - Autonomous Agents
 - Beast Mode
-- Blogs
 - Chat Configuration
-- Coding
 - Copilot Chat Mode
 - Developer Productivity
 - Engineering Agents
-- GitHub Copilot
 - GPT 4.1
 - Markdown Checklist
 - Refactoring

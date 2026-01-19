@@ -9,9 +9,7 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-18 07:00:00 +00:00
 permalink: /ai/community/Beginners-Guide-Using-Custom-AI-Models-with-Foundry-Local-and-Microsoft-Olive
 tags:
-- AI
 - AI Chatbot
-- Community
 - CPU
 - DeepSeek Models
 - Foundry Local

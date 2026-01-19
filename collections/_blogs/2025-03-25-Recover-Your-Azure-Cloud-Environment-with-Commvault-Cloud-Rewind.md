@@ -9,9 +9,7 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-03-25 14:45:56 +00:00
 permalink: /azure/blogs/Recover-Your-Azure-Cloud-Environment-with-Commvault-Cloud-Rewind
 tags:
-- Azure
 - Azure Infrastructure
-- Blogs
 - Cloud
 - Cloud Computing
 - Cloud Recovery

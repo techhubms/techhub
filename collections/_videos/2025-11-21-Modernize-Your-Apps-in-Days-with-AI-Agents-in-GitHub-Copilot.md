@@ -10,19 +10,14 @@ date: 2025-11-21 08:07:34 +00:00
 permalink: /github-copilot/videos/Modernize-Your-Apps-in-Days-with-AI-Agents-in-GitHub-Copilot
 tags:
 - .NET Framework
-- AI
 - AI Agents
 - Application Upgrade
-- Azure
 - Azure Migrate
 - Azure OpenAI
 - Cloud Migration
-- Coding
 - Containerization
 - Database Migration
 - Developer Workflows
-- DevOps
-- GitHub Copilot
 - IntelliJ
 - Legacy Apps
 - Migrateandmodernizeyourestate
@@ -30,7 +25,6 @@ tags:
 - MSIgnite
 - Oracle To PostgreSQL
 - Pull Request Automation
-- Videos
 section_names:
 - ai
 - azure

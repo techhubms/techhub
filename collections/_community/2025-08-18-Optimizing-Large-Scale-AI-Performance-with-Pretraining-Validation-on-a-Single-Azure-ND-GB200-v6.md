@@ -9,14 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-18 22:45:01 +00:00
 permalink: /ai/community/Optimizing-Large-Scale-AI-Performance-with-Pretraining-Validation-on-a-Single-Azure-ND-GB200-v6
 tags:
-- AI
-- Azure
 - Azure AI Benchmarking Guide
 - Azure ND GB200 V6
 - Benchmarking
 - Bf16
 - Cloud Infrastructure
-- Community
 - Context Parallelism
 - Data Parallelism
 - Fp16
@@ -26,10 +23,8 @@ tags:
 - Large Language Models
 - Llama3
 - LLM Architecture
-- Machine Learning
 - Memory Usage
 - Micro Batch Size
-- ML
 - Model Validation
 - NVIDIA NeMo
 - Parallelism

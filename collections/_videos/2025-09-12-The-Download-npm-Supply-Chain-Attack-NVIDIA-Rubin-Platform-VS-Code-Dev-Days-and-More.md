@@ -9,10 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-09-12 14:00:22 +00:00
 permalink: /ai/videos/The-Download-npm-Supply-Chain-Attack-NVIDIA-Rubin-Platform-VS-Code-Dev-Days-and-More
 tags:
-- AI
-- Coding
 - DevNews
-- DevOps
 - GitHub
 - GitHub MCP
 - GitHub Universe
@@ -21,11 +18,9 @@ tags:
 - npm
 - NVIDIA Rubin
 - Remote Servers
-- Security
 - Software Development
 - Supply Chain Attack
 - TheDownload
-- Videos
 - VS Code
 - VS Code Dev Days
 section_names:

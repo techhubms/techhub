@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 17:09:54 +00:00
 permalink: /ai/videos/Drive-Faster-Insights-with-Microsoft-and-SAP-AI-and-Data-Innovations
 tags:
-- AI
 - Automation
-- Azure
 - Business AI
 - Cloud Integration
 - Data Analytics
@@ -27,7 +25,6 @@ tags:
 - Migrateandmodernizeyourestate
 - MSIgnite
 - SAP
-- Videos
 section_names:
 - ai
 - azure

@@ -6,10 +6,8 @@ author: Xebia
 viewing_mode: external
 permalink: /github-copilot/community/XPRT-Magazine-12
 tags:
-- AI
 - ARM Templates
 - Automation
-- Azure
 - Azure Container Apps
 - Beacons
 - Bicep
@@ -17,18 +15,13 @@ tags:
 - Chaos Engineering
 - Cloud Native
 - Codespaces
-- Coding
-- Community
 - Compliance
 - Developer Productivity
-- DevOps
 - Engineering Culture
-- GitHub Copilot
 - IoT
 - Knowledge Sharing
 - Magazines
 - Microservices
-- Security
 - Team Learning
 - Value Chain
 - WebAssembly

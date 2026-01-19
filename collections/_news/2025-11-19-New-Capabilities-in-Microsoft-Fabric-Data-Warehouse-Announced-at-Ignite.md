@@ -10,7 +10,6 @@ date: 2025-11-19 11:00:00 +00:00
 permalink: /ml/news/New-Capabilities-in-Microsoft-Fabric-Data-Warehouse-Announced-at-Ignite
 tags:
 - Analytics
-- Azure
 - BI
 - Cloud Data Platform
 - Cosmos DB
@@ -20,8 +19,6 @@ tags:
 - ETL
 - IDENTITY Columns
 - Microsoft Fabric
-- ML
-- News
 - Schema Management
 - Snapshot Consistency
 - SQL Analytics

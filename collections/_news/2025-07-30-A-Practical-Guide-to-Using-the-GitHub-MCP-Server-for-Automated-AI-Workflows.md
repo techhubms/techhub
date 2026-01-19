@@ -10,23 +10,18 @@ date: 2025-07-30 16:00:00 +00:00
 permalink: /github-copilot/news/A-Practical-Guide-to-Using-the-GitHub-MCP-Server-for-Automated-AI-Workflows
 tags:
 - Agent Collaboration
-- AI
 - AI & ML
 - AI Agents
 - AI Workflow
 - CI/CD
 - Cloud Automation
 - Dependabot
-- DevOps
 - Generative AI
-- GitHub Copilot
 - MCP
-- News
 - OAuth
 - Pull Requests
 - Remote MCP Server
 - Secret Scanning
-- Security
 - Security Alerts
 - VS Code
 section_names:

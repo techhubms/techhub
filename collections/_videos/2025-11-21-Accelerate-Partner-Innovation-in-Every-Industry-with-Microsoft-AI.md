@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 13:16:13 +00:00
 permalink: /ai/videos/Accelerate-Partner-Innovation-in-Every-Industry-with-Microsoft-AI
 tags:
-- AI
 - AI Agents
 - Ask Ralph
-- Azure
 - Co Innovation
 - Co Sell
 - Colin Fleming
@@ -31,7 +29,6 @@ tags:
 - ServiceNow
 - Sunil Senan
 - Teleperformance
-- Videos
 - Virtual Stylist
 section_names:
 - ai

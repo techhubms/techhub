@@ -10,14 +10,12 @@ date: 2025-10-31 12:57:06 +00:00
 permalink: /azure/blogs/Optimize-Azure-Costs-with-Reserved-Instances
 tags:
 - Auto Renewal
-- Azure
 - Azure Advisor
 - Azure Essentials Show
 - Azure Reserved Instances
 - Azure VM
 - Best Practices
 - Billing
-- Blogs
 - Cloud
 - Cloud Cost Management
 - Cloud Strategy

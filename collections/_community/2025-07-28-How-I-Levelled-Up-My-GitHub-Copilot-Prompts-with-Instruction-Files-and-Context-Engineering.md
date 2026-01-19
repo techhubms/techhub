@@ -9,15 +9,12 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-28 12:03:27 +00:00
 permalink: /github-copilot/community/How-I-Levelled-Up-My-GitHub-Copilot-Prompts-with-Instruction-Files-and-Context-Engineering
 tags:
-- AI
 - AI Assisted Coding
 - Code Generation
 - Coding Best Practices
-- Community
 - Context Engineering
 - Copilot Tips
 - Developer Productivity
-- GitHub Copilot
 - Instruction Files
 - Prompt Engineering
 - Software Development

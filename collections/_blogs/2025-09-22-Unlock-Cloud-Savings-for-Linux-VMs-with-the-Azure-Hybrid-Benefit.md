@@ -9,12 +9,10 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-09-22 08:08:48 +00:00
 permalink: /azure/blogs/Unlock-Cloud-Savings-for-Linux-VMs-with-the-Azure-Hybrid-Benefit
 tags:
-- Azure
 - Azure Essentials Show
 - Azure Hybrid Benefit
 - Azure Pricing Calculator
 - Azure Reserved Instances
-- Blogs
 - BYOS
 - Cloud
 - Cloud Cost Optimization

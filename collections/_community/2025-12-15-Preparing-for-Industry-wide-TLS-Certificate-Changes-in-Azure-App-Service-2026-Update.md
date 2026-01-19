@@ -9,20 +9,17 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-15 10:23:57 +00:00
 permalink: /azure/community/Preparing-for-Industry-wide-TLS-Certificate-Changes-in-Azure-App-Service-2026-Update
 tags:
-- Azure
 - Azure App Service
 - Azure Security
 - Browser Standards
 - CA/B Forum
 - Certificate Pinning
 - Certificates
-- Community
 - DigiCert
 - EKU
 - GoDaddy
 - Managed Certificates
 - Mtls
-- Security
 - Security Compliance
 - SSL
 - TLS

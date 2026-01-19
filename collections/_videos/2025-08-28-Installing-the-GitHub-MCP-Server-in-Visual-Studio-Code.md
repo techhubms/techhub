@@ -9,20 +9,17 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-08-28 00:00:43 +00:00
 permalink: /github-copilot/videos/Installing-the-GitHub-MCP-Server-in-Visual-Studio-Code
 tags:
-- AI
 - AI Tools
 - Code Completion
 - Copilot
 - Copilot Agent
 - Developer Workflow
 - GitHub
-- GitHub Copilot
 - Local Development
 - Mcp
 - MCP Server
 - Mcpserver
 - Remote Server Setup
-- Videos
 - VS Code
 - VSC
 section_names:

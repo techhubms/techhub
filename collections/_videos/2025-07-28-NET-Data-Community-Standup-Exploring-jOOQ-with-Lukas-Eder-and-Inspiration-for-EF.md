@@ -10,7 +10,6 @@ date: 2025-07-28 15:50:14 +00:00
 permalink: /coding/videos/NET-Data-Community-Standup-Exploring-jOOQ-with-Lukas-Eder-and-Inspiration-for-EF
 tags:
 - .NET
-- Coding
 - Data Access
 - Demo
 - Developer Community
@@ -24,7 +23,6 @@ tags:
 - Shay Rojansky
 - Software Developer
 - Software Development
-- Videos
 section_names:
 - coding
 ---

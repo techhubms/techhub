@@ -10,7 +10,6 @@ date: 2025-11-25 15:51:30 +00:00
 permalink: /ai/videos/Building-the-Most-Intelligent-Agents-with-the-Latest-Knowledge-Sources
 tags:
 - Active Directory
-- AI
 - AI Agents
 - API Integration
 - Azure AI Search
@@ -27,7 +26,6 @@ tags:
 - Microsoft Ignite
 - MSIgnite
 - Personalization
-- Videos
 - Visualization
 section_names:
 - ai

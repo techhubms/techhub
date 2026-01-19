@@ -9,7 +9,6 @@ feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-28 13:56:17 +00:00
 permalink: /azure/community/Enforcing-PR-Branch-Policies-with-Multiple-Required-Pipelines-in-Azure-DevOps
 tags:
-- Azure
 - Azure DevOps
 - Azure Pipelines
 - Azure Repos
@@ -17,8 +16,6 @@ tags:
 - Build Definitions
 - Build Validation
 - CI/CD
-- Community
-- DevOps
 - Inner Source
 - Pipeline Configuration
 - Pipeline Requirements

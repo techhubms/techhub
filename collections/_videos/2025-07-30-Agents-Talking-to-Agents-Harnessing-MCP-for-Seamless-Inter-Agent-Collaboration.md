@@ -11,9 +11,7 @@ permalink: /ai/videos/Agents-Talking-to-Agents-Harnessing-MCP-for-Seamless-Inter
 tags:
 - Agent Collaboration
 - Agent Integration
-- AI
 - AI Agents
-- Azure
 - Azure AI Foundry
 - Cloud Computing
 - Context Sharing
@@ -30,7 +28,6 @@ tags:
 - Tech
 - Technology
 - Tool Catalog
-- Videos
 - VS Code
 section_names:
 - ai

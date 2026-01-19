@@ -9,14 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-15 04:22:11 +00:00
 permalink: /ai/community/Hosting-Remote-MCP-Server-on-Azure-Container-Apps-Using-HTTP-Transport
 tags:
-- AI
-- Azure
 - Azure Container Apps
 - Azure Deployment
 - Bicep
 - Cloud Scaling
-- Coding
-- Community
 - Containerization
 - Currency Conversion
 - HTTP Transport

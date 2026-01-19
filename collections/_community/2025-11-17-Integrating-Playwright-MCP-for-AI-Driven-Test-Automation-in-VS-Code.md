@@ -10,12 +10,9 @@ date: 2025-11-17 17:15:13 +00:00
 permalink: /ai/community/Integrating-Playwright-MCP-for-AI-Driven-Test-Automation-in-VS-Code
 tags:
 - Adaptive Testing
-- AI
 - AI Assisted Testing
 - Automation Framework
 - Browser Testing
-- Coding
-- Community
 - Copilot Chat
 - Dynamic Debugging
 - JavaScript

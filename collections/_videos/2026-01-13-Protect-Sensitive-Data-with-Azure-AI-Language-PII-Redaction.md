@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2026-01-13 17:10:44 +00:00
 permalink: /ai/videos/Protect-Sensitive-Data-with-Azure-AI-Language-PII-Redaction
 tags:
-- AI
 - AI Compliance
 - AI For Developers
-- Azure
 - Azure AI Foundry
 - Azure AI Language
 - Cloud Computing
@@ -31,11 +29,9 @@ tags:
 - PII Detection
 - PII Redaction
 - Redaction Service
-- Security
 - Sensitive Data
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

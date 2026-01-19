@@ -9,19 +9,15 @@ feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2023-05-23 00:00:00 +00:00
 permalink: /azure/blogs/GitHub-Advanced-Security-for-Azure-DevOps
 tags:
-- Azure
 - Azure DevOps
-- Blogs
 - Code Scanning
 - CodeQL
 - Dependency Scanning
-- DevOps
 - DevSecOps
 - GitHub Advanced Security
 - Microsoft Build
 - Pipeline Security
 - Secret Scanning
-- Security
 - Security Automation
 section_names:
 - devops

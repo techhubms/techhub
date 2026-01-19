@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-01 13:00:00 +00:00
 permalink: /ai/news/Accelerate-Data-Transformation-with-AI-in-Data-Wrangler
 tags:
-- AI
 - AI Functions
 - Big Data
 - Classification
@@ -18,9 +17,7 @@ tags:
 - Data Transformation
 - Data Wrangler
 - Microsoft Fabric
-- ML
 - Natural Language Processing
-- News
 - Pandas
 - Prompt Engineering
 - PROSE

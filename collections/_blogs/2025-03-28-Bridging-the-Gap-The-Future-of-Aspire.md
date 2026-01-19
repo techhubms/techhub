@@ -11,13 +11,9 @@ permalink: /coding/blogs/Bridging-the-Gap-The-Future-of-Aspire
 tags:
 - Application Modeling
 - Aspire
-- Azure
 - Bicep
-- Blogs
 - Cloud Native
-- Coding
 - Developer Experience
-- DevOps
 - Distributed Systems
 - IaC
 - Platform Engineering

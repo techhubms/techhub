@@ -9,18 +9,15 @@ feed_url: https://devops.com/feed/
 date: 2025-10-28 15:21:04 +00:00
 permalink: /ai/blogs/Impact-of-AI-Coding-Tools-on-DevOps-Workflows-Analysis-of-EMAPerforce-Survey
 tags:
-- AI
 - AI Benefits
 - AI Coding
 - AI Coding Tools
 - AI Risks
 - Application Development
-- Blogs
 - Code Review
 - Compliance
 - Developer Productivity
 - Developer Satisfaction
-- DevOps
 - Ema
 - Perforce
 - Performance Testing

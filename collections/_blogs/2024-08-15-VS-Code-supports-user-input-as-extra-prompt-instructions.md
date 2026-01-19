@@ -6,11 +6,8 @@ canonical_url: https://blog.matt-o.com/GitHub-Copilot-Custom-Instructions
 viewing_mode: external
 permalink: /github-copilot/blogs/blogs/2024-08-15-VS-Code-supports-user-input-as-extra-prompt-instructions
 tags:
-- AI
-- Blogs
 - Configuration
 - Custom Instructions
-- GitHub Copilot
 - Productivity
 section_names:
 - ai

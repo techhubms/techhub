@@ -11,19 +11,15 @@ permalink: /github-copilot/community/The-Ultimate-AI-Agent-Directory-100-Tools-B
 tags:
 - Agent Frameworks
 - Agent Orchestration
-- AI
 - AI Agents
 - AI Frameworks
 - AutoGen
 - Automation
 - Business Automation
 - Code Generation
-- Coding
-- Community
 - Conversational AI
 - Development Tools
 - Enterprise AI
-- GitHub Copilot
 - LangChain
 - Microsoft Copilot
 - Microsoft Copilot Studio

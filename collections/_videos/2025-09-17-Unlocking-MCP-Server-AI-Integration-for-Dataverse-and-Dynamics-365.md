@@ -10,7 +10,6 @@ date: 2025-09-17 07:00:41 +00:00
 permalink: /ai/videos/Unlocking-MCP-Server-AI-Integration-for-Dataverse-and-Dynamics-365
 tags:
 - Agentic AI
-- AI
 - AI Integration
 - Autonomous Agents
 - Cloud Computing
@@ -31,7 +30,6 @@ tags:
 - Security Considerations
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 ---

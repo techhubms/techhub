@@ -10,17 +10,14 @@ date: 2025-10-31 00:00:22 +00:00
 permalink: /github-copilot/videos/Building-MCP-Clients-Java-Integration-and-GitHub-Copilot-Use-Cases
 tags:
 - Agent Mode
-- AI
 - AI Integration
 - AIIntegration
 - AITools
 - Chat Applications
 - ChatApplications
 - Client Server
-- Coding
 - Copilot Integration
 - Dev Tools
-- GitHub Copilot
 - Java
 - Java Development
 - JavaClient
@@ -32,7 +29,6 @@ tags:
 - LocalLLM
 - MCP
 - MCP Inspector
-- Videos
 - VS Code
 section_names:
 - ai

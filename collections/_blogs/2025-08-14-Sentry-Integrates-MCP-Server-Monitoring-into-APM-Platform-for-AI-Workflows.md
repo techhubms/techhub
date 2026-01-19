@@ -9,24 +9,20 @@ feed_url: https://devops.com/feed/
 date: 2025-08-14 13:00:36 +00:00
 permalink: /ai/blogs/Sentry-Integrates-MCP-Server-Monitoring-into-APM-Platform-for-AI-Workflows
 tags:
-- AI
 - AI Applications
 - API Monitoring
 - APM
 - Application Layer Protocol
 - Application Performance Monitoring
 - Autonomous AI Agents
-- Blogs
 - Business Of DevOps
 - Cybersecurity
 - Debugging
-- DevOps
 - DevSecOps
 - JavaScript SDK
 - MCP
 - MCP Server Monitoring
 - Observability
-- Security
 - Sentry
 - Social Facebook
 - Social LinkedIn

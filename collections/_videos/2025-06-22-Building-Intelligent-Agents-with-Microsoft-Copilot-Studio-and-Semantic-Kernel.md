@@ -12,10 +12,8 @@ tags:
 - Agent Communication
 - Agent Development
 - Agent Integration
-- AI
 - AI Hands On
 - AI Orchestration
-- Coding
 - Copilot Studio
 - Developer Tools
 - Intelligent Agents
@@ -25,7 +23,6 @@ tags:
 - Practical Demos
 - Semantic Kernel
 - Semantic Processing
-- Videos
 - Workflow Automation
 section_names:
 - ai

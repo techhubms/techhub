@@ -9,17 +9,14 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-06 16:39:47 +00:00
 permalink: /github-copilot/news/Deprecation-of-GPT-4o-in-Copilot-Chat
 tags:
-- AI
 - AI Models
 - Copilot Chat
-- GitHub Copilot
 - GitHub Mobile
 - GPT 4.1
 - GPT 4o
 - IDEs
 - Machine Learning
 - Model Deprecation
-- News
 - OpenAI
 - Software Development
 section_names:

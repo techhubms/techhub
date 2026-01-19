@@ -15,16 +15,13 @@ tags:
 - Copilot Autofix
 - Dependency Review
 - Developer Security Tools
-- DevOps
 - DevSecOps
 - GitHub
 - GitHub Code Security
 - Open Source Security
 - Secure Development Workflow
-- Security
 - Security Campaigns
 - Static Code Analysis
-- Videos
 - Vulnerability Management
 section_names:
 - devops

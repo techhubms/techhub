@@ -9,16 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 06:14:52 +00:00
 permalink: /ai/community/How-to-Integrate-MCP-Tools-with-Azure-AI-Foundry-Agents-Using-Dynamic-Sessions-on-Azure-Container-Apps
 tags:
-- AI
 - AI Agents
 - API Authentication
 - ARM Template
-- Azure
 - Azure Container Apps
 - Azure Foundry
 - Azure Portal
 - Cloud Automation
-- Community
 - Dynamic Sessions
 - EnvironmentId
 - MCP

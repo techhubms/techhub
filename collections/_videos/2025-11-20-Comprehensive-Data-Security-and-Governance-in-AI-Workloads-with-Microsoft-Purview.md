@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-20 10:41:43 +00:00
 permalink: /ai/videos/Comprehensive-Data-Security-and-Governance-in-AI-Workloads-with-Microsoft-Purview
 tags:
-- AI
 - AI Risk Management
 - Audit Logs
-- Azure
 - Azure AI Foundry
 - Compliance Manager
 - Copilot Studio
@@ -25,11 +23,9 @@ tags:
 - Power BI
 - Regulatory Compliance
 - Secureyourdata
-- Security
 - Security Dashboard
 - Sensitive Data Protection
 - Unified Security Ecosystem
-- Videos
 section_names:
 - ai
 - azure

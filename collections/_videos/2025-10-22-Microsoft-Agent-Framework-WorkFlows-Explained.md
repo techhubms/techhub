@@ -11,14 +11,11 @@ permalink: /ai/videos/Microsoft-Agent-Framework-WorkFlows-Explained
 tags:
 - Agent Framework Demo
 - Agent Framework Workflows
-- AI
 - AI Agents
 - Automation Framework
-- Azure
 - Business Process Orchestration
 - Cloud Automation
 - Cloud Computing
-- Coding
 - Dev
 - Developer Tools
 - Development
@@ -31,7 +28,6 @@ tags:
 - Technology
 - Type Safe Architecture
 - Victor Dibia
-- Videos
 - Web UI
 - Workflow Automation
 section_names:

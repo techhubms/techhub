@@ -9,16 +9,13 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-07 23:41:48 +00:00
 permalink: /github-copilot/community/First-Impressions-of-GPT-5-Integration-in-Visual-Studio-Code-Copilot
 tags:
-- AI
 - AI Assistant
 - AI Integration
 - AI Model Comparison
 - Claude 4
 - Code Summarization
-- Community
 - Copilot Settings
 - Developer Experience
-- GitHub Copilot
 - GPT 4.1
 - GPT 5
 - Microsoft

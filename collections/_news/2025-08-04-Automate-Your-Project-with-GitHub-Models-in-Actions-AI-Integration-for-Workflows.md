@@ -9,20 +9,16 @@ feed_url: https://github.blog/feed/
 date: 2025-08-04 16:00:00 +00:00
 permalink: /github-copilot/news/Automate-Your-Project-with-GitHub-Models-in-Actions-AI-Integration-for-Workflows
 tags:
-- AI
 - AI & ML
 - AI Inference Action
 - AI Integration
 - Automation
 - CLI
-- DevOps
 - Generative AI
 - Gh Models Extension
 - GitHub Actions
-- GitHub Copilot
 - GitHub Models
 - Issue Triage
-- News
 - Permissions
 - Prompt Engineering
 - Pull Requests

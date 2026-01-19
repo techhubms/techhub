@@ -10,10 +10,8 @@ date: 2025-07-08 05:57:41 +00:00
 permalink: /ai/news/Build-Biosensing-AI-Native-Apps-on-Azure-with-BCI-AI-Foundry-and-Agents-Service
 tags:
 - Adaptive Systems
-- AI
 - AI Agents Service
 - All Things Azure
-- Azure
 - Azure AI Foundry
 - Azure AI Search
 - Azure Container Apps
@@ -21,13 +19,11 @@ tags:
 - Azure Event Hubs
 - Biosensing
 - Brain Computer Interface
-- Coding
 - Cognitive State Monitoring
 - Cosmos DB
 - Developer Tools
 - Fnirs
 - Health Technology
-- News
 - Real Time Applications
 - TypeAgent
 section_names:

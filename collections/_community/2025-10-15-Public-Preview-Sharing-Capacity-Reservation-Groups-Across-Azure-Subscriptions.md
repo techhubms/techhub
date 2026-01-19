@@ -9,14 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-15 22:47:39 +00:00
 permalink: /azure/community/Public-Preview-Sharing-Capacity-Reservation-Groups-Across-Azure-Subscriptions
 tags:
-- Azure
 - Azure API
 - Azure Capacity Reservation Groups
 - Azure Reserved Instances
 - Azure Virtual Machines
 - Centralized Capacity
 - Cloud Scalability
-- Community
 - Cost Optimization
 - CRG
 - Disaster Recovery

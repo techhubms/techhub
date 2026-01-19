@@ -11,12 +11,10 @@ permalink: /ai/news/How-Copilot-Studio-Uses-NET-and-WebAssembly-for-Performance-
 tags:
 - .NET
 - .NET 8
-- AI
 - AI Agents
 - AOT Compilation
 - Bot Framework
 - C#
-- Coding
 - Conversational AI
 - Copilot Studio
 - Debugging Tools
@@ -24,7 +22,6 @@ tags:
 - JavaScript Interoperability
 - JIT Compilation
 - Low Code
-- News
 - Performance
 - Performance Optimization
 - Power Fx

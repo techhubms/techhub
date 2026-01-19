@@ -9,17 +9,14 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-30 08:24:48 +00:00
 permalink: /ai/blogs/How-AI-is-Transforming-DevOps-Smarter-Faster-and-More-Reliable-Software-Delivery
 tags:
-- AI
 - AI in DevOps
 - AIOps
 - Automated Testing
 - Automation
-- Blogs
 - CI/CD Pipelines
 - Cloud Infrastructure
 - Continuous Deployment
 - Continuous Integration
-- DevOps
 - DevSecOps
 - Incident Management
 - Machine Learning

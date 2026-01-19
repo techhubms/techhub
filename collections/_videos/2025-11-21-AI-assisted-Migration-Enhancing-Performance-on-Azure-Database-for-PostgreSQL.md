@@ -9,23 +9,19 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 16:23:57 +00:00
 permalink: /ai/videos/AI-assisted-Migration-Enhancing-Performance-on-Azure-Database-for-PostgreSQL
 tags:
-- AI
 - AI Assisted Migration
 - Automated Tuning
-- Azure
 - Azure Database For PostgreSQL
 - Cloud Databases
 - Database Migration
 - Database Modernization
 - Enterprise Readiness
 - Migrateandmodernizeyourestate
-- ML
 - MSIgnite
 - Oracle Migration
 - Performance Tuning
 - PostgreSQL
 - Schema Validation
-- Videos
 - VS Code Demo
 section_names:
 - ai

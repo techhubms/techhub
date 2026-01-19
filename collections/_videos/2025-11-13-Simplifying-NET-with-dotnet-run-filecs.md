@@ -15,7 +15,6 @@ tags:
 - ASP.NET Core
 - Automation
 - C#
-- Coding
 - Developer Productivity
 - Educational Scenarios
 - F#
@@ -25,7 +24,6 @@ tags:
 - Scripting
 - Unified Development
 - Utility Programs
-- Videos
 - VS
 section_names:
 - coding

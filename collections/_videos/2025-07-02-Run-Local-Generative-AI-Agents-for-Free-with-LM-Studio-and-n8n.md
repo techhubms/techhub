@@ -9,13 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS
 date: 2025-07-02 16:01:27 +00:00
 permalink: /ai/videos/Run-Local-Generative-AI-Agents-for-Free-with-LM-Studio-and-n8n
 tags:
-- AI
 - AI Agents
 - AI Automation
 - AIautomation
 - API Integration
 - Chatbots
-- Coding
 - DeepSeek
 - Docker
 - DockerNetworking
@@ -38,7 +36,6 @@ tags:
 - RunLLMLocally
 - Self Hosted AI
 - SelfHostedAI
-- Videos
 - Windows
 - Workflow Automation
 section_names:

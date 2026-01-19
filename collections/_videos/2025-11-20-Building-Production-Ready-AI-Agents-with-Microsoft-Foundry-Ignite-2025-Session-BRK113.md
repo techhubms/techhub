@@ -10,14 +10,11 @@ date: 2025-11-20 16:20:43 +00:00
 permalink: /ai/videos/Building-Production-Ready-AI-Agents-with-Microsoft-Foundry-Ignite-2025-Session-BRK113
 tags:
 - Agentic Applications
-- AI
 - AI Development
 - AI Gateway
-- Azure
 - Azure AI
 - Business Process Automation
 - Code Based Workflows
-- Coding
 - Developer Tools
 - Enterprise Integration
 - Governance
@@ -29,7 +26,6 @@ tags:
 - Policy Management
 - Python
 - Real Time Context
-- Videos
 section_names:
 - ai
 - azure

@@ -10,16 +10,12 @@ date: 2025-03-12 17:58:25 +00:00
 permalink: /coding/news/Announcing-Microsoft-Desired-State-Configuration-v300
 tags:
 - Automation
-- Azure
-- Coding
 - Configuration Management
 - Cross Platform
 - Desired State Configuration
-- DevOps
 - DSC
 - IaC
 - JSON
-- News
 - PowerShell
 - PowerShell DSC
 - PSDSC

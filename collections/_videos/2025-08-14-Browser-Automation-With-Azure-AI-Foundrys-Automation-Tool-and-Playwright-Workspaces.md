@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-14 15:59:53 +00:00
 permalink: /ai/videos/Browser-Automation-With-Azure-AI-Foundrys-Automation-Tool-and-Playwright-Workspaces
 tags:
-- AI
 - AI Agents
 - Automation
-- Azure
 - Azure AI Foundry
 - Browser Automation Tool
 - Cloud Computing
@@ -26,7 +24,6 @@ tags:
 - Secure Session Isolation
 - Tech
 - Technology
-- Videos
 - VS Code
 - Web Automation
 section_names:

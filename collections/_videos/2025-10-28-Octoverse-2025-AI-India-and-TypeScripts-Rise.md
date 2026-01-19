@@ -9,14 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-10-28 16:05:04 +00:00
 permalink: /ai/videos/Octoverse-2025-AI-India-and-TypeScripts-Rise
 tags:
-- AI
 - AI Adoption
-- Coding
 - Developer
 - Developer Community
 - Developer Map
 - Developer Trends
-- DevOps
 - Generative AI
 - GitHub
 - India Developers
@@ -25,7 +22,6 @@ tags:
 - Programming Languages
 - Software Engineering
 - TypeScript
-- Videos
 section_names:
 - ai
 - coding

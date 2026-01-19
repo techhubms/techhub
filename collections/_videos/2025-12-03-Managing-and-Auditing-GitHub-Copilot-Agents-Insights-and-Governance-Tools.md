@@ -12,18 +12,13 @@ tags:
 - Access Management
 - Activity Monitoring
 - Administration
-- AI
 - Audit Logging
 - Control Panel
 - Copilot Agents
 - Developer Tools
-- DevOps
-- GitHub Copilot
 - Governance
 - Insights Dashboard
 - MCP
-- Security
-- Videos
 section_names:
 - ai
 - devops

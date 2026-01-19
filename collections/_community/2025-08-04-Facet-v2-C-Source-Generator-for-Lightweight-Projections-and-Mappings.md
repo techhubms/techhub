@@ -12,8 +12,6 @@ tags:
 - .NET
 - API Models
 - C#
-- Coding
-- Community
 - Compile Time
 - Custom Mappings
 - DTOs

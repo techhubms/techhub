@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-10-03 19:55:25 +00:00
 permalink: /ai/videos/Enhancements-to-BYOK-in-Visual-Studio-Code-Model-Provider-Integration
 tags:
-- AI
 - AI Integration
 - API
 - BYOK
-- Coding
 - Custom Language Models
 - Developer Tools
 - Extension API
@@ -21,7 +19,6 @@ tags:
 - Language Model Chat Provider API
 - Model Providers
 - Open Source
-- Videos
 - VS Code
 section_names:
 - ai

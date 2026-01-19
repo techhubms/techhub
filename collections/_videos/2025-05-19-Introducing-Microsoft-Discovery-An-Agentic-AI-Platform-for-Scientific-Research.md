@@ -11,11 +11,9 @@ permalink: /ai/videos/Introducing-Microsoft-Discovery-An-Agentic-AI-Platform-for
 tags:
 - Adaptive AI
 - Agentic R&D
-- AI
 - AI Agents
 - AI Platform
 - AI Science
-- Azure
 - Azure AI Foundry
 - Azure HPC
 - Enterprise AI
@@ -28,7 +26,6 @@ tags:
 - Scientific Computing
 - Scientific Discovery
 - Specialized AI Agents
-- Videos
 section_names:
 - ai
 - azure

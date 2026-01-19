@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-24 16:00:00 +00:00
 permalink: /azure/community/Clone-a-Consumption-Logic-App-to-a-Standard-Workflow
 tags:
-- Azure
 - Azure Functions
 - Azure Logic Apps
 - Azure Portal
-- Community
 - Connectors
 - Consumption Logic Apps
 - Enterprise Integration

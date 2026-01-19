@@ -12,11 +12,9 @@ tags:
 - App Testing
 - Application Readiness
 - Automation
-- Azure
 - Azure Virtual Desktop
 - Cloud Desktop
 - Dashboard
-- DevOps
 - Intune
 - IT Operations
 - Microsoft Ignite
@@ -27,8 +25,6 @@ tags:
 - OS Upgrade
 - Rimo3
 - SCCM
-- Security
-- Videos
 - Windows 11
 - Windows 365
 section_names:

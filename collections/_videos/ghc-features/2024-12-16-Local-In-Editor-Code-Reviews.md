@@ -13,13 +13,10 @@ plans:
 - Business
 alt-collection: features
 tags:
-- AI
 - Code
 - Code Review
 - Editing
-- GitHub Copilot
 - IDE
-- Videos
 section_names:
 - ai
 - github-copilot

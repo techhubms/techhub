@@ -11,10 +11,8 @@ permalink: /coding/blogs/Centering-a-WPF-TreeViewItem-in-the-TreeView-ScrollView
 tags:
 - .NET
 - Application Usability
-- Blogs
 - BringIntoView
 - C#
-- Coding
 - ContentPresenter
 - Helper Methods
 - ScrollViewer

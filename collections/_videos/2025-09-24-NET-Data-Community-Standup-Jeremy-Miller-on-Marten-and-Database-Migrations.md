@@ -11,7 +11,6 @@ permalink: /coding/videos/NET-Data-Community-Standup-Jeremy-Miller-on-Marten-and
 tags:
 - .NET
 - C#
-- Coding
 - Data Architecture
 - Data Persistence
 - Database Migrations
@@ -21,7 +20,6 @@ tags:
 - Marten
 - Migrations
 - ORM
-- Videos
 section_names:
 - coding
 ---

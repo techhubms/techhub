@@ -14,13 +14,11 @@ tags:
 - Microsoft Security
 - OneDevQuestion
 - Risk Assessment
-- Security
 - Security Awareness
 - Security Modeling
 - Storytelling
 - Team Communication
 - Threat Modeling
-- Videos
 section_names:
 - security
 ---

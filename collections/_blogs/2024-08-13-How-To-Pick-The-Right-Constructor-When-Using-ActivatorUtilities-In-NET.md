@@ -12,9 +12,7 @@ tags:
 - .NET
 - ActivatorUtilities
 - ActivatorUtilitiesConstructorAttribute
-- Blogs
 - C#
-- Coding
 - Constructor Selection
 - Dependency Injection
 - Microsoft.Extensions.DependencyInjection

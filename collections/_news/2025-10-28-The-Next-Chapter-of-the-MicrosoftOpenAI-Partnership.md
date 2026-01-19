@@ -11,18 +11,15 @@ permalink: /ai/news/The-Next-Chapter-of-the-MicrosoftOpenAI-Partnership
 tags:
 - AGI
 - Agreement
-- AI
 - AI Partnership
 - AI Strategy
 - API Exclusivity
-- Azure
 - Azure API
 - Cloud Services
 - Company News
 - Intellectual Property
 - Microsoft
 - Model Development
-- News
 - OpenAI
 - Public Benefit Corporation
 - Research Collaboration

@@ -10,17 +10,14 @@ date: 2025-07-09 17:53:52 +00:00
 permalink: /ai/videos/Lets-Learn-MCP-CSharp
 tags:
 - .NET
-- AI
 - Beginner
 - C#
-- Coding
 - Developer
 - Developer Tools
 - Dotnetdeveloper
 - Mcp
 - Microsoft
 - Software Developer
-- Videos
 section_names:
 - ai
 - coding

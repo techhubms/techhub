@@ -8,20 +8,11 @@ permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET 10
 - Agentic AI
-- AI
 - Automation
-- Azure
 - Cloud
-- Coding
 - Coding Agents
 - Compliance
-- DevOps
-- GitHub Copilot
-- Machine Learning
 - MCP
-- ML
-- Roundups
-- Security
 - VS
 - VS Code
 section_names:

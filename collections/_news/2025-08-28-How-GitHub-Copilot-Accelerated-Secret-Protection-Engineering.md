@@ -10,24 +10,18 @@ date: 2025-08-28 17:08:51 +00:00
 permalink: /github-copilot/news/How-GitHub-Copilot-Accelerated-Secret-Protection-Engineering
 tags:
 - Agentic AI
-- AI
 - AI & ML
 - API Integration
 - Application Security
 - Automation
-- Coding
 - Coding Automation
 - Credential Management
-- DevOps
 - DevOps Workflow
 - Engineering Productivity
 - Framework Driven Development
 - GitHub Actions
-- GitHub Copilot
-- News
 - Pull Requests
 - Secret Protection
-- Security
 - Software Engineering
 - Token Validation
 section_names:

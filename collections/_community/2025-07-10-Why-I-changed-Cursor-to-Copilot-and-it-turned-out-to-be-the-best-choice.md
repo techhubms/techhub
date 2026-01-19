@@ -10,16 +10,13 @@ permalink: /github-copilot/community/Why-I-changed-Cursor-to-Copilot-and-it-turn
 viewing_mode: external
 tags:
 - Agentic Behavior
-- AI
 - AI Assistants
 - APM
 - Billing Changes
 - Claude Code
-- Community
 - Copilot Pro
 - Cursor
 - Developer Tools
-- GitHub Copilot
 - LLM
 - Open Source
 - Request Limits

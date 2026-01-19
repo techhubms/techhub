@@ -10,26 +10,21 @@ date: 2025-02-07 20:43:29 +00:00
 permalink: /ai/news/Azure-Developer-CLI-azd-February-2025-New-Features-Bug-Fixes-and-AI-Templates
 tags:
 - .NET
-- AI
 - AI App Deployment
 - AI Templates
 - Azd
-- Azure
 - Azure Developer CLI
 - Azure SDK
 - Bicep
 - CLI Tools
 - Cloud Development
 - Codespaces
-- Coding
-- DevOps
 - Docker
 - GitHub Codespaces
 - Java
 - JavaScript
 - Key Vault
 - Kubernetes
-- News
 - OpenAI
 - Python
 - Semantic Kernel

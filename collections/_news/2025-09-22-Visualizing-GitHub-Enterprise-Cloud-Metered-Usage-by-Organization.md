@@ -12,7 +12,6 @@ tags:
 - Account Management
 - Billing
 - Cost Centers
-- DevOps
 - Enterprise Administration
 - Enterprise Management Tools
 - Enterprise Reporting
@@ -20,7 +19,6 @@ tags:
 - Improvement
 - License Management
 - Metered Usage
-- News
 - Organization Management
 - Reporting Tools
 - Usage API

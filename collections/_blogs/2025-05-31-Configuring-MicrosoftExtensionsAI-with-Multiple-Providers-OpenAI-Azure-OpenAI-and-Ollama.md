@@ -10,14 +10,10 @@ date: 2025-05-31 08:56:33 +00:00
 permalink: /ai/blogs/Configuring-MicrosoftExtensionsAI-with-Multiple-Providers-OpenAI-Azure-OpenAI-and-Ollama
 tags:
 - .NET
-- AI
-- Azure
 - Azure OpenAI
-- Blogs
 - C#
 - Chat Clients
 - ChatOptions
-- Coding
 - Dependency Injection
 - IChatClient
 - Microsoft.Extensions.AI

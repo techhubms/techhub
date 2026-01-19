@@ -11,14 +11,11 @@ permalink: /azure/community/Azure-Container-Registry-Now-Supports-Entra-ABAC-for
 tags:
 - ABAC
 - AKS
-- Azure
 - Azure Container Apps
 - Azure Container Instances
 - Azure Container Registry
 - Azure RBAC
 - CI/CD
-- Community
-- DevOps
 - Kubernetes
 - Least Privilege
 - Microsoft Entra ID
@@ -26,7 +23,6 @@ tags:
 - Permission Management
 - Registry Administration
 - Role Assignments
-- Security
 - Zero Trust
 section_names:
 - azure

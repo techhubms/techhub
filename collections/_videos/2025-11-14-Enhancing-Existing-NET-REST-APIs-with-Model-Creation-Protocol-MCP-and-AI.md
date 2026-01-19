@@ -11,7 +11,6 @@ permalink: /ai/videos/Enhancing-Existing-NET-REST-APIs-with-Model-Creation-Proto
 tags:
 - .NET
 - .NET 10
-- AI
 - AI Integration
 - AI Services
 - API Design
@@ -19,13 +18,11 @@ tags:
 - ASP.NET Core
 - Azure API Management
 - C#
-- Coding
 - LLM
 - MCP
 - MCP SDK
 - Model Creation Protocol
 - REST API
-- Videos
 - Web API
 section_names:
 - ai

@@ -9,15 +9,12 @@ feed_url: https://github.blog/feed/
 date: 2025-08-12 13:52:49 +00:00
 permalink: /ai/news/Why-We-Open-Sourced-Our-MCP-Server-and-What-It-Means-for-Developers
 tags:
-- AI
 - AI Integration
 - APIs
 - Architecture
 - Automation
 - Chatbots
-- Coding
 - Copilot
-- DevOps
 - DevOps Tools
 - GitHub Actions
 - GitHub MCP Server
@@ -26,7 +23,6 @@ tags:
 - Maintainers
 - MCP
 - Natural Language Processing
-- News
 - Open Source
 - VS Code
 - VS Code Extensions

@@ -9,15 +9,12 @@ date: 2025-07-18 19:28:33 +00:00
 permalink: /github-copilot/news/Upcoming-deprecations-and-changes-to-Copilot-code-review
 viewing_mode: external
 tags:
-- AI
 - Code Review
 - Coding Guidelines
 - Copilot Instructions.md
 - Developer Tools
 - Feature Update
 - GitHub
-- GitHub Copilot
-- News
 - Pull Request
 - UI Enhancement
 - Workflow

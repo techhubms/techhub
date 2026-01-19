@@ -14,14 +14,12 @@ tags:
 - CI/CD
 - Continuous Integration
 - Developer Experience
-- DevOps
 - GitHub Actions
 - GitHub Improvements
 - Improvement
 - Job Filtering
 - Lazy Loading
 - Monorepo Management
-- News
 - Workflow Optimization
 section_names:
 - devops

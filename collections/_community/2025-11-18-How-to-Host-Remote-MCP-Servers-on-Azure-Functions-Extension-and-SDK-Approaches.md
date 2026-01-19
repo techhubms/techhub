@@ -10,16 +10,12 @@ date: 2025-11-18 18:15:00 +00:00
 permalink: /ai/community/How-to-Host-Remote-MCP-Servers-on-Azure-Functions-Extension-and-SDK-Approaches
 tags:
 - .NET
-- AI
 - API Center
 - Authentication
 - Authorization
-- Azure
 - Azure Foundry
 - Azure Functions
 - C#
-- Coding
-- Community
 - Custom Handler
 - Flex Consumption
 - Host.json
@@ -36,7 +32,6 @@ tags:
 - OBO Auth
 - Python
 - SDK
-- Security
 - Server Sent Events
 - Serverless
 - Stateless Server

@@ -12,7 +12,6 @@ tags:
 - API Permissions
 - Audit Logging
 - Azure Active Directory
-- Blogs
 - Compliance
 - Conditional Access
 - Data Loss Prevention
@@ -26,7 +25,6 @@ tags:
 - OAuth 2.0
 - Power Automate
 - SaaS Security
-- Security
 - Single Sign On
 - Slack Integration
 - SSO

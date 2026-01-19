@@ -9,7 +9,6 @@ feed_url: https://devblogs.microsoft.com/engineering-at-microsoft/feed/
 date: 2025-12-03 01:46:50 +00:00
 permalink: /ai/news/Collaborating-with-AI-Agents-A-Framework-for-Engineering-Transformation-at-Microsoft
 tags:
-- AI
 - AI Agent
 - AI Agents
 - AI Transformation
@@ -23,7 +22,6 @@ tags:
 - Human AI Partnership
 - Microsoft Entra
 - Migration Framework
-- News
 - Prompt Engineering
 - Prompt Template
 - Security Boundaries

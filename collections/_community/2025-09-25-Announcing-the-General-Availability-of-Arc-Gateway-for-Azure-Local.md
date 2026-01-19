@@ -11,11 +11,9 @@ permalink: /azure/community/Announcing-the-General-Availability-of-Arc-Gateway-f
 tags:
 - AKS
 - Arc Gateway
-- Azure
 - Azure Arc
 - Azure Local
 - Cloud Integration
-- Community
 - Connectivity
 - Edge Computing
 - Enterprise Proxy
@@ -25,7 +23,6 @@ tags:
 - Hybrid Cloud
 - Microsoft Azure
 - Network Security
-- Security
 - Virtual Machines
 section_names:
 - azure

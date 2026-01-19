@@ -9,14 +9,11 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-06-25 20:27:52 +00:00
 permalink: /github-copilot/news/Improved-attachments-and-larger-context-in-Copilot-Chat-in-public-preview
 tags:
-- AI
 - Attachments
 - Collaboration
 - Context Limits
 - Copilot Chat
-- GitHub Copilot
 - Image Support
-- News
 section_names:
 - ai
 - github-copilot

@@ -9,13 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-09-05 18:01:32 +00:00
 permalink: /github-copilot/videos/Whats-New-with-the-GitHub-Copilot-Coding-Agent
 tags:
-- AI
 - Browser Automation
 - Copilot Coding Agent
 - CopilotCodingAgent
 - Dev Productivity
 - GitHub Agents Panel
-- GitHub Copilot
 - GitHub Features
 - MCP Servers
 - Mobile Development
@@ -23,7 +21,6 @@ tags:
 - Software Engineering
 - Task Automation
 - Technical Debt
-- Videos
 section_names:
 - ai
 - github-copilot

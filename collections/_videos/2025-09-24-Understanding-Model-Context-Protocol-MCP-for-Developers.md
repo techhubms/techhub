@@ -9,17 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-24 15:59:41 +00:00
 permalink: /github-copilot/videos/Understanding-Model-Context-Protocol-MCP-for-Developers
 tags:
-- AI
 - AI Development
 - Automation
 - Copilot Integration
 - Developer Tools
-- GitHub Copilot
 - MCP
 - Microsoft
 - Productivity Tools
 - Software Development
-- Videos
 section_names:
 - ai
 - github-copilot

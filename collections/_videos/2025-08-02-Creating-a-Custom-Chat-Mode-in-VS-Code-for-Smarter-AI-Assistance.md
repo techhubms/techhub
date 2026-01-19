@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-08-02 06:32:44 +00:00
 permalink: /ai/videos/Creating-a-Custom-Chat-Mode-in-VS-Code-for-Smarter-AI-Assistance
 tags:
-- AI
 - AI Coding Assistant
 - Blog Mode
 - Codebase Tools
-- Coding
 - Custom Chat Mode
 - Developer Productivity
 - GitHub Repo
@@ -21,7 +19,6 @@ tags:
 - Research Mode
 - Search Integration
 - SQL Optimizer
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

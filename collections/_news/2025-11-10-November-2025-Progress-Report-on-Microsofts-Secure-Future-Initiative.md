@@ -9,9 +9,7 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-10 17:55:11 +00:00
 permalink: /ai/news/November-2025-Progress-Report-on-Microsofts-Secure-Future-Initiative
 tags:
-- AI
 - AI Powered Cyberattacks
-- Azure
 - Cloud Security
 - Cybersecurity Governance
 - Data Security Posture Management
@@ -20,10 +18,8 @@ tags:
 - Microsoft Security
 - Microsoft Sentinel
 - Multifactor Authentication
-- News
 - Phishing Resistance
 - Secure Future Initiative
-- Security
 - Security Engineering
 - Security Operations
 - Vulnerability Disclosure

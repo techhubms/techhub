@@ -11,16 +11,13 @@ permalink: /coding/videos/How-Sitecore-Built-a-Scalable-Isolated-SaaS-Platform-o
 tags:
 - API Management
 - Autoscale Analysis
-- Azure
 - Circuit Breakers
-- Coding
 - Compliance
 - Cosmos DB
 - Cost Management
 - Data Isolation
 - DB Per Tenant
 - Deployment Stamps
-- DevOps
 - Event Overflow
 - Fleet Monitoring
 - MSIgnite
@@ -30,7 +27,6 @@ tags:
 - Sitecore
 - TCO Optimization
 - Unifyyourdataplatform
-- Videos
 section_names:
 - azure
 - coding

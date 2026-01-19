@@ -12,7 +12,6 @@ tags:
 - Agent Builder
 - Agent Creation
 - Agent Identity
-- AI
 - Automation
 - Copilot Agents
 - Copilot Studio
@@ -32,7 +31,6 @@ tags:
 - Platform Governance
 - Scoring Methods
 - Testing Tools
-- Videos
 - Zac Cadi
 section_names:
 - ai

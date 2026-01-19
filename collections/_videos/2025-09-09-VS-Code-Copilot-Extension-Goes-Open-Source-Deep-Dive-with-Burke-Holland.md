@@ -9,14 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-09 13:00:35 +00:00
 permalink: /github-copilot/videos/VS-Code-Copilot-Extension-Goes-Open-Source-Deep-Dive-with-Burke-Holland
 tags:
-- AI
 - AI Assistance
 - Beast Mode
 - Burke Holland
 - Chat Modes
 - Cloud Computing
 - Code Optimization
-- Coding
 - Community Contribution
 - Copilot Chat
 - Copilot Custom Modes
@@ -24,14 +22,12 @@ tags:
 - Developer Tools
 - Development
 - Extension Development
-- GitHub Copilot
 - Microsoft
 - Open Source
 - OpenAI
 - Prompt Engineering
 - Tech
 - Technology
-- Videos
 - VS Code
 - VS Code Copilot Extension
 - VS Code Insiders

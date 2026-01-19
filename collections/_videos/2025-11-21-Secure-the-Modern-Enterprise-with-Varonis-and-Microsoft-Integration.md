@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 12:51:47 +00:00
 permalink: /ai/videos/Secure-the-Modern-Enterprise-with-Varonis-and-Microsoft-Integration
 tags:
-- AI
 - AI Security
 - Asset Explorer
 - Cloud Integration
@@ -24,10 +23,8 @@ tags:
 - Observability
 - Risk Management
 - Salesforce
-- Security
 - Sensitive Data Protection
 - Varonis
-- Videos
 section_names:
 - ai
 - security

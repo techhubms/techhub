@@ -13,8 +13,6 @@ tags:
 - .NET 11
 - C#
 - C# 15
-- Coding
-- Community
 - Discriminated Unions
 - Language Design
 - Language Features

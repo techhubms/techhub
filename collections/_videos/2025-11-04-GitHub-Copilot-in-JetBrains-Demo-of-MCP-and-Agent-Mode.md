@@ -10,21 +10,17 @@ date: 2025-11-04 22:41:29 +00:00
 permalink: /github-copilot/videos/GitHub-Copilot-in-JetBrains-Demo-of-MCP-and-Agent-Mode
 tags:
 - Agent Mode
-- AI
 - Autonomous Issue Management
 - Code Planning
-- Coding
 - Coding Assistant
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - IDE Integration
 - JetBrains
 - MCP
 - MCP Elicitation
 - Programming Workflow
 - Software Development
-- Videos
 - Workflow Automation
 section_names:
 - ai

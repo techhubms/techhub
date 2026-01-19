@@ -13,7 +13,6 @@ tags:
 - AKS
 - Authentication
 - Azd
-- Azure
 - Azure App Service
 - Azure Developer CLI
 - Azure SDK
@@ -21,10 +20,8 @@ tags:
 - CI/CD
 - Cloud Development
 - Codespaces
-- Coding
 - Community Templates
 - Container Apps
-- DevOps
 - Docker
 - Extension Management
 - GitHub
@@ -34,7 +31,6 @@ tags:
 - Kubernetes
 - Layered Provisioning
 - Managed Identity
-- News
 - Python
 - Service Dependencies
 - Templates

@@ -12,9 +12,7 @@ tags:
 - .NET
 - API Documentation
 - ASP.NET Core
-- Coding
 - Microsoft
-- News
 - NSwag
 - Open Source
 - OpenAPI

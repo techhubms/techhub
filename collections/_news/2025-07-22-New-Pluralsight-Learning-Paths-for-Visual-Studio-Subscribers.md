@@ -9,21 +9,16 @@ feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-07-22 14:00:40 +00:00
 permalink: /github-copilot/news/New-Pluralsight-Learning-Paths-for-Visual-Studio-Subscribers
 tags:
-- AI
 - AI Powered Development
-- Azure
 - Azure Blob Storage
 - Azure Functions
 - Cloud Automation
-- Coding
 - Data Pipelines
 - Generative AI
-- GitHub Copilot
 - IaC
 - Learning Benefits
 - Microservices
 - Microsoft Fabric
-- News
 - Pluralsight
 - Power BI
 - Prompt Engineering

@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 11:53:10 +00:00
 permalink: /ai/videos/Key-Learnings-and-Best-Practices-for-Microsoft-Fabric-Migrations
 tags:
-- AI
 - AI Strategy
-- Azure
 - Best Practices
 - Case Study
 - Data Analytics
@@ -22,12 +20,10 @@ tags:
 - Microsoft Fabric
 - Migrateandmodernizeyourestate
 - Migration
-- ML
 - MSIgnite
 - Organizational Transformation
 - Platform Modernization
 - Retail Data
-- Videos
 section_names:
 - ai
 - azure

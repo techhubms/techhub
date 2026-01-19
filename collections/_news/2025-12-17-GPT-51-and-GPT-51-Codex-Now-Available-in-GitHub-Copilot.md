@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-17 16:16:42 +00:00
 permalink: /github-copilot/news/GPT-51-and-GPT-51-Codex-Now-Available-in-GitHub-Copilot
 tags:
-- AI
 - AI Code Completion
 - AI Models
 - Copilot
@@ -18,13 +17,11 @@ tags:
 - Copilot Enterprise
 - Copilot Pro
 - Eclipse
-- GitHub Copilot
 - GPT 5.1
 - GPT 5.1 Codex
 - IDE Integration
 - JetBrains
 - Model Deployment
-- News
 - VS Code
 - Xcode
 section_names:

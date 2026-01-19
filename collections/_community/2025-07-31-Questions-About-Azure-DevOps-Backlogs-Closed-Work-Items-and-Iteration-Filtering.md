@@ -10,13 +10,10 @@ date: 2025-07-31 13:38:24 +00:00
 permalink: /azure/community/Questions-About-Azure-DevOps-Backlogs-Closed-Work-Items-and-Iteration-Filtering
 tags:
 - ADO Backlog
-- Azure
 - Azure Boards
 - Azure DevOps
 - Board Configuration
 - Closed Work Items
-- Community
-- DevOps
 - Epics
 - Hierarchy View
 - Iteration Path

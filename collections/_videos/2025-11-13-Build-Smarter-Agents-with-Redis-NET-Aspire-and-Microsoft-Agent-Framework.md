@@ -13,13 +13,10 @@ tags:
 - .NET 10
 - .NET Aspire
 - Agentic Applications
-- AI
 - ASP.NET Core 10
-- Azure
 - C# 14
 - Chat History
 - Cloud Native
-- Coding
 - Collaboration
 - F# 10
 - MAUI
@@ -29,7 +26,6 @@ tags:
 - Semantic Cache
 - Session Management
 - Vector Store
-- Videos
 - VS
 section_names:
 - ai

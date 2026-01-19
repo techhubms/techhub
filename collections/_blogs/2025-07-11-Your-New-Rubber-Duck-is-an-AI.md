@@ -9,9 +9,7 @@ feed_url: https://roadtoalm.com/feed/
 date: 2025-07-11 07:29:51 +00:00
 permalink: /github-copilot/blogs/Your-New-Rubber-Duck-is-an-AI
 tags:
-- AI
 - Automation
-- Blogs
 - Chatgpt
 - Cloud
 - Code Review
@@ -19,10 +17,8 @@ tags:
 - Copilot
 - Developer Experience
 - Developer Productivity
-- DevOps
 - Engineering Culture
 - Genai
-- GitHub Copilot
 - Lead Podcast
 - Pair Programming
 - Prompting

@@ -9,7 +9,6 @@ date: 2025-07-21 16:52:37 +00:00
 permalink: /ai/news/Introducing-the-new-Power-Apps-Generative-power-meets-enterprise-grade-trust
 viewing_mode: external
 tags:
-- AI
 - AI Integration
 - Automation
 - Business Applications
@@ -18,7 +17,6 @@ tags:
 - Generative AI
 - Low Code
 - Microsoft
-- News
 - Power Apps
 - Power Platform
 section_names:

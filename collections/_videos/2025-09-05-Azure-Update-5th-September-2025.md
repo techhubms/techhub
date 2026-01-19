@@ -15,7 +15,6 @@ tags:
 - App Testing
 - Autoscaling
 - AVNM
-- Azure
 - Azure CDN
 - Azure Cloud
 - Azure OpenAI Service
@@ -29,7 +28,6 @@ tags:
 - Microsoft Azure
 - Microsoft Basic
 - MySQL Maintenance
-- Videos
 section_names:
 - azure
 ---

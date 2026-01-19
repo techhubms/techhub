@@ -10,10 +10,8 @@ date: 2025-06-17 19:30:00 +00:00
 permalink: /ai/news/Multimodal-Vision-Intelligence-with-NET-MAUI
 tags:
 - .NET
-- AI
 - Azure AI Foundry
 - C#
-- Coding
 - Community Toolkit
 - Computer Vision
 - Copilot
@@ -24,7 +22,6 @@ tags:
 - Microsoft.Extensions.AI
 - Mobile Development
 - Multimodal
-- News
 - Prompt Engineering
 section_names:
 - ai

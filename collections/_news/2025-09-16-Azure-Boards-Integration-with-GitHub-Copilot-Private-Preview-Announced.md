@@ -10,20 +10,15 @@ date: 2025-09-16 11:45:27 +00:00
 permalink: /github-copilot/news/Azure-Boards-Integration-with-GitHub-Copilot-Private-Preview-Announced
 tags:
 - Agile
-- AI
-- Azure
 - Azure Boards
 - Azure Boards App
 - Azure DevOps
 - Code Review
 - Copilot Coding Agent
-- DevOps
 - DevOps Workflow
 - Feature Preview
-- GitHub Copilot
 - GitHub Integration
 - Integration
-- News
 - Private Preview
 - Pull Request Automation
 - Requirements Management

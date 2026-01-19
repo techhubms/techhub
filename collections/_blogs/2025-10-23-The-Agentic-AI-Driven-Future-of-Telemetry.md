@@ -11,7 +11,6 @@ permalink: /ai/blogs/The-Agentic-AI-Driven-Future-of-Telemetry
 tags:
 - 10x Investigators
 - Agentic Telemetry
-- AI
 - AI Driven Operations
 - AI First Architecture
 - AI Infrastructure
@@ -21,14 +20,12 @@ tags:
 - Analytics
 - Automation
 - Autonomous Agents
-- Blogs
 - Business Of DevOps
 - Cloud Operations
 - Context Fusion
 - Contextual Telemetry
 - Contributed Content
 - Data Enrichment
-- DevOps
 - Human in The Loop
 - Incident Response
 - KubeCon + CloudNativeCon Europe

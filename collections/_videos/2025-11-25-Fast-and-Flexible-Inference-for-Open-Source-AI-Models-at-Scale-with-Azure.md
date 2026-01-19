@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-25 15:55:32 +00:00
 permalink: /ai/videos/Fast-and-Flexible-Inference-for-Open-Source-AI-Models-at-Scale-with-Azure
 tags:
-- AI
 - AI Agents
 - AKS
-- Azure
 - Azure AI
 - Azure Container Apps
 - CI/CD Pipeline
@@ -26,12 +24,10 @@ tags:
 - Hybrid Architecture
 - InnovatewithAzureAIappsandagents
 - LLM
-- ML
 - Model Deployment
 - MSIgnite
 - Open Source Models
 - Serverless GPU
-- Videos
 section_names:
 - ai
 - azure

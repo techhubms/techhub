@@ -18,7 +18,6 @@ tags:
 - C#
 - Cloud Development
 - Code Efficiency
-- Coding
 - Desktop Apps
 - F#
 - Full Stack Web Development
@@ -28,7 +27,6 @@ tags:
 - Mobile Development
 - Performance Optimization
 - Stephen Toub
-- Videos
 - VS
 section_names:
 - coding

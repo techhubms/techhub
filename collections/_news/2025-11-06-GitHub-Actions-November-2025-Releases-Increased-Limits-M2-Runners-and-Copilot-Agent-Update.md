@@ -10,18 +10,14 @@ date: 2025-11-06 19:02:42 +00:00
 permalink: /github-copilot/news/GitHub-Actions-November-2025-Releases-Increased-Limits-M2-Runners-and-Copilot-Agent-Update
 tags:
 - Actions
-- AI
 - AI Integration
 - CI/CD
 - Coding Agent
 - Continuous Integration
-- DevOps
 - GitHub Actions
-- GitHub Copilot
 - Improvement
 - M2 Macos Runners
 - Macos
-- News
 - Organizational Settings
 - Performance
 - Reusable Workflows

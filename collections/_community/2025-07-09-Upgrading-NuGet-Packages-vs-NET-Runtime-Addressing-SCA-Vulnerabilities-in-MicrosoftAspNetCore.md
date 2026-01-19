@@ -14,8 +14,6 @@ tags:
 - .NET Runtime
 - Authorization
 - Best Practices
-- Coding
-- Community
 - Components
 - Dependency Management
 - Microsoft.AspNetCore

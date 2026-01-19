@@ -9,22 +9,17 @@ feed_url: https://devblogs.microsoft.com/powershell/feed/
 date: 2025-02-28 20:49:30 +00:00
 permalink: /ai/news/Announcing-AI-Shell-Preview-2-Enhanced-Azure-PowerShell-Integration-and-More
 tags:
-- AI
 - AI Shell
 - Automation
-- Azure
 - Azure OpenAI
 - Azure PowerShell
 - Bicep
 - CLI Tools
-- Coding
 - Copilot in Azure
 - Deployment
 - Developer Tools
-- DevOps
 - Error Handling
 - Microsoft
-- News
 - OllamaSharp
 - OpenAI Compatible Models
 - PowerShell

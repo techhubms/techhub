@@ -13,16 +13,13 @@ tags:
 - AI
 - AI Workflows
 - C#
-- Coding
 - Cross Language
 - Interoperability
-- ML
 - Nick Chapsas
 - Python Integration
 - Python Libraries
 - Python.NET
 - Video Tutorial
-- Videos
 section_names:
 - coding
 - ml

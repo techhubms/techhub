@@ -10,11 +10,9 @@ date: 2025-05-13 06:35:58 +00:00
 permalink: /ai/blogs/Data-Security-Posture-Management-for-AI-with-Microsoft-Purview
 tags:
 - Activity Monitoring
-- AI
 - AI Governance
 - Azure Security
 - Blog
-- Blogs
 - Compliance
 - Copilot
 - Data Protection
@@ -25,7 +23,6 @@ tags:
 - Microsoft Purview
 - Policy Management
 - Risk Assessment
-- Security
 - Security Analytics
 - SharePoint
 section_names:

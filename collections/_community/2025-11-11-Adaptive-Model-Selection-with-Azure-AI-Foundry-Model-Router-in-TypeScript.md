@@ -9,16 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-11 08:00:00 +00:00
 permalink: /ai/community/Adaptive-Model-Selection-with-Azure-AI-Foundry-Model-Router-in-TypeScript
 tags:
-- AI
 - API Authentication
 - Application Insights
-- Azure
 - Azure AI Foundry
 - Azure Inference SDK
 - Azure Monitor
 - Chat Models
-- Coding
-- Community
 - Cost Optimization
 - Dynamic Model Selection
 - GPT 4.1

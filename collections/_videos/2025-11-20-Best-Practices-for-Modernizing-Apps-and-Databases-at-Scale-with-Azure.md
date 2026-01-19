@@ -10,11 +10,9 @@ date: 2025-11-20 15:42:31 +00:00
 permalink: /ai/videos/Best-Practices-for-Modernizing-Apps-and-Databases-at-Scale-with-Azure
 tags:
 - Accessibility
-- AI
 - AI Readiness
 - App Development
 - App Modernization
-- Azure
 - Azure SQL
 - Best Practices
 - Cloud Migration
@@ -25,7 +23,6 @@ tags:
 - MSIgnite
 - Real World Case Studies
 - SecOps
-- Videos
 section_names:
 - ai
 - azure

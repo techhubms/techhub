@@ -15,7 +15,6 @@ tags:
 - Authentication
 - Authorization
 - C#
-- Coding
 - Daniel Roth
 - Demo
 - Developer
@@ -28,9 +27,7 @@ tags:
 - Mike Kistler
 - Open Specification
 - Polyglot Notebook
-- Security
 - Software Developer
-- Videos
 section_names:
 - coding
 - security

@@ -11,15 +11,12 @@ permalink: /devops/news/GitHub-Advanced-Security-Trials-Expanded-for-Enterprise-
 tags:
 - Application Security
 - Code Security
-- DevOps
 - Enterprise Security
 - GitHub
 - GitHub Advanced Security
 - Improvement
 - Licensing
-- News
 - Secret Protection
-- Security
 - Security Features
 - Security Trial
 section_names:

@@ -11,12 +11,8 @@ permalink: /coding/community/OTEL-Sidecar-Extension-Cheat-Sheet-on-Azure-App-Ser
 tags:
 - .NET
 - Application Insights
-- Azure
 - Azure App Service
 - Azure Monitor
-- Coding
-- Community
-- DevOps
 - Elastic APM
 - Environment Variables
 - Linux
@@ -32,7 +28,6 @@ tags:
 - Python
 - Sample Repositories
 - SCM DO BUILD DURING DEPLOYMENT
-- Security
 - Startup Commands
 - Tracing
 section_names:

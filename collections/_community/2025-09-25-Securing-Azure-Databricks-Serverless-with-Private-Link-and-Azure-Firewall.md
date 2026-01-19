@@ -10,18 +10,15 @@ date: 2025-09-25 23:42:50 +00:00
 permalink: /ml/community/Securing-Azure-Databricks-Serverless-with-Private-Link-and-Azure-Firewall
 tags:
 - Application Rules
-- Azure
 - Azure Databricks
 - Azure Firewall
 - Cloud Security
-- Community
 - Compliance
 - Data Analytics
 - FQDN Filtering
 - Health Probe
 - Load Balancer
 - Microsoft Azure
-- ML
 - NAT
 - Network Connectivity Configuration
 - Network Security Group
@@ -30,7 +27,6 @@ tags:
 - Private Link
 - Route Tables
 - Router VM
-- Security
 - Serverless
 - Virtual Network
 - VNET Peering

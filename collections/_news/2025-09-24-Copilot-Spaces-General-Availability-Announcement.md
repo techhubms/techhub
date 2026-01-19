@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-24 17:49:12 +00:00
 permalink: /github-copilot/news/Copilot-Spaces-General-Availability-Announcement
 tags:
-- AI
 - Code Explanation
 - Code Generation
 - Context Management
@@ -17,10 +16,8 @@ tags:
 - Copilot Spaces
 - Dev Tooling
 - GitHub
-- GitHub Copilot
 - IDE Integration
 - Knowledge Sharing
-- News
 - Project Collaboration
 - Project Onboarding
 - Software Development

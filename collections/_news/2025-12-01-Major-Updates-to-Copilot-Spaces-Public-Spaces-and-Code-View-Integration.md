@@ -9,16 +9,12 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-01 23:35:29 +00:00
 permalink: /github-copilot/news/Major-Updates-to-Copilot-Spaces-Public-Spaces-and-Code-View-Integration
 tags:
-- AI
 - Code Viewer
 - Collaboration
 - Copilot
 - Copilot Spaces
-- DevOps
 - GitHub
-- GitHub Copilot
 - Individual Sharing
-- News
 - Open Source
 - Public Spaces
 - Role Based Access Control

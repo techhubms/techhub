@@ -12,7 +12,6 @@ tags:
 - Code
 - Code Connect
 - Code Generation
-- Coding
 - Design Systems
 - Design To Code
 - Developer
@@ -27,7 +26,6 @@ tags:
 - Mcpserver
 - Microsoft
 - Software Developer
-- Videos
 - VS Code
 section_names:
 - coding

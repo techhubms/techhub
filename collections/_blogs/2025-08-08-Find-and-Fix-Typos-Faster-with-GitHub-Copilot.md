@@ -9,20 +9,16 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-08-08 00:00:00 +00:00
 permalink: /github-copilot/blogs/Find-and-Fix-Typos-Faster-with-GitHub-Copilot
 tags:
-- AI
 - Automated Refactoring
 - Best Practices
-- Blogs
 - Code Quality
 - Code Review
-- Coding
 - Copilot Agent Mode
 - Copilot Chat
 - Copilot Edit Mode
 - Debugging
 - Developer Productivity
 - Function Naming
-- GitHub Copilot
 - Naming Conventions
 - Typo Detection
 - Variable Names

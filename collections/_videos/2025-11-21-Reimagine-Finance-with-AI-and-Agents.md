@@ -10,10 +10,8 @@ date: 2025-11-21 17:08:37 +00:00
 permalink: /ai/videos/Reimagine-Finance-with-AI-and-Agents
 tags:
 - Agenticbusinessapplications
-- AI
 - AI Agents
 - Auditability
-- Azure
 - Azure AI Foundry
 - Business Applications
 - Copilot Studio
@@ -25,7 +23,6 @@ tags:
 - Microsoft Ignite
 - MSIgnite
 - Variance Analysis
-- Videos
 section_names:
 - ai
 - azure

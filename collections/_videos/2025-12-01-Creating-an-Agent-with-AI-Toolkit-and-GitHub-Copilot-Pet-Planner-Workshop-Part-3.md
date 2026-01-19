@@ -10,18 +10,15 @@ date: 2025-12-01 21:00:05 +00:00
 permalink: /github-copilot/videos/Creating-an-Agent-with-AI-Toolkit-and-GitHub-Copilot-Pet-Planner-Workshop-Part-3
 tags:
 - Agent Builder
-- AI
 - AI Agent
 - AI Integration
 - AI Toolkit
 - AI Tools
-- Azure
 - Cloud Computing
 - Custom Agent
 - Dev
 - Development
 - Environment Setup
-- GitHub Copilot
 - Local Server
 - MCP Server
 - Microsoft
@@ -31,7 +28,6 @@ tags:
 - Pet Planner Workshop
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

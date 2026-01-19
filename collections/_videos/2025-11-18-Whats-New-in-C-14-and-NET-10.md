@@ -14,14 +14,12 @@ tags:
 - C#
 - C# 14
 - C# Features
-- Coding
 - Development
 - Framework Updates
 - Language Features
 - Microsoft
 - Programming Languages
 - Release Highlights
-- Videos
 section_names:
 - coding
 ---

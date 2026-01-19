@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-14 17:15:11 +00:00
 permalink: /ai/news/4-Ways-AI-is-Reshaping-Discovery-Health-Work-and-Responsibility
 tags:
-- AI
 - AI Accountability
 - AI Agents
 - AI Ethics
@@ -21,7 +20,6 @@ tags:
 - Inclusion
 - Microsoft 365 Copilot
 - Microsoft Research
-- News
 - Personalized Medicine
 - Responsible AI
 - Scientific Discovery

@@ -9,15 +9,11 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-08-27 23:37:22 +00:00
 permalink: /github-copilot/news/Managing-Sub-Issues-with-GitHub-Copilot-Public-Preview-Update
 tags:
-- AI
 - Copilot Chat
 - Developer Workflow
-- DevOps
 - Epic Tracking
 - GitHub
-- GitHub Copilot
 - Issue Management
-- News
 - Project Organization
 - Public Preview
 - Software Development

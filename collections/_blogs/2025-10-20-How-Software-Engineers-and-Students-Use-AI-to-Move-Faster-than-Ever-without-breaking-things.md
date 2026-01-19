@@ -10,7 +10,6 @@ date: 2025-10-20 11:40:15 +00:00
 permalink: /github-copilot/blogs/How-Software-Engineers-and-Students-Use-AI-to-Move-Faster-than-Ever-without-breaking-things
 tags:
 - Agentic AI
-- AI
 - AI Adoption
 - AI And Students
 - AI Coding Tools
@@ -36,16 +35,13 @@ tags:
 - AI/ML
 - Augmented Development
 - Augmented Intelligence
-- Blogs
 - Business Of DevOps
 - Contributed Content
 - Cursor
 - Developer Productivity
-- DevOps
 - Digital Transformation
 - Enterprise AI
 - Future Of Work
-- GitHub Copilot
 - Human AI Collaboration
 - LLMs
 - Machine Learning

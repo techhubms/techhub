@@ -9,16 +9,12 @@ feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-02-05 05:35:07 +00:00
 permalink: /ai/news/Introducing-Azure-OpenAI-Realtime-API-Support-in-JavaScript
 tags:
-- AI
 - Authentication
-- Azure
 - Azure OpenAI
 - Azure SDK
-- Coding
 - DefaultAzureCredential
 - Event Handling
 - JavaScript
-- News
 - Node.js
 - OpenAI
 - OpenAI Library

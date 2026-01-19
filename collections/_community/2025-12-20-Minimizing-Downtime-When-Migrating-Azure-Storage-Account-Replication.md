@@ -10,10 +10,8 @@ date: 2025-12-20 13:03:51 +00:00
 permalink: /azure/community/Minimizing-Downtime-When-Migrating-Azure-Storage-Account-Replication
 tags:
 - Availability Zones
-- Azure
 - Azure Storage
 - Bicep
-- Community
 - Downtime
 - Geo Redundant Storage
 - GZRS

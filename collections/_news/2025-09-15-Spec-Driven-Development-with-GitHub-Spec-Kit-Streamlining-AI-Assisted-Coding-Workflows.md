@@ -9,16 +9,12 @@ feed_url: https://devblogs.microsoft.com/feed
 date: 2025-09-15 21:19:55 +00:00
 permalink: /github-copilot/news/Spec-Driven-Development-with-GitHub-Spec-Kit-Streamlining-AI-Assisted-Coding-Workflows
 tags:
-- AI
 - AI Agents
 - AI Assisted Coding
 - Automation
-- Coding
 - Development Workflows
 - GitHub
-- GitHub Copilot
 - GitHub Spec Kit
-- News
 - Open Source Tools
 - Project Templates
 - Python

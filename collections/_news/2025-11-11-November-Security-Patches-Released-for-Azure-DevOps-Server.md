@@ -9,18 +9,14 @@ feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-11-11 17:25:03 +00:00
 permalink: /azure/news/November-Security-Patches-Released-for-Azure-DevOps-Server
 tags:
-- Azure
 - Azure DevOps Server
 - Build Tasks
-- DevOps
 - Microsoft Azure
 - MSBuildV1
-- News
 - Patch Management
 - Patches
 - Performance Optimization
 - Release Notes
-- Security
 - Security Update
 - Self Hosted DevOps
 - Server Administration

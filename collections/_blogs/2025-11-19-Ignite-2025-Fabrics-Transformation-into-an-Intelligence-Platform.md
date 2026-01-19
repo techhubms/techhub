@@ -10,11 +10,8 @@ date: 2025-11-19 08:32:01 +00:00
 permalink: /ai/blogs/Ignite-2025-Fabrics-Transformation-into-an-Intelligence-Platform
 tags:
 - Agent 365
-- AI
 - AI Agents
 - Analytics Engineering
-- Azure
-- Blogs
 - Capacity Planning
 - Data
 - Data Architecture
@@ -27,7 +24,6 @@ tags:
 - Microsoft
 - Microsoft Fabric
 - Microsoft Foundry
-- ML
 - Operations Agent
 - Power BI
 - Real Time Intelligence

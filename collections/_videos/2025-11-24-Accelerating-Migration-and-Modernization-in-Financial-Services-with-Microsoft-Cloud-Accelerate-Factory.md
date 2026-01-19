@@ -10,11 +10,9 @@ date: 2025-11-24 08:25:12 +00:00
 permalink: /ai/videos/Accelerating-Migration-and-Modernization-in-Financial-Services-with-Microsoft-Cloud-Accelerate-Factory
 tags:
 - Agentic AI
-- AI
 - AI Powered Monitoring
 - Application Modernization
 - Automation
-- Azure
 - Azure Arc
 - Business Agility
 - CAF Framework
@@ -28,7 +26,6 @@ tags:
 - Modernization Economics
 - MSIgnite
 - Resilience
-- Videos
 section_names:
 - ai
 - azure

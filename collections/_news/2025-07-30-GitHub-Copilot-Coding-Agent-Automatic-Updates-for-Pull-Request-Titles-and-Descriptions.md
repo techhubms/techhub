@@ -9,17 +9,13 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-30 17:16:52 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Coding-Agent-Automatic-Updates-for-Pull-Request-Titles-and-Descriptions
 tags:
-- AI
 - Automation
 - Coding Agent
 - Copilot Business
 - Copilot Enterprise
 - Copilot Pro
-- DevOps
 - DevOps Workflow
 - Feature Update
-- GitHub Copilot
-- News
 - Pro Code Review
 - Pull Requests
 section_names:

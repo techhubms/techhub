@@ -15,8 +15,6 @@ tags:
 - .NET SDK
 - Andrew Lock
 - AOT
-- Blogs
-- Coding
 - Compatibility
 - Datadog
 - DotnetToolSettings.xml

@@ -10,11 +10,9 @@ date: 2025-07-30 22:30:19 +00:00
 permalink: /ai/videos/Building-agent-ready-tools-with-API-Center-and-API-Management
 tags:
 - Agent Service
-- AI
 - API Discovery
 - API Governance
 - API Management
-- Azure
 - Azure AI Foundry
 - Azure API Center
 - Centralized Registry
@@ -24,14 +22,12 @@ tags:
 - Dev
 - Developer Tools
 - Development
-- DevOps
 - MCP
 - Microsoft
 - Microsoft Cloud
 - Remote MCP Servers
 - Tech
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

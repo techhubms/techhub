@@ -9,7 +9,6 @@ feed_url: https://dellenny.com/feed/
 date: 2025-10-04 09:14:50 +00:00
 permalink: /coding/blogs/The-Hybrid-Cloud-Playbook-Mastering-Azure-Stack
 tags:
-- Azure
 - Azure Active Directory
 - Azure Blueprints
 - Azure DevOps
@@ -21,17 +20,13 @@ tags:
 - Azure Stack HCI
 - Backup
 - Bicep
-- Blogs
-- Coding
 - Containers
-- DevOps
 - Disaster Recovery
 - Edge Computing
 - ExpressRoute
 - Hybrid Cloud
 - Kubernetes
 - Log Analytics
-- Security
 - Terraform
 - Virtual Machines
 - Zero Trust

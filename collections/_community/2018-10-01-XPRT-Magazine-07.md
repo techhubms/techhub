@@ -6,20 +6,14 @@ author: Xebia
 viewing_mode: external
 permalink: /ai/community/XPRT-Magazine-07
 tags:
-- AI
 - Automation
-- Azure
 - Azure Security
 - Bots
 - Cloud
-- Coding
-- Community
 - Containers
-- DevOps
 - Kubernetes
 - Magazines
 - Property Based Testing
-- Security
 - Techorama
 - Unit Testing
 - Value Stream

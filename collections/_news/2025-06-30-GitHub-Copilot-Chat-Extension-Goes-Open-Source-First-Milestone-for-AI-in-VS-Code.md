@@ -10,16 +10,12 @@ date: 2025-06-30 00:00:00 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Chat-Extension-Goes-Open-Source-First-Milestone-for-AI-in-VS-Code
 tags:
 - Agent Mode
-- AI
 - AI Editor
-- Coding
 - Community Contribution
-- GitHub Copilot
 - GitHub Copilot Chat
 - LLM
 - Microsoft
 - MIT License
-- News
 - Open Source
 - Prompt Engineering
 - Pull Requests

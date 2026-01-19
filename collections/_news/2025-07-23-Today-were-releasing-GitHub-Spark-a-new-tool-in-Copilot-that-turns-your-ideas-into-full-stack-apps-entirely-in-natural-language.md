@@ -10,7 +10,6 @@ permalink: /github-copilot/news/Today-were-releasing-GitHub-Spark-a-new-tool-in-
 viewing_mode: external
 page: news
 tags:
-- AI
 - AI Tools
 - App Creation
 - Automation
@@ -18,11 +17,9 @@ tags:
 - Developer Tools
 - Full Stack Apps
 - GitHub
-- GitHub Copilot
 - GitHub Spark
 - LinkedIn Post
 - Natural Language
-- News
 - Software Development
 section_names:
 - ai

@@ -10,7 +10,6 @@ date: 2025-12-02 17:00:00 +00:00
 permalink: /ai/news/Building-Future-Ready-Cybersecurity-Teams-in-the-Age-of-AI
 tags:
 - Adaptive Defenders
-- AI
 - AI in Security
 - CISO
 - Continuous Learning
@@ -21,12 +20,10 @@ tags:
 - Hiring Practices
 - Malware
 - Microsoft Security
-- News
 - Onboarding
 - Phishing
 - Retention
 - Secure Future Initiative
-- Security
 - Security Culture
 - Security Leadership
 - Talent Strategy

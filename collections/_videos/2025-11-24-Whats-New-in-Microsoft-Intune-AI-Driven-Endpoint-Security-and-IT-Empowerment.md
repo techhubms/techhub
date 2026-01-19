@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 04:55:05 +00:00
 permalink: /ai/videos/Whats-New-in-Microsoft-Intune-AI-Driven-Endpoint-Security-and-IT-Empowerment
 tags:
-- AI
 - AI Capabilities
 - App Inventory
 - Automation
@@ -24,8 +23,6 @@ tags:
 - Microsoft Intune
 - MSIgnite
 - ScalewithcloudandAIendpoints
-- Security
-- Videos
 - Vulnerability Remediation
 section_names:
 - ai

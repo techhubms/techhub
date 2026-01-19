@@ -18,8 +18,6 @@ tags:
 - Enterprise Security
 - Google BigQuery
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Power BI
 - Private Preview

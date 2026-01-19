@@ -9,13 +9,10 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-06-25 20:19:44 +00:00
 permalink: /github-copilot/news/Anthropic-Claude-Sonnet-4-and-Claude-Opus-4-are-now-generally-available-in-GitHub-Copilot
 tags:
-- AI
 - AI Models
 - Anthropic
 - Claude Opus 4
 - Claude Sonnet 4
-- GitHub Copilot
-- News
 - Software Development
 section_names:
 - ai

@@ -9,16 +9,13 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-07-16 17:44:49 +00:00
 permalink: /ai/videos/Lets-Learn-MCP-Python
 tags:
-- AI
 - AI Models
 - Client Applications
-- Coding
 - Demo
 - Mcp
 - MCP Server
 - Python
 - Standardization
-- Videos
 - VS Code
 - Workshop
 section_names:

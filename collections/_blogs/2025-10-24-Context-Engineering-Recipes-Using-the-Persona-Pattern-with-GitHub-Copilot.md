@@ -9,15 +9,12 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-10-24 00:00:00 +00:00
 permalink: /github-copilot/blogs/Context-Engineering-Recipes-Using-the-Persona-Pattern-with-GitHub-Copilot
 tags:
-- AI
 - AI Assistant
-- Blogs
 - Code Review
 - Context Engineering
 - Developer Tools
 - Development Workflow
 - Documentation
-- GitHub Copilot
 - Persona Pattern
 - Programming Productivity
 - Prompt Engineering

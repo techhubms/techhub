@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-03 23:09:40 +00:00
 permalink: /ai/community/Beyond-the-Chat-Window-How-Change-Driven-Architecture-Enables-Ambient-AI-Agents
 tags:
-- AI
 - AI Agents
 - Ambient Agents
 - Change Driven Architecture
-- Community
 - Continuous Queries
 - Cosmos DB
 - DevOps Automation

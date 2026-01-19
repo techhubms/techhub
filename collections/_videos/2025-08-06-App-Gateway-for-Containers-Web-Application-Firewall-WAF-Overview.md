@@ -12,7 +12,6 @@ tags:
 - AKS
 - App Gateway For Containers
 - Application Gateway
-- Azure
 - Azure Cloud
 - Azure Networking
 - Azure Service Operator
@@ -27,9 +26,7 @@ tags:
 - Microsoft
 - Microsoft Azure
 - Pricing
-- Security
 - Security Configuration
-- Videos
 - WAF
 - Web Application Firewall
 section_names:

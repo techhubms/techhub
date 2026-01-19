@@ -11,11 +11,9 @@ permalink: /devops/blogs/MyDecisive-Open-Sources-Smart-Telemetry-Hub-for-OpenTel
 tags:
 - Alerting
 - Backend Analysis
-- Blogs
 - Business Of DevOps
 - CNCF
 - Data Filtering
-- DevOps
 - DevOps Observability Costs
 - Golden Signals
 - Instrumentation

@@ -11,7 +11,6 @@ permalink: /azure/videos/Entra-Synced-Passkeys-and-Passkey-Profiles
 tags:
 - Apple Icloud Keychain
 - Authentication
-- Azure
 - Azure Cloud
 - Azure Identity
 - Cloud
@@ -27,9 +26,7 @@ tags:
 - Passkey Policies
 - Passkeys
 - Policy Management
-- Security
 - Synced Credentials
-- Videos
 section_names:
 - azure
 - security

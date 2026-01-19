@@ -9,20 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-07 17:43:18 +00:00
 permalink: /github-copilot/community/Azure-App-Testing-Unified-AI-Driven-Load-and-E2E-Testing-in-the-Cloud
 tags:
-- AI
 - AI Driven Testing
-- Azure
 - Azure App Testing
 - Azure Load Testing
 - CI/CD
 - Cloud Testing
-- Coding
-- Community
 - Continuous Integration
 - Cross Browser Testing
-- DevOps
 - End To End Testing
-- GitHub Copilot
 - GitHub Copilot Agent
 - Infrastructure Automation
 - JMeter

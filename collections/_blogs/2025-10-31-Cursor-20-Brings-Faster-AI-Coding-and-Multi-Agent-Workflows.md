@@ -10,7 +10,6 @@ date: 2025-10-31 09:08:09 +00:00
 permalink: /ai/blogs/Cursor-20-Brings-Faster-AI-Coding-and-Multi-Agent-Workflows
 tags:
 - Agent Orchestration
-- AI
 - AI Code Generation
 - AI Coding Assistant
 - AI Coding Model
@@ -20,14 +19,11 @@ tags:
 - AI Programming Tools
 - AI Software Development
 - Automated Code Review
-- Blogs
 - Business Of DevOps
 - Code Review
-- Coding
 - Composer Model
 - Cursor 2.0
 - Cursor Update
-- DevOps
 - IDE
 - Infrastructure Automation
 - Intelligent Code Assistant

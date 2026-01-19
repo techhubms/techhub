@@ -9,8 +9,6 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2026-01-15 19:13:54 +00:00
 permalink: /ai/community/Modernizing-Healthcare-Transcription-and-Analytics-with-Azure-AI
 tags:
-- AI
-- Azure
 - Azure AI
 - Azure Cognitive Services
 - Azure Functions
@@ -18,14 +16,12 @@ tags:
 - Azure Storage
 - Batch Transcription
 - Clinical Insights
-- Community
 - Data Lake
 - Entity Recognition
 - FHIR
 - Healthcare AI
 - HIPAA Compliance
 - Microsoft Fabric
-- ML
 - Real Time Transcription
 - Speech Service
 - Text Analytics For Health

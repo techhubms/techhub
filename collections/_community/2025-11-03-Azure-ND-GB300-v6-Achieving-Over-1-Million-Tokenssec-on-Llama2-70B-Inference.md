@@ -9,22 +9,18 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-03 17:00:00 +00:00
 permalink: /ai/community/Azure-ND-GB300-v6-Achieving-Over-1-Million-Tokenssec-on-Llama2-70B-Inference
 tags:
-- AI
 - AI Inference
 - AI Infrastructure
-- Azure
 - Azure ND GB300 V6
 - Azure Virtual Machines
 - Benchmarking
 - Cloud AI
-- Community
 - Containerization
 - FP4 Quantization
 - GEMM TFLOPS
 - GPU Performance
 - High Bandwidth Memory
 - Llama2 70B
-- ML
 - ML Engineering
 - ML Pipeline
 - MLCommons

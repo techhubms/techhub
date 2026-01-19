@@ -10,8 +10,6 @@ date: 2025-08-01 16:55:30 +00:00
 permalink: /coding/community/Termix-v090-Add-Rename-Delete-Write-File-Ops-and-Fuzzy-Search-Preview
 tags:
 - .NET
-- Coding
-- Community
 - Delete
 - File Navigator
 - File Operations

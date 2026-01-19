@@ -9,9 +9,7 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-04 14:32:28 +00:00
 permalink: /ai/news/Cloud-and-AI-Unlocking-Australias-Public-Sector-Productivity
 tags:
-- AI
 - AI Tools
-- Azure
 - Cloud
 - Cloud Adoption
 - Company News
@@ -22,11 +20,9 @@ tags:
 - IT Modernization
 - Legacy System Modernization
 - Microsoft Azure
-- News
 - Procurement Reform
 - Productivity
 - Public Sector Innovation
-- Security
 - Service Delivery
 - Sustainability
 section_names:

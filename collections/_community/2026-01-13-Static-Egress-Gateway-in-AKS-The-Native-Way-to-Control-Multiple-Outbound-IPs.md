@@ -11,11 +11,7 @@ permalink: /coding/community/Static-Egress-Gateway-in-AKS-The-Native-Way-to-Cont
 tags:
 - AKS
 - Az CLI
-- Azure
 - BYO Networking
-- Coding
-- Community
-- DevOps
 - Egress IP
 - Gateway Node Pool
 - Kubectl
@@ -26,7 +22,6 @@ tags:
 - Network Security
 - Private Egress
 - Public IP Prefix
-- Security
 - Static Egress Gateway
 - User Defined Routing
 - YADA Demo App

@@ -9,8 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 12:47:53 +00:00
 permalink: /ai/videos/Scaling-Innovation-in-Smart-Eyewear-and-Connected-Retail-with-Azure-and-AI
 tags:
-- AI
-- Azure
 - Beamforming
 - Cloud Connectivity
 - Connected Retail
@@ -27,7 +25,6 @@ tags:
 - ScalewithcloudandAIendpoints
 - Smart Eyewear
 - TeamViewer
-- Videos
 section_names:
 - ai
 - azure

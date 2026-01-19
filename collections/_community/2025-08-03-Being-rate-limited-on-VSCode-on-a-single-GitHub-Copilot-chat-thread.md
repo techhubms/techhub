@@ -9,14 +9,11 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-03 11:37:06 +00:00
 permalink: /github-copilot/community/Being-rate-limited-on-VSCode-on-a-single-GitHub-Copilot-chat-thread
 tags:
-- AI
 - API Limits
 - Chat Thread
-- Community
 - Copilot Pro+
 - Developer Experience
 - Extension Usage
-- GitHub Copilot
 - Rate Limiting
 - Scaffolding
 - Usage Limits

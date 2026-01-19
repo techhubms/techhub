@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 12:50:52 +00:00
 permalink: /ai/videos/Powering-Seamless-and-Secure-Experiences-with-Lenovo-and-Microsoft-AI-Integration
 tags:
-- AI
 - AI Integration
 - AI Revolution
-- Azure
 - Cloud Platforms
 - Data Centers
 - Deployment Acceleration
@@ -25,7 +23,6 @@ tags:
 - Microsoft Events
 - Microsoft Ignite
 - MSIgnite
-- Videos
 - Windows
 section_names:
 - ai

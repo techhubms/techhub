@@ -10,15 +10,12 @@ date: 2025-12-23 08:00:28 +00:00
 permalink: /github-copilot/videos/VS-Code-2025-Year-in-Review-with-Burke-Holland-and-Pierce-Boggan
 tags:
 - Agent Mode
-- AI
 - AI Integration
 - Auto Mode
 - Background Agents
 - BYOK
 - Codex Integration
-- Coding
 - Copilot Chat
-- GitHub Copilot
 - MCP
 - Open Source
 - Plan Mode
@@ -27,7 +24,6 @@ tags:
 - Smart Routing
 - Subagents
 - Terminal Safety
-- Videos
 - VS Code
 section_names:
 - ai

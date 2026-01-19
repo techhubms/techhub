@@ -11,17 +11,11 @@ permalink: /github-copilot/community/AI-Dev-Days-2025-Your-Gateway-to-the-Future
 tags:
 - Agent HQ
 - Agentic DevOps
-- AI
 - AI Dev Days
 - App Modernisation
-- Azure
 - Azure SRE Agent
-- Coding
-- Community
 - Developer Productivity
-- DevOps
 - GitHub
-- GitHub Copilot
 - GitHub Universe
 - Hands On Labs
 - MCP

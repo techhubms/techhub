@@ -10,7 +10,6 @@ date: 2025-09-22 18:24:17 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Named-Leader-in-2025-Gartner-Magic-Quadrant-for-AI-Code-Assistants
 tags:
 - Agentic Workflows
-- AI
 - AI & ML
 - AI Code Assistants
 - AI Powered Development
@@ -20,8 +19,6 @@ tags:
 - Developer Tools
 - Enterprise Software
 - Gartner Magic Quadrant
-- GitHub Copilot
-- News
 - Productivity
 - Software Modernization
 - VS

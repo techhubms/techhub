@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-29 04:48:21 +00:00
 permalink: /azure/community/Provider-Managed-Azure-Subscriptions-Cost-Control-and-Commitment-Clarity
 tags:
-- Azure
 - Azure Billing
 - Azure Subscription Management
 - Billing Policies
-- Community
 - Cost Management
 - Enterprise Agreement
 - FinOps

@@ -13,8 +13,6 @@ tags:
 - .NET Framework
 - Assembly Versioning
 - Build Toolchain
-- Coding
-- Community
 - Cross Platform Development
 - Developer Workflow
 - MacOS

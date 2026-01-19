@@ -21,13 +21,11 @@ tags:
 - MSIgnite
 - Proactive Incident Response
 - Ransomware
-- Security
 - Security Operations
 - SharePoint Vulnerability
 - SOC
 - Threat Hunting
 - Threat Intelligence
-- Videos
 section_names:
 - security
 ---

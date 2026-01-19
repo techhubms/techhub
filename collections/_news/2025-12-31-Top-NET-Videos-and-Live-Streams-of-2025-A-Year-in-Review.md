@@ -20,7 +20,6 @@ tags:
 - Blazor
 - C#
 - Clean Architecture
-- Coding
 - Community Standup
 - Data API Builder
 - Developer Tools
@@ -30,7 +29,6 @@ tags:
 - MAUI
 - MCP
 - Modernization
-- News
 - Performance
 - VS
 - Wrapped

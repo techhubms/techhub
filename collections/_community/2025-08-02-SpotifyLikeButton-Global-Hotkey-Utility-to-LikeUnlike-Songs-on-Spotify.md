@@ -10,8 +10,6 @@ date: 2025-08-02 19:05:44 +00:00
 permalink: /coding/community/SpotifyLikeButton-Global-Hotkey-Utility-to-LikeUnlike-Songs-on-Spotify
 tags:
 - C#
-- Coding
-- Community
 - Dotfiles
 - Global Hotkeys
 - Hyprland

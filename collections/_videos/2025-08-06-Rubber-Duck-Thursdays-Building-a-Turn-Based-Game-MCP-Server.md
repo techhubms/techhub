@@ -9,20 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-06 09:04:39 +00:00
 permalink: /github-copilot/videos/Rubber-Duck-Thursdays-Building-a-Turn-Based-Game-MCP-Server
 tags:
-- AI
 - AI Powered Coding
 - Code Collaboration
-- Coding
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Live Coding
 - MCP Server
 - Programming
 - Server Development
 - Software Development
 - Turn Based Game
-- Videos
 section_names:
 - ai
 - coding

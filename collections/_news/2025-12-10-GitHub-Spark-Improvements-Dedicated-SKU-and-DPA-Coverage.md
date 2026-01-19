@@ -11,17 +11,14 @@ permalink: /github-copilot/news/GitHub-Spark-Improvements-Dedicated-SKU-and-DPA-
 tags:
 - Accessibility
 - Agent Improvements
-- AI
 - AI App Generation
 - App Preview
 - Budget Controls
 - Bug Fixes
 - Copilot
 - DPA Compliance
-- GitHub Copilot
 - GitHub Spark
 - Improvement
-- News
 - Repository Settings
 - Security Improvement
 - SKU Billing

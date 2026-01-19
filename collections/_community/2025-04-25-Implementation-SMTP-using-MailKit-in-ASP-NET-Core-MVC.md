@@ -12,8 +12,6 @@ tags:
 - .NET Core
 - ASP.NET Core
 - C#
-- Coding
-- Community
 - Email Integration
 - Email Trigger
 - Form Handling

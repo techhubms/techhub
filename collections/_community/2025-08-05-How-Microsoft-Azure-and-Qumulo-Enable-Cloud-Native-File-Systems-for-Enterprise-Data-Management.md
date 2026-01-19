@@ -9,15 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-05 21:25:58 +00:00
 permalink: /ai/community/How-Microsoft-Azure-and-Qumulo-Enable-Cloud-Native-File-Systems-for-Enterprise-Data-Management
 tags:
-- AI
 - AI Workloads
-- Azure
 - Azure Blob Storage
 - Azure Native Qumulo
 - Azure Virtual Machines
 - Cloud Native Architecture
 - Cloud Native Qumulo
-- Community
 - Data Management
 - Data Migration
 - Elastic Scalability
@@ -25,7 +22,6 @@ tags:
 - File System
 - HPC
 - Komprise
-- ML
 - Multi Protocol Support
 - Object Storage
 - Qumulo

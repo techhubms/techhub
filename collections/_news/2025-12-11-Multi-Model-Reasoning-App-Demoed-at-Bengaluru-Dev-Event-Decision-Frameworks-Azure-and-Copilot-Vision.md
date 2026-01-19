@@ -10,13 +10,10 @@ date: 2025-12-11 14:12:06 +00:00
 permalink: /ai/news/Multi-Model-Reasoning-App-Demoed-at-Bengaluru-Dev-Event-Decision-Frameworks-Azure-and-Copilot-Vision
 tags:
 - Agentic Architecture
-- AI
 - AI Decision Frameworks
-- Azure
 - Branch Automation
 - Chain Of Debate
 - Claude
-- Coding
 - Company News
 - Consensus Algorithms
 - Copilot Integration
@@ -31,7 +28,6 @@ tags:
 - Metacognition
 - Model Selection
 - Multi Model Reasoning
-- News
 - Streaming Synthesis
 - Windows 365
 section_names:

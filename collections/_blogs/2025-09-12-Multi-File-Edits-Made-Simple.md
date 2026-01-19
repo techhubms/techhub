@@ -9,18 +9,14 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-09-12 00:00:00 +00:00
 permalink: /github-copilot/blogs/Multi-File-Edits-Made-Simple
 tags:
-- AI
 - Async/Await
 - Automation
-- Blogs
 - Code Consistency
 - Code Review
-- Coding
 - Copilot Edits
 - Developer Tools
 - Diff Preview
 - ES Modules
-- GitHub Copilot
 - Modernization
 - Multi File Editing
 - Node.js

@@ -10,8 +10,6 @@ date: 2025-07-21 17:55:22 +00:00
 permalink: /coding/community/Developing-a-Web-Browser-and-Console-Log-Extension-for-Visual-Studio
 tags:
 - Browser Panel
-- Coding
-- Community
 - Console Log
 - Developer Productivity
 - Extension Development

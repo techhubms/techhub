@@ -10,14 +10,11 @@ date: 2025-11-20 08:22:54 +00:00
 permalink: /azure/community/Integrating-Azure-DevOps-with-Jira-Service-Management-Practical-Approaches-and-Real-World-Scenarios
 tags:
 - Audit Logging
-- Azure
 - Azure DevOps
 - Azure Functions
 - Bidirectional Sync
-- Community
 - Conditional Routing
 - Conflict Resolution
-- DevOps
 - DevOps Integration
 - Feature Request Automation
 - Field Mapping

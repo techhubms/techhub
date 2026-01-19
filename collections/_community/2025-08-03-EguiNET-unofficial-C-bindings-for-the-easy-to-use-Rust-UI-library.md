@@ -11,8 +11,6 @@ permalink: /coding/community/EguiNET-unofficial-C-bindings-for-the-easy-to-use-R
 tags:
 - Bindings
 - C#
-- Coding
-- Community
 - Egui
 - Game Engines
 - Immediate Mode GUI

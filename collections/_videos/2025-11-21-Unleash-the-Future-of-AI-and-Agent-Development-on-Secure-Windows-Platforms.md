@@ -14,9 +14,7 @@ tags:
 - Agent Hierarchies
 - Agent Packaging
 - Agent Registry
-- AI
 - Client Server Model
-- Coding
 - Computer Using Agents
 - Isolated Workspace
 - MCP
@@ -28,8 +26,6 @@ tags:
 - Privacy
 - ScalewithcloudandAIendpoints
 - Secure Deployment
-- Security
-- Videos
 - Windows AI
 section_names:
 - ai

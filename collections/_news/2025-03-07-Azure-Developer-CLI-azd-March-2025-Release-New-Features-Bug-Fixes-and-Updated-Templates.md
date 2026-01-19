@@ -10,9 +10,7 @@ date: 2025-03-07 19:14:23 +00:00
 permalink: /ai/news/Azure-Developer-CLI-azd-March-2025-Release-New-Features-Bug-Fixes-and-Updated-Templates
 tags:
 - .NET
-- AI
 - Azd
-- Azure
 - Azure Cosmos DB
 - Azure Developer CLI
 - Azure Event Hubs
@@ -25,19 +23,15 @@ tags:
 - Azure Storage
 - Bicep
 - Codespaces
-- Coding
-- DevOps
 - Docker
 - Java
 - JavaScript
 - Kubernetes
 - LangChain4j
-- News
 - Pipelines
 - PowerShell
 - Python
 - Quarkus
-- Security
 - Templates
 - Typescript
 - VS Code

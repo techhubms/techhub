@@ -10,10 +10,8 @@ date: 2025-12-03 18:05:00 +00:00
 permalink: /ai/news/Introducing-Data-Ingestion-Building-Blocks-in-NET-for-AI-Applications
 tags:
 - .NET
-- AI
 - AI Applications
 - Aspire
-- Coding
 - CosmosDB
 - Data
 - Data Ingestion
@@ -25,9 +23,7 @@ tags:
 - MarkDownReader
 - Microsoft.Extensions.DataIngestion
 - Microsoft.ML.Tokenizers
-- ML
 - MongoDB
-- News
 - Observability
 - OpenAI
 - OpenTelemetry

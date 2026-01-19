@@ -10,20 +10,16 @@ date: 2025-06-05 17:08:48 +00:00
 permalink: /azure/news/Restricting-PAT-Creation-in-Azure-DevOps-Preview-New-Granular-Controls-for-Administrators
 tags:
 - Access Controls
-- Azure
 - Azure & Cloud
 - Azure DevOps
-- DevOps
 - IAM
 - Identity And Access Management
 - Microsoft Entra ID
-- News
 - Organizational Policies
 - Packaging Scopes
 - PAT Policy
 - Personal Access Tokens
 - Project Collection Administrators
-- Security
 - Token Management
 section_names:
 - azure

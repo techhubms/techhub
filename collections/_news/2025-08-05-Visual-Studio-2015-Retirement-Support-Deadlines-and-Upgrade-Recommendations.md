@@ -15,9 +15,7 @@ tags:
 - AI
 - AI Code Completion
 - C++ Redistributable
-- Coding
 - Developer Tools
-- DevOps
 - GitHub Integration
 - IDE Support
 - Installation And Updates
@@ -25,7 +23,6 @@ tags:
 - Lifecycle Management
 - Microsoft
 - MSVC Tools
-- News
 - Productivity Tools
 - Support
 - Upgrade Guidance

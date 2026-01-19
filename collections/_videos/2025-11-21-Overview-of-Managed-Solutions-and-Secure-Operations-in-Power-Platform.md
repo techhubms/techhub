@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 13:29:26 +00:00
 permalink: /ai/videos/Overview-of-Managed-Solutions-and-Secure-Operations-in-Power-Platform
 tags:
-- AI
 - AI Agents
 - Alerting
 - ALM
@@ -27,9 +26,7 @@ tags:
 - MSIgnite
 - Operational Health
 - Power Platform
-- Security
 - Source Control
-- Videos
 section_names:
 - ai
 - security

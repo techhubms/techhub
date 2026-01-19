@@ -9,7 +9,6 @@ feed_url: https://dellenny.com/feed/
 date: 2025-07-28 09:12:20 +00:00
 permalink: /azure/blogs/A-Complete-Guide-to-Azure-Database-Migration-Strategies-Tools-and-Best-Practices
 tags:
-- Azure
 - Azure Advisor
 - Azure Database Migration
 - Azure Database Migration Service
@@ -17,7 +16,6 @@ tags:
 - Azure Monitor
 - Azure SQL Database
 - Backup
-- Blogs
 - Cloud Migration
 - Cosmos DB
 - Data Migration Assistant

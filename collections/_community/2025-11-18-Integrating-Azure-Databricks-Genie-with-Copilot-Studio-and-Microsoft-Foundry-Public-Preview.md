@@ -9,10 +9,7 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 18:48:18 +00:00
 permalink: /ai/community/Integrating-Azure-Databricks-Genie-with-Copilot-Studio-and-Microsoft-Foundry-Public-Preview
 tags:
-- AI
-- Azure
 - Azure Databricks
-- Community
 - Conversational Analytics
 - Copilot Studio
 - Data Democratization
@@ -21,10 +18,8 @@ tags:
 - Entra ID
 - Genie
 - Integration
-- Machine Learning
 - MCP
 - Microsoft Foundry
-- ML
 - OAuth
 - Power Apps
 - Teams Integration

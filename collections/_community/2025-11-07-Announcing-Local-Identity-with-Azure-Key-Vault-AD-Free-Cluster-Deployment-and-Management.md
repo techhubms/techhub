@@ -10,12 +10,10 @@ date: 2025-11-07 23:55:58 +00:00
 permalink: /azure/community/Announcing-Local-Identity-with-Azure-Key-Vault-AD-Free-Cluster-Deployment-and-Management
 tags:
 - Active Directory
-- Azure
 - Azure Key Vault
 - Azure Local Portal
 - Backup Integration
 - Cluster Deployment
-- Community
 - Commvault
 - Dell
 - Internal DNS
@@ -24,7 +22,6 @@ tags:
 - Local Identity
 - Management Toolkit
 - Partner Ecosystem
-- Security
 - Veeam
 section_names:
 - azure

@@ -10,7 +10,6 @@ date: 2025-10-28 07:00:24 +00:00
 permalink: /azure/videos/Optimize-Azure-Costs-with-Reserved-VM-Instances
 tags:
 - Auto Renewal
-- Azure
 - Azure Advisor
 - Azure Pricing
 - Azure Reserved Instances
@@ -25,7 +24,6 @@ tags:
 - Priyanshi Mittal
 - Reserved VM Utilization
 - Thomas Maurer
-- Videos
 - VM Reservations
 section_names:
 - azure

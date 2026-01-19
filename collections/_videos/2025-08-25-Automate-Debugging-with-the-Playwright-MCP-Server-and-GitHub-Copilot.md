@@ -9,24 +9,20 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-25 18:37:00 +00:00
 permalink: /github-copilot/videos/Automate-Debugging-with-the-Playwright-MCP-Server-and-GitHub-Copilot
 tags:
-- AI
 - AI Peer Programmer
 - AI Programming Assistant
 - Automated Testing
 - Bug Automation
 - Code Fix Validation
-- Coding
 - CodingAgent
 - Copilot Agent Mode
 - CopilotCodingAgent
 - Debugging
 - Error Reproduction
 - Frontend Testing
-- GitHub Copilot
 - Playwright MCP Server
 - Root Cause Analysis
 - Software Development Tools
-- Videos
 section_names:
 - ai
 - coding

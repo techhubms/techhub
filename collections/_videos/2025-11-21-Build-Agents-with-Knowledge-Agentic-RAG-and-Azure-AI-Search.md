@@ -10,8 +10,6 @@ date: 2025-11-21 17:21:54 +00:00
 permalink: /ai/videos/Build-Agents-with-Knowledge-Agentic-RAG-and-Azure-AI-Search
 tags:
 - Agent Development
-- AI
-- Azure
 - Azure AI Search
 - Bing Integration
 - Blob Storage
@@ -28,7 +26,6 @@ tags:
 - Retrieval Augmented Generation
 - Semantic Ranker
 - SharePoint Integration
-- Videos
 section_names:
 - ai
 - azure

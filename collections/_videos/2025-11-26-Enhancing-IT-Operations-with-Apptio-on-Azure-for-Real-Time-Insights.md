@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-26 00:48:56 +00:00
 permalink: /ai/videos/Enhancing-IT-Operations-with-Apptio-on-Azure-for-Real-Time-Insights
 tags:
-- AI
 - AI Optimization
 - Apptio
-- Azure
 - Cloud Management
 - Cloud Services
 - Cost Management
@@ -27,7 +25,6 @@ tags:
 - Operational Efficiency
 - Real Time Insights
 - Resource Optimization
-- Videos
 section_names:
 - ai
 - azure

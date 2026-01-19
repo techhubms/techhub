@@ -9,17 +9,13 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-21 10:00:00 +00:00
 permalink: /ml/news/SSMS-22-Meets-Fabric-Data-Warehouse-Evolving-the-Developer-Experiences
 tags:
-- Azure
 - Azure Data Platform
-- Coding
 - Data Warehouse
 - Database Projects
 - Developer Tools
 - Fabric Web Editor
 - IntelliSense
 - Microsoft Fabric
-- ML
-- News
 - Query Management
 - Schema Grouping
 - SQL Analytics Endpoint

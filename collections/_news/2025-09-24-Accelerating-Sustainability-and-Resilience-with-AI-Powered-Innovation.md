@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-24 14:53:38 +00:00
 permalink: /ai/news/Accelerating-Sustainability-and-Resilience-with-AI-Powered-Innovation
 tags:
-- AI
 - AI For Sustainability
 - AI Optimization
-- Azure
 - Azure Databricks
 - Azure OpenAI
 - Azure Quantum Elements
@@ -25,7 +23,6 @@ tags:
 - Environmental Innovation
 - Microfluidics
 - Microsoft Cloud
-- News
 - Supply Chain Analytics
 - Sustainability
 - Sustainable Cloud

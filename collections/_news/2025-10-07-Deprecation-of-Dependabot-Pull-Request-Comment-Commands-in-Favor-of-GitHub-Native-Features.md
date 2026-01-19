@@ -11,12 +11,10 @@ permalink: /devops/news/Deprecation-of-Dependabot-Pull-Request-Comment-Commands-
 tags:
 - Dependabot
 - Developer Productivity
-- DevOps
 - GitHub
 - GitHub CLI
 - GitHub Platform
 - Merge Operations
-- News
 - Open Source Security
 - Pull Requests
 - REST API

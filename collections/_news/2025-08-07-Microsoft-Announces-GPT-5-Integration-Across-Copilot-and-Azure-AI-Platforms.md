@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-07 17:50:58 +00:00
 permalink: /github-copilot/news/Microsoft-Announces-GPT-5-Integration-Across-Copilot-and-Azure-AI-Platforms
 tags:
-- AI
 - AI Chat
 - AI Coding
 - AI Deployment
@@ -17,17 +16,14 @@ tags:
 - AI Models
 - AI On Azure
 - AI Reasoning
-- Azure
 - Azure AI Foundry
 - Code Generation
 - Company News
 - Copilot
 - Enterprise AI
-- GitHub Copilot
 - GPT 5
 - Microsoft 365 Copilot
 - Natural Language Processing
-- News
 - OpenAI
 - Productivity AI
 section_names:

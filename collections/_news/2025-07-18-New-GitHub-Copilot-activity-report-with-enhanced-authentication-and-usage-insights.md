@@ -11,11 +11,8 @@ viewing_mode: external
 tags:
 - Activity Report
 - Administrators
-- AI
 - Enterprise
 - Feature Adoption
-- GitHub Copilot
-- News
 - Organization
 - Reporting
 - Usage Analytics

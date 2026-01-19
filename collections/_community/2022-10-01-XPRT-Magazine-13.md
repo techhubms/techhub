@@ -7,18 +7,13 @@ viewing_mode: external
 permalink: /ai/community/XPRT-Magazine-13
 tags:
 - Accessibility
-- AI
 - Automation
-- Azure
 - Azure Managed Grafana
 - Azure Virtual Desktop
 - Bitrot
 - Blazor
 - Cloud Adoption
-- Coding
-- Community
 - Compliance
-- DevOps
 - Digital Twins
 - Engineering Culture
 - GitHub Actions
@@ -28,7 +23,6 @@ tags:
 - Nullable Reference Types
 - Observability
 - Platform Engineering
-- Security
 - Team Learning
 - WireMock
 - Xpirit USA

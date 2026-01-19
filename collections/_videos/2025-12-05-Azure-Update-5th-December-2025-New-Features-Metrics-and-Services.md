@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7
 date: 2025-12-05 16:03:01 +00:00
 permalink: /ai/videos/Azure-Update-5th-December-2025-New-Features-Metrics-and-Services
 tags:
-- AI
 - AI Service
 - ALB Metrics
-- Azure
 - Azure Cloud
 - Azure Databricks
 - Azure ML SDK
@@ -27,11 +25,9 @@ tags:
 - Microsoft
 - Microsoft Azure
 - Mistral AI
-- ML
 - PostgreSQL Flex
 - Regional Expansion
 - SDK Retirement
-- Videos
 section_names:
 - ai
 - azure

@@ -9,19 +9,15 @@ feed_url: https://devops.com/feed/
 date: 2025-09-29 15:00:18 +00:00
 permalink: /ai/blogs/Harness-Acquires-Qwiet-AI-to-Strengthen-AI-Driven-Application-Security-in-DevOps
 tags:
-- AI
 - AI Agents
 - API Security
 - Application Security
-- Blogs
 - Code Analysis
 - Code Property Graph
-- DevOps
 - DevSecOps
 - Harness
 - Qwiet AI
 - SDLC
-- Security
 - Security Automation
 - Security Testing
 - ShiftLeft

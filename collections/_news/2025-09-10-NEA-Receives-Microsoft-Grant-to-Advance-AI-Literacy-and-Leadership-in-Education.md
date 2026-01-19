@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-10 15:16:47 +00:00
 permalink: /ai/news/NEA-Receives-Microsoft-Grant-to-Advance-AI-Literacy-and-Leadership-in-Education
 tags:
-- AI
 - AI in Schools
 - AI Literacy
 - Company News
@@ -22,7 +21,6 @@ tags:
 - Microsoft
 - Microsoft Elevate
 - NEA
-- News
 - Policy Development
 - Professional Learning
 section_names:

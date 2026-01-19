@@ -12,11 +12,8 @@ plans:
 - Free
 alt-collection: features
 tags:
-- AI
 - Code
-- GitHub Copilot
 - Pull Request
-- Videos
 - VS Code
 section_names:
 - ai

@@ -9,11 +9,9 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-09 15:00:00 +00:00
 permalink: /ai/news/Microsoft-Expands-Azure-Cloud-and-AI-Infrastructure-Across-Asia
 tags:
-- AI
 - AI + Machine Learning
 - AI Infrastructure
 - Asia Datacenter Regions
-- Azure
 - Azure Availability Zones
 - Azure Machine Learning
 - Azure OpenAI Service
@@ -21,7 +19,6 @@ tags:
 - Cloud Infrastructure
 - Cost Optimization
 - Datacenter
-- DevOps
 - Digital Transformation
 - India
 - Indonesia
@@ -32,7 +29,6 @@ tags:
 - Microsoft Cloud Adoption Framework
 - Multi Region Architecture
 - Network Infrastructure
-- News
 - Scalability
 - Taiwan
 - Well Architected Framework

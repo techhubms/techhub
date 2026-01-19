@@ -10,12 +10,10 @@ date: 2025-12-09 20:39:17 +00:00
 permalink: /devops/news/Azure-DevOps-Server-Now-Generally-Available-for-Self-Hosted-Enterprises
 tags:
 - Azure DevOps Server
-- DevOps
 - Enterprise Software
 - General Availability
 - Installation Guide
 - Microsoft Server Products
-- News
 - Production Readiness
 - Release Notes
 - Security Compliance

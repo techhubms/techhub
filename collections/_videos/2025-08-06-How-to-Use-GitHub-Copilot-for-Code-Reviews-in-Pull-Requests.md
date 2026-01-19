@@ -9,20 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-06 14:01:17 +00:00
 permalink: /github-copilot/videos/How-to-Use-GitHub-Copilot-for-Code-Reviews-in-Pull-Requests
 tags:
-- AI
 - AI Assistant
 - Automated Code Review
 - Code Quality
 - Code Review
 - CodeReview
 - Developer Workflow
-- DevOps
 - DevOps Practices
 - GitHub
-- GitHub Copilot
 - Pull Request
 - Review Suggestions
-- Videos
 section_names:
 - ai
 - devops

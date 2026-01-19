@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-20 16:14:48 +00:00
 permalink: /ai/videos/Record-Breaking-AI-Inference-Performance-with-Azure-ND-Virtual-Machines
 tags:
-- AI
 - AI Inference
 - AI Infrastructure
 - Attention Mechanisms
-- Azure
 - Azure ND Virtual Machines
 - Azure Supercomputing
 - Deep Learning
@@ -29,7 +27,6 @@ tags:
 - ND GB200
 - ND GB300
 - Tokens Per Second
-- Videos
 section_names:
 - ai
 - azure

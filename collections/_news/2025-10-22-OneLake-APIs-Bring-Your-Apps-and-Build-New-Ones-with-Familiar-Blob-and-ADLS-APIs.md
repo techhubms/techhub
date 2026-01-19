@@ -10,7 +10,6 @@ date: 2025-10-22 09:00:00 +00:00
 permalink: /ml/news/OneLake-APIs-Bring-Your-Apps-and-Build-New-Ones-with-Familiar-Blob-and-ADLS-APIs
 tags:
 - API Compatibility
-- Azure
 - Azure Blob Storage
 - Azure Data Lake Storage
 - Blob API
@@ -23,8 +22,6 @@ tags:
 - Developer Tools
 - DF API
 - Microsoft Fabric
-- ML
-- News
 - On Premises Mirroring
 - OneLake
 section_names:

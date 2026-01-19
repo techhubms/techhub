@@ -9,18 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-12-17 17:00:47 +00:00
 permalink: /github-copilot/videos/Next-Level-SQL-in-VS-Code-GitHub-Copilot-GA-and-AI-Ready-SQL
 tags:
-- AI
 - AI Ready Schema
 - Ask And Agent Mode
-- Azure
 - Azure SQL
 - Cloud Computing
 - Code Workflow Automation
-- Coding
 - Database Development
 - Dev
 - Development
-- GitHub Copilot
 - Intelligent Applications
 - Microsoft
 - MSSQL Extension
@@ -31,7 +27,6 @@ tags:
 - Tech
 - Technology
 - Vector Data Types
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

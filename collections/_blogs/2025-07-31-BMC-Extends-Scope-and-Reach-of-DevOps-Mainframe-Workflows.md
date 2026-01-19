@@ -9,16 +9,13 @@ feed_url: https://devops.com/feed/
 date: 2025-07-31 12:58:31 +00:00
 permalink: /ai/blogs/BMC-Extends-Scope-and-Reach-of-DevOps-Mainframe-Workflows
 tags:
-- AI
 - AI Assistant
 - Automation
-- Blogs
 - BMC
 - BMC AMI Cloud
 - BMC AMI Zadviser Enterprise
 - Business Of DevOps
 - Cloud Object Storage
-- DevOps
 - DevOps Analytics
 - Git Integration
 - Identity Management

@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 13:00:00 +00:00
 permalink: /ml/news/Enhancements-to-Microsoft-Fabric-Data-Factory-Copy-Job-Truncate-Destination-Query-Based-Subsets-and-Multi-Folder-Support
 tags:
-- Azure
 - Azure SQL Database
 - Bulk Copy
 - Change Data Capture
@@ -24,8 +23,6 @@ tags:
 - Folder Copy
 - Incremental Copy
 - Microsoft Fabric
-- ML
-- News
 - Truncate Destination
 section_names:
 - azure

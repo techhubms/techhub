@@ -16,7 +16,6 @@ tags:
 - Apple Developer Console
 - Build Pipelines
 - C#
-- Coding
 - Deep Linking
 - Entitlements
 - Interactive Widgets
@@ -24,7 +23,6 @@ tags:
 - Ios Widgets
 - MAUI
 - Mobile Development
-- News
 - Preferences
 - Release Build
 - Swift

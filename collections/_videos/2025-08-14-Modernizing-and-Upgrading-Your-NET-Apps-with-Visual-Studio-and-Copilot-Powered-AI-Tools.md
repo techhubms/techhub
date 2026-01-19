@@ -10,21 +10,18 @@ date: 2025-08-14 14:32:40 +00:00
 permalink: /ai/videos/Modernizing-and-Upgrading-Your-NET-Apps-with-Visual-Studio-and-Copilot-Powered-AI-Tools
 tags:
 - .NET
-- AI
 - AI Driven Migrations
 - AI Powered Code Fixes
 - AI Tools
 - Application Upgrade
 - Automation
 - Code Modernization
-- Coding
 - Copilot
 - Copilot Powered Plans
 - Developer Productivity
 - Microsoft
 - Migration Tools
 - Natural Language Programming
-- Videos
 - VS
 section_names:
 - ai

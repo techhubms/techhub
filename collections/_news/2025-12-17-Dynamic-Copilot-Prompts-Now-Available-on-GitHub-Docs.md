@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-17 15:19:18 +00:00
 permalink: /github-copilot/news/Dynamic-Copilot-Prompts-Now-Available-on-GitHub-Docs
 tags:
-- AI
 - AI Integration
 - Code Readability
 - Coding Assistant
@@ -18,11 +17,9 @@ tags:
 - Copilot Prompts
 - Developer Productivity
 - Documentation Tools
-- GitHub Copilot
 - GitHub Docs
 - Improvement
 - Inline Prompts
-- News
 - Prompt Blocks
 section_names:
 - ai

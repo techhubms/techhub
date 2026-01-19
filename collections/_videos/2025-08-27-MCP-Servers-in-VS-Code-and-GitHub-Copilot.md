@@ -10,17 +10,14 @@ date: 2025-08-27 18:42:25 +00:00
 permalink: /github-copilot/videos/MCP-Servers-in-VS-Code-and-GitHub-Copilot
 tags:
 - Agent Mode
-- AI
 - Code
 - Code Completion
-- Coding
 - Copilot
 - Custom MCP Server
 - Demo
 - Developer
 - Developer Workflow
 - Extension
-- GitHub Copilot
 - Integration
 - Mcp
 - MCP Servers
@@ -28,7 +25,6 @@ tags:
 - Mcpserver
 - Remote Servers
 - Software Developer
-- Videos
 - VS Code
 section_names:
 - ai

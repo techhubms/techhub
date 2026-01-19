@@ -9,16 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-28 20:54:43 +00:00
 permalink: /ai/community/Accelerating-Cloud-Native-Development-with-AI-Powered-Azure-NetApp-Files-VS-Code-Extension
 tags:
-- AI
 - AI Automation
 - ARM Templates
-- Azure
 - Azure NetApp Files
 - Cloud Storage
-- Coding
-- Community
 - Developer Productivity
-- DevOps
 - Enterprise Cloud
 - IaC
 - Microsoft Entra ID

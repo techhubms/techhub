@@ -10,14 +10,10 @@ date: 2026-01-07 05:27:21 +00:00
 permalink: /coding/community/Building-scalable-cost-effective-real-time-multiplayer-games-with-Azure-Web-PubSub
 tags:
 - Auto Scaling
-- Azure
 - Azure Front Door
 - Azure Web PubSub
 - Backend Architecture
-- Coding
-- Community
 - Cost Optimization
-- DevOps
 - Event Driven Systems
 - Game Server Infrastructure
 - Geo Replication
@@ -25,7 +21,6 @@ tags:
 - Persistent Connections
 - Real Time Messaging
 - Scalability
-- Security
 - Security Best Practices
 - Sharding
 - WebSockets

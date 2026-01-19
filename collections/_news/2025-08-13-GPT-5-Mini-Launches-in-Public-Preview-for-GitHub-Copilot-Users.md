@@ -10,7 +10,6 @@ date: 2025-08-13 17:49:12 +00:00
 permalink: /github-copilot/news/GPT-5-Mini-Launches-in-Public-Preview-for-GitHub-Copilot-Users
 tags:
 - Admin Settings
-- AI
 - AI Models
 - Coding Assistance
 - Copilot Business
@@ -18,12 +17,10 @@ tags:
 - Copilot Enterprise
 - Copilot Free
 - Developer Tools
-- GitHub Copilot
 - GPT 5 Mini
 - IDE Integration
 - Model Deployment
 - Model Multipliers
-- News
 - OpenAI
 - Productivity
 - Public Preview

@@ -9,12 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-25 16:00:20 +00:00
 permalink: /ai/videos/Unlocking-AI-Practice-Scale-for-Partners-with-Azure-Insights-from-MS-Ignite
 tags:
-- AI
 - AI Centers Of Excellence
 - AI Deployment
 - AI Landing Zone
 - AI Transformation
-- Azure
 - Azure Accelerate
 - Azure AI
 - Business Impact
@@ -27,7 +25,6 @@ tags:
 - Packaged Learnings
 - Partner Enablement
 - User Adoption
-- Videos
 section_names:
 - ai
 - azure

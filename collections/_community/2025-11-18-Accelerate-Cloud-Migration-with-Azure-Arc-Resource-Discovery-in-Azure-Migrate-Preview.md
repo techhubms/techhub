@@ -10,13 +10,11 @@ date: 2025-11-18 16:23:18 +00:00
 permalink: /azure/community/Accelerate-Cloud-Migration-with-Azure-Arc-Resource-Discovery-in-Azure-Migrate-Preview
 tags:
 - Arc Enabled Resources
-- Azure
 - Azure Arc
 - Azure Hybrid Use Benefits
 - Azure Migrate
 - Cloud Migration
 - Collector VM Extension
-- Community
 - Cost Savings
 - Extended Security Updates
 - Hybrid Cloud

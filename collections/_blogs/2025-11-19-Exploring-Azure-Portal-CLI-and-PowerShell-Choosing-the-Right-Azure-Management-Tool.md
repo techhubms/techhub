@@ -9,17 +9,13 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-19 10:14:24 +00:00
 permalink: /coding/blogs/Exploring-Azure-Portal-CLI-and-PowerShell-Choosing-the-Right-Azure-Management-Tool
 tags:
-- Azure
 - Azure CLI
 - Azure Portal
 - Azure PowerShell
-- Blogs
 - CI/CD
 - Cloud Management
 - Cloud Shell
-- Coding
 - Cross Platform Deployment
-- DevOps
 - Monitoring
 - PowerShell Cmdlets
 - RBAC

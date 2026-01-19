@@ -11,7 +11,6 @@ permalink: /ai/news/AI-Agent-Lifecycle-Security-and-Observability-Highlights-fro
 tags:
 - Agent Lifecycle
 - Agent Observability
-- AI
 - AI Agents
 - Copilot Studio
 - Fabric IQ
@@ -22,9 +21,7 @@ tags:
 - Microsoft Foundry
 - Microsoft Ignite
 - Microsoft Purview
-- News
 - Power BI
-- Security
 - Security Solutions
 - Work IQ
 section_names:

@@ -9,12 +9,10 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-09 17:57:56 +00:00
 permalink: /ai/news/Microsoft-Unveils-Supercomputing-Cluster-with-4600-NVIDIA-GB300-GPUs-for-Next-Gen-AI-Workloads
 tags:
-- AI
 - AI Acceleration
 - AI Infrastructure
 - AI Scale
 - AI Workloads
-- Azure
 - Cloud Computing
 - Company News
 - Datacenter
@@ -24,7 +22,6 @@ tags:
 - LinkedIn Post
 - Microsoft
 - Microsoft Azure
-- News
 - NVIDIA GB300
 - Silicon Design
 - Supercomputing Cluster

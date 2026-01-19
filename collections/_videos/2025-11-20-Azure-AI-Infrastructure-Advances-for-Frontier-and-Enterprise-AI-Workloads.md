@@ -10,10 +10,8 @@ date: 2025-11-20 17:20:56 +00:00
 permalink: /ai/videos/Azure-AI-Infrastructure-Advances-for-Frontier-and-Enterprise-AI-Workloads
 tags:
 - Agent Mode
-- AI
 - AI Infrastructure
 - AI Model Deployment
-- Azure
 - Azure AI
 - Cooling Systems
 - Datacenter Optimization
@@ -33,7 +31,6 @@ tags:
 - NVIDIA Grace Blackwell
 - Quantum 2 InfiniBand
 - Silicon Optimization
-- Videos
 section_names:
 - ai
 - azure

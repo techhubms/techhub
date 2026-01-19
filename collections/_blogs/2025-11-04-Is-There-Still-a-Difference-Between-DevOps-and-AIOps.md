@@ -9,18 +9,15 @@ feed_url: https://devops.com/feed/
 date: 2025-11-04 09:58:00 +00:00
 permalink: /ai/blogs/Is-There-Still-a-Difference-Between-DevOps-and-AIOps
 tags:
-- AI
 - AI in IT Operations
 - AIOps
 - Anomaly Detection
 - Automated Remediation
 - Automation
-- Blogs
 - Business Of DevOps
 - CI/CD
 - Continuous Improvement
 - Contributed Content
-- DevOps
 - Digital Transformation
 - Incident Management
 - Infrastructure Management

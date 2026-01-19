@@ -11,7 +11,6 @@ permalink: /ml/news/Fabric-Eventstream-SQL-Operator-Real-Time-Data-Processing-in
 tags:
 - Aggregation
 - Anomaly Detection
-- Azure
 - Azure Stream Analytics
 - Data Engineering
 - Data Pipeline
@@ -20,8 +19,6 @@ tags:
 - Eventstream
 - Low Code
 - Microsoft Fabric
-- ML
-- News
 - Power BI
 - Real Time Intelligence
 - SQL Operator

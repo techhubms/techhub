@@ -9,13 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-19 08:57:53 +00:00
 permalink: /azure/community/Troubleshooting-Azure-Network-Security-Perimeter-Connectivity-SQL-Database-and-Storage-Account
 tags:
-- Azure
 - Azure Networking
 - Azure Platform
 - Azure SQL Database
 - Azure Storage Account
 - Bulk Insert
-- Community
 - Data Security
 - Firewall Rules
 - GA
@@ -24,7 +22,6 @@ tags:
 - NSP
 - Preview Features
 - Resource Connectivity
-- Security
 section_names:
 - azure
 - security

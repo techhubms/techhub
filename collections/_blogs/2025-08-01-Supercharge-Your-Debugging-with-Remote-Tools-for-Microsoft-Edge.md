@@ -9,9 +9,7 @@ feed_url: https://dellenny.com/feed/
 date: 2025-08-01 18:10:17 +00:00
 permalink: /coding/blogs/Supercharge-Your-Debugging-with-Remote-Tools-for-Microsoft-Edge
 tags:
-- Blogs
 - Chromium
-- Coding
 - Cross Device Debugging
 - DevTools
 - Edge

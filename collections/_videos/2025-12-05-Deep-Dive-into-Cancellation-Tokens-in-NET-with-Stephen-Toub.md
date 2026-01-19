@@ -17,7 +17,6 @@ tags:
 - CancellationToken
 - Cancellationtokens
 - CancellationTokenSource
-- Coding
 - Cooperative Cancellation
 - Demo
 - Dotnetdeveloper
@@ -33,7 +32,6 @@ tags:
 - Stephentoub
 - Threading
 - Tokens
-- Videos
 - Volatile
 section_names:
 - coding

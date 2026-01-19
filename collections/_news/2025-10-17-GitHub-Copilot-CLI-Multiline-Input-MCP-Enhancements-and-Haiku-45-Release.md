@@ -9,21 +9,17 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-17 18:29:47 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-CLI-Multiline-Input-MCP-Enhancements-and-Haiku-45-Release
 tags:
-- AI
 - Anthropic Claude Haiku 4.5
 - Authentication
 - Client Apps
-- Coding
 - Copilot
 - Debugging Tools
 - Developer Tools
 - Environment Variables
-- GitHub Copilot
 - GitHub Copilot CLI
 - Improvement
 - MCP Enhancements
 - Multiline Input
-- News
 - Noninteractive Workflows
 - PowerShell Support
 - Session Management

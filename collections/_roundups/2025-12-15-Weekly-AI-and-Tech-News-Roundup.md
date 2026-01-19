@@ -7,22 +7,13 @@ date: 2025-12-15 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - Agentic AI
-- AI
 - AI Agents
 - Application Modernization
-- Azure
 - CI/CD
 - Cloud Automation
-- Coding
 - Developer Productivity
-- DevOps
-- GitHub Copilot
-- Machine Learning
 - Microsoft Fabric
-- ML
 - OpenAI GPT 5.2
-- Roundups
-- Security
 - Supply Chain Security
 - VS Code
 section_names:

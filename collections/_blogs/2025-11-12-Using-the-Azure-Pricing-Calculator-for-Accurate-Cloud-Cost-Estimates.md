@@ -9,11 +9,9 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-12 16:05:06 +00:00
 permalink: /azure/blogs/Using-the-Azure-Pricing-Calculator-for-Accurate-Cloud-Cost-Estimates
 tags:
-- Azure
 - Azure Pricing Calculator
 - Azure Regions
 - Azure Services
-- Blogs
 - Budget Planning
 - Cloud Cost Estimation
 - Cloud Licensing

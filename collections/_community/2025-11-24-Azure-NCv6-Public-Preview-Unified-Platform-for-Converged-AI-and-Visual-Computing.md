@@ -11,13 +11,10 @@ permalink: /ai/community/Azure-NCv6-Public-Preview-Unified-Platform-for-Converge
 tags:
 - 3D Rendering
 - Agentic Workflows
-- AI
 - AI Infrastructure
-- Azure
 - Azure HPC
 - Azure NCv6
 - Azure Virtual Desktop
-- Community
 - Digital Twins
 - Fractional GPU
 - Generative AI

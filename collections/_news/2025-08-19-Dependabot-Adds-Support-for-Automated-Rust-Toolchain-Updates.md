@@ -15,9 +15,7 @@ tags:
 - Continuous Integration
 - Dependabot
 - Dependency Management
-- DevOps
 - GitHub
-- News
 - Rust
 - Rust Toolchain
 - Rust Toolchain.toml

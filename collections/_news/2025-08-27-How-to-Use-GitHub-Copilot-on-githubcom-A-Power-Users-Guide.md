@@ -9,20 +9,15 @@ feed_url: https://github.blog/feed/
 date: 2025-08-27 16:00:00 +00:00
 permalink: /github-copilot/news/How-to-Use-GitHub-Copilot-on-githubcom-A-Power-Users-Guide
 tags:
-- AI
 - AI & ML
 - AI Agent
 - Claude Sonnet 4
-- Coding
 - Development Workflow
-- DevOps
 - GitHub Checkout
-- GitHub Copilot
 - GitHub.com
 - GPT 4.1
 - Issue Tracking
 - Model Selection
-- News
 - Opus 4
 - Project Management
 - Prototyping

@@ -9,13 +9,11 @@ feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-20 16:00:12 +00:00
 permalink: /ai/news/Announcing-Azure-Language-in-Foundry-Tools-for-Deterministic-Privacy-First-Agents
 tags:
-- AI
 - AI Agent
 - AI Agents
 - AI Development
 - AI Tools
 - Authentication
-- Azure
 - Azure AI
 - Azure AI Foundry
 - Azure AI Services
@@ -37,7 +35,6 @@ tags:
 - MSIgnite
 - Multi Turn Conversations
 - Named Entity Recognition
-- News
 - Pii Redaction
 - Privacy
 - Privacy Control

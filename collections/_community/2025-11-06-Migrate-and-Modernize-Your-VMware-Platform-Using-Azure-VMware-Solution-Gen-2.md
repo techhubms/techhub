@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-06 19:17:51 +00:00
 permalink: /azure/community/Migrate-and-Modernize-Your-VMware-Platform-Using-Azure-VMware-Solution-Gen-2
 tags:
-- Azure
 - Azure Migrate
 - Azure Native Integration
 - Azure VMware Solution
 - Cloud Infrastructure
-- Community
 - Deployment
 - Hybrid Cloud
 - Migration Strategy

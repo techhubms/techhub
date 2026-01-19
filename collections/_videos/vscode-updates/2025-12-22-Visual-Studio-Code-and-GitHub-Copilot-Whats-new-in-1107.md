@@ -10,7 +10,6 @@ permalink: /github-copilot/videos/Visual-Studio-Code-and-GitHub-Copilot-Whats-ne
 section: github-copilot
 alt-collection: vscode-updates
 tags:
-- AI
 - Background Agent
 - Chain Of Thought
 - Chat Terminal
@@ -18,12 +17,10 @@ tags:
 - Code Coverage
 - Custom Agent
 - Developer Tools
-- GitHub Copilot
 - MCP Marketplace
 - Merge Conflicts
 - Productivity
 - Terminal Profiles
-- Videos
 - VS Code
 - VS Code 1.107
 section_names:

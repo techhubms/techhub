@@ -9,13 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-03 17:00:34 +00:00
 permalink: /github-copilot/videos/Modernize-Java-Apps-with-AI-Deploy-Your-Applications-to-Azure
 tags:
-- AI
 - AI Assisted Development
 - AIAssisted
 - App Modernization
 - AppModernization
 - Architecture Diagrams
-- Azure
 - Azure App Service
 - Azure Deployment
 - Azure Developer CLI
@@ -29,12 +27,9 @@ tags:
 - CloudDeployment
 - CloudMigration
 - Deployment Automation
-- DevOps
-- GitHub Copilot
 - Java
 - JavaAzure
 - JavaCloud
-- Videos
 - YAML
 section_names:
 - ai

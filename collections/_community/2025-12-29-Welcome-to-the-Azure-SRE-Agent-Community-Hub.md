@@ -9,10 +9,7 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-29 21:05:14 +00:00
 permalink: /azure/community/Welcome-to-the-Azure-SRE-Agent-Community-Hub
 tags:
-- Azure
 - Azure SRE Agent
-- Community
-- DevOps
 - Engineering Best Practices
 - Incident Response
 - Microsoft

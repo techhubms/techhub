@@ -11,7 +11,6 @@ permalink: /coding/videos/How-to-Contribute-to-MCP-Tools-Documentation-Code-and-
 tags:
 - .NET
 - Best Practices
-- Coding
 - Contribution
 - Documentation
 - GitHub
@@ -20,7 +19,6 @@ tags:
 - Open Source
 - Python
 - Tools
-- Videos
 section_names:
 - coding
 ---

@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 11:18:51 +00:00
 permalink: /azure/videos/Optimizing-Azure-Investments-with-Citrix-Security-Cost-and-Experience
 tags:
-- Azure
 - Capture Prevention
 - Citrix
 - Citrix Cloud
@@ -21,10 +20,8 @@ tags:
 - MSIgnite
 - On Premises Migration
 - Secure Private Access
-- Security
 - Unified Communications
 - User Experience
-- Videos
 - Watermarking
 - Windows 365
 - Zero Trust

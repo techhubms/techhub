@@ -12,7 +12,6 @@ tags:
 - Access Management
 - Active Directory
 - AD
-- Azure
 - Azure Active Directory
 - Cloud Identity
 - Conditional Access
@@ -27,10 +26,8 @@ tags:
 - Identity Management
 - Microsoft Entra ID
 - Microsoft Security
-- Security
 - Security Copilot
 - SOA Conversion
-- Videos
 section_names:
 - azure
 - security

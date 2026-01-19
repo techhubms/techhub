@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 07:14:34 +00:00
 permalink: /ai/videos/End-to-End-Migration-of-Applications-to-Azure-IaaS-and-PaaS-with-AI-Agents
 tags:
-- AI
 - AI Agent
 - Application Discovery
-- Azure
 - Azure Accelerate Program
 - Azure Arc
 - Azure Migration
@@ -30,7 +28,6 @@ tags:
 - PaaS
 - Platform Landing Zone
 - ROI Analysis
-- Videos
 - VMware To Azure
 - Windows Server
 - Workload Modernization

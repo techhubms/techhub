@@ -11,7 +11,6 @@ permalink: /azure/community/Best-Practices-for-Migrating-COTS-Applications-to-Mi
 tags:
 - Automation
 - Availability Zones
-- Azure
 - Azure Advisor
 - Azure API Management
 - Azure Governance
@@ -25,7 +24,6 @@ tags:
 - Backup
 - Cloud Adoption Framework
 - Cloud Security
-- Community
 - COTS Migration
 - Disaster Recovery
 - Identity Integration
@@ -37,7 +35,6 @@ tags:
 - Monitoring
 - Operational Optimization
 - Runbooks
-- Security
 section_names:
 - azure
 - security

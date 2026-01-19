@@ -9,18 +9,14 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-31 20:38:46 +00:00
 permalink: /github-copilot/news/Copilot-Chat-Unlocks-Powerful-Repository-Management-Skills-in-GitHub
 tags:
-- AI
 - Automation
 - Branching
 - Chat Driven Development
 - Copilot Chat
 - Developer Productivity
-- DevOps
 - File Creation
 - File Updates
 - GitHub
-- GitHub Copilot
-- News
 - Pull Requests
 - Repository Workflows
 section_names:

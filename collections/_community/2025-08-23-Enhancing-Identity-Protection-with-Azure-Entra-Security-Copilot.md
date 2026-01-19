@@ -9,10 +9,7 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-23 11:28:05 +00:00
 permalink: /ai/community/Enhancing-Identity-Protection-with-Azure-Entra-Security-Copilot
 tags:
-- AI
-- Azure
 - Azure Entra
-- Community
 - Conditional Access
 - Generative AI
 - Identity Protection
@@ -21,7 +18,6 @@ tags:
 - Microsoft Entra ID
 - Microsoft Sentinel
 - Policy Optimization
-- Security
 - Security Copilot
 - SIEM
 - Threat Detection

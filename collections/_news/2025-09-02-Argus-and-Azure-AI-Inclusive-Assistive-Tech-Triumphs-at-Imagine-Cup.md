@@ -10,11 +10,9 @@ date: 2025-09-02 17:04:06 +00:00
 permalink: /ai/news/Argus-and-Azure-AI-Inclusive-Assistive-Tech-Triumphs-at-Imagine-Cup
 tags:
 - Accessibility
-- AI
 - AI Development
 - Argus Panoptes
 - Assistive Technology
-- Azure
 - Azure AI Foundry
 - Azure AI Speech
 - Cloud Inference
@@ -24,7 +22,6 @@ tags:
 - Inclusion
 - Microsoft For Startups
 - Microsoft Imagine Cup
-- News
 - Startups
 - Student Innovation
 - Wearable Tech

@@ -12,9 +12,7 @@ tags:
 - Automation
 - Azure DevOps
 - Branching
-- Community
 - Conflict Resolution
-- DevOps
 - Git
 - Incoming Changes
 - Merge Conflicts

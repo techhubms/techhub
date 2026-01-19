@@ -10,13 +10,11 @@ date: 2025-07-23 17:00:19 +00:00
 permalink: /ai/news/Building-Agent-to-Agent-Communication-with-MCP-Capabilities-Patterns-and-Implementation
 tags:
 - Agent Communication
-- AI
 - AI Agent
 - Elicitation
 - MCP
 - Microsoft AI
 - Multi Turn Interaction
-- News
 - Progress Updates
 - Resumable Streams
 - Sampling

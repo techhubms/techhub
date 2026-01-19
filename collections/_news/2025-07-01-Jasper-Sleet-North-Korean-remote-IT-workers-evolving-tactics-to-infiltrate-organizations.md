@@ -13,10 +13,8 @@ tags:
 - Cybersecurity
 - Insider Threats
 - IT Security
-- News
 - North Korea
 - Remote Work
-- Security
 - Security Tactics
 section_names:
 - security

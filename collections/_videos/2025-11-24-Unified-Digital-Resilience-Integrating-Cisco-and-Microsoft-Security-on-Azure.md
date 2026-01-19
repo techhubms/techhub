@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 10:37:38 +00:00
 permalink: /ai/videos/Unified-Digital-Resilience-Integrating-Cisco-and-Microsoft-Security-on-Azure
 tags:
-- AI
 - AI Security
 - Automation
-- Azure
 - Azure Security
 - Business Continuity
 - Cisco
@@ -23,13 +21,11 @@ tags:
 - MSIgnite
 - Operational Efficiency
 - Partners
-- Security
 - Security Matrix
 - Security Operations
 - Security Response
 - Threat Modeling
 - Unified Threat Detection
-- Videos
 section_names:
 - ai
 - azure

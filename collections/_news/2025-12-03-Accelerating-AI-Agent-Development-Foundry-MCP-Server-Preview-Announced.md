@@ -11,12 +11,9 @@ permalink: /ai/news/Accelerating-AI-Agent-Development-Foundry-MCP-Server-Preview
 tags:
 - Agent Management
 - Agents
-- AI
 - AI Agents
-- Azure
 - Azure Entra ID
 - Cloud Integration
-- Coding
 - Foundry MCP Server
 - MCP
 - Microsoft Foundry
@@ -24,10 +21,8 @@ tags:
 - Model Deployment
 - Monitoring
 - MSIgnite
-- News
 - OAuth 2.0
 - RBAC
-- Security
 - Security Best Practices
 - VS
 - VS Code

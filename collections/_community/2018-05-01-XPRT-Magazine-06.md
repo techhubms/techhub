@@ -12,9 +12,6 @@ tags:
 - Browser Security
 - ChatOps
 - Cloud
-- Coding
-- Community
-- DevOps
 - FaaS
 - Kubernetes
 - Magazines
@@ -22,7 +19,6 @@ tags:
 - Mob Programming
 - OpenFaaS
 - Performance
-- Security
 - Web
 - Website Speed
 section_names:

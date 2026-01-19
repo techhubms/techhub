@@ -12,7 +12,6 @@ tags:
 - Agile Methodology
 - Automated Testing
 - Automation Tools
-- Blogs
 - Business Of DevOps
 - CI/CD
 - CI/CD Pipelines
@@ -23,7 +22,6 @@ tags:
 - Continuous Integration
 - Continuous Testing
 - Contributed Content
-- DevOps
 - DevOps Best Practices
 - DevOps Culture
 - DevOps Workflow
@@ -39,7 +37,6 @@ tags:
 - Monitoring
 - Observability
 - Quality Assurance
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

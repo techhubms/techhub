@@ -9,12 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-11-06 14:48:36 +00:00
 permalink: /ai/videos/Anders-Hejlsberg-on-Octoverse-2025-TypeScript-Evolution-Go-and-AI-in-Development
 tags:
-- AI
 - AI Assisted Development
-- Coding
 - Developer Productivity
 - Developer Workflows
-- DevOps
 - GitHub
 - Go
 - Language Evolution
@@ -24,7 +21,6 @@ tags:
 - Programming Languages
 - Software Development
 - TypeScript
-- Videos
 section_names:
 - ai
 - coding

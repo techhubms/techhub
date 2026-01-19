@@ -15,19 +15,15 @@ tags:
 - .NET Framework
 - Application Transformation
 - ASP.NET Core
-- Azure
 - C# 14
 - Cloud Architecture
 - Cloud Native
-- Coding
 - Containerization
-- DevOps
 - F# 10
 - MAUI
 - Microservices
 - Migration
 - Modernization
-- Videos
 - VS
 section_names:
 - azure

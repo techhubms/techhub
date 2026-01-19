@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-10 17:19:46 +00:00
 permalink: /github-copilot/news/Claude-Sonnet-35-Deprecated-Claude-Haiku-45-Now-Available-in-GitHub-Copilot-Free
 tags:
-- AI
 - AI Models
 - Anthropic
 - Claude Haiku 4.5
@@ -18,10 +17,8 @@ tags:
 - Copilot Chat
 - Copilot Enterprise
 - Copilot Free
-- GitHub Copilot
 - Model Deprecation
 - Model Policies
-- News
 - Retired
 - VS Code
 section_names:

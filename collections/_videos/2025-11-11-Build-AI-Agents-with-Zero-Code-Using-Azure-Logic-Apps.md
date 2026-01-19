@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-11 21:47:17 +00:00
 permalink: /ai/videos/Build-AI-Agents-with-Zero-Code-Using-Azure-Logic-Apps
 tags:
-- AI
 - AI Agents
 - Authentication
-- Azure
 - Azure Logic Apps
 - Azure OpenAI
 - Cloud Computing
@@ -33,7 +31,6 @@ tags:
 - ServiceNow Integration
 - Tech
 - Technology
-- Videos
 - Workflow Automation
 section_names:
 - ai

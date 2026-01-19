@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 16:00:00 +00:00
 permalink: /azure/community/Preview-of-Azure-Dlsv7-Dsv7-and-Esv7-VMs-with-Intel-Xeon-6-Granite-Rapids
 tags:
-- Azure
 - Azure Boost
 - Azure VMs
 - Business Intelligence
-- Community
 - Data Warehousing
 - Dlsv7
 - Dsv7

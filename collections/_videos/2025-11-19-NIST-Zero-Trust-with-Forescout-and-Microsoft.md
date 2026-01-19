@@ -21,11 +21,9 @@ tags:
 - MSIgnite
 - NIST 1800 35
 - Policy Decision Point
-- Security
 - Security Architecture
 - Security Operations
 - Unmanaged Devices
-- Videos
 - Zero Trust
 section_names:
 - security

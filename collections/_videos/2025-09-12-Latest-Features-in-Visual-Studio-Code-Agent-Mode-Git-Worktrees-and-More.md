@@ -10,17 +10,13 @@ date: 2025-09-12 16:22:57 +00:00
 permalink: /ai/videos/Latest-Features-in-Visual-Studio-Code-Agent-Mode-Git-Worktrees-and-More
 tags:
 - Agent Mode
-- AI
 - AI Features
 - Background Agent Tasks
-- Coding
 - Development Tools
-- DevOps
 - Extensions API
 - Git Worktrees
 - Model Flexibility
 - Terminal Automation
-- Videos
 - VS Code
 - VS Code Agents
 section_names:

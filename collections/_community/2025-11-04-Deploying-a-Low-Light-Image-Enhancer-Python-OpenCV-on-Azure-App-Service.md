@@ -10,13 +10,10 @@ date: 2025-11-04 07:33:04 +00:00
 permalink: /coding/community/Deploying-a-Low-Light-Image-Enhancer-Python-OpenCV-on-Azure-App-Service
 tags:
 - App Architecture
-- Azure
 - Azure App Service
 - Azure Developer CLI
 - Brightness Adjustment
 - CLAHE
-- Coding
-- Community
 - Deployment
 - Flask
 - Gamma Correction

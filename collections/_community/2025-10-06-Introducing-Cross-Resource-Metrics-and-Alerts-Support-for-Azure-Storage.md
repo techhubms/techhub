@@ -10,15 +10,12 @@ date: 2025-10-06 12:38:16 +00:00
 permalink: /azure/community/Introducing-Cross-Resource-Metrics-and-Alerts-Support-for-Azure-Storage
 tags:
 - Action Groups
-- Azure
 - Azure Monitor
 - Azure Storage
 - Blob Storage
 - Cloud Operations
-- Community
 - Cross Resource Metrics
 - Dashboard
-- DevOps
 - File Storage
 - Fleet Management
 - Operational Monitoring

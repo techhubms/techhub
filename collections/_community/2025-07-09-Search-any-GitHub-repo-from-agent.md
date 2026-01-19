@@ -9,14 +9,11 @@ date: 2025-07-09 22:57:13 +00:00
 permalink: /github-copilot/community/Search-any-GitHub-repo-from-agent
 viewing_mode: external
 tags:
-- AI
 - API References
 - Chat View
-- Community
 - Copilot Instructions.md
 - Development Tools
 - Embeddings
-- GitHub Copilot
 - GitHub Repositories
 - Githubrepo
 - Prompt Discovery

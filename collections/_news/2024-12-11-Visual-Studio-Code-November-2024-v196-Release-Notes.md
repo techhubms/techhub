@@ -10,20 +10,15 @@ date: 2024-12-11 17:00:00 +00:00
 permalink: /github-copilot/news/Visual-Studio-Code-November-2024-v196-Release-Notes
 tags:
 - Accessibility
-- AI
 - AI Assisted Development
-- Coding
 - Copilot Chat
 - Copilot Debug
 - Copilot Edits
 - Debugging
-- DevOps
 - DevOps Workflows
 - Editor Improvements
 - Extension Management
-- GitHub Copilot
 - GitHub Copilot Free
-- News
 - Notebooks
 - Python Environments
 - Python Testing

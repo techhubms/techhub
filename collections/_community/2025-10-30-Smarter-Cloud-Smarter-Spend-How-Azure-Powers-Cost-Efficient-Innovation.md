@@ -9,9 +9,7 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-30 17:05:07 +00:00
 permalink: /ai/community/Smarter-Cloud-Smarter-Spend-How-Azure-Powers-Cost-Efficient-Innovation
 tags:
-- AI
 - AI Cost Optimization
-- Azure
 - Azure Advisor
 - Azure AI Foundry
 - Azure Hybrid Benefit
@@ -21,7 +19,6 @@ tags:
 - Cloud Governance
 - Cloud Insights
 - Cloud Migration
-- Community
 - Cost Optimization
 - Digital Transformation
 - FinOps

@@ -12,7 +12,6 @@ tags:
 - Active Directory
 - API Gateway
 - Automation
-- Azure
 - DHCP
 - DNS
 - Hybrid Cloud
@@ -25,7 +24,6 @@ tags:
 - Network Observability
 - Network Optimizations
 - ServiceNow Integration
-- Videos
 section_names:
 - azure
 ---

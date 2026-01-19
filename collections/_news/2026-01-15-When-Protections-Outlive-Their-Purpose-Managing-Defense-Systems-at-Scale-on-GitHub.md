@@ -12,7 +12,6 @@ tags:
 - DDoS Protection
 - Defense Mechanisms
 - Developer Experience
-- DevOps
 - Engineering
 - GitHub
 - Incident Response
@@ -20,11 +19,9 @@ tags:
 - Lifecycle Management
 - Logging
 - Mitigation
-- News
 - Observability
 - Platform Security
 - Rate Limiting
-- Security
 - Site Reliability
 - Technical Debt
 - Traffic Controls

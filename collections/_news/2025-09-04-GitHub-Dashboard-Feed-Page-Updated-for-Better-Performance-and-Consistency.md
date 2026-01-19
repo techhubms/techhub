@@ -10,13 +10,11 @@ date: 2025-09-04 21:07:51 +00:00
 permalink: /devops/news/GitHub-Dashboard-Feed-Page-Updated-for-Better-Performance-and-Consistency
 tags:
 - Dashboard Feed
-- DevOps
 - Event Feeds
 - Feed Upgrades
 - GitHub
 - GitHub Homepage
 - Infrastructure
-- News
 - Performance Improvements
 - Product Update
 - Recommendations

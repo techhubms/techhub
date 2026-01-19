@@ -9,17 +9,14 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-08-27 15:59:03 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Code-Completion-Now-Powered-by-GPT-41-Model
 tags:
-- AI
 - AI Models
 - AI Updates
 - Code Completion
 - Copilot Model Picker
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - GPT 4.1
 - Machine Learning
-- News
 - Reinforcement Learning
 - Software Development
 section_names:

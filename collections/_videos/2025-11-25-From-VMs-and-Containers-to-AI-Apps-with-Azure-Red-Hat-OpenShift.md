@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-25 15:54:09 +00:00
 permalink: /ai/videos/From-VMs-and-Containers-to-AI-Apps-with-Azure-Red-Hat-OpenShift
 tags:
-- AI
 - AI Strategy
 - ARO
-- Azure
 - Azure Red Hat OpenShift
 - Banco Bradesco
 - Cluster Administration
@@ -27,7 +25,6 @@ tags:
 - Migration
 - MSIgnite
 - Red Hat OpenShift Virtualization
-- Videos
 - Virtual Machines
 section_names:
 - ai

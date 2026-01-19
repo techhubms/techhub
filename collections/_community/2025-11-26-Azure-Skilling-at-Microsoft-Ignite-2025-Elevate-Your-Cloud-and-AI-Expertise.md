@@ -9,17 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-26 22:14:11 +00:00
 permalink: /ai/community/Azure-Skilling-at-Microsoft-Ignite-2025-Elevate-Your-Cloud-and-AI-Expertise
 tags:
-- AI
 - AI Skills Navigator
 - Applied Learning
 - Applied Skills
-- Azure
 - Azure AI Foundry
 - Azure Skills Challenge
 - Certification
 - Cloud
-- Coding
-- Community
 - Data Platforms
 - Developer
 - Hands On Labs

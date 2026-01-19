@@ -9,15 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-05 00:09:20 +00:00
 permalink: /coding/community/Deploying-a-Bun-Hono-Vite-App-to-Azure-Linux-Web-App
 tags:
-- Azure
 - Azure App Service
 - Azure PaaS
 - Bun
 - CI/CD
-- Coding
-- Community
 - Deployment
-- DevOps
 - Docker
 - Full Stack
 - Hono

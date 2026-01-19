@@ -9,17 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-06 06:37:46 +00:00
 permalink: /coding/community/Advanced-Kafka-Lag-Monitoring-Techniques-for-Azure-Event-Hubs
 tags:
-- Azure
 - Azure Event Hubs
 - Azure Monitor
 - Blob Storage
 - CLI Tools
-- Coding
 - Commit Frequency
-- Community
 - Consumer Lag
 - Cosmos DB
-- DevOps
 - Durable Storage
 - Event Hubs Premium
 - Kafka

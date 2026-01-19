@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 12:44:52 +00:00
 permalink: /ai/videos/AI-based-Data-Discovery-and-Threat-Detection-with-Veeam-on-Azure
 tags:
-- AI
 - AI Driven Security
-- Azure
 - Azure AI
 - Blast Radius Analysis
 - Data Discovery
@@ -25,13 +23,11 @@ tags:
 - MSIgnite
 - Natural Language Query
 - Ransomware Detection
-- Security
 - Security Operations
 - Signal Analysis
 - SOC
 - Threat Evaluation
 - Veeam Data Cloud
-- Videos
 section_names:
 - ai
 - azure

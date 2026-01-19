@@ -10,7 +10,6 @@ date: 2025-10-23 16:00:00 +00:00
 permalink: /azure/news/Harden-Your-Identity-Defense-with-Microsoft-Defender-and-Entra-Enhanced-ITDR-and-Unified-Insights
 tags:
 - Active Directory
-- Azure
 - Cloud Security
 - Conditional Access
 - Cybersecurity
@@ -20,9 +19,7 @@ tags:
 - ITDR
 - Microsoft Defender For Identity
 - Microsoft Entra ID
-- News
 - Privileged Access Management
-- Security
 - Security Operations
 - SOC
 - Threat Intelligence

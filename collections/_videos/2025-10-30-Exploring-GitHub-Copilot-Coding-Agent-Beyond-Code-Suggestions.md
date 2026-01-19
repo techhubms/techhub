@@ -9,17 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-30 18:08:46 +00:00
 permalink: /github-copilot/videos/Exploring-GitHub-Copilot-Coding-Agent-Beyond-Code-Suggestions
 tags:
-- AI
 - AI Powered Development
 - Autonomous Agent
 - Code Automation
 - Coding Agent
 - Damian Brady
 - Developer Productivity
-- GitHub Copilot
 - GitHub Issues
 - Microsoft Developer
-- Videos
 - Workflow Automation
 section_names:
 - ai

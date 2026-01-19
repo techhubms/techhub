@@ -9,12 +9,10 @@ feed_url: https://devblogs.microsoft.com/engineering-at-microsoft/feed/
 date: 2025-03-03 17:00:44 +00:00
 permalink: /ai/news/How-Microsoft-Engineers-Build-AI-Insights-into-Scalable-RAG-Enabled-Applications
 tags:
-- AI
 - AI Applications
 - AI Apps
 - AI Development
 - Ask Learn Plugin
-- Azure
 - Copilot For Azure
 - Dynamics 365 Business Central
 - Engineering@Microsoft
@@ -23,7 +21,6 @@ tags:
 - Machine Learning
 - Microsoft Engineering
 - Microsoft Security Copilot
-- News
 - RAG
 - Retrieval Augmented Generation
 - Scalable

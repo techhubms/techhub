@@ -9,10 +9,8 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-14 00:35:00 +00:00
 permalink: /ai/news/Microsoft-Advances-Open-Source-Infrastructure-for-Frontier-Scale-AI
 tags:
-- AI
 - AI + Machine Learning
 - AI Infrastructure
-- Azure
 - Caliptra
 - Cloud Computing
 - Data Centers
@@ -22,13 +20,11 @@ tags:
 - Liquid Cooling
 - Microsoft Azure
 - Networking
-- News
 - OCP Global Summit
 - Open Compute Project
 - Power Stabilization
 - Quantum Resilient Cryptography
 - Resiliency
-- Security
 - Silicon Root Of Trust
 - Sustainability
 section_names:

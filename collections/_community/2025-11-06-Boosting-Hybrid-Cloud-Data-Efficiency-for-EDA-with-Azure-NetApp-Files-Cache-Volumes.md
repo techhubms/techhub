@@ -9,13 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-06 20:55:11 +00:00
 permalink: /azure/community/Boosting-Hybrid-Cloud-Data-Efficiency-for-EDA-with-Azure-NetApp-Files-Cache-Volumes
 tags:
-- Azure
 - Azure NetApp Files
 - Bandwidth Optimization
 - Cache Volumes
 - Cloud Architecture
 - Cloud Bursting
-- Community
 - Data Collaboration
 - Data Mobility
 - Distributed Workloads

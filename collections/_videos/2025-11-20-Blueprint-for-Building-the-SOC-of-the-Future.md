@@ -10,7 +10,6 @@ date: 2025-11-20 14:27:33 +00:00
 permalink: /ai/videos/Blueprint-for-Building-the-SOC-of-the-Future
 tags:
 - Agentic AI
-- AI
 - AI Security
 - Attack Path Mapping
 - Automated Response
@@ -22,12 +21,10 @@ tags:
 - ModernizeSecOpswithaunifiedplatform
 - MSIgnite
 - Predictive Shielding
-- Security
 - Security Operations
 - SOC Architecture
 - Threat Detection
 - Unified Identity Inventory
-- Videos
 section_names:
 - ai
 - security

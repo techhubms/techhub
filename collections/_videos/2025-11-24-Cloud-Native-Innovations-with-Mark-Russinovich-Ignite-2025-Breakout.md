@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 12:45:11 +00:00
 permalink: /coding/videos/Cloud-Native-Innovations-with-Mark-Russinovich-Ignite-2025-Breakout
 tags:
-- Azure
 - Azure Container Instances
 - CADA
 - Cloud Native
-- Coding
 - Confidential Containers
 - Containers
 - Dapper
@@ -28,9 +26,7 @@ tags:
 - MSIgnite
 - Multi Cloud
 - RADIUS
-- Security
 - Serverless Containers
-- Videos
 section_names:
 - azure
 - coding

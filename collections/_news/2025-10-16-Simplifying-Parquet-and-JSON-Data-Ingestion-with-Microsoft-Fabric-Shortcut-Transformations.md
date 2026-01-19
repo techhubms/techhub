@@ -10,7 +10,6 @@ date: 2025-10-16 10:00:00 +00:00
 permalink: /ml/news/Simplifying-Parquet-and-JSON-Data-Ingestion-with-Microsoft-Fabric-Shortcut-Transformations
 tags:
 - ACID Transactions
-- Azure
 - Azure Data Lake
 - Compression Formats
 - Continuous Sync
@@ -21,9 +20,7 @@ tags:
 - JSON
 - Lakehouse
 - Microsoft Fabric
-- ML
 - Nested Data
-- News
 - Parquet
 - Schema Inference
 - Shortcut Transformations

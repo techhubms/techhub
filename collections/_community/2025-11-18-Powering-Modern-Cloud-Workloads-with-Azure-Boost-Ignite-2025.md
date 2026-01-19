@@ -12,12 +12,10 @@ tags:
 - ABCD
 - Active Active Resiliency
 - Attestation
-- Azure
 - Azure Boost
 - Azure Infrastructure
 - Azure VM
 - Cloud Infrastructure
-- Community
 - Confidential Computing
 - Enterprise Workloads
 - High Throughput
@@ -28,7 +26,6 @@ tags:
 - PCIe Encryption
 - Performance
 - RDMA
-- Security
 - TDISP
 - Virtualization
 section_names:

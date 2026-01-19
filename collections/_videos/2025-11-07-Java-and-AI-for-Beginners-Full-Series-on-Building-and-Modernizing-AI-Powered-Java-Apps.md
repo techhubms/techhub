@@ -10,13 +10,10 @@ date: 2025-11-07 05:01:19 +00:00
 permalink: /ai/videos/Java-and-AI-for-Beginners-Full-Series-on-Building-and-Modernizing-AI-Powered-Java-Apps
 tags:
 - Agent
-- AI
 - AI Integration
 - Application Migration
-- Azure
 - Azure Deployment
 - Cloud Computing
-- Coding
 - Containers
 - Context Engineering
 - Dev
@@ -32,7 +29,6 @@ tags:
 - Responsible AI
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

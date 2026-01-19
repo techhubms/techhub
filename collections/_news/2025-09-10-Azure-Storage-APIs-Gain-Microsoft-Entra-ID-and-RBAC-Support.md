@@ -14,19 +14,15 @@ tags:
 - API Integration
 - Authentication
 - Authorization
-- Azure
 - Azure SDK
 - Azure Storage
 - Blob Storage
-- Coding
 - DefaultAzureCredential
 - Error Handling
 - Microsoft Entra ID
-- News
 - OAuth 2.0
 - RBAC
 - REST API
-- Security
 - Security Best Practices
 - Storage
 section_names:

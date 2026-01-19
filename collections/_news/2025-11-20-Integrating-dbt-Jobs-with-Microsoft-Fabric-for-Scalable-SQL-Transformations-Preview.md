@@ -11,7 +11,6 @@ permalink: /ml/news/Integrating-dbt-Jobs-with-Microsoft-Fabric-for-Scalable-SQL-
 tags:
 - Admin Portal
 - Authentication
-- Azure
 - CI/CD
 - Data Engineering
 - Data Factory
@@ -22,9 +21,7 @@ tags:
 - Entra ID
 - Governance
 - Microsoft Fabric
-- ML
 - Monitoring
-- News
 - Operationalization
 - Scheduling
 - SQL Models

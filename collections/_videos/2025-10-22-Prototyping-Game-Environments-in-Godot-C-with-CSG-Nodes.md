@@ -11,7 +11,6 @@ permalink: /coding/videos/Prototyping-Game-Environments-in-Godot-C-with-CSG-Node
 tags:
 - .NET
 - C#
-- Coding
 - Collision Detection
 - CSG Nodes
 - CSG Operations
@@ -24,7 +23,6 @@ tags:
 - Prototyping
 - Rapid Prototyping
 - Scene Management
-- Videos
 - VS Code
 section_names:
 - coding

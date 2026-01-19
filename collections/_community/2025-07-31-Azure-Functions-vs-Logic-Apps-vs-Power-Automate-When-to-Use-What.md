@@ -11,10 +11,8 @@ permalink: /azure/community/Azure-Functions-vs-Logic-Apps-vs-Power-Automate-When
 tags:
 - Application Design
 - Automation Tools
-- Azure
 - Azure Functions
 - Cloud Integration
-- Community
 - Logic Apps
 - Microsoft Cloud
 - Power Automate

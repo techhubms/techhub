@@ -11,17 +11,13 @@ permalink: /github-copilot/news/How-to-Write-a-Great-agentsmd-Lessons-from-2500-
 tags:
 - Agentic AI
 - Agents.md
-- AI
 - AI & ML
 - AI Development
-- Coding
 - Copilot Agents
 - Devops Workflow
 - Generative AI
-- GitHub Copilot
 - Linting
 - Markdownlint
-- News
 - Persona Definition
 - Quality Assurance
 - React 18

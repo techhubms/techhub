@@ -9,17 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-07 16:05:02 +00:00
 permalink: /ai/community/Concurrency-Best-Practices-for-LLM-Powered-Apps-with-Azure-OpenAI-and-Python
 tags:
-- AI
 - AI Application
 - API Integration
 - Asynchronous
 - AsyncIO
-- Azure
 - Azure AI Search
 - Azure OpenAI Service
 - Backend Development
-- Coding
-- Community
 - FastAPI
 - Gunicorn
 - LLM

@@ -10,8 +10,6 @@ date: 2025-07-30 09:05:00 +00:00
 permalink: /ai/news/Fabric-July-2025-Feature-Summary
 tags:
 - Activator
-- AI
-- Azure
 - Azure SQL Database
 - Connectors
 - Copilot Studio
@@ -22,14 +20,11 @@ tags:
 - Fabric Data Agent
 - Microsoft Fabric
 - Mirroring
-- ML
-- News
 - NoSQL
 - OneLake Catalog
 - Pipelines
 - Power BI
 - Real Time Intelligence
-- Security
 section_names:
 - ai
 - azure

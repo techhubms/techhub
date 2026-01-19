@@ -10,10 +10,8 @@ date: 2025-12-17 22:22:37 +00:00
 permalink: /azure/community/Event-Driven-to-Change-Driven-Low-cost-Dependency-Inversion
 tags:
 - Anti Corruption Layer
-- Azure
 - Azure SQL
 - Change Driven Architecture
-- Community
 - Continuous Queries
 - Cosmos DB
 - CQRS

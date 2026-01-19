@@ -9,13 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-19 17:45:00 +00:00
 permalink: /azure/community/Azure-Native-Pure-Storage-Cloud-Expanded-VM-Integration-Announced-at-Ignite
 tags:
-- Azure
 - Azure Boost
 - Azure Resource Manager
 - Azure Storage
 - Azure VMware Solution
 - Cloud Integration
-- Community
 - Cost Optimization
 - Data Migration
 - Enterprise Storage

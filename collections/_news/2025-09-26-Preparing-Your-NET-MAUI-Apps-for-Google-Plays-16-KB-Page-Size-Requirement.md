@@ -16,7 +16,6 @@ tags:
 - Android 15
 - Android Development
 - App Compatibility
-- Coding
 - Dependencies
 - Developer Guidance
 - Emulator Testing
@@ -24,7 +23,6 @@ tags:
 - MAUI
 - Memory Management
 - Mobile Apps
-- News
 - NuGet
 - Page Size Requirement
 section_names:

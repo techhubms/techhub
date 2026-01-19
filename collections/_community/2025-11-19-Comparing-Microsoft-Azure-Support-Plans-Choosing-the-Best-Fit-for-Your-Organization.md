@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-19 18:01:29 +00:00
 permalink: /azure/community/Comparing-Microsoft-Azure-Support-Plans-Choosing-the-Best-Fit-for-Your-Organization
 tags:
-- Azure
 - Azure Support Plans
 - Business Continuity
 - Cloud Reliability
 - Cloud Support
-- Community
 - Cost Optimization
 - IT Operations
 - Microsoft Azure

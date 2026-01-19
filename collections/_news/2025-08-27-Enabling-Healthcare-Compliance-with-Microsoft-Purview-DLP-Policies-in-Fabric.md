@@ -11,7 +11,6 @@ permalink: /azure/news/Enabling-Healthcare-Compliance-with-Microsoft-Purview-DLP
 tags:
 - Access Monitoring
 - Audit Trails
-- Azure
 - Cloud Data Security
 - Data Classification
 - Data Loss Prevention
@@ -20,12 +19,10 @@ tags:
 - HIPAA
 - Microsoft Fabric
 - Microsoft Purview
-- News
 - PHI Protection
 - Power BI
 - Privacy
 - Regulatory Compliance
-- Security
 - Security Administration
 section_names:
 - azure

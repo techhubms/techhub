@@ -11,14 +11,11 @@ permalink: /azure/community/Azure-Monitor-Private-Link-Scope-AMPLS-Scale-Limits-
 tags:
 - AMPLS
 - Application Insights
-- Azure
 - Azure Monitor
 - Azure Private Link
 - Azure Telemetry
-- Community
 - Compliance
 - Data Exfiltration
-- DevOps
 - DevOps Teams
 - Log Analytics Workspace
 - Microsoft Backbone Network
@@ -29,7 +26,6 @@ tags:
 - Private Endpoint
 - Resource Management
 - Scalability
-- Security
 - Sovereign Cloud
 - Zero Trust
 section_names:

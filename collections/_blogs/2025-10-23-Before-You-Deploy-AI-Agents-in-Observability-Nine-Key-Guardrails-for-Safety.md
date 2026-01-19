@@ -10,7 +10,6 @@ date: 2025-10-23 07:00:21 +00:00
 permalink: /ai/blogs/Before-You-Deploy-AI-Agents-in-Observability-Nine-Key-Guardrails-for-Safety
 tags:
 - Agentic AI
-- AI
 - AI Audit Trails
 - AI Cost Management
 - AI Deployment Controls
@@ -23,13 +22,11 @@ tags:
 - AI Rate Limiting
 - Audit Trails
 - Autonomous Agents
-- Blogs
 - Business Of DevOps
 - Continuous Testing
 - Contributed Content
 - Cost Management
 - Data Privacy
-- DevOps
 - Human in The Loop
 - Identity And Access Control
 - KubeCon
@@ -42,7 +39,6 @@ tags:
 - Policy Validation
 - Rate Limiting
 - Role Based Access Control
-- Security
 - Self Healing Infrastructure
 - Social Facebook
 - Social LinkedIn

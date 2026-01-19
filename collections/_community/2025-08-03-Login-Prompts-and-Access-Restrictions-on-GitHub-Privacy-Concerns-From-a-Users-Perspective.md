@@ -10,8 +10,6 @@ date: 2025-08-03 21:58:23 +00:00
 permalink: /devops/community/Login-Prompts-and-Access-Restrictions-on-GitHub-Privacy-Concerns-From-a-Users-Perspective
 tags:
 - Browser Fingerprinting
-- Community
-- DevOps
 - GitHub
 - Login Issues
 - Mobile Browsing

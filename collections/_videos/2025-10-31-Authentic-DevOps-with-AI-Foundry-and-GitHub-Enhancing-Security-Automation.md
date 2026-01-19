@@ -10,18 +10,13 @@ date: 2025-10-31 16:12:32 +00:00
 permalink: /github-copilot/videos/Authentic-DevOps-with-AI-Foundry-and-GitHub-Enhancing-Security-Automation
 tags:
 - Agent Development
-- AI
-- Azure
 - Azure AI Foundry
 - Azure Key Vault
 - Cloud Computing
-- Coding
 - Dev
 - Developer Tools
 - Development
-- DevOps
 - DevOps Automation
-- GitHub Copilot
 - GitHub Security
 - Managed Identity
 - MCP Tools
@@ -31,12 +26,10 @@ tags:
 - Orchestration
 - Prompt Engineering
 - Python
-- Security
 - Security Agents
 - Tech
 - Technology
 - Token Authentication
-- Videos
 - VS
 - Vulnerability Insights
 section_names:

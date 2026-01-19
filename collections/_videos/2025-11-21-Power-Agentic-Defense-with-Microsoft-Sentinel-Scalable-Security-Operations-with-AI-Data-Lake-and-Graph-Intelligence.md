@@ -10,8 +10,6 @@ date: 2025-11-21 14:44:29 +00:00
 permalink: /ai/videos/Power-Agentic-Defense-with-Microsoft-Sentinel-Scalable-Security-Operations-with-AI-Data-Lake-and-Graph-Intelligence
 tags:
 - Agentic AI
-- AI
-- Azure
 - Azure Data Lake
 - Case Management
 - Cyber Defense
@@ -25,13 +23,11 @@ tags:
 - ModernizeSecOpswithaunifiedplatform
 - MSIgnite
 - Partner Integrations
-- Security
 - Security Automation
 - Security Operations
 - Security Store
 - SIEM
 - Threat Hunting
-- Videos
 section_names:
 - ai
 - azure

@@ -9,17 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 07:00:00 +00:00
 permalink: /github-copilot/community/Fix-Broken-Migrations-with-AI-Debugging-in-VS-Code-Using-GitHub-Copilot
 tags:
-- AI
 - AI in Development
 - Code Automation
-- Coding
-- Community
 - Database Migration
 - Dev Workflow
 - Developer Productivity
 - Foreign Key
 - GibsonAI CLI
-- GitHub Copilot
 - Migration Debugging
 - Natural Language Prompts
 - Prompt Engineering

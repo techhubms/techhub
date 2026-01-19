@@ -9,18 +9,14 @@ feed_url: https://roadtoalm.com/feed/
 date: 2025-11-28 13:27:50 +00:00
 permalink: /github-copilot/blogs/English-as-the-New-Programming-Language-Natural-Language-in-Software-Development
 tags:
-- AI
 - AI Coding Assistant
 - AI SDLC
 - Architecture
-- Blogs
 - C#
 - Chatgpt
 - Code Generation
-- Coding
 - Development Skills
 - Development Workflow
-- GitHub Copilot
 - Natural Language Programming
 - Programming
 - Prompt Engineering

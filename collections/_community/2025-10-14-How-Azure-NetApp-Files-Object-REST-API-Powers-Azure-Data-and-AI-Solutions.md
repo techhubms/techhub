@@ -9,20 +9,16 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-14 15:00:00 +00:00
 permalink: /ai/community/How-Azure-NetApp-Files-Object-REST-API-Powers-Azure-Data-and-AI-Solutions
 tags:
-- AI
-- Azure
 - Azure AI
 - Azure Databricks
 - Azure NetApp Files
 - Azure OpenAI
-- Community
 - Compliance
 - Data Lake
 - Data Science
 - Data Security
 - Enterprise Analytics
 - Microsoft Fabric
-- ML
 - Object REST API
 - OneLake
 - Power BI

@@ -10,9 +10,7 @@ date: 2025-11-24 19:12:00 +00:00
 permalink: /ai/videos/Microsoft-Foundry-Workflows-Pt-1-Creating-a-Sequential-Multi-Agent-Workflow
 tags:
 - Agent Orchestration
-- AI
 - AI Workflow
-- Azure
 - Azure AI Foundry
 - Cloud Computing
 - Dev
@@ -27,7 +25,6 @@ tags:
 - Tech
 - Technology
 - Template Usage
-- Videos
 - Workflow Automation
 section_names:
 - ai

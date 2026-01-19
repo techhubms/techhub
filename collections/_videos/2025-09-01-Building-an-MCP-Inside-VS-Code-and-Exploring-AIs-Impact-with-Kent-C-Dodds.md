@@ -9,20 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-09-01 07:00:11 +00:00
 permalink: /ai/videos/Building-an-MCP-Inside-VS-Code-and-Exploring-AIs-Impact-with-Kent-C-Dodds
 tags:
-- AI
 - AI in Development
 - API Integration
-- Coding
 - Developer Conference
 - Developer Tools
-- DevOps
 - EpicAI
 - GitHub
 - Kent C. Dodds
 - MCP
 - MCP Authentication
 - Playwright
-- Videos
 - VS Code
 - VS Code Extensions
 - Workflow Automation

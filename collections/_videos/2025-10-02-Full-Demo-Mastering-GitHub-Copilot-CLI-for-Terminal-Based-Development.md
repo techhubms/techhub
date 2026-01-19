@@ -9,16 +9,13 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-10-02 14:01:01 +00:00
 permalink: /github-copilot/videos/Full-Demo-Mastering-GitHub-Copilot-CLI-for-Terminal-Based-Development
 tags:
-- AI
 - AI Agent
 - AI Collaboration
 - Automation
 - Codebase Exploration
-- Coding
 - Command Line
 - Debugging
 - Developer Tools
-- GitHub Copilot
 - GitHub Copilot CLI
 - GitHub Integration
 - GitHubCopilotCLI
@@ -27,7 +24,6 @@ tags:
 - Productivity
 - Ryan Hecht
 - Terminal
-- Videos
 section_names:
 - ai
 - coding

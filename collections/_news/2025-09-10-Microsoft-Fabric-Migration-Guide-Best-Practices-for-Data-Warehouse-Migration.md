@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-10 10:00:00 +00:00
 permalink: /ml/news/Microsoft-Fabric-Migration-Guide-Best-Practices-for-Data-Warehouse-Migration
 tags:
-- Azure
 - Azure Synapse
 - Data Engineering
 - Data Governance
@@ -20,8 +19,6 @@ tags:
 - Microsoft Fabric
 - Migration Assistant
 - Migration Guide
-- ML
-- News
 - Performance Optimization
 - SQL Pools
 - Warehouse Architecture

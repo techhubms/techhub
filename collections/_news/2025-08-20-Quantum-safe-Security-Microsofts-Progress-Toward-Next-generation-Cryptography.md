@@ -10,7 +10,6 @@ date: 2025-08-20 16:00:00 +00:00
 permalink: /azure/news/Quantum-safe-Security-Microsofts-Progress-Toward-Next-generation-Cryptography
 tags:
 - Adams Bridge Accelerator
-- Azure
 - Caliptra
 - Cryptographic Standards
 - Cybersecurity
@@ -20,13 +19,11 @@ tags:
 - Microsoft Quantum Safe Program
 - ML DSA
 - ML KEM
-- News
 - NIST
 - Open Quantum Safe Project
 - Post Quantum Cryptography
 - PQC
 - Quantum Computing
-- Security
 - SymCrypt
 - TLS 1.3
 - Windows Insiders

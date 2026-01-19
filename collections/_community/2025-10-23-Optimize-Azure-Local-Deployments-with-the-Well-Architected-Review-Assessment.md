@@ -11,13 +11,10 @@ permalink: /azure/community/Optimize-Azure-Local-Deployments-with-the-Well-Archi
 tags:
 - AKS
 - Architecture Assessment
-- Azure
 - Azure Arc
 - Azure Local
 - Azure Virtual Desktop
 - Cloud Security
-- Community
-- DevOps
 - Edge Computing
 - Hybrid Cloud
 - Infrastructure Best Practices
@@ -25,7 +22,6 @@ tags:
 - Operational Excellence
 - Platform Optimization
 - Reliability
-- Security
 - Well Architected Framework
 section_names:
 - azure

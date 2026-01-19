@@ -10,7 +10,6 @@ date: 2025-11-19 13:18:43 +00:00
 permalink: /azure/videos/Azure-Local-and-Atos-Migrating-Internal-Services-from-VMware
 tags:
 - Atos
-- Azure
 - Azure Arc
 - Azure Local
 - Cloud Transformation
@@ -27,7 +26,6 @@ tags:
 - PostgreSQL
 - SQL Modernization
 - Storage Spaces Direct
-- Videos
 - VMware Migration
 section_names:
 - azure

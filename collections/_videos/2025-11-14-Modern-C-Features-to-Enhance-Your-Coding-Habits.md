@@ -17,13 +17,11 @@ tags:
 - C# 14
 - C# Improvements
 - Code Quality
-- Coding
 - Developer Tips
 - Language Features
 - LTS Release
 - Productivity
 - Refactoring
-- Videos
 section_names:
 - coding
 ---

@@ -11,11 +11,9 @@ permalink: /github-copilot/videos/Building-Finance-Apps-in-VS-Code-with-Agent-Mo
 tags:
 - Agent Mode
 - Agentmode
-- AI
 - AI Development
 - App Debugging
 - BYOK
-- Coding
 - Copilot Vision
 - Custom Agents
 - Customvision
@@ -23,7 +21,6 @@ tags:
 - Developer
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Issue Tracking
 - Mcp
 - Microsoft
@@ -32,7 +29,6 @@ tags:
 - Software Developer
 - Source Control
 - Tutorial
-- Videos
 - VS Code
 - Workflow Automation
 section_names:

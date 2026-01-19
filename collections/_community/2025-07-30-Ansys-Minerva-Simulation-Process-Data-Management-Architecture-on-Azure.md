@@ -10,14 +10,11 @@ date: 2025-07-30 21:17:02 +00:00
 permalink: /azure/community/Ansys-Minerva-Simulation-Process-Data-Management-Architecture-on-Azure
 tags:
 - Ansys Minerva
-- Azure
 - Backup Strategy
 - Cloud Architecture
-- Community
 - Ddv5
 - High Availability
 - Infrastructure
-- Security
 - Simulation Data Management
 - SQL Server
 - Virtual Machines

@@ -10,10 +10,8 @@ date: 2025-11-17 21:36:26 +00:00
 permalink: /azure/community/Automate-Large-Scale-VM-Power-Management-with-Azure-Scheduled-Actions
 tags:
 - API Automation
-- Azure
 - Batch Operations
 - Cloud Infrastructure
-- Community
 - Compute.schedule
 - Error Handling
 - High Scale

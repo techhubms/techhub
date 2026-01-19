@@ -11,7 +11,6 @@ permalink: /coding/videos/Taking-NET-out-of-NET-Aspire-Working-with-Non-NET-Appl
 tags:
 - .NET Aspire
 - Application Deployment
-- Coding
 - Cross Platform Development
 - Debugging
 - Developer Dashboard
@@ -23,7 +22,6 @@ tags:
 - Production Readiness
 - Python Integration
 - Service Orchestration
-- Videos
 section_names:
 - coding
 ---

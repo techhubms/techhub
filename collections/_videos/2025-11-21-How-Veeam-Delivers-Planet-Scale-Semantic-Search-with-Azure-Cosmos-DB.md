@@ -9,8 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 17:12:47 +00:00
 permalink: /ai/videos/How-Veeam-Delivers-Planet-Scale-Semantic-Search-with-Azure-Cosmos-DB
 tags:
-- AI
-- Azure
 - Azure Container Apps
 - Azure Cosmos DB
 - Azure Databricks
@@ -22,7 +20,6 @@ tags:
 - Garnet Cache
 - Hybrid Search
 - Microsoft Ignite
-- ML
 - MSIgnite
 - Multi Tenant IO
 - Reliability
@@ -32,7 +29,6 @@ tags:
 - System Architecture
 - Unifyyourdataplatform
 - Vector Search
-- Videos
 section_names:
 - ai
 - azure

@@ -9,9 +9,7 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-19 21:19:14 +00:00
 permalink: /ai/news/Infinite-Scale-The-Architecture-Behind-the-Azure-AI-Superfactory
 tags:
-- AI
 - AI Workload Management
-- Azure
 - Azure AI
 - Blackwell Accelerators
 - Cluster Networking
@@ -24,7 +22,6 @@ tags:
 - High Availability Power
 - Hyperscale Infrastructure
 - Liquid Cooling
-- News
 - NVIDIA GPU
 - OPTICAL WAN Network
 - Packet Trimming

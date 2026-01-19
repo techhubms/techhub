@@ -10,20 +10,15 @@ date: 2025-08-08 16:00:00 +00:00
 permalink: /github-copilot/news/How-to-Use-GitHub-Copilot-to-Level-Up-Your-Code-Reviews-and-Pull-Requests
 tags:
 - Agentic Workflows
-- AI
 - AI & ML
 - AI Coding Tools
 - Best Practices
 - Code Review
-- Coding
 - Developer Productivity
 - Development Lifecycle
-- DevOps
 - GitHub Actions
-- GitHub Copilot
 - Go
 - Markdown Formatting
-- News
 - Pull Requests
 - Refactoring Suggestions
 - Ruby

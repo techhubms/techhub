@@ -11,7 +11,6 @@ permalink: /github-copilot/news/How-GitHubs-Agentic-Security-Principles-Make-Cop
 tags:
 - Action Attribution
 - Agentic AI
-- AI
 - AI & ML
 - AI Agents
 - AI Risk Mitigation
@@ -19,12 +18,9 @@ tags:
 - Data Exfiltration
 - Firewall
 - GitHub
-- GitHub Copilot
 - Human in The Loop
-- News
 - Permissions
 - Prompt Injection
-- Security
 - Security Principles
 section_names:
 - ai

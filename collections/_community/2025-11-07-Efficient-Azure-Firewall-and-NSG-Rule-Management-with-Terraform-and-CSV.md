@@ -9,14 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-07 02:53:43 +00:00
 permalink: /azure/community/Efficient-Azure-Firewall-and-NSG-Rule-Management-with-Terraform-and-CSV
 tags:
-- Azure
 - Azure Firewall
 - Azure Infrastructure
 - Azure Route Table
 - Cloud Security
-- Community
 - CSV Integration
-- DevOps
 - Edit CSV
 - Firewall Rules
 - IaC
@@ -25,7 +22,6 @@ tags:
 - Rainbow CSV
 - Resource Automation
 - Rule Management
-- Security
 - Terraform
 - VS Code Extensions
 section_names:

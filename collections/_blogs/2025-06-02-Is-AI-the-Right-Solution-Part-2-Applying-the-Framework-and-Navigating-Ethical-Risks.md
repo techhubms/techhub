@@ -9,13 +9,11 @@ feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-06-02 04:00:00 +00:00
 permalink: /ai/blogs/Is-AI-the-Right-Solution-Part-2-Applying-the-Framework-and-Navigating-Ethical-Risks
 tags:
-- AI
 - AI Bias
 - AI Project Validation
 - AI Transparency
 - AI Workforce Impact
 - Automation
-- Blogs
 - Business Impact
 - Customer Experience
 - Data Governance

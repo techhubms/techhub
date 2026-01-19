@@ -9,21 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-11-18 16:15:06 +00:00
 permalink: /coding/videos/VS-Code-Private-Marketplace-Enterprise-Control-Meets-Developer-Speed
 tags:
-- Azure
 - Azure Deployment
 - CI/CD
-- Coding
 - Compliance
 - Copilot Enterprise
 - Developer Tools
-- DevOps
 - Enterprise Extensions
 - Extension Governance
 - GitHub Integration
 - Group Policy
-- Security
 - Security Policy
-- Videos
 - VS Code
 - VS Code Private Marketplace
 section_names:

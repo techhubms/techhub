@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-20 11:14:23 +00:00
 permalink: /ai/videos/Solving-Real-MSP-Challenges-with-Agentic-AI-at-Microsoft-Ignite-2025
 tags:
-- AI
 - AI Agents
 - Billing Automation
 - Copilot Chat
@@ -28,7 +27,6 @@ tags:
 - StreamOne
 - Supply Chain
 - TD SYNNEX
-- Videos
 section_names:
 - ai
 ---

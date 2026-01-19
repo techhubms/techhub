@@ -9,18 +9,15 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-11 19:22:02 +00:00
 permalink: /github-copilot/news/Auto-Model-Selection-for-GitHub-Copilot-in-Visual-Studio-Public-Preview
 tags:
-- AI
 - Auto Model Selection
 - Business
 - Copilot
 - Enterprise
-- GitHub Copilot
 - GPT 4.1
 - GPT 5
 - Haiku 4.5
 - IDE Integration
 - Model Picker
-- News
 - Premium Request
 - Pro
 - Public Preview

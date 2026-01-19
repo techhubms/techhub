@@ -9,15 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-26 15:53:50 +00:00
 permalink: /ai/community/Accelerating-Infrastructure-as-Code-New-Terraform-Enhancements-for-Azure
 tags:
-- AI
-- Azure
 - Azure Portal
 - CI/CD
 - Cloud Automation
-- Community
 - Compliance
 - Copilot in Azure
-- DevOps
 - Export Infrastructure
 - HCL
 - IaC

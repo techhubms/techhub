@@ -9,19 +9,15 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-21 17:00:25 +00:00
 permalink: /github-copilot/videos/How-to-Test-Nonexistent-Code-with-GitHub-Copilot
 tags:
-- AI
 - AI Assistant
 - AI Development
 - Code Completion
 - Code Generation
-- Coding
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Programming
 - Software Engineering
 - Validation Function
-- Videos
 section_names:
 - ai
 - coding

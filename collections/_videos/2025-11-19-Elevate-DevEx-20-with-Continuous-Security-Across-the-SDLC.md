@@ -9,18 +9,15 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 12:22:05 +00:00
 permalink: /ai/videos/Elevate-DevEx-20-with-Continuous-Security-Across-the-SDLC
 tags:
-- AI
 - AI Driven Triage
 - API Testing
 - AppScan
-- Azure
 - Azure OpenAI
 - Container Scanning
 - Continuous Security
 - DAST
 - Dependency Checks
 - DevEx 2.0
-- DevOps
 - GitHub Pipelines
 - GPT 5
 - IDE Coaching
@@ -30,9 +27,7 @@ tags:
 - Risk Tracking
 - SAST
 - SBOM
-- Security
 - Security Alignment
-- Videos
 section_names:
 - ai
 - azure

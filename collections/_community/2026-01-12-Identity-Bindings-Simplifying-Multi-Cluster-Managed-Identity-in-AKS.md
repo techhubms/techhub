@@ -11,15 +11,12 @@ permalink: /azure/community/Identity-Bindings-Simplifying-Multi-Cluster-Managed-
 tags:
 - AKS
 - Application Security
-- Azure
 - Azure Entra ID
 - Azure Key Vault
 - Azure Managed Identity
 - Cloud Security
 - ClusterRole
 - ClusterRoleBinding
-- Community
-- DevOps
 - Federated Identity Credential
 - Identity Bindings
 - Kubernetes Automation
@@ -27,7 +24,6 @@ tags:
 - Managed Identity
 - OIDC
 - Pod Identity
-- Security
 - Workload Identity
 section_names:
 - azure

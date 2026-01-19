@@ -12,14 +12,11 @@ tags:
 - .NET
 - Agent Monitoring
 - AgentOps
-- AI
 - AI Development
 - AI Red Teaming
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
 - Azure SDK
-- Coding
 - Deep Research
 - Deep Research Agent
 - Entra Agent ID
@@ -30,13 +27,11 @@ tags:
 - JavaScript
 - MCP
 - Model Evaluation
-- News
 - OpenAI
 - Prompt Shields
 - Purview
 - Python
 - Reinforcement Learning
-- Security
 - TypeScript
 section_names:
 - ai

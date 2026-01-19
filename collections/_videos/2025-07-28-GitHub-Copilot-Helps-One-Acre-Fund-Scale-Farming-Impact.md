@@ -10,21 +10,18 @@ date: 2025-07-28 19:14:13 +00:00
 permalink: /github-copilot/videos/GitHub-Copilot-Helps-One-Acre-Fund-Scale-Farming-Impact
 tags:
 - Agricultural Innovation
-- AI
 - AI in Development
 - AI Productivity
 - Code Collaboration
 - Developer Tools
 - Engineering Impact
 - GitHub
-- GitHub Copilot
 - Nonprofit Technology
 - One Acre Fund
 - OneAcreFund
 - Open Source
 - OpenSource
 - Software Acceleration
-- Videos
 section_names:
 - ai
 - github-copilot

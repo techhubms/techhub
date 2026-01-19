@@ -9,14 +9,11 @@ feed_url: https://devops.com/feed/
 date: 2025-10-28 18:29:14 +00:00
 permalink: /ai/blogs/Securing-the-AI-Era-How-Development-Security-and-Compliance-Must-Evolve
 tags:
-- AI
 - AI Copilots
 - Automated Agents
-- Blogs
 - Compliance
 - Compliance Frameworks
 - Continuous Risk Loop
-- DevOps
 - DevSecOps
 - DORA Metrics
 - Guardrails
@@ -30,7 +27,6 @@ tags:
 - Real Time Remediation
 - Risk Driven Engineering
 - Sdlc
-- Security
 - Security Automation
 - Social Facebook
 - Social LinkedIn

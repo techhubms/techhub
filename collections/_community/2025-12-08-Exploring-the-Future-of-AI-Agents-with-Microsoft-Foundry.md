@@ -10,14 +10,11 @@ date: 2025-12-08 17:13:27 +00:00
 permalink: /ai/community/Exploring-the-Future-of-AI-Agents-with-Microsoft-Foundry
 tags:
 - Agentic AI
-- AI
 - AI Agents
 - AI Development
 - AI Implementation
 - Autonomous Systems
-- Azure
 - Azure AI
-- Community
 - Copilot Studio
 - Developer Community
 - Foundry Agent Service

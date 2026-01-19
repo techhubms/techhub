@@ -10,7 +10,6 @@ date: 2025-10-06 10:12:54 +00:00
 permalink: /ml/news/Fabric-Spark-Connector-for-SQL-Databases-Now-Available-Preview
 tags:
 - Authentication
-- Azure
 - Azure SQL Database
 - Azure SQL Managed Instance
 - Big Data
@@ -19,8 +18,6 @@ tags:
 - Fabric Runtime
 - Fabric SQL Database
 - Microsoft Fabric
-- ML
-- News
 - PySpark
 - Scala
 - Spark Connector

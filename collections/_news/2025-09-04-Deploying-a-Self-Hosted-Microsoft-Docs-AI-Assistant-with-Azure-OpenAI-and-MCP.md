@@ -9,19 +9,15 @@ feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-09-04 22:09:45 +00:00
 permalink: /ai/news/Deploying-a-Self-Hosted-Microsoft-Docs-AI-Assistant-with-Azure-OpenAI-and-MCP
 tags:
-- AI
 - AI Apps
 - All Things Azure
-- Azure
 - Azure AI Foundry
 - Azure CLI
 - Azure Container Apps
 - Azure Container Registry
 - Azure OpenAI Service
 - Cloud Architecture
-- Coding
 - Developer Tools
-- DevOps
 - Docker
 - GPT 35 Turbo
 - GPT 4
@@ -29,7 +25,6 @@ tags:
 - MCP
 - Microsoft Learn
 - Mslearn Mcp Chat
-- News
 - Next.js
 - Node.js
 - RAG Pipeline

@@ -16,8 +16,6 @@ tags:
 - ASP.NET Core
 - C#
 - Clean Architecture
-- Coding
-- Community
 - CQRS
 - Dependency Injection
 - Docker

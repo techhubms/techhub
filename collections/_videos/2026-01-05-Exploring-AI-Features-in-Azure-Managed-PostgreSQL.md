@@ -9,14 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7
 date: 2026-01-05 09:39:54 +00:00
 permalink: /ai/videos/Exploring-AI-Features-in-Azure-Managed-PostgreSQL
 tags:
-- AI
 - AI Extensions
-- Azure
 - Azure Cloud
 - Azure Foundry
 - Azure PostgreSQL
 - Cloud
-- Coding
 - Database
 - Database AI
 - Embedding
@@ -30,7 +27,6 @@ tags:
 - Semantic Search
 - Vector
 - Vector Database
-- Videos
 - VS Code Extension
 section_names:
 - ai

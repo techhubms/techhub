@@ -9,9 +9,7 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-23 11:00:00 +00:00
 permalink: /coding/news/MSSQL-Extension-for-VS-Code-Adds-Fabric-Integration-and-Database-Provisioning
 tags:
-- Azure
 - Azure SQL
-- Coding
 - Context Switching
 - Database Provisioning
 - Developer Tools
@@ -20,7 +18,6 @@ tags:
 - Microsoft Fabric
 - Modern App Development
 - MSSQL Extension
-- News
 - Public Preview
 - SQL Database
 - SQL Development

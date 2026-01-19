@@ -10,21 +10,16 @@ date: 2025-07-31 17:54:07 +00:00
 permalink: /github-copilot/news/Special-Visual-Studio-Toolbox-Live-Microsoft-Led-Sessions-on-NET-AI-Azure-and-Copilot-Aug-5
 tags:
 - .NET
-- AI
 - AI Apps
-- Azure
 - Cloud Native Development
 - Code Quality
-- Coding
 - Company News
 - Cross Platform Apps
 - Debugging
 - Engineering Tips
-- GitHub Copilot
 - Live Event
 - MAUI
 - Microsoft
-- News
 - Productivity Tools
 - VS
 section_names:

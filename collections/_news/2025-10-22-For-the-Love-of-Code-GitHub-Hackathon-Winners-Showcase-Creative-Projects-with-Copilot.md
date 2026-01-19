@@ -9,21 +9,17 @@ feed_url: https://github.blog/feed/
 date: 2025-10-22 20:30:35 +00:00
 permalink: /github-copilot/news/For-the-Love-of-Code-GitHub-Hackathon-Winners-Showcase-Creative-Projects-with-Copilot
 tags:
-- AI
 - AI Development
 - APIs
 - Arduino
 - Automation
 - Bots
-- Coding
 - Developer Experience
 - Developer Tools
 - Express
 - Framer Motion
 - Game Development
-- GitHub Copilot
 - Hackathon
-- News
 - Open Source
 - Open Source Community
 - Python

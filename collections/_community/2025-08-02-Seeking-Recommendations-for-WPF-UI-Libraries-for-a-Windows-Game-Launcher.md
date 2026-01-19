@@ -11,8 +11,6 @@ permalink: /coding/community/Seeking-Recommendations-for-WPF-UI-Libraries-for-a-
 tags:
 - Blazor Hybrid
 - C#
-- Coding
-- Community
 - Component Customization
 - Frontend
 - Game Launcher

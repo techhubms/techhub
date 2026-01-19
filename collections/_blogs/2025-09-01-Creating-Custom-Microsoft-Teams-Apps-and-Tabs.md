@@ -13,9 +13,7 @@ tags:
 - App Manifest
 - Authentication
 - Azure Active Directory
-- Blogs
 - C#
-- Coding
 - Custom Teams Apps
 - Microsoft 365
 - Microsoft Teams

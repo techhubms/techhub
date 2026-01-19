@@ -10,22 +10,18 @@ date: 2025-10-27 18:59:41 +00:00
 permalink: /ai/news/Azure-SDK-Release-Highlights-October-2025
 tags:
 - .NET
-- AI
 - AI Agents
 - AI Model Deployment
 - API Improvements
-- Azure
 - Azure AI Foundry
 - Azure AI Search
 - Azure Identity
 - Azure SDK
-- Coding
 - Document Intelligence
 - Go
 - Java
 - JavaScript
 - Microsoft Entra ID
-- News
 - Python
 - Resource Management
 - SDK

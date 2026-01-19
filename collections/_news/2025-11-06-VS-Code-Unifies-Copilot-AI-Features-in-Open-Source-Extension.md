@@ -9,17 +9,13 @@ feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-11-06 00:00:00 +00:00
 permalink: /github-copilot/news/VS-Code-Unifies-Copilot-AI-Features-in-Open-Source-Extension
 tags:
-- AI
 - AI Code Suggestions
-- Coding
 - Copilot Chat
 - Developer Tools
 - Extension Development
 - Ghost Text
-- GitHub Copilot
 - Inline Suggestions
 - LLM Integration
-- News
 - Open Source
 - OpenAI
 - Performance Optimization

@@ -9,8 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 08:27:24 +00:00
 permalink: /ai/videos/Modernizing-Cloud-Desktop-and-Endpoint-Management-with-Nerdio-Manager
 tags:
-- AI
-- Azure
 - Azure Virtual Desktop
 - Cloud Management
 - Comprehensive Reporting
@@ -26,7 +24,6 @@ tags:
 - Nerdio Copilot Assistant
 - Nerdio Manager
 - Remote Support
-- Videos
 - Virtual Desktop Infrastructure
 - Windows 365
 section_names:

@@ -13,9 +13,7 @@ tags:
 - ASP.NET
 - ASP.NET Core
 - Avatar Update
-- Blogs
 - C#
-- Coding
 - Dynamic UI
 - Htmx
 - HX Trigger

@@ -9,22 +9,18 @@ feed_url: https://github.blog/feed/
 date: 2025-12-04 20:35:36 +00:00
 permalink: /github-copilot/news/Accelerate-Debugging-with-GitHub-Copilot-Spaces-and-Copilot-Coding-Agent
 tags:
-- AI
 - AI & ML
 - AI Coding Assistant
 - Code Review
-- Coding
 - Copilot Coding Agent
 - Copilot Spaces
 - Debugging
 - GitHub Checkout
-- GitHub Copilot
 - GitHub Copilot Spaces
 - GitHub Enterprise
 - IDE Integration
 - Knowledge Sharing
 - MCP Server
-- News
 - Onboarding
 - Project Contextualization
 - Pull Request Automation

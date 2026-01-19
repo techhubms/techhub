@@ -11,18 +11,15 @@ permalink: /devops/news/GitHub-Enterprise-Server-319-New-Release-Candidate-Featu
 tags:
 - App Manager
 - Collaboration Tools
-- DevOps
 - Enterprise Administration
 - GHES 3.19
 - GitHub Enterprise Server
 - Monitoring
-- News
 - OpenTelemetry
 - Policy Enforcement
 - Release Candidate
 - Repository Management
 - Ruleset Management
-- Security
 - SHA Pinning
 - TLS Ciphers
 - Version Control

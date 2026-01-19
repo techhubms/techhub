@@ -10,12 +10,9 @@ date: 2025-08-15 20:17:18 +00:00
 permalink: /ai/videos/Boost-Your-Productivity-with-Visual-Studio-and-Model-Context-Protocol-MCP-Servers
 tags:
 - Agent Ready APIs
-- AI
 - AI Development
-- Azure
 - Azure AI Foundry
 - Cloud Computing
-- Coding
 - Custom Agents
 - Dev
 - Developer Productivity
@@ -28,7 +25,6 @@ tags:
 - Microsoft Cloud
 - Tech
 - Technology
-- Videos
 - VS
 - VS Code
 - VS Code Extensions

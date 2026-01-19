@@ -9,14 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-31 08:06:57 +00:00
 permalink: /ai/community/Streamline-Load-Testing-with-AI-Assisted-Authoring-in-Azure-App-Testing
 tags:
-- AI
 - AI Assisted Testing
-- Azure
 - Azure Load Testing
 - Browser Extension
 - Chrome
-- Community
-- DevOps
 - Edge
 - JMeter
 - Load Testing

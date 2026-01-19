@@ -11,16 +11,13 @@ permalink: /devops/blogs/John-Willis-The-True-North-of-DevOps-and-DevSecOps
 tags:
 - Automation
 - Behavioral Change
-- Blogs
 - CAMS
 - Continuous Improvement
 - Culture
 - DASP
-- DevOps
 - DevSecOps
 - John Willis
 - Measurement
-- Security
 - Security Ownership
 - Security Patterns
 - Sharing

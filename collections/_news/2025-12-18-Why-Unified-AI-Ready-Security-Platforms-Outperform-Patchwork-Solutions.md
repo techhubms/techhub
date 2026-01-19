@@ -9,18 +9,14 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-18 17:00:00 +00:00
 permalink: /ai/news/Why-Unified-AI-Ready-Security-Platforms-Outperform-Patchwork-Solutions
 tags:
-- AI
 - AI Security
-- Azure
 - Cloud Security
 - Cybersecurity
 - Exposure Management
 - Incident Response
 - Microsoft Defender
 - Microsoft Sentinel
-- News
 - Ransomware Protection
-- Security
 - Security Analytics
 - Security Copilot
 - Security Data Lake

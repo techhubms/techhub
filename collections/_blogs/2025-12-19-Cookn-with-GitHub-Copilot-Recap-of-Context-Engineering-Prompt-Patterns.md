@@ -9,17 +9,13 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-12-19 00:00:00 +00:00
 permalink: /github-copilot/blogs/Cookn-with-GitHub-Copilot-Recap-of-Context-Engineering-Prompt-Patterns
 tags:
-- AI
 - AI Code Assistants
 - API Security
 - Best Practices
-- Blogs
 - Code Review
-- Coding
 - Cognitive Verifier
 - Context Engineering
 - Developer Productivity
-- GitHub Copilot
 - Persona Pattern
 - Prompt Engineering
 - Reflection Pattern

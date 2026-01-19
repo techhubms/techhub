@@ -10,22 +10,18 @@ date: 2025-09-09 15:02:04 +00:00
 permalink: /ai/blogs/JFrog-SwampUP-2025-Highlights-AI-Driven-DevOps-Governance-and-Secure-Software-Supply-Chains
 tags:
 - Agentic Repository
-- AI
 - AI Catalog
 - AI Models
 - AppTrust
 - Artifact Management
 - Automation
-- Blogs
 - Compliance
 - DevGovOps
-- DevOps
 - Evidence Ecosystem
 - Governance
 - JFrog
 - JFrog Swampup
 - Release Management
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

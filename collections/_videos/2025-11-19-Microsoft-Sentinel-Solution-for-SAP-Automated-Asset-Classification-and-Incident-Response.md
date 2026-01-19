@@ -31,11 +31,9 @@ tags:
 - ODSP1489 V1
 - Ontinue Pre Recorded Session Title | ODSP1489
 - SAP
-- Security
 - Security Monitoring
 - Security Rules
 - Technical
-- Videos
 section_names:
 - security
 ---

@@ -9,16 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-23 21:50:11 +00:00
 permalink: /ai/community/AI-assisted-load-test-authoring-in-Azure-Load-Testing
 tags:
-- AI
 - AI Assisted Authoring
-- Azure
 - Azure App Testing Extension
 - Azure Load Testing
 - Browser Recording
 - Cloud Scalability
-- Community
 - Correlation
-- DevOps
 - JMeter
 - Microsoft Azure
 - Parameterization

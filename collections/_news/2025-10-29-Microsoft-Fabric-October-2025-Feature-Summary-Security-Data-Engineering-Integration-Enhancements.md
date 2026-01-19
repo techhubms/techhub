@@ -10,7 +10,6 @@ date: 2025-10-29 09:00:00 +00:00
 permalink: /ml/news/Microsoft-Fabric-October-2025-Feature-Summary-Security-Data-Engineering-Integration-Enhancements
 tags:
 - Adaptive Target File Size
-- Azure
 - Concurrency
 - Data Agent
 - Data Engineering
@@ -22,14 +21,11 @@ tags:
 - Graph Data Management
 - Lakehouse
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Outbound Access Protection
 - Power BI
 - Python
 - Real Time Intelligence
-- Security
 - Spark
 - SQL
 - Workspace Level Private Link

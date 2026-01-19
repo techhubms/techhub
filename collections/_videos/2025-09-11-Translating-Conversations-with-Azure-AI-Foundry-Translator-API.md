@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-11 17:57:05 +00:00
 permalink: /ai/videos/Translating-Conversations-with-Azure-AI-Foundry-Translator-API
 tags:
-- AI
 - API Integration
-- Azure
 - Azure AI Foundry
 - Azure Cloud
 - Cloud Computing
@@ -32,7 +30,6 @@ tags:
 - Tone Detection
 - Translation API
 - Translator API
-- Videos
 section_names:
 - ai
 - azure

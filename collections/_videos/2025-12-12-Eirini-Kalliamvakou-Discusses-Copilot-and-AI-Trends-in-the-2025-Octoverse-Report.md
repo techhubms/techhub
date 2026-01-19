@@ -9,20 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-12-12 15:01:50 +00:00
 permalink: /github-copilot/videos/Eirini-Kalliamvakou-Discusses-Copilot-and-AI-Trends-in-the-2025-Octoverse-Report
 tags:
-- AI
 - AI Sentiment
 - AI Trends
 - Developer Onboarding
 - Developer Productivity
-- DevOps
 - GitHub
-- GitHub Copilot
 - Octoverse
 - Pull Requests
 - Research Insights
 - Software Development
 - Team Dynamics
-- Videos
 section_names:
 - ai
 - devops

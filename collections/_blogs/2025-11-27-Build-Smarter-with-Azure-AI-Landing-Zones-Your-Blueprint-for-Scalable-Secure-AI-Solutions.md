@@ -9,12 +9,9 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-11-27 18:21:50 +00:00
 permalink: /ai/blogs/Build-Smarter-with-Azure-AI-Landing-Zones-Your-Blueprint-for-Scalable-Secure-AI-Solutions
 tags:
-- AI
-- Azure
 - Azure AI
 - Azure AI Landing Zones
 - Azure Essentials Show
-- Blogs
 - Cloud
 - Cloud Architecture
 - Cloud Best Practices

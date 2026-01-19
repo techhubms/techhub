@@ -10,12 +10,10 @@ date: 2025-11-18 17:30:00 +00:00
 permalink: /azure/community/Announcing-the-Public-Preview-of-Azure-StandardV2-NAT-Gateway-and-Public-IPs
 tags:
 - ARM Template
-- Azure
 - Azure NAT Gateway
 - Bicep
 - CLI
 - Cloud Networking
-- Community
 - Flow Logs
 - High Availability
 - IPv6

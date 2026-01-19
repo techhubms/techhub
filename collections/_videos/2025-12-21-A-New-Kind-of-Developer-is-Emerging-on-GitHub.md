@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-12-21 15:00:26 +00:00
 permalink: /github-copilot/videos/A-New-Kind-of-Developer-is-Emerging-on-GitHub
 tags:
-- AI
 - AI Adoption
 - AI Fluency
 - AI Integration
@@ -20,10 +19,8 @@ tags:
 - Developer Tools
 - Eirini Kalliamvakou
 - GitHub
-- GitHub Copilot
 - Programming
 - Software Development
-- Videos
 section_names:
 - ai
 - github-copilot

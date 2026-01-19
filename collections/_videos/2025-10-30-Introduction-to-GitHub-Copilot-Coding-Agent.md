@@ -9,17 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-30 18:08:01 +00:00
 permalink: /github-copilot/videos/Introduction-to-GitHub-Copilot-Coding-Agent
 tags:
-- AI
 - AI Code Automation
 - Code Suggestions
 - Copilot Coding Agent
 - Damian Brady
 - Developer Tools
-- GitHub Copilot
 - GitHub Integration
 - Issue Resolution
 - Microsoft Developer
-- Videos
 - Workflow Automation
 section_names:
 - ai

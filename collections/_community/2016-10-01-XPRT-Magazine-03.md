@@ -7,16 +7,12 @@ viewing_mode: external
 permalink: /ai/community/XPRT-Magazine-03
 tags:
 - Agile
-- AI
 - Automation
-- Azure
 - Azure Machine Learning
 - Bot Framework
 - Cloud
-- Community
 - Containers
 - Continuous Delivery
-- DevOps
 - IaC
 - Machine Learning
 - Magazines

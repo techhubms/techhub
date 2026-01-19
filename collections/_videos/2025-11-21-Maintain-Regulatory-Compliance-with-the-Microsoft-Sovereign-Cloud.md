@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 17:11:09 +00:00
 permalink: /ai/videos/Maintain-Regulatory-Compliance-with-the-Microsoft-Sovereign-Cloud
 tags:
-- AI
 - AI Enablement
-- Azure
 - Compliance Auditing
 - Customer Managed Keys
 - Data Sovereignty
@@ -25,9 +23,7 @@ tags:
 - Offline Cloud
 - Private Clouds
 - Regulatory Compliance
-- Security
 - Site To Site Recovery
-- Videos
 section_names:
 - ai
 - azure

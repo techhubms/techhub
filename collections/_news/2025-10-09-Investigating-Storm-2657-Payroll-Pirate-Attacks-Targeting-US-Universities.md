@@ -10,7 +10,6 @@ date: 2025-10-09 15:00:00 +00:00
 permalink: /azure/news/Investigating-Storm-2657-Payroll-Pirate-Attacks-Targeting-US-Universities
 tags:
 - Audit Logs
-- Azure
 - CloudAppEvents
 - Defender XDR
 - Duo MFA
@@ -23,12 +22,10 @@ tags:
 - Microsoft Defender For Cloud Apps
 - Microsoft Sentinel
 - Microsoft Threat Intelligence
-- News
 - Passwordless Authentication
 - Payroll Pirate
 - Phishing
 - SaaS Security
-- Security
 - Security Copilot
 - Storm 2657
 - Threat Hunting

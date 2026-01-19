@@ -10,11 +10,9 @@ date: 2025-07-17 06:05:33 +00:00
 permalink: /ai/videos/MCP-C-SDK-Whats-New-and-Upcoming-for-NET-Developers
 tags:
 - .NET
-- AI
 - AI Integration
 - Azure App Service
 - C#
-- Coding
 - Development Tips
 - DNX
 - MCP
@@ -23,7 +21,6 @@ tags:
 - Microsoft
 - SDK Updates
 - Versions
-- Videos
 section_names:
 - ai
 - coding

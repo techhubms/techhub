@@ -9,9 +9,7 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-12 16:23:01 +00:00
 permalink: /ai/news/MMCTAgent-Microsofts-Multimodal-Critical-Thinking-Agent-for-Image-and-Video-Reasoning
 tags:
-- AI
 - AutoGen
-- Azure
 - Azure AI Foundry Labs
 - Azure AI Search
 - Company News
@@ -24,7 +22,6 @@ tags:
 - MMCTAgent
 - Modular Agents
 - Multimodal AI
-- News
 - Object Detection
 - OCR
 - Open Source Tools

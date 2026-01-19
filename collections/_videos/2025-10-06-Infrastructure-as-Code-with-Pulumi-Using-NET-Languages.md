@@ -14,12 +14,10 @@ tags:
 - C#
 - Cloud Infrastructure
 - Code
-- Coding
 - Demo
 - Developer
 - Developer Community
 - Developer Tools
-- DevOps
 - Dotnetdeveloper
 - F#
 - IaC
@@ -28,7 +26,6 @@ tags:
 - Programming Languages
 - Pulumi
 - Software Developer
-- Videos
 section_names:
 - coding
 - devops

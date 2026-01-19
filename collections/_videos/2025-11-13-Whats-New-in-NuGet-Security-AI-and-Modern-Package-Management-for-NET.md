@@ -10,9 +10,7 @@ date: 2025-11-13 17:40:49 +00:00
 permalink: /ai/videos/Whats-New-in-NuGet-Security-AI-and-Modern-Package-Management-for-NET
 tags:
 - .NET
-- AI
 - AI Productivity
-- Coding
 - Dependency Mitigation
 - Developer Tools
 - MCP
@@ -24,10 +22,8 @@ tags:
 - Package Discovery
 - Package Management
 - Secure Dependencies
-- Security
 - Sponsorship
 - Trusted Publishing
-- Videos
 section_names:
 - ai
 - coding

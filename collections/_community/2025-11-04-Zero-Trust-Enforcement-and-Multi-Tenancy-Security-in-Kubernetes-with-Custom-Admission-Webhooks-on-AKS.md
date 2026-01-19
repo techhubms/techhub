@@ -11,12 +11,9 @@ permalink: /azure/community/Zero-Trust-Enforcement-and-Multi-Tenancy-Security-in
 tags:
 - Admission Controller
 - AKS
-- Azure
 - Azure AD
 - Azure Policy
-- Community
 - Custom Webhooks
-- DevOps
 - Flask
 - Kubernetes
 - Kyverno
@@ -29,7 +26,6 @@ tags:
 - RBAC
 - ResourceQuota
 - Runtime Security
-- Security
 - Supply Chain Security
 - TLS
 - Zero Trust

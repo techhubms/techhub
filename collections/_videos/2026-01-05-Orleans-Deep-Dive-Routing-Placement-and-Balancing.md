@@ -12,7 +12,6 @@ tags:
 - .NET
 - Actor Model
 - Cloud Development
-- Coding
 - Distributed Systems
 - Load Balancing
 - Microservices
@@ -21,7 +20,6 @@ tags:
 - Placement
 - Routing
 - Scalability
-- Videos
 section_names:
 - coding
 ---

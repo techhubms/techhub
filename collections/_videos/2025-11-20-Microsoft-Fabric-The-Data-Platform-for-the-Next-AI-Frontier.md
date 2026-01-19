@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-20 14:39:30 +00:00
 permalink: /ai/videos/Microsoft-Fabric-The-Data-Platform-for-the-Next-AI-Frontier
 tags:
-- AI
 - AI Platform
 - Analytics
-- Azure
 - Capacity Management
 - Cosmos DB
 - Data Migration
@@ -22,19 +20,16 @@ tags:
 - Fabric IQ
 - Microsoft Fabric
 - Microsoft Sentinel
-- ML
 - MSIgnite
 - NoSQL Database
 - OneLake
 - Ontology
 - Open APIs
-- Security
 - Semantic Modeling
 - SQL Database
 - Synapse Analytics
 - Threat Detection
 - Unifyyourdataplatform
-- Videos
 section_names:
 - ai
 - azure

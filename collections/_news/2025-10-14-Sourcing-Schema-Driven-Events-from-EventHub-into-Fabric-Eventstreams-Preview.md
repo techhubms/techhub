@@ -11,7 +11,6 @@ permalink: /ml/news/Sourcing-Schema-Driven-Events-from-EventHub-into-Fabric-Even
 tags:
 - Analytics
 - Avro Schema
-- Azure
 - Azure EventHub
 - Data Governance
 - Data Quality
@@ -20,8 +19,6 @@ tags:
 - Eventstream
 - KQL
 - Microsoft Fabric
-- ML
-- News
 - Payload Modeling
 - Pipeline Validation
 - Real Time Intelligence

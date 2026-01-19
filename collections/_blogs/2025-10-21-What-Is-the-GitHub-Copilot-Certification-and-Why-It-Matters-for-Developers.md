@@ -9,16 +9,13 @@ feed_url: https://dellenny.com/feed/
 date: 2025-10-21 09:48:21 +00:00
 permalink: /github-copilot/blogs/What-Is-the-GitHub-Copilot-Certification-and-Why-It-Matters-for-Developers
 tags:
-- AI
 - AI Certification
-- Blogs
 - Copilot Features
 - Developer Skills
 - Digital Badges
 - Enterprise Readiness
 - Exam Preparation
 - GitHib Copilot
-- GitHub Copilot
 - GitHub Copilot Certification
 - Microsoft
 - Privacy in AI

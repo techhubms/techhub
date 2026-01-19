@@ -10,7 +10,6 @@ date: 2025-10-31 16:11:13 +00:00
 permalink: /azure/news/Multi-region-Expansion-Strategies-for-Azure-Deployments-in-Financial-Services
 tags:
 - All Things Azure
-- Azure
 - Azure Landing Zones
 - Azure Regions
 - Business Continuity
@@ -22,7 +21,6 @@ tags:
 - Financial Services
 - Modernization
 - Multi Region Deployment
-- News
 - Performance
 - Regulatory Compliance
 - Resiliency

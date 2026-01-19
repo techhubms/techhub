@@ -11,8 +11,6 @@ permalink: /devops/community/Releases-and-Tags-Disappearing-Troubleshooting-GitH
 tags:
 - Actions
 - Branches
-- Community
-- DevOps
 - Docker
 - Git
 - Git Push

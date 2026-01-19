@@ -9,9 +9,7 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-30 18:00:00 +00:00
 permalink: /ai/news/5-Critical-Generative-AI-Security-Threats-Insights-from-Microsoft
 tags:
-- AI
 - AI Security
-- Azure
 - CIEM
 - Cloud Native Application Protection
 - Cloud Security
@@ -25,10 +23,8 @@ tags:
 - Microsoft Defender For Cloud
 - Microsoft Security
 - Model Vulnerabilities
-- News
 - Phishing
 - Prompt Injection
-- Security
 - Threat Detection
 section_names:
 - ai

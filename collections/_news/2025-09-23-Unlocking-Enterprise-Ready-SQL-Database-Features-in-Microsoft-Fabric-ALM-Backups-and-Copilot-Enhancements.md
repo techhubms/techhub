@@ -9,25 +9,19 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-23 13:00:00 +00:00
 permalink: /ai/news/Unlocking-Enterprise-Ready-SQL-Database-Features-in-Microsoft-Fabric-ALM-Backups-and-Copilot-Enhancements
 tags:
-- AI
 - ALM
 - Application Lifecycle Management
-- Azure
-- Coding
 - Copilot
 - Data Platform
 - Database Recovery
 - Developer Productivity
 - Microsoft Entra ID
 - Microsoft Fabric
-- ML
-- News
 - Performance Dashboard
 - Point in Time Restore
 - Query Management
 - Replication
 - REST API
-- Security
 - SQL Auditing
 - SQL Database
 - VS Code Integration

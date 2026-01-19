@@ -9,19 +9,15 @@ feed_url: https://devops.com/feed/
 date: 2025-10-29 18:26:58 +00:00
 permalink: /ai/blogs/Survey-Reveals-Security-Risks-in-AI-Generated-Code
 tags:
-- AI
 - AI Coding Tools
 - AI Generated Code
 - AI Security
 - Aikido Security
 - Alert Fatigue
 - Application Security
-- Blogs
-- DevOps
 - DevSecOps
 - IT Survey
 - Penetration Testing
-- Security
 - Security Automation
 - Security Tools
 - Social Facebook

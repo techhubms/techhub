@@ -9,7 +9,6 @@ feed_url: https://github.blog/feed/
 date: 2025-07-23 07:01:00 +00:00
 permalink: /devops/news/We-Need-a-European-Sovereign-Tech-Fund-to-Sustain-Open-Source-Software
 tags:
-- DevOps
 - Digital Infrastructure
 - EU Budget
 - EU Policy
@@ -17,14 +16,12 @@ tags:
 - Funding
 - GitHub Sponsors
 - Maintainers
-- News
 - News & Insights
 - Open Source
 - Open Source Funding
 - OSS Maintainers
 - Policy
 - Public Private Partnership
-- Security
 - Software Sustainability
 - Sovereign Tech Fund
 - Supply Chain

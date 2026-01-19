@@ -10,15 +10,12 @@ date: 2025-11-18 16:05:17 +00:00
 permalink: /azure/community/Whats-New-in-Azure-Local-Cloud-Infrastructure-for-Distributed-Locations-Managed-by-Azure-Arc
 tags:
 - AKS
-- Azure
 - Azure Arc
 - Azure Key Vault
 - Azure Local
 - Cloud Managed Services
-- Community
 - Containers
 - Data Sovereignty
-- DevOps
 - Distributed Infrastructure
 - Edge Computing
 - Hybrid Cloud
@@ -28,7 +25,6 @@ tags:
 - NVIDIA RTX Pro 6000
 - Rack Aware Clustering
 - SAN Storage
-- Security
 - Sovereign Private Cloud
 - Virtual Machines
 - VM Migration

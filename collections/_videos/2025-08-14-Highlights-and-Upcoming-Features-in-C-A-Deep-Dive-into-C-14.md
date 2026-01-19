@@ -15,14 +15,12 @@ tags:
 - C# Features
 - Code Clarity
 - Code Safety
-- Coding
 - Developer Tools
 - Expressiveness
 - Language Evolution
 - Modern C#
 - Performance
 - Programming
-- Videos
 - VS
 section_names:
 - coding

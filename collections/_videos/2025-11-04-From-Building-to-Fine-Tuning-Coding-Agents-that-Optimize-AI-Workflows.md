@@ -10,23 +10,18 @@ date: 2025-11-04 18:19:47 +00:00
 permalink: /ai/videos/From-Building-to-Fine-Tuning-Coding-Agents-that-Optimize-AI-Workflows
 tags:
 - Agent Orchestration
-- AI
 - AI Engineering
-- Azure
 - Azure AI Foundry
 - Azure Machine Learning
 - Cloud Computing
-- Coding
 - Dev
 - Development
-- DevOps
 - DevOps Workflows
 - GitHub
 - GitHub Integration
 - Hugging Face
 - Math For AI
 - Microsoft
-- ML
 - Model Fine Tuning
 - Multi Agent Systems
 - Preference Optimization
@@ -37,7 +32,6 @@ tags:
 - SWE Agents
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

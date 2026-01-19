@@ -10,20 +10,16 @@ date: 2025-11-06 20:30:00 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-CLI-101-How-to-use-GitHub-Copilot-from-the-command-line
 tags:
 - Agentic Workflows
-- AI
 - AI & ML
 - AI Powered Development
 - Code Generation
-- Coding
 - Command Line Interface
 - Developer Tools
 - Generative AI
-- GitHub Copilot
 - GitHub Copilot CLI
 - Issue Management
 - LLMs
 - MCP Integration
-- News
 - Node.js
 - npm
 - Project Setup

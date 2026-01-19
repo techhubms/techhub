@@ -10,14 +10,11 @@ permalink: /github-copilot/community/AMA-on-GitHub-Copilot-tomorrow-April-25
 viewing_mode: external
 tags:
 - Agent Mode
-- AI
 - AI Agents
 - AI Models
-- Community
 - Community Engagement
 - Company Vision
 - GitHub
-- GitHub Copilot
 - Reddit AMA
 - Software Development
 - VS Code

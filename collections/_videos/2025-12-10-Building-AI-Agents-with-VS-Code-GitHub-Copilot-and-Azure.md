@@ -10,20 +10,16 @@ date: 2025-12-10 22:07:54 +00:00
 permalink: /github-copilot/videos/Building-AI-Agents-with-VS-Code-GitHub-Copilot-and-Azure
 tags:
 - Agent Deployment
-- AI
 - AI Agents
 - AI Toolkit
-- Azure
 - Azure Free Trial
 - Cloud Computing
 - Cloud Deployment
 - Code Tracing
-- Coding
 - Dev
 - Developer
 - Developer Workflow
 - Development
-- GitHub Copilot
 - Instrumenting Code
 - MCP
 - MCP Lab
@@ -32,7 +28,6 @@ tags:
 - Model Playground
 - Tech
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

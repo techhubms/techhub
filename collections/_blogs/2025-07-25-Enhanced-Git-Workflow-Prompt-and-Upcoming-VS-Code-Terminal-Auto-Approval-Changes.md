@@ -9,19 +9,14 @@ feed_url: https://r-vm.com/feed.xml
 date: 2025-07-25 00:00:00 +00:00
 permalink: /github-copilot/blogs/Enhanced-Git-Workflow-Prompt-and-Upcoming-VS-Code-Terminal-Auto-Approval-Changes
 tags:
-- AI
 - Automation
-- Blogs
 - Branch Protection
-- Coding
 - Configuration
 - Configuration Changes
 - Custom Prompts
 - Developer Tools
-- DevOps
 - Git
 - Git Workflow
-- GitHub Copilot
 - GitHub Copilot Chat
 - MCP Server
 - PowerShell Scripts

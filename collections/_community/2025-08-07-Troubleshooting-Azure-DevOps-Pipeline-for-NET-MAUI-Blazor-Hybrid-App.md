@@ -11,14 +11,10 @@ permalink: /coding/community/Troubleshooting-Azure-DevOps-Pipeline-for-NET-MAUI-
 tags:
 - .NET 9
 - .NET Workload
-- Azure
 - Azure DevOps
 - Blazor Hybrid
 - Build Automation
 - CI/CD
-- Coding
-- Community
-- DevOps
 - DotNetCoreCLI
 - MAUI
 - Microsoft.NETCore.App.Runtime.Mono.win X64

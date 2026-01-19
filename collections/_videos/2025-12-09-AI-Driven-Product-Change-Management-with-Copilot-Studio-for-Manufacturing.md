@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q
 date: 2025-12-09 16:01:36 +00:00
 permalink: /ai/videos/AI-Driven-Product-Change-Management-with-Copilot-Studio-for-Manufacturing
 tags:
-- AI
 - AI Change Management
 - AI Solutions
 - Automated Workflow
@@ -21,7 +20,6 @@ tags:
 - Microsoft Cloud
 - Process Automation
 - Product Change Management
-- Videos
 - Workflow Automation
 section_names:
 - ai

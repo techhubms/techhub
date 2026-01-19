@@ -9,13 +9,10 @@ feed_url: https://devops.com/feed/
 date: 2025-10-23 18:56:50 +00:00
 permalink: /ai/blogs/How-DevOps-Is-Evolving-for-the-Age-of-Intelligent-Automation
 tags:
-- AI
 - AI Governance
 - AI Observability
 - Automation
-- Blogs
 - Compliance
-- DevOps
 - Digital Transformation
 - Engineering Culture
 - IDP

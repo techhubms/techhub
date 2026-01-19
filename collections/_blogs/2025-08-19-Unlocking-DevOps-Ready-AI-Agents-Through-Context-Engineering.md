@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-08-19 10:38:57 +00:00
 permalink: /ai/blogs/Unlocking-DevOps-Ready-AI-Agents-Through-Context-Engineering
 tags:
-- AI
 - AI Agents
 - AI Coding Tools
 - AI Developer Tools
@@ -20,7 +19,6 @@ tags:
 - AI Software Development
 - AI Workflows
 - Autonomous Agents
-- Blogs
 - BrowserMCP
 - Business Of DevOps
 - CloudWatch
@@ -31,7 +29,6 @@ tags:
 - Cursor IDE
 - Datadog
 - Development Workflows
-- DevOps
 - DevOps Automation
 - GitHub Integration
 - Implementation Planning

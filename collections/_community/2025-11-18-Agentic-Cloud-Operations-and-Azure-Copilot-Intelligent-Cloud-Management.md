@@ -10,10 +10,8 @@ date: 2025-11-18 16:02:38 +00:00
 permalink: /ai/community/Agentic-Cloud-Operations-and-Azure-Copilot-Intelligent-Cloud-Management
 tags:
 - Agentic Cloud Ops
-- AI
 - AI Agents
 - Application Insights
-- Azure
 - Azure Copilot
 - Azure Deployment
 - Azure Migration
@@ -22,8 +20,6 @@ tags:
 - BYOS
 - Cloud Automation
 - Cloud Management
-- Community
-- DevOps
 - Governance
 - IaC
 - Intelligent Automation
@@ -32,7 +28,6 @@ tags:
 - PowerShell
 - RBAC
 - Resiliency
-- Security
 - Troubleshooting
 - Well Architected Framework
 section_names:

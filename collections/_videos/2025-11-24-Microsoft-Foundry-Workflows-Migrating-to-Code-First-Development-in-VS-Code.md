@@ -9,20 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-24 19:12:14 +00:00
 permalink: /github-copilot/videos/Microsoft-Foundry-Workflows-Migrating-to-Code-First-Development-in-VS-Code
 tags:
-- AI
-- Azure
 - Azure AI Foundry
 - Azure Cloud
 - Cloud Computing
 - Code First Development
-- Coding
 - Copilot Agent Mode
 - Dev
 - Development
 - Development Tools
 - Environment Setup
 - Extension Integration
-- GitHub Copilot
 - Local Development
 - Microsoft
 - Microsoft AI
@@ -30,7 +26,6 @@ tags:
 - Model Mondays
 - Tech
 - Technology
-- Videos
 - VS Code
 - Workflow Migration
 - Workflows

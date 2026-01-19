@@ -9,16 +9,13 @@ feed_url: https://devops.com/feed/
 date: 2025-10-08 16:46:37 +00:00
 permalink: /ai/blogs/Survey-Highlights-Challenges-and-Opportunities-in-Software-Engineering-and-DevOps
 tags:
-- AI
 - AI Productivity
 - Automation
-- Blogs
 - Chainguard
 - Chainguard Survey
 - Code Maintenance
 - Context Switching
 - Developer Experience
-- DevOps
 - DevOps Workflows
 - Digital Transformation
 - Engineering Burnout

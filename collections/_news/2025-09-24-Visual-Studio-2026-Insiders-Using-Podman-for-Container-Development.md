@@ -10,18 +10,15 @@ date: 2025-09-24 17:30:30 +00:00
 permalink: /coding/news/Visual-Studio-2026-Insiders-Using-Podman-for-Container-Development
 tags:
 - Cloud Native
-- Coding
 - Container Development
 - Container Engine
 - Container Runtime
 - Debugging
 - Developer Tools
-- DevOps
 - Docker Alternative
 - IDE
 - Image Management
 - Integrated Terminal
-- News
 - Open Source
 - Podman
 - Uncategorized

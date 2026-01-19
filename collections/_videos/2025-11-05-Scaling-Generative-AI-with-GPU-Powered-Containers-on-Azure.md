@@ -10,21 +10,17 @@ date: 2025-11-05 01:00:52 +00:00
 permalink: /github-copilot/videos/Scaling-Generative-AI-with-GPU-Powered-Containers-on-Azure
 tags:
 - Agent Mode
-- AI
 - AI Development
 - AIContainers
 - Architecture
-- Azure
 - Azure Container Apps
 - AzureContainerApps
 - Claude Sonnet
-- Coding
 - CUDA
 - Docker Containers
 - DockerContainers
 - Generative AI
 - GenerativeAI
-- GitHub Copilot
 - GPU
 - GPU Acceleration
 - Hugging Face
@@ -32,7 +28,6 @@ tags:
 - ImageGeneration
 - Java
 - JavaAI
-- ML
 - Model Inference
 - ONNX
 - ONNX Runtime
@@ -43,7 +38,6 @@ tags:
 - Stable Diffusion
 - StableDiffusion
 - Version Compatibility
-- Videos
 section_names:
 - ai
 - azure

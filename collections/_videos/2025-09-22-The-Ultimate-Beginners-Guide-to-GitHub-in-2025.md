@@ -14,7 +14,6 @@ tags:
 - Continuous Integration
 - Developer Profile
 - Developer Tools
-- DevOps
 - Git
 - GitHub
 - Merge
@@ -25,7 +24,6 @@ tags:
 - Source Control
 - Tutorial
 - Version Control
-- Videos
 section_names:
 - devops
 ---

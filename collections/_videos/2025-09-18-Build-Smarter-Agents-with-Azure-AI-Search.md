@@ -10,8 +10,6 @@ date: 2025-09-18 07:00:52 +00:00
 permalink: /ai/videos/Build-Smarter-Agents-with-Azure-AI-Search
 tags:
 - Agentic AI
-- AI
-- Azure
 - Azure AI Foundry
 - Azure AI Search
 - ChatGPT
@@ -24,7 +22,6 @@ tags:
 - RAG
 - Retrieval Augmented Generation
 - Skilling
-- Videos
 section_names:
 - ai
 - azure

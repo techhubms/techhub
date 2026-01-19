@@ -11,14 +11,12 @@ permalink: /coding/videos/Latest-Updates-to-Coding-Agent-Integration-in-Visual-S
 tags:
 - Automation
 - Code Editing
-- Coding
 - Coding Agent
 - Developer Tools
 - Editor Integration
 - Feature Updates
 - Programming Environment
 - Software Engineering
-- Videos
 - VS Code
 section_names:
 - coding

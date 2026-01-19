@@ -9,16 +9,12 @@ feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-06-10 19:13:51 +00:00
 permalink: /azure/news/June-Patches-Released-for-Azure-DevOps-Server-20222-Improvements-and-Important-Updates
 tags:
-- Azure
 - Azure DevOps Server
 - Custom Columns
-- DevOps
 - Installation
-- News
 - Patches
 - Plan Id
 - Release Notes
-- Security
 - Server Upgrade
 - Suite Id
 - Suite Import

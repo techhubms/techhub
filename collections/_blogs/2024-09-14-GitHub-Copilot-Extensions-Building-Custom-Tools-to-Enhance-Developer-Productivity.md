@@ -9,17 +9,13 @@ feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2024-09-14 00:00:00 +00:00
 permalink: /github-copilot/blogs/GitHub-Copilot-Extensions-Building-Custom-Tools-to-Enhance-Developer-Productivity
 tags:
-- AI
 - APIs
-- Blogs
 - Codespaces
 - Copilot Extension SDK
 - Copilot Extensions
 - Custom Extensions
 - Developer Productivity
-- DevOps
 - GitHub Apps
-- GitHub Copilot
 - LLM
 - OpenAI
 - Retrieval Augmented Generation

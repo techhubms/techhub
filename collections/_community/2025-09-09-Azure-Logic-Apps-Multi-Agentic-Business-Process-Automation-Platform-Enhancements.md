@@ -12,13 +12,9 @@ tags:
 - A2A Standard
 - Agent Based Architecture
 - Agent Loop
-- AI
 - AI Integration
 - Automation Workflows
-- Azure
 - Azure Logic Apps
-- Coding
-- Community
 - Conversational Agents
 - Enterprise Security
 - Foundry Agent Service
@@ -27,7 +23,6 @@ tags:
 - Observability
 - On Behalf Of Authentication
 - Python Code Interpreter
-- Security
 - State Machine Orchestration
 section_names:
 - ai

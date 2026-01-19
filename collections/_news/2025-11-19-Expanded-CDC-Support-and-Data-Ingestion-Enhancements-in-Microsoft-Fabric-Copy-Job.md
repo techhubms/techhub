@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 12:30:00 +00:00
 permalink: /ml/news/Expanded-CDC-Support-and-Data-Ingestion-Enhancements-in-Microsoft-Fabric-Copy-Job
 tags:
-- Azure
 - Bulk Copy
 - Change Data Capture
 - Cloud Data Integration
@@ -24,9 +23,7 @@ tags:
 - Incremental Copy
 - Lakehouse
 - Microsoft Fabric
-- ML
 - Monitoring
-- News
 - Observability
 - Oracle
 - SAP

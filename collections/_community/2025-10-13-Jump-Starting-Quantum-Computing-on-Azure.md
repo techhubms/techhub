@@ -9,14 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-13 23:40:03 +00:00
 permalink: /ai/community/Jump-Starting-Quantum-Computing-on-Azure
 tags:
-- AI
-- Azure
 - Azure Quantum
 - Azure Quantum Development Kit
 - Cloud Quantum Computing
 - CNOT Gate
-- Coding
-- Community
 - Entanglement
 - Hadamard Gate
 - Python

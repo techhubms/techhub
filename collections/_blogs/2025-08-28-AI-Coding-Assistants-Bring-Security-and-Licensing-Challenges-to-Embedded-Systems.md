@@ -9,22 +9,18 @@ feed_url: https://devops.com/feed/
 date: 2025-08-28 06:11:13 +00:00
 permalink: /ai/blogs/AI-Coding-Assistants-Bring-Security-and-Licensing-Challenges-to-Embedded-Systems
 tags:
-- AI
 - AI Coding Assistants
 - AI Generated Code Vulnerabilities
 - AI Security Risks
 - Black Duck Software
 - Black Duck Software Survey
-- Blogs
 - C++
 - C++ Embedded Programming
 - Censuswide Research
 - Censuswide Survey
-- Coding
 - Cybersecurity
 - Cybersecurity For Embedded Systems
 - Developer VS Management Perspectives.
-- DevOps
 - Devsecops
 - Embedded Systems
 - Embedded Systems Security
@@ -38,7 +34,6 @@ tags:
 - SBOM
 - SBOM Adoption
 - SCA Tools
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

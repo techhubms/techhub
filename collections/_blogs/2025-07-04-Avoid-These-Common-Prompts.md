@@ -9,15 +9,12 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-07-04 00:00:00 +00:00
 permalink: /github-copilot/blogs/Avoid-These-Common-Prompts
 tags:
-- AI
 - AI Assisted Development
-- Blogs
 - Bug Fixing
 - Coding Productivity
 - Contextual Prompts
 - Copilot Prompts
 - Developer Experience
-- GitHub Copilot
 - Programming Best Practices
 - Prompt Engineering
 - Unit Test Generation

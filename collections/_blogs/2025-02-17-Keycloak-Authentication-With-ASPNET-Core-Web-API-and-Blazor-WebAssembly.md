@@ -15,8 +15,6 @@ tags:
 - Authentication
 - Authorization
 - Blazor WebAssembly
-- Blogs
-- Coding
 - Docker
 - HttpClientFactory
 - Identity And Access Management
@@ -26,7 +24,6 @@ tags:
 - Microsoft.AspNetCore.Components.WebAssembly.Authentication
 - OAuth2
 - OpenID Connect
-- Security
 - Web API
 section_names:
 - coding

@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 11:43:02 +00:00
 permalink: /ai/videos/Deploying-Local-AI-Models-in-Enterprise-with-Windows-ML
 tags:
-- AI
 - AI Framework
 - App Development
-- Coding
 - CPU Inference
 - Edge Computing
 - Enterprise AI
@@ -26,7 +24,6 @@ tags:
 - Privacy
 - QNN Execution Provider
 - ScalewithcloudandAIendpoints
-- Videos
 - Windows ML
 section_names:
 - ai

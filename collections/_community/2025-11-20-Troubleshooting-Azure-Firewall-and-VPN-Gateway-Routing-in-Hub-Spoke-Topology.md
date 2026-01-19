@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-20 18:04:09 +00:00
 permalink: /azure/community/Troubleshooting-Azure-Firewall-and-VPN-Gateway-Routing-in-Hub-Spoke-Topology
 tags:
-- Azure
 - Azure Firewall
 - Azure Hybrid Connectivity
 - Azure Networking
 - BGP
-- Community
 - Connectivity Issues
 - Hub Spoke Architecture
 - Inbound Private Resolver
@@ -22,7 +20,6 @@ tags:
 - Network Segmentation
 - Route Propagation
 - Routing Troubleshooter
-- Security
 - UDR
 - User Defined Routing
 - Virtual Appliance

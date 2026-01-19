@@ -10,7 +10,6 @@ date: 2025-10-08 16:01:18 +00:00
 permalink: /github-copilot/videos/ADHD-GitHub-Copilot-and-Neurodiversity-Real-Talk-with-Mads-Torgersen-and-Klaus-Loffelmann
 tags:
 - ADHD
-- AI
 - AI Tools
 - Cloud Computing
 - Creativity
@@ -18,7 +17,6 @@ tags:
 - Developer Productivity
 - Development
 - Flow State
-- GitHub Copilot
 - Mental Health
 - Microsoft
 - Microsoft Developer
@@ -29,7 +27,6 @@ tags:
 - Stage Performance
 - Tech
 - Technology
-- Videos
 - Workplace Strategies
 section_names:
 - ai

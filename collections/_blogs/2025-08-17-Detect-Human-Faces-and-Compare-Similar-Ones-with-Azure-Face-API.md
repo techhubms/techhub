@@ -9,13 +9,10 @@ feed_url: https://dellenny.com/feed/
 date: 2025-08-17 10:07:04 +00:00
 permalink: /ai/blogs/Detect-Human-Faces-and-Compare-Similar-Ones-with-Azure-Face-API
 tags:
-- AI
 - API Integration
 - Authentication
-- Azure
 - Azure Cognitive Services
 - Azure Face API
-- Blogs
 - C#
 - Cloud AI
 - Computer Vision

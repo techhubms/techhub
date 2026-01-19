@@ -10,10 +10,7 @@ date: 2024-09-24 00:00:00 +00:00
 permalink: /coding/blogs/How-to-Reliably-Test-Htmx-Applications-with-Playwright-in-C
 tags:
 - ASP.NET Core
-- Blogs
 - C#
-- Coding
-- DevOps
 - Frontend Testing
 - Htmx
 - Integration Testing

@@ -10,7 +10,6 @@ date: 2025-11-17 10:53:28 +00:00
 permalink: /azure/videos/Azure-Front-Door-Resiliency-Deep-Dive-and-Architecting-for-Mission-Critical-Applications
 tags:
 - Application Acceleration
-- Azure
 - Azure Cloud
 - Azure Front Door
 - Azure Traffic Manager
@@ -29,7 +28,6 @@ tags:
 - Resiliency
 - System Configuration
 - Traffic Shield
-- Videos
 section_names:
 - azure
 ---

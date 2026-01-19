@@ -9,10 +9,8 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-10-27 09:05:14 +00:00
 permalink: /azure/blogs/Azure-Local-2510-Release-New-Features-for-Edge-Security-and-Hybrid-Cloud
 tags:
-- Azure
 - Azure Arc
 - Azure Local
-- Blogs
 - Cloud
 - Deployment
 - Edge Computing
@@ -22,7 +20,6 @@ tags:
 - Network Security Groups
 - Rack Aware Cluster
 - SDN
-- Security
 - Security Updates
 - Sovereign Cloud
 - Trusted VM

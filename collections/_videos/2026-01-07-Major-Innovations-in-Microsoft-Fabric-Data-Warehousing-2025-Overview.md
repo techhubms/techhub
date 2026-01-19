@@ -11,7 +11,6 @@ permalink: /ml/videos/Major-Innovations-in-Microsoft-Fabric-Data-Warehousing-202
 tags:
 - Administration
 - Analytics
-- Azure
 - Cloud Computing
 - Cloud Data
 - Data Clustering
@@ -27,14 +26,11 @@ tags:
 - Microsoft
 - Microsoft Fabric
 - Migration Assistant
-- ML
-- Security
 - Security Features
 - SQL
 - SQL Server
 - Tech
 - Technology
-- Videos
 section_names:
 - azure
 - ml

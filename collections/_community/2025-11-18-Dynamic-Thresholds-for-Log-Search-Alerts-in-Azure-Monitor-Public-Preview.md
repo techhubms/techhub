@@ -9,16 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 16:00:00 +00:00
 permalink: /ai/community/Dynamic-Thresholds-for-Log-Search-Alerts-in-Azure-Monitor-Public-Preview
 tags:
-- AI
 - AKS
 - AKS Monitoring
 - Alerting Automation
 - Anomaly Detection
-- Azure
 - Azure Monitor
 - Cloud Operations
-- Community
-- DevOps
 - DevOps Monitoring
 - Dynamic Thresholds
 - Kusto Query Language

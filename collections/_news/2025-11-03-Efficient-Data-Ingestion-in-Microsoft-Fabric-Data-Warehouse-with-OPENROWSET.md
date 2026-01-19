@@ -10,7 +10,6 @@ date: 2025-11-03 10:00:00 +00:00
 permalink: /ml/news/Efficient-Data-Ingestion-in-Microsoft-Fabric-Data-Warehouse-with-OPENROWSET
 tags:
 - Auditing
-- Azure
 - Azure Storage
 - COPY INTO
 - CSV
@@ -22,8 +21,6 @@ tags:
 - JSONL
 - Metadata Extraction
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - OPENROWSET
 - Parquet

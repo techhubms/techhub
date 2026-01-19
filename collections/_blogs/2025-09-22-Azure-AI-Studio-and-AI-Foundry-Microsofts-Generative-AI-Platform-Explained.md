@@ -9,12 +9,9 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-22 09:11:05 +00:00
 permalink: /ai/blogs/Azure-AI-Studio-and-AI-Foundry-Microsofts-Generative-AI-Platform-Explained
 tags:
-- AI
 - AI Platform
-- Azure
 - Azure AI Foundry
 - Azure AI Studio
-- Blogs
 - Compliance
 - Enterprise AI
 - Fine Tuning

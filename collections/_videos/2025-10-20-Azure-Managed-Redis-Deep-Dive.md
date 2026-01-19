@@ -10,7 +10,6 @@ date: 2025-10-20 12:00:52 +00:00
 permalink: /azure/videos/Azure-Managed-Redis-Deep-Dive
 tags:
 - Authentication
-- Azure
 - Azure Cloud
 - Azure Managed Redis
 - Cloud
@@ -28,7 +27,6 @@ tags:
 - Replication
 - Scaling
 - Sharding
-- Videos
 section_names:
 - azure
 ---

@@ -16,10 +16,8 @@ tags:
 - Agent Orchestration
 - Agentmode
 - AgetnFx
-- AI
 - AI Agents
 - Application Intelligence
-- Coding
 - Copilot
 - Demo
 - Developer
@@ -30,7 +28,6 @@ tags:
 - Microsoft AI
 - Software Developer
 - Software Development
-- Videos
 section_names:
 - ai
 - coding

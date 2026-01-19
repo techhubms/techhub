@@ -11,7 +11,6 @@ permalink: /devops/blogs/How-Observability-Improves-User-Experience-and-Digital-
 tags:
 - Airbnb Observability
 - Application Monitoring
-- Blogs
 - Business Of DevOps
 - Clepher
 - Cloud Native
@@ -19,7 +18,6 @@ tags:
 - Cloud Native Platforms
 - Contributed Content
 - Customer Retention
-- DevOps
 - DevOps Observability
 - DevOps Practices
 - Digital Experience Monitoring

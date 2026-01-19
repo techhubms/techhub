@@ -9,16 +9,13 @@ feed_url: https://devops.com/feed/
 date: 2025-11-04 09:30:08 +00:00
 permalink: /ai/blogs/Your-Next-Secrets-Leak-is-Hiding-in-AI-Coding-Tools
 tags:
-- AI
 - AI Coding Tools
 - Automation
-- Blogs
 - Business Of DevOps
 - CI/CD Security
 - Conftest
 - Contributed Content
 - Credential Leakage
-- DevOps
 - Dynamic Secrets
 - GitGuardian
 - GitHub
@@ -37,7 +34,6 @@ tags:
 - Secret Sprawl
 - Secrets
 - Secrets Management
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

@@ -11,13 +11,11 @@ permalink: /azure/community/Expose-AVD-Registration-Status-on-Azure-VM-Objects-f
 tags:
 - Automation
 - AVD
-- Azure
 - Azure Portal
 - Azure Resource Graph
 - Azure Virtual Desktop
 - Azure VM
 - CLI
-- Community
 - Monitoring
 - PowerShell
 - Registration Status

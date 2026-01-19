@@ -9,16 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-07 17:00:00 +00:00
 permalink: /azure/community/Whats-New-in-FinOps-Toolkit-12-July-2025
 tags:
-- Azure
 - Azure Data Explorer
 - Azure Optimization Engine
 - CIDR Support
-- Community
 - Cost Export
 - Cost Management
 - Data Ingestion
 - Data Pipelines
-- DevOps
 - DevOps Automation
 - Executive Reporting
 - FinOps Toolkit
@@ -32,7 +29,6 @@ tags:
 - Resource Management
 - Role Based Access Control
 - Schema Versioning
-- Security
 - Security Permissions
 section_names:
 - azure

@@ -10,12 +10,8 @@ date: 2025-12-23 22:08:48 +00:00
 permalink: /ai/community/Automating-Customer-Issue-Triage-with-Azure-SRE-Agent-and-MCP
 tags:
 - Agent Based Automation
-- AI
-- Azure
 - Azure Portal
 - Azure SRE Agent
-- Community
-- DevOps
 - DevOps Workflow
 - GitHub
 - Incident Management

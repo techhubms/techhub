@@ -9,18 +9,15 @@ feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-04-23 16:25:10 +00:00
 permalink: /coding/news/Introducing-Modularized-Azure-SDK-Libraries-for-JavaScript
 tags:
-- Azure
 - Azure SDK
 - Bundle Size
 - Client Libraries
-- Coding
 - CommonJS
 - ESM
 - JavaScript
 - Long Running Operations
 - Modular
 - Modularization
-- News
 - Pagination
 - REST Level Clients
 - SDK

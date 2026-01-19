@@ -9,9 +9,7 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 17:33:20 +00:00
 permalink: /ai/community/How-Microsoft-Defender-Experts-Uses-AI-to-Cut-Through-the-Noise
 tags:
-- AI
 - AI Based Incident Classification
-- Community
 - Expert Guided AI
 - False Positive Filtering
 - Feedback Loops
@@ -21,7 +19,6 @@ tags:
 - Microsoft Security
 - Noise Reduction
 - Risk Scoring
-- Security
 - Security Operations
 - Similarity Algorithm
 - SOC Automation

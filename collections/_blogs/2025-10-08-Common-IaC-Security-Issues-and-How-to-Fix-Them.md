@@ -13,10 +13,8 @@ tags:
 - Automated Compliance
 - Automation
 - AWS Config
-- Azure
 - Azure Key Vault
 - Azure Policy
-- Blogs
 - Business Of DevOps
 - CI/CD Pipeline
 - CI/CD Pipeline Security
@@ -27,7 +25,6 @@ tags:
 - Compliance
 - Configuration Drift
 - Contributed Content
-- DevOps
 - Devsecops
 - Drift Detection
 - Hardcoded Secrets
@@ -42,7 +39,6 @@ tags:
 - Policy as Code
 - RBAC
 - Secrets Management
-- Security
 - SOC 2
 - Social Facebook
 - Social LinkedIn

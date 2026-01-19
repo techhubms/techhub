@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 17:35:49 +00:00
 permalink: /azure/community/Announcing-Preview-of-Azure-Ebsv6-and-Ebdsv6-VMs-Powered-by-5th-Gen-Intel-Xeon-Processors
 tags:
-- Azure
 - Azure Boost
 - Azure Virtual Machines
 - Cloud Infrastructure
-- Community
 - Data Warehousing
 - Ebdsv6
 - Ebsv6

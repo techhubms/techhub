@@ -9,12 +9,9 @@ feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-20 08:10:49 +00:00
 permalink: /azure/community/Should-I-Build-for-Azure-DevOps-Exploring-Market-Potential-for-Outlook-Add-ins
 tags:
-- Azure
 - Azure DevOps
 - COM Technology
-- Community
 - Cross Platform Development
-- DevOps
 - Enterprise Productivity
 - Fortune 100
 - Market Analysis

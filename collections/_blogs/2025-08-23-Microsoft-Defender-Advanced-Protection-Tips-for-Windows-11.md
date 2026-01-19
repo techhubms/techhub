@@ -11,7 +11,6 @@ permalink: /security/blogs/Microsoft-Defender-Advanced-Protection-Tips-for-Windo
 tags:
 - Antivirus
 - BitLocker
-- Blogs
 - Controlled Folder Access
 - Data Backup
 - Device Health
@@ -21,7 +20,6 @@ tags:
 - Offline Scan
 - Phishing Protection
 - Ransomware Protection
-- Security
 - SmartScreen
 - Tamper Protection
 - Windows 11

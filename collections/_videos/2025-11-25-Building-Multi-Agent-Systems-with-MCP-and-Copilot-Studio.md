@@ -12,7 +12,6 @@ tags:
 - A2A
 - Agent Integration
 - Agent Protocols
-- AI
 - Copilot Studio
 - Enterprise AI
 - Fabric Data Agents
@@ -26,7 +25,6 @@ tags:
 - Microsoft Ignite
 - MSIgnite
 - Multi Agent Systems
-- Videos
 section_names:
 - ai
 ---

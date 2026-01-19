@@ -9,15 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-07-30 17:00:40 +00:00
 permalink: /github-copilot/videos/How-to-Use-GitHub-Copilot-The-Complete-Beginners-Guide
 tags:
-- AI
 - AI Pair Programming
 - Beginner Tutorial
 - Code Refactoring
 - Code Review
-- Coding
 - Development Workflow
 - GitHub
-- GitHub Copilot
 - Integration
 - LLMs
 - Prompt Engineering
@@ -26,7 +23,6 @@ tags:
 - Security Best Practices
 - Test Driven Development
 - Tutorial
-- Videos
 - VS Code
 section_names:
 - ai

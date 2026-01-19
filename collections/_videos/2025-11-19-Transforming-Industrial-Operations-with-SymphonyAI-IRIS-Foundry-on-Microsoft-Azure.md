@@ -10,10 +10,8 @@ date: 2025-11-19 14:50:50 +00:00
 permalink: /ai/videos/Transforming-Industrial-Operations-with-SymphonyAI-IRIS-Foundry-on-Microsoft-Azure
 tags:
 - Agenticbusinessapplications
-- AI
 - AI Modeling
 - Asset Hierarchies
-- Azure
 - CMMS
 - Data Integration
 - Human in The Loop Validation
@@ -28,7 +26,6 @@ tags:
 - SymphonyAI
 - Unified Data Models
 - Unified Namespace
-- Videos
 section_names:
 - ai
 - azure

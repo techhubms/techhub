@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-07-28 16:00:13 +00:00
 permalink: /ai/videos/MCP-Security-Best-Practices
 tags:
-- AI
 - AI App Security
 - AI System Resilience
 - Enterprise AI
@@ -20,7 +19,6 @@ tags:
 - Session Hijacking
 - Token Passthrough
 - Tool Poisoning
-- Videos
 section_names:
 - ai
 ---

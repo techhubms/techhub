@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-08 18:01:03 +00:00
 permalink: /github-copilot/videos/GitHub-Copilot-Surpasses-ChatGPT-as-Top-Developer-AI-Tool
 tags:
-- AI
 - AI Assistant
 - AI Tools
 - ChatGPT
@@ -17,11 +16,9 @@ tags:
 - Developer Survey
 - Developer Workflow
 - GitHub
-- GitHub Copilot
 - Productivity
 - Software Development
 - The Pragmatic Engineer
-- Videos
 section_names:
 - ai
 - github-copilot

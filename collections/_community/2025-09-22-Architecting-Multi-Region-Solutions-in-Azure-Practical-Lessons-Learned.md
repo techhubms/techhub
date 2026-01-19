@@ -10,7 +10,6 @@ date: 2025-09-22 11:00:00 +00:00
 permalink: /azure/community/Architecting-Multi-Region-Solutions-in-Azure-Practical-Lessons-Learned
 tags:
 - Active Directory
-- Azure
 - Azure Governance
 - Azure Policy
 - BCDR
@@ -18,11 +17,9 @@ tags:
 - Cloud Infrastructure
 - Cloud Monitoring
 - Cloud Networking
-- Community
 - Compliance
 - Cost Optimization
 - Data Residency
-- DevOps
 - Disaster Recovery
 - Landing Zones
 - Microsoft Entra ID
@@ -30,7 +27,6 @@ tags:
 - Performance Optimization
 - Resilience
 - Scalability
-- Security
 - Virtual Networks
 section_names:
 - azure

@@ -9,16 +9,11 @@ feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2023-04-24 00:00:00 +00:00
 permalink: /github-copilot/blogs/How-CopilotAI-helps-me-in-my-daily-work
 tags:
-- AI
 - AI Code Generation
 - Automation
-- Azure
 - Azure Functions
-- Blogs
-- Coding
 - Deployment Protection Rules
 - GitHub Actions
-- GitHub Copilot
 - Node.js
 - OAuth
 section_names:

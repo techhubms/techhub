@@ -15,8 +15,6 @@ tags:
 - AdMob
 - Banner Ads
 - C#
-- Coding
-- Community
 - Desktop Monetization
 - Native Ads
 - Native Desktop Apps

@@ -10,7 +10,6 @@ date: 2025-08-27 18:03:54 +00:00
 permalink: /github-copilot/news/Copilot-Code-Review-Now-Available-in-Xcode-and-Enterprise-Admin-Controls
 tags:
 - Admin Control
-- AI
 - CCR
 - Code Review Automation
 - Copilot Code Review
@@ -18,9 +17,7 @@ tags:
 - Eclipse
 - Enterprise Administration
 - Enterprise Policy
-- GitHub Copilot
 - JetBrains
-- News
 - Organization Settings
 - Pull Requests
 - Security Review

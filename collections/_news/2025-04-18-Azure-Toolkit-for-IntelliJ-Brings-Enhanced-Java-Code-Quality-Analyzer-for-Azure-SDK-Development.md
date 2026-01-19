@@ -11,21 +11,17 @@ permalink: /coding/news/Azure-Toolkit-for-IntelliJ-Brings-Enhanced-Java-Code-Qua
 tags:
 - Asynchronous Programming
 - Authentication
-- Azure
 - Azure SDK
 - Azure Toolkit
 - Best Practices
 - Code Quality
-- Coding
 - Event Hub
 - IntelliJ
 - Java
 - Microsoft Entra ID
-- News
 - OpenAI
 - Performance
 - Reactive Streams
-- Security
 - Service Bus
 - Storage
 section_names:

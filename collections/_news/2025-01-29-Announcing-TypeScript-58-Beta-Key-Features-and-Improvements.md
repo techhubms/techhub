@@ -10,7 +10,6 @@ date: 2025-01-29 18:51:38 +00:00
 permalink: /coding/news/Announcing-TypeScript-58-Beta-Key-Features-and-Improvements
 tags:
 - Checked Return Types
-- Coding
 - CommonJS
 - Compiler Flags
 - Conditional Types
@@ -22,7 +21,6 @@ tags:
 - Libreplacement
 - Module Node18
 - Module Nodenext
-- News
 - Node.js
 - Program Optimization
 - TypeScript

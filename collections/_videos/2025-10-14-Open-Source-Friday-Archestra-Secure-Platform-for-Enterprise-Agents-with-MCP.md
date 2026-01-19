@@ -10,7 +10,6 @@ date: 2025-10-14 21:10:06 +00:00
 permalink: /ai/videos/Open-Source-Friday-Archestra-Secure-Platform-for-Enterprise-Agents-with-MCP
 tags:
 - Access Control
-- AI
 - AI Orchestration
 - Archestra
 - Automation
@@ -20,9 +19,7 @@ tags:
 - Microsoft Cloud Platform
 - Model Governance
 - Open Source
-- Security
 - Software Deployment
-- Videos
 section_names:
 - ai
 - security

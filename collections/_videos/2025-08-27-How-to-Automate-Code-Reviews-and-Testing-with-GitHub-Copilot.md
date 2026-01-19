@@ -9,21 +9,17 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-27 14:00:27 +00:00
 permalink: /github-copilot/videos/How-to-Automate-Code-Reviews-and-Testing-with-GitHub-Copilot
 tags:
-- AI
 - AI Assisted Development
 - Autofix
 - Automated Testing
 - Code Review
 - CodeReview
 - Continuous Integration
-- DevOps
 - GitHub
-- GitHub Copilot
 - Pull Requests
 - Repository Management
 - Security Scanning
 - Software Development
-- Videos
 section_names:
 - ai
 - devops

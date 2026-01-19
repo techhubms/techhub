@@ -9,14 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 15:00:33 +00:00
 permalink: /ai/videos/Cloud-Innovation-and-Efficiency-with-Arm-Based-Azure-Cobalt-100-VMs
 tags:
-- AI
 - AI Workloads
 - ARM Based VMs
-- Azure
 - Azure Cobalt 100
 - Cloud Infrastructure
 - Cloud Migration
-- Coding
 - Databricks
 - GitHub Runners
 - Machine Learning
@@ -33,7 +30,6 @@ tags:
 - Scalability
 - SPECjbb
 - Tutorials
-- Videos
 - Windows Performance
 - Workload Deployment
 section_names:

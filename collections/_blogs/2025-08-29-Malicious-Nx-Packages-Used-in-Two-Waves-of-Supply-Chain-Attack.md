@@ -9,12 +9,9 @@ feed_url: https://devops.com/feed/
 date: 2025-08-29 17:15:10 +00:00
 permalink: /ai/blogs/Malicious-Nx-Packages-Used-in-Two-Waves-of-Supply-Chain-Attack
 tags:
-- AI
 - AI CLI Tools
 - Automation
-- Blogs
 - Credential Theft
-- DevOps
 - DevOps And Open Technologies
 - DevOps Security
 - GitGuardian
@@ -26,7 +23,6 @@ tags:
 - Open Source Security
 - Publish.yml
 - Repository Permissions
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

@@ -9,13 +9,11 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-12-02 12:34:53 +00:00
 permalink: /azure/blogs/Manage-Azure-Local-Updates
 tags:
-- Azure
 - Azure Arc
 - Azure Local
 - Azure Portal
 - Azure Update Manager
 - Best Practices
-- Blogs
 - Cloud
 - Cloud Infrastructure
 - Hybrid Cloud

@@ -11,14 +11,11 @@ permalink: /ml/news/Microsoft-Fabric-Spark-Applications-Comparison-Feature-Previ
 tags:
 - Apache Spark
 - Application Comparison
-- Azure
 - Data Engineering
 - Debugging
 - L2 Monitoring
 - Microsoft Fabric
-- ML
 - Monitoring Tools
-- News
 - Performance Monitoring
 - Regression Analysis
 - Resource Optimization

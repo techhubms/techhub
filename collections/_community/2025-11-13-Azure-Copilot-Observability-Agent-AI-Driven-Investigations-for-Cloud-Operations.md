@@ -10,18 +10,14 @@ date: 2025-11-13 19:02:49 +00:00
 permalink: /ai/community/Azure-Copilot-Observability-Agent-AI-Driven-Investigations-for-Cloud-Operations
 tags:
 - Agentic Investigations
-- AI
 - AI Operations
 - AKS
 - Anomaly Detection
-- Azure
 - Azure Alerts
 - Azure Copilot
 - Azure Monitor
 - Azure Portal Integration
 - Cloud Automation
-- Community
-- DevOps
 - Infrastructure Monitoring
 - Log Analytics
 - Machine Learning

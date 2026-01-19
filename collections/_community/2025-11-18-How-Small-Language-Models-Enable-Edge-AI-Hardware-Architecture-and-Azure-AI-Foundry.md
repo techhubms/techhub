@@ -9,11 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 08:23:25 +00:00
 permalink: /ai/community/How-Small-Language-Models-Enable-Edge-AI-Hardware-Architecture-and-Azure-AI-Foundry
 tags:
-- AI
 - AI Model Deployment
-- Azure
 - Azure AI Foundry
-- Community
 - CPU
 - Edge AI
 - GPU

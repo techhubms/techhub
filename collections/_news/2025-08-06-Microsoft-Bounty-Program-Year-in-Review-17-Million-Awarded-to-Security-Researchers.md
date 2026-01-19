@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-06 17:21:40 +00:00
 permalink: /ai/news/Microsoft-Bounty-Program-Year-in-Review-17-Million-Awarded-to-Security-Researchers
 tags:
-- AI
 - AI Security
 - Bug Bounty
 - Cloud Security
@@ -21,9 +20,7 @@ tags:
 - Microsoft Bounty Program
 - Microsoft Defender
 - MSRC
-- News
 - Power Platform
-- Security
 - Security Research
 - Vulnerability Disclosure
 - Windows

@@ -9,21 +9,17 @@ feed_url: https://github.blog/feed/
 date: 2025-10-13 22:40:04 +00:00
 permalink: /github-copilot/news/Getting-Started-with-GitHub-Copilot-CLI-in-the-Terminal
 tags:
-- AI
 - AI & ML
 - AI Assistant
 - Automation
 - CLI
 - CLI Tools
-- Coding
 - Command Line Interface
 - Developer Workflow
 - GitHub
-- GitHub Copilot
 - GitHub Copilot CLI
 - Installation
 - MCP Server
-- News
 - Node.js
 - npm
 - Permissions

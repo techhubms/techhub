@@ -11,16 +11,13 @@ permalink: /azure/community/Azure-Failure-Prediction-and-Detection-AFPD-Preventi
 tags:
 - A/B Testing
 - AFPD
-- Azure
 - Azure Compute
 - Azure Failure Prediction & Detection
 - Azure Notifications
 - Azure Resource Graph
 - Cloud Monitoring
 - Cloud Reliability
-- Community
 - Contextual Bandit Models
-- DevOps
 - Event Grid
 - Failure Mitigation
 - Fleet Health

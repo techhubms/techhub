@@ -9,23 +9,17 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2026-01-15 09:00:00 +00:00
 permalink: /github-copilot/news/How-the-Microsoft-SQL-Team-is-Advancing-SQL-Tools-and-Developer-Experiences
 tags:
-- AI
 - AI Assisted Development
-- Azure
 - Azure Portal
 - Azure SQL
 - CI/CD
-- Coding
 - Data Engineering
 - Database Deployment
 - Database DevOps
 - Database Projects
-- DevOps
 - Fabric
-- GitHub Copilot
 - Microsoft Fabric
 - MSSQL Extension
-- News
 - SDK Style SQL Projects
 - Source Control
 - SQL Server

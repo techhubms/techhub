@@ -11,7 +11,6 @@ permalink: /azure/videos/Active-Directory-Disaster-Recovery-Modern-Approaches-fo
 tags:
 - Active Directory
 - Alerting
-- Azure
 - Cayosoft
 - Change Monitoring
 - Disaster Recovery
@@ -24,9 +23,7 @@ tags:
 - MSIgnite
 - ProtectcloudAIplatformandapps
 - Recovery Plan
-- Security
 - Threat Detection
-- Videos
 - Windows Server Backup
 section_names:
 - azure

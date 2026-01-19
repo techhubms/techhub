@@ -10,7 +10,6 @@ date: 2025-09-02 16:00:00 +00:00
 permalink: /azure/community/GA-Enhanced-Audit-in-Azure-Security-Baseline-for-Linux
 tags:
 - Audit Only
-- Azure
 - Azure Arc
 - Azure Governance
 - Azure Machine Configuration
@@ -18,7 +17,6 @@ tags:
 - Azure Security Baseline
 - CIS Controls
 - Cloud Security
-- Community
 - Compliance
 - Configuration Drift
 - Enterprise Security
@@ -30,7 +28,6 @@ tags:
 - Remediation
 - Reporting
 - Resource Graph Explorer
-- Security
 - Security Auditing
 section_names:
 - azure

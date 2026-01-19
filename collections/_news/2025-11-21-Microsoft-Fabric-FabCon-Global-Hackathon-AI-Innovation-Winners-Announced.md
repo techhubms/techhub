@@ -9,9 +9,7 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 09:00:00 +00:00
 permalink: /ai/news/Microsoft-Fabric-FabCon-Global-Hackathon-AI-Innovation-Winners-Announced
 tags:
-- AI
 - AI Applications
-- Azure
 - Azure Databases
 - Azure OpenAI
 - Copilot Studio
@@ -22,10 +20,7 @@ tags:
 - Governance
 - Hackathon
 - IoT
-- Machine Learning
 - Microsoft Fabric
-- ML
-- News
 - Open Mirroring
 - Power BI
 - Prompt Engineering

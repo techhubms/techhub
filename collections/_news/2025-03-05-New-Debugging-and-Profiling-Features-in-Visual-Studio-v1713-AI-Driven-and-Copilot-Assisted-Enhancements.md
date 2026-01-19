@@ -9,20 +9,16 @@ feed_url: https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/
 date: 2025-03-05 15:39:27 +00:00
 permalink: /github-copilot/news/New-Debugging-and-Profiling-Features-in-Visual-Studio-v1713-AI-Driven-and-Copilot-Assisted-Enhancements
 tags:
-- AI
 - Async Debugging
-- Coding
 - Copilot
 - CPU Usage
 - Debug
 - Debugging
 - Debugging And Diagnostics
 - Exception Analysis
-- GitHub Copilot
 - IEnumerable Visualizer
 - Instrumentation
 - Multiprocess Analysis
-- News
 - Parallel Stacks
 - Profiling
 - V17.13

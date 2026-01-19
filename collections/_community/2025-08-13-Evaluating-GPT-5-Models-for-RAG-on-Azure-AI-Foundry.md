@@ -9,12 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 07:54:51 +00:00
 permalink: /ai/community/Evaluating-GPT-5-Models-for-RAG-on-Azure-AI-Foundry
 tags:
-- AI
-- Azure
 - Azure AI Evaluation
 - Azure AI Foundry
 - Clarifying Questions
-- Community
 - Evaluation SDK
 - GPT 5
 - Groundedness

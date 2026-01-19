@@ -24,11 +24,9 @@ tags:
 - Microsoft Purview
 - MSIgnite
 - Secureyourdata
-- Security
 - Security Best Practices
 - Security Frameworks
 - User Training
-- Videos
 section_names:
 - security
 ---

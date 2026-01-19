@@ -10,14 +10,11 @@ date: 2025-09-22 18:59:37 +00:00
 permalink: /ai/videos/AI-Agent-Memory-Building-Self-Improving-Agents
 tags:
 - Agent Design
-- AI
 - AI Agents
 - AI Development
-- Azure
 - Azure AI Search
 - Cloud Computing
 - Cloud Development
-- Coding
 - Dev
 - Development
 - Mem0
@@ -30,7 +27,6 @@ tags:
 - Tech
 - Technical Tutorial
 - Technology
-- Videos
 section_names:
 - ai
 - azure

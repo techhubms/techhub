@@ -9,13 +9,11 @@ feed_url: https://devclass.com/feed/
 date: 2026-01-15 17:14:53 +00:00
 permalink: /ai/blogs/Vibe-Coded-Applications-Full-of-Security-Blunders
 tags:
-- AI
 - AI Agent
 - AI Code Generation
 - AI/ML
 - Application Security
 - Authorization Logic
-- Blogs
 - Business Logic Bugs
 - Claude
 - Claude Code
@@ -25,7 +23,6 @@ tags:
 - OpenAI Codex
 - Replit
 - Secure Coding
-- Security
 - Security Best Practices
 - Security Vulnerabilities
 - Server Side Request Forgery

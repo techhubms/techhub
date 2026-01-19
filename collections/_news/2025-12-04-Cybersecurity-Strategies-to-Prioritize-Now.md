@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-04 19:01:12 +00:00
 permalink: /azure/news/Cybersecurity-Strategies-to-Prioritize-Now
 tags:
-- Azure
 - Azure Front Door
 - Company News
 - Cyber Hygiene
@@ -28,9 +27,7 @@ tags:
 - Microsoft Security
 - Multifactor Authentication
 - Network Segmentation
-- News
 - Phishing Resistant MFA
-- Security
 - Security Collaboration
 - Security Standards
 - VPN

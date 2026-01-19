@@ -10,7 +10,6 @@ date: 2025-06-11 23:38:57 +00:00
 permalink: /ai/news/AI-Genius-Challenge-Flex-Your-AI-Skills-and-Beat-the-Clock
 tags:
 - Agents
-- AI
 - AI Agent
 - AI Agents
 - AI Apps
@@ -18,7 +17,6 @@ tags:
 - AI Studio
 - All Things Azure
 - App Development
-- Azure
 - Azure AI
 - Azure Databases
 - Copilot
@@ -26,7 +24,6 @@ tags:
 - Hackathon
 - Kubernetes
 - Microsoft Reactor
-- News
 - Public RAG Endpoints
 - Retrieval Augmented Generation
 section_names:

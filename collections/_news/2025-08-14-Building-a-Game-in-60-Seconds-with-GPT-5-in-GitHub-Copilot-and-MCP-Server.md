@@ -9,18 +9,14 @@ feed_url: https://github.blog/feed/
 date: 2025-08-14 16:30:00 +00:00
 permalink: /github-copilot/news/Building-a-Game-in-60-Seconds-with-GPT-5-in-GitHub-Copilot-and-MCP-Server
 tags:
-- AI
 - AI & ML
 - AI Development
 - Automation
-- Coding
 - Copilot Integration
 - Developer Workflow
-- DevOps
 - Game Development
 - Generative AI
 - GitHub Actions
-- GitHub Copilot
 - GPT 5
 - HTML5
 - Issue Automation
@@ -28,7 +24,6 @@ tags:
 - MCP
 - MCP Server
 - Natural Language Automation
-- News
 - OpenAI
 - Programming Productivity
 - Repository Management

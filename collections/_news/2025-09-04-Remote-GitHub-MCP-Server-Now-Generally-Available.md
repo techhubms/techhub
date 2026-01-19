@@ -9,25 +9,20 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-04 15:00:49 +00:00
 permalink: /github-copilot/news/Remote-GitHub-MCP-Server-Now-Generally-Available
 tags:
-- AI
 - AI Workflow
 - Authentication
 - Code Scanning
 - Copilot Coding Agent
 - Cursor
-- DevOps
 - DevOps Tools
 - Eclipse
 - GHAS
-- GitHub Copilot
 - GitHub MCP Server
 - JetBrains
-- News
 - OAuth 2.1
 - PKCE
 - Pull Request Workflow
 - Secret Scanning
-- Security
 - Security Advisories
 - Security Guardrails
 - Sub Issue Management

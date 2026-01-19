@@ -10,7 +10,6 @@ date: 2025-12-15 18:05:00 +00:00
 permalink: /ai/news/Microsoft-Recognized-as-Leader-in-KuppingerCole-Leadership-Compass-for-Generative-AI-Defense
 tags:
 - Agent365
-- AI
 - AI Governance
 - AI Protection
 - CISO
@@ -28,9 +27,7 @@ tags:
 - Microsoft Entra
 - Microsoft Purview
 - Microsoft Security
-- News
 - NIST AI RMF
-- Security
 - Security Architecture
 - Threat Intelligence
 section_names:

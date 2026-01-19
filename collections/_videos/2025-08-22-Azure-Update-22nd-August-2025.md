@@ -11,7 +11,6 @@ permalink: /azure/videos/Azure-Update-22nd-August-2025
 tags:
 - AKS
 - Application Gateway
-- Azure
 - Azure Bastion
 - Azure Billing
 - Azure Cloud
@@ -30,7 +29,6 @@ tags:
 - Microsoft Azure
 - Microsoft Defender For Cloud
 - Microsoft Sentinel
-- Videos
 section_names:
 - azure
 ---

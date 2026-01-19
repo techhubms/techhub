@@ -10,7 +10,6 @@ date: 2025-06-06 17:34:50 +00:00
 permalink: /ai/videos/HEINEKEN-Leveraging-Microsoft-AI-for-Business-Transformation
 tags:
 - Agentic AI
-- AI
 - AI Adoption
 - AI Strategy
 - Business Transformation
@@ -23,7 +22,6 @@ tags:
 - Microsoft AI
 - Microsoft AI Transformation
 - Microsoft Cloud
-- Videos
 section_names:
 - ai
 ---

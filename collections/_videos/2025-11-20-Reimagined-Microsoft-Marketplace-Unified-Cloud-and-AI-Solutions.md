@@ -10,9 +10,7 @@ date: 2025-11-20 17:05:21 +00:00
 permalink: /ai/videos/Reimagined-Microsoft-Marketplace-Unified-Cloud-and-AI-Solutions
 tags:
 - Agentic AI
-- AI
 - AI Solutions
-- Azure
 - Azure Consumption Commitment
 - Azure Marketplace
 - Channel Partners
@@ -27,7 +25,6 @@ tags:
 - Partner Ecosystem
 - Spend Optimization
 - Tech Procurement
-- Videos
 - Voice Infrastructure
 section_names:
 - ai

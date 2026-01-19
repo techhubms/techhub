@@ -11,7 +11,6 @@ permalink: /coding/videos/NET-Data-Community-Standup-EF-10-Release-Celebration
 tags:
 - .NET
 - .NET Developer
-- Coding
 - Data
 - Data Access
 - Database
@@ -26,7 +25,6 @@ tags:
 - Modern .NET
 - ORM
 - Q&A
-- Videos
 section_names:
 - coding
 ---

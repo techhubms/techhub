@@ -10,13 +10,10 @@ date: 2025-08-12 17:00:00 +00:00
 permalink: /ai/community/How-Adastra-Used-Microsoft-Fabric-and-Azure-OpenAI-Service-to-Transform-Heritage-Grocers-Groups-Data-Analytics
 tags:
 - Adastra
-- AI
 - AI Transformation
-- Azure
 - Azure OpenAI Service
 - Business Intelligence
 - Cloud Scalability
-- Community
 - Data Analytics
 - Data Consistency
 - Data Management
@@ -25,7 +22,6 @@ tags:
 - Heritage Grocers Group
 - Microsoft Fabric
 - Microsoft Partner
-- ML
 - POS Data
 - Predictive Analytics
 - Process Automation

@@ -11,12 +11,9 @@ permalink: /github-copilot/videos/Taming-AI-Assisted-Coding-Models-with-Eleanor-
 tags:
 - Agentic Models
 - Agents.md Standard
-- AI
 - AI Assisted Coding
 - CLI Workflows
-- Coding
 - GitHub Actions
-- GitHub Copilot
 - LLM Personalities
 - Model Guardrails
 - Open Source Tools
@@ -24,7 +21,6 @@ tags:
 - Ruler Project
 - Sandboxed Evaluations
 - Spec Writing
-- Videos
 - VS Code
 section_names:
 - ai

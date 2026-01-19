@@ -10,22 +10,17 @@ date: 2025-04-17 19:59:42 +00:00
 permalink: /github-copilot/news/Introducing-the-Azure-MCP-Server-Empowering-AI-Agents-with-Azure-Services
 tags:
 - Agents
-- AI
 - AI Agents
 - App Configuration
-- Azure
 - Azure CLI
 - Azure MCP Server
 - Azure SDK
 - Azure Services
 - Azure Storage
-- Coding
 - Cosmos DB
-- GitHub Copilot
 - Log Analytics
 - MCP
 - MCP SDK
-- News
 - Open Source
 - Public Preview
 - Semantic Kernel

@@ -10,8 +10,6 @@ date: 2025-07-29 02:09:39 +00:00
 permalink: /coding/community/Unlocking-Hidden-AcrylicMica-Style-UI-in-Visual-Studio-2022
 tags:
 - Acrylic UI
-- Coding
-- Community
 - Developer Tools
 - Extension
 - Feature Flags

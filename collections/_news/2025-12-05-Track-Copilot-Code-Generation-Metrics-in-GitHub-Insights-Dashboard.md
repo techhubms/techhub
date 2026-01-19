@@ -10,7 +10,6 @@ date: 2025-12-05 18:40:33 +00:00
 permalink: /github-copilot/news/Track-Copilot-Code-Generation-Metrics-in-GitHub-Insights-Dashboard
 tags:
 - Agent Actions
-- AI
 - AI Insights
 - Code Generation
 - Completions
@@ -19,11 +18,9 @@ tags:
 - Data Analysis
 - Enterprise
 - GitHub
-- GitHub Copilot
 - Lines Of Code
 - Metrics
 - NDJSON
-- News
 - Permissions
 - Programming Languages
 - Usage Metrics

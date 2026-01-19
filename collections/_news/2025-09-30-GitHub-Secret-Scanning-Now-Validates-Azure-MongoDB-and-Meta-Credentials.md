@@ -10,24 +10,20 @@ date: 2025-09-30 17:31:57 +00:00
 permalink: /azure/news/GitHub-Secret-Scanning-Now-Validates-Azure-MongoDB-and-Meta-Credentials
 tags:
 - Application Security
-- Azure
 - Azure APIM
 - Azure Entra ID
 - Code Security
 - Continuous Integration
 - Credential Security
-- DevOps
 - DevOps Security
 - GitHub
 - Improvement
 - Meta
 - Microsoft Azure
 - MongoDB
-- News
 - Personal Access Token
 - Product Update
 - Secret Scanning
-- Security
 - Token Validation
 section_names:
 - azure

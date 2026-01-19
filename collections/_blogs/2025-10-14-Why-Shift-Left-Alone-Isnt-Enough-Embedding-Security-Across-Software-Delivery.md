@@ -10,12 +10,10 @@ date: 2025-10-14 11:31:30 +00:00
 permalink: /devops/blogs/Why-Shift-Left-Alone-Isnt-Enough-Embedding-Security-Across-Software-Delivery
 tags:
 - Adaptive Security
-- Blogs
 - Continuous Improvement
 - Continuous Security
 - Contributed Content
 - Cyber Resilience
-- DevOps
 - DevOps Best Practices
 - Devsecops
 - Dynamic Systems
@@ -29,7 +27,6 @@ tags:
 - Secure By Default
 - Secure By Design
 - Secure Coding
-- Security
 - Security Compliance
 - Security Governance
 - Security in Production

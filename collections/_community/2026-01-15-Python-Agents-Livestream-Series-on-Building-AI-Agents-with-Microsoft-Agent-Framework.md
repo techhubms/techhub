@@ -10,19 +10,15 @@ date: 2026-01-15 08:00:00 +00:00
 permalink: /ai/community/Python-Agents-Livestream-Series-on-Building-AI-Agents-with-Microsoft-Agent-Framework
 tags:
 - Agentic Workflows
-- AI
 - AI Agents
 - Aspire Dashboard
-- Azure
 - Azure AI Evaluation
 - Codespaces
-- Community
 - DevUI
 - Human in The Loop
 - MCP Server
 - Memory Management
 - Microsoft Agent Framework
-- ML
 - OpenTelemetry
 - PostgreSQL
 - Python

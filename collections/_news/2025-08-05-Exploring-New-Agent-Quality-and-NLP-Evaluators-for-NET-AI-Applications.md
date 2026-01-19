@@ -11,13 +11,10 @@ permalink: /ai/news/Exploring-New-Agent-Quality-and-NLP-Evaluators-for-NET-AI-Ap
 tags:
 - .NET
 - Agent Quality
-- AI
 - AI Evaluation
-- Azure
 - Azure OpenAI
 - BLEU
 - C#
-- Coding
 - Evaluations
 - F1 Evaluator
 - GLEU
@@ -25,7 +22,6 @@ tags:
 - MEAI.Evaluation
 - Microsoft.Extensions.AI
 - Microsoft.Extensions.AI.Evaluation
-- News
 - NLP Metrics
 - Testing
 section_names:

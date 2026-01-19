@@ -10,14 +10,11 @@ date: 2025-09-19 14:51:16 +00:00
 permalink: /ai/blogs/AI-Driven-Security-and-Automation-in-Modern-DevOps-Insights-from-JFrog-swampUP-2025
 tags:
 - Agentic Repositories
-- AI
 - AI Agents
 - AI in DevOps
 - Automation
-- Blogs
 - Compliance
 - Continuous Delivery
-- DevOps
 - DevOps Security
 - Governance
 - JFrog AppTrust
@@ -26,7 +23,6 @@ tags:
 - MCP
 - Production Systems
 - Release Velocity
-- Security
 - Software Delivery
 - Software Supply Chain
 - Traceability

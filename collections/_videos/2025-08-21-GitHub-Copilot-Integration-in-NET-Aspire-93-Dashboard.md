@@ -10,19 +10,15 @@ date: 2025-08-21 20:04:17 +00:00
 permalink: /github-copilot/videos/GitHub-Copilot-Integration-in-NET-Aspire-93-Dashboard
 tags:
 - .NET Aspire
-- AI
 - Application Logs
-- Coding
 - Copilot Dashboard
 - Developer Tools
 - Error Tracing
-- GitHub Copilot
 - Integrated Development
 - Microsoft .NET
 - OneDevQuestion
 - Programming Productivity
 - Root Cause Analysis
-- Videos
 section_names:
 - ai
 - coding

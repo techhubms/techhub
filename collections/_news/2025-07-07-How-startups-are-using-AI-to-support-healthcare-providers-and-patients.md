@@ -9,12 +9,10 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-07 14:27:02 +00:00
 permalink: /ai/news/How-startups-are-using-AI-to-support-healthcare-providers-and-patients
 tags:
-- AI
 - Company News
 - Health
 - Healthcare
 - Medical Technology
-- News
 - Patient Care
 - Startups
 section_names:

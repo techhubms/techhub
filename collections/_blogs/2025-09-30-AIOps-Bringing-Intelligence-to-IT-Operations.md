@@ -9,14 +9,11 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-30 08:30:48 +00:00
 permalink: /ai/blogs/AIOps-Bringing-Intelligence-to-IT-Operations
 tags:
-- AI
 - AIOps
 - Anomaly Detection
 - Automation
-- Blogs
 - Continuous Delivery
 - Data Pipeline
-- DevOps
 - ELK Stack
 - Incident Response
 - IT Operations

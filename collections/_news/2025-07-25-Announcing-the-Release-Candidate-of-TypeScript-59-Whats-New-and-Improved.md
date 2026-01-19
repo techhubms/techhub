@@ -9,14 +9,12 @@ feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-07-25 16:53:10 +00:00
 permalink: /coding/news/Announcing-the-Release-Candidate-of-TypeScript-59-Whats-New-and-Improved
 tags:
-- Coding
 - Developer Tools
 - DOM APIs
 - Expandable Hovers
 - Import Defer
 - JavaScript
 - Module Detection
-- News
 - Node 20
 - npm
 - Performance Optimization

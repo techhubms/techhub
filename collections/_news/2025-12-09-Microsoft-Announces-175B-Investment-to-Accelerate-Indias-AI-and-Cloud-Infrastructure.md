@@ -9,11 +9,9 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-09 15:56:34 +00:00
 permalink: /ai/news/Microsoft-Announces-175B-Investment-to-Accelerate-Indias-AI-and-Cloud-Infrastructure
 tags:
-- AI
 - AI Infrastructure
 - AI Integration
 - AI Skilling
-- Azure
 - Azure Machine Learning
 - Azure OpenAI Service
 - Company News
@@ -25,7 +23,6 @@ tags:
 - Microsoft India
 - Multilingual Access
 - National Career Service
-- News
 - NVIDIA GPUs
 - Population Scale AI
 - Predictive Analytics

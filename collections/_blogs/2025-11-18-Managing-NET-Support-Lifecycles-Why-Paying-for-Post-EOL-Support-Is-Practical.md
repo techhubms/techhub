@@ -16,8 +16,6 @@ tags:
 - .NET 9
 - .NET Core
 - ASP.NET Core
-- Blogs
-- Coding
 - CVE 55315
 - End Of Life
 - Enterprise Compliance
@@ -30,7 +28,6 @@ tags:
 - Request Smuggling
 - Runtime
 - SDK
-- Security
 - Security Fixes
 - Security Vulnerability
 - STS

@@ -11,9 +11,7 @@ permalink: /azure/community/ApiManagement-MCP-Server-Creation-Error-Error-conver
 tags:
 - API Exposure
 - API Gateway
-- Azure
 - Azure API Management
-- Community
 - ControlPath
 - Error Handling
 - Input Parsing

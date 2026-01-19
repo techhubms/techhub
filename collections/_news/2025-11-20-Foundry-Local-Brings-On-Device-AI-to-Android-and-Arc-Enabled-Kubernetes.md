@@ -9,15 +9,12 @@ feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-20 16:30:12 +00:00
 permalink: /ai/news/Foundry-Local-Brings-On-Device-AI-to-Android-and-Arc-Enabled-Kubernetes
 tags:
-- AI
 - AI Development
 - AI Tools
 - Android Development
 - AnythingLLM
-- Azure
 - Azure AI Foundry
 - Azure Arc
-- Coding
 - Container Deployment
 - Deep Learning Models
 - Edge AI
@@ -29,7 +26,6 @@ tags:
 - LangChain Integration
 - Mistral
 - MSIgnite
-- News
 - On Device AI
 - OpenAI API
 - Phi

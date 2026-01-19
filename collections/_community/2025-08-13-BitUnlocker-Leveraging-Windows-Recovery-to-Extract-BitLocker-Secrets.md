@@ -12,7 +12,6 @@ tags:
 - BCD Store
 - BitLocker
 - Boot.sdi
-- Community
 - CVE 48003
 - CVE 48800
 - CVE 48804
@@ -24,7 +23,6 @@ tags:
 - ReAgent.xml
 - Recovery OS
 - REVISE Mitigation
-- Security
 - Security Testing
 - SetupPlatform.exe
 - TPM+PIN

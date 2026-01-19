@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-19 23:05:52 +00:00
 permalink: /ai/videos/Deploying-and-Comparing-Models-in-Microsoft-Foundry
 tags:
-- AI
 - AI Development
 - AI Model Deployment
-- Azure
 - Azure AI Foundry
 - Cloud Computing
 - Code First Workflow
@@ -26,7 +24,6 @@ tags:
 - Model Playground
 - Tech
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

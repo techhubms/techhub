@@ -9,18 +9,15 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-09 00:09:13 +00:00
 permalink: /ai/community/How-to-Build-Frontier-AI-Solutions-with-Azure-AI-Landing-Zone
 tags:
-- AI
 - AI Adoption
 - AKS
 - App Service
-- Azure
 - Azure AI Foundry
 - Azure AI Landing Zone
 - Azure Container Apps
 - Azure Functions
 - Bicep
 - Cloud Adoption Framework
-- Community
 - Enterprise Architecture
 - Governance
 - IaC

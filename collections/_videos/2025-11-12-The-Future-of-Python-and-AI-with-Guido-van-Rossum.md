@@ -9,13 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-12 15:01:22 +00:00
 permalink: /ai/videos/The-Future-of-Python-and-AI-with-Guido-van-Rossum
 tags:
-- AI
 - AI Era
 - AI Programming Tools
-- Azure
 - Cloud Computing
 - Cloud Development
-- Coding
 - Copilot
 - Dev
 - Developer
@@ -34,7 +31,6 @@ tags:
 - TypeAgent
 - Typechecking
 - TypeScript
-- Videos
 - VS Code
 section_names:
 - ai

@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:51 +00:00
 permalink: /github-copilot/news/Custom-Agents-in-GitHub-Copilot-for-JetBrains-Eclipse-and-Xcode-Now-in-Public-Preview
 tags:
-- AI
 - AI Agents
 - Coding Standards
 - Copilot
@@ -17,11 +16,9 @@ tags:
 - Custom Agents
 - Developer Tools
 - Eclipse
-- GitHub Copilot
 - IDE Extensions
 - JetBrains IDEs
 - Markdown Configuration
-- News
 - Workflow Automation
 - Xcode
 section_names:

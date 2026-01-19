@@ -8,10 +8,8 @@ viewing_mode: internal
 tags:
 - GPT
 - Language Models
-- ML
 - Neural Networks
 - PyTorch
-- Videos
 section_names:
 - ml
 ---

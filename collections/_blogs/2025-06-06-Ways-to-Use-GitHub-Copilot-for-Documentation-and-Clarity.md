@@ -9,19 +9,15 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-06-06 00:00:00 +00:00
 permalink: /github-copilot/blogs/Ways-to-Use-GitHub-Copilot-for-Documentation-and-Clarity
 tags:
-- AI
 - API Documentation
-- Blogs
 - Chain Of Thought Prompting
 - Code Clarity
 - Code Explanations
-- Coding
 - Commit Messages
 - Copilot Chat
 - Developer Productivity
 - Docstrings
 - Documentation
-- GitHub Copilot
 - Inline Comments
 - Slash Commands
 - Technical Writing

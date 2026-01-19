@@ -11,10 +11,8 @@ permalink: /ai/news/Azure-Developer-CLI-azd-November-2025-Release-Container-Apps
 tags:
 - .NET
 - .NET 10
-- AI
 - Aspire 13
 - Azd
-- Azure
 - Azure AI Search
 - Azure Communication Services
 - Azure Container Apps
@@ -23,9 +21,7 @@ tags:
 - Azure SDK
 - CI/CD
 - Codespaces
-- Coding
 - Copilot Studio
-- DevOps
 - Docker
 - Event Grid
 - Extension Framework
@@ -34,7 +30,6 @@ tags:
 - JavaScript
 - Kubernetes
 - Layered Provisioning
-- News
 - Python
 - Semantic Kernel
 - Typescript

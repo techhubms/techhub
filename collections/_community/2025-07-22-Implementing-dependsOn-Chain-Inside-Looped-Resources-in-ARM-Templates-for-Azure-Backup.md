@@ -10,13 +10,10 @@ date: 2025-07-22 12:49:16 +00:00
 permalink: /azure/community/Implementing-dependsOn-Chain-Inside-Looped-Resources-in-ARM-Templates-for-Azure-Backup
 tags:
 - ARM Templates
-- Azure
 - Azure Backup
 - Azure DevOps
 - Azure Recovery Services
-- Community
 - Dependson
-- DevOps
 - IaC
 - Protected Items
 - Resource Deployment

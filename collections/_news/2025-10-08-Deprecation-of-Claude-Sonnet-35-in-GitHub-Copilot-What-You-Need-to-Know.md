@@ -10,7 +10,6 @@ date: 2025-10-08 00:34:21 +00:00
 permalink: /github-copilot/news/Deprecation-of-Claude-Sonnet-35-in-GitHub-Copilot-What-You-Need-to-Know
 tags:
 - Administrator Guide
-- AI
 - AI Models
 - Claude Sonnet 3.5
 - Code Completions
@@ -18,10 +17,8 @@ tags:
 - Copilot Chat
 - Copilot Enterprise
 - Copilot Free
-- GitHub Copilot
 - Model Deprecation
 - Model Policies
-- News
 - Retired
 - VS Code
 section_names:

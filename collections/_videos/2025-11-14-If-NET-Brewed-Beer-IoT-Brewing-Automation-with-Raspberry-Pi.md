@@ -11,7 +11,6 @@ permalink: /coding/videos/If-NET-Brewed-Beer-IoT-Brewing-Automation-with-Raspber
 tags:
 - .NET
 - .NET Conf
-- Coding
 - Device Automation
 - Embedded Systems
 - Hardware Integration
@@ -22,7 +21,6 @@ tags:
 - Raspberry Pi
 - Software Development
 - Tech Conference
-- Videos
 section_names:
 - coding
 ---

@@ -10,10 +10,8 @@ date: 2025-06-03 22:20:12 +00:00
 permalink: /ai/news/Enhancing-Conversational-Agents-with-Azure-AI-Language-CLU-and-Custom-Question-Answering
 tags:
 - Agent Development
-- AI
 - AI Agents
 - AI Applications
-- Azure
 - Azure AI Foundry
 - Azure AI Foundry Labs
 - Azure AI Language
@@ -28,7 +26,6 @@ tags:
 - LLM
 - Microsoft Build
 - Model Deployment
-- News
 - QnA Maker
 - Question Answering Agent
 section_names:

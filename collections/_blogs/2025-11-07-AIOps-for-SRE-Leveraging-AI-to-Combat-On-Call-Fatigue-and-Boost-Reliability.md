@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-11-07 11:48:23 +00:00
 permalink: /ai/blogs/AIOps-for-SRE-Leveraging-AI-to-Combat-On-Call-Fatigue-and-Boost-Reliability
 tags:
-- AI
 - AI Driven Operations
 - AI For IT Operations
 - AI Operations
@@ -17,11 +16,9 @@ tags:
 - Alert Fatigue
 - Anomaly Detection
 - Automated Remediation
-- Blogs
 - Business Of DevOps
 - Cloud Operations
 - Contributed Content
-- DevOps
 - DevOps Automation
 - Event Correlation
 - Incident Management

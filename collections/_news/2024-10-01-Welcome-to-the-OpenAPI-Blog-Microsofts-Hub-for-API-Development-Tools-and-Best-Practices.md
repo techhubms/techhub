@@ -10,21 +10,16 @@ date: 2024-10-01 18:48:35 +00:00
 permalink: /github-copilot/news/Welcome-to-the-OpenAPI-Blog-Microsofts-Hub-for-API-Development-Tools-and-Best-Practices
 tags:
 - .NET
-- AI
 - API Center
 - API Design
 - API Development
 - ASP.NET Core
-- Azure
 - Azure API Management
 - Client Code Generation
-- Coding
 - Copilot Agents
-- GitHub Copilot
 - Hidi
 - Kiota
 - Microsoft
-- News
 - OpenAPI
 - Power Platform
 - Semantic Kernel

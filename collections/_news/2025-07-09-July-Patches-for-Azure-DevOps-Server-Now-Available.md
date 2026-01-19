@@ -9,18 +9,14 @@ feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-07-09 15:37:13 +00:00
 permalink: /azure/news/July-Patches-for-Azure-DevOps-Server-Now-Available
 tags:
-- Azure
 - Azure DevOps Server
-- DevOps
 - Microsoft
 - Multi Repo Trigger
-- News
 - Null Reference Exception
 - On Premises DevOps
 - Patch Installation
 - Patches
 - Release Notes
-- Security
 - Security Update
 - YAML Pipelines
 section_names:

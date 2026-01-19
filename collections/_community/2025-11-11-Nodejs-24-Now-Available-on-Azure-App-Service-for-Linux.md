@@ -11,12 +11,9 @@ permalink: /coding/community/Nodejs-24-Now-Available-on-Azure-App-Service-for-Li
 tags:
 - App Service Deployment
 - ARM Templates
-- Azure
 - Azure App Service
 - Bicep Templates
 - CI Workflows
-- Coding
-- Community
 - Continuous Integration
 - JavaScript
 - Linux

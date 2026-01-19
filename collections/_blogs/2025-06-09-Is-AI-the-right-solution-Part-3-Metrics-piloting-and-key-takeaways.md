@@ -9,8 +9,6 @@ feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-06-09 08:00:00 +00:00
 permalink: /ai/blogs/Is-AI-the-right-solution-Part-3-Metrics-piloting-and-key-takeaways
 tags:
-- AI
-- Blogs
 - Business Alignment
 - Ethical AI
 - IASA

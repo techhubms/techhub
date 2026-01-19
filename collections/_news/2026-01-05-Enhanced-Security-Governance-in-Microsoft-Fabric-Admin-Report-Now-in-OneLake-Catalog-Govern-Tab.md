@@ -10,7 +10,6 @@ date: 2026-01-05 11:00:00 +00:00
 permalink: /azure/news/Enhanced-Security-Governance-in-Microsoft-Fabric-Admin-Report-Now-in-OneLake-Catalog-Govern-Tab
 tags:
 - Admin Report
-- Azure
 - Compliance
 - Copilot
 - Data Loss Prevention
@@ -22,9 +21,7 @@ tags:
 - Information Protection
 - Microsoft Fabric
 - Microsoft Purview
-- News
 - OneLake Catalog
-- Security
 - Security Insights
 - Sensitivity Labels
 section_names:

@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-22 23:12:41 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-SWE-Model-Launches-in-Visual-Studio-Code-Insiders
 tags:
-- AI
 - AI Assistants
 - AI Models
 - Code Editing
@@ -18,9 +17,7 @@ tags:
 - Copilot SWE
 - Developer Productivity
 - GitHub
-- GitHub Copilot
 - IDE Tools
-- News
 - Prompt Engineering
 - Technical Preview
 - VS Code

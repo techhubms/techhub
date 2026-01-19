@@ -10,10 +10,8 @@ date: 2025-05-07 17:30:53 +00:00
 permalink: /ai/news/Azure-Developer-CLI-azd-May-2025-Release-New-Features-Templates-and-Docs
 tags:
 - .NET
-- AI
 - App Service
 - Azd
-- Azure
 - Azure API Management
 - Azure Container Apps
 - Azure Developer CLI
@@ -22,15 +20,12 @@ tags:
 - Blazor
 - CI/CD
 - Codespaces
-- Coding
-- DevOps
 - Docker
 - GitHub Actions
 - GitHub Codespaces
 - Java
 - JavaScript
 - Kubernetes
-- News
 - Node.js
 - OpenAI
 - Python

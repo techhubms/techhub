@@ -10,7 +10,6 @@ date: 2025-08-28 15:39:03 +00:00
 permalink: /coding/videos/Explaining-the-Open-Sourcing-of-Windows-Subsystem-for-Linux-WSL
 tags:
 - Codebase
-- Coding
 - Community Contributions
 - Developer Tools
 - File System Mounting
@@ -21,7 +20,6 @@ tags:
 - Open Source
 - Shorts
 - Transparency
-- Videos
 - Virtual Machines
 - Windows Subsystem For Linux
 - WSL

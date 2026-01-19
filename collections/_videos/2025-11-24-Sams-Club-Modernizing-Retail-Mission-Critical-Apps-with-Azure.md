@@ -10,14 +10,11 @@ date: 2025-11-24 12:15:09 +00:00
 permalink: /ml/videos/Sams-Club-Modernizing-Retail-Mission-Critical-Apps-with-Azure
 tags:
 - AKS
-- Azure
 - Azure SQL
 - Cloud Native
-- Coding
 - Cosmos DB
 - Data Consistency
 - Demo
-- DevOps
 - E Commerce
 - Fault Tolerance
 - High Availability
@@ -26,7 +23,6 @@ tags:
 - Microsoft Ignite
 - Migrateandmodernizeyourestate
 - Migration
-- ML
 - MSIgnite
 - Multi Region Deployment
 - Platform Modernization
@@ -35,7 +31,6 @@ tags:
 - Saga Pattern
 - Sam's Club
 - Service Architecture
-- Videos
 section_names:
 - azure
 - coding

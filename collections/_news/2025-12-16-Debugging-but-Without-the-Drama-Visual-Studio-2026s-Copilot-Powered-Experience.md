@@ -9,20 +9,16 @@ feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-16 15:00:12 +00:00
 permalink: /github-copilot/news/Debugging-but-Without-the-Drama-Visual-Studio-2026s-Copilot-Powered-Experience
 tags:
-- AI
 - AI Debugging
 - Bug Fixing
 - Code Analysis
-- Coding
 - Copilot Chat
 - Debugger Agent
 - Debugging And Diagnostics
 - Developer Productivity
 - Editor Integration
 - Exception Assistance
-- GitHub Copilot
 - Inline Values
-- News
 - Performance
 - Software Development
 - Test Debugging

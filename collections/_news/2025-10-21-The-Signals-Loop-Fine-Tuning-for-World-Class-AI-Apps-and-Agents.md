@@ -10,11 +10,9 @@ date: 2025-10-21 15:00:00 +00:00
 permalink: /github-copilot/news/The-Signals-Loop-Fine-Tuning-for-World-Class-AI-Apps-and-Agents
 tags:
 - Agent Design
-- AI
 - AI + Machine Learning
 - AI Agents
 - Autonomous Workflows
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
 - Cloud AI
@@ -24,12 +22,9 @@ tags:
 - Dragon Copilot
 - Feedback Loops
 - Fine Tuning
-- GitHub Copilot
 - LLM Architecture
 - LoRA
-- ML
 - Model Evaluation
-- News
 - Open Source Models
 - Productivity
 - Real Time Telemetry

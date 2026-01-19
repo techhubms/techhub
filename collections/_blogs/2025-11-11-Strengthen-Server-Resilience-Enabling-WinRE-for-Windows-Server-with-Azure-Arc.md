@@ -10,12 +10,10 @@ date: 2025-11-11 13:16:43 +00:00
 permalink: /azure/blogs/Strengthen-Server-Resilience-Enabling-WinRE-for-Windows-Server-with-Azure-Arc
 tags:
 - Adaptive Cloud
-- Azure
 - Azure Adaptive Cloud
 - Azure Arc
 - Azure Connected Machine Agent
 - Azure Policy
-- Blogs
 - Centralized Governance
 - Cloud
 - Compliance
@@ -25,7 +23,6 @@ tags:
 - Microsoft
 - Microsoft Azure
 - Public Preview
-- Security
 - Server Management
 - Windows
 - Windows Recovery Environment

@@ -9,15 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-13 10:00:00 +00:00
 permalink: /ai/community/Environmental-Sustainability-Features-in-Azure-API-Management-Minimizing-API-Infrastructure-Carbon-Impact
 tags:
-- AI
 - AI Infrastructure
 - API Infrastructure
 - API Policy
-- Azure
 - Azure API Management
 - Azure Carbon Intensity
 - Carbon Optimization
-- Community
 - Compliance
 - Environmental Sustainability
 - GenAI

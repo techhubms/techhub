@@ -10,7 +10,6 @@ date: 2025-11-19 12:41:34 +00:00
 permalink: /ai/videos/Securing-the-AI-Agents-with-Zenity-and-Microsoft
 tags:
 - Agent Vulnerabilities
-- AI
 - AI Agents
 - AI Governance
 - Compliance
@@ -25,10 +24,8 @@ tags:
 - OWASP Agent Standard
 - Posture Management
 - Runtime Activity
-- Security
 - Security Solutions
 - Threat Graph
-- Videos
 - Zenity
 section_names:
 - ai

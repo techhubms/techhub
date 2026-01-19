@@ -10,21 +10,14 @@ date: 2025-05-21 17:00:09 +00:00
 permalink: /github-copilot/news/Connect-Once-Integrate-Anywhere-Model-Context-Protocol-MCP-for-AI-Integration
 tags:
 - Agent Mode
-- AI
 - AI Integration
 - APIs
-- Azure
 - Azure API Management
 - C# SDK
-- Coding
 - Developer Productivity
-- DevOps
-- GitHub Copilot
 - MCP
-- News
 - OAuth 2.1
 - Registry
-- Security
 - VS
 - VS Code
 section_names:

@@ -10,20 +10,15 @@ date: 2025-11-20 10:23:43 +00:00
 permalink: /github-copilot/videos/AI-Powered-Hybrid-DevOps-with-GitHub-Copilot-and-Azure-DevOps
 tags:
 - Agentic DevOps
-- AI
 - Automation
-- Azure
 - Azure Boards
 - Azure DevOps
 - Azure Pipelines
 - Branch Management
 - CI/CD
 - Code Review
-- Coding
-- DevOps
 - DevOps Strategy
 - GitHub
-- GitHub Copilot
 - Hybrid Adoption
 - InnovatewithAzureAIappsandagents
 - MCP Servers
@@ -31,7 +26,6 @@ tags:
 - MSIgnite
 - Playwright
 - Sessions
-- Videos
 - Work Item Traceability
 - YAML
 section_names:

@@ -11,7 +11,6 @@ permalink: /ml/community/Excel-at-40-Week-1-Days-13
 tags:
 - Analytics
 - Audit Automation
-- Community
 - Conditional Formatting
 - Data Analysis
 - Excel Formulas
@@ -19,7 +18,6 @@ tags:
 - Macros
 - Microsoft Excel
 - Microsoft Fabric
-- ML
 - PivotTables
 - Power BI
 - Python in Excel

@@ -11,12 +11,10 @@ permalink: /devops/news/One-Click-Merge-Conflict-Resolution-in-GitHub-Web-Interf
 tags:
 - Code Collaboration
 - Collaboration Tools
-- DevOps
 - DevOps Tools
 - GitHub
 - Improvement
 - Merge Conflicts
-- News
 - Productivity
 - Pull Requests
 - Source Control

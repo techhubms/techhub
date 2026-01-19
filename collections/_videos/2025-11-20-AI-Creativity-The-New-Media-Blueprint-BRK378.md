@@ -10,7 +10,6 @@ date: 2025-11-20 14:55:21 +00:00
 permalink: /ai/videos/AI-Creativity-The-New-Media-Blueprint-BRK378
 tags:
 - Agentic AI
-- AI
 - AI Agents
 - AI Transformation
 - Automated Workflows
@@ -29,7 +28,6 @@ tags:
 - MSIgnite
 - Premier League
 - Session BRK378
-- Videos
 - Workflow Automation
 section_names:
 - ai

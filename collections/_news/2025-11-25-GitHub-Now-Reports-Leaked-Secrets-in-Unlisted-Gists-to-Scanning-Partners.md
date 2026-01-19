@@ -13,19 +13,16 @@ tags:
 - AWS
 - Code Leaks
 - Code Sharing
-- DevOps
 - DevOps Best Practices
 - GitHub
 - GitHub Gists
 - Improvement
 - Incident Response
-- News
 - OpenAI
 - Partner Program
 - Repository Security
 - Secret Scanning
 - Secrets Management
-- Security
 - Security Alert
 - Stripe
 section_names:

@@ -10,11 +10,9 @@ date: 2025-10-07 06:25:50 +00:00
 permalink: /ml/community/Secure-Medallion-Architecture-Pattern-on-Azure-Databricks-Part-I
 tags:
 - ADLS Gen2
-- Azure
 - Azure Databricks
 - Azure Key Vault
 - Cluster Policies
-- Community
 - Data Governance
 - Delta Lake
 - Lakeflow
@@ -23,9 +21,7 @@ tags:
 - Managed Identities
 - Medallion Architecture
 - Microsoft Entra ID
-- ML
 - Operational Security
-- Security
 - System Tables
 - Unity Catalog
 section_names:

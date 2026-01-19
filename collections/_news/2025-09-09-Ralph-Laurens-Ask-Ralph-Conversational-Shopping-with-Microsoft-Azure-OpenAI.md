@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-09 13:20:25 +00:00
 permalink: /ai/news/Ralph-Laurens-Ask-Ralph-Conversational-Shopping-with-Microsoft-Azure-OpenAI
 tags:
-- AI
 - AI Integration
 - Ask Ralph
-- Azure
 - Azure OpenAI Service
 - Cloud AI
 - Company News
@@ -21,7 +19,6 @@ tags:
 - E Commerce
 - Machine Learning
 - Microsoft Azure
-- News
 - Ralph Lauren
 - Retail Technology
 section_names:

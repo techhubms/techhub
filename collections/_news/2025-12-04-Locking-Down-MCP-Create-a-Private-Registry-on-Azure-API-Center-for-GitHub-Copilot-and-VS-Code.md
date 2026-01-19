@@ -9,24 +9,19 @@ feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-12-04 15:06:03 +00:00
 permalink: /github-copilot/news/Locking-Down-MCP-Create-a-Private-Registry-on-Azure-API-Center-for-GitHub-Copilot-and-VS-Code
 tags:
-- AI
 - Anonymous Access
 - API Management
 - API Registry
-- Azure
 - Azure API Center
 - CORS
 - Developer Productivity
 - Developer Tools
-- DevOps
 - Endpoint Configuration
 - Enterprise Integration
 - GitHub
-- GitHub Copilot
 - MCP
 - MCP (model Context Protocol)
 - Microsoft Azure
-- News
 - V0.1 MCP Registry
 - VS Code
 section_names:

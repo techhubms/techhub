@@ -11,7 +11,6 @@ permalink: /ai/videos/AI-Use-Cases-in-Microsoft-Teams-Integrated-Contact-Center
 tags:
 - Agent Assist
 - Agenticbusinessapplications
-- AI
 - AI Integration
 - Business System Integration
 - Contact Center
@@ -25,7 +24,6 @@ tags:
 - Power Platform
 - Scalable Performance
 - Supervisor Functionality
-- Videos
 section_names:
 - ai
 ---

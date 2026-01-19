@@ -10,8 +10,6 @@ date: 2025-10-14 19:01:20 +00:00
 permalink: /ai/news/The-Developers-Guide-to-Smarter-Fine-tuning-with-Azure-AI-Foundry
 tags:
 - Agentic AI
-- AI
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
 - Code Samples
@@ -23,7 +21,6 @@ tags:
 - LLM
 - MicrosoftLearn
 - Model Customization
-- News
 - Python Grader
 - Region Deployment
 - Reinforcement Fine Tuning

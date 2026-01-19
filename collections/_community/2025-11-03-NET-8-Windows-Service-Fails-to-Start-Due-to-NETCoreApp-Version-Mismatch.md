@@ -12,8 +12,6 @@ tags:
 - .NET
 - .NET 8
 - Application Failure
-- Coding
-- Community
 - Dependency Resolution
 - Event Viewer
 - Framework Dependency

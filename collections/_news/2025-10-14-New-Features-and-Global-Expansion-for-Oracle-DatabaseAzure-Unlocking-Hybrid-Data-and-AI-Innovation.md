@@ -9,10 +9,8 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-14 18:00:00 +00:00
 permalink: /ai/news/New-Features-and-Global-Expansion-for-Oracle-DatabaseAzure-Unlocking-Hybrid-Data-and-AI-Innovation
 tags:
-- AI
 - AI + Machine Learning
 - AI Integration
-- Azure
 - Azure Accelerate
 - Azure AI Foundry
 - Azure Arc
@@ -29,14 +27,11 @@ tags:
 - Microsoft Fabric
 - Microsoft Sentinel
 - Migration
-- ML
-- News
 - OneLake
 - Oracle Database@Azure
 - Oracle GoldenGate
 - Power BI
 - Real Time Analytics
-- Security
 - Zero ETL
 section_names:
 - ai

@@ -9,16 +9,12 @@ feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2026-01-15 13:00:33 +00:00
 permalink: /github-copilot/news/Copilot-Memories-Streamlining-Team-Coding-with-Visual-Studio
 tags:
-- AI
 - AI Assisted Development
 - Code Consistency
 - Code Standards
-- Coding
 - Coding Best Practices
 - Copilot Memories
 - Developer Workflow
-- GitHub Copilot
-- News
 - Onboarding
 - Project Guidelines
 - Team Collaboration

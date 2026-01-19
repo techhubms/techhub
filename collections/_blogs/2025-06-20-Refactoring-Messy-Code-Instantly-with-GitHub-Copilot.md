@@ -9,16 +9,13 @@ feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-06-20 00:00:00 +00:00
 permalink: /github-copilot/blogs/Refactoring-Messy-Code-Instantly-with-GitHub-Copilot
 tags:
-- AI
 - AI Assisted Coding
 - Automation
-- Blogs
 - Clean Code
 - Code Quality
 - Code Refactoring
 - Copilot Chat
 - Developer Productivity
-- GitHub Copilot
 - Software Engineering
 - Workflow Optimization
 section_names:

@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 14:33:12 +00:00
 permalink: /ai/videos/Drive-Innovation-with-AI-Hybrid-Cloud-and-Azure-Storage-Solutions
 tags:
-- AI
 - AI Factory
-- Azure
 - Azure Local
 - Azure Storage
 - Cloud Infrastructure
@@ -27,7 +25,6 @@ tags:
 - PowerStore
 - Reliability
 - Scalability
-- Videos
 - Workflow Automation
 section_names:
 - ai

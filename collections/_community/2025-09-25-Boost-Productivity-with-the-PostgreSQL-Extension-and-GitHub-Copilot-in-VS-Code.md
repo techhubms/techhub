@@ -9,17 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-25 05:00:00 +00:00
 permalink: /github-copilot/community/Boost-Productivity-with-the-PostgreSQL-Extension-and-GitHub-Copilot-in-VS-Code
 tags:
-- AI
-- Azure
 - Azure Database For PostgreSQL
-- Coding
-- Community
 - Copilot Chat
 - Database Development
 - Developer Productivity
 - Docker
 - Extension Marketplace
-- GitHub Copilot
 - IntelliSense
 - Microsoft Entra ID
 - PostgreSQL

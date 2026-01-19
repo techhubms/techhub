@@ -10,7 +10,6 @@ date: 2025-11-21 15:23:41 +00:00
 permalink: /ai/videos/Preventing-Data-Exfiltration-with-Microsoft-Purviews-Layered-Protection-Strategy
 tags:
 - Adaptive Application Scopes
-- AI
 - AI Driven Protection
 - Cloud Security
 - Consumer AI Tools
@@ -24,12 +23,10 @@ tags:
 - Microsoft Purview
 - MSIgnite
 - Secureyourdata
-- Security
 - Security Strategy
 - Sensitive Data
 - Unified Data Protection
 - Unmanaged Devices
-- Videos
 section_names:
 - ai
 - security

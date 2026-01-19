@@ -10,19 +10,15 @@ date: 2025-12-16 18:28:30 +00:00
 permalink: /github-copilot/news/C-Code-Editing-Tools-for-GitHub-Copilot-in-Visual-Studio-2026-Insiders-Public-Preview
 tags:
 - Agent Mode
-- AI
 - C++
 - Class Hierarchies
 - Code Editing
 - Code Refactoring
-- Coding
 - Copilot
 - Copilot Chat
 - Developer Tools
 - Function Call Tracing
-- GitHub Copilot
 - Multi File Support
-- News
 - Public Preview
 - Semantic Analysis
 - Symbol Awareness

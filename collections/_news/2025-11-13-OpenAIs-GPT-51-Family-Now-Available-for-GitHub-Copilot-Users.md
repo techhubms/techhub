@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-13 17:10:39 +00:00
 permalink: /github-copilot/news/OpenAIs-GPT-51-Family-Now-Available-for-GitHub-Copilot-Users
 tags:
-- AI
 - AI Models
 - API Key Integration
 - Copilot
@@ -17,14 +16,12 @@ tags:
 - Copilot CLI
 - Copilot Plans
 - Eclipse
-- GitHub Copilot
 - GPT 5.1
 - GPT 5.1 Codex
 - GPT 5.1 Codex Mini
 - IDE Integration
 - JetBrains
 - Model Selection
-- News
 - Policy Management
 - VS Code
 - Xcode

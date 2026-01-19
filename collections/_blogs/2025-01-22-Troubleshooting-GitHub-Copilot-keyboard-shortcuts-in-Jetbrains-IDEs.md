@@ -9,11 +9,8 @@ feed_url: https://jessehouwing.net/rss/
 date: 2025-01-22 18:39:29 +00:00
 permalink: /github-copilot/blogs/Troubleshooting-GitHub-Copilot-keyboard-shortcuts-in-Jetbrains-IDEs
 tags:
-- AI
-- Blogs
 - Codespaces
 - GitHub
-- GitHub Copilot
 - IDE Configuration
 - IntelliJ
 - Jetbrains

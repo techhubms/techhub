@@ -10,7 +10,6 @@ date: 2025-11-24 14:26:49 +00:00
 permalink: /ai/videos/Securing-AI-at-Scale-Microsofts-Latest-Innovations-in-Agent-App-and-Data-Protection
 tags:
 - Agent 365
-- AI
 - AI Agents
 - AI Governance
 - AI Security
@@ -26,11 +25,9 @@ tags:
 - Other
 - Purview
 - Regulatory Compliance
-- Security
 - Security Dashboard For AI
 - Supply Chain Security
 - Threat Detection
-- Videos
 section_names:
 - ai
 - security

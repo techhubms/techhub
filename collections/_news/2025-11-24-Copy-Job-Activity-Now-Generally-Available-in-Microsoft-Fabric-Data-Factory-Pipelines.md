@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-24 11:00:00 +00:00
 permalink: /ml/news/Copy-Job-Activity-Now-Generally-Available-in-Microsoft-Fabric-Data-Factory-Pipelines
 tags:
-- Azure
 - Bulk Data Transfer
 - Change Data Capture
 - Copy Job Activity
@@ -22,8 +21,6 @@ tags:
 - ETL
 - Incremental Copy
 - Microsoft Fabric
-- ML
-- News
 - No Code
 - Pipeline Automation
 - Pipeline Scheduling

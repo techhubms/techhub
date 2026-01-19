@@ -11,10 +11,7 @@ ghes_support: false
 plans:
 - Business
 alt-collection: features
-tags:
-- AI
-- GitHub Copilot
-- Videos
+tags: []
 section_names:
 - ai
 - github-copilot

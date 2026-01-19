@@ -13,13 +13,11 @@ tags:
 - Development Security
 - Michael Howard
 - Microsoft
-- Security
 - Security Best Practices
 - Security Bug
 - Security Risks
 - Server Side Request Forgery
 - SSRF
-- Videos
 - Vulnerability
 - Web Application Security
 section_names:

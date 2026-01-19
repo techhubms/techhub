@@ -9,15 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 20:29:14 +00:00
 permalink: /ai/community/Oracle-DatabaseAzure-Now-Available-in-31-Regions-With-Enhanced-Security-and-AI-Integration
 tags:
-- AI
 - AI Integration
 - Apache Iceberg
 - Autonomous AI Database
-- Azure
 - Azure Arc
 - Azure Key Vault
 - Cloud Security
-- Community
 - Enterprise Data
 - Exadata Database
 - Governance
@@ -32,7 +29,6 @@ tags:
 - Operational Automation
 - Oracle Database@Azure
 - Power BI
-- Security
 - Transparent Data Encryption
 section_names:
 - ai

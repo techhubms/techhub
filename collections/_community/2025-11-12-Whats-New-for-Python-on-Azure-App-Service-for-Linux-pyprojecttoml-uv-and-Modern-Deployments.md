@@ -10,15 +10,11 @@ date: 2025-11-12 15:16:13 +00:00
 permalink: /coding/community/Whats-New-for-Python-on-Azure-App-Service-for-Linux-pyprojecttoml-uv-and-Modern-Deployments
 tags:
 - App Service For Linux
-- Azure
 - Azure App Service
 - CI/CD
 - Cloud Development
-- Coding
-- Community
 - Continuous Deployment
 - Deployment Pipeline
-- DevOps
 - Flask
 - GitHub Actions
 - Oryx

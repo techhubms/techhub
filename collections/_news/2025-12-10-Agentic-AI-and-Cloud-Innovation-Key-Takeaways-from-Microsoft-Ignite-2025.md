@@ -10,18 +10,14 @@ date: 2025-12-10 17:00:00 +00:00
 permalink: /ai/news/Agentic-AI-and-Cloud-Innovation-Key-Takeaways-from-Microsoft-Ignite-2025
 tags:
 - Agentic AI
-- AI
 - AI + Machine Learning
-- Azure
 - Azure Boost DPU
 - Azure Copilot
 - Azure HorizonDB
 - Claude Models
 - Cloud Migration
 - Cobalt 200
-- Coding
 - Data Security
-- DevOps
 - DevOps Automation
 - DiskANN
 - Fabric IQ
@@ -31,12 +27,9 @@ tags:
 - Integrated HSM
 - Microsoft Foundry
 - Microsoft Ignite
-- ML
-- News
 - NVIDIA Blackwell
 - PostgreSQL
 - RBAC
-- Security
 - Semantic Intelligence
 - Vector Indexing
 section_names:

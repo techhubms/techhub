@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 01:25:53 +00:00
 permalink: /azure/community/Accelerating-SAP-Sybase-ASE-to-Azure-SQL-Migration-Using-SSMA-and-Parallel-BCP
 tags:
-- Azure
 - Azure Data Migration
 - Azure SQL Database
 - BCP
 - Cloud Modernization
-- Community
 - Data Chunking
 - Data Engineering
 - Database Migration

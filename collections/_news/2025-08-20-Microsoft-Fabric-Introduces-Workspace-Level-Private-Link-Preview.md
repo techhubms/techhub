@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-20 16:11:57 +00:00
 permalink: /azure/news/Microsoft-Fabric-Introduces-Workspace-Level-Private-Link-Preview
 tags:
-- Azure
 - Azure Portal
 - Azure Private Link
 - Cloud Security
@@ -20,10 +19,8 @@ tags:
 - Granular Access Control
 - Microsoft Fabric
 - Network Security
-- News
 - Private Endpoint
 - Regulatory Compliance
-- Security
 - Virtual Networks
 section_names:
 - azure

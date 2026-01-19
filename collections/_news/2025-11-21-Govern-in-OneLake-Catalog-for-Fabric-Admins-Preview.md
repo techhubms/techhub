@@ -10,7 +10,6 @@ date: 2025-11-21 09:30:00 +00:00
 permalink: /ml/news/Govern-in-OneLake-Catalog-for-Fabric-Admins-Preview
 tags:
 - Admin Tools
-- Azure
 - Capacity Management
 - Compliance
 - Copilot
@@ -22,10 +21,7 @@ tags:
 - Fabric Insights
 - Governance Dashboard
 - Microsoft Fabric
-- ML
-- News
 - OneLake Catalog
-- Security
 - Sensitivity Labels
 section_names:
 - azure

@@ -9,13 +9,9 @@ feed_url: https://blog.jesseswart.nl/index.xml
 date: 2024-06-21 07:51:32 +00:00
 permalink: /github-copilot/blogs/Quickly-Consume-External-APIs-with-GitHub-Copilot
 tags:
-- AI
 - API Documentation
 - API Integration
-- Blogs
-- Coding
 - Developer Tools
-- GitHub Copilot
 - OpenWeather
 section_names:
 - ai

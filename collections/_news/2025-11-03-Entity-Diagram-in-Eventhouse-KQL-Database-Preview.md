@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-03 09:00:00 +00:00
 permalink: /ml/news/Entity-Diagram-in-Eventhouse-KQL-Database-Preview
 tags:
-- Azure
 - Cross Database Relationships
 - Data Engineering
 - Data Flow
@@ -21,8 +20,6 @@ tags:
 - KQL Database
 - Materialized Views
 - Microsoft Fabric
-- ML
-- News
 - Real Time Analytics
 - Schema Validation
 - Update Policies

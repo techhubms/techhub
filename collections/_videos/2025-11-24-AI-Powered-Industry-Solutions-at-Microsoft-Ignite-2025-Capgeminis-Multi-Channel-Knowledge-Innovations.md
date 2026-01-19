@@ -10,17 +10,14 @@ date: 2025-11-24 14:34:52 +00:00
 permalink: /github-copilot/videos/AI-Powered-Industry-Solutions-at-Microsoft-Ignite-2025-Capgeminis-Multi-Channel-Knowledge-Innovations
 tags:
 - Agentic Industry Studio
-- AI
 - AI Innovations
 - AI Transformation
-- Azure
 - Capgemini
 - Customer Efficiency
 - Domain Knowledge
 - Dynamic Knowledge Creation
 - English (us)
 - F5n1
-- GitHub Copilot
 - GitHub Integrations
 - Ignite
 - Intelligent Operation Center
@@ -34,7 +31,6 @@ tags:
 - STUDIOSP78
 - STUDIOSP78 V1
 - Technical
-- Videos
 - Voice Technology
 section_names:
 - ai

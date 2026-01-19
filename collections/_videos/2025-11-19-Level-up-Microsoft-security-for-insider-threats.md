@@ -21,12 +21,10 @@ tags:
 - MS Ignite
 - MSIgnite
 - OpenText Core
-- Security
 - Security Analytics
 - Security Operations
 - Telemetry
 - Threat Detection
-- Videos
 section_names:
 - security
 ---

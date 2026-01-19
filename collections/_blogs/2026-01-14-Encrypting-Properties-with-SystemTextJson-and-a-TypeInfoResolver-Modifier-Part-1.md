@@ -11,11 +11,8 @@ permalink: /coding/blogs/Encrypting-Properties-with-SystemTextJson-and-a-TypeInf
 tags:
 - .NET
 - Attribute Based Encryption
-- Azure
 - Azure Key Vault
-- Blogs
 - C#
-- Coding
 - Custom Serialization
 - Data Protection
 - Dependency Injection
@@ -28,7 +25,6 @@ tags:
 - Minimal API
 - PII Compliance
 - POCO
-- Security
 - Serialization
 - System.Text.Json
 - Typeinforesolver

@@ -9,9 +9,7 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-07 15:00:00 +00:00
 permalink: /ai/news/Introducing-Azure-Accelerate-Expert-Support-and-Investments-for-Your-Cloud-and-AI-Transformation
 tags:
-- AI
 - AI + Machine Learning
-- Azure
 - Azure Accelerate
 - Azure AI Search
 - Azure Essentials
@@ -28,7 +26,6 @@ tags:
 - Management And Governance
 - Microsoft Partners
 - Migration
-- News
 section_names:
 - ai
 - azure

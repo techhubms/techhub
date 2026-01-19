@@ -10,10 +10,8 @@ date: 2024-12-09 06:56:56 +00:00
 permalink: /coding/blogs/Chain-of-Responsibility-Design-Pattern-in-C
 tags:
 - .NET
-- Blogs
 - C#
 - Chain Of Responsibility
-- Coding
 - Design Pattern
 - Design Patterns
 - Loose Coupling

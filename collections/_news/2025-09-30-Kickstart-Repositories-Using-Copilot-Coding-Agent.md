@@ -10,11 +10,9 @@ date: 2025-09-30 22:58:07 +00:00
 permalink: /github-copilot/news/Kickstart-Repositories-Using-Copilot-Coding-Agent
 tags:
 - Agent Policies
-- AI
 - AI Development Tools
 - Code Generation
 - Code Review
-- Coding
 - Collaboration Tools
 - Copilot
 - Copilot Business
@@ -24,10 +22,8 @@ tags:
 - Developer Productivity
 - Documentation
 - GitHub
-- GitHub Copilot
 - GitHub Enterprise
 - Improvement
-- News
 - Prompt Engineering
 - Pull Requests
 - Repository Automation

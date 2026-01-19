@@ -9,10 +9,8 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-24 09:30:00 +00:00
 permalink: /ai/news/Querying-Database-Backups-in-Microsoft-Fabric-In-Place-Analytics-Without-ETL
 tags:
-- AI
 - Analytics
 - Apache Iceberg
-- Azure
 - Azure AI Foundry
 - Cloud Data Lake
 - Compliance
@@ -26,12 +24,9 @@ tags:
 - Metadata Virtualization
 - Microsoft Entra
 - Microsoft Fabric
-- ML
 - Multi Cloud
-- News
 - OneLake
 - Power BI
-- Security
 section_names:
 - ai
 - azure

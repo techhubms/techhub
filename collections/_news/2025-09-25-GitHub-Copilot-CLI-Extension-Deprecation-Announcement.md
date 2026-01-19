@@ -10,7 +10,6 @@ date: 2025-09-25 20:32:31 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-CLI-Extension-Deprecation-Announcement
 tags:
 - Agentic AI
-- AI
 - AI Coding Assistant
 - CLI Extension
 - Client Apps
@@ -19,10 +18,8 @@ tags:
 - Deprecation Notice
 - Enterprise Policy
 - Gh Copilot
-- GitHub Copilot
 - GitHub Copilot CLI
 - Migration Guide
-- News
 - Retired
 - VS Code
 section_names:

@@ -10,16 +10,12 @@ date: 2025-03-12 18:00:43 +00:00
 permalink: /coding/news/Authoring-Enhancements-in-Microsoft-Desired-State-Configuration-v300
 tags:
 - Authoring
-- Azure
 - Azure Resource Manager
 - Bicep
-- Coding
 - Configuration as Code
 - Desired State Configuration
-- DevOps
 - DSC V3.0.0
 - IaC
-- News
 - PowerShell
 - PowerShell DSC
 - Schema Validation

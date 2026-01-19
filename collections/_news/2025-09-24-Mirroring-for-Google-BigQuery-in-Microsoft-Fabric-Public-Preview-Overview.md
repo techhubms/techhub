@@ -10,7 +10,6 @@ date: 2025-09-24 15:00:00 +00:00
 permalink: /ml/news/Mirroring-for-Google-BigQuery-in-Microsoft-Fabric-Public-Preview-Overview
 tags:
 - Analytics
-- Azure
 - Change Data Capture
 - Cross Cloud
 - Data Governance
@@ -21,8 +20,6 @@ tags:
 - Google BigQuery
 - Microsoft Fabric
 - Mirroring
-- ML
-- News
 - OneLake
 - OPDG
 - Power BI

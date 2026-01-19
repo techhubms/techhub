@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-30 14:14:35 +00:00
 permalink: /ai/news/Grok-4-Now-Available-in-Azure-AI-Foundry-Advanced-Reasoning-and-Business-Ready-AI
 tags:
-- AI
 - AI Benchmarking
 - AI Safety
-- Azure
 - Azure AI Foundry
 - Code Generation
 - Company News
@@ -23,7 +21,6 @@ tags:
 - Grok 4
 - Large Context Window
 - Model Card
-- News
 - Pricing
 - Real Time Data
 - Reinforcement Learning

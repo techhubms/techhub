@@ -10,20 +10,15 @@ date: 2025-11-18 16:27:30 +00:00
 permalink: /ai/community/Whats-New-in-Azure-App-Service-Managed-Instance-Aspire-AI-and-Developer-Platform-Updates-at-MS-Ignite-2025
 tags:
 - .NET
-- AI
 - AI Integration
 - App Service Environment V3
 - ASP.NET
 - Aspire
-- Azure
 - Azure App Service
 - Azure Monitor
 - Azure Pipelines
 - CI/CD
-- Coding
-- Community
 - Custom Error Pages
-- DevOps
 - Elastic APM
 - Foundry Agent Service
 - GitHub Actions

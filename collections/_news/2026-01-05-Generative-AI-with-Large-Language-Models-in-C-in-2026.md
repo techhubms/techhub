@@ -11,14 +11,11 @@ permalink: /ai/news/Generative-AI-with-Large-Language-Models-in-C-in-2026
 tags:
 - .NET
 - Agentic Workflows
-- AI
 - AI Engineering
-- Azure
 - Azure OpenAI
 - Azure OpenAI Service
 - C#
 - ChatGPT
-- Coding
 - Embeddings
 - Generative AI
 - GitHub Models
@@ -27,7 +24,6 @@ tags:
 - MEAI
 - Microsoft Extensions For AI
 - Microsoft Foundry
-- News
 - Ollama
 - Prompt Engineering
 - Rag

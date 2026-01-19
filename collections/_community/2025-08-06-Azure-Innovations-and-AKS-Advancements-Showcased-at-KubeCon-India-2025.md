@@ -9,18 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-06 02:30:00 +00:00
 permalink: /ai/community/Azure-Innovations-and-AKS-Advancements-Showcased-at-KubeCon-India-2025
 tags:
-- AI
 - AI Model Context Protocol
 - AKS
 - AKS Security Dashboard
-- Azure
 - Azure Bastion
 - Azure Monitor
 - Cloud Native
-- Community
 - Confidential VMs
 - Deployment Safeguards
-- DevOps
 - Encryption
 - KubeCon
 - Kubernetes
@@ -29,7 +25,6 @@ tags:
 - Node Auto Provisioning
 - Observability
 - Prometheus
-- Security
 - Web Application Firewall
 - Zero Trust
 section_names:

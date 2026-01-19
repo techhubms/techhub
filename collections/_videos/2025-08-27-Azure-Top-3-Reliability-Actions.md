@@ -10,7 +10,6 @@ date: 2025-08-27 21:22:32 +00:00
 permalink: /azure/videos/Azure-Top-3-Reliability-Actions
 tags:
 - Availability Zones
-- Azure
 - Azure Architect
 - Azure Availability Zones
 - Azure Networking
@@ -25,7 +24,6 @@ tags:
 - Regions
 - Reliability
 - Resilience
-- Videos
 section_names:
 - azure
 ---

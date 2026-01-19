@@ -10,18 +10,13 @@ date: 2025-12-30 16:22:54 +00:00
 permalink: /ai/community/How-SRE-Agent-Closes-the-Developer-Loop-Debugging-and-Fixing-Azure-Cloud-App-Failures-with-AI
 tags:
 - .NET 8
-- AI
 - Application Debugging
-- Azure
 - Azure Networking
 - Azure SQL Database
 - Azure SRE Agent
 - Bicep
 - Claude Opus
-- Coding
-- Community
 - Developer Workflow
-- DevOps
 - DevOps Automation
 - DNS Zone
 - Entra ID
@@ -32,7 +27,6 @@ tags:
 - Managed Identity
 - Private Endpoint
 - Resource Mapping
-- Security
 - Virtual Network
 - VS Code Copilot
 section_names:

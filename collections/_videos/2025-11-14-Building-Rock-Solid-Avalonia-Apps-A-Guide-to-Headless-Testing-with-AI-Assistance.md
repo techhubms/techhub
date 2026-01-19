@@ -10,21 +10,16 @@ date: 2025-11-14 06:30:06 +00:00
 permalink: /github-copilot/videos/Building-Rock-Solid-Avalonia-Apps-A-Guide-to-Headless-Testing-with-AI-Assistance
 tags:
 - .NET
-- AI
 - AI Pair Programming
 - Application Quality
 - Avalonia
-- Coding
 - Continuous Integration
 - Developer Productivity
-- DevOps
-- GitHub Copilot
 - Headless Testing
 - Test Automation
 - Testing Strategy
 - UI Automation
 - UI Testing
-- Videos
 section_names:
 - ai
 - coding

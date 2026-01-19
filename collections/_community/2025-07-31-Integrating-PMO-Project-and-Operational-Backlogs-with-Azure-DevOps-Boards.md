@@ -10,12 +10,9 @@ date: 2025-07-31 10:06:16 +00:00
 permalink: /azure/community/Integrating-PMO-Project-and-Operational-Backlogs-with-Azure-DevOps-Boards
 tags:
 - API Task Feed
-- Azure
 - Azure Boards
 - Azure DevOps
-- Community
 - Cross Team Collaboration
-- DevOps
 - DevOps Best Practices
 - Hierarchical Teams
 - ITSM Integration

@@ -11,11 +11,9 @@ permalink: /azure/community/Cloud-Native-Identity-with-Azure-Files-Entra-only-Se
 tags:
 - Active Directory
 - Admin Roles
-- Azure
 - Azure Files
 - Cloud Security
 - Cloud Storage
-- Community
 - FSLogix
 - Hybrid Identity
 - Identity Management
@@ -23,7 +21,6 @@ tags:
 - Operational Overhead
 - RBAC
 - Remote Work
-- Security
 - SMB Authentication
 - Thin Client
 - Virtual Desktop Infrastructure

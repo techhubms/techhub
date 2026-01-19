@@ -12,9 +12,7 @@ tags:
 - Bluetooth Keyboard
 - Bluetooth Mouse
 - Coding Environment
-- Community
 - Device Compatibility
-- DevOps
 - GitHub
 - GitHub Codespaces
 - Ipad

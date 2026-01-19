@@ -10,11 +10,9 @@ date: 2025-05-21 14:46:46 +00:00
 permalink: /ai/news/Transitioning-to-MicrosoftExtensionsAIs-IEmbeddingGenerator-in-Semantic-Kernel
 tags:
 - .NET
-- AI
 - AI Services
 - Azure OpenAI
 - C#
-- Coding
 - Connector Support
 - Ecosystem
 - Embeddings
@@ -23,7 +21,6 @@ tags:
 - Microsoft Semantic Kernel
 - Microsoft.Extensions.AI
 - Migration Guide
-- News
 - OpenAI
 - RAG
 - Samples

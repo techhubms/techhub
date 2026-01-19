@@ -9,18 +9,14 @@ feed_url: https://code.visualstudio.com/feed.xml
 date: 2026-01-15 00:00:00 +00:00
 permalink: /ai/news/Building-docfind-Fast-Client-Side-Search-for-VS-Code-Docs-with-Rust-WASM-and-Copilot
 tags:
-- AI
 - Blog
 - CLI Tools
 - Client Side Search
-- Coding
-- DevOps
 - Docfind
 - Edge Computing
 - FSST
 - FST
 - Levenshtein Automaton
-- News
 - Open Source
 - RAKE
 - Rust

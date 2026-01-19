@@ -12,7 +12,6 @@ tags:
 - .NET
 - .NET 10
 - Blazor
-- Coding
 - DNX
 - Dotnet10
 - Kestrel
@@ -22,7 +21,6 @@ tags:
 - Passkeys
 - Preview 6
 - Validation
-- Videos
 - VS Code
 - WebAuthN
 section_names:

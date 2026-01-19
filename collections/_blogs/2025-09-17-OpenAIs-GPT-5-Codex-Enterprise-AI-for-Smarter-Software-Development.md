@@ -9,20 +9,16 @@ feed_url: https://devops.com/feed/
 date: 2025-09-17 07:26:00 +00:00
 permalink: /ai/blogs/OpenAIs-GPT-5-Codex-Enterprise-AI-for-Smarter-Software-Development
 tags:
-- AI
 - AI Code Review
 - AI in DevOps
 - Automated Code Review
-- Blogs
 - Business Of DevOps
 - CLI Tools
 - Code Quality
 - Code Refactoring
-- Coding
 - Complex Debugging AI
 - Debugging
 - Developer Workflows
-- DevOps
 - Enterprise AI Coding
 - Enterprise Software Development
 - GPT 5 Codex

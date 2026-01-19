@@ -12,12 +12,10 @@ tags:
 - .NET
 - .NET 10
 - .NET 9
-- AI
 - AI Inference
 - AI Library Design
 - AI Performance
 - AIML
-- Coding
 - Cost Optimization
 - Demo
 - Developer
@@ -26,15 +24,12 @@ tags:
 - Dotnetdeveloper
 - GPU Utilization
 - Hugging Face Models
-- Machine Learning
 - MachineLearning
-- ML
 - Onnx
 - ONNX Runtime
 - Production AI
 - Python Integration
 - Software Developer
-- Videos
 section_names:
 - ai
 - coding

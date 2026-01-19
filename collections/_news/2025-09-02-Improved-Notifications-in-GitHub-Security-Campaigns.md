@@ -9,18 +9,13 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-02 09:29:30 +00:00
 permalink: /github-copilot/news/Improved-Notifications-in-GitHub-Security-Campaigns
 tags:
-- AI
 - Application Security
 - Code Security
 - Developer Collaboration
-- DevOps
-- GitHub Copilot
 - GitHub Copilot Autofix
 - GitHub Enterprise Cloud
 - GitHub Security Campaigns
-- News
 - Notification System
-- Security
 - Security Alerts
 - Security Automation
 section_names:

@@ -9,17 +9,13 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-09-06 14:01:05 +00:00
 permalink: /github-copilot/videos/Turning-GitHub-Copilot-Prompts-into-Executable-Files-in-VS-Code
 tags:
-- AI
 - AI Integration
 - AI Workflow
 - Code Automation
-- Coding
 - Context Engineering
 - Developer Tools
-- GitHub Copilot
 - Productivity
 - Prompt Files
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

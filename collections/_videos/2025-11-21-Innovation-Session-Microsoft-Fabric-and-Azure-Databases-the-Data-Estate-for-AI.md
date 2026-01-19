@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 12:58:10 +00:00
 permalink: /ai/videos/Innovation-Session-Microsoft-Fabric-and-Azure-Databases-the-Data-Estate-for-AI
 tags:
-- AI
 - AI Transformation
-- Azure
 - Azure PostgreSQL
 - Azure SQL
 - Customer Success
@@ -20,7 +18,6 @@ tags:
 - Fabric IQ
 - Microsoft Fabric
 - Microsoft Ignite
-- ML
 - MSIgnite
 - OneLake
 - Power BI
@@ -28,7 +25,6 @@ tags:
 - Semantic Models
 - Unified Data Platform
 - Unifyyourdataplatform
-- Videos
 - VS Code Extension
 section_names:
 - ai

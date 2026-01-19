@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-01 15:52:33 +00:00
 permalink: /ai/videos/Why-is-everyone-suddenly-talking-about-AI-agents
 tags:
-- AI
 - AI Agents
 - AI Development
 - AI Model Costs
@@ -19,7 +18,6 @@ tags:
 - Microsoft AI
 - Onedevquestion
 - Tech Shifts
-- Videos
 section_names:
 - ai
 ---

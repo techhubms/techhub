@@ -10,7 +10,6 @@ date: 2026-01-06 15:13:38 +00:00
 permalink: /ai/news/Empowering-Deaf-Creators-Min-ji-Sos-Journey-with-Microsoft-Copilot-and-AI
 tags:
 - Accessibility
-- AI
 - AI For Impact
 - Assistive Technology
 - Company News
@@ -24,7 +23,6 @@ tags:
 - Microsoft AI
 - Microsoft Copilot
 - Natural Language Processing
-- News
 - Storyboarding
 - Webtoon Creation
 section_names:

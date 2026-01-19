@@ -9,18 +9,14 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-04-04 00:00:00 +00:00
 permalink: /github-copilot/blogs/Let-Copilot-Help-You-Name-Things
 tags:
-- AI
 - AI Coding Assistant
-- Blogs
 - Code Quality
-- Coding
 - Coding Best Practices
 - Copilot Agent Mode
 - Copilot Chat
 - Developer Productivity
 - Edit Mode
 - Function Naming
-- GitHub Copilot
 - Naming Conventions
 - Programming Tips
 - Refactoring

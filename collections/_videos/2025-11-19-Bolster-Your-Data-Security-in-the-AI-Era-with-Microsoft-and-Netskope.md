@@ -23,11 +23,9 @@ tags:
 - Regulatory Compliance
 - SaaS Security
 - Secureyourdata
-- Security
 - Security Integration
 - SSE
 - Unified Security
-- Videos
 section_names:
 - security
 ---

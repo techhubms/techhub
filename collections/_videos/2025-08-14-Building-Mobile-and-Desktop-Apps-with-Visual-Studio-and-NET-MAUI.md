@@ -14,7 +14,6 @@ tags:
 - .NET 9
 - App Size Optimization
 - C#
-- Coding
 - Cross Platform
 - Design Tools
 - Desktop Apps
@@ -25,7 +24,6 @@ tags:
 - Performance Optimization
 - Project Structure
 - UI Development
-- Videos
 - VS
 - XAML
 section_names:

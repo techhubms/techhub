@@ -10,7 +10,6 @@ date: 2025-09-03 22:50:03 +00:00
 permalink: /azure/community/Azure-Local-Training-Program-Self-Paced-Cloud-Management-Skills
 tags:
 - Arc Registration
-- Azure
 - Azure Local
 - Azure Migrate
 - Azure Monitoring
@@ -19,11 +18,9 @@ tags:
 - Azure VM Management
 - Billing
 - Cloud Management
-- Community
 - Configurator App
 - Environment Checker
 - Networking
-- Security
 - Self Paced Learning
 section_names:
 - azure

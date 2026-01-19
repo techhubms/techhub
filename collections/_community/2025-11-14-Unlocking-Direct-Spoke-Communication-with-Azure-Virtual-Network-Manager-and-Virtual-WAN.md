@@ -10,12 +10,10 @@ date: 2025-11-14 14:09:16 +00:00
 permalink: /azure/community/Unlocking-Direct-Spoke-Communication-with-Azure-Virtual-Network-Manager-and-Virtual-WAN
 tags:
 - AVNM
-- Azure
 - Azure Firewall
 - Azure Virtual Network Manager
 - Azure Virtual WAN
 - Cloud Networking
-- Community
 - ExpressRoute
 - Hub And Spoke Architecture
 - Hybrid Connectivity

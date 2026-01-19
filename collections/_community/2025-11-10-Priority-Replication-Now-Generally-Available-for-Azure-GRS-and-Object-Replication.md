@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-10 20:21:17 +00:00
 permalink: /azure/community/Priority-Replication-Now-Generally-Available-for-Azure-GRS-and-Object-Replication
 tags:
-- Azure
 - Azure Portal
 - Azure Storage
 - Blob Storage
 - Block Blob
-- Community
 - Data Durability
 - Disaster Recovery
 - Geo Priority Replication

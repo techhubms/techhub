@@ -10,15 +10,12 @@ date: 2025-11-14 20:46:40 +00:00
 permalink: /ai/community/Join-Microsoft-at-SC25-HPC-and-AI-Innovations-in-St-Louis
 tags:
 - Agentic AI
-- AI
 - AI Infrastructure
 - AMD
-- Azure
 - Azure AI
 - Azure Arc
 - Azure HPC
 - Cloud Computing
-- Community
 - Data Center
 - High Performance Computing
 - HPC

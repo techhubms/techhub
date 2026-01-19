@@ -10,14 +10,11 @@ date: 2025-11-18 18:43:59 +00:00
 permalink: /ai/community/Agent-Loop-Expands-AI-Automation-in-Azure-Logic-Apps-with-New-Features
 tags:
 - Agent Loop
-- AI
 - AI Automation
 - APIM AI Gateway
 - Automation
-- Azure
 - Azure Logic Apps
 - Bring Your Own Model
-- Community
 - Conversational Agents
 - Document Level Permissions
 - Enterprise Integration
@@ -28,7 +25,6 @@ tags:
 - Okta
 - Preview Features
 - RAG Security
-- Security
 - Serverless
 - Teams Integration
 - Tool Calling

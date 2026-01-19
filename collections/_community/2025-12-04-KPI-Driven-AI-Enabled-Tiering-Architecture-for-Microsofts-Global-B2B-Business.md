@@ -9,14 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-04 21:00:36 +00:00
 permalink: /ai/community/KPI-Driven-AI-Enabled-Tiering-Architecture-for-Microsofts-Global-B2B-Business
 tags:
-- AI
-- Azure
 - Azure Stream Analytics
 - Azure Synapse Analytics
 - Business Analytics
 - CatBoost
 - Clustering
-- Community
 - Composite Score Optimization
 - Dynamic Tiering
 - FastAPI
@@ -24,9 +21,7 @@ tags:
 - Hybrid Segmentation
 - KPI Segmentation
 - LLMs
-- Machine Learning
 - Microsoft MCAPS
-- ML
 - OpenAI API
 - Optimization
 - OR Tools

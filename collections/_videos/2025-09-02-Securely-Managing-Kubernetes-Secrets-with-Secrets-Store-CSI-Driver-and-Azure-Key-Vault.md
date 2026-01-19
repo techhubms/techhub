@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-02 16:39:25 +00:00
 permalink: /azure/videos/Securely-Managing-Kubernetes-Secrets-with-Secrets-Store-CSI-Driver-and-Azure-Key-Vault
 tags:
-- Azure
 - Azure Key Vault
 - Cloud Computing
 - Cloud Security
@@ -17,7 +16,6 @@ tags:
 - Container Security
 - Dev
 - Development
-- DevOps
 - External Secrets
 - Kubernetes
 - Kubernetes SIG Auth
@@ -26,10 +24,8 @@ tags:
 - Secret Management
 - Secrets Rotation
 - Secrets Store CSI Driver
-- Security
 - Tech
 - Technology
-- Videos
 section_names:
 - azure
 - devops

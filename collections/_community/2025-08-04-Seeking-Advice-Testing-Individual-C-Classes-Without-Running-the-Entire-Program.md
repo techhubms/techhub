@@ -13,8 +13,6 @@ tags:
 - C#
 - Class Testing
 - Code Testing
-- Coding
-- Community
 - Debugging
 - Development Workflow
 - Intellisense

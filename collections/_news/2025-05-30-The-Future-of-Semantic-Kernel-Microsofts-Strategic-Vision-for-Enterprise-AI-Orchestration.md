@@ -10,19 +10,15 @@ date: 2025-05-30 13:15:06 +00:00
 permalink: /ai/news/The-Future-of-Semantic-Kernel-Microsofts-Strategic-Vision-for-Enterprise-AI-Orchestration
 tags:
 - .NET
-- AI
 - AI Orchestration
 - AutoGen
-- Azure
 - Azure AI
 - Azure AI Foundry
-- Coding
 - Enterprise AI
 - Foundry
 - MCP
 - Microsoft
 - Multi Agent
-- News
 - Open Source
 - Process Automation
 - Semantic Kernel

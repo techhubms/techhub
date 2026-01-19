@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-11 15:35:34 +00:00
 permalink: /ai/videos/Understanding-the-Connection-Between-Copilot-Studio-and-Azure-AI-Foundry
 tags:
-- AI
 - AI Development
 - AI Integration
 - AI Platform
@@ -21,7 +20,6 @@ tags:
 - Microsoft Developer
 - OneDevQuestion
 - Scott Durow
-- Videos
 section_names:
 - ai
 ---

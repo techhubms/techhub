@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 16:17:14 +00:00
 permalink: /azure/community/Azure-PostgreSQL-Extended-Support-Stay-Secure-at-Every-Upgrade-Stage
 tags:
-- Azure
 - Azure Database For PostgreSQL
 - Business Continuity
 - Cloud Database Management
-- Community
 - Critical Workloads
 - Database Lifecycle
 - Database Security
@@ -23,7 +21,6 @@ tags:
 - Microsoft Azure
 - PostgreSQL Upgrades
 - Regulatory Compliance
-- Security
 - Security Patches
 - Technical Support
 - Version Retirement

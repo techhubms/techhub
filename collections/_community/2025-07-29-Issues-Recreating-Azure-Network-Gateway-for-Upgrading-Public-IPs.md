@@ -9,10 +9,8 @@ feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-29 12:55:30 +00:00
 permalink: /azure/community/Issues-Recreating-Azure-Network-Gateway-for-Upgrading-Public-IPs
 tags:
-- Azure
 - Azure Network Gateway
 - Azure Networking
-- Community
 - Connectivity Issues
 - Downtime
 - Firewall Rule

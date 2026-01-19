@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-09-23 17:15:04 +00:00
 permalink: /github-copilot/videos/GitHub-MCP-Registry-Integration-with-Playwright-in-VS-Code-Insiders
 tags:
-- AI
 - Automated Testing
 - Code
-- Coding
 - Copilot
 - Demo
 - Developer
@@ -20,9 +18,7 @@ tags:
 - Developer Tools
 - Developer Workflow
 - Developerworkflow
-- DevOps
 - Extension Development
-- GitHub Copilot
 - GitHub MCP
 - Mcp
 - MCP Registry
@@ -30,7 +26,6 @@ tags:
 - Software Developer
 - Software Development
 - Testing Automation
-- Videos
 - VS Code
 - VS Code Insiders
 section_names:

@@ -9,23 +9,19 @@ feed_url: https://github.blog/feed/
 date: 2025-07-25 17:12:02 +00:00
 permalink: /ai/news/How-to-Build-Secure-and-Scalable-Remote-MCP-Servers
 tags:
-- AI
 - AI & ML
 - AI Agents
 - AI Gateway
 - APIs
 - Authorization
-- Azure
 - Azure Key Vault
 - Distributed Tracing
 - Generative AI
 - MCP
 - Multi Tenancy
-- News
 - OAuth 2.1
 - OpenTelemetry
 - Secrets Management
-- Security
 - Security Best Practices
 - Token Validation
 section_names:

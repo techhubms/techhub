@@ -11,7 +11,6 @@ permalink: /ml/news/Securely-Access-VPC-Protected-Amazon-S3-Buckets-in-Microsoft
 tags:
 - Amazon S3
 - AWS IAM
-- Azure
 - Cloud Security
 - CloudTrail
 - Cross Cloud Access
@@ -19,12 +18,9 @@ tags:
 - Identity Management
 - Microsoft Entra ID
 - Microsoft Fabric
-- ML
-- News
 - OIDC
 - On Premises Data Gateway
 - S3 Shortcut
-- Security
 - Service Principal
 - VPC
 - Zero Trust

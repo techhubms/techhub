@@ -11,7 +11,6 @@ permalink: /ai/news/The-Realities-of-Application-Modernization-with-Agentic-AI-A
 tags:
 - Agentic AI
 - Agents
-- AI
 - AI Agents
 - App Development
 - Application Modernization
@@ -24,7 +23,6 @@ tags:
 - Legacy Systems
 - Migration
 - Modernization
-- News
 - Opinion
 - Organizational Change
 - Software Architecture

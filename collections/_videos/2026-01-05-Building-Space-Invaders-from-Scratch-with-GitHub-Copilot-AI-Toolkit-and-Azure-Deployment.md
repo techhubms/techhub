@@ -9,23 +9,17 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2026-01-05 22:53:34 +00:00
 permalink: /github-copilot/videos/Building-Space-Invaders-from-Scratch-with-GitHub-Copilot-AI-Toolkit-and-Azure-Deployment
 tags:
-- AI
 - AI Toolkit
-- Azure
 - Azure CLI
 - Azure Developer CLI
 - Azure MCP
 - Cloud Deployment
-- Coding
-- DevOps
 - Figma
 - Game Development
-- GitHub Copilot
 - Leaderboard
 - MCP
 - Playwright
 - Spec Kit
-- Videos
 - VS Code
 section_names:
 - ai

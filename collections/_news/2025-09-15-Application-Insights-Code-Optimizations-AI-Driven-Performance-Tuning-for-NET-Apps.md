@@ -10,18 +10,12 @@ date: 2025-09-15 17:05:00 +00:00
 permalink: /github-copilot/news/Application-Insights-Code-Optimizations-AI-Driven-Performance-Tuning-for-NET-Apps
 tags:
 - .NET
-- AI
 - Application Insights
-- Azure
 - Azure Monitor
 - Blocking Insights
 - Code Recommendations
-- Coding
 - Debugging
-- DevOps
-- GitHub Copilot
 - GitHub Issues
-- News
 - OpenTelemetry
 - Performance
 - Performance Optimization

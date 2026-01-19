@@ -10,24 +10,20 @@ date: 2025-07-30 22:23:12 +00:00
 permalink: /github-copilot/videos/Vibe-Code-your-first-MCP-server-with-GitHub-Copilot
 tags:
 - Agent Development
-- AI
 - AI Agent
 - AI Integration
 - AI Tools
 - Azure AI Foundry
 - Cloud Computing
-- Coding
 - Custom Agents
 - Dev
 - Development
 - Foundry Agent Service
-- GitHub Copilot
 - MCP
 - MCP Server
 - Microsoft
 - Tech
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

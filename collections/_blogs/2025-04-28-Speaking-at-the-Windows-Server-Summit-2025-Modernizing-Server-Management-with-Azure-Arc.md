@@ -9,10 +9,8 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-04-28 13:56:14 +00:00
 permalink: /azure/blogs/Speaking-at-the-Windows-Server-Summit-2025-Modernizing-Server-Management-with-Azure-Arc
 tags:
-- Azure
 - Azure Adaptive Cloud
 - Azure Arc
-- Blogs
 - Cloud
 - Cloud Technology
 - Connectivity

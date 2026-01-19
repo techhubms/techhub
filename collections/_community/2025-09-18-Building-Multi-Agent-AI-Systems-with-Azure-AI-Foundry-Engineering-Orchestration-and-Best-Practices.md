@@ -11,16 +11,13 @@ permalink: /ai/community/Building-Multi-Agent-AI-Systems-with-Azure-AI-Foundry-E
 tags:
 - Agent Development
 - Agent Workflows
-- AI
 - AI Agent Tools
 - AI Orchestration
 - AI Platform
 - AI Safety
 - AutoGen
-- Azure
 - Azure AI Foundry
 - Azure Application Insights
-- Community
 - Connected Agents
 - Enterprise AI
 - LLM Agents

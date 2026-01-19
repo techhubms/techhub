@@ -15,18 +15,15 @@ tags:
 - Custom Properties
 - Dependabot
 - Deployment
-- DevOps
 - GHES 3.18
 - GitHub Enterprise Server
 - Issue Tracking
 - Monitoring
-- News
 - OpenTelemetry
 - Policy Management
 - Project Management
 - Prometheus
 - Pull Request Rules
-- Security
 section_names:
 - devops
 - security

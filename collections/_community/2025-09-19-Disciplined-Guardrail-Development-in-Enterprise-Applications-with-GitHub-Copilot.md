@@ -10,20 +10,15 @@ date: 2025-09-19 20:06:44 +00:00
 permalink: /github-copilot/community/Disciplined-Guardrail-Development-in-Enterprise-Applications-with-GitHub-Copilot
 tags:
 - .NET
-- AI
 - AI Assisted Development
 - Application Architecture
 - Chat Modes
 - Code Quality
-- Coding
-- Community
 - Custom Instructions
 - Database Schema
 - Design Documentation
-- DevOps
 - DevOps Practices
 - Enterprise Software
-- GitHub Copilot
 - Guardrails
 - LLM Integration
 - Project Structure

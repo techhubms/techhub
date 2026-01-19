@@ -10,7 +10,6 @@ date: 2025-10-02 11:00:00 +00:00
 permalink: /ml/news/Extending-Point-in-Time-Retention-in-Fabric-SQL-DB-From-7-to-35-Days
 tags:
 - Automated Backups
-- Azure
 - Backup Retention
 - Compliance
 - Data Platform
@@ -20,8 +19,6 @@ tags:
 - Enterprise Data
 - Fabric SQL DB
 - Microsoft Fabric
-- ML
-- News
 - PITR
 - Point in Time Restore
 - Sys.dm Database Backups

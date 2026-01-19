@@ -9,13 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-09-30 19:14:54 +00:00
 permalink: /github-copilot/videos/VS-Code-Background-Coding-Agents-and-GitHub-Copilot-Enhancements
 tags:
-- AI
 - AI Tools
 - Background Coding Agents
 - Brigit Murtaugh
 - Code
 - Code Enhancement
-- Coding
 - Codingagents
 - Copilot
 - Copilot Coding Agent
@@ -24,10 +22,8 @@ tags:
 - Developer Community
 - Developer Tools
 - Extension Development
-- GitHub Copilot
 - Microsoft
 - Productivity
-- Videos
 - VS Code
 section_names:
 - ai

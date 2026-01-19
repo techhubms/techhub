@@ -10,7 +10,6 @@ date: 2025-12-18 14:51:52 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Code-Review-Preview-Features-Now-Available-in-Enterprise-Cloud-with-Data-Residency
 tags:
 - Agentic Code Review
-- AI
 - AI Powered Code Review
 - Code Review Automation
 - CodeQL
@@ -19,10 +18,8 @@ tags:
 - Data Residency
 - Developer Tools
 - ESLint
-- GitHub Copilot
 - GitHub Enterprise Cloud
 - Improvement
-- News
 - Pull Requests
 section_names:
 - ai

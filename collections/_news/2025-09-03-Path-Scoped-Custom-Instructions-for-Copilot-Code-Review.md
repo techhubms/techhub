@@ -9,15 +9,12 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-03 20:41:26 +00:00
 permalink: /github-copilot/news/Path-Scoped-Custom-Instructions-for-Copilot-Code-Review
 tags:
-- AI
 - Applyto Section
 - Code Review Automation
 - Copilot Code Review
 - Custom Instructions
 - Developer Tools
 - GitHub
-- GitHub Copilot
-- News
 - Path Scoped Instructions
 - Pull Requests
 - Repository Guidance

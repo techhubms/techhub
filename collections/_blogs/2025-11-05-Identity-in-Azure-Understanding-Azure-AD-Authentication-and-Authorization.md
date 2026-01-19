@@ -11,10 +11,8 @@ permalink: /azure/blogs/Identity-in-Azure-Understanding-Azure-AD-Authentication-
 tags:
 - Authentication
 - Authorization
-- Azure
 - Azure Active Directory
 - Azure AD
-- Blogs
 - Cloud Security
 - Conditional Access
 - IAM
@@ -25,7 +23,6 @@ tags:
 - Privileged Identity Management
 - Role Based Access Control
 - SAML
-- Security
 - Single Sign On
 section_names:
 - azure

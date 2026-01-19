@@ -10,7 +10,6 @@ date: 2025-12-11 17:00:00 +00:00
 permalink: /azure/news/Imposter-for-Hire-How-Fake-Employees-Breach-Security
 tags:
 - Active Directory
-- Azure
 - Cloud Security
 - Cyberattack
 - DART
@@ -22,9 +21,7 @@ tags:
 - Microsoft Entra ID
 - Microsoft Incident Response
 - Microsoft Purview
-- News
 - PiKVM
-- Security
 - Security Operations
 - Threat Intelligence
 section_names:

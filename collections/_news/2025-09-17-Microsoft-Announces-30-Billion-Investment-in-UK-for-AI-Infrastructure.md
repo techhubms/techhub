@@ -9,11 +9,9 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-17 16:50:37 +00:00
 permalink: /ai/news/Microsoft-Announces-30-Billion-Investment-in-UK-for-AI-Infrastructure
 tags:
-- AI
 - AI Development
 - AI Infrastructure
 - AI Skills
-- Azure
 - Cloud Computing
 - Company News
 - Datacenters
@@ -21,7 +19,6 @@ tags:
 - Microsoft
 - Microsoft Copilot
 - Microsoft Research
-- News
 - NVIDIA GPUs
 - On The Issues
 - Prime Minister Keir Starmer

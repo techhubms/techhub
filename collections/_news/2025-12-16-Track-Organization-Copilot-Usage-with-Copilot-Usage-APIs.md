@@ -10,15 +10,12 @@ date: 2025-12-16 15:08:56 +00:00
 permalink: /github-copilot/news/Track-Organization-Copilot-Usage-with-Copilot-Usage-APIs
 tags:
 - Admin Tools
-- AI
 - AI Controls
 - API Metrics
 - Copilot
 - Copilot Usage API
 - Enterprise Management
 - Feature Adoption
-- GitHub Copilot
-- News
 - Organization Settings
 - Permissions
 - Policy Settings

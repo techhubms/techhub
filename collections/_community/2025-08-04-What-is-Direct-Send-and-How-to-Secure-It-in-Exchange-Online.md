@@ -10,8 +10,6 @@ date: 2025-08-04 16:06:17 +00:00
 permalink: /azure/community/What-is-Direct-Send-and-How-to-Secure-It-in-Exchange-Online
 tags:
 - Advanced Hunting
-- Azure
-- Community
 - Defender For Office 365
 - Direct Send
 - Email Quarantine

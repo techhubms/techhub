@@ -9,19 +9,15 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-19 14:07:53 +00:00
 permalink: /github-copilot/news/Using-GitHub-Copilot-Coding-Agent-with-Microsoft-Teams-for-Automated-PRs
 tags:
-- AI
 - Async Development
 - Automation
-- Coding
 - Copilot
 - Copilot Coding Agent
 - Developer Workflow
 - GitHub App
 - GitHub Business
-- GitHub Copilot
 - GitHub Enterprise
 - Microsoft Teams
-- News
 - Productivity Tools
 - Pull Requests
 - Repository Management

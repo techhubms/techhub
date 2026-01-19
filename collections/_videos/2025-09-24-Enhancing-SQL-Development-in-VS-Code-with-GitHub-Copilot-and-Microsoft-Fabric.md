@@ -10,17 +10,13 @@ date: 2025-09-24 16:01:28 +00:00
 permalink: /github-copilot/videos/Enhancing-SQL-Development-in-VS-Code-with-GitHub-Copilot-and-Microsoft-Fabric
 tags:
 - Agent Tools
-- AI
 - AI Assisted Coding
-- Azure
 - Azure SQL
 - Cloud Computing
-- Coding
 - Data Exposed
 - Dev
 - Developer Tools
 - Development
-- GitHub Copilot
 - Microsoft
 - Microsoft Fabric
 - MSSQL Extension
@@ -31,7 +27,6 @@ tags:
 - SQL Server Containers
 - Tech
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

@@ -9,13 +9,10 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-11 02:30:28 +00:00
 permalink: /github-copilot/community/Missing-feature-in-VS-Code-version-11020-option-to-close-copilot-changedmodified-files
 tags:
-- AI
-- Community
 - Development Tools
 - Extension Updates
 - File List
 - File Management
-- GitHub Copilot
 - Plugin Issues
 - UI Changes
 - User Feedback

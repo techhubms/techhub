@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 08:22:23 +00:00
 permalink: /ai/videos/Modernize-on-premises-VMware-environments-with-Azure-VMware-Solution
 tags:
-- AI
 - AVS
-- Azure
 - Azure Arc
 - Azure NetApp Files
 - Azure VMware Solution
@@ -26,7 +24,6 @@ tags:
 - MSIgnite
 - OpenAI
 - Platform Services
-- Videos
 - VMware Migration
 - Vsphere
 section_names:

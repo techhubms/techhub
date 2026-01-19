@@ -12,8 +12,6 @@ tags:
 - .NET
 - AWS
 - C#
-- Coding
-- Community
 - Ecosystem
 - Engineering Management
 - Go

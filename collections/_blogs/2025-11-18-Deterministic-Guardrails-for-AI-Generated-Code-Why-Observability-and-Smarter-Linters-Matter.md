@@ -9,22 +9,18 @@ feed_url: https://devops.com/feed/
 date: 2025-11-18 11:08:52 +00:00
 permalink: /ai/blogs/Deterministic-Guardrails-for-AI-Generated-Code-Why-Observability-and-Smarter-Linters-Matter
 tags:
-- AI
 - AI Code Generation
 - AI Code Review
 - AI Development Workflows
 - Automated Pull Requests
 - Behavioral Verification
-- Blogs
 - Business Of DevOps
 - CI Pipeline
 - Code Review Best Practices
 - Code Validation
 - Code Verification
-- Coding
 - Contributed Content
 - Deterministic Guardrails
-- DevOps
 - DevOps AI
 - DevOps And Open Technologies
 - DevOps Workflows
@@ -32,7 +28,6 @@ tags:
 - Ebpf
 - Generated Code Risks
 - Observability
-- Security
 - Smarter Linters
 - Social Facebook
 - Social LinkedIn

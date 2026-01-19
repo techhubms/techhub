@@ -10,15 +10,11 @@ date: 2025-07-02 16:00:20 +00:00
 permalink: /ai/blogs/Microsoft-Previews-MCP-Tool-for-SQL-Server-Enhancing-AI-Driven-Database-Interaction
 tags:
 - .NET
-- AI
 - AI Agents
 - AI/ML
-- Azure
 - Azure SQL
-- Blogs
 - Claude Desktop
 - Cloud Data
-- Coding
 - Database Automation
 - Database Development
 - Databases

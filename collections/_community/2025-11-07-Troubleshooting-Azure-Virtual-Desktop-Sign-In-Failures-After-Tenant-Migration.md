@@ -12,10 +12,8 @@ tags:
 - Access Control
 - Application Group
 - Authentication
-- Azure
 - Azure AD
 - Azure Virtual Desktop
-- Community
 - Conditional Access
 - Host Pool
 - Identity Management
@@ -24,7 +22,6 @@ tags:
 - Microsoft Entra ID
 - Microsoft Graph PowerShell
 - MSAL Tokens
-- Security
 - Tenant Migration
 - Token Persistence
 section_names:

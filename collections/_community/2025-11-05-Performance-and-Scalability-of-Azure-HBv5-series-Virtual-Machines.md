@@ -11,9 +11,7 @@ permalink: /azure/community/Performance-and-Scalability-of-Azure-HBv5-series-Vir
 tags:
 - AMD EPYC
 - Ansys Fluent
-- Azure
 - Azure HBv5
-- Community
 - Cost Optimization
 - CPU Benchmarking
 - Devito

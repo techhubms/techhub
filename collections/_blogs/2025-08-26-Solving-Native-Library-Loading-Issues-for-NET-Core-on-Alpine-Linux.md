@@ -13,9 +13,7 @@ tags:
 - .NET 5
 - .NET Core
 - Alpine Linux
-- Blogs
 - CI/CD
-- Coding
 - Containerization
 - Cross Platform Development
 - Datadog .NET Tracer

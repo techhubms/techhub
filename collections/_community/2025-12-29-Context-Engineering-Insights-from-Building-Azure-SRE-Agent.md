@@ -10,11 +10,8 @@ date: 2025-12-29 21:13:43 +00:00
 permalink: /ai/community/Context-Engineering-Insights-from-Building-Azure-SRE-Agent
 tags:
 - Agent Design
-- AI
 - AI Agents
-- Azure
 - Azure SRE Agent
-- Community
 - Context Engineering
 - Debugging
 - Guardrails

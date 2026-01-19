@@ -10,10 +10,7 @@ date: 2025-07-17 12:46:30 +00:00
 permalink: /azure/community/Test-Plan-How-to-Get-the-Latest-Test-Case-Result-for-All-Test-Cases-in-Azure-DevOps
 tags:
 - Automation
-- Azure
 - Azure DevOps
-- Community
-- DevOps
 - Execution History
 - Reporting
 - Software Testing

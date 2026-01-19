@@ -15,9 +15,7 @@ tags:
 - Application Deployment
 - Application Installer
 - Arm64
-- Blogs
 - Build Configuration
-- Coding
 - Cross Platform
 - Markdown Monster
 - Native Binaries

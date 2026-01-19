@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-20 18:05:30 +00:00
 permalink: /ai/news/How-AI-Search-is-Transforming-Conversion-Measurement
 tags:
-- AI
 - AI Powered Experiences
 - AI Search
 - Bing
@@ -22,7 +21,6 @@ tags:
 - Metrics
 - Microsoft Clarity
 - Microsoft Copilot
-- News
 - Schema Markup
 - Structured Content
 - User Intent

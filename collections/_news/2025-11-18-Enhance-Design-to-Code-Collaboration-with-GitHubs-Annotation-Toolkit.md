@@ -11,19 +11,16 @@ permalink: /coding/news/Enhance-Design-to-Code-Collaboration-with-GitHubs-Annota
 tags:
 - Accessibility
 - Annotation Toolkit
-- Coding
 - Collaboration
 - Design Collaboration
 - Design Handoff
 - Design Intent
 - Developer Workflow
-- DevOps
 - Documentation
 - Enterprise Software
 - Figma
 - Frontend Development
 - GitHub
-- News
 - Open Source
 - Productivity
 - Quality Assurance

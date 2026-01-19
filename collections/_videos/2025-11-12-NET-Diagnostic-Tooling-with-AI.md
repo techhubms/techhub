@@ -11,14 +11,12 @@ permalink: /ai/videos/NET-Diagnostic-Tooling-with-AI
 tags:
 - .NET
 - .NET 10
-- AI
 - AI Diagnostics
 - Application Optimization
 - ASP.NET Core
 - Automated Debugging
 - C#
 - Cloud Native Apps
-- Coding
 - Developer Productivity
 - Diagnostic Workflows
 - Error Detection
@@ -26,7 +24,6 @@ tags:
 - Intelligent Tooling
 - MAUI
 - Performance Analysis
-- Videos
 - VS
 section_names:
 - ai

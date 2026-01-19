@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-08-12 17:30:37 +00:00
 permalink: /github-copilot/news/OpenAI-GPT-5-Now-Available-to-GitHub-Copilot-Users-in-Major-IDEs
 tags:
-- AI
 - AI Coding Assistant
 - AI Model
 - Copilot Business
@@ -17,11 +16,9 @@ tags:
 - Copilot Enterprise
 - Developer Tools
 - Eclipse
-- GitHub Copilot
 - GPT 5
 - IDE Integration
 - JetBrains IDEs
-- News
 - OpenAI
 - VS
 - Xcode

@@ -9,21 +9,17 @@ feed_url: https://devops.com/feed/
 date: 2025-08-07 13:56:07 +00:00
 permalink: /ai/blogs/Black-Duck-Software-Brings-AI-Powered-Security-to-IDEs
 tags:
-- AI
 - AI Coding Tools
 - AI Security
 - AI Tools
 - Black Duck Assist
 - Black Hat USA
 - BlackHatUSA2025
-- Blogs
 - Business Of DevOps
 - Citizen Developers
 - Code Generation
 - Code Sight
 - Code Vulnerability
-- Coding
-- DevOps
 - DevSecOps
 - Eclipse
 - IDE Integration
@@ -32,7 +28,6 @@ tags:
 - Polaris
 - Prompt Engineering
 - Real Time Code Analysis
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

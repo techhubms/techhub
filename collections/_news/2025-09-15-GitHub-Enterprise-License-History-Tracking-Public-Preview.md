@@ -13,13 +13,11 @@ tags:
 - Admin Tools
 - Billing
 - Cloud Platform
-- DevOps
 - Enterprise Management
 - Enterprise Management Tools
 - GitHub Enterprise
 - License History
 - License Management
-- News
 - Release Preview
 - Usage Tracking
 section_names:

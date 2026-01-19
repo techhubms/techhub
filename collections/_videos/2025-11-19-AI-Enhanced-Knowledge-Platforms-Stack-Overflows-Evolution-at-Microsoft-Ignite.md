@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 15:19:07 +00:00
 permalink: /ai/videos/AI-Enhanced-Knowledge-Platforms-Stack-Overflows-Evolution-at-Microsoft-Ignite
 tags:
-- AI
 - AI Assisted Curation
 - Content Scoring
 - Copilotandagentsatwork
@@ -27,7 +26,6 @@ tags:
 - Stack Overflow For Teams
 - Stack Overflow Internal
 - Trusted Solutions
-- Videos
 section_names:
 - ai
 ---

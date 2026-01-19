@@ -10,7 +10,6 @@ date: 2026-01-08 15:00:05 +00:00
 permalink: /ai/news/Microsoft-Launches-Agentic-AI-Solutions-to-Transform-Retail-Automation-and-Personalization
 tags:
 - Agentic AI
-- AI
 - AI Automation
 - Catalog Enrichment
 - Company News
@@ -20,7 +19,6 @@ tags:
 - E Commerce
 - Intelligent Agents
 - Microsoft
-- News
 - Personalization
 - Recommendation Engines
 - Retail Technology

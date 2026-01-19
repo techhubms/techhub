@@ -9,18 +9,15 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-08-07 23:16:05 +00:00
 permalink: /github-copilot/videos/Let-it-Cook-with-GPT-5-Using-GPT-5-in-Visual-Studio-Code-and-GitHub-Copilot
 tags:
-- AI
 - AI Integration
 - AI Models
 - AI Powered Development
 - Burke Holland
 - Code
-- Coding
 - Copilot Workflow
 - Demo
 - Developer
 - Developer Tools
-- GitHub Copilot
 - GPT 5
 - GPT5
 - James Montemagno
@@ -29,7 +26,6 @@ tags:
 - Pierce Boggan
 - Software Developer
 - Vibecoding
-- Videos
 - VS Code
 - VS Code Extensions
 - Workflow Customization

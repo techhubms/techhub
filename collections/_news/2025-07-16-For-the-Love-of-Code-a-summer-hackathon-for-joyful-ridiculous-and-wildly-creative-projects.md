@@ -9,13 +9,10 @@ feed_url: https://github.blog/feed/
 date: 2025-07-16 15:00:00 +00:00
 permalink: /github-copilot/news/For-the-Love-of-Code-a-summer-hackathon-for-joyful-ridiculous-and-wildly-creative-projects
 tags:
-- AI
 - Creativity
 - Developer Community
-- GitHub Copilot
 - Hackathon
 - Innovation
-- News
 - Open Source
 - Side Projects
 - Software Development

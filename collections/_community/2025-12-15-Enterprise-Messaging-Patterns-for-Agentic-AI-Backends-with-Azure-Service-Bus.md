@@ -10,12 +10,9 @@ date: 2025-12-15 19:00:00 +00:00
 permalink: /ai/community/Enterprise-Messaging-Patterns-for-Agentic-AI-Backends-with-Azure-Service-Bus
 tags:
 - Agentic AI
-- AI
-- Azure
 - Azure Service Bus
 - Backpressure
 - Cloud Architecture
-- Community
 - Cost Optimization
 - Dead Letter Queue
 - Distributed Systems

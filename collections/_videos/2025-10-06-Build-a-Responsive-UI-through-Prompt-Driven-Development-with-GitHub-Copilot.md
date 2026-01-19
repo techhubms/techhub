@@ -9,19 +9,15 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-10-06 14:01:17 +00:00
 permalink: /github-copilot/videos/Build-a-Responsive-UI-through-Prompt-Driven-Development-with-GitHub-Copilot
 tags:
-- AI
 - Code Automation
-- Coding
 - Custom Chat Modes
 - Developer Tools
-- GitHub Copilot
 - Prompt Driven Development
 - Prompt Engineering
 - README Generation
 - Real Time Search
 - Responsive UI
 - UI Enhancement
-- Videos
 - VS Code
 section_names:
 - ai

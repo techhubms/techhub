@@ -19,7 +19,6 @@ tags:
 - Microsoft Security
 - MITRE
 - National Security
-- News
 - NIST
 - On The Issues
 - Open Quantum Safe Project
@@ -28,7 +27,6 @@ tags:
 - PQC Capabilities
 - Quantum Computing
 - Quantum Safe Program
-- Security
 - TLS
 - Windows
 - Workforce Readiness

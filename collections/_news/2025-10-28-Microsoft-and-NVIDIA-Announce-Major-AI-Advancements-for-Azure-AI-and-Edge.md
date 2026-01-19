@@ -10,11 +10,9 @@ date: 2025-10-28 18:30:00 +00:00
 permalink: /ai/news/Microsoft-and-NVIDIA-Announce-Major-AI-Advancements-for-Azure-AI-and-Edge
 tags:
 - 3D Asset Generation
-- AI
 - AI + Machine Learning
 - AI Infrastructure
 - AKS
-- Azure
 - Azure AI Foundry
 - Azure Arc
 - Azure Local
@@ -29,7 +27,6 @@ tags:
 - Microsoft TRELLIS
 - Multimodal Models
 - ND GB200 V6 VMs
-- News
 - NVIDIA
 - NVIDIA Blackwell
 - NVIDIA RTX PRO 6000

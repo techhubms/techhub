@@ -10,14 +10,11 @@ date: 2025-11-18 17:00:00 +00:00
 permalink: /ai/community/AI-Gateway-in-Azure-API-Management-Now-Integrated-with-Microsoft-Foundry
 tags:
 - Agent Management
-- AI
 - AI Gateway
 - API Governance
 - Application Insights
-- Azure
 - Azure API Management
 - Centralized Control
-- Community
 - Compliance
 - Content Safety
 - Enterprise AI
@@ -26,7 +23,6 @@ tags:
 - Microsoft Foundry
 - Microsoft Ignite
 - Observability
-- Security
 - Telemetry
 - Token Quotas
 section_names:

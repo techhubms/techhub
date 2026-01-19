@@ -10,16 +10,13 @@ date: 2025-10-10 20:18:35 +00:00
 permalink: /ai/blogs/Technical-Debt-Make-Developers-Happier-Now-or-Pay-More-Later
 tags:
 - Agentic AI
-- AI
 - AI Agents
 - Automation
-- Blogs
 - CI/CD
 - Code Quality
 - Continuous Integration
 - Contributed Content
 - Developer Experience
-- DevOps
 - DevOps Culture
 - DX
 - DX Champion

@@ -10,7 +10,6 @@ date: 2025-09-29 16:37:42 +00:00
 permalink: /github-copilot/news/Anthropic-Claude-Sonnet-45-Launches-for-GitHub-Copilot-Chat-and-CLI
 tags:
 - Agent Mode
-- AI
 - AI Models
 - Anthropic
 - API Key
@@ -22,10 +21,8 @@ tags:
 - Copilot Pro
 - Developer Tools
 - Enterprise AI
-- GitHub Copilot
 - Model Picker
 - Model Selection
-- News
 - VS Code
 section_names:
 - ai

@@ -11,7 +11,6 @@ permalink: /azure/community/Smart-Tiering-for-Azure-Blob-and-Data-Lake-Storage-A
 tags:
 - API Configuration
 - Automated Tiering
-- Azure
 - Azure Blob Storage
 - Azure Data Lake Storage
 - Azure Portal
@@ -20,7 +19,6 @@ tags:
 - Capacity Management
 - Cloud Storage
 - Cold Tier
-- Community
 - Cool Tier
 - Cost Savings
 - Data Tiering

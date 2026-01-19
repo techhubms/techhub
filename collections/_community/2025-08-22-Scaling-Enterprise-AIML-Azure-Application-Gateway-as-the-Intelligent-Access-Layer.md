@@ -9,22 +9,18 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-22 14:18:34 +00:00
 permalink: /ai/community/Scaling-Enterprise-AIML-Azure-Application-Gateway-as-the-Intelligent-Access-Layer
 tags:
-- AI
 - AI Security
 - API Security
 - Application Gateway Integrations
-- Azure
 - Azure AI
 - Azure Application Gateway
 - Azure Cognitive Services
 - Azure Machine Learning
-- Community
 - Endpoint Protection
 - Load Balancing
 - Rate Limiting
 - Real Time Streaming
 - Reverse Proxy
-- Security
 - Server Sent Events
 - Traffic Management
 - Web Application Firewall

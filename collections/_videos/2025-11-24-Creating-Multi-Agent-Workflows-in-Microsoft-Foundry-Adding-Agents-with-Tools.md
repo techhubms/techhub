@@ -11,8 +11,6 @@ permalink: /ai/videos/Creating-Multi-Agent-Workflows-in-Microsoft-Foundry-Adding
 tags:
 - Agent Creation
 - Agent Tools
-- AI
-- Azure
 - Azure AI Foundry
 - Cloud AI
 - Cloud Computing
@@ -28,7 +26,6 @@ tags:
 - Tech
 - Technical Tutorial
 - Technology
-- Videos
 - Workflow Automation
 - Workflow Tracing
 section_names:

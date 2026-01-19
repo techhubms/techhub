@@ -9,17 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-30 16:24:14 +00:00
 permalink: /ai/videos/Securing-AI-Deployments-with-HashiCorp-Vault-and-Azure
 tags:
-- AI
 - AI Deployment
 - Auditability
 - Automation
-- Azure
 - Azure Verified Modules
 - Cloud Computing
 - Confused Deputy
 - Dev
 - Development
-- DevOps
 - Dynamic Credential Management
 - Governance
 - HashiCorp Vault
@@ -28,13 +25,11 @@ tags:
 - Microsoft
 - Multi Agent Systems
 - Packer
-- Security
 - Tech
 - Technology
 - Terraform
 - Traceability
 - Vault Radar
-- Videos
 section_names:
 - ai
 - azure

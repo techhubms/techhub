@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-11 16:01:15 +00:00
 permalink: /azure/videos/Building-a-Snapshot-Backup-Catalog-with-SQL-Server-2025-and-Pure-Storage-FlashArray
 tags:
-- Azure
 - Azure SQL
 - Backup Catalog
 - Cloud Computing
@@ -30,7 +29,6 @@ tags:
 - T SQL
 - Tech
 - Technology
-- Videos
 section_names:
 - azure
 ---

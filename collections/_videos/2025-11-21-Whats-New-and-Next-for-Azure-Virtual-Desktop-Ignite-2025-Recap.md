@@ -10,7 +10,6 @@ date: 2025-11-21 14:29:12 +00:00
 permalink: /azure/videos/Whats-New-and-Next-for-Azure-Virtual-Desktop-Ignite-2025-Recap
 tags:
 - App Attach
-- Azure
 - Azure Virtual Desktop
 - B2B Access
 - Cloud Migration
@@ -22,10 +21,8 @@ tags:
 - Pricing
 - RDP Multipath
 - ScalewithcloudandAIendpoints
-- Security
 - User Experience
 - VDI Migration
-- Videos
 - Windows 365
 section_names:
 - azure

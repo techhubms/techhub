@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-02 19:16:29 +00:00
 permalink: /ai/videos/Context-Window-3-Azure-AI-Foundry-Community-Questions-Answered
 tags:
-- AI
 - AI Agents
 - AI Best Practices
 - AI Development
-- Azure
 - Azure AI
 - Azure AI Foundry
 - Cloud Computing
@@ -24,7 +22,6 @@ tags:
 - Tech
 - Tech Community
 - Technology
-- Videos
 section_names:
 - ai
 - azure

@@ -12,7 +12,6 @@ tags:
 - Activator
 - Advanced Analysis
 - Automation
-- Azure
 - Capacity Administration
 - Capacity Events
 - Capacity Monitoring
@@ -24,8 +23,6 @@ tags:
 - Eventhouse
 - Eventstream
 - Microsoft Fabric
-- ML
-- News
 - Process Automation
 - Real Time Hub
 - Schema Reference

@@ -9,17 +9,14 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-01 12:59:10 +00:00
 permalink: /github-copilot/news/Auto-Model-Selection-Now-Available-in-VS-Code-for-GitHub-Copilot-Business-and-Enterprise
 tags:
-- AI
 - AI Models
 - Auto Model Selection
 - Business Plans
 - Copilot
 - Enterprise Plans
-- GitHub Copilot
 - GPT 4.1
 - GPT 5
 - Model Policies
-- News
 - Premium Requests
 - Sonnet 3.5
 - Sonnet 4

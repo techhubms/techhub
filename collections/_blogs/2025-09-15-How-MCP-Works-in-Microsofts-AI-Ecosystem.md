@@ -10,16 +10,12 @@ date: 2025-09-15 07:41:15 +00:00
 permalink: /ai/blogs/How-MCP-Works-in-Microsofts-AI-Ecosystem
 tags:
 - Agentic Web
-- AI
 - AI Agent
 - AI Governance
 - AI Integration
 - APIs
-- Azure
 - Azure AI Foundry
-- Blogs
 - C# SDK
-- Coding
 - Copilot Studio
 - Dynamics 365
 - General

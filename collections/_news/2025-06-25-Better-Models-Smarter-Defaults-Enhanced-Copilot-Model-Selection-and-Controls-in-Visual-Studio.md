@@ -9,19 +9,16 @@ feed_url: https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/
 date: 2025-06-25 23:24:03 +00:00
 permalink: /github-copilot/news/Better-Models-Smarter-Defaults-Enhanced-Copilot-Model-Selection-and-Controls-in-Visual-Studio
 tags:
-- AI
 - AI Models
 - Billing Updates
 - Claude Sonnet 4
 - Copilot
 - Developer Tools
 - Gemini Pro
-- GitHub Copilot
 - GPT 4.1
 - Inline Suggestions
 - Model Selection
 - Models
-- News
 - Premium Requests
 - Productivity
 - Usage Management

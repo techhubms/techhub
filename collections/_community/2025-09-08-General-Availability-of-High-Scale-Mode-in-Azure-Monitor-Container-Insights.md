@@ -11,15 +11,12 @@ permalink: /azure/community/General-Availability-of-High-Scale-Mode-in-Azure-Mon
 tags:
 - Agent Configuration
 - AKS
-- Azure
 - Azure Monitor
 - Cloud Infrastructure
 - Cloud Operations
-- Community
 - Container Insights
 - Data Collection
 - DCR
-- DevOps
 - High Scale Mode
 - Kubernetes
 - Log Collection

@@ -10,12 +10,9 @@ date: 2025-11-18 16:00:00 +00:00
 permalink: /azure/community/Azure-Arc-Site-Manager-Public-Preview-Refresh-Unified-Management-for-Hybrid-and-Edge-Environments
 tags:
 - Aggregated Alerts
-- Azure
 - Azure Arc
 - Azure CLI
 - Azure Resource Manager
-- Community
-- DevOps
 - Edge Computing
 - Hierarchical Organization
 - Hybrid Cloud
@@ -27,7 +24,6 @@ tags:
 - RBAC
 - Resource Groups
 - Role Based Access Control
-- Security
 - Security Monitoring
 - Service Groups
 - Site Manager

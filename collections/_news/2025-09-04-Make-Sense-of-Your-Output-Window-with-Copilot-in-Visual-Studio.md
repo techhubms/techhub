@@ -9,9 +9,7 @@ feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-09-04 12:00:38 +00:00
 permalink: /github-copilot/news/Make-Sense-of-Your-Output-Window-with-Copilot-in-Visual-Studio
 tags:
-- AI
 - Build Logs
-- Coding
 - Context
 - Copilot Chat
 - Debug
@@ -19,12 +17,10 @@ tags:
 - Developer Tools
 - Development Productivity
 - Error Resolution
-- GitHub Copilot
 - GitHub Copilot Chat
 - IDE Features
 - Log Analysis
 - Microsoft
-- News
 - Output Window
 - Visual Studio 17.14
 - VS

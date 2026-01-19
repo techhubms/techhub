@@ -9,21 +9,16 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:26:45 +00:00
 permalink: /github-copilot/news/Use-GitHub-Copilot-Coding-Agent-with-Slack-to-Generate-Pull-Requests
 tags:
-- AI
 - Automation
 - Bug Fixing
-- Coding
 - Collaboration
 - Copilot
 - Copilot Coding Agent
 - Developer Tools
-- DevOps
 - DevOps Automation
 - Feature Development
 - GitHub App
-- GitHub Copilot
 - Microsoft Teams Integration
-- News
 - Pull Requests
 - Refactoring
 - Slack Integration

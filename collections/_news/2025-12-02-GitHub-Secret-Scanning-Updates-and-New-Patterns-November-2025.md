@@ -11,9 +11,7 @@ permalink: /azure/news/GitHub-Secret-Scanning-Updates-and-New-Patterns-November-
 tags:
 - Application Security
 - AWS
-- Azure
 - Databricks
-- DevOps
 - Discord
 - Elliptic Curve
 - GitHub
@@ -21,7 +19,6 @@ tags:
 - Key Management
 - Metadata Validation
 - Microsoft
-- News
 - Partner Integrations
 - PKCS#8
 - PostHog
@@ -29,7 +26,6 @@ tags:
 - Push Protection
 - Rainforest Pay
 - Secret Scanning
-- Security
 - Sentry
 section_names:
 - azure

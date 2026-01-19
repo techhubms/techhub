@@ -9,22 +9,18 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-03 16:23:18 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-CLI-Enhanced-Model-Selection-Image-Recognition-and-Streamlined-UI-Improvements
 tags:
-- AI
 - AI Coding Assistant
 - Anthropic Claude Sonnet
 - Client Apps
-- Coding
 - Command Line Interface
 - Copilot
 - Developer Tools
 - Enterprise Authentication
-- GitHub Copilot
 - GitHub Copilot CLI
 - Image Recognition
 - Improvement
 - Markdown Rendering
 - Model Selection
-- News
 - npm
 - PowerShell
 - Security Permissions

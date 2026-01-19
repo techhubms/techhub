@@ -12,7 +12,6 @@ tags:
 - .NET
 - .NET Support Policy
 - C#
-- Coding
 - Development Best Practices
 - Lifecycle Support
 - LTS
@@ -21,7 +20,6 @@ tags:
 - Software Maintenance
 - STS
 - Versioning
-- Videos
 section_names:
 - coding
 ---

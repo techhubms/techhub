@@ -11,16 +11,13 @@ permalink: /coding/news/Whats-New-in-Git-252-Features-and-Performance-Enhancemen
 tags:
 - Bloom Filters
 - Branch Management
-- Coding
 - Commit History
-- DevOps
 - Geometric Repacking
 - Git
 - Git 2.52
 - Git Last Modified
 - Git Maintenance
 - Git Refs
-- News
 - Open Source
 - Performance Benchmark
 - Reference Backends

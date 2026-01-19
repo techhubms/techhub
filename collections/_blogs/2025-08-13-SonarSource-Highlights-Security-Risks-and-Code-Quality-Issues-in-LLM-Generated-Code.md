@@ -9,16 +9,13 @@ feed_url: https://devops.com/feed/
 date: 2025-08-13 13:43:07 +00:00
 permalink: /ai/blogs/SonarSource-Highlights-Security-Risks-and-Code-Quality-Issues-in-LLM-Generated-Code
 tags:
-- AI
 - AI Coding Tools
 - Analysis
-- Blogs
 - Business Of DevOps
 - Claude Sonnet 4
 - Code Quality
 - Code Review
 - Code Smells
-- DevOps
 - DevSecOps
 - GPT 4o
 - Hard Coded Credentials
@@ -28,7 +25,6 @@ tags:
 - LLMs
 - Messy Code
 - Path Traversal
-- Security
 - Security Vulnerabilities
 - Social Facebook
 - Social LinkedIn

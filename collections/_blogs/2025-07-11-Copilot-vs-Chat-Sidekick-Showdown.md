@@ -9,9 +9,7 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-07-11 00:00:00 +00:00
 permalink: /github-copilot/blogs/Copilot-vs-Chat-Sidekick-Showdown
 tags:
-- AI
 - AI Assistant
-- Blogs
 - ChatGPT
 - Code Completion
 - Code Review
@@ -19,7 +17,6 @@ tags:
 - Copilot Chat
 - Developer Productivity
 - Gemini
-- GitHub Copilot
 - Integrated Development Environment
 - Workflow Tips
 section_names:

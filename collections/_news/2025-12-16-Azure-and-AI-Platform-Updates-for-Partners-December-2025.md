@@ -9,10 +9,8 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-16 18:23:05 +00:00
 permalink: /ai/news/Azure-and-AI-Platform-Updates-for-Partners-December-2025
 tags:
-- AI
 - AI + Machine Learning
 - AI Agent
-- Azure
 - Azure Copilot
 - Azure PostgreSQL
 - Azure Security
@@ -30,11 +28,8 @@ tags:
 - Microsoft Agent 365
 - Microsoft Foundry
 - Microsoft Ignite
-- ML
-- News
 - Operational Efficiency
 - Retrieval Augmented Generation
-- Security
 section_names:
 - ai
 - azure

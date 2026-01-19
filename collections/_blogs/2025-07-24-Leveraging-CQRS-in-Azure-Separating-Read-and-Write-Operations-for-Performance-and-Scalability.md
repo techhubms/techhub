@@ -11,7 +11,6 @@ permalink: /coding/blogs/Leveraging-CQRS-in-Azure-Separating-Read-and-Write-Oper
 tags:
 - Application Design
 - Architecture
-- Azure
 - Azure API Management
 - Azure Cache For Redis
 - Azure Cosmos DB
@@ -20,12 +19,9 @@ tags:
 - Azure Functions
 - Azure Service Bus
 - Azure SQL Database
-- Blogs
 - Cloud Native
-- Coding
 - Command Query Responsibility Segregation
 - CQRS
-- DevOps
 - Event Driven Architecture
 - Eventual Consistency
 - Microservices

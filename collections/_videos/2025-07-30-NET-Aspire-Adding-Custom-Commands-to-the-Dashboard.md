@@ -12,7 +12,6 @@ tags:
 - .NET
 - .NET Aspire
 - Automation
-- Coding
 - Configuration
 - Custom Commands
 - Dashboard
@@ -20,7 +19,6 @@ tags:
 - Development Environment
 - Scripts
 - Team Collaboration
-- Videos
 section_names:
 - coding
 ---

@@ -9,17 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-09-22 07:00:47 +00:00
 permalink: /ai/videos/The-Future-of-Coding-Agents-in-VS-Code-Insights-from-VS-Code-Insiders-Podcast
 tags:
-- AI
 - AI Powered Development
 - Background Agents
 - Background Tasks
-- Coding
 - Coding Agents
 - Developer Tools
 - GitHub Pull Requests
 - IDE Enhancements
 - Software Development
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

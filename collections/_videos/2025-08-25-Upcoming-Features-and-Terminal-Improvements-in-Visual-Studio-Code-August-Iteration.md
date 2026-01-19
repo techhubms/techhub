@@ -12,19 +12,16 @@ tags:
 - Agent Mode
 - Automation
 - Code Editing
-- Coding
 - Continuous Integration
 - Daniel Imms
 - Developer Tools
 - Development Productivity
-- DevOps
 - Iteration Plan
 - Microsoft
 - Open Source
 - Podcast
 - Terminal
 - Terminal Improvements
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

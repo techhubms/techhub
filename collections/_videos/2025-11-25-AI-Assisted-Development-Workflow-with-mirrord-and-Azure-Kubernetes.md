@@ -9,19 +9,15 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-25 17:24:34 +00:00
 permalink: /ai/videos/AI-Assisted-Development-Workflow-with-mirrord-and-Azure-Kubernetes
 tags:
-- AI
 - AI Code Editors
 - AKS
-- Azure
 - Cloud Computing
 - Cloud Development
-- Coding
 - Continuous Integration
 - Debugging
 - Dev
 - Development
 - Development Workflow
-- DevOps
 - Distributed Systems
 - Kubernetes
 - Local Testing
@@ -32,7 +28,6 @@ tags:
 - Open Source Tools
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

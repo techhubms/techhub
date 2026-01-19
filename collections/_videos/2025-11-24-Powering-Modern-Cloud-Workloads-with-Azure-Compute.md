@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 08:12:27 +00:00
 permalink: /ai/videos/Powering-Modern-Cloud-Workloads-with-Azure-Compute
 tags:
-- AI
 - AI Inference
-- Azure
 - Azure Compute
 - Azure Virtual Machines
 - Cloud Scalability
@@ -27,9 +25,7 @@ tags:
 - Migrateandmodernizeyourestate
 - MSIgnite
 - Performance Optimization
-- Security
 - V4L Series
-- Videos
 section_names:
 - ai
 - azure

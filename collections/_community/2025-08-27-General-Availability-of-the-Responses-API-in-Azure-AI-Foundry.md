@@ -11,14 +11,11 @@ permalink: /ai/community/General-Availability-of-the-Responses-API-in-Azure-AI-F
 tags:
 - Agent Development
 - AgentOps
-- AI
 - API Orchestration
 - AutoGen
-- Azure
 - Azure AI Foundry
 - Azure OpenAI Service
 - Code Interpreter
-- Community
 - Enterprise Automation
 - Function Calling
 - GPT 5

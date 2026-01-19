@@ -9,15 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-11-15 14:12:13 +00:00
 permalink: /github-copilot/videos/Tackling-Your-Tech-Debt-with-Copilot-Coding-Agent
 tags:
-- AI
 - AI Agent
 - Code Modernization
 - Code Refactoring
-- Coding
 - Copilot Coding Agent
 - Developer Workflow
 - GitHub
-- GitHub Copilot
 - GitHub Universe
 - GitHubUniverse
 - Issue Assignment
@@ -25,7 +22,6 @@ tags:
 - Programming Tools
 - Software Engineering
 - Tech Debt
-- Videos
 - WRAP Strategy
 section_names:
 - ai

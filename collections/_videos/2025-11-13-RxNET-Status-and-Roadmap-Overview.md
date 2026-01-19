@@ -11,7 +11,6 @@ permalink: /coding/videos/RxNET-Status-and-Roadmap-Overview
 tags:
 - .NET
 - Asynchronous Programming
-- Coding
 - Event Streams
 - Framework Updates
 - Future Planning
@@ -23,7 +22,6 @@ tags:
 - Reactive Programming
 - Rx.NET
 - Software Roadmap
-- Videos
 section_names:
 - coding
 ---

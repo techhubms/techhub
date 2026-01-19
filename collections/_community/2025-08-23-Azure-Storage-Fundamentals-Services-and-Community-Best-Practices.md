@@ -9,14 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-23 18:37:03 +00:00
 permalink: /azure/community/Azure-Storage-Fundamentals-Services-and-Community-Best-Practices
 tags:
-- Azure
 - Azure CLI
 - Azure Disks
 - Azure Storage
 - Blob Storage
 - Cloud Cost Management
 - Cloud Security
-- Community
 - Data Lake Storage
 - Disaster Recovery
 - Elastic SAN

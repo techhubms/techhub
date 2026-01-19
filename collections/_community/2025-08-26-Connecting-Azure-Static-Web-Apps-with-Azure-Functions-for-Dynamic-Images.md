@@ -11,13 +11,10 @@ permalink: /coding/community/Connecting-Azure-Static-Web-Apps-with-Azure-Functio
 tags:
 - .NET
 - API Integration
-- Azure
 - Azure Functions
 - Azure Static Web Apps
 - Backend Integration
 - C#
-- Coding
-- Community
 - CORS
 - Function Apps
 - HTTP Triggers

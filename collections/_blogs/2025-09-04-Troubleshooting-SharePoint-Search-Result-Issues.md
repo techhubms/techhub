@@ -9,8 +9,6 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-04 13:48:28 +00:00
 permalink: /coding/blogs/Troubleshooting-SharePoint-Search-Result-Issues
 tags:
-- Blogs
-- Coding
 - Crawling
 - Indexing
 - Managed Properties

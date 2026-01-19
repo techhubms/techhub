@@ -9,13 +9,10 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-29 13:33:13 +00:00
 permalink: /github-copilot/community/Forcing-Chain-of-Thought-to-Non-Thinking-Models-in-AI-IDEs-like-VS-Code-Copilot
 tags:
-- AI
 - AI IDE
 - APM Agent
 - Chain Of Thought
-- Community
 - Cursor IDE
-- GitHub Copilot
 - Planning
 - Project Management
 - Prompt Engineering

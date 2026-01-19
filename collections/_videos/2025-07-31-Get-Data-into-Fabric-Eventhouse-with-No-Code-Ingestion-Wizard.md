@@ -10,7 +10,6 @@ date: 2025-07-31 18:16:15 +00:00
 permalink: /ml/videos/Get-Data-into-Fabric-Eventhouse-with-No-Code-Ingestion-Wizard
 tags:
 - Amazon S3
-- Azure
 - Azure Storage
 - Cloud Computing
 - Continuous Ingestion
@@ -27,14 +26,12 @@ tags:
 - Fabric Eventhouse
 - Microsoft
 - Microsoft Fabric
-- ML
 - No Code Wizard
 - OneLake
 - Real Time Analytics
 - Schema Inference
 - Tech
 - Technology
-- Videos
 section_names:
 - azure
 - ml

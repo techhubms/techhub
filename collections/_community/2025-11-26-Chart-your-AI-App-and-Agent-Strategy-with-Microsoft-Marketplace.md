@@ -9,15 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-26 18:19:58 +00:00
 permalink: /ai/community/Chart-your-AI-App-and-Agent-Strategy-with-Microsoft-Marketplace
 tags:
-- AI
 - AI Agents
 - AI Applications
 - AI Strategy
-- Azure
 - Azure AI
 - Build VS Buy
 - Cloud Marketplace
-- Community
 - Cost Control
 - Enterprise AI
 - Governance

@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-13 16:37:10 +00:00
 permalink: /github-copilot/news/Claude-Sonnet-45-Now-Available-in-GitHub-Copilot
 tags:
-- AI
 - AI Integration
 - AI Models
 - Business
@@ -18,10 +17,8 @@ tags:
 - Copilot Chat
 - Eclipse
 - Enterprise
-- GitHub Copilot
 - IDE
 - JetBrains
-- News
 - Pro
 - Pro Plus
 - Software Development

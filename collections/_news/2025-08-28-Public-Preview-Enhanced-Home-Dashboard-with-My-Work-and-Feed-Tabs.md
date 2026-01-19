@@ -11,12 +11,10 @@ permalink: /devops/news/Public-Preview-Enhanced-Home-Dashboard-with-My-Work-and-
 tags:
 - Dashboard
 - Developer Productivity
-- DevOps
 - Feed Tab
 - GitHub
 - Issues
 - My Work Tab
-- News
 - Public Preview
 - Pull Requests
 - Repository Management

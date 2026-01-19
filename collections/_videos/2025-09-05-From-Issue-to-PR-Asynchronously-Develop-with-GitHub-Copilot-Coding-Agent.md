@@ -10,21 +10,17 @@ date: 2025-09-05 17:29:28 +00:00
 permalink: /github-copilot/videos/From-Issue-to-PR-Asynchronously-Develop-with-GitHub-Copilot-Coding-Agent
 tags:
 - Agent Command Center
-- AI
 - AI Code Generation
 - Automated Testing
 - Autonomous Agents
 - Azure AI
 - Cloud Computing
-- Coding
 - Coding Agent
 - Coding Automation
 - Dev
 - Developer Productivity
 - Development
-- DevOps
 - GitHub
-- GitHub Copilot
 - MCP
 - Microsoft
 - Playwright Integration
@@ -32,7 +28,6 @@ tags:
 - Software Development
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - coding

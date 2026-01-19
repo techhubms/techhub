@@ -9,8 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-30 20:10:38 +00:00
 permalink: /ai/news/Microsoft-Cloud-and-AI-Strength-Fuels-Q4-2025-Financial-Results
 tags:
-- AI
-- Azure
 - Cloud Revenue
 - Company News
 - Dynamics 365
@@ -21,7 +19,6 @@ tags:
 - LinkedIn
 - Microsoft 365
 - Microsoft Cloud
-- News
 - Productivity And Business Processes
 - Q4
 - Windows

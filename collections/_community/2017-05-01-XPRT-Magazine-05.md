@@ -8,15 +8,12 @@ permalink: /azure/community/XPRT-Magazine-05
 tags:
 - ARM Templates
 - Automation
-- Azure
 - Best Practices
 - Cloud
 - Cloud Transition
 - Communities
-- Community
 - Containers
 - Deployment Pipelines
-- DevOps
 - Event Grid
 - Magazines
 - Scaling

@@ -11,14 +11,11 @@ permalink: /coding/videos/Connecting-Computing-Eras-From-Altair-8800-to-Azure-Cl
 tags:
 - Altair 8800
 - Assembler
-- Azure
 - BASIC
 - Bootloaders
 - Cloud Architecture
-- Coding
 - CP/M
 - Development Practices
-- DevOps
 - Emulators
 - Mark Russinovich
 - Microsoft Ignite
@@ -33,7 +30,6 @@ tags:
 - Sysinternals
 - Terminal
 - UEFI
-- Videos
 section_names:
 - azure
 - coding

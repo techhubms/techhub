@@ -9,16 +9,13 @@ feed_url: https://github.blog/feed/
 date: 2025-06-17 16:00:00 +00:00
 permalink: /github-copilot/news/5-tips-for-using-GitHub-Copilot-with-issues-to-boost-your-productivity
 tags:
-- AI
 - AI & ML
 - AI Features
 - Automation
 - Context Switching
 - Developer Productivity
 - Generative AI
-- GitHub Copilot
 - GitHub Issues
-- News
 - Resolution Time
 section_names:
 - ai

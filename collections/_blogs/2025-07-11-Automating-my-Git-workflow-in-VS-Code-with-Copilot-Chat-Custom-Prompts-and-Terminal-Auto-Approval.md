@@ -9,19 +9,14 @@ feed_url: https://r-vm.com/feed.xml
 date: 2025-07-11 00:00:00 +00:00
 permalink: /github-copilot/blogs/Automating-my-Git-workflow-in-VS-Code-with-Copilot-Chat-Custom-Prompts-and-Terminal-Auto-Approval
 tags:
-- AI
 - Automation
-- Blogs
 - Code Review
-- Coding
 - Configuration
 - Copilot Chat
 - Custom Prompts
 - Developer Tools
 - Development
-- DevOps
 - Git
-- GitHub Copilot
 - PowerShell
 - Productivity
 - Python

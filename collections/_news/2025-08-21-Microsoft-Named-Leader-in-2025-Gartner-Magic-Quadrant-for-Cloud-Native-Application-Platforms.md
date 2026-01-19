@@ -10,29 +10,24 @@ date: 2025-08-21 15:00:00 +00:00
 permalink: /ai/news/Microsoft-Named-Leader-in-2025-Gartner-Magic-Quadrant-for-Cloud-Native-Application-Platforms
 tags:
 - Agentic DevOps
-- AI
 - AI + Machine Learning
 - AI Model Deployment
 - App Lifecycle
-- Azure
 - Azure AI Foundry
 - Azure App Service
 - Azure Container Apps
 - Azure Functions
 - Azure Static Web Apps
 - Cloud Native
-- Coding
 - Compute
 - Containers
 - Cost Optimization
 - Developer Productivity
-- DevOps
 - Enterprise Scalability
 - Event Driven Architectures
 - Gartner® Magic Quadrant™
 - Internet Of Things
 - Microservices
-- News
 - PaaS
 - Serverless
 - SRE

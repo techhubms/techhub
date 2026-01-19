@@ -17,15 +17,12 @@ tags:
 - CodeQL CLI
 - Continuous Integration
 - Copilot Autofix
-- DevOps
 - GitHub
 - GitHub Actions
 - GitHub Enterprise Server
-- News
 - OWASP Top 10
 - Release Notes
 - Rust
-- Security
 - Security Analysis
 section_names:
 - devops

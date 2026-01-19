@@ -11,16 +11,13 @@ permalink: /github-copilot/news/The-Legacy-Copilot-Usage-Report-CSV-Is-No-Longer
 tags:
 - Activity Report
 - Admin Tools
-- AI
 - Automation
 - Copilot
 - CSV Retirement
 - Data Export
 - GitHub
 - GitHub Administration
-- GitHub Copilot
 - Metrics
-- News
 - Reporting
 - Retired
 - Usage Report

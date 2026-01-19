@@ -10,13 +10,11 @@ date: 2025-09-02 17:41:37 +00:00
 permalink: /azure/community/Broadcom-VMware-Licensing-Changes-Impacting-Azure-VMware-Solution-Customers
 tags:
 - AVS
-- Azure
 - Azure VMware Solution
 - Broadcom
 - BYOL
 - Cloud Deployment
 - Cloud Licensing
-- Community
 - Hyperscaler Platforms
 - Infrastructure Management
 - Licensing

@@ -9,14 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-22 07:29:14 +00:00
 permalink: /ai/community/Serverless-MCP-Agent-with-LangChainjs-v1-Full-Stack-GenAI-Deployment-on-Azure
 tags:
-- AI
 - Authentication
-- Azure
 - Azure Developer CLI
 - Azure Functions
 - Azure Static Web Apps
-- Coding
-- Community
 - Cosmos DB
 - Debugging
 - GenAI

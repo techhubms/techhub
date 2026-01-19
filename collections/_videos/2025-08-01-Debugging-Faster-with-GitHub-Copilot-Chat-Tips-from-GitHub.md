@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-01 14:01:09 +00:00
 permalink: /github-copilot/videos/Debugging-Faster-with-GitHub-Copilot-Chat-Tips-from-GitHub
 tags:
-- AI
 - Automation
 - Bug Fixing
 - Code Assistance
@@ -18,9 +17,7 @@ tags:
 - Developer Productivity
 - Error Messages
 - GitHub
-- GitHub Copilot
 - Programming
-- Videos
 section_names:
 - ai
 - github-copilot

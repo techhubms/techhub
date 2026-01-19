@@ -12,7 +12,6 @@ tags:
 - .NET
 - App Architecture
 - C#
-- Coding
 - Component Integration
 - Cross Platform
 - Hot Reload
@@ -21,7 +20,6 @@ tags:
 - MVU
 - MVU Pattern
 - MVVM
-- News
 - Open Source
 - Performance
 - State Management

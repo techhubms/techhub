@@ -12,7 +12,6 @@ tags:
 - Agent Builder
 - Agentic Architecture
 - Aghogho Biakolo
-- AI
 - AI Agents
 - Approval Workflow
 - Billing Insights
@@ -32,7 +31,6 @@ tags:
 - Reporting
 - Sales Development Agent
 - Security Integration
-- Videos
 section_names:
 - ai
 ---

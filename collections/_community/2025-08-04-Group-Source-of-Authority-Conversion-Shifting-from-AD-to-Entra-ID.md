@@ -10,9 +10,7 @@ date: 2025-08-04 14:06:29 +00:00
 permalink: /azure/community/Group-Source-of-Authority-Conversion-Shifting-from-AD-to-Entra-ID
 tags:
 - Active Directory
-- Azure
 - Cloud Identity
-- Community
 - Entra Capabilities
 - Entra ID
 - Graph Explorer
@@ -21,7 +19,6 @@ tags:
 - Hybrid Identity
 - Identity Governance
 - Mail Enabled Groups
-- Security
 - SOA Conversion
 section_names:
 - azure

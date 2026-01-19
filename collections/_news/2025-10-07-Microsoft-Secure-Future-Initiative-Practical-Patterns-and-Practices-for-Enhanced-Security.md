@@ -20,8 +20,6 @@ tags:
 - Microsoft Secure Future Initiative
 - Multifactor Authentication
 - Network Isolation
-- News
-- Security
 - Security Architecture
 - Security Patterns
 - Software Supply Chain

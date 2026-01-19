@@ -10,29 +10,23 @@ date: 2025-09-23 13:00:00 +00:00
 permalink: /github-copilot/news/Modernizing-Java-Projects-with-GitHub-Copilot-Agent-Mode-Step-by-Step-Guide
 tags:
 - Agent Mode
-- AI
 - AI & ML
 - AI Assisted Development
 - AKS
 - App Modernization
 - Application Insights
 - Automated Migration
-- Azure
 - Cloud Deployment
 - Continuous Integration
 - CVE Scanning
 - Dependency Upgrades
-- DevOps
-- GitHub Copilot
 - Gradle
 - Java
 - Log Analytics
 - Managed Identity
 - Maven
 - Microsoft Entra ID
-- News
 - OpenRewrite
-- Security
 - Spring Security
 - VS Code
 section_names:

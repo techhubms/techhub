@@ -10,19 +10,15 @@ date: 2025-05-13 17:26:51 +00:00
 permalink: /github-copilot/news/Agent-Mode-Public-Preview-Launches-for-Visual-Studio-1714
 tags:
 - Agent Mode
-- AI
 - AI Agents
 - Azure Storage
 - Code Refactoring
-- Coding
 - Copilot
 - Copilot Chat
 - Cosmos DB
 - Documentation Generation
-- GitHub Copilot
 - MCP
 - MCP Servers
-- News
 - Productivity
 - Testing
 - Visual Studio 17.14

@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-05 18:19:03 +00:00
 permalink: /github-copilot/news/Copilot-Coding-Agent-Adds-Organization-Wide-Custom-Instructions
 tags:
-- AI
 - Automation
 - Best Practices
 - Coding Agent
@@ -17,9 +16,7 @@ tags:
 - Copilot
 - Copilot Coding Agent
 - Custom Instructions
-- GitHub Copilot
 - Improvement
-- News
 - Organizational Settings
 - Software Development
 section_names:

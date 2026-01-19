@@ -9,14 +9,11 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-04 15:40:53 +00:00
 permalink: /github-copilot/community/GitHub-Copilot-is-great-but-do-you-ever-wish-it-actually-coded-like-you
 tags:
-- AI
 - AI Assistant
 - Automation
 - Code Completion
 - Coding Style
-- Community
 - Developer Experience
-- GitHub Copilot
 - Machine Learning
 - Personalized AI
 - Software Tools

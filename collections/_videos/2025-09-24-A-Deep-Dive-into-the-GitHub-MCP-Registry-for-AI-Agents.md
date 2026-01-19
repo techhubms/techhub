@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-09-24 20:33:32 +00:00
 permalink: /ai/videos/A-Deep-Dive-into-the-GitHub-MCP-Registry-for-AI-Agents
 tags:
-- AI
 - AI Agents
 - Community Driven
 - Connect MCP
@@ -22,7 +21,6 @@ tags:
 - MCP Registry
 - Open Ecosystem
 - Registry Tutorial
-- Videos
 section_names:
 - ai
 ---

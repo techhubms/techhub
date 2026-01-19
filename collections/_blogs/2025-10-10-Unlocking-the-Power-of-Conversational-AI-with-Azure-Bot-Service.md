@@ -9,13 +9,10 @@ feed_url: https://dellenny.com/feed/
 date: 2025-10-10 14:06:46 +00:00
 permalink: /ai/blogs/Unlocking-the-Power-of-Conversational-AI-with-Azure-Bot-Service
 tags:
-- AI
-- Azure
 - Azure Application Insights
 - Azure Bot Service
 - Azure Cognitive Services
 - Azure OpenAI Service
-- Blogs
 - Bot Framework Composer
 - Bot Framework SDK
 - Chatbot Development

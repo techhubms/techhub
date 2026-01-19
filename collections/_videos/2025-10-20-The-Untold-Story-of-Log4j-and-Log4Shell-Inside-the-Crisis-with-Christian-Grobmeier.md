@@ -22,10 +22,8 @@ tags:
 - Patch Management
 - SBOM
 - Secure Development
-- Security
 - Software Supply Chain
 - Software Vulnerabilities
-- Videos
 - Vulnerability Response
 section_names:
 - security

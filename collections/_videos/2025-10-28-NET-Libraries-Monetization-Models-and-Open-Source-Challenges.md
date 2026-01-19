@@ -13,7 +13,6 @@ tags:
 - .NET Community
 - .NET Libraries
 - C#
-- Coding
 - Community Development
 - Developer Tools
 - Forking Projects
@@ -22,7 +21,6 @@ tags:
 - Open Source
 - Software Maintenance
 - Sustainability
-- Videos
 section_names:
 - coding
 ---

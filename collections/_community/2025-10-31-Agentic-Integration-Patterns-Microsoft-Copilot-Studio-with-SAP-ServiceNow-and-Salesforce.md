@@ -10,11 +10,8 @@ date: 2025-10-31 20:41:25 +00:00
 permalink: /ai/community/Agentic-Integration-Patterns-Microsoft-Copilot-Studio-with-SAP-ServiceNow-and-Salesforce
 tags:
 - Agent To Agent (a2a)
-- AI
-- Azure
 - Azure Agent Framework
 - Azure Logic Apps
-- Community
 - Conversational AI
 - Enterprise Automation
 - Federated Identity

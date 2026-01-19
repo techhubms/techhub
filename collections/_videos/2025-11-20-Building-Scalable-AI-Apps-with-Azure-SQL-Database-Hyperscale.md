@@ -10,9 +10,7 @@ date: 2025-11-20 16:38:24 +00:00
 permalink: /ai/videos/Building-Scalable-AI-Apps-with-Azure-SQL-Database-Hyperscale
 tags:
 - Advanced Session
-- AI
 - AI Automation
-- Azure
 - Azure Architecture
 - Azure SQL Database Hyperscale
 - Cloud Native SQL
@@ -25,7 +23,6 @@ tags:
 - Microservices
 - Microsoft Foundry
 - Microsoft Ignite
-- ML
 - MSIgnite
 - RAG
 - Read Scale Out
@@ -34,7 +31,6 @@ tags:
 - Serverless
 - T SQL
 - Vector Indexes
-- Videos
 section_names:
 - ai
 - azure

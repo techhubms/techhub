@@ -10,20 +10,16 @@ date: 2025-08-25 14:30:00 +00:00
 permalink: /azure/community/System-Assigned-Identity-based-Access-for-Azure-Machine-Configuration-Packages-Now-Generally-Available
 tags:
 - Automation
-- Azure
 - Azure Arc
 - Azure Machine Configuration
 - Azure Policy
 - Azure Storage
 - Blob Storage
-- Community
 - Compliance
-- DevOps
 - Guest Configuration
 - Policy Enforcement
 - PowerShell
 - Role Based Access Control
-- Security
 - Server Management
 - System Assigned Identity
 - User Assigned Identity

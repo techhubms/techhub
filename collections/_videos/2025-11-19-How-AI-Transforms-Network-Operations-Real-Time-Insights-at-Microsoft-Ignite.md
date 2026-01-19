@@ -10,32 +10,25 @@ date: 2025-11-19 13:03:09 +00:00
 permalink: /ai/videos/How-AI-Transforms-Network-Operations-Real-Time-Insights-at-Microsoft-Ignite
 tags:
 - Agenticbusinessapplications
-- AI
 - AI in Network Operations
 - API Integration
-- Azure
 - Build VS Buy
 - Compliance
 - Data Pipelines
-- DevOps
 - Human in The Loop
 - Hybrid Data
 - Incident Triage
 - Knowledge Retrieval
 - Large Language Models
-- Machine Learning
 - Microsoft Azure
-- ML
 - MLOps
 - MSIgnite
 - Natural Language Processing
 - Network Observability
 - RAG
 - Real Time Insights
-- Security
 - Text To SQL
 - Traffic Analysis
-- Videos
 section_names:
 - ai
 - azure

@@ -12,10 +12,8 @@ tags:
 - A2A
 - Activity Protocol
 - Agent Framework
-- AI
 - AI Orchestration
 - AutoGen
-- Azure
 - Cloud Computing
 - Containerization
 - Dev
@@ -32,7 +30,6 @@ tags:
 - Semantic Kernel
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

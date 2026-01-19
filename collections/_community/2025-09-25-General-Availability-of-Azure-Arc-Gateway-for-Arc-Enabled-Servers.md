@@ -11,13 +11,10 @@ permalink: /azure/community/General-Availability-of-Azure-Arc-Gateway-for-Arc-En
 tags:
 - Arc Enabled Servers
 - Arc Gateway
-- Azure
 - Azure Arc
 - Azure CLI
 - Azure Extensions
 - Azure Security
-- Community
-- DevOps
 - Enterprise Proxy
 - Firewall
 - Hybrid Cloud
@@ -25,7 +22,6 @@ tags:
 - Network Configuration
 - Onboarding
 - PowerShell
-- Security
 - Server Management
 - Windows Admin Center
 section_names:

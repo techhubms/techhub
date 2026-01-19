@@ -10,24 +10,19 @@ date: 2025-12-01 21:00:12 +00:00
 permalink: /github-copilot/videos/Setting-Up-AI-Toolkit-and-GitHub-Copilot-for-Microsoft-Foundry-Projects
 tags:
 - Agent Development
-- AI
 - AI Toolkit
-- Azure
 - Cloud Computing
 - Cloud Development
-- Coding
 - Dev
 - Developer Tools
 - Development
 - Environment Setup
-- GitHub Copilot
 - Microsoft
 - Microsoft Azure
 - Microsoft Foundry
 - Model Management
 - Tech
 - Technology
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

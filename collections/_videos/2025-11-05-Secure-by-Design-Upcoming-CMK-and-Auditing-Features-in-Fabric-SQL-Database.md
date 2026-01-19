@@ -11,7 +11,6 @@ permalink: /azure/videos/Secure-by-Design-Upcoming-CMK-and-Auditing-Features-in-
 tags:
 - Access Control
 - Auditing
-- Azure
 - Cloud Computing
 - CMK
 - Compliance
@@ -27,13 +26,11 @@ tags:
 - Microsoft Azure
 - Microsoft Fabric
 - Regulatory Compliance
-- Security
 - SQL Security
 - TDE
 - Tech
 - Technology
 - Transparent Data Encryption
-- Videos
 section_names:
 - azure
 - security

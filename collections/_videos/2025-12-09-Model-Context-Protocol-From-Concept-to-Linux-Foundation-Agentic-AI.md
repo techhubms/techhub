@@ -10,7 +10,6 @@ date: 2025-12-09 21:00:03 +00:00
 permalink: /ai/videos/Model-Context-Protocol-From-Concept-to-Linux-Foundation-Agentic-AI
 tags:
 - Agentic AI Foundation
-- AI
 - AI Agents
 - AI Integration
 - AI Standards
@@ -23,7 +22,6 @@ tags:
 - Open Source
 - OpenAI
 - OpenSource
-- Videos
 section_names:
 - ai
 ---

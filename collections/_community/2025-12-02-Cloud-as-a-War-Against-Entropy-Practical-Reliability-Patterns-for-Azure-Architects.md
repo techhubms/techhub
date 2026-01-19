@@ -11,17 +11,14 @@ permalink: /azure/community/Cloud-as-a-War-Against-Entropy-Practical-Reliability
 tags:
 - Architecture Review
 - Availability Zones
-- Azure
 - Azure App Service
 - Azure SQL Database
 - Azure Storage
 - Chaos Engineering
 - Cloud Native Systems
 - Cloud Reliability
-- Community
 - Configuration Management
 - Data Consistency
-- DevOps
 - Domain Driven Design
 - Idempotent APIs
 - Incident Response

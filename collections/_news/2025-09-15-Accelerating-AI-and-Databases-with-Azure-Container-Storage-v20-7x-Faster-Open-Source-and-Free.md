@@ -9,9 +9,7 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-15 15:00:00 +00:00
 permalink: /ai/news/Accelerating-AI-and-Databases-with-Azure-Container-Storage-v20-7x-Faster-Open-Source-and-Free
 tags:
-- AI
 - AKS
-- Azure
 - Azure Container Storage
 - Cloud Storage
 - Compute
@@ -23,7 +21,6 @@ tags:
 - Kubernetes
 - Latency
 - Model Deployment
-- News
 - NVMe
 - Open Source
 - Performance Optimization

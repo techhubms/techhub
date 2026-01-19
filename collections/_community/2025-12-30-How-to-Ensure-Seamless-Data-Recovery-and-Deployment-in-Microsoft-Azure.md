@@ -10,22 +10,18 @@ date: 2025-12-30 08:00:00 +00:00
 permalink: /ml/community/How-to-Ensure-Seamless-Data-Recovery-and-Deployment-in-Microsoft-Azure
 tags:
 - Apache Spark
-- Azure
 - Azure Cosmos DB
 - Azure Databricks
 - Backup And Restore
 - Blob Storage
 - CI/CD
 - Cloud Databases
-- Community
 - Continuous Delivery
 - Data Lake Storage
 - Data Protection
 - Data Recovery
 - Database Management
 - Deployment Automation
-- DevOps
-- ML
 - Production Rollback
 - Restoration Workflow
 section_names:

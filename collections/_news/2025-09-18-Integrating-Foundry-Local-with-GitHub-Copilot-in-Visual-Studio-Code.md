@@ -9,20 +9,16 @@ feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-09-18 19:00:50 +00:00
 permalink: /github-copilot/news/Integrating-Foundry-Local-with-GitHub-Copilot-in-Visual-Studio-Code
 tags:
-- AI
 - AI Development
 - AI Toolkit
 - Azure AI Foundry
 - Code Generation
-- Coding
 - Development Tools
 - Foundry Local
 - FoundryLocal
-- GitHub Copilot
 - Local AI Models
 - Microsoft Phi
 - Model Management
-- News
 - Offline Development
 - OpenAI GPT
 - Privacy

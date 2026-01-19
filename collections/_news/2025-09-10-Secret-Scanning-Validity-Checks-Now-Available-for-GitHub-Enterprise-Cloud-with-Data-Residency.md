@@ -11,15 +11,12 @@ permalink: /devops/news/Secret-Scanning-Validity-Checks-Now-Available-for-GitHub
 tags:
 - Application Security
 - Data Residency
-- DevOps
 - Enterprise Server
 - GitHub
 - GitHub Advanced Security
 - GitHub Enterprise Cloud
-- News
 - Secret Protection
 - Secret Scanning
-- Security
 - Security Automation
 - SSLmate
 - Token Validation

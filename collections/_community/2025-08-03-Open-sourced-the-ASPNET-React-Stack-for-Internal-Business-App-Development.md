@@ -12,8 +12,6 @@ tags:
 - .NET
 - ASP.NET Core
 - Business Apps
-- Coding
-- Community
 - CRUD Automation
 - Framework
 - Full Stack

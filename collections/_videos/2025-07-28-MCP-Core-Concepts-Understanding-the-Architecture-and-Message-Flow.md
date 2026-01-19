@@ -10,7 +10,6 @@ date: 2025-07-28 16:01:06 +00:00
 permalink: /ai/videos/MCP-Core-Concepts-Understanding-the-Architecture-and-Message-Flow
 tags:
 - Agents
-- AI
 - AI Development
 - Client Server Architecture
 - MCP
@@ -19,7 +18,6 @@ tags:
 - Models
 - Protocol Architecture
 - Tools
-- Videos
 section_names:
 - ai
 ---

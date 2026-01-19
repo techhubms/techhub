@@ -11,7 +11,6 @@ permalink: /ai/videos/Understanding-Agent-Flows-in-Microsoft-Copilot-Studio-A-Si
 tags:
 - Agent Flows
 - AgentFlows
-- AI
 - API Integration
 - App Integration
 - Automation
@@ -24,7 +23,6 @@ tags:
 - MicrosoftAI
 - Power Platform
 - Task Automation
-- Videos
 - Workflow Automation
 section_names:
 - ai

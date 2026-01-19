@@ -9,12 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-07-28 16:01:25 +00:00
 permalink: /ai/videos/Build-your-first-MCP-server
 tags:
-- AI
 - AI Toolkit
 - C#
 - Client
 - Cloud Deployment
-- Coding
 - Java
 - JavaScript
 - LLM
@@ -25,7 +23,6 @@ tags:
 - Server
 - Streaming
 - TypeScript
-- Videos
 - VS Code
 section_names:
 - ai

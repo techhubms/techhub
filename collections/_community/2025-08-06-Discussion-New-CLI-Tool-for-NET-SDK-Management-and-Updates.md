@@ -14,8 +14,6 @@ tags:
 - .NET Runtime
 - .NET SDK
 - CLI Tools
-- Coding
-- Community
 - Cross Platform Development
 - Developer Experience
 - Dnup

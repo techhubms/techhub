@@ -10,22 +10,18 @@ date: 2025-12-09 18:34:22 +00:00
 permalink: /coding/news/Blue-Green-Deployment-in-Azure-Container-Apps-with-Azure-Developer-CLI
 tags:
 - Azd
-- Azure
 - Azure Container Apps
 - Azure Developer CLI
 - Azure SDK
 - Bicep
 - Blue Green Deployment
 - CI/CD
-- Coding
 - Containerization
 - Deployment Strategies
-- DevOps
 - Docker
 - GitHub Actions
 - IaC
 - Immutable Deployments
-- News
 - Python
 - Revision Based Deployment
 - Traffic Splitting

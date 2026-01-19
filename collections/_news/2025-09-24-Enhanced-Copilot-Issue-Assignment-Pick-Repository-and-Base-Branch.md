@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-24 09:30:06 +00:00
 permalink: /github-copilot/news/Enhanced-Copilot-Issue-Assignment-Pick-Repository-and-Base-Branch
 tags:
-- AI
 - Automation
 - Branch Selection
 - Coding Assistant
@@ -18,10 +17,8 @@ tags:
 - Developer Tools
 - Development Process
 - GitHub
-- GitHub Copilot
 - Improvement
 - Issue Assignment
-- News
 - Project Management
 - Projects & Issues
 - Public Preview

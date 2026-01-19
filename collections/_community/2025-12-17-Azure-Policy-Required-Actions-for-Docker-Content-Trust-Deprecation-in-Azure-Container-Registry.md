@@ -12,18 +12,14 @@ tags:
 - ACR
 - API Deprecation
 - ARM API
-- Azure
 - Azure Container Registry
 - Azure Policy
 - Cloud Governance
-- Community
 - Container Security
-- DevOps
 - Docker Content Trust
 - Notary Project
 - Policy Compliance
 - Policy Definition
-- Security
 - Security Compliance
 - Trustpolicy
 section_names:

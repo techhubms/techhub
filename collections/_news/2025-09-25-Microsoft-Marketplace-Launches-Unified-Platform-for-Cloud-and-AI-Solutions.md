@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-25 14:13:11 +00:00
 permalink: /ai/news/Microsoft-Marketplace-Launches-Unified-Platform-for-Cloud-and-AI-Solutions
 tags:
-- AI
 - AI Agents
 - AI Apps
-- Azure
 - Azure AI Foundry
 - Azure Marketplace
 - Cloud Management
@@ -27,7 +25,6 @@ tags:
 - Microsoft AppSource
 - Microsoft Marketplace
 - Microsoft Security
-- News
 - Partner Ecosystem
 - Power Platform
 - Private Offers

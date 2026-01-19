@@ -10,7 +10,6 @@ date: 2025-10-08 13:49:40 +00:00
 permalink: /azure/community/AMBA-ALZ-Pattern-Recent-Enhancements-to-Built-in-Policies-and-Role-Based-Access-in-Azure
 tags:
 - AMBA ALZ
-- Azure
 - Azure CLI
 - Azure Deployment
 - Azure Governance
@@ -20,14 +19,11 @@ tags:
 - Azure Role Based Access Control
 - Azure Service Health
 - Built in Policy
-- Community
-- DevOps
 - GitHub Actions
 - Managed Identities
 - Monitoring Policy Contributor
 - Operational Excellence
 - Policy Management
-- Security
 - Security Best Practices
 - Terraform
 section_names:

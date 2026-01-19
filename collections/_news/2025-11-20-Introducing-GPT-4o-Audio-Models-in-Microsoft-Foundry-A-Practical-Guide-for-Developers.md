@@ -9,11 +9,9 @@ feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-11-20 16:00:21 +00:00
 permalink: /ai/news/Introducing-GPT-4o-Audio-Models-in-Microsoft-Foundry-A-Practical-Guide-for-Developers
 tags:
-- AI
 - API Integration
 - Audio Models
 - Authentication
-- Azure
 - Azure AI
 - Azure AI Foundry
 - Azure CLI
@@ -23,7 +21,6 @@ tags:
 - GPT 4o
 - Gradio
 - Microsoft Foundry
-- News
 - OpenAI
 - Speech To Text
 - Text To Speech

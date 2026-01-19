@@ -12,11 +12,9 @@ tags:
 - AKS
 - Application Insights
 - Architecture
-- Azure
 - Azure Active Directory
 - Azure Key Vault
 - Azure Monitor
-- Blogs
 - CI/CD
 - Cloud Native
 - Consul
@@ -28,7 +26,6 @@ tags:
 - Open Service Mesh
 - Policy Automation
 - RBAC
-- Security
 - Service Mesh
 - Sidecar Proxy
 - Solution Architecture

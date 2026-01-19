@@ -10,7 +10,6 @@ date: 2025-08-21 09:00:00 +00:00
 permalink: /ml/news/Preview-of-Item-History-Page-in-Microsoft-Fabric-Capacity-Metrics-App
 tags:
 - Analytics
-- Azure
 - Capacity Metrics App
 - Capacity Planning
 - Capacity Upgrade
@@ -20,9 +19,7 @@ tags:
 - Item Level Metrics
 - Microsoft
 - Microsoft Fabric
-- ML
 - Monitoring
-- News
 - Performance Analysis
 - Power BI
 - Resource Optimization

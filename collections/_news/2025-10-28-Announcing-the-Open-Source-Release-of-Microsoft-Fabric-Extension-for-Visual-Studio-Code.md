@@ -9,16 +9,12 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-28 10:00:00 +00:00
 permalink: /coding/news/Announcing-the-Open-Source-Release-of-Microsoft-Fabric-Extension-for-Visual-Studio-Code
 tags:
-- Azure
-- Coding
 - Community Collaboration
 - CRUD Operations
 - Developer Tools
-- DevOps
 - Extension API
 - Git Integration
 - Microsoft Fabric
-- News
 - Open Source
 - Tenant Management
 - VS Code

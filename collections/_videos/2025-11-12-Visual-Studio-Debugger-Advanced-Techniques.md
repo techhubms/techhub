@@ -12,13 +12,11 @@ tags:
 - .NET
 - .NET 10
 - .NET MAUI 10
-- AI
 - AI Debugging
 - ASP.NET Core 10
 - Async Code
 - C# 14
 - Code Troubleshooting
-- Coding
 - Conditional Breakpoints
 - Data Breakpoints
 - Debugging
@@ -27,7 +25,6 @@ tags:
 - Immediate Window
 - Memory Analysis
 - Tracepoints
-- Videos
 - VS
 - Watch Window
 section_names:

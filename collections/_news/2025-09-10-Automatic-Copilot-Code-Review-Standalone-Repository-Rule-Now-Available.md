@@ -9,18 +9,14 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-10 20:08:07 +00:00
 permalink: /github-copilot/news/Automatic-Copilot-Code-Review-Standalone-Repository-Rule-Now-Available
 tags:
-- AI
 - Automatic Code Review
 - Automation
 - Code Quality
 - Continuous Review
 - Copilot
 - Developer Tools
-- DevOps
 - GitHub
-- GitHub Copilot
 - Improvement
-- News
 - Pull Requests
 - Repository Rules
 - Rule Configuration

@@ -10,14 +10,11 @@ date: 2025-10-21 15:41:25 +00:00
 permalink: /github-copilot/videos/AI-Powered-Enhancements-in-Microsoft-Learn-Developer-Docs-with-Copilot-Highlights
 tags:
 - .NET
-- AI
 - AI Integration
 - AI Powered Docs
-- Azure
 - Azure Functions
 - Cloud Computing
 - Code Migration
-- Coding
 - Coding Best Practices
 - Content Engineering
 - Context Engineering
@@ -26,7 +23,6 @@ tags:
 - Developer Documentation
 - Developer Tools
 - Development
-- GitHub Copilot
 - Machine Learning
 - Microsoft
 - Microsoft Developer
@@ -35,7 +31,6 @@ tags:
 - Tech
 - Technical Writing
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

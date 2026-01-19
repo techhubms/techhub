@@ -18,8 +18,6 @@ tags:
 - KQL
 - Lakehouse
 - Microsoft Fabric
-- ML
-- News
 - Operational Metrics
 - Real Time Analytics
 - Schema Mirroring

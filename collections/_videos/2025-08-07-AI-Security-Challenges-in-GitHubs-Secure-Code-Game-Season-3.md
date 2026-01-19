@@ -9,14 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-07 16:24:36 +00:00
 permalink: /ai/videos/AI-Security-Challenges-in-GitHubs-Secure-Code-Game-Season-3
 tags:
-- AI
 - AI Challenges
 - AI Security
 - AI Vulnerabilities
 - Application Security
 - Code Patching
 - Cybersecurity
-- DevOps
 - DevOps Security
 - Ethical Hacking
 - GitHub
@@ -25,8 +23,6 @@ tags:
 - Prompt Injection
 - Secure Code Game
 - Secure Coding
-- Security
-- Videos
 - Vulnerability Mitigation
 section_names:
 - ai

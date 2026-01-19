@@ -13,7 +13,6 @@ tags:
 - .NET 10
 - Application Optimization
 - C#
-- Coding
 - Configuration Settings
 - Containerization
 - DATAS
@@ -25,7 +24,6 @@ tags:
 - Kubernetes
 - Memory
 - Memory Management
-- News
 - Performance
 - Runtime Configuration
 - Server GC

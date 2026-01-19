@@ -11,7 +11,6 @@ permalink: /azure/community/Cut-migration-costs-with-B-Series-and-Cobalt-100-VM-
 tags:
 - ARM Native Workloads
 - ARM64
-- Azure
 - Azure Infrastructure
 - Azure Migrate
 - Azure Virtual Machines
@@ -19,7 +18,6 @@ tags:
 - Burstable VMs
 - Cloud Migration
 - Cobalt 100 VM
-- Community
 - Cost Estimation
 - Energy Efficiency
 - VM Cost Optimization

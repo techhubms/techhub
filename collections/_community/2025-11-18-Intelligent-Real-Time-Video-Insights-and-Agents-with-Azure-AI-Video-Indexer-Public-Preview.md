@@ -10,12 +10,9 @@ date: 2025-11-18 16:00:14 +00:00
 permalink: /ai/community/Intelligent-Real-Time-Video-Insights-and-Agents-with-Azure-AI-Video-Indexer-Public-Preview
 tags:
 - Agentic AI
-- AI
 - API Integration
-- Azure
 - Azure AI Video Indexer
 - Azure Arc
-- Community
 - Conversational AI
 - Custom AI Models
 - Edge Native

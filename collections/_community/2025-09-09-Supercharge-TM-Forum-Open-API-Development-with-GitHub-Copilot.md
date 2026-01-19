@@ -10,15 +10,11 @@ date: 2025-09-09 13:42:07 +00:00
 permalink: /github-copilot/community/Supercharge-TM-Forum-Open-API-Development-with-GitHub-Copilot
 tags:
 - Agent Mode
-- AI
 - AI Coding Assistant
 - API Development
-- Coding
-- Community
 - Copilot Chat
 - Developer Productivity
 - Express
-- GitHub Copilot
 - Node.js
 - OpenAPI Specification
 - REST API

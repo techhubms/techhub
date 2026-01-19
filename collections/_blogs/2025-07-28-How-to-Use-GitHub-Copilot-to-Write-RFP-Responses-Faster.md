@@ -11,13 +11,10 @@ permalink: /github-copilot/blogs/How-to-Use-GitHub-Copilot-to-Write-RFP-Response
 tags:
 - .NET
 - Agile
-- AI
 - AI Assistant
-- Blogs
 - Budget Estimation
 - Copilot
 - Copilot Chat
-- GitHub Copilot
 - Markdown Templates
 - Project Planning
 - Prompt Engineering

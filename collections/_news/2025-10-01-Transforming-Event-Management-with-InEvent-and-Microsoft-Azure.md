@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-01 16:42:33 +00:00
 permalink: /ai/news/Transforming-Event-Management-with-InEvent-and-Microsoft-Azure
 tags:
-- AI
 - AI Automation
 - AKS
-- Azure
 - Azure Active Directory
 - Azure OpenAI Service
 - ChatGPT
@@ -24,9 +22,7 @@ tags:
 - InEvent
 - Microsoft Azure
 - Microsoft Teams
-- News
 - Outlook Integration
-- Security
 - Single Sign On
 - Workflow Integration
 section_names:

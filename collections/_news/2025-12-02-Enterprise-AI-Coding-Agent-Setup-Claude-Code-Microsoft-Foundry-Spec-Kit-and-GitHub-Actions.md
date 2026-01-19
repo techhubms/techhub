@@ -10,14 +10,10 @@ date: 2025-12-02 01:37:40 +00:00
 permalink: /ai/news/Enterprise-AI-Coding-Agent-Setup-Claude-Code-Microsoft-Foundry-Spec-Kit-and-GitHub-Actions
 tags:
 - Agent Framework
-- AI
 - All Things Azure
-- Azure
 - Azure AI Foundry
 - Azure CLI
 - Claude Code
-- Coding
-- DevOps
 - Enterprise AI
 - Entra ID
 - Fabric Connector
@@ -25,12 +21,10 @@ tags:
 - MCP Tools
 - Microsoft Foundry
 - Multi Agent System
-- News
 - Node.js
 - Project Context
 - Python
 - RAG Grounding
-- Security
 - Security Authentication
 - Spec Kit
 - Structured Development

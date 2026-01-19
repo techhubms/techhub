@@ -9,14 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-25 15:04:26 +00:00
 permalink: /azure/community/Designing-for-Certainty-How-Azure-Capacity-Reservations-Safeguard-MissionCritical-Workloads
 tags:
-- Azure
 - Azure Capacity Reservations
 - Azure VM
 - Capacity Planning
 - Cloud Architecture
-- Community
 - Compute Availability
-- DevOps
 - FinOps
 - High Availability
 - Pay as You Go

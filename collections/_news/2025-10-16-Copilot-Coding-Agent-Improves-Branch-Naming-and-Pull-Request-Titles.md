@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-16 20:32:39 +00:00
 permalink: /github-copilot/news/Copilot-Coding-Agent-Improves-Branch-Naming-and-Pull-Request-Titles
 tags:
-- AI
 - Automation
 - Background Agent
 - Branch Naming
@@ -19,9 +18,7 @@ tags:
 - Developer Tools
 - Enterprise Subscribers
 - GitHub Actions
-- GitHub Copilot
 - Improvement
-- News
 - Pro Subscribers
 - Pull Request Titles
 - Workflow Improvement

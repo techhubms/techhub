@@ -9,20 +9,16 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-12 18:31:57 +00:00
 permalink: /github-copilot/news/Configuring-Internal-MCP-Registries-and-Allowlists-for-Copilot-in-VS-Code-Insiders
 tags:
-- AI
 - Allowlist Enforcement
 - Azure API Center
 - Copilot
 - Copilot Business
 - Copilot Enterprise
-- DevOps
 - Eclipse
 - Enterprise Policy
-- GitHub Copilot
 - Improvement
 - JetBrains
 - MCP Registry
-- News
 - Platform Governance
 - Policy Governance
 - Registry Only Policy

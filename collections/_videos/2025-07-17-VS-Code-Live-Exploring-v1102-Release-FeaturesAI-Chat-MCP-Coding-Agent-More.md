@@ -9,17 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-07-17 16:48:30 +00:00
 permalink: /ai/videos/VS-Code-Live-Exploring-v1102-Release-FeaturesAI-Chat-MCP-Coding-Agent-More
 tags:
-- AI
 - AI Editor
 - Chat Improvements
-- Coding
 - Coding Agent Integration
 - Custom Modes
 - Development Tools
 - Edit Chat
 - MCP Support
 - Open Source
-- Videos
 - VS Code
 - VS Code V1.102
 section_names:

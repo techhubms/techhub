@@ -9,8 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-25 12:05:54 +00:00
 permalink: /ai/videos/Advancing-Confidential-Computing-Bosch-Microsoft-Azure-and-Intel-TDX
 tags:
-- AI
-- Azure
 - Cloud Security
 - Confidential Computing
 - Confidential VMs
@@ -27,9 +25,7 @@ tags:
 - Secure AI
 - Secure Enablement
 - Secureyourdata
-- Security
 - Trusted Digital Ecosystems
-- Videos
 section_names:
 - ai
 - azure

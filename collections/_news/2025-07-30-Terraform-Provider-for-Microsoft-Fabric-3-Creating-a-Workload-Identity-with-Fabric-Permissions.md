@@ -10,15 +10,11 @@ date: 2025-07-30 07:00:00 +00:00
 permalink: /ml/news/Terraform-Provider-for-Microsoft-Fabric-3-Creating-a-Workload-Identity-with-Fabric-Permissions
 tags:
 - Automation
-- Azure
 - Deployment
-- DevOps
 - Fabric Administrator
 - IaC
 - Identity Management
 - Microsoft Fabric
-- ML
-- News
 - Permissions
 - Resource Configuration
 - Terraform

@@ -11,15 +11,11 @@ permalink: /coding/news/Practical-Insights-on-Using-Azure-Developer-CLI-azd-for-
 tags:
 - .NET
 - Azd
-- Azure
 - Azure Container Apps
 - Azure Developer CLI
 - Azure SDK
 - Bicep
-- Coding
-- DevOps
 - IaC
-- News
 section_names:
 - azure
 - coding

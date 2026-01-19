@@ -9,15 +9,12 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-24 09:00:00 +00:00
 permalink: /ml/news/From-Signals-to-Insights-Building-a-Real-Time-Streaming-Data-Platform-with-Fabric-Eventstream
 tags:
-- Azure
 - Building Monitoring
 - Data Driven Decision Making
 - Eventstream
 - IoT
 - Microsoft Fabric
-- ML
 - MQTT
-- News
 - Public Weather Feeds
 - Real Time Intelligence
 - Sensor Data

@@ -11,17 +11,12 @@ permalink: /github-copilot/community/AI-Toolkit-Extension-Pack-for-Visual-Studio
 tags:
 - .NET
 - Agentic Applications
-- AI
 - AI Agents
 - AI Toolkit
-- Azure
 - Azure AI Foundry
 - Cloud Deployment
-- Coding
-- Community
 - Debugging
 - Foundry SDK
-- GitHub Copilot
 - Graph Visualizer
 - Hosted Agents Playground
 - Microsoft Agent Framework

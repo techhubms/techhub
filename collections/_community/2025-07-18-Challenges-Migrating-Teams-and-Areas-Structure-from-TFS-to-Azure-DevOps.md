@@ -10,10 +10,7 @@ date: 2025-07-18 13:45:18 +00:00
 permalink: /azure/community/Challenges-Migrating-Teams-and-Areas-Structure-from-TFS-to-Azure-DevOps
 tags:
 - Areas
-- Azure
 - Azure DevOps
-- Community
-- DevOps
 - Migration
 - Modules
 - Organizational Structure

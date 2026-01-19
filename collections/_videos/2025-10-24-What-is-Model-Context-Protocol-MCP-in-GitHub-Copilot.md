@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-10-24 18:20:31 +00:00
 permalink: /github-copilot/videos/What-is-Model-Context-Protocol-MCP-in-GitHub-Copilot
 tags:
-- AI
 - AI Models
 - Contextual AI
 - Copilot
@@ -18,10 +17,8 @@ tags:
 - Developer Productivity
 - External Tool Integration
 - GitHub
-- GitHub Copilot
 - Mcp
 - Shorts
-- Videos
 - VS Code
 section_names:
 - ai

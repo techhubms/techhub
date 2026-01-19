@@ -11,8 +11,6 @@ permalink: /coding/blogs/Implementing-a-Pooled-Dependency-Injection-Lifetime-in-
 tags:
 - .NET Core
 - ASP.NET Core
-- Blogs
-- Coding
 - DbContext Pooling
 - Dependency Injection
 - IResettableService

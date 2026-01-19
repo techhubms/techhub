@@ -9,23 +9,19 @@ feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-06-20 16:23:00 +00:00
 permalink: /ai/news/codex-mini-Fast-Scalable-Code-Generation-for-the-CLI-Era
 tags:
-- AI
 - API Access
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
 - CLI Workflows
 - Code Generation
 - Codex CLI
 - Codex Mini
-- Coding
 - Command Line Automation
 - Cost Efficiency
 - Developer Productivity
 - Function Calling
 - GitHub Actions Integration
 - Instruction Following AI
-- News
 - O4 Mini Model
 - Streaming Outputs
 - Terminal Tools

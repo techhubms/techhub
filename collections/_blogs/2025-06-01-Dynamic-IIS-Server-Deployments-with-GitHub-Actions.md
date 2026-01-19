@@ -11,10 +11,8 @@ permalink: /devops/blogs/Dynamic-IIS-Server-Deployments-with-GitHub-Actions
 tags:
 - Automation
 - AWS
-- Blogs
 - Cloud Migration
 - Deployment
-- DevOps
 - GitHub Actions
 - Iis
 - Self Hosted Runners

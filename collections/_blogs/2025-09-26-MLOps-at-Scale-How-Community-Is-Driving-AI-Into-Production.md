@@ -9,18 +9,13 @@ feed_url: https://devops.com/feed/
 date: 2025-09-26 16:20:05 +00:00
 permalink: /ai/blogs/MLOps-at-Scale-How-Community-Is-Driving-AI-Into-Production
 tags:
-- AI
 - AI Operations
 - Best Practices
-- Blogs
 - CI/CD
 - Community Of Practice
-- DevOps
 - Generative AI
 - Governance
 - JFrog Swampup
-- Machine Learning
-- ML
 - MLOps
 - Model Deployment
 - Model Monitoring

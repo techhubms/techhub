@@ -9,18 +9,15 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-07-30 14:01:12 +00:00
 permalink: /github-copilot/videos/Never-lose-your-GitHub-Copilot-session-history-again
 tags:
-- AI
 - Code Documentation
 - Copilot Deep Dive
 - Developer Productivity
 - GitHub
-- GitHub Copilot
 - Programming
 - Prompt Engineering
 - Session History
 - Software Development
 - Version Control
-- Videos
 section_names:
 - ai
 - github-copilot

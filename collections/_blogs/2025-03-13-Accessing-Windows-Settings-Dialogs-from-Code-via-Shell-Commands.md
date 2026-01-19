@@ -11,9 +11,7 @@ permalink: /coding/blogs/Accessing-Windows-Settings-Dialogs-from-Code-via-Shell-
 tags:
 - .NET
 - Application Permissions
-- Blogs
 - C#
-- Coding
 - Ms Settings
 - PowerShell
 - Process.Start

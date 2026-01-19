@@ -9,16 +9,13 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-16 15:10:09 +00:00
 permalink: /github-copilot/videos/Introducing-GitHub-Copilot-Integration-in-SQL-Server-Management-Studio-22
 tags:
-- AI
 - Azure SQL
 - Cloud Computing
 - Code Completion
-- Coding
 - Data Exposed
 - Database Management
 - Dev
 - Development
-- GitHub Copilot
 - Microsoft
 - SQL
 - SQL Development
@@ -28,7 +25,6 @@ tags:
 - Tech
 - Technology
 - Troubleshooting
-- Videos
 - VS
 - VS Code
 section_names:

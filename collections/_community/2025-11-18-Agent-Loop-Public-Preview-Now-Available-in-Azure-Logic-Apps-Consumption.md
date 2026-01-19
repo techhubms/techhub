@@ -10,13 +10,10 @@ date: 2025-11-18 18:36:23 +00:00
 permalink: /ai/community/Agent-Loop-Public-Preview-Now-Available-in-Azure-Logic-Apps-Consumption
 tags:
 - Agent Loop
-- AI
 - AI Agents
 - Autonomous Agents
-- Azure
 - Azure Logic Apps
 - Business Process Automation
-- Community
 - Connectors
 - Consumption Plan
 - Conversational Agents

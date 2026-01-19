@@ -9,27 +9,21 @@ feed_url: https://dellenny.com/feed/
 date: 2025-08-04 12:13:52 +00:00
 permalink: /github-copilot/blogs/DevOps-Meets-Microsoft-AI-Accelerating-Innovation-in-the-Cloud-Era
 tags:
-- AI
 - AIOps
 - Application Insights
 - Automation
-- Azure
 - Azure DevOps
 - Azure Machine Learning
 - Azure Monitor
 - Azure Pipelines
-- Blogs
 - CI/CD
 - Cloud Computing
-- DevOps
 - DevSecOps
 - GitHub Actions
-- GitHub Copilot
 - Log Analytics
 - Microsoft AI
 - Microsoft Fabric
 - Microsoft Sentinel
-- ML
 - MLflow
 - OpenAI Codex
 - Responsible AI

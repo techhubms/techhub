@@ -12,19 +12,15 @@ tags:
 - Access Control
 - ARM
 - Authentication
-- Azure
 - Azure & Cloud
 - Azure DevOps
 - Azure Resource Manager
 - Cloud Security
 - Conditional Access
-- DevOps
 - Identity Management
 - Microsoft Entra
 - Microsoft Visual Studio Team Services
-- News
 - Policy Management
-- Security
 - Token Management
 - User Sign in
 section_names:

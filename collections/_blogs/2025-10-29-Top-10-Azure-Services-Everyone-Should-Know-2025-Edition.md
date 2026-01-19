@@ -9,7 +9,6 @@ feed_url: https://dellenny.com/feed/
 date: 2025-10-29 07:52:42 +00:00
 permalink: /azure/blogs/Top-10-Azure-Services-Everyone-Should-Know-2025-Edition
 tags:
-- Azure
 - Azure Active Directory
 - Azure App Service
 - Azure Blob Storage
@@ -20,17 +19,14 @@ tags:
 - Azure Logic Apps
 - Azure SQL Database
 - Azure Virtual Machines
-- Blogs
 - CI/CD
 - Cloud Architecture
 - Cloud Security
-- DevOps
 - Hybrid Cloud
 - IaaS
 - Identity Management
 - Microservices
 - PaaS
-- Security
 - Serverless
 - Workflow Automation
 section_names:

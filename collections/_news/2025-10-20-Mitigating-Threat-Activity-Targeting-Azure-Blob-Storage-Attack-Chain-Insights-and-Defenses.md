@@ -10,7 +10,6 @@ date: 2025-10-20 16:00:00 +00:00
 permalink: /azure/news/Mitigating-Threat-Activity-Targeting-Azure-Blob-Storage-Attack-Chain-Insights-and-Defenses
 tags:
 - Attack Chain
-- Azure
 - Azure Blob Storage
 - Cloud Monitoring
 - Cloud Security
@@ -24,10 +23,8 @@ tags:
 - Microsoft Defender For Cloud
 - Microsoft Entra ID
 - MITRE ATT&CK
-- News
 - Role Based Access Control
 - SAS Tokens
-- Security
 - Security Recommendations
 - Threat Detection
 - Zero Trust

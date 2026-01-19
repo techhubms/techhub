@@ -11,9 +11,7 @@ permalink: /coding/blogs/Unpacking-Zip-Folders-into-Windows-Long-File-Paths-with
 tags:
 - .NET
 - Application Manifest
-- Blogs
 - C#
-- Coding
 - ExtractToDirectory
 - File System
 - Group Policy

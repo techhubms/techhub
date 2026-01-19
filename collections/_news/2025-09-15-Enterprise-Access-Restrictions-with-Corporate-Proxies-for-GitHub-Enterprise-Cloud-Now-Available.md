@@ -14,17 +14,14 @@ tags:
 - Copilot Network Policy
 - Corporate Proxy
 - Data Residency
-- DevOps
 - Enterprise Managed Users
 - Enterprise Management Tools
 - Firewall
 - GitHub Enterprise Cloud
 - Improvement
 - Network Restrictions
-- News
 - Platform Governance
 - Proxy Configuration
-- Security
 section_names:
 - devops
 - security

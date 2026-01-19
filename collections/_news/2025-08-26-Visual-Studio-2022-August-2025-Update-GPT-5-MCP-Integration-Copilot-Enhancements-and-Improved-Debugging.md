@@ -9,23 +9,19 @@ feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-08-26 18:22:28 +00:00
 permalink: /github-copilot/news/Visual-Studio-2022-August-2025-Update-GPT-5-MCP-Integration-Copilot-Enhancements-and-Improved-Debugging
 tags:
-- AI
 - AI Integration
 - C++
 - Code Completion
 - Code Suggestions
-- Coding
 - Copilot
 - Copilot Chat
 - Debug
 - Developer Tools
 - Git
 - Git Integration
-- GitHub Copilot
 - GPT 5
 - MCP
 - Models
-- News
 - Next Edits Suggestion
 - OAuth
 - OpenAI

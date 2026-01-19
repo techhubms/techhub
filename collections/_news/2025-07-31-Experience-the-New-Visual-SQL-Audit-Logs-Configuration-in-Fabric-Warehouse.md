@@ -20,10 +20,7 @@ tags:
 - Fabric Warehouse
 - Log Retention
 - Microsoft Fabric
-- ML
-- News
 - OneLake
-- Security
 - SQL Audit Logs
 - User Interface
 section_names:

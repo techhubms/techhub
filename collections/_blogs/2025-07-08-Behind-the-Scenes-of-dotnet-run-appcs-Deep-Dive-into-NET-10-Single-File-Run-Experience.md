@@ -11,10 +11,8 @@ permalink: /coding/blogs/Behind-the-Scenes-of-dotnet-run-appcs-Deep-Dive-into-NE
 tags:
 - .NET 10
 - .NET Run
-- Blogs
 - Build Caching
 - C#
-- Coding
 - MSBuild
 - Roslyn
 - SDK Directives

@@ -12,14 +12,11 @@ tags:
 - Application Security
 - ASP.NET Core
 - Authentication
-- Azure
 - Azure App Service
 - Azure Bot Service
 - Azure Firewall
 - Bot Framework
 - C#
-- Coding
-- Community
 - Custom Engine Agent
 - Entra ID
 - JWT Token Validation
@@ -27,7 +24,6 @@ tags:
 - Microsoft Teams
 - Network Security
 - NSG
-- Security
 - Service Principal
 - Tenant Restriction
 section_names:

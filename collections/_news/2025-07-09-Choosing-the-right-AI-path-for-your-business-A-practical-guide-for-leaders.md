@@ -9,13 +9,11 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-09 21:48:06 +00:00
 permalink: /ai/news/Choosing-the-right-AI-path-for-your-business-A-practical-guide-for-leaders
 tags:
-- AI
 - AI Strategy
 - Business
 - Company News
 - Decision Making
 - Leadership
-- News
 - Practical Guide
 section_names:
 - ai

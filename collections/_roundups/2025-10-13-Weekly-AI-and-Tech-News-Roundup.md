@@ -6,24 +6,15 @@ viewing_mode: internal
 date: 2025-10-13 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
-- AI
 - AI Agents
-- Azure
 - Azure AI
 - CI/CD
 - Cloud Infrastructure
-- Coding
 - Data Engineering
 - Developer Tools
-- DevOps
-- GitHub Copilot
-- Machine Learning
-- ML
 - Multimodal Models
 - Observability
 - Open Source
-- Roundups
-- Security
 - Serverless Computing
 - Zero Trust
 section_names:

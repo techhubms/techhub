@@ -11,11 +11,8 @@ permalink: /coding/community/Ubuntu-Based-Runtimes-Coming-to-Azure-App-Service-f
 tags:
 - .NET 10
 - App Deployment
-- Azure
 - Azure App Service
 - Azure CLI
-- Coding
-- Community
 - Debian
 - GitHub Actions
 - Java 25

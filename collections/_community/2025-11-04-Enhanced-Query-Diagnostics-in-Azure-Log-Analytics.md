@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-04 14:35:59 +00:00
 permalink: /azure/community/Enhanced-Query-Diagnostics-in-Azure-Log-Analytics
 tags:
-- Azure
 - Azure Log Analytics
 - Azure Monitor
 - Azure Portal
-- Community
 - Error Handling
 - Kusto Query Language
 - Log Analytics Service

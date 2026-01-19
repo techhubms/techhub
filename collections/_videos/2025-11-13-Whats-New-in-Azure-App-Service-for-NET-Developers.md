@@ -15,13 +15,10 @@ tags:
 - .NET MAUI 10
 - Application Security
 - ASP.NET Core 10
-- Azure
 - Azure App Service
 - Azure DevOps
 - C# 14
 - Cloud Deployment
-- Coding
-- DevOps
 - Diagnostics
 - F# 10
 - GitHub Actions
@@ -29,8 +26,6 @@ tags:
 - Monitoring
 - Performance Optimization
 - Scaling Applications
-- Security
-- Videos
 - VS
 - Web Apps
 section_names:

@@ -9,16 +9,12 @@ feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-05-09 00:00:00 +00:00
 permalink: /github-copilot/blogs/Master-Quick-Chat-Instantly-Access-GitHub-Copilot-AI-Without-Disrupting-Coding-Flow
 tags:
-- AI
 - AI Assistant
-- Blogs
 - Code Optimization
 - Code Suggestions
-- Coding
 - Coding Workflow
 - Developer Productivity
 - Error Explanation
-- GitHub Copilot
 - Inline Chat
 - Quick Chat
 - Unit Testing

@@ -10,7 +10,6 @@ date: 2025-11-03 17:00:00 +00:00
 permalink: /azure/news/Enhancing-Software-Supply-Chain-Security-with-Microsofts-Signing-Transparency
 tags:
 - Auditing
-- Azure
 - Azure Built in Security
 - Azure Confidential Computing
 - Code Signing
@@ -21,9 +20,7 @@ tags:
 - Cryptographic Ledger
 - Merkle Tree
 - Microsoft Azure
-- News
 - SCITT
-- Security
 - Signing Transparency
 - Software Supply Chain Security
 - Transparency Logs

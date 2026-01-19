@@ -10,7 +10,6 @@ date: 2025-10-24 14:56:02 +00:00
 permalink: /ai/news/AI-Skilling-Initiatives-and-Africas-230-Million-Job-Opportunity
 tags:
 - Africa
-- AI
 - AI Curriculum
 - AI Skilling
 - AINSI
@@ -25,7 +24,6 @@ tags:
 - Kenya
 - Microsoft AI
 - Microsoft AI Skills Director
-- News
 - Workforce Development
 section_names:
 - ai

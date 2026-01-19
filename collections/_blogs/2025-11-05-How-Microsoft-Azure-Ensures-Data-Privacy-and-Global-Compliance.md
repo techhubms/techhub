@@ -10,10 +10,8 @@ date: 2025-11-05 10:05:40 +00:00
 permalink: /azure/blogs/How-Microsoft-Azure-Ensures-Data-Privacy-and-Global-Compliance
 tags:
 - Audit
-- Azure
 - Azure Compliance Manager
 - Azure Key Vault
-- Blogs
 - Cloud Governance
 - Cloud Security
 - Compliance
@@ -30,7 +28,6 @@ tags:
 - Microsoft Defender For Cloud
 - Microsoft Purview
 - Secure Cloud
-- Security
 - Zero Trust
 section_names:
 - azure

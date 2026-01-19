@@ -13,7 +13,6 @@ tags:
 - AKS
 - App Gateway V2
 - App Service JBoss EAP
-- Azure
 - Azure Cloud
 - Azure Container Storage
 - Azure Data Box
@@ -25,9 +24,7 @@ tags:
 - Azure VMware
 - Cloud
 - Cloud Infrastructure
-- Coding
 - DCa/ECa V6
-- DevOps
 - Distributed Tracing
 - Fleet Manager
 - Grafana
@@ -39,7 +36,6 @@ tags:
 - Observability
 - Service Retirement
 - SQL Hub
-- Videos
 - Virtual Machines
 section_names:
 - azure

@@ -11,11 +11,9 @@ permalink: /azure/community/Architectural-Patterns-and-Secure-Onboarding-for-Azu
 tags:
 - Air Gapped Environments
 - Arc Gateway
-- Azure
 - Azure Arc
 - Azure Firewall
 - Azure Monitor
-- Community
 - Compliance
 - Control Plane
 - Data Plane
@@ -24,7 +22,6 @@ tags:
 - Network Isolation
 - Private Link
 - Regulated Industries
-- Security
 - Security Architecture
 - Zero Trust
 section_names:

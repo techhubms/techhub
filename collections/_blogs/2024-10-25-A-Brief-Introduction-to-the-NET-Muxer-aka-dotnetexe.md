@@ -11,9 +11,7 @@ permalink: /coding/blogs/A-Brief-Introduction-to-the-NET-Muxer-aka-dotnetexe
 tags:
 - .NET
 - Apphost
-- Blogs
 - CLI
-- Coding
 - CoreHost
 - Corehost.cpp
 - Debugging

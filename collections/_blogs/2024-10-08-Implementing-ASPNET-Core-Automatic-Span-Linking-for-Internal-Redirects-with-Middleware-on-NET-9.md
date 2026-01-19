@@ -12,9 +12,6 @@ tags:
 - .NET 9
 - Activity
 - ASP.NET Core
-- Blogs
-- Coding
-- DevOps
 - Distributed Tracing
 - ITempDataDictionaryFactory
 - Middleware

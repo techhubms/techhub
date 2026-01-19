@@ -9,18 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-15 20:17:22 +00:00
 permalink: /ai/community/Streamline-Azure-NetApp-Files-Management-Directly-from-VS-Code
 tags:
-- AI
 - AI Automation
 - ARM Templates
-- Azure
 - Azure DevOps
 - Azure NetApp Files
 - Capacity Planning
-- Coding
-- Community
 - Cost Efficiency
 - Developer Experience
-- DevOps
 - IaC
 - IDE Tools
 - Natural Language Commands

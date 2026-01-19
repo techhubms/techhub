@@ -13,7 +13,6 @@ tags:
 - .NET Developer
 - ASP.NET Core
 - Aspdotnet
-- Coding
 - Demo
 - Developer Community
 - Developer Tools
@@ -22,7 +21,6 @@ tags:
 - Microsoft
 - Razor
 - Tooling Enhancements
-- Videos
 - Visual Studio Insiders
 - Visualstudio2026
 - Visualstudioinsiders

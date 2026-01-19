@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-15 16:40:53 +00:00
 permalink: /github-copilot/news/Claude-Haiku-45-Now-Available-in-GitHub-Copilot
 tags:
-- AI
 - AI Integration
 - AI Model
 - Anthropic
@@ -21,9 +20,7 @@ tags:
 - Copilot Enterprise
 - Copilot Pro
 - Copilot Settings
-- GitHub Copilot
 - Model Picker
-- News
 - VS Code
 section_names:
 - ai

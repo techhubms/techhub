@@ -9,14 +9,10 @@ feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2024-10-30 00:00:00 +00:00
 permalink: /github-copilot/blogs/GitHub-Universe-2024-Successfully-scaling-GitHub-Copilot-to-thousands-of-developers
 tags:
-- AI
-- Blogs
 - Conference
 - Copilot Adoption
 - Developer Tooling
-- DevOps
 - GitHub
-- GitHub Copilot
 - GitHub Universe
 - Organizational Implementation
 - Scalability

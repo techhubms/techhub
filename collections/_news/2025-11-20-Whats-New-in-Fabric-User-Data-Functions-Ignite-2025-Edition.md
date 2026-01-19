@@ -10,11 +10,9 @@ date: 2025-11-20 11:00:00 +00:00
 permalink: /ml/news/Whats-New-in-Fabric-User-Data-Functions-Ignite-2025-Edition
 tags:
 - API Integration
-- Azure
 - Azure Key Vault
 - Business Logic
 - Centralized Logic
-- Coding
 - Configuration Management
 - Cosmos DB
 - Data Engineering
@@ -22,8 +20,6 @@ tags:
 - Fabric Activator
 - Managed Functions
 - Microsoft Fabric
-- ML
-- News
 - NoSQL
 - Python
 - User Data Functions

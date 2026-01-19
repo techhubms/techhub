@@ -9,11 +9,9 @@ feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-08-13 18:29:24 +00:00
 permalink: /github-copilot/news/Azure-Developer-CLI-Dev-to-Production-with-Azure-DevOps-Pipelines
 tags:
-- AI
 - AI Assisted Development
 - Artifact Management
 - Azd
-- Azure
 - Azure & Cloud
 - Azure Developer CLI
 - Azure Developer CLI (azd)
@@ -23,14 +21,10 @@ tags:
 - Bicep
 - CI/CD
 - Cloud Deployment
-- Coding
-- DevOps
 - Environment Variables
-- GitHub Copilot
 - GitHub Copilot For Azure
 - IaC
 - Multi Stage Pipeline
-- News
 - Pipeline Automation
 - Pipeline Validation
 - VS Code

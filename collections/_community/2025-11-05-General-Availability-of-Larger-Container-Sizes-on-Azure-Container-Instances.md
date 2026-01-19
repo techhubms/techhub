@@ -11,13 +11,11 @@ permalink: /azure/community/General-Availability-of-Larger-Container-Sizes-on-Az
 tags:
 - AKS
 - ARM Templates
-- Azure
 - Azure CLI
 - Azure Container Instances
 - Azure Portal
 - Bicep
 - Cloud Computing
-- Community
 - Confidential Containers
 - Container SKUs
 - Data Inferencing

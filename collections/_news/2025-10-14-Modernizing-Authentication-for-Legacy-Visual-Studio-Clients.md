@@ -10,19 +10,15 @@ date: 2025-10-14 15:28:47 +00:00
 permalink: /azure/news/Modernizing-Authentication-for-Legacy-Visual-Studio-Clients
 tags:
 - Authentication
-- Azure
 - Azure & Cloud
 - Azure DevOps
 - Client Upgrade
-- DevOps
 - End Of Support
 - Identity Standards
 - Interactive Reauthentication
 - Legacy Clients
 - Microsoft Entra ID
 - Modern Authentication
-- News
-- Security
 - Security Update
 - Token Management
 - VS

@@ -11,7 +11,6 @@ permalink: /coding/videos/High-Performance-Terrain-Simulations-in-NET
 tags:
 - .NET
 - Architecture
-- Coding
 - Custom Memory Pool
 - Gaea
 - High Performance Computing
@@ -22,7 +21,6 @@ tags:
 - Simulation
 - SPMD
 - Terrain Simulation
-- Videos
 section_names:
 - coding
 ---

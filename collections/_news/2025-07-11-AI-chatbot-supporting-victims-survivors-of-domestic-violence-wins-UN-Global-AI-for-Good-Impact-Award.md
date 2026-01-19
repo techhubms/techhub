@@ -9,12 +9,10 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-11 14:09:12 +00:00
 permalink: /ai/news/AI-chatbot-supporting-victims-survivors-of-domestic-violence-wins-UN-Global-AI-for-Good-Impact-Award
 tags:
-- AI
 - AI Chatbot
 - AI Innovation
 - Company News
 - Domestic Violence
-- News
 - Recognition
 - Social Welfare
 - Support Services

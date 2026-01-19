@@ -9,22 +9,18 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-10-31 14:00:21 +00:00
 permalink: /github-copilot/videos/Enterprise-Grade-AI-Governance-with-GitHub-Copilot-and-Advanced-Security
 tags:
-- AI
 - AI Agent
 - Control Plane
 - Copilot Metrics
 - Custom Agents
 - Developer Experience
-- DevOps
 - Enterprise Governance
 - GitHub
 - GitHub Advanced Security
-- GitHub Copilot
 - GitHub Copilot Enterprise
 - GitHubUniverse
 - Platform Engineering
 - SDLC
-- Videos
 - VS Code
 section_names:
 - ai

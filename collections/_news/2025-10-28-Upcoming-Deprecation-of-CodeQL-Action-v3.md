@@ -16,13 +16,10 @@ tags:
 - CodeQL Action
 - CodeQL V4
 - Dependabot
-- DevOps
 - GitHub Actions
 - GitHub Enterprise Server
-- News
 - Node.js 24
 - Retired
-- Security
 - Security Automation
 - Workflow Update
 section_names:

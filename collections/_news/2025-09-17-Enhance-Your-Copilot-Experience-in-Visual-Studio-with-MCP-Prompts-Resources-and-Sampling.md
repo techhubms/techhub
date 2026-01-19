@@ -10,20 +10,15 @@ date: 2025-09-17 17:30:37 +00:00
 permalink: /github-copilot/news/Enhance-Your-Copilot-Experience-in-Visual-Studio-with-MCP-Prompts-Resources-and-Sampling
 tags:
 - Agentic Behaviors
-- AI
-- Azure
 - Azure DevOps
 - Chat
-- Coding
 - Copilot
 - Developer
 - Developer Productivity
-- DevOps
 - DuckDB
 - Extensions
 - Figma
 - GitHub
-- GitHub Copilot
 - Hugging Face
 - IDE Integration
 - LLM
@@ -32,7 +27,6 @@ tags:
 - MCP Resources
 - MCP Sampling
 - MongoDB
-- News
 - Playwright
 - Prompt Engineering
 - Prompts

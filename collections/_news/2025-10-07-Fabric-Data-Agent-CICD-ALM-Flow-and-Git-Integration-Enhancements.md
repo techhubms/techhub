@@ -11,19 +11,15 @@ permalink: /ml/news/Fabric-Data-Agent-CICD-ALM-Flow-and-Git-Integration-Enhancem
 tags:
 - ALM
 - Application Lifecycle Management
-- Azure
 - CI/CD
 - Collaboration
 - Data Engineering
 - Data Management
 - Deployment Pipeline
 - Development Workspace
-- DevOps
 - Fabric Data Agent
 - Git Integration
 - Microsoft Fabric
-- ML
-- News
 - Production Workspace
 - Source Control
 - Version Control

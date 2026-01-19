@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 16:54:16 +00:00
 permalink: /ai/community/From-Traditional-Security-to-AI-Driven-Cyber-Resilience-Microsofts-Approach-to-Securing-AI
 tags:
-- AI
 - AI Security
 - AI Workloads
 - Azure AI Foundry
-- Community
 - Compliance
 - Conditional Access
 - Content Safety
@@ -30,7 +28,6 @@ tags:
 - Non Human Identities
 - Privileged Identity Management
 - Red Teaming
-- Security
 section_names:
 - ai
 - security

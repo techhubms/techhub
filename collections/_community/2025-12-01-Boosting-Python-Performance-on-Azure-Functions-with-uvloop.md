@@ -11,10 +11,7 @@ permalink: /coding/community/Boosting-Python-Performance-on-Azure-Functions-with
 tags:
 - Asynchronous Workloads
 - Asyncio
-- Azure
 - Azure Functions
-- Coding
-- Community
 - Concurrency
 - Event Loop
 - Flex Consumption

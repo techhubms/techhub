@@ -10,9 +10,7 @@ date: 2025-07-28 16:58:05 +00:00
 permalink: /devops/community/Bug-Commit-changes-button-remains-active-during-GitHub-file-upload-causes-incomplete-commits
 tags:
 - Commit Changes
-- Community
 - Community Feedback
-- DevOps
 - File Upload
 - GitHub
 - GitHub Repository

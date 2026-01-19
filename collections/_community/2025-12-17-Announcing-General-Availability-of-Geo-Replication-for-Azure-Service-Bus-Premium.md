@@ -11,13 +11,11 @@ permalink: /azure/community/Announcing-General-Availability-of-Geo-Replication-f
 tags:
 - Asynchronous Replication
 - Availability Zones
-- Azure
 - Azure Messaging
 - Azure Regions
 - Azure Service Bus
 - Business Continuity
 - Cloud Architecture
-- Community
 - Disaster Recovery
 - Geo Replication
 - High Availability

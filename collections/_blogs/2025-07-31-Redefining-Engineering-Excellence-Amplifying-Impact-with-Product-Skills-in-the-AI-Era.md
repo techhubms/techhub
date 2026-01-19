@@ -9,13 +9,10 @@ feed_url: https://devops.com/feed/
 date: 2025-07-31 09:53:03 +00:00
 permalink: /ai/blogs/Redefining-Engineering-Excellence-Amplifying-Impact-with-Product-Skills-in-the-AI-Era
 tags:
-- AI
 - Automation
-- Blogs
 - Business Of DevOps
 - Business Value
 - Contributed Content
-- DevOps
 - Engineering Leadership
 - Innovation
 - Leadership

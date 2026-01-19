@@ -13,19 +13,16 @@ tags:
 - .NET Aspire
 - Agent Collaboration
 - Agentic AI
-- AI
 - AI Agents
 - AI Frameworks
 - ASP.NET Core
 - Autonomous Systems
 - C#
-- Coding
 - F#
 - Function Execution
 - Machine Intelligence
 - MAUI
 - Planning And Reasoning
-- Videos
 - VS
 section_names:
 - ai

@@ -10,9 +10,7 @@ date: 2025-10-16 14:01:36 +00:00
 permalink: /ai/videos/Microsoft-GenAI-for-Energy-Permitting-Solution-Accelerator
 tags:
 - Agentic AI
-- AI
 - AI Workflows
-- Azure
 - Compliance Checks
 - Document Automation
 - Energy
@@ -28,7 +26,6 @@ tags:
 - Permitting
 - Regulatory Automation
 - Solution Accelerator
-- Videos
 section_names:
 - ai
 - azure

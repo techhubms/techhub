@@ -11,9 +11,7 @@ permalink: /ai/videos/Power-Next-Generation-AI-Workloads-with-NVIDIA-Blackwell-o
 tags:
 - Agentic AI
 - Agenticbusinessapplications
-- AI
 - AI Super Factories
-- Azure
 - Confidential Computing
 - GPU Acceleration
 - Microsoft Ignite
@@ -27,7 +25,6 @@ tags:
 - Physical AI
 - Robotics Simulation
 - RTX PRO 6000 Blackwell
-- Videos
 section_names:
 - ai
 - azure

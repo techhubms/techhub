@@ -11,16 +11,12 @@ permalink: /coding/blogs/Intent-vs-Mechanics-The-Power-of-Abstraction-in-Aspire
 tags:
 - App Service
 - Aspire
-- Azure
 - Azure Key Vault
 - Bicep
-- Blogs
 - Cloud Development
 - Code Abstraction
-- Coding
 - Container Apps
 - Developer Workflow
-- DevOps
 - Distributed Applications
 - Docker Compose
 - Environment Configuration
@@ -28,7 +24,6 @@ tags:
 - Local Development
 - Managed Identity
 - Secret Management
-- Security
 - Software Development
 section_names:
 - azure

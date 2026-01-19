@@ -9,13 +9,10 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-07 16:53:57 +00:00
 permalink: /ai/news/New-e-book-teaches-how-to-build-an-AI-powered-security-operations-center
 tags:
-- AI
 - AI Powered
 - Company News
 - Cybersecurity
 - E Book
-- News
-- Security
 - Security Operations Center
 - Threat Detection
 section_names:

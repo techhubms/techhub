@@ -10,17 +10,12 @@ date: 2025-08-14 17:00:00 +00:00
 permalink: /github-copilot/news/Announcing-the-NuGet-MCP-Server-Preview-Real-Time-NuGet-Package-Management-with-AI-Integration
 tags:
 - .NET
-- AI
 - AI Powered Development
 - Automation
-- Coding
 - Continuous Integration
 - Copilot
 - Dependency Management
-- DevOps
-- GitHub Copilot
 - MCP
-- News
 - NuGet
 - NuGet MCP Server
 - NuGetSolver

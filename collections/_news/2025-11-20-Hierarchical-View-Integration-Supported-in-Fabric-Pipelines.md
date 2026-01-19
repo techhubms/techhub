@@ -10,16 +10,13 @@ date: 2025-11-20 10:00:00 +00:00
 permalink: /ml/news/Hierarchical-View-Integration-Supported-in-Fabric-Pipelines
 tags:
 - Analytics Integration
-- Azure
 - Data Engineering
 - Data Orchestration
 - Downstream Jobs
 - Hierarchical View
 - Job Dependencies
 - Microsoft Fabric
-- ML
 - Monitoring Hub
-- News
 - Operational Visibility
 - Orchestration
 - Pipeline Runs

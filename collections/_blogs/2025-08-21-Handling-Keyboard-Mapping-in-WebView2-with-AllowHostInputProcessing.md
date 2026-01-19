@@ -11,9 +11,7 @@ permalink: /coding/blogs/Handling-Keyboard-Mapping-in-WebView2-with-AllowHostInp
 tags:
 - .NET
 - AllowHostInputProcessing
-- Blogs
 - C# Code Samples
-- Coding
 - CoreWebView2ControllerOptions
 - Hybrid Apps
 - JavaScript Interop

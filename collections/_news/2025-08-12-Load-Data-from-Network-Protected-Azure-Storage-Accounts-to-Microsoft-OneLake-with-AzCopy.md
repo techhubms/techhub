@@ -11,7 +11,6 @@ permalink: /azure/news/Load-Data-from-Network-Protected-Azure-Storage-Accounts-t
 tags:
 - ARM Template
 - AzCopy
-- Azure
 - Azure Data Engineering
 - Azure Storage
 - Cloud Data Integration
@@ -22,7 +21,6 @@ tags:
 - Firewall
 - Managed Identity
 - Microsoft OneLake
-- News
 - OneLake Shortcut
 - Resource Instance Rule
 - Trusted Workspace Access

@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-23 13:46:00 +00:00
 permalink: /ai/news/ContraForce-and-Microsoft-Enabling-Autonomous-Cybersecurity-for-Startups-and-MSPs
 tags:
-- AI
 - AI Agents
 - Automation
-- Azure
 - Azure AI Foundry
 - Azure Security
 - Company News
@@ -24,9 +22,7 @@ tags:
 - Microsoft Entra ID
 - Microsoft For Startups
 - Microsoft Sentinel
-- News
 - Pegasus Program
-- Security
 - Security Operations
 - SIEM
 - XDR

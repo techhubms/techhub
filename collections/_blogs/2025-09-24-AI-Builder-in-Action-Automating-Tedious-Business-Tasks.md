@@ -9,9 +9,7 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-24 09:13:30 +00:00
 permalink: /ai/blogs/AI-Builder-in-Action-Automating-Tedious-Business-Tasks
 tags:
-- AI
 - AI Builder
-- Blogs
 - Business Automation
 - Copilot
 - Email Categorization

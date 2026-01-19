@@ -9,9 +9,7 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-09 16:00:00 +00:00
 permalink: /ai/news/Reasoning-Reimagined-Introducing-Phi-4-mini-flash-reasoning-for-Efficient-Edge-AI
 tags:
-- AI
 - AI + Machine Learning
-- Azure
 - Azure AI Foundry
 - Copilot
 - Deployment
@@ -23,7 +21,6 @@ tags:
 - Microsoft
 - Mobile AI
 - Model Efficiency
-- News
 - Phi 4 Mini Flash Reasoning
 - Real Time Applications
 - Responsible AI

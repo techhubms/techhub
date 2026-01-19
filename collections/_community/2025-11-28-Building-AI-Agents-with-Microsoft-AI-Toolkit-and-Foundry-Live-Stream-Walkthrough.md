@@ -10,11 +10,8 @@ date: 2025-11-28 09:48:39 +00:00
 permalink: /ai/community/Building-AI-Agents-with-Microsoft-AI-Toolkit-and-Foundry-Live-Stream-Walkthrough
 tags:
 - Agent Development
-- AI
 - AI Agents
 - AI Toolkit
-- Azure
-- Community
 - Debugging Tools
 - Developer Tools
 - Function Definitions

@@ -10,13 +10,11 @@ date: 2025-09-09 13:36:43 +00:00
 permalink: /azure/community/Announcing-Preview-of-New-Azure-Dasv7-Easv7-and-Fasv7-Series-VMs-Based-on-5th-Gen-AMD-EPYC-Turin-Processors
 tags:
 - AMD EPYC
-- Azure
 - Azure Boost
 - Azure Disk Storage
 - Azure HSM
 - Azure Virtual Machines
 - Cloud Infrastructure
-- Community
 - Compute Optimization
 - Dasv7
 - Easv7

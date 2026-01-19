@@ -13,14 +13,11 @@ tags:
 - API Documentation
 - Cursor Based Pagination
 - Dependabot
-- DevOps
 - DevOps Practices
 - GitHub
-- News
 - Pagination
 - REST API
 - Retired
-- Security
 - Security Alerts
 - Supply Chain Security
 section_names:

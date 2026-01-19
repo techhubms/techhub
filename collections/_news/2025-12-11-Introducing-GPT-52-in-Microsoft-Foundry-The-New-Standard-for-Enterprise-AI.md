@@ -10,13 +10,11 @@ date: 2025-12-11 18:18:05 +00:00
 permalink: /ai/news/Introducing-GPT-52-in-Microsoft-Foundry-The-New-Standard-for-Enterprise-AI
 tags:
 - Agentic Execution
-- AI
 - AI + Machine Learning
 - AI Agents
 - AI Model Deployment
 - Analytics
 - Application Modernization
-- Azure
 - Coding Automation
 - Compliance
 - Context Aware Planning
@@ -26,7 +24,6 @@ tags:
 - Large Language Model
 - Microsoft Foundry
 - Model Pricing
-- News
 - Reasoning
 - Technical Leadership
 section_names:

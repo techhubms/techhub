@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-12-11 18:26:07 +00:00
 permalink: /ml/videos/Whats-New-and-Generally-Available-in-SQL-Database-in-Microsoft-Fabric
 tags:
-- Azure
 - Azure SQL
 - Cloud Computing
 - Cloud Data Platform
@@ -24,14 +23,12 @@ tags:
 - Integration
 - Microsoft
 - Microsoft Fabric
-- ML
 - Sample Architecture
 - SQL Database
 - SQL Demo
 - Tech
 - Tech Release
 - Technology
-- Videos
 section_names:
 - azure
 - ml

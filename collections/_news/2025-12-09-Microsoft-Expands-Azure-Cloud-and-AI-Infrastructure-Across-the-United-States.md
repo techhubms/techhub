@@ -9,11 +9,9 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-09 16:00:00 +00:00
 permalink: /ai/news/Microsoft-Expands-Azure-Cloud-and-AI-Infrastructure-Across-the-United-States
 tags:
-- AI
 - AI + Machine Learning
 - AI Infrastructure
 - Availability Zones
-- Azure
 - Azure Government
 - Cloud Infrastructure
 - Cloud Strategy
@@ -23,7 +21,6 @@ tags:
 - East US 3
 - LEED Certification
 - Multi Region Architecture
-- News
 - Resilience
 - Sustainability
 section_names:

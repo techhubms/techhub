@@ -9,10 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-08 22:58:42 +00:00
 permalink: /azure/community/Azure-Arc-Server-Forum-2026-Schedule-and-Participation-Updates
 tags:
-- Azure
 - Azure Arc
 - Cloud Operations
-- Community
 - Community Forum
 - Edge Computing
 - Hybrid Cloud

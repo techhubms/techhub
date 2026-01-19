@@ -9,18 +9,13 @@ feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2025-12-20 00:00:00 +00:00
 permalink: /github-copilot/blogs/GitHub-Copilot-Coding-Agent-Practical-Automation-Examples
 tags:
-- AI
 - Automation
-- Blogs
 - Cloud Agents
-- Coding
 - Continuous Integration
 - Copilot Chat
 - Developer Tools
-- DevOps
 - DevOps Automation
 - GitHub Actions
-- GitHub Copilot
 - GitHub Copilot Coding Agent
 - GitHub UI
 - Private MCP Registry

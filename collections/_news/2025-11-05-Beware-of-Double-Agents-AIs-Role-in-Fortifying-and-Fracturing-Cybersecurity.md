@@ -10,11 +10,9 @@ date: 2025-11-05 14:08:19 +00:00
 permalink: /ai/news/Beware-of-Double-Agents-AIs-Role-in-Fortifying-and-Fracturing-Cybersecurity
 tags:
 - Agentic Zero Trust
-- AI
 - AI Agents
 - AI Risk Management
 - AI Security
-- Azure
 - Azure AI Foundry
 - Company News
 - Containment And Alignment
@@ -25,9 +23,7 @@ tags:
 - Microsoft Copilot Studio
 - Microsoft Defender
 - Microsoft Entra Agent ID
-- News
 - Phishing
-- Security
 - Security Copilot
 - Zero Trust
 section_names:

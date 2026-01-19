@@ -9,18 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-08-21 23:04:36 +00:00
 permalink: /github-copilot/videos/VS-Code-Live-Scripting-with-Joyride-and-GitHub-Copilot
 tags:
-- AI
 - AI Coding Assistance
 - Code
 - Code Productivity
-- Coding
 - Coding Automation
 - Developer Tools
-- GitHub Copilot
 - Joyride
 - Live Coding
 - User Scripting
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

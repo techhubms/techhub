@@ -10,19 +10,15 @@ date: 2025-08-18 14:00:09 +00:00
 permalink: /github-copilot/videos/Hello-GPT-5-and-GPT-5-mini-New-AI-Features-in-VS-Code-Agent-Mode
 tags:
 - Agent Mode
-- AI
 - AI Development
 - AI Integration
 - Beast Mode
-- Coding
 - Coding Productivity
 - Developer Tools
-- GitHub Copilot
 - GPT 5
 - GPT 5 Mini
 - Model Management
 - Task Lists
-- Videos
 - VS Code
 section_names:
 - ai

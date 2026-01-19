@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-07-29 11:30:00 +00:00
 permalink: /ml/news/JSON-Lines-Support-in-OPENROWSET-for-Fabric-Data-Warehouse-and-Lakehouse-SQL-Endpoints-Preview
 tags:
-- Azure
 - Data Analytics
 - Data Lake
 - Data Warehouse
@@ -18,8 +17,6 @@ tags:
 - JSONL
 - Lakehouse
 - Microsoft Fabric
-- ML
-- News
 - OPENROWSET
 - Semi Structured Data
 - SQL Endpoints

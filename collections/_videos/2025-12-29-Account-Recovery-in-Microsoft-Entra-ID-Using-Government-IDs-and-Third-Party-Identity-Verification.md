@@ -11,7 +11,6 @@ permalink: /azure/videos/Account-Recovery-in-Microsoft-Entra-ID-Using-Government
 tags:
 - Account Recovery
 - Au10tix
-- Azure
 - Azure Cloud
 - Cloud
 - Cloud Security
@@ -25,10 +24,8 @@ tags:
 - Passkeys
 - Passwordless
 - Phishing Resistance
-- Security
 - Self Service Password Reset
 - Third Party Authentication
-- Videos
 section_names:
 - azure
 - security

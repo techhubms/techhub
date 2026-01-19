@@ -11,7 +11,6 @@ permalink: /security/blogs/Microsoft-Entra-Suite-The-Future-of-Identity-and-Acce
 tags:
 - Access Governance
 - Authentication
-- Blogs
 - Cloud Security
 - Conditional Access
 - Entra ID Governance
@@ -25,7 +24,6 @@ tags:
 - Microsoft Entra
 - Multicloud
 - Passwordless
-- Security
 - Verified ID
 - Zero Trust
 section_names:

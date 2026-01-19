@@ -10,11 +10,9 @@ date: 2026-01-09 15:51:21 +00:00
 permalink: /azure/community/Frequent-Platform-Initiated-Azure-VM-Redeployments-v6-Series-in-North-Europe
 tags:
 - Auto Recovery
-- Azure
 - Azure Support
 - Azure VM
 - Cloud Infrastructure
-- Community
 - Firmware Issue
 - Host OS
 - North Europe

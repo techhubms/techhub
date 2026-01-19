@@ -13,14 +13,12 @@ tags:
 - AppHost
 - Aspire
 - Cloud Apps
-- Coding
 - Constants
 - Magic Strings
 - Microsoft
 - Project Naming
 - Service References
 - Shared Libraries
-- Videos
 section_names:
 - coding
 ---

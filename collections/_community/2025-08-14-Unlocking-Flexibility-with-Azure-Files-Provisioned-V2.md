@@ -9,14 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 18:47:38 +00:00
 permalink: /azure/community/Unlocking-Flexibility-with-Azure-Files-Provisioned-V2
 tags:
-- Azure
 - Azure File Sync
 - Azure Files
 - Azure Storage
 - Billing Models
 - Cloud Architecture
 - Cloud Storage
-- Community
 - Cost Optimization
 - Enterprise Storage
 - Hybrid Storage

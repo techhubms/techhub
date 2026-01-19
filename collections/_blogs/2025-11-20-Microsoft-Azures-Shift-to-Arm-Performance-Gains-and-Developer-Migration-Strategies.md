@@ -9,24 +9,18 @@ feed_url: https://devclass.com/feed/
 date: 2025-11-20 09:00:00 +00:00
 permalink: /ai/blogs/Microsoft-Azures-Shift-to-Arm-Performance-Gains-and-Developer-Migration-Strategies
 tags:
-- AI
 - AI Workloads
 - ARM 22824 Sp1
 - ARM Neoverse
 - Arm64 Runners
-- Azure
-- Blogs
 - Cloud Migration
 - Cobalt 100
 - Cobalt 200
-- Coding
 - Databricks
 - Developer Tools
 - Efficiency
 - Kubernetes
-- Machine Learning
 - Microsoft Azure
-- ML
 - ONNX Runtime
 - Price Performance
 - Snowflake

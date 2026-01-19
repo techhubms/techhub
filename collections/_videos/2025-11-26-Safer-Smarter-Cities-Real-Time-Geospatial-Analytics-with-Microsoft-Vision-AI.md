@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-26 20:17:43 +00:00
 permalink: /ai/videos/Safer-Smarter-Cities-Real-Time-Geospatial-Analytics-with-Microsoft-Vision-AI
 tags:
-- AI
 - Andrew Hester
 - Automated Alerts
-- Azure
 - City Of Raleigh
 - Data Integration
 - Emergency Response
@@ -34,7 +32,6 @@ tags:
 - Technical
 - Technical Session
 - Urban Safety
-- Videos
 - Vision AI
 section_names:
 - ai

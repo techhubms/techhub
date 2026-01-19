@@ -11,15 +11,12 @@ permalink: /ai/news/Aspire-94-CLI-Interactive-Dashboard-AI-Integrations-and-New-
 tags:
 - .NET
 - .NET Aspire
-- AI
 - AOT Compilation
 - Apphost
 - Aspire
 - Aspire 9.4
-- Azure
 - Azure AI Foundry
 - CLI
-- Coding
 - Custom Resource
 - Dashboard
 - Developer Productivity
@@ -27,7 +24,6 @@ tags:
 - Featured
 - GitHub Models
 - Interaction Service
-- News
 - OpenTelemetry
 - YARP Integration
 section_names:

@@ -12,8 +12,6 @@ tags:
 - .NET
 - Attributes
 - C#
-- Coding
-- Community
 - Custom Conventions
 - Database Design
 - DbContext

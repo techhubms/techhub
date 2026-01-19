@@ -14,8 +14,6 @@ tags:
 - .NET CLI
 - Aspire
 - AspireSandbox
-- Blogs
-- Coding
 - Database Schema
 - DbContext
 - Distributed Applications

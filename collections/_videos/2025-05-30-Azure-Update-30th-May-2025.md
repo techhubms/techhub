@@ -10,11 +10,9 @@ permalink: /ai/videos/Azure-Update-30th-May-2025
 viewing_mode: internal
 tags:
 - AFD Container Apps
-- AI
 - API Management
 - App Service Hybrid Connection
 - Application Gateway SSE
-- Azure
 - Azure AI Foundry
 - Azure Firewall
 - Azure Migrate
@@ -25,10 +23,8 @@ tags:
 - Johnsavillstechnicaltraining
 - Microsoft
 - Microsoft Planetary Computer
-- ML
 - Onboard to Azure
 - PostgreSQL
-- Videos
 section_names:
 - ai
 - azure

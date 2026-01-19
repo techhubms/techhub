@@ -10,13 +10,9 @@ date: 2025-10-06 18:55:15 +00:00
 permalink: /ai/community/Curso-gratuito-IA-Generativa-y-Python-Serie-de-9-transmisiones-en-vivo
 tags:
 - Agentes De IA
-- AI
 - Autogen
-- Azure
 - Azure AI Content Safety
 - Azure AI Search
-- Coding
-- Community
 - Embeddings
 - Evaluación ML
 - FastMCP
@@ -31,7 +27,6 @@ tags:
 - Pydantic AI
 - Python
 - RAG
-- Security
 - Seguridad En IA
 - Semantic Kernel
 - Structured Outputs

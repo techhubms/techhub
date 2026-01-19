@@ -9,17 +9,13 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-07 07:03:54 +00:00
 permalink: /github-copilot/blogs/Top-10-Things-You-Can-Do-with-GitHub-Copilot-as-a-New-Developer
 tags:
-- AI
 - Beginner Developer
-- Blogs
 - Boilerplate Code
 - Code Completion
 - Code Documentation
-- Coding
 - Coding Productivity
 - Debugging
 - Developer Workflow
-- GitHub Copilot
 - Learning Programming
 - Pair Programming
 - Programming Education

@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-04 16:47:03 +00:00
 permalink: /github-copilot/news/OpenAIs-GPT-51-Codex-Max-Public-Preview-Release-for-GitHub-Copilot
 tags:
-- AI
 - AI Model Release
 - API Key Management
 - Copilot
@@ -17,10 +16,8 @@ tags:
 - Copilot CLI
 - Copilot Pro
 - Enterprise
-- GitHub Copilot
 - GPT 5.1 Codex Max
 - Model Picker
-- News
 - OpenAI
 - Pro Plan
 - VS Code

@@ -11,20 +11,17 @@ permalink: /azure/community/October-2025-Update-App-Service-Managed-Certificates
 tags:
 - App Service Managed Certificates
 - ASMC
-- Azure
 - Azure App Service
 - Azure Front Ends
 - Azure Security
 - Certificate Issuance
 - Certificate Renewal
-- Community
 - DigiCert
 - DNS
 - Domain Validation
 - HTTP Token Validation
 - Platform Updates
 - Private Endpoints
-- Security
 - Traffic Manager
 - Web Apps
 section_names:

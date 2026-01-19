@@ -10,13 +10,11 @@ date: 2025-11-18 17:24:09 +00:00
 permalink: /azure/community/Enhancing-Resiliency-in-Azure-Compute-Gallery-Soft-Delete-and-Zonal-Redundant-Storage
 tags:
 - Access Control
-- Azure
 - Azure Compute Gallery
 - Azure Portal
 - Business Continuity
 - Cloud Resiliency
 - Cloud Storage
-- Community
 - Disaster Recovery
 - Image Management
 - Image Recovery

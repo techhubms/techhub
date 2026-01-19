@@ -11,23 +11,18 @@ permalink: /github-copilot/news/How-Developers-Are-Leading-AI-Transformation-Acr
 tags:
 - Agent Factory
 - Agentic DevOps
-- AI
 - AI + Machine Learning
 - AI Agents
 - Application Lifecycle
 - Automation
-- Azure
 - Azure AI Foundry
 - CI/CD
 - Copilots
 - Developer Experience
-- DevOps
 - Enterprise Integration
 - Generative AI
-- GitHub Copilot
 - MCP
 - Microsoft Cloud
-- News
 - Productivity Tools
 - Software Modernization
 section_names:

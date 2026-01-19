@@ -9,17 +9,13 @@ feed_url: https://www.reddit.com/r/VisualStudio/.rss
 date: 2025-08-08 14:07:47 +00:00
 permalink: /github-copilot/community/Understanding-GitHub-Copilots-Code-Modification-Behavior-in-Visual-Studio
 tags:
-- AI
 - AI Code Assistant
 - Best Practices
 - Code Modification
 - Code Refactoring
-- Coding
-- Community
 - Contextual Code
 - Copilot Usage Tips
 - Developer Experience
-- GitHub Copilot
 - LLM Limitations
 - Prompt Engineering
 - VS

@@ -10,11 +10,9 @@ date: 2025-08-11 19:34:46 +00:00
 permalink: /devops/blogs/Minimus-Adds-VEX-Support-and-Microsoft-SSO-Integration-to-Hardened-Images-Service
 tags:
 - Application Security
-- Blogs
 - CIS Benchmarks
 - Compliance Dashboards
 - Container Security
-- DevOps
 - DevSecOps
 - Hardened Images
 - Helm Charts
@@ -24,7 +22,6 @@ tags:
 - NIST
 - Role Based Access Control
 - Secure Software Supply Chain
-- Security
 - Single Sign On
 - Social Facebook
 - Social LinkedIn

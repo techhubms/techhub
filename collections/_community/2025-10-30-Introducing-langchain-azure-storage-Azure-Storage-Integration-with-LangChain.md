@@ -9,15 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-30 16:00:00 +00:00
 permalink: /ai/community/Introducing-langchain-azure-storage-Azure-Storage-Integration-with-LangChain
 tags:
-- AI
 - Authentication
-- Azure
 - Azure AI Search
 - Azure Storage
 - AzureBlobStorageLoader
 - Blob Storage
-- Coding
-- Community
 - Container Access
 - DefaultAzureCredential
 - Document Loader

@@ -10,7 +10,6 @@ date: 2025-11-04 10:44:45 +00:00
 permalink: /github-copilot/blogs/The-AI-Powered-Evolution-of-Software-Development
 tags:
 - Agentic AI
-- AI
 - AI Analytics
 - AI Driven Coding
 - AI For Developers
@@ -22,18 +21,15 @@ tags:
 - AI Testing Tools
 - AI. Analytics
 - Autonomous Software Operations
-- Blogs
 - Business Of DevOps
 - Code Optimization
 - Contributed Content
 - Developer Experience
 - Development Workflow
 - Devex
-- DevOps
 - DevOps And Open Technologies
 - DevOps Culture
 - Future Of Software Engineering
-- GitHub Copilot
 - Intelligent Automation
 - Machine Learning
 - OpenAI Codex

@@ -10,9 +10,7 @@ date: 2025-08-02 18:13:16 +00:00
 permalink: /coding/community/WinUI-OSS-Update-Phased-Rollout-Toward-Open-Collaboration
 tags:
 - .NET
-- Coding
 - Collaboration
-- Community
 - Microsoft UI
 - Open Collaboration
 - Open Source

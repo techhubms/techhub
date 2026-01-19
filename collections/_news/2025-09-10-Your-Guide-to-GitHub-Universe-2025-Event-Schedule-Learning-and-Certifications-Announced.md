@@ -10,7 +10,6 @@ date: 2025-09-10 20:52:28 +00:00
 permalink: /github-copilot/news/Your-Guide-to-GitHub-Universe-2025-Event-Schedule-Learning-and-Certifications-Announced
 tags:
 - Advanced Security
-- AI
 - AI Powered Development
 - Automation
 - Career Mentoring
@@ -18,15 +17,11 @@ tags:
 - CI/CD
 - Coding Agent
 - Company News
-- DevOps
 - GitHub Actions
-- GitHub Copilot
 - GitHub Universe
 - Learning Experience
 - Microsoft Azure
-- News
 - News & Insights
-- Security
 - Software Development
 section_names:
 - ai

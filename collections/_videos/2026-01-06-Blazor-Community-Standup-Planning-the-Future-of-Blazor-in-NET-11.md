@@ -14,7 +14,6 @@ tags:
 - ASP.NET Core
 - Blazor
 - C#
-- Coding
 - Community Standup
 - Developer Community
 - Dotnet11
@@ -24,7 +23,6 @@ tags:
 - Microsoft
 - Open Source
 - Software Developer
-- Videos
 - Web Development
 section_names:
 - coding

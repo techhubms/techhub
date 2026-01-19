@@ -10,26 +10,21 @@ date: 2025-10-27 09:14:43 +00:00
 permalink: /github-copilot/blogs/Visual-Studio-Copilot-Gets-Planning-Mode-for-Complex-Tasks
 tags:
 - Agentic Development
-- AI
 - AI Assisted Coding
 - AI Assisted Development
 - AI Coding Tools
 - AI For Developers
 - Benchmarking
-- Blogs
 - Business Of DevOps
 - Claude Sonnet 4
-- Coding
 - Coding Productivity
 - Copilot AI
 - Copilot Planning
 - Copilot Planning Benchmark
 - Copilot Planning Feature
 - Copilot Preview
-- DevOps
 - DevOps AI Tools
 - DevOps Tools
-- GitHub Copilot
 - GPT 5
 - GPT 5 Copilot
 - Intent Driven Development

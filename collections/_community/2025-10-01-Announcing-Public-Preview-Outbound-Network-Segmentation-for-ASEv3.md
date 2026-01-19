@@ -12,19 +12,16 @@ tags:
 - App Service Environment V3
 - ARM Template
 - ASEv3
-- Azure
 - Azure App Service
 - Azure CLI
 - Azure Networking
 - Bicep Template
-- Community
 - Compliance
 - Egress Control
 - Firewall
 - NAT Gateway
 - Network Security Groups
 - Outbound Network Segmentation
-- Security
 - Subnet
 - Virtual Network Integration
 section_names:

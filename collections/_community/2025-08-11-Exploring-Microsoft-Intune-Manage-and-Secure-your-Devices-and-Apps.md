@@ -11,9 +11,7 @@ permalink: /azure/community/Exploring-Microsoft-Intune-Manage-and-Secure-your-De
 tags:
 - Access Control
 - App Management
-- Azure
 - Azure AD
-- Community
 - Compliance
 - Data Protection
 - Device Security
@@ -25,7 +23,6 @@ tags:
 - Microsoft Defender
 - Microsoft Intune
 - Remote Work Security
-- Security
 section_names:
 - azure
 - security

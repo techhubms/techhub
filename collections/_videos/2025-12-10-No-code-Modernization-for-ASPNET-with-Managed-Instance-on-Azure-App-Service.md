@@ -12,10 +12,8 @@ tags:
 - .NET
 - Agentic Workflows
 - ASP.NET
-- Azure
 - Azure App Service
 - Cloud Modernization
-- Coding
 - Custom Installers
 - Enterprise Innovation
 - Integration
@@ -26,7 +24,6 @@ tags:
 - Scalability
 - System Commands
 - Total Cost Of Ownership
-- Videos
 - Web API
 section_names:
 - azure

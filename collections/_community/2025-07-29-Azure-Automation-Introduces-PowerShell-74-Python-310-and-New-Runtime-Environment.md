@@ -9,11 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-07-29 11:34:41 +00:00
 permalink: /coding/community/Azure-Automation-Introduces-PowerShell-74-Python-310-and-New-Runtime-Environment
 tags:
-- Azure
 - Azure Automation
 - Azure CLI
-- Coding
-- Community
 - Cross Platform Orchestration
 - Infrastructure Management
 - Module Version Management
@@ -24,7 +21,6 @@ tags:
 - Runbooks
 - Runtime Environment
 - Script Modernization
-- Security
 section_names:
 - azure
 - coding

@@ -9,23 +9,19 @@ feed_url: https://devops.com/feed/
 date: 2025-08-14 11:00:40 +00:00
 permalink: /ai/blogs/Most-Organizations-Face-Breaches-Caused-by-Vulnerable-Code-Survey-Finds
 tags:
-- AI
 - AI Coding Tools
 - API Security
 - Application Security
-- Blogs
 - Breaches
 - Business Of DevOps
 - Checkmarx One
 - CI/CD Pipelines
 - Cloud Infrastructure
 - Developer Tools
-- DevOps
 - DevSecOps
 - Dynamic Application Security Testing
 - Infrastructure as Code Scanning
 - Open Source Vulnerabilities
-- Security
 - Security Breaches
 - Social Facebook
 - Social LinkedIn

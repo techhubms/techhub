@@ -10,7 +10,6 @@ date: 2025-08-05 15:42:51 +00:00
 permalink: /ai/news/Whats-New-in-Copilot-Studio-July-2025-Feature-Roundup
 tags:
 - Admin Center
-- AI
 - Analytics
 - Company News
 - Compliance
@@ -20,12 +19,10 @@ tags:
 - Governance
 - Microsoft Copilot
 - Natural Language Understanding
-- News
 - NLU+
 - Power Platform
 - Purview
 - ROI Analysis
-- Security
 section_names:
 - ai
 - security

@@ -9,11 +9,9 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
 permalink: /ai/news/Microsoft-and-Snowflake-Simplified-Interoperability-with-No-Data-Movement
 tags:
-- AI
 - AI Workloads
 - Analytics
 - Apache Iceberg
-- Azure
 - Cross Platform Integration
 - Data Architecture
 - Data Interoperability
@@ -23,10 +21,7 @@ tags:
 - Enterprise Data Management
 - Fabric Shortcut
 - General Availability
-- Machine Learning
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Parquet
 - Preview Features

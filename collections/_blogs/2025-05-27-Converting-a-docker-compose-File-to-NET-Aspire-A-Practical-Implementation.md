@@ -14,9 +14,7 @@ tags:
 - App Modeling
 - Aspire
 - Aspire App Host
-- Blogs
 - CI/CD
-- Coding
 - Containerization
 - Distributed Application
 - Docker

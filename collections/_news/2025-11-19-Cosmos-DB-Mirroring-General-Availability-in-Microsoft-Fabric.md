@@ -9,8 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 09:30:00 +00:00
 permalink: /ai/news/Cosmos-DB-Mirroring-General-Availability-in-Microsoft-Fabric
 tags:
-- AI
-- Azure
 - BM25
 - Cosmos DB
 - Data Analytics
@@ -20,8 +18,6 @@ tags:
 - General Availability
 - High Velocity Data
 - Microsoft Fabric
-- ML
-- News
 - NoSQL Database
 - OneLake
 - Power BI Integration

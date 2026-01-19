@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 08:27:45 +00:00
 permalink: /ai/videos/Real-Stories-of-AI-Transformation-in-Local-Government
 tags:
-- AI
 - AI Adoption
-- Azure
 - Citizen Services
 - City Infrastructure
 - Copilotandagentsatwork
@@ -26,8 +24,6 @@ tags:
 - Public Sector
 - Responsible AI
 - Scalable AI
-- Security
-- Videos
 - Workforce Optimization
 section_names:
 - ai

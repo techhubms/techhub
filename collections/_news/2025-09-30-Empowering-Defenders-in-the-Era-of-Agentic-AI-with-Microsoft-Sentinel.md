@@ -10,9 +10,7 @@ date: 2025-09-30 14:18:32 +00:00
 permalink: /ai/news/Empowering-Defenders-in-the-Era-of-Agentic-AI-with-Microsoft-Sentinel
 tags:
 - Agentic AI
-- AI
 - Automation
-- Azure
 - Azure AI Foundry
 - Cloud Security
 - Company News
@@ -24,8 +22,6 @@ tags:
 - Microsoft Purview
 - Microsoft Sentinel
 - Multicloud
-- News
-- Security
 - Security Agents
 - Security Copilot
 - Security Copilot Agents

@@ -10,12 +10,10 @@ date: 2025-11-26 20:02:48 +00:00
 permalink: /ai/videos/Building-Trustworthy-and-Auditable-AI-Systems-Practical-Strategies-from-Microsoft-Ignite-2025
 tags:
 - Accountability
-- AI
 - AI Adoption
 - AI Auditing
 - AI Governance
 - AI Trust
-- Azure
 - Azure AI
 - BRKSP480
 - Client Stories
@@ -34,7 +32,6 @@ tags:
 - Practical AI Solutions
 - Technical
 - Technical Strategy
-- Videos
 - Workflow Complexity
 section_names:
 - ai

@@ -9,12 +9,10 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-03-28 10:18:12 +00:00
 permalink: /ml/blogs/Save-on-Azure-SQL-with-Azure-Hybrid-Benefit
 tags:
-- Azure
 - Azure Essentials Show
 - Azure Hybrid Benefit
 - Azure SQL
 - Azure Virtual Machines
-- Blogs
 - Cloud
 - Cloud Migration
 - Cost Optimization
@@ -22,7 +20,6 @@ tags:
 - Infrastructure Modernization
 - Microsoft
 - Microsoft Azure
-- ML
 - Security Features
 - SQL
 - SQL Database

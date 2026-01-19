@@ -10,17 +10,12 @@ date: 2025-09-16 16:39:16 +00:00
 permalink: /github-copilot/community/Search-Less-Build-More-Inner-Sourcing-with-GitHub-Copilot-and-Azure-DevOps-MCP-Server
 tags:
 - ADO
-- AI
 - Automation
-- Azure
 - Azure DevOps
 - Code Discoverability
 - Code Search Extension
-- Community
 - Copilot Instructions
 - Developer Productivity
-- DevOps
-- GitHub Copilot
 - IDE Integration
 - Inner Sourcing
 - Knowledge Management

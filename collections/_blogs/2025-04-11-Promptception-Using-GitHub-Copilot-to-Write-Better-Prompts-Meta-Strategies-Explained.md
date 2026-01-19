@@ -9,14 +9,11 @@ feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-04-11 00:00:00 +00:00
 permalink: /github-copilot/blogs/Promptception-Using-GitHub-Copilot-to-Write-Better-Prompts-Meta-Strategies-Explained
 tags:
-- AI
-- Blogs
 - Code Review
 - Copilot Agent Mode
 - Copilot Chat
 - Copilot Edit
 - Developer Productivity
-- GitHub Copilot
 - Playwright
 - Prompt Engineering
 - Prompt Optimization

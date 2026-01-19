@@ -9,19 +9,15 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-24 15:00:18 +00:00
 permalink: /github-copilot/news/Deprecation-of-GitHub-Copilot-Extensions-in-Favor-of-Model-Context-Protocol-MCP-Servers
 tags:
-- AI
 - AI Agent Integration
 - Copilot
 - Copilot Marketplace
 - Cross Platform Compatibility
 - Developer Workflow
-- DevOps
 - GitHub Apps
-- GitHub Copilot
 - GitHub Copilot Extensions
 - IDE Integration
 - MCP
-- News
 - Open Standard
 - Plugin Architecture
 - Retired

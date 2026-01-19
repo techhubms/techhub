@@ -9,13 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-11 09:10:39 +00:00
 permalink: /ai/community/Extracting-Page-Numbers-from-PDFs-with-Azure-AI-Search-and-OCR
 tags:
-- AI
 - AI Search
-- Azure
 - Azure AI Search
 - Azure Blob Storage
 - Azure Cognitive Search
-- Community
 - Document Cracking
 - Index Definition
 - Index Projection

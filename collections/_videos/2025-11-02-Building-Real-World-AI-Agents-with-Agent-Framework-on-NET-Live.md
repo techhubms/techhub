@@ -12,12 +12,9 @@ tags:
 - .NET
 - Agent Framework
 - Agents
-- AI
 - AI Agents
 - Autogen
-- Azure
 - Azure AI Foundry
-- Coding
 - Context Sharing
 - Demo
 - Developer
@@ -32,7 +29,6 @@ tags:
 - Semantic Kernel
 - SemantiClip
 - Software Developer
-- Videos
 - Workflow Automation
 section_names:
 - ai

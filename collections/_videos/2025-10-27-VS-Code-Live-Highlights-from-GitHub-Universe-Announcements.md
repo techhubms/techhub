@@ -16,7 +16,6 @@ tags:
 - Developer Community
 - Developer Tools
 - Developerevents
-- DevOps
 - Event Recap
 - GitHub
 - GitHub Universe
@@ -25,7 +24,6 @@ tags:
 - Product Announcements
 - Software Developer
 - Software Development
-- Videos
 - VS Code
 section_names:
 - devops

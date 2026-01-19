@@ -9,12 +9,9 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-07 22:18:20 +00:00
 permalink: /github-copilot/community/Differences-Between-GitHub-Copilot-GPT-5-Premium-and-Free-Copilot-Microsoft-GPT-5
 tags:
-- AI
 - Code Generation
 - Coding Productivity
-- Community
 - Copilot.microsoft.com
-- GitHub Copilot
 - GPT 5
 - IDE Integration
 - Microsoft

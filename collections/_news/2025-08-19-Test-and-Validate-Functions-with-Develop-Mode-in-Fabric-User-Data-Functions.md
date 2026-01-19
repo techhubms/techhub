@@ -16,8 +16,6 @@ tags:
 - Function Validation
 - Library Management
 - Microsoft Fabric
-- ML
-- News
 - Preview Features
 - Python
 - Region Availability

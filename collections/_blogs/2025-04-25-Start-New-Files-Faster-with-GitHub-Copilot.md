@@ -9,18 +9,14 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-04-25 00:00:00 +00:00
 permalink: /github-copilot/blogs/Start-New-Files-Faster-with-GitHub-Copilot
 tags:
-- AI
 - AI Code Generation
 - Best Practices
-- Blogs
 - Boilerplate Code
 - Code Templates
-- Coding
 - Copilot Chat
 - Developer Productivity
 - Dockerfile
 - GitHub Actions
-- GitHub Copilot
 - HTML
 - IDE
 - Project Setup

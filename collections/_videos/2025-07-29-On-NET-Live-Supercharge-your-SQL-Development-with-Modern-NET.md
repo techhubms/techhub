@@ -12,16 +12,13 @@ tags:
 - .NET
 - .NET Build SDK
 - Build Validation
-- Coding
 - Cross Platform
 - Global Tool
-- ML
 - NuGet
 - Software Development
 - SQL
 - SQL Server
 - Static Code Analysis
-- Videos
 section_names:
 - coding
 - ml

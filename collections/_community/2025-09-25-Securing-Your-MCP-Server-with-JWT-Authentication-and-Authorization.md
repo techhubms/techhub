@@ -12,10 +12,7 @@ tags:
 - API Security
 - Authentication
 - Authorization
-- Azure
 - Azure Samples
-- Coding
-- Community
 - Express.js
 - JSON Web Tokens
 - JWT
@@ -26,7 +23,6 @@ tags:
 - Node.js
 - RBAC
 - Role Based Access Control
-- Security
 - Token Based Security
 section_names:
 - azure

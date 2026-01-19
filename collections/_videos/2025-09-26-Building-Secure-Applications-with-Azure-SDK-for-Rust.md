@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-26 22:29:01 +00:00
 permalink: /coding/videos/Building-Secure-Applications-with-Azure-SDK-for-Rust
 tags:
-- Azure
 - Azure Key Vault
 - Azure SDK
 - Cloud Development
-- Coding
 - Developer Tools
 - High Performance Computing
 - Memory Safety
@@ -23,9 +21,7 @@ tags:
 - Rust
 - Secrets Management
 - Secure Applications
-- Security
 - Security Best Practices
-- Videos
 section_names:
 - azure
 - coding

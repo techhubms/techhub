@@ -10,7 +10,6 @@ date: 2025-09-18 15:35:24 +00:00
 permalink: /azure/videos/Understanding-Azure-Monitor-Health-Models
 tags:
 - Alerts Management
-- Azure
 - Azure Monitor
 - Cloud Operations
 - Health Models
@@ -21,7 +20,6 @@ tags:
 - Observability
 - OneDevQuestion
 - System Health
-- Videos
 section_names:
 - azure
 ---

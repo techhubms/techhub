@@ -10,17 +10,14 @@ date: 2025-09-18 08:38:53 +00:00
 permalink: /ai/blogs/GitHub-MCP-Registry-Launches-as-Central-Hub-for-AI-Development-Tools
 tags:
 - Agentic Workflows
-- AI
 - AI Agent Integrations
 - AI Assisted Development
 - AI Powered Development
 - AI Powered Workflows
 - Automation
-- Blogs
 - Copilot Coding Agent
 - Developer Productivity
 - Developer Tools
-- DevOps
 - GitHub MCP Registry
 - IaC
 - MCP

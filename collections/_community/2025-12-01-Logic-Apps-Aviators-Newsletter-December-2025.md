@@ -10,19 +10,14 @@ date: 2025-12-01 16:00:00 +00:00
 permalink: /ai/community/Logic-Apps-Aviators-Newsletter-December-2025
 tags:
 - Agent Loop
-- AI
 - API Management
 - Automation
-- Azure
 - Azure Functions
 - Azure Integration Services
 - Azure Logic Apps
 - BizTalk Server
-- Coding
-- Community
 - Community Day
 - Debugging
-- DevOps
 - Entra ID
 - Foundry
 - HL7 Connector
@@ -32,7 +27,6 @@ tags:
 - Multi Agent Workflows
 - OAuth
 - RabbitMQ
-- Security
 - Semantic Kernel
 - Service Bus
 - XML

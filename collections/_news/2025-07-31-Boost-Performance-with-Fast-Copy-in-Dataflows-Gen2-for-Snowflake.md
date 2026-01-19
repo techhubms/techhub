@@ -20,8 +20,6 @@ tags:
 - Fast Copy
 - Lakehouse
 - Microsoft Fabric
-- ML
-- News
 - Performance Optimization
 - Production Workloads
 - Snowflake

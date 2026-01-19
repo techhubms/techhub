@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-27 15:57:28 +00:00
 permalink: /ai/videos/Implementing-Vector-Search-in-Your-Application-with-SQL-Server-2025
 tags:
-- AI
 - AI Applications
-- Azure
 - Azure SQL
 - Cloud Computing
 - Cloud Database
@@ -21,10 +19,8 @@ tags:
 - Demo
 - Dev
 - Development
-- Machine Learning
 - Microsoft
 - Microsoft Data Platform
-- ML
 - Performance Tuning
 - Semantic Search
 - SQL Functions
@@ -33,7 +29,6 @@ tags:
 - Technology
 - Transact SQL
 - Vector Search
-- Videos
 section_names:
 - ai
 - azure

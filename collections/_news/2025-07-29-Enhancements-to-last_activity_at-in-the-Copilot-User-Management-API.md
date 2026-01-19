@@ -10,15 +10,12 @@ date: 2025-07-29 16:05:17 +00:00
 permalink: /github-copilot/news/Enhancements-to-last_activity_at-in-the-Copilot-User-Management-API
 tags:
 - Activity Tracking
-- AI
 - API Durability
 - API Updates
 - Copilot API
 - Feature Usage
-- GitHub Copilot
 - Last Activity At
 - Metrics
-- News
 - Pipeline Resilience
 - User Management
 section_names:

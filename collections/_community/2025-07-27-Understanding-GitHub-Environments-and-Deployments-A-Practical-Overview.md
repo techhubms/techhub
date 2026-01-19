@@ -12,9 +12,7 @@ tags:
 - Action Secrets
 - Automation
 - CI/CD
-- Community
 - Deployment Workflow
-- DevOps
 - GitHub
 - GitHub Actions
 - GitHub Deployments

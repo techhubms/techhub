@@ -11,16 +11,13 @@ permalink: /coding/news/Exploring-Azure-Developer-CLI-azd-Extensions-Customizing
 tags:
 - .NET
 - Azd Extensions
-- Azure
 - Azure Developer CLI
 - Azure SDK
 - CI/CD
 - CLI
 - Codespaces
-- Coding
 - Custom Commands
 - Developer Tooling
-- DevOps
 - Docker
 - Extension Framework
 - Extension Registry
@@ -28,7 +25,6 @@ tags:
 - JavaScript
 - Kubernetes
 - Modular Plugins
-- News
 - Open Source
 - Python
 - Typescript

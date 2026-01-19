@@ -11,9 +11,7 @@ permalink: /ai/videos/Building-Microsoft-Agent-Framework-Solutions-for-Microsoft
 tags:
 - Agent 365 SDK
 - Agent Registration
-- AI
 - AI Agents
-- Azure
 - Collaborative Workflows
 - Compliance
 - Defender Integration
@@ -26,10 +24,8 @@ tags:
 - MSIgnite
 - Observability
 - Onboarding Automation
-- Security
 - Security Monitoring
 - Tenant Environment
-- Videos
 section_names:
 - ai
 - azure

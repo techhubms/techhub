@@ -9,18 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-10-28 17:02:52 +00:00
 permalink: /github-copilot/videos/OpenAI-Codex-Now-Available-in-VS-Code-with-GitHub-Copilot-Pro
 tags:
-- AI
 - AI Code Completion
 - AI Coding Tools
 - Code Agents
 - Code Suggestions
-- Coding
 - Developer Tools
-- GitHub Copilot
 - GitHub Copilot Pro+
 - OpenAI Codex
 - Productivity Tools
-- Videos
 - VS Code
 section_names:
 - ai

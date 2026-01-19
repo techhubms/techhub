@@ -9,13 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-10 04:15:00 +00:00
 permalink: /ai/community/GPT-5-and-GPT-OSS-Models-Now-Integrated-in-AI-Toolkit-for-VS-Code
 tags:
-- AI
 - AI Toolkit
-- Azure
 - Azure AI Foundry
 - Cloud AI
 - Code Generation
-- Community
 - Edge AI
 - GitHub
 - GPT 5

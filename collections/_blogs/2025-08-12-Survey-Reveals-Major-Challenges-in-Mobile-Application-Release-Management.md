@@ -11,9 +11,7 @@ permalink: /devops/blogs/Survey-Reveals-Major-Challenges-in-Mobile-Application-R
 tags:
 - Asana
 - Automation
-- Blogs
 - CI/CD
-- DevOps
 - Engineering Productivity
 - Incident Management
 - Jira

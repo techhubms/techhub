@@ -9,17 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-13 19:05:27 +00:00
 permalink: /ai/community/Azure-AI-Blogs-Consolidate-into-New-Azure-AI-Foundry-Blog
 tags:
-- AI
 - AI News
 - AI Platform Blog
-- Azure
 - Azure AI
 - Azure AI Foundry
 - Azure AI Services
 - Azure Community
 - Azure Machine Learning
 - Blog Migration
-- Community
 - Machine Learning Blog
 - Microsoft AI
 - RSS Subscription

@@ -12,8 +12,6 @@ tags:
 - .NET Aspire
 - AddMicroservice Extension
 - Cloud Native
-- Coding
-- DevOps
 - Engineering Productivity
 - F5 Development
 - HTTP File Templates
@@ -24,7 +22,6 @@ tags:
 - Onboarding
 - RunAsEmulator Extension
 - Seed Data
-- Videos
 - Windows 365
 section_names:
 - coding

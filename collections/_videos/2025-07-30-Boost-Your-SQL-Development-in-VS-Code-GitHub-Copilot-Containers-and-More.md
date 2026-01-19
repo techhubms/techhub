@@ -11,10 +11,7 @@ permalink: /github-copilot/videos/Boost-Your-SQL-Development-in-VS-Code-GitHub-C
 tags:
 - Agent Mode
 - Agentmode
-- AI
-- Azure
 - Code
-- Coding
 - Compare
 - Connection Management
 - Containers
@@ -24,7 +21,6 @@ tags:
 - Developer Community
 - Developer Productivity
 - Developer Tools
-- GitHub Copilot
 - Local Containers
 - Microsoft Azure
 - Mssql
@@ -35,7 +31,6 @@ tags:
 - SQL
 - SQL Development
 - SQL Server
-- Videos
 - VS Code
 section_names:
 - ai

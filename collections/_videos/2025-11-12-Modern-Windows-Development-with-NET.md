@@ -16,7 +16,6 @@ tags:
 - ASP.NET Core 10
 - C# 14
 - Cloud Native Apps
-- Coding
 - Desktop Applications
 - Development Tools
 - F# 10
@@ -25,7 +24,6 @@ tags:
 - Modernization
 - Native Applications
 - Performance
-- Videos
 - VS
 - Windows App SDK
 - Windows Development

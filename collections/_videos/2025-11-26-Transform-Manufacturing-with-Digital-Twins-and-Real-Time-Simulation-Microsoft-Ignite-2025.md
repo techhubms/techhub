@@ -10,10 +10,8 @@ date: 2025-11-26 20:19:12 +00:00
 permalink: /ai/videos/Transform-Manufacturing-with-Digital-Twins-and-Real-Time-Simulation-Microsoft-Ignite-2025
 tags:
 - 3D Visualization
-- AI
 - AI Models
 - Ansys
-- Azure
 - Cloud Collaboration
 - Data Operations
 - Digital Twins
@@ -37,7 +35,6 @@ tags:
 - Technical
 - Traffic Data Processing
 - Transform Manufacturing With Digital Twins And Real Time Simulation | STUDIOSP64
-- Videos
 section_names:
 - ai
 - azure

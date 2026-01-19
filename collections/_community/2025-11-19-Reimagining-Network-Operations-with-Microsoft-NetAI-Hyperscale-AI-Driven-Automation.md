@@ -10,15 +10,11 @@ date: 2025-11-19 01:45:22 +00:00
 permalink: /ai/community/Reimagining-Network-Operations-with-Microsoft-NetAI-Hyperscale-AI-Driven-Automation
 tags:
 - Agent Collaboration
-- AI
 - AI Automation
 - Automation Toolkit
-- Azure
 - Azure Networking
 - Cloud Operations
-- Community
 - Deterministic Workflows
-- DevOps
 - DWDM
 - Hyperscale
 - Incident Management

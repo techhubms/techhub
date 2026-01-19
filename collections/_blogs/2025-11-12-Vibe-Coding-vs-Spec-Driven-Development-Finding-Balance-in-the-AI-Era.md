@@ -9,14 +9,11 @@ feed_url: https://devops.com/feed/
 date: 2025-11-12 19:24:36 +00:00
 permalink: /ai/blogs/Vibe-Coding-vs-Spec-Driven-Development-Finding-Balance-in-the-AI-Era
 tags:
-- AI
 - AI Copilots
 - Automation
 - AWS
-- Blogs
 - Code Review
 - Development Workflow
-- DevOps
 - Feedback Loops
 - Generative AI
 - Observability

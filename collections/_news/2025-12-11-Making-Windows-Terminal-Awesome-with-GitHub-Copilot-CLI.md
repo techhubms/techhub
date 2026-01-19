@@ -9,17 +9,13 @@ feed_url: https://devblogs.microsoft.com/feed
 date: 2025-12-11 17:00:28 +00:00
 permalink: /github-copilot/news/Making-Windows-Terminal-Awesome-with-GitHub-Copilot-CLI
 tags:
-- AI
 - CLI Development
-- Coding
 - Command Line Tools
 - Customization
-- GitHub Copilot
 - GitHub Copilot CLI
 - Microsoft
 - Microsoft For Developers
 - Nerd Fonts
-- News
 - npm
 - Oh My Posh
 - PowerShell

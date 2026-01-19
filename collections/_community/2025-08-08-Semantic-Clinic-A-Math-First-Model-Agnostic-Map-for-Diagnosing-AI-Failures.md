@@ -9,7 +9,6 @@ feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-08 12:32:38 +00:00
 permalink: /ai/community/Semantic-Clinic-A-Math-First-Model-Agnostic-Map-for-Diagnosing-AI-Failures
 tags:
-- AI
 - AI Diagnostics
 - AI Failures
 - Attention Variance
@@ -17,14 +16,10 @@ tags:
 - BBCR
 - BBMC
 - BBPF
-- Community
-- DevOps
 - Embedding Geometry
 - LLM
-- Machine Learning
 - Math First AI Tools
 - MIT Licensed
-- ML
 - Model Agnostic
 - Multi Agent Systems
 - Open Source

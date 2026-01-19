@@ -9,9 +9,7 @@ feed_url: https://devclass.com/feed/
 date: 2025-07-03 14:48:30 +00:00
 permalink: /devops/blogs/Security-Risks-from-Deleted-GitHub-Commits-Admin-Access-to-Istio-Exposed
 tags:
-- Blogs
 - Credential Leaks
-- DevOps
 - DevOps Security
 - DevSecOps
 - GH Archive
@@ -24,7 +22,6 @@ tags:
 - Personal Access Token
 - Repository Hygiene
 - Secret Management
-- Security
 - Service Mesh
 - Source Control
 - Token Revocation

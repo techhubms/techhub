@@ -9,21 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-12-10 22:07:54 +00:00
 permalink: /github-copilot/videos/Ship-Faster-End-to-End-Azure-App-Development-with-GitHub-Copilot-and-Intelligent-Agents
 tags:
-- AI
 - AI Agents
 - App Modernization
 - Automation
-- Azure
 - Cloud Architecture
 - Cloud Computing
-- Coding
 - Deployment
 - Dev
 - Developer
 - Development
-- DevOps
 - Diagnostics
-- GitHub Copilot
 - MCP Server
 - Microsoft
 - Planning
@@ -33,7 +28,6 @@ tags:
 - Tech
 - Technology
 - Testing Agent
-- Videos
 section_names:
 - ai
 - azure

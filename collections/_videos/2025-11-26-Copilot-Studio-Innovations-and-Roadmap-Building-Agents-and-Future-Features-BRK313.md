@@ -11,7 +11,6 @@ permalink: /ai/videos/Copilot-Studio-Innovations-and-Roadmap-Building-Agents-and
 tags:
 - Agent Development
 - Agent Identity
-- AI
 - Automation
 - BRK313
 - Business Impact
@@ -34,7 +33,6 @@ tags:
 - Msft Ignite
 - Platform Management
 - Testing Tools
-- Videos
 - What’s New in Copilot Studio And Roadmap | BRK313
 section_names:
 - ai

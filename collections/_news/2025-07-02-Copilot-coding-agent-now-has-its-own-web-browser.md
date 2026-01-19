@@ -9,11 +9,8 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-02 18:45:04 +00:00
 permalink: /github-copilot/news/Copilot-coding-agent-now-has-its-own-web-browser
 tags:
-- AI
 - Coding Agent
 - Developer Tools
-- GitHub Copilot
-- News
 - Playwright MCP
 - Public Preview
 - Web Browsing

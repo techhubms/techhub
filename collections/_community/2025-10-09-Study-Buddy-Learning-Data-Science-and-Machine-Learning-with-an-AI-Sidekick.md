@@ -9,21 +9,16 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-09 07:00:00 +00:00
 permalink: /github-copilot/community/Study-Buddy-Learning-Data-Science-and-Machine-Learning-with-an-AI-Sidekick
 tags:
-- AI
 - AI Assistant
 - Beginner
 - Chatmode
-- Community
 - Curriculum
 - Data Science
 - Data Science For Beginners
 - Education Technology
 - GitHub
-- GitHub Copilot
 - Interactive Learning
-- Machine Learning
 - Microsoft
-- ML
 - Python
 - Study Buddy Agent
 - VS Code

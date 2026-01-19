@@ -10,23 +10,17 @@ date: 2025-11-17 14:01:36 +00:00
 permalink: /github-copilot/news/Levi-Strauss-and-Co-Partners-with-Microsoft-to-Develop-Next-Gen-Superagent
 tags:
 - Agentic AI
-- AI
 - Automation
-- Azure
 - Azure AI Foundry
 - Cloud Migration
-- Coding
 - Company News
 - Copilot Studio
-- GitHub Copilot
 - Levi Strauss & Co.
 - Microsoft
 - Microsoft Intune
 - Microsoft Teams
-- News
 - Observability
 - Release Management
-- Security
 - Semantic Kernel
 - Superagent
 - Surface Copilot+ PCs

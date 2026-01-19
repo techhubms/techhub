@@ -13,13 +13,10 @@ tags:
 - .NET 10
 - .NET Aspire 13
 - .NET MAUI 10
-- AI
 - ASP.NET Core 10
 - Automation
-- Azure
 - C# 14
 - Cloud Hosting
-- Coding
 - Cross Platform Development
 - F# 10
 - Full Stack Development
@@ -29,7 +26,6 @@ tags:
 - Remote Servers
 - Scalability
 - Tool Integration
-- Videos
 - VS
 section_names:
 - ai

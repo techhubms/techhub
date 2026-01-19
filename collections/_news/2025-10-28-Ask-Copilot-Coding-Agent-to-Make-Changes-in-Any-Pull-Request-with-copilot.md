@@ -10,7 +10,6 @@ date: 2025-10-28 15:20:57 +00:00
 permalink: /github-copilot/news/Ask-Copilot-Coding-Agent-to-Make-Changes-in-Any-Pull-Request-with-copilot
 tags:
 - '@copilot'
-- AI
 - Automation
 - Code Review
 - Copilot
@@ -18,11 +17,9 @@ tags:
 - Copilot Coding Agent
 - Feature Update
 - GitHub
-- GitHub Copilot
 - GitHub Enterprise
 - GitHub Pro
 - Improvement
-- News
 - Pull Requests
 - Software Development
 - Universe25

@@ -9,7 +9,6 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-08-07 16:00:00 +00:00
 permalink: /ai/news/Announcing-Public-Preview-of-the-Phishing-Triage-Agent-in-Microsoft-Defender
 tags:
-- AI
 - AI Security
 - Automated Investigation And Response
 - Autonomous Security
@@ -17,11 +16,9 @@ tags:
 - Incident Response
 - Large Language Models
 - Microsoft Defender
-- News
 - Phishing Detection
 - Phishing Triage Agent
 - Responsible AI
-- Security
 - Security Copilot
 - Security Operations Center
 - SOC Automation

@@ -10,10 +10,7 @@ date: 2025-03-10 08:00:43 +00:00
 permalink: /ai/videos/Microsoft-365-Agents-SDK-Building-Multichannel-and-AI-Integrated-Agents
 tags:
 - Agent Development
-- AI
-- Azure
 - Azure AI SDK
-- Coding
 - Copilot Studio
 - Enterprise Bots
 - Facebook Messenger
@@ -25,7 +22,6 @@ tags:
 - Semantic Kernel
 - Slack
 - Twilio
-- Videos
 - Webchat
 section_names:
 - ai

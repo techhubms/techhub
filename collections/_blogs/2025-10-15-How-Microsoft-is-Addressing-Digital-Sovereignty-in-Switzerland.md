@@ -9,11 +9,9 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-10-15 07:36:15 +00:00
 permalink: /azure/blogs/How-Microsoft-is-Addressing-Digital-Sovereignty-in-Switzerland
 tags:
-- Azure
 - Azure Arc
 - Azure Local
 - Azure Policy
-- Blogs
 - Cloud
 - Compliance
 - Confidential Computing
@@ -34,7 +32,6 @@ tags:
 - Multi Cloud
 - National Partner Cloud
 - Regulated Environment Management
-- Security
 - Sovereign Cloud
 - Sovereign Landing Zones
 - Sovereign Private Cloud

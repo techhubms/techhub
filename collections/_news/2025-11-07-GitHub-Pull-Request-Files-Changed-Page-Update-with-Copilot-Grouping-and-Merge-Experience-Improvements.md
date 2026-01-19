@@ -10,7 +10,6 @@ date: 2025-11-07 01:12:34 +00:00
 permalink: /github-copilot/news/GitHub-Pull-Request-Files-Changed-Page-Update-with-Copilot-Grouping-and-Merge-Experience-Improvements
 tags:
 - Accessibility
-- AI
 - Annotations
 - Batch Suggested Changes
 - CI Tools
@@ -20,13 +19,10 @@ tags:
 - Copilot
 - Copilot Enterprise
 - Copilot Pro+
-- DevOps
 - Draft Conversion
 - GitHub
-- GitHub Copilot
 - Improvement
 - Merge Experience
-- News
 - Public Preview
 - Pull Request
 - Status Checks

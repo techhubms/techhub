@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-03-05 22:00:38 +00:00
 permalink: /ai/videos/Deploying-Azure-Local-at-Scale-Lessons-from-Coles-Supermarket-at-Microsoft-Ignite-2024
 tags:
-- AI
 - AI Inferencing
-- Azure
 - Azure Local
 - Azure Stack HCI
 - Cloud Transition
@@ -26,7 +24,6 @@ tags:
 - Microsoft Ignite
 - Node Management
 - Retail Technology
-- Videos
 - Workload Deployment
 section_names:
 - ai

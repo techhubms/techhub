@@ -9,12 +9,10 @@ feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-02-28 19:35:56 +00:00
 permalink: /coding/news/Announcing-TypeScript-58-New-Features-and-Improvements
 tags:
-- Coding
 - Compiler Options
 - Declaration Files
 - ECMAScript Modules
 - JavaScript
-- News
 - Node.js
 - Performance Optimization
 - Return Type Checking

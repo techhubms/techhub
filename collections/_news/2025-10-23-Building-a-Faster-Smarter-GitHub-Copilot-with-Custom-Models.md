@@ -9,7 +9,6 @@ feed_url: https://github.blog/feed/
 date: 2025-10-23 18:31:12 +00:00
 permalink: /github-copilot/news/Building-a-Faster-Smarter-GitHub-Copilot-with-Custom-Models
 tags:
-- AI
 - AI & ML
 - AI Agents
 - AI Coding Tools
@@ -19,13 +18,11 @@ tags:
 - Developer Tools
 - Editor Integration
 - Fine Tuning
-- GitHub Copilot
 - HumanEval
 - LLM
 - LLM Judge
 - Machine Learning Evaluation
 - Model Training
-- News
 - Offline Evaluation
 - Real Time Code Suggestions
 - Reinforcement Learning

@@ -10,18 +10,15 @@ date: 2025-11-20 22:37:21 +00:00
 permalink: /coding/videos/Whats-New-in-Windows-Settings-for-Developers-Advanced-Settings-Long-Path-Support-and-Git-Integration
 tags:
 - Advanced Settings
-- Coding
 - Configuration
 - Developer Experience
 - Developer Tools
-- DevOps
 - File Explorer
 - General Availability
 - Git Integration
 - Long File Path
 - Microsoft Developer
 - Productivity
-- Videos
 - Windows
 - Windows Settings
 section_names:

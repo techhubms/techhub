@@ -11,9 +11,7 @@ permalink: /coding/blogs/Strongly-Typed-Markdown-for-ASPNET-Core-Content-Apps
 tags:
 - ASP.NET
 - ASP.NET Core
-- Blogs
 - C#
-- Coding
 - Content Management
 - Markdig
 - Markdown

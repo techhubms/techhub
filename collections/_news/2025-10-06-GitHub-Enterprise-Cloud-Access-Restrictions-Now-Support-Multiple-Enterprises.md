@@ -13,7 +13,6 @@ tags:
 - Authentication Security
 - Copilot Access
 - Corporate Proxy
-- DevOps
 - Enterprise ID
 - Enterprise Managed Users
 - Enterprise Management Tools
@@ -21,10 +20,8 @@ tags:
 - GitHub Enterprise Cloud
 - Improvement
 - Network Security
-- News
 - Platform Governance
 - Proxy Header
-- Security
 section_names:
 - devops
 - security

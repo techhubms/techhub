@@ -9,7 +9,6 @@ date: 2025-07-15 16:00:00 +00:00
 permalink: /github-copilot/news/From-chaos-to-clarity-Using-GitHub-Copilot-agents-to-improve-developer-workflows
 viewing_mode: external
 tags:
-- AI
 - AI & ML
 - AI Productivity
 - Automation
@@ -20,8 +19,6 @@ tags:
 - Copilot Coding Agent
 - Custom Instructions
 - Developer Tools
-- GitHub Copilot
-- News
 - Rubber Duck Thursdays
 - Setup Steps
 section_names:

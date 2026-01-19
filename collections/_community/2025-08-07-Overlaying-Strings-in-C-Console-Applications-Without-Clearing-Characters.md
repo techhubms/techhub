@@ -13,8 +13,6 @@ tags:
 - ANSI Codes
 - C#
 - Character Output
-- Coding
-- Community
 - Console Application
 - Cursor Positioning
 - Display Logic

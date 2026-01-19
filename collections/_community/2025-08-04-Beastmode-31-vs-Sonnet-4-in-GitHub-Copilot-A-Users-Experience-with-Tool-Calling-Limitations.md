@@ -9,13 +9,10 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-04 16:46:19 +00:00
 permalink: /github-copilot/community/Beastmode-31-vs-Sonnet-4-in-GitHub-Copilot-A-Users-Experience-with-Tool-Calling-Limitations
 tags:
-- AI
 - AI Model Comparison
 - Beastmode 3.1
 - Code Commit
-- Community
 - Developer Workflow
-- GitHub Copilot
 - GPT 4.1
 - Rate Limits
 - Software Development

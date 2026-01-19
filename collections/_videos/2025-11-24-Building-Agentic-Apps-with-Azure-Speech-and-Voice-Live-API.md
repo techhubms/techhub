@@ -10,10 +10,8 @@ date: 2025-11-24 10:30:56 +00:00
 permalink: /ai/videos/Building-Agentic-Apps-with-Azure-Speech-and-Voice-Live-API
 tags:
 - Adaptive Conversation
-- AI
 - AI Agents
 - Audio Enhancements
-- Azure
 - Azure AI
 - Azure Speech
 - Branded Voices
@@ -28,7 +26,6 @@ tags:
 - Neural HD Voices
 - Prompt Engineering
 - Real Time Voice
-- Videos
 - Voice Assistant
 - Voice Live API
 section_names:

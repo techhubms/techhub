@@ -10,18 +10,14 @@ date: 2025-08-08 09:45:28 +00:00
 permalink: /github-copilot/community/Comparing-Copilot-AI-Models-for-C-Bug-Fixing-GPT-5-Gemini-25-Pro-and-Others
 tags:
 - .NET Bug Fixing
-- AI
 - AI Assisted Development
 - AI Code Completion
 - C#
 - Claude Sonnet 4
-- Coding
-- Community
 - Copilot Model Comparison
 - Debugger
 - Dynamic Delegate
 - Gemini 2.5 Pro
-- GitHub Copilot
 - GPT 5
 - Inheritance Hierarchy
 - IsAssignableFrom

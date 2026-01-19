@@ -10,11 +10,9 @@ permalink: /ai/community/Microsofts-AI-Doctor-MAI-DxO-has-crushed-human-doctors
 viewing_mode: external
 tags:
 - Accuracy Comparison
-- AI
 - AI Healthcare
 - AI Performance
 - ArtificialInteligence
-- Community
 - Diagnostic Tools
 - Healthcare Innovation
 - Machine Learning

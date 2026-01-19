@@ -9,8 +9,6 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-27 15:51:55 +00:00
 permalink: /ai/community/Transforming-SAP-for-the-Intelligent-Enterprise-with-Azure-Microsoft-Fabric-and-AI
 tags:
-- AI
-- Azure
 - Azure AD
 - Azure API Management
 - Azure Backup
@@ -20,7 +18,6 @@ tags:
 - Azure NetApp Files
 - Azure OpenAI
 - Cloud Adoption Framework
-- Community
 - Defender For Cloud
 - Entra ID
 - Event Grid
@@ -29,11 +26,9 @@ tags:
 - Landing Zone
 - Microsoft Fabric
 - Microsoft Sentinel
-- ML
 - OneLake
 - Premium SSD
 - SAP On Azure
-- Security
 - Service Bus
 - Ultra Disk
 - Virtual Machines

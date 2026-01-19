@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-11-04 10:55:16 +00:00
 permalink: /ai/blogs/How-AIOps-is-Revolutionizing-DevOps-Monitoring-in-the-Cloud-Era
 tags:
-- AI
 - AI Driven DevOps
 - AI in IT Operations
 - AIOps
@@ -18,7 +17,6 @@ tags:
 - Application Performance Management/Monitoring
 - Automation
 - Automation in Cloud
-- Blogs
 - Business Of DevOps
 - CI/CD Pipelines
 - Cloud Computing
@@ -26,7 +24,6 @@ tags:
 - Cloud Native
 - Cloud Native Monitoring
 - Contributed Content
-- DevOps
 - Digital Transformation
 - Hybrid Cloud
 - Incident Management

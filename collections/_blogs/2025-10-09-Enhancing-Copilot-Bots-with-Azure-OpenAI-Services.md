@@ -9,13 +9,10 @@ feed_url: https://dellenny.com/feed/
 date: 2025-10-09 07:08:29 +00:00
 permalink: /ai/blogs/Enhancing-Copilot-Bots-with-Azure-OpenAI-Services
 tags:
-- AI
 - AI Security
 - Assistants API
-- Azure
 - Azure Cognitive Search
 - Azure OpenAI Service
-- Blogs
 - Conversational AI
 - Copilot
 - Copilot Studio

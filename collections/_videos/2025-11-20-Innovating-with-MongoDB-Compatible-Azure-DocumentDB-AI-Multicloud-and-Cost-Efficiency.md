@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-20 17:12:14 +00:00
 permalink: /ai/videos/Innovating-with-MongoDB-Compatible-Azure-DocumentDB-AI-Multicloud-and-Cost-Efficiency
 tags:
-- AI
 - AI Query Optimization
-- Azure
 - Azure Cosmos DB
 - Azure DocumentDB
 - Cosmos AI Graph
@@ -24,7 +22,6 @@ tags:
 - Linux Foundation
 - LLM Index Advisor
 - Microsoft Ignite
-- ML
 - MongoDB Compatibility
 - MSIgnite
 - Multicloud
@@ -33,7 +30,6 @@ tags:
 - Semantic Search
 - Turnkey Scaling
 - Unifyyourdataplatform
-- Videos
 - VS Code Extension
 section_names:
 - ai

@@ -9,19 +9,15 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-10-25 14:00:00 +00:00
 permalink: /ai/videos/Building-Tools-and-the-Future-of-DIY-Development-GitHub-Podcast-Episode-3
 tags:
-- AI
 - Browser Extensions
-- Coding
 - Command Line
 - Community Projects
 - Creative Coding
 - Developer Tools
-- DevOps
 - GitHub
 - Open Source
 - Productivity
 - Software Development
-- Videos
 section_names:
 - ai
 - coding

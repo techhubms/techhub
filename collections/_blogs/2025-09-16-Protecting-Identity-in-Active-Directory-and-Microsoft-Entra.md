@@ -11,8 +11,6 @@ permalink: /azure/blogs/Protecting-Identity-in-Active-Directory-and-Microsoft-En
 tags:
 - Active Directory
 - Authentication
-- Azure
-- Blogs
 - Cloud
 - Cloud Security
 - Commvault
@@ -28,7 +26,6 @@ tags:
 - Microsoft Entra ID
 - Podcast
 - Resilience
-- Security
 - Security Architecture
 - Windows Server
 - Zero Trust

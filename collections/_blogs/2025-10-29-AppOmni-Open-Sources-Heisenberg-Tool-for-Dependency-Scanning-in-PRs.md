@@ -10,12 +10,10 @@ date: 2025-10-29 16:08:25 +00:00
 permalink: /devops/blogs/AppOmni-Open-Sources-Heisenberg-Tool-for-Dependency-Scanning-in-PRs
 tags:
 - AppOmni
-- Blogs
 - CI/CD
 - CLI Tools
 - Dependency Scanning
 - Development Best Practices
-- DevOps
 - DevSecOps
 - GitHub Actions
 - Go Workflows
@@ -26,7 +24,6 @@ tags:
 - Python Workflows
 - SBoM
 - Secure Coding
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

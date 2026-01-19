@@ -10,22 +10,18 @@ date: 2025-11-13 16:44:41 +00:00
 permalink: /azure/community/Customizable-Security-Baselines-Now-in-Preview-for-Azure-Policy-and-Machine-Configuration
 tags:
 - ARM Templates
-- Azure
 - Azure Arc
 - Azure CLI
 - Azure Policy
 - Bicep
 - CIS Benchmarks
-- Community
 - Compliance Automation
 - Configuration Management
 - Continuous Compliance
-- DevOps
 - DevOps Integration
 - Linux
 - Machine Configuration
 - Policy as Code
-- Security
 - Security Baselines
 - Windows Server
 section_names:

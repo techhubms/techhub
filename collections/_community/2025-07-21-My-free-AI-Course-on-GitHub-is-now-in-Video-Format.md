@@ -9,10 +9,8 @@ date: 2025-07-21 20:40:28 +00:00
 permalink: /ai/community/My-free-AI-Course-on-GitHub-is-now-in-Video-Format
 viewing_mode: external
 tags:
-- AI
 - AI Agents
 - AI Applications
-- Community
 - Community Feedback
 - Education
 - Free Course

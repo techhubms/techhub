@@ -10,14 +10,11 @@ date: 2025-09-04 09:58:58 +00:00
 permalink: /azure/news/Introducing-the-New-Test-Run-Hub-in-Azure-Test-Plans
 tags:
 - Analytics Dashboard
-- Azure
 - Azure DevOps
 - Azure Test Plans
 - Collaboration
 - Continuous Improvement
-- DevOps
 - Markdown Support
-- News
 - QA
 - REST API
 - Software Testing

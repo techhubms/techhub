@@ -9,7 +9,6 @@ feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2024-11-08 21:01:44 +00:00
 permalink: /coding/news/Announcing-TypeScript-57-RC-Key-Features-and-Updates
 tags:
-- Coding
 - Composite Projects
 - ES2024
 - Implicit Any
@@ -17,7 +16,6 @@ tags:
 - JavaScript
 - JSON Imports
 - Lib.d.ts
-- News
 - Node.js
 - Path Rewriting
 - Project Configuration

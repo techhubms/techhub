@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-30 22:57:41 +00:00
 permalink: /github-copilot/news/Anthropic-Claude-Sonnet-45-Now-Available-for-GitHub-Copilot-Coding-Agent
 tags:
-- AI
 - AI Model
 - Anthropic
 - Claude Sonnet 4.5
@@ -20,9 +19,7 @@ tags:
 - Copilot Pro
 - Copilot Settings
 - Developer Tools
-- GitHub Copilot
 - Model Integration
-- News
 - Policy Enablement
 - SWE Bench
 section_names:

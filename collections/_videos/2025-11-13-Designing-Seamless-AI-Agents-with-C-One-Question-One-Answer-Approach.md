@@ -11,21 +11,18 @@ permalink: /ai/videos/Designing-Seamless-AI-Agents-with-C-One-Question-One-Answe
 tags:
 - .NET
 - .NET Development
-- AI
 - AI Agents
 - AI Integration
 - AI UX Patterns
 - AiGen
 - C#
 - CodeRush
-- Coding
 - Coding Assistants
 - Design Principles
 - DevExpress
 - Pair Programming
 - Single Response Model
 - User Experience
-- Videos
 section_names:
 - ai
 - coding

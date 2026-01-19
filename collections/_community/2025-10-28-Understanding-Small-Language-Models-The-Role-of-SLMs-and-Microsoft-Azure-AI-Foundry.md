@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-28 07:00:00 +00:00
 permalink: /ai/community/Understanding-Small-Language-Models-The-Role-of-SLMs-and-Microsoft-Azure-AI-Foundry
 tags:
-- AI
 - AI Deployment
 - AI Privacy
 - Azure AI Foundry
-- Community
 - Edge AI
 - Inference
 - Large Language Models

@@ -9,20 +9,16 @@ feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-09-22 17:26:51 +00:00
 permalink: /github-copilot/news/Enhancements-to-XAML-Live-Preview-in-Visual-Studio-for-NET-MAUI
 tags:
-- AI
 - AI Assisted Coding
 - Android Emulator Support
-- Coding
 - Copilot Vision
 - Cross Platform UI
 - Design Time
 - Element Inspection
-- GitHub Copilot
 - Hot Reload
 - IDE Tools
 - Live Preview
 - MAUI
-- News
 - UI Prototyping
 - VS
 - XAML

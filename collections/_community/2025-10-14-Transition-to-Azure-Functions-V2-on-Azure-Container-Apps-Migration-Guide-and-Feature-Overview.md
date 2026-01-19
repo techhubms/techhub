@@ -11,18 +11,14 @@ permalink: /coding/community/Transition-to-Azure-Functions-V2-on-Azure-Container
 tags:
 - Alerting
 - Application Insights
-- Azure
 - Azure Container Apps
 - Azure Functions
 - Azure Pipelines
 - CI/CD
-- Coding
-- Community
 - Containerization
 - Custom Domains
 - DAPR Integration
 - Deployment Best Practices
-- DevOps
 - DevOps Automation
 - Diagnostics
 - Feature Comparison

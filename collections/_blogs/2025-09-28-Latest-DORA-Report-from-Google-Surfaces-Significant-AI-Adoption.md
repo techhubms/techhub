@@ -9,12 +9,9 @@ feed_url: https://devops.com/feed/
 date: 2025-09-28 03:36:53 +00:00
 permalink: /ai/blogs/Latest-DORA-Report-from-Google-Surfaces-Significant-AI-Adoption
 tags:
-- AI
 - AI Adoption
 - AI Tools
 - Automation
-- Blogs
-- DevOps
 - DORA
 - Engineering Practices
 - Google

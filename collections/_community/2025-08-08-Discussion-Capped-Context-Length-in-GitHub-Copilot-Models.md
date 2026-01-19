@@ -10,9 +10,7 @@ date: 2025-08-08 06:02:15 +00:00
 permalink: /github-copilot/community/Discussion-Capped-Context-Length-in-GitHub-Copilot-Models
 tags:
 - Agent Context
-- AI
 - AI Models
-- Community
 - Context Length
 - Conversation Continuity
 - Copilot Premium
@@ -20,7 +18,6 @@ tags:
 - Debugging
 - Gemini 2.5 Pro
 - GitHub
-- GitHub Copilot
 - GPT 4.1
 - GPT 5
 - Sonnet 4

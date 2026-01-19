@@ -12,8 +12,6 @@ tags:
 - .gitignore
 - API Keys
 - Backup
-- Community
-- DevOps
 - DevOps Best Practices
 - Force Push
 - Git
@@ -22,7 +20,6 @@ tags:
 - History Rewriting
 - Incident Response
 - Secret Management
-- Security
 - Team Coordination
 - Token Rotation
 - Version Control

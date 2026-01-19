@@ -10,11 +10,9 @@ date: 2025-11-18 16:49:02 +00:00
 permalink: /azure/community/Azure-Linux-Security-Focused-Cloud-Innovation-at-Ignite-2025
 tags:
 - AKS
-- Azure
 - Azure Linux
 - Azure Red Hat OpenShift
 - Cloud Security
-- Community
 - Container Security
 - Dm Verity
 - FedRAMP
@@ -25,7 +23,6 @@ tags:
 - Microsoft Ignite
 - OS Guard
 - Pod Sandboxing
-- Security
 - SELinux
 - Trusted Launch
 - Upstream Transparency

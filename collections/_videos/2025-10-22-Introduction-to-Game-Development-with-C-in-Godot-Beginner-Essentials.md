@@ -12,7 +12,6 @@ tags:
 - .NET
 - Beginner Tutorial
 - C#
-- Coding
 - Crafting UI
 - Game Development
 - GitHub
@@ -24,7 +23,6 @@ tags:
 - Player Control
 - Programming
 - Scenes And Nodes
-- Videos
 - VS
 section_names:
 - coding

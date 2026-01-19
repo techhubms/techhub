@@ -9,15 +9,12 @@ feed_url: https://devops.com/feed/
 date: 2025-08-04 10:26:03 +00:00
 permalink: /ai/blogs/The-Evolution-of-DevOps-Impact-of-2000-Token-Per-Second-AI-Code-Generation
 tags:
-- AI
 - Automation
-- Blogs
 - Business Of DevOps
 - Cerebras
 - CI/CD
 - Code Generation
 - Development Workflows
-- DevOps
 - Engineering
 - IaC
 - Machine Learning

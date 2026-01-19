@@ -10,17 +10,14 @@ date: 2025-07-30 10:46:10 +00:00
 permalink: /devops/blogs/Emerging-DevOps-Trends-Security-Scalability-and-Sustainability
 tags:
 - Application Modernization
-- Blogs
 - Business Of DevOps
 - Contributed Content
 - Development Practices
-- DevOps
 - DevOps Trends
 - Devsecops
 - JFrog Platform
 - Scalability
 - Scalability in DevOps
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

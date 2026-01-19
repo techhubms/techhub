@@ -12,14 +12,12 @@ tags:
 - Advanced Security
 - Application Security
 - Code Security
-- DevOps
 - Enterprise Management Tools
 - Enterprise Teams
 - GitHub API
 - GitHub Enterprise Cloud
 - Governance
 - Granular Access Control
-- News
 - Organization Management
 - Permissions
 - Platform Governance
@@ -28,7 +26,6 @@ tags:
 - Repository Rulesets
 - Role Management
 - Secret Scanning
-- Security
 - Security Manager
 section_names:
 - devops

@@ -10,21 +10,17 @@ date: 2025-08-04 17:17:37 +00:00
 permalink: /azure/news/Automate-Open-Source-Dependency-Scanning-in-Azure-DevOps-with-Advanced-Security
 tags:
 - Advanced Security
-- Azure
 - Azure DevOps
 - Build Validation
 - CI/CD
 - Dependency Scanning
-- DevOps
 - DevOps Pipelines
 - GitHub Advanced Security
-- News
 - Open Source
 - Open Source Vulnerabilities
 - Pipeline Automation
 - Pull Request Annotations
 - Repository Settings
-- Security
 - Security Alerts
 section_names:
 - azure

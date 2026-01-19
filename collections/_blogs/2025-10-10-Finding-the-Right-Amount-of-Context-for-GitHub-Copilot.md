@@ -9,10 +9,8 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-10-10 00:00:00 +00:00
 permalink: /github-copilot/blogs/Finding-the-Right-Amount-of-Context-for-GitHub-Copilot
 tags:
-- AI
 - AI Tools
 - Best Practices
-- Blogs
 - Code Assistance
 - Code Context
 - Code Refactoring
@@ -21,7 +19,6 @@ tags:
 - Copilot Edits
 - Copilot Sidebar
 - Developer Productivity
-- GitHub Copilot
 - VS Code
 section_names:
 - ai

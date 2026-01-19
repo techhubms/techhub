@@ -11,25 +11,19 @@ permalink: /github-copilot/videos/AI-Agents-and-MCP-in-Production-Azure-App-Plat
 tags:
 - .NET 10
 - Agent Framework
-- AI
 - AI Agents
 - App Modernization
 - Authentication
-- Azure
 - Azure AI Foundry
 - Azure App Platform
-- Coding
 - Content Moderation
 - Easy Auth
-- GitHub Copilot
 - Governance
 - InnovatewithAzureAIappsandagents
 - MCP
 - MSIgnite
 - Observability
 - Policy Enforcement
-- Security
-- Videos
 - VS Code
 section_names:
 - ai

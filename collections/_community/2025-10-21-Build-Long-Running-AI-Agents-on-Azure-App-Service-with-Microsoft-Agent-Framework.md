@@ -11,17 +11,13 @@ permalink: /ai/community/Build-Long-Running-AI-Agents-on-Azure-App-Service-with-
 tags:
 - .NET 9
 - Agent Framework Samples
-- AI
 - AI Agents
 - Async Pattern
-- Azure
 - Azure AI Foundry
 - Azure App Service
 - Azure Durable Functions
 - Background Workers
 - Cloud Architecture
-- Coding
-- Community
 - Cosmos DB
 - GPT 4o
 - Long Running Workflows

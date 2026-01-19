@@ -11,7 +11,6 @@ permalink: /ai/news/Copilot-Studio-Empowering-Agentic-Business-Transformation-at
 tags:
 - Agent 365
 - Agentic Transformation
-- AI
 - AI Agents
 - Analytics
 - Automation
@@ -27,7 +26,6 @@ tags:
 - Microsoft Defender
 - Microsoft Entra
 - Microsoft Graph
-- News
 - Power Platform
 - Teams Integration
 - Windows 365

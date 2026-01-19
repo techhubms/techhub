@@ -13,9 +13,7 @@ tags:
 - .NET ASP.NET
 - ASP.NET
 - Assembly Loading
-- Blogs
 - C#
-- Coding
 - Dependency Management
 - Dynamic Code
 - LiveReloadServer

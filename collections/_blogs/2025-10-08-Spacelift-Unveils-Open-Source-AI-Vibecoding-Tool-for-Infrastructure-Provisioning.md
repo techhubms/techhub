@@ -10,12 +10,9 @@ date: 2025-10-08 15:25:41 +00:00
 permalink: /ai/blogs/Spacelift-Unveils-Open-Source-AI-Vibecoding-Tool-for-Infrastructure-Provisioning
 tags:
 - Agentic AI
-- AI
 - AI Framework
 - API Integration
 - Audit Trails
-- Blogs
-- DevOps
 - DevOps Automation
 - DevOps Workflows
 - IaC

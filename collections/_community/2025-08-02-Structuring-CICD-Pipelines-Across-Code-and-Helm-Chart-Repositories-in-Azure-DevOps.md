@@ -11,14 +11,10 @@ permalink: /coding/community/Structuring-CICD-Pipelines-Across-Code-and-Helm-Cha
 tags:
 - AKS
 - Artifact Handoff
-- Azure
 - Azure Container Registry
 - Azure DevOps
 - Build Automation
 - CI/CD
-- Coding
-- Community
-- DevOps
 - Docker
 - Helm
 - IaC

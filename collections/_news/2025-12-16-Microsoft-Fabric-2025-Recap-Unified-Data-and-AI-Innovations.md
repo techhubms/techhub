@@ -9,32 +9,25 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-16 09:00:00 +00:00
 permalink: /ai/news/Microsoft-Fabric-2025-Recap-Unified-Data-and-AI-Innovations
 tags:
-- AI
 - AI Functions
-- Azure
 - Azure Data Factory
 - Azure SQL
-- Coding
 - Copilot
 - Data Engineering
 - Data Governance
 - Data Science
-- DevOps
 - Fabric Cicd
 - Fabric CLI
 - Fabric Data Days
 - Microsoft Fabric
 - Migration Assistant
-- ML
 - Modernization
-- News
 - OneLake
 - Outbound Access Protection
 - Private Links
 - Professional Developer Tools
 - Real Time Intelligence
 - Role Based Data Access
-- Security
 - SQL Server
 - Terraform
 - VS Code

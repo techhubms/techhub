@@ -9,17 +9,13 @@ feed_url: https://devops.com/feed/
 date: 2025-11-07 14:19:41 +00:00
 permalink: /ai/blogs/MIT-Researchers-Propose-a-New-Software-Architecture-with-Concepts-and-Synchronizations
 tags:
-- AI
 - AI Assisted Development
 - AI Coding Tools
-- Blogs
 - Business Of DevOps
 - Clean Code Architecture
 - Code Maintainability
 - Code Visibility
-- Coding
 - Concept Catalogs
-- DevOps
 - DevOps Automation
 - DevOps Reliability
 - Domain Specific Languages

@@ -9,10 +9,8 @@ feed_url: https://github.blog/feed/
 date: 2025-11-25 17:00:00 +00:00
 permalink: /ai/news/Pythons-Enduring-Appeal-Readability-AI-and-Insights-from-Guido-van-Rossum
 tags:
-- AI
 - AI Development
 - Code Clarity
-- Coding
 - Data Science
 - Developer Experience
 - Developer Skills
@@ -21,7 +19,6 @@ tags:
 - Hugging Face
 - LLM Agents
 - Machine Learning
-- News
 - News & Insights
 - NumPy
 - Octoverse

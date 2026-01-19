@@ -11,13 +11,9 @@ permalink: /coding/community/Announcing-Public-Preview-of-the-Terraform-MSGraph-
 tags:
 - AppRoleAssignment
 - AzAPI
-- Azure
 - AzureAD
 - AzureRM
 - Code Generation
-- Coding
-- Community
-- DevOps
 - DevOps Automation
 - Entra API
 - HashiCorp Configuration Language
@@ -30,7 +26,6 @@ tags:
 - MSGraph Provider
 - Outlook API
 - Role Assignment
-- Security
 - Service Principal
 - SharePoint
 - Terraform

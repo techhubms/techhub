@@ -11,8 +11,6 @@ permalink: /coding/community/Templates-for-MVC-Razor-Pages-with-a-Modern-Fronten
 tags:
 - .NET
 - ASP.NET
-- Coding
-- Community
 - Custom Build System
 - Frontend Architecture
 - JavaScript

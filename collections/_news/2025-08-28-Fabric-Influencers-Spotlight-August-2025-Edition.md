@@ -23,8 +23,6 @@ tags:
 - Governance
 - Materialized Lake Views
 - Microsoft Fabric
-- ML
-- News
 - Pandas
 - Power BI
 - Translytical Task Flows

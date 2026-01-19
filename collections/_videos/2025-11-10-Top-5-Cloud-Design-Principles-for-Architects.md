@@ -11,22 +11,18 @@ permalink: /azure/videos/Top-5-Cloud-Design-Principles-for-Architects
 tags:
 - Architect
 - AWS
-- Azure
 - Cloud
 - Cloud Architecture
 - Cloud Consulting
 - Cloud Engineer
 - Consultant
 - Design Principles
-- DevOps
 - Elasticity
 - GCP
 - Governance
 - IaC
 - Scale
-- Security
 - Solution Design
-- Videos
 section_names:
 - azure
 - devops

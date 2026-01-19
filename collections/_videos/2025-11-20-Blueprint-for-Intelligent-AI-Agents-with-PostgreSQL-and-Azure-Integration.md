@@ -9,14 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-20 16:01:00 +00:00
 permalink: /github-copilot/videos/Blueprint-for-Intelligent-AI-Agents-with-PostgreSQL-and-Azure-Integration
 tags:
-- AI
 - AI Agents
 - AI Model Management
 - AZD Up Command
-- Azure
 - Azure Database For PostgreSQL
 - Database Performance
-- GitHub Copilot
 - GPT 5
 - Intelligent Agents
 - Knowledge Graphs
@@ -24,12 +21,10 @@ tags:
 - Metrics Intelligence
 - Microsoft Foundry
 - Microsoft Ignite
-- ML
 - MSIgnite
 - Semantic Ranking
 - Unifyyourdataplatform
 - Vector Search
-- Videos
 section_names:
 - ai
 - azure

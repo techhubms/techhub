@@ -13,7 +13,6 @@ tags:
 - AI
 - AI Powered Observability
 - AI/ML
-- Blogs
 - Business Observability
 - Business Of DevOps
 - Business Outcomes
@@ -22,7 +21,6 @@ tags:
 - Contributed Content
 - Cost Optimization
 - Cross Functional Collaboration
-- DevOps
 - DevOps Observability Practices
 - Incident Response
 - Logs

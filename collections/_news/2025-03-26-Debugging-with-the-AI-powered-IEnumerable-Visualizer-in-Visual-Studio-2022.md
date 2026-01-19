@@ -9,20 +9,16 @@ feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-03-26 15:00:31 +00:00
 permalink: /github-copilot/news/Debugging-with-the-AI-powered-IEnumerable-Visualizer-in-Visual-Studio-2022
 tags:
-- AI
 - C#
 - Code Visualization
-- Coding
 - Copilot
 - Copilot Chat
 - Debug
 - Debugger Tools
 - Debugging
 - Developer Productivity
-- GitHub Copilot
 - IEnumerable Visualizer
 - LINQ
-- News
 - Productivity
 - Query Refinement
 - Syntax Highlighting

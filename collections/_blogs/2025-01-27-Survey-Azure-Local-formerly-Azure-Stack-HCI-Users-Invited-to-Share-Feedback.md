@@ -11,11 +11,9 @@ permalink: /azure/blogs/Survey-Azure-Local-formerly-Azure-Stack-HCI-Users-Invite
 tags:
 - AKS
 - AKS Arc
-- Azure
 - Azure Arc
 - Azure Local
 - Azure Stack HCI
-- Blogs
 - Microsoft
 - Microsoft Azure
 - Survey

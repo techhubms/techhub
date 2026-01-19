@@ -10,13 +10,11 @@ date: 2025-06-06 08:34:23 +00:00
 permalink: /ai/videos/Agent-Orchestration-Strongly-Typed-Inputs-and-Results-in-Semantic-Kernel
 tags:
 - Agent Orchestration
-- AI
 - AI Agent Workflow
 - AI Development
 - AI Orchestration
 - C#
 - Code Robustness
-- Coding
 - Custom Classes
 - InputTransform
 - Microsoft AI
@@ -26,7 +24,6 @@ tags:
 - Strongly Typed Models
 - Structured Data
 - Type Safe AI
-- Videos
 section_names:
 - ai
 - coding

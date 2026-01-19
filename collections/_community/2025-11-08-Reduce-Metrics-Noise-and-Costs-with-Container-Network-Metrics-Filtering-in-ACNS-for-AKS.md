@@ -11,15 +11,12 @@ permalink: /azure/community/Reduce-Metrics-Noise-and-Costs-with-Container-Networ
 tags:
 - ACNS
 - AKS
-- Azure
 - Azure Container Networking Services
 - Cilium
-- Community
 - ContainerNetworking
 - Cost Optimization
 - CRD
 - Custom Resource Definitions
-- DevOps
 - Ebpf
 - Grafana
 - Kubernetes

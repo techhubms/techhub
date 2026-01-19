@@ -13,7 +13,6 @@ tags:
 - Breakpoints
 - C#
 - Call Stack
-- Coding
 - Collision Shapes
 - Conditional Breakpoints
 - Debugging
@@ -23,7 +22,6 @@ tags:
 - Live Scene Data
 - Microsoft Developer
 - Remote Tab
-- Videos
 - VS Code
 - Watch Expressions
 section_names:

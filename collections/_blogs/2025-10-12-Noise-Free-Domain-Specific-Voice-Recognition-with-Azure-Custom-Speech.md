@@ -10,12 +10,9 @@ date: 2025-10-12 08:14:12 +00:00
 permalink: /ai/blogs/Noise-Free-Domain-Specific-Voice-Recognition-with-Azure-Custom-Speech
 tags:
 - Acoustic Adaptation
-- AI
 - Application Integration
-- Azure
 - Azure AI Speech
 - Azure Custom Speech
-- Blogs
 - Custom Model Training
 - Domain Specific Vocabulary
 - Healthcare IT

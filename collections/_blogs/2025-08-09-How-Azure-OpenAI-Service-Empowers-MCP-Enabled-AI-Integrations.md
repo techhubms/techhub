@@ -9,18 +9,15 @@ feed_url: https://dellenny.com/feed/
 date: 2025-08-09 06:58:28 +00:00
 permalink: /ai/blogs/How-Azure-OpenAI-Service-Empowers-MCP-Enabled-AI-Integrations
 tags:
-- AI
 - AI Agent
 - AI Integration
 - AKS
 - API Management
 - Authentication
-- Azure
 - Azure AI Studio
 - Azure Functions
 - Azure Monitor
 - Azure OpenAI Service
-- Blogs
 - Enterprise Security
 - Entra ID
 - JSON RPC

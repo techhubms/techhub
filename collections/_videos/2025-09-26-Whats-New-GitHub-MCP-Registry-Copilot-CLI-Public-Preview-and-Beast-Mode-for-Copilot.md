@@ -9,20 +9,17 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-09-26 23:13:32 +00:00
 permalink: /github-copilot/videos/Whats-New-GitHub-MCP-Registry-Copilot-CLI-Public-Preview-and-Beast-Mode-for-Copilot
 tags:
-- AI
 - Beast Mode
 - Claude Opus 4.1
 - Copilot CLI
 - Copilot Features
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - GitHub MCP Registry
 - GPT 5 Codex
 - Machine Learning
 - MCP
 - Public Preview
-- Videos
 - VS Code
 section_names:
 - ai

@@ -9,10 +9,8 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
 permalink: /ai/news/Modernizing-Azure-Synapse-Analytics-with-Microsoft-Fabric-Migration-and-Integration-Pathways
 tags:
-- AI
 - AI Native Analytics
 - Architecture Patterns
-- Azure
 - Azure Data Factory
 - Azure Synapse
 - Compliance
@@ -25,8 +23,6 @@ tags:
 - Fabric Data Factory
 - Microsoft Fabric
 - Migration
-- ML
-- News
 - Notebook Migration
 - OneLake
 - Power BI

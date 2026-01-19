@@ -10,19 +10,15 @@ date: 2025-10-10 21:30:06 +00:00
 permalink: /github-copilot/videos/Enhancing-Developer-Workflows-with-MCP-Servers-and-GitHub-Copilot-in-VS-Code
 tags:
 - Agent Mode
-- AI
 - AI Coding
 - Code Automation
-- Coding
 - Context7
 - Developer Workflow
-- GitHub Copilot
 - MCP Servers
 - Microsoft
 - MS Learn
 - Productivity
 - Remote Servers
-- Videos
 - VS Code
 section_names:
 - ai

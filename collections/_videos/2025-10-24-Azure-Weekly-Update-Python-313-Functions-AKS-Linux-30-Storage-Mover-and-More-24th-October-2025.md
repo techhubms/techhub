@@ -11,7 +11,6 @@ permalink: /azure/videos/Azure-Weekly-Update-Python-313-Functions-AKS-Linux-30-S
 tags:
 - AKS
 - App Gateway Migration
-- Azure
 - Azure Cloud
 - Azure Functions
 - Azure Linux 3.0
@@ -30,7 +29,6 @@ tags:
 - Microsoft Azure
 - Python 3.13
 - SQL Managed Instance
-- Videos
 - VM Vcore
 section_names:
 - azure

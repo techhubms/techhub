@@ -12,9 +12,7 @@ tags:
 - Alpine.js
 - ASP.NET Core
 - Blazor
-- Blogs
 - Client Side
-- Coding
 - Counter Example
 - DOM Manipulation
 - Front End

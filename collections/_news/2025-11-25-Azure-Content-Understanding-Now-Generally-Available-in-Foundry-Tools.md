@@ -10,9 +10,7 @@ date: 2025-11-25 16:00:24 +00:00
 permalink: /ai/news/Azure-Content-Understanding-Now-Generally-Available-in-Foundry-Tools
 tags:
 - Agent Ecosystem
-- AI
 - Audit Automation
-- Azure
 - Azure AI Search
 - Azure AI Services
 - Azure Content Understanding
@@ -25,7 +23,6 @@ tags:
 - Generative AI
 - Layout Analysis
 - Microsoft Foundry
-- News
 - OCR
 - Prebuilt Analyzers
 - Production Workloads

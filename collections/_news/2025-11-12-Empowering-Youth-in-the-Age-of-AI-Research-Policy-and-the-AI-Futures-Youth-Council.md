@@ -10,7 +10,6 @@ date: 2025-11-12 17:28:19 +00:00
 permalink: /ai/news/Empowering-Youth-in-the-Age-of-AI-Research-Policy-and-the-AI-Futures-Youth-Council
 tags:
 - Age Assurance
-- AI
 - AI Companions
 - AI Policy
 - Child Privacy
@@ -21,7 +20,6 @@ tags:
 - Global Research
 - Guardrails
 - Microsoft
-- News
 - On The Issues
 - Online Safety
 - Parental Guidance

@@ -6,24 +6,15 @@ viewing_mode: internal
 date: 2025-09-15 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
-- AI
 - AI Coding
 - AI Infrastructure
-- Azure
 - CI/CD
 - Cloud Computing
-- Coding
 - Data Management
-- DevOps
 - Enterprise Apps
-- GitHub Copilot
 - Low Code Automation
-- Machine Learning
-- ML
 - Observability
 - Open Source
-- Roundups
-- Security
 - VS Code
 section_names:
 - ai

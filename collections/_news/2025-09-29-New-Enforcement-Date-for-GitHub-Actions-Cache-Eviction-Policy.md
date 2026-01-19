@@ -15,9 +15,7 @@ tags:
 - Cache Management
 - CI/CD
 - Continuous Integration
-- DevOps
 - GitHub Actions
-- News
 - Policy Change
 - Repository Management
 - Retired

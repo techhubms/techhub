@@ -10,19 +10,14 @@ date: 2025-10-24 22:38:54 +00:00
 permalink: /github-copilot/news/Your-6-Step-Guide-to-Deploying-a-Website-with-GitHub-Codespaces-and-Copilot-Agent-Mode
 tags:
 - Agents
-- AI
 - All Things Azure
 - App Development
-- Coding
 - Continuous Deployment
 - Copilot Agent Mode
 - Developer Productivity
-- DevOps
 - DevOps Workflow
 - GitHub Codespaces
-- GitHub Copilot
 - GitHub Pages
-- News
 - Personal Website
 - Repository Management
 - Site Customization

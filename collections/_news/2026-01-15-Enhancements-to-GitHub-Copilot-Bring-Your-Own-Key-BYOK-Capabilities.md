@@ -10,7 +10,6 @@ date: 2026-01-15 20:01:40 +00:00
 permalink: /github-copilot/news/Enhancements-to-GitHub-Copilot-Bring-Your-Own-Key-BYOK-Capabilities
 tags:
 - Admin Configuration
-- AI
 - Anthropic
 - API Integration
 - AWS Bedrock
@@ -19,11 +18,9 @@ tags:
 - Copilot
 - Copilot Chat
 - Enterprise Security
-- GitHub Copilot
 - Google AI Studio
 - LLM Providers
 - Microsoft Foundry
-- News
 - OpenAI
 - Responses API
 - Streaming Responses

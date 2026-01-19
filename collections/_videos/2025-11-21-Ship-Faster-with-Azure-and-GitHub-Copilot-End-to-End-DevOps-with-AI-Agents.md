@@ -9,17 +9,13 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 17:19:32 +00:00
 permalink: /github-copilot/videos/Ship-Faster-with-Azure-and-GitHub-Copilot-End-to-End-DevOps-with-AI-Agents
 tags:
-- AI
 - AI Agents
 - App Modernization Agent
 - Automation
-- Azure
 - Azure Container Apps
 - Azure MCP Server
 - Coding Agent
 - Datadog
-- DevOps
-- GitHub Copilot
 - GitHub Copilot For Azure
 - Incident Response
 - InnovatewithAzureAIappsandagents
@@ -29,7 +25,6 @@ tags:
 - Quality Assurance
 - SRE Agent
 - Testing Agent
-- Videos
 - VS Code
 section_names:
 - ai

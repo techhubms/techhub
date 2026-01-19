@@ -11,7 +11,6 @@ permalink: /ml/news/Simplified-OneLake-Capacity-Costs-Updated-Proxy-Consumption-
 tags:
 - ADLS
 - Analytics
-- Azure
 - Azure Data Lake Storage
 - Billing
 - Capacity Utilization
@@ -22,8 +21,6 @@ tags:
 - Data Storage
 - Lakehouse
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Proxy Access
 - Redirect Access

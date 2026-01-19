@@ -11,16 +11,12 @@ permalink: /coding/community/Create-Your-Own-Bicep-Local-Extension-Using-NET
 tags:
 - .NET 9
 - ARM
-- Azure
 - Azure Bicep
 - Bicep Extension
 - Bicep Local
 - C#
 - CLI
-- Coding
-- Community
 - Custom Extension
-- DevOps
 - IaC
 - Local Deployment
 - Main.bicep

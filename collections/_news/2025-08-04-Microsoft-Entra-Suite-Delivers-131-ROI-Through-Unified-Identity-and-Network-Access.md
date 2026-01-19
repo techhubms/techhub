@@ -18,9 +18,7 @@ tags:
 - Microsoft Entra Suite
 - Microsoft Security
 - Network Access
-- News
 - ROI Study
-- Security
 - Security Operations
 - Zero Trust
 section_names:

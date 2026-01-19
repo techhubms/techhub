@@ -11,16 +11,13 @@ permalink: /azure/community/Expanding-Azure-Arc-for-Hybrid-and-Multicloud-Manage
 tags:
 - Agentless Inventory
 - AWS
-- Azure
 - Azure Arc
 - Azure Key Vault
 - Azure Migrate
 - Azure Policy
 - Azure Virtual Desktop
-- Community
 - Compliance
 - Connected Machine Agent
-- DevOps
 - Disaster Recovery
 - Google Cloud Platform
 - Hybrid Cloud
@@ -30,7 +27,6 @@ tags:
 - OIDC Federation
 - Operational Consistency
 - OS Configuration Editor
-- Security
 - Site Management
 - Windows Recovery Environment
 - Workload Identity

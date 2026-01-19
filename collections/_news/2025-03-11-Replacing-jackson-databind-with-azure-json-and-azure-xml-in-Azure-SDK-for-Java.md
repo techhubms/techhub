@@ -9,12 +9,10 @@ feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-03-11 20:38:45 +00:00
 permalink: /coding/news/Replacing-jackson-databind-with-azure-json-and-azure-xml-in-Azure-SDK-for-Java
 tags:
-- Azure
 - Azure Core
 - Azure JSON
 - Azure SDK
 - Azure XML
-- Coding
 - Core
 - Dependency Management
 - Gson
@@ -22,7 +20,6 @@ tags:
 - Java
 - JsonSerializable
 - Module System
-- News
 - Reflection
 - Serialization
 - XmlSerializable

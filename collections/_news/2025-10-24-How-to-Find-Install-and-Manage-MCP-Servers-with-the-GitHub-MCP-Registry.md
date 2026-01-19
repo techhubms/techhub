@@ -10,21 +10,17 @@ date: 2025-10-24 16:00:00 +00:00
 permalink: /ai/news/How-to-Find-Install-and-Manage-MCP-Servers-with-the-GitHub-MCP-Registry
 tags:
 - Agentic Workflows
-- AI
 - AI & ML
 - AI Tools
 - Authentication
 - Automation
-- Coding
 - Developer Productivity
-- DevOps
 - Generative AI
 - GitHub
 - GitHub Actions
 - Governance
 - MCP
 - MCP Registry
-- News
 - OAuth
 - Playwright
 - Registry Allow Lists

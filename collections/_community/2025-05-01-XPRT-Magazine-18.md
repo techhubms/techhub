@@ -8,24 +8,17 @@ permalink: /github-copilot/community/XPRT-Magazine-18
 tags:
 - .NET Aspire
 - Accessibility
-- AI
 - AI Agents
-- Azure
 - Cloud Native
-- Coding
-- Community
-- DevOps
 - Engagement Management
 - Entra ID
 - Generative AI
-- GitHub Copilot
 - Infrastructure From Code
 - JWT
 - Knowledge Sharing
 - Magazines
 - Octopus Deploy
 - Prompt Engineering
-- Security
 - Semantic Kernel
 section_names:
 - ai

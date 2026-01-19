@@ -14,7 +14,6 @@ tags:
 - Coding Agents
 - Custom Agents
 - Developer Tools
-- DevOps
 - Enterprise Controls
 - GitHub
 - GitHub Universe
@@ -26,7 +25,6 @@ tags:
 - OpenAI
 - Plan Mode
 - Software Development
-- Videos
 - Xai
 section_names:
 - devops

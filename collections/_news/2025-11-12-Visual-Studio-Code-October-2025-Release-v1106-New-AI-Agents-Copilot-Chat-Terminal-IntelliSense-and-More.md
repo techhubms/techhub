@@ -10,18 +10,13 @@ date: 2025-11-12 17:00:00 +00:00
 permalink: /github-copilot/news/Visual-Studio-Code-October-2025-Release-v1106-New-AI-Agents-Copilot-Chat-Terminal-IntelliSense-and-More
 tags:
 - Agent HQ
-- AI
 - AI Agents
 - Code Editing
-- Coding
 - Copilot Chat
 - Copilot CLI
 - Custom Agents
-- DevOps
 - Editor Experience
 - Extension Authoring
-- GitHub Copilot
-- News
 - Open Source
 - Pylance
 - Python

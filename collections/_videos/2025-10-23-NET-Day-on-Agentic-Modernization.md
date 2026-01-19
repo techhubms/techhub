@@ -11,22 +11,16 @@ permalink: /github-copilot/videos/NET-Day-on-Agentic-Modernization
 tags:
 - .NET
 - Agentic Applications
-- AI
 - AI Development
 - App Modernization
-- Azure
 - Azure AI Foundry
 - Azure App Service
 - Azure MCP
 - Azure Migration
 - Azure SRE Agent
 - Cloud Development
-- Coding
-- DevOps
-- GitHub Copilot
 - Managed Instance
 - Microsoft Agent Framework
-- Videos
 - VS
 section_names:
 - ai

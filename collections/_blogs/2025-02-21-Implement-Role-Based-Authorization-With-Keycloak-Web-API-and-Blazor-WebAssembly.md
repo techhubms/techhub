@@ -14,16 +14,13 @@ tags:
 - Authentication
 - Authorization
 - Blazor WebAssembly
-- Blogs
 - ClaimsPrincipal
-- Coding
 - Identity Management
 - Keycloak
 - OIDC
 - RBAC
 - Role Based Authorization
 - Roles
-- Security
 - Web API
 section_names:
 - coding

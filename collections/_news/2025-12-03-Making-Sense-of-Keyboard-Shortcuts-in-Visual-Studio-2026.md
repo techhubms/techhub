@@ -10,7 +10,6 @@ date: 2025-12-03 15:00:13 +00:00
 permalink: /coding/news/Making-Sense-of-Keyboard-Shortcuts-in-Visual-Studio-2026
 tags:
 - C# Profile
-- Coding
 - Ctrl+W
 - Customization
 - Developer Profiles
@@ -19,7 +18,6 @@ tags:
 - Keybinding
 - Keyboard Schemes
 - Keyboard Shortcuts
-- News
 - Productivity
 - Scopes
 - Sequenced Shortcuts

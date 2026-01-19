@@ -9,22 +9,17 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 17:00:00 +00:00
 permalink: /ai/community/Announcing-Public-Preview-of-AMLFS-20-New-Azure-Managed-Lustre-SKU-for-AI-and-HPC
 tags:
-- AI
 - AI Workloads
 - AMLFS 20
-- Azure
 - Azure Managed Lustre
 - Cloud Storage
-- Community
 - Dataset Management
 - Filesystem
 - High Performance Computing
 - HPC
 - Large Scale Storage
-- Machine Learning
 - Metadata Performance
 - Microsoft Azure
-- ML
 - Multi MDS Architecture
 - PiB Scale
 - Public Preview

@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-12-18 13:01:34 +00:00
 permalink: /ai/videos/Leveraging-the-Model-Context-Protocol-MCP-in-Visual-Studio-Code-for-Enhanced-Development
 tags:
-- AI
 - AI Assisted Development
 - AI Integration
-- Coding
 - Database Access
 - Developer Tools
 - External APIs
@@ -20,7 +18,6 @@ tags:
 - MCP
 - Microsoft Foundry
 - Unified Interface
-- Videos
 - VS Code
 section_names:
 - ai

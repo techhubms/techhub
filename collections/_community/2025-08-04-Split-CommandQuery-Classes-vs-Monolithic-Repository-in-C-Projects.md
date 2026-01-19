@@ -11,9 +11,7 @@ permalink: /coding/community/Split-CommandQuery-Classes-vs-Monolithic-Repository
 tags:
 - Backend Development
 - C#
-- Coding
 - Command Query Segregation
-- Community
 - CQRS
 - Design Patterns
 - File Organization

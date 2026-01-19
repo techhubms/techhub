@@ -11,21 +11,17 @@ permalink: /azure/community/Securing-Cloud-Shell-Access-to-Azure-Kubernetes-Serv
 tags:
 - Access Control
 - AKS
-- Azure
 - Azure Bastion
 - Azure CLI
 - Azure Cloud Shell
 - Azure Firewall
 - Cloud Security
 - Command Invoke
-- Community
-- DevOps
 - IP Allow List
 - Kubernetes
 - NAT Gateway
 - Network Security
 - Private Endpoints
-- Security
 - Vnet Integration
 section_names:
 - azure

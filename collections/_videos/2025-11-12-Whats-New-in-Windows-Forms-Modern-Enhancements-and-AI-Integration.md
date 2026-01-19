@@ -11,18 +11,14 @@ permalink: /github-copilot/videos/Whats-New-in-Windows-Forms-Modern-Enhancements
 tags:
 - .NET
 - .NET 10
-- AI
 - AI Integration
 - Async Await
 - C#
-- Coding
 - Desktop Development
-- GitHub Copilot
 - Line Of Business Apps
 - Microsoft AI Extensions
 - Modernization
 - Semantic Kernel
-- Videos
 - VS
 - Windows 11 UI
 - Windows Forms

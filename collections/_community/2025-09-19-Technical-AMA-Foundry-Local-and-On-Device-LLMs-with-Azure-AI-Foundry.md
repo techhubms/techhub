@@ -9,15 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-19 07:00:00 +00:00
 permalink: /ai/community/Technical-AMA-Foundry-Local-and-On-Device-LLMs-with-Azure-AI-Foundry
 tags:
-- AI
 - AI Frameworks
 - AI Workflow
 - API Integration
-- Azure
 - Azure AI Foundry
 - CLI Tools
 - Cloud Transition
-- Community
 - Cost Efficiency
 - Edge AI
 - Foundry Local

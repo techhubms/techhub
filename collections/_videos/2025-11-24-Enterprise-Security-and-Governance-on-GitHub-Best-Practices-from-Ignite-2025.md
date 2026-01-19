@@ -14,7 +14,6 @@ tags:
 - Compliance
 - Dev Containers
 - Developer Productivity
-- DevOps
 - Enterprise Security
 - GitHub
 - Governance
@@ -24,9 +23,7 @@ tags:
 - Pull Requests
 - Repository Management
 - Rule Enforcement
-- Security
 - Security Policy
-- Videos
 section_names:
 - devops
 - security

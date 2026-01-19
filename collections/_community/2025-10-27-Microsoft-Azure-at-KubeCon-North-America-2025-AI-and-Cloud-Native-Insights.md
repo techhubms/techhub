@@ -10,14 +10,10 @@ date: 2025-10-27 18:00:00 +00:00
 permalink: /ai/community/Microsoft-Azure-at-KubeCon-North-America-2025-AI-and-Cloud-Native-Insights
 tags:
 - Agentic AI
-- AI
 - AI Workloads
 - AKS
-- Azure
 - Cloud Native
-- Community
 - Container Security
-- DevOps
 - GitHub Actions
 - Hybrid Deployments
 - IaC
@@ -28,7 +24,6 @@ tags:
 - Microsoft Azure
 - Multicluster
 - Open Source
-- Security
 - Supply Chain Security
 section_names:
 - ai

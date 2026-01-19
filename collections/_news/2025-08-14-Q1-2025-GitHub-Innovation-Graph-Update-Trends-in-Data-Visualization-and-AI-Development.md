@@ -9,7 +9,6 @@ feed_url: https://github.blog/feed/
 date: 2025-08-14 16:00:00 +00:00
 permalink: /ai/news/Q1-2025-GitHub-Innovation-Graph-Update-Trends-in-Data-Visualization-and-AI-Development
 tags:
-- AI
 - AI Development
 - AI Index Report
 - Bar Chart Race
@@ -20,7 +19,6 @@ tags:
 - Innovation Graph
 - LLM
 - Machine Learning
-- News
 - News & Insights
 - Open Source Analytics
 - Policy

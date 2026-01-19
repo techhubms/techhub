@@ -10,13 +10,9 @@ date: 2025-11-25 21:19:33 +00:00
 permalink: /ai/community/Azure-Logic-Apps-Connectors-Now-Available-as-MCP-Tools-in-Microsoft-Foundry
 tags:
 - Agentic Apps
-- AI
 - API Integration
-- Azure
 - Azure Logic Apps
 - Azure Portal
-- Coding
-- Community
 - Connectors
 - Dynamics 365
 - Enterprise Integration

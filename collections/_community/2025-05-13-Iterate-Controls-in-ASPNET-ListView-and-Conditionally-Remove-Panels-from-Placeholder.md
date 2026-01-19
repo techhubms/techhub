@@ -11,8 +11,6 @@ permalink: /coding/community/Iterate-Controls-in-ASPNET-ListView-and-Conditional
 tags:
 - ASP.NET
 - C#
-- Coding
-- Community
 - Conditional Logic
 - Control Iteration
 - DataTable

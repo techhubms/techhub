@@ -9,8 +9,6 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-16 15:00:00 +00:00
 permalink: /ai/news/Unlock-Insights-with-Azure-Storage-Discovery-and-Copilot-Integration
 tags:
-- AI
-- Azure
 - Azure Blob Storage
 - Azure Data Lake Storage
 - Azure Marketplace
@@ -26,9 +24,7 @@ tags:
 - Microsoft Azure
 - Microsoft Entra ID
 - Natural Language Queries
-- News
 - Redundancy
-- Security
 - Storage
 - Storage Automation
 - Storage Management

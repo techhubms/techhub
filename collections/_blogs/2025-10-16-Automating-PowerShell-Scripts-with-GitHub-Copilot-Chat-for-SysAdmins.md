@@ -9,15 +9,10 @@ feed_url: https://dellenny.com/feed/
 date: 2025-10-16 06:12:17 +00:00
 permalink: /github-copilot/blogs/Automating-PowerShell-Scripts-with-GitHub-Copilot-Chat-for-SysAdmins
 tags:
-- AI
 - Automation
-- Azure
 - Azure AD
 - Best Practices
-- Blogs
-- Coding
 - Error Handling
-- GitHub Copilot
 - GitHub Copilot Chat
 - IT Administration
 - M365 Copilot

@@ -14,17 +14,14 @@ tags:
 - API Ops
 - API Security
 - APIM
-- Azure
 - Azure Application Gateway
 - Azure Front Door
 - Cloudflare
-- Community
 - Cost Optimization
 - Firewall
 - Landing Zone
 - Networking
 - Private Link
-- Security
 - WAF Policy
 - Web Application Firewall
 section_names:

@@ -10,14 +10,11 @@ date: 2025-11-30 15:00:40 +00:00
 permalink: /github-copilot/videos/Extending-AI-Agents-Live-Demo-of-GitHub-MCP-Server-Integration
 tags:
 - Agent Architecture
-- AI
 - AI Agents
 - Automation
-- Coding
 - Copilot Agent Mode
 - Developer Workflow
 - GitHub
-- GitHub Copilot
 - GitHub MCP Server
 - GitHub Registry
 - GitHub Universe
@@ -26,7 +23,6 @@ tags:
 - Mermaid Charts
 - Multi Step Workflow
 - Prompt Engineering
-- Videos
 - VS Code
 section_names:
 - ai

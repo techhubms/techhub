@@ -9,9 +9,7 @@ feed_url: https://www.reddit.com/r/github/.rss
 date: 2025-08-03 14:00:17 +00:00
 permalink: /devops/community/Are-There-Perks-to-Using-GitHub-Pages-for-Web-Tool-Hosting-Over-Amateur-Hosting-Sites
 tags:
-- Community
 - Deployment
-- DevOps
 - GitHub
 - GitHub Pages
 - HTML

@@ -11,7 +11,6 @@ permalink: /devops/blogs/Observability-and-Security-Evolving-DevOps-Across-Cloud
 tags:
 - Adaptive Baselines
 - API Tracing
-- Blogs
 - Business Impact Monitoring
 - Business Of DevOps
 - Cloud Native
@@ -19,7 +18,6 @@ tags:
 - Compliance Workflows
 - Configuration Drift
 - Contributed Content
-- DevOps
 - DevOps Visibility
 - Devsecops
 - Hybrid Cloud
@@ -30,7 +28,6 @@ tags:
 - Observability
 - Proactive Observability
 - Risk Driven Remediation
-- Security
 - Security Insights
 - Social Facebook
 - Social LinkedIn

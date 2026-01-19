@@ -9,19 +9,15 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-09 15:00:00 +00:00
 permalink: /ai/community/Benchmarking-Llama-2-70B-and-405B-Models-on-Azure-ND-GB200-v6-with-MLPerf-Inference-v51
 tags:
-- AI
 - AI Benchmarking
-- Azure
 - Azure HPC
 - Azure ND GB200 V6
 - Azure Virtual Machines
-- Community
 - Containerization
 - GPU Acceleration
 - Large Language Models
 - Llama 2 70B
 - Llama 3.1 405B
-- ML
 - ML Workflow
 - MLCommons
 - MLPerf Inference

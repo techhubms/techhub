@@ -10,9 +10,7 @@ date: 2025-11-20 17:14:03 +00:00
 permalink: /ai/videos/Agentic-AI-Agents-Transforming-Retail-with-Microsoft-Azure
 tags:
 - Agentic AI
-- AI
 - AI Agents
-- Azure
 - Azure AI
 - Business Strategy
 - Catalog Enrichment
@@ -27,7 +25,6 @@ tags:
 - Retail Technology
 - Retail Value Chain
 - User Experience Integration
-- Videos
 section_names:
 - ai
 - azure

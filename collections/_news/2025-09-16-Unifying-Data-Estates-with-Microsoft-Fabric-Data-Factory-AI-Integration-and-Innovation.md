@@ -9,9 +9,7 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-16 01:00:00 +00:00
 permalink: /ai/news/Unifying-Data-Estates-with-Microsoft-Fabric-Data-Factory-AI-Integration-and-Innovation
 tags:
-- AI
 - AI Copilot
-- Azure
 - Azure Key Vault
 - Azure SQL
 - Change Data Capture
@@ -26,9 +24,7 @@ tags:
 - Lakehouse
 - Managed Airflow
 - Microsoft Fabric
-- ML
 - Natural Language Transformation
-- News
 - On Premises Gateway
 - OneLake
 - Pipelines

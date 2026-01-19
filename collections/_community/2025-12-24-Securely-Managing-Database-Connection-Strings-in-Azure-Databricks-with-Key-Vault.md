@@ -11,22 +11,18 @@ permalink: /ml/community/Securely-Managing-Database-Connection-Strings-in-Azure-
 tags:
 - Access Policies
 - App Registration
-- Azure
 - Azure Identity
 - Azure Key Vault
 - Cloud Security
 - Cluster Configuration
-- Community
 - Connection String
 - Credential Management
 - Data Engineering
 - Database Security
 - Databricks
-- ML
 - Python
 - Secret Management
 - Secrets Retrieval
-- Security
 section_names:
 - azure
 - ml

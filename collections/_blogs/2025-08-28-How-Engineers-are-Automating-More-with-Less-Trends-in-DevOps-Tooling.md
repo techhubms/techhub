@@ -9,13 +9,11 @@ feed_url: https://devops.com/feed/
 date: 2025-08-28 05:45:55 +00:00
 permalink: /github-copilot/blogs/How-Engineers-are-Automating-More-with-Less-Trends-in-DevOps-Tooling
 tags:
-- AI
 - AI in DevOps
 - AI Integration
 - Anomaly Detection
 - ArgoCD
 - Autonomous Operations
-- Blogs
 - Business Of DevOps
 - CI/CD
 - CI/CD Evolution
@@ -25,13 +23,11 @@ tags:
 - Cost Conscious Automation
 - Dagger
 - Developer Experience
-- DevOps
 - DevOps Automation
 - Edge Automation
 - Event Driven Automation
 - Flux
 - GitHub Actions
-- GitHub Copilot
 - GitLab DevSecOps Survey
 - GitOps
 - GitOps Automation

@@ -13,11 +13,8 @@ plans:
 - Enterprise
 alt-collection: features
 tags:
-- AI
 - Code Review
-- GitHub Copilot
 - Pull Request
-- Videos
 - Workspace
 section_names:
 - ai

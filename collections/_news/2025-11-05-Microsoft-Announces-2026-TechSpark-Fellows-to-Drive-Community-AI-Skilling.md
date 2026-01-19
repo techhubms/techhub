@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-05 18:14:19 +00:00
 permalink: /ai/news/Microsoft-Announces-2026-TechSpark-Fellows-to-Drive-Community-AI-Skilling
 tags:
-- AI
 - AI Adoption
 - AI Skilling
 - AI Training
@@ -22,7 +21,6 @@ tags:
 - Infrastructure
 - Learning Initiatives
 - Microsoft TechSpark
-- News
 - Nonprofit
 - On The Issues
 - STEM Education

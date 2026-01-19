@@ -14,18 +14,15 @@ tags:
 - C#
 - ClickHouse
 - Code Generation
-- Coding
 - Data Engineering
 - Data Processing
 - Data Warehousing
 - High Performance Computing
-- ML
 - Optimization
 - Performance Benchmarking
 - Spans
 - SQL Performance
 - Vectors
-- Videos
 section_names:
 - coding
 - ml

@@ -11,17 +11,12 @@ permalink: /ml/news/Microsoft-Fabric-VS-Code-Extension-New-Features-and-General-
 tags:
 - API
 - Automation
-- Azure
 - Azure DevOps
-- Coding
-- DevOps
 - Fabric Workspaces
 - Git Integration
 - Item Definitions
 - Microsoft Fabric
-- ML
 - MSSQL Extension
-- News
 - Source Control
 - SQL Database
 - VS Code

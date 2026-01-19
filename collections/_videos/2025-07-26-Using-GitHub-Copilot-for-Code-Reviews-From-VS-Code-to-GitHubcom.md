@@ -9,20 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-07-26 14:01:31 +00:00
 permalink: /github-copilot/videos/Using-GitHub-Copilot-for-Code-Reviews-From-VS-Code-to-GitHubcom
 tags:
-- AI
 - AI Powered Code Review
 - Code Review Automation
 - Code Suggestions
 - CodeReview
 - Development Workflow
-- DevOps
 - GitHub
-- GitHub Copilot
 - Logic Bugs
 - Pull Requests
 - Security Patterns
 - Team Guidelines
-- Videos
 - VS Code
 section_names:
 - ai

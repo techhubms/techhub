@@ -10,25 +10,20 @@ date: 2025-08-25 16:01:12 +00:00
 permalink: /github-copilot/news/Safeguarding-VS-Code-Against-Prompt-Injections-Securing-GitHub-Copilot-Chat
 tags:
 - Agent Mode
-- AI
 - AI Security
 - Application Security
-- Coding
 - CVE
 - Developer Containers
 - Editfile Tool
 - Exploit
 - Fetch Webpage Tool
 - GitHub Codespaces
-- GitHub Copilot
 - GitHub Security Lab
 - Language Models
 - LLM
 - MCP Server
-- News
 - Prompt Injection
 - Sandboxing
-- Security
 - Security Mitigation
 - Simple Browser Tool
 - Supply Chain Security

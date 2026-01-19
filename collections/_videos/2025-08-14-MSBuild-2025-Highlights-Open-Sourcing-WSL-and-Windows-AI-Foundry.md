@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-14 19:05:59 +00:00
 permalink: /ai/videos/MSBuild-2025-Highlights-Open-Sourcing-WSL-and-Windows-AI-Foundry
 tags:
-- AI
 - AI On Windows
 - Developer Tools
 - Local AI Models
@@ -17,7 +16,6 @@ tags:
 - MSBuild
 - OneDevQuestion
 - Open Source
-- Videos
 - Windows AI Foundry
 - Windows Development
 - Windows Subsystem For Linux

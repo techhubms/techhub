@@ -11,8 +11,6 @@ permalink: /github-copilot/news/Azure-MCP-Server-May-2025-Release-New-Integratio
 tags:
 - .NET
 - Agents
-- AI
-- Azure
 - Azure AI Search
 - Azure Data Explorer
 - Azure Key Vault
@@ -20,21 +18,15 @@ tags:
 - Azure SDK
 - Azure Service Bus
 - Cloud
-- Coding
 - Data Analytics
 - Developer Best Practices
-- DevOps
 - Documentation
-- GitHub Copilot
 - GitHub Copilot For Azure
 - Integrations
 - Kusto
 - MCP
-- ML
-- News
 - PostgreSQL
 - Python
-- Security
 - VS Code
 section_names:
 - ai

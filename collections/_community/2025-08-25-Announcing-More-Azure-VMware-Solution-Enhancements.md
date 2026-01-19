@@ -10,14 +10,12 @@ date: 2025-08-25 16:50:52 +00:00
 permalink: /azure/community/Announcing-More-Azure-VMware-Solution-Enhancements
 tags:
 - AVS
-- Azure
 - Azure Elastic SAN
 - Azure Government
 - Azure NetApp Files
 - Azure Region Expansion
 - Azure VMware Solution
 - Cloud Migration
-- Community
 - Data Center Modernization
 - DISA Provisional Authorization
 - Infrastructure

@@ -12,9 +12,7 @@ tags:
 - AI
 - AI Agent
 - CLI Tools
-- Coding
 - Developer Productivity
-- DevOps
 - Enterprise IT
 - MCP Server
 - Microsoft Ignite
@@ -23,9 +21,7 @@ tags:
 - PowerShell
 - PowerToys
 - ScalewithcloudandAIendpoints
-- Security
 - Text Editor
-- Videos
 - Windows 11
 - Windows Subsystem For Linux
 - Windows Terminal

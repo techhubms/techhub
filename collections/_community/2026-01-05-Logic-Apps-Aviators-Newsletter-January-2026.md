@@ -9,19 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2026-01-05 16:00:00 +00:00
 permalink: /ai/community/Logic-Apps-Aviators-Newsletter-January-2026
 tags:
-- AI
 - AI Integration
 - APIM
-- Azure
 - Azure Functions
 - Azure Logic Apps
 - BizTalk Server
 - Cloud Migration
-- Coding
-- Community
 - Community Playbook
 - Data Mapper
-- DevOps
 - DevOps Pipelines
 - Enterprise Integration
 - Hybrid Integration

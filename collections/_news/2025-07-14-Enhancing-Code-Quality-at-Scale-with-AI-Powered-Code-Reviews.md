@@ -9,7 +9,6 @@ feed_url: https://devblogs.microsoft.com/engineering-at-microsoft/feed/
 date: 2025-07-14 15:21:05 +00:00
 permalink: /github-copilot/news/Enhancing-Code-Quality-at-Scale-with-AI-Powered-Code-Reviews
 tags:
-- AI
 - AI Agent
 - AI Apps
 - AI in Software Development
@@ -20,16 +19,12 @@ tags:
 - Code Review Assistant
 - Code Reviews
 - Code Suggestions
-- Coding
 - Customizable Code Review
 - Developer Onboarding
 - Developer Productivity
-- DevOps
 - Engineering Workflow
 - Engineering@Microsoft
-- GitHub Copilot
 - Microsoft
-- News
 - Pull Requests
 section_names:
 - ai

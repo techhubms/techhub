@@ -9,8 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-08 16:01:29 +00:00
 permalink: /ai/videos/SQL-Database-Enhancements-in-Microsoft-Fabric-Copilot-Data-Virtualization-and-More
 tags:
-- AI
-- Azure
 - Backup
 - Cloud Computing
 - Copilot
@@ -23,14 +21,12 @@ tags:
 - Microsoft
 - Microsoft Fabric
 - Microsoft Learn
-- ML
 - Notebook Integration
 - Restore
 - SQL Database
 - T SQL
 - Tech
 - Technology
-- Videos
 - Workflow Automation
 section_names:
 - ai

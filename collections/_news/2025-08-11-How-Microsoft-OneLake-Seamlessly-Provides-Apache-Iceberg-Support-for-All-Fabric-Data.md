@@ -23,8 +23,6 @@ tags:
 - Lakehouse
 - Metadata Conversion
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Open Table Formats
 - Snowflake

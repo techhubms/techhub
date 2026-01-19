@@ -9,25 +9,21 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-12-11 22:29:17 +00:00
 permalink: /github-copilot/videos/Scripting-the-GitHub-Copilot-CLI-Deep-Dive
 tags:
-- AI
 - AI Development Tools
 - Automation
 - CLI Automation
 - Cloud Computing
-- Coding
 - Copilot
 - Dev
 - Developer
 - Developer Productivity
 - Development
 - Development Workflows
-- GitHub Copilot
 - GitHub Copilot CLI
 - Microsoft
 - Scripting
 - Tech
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

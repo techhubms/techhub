@@ -15,7 +15,6 @@ tags:
 - ASP.NET Core
 - Blazor
 - Blazor WebAssembly
-- Coding
 - Daniel Roth
 - Demo
 - Developer
@@ -26,7 +25,6 @@ tags:
 - Microsoft
 - Performance Enhancement
 - Software Developer
-- Videos
 - Web Development
 - Webassembly
 - WebAssembly Performance

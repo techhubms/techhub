@@ -10,7 +10,6 @@ date: 2025-11-24 07:40:30 +00:00
 permalink: /ai/videos/Building-Secure-AI-Agents-with-Microsofts-Security-Stack
 tags:
 - Agentic AI
-- AI
 - AI Agents
 - AI Risks
 - AI Security
@@ -30,9 +29,7 @@ tags:
 - ProtectcloudAIplatformandapps
 - Role Boundaries
 - Secure Future Initiative
-- Security
 - Threat Modeling
-- Videos
 section_names:
 - ai
 - security

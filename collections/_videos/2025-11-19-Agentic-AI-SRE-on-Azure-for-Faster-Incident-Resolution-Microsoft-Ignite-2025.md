@@ -9,15 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 15:13:35 +00:00
 permalink: /ai/videos/Agentic-AI-SRE-on-Azure-for-Faster-Incident-Resolution-Microsoft-Ignite-2025
 tags:
-- AI
 - AI SRE
 - Automation
-- Azure
 - Azure Monitor
 - Context Engineering
 - Copilotandagentsatwork
 - Data Processing
-- DevOps
 - Governance
 - Hawkeye
 - Incident Response
@@ -28,9 +25,7 @@ tags:
 - NeuBird
 - Observability
 - Root Cause Analysis
-- Security
 - Site Reliability Engineering
-- Videos
 section_names:
 - ai
 - azure

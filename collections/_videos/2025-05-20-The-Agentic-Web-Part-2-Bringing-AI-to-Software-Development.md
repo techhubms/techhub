@@ -10,7 +10,6 @@ date: 2025-05-20 20:28:49 +00:00
 permalink: /ai/videos/The-Agentic-Web-Part-2-Bringing-AI-to-Software-Development
 tags:
 - Agentic AI
-- AI
 - AI Agents
 - AI App Factory
 - AI in Development
@@ -25,7 +24,6 @@ tags:
 - Microsoft Events
 - Microsoft Ignite
 - Software Development Lifecycle
-- Videos
 section_names:
 - ai
 ---

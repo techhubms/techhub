@@ -9,16 +9,12 @@ feed_url: https://dellenny.com/feed/
 date: 2025-08-07 09:54:15 +00:00
 permalink: /github-copilot/blogs/Top-10-Ways-New-Developers-Can-Benefit-from-GitHub-Copilot
 tags:
-- AI
 - AI Coding Assistant
 - Automated Code Suggestions
-- Blogs
 - Code Autocompletion
-- Coding
 - Coding Best Practices
 - Debugging
 - Developer Productivity
-- GitHub Copilot
 - JetBrains
 - Language Learning
 - Learning Programming

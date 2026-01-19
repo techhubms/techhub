@@ -14,8 +14,6 @@ tags:
 - Asynchronous Programming
 - C#
 - Code Refactoring
-- Coding
-- Community
 - Event Handlers
 - GetAwaiter().GetResult()
 - GUI Frameworks

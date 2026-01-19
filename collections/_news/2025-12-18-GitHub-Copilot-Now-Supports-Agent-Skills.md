@@ -10,17 +10,13 @@ date: 2025-12-18 17:26:18 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Now-Supports-Agent-Skills
 tags:
 - Agent Skills
-- AI
 - Automation
-- Coding
 - Coding Agents
 - Copilot
 - Copilot CLI
 - Developer Tools
 - GitHub Community
-- GitHub Copilot
 - Instruction Scripting
-- News
 - SXkills Directory
 - VS Code
 - VS Code Insiders

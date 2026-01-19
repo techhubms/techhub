@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-03 14:01:06 +00:00
 permalink: /github-copilot/videos/Are-you-using-all-3-GitHub-Copilot-modes
 tags:
-- AI
 - AI Code Assistant
 - AI Programming
 - Code Completion
@@ -18,10 +17,8 @@ tags:
 - Copilot Edit Mode
 - Developer Productivity
 - GitHub
-- GitHub Copilot
 - Programming
 - Programming Tools
-- Videos
 section_names:
 - ai
 - github-copilot

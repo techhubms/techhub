@@ -11,17 +11,14 @@ permalink: /github-copilot/videos/Introduction-to-Prompt-Driven-Development-in-V
 tags:
 - Agent Mode
 - Agentmode
-- AI
 - AI Assisted Coding
 - Beginner
-- Coding
 - Copilot
 - Copilot Vision
 - Demo
 - Developer
 - Developer Tools
 - Extension
-- GitHub Copilot
 - IDE
 - Prompt Driven Development
 - Prompt Engineering
@@ -29,7 +26,6 @@ tags:
 - Software Developer
 - Software Development
 - Testing Workflows
-- Videos
 - Voice Chat
 - VS Code
 - VS Code Features

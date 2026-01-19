@@ -10,7 +10,6 @@ date: 2025-10-31 14:03:18 +00:00
 permalink: /ai/news/Kenya-Private-Sector-Alliance-and-Microsoft-Launch-KAISA-to-Drive-National-AI-Skilling
 tags:
 - Africa AI Adoption
-- AI
 - AI Ecosystem
 - AI Innovation
 - AI Skills Development
@@ -23,7 +22,6 @@ tags:
 - KAISA
 - Kenya Private Sector Alliance
 - Microsoft
-- News
 - Policy Collaboration
 - Responsible AI
 - Technology Partnerships

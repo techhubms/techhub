@@ -9,23 +9,18 @@ feed_url: https://github.blog/engineering/feed/
 date: 2025-03-04 17:00:24 +00:00
 permalink: /github-copilot/news/Finding-Leaked-Passwords-with-AI-Building-GitHub-Copilot-Secret-Scanning
 tags:
-- AI
 - Copilot Autofix
-- DevOps
 - Engineering
 - False Positives
 - GitHub Advanced Security
-- GitHub Copilot
 - GitHub Secret Protection
 - LLM
 - Model Evaluation
-- News
 - Password Detection
 - Platform Security
 - Prompt Engineering
 - Resource Management
 - Secret Scanning
-- Security
 - Security Alerts
 section_names:
 - ai

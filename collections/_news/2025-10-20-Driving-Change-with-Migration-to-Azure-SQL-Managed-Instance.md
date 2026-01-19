@@ -11,7 +11,6 @@ permalink: /azure/news/Driving-Change-with-Migration-to-Azure-SQL-Managed-Instan
 tags:
 - AI
 - AI Ready Infrastructure
-- Azure
 - Azure SQL Managed Instance
 - Cloud Databases
 - Database Modernization
@@ -20,7 +19,6 @@ tags:
 - Hybrid Cloud
 - Microsoft Azure
 - Multicloud
-- News
 - Scalability
 - SQL Server
 - SQL Server Migration

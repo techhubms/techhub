@@ -10,7 +10,6 @@ date: 2025-10-06 16:11:26 +00:00
 permalink: /github-copilot/news/Grok-Code-Fast-1-Public-Preview-Launched-for-GitHub-Copilot-Plans
 tags:
 - Agent Mode
-- AI
 - AI Model
 - Ask Mode
 - Copilot
@@ -19,10 +18,8 @@ tags:
 - Eclipse
 - Edit Mode
 - Enterprise Admin
-- GitHub Copilot
 - Grok Code Fast 1
 - JetBrains IDEs
-- News
 - Policy Management
 - Public Preview
 - VS

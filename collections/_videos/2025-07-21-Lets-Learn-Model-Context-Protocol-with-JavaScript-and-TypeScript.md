@@ -10,13 +10,11 @@ date: 2025-07-21 19:11:17 +00:00
 permalink: /ai/videos/Lets-Learn-Model-Context-Protocol-with-JavaScript-and-TypeScript
 tags:
 - .NET
-- AI
 - AI Development
 - AI Frameworks
 - AI Integration
 - Beginner
 - Beginner Workshop
-- Coding
 - Demo
 - Developer
 - Developer Community
@@ -30,7 +28,6 @@ tags:
 - Microsoft Docs MCP
 - Playwright
 - Typescript
-- Videos
 section_names:
 - ai
 - coding

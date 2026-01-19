@@ -10,12 +10,9 @@ date: 2024-11-15 10:00:00 +00:00
 permalink: /coding/blogs/Unleashing-the-Power-of-VS-Code-IT-Tage-Frankfurt-2024-Talk-Announcement
 tags:
 - Azure DevOps
-- Blogs
 - C#
 - CI/CD
-- Coding
 - Conference
-- DevOps
 - Full Stack Development
 - GitHub
 - Harald Binkle

@@ -9,23 +9,18 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2026-01-15 22:47:33 +00:00
 permalink: /ai/community/Unlocking-Advanced-Data-Analytics-and-AI-with-Azure-NetApp-Files-Object-REST-API
 tags:
-- AI
 - AI Workloads
 - Analytics
-- Azure
 - Azure Databricks
 - Azure NetApp Files
 - Cloud Security
 - Cloud Storage
-- Community
 - Data Architecture
 - Data Integration
 - Enterprise Storage
 - Governance
-- Machine Learning
 - Microsoft Fabric
 - Microsoft OneLake
-- ML
 - NFS
 - Object REST API
 - Real Time Analytics

@@ -9,10 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-29 17:37:37 +00:00
 permalink: /ai/community/Maximizing-Cost-Efficiency-with-Azure-Essentials-for-Cloud-and-AI-Investments
 tags:
-- AI
 - AI Center Of Excellence
 - AI Ops
-- Azure
 - Azure Accelerate
 - Azure Advisor
 - Azure AI Foundry
@@ -30,7 +28,6 @@ tags:
 - Business Value
 - Cloud Adoption Framework
 - Cloud Governance
-- Community
 - Copilot in Azure
 - Cost Efficiency
 - FinOps

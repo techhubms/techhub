@@ -9,10 +9,7 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-14 00:03:37 +00:00
 permalink: /ai/community/Operational-Excellence-in-AI-Infrastructure-Standardized-Node-Lifecycle-Management
 tags:
-- AI
 - AI Infrastructure
-- Azure
-- Community
 - Compliance Tools
 - CPACT
 - CPU Architecture

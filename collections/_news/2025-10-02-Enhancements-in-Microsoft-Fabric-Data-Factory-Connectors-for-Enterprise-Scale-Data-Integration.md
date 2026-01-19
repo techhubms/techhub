@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-02 09:00:00 +00:00
 permalink: /ml/news/Enhancements-in-Microsoft-Fabric-Data-Factory-Connectors-for-Enterprise-Scale-Data-Integration
 tags:
-- Azure
 - Azure Database For PostgreSQL
 - Azure Databricks
 - Connectors
@@ -22,11 +21,8 @@ tags:
 - Lakehouse
 - Microsoft Entra ID
 - Microsoft Fabric
-- ML
 - MongoDB
-- News
 - Pipeline Automation
-- Security
 - Snowflake
 - TLS 1.3
 - Upsert

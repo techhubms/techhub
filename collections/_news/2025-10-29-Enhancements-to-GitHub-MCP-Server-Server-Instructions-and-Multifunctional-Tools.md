@@ -9,18 +9,15 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-29 09:07:43 +00:00
 permalink: /ai/news/Enhancements-to-GitHub-MCP-Server-Server-Instructions-and-Multifunctional-Tools
 tags:
-- AI
 - AI Assisted Development
 - Code Security
 - Copilot
 - Default Toolset
-- DevOps
 - DevOps Automation
 - GitHub MCP Server
 - Issue Management
 - MCP
 - Multitool Workflows
-- News
 - Pull Request Review
 - Repository Configuration
 - Server Instructions

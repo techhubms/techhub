@@ -10,16 +10,12 @@ permalink: /github-copilot/news/GitHub-Copilot-app-modernization-for-NET-enters-
 viewing_mode: external
 tags:
 - .NET
-- AI
 - AI Tools
 - App Modernization
 - Assessment
-- Azure
 - Cloud Migration
 - Code Remediation
 - Enterprise Migration
-- GitHub Copilot
-- News
 - Validation
 section_names:
 - ai

@@ -10,7 +10,6 @@ date: 2025-10-22 16:00:00 +00:00
 permalink: /azure/news/Microsoft-Recognized-as-Leader-in-2025-Gartner-Magic-Quadrant-for-Distributed-Hybrid-Infrastructure
 tags:
 - AKS
-- Azure
 - Azure Arc
 - Azure Local
 - Azure Policy
@@ -28,7 +27,6 @@ tags:
 - Microsoft Azure
 - Microsoft Defender For Cloud
 - Multicloud
-- News
 - Sovereign Cloud
 section_names:
 - azure

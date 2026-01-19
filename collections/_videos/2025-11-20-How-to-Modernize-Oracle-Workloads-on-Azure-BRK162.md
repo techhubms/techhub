@@ -10,9 +10,7 @@ date: 2025-11-20 15:46:06 +00:00
 permalink: /ai/videos/How-to-Modernize-Oracle-Workloads-on-Azure-BRK162
 tags:
 - Agent Demonstration
-- AI
 - App Modernization
-- Azure
 - Azure AI Services
 - Azure Key Vault
 - Azure Marketplace
@@ -24,11 +22,8 @@ tags:
 - Microsoft Fabric
 - Migrateandmodernizeyourestate
 - Migration
-- ML
 - MSIgnite
 - Oracle Database
-- Security
-- Videos
 section_names:
 - ai
 - azure

@@ -13,10 +13,8 @@ tags:
 - Audit Mode
 - Authentication
 - Authorization
-- Azure
 - Azure Virtual Machines
 - Cloud Security
-- Community
 - Ebpf
 - Guest Proxy Agent
 - HMAC
@@ -26,7 +24,6 @@ tags:
 - MSP
 - RBAC
 - Role Based Access Control
-- Security
 - Security Best Practices
 - Server Side Request Forgery
 - SSRF

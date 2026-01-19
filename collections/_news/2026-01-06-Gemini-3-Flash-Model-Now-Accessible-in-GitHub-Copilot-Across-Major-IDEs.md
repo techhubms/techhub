@@ -10,7 +10,6 @@ date: 2026-01-06 19:24:20 +00:00
 permalink: /github-copilot/news/Gemini-3-Flash-Model-Now-Accessible-in-GitHub-Copilot-Across-Major-IDEs
 tags:
 - Admins
-- AI
 - AI Model
 - Copilot
 - Copilot Business
@@ -19,10 +18,8 @@ tags:
 - Copilot Settings
 - Eclipse
 - Gemini 3 Flash
-- GitHub Copilot
 - JetBrains
 - Model Deployment
-- News
 - Public Preview
 - VS
 - Xcode

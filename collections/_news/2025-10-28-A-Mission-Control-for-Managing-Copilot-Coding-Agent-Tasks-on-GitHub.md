@@ -10,17 +10,12 @@ date: 2025-10-28 15:29:08 +00:00
 permalink: /github-copilot/news/A-Mission-Control-for-Managing-Copilot-Coding-Agent-Tasks-on-GitHub
 tags:
 - Agent Tasks
-- AI
 - Centralized Dashboard
 - Codespaces
-- Coding
 - Copilot
 - Copilot Coding Agent
 - Developer Experience
-- DevOps
 - GitHub CLI
-- GitHub Copilot
-- News
 - Pull Requests
 - Real Time Steering
 - Repository Management

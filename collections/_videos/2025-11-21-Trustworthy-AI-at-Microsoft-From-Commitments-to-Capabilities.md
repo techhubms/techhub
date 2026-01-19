@@ -10,11 +10,9 @@ date: 2025-11-21 10:17:57 +00:00
 permalink: /ai/videos/Trustworthy-AI-at-Microsoft-From-Commitments-to-Capabilities
 tags:
 - Agentic Workflow
-- AI
 - AI Deployment
 - AI Governance
 - AI Security
-- Azure
 - Azure AI
 - Change Management
 - Compliance
@@ -28,11 +26,9 @@ tags:
 - Pre Deployment Testing
 - Responsible AI
 - Risk Assessment
-- Security
 - Sovereignty
 - Stanley Black & Decker
 - Trustworthy AI
-- Videos
 section_names:
 - ai
 - azure

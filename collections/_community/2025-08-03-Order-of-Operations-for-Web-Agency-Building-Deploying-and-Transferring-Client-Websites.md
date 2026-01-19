@@ -10,8 +10,6 @@ date: 2025-08-03 05:28:12 +00:00
 permalink: /devops/community/Order-of-Operations-for-Web-Agency-Building-Deploying-and-Transferring-Client-Websites
 tags:
 - Client Handoff
-- Community
-- DevOps
 - DNS Configuration
 - Domain Management
 - GitHub

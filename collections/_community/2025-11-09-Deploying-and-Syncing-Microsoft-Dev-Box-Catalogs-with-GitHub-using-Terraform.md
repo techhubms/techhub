@@ -9,17 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-09 16:42:48 +00:00
 permalink: /coding/community/Deploying-and-Syncing-Microsoft-Dev-Box-Catalogs-with-GitHub-using-Terraform
 tags:
-- Azure
 - Azure CLI
 - Azure Dev Center
 - Azure Key Vault
 - CI/CD
 - Cloud Workstation
-- Coding
-- Community
 - Dev Box Catalog
 - Development Environment Automation
-- DevOps
 - GitHub
 - GitHub Integration
 - IaC

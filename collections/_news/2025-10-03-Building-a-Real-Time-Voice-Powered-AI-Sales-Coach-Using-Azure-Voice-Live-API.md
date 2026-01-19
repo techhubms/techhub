@@ -9,21 +9,17 @@ feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-10-03 06:47:00 +00:00
 permalink: /ai/news/Building-a-Real-Time-Voice-Powered-AI-Sales-Coach-Using-Azure-Voice-Live-API
 tags:
-- AI
 - AI Sales Coach
 - All Things Azure
 - Audio Processing
 - Avatar Simulation
-- Azure
 - Azure AI
 - Azure Developer CLI
 - Azure Voice Live API
 - C#
-- Coding
 - Feedback System
 - LLM as Judge
 - Model Integration
-- News
 - Prompt Engineering
 - Real Time Speech
 - Session Configuration

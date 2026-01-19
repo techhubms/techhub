@@ -10,13 +10,10 @@ date: 2025-09-08 20:37:35 +00:00
 permalink: /ai/community/Build-Modular-Agents-with-Logic-Apps-MCP-Servers-Public-Preview
 tags:
 - Agent Solutions
-- AI
 - API Integration
-- Azure
 - Azure API Center
 - Azure Logic Apps
 - Cloud Integration
-- Community
 - Connectors
 - Easy Auth
 - Enterprise Integration

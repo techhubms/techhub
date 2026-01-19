@@ -12,16 +12,12 @@ tags:
 - ACR
 - Authentication
 - Automation
-- Azure
 - Azure Container Registry
 - Azure Monitor Workbook
 - Azure REST API
 - Bash Scripting
-- Community
-- DevOps
 - PowerShell
 - Resource Graph
-- Security
 - Token Expiration
 - Workbook Deployment
 section_names:

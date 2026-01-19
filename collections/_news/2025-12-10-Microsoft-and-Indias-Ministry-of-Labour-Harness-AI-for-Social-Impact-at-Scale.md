@@ -9,9 +9,7 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-10 02:11:00 +00:00
 permalink: /ai/news/Microsoft-and-Indias-Ministry-of-Labour-Harness-AI-for-Social-Impact-at-Scale
 tags:
-- AI
 - AI Adoption
-- Azure
 - Azure Services
 - Cloud Security
 - Company News
@@ -25,7 +23,6 @@ tags:
 - Microsoft
 - Ministry Of Labour And Employment
 - NCS
-- News
 - Resume Builder
 - Social Security
 - Workforce Analytics

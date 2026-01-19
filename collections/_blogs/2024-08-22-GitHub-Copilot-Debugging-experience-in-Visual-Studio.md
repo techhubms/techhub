@@ -6,12 +6,9 @@ canonical_url: https://devblogs.microsoft.com/visualstudio/simplified-code-refin
 viewing_mode: external
 permalink: /github-copilot/blogs/blogs/2024-08-22-GitHub-Copilot-Debugging-experience-in-Visual-Studio
 tags:
-- AI
 - AI Assistance
-- Blogs
 - Debugging
 - Development Tools
-- GitHub Copilot
 - Microsoft
 - VS
 section_names:

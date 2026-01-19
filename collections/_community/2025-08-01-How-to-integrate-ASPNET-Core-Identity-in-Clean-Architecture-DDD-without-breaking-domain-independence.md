@@ -14,14 +14,11 @@ tags:
 - Authentication
 - Best Practices
 - Clean Architecture
-- Coding
-- Community
 - Domain Driven Design
 - Entity Separation
 - Identity
 - Infrastructure
 - Roles
-- Security
 - User Management
 section_names:
 - coding

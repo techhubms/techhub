@@ -10,13 +10,10 @@ date: 2025-10-24 18:26:31 +00:00
 permalink: /coding/community/Scaling-Azure-Functions-Python-with-orjson
 tags:
 - API
-- Azure
 - Azure Functions
 - Azure Load Testing
 - Benchmarks
 - Cloud Engineering
-- Coding
-- Community
 - Cosmos DB
 - Deserialization
 - Event Hubs

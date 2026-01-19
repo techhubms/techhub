@@ -11,11 +11,9 @@ permalink: /devops/blogs/From-Incidents-to-Insights-The-Power-of-Blameless-Postm
 tags:
 - Accountability
 - Blameless Post Mortem
-- Blogs
 - Business Of DevOps
 - Continuous Improvement
 - Contributed Content
-- DevOps
 - DevOps Culture
 - Incident Response
 - Post Mortem Best Practices

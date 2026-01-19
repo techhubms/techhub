@@ -17,9 +17,7 @@ tags:
 - API Security
 - API Strategy
 - Automation
-- Blogs
 - Developer Experience
-- DevOps
 - Digital Transformation
 - Governance
 - Multi Cloud

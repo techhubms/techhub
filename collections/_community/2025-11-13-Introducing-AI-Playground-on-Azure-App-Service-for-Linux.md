@@ -9,18 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-13 04:36:41 +00:00
 permalink: /ai/community/Introducing-AI-Playground-on-Azure-App-Service-for-Linux
 tags:
-- AI
 - AI Playground
 - App Performance
 - App Service Extensions
-- Azure
 - Azure App Service
 - Azure Portal
 - BitNet
 - C#
 - Code Integration
-- Coding
-- Community
 - Kudu
 - Linux App Service
 - Model Latency

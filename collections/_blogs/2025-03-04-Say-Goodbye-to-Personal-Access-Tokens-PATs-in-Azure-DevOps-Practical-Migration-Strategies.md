@@ -11,12 +11,9 @@ permalink: /azure/blogs/Say-Goodbye-to-Personal-Access-Tokens-PATs-in-Azure-DevO
 tags:
 - App Registration
 - Authentication
-- Azure
 - Azure DevOps
 - Azure Functions
 - Azure Resource Manager
-- Blogs
-- DevOps
 - Integration Testing
 - Jest
 - Managed Identity
@@ -25,7 +22,6 @@ tags:
 - Personal Access Tokens
 - Pipeline Automation
 - Renovate
-- Security
 - Security Best Practices
 - Service Principal
 - Workload Identity Federation

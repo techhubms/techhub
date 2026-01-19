@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-07-29 22:42:02 +00:00
 permalink: /ai/videos/MCP-Gets-OAuth-Understanding-the-New-Authorization-Specification
 tags:
-- AI
 - AI Agent
 - Authorization
-- Azure
 - Azure AI Foundry
 - Cloud Computing
 - Dev
@@ -23,10 +21,8 @@ tags:
 - Microsoft
 - OAuth 2.1
 - Protected Resource Metadata
-- Security
 - Tech
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

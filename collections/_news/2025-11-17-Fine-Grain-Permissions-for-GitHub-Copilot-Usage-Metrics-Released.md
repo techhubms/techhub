@@ -9,16 +9,13 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-17 16:57:55 +00:00
 permalink: /github-copilot/news/Fine-Grain-Permissions-for-GitHub-Copilot-Usage-Metrics-Released
 tags:
-- AI
 - AI Controls
 - API
 - Copilot
 - Copilot Usage Metrics
 - Dashboard
 - Enterprise Role
-- GitHub Copilot
 - Metrics
-- News
 - Permission Management
 - User Access
 section_names:

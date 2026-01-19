@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-12-03 21:32:15 +00:00
 permalink: /azure/videos/Azure-Arc-Extending-Azure-for-Hybrid-and-Multi-Cloud-Management
 tags:
-- Azure
 - Azure Arc
 - 'Azure Arc: Extending Azure For Hybrid And Multi Cloud Management | BRK183'
 - BRK183
@@ -17,7 +16,6 @@ tags:
 - Cloud Governance
 - Cloud Management
 - Cloud Native
-- DevOps
 - English (us)
 - F5n1
 - Hybrid Cloud
@@ -31,11 +29,9 @@ tags:
 - Msft Ignite
 - Multi Cloud Management
 - Operations
-- Security
 - System Center
 - Technical
 - Unified Management
-- Videos
 - Windows
 section_names:
 - azure

@@ -12,7 +12,6 @@ tags:
 - Additive APIs
 - API Compatibility
 - Backward Compatibility
-- Coding
 - Developer Experience
 - Developer Tools
 - Extensibility
@@ -23,7 +22,6 @@ tags:
 - Marketplace
 - Microsoft
 - MSI Installers
-- News
 - VisualStudio.Extensibility
 - VS
 - VSIX

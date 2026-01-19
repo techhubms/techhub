@@ -10,13 +10,10 @@ date: 2025-08-26 22:22:59 +00:00
 permalink: /ai/community/Benchmarking-Llama-31-8B-Inference-with-vLLM-on-Azure-GPU-and-CPU-VMs
 tags:
 - A100
-- AI
 - AI Infrastructure
 - AVX512
-- Azure
 - Azure ND Series
 - Benchmarking
-- Community
 - Cost Efficiency
 - CPU VM
 - CUDA

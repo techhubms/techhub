@@ -10,16 +10,13 @@ date: 2025-08-27 14:55:10 +00:00
 permalink: /github-copilot/news/Copilot-Coding-Agent-Now-in-GitHub-Enterprise-Cloud-with-Data-Residency
 tags:
 - Agent Automation
-- AI
 - Autonomous Coding
 - Copilot Coding Agent
 - Data Residency
 - Developer Tools
 - Enterprise Workflows
-- GitHub Copilot
 - GitHub Enterprise Cloud
 - Issue Assignment
-- News
 - Pull Requests
 section_names:
 - ai

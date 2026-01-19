@@ -14,8 +14,6 @@ tags:
 - Application Pool
 - Applicationhost.config
 - ASP.NET Core
-- Blogs
-- Coding
 - Configuration
 - Environment Variables
 - Hosting

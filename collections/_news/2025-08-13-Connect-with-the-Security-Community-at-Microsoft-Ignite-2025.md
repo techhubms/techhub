@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-13 17:09:05 +00:00
 permalink: /ai/news/Connect-with-the-Security-Community-at-Microsoft-Ignite-2025
 tags:
-- AI
 - AI Security
 - Career Growth
 - Cloud Security
@@ -21,10 +20,8 @@ tags:
 - Microsoft Ignite
 - Microsoft Security
 - Networking
-- News
 - SecOps
 - Secure AI Adoption
-- Security
 - Security Certifications
 - Security Community
 - Security Governance

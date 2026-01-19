@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-01 17:30:05 +00:00
 permalink: /github-copilot/news/Spark-Public-Preview-Released-for-Copilot-Enterprise-Expanded-Access-and-Enhanced-Reliability
 tags:
-- AI
 - App Development
 - Bug Fixes
 - Build Errors
@@ -17,10 +16,8 @@ tags:
 - Copilot Enterprise
 - Deployment
 - Enterprise Managed Users
-- GitHub Copilot
 - Improvement
 - Iteration History
-- News
 - Performance Improvements
 - Public Preview
 - Publishing

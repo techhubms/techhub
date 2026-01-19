@@ -9,10 +9,8 @@ feed_url: https://www.reddit.com/r/microsoft/.rss
 date: 2025-07-26 10:39:54 +00:00
 permalink: /ai/community/Microsoft-launches-first-Southeast-Asia-AI-research-lab-in-Singapore
 tags:
-- AI
 - AI Lab
 - AI Research
-- Community
 - Innovation
 - Microsoft
 - Regional Collaboration

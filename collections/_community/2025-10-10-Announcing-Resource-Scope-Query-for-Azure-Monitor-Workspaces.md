@@ -11,15 +11,12 @@ permalink: /azure/community/Announcing-Resource-Scope-Query-for-Azure-Monitor-Wo
 tags:
 - Access Control
 - Application Insights
-- Azure
 - Azure Monitor Agent
 - Azure Monitor Workspaces
 - Azure Portal
 - Azure RBAC
 - Centralized Monitoring
-- Community
 - Container Insights
-- DevOps
 - Grafana
 - Log Analytics Workspaces
 - Metrics
@@ -30,7 +27,6 @@ tags:
 - RBAC
 - Resource Permissions
 - Resource Scope Query
-- Security
 - Workspace Permissions
 section_names:
 - azure

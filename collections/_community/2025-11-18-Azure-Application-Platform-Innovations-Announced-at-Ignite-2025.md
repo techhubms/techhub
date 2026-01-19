@@ -10,27 +10,21 @@ date: 2025-11-18 16:13:48 +00:00
 permalink: /github-copilot/community/Azure-Application-Platform-Innovations-Announced-at-Ignite-2025
 tags:
 - .NET Modernization
-- AI
 - AI Gateway
 - AKS
 - AKS Automatic
 - API Management
 - App Modernization
-- Azure
 - Azure Application Platform
 - Azure Functions
 - Azure Red Hat OpenShift
-- Community
 - Confidential Containers
-- DevOps
 - Docker Compose
 - Durable Functions
-- GitHub Copilot
 - Logic Apps
 - MCP
 - Microsoft Foundry
 - Multi Agent Orchestration
-- Security
 - Semantic Kernel
 section_names:
 - ai

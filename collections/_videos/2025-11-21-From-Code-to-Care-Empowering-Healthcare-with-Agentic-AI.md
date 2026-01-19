@@ -10,10 +10,8 @@ date: 2025-11-21 16:37:26 +00:00
 permalink: /ai/videos/From-Code-to-Care-Empowering-Healthcare-with-Agentic-AI
 tags:
 - Agentic AI
-- AI
 - AI Agents
 - AI Orchestration
-- Azure
 - Azure AI
 - Cancer Care
 - Data Security
@@ -28,7 +26,6 @@ tags:
 - Pro Code
 - Trustworthy AI
 - Unified Data
-- Videos
 - Workflow Automation
 section_names:
 - ai

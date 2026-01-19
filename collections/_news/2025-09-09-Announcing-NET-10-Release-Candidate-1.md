@@ -15,7 +15,6 @@ tags:
 - Blazor
 - C#
 - C# Dev Kit
-- Coding
 - Community Standup
 - Cosmos DB
 - Diagnostics
@@ -25,7 +24,6 @@ tags:
 - MAUI
 - Metrics
 - Minimal APIs
-- News
 - OpenAPI
 - Post Quantum Cryptography
 - SQL Server

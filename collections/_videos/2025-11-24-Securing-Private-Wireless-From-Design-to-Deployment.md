@@ -10,11 +10,9 @@ date: 2025-11-24 07:17:15 +00:00
 permalink: /ai/videos/Securing-Private-Wireless-From-Design-to-Deployment
 tags:
 - 5G Security
-- AI
 - AI Powered Defense
 - AI Security
 - Authentication
-- Azure
 - Cyber Threat Defense
 - Incident Management
 - Microsoft Ignite
@@ -22,11 +20,9 @@ tags:
 - MSIgnite
 - Network Security
 - Private Wireless
-- Security
 - Security Orchestration
 - Telecom Security
 - Threat Hunting
-- Videos
 section_names:
 - ai
 - azure

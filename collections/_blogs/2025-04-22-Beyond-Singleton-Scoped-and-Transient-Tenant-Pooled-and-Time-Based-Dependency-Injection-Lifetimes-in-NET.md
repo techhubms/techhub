@@ -11,8 +11,6 @@ permalink: /coding/blogs/Beyond-Singleton-Scoped-and-Transient-Tenant-Pooled-and
 tags:
 - .NET
 - ASP.NET Core
-- Blogs
-- Coding
 - Dependency Injection
 - Factory Pattern
 - Multi Tenancy

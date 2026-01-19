@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-02-20 14:00:51 +00:00
 permalink: /ai/videos/Relativitys-AI-and-Azure-Powered-Unstructured-Data-Processing-in-Legal-Tech
 tags:
-- AI
 - AI Innovation
-- Azure
 - Azure Data Lake Storage
 - Data Management
 - Document Analysis
@@ -21,11 +19,9 @@ tags:
 - Microsoft
 - Microsoft Azure
 - Microsoft Ignite
-- ML
 - Relativity
 - Unstructured Data
 - Video Processing
-- Videos
 section_names:
 - ai
 - azure

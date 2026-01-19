@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-07 15:04:17 +00:00
 permalink: /azure/community/General-Availability-of-Inbound-IPv6-Support-for-Azure-App-Service
 tags:
-- Azure
 - Azure App Service
 - Azure Government
 - Cloud Deployment
-- Community
 - DNS
 - Functions Consumption
 - Functions Elastic Premium

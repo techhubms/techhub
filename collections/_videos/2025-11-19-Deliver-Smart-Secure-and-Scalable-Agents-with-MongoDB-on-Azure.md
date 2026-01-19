@@ -9,8 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 11:00:59 +00:00
 permalink: /ai/videos/Deliver-Smart-Secure-and-Scalable-Agents-with-MongoDB-on-Azure
 tags:
-- AI
-- Azure
 - Azure AI Foundry
 - Azure Functions
 - Azure Landing Zones
@@ -26,9 +24,7 @@ tags:
 - Multi Region Deployment
 - Operational Excellence
 - Secure Databases
-- Security
 - Vector Search
-- Videos
 section_names:
 - ai
 - azure

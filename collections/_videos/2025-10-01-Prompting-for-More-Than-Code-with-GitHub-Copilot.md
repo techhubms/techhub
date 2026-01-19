@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-10-01 14:00:27 +00:00
 permalink: /github-copilot/videos/Prompting-for-More-Than-Code-with-GitHub-Copilot
 tags:
-- AI
 - Application Development
 - Code
 - Copilot
@@ -19,7 +18,6 @@ tags:
 - Developer Community
 - Developer Productivity
 - Developer Tools
-- GitHub Copilot
 - Microsoft
 - Prompt Driven Development
 - Prompt Engineering
@@ -28,7 +26,6 @@ tags:
 - Recipe Planning
 - Software Developer
 - Software Development
-- Videos
 - VS Code
 section_names:
 - ai

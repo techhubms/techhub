@@ -10,16 +10,13 @@ date: 2026-01-14 15:01:54 +00:00
 permalink: /ai/videos/Running-AI-Coding-Agents-with-Dev-Containers-and-GitHub-Codespaces
 tags:
 - Agents
-- AI
 - AI Coding Agent
 - Code Extensions
-- Coding
 - Containers
 - Demo
 - Dev Containers
 - Developer
 - Developer Tools
-- DevOps
 - Environment Setup
 - GitHub Codespaces
 - Microsoft
@@ -28,7 +25,6 @@ tags:
 - Runtimes
 - SDK
 - Software Developer
-- Videos
 - VS Code
 section_names:
 - ai

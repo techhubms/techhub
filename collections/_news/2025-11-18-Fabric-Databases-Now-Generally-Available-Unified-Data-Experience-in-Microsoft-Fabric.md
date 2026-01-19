@@ -9,17 +9,13 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
 permalink: /ai/news/Fabric-Databases-Now-Generally-Available-Unified-Data-Experience-in-Microsoft-Fabric
 tags:
-- AI
 - AI Integration
-- Azure
 - Azure OpenAI Service
 - Cosmos DB
 - Enterprise Security
 - Fabric Databases
 - GraphQL API
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Operational Analytics
 - Power BI

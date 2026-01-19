@@ -10,21 +10,17 @@ date: 2025-11-20 15:46:54 +00:00
 permalink: /github-copilot/news/Enterprise-BYOK-for-GitHub-Copilot-Now-in-Public-Preview
 tags:
 - Admin Controls
-- AI
 - Anthropic
 - API Key
 - Billing
 - BYOK
 - Copilot
 - Copilot Chat
-- DevOps
 - Enterprise
-- GitHub Copilot
 - IDE Integration
 - LLM Providers
 - Microsoft Foundry
 - Model Management
-- News
 - OpenAI
 - Organization Admin
 - VS Code

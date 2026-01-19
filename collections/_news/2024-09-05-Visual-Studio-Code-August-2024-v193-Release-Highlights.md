@@ -10,20 +10,15 @@ date: 2024-09-05 17:00:00 +00:00
 permalink: /github-copilot/news/Visual-Studio-Code-August-2024-v193-Release-Highlights
 tags:
 - Accessibility
-- AI
 - August Release
 - Code Generation
-- Coding
 - Debugging
-- DevOps
 - Django
 - ECMAScript Modules
 - Extensions
 - Git
-- GitHub Copilot
 - IntelliSense
 - JavaScript
-- News
 - Python
 - Remote Development
 - Settings

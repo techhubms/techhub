@@ -11,13 +11,9 @@ permalink: /github-copilot/news/Scaling-for-Impact-How-GitHub-Copilot-Accelerate
 tags:
 - Africa
 - Agricultural Empowerment
-- AI
 - AI Assisted Development
 - Community Impact
-- DevOps
 - Digital Transformation
-- GitHub Copilot
-- News
 - Nonprofit Technology
 - One Acre Fund
 - Open Source

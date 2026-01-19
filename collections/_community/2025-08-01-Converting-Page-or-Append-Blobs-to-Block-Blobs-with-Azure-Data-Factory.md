@@ -12,14 +12,11 @@ tags:
 - Access Tiers
 - Append Blobs
 - Archive Tier
-- Azure
 - Azure Blob Storage
 - Azure Data Factory
 - Block Blobs
-- Community
 - Data Pipelines
 - Lifecycle Management
-- ML
 - Page Blobs
 - Storage Cost Optimization
 section_names:

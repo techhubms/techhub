@@ -10,7 +10,6 @@ date: 2025-11-21 14:59:32 +00:00
 permalink: /ai/videos/Secure-Your-AI-Agents-with-Microsoft-Defender-Best-Practices-from-Ignite-2025
 tags:
 - Agentic AI
-- AI
 - AI Agents
 - AI Security
 - Attack Simulation
@@ -24,11 +23,9 @@ tags:
 - MSIgnite
 - ProtectcloudAIplatformandapps
 - Responsible AI
-- Security
 - Security Best Practices
 - Security Governance
 - Threat Detection
-- Videos
 section_names:
 - ai
 - security

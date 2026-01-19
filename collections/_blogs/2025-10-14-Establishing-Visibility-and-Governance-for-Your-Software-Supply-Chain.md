@@ -13,7 +13,6 @@ tags:
 - Appsec
 - Asset Visibility
 - Attack Surface Management
-- Blogs
 - Build Time Security
 - Business Of DevOps
 - Cloud Governance
@@ -21,7 +20,6 @@ tags:
 - Contributed Content
 - Cybersecurity Governance
 - Dependency Tracking
-- DevOps
 - Ebpf Runtime Analysis
 - Kubernetes Gatekeeper
 - Log4Shell
@@ -32,7 +30,6 @@ tags:
 - SBoM
 - SBOM Automation
 - Secure Software Development
-- Security
 - SLSA
 - Social Facebook
 - Social LinkedIn

@@ -9,13 +9,9 @@ feed_url: https://harrybin.de/rss.xml
 date: 2025-04-24 22:00:00 +00:00
 permalink: /ai/blogs/Building-a-React-Based-Speaking-AI-Avatar-with-Azure-OpenAI-and-Microsoft-Cognitive-Services
 tags:
-- AI
 - AnimationMixer
 - Avatar
-- Azure
 - Azure OpenAI
-- Blogs
-- Coding
 - GLTFLoader
 - Lip Syncing
 - Microsoft Cognitive Services

@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-26 18:56:40 +00:00
 permalink: /ai/news/Introducing-Crescent-Microsofts-Cryptographic-Library-for-Privacy-Preserving-Digital-Identity
 tags:
-- AI
 - Authentication
 - Azure AI Foundry
 - Company News
@@ -22,10 +21,8 @@ tags:
 - JSON Web Token
 - Microsoft Research
 - Mobile Driver’s License
-- News
 - Privacy
 - Rust
-- Security
 - Selective Disclosure
 - SNARK
 - Zero Knowledge Proofs

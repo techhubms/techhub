@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-01 16:45:01 +00:00
 permalink: /github-copilot/news/How-AI-Power-Users-in-Malaysia-Achieve-More-with-Microsoft-365-Copilot
 tags:
-- AI
 - AI Adoption
 - AI Integration
 - Automation
@@ -20,10 +19,8 @@ tags:
 - Employee Experience
 - Excel
 - Financial Services
-- GitHub Copilot
 - Malaysia
 - Microsoft 365 Copilot
-- News
 - PowerPoint
 - Word
 - Workplace Efficiency

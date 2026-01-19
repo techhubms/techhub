@@ -9,8 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-02-27 14:00:47 +00:00
 permalink: /ai/videos/CSXs-Digital-Transformation-with-Azure-AI-and-Microsoft-Fabric
 tags:
-- AI
-- Azure
 - Cloud Innovation
 - Cloud Migration
 - Copilot Studio
@@ -23,12 +21,10 @@ tags:
 - Microsoft Fabric
 - Microsoft Ignite
 - Migration Challenges
-- ML
 - Operational Excellence
 - Predictive Maintenance
 - Rail Industry
 - Safety
-- Videos
 section_names:
 - ai
 - azure

@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-17 15:17:46 +00:00
 permalink: /ai/news/CX-Observe-Product-Feedback-Copilot-AI-Powered-Insights-for-Azure-Product-Leaders
 tags:
-- AI
 - AI Copilot
 - AI Innovation
-- Azure
 - Azure Infrastructure
 - Company News
 - Customer Feedback
@@ -21,7 +19,6 @@ tags:
 - Hackathon
 - K Means Algorithm
 - Microsoft Garage
-- News
 - Product Management
 - Roadmap Prioritization
 - Semantic Clustering

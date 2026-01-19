@@ -9,15 +9,12 @@ feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-09-23 19:01:15 +00:00
 permalink: /ai/news/Foundry-Local-Meets-More-Silicon-Expanded-AI-Runtime-and-NPU-Support
 tags:
-- AI
 - AI Development
 - AI Models
 - AI Runtime
 - AMD
-- Azure
 - Azure AI Foundry
 - Brew
-- Coding
 - Cross Platform Development
 - Developer Tools
 - Edge AI
@@ -25,7 +22,6 @@ tags:
 - FoundryLocal
 - Installation Guide
 - Intel
-- News
 - NPU
 - NVIDIA
 - On Device AI

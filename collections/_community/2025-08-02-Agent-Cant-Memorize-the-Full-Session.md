@@ -10,14 +10,11 @@ date: 2025-08-02 16:05:40 +00:00
 permalink: /github-copilot/community/Agent-Cant-Memorize-the-Full-Session
 tags:
 - Agent Behavior
-- AI
 - Claude
 - Code Execution
-- Community
 - Context Retention
 - Contextual Consistency
 - Docker Compose
-- GitHub Copilot
 - Python Execution
 - Session Memory
 - User Experience

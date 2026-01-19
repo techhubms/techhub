@@ -9,20 +9,15 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 14:51:59 +00:00
 permalink: /github-copilot/videos/Redefining-the-SDLC-with-GitHub-Copilot-and-Context-Driven-AI
 tags:
-- AI
 - AI Driven Development
 - Angular
-- Azure
 - Azure DevOps
 - Code Quality
-- Coding
 - Coding Consistency
 - Context Framework
 - Copilotandagentsatwork
-- DevOps
 - Enterprise Practices
 - Figma
-- GitHub Copilot
 - Jira Integration
 - MCP Server
 - Mermaid Diagrams
@@ -31,7 +26,6 @@ tags:
 - React
 - SDLC
 - Slalom Accelerator
-- Videos
 section_names:
 - ai
 - azure

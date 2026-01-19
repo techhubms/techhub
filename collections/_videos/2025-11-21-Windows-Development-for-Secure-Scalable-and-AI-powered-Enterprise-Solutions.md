@@ -12,9 +12,7 @@ tags:
 - Agent Connectors
 - Agent ID
 - Agent Workspace
-- AI
 - AI Development
-- Coding
 - Developer Environment
 - Enterprise Security
 - Foundry Local
@@ -27,9 +25,7 @@ tags:
 - Privacy
 - Scalability
 - ScalewithcloudandAIendpoints
-- Security
 - Semantic Search
-- Videos
 - Windows APIs
 - Windows Developer Platform
 - Winget

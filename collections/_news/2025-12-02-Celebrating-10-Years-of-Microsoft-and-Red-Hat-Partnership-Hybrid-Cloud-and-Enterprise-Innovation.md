@@ -9,30 +9,23 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-02 16:00:00 +00:00
 permalink: /ai/news/Celebrating-10-Years-of-Microsoft-and-Red-Hat-Partnership-Hybrid-Cloud-and-Enterprise-Innovation
 tags:
-- AI
 - AI + Machine Learning
 - AI Platform
 - Ansible Automation Platform
 - Automation
-- Azure
 - Azure Marketplace
 - Azure OpenAI Service
 - Azure Red Hat OpenShift
 - Cloud Modernization
 - Confidential Containers
 - Containers
-- DevOps
 - Enterprise Cloud
 - Governance
 - Hybrid Cloud
 - Kubernetes
-- Machine Learning
 - Microsoft Foundry
-- ML
-- News
 - Open Source
 - Red Hat
-- Security
 - Virtualization
 section_names:
 - ai

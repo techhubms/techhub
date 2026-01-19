@@ -9,10 +9,8 @@ feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-07 02:26:59 +00:00
 permalink: /azure/community/Understanding-Hyper-V-and-Azure-Host-OS-Architecture
 tags:
-- Azure
 - Azure Host OS
 - Child Partition
-- Community
 - Hardware Virtualization
 - Hyper V
 - Hypervisor Architecture

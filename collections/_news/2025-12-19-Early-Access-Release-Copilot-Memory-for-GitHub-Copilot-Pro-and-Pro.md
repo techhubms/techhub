@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-19 17:05:54 +00:00
 permalink: /github-copilot/news/Early-Access-Release-Copilot-Memory-for-GitHub-Copilot-Pro-and-Pro
 tags:
-- AI
 - AI Assistant
 - Code Review
 - Copilot
@@ -18,8 +17,6 @@ tags:
 - Copilot Settings
 - Developer Tools
 - Early Access
-- GitHub Copilot
-- News
 - Pro
 - Pro Plus
 - Programming Productivity

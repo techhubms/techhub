@@ -11,13 +11,10 @@ permalink: /azure/blogs/Arc-Jumpstart-Drops-Enhancing-Community-Collaboration-fo
 tags:
 - Arc Jumpstart
 - Automation
-- Azure
 - Azure Arc
-- Blogs
 - Cloud
 - Cloud Native
 - Community Collaboration
-- DevOps
 - Edge Computing
 - Hybrid Cloud
 - IT Operations

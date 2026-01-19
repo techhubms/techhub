@@ -9,16 +9,13 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-07-28 16:00:52 +00:00
 permalink: /ai/videos/MCP-Development-Best-Practices
 tags:
-- AI
 - Deployment
 - Error Handling
 - MCP
 - Performance Optimization
 - Project Structure
 - Schema Validation
-- Security
 - Tool Design
-- Videos
 - Workflow Patterns
 section_names:
 - ai

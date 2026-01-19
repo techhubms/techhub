@@ -9,7 +9,6 @@ feed_url: https://github.blog/feed/
 date: 2025-10-30 21:46:07 +00:00
 permalink: /github-copilot/news/Measuring-What-Matters-Offline-Evaluation-of-GitHub-MCP-Server
 tags:
-- AI
 - AI & ML
 - Argument Validation
 - Automated Testing
@@ -17,16 +16,13 @@ tags:
 - Classification Metrics
 - Confusion Matrix
 - Developer Tools
-- DevOps
 - DevOps Pipeline
 - F1 Score
 - Generative AI
-- GitHub Copilot
 - GitHub MCP Server
 - LLM Evaluation
 - Machine Learning
 - MCP
-- News
 - Offline Evaluation
 - Tool Selection
 section_names:

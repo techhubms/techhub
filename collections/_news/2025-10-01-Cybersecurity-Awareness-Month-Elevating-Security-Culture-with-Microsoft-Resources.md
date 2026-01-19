@@ -9,7 +9,6 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-01 16:00:00 +00:00
 permalink: /ai/news/Cybersecurity-Awareness-Month-Elevating-Security-Culture-with-Microsoft-Resources
 tags:
-- AI
 - AI Governance
 - Be Cybersmart Kit
 - Cybersecurity Awareness Month
@@ -17,11 +16,9 @@ tags:
 - Identity And Access Management
 - Microsoft Security
 - Multifactor Authentication
-- News
 - Phishing Simulations
 - Risk Management
 - Secure Future Initiative
-- Security
 - Security Best Practices
 - Security Culture
 - Security Resources

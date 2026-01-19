@@ -11,7 +11,6 @@ permalink: /coding/videos/NET-MAUI-Community-Standup-NET-10-Announcements-Roundu
 tags:
 - .NET
 - .NET 10
-- Coding
 - David Ortinau
 - Demo
 - Developer
@@ -24,7 +23,6 @@ tags:
 - Platform Updates
 - Software Developer
 - Software Development
-- Videos
 section_names:
 - coding
 ---

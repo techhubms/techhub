@@ -10,21 +10,14 @@ date: 2026-01-05 14:29:43 +00:00
 permalink: /github-copilot/news/Immersive-Developer-Learning-with-Visual-Studio-NET-Azure-and-GitHub-Copilot-VS-Live-2026-Preview
 tags:
 - .NET
-- AI
 - AI Assisted Development
 - Architecture
-- Azure
 - C# Source Generators
 - Cloud Native
 - Code Quality
-- Coding
 - Debugging
-- DevOps
-- GitHub Copilot
 - Hands On Labs
-- News
 - Scenario Based Learning
-- Security
 - Technical Training
 - Training
 - VS

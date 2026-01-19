@@ -9,15 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-11-12 15:00:02 +00:00
 permalink: /github-copilot/videos/Your-codebase-your-rules-Customizing-Copilot-with-context-engineering
 tags:
-- AI
 - Codebase Integration
-- Coding
 - Context Engineering
 - Custom Instructions
 - Developer Workflow
 - Enterprise Scale
 - GitHub
-- GitHub Copilot
 - GitHub Copilot Enterprise
 - GitHubUniverse
 - Plan Mode
@@ -25,7 +22,6 @@ tags:
 - Prompt Engineering
 - Software Architecture
 - Test Driven Development
-- Videos
 - VS Code
 section_names:
 - ai

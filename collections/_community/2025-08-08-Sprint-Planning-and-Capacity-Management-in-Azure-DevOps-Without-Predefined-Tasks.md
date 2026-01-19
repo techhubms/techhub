@@ -10,12 +10,9 @@ date: 2025-08-08 10:59:17 +00:00
 permalink: /azure/community/Sprint-Planning-and-Capacity-Management-in-Azure-DevOps-Without-Predefined-Tasks
 tags:
 - Agile
-- Azure
 - Azure DevOps
 - Backlog Management
 - Capacity Planning
-- Community
-- DevOps
 - Forecasting
 - Sprint Planning
 - Story Points

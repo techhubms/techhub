@@ -10,7 +10,6 @@ date: 2025-09-22 17:00:00 +00:00
 permalink: /ml/news/Unlocking-Real-Time-Operational-Intelligence-Azure-Monitor-Logs-Integration-in-Fabric-via-Eventstream
 tags:
 - Analytics Workflow
-- Azure
 - Azure Integration
 - Azure Monitor
 - Business Intelligence
@@ -21,9 +20,7 @@ tags:
 - Eventhouse
 - Eventstream
 - Microsoft Fabric
-- ML
 - Monitoring Logs
-- News
 - Operational Monitoring
 - Real Time Intelligence
 - Streaming Analytics

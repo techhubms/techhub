@@ -9,7 +9,6 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-21 16:00:00 +00:00
 permalink: /ai/news/The-New-Microsoft-Security-Store-Unifying-Partners-and-Innovation-for-Stronger-Security
 tags:
-- AI
 - AI Agents
 - Automation
 - Cloud Security
@@ -21,9 +20,7 @@ tags:
 - Microsoft Purview
 - Microsoft Security Store
 - Microsoft Sentinel
-- News
 - SaaS Solutions
-- Security
 - Security Copilot
 - Security Marketplace
 - Threat Protection

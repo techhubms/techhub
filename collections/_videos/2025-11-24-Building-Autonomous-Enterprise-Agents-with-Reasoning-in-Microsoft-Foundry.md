@@ -11,9 +11,7 @@ permalink: /ai/videos/Building-Autonomous-Enterprise-Agents-with-Reasoning-in-Mi
 tags:
 - Advanced AI
 - Agentic Workflows
-- AI
 - Autonomous Agents
-- Azure
 - Azure AI
 - Content Generation
 - Customer Support
@@ -33,7 +31,6 @@ tags:
 - Parallel Execution
 - Reasoning Models
 - Tool Calling
-- Videos
 section_names:
 - ai
 - azure

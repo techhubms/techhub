@@ -12,7 +12,6 @@ tags:
 - Agent HQ
 - Community Events
 - Developer News
-- DevOps
 - GitHub
 - GitHub Game Off
 - GitHub Universe
@@ -26,7 +25,6 @@ tags:
 - TheDownload
 - TypeScript
 - Uv
-- Videos
 section_names:
 - devops
 ---

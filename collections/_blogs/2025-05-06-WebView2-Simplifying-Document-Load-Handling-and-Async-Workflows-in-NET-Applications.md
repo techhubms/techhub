@@ -11,9 +11,7 @@ permalink: /coding/blogs/WebView2-Simplifying-Document-Load-Handling-and-Async-W
 tags:
 - .NET
 - Async Programming
-- Blogs
 - C#
-- Coding
 - Document Loaded
 - Event Handling
 - JavaScript Interop

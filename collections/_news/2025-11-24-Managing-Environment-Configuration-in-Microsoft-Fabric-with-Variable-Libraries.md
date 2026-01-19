@@ -9,20 +9,15 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-24 12:47:12 +00:00
 permalink: /ai/news/Managing-Environment-Configuration-in-Microsoft-Fabric-with-Variable-Libraries
 tags:
-- AI
-- Azure
 - Azure Key Vault
 - Azure OpenAI
 - CI/CD
-- Coding
 - Data Engineering
 - Deployment Pipeline
 - Dynamic Configuration
 - Environment Configuration
 - Lakehouse
 - Microsoft Fabric
-- ML
-- News
 - Python
 - Schema Management
 - Secrets Management

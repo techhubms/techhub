@@ -9,16 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-27 08:00:00 +00:00
 permalink: /ai/community/Unlocking-Your-First-AI-Solution-on-Azure-Practical-Paths-for-Developers
 tags:
-- AI
 - AI Chatbot
 - AI Security
 - AI Solution
-- Azure
 - Azure AI Foundry
 - Azure Deployment
 - Azure Marketplace
 - Cloud Development
-- Community
 - Data Integration
 - GitHub
 - Microsoft Azure

@@ -8,22 +8,13 @@ permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
 - Agent Framework
-- AI
 - AI Agents
-- Azure
 - Cloud Native
-- Coding
 - Copilot Studio
-- DevOps
-- GitHub Copilot
 - Hybrid Cloud
-- Machine Learning
-- ML
 - Observability
 - OpenTelemetry
 - Retrieval Augmented Generation
-- Roundups
-- Security
 - Supply Chain Security
 - VS Code
 section_names:

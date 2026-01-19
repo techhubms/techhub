@@ -9,21 +9,18 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-10 02:35:21 +00:00
 permalink: /ai/community/Accelerating-Enterprise-AI-Adoption-with-Azure-AI-Landing-Zone
 tags:
-- AI
 - AI ALZ
 - AI Governance
 - AI Security
 - AKS
 - App Service
 - AVM
-- Azure
 - Azure AI Foundry
 - Azure AI Landing Zone
 - Azure Container Apps
 - Azure Functions
 - Bicep
 - Cloud Adoption Framework
-- Community
 - Compliance
 - Enterprise AI
 - IaC

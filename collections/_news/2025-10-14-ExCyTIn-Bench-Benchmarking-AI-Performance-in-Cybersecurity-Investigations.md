@@ -9,10 +9,8 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-14 16:00:00 +00:00
 permalink: /ai/news/ExCyTIn-Bench-Benchmarking-AI-Performance-in-Cybersecurity-Investigations
 tags:
-- AI
 - AI Benchmarking
 - AI Security
-- Azure
 - Cybersecurity
 - Defender
 - ExCyTIn Bench
@@ -20,9 +18,7 @@ tags:
 - LLM Evaluation
 - Microsoft
 - Microsoft Sentinel
-- News
 - Open Source
-- Security
 - Security Copilot
 - Security Operations Center
 - SOC

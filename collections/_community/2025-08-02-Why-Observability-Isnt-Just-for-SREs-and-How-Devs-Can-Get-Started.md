@@ -10,9 +10,7 @@ date: 2025-08-02 15:09:58 +00:00
 permalink: /devops/community/Why-Observability-Isnt-Just-for-SREs-and-How-Devs-Can-Get-Started
 tags:
 - Application Performance
-- Community
 - Developer Practices
-- DevOps
 - Logging
 - Metrics
 - Monitoring

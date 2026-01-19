@@ -10,7 +10,6 @@ date: 2025-10-21 09:00:00 +00:00
 permalink: /ml/news/Implementing-Row-and-Column-Level-Security-for-Spark-in-OneLake
 tags:
 - Access Control
-- Azure
 - Big Data
 - Column Level Security
 - Data Governance
@@ -18,13 +17,10 @@ tags:
 - Lakehouse
 - Microsoft Azure
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Row Level Security
 - Schema Enabled Lakehouse
 - Secure Cluster
-- Security
 - Spark
 - SQL
 - Workspace Security

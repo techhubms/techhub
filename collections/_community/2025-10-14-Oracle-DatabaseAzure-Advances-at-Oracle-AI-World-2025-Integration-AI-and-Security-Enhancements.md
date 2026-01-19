@@ -9,16 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-14 18:00:00 +00:00
 permalink: /ai/community/Oracle-DatabaseAzure-Advances-at-Oracle-AI-World-2025-Integration-AI-and-Security-Enhancements
 tags:
-- AI
 - Autonomous Database
-- Azure
 - Azure AI Foundry
 - Azure Arc
 - Cloud Migration
-- Community
 - Copilot Studio
 - Data Integration
-- DevOps
 - Entra ID
 - GoldenGate
 - Hybrid Cloud
@@ -26,12 +22,10 @@ tags:
 - Microsoft Fabric
 - Microsoft Purview
 - Microsoft Sentinel
-- ML
 - OneLake
 - Operational Automation
 - Oracle Database@Azure
 - Power BI
-- Security
 - Terraform
 section_names:
 - ai

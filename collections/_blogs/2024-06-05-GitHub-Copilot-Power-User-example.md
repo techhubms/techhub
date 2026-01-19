@@ -9,14 +9,9 @@ feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2024-06-05 00:00:00 +00:00
 permalink: /github-copilot/blogs/GitHub-Copilot-Power-User-example
 tags:
-- AI
-- Blogs
 - Code Refactoring
-- Coding
 - Developer Workflow
-- DevOps
 - GitHub Actions
-- GitHub Copilot
 - YAML Pipelines
 section_names:
 - ai

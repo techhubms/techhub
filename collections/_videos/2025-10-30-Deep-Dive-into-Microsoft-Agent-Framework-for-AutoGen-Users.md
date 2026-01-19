@@ -11,12 +11,9 @@ permalink: /ai/videos/Deep-Dive-into-Microsoft-Agent-Framework-for-AutoGen-Users
 tags:
 - Agent as A Tool
 - Agent Orchestration
-- AI
 - AI Agents
 - AutoGen
-- Azure
 - Cloud Computing
-- Coding
 - Debug Tools
 - Dev
 - Development
@@ -35,7 +32,6 @@ tags:
 - Semantic Kernel
 - Tech
 - Technology
-- Videos
 - Workflow
 section_names:
 - ai

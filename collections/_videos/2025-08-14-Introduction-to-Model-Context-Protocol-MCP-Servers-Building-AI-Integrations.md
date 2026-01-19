@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-14 17:00:05 +00:00
 permalink: /ai/videos/Introduction-to-Model-Context-Protocol-MCP-Servers-Building-AI-Integrations
 tags:
-- AI
 - AI Integration
 - AI Platforms
 - AI Workflows
@@ -27,7 +26,6 @@ tags:
 - Server Lifecycle
 - Tech
 - Technology
-- Videos
 - VS
 section_names:
 - ai

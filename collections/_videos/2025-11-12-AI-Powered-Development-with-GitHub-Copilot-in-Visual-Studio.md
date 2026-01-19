@@ -11,21 +11,17 @@ permalink: /github-copilot/videos/AI-Powered-Development-with-GitHub-Copilot-in-
 tags:
 - .NET
 - .NET MAUI 10
-- AI
 - ASP.NET Core 10
 - C#
 - C# 14
 - Code Suggestions
-- Coding
 - Documentation Assistance
-- GitHub Copilot
 - Inline Chat
 - Productivity Tools
 - Prompt Engineering
 - Refactoring
 - Slash Commands
 - Test Generation
-- Videos
 - VS
 section_names:
 - ai

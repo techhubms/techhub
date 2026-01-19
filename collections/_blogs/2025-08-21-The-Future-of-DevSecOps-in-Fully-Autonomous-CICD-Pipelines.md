@@ -9,18 +9,14 @@ feed_url: https://devops.com/feed/
 date: 2025-08-21 17:12:05 +00:00
 permalink: /ai/blogs/The-Future-of-DevSecOps-in-Fully-Autonomous-CICD-Pipelines
 tags:
-- AI
 - Autonomous Pipeline
-- Blogs
 - CI/CD
 - Continuous Deployment
 - Continuous Integration
 - Contributed Content
-- DevOps
 - DevSecOps
 - Machine Learning
 - Pipeline Automation
-- Security
 - Security Automation
 - Security Monitoring
 - Social Facebook

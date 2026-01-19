@@ -9,14 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-15 17:08:39 +00:00
 permalink: /ai/community/Deploying-OpenAIs-GPT-OSS-20B-on-Azure-AKS-with-KAITO-and-vLLM
 tags:
-- AI
 - AI Endpoint
 - AKS
 - API Deployment
-- Azure
 - Azure CLI
 - Chat Completions API
-- Community
 - GPT OSS 20B
 - GPU Inference
 - KAITO
@@ -24,7 +21,6 @@ tags:
 - Kubernetes
 - LLM
 - Load Testing
-- ML
 - NVIDIA A10
 - OpenAI
 - Performance Benchmarking

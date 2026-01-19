@@ -11,7 +11,6 @@ permalink: /ai/videos/Agent-to-Agent-Collaboration-in-Copilot-Studio
 tags:
 - Agent Collaboration
 - Agent Solution Design
-- AI
 - AI Agents
 - Cloud Computing
 - Copilot Studio
@@ -29,7 +28,6 @@ tags:
 - Preview Feature
 - Tech
 - Technology
-- Videos
 - Workflow Automation
 section_names:
 - ai

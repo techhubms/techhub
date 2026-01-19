@@ -9,19 +9,15 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-08 11:14:40 +00:00
 permalink: /github-copilot/community/Community-Experiences-with-GPT-5-in-GitHub-Copilot-and-Coding-Workflows
 tags:
-- AI
 - AI Coding Assistants
 - Beast Mode
 - Bug Fixing
 - Claude 4
-- Coding
-- Community
 - Copilot Chat
 - Cost Analysis
 - Data Science
 - Developer Workflow
 - Gemini 2.5 Pro
-- GitHub Copilot
 - GPT 5
 - LLM Performance
 - Prompt Engineering

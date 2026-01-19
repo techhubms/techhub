@@ -11,7 +11,6 @@ permalink: /coding/news/Azure-SDK-Release-Highlights-September-2025
 tags:
 - .NET
 - API Changes
-- Azure
 - Azure Batch
 - Azure Developer Tools
 - Azure Identity
@@ -19,13 +18,11 @@ tags:
 - Azure SDK
 - Beta Release
 - Client Libraries
-- Coding
 - Go
 - Java
 - JavaScript
 - Long Running Operations
 - Management Libraries
-- News
 - Python
 - Resource Management
 - Rust

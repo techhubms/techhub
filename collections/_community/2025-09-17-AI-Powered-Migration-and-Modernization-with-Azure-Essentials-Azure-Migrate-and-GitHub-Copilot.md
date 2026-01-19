@@ -10,9 +10,7 @@ date: 2025-09-17 17:45:09 +00:00
 permalink: /github-copilot/community/AI-Powered-Migration-and-Modernization-with-Azure-Essentials-Azure-Migrate-and-GitHub-Copilot
 tags:
 - Agentic Applications
-- AI
 - AI Assisted Migration
-- Azure
 - Azure Advisor
 - Azure Essentials
 - Azure Migrate
@@ -22,18 +20,14 @@ tags:
 - Azure Security Center
 - Cloud Adoption Framework
 - Cloud Security
-- Community
-- DevOps
 - Disaster Recovery
 - FinOps
-- GitHub Copilot
 - Governance
 - Microsoft Defender For Cloud
 - Migration
 - Modernization
 - RBAC
 - Resiliency
-- Security
 section_names:
 - ai
 - azure

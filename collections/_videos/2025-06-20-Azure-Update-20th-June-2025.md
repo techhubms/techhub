@@ -13,7 +13,6 @@ tags:
 - AKS
 - App Service
 - ASR Ultra Disk
-- Azure
 - Azure Backup
 - Azure Cloud
 - Azure Functions
@@ -26,10 +25,8 @@ tags:
 - Linux VM Diagnostics
 - Microsoft
 - Microsoft Azure
-- ML
 - OpenTelemetry
 - PostgreSQL
-- Videos
 - VNET
 section_names:
 - azure

@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-10-09 12:45:40 +00:00
 permalink: /ai/blogs/Atlassian-Rovo-Dev-AI-Coding-Agent-Now-Generally-Available
 tags:
-- AI
 - AI Code Review
 - AI Coding Agent
 - AI DevOps Tools
@@ -24,13 +23,10 @@ tags:
 - Atlassian Rovo Dev
 - Atlassian Team 25
 - Bitbucket CI/CD
-- Blogs
 - Business Of DevOps
 - CLI Tools
 - Code Review
-- Coding
 - Compass
-- DevOps
 - DevOps Automation
 - DX Engineering Metrics
 - Jira Integration

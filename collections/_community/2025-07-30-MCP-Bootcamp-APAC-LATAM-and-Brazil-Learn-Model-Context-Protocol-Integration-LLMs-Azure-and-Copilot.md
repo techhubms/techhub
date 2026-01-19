@@ -9,15 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-07-30 19:00:00 +00:00
 permalink: /github-copilot/community/MCP-Bootcamp-APAC-LATAM-and-Brazil-Learn-Model-Context-Protocol-Integration-LLMs-Azure-and-Copilot
 tags:
-- AI
 - AI Engineering
-- Azure
 - Azure Container Apps
 - Bootcamp
 - Cloud Deployment
-- Coding
-- Community
-- GitHub Copilot
 - HTTP Streaming
 - LLM Integration
 - MCP

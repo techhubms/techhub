@@ -9,14 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-03 15:22:37 +00:00
 permalink: /ai/community/General-Availability-of-Teams-Phone-Extensibility-with-Azure-Communication-Services
 tags:
-- AI
-- Azure
 - Azure Communication Services
 - Azure SDK
 - Call Automation API
 - Call Recording
 - CCaaS
-- Community
 - Compliance
 - Conversational AI
 - ISV Solutions

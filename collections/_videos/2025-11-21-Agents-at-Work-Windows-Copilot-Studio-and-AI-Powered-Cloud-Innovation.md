@@ -13,7 +13,6 @@ tags:
 - Advanced Session
 - Agent Development
 - Agent Mode
-- AI
 - AI Productivity
 - Cloud Integration
 - Copilot Plus PC
@@ -26,7 +25,6 @@ tags:
 - MSIgnite
 - ScalewithcloudandAIendpoints
 - Semantic Search
-- Videos
 - Windows
 - Windows 365
 section_names:

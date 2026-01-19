@@ -11,15 +11,11 @@ permalink: /ai/community/Azure-Copilot-Adds-Advanced-Kubernetes-Troubleshooting-
 tags:
 - Agent Mode
 - Agentic Cloud Operations
-- AI
 - AKS
 - Automated Mitigation
-- Azure
 - Azure Copilot
 - Cloud Diagnostics
 - Cluster Management
-- Community
-- DevOps
 - Kubectl
 - Kubernetes
 - Kubernetes Troubleshooting

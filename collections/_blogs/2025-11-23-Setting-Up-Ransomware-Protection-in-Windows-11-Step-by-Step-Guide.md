@@ -9,7 +9,6 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-23 17:10:25 +00:00
 permalink: /security/blogs/Setting-Up-Ransomware-Protection-in-Windows-11-Step-by-Step-Guide
 tags:
-- Blogs
 - Cloud Backup
 - Controlled Folder Access
 - Cybersecurity
@@ -18,7 +17,6 @@ tags:
 - OneDrive
 - Ransomware
 - Ransomware Protection
-- Security
 - Windows 11
 - Windows Security
 section_names:

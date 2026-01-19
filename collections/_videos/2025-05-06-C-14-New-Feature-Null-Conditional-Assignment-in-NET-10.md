@@ -16,7 +16,6 @@ tags:
 - Clean Code
 - CleanCode
 - Code Quality
-- Coding
 - Conditional Operators
 - CSharp14
 - CSharpFeatures
@@ -25,7 +24,6 @@ tags:
 - Null Conditional Assignment
 - NullConditional
 - Safer Coding
-- Videos
 - VS
 section_names:
 - coding

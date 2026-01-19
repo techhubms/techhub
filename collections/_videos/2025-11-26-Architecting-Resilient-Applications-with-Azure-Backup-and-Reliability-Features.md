@@ -12,7 +12,6 @@ tags:
 - AKS
 - Application Protection
 - Architect Resilient Apps With Azure Backup And Reliability Features | BRK148
-- Azure
 - Azure Backup
 - BRK148
 - Containers
@@ -30,9 +29,7 @@ tags:
 - Msft Ignite
 - Ransomware Protection
 - Reliability
-- Security
 - Threat Detection
-- Videos
 - Virtual Machines
 - Workload Coverage
 - Zonal Resiliency

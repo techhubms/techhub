@@ -10,17 +10,14 @@ date: 2025-12-04 01:05:19 +00:00
 permalink: /ai/videos/AI-Dev-Days-Building-AI-Applications-with-Azure-and-GitHub
 tags:
 - Agentic DevOps
-- AI
 - AI Applications
 - AI Models
 - Automation
-- Azure
 - Azure SRE Agent
 - Demo
 - Developer
 - Developer Community
 - Developer Tools
-- DevOps
 - GitHub
 - GitHub Universe
 - GPT
@@ -34,7 +31,6 @@ tags:
 - Python
 - Software Engineering
 - Softwaredevelopers
-- Videos
 section_names:
 - ai
 - azure

@@ -9,13 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-25 21:12:24 +00:00
 permalink: /ai/community/Securing-Azure-OpenAI-Access-from-On-Premises-with-Application-Gateway-A-Customer-Success-Story
 tags:
-- AI
 - Application Gateway
-- Azure
 - Azure Networking
 - Azure OpenAI
 - Cloud Governance
-- Community
 - Enterprise Security
 - Generative AI
 - IP Firewall
@@ -24,7 +21,6 @@ tags:
 - On Premises Integration
 - Public IP
 - Reverse Proxy
-- Security
 - SSL Certificate
 - SSL Termination
 - Virtual Network

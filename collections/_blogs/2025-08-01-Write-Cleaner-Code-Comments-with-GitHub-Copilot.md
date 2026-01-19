@@ -10,20 +10,16 @@ date: 2025-08-01 00:00:00 +00:00
 permalink: /github-copilot/blogs/Write-Cleaner-Code-Comments-with-GitHub-Copilot
 tags:
 - Agent Mode
-- AI
 - AI Assisted Development
-- Blogs
 - Code Comments
 - Code Readability
 - Code Review
-- Coding
 - Coding Best Practices
 - Copilot Chat
 - Developer Productivity
 - Docstrings
 - Documentation
 - Edit Mode
-- GitHub Copilot
 - Inline Comments
 section_names:
 - ai

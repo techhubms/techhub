@@ -9,21 +9,16 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-25 09:00:00 +00:00
 permalink: /ai/news/Innovations-in-Fabric-Data-Factory-Orchestration-Announced-at-Fabric-Conference-Europe-2025
 tags:
-- AI
 - AI Assistant
 - Airflow
-- Azure
 - CI/CD
 - Copilot
 - Copy Job Activity
 - Data Integration
 - Data Pipelines
-- DevOps
 - Fabric Data Factory
 - Metadata Driven Pipelines
 - Microsoft Fabric
-- ML
-- News
 - Notebook Integration
 - Orchestration
 - Pipeline Expression Editor

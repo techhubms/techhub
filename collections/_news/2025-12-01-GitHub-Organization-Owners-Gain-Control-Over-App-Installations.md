@@ -11,18 +11,15 @@ permalink: /devops/news/GitHub-Organization-Owners-Gain-Control-Over-App-Install
 tags:
 - Access Control
 - Compliance
-- DevOps
 - Enterprise Management
 - Enterprise Management Tools
 - GitHub
 - GitHub Apps
 - Governance
 - Improvement
-- News
 - Organization Administration
 - Permission Management
 - Repository Admin
-- Security
 - Settings Management
 section_names:
 - devops

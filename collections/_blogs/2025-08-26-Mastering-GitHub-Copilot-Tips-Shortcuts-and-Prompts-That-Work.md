@@ -9,17 +9,13 @@ feed_url: https://dellenny.com/feed/
 date: 2025-08-26 14:32:26 +00:00
 permalink: /github-copilot/blogs/Mastering-GitHub-Copilot-Tips-Shortcuts-and-Prompts-That-Work
 tags:
-- AI
 - AI Assistant
 - AI Code Generation
 - Architecture
 - Best Practices
-- Blogs
 - Code Autocomplete
-- Coding
 - Coding Productivity
 - Documentation
-- GitHub Copilot
 - JetBrains
 - Neovim
 - Prompt Engineering

@@ -17,13 +17,11 @@ tags:
 - Blazor
 - C#
 - Cloud Native
-- Coding
 - Minimal APIs
 - OpenAPI
 - Passkey Authentication
 - Performance Improvements
 - Validation
-- Videos
 - Web Application Development
 section_names:
 - coding

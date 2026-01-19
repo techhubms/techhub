@@ -11,7 +11,6 @@ permalink: /security/blogs/Practical-Data-Protection-in-Microsoft-365-Sensitivit
 tags:
 - Access Control
 - Azure Active Directory
-- Blogs
 - Compliance Center
 - Conditional Access
 - Data Loss Prevention
@@ -22,7 +21,6 @@ tags:
 - Microsoft 365
 - Multi Factor Authentication
 - Office 365 Security
-- Security
 - Security Policy
 - Sensitivity Labels
 - Small Business IT

@@ -10,11 +10,9 @@ date: 2025-11-25 16:03:02 +00:00
 permalink: /github-copilot/news/Microsoft-Expands-AI-and-Cloud-Services-in-Indonesia-Central-Region
 tags:
 - Agentic AI
-- AI
 - AI Infrastructure
 - AI Powered Solutions
 - AI Skilling
-- Azure
 - Azure App Services
 - Azure Central Region
 - Azure Databases
@@ -26,14 +24,11 @@ tags:
 - Data Science
 - Developer Enablement
 - Frontier Firms
-- GitHub Copilot
 - Indonesia
 - Microsoft Azure
 - Microsoft Elevate
 - Microsoft Fabric
-- ML
 - NCads H100 V5
-- News
 - NVadsA10 V5
 section_names:
 - ai

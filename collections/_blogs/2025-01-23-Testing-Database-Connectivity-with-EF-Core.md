@@ -11,15 +11,12 @@ permalink: /coding/blogs/Testing-Database-Connectivity-with-EF-Core
 tags:
 - .NET
 - ASP.NET Core
-- Blogs
 - C#
-- Coding
 - Connectivity
 - Container Orchestration
 - Database
 - Database Connectivity
 - DbContext
-- DevOps
 - EF Core
 - Health Checks
 - Kubernetes

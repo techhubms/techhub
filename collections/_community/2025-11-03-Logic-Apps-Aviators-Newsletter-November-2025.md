@@ -10,19 +10,14 @@ date: 2025-11-03 16:00:00 +00:00
 permalink: /ai/community/Logic-Apps-Aviators-Newsletter-November-2025
 tags:
 - Agent Loop
-- AI
 - API Management
 - Automation
-- Azure
 - Azure AI Search
 - Azure API Center
 - Azure Functions
 - Bicep
 - CI/CD
-- Coding
-- Community
 - Decision Automation
-- DevOps
 - Enterprise Integration
 - Entra ID
 - Event Driven Architecture
@@ -39,7 +34,6 @@ tags:
 - RabbitMQ
 - RAG
 - Rules Engine
-- Security
 - Service Bus
 - VS Code
 - Webhook Authentication

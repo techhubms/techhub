@@ -10,10 +10,8 @@ date: 2025-11-20 14:36:50 +00:00
 permalink: /ai/videos/Defending-Cloud-Platforms-Unified-Security-with-Microsoft-Defender
 tags:
 - Adversary Detection
-- AI
 - AI Threats
 - Attack Prevention
-- Azure
 - Azure Security Center
 - Cloud Security
 - Cloud Workload Protection
@@ -26,10 +24,8 @@ tags:
 - Multi Cloud Security
 - ProtectcloudAIplatformandapps
 - Risk Prioritization
-- Security
 - Security Automation
 - Security Posture Management
-- Videos
 section_names:
 - ai
 - azure

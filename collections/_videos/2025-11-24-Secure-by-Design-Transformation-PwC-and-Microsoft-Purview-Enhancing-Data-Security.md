@@ -24,9 +24,7 @@ tags:
 - MSIgnite
 - PwC
 - Secure By Design
-- Security
 - Security Gaps
-- Videos
 section_names:
 - security
 ---

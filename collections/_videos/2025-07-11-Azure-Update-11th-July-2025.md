@@ -10,10 +10,8 @@ date: 2025-07-11 13:43:48 +00:00
 permalink: /ai/videos/Azure-Update-11th-July-2025
 tags:
 - AFS
-- AI
 - AVNM
 - AWS S3 Migration
-- Azure
 - Azure Automation
 - Azure Blob Storage
 - Azure Cloud
@@ -24,7 +22,6 @@ tags:
 - Cloud Updates
 - Codex Mini
 - Customer Controlled Maintenance
-- DevOps
 - Granular RBAC
 - High Scale PE
 - Microsoft
@@ -34,7 +31,6 @@ tags:
 - PowerShell 7.4
 - Python 3.10
 - Trusted Launch
-- Videos
 - VMSS
 section_names:
 - ai

@@ -11,16 +11,11 @@ permalink: /ai/community/Build-Your-First-AI-Agent-with-Azure-App-Service
 tags:
 - .NET
 - Agentic Applications
-- AI
 - AI Agent
-- Azure
 - Azure AI Foundry
 - Azure App Service
 - Azure OpenAI
 - Codespaces
-- Coding
-- Community
-- DevOps
 - GitHub Actions
 - Java
 - LangGraph

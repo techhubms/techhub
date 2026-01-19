@@ -10,14 +10,12 @@ date: 2025-05-22 15:04:21 +00:00
 permalink: /coding/news/Announcing-TypeScript-Native-Previews-A-Faster-Native-Compiler-and-Toolset
 tags:
 - API
-- Coding
 - Go
 - JavaScript Type Checking
 - JSX
 - Language Server
 - LSP
 - Native Compiler
-- News
 - Node.js
 - Open Source
 - Performance

@@ -10,7 +10,6 @@ date: 2025-10-29 11:00:00 +00:00
 permalink: /ml/news/Simplifying-Data-Ingestion-with-Copy-Job-Enhanced-File-Format-Support-in-Microsoft-Fabric-Data-Factory
 tags:
 - Avro
-- Azure
 - Bulk Copy
 - Cloud Data
 - Copy Job
@@ -25,8 +24,6 @@ tags:
 - Incremental Copy
 - Integration
 - Microsoft Fabric
-- ML
-- News
 - ORC
 - XML
 section_names:

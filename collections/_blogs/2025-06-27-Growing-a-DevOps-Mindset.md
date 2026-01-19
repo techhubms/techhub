@@ -10,10 +10,8 @@ date: 2025-06-27 07:05:44 +00:00
 permalink: /devops/blogs/Growing-a-DevOps-Mindset
 tags:
 - ADKAR
-- Blogs
 - Collaboration
 - Continuous Improvement
-- DevOps
 - Engineering Culture
 - Fixed Mindset
 - Growth Mindset

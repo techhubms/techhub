@@ -10,17 +10,13 @@ date: 2025-11-18 23:47:06 +00:00
 permalink: /ai/community/Agent-Loop-New-AI-Features-in-Logic-Apps-Standard-and-Public-Preview-Announced-at-Ignite
 tags:
 - Agent Loop
-- AI
 - AI Automation
 - AI Gateway
-- Azure
 - Azure AI Search
 - Azure API Management
 - Azure Logic Apps
 - BYOM
-- Community
 - Connector Ecosystem
-- DevOps
 - Document Level Security
 - Identity And Access Management
 - MCP
@@ -28,7 +24,6 @@ tags:
 - Microsoft Teams Integration
 - Okta Integration
 - RAG
-- Security
 - Serverless
 - Workflow Designer
 section_names:

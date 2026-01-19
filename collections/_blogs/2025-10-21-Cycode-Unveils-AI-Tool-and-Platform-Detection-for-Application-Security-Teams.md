@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-10-21 21:31:46 +00:00
 permalink: /ai/blogs/Cycode-Unveils-AI-Tool-and-Platform-Detection-for-Application-Security-Teams
 tags:
-- AI
 - AI Bill Of Materials
 - AI Code Generation
 - AI Coding Assistants
@@ -17,18 +16,13 @@ tags:
 - AIBOM
 - Application Security
 - ASPM
-- Blogs
 - Cycode
-- DevOps
 - DevSecOps
 - LLM
-- Machine Learning
 - MCP
-- ML
 - Policy Enforcement
 - Risk Intelligence Graph
 - SBoM
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

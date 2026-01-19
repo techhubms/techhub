@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-15 10:00:00 +00:00
 permalink: /azure/news/Customer-Managed-Keys-for-Microsoft-Fabric-Workspaces-Now-Generally-Available
 tags:
-- Azure
 - Azure Key Vault
 - CMK
 - Compliance
@@ -21,8 +20,6 @@ tags:
 - Governance
 - Managed HSM
 - Microsoft Fabric
-- News
-- Security
 - SQL Analytics Endpoint
 - TLS 1.2
 - Workspace Administration

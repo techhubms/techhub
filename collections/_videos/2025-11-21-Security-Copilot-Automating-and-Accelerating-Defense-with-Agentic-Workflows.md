@@ -11,7 +11,6 @@ permalink: /ai/videos/Security-Copilot-Automating-and-Accelerating-Defense-with-
 tags:
 - Agent Orchestration
 - Agentic Workflows
-- AI
 - Device Security
 - Identity Security
 - Interactive Queries
@@ -22,13 +21,11 @@ tags:
 - MSIgnite
 - Partner Solutions
 - Phishing Triage
-- Security
 - Security Agents
 - Security Automation
 - Security Copilot
 - Security Marketplace
 - Trust Metrics
-- Videos
 section_names:
 - ai
 - security

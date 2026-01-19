@@ -9,10 +9,8 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-01 08:00:00 +00:00
 permalink: /ai/news/AI-Powered-Data-Transformation-and-Insights-with-Copilot-in-Fabric-Data-Factory
 tags:
-- AI
 - AI Assistant
 - Automation
-- Azure
 - Azure Data
 - Cloud Data Integration
 - Copilot
@@ -23,7 +21,6 @@ tags:
 - Mashup
 - Microsoft Fabric
 - Natural Language
-- News
 - Pipeline Orchestration
 - Power Query
 - Productivity Tools

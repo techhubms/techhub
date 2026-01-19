@@ -9,12 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-08-29 19:51:24 +00:00
 permalink: /github-copilot/videos/Introducing-Spec-Kit-for-Spec-Driven-Development-in-VS-Code
 tags:
-- AI
 - AI Tools
 - Automation
 - Code
 - Code Generation
-- Coding
 - Copilot
 - Demo
 - Developer
@@ -22,7 +20,6 @@ tags:
 - Developer Tools
 - Executable Specifications
 - GitHub
-- GitHub Copilot
 - Live Coding
 - Microsoft
 - Open Source
@@ -33,7 +30,6 @@ tags:
 - Specdrivendevelopement
 - Specification Driven
 - Speckit
-- Videos
 - VS Code
 section_names:
 - ai

@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-20 12:00:00 +00:00
 permalink: /ml/news/Capacity-Usage-Now-Enabled-for-Test-Capability-in-Fabric-User-Data-Functions
 tags:
-- Azure
 - Capacity Metrics
 - Data Architecture
 - Data Engineering
@@ -18,8 +17,6 @@ tags:
 - Fabric User Data Functions
 - General Availability
 - Microsoft Fabric
-- ML
-- News
 - Power BI Integration
 - Python Functions
 - Service Limits

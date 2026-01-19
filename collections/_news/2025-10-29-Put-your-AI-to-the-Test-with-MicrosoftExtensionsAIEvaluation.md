@@ -10,24 +10,19 @@ date: 2025-10-29 17:00:39 +00:00
 permalink: /ai/news/Put-your-AI-to-the-Test-with-MicrosoftExtensionsAIEvaluation
 tags:
 - .NET
-- AI
 - AI Evaluation
-- Azure
 - Azure Blob Storage
 - Azure DevOps
 - Azure OpenAI
 - CI/CD
-- Coding
 - Content Safety
 - Custom Evaluators
-- DevOps
 - Evaluations
 - LLM
 - Meai
 - Microsoft.Extensions.AI.Evaluation
 - MSTest
 - Natural Language Processing
-- News
 - NuGet
 - NUnit
 - Quality Metrics

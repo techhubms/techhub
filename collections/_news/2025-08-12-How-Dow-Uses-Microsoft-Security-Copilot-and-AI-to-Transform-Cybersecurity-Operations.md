@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-12 16:31:43 +00:00
 permalink: /ai/news/How-Dow-Uses-Microsoft-Security-Copilot-and-AI-to-Transform-Cybersecurity-Operations
 tags:
-- AI
 - AI in Security
 - Alert Prioritization
 - Apprenticeship
@@ -24,9 +23,7 @@ tags:
 - Machine Learning
 - Microsoft
 - Microsoft Security Copilot
-- News
 - Responsible AI
-- Security
 - Security Governance
 - Security Operations Center
 - Threat Hunting

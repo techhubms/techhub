@@ -9,12 +9,10 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-16 18:00:02 +00:00
 permalink: /ai/news/Announcing-the-General-Availability-of-Azure-Kubernetes-Service-AKS-Automatic
 tags:
-- AI
 - AKS
 - AKS Automatic
 - Automation
 - Autoscaling
-- Azure
 - Azure Linux
 - Azure Monitor
 - CI/CD
@@ -23,14 +21,12 @@ tags:
 - Company News
 - Container Orchestration
 - Developer Tools
-- DevOps
 - Enterprise IT
 - GitHub Actions
 - Karpenter
 - KEDA
 - Kubernetes
 - Microsoft Entra ID
-- News
 - Production Clusters
 - Scale
 - Technology

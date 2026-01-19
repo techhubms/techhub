@@ -9,9 +9,7 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-09 17:05:53 +00:00
 permalink: /ai/news/MOSAIC-A-Wide-and-Slow-MicroLED-Network-Architecture-for-Next-Gen-AI-Infrastructure
 tags:
-- AI
 - AI Infrastructure
-- Azure
 - Company News
 - Datacenter Networking
 - Energy Efficiency
@@ -21,7 +19,6 @@ tags:
 - Microsoft Research
 - MOSAIC
 - Network Bottleneck
-- News
 - Optical Interconnect
 - Optical Transmission
 - Parallel Low Speed Channels

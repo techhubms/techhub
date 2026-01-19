@@ -9,24 +9,19 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-01 17:00:00 +00:00
 permalink: /ai/news/Fabric-CLI-Goes-Open-Source-with-AI-Ready-Features-in-v110
 tags:
-- AI
 - AI Assisted Development
 - Automation
-- Azure
 - CI/CD
 - CLI Tools
-- Coding
 - Command Line Interface
 - Community Contributions
 - Deployment
 - Developer Tools
-- DevOps
 - Extensions
 - Fabric CLI
 - Interactive Scripting
 - JSON Output
 - Microsoft Fabric
-- News
 - Open Source
 - VS Code Integration
 - Workspace Automation

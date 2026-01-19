@@ -10,12 +10,10 @@ date: 2025-10-01 09:23:26 +00:00
 permalink: /devops/blogs/Shai-Hulud-Supply-Chain-Worm-Sheds-Light-on-DevOps-Security-Risks
 tags:
 - Artifact Provenance
-- Blogs
 - Business Of DevOps
 - CI/CD Security
 - Continuous Verification
 - Credential Theft
-- DevOps
 - DevOps Security
 - DevSecOps
 - GitHub Actions
@@ -25,7 +23,6 @@ tags:
 - Pipeline Security
 - SBoM
 - Secure Software Delivery
-- Security
 - Shai Hulud
 - Shai Hulud Worm
 - Short Lived Tokens

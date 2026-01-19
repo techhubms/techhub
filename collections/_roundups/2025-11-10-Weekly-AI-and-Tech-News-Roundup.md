@@ -7,22 +7,13 @@ date: 2025-11-10 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
-- AI
 - AI Agents
-- Azure
 - CI/CD
 - Cloud Native
-- Coding
 - Containerization
-- DevOps
 - Enterprise AI
-- GitHub Copilot
 - Kubernetes
-- Machine Learning
 - Microsoft Fabric
-- ML
-- Roundups
-- Security
 - TypeScript
 - Workflow Automation
 section_names:

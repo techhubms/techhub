@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-01 16:31:47 +00:00
 permalink: /github-copilot/videos/The-Download-GitHub-Copilot-Overtakes-ChatGPT-as-Top-Developer-AI-Tool
 tags:
-- AI
 - AI News
 - AI Security
 - AI Tools
@@ -18,7 +17,6 @@ tags:
 - Developer Tools
 - Generative AI
 - GitHub
-- GitHub Copilot
 - Google AI
 - Hackathon
 - Netflix
@@ -26,7 +24,6 @@ tags:
 - Podcast
 - Software Development
 - TheDownload
-- Videos
 section_names:
 - ai
 - github-copilot

@@ -10,10 +10,8 @@ date: 2025-11-11 17:38:14 +00:00
 permalink: /azure/community/Generational-Performance-Leap-for-Azure-Confidential-Computing-VMs
 tags:
 - AMD EPYC
-- Azure
 - Azure Confidential Computing
 - Cloud Security
-- Community
 - Compliance
 - Confidential VMs
 - CPU Throughput
@@ -24,7 +22,6 @@ tags:
 - Performance Benchmark
 - Prowess Consulting
 - Redis
-- Security
 - SEV SNP
 - Virtual Machines
 section_names:

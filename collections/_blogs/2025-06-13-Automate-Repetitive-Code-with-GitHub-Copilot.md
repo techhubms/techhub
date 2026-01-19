@@ -9,17 +9,13 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-06-13 00:00:00 +00:00
 permalink: /github-copilot/blogs/Automate-Repetitive-Code-with-GitHub-Copilot
 tags:
-- AI
 - AI Powered Coding
 - API Calls
-- Blogs
 - Boilerplate Reduction
 - C#
 - Code Generation
-- Coding
 - Coding Assistant
 - Developer Productivity
-- GitHub Copilot
 - JavaScript
 - Natural Language Comments
 - Pattern Recognition

@@ -11,11 +11,9 @@ permalink: /devops/blogs/Security-Risks-of-Malicious-VS-Code-Extensions-Targetin
 tags:
 - AI
 - AI Coding Assistant
-- Blogs
 - CI/CD
 - Crates.io
 - Crates.io Security
-- DevOps
 - DevSecOps
 - DLL Hijacking
 - GitHub
@@ -26,7 +24,6 @@ tags:
 - Malicious Extensions
 - npm Registry
 - OpenAI
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

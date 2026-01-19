@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-30 13:00:00 +00:00
 permalink: /ml/news/Secure-Data-Movement-in-Microsoft-Fabric-with-Copy-Job-and-VNET-Data-Gateway
 tags:
-- Azure
 - Compliance
 - Copy Job
 - Data Integration
@@ -19,12 +18,9 @@ tags:
 - Enterprise Data
 - ExpressRoute
 - Microsoft Fabric
-- ML
 - Network Architecture
-- News
 - Operational Simplicity
 - Private Network
-- Security
 - Virtual Network Data Gateway
 - VNET
 section_names:

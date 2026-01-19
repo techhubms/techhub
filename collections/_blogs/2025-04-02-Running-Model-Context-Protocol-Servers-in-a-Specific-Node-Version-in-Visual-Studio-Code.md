@@ -9,14 +9,9 @@ feed_url: https://jessehouwing.net/rss/
 date: 2025-04-02 17:56:59 +00:00
 permalink: /github-copilot/blogs/Running-Model-Context-Protocol-Servers-in-a-Specific-Node-Version-in-Visual-Studio-Code
 tags:
-- AI
 - Azure Pipelines
-- Blogs
-- Coding
-- DevOps
 - Fast Node Manager
 - GitHub
-- GitHub Copilot
 - MCP
 - MCP Server
 - Node Version Management

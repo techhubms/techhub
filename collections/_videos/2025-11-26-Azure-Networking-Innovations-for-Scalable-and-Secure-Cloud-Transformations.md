@@ -10,7 +10,6 @@ date: 2025-11-26 00:46:43 +00:00
 permalink: /azure/videos/Azure-Networking-Innovations-for-Scalable-and-Secure-Cloud-Transformations
 tags:
 - Application Delivery
-- Azure
 - Azure Networking
 - Azure Security
 - Cloud Architecture
@@ -25,8 +24,6 @@ tags:
 - Networking Foundations
 - Resilient Infrastructure
 - Scalable Networking
-- Security
-- Videos
 section_names:
 - azure
 - security

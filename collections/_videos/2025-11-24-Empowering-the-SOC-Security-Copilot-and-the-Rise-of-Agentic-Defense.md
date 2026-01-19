@@ -10,7 +10,6 @@ date: 2025-11-24 13:50:45 +00:00
 permalink: /ai/videos/Empowering-the-SOC-Security-Copilot-and-the-Rise-of-Agentic-Defense
 tags:
 - Agentic AI
-- AI
 - AI Automation
 - Azure Security
 - Copilot Investigation
@@ -22,13 +21,11 @@ tags:
 - MSIgnite
 - Phishing Triage Agent
 - SCU Pricing
-- Security
 - Security Copilot
 - Security Operations
 - SOC
 - SOC Lifecycle
 - Threat Intelligence
-- Videos
 section_names:
 - ai
 - security

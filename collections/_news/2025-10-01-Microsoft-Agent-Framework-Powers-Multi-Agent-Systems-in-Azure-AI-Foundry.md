@@ -10,11 +10,9 @@ date: 2025-10-01 17:35:44 +00:00
 permalink: /ai/news/Microsoft-Agent-Framework-Powers-Multi-Agent-Systems-in-Azure-AI-Foundry
 tags:
 - Agent Framework
-- AI
 - AI Economics
 - AI Orchestration
 - AutoGen
-- Azure
 - Azure AI Foundry
 - Azure Integration
 - Company News
@@ -23,7 +21,6 @@ tags:
 - LinkedIn Post
 - Microsoft Agent Framework
 - Multi Agent Systems
-- News
 - Observability
 - Scalable AI
 - Semantic Kernel

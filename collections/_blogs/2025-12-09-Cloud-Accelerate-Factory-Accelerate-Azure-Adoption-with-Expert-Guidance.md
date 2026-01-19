@@ -9,20 +9,17 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-12-09 08:44:07 +00:00
 permalink: /azure/blogs/Cloud-Accelerate-Factory-Accelerate-Azure-Adoption-with-Expert-Guidance
 tags:
-- Azure
 - Azure Deployment
 - Azure Essentials
 - Azure Essentials Show
 - Azure Migration
 - Azure Modernization
-- Blogs
 - Cloud
 - Cloud Accelerate Factory
 - Cloud Adoption
 - Cloud Migration
 - Cloud Security
 - Cloud Transformation
-- DevOps
 - Digital Transformation
 - Infrastructure Modernization
 - Microsoft

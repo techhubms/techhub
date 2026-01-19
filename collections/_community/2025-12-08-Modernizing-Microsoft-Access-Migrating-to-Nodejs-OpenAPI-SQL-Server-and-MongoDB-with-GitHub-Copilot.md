@@ -10,16 +10,10 @@ date: 2025-12-08 19:59:25 +00:00
 permalink: /github-copilot/community/Modernizing-Microsoft-Access-Migrating-to-Nodejs-OpenAPI-SQL-Server-and-MongoDB-with-GitHub-Copilot
 tags:
 - Accessibility
-- AI
 - API First
-- Azure
 - Business Logic Migration
-- Coding
-- Community
 - Constraint Refactoring
 - Database Modernization
-- DevOps
-- GitHub Copilot
 - Liquibase
 - Microsoft Access
 - MongoDB

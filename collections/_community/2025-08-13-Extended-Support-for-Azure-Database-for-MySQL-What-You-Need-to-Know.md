@@ -10,12 +10,10 @@ date: 2025-08-13 15:15:15 +00:00
 permalink: /azure/community/Extended-Support-for-Azure-Database-for-MySQL-What-You-Need-to-Know
 tags:
 - ARM Templates
-- Azure
 - Azure CLI
 - Azure Database For MySQL
 - Azure Flexible Server
 - Cloud Database
-- Community
 - Community End Of Life
 - Database Migration
 - Enterprise SLA

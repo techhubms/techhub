@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-27 14:00:09 +00:00
 permalink: /ai/videos/AI-Project-Based-Learning-and-the-Future-of-Tech-Careers
 tags:
-- AI
 - Automation
 - Developer Skills
 - Future Of Work
@@ -19,7 +18,6 @@ tags:
 - Project Based Learning
 - Software Development
 - Technology Careers
-- Videos
 section_names:
 - ai
 ---

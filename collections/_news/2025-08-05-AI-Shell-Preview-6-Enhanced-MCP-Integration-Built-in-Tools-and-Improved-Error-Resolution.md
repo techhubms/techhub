@@ -9,17 +9,14 @@ feed_url: https://devblogs.microsoft.com/powershell/feed/
 date: 2025-08-05 18:40:38 +00:00
 permalink: /ai/news/AI-Shell-Preview-6-Enhanced-MCP-Integration-Built-in-Tools-and-Improved-Error-Resolution
 tags:
-- AI
 - AI Agent
 - AI Shell
 - Automation
 - Azure OpenAI
-- Coding
 - Command Line
 - Copilot in Azure
 - Error Handling
 - MCP
-- News
 - OpenAI
 - PowerShell
 - Resolve Error

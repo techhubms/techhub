@@ -10,10 +10,8 @@ date: 2025-05-08 07:00:00 +00:00
 permalink: /ai/blogs/Understanding-the-Model-Context-Protocol-MCP
 tags:
 - Agentic AI
-- AI
 - AI Integration
 - API Integrations
-- Blogs
 - JSON RPC
 - Knowledge Graph Management
 - MCP

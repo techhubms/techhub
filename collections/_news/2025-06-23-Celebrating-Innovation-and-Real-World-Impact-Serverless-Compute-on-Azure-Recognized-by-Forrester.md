@@ -9,9 +9,7 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-06-23 15:00:00 +00:00
 permalink: /ai/news/Celebrating-Innovation-and-Real-World-Impact-Serverless-Compute-on-Azure-Recognized-by-Forrester
 tags:
-- AI
 - AI Integration
-- Azure
 - Azure AI Foundry
 - Azure Container Apps
 - Azure Functions
@@ -20,14 +18,12 @@ tags:
 - Containers
 - Customer Stories
 - Developer Experience
-- DevOps
 - Enterprise Security
 - Event Driven Architecture
 - Forrester
 - Forrester Wave
 - GPU Serverless
 - Internet Of Things
-- News
 - Real World Impact
 - Scalability
 - Serverless

@@ -12,8 +12,6 @@ tags:
 - .NET
 - .NET 8
 - Code Based Transformation
-- Coding
-- Community
 - Oxygen
 - Schema Evolution
 - Test Maintainability

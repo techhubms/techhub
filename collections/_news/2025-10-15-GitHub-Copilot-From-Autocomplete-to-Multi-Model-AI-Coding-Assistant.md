@@ -9,15 +9,12 @@ feed_url: https://github.blog/feed/
 date: 2025-10-15 15:00:00 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-From-Autocomplete-to-Multi-Model-AI-Coding-Assistant
 tags:
-- AI
 - AI & ML
 - AI Coding Assistant
 - Code Review Automation
-- Coding
 - Copilot Agent Mode
 - Copilot CLI
 - Developer Productivity
-- GitHub Copilot
 - GitHub Copilot CLI
 - IDE Integration
 - JetBrains
@@ -25,7 +22,6 @@ tags:
 - MCP
 - MCP Server
 - Multi Model AI
-- News
 - Pull Request Automation
 - VS Code
 section_names:

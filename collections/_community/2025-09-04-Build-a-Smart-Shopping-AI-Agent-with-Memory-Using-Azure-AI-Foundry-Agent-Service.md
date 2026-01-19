@@ -10,13 +10,9 @@ date: 2025-09-04 07:00:00 +00:00
 permalink: /ai/community/Build-a-Smart-Shopping-AI-Agent-with-Memory-Using-Azure-AI-Foundry-Agent-Service
 tags:
 - Agent Development
-- AI
 - AI Agents
 - API Integration
-- Azure
 - Azure AI Foundry
-- Coding
-- Community
 - FunctionTool
 - GPT 4o
 - Memori

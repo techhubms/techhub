@@ -10,10 +10,8 @@ date: 2025-10-06 20:20:36 +00:00
 permalink: /ai/news/Azure-AI-Foundry-Launches-Multimodal-AI-Models-for-Developers
 tags:
 - Agentic AI
-- AI
 - Audio Generation
 - AutoGen
-- Azure
 - Azure AI Foundry
 - Cloud AI
 - Company News
@@ -24,7 +22,6 @@ tags:
 - Microsoft
 - Microsoft Agent Framework
 - Multimodal AI
-- News
 - OpenAI
 - Responsible AI
 - Semantic Kernel

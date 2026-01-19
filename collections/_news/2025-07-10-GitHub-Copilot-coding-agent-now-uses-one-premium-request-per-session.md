@@ -9,13 +9,10 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-10 18:23:43 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-coding-agent-now-uses-one-premium-request-per-session
 tags:
-- AI
 - Automation
 - Bug Fixing
 - Developer Productivity
 - Feature Implementation
-- GitHub Copilot
-- News
 - Tech Debt
 section_names:
 - ai

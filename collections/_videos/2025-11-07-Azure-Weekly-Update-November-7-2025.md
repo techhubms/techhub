@@ -10,15 +10,12 @@ date: 2025-11-07 15:51:24 +00:00
 permalink: /coding/videos/Azure-Weekly-Update-November-7-2025
 tags:
 - ANF
-- Azure
 - Azure Cloud
 - Azure Storage
 - Azure Updates
 - Cloud
 - Cloud Computing
-- Coding
 - Cosmos DB
-- DevOps
 - DocumentDB
 - ExpressRoute
 - Failover
@@ -32,7 +29,6 @@ tags:
 - REST API
 - SQL Database
 - SSMS
-- Videos
 - Virtual Machines
 section_names:
 - azure

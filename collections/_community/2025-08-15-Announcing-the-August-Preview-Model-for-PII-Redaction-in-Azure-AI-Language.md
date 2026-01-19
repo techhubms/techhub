@@ -9,13 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-15 07:34:14 +00:00
 permalink: /ai/community/Announcing-the-August-Preview-Model-for-PII-Redaction-in-Azure-AI-Language
 tags:
-- AI
 - AI Model Update
-- Azure
 - Azure AI Foundry
 - Azure AI Language
 - Azure Cognitive Services
-- Community
 - Data Privacy
 - Entity Recognition
 - Financial Data

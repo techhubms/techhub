@@ -10,27 +10,21 @@ date: 2025-11-14 11:40:23 +00:00
 permalink: /github-copilot/news/Tutorial-Videos-Setting-up-GitHub-Copilot-for-Your-Company
 tags:
 - Agentic Platform
-- AI
 - All Things Azure
-- Azure
 - Azure Subscription
 - Code Review
 - Configuration
 - Developer Productivity
 - Developer Tools
-- DevOps
 - GitHub
-- GitHub Copilot
 - GitHub Enterprise
 - GitHub Licences
 - IDE Integration
 - Licensing
 - Microsoft Entra ID
-- News
 - Operations
 - Organization Onboarding
 - Permissions
-- Security
 - Setup Guide
 - Single Sign On
 - SSO

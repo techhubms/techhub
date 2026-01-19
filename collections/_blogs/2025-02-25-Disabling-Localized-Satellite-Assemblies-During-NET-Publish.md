@@ -10,8 +10,6 @@ date: 2025-02-25 09:00:00 +00:00
 permalink: /coding/blogs/Disabling-Localized-Satellite-Assemblies-During-NET-Publish
 tags:
 - .NET
-- Blogs
-- Coding
 - Configuration
 - Globalization
 - Hosting

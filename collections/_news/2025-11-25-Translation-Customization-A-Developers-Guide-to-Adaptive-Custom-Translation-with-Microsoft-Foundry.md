@@ -10,13 +10,10 @@ date: 2025-11-25 16:00:37 +00:00
 permalink: /ai/news/Translation-Customization-A-Developers-Guide-to-Adaptive-Custom-Translation-with-Microsoft-Foundry
 tags:
 - Adaptive Custom Translation
-- AI
 - AI Development
 - AI Tools
 - API Integration
-- Azure
 - Azure AI Translator
-- Coding
 - Custom Translator
 - Developer Guide
 - Domain Specific Translation
@@ -29,7 +26,6 @@ tags:
 - Microsoft Foundry
 - Model Customization
 - MSIgnite
-- News
 - Text Translation
 - TMX
 - Translation API

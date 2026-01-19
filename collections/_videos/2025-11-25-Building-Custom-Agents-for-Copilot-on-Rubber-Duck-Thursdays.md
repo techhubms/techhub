@@ -10,17 +10,14 @@ date: 2025-11-25 08:44:19 +00:00
 permalink: /github-copilot/videos/Building-Custom-Agents-for-Copilot-on-Rubber-Duck-Thursdays
 tags:
 - Agent Design
-- AI
 - AI Development
 - Copilot Customization
 - Custom Agents
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Live Coding
 - Programming Stream
 - Software Engineering
-- Videos
 section_names:
 - ai
 - github-copilot

@@ -9,7 +9,6 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-07-18 16:00:00 +00:00
 permalink: /ai/news/Microsoft-at-Black-Hat-USA-2025-A-Unified-Approach-to-Modern-Cyber-Defense
 tags:
-- AI
 - AI First Security
 - Black Hat USA
 - Cyber Defense
@@ -17,8 +16,6 @@ tags:
 - End To End Security
 - Microsoft Security
 - Modern Cyber Threats
-- News
-- Security
 - Security Event
 - Security Platform
 - Threat Intelligence

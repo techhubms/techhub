@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-06 17:31:54 +00:00
 permalink: /github-copilot/news/Copilot-code-review-copilot-instructionmd-support-is-now-generally-available
 tags:
-- AI
 - AI Assisted Code Review
 - Code Review Automation
 - Copilot Code Review
@@ -17,9 +16,7 @@ tags:
 - Developer Tools
 - General Availability
 - GitHub
-- GitHub Copilot
 - Natural Language Instructions
-- News
 - Workflow Customization
 section_names:
 - ai

@@ -12,7 +12,6 @@ tags:
 - .NET
 - Astro
 - C#
-- Coding
 - F#
 - Frontend Components
 - Functional Programming
@@ -20,7 +19,6 @@ tags:
 - Programming Concepts
 - Programming Languages
 - Software Development
-- Videos
 section_names:
 - coding
 ---

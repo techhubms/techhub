@@ -13,8 +13,6 @@ tags:
 - AJAX
 - ASP.NET MVC
 - Client Side Validation
-- Coding
-- Community
 - Double Requests
 - Form Submission
 - JavaScript

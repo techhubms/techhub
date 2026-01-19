@@ -10,7 +10,6 @@ date: 2025-12-09 14:22:51 +00:00
 permalink: /ml/news/Microsoft-Fabric-Extensibility-Toolkit-Streamlining-Workload-Publishing-for-Partners
 tags:
 - Attestation Template
-- Azure
 - Compliance Guidelines
 - Component Standards
 - Documentation
@@ -20,8 +19,6 @@ tags:
 - Fabric Workload Hub
 - FET
 - Microsoft Fabric
-- ML
-- News
 - Partner Workloads
 - Private Preview
 - Publishing Criteria

@@ -9,15 +9,12 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-10 06:25:57 +00:00
 permalink: /github-copilot/news/New-Copilot-Chat-features-now-generally-available-on-GitHub
 tags:
-- AI
 - Copilot Chat
 - Feature Release
 - General Availability
-- GitHub Copilot
 - Instant Preview
 - Issue Management
 - Model Selection
-- News
 - Productivity Tools
 section_names:
 - ai

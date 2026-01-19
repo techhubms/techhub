@@ -11,19 +11,14 @@ permalink: /ai/community/Delivering-Scalable-Client-Side-Configuration-with-Azur
 tags:
 - A/B Testing
 - Agentic Applications
-- AI
 - AI Driven UI
 - AppConfig Provider
-- Azure
 - Azure App Configuration
 - Azure Front Door
 - CDN
 - Client Side Configuration
 - Cloud Architecture
-- Coding
-- Community
 - Configuration Management
-- DevOps
 - Dynamic Configuration
 - Edge Caching
 - Feature Flags

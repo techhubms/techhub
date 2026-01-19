@@ -11,7 +11,6 @@ permalink: /ai/videos/Building-Multi-Agent-AI-Systems-with-LangChain4j-and-Java
 tags:
 - Agent Orchestration
 - AgentOrchestration
-- AI
 - AI Agents
 - Audio Generation
 - Docker
@@ -32,7 +31,6 @@ tags:
 - SequenceBuilder
 - Text To Speech
 - TextToSpeech
-- Videos
 - Workflow Automation
 section_names:
 - ai

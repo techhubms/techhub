@@ -11,7 +11,6 @@ permalink: /coding/news/Azure-Developer-CLI-Build-Once-Deploy-Everywhere-from-De
 tags:
 - Automation
 - Azd
-- Azure
 - Azure & Cloud
 - Azure Developer CLI
 - Azure Developer CLI (azd)
@@ -19,13 +18,10 @@ tags:
 - Build Artifacts
 - CI/CD
 - Cloud Deployment
-- Coding
 - Conditional Deployment
-- DevOps
 - Environment Variables
 - GitHub Actions
 - IaC
-- News
 section_names:
 - azure
 - coding

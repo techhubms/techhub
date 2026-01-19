@@ -9,19 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-29 16:01:19 +00:00
 permalink: /github-copilot/videos/Upgrade-MSVC-with-GitHub-Copilot-App-Modernization-for-C
 tags:
-- AI
 - App Modernization
 - C++
 - Cloud Computing
 - Code Migration
-- Coding
 - Copilot
 - Copilot Agents
 - Dev
 - Developer Tools
 - Development
 - Error Resolution
-- GitHub Copilot
 - IDE
 - Microsoft
 - Microsoft C++ Build Tools
@@ -31,7 +28,6 @@ tags:
 - Source Code Upgrade
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - coding

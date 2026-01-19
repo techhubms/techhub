@@ -9,15 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt
 date: 2025-06-04 11:17:38 +00:00
 permalink: /ai/videos/Deploying-MCP-Server-to-Azure-and-Connecting-with-Semantic-Kernel-A-Step-by-Step-Tutorial
 tags:
-- AI
 - AI Development
 - AI Orchestration
 - AI Tools
-- Azure
 - Azure Deployment
 - Azure Services
 - Cloud Deployment
-- Coding
 - Intelligent Apps
 - MCP
 - MCP Server
@@ -27,7 +24,6 @@ tags:
 - Semantic Kernel
 - Step By Step Guide
 - Tutorial
-- Videos
 section_names:
 - ai
 - azure

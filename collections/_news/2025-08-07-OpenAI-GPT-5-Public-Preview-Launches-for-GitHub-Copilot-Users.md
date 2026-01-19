@@ -10,7 +10,6 @@ date: 2025-08-07 17:00:02 +00:00
 permalink: /github-copilot/news/OpenAI-GPT-5-Public-Preview-Launches-for-GitHub-Copilot-Users
 tags:
 - Agentic AI
-- AI
 - AI Collaboration
 - AI Models
 - AI Preview
@@ -19,11 +18,9 @@ tags:
 - Copilot Chat
 - Copilot Enterprise
 - Developer Tools
-- GitHub Copilot
 - GPT 5
 - Intelligent Assistant
 - Model Deployment
-- News
 - OpenAI
 - VS Code
 section_names:

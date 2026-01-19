@@ -9,7 +9,6 @@ feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-03-11 14:31:27 +00:00
 permalink: /coding/news/A-10x-Faster-TypeScript-Native-Compiler-Port-and-Performance-Roadmap
 tags:
-- Coding
 - Developer Experience
 - Editor Responsiveness
 - Go
@@ -17,7 +16,6 @@ tags:
 - Language Services
 - LSP
 - Native Compiler
-- News
 - Open Source
 - Performance Improvement
 - Project Roadmap

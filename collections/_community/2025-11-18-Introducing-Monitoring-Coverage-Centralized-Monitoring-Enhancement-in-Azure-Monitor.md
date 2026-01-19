@@ -10,13 +10,10 @@ date: 2025-11-18 16:00:00 +00:00
 permalink: /azure/community/Introducing-Monitoring-Coverage-Centralized-Monitoring-Enhancement-in-Azure-Monitor
 tags:
 - AKS
-- Azure
 - Azure Advisor
 - Azure Monitor
 - Centralized Monitoring
-- Community
 - Configuration Management
-- DevOps
 - Log Analytics
 - Monitoring Coverage
 - Monitoring Recommendations

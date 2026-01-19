@@ -9,9 +9,7 @@ feed_url: https://dellenny.com/feed/
 date: 2025-08-07 06:43:47 +00:00
 permalink: /ai/blogs/Getting-Started-with-Copilot-Studio-Build-Your-First-AI-Powered-Bot
 tags:
-- AI
 - Azure OpenAI Service
-- Blogs
 - Bot Development
 - Conversational Bots
 - Copilot

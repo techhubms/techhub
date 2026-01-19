@@ -10,7 +10,6 @@ date: 2025-12-15 09:00:00 +00:00
 permalink: /ml/news/Fabric-Runtime-20-Experimental-Preview-Scalable-Data-Engineering-with-Spark
 tags:
 - Apache Spark 4.0
-- Azure
 - Azure Linux 3.0
 - Big Data
 - Data Engineering
@@ -20,8 +19,6 @@ tags:
 - Fabric Runtime 2.0
 - Java 21
 - Microsoft Fabric
-- ML
-- News
 - Preview Features
 - Python 3.12
 - Scala 2.13

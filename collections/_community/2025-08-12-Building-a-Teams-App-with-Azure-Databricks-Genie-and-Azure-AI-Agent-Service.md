@@ -9,16 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 21:10:22 +00:00
 permalink: /ai/community/Building-a-Teams-App-with-Azure-Databricks-Genie-and-Azure-AI-Agent-Service
 tags:
-- AI
 - AI Agents
-- Azure
 - Azure AI Agent Service
 - Azure AI Foundry
 - Azure App Service
 - Azure Databricks
 - Bot Service
-- Coding
-- Community
 - Conversational AI
 - Data Intelligence
 - Data Visualization
@@ -29,7 +25,6 @@ tags:
 - Kubernetes
 - LLM Integration
 - Microsoft Teams App
-- ML
 - Natural Language Analytics
 - On Behalf Of Authentication
 - Python

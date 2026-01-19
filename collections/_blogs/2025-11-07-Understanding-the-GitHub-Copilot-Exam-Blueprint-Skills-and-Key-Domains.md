@@ -9,15 +9,12 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-07 09:41:13 +00:00
 permalink: /github-copilot/blogs/Understanding-the-GitHub-Copilot-Exam-Blueprint-Skills-and-Key-Domains
 tags:
-- AI
 - AI Certification
-- Blogs
 - Copilot Chat
 - Copilot Exam
 - Copilot Plans
 - Data Handling
 - Developer Tools
-- GitHub Copilot
 - IDE Integration
 - Privacy
 - Prompt Engineering

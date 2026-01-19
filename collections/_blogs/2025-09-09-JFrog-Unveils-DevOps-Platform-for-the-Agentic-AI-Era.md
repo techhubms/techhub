@@ -10,14 +10,10 @@ date: 2025-09-09 16:15:32 +00:00
 permalink: /github-copilot/blogs/JFrog-Unveils-DevOps-Platform-for-the-Agentic-AI-Era
 tags:
 - Agentic AI
-- AI
 - AI Agents
 - Anthropic
-- Blogs
 - CI/CD
-- DevOps
 - DevOps Platform
-- GitHub Copilot
 - Governance
 - GRC
 - Jfrog
@@ -27,7 +23,6 @@ tags:
 - NVIDIA Nemotron
 - Risk Management
 - Secure Model Registry
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

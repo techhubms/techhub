@@ -10,7 +10,6 @@ date: 2025-10-07 10:00:00 +00:00
 permalink: /ml/news/Simplifying-File-Access-in-OPENROWSET-Data-Sources-and-Relative-Paths-Preview
 tags:
 - ADLS
-- Azure
 - Azure Data Lake Storage
 - Data Analytics
 - Data Engineering
@@ -20,8 +19,6 @@ tags:
 - GUID Based URI
 - Lakehouse
 - Microsoft Fabric
-- ML
-- News
 - OPENROWSET
 - Relative Paths
 - SQL

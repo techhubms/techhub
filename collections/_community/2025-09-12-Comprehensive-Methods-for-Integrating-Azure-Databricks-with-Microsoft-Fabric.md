@@ -9,9 +9,7 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-12 21:43:27 +00:00
 permalink: /ml/community/Comprehensive-Methods-for-Integrating-Azure-Databricks-with-Microsoft-Fabric
 tags:
-- Azure
 - Azure Databricks
-- Community
 - Data Engineering
 - Data Governance
 - Data Integration
@@ -23,7 +21,6 @@ tags:
 - ETL
 - Lakehouse
 - Microsoft Fabric
-- ML
 - OneLake
 - Power BI
 - Trusted Workspace Access

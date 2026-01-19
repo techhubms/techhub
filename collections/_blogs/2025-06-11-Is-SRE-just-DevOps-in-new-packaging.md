@@ -9,8 +9,6 @@ feed_url: https://roadtoalm.com/feed/
 date: 2025-06-11 08:33:40 +00:00
 permalink: /devops/blogs/Is-SRE-just-DevOps-in-new-packaging
 tags:
-- Blogs
-- DevOps
 - Engineering Culture
 - Incident Management
 - Lead Podcast

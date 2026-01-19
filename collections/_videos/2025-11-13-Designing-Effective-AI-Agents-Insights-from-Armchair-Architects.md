@@ -10,11 +10,9 @@ date: 2025-11-13 08:01:10 +00:00
 permalink: /ai/videos/Designing-Effective-AI-Agents-Insights-from-Armchair-Architects
 tags:
 - Agent Autonomy
-- AI
 - AI Agent Architecture
 - Armchair Architects
 - Autogen
-- Azure
 - Azure Essentials
 - Enterprise AI
 - Governance
@@ -27,7 +25,6 @@ tags:
 - Retrieval Augmented Generation
 - Semantic Kernel
 - Vector Databases
-- Videos
 section_names:
 - ai
 - azure

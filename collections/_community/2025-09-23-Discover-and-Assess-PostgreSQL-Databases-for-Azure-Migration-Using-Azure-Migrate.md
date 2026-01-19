@@ -10,12 +10,10 @@ date: 2025-09-23 08:09:24 +00:00
 permalink: /azure/community/Discover-and-Assess-PostgreSQL-Databases-for-Azure-Migration-Using-Azure-Migrate
 tags:
 - Agentless Discovery
-- Azure
 - Azure Compute SKU
 - Azure Database For PostgreSQL
 - Azure Migrate
 - Cloud Migration
-- Community
 - Configuration Compatibility
 - Cost Analysis
 - Database Migration

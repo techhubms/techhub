@@ -13,7 +13,6 @@ tags:
 - Agent Identity
 - Agent Registry
 - Agentic Systems
-- AI
 - AI Governance
 - AI Security
 - Autonomous Agents
@@ -25,9 +24,7 @@ tags:
 - Microsoft Defender
 - Microsoft Entra
 - Microsoft Purview
-- News
 - Role Based Access Control
-- Security
 - Security Posture
 - Threat Detection
 - XPIA

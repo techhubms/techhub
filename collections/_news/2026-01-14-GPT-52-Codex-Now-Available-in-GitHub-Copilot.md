@@ -10,7 +10,6 @@ date: 2026-01-14 17:04:31 +00:00
 permalink: /github-copilot/news/GPT-52-Codex-Now-Available-in-GitHub-Copilot
 tags:
 - Admin Settings
-- AI
 - AI Model
 - API Key
 - Copilot
@@ -19,11 +18,9 @@ tags:
 - Copilot CLI
 - Copilot Enterprise
 - Copilot Pro
-- GitHub Copilot
 - GPT 5.2 Codex
 - Model Picker
 - Model Release
-- News
 - OpenAI
 - VS Code
 section_names:

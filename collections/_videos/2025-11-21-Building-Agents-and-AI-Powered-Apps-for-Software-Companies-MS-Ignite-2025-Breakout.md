@@ -9,18 +9,13 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 11:27:10 +00:00
 permalink: /github-copilot/videos/Building-Agents-and-AI-Powered-Apps-for-Software-Companies-MS-Ignite-2025-Breakout
 tags:
-- AI
 - AI Agents
 - AI Infrastructure
 - AI Kit
 - AI Powered Apps
-- Azure
 - Azure AI
 - Azure Logic Apps
-- Coding
-- DevOps
 - GitHub
-- GitHub Copilot
 - Graph Analytics
 - Industrial AI Stack
 - InnovatewithAzureAIappsandagents
@@ -32,8 +27,6 @@ tags:
 - Pair Programming
 - Partner Ecosystem
 - Rapid Development
-- Security
-- Videos
 section_names:
 - ai
 - azure

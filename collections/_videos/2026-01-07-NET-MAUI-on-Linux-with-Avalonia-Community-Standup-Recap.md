@@ -12,7 +12,6 @@ tags:
 - .NET
 - Avalonia
 - C#
-- Coding
 - Cross Platform Development
 - Demo
 - Desktop Development
@@ -27,7 +26,6 @@ tags:
 - Open Source
 - Software Developer
 - UI Frameworks
-- Videos
 section_names:
 - coding
 ---

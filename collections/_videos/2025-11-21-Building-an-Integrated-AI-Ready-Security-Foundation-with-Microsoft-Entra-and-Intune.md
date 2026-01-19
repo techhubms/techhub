@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 15:04:28 +00:00
 permalink: /ai/videos/Building-an-Integrated-AI-Ready-Security-Foundation-with-Microsoft-Entra-and-Intune
 tags:
-- AI
 - AI Security
 - Authentication
 - Compliance
@@ -26,9 +25,7 @@ tags:
 - Network Protection
 - Organizational Insights
 - Phased Rollout
-- Security
 - Security Governance
-- Videos
 - Zero Trust
 section_names:
 - ai

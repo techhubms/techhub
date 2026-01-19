@@ -11,7 +11,6 @@ permalink: /azure/videos/Understanding-Shared-Capacity-Reservations-in-Azure
 tags:
 - Availability Zone
 - Availability Zones
-- Azure
 - Azure Cloud
 - Azure SLA
 - Azure Virtual Machines
@@ -25,7 +24,6 @@ tags:
 - Resource Management
 - Savings Plans
 - Subscription Management
-- Videos
 section_names:
 - azure
 ---

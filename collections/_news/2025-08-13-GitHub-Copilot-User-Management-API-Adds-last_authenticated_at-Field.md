@@ -10,16 +10,13 @@ date: 2025-08-13 21:51:19 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-User-Management-API-Adds-last_authenticated_at-Field
 tags:
 - Admin Tools
-- AI
 - API Schema
 - API Update
 - Authentication
 - Copilot API
 - Feature Parity
-- GitHub Copilot
 - GitHub REST API
 - Last Authenticated At
-- News
 - User Management
 section_names:
 - ai

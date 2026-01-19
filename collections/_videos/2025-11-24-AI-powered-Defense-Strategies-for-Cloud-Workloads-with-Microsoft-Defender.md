@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 07:34:52 +00:00
 permalink: /ai/videos/AI-powered-Defense-Strategies-for-Cloud-Workloads-with-Microsoft-Defender
 tags:
-- AI
 - AI Security
 - Attack Response
 - Automation
-- Azure
 - Cloud Security
 - Cloud Storage Security
 - CNAPP
@@ -24,11 +22,9 @@ tags:
 - Microsoft Ignite
 - MSIgnite
 - ProtectcloudAIplatformandapps
-- Security
 - Security Monitoring
 - Threat Detection
 - Threat Hunting
-- Videos
 - XDR
 section_names:
 - ai

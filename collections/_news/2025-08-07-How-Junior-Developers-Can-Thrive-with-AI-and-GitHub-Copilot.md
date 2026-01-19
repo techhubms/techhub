@@ -9,24 +9,19 @@ feed_url: https://github.blog/feed/
 date: 2025-08-07 21:05:55 +00:00
 permalink: /github-copilot/news/How-Junior-Developers-Can-Thrive-with-AI-and-GitHub-Copilot
 tags:
-- AI
 - AI & ML
 - AI Career Skills
 - AI Powered Development
 - AI Tools
 - Automation
 - Code Review
-- Coding
 - Coding Best Practices
 - Debugging
 - Developer Portfolio
 - Developer Skills
-- DevOps
 - Generative AI
 - GitHub Actions
-- GitHub Copilot
 - Junior Developers
-- News
 - Open Source Contribution
 - Software Engineering
 - VS Code

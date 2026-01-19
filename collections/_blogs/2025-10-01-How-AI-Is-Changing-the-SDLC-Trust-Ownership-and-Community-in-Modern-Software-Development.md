@@ -9,18 +9,15 @@ feed_url: https://www.arresteddevops.com/episode/index.xml
 date: 2025-10-01 13:36:13 +00:00
 permalink: /ai/blogs/How-AI-Is-Changing-the-SDLC-Trust-Ownership-and-Community-in-Modern-Software-Development
 tags:
-- AI
 - AI Agents
 - AI Fluency
 - AI Integration
 - AI Validation
 - Best Practices
-- Blogs
 - Blue Green Deployments
 - Code Ownership
 - Community Learning
 - Continuous Delivery
-- DevOps
 - DevOps Transformation
 - Guardrails
 - LLM

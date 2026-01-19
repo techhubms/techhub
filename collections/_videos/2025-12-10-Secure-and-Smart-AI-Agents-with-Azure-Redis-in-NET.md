@@ -11,21 +11,16 @@ permalink: /ai/videos/Secure-and-Smart-AI-Agents-with-Azure-Redis-in-NET
 tags:
 - .NET
 - Agentic Applications
-- AI
 - AI Agents
 - Application Security
 - Authentication
-- Azure
 - Azure Redis
 - Cloud Development
-- Coding
 - Data Modernization
 - MCP Protocol
 - Microsoft Azure
 - Redis Integration
-- Security
 - Security Enhancement
-- Videos
 section_names:
 - ai
 - azure

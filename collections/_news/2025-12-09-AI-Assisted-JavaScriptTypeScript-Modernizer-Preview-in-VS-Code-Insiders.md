@@ -9,17 +9,13 @@ feed_url: https://devblogs.microsoft.com/feed
 date: 2025-12-09 17:41:29 +00:00
 permalink: /github-copilot/news/AI-Assisted-JavaScriptTypeScript-Modernizer-Preview-in-VS-Code-Insiders
 tags:
-- AI
 - AI Assistance
 - App Modernization
 - Code Modernization
-- Coding
 - Copilot Chat
 - Dependency Upgrades
 - Extension
-- GitHub Copilot
 - JavaScript
-- News
 - Node.js
 - npm
 - Package.json

@@ -9,10 +9,8 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-31 16:00:00 +00:00
 permalink: /ai/news/Building-Resilient-Cloud-Solutions-with-Azure-Essentials-and-Shared-Responsibility
 tags:
-- AI
 - AI Resilience
 - Automation
-- Azure
 - Azure Chaos Studio
 - Azure DevOps
 - Azure Essentials
@@ -21,16 +19,13 @@ tags:
 - Cloud Resiliency
 - Compute
 - Developer Tools
-- DevOps
 - Disaster Recovery
 - Governance
 - High Availability
 - Hybrid + Multicloud
 - Management And Governance
 - Microsoft Defender For Cloud
-- News
 - Reliability
-- Security
 - Shared Responsibility
 - Zone Redundant Architecture
 section_names:

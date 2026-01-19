@@ -11,17 +11,14 @@ permalink: /devops/news/GitHub-Secret-Scanning-Custom-Pattern-Configuration-in-P
 tags:
 - Advanced Security
 - Configuration Management
-- DevOps
 - Enterprise Security
 - False Positive Management
 - GitHub
-- News
 - Organization Security
 - Push Protection
 - REST API
 - Secret Protection
 - Secret Scanning
-- Security
 - Security Policy
 section_names:
 - devops

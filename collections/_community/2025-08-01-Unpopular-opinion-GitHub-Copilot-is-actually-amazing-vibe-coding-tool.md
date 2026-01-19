@@ -10,15 +10,12 @@ date: 2025-08-01 18:28:38 +00:00
 permalink: /github-copilot/community/Unpopular-opinion-GitHub-Copilot-is-actually-amazing-vibe-coding-tool
 tags:
 - Agent Workflows
-- AI
 - AI Code Generation
 - CI/CD Integration
 - Claude Opus
 - Claude Sonnet
-- Community
 - Copilot Workspace
 - Cursor
-- GitHub Copilot
 - GPT 4.1
 - JetBrains IDE
 - Microservices

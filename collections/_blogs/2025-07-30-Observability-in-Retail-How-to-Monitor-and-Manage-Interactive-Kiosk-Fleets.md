@@ -9,13 +9,11 @@ feed_url: https://devops.com/feed/
 date: 2025-07-30 11:54:54 +00:00
 permalink: /devops/blogs/Observability-in-Retail-How-to-Monitor-and-Manage-Interactive-Kiosk-Fleets
 tags:
-- Blogs
 - Business Of DevOps
 - Centralized Observability
 - Contributed Content
 - Customer Experience
 - Customer Experience Technology
-- DevOps
 - Distributed Systems
 - Kiosk Monitoring
 - Observability

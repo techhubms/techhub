@@ -15,11 +15,9 @@ tags:
 - Collaboration
 - Contributions
 - Developer Ecosystem
-- DevOps
 - GitHub
 - Open Source
 - Software Development
-- Videos
 section_names:
 - devops
 ---

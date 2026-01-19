@@ -10,17 +10,13 @@ date: 2025-08-07 17:00:00 +00:00
 permalink: /github-copilot/news/GPT-5-Launches-in-Azure-AI-Foundry-New-Era-for-AI-Apps-Agents-and-Developers
 tags:
 - Agentic Workflows
-- AI
 - AI + Machine Learning
 - AI Content Safety
 - API Integration
-- Azure
 - Azure AI
 - Azure AI Foundry
 - Code Generation
-- Coding
 - Compliance
-- GitHub Copilot
 - GPT 5
 - Hebbia
 - Large Language Model
@@ -28,12 +24,10 @@ tags:
 - Microsoft Defender For Cloud
 - Microsoft Purview
 - Model Router
-- News
 - OpenAI
 - Reasoning
 - Relativity
 - SAP
-- Security
 - SLM
 - VS Code
 - VS Code Extension

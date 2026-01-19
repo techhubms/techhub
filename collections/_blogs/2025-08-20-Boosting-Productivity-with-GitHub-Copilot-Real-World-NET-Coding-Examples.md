@@ -10,18 +10,14 @@ date: 2025-08-20 07:58:07 +00:00
 permalink: /github-copilot/blogs/Boosting-Productivity-with-GitHub-Copilot-Real-World-NET-Coding-Examples
 tags:
 - .NET
-- AI
 - AI Pair Programmer
 - ASP.NET Core
-- Blogs
 - Boilerplate Reduction
 - C#
 - Code Automation
-- Coding
 - Controller Scaffolding
 - Copilot Best Practices
 - EF
-- GitHub Copilot
 - LINQ
 - Microsoft
 - Productivity Tools

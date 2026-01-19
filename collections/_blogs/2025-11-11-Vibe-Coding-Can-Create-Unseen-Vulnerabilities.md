@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-11-11 09:30:29 +00:00
 permalink: /ai/blogs/Vibe-Coding-Can-Create-Unseen-Vulnerabilities
 tags:
-- AI
 - AI And Cybersecurity
 - AI Automation
 - AI Code Review
@@ -25,15 +24,12 @@ tags:
 - AI Software Security
 - Application Security
 - Black Box Coding
-- Blogs
 - Business Of DevOps
 - Code Review
-- Coding
 - Compliance Risks
 - Contributed Content
 - Developer in The Loop
 - Developer Oversight
-- DevOps
 - DevOps Workflows
 - Firebase Breach
 - GenAI
@@ -46,7 +42,6 @@ tags:
 - No Code Tools
 - Secure Coding
 - Secure Coding Practices
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

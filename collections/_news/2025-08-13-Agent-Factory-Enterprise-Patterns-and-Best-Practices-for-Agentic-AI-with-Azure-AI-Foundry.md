@@ -12,10 +12,8 @@ tags:
 - Agent Factory
 - Agent Orchestration
 - Agentic AI
-- AI
 - AI + Machine Learning
 - AI Design Patterns
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
 - Compliance
@@ -27,7 +25,6 @@ tags:
 - Microsoft Azure
 - Modular AI Architecture
 - Multi Agent Systems
-- News
 - Observability
 - Planning Pattern
 - RBAC

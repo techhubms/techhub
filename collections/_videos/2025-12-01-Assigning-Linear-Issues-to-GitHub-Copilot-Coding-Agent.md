@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-12-01 14:58:19 +00:00
 permalink: /github-copilot/videos/Assigning-Linear-Issues-to-GitHub-Copilot-Coding-Agent
 tags:
-- AI
 - AI Powered Development
 - Code Automation
 - Coding Agent
@@ -17,14 +16,11 @@ tags:
 - Copilot Coding Agent
 - CopilotCodingAgent
 - Development Workflow
-- DevOps
 - DevOps Integration
 - GitHub
-- GitHub Copilot
 - Issue Management
 - Linear
 - Pull Requests
-- Videos
 section_names:
 - ai
 - devops

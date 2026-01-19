@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 08:26:43 +00:00
 permalink: /ai/videos/How-Premier-League-Scaled-Data-Driven-Fan-Engagement-with-Microsoft-Fabric-and-Azure
 tags:
-- AI
 - AI Orchestration
 - API Architecture
-- Azure
 - Cloud Scalability
 - Containerization
 - Data Ingestion
@@ -20,7 +18,6 @@ tags:
 - Fan Engagement
 - Microsoft Fabric
 - Microsoft Ignite
-- ML
 - MSIgnite
 - Opta Data
 - Personalization
@@ -28,7 +25,6 @@ tags:
 - Real Time Data
 - Sports Analytics
 - Unifyyourdataplatform
-- Videos
 section_names:
 - ai
 - azure

@@ -13,7 +13,6 @@ tags:
 - Billing Optimization
 - Compliance
 - CSV Export
-- DevOps
 - Enterprise Billing
 - Enterprise Management Tools
 - Enterprise Tools
@@ -21,7 +20,6 @@ tags:
 - Improvement
 - License Management
 - Member Roles
-- News
 - Organization Management
 - Outside Collaborators
 - Reporting

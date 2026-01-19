@@ -9,17 +9,13 @@ date: 2025-07-16 12:00:38 +00:00
 permalink: /github-copilot/news/Configure-internet-access-for-Copilot-coding-agent
 viewing_mode: external
 tags:
-- AI
 - Coding Assistant
 - Data Protection
 - Developer Tools
-- GitHub Copilot
 - Internet Access
-- News
 - Privacy
 - Public Preview
 - Risk Mitigation
-- Security
 - Software Development
 section_names:
 - ai

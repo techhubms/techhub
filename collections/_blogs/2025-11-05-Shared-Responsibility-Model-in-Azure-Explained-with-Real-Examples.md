@@ -9,10 +9,8 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-05 11:06:55 +00:00
 permalink: /azure/blogs/Shared-Responsibility-Model-in-Azure-Explained-with-Real-Examples
 tags:
-- Azure
 - Azure Active Directory
 - Azure Key Vault
-- Blogs
 - Cloud Security
 - Compliance
 - Data Governance
@@ -23,7 +21,6 @@ tags:
 - Operational Responsibility
 - PaaS
 - SaaS
-- Security
 - Security Best Practices
 - Shared Responsibility Model
 section_names:

@@ -11,12 +11,10 @@ permalink: /ai/videos/NET-AI-Community-Standup-Building-AI-Apps-with-the-New-NET
 tags:
 - .NET
 - .NET AI Stack
-- AI
 - AI Agents
 - AI Development
 - Bruno Capuano
 - C#
-- Coding
 - Community Standup
 - Demo
 - Developer
@@ -31,7 +29,6 @@ tags:
 - Practical AI
 - Software Developer
 - Software Engineering
-- Videos
 section_names:
 - ai
 - coding

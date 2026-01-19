@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-12-01 18:00:38 +00:00
 permalink: /coding/videos/Tooling-Support-for-MCP-in-Visual-Studio-Code
 tags:
-- Coding
 - Command Palette
 - Development Tools
 - Installation
@@ -19,7 +18,6 @@ tags:
 - Registry
 - Tooling
 - Troubleshooting
-- Videos
 - VS Code
 section_names:
 - coding

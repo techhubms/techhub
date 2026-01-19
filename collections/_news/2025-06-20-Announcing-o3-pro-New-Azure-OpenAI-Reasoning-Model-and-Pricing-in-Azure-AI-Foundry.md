@@ -9,9 +9,7 @@ feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-06-20 16:06:00 +00:00
 permalink: /ai/news/Announcing-o3-pro-New-Azure-OpenAI-Reasoning-Model-and-Pricing-in-Azure-AI-Foundry
 tags:
-- AI
 - API Versioning
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
 - Enterprise AI
@@ -19,7 +17,6 @@ tags:
 - Foundry
 - Model Pricing
 - Multimodal Input
-- News
 - O3 Pro
 - OpenAI Library
 - Reasoning Model

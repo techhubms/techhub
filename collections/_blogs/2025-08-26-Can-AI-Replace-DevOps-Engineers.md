@@ -9,18 +9,15 @@ feed_url: https://devops.com/feed/
 date: 2025-08-26 15:14:00 +00:00
 permalink: /ai/blogs/Can-AI-Replace-DevOps-Engineers
 tags:
-- AI
 - AI Assistants
 - AI Augmentation
 - AI in DevOps
 - Automation
 - Azure Policy
-- Blogs
 - CI/CD
 - Cloud Infrastructure
 - Contributed Content
 - Developer
-- DevOps
 - DevOps Engineering
 - IaC
 - Platform Engineering

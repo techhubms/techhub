@@ -10,7 +10,6 @@ date: 2025-12-08 11:27:19 +00:00
 permalink: /azure/community/Applying-DevOps-Principles-on-Lean-Infrastructure-Lessons-from-Scaling-to-102000-Users-and-Planning-Azure-Migration
 tags:
 - Application Insights
-- Azure
 - Azure App Service
 - Azure Blob Storage
 - Azure Cache For Redis
@@ -20,8 +19,6 @@ tags:
 - Azure Migration
 - CI/CD Pipeline
 - Cloud Cost Management
-- Community
-- DevOps
 - GitHub Actions
 - Hybrid Cloud
 - IaC

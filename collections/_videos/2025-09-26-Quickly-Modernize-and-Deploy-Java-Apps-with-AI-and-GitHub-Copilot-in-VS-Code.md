@@ -9,23 +9,19 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-09-26 20:19:30 +00:00
 permalink: /github-copilot/videos/Quickly-Modernize-and-Deploy-Java-Apps-with-AI-and-GitHub-Copilot-in-VS-Code
 tags:
-- AI
 - AI Integration
 - App Modernization
 - Cloud Deployment
 - Code
 - Code Migration
-- Coding
 - Demo
 - Developer
 - Developer Community
 - Developer Tools
-- GitHub Copilot
 - Java
 - Java Upgrade
 - Livedemo
 - Microsoft
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

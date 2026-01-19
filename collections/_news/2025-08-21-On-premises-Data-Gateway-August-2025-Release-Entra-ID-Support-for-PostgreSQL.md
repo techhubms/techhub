@@ -11,7 +11,6 @@ permalink: /ml/news/On-premises-Data-Gateway-August-2025-Release-Entra-ID-Suppor
 tags:
 - August
 - Authentication
-- Azure
 - Connector
 - Data Connectivity
 - Data Integration
@@ -20,13 +19,10 @@ tags:
 - Gateway Update
 - Identity Management
 - Microsoft Entra ID
-- ML
-- News
 - On Premises Data Gateway
 - PostgreSQL
 - Power BI
 - Power BI Desktop
-- Security
 section_names:
 - azure
 - ml

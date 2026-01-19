@@ -10,8 +10,6 @@ date: 2025-09-04 13:53:43 +00:00
 permalink: /coding/blogs/Avoiding-SharePoint-Sprawl-Without-Killing-Collaboration
 tags:
 - Automation
-- Blogs
-- Coding
 - Collaboration
 - Content Archiving
 - IT Governance

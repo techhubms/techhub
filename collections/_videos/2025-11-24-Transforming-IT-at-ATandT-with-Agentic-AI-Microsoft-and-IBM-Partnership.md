@@ -11,11 +11,9 @@ permalink: /ai/videos/Transforming-IT-at-ATandT-with-Agentic-AI-Microsoft-and-IB
 tags:
 - Agentic AI
 - Agenticbusinessapplications
-- AI
 - AI Performance Optimization
 - AT&T
 - Automation
-- Azure
 - Cloud Migration
 - Collaboration
 - Enterprise AI
@@ -27,7 +25,6 @@ tags:
 - No Code Development
 - Productivity Improvement
 - Resilient Infrastructure
-- Videos
 section_names:
 - ai
 - azure

@@ -10,7 +10,6 @@ date: 2025-12-12 20:22:35 +00:00
 permalink: /github-copilot/news/Gemini-3-Pro-Model-Launches-for-GitHub-Copilot-in-Popular-IDEs
 tags:
 - Admin Policy
-- AI
 - AI Development
 - AI Model
 - Copilot
@@ -21,11 +20,9 @@ tags:
 - Copilot Pro+
 - Eclipse
 - Gemini 3 Pro
-- GitHub Copilot
 - IDE Integration
 - JetBrains IDEs
 - Model Management
-- News
 - Software Development Tools
 - VS
 - Xcode

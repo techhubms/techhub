@@ -9,10 +9,8 @@ feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-28 20:43:49 +00:00
 permalink: /azure/community/Azure-Tag-Best-Practice-Staging-Tags-Before-Server-Onboarding
 tags:
-- Azure
 - Azure Arc
 - Best Practices
-- Community
 - Maintenance Configurations
 - Onboarding
 - Patching
@@ -20,7 +18,6 @@ tags:
 - Resource Management
 - Resource Tagging
 - Schedules
-- Security
 section_names:
 - azure
 - security

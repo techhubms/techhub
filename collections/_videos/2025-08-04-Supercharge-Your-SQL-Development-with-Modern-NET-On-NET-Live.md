@@ -12,18 +12,15 @@ tags:
 - .NET
 - Build Validation
 - CI/CD
-- Coding
 - Cross Platform Development
 - Database Tooling
 - Developer Tooling
 - Erik Ejlskov Jensen
 - Global Tool
-- ML
 - NuGet
 - SQL Server
 - Sqlpackage
 - Static Code Analysis
-- Videos
 section_names:
 - coding
 - ml

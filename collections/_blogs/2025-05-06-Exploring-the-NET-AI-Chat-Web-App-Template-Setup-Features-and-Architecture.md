@@ -11,16 +11,13 @@ permalink: /ai/blogs/Exploring-the-NET-AI-Chat-Web-App-Template-Setup-Features-a
 tags:
 - .NET
 - .NET Core
-- AI
 - AI Chat Web App
 - ASP.NET Core
 - Aspire
 - Azure OpenAI Service
 - Blazor
-- Blogs
 - C#
 - Chat Applications
-- Coding
 - EF Core
 - Embeddings
 - GitHub Models

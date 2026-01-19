@@ -9,15 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 04:15:00 +00:00
 permalink: /github-copilot/community/Modernizing-Legacy-Java-Applications-with-GitHub-Copilot-App-Modernization-Upgrade
 tags:
-- AI
 - AI Powered Refactoring
 - CI/CD
 - Claude Sonnet 4
 - Code Automation
-- Coding
-- Community
 - CVE Security Validation
-- GitHub Copilot
 - GitHub Copilot App Modernization
 - GitHub Copilot Chat
 - Gradle

@@ -10,7 +10,6 @@ date: 2025-11-20 03:00:00 +00:00
 permalink: /ml/news/Maps-in-Microsoft-Fabric-Bring-Your-Own-Imagery-for-Real-Time-Geospatial-Intelligence
 tags:
 - Asset Tracking
-- Azure
 - Canopy Imagery
 - Construction Monitoring
 - Custom Labels
@@ -21,8 +20,6 @@ tags:
 - Imagery
 - Maps
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Org Apps
 - Planetary Computer

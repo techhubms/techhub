@@ -12,7 +12,6 @@ tags:
 - .NET
 - ASP.NET Core
 - Blazor
-- Coding
 - Community Demo
 - Components
 - Daniel Roth
@@ -23,7 +22,6 @@ tags:
 - Navigation
 - Roland Vizner
 - State Persistence
-- Videos
 section_names:
 - coding
 ---

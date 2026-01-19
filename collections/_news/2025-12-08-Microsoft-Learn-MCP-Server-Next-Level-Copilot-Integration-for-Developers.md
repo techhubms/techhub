@@ -10,11 +10,9 @@ date: 2025-12-08 20:00:00 +00:00
 permalink: /github-copilot/news/Microsoft-Learn-MCP-Server-Next-Level-Copilot-Integration-for-Developers
 tags:
 - .NET
-- AI
 - API References
 - C#
 - Code Suggestions
-- Coding
 - Copilot
 - Copilot CLI
 - Copilot Coding Agent
@@ -22,13 +20,11 @@ tags:
 - Developer Tools
 - Docs
 - Documentation Integration
-- GitHub Copilot
 - Integration Guide
 - Learn
 - MCP
 - MCP Server
 - Microsoft Learn
-- News
 - VS
 - VS Code
 section_names:

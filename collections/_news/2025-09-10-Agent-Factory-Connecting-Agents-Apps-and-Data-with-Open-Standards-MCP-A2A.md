@@ -12,10 +12,8 @@ tags:
 - A2A
 - Agent Factory
 - Agent2Agent
-- AI
 - AI + Machine Learning
 - AI Agents
-- Azure
 - Azure AI Foundry
 - Connector Libraries
 - Enterprise Integration
@@ -23,7 +21,6 @@ tags:
 - MCP
 - Microsoft Azure
 - Multi Agent Systems
-- News
 - Observability
 - Open Standards
 - Semantic Kernel

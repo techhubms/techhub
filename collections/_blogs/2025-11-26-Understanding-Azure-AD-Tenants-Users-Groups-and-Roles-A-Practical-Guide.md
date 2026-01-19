@@ -10,9 +10,7 @@ date: 2025-11-26 08:25:56 +00:00
 permalink: /azure/blogs/Understanding-Azure-AD-Tenants-Users-Groups-and-Roles-A-Practical-Guide
 tags:
 - Access Control
-- Azure
 - Azure AD
-- Blogs
 - Cloud Governance
 - Conditional Access
 - Dynamic Groups
@@ -23,7 +21,6 @@ tags:
 - MFA
 - Microsoft Entra ID
 - RBAC
-- Security
 - Security Groups
 - Tenant Management
 - User Lifecycle

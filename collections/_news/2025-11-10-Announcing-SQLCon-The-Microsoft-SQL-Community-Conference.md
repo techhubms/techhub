@@ -9,15 +9,12 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-10 14:16:58 +00:00
 permalink: /ai/news/Announcing-SQLCon-The-Microsoft-SQL-Community-Conference
 tags:
-- AI
 - AI Model Management
-- Azure
 - Azure Arc
 - Azure SQL Database
 - Change Event Streaming
 - CI/CD
 - Cloud Migration
-- Coding
 - Copilot Integration
 - Data Security
 - Database Development
@@ -27,11 +24,8 @@ tags:
 - Hybrid Data Management
 - JSON Data Type
 - Microsoft Fabric
-- ML
-- News
 - Regular Expressions
 - REST API
-- Security
 - Semantic Search
 - SQL Server
 - SQL Server Management Studio

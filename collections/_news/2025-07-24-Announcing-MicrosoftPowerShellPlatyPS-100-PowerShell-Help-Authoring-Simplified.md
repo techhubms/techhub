@@ -11,13 +11,11 @@ permalink: /coding/news/Announcing-MicrosoftPowerShellPlatyPS-100-PowerShell-Hel
 tags:
 - C#
 - Cmdlets
-- Coding
 - Cross Platform
 - Documentation
 - MAML
 - Markdown
 - Microsoft Learn
-- News
 - PlatyPS
 - PowerShell
 - PowerShell Gallery

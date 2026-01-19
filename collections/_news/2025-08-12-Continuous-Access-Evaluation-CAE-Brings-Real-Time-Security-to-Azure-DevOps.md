@@ -10,21 +10,16 @@ date: 2025-08-12 14:39:05 +00:00
 permalink: /coding/news/Continuous-Access-Evaluation-CAE-Brings-Real-Time-Security-to-Azure-DevOps
 tags:
 - .NET Client Library
-- Azure
 - Azure & Cloud
 - Azure DevOps
 - Claims Challenge
-- Coding
 - Conditional Access
 - Continuous Access Evaluation
-- DevOps
 - Identity Management
 - Incident Response
 - MFA
 - Microsoft Entra ID
-- News
 - Real Time Security
-- Security
 - Security Enforcement
 - Token Revocation
 section_names:

@@ -10,9 +10,7 @@ date: 2025-07-30 22:32:10 +00:00
 permalink: /ai/videos/MCP-In-Production-Building-Secure-and-Agent-Ready-Model-Context-Protocol-Servers
 tags:
 - Agentic AI
-- AI
 - AI Security
-- Azure
 - Azure AI Foundry
 - Cloud Computing
 - Cloud Security
@@ -24,13 +22,11 @@ tags:
 - MCP Server
 - Microsoft
 - OAuth 2.1
-- Security
 - Session Hijacking
 - Tech
 - Technology
 - Token Passthrough Vulnerability
 - Token Validation
-- Videos
 - VS Code Integration
 section_names:
 - ai

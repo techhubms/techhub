@@ -10,15 +10,12 @@ date: 2025-08-04 19:57:43 +00:00
 permalink: /azure/community/File-Share-Access-for-SYSTEM-User-with-PowerShell-Across-Multiple-Devices
 tags:
 - Automation
-- Azure
-- Community
 - Domain
 - File Permissions
 - File Share
 - Network
 - PowerShell
 - Scheduled Tasks
-- Security
 - SYSTEM User
 - Windows
 section_names:

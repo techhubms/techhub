@@ -9,13 +9,10 @@ feed_url: https://devops.com/feed/
 date: 2025-09-16 13:00:31 +00:00
 permalink: /ai/blogs/Pulumi-Introduces-AI-Agents-for-Automated-Infrastructure-Management
 tags:
-- AI
 - AI Agents
 - Automation
-- Blogs
 - Cloud Management
 - Compliance
-- DevOps
 - DevSecOps
 - Digital Workforce
 - IaC

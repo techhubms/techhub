@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-12-04 16:00:27 +00:00
 permalink: /ai/videos/GitHub-Models-Test-and-Compare-AI-Code-Models
 tags:
-- AI
 - AI Comparison
 - AI For Developers
 - AI Integration
@@ -26,7 +25,6 @@ tags:
 - Model Testing
 - Prompt Engineering
 - Software Development
-- Videos
 section_names:
 - ai
 ---

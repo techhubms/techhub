@@ -11,10 +11,8 @@ permalink: /coding/blogs/Retrieving-Images-from-the-Clipboard-Reliably-in-WPF-Re
 tags:
 - .NET
 - Bitmap
-- Blogs
 - C#
 - Clipboard
-- Coding
 - ImageSource
 - Interop
 - Markdown Monster

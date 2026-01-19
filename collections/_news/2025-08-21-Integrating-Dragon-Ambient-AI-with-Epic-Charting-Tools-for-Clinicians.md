@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-21 15:09:00 +00:00
 permalink: /ai/news/Integrating-Dragon-Ambient-AI-with-Epic-Charting-Tools-for-Clinicians
 tags:
-- AI
 - AI Assistant
 - AI in Healthcare
 - Ambient AI
@@ -24,7 +23,6 @@ tags:
 - Medical Documentation
 - Microsoft
 - Microsoft AI
-- News
 - Patient Care
 - Workflow Automation
 section_names:

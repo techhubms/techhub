@@ -10,17 +10,14 @@ date: 2025-12-09 13:51:03 +00:00
 permalink: /azure/community/Challenges-with-Custom-Script-Extensions-Authentication-in-Azure-Session-Host-Configuration
 tags:
 - Authentication
-- Azure
 - Azure Key Vault
 - Azure Portal
 - Azure Security
 - Azure Virtual Desktop
-- Community
 - Credential Management
 - Custom Script Extension
 - Managed Identity
 - SAS Token
-- Security
 - Session Host Configuration
 - Storage Account
 section_names:

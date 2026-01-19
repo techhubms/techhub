@@ -12,12 +12,9 @@ tags:
 - .NET
 - Application Insights
 - ASP.NET Core
-- Azure
 - Azure SRE Agent
 - Cloud Development
-- Coding
 - Custom Sub Agent
-- DevOps
 - Health Checks
 - Incident Response
 - Performance Monitoring
@@ -27,7 +24,6 @@ tags:
 - Root Cause Analysis
 - Safe Rollback
 - Teams Integration
-- Videos
 section_names:
 - azure
 - coding

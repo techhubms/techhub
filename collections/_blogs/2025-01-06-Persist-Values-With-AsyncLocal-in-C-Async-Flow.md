@@ -13,9 +13,7 @@ tags:
 - Async Programming
 - Asynchronous Programming
 - AsyncLocal
-- Blogs
 - C#
-- Coding
 - Context Propagation
 - Correlation ID
 - ExecutionContext

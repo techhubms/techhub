@@ -11,17 +11,14 @@ section: github-copilot
 alt-collection: vscode-updates
 tags:
 - AGENTS.md
-- AI
 - Auto Model Selection
 - Chat Sessions
 - Coding Agent
 - Custom Chat Modes
 - Developer Tools
-- GitHub Copilot
 - Productivity
 - Prompt Files
 - Terminal
-- Videos
 - VS Code
 - VS Code 1.104
 section_names:

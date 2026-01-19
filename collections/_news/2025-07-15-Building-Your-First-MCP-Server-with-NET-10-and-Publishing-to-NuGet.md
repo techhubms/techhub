@@ -11,15 +11,11 @@ permalink: /github-copilot/news/Building-Your-First-MCP-Server-with-NET-10-and-P
 tags:
 - .NET
 - .NET 10
-- AI
 - AI Assistants
 - C#
-- Coding
 - Community Tools
 - Configuration
-- GitHub Copilot
 - MCP
-- News
 - NuGet
 - Open Standard
 - Project Publishing

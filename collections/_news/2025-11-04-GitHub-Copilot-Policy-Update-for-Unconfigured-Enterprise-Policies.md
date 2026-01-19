@@ -11,7 +11,6 @@ permalink: /github-copilot/news/GitHub-Copilot-Policy-Update-for-Unconfigured-En
 tags:
 - Access Control
 - Admin Tools
-- AI
 - Configuration
 - Copilot
 - Developer Tools
@@ -19,9 +18,7 @@ tags:
 - Enterprise Management Tools
 - Enterprise Policy
 - Feature Update
-- GitHub Copilot
 - Improvement
-- News
 - Organization Policy
 - Policy Management
 section_names:

@@ -9,13 +9,10 @@ feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-05-02 00:00:00 +00:00
 permalink: /github-copilot/blogs/Craft-Prompts-That-Get-Copilot-to-Deliver-What-You-Need
 tags:
-- AI
-- Blogs
 - Code Generation
 - Contextual Prompting
 - Debugging Copilot
 - Developer Productivity
-- GitHub Copilot
 - Large Language Models
 - Persona Based Prompts
 - Prompt Engineering

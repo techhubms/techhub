@@ -12,15 +12,12 @@ tags:
 - .NET
 - .NET Framework
 - Bug Fixes
-- Coding
 - Framework
 - Maintenance
 - Maintenance & Updates
 - Microsoft
-- News
 - Patches
 - Release Notes
-- Security
 - Servicing Update
 section_names:
 - coding

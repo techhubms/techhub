@@ -9,18 +9,14 @@ feed_url: https://devops.com/feed/
 date: 2025-09-09 18:52:25 +00:00
 permalink: /github-copilot/blogs/JFrog-CEO-AI-Agents-Require-Practices-Beyond-Security-Traceability
 tags:
-- AI
 - AI Agents
 - Anthropic
 - AppTrust
-- Blogs
 - Claude Code
 - Cursor
-- DevOps
 - DevOps At The Edge
 - DevSecOps
 - GitHub
-- GitHub Copilot
 - Governance
 - GRC
 - JFrog
@@ -31,7 +27,6 @@ tags:
 - Model Registry
 - NVIDIA
 - Policy Analytics
-- Security
 - ServiceNow
 - Social Facebook
 - Social LinkedIn

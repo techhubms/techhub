@@ -10,10 +10,8 @@ date: 2025-02-27 22:28:17 +00:00
 permalink: /coding/news/Microsoft-Update-Changes-for-PowerShell-7-Expected-Behavior-and-Update-Rules
 tags:
 - Automation
-- Coding
 - LTS
 - Microsoft Update
-- News
 - PowerShell
 - PowerShell Installation
 - Preview Releases

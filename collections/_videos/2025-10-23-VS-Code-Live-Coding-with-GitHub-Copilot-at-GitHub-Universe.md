@@ -9,15 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-10-23 18:10:19 +00:00
 permalink: /github-copilot/videos/VS-Code-Live-Coding-with-GitHub-Copilot-at-GitHub-Universe
 tags:
-- AI
 - AI Powered Development
 - Code
-- Coding
 - Developer
 - Developer Community
 - Developer Tools
 - Figma
-- GitHub Copilot
 - GitHub Universe
 - Live Coding
 - Mcp
@@ -27,7 +24,6 @@ tags:
 - Programming
 - Software Developer
 - Software Development
-- Videos
 - VS Code
 section_names:
 - ai

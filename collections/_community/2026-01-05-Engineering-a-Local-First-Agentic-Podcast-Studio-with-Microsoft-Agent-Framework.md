@@ -11,11 +11,8 @@ permalink: /ai/community/Engineering-a-Local-First-Agentic-Podcast-Studio-with-M
 tags:
 - Agent Executor
 - Agentic Orchestration
-- AI
 - AI Agents
 - Chain Of Thought
-- Coding
-- Community
 - DevUI
 - EdgeAI
 - Local First Architecture

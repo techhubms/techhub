@@ -18,9 +18,7 @@ tags:
 - Data Warehouses
 - Lakehouses
 - Microsoft Fabric
-- ML
 - Model Management
-- News
 - Python Script
 - Reporting
 - REST API

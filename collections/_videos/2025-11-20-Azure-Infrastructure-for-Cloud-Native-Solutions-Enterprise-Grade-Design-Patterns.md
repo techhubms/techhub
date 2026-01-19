@@ -10,13 +10,10 @@ date: 2025-11-20 17:22:14 +00:00
 permalink: /coding/videos/Azure-Infrastructure-for-Cloud-Native-Solutions-Enterprise-Grade-Design-Patterns
 tags:
 - Atomic Scaling
-- Azure
 - Azure Storage
 - Cloud Native Architecture
-- Coding
 - Container Networking
 - Databricks
-- DevOps
 - High Availability
 - Illumia Breach Containment
 - Kubernetes
@@ -26,10 +23,8 @@ tags:
 - Performance Optimization
 - Resilience
 - Scalability
-- Security
 - Sharding
 - Threat Intelligence
-- Videos
 - VM Lifecycle Management
 - VMSS
 - Zone Aligned Architecture

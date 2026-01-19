@@ -9,19 +9,15 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-07-26 04:19:42 +00:00
 permalink: /github-copilot/videos/Vibe-Coding-PromptBoostdev-with-GitHub-Copilot-in-VS-Code
 tags:
-- AI
 - AI Development
 - Code Collaboration
-- Coding
 - Copilot Integration
 - Development Workflow
-- GitHub Copilot
 - Live Coding
 - Productivity Tools
 - Prompt Engineering
 - Promptboost.dev
 - Software Engineering
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

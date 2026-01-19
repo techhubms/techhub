@@ -10,8 +10,6 @@ date: 2025-11-18 08:00:00 +00:00
 permalink: /ai/news/Introducing-Microsoft-Fabric-IQ-From-Data-Platform-to-Unified-Intelligence
 tags:
 - Agentic AI
-- AI
-- Azure
 - Business Intelligence
 - Data Agent
 - Data Platform
@@ -23,8 +21,6 @@ tags:
 - Graph Analytics
 - Microsoft Fabric IQ
 - Microsoft Ignite
-- ML
-- News
 - No Code Modeling
 - OneLake
 - Ontology

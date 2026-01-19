@@ -9,9 +9,7 @@ feed_url: https://dellenny.com/feed/
 date: 2025-10-29 07:46:39 +00:00
 permalink: /ai/blogs/What-Is-Microsoft-Azure-A-Beginners-Guide-to-the-Azure-Ecosystem
 tags:
-- AI
 - AKS
-- Azure
 - Azure Arc
 - Azure Blob Storage
 - Azure Cognitive Services
@@ -24,16 +22,11 @@ tags:
 - Azure SQL Database
 - Azure Stack
 - Azure Virtual Machines
-- Blogs
 - Cloud Computing
-- Coding
 - Cosmos DB
-- DevOps
 - GitHub
 - Hybrid Cloud
 - Microsoft Azure
-- ML
-- Security
 - VS
 section_names:
 - ai

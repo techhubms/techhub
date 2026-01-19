@@ -11,7 +11,6 @@ permalink: /coding/community/Securing-Azure-Bot-Service-Endpoints-for-Teams-Chan
 tags:
 - Application Level Security
 - ASP.NET Core
-- Azure
 - Azure App Service
 - Azure Bot Service
 - Azure Firewall
@@ -19,8 +18,6 @@ tags:
 - Bot Framework
 - C#
 - Cloud Security
-- Coding
-- Community
 - Endpoint Security
 - Entra ID
 - JWT Token Validation
@@ -29,7 +26,6 @@ tags:
 - Multi Tenant Security
 - Network Isolation
 - Network Security Groups
-- Security
 - Service Principal
 - Token Authentication
 section_names:

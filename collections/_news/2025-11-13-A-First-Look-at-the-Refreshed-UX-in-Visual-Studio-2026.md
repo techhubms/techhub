@@ -11,11 +11,9 @@ permalink: /coding/news/A-First-Look-at-the-Refreshed-UX-in-Visual-Studio-2026
 tags:
 - Accessibility
 - Code Editor
-- Coding
 - Developer Tools
 - Extension Development
 - IDE
-- News
 - Performance Improvement
 - Personalization
 - Settings Management

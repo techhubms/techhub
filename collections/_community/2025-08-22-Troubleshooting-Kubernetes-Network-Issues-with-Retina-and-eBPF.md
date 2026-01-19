@@ -10,11 +10,8 @@ date: 2025-08-22 16:38:59 +00:00
 permalink: /azure/community/Troubleshooting-Kubernetes-Network-Issues-with-Retina-and-eBPF
 tags:
 - AKS
-- Azure
 - Bpftool
 - Cloud Native
-- Community
-- DevOps
 - Distributed Systems
 - Ebpf
 - Inspektor Gadget
@@ -27,7 +24,6 @@ tags:
 - Persistent Volume
 - Pwru
 - Retina
-- Security
 section_names:
 - azure
 - devops

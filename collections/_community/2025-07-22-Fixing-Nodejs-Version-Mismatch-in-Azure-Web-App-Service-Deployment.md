@@ -9,13 +9,10 @@ feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-22 11:41:42 +00:00
 permalink: /azure/community/Fixing-Nodejs-Version-Mismatch-in-Azure-Web-App-Service-Deployment
 tags:
-- Azure
 - Azure DevOps
 - Azure Web App
-- Community
 - Container Deployment
 - Dependency Management
-- DevOps
 - Environment Variables
 - Linux Container
 - Node.js

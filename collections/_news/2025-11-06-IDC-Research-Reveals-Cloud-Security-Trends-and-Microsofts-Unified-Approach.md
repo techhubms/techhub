@@ -10,8 +10,6 @@ date: 2025-11-06 18:12:32 +00:00
 permalink: /ai/news/IDC-Research-Reveals-Cloud-Security-Trends-and-Microsofts-Unified-Approach
 tags:
 - Agentic AI
-- AI
-- Azure
 - CISO
 - Cloud Native Applications
 - Cloud Security
@@ -22,9 +20,7 @@ tags:
 - Generative AI
 - Microsoft Defender For Cloud
 - Microsoft Security
-- News
 - SecOps
-- Security
 - Security Operations
 - Security Platform
 - SIEM

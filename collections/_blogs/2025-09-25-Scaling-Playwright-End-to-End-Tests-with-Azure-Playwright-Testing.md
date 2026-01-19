@@ -10,17 +10,13 @@ date: 2025-09-25 08:36:33 +00:00
 permalink: /coding/blogs/Scaling-Playwright-End-to-End-Tests-with-Azure-Playwright-Testing
 tags:
 - Automation
-- Azure
 - Azure CLI
 - Azure Entra ID
 - Azure Playwright Testing
-- Blogs
 - Browser Automation
 - CI/CD Integration
 - Cloud Testing
-- Coding
 - Debugging
-- DevOps
 - End To End Testing
 - Node.js
 - Parallel Testing

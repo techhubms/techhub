@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-10 17:50:49 +00:00
 permalink: /ai/news/Microsoft-Elevate-Washington-Bringing-AI-Access-and-Skills-to-Every-Community-in-the-State
 tags:
-- AI
 - AI For Good Lab
 - AI Training
 - Community Colleges
@@ -22,7 +21,6 @@ tags:
 - Learning Accelerators
 - Microsoft 365
 - Microsoft Elevate Washington
-- News
 - Professional Development
 - Public Education
 - Teams For Education

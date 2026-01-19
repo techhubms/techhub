@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 07:14:51 +00:00
 permalink: /ai/videos/Drive-Growth-Profitability-and-Resilience-with-Agentic-Supply-Chains
 tags:
-- AI
 - AI Agents
 - Autonomous Networks
-- Azure
 - Azure AI
 - Blue Yonder
 - Connected Supply Chain
@@ -23,13 +21,11 @@ tags:
 - Manufacturing Technology
 - Microsoft Fabric
 - Microsoft Ignite
-- ML
 - MSIgnite
 - Operational Resilience
 - Predictive Analytics
 - Supply Chain
 - Unifyyourdataplatform
-- Videos
 section_names:
 - ai
 - azure

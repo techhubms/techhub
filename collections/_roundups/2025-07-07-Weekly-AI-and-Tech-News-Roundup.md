@@ -7,28 +7,20 @@ date: 2025-07-07 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET 10
-- AI
 - AI Accessibility
 - AI Agents
-- Azure
 - Azure AI Foundry
 - Azure Dev CLI
 - Azure Files
 - Blazor
 - Cloud Security
-- Coding
 - Copilot Agent
 - Copilot Vision
 - Cosmos DB
-- DevOps
-- GitHub Copilot
 - MAUI
 - MCP
-- ML
 - Ollama
 - PostgreSQL
-- Roundups
-- Security
 - Semantic Kernel
 - Terraform
 - Vault

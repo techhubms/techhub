@@ -10,7 +10,6 @@ date: 2025-11-25 18:10:22 +00:00
 permalink: /github-copilot/news/Copilot-Agent-Sessions-from-External-Apps-Now-Available-on-GitHub-Mobile-for-Android
 tags:
 - Agent Tasks
-- AI
 - Android
 - Client Apps
 - Copilot
@@ -18,13 +17,11 @@ tags:
 - Developer Productivity
 - External App Sharing
 - Feature Planning
-- GitHub Copilot
 - GitHub Mobile
 - Idea Management
 - Improvement
 - Integration
 - Mobile Development
-- News
 - Sharesheet
 - Workflow Automation
 section_names:

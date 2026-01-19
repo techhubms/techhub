@@ -9,15 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-07 15:26:36 +00:00
 permalink: /ai/community/From-Space-to-Subsurface-Predicting-Gold-Zones-with-Azure-AI-and-Machine-Learning
 tags:
-- AI
 - AutoML
-- Azure
 - Azure AI
 - Azure Machine Learning
 - Azure Notebooks
 - Azure Storage
 - Classification Models
-- Community
 - Compute Cluster
 - Data Processing
 - Geoscience
@@ -26,7 +23,6 @@ tags:
 - KMeans
 - Microsoft Azure
 - Mining
-- ML
 - Model Registry
 - Model Validation
 - Python

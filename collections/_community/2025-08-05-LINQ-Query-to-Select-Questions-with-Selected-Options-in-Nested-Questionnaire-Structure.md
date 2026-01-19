@@ -11,8 +11,6 @@ permalink: /coding/community/LINQ-Query-to-Select-Questions-with-Selected-Option
 tags:
 - .NET
 - C#
-- Coding
-- Community
 - Data Query
 - Functional Programming
 - LINQ

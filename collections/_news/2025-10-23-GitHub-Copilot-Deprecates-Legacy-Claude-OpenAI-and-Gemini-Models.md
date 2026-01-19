@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-23 18:05:54 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Deprecates-Legacy-Claude-OpenAI-and-Gemini-Models
 tags:
-- AI
 - Claude Opus
 - Claude Sonnet
 - Copilot
@@ -17,12 +16,10 @@ tags:
 - Copilot Settings
 - Enterprise Administration
 - Gemini 2.5 Pro
-- GitHub Copilot
 - GitHub Enterprise
 - GPT 5
 - Model Deprecation
 - Model Management
-- News
 - Retired
 - VS Code
 section_names:

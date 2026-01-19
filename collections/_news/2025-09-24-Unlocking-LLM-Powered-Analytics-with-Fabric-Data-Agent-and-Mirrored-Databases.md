@@ -9,9 +9,7 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-24 17:00:00 +00:00
 permalink: /ai/news/Unlocking-LLM-Powered-Analytics-with-Fabric-Data-Agent-and-Mirrored-Databases
 tags:
-- AI
 - AI Integration
-- Azure
 - Azure Cosmos DB
 - Azure SQL Database
 - Cloud Data
@@ -23,9 +21,7 @@ tags:
 - LLM
 - Microsoft Fabric
 - Mirrored Database
-- ML
 - Natural Language Queries
-- News
 - NL2SQL
 - Operational Data
 section_names:

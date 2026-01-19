@@ -11,7 +11,6 @@ permalink: /ai/news/Microsoft-Entra-ID-Recognized-for-Access-Management-Leadersh
 tags:
 - Access Management
 - Agent ID
-- AI
 - AI Powered Security
 - Conditional Access
 - Cybersecurity
@@ -23,8 +22,6 @@ tags:
 - Microsoft Entra
 - Microsoft Security
 - Multifactor Authentication
-- News
-- Security
 - Security Copilot
 - Teams Integration
 - Threat Response

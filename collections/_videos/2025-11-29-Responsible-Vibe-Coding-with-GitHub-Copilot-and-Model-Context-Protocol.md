@@ -10,14 +10,11 @@ date: 2025-11-29 15:00:51 +00:00
 permalink: /github-copilot/videos/Responsible-Vibe-Coding-with-GitHub-Copilot-and-Model-Context-Protocol
 tags:
 - Agent Client Protocol
-- AI
 - AI Agents
 - AI Observability
-- Coding
 - Demo
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - GitHub Universe
 - GitHubUniverse
 - Goose
@@ -27,7 +24,6 @@ tags:
 - Prompt Engineering
 - Responsible Coding
 - Team Workload Visualization
-- Videos
 section_names:
 - ai
 - coding

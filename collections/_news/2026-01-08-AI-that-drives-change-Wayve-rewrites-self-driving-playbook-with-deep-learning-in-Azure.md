@@ -9,15 +9,12 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-08 14:36:51 +00:00
 permalink: /ai/news/AI-that-drives-change-Wayve-rewrites-self-driving-playbook-with-deep-learning-in-Azure
 tags:
-- AI
 - Autonomous Vehicles
-- Azure
 - Azure AI
 - Cloud Computing
 - Deep Learning
 - Innovation
 - Machine Learning
-- News
 - Self Driving Cars
 - Wayve
 section_names:

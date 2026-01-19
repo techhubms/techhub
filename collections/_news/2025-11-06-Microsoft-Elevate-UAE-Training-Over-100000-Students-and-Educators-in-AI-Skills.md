@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-06 17:33:18 +00:00
 permalink: /ai/news/Microsoft-Elevate-UAE-Training-Over-100000-Students-and-Educators-in-AI-Skills
 tags:
-- AI
 - AI Adoption
 - AI Fundamentals
 - AI Skills Training
@@ -25,7 +24,6 @@ tags:
 - Leadership Development
 - MBZUAI
 - Microsoft Elevate
-- News
 - On The Issues
 - UAE
 section_names:

@@ -13,7 +13,6 @@ tags:
 - '#devops'
 - Application Insights
 - Azd
-- Azure
 - Azure & Cloud
 - Azure App Service
 - Azure Container Apps
@@ -21,9 +20,7 @@ tags:
 - Azure Developer CLI
 - Azure Developer CLI (azd)
 - CI/CD
-- Coding
 - Container Deployment
-- DevOps
 - Flask
 - GitHub
 - GitHub Actions
@@ -31,7 +28,6 @@ tags:
 - Key Vault
 - Layered Infrastructure
 - Managed Identity
-- News
 - Python
 - VNET
 section_names:

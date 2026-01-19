@@ -10,12 +10,10 @@ date: 2025-12-15 17:29:32 +00:00
 permalink: /ai/videos/Getting-Started-with-Azure-AI-Foundry-A-Beginners-Guide
 tags:
 - Agent Building
-- AI
 - AI Agents
 - AI Development
 - AI Platform
 - AIDevelopers
-- Azure
 - Azure AI
 - Azure AI Foundry
 - Cloud AI
@@ -25,7 +23,6 @@ tags:
 - Model Selection
 - OneDevQuestion
 - Seth Juarez
-- Videos
 section_names:
 - ai
 - azure

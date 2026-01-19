@@ -11,9 +11,7 @@ permalink: /ai/videos/Partners-and-Agentic-AI-Transforming-Energy-and-Resources-
 tags:
 - Agent 365
 - Agentic AI
-- AI
 - AI Transformation
-- Azure
 - Chevron
 - Decision Making
 - Energy Industry
@@ -27,8 +25,6 @@ tags:
 - Petronas
 - Real Time Data
 - Resource Management
-- Security
-- Videos
 section_names:
 - ai
 - azure

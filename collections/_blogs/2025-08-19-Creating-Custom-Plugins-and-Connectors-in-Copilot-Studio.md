@@ -9,11 +9,9 @@ feed_url: https://dellenny.com/feed/
 date: 2025-08-19 14:52:34 +00:00
 permalink: /ai/blogs/Creating-Custom-Plugins-and-Connectors-in-Copilot-Studio
 tags:
-- AI
 - AI Integration
 - API Authentication
 - Automation
-- Blogs
 - Copilot
 - Copilot Extensions
 - Copilot Studio

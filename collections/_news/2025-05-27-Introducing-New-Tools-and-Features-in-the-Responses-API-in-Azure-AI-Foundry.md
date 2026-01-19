@@ -9,13 +9,10 @@ feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-05-27 21:51:00 +00:00
 permalink: /ai/news/Introducing-New-Tools-and-Features-in-the-Responses-API-in-Azure-AI-Foundry
 tags:
-- AI
 - AI Development
 - Assistants API
-- Azure
 - Azure AI Foundry
 - Chat Completions API
-- News
 - OpenAI
 - Responses API
 section_names:

@@ -10,7 +10,6 @@ date: 2025-10-14 07:00:00 +00:00
 permalink: /ml/news/Introducing-the-Job-Level-Bursting-Switch-in-Microsoft-Fabric
 tags:
 - Autoscale Billing
-- Azure
 - Burst Capacity
 - Capacity Administrator
 - Compute Units
@@ -22,8 +21,6 @@ tags:
 - Interactive Notebooks
 - Job Level Bursting
 - Microsoft Fabric
-- ML
-- News
 - Performance Optimization
 - Resource Management
 - Spark

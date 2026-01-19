@@ -11,7 +11,6 @@ permalink: /ml/news/Enhancements-to-Copy-Job-for-Data-Ingestion-in-Microsoft-Fab
 tags:
 - Amazon RDS
 - Amazon S3
-- Azure
 - Azure SQL Database
 - Change Data Capture
 - CI/CD Automation
@@ -27,9 +26,7 @@ tags:
 - Lakehouse
 - MariaDB
 - Microsoft Fabric
-- ML
 - New Connectors
-- News
 - Oracle Cloud Storage
 - Pipeline Automation
 - SAP

@@ -10,7 +10,6 @@ date: 2025-10-07 17:05:00 +00:00
 permalink: /github-copilot/news/Reviewing-AI-Generated-Code-in-NET-Best-Practices-for-Developers
 tags:
 - .NET
-- AI
 - AI Generated Code
 - API Design
 - Best Practices
@@ -18,12 +17,9 @@ tags:
 - Code Quality
 - Code Review
 - Code Standards
-- Coding
 - Copilot
 - Documentation
 - Error Handling
-- GitHub Copilot
-- News
 - Pull Requests
 - Software Architecture
 - Test Coverage

@@ -11,13 +11,10 @@ permalink: /ml/news/Fabric-Spark-Run-Series-Analysis-Enterprise-Scale-Observabil
 tags:
 - Anomaly Detection
 - Autotune
-- Azure
 - Data Engineering
 - Enterprise Data
 - Microsoft Fabric
-- ML
 - Monitoring
-- News
 - Notebook Executions
 - Observability
 - Performance Tuning

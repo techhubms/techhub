@@ -11,14 +11,12 @@ permalink: /ai/videos/AI-Powered-Testing-in-Visual-Studio
 tags:
 - .NET
 - .NET 10
-- AI
 - AI Powered Testing
 - ASP.NET Core 10
 - Automated Testing
 - Bug Detection
 - C# 14
 - Cloud Native Apps
-- Coding
 - F# 10
 - Intelligent Features
 - Quality Assurance
@@ -27,7 +25,6 @@ tags:
 - Test Coverage
 - Test Data Generation
 - Testing Workflow
-- Videos
 - VS
 section_names:
 - ai

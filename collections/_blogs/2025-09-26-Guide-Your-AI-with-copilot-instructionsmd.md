@@ -9,15 +9,11 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-09-26 00:00:00 +00:00
 permalink: /github-copilot/blogs/Guide-Your-AI-with-copilot-instructionsmd
 tags:
-- AI
 - Async/await
-- Blogs
 - Code Consistency
-- Coding
 - Copilot Instructions.md
 - Developer Productivity
 - Documentation Standards
-- GitHub Copilot
 - JavaScript
 - JSDoc
 - Naming Conventions

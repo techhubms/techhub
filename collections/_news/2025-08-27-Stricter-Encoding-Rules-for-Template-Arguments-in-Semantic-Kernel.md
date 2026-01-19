@@ -10,16 +10,13 @@ date: 2025-08-27 05:17:18 +00:00
 permalink: /ai/news/Stricter-Encoding-Rules-for-Template-Arguments-in-Semantic-Kernel
 tags:
 - .NET
-- AI
 - AllowDangerouslySetContent
 - Automatic Encoding
-- Coding
 - Exception Handling
 - Handlebars
 - HttpUtility.HtmlEncode
 - Liquid
 - Manual Encoding
-- News
 - Prompt Templates
 - Python
 - SDK Update

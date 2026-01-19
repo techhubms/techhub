@@ -10,8 +10,6 @@ date: 2025-10-09 16:00:00 +00:00
 permalink: /ai/news/Securing-Agentic-AI-and-Data-Microsoft-Ignite-2025-Security-Sessions-Preview
 tags:
 - Agentic AI
-- AI
-- Azure
 - Certification
 - Cloud Security
 - Compliance
@@ -26,8 +24,6 @@ tags:
 - Microsoft Security
 - Microsoft Sentinel
 - MISA
-- News
-- Security
 - Security Copilot
 - Security Operations Center
 - Security Posture Management

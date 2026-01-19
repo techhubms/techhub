@@ -11,12 +11,9 @@ permalink: /devops/news/GitHub-Secret-Scanning-Expands-with-New-Validators-and-V
 tags:
 - Bitrise
 - Credential Management
-- DevOps
 - GitHub
 - Groq
-- News
 - Secret Scanning
-- Security
 - Siemens
 - Square
 - Token Validation

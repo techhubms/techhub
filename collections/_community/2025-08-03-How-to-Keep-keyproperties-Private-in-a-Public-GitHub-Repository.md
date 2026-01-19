@@ -11,8 +11,6 @@ permalink: /devops/community/How-to-Keep-keyproperties-Private-in-a-Public-GitHu
 tags:
 - .gitignore
 - Android Development
-- Community
-- DevOps
 - GitHub
 - Key.properties
 - Private Files

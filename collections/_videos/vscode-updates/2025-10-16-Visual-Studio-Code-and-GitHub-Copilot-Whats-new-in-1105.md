@@ -10,17 +10,14 @@ permalink: /github-copilot/videos/Visual-Studio-Code-and-GitHub-Copilot-Whats-ne
 section: github-copilot
 alt-collection: vscode-updates
 tags:
-- AI
 - Chain Of Thought
 - Chat Terminal
 - Code Coverage
 - Developer Tools
-- GitHub Copilot
 - MCP Marketplace
 - Merge Conflicts
 - Productivity
 - Terminal Profiles
-- Videos
 - VS Code
 - VS Code 1.105
 section_names:

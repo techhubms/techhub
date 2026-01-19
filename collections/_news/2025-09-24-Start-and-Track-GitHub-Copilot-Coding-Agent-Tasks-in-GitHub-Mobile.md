@@ -9,16 +9,13 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-24 16:16:48 +00:00
 permalink: /github-copilot/news/Start-and-Track-GitHub-Copilot-Coding-Agent-Tasks-in-GitHub-Mobile
 tags:
-- AI
 - Client Apps
 - Copilot
 - Copilot Coding Agent
 - Developer Tools
 - GitHub App
-- GitHub Copilot
 - GitHub Mobile
 - Mobile Development
-- News
 - Pull Requests
 - Repository Management
 - Software Development

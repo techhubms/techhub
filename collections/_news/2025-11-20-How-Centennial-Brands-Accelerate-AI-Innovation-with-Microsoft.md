@@ -10,9 +10,7 @@ date: 2025-11-20 16:56:02 +00:00
 permalink: /ai/news/How-Centennial-Brands-Accelerate-AI-Innovation-with-Microsoft
 tags:
 - Agribusiness Technology
-- AI
 - AI Agent
-- Azure
 - Azure OpenAI
 - Cloud Migration
 - Company News
@@ -26,10 +24,7 @@ tags:
 - Kraft Heinz
 - Land O’Lakes
 - Levi Strauss & Co.
-- Machine Learning
 - Microsoft AI
-- ML
-- News
 - Production Optimization
 - Retail Innovation
 - Supply Chain

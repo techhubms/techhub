@@ -10,16 +10,13 @@ date: 2025-11-17 18:55:08 +00:00
 permalink: /azure/community/Linux-on-Azure-at-Microsoft-Ignite-2025-Whats-New-Sessions-and-Announcements
 tags:
 - AKS
-- Azure
 - Azure Linux
 - Azure Machine Configuration
 - Azure Migrate
 - Azure Red Hat OpenShift
 - CIS Benchmarks
 - Cloud Infrastructure
-- Community
 - Compliance
-- DevOps
 - FIPS
 - Hybrid Cloud
 - Immutable OS
@@ -27,7 +24,6 @@ tags:
 - Linux Security
 - Pod Sandboxing
 - PostgreSQL
-- Security
 - Session Guide
 section_names:
 - azure

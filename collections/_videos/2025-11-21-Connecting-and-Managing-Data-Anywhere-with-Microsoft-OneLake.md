@@ -10,7 +10,6 @@ date: 2025-11-21 08:30:17 +00:00
 permalink: /ml/videos/Connecting-and-Managing-Data-Anywhere-with-Microsoft-OneLake
 tags:
 - Access Controls
-- Azure
 - Data Catalog
 - Data Governance
 - Data Integration
@@ -20,16 +19,13 @@ tags:
 - Lakehouse
 - Microsoft Fabric
 - Microsoft OneLake
-- ML
 - MSIgnite
 - OneDrive
-- Security
 - SharePoint
 - Snowflake
 - Structured Data
 - Unifyyourdataplatform
 - Unstructured Data
-- Videos
 section_names:
 - azure
 - ml

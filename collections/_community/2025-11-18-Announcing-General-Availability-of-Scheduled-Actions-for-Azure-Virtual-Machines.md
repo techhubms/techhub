@@ -10,12 +10,10 @@ date: 2025-11-18 17:35:21 +00:00
 permalink: /azure/community/Announcing-General-Availability-of-Scheduled-Actions-for-Azure-Virtual-Machines
 tags:
 - API Automation
-- Azure
 - Azure Compute
 - Azure REST API
 - Azure Virtual Machines
 - Batch Operations
-- Community
 - Concurrent Operations
 - Contoso Use Case
 - Scheduled Actions

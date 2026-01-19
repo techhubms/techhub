@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-08-28 17:55:41 +00:00
 permalink: /github-copilot/news/Start-and-Track-GitHub-Copilot-Coding-Agent-Tasks-from-Raycast
 tags:
-- AI
 - Coding Agent
 - Copilot Agents
 - Copilot Business
@@ -18,9 +17,7 @@ tags:
 - Desktop Productivity
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Macos
-- News
 - Public Preview
 - Pull Request Automation
 - Raycast

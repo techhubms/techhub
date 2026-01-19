@@ -11,11 +11,8 @@ permalink: /azure/community/Seeking-Advice-on-Deployment-Pipeline-Design-for-Mul
 tags:
 - Application Dependencies
 - Automation
-- Azure
 - Azure DevOps
-- Community
 - Deployment Pipeline
-- DevOps
 - DevOps Patterns
 - Environment Management
 - Infrastructure Mapping

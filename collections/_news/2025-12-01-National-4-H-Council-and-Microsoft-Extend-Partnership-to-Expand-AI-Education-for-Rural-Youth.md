@@ -11,7 +11,6 @@ permalink: /ai/news/National-4-H-Council-and-Microsoft-Extend-Partnership-to-Exp
 tags:
 - 4 H Tech Changemakers
 - Agriculture Technology
-- AI
 - AI Education
 - AI Ethics
 - AI Foundations Curriculum
@@ -22,7 +21,6 @@ tags:
 - Land Grant Universities
 - Microsoft
 - Minecraft Education
-- News
 - Presidential AI Challenge
 - Rural Communities
 - STEM

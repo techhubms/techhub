@@ -9,11 +9,8 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-21 15:39:36 +00:00
 permalink: /github-copilot/blogs/Top-GitHub-Copilot-Shortcuts-and-Productivity-Tips-for-VS-Code
 tags:
-- AI
 - AI Pair Programming
-- Blogs
 - Code Review
-- Coding
 - Contextual AI
 - Copilot Agent Mode
 - Copilot Chat
@@ -21,7 +18,6 @@ tags:
 - Copilot Slash Commands
 - Developer Productivity
 - GitHib Copilot
-- GitHub Copilot
 - Keyboard Shortcuts
 - Programming Tools
 - Prompt Engineering

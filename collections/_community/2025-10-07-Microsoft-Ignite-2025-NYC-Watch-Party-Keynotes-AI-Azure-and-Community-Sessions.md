@@ -11,14 +11,10 @@ permalink: /ai/community/Microsoft-Ignite-2025-NYC-Watch-Party-Keynotes-AI-Azure
 tags:
 - .NET
 - Agentic Orchestration
-- AI
 - Automation
-- Azure
 - Azure AI Foundry
 - Azure Load Balancer
 - Cloud
-- Coding
-- Community
 - Copilot Studio
 - Microsoft Ignite
 - MVP

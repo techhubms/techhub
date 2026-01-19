@@ -9,11 +9,9 @@ feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-05-26 07:00:00 +00:00
 permalink: /ai/blogs/Is-AI-the-Right-Solution-Part-1-A-Decision-Framework-for-Validating-AI-Projects
 tags:
-- AI
 - AI Feasibility
 - AI Operational Costs
 - AI Project Validation
-- Blogs
 - Business Impact
 - Data Readiness
 - Decision Tree

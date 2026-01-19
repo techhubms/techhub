@@ -10,13 +10,10 @@ date: 2025-10-17 07:25:12 +00:00
 permalink: /ai/community/LangChain-v1-Launches-with-Azure-AI-Foundry-Support-and-Streamlined-Agent-APIs
 tags:
 - Agent Abstractions
-- AI
 - AI Agents
 - API Migration
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
-- Community
 - Content Blocks
 - Developer API
 - JavaScript

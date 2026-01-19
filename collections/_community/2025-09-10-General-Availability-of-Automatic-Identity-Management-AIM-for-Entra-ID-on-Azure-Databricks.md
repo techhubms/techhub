@@ -14,15 +14,12 @@ tags:
 - AIM
 - API Automation
 - Automation
-- Azure
 - Azure Databricks
-- Community
 - Dashboards
 - Entra ID
 - Identity Management
 - Microsoft Entra
 - Nested Groups
-- Security
 - User Provisioning
 section_names:
 - azure

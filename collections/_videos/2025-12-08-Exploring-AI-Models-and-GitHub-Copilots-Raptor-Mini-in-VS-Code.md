@@ -9,21 +9,17 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-12-08 08:01:01 +00:00
 permalink: /github-copilot/videos/Exploring-AI-Models-and-GitHub-Copilots-Raptor-Mini-in-VS-Code
 tags:
-- AI
 - AI Models
 - Benchmarks
-- Coding
 - Coding Experience
 - Context Complexity
 - Developer Workflows
 - Evals
 - Fine Tuning
-- GitHub Copilot
 - Model Evaluation
 - Model Selection
 - Raptor Mini
 - Sonnet
-- Videos
 - VS Code
 section_names:
 - ai

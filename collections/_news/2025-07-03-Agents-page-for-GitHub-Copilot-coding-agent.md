@@ -9,13 +9,10 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-03 12:00:54 +00:00
 permalink: /github-copilot/news/Agents-page-for-GitHub-Copilot-coding-agent
 tags:
-- AI
 - Bug Fixing
 - Coding Agents
 - Developer Productivity
 - Feature Implementation
-- GitHub Copilot
-- News
 - Tech Debt
 section_names:
 - ai

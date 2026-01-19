@@ -9,14 +9,12 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-17 15:45:54 +00:00
 permalink: /ai/news/Microsoft-Opens-Quantum-Research-Center-with-Maryland-Partnership
 tags:
-- AI
 - Atom Computing
 - Company News
 - DARPA
 - Hardware Software Co Design
 - Majorana 1
 - Microsoft Quantum
-- News
 - On The Issues
 - Public Private Partnership
 - Quantum Benchmarking Initiative

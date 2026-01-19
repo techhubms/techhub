@@ -12,11 +12,8 @@ plans:
 - Free
 alt-collection: features
 tags:
-- AI
 - Editing
-- GitHub Copilot
 - Suggestions
-- Videos
 section_names:
 - ai
 - github-copilot

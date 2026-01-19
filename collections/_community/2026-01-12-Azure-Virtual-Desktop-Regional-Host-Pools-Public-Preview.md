@@ -10,13 +10,11 @@ date: 2026-01-12 20:30:42 +00:00
 permalink: /azure/community/Azure-Virtual-Desktop-Regional-Host-Pools-Public-Preview
 tags:
 - Admin Preview
-- Azure
 - Azure Portal
 - Azure Regions
 - Azure Virtual Desktop
 - Cloud Infrastructure
 - Cloud Services
-- Community
 - Data Sovereignty
 - Database Architecture
 - Deployment

@@ -11,13 +11,11 @@ permalink: /ai/videos/Beyond-Chat-Building-Smarter-AI-Agents-in-NET-with-AiGen
 tags:
 - .NET
 - Agents
-- AI
 - AI Agents
 - AI Integration
 - AiGen
 - C#
 - Code Assistant
-- Coding
 - Demo
 - Developer
 - Developer Community
@@ -28,7 +26,6 @@ tags:
 - Software Developer
 - Software Development
 - User Experience
-- Videos
 - VS
 section_names:
 - ai

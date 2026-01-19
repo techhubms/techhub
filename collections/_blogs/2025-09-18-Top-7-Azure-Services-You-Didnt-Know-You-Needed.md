@@ -10,7 +10,6 @@ date: 2025-09-18 10:55:59 +00:00
 permalink: /azure/blogs/Top-7-Azure-Services-You-Didnt-Know-You-Needed
 tags:
 - Application Insights
-- Azure
 - Azure App Configuration
 - Azure Bastion
 - Azure Chaos Studio
@@ -18,7 +17,6 @@ tags:
 - Azure Logic Apps
 - Azure Monitor
 - Azure Sentinel
-- Blogs
 - Chaos Engineering
 - Cloud Automation
 - Cloud Security
@@ -28,7 +26,6 @@ tags:
 - Observability
 - RDP
 - Resilience Testing
-- Security
 - SIEM
 - Workflow Automation
 section_names:

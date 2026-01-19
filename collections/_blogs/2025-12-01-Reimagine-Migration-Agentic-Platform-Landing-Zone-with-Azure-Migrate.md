@@ -12,16 +12,13 @@ tags:
 - Agentic
 - Agentic Approach
 - Automation
-- Azure
 - Azure Essentials Show
 - Azure Landing Zone
 - Azure Migrate
-- Blogs
 - Cloud
 - Cloud Governance
 - Cloud Migration
 - Compliance
-- DevOps
 - Hybrid Connectivity
 - IaC
 - Identity Management
@@ -32,7 +29,6 @@ tags:
 - Platform Landing Zone
 - Policy Enforcement
 - Scalability
-- Security
 - Subscription Management
 - Workload Assessment
 section_names:

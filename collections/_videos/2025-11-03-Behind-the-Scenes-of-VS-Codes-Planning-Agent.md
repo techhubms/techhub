@@ -9,19 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-11-03 08:00:35 +00:00
 permalink: /ai/videos/Behind-the-Scenes-of-VS-Codes-Planning-Agent
 tags:
-- AI
 - AI Agents
 - Automation
 - Bhavya
 - Chat Planning
-- Coding
 - Copilot Chat
 - Developer Tools
 - Extension
 - Productivity Tools
 - Software Engineering
 - Task Planning
-- Videos
 - VS Code
 section_names:
 - ai

@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-10-29 22:06:44 +00:00
 permalink: /github-copilot/videos/Collapsing-the-Distance-from-Idea-to-Impact-with-GitHub-Copilot-and-AI-Powered-Development
 tags:
-- AI
 - AI Powered Development
 - Ascii Motion
 - ASOS
@@ -18,7 +17,6 @@ tags:
 - CrisisLens
 - Digital Public Goods
 - GitHub
-- GitHub Copilot
 - GitHub Universe
 - GitHubUniverse
 - Hackathon Projects
@@ -27,7 +25,6 @@ tags:
 - PyFluff Furby
 - Python
 - Software Engineering
-- Videos
 section_names:
 - ai
 - github-copilot

@@ -11,15 +11,12 @@ permalink: /ml/news/Unlock-Real-Time-Intelligence-with-the-Eventhouse-Endpoint-f
 tags:
 - Advanced Analytics
 - Anomaly Detection
-- Azure
 - Data Engineering
 - Dynamic Data Types
 - Eventhouse Endpoint
 - KQL
 - Lakehouse
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Python Integration
 - Query Acceleration Policy

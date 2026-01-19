@@ -10,7 +10,6 @@ date: 2025-09-22 13:17:22 +00:00
 permalink: /azure/videos/Azure-Database-for-PostgreSQL-Flexible-Server-Deep-Dive
 tags:
 - Authentication
-- Azure
 - Azure Backup
 - Azure Cloud
 - Azure Database For PostgreSQL
@@ -30,7 +29,6 @@ tags:
 - Postgresql
 - Postgress
 - Replication
-- Videos
 - Virtual Endpoints
 section_names:
 - azure

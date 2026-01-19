@@ -10,7 +10,6 @@ date: 2025-11-19 11:47:25 +00:00
 permalink: /azure/videos/Optimizing-Azure-Managed-Disk-Tiering-for-Performance-and-Cost-Efficiency
 tags:
 - AutoScaler
-- Azure
 - Azure Managed Disks
 - Cloud Storage
 - Cost Management
@@ -26,7 +25,6 @@ tags:
 - Performance Tuning
 - Storage Management
 - Storage Optimization
-- Videos
 section_names:
 - azure
 ---

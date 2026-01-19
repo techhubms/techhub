@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-30 11:21:57 +00:00
 permalink: /ml/news/On-Premises-Data-Gateway-October-2025-Release-Overview
 tags:
-- Azure
 - Bug Fix
 - Connector Compatibility
 - Data Connectivity
@@ -20,8 +19,6 @@ tags:
 - FabricPipelineWorker
 - Gateway Version 3000.290
 - Microsoft Fabric
-- ML
-- News
 - On Premises Data Gateway
 - Power BI
 - Power BI Desktop

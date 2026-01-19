@@ -10,27 +10,21 @@ date: 2025-11-20 11:03:44 +00:00
 permalink: /github-copilot/news/Azure-DevOps-to-GitHub-Migration-Playbook-A-Step-by-Step-Guide-for-Agentic-DevOps
 tags:
 - Agentic DevOps
-- AI
 - AI Developer Tools
 - All Things Azure
 - Automation
-- Azure
 - Azure Boards
 - Azure DevOps
 - Azure Pipelines
 - CI/CD
-- Coding
 - Developer Productivity
-- DevOps
 - DevOps Integration
 - GHE
 - GitHub
 - GitHub CLI
-- GitHub Copilot
 - GitHub Enterprise
 - Hybrid Cloud
 - Migration
-- News
 - Personal Access Token
 - Repository Management
 - Source Code Migration

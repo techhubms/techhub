@@ -9,14 +9,10 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-18 08:30:25 +00:00
 permalink: /ai/blogs/Automating-Jira-PR-Reviews-and-Deployment-with-AI-Agents
 tags:
-- AI
 - AI Agent
 - Atlassian Python API
 - Automation
-- Blogs
 - CI/CD
-- Coding
-- DevOps
 - DevOps Pipeline
 - GitHub
 - GitHub Actions

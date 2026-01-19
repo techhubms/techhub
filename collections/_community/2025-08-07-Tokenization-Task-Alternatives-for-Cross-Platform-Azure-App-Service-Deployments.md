@@ -10,15 +10,11 @@ date: 2025-08-07 18:24:01 +00:00
 permalink: /coding/community/Tokenization-Task-Alternatives-for-Cross-Platform-Azure-App-Service-Deployments
 tags:
 - .NET 8
-- Azure
 - Azure App Service
 - Azure DevOps
 - CI/CD
-- Coding
-- Community
 - Cross Platform
 - Deployment Pipelines
-- DevOps
 - Environment Variables
 - Linux Agents
 - Runtime Configuration

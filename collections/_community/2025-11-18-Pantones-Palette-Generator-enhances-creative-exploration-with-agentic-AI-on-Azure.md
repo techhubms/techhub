@@ -10,20 +10,15 @@ date: 2025-11-18 16:54:22 +00:00
 permalink: /github-copilot/community/Pantones-Palette-Generator-enhances-creative-exploration-with-agentic-AI-on-Azure
 tags:
 - Agentic RAG
-- AI
 - AI Orchestration
-- Azure
 - Azure AI Search
 - Azure Cosmos DB
 - Azure Functions
 - Azure OpenAI
-- Coding
 - Color Science
-- Community
 - Data Persistence
 - Design Automation
 - Developer Tools
-- GitHub Copilot
 - LLM Integration
 - Microsoft Agent Framework
 - Microsoft Foundry

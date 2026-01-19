@@ -9,12 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 23:19:21 +00:00
 permalink: /coding/community/General-Availability-Enhanced-Data-Mapper-Experience-in-Logic-Apps-Standard
 tags:
-- Azure
 - Azure Integration Services
 - Azure Logic Apps
 - BizTalk Migration
-- Coding
-- Community
 - CSV Schema
 - Data Mapper UX
 - Data Transformation

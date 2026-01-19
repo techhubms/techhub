@@ -9,18 +9,15 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-02 19:20:00 +00:00
 permalink: /github-copilot/news/Claude-Sonnet-45-Now-Available-to-GitHub-Copilot-Users-in-Visual-Studio-and-Other-IDEs
 tags:
-- AI
 - AI Models
 - Claude Sonnet 4.5
 - Copilot
 - Copilot Enterprise
 - Copilot Pro
 - Eclipse
-- GitHub Copilot
 - IDE Integration
 - JetBrains IDEs
 - Model Picker
-- News
 - Public Preview
 - VS
 - VS Code

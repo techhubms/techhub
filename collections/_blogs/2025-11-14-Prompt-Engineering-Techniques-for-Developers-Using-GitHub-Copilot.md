@@ -9,18 +9,14 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-14 08:50:07 +00:00
 permalink: /github-copilot/blogs/Prompt-Engineering-Techniques-for-Developers-Using-GitHub-Copilot
 tags:
-- AI
 - AI Coding Assistant
 - Best Practices
-- Blogs
 - Boilerplate Generation
 - Code Quality
 - Code Review
 - Code Suggestions
-- Coding
 - Contextual Prompts
 - Developer Productivity
-- GitHub Copilot
 - Iterative Development
 - OpenAI
 - Programming Tutorials

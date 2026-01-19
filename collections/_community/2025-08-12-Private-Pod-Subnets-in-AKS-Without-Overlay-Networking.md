@@ -10,14 +10,10 @@ date: 2025-08-12 13:36:46 +00:00
 permalink: /coding/community/Private-Pod-Subnets-in-AKS-Without-Overlay-Networking
 tags:
 - AKS
-- Azure
 - Azure CNI
 - Azure Firewall
-- Coding
-- Community
 - ConfigMap
 - DaemonSet
-- DevOps
 - Egress Gateway
 - ExpressRoute
 - Ip Masq Agent V2

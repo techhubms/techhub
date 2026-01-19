@@ -10,13 +10,10 @@ date: 2025-11-24 15:00:06 +00:00
 permalink: /ai/news/Visual-Studio-2026-Modern-IDE-with-Monthly-Updates-and-Flexible-Build-Tools
 tags:
 - .NET
-- AI
 - Build Tools
 - C++
-- Coding
 - Continuous Delivery
 - Developer Tools
-- DevOps
 - Enterprise Support
 - IDE
 - Insiders Channel
@@ -26,7 +23,6 @@ tags:
 - Modern Support Lifecycle
 - Monthly Updates
 - MSVC
-- News
 - Project Compatibility
 - Release Cadence
 - Servicing Channels

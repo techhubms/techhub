@@ -10,9 +10,7 @@ date: 2025-08-25 10:06:56 +00:00
 permalink: /coding/blogs/Branding-Your-SharePoint-Site-for-Your-Organization
 tags:
 - Accessibility
-- Blogs
 - Branding
-- Coding
 - Company Logo
 - Employee Experience
 - Hub Sites

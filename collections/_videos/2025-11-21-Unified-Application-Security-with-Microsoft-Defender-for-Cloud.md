@@ -9,15 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 15:20:44 +00:00
 permalink: /ai/videos/Unified-Application-Security-with-Microsoft-Defender-for-Cloud
 tags:
-- AI
 - AI Workloads
 - Application Security
-- Azure
 - Azure Security
 - Cloud Native
 - Cloud Security
 - Container Security
-- DevOps
 - DevOps Security
 - GitHub Advanced Security
 - Incident Response
@@ -25,12 +22,10 @@ tags:
 - MSIgnite
 - Multi Cloud
 - ProtectcloudAIplatformandapps
-- Security
 - Security CLI
 - Security Guardrails
 - Security Posture Management
 - Threat Mitigation
-- Videos
 section_names:
 - ai
 - azure

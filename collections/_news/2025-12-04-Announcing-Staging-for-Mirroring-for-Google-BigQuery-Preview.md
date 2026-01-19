@@ -10,7 +10,6 @@ date: 2025-12-04 08:00:00 +00:00
 permalink: /ml/news/Announcing-Staging-for-Mirroring-for-Google-BigQuery-Preview
 tags:
 - Analytics
-- Azure
 - Bulk Data
 - Cloud Data
 - Cross Cloud
@@ -21,8 +20,6 @@ tags:
 - Google BigQuery
 - Microsoft Fabric
 - Mirroring
-- ML
-- News
 - Performance Optimization
 - Preview Feature
 - Staging

@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q
 date: 2025-06-24 15:01:15 +00:00
 permalink: /ai/videos/How-AI-and-Microsoft-Are-Transforming-the-Energy-Sector-Insights-from-EPRI
 tags:
-- AI
 - Collaboration
 - Digital Transformation
 - Electric Power Research Institute
@@ -24,7 +23,6 @@ tags:
 - Resilience
 - Sustainability
 - Utilities
-- Videos
 section_names:
 - ai
 ---

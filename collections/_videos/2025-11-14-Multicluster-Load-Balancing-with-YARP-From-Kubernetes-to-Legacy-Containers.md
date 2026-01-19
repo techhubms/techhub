@@ -12,9 +12,7 @@ tags:
 - .NET
 - Architecture
 - Cloud Native
-- Coding
 - Container Orchestration
-- DevOps
 - Integration
 - Kubernetes
 - Legacy Modernization
@@ -23,7 +21,6 @@ tags:
 - Production Infrastructure
 - Routing
 - Traffic Management
-- Videos
 - Windows Containers
 - YARP
 section_names:

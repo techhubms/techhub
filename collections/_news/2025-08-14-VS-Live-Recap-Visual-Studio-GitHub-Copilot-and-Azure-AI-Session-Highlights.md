@@ -10,20 +10,15 @@ date: 2025-08-14 17:05:34 +00:00
 permalink: /github-copilot/news/VS-Live-Recap-Visual-Studio-GitHub-Copilot-and-Azure-AI-Session-Highlights
 tags:
 - .NET
-- AI
 - AI Assisted Debugging
 - AI Development
-- Azure
 - Azure AI
-- Coding
 - Company News
 - Demo
 - Developer Conference
 - Git Integration
-- GitHub Copilot
 - Inner Loop Productivity
 - Microsoft HQ
-- News
 - Productivity Tools
 - Session Highlights
 - VS

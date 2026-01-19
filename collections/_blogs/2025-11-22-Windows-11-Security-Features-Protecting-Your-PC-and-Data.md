@@ -10,7 +10,6 @@ date: 2025-11-22 08:14:41 +00:00
 permalink: /security/blogs/Windows-11-Security-Features-Protecting-Your-PC-and-Data
 tags:
 - BitLocker
-- Blogs
 - Controlled Folder Access
 - Core Isolation
 - Defender Antivirus
@@ -23,7 +22,6 @@ tags:
 - PC Security
 - Ransomware Protection
 - Secure Boot
-- Security
 - Smart App Control
 - TPM 2.0
 - UEFI

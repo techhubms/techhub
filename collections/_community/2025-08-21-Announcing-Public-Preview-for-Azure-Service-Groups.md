@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-21 17:58:39 +00:00
 permalink: /azure/community/Announcing-Public-Preview-for-Azure-Service-Groups
 tags:
-- Azure
 - Azure Governance
 - Azure Monitor
 - Azure Service Groups
 - Cloud Management
-- Community
 - Hierarchy Management
 - Management Groups
 - Microsoft Entra

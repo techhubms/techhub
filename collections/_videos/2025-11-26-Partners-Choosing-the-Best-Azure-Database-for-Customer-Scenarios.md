@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-26 20:02:42 +00:00
 permalink: /ai/videos/Partners-Choosing-the-Best-Azure-Database-for-Customer-Scenarios
 tags:
-- AI
 - AI Integration
 - Analytics
 - Application Modernization
-- Azure
 - Azure SQL
 - Cloud Migration
 - Co Location
@@ -27,7 +25,6 @@ tags:
 - Microsoft AI Cloud Partner Program
 - Microsoft Fabric
 - Microsoft Ignite
-- ML
 - Ms Ignite
 - Msft Ignite
 - Partner Solutions
@@ -36,7 +33,6 @@ tags:
 - Session
 - Unify Your Data Platform
 - Unify Your Data Platform:microsoft Fabric
-- Videos
 section_names:
 - ai
 - azure

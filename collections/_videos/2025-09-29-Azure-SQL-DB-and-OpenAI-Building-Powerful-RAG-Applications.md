@@ -9,15 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-29 16:00:36 +00:00
 permalink: /ai/videos/Azure-SQL-DB-and-OpenAI-Building-Powerful-RAG-Applications
 tags:
-- AI
 - AI Integration
 - Application Development
-- Azure
 - Azure Samples
 - Azure SQL Database
 - Cloud Computing
 - Cloud Data
-- Coding
 - Data Engineering
 - Database AI
 - Dev
@@ -33,7 +30,6 @@ tags:
 - Step By Step Guide
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

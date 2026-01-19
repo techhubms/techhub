@@ -10,12 +10,10 @@ date: 2025-11-24 08:08:59 +00:00
 permalink: /ai/videos/Govern-AI-Agents-with-Azure-API-Management-Secure-Monitor-and-Scale-AI-Workloads
 tags:
 - Agent Governance
-- AI
 - AI Gateway
 - API Center
 - API Integration
 - API Monitoring
-- Azure
 - Azure API Management
 - Azure Foundry
 - Content Safety
@@ -28,10 +26,8 @@ tags:
 - MSIgnite
 - Multi Model AI
 - Policy Enforcement
-- Security
 - Semantic Caching
 - Token Limit
-- Videos
 section_names:
 - ai
 - azure

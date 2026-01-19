@@ -9,17 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 16:02:34 +00:00
 permalink: /ai/community/Intelligent-Troubleshooting-with-Azure-Copilot-Observability-Agent
 tags:
-- AI
 - AI Driven Investigations
 - AKS
 - Anomaly Detection
 - Application Services
-- Azure
 - Azure Copilot Observability Agent
 - Azure Monitor
 - Azure Portal
 - Cloud Operations
-- Community
 - Copilot Integration
 - Deep Preview
 - Diagnostics

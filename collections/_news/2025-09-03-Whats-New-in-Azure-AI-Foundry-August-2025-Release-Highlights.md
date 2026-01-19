@@ -11,14 +11,11 @@ permalink: /ai/news/Whats-New-in-Azure-AI-Foundry-August-2025-Release-Highlights
 tags:
 - .NET SDK
 - Agents
-- AI
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
 - Azure SDKs
 - Browser Automation
 - CMK
-- Coding
 - FLUX
 - FLUX Models
 - Foundry Local
@@ -29,7 +26,6 @@ tags:
 - Mistral Document AI
 - Model Deployment
 - Model Router
-- News
 - Observability
 - OpenAI Gpt Oss
 - Playwright Testing

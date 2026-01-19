@@ -10,7 +10,6 @@ date: 2025-10-20 09:00:00 +00:00
 permalink: /ml/news/External-Data-Materialization-Strategies-in-Fabric-Data-Warehouse
 tags:
 - Analytics
-- Azure
 - Azure Data Lake Storage
 - CSV
 - CTAS
@@ -21,8 +20,6 @@ tags:
 - JSONL
 - Materialization
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - OPENROWSET
 - Parquet

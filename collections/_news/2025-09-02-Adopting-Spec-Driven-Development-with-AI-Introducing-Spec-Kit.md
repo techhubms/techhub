@@ -9,18 +9,14 @@ feed_url: https://github.blog/feed/
 date: 2025-09-02 16:48:03 +00:00
 permalink: /github-copilot/news/Adopting-Spec-Driven-Development-with-AI-Introducing-Spec-Kit
 tags:
-- AI
 - AI & ML
 - AI Tooling
 - Automation
 - CLI Tools
-- Coding
 - Development Workflow
 - Feature Implementation
 - Generative AI
-- GitHub Copilot
 - Legacy Modernization
-- News
 - Open Source
 - Project Planning
 - Software Engineering

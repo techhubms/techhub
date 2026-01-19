@@ -11,10 +11,8 @@ permalink: /coding/videos/VS-Code-Live-Let-it-Cook-Building-a-Universal-MCP-Inst
 tags:
 - Burke Holland
 - Centralized Installation
-- Coding
 - Deep Linking
 - Developer Tools
-- DevOps
 - Install Link
 - Installation Directions
 - Microsoft Certified Projects
@@ -23,7 +21,6 @@ tags:
 - Repository Badges
 - Sean Roberts
 - Vibecoding
-- Videos
 - VS Code
 section_names:
 - devops

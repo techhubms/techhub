@@ -10,20 +10,16 @@ date: 2025-11-10 08:00:41 +00:00
 permalink: /github-copilot/videos/VS-Code-as-an-AI-Native-Editor-Insights-from-GitHub-Universe-2025
 tags:
 - Agent Sessions
-- AI
 - AI Agents
 - AI Native Editor
 - Cloud Development
-- Coding
 - Coding Workflow
 - Copilot Upgrades
 - Developer Tooling
 - Editor Extensions
-- GitHub Copilot
 - GitHub Universe
 - Mission Control
 - Open Platform
-- Videos
 - VS Code
 section_names:
 - ai

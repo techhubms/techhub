@@ -17,7 +17,6 @@ tags:
 - ASP.NET Core
 - Authentication
 - Authorization
-- Coding
 - Daniel Roth
 - Demo
 - Developer Community
@@ -25,10 +24,8 @@ tags:
 - Dotnetdeveloper
 - HTTP 401
 - Microsoft
-- Security
 - Software Developer
 - Stephen Halter
-- Videos
 - Web APIs
 section_names:
 - coding

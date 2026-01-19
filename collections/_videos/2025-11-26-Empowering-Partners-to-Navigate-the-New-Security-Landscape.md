@@ -10,9 +10,7 @@ date: 2025-11-26 10:13:41 +00:00
 permalink: /ai/videos/Empowering-Partners-to-Navigate-the-New-Security-Landscape
 tags:
 - Agent Sprawl
-- AI
 - AI Security
-- Azure
 - Data Leaks
 - Empowering Partners To Navigate The New Security Landscape | PBRK273
 - Enterprise Security
@@ -34,11 +32,9 @@ tags:
 - PBRK273
 - Regulatory Compliance
 - Secure Your Data
-- Security
 - Security Challenges
 - Security Teams
 - Threat Intelligence
-- Videos
 section_names:
 - ai
 - azure

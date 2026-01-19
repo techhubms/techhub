@@ -14,7 +14,6 @@ tags:
 - Android
 - API Integration
 - Apple Declared Age Range
-- Coding
 - Compliance
 - Cross Platform
 - Family Sharing
@@ -22,7 +21,6 @@ tags:
 - IAgeSignalService
 - Ios
 - MAUI
-- News
 - NuGet
 - Platform Specific Code
 - Sample App

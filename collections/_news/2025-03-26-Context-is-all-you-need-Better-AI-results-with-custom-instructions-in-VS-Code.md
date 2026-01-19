@@ -9,16 +9,12 @@ feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-03-26 00:00:00 +00:00
 permalink: /github-copilot/news/Context-is-all-you-need-Better-AI-results-with-custom-instructions-in-VS-Code
 tags:
-- AI
 - Code Generation
-- Coding
 - Commit Message Generation
 - Copilot Chat
 - Custom Instructions
 - Development Workflow
-- GitHub Copilot
 - JavaScript
-- News
 - Node.js
 - Project Configuration
 - Prompt Engineering

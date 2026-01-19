@@ -11,19 +11,14 @@ permalink: /github-copilot/news/Debugging-UI-with-AI-GitHub-Copilot-agent-mode-m
 tags:
 - Agent Mode
 - Agentic AI
-- AI
 - AI & ML
 - AI Workflows
 - Automation
-- Coding
 - Custom Instructions
 - Developer Productivity
-- DevOps
 - End To End Testing
-- GitHub Copilot
 - MCP
 - MCP Server
-- News
 - Next.js
 - Playwright
 - Rubber Duck Thursdays

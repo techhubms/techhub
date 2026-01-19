@@ -9,15 +9,12 @@ feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-05-14 00:00:00 +00:00
 permalink: /ai/news/Integrating-Model-Context-Protocol-MCP-in-VS-Code-Agent-Mode
 tags:
-- AI
 - AI Agents
-- Coding
 - Developer Tools
 - Dynamic Tool Discovery
 - Extension Development
 - GitHub MCP Server
 - MCP
-- News
 - Playwright MCP Server
 - Secrets Management
 - Tool Server

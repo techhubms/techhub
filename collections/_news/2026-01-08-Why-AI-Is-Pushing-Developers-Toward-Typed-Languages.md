@@ -9,12 +9,10 @@ feed_url: https://github.blog/feed/
 date: 2026-01-08 22:25:54 +00:00
 permalink: /ai/news/Why-AI-Is-Pushing-Developers-Toward-Typed-Languages
 tags:
-- AI
 - AI & ML
 - AI Assisted Development
 - C#
 - C++
-- Coding
 - Copilot CLI
 - Dynamic Typing
 - Gradual Typing
@@ -22,7 +20,6 @@ tags:
 - JavaScript
 - LLMs
 - Luau
-- News
 - Octoverse
 - Programming Languages
 - Programming Languages & Frameworks

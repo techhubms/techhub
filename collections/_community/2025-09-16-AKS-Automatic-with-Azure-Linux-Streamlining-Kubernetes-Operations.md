@@ -11,15 +11,12 @@ permalink: /azure/community/AKS-Automatic-with-Azure-Linux-Streamlining-Kubernet
 tags:
 - AKS
 - AKS Automatic
-- Azure
 - Azure Linux
 - CIS Benchmarks
 - Cloud Infrastructure
 - Cluster Security
-- Community
 - Container Workloads
 - CVE Management
-- DevOps
 - FedRAMP
 - FIPS Compliance
 - Kubernetes
@@ -28,7 +25,6 @@ tags:
 - Operational Efficiency
 - Performance Optimization
 - Scaling
-- Security
 section_names:
 - azure
 - devops

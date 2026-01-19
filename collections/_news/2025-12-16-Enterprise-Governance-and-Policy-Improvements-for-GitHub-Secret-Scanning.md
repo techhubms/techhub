@@ -12,18 +12,15 @@ tags:
 - Alert Management
 - Application Security
 - Custom Patterns
-- DevOps
 - DevOps Security
 - Enterprise Security
 - GitHub
 - GitHub Apps
 - Improvement
-- News
 - Permissions
 - Policy Management
 - Push Protection
 - Secret Scanning
-- Security
 - Security Governance
 - Security Manager Role
 section_names:

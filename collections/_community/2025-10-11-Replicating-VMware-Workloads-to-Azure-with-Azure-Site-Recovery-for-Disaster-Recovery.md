@@ -9,10 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-11 18:46:30 +00:00
 permalink: /azure/community/Replicating-VMware-Workloads-to-Azure-with-Azure-Site-Recovery-for-Disaster-Recovery
 tags:
-- Azure
 - Azure Site Recovery
 - Backup
-- Community
 - Cost Optimization
 - Database Replication
 - Disaster Recovery
@@ -23,7 +21,6 @@ tags:
 - Network Security
 - Non Destructive DR Drill
 - Oracle
-- Security
 - SQL Server
 - VMware
 - Windows Server

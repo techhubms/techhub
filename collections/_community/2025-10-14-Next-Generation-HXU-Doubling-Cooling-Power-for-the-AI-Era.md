@@ -9,11 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-14 00:00:00 +00:00
 permalink: /ai/community/Next-Generation-HXU-Doubling-Cooling-Power-for-the-AI-Era
 tags:
-- AI
 - AI Accelerators
 - AI Infrastructure
-- Azure
-- Community
 - Cybersecurity
 - Datacenter Cooling
 - High Density Computing
@@ -27,7 +24,6 @@ tags:
 - Power Density
 - Predictive Maintenance
 - Redundancy
-- Security
 - Telemetry
 section_names:
 - ai

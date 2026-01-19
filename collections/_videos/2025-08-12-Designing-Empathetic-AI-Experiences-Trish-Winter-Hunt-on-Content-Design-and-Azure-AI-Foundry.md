@@ -9,12 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-12 15:33:36 +00:00
 permalink: /ai/videos/Designing-Empathetic-AI-Experiences-Trish-Winter-Hunt-on-Content-Design-and-Azure-AI-Foundry
 tags:
-- AI
 - AI Adoption
 - AI Agents
 - AI Hallucinations Handling
 - AI UX
-- Azure
 - Azure AI Foundry
 - ChatGPT
 - Cloud Computing
@@ -35,7 +33,6 @@ tags:
 - Technology
 - User Experience
 - UX Writing
-- Videos
 section_names:
 - ai
 - azure

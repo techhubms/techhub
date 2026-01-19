@@ -13,7 +13,6 @@ tags:
 - AI Inferencing
 - Application Gateway
 - Automation
-- Azure
 - Azure Boost
 - Azure IaaS
 - Azure Ultra Disk
@@ -30,7 +29,6 @@ tags:
 - QUIC
 - Scaling
 - Storage Solutions
-- Videos
 - Virtual Machines
 section_names:
 - azure

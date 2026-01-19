@@ -10,13 +10,11 @@ date: 2025-10-28 13:57:29 +00:00
 permalink: /azure/blogs/Azure-Local-Overview-Hybrid-Cloud-Edge-and-Sovereign-Scenarios
 tags:
 - AKS
-- Azure
 - Azure Defender
 - Azure Local
 - Azure Monitor
 - Azure Portal
 - Azure Virtual Desktop
-- Blogs
 - Cloud Architecture
 - Cloud Management
 - Digital Sovereignty
@@ -26,7 +24,6 @@ tags:
 - High Availability
 - Hybrid Cloud
 - Lifecycle Management
-- Security
 - Uncategorized
 - Virtual Machines
 - Workload Management

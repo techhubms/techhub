@@ -9,19 +9,15 @@ feed_url: https://www.reddit.com/r/devops/.rss
 date: 2025-08-04 04:16:15 +00:00
 permalink: /ai/community/Our-Infra-Was-Fine-The-AI-Pipeline-Wasnt-3-Silent-Crashes-We-Kept-Missing
 tags:
-- AI
 - Bootstrap Ordering
 - Canary Prompt
 - CI/CD
-- Community
 - Deployment Deadlock
-- DevOps
 - Incident Response
 - LLM Pipeline
 - Pre Deploy Collapse
 - Problem Mapping
 - Production Failures
-- Security
 - Semantic Health Checks
 - Semantic Tree
 section_names:

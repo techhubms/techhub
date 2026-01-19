@@ -11,19 +11,14 @@ permalink: /github-copilot/community/AI-Toolkit-for-VS-Code-January-2026-Update-
 tags:
 - Agent Framework
 - Agent Skills
-- AI
 - AI Toolkit
 - Anthropic
-- Azure
 - Bug Fixes
 - Claude
 - Code Generation
-- Coding
-- Community
 - Copilot Chat
 - Entra Auth
 - Evaluation Tools
-- GitHub Copilot
 - Microsoft Foundry
 - Model Catalog
 - Performance Tuning

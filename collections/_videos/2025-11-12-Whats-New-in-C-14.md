@@ -16,7 +16,6 @@ tags:
 - ASP.NET Core 10
 - C#
 - C# 14
-- Coding
 - Coding Patterns
 - Developer Productivity
 - F# 10
@@ -25,7 +24,6 @@ tags:
 - Microsoft
 - Programming Languages
 - Software Development
-- Videos
 - VS
 section_names:
 - coding

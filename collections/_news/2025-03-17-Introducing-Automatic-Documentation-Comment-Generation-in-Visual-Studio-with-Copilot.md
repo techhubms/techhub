@@ -9,20 +9,16 @@ feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-03-17 15:00:10 +00:00
 permalink: /github-copilot/news/Introducing-Automatic-Documentation-Comment-Generation-in-Visual-Studio-with-Copilot
 tags:
-- AI
 - AI Generated Comments
 - Automatic Doc Comments
 - C#
 - C++
-- Coding
 - Copilot
 - Developer Tools
 - Docs
 - Documentation
 - Doxygen
 - Editor Integration
-- GitHub Copilot
-- News
 - Preview Feature
 - Productivity
 - Settings

@@ -9,7 +9,6 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-06 17:00:00 +00:00
 permalink: /azure/news/The-New-Era-of-Azure-Ultra-Disk-Next-Gen-Mission-Critical-Block-Storage
 tags:
-- Azure
 - Azure Boost
 - Azure Ultra Disk
 - Backup And Recovery
@@ -22,7 +21,6 @@ tags:
 - Latency
 - Managed Disks
 - Mission Critical Workloads
-- News
 - Performance Optimization
 - Snapshot Recovery
 - Storage

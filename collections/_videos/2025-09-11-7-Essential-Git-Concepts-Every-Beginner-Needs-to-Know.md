@@ -11,7 +11,6 @@ permalink: /devops/videos/7-Essential-Git-Concepts-Every-Beginner-Needs-to-Know
 tags:
 - Branches
 - Collaboration
-- DevOps
 - Git
 - Gitcommands
 - GitHub
@@ -22,7 +21,6 @@ tags:
 - Software Development
 - Staging Area
 - Version Control
-- Videos
 section_names:
 - devops
 ---

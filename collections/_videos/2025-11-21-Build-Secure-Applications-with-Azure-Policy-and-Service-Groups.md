@@ -9,8 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 10:19:24 +00:00
 permalink: /ai/videos/Build-Secure-Applications-with-Azure-Policy-and-Service-Groups
 tags:
-- AI
-- Azure
 - Azure Policy
 - Cloud Security
 - Compliance
@@ -23,10 +21,8 @@ tags:
 - MSIgnite
 - Resource Management
 - Secure By Default
-- Security
 - Security Governance
 - Service Groups
-- Videos
 - Windows Workloads
 section_names:
 - ai

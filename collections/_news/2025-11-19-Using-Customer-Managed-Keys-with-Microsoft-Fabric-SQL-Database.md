@@ -14,7 +14,6 @@ tags:
 - AI Projects
 - Asymmetric Key
 - Auditability
-- Azure
 - Azure Key Vault
 - Compliance
 - Customer Managed Keys
@@ -25,11 +24,8 @@ tags:
 - Encryption Query
 - Fabric Integration
 - Microsoft Fabric
-- ML
-- News
 - Regulatory Standards
 - Secure Development
-- Security
 - SQL Database
 - Transparent Data Encryption
 - Workspaces

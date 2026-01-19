@@ -9,16 +9,13 @@ feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-07-11 00:00:00 +00:00
 permalink: /github-copilot/blogs/Copilot-vs-Chat-Sidekick-Showdown-When-to-Use-Each-Coding-Sidekick
 tags:
-- AI
 - AI Coding Tools
-- Blogs
 - ChatGPT
 - Code Assistant
 - Coding Productivity
 - Coding Workflow
 - Copilot Chat
 - Gemini
-- GitHub Copilot
 - Inline Code Suggestions
 - Software Development
 section_names:

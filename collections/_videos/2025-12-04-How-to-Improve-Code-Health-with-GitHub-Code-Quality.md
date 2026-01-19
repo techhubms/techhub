@@ -17,12 +17,10 @@ tags:
 - Coding Standards
 - Continuous Integration
 - Developer Tools
-- DevOps
 - GitHub
 - Repository Health
 - Software Maintenance
 - Technical Debt
-- Videos
 section_names:
 - devops
 ---

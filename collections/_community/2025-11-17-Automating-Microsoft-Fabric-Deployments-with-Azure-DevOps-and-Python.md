@@ -10,19 +10,14 @@ date: 2025-11-17 06:10:49 +00:00
 permalink: /ml/community/Automating-Microsoft-Fabric-Deployments-with-Azure-DevOps-and-Python
 tags:
 - Authentication
-- Azure
 - Azure DevOps
 - CI/CD Pipeline
-- Coding
-- Community
 - Configuration Files
 - Data Pipeline
-- DevOps
 - Environment Strategy
 - Fabric Cicd
 - Lakehouse
 - Microsoft Fabric
-- ML
 - Notebook Deployment
 - Parameter Management
 - Pipeline Orchestration

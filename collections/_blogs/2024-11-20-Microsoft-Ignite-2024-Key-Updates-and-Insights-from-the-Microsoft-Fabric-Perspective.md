@@ -9,10 +9,7 @@ feed_url: https://zure.com/category/blog/feed/?tag=dataai
 date: 2024-11-20 06:19:29 +00:00
 permalink: /ai/blogs/Microsoft-Ignite-2024-Key-Updates-and-Insights-from-the-Microsoft-Fabric-Perspective
 tags:
-- AI
 - AI Skills
-- Azure
-- Blogs
 - CI/CD
 - Copilot
 - Data & AI
@@ -21,7 +18,6 @@ tags:
 - Ignite
 - Lakehouse
 - Microsoft Fabric
-- ML
 - OneLake
 - Open Mirroring
 - Real Time Intelligence

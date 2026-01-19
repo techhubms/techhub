@@ -10,16 +10,13 @@ date: 2025-03-17 10:33:20 +00:00
 permalink: /azure/blogs/Windows-Server-2025-Security-Baseline-and-App-Control-Enhancing-Windows-Server-Security
 tags:
 - App Control
-- Azure
 - Azure Arc
-- Blogs
 - Cloud
 - Hybrid Cloud
 - Microsoft
 - Microsoft Azure
 - Policy Management
 - PowerShell
-- Security
 - Security Baseline
 - Server Security
 - Windows Admin Center

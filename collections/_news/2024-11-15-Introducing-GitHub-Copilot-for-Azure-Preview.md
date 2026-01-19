@@ -9,24 +9,18 @@ feed_url: https://code.visualstudio.com/feed.xml
 date: 2024-11-15 00:00:00 +00:00
 permalink: /github-copilot/news/Introducing-GitHub-Copilot-for-Azure-Preview
 tags:
-- AI
 - Application Deployment
-- Azure
 - Azure AI Search
 - Azure Developer CLI
 - Azure OpenAI
 - Azure Portal
 - Azure SQL
 - CI/CD
-- Coding
 - Container Apps
-- DevOps
 - Diagnostics
-- GitHub Copilot
 - GitHub Copilot For Azure
 - GPT 4o
 - Kubernetes
-- News
 - RAG
 - Resource Management
 - Slash Commands

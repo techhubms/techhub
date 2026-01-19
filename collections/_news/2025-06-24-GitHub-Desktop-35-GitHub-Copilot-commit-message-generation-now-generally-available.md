@@ -9,11 +9,8 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-06-24 10:26:20 +00:00
 permalink: /github-copilot/news/GitHub-Desktop-35-GitHub-Copilot-commit-message-generation-now-generally-available
 tags:
-- AI
-- GitHub Copilot
 - GitHub Desktop
 - Improvements
-- News
 - Version 3.5
 section_names:
 - ai

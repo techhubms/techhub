@@ -10,17 +10,14 @@ date: 2025-11-29 08:26:10 +00:00
 permalink: /azure/community/Securing-Azure-Confidential-VM-Backups-with-Recovery-Services-Vault-and-Private-Endpoints
 tags:
 - Attestation
-- Azure
 - Azure Confidential VM
 - Azure Monitor
 - Backup Extension
 - Bicep
 - CMK Support
-- Community
 - Confidential Computing
 - Customer Managed Keys
 - CVM Encryption
-- DevOps
 - DNS Zone
 - Enhanced Backup Policy
 - Key Vault
@@ -31,7 +28,6 @@ tags:
 - RBAC
 - Recovery Services Vault
 - REST API
-- Security
 - Terraform
 - Zone Redundant Storage
 section_names:

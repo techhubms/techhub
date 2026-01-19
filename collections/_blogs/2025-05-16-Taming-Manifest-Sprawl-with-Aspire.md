@@ -11,14 +11,11 @@ permalink: /coding/blogs/Taming-Manifest-Sprawl-with-Aspire
 tags:
 - .NET
 - Aspire
-- Blogs
 - C#
 - CI/CD
 - Cloud Native
-- Coding
 - Configuration Management
 - Developer Experience
-- DevOps
 - Docker
 - Docker Compose
 - Kubernetes

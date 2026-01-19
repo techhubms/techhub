@@ -15,7 +15,6 @@ tags:
 - ASP.NET Core
 - Aspdotnet
 - Blazor
-- Coding
 - Contributing
 - Demo
 - Developer
@@ -27,7 +26,6 @@ tags:
 - Perfview
 - Software Developer
 - Thread Pool
-- Videos
 section_names:
 - coding
 ---

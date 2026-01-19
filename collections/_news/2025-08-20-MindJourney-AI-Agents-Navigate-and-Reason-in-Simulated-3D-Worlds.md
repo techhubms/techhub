@@ -10,7 +10,6 @@ date: 2025-08-20 21:00:30 +00:00
 permalink: /ai/news/MindJourney-AI-Agents-Navigate-and-Reason-in-Simulated-3D-Worlds
 tags:
 - 3D Simulation
-- AI
 - AI Agents
 - AI Evaluation
 - Autonomous Systems
@@ -18,7 +17,6 @@ tags:
 - Computer Vision
 - Microsoft Research
 - MindJourney
-- News
 - Simulation
 - Spatial Beam Search
 - Spatial Reasoning

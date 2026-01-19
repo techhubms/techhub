@@ -11,13 +11,11 @@ permalink: /ml/blogs/Boosting-Performance-with-the-Materialized-View-Pattern-in-
 tags:
 - Analytical Dashboards
 - Architecture
-- Azure
 - Azure Data Factory
 - Azure Databricks
 - Azure SQL Database
 - Azure SQL Managed Instance
 - Azure Synapse Analytics
-- Blogs
 - Cost Optimization
 - Data Architecture
 - Data Engineering
@@ -28,7 +26,6 @@ tags:
 - KPI Reporting
 - Materialized View Pattern
 - Microsoft Azure
-- ML
 - Partitioning
 - Power BI DirectQuery
 - Query Performance

@@ -12,9 +12,7 @@ tags:
 - .NET
 - .NET 8
 - .NET CLI
-- Blogs
 - C#
-- Coding
 - Content Pipeline
 - Cross Platform
 - DesktopGL

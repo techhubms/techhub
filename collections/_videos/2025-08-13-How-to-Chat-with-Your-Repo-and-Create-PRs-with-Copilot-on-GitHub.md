@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-13 14:00:33 +00:00
 permalink: /github-copilot/videos/How-to-Chat-with-Your-Repo-and-Create-PRs-with-Copilot-on-GitHub
 tags:
-- AI
 - AI Chat
 - AI Control Center
 - AI Models
@@ -18,7 +17,6 @@ tags:
 - Conversational AI
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - GitHub Web Features
 - IDE Integration
 - Issue Management
@@ -26,7 +24,6 @@ tags:
 - Pull Requests
 - Repository Q&A
 - Software Engineering
-- Videos
 section_names:
 - ai
 - github-copilot

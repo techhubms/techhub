@@ -11,10 +11,8 @@ permalink: /ai/videos/Accelerating-AI-Agent-Development-with-Microsoft-Foundry-a
 tags:
 - Agent Factory
 - Agentic Workflows
-- AI
 - AI Agents
 - AI Studio
-- Azure
 - Azure AI
 - Capgemini
 - Citrix
@@ -30,9 +28,7 @@ tags:
 - Model Catalog
 - MSIgnite
 - Purview
-- Security
 - Threat Protection
-- Videos
 - Workflow Orchestration
 section_names:
 - ai

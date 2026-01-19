@@ -10,13 +10,11 @@ date: 2025-09-26 07:58:54 +00:00
 permalink: /devops/blogs/How-GitHub-Plans-to-Secure-npm-After-Recent-Supply-Chain-Attacks
 tags:
 - API Token Deprecation
-- Blogs
 - Business Of DevOps
 - CI/CD Authentication
 - CI/CD Pipelines
 - Crates.io
 - Crates.io Security
-- DevOps
 - DevSecOps
 - GitHub
 - npm
@@ -30,7 +28,6 @@ tags:
 - PyPI
 - PyPI Trusted Publishing
 - RubyGems
-- Security
 - Shai Hulud Worm
 - Social Facebook
 - Social LinkedIn

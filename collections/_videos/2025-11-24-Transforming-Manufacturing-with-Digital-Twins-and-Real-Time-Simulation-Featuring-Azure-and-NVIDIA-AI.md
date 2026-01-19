@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 14:31:52 +00:00
 permalink: /ai/videos/Transforming-Manufacturing-with-Digital-Twins-and-Real-Time-Simulation-Featuring-Azure-and-NVIDIA-AI
 tags:
-- AI
 - AI Models
 - Ansys
-- Azure
 - Cloud Computing
 - Digital Twins
 - Emergency Response
@@ -27,7 +25,6 @@ tags:
 - Real Time Simulation
 - Simulation Platforms
 - Traffic Data Analytics
-- Videos
 section_names:
 - ai
 - azure

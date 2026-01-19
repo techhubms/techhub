@@ -14,8 +14,6 @@ tags:
 - Blazor
 - C#
 - Clean Architecture
-- Coding
-- Community
 - Community Projects
 - GitHub
 - Nature Sounds App

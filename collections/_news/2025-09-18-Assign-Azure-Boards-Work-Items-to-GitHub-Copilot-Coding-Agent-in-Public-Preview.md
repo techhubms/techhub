@@ -9,21 +9,16 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-18 19:43:27 +00:00
 permalink: /github-copilot/news/Assign-Azure-Boards-Work-Items-to-GitHub-Copilot-Coding-Agent-in-Public-Preview
 tags:
-- AI
 - AI Agent
-- Azure
 - Azure Boards
 - Azure DevOps
 - Copilot
 - Copilot Chat
 - Copilot Coding Agent
 - Developer Tools
-- DevOps
 - DevOps Automation
 - GitHub
-- GitHub Copilot
 - GitHub Issues
-- News
 - Preview Release
 - Pull Request Automation
 - Raycast

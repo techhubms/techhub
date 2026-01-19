@@ -13,7 +13,6 @@ tags:
 - Architecture
 - Best Practices
 - C#
-- Coding
 - Dapper
 - Data
 - Data Access
@@ -30,7 +29,6 @@ tags:
 - ORM
 - Performance
 - Trade Offs
-- Videos
 section_names:
 - coding
 ---

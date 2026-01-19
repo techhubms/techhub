@@ -9,9 +9,7 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 11:30:00 +00:00
 permalink: /ai/news/New-Data-Factory-Pipeline-Features-Unveiled-at-Microsoft-Ignite
 tags:
-- AI
 - Apache Airflow
-- Azure
 - Copilot For Data Factory
 - Data Factory
 - Data Integration
@@ -21,9 +19,7 @@ tags:
 - Lakehouse Maintenance
 - Microsoft Fabric
 - Microsoft Ignite
-- ML
 - Monitor Hub
-- News
 - Observability
 - Optimize Activity
 - Parquet

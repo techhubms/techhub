@@ -10,10 +10,8 @@ date: 2025-07-22 10:53:51 +00:00
 permalink: /ai/blogs/Designing-and-Creating-Agentic-AI-Systems-on-Azure
 tags:
 - Agentic AI
-- AI
 - AI Architecture
 - AutoGPT
-- Azure
 - Azure AI
 - Azure AI Studio
 - Azure Cognitive Search
@@ -24,7 +22,6 @@ tags:
 - Azure Monitor
 - Azure OpenAI Service
 - BabyAGI
-- Blogs
 - Chain Of Thought
 - Cosmos DB
 - Enterprise Assistant

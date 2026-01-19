@@ -14,7 +14,6 @@ tags:
 - Burke Holland
 - Code
 - Code Editing
-- Coding
 - Demo
 - Developer
 - Developer Community
@@ -25,7 +24,6 @@ tags:
 - Software Developer
 - Software Development
 - Vibecoding
-- Videos
 - VS Code
 - VS Code Extensions
 - VS Code Features

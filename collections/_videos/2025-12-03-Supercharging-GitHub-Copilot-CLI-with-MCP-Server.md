@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-12-03 18:01:15 +00:00
 permalink: /github-copilot/videos/Supercharging-GitHub-Copilot-CLI-with-MCP-Server
 tags:
-- AI
 - AST
 - CLI Tools
 - Code Documentation
@@ -17,16 +16,13 @@ tags:
 - Code Symbol Extraction
 - Codebase Navigation
 - Codebase Search
-- Coding
 - Developer Tools
-- GitHub Copilot
 - GitHub Copilot CLI
 - Kit Dev
 - MCP Server
 - Package Documentation
 - Terminal Chat
 - Tree Sitter
-- Videos
 - VS Code
 section_names:
 - ai

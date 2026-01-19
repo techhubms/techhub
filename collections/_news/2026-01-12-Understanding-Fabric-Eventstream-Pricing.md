@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2026-01-12 14:00:00 +00:00
 permalink: /ml/news/Understanding-Fabric-Eventstream-Pricing
 tags:
-- Azure
 - Azure Data Services
 - Capacity Metrics
 - Cost Estimation
@@ -20,8 +19,6 @@ tags:
 - Eventstream
 - Fabric Capacity Estimator
 - Microsoft Fabric
-- ML
-- News
 - Operators
 - Pricing
 - Real Time Analytics

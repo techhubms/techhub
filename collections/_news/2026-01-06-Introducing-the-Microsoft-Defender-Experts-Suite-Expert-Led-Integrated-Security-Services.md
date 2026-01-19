@@ -19,8 +19,6 @@ tags:
 - Microsoft Defender Experts Suite
 - Microsoft Security
 - MXDR
-- News
-- Security
 - Security Advisory
 - Security Operations
 - Security Operations Center

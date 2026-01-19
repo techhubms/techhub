@@ -9,14 +9,12 @@ feed_url: https://github.blog/feed/
 date: 2025-12-09 17:00:00 +00:00
 permalink: /github-copilot/news/Balancing-Speed-and-Quality-with-AI-and-GitHub-Copilot-in-Development
 tags:
-- AI
 - AI & ML
 - AI Driven Development
 - Automated Code Analysis
 - Best Practices
 - Code Review Automation
 - CodeQL
-- Coding
 - Coding Agent
 - Coding Standards
 - Continuous Improvement
@@ -24,9 +22,7 @@ tags:
 - Feature Documentation
 - Generative AI
 - GitHub Code Quality
-- GitHub Copilot
 - IDE Integration
-- News
 - Prompt Engineering
 - Pull Request Workflow
 - Quality Guardrails

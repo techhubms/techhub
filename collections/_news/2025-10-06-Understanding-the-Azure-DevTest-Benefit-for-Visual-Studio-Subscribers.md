@@ -9,18 +9,15 @@ feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-10-06 15:52:00 +00:00
 permalink: /azure/news/Understanding-the-Azure-DevTest-Benefit-for-Visual-Studio-Subscribers
 tags:
-- Azure
 - Azure Dev/Test Benefit
 - Cloud Cost Optimization
 - Cloud Provisioning
 - Continuous Integration
 - Deployment Environments
 - Development Environments
-- DevOps
 - DevOps Practices
 - Enterprise Agreement
 - Microsoft Azure
-- News
 - Non Production Environments
 - Pay as You Go Dev/Test
 - Productivity

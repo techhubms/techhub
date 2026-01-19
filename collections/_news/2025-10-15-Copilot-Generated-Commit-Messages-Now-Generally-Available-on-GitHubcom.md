@@ -9,20 +9,16 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-15 16:47:01 +00:00
 permalink: /github-copilot/news/Copilot-Generated-Commit-Messages-Now-Generally-Available-on-GitHubcom
 tags:
-- AI
 - AI Assistant
 - Automation
 - Commit Messages
 - Commit Metadata
 - Copilot
 - Developer Workflow
-- DevOps
 - Documentation
 - Feature Release
-- GitHub Copilot
 - GitHub Enterprise Cloud
 - GitHub.com
-- News
 section_names:
 - ai
 - devops

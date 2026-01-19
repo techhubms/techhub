@@ -11,14 +11,12 @@ permalink: /azure/community/Azure-Local-Now-Generally-Available-for-Government-C
 tags:
 - AKS
 - ARM Templates
-- Azure
 - Azure Arc
 - Azure Government
 - Azure Local
 - Azure Monitor
 - BitLocker
 - Cloud Management
-- Community
 - Compliance
 - Data Residency
 - Government IT
@@ -27,7 +25,6 @@ tags:
 - Kubernetes
 - Microsoft Defender For Cloud
 - Operational Control
-- Security
 - Security Updates
 - Trusted Launch
 - Virtual Machines

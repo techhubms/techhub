@@ -9,8 +9,6 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-10 10:49:25 +00:00
 permalink: /azure/blogs/How-Microsoft-Keeps-Your-Data-Safe-in-the-Cloud-A-Deep-Dive-into-Cloud-Security-Practices
 tags:
-- Azure
-- Blogs
 - Cloud
 - Compliance
 - Encryption
@@ -28,7 +26,6 @@ tags:
 - Multi Factor Authentication
 - Physical Security
 - RBAC
-- Security
 - Shared Responsibility Model
 - Threat Detection
 section_names:

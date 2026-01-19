@@ -13,7 +13,6 @@ tags:
 - C#
 - C# 15
 - C# 16
-- Coding
 - Discriminated Unions
 - Feature Proposal
 - Language Features
@@ -22,7 +21,6 @@ tags:
 - Programming
 - Software Development
 - Union Types
-- Videos
 section_names:
 - coding
 ---

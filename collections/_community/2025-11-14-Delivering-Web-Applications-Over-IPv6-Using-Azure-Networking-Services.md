@@ -11,14 +11,11 @@ permalink: /azure/community/Delivering-Web-Applications-Over-IPv6-Using-Azure-Ne
 tags:
 - Anycast
 - Application Gateway
-- Azure
 - Azure DDoS Protection
 - Azure DNS
 - Azure Front Door
 - Azure Virtual Network
 - Cloud Networking
-- Community
-- DevOps
 - Dual Stack Networking
 - ExpressRoute
 - External Load Balancer
@@ -30,7 +27,6 @@ tags:
 - Network Security Group
 - Private Link
 - Public IP
-- Security
 - Traffic Manager
 - VNET Peering
 - Web Application Firewall

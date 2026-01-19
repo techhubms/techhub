@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-16 19:21:34 +00:00
 permalink: /github-copilot/news/Grok-Code-Fast-1-Now-Available-in-GitHub-Copilot
 tags:
-- AI
 - AI Models
 - Copilot
 - Copilot Business
@@ -18,10 +17,8 @@ tags:
 - Copilot Pro
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Grok Code Fast 1
 - IDE Integration
-- News
 - Release Notes
 - VS
 - VS Code

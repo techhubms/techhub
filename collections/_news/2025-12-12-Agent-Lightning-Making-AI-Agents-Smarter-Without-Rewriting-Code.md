@@ -11,7 +11,6 @@ permalink: /ai/news/Agent-Lightning-Making-AI-Agents-Smarter-Without-Rewriting-C
 tags:
 - Agent Development
 - Agent Lightning
-- AI
 - AI Agents
 - AutoGen
 - Company News
@@ -22,7 +21,6 @@ tags:
 - Microsoft
 - Microsoft Research
 - Middleware Architecture
-- News
 - Open Source
 - OpenAI Agents SDK
 - Reinforcement Learning

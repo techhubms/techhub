@@ -10,7 +10,6 @@ date: 2025-11-06 14:43:11 +00:00
 permalink: /devops/blogs/Avoiding-Cloud-Cost-Traps-Optimize-Workloads-Before-Negotiating-Discounts
 tags:
 - Autoscaling
-- Blogs
 - Cloud
 - Cloud Cost
 - Cloud Discounts
@@ -20,7 +19,6 @@ tags:
 - Containerization
 - Contributed Content
 - CPU Usage
-- DevOps
 - DevOps Practices
 - Financial Commitment
 - FinOps

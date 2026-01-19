@@ -10,12 +10,9 @@ date: 2025-11-20 20:22:48 +00:00
 permalink: /azure/community/Azure-DNS-Security-Policy-with-Threat-Intelligence-Feed-Now-Generally-Available
 tags:
 - ARM
-- Azure
 - Azure DNS
 - Azure Private DNS Zones
 - Bicep
-- Community
-- DevOps
 - DevOps Integration
 - DNS Filtering
 - DNS Security Policy
@@ -26,7 +23,6 @@ tags:
 - Log Analytics
 - Microsoft Security Response Center
 - Private Resolver
-- Security
 - SOC
 - Terraform
 - Threat Intelligence

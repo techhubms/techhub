@@ -9,13 +9,9 @@ feed_url: https://zure.com/blog/rss.xml
 date: 2025-10-30 12:50:02 +00:00
 permalink: /coding/blogs/How-Reusing-WCF-SQL-XML-Simplified-Our-BizTalk-to-Azure-Migration
 tags:
-- Azure
 - Azure Functions
 - Azure Key Vault
 - BizTalk Migration
-- Blogs
-- Coding
-- DevOps
 - Enterprise Integration
 - Legacy System Modernization
 - LINQ To XML

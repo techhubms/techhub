@@ -10,10 +10,8 @@ date: 2025-09-16 09:27:34 +00:00
 permalink: /ai/news/The-Power-of-ISVs-Unleashing-Innovation-in-Microsoft-Fabric
 tags:
 - Agent Mart Studio
-- AI
 - AI Agents
 - Apache Spark
-- Azure
 - CluedIn
 - Data Analytics
 - Data Engineering
@@ -27,9 +25,7 @@ tags:
 - Lumel
 - Master Data Management
 - Microsoft Fabric
-- ML
 - Neo4j AuraDB
-- News
 - OneLake
 - Osmos AI Data Engineer
 - Product Experimentation

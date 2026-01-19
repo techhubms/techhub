@@ -9,15 +9,11 @@ feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2025-04-01 00:00:00 +00:00
 permalink: /github-copilot/blogs/GitHub-Copilot-Changing-the-Narrative-from-Productivity-to-Strong-DevOps-Foundations
 tags:
-- AI
 - Application Delivery
 - Automation
-- Blogs
 - CI/CD
-- DevOps
 - Engineering Productivity
 - Generative AI
-- GitHub Copilot
 - Pipelines
 - Project Padawan
 - Software Quality

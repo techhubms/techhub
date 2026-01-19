@@ -10,13 +10,10 @@ date: 2025-06-05 09:44:38 +00:00
 permalink: /ai/news/Enhancing-Plugin-Metadata-Management-with-SemanticPluginForge
 tags:
 - .NET
-- AI
-- Coding
 - Dynamic Metadata
 - Function Calling
 - IPluginMetadataProvider
 - LLM
-- News
 - NuGet
 - Open Source Tools
 - Plugin Metadata

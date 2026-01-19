@@ -9,17 +9,14 @@ feed_url: https://devops.com/feed/
 date: 2025-09-10 06:23:12 +00:00
 permalink: /ai/blogs/DevGovOps-Embedding-Governance-into-DevOps-for-the-Age-of-AI
 tags:
-- AI
 - AI Governance
 - AI in DevOps
 - AI Supply Chain Security
 - Artifact Trust
-- Blogs
 - Compliance Automation
 - Compliance in CI/CD
 - Continuous Compliance
 - DevGovOps
-- DevOps
 - DevOps Evolution
 - DevOps Governance
 - DevSecOps VS DevGovOps
@@ -32,7 +29,6 @@ tags:
 - JFrogswampUp2025
 - Platform Governance
 - Responsible AI Adoption
-- Security
 - Security Automation
 - Shadow AI
 - Shadow AI Management

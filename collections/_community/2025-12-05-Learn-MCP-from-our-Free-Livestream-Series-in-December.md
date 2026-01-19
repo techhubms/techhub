@@ -10,24 +10,19 @@ date: 2025-12-05 08:00:00 +00:00
 permalink: /github-copilot/community/Learn-MCP-from-our-Free-Livestream-Series-in-December
 tags:
 - Agent Interoperability
-- AI
 - AI Agents
 - Authentication
-- Azure
 - Azure Container Apps
 - Azure Functions
 - Cloud Deployment
-- Community
 - Containerization
 - FastMCP SDK
-- GitHub Copilot
 - Langchain
 - MCP
 - Microsoft Agent Framework
 - Microsoft Entra
 - OAuth2
 - Python
-- Security
 section_names:
 - ai
 - azure

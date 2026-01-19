@@ -10,7 +10,6 @@ date: 2026-01-14 15:03:31 +00:00
 permalink: /azure/news/Inside-RedVDS-Investigating-How-a-Criminal-VDS-Provider-Empowered-Global-Cyberattacks
 tags:
 - Anti Phishing
-- Azure
 - Business Email Compromise
 - Cloud Security
 - Credential Theft
@@ -21,12 +20,10 @@ tags:
 - MFA
 - Microsoft Defender XDR
 - Microsoft Security Copilot
-- News
 - Phishing
 - Power Automate
 - RedVDS
 - Remote Desktop
-- Security
 - Security Monitoring
 - Storm 2470
 - Threat Intelligence

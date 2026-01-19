@@ -11,11 +11,9 @@ permalink: /ai/videos/Integrating-Copilot-Studio-and-Azure-AI-Foundry-for-Accele
 tags:
 - Activity Explorer
 - Agent Orchestration
-- AI
 - AI Development
 - AI Governance
 - AI Integration
-- Azure
 - Azure AI Foundry
 - Copilot Studio
 - Deterministic AI
@@ -27,7 +25,6 @@ tags:
 - MSIgnite
 - Prompt Engineering
 - Scalable Solutions
-- Videos
 section_names:
 - ai
 - azure

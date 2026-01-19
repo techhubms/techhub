@@ -10,10 +10,8 @@ date: 2025-07-29 10:22:58 +00:00
 permalink: /azure/community/Are-Snapshots-Suitable-for-One-Time-Backup-in-Azure
 tags:
 - Archival
-- Azure
 - Azure Snapshot
 - Cloud Backup
-- Community
 - Disk Copy
 - On Premises
 - One Time Backup

@@ -9,13 +9,10 @@ feed_url: https://www.arresteddevops.com/episode/index.xml
 date: 2025-06-03 10:18:43 +00:00
 permalink: /ai/blogs/AI-Ethics-and-Empathy-A-Deep-Dive-With-Kat-Morgan-on-Arrested-DevOps
 tags:
-- AI
 - AI Ethics
-- Blogs
 - Code Hygiene
 - Coding Assistance
 - Dev Environments
-- DevOps
 - DevOps Culture
 - Empathy
 - Environmental Impact

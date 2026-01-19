@@ -10,7 +10,6 @@ date: 2025-09-23 15:28:19 +00:00
 permalink: /github-copilot/videos/Modernize-Java-Apps-in-Days-with-GitHub-Copilot
 tags:
 - Accelerated Development
-- AI
 - App Modernization
 - Cloud Computing
 - Cloud Migration
@@ -23,14 +22,12 @@ tags:
 - Development
 - Enterprise Security
 - GitHub
-- GitHub Copilot
 - Java
 - Microsoft
 - Modernize
 - Software Updates
 - Tech
 - Technology
-- Videos
 - Vulnerability Fixing
 section_names:
 - ai

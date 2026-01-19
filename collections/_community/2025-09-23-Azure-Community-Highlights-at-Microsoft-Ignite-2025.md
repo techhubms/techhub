@@ -9,23 +9,19 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-23 19:59:06 +00:00
 permalink: /ai/community/Azure-Community-Highlights-at-Microsoft-Ignite-2025
 tags:
-- AI
 - AI Community
 - AKS
-- Azure
 - Azure AI
 - Azure AI Foundry
 - Azure Data
 - Azure Infrastructure
 - Cloud Migration
-- Community
 - Community Sessions
 - Data Analytics
 - Data Platform
 - Event
 - IaC
 - Microsoft Ignite
-- ML
 - MVP Program
 - SQL Server Management Studio
 - SSMS Copilot

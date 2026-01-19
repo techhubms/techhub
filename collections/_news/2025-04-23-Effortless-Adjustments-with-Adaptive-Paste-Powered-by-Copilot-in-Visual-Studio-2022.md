@@ -10,16 +10,12 @@ date: 2025-04-23 14:51:46 +00:00
 permalink: /github-copilot/news/Effortless-Adjustments-with-Adaptive-Paste-Powered-by-Copilot-in-Visual-Studio-2022
 tags:
 - Adaptive Paste
-- AI
 - Code Adaptation
 - Code Modification
-- Coding
 - Copilot
 - Developer Productivity
 - Editor Features
-- GitHub Copilot
 - Interface Implementation
-- News
 - Productivity
 - Software Development
 - VS

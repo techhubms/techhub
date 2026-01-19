@@ -10,27 +10,21 @@ date: 2025-11-18 16:04:11 +00:00
 permalink: /github-copilot/community/Runtime-Security-and-AI-Fixes-Integrating-GitHub-Advanced-Security-with-Defender-for-Cloud
 tags:
 - Agentic Remediation
-- AI
 - AI Suggested Fix
 - Alert Fatigue
 - Application Security
 - Artifact Metadata
-- Azure
 - Azure Portal
 - Cloud Native Apps
 - Code Scanning
-- Community
 - Copilot Autofix
 - Dependabot
-- DevOps
 - DevSecOps
 - GitHub Advanced Security
-- GitHub Copilot
 - Microsoft Defender For Cloud
 - PR Automation
 - Pull Request Automation
 - Runtime Security
-- Security
 - Security Campaigns
 - Security Integration
 - Virtual Registry

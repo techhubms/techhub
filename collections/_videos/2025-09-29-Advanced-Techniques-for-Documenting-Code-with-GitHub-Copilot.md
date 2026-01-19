@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-09-29 14:01:44 +00:00
 permalink: /github-copilot/videos/Advanced-Techniques-for-Documenting-Code-with-GitHub-Copilot
 tags:
-- AI
 - AI Dev Tools
 - API Documentation
 - APIKeys
@@ -17,19 +16,16 @@ tags:
 - Code
 - Code Comments
 - Code Generation
-- Coding
 - Copilot
 - Demo
 - Developer Tools
 - Documentation
-- GitHub Copilot
 - Microsoft
 - Ppd
 - Prompt Engineering
 - Prompt Files
 - Promptdrivendevelopment
 - README
-- Videos
 - VS Code
 - Workflows
 section_names:

@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-15 07:00:26 +00:00
 permalink: /azure/videos/Unlocking-Cloud-Savings-for-Linux-VMs-with-Azure-Hybrid-Benefit
 tags:
-- Azure
 - Azure Cloud
 - Azure Hybrid Benefit
 - Azure Pricing Calculator
@@ -24,7 +23,6 @@ tags:
 - PAYG
 - Red Hat
 - SUSE
-- Videos
 section_names:
 - azure
 ---

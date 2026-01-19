@@ -11,7 +11,6 @@ permalink: /azure/news/Protecting-Azure-Infrastructure-Defense-in-Depth-from-Sil
 tags:
 - AI
 - AI Infrastructure Security
-- Azure
 - Azure Boost
 - Azure Integrated HSM
 - Caliptra
@@ -21,13 +20,11 @@ tags:
 - FIPS 140 3
 - Hardware Security
 - Microsoft Azure
-- News
 - OCP SAFE
 - Root Of Trust
 - SCITT
 - Secure Cloud
 - Secure Future Initiative
-- Security
 - Supply Chain Integrity
 - Trusted Execution Environments
 - Uncategorized

@@ -10,11 +10,8 @@ date: 2025-11-26 08:32:12 +00:00
 permalink: /ai/blogs/Microsoft-Ignite-2025-The-Dawn-of-the-AI-Agent-Era
 tags:
 - Agent 365
-- AI
 - AI Agents
 - Automation
-- Azure
-- Blogs
 - Compliance
 - Copilot
 - Cybersecurity
@@ -28,9 +25,7 @@ tags:
 - Microsoft Foundry
 - Microsoft General
 - Microsoft Ignite
-- ML
 - PowerPoint
-- Security
 - Teams
 - Word
 section_names:

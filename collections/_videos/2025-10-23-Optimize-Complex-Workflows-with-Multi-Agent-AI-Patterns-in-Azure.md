@@ -10,11 +10,9 @@ date: 2025-10-23 07:00:39 +00:00
 permalink: /ai/videos/Optimize-Complex-Workflows-with-Multi-Agent-AI-Patterns-in-Azure
 tags:
 - Agent Orchestration
-- AI
 - AI Agent
 - AI Patterns
 - Automation
-- Azure
 - Azure AI Foundry
 - Azure Essentials Show
 - AzureEssentialsShow
@@ -28,7 +26,6 @@ tags:
 - Scalability
 - Semantic Kernel
 - SLM
-- Videos
 section_names:
 - ai
 - azure

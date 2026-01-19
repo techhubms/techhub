@@ -10,7 +10,6 @@ date: 2025-08-19 17:52:31 +00:00
 permalink: /github-copilot/news/Agents-Panel-Easily-Delegate-Tasks-to-Copilot-Coding-Agent-Across-GitHub
 tags:
 - Agents Panel
-- AI
 - AI Development Tools
 - Autonomous Developer Agent
 - Code Review
@@ -18,12 +17,9 @@ tags:
 - Copilot Coding Agent
 - Copilot Enterprise
 - Developer Collaboration
-- DevOps
 - Draft Pull Request
 - GitHub
-- GitHub Copilot
 - Natural Language Tasks
-- News
 - Pro+
 - Task Delegation
 - Workflow Automation

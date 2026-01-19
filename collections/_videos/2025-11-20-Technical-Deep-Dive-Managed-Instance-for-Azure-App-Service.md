@@ -10,15 +10,11 @@ date: 2025-11-20 16:42:03 +00:00
 permalink: /github-copilot/videos/Technical-Deep-Dive-Managed-Instance-for-Azure-App-Service
 tags:
 - Agentic Framework
-- AI
 - ASP.NET
-- Azure
 - Azure AI
 - Azure App Service
 - Cloud Modernization
-- Coding
 - Configuration Scripts
-- GitHub Copilot
 - Legacy App Migration
 - Managed Identity
 - Managed Instance
@@ -29,7 +25,6 @@ tags:
 - Performance Optimization
 - Scalability
 - TCO
-- Videos
 section_names:
 - ai
 - azure

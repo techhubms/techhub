@@ -9,11 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-15 13:49:08 +00:00
 permalink: /azure/community/Troubleshooting-MCC-Phantom-Install-Issues-on-Windows-Server-2022-with-WSL
 tags:
-- Azure
 - Azure Container Registry
-- Community
 - Container Deployment
-- DevOps
 - Gmsa
 - Install Troubleshooting
 - Log Diagnostics

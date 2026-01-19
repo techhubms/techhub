@@ -9,9 +9,7 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-04 09:00:00 +00:00
 permalink: /ai/news/OneLake-your-foundation-for-an-AI-ready-data-estate
 tags:
-- AI
 - Apache Iceberg
-- Azure
 - Azure AI Foundry
 - Data Agents
 - Data Catalog
@@ -26,11 +24,8 @@ tags:
 - Microsoft Fabric
 - Microsoft OneLake
 - Mirroring
-- ML
-- News
 - Power BI
 - Purview
-- Security
 - Shortcuts
 section_names:
 - ai

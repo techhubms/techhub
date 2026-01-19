@@ -9,12 +9,10 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-03 01:48:00 +00:00
 permalink: /ai/news/Microsofts-Scalable-AI-Infrastructure-for-Copilot-ChatGPT-and-Enterprise-AI-Workloads
 tags:
-- AI
 - AI Inference
 - AI Infrastructure
 - AI Training
 - APIs
-- Azure
 - ChatGPT
 - Cloud Architecture
 - Company News
@@ -24,7 +22,6 @@ tags:
 - LinkedIn Post
 - Microsoft 365 Copilot
 - Microsoft Azure
-- News
 - Nuance
 - Satya Nadella
 - Scalability

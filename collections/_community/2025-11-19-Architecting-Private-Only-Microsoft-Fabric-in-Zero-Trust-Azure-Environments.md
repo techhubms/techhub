@@ -11,9 +11,7 @@ permalink: /ml/community/Architecting-Private-Only-Microsoft-Fabric-in-Zero-Trus
 tags:
 - ADLS
 - AzAPI Provider
-- Azure
 - CI/CD Validation
-- Community
 - Data Pipeline
 - DNS Security
 - Firewall Logs
@@ -23,11 +21,9 @@ tags:
 - Lakehouse
 - Managed Private Endpoints
 - Microsoft Fabric
-- ML
 - Network Inspection
 - Private Endpoints
 - Production Ready
-- Security
 - Spark
 - Terraform
 - VNet Data Gateway

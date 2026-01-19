@@ -11,9 +11,7 @@ permalink: /azure/blogs/What-Microsoft-Entra-Really-Means-for-Identity-and-Secur
 tags:
 - Access Control
 - Authentication
-- Azure
 - Azure Active Directory
-- Blogs
 - Conditional Access
 - Governance
 - Hybrid Cloud
@@ -25,7 +23,6 @@ tags:
 - Microsoft Entra ID
 - Microsoft General
 - Passwordless Authentication
-- Security
 - SOC Integration
 - Workload Identity
 - Zero Trust

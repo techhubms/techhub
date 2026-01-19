@@ -10,16 +10,12 @@ date: 2025-12-05 17:34:53 +00:00
 permalink: /ai/community/Innovation-Challenge-Winning-Azure-AI-Projects-from-November-2025-Hackathon
 tags:
 - A/B Testing
-- AI
 - AI Agents
 - AI Orchestration
 - Automation
-- Azure
 - Azure AI
 - Azure Cognitive Services
 - Civic Engagement
-- Coding
-- Community
 - Customer Personalization
 - Developer Community
 - Education Technology

@@ -11,7 +11,6 @@ permalink: /ml/news/Previewing-OneLake-Table-APIs-for-Microsoft-Fabric
 tags:
 - Analytics
 - Apache Iceberg
-- Azure
 - Cloud Data
 - Data Engineering
 - Data Integration
@@ -20,8 +19,6 @@ tags:
 - Iceberg REST Catalog
 - Microsoft Fabric
 - Microsoft OneLake
-- ML
-- News
 - OneLake Table APIs
 - Open Table Formats
 - Programmatic Data Access

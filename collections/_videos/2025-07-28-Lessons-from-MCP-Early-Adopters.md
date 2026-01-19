@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-07-28 16:01:14 +00:00
 permalink: /ai/videos/Lessons-from-MCP-Early-Adopters
 tags:
-- AI
 - Browser Automation
 - C#
 - Dev Days
@@ -23,7 +22,6 @@ tags:
 - Production Systems
 - Prompt Management
 - Python
-- Videos
 section_names:
 - ai
 ---

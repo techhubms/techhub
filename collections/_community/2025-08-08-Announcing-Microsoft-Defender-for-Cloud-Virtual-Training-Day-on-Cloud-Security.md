@@ -9,13 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-08 19:50:59 +00:00
 permalink: /azure/community/Announcing-Microsoft-Defender-for-Cloud-Virtual-Training-Day-on-Cloud-Security
 tags:
-- Azure
 - Cloud Native Application Protection
 - Cloud Security
-- Community
 - Compliance
 - Container Security
-- DevOps
 - DevOps Security
 - Hybrid Cloud
 - Incident Response
@@ -23,7 +20,6 @@ tags:
 - Microsoft Defender For Cloud
 - Multicloud Security
 - Operational Security
-- Security
 - Security Posture Management
 - Server Security
 - Virtual Training

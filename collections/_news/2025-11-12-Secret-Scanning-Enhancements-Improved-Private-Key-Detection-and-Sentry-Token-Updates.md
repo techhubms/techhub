@@ -12,18 +12,15 @@ tags:
 - Application Security
 - Code Security
 - Credential Protection
-- DevOps
 - Elliptic Curve
 - GitHub
 - Improvement
-- News
 - Pattern Detection
 - PKCS#8
 - Private Keys
 - Repository Security
 - RSA
 - Secret Scanning
-- Security
 - Sentry
 - Token Renaming
 section_names:

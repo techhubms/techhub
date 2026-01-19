@@ -9,17 +9,14 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-28 17:38:36 +00:00
 permalink: /github-copilot/blogs/GitHub-Copilot-for-Python-Real-World-Coding-Scenarios-and-Practical-Examples
 tags:
-- AI
 - AI Pair Programming
 - Automation
-- Blogs
 - Django
 - Documentation
 - Error Handling
 - FastAPI
 - Flask
 - GitHib Copilot
-- GitHub Copilot
 - Machine Learning
 - Matplotlib
 - NumPy

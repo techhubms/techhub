@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-03 09:00:00 +00:00
 permalink: /ml/news/Automating-Warehouse-and-SQL-Endpoint-Deployment-in-Microsoft-Fabric
 tags:
-- Azure
 - Continuous Integration
 - DacFx
 - Data Lake
@@ -18,14 +17,11 @@ tags:
 - Dependency Resolution
 - Deployment Automation
 - Deployment Pipelines
-- DevOps
 - Fabric Warehouse
 - Git Integration
 - Lakehouse
 - Metadata Hydration
 - Microsoft Fabric
-- ML
-- News
 - SQL Analytics Endpoint
 - SQLCMD Variables
 section_names:

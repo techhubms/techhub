@@ -12,7 +12,6 @@ tags:
 - API Management
 - APIC
 - APIM
-- Azure
 - Azure Bastion
 - Azure Cloud
 - Azure File Sync
@@ -24,8 +23,6 @@ tags:
 - Certification
 - Claude Opus
 - Cloud
-- Coding
-- DevOps
 - DevOps Master Class
 - Entra ID
 - Foundry
@@ -33,7 +30,6 @@ tags:
 - Managed Identities
 - Microsoft
 - Microsoft Azure
-- ML
 - MySQL Support
 - Network Watcher
 - New Zealand North
@@ -41,7 +37,6 @@ tags:
 - RDP Integration
 - Regex
 - T SQL
-- Videos
 - Virtual Machine Retirement
 section_names:
 - azure

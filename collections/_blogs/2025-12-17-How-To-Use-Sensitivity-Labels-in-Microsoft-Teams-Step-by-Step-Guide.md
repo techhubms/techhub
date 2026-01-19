@@ -10,7 +10,6 @@ date: 2025-12-17 16:11:16 +00:00
 permalink: /security/blogs/How-To-Use-Sensitivity-Labels-in-Microsoft-Teams-Step-by-Step-Guide
 tags:
 - Access Control
-- Blogs
 - Compliance
 - Confidential Data
 - Data Security
@@ -22,7 +21,6 @@ tags:
 - Microsoft Purview
 - Microsoft Teams
 - OneDrive
-- Security
 - Sensitivity Labels
 - SharePoint
 section_names:

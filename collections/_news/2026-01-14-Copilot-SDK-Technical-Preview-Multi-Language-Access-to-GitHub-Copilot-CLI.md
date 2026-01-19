@@ -10,16 +10,12 @@ date: 2026-01-14 23:00:28 +00:00
 permalink: /github-copilot/news/Copilot-SDK-Technical-Preview-Multi-Language-Access-to-GitHub-Copilot-CLI
 tags:
 - .NET
-- AI
 - API
 - CLI
-- Coding
 - Copilot
 - Copilot SDK
 - Developer Tools
-- GitHub Copilot
 - Go
-- News
 - Node.js
 - Programming Languages
 - Python

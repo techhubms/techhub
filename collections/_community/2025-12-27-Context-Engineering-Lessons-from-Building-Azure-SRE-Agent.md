@@ -9,14 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-27 20:07:30 +00:00
 permalink: /ai/community/Context-Engineering-Lessons-from-Building-Azure-SRE-Agent
 tags:
-- AI
-- Azure
 - Azure CLI
 - Azure SRE Agent
 - Code Interpreter
-- Community
 - Context Engineering
-- DevOps
 - DevOps Patterns
 - Incident Automation
 - Kubernetes

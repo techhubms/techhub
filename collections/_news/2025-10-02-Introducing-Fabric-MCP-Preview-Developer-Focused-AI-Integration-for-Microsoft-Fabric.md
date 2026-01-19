@@ -10,11 +10,8 @@ date: 2025-10-02 15:00:00 +00:00
 permalink: /ai/news/Introducing-Fabric-MCP-Preview-Developer-Focused-AI-Integration-for-Microsoft-Fabric
 tags:
 - .NET 9
-- AI
 - AI Assisted Development
 - API Integration
-- Azure
-- Coding
 - Data Analytics
 - Dev Box
 - Fabric API
@@ -22,8 +19,6 @@ tags:
 - Lakehouse
 - MCP
 - Microsoft Fabric
-- ML
-- News
 - Open Source
 - OpenAI
 - Pipelines

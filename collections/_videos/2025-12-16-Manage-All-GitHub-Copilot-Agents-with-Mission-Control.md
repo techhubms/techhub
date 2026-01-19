@@ -10,19 +10,16 @@ date: 2025-12-16 20:49:53 +00:00
 permalink: /github-copilot/videos/Manage-All-GitHub-Copilot-Agents-with-Mission-Control
 tags:
 - Agent Management
-- AI
 - Coding Automation
 - Copilot Agents
 - Custom Agents
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Mission Control
 - MissionControl
 - Productivity
 - Real Time Steering
 - Session Logs
-- Videos
 - VS Code Integration
 section_names:
 - ai

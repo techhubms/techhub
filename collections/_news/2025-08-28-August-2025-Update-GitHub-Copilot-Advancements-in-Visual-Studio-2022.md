@@ -9,19 +9,15 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-08-28 17:18:55 +00:00
 permalink: /github-copilot/news/August-2025-Update-GitHub-Copilot-Advancements-in-Visual-Studio-2022
 tags:
-- AI
 - AI Powered Development
 - API Keys
 - Code Suggestions
-- Coding
 - Copilot Chat
 - Developer Productivity
-- GitHub Copilot
 - GPT 5
 - IDE Integrations
 - MCP
 - Model Integration
-- News
 - Software Updates
 - VS
 section_names:

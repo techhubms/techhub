@@ -11,16 +11,12 @@ permalink: /ml/news/Fabric-User-Data-Functions-Now-Generally-Available
 tags:
 - API Integration
 - Async Functions
-- Azure
-- Coding
 - Custom Functions
 - Data Engineering
 - Data Pipelines
 - Fabric Lakehouse
 - Fabric SQL Database
 - Microsoft Fabric
-- ML
-- News
 - Notebooks
 - OpenAPI
 - Pandas

@@ -11,7 +11,6 @@ permalink: /coding/news/EFCoreVisualizer-Analyze-Entity-Framework-Core-Query-Pla
 tags:
 - .NET
 - .NET Data
-- Coding
 - Database Indexes
 - Debugger Visualizer
 - EF
@@ -19,7 +18,6 @@ tags:
 - EFCore.Visualizer
 - LINQ
 - MySQL
-- News
 - Oracle
 - ORM
 - Performance Tuning

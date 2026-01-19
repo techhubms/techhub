@@ -18,8 +18,6 @@ tags:
 - Data Warehouse
 - Exec Requests History
 - Microsoft Fabric
-- ML
-- News
 - Performance Tuning
 - Preview Feature
 - Query Insights

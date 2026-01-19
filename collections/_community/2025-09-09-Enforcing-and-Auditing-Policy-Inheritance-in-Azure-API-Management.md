@@ -12,16 +12,13 @@ tags:
 - API Management
 - API Security
 - Audit
-- Azure
 - Azure Policy
 - Azure Portal
-- Community
 - Compliance
 - Governance
 - Operational Requirements
 - Policy Enforcement
 - Policy Inheritance
-- Security
 - Security Controls
 section_names:
 - azure

@@ -9,10 +9,8 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-01 08:12:56 +00:00
 permalink: /azure/blogs/Understanding-Azure-Resource-Organization-Management-Groups-Subscriptions-and-Resource-Groups
 tags:
-- Azure
 - Azure Policy
 - Billing Segmentation
-- Blogs
 - Cloud Architecture
 - Cloud Governance
 - Compliance

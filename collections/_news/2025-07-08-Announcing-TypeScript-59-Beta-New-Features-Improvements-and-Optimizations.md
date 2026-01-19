@@ -9,14 +9,12 @@ feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-07-08 17:38:54 +00:00
 permalink: /coding/news/Announcing-TypeScript-59-Beta-New-Features-Improvements-and-Optimizations
 tags:
-- Coding
 - Compiler
 - Developer Tools
 - ECMAScript
 - Import Defer
 - JavaScript
 - Language Server
-- News
 - Node.js
 - Open Source
 - Performance Optimization

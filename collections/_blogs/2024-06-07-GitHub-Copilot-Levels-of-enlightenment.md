@@ -9,13 +9,9 @@ feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2024-06-07 00:00:00 +00:00
 permalink: /github-copilot/blogs/GitHub-Copilot-Levels-of-enlightenment
 tags:
-- AI
-- Blogs
 - Code Generation
-- Coding
 - Coding Tips
 - Developer Productivity
-- GitHub Copilot
 - Machine Learning Tools
 - Prompt Engineering
 - Software Practices

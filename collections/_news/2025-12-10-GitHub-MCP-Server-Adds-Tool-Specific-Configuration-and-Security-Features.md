@@ -9,22 +9,18 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-10 11:01:02 +00:00
 permalink: /ai/news/GitHub-MCP-Server-Adds-Tool-Specific-Configuration-and-Security-Features
 tags:
-- AI
 - AI Workflows
 - Content Sanitization
 - Context Window
 - Copilot
-- DevOps
 - GitHub
 - GitHub MCP Server
 - Go SDK
 - Granular Permissions
 - Lockdown Mode
 - MCP
-- News
 - Prompt Injection Mitigation
 - Public Repositories
-- Security
 - Security Hardening
 - Server Configuration
 - Tool Configuration

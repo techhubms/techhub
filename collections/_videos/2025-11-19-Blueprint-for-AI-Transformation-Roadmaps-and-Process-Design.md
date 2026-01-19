@@ -11,19 +11,15 @@ permalink: /ai/videos/Blueprint-for-AI-Transformation-Roadmaps-and-Process-Desig
 tags:
 - Agentic AI
 - Agenticbusinessapplications
-- AI
 - AI Transformation
 - Architecture Planning
-- Azure
 - Azure DevOps
-- DevOps
 - Lucid Suite
 - Microsoft Teams
 - MSIgnite
 - Organizational Clarity
 - Process Blueprint
 - SharePoint Integration
-- Videos
 - Workflow Documentation
 section_names:
 - ai

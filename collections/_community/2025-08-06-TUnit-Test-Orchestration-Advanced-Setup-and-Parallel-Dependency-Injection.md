@@ -12,8 +12,6 @@ tags:
 - .NET
 - C#
 - ClassDataSource
-- Coding
-- Community
 - Dependency Injection
 - Docker
 - Integration Testing

@@ -10,11 +10,9 @@ date: 2025-05-19 15:45:07 +00:00
 permalink: /ai/videos/Microsoft-Discovery-Platform-Overview-AI-Driven-RandD-on-Azure
 tags:
 - Agentic R&D
-- AI
 - AI Agents
 - AI Orchestration
 - AI Science
-- Azure
 - Azure AI Foundry
 - Azure HPC
 - Azure Infrastructure
@@ -29,7 +27,6 @@ tags:
 - Scientific Computing
 - Scientific Discovery
 - Specialized AI Agents
-- Videos
 section_names:
 - ai
 - azure

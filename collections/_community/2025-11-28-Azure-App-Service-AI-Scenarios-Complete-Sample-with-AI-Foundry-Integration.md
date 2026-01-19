@@ -9,17 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-28 10:42:08 +00:00
 permalink: /ai/community/Azure-App-Service-AI-Scenarios-Complete-Sample-with-AI-Foundry-Integration
 tags:
-- AI
 - API Integration
 - Audio Transcription
-- Azure
 - Azure AI Foundry
 - Azure App Service
 - Azure CLI
 - Azure Cognitive Services
 - Azure Developer CLI
-- Coding
-- Community
 - Conversational AI
 - Enterprise Chat
 - Flask
@@ -34,7 +30,6 @@ tags:
 - Python
 - RBAC
 - Reasoning Models
-- Security
 - Security Best Practices
 section_names:
 - ai

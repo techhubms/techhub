@@ -13,7 +13,6 @@ tags:
 - .NET Aspire
 - ASP.NET Core
 - C#
-- Coding
 - F#
 - MAUI
 - Microsoft.Testing.Platform
@@ -25,7 +24,6 @@ tags:
 - Test Automation
 - Test Deployment
 - Testing Frameworks
-- Videos
 - VS
 - VSTest
 - xUnit

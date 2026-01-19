@@ -9,18 +9,15 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-12-11 22:29:20 +00:00
 permalink: /github-copilot/videos/Tackling-Tech-Debt-with-the-GitHub-Copilot-Cloud-Agent
 tags:
-- AI
 - AI Agents
 - AI Development
 - Cloud Computing
 - Cloud Development
 - Code Refactoring
-- Coding
 - Copilot Cloud Agent
 - Dev
 - Developer
 - Development
-- GitHub Copilot
 - Legacy Modernization
 - Microsoft
 - Microsoft Foundry
@@ -28,7 +25,6 @@ tags:
 - Tech
 - Technical Debt
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-27 17:48:20 +00:00
 permalink: /ai/news/BrainKey-Leverages-Microsoft-Azure-and-AI-to-Advance-Brain-Health-Research
 tags:
-- AI
 - AI in Healthcare
 - AKS
-- Azure
 - Azure Blob Storage
 - Azure Marketplace
 - BrainKey
@@ -26,7 +24,6 @@ tags:
 - Microsoft Azure
 - Microsoft For Startups
 - MRI Analysis
-- News
 - Nuance PowerShare
 - Terraform
 section_names:

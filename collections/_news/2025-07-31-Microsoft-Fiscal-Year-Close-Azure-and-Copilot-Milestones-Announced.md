@@ -9,8 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-31 01:44:00 +00:00
 permalink: /ai/news/Microsoft-Fiscal-Year-Close-Azure-and-Copilot-Milestones-Announced
 tags:
-- AI
-- Azure
 - Azure AI
 - Azure Foundry
 - Cloud Adoption
@@ -21,7 +19,6 @@ tags:
 - M365 Copilot
 - Microsoft
 - Microsoft Copilot
-- News
 - Platform Diffusion
 - Project Red Dog
 - Satya Nadella

@@ -9,15 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-26 13:19:57 +00:00
 permalink: /ai/community/Automate-Log-Analytics-Workflows-with-Azure-Logic-Apps-and-Azure-OpenAI
 tags:
-- AI
 - Application Insights
 - Automation
-- Azure
 - Azure Logic Apps
 - Azure Monitor
 - Azure OpenAI
 - Cloud Monitoring
-- Community
 - Data Summarization
 - Email Reports
 - Error Analysis

@@ -9,9 +9,7 @@ feed_url: https://dellenny.com/feed/
 date: 2025-08-02 09:49:32 +00:00
 permalink: /github-copilot/blogs/How-GitHub-Copilots-New-Memory-Feature-Changes-Your-Coding-Experience
 tags:
-- AI
 - AI Pair Programmer
-- Blogs
 - Code Completion
 - Code Context
 - Code Personalization
@@ -20,7 +18,6 @@ tags:
 - Copilot
 - Copilot Memory Feature
 - Developer Productivity
-- GitHub Copilot
 - IDE Integration
 - Machine Learning
 - Personalized Coding

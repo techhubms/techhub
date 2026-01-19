@@ -11,10 +11,8 @@ section: github-copilot
 alt-collection: vscode-updates
 tags:
 - Agent Mode
-- AI
 - AI Stats
 - Checkpoints
-- GitHub Copilot
 - GPT 5
 - Math Rendering
 - MCP Autostart
@@ -22,7 +20,6 @@ tags:
 - Pull Request Extension
 - Terminal Inline Chat
 - Todo List
-- Videos
 - VS Code
 - VS Code 1.103
 section_names:

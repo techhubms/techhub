@@ -10,15 +10,11 @@ permalink: /github-copilot/community/Hot-take-Copilot-is-amazing-Youre-probably-
 viewing_mode: external
 tags:
 - .NET
-- AI
 - Angular
 - Backend Development
 - Claude 4
-- Coding
-- Community
 - Enterprise Software
 - Frontend Development
-- GitHub Copilot
 - Junior Developers
 - Prompt Engineering
 - Software Maintenance

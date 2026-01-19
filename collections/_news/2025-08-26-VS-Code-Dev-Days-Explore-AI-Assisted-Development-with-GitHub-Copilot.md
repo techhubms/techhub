@@ -10,18 +10,14 @@ date: 2025-08-26 00:00:00 +00:00
 permalink: /github-copilot/news/VS-Code-Dev-Days-Explore-AI-Assisted-Development-with-GitHub-Copilot
 tags:
 - Agent Mode
-- AI
 - AI Assisted Development
 - AI Productivity
-- Coding
 - Coding Workshop
 - Developer Community
 - Developer Events
 - Developer Tools
-- GitHub Copilot
 - MCP
 - Microsoft
-- News
 - Next Edit Suggestions
 - VS Code
 - VS Code Dev Days

@@ -9,7 +9,6 @@ date: 2025-07-21 16:42:58 +00:00
 permalink: /ai/news/Microsoft-supports-making-Europes-languages-and-cultures-more-accessible-in-the-digital-realm
 viewing_mode: external
 tags:
-- AI
 - Company News
 - Cultural Diversity
 - Digital Accessibility
@@ -20,7 +19,6 @@ tags:
 - Linguistic Technology
 - Localization
 - Microsoft
-- News
 - On The Issues
 - Technology
 section_names:

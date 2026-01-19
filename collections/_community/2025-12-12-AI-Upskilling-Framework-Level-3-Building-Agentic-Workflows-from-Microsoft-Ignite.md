@@ -10,15 +10,12 @@ date: 2025-12-12 17:31:50 +00:00
 permalink: /ai/community/AI-Upskilling-Framework-Level-3-Building-Agentic-Workflows-from-Microsoft-Ignite
 tags:
 - Agentic Workflows
-- AI
 - AI Agents
 - AI Demos
 - AI Development
 - AI Training
 - AI Upskilling Framework
-- Azure
 - Claims Workflow
-- Community
 - Community Resources
 - Developer Skills
 - Fraud Detection

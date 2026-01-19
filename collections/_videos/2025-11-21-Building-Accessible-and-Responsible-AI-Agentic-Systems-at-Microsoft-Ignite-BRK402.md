@@ -10,7 +10,6 @@ date: 2025-11-21 08:09:41 +00:00
 permalink: /ai/videos/Building-Accessible-and-Responsible-AI-Agentic-Systems-at-Microsoft-Ignite-BRK402
 tags:
 - Agentic AI
-- AI
 - AI Accessibility
 - AI Safety
 - Alternative Text
@@ -25,7 +24,6 @@ tags:
 - Red Teaming
 - Responsible AI
 - Risk Identification
-- Videos
 - Visual Accessibility
 section_names:
 - ai

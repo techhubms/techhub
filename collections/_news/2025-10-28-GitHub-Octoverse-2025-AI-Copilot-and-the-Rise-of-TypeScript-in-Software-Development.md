@@ -10,23 +10,19 @@ date: 2025-10-28 23:12:00 +00:00
 permalink: /github-copilot/news/GitHub-Octoverse-2025-AI-Copilot-and-the-Rise-of-TypeScript-in-Software-Development
 tags:
 - Agent HQ
-- AI
 - AI Adoption
 - AI Tools
-- Coding
 - Coding Agents
 - Company News
 - Copilot
 - Developer Growth
 - Developer Productivity
-- GitHub Copilot
 - GitHub Octoverse
 - GitHub Statistics
 - JavaScript
 - LinkedIn Post
 - Microsoft
 - Multimodal AI
-- News
 - Open Source
 - Podcast
 - Programming Languages

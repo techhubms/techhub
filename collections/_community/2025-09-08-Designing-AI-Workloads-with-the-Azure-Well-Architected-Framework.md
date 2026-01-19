@@ -9,28 +9,22 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-08 23:35:59 +00:00
 permalink: /ai/community/Designing-AI-Workloads-with-the-Azure-Well-Architected-Framework
 tags:
-- AI
 - AI Workloads
 - AKS
 - Application Insights
-- Azure
 - Azure Machine Learning
 - Azure Monitor
 - Azure Well Architected Framework
 - CI/CD
 - Cloud Architecture
-- Community
 - Cost Optimization
 - Data Security
-- DevOps
-- ML
 - MLOps
 - Model Decay
 - Model Explainability
 - Operational Excellence
 - Performance Optimization
 - Scalable AI Solutions
-- Security
 section_names:
 - ai
 - azure

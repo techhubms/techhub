@@ -13,11 +13,9 @@ tags:
 - Access Policy
 - Aembit
 - Agentic AI
-- AI
 - AI Security
 - Audit Trail
 - Blended Identity
-- Blogs
 - Credential Management
 - Cyberwire
 - Enterprise AI
@@ -27,7 +25,6 @@ tags:
 - MCP Identity Gateway
 - Policy Enforcement
 - Runtime Security
-- Security
 - Workload IAM
 section_names:
 - ai

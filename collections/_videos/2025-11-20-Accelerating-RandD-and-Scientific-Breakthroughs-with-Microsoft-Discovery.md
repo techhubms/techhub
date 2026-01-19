@@ -10,9 +10,7 @@ date: 2025-11-20 14:57:10 +00:00
 permalink: /ai/videos/Accelerating-RandD-and-Scientific-Breakthroughs-with-Microsoft-Discovery
 tags:
 - Agentic AI
-- AI
 - AI Agents
-- Azure
 - Azure AI
 - Data Challenges
 - Foundry
@@ -21,7 +19,6 @@ tags:
 - Microsoft Discovery
 - Microsoft Ignite
 - Migrateandmodernizeyourestate
-- ML
 - MSIgnite
 - Product Design
 - Quantum Computing
@@ -29,7 +26,6 @@ tags:
 - Sales Tools
 - Scientific Research
 - Simulation
-- Videos
 section_names:
 - ai
 - azure

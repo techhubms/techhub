@@ -10,9 +10,7 @@ date: 2025-11-24 07:26:49 +00:00
 permalink: /ai/blogs/Ignite-2025-How-Fabric-IQ-Transforms-Data-Into-Real-Understanding
 tags:
 - Agent 365
-- AI
 - AI Agents
-- Blogs
 - Business Process Optimization
 - Data Governance
 - Enterprise Data
@@ -22,7 +20,6 @@ tags:
 - Microsoft AI
 - Microsoft Fabric
 - Microsoft Ignite
-- ML
 - Operational Intelligence
 - Reasoning Graph
 - Semantic Layer

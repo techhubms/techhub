@@ -9,12 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-28 22:13:32 +00:00
 permalink: /ai/community/Performance-Analysis-DeepSeek-R1-Inference-with-vLLM-on-Azure-ND-H100-v5
 tags:
-- AI
 - AI Infrastructure
-- Azure
 - Azure ND H100 V5
 - Chain Of Thought
-- Community
 - Cost Analysis
 - DeepSeek R1
 - FP8 Precision

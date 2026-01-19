@@ -10,13 +10,10 @@ date: 2025-08-05 07:56:10 +00:00
 permalink: /coding/community/How-I-Replaced-10-Logic-App-Conditions-with-1-C-Script
 tags:
 - Automation
-- Azure
 - Azure Functions
 - Azure Logic Apps
 - C#
-- Coding
 - Cold Start
-- Community
 - Conditional Logic
 - HTTP Latency
 - Inline Code

@@ -10,21 +10,16 @@ date: 2025-12-10 15:00:47 +00:00
 permalink: /github-copilot/news/Streamlining-Your-Git-Workflow-with-Visual-Studio-2026
 tags:
 - .NET
-- AI
 - Async Programming
 - Azure DevOps
 - Branch Management
 - Code Review
-- Coding
 - Commit Message Automation
 - Copilot Chat
 - Copilot Code Review
-- DevOps
 - Git
 - Git Changes Window
 - Git Repository Window
-- GitHub Copilot
-- News
 - Pull Requests
 - Source Control
 - Stashing

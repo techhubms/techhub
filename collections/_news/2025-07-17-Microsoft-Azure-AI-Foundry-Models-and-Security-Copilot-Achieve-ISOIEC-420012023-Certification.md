@@ -9,24 +9,20 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-17 15:00:00 +00:00
 permalink: /ai/news/Microsoft-Azure-AI-Foundry-Models-and-Security-Copilot-Achieve-ISOIEC-420012023-Certification
 tags:
-- AI
 - AI + Machine Learning
 - AI Compliance
 - AI Foundry Models
 - AI Governance
 - AI Lifecycle
 - AI Risk Management
-- Azure
 - Cloud Platform
 - Copilot
 - ISO/IEC 42001:2023
 - Microsoft Azure
 - Microsoft Security Copilot
-- News
 - Operational Resilience
 - Regulatory Standards
 - Responsible AI
-- Security
 - Security Certification
 - Trust And Transparency
 section_names:

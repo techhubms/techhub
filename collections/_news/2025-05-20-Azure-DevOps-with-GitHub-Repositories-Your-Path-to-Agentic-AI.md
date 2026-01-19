@@ -10,18 +10,13 @@ date: 2025-05-20 16:00:55 +00:00
 permalink: /github-copilot/news/Azure-DevOps-with-GitHub-Repositories-Your-Path-to-Agentic-AI
 tags:
 - Agentic AI
-- AI
 - AI Teammate
-- Azure
 - Azure DevOps
 - Bug Fixing
 - Code Review
-- DevOps
 - Feature Implementation
-- GitHub Copilot
 - GitHub Repositories
 - Microsoft For Developers
-- News
 - Pull Requests
 - Software Development Lifecycle
 section_names:

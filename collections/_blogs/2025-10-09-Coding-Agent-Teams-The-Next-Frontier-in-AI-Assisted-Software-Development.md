@@ -11,7 +11,6 @@ permalink: /ai/blogs/Coding-Agent-Teams-The-Next-Frontier-in-AI-Assisted-Softwar
 tags:
 - Agent Based Programming
 - Agentic AI
-- AI
 - AI Agents
 - AI Assisted Software Development
 - AI Code Generation
@@ -26,17 +25,14 @@ tags:
 - AI Programming Teams
 - AutoGen
 - Autonomous Coding Agents
-- Blogs
 - Business Of DevOps
 - Claudeflow
-- Coding
 - Coding Agent Frameworks
 - Coding Automation
 - Collaborative AI Agents
 - Contributed Content
 - CrewAI
 - Developer Productivity
-- DevOps
 - Doin' DevOps
 - Generative AI For Developers
 - Intelligent Coding Assistants

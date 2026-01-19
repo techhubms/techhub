@@ -11,23 +11,19 @@ permalink: /ai/news/Assess-Agentic-Risks-with-the-AI-Red-Teaming-Agent-in-Micros
 tags:
 - Adversarial Testing
 - Agentic Pipelines
-- AI
 - AI Development
 - AI Red Teaming Agent
 - AI Security
 - AI Tools
-- Azure
 - Azure AI Foundry
 - CI/CD
 - Compliance
 - Generative AI
 - Microsoft Foundry
-- News
 - Prompt Injection
 - PyRIT
 - Red Teaming
 - SDK Integration
-- Security
 - Sensitive Data Leakage
 - Trustworthy AI
 section_names:

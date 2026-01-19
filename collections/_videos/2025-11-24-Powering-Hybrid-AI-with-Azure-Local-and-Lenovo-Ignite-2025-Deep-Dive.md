@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 10:34:29 +00:00
 permalink: /ai/videos/Powering-Hybrid-AI-with-Azure-Local-and-Lenovo-Ignite-2025-Deep-Dive
 tags:
-- AI
 - AKS
-- Azure
 - Azure AI Foundry
 - Azure Local
 - Clustered Workloads
@@ -29,7 +27,6 @@ tags:
 - Predictive Maintenance
 - Real Time Analytics
 - Scalable Infrastructure
-- Videos
 section_names:
 - ai
 - azure

@@ -9,20 +9,16 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-18 10:30:00 +00:00
 permalink: /ml/news/How-to-Connect-Microsoft-Fabric-to-Azure-DevOps-Using-Service-Principal
 tags:
-- Azure
 - Azure DevOps
 - CI/CD
 - Cloud Development
 - Configured Credential
 - Continuous Deployment
 - Cross Tenant Authentication
-- DevOps
 - Enterprise Security
 - Git Integration
 - GitHub Integration
 - Microsoft Fabric
-- ML
-- News
 - OAuth 2.0
 - Service Principal
 - Workspace Automation

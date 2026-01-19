@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-14 14:45:20 +00:00
 permalink: /ai/videos/Unlocking-AI-Interoperability-with-Model-Context-Protocol-MCP
 tags:
-- AI
 - AI Agents
 - AI Architecture
 - AI Interoperability
@@ -26,7 +25,6 @@ tags:
 - Server Development
 - Tech
 - Technology
-- Videos
 - VS
 section_names:
 - ai

@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-20 10:28:39 +00:00
 permalink: /ml/videos/Migrating-to-Microsoft-Fabric-Unifying-Your-Data-Journey
 tags:
-- Azure
 - Azure Data Factory
 - Azure Synapse Gen 2
 - Cloud Data Warehouse
@@ -23,13 +22,11 @@ tags:
 - Microsoft Fabric
 - Migration Best Practices
 - Migration Pathways
-- ML
 - Modern Data Estate
 - MSIgnite
 - Spark Engineering
 - Statsig
 - Unifyyourdataplatform
-- Videos
 - Warehouse Native
 section_names:
 - azure

@@ -11,7 +11,6 @@ permalink: /security/blogs/Configuring-Windows-Firewall-for-Maximum-Safety
 tags:
 - Advanced Security
 - Antivirus
-- Blogs
 - Cybersecurity
 - Firewall Configuration
 - Firewall Logging
@@ -19,7 +18,6 @@ tags:
 - Network Protection
 - Outbound Rules
 - Port Blocking
-- Security
 - Security Best Practices
 - System Hardening
 - Windows 11

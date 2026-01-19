@@ -11,7 +11,6 @@ permalink: /security/community/How-to-Update-proxyAddresses-for-a-Cloud-Only-Ent
 tags:
 - Azure Active Directory
 - Cloud Identity
-- Community
 - Directory Synchronization
 - Exchange Online
 - Graph API
@@ -21,7 +20,6 @@ tags:
 - PATCH Request
 - Permissions
 - Proxyaddresses
-- Security
 - User Management
 section_names:
 - security

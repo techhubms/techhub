@@ -11,7 +11,6 @@ permalink: /ai/blogs/Claude-Introduces-Agent-Skills-for-Custom-AI-Workflows
 tags:
 - Agent Skills
 - Agentic Development
-- AI
 - AI Agents
 - AI Automation
 - AI For Developers
@@ -21,7 +20,6 @@ tags:
 - Anthropic AI Tools
 - Anthropic Claude
 - Automation
-- Blogs
 - Business Of DevOps
 - CI/CD Pipelines
 - Claude AI Update
@@ -34,7 +32,6 @@ tags:
 - Claude Skills
 - Claude Web App
 - Custom AI Workflows
-- DevOps
 - DevOps AI
 - DevOps Automation
 - IaC

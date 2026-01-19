@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-19 07:00:05 +00:00
 permalink: /azure/videos/Your-Guide-to-Saving-with-Azure-Hybrid-Benefit
 tags:
-- Azure
 - Azure Hybrid Benefit
 - Azure Reservations
 - AzureEssentialsShow
@@ -22,7 +21,6 @@ tags:
 - Linux Workloads
 - Microsoft Azure
 - SQL Server On Azure
-- Videos
 - Windows Server Migration
 - Workload Migration
 section_names:

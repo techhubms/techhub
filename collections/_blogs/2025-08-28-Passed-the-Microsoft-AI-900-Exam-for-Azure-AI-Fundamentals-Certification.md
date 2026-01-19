@@ -9,15 +9,12 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-08-28 14:48:56 +00:00
 permalink: /ai/blogs/Passed-the-Microsoft-AI-900-Exam-for-Azure-AI-Fundamentals-Certification
 tags:
-- AI
 - AI 900
 - AI Workloads
-- Azure
 - Azure AI Fundamentals
 - Azure Cognitive Services
 - Azure Machine Learning
 - Azure OpenAI Service
-- Blogs
 - Certification
 - Cloud
 - Cloud Computing

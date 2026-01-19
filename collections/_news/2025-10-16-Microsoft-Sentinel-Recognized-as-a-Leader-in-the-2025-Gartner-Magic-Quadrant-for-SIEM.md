@@ -10,10 +10,8 @@ date: 2025-10-16 18:00:00 +00:00
 permalink: /ai/news/Microsoft-Sentinel-Recognized-as-a-Leader-in-the-2025-Gartner-Magic-Quadrant-for-SIEM
 tags:
 - Agentic AI
-- AI
 - AI Powered Security
 - Automation
-- Azure
 - Cloud Security
 - Cyberthreat Response
 - Data Lake
@@ -23,8 +21,6 @@ tags:
 - MCP Server
 - Microsoft Defender
 - Microsoft Sentinel
-- News
-- Security
 - Security Analytics
 - Security Operations Center
 - SIEM

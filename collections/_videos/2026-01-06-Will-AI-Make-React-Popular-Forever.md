@@ -9,18 +9,15 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2026-01-06 17:01:29 +00:00
 permalink: /github-copilot/videos/Will-AI-Make-React-Popular-Forever
 tags:
-- AI
 - Consolidation Effect
 - Developer Tools
 - Framework Popularity
 - GitHub
-- GitHub Copilot
 - Haskell
 - Machine Learning
 - Programming Languages
 - React
 - Software Development
-- Videos
 section_names:
 - ai
 - github-copilot

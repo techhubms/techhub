@@ -11,11 +11,8 @@ permalink: /azure/community/Enhancing-Workload-Resilience-with-Azure-Files-Zonal
 tags:
 - Application Level Replication
 - Availability Zones
-- Azure
 - Azure Files
 - Azure Storage
-- Community
-- DevOps
 - Enterprise Workloads
 - Failure Domain Isolation
 - High Availability

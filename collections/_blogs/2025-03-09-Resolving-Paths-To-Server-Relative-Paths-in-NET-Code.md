@@ -12,9 +12,7 @@ tags:
 - .NET
 - ASP.NET
 - ASP.NET Core
-- Blogs
 - Business Logic
-- Coding
 - Controllers
 - Extension Methods
 - Helpers

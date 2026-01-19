@@ -9,19 +9,15 @@ feed_url: https://devops.com/feed/
 date: 2025-09-17 07:26:00 +00:00
 permalink: /ai/blogs/OpenAIs-GPT-5-Codex-AI-for-Enterprise-Grade-Development-and-Code-Review
 tags:
-- AI
 - AI Code Review
 - AI in DevOps
-- Blogs
 - Business Of DevOps
 - CLI Tools
 - Code Review Automation
-- Coding
 - Complex Debugging
 - Complex Debugging AI
 - Cursor IDE
 - Development Tools
-- DevOps
 - DevOps Workflow
 - Enterprise AI Coding
 - Enterprise Software Development

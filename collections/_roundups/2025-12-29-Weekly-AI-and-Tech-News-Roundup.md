@@ -7,22 +7,14 @@ date: 2025-12-29 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - Agent Framework
-- AI
 - AI Agents
 - Automation
-- Azure
 - Azure Databricks
 - Azure SRE
 - CI/CD
-- Coding
-- DevOps
-- GitHub Copilot
 - Load Testing
 - MCP (model Context Protocol)
-- ML
 - Open Source
-- Roundups
-- Security
 - Supply Chain Security
 - VS Code
 section_names:

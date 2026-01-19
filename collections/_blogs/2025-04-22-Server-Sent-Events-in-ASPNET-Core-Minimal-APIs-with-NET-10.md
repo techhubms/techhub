@@ -14,9 +14,7 @@ tags:
 - ASP.NET
 - ASP.NET Core
 - BackgroundService
-- Blogs
 - C# 14
-- Coding
 - EventSource
 - IAsyncEnumerable
 - INotifyPropertyChanged

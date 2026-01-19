@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 17:17:10 +00:00
 permalink: /ai/videos/Introducing-Microsoft-Foundry-Tools-for-Agentic-AI-Apps-BRK192
 tags:
-- AI
 - AI Agents
 - APIs
-- Azure
 - Azure AI
 - Azure Database
 - Cosmos DB
@@ -29,7 +27,6 @@ tags:
 - Model Versioning
 - MSIgnite
 - Transcription
-- Videos
 section_names:
 - ai
 - azure

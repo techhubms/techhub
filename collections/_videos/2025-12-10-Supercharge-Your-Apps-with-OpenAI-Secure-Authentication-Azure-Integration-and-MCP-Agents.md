@@ -11,14 +11,11 @@ permalink: /ai/videos/Supercharge-Your-Apps-with-OpenAI-Secure-Authentication-Az
 tags:
 - .NET
 - Agentic Apps
-- AI
 - AI Integration
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
 - Cloud Computing
 - Cloud Development
-- Coding
 - Dev
 - Developer
 - Development
@@ -32,11 +29,9 @@ tags:
 - OpenAI
 - Python
 - Secure Authentication
-- Security
 - Tech
 - Technology
 - Token Based Authentication
-- Videos
 section_names:
 - ai
 - azure

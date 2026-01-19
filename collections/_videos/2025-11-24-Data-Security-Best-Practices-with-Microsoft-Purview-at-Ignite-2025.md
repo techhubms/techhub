@@ -10,7 +10,6 @@ date: 2025-11-24 13:45:39 +00:00
 permalink: /ai/videos/Data-Security-Best-Practices-with-Microsoft-Purview-at-Ignite-2025
 tags:
 - Advisory Services
-- AI
 - AI Security Training
 - Cloud Security
 - Co Sell Journey
@@ -27,9 +26,7 @@ tags:
 - On Premises Security
 - Partner Engagement
 - Power Platform
-- Security
 - Skilling Hub
-- Videos
 section_names:
 - ai
 - security

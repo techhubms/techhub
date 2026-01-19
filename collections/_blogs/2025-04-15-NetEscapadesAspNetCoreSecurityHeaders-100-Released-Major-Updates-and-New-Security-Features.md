@@ -12,8 +12,6 @@ tags:
 - .NET Core
 - API Security
 - ASP.NET Core
-- Blogs
-- Coding
 - Content Security Policy
 - HTTP Headers
 - Middleware
@@ -21,7 +19,6 @@ tags:
 - Nonce Generation
 - OWASP
 - Permissions Policy
-- Security
 - Security Headers
 - Trusted Types
 section_names:

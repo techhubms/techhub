@@ -9,17 +9,13 @@ feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-07-31 01:16:09 +00:00
 permalink: /ai/community/Building-an-AI-Extension-to-Enhance-Azure-DevOps-Pull-Request-Reviews
 tags:
-- AI
 - AI Extension
 - Automation
-- Azure
 - Azure AI
 - Azure DevOps
 - BYOLLM
 - Code Review Tools
-- Community
 - Context Windows
-- DevOps
 - Embedded Systems
 - GitHub Style Comments
 - Integration
@@ -31,7 +27,6 @@ tags:
 - PR Automation
 - PR Recommendations
 - Pull Request Reviews
-- Security
 - Security Review
 - Work Item Management
 section_names:

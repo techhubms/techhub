@@ -10,16 +10,13 @@ date: 2025-07-07 19:32:46 +00:00
 permalink: /azure/news/Markdown-Support-Now-Available-for-Azure-DevOps-Work-Items
 tags:
 - Agile
-- Azure
 - Azure & Cloud
 - Azure Cloud
 - Azure DevOps
-- DevOps
 - Editor
 - HTML Conversion
 - Large Text Fields
 - Markdown
-- News
 - Release Process
 - REST API
 - User Feedback

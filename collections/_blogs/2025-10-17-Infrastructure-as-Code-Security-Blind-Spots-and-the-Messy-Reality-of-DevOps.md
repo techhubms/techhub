@@ -9,20 +9,16 @@ feed_url: https://devops.com/feed/
 date: 2025-10-17 15:19:37 +00:00
 permalink: /ai/blogs/Infrastructure-as-Code-Security-Blind-Spots-and-the-Messy-Reality-of-DevOps
 tags:
-- AI
 - AI in Security
 - Audit Logging
 - Automation
-- Blogs
 - Cloud Security
 - Credential Management
-- DevOps
 - Federated Identity
 - Human Factors
 - IaC
 - Incident Response
 - Policy as Code
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

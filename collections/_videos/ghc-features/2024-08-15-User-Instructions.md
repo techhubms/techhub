@@ -12,11 +12,8 @@ plans:
 - Free
 alt-collection: features
 tags:
-- AI
 - Code
-- GitHub Copilot
 - Instructions
-- Videos
 section_names:
 - ai
 - github-copilot

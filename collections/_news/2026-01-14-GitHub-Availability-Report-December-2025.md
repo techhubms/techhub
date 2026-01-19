@@ -9,22 +9,18 @@ feed_url: https://github.blog/feed/
 date: 2026-01-14 22:06:49 +00:00
 permalink: /github-copilot/news/GitHub-Availability-Report-December-2025
 tags:
-- AI
 - API Reliability
 - Availability Engineering
 - Cloud Infrastructure
 - Company News
 - Copilot Code Review
 - Copilot Policies
-- DevOps
 - GitHub Actions
 - GitHub Availability Report
-- GitHub Copilot
 - Incident Analysis
 - Incident Mitigation
 - Kafka
 - Monitoring
-- News
 - News & Insights
 - Operational Resilience
 - Platform Engineering

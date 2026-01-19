@@ -11,9 +11,7 @@ permalink: /coding/blogs/Initialize-ASPNET-Core-TagHelpers-with-Shared-Data
 tags:
 - ASP.NET
 - ASP.NET Core
-- Blogs
 - C#
-- Coding
 - Dependency Injection
 - HtmlAttributeNotBound
 - ITagHelperInitializer

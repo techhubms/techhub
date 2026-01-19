@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-26 12:04:04 +00:00
 permalink: /ml/news/Enhanced-Monitoring-for-Spark-High-Concurrency-Workloads-in-Microsoft-Fabric
 tags:
-- Azure
 - Big Data
 - Data Engineering
 - Debugging
@@ -20,8 +19,6 @@ tags:
 - Job Monitoring
 - Logs
 - Microsoft Fabric
-- ML
-- News
 - Notebook Monitoring
 - Notebook Snapshots
 - Observability

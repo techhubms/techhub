@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2026-01-05 21:17:25 +00:00
 permalink: /azure/community/Live-AMA-Demystifying-Azure-Pricing-PM-Session
 tags:
-- Azure
 - Azure Pricing
 - Cloud Cost Management
 - Cloud Migration
 - Cloud Spend
-- Community
 - Cost Optimization
 - Forecasting
 - Hybrid Benefit

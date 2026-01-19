@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-15 09:00:00 +00:00
 permalink: /azure/news/Customer-Managed-Keys-Now-Available-for-Fabric-Warehouse-and-SQL-Analytics-Endpoint
 tags:
-- Azure
 - Azure Key Vault
 - BYOK
 - Compliance
@@ -18,8 +17,6 @@ tags:
 - Database Security
 - Governance
 - Microsoft Fabric
-- News
-- Security
 - SPN
 - SQL Analytics Endpoint
 - Warehouse Encryption

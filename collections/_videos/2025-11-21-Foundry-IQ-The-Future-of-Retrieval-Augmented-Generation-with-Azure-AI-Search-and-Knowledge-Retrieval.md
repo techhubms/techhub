@@ -10,9 +10,7 @@ date: 2025-11-21 07:32:34 +00:00
 permalink: /ai/videos/Foundry-IQ-The-Future-of-Retrieval-Augmented-Generation-with-Azure-AI-Search-and-Knowledge-Retrieval
 tags:
 - Agentic RAG
-- AI
 - AI Agents
-- Azure
 - Azure AI Search
 - Cloud Indexing
 - Contextual AI
@@ -28,7 +26,6 @@ tags:
 - RAG Orchestration
 - Retrieval Augmented Generation
 - Steering Instructions
-- Videos
 section_names:
 - ai
 - azure

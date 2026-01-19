@@ -9,19 +9,15 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-18 09:20:59 +00:00
 permalink: /github-copilot/news/Enterprise-Pull-Request-Metrics-Now-Included-in-GitHub-Copilot-Usage-Metrics-API
 tags:
-- AI
 - AI Controls
 - API Reporting
 - Copilot
 - Copilot API
 - Copilot Usage Metrics
 - Developer Productivity
-- DevOps
 - DevOps Metrics
 - Enterprise Metrics
-- GitHub Copilot
 - GitHub Enterprise
-- News
 - Pull Request Analytics
 - Pull Request Review
 section_names:

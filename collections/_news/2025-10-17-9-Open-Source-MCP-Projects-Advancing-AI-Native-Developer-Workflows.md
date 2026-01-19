@@ -10,22 +10,18 @@ date: 2025-10-17 16:00:00 +00:00
 permalink: /github-copilot/news/9-Open-Source-MCP-Projects-Advancing-AI-Native-Developer-Workflows
 tags:
 - Agentic Tooling
-- AI
 - AI Native Workflows
 - Automation
-- Coding
 - Context7
 - Developer Productivity
 - FastAPI
 - Generative AI
-- GitHub Copilot
 - IDE Assistants
 - Inspector
 - LLM
 - Machine Learning
 - MCP
 - N8n
-- News
 - Nuxt
 - Open Source
 - Orchestration

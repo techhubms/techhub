@@ -10,7 +10,6 @@ date: 2025-11-24 14:28:09 +00:00
 permalink: /azure/videos/Simplifying-Azure-Local-Deployments-with-Lenovo-ThinkAgile-MX-and-LOCA
 tags:
 - Automation
-- Azure
 - Azure Deployment
 - Azure Local
 - Cluster Deployment
@@ -27,7 +26,6 @@ tags:
 - Open Cloud Automation
 - Reliability
 - Subscription Management
-- Videos
 section_names:
 - azure
 ---

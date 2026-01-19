@@ -9,10 +9,8 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-09 16:00:00 +00:00
 permalink: /ai/news/Microsoft-Azure-Launches-GB300-NVL72-Supercluster-for-OpenAI-Workloads
 tags:
-- AI
 - AI Datacenter
 - AI Infrastructure
-- Azure
 - Blackwell Ultra GPUs
 - Collective Operations
 - Compute
@@ -24,7 +22,6 @@ tags:
 - InfiniBand
 - Microsoft Azure
 - ND GB300 V6
-- News
 - NVIDIA GB300
 - NVIDIA Quantum X800
 - NVL72

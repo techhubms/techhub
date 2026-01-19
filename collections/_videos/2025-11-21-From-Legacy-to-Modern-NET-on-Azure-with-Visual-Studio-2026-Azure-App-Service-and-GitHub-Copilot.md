@@ -10,25 +10,19 @@ date: 2025-11-21 10:37:23 +00:00
 permalink: /github-copilot/videos/From-Legacy-to-Modern-NET-on-Azure-with-Visual-Studio-2026-Azure-App-Service-and-GitHub-Copilot
 tags:
 - .NET
-- AI
 - AI Powered Development
 - App Compatibility
-- Azure
 - Azure App Service
 - Azure Key Vault
 - Azure Managed Instance
 - Cloud Deployment
-- Coding
 - Cost Efficiency
-- DevOps
-- GitHub Copilot
 - Legacy Modernization
 - Migrateandmodernizeyourestate
 - MSIgnite
 - MVC Music Store
 - Observability
 - Secure Deployments
-- Videos
 - VS
 - WinForms
 section_names:

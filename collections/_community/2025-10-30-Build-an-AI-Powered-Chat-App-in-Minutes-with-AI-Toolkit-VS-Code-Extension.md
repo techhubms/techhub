@@ -9,9 +9,7 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-30 04:56:45 +00:00
 permalink: /github-copilot/community/Build-an-AI-Powered-Chat-App-in-Minutes-with-AI-Toolkit-VS-Code-Extension
 tags:
-- AI
 - AI Toolkit
-- Azure
 - Azure App Service
 - Azure Developer CLI
 - Azure Storage
@@ -19,10 +17,7 @@ tags:
 - Backend
 - Chat Application
 - Cloud Deployment
-- Coding
-- Community
 - Frontend
-- GitHub Copilot
 - GitHub LLM
 - Project Scaffold
 - Python

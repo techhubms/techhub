@@ -10,8 +10,6 @@ date: 2024-11-29 12:30:19 +00:00
 permalink: /ml/blogs/Translytical-Fabric-Power-BI-Write-Back-Capabilities-and-the-Future-of-Analytics
 tags:
 - AI
-- Azure
-- Blogs
 - Business Intelligence
 - Data & AI
 - Data Analytics
@@ -19,7 +17,6 @@ tags:
 - Fabric Database
 - Ignite
 - Microsoft Fabric
-- ML
 - Power BI
 - Reporting
 - Translytical

@@ -9,12 +9,10 @@ feed_url: https://devops.com/feed/
 date: 2025-11-14 10:17:05 +00:00
 permalink: /ai/blogs/How-Hyperconnected-AI-Development-Creates-a-Multi-System-Secret-Sprawl
 tags:
-- AI
 - AI Development Security
 - AI Secret Leaks
 - API Key Exposure
 - API Key Sprawl
-- Blogs
 - Business Of DevOps
 - Claude Code
 - Claude Code Security
@@ -27,7 +25,6 @@ tags:
 - Cursor IDE Risks
 - Database Credential Leaks
 - Database Security
-- DevOps
 - DevOps Best Practices
 - Ggshield
 - GitHub Secret Exposure
@@ -46,7 +43,6 @@ tags:
 - Secret Management
 - Secret Scanning Tools
 - Secrets Sprawl
-- Security
 - Security Automation
 - Social Facebook
 - Social LinkedIn

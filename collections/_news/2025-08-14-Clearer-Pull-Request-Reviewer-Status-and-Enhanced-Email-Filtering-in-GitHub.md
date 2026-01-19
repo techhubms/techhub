@@ -11,14 +11,12 @@ permalink: /devops/news/Clearer-Pull-Request-Reviewer-Status-and-Enhanced-Email-
 tags:
 - Accessibility
 - Collaboration
-- DevOps
 - Email Filtering
 - Email Notifications
 - GitHub
 - Inclusive Design
 - Issue Tracking
 - Metadata
-- News
 - PR Approvals
 - Pull Requests
 - Reviewer Status

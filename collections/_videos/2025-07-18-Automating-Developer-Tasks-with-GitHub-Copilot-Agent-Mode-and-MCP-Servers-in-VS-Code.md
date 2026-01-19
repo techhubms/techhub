@@ -10,14 +10,11 @@ date: 2025-07-18 20:27:10 +00:00
 permalink: /github-copilot/videos/Automating-Developer-Tasks-with-GitHub-Copilot-Agent-Mode-and-MCP-Servers-in-VS-Code
 tags:
 - Agent Mode
-- AI
 - Copilot
 - Copilot Agent
 - Developer
 - Developer Automation
 - Developer Tools
-- DevOps
-- GitHub Copilot
 - Issue Assignment
 - LeetCode Integration
 - Mcp
@@ -25,7 +22,6 @@ tags:
 - Mcpserver
 - Productivity
 - Pull Requests
-- Videos
 - VS Code
 section_names:
 - ai

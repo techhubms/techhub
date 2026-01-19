@@ -9,19 +9,15 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-24 07:00:00 +00:00
 permalink: /github-copilot/community/AI-Toolkit-for-VS-Code-October-Update-GitHub-Copilot-Tools-Integration
 tags:
-- AI
 - AI Agent Development
 - AI Evaluation
 - AI Frameworks
 - AI Toolkit
 - Azure AI Foundry
 - Code Generation
-- Coding
-- Community
 - Copilot Integration
 - Developer Tools
 - Evaluation Tools
-- GitHub Copilot
 - Microsoft Agent Framework
 - Model Playground
 - ONNX Models

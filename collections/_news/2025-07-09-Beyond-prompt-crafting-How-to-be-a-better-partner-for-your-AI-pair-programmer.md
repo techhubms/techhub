@@ -9,14 +9,11 @@ feed_url: https://github.blog/feed/
 date: 2025-07-09 16:00:00 +00:00
 permalink: /github-copilot/news/Beyond-prompt-crafting-How-to-be-a-better-partner-for-your-AI-pair-programmer
 tags:
-- AI
 - AI & ML
 - AI Pair Programming
 - Code Quality
 - Coding Context
 - Developer Tools
-- GitHub Copilot
-- News
 section_names:
 - ai
 - github-copilot

@@ -9,19 +9,14 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-18 07:00:00 +00:00
 permalink: /ai/news/2025-SQL-Year-in-Review-SQL-Server-Azure-SQL-and-Fabric-Updates
 tags:
-- AI
 - AI Integration
-- Azure
 - Azure SQL
-- Coding
 - Copilot
 - Data Migration
 - Database Security
 - Fabric CLI
 - JSON Support
 - Microsoft Fabric
-- ML
-- News
 - Python Notebooks
 - SQL Database
 - SQL Development

@@ -9,18 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-21 16:19:58 +00:00
 permalink: /github-copilot/community/Your-Guide-to-Debugging-and-Reviewing-Copilot-Generated-Code
 tags:
-- AI
 - AI Coding Assistant
 - AI in Development
 - Automated Code Generation
 - Code Quality
 - Code Review
-- Coding
-- Community
 - Debugging
 - Developer Best Practices
 - GitHub
-- GitHub Copilot
 - Human in The Loop
 - Productivity Tools
 section_names:

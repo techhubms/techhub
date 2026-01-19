@@ -9,15 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-10-14 16:30:26 +00:00
 permalink: /github-copilot/videos/Generate-a-Test-Suite-with-GitHub-Copilot-and-Prompt-Driven-Development
 tags:
-- AI
 - API Testing
-- Coding
 - Demo
 - Developer
 - Developer Tools
 - Developertipsandtricks
 - End To End Testing
-- GitHub Copilot
 - Integration Testing
 - Microsoft
 - Mocking Strategy
@@ -27,7 +24,6 @@ tags:
 - Prompts
 - Test Automation
 - Unit Testing
-- Videos
 - VS Code
 section_names:
 - ai

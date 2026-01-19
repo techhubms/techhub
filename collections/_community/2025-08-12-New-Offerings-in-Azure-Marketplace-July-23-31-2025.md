@@ -9,16 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 13:00:00 +00:00
 permalink: /ai/community/New-Offerings-in-Azure-Marketplace-July-23-31-2025
 tags:
-- AI
 - AI Solutions
 - Archiving
 - Automation
-- Azure
 - Azure Integration
 - Azure Marketplace
 - Backup Solutions
 - Cloud Migration
-- Community
 - Compliance
 - Data Analytics
 - Databricks
@@ -26,11 +23,9 @@ tags:
 - Generative AI
 - Governance
 - Microsoft Azure
-- ML
 - Partner Solutions
 - Power Platform
 - Remote Monitoring
-- Security
 - Security Platforms
 - Workflows
 section_names:

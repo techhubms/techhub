@@ -9,15 +9,10 @@ feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-05-23 00:00:00 +00:00
 permalink: /github-copilot/blogs/Use-Copilot-in-VS-Code-to-Summarize-Pull-Requests-Efficiently
 tags:
-- AI
 - Best Practices
-- Blogs
 - Code Review
-- Coding
 - Copilot Chat
 - Developer Workflow
-- DevOps
-- GitHub Copilot
 - PR Description
 - Productivity
 - Pull Requests

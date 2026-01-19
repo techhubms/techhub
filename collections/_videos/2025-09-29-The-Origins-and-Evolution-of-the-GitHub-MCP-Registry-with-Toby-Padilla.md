@@ -9,17 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-09-29 07:01:00 +00:00
 permalink: /github-copilot/videos/The-Origins-and-Evolution-of-the-GitHub-MCP-Registry-with-Toby-Padilla
 tags:
-- AI
 - AI Tooling
 - Cross Company Collaboration
 - Developer Tools
-- GitHub Copilot
 - GitHub MCP Registry
 - MCP
 - MCP Server
 - Open Standards
 - Registry Standard
-- Videos
 - VS Code
 section_names:
 - ai

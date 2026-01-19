@@ -10,7 +10,6 @@ date: 2025-12-10 18:00:00 +00:00
 permalink: /ai/news/From-Awareness-to-Action-Building-a-Security-First-Culture-for-the-Agentic-AI-Era
 tags:
 - Agentic AI
-- AI
 - AI Adoption
 - AI Agents
 - AI Risks
@@ -21,9 +20,7 @@ tags:
 - Identity Management
 - Microsoft Ignite
 - Microsoft Security
-- News
 - Responsible AI
-- Security
 - Security First Culture
 - Security Training
 - Skilling Initiatives

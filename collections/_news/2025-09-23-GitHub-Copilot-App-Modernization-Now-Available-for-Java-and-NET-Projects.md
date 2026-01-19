@@ -10,24 +10,19 @@ date: 2025-09-23 13:00:35 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-App-Modernization-Now-Available-for-Java-and-NET-Projects
 tags:
 - .NET
-- AI
 - App Modernization
 - Application Assessment
 - Build Patching
 - Cloud Deployment
 - Code Transformation
-- Coding
 - Containerization
 - Continuous Integration
 - Copilot
 - Dependency Management
-- DevOps
 - GitHub
-- GitHub Copilot
 - Improvement
 - Java
 - Modernization Tools
-- News
 - Software Migration
 section_names:
 - ai

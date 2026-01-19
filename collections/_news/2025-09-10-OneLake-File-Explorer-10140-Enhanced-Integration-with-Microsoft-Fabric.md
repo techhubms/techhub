@@ -10,7 +10,6 @@ date: 2025-09-10 09:00:00 +00:00
 permalink: /ml/news/OneLake-File-Explorer-10140-Enhanced-Integration-with-Microsoft-Fabric
 tags:
 - .NET 8
-- Azure
 - Data Engineering
 - Data Upload
 - Data Workflow
@@ -20,8 +19,6 @@ tags:
 - Lakehouse Integration
 - Microsoft Ecosystem
 - Microsoft Fabric
-- ML
-- News
 - OneLake File Explorer
 - Sync Reliability
 - Windows Integration

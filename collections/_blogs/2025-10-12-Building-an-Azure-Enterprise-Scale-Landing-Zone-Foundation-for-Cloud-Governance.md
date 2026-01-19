@@ -9,7 +9,6 @@ feed_url: https://dellenny.com/feed/
 date: 2025-10-12 08:10:44 +00:00
 permalink: /azure/blogs/Building-an-Azure-Enterprise-Scale-Landing-Zone-Foundation-for-Cloud-Governance
 tags:
-- Azure
 - Azure Active Directory
 - Azure DevOps
 - Azure Landing Zone
@@ -17,20 +16,17 @@ tags:
 - Azure Policy
 - Azure Security Center
 - Bicep
-- Blogs
 - CI/CD
 - Cloud Adoption Framework
 - Cloud Security
 - Cost Optimization
 - Defender For Cloud
-- DevOps
 - Enterprise Architecture
 - Governance
 - IaC
 - Management Groups
 - Networking
 - Role Based Access Control
-- Security
 - Terraform
 section_names:
 - azure

@@ -11,7 +11,6 @@ permalink: /azure/news/Storm-0501s-Evolving-Cloud-Based-Ransomware-Tactics-Micro
 tags:
 - AADInternals
 - Active Directory
-- Azure
 - Azure Defender
 - Azure Storage
 - Cloud Based Ransomware
@@ -24,10 +23,8 @@ tags:
 - MFA
 - Microsoft Defender For Endpoint
 - Microsoft Entra ID
-- News
 - Privilege Escalation
 - Ransomware
-- Security
 - Security Best Practices
 - Storm 0501
 section_names:

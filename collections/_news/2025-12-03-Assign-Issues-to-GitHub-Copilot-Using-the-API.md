@@ -10,7 +10,6 @@ date: 2025-12-03 19:21:25 +00:00
 permalink: /github-copilot/news/Assign-Issues-to-GitHub-Copilot-Using-the-API
 tags:
 - Addassigneestoassignable Mutation
-- AI
 - API Integration
 - Branch Management
 - Copilot
@@ -18,13 +17,10 @@ tags:
 - Createissue Mutation
 - Custom Agents
 - Custom Instructions
-- DevOps
 - DevOps Automation
-- GitHub Copilot
 - GraphQL API
 - Improvement
 - Issue Assignment
-- News
 - Projects & Issues
 - Replaceactorsforassignable Mutation
 - Repository Configuration

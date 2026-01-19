@@ -10,13 +10,10 @@ date: 2025-08-07 20:23:51 +00:00
 permalink: /ai/community/Deploying-OpenAIs-gpt-oss-Models-to-Azure-Container-Apps-Serverless-GPUs-with-Ollama
 tags:
 - A100 GPU
-- AI
 - API Integration
 - Autoscaling
-- Azure
 - Azure Container Apps
 - Cloud AI
-- Community
 - Containerization
 - Cost Optimization
 - Docker

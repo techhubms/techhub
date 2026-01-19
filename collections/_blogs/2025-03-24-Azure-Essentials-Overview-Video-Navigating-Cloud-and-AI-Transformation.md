@@ -9,14 +9,11 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-03-24 14:47:03 +00:00
 permalink: /ai/blogs/Azure-Essentials-Overview-Video-Navigating-Cloud-and-AI-Transformation
 tags:
-- AI
 - AI Transformation
-- Azure
 - Azure Essentials
 - Azure Essentials Show
 - Azure Marketing
 - Azure OpenAI
-- Blogs
 - Cloud
 - Cloud Adoption
 - Cloud Computing

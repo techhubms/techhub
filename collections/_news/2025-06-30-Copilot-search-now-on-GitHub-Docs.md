@@ -9,11 +9,8 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-06-30 17:30:46 +00:00
 permalink: /github-copilot/news/Copilot-search-now-on-GitHub-Docs
 tags:
-- AI
 - Documentation
 - GitHub
-- GitHub Copilot
-- News
 - Productivity
 - Search
 section_names:

@@ -9,21 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-09-06 07:57:10 +00:00
 permalink: /github-copilot/videos/Modernizing-Legacy-COBOL-to-Cloud-with-GitHub-Copilot
 tags:
-- AI
 - AI Assisted Development
 - Automated Documentation
 - Autonomous Agents
-- Azure
 - Cloud Migration
 - COBOL Modernization
 - Code Transformation
-- Coding
-- GitHub Copilot
 - Legacy Code Migration
 - Microsoft
 - Reverse Engineering
 - Test Generation
-- Videos
 section_names:
 - ai
 - azure

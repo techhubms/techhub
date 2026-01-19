@@ -10,14 +10,12 @@ date: 2025-09-09 16:00:00 +00:00
 permalink: /azure/community/Bring-Your-Own-License-BYOL-Now-Available-for-JBoss-EAP-on-Azure-App-Service
 tags:
 - Application Hosting
-- Azure
 - Azure App Service
 - Azure Red Hat OpenShift
 - Azure VMs
 - Bring Your Own License
 - BYOL
 - Cloud Migration
-- Community
 - Enterprise Java
 - Java
 - Java EE

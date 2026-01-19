@@ -10,7 +10,6 @@ date: 2025-09-02 14:37:57 +00:00
 permalink: /ai/news/How-AI-Is-Transforming-Healthcare-in-Kenya-Beyond-Patient-Care
 tags:
 - Africa
-- AI
 - AI Adoption
 - Cloud Infrastructure
 - Company News
@@ -24,7 +23,6 @@ tags:
 - Healthcare
 - Kenya
 - Microsoft
-- News
 - Public Private Partnerships
 - Workforce Development
 section_names:

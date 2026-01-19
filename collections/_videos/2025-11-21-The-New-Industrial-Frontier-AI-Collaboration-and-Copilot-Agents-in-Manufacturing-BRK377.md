@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 16:14:24 +00:00
 permalink: /ai/videos/The-New-Industrial-Frontier-AI-Collaboration-and-Copilot-Agents-in-Manufacturing-BRK377
 tags:
-- AI
 - Autonomous Operations
-- Azure
 - Azure IoT
 - Copilot Agents
 - Copilotandagentsatwork
@@ -25,7 +23,6 @@ tags:
 - MSIgnite
 - Robotics
 - Sensors
-- Videos
 - Virtual Support Agents
 section_names:
 - ai

@@ -9,9 +9,7 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-05 11:00:11 +00:00
 permalink: /ai/news/Pantone-Collaborates-with-Microsoft-to-Launch-AI-Powered-Palette-Generator
 tags:
-- AI
 - AI Integration
-- Azure
 - Azure AI Foundry
 - Azure AI Search
 - Azure Cosmos DB
@@ -23,7 +21,6 @@ tags:
 - Design Automation
 - Digital Design
 - Microsoft Azure
-- News
 - Pantone Connect
 - Pantone Palette Generator
 - Retrieval Augmented Generation

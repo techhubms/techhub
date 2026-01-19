@@ -11,9 +11,7 @@ permalink: /devops/community/kubeseal-Built-a-small-tool-to-make-bitnamis-sealed
 tags:
 - Automation
 - Bitnami
-- Community
 - Configuration Management
-- DevOps
 - DevOps Tools
 - GitOps
 - Kubernetes

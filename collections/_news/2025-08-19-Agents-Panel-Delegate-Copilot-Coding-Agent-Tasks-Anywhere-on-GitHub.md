@@ -11,17 +11,14 @@ permalink: /github-copilot/news/Agents-Panel-Delegate-Copilot-Coding-Agent-Tasks
 tags:
 - Agentic Workflows
 - Agents Panel
-- AI
 - AI Agents
 - Autonomous Developer Agent
 - Background Coding Tasks
 - Copilot Coding Agent
 - Generative AI
-- GitHub Copilot
 - GitHub Mobile
 - MCP
 - MCP Server
-- News
 - News & Insights
 - Product
 - Pull Requests

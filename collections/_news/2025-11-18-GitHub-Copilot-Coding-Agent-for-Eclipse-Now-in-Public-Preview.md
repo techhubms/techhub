@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:05 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Coding-Agent-for-Eclipse-Now-in-Public-Preview
 tags:
-- AI
 - AI Code Assistant
 - Copilot
 - Copilot Chat
@@ -17,10 +16,8 @@ tags:
 - Developer Tools
 - Eclipse IDE
 - GitHub
-- GitHub Copilot
 - IDE Integration
 - Job Tracking
-- News
 - Public Preview
 - Pull Request Automation
 - Task Delegation

@@ -12,7 +12,6 @@ tags:
 - Automated Patching
 - Automated Rollbacks
 - Automation
-- Blogs
 - Business Of DevOps
 - Canary Deployments
 - CI Gating
@@ -21,7 +20,6 @@ tags:
 - Continuous Delivery Security
 - Contributed Content
 - CVE Scanning
-- DevOps
 - DevOps Best Practices
 - DevOps Security
 - DevSecOps
@@ -34,7 +32,6 @@ tags:
 - Rollbacks
 - Runtime Mitigation
 - SBoM
-- Security
 - Security Automation
 - Social Facebook
 - Social LinkedIn

@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-07-29 07:00:24 +00:00
 permalink: /ai/videos/Design-AI-Workloads-with-the-Azure-Well-Architected-Framework
 tags:
-- AI
 - AI Workload Design
-- Azure
 - Azure Essentials Show
 - Azure PaaS
 - Azure SaaS
@@ -24,7 +22,6 @@ tags:
 - Operational Excellence
 - Performance Efficiency
 - Reliability
-- Videos
 section_names:
 - ai
 - azure

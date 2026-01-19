@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-19 23:25:02 +00:00
 permalink: /ai/videos/Building-Omnichannel-Voice-AI-Agents-with-Azure
 tags:
-- AI
 - AI Workflows
-- Azure
 - Azure Communication Services
 - Cloud Computing
 - Conversational AI
@@ -29,7 +27,6 @@ tags:
 - Technology
 - Telephony Integration
 - Text To Speech
-- Videos
 - Voice AI
 - WebRTC
 - WebSocket

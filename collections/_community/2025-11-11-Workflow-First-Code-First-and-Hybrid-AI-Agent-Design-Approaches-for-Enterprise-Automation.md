@@ -11,13 +11,9 @@ permalink: /ai/community/Workflow-First-Code-First-and-Hybrid-AI-Agent-Design-Ap
 tags:
 - .NET SDK
 - Agent Orchestration
-- AI
 - AI Agents
-- Azure
 - Azure AI Foundry
 - Azure Functions
-- Coding
-- Community
 - Copilot Studio
 - Enterprise Automation
 - Hybrid Development

@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-10-08 13:00:42 +00:00
 permalink: /ai/blogs/PagerDuty-Introduces-Suite-of-AI-Agents-to-Enhance-IT-Management-and-DevOps-Workflows
 tags:
-- AI
 - AI Agents
 - AI Automation in IT Operations
 - AI Driven Reliability Engineering
@@ -23,8 +22,6 @@ tags:
 - AIOps Platforms
 - Automation
 - Backstage
-- Blogs
-- DevOps
 - DevOps Automation
 - DevOps Productivity
 - Incident Response

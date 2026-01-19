@@ -11,7 +11,6 @@ permalink: /coding/community/What-exactly-does-Azure-cloud-engineers-do
 tags:
 - .NET
 - APIs
-- Azure
 - Azure Certification
 - Azure Functions
 - C#
@@ -19,9 +18,6 @@ tags:
 - Cloud Development
 - Cloud Engineer
 - Cloud Migration
-- Coding
-- Community
-- DevOps
 section_names:
 - azure
 - coding

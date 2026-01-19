@@ -11,7 +11,6 @@ permalink: /ai/news/AI-Powered-Error-Insights-Copilot-for-Fabric-Data-Factory-Pi
 tags:
 - Actionable Recommendations
 - Activity Error Analysis
-- AI
 - AI Powered Development
 - Automation
 - Copilot
@@ -22,8 +21,6 @@ tags:
 - Error Insights Copilot
 - Fabric Data Factory
 - Microsoft Fabric
-- ML
-- News
 - Pipeline Monitoring
 - Pipeline Troubleshooting
 - Root Cause Analysis

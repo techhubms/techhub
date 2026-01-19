@@ -9,7 +9,6 @@ feed_url: https://dellenny.com/feed/
 date: 2025-08-30 10:50:23 +00:00
 permalink: /security/blogs/How-to-Enable-Ransomware-Protection-in-Windows-11
 tags:
-- Blogs
 - Controlled Folder Access
 - Cybersecurity
 - Data Protection
@@ -18,7 +17,6 @@ tags:
 - Microsoft Security
 - OneDrive
 - Ransomware Protection
-- Security
 - Windows 11
 - Windows Security
 section_names:

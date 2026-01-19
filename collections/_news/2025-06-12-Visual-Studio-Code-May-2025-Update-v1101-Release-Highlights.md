@@ -11,18 +11,13 @@ permalink: /github-copilot/news/Visual-Studio-Code-May-2025-Update-v1101-Release
 tags:
 - Accessibility
 - Agent Mode
-- AI
 - Authentication
 - Chat AI
-- Coding
-- DevOps
 - Electron 35
 - Extension Authoring
-- GitHub Copilot
 - Jupyter
 - MCP
 - MCP Servers
-- News
 - Notebook
 - Pull Requests
 - Python

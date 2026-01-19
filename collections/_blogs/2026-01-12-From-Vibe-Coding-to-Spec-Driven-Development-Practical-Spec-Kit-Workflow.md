@@ -10,23 +10,18 @@ date: 2026-01-12 00:00:00 +00:00
 permalink: /github-copilot/blogs/From-Vibe-Coding-to-Spec-Driven-Development-Practical-Spec-Kit-Workflow
 tags:
 - .NET 9
-- AI
 - AI Assisted Development
 - ASP.NET Core Identity
 - Blazor Server
-- Blogs
 - C# 13
 - Claude
-- Coding
 - Coding Best Practices
 - Copilot
 - Development
-- DevOps
 - Docker
 - Edge Case Handling
 - EF Core
 - GitHub
-- GitHub Copilot
 - MVP
 - PostgreSQL
 - Quality Assurance

@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-10-23 06:30:46 +00:00
 permalink: /github-copilot/blogs/The-Breakneck-Future-of-Code-Generation-AI-in-Software-Engineering-and-SRE
 tags:
-- AI
 - AI Automation
 - AI Code Generation
 - AI Driven Development
@@ -20,18 +19,14 @@ tags:
 - AI Reliability
 - AI SRE
 - Automation
-- Blogs
 - Business Of DevOps
 - Cloud Native
 - Cloud Native Systems
 - Code Duplication
-- Coding
 - Configuration Management
 - Contributed Content
-- DevOps
 - Distributed Inference
 - Engineering Best Practices
-- GitHub Copilot
 - IaC
 - Incident Management
 - KubeCon + CNC NA

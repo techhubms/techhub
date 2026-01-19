@@ -9,7 +9,6 @@ feed_url: https://github.blog/feed/
 date: 2026-01-12 17:00:00 +00:00
 permalink: /github-copilot/news/Want-Better-AI-Outputs-Try-Context-Engineering-with-GitHub-Copilot
 tags:
-- AI
 - AI & ML
 - AI Assisted Development
 - Coding Standards
@@ -18,10 +17,8 @@ tags:
 - Custom Instructions
 - Developer Tools
 - Generative AI
-- GitHub Copilot
 - Insider
 - LLMs
-- News
 - Prompt Engineering
 - Reusable Prompts
 - Software Development

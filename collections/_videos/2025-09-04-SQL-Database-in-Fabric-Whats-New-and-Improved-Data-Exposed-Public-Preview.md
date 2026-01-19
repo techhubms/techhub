@@ -10,7 +10,6 @@ date: 2025-09-04 21:03:39 +00:00
 permalink: /ml/videos/SQL-Database-in-Fabric-Whats-New-and-Improved-Data-Exposed-Public-Preview
 tags:
 - Analytics Platform
-- Azure
 - Azure SQL
 - Cloud Computing
 - Cloud Data
@@ -22,7 +21,6 @@ tags:
 - Live Demo
 - Microsoft
 - Microsoft Fabric
-- ML
 - Private Preview
 - Public Preview
 - Roadmap
@@ -31,7 +29,6 @@ tags:
 - SQL Features
 - Tech
 - Technology
-- Videos
 section_names:
 - azure
 - ml

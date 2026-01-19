@@ -9,12 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 10:32:04 +00:00
 permalink: /ai/videos/Zurich-and-Toyotas-Playbook-for-Enterprise-AI-Innovation
 tags:
-- AI
 - AI Deployment
 - AI Document Processing
 - AI Review Board
 - API Reliability
-- Azure
 - Azure AI
 - Business Alignment
 - Context Modeling
@@ -30,7 +28,6 @@ tags:
 - Technical Challenges
 - Toyota
 - Unstructured Data
-- Videos
 - Zurich
 section_names:
 - ai

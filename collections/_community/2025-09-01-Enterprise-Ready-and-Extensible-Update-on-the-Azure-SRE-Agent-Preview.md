@@ -10,18 +10,14 @@ date: 2025-09-01 19:17:04 +00:00
 permalink: /ai/community/Enterprise-Ready-and-Extensible-Update-on-the-Azure-SRE-Agent-Preview
 tags:
 - AAU
-- AI
 - AI Automation
 - App Service
-- Azure
 - Azure CLI
 - Azure DevOps
 - Azure Functions
 - Azure Monitor
 - Azure SRE Agent
 - Cloud Governance
-- Community
-- DevOps
 - Enterprise Integration
 - GitHub Integration
 - Incident Management
@@ -30,7 +26,6 @@ tags:
 - Operational Excellence
 - PagerDuty
 - Root Cause Analysis
-- Security
 - ServiceNow
 - Source Code Analysis
 section_names:

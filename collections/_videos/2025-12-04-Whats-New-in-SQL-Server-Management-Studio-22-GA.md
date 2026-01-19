@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-12-04 21:00:34 +00:00
 permalink: /coding/videos/Whats-New-in-SQL-Server-Management-Studio-22-GA
 tags:
-- Azure
 - Azure SQL
 - Cloud Computing
-- Coding
 - Data Exposed
 - Database Development
 - DBA Tools
@@ -31,7 +29,6 @@ tags:
 - System Requirements
 - Tech
 - Technology
-- Videos
 - Workload Management
 section_names:
 - azure

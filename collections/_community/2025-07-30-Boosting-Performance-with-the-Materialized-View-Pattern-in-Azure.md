@@ -10,15 +10,12 @@ date: 2025-07-30 07:46:20 +00:00
 permalink: /ml/community/Boosting-Performance-with-the-Materialized-View-Pattern-in-Azure
 tags:
 - Analytical Dashboards
-- Azure
-- Community
 - Cost Effective Processing
 - Data Architecture
 - Data Systems
 - Large Datasets
 - Materialized View
 - Microsoft Azure
-- ML
 - Precomputed Queries
 - Query Performance
 section_names:

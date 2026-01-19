@@ -10,16 +10,13 @@ date: 2025-11-25 12:19:01 +00:00
 permalink: /ai/videos/AI-Driven-Governance-for-Nasdaq-Boardvantage-with-Azure-PostgreSQL-and-Microsoft-Foundry
 tags:
 - Agentic AI
-- AI
 - AI Governance
 - AKS
 - API Management
-- Azure
 - Azure AI Foundry
 - Azure Functions
 - Azure PostgreSQL
 - Chat Assistant Architecture
-- Coding
 - Compliance
 - Data Security
 - Fan in Fan Out Orchestration
@@ -27,13 +24,11 @@ tags:
 - Meeting Minutes Automation
 - Microservices
 - Microsoft Foundry
-- ML
 - MSIgnite
 - PG Vector
 - Prompt Flow
 - Smart Document Summarization
 - Unifyyourdataplatform
-- Videos
 section_names:
 - ai
 - azure

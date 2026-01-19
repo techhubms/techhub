@@ -10,16 +10,12 @@ date: 2025-06-30 15:00:36 +00:00
 permalink: /ai/news/Whats-New-in-Azure-AI-Foundry-June-2025-Major-Model-Releases-Agent-Service-GA-and-Developer-Tools
 tags:
 - Agent Service
-- AI
 - AI Development
 - AutoGen
-- Azure
 - Azure AI Foundry
 - Azure AI Search
 - Azure OpenAI
-- Coding
 - DeepSeek R1
-- DevOps
 - Fine Tuning
 - Generative AI
 - GitHub Integration
@@ -27,7 +23,6 @@ tags:
 - Logic Apps
 - MCP
 - Model Safety
-- News
 - O3 Pro
 - SDK
 - Semantic Kernel

@@ -11,18 +11,14 @@ permalink: /github-copilot/news/How-GitHub-Copilot-Uses-Embedding-Guided-Tool-Ro
 tags:
 - Adaptive Tool Clustering
 - Agentic Workflows
-- AI
 - AI & ML
 - AI Driven Tooling
 - Codebase Analysis
-- Coding
 - Copilot Embedding Model
 - Developer Tools
 - Embedding Guided Routing
-- GitHub Copilot
 - LLM
 - MCP
-- News
 - Performance Optimization
 - Semantic Similarity
 - SWE Lancer

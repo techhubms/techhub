@@ -9,14 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 08:17:17 +00:00
 permalink: /github-copilot/videos/First-Look-at-Visual-Studio-2026-Fast-Modern-and-AI-Powered
 tags:
-- AI
 - AI Powered Development
 - Code Review
-- Coding
 - Collaboration Tools
 - Diagnostics
 - Enterprise Development
-- GitHub Copilot
 - IDE
 - InnovatewithAzureAIappsandagents
 - Microsoft Learn
@@ -27,7 +24,6 @@ tags:
 - Performance Optimization
 - Profiler Agent
 - Project Upgrades
-- Videos
 - VS
 section_names:
 - ai

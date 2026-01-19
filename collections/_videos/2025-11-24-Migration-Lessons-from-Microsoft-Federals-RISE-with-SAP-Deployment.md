@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 07:28:33 +00:00
 permalink: /ai/videos/Migration-Lessons-from-Microsoft-Federals-RISE-with-SAP-Deployment
 tags:
-- AI
 - AI Powered Monitoring
-- Azure
 - Azure Government
 - Business Continuity
 - Compliance
@@ -27,10 +25,8 @@ tags:
 - RISE With SAP
 - SAP
 - SAP BTP
-- Security
 - Sovereignty
 - Threat Detection
-- Videos
 section_names:
 - ai
 - azure

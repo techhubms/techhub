@@ -9,9 +9,7 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-19 09:57:36 +00:00
 permalink: /azure/blogs/Azure-Support-Plans-Compared-Choosing-the-Right-One-for-Your-Organization
 tags:
-- Azure
 - Basic Support
-- Blogs
 - Cloud Architecture
 - Cloud Migration
 - Cloud Operations

@@ -10,23 +10,19 @@ date: 2025-11-25 15:36:04 +00:00
 permalink: /ai/videos/Secure-Code-to-Cloud-with-AI-Infused-DevSecOps
 tags:
 - Agentic Workflows
-- AI
 - AI Powered Remediation
 - Alert Fatigue
 - Azure AI
 - Cloud Security
 - Code To Cloud
 - Developer Tools
-- DevOps
 - DevSecOps
 - GitHub Advanced Security
 - InnovatewithAzureAIappsandagents
 - Microsoft Defender For Cloud
 - MSIgnite
-- Security
 - Security Automation
 - Session BRK112
-- Videos
 - Vulnerability Management
 section_names:
 - ai

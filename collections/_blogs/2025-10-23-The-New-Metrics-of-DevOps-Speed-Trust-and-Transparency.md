@@ -10,11 +10,8 @@ date: 2025-10-23 19:33:45 +00:00
 permalink: /ai/blogs/The-New-Metrics-of-DevOps-Speed-Trust-and-Transparency
 tags:
 - Agentic Development
-- AI
 - Automation
-- Blogs
 - CI/CD
-- DevOps
 - Governance
 - Infrastructure
 - JFrog Swampup

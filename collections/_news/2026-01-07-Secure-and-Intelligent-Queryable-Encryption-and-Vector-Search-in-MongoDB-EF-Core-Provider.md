@@ -10,9 +10,7 @@ date: 2026-01-07 18:05:00 +00:00
 permalink: /ai/news/Secure-and-Intelligent-Queryable-Encryption-and-Vector-Search-in-MongoDB-EF-Core-Provider
 tags:
 - .NET
-- AI
 - C#
-- Coding
 - Data Security
 - Database Development
 - EF
@@ -20,7 +18,6 @@ tags:
 - Encryption
 - LINQ
 - Mongodb
-- News
 - Queryable Encryption
 - Rag
 - Semantic Search

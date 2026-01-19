@@ -10,7 +10,6 @@ date: 2025-11-24 11:52:25 +00:00
 permalink: /ai/videos/Agentic-AI-Drives-Innovation-in-Financial-Services-Insights-from-Microsoft-Ignite-Panel
 tags:
 - Agentic AI
-- AI
 - AI Transformation
 - Banking Innovation
 - Change Management
@@ -27,7 +26,6 @@ tags:
 - Risk Intelligence
 - Technical Debt
 - Unified Experience Strategy
-- Videos
 section_names:
 - ai
 ---

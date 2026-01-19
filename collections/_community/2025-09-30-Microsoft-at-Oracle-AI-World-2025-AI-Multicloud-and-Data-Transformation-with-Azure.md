@@ -9,19 +9,15 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-30 16:33:49 +00:00
 permalink: /ai/community/Microsoft-at-Oracle-AI-World-2025-AI-Multicloud-and-Data-Transformation-with-Azure
 tags:
-- AI
 - AI Integration
-- Azure
 - Azure AI Foundry
 - Azure Migration
 - Cloud Native
-- Community
 - Copilot Studio
 - Data Transformation
 - Enterprise Security
 - Intelligent Applications
 - Microsoft Fabric
-- ML
 - Multicloud
 - Oracle Database@Azure
 - Power BI

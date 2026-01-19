@@ -9,22 +9,17 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 16:00:00 +00:00
 permalink: /github-copilot/community/AI-Driven-Automation-and-Incident-Response-with-Azure-SRE-Agent
 tags:
-- AI
 - AIOps
 - Application Insights
 - Automation
-- Azure
 - Azure DevOps
 - Azure Monitor
 - Azure SRE Agent
 - CI/CD Integration
-- Community
 - Continuous Integration
 - Custom Actions
-- DevOps
 - DevOps Workflows
 - Event Driven Triggers
-- GitHub Copilot
 - Hybrid Cloud
 - IaC Drift Detection
 - Incident Response

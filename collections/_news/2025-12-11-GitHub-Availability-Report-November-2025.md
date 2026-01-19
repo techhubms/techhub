@@ -15,7 +15,6 @@ tags:
 - Company News
 - Copilot
 - Dependabot
-- DevOps
 - GHCR
 - Git Operations
 - GitHub
@@ -23,7 +22,6 @@ tags:
 - Incident Mitigation
 - Incident Response
 - Monitoring
-- News
 - News & Insights
 - Service Outage
 - TLS Certificate

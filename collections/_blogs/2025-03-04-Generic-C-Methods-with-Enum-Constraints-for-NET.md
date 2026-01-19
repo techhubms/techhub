@@ -10,9 +10,7 @@ date: 2025-03-04 00:00:00 +00:00
 permalink: /coding/blogs/Generic-C-Methods-with-Enum-Constraints-for-NET
 tags:
 - .NET
-- Blogs
 - C#
-- Coding
 - Enum
 - Generics
 - Helper Methods

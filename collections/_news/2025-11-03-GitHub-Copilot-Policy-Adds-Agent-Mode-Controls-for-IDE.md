@@ -11,7 +11,6 @@ permalink: /github-copilot/news/GitHub-Copilot-Policy-Adds-Agent-Mode-Controls-f
 tags:
 - Access Controls
 - Agent Mode
-- AI
 - AI Controls
 - Copilot
 - Copilot Policies
@@ -19,11 +18,9 @@ tags:
 - Enterprise Management
 - Enterprise Management Tools
 - GitHub Administration
-- GitHub Copilot
 - Governance
 - IDE Integration
 - Improvement
-- News
 - Policy Management
 section_names:
 - ai

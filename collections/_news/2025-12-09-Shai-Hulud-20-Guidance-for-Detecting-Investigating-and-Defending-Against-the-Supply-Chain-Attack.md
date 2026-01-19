@@ -10,7 +10,6 @@ date: 2025-12-09 21:41:32 +00:00
 permalink: /azure/news/Shai-Hulud-20-Guidance-for-Detecting-Investigating-and-Defending-Against-the-Supply-Chain-Attack
 tags:
 - Attack Path Analysis
-- Azure
 - Azure Key Vault
 - Bun Runtime
 - CI/CD Pipelines
@@ -18,16 +17,13 @@ tags:
 - Credential Theft
 - Defender For Cloud
 - Defender XDR
-- DevOps
 - GitHub Actions
 - Incident Response
 - Key Vault
 - Microsoft Defender
 - Microsoft Sentinel
-- News
 - Node.js
 - npm Package Security
-- Security
 - Security Copilot
 - Shai Hulud 2.0
 - Supply Chain Attack

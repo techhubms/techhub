@@ -9,20 +9,16 @@ feed_url: https://github.blog/feed/
 date: 2025-08-22 16:52:27 +00:00
 permalink: /github-copilot/news/Building-Your-First-MCP-Server-Extending-GitHub-Copilot-with-Custom-Tools
 tags:
-- AI
 - AI & ML
 - AI Extensibility
 - AI Integration
 - APIs
-- Coding
 - Custom API
 - Developer Tools
 - Game Server
-- GitHub Copilot
 - MCP
 - MCP Server
 - MCP Tools
-- News
 - Next.js
 - Open Source
 - Prompt Engineering

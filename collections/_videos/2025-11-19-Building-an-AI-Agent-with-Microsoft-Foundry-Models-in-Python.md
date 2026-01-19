@@ -10,14 +10,11 @@ date: 2025-11-19 23:05:55 +00:00
 permalink: /ai/videos/Building-an-AI-Agent-with-Microsoft-Foundry-Models-in-Python
 tags:
 - Agent Tracing
-- AI
 - AI Agent
 - AI Development
-- Azure
 - Azure AI Foundry
 - Cloud AI
 - Cloud Computing
-- Coding
 - Dev
 - Development
 - Microsoft
@@ -28,7 +25,6 @@ tags:
 - Sample Code
 - Tech
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

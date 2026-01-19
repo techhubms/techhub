@@ -10,19 +10,15 @@ date: 2025-04-16 18:24:10 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Highlights-in-Visual-Studio-1714-Preview-3-New-Features-and-Improvements
 tags:
 - Adaptive Paste
-- AI
 - AI Assisted Development
 - Code Completion
 - Code Mapping
-- Coding
 - Copilot
 - Copilot Chat
 - Developer Tools
-- GitHub Copilot
 - Guided Walkthrough
 - Model Selection
 - Multi File Editing
-- News
 - Next Edit Suggestions
 - Preview Release
 - VS

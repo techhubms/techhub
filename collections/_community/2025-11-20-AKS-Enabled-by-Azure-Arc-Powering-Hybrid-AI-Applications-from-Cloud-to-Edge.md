@@ -9,20 +9,16 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-20 00:36:19 +00:00
 permalink: /ai/community/AKS-Enabled-by-Azure-Arc-Powering-Hybrid-AI-Applications-from-Cloud-to-Edge
 tags:
-- AI
 - AI Foundry Local
 - AI Model Deployment
 - AKS
 - AKS Container Apps
-- Azure
 - Azure Arc
 - Azure Container Storage
 - Azure Monitor Pipeline
 - Bare Metal Kubernetes
 - Cluster High Availability
-- Community
 - Data Sovereignty
-- DevOps
 - Disconnected Operations
 - Edge Computing
 - GPU Acceleration
@@ -31,10 +27,8 @@ tags:
 - Key Vault Extension
 - KMS V2
 - Kubernetes Security
-- ML
 - RAG
 - Retrieval Augmented Generation
-- Security
 - Telecom
 - Workload Identity Federation
 section_names:

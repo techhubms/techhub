@@ -9,23 +9,19 @@ feed_url: https://devops.com/feed/
 date: 2025-09-18 16:10:22 +00:00
 permalink: /ai/blogs/Harness-CEO-Advocates-AI-Driven-Transformation-of-CICD-Workflows
 tags:
-- AI
 - AI Agents
 - Automation
 - Backstage
-- Blogs
 - CI/CD
 - Continuous Delivery
 - Continuous Integration
 - Developer Portal
-- DevOps
 - Devsecops
 - FinOps
 - Harness
 - Large Language Models
 - Orchestration
 - Platform Engineering
-- Security
 - Security Remediation
 - Social Facebook
 - Social LinkedIn

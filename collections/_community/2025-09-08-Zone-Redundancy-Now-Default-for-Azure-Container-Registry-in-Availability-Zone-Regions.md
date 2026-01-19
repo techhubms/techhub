@@ -11,11 +11,9 @@ permalink: /azure/community/Zone-Redundancy-Now-Default-for-Azure-Container-Regi
 tags:
 - ACR
 - Availability Zones
-- Azure
 - Azure Container Registry
 - Cloud Infrastructure
 - Cloud Resilience
-- Community
 - Container Registry
 - Disaster Recovery
 - High Availability

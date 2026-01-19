@@ -12,10 +12,8 @@ tags:
 - AES 256
 - AKS
 - AMD EPYC
-- Azure
 - Azure Confidential Computing
 - Cloud Security
-- Community
 - Confidential VMs
 - Confidential Workloads
 - DCasv6
@@ -26,7 +24,6 @@ tags:
 - Memory Encryption
 - Multi Tenant Security
 - Secure Cloud
-- Security
 - SEV SNP
 - Virtualization Based Security
 - Windows VBS

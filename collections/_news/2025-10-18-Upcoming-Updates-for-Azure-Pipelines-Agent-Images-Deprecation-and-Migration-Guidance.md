@@ -10,17 +10,14 @@ date: 2025-10-18 18:40:30 +00:00
 permalink: /azure/news/Upcoming-Updates-for-Azure-Pipelines-Agent-Images-Deprecation-and-Migration-Guidance
 tags:
 - Agent Pools
-- Azure
 - Azure DevOps
 - Azure Pipelines
 - CI/CD
 - Container Jobs
-- DevOps
 - Hosted Agents
 - Image Updates
 - Macos 13 Ventura Deprecation
 - Macos Sequoia
-- News
 - Pipeline Migration
 - Self Hosted Agent
 - Ubuntu 20.04 Deprecation

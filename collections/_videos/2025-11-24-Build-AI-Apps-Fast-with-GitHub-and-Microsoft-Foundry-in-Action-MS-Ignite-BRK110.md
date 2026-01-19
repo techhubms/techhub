@@ -10,18 +10,13 @@ date: 2025-11-24 07:11:10 +00:00
 permalink: /github-copilot/videos/Build-AI-Apps-Fast-with-GitHub-and-Microsoft-Foundry-in-Action-MS-Ignite-BRK110
 tags:
 - Agent Framework
-- AI
 - AI Toolkit
 - App Deployment
-- Azure
 - Azure AI
 - Cloud Security
-- Coding
 - Developer Tools
-- DevOps
 - GitHub
 - GitHub Actions
-- GitHub Copilot
 - InnovatewithAzureAIappsandagents
 - Microsoft Foundry
 - Modular Architecture
@@ -29,7 +24,6 @@ tags:
 - Multi Agent Systems
 - Orchestration
 - Retrieval Augmented Generation
-- Videos
 section_names:
 - ai
 - azure

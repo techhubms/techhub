@@ -10,7 +10,6 @@ date: 2025-11-24 07:38:59 +00:00
 permalink: /azure/videos/Build-Secure-Applications-with-Defender-and-Azure-Network-Security
 tags:
 - Audit Logging
-- Azure
 - Azure Bastion
 - Azure Firewall
 - Azure Network Security
@@ -22,10 +21,8 @@ tags:
 - Migrateandmodernizeyourestate
 - MSIgnite
 - Network Security
-- Security
 - Security Posture
 - Session Recording
-- Videos
 - Web Application Firewall
 - Zero Trust Security
 section_names:

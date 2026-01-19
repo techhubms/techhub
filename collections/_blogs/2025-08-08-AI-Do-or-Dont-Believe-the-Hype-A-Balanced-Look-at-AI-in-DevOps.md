@@ -9,15 +9,12 @@ feed_url: https://devops.com/feed/
 date: 2025-08-08 19:43:40 +00:00
 permalink: /ai/blogs/AI-Do-or-Dont-Believe-the-Hype-A-Balanced-Look-at-AI-in-DevOps
 tags:
-- AI
 - AI Powered Development Tools
-- Blogs
 - Claude Sonnet
 - Code Review
 - Code Scaffolding
 - Cursor Pro
 - Developer Productivity
-- DevOps
 - Documentation Automation
 - GitLab–Harris Poll
 - METR Study

@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-23 19:06:55 +00:00
 permalink: /ml/videos/Enhanced-Performance-Dashboard-for-SQL-Databases-in-Microsoft-Fabric
 tags:
-- Azure
 - Cloud Computing
 - Cloud Data Platform
 - Data Analytics
@@ -20,7 +19,6 @@ tags:
 - Memory Monitoring
 - Microsoft
 - Microsoft Fabric
-- ML
 - Performance Dashboard
 - Performance Tuning
 - Resource Management
@@ -28,7 +26,6 @@ tags:
 - SQL Database
 - Tech
 - Technology
-- Videos
 - Workload Optimization
 section_names:
 - azure

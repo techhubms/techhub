@@ -6,10 +6,7 @@ canonical_url: https://blog.jesseswart.nl/post/copilot-data-conversion
 viewing_mode: external
 permalink: /github-copilot/blogs/blogs/2024-06-19-Converting-data-into-a-different-format
 tags:
-- AI
-- Blogs
 - Data Conversion
-- GitHub Copilot
 - Markdown
 - Productivity
 - Programming

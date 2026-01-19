@@ -12,7 +12,6 @@ tags:
 - Access Reviews
 - Adaptive Policies
 - Agent Identities
-- AI
 - AI Gateway
 - AI Security
 - Continuous Access Evaluation
@@ -23,9 +22,7 @@ tags:
 - Microsoft Ignite
 - MSIgnite
 - ProtectcloudAIplatformandapps
-- Security
 - Security Leadership
-- Videos
 - Zero Trust
 section_names:
 - ai

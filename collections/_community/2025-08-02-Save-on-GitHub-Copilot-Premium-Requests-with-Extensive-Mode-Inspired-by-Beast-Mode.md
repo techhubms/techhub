@@ -9,14 +9,11 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-02 06:09:33 +00:00
 permalink: /github-copilot/community/Save-on-GitHub-Copilot-Premium-Requests-with-Extensive-Mode-Inspired-by-Beast-Mode
 tags:
-- AI
 - Automation
 - Beast Mode
 - Best Practices
 - Bug Testing
-- Community
 - Extensive Mode
-- GitHub Copilot
 - GPT 4.1
 - Memory System
 - Prompt Engineering

@@ -9,10 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-13 13:47:18 +00:00
 permalink: /ai/community/Power-Stabilization-Strategies-for-AI-Training-Datacenters
 tags:
-- AI
 - AI Infrastructure
 - AI Training
-- Community
 - Datacenters
 - Energy Storage
 - GPU Clusters

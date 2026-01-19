@@ -10,16 +10,12 @@ date: 2025-07-30 08:08:05 +00:00
 permalink: /github-copilot/blogs/How-to-Activate-and-Use-the-Scrum-Assistant-Agent-in-GitHub-Copilot
 tags:
 - Agile
-- AI
 - AI Agents
 - Automation
 - Backlog Grooming
 - Blocker Tracking
-- Blogs
 - Copilot Chat
 - Copilot Workspace
-- DevOps
-- GitHub Copilot
 - M365 Copilot
 - Microsoft 365 Copilot
 - Productivity Tools

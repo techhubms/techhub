@@ -10,7 +10,6 @@ date: 2025-07-20 11:52:33 +00:00
 permalink: /ai/blogs/Agentic-AI-The-Next-Evolution-Beyond-Generative-AI-for-Solution-Architects
 tags:
 - Agentic AI
-- AI
 - AI Agents
 - AI Architecture
 - AI Workflow Orchestration
@@ -18,7 +17,6 @@ tags:
 - Architecture
 - AutoGen
 - Autonomous AI Systems
-- Blogs
 - Context Aware AI
 - Digital Transformation
 - Enterprise Automation

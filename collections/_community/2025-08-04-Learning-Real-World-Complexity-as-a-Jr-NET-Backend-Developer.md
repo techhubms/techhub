@@ -12,8 +12,6 @@ tags:
 - .NET
 - AutoMapper
 - Backend Development
-- Coding
-- Community
 - Complex Endpoints
 - CRUD Operations
 - Data Validation
@@ -21,7 +19,6 @@ tags:
 - DTO
 - EF Core
 - Fullstack Development
-- ML
 - SQL Server
 section_names:
 - coding

@@ -10,18 +10,14 @@ date: 2025-08-05 15:01:00 +00:00
 permalink: /ai/videos/Building-Durable-Multi-Agent-AI-Workflows-with-Dapr-Agents
 tags:
 - Agentic Systems
-- AI
 - AI Agents
-- Azure
 - Cloud Architecture
 - Cloud Computing
-- Coding
 - Dapr
 - Dapr Agents
 - Dev
 - Developer Tools
 - Development
-- DevOps
 - Distributed Applications
 - Durable Workflows
 - LLM
@@ -35,7 +31,6 @@ tags:
 - Stateful Workflows
 - Tech
 - Technology
-- Videos
 - Virtual Actor Model
 section_names:
 - ai

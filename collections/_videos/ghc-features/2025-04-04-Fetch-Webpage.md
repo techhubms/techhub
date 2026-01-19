@@ -12,9 +12,6 @@ plans:
 - Free
 alt-collection: features
 tags:
-- AI
-- GitHub Copilot
-- Videos
 - Web Scraping
 - Web UI
 section_names:

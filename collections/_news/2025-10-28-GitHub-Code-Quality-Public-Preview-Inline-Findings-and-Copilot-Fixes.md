@@ -9,28 +9,22 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:28:45 +00:00
 permalink: /github-copilot/news/GitHub-Code-Quality-Public-Preview-Inline-Findings-and-Copilot-Fixes
 tags:
-- AI
 - Application Security
 - Automated Fixes
 - C#
 - Code Review
 - CodeQL
-- Coding
 - Copilot
-- DevOps
 - GitHub Code Quality
-- GitHub Copilot
 - Go
 - Java
 - JavaScript
 - Maintainability
-- News
 - Platform Governance
 - Pull Requests
 - Python
 - Reliability
 - Ruby
-- Security
 - Software Quality
 - Static Analysis
 - Technical Debt

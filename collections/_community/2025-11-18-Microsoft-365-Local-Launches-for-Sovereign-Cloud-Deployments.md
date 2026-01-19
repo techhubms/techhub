@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 16:00:00 +00:00
 permalink: /azure/community/Microsoft-365-Local-Launches-for-Sovereign-Cloud-Deployments
 tags:
-- Azure
 - Azure Arc
 - Azure Local
 - Azure Monitor
-- Community
 - Compliance
 - Data Sovereignty
 - Exchange Server
@@ -23,7 +21,6 @@ tags:
 - Microsoft Defender For Cloud
 - Network Security Groups
 - Privileged Access
-- Security
 - Security Baseline
 - SharePoint Server
 - Skype For Business Server

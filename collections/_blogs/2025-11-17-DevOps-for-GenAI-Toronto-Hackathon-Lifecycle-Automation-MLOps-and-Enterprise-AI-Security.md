@@ -10,16 +10,13 @@ date: 2025-11-17 17:31:55 +00:00
 permalink: /ai/blogs/DevOps-for-GenAI-Toronto-Hackathon-Lifecycle-Automation-MLOps-and-Enterprise-AI-Security
 tags:
 - Agent Deployment
-- AI
 - AI Observability
 - AI Security
 - Argo Workflows
-- Blogs
 - CI/CD Automation
 - Community Collaboration
 - Continuous Integration
 - Contributed Content
-- DevOps
 - Enterprise AI Security
 - Enterprise Governance
 - Explainable AI
@@ -29,13 +26,11 @@ tags:
 - Hackathon
 - Kubeflow
 - Kubernetes
-- ML
 - MLflow
 - MLOps
 - OpenTelemetry
 - Policy as Code
 - Prometheus
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

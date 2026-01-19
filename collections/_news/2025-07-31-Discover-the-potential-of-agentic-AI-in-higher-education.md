@@ -11,7 +11,6 @@ permalink: /ai/news/Discover-the-potential-of-agentic-AI-in-higher-education
 tags:
 - Academic Technology
 - Agentic AI
-- AI
 - AI Applications
 - AI in Education
 - Company News
@@ -21,7 +20,6 @@ tags:
 - Future Of Learning
 - Higher Education
 - Microsoft
-- News
 - Personalized Learning
 section_names:
 - ai

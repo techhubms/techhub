@@ -10,11 +10,9 @@ date: 2025-06-05 20:20:50 +00:00
 permalink: /ai/news/Azure-Developer-CLI-azd-Highlights-and-Updates-for-June-2025-Release
 tags:
 - .NET
-- AI
 - AI Agents
 - Aspire
 - Azd
-- Azure
 - Azure AI Foundry
 - Azure Developer CLI
 - Azure DevOps
@@ -23,9 +21,7 @@ tags:
 - Bicep
 - CI/CD
 - Codespaces
-- Coding
 - Cosmos DB
-- DevOps
 - Docker
 - Extensions
 - GenAI
@@ -35,7 +31,6 @@ tags:
 - Kubernetes
 - Managed Identities
 - MCP
-- News
 - Pipeline Configuration
 - Python
 - Templates

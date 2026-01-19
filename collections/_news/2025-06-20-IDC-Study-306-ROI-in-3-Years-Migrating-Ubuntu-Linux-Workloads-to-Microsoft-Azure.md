@@ -9,20 +9,16 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-06-20 15:00:00 +00:00
 permalink: /ai/news/IDC-Study-306-ROI-in-3-Years-Migrating-Ubuntu-Linux-Workloads-to-Microsoft-Azure
 tags:
-- AI
 - AI Readiness
-- Azure
 - Cloud Migration
 - Compute
 - Cost Reduction
 - IDC Study
 - Linux Virtual Machines
 - Microsoft Azure
-- News
 - Operational Efficiency
 - ROI
 - Scalability
-- Security
 - Ubuntu
 section_names:
 - azure

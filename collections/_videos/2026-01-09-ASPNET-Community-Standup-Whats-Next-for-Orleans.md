@@ -12,7 +12,6 @@ tags:
 - .NET
 - Actor Model
 - ASP.NET Core
-- Coding
 - Community Standup
 - Demo
 - Developer
@@ -27,7 +26,6 @@ tags:
 - Scalability
 - Software Architecture
 - Software Developer
-- Videos
 section_names:
 - coding
 ---

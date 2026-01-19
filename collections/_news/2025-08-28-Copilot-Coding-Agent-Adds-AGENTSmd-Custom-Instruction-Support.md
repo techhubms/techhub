@@ -10,7 +10,6 @@ date: 2025-08-28 18:00:58 +00:00
 permalink: /github-copilot/news/Copilot-Coding-Agent-Adds-AGENTSmd-Custom-Instruction-Support
 tags:
 - AGENTS.md
-- AI
 - AI Development
 - Automation
 - Coding Best Practices
@@ -18,9 +17,7 @@ tags:
 - Custom Instructions
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Instructions File
-- News
 - Project Configuration
 - Workflow
 section_names:

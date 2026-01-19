@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-10 13:32:43 +00:00
 permalink: /ml/news/The-Evolution-of-SSIS-SQL-Server-Integration-Services-2025-General-Availability-and-Microsoft-Fabric-Integration
 tags:
-- Azure
 - Azure Data Factory
 - Change Data Capture
 - Copy Job
@@ -22,11 +21,8 @@ tags:
 - Lakehouse
 - Microsoft Entra ID
 - Microsoft Fabric
-- ML
-- News
 - Oracle Connector
 - Private Preview
-- Security
 - SQL Server
 - SQL Server Integration Services
 - SSIS

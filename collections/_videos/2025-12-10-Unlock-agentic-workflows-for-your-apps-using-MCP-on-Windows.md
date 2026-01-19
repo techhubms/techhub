@@ -10,12 +10,10 @@ date: 2025-12-10 22:07:54 +00:00
 permalink: /ai/videos/Unlock-agentic-workflows-for-your-apps-using-MCP-on-Windows
 tags:
 - Agentic Workflows
-- AI
 - AI Agents
 - AI Development
 - App Integration
 - Automation
-- Azure
 - Cloud Computing
 - Dev
 - Developer
@@ -30,7 +28,6 @@ tags:
 - Scalability
 - Tech
 - Technology
-- Videos
 - Windows
 section_names:
 - ai

@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 15:07:07 +00:00
 permalink: /ai/videos/CTERA-in-Action-Building-Data-Fabric-for-Enterprises-at-Microsoft-Ignite
 tags:
-- AI
 - AI Readiness
-- Azure
 - CTERA
 - Data Fabric
 - Data Intelligence
@@ -28,7 +26,6 @@ tags:
 - Secure Data Management
 - Unified File Systems
 - Unifyyourdataplatform
-- Videos
 - Virtual Experts
 section_names:
 - ai

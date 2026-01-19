@@ -9,14 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 16:35:46 +00:00
 permalink: /ai/community/Building-an-AI-Receptionist-Hands-On-Demo-with-Azure-Communication-Services-and-OpenAI
 tags:
-- AI
 - API Integration
 - Appointment Management
-- Azure
 - Azure Communication Services
 - Azure OpenAI
-- Coding
-- Community
 - Conversational AI
 - Event Driven Architecture
 - Event Grid

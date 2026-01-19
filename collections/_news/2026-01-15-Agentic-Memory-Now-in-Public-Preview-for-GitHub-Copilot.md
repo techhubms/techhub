@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2026-01-15 21:57:44 +00:00
 permalink: /github-copilot/news/Agentic-Memory-Now-in-Public-Preview-for-GitHub-Copilot
 tags:
-- AI
 - AI Powered Development
 - CLI
 - Code Assistance
@@ -20,8 +19,6 @@ tags:
 - Copilot Pro
 - Developer Tools
 - GitHub
-- GitHub Copilot
-- News
 - Public Preview
 - Repository Insights
 section_names:

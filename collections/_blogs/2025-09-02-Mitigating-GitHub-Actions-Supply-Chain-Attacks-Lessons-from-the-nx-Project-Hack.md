@@ -10,11 +10,9 @@ date: 2025-09-02 21:05:46 +00:00
 permalink: /devops/blogs/Mitigating-GitHub-Actions-Supply-Chain-Attacks-Lessons-from-the-nx-Project-Hack
 tags:
 - Advanced Security Code Scanning
-- Blogs
 - Branch Policies
 - CI/CD
 - Dependabot
-- DevOps
 - Environment Secrets
 - GitHub
 - GitHub Actions
@@ -23,7 +21,6 @@ tags:
 - Permission Management
 - Repository Secrets
 - Secret Management
-- Security
 - StepSecurity
 - Supply Chain Security
 - Workflow Security

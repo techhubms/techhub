@@ -10,11 +10,8 @@ date: 2025-07-29 13:38:12 +00:00
 permalink: /ai/videos/Building-AI-Agent-Workflows-with-Semantic-Kernel
 tags:
 - Agent Frameworks
-- AI
 - AI Agents
-- Azure
 - Azure AI Foundry
-- Coding
 - Microsoft Developer
 - Open Source
 - Orchestration Patterns
@@ -22,7 +19,6 @@ tags:
 - Semantic Kernel
 - SemantiClip
 - Video To Blog
-- Videos
 section_names:
 - ai
 - azure

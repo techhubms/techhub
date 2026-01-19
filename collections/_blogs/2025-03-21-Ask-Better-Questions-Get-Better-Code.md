@@ -9,16 +9,12 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-03-21 00:00:00 +00:00
 permalink: /github-copilot/blogs/Ask-Better-Questions-Get-Better-Code
 tags:
-- AI
 - AI Pair Programming
 - Best Practices
-- Blogs
 - Code Quality
-- Coding
 - Coding Assistance
 - Copilot Chat
 - Developer Productivity
-- GitHub Copilot
 - Prompt Engineering
 - Question Clarity
 - Software Development

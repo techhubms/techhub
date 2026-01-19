@@ -9,20 +9,16 @@ feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-07-17 00:00:00 +00:00
 permalink: /github-copilot/news/Command-GitHubs-Coding-Agent-from-VS-Code
 tags:
-- AI
 - AI Developer Agent
 - Autonomous Development
 - Code Review Automation
 - Codebase Integration
-- Coding
 - Coding Agent
 - Dev Environment
 - GitHub
-- GitHub Copilot
 - GitHub Pull Requests Extension
 - MCP
 - MCP Servers
-- News
 - PR Workflow
 - Session Management
 - VS Code

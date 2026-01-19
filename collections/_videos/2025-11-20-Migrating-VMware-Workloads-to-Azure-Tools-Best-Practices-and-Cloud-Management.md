@@ -10,13 +10,11 @@ date: 2025-11-20 10:58:45 +00:00
 permalink: /azure/videos/Migrating-VMware-Workloads-to-Azure-Tools-Best-Practices-and-Cloud-Management
 tags:
 - Application Tagging
-- Azure
 - Azure Arc
 - Azure Migrate
 - Azure VMware Solution
 - Cloud Management
 - Cloud Security
-- DevOps
 - High Availability
 - Hybrid Cloud
 - Migrateandmodernizeyourestate
@@ -24,8 +22,6 @@ tags:
 - MSIgnite
 - Network Architecture
 - Operational Monitoring
-- Security
-- Videos
 - Virtual Machines
 - VM Provisioning
 - VMware

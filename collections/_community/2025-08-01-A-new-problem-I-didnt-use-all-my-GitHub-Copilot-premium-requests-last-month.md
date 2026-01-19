@@ -9,14 +9,11 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-01 12:20:43 +00:00
 permalink: /github-copilot/community/A-new-problem-I-didnt-use-all-my-GitHub-Copilot-premium-requests-last-month
 tags:
-- AI
 - AI Productivity
 - Claude 4
-- Community
 - Copilot Budgeting
 - Developer Tools
 - Gemini CLI
-- GitHub Copilot
 - Model Selection
 - Monthly Reset
 - Premium Requests

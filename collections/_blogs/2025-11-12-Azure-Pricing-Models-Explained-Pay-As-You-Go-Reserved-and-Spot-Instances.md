@@ -9,11 +9,9 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-12 15:56:44 +00:00
 permalink: /azure/blogs/Azure-Pricing-Models-Explained-Pay-As-You-Go-Reserved-and-Spot-Instances
 tags:
-- Azure
 - Azure Advisor
 - Azure Cost Management
 - Azure Pricing
-- Blogs
 - Budget Management
 - Cloud Billing
 - Cloud Computing

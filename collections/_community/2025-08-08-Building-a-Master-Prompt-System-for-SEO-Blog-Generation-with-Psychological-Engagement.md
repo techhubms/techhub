@@ -9,10 +9,8 @@ feed_url: https://www.reddit.com/r/ArtificialInteligence/.rss
 date: 2025-08-08 09:28:36 +00:00
 permalink: /ai/community/Building-a-Master-Prompt-System-for-SEO-Blog-Generation-with-Psychological-Engagement
 tags:
-- AI
 - AI Content Creation
 - ArtificialInteligence
-- Community
 - Content Structure
 - Engagement Psychology
 - Expert Persona

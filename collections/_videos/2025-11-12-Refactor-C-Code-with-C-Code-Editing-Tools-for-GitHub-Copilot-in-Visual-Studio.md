@@ -10,20 +10,17 @@ date: 2025-11-12 17:00:47 +00:00
 permalink: /github-copilot/videos/Refactor-C-Code-with-C-Code-Editing-Tools-for-GitHub-Copilot-in-Visual-Studio
 tags:
 - Agent Mode
-- AI
 - C++
 - Class Inheritance
 - Cloud Computing
 - Code Editing Tools
 - Codebase Analysis
-- Coding
 - Copilot
 - Dev
 - Development
 - Development Tools
 - Function Call Tracing
 - GitHub
-- GitHub Copilot
 - IntelliSense
 - Microsoft
 - Modernization
@@ -31,7 +28,6 @@ tags:
 - Refactoring
 - Tech
 - Technology
-- Videos
 - VS
 section_names:
 - ai

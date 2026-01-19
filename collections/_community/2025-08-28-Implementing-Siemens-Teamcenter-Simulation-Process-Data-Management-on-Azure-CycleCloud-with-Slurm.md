@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-28 19:58:12 +00:00
 permalink: /azure/community/Implementing-Siemens-Teamcenter-Simulation-Process-Data-Management-on-Azure-CycleCloud-with-Slurm
 tags:
-- Azure
 - Azure Application Gateway
 - Azure CycleCloud
 - Azure Entra ID
 - Azure Firewall
-- Community
 - Cost Governance
 - HPC
 - Hybrid Cloud
@@ -22,7 +20,6 @@ tags:
 - Product Validation
 - RBAC
 - SAML
-- Security
 - Simulation Management
 - Simulation Workflow
 - Slurm

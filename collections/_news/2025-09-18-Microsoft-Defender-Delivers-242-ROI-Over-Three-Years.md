@@ -9,9 +9,7 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-09-18 17:00:00 +00:00
 permalink: /ai/news/Microsoft-Defender-Delivers-242-ROI-Over-Three-Years
 tags:
-- AI
 - AI Automation
-- Azure
 - Cybersecurity
 - Forrester TEI
 - Hybrid Cloud Security
@@ -19,11 +17,9 @@ tags:
 - Kusto Query Language
 - Microsoft Defender
 - Microsoft Sentinel
-- News
 - Operational Efficiency
 - ROI
 - SecOps
-- Security
 - Security Operations
 - SIEM
 - Threat Detection

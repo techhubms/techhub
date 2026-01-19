@@ -13,14 +13,12 @@ tags:
 - .NET 10
 - .NET RC1
 - C#
-- Coding
 - Development Tools
 - Dotnet10
 - Microsoft
 - Programming
 - Release Candidate
 - Software Release
-- Videos
 - Visualstudio2026
 - VS
 section_names:

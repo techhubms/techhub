@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-18 17:45:00 +00:00
 permalink: /github-copilot/videos/Integrating-Azure-AI-Foundry-Models-with-GitHub-Copilot-Using-the-AI-Toolkit
 tags:
-- AI
 - AI Integration
 - AI Toolkit
 - AI Workflows
-- Azure
 - Azure AI Foundry
 - Azure Cloud
 - Cloud Computing
@@ -22,14 +20,12 @@ tags:
 - Dev Tools
 - Development
 - Enterprise AI
-- GitHub Copilot
 - LLM
 - Microsoft
 - Microsoft Developer
 - Model Deployment
 - Tech
 - Technology
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

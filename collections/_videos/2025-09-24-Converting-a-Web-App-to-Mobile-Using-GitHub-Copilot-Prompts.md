@@ -9,15 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-09-24 14:01:37 +00:00
 permalink: /github-copilot/videos/Converting-a-Web-App-to-Mobile-Using-GitHub-Copilot-Prompts
 tags:
-- AI
 - Code
-- Coding
 - Copilot
 - Demo
 - Developer
 - Developer Community
 - Developer Tools
-- GitHub Copilot
 - MCP
 - Microsoft
 - Mobile Development
@@ -27,7 +24,6 @@ tags:
 - Prompt Engineering
 - Promptdrivendevelopment
 - Software Developer
-- Videos
 - Voice Prompting
 - VS Code
 - Web App Conversion

@@ -11,8 +11,6 @@ permalink: /coding/blogs/Integrating-WindowsMedia-SpeechRecognition-in-WPF-Appli
 tags:
 - .NET
 - Asynchronous Programming
-- Blogs
-- Coding
 - Dependency Management
 - Input Handling
 - Language Support

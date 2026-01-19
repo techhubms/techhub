@@ -11,12 +11,9 @@ permalink: /coding/blogs/Microsoft-Visual-Studio-Update-Cycle-Annual-Releases-an
 tags:
 - .NET
 - Annual Releases
-- Blogs
 - Build Tools
-- Coding
 - Community Edition
 - Developer Tools
-- DevOps
 - Enterprise Support
 - License Management
 - Long Term Servicing Channel

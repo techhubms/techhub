@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-11-04 14:00:36 +00:00
 permalink: /ai/blogs/Kong-Adds-Model-Context-Protocol-Support-to-Insomnia-API-Tool
 tags:
-- AI
 - AI APIs
 - AI Security
 - Anthropic
@@ -19,10 +18,8 @@ tags:
 - API Observability
 - API Testing
 - Automation
-- Blogs
 - Business Of DevOps
 - Compliance
-- DevOps
 - Git Sync
 - Insomnia
 - Insomnia 12

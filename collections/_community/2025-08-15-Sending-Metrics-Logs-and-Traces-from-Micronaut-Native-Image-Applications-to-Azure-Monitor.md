@@ -10,11 +10,9 @@ date: 2025-08-15 04:54:15 +00:00
 permalink: /azure/community/Sending-Metrics-Logs-and-Traces-from-Micronaut-Native-Image-Applications-to-Azure-Monitor
 tags:
 - Application Insights
-- Azure
 - Azure Container Apps
 - Azure Monitor
 - Cloud Native
-- Community
 - Distributed Tracing
 - Fat JAR
 - GraalVM Native Image

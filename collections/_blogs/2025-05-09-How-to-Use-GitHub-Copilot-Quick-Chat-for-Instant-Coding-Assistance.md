@@ -9,15 +9,11 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-05-09 00:00:00 +00:00
 permalink: /github-copilot/blogs/How-to-Use-GitHub-Copilot-Quick-Chat-for-Instant-Coding-Assistance
 tags:
-- AI
 - AI Assistant
-- Blogs
 - Code Explanation
 - Code Optimization
-- Coding
 - Copilot Features
 - Developer Productivity
-- GitHub Copilot
 - Inline Code Suggestions
 - Keyboard Shortcuts
 - Programming Tools

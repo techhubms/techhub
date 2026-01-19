@@ -12,8 +12,6 @@ tags:
 - .NET
 - .NET 8
 - App Development
-- Coding
-- Community
 - Cross Platform
 - MainWindow.xaml.cs
 - MAUI

@@ -9,7 +9,6 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-19 10:04:11 +00:00
 permalink: /azure/blogs/Practical-Cost-Optimization-Strategies-for-Microsoft-Azure-Beginners
 tags:
-- Azure
 - Azure Advisor
 - Azure Automation
 - Azure Cost Management
@@ -17,12 +16,10 @@ tags:
 - Azure Portal
 - Azure Reservations
 - Blob Storage
-- Blogs
 - Cloud Billing
 - Cloud Budgets
 - Cost Alerts
 - Cost Optimization
-- DevOps
 - DevOps Practices
 - PaaS Services
 - PowerShell

@@ -9,11 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-10-30 14:01:27 +00:00
 permalink: /github-copilot/videos/How-GitHub-Copilot-Hacked-a-Furby
 tags:
-- AI
-- Coding
 - Developer Tools
 - Furby
-- GitHub Copilot
 - GitHub Universe
 - GitHubUniverse
 - Hacking
@@ -25,7 +22,6 @@ tags:
 - Python
 - Robotics
 - Toy Hacking
-- Videos
 section_names:
 - ai
 - coding

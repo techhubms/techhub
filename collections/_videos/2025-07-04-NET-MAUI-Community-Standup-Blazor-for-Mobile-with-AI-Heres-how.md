@@ -10,19 +10,15 @@ permalink: /ai/videos/NET-MAUI-Community-Standup-Blazor-for-Mobile-with-AI-Heres
 viewing_mode: internal
 tags:
 - .NET
-- AI
 - App Enhancement
-- Azure
 - Azure AI Foundry
 - Beth Massi
 - Blazor
-- Coding
 - Community Links
 - David Ortinau
 - Dotnetmaui
 - MAUI
 - Native Mobile Features
-- Videos
 - Web App
 section_names:
 - ai

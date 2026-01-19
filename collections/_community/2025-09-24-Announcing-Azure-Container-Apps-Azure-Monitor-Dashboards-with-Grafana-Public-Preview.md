@@ -9,14 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-24 17:52:49 +00:00
 permalink: /azure/community/Announcing-Azure-Container-Apps-Azure-Monitor-Dashboards-with-Grafana-Public-Preview
 tags:
-- Azure
 - Azure Container Apps
 - Azure Monitor
 - Cloud Operations
-- Community
 - Containers
 - Dashboards
-- DevOps
 - Grafana
 - Metrics
 - Microsoft Azure

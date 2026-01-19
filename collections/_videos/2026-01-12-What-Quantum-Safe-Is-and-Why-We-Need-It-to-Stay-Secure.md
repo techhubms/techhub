@@ -9,8 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7
 date: 2026-01-12 14:39:56 +00:00
 permalink: /ai/videos/What-Quantum-Safe-Is-and-Why-We-Need-It-to-Stay-Secure
 tags:
-- AI
-- Azure
 - Azure Cloud
 - Cloud
 - Cloud Security
@@ -30,9 +28,7 @@ tags:
 - Quantum Security
 - Quantum Threats
 - RSA
-- Security
 - SymCrypt
-- Videos
 section_names:
 - ai
 - azure

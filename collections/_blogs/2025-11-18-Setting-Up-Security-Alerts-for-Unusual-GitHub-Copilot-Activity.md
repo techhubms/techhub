@@ -9,22 +9,18 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-18 15:28:44 +00:00
 permalink: /github-copilot/blogs/Setting-Up-Security-Alerts-for-Unusual-GitHub-Copilot-Activity
 tags:
-- AI
 - AI Security
 - Audit Logging
 - Automation Bias
 - Azure Sentinel
-- Blogs
 - Code Scanning
 - CodeQL
 - Copilot Metrics
 - Data Exfiltration
 - Developer Productivity
 - Enterprise Security
-- GitHub Copilot
 - Prompt Injection
 - Secret Scanning
-- Security
 - Security Alerts
 - SIEM
 - Unusual Activity Detection

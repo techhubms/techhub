@@ -10,9 +10,7 @@ date: 2025-12-09 10:00:00 +00:00
 permalink: /coding/blogs/Trying-out-the-Zed-editor-on-Windows-for-NET-and-Markdown
 tags:
 - .NET
-- Blogs
 - C#
-- Coding
 - Customization
 - Developer Tools
 - Editor Comparison

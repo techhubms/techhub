@@ -9,17 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-18 15:00:00 +00:00
 permalink: /azure/community/Introducing-Image-Customizer-for-Azure-Linux
 tags:
-- Azure
 - Azure Linux
 - Base Images
 - Chroot
 - CI/CD
 - Cloud Security
-- Community
 - Container Tools
 - Custom Images
 - Declarative API
-- DevOps
 - Dm Verity
 - Image Customization
 - Image Customizer

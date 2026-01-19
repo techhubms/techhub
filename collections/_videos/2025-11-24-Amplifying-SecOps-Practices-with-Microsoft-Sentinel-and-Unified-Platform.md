@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 13:48:44 +00:00
 permalink: /ai/videos/Amplifying-SecOps-Practices-with-Microsoft-Sentinel-and-Unified-Platform
 tags:
-- AI
 - Attack Disruption
-- Azure
 - Business Premium
 - Cloud Security
 - Customer Success
@@ -27,7 +25,6 @@ tags:
 - Predictive SOC
 - Role Based AI Agent
 - Secure Future Initiative
-- Security
 - Security Analytics
 - Security Copilot
 - Security Incentives
@@ -36,7 +33,6 @@ tags:
 - Sentinel Graph
 - Tab
 - Threat Detection
-- Videos
 section_names:
 - ai
 - azure

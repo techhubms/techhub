@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-20 13:31:20 +00:00
 permalink: /github-copilot/news/NFL-and-Microsoft-Expand-Partnership-Copilot-and-Azure-AI-Transform-Sidelines-and-Operations
 tags:
-- AI
 - AI in Sports
 - AI Innovation
-- Azure
 - Azure AI
 - Azure AI Foundry
 - Cloud Platforms
@@ -21,10 +19,8 @@ tags:
 - Data Driven Insights
 - Game Day Analytics
 - Game Operations
-- GitHub Copilot
 - Microsoft 365 Copilot
 - Microsoft Copilot
-- News
 - NFL
 - Player Scouting
 - Real Time Data

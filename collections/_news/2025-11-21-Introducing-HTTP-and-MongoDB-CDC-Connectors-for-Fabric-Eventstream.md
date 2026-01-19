@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 12:00:00 +00:00
 permalink: /ml/news/Introducing-HTTP-and-MongoDB-CDC-Connectors-for-Fabric-Eventstream
 tags:
-- Azure
 - Change Data Capture
 - Community Feedback
 - Dashboard
@@ -19,10 +18,8 @@ tags:
 - Fabric Ideas
 - HTTP Connector
 - Microsoft Fabric
-- ML
 - MongoDB Atlas
 - MongoDB CDC
-- News
 - No Code Integration
 - Public APIs
 - Real Time Analytics

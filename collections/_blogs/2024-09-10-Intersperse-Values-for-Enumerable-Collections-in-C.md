@@ -10,9 +10,7 @@ date: 2024-09-10 00:00:00 +00:00
 permalink: /coding/blogs/Intersperse-Values-for-Enumerable-Collections-in-C
 tags:
 - .NET
-- Blogs
 - C#
-- Coding
 - Collections
 - Extension Methods
 - Functional Programming

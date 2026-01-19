@@ -10,14 +10,11 @@ date: 2025-12-05 06:00:35 +00:00
 permalink: /azure/community/Automated-Proactive-Monitoring-with-Azure-SRE-Agent-Scheduled-Tasks
 tags:
 - Application Insights
-- Azure
 - Azure CLI
 - Azure SRE Agent
 - Best Practices
 - Cloud Operations
-- Community
 - Compliance
-- DevOps
 - DevOps Automation
 - ICM
 - Incident Response
@@ -27,7 +24,6 @@ tags:
 - Microsoft Azure
 - Proactive Monitoring
 - Scheduled Tasks
-- Security
 - Security Posture
 section_names:
 - azure

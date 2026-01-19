@@ -9,11 +9,9 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-15 07:23:11 +00:00
 permalink: /ai/blogs/Case-Study-Reducing-Support-Ticket-Volume-Using-AI-Bots-Built-in-Copilot-Studio
 tags:
-- AI
 - AI Bots
 - AI Implementation
 - API Integration
-- Blogs
 - Bot Integration
 - Copilot
 - Copilot Studio

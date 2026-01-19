@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7
 date: 2025-08-25 14:57:08 +00:00
 permalink: /azure/videos/Azure-Service-Groups-Flexible-Resource-Organization-Explained
 tags:
-- Azure
 - Azure AD
 - Azure Governance
 - Azure Monitoring
@@ -28,7 +27,6 @@ tags:
 - Scope Management
 - Service Groups
 - Subscription
-- Videos
 section_names:
 - azure
 ---

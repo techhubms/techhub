@@ -11,7 +11,6 @@ permalink: /azure/news/How-Azure-Cobalt-100-VMs-are-Powering-Real-World-Solution
 tags:
 - AKS
 - ARM Architecture
-- Azure
 - Azure Cobalt 100
 - Cloud Infrastructure
 - Cloud Native
@@ -23,7 +22,6 @@ tags:
 - Microsoft Azure
 - Microsoft Defender
 - Microsoft Teams
-- News
 - Performance Optimization
 - Snowflake
 - Temenos

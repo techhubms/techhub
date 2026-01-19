@@ -10,12 +10,8 @@ date: 2025-10-23 07:00:00 +00:00
 permalink: /ai/community/A-Developers-Guide-to-Edge-AI-with-Microsoft-Foundry-Local
 tags:
 - .NET
-- AI
 - AI Cost Optimization
 - AI Engineering
-- Azure
-- Coding
-- Community
 - Compliance
 - Edge AI
 - Edge Computing

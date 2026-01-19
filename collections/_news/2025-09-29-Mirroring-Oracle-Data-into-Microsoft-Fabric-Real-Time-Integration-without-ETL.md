@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-29 17:00:00 +00:00
 permalink: /ml/news/Mirroring-Oracle-Data-into-Microsoft-Fabric-Real-Time-Integration-without-ETL
 tags:
-- Azure
 - Cross Cloud Analytics
 - Data Integration
 - Data Lake
@@ -19,10 +18,7 @@ tags:
 - ETL Replacement
 - Exadata
 - Google BigQuery
-- Machine Learning
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Oracle Cloud Infrastructure
 - Oracle Database

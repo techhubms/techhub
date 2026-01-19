@@ -10,19 +10,16 @@ date: 2025-10-01 14:01:04 +00:00
 permalink: /github-copilot/videos/The-Coding-Buddy-That-Lives-in-Your-Command-Line-GitHub-Copilot-CLI
 tags:
 - Agentic AI
-- AI
 - AI in Development
 - AI Programming Assistant
 - Code Completion
 - Command Line Interface
 - Developer Tools
-- GitHub Copilot
 - GitHub Copilot CLI
 - GithubCopilotCLI
 - Local Development
 - Productivity
 - Terminal
-- Videos
 section_names:
 - ai
 - github-copilot

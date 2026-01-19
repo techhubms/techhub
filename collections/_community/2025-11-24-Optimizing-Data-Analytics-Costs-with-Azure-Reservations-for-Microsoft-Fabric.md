@@ -9,20 +9,16 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-24 19:13:50 +00:00
 permalink: /ml/community/Optimizing-Data-Analytics-Costs-with-Azure-Reservations-for-Microsoft-Fabric
 tags:
-- Azure
 - Azure Advisor
 - Azure Marketplace
 - Azure Portal
 - Azure Reservations
 - Capacity Management
-- Community
 - Cost Optimization
 - Data Analytics
 - Data Platform
 - Fabric Capacity Units
-- Machine Learning
 - Microsoft Fabric
-- ML
 - OneLake
 - Pricing Model
 - Real Time Analytics

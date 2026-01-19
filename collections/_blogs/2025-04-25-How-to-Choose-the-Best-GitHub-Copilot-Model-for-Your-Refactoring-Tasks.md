@@ -9,13 +9,10 @@ feed_url: https://jessehouwing.net/rss/
 date: 2025-04-25 09:24:19 +00:00
 permalink: /github-copilot/blogs/How-to-Choose-the-Best-GitHub-Copilot-Model-for-Your-Refactoring-Tasks
 tags:
-- AI
 - AI Models
-- Blogs
 - Copilot Chat
 - Developer Productivity
 - GitHub
-- GitHub Copilot
 - GPT 4.5
 - GPT 4o
 - Model Selection

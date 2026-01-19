@@ -11,15 +11,12 @@ permalink: /azure/community/Microsoft-BizTalk-Server-Product-Lifecycle-Update-Mo
 tags:
 - API Management
 - ARM Templates
-- Azure
 - Azure Integration Services
 - Azure Logic Apps
 - Azure Monitor
 - B2B Messaging
 - Bicep
 - BizTalk Server
-- Community
-- DevOps
 - DevOps Tooling
 - Enterprise Integration
 - Host Integration Server

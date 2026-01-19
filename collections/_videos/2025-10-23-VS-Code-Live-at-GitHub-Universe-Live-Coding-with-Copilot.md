@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-10-23 18:14:40 +00:00
 permalink: /github-copilot/videos/VS-Code-Live-at-GitHub-Universe-Live-Coding-with-Copilot
 tags:
-- AI
 - Code
 - Code Collaboration
-- Coding
 - Coding Workflow
 - Community Event
 - Copilot Integration
@@ -20,14 +18,12 @@ tags:
 - Developer Community
 - Developer Tools
 - Figma
-- GitHub Copilot
 - GitHub Universe
 - Live Coding
 - Mcp
 - Mcpserver
 - Microsoft
 - Software Developer
-- Videos
 - VS Code
 section_names:
 - ai

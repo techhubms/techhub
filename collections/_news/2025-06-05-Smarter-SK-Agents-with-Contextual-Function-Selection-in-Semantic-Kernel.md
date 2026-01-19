@@ -11,16 +11,13 @@ permalink: /ai/news/Smarter-SK-Agents-with-Contextual-Function-Selection-in-Sema
 tags:
 - .NET
 - Agents
-- AI
 - AI Agents
 - Azure OpenAI
 - C#
 - ChatCompletionAgent
-- Coding
 - Contextual Function Selection
 - Customer Review Summarization
 - Function Filtering
-- News
 - Plugin Integration
 - Retrieval Augmented Generation
 - Semantic Kernel

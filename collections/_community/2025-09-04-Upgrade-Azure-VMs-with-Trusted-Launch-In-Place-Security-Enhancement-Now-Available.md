@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-04 05:50:05 +00:00
 permalink: /azure/community/Upgrade-Azure-VMs-with-Trusted-Launch-In-Place-Security-Enhancement-Now-Available
 tags:
-- Azure
 - Azure Security Benchmark
 - Azure Virtual Machines
 - Boot Integrity Monitoring
 - Cloud Security
-- Community
 - Compliance
 - FedRAMP
 - Gen1 VM
@@ -26,7 +24,6 @@ tags:
 - PCI DSS
 - Scale Set
 - Secure Boot
-- Security
 - Trusted Launch
 - Vtpm
 section_names:

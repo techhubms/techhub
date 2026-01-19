@@ -11,7 +11,6 @@ permalink: /azure/videos/Azure-Update-15th-August-2025
 tags:
 - ADF Upsert
 - App Service
-- Azure
 - Azure App Testing
 - Azure Automation
 - Azure Cloud
@@ -30,7 +29,6 @@ tags:
 - Power Platform
 - Private App Gateway V2
 - Tenant Health Alerts
-- Videos
 section_names:
 - azure
 ---

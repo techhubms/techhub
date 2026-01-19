@@ -12,7 +12,6 @@ tags:
 - API Latency
 - Application Performance Management
 - Application Performance Management/Monitoring
-- Blogs
 - Business Aligned SLOs
 - Business Context
 - Business Metrics
@@ -22,7 +21,6 @@ tags:
 - Contributed Content
 - Customer Impact
 - Data Driven DevOps
-- DevOps
 - Engineering Reliability
 - Enterprise Customers
 - Enterprise Reliability

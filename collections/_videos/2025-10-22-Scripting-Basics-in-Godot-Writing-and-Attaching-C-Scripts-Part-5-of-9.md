@@ -13,7 +13,6 @@ tags:
 - Beginner Tutorial
 - C#
 - CharacterBody3D
-- Coding
 - Debugging
 - Export Variables
 - Game Development
@@ -25,7 +24,6 @@ tags:
 - Physics Process
 - Player Movement
 - Scripting
-- Videos
 - VS Code
 section_names:
 - coding

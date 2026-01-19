@@ -10,7 +10,6 @@ date: 2025-12-17 15:30:47 +00:00
 permalink: /github-copilot/news/Copilot-Code-Review-Now-Available-for-Organization-Members-Without-a-License
 tags:
 - Admin Policy
-- AI
 - Analytics Dashboard
 - Billing
 - Business Plans
@@ -18,9 +17,7 @@ tags:
 - Copilot
 - Copilot Code Review
 - Enterprise Plans
-- GitHub Copilot
 - License Management
-- News
 - Open Source
 - Organization Repository
 - Premium Requests

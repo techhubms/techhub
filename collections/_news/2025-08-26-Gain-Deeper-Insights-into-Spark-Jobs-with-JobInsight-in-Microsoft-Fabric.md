@@ -11,7 +11,6 @@ permalink: /ml/news/Gain-Deeper-Insights-into-Spark-Jobs-with-JobInsight-in-Micr
 tags:
 - ADLS Gen2
 - Automation
-- Azure
 - Big Data
 - Data Analysis
 - Data Engineering
@@ -20,8 +19,6 @@ tags:
 - JobInsight
 - Lakehouse
 - Microsoft Fabric
-- ML
-- News
 - Notebook
 - Performance Monitoring
 - Resource Tuning

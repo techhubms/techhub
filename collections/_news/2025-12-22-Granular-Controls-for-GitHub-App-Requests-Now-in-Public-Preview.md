@@ -12,7 +12,6 @@ tags:
 - Access Management
 - App Access Requests
 - App Governance
-- DevOps
 - Enterprise Management Tools
 - Enterprise Security
 - GHES 3.21
@@ -20,10 +19,8 @@ tags:
 - Governance Policy
 - Improvement
 - Member Privileges
-- News
 - OAuth Apps
 - Organization Settings
-- Security
 section_names:
 - devops
 - security

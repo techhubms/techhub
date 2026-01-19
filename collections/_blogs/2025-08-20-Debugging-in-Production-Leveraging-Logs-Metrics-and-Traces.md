@@ -11,13 +11,11 @@ permalink: /devops/blogs/Debugging-in-Production-Leveraging-Logs-Metrics-and-Tra
 tags:
 - Alerting
 - Automation
-- Blogs
 - Business Of DevOps
 - Cloud Native
 - Contributed Content
 - Correlation IDs
 - Debugging
-- DevOps
 - DevOps Best Practices
 - Distributed Tracing
 - ELK Stack

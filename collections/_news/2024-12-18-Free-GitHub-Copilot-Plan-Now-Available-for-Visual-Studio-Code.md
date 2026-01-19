@@ -9,20 +9,16 @@ feed_url: https://code.visualstudio.com/feed.xml
 date: 2024-12-18 00:00:00 +00:00
 permalink: /github-copilot/news/Free-GitHub-Copilot-Plan-Now-Available-for-Visual-Studio-Code
 tags:
-- AI
 - AI Code Completion
 - AI Models
 - Claude 3.5 Sonnet
 - Code Generation
-- Coding
 - Coding Workflows
 - Commit Message Automation
 - Copilot Edits
 - Custom Instructions
 - Free Developer Tools
-- GitHub Copilot
 - GPT 4o
-- News
 - Productivity
 - Project Awareness
 - Terminal Chat

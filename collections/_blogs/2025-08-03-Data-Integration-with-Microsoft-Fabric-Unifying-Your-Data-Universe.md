@@ -10,9 +10,7 @@ date: 2025-08-03 08:17:00 +00:00
 permalink: /ml/blogs/Data-Integration-with-Microsoft-Fabric-Unifying-Your-Data-Universe
 tags:
 - Architecture
-- Azure
 - Azure Data Factory
-- Blogs
 - Data Activator
 - Data Engineering
 - Data Governance
@@ -26,7 +24,6 @@ tags:
 - Fabric
 - Microsoft Fabric
 - Microsoft Purview
-- ML
 - OneLake
 - Power BI
 - Real Time Data

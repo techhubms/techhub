@@ -10,7 +10,6 @@ date: 2025-11-21 11:13:59 +00:00
 permalink: /azure/videos/Building-Modernizing-and-Securing-AKS-Workloads-with-Azure-Linux
 tags:
 - AKS
-- Azure
 - Azure Linux
 - CBL Mariner
 - Container Host
@@ -25,9 +24,7 @@ tags:
 - Node Lifecycle Management
 - OS Guard
 - Pod Sandboxing
-- Security
 - SELinux
-- Videos
 - Workload Isolation
 section_names:
 - azure

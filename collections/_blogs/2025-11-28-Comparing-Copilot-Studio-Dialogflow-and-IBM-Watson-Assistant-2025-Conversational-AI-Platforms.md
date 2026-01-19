@@ -9,10 +9,8 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-28 17:32:15 +00:00
 permalink: /ai/blogs/Comparing-Copilot-Studio-Dialogflow-and-IBM-Watson-Assistant-2025-Conversational-AI-Platforms
 tags:
-- AI
 - AI Platform Comparison
 - Azure OpenAI Service
-- Blogs
 - Chatbots
 - Conversational AI
 - Copilot Studio

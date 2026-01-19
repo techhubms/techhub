@@ -14,7 +14,6 @@ tags:
 - Continuous Deployment
 - Continuous Integration
 - Developer Experience
-- DevOps
 - Engineering Productivity
 - Enterprise Modernization
 - GitHub
@@ -25,7 +24,6 @@ tags:
 - Repository Management
 - Software Engineering
 - Tool Migration
-- Videos
 - Workflow Automation
 section_names:
 - devops

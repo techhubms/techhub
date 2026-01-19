@@ -10,11 +10,8 @@ date: 2025-08-13 12:05:29 +00:00
 permalink: /azure/community/Persistent-Visual-Studio-Enterprise-Access-Level-in-Azure-DevOps-After-License-Removal
 tags:
 - Access Levels
-- Azure
 - Azure Active Directory
 - Azure DevOps
-- Community
-- DevOps
 - Entra ID
 - Group Synchronization
 - Identity Synchronization

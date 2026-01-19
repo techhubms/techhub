@@ -9,12 +9,8 @@ feed_url: https://blog.jesseswart.nl/index.xml
 date: 2024-06-19 11:47:56 +00:00
 permalink: /github-copilot/blogs/Copilot-Data-Conversion
 tags:
-- AI
-- Blogs
-- Coding
 - CSV
 - Data Conversion
-- GitHub Copilot
 - JSON
 - SQL
 - Table Designer

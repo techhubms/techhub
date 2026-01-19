@@ -11,7 +11,6 @@ permalink: /ml/news/Migration-Assistant-for-Fabric-Data-Warehouse-General-Availa
 tags:
 - ACID Compliance
 - Analytics Platform
-- Azure
 - Azure Synapse Analytics
 - Cloud Migration
 - Data Engineering
@@ -22,8 +21,6 @@ tags:
 - Distributed Computing
 - Microsoft Fabric
 - Migration Assistant
-- ML
-- News
 - Power BI Integration
 - SaaS Analytics
 - T SQL

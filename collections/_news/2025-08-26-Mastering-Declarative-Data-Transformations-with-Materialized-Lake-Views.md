@@ -10,7 +10,6 @@ date: 2025-08-26 16:00:00 +00:00
 permalink: /ml/news/Mastering-Declarative-Data-Transformations-with-Materialized-Lake-Views
 tags:
 - Analytics
-- Azure
 - Azure SQL Database
 - Data Engineering
 - Data Governance
@@ -24,8 +23,6 @@ tags:
 - Materialized Lake Views
 - Medallion Architecture
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - SQL Mirroring
 section_names:

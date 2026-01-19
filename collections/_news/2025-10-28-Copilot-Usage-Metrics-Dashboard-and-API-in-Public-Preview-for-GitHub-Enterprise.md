@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:23:43 +00:00
 permalink: /github-copilot/news/Copilot-Usage-Metrics-Dashboard-and-API-in-Public-Preview-for-GitHub-Enterprise
 tags:
-- AI
 - AI Adoption
 - API
 - Copilot
@@ -17,10 +16,8 @@ tags:
 - Copilot Analytics
 - Dashboard
 - Enterprise Metrics
-- GitHub Copilot
 - IDE Usage
 - Model Usage
-- News
 - Programming Languages
 - Public Preview
 - Software Development Metrics

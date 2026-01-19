@@ -12,7 +12,6 @@ tags:
 - AI
 - AI Workloads
 - Argo CD
-- Blogs
 - Broadcom
 - Canonical
 - Chiseled Ubuntu
@@ -21,7 +20,6 @@ tags:
 - Containers
 - Continuous Delivery
 - Database Support
-- DevOps
 - Enterprise IT
 - GPU Drivers
 - Infrastructure Management

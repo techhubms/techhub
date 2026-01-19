@@ -10,10 +10,8 @@ date: 2025-07-15 10:00:00 +00:00
 permalink: /coding/blogs/C-14-Extension-Members-in-NET-10-Preview-How-to-Use-Extension-Everything
 tags:
 - .NET 10
-- Blogs
 - C#
 - C# 14
-- Coding
 - Extension Members
 - Extension Methods
 - Extension Properties

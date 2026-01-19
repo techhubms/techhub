@@ -10,9 +10,7 @@ date: 2025-11-21 12:54:50 +00:00
 permalink: /ai/videos/Databricks-and-Microsoft-Announce-Deep-Integrations-with-OneLake-Foundry-and-Copilot-Studio
 tags:
 - Agent 365
-- AI
 - AI Integration
-- Azure
 - Azure Databricks
 - Copilot Studio
 - Data Analytics
@@ -24,12 +22,10 @@ tags:
 - Microsoft Entra ID
 - Microsoft Foundry
 - Microsoft OneLake
-- ML
 - MSIgnite
 - Other
 - SAP On Azure
 - Unity Catalog
-- Videos
 section_names:
 - ai
 - azure

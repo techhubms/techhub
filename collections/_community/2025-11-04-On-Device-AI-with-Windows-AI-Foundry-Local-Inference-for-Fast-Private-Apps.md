@@ -9,13 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-04 08:00:00 +00:00
 permalink: /ai/community/On-Device-AI-with-Windows-AI-Foundry-Local-Inference-for-Fast-Private-Apps
 tags:
-- AI
 - AI Inference
 - Application Workflow
 - Azure AI Services
 - Azure Cognitive Services
-- Coding
-- Community
 - Developer Toolkit
 - DirectML
 - Edge AI

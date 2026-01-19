@@ -10,12 +10,10 @@ date: 2025-09-08 19:29:51 +00:00
 permalink: /azure/community/Protect-Azure-Storage-Accounts-with-Network-Security-Perimeter-General-Availability
 tags:
 - Access Management
-- Azure
 - Azure Key Vault
 - Azure Monitor
 - Azure Storage
 - Centralized Logging
-- Community
 - Compliance
 - Data Exfiltration Prevention
 - Enforced Mode
@@ -24,7 +22,6 @@ tags:
 - PaaS Security
 - Private Endpoints
 - Resource Profiles
-- Security
 - Transition Mode
 - Virtual Network
 section_names:

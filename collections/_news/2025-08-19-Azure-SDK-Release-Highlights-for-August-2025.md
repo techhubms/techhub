@@ -10,22 +10,18 @@ date: 2025-08-19 18:43:38 +00:00
 permalink: /ai/news/Azure-SDK-Release-Highlights-for-August-2025
 tags:
 - .NET
-- AI
 - AI Projects
-- Azure
 - Azure AI Foundry
 - Azure OpenAI Service
 - Azure SDK
 - Carbon Optimization
 - Client Libraries
-- Coding
 - Data Movement
 - Go
 - JavaScript
 - Management Libraries
 - Monitor Query Logs
 - Monitor Query Metrics
-- News
 - Python
 - Recovery Services
 - Release Notes

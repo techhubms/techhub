@@ -9,11 +9,8 @@ feed_url: https://harrybin.de/rss.xml
 date: 2025-10-01 23:51:00 +00:00
 permalink: /github-copilot/blogs/Using-GitHub-Copilot-for-Multiple-Tasks-in-Parallel
 tags:
-- AI
 - Asynchronous Development
 - Automation
-- Blogs
-- Coding
 - Coding Agent
 - Copilot Chat
 - Copilot CLI
@@ -21,7 +18,6 @@ tags:
 - Developer Productivity
 - Developer Tools
 - GitHub Actions
-- GitHub Copilot
 - Parallel Tasks
 - Project Bootstrapping
 - Terminal Workflow

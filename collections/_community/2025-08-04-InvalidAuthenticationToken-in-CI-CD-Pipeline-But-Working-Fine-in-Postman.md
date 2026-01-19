@@ -11,17 +11,13 @@ permalink: /azure/community/InvalidAuthenticationToken-in-CI-CD-Pipeline-But-Wor
 tags:
 - Access Token
 - Authentication
-- Azure
 - Azure REST API
 - CI/CD
-- Community
-- DevOps
 - Get AzAccessToken
 - Invoke RestMethod
 - Pipeline
 - Postman
 - PowerShell
-- Security
 section_names:
 - azure
 - devops

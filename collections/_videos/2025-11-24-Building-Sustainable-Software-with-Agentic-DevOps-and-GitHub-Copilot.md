@@ -11,17 +11,13 @@ permalink: /github-copilot/videos/Building-Sustainable-Software-with-Agentic-Dev
 tags:
 - Agentic DevOps
 - Agile Development
-- AI
 - AI Agents
 - AI Tooling
 - Code Performance
-- Coding
 - Continuous AI
-- DevOps
 - DevOps Practices
 - Enterprise Build Optimization
 - Environmental Impact
-- GitHub Copilot
 - GitHub Next
 - Green Software
 - InnovatewithAzureAIappsandagents
@@ -29,7 +25,6 @@ tags:
 - Software Engineering
 - Sustainable Software
 - Usability Analysis
-- Videos
 section_names:
 - ai
 - coding

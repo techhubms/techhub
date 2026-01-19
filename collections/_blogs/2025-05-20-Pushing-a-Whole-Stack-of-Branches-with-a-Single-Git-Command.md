@@ -9,10 +9,8 @@ feed_url: https://andrewlock.net/rss.xml
 date: 2025-05-20 09:00:00 +00:00
 permalink: /devops/blogs/Pushing-a-Whole-Stack-of-Branches-with-a-Single-Git-Command
 tags:
-- Blogs
 - Branch Management
 - Code Review
-- DevOps
 - Force With Lease
 - Git
 - Git Aliases

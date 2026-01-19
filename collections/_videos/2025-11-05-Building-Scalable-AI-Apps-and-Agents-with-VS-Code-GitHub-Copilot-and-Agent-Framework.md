@@ -10,15 +10,10 @@ date: 2025-11-05 15:01:39 +00:00
 permalink: /github-copilot/videos/Building-Scalable-AI-Apps-and-Agents-with-VS-Code-GitHub-Copilot-and-Agent-Framework
 tags:
 - Agent Framework
-- AI
 - AI Toolkit
-- Azure
 - Azure AI Foundry
-- Coding
 - Demo
-- DevOps
 - GitHub
-- GitHub Copilot
 - GitHub Universe
 - GitHubUniverse
 - Incident Response
@@ -29,7 +24,6 @@ tags:
 - Spec Driven Development
 - Spec Kit
 - Tracing
-- Videos
 - VS Code
 section_names:
 - ai

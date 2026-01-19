@@ -18,8 +18,6 @@ tags:
 - Entra ID
 - Lakehouse
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - OPENROWSET
 - Parquet

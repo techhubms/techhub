@@ -6,23 +6,14 @@ viewing_mode: internal
 date: 2025-12-22 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
-- AI
 - Automation
-- Azure
 - Cloud Computing
 - Code Review
-- Coding
 - Data Engineering
 - Dependabot
-- DevOps
-- GitHub Copilot
-- Machine Learning
 - Microsoft Fabric
-- ML
 - Orchestration
 - Prompt Engineering
-- Roundups
-- Security
 - VS Code
 section_names:
 - ai

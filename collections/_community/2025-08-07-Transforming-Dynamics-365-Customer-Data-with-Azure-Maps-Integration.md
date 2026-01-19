@@ -10,11 +10,9 @@ date: 2025-08-07 17:20:42 +00:00
 permalink: /azure/community/Transforming-Dynamics-365-Customer-Data-with-Azure-Maps-Integration
 tags:
 - API
-- Azure
 - Azure Maps
 - Bing Maps
 - Clustering
-- Community
 - CRM Data Transformation
 - CRM Integration
 - Data Visualization

@@ -11,7 +11,6 @@ permalink: /ai/videos/Choosing-Your-First-AI-Application
 tags:
 - Agent
 - Agents
-- AI
 - AI Deployment
 - AI Strategy
 - AI Use Cases
@@ -28,7 +27,6 @@ tags:
 - Risk Management
 - ROI
 - Technical Feasibility
-- Videos
 section_names:
 - ai
 ---

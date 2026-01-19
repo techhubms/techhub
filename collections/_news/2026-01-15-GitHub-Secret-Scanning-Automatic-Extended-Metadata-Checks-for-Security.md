@@ -11,18 +11,15 @@ permalink: /devops/news/GitHub-Secret-Scanning-Automatic-Extended-Metadata-Check
 tags:
 - Application Security
 - Developer Security
-- DevOps
 - Enterprise Cloud
 - Exposure Assessment
 - GitHub
 - Improvement
 - Incident Response
 - Metadata Checks
-- News
 - Remediation
 - Repository Security
 - Secret Scanning
-- Security
 - Security Alerts
 - Security Configuration
 - Token Security

@@ -10,9 +10,7 @@ date: 2025-11-18 08:00:00 +00:00
 permalink: /ai/news/Whats-New-for-Fabric-Data-Agents-AI-Interoperability-and-Enterprise-Data-Insights-at-Ignite-2025
 tags:
 - Agentic Web
-- AI
 - AI Integration
-- Azure
 - Azure AI Search
 - Context Aware Analytics
 - Data Reasoning
@@ -22,9 +20,7 @@ tags:
 - Interoperability
 - MCP Server
 - Microsoft Fabric
-- ML
 - Modular Agents
-- News
 - OneLake
 - Ontology
 - Teams Integration

@@ -10,7 +10,6 @@ date: 2025-07-04 14:16:55 +00:00
 permalink: /ml/videos/Azure-Updates-Key-Announcements-for-July-2025
 tags:
 - Audit
-- Azure
 - Azure App Service
 - Azure Cloud
 - Azure DNS
@@ -25,9 +24,7 @@ tags:
 - Cloud Data
 - Cloud Platform
 - Cloud Security
-- Coding
 - Cosmos DB
-- DevOps
 - DNAT
 - Entra Domain Services
 - FQDN Filtering
@@ -35,14 +32,11 @@ tags:
 - Metrics Query Editor
 - Microsoft
 - Microsoft Azure
-- ML
 - MongoDB
 - Mssql Python
 - NFS Encryption
 - PostgreSQL
-- Security
 - Security Policy
-- Videos
 - VM Dependency Agent
 - VS Code Extension
 section_names:

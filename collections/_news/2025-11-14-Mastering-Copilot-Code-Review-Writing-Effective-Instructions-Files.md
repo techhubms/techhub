@@ -9,7 +9,6 @@ feed_url: https://github.blog/feed/
 date: 2025-11-14 17:00:00 +00:00
 permalink: /github-copilot/news/Mastering-Copilot-Code-Review-Writing-Effective-Instructions-Files
 tags:
-- AI
 - AI & ML
 - Applyto Frontmatter
 - Automation
@@ -21,10 +20,8 @@ tags:
 - Copilot Instructions.md
 - Custom Instructions
 - Developer Productivity
-- GitHub Copilot
 - GitHub Copilot Code Review
 - Instructions Files
-- News
 - Path Specific Instructions
 - Style Conventions
 - Team Standards

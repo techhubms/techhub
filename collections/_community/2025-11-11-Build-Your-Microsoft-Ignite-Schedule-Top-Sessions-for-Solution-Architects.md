@@ -10,21 +10,16 @@ date: 2025-11-11 00:19:08 +00:00
 permalink: /ai/community/Build-Your-Microsoft-Ignite-Schedule-Top-Sessions-for-Solution-Architects
 tags:
 - Agentic AI
-- AI
 - AI Governance
-- Azure
 - Azure Databricks
 - Cloud Migration
-- Community
 - Compliance
 - Data Architecture
 - Infrastructure
 - Microsoft Fabric
 - Microsoft Ignite
 - Microsoft Purview
-- ML
 - SAP
-- Security
 - Solution Architecture
 - SQL Server
 - Windows Server

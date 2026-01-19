@@ -9,17 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 14:33:42 +00:00
 permalink: /ai/community/How-Azure-Storage-Powers-AI-Workloads-Behind-the-Scenes-with-OpenAI-Blobfuse-and-More
 tags:
-- AI
 - AI Infrastructure
 - AI Workloads
-- Azure
 - Azure Blob Storage
 - Azure OpenAI Service
 - Azure Scaled Accounts
 - Azure Storage
 - Blobfuse2
 - Cloud Infrastructure
-- Community
 - Data Management
 - Data Pipelines
 - Enterprise AI

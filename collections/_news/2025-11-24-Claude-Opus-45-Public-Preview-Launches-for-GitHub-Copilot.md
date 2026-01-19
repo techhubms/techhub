@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-24 18:12:32 +00:00
 permalink: /github-copilot/news/Claude-Opus-45-Public-Preview-Launches-for-GitHub-Copilot
 tags:
-- AI
 - AI Model
 - Anthropic
 - Claude Opus 4.5
@@ -20,10 +19,8 @@ tags:
 - Copilot Mobile
 - Documentation
 - Enterprise Plans
-- GitHub Copilot
 - Model Picker
 - Model Rollout
-- News
 - Premium Request Multiplier
 - Pro Plans
 - Token Usage

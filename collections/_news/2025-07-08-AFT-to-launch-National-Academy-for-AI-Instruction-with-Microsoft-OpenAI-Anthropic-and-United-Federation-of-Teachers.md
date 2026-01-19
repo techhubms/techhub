@@ -11,13 +11,11 @@ permalink: /ai/news/AFT-to-launch-National-Academy-for-AI-Instruction-with-Micro
 tags:
 - Academy
 - AFT
-- AI
 - AI Instruction
 - Anthropic
 - Company News
 - Education
 - Microsoft
-- News
 - OpenAI
 - Teachers
 - United Federation Of Teachers

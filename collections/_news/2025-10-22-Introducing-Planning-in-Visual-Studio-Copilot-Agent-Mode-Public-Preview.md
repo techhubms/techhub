@@ -10,16 +10,12 @@ date: 2025-10-22 15:54:18 +00:00
 permalink: /github-copilot/news/Introducing-Planning-in-Visual-Studio-Copilot-Agent-Mode-Public-Preview
 tags:
 - Agent Mode
-- AI
 - Claude Sonnet 4
-- Coding
 - Copilot
 - Copilot Chat
 - Copilot Planning
 - Developer Tools
-- GitHub Copilot
 - GPT 5
-- News
 - Planning
 - Planning Mode
 - Prompt Engineering

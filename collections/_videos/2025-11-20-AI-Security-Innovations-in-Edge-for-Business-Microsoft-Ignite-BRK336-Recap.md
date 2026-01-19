@@ -10,7 +10,6 @@ date: 2025-11-20 07:23:25 +00:00
 permalink: /ai/videos/AI-Security-Innovations-in-Edge-for-Business-Microsoft-Ignite-BRK336-Recap
 tags:
 - Agentic AI
-- AI
 - AI Productivity
 - Browser Security
 - Copilot Mode
@@ -23,10 +22,8 @@ tags:
 - MSIgnite
 - Purview DLP
 - ScalewithcloudandAIendpoints
-- Security
 - Security Features
 - Teams Integration
-- Videos
 - Workflow Automation
 section_names:
 - ai

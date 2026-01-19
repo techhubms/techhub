@@ -7,23 +7,15 @@ date: 2025-08-11 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
-- AI
 - AI Agents
-- Azure
 - CI/CD
 - Claude Opus 4.1
 - Cloud Identity
-- Coding
-- DevOps
 - Enterprise AI
-- GitHub Copilot
 - GPT 5
 - MCP
-- ML
 - Multi Agent Systems
 - Passwordless Authentication
-- Roundups
-- Security
 - VS Code
 section_names:
 - ai

@@ -11,7 +11,6 @@ permalink: /ai/videos/Building-Agents-for-Microsoft-365-Copilot-with-the-Agents-
 tags:
 - Agent Integration
 - Agents Toolkit
-- AI
 - BRK319
 - Build Agents For Copilot With The Microsoft 365 Agents Toolkit | BRK319
 - Copilot And Agents At Work:copilot Studio
@@ -33,7 +32,6 @@ tags:
 - Msft Ignite
 - SDK
 - SharePoint Data
-- Videos
 section_names:
 - ai
 ---

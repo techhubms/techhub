@@ -10,12 +10,10 @@ date: 2025-08-19 10:00:00 +00:00
 permalink: /ai/news/OpenAPI-Specification-Generation-in-Fabric-User-Data-Functions
 tags:
 - Agentic Use Cases
-- AI
 - AI Agents
 - API Gateway
 - API Integration
 - API Management
-- Azure
 - Azure AI Foundry
 - Azure API Management
 - Client Code
@@ -26,8 +24,6 @@ tags:
 - Fabric User Data Functions
 - JSON
 - Microsoft Fabric
-- ML
-- News
 - OpenAPI Specification
 - Python
 - REST API

@@ -12,10 +12,7 @@ plans:
 - Free
 alt-collection: features
 tags:
-- AI
-- GitHub Copilot
 - Pull Request
-- Videos
 - Web UI
 section_names:
 - ai

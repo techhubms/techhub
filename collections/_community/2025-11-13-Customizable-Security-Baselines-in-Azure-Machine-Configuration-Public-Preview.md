@@ -11,7 +11,6 @@ permalink: /azure/community/Customizable-Security-Baselines-in-Azure-Machine-Con
 tags:
 - ARM Templates
 - Audit Policy
-- Azure
 - Azure Arc
 - Azure CLI
 - Azure Machine Configuration
@@ -19,14 +18,11 @@ tags:
 - Bicep
 - CI/CD
 - CIS Benchmark
-- Community
 - Compliance
 - Configuration Management
-- DevOps
 - Governance
 - Linux Server
 - Policy as Code
-- Security
 - Security Baseline
 - Windows Server
 section_names:

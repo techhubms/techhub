@@ -14,7 +14,6 @@ tags:
 - Community Projects
 - Developer
 - Developer Collaboration
-- DevOps
 - Environmental Sustainability
 - Git
 - Git And GitHub
@@ -28,7 +27,6 @@ tags:
 - Software
 - Software Development
 - Version Control
-- Videos
 section_names:
 - devops
 ---

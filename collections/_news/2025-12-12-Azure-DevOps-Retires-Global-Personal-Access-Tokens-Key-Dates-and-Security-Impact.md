@@ -10,20 +10,16 @@ date: 2025-12-12 14:15:06 +00:00
 permalink: /azure/news/Azure-DevOps-Retires-Global-Personal-Access-Tokens-Key-Dates-and-Security-Impact
 tags:
 - Authentication
-- Azure
 - Azure DevOps
 - Credential Migration
-- DevOps
 - DevOps Workflows
 - Identity Management
 - Microsoft Entra
-- News
 - Organizational Policies
 - PAT Retirement
 - PATs
 - Personal Access Tokens
 - Release Management
-- Security
 - Token Decommission
 - Token Governance
 section_names:

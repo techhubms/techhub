@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:17 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Isolated-Subagents-Now-in-Public-Preview-for-JetBrains-Eclipse-and-Xcode
 tags:
-- AI
 - AI Development Tools
 - API Design
 - Autonomous Agents
@@ -19,10 +18,8 @@ tags:
 - Custom Agents
 - Developer Tools
 - Eclipse
-- GitHub Copilot
 - IDE Extensions
 - JetBrains IDEs
-- News
 - Productivity
 - Subagents
 - Technical Documentation

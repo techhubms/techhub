@@ -8,24 +8,15 @@ permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
 - Agentic AI
-- AI
 - AI Driven Automation
-- Azure
 - C#
 - Cloud Cost Management
 - Cloud Security
-- Coding
-- DevOps
-- GitHub Copilot
 - High Performance Computing
 - IDE Integration
-- Machine Learning
 - Microsoft Fabric
-- ML
 - Multi Agent Orchestration
 - Open Source
-- Roundups
-- Security
 - Semantic Search
 section_names:
 - ai

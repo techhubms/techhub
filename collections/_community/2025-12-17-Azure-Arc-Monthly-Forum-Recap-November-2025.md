@@ -11,13 +11,11 @@ permalink: /azure/community/Azure-Arc-Monthly-Forum-Recap-November-2025
 tags:
 - Auto Agent Upgrade
 - AZCM Agent
-- Azure
 - Azure Arc
 - Azure Monitor
 - Azure Policy
 - Change Tracking
 - CIS Baseline Compliance
-- Community
 - Essential Machine Management
 - Hybrid Cloud
 - Inventory
@@ -26,7 +24,6 @@ tags:
 - Machine Configuration
 - Operations Center
 - Preview
-- Security
 - Security Baseline
 - Windows Server
 section_names:

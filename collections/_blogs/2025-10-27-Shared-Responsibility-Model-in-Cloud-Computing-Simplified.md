@@ -9,13 +9,11 @@ feed_url: https://dellenny.com/feed/
 date: 2025-10-27 06:41:21 +00:00
 permalink: /azure/blogs/Shared-Responsibility-Model-in-Cloud-Computing-Simplified
 tags:
-- Azure
 - Azure App Service
 - Azure Key Vault
 - Azure Security
 - Azure Security Center
 - Azure SQL Database
-- Blogs
 - Cloud Security
 - Compliance
 - Data Encryption
@@ -30,7 +28,6 @@ tags:
 - RBAC
 - Role Based Access Control
 - SaaS
-- Security
 - Security Best Practices
 - Shared Responsibility Model
 section_names:

@@ -11,7 +11,6 @@ permalink: /azure/news/Mitigating-Threats-Targeting-Microsoft-Teams-Attack-Chain
 tags:
 - Attack Chain
 - Attack Surface Reduction
-- Azure
 - Azure Security
 - Conditional Access
 - Defender For Cloud Apps
@@ -24,10 +23,8 @@ tags:
 - Microsoft Purview
 - Microsoft Sentinel
 - Microsoft Teams
-- News
 - Phishing
 - Ransomware
-- Security
 - Security Controls
 - TeamsPhisher
 - Threat Intelligence

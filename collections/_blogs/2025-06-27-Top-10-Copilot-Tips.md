@@ -9,16 +9,12 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-06-27 00:00:00 +00:00
 permalink: /github-copilot/blogs/Top-10-Copilot-Tips
 tags:
-- AI
 - AI Coding Assistant
 - Best Practices
-- Blogs
 - Code Refactoring
 - Code Review
-- Coding
 - Copilot Chat
 - Developer Productivity
-- GitHub Copilot
 - Pro Tips
 - Prompt Engineering
 - Testing Automation

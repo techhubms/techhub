@@ -9,9 +9,7 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-01 04:36:49 +00:00
 permalink: /ai/community/Building-a-Secure-and-Compliant-Azure-AI-Landing-Zone-Policy-Framework-and-Best-Practices
 tags:
-- AI
 - AKS
-- Azure
 - Azure AI Landing Zone
 - Azure Blueprints
 - Azure Cognitive Services
@@ -21,10 +19,8 @@ tags:
 - Azure OpenAI
 - Azure Policy
 - CI/CD
-- Community
 - Compliance
 - Data Protection
-- DevOps
 - EPAC
 - Governance
 - IaC
@@ -33,7 +29,6 @@ tags:
 - Monitoring
 - Networking
 - Policy as Code
-- Security
 section_names:
 - ai
 - azure

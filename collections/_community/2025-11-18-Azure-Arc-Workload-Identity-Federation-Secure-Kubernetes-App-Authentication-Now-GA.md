@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 16:00:00 +00:00
 permalink: /azure/community/Azure-Arc-Workload-Identity-Federation-Secure-Kubernetes-App-Authentication-Now-GA
 tags:
-- Azure
 - Azure Arc
 - Azure CLI
 - Azure Key Vault
 - Azure Storage
-- Community
 - Edge Computing
 - Hybrid Cloud
 - Identity Federation
@@ -24,7 +22,6 @@ tags:
 - OIDC
 - Rancher K3s
 - Red Hat OpenShift
-- Security
 - Service Account
 - Token Federation
 - VMware Tanzu

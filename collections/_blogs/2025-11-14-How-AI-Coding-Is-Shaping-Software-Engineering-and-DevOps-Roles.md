@@ -10,20 +10,17 @@ date: 2025-11-14 12:33:41 +00:00
 permalink: /ai/blogs/How-AI-Coding-Is-Shaping-Software-Engineering-and-DevOps-Roles
 tags:
 - Agentic AI
-- AI
 - AI Compliance Challenges
 - AI Generated Code
 - AI Generated Code Vulnerabilities
 - AI in DevOps
 - AI in Software Development
 - AI Tools Adoption
-- Blogs
 - Business Of DevOps
 - Code Vulnerabilities
 - Collaboration Barriers
 - Compliance Management
 - Developer Upskilling
-- DevOps
 - DevOps Productivity
 - DevSecOps
 - DevSecOps Challenges

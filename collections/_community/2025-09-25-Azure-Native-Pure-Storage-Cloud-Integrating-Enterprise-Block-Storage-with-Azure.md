@@ -9,13 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-25 16:00:00 +00:00
 permalink: /azure/community/Azure-Native-Pure-Storage-Cloud-Integrating-Enterprise-Block-Storage-with-Azure
 tags:
-- Azure
 - Azure Native Integration
 - Azure Storage
 - Azure VMware Solution
 - Cloud Infrastructure
 - Cloud Storage
-- Community
 - Data Management
 - Enterprise Block Storage
 - Hybrid Cloud

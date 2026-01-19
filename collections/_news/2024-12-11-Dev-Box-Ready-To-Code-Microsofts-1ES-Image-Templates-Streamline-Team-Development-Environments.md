@@ -10,21 +10,17 @@ date: 2024-12-11 17:00:17 +00:00
 permalink: /coding/news/Dev-Box-Ready-To-Code-Microsofts-1ES-Image-Templates-Streamline-Team-Development-Environments
 tags:
 - 1ES
-- Azure
 - Azure Bicep
 - Azure DevOps
 - Azure Image Builder
 - CI/CD
-- Coding
 - Dev Box
 - DevCenter
 - Developer Productivity
-- DevOps
 - Engineering@Microsoft
 - Environment Automation
 - Image Templates
 - Microsoft Dev Box
-- News
 - One Engineering System
 - Ready To Code
 - Team Customizations

@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-20 02:30:00 +00:00
 permalink: /ml/news/IDENTITY-Columns-in-Fabric-Data-Warehouse-Preview
 tags:
-- Azure
 - BIGINT
 - Cloud Analytics
 - Data Integrity
@@ -21,8 +20,6 @@ tags:
 - IDENTITY Column
 - Ingestion Pipeline
 - Microsoft Fabric
-- ML
-- News
 - Parallel Ingestion
 - Preview Features
 - SQL Server

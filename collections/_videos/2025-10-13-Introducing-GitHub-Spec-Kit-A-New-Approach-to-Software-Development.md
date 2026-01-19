@@ -17,7 +17,6 @@ tags:
 - AI Tools
 - Command Automation
 - Development Workflow
-- DevOps
 - Executable Specifications
 - GitHub
 - Open Source
@@ -27,7 +26,6 @@ tags:
 - Software Planning
 - Spec Kit
 - SpecKit
-- Videos
 section_names:
 - devops
 ---

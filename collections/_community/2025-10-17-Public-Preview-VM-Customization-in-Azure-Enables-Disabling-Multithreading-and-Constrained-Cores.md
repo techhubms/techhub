@@ -10,10 +10,8 @@ date: 2025-10-17 21:52:05 +00:00
 permalink: /azure/community/Public-Preview-VM-Customization-in-Azure-Enables-Disabling-Multithreading-and-Constrained-Cores
 tags:
 - ARM Templates
-- Azure
 - Azure CLI
 - Bring Your Own License
-- Community
 - Compliance
 - Constrained Cores
 - HPC

@@ -10,10 +10,8 @@ date: 2025-07-02 15:00:43 +00:00
 permalink: /ai/news/Azure-SDK-Release-Highlights-for-June-2025
 tags:
 - .NET
-- AI
 - AI Agents
 - Analytics
-- Azure
 - Azure AI Search
 - Azure Identity
 - Azure SDK
@@ -21,15 +19,12 @@ tags:
 - Bulk API
 - Client Library
 - Cloud Services
-- Coding
 - Cosmos DB
 - DefaultAzureCredential
 - Go
 - Hybrid Search
 - Java
 - JavaScript
-- ML
-- News
 - Online Experimentation
 - Python
 - Release Notes

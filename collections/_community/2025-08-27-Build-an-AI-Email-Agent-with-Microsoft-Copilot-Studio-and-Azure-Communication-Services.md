@@ -9,15 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-27 22:49:57 +00:00
 permalink: /ai/community/Build-an-AI-Email-Agent-with-Microsoft-Copilot-Studio-and-Azure-Communication-Services
 tags:
-- AI
 - AI Agent
-- Azure
 - Azure Communication Services
 - Azure Functions
 - Azure Portal
 - Bot Development
-- Coding
-- Community
 - Conversation Design
 - Debugging
 - Email Automation

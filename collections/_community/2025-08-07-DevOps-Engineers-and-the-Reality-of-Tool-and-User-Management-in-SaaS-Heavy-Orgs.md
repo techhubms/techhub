@@ -11,8 +11,6 @@ permalink: /devops/community/DevOps-Engineers-and-the-Reality-of-Tool-and-User-M
 tags:
 - Automation
 - CI/CD
-- Community
-- DevOps
 - Google Workspace
 - IAM
 - IT Operations

@@ -13,15 +13,12 @@ tags:
 - ASP.NET Core
 - Attribute Based Security
 - C#
-- Coding
-- Community
 - Custom Validation
 - ISecurityKeyValidator
 - Middleware
 - Minimal APIs
 - NuGet Package
 - OpenAPI
-- Security
 - Swagger
 section_names:
 - coding

@@ -9,8 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 09:00:00 +00:00
 permalink: /ai/news/Mirroring-Operational-Databases-to-Microsoft-Fabric-OneLake-SQL-Server-PostgreSQL-Cosmos-DB-Snowflake-and-Qlik-Integrations-Now-GA
 tags:
-- AI
-- Azure
 - Azure Cosmos DB
 - Azure PostgreSQL
 - BI
@@ -19,12 +17,9 @@ tags:
 - Governance
 - Hybrid Cloud
 - Iceberg Tables
-- Machine Learning
 - Microsoft Fabric
 - Mirroring
-- ML
 - Multi Cloud
-- News
 - OneLake
 - Operational Data
 - Qlik

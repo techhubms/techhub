@@ -9,14 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-10-25 12:01:39 +00:00
 permalink: /github-copilot/videos/Adding-a-Database-to-Your-App-with-GitHub-Copilot-and-Microsoft-Docs-MCP-Server
 tags:
-- AI
 - Best Practices
-- Coding
 - Copilot
 - Database Integration
 - Development Workflow
 - GitHub
-- GitHub Copilot
 - Mcp
 - MCP Server
 - Microsoft Docs
@@ -24,7 +21,6 @@ tags:
 - Micrsoft
 - Shorts
 - Tutorial
-- Videos
 - VS Code
 section_names:
 - ai

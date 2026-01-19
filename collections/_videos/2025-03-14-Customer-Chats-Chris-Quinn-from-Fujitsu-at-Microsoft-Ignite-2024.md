@@ -9,24 +9,19 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-03-14 15:01:17 +00:00
 permalink: /ai/videos/Customer-Chats-Chris-Quinn-from-Fujitsu-at-Microsoft-Ignite-2024
 tags:
-- AI
 - AI Innovations
 - Automation
-- Azure
 - Chris Quinn
 - Cloud Adoption
 - Cloud Migration
 - Cloud Security
-- DevOps
 - Fujitsu
 - Linux On Azure
 - Microsoft
 - Microsoft Events
 - Microsoft Ignite
 - Microsoft Strategic Partner
-- Security
 - Security Best Practices
-- Videos
 section_names:
 - ai
 - azure

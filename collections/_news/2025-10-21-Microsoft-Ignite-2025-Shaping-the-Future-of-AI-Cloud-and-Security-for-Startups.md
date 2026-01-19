@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-21 14:32:59 +00:00
 permalink: /ai/news/Microsoft-Ignite-2025-Shaping-the-Future-of-AI-Cloud-and-Security-for-Startups
 tags:
-- AI
 - AI Agents
 - AI Startups
-- Azure
 - Azure AI Foundry
 - Azure Build
 - Azure Marketplace
@@ -26,9 +24,7 @@ tags:
 - Microsoft Copilot
 - Microsoft For Startups
 - Microsoft Ignite
-- News
 - Robotic AI
-- Security
 section_names:
 - ai
 - azure

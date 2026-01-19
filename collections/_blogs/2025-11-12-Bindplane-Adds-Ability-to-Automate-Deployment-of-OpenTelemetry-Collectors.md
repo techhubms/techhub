@@ -15,9 +15,7 @@ tags:
 - Application Instrumentation
 - Automation
 - Bindplane
-- Blogs
 - Blueprints
-- DevOps
 - DevOps Automation
 - Fleets
 - IT Monitoring

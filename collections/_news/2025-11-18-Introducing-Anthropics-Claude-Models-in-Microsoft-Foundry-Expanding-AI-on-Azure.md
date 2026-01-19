@@ -10,12 +10,10 @@ date: 2025-11-18 15:00:28 +00:00
 permalink: /ai/news/Introducing-Anthropics-Claude-Models-in-Microsoft-Foundry-Expanding-AI-on-Azure
 tags:
 - Agentic AI
-- AI
 - AI + Machine Learning
 - AI Agents
 - AI Integration
 - Anthropic
-- Azure
 - Claude
 - Claude Code
 - Claude Haiku 4.5
@@ -27,7 +25,6 @@ tags:
 - GPT
 - MCP
 - Microsoft Foundry
-- News
 - Pricing
 - Responsible AI
 section_names:

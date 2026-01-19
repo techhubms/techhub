@@ -9,17 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-12-03 09:21:56 +00:00
 permalink: /github-copilot/videos/Rubber-Duck-Thursdays-Building-with-Copilot-Custom-Agents
 tags:
-- AI
 - Copilot Custom Instructions
 - Copilot Customization
 - Custom Agents
 - Developer Tools
-- GitHub Copilot
 - Live Coding
 - Productivity
 - Programming Workflow
 - Rubber Duck Thursdays
-- Videos
 section_names:
 - ai
 - github-copilot

@@ -9,19 +9,16 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-17 15:29:48 +00:00
 permalink: /github-copilot/news/GPT-41-Copilot-Code-Completion-Model-October-Update
 tags:
-- AI
 - AI Code Suggestions
 - AI Models
 - Code Completion
 - Copilot
 - Copilot Update
 - Developer Productivity
-- GitHub Copilot
 - GPT 4.1
 - Improvement
 - Inline Code Suggestions
 - Machine Learning
-- News
 - Software Development Tools
 section_names:
 - ai

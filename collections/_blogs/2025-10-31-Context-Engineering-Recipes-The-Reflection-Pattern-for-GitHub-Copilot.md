@@ -9,14 +9,10 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-10-31 00:00:00 +00:00
 permalink: /github-copilot/blogs/Context-Engineering-Recipes-The-Reflection-Pattern-for-GitHub-Copilot
 tags:
-- AI
 - AI Reasoning
-- Blogs
 - Code Mentoring
 - Code Review
-- Coding
 - Developer Tools
-- GitHub Copilot
 - Prompt Engineering
 - Reflection Pattern
 - Self Critique

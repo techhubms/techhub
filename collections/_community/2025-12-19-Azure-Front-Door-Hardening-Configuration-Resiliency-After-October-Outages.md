@@ -9,15 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-19 02:15:12 +00:00
 permalink: /azure/community/Azure-Front-Door-Hardening-Configuration-Resiliency-After-October-Outages
 tags:
-- Azure
 - Azure Front Door
 - Cloud Security
-- Community
 - Configuration Management
 - Content Delivery Network
 - Control Plane
 - Data Plane
-- DevOps
 - Edge Networking
 - High Availability
 - Incident Response
@@ -25,7 +22,6 @@ tags:
 - Multi Tenant Architecture
 - Resiliency
 - Safe Deployment Practices
-- Security
 - Service Outage
 - Traffic Management
 - Web Application Firewall

@@ -11,10 +11,8 @@ permalink: /ai/videos/Building-Cross-Platform-NET-Apps-with-Uno-Platform-and-Con
 tags:
 - .NET
 - Agentic Workflows
-- AI
 - AI Agents
 - Bruno Capuano
-- Coding
 - Contextual AI
 - Cross Platform Development
 - Figma Plugins
@@ -32,7 +30,6 @@ tags:
 - Uno Platform
 - Uno Platform Studio
 - UnoPlatform
-- Videos
 - WebAssembly
 - Windows
 section_names:

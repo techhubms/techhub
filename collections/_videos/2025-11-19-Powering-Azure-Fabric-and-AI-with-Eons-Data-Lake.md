@@ -9,8 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 15:01:51 +00:00
 permalink: /ai/videos/Powering-Azure-Fabric-and-AI-with-Eons-Data-Lake
 tags:
-- AI
-- Azure
 - Azure OpenAI
 - Backup Restoration
 - Blob Storage
@@ -23,13 +21,11 @@ tags:
 - Iceberg Tables
 - KQL
 - Microsoft Fabric
-- ML
 - MSIgnite
 - OneLake
 - Spark
 - SQL Analytics
 - Unifyyourdataplatform
-- Videos
 section_names:
 - ai
 - azure

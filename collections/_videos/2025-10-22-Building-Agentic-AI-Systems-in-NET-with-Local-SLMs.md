@@ -12,10 +12,8 @@ tags:
 - .NET
 - Agentic AI
 - Agents
-- AI
 - Autonomous Agents
 - C#
-- Coding
 - Demo
 - Developer
 - Developer Community
@@ -39,7 +37,6 @@ tags:
 - Smalllanguagemodels
 - Software Developer
 - State Management
-- Videos
 section_names:
 - ai
 - coding

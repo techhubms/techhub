@@ -9,10 +9,8 @@ feed_url: https://devblogs.microsoft.com/feed
 date: 2025-11-25 22:51:14 +00:00
 permalink: /github-copilot/news/Effortless-Container-Management-with-GitHub-Copilot-and-VS-Code
 tags:
-- AI
 - CLI Replacement
 - Code Assistant
-- Coding
 - Command Automation
 - Container Management
 - Container Tools
@@ -20,9 +18,7 @@ tags:
 - Dev Workflow
 - Developer Productivity
 - Development Tools
-- GitHub Copilot
 - Integration
-- News
 - Troubleshooting
 - Uncategorized
 - VS Code

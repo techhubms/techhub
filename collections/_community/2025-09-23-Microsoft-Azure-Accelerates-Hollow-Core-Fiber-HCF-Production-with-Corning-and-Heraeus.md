@@ -11,10 +11,8 @@ permalink: /azure/community/Microsoft-Azure-Accelerates-Hollow-Core-Fiber-HCF-Pr
 tags:
 - AI
 - AI Infrastructure
-- Azure
 - Azure Networking
 - Cloud Networking
-- Community
 - Corning
 - Data Center Infrastructure
 - DNANF

@@ -10,7 +10,6 @@ date: 2025-11-21 17:18:13 +00:00
 permalink: /ai/videos/AI-for-Energy-From-Advanced-Operations-to-Emissions-Management
 tags:
 - Agentic AI
-- AI
 - AI Adoption
 - Autonomous Grid
 - Compliance Workflows
@@ -28,7 +27,6 @@ tags:
 - Predictive Maintenance
 - Transformer Monitoring
 - Utility Industry
-- Videos
 section_names:
 - ai
 ---

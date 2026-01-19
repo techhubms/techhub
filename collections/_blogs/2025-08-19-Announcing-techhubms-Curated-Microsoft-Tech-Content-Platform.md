@@ -10,16 +10,11 @@ date: 2025-08-19 00:00:00 +00:00
 permalink: /github-copilot/blogs/Announcing-techhubms-Curated-Microsoft-Tech-Content-Platform
 tags:
 - .NET
-- AI
 - AI Powered Tagging
-- Azure
 - Azure App Services
 - Azure Static Web Apps
-- Blogs
 - Curated Content
 - Developer Tools
-- DevOps
-- GitHub Copilot
 - GitHub Pages
 - Jekyll
 - Machine Learning

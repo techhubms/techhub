@@ -11,10 +11,8 @@ permalink: /ml/videos/Integrating-GraphQL-APIs-with-Fabric-SQL-Databases
 tags:
 - API Integration
 - Authentication
-- Azure
 - Azure SQL
 - Cloud Computing
-- Coding
 - Data Driven Applications
 - Data Engineering
 - Data Platform
@@ -25,14 +23,12 @@ tags:
 - Microsoft
 - Microsoft Fabric
 - Microsoft MVP
-- ML
 - Power BI
 - Query Execution
 - Schema Generation
 - SQL Server
 - Tech
 - Technology
-- Videos
 section_names:
 - azure
 - coding

@@ -21,7 +21,9 @@ namespace TechHub.ContentFixer;
 /// - Remove {% raw %} and {% endraw %} tags
 /// - Process {{ "/path" | relative_url }} filters
 /// - Keep {% youtube VIDEO_ID %} tags intact (will be processed at runtime)
-/// - Remove section/collection names from tags (AI, Azure, Blogs, Videos, etc.)
+/// - Remove section/collection names from tags ONLY for sections/collections this item belongs to
+///   (e.g., if section_names contains "ai", remove "AI" tag; if collection is "blogs", remove "Blogs" tag)
+/// - Special rule: If "GitHub Copilot" is in tags, also remove "AI" tag
 /// </summary>
 internal sealed class Program
 {
@@ -38,29 +40,34 @@ internal sealed class Program
     };
 
     /// <summary>
-    /// Tags to remove from frontmatter - these are section/collection names that were added
-    /// for Jekyll static filtering but are no longer needed with dynamic .NET queries.
-    /// Case-insensitive matching.
+    /// Reverse mapping: URL slug → display name(s)
+    /// Used to determine which tag names to remove based on section_names.
     /// </summary>
-    private static readonly HashSet<string> _tagsToRemove = new(StringComparer.OrdinalIgnoreCase)
+    private static readonly Dictionary<string, List<string>> _sectionSlugToDisplayNames = new()
     {
-        // Section names (display names and URL slugs)
-        "AI", "Artificial Intelligence",
-        "Azure",
-        "GitHub Copilot",
-        ".NET", "Coding", "dotnet",
-        "DevOps",
-        "Security",
-        "Machine Learning", "ML",
-        "Cloud",
-        "All",
-        // Collection names
-        "News",
-        "Blogs",
-        "Videos",
-        "Community",
-        "Roundups",
-        "Events"
+        ["ai"] = ["AI", "Artificial Intelligence"],
+        ["azure"] = ["Azure"],
+        ["github-copilot"] = ["GitHub Copilot"],
+        ["dotnet"] = [".NET", "dotnet"],
+        ["devops"] = ["DevOps"],
+        ["security"] = ["Security"],
+        ["coding"] = ["Coding"],
+        ["cloud"] = ["Cloud"],
+        ["machine-learning"] = ["Machine Learning", "ML"]
+    };
+
+    /// <summary>
+    /// Collection name → display name(s)
+    /// Used to determine which tag names to remove based on collection.
+    /// </summary>
+    private static readonly Dictionary<string, List<string>> _collectionToDisplayNames = new()
+    {
+        ["news"] = ["News"],
+        ["blogs"] = ["Blogs"],
+        ["videos"] = ["Videos"],
+        ["community"] = ["Community"],
+        ["roundups"] = ["Roundups"],
+        ["events"] = ["Events"]
     };
 
     private static async Task<int> Main(string[] args)
@@ -223,18 +230,50 @@ internal sealed class Program
             changed = true;
         }
 
-        // 3. Remove section/collection names from tags
+        // 3. Remove section/collection names from tags (only for sections/collections this item belongs to)
         if (frontMatter.TryGetValue("tags", out var tagsObj))
         {
             var currentTags = GetListValue(frontMatter, "tags");
+            var sectionNames = GetListValue(frontMatter, "section_names");
+
+            // Build list of tags to remove based on actual section_names and collection
+            var tagsToRemove = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+            // Add section display names for sections this item belongs to
+            foreach (var sectionName in sectionNames)
+            {
+                if (_sectionSlugToDisplayNames.TryGetValue(sectionName, out var displayNames))
+                {
+                    foreach (var displayName in displayNames)
+                    {
+                        tagsToRemove.Add(displayName);
+                    }
+                }
+            }
+
+            // Add collection display names for the collection this item belongs to
+            if (_collectionToDisplayNames.TryGetValue(collection, out var collectionDisplayNames))
+            {
+                foreach (var displayName in collectionDisplayNames)
+                {
+                    tagsToRemove.Add(displayName);
+                }
+            }
+
+            // Special rule: If "GitHub Copilot" is in tags, also remove "AI"
+            if (currentTags.Any(t => t.Equals("GitHub Copilot", StringComparison.OrdinalIgnoreCase)))
+            {
+                tagsToRemove.Add("AI");
+            }
+
             var filteredTags = currentTags
-                .Where(tag => !_tagsToRemove.Contains(tag))
+                .Where(tag => !tagsToRemove.Contains(tag))
                 .ToList();
 
             var removedCount = currentTags.Count - filteredTags.Count;
             if (removedCount > 0)
             {
-                var removedTags = currentTags.Where(tag => _tagsToRemove.Contains(tag)).ToList();
+                var removedTags = currentTags.Where(tag => tagsToRemove.Contains(tag)).ToList();
                 frontMatter["tags"] = filteredTags;
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"  ✓ Removed {removedCount} section/collection tags: {string.Join(", ", removedTags)}");

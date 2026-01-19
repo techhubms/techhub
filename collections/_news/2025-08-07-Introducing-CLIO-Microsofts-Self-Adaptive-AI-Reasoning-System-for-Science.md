@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-07 18:08:54 +00:00
 permalink: /ai/news/Introducing-CLIO-Microsofts-Self-Adaptive-AI-Reasoning-System-for-Science
 tags:
-- AI
 - AI Evaluation
 - AI in Science
 - AI Trustworthiness
@@ -25,7 +24,6 @@ tags:
 - MAI DxO
 - Microsoft Discovery Platform
 - Microsoft Research
-- News
 - OpenAI GPT 4.1
 - Scientific Discovery
 - Self Adaptive AI

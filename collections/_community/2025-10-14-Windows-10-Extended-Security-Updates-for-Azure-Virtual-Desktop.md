@@ -10,16 +10,13 @@ date: 2025-10-14 22:00:00 +00:00
 permalink: /azure/community/Windows-10-Extended-Security-Updates-for-Azure-Virtual-Desktop
 tags:
 - Autopatch
-- Azure
 - Azure Marketplace
 - Azure Virtual Desktop
-- Community
 - Cybersecurity
 - ESU
 - Extended Security Updates
 - Microsoft 365 Apps
 - Operating System Support
-- Security
 - Session Hosts
 - Windows 10
 - Windows 11 Migration

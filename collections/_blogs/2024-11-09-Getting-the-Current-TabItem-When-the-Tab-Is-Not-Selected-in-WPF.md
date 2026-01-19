@@ -9,9 +9,7 @@ feed_url: https://feeds.feedburner.com/rickstrahl
 date: 2024-11-09 09:10:44 +00:00
 permalink: /coding/blogs/Getting-the-Current-TabItem-When-the-Tab-Is-Not-Selected-in-WPF
 tags:
-- Blogs
 - C#
-- Coding
 - Context Menu
 - Event Handling
 - FindAncestor

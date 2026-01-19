@@ -10,18 +10,15 @@ date: 2025-08-12 17:10:52 +00:00
 permalink: /github-copilot/news/GPT-5-Comes-to-GitHub-Copilot-in-Visual-Studio
 tags:
 - Agent Mode
-- AI
 - AI Code Completion
 - AI Development Tools
 - Copilot Business
 - Copilot Chat
 - Copilot Enterprise
-- GitHub Copilot
 - GPT 5
 - IDE Integration
 - Model Deprecation
 - Model Picker
-- News
 - OpenAI
 - Software Engineering Productivity
 - VS

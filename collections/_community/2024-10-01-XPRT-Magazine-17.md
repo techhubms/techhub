@@ -6,16 +6,10 @@ author: Xebia
 viewing_mode: external
 permalink: /github-copilot/community/XPRT-Magazine-17
 tags:
-- AI
 - Automation
-- Azure
 - Cloud Native
-- Coding
-- Community
 - Cost Allocation
-- DevOps
 - Documentation
-- GitHub Copilot
 - GitHub Models
 - Kubernetes
 - LLM
@@ -25,7 +19,6 @@ tags:
 - Platform Engineering
 - Prompty
 - Radius
-- Security
 - Terraform
 section_names:
 - ai

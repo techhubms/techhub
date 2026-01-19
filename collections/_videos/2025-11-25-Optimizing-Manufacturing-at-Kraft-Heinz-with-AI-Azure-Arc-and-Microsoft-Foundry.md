@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-25 12:16:40 +00:00
 permalink: /ai/videos/Optimizing-Manufacturing-at-Kraft-Heinz-with-AI-Azure-Arc-and-Microsoft-Foundry
 tags:
-- AI
 - Autonomous Systems
-- Azure
 - Azure Arc
 - Cloud Integration
 - Connected Worker
@@ -28,7 +26,6 @@ tags:
 - MSIgnite
 - Real Time Recommendations
 - Supply Chain Automation
-- Videos
 section_names:
 - ai
 - azure

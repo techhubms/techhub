@@ -10,15 +10,12 @@ date: 2025-12-08 10:00:00 +00:00
 permalink: /ml/news/Understanding-Billing-for-Anomaly-Detector-in-Microsoft-Fabrics-Real-Time-Intelligence
 tags:
 - Anomaly Detector
-- Azure
 - Billing
 - Capacity Metrics
 - Capacity Units
 - Data Monitoring
 - Eventhouse
 - Microsoft Fabric
-- ML
-- News
 - Operational Analytics
 - Real Time Intelligence
 - Streaming Data

@@ -10,7 +10,6 @@ date: 2025-11-18 16:00:00 +00:00
 permalink: /ai/news/AI-Driven-Security-Agents-Now-in-Microsoft-365-E5-Security-Copilot-Integration-and-Expansion
 tags:
 - Adaptive Agents
-- AI
 - AI Security Agents
 - Conditional Access
 - Data Security
@@ -21,9 +20,7 @@ tags:
 - Microsoft Intune
 - Microsoft Purview
 - Microsoft Security Copilot
-- News
 - Partner Built Agents
-- Security
 - Security Automation
 - Security Operations
 - Threat Intelligence

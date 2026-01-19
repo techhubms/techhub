@@ -10,15 +10,11 @@ date: 2025-08-04 11:47:42 +00:00
 permalink: /coding/community/Improving-Performance-of-a-C-Console-App-Processing-Azure-Service-Bus-Deadletter-Queues
 tags:
 - Async Programming
-- Azure
 - Azure Service Bus
 - Azure Storage
 - C#
-- Coding
-- Community
 - Console App
 - Deadletter Queue
-- DevOps
 - DevOps Pipeline
 - Message Processing
 - Performance

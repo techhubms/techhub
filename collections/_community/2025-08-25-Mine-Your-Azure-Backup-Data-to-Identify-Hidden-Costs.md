@@ -9,13 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-25 19:13:57 +00:00
 permalink: /azure/community/Mine-Your-Azure-Backup-Data-to-Identify-Hidden-Costs
 tags:
-- Azure
 - Azure Backup
 - Backup Automation
 - Business Continuity Center
 - Cloud Cost Optimization
 - Cloud Operations
-- Community
 - Data Analysis
 - Power BI
 - PowerShell

@@ -9,14 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-13 20:33:42 +00:00
 permalink: /ai/community/Building-Resilient-AI-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework
 tags:
-- AI
 - AI Agents
-- Azure
 - Azure Durable Functions
 - Azure Functions
 - C#
-- Coding
-- Community
 - Distributed Systems
 - Durable Task Extension
 - Human in The Loop

@@ -10,7 +10,6 @@ date: 2025-06-02 06:45:23 +00:00
 permalink: /ai/videos/Agent-Concurrent-Orchestration-in-Semantic-Kernel
 tags:
 - Agent Aggregation
-- AI
 - AI Agent Orchestration
 - AI Agents
 - AI Demo
@@ -20,7 +19,6 @@ tags:
 - AIinTamil
 - AIOrchestration
 - BrainstormingAI
-- Coding
 - Concurrent Pattern
 - ConcurrentPattern
 - DotNetAI
@@ -31,7 +29,6 @@ tags:
 - OpenAISolutions
 - Parallel Processing
 - Semantic Kernel
-- Videos
 - Voting Systems
 section_names:
 - ai

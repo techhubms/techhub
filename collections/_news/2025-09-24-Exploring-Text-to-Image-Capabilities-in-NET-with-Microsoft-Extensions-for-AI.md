@@ -12,11 +12,9 @@ tags:
 - .NET
 - Abstractions
 - Agent Framework
-- AI
 - API
 - Azure AI Foundry
 - C#
-- Coding
 - Copilot Studio
 - Developer Tools
 - Extensions
@@ -27,7 +25,6 @@ tags:
 - MEAI
 - Microsoft.Extensions.AI
 - Multimodal AI
-- News
 - OpenAI
 - SDK
 - Text To Image

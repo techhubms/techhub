@@ -9,15 +9,12 @@ feed_url: https://devops.com/feed/
 date: 2025-10-15 14:01:27 +00:00
 permalink: /ai/blogs/Survey-Reveals-Rapid-AI-Adoption-to-Strengthen-DevSecOps-Practices
 tags:
-- AI
 - AI Adoption
 - Application Security
 - Audit
 - Automation
-- Blogs
 - CDN
 - Compliance
-- DevOps
 - DevSecOps
 - False Positives
 - Fastly
@@ -25,7 +22,6 @@ tags:
 - Logging
 - Remediation
 - Sandboxing
-- Security
 - Security Tooling
 - Social Facebook
 - Social LinkedIn

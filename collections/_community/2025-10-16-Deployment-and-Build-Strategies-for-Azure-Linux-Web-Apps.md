@@ -9,16 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-16 12:39:45 +00:00
 permalink: /coding/community/Deployment-and-Build-Strategies-for-Azure-Linux-Web-Apps
 tags:
-- Azure
 - Azure App Service
 - Azure DevOps
 - Azure Web Apps
 - Build Pipeline
 - CI/CD
-- Coding
-- Community
 - Deployment Automation
-- DevOps
 - Environment Variables
 - Flask
 - Linux Web Apps

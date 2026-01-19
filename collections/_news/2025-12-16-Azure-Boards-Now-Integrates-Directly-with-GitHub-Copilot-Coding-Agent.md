@@ -10,22 +10,17 @@ date: 2025-12-16 13:17:08 +00:00
 permalink: /github-copilot/news/Azure-Boards-Now-Integrates-Directly-with-GitHub-Copilot-Coding-Agent
 tags:
 - Agentic AI
-- AI
-- Azure
 - Azure & Cloud
 - Azure Boards
 - Azure DevOps
 - Branch Management
 - Copilot Coding Agent
 - Custom Agents
-- DevOps
 - Enterprise Integration
 - Feature Rollout
-- GitHub Copilot
 - Kanban Board
 - MCP Server
 - Model Selection
-- News
 - Pull Request Workflow
 - Repository Integration
 - REST API

@@ -15,7 +15,6 @@ tags:
 - Billing
 - BillingService
 - C#
-- Coding
 - Conditional Compilation
 - Cross Platform
 - Dependency Injection
@@ -26,7 +25,6 @@ tags:
 - MAUI
 - Microsoft Store
 - MVVM
-- News
 - Sample Code
 - StoreKit
 - StoreKit 1

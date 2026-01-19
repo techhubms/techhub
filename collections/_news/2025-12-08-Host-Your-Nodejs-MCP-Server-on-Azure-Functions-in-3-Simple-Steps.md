@@ -9,19 +9,15 @@ feed_url: https://devblogs.microsoft.com/feed
 date: 2025-12-08 18:00:54 +00:00
 permalink: /ai/news/Host-Your-Nodejs-MCP-Server-on-Azure-Functions-in-3-Simple-Steps
 tags:
-- AI
 - Anthropic MCP SDK
-- Azure
 - Azure Developer CLI
 - Azure Functions
-- Coding
 - Custom Handler
 - Express
 - HTTP Streaming
 - IaC
 - LangChain.js
 - MCP
-- News
 - Node.js
 - Serverless
 - TypeScript

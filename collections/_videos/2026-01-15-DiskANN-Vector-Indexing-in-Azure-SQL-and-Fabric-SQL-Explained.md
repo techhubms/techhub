@@ -9,8 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2026-01-15 17:00:42 +00:00
 permalink: /ai/videos/DiskANN-Vector-Indexing-in-Azure-SQL-and-Fabric-SQL-Explained
 tags:
-- AI
-- Azure
 - Azure SQL
 - Cloud Computing
 - Cloud Database
@@ -22,17 +20,14 @@ tags:
 - DiskANN
 - Fabric SQL
 - Ignite
-- Machine Learning
 - Microsoft
 - Microsoft SQL Engine
-- ML
 - Public Preview
 - SQL Server
 - Tech
 - Technology
 - Vector Indexing
 - Vector Search
-- Videos
 section_names:
 - ai
 - azure

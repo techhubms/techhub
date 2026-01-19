@@ -10,18 +10,13 @@ date: 2025-07-02 17:30:59 +00:00
 permalink: /github-copilot/news/Introducing-the-Awesome-GitHub-Copilot-Customizations-Repo
 tags:
 - Agent Mode
-- AI
 - Code Review
-- Coding
 - Community Driven
 - Custom Chat Modes
 - Custom Instructions
 - Developer Productivity
-- DevOps
-- GitHub Copilot
 - MCP Server
 - Microsoft
-- News
 - Next.js
 - PostgreSQL
 - Prompt Engineering

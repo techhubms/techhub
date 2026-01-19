@@ -22,9 +22,7 @@ tags:
 - Passkey Integration
 - PQC Certificates
 - Secureyourdata
-- Security
 - Sysmon
-- Videos
 - Windows 11
 - Windows 365
 - Windows Hello

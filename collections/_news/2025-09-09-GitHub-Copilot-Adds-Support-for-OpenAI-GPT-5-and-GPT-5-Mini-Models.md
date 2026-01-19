@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-09 20:02:16 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Adds-Support-for-OpenAI-GPT-5-and-GPT-5-Mini-Models
 tags:
-- AI
 - AI Models
 - Copilot
 - Copilot Business
@@ -17,13 +16,11 @@ tags:
 - Copilot Enterprise
 - Developer Tools
 - Eclipse
-- GitHub Copilot
 - GPT 5
 - GPT 5 Mini
 - IDEs
 - JetBrains IDEs
 - Model Picker
-- News
 - OpenAI
 - VS
 - VS Code

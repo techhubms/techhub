@@ -10,7 +10,6 @@ date: 2025-09-03 09:00:00 +00:00
 permalink: /ml/news/Accelerating-Data-Ingestion-from-SQL-to-Fabric-with-Fast-Copy-in-Dataflow
 tags:
 - Analytics
-- Azure
 - Bulk Loading
 - Data Ingestion
 - Data Integration
@@ -20,8 +19,6 @@ tags:
 - ETL
 - Fast Copy
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Parallel Processing
 - Performance Optimization

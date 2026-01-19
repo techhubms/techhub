@@ -9,8 +9,6 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-07-18 00:00:00 +00:00
 permalink: /github-copilot/blogs/Use-GitHub-Copilot-Chat-to-Plan-Before-You-Code
 tags:
-- AI
-- Blogs
 - Code Design
 - Code Outline
 - Coding Workflow
@@ -18,7 +16,6 @@ tags:
 - Developer Productivity
 - Developer Tools
 - Edge Cases
-- GitHub Copilot
 - JavaScript
 - Logic Structure
 - Pair Programming

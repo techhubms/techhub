@@ -9,20 +9,16 @@ feed_url: https://devclass.com/feed/
 date: 2025-07-14 16:58:30 +00:00
 permalink: /github-copilot/blogs/Microsoft-Expands-Copilot-Features-in-Visual-Studio-Code-1102
 tags:
-- AI
 - AI Agent Safety
 - AI Bloat
 - AI Coding Tools
 - AI/ML
-- Blogs
 - CLI Tools
-- Coding
 - Copilot
 - Copilot Chat
 - Custom Instructions
 - Developer Experience
 - Development
-- GitHub Copilot
 - IDE Integrations
 - LLM Evaluation
 - MCP

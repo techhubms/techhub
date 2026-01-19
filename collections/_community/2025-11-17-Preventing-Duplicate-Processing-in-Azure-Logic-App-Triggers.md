@@ -9,12 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-17 08:58:53 +00:00
 permalink: /azure/community/Preventing-Duplicate-Processing-in-Azure-Logic-App-Triggers
 tags:
-- Azure
 - Azure Logic Apps
 - Clienttrackingid
-- Community
 - Dataverse
-- DevOps
 - Duplicate Detection
 - Implementation Guide
 - Integration Services

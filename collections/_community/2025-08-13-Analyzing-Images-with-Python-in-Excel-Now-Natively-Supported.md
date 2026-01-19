@@ -9,8 +9,6 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 15:45:03 +00:00
 permalink: /coding/community/Analyzing-Images-with-Python-in-Excel-Now-Natively-Supported
 tags:
-- Coding
-- Community
 - Computer Vision
 - Data Science
 - Excel Data Analysis

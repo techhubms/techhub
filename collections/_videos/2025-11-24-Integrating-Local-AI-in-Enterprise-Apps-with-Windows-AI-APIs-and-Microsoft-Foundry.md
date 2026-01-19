@@ -10,9 +10,7 @@ date: 2025-11-24 12:06:23 +00:00
 permalink: /ai/videos/Integrating-Local-AI-in-Enterprise-Apps-with-Windows-AI-APIs-and-Microsoft-Foundry
 tags:
 - Administrative Controls
-- AI
 - App Content Search
-- Coding
 - Copilot+ PCs
 - Enterprise Apps
 - Image Understanding
@@ -26,7 +24,6 @@ tags:
 - Retrieval Augmented Generation
 - ScalewithcloudandAIendpoints
 - Summarization
-- Videos
 - Vision Models
 - Windows AI APIs
 section_names:

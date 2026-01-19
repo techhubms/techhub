@@ -10,21 +10,14 @@ date: 2025-07-01 22:00:46 +00:00
 permalink: /github-copilot/news/Join-Us-for-MCP-Dev-Days-July-29-30-Deep-Dive-into-the-Model-Context-Protocol
 tags:
 - Agent Experiences
-- AI
 - AI Models
 - API Management
-- Azure
-- Coding
 - Developer Events
 - Developer Tools
-- DevOps
-- GitHub Copilot
 - MCP
 - MCP Dev Days
 - Microsoft Developer
-- News
 - Prompt Driven Development
-- Security
 - Security Best Practices
 - VS
 - VS Code

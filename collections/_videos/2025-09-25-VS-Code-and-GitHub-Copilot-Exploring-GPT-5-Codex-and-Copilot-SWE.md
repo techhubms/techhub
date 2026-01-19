@@ -9,20 +9,17 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-09-25 17:48:26 +00:00
 permalink: /github-copilot/videos/VS-Code-and-GitHub-Copilot-Exploring-GPT-5-Codex-and-Copilot-SWE
 tags:
-- AI
 - AI Coding Assistant
 - AI Integration
 - AI Models
 - Code
 - Code Completion
 - Codex
-- Coding
 - Copilot SWE
 - Demo
 - Developer
 - Developer Community
 - Developer Tools
-- GitHub Copilot
 - Gpt
 - GPT 5 Codex
 - Gpt5
@@ -30,7 +27,6 @@ tags:
 - Microsoft
 - Pierce Boggan
 - Software Developer
-- Videos
 - VS Code
 section_names:
 - ai

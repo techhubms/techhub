@@ -9,19 +9,16 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-25 18:32:35 +00:00
 permalink: /ai/community/Azure-AI-Landing-Zone-Enterprise-Scale-Secure-and-Governed-AI-Deployment-Architecture
 tags:
-- AI
 - AI Landing Zone
 - API Management
 - App Service
 - Application Gateway
 - Application Insights
-- Azure
 - Azure AI Search
 - Azure Architecture
 - Azure Cognitive Services
 - Azure Key Vault
 - Azure OpenAI
-- Community
 - Container Apps
 - Cosmos DB
 - Defender For Cloud
@@ -33,7 +30,6 @@ tags:
 - Network Security Groups
 - Power BI
 - Private Endpoints
-- Security
 - Virtual Network Peering
 - Web Application Firewall
 - Zero Trust

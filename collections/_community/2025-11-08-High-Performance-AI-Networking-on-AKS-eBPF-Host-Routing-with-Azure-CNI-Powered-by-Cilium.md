@@ -10,15 +10,11 @@ date: 2025-11-08 00:45:49 +00:00
 permalink: /ai/community/High-Performance-AI-Networking-on-AKS-eBPF-Host-Routing-with-Azure-CNI-Powered-by-Cilium
 tags:
 - Advanced Container Networking Services
-- AI
 - AKS
-- Azure
 - Azure CNI
 - BpfVeth
 - Cilium
-- Community
 - Container Networking
-- DevOps
 - Ebpf
 - Kubernetes 1.33
 - Kubernetes Networking
@@ -26,7 +22,6 @@ tags:
 - Network Profile
 - Performance Optimization
 - Pod Throughput
-- Security
 - Security Safeguards
 - TCP Benchmarking
 - Ubuntu 24.04

@@ -9,16 +9,13 @@ feed_url: https://devops.com/feed/
 date: 2025-10-02 17:17:53 +00:00
 permalink: /ai/blogs/Shortcut-Introduces-Korey-AI-Agent-for-Software-Project-Management
 tags:
-- AI
 - AI Agent
 - AI Agents For Software Development
 - AI in Project Tracking
 - AI Powered Product Management
 - AI Project Management
 - Automation
-- Blogs
 - Business Of DevOps
-- DevOps
 - DevOps Automation
 - Engineering Productivity
 - Engineering Workflows

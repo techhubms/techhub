@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-18 16:31:52 +00:00
 permalink: /ai/news/Building-the-Worlds-Most-Powerful-AI-Datacenter-in-Wisconsin
 tags:
-- AI
 - AI Datacenter
 - AI Training
-- Azure
 - Broadband Access
 - Closed Loop Cooling
 - Company News
@@ -23,7 +21,6 @@ tags:
 - Green Technology
 - Innovation
 - Microsoft
-- News
 - NVIDIA GPUs
 - Partnerships
 - Solar Energy

@@ -11,17 +11,14 @@ permalink: /azure/community/Implementing-Zero-Trust-Network-Security-for-Azure-W
 tags:
 - Access Restriction
 - App Service
-- Azure
 - Azure Web Apps
 - Cloud Security
-- Community
 - Enterprise Security
 - Network Isolation
 - Network Security
 - Private DNS
 - Private Endpoint
 - Resource Group
-- Security
 - Virtual Network
 - Zero Trust
 - Zero Trust Architecture

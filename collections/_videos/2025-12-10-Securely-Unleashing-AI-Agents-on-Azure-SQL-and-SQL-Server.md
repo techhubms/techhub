@@ -11,10 +11,8 @@ permalink: /ai/videos/Securely-Unleashing-AI-Agents-on-Azure-SQL-and-SQL-Server
 tags:
 - .NET
 - Agent Errors
-- AI
 - AI Agents
 - Autonomous Systems
-- Azure
 - Azure SQL Database
 - Compliance
 - Custom Code
@@ -22,13 +20,10 @@ tags:
 - Database Access
 - Enterprise Data
 - Least Privilege
-- ML
 - Query Optimization
 - Schema Understanding
-- Security
 - Security Boundaries
 - SQL Server
-- Videos
 section_names:
 - ai
 - azure

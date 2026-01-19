@@ -10,10 +10,8 @@ date: 2025-09-25 17:10:09 +00:00
 permalink: /azure/community/Microsoft-Azure-Introduces-Azure-Integrated-HSM-Secure-Hardware-Backed-Cryptography-for-Virtual-Machines
 tags:
 - AMD V7 Series
-- Azure
 - Azure Integrated HSM
 - Azure Key Vault
-- Community
 - Crypto Accelerator
 - Cryptography
 - Encryption
@@ -21,7 +19,6 @@ tags:
 - Hardware Security Module
 - Key Management
 - Secure Compute
-- Security
 - Trusted Launch VMs
 - Windows Virtual Machines
 section_names:

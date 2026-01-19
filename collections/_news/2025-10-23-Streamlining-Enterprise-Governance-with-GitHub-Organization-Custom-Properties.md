@@ -11,14 +11,12 @@ permalink: /devops/news/Streamlining-Enterprise-Governance-with-GitHub-Organizat
 tags:
 - Configuration
 - Custom Properties
-- DevOps
 - Enterprise Administration
 - Enterprise Management Tools
 - GitHub
 - Governance
 - Improvement
 - Metadata
-- News
 - Organization Management
 - Platform Governance
 - Platform Management

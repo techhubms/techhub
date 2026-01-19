@@ -12,12 +12,9 @@ tags:
 - API Gateway
 - APIM
 - Asynchronous Systems
-- Azure
 - Azure API Management
 - Azure Functions
 - Azure Service Bus
-- Community
-- DevOps
 - Enterprise Integration
 - Event Driven Architecture
 - Event Processing
@@ -30,7 +27,6 @@ tags:
 - Policy
 - RBAC
 - Secure API
-- Security
 - Service Bus
 - Throttling
 section_names:

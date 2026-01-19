@@ -9,16 +9,13 @@ date: 2025-07-10 18:25:27 +00:00
 permalink: /github-copilot/community/VS-Code-June-2025-version-1102
 viewing_mode: external
 tags:
-- AI
 - Chat
-- Community
 - Copilot Coding Agent
 - Custom Instructions
 - Custom Modes
 - Edit
 - Editor Features
 - Generate
-- GitHub Copilot
 - GitHub Copilot Chat
 - Mcp
 - MCP Support

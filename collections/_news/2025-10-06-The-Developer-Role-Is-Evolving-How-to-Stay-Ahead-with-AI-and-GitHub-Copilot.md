@@ -9,11 +9,9 @@ feed_url: https://github.blog/feed/
 date: 2025-10-06 20:12:49 +00:00
 permalink: /github-copilot/news/The-Developer-Role-Is-Evolving-How-to-Stay-Ahead-with-AI-and-GitHub-Copilot
 tags:
-- AI
 - AI & ML
 - AI Development
 - AI Productivity Tools
-- Coding
 - Collaborative Development
 - Company News
 - Continuous Learning
@@ -21,12 +19,10 @@ tags:
 - Developer Collaboration
 - Developer Orchestration
 - Developer Skills
-- GitHub Copilot
 - GitHub Copilot Code Review
 - GitHub Copilot Spaces
 - GitHub Universe
 - Machine Learning
-- News
 - News & Insights
 - Open Source
 - Python

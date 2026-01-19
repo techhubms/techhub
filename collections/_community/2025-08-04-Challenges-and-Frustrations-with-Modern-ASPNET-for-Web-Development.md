@@ -14,8 +14,6 @@ tags:
 - Blazor
 - Bun
 - C#
-- Coding
-- Community
 - Deno
 - JavaScript Frameworks
 - Node.js

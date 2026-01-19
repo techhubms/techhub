@@ -10,16 +10,13 @@ permalink: /github-copilot/news/GitHub-Copilot-in-Eclipsesmarter-faster-and-more
 viewing_mode: external
 page: news
 tags:
-- AI
 - AI Assisted Coding
 - Commit Message Generation
 - Compatibility
 - Context Understanding
 - Development Tools
 - Eclipse
-- GitHub Copilot
 - IDE
-- News
 - Productivity
 - Software Updates
 section_names:

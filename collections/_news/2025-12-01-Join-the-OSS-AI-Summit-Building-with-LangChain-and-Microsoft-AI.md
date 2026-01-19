@@ -10,9 +10,7 @@ date: 2025-12-01 18:00:07 +00:00
 permalink: /ai/news/Join-the-OSS-AI-Summit-Building-with-LangChain-and-Microsoft-AI
 tags:
 - Agent Orchestration
-- AI
 - AI Agents
-- Azure
 - Azure Container Apps
 - Azure Functions
 - Azure OpenAI
@@ -25,7 +23,6 @@ tags:
 - LangChain.js
 - MCP
 - Microsoft Foundry
-- News
 - OpenTelemetry
 - Oss
 - OSS AI Summit

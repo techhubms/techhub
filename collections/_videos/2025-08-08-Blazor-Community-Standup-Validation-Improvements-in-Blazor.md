@@ -15,7 +15,6 @@ tags:
 - Blazor
 - Blazor Community Standup
 - Code Demos
-- Coding
 - Complex Types
 - Demo
 - Developer
@@ -27,7 +26,6 @@ tags:
 - Software Developer
 - Software Development
 - Validation
-- Videos
 section_names:
 - coding
 ---

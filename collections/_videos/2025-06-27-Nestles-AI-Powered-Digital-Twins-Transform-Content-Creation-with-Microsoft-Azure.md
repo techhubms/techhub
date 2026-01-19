@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q
 date: 2025-06-27 14:00:32 +00:00
 permalink: /ai/videos/Nestles-AI-Powered-Digital-Twins-Transform-Content-Creation-with-Microsoft-Azure
 tags:
-- AI
 - AI Powered Digital Twins
-- Azure
 - Consumer Goods
 - Digital Content Creation
 - Digital Media
@@ -27,7 +25,6 @@ tags:
 - Nestlé
 - NVIDIA Omniverse
 - Product Visualization
-- Videos
 section_names:
 - ai
 - azure

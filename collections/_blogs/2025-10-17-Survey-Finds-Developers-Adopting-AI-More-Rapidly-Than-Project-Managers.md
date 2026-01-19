@@ -9,17 +9,14 @@ feed_url: https://devops.com/feed/
 date: 2025-10-17 12:45:40 +00:00
 permalink: /ai/blogs/Survey-Finds-Developers-Adopting-AI-More-Rapidly-Than-Project-Managers
 tags:
-- AI
 - AI Adoption
 - AI Challenges
 - AI Prototyping
 - AI Skills
 - BairesDev
-- Blogs
 - Career Opportunities
 - Coding Automation
 - Developer Productivity
-- DevOps
 - Machine Learning
 - Project Management
 - Social Facebook

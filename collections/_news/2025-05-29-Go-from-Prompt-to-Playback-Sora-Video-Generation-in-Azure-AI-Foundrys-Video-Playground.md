@@ -9,17 +9,14 @@ feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-05-29 20:38:42 +00:00
 permalink: /ai/news/Go-from-Prompt-to-Playback-Sora-Video-Generation-in-Azure-AI-Foundrys-Video-Playground
 tags:
-- AI
 - AI Development
 - API Integration
-- Azure
 - Azure AI Content Safety
 - Azure AI Foundry
 - Azure OpenAI
 - Developer Tools
 - Model Prototyping
 - Multi Lingual Code Samples
-- News
 - Prompt Engineering
 - Sora
 - Video Generation

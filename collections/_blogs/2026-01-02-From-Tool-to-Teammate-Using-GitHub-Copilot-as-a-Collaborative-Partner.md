@@ -9,16 +9,13 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2026-01-02 00:00:00 +00:00
 permalink: /github-copilot/blogs/From-Tool-to-Teammate-Using-GitHub-Copilot-as-a-Collaborative-Partner
 tags:
-- AI
 - AI Assisted Development
-- Blogs
 - Code Review
 - Coding Practices
 - Collaboration
 - Developer Productivity
 - Developer Tools
 - Feedback Loops
-- GitHub Copilot
 - Pair Programming
 - Programming Workflow
 - Software Engineering

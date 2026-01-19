@@ -7,29 +7,21 @@ date: 2025-09-08 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
-- AI
 - AI Agents
-- Azure
 - Azure AI
 - Blazor
 - CI/CD
 - Cloud Infrastructure
 - Code Review
-- Coding
 - Compliance
 - Data Analytics
 - Developer Tooling
-- DevOps
 - Enterprise Security
-- GitHub Copilot
 - Identity Management
 - Kubernetes
 - MCP
 - Microsoft Fabric
-- ML
 - OpenAI
-- Roundups
-- Security
 - VS Code
 - Workflow Automation
 section_names:

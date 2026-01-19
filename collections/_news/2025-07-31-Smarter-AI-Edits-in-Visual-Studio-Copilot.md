@@ -10,20 +10,16 @@ date: 2025-07-31 12:00:42 +00:00
 permalink: /github-copilot/news/Smarter-AI-Edits-in-Visual-Studio-Copilot
 tags:
 - Agent Mode
-- AI
 - AI Agents
 - AI Generated Edits
 - AI Integration
 - Bug Fixing
 - Code Assistant
 - Code Quality
-- Coding
 - Context Window
 - Copilot
 - Developer Tools
-- GitHub Copilot
 - GitHub Copilot Chat
-- News
 - Refactoring
 - Smart Diff
 - Speculative Decoding

@@ -10,21 +10,16 @@ date: 2025-10-30 12:00:36 +00:00
 permalink: /github-copilot/news/Visual-Studio-October-2025-Update-Copilot-Memories-Custom-Instructions-and-Azure-Foundry-Integration
 tags:
 - Agentic Workflows
-- AI
 - AI Integration
-- Azure
 - Azure Foundry
 - Chat Management
 - Claude Haiku 4.5
 - Claude Sonnet 4.5
-- Coding
 - Coding Standards
 - Copilot Memories
 - Custom Instructions
 - Developer Tools
-- GitHub Copilot
 - Instruction Files
-- News
 - Planning Feature
 - Project Aware AI
 - V17.14

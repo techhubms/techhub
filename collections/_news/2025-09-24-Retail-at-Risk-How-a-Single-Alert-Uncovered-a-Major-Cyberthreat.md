@@ -10,7 +10,6 @@ date: 2025-09-24 17:00:00 +00:00
 permalink: /azure/news/Retail-at-Risk-How-a-Single-Alert-Uncovered-a-Major-Cyberthreat
 tags:
 - Attack Detection
-- Azure
 - Azure Virtual Desktop
 - Cloud Security
 - Credential Security
@@ -24,10 +23,8 @@ tags:
 - Microsoft Entra ID
 - Microsoft Incident Response
 - Microsoft Sentinel
-- News
 - Remote Desktop Protocol
 - Retail Security
-- Security
 - SharePoint Vulnerabilities
 - Threat Intelligence
 - Zero Trust

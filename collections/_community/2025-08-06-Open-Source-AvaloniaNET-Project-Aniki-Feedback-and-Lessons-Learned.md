@@ -16,8 +16,6 @@ tags:
 - Branding
 - C#
 - Code Quality
-- Coding
-- Community
 - Community Feedback
 - Cross Platform
 - Encryption

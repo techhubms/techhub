@@ -11,17 +11,14 @@ permalink: /azure/community/Conditional-Access-Policy-Limitation-Windows-365-Por
 tags:
 - Access Control
 - Application ID
-- Azure
 - Azure Active Directory
 - Azure Virtual Desktop
-- Community
 - Conditional Access
 - Entra ID
 - External Users
 - MFA
 - Microsoft 365
 - Resource ID
-- Security
 - Windows 365
 - Windows App
 section_names:

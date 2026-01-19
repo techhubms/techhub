@@ -9,18 +9,14 @@ feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-02-25 01:45:58 +00:00
 permalink: /github-copilot/news/Claude-37-Now-Integrated-in-GitHub-Copilot-for-Visual-Studio-2022
 tags:
-- AI
 - AI Coding Assistant
 - Anthropic
 - Claude 3.7
-- Coding
 - Copilot
 - Copilot Chat
 - Copilot Integration
 - Developer Tools
-- GitHub Copilot
 - Model Picker
-- News
 - Sonnet Model
 - VS
 section_names:

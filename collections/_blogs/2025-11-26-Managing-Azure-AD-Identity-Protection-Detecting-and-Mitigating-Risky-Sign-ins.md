@@ -10,9 +10,7 @@ date: 2025-11-26 11:26:47 +00:00
 permalink: /azure/blogs/Managing-Azure-AD-Identity-Protection-Detecting-and-Mitigating-Risky-Sign-ins
 tags:
 - Automation
-- Azure
 - Azure AD Identity Protection
-- Blogs
 - Cloud Security
 - Conditional Access
 - Identity Protection
@@ -21,7 +19,6 @@ tags:
 - Microsoft Entra ID
 - Multi Factor Authentication
 - Risky Sign Ins
-- Security
 - SIEM Integration
 - Threat Detection
 - User Education

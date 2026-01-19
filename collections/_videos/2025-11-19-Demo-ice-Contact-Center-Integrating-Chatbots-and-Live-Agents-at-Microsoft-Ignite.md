@@ -11,7 +11,6 @@ permalink: /ai/videos/Demo-ice-Contact-Center-Integrating-Chatbots-and-Live-Agen
 tags:
 - Agent Handoff
 - Agenticbusinessapplications
-- AI
 - AI Services
 - Chatbot
 - Customer Communication
@@ -26,7 +25,6 @@ tags:
 - Post Conversation Analytics
 - SMS Channel
 - Translation
-- Videos
 - Voice Channel
 section_names:
 - ai

@@ -9,20 +9,15 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-19 19:13:15 +00:00
 permalink: /ai/community/Azure-CLI-and-Azure-PowerShell-Quality-Security-and-AI-Updates-Announced-at-Ignite-2025
 tags:
-- AI
 - ArizeAI Extension
 - ARM API
 - Automation
-- Azure
 - Azure CLI
 - Azure PowerShell
 - Azure Services
 - Bicep Templates
 - Claims Challenge
 - Cloud Endpoint Discovery
-- Coding
-- Community
-- DevOps
 - Fabric Module
 - IaC
 - Identity Management
@@ -32,7 +27,6 @@ tags:
 - Paginate Parameter
 - Python 3.13
 - Release Notes
-- Security
 - Security Vulnerabilities
 - What If Analysis
 section_names:

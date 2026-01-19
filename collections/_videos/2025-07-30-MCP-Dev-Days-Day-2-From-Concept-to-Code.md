@@ -9,13 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-07-30 22:20:09 +00:00
 permalink: /ai/videos/MCP-Dev-Days-Day-2-From-Concept-to-Code
 tags:
-- AI
 - AI Agents
 - API Management
-- Azure
 - Azure Functions
 - Cloud Computing
-- Coding
 - Dev
 - Development
 - Foundry Agent Service
@@ -24,10 +21,8 @@ tags:
 - Production Deployment
 - Prompt Driven Development
 - Scalable Architectures
-- Security
 - Tech
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

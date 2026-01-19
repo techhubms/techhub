@@ -9,8 +9,6 @@ feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-03-21 00:00:00 +00:00
 permalink: /github-copilot/blogs/Ask-Better-Questions-Get-Better-Code-with-GitHub-Copilot
 tags:
-- AI
-- Blogs
 - Clear Communication
 - Code Review
 - Code Suggestions
@@ -18,7 +16,6 @@ tags:
 - Copilot Chat
 - Developer Productivity
 - Efficient Coding
-- GitHub Copilot
 - Prompt Engineering
 - Software Development
 section_names:

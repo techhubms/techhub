@@ -10,12 +10,9 @@ date: 2025-11-25 03:45:25 +00:00
 permalink: /coding/community/General-Availability-of-XML-Parse-and-Compose-Actions-for-Azure-Logic-Apps
 tags:
 - Array Input
-- Azure
 - Azure Logic Apps
 - BizTalk Migration
 - Cloud Workflow
-- Coding
-- Community
 - Compose XML
 - Content Type
 - Data Integration

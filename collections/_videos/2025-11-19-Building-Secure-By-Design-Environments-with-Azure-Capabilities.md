@@ -10,7 +10,6 @@ date: 2025-11-19 08:05:37 +00:00
 permalink: /azure/videos/Building-Secure-By-Design-Environments-with-Azure-Capabilities
 tags:
 - AWS Security Hub
-- Azure
 - Azure Native Security
 - Azure Policies
 - Azure Security
@@ -25,10 +24,8 @@ tags:
 - MSIgnite
 - Preventive Policies
 - ProtectcloudAIplatformandapps
-- Security
 - Security By Design
 - Security Standards
-- Videos
 section_names:
 - azure
 - security

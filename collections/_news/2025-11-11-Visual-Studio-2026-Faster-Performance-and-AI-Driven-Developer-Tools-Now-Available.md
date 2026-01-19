@@ -10,17 +10,14 @@ date: 2025-11-11 16:08:47 +00:00
 permalink: /ai/news/Visual-Studio-2026-Faster-Performance-and-AI-Driven-Developer-Tools-Now-Available
 tags:
 - .NET 10
-- AI
 - AI Native IDE
 - Automatic Updates
 - C#
 - C++
-- Coding
 - Developer Productivity
 - Extensions
 - IDE
 - Insiders Channel
-- News
 - Performance Improvement
 - Profiler Agent
 - User Experience

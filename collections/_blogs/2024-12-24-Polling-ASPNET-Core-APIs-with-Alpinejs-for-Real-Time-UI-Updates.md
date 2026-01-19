@@ -12,9 +12,7 @@ tags:
 - Alpine.js
 - API Integration
 - ASP.NET Core
-- Blogs
 - C#
-- Coding
 - Front End Frameworks
 - JavaScript
 - Minimal JavaScript

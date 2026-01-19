@@ -11,17 +11,12 @@ permalink: /github-copilot/news/Whats-New-in-Visual-Studio-Code-September-2024-v
 tags:
 - Accessibility
 - Account Management
-- AI
 - Code Completion
-- Coding
 - Copilot Chat
 - Debugging
-- DevOps
 - Experimental Features
 - Extension Management
-- GitHub Copilot
 - GPT 4o
-- News
 - Notebook Editor
 - OpenAI Integration
 - Python

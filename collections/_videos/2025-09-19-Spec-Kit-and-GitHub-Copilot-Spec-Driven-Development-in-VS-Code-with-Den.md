@@ -9,19 +9,15 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-09-19 14:37:29 +00:00
 permalink: /github-copilot/videos/Spec-Kit-and-GitHub-Copilot-Spec-Driven-Development-in-VS-Code-with-Den
 tags:
-- AI
 - AI Tools
 - Code Generation
-- Coding
 - Den Delimarsky
-- GitHub Copilot
 - Live Demo
 - Open Source Toolkit
 - Software Specifications
 - Spec Driven Development
 - Spec Kit
 - Speckit
-- Videos
 - VS Code
 section_names:
 - ai

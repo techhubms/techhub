@@ -9,22 +9,17 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-16 09:40:33 +00:00
 permalink: /github-copilot/news/General-Availability-of-Code-Scanning-Alert-Assignees-in-GitHub
 tags:
-- AI
 - Alert Assignment
 - Alert Notifications
 - Application Security
 - Code Scanning
 - Copilot Autofix
-- DevOps
 - DevOps Workflows
 - GitHub Advanced Security
 - GitHub Code Security
-- GitHub Copilot
 - GitHub Enterprise Server
-- News
 - Repository Management
 - REST API
-- Security
 - Security Automation
 - Security Workflows
 - Vulnerability Remediation

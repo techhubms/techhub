@@ -10,17 +10,13 @@ date: 2025-11-25 15:37:51 +00:00
 permalink: /github-copilot/videos/Inside-Microsofts-AI-Transformation-Across-the-Software-Lifecycle
 tags:
 - Agentic DevOps
-- AI
 - AI Powered Tools
 - Automation
-- Azure
 - Azure AI
 - Cloud Developer Infrastructure
 - Code Alignment
-- DevOps
 - DevOps Transformation
 - Engineering Standards
-- GitHub Copilot
 - InnovatewithAzureAIappsandagents
 - Microsoft Foundry
 - Microsoft Ignite
@@ -29,7 +25,6 @@ tags:
 - Pipeline Templates
 - Software Engineering
 - Technical Debt
-- Videos
 section_names:
 - ai
 - azure

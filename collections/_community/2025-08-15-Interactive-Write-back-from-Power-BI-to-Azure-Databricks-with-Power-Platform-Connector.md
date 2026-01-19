@@ -10,9 +10,7 @@ date: 2025-08-15 00:12:37 +00:00
 permalink: /ml/community/Interactive-Write-back-from-Power-BI-to-Azure-Databricks-with-Power-Platform-Connector
 tags:
 - Analytics
-- Azure
 - Azure Databricks
-- Community
 - Connector Integration
 - Copilot Studio
 - Data Governance
@@ -21,7 +19,6 @@ tags:
 - Delta Lake
 - Embedded Power Apps
 - Microsoft
-- ML
 - Operational Analytics
 - Power Apps
 - Power Automate

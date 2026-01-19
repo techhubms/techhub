@@ -14,7 +14,6 @@ tags:
 - C#
 - C# 8.0
 - Code Safety
-- Coding
 - Default Project Settings
 - Modern C# Features
 - Non Nullable References
@@ -22,7 +21,6 @@ tags:
 - Nullable Reference Types
 - Programming Best Practices
 - Type System
-- Videos
 section_names:
 - coding
 ---

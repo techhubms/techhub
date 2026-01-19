@@ -12,12 +12,9 @@ plans:
 - Free
 alt-collection: features
 tags:
-- AI
-- GitHub Copilot
 - GPT
 - LLM
 - Suggestions
-- Videos
 section_names:
 - ai
 - github-copilot

@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-17 17:28:26 +00:00
 permalink: /github-copilot/news/GPT-51-Codex-Max-Now-Available-in-GitHub-Copilot-Across-Platforms
 tags:
-- AI
 - AI Model
 - Business
 - Chat Model Picker
@@ -18,12 +17,10 @@ tags:
 - Copilot Settings
 - Eclipse
 - Enterprise
-- GitHub Copilot
 - GPT 5.1 Codex Max
 - IDE Integration
 - JetBrains
 - Model Release
-- News
 - Pro
 - Pro+
 - VS

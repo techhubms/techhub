@@ -10,25 +10,21 @@ date: 2025-11-18 22:07:34 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-CLI-Introduces-New-AI-Models-Enhanced-Code-Search-and-Improved-Image-Support
 tags:
 - Agent Configuration
-- AI
 - AI Models
 - Automation
 - Bugfixes
 - CLI
 - Client Apps
 - Code Search
-- Coding
 - Copilot
 - Developer Tools
 - Gemini 3.5 Pro
-- GitHub Copilot
 - GitHub Copilot CLI
 - Google AI
 - GPT 5.1
 - Image Support
 - Improvement
 - Markdown
-- News
 - npm
 - OpenAI
 - PowerShell

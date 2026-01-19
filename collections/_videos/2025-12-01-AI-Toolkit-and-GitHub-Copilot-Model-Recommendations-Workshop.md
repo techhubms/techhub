@@ -10,15 +10,12 @@ date: 2025-12-01 21:00:21 +00:00
 permalink: /github-copilot/videos/AI-Toolkit-and-GitHub-Copilot-Model-Recommendations-Workshop
 tags:
 - Agent Mode
-- AI
 - AI Development
 - AI Toolkit
-- Azure
 - Cloud Computing
 - Dev
 - Developer Tools
 - Development
-- GitHub Copilot
 - Language Models
 - Microsoft
 - Microsoft Foundry
@@ -27,7 +24,6 @@ tags:
 - Model Recommendations
 - Tech
 - Technology
-- Videos
 - Workshop
 section_names:
 - ai

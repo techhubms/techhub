@@ -11,19 +11,16 @@ permalink: /azure/news/Project-Flash-Enhancing-Azure-Virtual-Machine-Availabilit
 tags:
 - Advancing Reliability
 - Availability Monitoring
-- Azure
 - Azure Monitor
 - Azure Resource Graph
 - Azure Virtual Machines
 - Cloud Observability
 - Compute
-- DevOps
 - Event Grid
 - Infrastructure Monitoring
 - Infrastructure Reliability
 - Internet Of Things
 - Management And Governance
-- News
 - Project Flash
 - Real Time Alerts
 - Resource Health

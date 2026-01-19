@@ -10,27 +10,21 @@ date: 2025-11-20 17:01:31 +00:00
 permalink: /ai/videos/Unleashing-Telco-Innovation-Agentic-AI-and-Connected-Intelligence-with-Microsoft-Cloud
 tags:
 - Agentic AI
-- AI
 - Autonomous Networks
-- Azure
 - Cloud Solutions
 - Connected Intelligence
 - Data Unification
-- Machine Learning
 - Microsoft AI
 - Microsoft Ignite
-- ML
 - Model Tuning
 - MSIgnite
 - Network Automation
 - Nokia
-- Security
 - Security Agents
 - Service Delivery
 - Telecom
 - TM Forum Standards
 - Unifyyourdataplatform
-- Videos
 section_names:
 - ai
 - azure

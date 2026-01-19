@@ -10,13 +10,10 @@ date: 2025-05-07 07:00:00 +00:00
 permalink: /github-copilot/blogs/GitHub-Copilot-Agent-Mode-Transforming-your-development-workflow
 tags:
 - Agent Mode
-- AI
-- Blogs
 - Code Completion
 - Context Aware Assistance
 - Debugging
 - Development
-- GitHub Copilot
 - IDE
 - Interactive Learning
 - Natural Language Interaction

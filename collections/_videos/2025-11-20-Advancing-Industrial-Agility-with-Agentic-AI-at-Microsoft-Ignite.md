@@ -10,11 +10,9 @@ date: 2025-11-20 14:53:41 +00:00
 permalink: /ai/videos/Advancing-Industrial-Agility-with-Agentic-AI-at-Microsoft-Ignite
 tags:
 - Agentic AI
-- AI
 - AI Automation
 - AI Strategy
 - Autonomous Systems
-- Azure
 - Azure AI
 - Digital Twins
 - Energy
@@ -28,7 +26,6 @@ tags:
 - MSIgnite
 - Multi Agent Systems
 - Service Delivery
-- Videos
 section_names:
 - ai
 - azure

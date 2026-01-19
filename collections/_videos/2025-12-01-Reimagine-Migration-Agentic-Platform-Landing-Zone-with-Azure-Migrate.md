@@ -11,7 +11,6 @@ permalink: /azure/videos/Reimagine-Migration-Agentic-Platform-Landing-Zone-with-
 tags:
 - Agentic Approach
 - Automation
-- Azure
 - Azure Essentials
 - Azure Landing Zone
 - Azure Migrate
@@ -19,13 +18,10 @@ tags:
 - Cloud Migration
 - Cloud Modernization
 - Compliance
-- DevOps
 - Microsoft Azure
 - Secure Deployment
-- Security
 - Shiva Shastri
 - Thomas Maurer
-- Videos
 - Workload Migration
 section_names:
 - azure

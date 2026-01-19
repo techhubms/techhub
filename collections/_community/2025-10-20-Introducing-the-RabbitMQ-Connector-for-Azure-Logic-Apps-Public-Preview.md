@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-20 13:52:07 +00:00
 permalink: /azure/community/Introducing-the-RabbitMQ-Connector-for-Azure-Logic-Apps-Public-Preview
 tags:
-- Azure
 - Azure Logic Apps
 - BizTalk Modernization
 - Clustering
-- Community
 - Connector
 - Exchange
 - High Availability

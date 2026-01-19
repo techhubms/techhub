@@ -10,13 +10,10 @@ date: 2025-08-12 12:30:37 +00:00
 permalink: /azure/community/SQL-Server-on-Linux-Now-Supports-cgroup-v2
 tags:
 - AKS
-- Azure
 - Cgroup
 - Cgroup V2
-- Community
 - Container Orchestration
 - Containerization
-- DevOps
 - Docker
 - Errorlog
 - Kubernetes

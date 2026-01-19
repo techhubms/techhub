@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 10:16:24 +00:00
 permalink: /ai/videos/Meet-the-Performance-Enhanced-Next-Gen-Azure-SQL-Managed-Instance
 tags:
-- AI
 - AI Assisted Migration
-- Azure
 - Azure App Service
 - Azure SQL Managed Instance
 - Capacity Planning
@@ -27,7 +25,6 @@ tags:
 - Performance Scaling
 - SQL Migration
 - SQL Server
-- Videos
 section_names:
 - ai
 - azure

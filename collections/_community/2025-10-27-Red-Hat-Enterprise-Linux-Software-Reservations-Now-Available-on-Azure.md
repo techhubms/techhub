@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-27 16:00:00 +00:00
 permalink: /azure/community/Red-Hat-Enterprise-Linux-Software-Reservations-Now-Available-on-Azure
 tags:
-- Azure
 - Azure Reservations
 - Billing
 - Cloud Cost Management
-- Community
 - Linux
 - Microsoft Azure
 - Open Source

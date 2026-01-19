@@ -10,7 +10,6 @@ date: 2025-04-07 00:00:00 +00:00
 permalink: /ai/news/Agent-Mode-Now-Available-to-All-VS-Code-Users-with-MCP-Support
 tags:
 - Agent Mode
-- AI
 - AI Pair Programming
 - AI Tools
 - AI Workflows
@@ -18,12 +17,10 @@ tags:
 - Chat UI
 - Code Automation
 - Code Editing
-- Coding
 - Developer Productivity
 - Language Server Protocol
 - LLM Integration
 - MCP
-- News
 - Terminal Automation
 - Tool Extensibility
 - VS Code

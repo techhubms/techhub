@@ -9,15 +9,11 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-03 01:29:08 +00:00
 permalink: /github-copilot/community/Seeking-Guidance-Effectively-Using-GitHub-Copilot-with-VS-Code-and-Docker
 tags:
-- AI
 - Angular
 - Beginner Questions
-- Community
-- DevOps
 - Docker
 - Git
 - GitHub
-- GitHub Copilot
 - Node.js
 - Project Workflow
 - Restore Points

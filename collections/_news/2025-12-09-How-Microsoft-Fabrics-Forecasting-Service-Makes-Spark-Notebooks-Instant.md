@@ -9,8 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-09 09:00:00 +00:00
 permalink: /ai/news/How-Microsoft-Fabrics-Forecasting-Service-Makes-Spark-Notebooks-Instant
 tags:
-- AI
-- Azure
 - Azure Cosmos DB
 - Azure Data Explorer
 - Big Data Infrastructure
@@ -20,10 +18,7 @@ tags:
 - Data Engineering
 - Elastic Compute
 - Forecasting Service
-- Machine Learning
 - Microsoft Fabric
-- ML
-- News
 - Resource Optimization
 - Spark
 - Time Series Forecasting

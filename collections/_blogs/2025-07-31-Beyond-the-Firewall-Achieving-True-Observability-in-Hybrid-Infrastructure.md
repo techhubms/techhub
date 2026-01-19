@@ -9,11 +9,9 @@ feed_url: https://devops.com/feed/
 date: 2025-07-31 05:00:01 +00:00
 permalink: /devops/blogs/Beyond-the-Firewall-Achieving-True-Observability-in-Hybrid-Infrastructure
 tags:
-- Blogs
 - Business Of DevOps
 - Contributed Content
 - Data Collection
-- DevOps
 - DevSecOps
 - Hybrid Infrastructure
 - Internet Performance Monitoring
@@ -22,7 +20,6 @@ tags:
 - Monitoring Tools
 - Observability
 - RUM
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

@@ -10,19 +10,14 @@ date: 2025-11-12 09:38:46 +00:00
 permalink: /ai/community/Real-Time-AI-Streaming-with-Azure-OpenAI-and-SignalR
 tags:
 - .NET 8
-- AI
 - AI Integration
 - Angular
 - ASP.NET Core
-- Azure
 - Azure OpenAI
 - Azure SignalR Service
 - Cloud Scale
-- Coding
-- Community
 - Content Filtering
 - DefaultAzureCredential
-- DevOps
 - Entra ID
 - Frontend Integration
 - Live Chat

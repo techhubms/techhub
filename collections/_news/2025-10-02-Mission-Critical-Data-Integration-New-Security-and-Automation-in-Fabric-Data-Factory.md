@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-02 17:00:00 +00:00
 permalink: /ml/news/Mission-Critical-Data-Integration-New-Security-and-Automation-in-Fabric-Data-Factory
 tags:
-- Azure
 - Azure Key Vault
 - Compliance
 - Data Factory
@@ -19,13 +18,10 @@ tags:
 - Enterprise Data
 - Hybrid Cloud
 - Microsoft Fabric
-- ML
 - Network Isolation
-- News
 - PowerShell Automation
 - Private Link
 - REST API
-- Security
 - VNet Gateway
 - Workspace Identity Authentication
 section_names:

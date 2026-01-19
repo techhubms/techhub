@@ -10,7 +10,6 @@ date: 2025-11-25 18:09:25 +00:00
 permalink: /ai/videos/Beyond-Visibility-Microsoft-Purview-Data-Security-Posture-Management
 tags:
 - Advanced Security
-- AI
 - AI Agents
 - Compliance
 - Data Governance
@@ -25,12 +24,10 @@ tags:
 - Posture Management
 - Rudra Mitra
 - Secureyourdata
-- Security
 - Security Risk Mitigation
 - Session BRK253
 - Talhah Mir
 - Threat Protection
-- Videos
 - Yaki Faitelson
 section_names:
 - ai

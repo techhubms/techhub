@@ -9,20 +9,15 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-17 12:52:18 +00:00
 permalink: /github-copilot/community/Practical-Ways-to-Use-AI-in-Your-Data-Science-and-ML-Journey
 tags:
-- AI
 - AI Agents
 - Azure AI Foundry
-- Community
 - Curriculum
 - Data Science
 - Data Wrangler
-- GitHub Copilot
 - Hands On Workshop
 - Jupyter Notebooks
 - Learning Community
-- Machine Learning
 - Microsoft
-- ML
 - Practical AI
 - Python
 - Study Plans

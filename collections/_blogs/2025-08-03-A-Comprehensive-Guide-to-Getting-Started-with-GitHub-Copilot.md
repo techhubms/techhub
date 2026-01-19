@@ -9,10 +9,8 @@ feed_url: https://dellenny.com/feed/
 date: 2025-08-03 08:24:29 +00:00
 permalink: /github-copilot/blogs/A-Comprehensive-Guide-to-Getting-Started-with-GitHub-Copilot
 tags:
-- AI
 - AI Coding Assistant
 - AI Programming
-- Blogs
 - Code Completion
 - Code Productivity
 - Code Suggestions
@@ -23,7 +21,6 @@ tags:
 - Copilot Setup
 - Copilot Subscription
 - Editor Extensions
-- GitHub Copilot
 - OpenAI
 - Programming Tools
 - Software Development

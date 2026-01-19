@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-17 15:04:53 +00:00
 permalink: /github-copilot/news/Gemini-3-Flash-Public-Preview-Released-for-GitHub-Copilot-Users
 tags:
-- AI
 - AI Models
 - API Key
 - Copilot
@@ -19,9 +18,7 @@ tags:
 - Copilot Mobile
 - Copilot Pro
 - Gemini 3 Flash
-- GitHub Copilot
 - Model Picker
-- News
 - Public Preview
 - VS Code
 section_names:

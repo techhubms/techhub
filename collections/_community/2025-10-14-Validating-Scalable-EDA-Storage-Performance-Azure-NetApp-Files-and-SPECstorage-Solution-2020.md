@@ -9,15 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-14 01:37:14 +00:00
 permalink: /azure/community/Validating-Scalable-EDA-Storage-Performance-Azure-NetApp-Files-and-SPECstorage-Solution-2020
 tags:
-- Azure
 - Azure Architecture
 - Azure NetApp Files
 - Benchmarking
 - Cloud File Storage
 - Cloud Storage
-- Community
 - Data Management
-- DevOps
 - Electronic Design Automation
 - Global Collaboration
 - High Performance Computing

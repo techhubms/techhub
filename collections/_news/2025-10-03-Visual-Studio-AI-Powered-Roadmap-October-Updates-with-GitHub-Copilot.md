@@ -10,10 +10,8 @@ date: 2025-10-03 19:29:09 +00:00
 permalink: /github-copilot/news/Visual-Studio-AI-Powered-Roadmap-October-Updates-with-GitHub-Copilot
 tags:
 - Agentic Experiences
-- AI
 - AI Integration
 - Chat
-- Coding
 - Coding Agent
 - Coding Productivity
 - Copilot
@@ -21,11 +19,9 @@ tags:
 - Debugger Agent
 - Developer Tools
 - Dynamic Tool Calling
-- GitHub Copilot
 - IDE
 - MCP
 - Modernize Agent
-- News
 - Performance Optimization
 - VS
 section_names:

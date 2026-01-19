@@ -12,7 +12,6 @@ tags:
 - Access Control
 - Administration
 - Compliance
-- DevOps
 - DevOps Tools
 - Enterprise Management
 - Enterprise Management Tools
@@ -20,7 +19,6 @@ tags:
 - GitHub Apps
 - Governance
 - Improvement
-- News
 - Organization Owners
 - Permissions
 - Public Preview

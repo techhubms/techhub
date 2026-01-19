@@ -9,13 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-06 16:24:37 +00:00
 permalink: /azure/community/General-Availability-of-Software-Defined-Networking-SDN-on-Azure-Local-with-Azure-Arc
 tags:
-- Azure
 - Azure Arc
 - Azure CLI
 - Azure Local
 - Azure Portal
 - Azure Resource Manager
-- Community
 - Disaster Recovery
 - Failover Cluster
 - Hybrid Cloud
@@ -24,7 +22,6 @@ tags:
 - Network Security Groups
 - NSG
 - SDN
-- Security
 - Software Defined Networking
 - Virtual Networks
 - VLAN

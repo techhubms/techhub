@@ -11,11 +11,9 @@ permalink: /ai/blogs/How-the-2007-Thriller-Maximum-Impact-Predicted-Agentic-AI
 tags:
 - 6Ds Of Exponential Organizations
 - Agentic AI
-- AI
 - AI Middleware
 - AI Orchestration
 - Automation
-- Blogs
 - Book Reflection
 - ChatGPT
 - Digital Transformation

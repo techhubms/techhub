@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-26 00:48:16 +00:00
 permalink: /ai/videos/AI-Driven-Insights-and-Analytics-with-Microsoft-Fabric-and-Power-BI
 tags:
-- AI
 - AI First Organization
 - AI Powered Analytics
 - Business Intelligence
@@ -20,14 +19,12 @@ tags:
 - Fabric Breakout
 - Microsoft Ecosystem
 - Microsoft Fabric
-- ML
 - MSIgnite
 - Power BI
 - Scalable Analytics
 - Trusted Analytics
 - Unified Data Platform
 - Unifyyourdataplatform
-- Videos
 section_names:
 - ai
 - ml

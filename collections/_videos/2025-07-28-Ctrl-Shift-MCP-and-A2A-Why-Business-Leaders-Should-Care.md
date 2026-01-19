@@ -13,7 +13,6 @@ tags:
 - Agent 2 Agent
 - Agent To Agent
 - Agents
-- AI
 - AI Agents
 - AI Architecture
 - Business AI
@@ -22,7 +21,6 @@ tags:
 - LLM
 - MCP
 - Tech Trends
-- Videos
 section_names:
 - ai
 ---

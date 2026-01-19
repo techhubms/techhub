@@ -11,7 +11,6 @@ permalink: /azure/videos/Understanding-Azure-Availability-Zone-Mappings-for-Subs
 tags:
 - Availability Zone
 - AZ Alignment
-- Azure
 - Azure Availability Zones
 - Azure Capacity
 - Azure Cloud
@@ -29,7 +28,6 @@ tags:
 - Read AzureAZs.ps1
 - Regional Mapping
 - Subscriptions
-- Videos
 section_names:
 - azure
 ---

@@ -9,14 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-09 05:55:41 +00:00
 permalink: /ai/community/Building-Agentic-Workflows-with-n8n-and-Azure-Container-Apps
 tags:
-- AI
 - AI Integration
 - Automation Templates
-- Azure
 - Azure Container Apps
 - Azure OpenAI Service
 - Cloud Infrastructure
-- Community
 - Containerization
 - Intelligent Workflows
 - N8n

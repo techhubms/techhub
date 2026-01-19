@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-16 20:32:55 +00:00
 permalink: /github-copilot/news/Copilot-Coding-Agent-Can-Now-Search-the-Web
 tags:
-- AI
 - AI Assistant
 - Asynchronous Automation
 - Best Practices Research
@@ -19,10 +18,8 @@ tags:
 - Copilot Pro
 - Developer Tools
 - Error Debugging
-- GitHub Copilot
 - Improvement
 - Language Support
-- News
 - Policy Configuration
 - Pull Request Automation
 - Software Development

@@ -9,17 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-12-22 16:13:08 +00:00
 permalink: /ai/videos/Unlocking-the-Power-of-VS-Codes-Simple-Browser-Feature
 tags:
-- AI
 - AI Integration
 - Browser Logs
-- Coding
 - Developer Tools
 - Element Inspection
 - Error Debugging
 - Local Development
 - Productivity Tips
 - Simple Browser
-- Videos
 - VS Code
 - Web Development
 section_names:

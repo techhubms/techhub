@@ -9,20 +9,16 @@ feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-10-01 16:27:11 +00:00
 permalink: /coding/news/Unlocking-the-Hidden-Value-of-Your-Visual-Studio-Subscription
 tags:
-- Azure
 - Azure Credits
 - Cloud Academy
-- Coding
 - Dev/Test Environment
 - Developer Tools
 - Development Environment
-- DevOps
 - DevOps Cost Savings
 - Enterprise Subscription
 - Microsoft Benefits
 - MSDN
 - My.visualstudio.com
-- News
 - Pluralsight
 - Software Downloads
 - SQL Server Developer Edition

@@ -10,19 +10,15 @@ date: 2025-08-13 15:31:56 +00:00
 permalink: /azure/news/Azure-DevOps-Improves-OAuth-Client-Secret-Security-Secrets-Now-Shown-Only-Once
 tags:
 - API Deprecation
-- Azure
 - Azure DevOps
 - Azure Key Vault
 - Client Secrets
 - Credential Storage
-- DevOps
 - DevOps Workflows
-- News
 - OAuth
 - Secret Management
 - Secret Rotation
 - Secure First Initiative
-- Security
 - Security Best Practices
 section_names:
 - azure

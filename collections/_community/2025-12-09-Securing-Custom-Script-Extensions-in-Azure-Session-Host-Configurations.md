@@ -10,12 +10,10 @@ date: 2025-12-09 13:01:13 +00:00
 permalink: /azure/community/Securing-Custom-Script-Extensions-in-Azure-Session-Host-Configurations
 tags:
 - Automation
-- Azure
 - Azure Key Vault
 - Azure Portal
 - Azure Virtual Desktop
 - Blob Storage Authentication
-- Community
 - Credential Management
 - Custom Script Extension
 - Domain Join
@@ -24,7 +22,6 @@ tags:
 - Managed Identity
 - SAS Token
 - Secure Deployment
-- Security
 - Security Best Practices
 - Session Host Configuration
 section_names:

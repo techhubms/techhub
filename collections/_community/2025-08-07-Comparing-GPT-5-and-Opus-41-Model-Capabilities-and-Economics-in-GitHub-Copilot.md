@@ -9,13 +9,10 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-07 18:46:10 +00:00
 permalink: /github-copilot/community/Comparing-GPT-5-and-Opus-41-Model-Capabilities-and-Economics-in-GitHub-Copilot
 tags:
-- AI
 - AI Evaluation
 - AI Model Comparison
 - Code Generation
 - Coding AI
-- Community
-- GitHub Copilot
 - GPT 5
 - Model Pricing
 - Opus 4.1

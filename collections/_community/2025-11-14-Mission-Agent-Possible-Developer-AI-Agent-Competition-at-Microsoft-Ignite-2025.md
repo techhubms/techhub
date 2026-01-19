@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-14 08:00:00 +00:00
 permalink: /ai/community/Mission-Agent-Possible-Developer-AI-Agent-Competition-at-Microsoft-Ignite-2025
 tags:
-- AI
 - AI Agent
 - AI Innovation
 - Azure AI Foundry
-- Community
 - Contest
 - Developer Challenge
 - Developer Skills

@@ -11,18 +11,15 @@ permalink: /azure/community/Introducing-WireGuard-In-Transit-Encryption-for-Azur
 tags:
 - Advanced Container Networking
 - AKS
-- Azure
 - Azure CNI
 - Cilium
 - Cloud Security
 - Cluster Security
-- Community
 - Container Networking
 - Encryption
 - in Transit Encryption
 - Key Management
 - Network Security
-- Security
 - VNet Encryption
 - WireGuard
 section_names:

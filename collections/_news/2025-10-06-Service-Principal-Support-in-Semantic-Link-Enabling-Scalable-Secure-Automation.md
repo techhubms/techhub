@@ -10,19 +10,15 @@ date: 2025-10-06 10:00:00 +00:00
 permalink: /ml/news/Service-Principal-Support-in-Semantic-Link-Enabling-Scalable-Secure-Automation
 tags:
 - Automation
-- Azure
 - Azure Active Directory
 - Data Pipelines
 - Enterprise Data
 - Key Vault
 - Microsoft Fabric
-- ML
-- News
 - Notebook Integration
 - Python
 - Scheduling
 - Secure Authentication
-- Security
 - Sem.py
 - Semantic Link
 - Service Principal

@@ -9,14 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-05 23:27:17 +00:00
 permalink: /ml/community/FinOps-hubs-12-Non-Breaking-Schema-Versioning-and-FOCUS-12-Alignment
 tags:
-- Azure
 - Azure Advisor
 - Azure Cost Management
 - Azure Data Explorer
 - Azure Hybrid Benefit
 - Cloud Cost Intelligence
 - Commitment Discount
-- Community
 - Cost Management Datasets
 - Cost Optimization
 - Cost Reporting
@@ -29,7 +27,6 @@ tags:
 - FOCUS 1.2
 - Microsoft
 - Microsoft Fabric
-- ML
 - Power BI
 - Real Datatype
 section_names:

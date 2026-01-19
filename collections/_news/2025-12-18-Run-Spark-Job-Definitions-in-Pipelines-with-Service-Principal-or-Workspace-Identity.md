@@ -11,18 +11,14 @@ permalink: /ml/news/Run-Spark-Job-Definitions-in-Pipelines-with-Service-Principa
 tags:
 - Authentication
 - Automated Workflows
-- Azure
 - Data Engineering
 - Data Factory
 - Enterprise Security
 - Identity Management
 - Microsoft Fabric
-- ML
-- News
 - Notebook Automation
 - Pipeline Orchestration
 - Production Pipelines
-- Security
 - Service Principal
 - Spark Job Definition
 - Workspace Identity

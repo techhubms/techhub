@@ -10,16 +10,13 @@ date: 2024-11-07 00:00:00 +00:00
 permalink: /devops/blogs/DevCon-Romania-2024-Protecting-Against-Supply-Chain-Attacks-in-DevOps-Pipelines
 tags:
 - Attack Vectors
-- Blogs
 - Conference
 - DevCon Romania
-- DevOps
 - GHAS
 - GitHub
 - GitHub Advanced Security
 - Pipeline Security
 - Secure Pipelines
-- Security
 - Software Delivery
 - Software Dependencies
 - Supply Chain Security

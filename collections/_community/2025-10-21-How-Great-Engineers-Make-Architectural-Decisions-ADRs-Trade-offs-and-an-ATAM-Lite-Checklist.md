@@ -12,16 +12,12 @@ tags:
 - ADR
 - Architecture Decision Records
 - ATAM
-- Azure
 - Azure Well Architected Framework
 - Caching
 - Cloud Architecture
-- Coding
-- Community
 - Cosmos DB
 - Cost Optimization
 - Decision Matrix
-- DevOps
 - DevOps Best Practices
 - Engineering Documentation
 - Infrastructure
@@ -30,7 +26,6 @@ tags:
 - Performance
 - Redis
 - Reliability
-- Security
 - Team Guidelines
 - Trade Offs
 section_names:

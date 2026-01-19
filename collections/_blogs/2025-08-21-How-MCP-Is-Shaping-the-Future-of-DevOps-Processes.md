@@ -9,15 +9,12 @@ feed_url: https://devops.com/feed/
 date: 2025-08-21 16:53:01 +00:00
 permalink: /ai/blogs/How-MCP-Is-Shaping-the-Future-of-DevOps-Processes
 tags:
-- AI
 - AI Agents
 - AI in DevOps
 - AI Integration
 - Anthropic
-- Blogs
 - CI/CD
 - Cloudbees
-- DevOps
 - DevOps Automation
 - Large Language Models
 - Loreli Cadapan

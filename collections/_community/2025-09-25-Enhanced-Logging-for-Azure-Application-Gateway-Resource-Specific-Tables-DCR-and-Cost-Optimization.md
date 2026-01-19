@@ -9,16 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-25 21:12:08 +00:00
 permalink: /azure/community/Enhanced-Logging-for-Azure-Application-Gateway-Resource-Specific-Tables-DCR-and-Cost-Optimization
 tags:
-- Azure
 - Azure Application Gateway
 - Azure Monitor
 - Basic Log Plan
 - Cloud Observability
-- Community
 - Cost Optimization
 - Data Explorer
 - DCR Transformations
-- DevOps
 - Diagnostics
 - GDPR Compliance
 - KQL
@@ -27,7 +24,6 @@ tags:
 - Logging Strategy
 - RBAC
 - Resource Specific Tables
-- Security
 - Web Application Firewall
 section_names:
 - azure

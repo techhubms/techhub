@@ -9,15 +9,12 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-08-15 22:52:35 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Text-Completion-for-Pull-Request-Descriptions-to-Be-Deprecated
 tags:
-- AI
 - AI Assistance
 - Beta Features
 - Copilot Enterprise
 - Developer Tools
 - Feature Deprecation
 - GitHub
-- GitHub Copilot
-- News
 - PR Summaries
 - Product Update
 - Pull Requests

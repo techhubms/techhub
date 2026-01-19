@@ -11,10 +11,8 @@ permalink: /azure/community/Troubleshooting-gMSA-Configuration-Errors-During-Mic
 tags:
 - Active Directory
 - AD Permissions
-- Azure
 - Azure AD Connect
 - Cloud Sync
-- Community
 - Directory Services
 - Domain Controller
 - Error Troubleshooting
@@ -22,7 +20,6 @@ tags:
 - Group Managed Service Account
 - Microsoft Entra ID
 - Password Writeback
-- Security
 - Service Account
 - Sync Server
 section_names:

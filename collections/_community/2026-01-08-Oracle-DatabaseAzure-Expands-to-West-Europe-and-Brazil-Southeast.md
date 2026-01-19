@@ -9,17 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2026-01-08 00:06:13 +00:00
 permalink: /ai/community/Oracle-DatabaseAzure-Expands-to-West-Europe-and-Brazil-Southeast
 tags:
-- AI
 - AI Ready Platform
 - Availability Zones
-- Azure
 - Azure App Service
 - Azure Integration
 - Azure Monitor
 - Azure Regions
 - Brazil Southeast
 - Business Continuity
-- Community
 - Compliance
 - Copilot Studio
 - Disaster Recovery
@@ -30,7 +27,6 @@ tags:
 - Netherlands
 - Oracle Database
 - Oracle Database@Azure
-- Security
 - West Europe
 - Zero Downtime Migration
 section_names:

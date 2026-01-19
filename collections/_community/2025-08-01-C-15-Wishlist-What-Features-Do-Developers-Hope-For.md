@@ -11,8 +11,6 @@ permalink: /coding/community/C-15-Wishlist-What-Features-Do-Developers-Hope-For
 tags:
 - C#
 - C# 15
-- Coding
-- Community
 - Community Discussion
 - Developer Feedback
 - Extension Properties

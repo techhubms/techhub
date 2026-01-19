@@ -11,7 +11,6 @@ permalink: /azure/videos/Maximize-Azure-ROI-Real-world-strategies-with-confirmed
 tags:
 - Archera
 - Automation
-- Azure
 - Azure Cost Management
 - Azure Reservations
 - Azure Savings
@@ -27,7 +26,6 @@ tags:
 - ROI
 - Savings Plans
 - Underperforming Commitment
-- Videos
 section_names:
 - azure
 ---

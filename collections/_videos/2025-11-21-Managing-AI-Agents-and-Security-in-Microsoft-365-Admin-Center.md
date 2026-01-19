@@ -30,10 +30,8 @@ tags:
 - Other
 - Policy Templates
 - Risk Monitoring
-- Security
 - STUDIO37
 - STUDIO37 V1
-- Videos
 section_names:
 - security
 ---

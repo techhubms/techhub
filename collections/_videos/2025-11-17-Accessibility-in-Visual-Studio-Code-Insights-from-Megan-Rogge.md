@@ -11,7 +11,6 @@ permalink: /coding/videos/Accessibility-in-Visual-Studio-Code-Insights-from-Mega
 tags:
 - Accessibility
 - Accessible Views
-- Coding
 - Color Contrast
 - Developer Tools
 - IDE
@@ -22,7 +21,6 @@ tags:
 - Sound Signals
 - Terminal Output
 - UI Design
-- Videos
 - VS Code
 section_names:
 - coding

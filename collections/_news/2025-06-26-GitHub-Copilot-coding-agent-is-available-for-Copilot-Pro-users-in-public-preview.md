@@ -9,12 +9,9 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-06-26 13:23:05 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-coding-agent-is-available-for-Copilot-Pro-users-in-public-preview
 tags:
-- AI
 - Background Tasks
 - Coding Agent
 - Copilot Pro
-- GitHub Copilot
-- News
 - Public Preview
 section_names:
 - ai

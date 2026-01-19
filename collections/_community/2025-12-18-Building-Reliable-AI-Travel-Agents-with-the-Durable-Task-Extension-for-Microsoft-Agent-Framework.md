@@ -11,16 +11,12 @@ permalink: /ai/community/Building-Reliable-AI-Travel-Agents-with-the-Durable-Tas
 tags:
 - .NET 9
 - Agent Patterns
-- AI
 - Automated Workflows
-- Azure
 - Azure Functions
 - Azure OpenAI Service
 - Azure Static Web Apps
 - Blob Storage
 - C#
-- Coding
-- Community
 - Durable Task Extension
 - Durable Task Scheduler
 - GPT 4o Mini

@@ -10,11 +10,9 @@ date: 2025-07-29 14:09:36 +00:00
 permalink: /azure/community/Important-Changes-to-App-Service-Managed-Certificates-Is-Your-Certificate-Affected
 tags:
 - App Service
-- Azure
 - Certificate Management
 - Certificate Update
 - Cloud Services
-- Community
 - Managed Certificates
 - Microsoft
 - Service Changes

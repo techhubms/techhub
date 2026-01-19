@@ -11,7 +11,6 @@ permalink: /devops/blogs/A-Modern-Approach-to-Multi-Signal-Optimization
 tags:
 - Application Performance Monitoring
 - ArgoCD
-- Blogs
 - Business Of DevOps
 - CI/CD Observability
 - Cloud Cost Optimization
@@ -21,7 +20,6 @@ tags:
 - CloudNativeCon Atlanta
 - Contributed Content
 - Datadog
-- DevOps
 - DevOps Automation
 - DevOps in The Cloud
 - Grafana

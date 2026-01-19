@@ -10,17 +10,13 @@ date: 2025-09-11 16:05:09 +00:00
 permalink: /github-copilot/news/Announcing-the-Copilot-Profiler-Agent-AI-Powered-Performance-Analysis-in-Visual-Studio-2026
 tags:
 - .NET
-- AI
 - AI Assistant
 - BenchmarkDotNet
-- Coding
 - Copilot Profiler Agent
 - CPU Analysis
 - Debugging And Diagnostics
 - Developer Productivity
-- GitHub Copilot
 - Memory Optimization
-- News
 - Open Source
 - Performance Improvements
 - Performance Profiling

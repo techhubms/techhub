@@ -13,14 +13,12 @@ tags:
 - Application Development
 - C#
 - Code Tutorial
-- Coding
 - Console Applications
 - Library
 - Open Source
 - Programming
 - Razor Pages
 - RazorConsole
-- Videos
 section_names:
 - coding
 ---

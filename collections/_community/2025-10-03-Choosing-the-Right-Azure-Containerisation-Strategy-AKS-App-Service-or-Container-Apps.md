@@ -10,15 +10,12 @@ date: 2025-10-03 14:06:10 +00:00
 permalink: /azure/community/Choosing-the-Right-Azure-Containerisation-Strategy-AKS-App-Service-or-Container-Apps
 tags:
 - AKS
-- Azure
 - Azure App Service
 - Azure Container Apps
 - CI/CD
 - Cloud Native
-- Community
 - Containerisation
 - Dapr
-- DevOps
 - Infrastructure Management
 - KEDA
 - Kubernetes

@@ -12,8 +12,6 @@ tags:
 - .NET
 - Action Filters
 - Clean Code
-- Coding
-- Community
 - Controller Design
 - Custom Validators
 - Data Annotations

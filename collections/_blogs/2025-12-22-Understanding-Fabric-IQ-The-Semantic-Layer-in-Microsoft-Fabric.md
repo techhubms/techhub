@@ -9,10 +9,7 @@ feed_url: https://zure.com/blog/rss.xml
 date: 2025-12-22 08:26:46 +00:00
 permalink: /ai/blogs/Understanding-Fabric-IQ-The-Semantic-Layer-in-Microsoft-Fabric
 tags:
-- AI
 - AI Agents
-- Azure
-- Blogs
 - Business Logic
 - Data Agents
 - Data Catalog
@@ -28,7 +25,6 @@ tags:
 - Microsoft Fabric
 - Microsoft OneLake
 - Microsoft Purview
-- ML
 - Ontology
 - Semantic Layer
 section_names:

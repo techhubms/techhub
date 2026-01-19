@@ -11,16 +11,12 @@ permalink: /coding/community/Enforcing-Angular-Unit-Test-Coverage-in-Azure-DevOp
 tags:
 - .NET Core
 - Angular
-- Azure
 - Azure DevOps
 - ChromeHeadless
 - CI/CD Pipeline
 - Cobertura
 - Code Coverage
-- Coding
-- Community
 - Continuous Integration
-- DevOps
 - JUnit
 - Karma
 - npm

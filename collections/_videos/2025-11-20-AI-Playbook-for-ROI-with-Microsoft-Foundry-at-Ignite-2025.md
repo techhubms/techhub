@@ -9,8 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-20 17:03:57 +00:00
 permalink: /ai/videos/AI-Playbook-for-ROI-with-Microsoft-Foundry-at-Ignite-2025
 tags:
-- AI
-- Azure
 - Azure AI
 - Business Impact
 - Compliance
@@ -31,7 +29,6 @@ tags:
 - ROI
 - Scalability
 - Token Costs
-- Videos
 section_names:
 - ai
 - azure

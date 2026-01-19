@@ -11,9 +11,7 @@ permalink: /azure/community/New-Tools-for-Hybrid-Access-and-Identity-Verificatio
 tags:
 - Access Management
 - Active Directory
-- Azure
 - Cloud Security
-- Community
 - Compliance
 - Entitlement Management
 - Entra ID Governance
@@ -24,7 +22,6 @@ tags:
 - Identity Governance
 - Microsoft Entra
 - On Premises Applications
-- Security
 - Verified ID
 section_names:
 - azure

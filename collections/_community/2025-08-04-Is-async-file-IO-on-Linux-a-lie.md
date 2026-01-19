@@ -11,8 +11,6 @@ permalink: /coding/community/Is-async-file-IO-on-Linux-a-lie
 tags:
 - .NET
 - Async IO
-- Coding
-- Community
 - F GETFL
 - Fcntl
 - File.OpenHandle

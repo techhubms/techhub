@@ -10,8 +10,6 @@ date: 2025-11-14 09:47:50 +00:00
 permalink: /azure/blogs/Scaling-GitOps-for-Continuous-Delivery-in-Hybrid-and-Multi-Cloud-Environments
 tags:
 - ArgoCD
-- Azure
-- Blogs
 - Business Of DevOps
 - CI/CD
 - Cloud Governance
@@ -20,7 +18,6 @@ tags:
 - Container Image Signing
 - Continuous Delivery
 - Contributed Content
-- DevOps
 - DevOps Automation
 - Drift Detection
 - Flux
@@ -52,7 +49,6 @@ tags:
 - RBAC
 - Repository Design
 - Secrets Management
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

@@ -10,17 +10,13 @@ date: 2025-11-08 14:39:53 +00:00
 permalink: /coding/community/Simplifying-Microservice-Reliability-with-Dapr
 tags:
 - .NET Core
-- Azure
 - Azure Container Apps
 - Azure Key Vault
 - Azure Service Bus
-- Coding
-- Community
 - Configuration Management
 - Cosmos DB
 - Dapr
 - Developer Tools
-- DevOps
 - Event Driven Architecture
 - Microservices
 - Pub/Sub

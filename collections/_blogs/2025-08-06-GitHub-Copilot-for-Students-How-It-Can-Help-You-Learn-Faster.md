@@ -9,15 +9,12 @@ feed_url: https://dellenny.com/feed/
 date: 2025-08-06 11:19:20 +00:00
 permalink: /github-copilot/blogs/GitHub-Copilot-for-Students-How-It-Can-Help-You-Learn-Faster
 tags:
-- AI
 - AI Pair Programming
 - Bash
-- Blogs
 - C++
 - Code Suggestions
 - Coding Assistant
 - Debugging
-- GitHub Copilot
 - Java
 - JavaScript
 - JetBrains

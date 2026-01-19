@@ -9,17 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-19 12:36:16 +00:00
 permalink: /ai/community/Accelerate-Cloud-Migration-with-Azure-Copilot-Migration-Agent
 tags:
-- AI
 - AI Driven Automation
 - Automation
-- Azure
 - Azure Copilot
 - Azure Migrate
 - Cloud Adoption Framework
 - Cloud Migration
-- Community
 - Database Modernization
-- DevOps
 - Governance
 - Landing Zone Setup
 - Linux Migration

@@ -10,11 +10,8 @@ date: 2025-08-03 05:51:52 +00:00
 permalink: /ai/community/Build-Smarter-LLMs-with-Local-MCP-Servers-in-NET
 tags:
 - .NET
-- AI
 - C#
 - Code Samples
-- Coding
-- Community
 - Deterministic AI
 - Function Triggering
 - LLM

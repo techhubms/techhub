@@ -11,8 +11,6 @@ permalink: /devops/blogs/Startup-Engineering-Culture-in-Action
 tags:
 - Architecture
 - Atlas
-- Blogs
-- DevOps
 - Engineering Culture
 - Lead Podcast
 - Lean Processes

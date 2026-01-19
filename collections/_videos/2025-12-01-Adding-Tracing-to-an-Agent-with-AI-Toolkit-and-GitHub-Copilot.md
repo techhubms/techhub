@@ -10,7 +10,6 @@ date: 2025-12-01 21:00:31 +00:00
 permalink: /github-copilot/videos/Adding-Tracing-to-an-Agent-with-AI-Toolkit-and-GitHub-Copilot
 tags:
 - Agent Development
-- AI
 - AI Development
 - AI Toolkit
 - Cloud Computing
@@ -19,7 +18,6 @@ tags:
 - Dev
 - Developer Tools
 - Development
-- GitHub Copilot
 - Microsoft
 - Microsoft Foundry
 - Pet Planner Workshop
@@ -27,7 +25,6 @@ tags:
 - Technology
 - Tracing
 - Tracing Viewer
-- Videos
 section_names:
 - ai
 - github-copilot

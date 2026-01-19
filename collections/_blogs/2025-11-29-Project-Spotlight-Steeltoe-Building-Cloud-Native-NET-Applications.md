@@ -11,9 +11,7 @@ permalink: /coding/blogs/Project-Spotlight-Steeltoe-Building-Cloud-Native-NET-Ap
 tags:
 - .NET
 - Application Management
-- Blogs
 - Cloud Native
-- Coding
 - Distributed Tracing
 - Enterprise Applications
 - Externalized Configuration

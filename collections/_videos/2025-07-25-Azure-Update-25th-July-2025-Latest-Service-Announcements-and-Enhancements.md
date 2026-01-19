@@ -10,7 +10,6 @@ date: 2025-07-25 14:27:36 +00:00
 permalink: /ml/videos/Azure-Update-25th-July-2025-Latest-Service-Announcements-and-Enhancements
 tags:
 - App Gateway For Containers
-- Azure
 - Azure Cloud
 - Azure CNI
 - Azure Firewall
@@ -24,16 +23,12 @@ tags:
 - Cloud Architecture
 - Cloud Security
 - Data Lake
-- DevOps
 - Infrastructure
 - Log Analytics
 - Microsoft
 - Microsoft Azure
 - Microsoft Sentinel
-- ML
-- Security
 - Sentinel Data Lake
-- Videos
 - VNet Encryption
 section_names:
 - azure

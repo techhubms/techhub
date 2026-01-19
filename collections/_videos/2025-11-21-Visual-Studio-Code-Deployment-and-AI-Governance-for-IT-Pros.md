@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 16:48:24 +00:00
 permalink: /ai/videos/Visual-Studio-Code-Deployment-and-AI-Governance-for-IT-Pros
 tags:
-- AI
 - AI Tools
 - Compliance
 - Developer Productivity
-- DevOps
 - Enterprise Deployment
 - Entra ID
 - Extension Marketplace
@@ -25,7 +23,6 @@ tags:
 - Policy Enforcement
 - Prompt Engineering
 - Telemetry Management
-- Videos
 - VS Code
 section_names:
 - ai

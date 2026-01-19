@@ -12,8 +12,6 @@ tags:
 - AutoHotkey
 - Automation
 - Batch Scripts
-- Blogs
-- Coding
 - Command Line Automation
 - Desktop Management
 - PowerShell

@@ -12,9 +12,6 @@ tags:
 - .NET
 - Branch Management
 - C#
-- Coding
-- Community
-- DevOps
 - Extension
 - Git Integration
 - Git Worktree

@@ -11,7 +11,6 @@ permalink: /ai/news/AutoGen-Reimagined-Announcing-the-Launch-of-AutoGen-04
 tags:
 - .NET
 - Agentic Workflows
-- AI
 - Asynchronous Messaging
 - Autogen
 - AutoGen Studio
@@ -21,7 +20,6 @@ tags:
 - Magentic One
 - Modular AI
 - New Release
-- News
 - OpenTelemetry
 - Python
 section_names:

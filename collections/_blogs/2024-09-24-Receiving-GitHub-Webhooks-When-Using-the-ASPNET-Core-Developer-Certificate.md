@@ -11,11 +11,8 @@ permalink: /coding/blogs/Receiving-GitHub-Webhooks-When-Using-the-ASPNET-Core-De
 tags:
 - .NET
 - ASP.NET Core
-- Blogs
 - Certificate Management
-- Coding
 - Developer Certificate
-- DevOps
 - GitHub
 - GitHub App
 - HTTPS

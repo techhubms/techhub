@@ -9,13 +9,11 @@ feed_url: https://devops.com/feed/
 date: 2025-10-23 14:10:49 +00:00
 permalink: /devops/blogs/Open-Cost-Efficient-Architectures-for-Observability-Escaping-Vendor-Lock-In-and-Ballooning-Costs
 tags:
-- Blogs
 - Cloud Native
 - Columnar Databases
 - Contributed Content
 - Cost Optimization
 - Datadog
-- DevOps
 - Elasticsearch
 - Grafana
 - Logging

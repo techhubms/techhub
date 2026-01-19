@@ -9,8 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
 permalink: /ai/news/Announcing-Deep-Integration-between-Microsoft-OneLake-and-Azure-Databricks
 tags:
-- AI
-- Azure
 - Azure AI Foundry
 - Azure Databricks
 - Catalog API
@@ -28,8 +26,6 @@ tags:
 - Lakehouse Architecture
 - Microsoft Fabric
 - Microsoft OneLake
-- ML
-- News
 - Open Data
 - Power BI
 - Unity Catalog

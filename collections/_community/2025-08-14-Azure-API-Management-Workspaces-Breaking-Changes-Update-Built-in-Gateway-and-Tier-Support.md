@@ -11,12 +11,10 @@ permalink: /azure/community/Azure-API-Management-Workspaces-Breaking-Changes-Upd
 tags:
 - API Limits
 - API Management
-- Azure
 - Azure API Management
 - Breaking Changes
 - Built in Gateway
 - Cloud Integration
-- Community
 - Developer Tier
 - Federated API
 - Managed Identities

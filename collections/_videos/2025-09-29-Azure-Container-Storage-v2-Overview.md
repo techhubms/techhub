@@ -11,7 +11,6 @@ permalink: /azure/videos/Azure-Container-Storage-v2-Overview
 tags:
 - ACStor
 - AKS
-- Azure
 - Azure Cloud
 - Azure Container Storage
 - Cloud
@@ -28,7 +27,6 @@ tags:
 - NVMe
 - Performance
 - Storage Architecture
-- Videos
 - VM SKUs
 section_names:
 - azure

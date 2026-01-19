@@ -11,11 +11,9 @@ permalink: /azure/community/Layer-7-Network-Policies-for-AKS-General-Availabilit
 tags:
 - Advanced Container Networking
 - AKS
-- Azure
 - CCNP
 - Cilium
 - Cluster Security
-- Community
 - Container Networking
 - Egress Controls
 - FQDN Filtering
@@ -24,7 +22,6 @@ tags:
 - Layer 7 Network Policy
 - Network Observability
 - Policy Enforcement
-- Security
 - Zero Trust
 section_names:
 - azure

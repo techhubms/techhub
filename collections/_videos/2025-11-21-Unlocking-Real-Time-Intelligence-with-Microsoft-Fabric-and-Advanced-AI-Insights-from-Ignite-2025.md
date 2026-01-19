@@ -10,9 +10,7 @@ date: 2025-11-21 07:23:30 +00:00
 permalink: /ai/videos/Unlocking-Real-Time-Intelligence-with-Microsoft-Fabric-and-Advanced-AI-Insights-from-Ignite-2025
 tags:
 - Advanced Analytics
-- AI
 - Anomaly Detection
-- Azure
 - Copilot Data Exploration
 - Customer Success
 - Data Platform
@@ -21,17 +19,14 @@ tags:
 - Hospital Operations
 - Industry Use Cases
 - Live Data Processing
-- Machine Learning
 - Microsoft Fabric
 - Microsoft Sentinel
-- ML
 - MSIgnite
 - Natural Language Insights
 - Operational Analytics
 - Preview Features
 - Real Time Intelligence
 - Unifyyourdataplatform
-- Videos
 section_names:
 - ai
 - azure

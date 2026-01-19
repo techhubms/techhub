@@ -10,10 +10,8 @@ date: 2025-05-28 07:48:00 +00:00
 permalink: /devops/blogs/Is-DevOps-Dead-Or-just-evolving
 tags:
 - Automation
-- Blogs
 - CI/CD Pipelines
 - Developer Experience
-- DevOps
 - Engineering Culture
 - Internal Platforms
 - Lead Podcast

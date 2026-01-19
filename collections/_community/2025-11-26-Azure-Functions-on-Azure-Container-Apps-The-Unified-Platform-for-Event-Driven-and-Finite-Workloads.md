@@ -9,18 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-26 05:04:27 +00:00
 permalink: /ai/community/Azure-Functions-on-Azure-Container-Apps-The-Unified-Platform-for-Event-Driven-and-Finite-Workloads
 tags:
-- AI
-- Azure
 - Azure Container Apps
 - Azure Functions
 - Batch Processing
 - Blob Trigger
 - Blue/Green Deployment
 - CI/CD
-- Coding
-- Community
 - Dapr
-- DevOps
 - Durable Functions
 - Event Driven Architecture
 - Event Hubs
@@ -30,7 +25,6 @@ tags:
 - Ingress
 - Machine Learning Inference
 - Microservices
-- ML
 - Queue Trigger
 - Serverless
 - Service Bus

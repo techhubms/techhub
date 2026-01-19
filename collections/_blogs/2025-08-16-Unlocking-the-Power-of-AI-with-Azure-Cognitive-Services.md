@@ -9,13 +9,10 @@ feed_url: https://dellenny.com/feed/
 date: 2025-08-16 18:18:45 +00:00
 permalink: /ai/blogs/Unlocking-the-Power-of-AI-with-Azure-Cognitive-Services
 tags:
-- AI
 - AI Integration
 - Anomaly Detector
 - API Development
-- Azure
 - Azure Cognitive Services
-- Blogs
 - Cloud AI
 - Content Moderator
 - Developer Tools

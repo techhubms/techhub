@@ -9,13 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 12:43:12 +00:00
 permalink: /coding/videos/Fast-and-Easy-Windows-Setup-and-Configuration-with-WinGet-and-Desired-State-Configuration
 tags:
-- Coding
 - Command Line Interface
 - Configuration as Code
 - Configuration Management
 - Desired State Configuration
 - Developer Tools
-- DevOps
 - DSC
 - Font Management
 - IT Automation
@@ -26,7 +24,6 @@ tags:
 - ScalewithcloudandAIendpoints
 - Terminal Tools
 - UI Modernization
-- Videos
 - VS Code
 - Windows Configuration
 - WinGet

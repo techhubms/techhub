@@ -13,7 +13,6 @@ tags:
 - ASP.NET Core
 - Aspdotnet
 - C#
-- Coding
 - Community Standup
 - Developer Community
 - Developer Tools
@@ -25,7 +24,6 @@ tags:
 - Server Development
 - Vibe Coding
 - Vibecoding
-- Videos
 section_names:
 - coding
 ---

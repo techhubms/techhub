@@ -11,14 +11,12 @@ permalink: /azure/community/Simplifying-Outbound-Connectivity-Troubleshooting-in
 tags:
 - ACR
 - AKS
-- Azure
 - Azure Networking
 - Azure Portal
 - Azure Virtual Network Verifier
 - Cloud Native
 - Cluster Operations
 - CNI Overlay
-- Community
 - Connectivity Analysis
 - Container Registry
 - Containers

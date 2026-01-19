@@ -10,16 +10,13 @@ date: 2025-09-25 11:00:00 +00:00
 permalink: /ai/news/Building-AI-Agents-for-Enterprise-Data-with-Agent-Mart-Studio-and-Microsoft-Fabric
 tags:
 - Agent Mart Studio
-- AI
 - AI Agents
-- Azure
 - Business Process Automation
 - Data Automation
 - Data Integration
 - Enterprise Data
 - Lucid Data Hub
 - Microsoft Fabric
-- News
 - No Code AI
 - OneLake
 - Retail Automation

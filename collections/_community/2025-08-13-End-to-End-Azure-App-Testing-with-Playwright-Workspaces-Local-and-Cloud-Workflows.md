@@ -11,17 +11,13 @@ permalink: /coding/community/End-to-End-Azure-App-Testing-with-Playwright-Worksp
 tags:
 - App Deployment
 - Automated Testing
-- Azure
 - Azure App Testing
 - Azure Portal
 - Azure Web App
 - Browser Automation
 - CI/CD
 - Cloud Testing
-- Coding
-- Community
 - Continuous Integration
-- DevOps
 - Express
 - Functional Testing
 - JavaScript

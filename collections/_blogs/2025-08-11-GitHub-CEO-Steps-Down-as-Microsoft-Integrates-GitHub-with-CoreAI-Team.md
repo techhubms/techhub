@@ -9,16 +9,13 @@ feed_url: https://devops.com/feed/
 date: 2025-08-11 19:55:55 +00:00
 permalink: /ai/blogs/GitHub-CEO-Steps-Down-as-Microsoft-Integrates-GitHub-with-CoreAI-Team
 tags:
-- AI
 - AI Coding
 - AI Engineering
 - AI Tools
-- Blogs
 - Career Moves
 - CoreAI
 - Cursor
 - Developer Tools
-- DevOps
 - GitHub
 - GitHub Integration
 - Google

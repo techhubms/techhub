@@ -9,17 +9,14 @@ feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-29 03:25:27 +00:00
 permalink: /azure/community/Inherited-a-Large-Azure-Environment-Seeking-Guidance-as-a-New-Cloud-Architect
 tags:
-- Azure
 - Azure Subscriptions
 - Cloud Adoption
 - Cloud Architecture
 - Cloud Governance
-- Community
 - Enterprise IT
 - IT Operations
 - Organizational Change
 - Resource Management
-- Security
 - Subscription Management
 section_names:
 - azure

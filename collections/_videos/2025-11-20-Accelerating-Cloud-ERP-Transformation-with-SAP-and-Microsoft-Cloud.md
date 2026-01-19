@@ -10,8 +10,6 @@ date: 2025-11-20 11:04:20 +00:00
 permalink: /ai/videos/Accelerating-Cloud-ERP-Transformation-with-SAP-and-Microsoft-Cloud
 tags:
 - Agent Architecture
-- AI
-- Azure
 - BTP
 - Business Context Integration
 - Business Data Cloud
@@ -31,7 +29,6 @@ tags:
 - SAP Business Technology Platform
 - Teams Integration
 - Unifyyourdataplatform
-- Videos
 - Zero Copy Access
 section_names:
 - ai

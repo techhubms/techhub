@@ -11,7 +11,6 @@ permalink: /coding/community/Building-Enterprise-Grade-Shared-AKS-Clusters-A-Gui
 tags:
 - AKS
 - Argo CD
-- Azure
 - Azure CNI
 - Azure DevOps
 - Azure Disk
@@ -19,11 +18,8 @@ tags:
 - Azure Key Vault
 - Azure Monitor
 - CI/CD
-- Coding
-- Community
 - Cosign
 - Cost Management
-- DevOps
 - Flux
 - GitHub Actions
 - GitOps
@@ -40,7 +36,6 @@ tags:
 - Prometheus
 - RBAC
 - ResourceQuota
-- Security
 - Service Mesh
 - Trivy
 - Velero

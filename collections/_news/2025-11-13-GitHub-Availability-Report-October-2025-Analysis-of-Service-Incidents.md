@@ -14,7 +14,6 @@ tags:
 - Cloud Infrastructure
 - Codespaces
 - Company News
-- DevOps
 - Enterprise Importer
 - Error Rates
 - GitHub
@@ -24,7 +23,6 @@ tags:
 - Mobile Push Notifications
 - Monitoring
 - Network Outage
-- News
 - News & Insights
 - Resilience Engineering
 - Service Degradation

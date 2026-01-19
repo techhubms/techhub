@@ -10,16 +10,12 @@ date: 2025-11-17 10:31:44 +00:00
 permalink: /coding/community/Secure-Azure-Stream-Analytics-Jobs-with-Dedicated-Clusters-and-Managed-Private-Endpoints
 tags:
 - Automation
-- Azure
 - Azure Portal
 - Azure Stream Analytics
 - Blob Storage
 - Cloud Security
-- Coding
-- Community
 - Data Pipeline
 - Dedicated Cluster
-- DevOps
 - Event Processing
 - IAM
 - Input/Output Configuration
@@ -28,7 +24,6 @@ tags:
 - Managed Private Endpoint
 - Private Link
 - Role Assignment
-- Security
 - Stream Analytics Job
 - Terraform
 - Zero Trust

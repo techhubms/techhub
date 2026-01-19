@@ -9,8 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-05 09:30:00 +00:00
 permalink: /ai/news/Advance-your-career-in-Data-and-AI-with-Microsoft-Fabric-Data-Days
 tags:
-- AI
-- Azure
 - Certification
 - Contests
 - Data Engineering
@@ -23,8 +21,6 @@ tags:
 - Microsoft Certified Trainer
 - Microsoft Data Platform
 - Microsoft Fabric
-- ML
-- News
 - Notebooks
 - PL 300
 - Power BI

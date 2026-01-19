@@ -10,16 +10,12 @@ date: 2025-09-17 21:32:31 +00:00
 permalink: /ai/community/Accelerate-and-Simplify-Cloud-Transformation-with-New-Agentic-AI-Solutions
 tags:
 - Agentic AI
-- AI
 - AI Assisted Tooling
-- Azure
 - Azure Accelerate
 - Azure VMware Solution
 - Cloud Migration
 - Cloud Modernization
-- Community
 - Developer Experience
-- DevOps
 - Intelligent Automation
 - IT Transformation
 - Java Modernization

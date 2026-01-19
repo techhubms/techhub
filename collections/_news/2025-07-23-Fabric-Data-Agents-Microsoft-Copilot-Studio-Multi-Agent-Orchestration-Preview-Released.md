@@ -10,7 +10,6 @@ date: 2025-07-23 10:00:00 +00:00
 permalink: /ai/news/Fabric-Data-Agents-Microsoft-Copilot-Studio-Multi-Agent-Orchestration-Preview-Released
 tags:
 - Agent Interoperability
-- AI
 - Automation
 - Data Environments
 - Enterprise Automation
@@ -19,9 +18,7 @@ tags:
 - Intelligent Agents
 - Microsoft Copilot Studio
 - Microsoft Fabric
-- ML
 - Multi Agent Orchestration
-- News
 section_names:
 - ai
 - ml

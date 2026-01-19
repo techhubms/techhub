@@ -9,14 +9,12 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-17 10:07:13 +00:00
 permalink: /azure/blogs/Azure-for-Beginners-How-to-Launch-Your-First-Cloud-Project-in-30-Minutes
 tags:
-- Azure
 - Azure App Service
 - Azure Blob Storage
 - Azure Deployment
 - Azure Free Tier
 - Azure Portal
 - Beginner Guide
-- Blogs
 - Cloud Computing
 - Cloud Project
 - Microsoft Azure

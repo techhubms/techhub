@@ -9,14 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-12-10 22:07:54 +00:00
 permalink: /ai/videos/Aspire-for-AI-Applications
 tags:
-- AI
 - AI Application Development
 - API Management
 - App Orchestration
 - Application Flow
 - Application Insights
 - Aspire
-- Azure
 - Azure Free Trial
 - Cloud Computing
 - Containers
@@ -30,7 +28,6 @@ tags:
 - Tech
 - Technology
 - Token Usage Analysis
-- Videos
 section_names:
 - ai
 - azure

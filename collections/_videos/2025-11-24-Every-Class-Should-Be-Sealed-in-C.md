@@ -13,7 +13,6 @@ tags:
 - C#
 - Class Design
 - Code Safety
-- Coding
 - Development Practices
 - Maintainability
 - Object Oriented Programming
@@ -21,7 +20,6 @@ tags:
 - Performance
 - Sealed Classes
 - Software Engineering
-- Videos
 section_names:
 - coding
 ---

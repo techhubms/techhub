@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 16:43:19 +00:00
 permalink: /azure/videos/Anatomy-of-an-Outage-Evolving-Transparency-in-Microsoft-Engineering-Teams
 tags:
-- Azure
 - Azure Front Door
 - Azure Incident Response
 - Azure Service Health
-- DevOps
 - Engineering Best Practices
 - Incident Communication
 - Incident Response
@@ -24,11 +22,9 @@ tags:
 - Outage Management
 - Post Incident Review
 - Resilience
-- Security
 - Shared Responsibility Model
 - Status Page
 - Transparency
-- Videos
 section_names:
 - azure
 - devops

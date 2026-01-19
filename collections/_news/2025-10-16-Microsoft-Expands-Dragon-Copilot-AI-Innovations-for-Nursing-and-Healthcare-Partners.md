@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-16 14:06:15 +00:00
 permalink: /ai/news/Microsoft-Expands-Dragon-Copilot-AI-Innovations-for-Nursing-and-Healthcare-Partners
 tags:
-- AI
 - AI Assistant
 - Ambient AI
 - Atropos Health
@@ -20,7 +19,6 @@ tags:
 - Elsevier
 - Healthcare AI
 - Microsoft Health
-- News
 - Nursing Workflows
 - OpenEvidence
 - Partner Integrations

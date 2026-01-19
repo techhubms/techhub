@@ -9,12 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 06:33:59 +00:00
 permalink: /ai/videos/Building-and-Shipping-Edge-AI-Apps-with-Microsoft-Foundry
 tags:
-- AI
 - AI Demonstrations
 - AI Workflow
 - Android Integration
 - Audio Transcription
-- Azure
 - Azure Arc
 - Client Applications
 - Cloud To Edge
@@ -33,7 +31,6 @@ tags:
 - On Device AI
 - ORAS Tool
 - PhonePe Collaboration
-- Videos
 section_names:
 - ai
 - azure

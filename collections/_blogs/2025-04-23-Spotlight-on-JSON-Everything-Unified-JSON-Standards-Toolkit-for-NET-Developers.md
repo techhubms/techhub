@@ -10,8 +10,6 @@ date: 2025-04-23 18:55:14 +00:00
 permalink: /coding/blogs/Spotlight-on-JSON-Everything-Unified-JSON-Standards-Toolkit-for-NET-Developers
 tags:
 - .NET
-- Blogs
-- Coding
 - Data Validation
 - Greg Dennis
 - JSON

@@ -9,14 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-15 17:29:56 +00:00
 permalink: /ai/community/How-AI-and-Communication-APIs-Are-Transforming-Industry-Workflows
 tags:
-- AI
 - AI Routing
 - Appointment Scheduling
-- Azure
 - Azure AI Foundry
 - Azure Communication Services
 - Communication Workflows
-- Community
 - Compliance Automation
 - Conversational AI
 - Copilot Studio

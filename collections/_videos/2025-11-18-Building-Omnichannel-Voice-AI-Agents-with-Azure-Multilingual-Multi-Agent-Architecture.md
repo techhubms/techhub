@@ -9,8 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-18 19:13:32 +00:00
 permalink: /ai/videos/Building-Omnichannel-Voice-AI-Agents-with-Azure-Multilingual-Multi-Agent-Architecture
 tags:
-- AI
-- Azure
 - Azure AI
 - Azure Communication Services
 - Azure Speech Services
@@ -19,9 +17,7 @@ tags:
 - Dev
 - Development
 - Intent Recognition
-- Machine Learning
 - Microsoft
-- ML
 - Multi Agent Architecture
 - Multilingual
 - Real Time Interaction
@@ -29,7 +25,6 @@ tags:
 - Tech
 - Technology
 - Text To Speech
-- Videos
 - Voice AI Agents
 - Voice Live API
 - WebRTC

@@ -10,9 +10,7 @@ date: 2025-08-14 16:29:48 +00:00
 permalink: /azure/community/Partial-Updates-in-MongoDB-via-Azure-Data-Factory-Data-Flow-Nested-Field-Modification
 tags:
 - Array Manipulation
-- Azure
 - Azure Data Factory
-- Community
 - Data Flow
 - Derived Column
 - ETL

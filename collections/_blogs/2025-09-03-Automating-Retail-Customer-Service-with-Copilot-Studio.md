@@ -9,9 +9,7 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-03 07:44:29 +00:00
 permalink: /ai/blogs/Automating-Retail-Customer-Service-with-Copilot-Studio
 tags:
-- AI
 - API Workflows
-- Blogs
 - Bot Framework
 - Chatbot Solutions
 - Copilot

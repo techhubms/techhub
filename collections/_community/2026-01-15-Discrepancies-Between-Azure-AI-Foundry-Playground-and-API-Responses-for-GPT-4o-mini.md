@@ -9,17 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2026-01-15 20:34:31 +00:00
 permalink: /ai/community/Discrepancies-Between-Azure-AI-Foundry-Playground-and-API-Responses-for-GPT-4o-mini
 tags:
-- AI
 - AI Model Behavior
 - API Integration
-- Azure
 - Azure AI Foundry
 - Azure OpenAI Service
 - AzureChatOpenAI
 - Chat Playground
 - Chatbot Development
 - Classification Logic
-- Community
 - GPT 4o Mini
 - LangChain
 - Prompt Engineering

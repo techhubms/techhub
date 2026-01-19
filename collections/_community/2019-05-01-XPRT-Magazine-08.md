@@ -6,21 +6,15 @@ author: Xebia
 viewing_mode: external
 permalink: /ai/community/XPRT-Magazine-08
 tags:
-- AI
 - APIs
 - Automation
-- Azure
 - Azure Service Bus
 - Chaos Engineering
 - Cloud
-- Coding
-- Community
 - Data Science
-- DevOps
 - Event Sourcing
 - Kubernetes
 - Magazines
-- ML
 - Productivity
 - Serverless
 - Symbol Management

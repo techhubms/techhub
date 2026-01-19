@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-28 14:22:54 +00:00
 permalink: /ai/news/How-Microsoft-Research-is-enhancing-the-ability-of-LLMs-to-handle-more-complex-reasoning-tasks
 tags:
-- AI
 - AI Research
 - Cognitive Abilities
 - Company News
@@ -20,7 +19,6 @@ tags:
 - Machine Learning
 - Microsoft Research
 - Natural Language Processing
-- News
 - Problem Solving
 section_names:
 - ai

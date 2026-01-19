@@ -9,15 +9,12 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-04 14:19:05 +00:00
 permalink: /github-copilot/community/Is-it-fraud-I-wish-it-is-not
 tags:
-- AI
 - AI Services
 - Billing
 - Chat Credits
 - Code Completion
-- Community
 - Developer Tools
 - Feature Comparison
-- GitHub Copilot
 - Subscription
 - Usage Patterns
 - User Feedback

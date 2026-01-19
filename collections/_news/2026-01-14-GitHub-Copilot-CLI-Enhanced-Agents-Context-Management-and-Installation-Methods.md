@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2026-01-14 20:21:16 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-CLI-Enhanced-Agents-Context-Management-and-Installation-Methods
 tags:
-- AI
 - AI Agents
 - Automation
 - CI/CD Authentication
@@ -20,7 +19,6 @@ tags:
 - Copilot
 - DevOps Tools
 - GitHub Codespaces
-- GitHub Copilot
 - GitHub Copilot CLI
 - GPT 4.1
 - GPT 5 Mini
@@ -28,7 +26,6 @@ tags:
 - Improvement
 - Installation
 - Model Management
-- News
 - Project Context
 - Scripting
 - Session Management

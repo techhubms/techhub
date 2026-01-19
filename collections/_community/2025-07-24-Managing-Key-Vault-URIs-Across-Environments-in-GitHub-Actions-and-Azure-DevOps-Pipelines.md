@@ -11,18 +11,14 @@ permalink: /azure/community/Managing-Key-Vault-URIs-Across-Environments-in-GitHu
 tags:
 - Access Policy
 - ARM Templates
-- Azure
 - Azure DevOps
 - Azure Key Vault
 - CI/CD
-- Community
-- DevOps
 - Environment Variables
 - GitHub Actions
 - OIDC
 - Pipeline Parameters
 - Secrets Management
-- Security
 - Service Principal
 - YAML Pipelines
 section_names:

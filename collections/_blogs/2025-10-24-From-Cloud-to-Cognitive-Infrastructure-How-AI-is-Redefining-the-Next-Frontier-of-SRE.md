@@ -9,20 +9,17 @@ feed_url: https://devops.com/feed/
 date: 2025-10-24 11:07:09 +00:00
 permalink: /ai/blogs/From-Cloud-to-Cognitive-Infrastructure-How-AI-is-Redefining-the-Next-Frontier-of-SRE
 tags:
-- AI
 - AI Driven SRE
 - AI in DevOps
 - AI Infrastructure
 - AI Reliability
 - AI Workloads
-- Blogs
 - Business Of DevOps
 - Cloud Native Infrastructure
 - Cloud Observability
 - Cloud Operations
 - Contributed Content
 - Data Pipelines
-- DevOps
 - GPU Clusters
 - GPU Utilization
 - Hybrid AI Systems

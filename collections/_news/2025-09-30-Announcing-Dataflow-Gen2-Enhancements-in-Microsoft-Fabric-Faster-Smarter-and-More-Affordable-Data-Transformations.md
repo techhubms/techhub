@@ -9,9 +9,7 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-30 09:00:00 +00:00
 permalink: /ai/news/Announcing-Dataflow-Gen2-Enhancements-in-Microsoft-Fabric-Faster-Smarter-and-More-Affordable-Data-Transformations
 tags:
-- AI
 - AI Powered Transformation
-- Azure
 - Azure Data Lake Storage Gen2
 - CI/CD
 - Copilot
@@ -20,10 +18,8 @@ tags:
 - Lakehouse
 - Microsoft Fabric
 - Migration
-- ML
 - Modern Query Evaluation
 - Natural Language Data Ingestion
-- News
 - OneLake Catalog
 - Parameterized Dataflows
 - Performance Optimization

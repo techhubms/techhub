@@ -12,7 +12,6 @@ tags:
 - Action Driven Workflows
 - Agent Orchestration
 - Agentic Automation
-- AI
 - AI Agents
 - Community Blog Automation
 - Copilotandagentsatwork
@@ -25,7 +24,6 @@ tags:
 - Release Notes Automation
 - Rovo Agents
 - Team Collaboration
-- Videos
 - Workflow Design
 section_names:
 - ai

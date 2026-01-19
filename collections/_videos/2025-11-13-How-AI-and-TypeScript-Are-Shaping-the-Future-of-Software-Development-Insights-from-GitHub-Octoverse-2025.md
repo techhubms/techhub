@@ -9,14 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-11-13 15:00:42 +00:00
 permalink: /ai/videos/How-AI-and-TypeScript-Are-Shaping-the-Future-of-Software-Development-Insights-from-GitHub-Octoverse-2025
 tags:
-- AI
 - AI Adoption
 - AI Trends
 - Code Generation
-- Coding
 - Coding Practices
 - Developer Tools
-- DevOps
 - Emerging Markets
 - GitHub
 - Octoverse
@@ -24,7 +21,6 @@ tags:
 - Python
 - Software Development
 - TypeScript
-- Videos
 section_names:
 - ai
 - coding

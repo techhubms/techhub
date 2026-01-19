@@ -9,18 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-30 09:14:23 +00:00
 permalink: /ai/community/Troubleshooting-Azure-Linux-Web-App-Deployment-Compatibility-Environment-Variables-and-Memory
 tags:
-- AI
 - App Service SKU
-- Azure
 - Azure App Service
 - Azure Portal
 - Build Troubleshooting
-- Coding
-- Community
 - Compatibility
 - Container Startup
 - Deployment Center
-- DevOps
 - Environment Variables
 - Exit Code 137
 - Flask

@@ -11,7 +11,6 @@ permalink: /ml/news/Warehouse-Snapshots-Now-Generally-Available-in-Microsoft-Fab
 tags:
 - Analytics
 - Audit
-- Azure
 - Compliance
 - Data Consistency
 - Data Science
@@ -20,10 +19,7 @@ tags:
 - Financial Close
 - General Availability
 - Incident Recovery
-- Machine Learning
 - Microsoft Fabric
-- ML
-- News
 - Reporting
 - Reproducible Datasets
 - Snapshot Management

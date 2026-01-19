@@ -11,14 +11,12 @@ permalink: /devops/news/Metered-GitHub-Enterprise-Billing-Now-Available-for-Visu
 tags:
 - API Automation
 - Compliance Auditing
-- DevOps
 - DevOps Administration
 - Enterprise Cloud
 - GitHub Enterprise
 - License Assignment
 - License Management
 - Metered Billing
-- News
 - Subscription Management
 - Usage Based Billing
 - User Management

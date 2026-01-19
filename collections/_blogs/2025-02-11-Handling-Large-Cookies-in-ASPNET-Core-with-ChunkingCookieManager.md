@@ -12,9 +12,7 @@ tags:
 - .NET
 - ASP.NET
 - ASP.NET Core
-- Blogs
 - ChunkingCookieManager
-- Coding
 - CookieOptions
 - Cookies
 - Cookies Size Limit

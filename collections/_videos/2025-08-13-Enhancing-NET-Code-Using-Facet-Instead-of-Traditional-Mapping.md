@@ -12,7 +12,6 @@ tags:
 - .NET
 - C#
 - Code Performance
-- Coding
 - Data Transformation
 - Development Practice
 - Facet Library
@@ -21,7 +20,6 @@ tags:
 - Object Mapping
 - Open Source
 - Typed Projections
-- Videos
 section_names:
 - coding
 ---

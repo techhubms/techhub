@@ -11,10 +11,8 @@ permalink: /azure/news/Building-a-Security-First-Culture-at-Microsoft-Strategies
 tags:
 - AI
 - AI Cyberthreats
-- Azure
 - Chief Information Security Officer
 - Company News
-- DevOps
 - DevSecOps
 - Employee Awareness
 - Engineering Security
@@ -23,9 +21,7 @@ tags:
 - Incident Response
 - Microsoft Security
 - Microsoft Security Academy
-- News
 - Secure Future Initiative
-- Security
 - Security Culture
 - Security Foundations
 - Security Training

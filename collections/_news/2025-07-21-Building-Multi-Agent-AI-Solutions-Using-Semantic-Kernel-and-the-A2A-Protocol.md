@@ -12,11 +12,8 @@ tags:
 - A2A
 - A2A Protocol
 - Agent Orchestration
-- AI
-- Azure
 - Azure AI Foundry
 - Azure Functions
-- Coding
 - DevTools
 - Distributed AI
 - Enterprise AI
@@ -25,7 +22,6 @@ tags:
 - Microservices
 - Microsoft AI
 - Multi Agent Systems
-- News
 - Playwright
 - Python
 - SDK

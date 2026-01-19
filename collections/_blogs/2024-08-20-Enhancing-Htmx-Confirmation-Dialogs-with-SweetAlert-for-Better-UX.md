@@ -10,9 +10,7 @@ date: 2024-08-20 00:00:00 +00:00
 permalink: /coding/blogs/Enhancing-Htmx-Confirmation-Dialogs-with-SweetAlert-for-Better-UX
 tags:
 - ASP.NET
-- Blogs
 - Client Side Scripting
-- Coding
 - Confirmation Dialog
 - Event Handling
 - Evt.preventdefault

@@ -11,7 +11,6 @@ permalink: /ml/news/Step-by-Step-Using-Copy-Job-to-Move-Data-Across-Tenants-in-F
 tags:
 - Access Control
 - Authentication
-- Azure
 - Azure Data Lake Gen2
 - Bulk Copy
 - Change Data Capture
@@ -24,8 +23,6 @@ tags:
 - Incremental Copy
 - Microsoft Entra ID
 - Microsoft Fabric
-- ML
-- News
 - Role Assignment
 - Service Principal
 - Table Mapping

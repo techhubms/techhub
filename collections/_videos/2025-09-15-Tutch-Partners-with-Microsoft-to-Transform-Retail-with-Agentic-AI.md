@@ -10,8 +10,6 @@ date: 2025-09-15 14:00:04 +00:00
 permalink: /ai/videos/Tutch-Partners-with-Microsoft-to-Transform-Retail-with-Agentic-AI
 tags:
 - Agentic AI
-- AI
-- Azure
 - Azure AI
 - Beacon Lighting
 - Business Transformation
@@ -25,7 +23,6 @@ tags:
 - Product Recommendations
 - Retail Technology
 - Tutch
-- Videos
 section_names:
 - ai
 - azure

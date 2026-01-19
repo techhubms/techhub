@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-10 08:00:00 +00:00
 permalink: /ai/news/Microsoft-Recognized-as-Leader-in-2025-GigaOm-Radar-for-Semantic-Layers-and-Metric-Stores
 tags:
-- AI
 - AI Integration
 - Analytics
 - Business Intelligence
@@ -22,8 +21,6 @@ tags:
 - Metric Stores
 - Microsoft Fabric
 - Microsoft Ignite
-- ML
-- News
 - Power BI
 - Semantic Models
 section_names:

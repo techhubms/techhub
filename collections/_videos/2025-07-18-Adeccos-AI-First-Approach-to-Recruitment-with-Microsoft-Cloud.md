@@ -10,12 +10,10 @@ date: 2025-07-18 16:20:01 +00:00
 permalink: /ai/videos/Adeccos-AI-First-Approach-to-Recruitment-with-Microsoft-Cloud
 tags:
 - Adecco
-- AI
 - AI Driven Future
 - AI First Strategy
 - AI Tools
 - AI Transformation
-- Azure
 - Caroline Basyn
 - Digital Transformation
 - Enterprise AI
@@ -27,7 +25,6 @@ tags:
 - Recruitment
 - Skills Development
 - Talent Innovation
-- Videos
 section_names:
 - ai
 - azure

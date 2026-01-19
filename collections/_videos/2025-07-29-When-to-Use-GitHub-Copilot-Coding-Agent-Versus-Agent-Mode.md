@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-07-29 14:00:00 +00:00
 permalink: /github-copilot/videos/When-to-Use-GitHub-Copilot-Coding-Agent-Versus-Agent-Mode
 tags:
-- AI
 - Autonomous Development
-- Coding
 - Coding Agent
 - CodingAgent
 - Copilot Agent Mode
@@ -19,11 +17,9 @@ tags:
 - Developer Productivity
 - Game Development
 - GitHub
-- GitHub Copilot
 - Interactive Development
 - Software Automation
 - Testing Migration
-- Videos
 section_names:
 - ai
 - coding

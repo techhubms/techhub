@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-11-19 19:14:53 +00:00
 permalink: /ai/videos/Using-the-Plan-Agent-in-VS-Code-for-Step-by-Step-Task-Planning
 tags:
-- AI
 - AI Tools
-- Coding
 - Copilot Chat
 - Developer Productivity
 - Implementation Strategy
@@ -21,7 +19,6 @@ tags:
 - Requirement Refinement
 - Step By Step Planning
 - Task Planning
-- Videos
 - VS Code
 section_names:
 - ai

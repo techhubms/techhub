@@ -10,23 +10,17 @@ date: 2025-11-11 21:32:57 +00:00
 permalink: /github-copilot/community/Top-Microsoft-Ignite-2025-Sessions-for-Azure-Developers-AI-Copilot-and-Fabric
 tags:
 - Agent Framework
-- AI
 - AI Agents
 - AI Integration
-- Azure
 - Azure AI Foundry
 - CI/CD
 - Cloud Development
-- Community
 - Data Agents
 - Developers
-- DevOps
-- GitHub Copilot
 - Lakehouse
 - MCP Systems
 - Microsoft Fabric
 - Microsoft Ignite
-- ML
 - Session Scheduler
 section_names:
 - ai

@@ -10,15 +10,12 @@ date: 2025-10-31 15:44:05 +00:00
 permalink: /ai/community/Building-Multi-Agent-AI-Systems-on-Azure-App-Service-with-Microsoft-Agent-Framework
 tags:
 - .NET 9
-- AI
 - AI Agents
 - Async Request Reply
-- Azure
 - Azure AI Foundry
 - Azure App Service
 - Bicep
 - Cloud Architecture
-- Community
 - Cosmos DB
 - External API Integration
 - Microsoft Agent Framework

@@ -10,10 +10,8 @@ date: 2025-11-19 14:53:29 +00:00
 permalink: /ai/videos/Reimagining-IT-Operations-with-Agentic-AI-on-Microsoft-Azure
 tags:
 - Agentic AI
-- AI
 - AI Agents
 - Autonomous Operations
-- Azure
 - Digital Operations
 - Incident Management
 - Infrastructure Management
@@ -29,7 +27,6 @@ tags:
 - Service Request
 - TAO
 - TCS
-- Videos
 section_names:
 - ai
 - azure

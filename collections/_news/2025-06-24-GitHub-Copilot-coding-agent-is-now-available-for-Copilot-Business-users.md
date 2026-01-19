@@ -9,12 +9,9 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-06-24 20:40:34 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-coding-agent-is-now-available-for-Copilot-Business-users
 tags:
-- AI
 - Coding Agent
 - Copilot Enterprise
 - Copilot Pro+
-- GitHub Copilot
-- News
 - Productivity
 - Public Preview
 - Workflow Automation

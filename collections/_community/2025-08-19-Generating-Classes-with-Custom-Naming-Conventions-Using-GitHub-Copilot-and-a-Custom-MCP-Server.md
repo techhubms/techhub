@@ -10,20 +10,15 @@ date: 2025-08-19 16:26:20 +00:00
 permalink: /github-copilot/community/Generating-Classes-with-Custom-Naming-Conventions-Using-GitHub-Copilot-and-a-Custom-MCP-Server
 tags:
 - .NET
-- AI
 - ASP.NET Core
-- Azure
 - Azure App Service
 - Business Logic
 - C#
 - Class Generation
-- Coding
-- Community
 - Copilot Agent
 - Dependency Injection
 - Enterprise Compliance
 - ExpressRoute
-- GitHub Copilot
 - GitHub Spark
 - MCP
 - MCP Server

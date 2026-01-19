@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 13:23:06 +00:00
 permalink: /ai/videos/Build-Partner-Advantage-Drive-Key-AI-Use-Cases-with-Azure-Tech-Stack
 tags:
-- AI
 - AI Agents
 - App Development
 - Automation
-- Azure
 - Azure AI
 - Azure Foundry
 - Azure Web Apps
@@ -29,7 +27,6 @@ tags:
 - Partner Ecosystem
 - Partner Funding
 - Specializations
-- Videos
 section_names:
 - ai
 - azure

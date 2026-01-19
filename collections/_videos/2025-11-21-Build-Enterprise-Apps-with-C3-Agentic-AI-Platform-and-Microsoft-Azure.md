@@ -9,13 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 12:49:52 +00:00
 permalink: /ai/videos/Build-Enterprise-Apps-with-C3-Agentic-AI-Platform-and-Microsoft-Azure
 tags:
-- AI
 - AI Agents
 - App Deployment
 - Application Canvas
-- Azure
 - C3 Agentic AI Platform
-- Coding
 - Copilot Collaboration
 - Dashboarding
 - Enterprise AI
@@ -26,7 +23,6 @@ tags:
 - MSIgnite
 - Observability
 - Versioning
-- Videos
 - VS Code
 - Workflow Automation
 section_names:

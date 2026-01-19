@@ -10,14 +10,11 @@ date: 2025-12-01 23:35:11 +00:00
 permalink: /ai/community/General-Availability-of-AI-and-RAG-Connectors-in-Azure-Logic-Apps-Standard
 tags:
 - AgentLoop
-- AI
 - AI Connectors
 - AI Search
-- Azure
 - Azure Logic Apps
 - Azure OpenAI
 - Chunking
-- Community
 - Document Intelligence
 - Document Processing
 - Embeddings

@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-21 20:06:07 +00:00
 permalink: /ml/videos/MS-Ignite-SQL-Server-2025-SQL-Database-in-Fabric-and-More-Announced
 tags:
-- Azure
 - Azure SQL
 - Azure SQL DB
 - Cloud Computing
@@ -25,12 +24,10 @@ tags:
 - Microsoft Developer
 - Microsoft Fabric
 - Microsoft Ignite
-- ML
 - SQL
 - SQL Server
 - Tech
 - Technology
-- Videos
 section_names:
 - azure
 - ml

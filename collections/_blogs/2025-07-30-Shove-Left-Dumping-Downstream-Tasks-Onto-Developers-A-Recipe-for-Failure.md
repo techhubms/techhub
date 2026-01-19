@@ -9,20 +9,17 @@ feed_url: https://devops.com/feed/
 date: 2025-07-30 12:34:17 +00:00
 permalink: /devops/blogs/Shove-Left-Dumping-Downstream-Tasks-Onto-Developers-A-Recipe-for-Failure
 tags:
-- Blogs
 - Business Of DevOps
 - Change Developer
 - Collaboration
 - Contributed Content
 - Database
 - Developer Burnout
-- DevOps
 - DevSecOps
 - Doin' DevOps
 - Downstream Tasks
 - Efficiency
 - Project Failure
-- Security
 - Shift Left
 - Shove Left
 - Social Facebook

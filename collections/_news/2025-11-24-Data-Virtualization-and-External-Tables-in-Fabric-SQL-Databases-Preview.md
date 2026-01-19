@@ -10,8 +10,6 @@ date: 2025-11-24 10:00:00 +00:00
 permalink: /ai/news/Data-Virtualization-and-External-Tables-in-Fabric-SQL-Databases-Preview
 tags:
 - ABFS
-- AI
-- Azure
 - Azure Data Lake Gen2
 - Azure SQL Database
 - BULK Operations
@@ -24,8 +22,6 @@ tags:
 - JSON
 - JSON Functions
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - OPENROWSET
 - Parquet

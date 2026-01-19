@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7
 date: 2025-12-19 15:51:48 +00:00
 permalink: /ai/videos/Azure-Update-19th-December-2025-Service-Improvements-AI-and-Security-News
 tags:
-- AI
 - ASM Blob Storage
-- Azure
 - Azure AI
 - Azure Cloud
 - Azure NetApp Files
@@ -25,11 +23,9 @@ tags:
 - Microsoft
 - Microsoft Azure
 - Ransomware Protection
-- Security
 - Serverless
 - Service Bus Trigger
 - SRE
-- Videos
 - Voice Models
 section_names:
 - ai

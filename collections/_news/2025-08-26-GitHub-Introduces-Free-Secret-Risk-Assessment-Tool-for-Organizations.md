@@ -10,15 +10,12 @@ date: 2025-08-26 21:21:48 +00:00
 permalink: /devops/news/GitHub-Introduces-Free-Secret-Risk-Assessment-Tool-for-Organizations
 tags:
 - Continuous Monitoring
-- DevOps
 - GitHub
 - GitHub Enterprise
 - Incident Management
-- News
 - Organization Security
 - Risk Assessment
 - Secret Scanning
-- Security
 - Security Tools
 - Token Exposure
 section_names:

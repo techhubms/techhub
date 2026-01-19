@@ -9,10 +9,8 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-11 11:30:00 +00:00
 permalink: /ai/news/Microsoft-Named-a-Leader-in-2025-Gartner-Magic-Quadrant-for-Data-Integration-Tools
 tags:
-- AI
 - AI Powered Analytics
 - Apache Iceberg
-- Azure
 - Cloud Data
 - Cross Cloud Integration
 - Data Governance
@@ -24,8 +22,6 @@ tags:
 - Fabric Data Factory
 - Gartner Magic Quadrant
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Real Time Intelligence
 - SaaS

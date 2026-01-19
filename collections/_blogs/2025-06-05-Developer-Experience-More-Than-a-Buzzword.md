@@ -10,11 +10,9 @@ date: 2025-06-05 08:31:00 +00:00
 permalink: /devops/blogs/Developer-Experience-More-Than-a-Buzzword
 tags:
 - AI
-- Blogs
 - Developer Experience
 - Developer Portal
 - Developer Productivity
-- DevOps
 - DevX
 - Discoverability
 - Documentation

@@ -13,11 +13,9 @@ tags:
 - Agent Factory
 - Agent Memory
 - Agent Service
-- AI
 - AI Agent
 - AI Agents
 - API Integration
-- Azure
 - Contextual AI
 - Conversational AI
 - Gpt 4.1
@@ -30,7 +28,6 @@ tags:
 - Microsoft Foundry
 - MSIgnite
 - Natural Language Processing
-- News
 - Personalization
 - Python SDK
 - Stateful Agents

@@ -9,11 +9,8 @@ feed_url: https://dellenny.com/feed/
 date: 2025-10-23 08:41:37 +00:00
 permalink: /ai/blogs/Unlocking-Smarter-Search-Integrating-Azure-AI-Search-and-Azure-OpenAI-Service
 tags:
-- AI
-- Azure
 - Azure AI Search
 - Azure OpenAI Service
-- Blogs
 - Cognitive Search
 - Data Enrichment
 - Embeddings

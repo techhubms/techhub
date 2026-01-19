@@ -10,7 +10,6 @@ date: 2025-11-25 11:00:00 +00:00
 permalink: /ml/news/Enterprise-Grade-JDBC-Driver-for-Microsoft-Fabric-Data-Engineering-Preview
 tags:
 - Authentication
-- Azure
 - Azure Entra ID
 - BI Tools
 - Certificate Authentication
@@ -25,8 +24,6 @@ tags:
 - Lakehouse
 - Logging
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Power BI
 - Preview Release

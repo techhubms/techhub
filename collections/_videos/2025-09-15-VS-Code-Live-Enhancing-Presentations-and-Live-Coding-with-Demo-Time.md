@@ -9,17 +9,13 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-09-15 22:30:14 +00:00
 permalink: /github-copilot/videos/VS-Code-Live-Enhancing-Presentations-and-Live-Coding-with-Demo-Time
 tags:
-- AI
 - Code Demos
-- Coding
 - Demo Time
 - Developer Presentations
 - Development Workflow
-- GitHub Copilot
 - Live Coding
 - Presentation Tools
 - Productivity Tools
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

@@ -9,14 +9,11 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-07 17:22:08 +00:00
 permalink: /github-copilot/community/OpenAI-GPT-5-Public-Preview-Announcement-for-GitHub-Copilot
 tags:
-- AI
 - AI Models
-- Community
 - Community Discussion
 - Copilot Settings
 - Developer Feedback
 - GitHub
-- GitHub Copilot
 - Model Upgrade
 - OpenAI GPT 5
 - Premium Pricing

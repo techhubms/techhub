@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 11:55:10 +00:00
 permalink: /ai/videos/Innovate-with-AI-at-Enterprise-Scale-Microsoft-Ignite-Session-BRK410
 tags:
-- AI
 - AI Agents
 - AI Deployment
 - AI Guardrails
@@ -29,7 +28,6 @@ tags:
 - Risk Management
 - Sky Virtual Agent
 - Startup Collaboration
-- Videos
 section_names:
 - ai
 ---

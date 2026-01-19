@@ -10,15 +10,12 @@ date: 2025-07-23 16:11:38 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-coding-agent-now-supports-instructionsmd-custom-instructions
 tags:
 - .instructions.md
-- AI
 - Automation
 - Copilot Coding Agent
 - Custom Instructions
 - Enterprise
 - GitHub CLI
-- GitHub Copilot
 - IDE Integration
-- News
 - Pro+
 - Pull Requests
 - Repository Automation

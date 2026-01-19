@@ -6,9 +6,6 @@ canonical_url: https://www.youtube.com/playlist?list=PLXVVwOM8uv2y0Yo6H8qu9giWWW
 viewing_mode: external
 permalink: /github-copilot/blogs/blogs/2024-06-01-GitHub-Copilot-video-series-Levels-of-Enlightenment
 tags:
-- AI
-- Blogs
-- GitHub Copilot
 - Programming
 - Software Development
 - Tutorials

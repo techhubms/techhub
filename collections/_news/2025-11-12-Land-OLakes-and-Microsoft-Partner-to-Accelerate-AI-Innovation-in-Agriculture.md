@@ -11,9 +11,7 @@ permalink: /ai/news/Land-OLakes-and-Microsoft-Partner-to-Accelerate-AI-Innovatio
 tags:
 - Agribusiness
 - Agricultural Technology
-- AI
 - AI Innovation
-- Azure
 - Azure AI Foundry
 - Cloud Migration
 - Company News
@@ -24,7 +22,6 @@ tags:
 - Enterprise Copilot
 - Land O’Lakes
 - Microsoft
-- News
 - Oz
 section_names:
 - ai

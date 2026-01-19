@@ -9,12 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7
 date: 2025-11-26 16:52:12 +00:00
 permalink: /ai/videos/SQL-Server-2025-Top-Ten-Features
 tags:
-- AI
 - AI Integration
-- Azure
 - Azure Arc
 - Change Event Streaming
-- Coding
 - Database
 - Diskann
 - Engine Improvements
@@ -24,7 +21,6 @@ tags:
 - JSON
 - Microsoft
 - Microsoft Fabric
-- ML
 - Python Driver
 - RAG
 - Regex
@@ -33,7 +29,6 @@ tags:
 - SQL Server
 - Standard Edition
 - Vector Support
-- Videos
 section_names:
 - ai
 - azure

@@ -23,12 +23,10 @@ tags:
 - Microsoft 365
 - Microsoft Digital Crimes Unit
 - Multi Factor Authentication
-- News
 - On The Issues
 - Phishing
 - RaccoonO365
 - Ransomware
-- Security
 - Threat Intelligence
 section_names:
 - security

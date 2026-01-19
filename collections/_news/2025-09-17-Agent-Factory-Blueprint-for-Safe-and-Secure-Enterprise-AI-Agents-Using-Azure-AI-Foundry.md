@@ -10,11 +10,9 @@ date: 2025-09-17 21:30:00 +00:00
 permalink: /ai/news/Agent-Factory-Blueprint-for-Safe-and-Secure-Enterprise-AI-Agents-Using-Azure-AI-Foundry
 tags:
 - Agent Factory
-- AI
 - AI + Machine Learning
 - AI Agent Blueprint
 - Analytics
-- Azure
 - Azure AI Foundry
 - Compliance
 - Data Protection
@@ -26,14 +24,12 @@ tags:
 - Management And Governance
 - Microsoft Defender
 - Microsoft Purview
-- News
 - NIST AI RMF
 - Observability
 - Prompt Injection
 - PyRIT
 - Red Teaming Agent
 - Risk Evaluation
-- Security
 - Shift Left Security
 section_names:
 - ai

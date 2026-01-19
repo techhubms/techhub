@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-26 10:01:45 +00:00
 permalink: /ai/videos/Deploying-and-Operating-Power-Platform-Solutions-with-DevOps
 tags:
-- AI
 - ALM
 - BRK310
 - Canvases
@@ -17,7 +16,6 @@ tags:
 - Copilot Studio
 - Dataverse
 - Deploying And Operating Power Platform Solutions With DevOps | BRK310
-- DevOps
 - Environment Groups
 - F5n1
 - GitHub
@@ -37,7 +35,6 @@ tags:
 - Power Platform Monitor
 - Production Deployment
 - Source Control
-- Videos
 section_names:
 - ai
 - devops

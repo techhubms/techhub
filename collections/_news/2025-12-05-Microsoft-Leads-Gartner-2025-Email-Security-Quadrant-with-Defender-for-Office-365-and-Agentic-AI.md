@@ -10,7 +10,6 @@ date: 2025-12-05 20:00:00 +00:00
 permalink: /ai/news/Microsoft-Leads-Gartner-2025-Email-Security-Quadrant-with-Defender-for-Office-365-and-Agentic-AI
 tags:
 - Agentic AI
-- AI
 - Benchmarking
 - Business Email Compromise
 - Cybersecurity
@@ -19,10 +18,8 @@ tags:
 - Integrated Cloud Email Security
 - Microsoft Defender For Office 365
 - Microsoft Teams Security
-- News
 - Phishing Attacks
 - Secure Email Gateway
-- Security
 - Security Copilot
 - Security Operations Center
 - Threat Detection

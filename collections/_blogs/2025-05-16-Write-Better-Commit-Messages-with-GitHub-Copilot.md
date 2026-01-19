@@ -9,17 +9,13 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-05-16 00:00:00 +00:00
 permalink: /github-copilot/blogs/Write-Better-Commit-Messages-with-GitHub-Copilot
 tags:
-- AI
 - AI Tools
 - Best Practices
-- Blogs
 - Code Change Summaries
-- Coding
 - Commit Messages
 - Conventional Commits
 - Copilot Chat
 - Developer Workflow
-- GitHub Copilot
 - PR Descriptions
 - Tab Completion
 - VS Code

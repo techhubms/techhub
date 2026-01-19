@@ -10,20 +10,16 @@ date: 2026-01-05 13:01:17 +00:00
 permalink: /github-copilot/videos/Hands-On-Lab-The-Power-of-GitHub-Copilot-in-Visual-Studio-Code
 tags:
 - Agentic Development
-- AI
 - AI Coding Assistance
 - Cloud Development
 - Code Customization
-- Coding
 - Coding Workflows
 - Copilot Agent Mode
 - Copilot CLI
 - Custom Agents
 - Developer Productivity
-- GitHub Copilot
 - GitHub Copilot Cloud Agent
 - MCP Servers
-- Videos
 - VS Code
 section_names:
 - ai

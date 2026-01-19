@@ -10,26 +10,19 @@ date: 2025-06-19 21:19:28 +00:00
 permalink: /github-copilot/news/Announcing-General-Availability-of-GitHub-Copilot-for-AzureNow-with-Agent-Mode
 tags:
 - Agent Mode
-- AI
 - AI Agent
 - AI Powered Development
 - All Things Azure
 - App Development
 - Appdev
 - Application Deployment
-- Azure
 - Azure Bicep
 - Azure Developer CLI
 - Cloud Automation
-- Coding
 - Copilot Chat
-- DevOps
 - Enterprise Security
-- GitHub Copilot
 - IaC
 - Infrastructure Management
-- News
-- Security
 - VS
 - VS Code
 section_names:

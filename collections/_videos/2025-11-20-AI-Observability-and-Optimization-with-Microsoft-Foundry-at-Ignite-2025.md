@@ -10,14 +10,11 @@ date: 2025-11-20 16:18:44 +00:00
 permalink: /ai/videos/AI-Observability-and-Optimization-with-Microsoft-Foundry-at-Ignite-2025
 tags:
 - Agent Fleet Management
-- AI
 - AI Observability
 - AI Optimization
-- Azure
 - CarMax
 - Continuous Evaluation
 - Deployment Gates
-- DevOps
 - Diagnostics
 - GitHub Integration
 - Human in The Loop
@@ -30,7 +27,6 @@ tags:
 - Risk Assessment
 - Safety Evaluation
 - Sky Release
-- Videos
 section_names:
 - ai
 - azure

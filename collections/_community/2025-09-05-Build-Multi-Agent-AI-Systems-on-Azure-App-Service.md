@@ -11,15 +11,11 @@ permalink: /ai/community/Build-Multi-Agent-AI-Systems-on-Azure-App-Service
 tags:
 - .NET Aspire
 - Agent Orchestration
-- AI
 - App Deployment
 - App Monitoring
-- Azure
 - Azure AI Foundry
 - Azure App Service
 - Cloud Native
-- Coding
-- Community
 - Connected Agents
 - E Commerce
 - MCP

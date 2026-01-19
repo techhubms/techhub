@@ -9,22 +9,18 @@ feed_url: https://github.blog/feed/
 date: 2025-07-16 21:06:17 +00:00
 permalink: /github-copilot/news/GitHub-Availability-Report-June-2025
 tags:
-- AI
 - Claude Models
 - Company News
 - Copilot Chat
 - Copilot Coding Agent
-- DevOps
 - Error Rates
 - Gemini Models
 - GitHub Actions
 - GitHub Availability Report
-- GitHub Copilot
 - Incident Report
 - JetBrains IDEs
 - Mitigation
 - Network Routing
-- News
 - News & Insights
 - Service Outage
 - Site Reliability

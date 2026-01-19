@@ -10,12 +10,10 @@ date: 2025-09-23 18:25:56 +00:00
 permalink: /ai/videos/Building-a-Resilience-Coach-with-AI-on-Cozy-AI-Kitchen
 tags:
 - Agent Development
-- AI
 - AI Coaching
 - AI Engineering
 - Azure OpenAI
 - Cloud Computing
-- Coding
 - Context Engineering
 - Cozy AI Kitchen
 - Dev
@@ -31,7 +29,6 @@ tags:
 - Tech
 - Technology
 - Tutorial
-- Videos
 - VS Code
 section_names:
 - ai

@@ -10,15 +10,11 @@ date: 2025-11-13 06:28:27 +00:00
 permalink: /coding/community/Part-I-OTEL-Sidecar-Extension-on-Azure-App-Service-for-Linux-PHP-Integration-Guide
 tags:
 - Application Insights
-- Azure
 - Azure App Service
 - Azure Monitor
-- Coding
-- Community
 - Composer
 - Containerization
 - Deployment
-- DevOps
 - Environment Variables
 - Linux
 - Monitoring

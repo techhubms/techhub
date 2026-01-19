@@ -12,12 +12,9 @@ plans:
 - Free
 alt-collection: features
 tags:
-- AI
 - BYOLLM
 - Chat
 - Code
-- GitHub Copilot
-- Videos
 section_names:
 - ai
 - github-copilot

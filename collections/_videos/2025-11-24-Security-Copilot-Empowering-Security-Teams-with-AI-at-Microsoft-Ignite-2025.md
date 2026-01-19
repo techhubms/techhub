@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 08:11:12 +00:00
 permalink: /ai/videos/Security-Copilot-Empowering-Security-Teams-with-AI-at-Microsoft-Ignite-2025
 tags:
-- AI
 - ArcGIS Analytics
 - BRK244
 - Data Automation
@@ -24,13 +23,11 @@ tags:
 - OneLake
 - Partner Solutions
 - SecOps
-- Security
 - Security Automation
 - Security Copilot
 - SharePoint Integration
 - Snowflake Integration
 - Unified Data Platform
-- Videos
 section_names:
 - ai
 - security

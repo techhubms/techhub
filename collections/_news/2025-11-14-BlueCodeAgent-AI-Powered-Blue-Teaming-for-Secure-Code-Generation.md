@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-14 16:48:52 +00:00
 permalink: /ai/news/BlueCodeAgent-AI-Powered-Blue-Teaming-for-Secure-Code-Generation
 tags:
-- AI
 - AI Ethics
 - AI Governance
 - Automated Testing
@@ -24,9 +23,7 @@ tags:
 - LLM Security
 - Malicious Code
 - Microsoft Research
-- News
 - Red Teaming
-- Security
 - Vulnerability Detection
 section_names:
 - ai

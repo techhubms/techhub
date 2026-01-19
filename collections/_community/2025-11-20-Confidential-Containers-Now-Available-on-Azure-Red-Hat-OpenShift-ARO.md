@@ -10,17 +10,14 @@ date: 2025-11-20 14:06:03 +00:00
 permalink: /azure/community/Confidential-Containers-Now-Available-on-Azure-Red-Hat-OpenShift-ARO
 tags:
 - AMD SEV SNP
-- Azure
 - Azure Red Hat OpenShift
 - Cloud Security
 - Cluster Isolation
-- Community
 - Compliance
 - Confidential Computing
 - Confidential Containers
 - Containerization
 - CVMs
-- DevOps
 - DevOps Environments
 - GDPR
 - HIPAA
@@ -29,7 +26,6 @@ tags:
 - Microsoft Ignite
 - OpenShift 4.15
 - Sandboxes
-- Security
 - Security Automation
 - Trusted Execution Environments
 - Workload Attestation

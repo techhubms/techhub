@@ -9,19 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-19 00:57:37 +00:00
 permalink: /ai/community/Azure-Copilot-Deployment-Agent-Preview-Smarter-Infrastructure-Planning
 tags:
-- AI
 - Application Insights
-- Azure
 - Azure AD
 - Azure Cognitive Search
 - Azure Copilot
 - Azure Key Vault
 - CI/CD
 - Cloud Architecture
-- Coding
-- Community
 - Deployment Agent
-- DevOps
 - GenAI
 - GitHub
 - IaC

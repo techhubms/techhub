@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-07-30 22:35:15 +00:00
 permalink: /ai/videos/Unlocking-Your-Agents-Potential-with-Model-Context-Protocol-in-Azure-AI-Foundry
 tags:
-- AI
 - AI Agent
-- Azure
 - Azure AI Foundry
 - Cloud Computing
 - Data Analytics
@@ -23,7 +21,6 @@ tags:
 - Microsoft
 - Tech
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

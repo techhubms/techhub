@@ -12,9 +12,7 @@ tags:
 - Activity Protocol
 - Agent Framework
 - Agent Orchestration
-- AI
 - AutoGen
-- Azure
 - Azure AI
 - Azure Purview
 - Containerized Agents
@@ -26,16 +24,13 @@ tags:
 - LangGraph
 - MCP Toolchains
 - Microsoft Foundry
-- ML
 - MSIgnite
 - Multi Agent Systems
 - OpenAI Agents SDK
 - OpenTelemetry
 - Policy Middleware
 - Secure Deployment
-- Security
 - Semantic Kernel
-- Videos
 - VS
 section_names:
 - ai

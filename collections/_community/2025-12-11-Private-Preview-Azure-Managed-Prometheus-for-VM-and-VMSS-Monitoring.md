@@ -11,12 +11,9 @@ permalink: /azure/community/Private-Preview-Azure-Managed-Prometheus-for-VM-and-
 tags:
 - AKS
 - Alerting
-- Azure
 - Azure Arc
 - Azure Managed Grafana
 - Azure Monitor
-- Community
-- DevOps
 - GPU Monitoring
 - HPC
 - IaaS

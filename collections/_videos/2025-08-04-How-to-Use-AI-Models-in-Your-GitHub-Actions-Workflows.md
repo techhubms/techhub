@@ -9,20 +9,17 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-04 14:01:12 +00:00
 permalink: /ai/videos/How-to-Use-AI-Models-in-Your-GitHub-Actions-Workflows
 tags:
-- AI
 - AI Models
 - AI Powered Automation
 - Automation
 - Bug Reproduction Checker
 - Changelog Generator
-- DevOps
 - Documentation Automation
 - GitHub
 - GitHub Actions
 - GitHubModels
 - Project Bloom
 - Repository Management
-- Videos
 - Weekly Issue Summaries
 - Workflow Automation
 section_names:

@@ -10,18 +10,15 @@ date: 2025-08-11 12:09:24 +00:00
 permalink: /ai/blogs/How-Gemini-CLI-GitHub-Actions-is-Changing-Developer-Workflows
 tags:
 - Agentic DevOps
-- AI
 - AI Assisted Development
 - AI Automation
 - AI Powered Tools
-- Blogs
 - Business Of DevOps
 - Code Review Automation
 - Collaborative Coding
 - Command Allowlisting
 - Continuous Integration
 - Developer Productivity
-- DevOps
 - Gemini CLI
 - GitHub Actions
 - GitHub Workflows

@@ -12,11 +12,9 @@ tags:
 - Admin Configuration
 - Agent Efficiency
 - Agentic Workflows
-- AI
 - AI Integration
 - AI Summarization
 - Autonomous Agents
-- Azure
 - Azure AI
 - Business Impact
 - Case 360 Architecture
@@ -28,7 +26,6 @@ tags:
 - Operational Intelligence
 - Recommendations
 - User Validation
-- Videos
 section_names:
 - ai
 - azure

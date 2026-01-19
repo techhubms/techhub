@@ -10,12 +10,9 @@ date: 2025-10-25 15:57:45 +00:00
 permalink: /ai/community/BYOPI-Building-a-Custom-Private-Azure-AI-Search-Indexer-with-Azure-Data-Factory
 tags:
 - ADF Pipeline
-- AI
-- Azure
 - Azure AI Search
 - Azure Data Factory
 - BYOPI
-- Community
 - Compliance
 - CRUD
 - Data Integration
@@ -28,7 +25,6 @@ tags:
 - PowerShell
 - Private Endpoint
 - REST API
-- Security
 - Self Hosted Integration Runtime
 - SQL Server
 - VNet

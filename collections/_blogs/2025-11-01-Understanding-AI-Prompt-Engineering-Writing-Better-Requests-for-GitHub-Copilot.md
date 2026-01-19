@@ -9,17 +9,14 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-01 08:08:59 +00:00
 permalink: /github-copilot/blogs/Understanding-AI-Prompt-Engineering-Writing-Better-Requests-for-GitHub-Copilot
 tags:
-- AI
 - AI Best Practices
 - AI Prompts
-- Blogs
 - Code Completion
 - Code Generation
 - Coding Standards
 - Copilot Usage
 - Developer Productivity
 - FastAPI
-- GitHub Copilot
 - M365 Copilot
 - Programming Tools
 - Prompt Engineering

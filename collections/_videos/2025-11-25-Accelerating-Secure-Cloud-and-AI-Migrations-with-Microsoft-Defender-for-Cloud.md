@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-25 15:58:47 +00:00
 permalink: /ai/videos/Accelerating-Secure-Cloud-and-AI-Migrations-with-Microsoft-Defender-for-Cloud
 tags:
-- AI
 - AI Platforms
-- Azure
 - Azure Accelerate
 - Business Critical Applications
 - Cloud
@@ -30,11 +28,9 @@ tags:
 - Orchestration
 - Partner Business Models
 - Secure Migration
-- Security
 - Security Assessment
 - Security Recommendations
 - Tab
-- Videos
 section_names:
 - ai
 - azure

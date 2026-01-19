@@ -10,30 +10,24 @@ date: 2025-06-17 22:54:11 +00:00
 permalink: /ai/news/Securely-TurboCharge-Software-Delivery-with-Codex-Coding-Agent-on-Azure-OpenAI
 tags:
 - Agents
-- AI
 - All Things Azure
 - App Development
 - Automation
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
 - CI/CD
 - CLI
 - Codex
 - Codex Mini
-- Coding
 - Coding Agent
 - Config.json
 - Developer Productivity
-- DevOps
 - Entra ID
 - GitHub Actions
-- News
 - Node.js
 - OpenAI
 - Private Networking
 - Refactoring
-- Security
 section_names:
 - ai
 - azure

@@ -10,18 +10,15 @@ date: 2025-11-24 07:42:13 +00:00
 permalink: /ai/videos/Unlock-Cloud-Scale-Observability-and-Optimization-with-Azure-Monitor
 tags:
 - Agentic AI
-- AI
 - AI Operations
 - AKS
 - Audit Logging
-- Azure
 - Azure Monitor
 - Carbon Efficiency
 - CLI Automation
 - Cloud Monitoring
 - Copilot in Azure
 - Cost Optimization
-- DevOps
 - Grafana
 - Hybrid Cloud
 - Microsoft Ignite
@@ -31,7 +28,6 @@ tags:
 - OpenTelemetry
 - Performance Troubleshooting
 - Prompt QL
-- Videos
 section_names:
 - ai
 - azure

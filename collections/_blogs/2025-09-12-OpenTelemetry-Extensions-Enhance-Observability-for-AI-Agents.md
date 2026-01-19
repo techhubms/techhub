@@ -9,16 +9,13 @@ feed_url: https://devops.com/feed/
 date: 2025-09-12 12:30:57 +00:00
 permalink: /ai/blogs/OpenTelemetry-Extensions-Enhance-Observability-for-AI-Agents
 tags:
-- AI
 - AI Agents
 - AI Canvas
 - AI Driven IT Automation
 - AI Observability
-- Blogs
 - Cisco
 - Cloud Monitoring
 - Data Fabric
-- DevOps
 - DevOps Observability
 - IT Automation
 - LLM Telemetry

@@ -11,7 +11,6 @@ permalink: /ai/videos/AI-Driven-Agents-Transforming-Supply-Chain-Management-at-B
 tags:
 - '#microsoft'
 - '#microsoftcloud'
-- AI
 - AI Challenges
 - AI Driven Agents
 - Automation
@@ -25,7 +24,6 @@ tags:
 - Microsoft Ignite
 - Retail
 - Supply Chain Management
-- Videos
 section_names:
 - ai
 ---

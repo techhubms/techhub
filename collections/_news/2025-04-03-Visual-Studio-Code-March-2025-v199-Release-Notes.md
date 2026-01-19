@@ -11,16 +11,13 @@ permalink: /ai/news/Visual-Studio-Code-March-2025-v199-Release-Notes
 tags:
 - Accessibility
 - Agent Mode
-- AI
 - AI Coding
 - Chat
-- Coding
 - Copilot
 - Extension API
 - Jupyter Notebook
 - MCP
 - MCP Servers
-- News
 - Next Edit Suggestions
 - Pylance
 - Remote Development

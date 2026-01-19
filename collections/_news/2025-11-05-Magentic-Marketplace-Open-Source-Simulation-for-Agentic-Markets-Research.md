@@ -11,9 +11,7 @@ permalink: /ai/news/Magentic-Marketplace-Open-Source-Simulation-for-Agentic-Mark
 tags:
 - Agent Based Simulation
 - Agentic Economy
-- AI
 - Autonomous Agents
-- Azure
 - Azure AI
 - Company News
 - Experimentation
@@ -25,7 +23,6 @@ tags:
 - Market Dynamics
 - Microsoft Research
 - Multi Agent Systems
-- News
 - Open Source
 - REST API
 - Systemic Bias

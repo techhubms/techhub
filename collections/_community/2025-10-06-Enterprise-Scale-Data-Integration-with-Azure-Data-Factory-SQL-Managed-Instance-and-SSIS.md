@@ -9,18 +9,15 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-06 21:02:48 +00:00
 permalink: /ml/community/Enterprise-Scale-Data-Integration-with-Azure-Data-Factory-SQL-Managed-Instance-and-SSIS
 tags:
-- Azure
 - Azure Data Factory
 - Azure SQL Managed Instance
 - Cloud Solution Architecture
-- Community
 - Data Engineering
 - Data Integration
 - Data Pipelines
 - Enterprise Edition
 - Microsoft Entra ID
 - Microsoft Fabric
-- ML
 - Power BI
 - Self Hosted Integration Runtime
 - SQL Server Integration Services

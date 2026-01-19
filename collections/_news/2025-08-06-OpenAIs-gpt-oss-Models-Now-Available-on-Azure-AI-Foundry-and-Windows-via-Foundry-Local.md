@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-06 01:04:00 +00:00
 permalink: /ai/news/OpenAIs-gpt-oss-Models-Now-Available-on-Azure-AI-Foundry-and-Windows-via-Foundry-Local
 tags:
-- AI
 - AI Integration
 - AI Models
-- Azure
 - Azure AI Foundry
 - Company News
 - Foundry Local
@@ -20,7 +18,6 @@ tags:
 - Hybrid AI
 - LinkedIn Post
 - Microsoft
-- News
 - Open Source AI
 - OpenAI
 - Performance Optimization

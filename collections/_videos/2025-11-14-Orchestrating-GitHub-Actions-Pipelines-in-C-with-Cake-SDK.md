@@ -14,17 +14,14 @@ tags:
 - C#
 - Cake SDK
 - CI/CD
-- Coding
 - Configuration as Code
 - Continuous Delivery
 - Continuous Integration
 - Debugging
 - Developer Tools
-- DevOps
 - GitHub Actions
 - Pipelines as Code
 - Testing
-- Videos
 - VS Code
 section_names:
 - coding

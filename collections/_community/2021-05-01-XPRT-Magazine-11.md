@@ -6,18 +6,12 @@ author: Xebia
 viewing_mode: external
 permalink: /github-copilot/community/XPRT-Magazine-11
 tags:
-- AI
 - Automation
-- Azure
 - Cloud Native
-- Coding
-- Community
 - Compliance
 - Developer Productivity
-- DevOps
 - Digital Transformation
 - GitHub Actions
-- GitHub Copilot
 - Innovation
 - Magazines
 - Managed Services
@@ -26,7 +20,6 @@ tags:
 - Platform Engineering
 - Remote Work
 - Resilience
-- Security
 - SPACE Framework
 - Team Learning
 - UI Modernization

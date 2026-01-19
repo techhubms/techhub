@@ -9,10 +9,8 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
 permalink: /ai/news/Integrating-SAP-Business-Data-Cloud-with-Microsoft-Fabric-Accelerating-AI-and-Analytics
 tags:
-- AI
 - AI Development
 - Analytics
-- Azure
 - Azure AI Foundry
 - Bi Directional Data Sharing
 - Copilot in Power BI
@@ -23,8 +21,6 @@ tags:
 - Enterprise Data
 - Intelligent Agents
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Power BI
 - SAP Business Data Cloud

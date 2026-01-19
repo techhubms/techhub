@@ -9,17 +9,13 @@ feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-05-19 00:00:00 +00:00
 permalink: /github-copilot/news/VS-Code-to-Open-Source-GitHub-Copilot-Chat-Extension-and-Advance-Open-AI-Editing
 tags:
-- AI
 - AI Powered Editor
-- Coding
 - Community Contribution
 - Developer Tools
 - Extension Development
-- GitHub Copilot
 - GitHub Copilot Chat
 - Large Language Models
 - MIT License
-- News
 - Open Source
 - Prompt Testing
 - Transparency

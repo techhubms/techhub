@@ -9,7 +9,6 @@ feed_url: https://github.blog/feed/
 date: 2025-08-26 16:10:14 +00:00
 permalink: /ai/news/Rediscovering-Joy-in-Learning-Jason-Lengstorf-on-AI-Open-Source-and-Developer-Growth
 tags:
-- AI
 - AI in Development
 - Autonomous Agents
 - Career Growth
@@ -22,7 +21,6 @@ tags:
 - Learning Strategies
 - MCP
 - Modern Web
-- News
 - Nuxt
 - Open Source
 - Open Source Sustainability

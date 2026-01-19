@@ -10,9 +10,7 @@ date: 2025-12-09 08:12:15 +00:00
 permalink: /ml/community/From-Bronze-to-Gold-Data-Quality-Strategies-for-ETL-in-Microsoft-Fabric
 tags:
 - Automated Testing
-- Azure
 - Bronze Layer
-- Community
 - Data Drift
 - Data Quality
 - Data Validation
@@ -23,7 +21,6 @@ tags:
 - Lakehouse
 - Medallion Architecture
 - Microsoft Fabric
-- ML
 - NYC Taxi Dataset
 - Observability
 - Power BI

@@ -15,7 +15,6 @@ tags:
 - Authentication
 - Blazor
 - C# 14
-- Coding
 - Component State
 - Diagnostics
 - Entra ID
@@ -25,8 +24,6 @@ tags:
 - Passkeys
 - Performance Optimization
 - QuickGrid
-- Security
-- Videos
 - VS
 - Web Development
 - WebAuthN

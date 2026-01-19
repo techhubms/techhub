@@ -10,10 +10,8 @@ date: 2026-01-15 20:00:20 +00:00
 permalink: /ai/videos/Build-Powerful-AI-Apps-for-Under-25-with-Azure-SQL-Database
 tags:
 - Agentic RAG
-- AI
 - AI Apps
 - AI Architecture
-- Azure
 - Azure Container Apps
 - Azure Foundry
 - Azure SQL Database
@@ -30,7 +28,6 @@ tags:
 - Static Web Apps
 - Tech
 - Technology
-- Videos
 - Web Apps
 section_names:
 - ai

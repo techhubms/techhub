@@ -9,17 +9,14 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-08-12 17:03:42 +00:00
 permalink: /ai/blogs/Implementing-a-Center-of-Excellence-for-Generative-AI
 tags:
-- AI
 - AI Best Practices
 - AI Deployment
 - AI Governance
 - AI Operations
-- Azure
 - Azure Cloud Adoption Framework
 - Azure Essentials Show
 - Azure Machine Learning
 - Azure OpenAI
-- Blogs
 - Center Of Excellence
 - Center Of Exellence
 - Cloud

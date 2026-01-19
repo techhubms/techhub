@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-28 16:00:28 +00:00
 permalink: /ai/videos/Intro-to-Java-and-AI-for-Beginners
 tags:
-- AI
 - AI Fundamentals
 - AI Integration
 - AIForBeginners
@@ -29,7 +28,6 @@ tags:
 - MCP
 - Microsoft
 - Software Development
-- Videos
 section_names:
 - ai
 ---

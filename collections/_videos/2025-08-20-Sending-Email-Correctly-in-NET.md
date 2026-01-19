@@ -13,7 +13,6 @@ tags:
 - Application Development
 - Backend Development
 - C#
-- Coding
 - Dylan Beattie
 - Email Best Practices
 - Email Integration
@@ -21,7 +20,6 @@ tags:
 - Nick Chapsas
 - SMTP
 - Software Engineering
-- Videos
 section_names:
 - coding
 ---

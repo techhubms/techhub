@@ -9,21 +9,17 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-31 18:59:48 +00:00
 permalink: /ml/community/Disaster-Recovery-Strategies-for-Azure-Databricks-and-Microsoft-Fabric
 tags:
-- Azure
 - Azure Databricks
 - Azure Managed Identity
 - Azure Monitor
 - Azure Storage
 - Business Continuity
 - CI/CD
-- Community
 - Data Synchronization
 - Delta Lake
-- DevOps
 - Disaster Recovery
 - IaC
 - Microsoft Fabric
-- ML
 - Power BI
 - Python
 - Regional Redundancy

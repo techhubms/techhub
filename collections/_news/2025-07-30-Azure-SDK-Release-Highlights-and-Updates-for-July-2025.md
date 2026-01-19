@@ -10,14 +10,11 @@ date: 2025-07-30 22:41:00 +00:00
 permalink: /ai/news/Azure-SDK-Release-Highlights-and-Updates-for-July-2025
 tags:
 - .NET
-- AI
 - AI Agents
-- Azure
 - Azure SDK
 - Azure Storage
 - Certificate Management
 - Cloud Health
-- Coding
 - Event Grid
 - Go
 - Java
@@ -26,13 +23,11 @@ tags:
 - Lambda Test
 - Management Libraries
 - MongoDB Atlas
-- News
 - Playwright
 - Python
 - Release Notes
 - Resource Management
 - SDK
-- Security
 - System Events
 section_names:
 - ai

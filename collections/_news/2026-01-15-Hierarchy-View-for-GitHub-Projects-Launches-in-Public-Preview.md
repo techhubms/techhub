@@ -9,12 +9,10 @@ feed_url: https://github.blog/changelog/feed/
 date: 2026-01-15 20:19:53 +00:00
 permalink: /devops/news/Hierarchy-View-for-GitHub-Projects-Launches-in-Public-Preview
 tags:
-- DevOps
 - GitHub Projects
 - Hierarchy View
 - Issue Management
 - Merge Queue
-- News
 - Performance Enhancement
 - Productivity Tools
 - Project Management

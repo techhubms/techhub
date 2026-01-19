@@ -9,10 +9,8 @@ feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-05-27 23:00:00 +00:00
 permalink: /ai/news/Azure-AI-Foundry-MCP-Server-May-2025-Update-Adding-Models-Knowledge-Evaluation
 tags:
-- AI
 - AI Development
 - AI Models
-- Azure
 - Azure AI
 - Azure AI Foundry
 - Azure AI Foundry Labs
@@ -22,7 +20,6 @@ tags:
 - Knowledge Management
 - MCP Server
 - Natural Language Interactions
-- News
 section_names:
 - ai
 - azure

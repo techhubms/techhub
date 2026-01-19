@@ -13,7 +13,6 @@ tags:
 - Blob Storage
 - Cloud Migration
 - Command Line Tools
-- DevOps
 - DevOps Automation
 - Enterprise Management
 - Enterprise Management Tools
@@ -26,7 +25,6 @@ tags:
 - GitHub Owned Storage
 - GitLab
 - Improvement
-- News
 - Repository Migration
 section_names:
 - devops

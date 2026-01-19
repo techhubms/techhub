@@ -7,26 +7,19 @@ viewing_mode: external
 permalink: /github-copilot/community/XPRT-Magazine-16
 tags:
 - Agents
-- AI
 - Art
-- Azure
 - Blazor
 - Carbon Measurement
-- Coding
-- Community
 - Container Apps
 - DDoS
-- DevOps
 - EF
 - Environmental Impact
-- GitHub Copilot
 - LLM
 - Magazines
 - OAuth
 - OpenID Connect
 - PKCE
 - Prompt Engineering
-- Security
 - SQL Merge
 section_names:
 - ai

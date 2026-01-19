@@ -15,14 +15,11 @@ tags:
 - Application Frameworks
 - Aspire CLI
 - CLI Tools
-- Coding
 - Demonstrations
-- DevOps
 - ExternalService Resource
 - GitHub Model Integration
 - Interaction Service
 - Software Development
-- Videos
 section_names:
 - coding
 - devops

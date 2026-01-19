@@ -23,9 +23,7 @@ tags:
 - Microsoft Intune
 - MSIgnite
 - ScalewithcloudandAIendpoints
-- Security
 - Threat Protection
-- Videos
 - Windows 365
 - Zero Trust
 section_names:

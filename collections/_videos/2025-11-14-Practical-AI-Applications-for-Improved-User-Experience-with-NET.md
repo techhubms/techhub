@@ -12,12 +12,10 @@ tags:
 - .NET
 - .NET 10
 - .NET Aspire
-- AI
 - AI Development
 - ASP.NET Core 10
 - C# 14
 - Cloud Native Apps
-- Coding
 - F# 10
 - MAUI
 - Microsoft
@@ -26,7 +24,6 @@ tags:
 - Natural Language Processing
 - UI Simplification
 - User Experience
-- Videos
 - VS
 section_names:
 - ai

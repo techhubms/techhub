@@ -10,13 +10,11 @@ date: 2025-09-17 14:00:51 +00:00
 permalink: /github-copilot/videos/Debugging-a-Full-Stack-Chat-App-with-GitHub-Copilot-Chat-in-VS-Code
 tags:
 - Agent Mode
-- AI
 - AI Pair Programming
 - AI Search
 - Ask Mode
 - Azure OpenAI
 - Chatapp
-- Coding
 - Copilot
 - Copilot Chat
 - Custom Chat Modes
@@ -24,13 +22,11 @@ tags:
 - Developer
 - Developer Tools
 - Full Stack Development
-- GitHub Copilot
 - MCP Servers
 - Microsoft
 - Prompt Driven Development
 - Promptdrivendevelopment
 - Software Developer
-- Videos
 - VS Code
 - Web Applications
 section_names:

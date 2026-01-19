@@ -11,17 +11,13 @@ permalink: /github-copilot/news/Ask-Mode-vs-Agent-Mode-Choosing-the-Right-GitHub
 tags:
 - .NET
 - Agent Mode
-- AI
 - Ask Mode
 - C#
 - Code Automation
 - Code Refactoring
-- Coding
 - Copilot
 - Copilot Chat
 - Developer Productivity
-- GitHub Copilot
-- News
 - Unit Testing
 - VS
 - VS Code

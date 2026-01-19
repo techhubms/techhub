@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-11-21 18:18:02 +00:00
 permalink: /github-copilot/videos/The-Download-Git-252-Gemini-3-GitHub-Copilot-Updates-and-Agent-365
 tags:
-- AI
 - AI Integration
 - Developer Tools
-- DevOps
 - Enterprise Software
 - File Conversion
 - Gemini
@@ -20,14 +18,12 @@ tags:
 - Git
 - Git 2.52
 - GitHub
-- GitHub Copilot
 - Microsoft Agent 365
 - Open Source
 - OpenSource
 - Software Development
 - Version Control
 - VERT
-- Videos
 section_names:
 - ai
 - devops

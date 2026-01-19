@@ -11,20 +11,17 @@ permalink: /ai/videos/Model-Context-Protocol-MCP-for-NET-Developers
 tags:
 - .NET
 - .NET 10
-- AI
 - AI Assistants
 - AI Integration
 - Application Architecture
 - ASP.NET Core
 - C#
 - Cloud Native Apps
-- Coding
 - F#
 - Integration Patterns
 - MAUI
 - MCP
 - Orchestration
-- Videos
 - VS
 section_names:
 - ai

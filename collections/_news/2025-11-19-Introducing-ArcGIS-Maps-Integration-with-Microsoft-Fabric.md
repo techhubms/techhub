@@ -9,12 +9,10 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 12:00:00 +00:00
 permalink: /ai/news/Introducing-ArcGIS-Maps-Integration-with-Microsoft-Fabric
 tags:
-- AI
 - AI Powered Mapping
 - Arcade Assistant
 - ArcGIS Maps
 - Attribute Table
-- Azure
 - Clustering
 - Data Engineering
 - Data Visualization
@@ -24,8 +22,6 @@ tags:
 - Interactive Maps
 - Living Atlas
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Power BI
 - Spark Notebooks

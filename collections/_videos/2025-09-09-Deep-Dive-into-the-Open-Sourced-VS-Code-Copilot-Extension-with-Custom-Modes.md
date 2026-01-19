@@ -9,27 +9,23 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-09 13:00:20 +00:00
 permalink: /github-copilot/videos/Deep-Dive-into-the-Open-Sourced-VS-Code-Copilot-Extension-with-Custom-Modes
 tags:
-- AI
 - AI Custom Modes
 - AI Prompt Engineering
 - Beast Mode
 - Burke Holland
 - Cloud Computing
-- Coding
 - Copilot Chat
 - Copilot Extension
 - Cost Optimization
 - Dev
 - Developer Tools
 - Development
-- GitHub Copilot
 - GPT 4.1
 - Microsoft
 - Open Source
 - Prompting Guide
 - Tech
 - Technology
-- Videos
 - VS Code
 - VS Code Copilot
 - VS Code Insiders

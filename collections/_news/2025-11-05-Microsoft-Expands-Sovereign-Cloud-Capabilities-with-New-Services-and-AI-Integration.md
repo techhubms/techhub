@@ -9,9 +9,7 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-05 07:00:00 +00:00
 permalink: /ai/news/Microsoft-Expands-Sovereign-Cloud-Capabilities-with-New-Services-and-AI-Integration
 tags:
-- AI
 - AI Models
-- Azure
 - Azure Key Vault
 - Azure Local
 - Azure Policy
@@ -22,12 +20,10 @@ tags:
 - Hybrid + Multicloud
 - Management And Governance
 - Microsoft 365 Copilot
-- News
 - NVIDIA GPUs
 - Private Cloud
 - Public Cloud
 - SAP On Azure
-- Security
 - Security Compliance
 - Sovereign Cloud
 - Sovereign Landing Zone

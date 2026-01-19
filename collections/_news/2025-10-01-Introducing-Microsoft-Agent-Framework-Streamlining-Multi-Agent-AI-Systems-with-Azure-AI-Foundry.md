@@ -10,12 +10,9 @@ date: 2025-10-01 19:03:22 +00:00
 permalink: /ai/news/Introducing-Microsoft-Agent-Framework-Streamlining-Multi-Agent-AI-Systems-with-Azure-AI-Foundry
 tags:
 - Agent2Agent
-- AI
 - AI Agents
 - AutoGen
-- Azure
 - Azure AI Foundry
-- Coding
 - Company News
 - Developer Tools
 - Enterprise AI
@@ -23,7 +20,6 @@ tags:
 - MCP
 - Microsoft Agent Framework
 - Multi Agent Systems
-- News
 - Observability
 - OpenAPI
 - OpenTelemetry

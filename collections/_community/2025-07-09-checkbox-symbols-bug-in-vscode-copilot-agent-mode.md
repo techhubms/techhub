@@ -7,12 +7,9 @@ viewing_mode: external
 date: 2025-07-09 09:41:14 +00:00
 permalink: /github-copilot/community/checkbox-symbols-bug-in-vscode-copilot-agent-mode
 tags:
-- AI
 - Bug Report
 - Checkbox Issue
 - Code Editor
-- Community
-- GitHub Copilot
 - PowerShell
 - VS Code
 section_names:

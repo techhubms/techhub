@@ -10,9 +10,7 @@ date: 2025-07-14 14:12:06 +00:00
 permalink: /ai/videos/Microsoft-Security-Copilot-Entra-Update-and-Conditional-Access-Agent
 tags:
 - A2A
-- AI
 - AI Security
-- Azure
 - Conditional Access
 - Conditional Access Agent
 - Copilot
@@ -24,11 +22,9 @@ tags:
 - Microsoft Entra
 - Microsoft Security Copilot
 - Natural Language Processing
-- Security
 - Security Automation
 - Security Monitoring
 - Security Operations
-- Videos
 section_names:
 - ai
 - azure

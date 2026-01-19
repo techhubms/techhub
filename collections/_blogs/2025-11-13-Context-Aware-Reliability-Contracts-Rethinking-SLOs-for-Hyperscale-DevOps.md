@@ -13,7 +13,6 @@ tags:
 - AI
 - AI Driven Scaling
 - Alert Fatigue
-- Blogs
 - Business Aligned Reliability
 - Capacity Planning
 - Context Aware Reliability
@@ -23,7 +22,6 @@ tags:
 - Context Propagation
 - Contributed Content
 - Cost Reduction
-- DevOps
 - Dynamic SLOs
 - Gitops
 - Hyperscale Reliability

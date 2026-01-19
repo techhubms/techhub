@@ -13,8 +13,6 @@ tags:
 - .NET 8
 - Appsettings.json
 - C#
-- Coding
-- Community
 - Configuration
 - Container
 - Integration Tests

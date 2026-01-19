@@ -10,28 +10,22 @@ date: 2025-11-25 16:10:35 +00:00
 permalink: /github-copilot/news/Introducing-Anthropics-Claude-Opus-45-in-Microsoft-Foundry-for-Enterprise-AI-Development
 tags:
 - Agentic Coding
-- AI
 - AI Models
 - Anthropic
-- Azure
 - Benchmarks
 - Claude Opus 4.5
-- Coding
 - Compaction Control
 - Company News
 - Copilot Studio
 - Cybersecurity
 - Developer Tools
 - Enterprise Workflows
-- GitHub Copilot
 - MCP Atlas
 - Microsoft Foundry
 - Multilingual Coding
-- News
 - Pricing
 - Python Tool Calling
 - SDK Helpers
-- Security
 - Software Engineering
 - SWE Bench
 - Visual Reasoning

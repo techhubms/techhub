@@ -12,11 +12,9 @@ page: community
 tags:
 - Agent Feedback
 - Agent Native
-- AI
 - AI Agents
 - Build Measure Learn
 - Co Design
-- Community
 - Documentation
 - Lean Startup
 - LLM

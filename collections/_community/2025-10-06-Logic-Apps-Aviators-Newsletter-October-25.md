@@ -11,21 +11,16 @@ permalink: /ai/community/Logic-Apps-Aviators-Newsletter-October-25
 tags:
 - Adaptive Cards
 - Agent Loop
-- AI
 - AI Agents
 - API Center
 - API Management
 - Approval Workflows
 - Automation
-- Azure
 - Azure Container Apps
 - Azure Logic Apps
 - BizTalk Migration
 - Cloud Security
-- Coding
-- Community
 - Data Processing
-- DevOps
 - Enterprise Integration
 - Entra ID
 - Hybrid Integration
@@ -33,7 +28,6 @@ tags:
 - MCP
 - Microsoft Teams
 - Python Code Interpreter
-- Security
 section_names:
 - ai
 - azure

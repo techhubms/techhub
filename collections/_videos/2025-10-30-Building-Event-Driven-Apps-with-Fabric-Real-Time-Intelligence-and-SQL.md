@@ -9,11 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-30 16:01:35 +00:00
 permalink: /ai/videos/Building-Event-Driven-Apps-with-Fabric-Real-Time-Intelligence-and-SQL
 tags:
-- AI
-- Azure
 - Azure SQL
 - Cloud Computing
-- Coding
 - Copilot
 - Dashboarding
 - Data Agent
@@ -26,13 +23,11 @@ tags:
 - KQL
 - Microsoft
 - Microsoft Fabric
-- ML
 - Real Time Analytics
 - SQL
 - Streaming Data
 - Tech
 - Technology
-- Videos
 - Windowing Functions
 section_names:
 - ai

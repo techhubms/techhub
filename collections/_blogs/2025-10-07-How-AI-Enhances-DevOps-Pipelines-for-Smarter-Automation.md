@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-10-07 08:59:47 +00:00
 permalink: /ai/blogs/How-AI-Enhances-DevOps-Pipelines-for-Smarter-Automation
 tags:
-- AI
 - AI Based DevOps Tools
 - AI Driven CI/CD Pipelines
 - AI Driven Software Delivery
@@ -20,13 +19,11 @@ tags:
 - AI Powered Automation
 - AI Powered CI/CD
 - Automated Security Testing
-- Blogs
 - Business Of DevOps
 - CI/CD Pipelines
 - Continuous Deployment
 - Continuous Integration
 - Contributed Content
-- DevOps
 - DevOps Automation
 - Devsecops
 - Future Of DevOps
@@ -37,7 +34,6 @@ tags:
 - Pipeline Optimization
 - Predictive Analytics
 - Predictive DevOps
-- Security
 - Security Automation
 - Self Healing Pipelines
 - Smart Deployments

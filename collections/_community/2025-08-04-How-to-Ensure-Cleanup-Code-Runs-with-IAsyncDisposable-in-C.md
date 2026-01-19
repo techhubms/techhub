@@ -13,8 +13,6 @@ tags:
 - Best Practices
 - C#
 - Cleanup
-- Coding
-- Community
 - Finalizer
 - IAsyncDisposable
 - IDisposable

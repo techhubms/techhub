@@ -10,19 +10,16 @@ date: 2025-08-16 14:00:07 +00:00
 permalink: /github-copilot/videos/GPT-5-Now-Available-in-GitHub-Copilot-Advanced-Features-and-How-to-Enable
 tags:
 - Advanced Coding
-- AI
 - AI Integration
 - AI Model
 - Code Generation
 - Copilot Features
 - Developer Tools
-- GitHub Copilot
 - GPT 5
 - GPT5
 - Hallucination Reduction
 - OpenAI
 - Programming Assistant
-- Videos
 - Visual Perception
 section_names:
 - ai

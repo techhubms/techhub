@@ -9,12 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-21 19:08:20 +00:00
 permalink: /ai/community/The-Future-of-AI-Developing-Lacuna-An-Agent-for-Revealing-Quiet-Assumptions-in-Product-Design
 tags:
-- AI
 - AI Powered Tools
 - Assumption Analysis
-- Azure
 - Azure AI Foundry
-- Community
 - Conversational Agents
 - Copilot Studio
 - Design Risk

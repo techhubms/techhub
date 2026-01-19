@@ -13,8 +13,6 @@ tags:
 - Best Practices
 - C#
 - Code Organization
-- Coding
-- Community
 - DLL
 - DRY
 - Maintainability

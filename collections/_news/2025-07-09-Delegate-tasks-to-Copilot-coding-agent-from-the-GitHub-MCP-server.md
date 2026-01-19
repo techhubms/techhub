@@ -9,12 +9,9 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-09 19:58:14 +00:00
 permalink: /github-copilot/news/Delegate-tasks-to-Copilot-coding-agent-from-the-GitHub-MCP-server
 tags:
-- AI
 - Background Processing
 - Coding Agent
-- GitHub Copilot
 - GitHub MCP Server
-- News
 - Task Delegation
 section_names:
 - ai

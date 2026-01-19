@@ -10,22 +10,18 @@ date: 2025-08-02 04:22:25 +00:00
 permalink: /github-copilot/videos/VS-Code-Live-Exploring-GitHub-Spark-and-Copilot-in-Visual-Studio-Code
 tags:
 - Agentmode
-- AI
 - AI Assistant
 - AI in Development
 - Code
 - Code Demo
-- Coding
 - Demo
 - Developer Community
 - Developer Tools
 - Extension Ecosystem
-- GitHub Copilot
 - GitHub Spark
 - Githubspark
 - Live Coding
 - Productivity Tools
-- Videos
 - VS Code
 section_names:
 - ai

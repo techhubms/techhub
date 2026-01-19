@@ -10,10 +10,7 @@ date: 2025-12-03 14:23:49 +00:00
 permalink: /ai/news/2025-Accessibility-Innovations-in-Windows-Year-in-Review
 tags:
 - Accessibility
-- AI
-- Azure
 - Chinese Language Support
-- Coding
 - Company News
 - Copilot+ PC
 - Custom Vocabulary
@@ -26,7 +23,6 @@ tags:
 - Microsoft Word Accessibility
 - Narrator
 - Natural Voices
-- News
 - On Device AI
 - Screen Curtain
 - Speech Recap

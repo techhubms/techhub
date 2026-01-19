@@ -10,7 +10,6 @@ date: 2025-11-21 12:47:00 +00:00
 permalink: /ai/videos/Imagine-the-Future-of-Industry-Blueprinting-with-AI-Agents
 tags:
 - Agentification
-- AI
 - AI Agents
 - AI in Industry
 - AI Transformation
@@ -21,7 +20,6 @@ tags:
 - Microsoft Ignite
 - MSIgnite
 - Operational Efficiency
-- Videos
 section_names:
 - ai
 ---

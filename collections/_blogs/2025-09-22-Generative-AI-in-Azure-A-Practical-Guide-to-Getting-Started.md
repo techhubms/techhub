@@ -9,15 +9,12 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-22 08:40:58 +00:00
 permalink: /ai/blogs/Generative-AI-in-Azure-A-Practical-Guide-to-Getting-Started
 tags:
-- AI
 - AI Governance
 - API Integration
-- Azure
 - Azure AI Studio
 - Azure Cognitive Services
 - Azure Machine Learning
 - Azure OpenAI Service
-- Blogs
 - Cloud Development
 - Computer Vision
 - Content Generation

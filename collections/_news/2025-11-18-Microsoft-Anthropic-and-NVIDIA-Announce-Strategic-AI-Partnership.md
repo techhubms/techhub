@@ -9,13 +9,11 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-18 16:53:27 +00:00
 permalink: /ai/news/Microsoft-Anthropic-and-NVIDIA-Announce-Strategic-AI-Partnership
 tags:
-- AI
 - AI Capacity
 - AI Infrastructure
 - AI Partnership
 - AI Super Factory
 - Anthropic
-- Azure
 - Azure AI
 - Azure Foundry
 - Claude Model
@@ -32,7 +30,6 @@ tags:
 - MCP
 - Microsoft
 - Model Optimization
-- News
 - NVIDIA
 - Token Economics
 - Vera Rubin

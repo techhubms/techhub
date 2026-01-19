@@ -9,15 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-24 18:12:34 +00:00
 permalink: /ai/community/From-Call-Transcripts-to-CRM-Gold-AI-Powered-Post-Call-Intelligence
 tags:
-- AI
 - AI Workflow
 - API Integration
-- Azure
 - Azure Communication Services
 - Azure OpenAI
 - Business Intelligence
 - Call Transcripts
-- Community
 - CRM Integration
 - Human in The Loop
 - JavaScript

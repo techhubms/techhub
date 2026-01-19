@@ -11,13 +11,11 @@ permalink: /azure/community/Deploying-Siemens-NX-on-Azure-NVads-V710-v5-Series-w
 tags:
 - Accelerated Networking
 - AMD Radeon Pro V710
-- Azure
 - Azure NVads V710
 - Azure Storage
 - Azure Virtual Machines
 - CAM
 - Cloud Architecture
-- Community
 - GPU Acceleration
 - High Performance Computing
 - OpenGL

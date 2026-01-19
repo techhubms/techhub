@@ -11,8 +11,6 @@ permalink: /coding/community/Termix-v120-NET-Terminal-File-Manager-Adds-Cut-Copy
 tags:
 - .NET
 - .NET Tool
-- Coding
-- Community
 - Copy
 - File Manager
 - Fuzzy Search

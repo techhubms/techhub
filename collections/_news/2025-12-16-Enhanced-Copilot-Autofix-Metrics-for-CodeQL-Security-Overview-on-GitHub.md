@@ -9,18 +9,14 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-16 10:45:33 +00:00
 permalink: /github-copilot/news/Enhanced-Copilot-Autofix-Metrics-for-CodeQL-Security-Overview-on-GitHub
 tags:
-- AI
 - Application Security
 - Code Scanning
 - CodeQL
 - Copilot Autofix
-- GitHub Copilot
 - GitHub Enterprise Cloud
 - Improvement
-- News
 - Pull Request Insights
 - Remediation
-- Security
 - Security Dashboard
 - Security Metrics
 - Security Overview

@@ -9,21 +9,18 @@ feed_url: https://devops.com/feed/
 date: 2025-09-29 07:37:10 +00:00
 permalink: /ai/blogs/DORA-2025-AIs-Impact-on-DevOps-Speed-Trust-and-the-Platform-Effect
 tags:
-- AI
 - AI Adoption
 - AI Assisted Development
 - AI Assisted Software Development
 - AI Trust
 - Amplification
 - Automation
-- Blogs
 - Business Of DevOps
 - Change Failure Rate
 - Culture & Practices
 - Deployment Frequency
 - Developer Productivity
 - Development Productivity
-- DevOps
 - DevOps Metrics
 - DORA Report
 - DORA Research

@@ -9,20 +9,17 @@ feed_url: https://devops.com/feed/
 date: 2025-11-18 10:22:55 +00:00
 permalink: /ai/blogs/MLSecOps-and-Prompt-Security-DevOps-Strategies-for-AI-Pipeline-Protection
 tags:
-- AI
 - AI Agent Security
 - AI Attack Surface
 - AI Chaos Testing
 - AI Governance
 - AI Supply Chain Risk
 - Autonomous Agent Security.
-- Blogs
 - Business Of DevOps
 - CI/CD Pipeline Security
 - CI/CD Pipelines
 - CodeShield
 - Contributed Content
-- DevOps
 - DevOps AI
 - DevSecOps
 - IaC
@@ -44,7 +41,6 @@ tags:
 - Red Team Testing
 - Runtime Monitoring
 - Secure AI Pipelines
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

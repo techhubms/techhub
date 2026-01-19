@@ -10,7 +10,6 @@ date: 2025-12-10 09:00:00 +00:00
 permalink: /ml/news/Lakehouse-Schemas-Now-Generally-Available-in-Microsoft-Fabric
 tags:
 - ADLS Gen2
-- Azure
 - Data Engineering
 - Data Lake
 - Data Management
@@ -20,8 +19,6 @@ tags:
 - Materialized Views
 - Microsoft Fabric
 - Migration Tools
-- ML
-- News
 - OneLake Security
 - Schema Lakehouse
 - Spark

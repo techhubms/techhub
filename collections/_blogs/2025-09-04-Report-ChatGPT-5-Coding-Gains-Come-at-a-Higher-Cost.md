@@ -9,17 +9,13 @@ feed_url: https://devops.com/feed/
 date: 2025-09-04 17:51:34 +00:00
 permalink: /ai/blogs/Report-ChatGPT-5-Coding-Gains-Come-at-a-Higher-Cost
 tags:
-- AI
 - AI Coding Tools
-- Blogs
 - ChatGPT
 - ChatGPT 5
 - Code Generation
-- Coding
 - Concurrency Bugs
 - Control Flow Bugs
 - Cost Analysis
-- DevOps
 - Java Tasks
 - LLM Evaluation
 - Maintenance Challenges

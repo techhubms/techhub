@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-12 07:00:58 +00:00
 permalink: /ai/videos/Supercharge-Data-and-AI-Innovation-with-Azure-Databricks
 tags:
-- AI
 - Analytics Platform
-- Azure
 - Azure AI Foundry
 - Azure Databricks
 - Azure Essentials Show
@@ -20,14 +18,11 @@ tags:
 - Data Analytics
 - Data Governance
 - Data Preparation
-- Machine Learning
 - Microsoft Entra
 - Microsoft Fabric
-- ML
 - Model Development
 - Pipeline Management
 - Skilling Resources
-- Videos
 section_names:
 - ai
 - azure

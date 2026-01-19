@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-08-08 00:00:05 +00:00
 permalink: /ai/news/GPT-5-is-now-generally-available-in-GitHub-Models
 tags:
-- AI
 - AI Collaboration
 - AI Models
 - APIs
@@ -24,7 +23,6 @@ tags:
 - Model Integration
 - Model Playground
 - Model Variants
-- News
 - OpenAI
 - Software Development
 section_names:

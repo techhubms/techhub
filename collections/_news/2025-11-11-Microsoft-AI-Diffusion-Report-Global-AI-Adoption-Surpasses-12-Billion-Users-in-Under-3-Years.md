@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-11 18:10:45 +00:00
 permalink: /ai/news/Microsoft-AI-Diffusion-Report-Global-AI-Adoption-Surpasses-12-Billion-Users-in-Under-3-Years
 tags:
-- AI
 - AI Adoption
 - AI Diffusion Report
 - AI Infrastructure
@@ -21,7 +20,6 @@ tags:
 - Global Technology Trends
 - Infrastructure
 - Microsoft
-- News
 - Skills Development
 - Technology Adoption
 section_names:

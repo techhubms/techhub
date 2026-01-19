@@ -13,7 +13,6 @@ tags:
 - Admin Setup
 - Agent Governance
 - Agent ID
-- AI
 - AI Security
 - App Lifecycle Management
 - Authentication
@@ -29,9 +28,7 @@ tags:
 - Permissions
 - Prompt Injection Protection
 - Secure Access
-- Security
 - Security Operations
-- Videos
 - Zero Trust
 section_names:
 - ai

@@ -10,20 +10,15 @@ date: 2025-07-09 17:15:00 +00:00
 permalink: /github-copilot/news/How-the-NET-MAUI-Team-Uses-GitHub-Copilot-for-Productivity
 tags:
 - .NET
-- AI
 - Automation
 - C#
 - CI/CD
-- Coding
 - Copilot Coding Agent
 - Copilot Productivity
-- DevOps
 - Firewall Rules
-- GitHub Copilot
 - MAUI
 - MCP Server
 - MEAI
-- News
 - Pull Requests
 - Repository Instructions
 - VS Code

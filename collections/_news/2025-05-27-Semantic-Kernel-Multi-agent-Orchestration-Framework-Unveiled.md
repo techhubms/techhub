@@ -11,8 +11,6 @@ permalink: /ai/news/Semantic-Kernel-Multi-agent-Orchestration-Framework-Unveiled
 tags:
 - .NET
 - Agent Orchestration
-- AI
-- Coding
 - Collaborative AI
 - Concurrent Orchestration
 - Developer Tools
@@ -21,7 +19,6 @@ tags:
 - Magentic Orchestration
 - Microsoft AI
 - Multi Agent Systems
-- News
 - Orchestration Framework
 - Python
 - Semantic Kernel

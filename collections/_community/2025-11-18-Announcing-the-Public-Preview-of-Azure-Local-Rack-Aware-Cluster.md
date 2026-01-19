@@ -11,14 +11,11 @@ permalink: /azure/community/Announcing-the-Public-Preview-of-Azure-Local-Rack-Aw
 tags:
 - ARM Templates
 - Availability Zones
-- Azure
 - Azure Arc
 - Azure Local
 - Azure Portal
 - Cluster Deployment
-- Community
 - Data Resiliency
-- DevOps
 - Fault Tolerance
 - High Availability
 - Hybrid Cloud

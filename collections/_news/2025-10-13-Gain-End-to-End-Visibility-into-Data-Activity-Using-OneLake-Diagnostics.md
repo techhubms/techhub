@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-13 11:00:00 +00:00
 permalink: /ml/news/Gain-End-to-End-Visibility-into-Data-Activity-Using-OneLake-Diagnostics
 tags:
-- Azure
 - Azure Blob Storage
 - Compliance
 - Data Activity
@@ -21,11 +20,8 @@ tags:
 - Lakehouse
 - Microsoft Fabric
 - Microsoft Purview
-- ML
-- News
 - OneLake
 - Power BI
-- Security
 - Security Monitoring
 - Spark
 - Workspace Monitoring

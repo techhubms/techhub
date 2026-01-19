@@ -9,18 +9,12 @@ feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-07-25 06:47:36 +00:00
 permalink: /github-copilot/news/From-Manual-Testing-to-AI-Generated-Automation-Azure-DevOps-MCP-and-Playwright-with-GitHub-Copilot
 tags:
-- AI
 - AI Generated Code
 - Automated Testing
-- Azure
 - Azure DevOps
 - CI/CD
-- Coding
-- DevOps
 - End To End Testing
-- GitHub Copilot
 - MCP Server
-- News
 - Playwright
 - Prompt Engineering
 - Software Quality

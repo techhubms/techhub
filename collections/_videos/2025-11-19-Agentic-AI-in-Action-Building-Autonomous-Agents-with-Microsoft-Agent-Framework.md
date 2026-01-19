@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 15:03:23 +00:00
 permalink: /ai/videos/Agentic-AI-in-Action-Building-Autonomous-Agents-with-Microsoft-Agent-Framework
 tags:
-- AI
 - AI Agents
 - Audit Traceability
 - Autonomous Workflows
-- Azure
 - Azure AI
 - Business Impact
 - Compliance
@@ -26,7 +24,6 @@ tags:
 - MVP Implementation
 - Role Based Access Control
 - Secure Document Management
-- Videos
 - Workflow Integration
 section_names:
 - ai

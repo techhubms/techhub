@@ -9,15 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-09 07:35:03 +00:00
 permalink: /ai/community/From-Large-Semi-Structured-Documents-to-Actionable-Data-Azure-Powered-Intelligent-Document-Processing-Pipelines
 tags:
-- AI
 - AI Pipelines
 - Analytics
-- Azure
 - Azure AI Search
 - Azure Databricks
 - Azure Document Intelligence
 - Azure OpenAI
-- Community
 - Compliance
 - Custom OCR
 - Data Stewardship
@@ -26,9 +23,7 @@ tags:
 - Entity Extraction
 - Hybrid Search
 - Intelligent Document Processing
-- Machine Learning
 - Microsoft Fabric
-- ML
 - ML Pipelines
 - OCR
 - RAG

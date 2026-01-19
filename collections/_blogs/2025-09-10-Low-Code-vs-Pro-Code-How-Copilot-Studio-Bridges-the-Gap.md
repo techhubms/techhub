@@ -9,11 +9,9 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-10 08:06:11 +00:00
 permalink: /ai/blogs/Low-Code-vs-Pro-Code-How-Copilot-Studio-Bridges-the-Gap
 tags:
-- AI
 - AI Assistance
 - Application Development
 - Automation
-- Blogs
 - Citizen Developers
 - Copilot
 - Copilot Studio

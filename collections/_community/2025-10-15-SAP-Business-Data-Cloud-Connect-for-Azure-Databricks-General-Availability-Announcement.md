@@ -9,21 +9,16 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-15 16:00:00 +00:00
 permalink: /ai/community/SAP-Business-Data-Cloud-Connect-for-Azure-Databricks-General-Availability-Announcement
 tags:
-- AI
 - Analytics
-- Azure
 - Azure Databricks
 - Bi Directional Data
-- Community
 - Data Governance
 - Data Integration
 - Data Security
 - Data Warehousing
 - Delta Sharing
 - Enterprise Data
-- Machine Learning
 - Microsoft
-- ML
 - SAP Business Data Cloud
 - Unified Data Estate
 section_names:

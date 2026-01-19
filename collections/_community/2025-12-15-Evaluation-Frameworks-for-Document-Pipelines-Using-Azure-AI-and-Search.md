@@ -9,12 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-15 20:24:10 +00:00
 permalink: /ai/community/Evaluation-Frameworks-for-Document-Pipelines-Using-Azure-AI-and-Search
 tags:
-- AI
-- Azure
 - Azure AI Search
 - Azure Document Intelligence
 - Best Practices
-- Community
 - Continuous Improvement
 - Document Intelligence
 - Domain Expert
@@ -23,7 +20,6 @@ tags:
 - Ground Truth
 - IDP
 - Microsoft AI
-- ML
 - ML Labeling
 - OCR
 - OpenAI

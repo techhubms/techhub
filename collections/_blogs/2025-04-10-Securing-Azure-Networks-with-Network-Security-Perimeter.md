@@ -9,13 +9,11 @@ feed_url: https://zure.com/blog/rss.xml
 date: 2025-04-10 04:40:00 +00:00
 permalink: /azure/blogs/Securing-Azure-Networks-with-Network-Security-Perimeter
 tags:
-- Azure
 - Azure Key Vault
 - Azure Network Security Perimeter
 - Azure SQL
 - Azure Storage
 - Blog
-- Blogs
 - Cloud Security
 - Cosmos DB
 - Event Hubs
@@ -26,7 +24,6 @@ tags:
 - Outbound Rules
 - PaaS Security
 - Private Endpoints
-- Security
 - Security Posture
 - Virtual Networks
 section_names:

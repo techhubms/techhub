@@ -10,18 +10,15 @@ date: 2025-09-01 14:01:20 +00:00
 permalink: /github-copilot/videos/A-First-Look-at-the-New-Copilot-Agents-Panel-on-GitHub
 tags:
 - Agents Panel
-- AI
 - AI Assistance
 - Browser Integration
 - Code Collaboration
 - Developer
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Issue Management
 - Pull Requests
 - Repository Management
-- Videos
 - Web Interface
 section_names:
 - ai

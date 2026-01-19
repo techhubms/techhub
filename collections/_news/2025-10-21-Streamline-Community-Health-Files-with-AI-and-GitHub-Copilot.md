@@ -9,7 +9,6 @@ feed_url: https://github.blog/feed/
 date: 2025-10-21 16:00:00 +00:00
 permalink: /github-copilot/news/Streamline-Community-Health-Files-with-AI-and-GitHub-Copilot
 tags:
-- AI
 - AI & ML
 - AI Documentation
 - Automation
@@ -18,10 +17,8 @@ tags:
 - CONTRIBUTING.md
 - Copilot Chat
 - Documentation Best Practices
-- GitHub Copilot
 - LICENSE
 - Maintainers
-- News
 - Open Source
 - Project Maintainers
 - Prompt Engineering

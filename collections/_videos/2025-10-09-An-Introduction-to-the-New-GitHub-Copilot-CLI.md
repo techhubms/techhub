@@ -9,19 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-10-09 14:01:23 +00:00
 permalink: /github-copilot/videos/An-Introduction-to-the-New-GitHub-Copilot-CLI
 tags:
-- AI
 - AI Assisted Coding
 - CLI Tools
 - Command Line
 - Copilot CLI
 - Developer Tools
-- GitHub Copilot
 - GithubCopilotCLI
 - Linux
 - Macos
 - MCP Servers
 - Terminal
-- Videos
 - Windows
 - WSL
 section_names:

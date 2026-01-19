@@ -11,7 +11,6 @@ permalink: /azure/videos/Changing-User-Source-of-Authority-from-AD-to-Entra-ID
 tags:
 - Access Management
 - Active Directory
-- Azure
 - Azure AD
 - Cloud
 - Cloud Identity
@@ -25,10 +24,8 @@ tags:
 - Microsoft
 - Microsoft Documentation
 - Migration
-- Security
 - Technical Training
 - User Source Of Authority
-- Videos
 section_names:
 - azure
 - security

@@ -10,12 +10,9 @@ date: 2025-06-22 09:00:00 +00:00
 permalink: /azure/blogs/Bicep-vs-Terraform-vs-OpenTofu-Your-Infrastructure-as-Code-options-in-2025
 tags:
 - ARM Templates
-- Azure
 - Bicep
-- Blogs
 - Cloud
 - Cloud Automation
-- DevOps
 - GitHub Actions
 - Hashicorp
 - IaC

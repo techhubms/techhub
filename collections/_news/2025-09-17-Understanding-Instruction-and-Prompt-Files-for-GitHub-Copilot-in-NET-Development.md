@@ -10,20 +10,16 @@ date: 2025-09-17 17:05:00 +00:00
 permalink: /github-copilot/news/Understanding-Instruction-and-Prompt-Files-for-GitHub-Copilot-in-NET-Development
 tags:
 - .NET
-- AI
 - AI Powered Development
 - ASP.NET
 - Best Practices
 - C#
 - Code Automation
 - Code Review
-- Coding
 - Copilot
 - Copilot Configuration
 - Custom Instructions
-- GitHub Copilot
 - Instruction Files
-- News
 - Productivity
 - Productivity Tips
 - Prompt Files

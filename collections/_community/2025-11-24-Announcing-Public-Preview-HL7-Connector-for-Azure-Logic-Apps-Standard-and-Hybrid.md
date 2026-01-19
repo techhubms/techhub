@@ -10,12 +10,10 @@ date: 2025-11-24 12:13:17 +00:00
 permalink: /azure/community/Announcing-Public-Preview-HL7-Connector-for-Azure-Logic-Apps-Standard-and-Hybrid
 tags:
 - Automated Data Exchange
-- Azure
 - Azure Integration Services
 - Azure Logic Apps
 - BizTalk Migration
 - Clinical Data Exchange
-- Community
 - Healthcare Integration
 - HL7
 - HL7 Connector

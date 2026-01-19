@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-15 12:49:40 +00:00
 permalink: /azure/community/Higher-Log-Rate-Enhancement-in-Azure-SQL-Managed-Instances-Business-Critical-Tier
 tags:
-- Azure
 - Azure SQL
 - Azure SQL Managed Instance
 - Business Critical Tier
 - Cloud Database
-- Community
 - Data Recovery
 - Database Throughput
 - Log Rate

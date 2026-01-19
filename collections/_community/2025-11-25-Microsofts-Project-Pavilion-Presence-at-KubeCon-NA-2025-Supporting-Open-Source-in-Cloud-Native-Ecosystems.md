@@ -9,20 +9,15 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-25 16:42:58 +00:00
 permalink: /ai/community/Microsofts-Project-Pavilion-Presence-at-KubeCon-NA-2025-Supporting-Open-Source-in-Cloud-Native-Ecosystems
 tags:
-- AI
 - AKS
 - Artifact Signing
-- Azure
 - Azure Container Registry
 - CloudNativeCon
 - CNCF
-- Community
 - Containerd
-- DevOps
 - Istio
 - KubeCon NA
 - Microsoft Azure
-- ML
 - ML Workloads
 - Notary Project
 - Observability
@@ -32,7 +27,6 @@ tags:
 - ORAS
 - Policy Enforcement
 - Project Pavilion
-- Security
 - Service Mesh
 section_names:
 - ai

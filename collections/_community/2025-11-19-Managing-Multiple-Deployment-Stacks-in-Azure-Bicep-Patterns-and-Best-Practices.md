@@ -11,14 +11,11 @@ permalink: /azure/community/Managing-Multiple-Deployment-Stacks-in-Azure-Bicep-P
 tags:
 - Actiononunmanage
 - ARM Templates
-- Azure
 - Azure Deployment Stacks
 - Azure Resource Management
 - Bicep
 - Cloud Operations
-- Community
 - Deny Assignments
-- DevOps
 - Enterprise Infrastructure
 - Environment Consistency
 - Governance

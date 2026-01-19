@@ -10,12 +10,9 @@ date: 2025-11-13 09:44:47 +00:00
 permalink: /coding/blogs/How-to-Refactor-Legacy-Solution-Architectures-Without-Breaking-Everything
 tags:
 - Architecture
-- Blogs
 - CI/CD
 - Codebase Modernization
-- Coding
 - Deployment Automation
-- DevOps
 - DevOps Practices
 - Incremental Refactoring
 - Legacy Systems

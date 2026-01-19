@@ -6,25 +6,16 @@ viewing_mode: internal
 date: 2025-09-22 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
-- AI
 - AI Agents
 - Application Modernization
 - Automation
-- Azure
 - Cloud Migration
-- Coding
 - Developer Tools
-- DevOps
-- GitHub Copilot
 - Kubernetes
 - Large Language Models
-- Machine Learning
 - MCP (model Context Protocol)
 - Microsoft Fabric
-- ML
 - Quantum Computing
-- Roundups
-- Security
 section_names:
 - ai
 - github-copilot

@@ -10,9 +10,7 @@ date: 2025-03-14 20:26:04 +00:00
 permalink: /coding/blogs/Making-HTML-Input-Controls-Truly-ReadOnly-Best-Practices-and-Workarounds
 tags:
 - Accessibility
-- Blogs
 - Bootstrap
-- Coding
 - CSS
 - Disabled Attribute
 - Form Submission

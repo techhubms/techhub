@@ -9,13 +9,10 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-27 09:14:00 +00:00
 permalink: /ai/news/August-2025-Microsoft-Fabric-Feature-Summary-Data-Engineering-ML-and-Platform-Enhancements
 tags:
-- AI
 - Apache Spark
 - Audit Logging
 - Autoscale Billing
-- Azure
 - Azure DevOps
-- Coding
 - Copilot
 - Data Agent
 - Data Engineering
@@ -23,14 +20,10 @@ tags:
 - Data Science
 - Dataflow Gen2
 - Deployment Pipelines
-- DevOps
 - Event Schema Registry
 - Fabric APIs
 - Livy API
-- Machine Learning
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - OpenAPI
 - Python Notebooks

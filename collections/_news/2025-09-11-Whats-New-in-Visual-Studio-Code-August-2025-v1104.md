@@ -9,17 +9,12 @@ feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-09-11 17:00:00 +00:00
 permalink: /github-copilot/news/Whats-New-in-Visual-Studio-Code-August-2025-v1104
 tags:
-- AI
 - AI Powered Development
 - Chat Features
-- Coding
 - Coding Agents
-- DevOps
 - Extension APIs
-- GitHub Copilot
 - JavaScript
 - Model Selection
-- News
 - Productivity Tools
 - Python
 - Release Notes

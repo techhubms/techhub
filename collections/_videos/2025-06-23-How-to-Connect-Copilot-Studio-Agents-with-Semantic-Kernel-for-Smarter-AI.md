@@ -9,14 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt
 date: 2025-06-23 12:02:12 +00:00
 permalink: /ai/videos/How-to-Connect-Copilot-Studio-Agents-with-Semantic-Kernel-for-Smarter-AI
 tags:
-- AI
 - AI Agents
 - AI Workflow
 - API Integration
 - App Permissions
-- Azure
 - Azure App Registration
-- Coding
 - Coding Tutorial
 - Copilot Studio Agent
 - External Integrations
@@ -26,7 +23,6 @@ tags:
 - Safe Travels Agent
 - Semantic Kernel
 - Tool Integration
-- Videos
 - VS
 section_names:
 - ai

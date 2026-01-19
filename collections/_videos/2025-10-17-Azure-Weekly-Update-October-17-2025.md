@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7
 date: 2025-10-17 10:51:56 +00:00
 permalink: /ai/videos/Azure-Weekly-Update-October-17-2025
 tags:
-- AI
 - AKS
 - API Management
-- Azure
 - Azure CLI
 - Azure Cloud
 - Azure Firewall
@@ -32,7 +30,6 @@ tags:
 - Microsoft Azure
 - SAP BDC
 - Ultra Disk
-- Videos
 section_names:
 - ai
 - azure

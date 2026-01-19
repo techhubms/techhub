@@ -10,10 +10,7 @@ date: 2025-11-18 18:35:43 +00:00
 permalink: /ai/community/Announcing-MCP-Server-Support-for-Logic-Apps-Agent-Loop
 tags:
 - Agent Loop
-- AI
-- Azure
 - Azure Logic Apps Standard
-- Community
 - Connector Driven Architecture
 - Custom Connectors
 - Enterprise Integration

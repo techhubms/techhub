@@ -9,7 +9,6 @@ feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-02-13 22:27:05 +00:00
 permalink: /coding/news/Announcing-the-Release-Candidate-RC-of-TypeScript-58
 tags:
-- Coding
 - CommonJS
 - Compiler Flags
 - Computed Properties
@@ -19,7 +18,6 @@ tags:
 - JavaScript
 - Library Replacement
 - Module Resolution
-- News
 - Nightly Builds
 - Node.js
 - Performance Optimization

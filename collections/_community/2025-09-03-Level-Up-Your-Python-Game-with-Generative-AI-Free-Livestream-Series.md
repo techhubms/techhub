@@ -10,10 +10,7 @@ date: 2025-09-03 23:03:37 +00:00
 permalink: /ai/community/Level-Up-Your-Python-Game-with-Generative-AI-Free-Livestream-Series
 tags:
 - Agents
-- AI
 - AI Discord
-- Coding
-- Community
 - Community Event
 - Generative AI
 - GitHub Codespaces

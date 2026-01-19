@@ -11,8 +11,6 @@ permalink: /ai/videos/Reinventing-Manufacturing-with-Digital-Twin-AI-Powered-Adv
 tags:
 - Advanced Manufacturing
 - Agents
-- AI
-- Azure
 - Data Integration
 - Digital Twin
 - Generative AI
@@ -30,7 +28,6 @@ tags:
 - Simulation
 - Supply Chain
 - Training
-- Videos
 - Workforce Attrition
 section_names:
 - ai

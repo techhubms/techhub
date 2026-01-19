@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-31 15:49:41 +00:00
 permalink: /ai/news/Deprecation-Notice-Updates-to-GitHub-Models-and-Migration-Guidance
 tags:
-- AI
 - AI Models
 - Azure Machine Learning
 - Community Discussions
@@ -24,7 +23,6 @@ tags:
 - Mistral Small 2503
 - Model Deprecation
 - Model Migration
-- News
 - Retired
 section_names:
 - ai

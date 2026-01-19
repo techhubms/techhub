@@ -9,16 +9,13 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-07-28 16:01:31 +00:00
 permalink: /ai/videos/Build-AI-Agents-in-VS-Code-4-Hands-On-Labs-with-MCP-AI-Toolkit
 tags:
-- AI
 - AI Agents
 - AI Toolkit
-- Coding
 - Custom Server Development
 - Developer Tools
 - MCP
 - Practical Labs
 - Prompt Engineering
-- Videos
 - VS Code
 - Web Integration
 section_names:

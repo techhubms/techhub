@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-13 06:59:27 +00:00
 permalink: /ai/news/LSEG-and-Microsoft-Transform-Access-to-AI-Ready-Financial-Data-with-Copilot-Studio-and-MCP
 tags:
-- AI
 - AI Agents
 - Cloud Platform
 - Company News
@@ -24,7 +23,6 @@ tags:
 - MCP
 - Microsoft
 - Microsoft 365 Copilot
-- News
 - Open Source
 - Workflow Automation
 section_names:

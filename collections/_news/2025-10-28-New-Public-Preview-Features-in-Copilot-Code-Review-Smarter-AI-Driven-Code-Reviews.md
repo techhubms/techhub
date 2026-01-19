@@ -9,24 +9,18 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-28 15:27:44 +00:00
 permalink: /github-copilot/news/New-Public-Preview-Features-in-Copilot-Code-Review-Smarter-AI-Driven-Code-Reviews
 tags:
-- AI
 - AI Code Review
 - Automation
 - CodeQL
-- Coding
 - Copilot
 - Copilot Code Review
 - Custom Workflows
 - Developer Tools
-- DevOps
 - ESLint
-- GitHub Copilot
 - JetBrains
 - LLM
-- News
 - Pull Requests
 - Quality Assurance
-- Security
 - Static Analysis
 - Universe25
 - VS

@@ -9,12 +9,9 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 16:00:00 +00:00
 permalink: /ai/news/Announcing-Next-Gen-Microsoft-Databases-and-Fabric-Unified-AI-Ready-Data-Estate
 tags:
-- AI
 - AI Integration
-- Azure
 - Azure DocumentDB
 - Azure HorizonDB
-- Coding
 - Copilot
 - Copilot Studio
 - Cosmos DB
@@ -29,8 +26,6 @@ tags:
 - Microsoft Foundry
 - Microsoft Ignite
 - Mirroring
-- ML
-- News
 - OneLake
 - PostgreSQL
 - Power BI

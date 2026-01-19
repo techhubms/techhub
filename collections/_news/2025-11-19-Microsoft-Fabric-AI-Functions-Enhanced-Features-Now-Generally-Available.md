@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 01:30:00 +00:00
 permalink: /ai/news/Microsoft-Fabric-AI-Functions-Enhanced-Features-Now-Generally-Available
 tags:
-- AI
 - AI Functions
 - Ai.analyze Sentiment
 - Ai.classify
@@ -20,7 +19,6 @@ tags:
 - Ai.similarity
 - Ai.summarize
 - Ai.translate
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
 - Claude
@@ -28,11 +26,8 @@ tags:
 - Data Science
 - GPT 5
 - LLaMA
-- Machine Learning
 - Microsoft Fabric
-- ML
 - Model Configuration
-- News
 - Pandas
 - PySpark
 - Vector Embeddings

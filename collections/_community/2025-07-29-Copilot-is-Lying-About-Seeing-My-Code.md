@@ -9,16 +9,12 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-29 09:59:08 +00:00
 permalink: /github-copilot/community/Copilot-is-Lying-About-Seeing-My-Code
 tags:
-- AI
 - AI Assistants
 - Bug Fixing
 - Code Analysis
 - Code Completion
 - Code Privacy
 - Code Suggestion
-- Coding
-- Community
-- GitHub Copilot
 - Searchbar
 - User Experience
 - VS

@@ -10,14 +10,11 @@ date: 2025-08-26 15:10:17 +00:00
 permalink: /github-copilot/blogs/Using-GitHub-Copilot-to-Teach-Programming-A-New-Approach-for-Educators
 tags:
 - Academic Integrity
-- AI
 - AI in Education
-- Blogs
 - Code Assistance
 - Coding Pedagogy
 - Computer Science Teaching
 - Critical Code Review
-- GitHub Copilot
 - Learning Tools
 - Pair Programming
 - Programming Education

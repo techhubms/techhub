@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-01 09:00:00 +00:00
 permalink: /ml/news/Simplifying-Data-Ingestion-with-Copy-job-Replicate-data-from-Dataverse-through-Fabric-to-multiple-destinations
 tags:
-- Azure
 - Azure SQL Database
 - Bulk Copy
 - Change Data Capture
@@ -24,8 +23,6 @@ tags:
 - Fabric Link
 - Incremental Copy
 - Microsoft Fabric
-- ML
-- News
 - Power Platform
 section_names:
 - azure

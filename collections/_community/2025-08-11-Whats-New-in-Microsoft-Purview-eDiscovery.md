@@ -11,7 +11,6 @@ permalink: /security/community/Whats-New-in-Microsoft-Purview-eDiscovery
 tags:
 - Audit Readiness
 - Case Management
-- Community
 - Compliance
 - Compliance Boundary
 - Condition Builder
@@ -27,7 +26,6 @@ tags:
 - Premium Features
 - Reporting
 - Search Duplication
-- Security
 section_names:
 - security
 ---

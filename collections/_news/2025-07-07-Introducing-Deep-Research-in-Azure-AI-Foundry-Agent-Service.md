@@ -10,10 +10,8 @@ date: 2025-07-07 17:00:00 +00:00
 permalink: /ai/news/Introducing-Deep-Research-in-Azure-AI-Foundry-Agent-Service
 tags:
 - Agents
-- AI
 - AI + Machine Learning
 - API
-- Azure
 - Azure AI Foundry
 - Azure Functions
 - Azure Logic Apps
@@ -26,7 +24,6 @@ tags:
 - GPT 4
 - Integration
 - Internet Of Things
-- News
 - OpenAI
 - Pricing
 - SDK

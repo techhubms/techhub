@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 11:21:00 +00:00
 permalink: /ai/videos/Modernizing-Oracle-Workloads-with-Oracle-DatabaseAzure-and-Native-Azure-AI-Services
 tags:
-- AI
 - AI Driven Analytics
 - Autonomous Database
-- Azure
 - Azure AI
 - Cloud Migration
 - Data Lakehouse
@@ -27,7 +25,6 @@ tags:
 - Operational Insights
 - Oracle Database@Azure
 - Oracle Exadata
-- Videos
 section_names:
 - ai
 - azure

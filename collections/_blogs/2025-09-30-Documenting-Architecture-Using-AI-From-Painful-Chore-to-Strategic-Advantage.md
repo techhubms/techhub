@@ -10,11 +10,9 @@ date: 2025-09-30 08:03:16 +00:00
 permalink: /ai/blogs/Documenting-Architecture-Using-AI-From-Painful-Chore-to-Strategic-Advantage
 tags:
 - ADR Automation
-- AI
 - AI in Documentation
 - Architecture
 - Architecture Automation
-- Blogs
 - C4 Model
 - CI/CD
 - Engineering Productivity

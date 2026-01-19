@@ -10,12 +10,9 @@ date: 2025-11-18 17:00:00 +00:00
 permalink: /ai/community/Momentum-for-Azure-Confidential-VMs-with-Intel-TDX
 tags:
 - 5th Gen Intel Xeon
-- AI
-- Azure
 - Azure Boost
 - Azure Confidential VM
 - Cloud Infrastructure
-- Community
 - Confidential AI
 - Confidential Computing
 - Data Security
@@ -31,7 +28,6 @@ tags:
 - OpenHCL
 - Performance Benchmark
 - Remote Storage
-- Security
 - Trusted Execution
 - VM Security
 section_names:

@@ -11,8 +11,6 @@ permalink: /coding/community/Trail-Bike-A-New-Cycling-App-Prototype-Using-NET-MA
 tags:
 - App Prototyping
 - C#
-- Coding
-- Community
 - Community Projects
 - Cross Platform Development
 - Cycling App

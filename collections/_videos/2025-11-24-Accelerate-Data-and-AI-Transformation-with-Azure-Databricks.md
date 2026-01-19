@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 08:32:26 +00:00
 permalink: /ai/videos/Accelerate-Data-and-AI-Transformation-with-Azure-Databricks
 tags:
-- AI
 - AI Agents
-- Azure
 - Azure Databricks
 - Conversational Analytics
 - Data Analytics
@@ -20,7 +18,6 @@ tags:
 - Knowledge Assistant
 - Microsoft Foundry
 - Microsoft Ignite
-- ML
 - Monitoring Tools
 - MSIgnite
 - Multi Agent Supervisor
@@ -29,7 +26,6 @@ tags:
 - Real Time Insights
 - Unifyyourdataplatform
 - Unity Catalog
-- Videos
 section_names:
 - ai
 - azure

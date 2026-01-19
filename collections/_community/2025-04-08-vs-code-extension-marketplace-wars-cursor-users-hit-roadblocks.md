@@ -8,11 +8,9 @@ date: 2025-04-08 00:00:00 +00:00
 permalink: /devops/community/vs-code-extension-marketplace-wars-cursor-users-hit-roadblocks
 tags:
 - C/C++
-- Community
 - Compliance
 - Cursor
 - Developer Tools
-- DevOps
 - Extension Marketplace
 - IDE
 - Microsoft

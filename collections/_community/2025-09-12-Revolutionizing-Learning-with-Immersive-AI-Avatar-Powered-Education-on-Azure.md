@@ -9,14 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-12 20:31:23 +00:00
 permalink: /ai/community/Revolutionizing-Learning-with-Immersive-AI-Avatar-Powered-Education-on-Azure
 tags:
-- AI
 - Avatar Engine
-- Azure
 - Azure Data Lake Storage
 - Azure Key Vault
 - Azure Speech Studio
 - CI/CD
-- Community
 - Data Loss Prevention
 - Defender For Storage
 - Identity Management
@@ -24,7 +21,6 @@ tags:
 - Microsoft Entra ID
 - Neural Voice
 - Private Link
-- Security
 - Security Best Practices
 - SSML
 - Text To Speech

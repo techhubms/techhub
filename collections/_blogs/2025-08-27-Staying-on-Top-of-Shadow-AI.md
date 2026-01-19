@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-08-27 08:18:31 +00:00
 permalink: /ai/blogs/Staying-on-Top-of-Shadow-AI
 tags:
-- AI
 - AI Adoption
 - AI Adoption Strategy
 - AI Compliance
@@ -23,12 +22,10 @@ tags:
 - AI Usage Policy
 - AI Workflow Monitoring
 - AIOps
-- Blogs
 - Business Of DevOps
 - Contributed Content
 - Data Governance
 - Data Governance And AI
-- DevOps
 - Enterprise AI Adoption
 - Generative AI Risks
 - Innovation Strategy
@@ -36,7 +33,6 @@ tags:
 - Policy Management
 - Regulatory Compliance
 - Responsible AI
-- Security
 - Shadow AI
 - Shadow IT
 - Social Facebook

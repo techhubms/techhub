@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 12:40:28 +00:00
 permalink: /ai/videos/Powering-Financial-Workflows-with-AI-Microsoft-and-LSEG-Partnership-at-Ignite
 tags:
-- AI
 - AI Integration
 - Collaboration
 - Copilot Agents
@@ -30,7 +29,6 @@ tags:
 - Semantic Search
 - Teams
 - Unifyyourdataplatform
-- Videos
 - Workspace
 section_names:
 - ai

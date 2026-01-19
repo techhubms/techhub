@@ -9,12 +9,9 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-06-30 08:47:01 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-in-Xcode-Explore-with-Copilot-Vision-custom-instructions-and-locale-response-support
 tags:
-- AI
 - Copilot Vision
 - Developer Tools
-- GitHub Copilot
 - Image Upload
-- News
 - Xcode
 section_names:
 - ai

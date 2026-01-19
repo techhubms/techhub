@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7
 date: 2025-08-26 18:55:48 +00:00
 permalink: /azure/videos/Azure-Service-Groups-Quick-Overview
 tags:
-- Azure
 - Azure Cloud
 - Azure Resource Management
 - Azure Service Groups
@@ -21,7 +20,6 @@ tags:
 - Microsoft Azure
 - Resource Organization
 - Technical Training
-- Videos
 section_names:
 - azure
 ---

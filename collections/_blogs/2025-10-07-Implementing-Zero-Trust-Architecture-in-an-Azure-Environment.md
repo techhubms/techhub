@@ -10,11 +10,9 @@ date: 2025-10-07 08:16:33 +00:00
 permalink: /azure/blogs/Implementing-Zero-Trust-Architecture-in-an-Azure-Environment
 tags:
 - Access Reviews
-- Azure
 - Azure Key Vault
 - Azure Policy
 - Azure Security
-- Blogs
 - Cloud Security
 - Conditional Access
 - Data Loss Prevention
@@ -28,7 +26,6 @@ tags:
 - Multi Factor Authentication
 - Network Segmentation
 - Privileged Identity Management
-- Security
 - SIEM
 - Solution Architecture
 - Zero Trust Architecture

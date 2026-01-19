@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q
 date: 2025-06-24 14:01:10 +00:00
 permalink: /ai/videos/Turning-AI-Vision-into-Impact-in-UK-Financial-Services
 tags:
-- AI
 - AI Transformation
 - Banking
 - Bionic Bankers
@@ -28,7 +27,6 @@ tags:
 - Responsible AI
 - Skilling
 - UK Market
-- Videos
 section_names:
 - ai
 ---

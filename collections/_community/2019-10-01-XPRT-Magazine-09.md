@@ -7,14 +7,9 @@ viewing_mode: external
 permalink: /ai/community/XPRT-Magazine-09
 tags:
 - .NET Foundation
-- AI
 - API Management
 - Automation
-- Azure
 - Cloud
-- Coding
-- Community
-- DevOps
 - EventStorming
 - Healthcare
 - High Quality Releases

@@ -9,14 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-29 20:33:52 +00:00
 permalink: /azure/community/Dalec-Declarative-Linux-Package-and-Container-Builds-with-Azure-Linux-and-Docker-BuildKit
 tags:
-- Azure
 - Azure Linux
 - CI/CD
-- Community
 - Container Images
 - Dalec
 - Declarative Configuration
-- DevOps
 - Docker BuildKit
 - Kubernetes
 - Linux Packaging
@@ -25,7 +22,6 @@ tags:
 - Provenance
 - RPM
 - SBOM
-- Security
 - YAML
 section_names:
 - azure

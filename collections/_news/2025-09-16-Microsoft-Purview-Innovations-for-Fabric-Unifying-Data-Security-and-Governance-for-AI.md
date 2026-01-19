@@ -9,9 +9,7 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-09-16 16:00:00 +00:00
 permalink: /ai/news/Microsoft-Purview-Innovations-for-Fabric-Unifying-Data-Security-and-Governance-for-AI
 tags:
-- AI
 - AI Transformation
-- Azure
 - Cloud Governance
 - Compliance
 - Data Governance
@@ -24,10 +22,7 @@ tags:
 - Insider Risk Management
 - Microsoft Fabric
 - Microsoft Purview
-- ML
-- News
 - Power BI
-- Security
 - Unified Catalog
 section_names:
 - ai

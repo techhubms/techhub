@@ -15,16 +15,13 @@ tags:
 - Code Scanning
 - CodeQL
 - Default Branch
-- DevOps
 - Environment Branch Protection
 - GitHub Actions
 - Improvement
 - Merge Commit
-- News
 - Permissions
 - Pull Request Target
 - Secrets Management
-- Security
 - Security Best Practices
 - Workflow Security
 section_names:

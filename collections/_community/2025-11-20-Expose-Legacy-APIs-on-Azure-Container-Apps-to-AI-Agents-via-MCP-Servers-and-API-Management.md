@@ -10,18 +10,14 @@ date: 2025-11-20 09:37:41 +00:00
 permalink: /ai/community/Expose-Legacy-APIs-on-Azure-Container-Apps-to-AI-Agents-via-MCP-Servers-and-API-Management
 tags:
 - Agent Tooling
-- AI
 - API Gateway
 - API Key
 - API Proxy
 - Authentication
 - Authorization
-- Azure
 - Azure API Management
 - Azure Container Apps
 - Centralized Security
-- Community
-- DevOps
 - E Commerce
 - Governance
 - Legacy API

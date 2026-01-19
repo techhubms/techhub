@@ -11,19 +11,15 @@ permalink: /ai/news/Access-Fabric-Modernizing-Identity-and-Network-Access-Securi
 tags:
 - Access Fabric
 - Adaptive Security
-- AI
 - AI Security
-- Azure
 - Cloud Security
 - Continuous Authentication
 - Hybrid Work
 - Identity Management
 - Microsoft Entra
 - Network Access
-- News
 - Phishing Prevention
 - Risk Based Access
-- Security
 - Security Strategy
 - Session Management
 - Threat Mitigation

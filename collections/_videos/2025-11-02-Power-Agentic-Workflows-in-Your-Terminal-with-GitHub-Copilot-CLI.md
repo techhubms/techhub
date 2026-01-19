@@ -10,22 +10,18 @@ date: 2025-11-02 14:00:11 +00:00
 permalink: /github-copilot/videos/Power-Agentic-Workflows-in-Your-Terminal-with-GitHub-Copilot-CLI
 tags:
 - Accessibility Review
-- AI
 - AI Assistant
 - Automation
-- Coding
 - Command Line
 - Debugging
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - GitHub Copilot CLI
 - GitHubUniverse
 - Headless Operation
 - Natural Language Coding
 - Software Development
 - Terminal Workflows
-- Videos
 section_names:
 - ai
 - coding

@@ -13,8 +13,6 @@ tags:
 - ASP.NET Core
 - Cache Expiration
 - Caching
-- Coding
-- Community
 - Database
 - Distributed Cache
 - HybridCache

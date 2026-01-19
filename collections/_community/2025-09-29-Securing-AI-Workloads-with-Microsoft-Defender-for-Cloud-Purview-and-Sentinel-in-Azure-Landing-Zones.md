@@ -10,24 +10,20 @@ date: 2025-09-29 22:14:43 +00:00
 permalink: /ai/community/Securing-AI-Workloads-with-Microsoft-Defender-for-Cloud-Purview-and-Sentinel-in-Azure-Landing-Zones
 tags:
 - Access Control
-- AI
 - AI Security
 - AKS Security
 - ARM Templates
-- Azure
 - Azure AI Services
 - Azure Blueprints
 - Azure Landing Zone
 - Azure Policy
 - Cloud Security Posture Management
-- Community
 - Compliance
 - Confidential Computing
 - Data Governance
 - Microsoft Defender For Cloud
 - Microsoft Purview
 - Microsoft Sentinel
-- Security
 - SIEM
 - SOAR
 - Terraform

@@ -9,26 +9,22 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-12-11 23:09:57 +00:00
 permalink: /github-copilot/videos/How-I-shipped-more-code-and-products-than-ever-before-with-GitHub-Copilot
 tags:
-- AI
 - AI Coding Assistant
 - App Development
 - Automation
 - Cloud Computing
 - Code Migration
 - Code Prototyping
-- Coding
 - Dev
 - Developer
 - Developer Productivity
 - Development
 - GitHub
-- GitHub Copilot
 - Microsoft
 - Production Deployment
 - Programming Tools
 - Tech
 - Technology
-- Videos
 - VS
 - VS Code
 - Workflow Optimization

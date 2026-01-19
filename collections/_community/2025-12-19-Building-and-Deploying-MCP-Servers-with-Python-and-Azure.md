@@ -9,16 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-19 15:13:45 +00:00
 permalink: /ai/community/Building-and-Deploying-MCP-Servers-with-Python-and-Azure
 tags:
-- AI
 - API Security
 - Application Insights
 - Authentication
-- Azure
 - Azure Container Apps
 - Azure Functions
 - Cloud Deployment
-- Coding
-- Community
 - Docker
 - FastMCP
 - Langchain
@@ -28,7 +24,6 @@ tags:
 - OAuth
 - OpenTelemetry
 - Python
-- Security
 section_names:
 - ai
 - azure

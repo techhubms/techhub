@@ -10,21 +10,17 @@ date: 2025-08-08 11:12:45 +00:00
 permalink: /ai/community/Deploying-Azure-Foundry-AI-Agents-via-API-for-Web-Integration
 tags:
 - Agent Deployment
-- AI
 - API Integration
-- Azure
 - Azure AI Foundry
 - Azure API
 - Azure Foundry AI
 - CI/CD
-- Community
 - Connector Configuration
 - Conversational Agents
 - Fabric Data Agent
 - IaC
 - Laravel
 - Microsoft Fabric
-- ML
 - Tenant Management
 - Terraform
 section_names:

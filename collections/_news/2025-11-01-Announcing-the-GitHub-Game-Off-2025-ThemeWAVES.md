@@ -10,10 +10,8 @@ date: 2025-11-01 20:37:00 +00:00
 permalink: /coding/news/Announcing-the-GitHub-Game-Off-2025-ThemeWAVES
 tags:
 - C#
-- Coding
 - Company
 - Competition
-- DevOps
 - Game Development
 - Game Engines
 - Game Jam
@@ -21,7 +19,6 @@ tags:
 - GitHub Game Off
 - Godot
 - JavaScript
-- News
 - Open Source
 - Phaser
 - Programming

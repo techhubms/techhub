@@ -10,29 +10,22 @@ date: 2025-11-18 16:30:51 +00:00
 permalink: /github-copilot/community/Building-AI-Apps-and-Agents-for-the-New-Frontier
 tags:
 - Agentic DevOps
-- AI
 - AI Agents
 - App Platform
 - Application Modernization
-- Azure
 - Azure App Service
 - Azure Container Apps
 - Azure Functions
 - Azure Logic Apps
 - Cloud Reliability
-- Coding
-- Community
 - Defender For Cloud
-- DevOps
 - DevOps Automation
 - GitHub Advanced Security
-- GitHub Copilot
 - MCP
 - Microsoft Agent Framework
 - Microsoft Foundry
 - Multi Agent Orchestration
 - Production AI
-- Security
 - Security Integration
 - Teams Integration
 - VS Code

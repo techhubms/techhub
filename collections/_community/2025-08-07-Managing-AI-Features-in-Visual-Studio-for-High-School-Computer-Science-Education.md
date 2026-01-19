@@ -9,17 +9,12 @@ feed_url: https://www.reddit.com/r/VisualStudio/.rss
 date: 2025-08-07 14:01:25 +00:00
 permalink: /github-copilot/community/Managing-AI-Features-in-Visual-Studio-for-High-School-Computer-Science-Education
 tags:
-- AI
 - AI in Education
 - C#
 - C++
 - Classroom Management
 - Codespaces
-- Coding
-- Community
 - Computer Science Education
-- DevOps
-- GitHub Copilot
 - Group Policy
 - IDE Configuration
 - Intellisense

@@ -11,19 +11,16 @@ permalink: /azure/community/Secure-Unique-Default-Hostnames-Now-GA-for-Functions
 tags:
 - App Security
 - Automation
-- Azure
 - Azure App Service
 - Azure CLI
 - Azure Functions
 - Azure Logic Apps
 - Best Practices
 - Cloud Security
-- Community
 - DNS Hygiene
 - Hostname Management
 - Resource Provisioning
 - Secure Default Hostnames
-- Security
 - Serverless
 - Subdomain Takeover
 - Web Apps

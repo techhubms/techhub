@@ -10,10 +10,8 @@ date: 2025-08-25 16:04:13 +00:00
 permalink: /ai/blogs/Retrieval-Augmented-Generation-RAG-in-Azure-AI-A-Step-by-Step-Guide
 tags:
 - .NET
-- AI
 - AI Studio
 - Authentication
-- Azure
 - Azure AI
 - Azure AI Content Understanding
 - Azure AI Foundry
@@ -21,7 +19,6 @@ tags:
 - Azure Monitor
 - Azure OpenAI Service
 - Blob Storage
-- Blogs
 - Document Intelligence
 - GPT 4
 - Indexing

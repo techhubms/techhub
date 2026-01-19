@@ -10,7 +10,6 @@ date: 2025-09-23 23:09:51 +00:00
 permalink: /github-copilot/news/Upcoming-Deprecation-of-Select-Copilot-Models-from-Claude-OpenAI-and-Gemini
 tags:
 - Admin Policies
-- AI
 - AI Integration
 - AI Models
 - Claude Opus
@@ -21,10 +20,8 @@ tags:
 - Copilot Enterprise
 - Enterprise Administration
 - Gemini
-- GitHub Copilot
 - Model Deprecation
 - Model Management
-- News
 - OpenAI GPT
 - Retired
 - VS Code

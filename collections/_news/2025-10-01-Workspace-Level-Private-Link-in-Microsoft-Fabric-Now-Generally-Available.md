@@ -11,18 +11,14 @@ permalink: /ml/news/Workspace-Level-Private-Link-in-Microsoft-Fabric-Now-General
 tags:
 - Access Control
 - API Management
-- Azure
 - Azure Networking
 - Collaboration
 - Data Governance
 - Data Security
 - Fabric Portal
 - Microsoft Fabric
-- ML
 - Network Isolation
-- News
 - Private Link
-- Security
 - Workspace Security
 section_names:
 - azure

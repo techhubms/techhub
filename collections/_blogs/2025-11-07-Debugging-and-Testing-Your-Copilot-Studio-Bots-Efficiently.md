@@ -9,9 +9,7 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-07 09:52:36 +00:00
 permalink: /ai/blogs/Debugging-and-Testing-Your-Copilot-Studio-Bots-Efficiently
 tags:
-- AI
 - Application Insights
-- Blogs
 - Bot Testing
 - Chatbot Development
 - Conversational AI

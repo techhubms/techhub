@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-20 10:43:53 +00:00
 permalink: /ai/videos/Modernizing-Windows-Server-Workloads-with-Azure-Administration-AI-and-Security-Tools
 tags:
-- AI
 - AI Shell
-- Azure
 - Azure Administration
 - Azure Arc
 - Azure Copilot
@@ -26,9 +24,7 @@ tags:
 - Monitoring
 - MSIgnite
 - Performance Insights
-- Security
 - Software Updates
-- Videos
 - Virtualization
 - Windows Admin Center
 - Windows Server

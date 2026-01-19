@@ -12,13 +12,10 @@ plans:
 - Free
 alt-collection: features
 tags:
-- AI
 - Documentation
 - GitHub
-- GitHub Copilot
 - Premium
 - Pull Request
-- Videos
 section_names:
 - ai
 - github-copilot

@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 15:28:56 +00:00
 permalink: /ai/videos/AI-Powered-Endpoint-Security-Updates-in-Microsoft-Defender
 tags:
-- AI
 - AI Security
 - Autonomous Protection
 - Device Protection
@@ -22,12 +21,10 @@ tags:
 - Predictive Shielding
 - Real Time Protection
 - SecOps
-- Security
 - Security Demo
 - Server R2
 - Threat Detection
 - Threat Landscape
-- Videos
 - Windows 7 Support
 section_names:
 - ai

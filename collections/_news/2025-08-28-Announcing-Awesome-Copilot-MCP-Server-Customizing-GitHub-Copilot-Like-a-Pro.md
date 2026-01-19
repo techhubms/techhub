@@ -9,20 +9,16 @@ feed_url: https://devblogs.microsoft.com/feed
 date: 2025-08-28 17:00:18 +00:00
 permalink: /github-copilot/news/Announcing-Awesome-Copilot-MCP-Server-Customizing-GitHub-Copilot-Like-a-Pro
 tags:
-- AI
 - AI Customization
 - Awesome Copilot
 - Chat Modes
 - Code Review
-- Coding
 - Copilot Chat
 - Custom Instructions
 - Developer Tools
 - Docker
-- GitHub Copilot
 - MCP
 - MCP Server
-- News
 - Prompts
 - Repository Management
 - VS

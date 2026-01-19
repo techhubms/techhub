@@ -10,20 +10,16 @@ date: 2025-07-30 17:46:12 +00:00
 permalink: /ai/community/Build-Secure-Launch-Your-Private-MCP-Registry-with-Azure-API-Center
 tags:
 - Agentic Tools
-- AI
 - AI Adoption
 - API Governance
 - Authentication
 - Authorization
-- Azure
 - Azure API Center
 - Azure API Management
 - Cloud Infrastructure
-- Community
 - Enterprise AI
 - MCP Center
 - Private Registry
-- Security
 - Tool Discovery
 section_names:
 - ai

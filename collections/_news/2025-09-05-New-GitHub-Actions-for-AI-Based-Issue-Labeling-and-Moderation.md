@@ -9,17 +9,14 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-05 22:38:54 +00:00
 permalink: /ai/news/New-GitHub-Actions-for-AI-Based-Issue-Labeling-and-Moderation
 tags:
-- AI
 - AI Models
 - Automation
 - Community Health
 - Developer Tools
-- DevOps
 - GitHub Actions
 - GitHub Models Inference API
 - Issue Triage
 - Moderation
-- News
 - Open Source
 - Spam Detection
 - Workflow Automation

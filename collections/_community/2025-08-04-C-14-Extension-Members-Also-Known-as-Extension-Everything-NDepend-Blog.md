@@ -12,8 +12,6 @@ tags:
 - .NET
 - C# 14
 - C# Features
-- Coding
-- Community
 - Developer Productivity
 - Extension Members
 - Extension Methods

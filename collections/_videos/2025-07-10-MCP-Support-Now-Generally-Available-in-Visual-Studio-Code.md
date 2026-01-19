@@ -10,7 +10,6 @@ date: 2025-07-10 21:30:10 +00:00
 permalink: /ai/videos/MCP-Support-Now-Generally-Available-in-Visual-Studio-Code
 tags:
 - Agent Mode
-- AI
 - Developer Productivity
 - Full Spec Support
 - IDE Integration
@@ -18,7 +17,6 @@ tags:
 - MCP Support
 - Microsoft Copilot Protocol
 - Server Extensibility
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

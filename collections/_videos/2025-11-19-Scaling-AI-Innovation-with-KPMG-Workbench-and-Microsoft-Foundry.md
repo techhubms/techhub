@@ -10,7 +10,6 @@ date: 2025-11-19 11:48:33 +00:00
 permalink: /ai/videos/Scaling-AI-Innovation-with-KPMG-Workbench-and-Microsoft-Foundry
 tags:
 - Agenticbusinessapplications
-- AI
 - AI Agents
 - AI Platform
 - Audit Technology
@@ -26,7 +25,6 @@ tags:
 - Scalability
 - Service Delivery
 - Tax Advisory
-- Videos
 section_names:
 - ai
 ---

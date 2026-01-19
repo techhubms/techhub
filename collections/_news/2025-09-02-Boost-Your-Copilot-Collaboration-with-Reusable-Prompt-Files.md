@@ -10,15 +10,12 @@ date: 2025-09-02 12:00:42 +00:00
 permalink: /github-copilot/news/Boost-Your-Copilot-Collaboration-with-Reusable-Prompt-Files
 tags:
 - .github/prompts
-- AI
 - Collaboration
 - Copilot Chat
 - Custom Prompts
 - Customization
 - Developer Productivity
-- GitHub Copilot
 - GitHub Copilot Chat
-- News
 - Prompt Engineering
 - Prompt Files
 - Prompting

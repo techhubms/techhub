@@ -10,14 +10,12 @@ date: 2025-09-15 16:56:48 +00:00
 permalink: /devops/blogs/WhiteCobras-Malicious-VSCode-Extensions-Pose-Major-Security-Risk-for-Developers
 tags:
 - Attack Chain
-- Blogs
 - C2 Server
 - Cloud Infrastructure
 - Cryptocurrency
 - Cryptocurrency Theft
 - Cybersecurity
 - Developer Security
-- DevOps
 - DevOps And Open Technologies
 - DevOps Security
 - Extension.js
@@ -29,7 +27,6 @@ tags:
 - PowerShell
 - Python Script
 - Secure Software Development
-- Security
 - Social Engineering
 - Social Facebook
 - Social LinkedIn

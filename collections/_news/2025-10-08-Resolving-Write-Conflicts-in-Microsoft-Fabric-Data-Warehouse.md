@@ -11,7 +11,6 @@ permalink: /ml/news/Resolving-Write-Conflicts-in-Microsoft-Fabric-Data-Warehouse
 tags:
 - ACID Transactions
 - Atomic Operations
-- Azure
 - Compaction Preemption
 - Concurrency Control
 - Conflict Resolution
@@ -19,8 +18,6 @@ tags:
 - Error Handling
 - ETL Pipelines
 - Microsoft Fabric
-- ML
-- News
 - Snapshot Isolation
 - T SQL
 - Table Level Locking

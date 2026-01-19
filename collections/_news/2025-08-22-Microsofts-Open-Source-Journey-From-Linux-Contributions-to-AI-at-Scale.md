@@ -9,13 +9,10 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-22 15:00:00 +00:00
 permalink: /ai/news/Microsofts-Open-Source-Journey-From-Linux-Contributions-to-AI-at-Scale
 tags:
-- AI
 - AKS
 - AutoGen
-- Azure
 - Azure Open Source
 - ChatGPT
-- Coding
 - Compute
 - Containers
 - COSMIC
@@ -28,7 +25,6 @@ tags:
 - KAITO
 - Kubernetes
 - Microsoft Open Source
-- News
 - OpenAI
 - Phi 4 Mini
 - PostgreSQL

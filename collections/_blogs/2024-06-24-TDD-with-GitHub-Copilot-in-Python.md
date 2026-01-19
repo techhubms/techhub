@@ -9,10 +9,6 @@ feed_url: https://blog.jesseswart.nl/index.xml
 date: 2024-06-24 14:06:14 +00:00
 permalink: /github-copilot/blogs/TDD-with-GitHub-Copilot-in-Python
 tags:
-- AI
-- Blogs
-- Coding
-- GitHub Copilot
 - Personal Finance
 - Python
 - TDD

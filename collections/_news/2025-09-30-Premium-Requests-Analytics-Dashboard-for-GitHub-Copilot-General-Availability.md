@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-30 18:05:46 +00:00
 permalink: /github-copilot/news/Premium-Requests-Analytics-Dashboard-for-GitHub-Copilot-General-Availability
 tags:
-- AI
 - Analytics
 - API Integration
 - Billing
@@ -17,11 +16,8 @@ tags:
 - Cost Tracking
 - Data Visualization
 - Developer Tools
-- DevOps
 - Enterprise Reporting
 - GitHub
-- GitHub Copilot
-- News
 - Premium Requests
 - Subscription Management
 - Usage Dashboard

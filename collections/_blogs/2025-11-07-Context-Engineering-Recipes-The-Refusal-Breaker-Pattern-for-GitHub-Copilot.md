@@ -9,16 +9,13 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-11-07 00:00:00 +00:00
 permalink: /github-copilot/blogs/Context-Engineering-Recipes-The-Refusal-Breaker-Pattern-for-GitHub-Copilot
 tags:
-- AI
 - AI Development
 - Automation
 - Best Practices
-- Blogs
 - Context Engineering
 - Copilot Refusal
 - Dev Workflow
 - Developer Tools
-- GitHub Copilot
 - Prompt Engineering
 section_names:
 - ai

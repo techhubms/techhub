@@ -10,19 +10,15 @@ date: 2025-02-24 00:00:00 +00:00
 permalink: /github-copilot/news/Introducing-GitHub-Copilot-Agent-Mode-Preview-for-VS-Code
 tags:
 - Agent Mode
-- AI
 - AI Assisted Coding
 - Autonomous Programming
 - Claude Sonnet
 - Code Analysis
-- Coding
 - Copilot Edits
 - Developer Productivity
-- GitHub Copilot
 - GPT 4o
 - LLM
 - MCP Servers
-- News
 - Refactoring
 - Terminal Commands
 - VS Code

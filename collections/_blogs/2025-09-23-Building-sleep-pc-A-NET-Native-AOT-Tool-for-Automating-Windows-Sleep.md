@@ -14,9 +14,7 @@ tags:
 - .NET 8
 - .NET Core
 - AOT
-- Blogs
 - C#
-- Coding
 - Command Line Parsing
 - Command Line Tool
 - ConsoleAppFramework

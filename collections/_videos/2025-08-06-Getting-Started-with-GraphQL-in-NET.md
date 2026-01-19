@@ -14,14 +14,12 @@ tags:
 - ASP.NET Core
 - Backend Development
 - C#
-- Coding
 - GraphQL
 - GraphQL API
 - HotChocolate
 - Michael Staib
 - Microsoft
 - Nick Chapsas
-- Videos
 section_names:
 - coding
 ---

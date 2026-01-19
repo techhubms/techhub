@@ -11,25 +11,20 @@ permalink: /github-copilot/videos/Automating-NET-Aspire-Architecture-Documentati
 tags:
 - .NET 10 Preview
 - .NET Aspire
-- AI
 - AppHost
 - Architecture Documentation
 - Aspire Dashboard
 - Automation
 - CI/CD
 - Cloud Native
-- Coding
 - Copilot Chat
 - Copilot Coding Agent
-- DevOps
 - DevOps Workflow
-- GitHub Copilot
 - Living Documentation
 - Markdown
 - Mermaid
 - Playwright MCP
 - Pull Requests
-- Videos
 - VS Code
 section_names:
 - ai

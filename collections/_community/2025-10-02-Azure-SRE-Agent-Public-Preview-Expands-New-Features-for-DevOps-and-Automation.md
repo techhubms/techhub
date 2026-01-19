@@ -11,15 +11,12 @@ permalink: /azure/community/Azure-SRE-Agent-Public-Preview-Expands-New-Features-
 tags:
 - AKS
 - AZ CLI
-- Azure
 - Azure App Service
 - Azure DevOps
 - Azure Functions
 - Azure Monitor
 - Azure Portal
 - Azure SRE Agent
-- Community
-- DevOps
 - DevOps Automation
 - Diagnostics
 - Enterprise Governance
@@ -30,7 +27,6 @@ tags:
 - RBAC
 - Root Cause Analysis
 - Runbooks
-- Security
 - ServiceNow
 - Site Reliability Engineering
 section_names:

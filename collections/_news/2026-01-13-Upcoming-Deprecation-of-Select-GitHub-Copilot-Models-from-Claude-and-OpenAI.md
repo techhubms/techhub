@@ -9,18 +9,15 @@ feed_url: https://github.blog/changelog/feed/
 date: 2026-01-13 19:29:00 +00:00
 permalink: /github-copilot/news/Upcoming-Deprecation-of-Select-GitHub-Copilot-Models-from-Claude-and-OpenAI
 tags:
-- AI
 - AI Models
 - Claude Opus
 - Copilot
 - Copilot Chat
 - Enterprise Administration
-- GitHub Copilot
 - GPT 5
 - GPT 5 Codex
 - Model Deprecation
 - Model Policy
-- News
 - OpenAI
 - Retired
 - VS Code

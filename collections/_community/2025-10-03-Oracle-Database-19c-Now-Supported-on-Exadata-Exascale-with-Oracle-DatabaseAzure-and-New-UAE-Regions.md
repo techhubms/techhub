@@ -10,10 +10,8 @@ date: 2025-10-03 17:02:27 +00:00
 permalink: /azure/community/Oracle-Database-19c-Now-Supported-on-Exadata-Exascale-with-Oracle-DatabaseAzure-and-New-UAE-Regions
 tags:
 - AI
-- Azure
 - Azure AI Foundry
 - Cloud Migration
-- Community
 - Compliance
 - Copilot Studio
 - Database Modernization

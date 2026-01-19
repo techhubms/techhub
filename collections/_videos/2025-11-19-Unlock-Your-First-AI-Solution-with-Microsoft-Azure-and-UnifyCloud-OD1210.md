@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 05:30:51 +00:00
 permalink: /ai/videos/Unlock-Your-First-AI-Solution-with-Microsoft-Azure-and-UnifyCloud-OD1210
 tags:
-- AI
 - AI Deployment
 - AI Factory
 - AI Guardian
-- Azure
 - Azure AI
 - Cloud Atlas
 - Cloud Shell
@@ -27,7 +25,6 @@ tags:
 - Resource Management
 - SMB
 - Step By Step Demo
-- Videos
 section_names:
 - ai
 - azure

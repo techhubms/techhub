@@ -10,13 +10,11 @@ date: 2025-10-15 19:00:00 +00:00
 permalink: /azure/community/Ephemeral-OS-Disk-Support-Now-in-Public-Preview-on-Azure-Virtual-Desktop
 tags:
 - ARM Templates
-- Azure
 - Azure Infrastructure
 - Azure Portal
 - Azure Virtual Desktop
 - CLI
 - Cloud Deployment
-- Community
 - Dynamic Autoscaling
 - Ephemeral OS Disk
 - Performance Optimization

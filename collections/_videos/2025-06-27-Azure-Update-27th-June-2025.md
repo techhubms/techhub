@@ -12,7 +12,6 @@ tags:
 - ACM FOCUS
 - AFD Managed Certificate
 - AVNM IPAM
-- Azure
 - Azure Advisor
 - Azure Cloud
 - Azure Firewall
@@ -22,7 +21,6 @@ tags:
 - Cloud
 - Cloud Infrastructure
 - Cloud Security
-- DevOps
 - Draft & Deploy
 - FXv2 VMs
 - IaaS
@@ -31,12 +29,9 @@ tags:
 - Managed Certificates
 - Microsoft
 - Microsoft Azure
-- ML
 - NetApp Migration
 - Prem SSD V2
-- Security
 - Vector Data
-- Videos
 - WAF Security Copilot
 - Workload Optimization
 section_names:

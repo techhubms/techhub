@@ -10,7 +10,6 @@ date: 2025-11-24 05:10:08 +00:00
 permalink: /ai/videos/AI-Powered-Data-Security-with-Security-Copilot-and-Microsoft-Purview
 tags:
 - Advanced Security Solutions
-- AI
 - AI Agents
 - Alert Triage
 - Automation
@@ -23,10 +22,8 @@ tags:
 - Policy Comparison
 - Risk Management
 - Secureyourdata
-- Security
 - Security Copilot
 - Security Operations
-- Videos
 section_names:
 - ai
 - security

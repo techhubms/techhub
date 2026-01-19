@@ -9,17 +9,14 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-18 16:19:21 +00:00
 permalink: /github-copilot/news/Copilot-Code-Review-Now-Available-in-JetBrains-IDEs-and-Visual-Studio
 tags:
-- AI
 - AI Development Tools
 - Code Review Automation
 - Copilot
 - Copilot Code Review
 - Developer Productivity
 - Editor Plugins
-- GitHub Copilot
 - IntelliJ IDEA
 - JetBrains IDEs
-- News
 - PyCharm
 - Self Review
 - VS

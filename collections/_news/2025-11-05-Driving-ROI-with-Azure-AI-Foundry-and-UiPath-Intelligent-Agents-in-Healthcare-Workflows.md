@@ -10,10 +10,8 @@ date: 2025-11-05 18:00:00 +00:00
 permalink: /ai/news/Driving-ROI-with-Azure-AI-Foundry-and-UiPath-Intelligent-Agents-in-Healthcare-Workflows
 tags:
 - Agentic Automation
-- AI
 - AI + Machine Learning
 - Automation
-- Azure
 - Azure AI Foundry
 - Business Process Automation
 - DICOMweb API
@@ -22,7 +20,6 @@ tags:
 - Healthcare AI
 - Medical Imaging
 - Microsoft Azure
-- News
 - Operational AI
 - Process Orchestration
 - Radiology Workflow

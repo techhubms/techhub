@@ -10,15 +10,12 @@ date: 2025-11-20 11:30:00 +00:00
 permalink: /ml/news/Whats-New-with-Fabric-Activator-Enhanced-Automation-and-Event-Detection
 tags:
 - Automation
-- Azure
 - Business Process Automation
 - Data Engineering
 - Event Detection
 - Fabric Activator
 - KQL Queryset
 - Microsoft Fabric
-- ML
-- News
 - No Code
 - Power Automate
 - Real Time Hub

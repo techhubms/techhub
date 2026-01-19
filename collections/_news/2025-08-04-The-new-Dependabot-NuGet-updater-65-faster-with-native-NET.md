@@ -12,19 +12,15 @@ tags:
 - .NET
 - Azure Artifacts
 - Central Package Management
-- Coding
 - Conflict Resolution
 - Dependabot
 - Dependency Update
-- DevOps
 - GitHub Packages
 - Global.json
 - MSBuild
-- News
 - NuGet
 - Package Management
 - Performance
-- Security
 - Transitive Dependencies
 section_names:
 - coding

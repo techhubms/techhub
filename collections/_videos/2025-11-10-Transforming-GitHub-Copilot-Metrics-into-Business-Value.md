@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-11-10 15:00:34 +00:00
 permalink: /github-copilot/videos/Transforming-GitHub-Copilot-Metrics-into-Business-Value
 tags:
-- AI
 - AI Adoption
 - Analytics
 - Business Value
@@ -19,14 +18,12 @@ tags:
 - Developer Productivity
 - Engineering Leadership
 - GitHub
-- GitHub Copilot
 - GitHub Universe
 - GitHubUniverse
 - Metrics
 - ROI
 - SDLC
 - Usage Insights
-- Videos
 section_names:
 - ai
 - github-copilot

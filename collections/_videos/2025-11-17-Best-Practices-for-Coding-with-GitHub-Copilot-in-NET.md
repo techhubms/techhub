@@ -11,20 +11,16 @@ permalink: /github-copilot/videos/Best-Practices-for-Coding-with-GitHub-Copilot-
 tags:
 - .NET
 - .NET Conf
-- AI
 - AI Coding Assistant
 - Best Practices
 - Code Generation
-- Coding
 - Coding Tips
 - Copilot Integration
 - Developer Workflow
-- GitHub Copilot
 - Microsoft
 - Sharda Kaur
 - Simona Liao
 - Student Zone
-- Videos
 section_names:
 - ai
 - coding

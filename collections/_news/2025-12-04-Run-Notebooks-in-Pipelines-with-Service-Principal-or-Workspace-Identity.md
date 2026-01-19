@@ -9,20 +9,16 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-04 11:00:00 +00:00
 permalink: /ml/news/Run-Notebooks-in-Pipelines-with-Service-Principal-or-Workspace-Identity
 tags:
-- Azure
 - Connection Property
 - Data Factory
 - Enterprise Security
 - Governance
 - Identity Management
 - Microsoft Fabric
-- ML
-- News
 - Notebook Activity
 - Operational Reliability
 - Pipeline Automation
 - Production Workloads
-- Security
 - Service Principal
 - SPN
 - WI

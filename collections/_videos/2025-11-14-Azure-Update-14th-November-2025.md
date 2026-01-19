@@ -10,11 +10,9 @@ date: 2025-11-14 16:32:17 +00:00
 permalink: /ai/videos/Azure-Update-14th-November-2025
 tags:
 - .NET 10
-- AI
 - AI Superfactory
 - AKS
 - App Gateway For Containers
-- Azure
 - Azure Data Lake Storage Gen2
 - Azure Firewall
 - Azure Functions
@@ -25,8 +23,6 @@ tags:
 - Backup
 - Cloud
 - Cloud Infrastructure
-- Coding
-- DevOps
 - Flatcar Container Linux
 - GPT 5.1
 - Johnsavillstechnicaltraining
@@ -36,8 +32,6 @@ tags:
 - Object Storage
 - Onboard to Azure
 - PostgreSQL Flexible Server
-- Security
-- Videos
 - WAF
 section_names:
 - ai

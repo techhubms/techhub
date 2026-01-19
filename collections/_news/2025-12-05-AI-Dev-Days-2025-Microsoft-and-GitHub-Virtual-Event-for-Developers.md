@@ -10,25 +10,19 @@ date: 2025-12-05 19:30:22 +00:00
 permalink: /github-copilot/news/AI-Dev-Days-2025-Microsoft-and-GitHub-Virtual-Event-for-Developers
 tags:
 - Agent Framework
-- AI
 - AI Agents
 - AI Dev Days
 - Anthropic
 - App Modernization
 - AutoGen
-- Azure
 - Cloud Development
 - Code Automation
-- Coding
 - Devdays
 - Developer Events
 - Developer Productivity
-- DevOps
-- GitHub Copilot
 - MCP Protocol
 - Microsoft Foundry
 - Model Orchestration
-- News
 - OpenAI
 - Semantic Kernel
 - Spec Kit

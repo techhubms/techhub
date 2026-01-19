@@ -10,13 +10,10 @@ date: 2025-08-13 07:00:00 +00:00
 permalink: /ai/community/How-Microsoft-Semantic-Kernel-Transforms-Proven-Workflows-into-Intelligent-Agents
 tags:
 - Agent Architecture
-- AI
 - AI Orchestration
 - Business Intelligence
 - Business Logic
 - Code Execution
-- Coding
-- Community
 - Data Analysis
 - Email Automation
 - Function Decorators

@@ -9,15 +9,11 @@ feed_url: https://dellenny.com/feed/
 date: 2025-08-20 08:04:32 +00:00
 permalink: /github-copilot/blogs/How-GitHub-Copilot-Helps-with-Test-Driven-Development-TDD
 tags:
-- AI
 - AI Coding Assistant
 - Assertion Generation
-- Blogs
 - Code Automation
-- Coding
 - Developer Productivity
 - Edge Case Generation
-- GitHub Copilot
 - JUnit
 - Pytest
 - Red Green Refactor

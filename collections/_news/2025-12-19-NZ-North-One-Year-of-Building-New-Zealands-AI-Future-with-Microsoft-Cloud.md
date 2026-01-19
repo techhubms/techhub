@@ -9,12 +9,10 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-19 14:34:22 +00:00
 permalink: /ai/news/NZ-North-One-Year-of-Building-New-Zealands-AI-Future-with-Microsoft-Cloud
 tags:
-- AI
 - AI Adoption
 - AI Agents
 - AI Innovation
 - AI Productivity
-- Azure
 - Azure Cloud
 - Azure Data Center
 - Cloud Migration
@@ -26,7 +24,6 @@ tags:
 - Health Tech
 - Microsoft Azure
 - New Zealand
-- News
 - Public Sector
 - Sustainability
 section_names:

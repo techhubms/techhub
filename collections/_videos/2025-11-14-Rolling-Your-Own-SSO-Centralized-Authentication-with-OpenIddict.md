@@ -15,18 +15,15 @@ tags:
 - Authentication
 - Authorization
 - Centralized Login
-- Coding
 - Custom Authentication
 - Entra ID
 - Identity Management
 - OpenIddict
-- Security
 - Security Best Practices
 - Session Management
 - Single Sign On
 - SSO Architecture
 - User Workflow
-- Videos
 section_names:
 - coding
 - security

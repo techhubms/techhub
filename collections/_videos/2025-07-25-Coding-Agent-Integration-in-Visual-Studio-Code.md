@@ -10,20 +10,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-07-25 14:01:36 +00:00
 permalink: /github-copilot/videos/Coding-Agent-Integration-in-Visual-Studio-Code
 tags:
-- AI
 - AI Coding Assistant
 - AI Developer
-- Coding
 - Coding Agent
 - Copilot Automation
 - Developer Workflow
 - Editor Integration
-- GitHub Copilot
 - GitHub Pull Requests Extension
 - Issue Assignment
 - Pull Request Management
 - Software Development
-- Videos
 - VS Code
 section_names:
 - ai

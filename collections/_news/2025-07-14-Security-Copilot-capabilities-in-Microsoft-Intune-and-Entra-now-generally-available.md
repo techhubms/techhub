@@ -9,7 +9,6 @@ date: 2025-07-14 17:23:42 +00:00
 permalink: /ai/news/Security-Copilot-capabilities-in-Microsoft-Intune-and-Entra-now-generally-available
 viewing_mode: external
 tags:
-- AI
 - AI Driven Security
 - Compliance
 - Endpoint Management
@@ -17,8 +16,6 @@ tags:
 - Microsoft 365
 - Microsoft Entra
 - Microsoft Intune
-- News
-- Security
 - Security Automation
 - Security Copilot
 - Threat Management

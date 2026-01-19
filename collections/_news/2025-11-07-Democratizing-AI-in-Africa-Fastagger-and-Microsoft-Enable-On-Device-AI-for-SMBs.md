@@ -10,9 +10,7 @@ date: 2025-11-07 14:02:38 +00:00
 permalink: /ai/news/Democratizing-AI-in-Africa-Fastagger-and-Microsoft-Enable-On-Device-AI-for-SMBs
 tags:
 - Africa Transformation Office
-- AI
 - AUNI System
-- Azure
 - Azure AI
 - Company News
 - Customer Retention
@@ -27,7 +25,6 @@ tags:
 - Microsoft
 - Mobile Money
 - Mobile Technology
-- News
 - NVIDIA GenAI
 - On Device AI
 - SaaS

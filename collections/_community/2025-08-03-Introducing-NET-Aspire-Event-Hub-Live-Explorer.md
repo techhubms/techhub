@@ -11,15 +11,11 @@ permalink: /coding/community/Introducing-NET-Aspire-Event-Hub-Live-Explorer
 tags:
 - .NET
 - .NET Aspire
-- Azure
 - Azure Event Hubs
 - Blazor
-- Coding
-- Community
 - Consumer Groups
 - Dashboard Integration
 - Developer Tooling
-- DevOps
 - Event Driven Workflows
 - Local Development
 - NuGet Package

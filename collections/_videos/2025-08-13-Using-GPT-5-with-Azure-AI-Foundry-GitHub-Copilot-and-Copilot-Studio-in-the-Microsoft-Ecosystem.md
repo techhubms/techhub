@@ -11,22 +11,18 @@ permalink: /github-copilot/videos/Using-GPT-5-with-Azure-AI-Foundry-GitHub-Copil
 tags:
 - Agent Development
 - Agents
-- AI
 - AI Integration
-- Azure
 - Azure AI Foundry
 - Copilot Chat
 - Copilot Studio
 - Copilot Studio Maker
 - Developer Tools
 - Generative AI
-- GitHub Copilot
 - GPT 5
 - Large Language Models
 - LLM
 - Microsoft Copilot
 - Microsoft Ecosystem
-- Videos
 section_names:
 - ai
 - azure

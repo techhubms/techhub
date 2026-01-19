@@ -10,15 +10,12 @@ date: 2025-08-07 23:01:07 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-in-VS-Code-July-2025-Release-v1103
 tags:
 - Agent Sessions
-- AI
 - AI Coding Assistant
 - Chat Agents
 - Chat Checkpoints
 - Coding Workflows
 - Developer Productivity
 - Experimental Features
-- GitHub Copilot
-- News
 - Release Notes
 - Terminal Integrations
 - To Do Lists

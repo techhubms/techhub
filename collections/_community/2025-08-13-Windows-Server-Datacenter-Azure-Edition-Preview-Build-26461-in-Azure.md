@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-13 16:41:57 +00:00
 permalink: /azure/community/Windows-Server-Datacenter-Azure-Edition-Preview-Build-26461-in-Azure
 tags:
-- Azure
 - Azure Automanage
 - Azure Edition
 - Azure Marketplace
 - Cloud Infrastructure
-- Community
 - Core Version
 - Deployment
 - Desktop Experience

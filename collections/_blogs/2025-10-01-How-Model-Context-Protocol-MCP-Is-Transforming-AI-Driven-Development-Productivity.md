@@ -13,7 +13,6 @@ tags:
 - Agentforce
 - AgentGateways
 - Agentic AI
-- AI
 - AI Development
 - AI Ecosystem
 - AI Governance
@@ -23,11 +22,9 @@ tags:
 - AI Standards
 - AI Tool Integration
 - AIOps
-- Blogs
 - Business Of DevOps
 - Contributed Content
 - Developer Productivity
-- DevOps
 - Enterprise AI Security
 - Governance
 - MCP

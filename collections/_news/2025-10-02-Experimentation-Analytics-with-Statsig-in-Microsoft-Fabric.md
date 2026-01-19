@@ -10,7 +10,6 @@ date: 2025-10-02 13:00:00 +00:00
 permalink: /ml/news/Experimentation-Analytics-with-Statsig-in-Microsoft-Fabric
 tags:
 - A/B Testing
-- Azure
 - Control Group
 - Data Science
 - Experimentation Analytics
@@ -18,8 +17,6 @@ tags:
 - Frequentist Testing
 - KPI
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Power BI
 - Product Analytics

@@ -10,7 +10,6 @@ date: 2025-12-03 19:38:19 +00:00
 permalink: /github-copilot/news/Claude-Opus-45-Preview-Available-in-GitHub-Copilot-Chat-and-IDEs
 tags:
 - Agent Mode
-- AI
 - Ask Mode
 - Claude Opus 4.5
 - Coding Assistant
@@ -21,11 +20,9 @@ tags:
 - Copilot Pro
 - Eclipse
 - Edit Mode
-- GitHub Copilot
 - IDE Integration
 - JetBrains
 - Model Management
-- News
 - VS
 - Xcode
 section_names:

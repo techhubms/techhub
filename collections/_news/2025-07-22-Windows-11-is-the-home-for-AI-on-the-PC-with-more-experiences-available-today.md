@@ -10,12 +10,10 @@ permalink: /ai/news/Windows-11-is-the-home-for-AI-on-the-PC-with-more-experience
 viewing_mode: external
 page: news
 tags:
-- AI
 - AI Features
 - AI Integration
 - Company News
 - Microsoft
-- News
 - Operating System
 - PC Experiences
 - User Experience

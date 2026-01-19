@@ -10,16 +10,12 @@ date: 2025-07-23 16:12:28 +00:00
 permalink: /github-copilot/news/Agents-Page-Update-Choose-Base-Branch-for-GitHub-Copilot-Coding-Agent-Tasks
 tags:
 - Agents Page
-- AI
 - Automation
 - Base Branch
 - Branching Model
 - Coding Agent
-- DevOps
 - Feature Branch
 - GitHub CLI
-- GitHub Copilot
-- News
 - Pull Requests
 - VS Code
 section_names:

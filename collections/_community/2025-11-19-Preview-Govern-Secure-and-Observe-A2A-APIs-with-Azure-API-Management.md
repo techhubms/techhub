@@ -11,7 +11,6 @@ permalink: /ai/community/Preview-Govern-Secure-and-Observe-A2A-APIs-with-Azure-A
 tags:
 - A2A API
 - Agent2Agent
-- AI
 - AI Agent
 - API Gateway
 - API Governance
@@ -19,15 +18,12 @@ tags:
 - API Observability
 - API Policy
 - Application Insights
-- Azure
 - Azure API Management
-- Community
 - Enterprise Integration
 - GenAI
 - JSON RPC
 - MCP Tools
 - OpenTelemetry
-- Security
 section_names:
 - ai
 - azure

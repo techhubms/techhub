@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-14 14:15:40 +00:00
 permalink: /azure/news/Queensland-Government-Enhances-Cybersecurity-for-Vulnerable-Communities-with-Microsoft-365-E5
 tags:
-- Azure
 - Azure Security
 - Company News
 - Compliance
@@ -27,8 +26,6 @@ tags:
 - Microsoft Purview
 - Microsoft Secure Score
 - Microsoft Sentinel
-- News
-- Security
 - Security Operations
 - Zero Trust
 section_names:

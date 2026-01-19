@@ -9,10 +9,8 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-28 12:33:12 +00:00
 permalink: /ai/blogs/Introducing-Knowledge-Agent-in-SharePoint-Public-Preview
 tags:
-- AI
 - AI in SharePoint
 - Automation Rules
-- Blogs
 - Content Automation
 - Copilot
 - Document Summarization

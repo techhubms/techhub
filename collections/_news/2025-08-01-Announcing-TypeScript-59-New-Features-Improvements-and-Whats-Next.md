@@ -9,12 +9,10 @@ feed_url: https://devblogs.microsoft.com/typescript/feed/
 date: 2025-08-01 16:19:25 +00:00
 permalink: /coding/news/Announcing-TypeScript-59-New-Features-Improvements-and-Whats-Next
 tags:
-- Coding
 - ECMAScript
 - Expandable Hovers
 - Import Defer
 - JavaScript
-- News
 - Node.js
 - Performance Optimization
 - Tsconfig

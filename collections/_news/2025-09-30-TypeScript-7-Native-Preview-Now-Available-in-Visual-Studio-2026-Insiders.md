@@ -9,13 +9,11 @@ feed_url: https://devblogs.microsoft.com/feed
 date: 2025-09-30 16:04:20 +00:00
 permalink: /coding/news/TypeScript-7-Native-Preview-Now-Available-in-Visual-Studio-2026-Insiders
 tags:
-- Coding
 - Compile Time
 - Developer Experience
 - IntelliSense
 - JavaScript
 - Native Compiler
-- News
 - npm
 - Package Management
 - Performance Optimization

@@ -10,14 +10,10 @@ date: 2025-10-15 18:35:27 +00:00
 permalink: /ai/blogs/VS-Code-Marketplace-Secret-Leaks-Highlight-Risks-in-Extensions-and-AI-Configurations
 tags:
 - Access Tokens
-- AI
 - AI Development
-- Azure
 - Azure DevOps
-- Blogs
 - Code Editor
 - Developer Tools
-- DevOps
 - DevOps And Open Technologies
 - Exposed Secrets
 - Extension Security
@@ -29,7 +25,6 @@ tags:
 - OpenVSX
 - Plugin Vulnerabilities
 - Secrets Management
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

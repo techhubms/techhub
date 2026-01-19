@@ -10,7 +10,6 @@ date: 2025-11-21 08:45:00 +00:00
 permalink: /ml/news/SQL-Pool-Insights-Monitoring-Microsoft-Fabric-Data-Warehouse-Performance
 tags:
 - Analytics Workloads
-- Azure
 - Capacity Planning
 - Data Engineering
 - Data Warehouse
@@ -18,8 +17,6 @@ tags:
 - Fabric Data Warehousing
 - Historical Data
 - Microsoft Fabric
-- ML
-- News
 - Performance Monitoring
 - Pressure Events
 - Query Insights

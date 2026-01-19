@@ -10,8 +10,6 @@ date: 2025-07-29 19:44:01 +00:00
 permalink: /coding/community/Widget-Creation-with-Xbox-Game-Bar-SDK-UWP-Workload-Missing-in-Visual-Studio-2022
 tags:
 - C#
-- Coding
-- Community
 - Game Development
 - Project Templates
 - SDK

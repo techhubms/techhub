@@ -11,15 +11,12 @@ permalink: /azure/community/Simplify-Image-Signing-and-Verification-with-Notary-
 tags:
 - AKS
 - Artifact Signing
-- Azure
 - Azure DevOps
 - Azure Key Vault
 - Azure Trusted Signing
 - Certificate Management
 - CI/CD Pipeline
-- Community
 - Container Image Security
-- DevOps
 - GitHub Actions
 - Helm Charts
 - Image Verification
@@ -28,7 +25,6 @@ tags:
 - OCI Artifacts
 - Ratify
 - SBOM
-- Security
 - Supply Chain Security
 section_names:
 - azure

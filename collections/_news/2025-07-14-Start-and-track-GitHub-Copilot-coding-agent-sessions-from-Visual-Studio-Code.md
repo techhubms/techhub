@@ -9,15 +9,12 @@ date: 2025-07-14 14:57:20 +00:00
 permalink: /github-copilot/news/Start-and-track-GitHub-Copilot-coding-agent-sessions-from-Visual-Studio-Code
 viewing_mode: external
 tags:
-- AI
 - AI Assistant
 - Automation
 - Background Tasks
 - Coding Agent
 - Copilot Features
 - Developer Productivity
-- GitHub Copilot
-- News
 - Programming Tools
 - Software Development
 - Task Delegation

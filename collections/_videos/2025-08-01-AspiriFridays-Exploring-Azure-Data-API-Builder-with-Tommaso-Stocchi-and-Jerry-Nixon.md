@@ -12,14 +12,11 @@ tags:
 - .NET
 - Application Programming Interfaces
 - Aspirify
-- Azure
 - Azure Data API Builder
 - Data API
 - Jerry Nixon
 - Microsoft
-- ML
 - Tommaso Stocchi
-- Videos
 section_names:
 - azure
 - ml

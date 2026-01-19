@@ -13,7 +13,6 @@ tags:
 - API
 - API Design
 - ASP.NET
-- Coding
 - Demo
 - Developer
 - Developer Community
@@ -30,7 +29,6 @@ tags:
 - Request Validation
 - Response Structuring
 - Software Architecture
-- Videos
 section_names:
 - coding
 ---

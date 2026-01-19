@@ -20,14 +20,12 @@ tags:
 - MSIgnite
 - Network Visibility
 - Secureyourdata
-- Security
 - Security Connectors
 - Security Platform
 - Security Store
 - SOC Operations
 - Threat Detection
 - Threat Intelligence
-- Videos
 section_names:
 - security
 ---

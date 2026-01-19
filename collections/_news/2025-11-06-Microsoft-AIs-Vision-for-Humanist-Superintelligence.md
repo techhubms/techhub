@@ -10,7 +10,6 @@ date: 2025-11-06 14:07:20 +00:00
 permalink: /ai/news/Microsoft-AIs-Vision-for-Humanist-Superintelligence
 tags:
 - AGI
-- AI
 - AI Alignment
 - AI Containment
 - AI Ethics
@@ -25,7 +24,6 @@ tags:
 - Medical Superintelligence
 - Microsoft AI
 - Mustafa Suleyman
-- News
 - Superintelligence
 section_names:
 - ai

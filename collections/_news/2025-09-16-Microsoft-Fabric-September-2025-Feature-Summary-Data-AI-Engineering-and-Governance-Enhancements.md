@@ -9,12 +9,9 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-16 00:00:00 +00:00
 permalink: /ai/news/Microsoft-Fabric-September-2025-Feature-Summary-Data-AI-Engineering-and-Governance-Enhancements
 tags:
-- AI
 - Apache Airflow
-- Azure
 - CI/CD
 - CLI
-- Coding
 - Copilot
 - Data Agent
 - Data Engineering
@@ -23,7 +20,6 @@ tags:
 - Data Wrangler
 - Databricks
 - Dataflow Gen2
-- DevOps
 - Entra ID
 - Extensibility Toolkit
 - Governance APIs
@@ -31,15 +27,12 @@ tags:
 - Materialized Lake Views
 - Microsoft Fabric
 - Mirroring
-- ML
-- News
 - Notebook
 - OneLake
 - Open Source
 - Pipelines
 - Purview
 - Python
-- Security
 - Spark
 - Terraform
 - VS Code Extension

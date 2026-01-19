@@ -9,18 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-25 12:08:40 +00:00
 permalink: /ai/videos/Levis-Global-IT-Transformation-Migration-and-Modernization-with-Azure
 tags:
-- AI
 - AI Workflows
 - AKS
 - Application Modernization
-- Azure
 - Azure SQL
 - Cloud Migration
 - Cloud Skills
-- Coding
 - Cost Savings
 - Data Modernization
-- DevOps
 - Enterprise Modernization
 - FinOps
 - Infrastructure Re Platforming
@@ -32,7 +28,6 @@ tags:
 - Public Cloud
 - SAP
 - SQL Server
-- Videos
 - Windows Server
 section_names:
 - ai

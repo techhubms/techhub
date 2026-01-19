@@ -9,17 +9,13 @@ feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-06-12 00:00:00 +00:00
 permalink: /ai/news/The-Complete-MCP-Experience-Full-Specification-Support-in-VS-Code
 tags:
-- AI
 - AI Agent Integration
 - Authorization
-- Coding
 - Developer Tools
-- DevOps
 - GitHub MCP Server
 - Identity Providers
 - MCP
 - Microsoft
-- News
 - OAuth
 - Prompts
 - Remote Servers

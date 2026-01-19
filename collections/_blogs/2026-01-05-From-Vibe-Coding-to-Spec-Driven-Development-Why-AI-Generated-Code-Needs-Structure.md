@@ -9,21 +9,17 @@ feed_url: https://hiddedesmet.com/feed.xml
 date: 2026-01-05 00:00:00 +00:00
 permalink: /ai/blogs/From-Vibe-Coding-to-Spec-Driven-Development-Why-AI-Generated-Code-Needs-Structure
 tags:
-- AI
 - AI Assisted Development
 - AI Coding Assistants
 - AI Safety
 - AI Workflows
-- Blogs
 - Claude
 - Code Quality
-- Coding
 - Context Driven Development
 - Copilot
 - Copilot Custom Instructions
 - Developer Productivity
 - Development
-- DevOps
 - DevOps Practices
 - GitHub
 - Production Ready Code

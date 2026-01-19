@@ -11,12 +11,8 @@ permalink: /github-copilot/community/Building-a-multi-agent-system-with-Semantic
 tags:
 - .NET
 - Agentic AI
-- AI
-- Coding
-- Community
 - Copilot UI
 - Executor Agent
-- GitHub Copilot
 - Human in The Loop
 - Planner Agent
 - Process Automation

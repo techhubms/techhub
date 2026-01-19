@@ -10,12 +10,9 @@ date: 2025-11-10 22:33:04 +00:00
 permalink: /coding/community/Modernizing-WPF-Map-Functionality-with-Azure-Maps-A-Practical-Migration-Path
 tags:
 - .NET
-- Azure
 - Azure Maps
 - Bing Maps
 - C#
-- Coding
-- Community
 - Desktop Applications
 - Geospatial
 - Map Control

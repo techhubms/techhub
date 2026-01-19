@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-15 06:01:24 +00:00
 permalink: /azure/community/Unlock-Cost-Savings-with-Utilization-Based-Storage-Recommendations-in-Azure-Migrate
 tags:
-- Azure
 - Azure Assessment
 - Azure Migrate
 - Cloud Migration
 - Cloud ROI
-- Community
 - Cost Savings
 - Infrastructure Modernization
 - Resource Planning

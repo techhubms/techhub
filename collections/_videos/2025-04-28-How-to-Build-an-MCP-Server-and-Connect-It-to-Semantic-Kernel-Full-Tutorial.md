@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt
 date: 2025-04-28 06:47:49 +00:00
 permalink: /ai/videos/How-to-Build-an-MCP-Server-and-Connect-It-to-Semantic-Kernel-Full-Tutorial
 tags:
-- AI
 - AI Development
 - AI Integration
 - Aidevelopment
-- Coding
 - Context Providers
 - Dynamic Applications
 - MCP
@@ -28,7 +26,6 @@ tags:
 - SemanticKernelClient
 - Server Setup
 - Tutorial
-- Videos
 section_names:
 - ai
 - coding

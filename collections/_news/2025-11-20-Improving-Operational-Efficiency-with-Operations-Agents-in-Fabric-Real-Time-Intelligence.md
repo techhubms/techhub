@@ -11,9 +11,7 @@ permalink: /ai/news/Improving-Operational-Efficiency-with-Operations-Agents-in-F
 tags:
 - Agent Configuration
 - Agentic Systems
-- AI
 - AI Powered Agents
-- Azure
 - Business Automation
 - Business Goals
 - Continuous Feedback
@@ -21,10 +19,7 @@ tags:
 - Eventhouse
 - Human in The Loop
 - LLM Tools
-- Machine Learning
 - Microsoft Fabric
-- ML
-- News
 - Operational Efficiency
 - Operations Agent
 - Power Automate

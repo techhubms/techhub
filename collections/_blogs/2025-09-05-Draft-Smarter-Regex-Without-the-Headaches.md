@@ -9,18 +9,14 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-09-05 00:00:00 +00:00
 permalink: /github-copilot/blogs/Draft-Smarter-Regex-Without-the-Headaches
 tags:
-- AI
 - AI Tools
 - Automation
-- Blogs
 - Code Generation
 - Code Quality
 - Code Refactoring
-- Coding
 - Copilot Agent Mode
 - Copilot Chat
 - Developer Productivity
-- GitHub Copilot
 - Pattern Matching
 - Programming
 - Regex

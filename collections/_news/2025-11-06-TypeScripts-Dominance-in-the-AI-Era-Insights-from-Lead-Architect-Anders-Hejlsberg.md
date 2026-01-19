@@ -9,10 +9,8 @@ feed_url: https://github.blog/feed/
 date: 2025-11-06 17:00:00 +00:00
 permalink: /ai/news/TypeScripts-Dominance-in-the-AI-Era-Insights-from-Lead-Architect-Anders-Hejlsberg
 tags:
-- AI
 - AI Assisted Coding
 - Code Reliability
-- Coding
 - Compiler Performance
 - Developer Skills
 - Developer Tools
@@ -20,7 +18,6 @@ tags:
 - JavaScript
 - Language Evolution
 - MCP
-- News
 - Octoverse
 - Open Source
 - Programming Languages

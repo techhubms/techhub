@@ -9,21 +9,17 @@ feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-06-02 14:30:55 +00:00
 permalink: /azure/news/GitHub-Secret-Protection-and-Code-Security-Now-Available-for-Azure-DevOps
 tags:
-- Azure
 - Azure DevOps
 - Code Security
 - CodeQL
 - Dependency Alerts
-- DevOps
 - Enterprise Security
 - GitHub
 - GitHub Advanced Security
-- News
 - Pricing
 - Repository Protection
 - Secret Protection
 - Secret Scanning
-- Security
 - Security Overview
 section_names:
 - azure

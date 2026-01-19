@@ -9,9 +9,7 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-05-07 10:44:34 +00:00
 permalink: /azure/blogs/Video-Build-a-Well-Architected-SaaS-Solution-on-Microsoft-Azure
 tags:
-- Azure
 - Azure Essentials Show
-- Blogs
 - Cloud
 - Cloud Computing
 - Cost Optimization

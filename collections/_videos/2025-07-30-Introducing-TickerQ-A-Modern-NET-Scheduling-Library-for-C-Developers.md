@@ -12,7 +12,6 @@ tags:
 - .NET
 - C#
 - C# Development
-- Coding
 - GitHub
 - Hangfire
 - Job Scheduling
@@ -20,7 +19,6 @@ tags:
 - Quartz
 - Scheduling Library
 - TickerQ
-- Videos
 section_names:
 - coding
 ---

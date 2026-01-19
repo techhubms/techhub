@@ -9,13 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-14 17:26:18 +00:00
 permalink: /ai/community/From-Timeouts-to-Triumph-Optimizing-GPT-4o-mini-for-Speed-Efficiency-and-Reliability
 tags:
-- AI
 - API Management
 - APIM
-- Azure
 - Azure Front Door
 - Azure OpenAI Service
-- Community
 - Cost Efficiency
 - GPT 4o Mini
 - High Throughput AI

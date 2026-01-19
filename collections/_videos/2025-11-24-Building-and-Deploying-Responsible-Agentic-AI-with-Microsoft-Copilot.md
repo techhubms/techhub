@@ -10,7 +10,6 @@ date: 2025-11-24 11:17:13 +00:00
 permalink: /ai/videos/Building-and-Deploying-Responsible-Agentic-AI-with-Microsoft-Copilot
 tags:
 - Agentic AI
-- AI
 - AI Adoption
 - AI Framework
 - AI Governance
@@ -27,7 +26,6 @@ tags:
 - MSIgnite
 - Multi Agent Management
 - Responsible AI
-- Videos
 section_names:
 - ai
 ---

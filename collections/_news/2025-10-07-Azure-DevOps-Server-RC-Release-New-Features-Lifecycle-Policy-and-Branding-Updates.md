@@ -9,13 +9,10 @@ feed_url: https://devblogs.microsoft.com/devops/feed/
 date: 2025-10-07 20:14:45 +00:00
 permalink: /azure/news/Azure-DevOps-Server-RC-Release-New-Features-Lifecycle-Policy-and-Branding-Updates
 tags:
-- Azure
 - Azure DevOps Server
 - Continuous Delivery
-- DevOps
 - Microsoft Azure
 - Modern Lifecycle Policy
-- News
 - Product Branding
 - Release Candidate
 - REST API

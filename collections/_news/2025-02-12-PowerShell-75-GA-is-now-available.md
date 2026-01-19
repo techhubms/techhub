@@ -11,10 +11,8 @@ permalink: /coding/news/PowerShell-75-GA-is-now-available
 tags:
 - Automation
 - Cmdlets
-- Coding
 - Community Contributions
 - Experimental Features
-- News
 - Platform Stability
 - PowerShell
 - PowerShell 7.5

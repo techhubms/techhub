@@ -13,9 +13,7 @@ tags:
 - Application Insights
 - Auto Scaling
 - Availability Zones
-- Azure
 - Azure Monitor
-- Blogs
 - Cloud Downtime
 - Cloud Planning
 - Cloud Reliability

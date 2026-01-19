@@ -11,10 +11,8 @@ permalink: /azure/blogs/Surge-in-DevOps-Platform-Incidents-2025-Mid-Year-Analysi
 tags:
 - Artifactory
 - Atlassian Outages
-- Azure
 - Azure DevOps
 - Azure DevOps Incidents
-- Blogs
 - Boards
 - Business Of DevOps
 - CI/CD
@@ -22,7 +20,6 @@ tags:
 - Cybersecurity
 - Developer Productivity
 - Developer Productivity Risks
-- DevOps
 - DevOps Platform Downtime
 - DevOps Platforms
 - DevOps Resilience
@@ -37,7 +34,6 @@ tags:
 - Pipelines
 - Platform Downtime
 - Ransomware
-- Security
 - Service Disruption
 - Social Facebook
 - Social LinkedIn

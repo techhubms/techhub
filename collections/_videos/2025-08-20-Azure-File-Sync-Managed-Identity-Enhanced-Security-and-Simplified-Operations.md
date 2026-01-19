@@ -10,7 +10,6 @@ date: 2025-08-20 14:56:24 +00:00
 permalink: /azure/videos/Azure-File-Sync-Managed-Identity-Enhanced-Security-and-Simplified-Operations
 tags:
 - Access Keys
-- Azure
 - Azure AD
 - Azure Certification
 - Azure File Sync
@@ -27,13 +26,11 @@ tags:
 - Operational Overhead Reduction
 - Permissions Management
 - PowerShell
-- Security
 - SMB
 - Storage Account
 - Storage Services
 - Storage Sync Service
 - System Assigned Identity
-- Videos
 section_names:
 - azure
 - security

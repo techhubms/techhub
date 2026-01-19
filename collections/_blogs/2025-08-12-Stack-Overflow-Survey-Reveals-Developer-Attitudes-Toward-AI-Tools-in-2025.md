@@ -10,7 +10,6 @@ date: 2025-08-12 09:37:44 +00:00
 permalink: /github-copilot/blogs/Stack-Overflow-Survey-Reveals-Developer-Attitudes-Toward-AI-Tools-in-2025
 tags:
 - Agentic AI
-- AI
 - AI Adoption
 - AI Assisted Development
 - AI Daily Usage
@@ -18,7 +17,6 @@ tags:
 - AI Outputs
 - AI Tools
 - AI Trust
-- Blogs
 - Business Of DevOps
 - Claude Sonnet
 - Developer Sentiment
@@ -26,7 +24,6 @@ tags:
 - Developers
 - Gemini Flash
 - Generative AI
-- GitHub Copilot
 - OpenAI GPT
 - Social Facebook
 - Social LinkedIn

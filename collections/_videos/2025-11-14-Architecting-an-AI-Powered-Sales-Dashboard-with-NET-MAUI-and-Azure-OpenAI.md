@@ -10,12 +10,9 @@ date: 2025-11-14 07:00:07 +00:00
 permalink: /ai/videos/Architecting-an-AI-Powered-Sales-Dashboard-with-NET-MAUI-and-Azure-OpenAI
 tags:
 - .NET 9
-- AI
 - Android
-- Azure
 - Azure OpenAI
 - Business Analytics
-- Coding
 - Cross Platform Development
 - GPT 5
 - Intelligent Apps
@@ -31,7 +28,6 @@ tags:
 - Sales Dashboard
 - Syncfusion
 - UI Performance
-- Videos
 - Windows
 section_names:
 - ai

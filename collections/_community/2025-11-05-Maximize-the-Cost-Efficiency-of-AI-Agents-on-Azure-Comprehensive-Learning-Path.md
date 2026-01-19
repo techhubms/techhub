@@ -9,15 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-05 14:46:02 +00:00
 permalink: /ai/community/Maximize-the-Cost-Efficiency-of-AI-Agents-on-Azure-Comprehensive-Learning-Path
 tags:
-- AI
 - AI Agents
 - AI Center Of Excellence
 - AI Development
 - Application Insights
-- Azure
 - Azure AI Foundry
 - Cloud Architecture
-- Community
 - Cost Management
 - Cost Optimization
 - FinOps

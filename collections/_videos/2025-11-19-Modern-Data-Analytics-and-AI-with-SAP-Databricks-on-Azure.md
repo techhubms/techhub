@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 14:03:01 +00:00
 permalink: /ai/videos/Modern-Data-Analytics-and-AI-with-SAP-Databricks-on-Azure
 tags:
-- AI
 - AI Applications
 - Automated Forecasting
-- Azure
 - Azure Databricks
 - Business Intelligence
 - Data Agents
@@ -21,15 +19,12 @@ tags:
 - Delta Sharing
 - Enterprise Data
 - Feature Importance
-- Machine Learning
 - Microsoft Ignite
-- ML
 - Model Diagnostics
 - MSIgnite
 - Power BI Integration
 - SAP Business Data Cloud
 - Unifyyourdataplatform
-- Videos
 section_names:
 - ai
 - azure

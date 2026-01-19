@@ -11,7 +11,6 @@ permalink: /ai/videos/ERP-Transformation-with-AI-Building-Autonomous-Agents-Micr
 tags:
 - Adaptive Experiences
 - Agent Framework
-- AI
 - AI Applications
 - Autonomous Agents
 - Business Process Automation
@@ -28,7 +27,6 @@ tags:
 - Partner Practices
 - Structured Data
 - Unstructured Data
-- Videos
 section_names:
 - ai
 ---

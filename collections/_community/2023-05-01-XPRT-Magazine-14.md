@@ -6,17 +6,12 @@ author: Xebia
 viewing_mode: external
 permalink: /ai/community/XPRT-Magazine-14
 tags:
-- AI
 - Automation
-- Azure
 - Bicep
 - Blazor
 - ChatGPT
 - CI/CD
 - Cloud Security
-- Coding
-- Community
-- DevOps
 - Digital Transformation
 - EF
 - Identity
@@ -25,7 +20,6 @@ tags:
 - Mutation Testing
 - OAuth2
 - Pulumi
-- Security
 - Terraform
 - Zero Trust
 section_names:

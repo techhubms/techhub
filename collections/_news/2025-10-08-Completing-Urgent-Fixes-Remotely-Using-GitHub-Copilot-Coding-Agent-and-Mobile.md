@@ -9,26 +9,21 @@ feed_url: https://github.blog/feed/
 date: 2025-10-08 16:00:00 +00:00
 permalink: /github-copilot/news/Completing-Urgent-Fixes-Remotely-Using-GitHub-Copilot-Coding-Agent-and-Mobile
 tags:
-- AI
 - Best Practices
 - Bug Fixing
 - Code Quality
-- Coding
 - Coding Agent
 - Continuous Deployment
 - Copilot Instructions
 - Developer Skills
 - Developer Tools
-- DevOps
 - DevOps Automation
 - GitHub
 - GitHub Actions
-- GitHub Copilot
 - GitHub Mobile
 - GitHub Platform
 - IssueOps
 - Mobile Code Review
-- News
 - Pull Requests
 section_names:
 - ai

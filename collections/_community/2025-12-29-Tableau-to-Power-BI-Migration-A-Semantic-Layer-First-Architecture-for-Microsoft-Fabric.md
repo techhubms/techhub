@@ -9,13 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-29 20:42:54 +00:00
 permalink: /ai/community/Tableau-to-Power-BI-Migration-A-Semantic-Layer-First-Architecture-for-Microsoft-Fabric
 tags:
-- AI
-- Azure
 - Azure SQL Database
 - BI Architecture
 - Business Intelligence
 - Capacity Planning
-- Community
 - Copilot
 - Data Agents
 - Data Migration
@@ -28,7 +25,6 @@ tags:
 - Fabric IQ
 - Governance
 - Microsoft Fabric
-- ML
 - OneLake
 - Power BI
 - Semantic Layer

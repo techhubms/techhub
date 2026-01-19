@@ -12,7 +12,6 @@ tags:
 - .NET
 - .NET 10
 - App Development
-- Coding
 - Community Standup
 - David Ortinau
 - Demo
@@ -29,7 +28,6 @@ tags:
 - UI Design
 - UI Toolkit
 - UX Divers
-- Videos
 - Xamarin
 section_names:
 - coding

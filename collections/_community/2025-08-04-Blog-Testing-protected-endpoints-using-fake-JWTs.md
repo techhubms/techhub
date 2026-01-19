@@ -14,13 +14,10 @@ tags:
 - Authentication
 - Authorization
 - C#
-- Coding
-- Community
 - Endpoint Security
 - Fake JWT
 - JWT
 - Protected Endpoints
-- Security
 - Testing
 section_names:
 - coding

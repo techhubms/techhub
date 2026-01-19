@@ -10,17 +10,14 @@ permalink: /github-copilot/news/Agent-mode-for-JetBrains-Eclipse-and-Xcode-is-no
 viewing_mode: external
 tags:
 - Agent Mode
-- AI
 - Autonomous Coding
 - Code Suggestions
 - Developer Tools
 - Eclipse
 - General Availability
 - GitHub Account
-- GitHub Copilot
 - IDE Integration
 - JetBrains
-- News
 - Xcode
 section_names:
 - ai

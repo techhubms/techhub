@@ -10,7 +10,6 @@ date: 2025-08-01 14:54:51 +00:00
 permalink: /ml/videos/Azure-Updates-August-2025-Highlights
 tags:
 - AVNM
-- Azure
 - Azure Arc
 - Azure Cloud
 - Azure Confidential Ledger
@@ -27,16 +26,13 @@ tags:
 - Microsoft
 - Microsoft Azure
 - Microsoft Security
-- ML
 - MySQL
 - PostgreSQL
 - Power BI
 - SAS Token Expiry Policy
-- Security
 - SQL Migration
 - SSD V2
 - Ultra NVMe
-- Videos
 section_names:
 - azure
 - ml

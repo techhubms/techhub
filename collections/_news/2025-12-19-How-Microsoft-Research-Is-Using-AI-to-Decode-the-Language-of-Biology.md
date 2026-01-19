@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-19 16:07:02 +00:00
 permalink: /ai/news/How-Microsoft-Research-Is-Using-AI-to-Decode-the-Language-of-Biology
 tags:
-- AI
 - Ava Amini
 - Biological Data
 - Broad Institute
@@ -22,7 +21,6 @@ tags:
 - Generative AI
 - Medical AI
 - Microsoft Research
-- News
 - Precision Medicine
 - Project Ex Vivo
 - Protein Design

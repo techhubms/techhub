@@ -11,11 +11,9 @@ permalink: /azure/community/Transactable-Partner-Solutions-Apptividad-and-CoreVi
 tags:
 - Apptividad Onboarding
 - Automation
-- Azure
 - Azure Marketplace
 - Biometric Validation
 - Cloud Administration
-- Community
 - CoreView ONE
 - Hybrid Environments
 - Identity Verification
@@ -23,7 +21,6 @@ tags:
 - Microsoft 365 Governance
 - Passive Liveness Detection
 - Policy Enforcement
-- Security
 section_names:
 - azure
 - security

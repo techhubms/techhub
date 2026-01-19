@@ -10,17 +10,13 @@ date: 2025-11-21 08:24:03 +00:00
 permalink: /github-copilot/videos/Reimagining-Software-Development-with-GitHub-Copilot-and-AI-Agents
 tags:
 - Agentic DevOps
-- AI
 - AI Agents
 - Automation
 - Cloud Development
-- Coding
 - Copilot Controls
 - Developer Productivity
-- DevOps
 - Enterprise Deployment
 - GitHub
-- GitHub Copilot
 - InnovatewithAzureAIappsandagents
 - Mission Control
 - MSIgnite
@@ -28,7 +24,6 @@ tags:
 - PR Integration
 - Software Development
 - SRE Agents
-- Videos
 section_names:
 - ai
 - coding

@@ -11,8 +11,6 @@ permalink: /ai/news/Enhancements-for-Data-Agent-Creators-in-Microsoft-Fabric
 tags:
 - Agent Authoring
 - Agent Configuration
-- AI
-- Azure
 - Data Agent
 - Data Science
 - Debugging
@@ -22,9 +20,7 @@ tags:
 - KQL
 - Markdown
 - Microsoft Fabric
-- ML
 - Multi Tasking
-- News
 - SDK
 - SQL Validation
 section_names:

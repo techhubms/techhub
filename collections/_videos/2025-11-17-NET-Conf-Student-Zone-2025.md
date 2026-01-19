@@ -10,22 +10,18 @@ date: 2025-11-17 20:12:59 +00:00
 permalink: /github-copilot/videos/NET-Conf-Student-Zone-2025
 tags:
 - .NET
-- AI
 - Aspire
 - CLI
-- Coding
 - Copilot
 - Cross Platform
 - Demo
 - Gaming
-- GitHub Copilot
 - Hands On
 - Linux
 - Mac
 - Open Source
 - Programming
 - Student Zone
-- Videos
 - VS
 - VS Code
 section_names:

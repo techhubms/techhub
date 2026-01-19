@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-19 14:23:41 +00:00
 permalink: /ai/news/Microsoft-Expands-AI-Skills-Training-to-350000-More-Nigerians
 tags:
-- AI
 - AI Hackathon
 - AI National Skills Initiative
 - AI Skills
@@ -22,7 +21,6 @@ tags:
 - Lagos Business School
 - Machine Learning
 - Microsoft Nigeria
-- News
 - Nigeria Digital Transformation
 - Public Sector Training
 - Skills Development

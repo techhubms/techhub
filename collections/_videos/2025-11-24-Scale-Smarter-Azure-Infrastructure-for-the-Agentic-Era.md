@@ -10,10 +10,8 @@ date: 2025-11-24 12:50:49 +00:00
 permalink: /ai/videos/Scale-Smarter-Azure-Infrastructure-for-the-Agentic-Era
 tags:
 - Agentic Operations
-- AI
 - AI Infrastructure
 - AKS
-- Azure
 - Azure Copilot Resiliency Agent
 - Azure Platform
 - Azure Portal
@@ -21,17 +19,13 @@ tags:
 - Cloud Operations
 - Cloud Transformation
 - Compliance
-- DevOps
 - Distributed AI
 - Governance
 - InnovatewithAzureAIappsandagents
-- ML
 - MSIgnite
 - Red Hat Partnership
 - Reliability Engineering
-- Security
 - SQL Server
-- Videos
 section_names:
 - ai
 - azure

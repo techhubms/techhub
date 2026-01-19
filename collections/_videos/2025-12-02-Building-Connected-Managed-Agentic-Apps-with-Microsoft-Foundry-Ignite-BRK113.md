@@ -10,12 +10,10 @@ date: 2025-12-02 20:30:27 +00:00
 permalink: /ai/videos/Building-Connected-Managed-Agentic-Apps-with-Microsoft-Foundry-Ignite-BRK113
 tags:
 - Agentic Applications
-- AI
 - AI Agents
 - AI Gateway
 - AI Governance
 - AI Platform
-- Azure
 - Azure AI
 - BRK113
 - Business Process Automation
@@ -35,7 +33,6 @@ tags:
 - Msft Ignite
 - Python
 - Real Time Business Context
-- Videos
 section_names:
 - ai
 - azure

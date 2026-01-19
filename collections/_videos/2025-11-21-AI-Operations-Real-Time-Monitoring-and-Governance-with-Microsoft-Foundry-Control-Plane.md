@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 16:29:22 +00:00
 permalink: /ai/videos/AI-Operations-Real-Time-Monitoring-and-Governance-with-Microsoft-Foundry-Control-Plane
 tags:
-- AI
 - AI Agent Operations
-- Azure
 - Azure AI
 - Case Study
 - Compliance
@@ -26,10 +24,8 @@ tags:
 - PII Protection
 - Production Monitoring
 - Prompt Injection Protection
-- Security
 - Threat Detection
 - Trustworthy AI
-- Videos
 section_names:
 - ai
 - azure

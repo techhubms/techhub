@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-20 20:45:25 +00:00
 permalink: /ai/videos/Mistral-Document-AI-Integration-with-Azure-AI-Foundry
 tags:
-- AI
 - AI Agents
 - AI Model Deployment
-- Azure
 - Azure AI
 - Azure AI Foundry
 - Cloud Computing
@@ -32,7 +30,6 @@ tags:
 - Tech
 - Technology
 - Unstructured Data
-- Videos
 section_names:
 - ai
 - azure

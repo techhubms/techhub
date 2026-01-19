@@ -14,9 +14,7 @@ tags:
 - Dependabot
 - Deprecation
 - Developer Tools
-- DevOps
 - GitHub
-- News
 - PR Management
 - Pull Requests
 - REST API

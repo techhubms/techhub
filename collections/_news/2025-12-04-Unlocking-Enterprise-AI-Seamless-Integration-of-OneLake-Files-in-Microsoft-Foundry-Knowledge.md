@@ -9,12 +9,10 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-04 09:00:00 +00:00
 permalink: /ai/news/Unlocking-Enterprise-AI-Seamless-Integration-of-OneLake-Files-in-Microsoft-Foundry-Knowledge
 tags:
-- AI
 - AI Agents
 - AI Integration
 - Amazon S3
 - Analytics
-- Azure
 - Azure AI Foundry
 - Azure Data Lake Storage
 - Data Governance
@@ -24,8 +22,6 @@ tags:
 - Enterprise Data
 - Knowledge Indexing
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Unstructured Data
 section_names:

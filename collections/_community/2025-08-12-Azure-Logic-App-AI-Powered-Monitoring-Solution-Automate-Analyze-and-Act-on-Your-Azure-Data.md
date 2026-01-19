@@ -9,16 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 21:37:11 +00:00
 permalink: /ai/community/Azure-Logic-App-AI-Powered-Monitoring-Solution-Automate-Analyze-and-Act-on-Your-Azure-Data
 tags:
-- AI
 - AI Summarization
 - Application Insights
-- Azure
 - Azure Log Analytics
 - Azure Logic Apps
 - Azure OpenAI Service
 - Bicep
 - Cloud Architecture
-- Community
 - Email Reporting
 - GPT 4o
 - IaC

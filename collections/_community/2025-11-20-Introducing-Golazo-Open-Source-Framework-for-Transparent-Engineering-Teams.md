@@ -11,10 +11,8 @@ permalink: /devops/community/Introducing-Golazo-Open-Source-Framework-for-Transp
 tags:
 - Agile Practices
 - Collaboration
-- Community
 - Continuous Improvement
 - Design Documentation
-- DevOps
 - Engineering Framework
 - GitHub
 - Golazo

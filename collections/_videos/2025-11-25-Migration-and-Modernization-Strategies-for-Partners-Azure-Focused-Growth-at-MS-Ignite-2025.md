@@ -10,10 +10,8 @@ date: 2025-11-25 12:13:05 +00:00
 permalink: /ai/videos/Migration-and-Modernization-Strategies-for-Partners-Azure-Focused-Growth-at-MS-Ignite-2025
 tags:
 - Agentic Capabilities
-- AI
 - AI Transformation
 - Automation
-- Azure
 - Azure Migration
 - Cloud Modernization
 - Human Agent Collaboration
@@ -23,10 +21,8 @@ tags:
 - Modern Cloud Foundations
 - MSIgnite
 - Partner Growth
-- Security
 - Security Compliance
 - Technical Debt
-- Videos
 - VMware Migration
 section_names:
 - ai

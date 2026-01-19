@@ -10,10 +10,8 @@ date: 2026-01-13 19:09:12 +00:00
 permalink: /azure/community/Cross-Region-Zero-Trust-Secure-Power-Platform-Connectivity-to-Azure-PaaS-Without-Public-Exposure
 tags:
 - Automation
-- Azure
 - Azure Firewall
 - Azure PaaS
-- Community
 - Customer Managed Key
 - Dataverse
 - DNS Proxy
@@ -27,7 +25,6 @@ tags:
 - Private Endpoint
 - RBAC
 - Regional Pair
-- Security
 - SQL Database
 - Storage Account
 - User Assigned Managed Identity

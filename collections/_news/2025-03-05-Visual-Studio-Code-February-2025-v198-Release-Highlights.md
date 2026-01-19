@@ -10,17 +10,12 @@ date: 2025-03-05 17:00:00 +00:00
 permalink: /github-copilot/news/Visual-Studio-Code-February-2025-v198-Release-Highlights
 tags:
 - Accessibility
-- AI
 - Authentication
 - Claude 3.7 Sonnet
-- Coding
 - Copilot Agent Mode
 - Copilot Chat
 - Copilot Edits
-- DevOps
-- GitHub Copilot
 - GPT 4.5
-- News
 - Notebook Editing
 - Python
 - Release Notes

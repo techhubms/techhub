@@ -11,11 +11,9 @@ permalink: /ai/videos/AI-Frontiers-with-Foundry-Labs-at-Microsoft-Ignite-Experim
 tags:
 - 3D Object Generation
 - Agent Factory
-- AI
 - AI Agents
 - Aurora
 - Autogen Framework
-- Azure
 - Azure AI
 - Azure AI Search
 - Enterprise AI
@@ -28,7 +26,6 @@ tags:
 - Multi Agent Orchestration
 - Planner Critic Architecture
 - Trellis
-- Videos
 - Weather Modeling
 section_names:
 - ai

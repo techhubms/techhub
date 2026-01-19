@@ -9,9 +9,7 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-09 14:31:51 +00:00
 permalink: /ai/news/Microsoft-Fabric-Real-Time-Intelligence-Setting-the-Standard-for-Streaming-Data-Platforms
 tags:
-- AI
 - Anomaly Detection
-- Azure
 - Data Explorer
 - Data Platforms
 - Digital Twin
@@ -23,8 +21,6 @@ tags:
 - Governance
 - Graph Analytics
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Operational Dashboards
 - Predictive Analytics

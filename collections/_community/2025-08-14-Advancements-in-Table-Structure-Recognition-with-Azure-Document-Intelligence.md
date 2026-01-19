@@ -9,11 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 21:26:24 +00:00
 permalink: /ai/community/Advancements-in-Table-Structure-Recognition-with-Azure-Document-Intelligence
 tags:
-- AI
-- Azure
 - Azure AI Services
 - Azure Document Intelligence
-- Community
 - Computer Vision
 - Deep Learning
 - Document AI

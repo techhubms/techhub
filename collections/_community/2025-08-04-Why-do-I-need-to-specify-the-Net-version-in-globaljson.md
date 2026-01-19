@@ -12,8 +12,6 @@ tags:
 - .NET
 - .NET CLI
 - C#
-- Coding
-- Community
 - Csproj
 - Debugging
 - EF Core

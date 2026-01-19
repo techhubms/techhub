@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-16 15:11:05 +00:00
 permalink: /ai/news/Microsoft-Introduces-Dragon-Copilot-Ambient-AI-Experience-for-Nursing-Workflows
 tags:
-- AI
 - AI Automation
 - Ambient Clinical Documentation
 - Ambient Experience
@@ -21,7 +20,6 @@ tags:
 - LinkedIn Post
 - Medical Information Retrieval
 - Microsoft AI
-- News
 - Nuance
 - Nursing Workflows
 - Patient Care

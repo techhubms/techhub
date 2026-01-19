@@ -9,8 +9,6 @@ feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-10-20 07:11:50 +00:00
 permalink: /ai/news/Fine-Tuning-GPT-4o-for-Image-Classification-on-Azure-AI-Foundry-A-Practical-Guide
 tags:
-- AI
-- Azure
 - Azure AI Foundry
 - Azure Machine Learning
 - Azure OpenAI
@@ -22,10 +20,8 @@ tags:
 - Image Classification
 - Inference
 - Latency
-- ML
 - Model Deployment
 - Model Evaluation
-- News
 - Stanford Dogs Dataset
 - Supervised Fine Tuning
 - Vision Language Models

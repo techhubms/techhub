@@ -9,9 +9,7 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-02 14:43:12 +00:00
 permalink: /ai/news/How-Microsoft-Is-Advancing-AI-Driven-Clean-Energy-in-Asia
 tags:
-- AI
 - Asia Pacific
-- Azure
 - Circular Economy
 - Clean Energy
 - Climate Innovation Fund
@@ -21,7 +19,6 @@ tags:
 - Geothermal
 - Grid Forecasting
 - Microsoft
-- News
 - Renewable Energy
 - Solar Power
 - Sustainability

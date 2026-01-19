@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-03 15:06:57 +00:00
 permalink: /ai/news/Hour-of-AI-Microsoft-Launches-Global-AI-Literacy-Initiative-for-Computer-Science-Education-Week-2025
 tags:
-- AI
 - AI Coding
 - AI Literacy
 - AI Prompts
@@ -17,7 +16,6 @@ tags:
 - Algorithm Design
 - Classroom Resources
 - Code.org
-- Coding
 - Company News
 - Computer Science Education Week
 - CSforALL
@@ -28,7 +26,6 @@ tags:
 - MakeCode
 - Microsoft Education
 - Minecraft Education
-- News
 - Visual Studio Code For Education
 section_names:
 - ai

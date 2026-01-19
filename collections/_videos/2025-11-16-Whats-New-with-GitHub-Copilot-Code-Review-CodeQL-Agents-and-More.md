@@ -10,7 +10,6 @@ date: 2025-11-16 14:01:16 +00:00
 permalink: /github-copilot/videos/Whats-New-with-GitHub-Copilot-Code-Review-CodeQL-Agents-and-More
 tags:
 - Actions Workflow
-- AI
 - AI Agent
 - AI Integration
 - Code Analysis
@@ -21,15 +20,12 @@ tags:
 - Copilot
 - Deterministic Detection
 - Developer Tooling
-- DevOps
 - GitHub
 - GitHub Actions
-- GitHub Copilot
 - Pull Request
 - Repository Automation
 - Session View
 - Software Development
-- Videos
 section_names:
 - ai
 - devops

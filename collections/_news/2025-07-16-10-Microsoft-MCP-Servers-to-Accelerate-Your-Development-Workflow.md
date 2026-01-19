@@ -9,20 +9,15 @@ feed_url: https://devblogs.microsoft.com/feed
 date: 2025-07-16 19:30:32 +00:00
 permalink: /ai/news/10-Microsoft-MCP-Servers-to-Accelerate-Your-Development-Workflow
 tags:
-- AI
 - AI Integration
 - Automation
-- Azure
 - Azure AI Foundry
 - Azure DevOps
-- Coding
 - Developer Productivity
-- DevOps
 - GitHub
 - MCP
 - MCP Server
 - Microsoft 365
-- News
 - Playwright
 - SQL Server
 - VS

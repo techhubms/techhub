@@ -9,13 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-28 18:30:02 +00:00
 permalink: /ai/community/Reimagining-AI-at-Scale-Deploying-NVIDIA-GB300-NVL72-on-Azure
 tags:
-- AI
 - AI Cluster
 - AI Infrastructure
-- Azure
 - Azure Boost
 - Blackwell Ultra GPU
-- Community
 - Datacenter
 - Fleet Health
 - Grace CPU

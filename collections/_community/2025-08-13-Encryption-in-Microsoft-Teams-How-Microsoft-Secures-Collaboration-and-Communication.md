@@ -10,7 +10,6 @@ date: 2025-08-13 15:00:00 +00:00
 permalink: /security/community/Encryption-in-Microsoft-Teams-How-Microsoft-Secures-Collaboration-and-Communication
 tags:
 - BYOK
-- Community
 - Compliance
 - Customer Key
 - Data At REST Encryption
@@ -24,7 +23,6 @@ tags:
 - Microsoft Teams
 - OneDrive
 - PCI DSS
-- Security
 - Security Architecture
 - Service Encryption
 - SharePoint

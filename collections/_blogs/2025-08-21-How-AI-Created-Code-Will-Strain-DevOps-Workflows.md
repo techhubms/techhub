@@ -9,16 +9,13 @@ feed_url: https://devops.com/feed/
 date: 2025-08-21 16:30:04 +00:00
 permalink: /ai/blogs/How-AI-Created-Code-Will-Strain-DevOps-Workflows
 tags:
-- AI
 - AI Adoption
 - AI Code Generation
 - Automation
-- Blogs
 - CI/CD
 - CI/CD Pipelines
 - Continuous Deployment
 - Continuous Integration
-- DevOps
 - DevOps Workflows
 - Governance
 - Infrastructure Management

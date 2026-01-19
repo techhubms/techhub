@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-11 08:00:07 +00:00
 permalink: /ai/videos/Deploying-AI-Solutions-with-Azure-AI-Landing-Zones
 tags:
-- AI
 - AI Deployment
 - AI Solutions
-- Azure
 - Azure AI Landing Zones
 - Azure Essentials
 - Azure Governance
@@ -20,14 +18,11 @@ tags:
 - Cloud Adoption Framework
 - Cloud Architecture
 - Deployment Best Practices
-- DevOps
 - Establish
 - IaC
 - IT Governance
 - Landing Zone Automation
 - Microsoft Azure
-- Security
-- Videos
 section_names:
 - ai
 - azure

@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-08-21 15:10:53 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Introduces-Commit-Message-Suggestions-and-Spaces-Enhancements
 tags:
-- AI
 - AI Code Assistance
 - Code Review
 - Commit Messages
@@ -18,9 +17,7 @@ tags:
 - Developer Tools
 - Documentation Automation
 - Enterprise Cloud
-- GitHub Copilot
 - GitHub.com
-- News
 - Productivity
 - Public Preview
 - Workflow Automation

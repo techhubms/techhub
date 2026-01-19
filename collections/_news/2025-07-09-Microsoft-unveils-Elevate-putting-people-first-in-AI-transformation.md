@@ -10,7 +10,6 @@ date: 2025-07-09 16:46:18 +00:00
 permalink: /ai/news/Microsoft-unveils-Elevate-putting-people-first-in-AI-transformation
 tags:
 - Accessibility
-- AI
 - AI Initiatives
 - AI Transformation
 - Business Innovation
@@ -18,7 +17,6 @@ tags:
 - Digital Transformation
 - Ethical AI
 - Microsoft Elevate
-- News
 - People Centric AI
 - Productivity
 - Technology Adoption

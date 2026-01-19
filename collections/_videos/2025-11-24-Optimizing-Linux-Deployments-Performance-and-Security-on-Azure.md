@@ -9,13 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 12:01:44 +00:00
 permalink: /azure/videos/Optimizing-Linux-Deployments-Performance-and-Security-on-Azure
 tags:
-- Azure
 - Azure Best Practices
 - Azure Monitor
 - Cloud Security
 - Compliance
 - Defender For Linux
-- DevOps
 - Ebpf
 - Inspector Gadget
 - Linux On Azure
@@ -27,11 +25,9 @@ tags:
 - PostgreSQL On Azure
 - Red Hat
 - Rocky Linux
-- Security
 - Security Hardened Images
 - SLES
 - Ubuntu
-- Videos
 - VM Deployment
 section_names:
 - azure

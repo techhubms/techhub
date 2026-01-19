@@ -10,7 +10,6 @@ date: 2025-10-30 16:00:31 +00:00
 permalink: /github-copilot/videos/MCP-and-Java-Apps-Building-a-Server
 tags:
 - Agent Mode
-- AI
 - AI Applications
 - AIServers
 - API Integration
@@ -18,10 +17,8 @@ tags:
 - APIIntegration
 - Automated Scaffolding
 - CloudDevelopment
-- Coding
 - Developer Tools
 - Endpoint Configuration
-- GitHub Copilot
 - Java
 - Java Development
 - JavaApps
@@ -32,7 +29,6 @@ tags:
 - QuarkusJav
 - Server Sent Events
 - ServerDevelopment
-- Videos
 section_names:
 - ai
 - coding

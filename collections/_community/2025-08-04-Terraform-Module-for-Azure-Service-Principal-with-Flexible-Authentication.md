@@ -10,17 +10,12 @@ date: 2025-08-04 23:04:18 +00:00
 permalink: /coding/community/Terraform-Module-for-Azure-Service-Principal-with-Flexible-Authentication
 tags:
 - Authentication
-- Azure
 - Certificate
 - Client Secret
-- Coding
-- Community
-- DevOps
 - IaC
 - Key Vault
 - OIDC
 - Role Assignment
-- Security
 - Service Principal
 - Storage Account
 - Terraform

@@ -11,9 +11,7 @@ permalink: /ai/news/Azure-Developer-CLI-azd-April-2025-Release-New-Features-Temp
 tags:
 - .NET
 - .NET Aspire
-- AI
 - Azd
-- Azure
 - Azure AI Search
 - Azure Container Apps
 - Azure Developer CLI
@@ -21,14 +19,12 @@ tags:
 - Azure SDK
 - Bicep
 - Codespaces
-- DevOps
 - Docker
 - GitHub Codespaces
 - Java
 - JavaScript
 - Key Vault
 - Kubernetes
-- News
 - Python
 - Templates
 - Typescript

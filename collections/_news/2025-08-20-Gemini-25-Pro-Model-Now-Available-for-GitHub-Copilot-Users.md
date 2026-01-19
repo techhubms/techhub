@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-08-20 13:46:28 +00:00
 permalink: /github-copilot/news/Gemini-25-Pro-Model-Now-Available-for-GitHub-Copilot-Users
 tags:
-- AI
 - AI Models
 - AI Reasoning
 - Copilot Business
@@ -18,11 +17,9 @@ tags:
 - Eclipse
 - Enterprise IT Administration
 - Gemini 2.5 Pro
-- GitHub Copilot
 - Google Gemini
 - JetBrains IDEs
 - Model Selector
-- News
 - Software Development Tools
 - VS
 - VS Code

@@ -9,14 +9,12 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-03 13:53:26 +00:00
 permalink: /ai/news/DepEd-and-Microsoft-expand-AI-powered-literacy-initiatives-across-the-Philippines
 tags:
-- AI
 - AI in Education
 - Company News
 - DepEd
 - Education Technology
 - Literacy
 - Microsoft
-- News
 - Philippines
 section_names:
 - ai

@@ -10,7 +10,6 @@ date: 2025-11-22 08:19:01 +00:00
 permalink: /security/blogs/Guide-to-Using-Microsoft-Defender-Effectively-in-Windows-Security
 tags:
 - App & Browser Control
-- Blogs
 - Cloud Delivered Protection
 - Controlled Folder Access
 - Exploit Protection
@@ -19,7 +18,6 @@ tags:
 - Microsoft Defender Antivirus
 - Ransomware Protection
 - Real Time Protection
-- Security
 - SmartScreen
 - Threat Intelligence
 - Virus & Threat Protection

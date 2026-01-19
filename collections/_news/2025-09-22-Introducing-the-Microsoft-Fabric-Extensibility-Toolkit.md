@@ -9,11 +9,8 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-22 15:30:00 +00:00
 permalink: /ai/news/Introducing-the-Microsoft-Fabric-Extensibility-Toolkit
 tags:
-- AI
 - API Integration
 - Authentication
-- Azure
-- Coding
 - Copilot
 - Custom Data Applications
 - Data Integration
@@ -25,8 +22,6 @@ tags:
 - Metadata Management
 - Microsoft Entra ID
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Package Installer
 - Power BI

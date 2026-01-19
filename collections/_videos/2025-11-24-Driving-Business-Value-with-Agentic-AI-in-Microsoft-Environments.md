@@ -10,7 +10,6 @@ date: 2025-11-24 14:29:29 +00:00
 permalink: /ai/videos/Driving-Business-Value-with-Agentic-AI-in-Microsoft-Environments
 tags:
 - Agentic AI
-- AI
 - AI Agents
 - AI Framework
 - AI Production
@@ -26,7 +25,6 @@ tags:
 - MSIgnite
 - NTT DATA
 - Secure AI Platform
-- Videos
 section_names:
 - ai
 ---

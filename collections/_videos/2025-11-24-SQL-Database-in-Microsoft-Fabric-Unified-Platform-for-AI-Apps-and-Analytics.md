@@ -9,16 +9,13 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 07:19:39 +00:00
 permalink: /ai/videos/SQL-Database-in-Microsoft-Fabric-Unified-Platform-for-AI-Apps-and-Analytics
 tags:
-- AI
 - AI Driven Development
 - Analytical Workloads
-- Azure
 - Azure SQL Database
 - Event Streaming
 - Fraud Detection
 - Microsoft Fabric
 - Microsoft Ignite
-- ML
 - MSIgnite
 - OneLake Integration
 - Performance Monitoring
@@ -29,7 +26,6 @@ tags:
 - Unified Data Platform
 - Unifyyourdataplatform
 - Vector Search
-- Videos
 section_names:
 - ai
 - azure

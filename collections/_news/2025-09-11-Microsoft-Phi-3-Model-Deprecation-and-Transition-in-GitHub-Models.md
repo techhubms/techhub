@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-11 20:06:02 +00:00
 permalink: /ai/news/Microsoft-Phi-3-Model-Deprecation-and-Transition-in-GitHub-Models
 tags:
-- AI
 - AI Models
 - Cloud AI
 - Ecosystem & Accessibility
@@ -18,7 +17,6 @@ tags:
 - Model Deprecation
 - Model Migration
 - Model Transition
-- News
 - Open Source AI
 - Phi 3
 - Phi 4

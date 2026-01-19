@@ -10,10 +10,8 @@ date: 2025-11-21 17:16:03 +00:00
 permalink: /ai/videos/From-DEV-to-PROD-Building-Agentic-Memory-with-Azure-Cosmos-DB
 tags:
 - Agentic Memory
-- AI
 - AI Applications
 - AI Security
-- Azure
 - Azure Cosmos DB
 - Cosmos DB Search
 - Data Compliance
@@ -23,15 +21,12 @@ tags:
 - Generative AI
 - Hybrid Queries
 - Microsoft Ignite
-- ML
 - MSIgnite
 - Prompt Engineering
-- Security
 - Semantic Search
 - SQL
 - Threat Defense
 - Unifyyourdataplatform
-- Videos
 section_names:
 - ai
 - azure

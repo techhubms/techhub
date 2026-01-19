@@ -11,13 +11,11 @@ permalink: /ai/videos/From-UX-to-AX-Why-Agent-Experience-is-the-Next-Frontier-in
 tags:
 - Agent Automation
 - Agent Experience
-- AI
 - AI Agents
 - AI Leadership
 - AI Planning
 - AI Strategy
 - AX Design
-- Azure
 - Azure AI
 - Business AI
 - Cloud Computing
@@ -35,7 +33,6 @@ tags:
 - Prompt Engineering
 - Tech
 - Technology
-- Videos
 - Workflow Automation
 section_names:
 - ai

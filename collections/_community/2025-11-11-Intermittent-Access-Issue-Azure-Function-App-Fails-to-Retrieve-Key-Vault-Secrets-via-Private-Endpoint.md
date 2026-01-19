@@ -11,10 +11,8 @@ permalink: /azure/community/Intermittent-Access-Issue-Azure-Function-App-Fails-t
 tags:
 - AccessToKeyVaultDenied
 - Authentication Errors
-- Azure
 - Azure Function App
 - Azure Key Vault
-- Community
 - Connectivity Issues
 - Key Vault References
 - Managed Identity
@@ -22,7 +20,6 @@ tags:
 - Premium Plan
 - Private Endpoint
 - Secret Management
-- Security
 - Troubleshooting
 - VNet Integration
 section_names:

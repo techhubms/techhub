@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 08:20:54 +00:00
 permalink: /ai/videos/Resilience-by-Design-Secure-Scalable-AI-Ready-Cloud-with-Azure
 tags:
-- AI
 - AI Ready
-- Azure
 - Azure Resiliency
 - Azure SQL
 - Cloud Architecture
@@ -23,10 +21,8 @@ tags:
 - Recovery Orchestration
 - Recovery Services
 - Resilience Goals
-- Security
 - Shared Responsibility
 - Threat Detection
-- Videos
 - VM Backup
 section_names:
 - ai

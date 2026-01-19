@@ -10,9 +10,7 @@ date: 2025-11-21 07:12:58 +00:00
 permalink: /ai/videos/Innovation-in-Microsoft-Databases-AI-Ready-Data-and-Modern-Apps
 tags:
 - Adobe Platform AI Engineering
-- AI
 - AI Integration
-- Azure
 - Azure CosmosDB
 - Data Extraction
 - Database Innovation
@@ -22,7 +20,6 @@ tags:
 - GPT 5
 - Horizon DB
 - Microsoft Ignite
-- ML
 - MSIgnite
 - Multi Cloud
 - Open Source
@@ -31,7 +28,6 @@ tags:
 - SQL Server
 - Unifyyourdataplatform
 - Vector Database
-- Videos
 - VS Code
 section_names:
 - ai

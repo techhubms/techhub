@@ -10,8 +10,6 @@ date: 2025-06-10 09:00:00 +00:00
 permalink: /coding/blogs/Converting-a-Microsoft-XNA-31-Game-to-MonoGame-on-NET-8-A-Step-by-Step-Porting-Journey
 tags:
 - .NET 8
-- Blogs
-- Coding
 - Content Pipeline
 - Game Development
 - Microsoft XNA

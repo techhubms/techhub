@@ -10,10 +10,8 @@ date: 2025-08-02 18:48:29 +00:00
 permalink: /devops/community/Deployment-versioning-challenges-across-customers-and-components
 tags:
 - Appversions
-- Community
 - Component Tracking
 - Deployment
-- DevOps
 - Helm Charts
 - Infrastructure
 - Multi Customer Deployments

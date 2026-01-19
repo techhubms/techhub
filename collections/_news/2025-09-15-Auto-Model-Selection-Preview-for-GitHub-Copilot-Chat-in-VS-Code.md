@@ -9,19 +9,16 @@ feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-09-15 00:00:00 +00:00
 permalink: /github-copilot/news/Auto-Model-Selection-Preview-for-GitHub-Copilot-Chat-in-VS-Code
 tags:
-- AI
 - AI Integration
 - AI Model Selection
 - Auto Selection
 - Claude Sonnet 4
 - Copilot Chat
 - Developer Tools
-- GitHub Copilot
 - GPT 5
 - GPT 5 Mini
 - Model Discount
 - Model Multiplier
-- News
 - OpenAI
 - Premium Requests
 - VS Code

@@ -10,9 +10,7 @@ date: 2025-10-29 07:37:59 +00:00
 permalink: /azure/blogs/Global-Infrastructure-101-Understanding-Data-Centers-Regions-and-Availability-Zones-in-Azure
 tags:
 - Availability Zones
-- Azure
 - Azure Regions
-- Blogs
 - Cloud Architecture
 - Cloud Best Practices
 - Cloud Resilience

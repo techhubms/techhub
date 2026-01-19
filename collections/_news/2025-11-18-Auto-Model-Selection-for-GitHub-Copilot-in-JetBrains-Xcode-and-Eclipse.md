@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:57 +00:00
 permalink: /github-copilot/news/Auto-Model-Selection-for-GitHub-Copilot-in-JetBrains-Xcode-and-Eclipse
 tags:
-- AI
 - AI Code Assistant
 - Auto Model Selection
 - Copilot
@@ -18,14 +17,12 @@ tags:
 - Copilot Pro
 - Eclipse
 - Editor Preview Features
-- GitHub Copilot
 - GPT 4.1
 - GPT 5
 - Haiku 4.5
 - IDE Integration
 - JetBrains IDEs
 - Model Picker
-- News
 - Sonnet 4.5
 - Xcode
 section_names:

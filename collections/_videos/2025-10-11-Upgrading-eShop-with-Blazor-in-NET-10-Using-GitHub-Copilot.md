@@ -11,19 +11,15 @@ permalink: /github-copilot/videos/Upgrading-eShop-with-Blazor-in-NET-10-Using-Gi
 tags:
 - .NET
 - .NET 10
-- AI
 - AI Assisted Development
 - Application Upgrade
 - ASP.NET Core
 - Blazor
-- Coding
 - Component State Persistence
 - Developer Tools
 - Eshop
-- GitHub Copilot
 - Microsoft
 - Not Found Handling
-- Videos
 section_names:
 - ai
 - coding

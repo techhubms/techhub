@@ -10,16 +10,13 @@ date: 2024-09-25 09:35:26 +00:00
 permalink: /azure/news/Security-Update-Changes-to-URI-Expiry-Time-in-Azure-Notification-Hubs
 tags:
 - API Changes
-- Azure
 - Azure Notification Hubs
 - Backward Compatibility
 - Get Notification Message Telemetry API
-- News
 - Notification Hubs
 - Platform Notification Services Feedback
 - PnsErrorDetailsUri
 - Push Notifications
-- Security
 - Security Update
 - URI Expiry
 section_names:

@@ -11,8 +11,6 @@ permalink: /coding/blogs/Dynamic-Htmx-Islands-with-ASPNET-Core-Island-TagHelpers
 tags:
 - ASP.NET
 - ASP.NET Core
-- Blogs
-- Coding
 - Dynamic Content
 - Htmx
 - Island Architecture

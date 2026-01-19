@@ -9,9 +9,7 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-21 18:39:06 +00:00
 permalink: /ai/community/Preview-and-Export-Azure-Changes-with-What-If-and-Bicep-in-Azure-CLI-and-PowerShell
 tags:
-- AI
 - AI Translation
-- Azure
 - Azure CLI
 - Azure Networking
 - Azure PowerShell
@@ -20,8 +18,6 @@ tags:
 - Bicep Templates
 - Change Preview
 - Cloud Automation
-- Community
-- DevOps
 - DryRun
 - Export Bicep
 - IaC

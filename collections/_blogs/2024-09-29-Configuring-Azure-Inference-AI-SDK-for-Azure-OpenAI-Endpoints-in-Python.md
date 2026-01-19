@@ -9,17 +9,13 @@ feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2024-09-29 00:00:00 +00:00
 permalink: /ai/blogs/Configuring-Azure-Inference-AI-SDK-for-Azure-OpenAI-Endpoints-in-Python
 tags:
-- AI
 - API Integration
 - Authentication
-- Azure
 - Azure Inference AI SDK
 - Azure OpenAI
 - AzureKeyCredential
-- Blogs
 - ChatCompletionsClient
 - Cloud Development
-- Coding
 - Environment Variables
 - GitHub Models
 - GPT 4o

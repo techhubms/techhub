@@ -10,9 +10,7 @@ date: 2025-01-13 07:47:49 +00:00
 permalink: /coding/blogs/How-to-Perform-Snapshot-Testing-With-Verify-in-C
 tags:
 - .NET
-- Blogs
 - C#
-- Coding
 - Integration Testing
 - Object State Verification
 - Snapshot Testing

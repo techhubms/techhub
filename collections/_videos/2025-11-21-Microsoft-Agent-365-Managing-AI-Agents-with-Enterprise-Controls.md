@@ -11,7 +11,6 @@ permalink: /ai/videos/Microsoft-Agent-365-Managing-AI-Agents-with-Enterprise-Con
 tags:
 - Agent Control Plane
 - Agent Governance
-- AI
 - AI Agents
 - Authorization
 - Autonomous Agents
@@ -26,8 +25,6 @@ tags:
 - Microsoft 365 Integration
 - Microsoft Agent 365
 - MSIgnite
-- Security
-- Videos
 section_names:
 - ai
 - security

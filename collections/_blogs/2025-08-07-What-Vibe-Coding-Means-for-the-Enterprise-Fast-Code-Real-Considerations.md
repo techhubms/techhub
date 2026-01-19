@@ -10,27 +10,22 @@ date: 2025-08-07 08:15:41 +00:00
 permalink: /ai/blogs/What-Vibe-Coding-Means-for-the-Enterprise-Fast-Code-Real-Considerations
 tags:
 - Accountability
-- AI
 - AI Coding Assistants
 - AI Generated Code
 - AI Governance
 - Automation
-- Blogs
 - Code Quality
 - Code Security
 - Code Validation
-- Coding
 - Contributed Content
 - Developer Roles
 - Developer's Jobs
 - Developers
-- DevOps
 - DevOps Practices
 - Enterprise
 - Enterprise Development
 - Guardrails
 - Prompt Engineering
-- Security
 - Security Risks
 - Social Facebook
 - Social LinkedIn

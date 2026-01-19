@@ -9,11 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-11 22:04:57 +00:00
 permalink: /ai/community/Build-Custom-AI-Copilots-Using-Microsoft-Copilot-Studio-and-Oracle-DatabaseAzure
 tags:
-- AI
 - AI Copilots
-- Azure
 - Azure Security
-- Community
 - Conversational AI
 - Copilot Studio
 - Data Governance
@@ -26,7 +23,6 @@ tags:
 - Oracle Database@Azure
 - Role Based Access Control
 - Secure Data Integration
-- Security
 - Teams Integration
 section_names:
 - ai

@@ -9,22 +9,17 @@ feed_url: https://github.blog/feed/
 date: 2025-08-21 18:02:34 +00:00
 permalink: /github-copilot/news/Explore-GitHub-Universe-2025-Dev-Tools-Community-Spaces-and-More
 tags:
-- AI
 - Career Coaching
 - Cloud Development
-- Coding
 - Community Event
 - Company News
 - Developer Tools
-- DevOps
 - GitHub Actions
 - GitHub Advanced Security
-- GitHub Copilot
 - GitHub Learn
 - GitHub Universe
 - Hackable Badges
 - Live Sessions
-- News
 - News & Insights
 - Open Source
 - Programming

@@ -10,7 +10,6 @@ date: 2025-11-21 07:25:32 +00:00
 permalink: /ai/videos/Accelerating-Agentic-Solutions-for-Financial-Services-with-Copilot-Studio
 tags:
 - Agentic Solutions
-- AI
 - AI Agents
 - Banking Technology
 - Capital Markets
@@ -27,7 +26,6 @@ tags:
 - Morningstar
 - MSIgnite
 - Sub Agents
-- Videos
 section_names:
 - ai
 ---

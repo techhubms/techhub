@@ -12,7 +12,6 @@ tags:
 - Agent Builder
 - Agent Governance
 - Agent Identity
-- AI
 - AI Agents
 - BRK313
 - Copilot Agents
@@ -33,7 +32,6 @@ tags:
 - Ms Ignite
 - Msft Ignite
 - Platform Integration
-- Videos
 - What’s New in Copilot Studio And Roadmap | BRK313
 section_names:
 - ai

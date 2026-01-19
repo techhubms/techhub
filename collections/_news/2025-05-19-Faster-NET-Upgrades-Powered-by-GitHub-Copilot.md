@@ -11,18 +11,14 @@ permalink: /github-copilot/news/Faster-NET-Upgrades-Powered-by-GitHub-Copilot
 tags:
 - .NET
 - .NET Upgrade
-- AI
 - AI Powered Upgrades
 - App Modernization
 - Code Transformation
-- Coding
 - Copilot Agent Mode
 - Development Tools
 - Git Integration
-- GitHub Copilot
 - Manual Change Learning
 - Modernization
-- News
 - Unit Test Validation
 - Upgrade
 - Upgrade Workflows

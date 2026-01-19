@@ -11,15 +11,12 @@ permalink: /coding/news/Spark-Resilience-Improvements-Enhance-Reliability-and-It
 tags:
 - API Failover
 - Application Development
-- Coding
 - Continuous Improvement
 - Data Store
 - Developer Experience
-- DevOps
 - File Filtering
 - GitHub
 - Iteration Panel
-- News
 - Open Source
 - Reliability
 - Spark

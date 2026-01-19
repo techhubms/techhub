@@ -9,15 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 16:00:00 +00:00
 permalink: /azure/community/Announcing-Hybrid-Deployment-Options-for-Azure-Virtual-Desktop
 tags:
-- Azure
 - Azure Arc
 - Azure Virtual Desktop
 - Cloud Desktop
 - Cloud Migration
-- Community
 - ControlUp
 - Datacenter
-- DevOps
 - Hybrid Cloud
 - Identity Management
 - LoginVSI

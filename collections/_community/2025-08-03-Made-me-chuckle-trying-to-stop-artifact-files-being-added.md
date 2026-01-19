@@ -9,13 +9,10 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-03 13:02:28 +00:00
 permalink: /github-copilot/community/Made-me-chuckle-trying-to-stop-artifact-files-being-added
 tags:
-- AI
 - Artifact Files
 - Automation
 - Code Artifacts
-- Community
 - Developer Workflow
-- GitHub Copilot
 - Humor
 - Software Development
 - Source Control

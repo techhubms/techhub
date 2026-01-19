@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-13 17:15:39 +00:00
 permalink: /ai/news/Future-Skills-Organisation-and-Microsoft-Launch-Nationwide-AI-Skills-Accelerator-in-Australia
 tags:
-- AI
 - AI Education
 - AI Skilling
 - AI Skills Accelerator
@@ -21,7 +20,6 @@ tags:
 - Industry Collaboration
 - Microsoft
 - National AI Centre
-- News
 - Patrick Kidd
 - Rachel Bondi
 - VET

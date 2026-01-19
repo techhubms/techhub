@@ -11,14 +11,12 @@ permalink: /azure/community/Accelerate-Cloud-Migration-with-Wave-Planning-in-Azu
 tags:
 - Application Grouping
 - Application Modernization
-- Azure
 - Azure Database Migration Service
 - Azure Migrate
 - Azure Migration Tools
 - Azure Virtual Machines
 - Cloud Adoption Framework
 - Cloud Migration
-- Community
 - Dependency Analysis
 - Enterprise Migration
 - Infrastructure Migration

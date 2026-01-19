@@ -10,17 +10,13 @@ date: 2025-11-04 15:35:47 +00:00
 permalink: /ai/community/Client-Side-Multi-Agent-Orchestration-with-ChatClientAgent-on-Azure-App-Service
 tags:
 - .NET 9
-- AI
 - AIFunctionFactory
-- Azure
 - Azure AI Foundry
 - Azure App Service
 - Azure OpenAI
 - C#
 - ChatClientAgent
 - Cloud Architecture
-- Coding
-- Community
 - Cosmos DB
 - Function Calling
 - Microsoft Agent Framework

@@ -11,13 +11,11 @@ permalink: /azure/community/Large-Message-Support-Now-Generally-Available-in-Azu
 tags:
 - AMQP
 - Apache Kafka
-- Azure
 - Azure Event Hubs
 - Azure Portal
 - Client Configuration
 - Cloud Messaging
 - Cloud Native
-- Community
 - Data Streaming
 - Dedicated Clusters
 - Event Processing

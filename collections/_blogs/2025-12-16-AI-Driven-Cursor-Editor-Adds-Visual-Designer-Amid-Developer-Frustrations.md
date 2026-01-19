@@ -9,15 +9,12 @@ feed_url: https://devclass.com/feed/
 date: 2025-12-16 12:49:25 +00:00
 permalink: /ai/blogs/AI-Driven-Cursor-Editor-Adds-Visual-Designer-Amid-Developer-Frustrations
 tags:
-- AI
 - AI Agents
 - AI/ML
 - Anthropic Claude
-- Blogs
 - Browser Sidebar
 - Code Instrumentation
 - Code Integrity
-- Coding
 - Cursor
 - Cursor AI Editor
 - Debug Mode

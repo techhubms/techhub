@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-18 17:18:04 +00:00
 permalink: /github-copilot/news/Claude-Opus-45-Now-Available-in-GitHub-Copilot
 tags:
-- AI
 - AI Models
 - Claude Opus 4.5
 - Copilot
@@ -19,11 +18,9 @@ tags:
 - Copilot Pro
 - Eclipse
 - Enterprise Administration
-- GitHub Copilot
 - IDE Integration
 - JetBrains
 - Model Selection
-- News
 - VS
 - VS Code
 - Xcode

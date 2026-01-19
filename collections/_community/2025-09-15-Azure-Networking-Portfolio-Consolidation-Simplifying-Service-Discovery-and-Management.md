@@ -9,7 +9,6 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-15 20:02:36 +00:00
 permalink: /azure/community/Azure-Networking-Portfolio-Consolidation-Simplifying-Service-Discovery-and-Management
 tags:
-- Azure
 - Azure DDoS Protection
 - Azure Documentation
 - Azure ExpressRoute
@@ -19,7 +18,6 @@ tags:
 - Azure Portal
 - Azure Virtual Network
 - Cloud Infrastructure
-- Community
 - Content Delivery
 - DNS
 - Hybrid Connectivity
@@ -27,7 +25,6 @@ tags:
 - Network Foundations
 - Network Security
 - Private Link
-- Security
 - Service Consolidation
 - Web Application Firewall
 section_names:

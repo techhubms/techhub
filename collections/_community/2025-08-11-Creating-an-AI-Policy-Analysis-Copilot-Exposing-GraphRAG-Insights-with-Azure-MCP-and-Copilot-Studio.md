@@ -9,18 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-11 15:16:46 +00:00
 permalink: /ai/community/Creating-an-AI-Policy-Analysis-Copilot-Exposing-GraphRAG-Insights-with-Azure-MCP-and-Copilot-Studio
 tags:
-- AI
 - AI Policy Analysis
 - Azd
-- Azure
 - Azure Container Apps
 - Azure Developer CLI
 - Bicep Templates
-- Coding
-- Community
 - Copilot Studio
 - Custom Connectors
-- DevOps
 - Docker
 - FastMCP
 - GraphRAG

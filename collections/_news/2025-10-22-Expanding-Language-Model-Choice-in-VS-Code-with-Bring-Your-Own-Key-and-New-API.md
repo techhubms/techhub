@@ -9,23 +9,19 @@ feed_url: https://code.visualstudio.com/feed.xml
 date: 2025-10-22 00:00:00 +00:00
 permalink: /github-copilot/news/Expanding-Language-Model-Choice-in-VS-Code-with-Bring-Your-Own-Key-and-New-API
 tags:
-- AI
 - AI Extensions
 - AI Toolkit
 - Azure AI Foundry
 - BYOK
 - Cerebras
 - Code Generation
-- Coding
 - Custom LLM
 - Extension Development
-- GitHub Copilot
 - GitHub Copilot Chat
 - Hugging Face
 - Language Model Chat Provider API
 - LLM Integration
 - Model Management
-- News
 - Ollama
 - OpenAI Compatible
 - VS Code

@@ -10,7 +10,6 @@ date: 2025-10-06 14:11:52 +00:00
 permalink: /azure/videos/Hybrid-Cloud-Networking-Connecting-Azure-AWS-GCP-and-More
 tags:
 - AWS
-- Azure
 - Azure Cloud
 - Cloud
 - Cloud Architecture
@@ -29,7 +28,6 @@ tags:
 - POP
 - Private Connectivity
 - S2S VPN
-- Videos
 - Virtual Networks
 - VNet
 section_names:

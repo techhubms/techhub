@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-09 18:16:44 +00:00
 permalink: /ai/news/AI-Powered-Spatial-Proteomics-Platform-GigaTIME-Accelerates-Cancer-Discovery
 tags:
-- AI
 - AI For Healthcare
 - Biomedical AI
 - Cancer Discovery
@@ -20,7 +19,6 @@ tags:
 - Machine Learning
 - Medical Innovation
 - Microsoft Research
-- News
 - Pathology Slides
 - Population Scale Analysis
 - Precision Oncology

@@ -9,22 +9,17 @@ feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-09-23 23:02:30 +00:00
 permalink: /ai/news/Teaching-the-LLM-Good-Habits-How-Azure-MCP-Uses-Best-Practice-Tools
 tags:
-- AI
 - All Things Azure
-- Azure
 - Azure Best Practices
 - Azure MCP
 - Bicep
 - CI/CD
 - Cloud Governance
-- Coding
 - DefaultAzureCredential
-- DevOps
 - IaC
 - LLM
 - MCP
 - MCP (model Context Protocol)
-- News
 - SDK
 - Terraform
 - Thought Leadership

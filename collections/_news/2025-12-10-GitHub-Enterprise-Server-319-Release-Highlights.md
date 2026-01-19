@@ -11,18 +11,15 @@ permalink: /devops/news/GitHub-Enterprise-Server-319-Release-Highlights
 tags:
 - App Managers
 - Collaboration Tools
-- DevOps
 - Enterprise Collaboration
 - GHES 3.19
 - GitHub Actions
 - GitHub Enterprise Server
 - Monitoring
-- News
 - OpenTelemetry
 - Policy Enforcement
 - Repository Policies
 - Ruleset Management
-- Security
 - SHA Pinning
 - SSH Ciphers
 - TLS Ciphers

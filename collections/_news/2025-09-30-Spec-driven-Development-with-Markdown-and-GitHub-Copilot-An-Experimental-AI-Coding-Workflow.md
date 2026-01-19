@@ -9,26 +9,22 @@ feed_url: https://github.blog/feed/
 date: 2025-09-30 19:07:46 +00:00
 permalink: /github-copilot/news/Spec-driven-Development-with-Markdown-and-GitHub-Copilot-An-Experimental-AI-Coding-Workflow
 tags:
-- AI
 - AI & ML
 - AI Coding Agents
 - AI Development Workflow
 - Automation
 - CLIs
-- Coding
 - Command Line Tools
 - Compile.prompt.md
 - Copilot Instructions.md
 - Generative AI
 - GitHub Brain MCP Server
-- GitHub Copilot
 - Go Language
 - Linting
 - Main.md
 - Markdown
 - Markdown Programming
 - MCP
-- News
 - README.md
 - Spec Driven Development
 - VS Code

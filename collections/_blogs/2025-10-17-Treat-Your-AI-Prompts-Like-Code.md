@@ -10,16 +10,11 @@ date: 2025-10-17 00:00:00 +00:00
 permalink: /github-copilot/blogs/Treat-Your-AI-Prompts-Like-Code
 tags:
 - .prompt.md
-- AI
 - AI Prompts
-- Blogs
-- Coding
 - Copilot Chat
 - Copilot Instructions.md
 - Development Workflow
-- DevOps
 - Git
-- GitHub Copilot
 - Prompt Documentation
 - Prompt Engineering
 - Prompt Review

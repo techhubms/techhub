@@ -9,9 +9,7 @@ feed_url: https://dellenny.com/feed/
 date: 2025-10-28 08:45:55 +00:00
 permalink: /github-copilot/blogs/How-to-Register-and-Prepare-for-the-GitHub-Copilot-Certification-Exam
 tags:
-- AI
 - AI Assisted Development
-- Blogs
 - Certification Exam
 - Coding Skills
 - Copilot Features
@@ -19,7 +17,6 @@ tags:
 - Developer Workflow
 - Exam Preparation
 - GitHib Copilot
-- GitHub Copilot
 - GitHub Copilot Certification
 - Microsoft Learn
 - Privacy

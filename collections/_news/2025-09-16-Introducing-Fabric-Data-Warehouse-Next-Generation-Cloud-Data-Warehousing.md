@@ -10,8 +10,6 @@ date: 2025-09-16 00:30:00 +00:00
 permalink: /ml/news/Introducing-Fabric-Data-Warehouse-Next-Generation-Cloud-Data-Warehousing
 tags:
 - Audit Logs
-- Azure
-- Coding
 - Copilot
 - Customer Managed Keys
 - Data Engineering
@@ -22,8 +20,6 @@ tags:
 - Lakehouse Architecture
 - Microsoft Fabric
 - Migration Assistant
-- ML
-- News
 - OPENROWSET(JSONL)
 - Performance Benchmarking
 - PrivateLink

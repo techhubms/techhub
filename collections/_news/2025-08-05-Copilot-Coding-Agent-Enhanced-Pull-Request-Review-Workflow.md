@@ -9,15 +9,11 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-05 20:05:53 +00:00
 permalink: /github-copilot/news/Copilot-Coding-Agent-Enhanced-Pull-Request-Review-Workflow
 tags:
-- AI
 - Automation
 - Change Requests
 - Coding Agent
 - Collaboration
 - Development Workflow
-- DevOps
-- GitHub Copilot
-- News
 - Pull Request
 - Repository Management
 - Write Access

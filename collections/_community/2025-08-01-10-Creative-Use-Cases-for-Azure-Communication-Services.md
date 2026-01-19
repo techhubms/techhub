@@ -9,13 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-01 13:06:56 +00:00
 permalink: /ai/community/10-Creative-Use-Cases-for-Azure-Communication-Services
 tags:
-- AI
-- Azure
 - Azure Communication Services
 - Azure OpenAI
 - Bot Framework
-- Coding
-- Community
 - Cost Estimation
 - Developer Workflow
 - Dynamics 365
@@ -23,7 +19,6 @@ tags:
 - HIPAA Compliance
 - Natural Language Processing
 - Real Time Messaging
-- Security
 - SMS Scheduling
 - Teams Interop
 - Video Calling

@@ -10,14 +10,11 @@ date: 2025-11-20 11:16:00 +00:00
 permalink: /ai/videos/Introducing-the-new-Azure-Copilot-for-the-new-era-of-Intelligent-Agents-BRK145
 tags:
 - Agentic AI
-- AI
-- Azure
 - Azure Copilot
 - Azure Experiences
 - Cloud Operations
 - Cloud Security
 - Context IQ
-- DevOps
 - DevOps Automation
 - Incident Response
 - Infrastructure Provisioning
@@ -27,9 +24,7 @@ tags:
 - MSIgnite
 - Multi Agent Orchestration
 - Resiliency Agent
-- Security
 - Security Posture Management
-- Videos
 section_names:
 - ai
 - azure

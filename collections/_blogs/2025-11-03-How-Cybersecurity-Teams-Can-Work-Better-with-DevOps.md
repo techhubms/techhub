@@ -10,7 +10,6 @@ date: 2025-11-03 19:50:57 +00:00
 permalink: /devops/blogs/How-Cybersecurity-Teams-Can-Work-Better-with-DevOps
 tags:
 - Automation
-- Blogs
 - CI/CD
 - Cloud Security
 - Cloud Security Best Practices
@@ -19,11 +18,9 @@ tags:
 - Cross Training
 - Cyber Security
 - Cybersecurity
-- DevOps
 - DevSecOps
 - Pipeline Security
 - Secure Development
-- Security
 - Security Automation
 - Security Best Practices
 - Security Champions

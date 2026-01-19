@@ -10,18 +10,14 @@ date: 2025-12-04 01:07:13 +00:00
 permalink: /github-copilot/videos/AI-Dev-Days-Using-AI-to-Enhance-Developer-Productivity
 tags:
 - Agent HQ
-- AI
 - AI Developer Tools
 - App Modernization
-- Azure
-- Coding
 - Coding Agent
 - Demo
 - Developer
 - Developer Community
 - Developer Productivity
 - Developer Tools
-- GitHub Copilot
 - GitHub Universe
 - GPT
 - GPT 5
@@ -30,7 +26,6 @@ tags:
 - Microsoft Ignite
 - Python
 - Softwaredevelopers
-- Videos
 - VS
 - VS Code
 section_names:

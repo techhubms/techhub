@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-12 08:00:36 +00:00
 permalink: /azure/videos/Accelerate-Cloud-Adoption-with-Expert-Guidance
 tags:
-- Azure
 - Azure Adoption
 - Azure Essentials
 - Azure Partners
@@ -18,7 +17,6 @@ tags:
 - Cloud Accelerate Factory
 - Cloud Migration
 - Deployment Assistance
-- DevOps
 - Expert Support
 - Microsoft Azure
 - Migration Frameworks
@@ -27,7 +25,6 @@ tags:
 - Ravi Mangipudi
 - Sprint Deployment
 - Thomas Maurer
-- Videos
 section_names:
 - azure
 - devops

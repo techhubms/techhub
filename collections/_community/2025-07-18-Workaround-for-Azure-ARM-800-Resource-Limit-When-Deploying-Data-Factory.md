@@ -11,17 +11,13 @@ permalink: /ml/community/Workaround-for-Azure-ARM-800-Resource-Limit-When-Deploy
 tags:
 - ARM Deployment
 - ARM Template
-- Azure
 - Azure Data Factory
 - Azure DevOps
 - Ci/cd
-- Community
 - Continuous Delivery
 - Data Factory Pipeline
 - Deployment
-- DevOps
 - IaC
-- ML
 - Resource Limits
 section_names:
 - azure

@@ -13,8 +13,6 @@ tags:
 - Atlassian
 - Bitbucket
 - Board Configuration
-- Community
-- DevOps
 - DevOps Tools
 - Engineering Management
 - Integration

@@ -10,7 +10,6 @@ date: 2025-08-14 15:28:24 +00:00
 permalink: /ai/news/Microsoft-Releases-Dion-A-New-Scalable-Optimizer-for-Training-AI-Models
 tags:
 - AdamW
-- AI
 - AI Model Training
 - Company News
 - Deep Learning
@@ -22,7 +21,6 @@ tags:
 - Machine Learning
 - Microsoft Research
 - Muon Optimizer
-- News
 - Optimization Algorithms
 - Orthonormal Updates
 - PyTorch

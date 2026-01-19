@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 10:25:11 +00:00
 permalink: /ai/videos/AI-Fine-Tuning-in-Microsoft-Foundry-Building-Production-Ready-Agents
 tags:
-- AI
 - AI Agents
 - AI Workflows
-- Azure
 - Azure OpenAI Service
 - Contract Processing
 - Data Extraction
@@ -20,7 +18,6 @@ tags:
 - GPT 5
 - InnovatewithAzureAIappsandagents
 - Microsoft Foundry
-- ML
 - Model Customization
 - MS Ignite
 - MSIgnite
@@ -31,7 +28,6 @@ tags:
 - Swagger
 - Synthetic Data Generation
 - Tool Calling
-- Videos
 - Workflow Automation
 section_names:
 - ai

@@ -11,13 +11,11 @@ permalink: /azure/community/Seeking-Advice-on-Preparing-for-Azure-Solutions-Arch
 tags:
 - AZ 104
 - AZ 305
-- Azure
 - Azure Administrator
 - Azure Certification
 - Azure Solutions Architect
 - CBT Training
 - Cloud Computing
-- Community
 - Exam Preparation
 - Free Azure Account
 - Learning Resources

@@ -9,19 +9,16 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-10 19:09:43 +00:00
 permalink: /github-copilot/news/Auto-Model-Selection-in-GitHub-Copilot-Now-Available-in-Visual-Studio-Code
 tags:
-- AI
 - AI Models
 - Auto Model Selection
 - Cloud IDE
 - Copilot
 - Copilot Plans
 - Developer Tools
-- GitHub Copilot
 - GPT 4.1
 - GPT 5.1 Codex Max
 - Haiku 4.5
 - Model Multiplier
-- News
 - Premium Requests
 - Sonnet 4.5
 - VS Code

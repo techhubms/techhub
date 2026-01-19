@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-11-18 15:01:39 +00:00
 permalink: /github-copilot/videos/How-Copilot-Spaces-gives-your-AI-the-right-project-context
 tags:
-- AI
 - AI Assistant
 - Bug Fixing
 - Code Completion
@@ -18,13 +17,11 @@ tags:
 - CopilotSpaces
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - IDE Integration
 - Project Context
 - Pull Requests
 - Repository Management
 - Vanessa Kalu
-- Videos
 section_names:
 - ai
 - github-copilot

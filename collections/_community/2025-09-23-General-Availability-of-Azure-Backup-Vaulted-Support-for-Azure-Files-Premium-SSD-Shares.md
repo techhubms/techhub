@@ -11,14 +11,12 @@ permalink: /azure/community/General-Availability-of-Azure-Backup-Vaulted-Support
 tags:
 - 3 2 1 Rule
 - AKS
-- Azure
 - Azure Backup
 - Azure File Sync
 - Azure Files Premium
 - Azure Virtual Desktop
 - Backup Policy
 - Cloud Native Storage
-- Community
 - Compliance
 - Cross Region Recovery
 - Disaster Recovery
@@ -28,7 +26,6 @@ tags:
 - Immutable Backup
 - Ransomware Protection
 - Recovery Services Vault
-- Security
 - SMB File Shares
 - SSD
 - Windows Workloads

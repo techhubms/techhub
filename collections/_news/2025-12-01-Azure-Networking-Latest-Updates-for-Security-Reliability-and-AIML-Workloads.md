@@ -9,11 +9,9 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-01 17:00:00 +00:00
 permalink: /ai/news/Azure-Networking-Latest-Updates-for-Security-Reliability-and-AIML-Workloads
 tags:
-- AI
 - AI Workloads
 - AKS
 - Application Gateway
-- Azure
 - Azure Bastion
 - Azure DDoS Protection
 - Azure DNS
@@ -26,10 +24,8 @@ tags:
 - JWT Validation
 - NAT Gateway V2
 - Networking
-- News
 - Pod CIDR Expansion
 - Private Link
-- Security
 - Threat Intelligence
 - Traffic Filtering
 - Virtual WAN

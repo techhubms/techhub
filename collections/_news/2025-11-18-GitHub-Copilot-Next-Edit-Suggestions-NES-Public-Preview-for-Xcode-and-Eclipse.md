@@ -9,17 +9,14 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:11 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Next-Edit-Suggestions-NES-Public-Preview-for-Xcode-and-Eclipse
 tags:
-- AI
 - AI Assistance
 - Code Suggestions
 - Copilot
 - Developer Tools
 - Eclipse
-- GitHub Copilot
 - IDE
 - Improvement
 - NES
-- News
 - Next Edit Suggestions
 - Plugin
 - Productivity

@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-09-08 07:00:18 +00:00
 permalink: /ai/videos/Extending-VS-Code-with-the-Language-Model-Chat-Provider-BYOK-API-Insights-from-Logan-Ramos
 tags:
-- AI
 - Anthropic
 - API
 - BYOK
-- Coding
 - Developer Tools
 - Extension Development
 - Google
@@ -22,7 +20,6 @@ tags:
 - Language Models
 - Model Integration
 - OpenAI
-- Videos
 - VS Code
 - VS Code API
 - Xai

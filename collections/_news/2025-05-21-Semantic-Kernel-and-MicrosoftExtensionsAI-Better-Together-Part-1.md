@@ -12,12 +12,10 @@ tags:
 - .NET
 - Abstractions
 - Agents
-- AI
 - AI Frameworks
 - Extensions AI
 - Integration
 - Microsoft.Extensions.AI
-- News
 - Samples
 - Semantic Kernel
 section_names:

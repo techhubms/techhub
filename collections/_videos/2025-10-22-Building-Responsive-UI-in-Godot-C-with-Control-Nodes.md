@@ -11,7 +11,6 @@ permalink: /coding/videos/Building-Responsive-UI-in-Godot-C-with-Control-Nodes
 tags:
 - .NET
 - C#
-- Coding
 - Control Nodes
 - Crafting System
 - Dynamic UI
@@ -26,7 +25,6 @@ tags:
 - UI Design
 - UI Programming
 - User Interface
-- Videos
 - VS Code
 section_names:
 - coding

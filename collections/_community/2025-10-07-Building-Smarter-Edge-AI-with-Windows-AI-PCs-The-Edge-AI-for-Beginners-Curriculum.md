@@ -9,11 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-07 07:13:47 +00:00
 permalink: /ai/community/Building-Smarter-Edge-AI-with-Windows-AI-PCs-The-Edge-AI-for-Beginners-Curriculum
 tags:
-- AI
 - AI Agent Framework
-- Azure
 - Azure AI Foundry
-- Community
 - Cross Platform AI
 - DirectML
 - Edge AI
@@ -23,7 +20,6 @@ tags:
 - Jupyter Notebooks
 - Local AI
 - Microsoft Olive
-- ML
 - Model Optimization
 - Model Quantization
 - ONNX Runtime

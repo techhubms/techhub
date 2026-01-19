@@ -14,10 +14,8 @@ tags:
 - .NET Aspire
 - App Orchestration
 - ASP.NET Core
-- Azure
 - C# 14
 - Cloud Native Development
-- Coding
 - Community Q&A
 - David Fowler
 - Development Process
@@ -26,7 +24,6 @@ tags:
 - MAUI
 - Microsoft Azure
 - Modern Web Development
-- Videos
 - VS
 section_names:
 - azure

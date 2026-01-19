@@ -13,9 +13,6 @@ tags:
 - Activity
 - ActivityTraceFlags
 - ASP.NET Core
-- Blogs
-- Coding
-- DevOps
 - Instrumentation
 - IsAllDataRequested
 - Middleware

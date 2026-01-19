@@ -11,16 +11,12 @@ permalink: /azure/blogs/How-to-Authenticate-Connect-MgGraph-Using-OIDC-in-GitHub
 tags:
 - Access Token
 - Automation
-- Azure
 - Azure Entra ID
-- Blogs
-- DevOps
 - GitHub
 - GitHub Actions
 - Microsoft Graph
 - OIDC
 - PowerShell
-- Security
 section_names:
 - azure
 - devops

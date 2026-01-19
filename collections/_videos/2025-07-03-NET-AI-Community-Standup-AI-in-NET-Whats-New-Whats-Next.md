@@ -12,15 +12,12 @@ tags:
 - .NET
 - .NET 10
 - .NET 9
-- AI
 - Bruno Capuano
 - C#
-- Coding
 - Machine Learning
 - Microsoft
 - Tanner Gooding
 - Tensor Support
-- Videos
 section_names:
 - ai
 - coding

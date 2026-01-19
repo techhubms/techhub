@@ -12,7 +12,6 @@ tags:
 - Access Control
 - Automation
 - Best Practices
-- Blogs
 - Build Pipelines
 - Business Of DevOps
 - CI/CD
@@ -22,7 +21,6 @@ tags:
 - Container Security
 - Container Vulnerabilities
 - Contributed Content
-- DevOps
 - Devsecops
 - DockerHub
 - Hardened Images
@@ -31,7 +29,6 @@ tags:
 - Kubernetes Security
 - Open Source Vulnerabilities
 - Secure Build Pipelines
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

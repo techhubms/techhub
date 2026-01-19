@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-07-31 16:01:20 +00:00
 permalink: /ml/videos/Multiple-Geo-Replicas-for-Azure-SQL-Hyperscale-Data-Exposed
 tags:
-- Azure
 - Azure SQL Database
 - Azure SQL Hyperscale
 - Cloud Computing
@@ -24,14 +23,12 @@ tags:
 - High Availability
 - Microsoft
 - Microsoft Azure
-- ML
 - Public Preview
 - Secondary Replicas
 - SQL Server
 - Tech
 - Technical Demo
 - Technology
-- Videos
 section_names:
 - azure
 - ml

@@ -10,22 +10,18 @@ date: 2026-01-14 18:45:09 +00:00
 permalink: /ai/news/Community-powered-Security-with-AI-Launching-the-GitHub-Security-Lab-Taskflow-Agent
 tags:
 - Agentic AI
-- AI
 - AI & ML
 - AI Research
 - CodeQL
 - Codespaces
 - Community Collaboration
 - Containerization
-- DevOps
 - GitHub Security Lab
 - MCP
-- News
 - Open Source
 - Open Source Security
 - PyPI
 - Python
-- Security
 - Security Analysis
 - Security Automation
 - Taskflow Agent

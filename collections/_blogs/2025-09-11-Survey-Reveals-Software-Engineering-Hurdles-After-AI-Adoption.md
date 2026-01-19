@@ -9,14 +9,11 @@ feed_url: https://devops.com/feed/
 date: 2025-09-11 20:01:09 +00:00
 permalink: /ai/blogs/Survey-Reveals-Software-Engineering-Hurdles-After-AI-Adoption
 tags:
-- AI
 - AI Adoption
 - AI Strategy
 - Application Development
 - Automation
-- Blogs
 - Data Security
-- DevOps
 - Engineering Metrics
 - Performance Monitoring
 - Productivity

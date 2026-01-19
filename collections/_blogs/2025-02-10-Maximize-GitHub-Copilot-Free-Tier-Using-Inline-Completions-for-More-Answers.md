@@ -9,8 +9,6 @@ feed_url: https://jessehouwing.net/rss/
 date: 2025-02-10 16:03:31 +00:00
 permalink: /github-copilot/blogs/Maximize-GitHub-Copilot-Free-Tier-Using-Inline-Completions-for-More-Answers
 tags:
-- AI
-- Blogs
 - Chat Messages
 - Code Completions
 - Coding Assistance
@@ -19,7 +17,6 @@ tags:
 - Editor Plugins
 - Free Tier
 - GitHub
-- GitHub Copilot
 - Inline Completions
 - Neovim
 - Productivity Tips

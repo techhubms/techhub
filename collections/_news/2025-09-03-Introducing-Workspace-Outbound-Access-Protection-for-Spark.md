@@ -9,18 +9,14 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-03 10:04:16 +00:00
 permalink: /ml/news/Introducing-Workspace-Outbound-Access-Protection-for-Spark
 tags:
-- Azure
 - Compliance
 - Data Engineering
 - Data Exfiltration
 - Managed Private Endpoints
 - Microsoft Fabric
-- ML
 - Network Security
-- News
 - OAP
 - Private Links
-- Security
 - Spark
 - Trusted Workspace Access
 - Workspace Outbound Access Protection

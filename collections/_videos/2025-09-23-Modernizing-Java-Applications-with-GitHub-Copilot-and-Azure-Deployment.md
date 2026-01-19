@@ -9,22 +9,17 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-23 13:01:50 +00:00
 permalink: /github-copilot/videos/Modernizing-Java-Applications-with-GitHub-Copilot-and-Azure-Deployment
 tags:
-- AI
 - App Modernization
 - Automated Assessment
-- Azure
 - Cloud Computing
 - Cloud Deployment
 - Code To Cloud
 - Code Upgrade
-- Coding
 - Continuous Deployment
 - Dependency Management
 - Dev
 - Development
-- DevOps
 - Enterprise Security
-- GitHub Copilot
 - Java
 - Java 21
 - Microsoft
@@ -34,7 +29,6 @@ tags:
 - Security Compliance
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

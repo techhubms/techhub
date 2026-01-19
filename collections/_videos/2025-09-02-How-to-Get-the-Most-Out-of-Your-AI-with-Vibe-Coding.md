@@ -9,21 +9,18 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-09-02 14:00:38 +00:00
 permalink: /github-copilot/videos/How-to-Get-the-Most-Out-of-Your-AI-with-Vibe-Coding
 tags:
-- AI
 - AI Assistant
 - AI Coding
 - AI Productivity
 - Context Engineering
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Non Technical Users
 - PRD
 - Product Requirements Document
 - Software Development
 - Vibe Coding
 - VibeCoding
-- Videos
 section_names:
 - ai
 - github-copilot

@@ -9,10 +9,7 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-11-13 14:50:54 +00:00
 permalink: /ai/blogs/Introducing-the-Digital-Sovereignty-Specialization-for-the-Microsoft-AI-Cloud-Partner-Program
 tags:
-- AI
 - Audit Requirements
-- Azure
-- Blogs
 - Cloud
 - Cloud Compliance
 - Cloud Security
@@ -31,7 +28,6 @@ tags:
 - Partner Specialization
 - Public Sector
 - Regulated Industries
-- Security
 - Sovereign Cloud
 section_names:
 - ai

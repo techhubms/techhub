@@ -9,14 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-06 14:15:35 +00:00
 permalink: /ai/community/Unlock-Structured-OCR-in-TypeScript-with-Mistral-Document-AI-on-AI-Foundry
 tags:
-- AI
 - AI Agents
 - API Integration
-- Azure
 - Azure AI Foundry
 - Azure Security
-- Coding
-- Community
 - Data Extraction
 - Document Automation
 - Document Understanding

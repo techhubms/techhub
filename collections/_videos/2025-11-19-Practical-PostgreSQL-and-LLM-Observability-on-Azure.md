@@ -9,15 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 13:00:54 +00:00
 permalink: /ai/videos/Practical-PostgreSQL-and-LLM-Observability-on-Azure
 tags:
-- AI
-- Azure
 - Cloud Deployment
 - Code Testing
 - Dashboards
 - Database Misconfiguration
 - Database Performance
 - Datadog
-- DevOps
 - GenAI
 - LLM
 - Microsoft Ignite
@@ -30,7 +27,6 @@ tags:
 - SQL Query Debugging
 - Unifyyourdataplatform
 - Vector Representation
-- Videos
 section_names:
 - ai
 - azure

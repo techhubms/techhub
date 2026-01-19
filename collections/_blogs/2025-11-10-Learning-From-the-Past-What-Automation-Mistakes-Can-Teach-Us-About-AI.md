@@ -9,15 +9,12 @@ feed_url: https://devops.com/feed/
 date: 2025-11-10 23:59:47 +00:00
 permalink: /ai/blogs/Learning-From-the-Past-What-Automation-Mistakes-Can-Teach-Us-About-AI
 tags:
-- AI
 - AI Agents
 - AI Orchestration
 - Automation
 - Automation Architecture
 - Automation Governance
-- Blogs
 - Business Process Management
-- DevOps
 - Enterprise AI
 - IT Governance
 - Operational Efficiency

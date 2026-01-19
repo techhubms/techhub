@@ -9,9 +9,7 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 08:30:00 +00:00
 permalink: /ai/news/Advanced-SAP-Data-Integration-with-Microsoft-Fabric-Mirroring-and-Copy-Job
 tags:
-- AI
 - AI Ready Data
-- Azure
 - BW OpenHub
 - Copy Job
 - Data Agents
@@ -20,9 +18,7 @@ tags:
 - Data Integration
 - Microsoft Fabric
 - Mirroring
-- ML
 - Multi Cloud
-- News
 - OData
 - ODBC
 - OneLake

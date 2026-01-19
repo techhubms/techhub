@@ -12,7 +12,6 @@ tags:
 - .NET
 - .NET Aspire
 - Azd
-- Azure
 - Azure Container Apps
 - Azure Developer CLI
 - Azure Functions
@@ -20,9 +19,7 @@ tags:
 - Bicep
 - CI/CD
 - Codespaces
-- Coding
 - Deployment Packaging
-- DevOps
 - Docker
 - Environment Management
 - Event Driven Architecture
@@ -31,7 +28,6 @@ tags:
 - Java
 - JavaScript
 - Kubernetes
-- News
 - OIDC Authentication
 - Project Validation
 - Python

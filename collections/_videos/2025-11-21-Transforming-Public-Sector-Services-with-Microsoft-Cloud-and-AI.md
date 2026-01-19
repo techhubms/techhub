@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 07:29:55 +00:00
 permalink: /ai/videos/Transforming-Public-Sector-Services-with-Microsoft-Cloud-and-AI
 tags:
-- AI
 - AI Transformation
-- Azure
 - Azure Government
 - Case Study
 - Citizen Services
@@ -32,7 +30,6 @@ tags:
 - Raleigh
 - San Francisco
 - Tomorrow.io
-- Videos
 section_names:
 - ai
 - azure

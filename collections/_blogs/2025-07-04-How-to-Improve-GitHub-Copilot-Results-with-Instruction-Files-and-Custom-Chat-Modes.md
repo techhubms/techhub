@@ -9,15 +9,12 @@ feed_url: https://harrybin.de/rss.xml
 date: 2025-07-04 17:00:00 +00:00
 permalink: /github-copilot/blogs/How-to-Improve-GitHub-Copilot-Results-with-Instruction-Files-and-Custom-Chat-Modes
 tags:
-- AI
 - Astro
-- Blogs
 - Coding Standards
 - Contextual Code Assistance
 - Custom Chat Modes
 - Developer Productivity
 - Developer Workflows
-- GitHub Copilot
 - Instruction Files
 - Project Collaboration
 - React

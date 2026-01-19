@@ -11,11 +11,8 @@ permalink: /ai/videos/Bulletproof-Agents-with-the-Durable-Task-Extension-for-Mic
 tags:
 - .NET
 - Agentic Workflows
-- AI
 - AI Agents
-- Azure
 - Azure Functions
-- Coding
 - Debugging
 - Determinism
 - Distributed Systems
@@ -27,7 +24,6 @@ tags:
 - Serverless Architecture
 - Session Management
 - Stateful Agents
-- Videos
 section_names:
 - ai
 - azure

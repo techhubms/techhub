@@ -10,12 +10,10 @@ date: 2025-11-12 15:50:33 +00:00
 permalink: /azure/blogs/Azure-Governance-Tools-Policies-Blueprints-and-RBAC-Explained
 tags:
 - Access Control
-- Azure
 - Azure Automation
 - Azure Blueprints
 - Azure Management
 - Azure Policy
-- Blogs
 - Cloud Governance
 - Compliance
 - Cost Management
@@ -25,7 +23,6 @@ tags:
 - RBAC
 - Resource Tagging
 - Role Based Access Control
-- Security
 - Security Best Practices
 section_names:
 - azure

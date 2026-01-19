@@ -13,8 +13,6 @@ tags:
 - .NET 8
 - ASP.NET Core
 - Caching
-- Coding
-- Community
 - EF Core
 - IIS
 - Memory Leaks

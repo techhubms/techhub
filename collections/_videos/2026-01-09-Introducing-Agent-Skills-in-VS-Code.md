@@ -11,10 +11,8 @@ permalink: /ai/videos/Introducing-Agent-Skills-in-VS-Code
 tags:
 - Agent Skills
 - Agentskills
-- AI
 - AI Tools
 - Code
-- Coding
 - Customization
 - Demo
 - Developer
@@ -23,7 +21,6 @@ tags:
 - James Montemagno
 - Microsoft
 - Software Developer
-- Videos
 - VS Code
 section_names:
 - ai

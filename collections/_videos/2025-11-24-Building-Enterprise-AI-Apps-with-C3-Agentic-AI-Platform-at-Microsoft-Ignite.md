@@ -11,7 +11,6 @@ permalink: /ai/videos/Building-Enterprise-AI-Apps-with-C3-Agentic-AI-Platform-at
 tags:
 - Agentic AI
 - Agenticbusinessapplications
-- AI
 - AI Agents
 - Application Canvas
 - C3 AI Studio
@@ -26,7 +25,6 @@ tags:
 - Ontology Modeling
 - Orchestration Framework
 - Versioning
-- Videos
 - VS Code
 - Workflow Automation
 section_names:

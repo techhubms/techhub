@@ -10,7 +10,6 @@ date: 2025-11-24 12:10:10 +00:00
 permalink: /ai/videos/Empowering-Nonprofits-with-Agentic-AI-Adoption-Lessons-from-Microsoft-Ignite
 tags:
 - Agentic AI
-- AI
 - AI Agents
 - AI Leadership
 - Digital Transformation
@@ -27,7 +26,6 @@ tags:
 - Reference Architecture
 - Risk Assessment
 - Unifyyourdataplatform
-- Videos
 section_names:
 - ai
 ---

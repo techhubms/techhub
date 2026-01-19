@@ -9,11 +9,9 @@ feed_url: https://devblogs.microsoft.com/all-things-azure/feed/
 date: 2025-11-20 16:40:49 +00:00
 permalink: /github-copilot/news/Accelerate-Development-with-VS-Code-for-the-Web-Azure-Integration
 tags:
-- AI
 - AI Assisted Coding
 - All Things Azure
 - Application Development
-- Azure
 - Azure Copilot
 - Azure Developer CLI
 - Azure Portal
@@ -21,14 +19,10 @@ tags:
 - C#
 - Cloud Deployment
 - Code Editing
-- Coding
-- DevOps
 - DevOps Workflow
 - Git Integration
-- GitHub Copilot
 - Java
 - Microsoft Foundry
-- News
 - Node.js
 - Pre Configured Workspaces
 - Python

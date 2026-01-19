@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-12-04 00:00:52 +00:00
 permalink: /ai/videos/How-AI-Voice-Agents-Transform-Medical-Documentation-in-Real-Time
 tags:
-- AI
 - AI in Healthcare
 - Clinical Workflow Automation
 - Cloud Computing
@@ -26,7 +25,6 @@ tags:
 - Speech Recognition
 - Tech
 - Technology
-- Videos
 - Workflow Optimization
 section_names:
 - ai

@@ -9,21 +9,16 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-20 17:34:19 +00:00
 permalink: /ai/blogs/The-Evolving-Blueprint-Whats-Next-for-the-Software-Architect-Role
 tags:
-- AI
 - Architecture
 - Architecture as Code
-- Azure
-- Blogs
 - CI/CD
 - Cloud Native
-- DevOps
 - Distributed Systems
 - Event Driven Architecture
 - Governance
 - Machine Learning
 - Microservices
 - MLOps
-- Security
 - Software Architecture
 - Solution Architecture
 - System Design

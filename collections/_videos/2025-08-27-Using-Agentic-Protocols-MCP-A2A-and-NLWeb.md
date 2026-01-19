@@ -11,12 +11,9 @@ permalink: /ai/videos/Using-Agentic-Protocols-MCP-A2A-and-NLWeb
 tags:
 - A2A
 - Agentic Protocols
-- AI
 - AI Agents
 - AI Integration
-- Azure
 - Cloud Computing
-- Coding
 - Dev
 - Developer Guides
 - Development
@@ -28,7 +25,6 @@ tags:
 - Sample Code
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

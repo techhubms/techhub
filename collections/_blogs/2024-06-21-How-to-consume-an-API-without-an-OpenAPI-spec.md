@@ -6,12 +6,8 @@ canonical_url: https://blog.jesseswart.nl/post/consume-api-copilot
 viewing_mode: external
 permalink: /github-copilot/blogs/blogs/2024-06-21-How-to-consume-an-API-without-an-OpenAPI-spec
 tags:
-- AI
 - API
-- Blogs
-- Coding
 - Development
-- GitHub Copilot
 - Productivity
 - Programming
 - Tutorials

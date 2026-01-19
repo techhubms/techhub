@@ -9,18 +9,14 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-06 17:23:25 +00:00
 permalink: /github-copilot/news/Copilot-Coding-Agent-Automatically-Generate-Custom-Instructions
 tags:
-- AI
 - Automation
 - Copilot Coding Agent
 - Copilot Enterprise
 - Copilot Pro
 - Custom Instructions
-- DevOps
 - GitHub CLI
-- GitHub Copilot
 - IDE Integration
 - MCP Server
-- News
 - Pull Requests
 - Repository Configuration
 - Software Development

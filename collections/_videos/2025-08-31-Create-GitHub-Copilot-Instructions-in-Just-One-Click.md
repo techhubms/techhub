@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-31 14:01:22 +00:00
 permalink: /github-copilot/videos/Create-GitHub-Copilot-Instructions-in-Just-One-Click
 tags:
-- AI
 - AI Coding Assistant
 - AI Integration
 - Codebase Context
@@ -19,10 +18,8 @@ tags:
 - Developer
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Repository Analysis
 - Software Development
-- Videos
 section_names:
 - ai
 - github-copilot

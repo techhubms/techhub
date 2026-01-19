@@ -10,14 +10,11 @@ date: 2025-11-14 06:00:06 +00:00
 permalink: /coding/videos/Carbon-Aware-Computing-with-NET-Open-Source-Libraries-for-Sustainable-Applications
 tags:
 - .NET
-- Azure
 - Azure PaaS
 - CarbonAware SDK
 - Cloud Computing
 - CO2 Intensity Prediction
-- Coding
 - Demand Shaping
-- DevOps
 - Dynamic Scaling
 - Green Software
 - Hangfire
@@ -29,7 +26,6 @@ tags:
 - Prometheus
 - Sustainability
 - Time Shifting
-- Videos
 section_names:
 - azure
 - coding

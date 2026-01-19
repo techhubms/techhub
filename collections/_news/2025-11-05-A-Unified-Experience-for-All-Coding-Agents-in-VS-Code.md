@@ -10,18 +10,14 @@ date: 2025-11-05 00:00:00 +00:00
 permalink: /github-copilot/news/A-Unified-Experience-for-All-Coding-Agents-in-VS-Code
 tags:
 - Agent Sessions
-- AI
 - Anthropic Claude
 - Code Orchestration
-- Coding
 - Coding Agents
 - Context Engineering
 - Copilot CLI
 - Custom Agents
 - Developers
-- GitHub Copilot
 - Model Integration
-- News
 - OpenAI Codex
 - Plan Agent
 - Pro+ Subscription

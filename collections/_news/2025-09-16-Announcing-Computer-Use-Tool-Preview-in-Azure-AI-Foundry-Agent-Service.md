@@ -10,9 +10,7 @@ date: 2025-09-16 15:00:45 +00:00
 permalink: /ai/news/Announcing-Computer-Use-Tool-Preview-in-Azure-AI-Foundry-Agent-Service
 tags:
 - Agent Service
-- AI
 - Automation
-- Azure
 - Azure AI Foundry
 - Browser Automation
 - Computer Use Tool
@@ -22,7 +20,6 @@ tags:
 - Legacy Integration
 - Microsoft
 - Natural Language AI
-- News
 - Operational Copilots
 - Pixel Based Reasoning
 - Prompt Injection

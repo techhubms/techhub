@@ -10,7 +10,6 @@ date: 2025-09-30 11:00:00 +00:00
 permalink: /ml/news/Enhancements-to-Dataflow-Gen2-in-Microsoft-Fabric-Expanded-Destinations-and-Schema-Support
 tags:
 - ADLS Gen2
-- Azure
 - Data Engineering
 - Data Governance
 - Data Integration
@@ -21,8 +20,6 @@ tags:
 - Hybrid Architecture
 - Lakehouse
 - Microsoft Fabric
-- ML
-- News
 - Power BI
 - SharePoint Integration
 - Snowflake

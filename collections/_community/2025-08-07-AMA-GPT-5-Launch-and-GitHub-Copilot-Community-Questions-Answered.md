@@ -10,17 +10,13 @@ date: 2025-08-07 17:12:55 +00:00
 permalink: /github-copilot/community/AMA-GPT-5-Launch-and-GitHub-Copilot-Community-Questions-Answered
 tags:
 - Agent Mode
-- AI
 - AI Integration
 - Auto Completion
 - Beast Mode
-- Coding
-- Community
 - Community AMA
 - Copilot Enterprise
 - Copilot Models
 - Developer Tools
-- GitHub Copilot
 - GPT 5
 - MCP
 - Microsoft

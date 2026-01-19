@@ -9,13 +9,10 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-02 18:02:20 +00:00
 permalink: /github-copilot/news/Copilot-code-review-Better-handling-of-large-pull-requests
 tags:
-- AI
 - Code Review
 - Copilot Improvements
 - GitHub
-- GitHub Copilot
 - Large Codebases
-- News
 - Pull Requests
 section_names:
 - ai

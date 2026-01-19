@@ -10,17 +10,14 @@ permalink: /github-copilot/videos/Visual-Studio-Code-and-GitHub-Copilot-Whats-ne
 section: github-copilot
 alt-collection: vscode-updates
 tags:
-- AI
 - Coding Agent
 - Custom Chat Modes
 - Custom Instructions
 - Developer Tools
-- GitHub Copilot
 - MCP Servers
 - Open Source
 - Productivity
 - Terminal Auto Approval
-- Videos
 - VS Code
 - VS Code 1.102
 section_names:

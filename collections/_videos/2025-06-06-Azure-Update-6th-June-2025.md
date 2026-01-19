@@ -9,10 +9,8 @@ date: 2025-06-06 14:35:12 +00:00
 permalink: /ai/videos/Azure-Update-6th-June-2025
 viewing_mode: internal
 tags:
-- AI
 - AI Managed Network
 - ASR Premium SSD
-- Azure
 - Azure Files NFS
 - Azure Migrate
 - Azure Storage Mover
@@ -21,16 +19,13 @@ tags:
 - Fabric Data Factory
 - Johnsavillstechnicaltraining
 - Microsoft
-- ML
 - MySQL
 - Onboard to Azure
 - Pg Cron Extension
 - PostgreSQL Flexible Server
 - Quota Groups
 - RBAC
-- Security
 - SMB To Blob
-- Videos
 section_names:
 - ai
 - azure

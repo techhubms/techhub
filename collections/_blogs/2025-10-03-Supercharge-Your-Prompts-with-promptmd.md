@@ -10,14 +10,10 @@ date: 2025-10-03 00:00:00 +00:00
 permalink: /github-copilot/blogs/Supercharge-Your-Prompts-with-promptmd
 tags:
 - .prompt.md
-- AI
 - API Documentation
-- Blogs
 - Code Quality
-- Coding
 - Copilot Chat
 - Developer Workflow
-- GitHub Copilot
 - Jest
 - Productivity
 - Prompt Engineering

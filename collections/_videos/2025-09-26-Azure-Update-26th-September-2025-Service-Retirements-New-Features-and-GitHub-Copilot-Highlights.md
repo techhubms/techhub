@@ -10,12 +10,10 @@ date: 2025-09-26 15:14:46 +00:00
 permalink: /github-copilot/videos/Azure-Update-26th-September-2025-Service-Retirements-New-Features-and-GitHub-Copilot-Highlights
 tags:
 - AFD Signed Request
-- AI
 - AKS Insights
 - App Gateway
 - App Modernization
 - App Service On Arc
-- Azure
 - Azure Backups
 - Azure Cloud
 - Azure Data Encryption (ade)
@@ -26,8 +24,6 @@ tags:
 - Cloud
 - Cloud Infrastructure
 - Container Insights
-- DevOps
-- GitHub Copilot
 - John Savill
 - Microsoft
 - Microsoft Azure
@@ -36,7 +32,6 @@ tags:
 - NVv3 Retirement
 - PostgreSQL
 - Service Retirement
-- Videos
 section_names:
 - ai
 - azure

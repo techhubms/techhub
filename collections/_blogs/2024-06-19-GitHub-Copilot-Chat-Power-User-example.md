@@ -9,12 +9,8 @@ feed_url: https://devopsjournal.io/blog/atom.xml
 date: 2024-06-19 00:00:00 +00:00
 permalink: /github-copilot/blogs/GitHub-Copilot-Chat-Power-User-example
 tags:
-- AI
 - API Scripting
 - Automation
-- Blogs
-- Coding
-- GitHub Copilot
 - Programming
 - Prompt Engineering
 section_names:

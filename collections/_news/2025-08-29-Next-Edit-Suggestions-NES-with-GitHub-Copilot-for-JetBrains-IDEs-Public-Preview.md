@@ -9,18 +9,15 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-08-29 17:32:16 +00:00
 permalink: /github-copilot/news/Next-Edit-Suggestions-NES-with-GitHub-Copilot-for-JetBrains-IDEs-Public-Preview
 tags:
-- AI
 - AI Code Assistant
 - Code Quality
 - Code Refactoring
 - Developer Tools
-- GitHub Copilot
 - IDE Extensions
 - Inline Suggestions
 - IntelliJ
 - JetBrains IDEs
 - NES
-- News
 - Next Edit Suggestions
 - Productivity
 section_names:

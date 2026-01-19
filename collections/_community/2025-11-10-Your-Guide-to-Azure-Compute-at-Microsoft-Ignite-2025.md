@@ -9,7 +9,6 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-10 20:41:35 +00:00
 permalink: /azure/community/Your-Guide-to-Azure-Compute-at-Microsoft-Ignite-2025
 tags:
-- Azure
 - Azure Backup
 - Azure Boost
 - Azure Compute
@@ -18,7 +17,6 @@ tags:
 - Azure Networking
 - Cloud Architecture
 - Cloud Security
-- Community
 - Cost Optimization
 - Disaster Recovery
 - Hybrid Cloud
@@ -27,7 +25,6 @@ tags:
 - Observability
 - Performance Tuning
 - Resiliency
-- Security
 - Virtual Machines
 section_names:
 - azure

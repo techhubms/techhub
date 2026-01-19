@@ -10,17 +10,14 @@ date: 2025-10-02 07:00:00 +00:00
 permalink: /ai/community/Foundry-Fridays-Weekly-Azure-AI-Foundry-AMA-Series
 tags:
 - Agentic Workflows
-- AI
 - AI Agent Security
 - AI Community
 - AI Developer
 - AI Tools
 - AMA
 - Ask Me Anything
-- Azure
 - Azure AI
 - Azure AI Foundry
-- Community
 - Discord Events
 - Foundry Fridays
 - MCP Registries

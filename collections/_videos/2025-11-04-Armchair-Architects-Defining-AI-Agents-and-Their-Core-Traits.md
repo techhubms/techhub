@@ -10,12 +10,10 @@ date: 2025-11-04 08:00:39 +00:00
 permalink: /ai/videos/Armchair-Architects-Defining-AI-Agents-and-Their-Core-Traits
 tags:
 - Agentic Web Stack
-- AI
 - AI Agents
 - AI Architects
 - AI Architecture
 - AI Development
-- Azure
 - Azure Architecture
 - Chatbots
 - Cloud Solutions
@@ -25,7 +23,6 @@ tags:
 - Microsoft Azure
 - Solution Architecture
 - Uli Homann
-- Videos
 section_names:
 - ai
 - azure

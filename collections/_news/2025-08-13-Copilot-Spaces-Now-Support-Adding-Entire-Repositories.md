@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-08-13 17:26:04 +00:00
 permalink: /github-copilot/news/Copilot-Spaces-Now-Support-Adding-Entire-Repositories
 tags:
-- AI
 - AI Coding Assistant
 - AI Integration
 - Codebase Exploration
@@ -18,9 +17,7 @@ tags:
 - Developer Tools
 - Feature Update
 - GitHub
-- GitHub Copilot
 - Navigation Improvements
-- News
 - Repository Management
 section_names:
 - ai

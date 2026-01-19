@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-11-28 17:57:02 +00:00
 permalink: /ai/videos/Secure-Code-Game-Empowering-Safer-LLM-Based-Applications
 tags:
-- AI
 - AI Application Development
 - Application Security
-- Coding
 - Developer Education
 - Engineering Decisions
 - GitHub
@@ -21,8 +19,6 @@ tags:
 - Open Source
 - Secure Code Game
 - Secure Coding
-- Security
-- Videos
 section_names:
 - ai
 - coding

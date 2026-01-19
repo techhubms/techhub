@@ -10,10 +10,8 @@ date: 2025-12-16 22:47:32 +00:00
 permalink: /azure/community/Troubleshooting-User-Session-Issues-in-Azure-Virtual-Desktop-Pooled-Host-Pools
 tags:
 - AVD
-- Azure
 - Azure Portal
 - Azure Virtual Desktop
-- Community
 - Disconnection Issue
 - FSLogix
 - Pooled Host Pool

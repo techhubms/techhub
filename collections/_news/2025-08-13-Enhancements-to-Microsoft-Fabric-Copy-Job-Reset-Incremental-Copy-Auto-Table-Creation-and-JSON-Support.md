@@ -10,7 +10,6 @@ date: 2025-08-13 09:00:00 +00:00
 permalink: /ml/news/Enhancements-to-Microsoft-Fabric-Copy-Job-Reset-Incremental-Copy-Auto-Table-Creation-and-JSON-Support
 tags:
 - Auto Table Creation
-- Azure
 - Azure SQL Database
 - Change Data Capture
 - Cloud Data Integration
@@ -25,8 +24,6 @@ tags:
 - Incremental Copy
 - JSON Format
 - Microsoft Fabric
-- ML
-- News
 - SQL Server
 section_names:
 - azure

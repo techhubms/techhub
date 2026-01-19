@@ -11,15 +11,11 @@ permalink: /coding/community/Dynamic-Azure-DevOps-MCP-Server-for-Seamless-Contex
 tags:
 - .azure Devops.json
 - Authentication Context Switching
-- Azure
 - Azure DevOps
 - Build Management
 - Claude Code
-- Coding
-- Community
 - Consulting Workflows
 - Credential Isolation
-- DevOps
 - DevOps Automation
 - Directory Detection
 - GitHub Secret Scanning
@@ -30,7 +26,6 @@ tags:
 - PAT Tokens
 - Pipeline Automation
 - Repository Management
-- Security
 - Security Best Practices
 - TypeScript
 - Workflow Optimization

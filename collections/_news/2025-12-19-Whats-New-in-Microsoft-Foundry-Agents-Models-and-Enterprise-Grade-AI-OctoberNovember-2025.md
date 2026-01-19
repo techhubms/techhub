@@ -9,15 +9,12 @@ feed_url: https://devblogs.microsoft.com/foundry/feed/
 date: 2025-12-19 04:55:08 +00:00
 permalink: /ai/news/Whats-New-in-Microsoft-Foundry-Agents-Models-and-Enterprise-Grade-AI-OctoberNovember-2025
 tags:
-- AI
 - AI Agents
 - AI Tools
 - Anthropic
 - Anthropic Claude
-- Azure
 - Azure AI Search
 - BYO Models
-- Coding
 - Enterprise AI
 - Foundry Agent Framework
 - Foundry Tools
@@ -26,15 +23,12 @@ tags:
 - Identity And Governance
 - MCP Integration
 - Microsoft Foundry
-- ML
 - Model Fine Tuning
 - Multi Agent System
-- News
 - Observability
 - OpenAI Sora
 - Persistent Memory
 - Reinforcement Learning
-- Security
 - Sora
 - VNET
 - Zero Trust

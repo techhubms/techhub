@@ -10,18 +10,15 @@ date: 2025-08-14 22:41:29 +00:00
 permalink: /ai/videos/GPT-5-for-Developers
 tags:
 - .NET
-- AI
 - AI APIs
 - AI Integration
 - Code Samples
-- Coding
 - Developer Demos
 - GPT 5
 - JavaScript
 - Machine Learning
 - Microsoft Developer Tools
 - Python
-- Videos
 section_names:
 - ai
 - coding

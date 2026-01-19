@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-24 09:00:00 +00:00
 permalink: /ml/news/Large-Object-Data-Support-in-Microsoft-Fabric-Data-Warehouse-and-SQL-Analytics-Endpoint
 tags:
-- Azure
 - Azure SQL Database
 - Binary Data
 - Cosmos DB
@@ -20,8 +19,6 @@ tags:
 - JSON
 - Large Objects
 - Microsoft Fabric
-- ML
-- News
 - Performance
 - Schema Mapping
 - SQL Analytics Endpoint

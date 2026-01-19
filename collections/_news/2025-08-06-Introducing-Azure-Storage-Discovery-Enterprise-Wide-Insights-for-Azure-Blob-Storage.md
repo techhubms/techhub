@@ -9,8 +9,6 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-06 15:00:00 +00:00
 permalink: /ai/news/Introducing-Azure-Storage-Discovery-Enterprise-Wide-Insights-for-Azure-Blob-Storage
 tags:
-- AI
-- Azure
 - Azure Blob Storage
 - Azure Copilot
 - Azure Storage Discovery
@@ -22,7 +20,6 @@ tags:
 - Historical Data Analytics
 - Interactive Reports
 - Microsoft Entra
-- News
 - Operational Efficiency
 - Security Compliance
 - Storage

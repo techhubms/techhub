@@ -9,10 +9,8 @@ feed_url: https://devblogs.microsoft.com/feed
 date: 2025-07-28 16:00:02 +00:00
 permalink: /ai/news/Lets-Learn-MCP-Series-Recap-8-Languages-4-Code-Bases-Full-Resources
 tags:
-- AI
 - AI Agents
 - C#
-- Coding
 - Community Events
 - Developer Events
 - Developer Resources
@@ -22,7 +20,6 @@ tags:
 - MCP
 - Microsoft
 - Multilingual
-- News
 - Open Source
 - Python
 - Training

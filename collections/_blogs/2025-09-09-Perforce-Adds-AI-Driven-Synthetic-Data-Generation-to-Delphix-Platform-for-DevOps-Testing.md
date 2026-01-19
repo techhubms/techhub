@@ -9,19 +9,16 @@ feed_url: https://devops.com/feed/
 date: 2025-09-09 12:00:08 +00:00
 permalink: /ai/blogs/Perforce-Adds-AI-Driven-Synthetic-Data-Generation-to-Delphix-Platform-for-DevOps-Testing
 tags:
-- AI
 - AI Automation
 - AI in DevOps
 - Air Gapped Environments
 - Air Gapped IT Environments
 - Application Testing
-- Blogs
 - Compliance
 - Compliance Testing AI
 - Data Masking
 - Data Masking Automation
 - Delphix
-- DevOps
 - DevOps AI
 - Llama
 - MLOps

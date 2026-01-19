@@ -10,19 +10,15 @@ date: 2025-08-05 09:00:00 +00:00
 permalink: /ml/news/Unlocking-Flexibility-in-Fabric-Introducing-Multiple-Scheduler-and-CICD-Support
 tags:
 - Automation
-- Azure
 - CI/CD
 - Data Engineering
 - Data Pipelines
 - Deployment Pipelines
-- DevOps
 - Git Integration
 - Job Types
 - Microsoft Fabric
-- ML
 - Monitoring
 - Multiple Scheduler
-- News
 - Scheduler API
 - Version Control
 section_names:

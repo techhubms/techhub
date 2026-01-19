@@ -9,10 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-07-29 14:00:39 +00:00
 permalink: /azure/community/Determine-Onboarding-Methods-in-Defender-for-Endpoint-Part-1
 tags:
-- Azure
 - BKMK EPLog
 - Co Management
-- Community
 - Defender For Endpoint
 - Device Onboarding
 - EndpointProtectionAgent.log
@@ -24,7 +22,6 @@ tags:
 - Microsoft Intune
 - Onboard
 - Registry Keys
-- Security
 - Troubleshoot
 - Troubleshooting
 - Understanding

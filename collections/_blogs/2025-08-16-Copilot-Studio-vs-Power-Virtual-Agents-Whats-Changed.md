@@ -10,10 +10,8 @@ date: 2025-08-16 08:22:07 +00:00
 permalink: /ai/blogs/Copilot-Studio-vs-Power-Virtual-Agents-Whats-Changed
 tags:
 - Agent Workflows
-- AI
 - Automation
 - Azure Integration
-- Blogs
 - Bots
 - Chatbots
 - Computer Use

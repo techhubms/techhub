@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-25 14:01:01 +00:00
 permalink: /ai/videos/Why-Did-the-Cost-of-My-AI-Agent-Exceed-the-Set-Budget
 tags:
-- AI
 - AI Agent
 - AI Deployment
 - AI Operations
-- Azure
 - Azure AI
 - Azure AI Foundry
 - Budgeting
@@ -28,7 +26,6 @@ tags:
 - Tech
 - Tech Community
 - Technology
-- Videos
 section_names:
 - ai
 - azure

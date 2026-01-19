@@ -11,11 +11,9 @@ permalink: /ai/videos/What-Is-Microsoft-Agent-Framework-and-Why-Another-Agent-Fr
 tags:
 - .NET
 - Agent Orchestration
-- AI
 - AI Agents
 - AI Development Kit
 - AutoGen
-- Coding
 - Enterprise AI
 - Graph Based Workflows
 - Human in The Loop
@@ -26,7 +24,6 @@ tags:
 - Python
 - Semantic Kernel
 - State Management
-- Videos
 section_names:
 - ai
 - coding

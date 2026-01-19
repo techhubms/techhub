@@ -10,12 +10,10 @@ date: 2025-09-04 21:49:24 +00:00
 permalink: /azure/community/Public-Preview-Self-Service-Quota-Management-for-Azure-App-Service
 tags:
 - App Service Plans
-- Azure
 - Azure App Service
 - Azure Portal
 - Capacity Management
 - Cloud Platforms
-- Community
 - Deployment
 - Portal Experience
 - Public Preview

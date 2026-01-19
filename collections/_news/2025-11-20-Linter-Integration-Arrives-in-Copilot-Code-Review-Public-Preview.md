@@ -9,20 +9,16 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-20 19:29:29 +00:00
 permalink: /github-copilot/news/Linter-Integration-Arrives-in-Copilot-Code-Review-Public-Preview
 tags:
-- AI
 - Automation
 - Code Quality
 - CodeQL
 - Configuration
 - Copilot
 - Copilot Code Review
-- DevOps
 - Enterprise
 - ESLint
 - GitHub
-- GitHub Copilot
 - Linters
-- News
 - PMD
 - Pull Requests
 - Repository Rulesets

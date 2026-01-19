@@ -10,13 +10,10 @@ date: 2025-06-25 16:00:00 +00:00
 permalink: /github-copilot/news/From-pair-to-peer-programmer-Our-vision-for-agentic-workflows-in-GitHub-Copilot
 tags:
 - Agentic AI
-- AI
 - AI Agents
 - Developer Tools
 - Generative AI
-- GitHub Copilot
 - Multi Step Reasoning
-- News
 - News & Insights
 - Problem Solving
 - Product

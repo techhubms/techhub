@@ -12,7 +12,6 @@ tags:
 - App Gateway
 - App Gateway V2
 - Application Gateway
-- Azure
 - Azure Application Gateway
 - Azure Architecture
 - Azure Cloud
@@ -29,8 +28,6 @@ tags:
 - Migration
 - Network Isolation
 - Private Endpoint
-- Security
-- Videos
 - WAF
 section_names:
 - azure

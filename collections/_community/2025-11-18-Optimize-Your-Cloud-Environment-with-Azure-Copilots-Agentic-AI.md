@@ -10,15 +10,12 @@ date: 2025-11-18 16:20:32 +00:00
 permalink: /ai/community/Optimize-Your-Cloud-Environment-with-Azure-Copilots-Agentic-AI
 tags:
 - Agentic Workflows
-- AI
-- Azure
 - Azure Copilot
 - Azure Management
 - Azure Portal
 - Carbon Insights
 - CLI Automation
 - Cloud Operations
-- Community
 - Compliance
 - Cost Management
 - FinOps

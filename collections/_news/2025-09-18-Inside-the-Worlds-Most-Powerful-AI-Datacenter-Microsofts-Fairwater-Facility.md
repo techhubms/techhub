@@ -9,10 +9,8 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-18 15:45:10 +00:00
 permalink: /ai/news/Inside-the-Worlds-Most-Powerful-AI-Datacenter-Microsofts-Fairwater-Facility
 tags:
-- AI
 - AI Infrastructure
 - AI WAN
-- Azure
 - Azure Blob Storage
 - Data Center Architecture
 - Distributed Systems
@@ -24,7 +22,6 @@ tags:
 - Hyperscale
 - Liquid Cooling
 - Microsoft Cloud
-- News
 - NVIDIA GPUs
 - NVLink
 - Storage

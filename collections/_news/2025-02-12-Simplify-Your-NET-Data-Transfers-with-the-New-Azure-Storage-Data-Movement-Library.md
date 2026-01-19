@@ -10,19 +10,16 @@ date: 2025-02-12 17:34:48 +00:00
 permalink: /coding/news/Simplify-Your-NET-Data-Transfers-with-the-New-Azure-Storage-Data-Movement-Library
 tags:
 - .NET
-- Azure
 - Azure Files
 - Azure Identity
 - Azure SDK
 - Azure Storage
 - Blob Storage
 - C#
-- Coding
 - Data Movement
 - Data Transfer
 - Library Migration
 - Microsoft Entra
-- News
 - NuGet Packages
 - Storage
 - TransferManager

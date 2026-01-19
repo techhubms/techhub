@@ -8,23 +8,14 @@ permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET 10
 - Agent Framework
-- AI
 - AI Agents
 - Automation
-- Azure
 - Cloud Native
-- Coding
-- DevOps
 - Enterprise AI
-- GitHub Copilot
 - Governance
-- Machine Learning
 - Microsoft Azure
 - Microsoft Fabric
-- ML
 - OpenAI
-- Roundups
-- Security
 - TypeScript
 - VS
 section_names:

@@ -12,17 +12,14 @@ tags:
 - .NET
 - .NET Aspire
 - .NET Developer
-- AI
 - AI Application Architecture
 - Avatar
-- Azure
 - Azure Agents
 - Azure AI
 - Azure AI Foundry
 - Azure AI Services
 - Blazor
 - Chat Completion
-- Coding
 - Custom Avatar
 - Demo
 - Dotnet10
@@ -34,7 +31,6 @@ tags:
 - Multimodal AI
 - Speech Services
 - Technical Deep Dive
-- Videos
 section_names:
 - ai
 - azure

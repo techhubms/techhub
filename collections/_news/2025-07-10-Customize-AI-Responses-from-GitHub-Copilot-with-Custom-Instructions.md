@@ -10,18 +10,14 @@ date: 2025-07-10 17:15:00 +00:00
 permalink: /github-copilot/news/Customize-AI-Responses-from-GitHub-Copilot-with-Custom-Instructions
 tags:
 - .NET
-- AI
 - AI Customization
 - C#
 - Code Generation
-- Coding
 - Coding Standards
 - Copilot
 - Copilot Agent Mode
 - Custom Instructions
 - Development Workflow
-- GitHub Copilot
-- News
 - VS
 - VS Code
 section_names:

@@ -9,10 +9,8 @@ feed_url: https://devops.com/feed/
 date: 2025-08-26 13:55:02 +00:00
 permalink: /devops/blogs/The-EUs-Cyber-Resilience-Act-Redefining-Secure-Software-Development
 tags:
-- Blogs
 - Compliance
 - Cyber Resilience Act
-- DevOps
 - DevSecOps
 - ENISA
 - EU
@@ -23,7 +21,6 @@ tags:
 - Risk Analysis
 - SBOM
 - Secure Software Development
-- Security
 - Security By Design
 - Social Facebook
 - Social LinkedIn

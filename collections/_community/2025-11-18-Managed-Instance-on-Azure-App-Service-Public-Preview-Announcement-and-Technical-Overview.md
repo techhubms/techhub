@@ -10,15 +10,11 @@ date: 2025-11-18 16:00:00 +00:00
 permalink: /coding/community/Managed-Instance-on-Azure-App-Service-Public-Preview-Announcement-and-Technical-Overview
 tags:
 - .NET Framework
-- Azure
 - Azure App Service
 - Azure Bastion
 - Azure Storage
 - Cloud Migration
-- Coding
-- Community
 - Compliance
-- DevOps
 - DevOps Automation
 - Enterprise Applications
 - Key Vault
@@ -27,7 +23,6 @@ tags:
 - PowerShell
 - Premium V4
 - RDP
-- Security
 - VNET Integration
 - Windows Registry
 section_names:

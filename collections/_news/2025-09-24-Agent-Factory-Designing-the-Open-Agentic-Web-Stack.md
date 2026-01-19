@@ -13,10 +13,8 @@ tags:
 - Agent Factory
 - Agent Orchestration
 - Agentic Web Stack
-- AI
 - AI + Machine Learning
 - AI Agents
-- Azure
 - Azure AI Foundry
 - Developer Tools
 - Enterprise Automation
@@ -25,11 +23,9 @@ tags:
 - MCP
 - Microsoft Entra ID
 - Multi Agent Systems
-- News
 - Observability
 - Open Standards
 - OpenTelemetry
-- Security
 - Zero Trust Security
 section_names:
 - ai

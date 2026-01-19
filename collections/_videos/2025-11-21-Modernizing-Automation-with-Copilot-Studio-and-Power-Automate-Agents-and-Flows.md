@@ -11,7 +11,6 @@ permalink: /ai/videos/Modernizing-Automation-with-Copilot-Studio-and-Power-Autom
 tags:
 - Agent Flows
 - Agentic Automation
-- AI
 - Automation
 - Cloud Flows
 - Copilot Studio
@@ -27,7 +26,6 @@ tags:
 - Process Analytics
 - Process Insights
 - RPA
-- Videos
 section_names:
 - ai
 ---

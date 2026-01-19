@@ -11,12 +11,8 @@ permalink: /ai/community/From-Concept-to-Code-Building-Production-Ready-Multi-Ag
 tags:
 - Agent Framework
 - Agent V2 SDK
-- AI
 - AI Orchestration
-- Azure
 - Azure AI Foundry
-- Coding
-- Community
 - Declarative Workflows
 - Enterprise AI
 - Foundry Workflows

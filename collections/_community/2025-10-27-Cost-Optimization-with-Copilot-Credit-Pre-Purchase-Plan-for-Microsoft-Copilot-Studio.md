@@ -9,12 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-27 15:29:27 +00:00
 permalink: /ai/community/Cost-Optimization-with-Copilot-Credit-Pre-Purchase-Plan-for-Microsoft-Copilot-Studio
 tags:
-- AI
 - AI Agent Development
-- Azure
 - Billing
 - Commit Units
-- Community
 - Copilot Credit
 - Copilot Studio
 - Cost Estimation

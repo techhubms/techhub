@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 10:38:55 +00:00
 permalink: /ai/videos/Data-Protection-in-the-Age-of-the-Adversary-Accelerating-Microsoft-Purview-Adoption
 tags:
-- AI
 - AI Security
 - Compliance
 - Continuous Learning
@@ -24,11 +23,9 @@ tags:
 - Microsoft Purview
 - MSIgnite
 - Secureyourdata
-- Security
 - Security Copilot
 - Sensitive Data
 - Threat Defense
-- Videos
 section_names:
 - ai
 - security

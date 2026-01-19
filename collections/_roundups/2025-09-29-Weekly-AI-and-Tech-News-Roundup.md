@@ -8,25 +8,17 @@ permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
 - Agentic Automation
-- AI
 - AI Agents
-- Azure
 - Azure AI
 - Claude Opus
 - Cloud Modernization
-- Coding
 - Containerization
-- DevOps
-- GitHub Copilot
 - Hybrid Cloud
 - IaC
 - MCP
 - Microsoft Fabric
-- ML
 - MLOps
 - OpenAI
-- Roundups
-- Security
 - Supply Chain Security
 - VS
 section_names:

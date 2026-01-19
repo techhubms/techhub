@@ -10,9 +10,7 @@ date: 2025-12-01 15:29:31 +00:00
 permalink: /ai/videos/AB-900-Study-Cram-Microsoft-365-Copilot-and-Agent-Administration-Fundamentals
 tags:
 - AB 900
-- AI
 - AI Agents
-- Azure
 - Azure Cloud
 - Cloud
 - Cloud Security
@@ -31,11 +29,9 @@ tags:
 - Permissions
 - Purview
 - Responsible AI
-- Security
 - Self Service Password Reset
 - Semantics Index
 - SSO
-- Videos
 - Zero Trust
 section_names:
 - ai

@@ -14,8 +14,6 @@ tags:
 - .NET SDK
 - .NET Tool
 - ASP.NET Core
-- Blogs
-- Coding
 - Command Line
 - Dnx
 - Global Tools

@@ -11,10 +11,8 @@ permalink: /devops/community/Best-Practices-for-Migrating-Manually-Created-Monit
 tags:
 - Automation
 - Best Practices
-- Community
 - Configuration Management
 - Datadog
-- DevOps
 - IaC
 - Migration
 - Monitoring

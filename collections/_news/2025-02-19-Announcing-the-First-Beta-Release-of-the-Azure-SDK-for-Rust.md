@@ -9,11 +9,9 @@ feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-02-19 18:19:05 +00:00
 permalink: /coding/news/Announcing-the-First-Beta-Release-of-the-Azure-SDK-for-Rust
 tags:
-- Azure
 - Azure SDK
 - Beta Release
 - Cloud Development
-- Coding
 - Cosmos DB
 - Developer Tools
 - Event Hubs
@@ -21,7 +19,6 @@ tags:
 - Key Vault
 - Memory Safety
 - Microsoft
-- News
 - Open Source
 - Rust
 - Secure Coding

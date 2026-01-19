@@ -10,20 +10,16 @@ date: 2025-10-13 07:00:57 +00:00
 permalink: /github-copilot/videos/Building-Agent-Memory-for-VS-Code-with-Harald-Kirschner
 tags:
 - Agent Memory
-- AI
 - API
 - Chat Agents
 - Chat Modes
-- Coding
 - Copilot Customization
 - Custom Instructions
 - Developer Tools
 - Extension Development
-- GitHub Copilot
 - Harald Kirschner
 - Microsoft
 - Prompt Engineering
-- Videos
 - VS Code
 section_names:
 - ai

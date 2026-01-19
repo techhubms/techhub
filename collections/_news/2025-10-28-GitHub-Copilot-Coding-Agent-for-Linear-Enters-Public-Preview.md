@@ -10,18 +10,14 @@ date: 2025-10-28 15:25:36 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Coding-Agent-for-Linear-Enters-Public-Preview
 tags:
 - Agent Integration
-- AI
 - Automation
 - Autonomous Agents
 - Code Review
 - Continuous Integration
 - Copilot
 - Developer Tools
-- DevOps
 - GitHub Actions
-- GitHub Copilot
 - Linear
-- News
 - Pull Requests
 - Universe25
 - Workflow Automation

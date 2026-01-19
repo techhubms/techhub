@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2026-01-15 22:08:50 +00:00
 permalink: /azure/community/Advancing-Embodied-Carbon-Measurement-at-Scale-for-Microsoft-Azure-Hardware
 tags:
-- Azure
 - Azure Hardware
 - Carbon Accounting
 - CHEM
 - Cloud Infrastructure
-- Community
 - Datacenter Design
 - Decarbonization
 - Embodied Carbon

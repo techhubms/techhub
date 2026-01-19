@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-25 12:02:39 +00:00
 permalink: /ai/videos/Impigers-AI-First-Enterprise-Transformation-at-Microsoft-Ignite
 tags:
-- AI
 - AI Architecture
 - AI Ethics
 - AI Governance
@@ -26,7 +25,6 @@ tags:
 - Platform Engineering
 - Secure AI Development
 - Third Party LLM Integration
-- Videos
 - Zero Trust
 section_names:
 - ai

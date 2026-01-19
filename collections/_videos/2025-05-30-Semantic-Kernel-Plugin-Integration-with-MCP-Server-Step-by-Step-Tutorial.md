@@ -10,12 +10,10 @@ date: 2025-05-30 07:07:03 +00:00
 permalink: /ai/videos/Semantic-Kernel-Plugin-Integration-with-MCP-Server-Step-by-Step-Tutorial
 tags:
 - .NET
-- AI
 - AI Agents
 - AI Development
 - AI Workflows
 - C#
-- Coding
 - CopilotStudio
 - Intelligent Plugins
 - MCP
@@ -26,7 +24,6 @@ tags:
 - Plugin Integration
 - Real Time Demo
 - Semantic Kernel
-- Videos
 section_names:
 - ai
 - coding

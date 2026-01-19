@@ -9,16 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-08 19:51:45 +00:00
 permalink: /ai/community/Never-Explain-Context-Twice-Introducing-Azure-SRE-Agent-Memory
 tags:
-- AI
 - AI Ops
 - Automation
-- Azure
 - Azure DevOps
 - Azure SRE Agent
-- Community
 - Context Engineering
 - Custom Sub Agents
-- DevOps
 - DevOps Automation
 - Incident Management
 - Knowledge Base

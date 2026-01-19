@@ -11,13 +11,10 @@ permalink: /github-copilot/videos/Refactor-an-Existing-Codebase-Using-Prompt-Dri
 tags:
 - Agent Mode
 - Agentmode
-- AI
 - AI Assisted Refactoring
-- Azure
 - Azure Cosmos DB
 - Code
 - Code Smells
-- Coding
 - Copilot
 - Demo
 - Developer
@@ -25,13 +22,11 @@ tags:
 - E Commerce
 - Ecommerce
 - FastAPI
-- GitHub Copilot
 - Microsoft
 - Prompt Engineering
 - Python
 - Refactoring
 - Software Developer
-- Videos
 - VS Code
 section_names:
 - ai

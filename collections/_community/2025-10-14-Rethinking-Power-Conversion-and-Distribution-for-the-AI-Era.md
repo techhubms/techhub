@@ -11,9 +11,7 @@ permalink: /azure/community/Rethinking-Power-Conversion-and-Distribution-for-the
 tags:
 - AI
 - AI Infrastructure
-- Azure
 - Cloud Infrastructure
-- Community
 - Data Center Architecture
 - Disaggregated Power
 - Energy Efficiency

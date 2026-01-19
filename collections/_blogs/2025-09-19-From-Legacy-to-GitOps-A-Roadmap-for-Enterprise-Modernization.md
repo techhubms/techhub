@@ -11,12 +11,10 @@ permalink: /devops/blogs/From-Legacy-to-GitOps-A-Roadmap-for-Enterprise-Moderniz
 tags:
 - Argo CD
 - Automation
-- Blogs
 - Business Of DevOps
 - CI/CD
 - Compliance
 - Contributed Content
-- DevOps
 - Enterprise GitOps Roadmap
 - Enterprise Modernization
 - Flux

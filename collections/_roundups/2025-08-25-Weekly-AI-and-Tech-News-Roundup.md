@@ -7,25 +7,17 @@ date: 2025-08-25 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET Modernization
-- AI
 - AI Agents
-- Azure
 - Azure Updates
 - CI/CD Pipelines
 - Cloud Infrastructure
-- Coding
 - Developer Productivity
-- DevOps
 - DevOps Automation
 - Enterprise Security
 - Git
-- GitHub Copilot
 - MCP
-- ML
 - ML Optimization
 - Quantum Safe Security
-- Roundups
-- Security
 - VS
 - Workflow Automation
 section_names:

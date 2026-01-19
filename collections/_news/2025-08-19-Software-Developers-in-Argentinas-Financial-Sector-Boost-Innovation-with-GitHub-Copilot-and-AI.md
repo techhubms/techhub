@@ -9,19 +9,15 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-19 14:24:43 +00:00
 permalink: /github-copilot/news/Software-Developers-in-Argentinas-Financial-Sector-Boost-Innovation-with-GitHub-Copilot-and-AI
 tags:
-- AI
 - AI Developer Tools
 - Application Development
 - Argentina Financial Sector
 - Banking Technology
 - Code Assistants
-- Coding
 - Coding Lifecycle
 - Copilot Chat Modes
 - Feature Delivery
 - Galicia Bank
-- GitHub Copilot
-- News
 - Productivity Tools
 - Secure Coding
 - Software Development

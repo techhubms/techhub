@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-12 17:00:34 +00:00
 permalink: /azure/videos/Provisioning-SQL-Server-2025-Databases-to-Kubernetes-with-Pure-Storage-Snapshots
 tags:
-- Azure
 - Cloud Computing
 - Cloud Databases
 - Containerized SQL
@@ -29,7 +28,6 @@ tags:
 - SQL Server
 - Tech
 - Technology
-- Videos
 section_names:
 - azure
 ---

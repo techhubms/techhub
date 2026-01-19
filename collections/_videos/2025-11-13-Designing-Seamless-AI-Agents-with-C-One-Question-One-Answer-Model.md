@@ -11,7 +11,6 @@ permalink: /ai/videos/Designing-Seamless-AI-Agents-with-C-One-Question-One-Answe
 tags:
 - .NET
 - .NET Conf
-- AI
 - AI Agents
 - AI Design Patterns
 - AI Integration
@@ -20,11 +19,9 @@ tags:
 - AiGen
 - C#
 - CodeRush
-- Coding
 - Context Engineering
 - Developer Tools
 - Pair Programming
-- Videos
 section_names:
 - ai
 - coding

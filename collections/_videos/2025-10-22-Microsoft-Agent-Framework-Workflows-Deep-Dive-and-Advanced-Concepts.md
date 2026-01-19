@@ -9,13 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-22 22:52:22 +00:00
 permalink: /ai/videos/Microsoft-Agent-Framework-Workflows-Deep-Dive-and-Advanced-Concepts
 tags:
-- AI
 - AI Agents
 - Automation Systems
-- Azure
 - Business Process Automation
 - Cloud Computing
-- Coding
 - Debugging
 - Dev
 - Developer Feedback
@@ -29,7 +26,6 @@ tags:
 - Tech
 - Technology
 - Type Safe Architecture
-- Videos
 - Web UI Demo
 - Workflow Automation
 - Workflow Web UI

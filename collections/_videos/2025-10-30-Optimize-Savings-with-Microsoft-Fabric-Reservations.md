@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-30 07:00:09 +00:00
 permalink: /azure/videos/Optimize-Savings-with-Microsoft-Fabric-Reservations
 tags:
-- Azure
 - Azure Advisor
 - Azure Marketplace
 - Azure Portal
@@ -21,7 +20,6 @@ tags:
 - Data Analytics
 - Microsoft Fabric
 - Microsoft Fabric Capacity
-- Videos
 - Workload Management
 section_names:
 - azure

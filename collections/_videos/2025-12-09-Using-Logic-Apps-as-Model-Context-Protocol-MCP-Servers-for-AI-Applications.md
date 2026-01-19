@@ -11,10 +11,8 @@ permalink: /ai/videos/Using-Logic-Apps-as-Model-Context-Protocol-MCP-Servers-for
 tags:
 - Agent Integration
 - Agents
-- AI
 - AI Application
 - Authentication
-- Azure
 - Azure Cloud
 - Azure Tools
 - Cloud
@@ -28,7 +26,6 @@ tags:
 - Microsoft Docs
 - Technical Training
 - Tools
-- Videos
 - Workflow Automation
 - Workflow Design
 section_names:

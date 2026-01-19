@@ -15,15 +15,12 @@ tags:
 - .NET MAUI 10
 - ASP.NET Core 10
 - Aspire
-- Azure
 - C# 14
 - Cloud Native
-- Coding
 - Custom Integrations
 - Custom Telemetry
 - Dashboard Customization
 - Developer Tools
-- DevOps
 - Extensibility
 - F# 10
 - Full Stack Development
@@ -33,7 +30,6 @@ tags:
 - Orchestration
 - Resource Types
 - Telemetry
-- Videos
 - VS
 section_names:
 - azure

@@ -10,13 +10,11 @@ date: 2025-09-25 13:59:32 +00:00
 permalink: /devops/blogs/Chainguard-Launches-Curated-JavaScript-Libraries-to-Enhance-Software-Supply-Chain-Security
 tags:
 - Application Security
-- Blogs
 - Chainguard
 - Curated JavaScript Libraries
 - Curated Packages
 - Cyberattack
 - Dependency Management
-- DevOps
 - DevSecOps
 - DevSecOps Practices
 - JavaScript Dependency Security
@@ -30,7 +28,6 @@ tags:
 - Open Source Software Security
 - Secure Artifact Management
 - Secure Software Supply Chain
-- Security
 - Shai Halud Cyberattack
 - SLSA Framework
 - Social Facebook

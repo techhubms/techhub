@@ -10,11 +10,8 @@ date: 2025-09-15 14:49:18 +00:00
 permalink: /ai/community/Building-Multi-Agent-Solutions-with-Microsoft-Fabric-Data-Agent-and-Azure-AI-Foundry
 tags:
 - Agentic AI
-- AI
-- Azure
 - Azure AI Foundry
 - Azure AI Services
-- Community
 - Copilot Studio
 - Data Engineering
 - Data Lakehouse
@@ -28,7 +25,6 @@ tags:
 - M365 Agents Toolkit
 - Microsoft Fabric
 - Microsoft Teams Integration
-- ML
 - Multi Agent Architecture
 - Power BI
 - Pro Code Development

@@ -10,10 +10,8 @@ date: 2025-11-18 16:00:00 +00:00
 permalink: /ai/news/Azure-at-Microsoft-Ignite-2025-Intelligent-Cloud-Innovations-Explained
 tags:
 - Agent Factory
-- AI
 - AI + Machine Learning
 - AI Agents
-- Azure
 - Azure Boost
 - Azure Built in Security
 - Azure Copilot
@@ -25,7 +23,6 @@ tags:
 - Data Intelligence
 - Databases
 - Defender For Cloud
-- DevOps
 - DevSecOps
 - Entra Agent ID
 - GitHub Advanced Security
@@ -35,11 +32,8 @@ tags:
 - Microsoft Fabric
 - Microsoft Foundry
 - Microsoft Ignite
-- ML
-- News
 - OneLake
 - Purview
-- Security
 - SQL Server
 section_names:
 - ai

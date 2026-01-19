@@ -10,7 +10,6 @@ date: 2025-09-30 13:30:00 +00:00
 permalink: /ml/news/On-premises-Data-Gateway-September-2025-Release-New-Features-and-Power-BI-Desktop-Compatibility
 tags:
 - Analytics
-- Azure
 - BigQuery
 - Data Connectivity
 - Data Engineering
@@ -20,8 +19,6 @@ tags:
 - Google BigQuery
 - Microsoft Fabric
 - Mirroring
-- ML
-- News
 - On Premises Data Gateway
 - Power BI
 - Power BI Desktop

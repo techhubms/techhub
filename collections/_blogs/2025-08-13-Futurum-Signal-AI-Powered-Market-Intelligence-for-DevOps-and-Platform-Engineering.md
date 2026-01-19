@@ -10,13 +10,10 @@ date: 2025-08-13 17:49:16 +00:00
 permalink: /ai/blogs/Futurum-Signal-AI-Powered-Market-Intelligence-for-DevOps-and-Platform-Engineering
 tags:
 - Agentic AI
-- AI
 - AI Powered Analytics
-- Blogs
 - Continuous Delivery
 - Continuous Integration
 - Data Platforms
-- DevOps
 - Ecosystem Alignment
 - Futurum Signal
 - Google Gemini

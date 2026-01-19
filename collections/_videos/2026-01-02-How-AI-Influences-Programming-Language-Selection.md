@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2026-01-02 15:01:42 +00:00
 permalink: /ai/videos/How-AI-Influences-Programming-Language-Selection
 tags:
-- AI
 - AI Assisted Development
 - Code Generation
-- Coding
 - Developer Experience
 - GitHub
 - Language Trends
@@ -21,7 +19,6 @@ tags:
 - Software Development
 - Statically Typed Languages
 - TypeScript
-- Videos
 section_names:
 - ai
 - coding

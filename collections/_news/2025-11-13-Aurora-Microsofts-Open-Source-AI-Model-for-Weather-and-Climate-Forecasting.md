@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-13 18:35:31 +00:00
 permalink: /ai/news/Aurora-Microsofts-Open-Source-AI-Model-for-Weather-and-Climate-Forecasting
 tags:
-- AI
 - AI For Good
 - AI Model
 - Atmospheric Data
@@ -22,7 +21,6 @@ tags:
 - Machine Learning
 - Meteorological Services
 - Microsoft Research
-- News
 - On The Issues
 - Open Source
 - SPARROW

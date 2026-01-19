@@ -9,16 +9,13 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-28 16:00:23 +00:00
 permalink: /ai/videos/Getting-Started-with-Generative-AI-for-Java-Developers-Using-GitHub-Codespaces
 tags:
-- AI
 - AI Tutorial
 - AIForBeginners
 - Authentication
 - Cloud Development
 - CloudDevelopment
-- Coding
 - Dev Container
 - DevContainers
-- DevOps
 - Generative AI
 - GenerativeAI
 - GitHub Codespaces
@@ -34,7 +31,6 @@ tags:
 - Large Language Models
 - OpenAI
 - OpenAI SDK
-- Videos
 - VS Code
 section_names:
 - ai

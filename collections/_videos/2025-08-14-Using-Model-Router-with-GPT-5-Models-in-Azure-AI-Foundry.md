@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-14 15:59:58 +00:00
 permalink: /ai/videos/Using-Model-Router-with-GPT-5-Models-in-Azure-AI-Foundry
 tags:
-- AI
 - AI Models
-- Azure
 - Azure AI Foundry
 - Cloud AI
 - Cloud Computing
@@ -30,7 +28,6 @@ tags:
 - Sample Code
 - Tech
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

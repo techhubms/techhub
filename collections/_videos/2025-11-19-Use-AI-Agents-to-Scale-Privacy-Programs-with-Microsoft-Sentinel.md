@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 13:34:12 +00:00
 permalink: /ai/videos/Use-AI-Agents-to-Scale-Privacy-Programs-with-Microsoft-Sentinel
 tags:
-- AI
 - AI Agents
 - Compliance
 - Data Governance
@@ -24,9 +23,7 @@ tags:
 - Regulatory Challenges
 - Risk Assessment
 - Secureyourdata
-- Security
 - Security Automation
-- Videos
 section_names:
 - ai
 - security

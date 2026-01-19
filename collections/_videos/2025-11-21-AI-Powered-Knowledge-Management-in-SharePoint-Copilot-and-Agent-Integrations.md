@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 14:34:13 +00:00
 permalink: /ai/videos/AI-Powered-Knowledge-Management-in-SharePoint-Copilot-and-Agent-Integrations
 tags:
-- AI
 - AI Integration
 - Content Automation
 - Content Enrichment
@@ -26,7 +25,6 @@ tags:
 - No Code Agents
 - PowerPoint
 - SharePoint
-- Videos
 - Workflow Automation
 section_names:
 - ai

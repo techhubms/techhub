@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-16 15:48:34 +00:00
 permalink: /ai/news/Latest-Microsoft-Digital-Defense-Report-Extortion-and-Ransomware-Drive-Cyberattacks
 tags:
-- AI
 - AI Security
 - Automation
 - Company News
@@ -24,11 +23,9 @@ tags:
 - Microsoft Digital Defense Report
 - Microsoft Security
 - Nation State Threats
-- News
 - On The Issues
 - Phishing
 - Ransomware
-- Security
 section_names:
 - ai
 - security

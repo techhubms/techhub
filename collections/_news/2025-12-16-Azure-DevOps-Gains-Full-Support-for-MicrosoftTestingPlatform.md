@@ -11,16 +11,12 @@ permalink: /coding/news/Azure-DevOps-Gains-Full-Support-for-MicrosoftTestingPlat
 tags:
 - .NET
 - .NET 10 SDK
-- Azure
 - Azure DevOps
 - C#
 - CI/CD Pipelines
-- Coding
-- DevOps
 - DotNetCoreCLI
 - F#
 - Microsoft.Testing.Platform
-- News
 - PublishTestResults
 - Retry Extension
 - Test Automation

@@ -9,13 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-08 14:05:44 +00:00
 permalink: /github-copilot/videos/Generating-Reliable-Tests-with-AI-and-Copilot-in-Playwright
 tags:
-- AI
 - AI Testing
 - Automated Testing
-- Coding
 - Developer Tools
 - Developers
-- GitHub Copilot
 - JavaScript
 - Microsoft Copilot Professional
 - OneDevQuestion
@@ -23,7 +20,6 @@ tags:
 - Test Automation
 - Test Generation
 - Testing
-- Videos
 - Web Automation
 section_names:
 - ai

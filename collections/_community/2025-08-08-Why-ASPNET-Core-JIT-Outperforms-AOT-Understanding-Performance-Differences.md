@@ -14,8 +14,6 @@ tags:
 - ASP.NET Core
 - Benchmarks
 - CLR
-- Coding
-- Community
 - Dynamic PGO
 - JIT Compilation
 - Optimization Techniques

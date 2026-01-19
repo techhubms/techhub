@@ -10,9 +10,7 @@ date: 2025-12-03 17:00:00 +00:00
 permalink: /ai/news/Extending-Azure-AI-Powered-Innovation-Resiliency-and-Control
 tags:
 - Advanced Analytics
-- AI
 - AI Innovation
-- Azure
 - Azure Arc
 - Azure Device Registry
 - Azure IoT
@@ -31,11 +29,8 @@ tags:
 - Kubernetes
 - Microsoft Fabric
 - Mission Critical Workloads
-- ML
-- News
 - Operational Sovereignty
 - Private Cloud
-- Security
 section_names:
 - ai
 - azure

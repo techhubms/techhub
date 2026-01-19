@@ -10,16 +10,13 @@ date: 2025-08-07 11:02:14 +00:00
 permalink: /ml/community/Challenges-with-Application-Insights-Diagnostic-Settings-and-Stream-Analytics-File-Updates
 tags:
 - Application Insights
-- Azure
 - Azure Storage
 - Azure Stream Analytics
-- Community
 - Data Export
 - Data Pipeline
 - Diagnostic Settings
 - Log Export
 - Log File Appending
-- ML
 - Monitoring
 - Pageviews
 - ResourceID Path

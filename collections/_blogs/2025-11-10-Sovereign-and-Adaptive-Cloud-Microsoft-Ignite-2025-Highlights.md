@@ -11,14 +11,11 @@ permalink: /ai/blogs/Sovereign-and-Adaptive-Cloud-Microsoft-Ignite-2025-Highligh
 tags:
 - Adaptive Cloud
 - Agentic Intelligence
-- AI
 - AI Operations
-- Azure
 - Azure Arc
 - Azure Local
 - Azure Management
 - Azure Policy
-- Blogs
 - Cloud
 - Cloud Security
 - Compliance
@@ -34,7 +31,6 @@ tags:
 - Multicloud
 - Observability
 - Resilience
-- Security
 - Sovereign Cloud
 section_names:
 - ai

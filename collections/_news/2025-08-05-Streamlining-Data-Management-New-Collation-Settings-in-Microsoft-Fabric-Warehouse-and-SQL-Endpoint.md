@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-05 10:30:00 +00:00
 permalink: /ml/news/Streamlining-Data-Management-New-Collation-Settings-in-Microsoft-Fabric-Warehouse-and-SQL-Endpoint
 tags:
-- Azure
 - Case Insensitive
 - Case Sensitive
 - Collation
@@ -19,8 +18,6 @@ tags:
 - Lakehouse
 - Microsoft Fabric
 - Mirrored Database
-- ML
-- News
 - SQL Endpoint
 - Warehouse
 - Workspace Level Settings

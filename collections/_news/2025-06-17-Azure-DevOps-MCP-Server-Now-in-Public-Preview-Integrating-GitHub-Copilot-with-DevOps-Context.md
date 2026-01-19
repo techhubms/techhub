@@ -11,19 +11,14 @@ permalink: /github-copilot/news/Azure-DevOps-MCP-Server-Now-in-Public-Preview-In
 tags:
 - Agentic AI
 - Agile
-- AI
 - AI Integration
-- Azure
 - Azure & Cloud
 - Azure DevOps
 - Build Automation
 - Cloud Development
 - Developer Tools
-- DevOps
-- GitHub Copilot
 - LLM
 - MCP Server
-- News
 - Public Preview
 - Pull Requests
 - Test Plans

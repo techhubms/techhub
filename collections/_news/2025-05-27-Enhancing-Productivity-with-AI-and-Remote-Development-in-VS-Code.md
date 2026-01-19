@@ -10,18 +10,13 @@ date: 2025-05-27 00:00:00 +00:00
 permalink: /github-copilot/news/Enhancing-Productivity-with-AI-and-Remote-Development-in-VS-Code
 tags:
 - Agent Mode
-- AI
 - AI Integration
 - Codespaces
-- Coding
 - Copilot Chat
 - Custom Instructions
 - Dev Containers
 - Developer Productivity
-- DevOps
 - Feature Configuration
-- GitHub Copilot
-- News
 - Python
 - Remote Development
 - Remote Tunnels

@@ -10,16 +10,13 @@ date: 2025-11-19 01:13:53 +00:00
 permalink: /ai/community/Azure-ND-GB300-v6-Virtual-Machines-General-Availability-and-Next-Gen-AI-Infrastructure
 tags:
 - Agentic AI
-- AI
 - AI Infrastructure
 - AKS
-- Azure
 - Azure Batch
 - Azure CycleCloud
 - Azure ND GB300 V6
 - Benchmarking
 - Cloud AI
-- Community
 - FP4 Tensor Core
 - GPU Virtual Machines
 - High Bandwidth
@@ -27,7 +24,6 @@ tags:
 - InfiniBand
 - Large Model Training
 - Llama 2
-- ML
 - Multimodal AI
 - NVIDIA GB300 NVL72
 - NVLINK

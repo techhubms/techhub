@@ -10,14 +10,11 @@ date: 2025-03-16 00:00:00 +00:00
 permalink: /devops/blogs/Really-keeping-your-GitHub-Actions-usage-secure
 tags:
 - Action Backups
-- Blogs
 - CVE 30066
 - Dependency Monitoring
-- DevOps
 - GitHub Actions
 - GitHub Advanced Security
 - Internal Marketplace
-- Security
 - Security Alerts
 - Slsa.dev
 - StepSecurity

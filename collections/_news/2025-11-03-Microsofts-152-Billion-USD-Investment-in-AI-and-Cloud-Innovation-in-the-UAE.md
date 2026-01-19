@@ -9,13 +9,11 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-03 18:35:28 +00:00
 permalink: /ai/news/Microsofts-152-Billion-USD-Investment-in-AI-and-Cloud-Innovation-in-the-UAE
 tags:
-- AI
 - AI Diffusion Report
 - AI For Good Lab
 - AI Investment
 - AI Models
 - AI Summit
-- Azure
 - Cloud Infrastructure
 - Company News
 - Compliance
@@ -24,7 +22,6 @@ tags:
 - Global South
 - GPU Datacenters
 - Microsoft
-- News
 - On The Issues
 - Public Private Partnership
 - Responsible AI

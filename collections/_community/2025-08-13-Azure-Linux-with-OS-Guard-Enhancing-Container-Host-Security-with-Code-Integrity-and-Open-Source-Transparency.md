@@ -10,10 +10,8 @@ date: 2025-08-13 16:01:17 +00:00
 permalink: /azure/community/Azure-Linux-with-OS-Guard-Enhancing-Container-Host-Security-with-Code-Integrity-and-Open-Source-Transparency
 tags:
 - AKS
-- Azure
 - Azure Linux
 - Code Integrity
-- Community
 - Container Security
 - Dm Verity
 - FedRAMP
@@ -25,7 +23,6 @@ tags:
 - OS Guard
 - Rootkit Protection
 - Secure Boot
-- Security
 - Security Compliance
 - SELinux
 - Supply Chain Security

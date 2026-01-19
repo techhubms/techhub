@@ -10,23 +10,17 @@ date: 2025-12-10 00:00:27 +00:00
 permalink: /github-copilot/videos/Modernizing-Legacy-Apps-with-GitHub-Copilot-and-Azure
 tags:
 - .NET
-- AI
 - AI Development
 - App Modernization
-- Azure
 - Best Practices
 - Cloud Infrastructure
 - Cloud Migration
 - Code Upgrade
-- Coding
 - Dependency Management
 - Developer Tools
-- DevOps
-- GitHub Copilot
 - Legacy Application
 - Outdated Libraries
 - Secure Development
-- Videos
 - VS
 section_names:
 - ai

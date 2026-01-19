@@ -10,7 +10,6 @@ permalink: /ai/videos/Should-I-add-a-chatbot-to-my-app
 viewing_mode: internal
 page: videos
 tags:
-- AI
 - AI Learning Hub
 - AI Strategy
 - App Development
@@ -20,7 +19,6 @@ tags:
 - OneDevQuestion
 - Process Automation
 - Steve Sanderson
-- Videos
 section_names:
 - ai
 ---

@@ -9,23 +9,18 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-09-10 14:00:32 +00:00
 permalink: /github-copilot/videos/GitHubs-Remote-MCP-Update-General-Availability-and-Key-Integrations
 tags:
-- AI
 - AI Integration
 - Automation
 - Code Scanning
 - Copilot
 - Developer Tools
-- DevOps
 - GitHub
-- GitHub Copilot
 - GitHub MCP
 - Large Language Models
 - MCP
 - Secret Scanning
-- Security
 - Security Advisories
 - Security Alerts
-- Videos
 section_names:
 - ai
 - devops

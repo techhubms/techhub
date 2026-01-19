@@ -9,11 +9,8 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-04 10:53:30 +00:00
 permalink: /github-copilot/community/Cannot-understand-premium-requests-count-calculation
 tags:
-- AI
 - AI Models
-- Community
 - Copilot Usage
-- GitHub Copilot
 - Model Access
 - Premium Requests
 - Pricing

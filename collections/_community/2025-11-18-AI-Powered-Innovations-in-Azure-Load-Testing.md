@@ -9,15 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 16:22:26 +00:00
 permalink: /ai/community/AI-Powered-Innovations-in-Azure-Load-Testing
 tags:
-- AI
 - AI Powered Insights
 - Application Reliability
-- Azure
 - Azure Load Testing
 - Baseline Comparison
 - Cloud Scale Testing
-- Community
-- DevOps
 - Dynamic Correlation
 - Intelligent Recommendations
 - JMeter

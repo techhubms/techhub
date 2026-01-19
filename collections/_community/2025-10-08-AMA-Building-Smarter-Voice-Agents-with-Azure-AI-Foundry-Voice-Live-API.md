@@ -9,14 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-08 17:54:26 +00:00
 permalink: /ai/community/AMA-Building-Smarter-Voice-Agents-with-Azure-AI-Foundry-Voice-Live-API
 tags:
-- AI
 - AI Agent Development
 - AMA Event
 - API Integration
 - Avatar Integration
-- Azure
 - Azure AI Foundry
-- Community
 - Conversational AI
 - CoreAI Speech
 - Developer Event

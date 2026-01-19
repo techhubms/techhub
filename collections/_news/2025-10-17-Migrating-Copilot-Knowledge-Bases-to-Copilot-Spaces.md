@@ -9,17 +9,14 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-17 20:49:48 +00:00
 permalink: /github-copilot/news/Migrating-Copilot-Knowledge-Bases-to-Copilot-Spaces
 tags:
-- AI
 - API Standards
 - Copilot
 - Copilot Spaces
 - Documentation
 - GitHub
 - GitHub Admin
-- GitHub Copilot
 - KB Sunset
 - Knowledge Base Migration
-- News
 - Onboarding
 - PRD
 - Release Notes

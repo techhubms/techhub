@@ -9,12 +9,10 @@ feed_url: https://devops.com/feed/
 date: 2025-09-18 16:41:29 +00:00
 permalink: /devops/blogs/Shai-Hulud-Attacks-Undermine-Software-Supply-Chain-Security
 tags:
-- Blogs
 - CI/CD
 - Credential Theft
 - CrowdStrike
 - Dependency Management
-- DevOps
 - DevOps Security
 - JavaScript Security
 - Multi Factor Authentication
@@ -23,7 +21,6 @@ tags:
 - Package Signing
 - SBOM
 - Secure Software Development
-- Security
 - Shai Hulud
 - Social Facebook
 - Social LinkedIn

@@ -10,18 +10,14 @@ date: 2025-07-25 07:09:39 +00:00
 permalink: /github-copilot/videos/Rubber-Duck-Thursday-Building-an-App-with-GitHub-Copilot-Agent-Mode-for-the-Competition
 tags:
 - Agent Mode
-- AI
 - AI Powered Development
 - App Development
 - Automation
-- Coding
 - Coding Competition
 - Collaborative Coding
 - Developer Tools
 - For The Love Of Code
 - GitHub
-- GitHub Copilot
-- Videos
 section_names:
 - ai
 - coding

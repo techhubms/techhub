@@ -9,10 +9,8 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-10-23 16:00:00 +00:00
 permalink: /ai/news/Fully-Managed-Cloud-to-Cloud-Transfers-with-Azure-Storage-Mover
 tags:
-- AI
 - AI Workloads
 - AWS S3
-- Azure
 - Azure Active Directory
 - Azure Blob Storage
 - Azure Monitor
@@ -25,7 +23,6 @@ tags:
 - Incremental Sync
 - Log Analytics
 - Multicloud
-- News
 - NFS
 - RBAC
 - SMB

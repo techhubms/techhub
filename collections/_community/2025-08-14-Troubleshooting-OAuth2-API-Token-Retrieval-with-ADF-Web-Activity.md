@@ -12,16 +12,13 @@ tags:
 - Access Token
 - API Authentication
 - Authorization Header
-- Azure
 - Azure Data Factory
 - Client Id
 - Client Secret
-- Community
 - Ilevel API
 - OAuth2
 - Pipeline Automation
 - REST API
-- Security
 - Token Acquisition
 - Web Activity
 section_names:

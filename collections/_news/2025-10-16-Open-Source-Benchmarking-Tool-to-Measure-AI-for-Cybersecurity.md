@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-16 01:56:47 +00:00
 permalink: /ai/news/Open-Source-Benchmarking-Tool-to-Measure-AI-for-Cybersecurity
 tags:
-- AI
 - AI Benchmarking
 - AI Reasoning
 - AI Systems
@@ -21,10 +20,8 @@ tags:
 - Incident Response
 - LinkedIn Post
 - Microsoft
-- News
 - Open Source
 - Real World Scenarios
-- Security
 - Security Evaluation
 - SOC
 - Threat Detection

@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-07-24 23:35:30 +00:00
 permalink: /coding/videos/Rubber-Duck-Thursdays-Build-for-the-Love-of-Code
 tags:
-- Coding
 - Collaborative Coding
 - GitHub
 - Idea Generation
@@ -19,7 +18,6 @@ tags:
 - Rubber Duck Thursdays
 - Software Projects
 - Streaming
-- Videos
 section_names:
 - coding
 ---

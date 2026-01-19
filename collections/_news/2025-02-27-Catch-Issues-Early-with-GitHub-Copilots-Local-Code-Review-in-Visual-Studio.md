@@ -9,18 +9,13 @@ feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-02-27 17:06:24 +00:00
 permalink: /github-copilot/news/Catch-Issues-Early-with-GitHub-Copilots-Local-Code-Review-in-Visual-Studio
 tags:
-- AI
 - AI Features
 - Code Review
-- Coding
 - Commit Workflow
 - Copilot
 - Copilot Suggestions
 - Developer Experience
-- DevOps
 - Git
-- GitHub Copilot
-- News
 - Performance Issues
 - Security Issues
 - Source Control

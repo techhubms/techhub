@@ -9,18 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-07-28 16:00:51 +00:00
 permalink: /ai/videos/Full-Course-MCP-for-Beginners-Lessons-1-11-by-Microsoft-Developer
 tags:
-- AI
 - AI Agents
 - AI Development
 - AI Toolkit
 - Best Practices
-- Coding
 - Deployment
 - MCP
 - Real World Case Studies
 - Scalability
-- Security
-- Videos
 - VS Code
 section_names:
 - ai

@@ -9,20 +9,16 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-13 08:00:00 +00:00
 permalink: /github-copilot/community/Demystifying-GitHub-Copilot-Security-Controls-for-Organizations
 tags:
-- AI
 - AI Security
 - Application Security
-- Community
 - Copilot Agent
 - Data Retention
 - Duplicate Detection Filter
 - Enterprise Configuration
-- GitHub Copilot
 - Intellectual Property
 - ISO 27001
 - MCP Registry
 - Regulatory Compliance
-- Security
 - SOC2
 - Trust Center
 - VS Code

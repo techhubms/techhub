@@ -9,11 +9,9 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-12 17:41:13 +00:00
 permalink: /ai/news/Microsoft-Announces-Fairwater-Datacenter-Building-an-AI-Superfactory-with-Azure
 tags:
-- AI
 - AI Infrastructure
 - AI Superfactory
 - AI Workloads
-- Azure
 - Cloud Computing
 - Company News
 - Data Center Networking
@@ -25,7 +23,6 @@ tags:
 - LinkedIn Post
 - Liquid Cooling
 - Microsoft
-- News
 - Performance Optimization
 - Planet Scale AI
 - Sustainability

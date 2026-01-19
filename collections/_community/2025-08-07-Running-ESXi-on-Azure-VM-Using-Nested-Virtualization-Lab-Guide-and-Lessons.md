@@ -10,11 +10,9 @@ date: 2025-08-07 20:18:01 +00:00
 permalink: /azure/community/Running-ESXi-on-Azure-VM-Using-Nested-Virtualization-Lab-Guide-and-Lessons
 tags:
 - AVS
-- Azure
 - Azure Migrate
 - Azure VM
 - Cloud Labs
-- Community
 - CSP
 - EA
 - ESXi

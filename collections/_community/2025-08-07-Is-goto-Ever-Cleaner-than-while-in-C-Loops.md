@@ -14,8 +14,6 @@ tags:
 - Code Clarity
 - Code Maintainability
 - Code Review
-- Coding
-- Community
 - Console Application
 - Control Flow
 - Function Extraction

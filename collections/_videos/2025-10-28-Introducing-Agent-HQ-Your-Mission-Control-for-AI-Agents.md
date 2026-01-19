@@ -10,18 +10,15 @@ date: 2025-10-28 21:17:43 +00:00
 permalink: /ai/videos/Introducing-Agent-HQ-Your-Mission-Control-for-AI-Agents
 tags:
 - AgentHQ
-- AI
 - AI Agents
 - Code Review
 - Command Line Interface
 - Developer Productivity
 - Developer Tools
-- DevOps
 - GitHub
 - Project Tracking
 - Session Management
 - Task Assignment
-- Videos
 - Web IDE
 section_names:
 - ai

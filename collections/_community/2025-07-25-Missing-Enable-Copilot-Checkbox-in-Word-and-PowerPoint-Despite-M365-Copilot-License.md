@@ -9,12 +9,9 @@ feed_url: https://www.reddit.com/r/microsoft/.rss
 date: 2025-07-25 20:33:09 +00:00
 permalink: /github-copilot/community/Missing-Enable-Copilot-Checkbox-in-Word-and-PowerPoint-Despite-M365-Copilot-License
 tags:
-- AI
 - Checkbox
-- Community
 - Excel
 - Feature Availability
-- GitHub Copilot
 - Microsoft
 - Microsoft 365 Copilot
 - Microsoft Documentation

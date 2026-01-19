@@ -10,12 +10,10 @@ date: 2025-08-26 15:00:00 +00:00
 permalink: /ai/news/Transforming-Scientific-Discovery-with-Microsoft-Azure-and-NVIDIA
 tags:
 - 3D Scanning
-- AI
 - AI + Machine Learning
 - AI Infrastructure
 - AI Models
 - AKS
-- Azure
 - Basecamp Research
 - Bioinformatics
 - BioNeMo Framework
@@ -32,8 +30,6 @@ tags:
 - Healthcare AI
 - Kubernetes
 - Microsoft Azure
-- ML
-- News
 - NVIDIA
 - Pangaea Data
 - Research Innovation

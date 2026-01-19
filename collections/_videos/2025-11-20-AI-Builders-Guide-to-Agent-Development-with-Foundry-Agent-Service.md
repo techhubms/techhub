@@ -12,10 +12,7 @@ tags:
 - Agent Development
 - Agent Memory
 - Agent Workflows
-- AI
-- Azure
 - Azure AI
-- Coding
 - Demo
 - Enterprise AI
 - Foundry Agent Service
@@ -30,7 +27,6 @@ tags:
 - Observability
 - OpenAI API
 - Personalization
-- Videos
 section_names:
 - ai
 - azure

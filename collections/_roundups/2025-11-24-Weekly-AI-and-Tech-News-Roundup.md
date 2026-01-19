@@ -7,21 +7,12 @@ date: 2025-11-24 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
-- AI
 - AI Agents
-- Azure
 - Cloud Infrastructure
-- Coding
 - Data Governance
-- DevOps
-- GitHub Copilot
 - IDE Integration
-- Machine Learning
-- ML
 - Model Deployment
 - Post Quantum Cryptography
-- Roundups
-- Security
 - VS
 - VS Code
 - Workflow Automation

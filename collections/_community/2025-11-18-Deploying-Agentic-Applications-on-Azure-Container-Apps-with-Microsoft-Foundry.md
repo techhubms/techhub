@@ -9,16 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 20:30:56 +00:00
 permalink: /ai/community/Deploying-Agentic-Applications-on-Azure-Container-Apps-with-Microsoft-Foundry
 tags:
-- AI
 - AI Agent
 - Application Insights
 - Automated Deployment
-- Azure
 - Azure Container Apps
 - Azure Developer CLI
 - Azure Monitor
 - Cloud Native
-- Community
 - Distributed Tracing
 - FastAPI
 - GenAI

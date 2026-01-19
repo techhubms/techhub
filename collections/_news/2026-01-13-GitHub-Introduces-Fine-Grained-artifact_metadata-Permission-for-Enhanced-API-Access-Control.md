@@ -15,13 +15,10 @@ tags:
 - Application Security
 - Artifact Metadata
 - CI/CD
-- DevOps
 - Fine Grained Permissions
 - GitHub
 - GitHub Actions
-- News
 - Repository Permissions
-- Security
 - Supply Chain Security
 - Workflow Automation
 section_names:

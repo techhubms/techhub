@@ -9,19 +9,15 @@ feed_url: https://github.blog/feed/
 date: 2025-09-04 16:00:00 +00:00
 permalink: /github-copilot/news/Building-Smarter-AI-Tool-Interactions-with-MCP-Elicitation
 tags:
-- AI
 - AI & ML
 - AI Tool Integration
 - Code Refactoring
-- Coding
 - Developer Experience
 - Elicitation
 - Game Development
 - Generative AI
-- GitHub Copilot
 - MCP
 - MCP Server
-- News
 - Rubber Duck Thursdays
 - Schema Driven Prompts
 - Tool Naming

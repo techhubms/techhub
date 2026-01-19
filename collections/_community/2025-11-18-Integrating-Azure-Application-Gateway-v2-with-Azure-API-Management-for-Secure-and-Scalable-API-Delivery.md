@@ -10,15 +10,11 @@ date: 2025-11-18 17:33:43 +00:00
 permalink: /coding/community/Integrating-Azure-Application-Gateway-v2-with-Azure-API-Management-for-Secure-and-Scalable-API-Delivery
 tags:
 - API Security
-- Azure
 - Azure API Management
 - Azure Application Gateway
 - Azure DevOps
 - Certificates
 - CI/CD
-- Coding
-- Community
-- DevOps
 - Key Vault
 - Layer 7 Routing
 - Log Analytics
@@ -27,7 +23,6 @@ tags:
 - OWASP
 - Private Endpoint
 - Rate Limiting
-- Security
 - Terraform
 - VNet
 - WAF

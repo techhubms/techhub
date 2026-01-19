@@ -7,23 +7,14 @@ date: 2025-07-14 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
-- AI
 - AI Agents
 - AI Ethics
 - Automation
-- Azure
 - CI/CD
 - Cloud Migration
-- Coding
-- DevOps
-- GitHub Copilot
-- Machine Learning
 - Microsoft
-- ML
 - Model Context Protocol (mcp)
 - Prompt Engineering
-- Roundups
-- Security
 - Semantic Kernel
 - TypeScript
 - Zero Trust

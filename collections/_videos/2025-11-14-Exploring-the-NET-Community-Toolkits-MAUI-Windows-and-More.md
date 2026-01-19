@@ -15,7 +15,6 @@ tags:
 - .NET Community Toolkit
 - ASP.NET Core
 - C#
-- Coding
 - Cross Platform Development
 - Desktop Development
 - F#
@@ -24,7 +23,6 @@ tags:
 - Microsoft
 - Mobile Development
 - Open Source
-- Videos
 - VS
 - Web Development
 - Windows Community Toolkit

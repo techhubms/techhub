@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-20 15:48:41 +00:00
 permalink: /ai/videos/Modernizing-ERP-with-RISE-with-SAP-on-Microsoft-Azure
 tags:
-- AI
 - AI Monitoring
-- Azure
 - Azure Infrastructure
 - Business Process Solutions
 - Compliance
@@ -29,8 +27,6 @@ tags:
 - SAP BDC
 - SAP BTP
 - SAP Business Suite
-- Security
-- Videos
 section_names:
 - ai
 - azure

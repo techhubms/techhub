@@ -10,10 +10,8 @@ date: 2025-09-03 16:00:00 +00:00
 permalink: /github-copilot/news/5-Tips-for-Crafting-Better-Custom-Instructions-for-GitHub-Copilot
 tags:
 - Agentic Workflows
-- AI
 - AI & ML
 - Astro
-- Coding
 - Coding Guidelines
 - Copilot Agent
 - Copilot Instructions.md
@@ -21,8 +19,6 @@ tags:
 - Developer Productivity
 - Flask
 - Generative AI
-- GitHub Copilot
-- News
 - Playwright
 - Project Structure
 - SQLAlchemy

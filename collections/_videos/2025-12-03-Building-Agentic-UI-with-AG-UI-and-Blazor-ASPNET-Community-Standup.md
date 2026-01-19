@@ -14,11 +14,9 @@ tags:
 - Agent Based Design
 - Agentic UI
 - Agentmode
-- AI
 - ASP.NET Core
 - Blazor
 - C#
-- Coding
 - CopilotKit
 - Demo
 - Developer
@@ -27,7 +25,6 @@ tags:
 - Microsoft
 - Software Developer
 - UI Development
-- Videos
 - Web Development
 section_names:
 - ai

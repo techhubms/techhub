@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-07 07:00:05 +00:00
 permalink: /azure/videos/Azure-Pricing-Calculator-Estimate-Smarter-Plan-Confidently
 tags:
-- Azure
 - Azure Cost Management
 - Azure Essentials Show
 - Azure Pricing Calculator
@@ -25,7 +24,6 @@ tags:
 - Real Time Pricing
 - Resource Optimization
 - Scenario Modeling
-- Videos
 - Workload Management
 section_names:
 - azure

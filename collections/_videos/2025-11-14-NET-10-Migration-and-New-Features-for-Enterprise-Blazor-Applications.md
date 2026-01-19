@@ -17,7 +17,6 @@ tags:
 - Blazor
 - C# 14
 - Cloud Native Apps
-- Coding
 - Enterprise Migration
 - F# 10
 - Full Stack Development
@@ -25,7 +24,6 @@ tags:
 - Passkeys
 - Performance Optimization
 - Secure Authentication
-- Videos
 - VS
 - Web Development
 section_names:

@@ -9,15 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-25 12:00:00 +00:00
 permalink: /ai/community/Enhancing-AI-Agent-Reliability-with-OpenAI-Agent-SDK-and-Azure-Durable-Functions
 tags:
-- AI
 - AI Agents
 - Application Scalability
-- Azure
 - Azure Durable Functions
 - Azure Functions
 - Cloud Automation
-- Coding
-- Community
 - Durable Orchestration
 - LLM Orchestration
 - Observability

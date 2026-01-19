@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-18 16:13:42 +00:00
 permalink: /ai/news/Integrating-Genspark-Agents-with-Microsoft-Agent-365-for-Secure-Enterprise-AI-Workflows
 tags:
-- AI
 - AI Agents
 - Automation
 - Customers
@@ -23,10 +22,8 @@ tags:
 - Mainfunc
 - Microsoft 365
 - Microsoft Agent 365
-- News
 - PowerPoint Integration
 - Purview
-- Security
 - Security Controls
 section_names:
 - ai

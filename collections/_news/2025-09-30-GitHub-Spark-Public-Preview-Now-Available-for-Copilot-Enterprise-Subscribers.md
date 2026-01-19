@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-30 16:15:02 +00:00
 permalink: /github-copilot/news/GitHub-Spark-Public-Preview-Now-Available-for-Copilot-Enterprise-Subscribers
 tags:
-- AI
 - AI Development
 - App Deployment
 - Codespaces
@@ -17,14 +16,11 @@ tags:
 - Copilot Agent
 - Copilot Enterprise
 - Developer Tools
-- DevOps
 - Enterprise Administration
 - GitHub
-- GitHub Copilot
 - GitHub Spark
 - LLM
 - Natural Language Programming
-- News
 - No Code
 - Prototyping
 - Rapid Application Development

@@ -9,8 +9,6 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-07-12 17:03:00 +00:00
 permalink: /coding/community/Decoupling-Views-and-ViewModels-in-CommunityToolkitMvvm
 tags:
-- Coding
-- Community
 - CommunityToolkit.Mvvm
 - DataContext
 - Dependency Injection

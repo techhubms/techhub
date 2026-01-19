@@ -9,17 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-02 21:20:46 +00:00
 permalink: /ai/community/Scaling-Azure-Compute-for-Performance-Innovations-from-Ignite-2025
 tags:
-- AI
 - AI Inference
 - Automation
-- Azure
 - Azure Compute
 - Capacity Optimization
 - Cloud Resiliency
-- Community
 - Compute Gallery
 - Data Analytics
-- DevOps
 - Direct Virtualization
 - Global Deployment
 - GPU
@@ -28,7 +24,6 @@ tags:
 - Performance Tuning
 - Scale Sets
 - Scheduled Actions
-- Security
 - Soft Delete
 - VM Applications
 - VMSS Instance Mix

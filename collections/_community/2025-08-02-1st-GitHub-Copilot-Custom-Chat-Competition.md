@@ -9,13 +9,10 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-02 06:29:17 +00:00
 permalink: /github-copilot/community/1st-GitHub-Copilot-Custom-Chat-Competition
 tags:
-- AI
 - AI Competition
 - Coding Productivity
-- Community
 - Community Initiative
 - Custom Chat Mode
-- GitHub Copilot
 - Gpt 4.1
 - Gpt 4o
 - MCP Tools

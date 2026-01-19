@@ -10,17 +10,14 @@ date: 2025-10-23 08:57:16 +00:00
 permalink: /ai/blogs/OpenTelemetry-and-AI-are-Unlocking-Logs-as-the-Essential-Signal-for-Why
 tags:
 - Agentic AI
-- AI
 - AI Driven Observability
 - AI Incident Response
 - AI Observability
-- Blogs
 - Business Of DevOps
 - Cloud Native
 - Cloud Native Telemetry
 - Contributed Content
 - Cross Signal Correlation
-- DevOps
 - ECS
 - Elastic Common Schema
 - Incident Response

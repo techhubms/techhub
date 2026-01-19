@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 13:03:14 +00:00
 permalink: /ai/videos/Partner-Benefits-for-Accelerating-Software-Company-Success-PBRK418
 tags:
-- AI
 - AI Apps
 - API Pilot
-- Azure
 - Azure Credits
 - Azure Sponsorship
 - Certified Software Designation
@@ -29,7 +27,6 @@ tags:
 - Skilling Opportunities
 - Software Development
 - Technical Resources
-- Videos
 section_names:
 - ai
 - azure

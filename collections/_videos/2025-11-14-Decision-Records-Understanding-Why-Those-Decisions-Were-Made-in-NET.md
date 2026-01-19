@@ -17,7 +17,6 @@ tags:
 - Authentication
 - Blazor
 - C# 14
-- Coding
 - Decision Records
 - Documentation
 - Dynamic UI
@@ -25,7 +24,6 @@ tags:
 - Maintainability
 - MAUI
 - Service Discovery
-- Videos
 - VS
 section_names:
 - coding

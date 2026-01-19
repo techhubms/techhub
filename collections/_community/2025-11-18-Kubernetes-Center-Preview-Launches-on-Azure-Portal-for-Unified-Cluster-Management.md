@@ -10,14 +10,11 @@ date: 2025-11-18 20:45:45 +00:00
 permalink: /azure/community/Kubernetes-Center-Preview-Launches-on-Azure-Portal-for-Unified-Cluster-Management
 tags:
 - AKS
-- Azure
 - Azure Portal
 - Cloud Monitoring
 - Cluster Management
-- Community
 - Compliance
 - Container Security
-- DevOps
 - Fleet Manager
 - Kubernetes Center
 - Managed Namespaces
@@ -25,7 +22,6 @@ tags:
 - Multi Cluster Management
 - Operational Insights
 - Platform Engineering
-- Security
 - Streamlined Workflows
 section_names:
 - azure

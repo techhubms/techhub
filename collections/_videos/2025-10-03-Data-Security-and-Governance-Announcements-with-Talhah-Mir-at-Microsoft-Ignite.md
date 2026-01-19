@@ -20,10 +20,8 @@ tags:
 - Microsoft Purview
 - Microsoft Security
 - Responsible AI
-- Security
 - Security Announcements
 - Talhah Mir
-- Videos
 section_names:
 - security
 ---

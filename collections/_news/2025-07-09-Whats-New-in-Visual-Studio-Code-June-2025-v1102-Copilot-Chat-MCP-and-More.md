@@ -11,17 +11,12 @@ permalink: /github-copilot/news/Whats-New-in-Visual-Studio-Code-June-2025-v1102-
 tags:
 - Accessibility
 - Agent Mode
-- AI
 - AI Tools
 - Chat Mode
-- Coding
 - Custom Instructions
-- DevOps
 - Extension Development
-- GitHub Copilot
 - GitHub Copilot Chat
 - MCP Servers
-- News
 - Open Source
 - Pull Requests
 - Pylance

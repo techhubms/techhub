@@ -17,7 +17,6 @@ tags:
 - AI
 - AI Assistance
 - ASP.NET
-- Coding
 - Dual Compilation
 - Legacy Application
 - Microsoft.Extensions
@@ -25,7 +24,6 @@ tags:
 - Modernization
 - MVC
 - Upgrade Process
-- Videos
 - Web API
 - Windows Service
 section_names:

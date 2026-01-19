@@ -9,9 +9,7 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-19 10:00:00 +00:00
 permalink: /ai/news/Fabric-IQ-The-Semantic-Foundation-for-Enterprise-AI
 tags:
-- AI
 - AI Agents
-- Azure
 - Business Rules
 - Data Agent
 - Data Governance
@@ -24,8 +22,6 @@ tags:
 - Live Data Binding
 - Low Code
 - Microsoft Fabric
-- ML
-- News
 - Ontology
 - Operational Intelligence
 - Operations Agent

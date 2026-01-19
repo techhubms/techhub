@@ -10,7 +10,6 @@ date: 2025-12-26 11:00:26 +00:00
 permalink: /ai/videos/Customizing-AI-Agents-in-VS-Code-with-Agent-Skills
 tags:
 - Agent Skills
-- AI
 - AI Agents
 - AI Customization
 - Context Window
@@ -18,7 +17,6 @@ tags:
 - Developer Tools
 - Markdown
 - Skill Management
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

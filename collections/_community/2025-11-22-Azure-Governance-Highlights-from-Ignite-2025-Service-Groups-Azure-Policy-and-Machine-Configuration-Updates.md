@@ -9,14 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-22 01:24:16 +00:00
 permalink: /azure/community/Azure-Governance-Highlights-from-Ignite-2025-Service-Groups-Azure-Policy-and-Machine-Configuration-Updates
 tags:
-- Azure
 - Azure Governance
 - Azure Monitoring
 - Azure Policy
 - Azure Resiliency
 - CIS Compliance
 - Cloud Compliance
-- Community
 - Custom Baselines
 - Extensibility Framework
 - Identity Based Exemptions
@@ -27,7 +25,6 @@ tags:
 - Remediations
 - Resource Management
 - Role Based Access Control
-- Security
 - Service Groups
 - Tech Community
 - UX Improvements

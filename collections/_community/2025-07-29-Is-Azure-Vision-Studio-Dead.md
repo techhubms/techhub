@@ -9,13 +9,10 @@ feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-07-29 10:09:33 +00:00
 permalink: /ai/community/Is-Azure-Vision-Studio-Dead
 tags:
-- AI
 - API Deprecation
-- Azure
 - Azure Cognitive Services
 - Azure Vision Studio
 - Cloud AI
-- Community
 - Custom Datasets
 - East US
 - Image Analysis

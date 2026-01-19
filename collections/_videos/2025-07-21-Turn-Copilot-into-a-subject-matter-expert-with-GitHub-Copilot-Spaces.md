@@ -10,7 +10,6 @@ date: 2025-07-21 14:00:59 +00:00
 permalink: /github-copilot/videos/Turn-Copilot-into-a-subject-matter-expert-with-GitHub-Copilot-Spaces
 tags:
 - Accessibility Standards
-- AI
 - AI Integration
 - Code Compliance
 - Contextual AI
@@ -19,10 +18,8 @@ tags:
 - Custom Knowledge Base
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Software Development
 - Team Collaboration
-- Videos
 section_names:
 - ai
 - github-copilot

@@ -9,13 +9,11 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 16:00:00 +00:00
 permalink: /ai/news/Announcing-Azure-Copilot-Agents-and-AI-Infrastructure-Innovations
 tags:
-- AI
 - AI + Machine Learning
 - AI Agents
 - AKS
 - AKS Automatic
 - App Modernization
-- Azure
 - Azure Boost
 - Azure Copilot
 - Azure Governance
@@ -24,7 +22,6 @@ tags:
 - Compute
 - Confidential Computing
 - Containers
-- DevOps
 - Fairwater Datacenter
 - GPU Computing
 - Management And Governance
@@ -32,10 +29,8 @@ tags:
 - Microsoft Ignite
 - Migration Tools
 - Network Security Perimeter
-- News
 - Operational Excellence
 - PostgreSQL
-- Security
 - SQL Managed Instance
 section_names:
 - ai

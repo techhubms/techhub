@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q
 date: 2025-06-23 14:00:22 +00:00
 permalink: /ai/videos/Enveda-Accelerating-Pharmaceutical-Discovery-with-Microsoft-AI
 tags:
-- AI
 - AI Applications
 - AI in Healthcare
 - AI Transformation
@@ -21,7 +20,6 @@ tags:
 - Microsoft AI
 - Microsoft Cloud
 - Pharmaceutical Innovation
-- Videos
 - Viswa Colluru
 section_names:
 - ai

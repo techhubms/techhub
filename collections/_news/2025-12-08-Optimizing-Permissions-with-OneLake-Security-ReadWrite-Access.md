@@ -10,7 +10,6 @@ date: 2025-12-08 11:00:00 +00:00
 permalink: /azure/news/Optimizing-Permissions-with-OneLake-Security-ReadWrite-Access
 tags:
 - Access Control
-- Azure
 - Collaboration
 - Data Architecture
 - Data Governance
@@ -19,12 +18,10 @@ tags:
 - Granular Permissions
 - Lakehouse
 - Microsoft Fabric
-- News
 - OneLake
 - ReadWrite Permissions
 - Role Based Security
 - Schema Level Access
-- Security
 - Storage Solutions
 section_names:
 - azure

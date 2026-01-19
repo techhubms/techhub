@@ -16,7 +16,6 @@ tags:
 - C# 14
 - CLI
 - Cloud Native
-- Coding
 - Command Line Interface
 - Cross Platform
 - Design Patterns
@@ -24,7 +23,6 @@ tags:
 - Libraries
 - Modern Development
 - Software Packaging
-- Videos
 - VS
 section_names:
 - coding

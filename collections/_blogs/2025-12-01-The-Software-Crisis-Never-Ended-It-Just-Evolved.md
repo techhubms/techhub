@@ -10,14 +10,11 @@ date: 2025-12-01 13:45:01 +00:00
 permalink: /ai/blogs/The-Software-Crisis-Never-Ended-It-Just-Evolved
 tags:
 - Agile
-- AI
 - AI in Software Development
 - Automation
-- Blogs
 - Cloud Platforms
 - Complexity Management
 - Continuous Integration
-- DevOps
 - Distributed Applications
 - IaC
 - Lifecycle Management

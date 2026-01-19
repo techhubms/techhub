@@ -13,9 +13,7 @@ tags:
 - AI in Software Development
 - Application Monitoring
 - AppSignal
-- Blogs
 - CNCF
-- DevOps
 - Elixir
 - Go
 - Instrumentation

@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-11 11:57:18 +00:00
 permalink: /ml/news/Customer-Managed-Keys-for-Microsoft-Fabric-Workspaces-Now-in-Public-Preview
 tags:
-- Azure
 - Azure Key Vault
 - Azure Managed HSM
 - Cloud Security
@@ -21,11 +20,8 @@ tags:
 - Key Management
 - Microsoft Fabric
 - Microsoft Managed Keys
-- ML
-- News
 - Public Preview
 - Regulatory Requirements
-- Security
 - Workspace Encryption
 section_names:
 - azure

@@ -9,17 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-20 07:00:00 +00:00
 permalink: /ai/community/AMA-Spotlight-Build-Smarter-with-Azure-Developer-CLI-AZD
 tags:
-- AI
 - Azd
-- Azure
 - Azure AI Foundry
 - Azure Developer CLI
 - CI/CD
-- Community
 - Debugging
 - Deployment
 - Developer Experience
-- DevOps
 - Enterprise AI
 - Infrastructure Automation
 - Live AMA

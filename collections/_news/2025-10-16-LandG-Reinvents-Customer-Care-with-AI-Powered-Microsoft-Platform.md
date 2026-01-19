@@ -9,9 +9,7 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-16 15:55:53 +00:00
 permalink: /ai/news/LandG-Reinvents-Customer-Care-with-AI-Powered-Microsoft-Platform
 tags:
-- AI
 - AI Powered Customer Service
-- Azure
 - Business Intelligence
 - Case Summarization
 - Company News
@@ -22,7 +20,6 @@ tags:
 - Microsoft Copilot
 - Microsoft Dynamics 365
 - Microsoft Ecosystem
-- News
 - Power Platform
 - Process Automation
 - Sentiment Analysis

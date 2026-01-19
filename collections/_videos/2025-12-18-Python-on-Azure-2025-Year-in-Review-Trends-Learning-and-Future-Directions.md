@@ -11,11 +11,9 @@ permalink: /coding/videos/Python-on-Azure-2025-Year-in-Review-Trends-Learning-an
 tags:
 - AI
 - AI Trends
-- Azure
 - Cloud Computing
 - Cloud Development
 - Cloud Engineering
-- Coding
 - Dev
 - Developer
 - Developer Community
@@ -32,7 +30,6 @@ tags:
 - Software Developer
 - Tech
 - Technology
-- Videos
 - Year in Review
 - Yearinreview
 section_names:

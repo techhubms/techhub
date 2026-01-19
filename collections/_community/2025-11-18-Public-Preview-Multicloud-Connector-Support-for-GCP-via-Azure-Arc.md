@@ -12,12 +12,9 @@ tags:
 - Agentless Inventory
 - Arc Enabled
 - AWS
-- Azure
 - Azure Arc
 - Azure Monitor
 - Cloud Operations
-- Community
-- DevOps
 - GCP
 - Google Cloud
 - Inventory
@@ -28,7 +25,6 @@ tags:
 - OIDC Federation
 - Preview
 - Resource Graph
-- Security
 - Security Monitoring
 - VM Management
 section_names:

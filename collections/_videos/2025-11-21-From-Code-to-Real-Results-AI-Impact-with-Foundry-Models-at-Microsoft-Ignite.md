@@ -10,11 +10,9 @@ date: 2025-11-21 16:31:17 +00:00
 permalink: /ai/videos/From-Code-to-Real-Results-AI-Impact-with-Foundry-Models-at-Microsoft-Ignite
 tags:
 - Advanced AI
-- AI
 - AI Agents
 - AI Architecture
 - AI Models
-- Azure
 - Azure AI
 - Conversation Relay
 - Customer Experience
@@ -27,7 +25,6 @@ tags:
 - MSIgnite
 - Omnichannel
 - Scalability
-- Videos
 section_names:
 - ai
 - azure

@@ -9,13 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-15 19:23:38 +00:00
 permalink: /ai/community/Modernizing-Oracle-Workloads-with-Oracle-DatabaseAzure-and-AI-Solutions
 tags:
-- AI
 - AI Integration
-- Azure
 - Azure Defender
 - Azure Sentinel
 - Cloud Migration
-- Community
 - Compliance
 - Copilot Studio
 - Data Sovereignty
@@ -27,7 +24,6 @@ tags:
 - OCI
 - Oracle Database@Azure
 - Public Cloud
-- Security
 section_names:
 - ai
 - azure

@@ -9,14 +9,11 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-28 11:13:32 +00:00
 permalink: /github-copilot/community/LMAO-Did-I-Do-Something-Wrong
 tags:
-- AI
 - AI Assistant
 - Automation
 - Code Suggestions
-- Community
 - Community Discussion
 - Developer Humor
-- GitHub Copilot
 - Programming Tools
 - Reddit
 - Software Development

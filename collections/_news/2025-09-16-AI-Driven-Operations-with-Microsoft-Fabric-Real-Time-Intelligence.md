@@ -10,9 +10,7 @@ date: 2025-09-16 00:45:00 +00:00
 permalink: /ai/news/AI-Driven-Operations-with-Microsoft-Fabric-Real-Time-Intelligence
 tags:
 - Agentic AI
-- AI
 - Anomaly Detection
-- Azure
 - Business Intelligence
 - Copilot
 - Digital Twin
@@ -23,8 +21,6 @@ tags:
 - Industrial AI
 - Kusto Query Language
 - Microsoft Fabric
-- ML
-- News
 - No Code Tools
 - Operational Analytics
 - Proactive Operations

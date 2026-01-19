@@ -9,10 +9,8 @@ feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-03 15:34:00 +00:00
 permalink: /azure/community/Implementing-NVA-for-Internet-Egress-and-Inter-Subnet-Routing-in-Azure-Hub-Spoke-Topology
 tags:
-- Azure
 - Azure Load Balancer
 - Cato Networks
-- Community
 - Hub Spoke Topology
 - Inter Subnet Routing
 - Internet Egress

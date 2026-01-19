@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-13 15:45:17 +00:00
 permalink: /ai/news/Across-the-Ambition-Gap-How-AI-Users-Are-Gaining-More-Than-Answers
 tags:
-- AI
 - AI Adoption
 - AI Decision Making
 - AI Enthusiasts
@@ -25,7 +24,6 @@ tags:
 - Generative AI
 - Microsoft
 - Millennials
-- News
 - Personalization
 - Transparency
 section_names:

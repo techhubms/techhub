@@ -9,16 +9,13 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-02 17:23:43 +00:00
 permalink: /github-copilot/community/Complete-functional-MVP-using-Copilot
 tags:
-- AI
 - AI Tools
 - Anthropic Claude Opus 4
 - Claude Sonnet 4
-- Community
 - Copilot Features
 - Copilot Pro
 - Deployment
 - Educational Websites
-- GitHub Copilot
 - Google Gemini 2.5 Pro
 - MVP Development
 - OpenAI GPT 3

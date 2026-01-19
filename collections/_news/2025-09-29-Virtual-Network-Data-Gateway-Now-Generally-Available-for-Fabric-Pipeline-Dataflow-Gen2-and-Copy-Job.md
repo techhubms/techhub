@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-29 13:00:00 +00:00
 permalink: /ml/news/Virtual-Network-Data-Gateway-Now-Generally-Available-for-Fabric-Pipeline-Dataflow-Gen2-and-Copy-Job
 tags:
-- Azure
 - Copy Job
 - Data Governance
 - Data Integration
@@ -18,11 +17,8 @@ tags:
 - ExpressRoute
 - Fabric Pipeline
 - Microsoft Fabric
-- ML
-- News
 - Private Endpoints
 - Secure Data Movement
-- Security
 - Virtual Network Data Gateway
 - VNET
 section_names:

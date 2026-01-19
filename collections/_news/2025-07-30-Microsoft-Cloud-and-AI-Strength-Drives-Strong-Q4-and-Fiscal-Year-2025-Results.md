@@ -9,9 +9,7 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-30 20:09:51 +00:00
 permalink: /ai/news/Microsoft-Cloud-and-AI-Strength-Drives-Strong-Q4-and-Fiscal-Year-2025-Results
 tags:
-- AI
 - Amy Hood
-- Azure
 - Cloud Computing
 - Company News
 - Dynamics 365
@@ -20,7 +18,6 @@ tags:
 - Intelligent Cloud
 - Microsoft
 - Microsoft 365
-- News
 - Productivity And Business Processes
 - Satya Nadella
 section_names:

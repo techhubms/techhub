@@ -10,11 +10,9 @@ date: 2025-12-15 12:57:07 +00:00
 permalink: /ai/videos/Using-Foundrys-Model-Router-to-Simplify-Optimal-AI-Model-Selection
 tags:
 - Agents
-- AI
 - AI Agents
 - AI Application Development
 - AI Model Selection
-- Azure
 - Azure AI
 - Azure Cloud
 - Azure Foundry
@@ -29,7 +27,6 @@ tags:
 - Model Routing
 - SLM
 - Solution Architecture
-- Videos
 section_names:
 - ai
 - azure

@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-08 00:34:33 +00:00
 permalink: /ai/news/AI-powered-Operations-A-Maturity-Path-for-Manufacturers
 tags:
-- AI
 - AI Powered Operations
 - AI Strategy
 - Company News
@@ -19,7 +18,6 @@ tags:
 - Manufacturing
 - Microsoft AI
 - Microsoft Partners
-- News
 - Operational Maturity
 - Smart Manufacturing
 section_names:

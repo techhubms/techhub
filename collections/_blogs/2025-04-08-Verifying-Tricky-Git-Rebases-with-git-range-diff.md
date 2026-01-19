@@ -9,13 +9,10 @@ feed_url: https://andrewlock.net/rss.xml
 date: 2025-04-08 09:00:00 +00:00
 permalink: /coding/blogs/Verifying-Tricky-Git-Rebases-with-git-range-diff
 tags:
-- Blogs
 - Branch Management
-- Coding
 - Commit Comparison
 - Continuous Integration
 - Development Workflow
-- DevOps
 - Git
 - Git Rebase
 - Merge Conflicts

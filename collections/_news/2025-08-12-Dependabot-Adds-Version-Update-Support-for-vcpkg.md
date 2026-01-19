@@ -10,16 +10,13 @@ date: 2025-08-12 16:22:46 +00:00
 permalink: /coding/news/Dependabot-Adds-Version-Update-Support-for-vcpkg
 tags:
 - C++
-- Coding
 - Continuous Integration
 - Dependabot
 - Dependency Updates
-- DevOps
 - DevOps Automation
 - GitHub
 - Manifest Mode
 - Microsoft
-- News
 - Open Source Tools
 - Package Management
 - Vcpkg

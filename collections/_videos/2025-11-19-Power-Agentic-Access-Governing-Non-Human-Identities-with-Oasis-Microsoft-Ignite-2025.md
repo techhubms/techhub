@@ -10,11 +10,9 @@ date: 2025-11-19 12:31:45 +00:00
 permalink: /ai/videos/Power-Agentic-Access-Governing-Non-Human-Identities-with-Oasis-Microsoft-Ignite-2025
 tags:
 - Access Control
-- AI
 - AI Agents
 - Audit Evidence
 - Automation
-- Azure
 - Cloud Security
 - GitHub
 - Identity Governance
@@ -29,10 +27,8 @@ tags:
 - ProtectcloudAIplatformandapps
 - Role Management
 - Secrets Rotation
-- Security
 - Service Principals
 - Tokens
-- Videos
 section_names:
 - ai
 - azure

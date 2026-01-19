@@ -9,14 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-07-28 16:00:13 +00:00
 permalink: /ai/videos/Advanced-MCP-Secure-Scalable-and-Multi-Modal-AI-Agents
 tags:
-- AI
 - API Management
-- Azure
 - Azure OpenAI
 - Cloud Native
-- Coding
 - Containers
-- DevOps
 - Enterprise Security
 - Load Balancers
 - MCP
@@ -27,8 +23,6 @@ tags:
 - Performance Optimization
 - Real Time Streaming
 - Scaling Strategies
-- Security
-- Videos
 section_names:
 - ai
 - azure

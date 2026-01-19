@@ -11,19 +11,16 @@ permalink: /ai/community/Selecting-the-Right-Agentic-Solution-on-Azure-A-Guide-t
 tags:
 - Agent Infrastructure
 - Agent Orchestration
-- AI
 - AI Workflow
 - AKS
 - App Service
 - AutoGen
-- Azure
 - Azure AI Agent Service
 - Azure AI Foundry
 - Azure Logic Apps
 - Azure OpenAI Service
 - C#
 - CI/CD
-- Community
 - Java
 - Knowledge Base Integration
 - MS Entra ID

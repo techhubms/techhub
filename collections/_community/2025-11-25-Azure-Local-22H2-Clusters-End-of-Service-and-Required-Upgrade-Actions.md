@@ -11,11 +11,9 @@ permalink: /azure/community/Azure-Local-22H2-Clusters-End-of-Service-and-Require
 tags:
 - 22H2
 - 24H2
-- Azure
 - Azure Local
 - Azure Stack HCI
 - Cluster Management
-- Community
 - Compliance
 - End Of Service
 - ESU
@@ -23,7 +21,6 @@ tags:
 - Hybrid Cloud
 - Lifecycle Policy
 - Microsoft Azure
-- Security
 - Security Updates
 - Upgrade Guidance
 - Windows Server Subscription

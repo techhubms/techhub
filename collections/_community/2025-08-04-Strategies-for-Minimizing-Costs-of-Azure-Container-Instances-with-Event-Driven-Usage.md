@@ -10,11 +10,9 @@ date: 2025-08-04 13:31:23 +00:00
 permalink: /azure/community/Strategies-for-Minimizing-Costs-of-Azure-Container-Instances-with-Event-Driven-Usage
 tags:
 - AZ CLI
-- Azure
 - Azure Container Instances
 - Azure Functions
 - Cloud Deployment
-- Community
 - Cost Optimization
 - On Demand Compute
 - Resource Management

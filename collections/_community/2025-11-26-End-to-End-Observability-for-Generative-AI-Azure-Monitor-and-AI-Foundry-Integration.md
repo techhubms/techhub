@@ -10,17 +10,13 @@ date: 2025-11-26 18:35:59 +00:00
 permalink: /ai/community/End-to-End-Observability-for-Generative-AI-Azure-Monitor-and-AI-Foundry-Integration
 tags:
 - Agent Monitoring
-- AI
 - Application Insights
-- Azure
 - Azure AI Foundry
 - Azure Monitor
 - Azure Monitor Workbooks
 - Cloud Monitoring
-- Community
 - Compliance
 - Cost Governance
-- DevOps
 - Generative AI
 - Grafana
 - LLM

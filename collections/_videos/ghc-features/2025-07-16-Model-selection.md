@@ -12,14 +12,10 @@ plans:
 - Free
 alt-collection: features
 tags:
-- AI
 - Chat Interface
-- Coding
-- GitHub Copilot
 - Model Selection
 - Programming
 - Software Development
-- Videos
 - VS Code
 section_names:
 - ai

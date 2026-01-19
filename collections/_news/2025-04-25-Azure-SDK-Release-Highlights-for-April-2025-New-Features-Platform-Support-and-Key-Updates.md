@@ -10,17 +10,14 @@ date: 2025-04-25 17:55:05 +00:00
 permalink: /coding/news/Azure-SDK-Release-Highlights-for-April-2025-New-Features-Platform-Support-and-Key-Updates
 tags:
 - .NET
-- Azure
 - Azure SDK
 - C++
-- Coding
 - Embedded C
 - End Of Life
 - Go
 - Java
 - JavaScript
 - Management Libraries
-- News
 - Node.js
 - Python
 - Release Notes

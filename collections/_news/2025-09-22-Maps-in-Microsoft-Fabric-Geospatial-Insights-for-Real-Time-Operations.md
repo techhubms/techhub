@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-22 13:30:00 +00:00
 permalink: /ml/news/Maps-in-Microsoft-Fabric-Geospatial-Insights-for-Real-Time-Operations
 tags:
-- Azure
 - Business Intelligence
 - Data Integration
 - Data Visualization
@@ -20,8 +19,6 @@ tags:
 - Lakehouse
 - Maps
 - Microsoft Fabric
-- ML
-- News
 - No Code Development
 - Real Time Intelligence
 - Spatial Data

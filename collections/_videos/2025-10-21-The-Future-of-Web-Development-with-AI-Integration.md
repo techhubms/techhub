@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-10-21 16:00:01 +00:00
 permalink: /ai/videos/The-Future-of-Web-Development-with-AI-Integration
 tags:
-- AI
 - AI Agents
 - AI Integration
 - Future Of Web
@@ -17,7 +16,6 @@ tags:
 - Jquery
 - Software Innovation
 - User Experience
-- Videos
 - Web Design
 - Web Development
 - WebDevelopment

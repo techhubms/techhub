@@ -10,19 +10,16 @@ date: 2025-12-12 14:12:05 +00:00
 permalink: /azure/news/Improved-Network-Diagnostics-and-Required-Self-Hosted-Runner-Upgrades-for-GitHub-Actions-with-Azure-VNET-Injection
 tags:
 - Actions
-- Azure
 - Azure VNET Injection
 - CI/CD
 - Connectivity Issues
 - Developer Automation
-- DevOps
 - Docker
 - GitHub Actions
 - Improvement
 - Infrastructure
 - Linux
 - Network Diagnostics
-- News
 - Runner Architecture
 - Self Hosted Runner
 - System Upgrade

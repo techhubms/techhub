@@ -15,7 +15,6 @@ tags:
 - '#microsoftindustry'
 - '#retail'
 - Agentic AI
-- AI
 - AI Automation
 - Alert Management
 - Microsoft Cloud
@@ -24,7 +23,6 @@ tags:
 - Retail Efficiency
 - Retail Technology
 - Store Operations
-- Videos
 - Workflow Automation
 section_names:
 - ai

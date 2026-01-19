@@ -10,20 +10,16 @@ date: 2025-07-31 17:12:43 +00:00
 permalink: /github-copilot/news/Onboarding-Your-AI-Peer-Programmer-Success-with-GitHub-Copilot-Coding-Agent
 tags:
 - Agentic Workflows
-- AI
 - AI & ML
 - AI Peer Programming
 - Azure Bicep
 - Copilot Coding Agent
 - Custom Instructions
 - Development Environment
-- DevOps
 - Firewall Configuration
 - Generative AI
 - GitHub Actions
-- GitHub Copilot
 - MCP Servers
-- News
 - Project Onboarding
 - Repositories
 - Workflow Automation

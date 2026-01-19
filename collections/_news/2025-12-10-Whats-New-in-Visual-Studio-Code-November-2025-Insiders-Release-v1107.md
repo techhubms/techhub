@@ -10,18 +10,13 @@ date: 2025-12-10 17:00:00 +00:00
 permalink: /github-copilot/news/Whats-New-in-Visual-Studio-Code-November-2025-Insiders-Release-v1107
 tags:
 - Accessibility
-- AI
 - Code Chat
 - Codespaces
-- Coding
 - Copilot CLI
-- DevOps
 - Editor Improvements
-- GitHub Copilot
 - GitHub MCP Server
 - Microsoft Authentication
 - MSAL
-- News
 - PowerShell
 - Terminal
 - Tree Sitter

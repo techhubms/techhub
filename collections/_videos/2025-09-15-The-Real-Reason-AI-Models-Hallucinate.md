@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-09-15 20:14:54 +00:00
 permalink: /ai/videos/The-Real-Reason-AI-Models-Hallucinate
 tags:
-- AI
 - AI Explanation
 - AI Hallucination
 - AI Research
@@ -21,7 +20,6 @@ tags:
 - Machine Learning
 - Model Confidence
 - OpenAI
-- Videos
 section_names:
 - ai
 ---

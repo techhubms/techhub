@@ -10,12 +10,10 @@ date: 2025-11-18 08:00:00 +00:00
 permalink: /azure/community/Built-In-CIS-Benchmarks-for-Linux-Security-on-Azure-Flexible-and-Hybrid-Ready-Compliance
 tags:
 - Audit Automation
-- Azure
 - Azure Arc
 - Azure Osconfig
 - CIS Benchmarks
 - Cloud Security
-- Community
 - Compliance as Code
 - Custom Configuration
 - Ebpf
@@ -30,7 +28,6 @@ tags:
 - PCI DSS
 - Policy Management
 - Regulatory Compliance
-- Security
 - STIG
 section_names:
 - azure

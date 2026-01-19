@@ -10,16 +10,12 @@ date: 2025-07-30 18:13:18 +00:00
 permalink: /github-copilot/news/Copilot-Coding-Agent-Enhanced-Reliability-and-Debugging-for-Custom-Setup-Steps
 tags:
 - Agent Session Logs
-- AI
 - Continuous Integration
 - Copilot Coding Agent
 - Custom Setup
 - Debugging
 - Development Tools
-- DevOps
 - GitHub Actions
-- GitHub Copilot
-- News
 - Pro/Enterprise Features
 - Workflow Automation
 section_names:

@@ -9,17 +9,13 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-07-28 16:00:25 +00:00
 permalink: /ai/videos/MCP-in-Action-Real-World-Case-Studies
 tags:
-- AI
-- Azure
 - Azure AI Search
 - Azure API Management
-- DevOps
 - Enterprise Automation
 - GitHub
 - MCP
 - Multi Agent Systems
 - OpenAI
-- Videos
 - VS Code
 section_names:
 - ai

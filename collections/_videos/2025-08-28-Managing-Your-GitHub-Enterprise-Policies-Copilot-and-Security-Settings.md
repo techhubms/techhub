@@ -11,23 +11,18 @@ permalink: /github-copilot/videos/Managing-Your-GitHub-Enterprise-Policies-Copil
 tags:
 - Access Control
 - Admin Tools
-- AI
 - Copilot Configuration
 - Developer Tools
-- DevOps
 - DevOps Practices
 - Enterprise
 - GitHub
-- GitHub Copilot
 - GitHub Enterprise
 - Governance
 - Organization Management
 - Policy Enforcement
 - Repository Governance
-- Security
 - Security Policies
 - Top Down Governance
-- Videos
 section_names:
 - ai
 - devops

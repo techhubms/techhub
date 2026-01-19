@@ -10,16 +10,13 @@ date: 2025-07-23 07:00:00 +00:00
 permalink: /azure/news/Terraform-Provider-for-Microsoft-Fabric-Using-MCP-Servers-and-Fabric-CLI
 tags:
 - Automation
-- Azure
 - Cloud Infrastructure
 - Declarative Deployment
-- DevOps
 - DevOps Practices
 - Fabric CLI
 - IaC
 - MCP Server
 - Microsoft Fabric
-- News
 - Resource Management
 - Terraform
 section_names:

@@ -10,8 +10,6 @@ date: 2026-01-07 14:58:24 +00:00
 permalink: /coding/blogs/Microsoft-Open-Sources-XAML-Studio-and-Highlights-Visual-Studio-Designer-Challenges
 tags:
 - .NET
-- Blogs
-- Coding
 - Desktop Applications
 - Development
 - Fluent UI

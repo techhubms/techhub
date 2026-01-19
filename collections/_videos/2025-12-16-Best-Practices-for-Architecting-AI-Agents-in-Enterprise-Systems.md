@@ -12,10 +12,8 @@ tags:
 - A2A Communication
 - Agent Framework
 - Agent Identity Management
-- AI
 - AI Agents
 - Architecture Best Practices
-- Azure
 - Canary Deployment
 - Enterprise Security
 - Guardrails
@@ -23,8 +21,6 @@ tags:
 - Microsoft Entra
 - Observability
 - OpenTelemetry
-- Security
-- Videos
 section_names:
 - ai
 - azure

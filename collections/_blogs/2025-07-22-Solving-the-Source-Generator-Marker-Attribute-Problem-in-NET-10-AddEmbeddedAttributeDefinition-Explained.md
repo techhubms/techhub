@@ -12,8 +12,6 @@ tags:
 - .NET 10
 - AddEmbeddedAttributeDefinition
 - Analyzer Development
-- Blogs
-- Coding
 - CS0436 Warning
 - EmbeddedAttribute
 - Incremental Generators

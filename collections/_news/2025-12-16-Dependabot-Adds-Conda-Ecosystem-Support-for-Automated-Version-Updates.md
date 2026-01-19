@@ -14,12 +14,10 @@ tags:
 - Continuous Integration
 - Dependabot
 - Dependency Management
-- DevOps
 - Environment.yml
 - GitHub
 - GitHub Enterprise Server
 - Improvement
-- News
 - Python
 - Supply Chain Security
 section_names:

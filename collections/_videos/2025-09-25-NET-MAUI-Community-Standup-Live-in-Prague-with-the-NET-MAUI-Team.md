@@ -11,7 +11,6 @@ permalink: /coding/videos/NET-MAUI-Community-Standup-Live-in-Prague-with-the-NET
 tags:
 - .NET
 - C#
-- Coding
 - Cross Platform
 - Demo
 - Developer Community
@@ -26,7 +25,6 @@ tags:
 - Software Developer
 - Standup
 - UI
-- Videos
 section_names:
 - coding
 ---

@@ -9,21 +9,16 @@ feed_url: https://github.blog/feed/
 date: 2025-10-22 16:00:00 +00:00
 permalink: /github-copilot/news/Inside-the-GitHub-Bug-Bounty-Program-Researcher-Insights-and-Security-Advances
 tags:
-- AI
 - AI Security
 - Application Security
 - Bug Bounty
 - Cybersecurity
 - Cybersecurity Awareness Month
-- DevOps
 - DevOps Security
 - GitHub
-- GitHub Copilot
 - GitHub Security
 - Injection Vulnerabilities
 - Logical Flaws
-- News
-- Security
 - Security Engineering
 - Security Research
 - Security Tooling

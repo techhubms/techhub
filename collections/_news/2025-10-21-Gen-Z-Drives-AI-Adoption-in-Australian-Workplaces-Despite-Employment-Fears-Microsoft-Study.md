@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-21 13:05:08 +00:00
 permalink: /ai/news/Gen-Z-Drives-AI-Adoption-in-Australian-Workplaces-Despite-Employment-Fears-Microsoft-Study
 tags:
-- AI
 - AI Adoption
 - AI Skills
 - AI Strategy
@@ -22,7 +21,6 @@ tags:
 - Early Career Professionals
 - Gen Z
 - Microsoft Australia
-- News
 - Organizational Change
 - Survey
 - Technology Culture

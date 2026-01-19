@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-08-14 10:00:21 +00:00
 permalink: /devops/blogs/Eclipse-Foundation-Publishes-Toolkit-to-Simplify-CRA-Compliance
 tags:
-- Blogs
 - Business Of DevOps
 - Compliance
 - Compliance Toolkit
@@ -18,7 +17,6 @@ tags:
 - CRA Compliance
 - Cyber Resilience Act
 - Dependency Analysis
-- DevOps
 - Eclipse Foundation
 - EU
 - EU Regulations
@@ -32,7 +30,6 @@ tags:
 - Red Hat
 - Regulations
 - Regulatory Compliance
-- Security
 - Security Requirements
 - Social Facebook
 - Social LinkedIn

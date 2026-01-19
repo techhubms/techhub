@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-11 07:00:00 +00:00
 permalink: /azure/community/Cloud-Forensics-Implementing-Security-Baselines-for-Forensic-Readiness-in-Microsoft-Azure
 tags:
-- Azure
 - Azure AD
 - Azure Monitor
 - Azure Security
 - Azure VM
-- Community
 - Conditional Access
 - DDoS Protection
 - Defender For Cloud
@@ -30,7 +28,6 @@ tags:
 - OS Disk Snapshots
 - Privileged Identity Management
 - RBAC
-- Security
 section_names:
 - azure
 - security

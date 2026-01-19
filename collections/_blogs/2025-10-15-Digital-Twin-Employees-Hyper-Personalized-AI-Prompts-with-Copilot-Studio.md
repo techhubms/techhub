@@ -9,9 +9,7 @@ feed_url: https://dellenny.com/feed/
 date: 2025-10-15 08:38:47 +00:00
 permalink: /ai/blogs/Digital-Twin-Employees-Hyper-Personalized-AI-Prompts-with-Copilot-Studio
 tags:
-- AI
 - AI Agent
-- Blogs
 - Business Process Automation
 - Copilot
 - Copilot Studio

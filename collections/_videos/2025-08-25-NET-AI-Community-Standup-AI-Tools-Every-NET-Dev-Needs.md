@@ -10,12 +10,10 @@ date: 2025-08-25 22:38:30 +00:00
 permalink: /github-copilot/videos/NET-AI-Community-Standup-AI-Tools-Every-NET-Dev-Needs
 tags:
 - .NET
-- AI
 - AI Powered Development
 - AI Tools
 - Automation
 - Best Practices
-- Coding
 - Coding With AI
 - Demo
 - Developer
@@ -23,14 +21,12 @@ tags:
 - Developer Tools
 - Developer Workflow
 - Dotnetdeveloper
-- GitHub Copilot
 - Lesson Learned
 - Microsoft
 - Microsoft Copilot Studio
 - Software Developer
 - Software Development
 - Tipsandtricks
-- Videos
 section_names:
 - ai
 - coding

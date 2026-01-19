@@ -12,14 +12,11 @@ tags:
 - App Service
 - Application Insights
 - Autoscaling
-- Azure
 - Azure Chaos Studio
 - Azure Load Testing
 - Chaos Engineering
 - CI/CD
 - Cloud Reliability
-- Community
-- DevOps
 - Fault Injection
 - Load Testing
 - Log Analytics
@@ -27,7 +24,6 @@ tags:
 - Monitoring
 - Performance Testing
 - Resiliency
-- Security
 - SQL Database
 section_names:
 - azure

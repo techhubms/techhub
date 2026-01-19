@@ -10,12 +10,10 @@ date: 2025-10-23 22:18:00 +00:00
 permalink: /coding/news/Announcing-Sponsorship-on-NuGetorg
 tags:
 - .NET
-- Coding
 - Developer Tools
 - GitHub Sponsors
 - Ko Fi
 - Liberapay
-- News
 - NuGet
 - NuGet.org
 - Open Collective

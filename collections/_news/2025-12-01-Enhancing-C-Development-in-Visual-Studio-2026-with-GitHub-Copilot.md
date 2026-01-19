@@ -9,21 +9,17 @@ feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-01 16:24:40 +00:00
 permalink: /github-copilot/news/Enhancing-C-Development-in-Visual-Studio-2026-with-GitHub-Copilot
 tags:
-- AI
 - App Modernization
 - Build Insights
 - Build Performance
 - C++
 - Code Editing
 - Code Refactoring
-- Coding
 - Copilot
 - Developer Tools
-- GitHub Copilot
 - IntelliSense
 - Microsoft
 - MSVC Build Tools
-- News
 - Private Preview
 - VS
 - Windows Development

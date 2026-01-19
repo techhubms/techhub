@@ -9,21 +9,16 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-25 16:49:31 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Coding-Agent-Now-Generally-Available
 tags:
-- AI
 - AI Agent
 - Automation
 - Autonomous Agents
 - Bug Fixing
-- Coding
 - Copilot
 - Copilot Coding Agent
 - Developer Tools
-- DevOps
 - Feature Implementation
 - GitHub Actions
-- GitHub Copilot
 - Improvement
-- News
 - Pull Requests
 - Software Development
 - Technical Debt

@@ -11,12 +11,10 @@ permalink: /ai/news/Developer-Focused-Azure-AI-Foundry-Sessions-at-Microsoft-Ign
 tags:
 - Agent Factory
 - Agentic AI
-- AI
 - AI Agents
 - AI Orchestration
 - AI Red Teaming
 - Automation
-- Azure
 - Azure AI Foundry
 - Azure AI Search
 - Azure OpenAI
@@ -26,7 +24,6 @@ tags:
 - Microsoft Ignite
 - MSIgnite
 - Multi Agent Systems
-- News
 - Responsible AI
 - VS Code
 section_names:

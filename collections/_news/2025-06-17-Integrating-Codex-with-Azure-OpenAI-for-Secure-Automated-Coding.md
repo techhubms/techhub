@@ -11,12 +11,10 @@ permalink: /ai/news/Integrating-Codex-with-Azure-OpenAI-for-Secure-Automated-Cod
 tags:
 - Agents
 - AGENTS.md
-- AI
 - AI Agents
 - All Things Azure
 - API Integration
 - App Development
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
 - CI/CD
@@ -24,14 +22,11 @@ tags:
 - Code Automation
 - Codex
 - Codex Mini
-- Coding
 - Coding Agent
 - Developer Productivity
-- DevOps
 - Enterprise Security
 - Entra ID
 - GitHub Actions
-- News
 - OpenAI
 - Python
 - Token Based Authentication

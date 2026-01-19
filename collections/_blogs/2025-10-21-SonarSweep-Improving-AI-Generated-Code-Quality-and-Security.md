@@ -9,23 +9,19 @@ feed_url: https://devops.com/feed/
 date: 2025-10-21 13:00:47 +00:00
 permalink: /ai/blogs/SonarSweep-Improving-AI-Generated-Code-Quality-and-Security
 tags:
-- AI
 - AI Code Quality
 - AI Code Review
 - AI Code Security
 - AI Generated Code
 - AI Model Training
-- Blogs
 - Bug Reduction
 - Code Vulnerabilities
 - Cybersecurity
 - Cybersecurity in AI
-- DevOps
 - Devsecops
 - Large Language Models
 - Reinforcement Learning
 - Secure Coding
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

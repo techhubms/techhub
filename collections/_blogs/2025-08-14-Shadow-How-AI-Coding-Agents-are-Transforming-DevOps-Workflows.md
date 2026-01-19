@@ -9,20 +9,16 @@ feed_url: https://devops.com/feed/
 date: 2025-08-14 07:38:39 +00:00
 permalink: /ai/blogs/Shadow-How-AI-Coding-Agents-are-Transforming-DevOps-Workflows
 tags:
-- AI
 - AI Agents
 - AI Assisted Workflows
 - AI Coding Agent
-- Blogs
 - Business Of DevOps
 - Code Intelligence
-- Coding
 - Coding Assistant
 - Command Validation
 - Continuous Deployment
 - Continuous Integration
 - Developer Time
-- DevOps
 - DevOps Automation
 - Documentation Automation
 - Doin' DevOps

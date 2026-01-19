@@ -9,7 +9,6 @@ feed_url: https://github.blog/feed/
 date: 2025-11-12 17:00:00 +00:00
 permalink: /github-copilot/news/How-Copilot-Helps-Build-the-GitHub-Platform
 tags:
-- AI
 - AI & ML
 - AI Assistant
 - API Endpoints
@@ -17,19 +16,14 @@ tags:
 - CI/CD
 - Code Automation
 - Code Maintenance
-- Coding
 - Collaboration
 - Database Migration
-- DevOps
 - Documentation
 - Feature Flags
-- GitHub Copilot
-- News
 - Performance Optimization
 - Pull Requests
 - Refactoring
 - Repository Analysis
-- Security
 - Security Gates
 - Software Development Lifecycle
 section_names:

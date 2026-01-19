@@ -10,15 +10,12 @@ date: 2025-08-28 08:18:30 +00:00
 permalink: /azure/community/Automating-Azure-Logic-Apps-Deployments-with-Deployment-Center-and-VS-Code
 tags:
 - Automation
-- Azure
 - Azure DevOps
 - Azure Logic Apps
 - Azure Repos
 - CI/CD
-- Community
 - Continuous Deployment
 - Deployment Center
-- DevOps
 - GitHub
 - Infrastructure Automation
 - Integration Services

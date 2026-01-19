@@ -9,7 +9,6 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2026-01-06 06:23:00 +00:00
 permalink: /azure/blogs/Azure-Cost-Estimation-Your-Strategic-Guide-to-Cloud-Pricing
 tags:
-- Azure
 - Azure Advisor
 - Azure Cost Estimation
 - Azure Cost Management
@@ -18,7 +17,6 @@ tags:
 - Azure Monitor
 - Azure Pricing
 - Azure Pricing Calculator
-- Blogs
 - Budgeting
 - Cloud
 - Cloud Architecture

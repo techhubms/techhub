@@ -11,15 +11,12 @@ permalink: /devops/news/GitHub-Releases-Introduce-Immutability-for-Enhanced-Supp
 tags:
 - Artifact Verification
 - CI/CD
-- DevOps
 - DevOps Security
 - GitHub
 - Immutable Releases
-- News
 - Release Attestation
 - Release Automation
 - Repository Management
-- Security
 - Sigstore
 - Software Distribution
 - Supply Chain Security

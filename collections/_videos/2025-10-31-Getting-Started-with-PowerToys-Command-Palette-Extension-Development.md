@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-31 16:41:45 +00:00
 permalink: /coding/videos/Getting-Started-with-PowerToys-Command-Palette-Extension-Development
 tags:
-- Coding
 - Command Palette
 - Developer Tools
 - Extension Development
@@ -19,7 +18,6 @@ tags:
 - PowerToys
 - Publishing
 - Scaffolding
-- Videos
 - VS
 section_names:
 - coding

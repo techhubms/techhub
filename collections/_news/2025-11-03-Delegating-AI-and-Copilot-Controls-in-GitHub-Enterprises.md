@@ -10,7 +10,6 @@ date: 2025-11-03 20:55:24 +00:00
 permalink: /github-copilot/news/Delegating-AI-and-Copilot-Controls-in-GitHub-Enterprises
 tags:
 - Agent Control Plane
-- AI
 - AI Governance
 - AI Policy Management
 - Audit Logging
@@ -21,9 +20,7 @@ tags:
 - Enterprise Management Tools
 - Enterprise Roles
 - Fine Grained Permissions
-- GitHub Copilot
 - GitHub Enterprise
-- News
 - Policy Delegation
 section_names:
 - ai

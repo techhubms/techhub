@@ -9,11 +9,9 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-26 16:33:15 +00:00
 permalink: /ai/blogs/Software-Architecture-Frameworks-and-Artificial-Intelligence-Building-Smarter-Systems
 tags:
-- AI
 - AI Governance
 - Architecture
 - Architecture Frameworks
-- Blogs
 - C4 Model
 - Continuous Deployment
 - Data Mesh

@@ -10,10 +10,7 @@ date: 2025-07-28 12:55:30 +00:00
 permalink: /github-copilot/community/Gemini-Pro-Fails-More-Often-Than-Not
 tags:
 - Agent Mode
-- AI
-- Community
 - Gemini Pro
-- GitHub Copilot
 - Lag
 - Long Context
 - Model Errors

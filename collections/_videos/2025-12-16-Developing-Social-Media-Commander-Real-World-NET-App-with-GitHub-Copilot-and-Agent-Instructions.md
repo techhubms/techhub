@@ -11,22 +11,17 @@ permalink: /github-copilot/videos/Developing-Social-Media-Commander-Real-World-N
 tags:
 - .NET
 - Agent Instructions
-- AI
 - AI Powered Development
 - Avalonia
-- Azure
 - Blue Sky Integration
 - CI/CD Automation
 - Cloud
 - Cloud Computing
-- Coding
 - Copilot Integration
 - Cross Platform App
 - Dev
 - Developer Workflow
 - Development
-- DevOps
-- GitHub Copilot
 - GitHub Spark
 - Live Coding
 - MCP Server
@@ -37,7 +32,6 @@ tags:
 - Prompt Engineering
 - Tech
 - Technology
-- Videos
 - VS
 section_names:
 - ai

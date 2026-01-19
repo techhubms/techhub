@@ -13,9 +13,7 @@ tags:
 - .NET Core
 - Analyzers
 - BenchmarkDotNet
-- Blogs
 - C#
-- Coding
 - DescriptionAttribute
 - Diagnostics
 - DisplayAttribute

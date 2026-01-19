@@ -9,15 +9,12 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-10 16:15:49 +00:00
 permalink: /github-copilot/news/Raptor-Mini-Model-Public-Preview-Available-in-GitHub-Copilot
 tags:
-- AI
 - AI Development
 - AI Model
 - Copilot
 - Copilot Chat
 - Experimental Model
-- GitHub Copilot
 - Model Picker
-- News
 - Pro Plan
 - Public Preview
 - Raptor Mini

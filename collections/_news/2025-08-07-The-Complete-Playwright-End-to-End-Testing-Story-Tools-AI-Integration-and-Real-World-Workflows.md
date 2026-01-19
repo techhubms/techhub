@@ -9,23 +9,17 @@ feed_url: https://devblogs.microsoft.com/feed
 date: 2025-08-07 18:00:52 +00:00
 permalink: /github-copilot/news/The-Complete-Playwright-End-to-End-Testing-Story-Tools-AI-Integration-and-Real-World-Workflows
 tags:
-- AI
 - AI Automation
 - Automated Debugging
-- Azure
 - Azure App Testing
 - Browser Automation
 - Codegen
-- Coding
 - Continuous Integration
-- DevOps
 - End To End Testing
 - Functional Testing
-- GitHub Copilot
 - GitHub Copilot Coding Agent
 - JavaScript
 - MCP
-- News
 - Playwright
 - Playwright MCP
 - Reporting

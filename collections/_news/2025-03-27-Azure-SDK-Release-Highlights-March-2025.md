@@ -10,10 +10,8 @@ date: 2025-03-27 17:00:03 +00:00
 permalink: /coding/news/Azure-SDK-Release-Highlights-March-2025
 tags:
 - .NET
-- Azure
 - Azure SDK
 - C++
-- Coding
 - Conda
 - Cosmos DB
 - Database Watcher
@@ -26,7 +24,6 @@ tags:
 - Key Vault
 - Language Authoring
 - Management Library
-- News
 - Node.js 18
 - OpenTelemetry
 - Python

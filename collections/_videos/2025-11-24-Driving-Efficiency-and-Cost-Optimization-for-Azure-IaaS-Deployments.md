@@ -11,7 +11,6 @@ permalink: /azure/videos/Driving-Efficiency-and-Cost-Optimization-for-Azure-IaaS
 tags:
 - AI
 - AI Tools
-- Azure
 - Azure Blob Storage
 - Azure IaaS
 - Cloud Infrastructure
@@ -28,7 +27,6 @@ tags:
 - Smart Tiering
 - Storage Provisioning
 - TCO Reduction
-- Videos
 section_names:
 - azure
 ---

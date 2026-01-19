@@ -9,12 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 16:03:51 +00:00
 permalink: /ai/community/Enhance-Your-Azure-Resiliency-with-Intelligent-Agent-and-Copilot-Innovations
 tags:
-- AI
-- Azure
 - Azure Backup
 - Azure Copilot
 - Azure Site Recovery
-- Community
 - Compliance
 - Cyber Recovery
 - Data Resiliency
@@ -26,7 +23,6 @@ tags:
 - Microsoft Ignite
 - Operations Center
 - Recovery Services Vault
-- Security
 - Vault Soft Delete
 - Zonal Architecture
 section_names:

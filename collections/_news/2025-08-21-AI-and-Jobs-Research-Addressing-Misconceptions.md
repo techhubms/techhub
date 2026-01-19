@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-21 22:06:16 +00:00
 permalink: /ai/news/AI-and-Jobs-Research-Addressing-Misconceptions
 tags:
-- AI
 - AI Chatbot
 - AI Limitations
 - AI Use Cases
@@ -20,7 +19,6 @@ tags:
 - Knowledge Work
 - Methodology
 - Microsoft Research
-- News
 - O*NET
 - Occupational Impact
 - Research Clarification

@@ -12,7 +12,6 @@ tags:
 - .NET
 - .NET 5
 - Boilerplate Reduction
-- Coding
 - Compile Time Code Generation
 - Demo
 - Developer Community
@@ -25,7 +24,6 @@ tags:
 - Software Development
 - Source Generators
 - Sourcegenerators
-- Videos
 section_names:
 - coding
 ---

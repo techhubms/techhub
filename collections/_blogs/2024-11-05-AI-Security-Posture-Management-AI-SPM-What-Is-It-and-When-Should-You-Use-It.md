@@ -9,13 +9,11 @@ feed_url: https://zure.com/category/blog/feed/?tag=dataai
 date: 2024-11-05 07:14:57 +00:00
 permalink: /ai/blogs/AI-Security-Posture-Management-AI-SPM-What-Is-It-and-When-Should-You-Use-It
 tags:
-- AI
 - AI Model Security
 - AI Risk Management
 - AI Security Posture Management
 - AI SPM
 - AI Vulnerabilities
-- Blogs
 - Cloud Security
 - Compliance
 - CSPM
@@ -23,7 +21,6 @@ tags:
 - Data Security
 - GenAI Security
 - Microsoft Defender For Cloud
-- Security
 - Security Monitoring
 - Security Posture
 - Shadow AI

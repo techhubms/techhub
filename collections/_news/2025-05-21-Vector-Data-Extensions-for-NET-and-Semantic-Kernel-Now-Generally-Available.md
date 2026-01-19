@@ -11,18 +11,15 @@ permalink: /ai/news/Vector-Data-Extensions-for-NET-and-Semantic-Kernel-Now-Gener
 tags:
 - .NET
 - Abstractions
-- AI
 - AI Powered Applications
 - Application Development
 - Azure AI Search
-- Coding
 - Embedding Generation
 - GA Release
 - Interoperability
 - Library Development
 - Microsoft.Extensions.AI.Abstractions
 - Microsoft.Extensions.VectorData.Abstractions
-- News
 - Semantic Kernel
 - Vector Database
 - Vector Store Connectors

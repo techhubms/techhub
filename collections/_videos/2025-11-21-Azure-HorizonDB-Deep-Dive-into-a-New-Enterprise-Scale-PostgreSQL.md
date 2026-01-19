@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 17:11:56 +00:00
 permalink: /ai/videos/Azure-HorizonDB-Deep-Dive-into-a-New-Enterprise-Scale-PostgreSQL
 tags:
-- AI
 - AI Features
-- Azure
 - Azure HorizonDB
 - Cloud Database
 - Cloud Native
@@ -27,7 +25,6 @@ tags:
 - PostgreSQL
 - Read Replicas
 - Rust Runtime
-- Videos
 - Write Ahead Log
 section_names:
 - ai

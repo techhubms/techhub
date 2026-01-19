@@ -10,11 +10,8 @@ date: 2025-06-16 05:00:00 +00:00
 permalink: /azure/blogs/From-Simple-to-Sophisticated-Evolving-Terraform-Infrastructure-for-Azure-with-CICD-and-Governance
 tags:
 - Automation
-- Azure
-- Blogs
 - CI/CD
 - Cost Management
-- DevOps
 - Drift Detection
 - Environment Separation
 - GitHub

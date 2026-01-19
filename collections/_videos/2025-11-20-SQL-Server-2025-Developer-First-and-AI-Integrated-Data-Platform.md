@@ -9,19 +9,15 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-20 10:39:16 +00:00
 permalink: /ai/videos/SQL-Server-2025-Developer-First-and-AI-Integrated-Data-Platform
 tags:
-- AI
 - AI Integration
 - Application Availability
-- Azure
 - Azure SQL
-- Coding
 - Copilot
 - Data Platform
 - Developer Features
 - Fabric Mirroring
 - JSON Native Data
 - Migrateandmodernizeyourestate
-- ML
 - MSIgnite
 - Prompt Programming
 - Real Time Analytics
@@ -30,7 +26,6 @@ tags:
 - SQL Server
 - T SQL
 - Vector Search
-- Videos
 section_names:
 - ai
 - azure

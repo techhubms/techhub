@@ -10,9 +10,7 @@ date: 2025-10-09 17:15:42 +00:00
 permalink: /ai/news/Microsoft-Partners-with-Checkoutcom-to-Enhance-Enterprise-Payments-Using-Azure-AI
 tags:
 - Agentic Commerce
-- AI
 - AI Powered Payments
-- Azure
 - Checkout.com
 - Cloud
 - Cloud Infrastructure
@@ -24,7 +22,6 @@ tags:
 - Intelligent Acceptance
 - Machine Learning
 - Microsoft Azure
-- News
 - Payment Optimization
 - Payment Platform
 - Trust And Security

@@ -9,12 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-04 13:16:37 +00:00
 permalink: /ai/community/Enhancing-Azure-Data-Management-with-Silk-Software-Defined-Storage-and-Silk-Echo-for-AI
 tags:
-- AI
 - AI Infrastructure
-- Azure
 - CDM
 - Cloning
-- Community
 - Copy Data Management
 - Data Compression
 - Data Deduplication

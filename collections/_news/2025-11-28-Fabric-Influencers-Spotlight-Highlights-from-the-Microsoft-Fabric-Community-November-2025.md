@@ -10,10 +10,8 @@ date: 2025-11-28 10:00:00 +00:00
 permalink: /ml/news/Fabric-Influencers-Spotlight-Highlights-from-the-Microsoft-Fabric-Community-November-2025
 tags:
 - Advanced Pipelines
-- Azure
 - Azure Tenants
 - BigQuery Mirroring
-- Coding
 - Custom Transformers
 - Data Engineering
 - Data Science
@@ -27,8 +25,6 @@ tags:
 - GraphQL
 - Microsoft Fabric
 - Microsoft MVP
-- ML
-- News
 - Power BI
 - Real Time Intelligence
 - Row Level Security

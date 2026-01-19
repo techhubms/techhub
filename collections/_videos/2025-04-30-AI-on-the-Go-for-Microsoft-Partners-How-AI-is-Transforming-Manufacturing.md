@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q
 date: 2025-04-30 16:00:03 +00:00
 permalink: /ai/videos/AI-on-the-Go-for-Microsoft-Partners-How-AI-is-Transforming-Manufacturing
 tags:
-- AI
 - AI On The Go
 - AI Opportunities
 - AI Trends
@@ -24,7 +23,6 @@ tags:
 - Microsoft
 - Microsoft Cloud
 - Partner Ecosystem
-- Videos
 section_names:
 - ai
 ---

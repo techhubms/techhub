@@ -10,9 +10,7 @@ date: 2025-10-22 20:06:09 +00:00
 permalink: /azure/community/Preparing-for-Azure-Relay-IP-Address-and-DNS-Changes
 tags:
 - Automation
-- Azure
 - Azure Relay
-- Community
 - DNS
 - Firewall
 - Hybrid Cloud

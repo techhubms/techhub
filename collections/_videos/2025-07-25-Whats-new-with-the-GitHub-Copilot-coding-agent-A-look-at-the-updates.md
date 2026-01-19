@@ -9,20 +9,17 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-07-25 14:01:34 +00:00
 permalink: /github-copilot/videos/Whats-new-with-the-GitHub-Copilot-coding-agent-A-look-at-the-updates
 tags:
-- AI
 - Coding Agent
 - CodingAgent
 - Copilot Business
 - Copilot Pro
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Playwright MCP
 - Remote MCP Servers
 - Screenshot Validation
 - Session Tracking
 - UI Validation
-- Videos
 section_names:
 - ai
 - github-copilot

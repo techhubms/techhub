@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-08-26 21:00:52 +00:00
 permalink: /github-copilot/news/Public-Preview-Grok-Code-Fast-1-Model-Now-Available-in-GitHub-Copilot
 tags:
-- AI
 - AI Models
 - Bring Your Own Key
 - Copilot Business
@@ -17,10 +16,8 @@ tags:
 - Copilot Pro
 - Copilot Pro+
 - Developer Tools
-- GitHub Copilot
 - Grok Code Fast 1
 - Model Management
-- News
 - VS Code
 - Xai
 section_names:

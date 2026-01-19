@@ -9,7 +9,6 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-10-02 17:00:00 +00:00
 permalink: /ai/news/Microsoft-Recognized-as-a-Leader-in-IDC-MarketScape-for-XDR
 tags:
-- AI
 - AI in Security
 - Attack Disruption
 - Automation
@@ -21,8 +20,6 @@ tags:
 - Kusto Query Language
 - Microsoft Defender XDR
 - Microsoft Security Copilot
-- News
-- Security
 - Security Operations
 - SIEM
 - Threat Hunting

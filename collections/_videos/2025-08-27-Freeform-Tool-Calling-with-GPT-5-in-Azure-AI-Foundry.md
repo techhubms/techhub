@@ -9,12 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-27 16:53:22 +00:00
 permalink: /ai/videos/Freeform-Tool-Calling-with-GPT-5-in-Azure-AI-Foundry
 tags:
-- AI
 - AI Integration
 - AI Workflows
 - Artifact Generation
 - Automation
-- Azure
 - Azure AI Foundry
 - Cloud AI
 - Cloud Computing
@@ -32,7 +30,6 @@ tags:
 - Tech
 - Technology
 - Tool Calling
-- Videos
 section_names:
 - ai
 - azure

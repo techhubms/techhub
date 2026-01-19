@@ -10,13 +10,10 @@ date: 2025-02-25 14:00:41 +00:00
 permalink: /ai/videos/Transforming-Customer-Interactions-with-Blip-AI-and-Microsoft-Solutions-at-Microsoft-Ignite-2024
 tags:
 - .NET 8
-- AI
 - AI Powered Customer Experience
-- Azure
 - Azure OpenAI Service
 - Blip
 - Cloud Innovation
-- Coding
 - Conversational AI
 - Data Streams
 - Messaging Platforms
@@ -24,7 +21,6 @@ tags:
 - Microsoft Ignite
 - Microsoft Technologies
 - Multimodal Interfaces
-- Videos
 section_names:
 - ai
 - azure

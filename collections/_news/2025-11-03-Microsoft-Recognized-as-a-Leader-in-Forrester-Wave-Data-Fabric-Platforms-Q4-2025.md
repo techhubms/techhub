@@ -10,10 +10,8 @@ date: 2025-11-03 08:00:00 +00:00
 permalink: /ai/news/Microsoft-Recognized-as-a-Leader-in-Forrester-Wave-Data-Fabric-Platforms-Q4-2025
 tags:
 - Agentic AI
-- AI
 - AI Integration
 - Analytics
-- Azure
 - Business Intelligence
 - Copilot in Fabric
 - Data Engineering
@@ -22,8 +20,6 @@ tags:
 - Data Integration
 - Forrester Wave
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Real Time Data
 - Unified Data Platform

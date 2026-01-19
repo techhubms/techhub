@@ -11,8 +11,6 @@ permalink: /coding/community/WPF-Apps-Becoming-Unresponsive-after-USB-Pen-Device
 tags:
 - .NET Framework
 - AppContext Switch
-- Coding
-- Community
 - Input Devices
 - PenThreadWorker
 - Stylus

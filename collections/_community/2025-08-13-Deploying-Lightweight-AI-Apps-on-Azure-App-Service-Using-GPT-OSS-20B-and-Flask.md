@@ -9,15 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-13 13:06:16 +00:00
 permalink: /ai/community/Deploying-Lightweight-AI-Apps-on-Azure-App-Service-Using-GPT-OSS-20B-and-Flask
 tags:
-- AI
-- Azure
 - Azure App Service
 - Azure Container Registry
 - Azure Deployment
 - Bicep
 - CI/CD Integration
-- Coding
-- Community
 - Container Sidecar
 - Enterprise Security
 - Flask

@@ -11,11 +11,9 @@ permalink: /azure/videos/From-Zero-to-Kubernetes-with-AKS-Automatic
 tags:
 - AKS
 - AKS Automatic
-- Azure
 - Azure Monitor
 - Cloud Native
 - Cloud Operations
-- DevOps
 - Infrastructure Automation
 - InnovatewithAzureAIappsandagents
 - Karpenter
@@ -29,9 +27,7 @@ tags:
 - Performance
 - Production Ready Kubernetes
 - Scalability
-- Security
 - Security Best Practices
-- Videos
 section_names:
 - azure
 - devops

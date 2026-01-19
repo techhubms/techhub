@@ -12,7 +12,6 @@ tags:
 - .NET
 - App Development
 - C#
-- Coding
 - Community Standup
 - Cross Platform
 - David Ortinau
@@ -26,7 +25,6 @@ tags:
 - Mobile Development
 - RC1
 - Release Candidate
-- Videos
 section_names:
 - coding
 ---

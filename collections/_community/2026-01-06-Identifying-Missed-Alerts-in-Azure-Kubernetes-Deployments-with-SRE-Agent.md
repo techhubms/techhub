@@ -11,17 +11,14 @@ permalink: /azure/community/Identifying-Missed-Alerts-in-Azure-Kubernetes-Deploy
 tags:
 - AKS
 - Alerting
-- Azure
 - Azure Cache For Redis
 - Azure DevOps
 - Azure Monitor
 - Azure SRE Agent
 - Bicep
 - Cloud Operations
-- Community
 - Container Orchestration
 - Credential Rotation
-- DevOps
 - GitHub MCP
 - Incident Response
 - KQL
@@ -29,7 +26,6 @@ tags:
 - Liveness Probe
 - Log Analytics
 - Monitoring
-- Security
 - Subagent
 - Synthetic Tests
 section_names:

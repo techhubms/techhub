@@ -11,11 +11,9 @@ permalink: /ai/videos/Choosing-Between-MCP-and-A2A-for-AI-Applications
 tags:
 - A2A
 - Agent Card
-- AI
 - AI Agents
 - AI Application Architecture
 - Artifacts
-- Azure
 - Generative AI
 - Integration
 - Large Language Models
@@ -26,7 +24,6 @@ tags:
 - Microsoft Cloud Platform
 - Protocols
 - Tasks
-- Videos
 section_names:
 - ai
 - azure

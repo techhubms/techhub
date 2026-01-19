@@ -9,16 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-29 17:26:23 +00:00
 permalink: /ai/community/Streamline-Cloud-Spend-with-Azure-Reserved-VM-Instances
 tags:
-- AI
 - AI Infrastructure
-- Azure
 - Azure Advisor
 - Azure Compute
 - Azure Reserved VM Instances
 - Batch Processing
 - Cloud Cost Optimization
 - Cloud Financial Management
-- Community
 - Cost Monitoring
 - Deep Learning
 - Generative AI

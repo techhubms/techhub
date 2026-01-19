@@ -16,7 +16,6 @@ tags:
 - Custom Agents
 - Developer Productivity
 - Developer Tools
-- DevOps
 - GitHub
 - GitHub Universe
 - GitHubUniverse
@@ -25,7 +24,6 @@ tags:
 - OpenAI
 - Plan Mode
 - Software Collaboration
-- Videos
 - VS Code
 section_names:
 - devops

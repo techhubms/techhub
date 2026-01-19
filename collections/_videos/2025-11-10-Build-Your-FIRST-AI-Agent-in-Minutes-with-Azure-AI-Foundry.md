@@ -11,7 +11,6 @@ permalink: /ai/videos/Build-Your-FIRST-AI-Agent-in-Minutes-with-Azure-AI-Foundry
 tags:
 - Agent Customization
 - Agent Project
-- AI
 - AI Agent
 - AI Agent Tutorial
 - AI Agents
@@ -20,7 +19,6 @@ tags:
 - AI Foundry Tutorial
 - AI Research
 - Automation
-- Azure
 - Azure AI Foundry
 - Azure Deployment
 - Azure Rag Chatbot
@@ -36,7 +34,6 @@ tags:
 - Private Knowledge Upload
 - RAG Chatbot
 - Resource Management
-- Videos
 section_names:
 - ai
 - azure

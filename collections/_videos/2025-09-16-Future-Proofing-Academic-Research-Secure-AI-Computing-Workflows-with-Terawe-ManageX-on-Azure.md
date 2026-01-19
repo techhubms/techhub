@@ -17,10 +17,8 @@ tags:
 - '#terawe'
 - '#tres'
 - Academic Research
-- AI
 - AI Models
 - Automated Data Pipelines
-- Azure
 - Cloud Computing
 - Compliance
 - Data Driven Projects
@@ -32,7 +30,6 @@ tags:
 - Self Service Workspaces
 - Terawe ManageX
 - University IT
-- Videos
 section_names:
 - ai
 - azure

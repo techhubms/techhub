@@ -9,8 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-12 19:52:53 +00:00
 permalink: /ai/videos/Exploring-MCP-Workflow-for-Database-Management-without-SQL
 tags:
-- AI
-- Azure
 - Azure AI Foundry
 - Cloud Computing
 - Cloud Tools
@@ -24,7 +22,6 @@ tags:
 - Microsoft Developer
 - Tech
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 13:29:35 +00:00
 permalink: /ai/videos/Partners-Accelerate-Media-Innovation-with-AI-Agents-and-Microsoft-Cloud
 tags:
-- AI
 - AI Agents
 - Audience Engagement
-- Azure
 - Content Creation
 - Data Foundations
 - Data Quality
@@ -23,11 +21,9 @@ tags:
 - Media Innovation
 - Microsoft Fabric
 - MicrosoftAICloudPartnerProgram
-- ML
 - MSIgnite
 - Privacy
 - Secure Cloud
-- Videos
 - Workflow Automation
 section_names:
 - ai

@@ -11,14 +11,11 @@ permalink: /azure/community/Azure-Monitors-Native-Grafana-Dashboards-Simplified-
 tags:
 - AKS
 - Application Insights
-- Azure
 - Azure Managed Grafana
 - Azure Monitor
 - Cloud Native Monitoring
-- Community
 - Container Insights
 - Dashboards
-- DevOps
 - Grafana
 - Kubernetes Monitoring
 - Metrics Visualization

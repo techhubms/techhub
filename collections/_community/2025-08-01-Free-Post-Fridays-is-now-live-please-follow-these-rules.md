@@ -11,8 +11,6 @@ permalink: /azure/community/Free-Post-Fridays-is-now-live-please-follow-these-ru
 tags:
 - Ads
 - AutoModerator
-- Azure
-- Community
 - Community Guidelines
 - Exam Dumps
 - Free Post Fridays

@@ -10,14 +10,10 @@ date: 2025-11-18 06:42:34 +00:00
 permalink: /coding/community/Microsofts-Open-Source-Advancements-for-Linux-Reliability-on-Azure
 tags:
 - ARM64
-- Azure
 - Cloud Hypervisor
 - Cloud LTS
-- Coding
-- Community
 - Confidential Computing
 - Container Security
-- DevOps
 - Hyper V
 - Kernel Updates
 - Kexec HandOver
@@ -30,7 +26,6 @@ tags:
 - OP TEE
 - Rust VMM
 - Secure Boot
-- Security
 - Systemd
 - Virtual File System
 section_names:

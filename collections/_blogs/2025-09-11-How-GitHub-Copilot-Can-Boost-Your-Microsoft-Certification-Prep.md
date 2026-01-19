@@ -9,17 +9,14 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-11 13:22:14 +00:00
 permalink: /github-copilot/blogs/How-GitHub-Copilot-Can-Boost-Your-Microsoft-Certification-Prep
 tags:
-- AI
 - AI Study Tools
 - AZ 500
 - Azure Active Directory
 - Azure CLI
-- Blogs
 - Certification Prep
 - Copilot
 - Exam Practice
 - Flashcards
-- GitHub Copilot
 - Hands On Labs
 - M365 Copilot
 - Microsoft 365

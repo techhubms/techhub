@@ -9,17 +9,14 @@ feed_url: https://devops.com/feed/
 date: 2025-08-21 14:00:40 +00:00
 permalink: /ai/blogs/HoundDogai-Code-Scanner-Shifts-Data-Privacy-Responsibility-Left
 tags:
-- AI
 - AI Integration
 - AI Security
 - Audit Reporting
-- Blogs
 - CI/CD
 - Code Scanning
 - Compliance
 - Data Loss Prevention
 - Data Privacy
-- DevOps
 - DevSecOps
 - Eclipse
 - GDPR
@@ -30,7 +27,6 @@ tags:
 - PIA
 - PII
 - Privacy By Design
-- Security
 - Shift Left
 - Social Facebook
 - Social LinkedIn

@@ -10,7 +10,6 @@ date: 2025-07-16 11:30:50 +00:00
 permalink: /ai/videos/Artificial-Intelligence-AI-and-Machine-Learning-ML-for-Everyone
 tags:
 - Agent
-- AI
 - AI Agents
 - AI Assistant
 - AI Fundamentals
@@ -28,7 +27,6 @@ tags:
 - Reinforcement Learning
 - Supervised Learning
 - Unsupervised Learning
-- Videos
 section_names:
 - ai
 ---

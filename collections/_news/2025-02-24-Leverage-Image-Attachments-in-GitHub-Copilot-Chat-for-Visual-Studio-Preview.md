@@ -9,21 +9,17 @@ feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-02-24 17:33:16 +00:00
 permalink: /github-copilot/news/Leverage-Image-Attachments-in-GitHub-Copilot-Chat-for-Visual-Studio-Preview
 tags:
-- AI
 - Code Generation
-- Coding
 - Copilot
 - Copilot Chat
 - Copilot Edits
 - CopilotFree
 - Debugging
 - Developer Tools
-- GitHub Copilot
 - GitHub Copilot Chat
 - GPT 4o
 - Image Attachments
 - LLM
-- News
 - Preview Channel
 - Project Scaffolding
 - UI Development

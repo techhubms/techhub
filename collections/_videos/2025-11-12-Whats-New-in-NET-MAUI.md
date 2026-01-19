@@ -14,7 +14,6 @@ tags:
 - App Tooling
 - ASP.NET Core 10
 - C# 14
-- Coding
 - Cross Platform Development
 - Desktop Development
 - F# 10
@@ -24,7 +23,6 @@ tags:
 - Performance Optimization
 - Single Codebase
 - User Interface
-- Videos
 - VS
 - XAML
 section_names:

@@ -10,17 +10,13 @@ date: 2025-06-07 00:00:00 +00:00
 permalink: /github-copilot/blogs/GitHub-Copilot-and-Productivity-Rethinking-Metrics-and-Value-in-Modern-Development
 tags:
 - Agent Mode
-- AI
 - Automation
-- Blogs
 - Business Value
 - Code Engagement
 - Continuous Integration
 - Developer Productivity
-- DevOps
 - Engineering Culture
 - Generative AI
-- GitHub Copilot
 - Metrics
 - ROI in Software Tools
 - SDLC

@@ -9,11 +9,9 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-19 01:19:00 +00:00
 permalink: /ai/news/Microsoft-Announces-Fairwater-Worlds-Most-Powerful-AI-Datacenter-Launches-in-Wisconsin
 tags:
-- AI
 - AI Datacenter
 - AI Inference
 - AI Training
-- Azure
 - Cloud Infrastructure
 - Cluster Computing
 - Company News
@@ -26,7 +24,6 @@ tags:
 - Liquid Cooling
 - Microsoft
 - Model Training
-- News
 - NVIDIA GB200
 - Renewable Energy
 - RL Tuning

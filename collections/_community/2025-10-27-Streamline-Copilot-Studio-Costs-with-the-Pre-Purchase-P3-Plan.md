@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-27 21:53:23 +00:00
 permalink: /ai/community/Streamline-Copilot-Studio-Costs-with-the-Pre-Purchase-P3-Plan
 tags:
-- AI
 - AI Agents
 - Billing
 - Capacity Planning
 - CCCU
-- Community
 - Copilot Credit Pre Purchase Plan
 - Copilot Studio
 - Cost Optimization

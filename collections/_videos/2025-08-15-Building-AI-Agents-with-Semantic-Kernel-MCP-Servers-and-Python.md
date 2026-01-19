@@ -10,14 +10,11 @@ date: 2025-08-15 16:15:45 +00:00
 permalink: /ai/videos/Building-AI-Agents-with-Semantic-Kernel-MCP-Servers-and-Python
 tags:
 - Agent Workflows
-- AI
 - AI Agents
 - AI Toolbox
-- Azure
 - Azure AI Foundry
 - Cloud AI
 - Cloud Computing
-- Coding
 - Dev
 - Development
 - Development Demos
@@ -33,7 +30,6 @@ tags:
 - Semantic Kernel
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

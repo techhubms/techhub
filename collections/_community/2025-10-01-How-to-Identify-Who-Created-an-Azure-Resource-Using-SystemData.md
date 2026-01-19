@@ -9,13 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-01 20:52:54 +00:00
 permalink: /azure/community/How-to-Identify-Who-Created-an-Azure-Resource-Using-SystemData
 tags:
-- Azure
 - Azure Resource Manager
 - Cloud Auditing
-- Community
 - Compliance
 - Createdby
-- DevOps
 - Governance
 - JSON View
 - Metadata
@@ -23,7 +20,6 @@ tags:
 - Resource Lifecycle
 - Resource Ownership
 - Resource Provisioning
-- Security
 - Subscription Management
 - Systemdata
 - Troubleshooting

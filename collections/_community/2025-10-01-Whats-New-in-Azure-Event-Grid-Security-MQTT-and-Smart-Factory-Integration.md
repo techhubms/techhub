@@ -10,15 +10,12 @@ date: 2025-10-01 23:22:50 +00:00
 permalink: /azure/community/Whats-New-in-Azure-Event-Grid-Security-MQTT-and-Smart-Factory-Integration
 tags:
 - API Security
-- Azure
 - Azure Event Grid
 - Azure Fabric
 - Azure Functions
 - Cloud Events
-- Community
 - Custom Webhook
 - Device Authentication
-- DevOps
 - Edge To Cloud
 - Event Driven Architecture
 - Industry 4.0
@@ -30,7 +27,6 @@ tags:
 - Pub/Sub
 - Real Time Analytics
 - SCADA
-- Security
 - Sparkplug B
 - Telemetry
 section_names:

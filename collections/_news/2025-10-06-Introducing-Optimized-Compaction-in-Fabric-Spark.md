@@ -10,7 +10,6 @@ date: 2025-10-06 11:00:00 +00:00
 permalink: /ml/news/Introducing-Optimized-Compaction-in-Fabric-Spark
 tags:
 - Auto Compaction
-- Azure
 - Blob Storage
 - Compaction
 - Data Engineering
@@ -21,8 +20,6 @@ tags:
 - File Level Compaction Target
 - Lakehouse Architecture
 - Microsoft Fabric Spark
-- ML
-- News
 - Performance Optimization
 - Spark SQL
 - Table Maintenance

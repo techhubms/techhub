@@ -10,15 +10,12 @@ date: 2025-09-25 13:00:00 +00:00
 permalink: /ml/news/Microsoft-Fabric-Update-Workspace-Admins-Gain-Direct-Workload-Assignment
 tags:
 - Analytics
-- Azure
 - Data Governance
 - Data Ingestion
 - Data Management
 - Data Quality
 - Entra ID
 - Microsoft Fabric
-- ML
-- News
 - No Code Data Integration
 - Osmos
 - Power BI

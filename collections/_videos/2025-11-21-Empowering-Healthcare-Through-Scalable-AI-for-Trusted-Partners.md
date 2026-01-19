@@ -10,10 +10,8 @@ date: 2025-11-21 13:04:53 +00:00
 permalink: /ai/videos/Empowering-Healthcare-Through-Scalable-AI-for-Trusted-Partners
 tags:
 - Agentic AI
-- AI
 - AI in Healthcare
 - Ambient AI
-- Azure
 - Clinical Applications
 - Data Platforms
 - Dragon Copilot
@@ -28,7 +26,6 @@ tags:
 - MSIgnite
 - Partner Ecosystem
 - Responsible AI
-- Videos
 - Workflow Migration
 section_names:
 - ai

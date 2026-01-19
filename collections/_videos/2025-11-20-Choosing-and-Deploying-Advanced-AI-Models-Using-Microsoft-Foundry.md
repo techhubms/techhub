@@ -10,12 +10,10 @@ date: 2025-11-20 10:26:01 +00:00
 permalink: /ai/videos/Choosing-and-Deploying-Advanced-AI-Models-Using-Microsoft-Foundry
 tags:
 - Advanced AI
-- AI
 - AI Agents
 - AI Deployment
 - Anthropic Claude
 - API Tools
-- Azure
 - Azure AI
 - Cohere
 - Enterprise Security
@@ -32,7 +30,6 @@ tags:
 - Responsible AI
 - RF3 Tool
 - Scalable AI
-- Videos
 - Xai
 section_names:
 - ai

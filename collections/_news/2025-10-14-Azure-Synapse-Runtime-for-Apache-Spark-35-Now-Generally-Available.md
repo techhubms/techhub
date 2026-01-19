@@ -10,7 +10,6 @@ date: 2025-10-14 10:29:13 +00:00
 permalink: /ml/news/Azure-Synapse-Runtime-for-Apache-Spark-35-Now-Generally-Available
 tags:
 - Apache Spark 3.5
-- Azure
 - Azure Synapse
 - Data Engineering
 - Delta Lake 3.2
@@ -18,9 +17,7 @@ tags:
 - Materialized Views
 - Microsoft Fabric
 - Migration
-- ML
 - Native Execution Engine
-- News
 - Production Workloads
 - Release Notes
 - Spark Runtime

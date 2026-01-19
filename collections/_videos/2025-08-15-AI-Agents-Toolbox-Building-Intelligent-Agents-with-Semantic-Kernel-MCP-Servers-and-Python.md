@@ -11,14 +11,11 @@ permalink: /ai/videos/AI-Agents-Toolbox-Building-Intelligent-Agents-with-Semanti
 tags:
 - Agent Workflows
 - Agents Toolbox
-- AI
 - AI Agents
 - AI Plugin Development
 - API Economy
-- Azure
 - Azure AI Foundry
 - Cloud Computing
-- Coding
 - Dev
 - Development
 - Function Calling
@@ -36,7 +33,6 @@ tags:
 - StreamableHTTP
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

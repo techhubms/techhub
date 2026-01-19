@@ -10,12 +10,9 @@ date: 2026-01-09 21:52:15 +00:00
 permalink: /ai/community/Upcoming-Free-Workshops-Agentic-Azure-Logic-Apps-and-Copilot-Studio-Integration
 tags:
 - Agentic Workflows
-- AI
 - Automation
-- Azure
 - Azure Logic Apps
 - Business Process Automation
-- Community
 - Copilot Studio
 - Enterprise Integration
 - Logic Apps Standard

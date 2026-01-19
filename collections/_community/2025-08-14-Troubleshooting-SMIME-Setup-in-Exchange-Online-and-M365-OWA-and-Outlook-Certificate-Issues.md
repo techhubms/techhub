@@ -11,7 +11,6 @@ permalink: /security/community/Troubleshooting-SMIME-Setup-in-Exchange-Online-an
 tags:
 - Certificate Enrollment
 - Certificate Trust
-- Community
 - Connect ExchangeOnline
 - Email Security
 - Encryption
@@ -26,7 +25,6 @@ tags:
 - PowerShell
 - Root Certificate
 - S/MIME
-- Security
 - SMIMECertificateIssuingCA
 - Windows
 section_names:

@@ -10,7 +10,6 @@ date: 2025-11-24 04:58:05 +00:00
 permalink: /coding/videos/Advancing-Windows-Device-Security-with-Surface-Innovation-and-Memory-Safe-Rust-Drivers
 tags:
 - Cargo WDK
-- Coding
 - Device Drivers
 - Device Firmware Configuration Interface
 - DFCI
@@ -26,8 +25,6 @@ tags:
 - Rust
 - ScalewithcloudandAIendpoints
 - Secure Core PC
-- Security
-- Videos
 - Windows Drivers Rs
 - Windows Security
 section_names:

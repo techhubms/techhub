@@ -12,18 +12,15 @@ tags:
 - Agentic Workflows
 - CI/CD
 - Credential Protection
-- DevOps
 - Gist Toolset
 - GitHub Actions
 - GitHub MCP Server
 - GraphQL
-- News
 - Prompt Injection
 - Public Repositories
 - Push Protection
 - Repository Security
 - Secret Scanning
-- Security
 - Tool Call Security
 - Workflow Automation
 section_names:

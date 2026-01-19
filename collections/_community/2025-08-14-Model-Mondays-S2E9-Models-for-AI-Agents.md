@@ -11,15 +11,12 @@ permalink: /ai/community/Model-Mondays-S2E9-Models-for-AI-Agents
 tags:
 - Agent Catalog
 - Agent Workflow
-- AI
 - Atomic Work
-- Azure
 - Azure AI Agent Service
 - Azure AI Foundry
 - Azure AI Services
 - Azure Logic Apps
 - Browser Automation Tool
-- Community
 - Discord Community
 - Enterprise AI
 - Flux Vision Models

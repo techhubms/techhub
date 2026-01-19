@@ -10,8 +10,6 @@ date: 2025-08-04 14:08:20 +00:00
 permalink: /azure/community/PIM-for-Groups-Missing-Permanently-Eligible-Option-When-Assigning-Roles
 tags:
 - Access Control
-- Azure
-- Community
 - Exchange Recipient Administrator
 - Groups
 - Identity Management

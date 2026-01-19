@@ -9,20 +9,17 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:57 +00:00
 permalink: /github-copilot/news/Enhanced-MCP-OAuth-Support-for-GitHub-Copilot-Plugins-in-JetBrains-Eclipse-and-Xcode
 tags:
-- AI
 - Authentication
 - Copilot
 - DCR
 - Dynamic Client Registration
 - Eclipse
 - Enterprise Integration
-- GitHub Copilot
 - IDE Plugins
 - Identity Provider
 - Improvement
 - JetBrains
 - MCP
-- News
 - OAuth
 - OAuth 2.0
 - OAuth 2.1

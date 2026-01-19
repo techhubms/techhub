@@ -12,15 +12,12 @@ tags:
 - .NET
 - .NET 10
 - .NET Aspire
-- AI
 - AI Development
 - AI Orchestration
 - ASP.NET Core 10
-- Azure
 - Azure AI Foundry
 - C# 14
 - Cloud Native Apps
-- Coding
 - Developer Tools
 - F# 10
 - Intelligent Applications
@@ -29,7 +26,6 @@ tags:
 - Production Deployment
 - Prompt Engineering
 - Testing
-- Videos
 - VS
 section_names:
 - ai

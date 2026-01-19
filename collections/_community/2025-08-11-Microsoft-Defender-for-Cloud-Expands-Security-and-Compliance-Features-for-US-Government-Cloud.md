@@ -10,10 +10,8 @@ date: 2025-08-11 16:00:00 +00:00
 permalink: /azure/community/Microsoft-Defender-for-Cloud-Expands-Security-and-Compliance-Features-for-US-Government-Cloud
 tags:
 - Agentless Monitoring
-- Azure
 - Azure Government
 - Cloud Security Posture Management
-- Community
 - Compliance
 - Continuous Compliance
 - CSPM
@@ -28,7 +26,6 @@ tags:
 - Multicloud Security
 - Risk Based Prioritization
 - Secrets Detection
-- Security
 - Threat Protection
 - U.S. Government Cloud
 - Vulnerability Management

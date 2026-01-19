@@ -9,18 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2026-01-15 21:04:04 +00:00
 permalink: /ai/community/Whats-New-with-Azure-NetApp-Files-VS-Code-Extension
 tags:
-- AI
 - AI Powered Commands
 - ARM Templates
-- Azure
 - Azure API
 - Azure NetApp Files
 - C#
 - Cloud Native Applications
 - Cloud Storage
-- Coding
-- Community
-- DevOps
 - DevOps Tools
 - JavaScript
 - Microsoft Entra ID

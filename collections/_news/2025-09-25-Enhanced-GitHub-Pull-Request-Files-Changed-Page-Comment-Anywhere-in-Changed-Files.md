@@ -16,7 +16,6 @@ tags:
 - Collaboration
 - Collaboration Tools
 - Developer Workflow
-- DevOps
 - Diff Viewer
 - Feature Preview
 - Files Changed
@@ -24,7 +23,6 @@ tags:
 - Improvement
 - Keyboard Shortcuts
 - Navigation
-- News
 - Pull Requests
 - Single File Mode
 - UI Enhancement

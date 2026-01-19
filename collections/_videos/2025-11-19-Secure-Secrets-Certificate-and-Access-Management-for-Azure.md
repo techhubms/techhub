@@ -10,12 +10,10 @@ date: 2025-11-19 11:24:57 +00:00
 permalink: /azure/videos/Secure-Secrets-Certificate-and-Access-Management-for-Azure
 tags:
 - ADCS Certificate Management
-- Azure
 - Azure Authentication
 - Azure DevOps
 - Cloud Security
 - Credential Management
-- DevOps
 - Granular Permissions
 - Infisical Platform
 - Infrastructure Security
@@ -25,8 +23,6 @@ tags:
 - OIDC Authentication
 - Secret Management
 - Secureyourdata
-- Security
-- Videos
 section_names:
 - azure
 - devops

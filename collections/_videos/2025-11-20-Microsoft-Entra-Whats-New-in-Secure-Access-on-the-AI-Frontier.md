@@ -12,11 +12,9 @@ tags:
 - Account Recovery
 - Agent Governance
 - Agent ID
-- AI
 - AI Security
 - App Lifecycle Management
 - Authentication
-- Azure
 - Cloud Security
 - Conditional Access
 - Identity Governance
@@ -27,10 +25,8 @@ tags:
 - MSIgnite
 - Permissions
 - Prompt Injection Protection
-- Security
 - Security Architecture
 - Unified Platform
-- Videos
 - Zero Trust
 section_names:
 - ai

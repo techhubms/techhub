@@ -12,7 +12,6 @@ tags:
 - Code
 - Code Demo
 - Code Editor
-- Coding
 - Demo
 - Developer
 - Developer Community
@@ -25,7 +24,6 @@ tags:
 - Release Highlights
 - Software Developer
 - Software Development
-- Videos
 - VS Code
 - VS Code V1.103
 - Vscoderelease

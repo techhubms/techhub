@@ -9,9 +9,7 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
 permalink: /ai/news/SQL-Database-in-Microsoft-Fabric-Now-Generally-Available
 tags:
-- AI
 - AI Ready Database
-- Azure
 - Azure DevOps
 - Azure Key Vault
 - Azure OpenAI
@@ -29,14 +27,11 @@ tags:
 - Microsoft Fabric
 - Microsoft Foundry
 - Microsoft Purview
-- ML
-- News
 - OneLake
 - Operational Data Store
 - Power BI
 - RAG
 - SaaS
-- Security
 - Semantic Kernel
 - Semantic Search
 - SQL Auditing

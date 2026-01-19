@@ -9,19 +9,15 @@ feed_url: https://code.visualstudio.com/feed.xml
 date: 2024-11-12 00:00:00 +00:00
 permalink: /github-copilot/news/Introducing-Copilot-Edits-AI-Powered-Multi-File-Editing-in-VS-Code-Preview
 tags:
-- AI
 - AI in Code Review
 - AI Powered Editing
 - Claude 3.5 Sonnet
 - Code Refactoring
-- Coding
 - Copilot Edits
 - Developer Tools
 - Extension Preview
-- GitHub Copilot
 - GPT 4o
 - Natural Language Programming
-- News
 - O1 Preview
 - Programming Productivity
 - Speculative Decoding

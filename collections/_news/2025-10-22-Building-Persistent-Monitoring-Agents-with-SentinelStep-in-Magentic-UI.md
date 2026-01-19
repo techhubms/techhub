@@ -10,7 +10,6 @@ date: 2025-10-22 15:43:25 +00:00
 permalink: /ai/news/Building-Persistent-Monitoring-Agents-with-SentinelStep-in-Magentic-UI
 tags:
 - Agent Workflow
-- AI
 - AI Evaluation
 - AI Governance
 - Company News
@@ -20,7 +19,6 @@ tags:
 - Magentic UI
 - Microsoft Research
 - Monitoring Agents
-- News
 - pip Install
 - Polling
 - Python

@@ -10,13 +10,10 @@ date: 2025-11-18 05:18:55 +00:00
 permalink: /azure/community/Windows-Server-2019-Retirement-on-AKS-enabled-by-Azure-Arc-Migration-Guidance
 tags:
 - AKS
-- Azure
 - Azure Arc
 - Cloud Operations
 - Cluster Management
-- Community
 - Container Migration
-- DevOps
 - Kubernetes
 - Microsoft Azure
 - Node Pools

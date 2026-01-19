@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-03 21:32:08 +00:00
 permalink: /azure/news/Microsoft-Edge-Adds-Passkey-Support-and-Syncing-with-Password-Manager
 tags:
-- Azure
 - Azure Confidential Ledger
 - Biometric Security
 - Cloud Security
@@ -20,11 +19,9 @@ tags:
 - Microsoft Account
 - Microsoft Edge
 - Microsoft Password Manager
-- News
 - Passkey
 - Passwordless Authentication
 - PIN Authentication
-- Security
 - Windows 10
 - Windows 11
 section_names:

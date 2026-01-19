@@ -9,7 +9,6 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 21:35:08 +00:00
 permalink: /security/community/Security-Update-Available-for-SQL-Server-2019-RTM-GDR
 tags:
-- Community
 - CVE 49759
 - Database Security
 - Denial Of Service
@@ -18,7 +17,6 @@ tags:
 - Microsoft SQL Server
 - Patch Management
 - RTM GDR
-- Security
 - Security Update
 - SQL Server
 - Update Catalog

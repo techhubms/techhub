@@ -9,12 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-12-09 18:08:55 +00:00
 permalink: /ai/videos/Nasdaq-Boardvantage-AI-Driven-Governance-Architecture-with-Azure-PostgreSQL-and-Microsoft-Foundry
 tags:
-- AI
 - AI Governance
 - AI Meeting Minutes
 - AKS
 - API Management
-- Azure
 - Azure Database For MySQL
 - Azure Database For PostgreSQL
 - Azure Functions
@@ -30,7 +28,6 @@ tags:
 - Microsoft
 - Microsoft Foundry
 - Microsoft Ignite
-- ML
 - Ms Ignite
 - Msft Ignite
 - Nasdaq Boardvantage
@@ -38,10 +35,8 @@ tags:
 - PG Vector
 - Prompt Flow
 - Regulatory Compliance
-- Security
 - Smart Document Summarization
 - Unify Your Data Platform
-- Videos
 section_names:
 - ai
 - azure

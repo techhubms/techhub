@@ -10,18 +10,15 @@ date: 2025-08-14 10:35:58 +00:00
 permalink: /github-copilot/news/Model-Context-Protocol-MCP-Support-for-GitHub-Copilot-Now-Available-in-JetBrains-Eclipse-and-Xcode
 tags:
 - Agent Mode
-- AI
 - Contextual Coding
 - Copilot Plugin
 - Developer Tools
 - Eclipse
 - Enterprise Policy
 - External Tool Integration
-- GitHub Copilot
 - IDE Integration
 - JetBrains
 - MCP
-- News
 - OAuth Authentication
 - PAT Authentication
 - Programming Productivity

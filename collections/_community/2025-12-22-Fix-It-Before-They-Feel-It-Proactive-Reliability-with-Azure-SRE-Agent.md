@@ -9,19 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-22 23:54:37 +00:00
 permalink: /ai/community/Fix-It-Before-They-Feel-It-Proactive-Reliability-with-Azure-SRE-Agent
 tags:
-- AI
 - Application Insights
 - ASP.NET Core 9.0
 - Autonomous Remediation
-- Azure
 - Azure App Service
 - Azure Bicep
 - Azure Monitor
 - Azure SRE Agent
-- Coding
-- Community
 - Deployment Health
-- DevOps
 - DevOps Automation
 - GitHub Integration
 - Incident Detection

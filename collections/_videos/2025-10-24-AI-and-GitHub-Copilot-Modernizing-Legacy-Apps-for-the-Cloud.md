@@ -10,24 +10,18 @@ date: 2025-10-24 23:58:52 +00:00
 permalink: /github-copilot/videos/AI-and-GitHub-Copilot-Modernizing-Legacy-Apps-for-the-Cloud
 tags:
 - .NET Modernization
-- AI
 - AI Powered Modernization
 - Application Modernization
-- Azure
 - Azure Deployment
 - CI/CD Automation
 - Cloud Migration
 - Code Assessment
-- Coding
-- DevOps
 - DevOps Workflow
-- GitHub Copilot
 - IaC
 - Java Modernization
 - Legacy Codebase
 - Security Fixes
 - Upgrade Automation
-- Videos
 section_names:
 - ai
 - azure

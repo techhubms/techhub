@@ -10,17 +10,13 @@ date: 2025-10-28 15:30:02 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-in-Visual-Studio-Code-Upgraded-with-OpenAI-Codex-and-New-Agent-Features
 tags:
 - Agent Sessions
-- AI
 - AI Agents
 - Code Completion
-- Coding
 - Copilot
 - Copilot Pro+
 - Developer Productivity
-- GitHub Copilot
 - GitHub Universe
 - Improvement
-- News
 - OpenAI Codex
 - Plan Mode
 - Subagents

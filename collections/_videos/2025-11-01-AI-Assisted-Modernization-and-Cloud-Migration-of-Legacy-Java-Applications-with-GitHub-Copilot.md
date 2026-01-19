@@ -9,21 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-01 00:00:14 +00:00
 permalink: /github-copilot/videos/AI-Assisted-Modernization-and-Cloud-Migration-of-Legacy-Java-Applications-with-GitHub-Copilot
 tags:
-- AI
 - AI Assisted Modernization
 - AIAssisted
 - AppModernization
 - Asset Manager
 - AWS S3
-- Azure
 - Azure Migration
 - AzureMigration
 - Cloud Migration
 - CloudMigration
-- Coding
 - CVE Scanning
-- DevOps
-- GitHub Copilot
 - Java 21
 - Java Migration
 - Java Upgrade
@@ -38,7 +33,6 @@ tags:
 - RabbitMQ
 - Security Vulnerabilities
 - Spring Boot
-- Videos
 section_names:
 - ai
 - azure

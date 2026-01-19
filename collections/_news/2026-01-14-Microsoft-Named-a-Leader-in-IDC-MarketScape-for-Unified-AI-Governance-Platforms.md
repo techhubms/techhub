@@ -10,7 +10,6 @@ date: 2026-01-14 17:00:00 +00:00
 permalink: /ai/news/Microsoft-Named-a-Leader-in-IDC-MarketScape-for-Unified-AI-Governance-Platforms
 tags:
 - Agent 365
-- AI
 - AI Governance
 - AI Risk Management
 - AI Security
@@ -27,9 +26,7 @@ tags:
 - Microsoft Purview
 - Model Monitoring
 - Multicloud
-- News
 - Responsible AI
-- Security
 - Transparency
 section_names:
 - ai

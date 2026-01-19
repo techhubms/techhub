@@ -9,18 +9,14 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-23 15:00:00 +00:00
 permalink: /ai/news/AIPowered-Real-Time-Intelligence-with-Anomaly-Detection-in-Microsoft-Fabric-Preview
 tags:
-- AI
 - Alerting
 - Anomaly Detection
-- Azure
 - Data Monitoring
 - Data Science
 - Eventhouse
 - Machine Learning Models
 - Microsoft Azure
 - Microsoft Fabric
-- ML
-- News
 - Operational Intelligence
 - Real Time Hub
 - Real Time Intelligence

@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-10-07 11:00:00 +00:00
 permalink: /ml/news/Query-and-Ingest-JSONL-Files-in-Fabric-Data-Warehouse-and-SQL-Endpoint
 tags:
-- Azure
 - CREATE TABLE as SELECT
 - CTAS
 - Data Engineering
@@ -18,8 +17,6 @@ tags:
 - JSONL
 - Lakehouse
 - Microsoft Fabric
-- ML
-- News
 - OPENROWSET
 - Schema Mapping
 - Semi Structured Data

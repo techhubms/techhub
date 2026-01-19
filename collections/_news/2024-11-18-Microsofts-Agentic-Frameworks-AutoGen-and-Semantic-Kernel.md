@@ -10,11 +10,9 @@ date: 2024-11-18 15:50:54 +00:00
 permalink: /ai/news/Microsofts-Agentic-Frameworks-AutoGen-and-Semantic-Kernel
 tags:
 - Agentic Frameworks
-- AI
 - AI Agents
 - AutoGen
 - C#
-- Coding
 - Dapr
 - Enterprise AI
 - Event Driven Architecture
@@ -24,7 +22,6 @@ tags:
 - Microsoft
 - Microsoft Orleans
 - Multi Agent Applications
-- News
 - Python
 - Semantic Kernel
 section_names:

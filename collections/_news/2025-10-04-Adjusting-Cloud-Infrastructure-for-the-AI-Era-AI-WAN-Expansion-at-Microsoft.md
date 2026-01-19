@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-04 02:01:00 +00:00
 permalink: /ai/news/Adjusting-Cloud-Infrastructure-for-the-AI-Era-AI-WAN-Expansion-at-Microsoft
 tags:
-- AI
 - AI Era
 - AI WAN
-- Azure
 - Cloud Infrastructure
 - Cloud Networking
 - Company News
@@ -24,7 +22,6 @@ tags:
 - Microsoft Azure
 - Network Capacity
 - Networking Technology
-- News
 - Optical Fiber Expansion
 section_names:
 - ai

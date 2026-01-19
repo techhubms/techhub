@@ -9,10 +9,8 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-12-11 16:00:00 +00:00
 permalink: /ai/news/Azure-Storage-Innovations-Foundation-for-AI-Powered-Data-Transformation
 tags:
-- AI
 - AI Workloads
 - ANF Migration Assistant
-- Azure
 - Azure Blob Storage
 - Azure Data Box
 - Azure Files
@@ -27,9 +25,7 @@ tags:
 - Kubernetes
 - LangChain Azure Blob Loader
 - Microsoft Entra ID
-- ML
 - Model Training
-- News
 - Premium Blob Storage
 - RAG
 - Smart Tier

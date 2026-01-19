@@ -10,7 +10,6 @@ date: 2025-10-13 09:00:00 +00:00
 permalink: /ml/news/Extending-Outbound-Access-Protection-to-Fabric-Warehouse-and-SQL-Analytics-Endpoint
 tags:
 - Analytics Security
-- Azure
 - Cloud Analytics
 - COPY INTO
 - Data Exfiltration Prevention
@@ -19,12 +18,9 @@ tags:
 - Fabric Warehouse
 - Governance
 - Microsoft Fabric
-- ML
-- News
 - OPENROWSET
 - Outbound Access Protection
 - Role Based Access Control
-- Security
 - SQL Analytics Endpoint
 - Workspace Protection
 section_names:

@@ -15,7 +15,6 @@ tags:
 - ASP.NET Core
 - Aspire
 - Cloud Native Development
-- Coding
 - Community Standup
 - Continuous Integration
 - Daniel Roth
@@ -24,7 +23,6 @@ tags:
 - Developer Community
 - Developer Tools
 - Developer Workflow
-- DevOps
 - Dotnetaspire
 - Maddy Montaquila
 - Microsoft
@@ -32,7 +30,6 @@ tags:
 - Software Developer
 - Software Engineering
 - Testing
-- Videos
 section_names:
 - coding
 - devops

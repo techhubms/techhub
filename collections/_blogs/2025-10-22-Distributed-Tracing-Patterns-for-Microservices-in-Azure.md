@@ -11,12 +11,9 @@ permalink: /azure/blogs/Distributed-Tracing-Patterns-for-Microservices-in-Azure
 tags:
 - Application Insights
 - Architecture
-- Azure
 - Azure Monitor
-- Blogs
 - Cloud Native
 - Correlation ID
-- DevOps
 - Distributed Tracing
 - Kusto Query Language
 - Microservices

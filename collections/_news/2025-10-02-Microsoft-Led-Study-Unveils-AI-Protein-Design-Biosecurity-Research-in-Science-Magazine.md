@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-02 20:43:12 +00:00
 permalink: /ai/news/Microsoft-Led-Study-Unveils-AI-Protein-Design-Biosecurity-Research-in-Science-Magazine
 tags:
-- AI
 - AI Ethics
 - AI Governance
 - AI Protein Design
@@ -20,11 +19,9 @@ tags:
 - LinkedIn Post
 - Microsoft Research
 - Mitigation Strategies
-- News
 - Red Teaming
 - Responsible AI
 - Science Magazine
-- Security
 - Synthetic Biology
 section_names:
 - ai

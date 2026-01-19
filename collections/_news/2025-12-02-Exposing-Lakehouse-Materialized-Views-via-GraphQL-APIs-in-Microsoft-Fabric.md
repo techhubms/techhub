@@ -11,8 +11,6 @@ permalink: /ml/news/Exposing-Lakehouse-Materialized-Views-via-GraphQL-APIs-in-Mi
 tags:
 - Analytics
 - API Development
-- Azure
-- Coding
 - Data Engineering
 - Data Integration
 - Data Platform
@@ -21,8 +19,6 @@ tags:
 - Lakehouse
 - Materialized View
 - Microsoft Fabric
-- ML
-- News
 - Retail Data
 - Schema Support
 - Spark SQL

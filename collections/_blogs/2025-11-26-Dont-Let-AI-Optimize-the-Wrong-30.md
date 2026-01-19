@@ -9,18 +9,15 @@ feed_url: https://roadtoalm.com/feed/
 date: 2025-11-26 11:01:39 +00:00
 permalink: /ai/blogs/Dont-Let-AI-Optimize-the-Wrong-30
 tags:
-- AI
 - AI Driven Workflows
 - AI For Meetings
 - AI in Software Development
 - AI Productivity
 - AI SDLC
 - AI Testing
-- Blogs
 - Chatgpt
 - CI/CD Automation
 - Developer Experience
-- DevOps
 - Documentation Automation
 - Programming
 - Requirements Management

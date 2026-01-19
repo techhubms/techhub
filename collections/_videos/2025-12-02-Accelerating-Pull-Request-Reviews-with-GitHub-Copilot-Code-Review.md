@@ -9,23 +9,19 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-12-02 15:00:17 +00:00
 permalink: /github-copilot/videos/Accelerating-Pull-Request-Reviews-with-GitHub-Copilot-Code-Review
 tags:
-- AI
 - AI Assistant
 - Automatic Reviews
 - Code Review
 - CodeQL
 - CodeReview
-- Coding
 - Dev Productivity
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Mission Control
 - Natural Language
 - PR Automation
 - Pull Requests
 - Review Customization
-- Videos
 section_names:
 - ai
 - coding

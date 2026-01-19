@@ -9,21 +9,17 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-28 16:55:08 +00:00
 permalink: /github-copilot/news/Sprint-to-Imagine-Cup-Igniting-Innovation-on-Campus
 tags:
-- AI
 - AI Education
 - AI Solutions
-- Coding
 - Community Events
 - Company News
 - Education
-- GitHub Copilot
 - Hands On Learning
 - Imagine Cup
 - MCP
 - Microsoft AI
 - Microsoft Learn
 - Microsoft MVP
-- News
 - Prototyping
 - Student Developers
 - Technical Skills

@@ -12,10 +12,8 @@ tags:
 - AD FS
 - Architecture
 - Authentication Protocols
-- Azure
 - Azure Active Directory
 - Azure AD B2C
-- Blogs
 - Conditional Access
 - Enterprise Applications
 - External Authentication
@@ -29,7 +27,6 @@ tags:
 - Okta
 - OpenID Connect
 - SAML 2.0
-- Security
 - Single Sign On
 - Solution Architecture
 section_names:

@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7
 date: 2025-06-30 12:49:42 +00:00
 permalink: /azure/videos/Azure-Files-Performance-Upgrade
 tags:
-- Azure
 - Azure Cloud
 - Azure Files
 - Azure Storage
@@ -30,7 +29,6 @@ tags:
 - SMB Multi Channel
 - Storage
 - Storage Limits
-- Videos
 - Workload Interaction
 section_names:
 - azure

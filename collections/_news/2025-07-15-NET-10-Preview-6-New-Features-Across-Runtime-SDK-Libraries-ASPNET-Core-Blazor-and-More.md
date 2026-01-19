@@ -15,7 +15,6 @@ tags:
 - ASP.NET Core
 - Blazor
 - C#
-- Coding
 - Containers
 - EF Core
 - Featured
@@ -23,7 +22,6 @@ tags:
 - JSON Serialization
 - Mac Catalyst
 - MAUI
-- News
 - Post Quantum Cryptography
 - VS
 - WinForms

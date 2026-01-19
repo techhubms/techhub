@@ -11,12 +11,10 @@ permalink: /devops/blogs/Why-Automation-Fails-Without-the-Right-QA-Mindset
 tags:
 - Automated Testing
 - Automation
-- Blogs
 - CI/CD
 - Collaboration
 - Continuous Delivery
 - Contributed Content
-- DevOps
 - DevOps Culture
 - Manual Testing
 - Pipeline Automation

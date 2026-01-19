@@ -10,7 +10,6 @@ date: 2025-10-01 15:00:00 +00:00
 permalink: /ml/news/Introducing-Memory-Consumption-Metrics-for-SQL-Database-in-Microsoft-Fabric
 tags:
 - Automatic Index
-- Azure
 - CPU Usage
 - Dashboard Metrics
 - Data Engineering
@@ -21,8 +20,6 @@ tags:
 - Memory Consumption
 - Metrics Tracking
 - Microsoft Fabric
-- ML
-- News
 - Performance Dashboard
 - Performance Monitoring
 - Query Analysis

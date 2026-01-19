@@ -10,12 +10,10 @@ date: 2025-07-18 14:55:42 +00:00
 permalink: /ai/videos/Azure-Update-18th-July-2025-New-Services-Features-and-Retirements
 tags:
 - AFD Classic
-- AI
 - AKS Extension Manager
 - AKS Migration Command
 - AKS Node Provisioning
 - AKS VM Node Pools
-- Azure
 - Azure AI Speaker Recognition
 - Azure Backup
 - Azure CDN
@@ -27,10 +25,8 @@ tags:
 - BlobNFS
 - Cloud
 - Cloud Migration
-- Coding
 - Cosmos DB
 - Databricks Unity Catalog
-- DevOps
 - Durable Functions Orchestration
 - Event Hub Geo Replication
 - ExpressRoute Gateway
@@ -39,12 +35,9 @@ tags:
 - Microsoft
 - Microsoft Azure
 - Microsoft Fabric
-- ML
 - PostgreSQL Flexible Server
 - PowerShell Durable Functions SDK
-- Security
 - SSD Ephemeral OS Disk
-- Videos
 section_names:
 - ai
 - azure

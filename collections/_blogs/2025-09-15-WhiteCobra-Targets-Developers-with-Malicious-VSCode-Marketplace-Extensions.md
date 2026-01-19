@@ -10,14 +10,12 @@ date: 2025-09-15 16:56:48 +00:00
 permalink: /devops/blogs/WhiteCobra-Targets-Developers-with-Malicious-VSCode-Marketplace-Extensions
 tags:
 - Attack Chain
-- Blogs
 - C2 Servers
 - Cloud Infrastructure
 - Cryptocurrency
 - Cryptocurrency Theft
 - Cybersecurity
 - Developer Security
-- DevOps
 - DevOps And Open Technologies
 - Extension.js
 - Infostealer
@@ -29,7 +27,6 @@ tags:
 - Open VSX
 - PowerShell
 - Prompt.js
-- Security
 - Social Facebook
 - Social LinkedIn
 - Social X

@@ -9,14 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-19 23:05:59 +00:00
 permalink: /ai/videos/Chatting-with-Microsoft-Foundry-AI-Models-Using-Python-in-VS-Code
 tags:
-- AI
 - AI Integration
-- Azure
 - Azure AI
 - Azure AI Foundry
 - Cloud AI
 - Cloud Computing
-- Coding
 - Dev
 - Development
 - Development Tutorial
@@ -29,7 +26,6 @@ tags:
 - Sample Code
 - Tech
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

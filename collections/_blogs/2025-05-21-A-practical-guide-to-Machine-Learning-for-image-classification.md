@@ -9,8 +9,6 @@ feed_url: https://hiddedesmet.com/feed.xml
 date: 2025-05-21 07:00:00 +00:00
 permalink: /ai/blogs/A-practical-guide-to-Machine-Learning-for-image-classification
 tags:
-- AI
-- Blogs
 - Convolutional Neural Networks
 - Data Augmentation
 - Data Preparation

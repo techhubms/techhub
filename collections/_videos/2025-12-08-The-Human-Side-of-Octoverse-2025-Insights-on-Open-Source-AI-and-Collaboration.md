@@ -9,12 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-12-08 17:12:15 +00:00
 permalink: /ai/videos/The-Human-Side-of-Octoverse-2025-Insights-on-Open-Source-AI-and-Collaboration
 tags:
-- AI
 - Code Standards
 - Community Growth
 - Contributor Advice
 - Developer Collaboration
-- DevOps
 - GitHub
 - Global Trends
 - Maintainers
@@ -22,7 +20,6 @@ tags:
 - Open Source
 - Open Source Ecosystem
 - Software Development
-- Videos
 section_names:
 - ai
 - devops

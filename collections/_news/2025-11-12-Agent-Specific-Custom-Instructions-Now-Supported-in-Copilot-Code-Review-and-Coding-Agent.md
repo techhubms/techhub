@@ -11,7 +11,6 @@ permalink: /github-copilot/news/Agent-Specific-Custom-Instructions-Now-Supported
 tags:
 - .instructions.md
 - Agent Specific Configuration
-- AI
 - Applyto Property
 - Bug Fixes
 - Code Automation
@@ -23,10 +22,8 @@ tags:
 - Developer Workflow
 - Documentation
 - Excludeagent Property
-- GitHub Copilot
 - GitHub Repository
 - Improvement
-- News
 - Path Globs
 section_names:
 - ai

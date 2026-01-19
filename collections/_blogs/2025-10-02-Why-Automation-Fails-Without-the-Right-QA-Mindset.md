@@ -9,13 +9,11 @@ feed_url: https://devops.com/feed/
 date: 2025-10-02 10:35:09 +00:00
 permalink: /devops/blogs/Why-Automation-Fails-Without-the-Right-QA-Mindset
 tags:
-- Blogs
 - Business Of DevOps
 - CI/CD
 - CI/CD Automation
 - Continuous Testing
 - Contributed Content
-- DevOps
 - DevOps Best Practices
 - DevOps Testing
 - Exploratory Testing

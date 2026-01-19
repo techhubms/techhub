@@ -9,16 +9,12 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-03-28 00:00:00 +00:00
 permalink: /github-copilot/blogs/Modernize-Legacy-Code-with-GitHub-Copilot
 tags:
-- AI
 - API Updates
 - Async/await
-- Blogs
 - Code Cleanup
 - Code Modernization
-- Coding
 - Copilot Chat
 - Copilot Edit
-- GitHub Copilot
 - JavaScript
 - Legacy Code
 - Python

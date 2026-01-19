@@ -9,17 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 16:45:53 +00:00
 permalink: /ai/videos/Real-Time-Analytics-and-AI-Applications-with-Cosmos-DB-in-Microsoft-Fabric
 tags:
-- AI
 - AI Driven Applications
 - Apache Spark
-- Azure
 - Blue Green Deployment
 - Collaborative Filtering
 - Cosmos DB
 - Medallion Architecture
 - Microsoft Fabric
 - Microsoft Ignite
-- ML
 - MSIgnite
 - Notebooks
 - Personalization
@@ -28,7 +25,6 @@ tags:
 - Unifyyourdataplatform
 - User Data Functions
 - Vector Search
-- Videos
 - Zero ETL
 section_names:
 - ai

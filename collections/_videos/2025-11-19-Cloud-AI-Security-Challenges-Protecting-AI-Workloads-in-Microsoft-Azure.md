@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 12:09:27 +00:00
 permalink: /ai/videos/Cloud-AI-Security-Challenges-Protecting-AI-Workloads-in-Microsoft-Azure
 tags:
-- AI
 - AI Workloads
 - Application Level Access Control
-- Azure
 - Check Point CloudGuard
 - Cloud AI Security
 - Cloud Security
@@ -29,9 +27,7 @@ tags:
 - MSIgnite
 - Network Security
 - SD WAN
-- Security
 - Security Architecture
-- Videos
 - Virtual WAN
 - VPN
 - WAF

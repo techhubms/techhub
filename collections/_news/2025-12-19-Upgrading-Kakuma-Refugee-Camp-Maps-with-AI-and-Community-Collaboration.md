@@ -9,8 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-19 20:04:02 +00:00
 permalink: /ai/news/Upgrading-Kakuma-Refugee-Camp-Maps-with-AI-and-Community-Collaboration
 tags:
-- AI
-- Azure
 - Community Engagement
 - Company News
 - Data Collection
@@ -20,7 +18,6 @@ tags:
 - Machine Learning
 - Mapping
 - Microsoft AI For Good Lab
-- News
 - Open Source
 - OpenStreetMap
 - Pattern Recognition

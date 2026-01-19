@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-20 09:00:00 +00:00
 permalink: /ml/news/Simplifying-Data-Ingestion-with-Copy-Job-Multiple-Scheduler-Support-in-Microsoft-Fabric
 tags:
-- Azure
 - Bulk Copy
 - CI/CD
 - Copy Job
@@ -20,9 +19,7 @@ tags:
 - Git Integration
 - Incremental Copy
 - Microsoft Fabric
-- ML
 - Multiple Scheduler
-- News
 - Orchestration
 - Public APIs
 section_names:

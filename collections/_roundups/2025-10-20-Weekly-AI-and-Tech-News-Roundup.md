@@ -7,21 +7,12 @@ date: 2025-10-20 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - Agentic AI
-- AI
 - Automation
-- Azure
 - Cloud Infrastructure
-- Coding
 - Developer Workflows
-- DevOps
-- GitHub Copilot
-- Machine Learning
 - MCP
-- ML
 - Open Source
 - Quantum Resilient Hardware
-- Roundups
-- Security
 - VS Code
 section_names:
 - ai

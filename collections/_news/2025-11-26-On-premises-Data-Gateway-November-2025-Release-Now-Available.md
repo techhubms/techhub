@@ -19,8 +19,6 @@ tags:
 - Data Source
 - Gateway Update
 - Microsoft Fabric
-- ML
-- News
 - On Premises Data Gateway
 - Power BI
 - Power BI Desktop

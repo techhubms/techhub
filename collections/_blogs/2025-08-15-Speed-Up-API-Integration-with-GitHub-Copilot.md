@@ -9,17 +9,13 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-08-15 00:00:00 +00:00
 permalink: /github-copilot/blogs/Speed-Up-API-Integration-with-GitHub-Copilot
 tags:
-- AI
 - AI Development
 - API Documentation
 - API Integration
 - Async/Await
-- Blogs
 - Code Automation
-- Coding
 - Developer Productivity
 - Error Handling
-- GitHub Copilot
 - JavaScript
 - OpenWeatherMap API
 section_names:

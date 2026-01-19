@@ -11,7 +11,6 @@ permalink: /devops/news/How-GitHub-Engineers-Solve-Platform-Problems-Best-Practi
 tags:
 - Ansible
 - Collaboration
-- DevOps
 - Distributed Systems
 - Engineering
 - GitHub
@@ -21,7 +20,6 @@ tags:
 - Knowledge Sharing
 - Monitoring
 - Network Fundamentals
-- News
 - Platform Engineering
 - Problem Solving
 - System Reliability

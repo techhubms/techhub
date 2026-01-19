@@ -13,12 +13,10 @@ tags:
 - .NET 10
 - .NET Aspire 13
 - .NET MAUI 10
-- AI
 - AI Integration
 - ASP.NET Core 10
 - C# 14
 - Cloud Native
-- Coding
 - Cross Platform Development
 - F# 10
 - Full Stack App
@@ -27,7 +25,6 @@ tags:
 - Productivity Tools
 - Single Codebase
 - Uno Platform
-- Videos
 - VS
 section_names:
 - ai

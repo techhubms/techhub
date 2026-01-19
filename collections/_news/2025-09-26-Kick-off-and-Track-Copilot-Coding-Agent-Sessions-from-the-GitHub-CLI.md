@@ -9,23 +9,18 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-26 09:00:02 +00:00
 permalink: /github-copilot/news/Kick-off-and-Track-Copilot-Coding-Agent-Sessions-from-the-GitHub-CLI
 tags:
-- AI
 - Automation
 - Background Tasks
 - CLI Tools
 - Client Apps
 - Code Review
-- Coding
 - Command Line
 - Copilot
 - Copilot Coding Agent
 - Developer Productivity
-- DevOps
 - Gh Agent Task
 - GitHub
 - GitHub CLI
-- GitHub Copilot
-- News
 - Pull Request
 - Release V2.80.0
 - Workflow Automation

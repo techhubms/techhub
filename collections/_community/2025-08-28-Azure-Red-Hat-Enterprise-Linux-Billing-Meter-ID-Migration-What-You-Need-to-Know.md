@@ -11,10 +11,8 @@ permalink: /azure/community/Azure-Red-Hat-Enterprise-Linux-Billing-Meter-ID-Migr
 tags:
 - APIs
 - Automation
-- Azure
 - Billing Meter ID
 - Budget Alerts
-- Community
 - Cost Management
 - Cost Optimization
 - Meter Migration

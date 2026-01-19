@@ -9,20 +9,16 @@ feed_url: https://zure.com/blog/rss.xml
 date: 2025-06-24 09:27:30 +00:00
 permalink: /ai/blogs/Integrating-Copilot-Agents-and-Security-Copilot-into-Enterprise-Grade-AI-Security-Architecture
 tags:
-- AI
 - AI Agent Identity
 - Audit
-- Azure
 - Azure AI Foundry
 - Azure Monitor
 - Blog
-- Blogs
 - Compliance Manager
 - Conditional Access
 - Copilot Studio
 - Data Protection
 - Defender For Cloud
-- DevOps
 - DevSecOps
 - Enterprise Security
 - Managed Identity
@@ -31,7 +27,6 @@ tags:
 - Plugin Integration
 - Prompt Injection
 - Purview DSPM
-- Security
 - Security Copilot
 - Task Adherence Evaluation
 section_names:

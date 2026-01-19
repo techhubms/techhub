@@ -13,15 +13,12 @@ tags:
 - AWS ECS
 - AWS Lambda
 - AWS Parameter Store
-- Community
-- DevOps
 - Environment Variables
 - Go
 - IAM
 - Microservices
 - Secrets Management
 - SecureString
-- Security
 section_names:
 - devops
 - security

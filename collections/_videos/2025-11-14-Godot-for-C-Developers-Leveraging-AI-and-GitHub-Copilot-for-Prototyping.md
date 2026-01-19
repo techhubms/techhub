@@ -13,19 +13,15 @@ tags:
 - .NET 10
 - .NET Aspire
 - .NET MAUI 10
-- AI
 - AI Tools
 - ASP.NET Core 10
 - C#
-- Coding
 - Debugging
 - Developer Productivity
 - F# 10
 - Game Development
-- GitHub Copilot
 - Godot
 - Prototyping
-- Videos
 - VS
 section_names:
 - ai

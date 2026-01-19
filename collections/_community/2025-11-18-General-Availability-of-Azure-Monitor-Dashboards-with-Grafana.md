@@ -12,7 +12,6 @@ tags:
 - AKS
 - Application Insights
 - ARM Templates
-- Azure
 - Azure Container Apps
 - Azure Data Explorer
 - Azure Managed Grafana
@@ -21,10 +20,8 @@ tags:
 - Azure PostgreSQL
 - Bicep
 - Cloud Native Monitoring
-- Community
 - Cosmos DB
 - Dashboard Automation
-- DevOps
 - Grafana
 - Microsoft Foundry
 - Monitoring Solutions

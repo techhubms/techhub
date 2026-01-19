@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 11:28:05 +00:00
 permalink: /ai/videos/Optimizing-Cloud-and-AI-ROI-with-Microsoft-Marketplace-Strategies
 tags:
-- AI
 - AI Strategy
-- Azure
 - Cloud Adoption
 - Cloud Governance
 - Compliance
@@ -27,7 +25,6 @@ tags:
 - PO Management Service
 - Procurement
 - Solution Deployment
-- Videos
 section_names:
 - ai
 - azure

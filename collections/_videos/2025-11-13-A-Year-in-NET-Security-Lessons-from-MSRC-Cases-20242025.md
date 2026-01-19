@@ -16,7 +16,6 @@ tags:
 - ASP.NET Core
 - C# 14
 - Cloud Native
-- Coding
 - Coding Pitfalls
 - Design Oversights
 - Developer Strategies
@@ -25,10 +24,8 @@ tags:
 - Microsoft Security Response Center
 - MSRC
 - Secure Coding
-- Security
 - Security Best Practices
 - Security Patterns
-- Videos
 - VS
 section_names:
 - coding

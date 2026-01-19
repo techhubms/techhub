@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 08:15:56 +00:00
 permalink: /ai/videos/Drive-Cost-Efficiency-and-Elevate-Azure-ROI-with-Strategic-Architecture-BRK216
 tags:
-- AI
 - AKS
 - Architecture Optimization
 - Automation
-- Azure
 - Azure Hybrid Benefit
 - Business Value
 - Cloud Native Apps
@@ -27,7 +25,6 @@ tags:
 - Policy Inheritance
 - ROI
 - Strategic Investments
-- Videos
 section_names:
 - ai
 - azure

@@ -12,7 +12,6 @@ tags:
 - AI
 - AI Ops Monitoring
 - AI Ready Workloads
-- Azure
 - Azure Local
 - Azure Storage
 - Cloud Infrastructure
@@ -29,9 +28,7 @@ tags:
 - Operational Efficiency
 - Private Cloud
 - ScalewithcloudandAIendpoints
-- Security
 - Tab0
-- Videos
 section_names:
 - azure
 - security

@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-07-24 16:37:37 +00:00
 permalink: /devops/videos/Upgrading-to-GitHubs-Remote-MCP-Server-From-Docker-Setup-to-OAuth-Simplicity
 tags:
-- DevOps
 - DevOps Workflow
 - Dynamic Toolsets
 - GitHub
@@ -19,7 +18,6 @@ tags:
 - Open Source
 - Remote Server
 - Server Upgrade
-- Videos
 section_names:
 - devops
 ---

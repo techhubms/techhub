@@ -9,10 +9,8 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-15 11:59:00 +00:00
 permalink: /ai/news/Understanding-Operations-Agent-Capacity-Usage-and-Billing-in-Microsoft-Fabric
 tags:
-- AI
 - Autonomous Agents
 - Autonomous Reasoning
-- Azure
 - Azure Metrics
 - Background Usage
 - Billing
@@ -25,8 +23,6 @@ tags:
 - Eventhouse
 - Fabric Preview
 - Microsoft Fabric
-- ML
-- News
 - OneLake Storage
 - Operations Agent
 - Power Automate

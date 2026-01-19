@@ -10,9 +10,7 @@ date: 2025-10-24 17:49:02 +00:00
 permalink: /ai/videos/Advancements-in-Developer-Agents-Task-Automation-and-Open-Source-Extensions
 tags:
 - Agent Architecture
-- AI
 - AI Agents
-- Coding
 - Developer Agents
 - Developer Tools
 - Issue Resolution
@@ -21,7 +19,6 @@ tags:
 - Software Engineering
 - SRE Agent
 - Task Automation
-- Videos
 section_names:
 - ai
 - coding

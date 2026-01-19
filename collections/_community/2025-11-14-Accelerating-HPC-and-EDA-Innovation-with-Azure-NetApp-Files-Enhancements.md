@@ -9,13 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-14 16:52:12 +00:00
 permalink: /ai/community/Accelerating-HPC-and-EDA-Innovation-with-Azure-NetApp-Files-Enhancements
 tags:
-- AI
 - AI Integration
-- Azure
 - Azure NetApp Files
 - Backup And Restore
 - Cloud Storage
-- Community
 - Compliance
 - Cost Optimization
 - Data Management
@@ -27,7 +24,6 @@ tags:
 - Performance Optimization
 - Quota Reporting
 - S3 Compatible
-- Security
 - Volume Scalability
 - Well Architected
 section_names:

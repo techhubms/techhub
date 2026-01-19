@@ -12,10 +12,8 @@ tags:
 - Agent Deployment
 - Agent Observability
 - Agentic AI
-- AI
 - AI Evaluation
 - AI Governance
-- Azure
 - Azure Essentials
 - Cognitive Monitoring
 - Copilot Studio
@@ -26,8 +24,6 @@ tags:
 - Microsoft Purview
 - Model Routing
 - Responsible AI
-- Security
-- Videos
 section_names:
 - ai
 - azure

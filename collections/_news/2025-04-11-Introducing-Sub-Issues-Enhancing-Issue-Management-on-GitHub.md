@@ -14,7 +14,6 @@ tags:
 - Architecture & Optimization
 - Beta Feedback
 - Development Process
-- DevOps
 - Dogfooding
 - Engineering
 - GitHub Issues
@@ -23,7 +22,6 @@ tags:
 - How GitHub Builds GitHub
 - Issue Tracking
 - MySQL
-- News
 - Project Management
 - React
 - Software Engineering

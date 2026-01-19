@@ -9,15 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-19 02:44:20 +00:00
 permalink: /ai/community/Introducing-Microsofts-Network-Operations-Agent-A-Telco-Framework-for-Autonomous-Networks
 tags:
-- AI
 - AI Agents
 - AI Gateway
 - AI Orchestration
-- Azure
 - Azure Agent Framework
 - Azure API Management
 - Azure Networking
-- Community
 - Copilot Integration
 - Data Mesh
 - Governance
@@ -25,13 +22,11 @@ tags:
 - Incident Response
 - MCP
 - Microsoft Fabric
-- ML
 - Multi Agent Systems
 - Network Operations Agent
 - NOA
 - OSS/BSS
 - Real Time Telemetry
-- Security
 - Security Compliance
 - Telecom Automation
 section_names:

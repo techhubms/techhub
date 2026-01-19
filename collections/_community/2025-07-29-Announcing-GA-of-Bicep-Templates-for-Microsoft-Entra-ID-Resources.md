@@ -9,13 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-07-29 15:00:00 +00:00
 permalink: /coding/community/Announcing-GA-of-Bicep-Templates-for-Microsoft-Entra-ID-Resources
 tags:
-- Azure
 - Azure Resource Manager
 - Bicep
-- Coding
-- Community
 - Deployment Automation
-- DevOps
 - Federated Identity
 - GitHub Actions
 - IaC
@@ -23,7 +19,6 @@ tags:
 - Microsoft Entra ID
 - Microsoft Graph
 - Resource Orchestration
-- Security
 - VS Code Extension
 section_names:
 - azure

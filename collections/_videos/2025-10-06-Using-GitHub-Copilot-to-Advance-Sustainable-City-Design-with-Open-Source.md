@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-10-06 18:15:16 +00:00
 permalink: /github-copilot/videos/Using-GitHub-Copilot-to-Advance-Sustainable-City-Design-with-Open-Source
 tags:
-- AI
 - City Energy Analyst
 - Climate Change
 - ClimateChange
@@ -18,12 +17,10 @@ tags:
 - Energy Efficiency
 - Environmental Technology
 - GitHub
-- GitHub Copilot
 - Open Source
 - OpenSource
 - Software Development
 - Sustainable Cities
-- Videos
 section_names:
 - ai
 - github-copilot

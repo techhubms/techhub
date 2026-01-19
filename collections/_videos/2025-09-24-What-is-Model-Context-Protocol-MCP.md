@@ -9,17 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-09-24 15:59:03 +00:00
 permalink: /github-copilot/videos/What-is-Model-Context-Protocol-MCP
 tags:
-- AI
 - AI Development
 - Automation
 - Developer Tools
-- GitHub Copilot
 - Intelligent Agents
 - MCP
 - Microsoft
 - Programming
 - Software Engineering
-- Videos
 section_names:
 - ai
 - github-copilot

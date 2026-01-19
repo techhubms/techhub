@@ -10,17 +10,13 @@ date: 2025-02-12 00:00:00 +00:00
 permalink: /github-copilot/news/Previewing-Copilot-Next-Edit-Suggestions-and-Agent-Mode-in-VS-Code
 tags:
 - Agent Mode
-- AI
 - AI Code Completion
 - AI Pair Programming
 - Code Refactoring
-- Coding
 - Copilot Chat
 - Editing Assistance
 - Editor Automation
-- GitHub Copilot
 - GPT 4o
-- News
 - Next Edit Suggestions
 - Preview Features
 - Vision Feature

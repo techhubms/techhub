@@ -9,19 +9,15 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-10-06 07:00:50 +00:00
 permalink: /github-copilot/videos/How-AI-Is-Changing-the-Way-Developers-Learn-to-Code-A-Conversation-with-Scott-Tolinski
 tags:
-- AI
 - AI in Education
 - AI Powered Development
 - Code Tutorials
-- Coding
 - Coding Assistants
 - Developer Education
-- GitHub Copilot
 - Learning To Code
 - Programming Tools
 - Scott Tolinski
 - Syntax Podcast
-- Videos
 - VS Code
 section_names:
 - ai

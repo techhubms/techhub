@@ -7,23 +7,14 @@ date: 2025-11-03 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
-- AI
 - AI Agents
 - AI Security
 - App Modernization
-- Azure
-- Coding
 - Developer Tools
-- DevOps
 - Generative AI
-- GitHub Copilot
-- Machine Learning
 - Microsoft Fabric
-- ML
 - Open Source
 - Quantum Computing
-- Roundups
-- Security
 - Vector Search
 - VS Code
 section_names:

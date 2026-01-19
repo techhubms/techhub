@@ -10,7 +10,6 @@ date: 2025-11-21 10:52:21 +00:00
 permalink: /ai/videos/Preparing-Enterprise-Workflows-for-AI-Driven-Transformation
 tags:
 - Agent Orchestration
-- AI
 - AI Agents
 - AI Demonstrations
 - AI Transformation
@@ -23,7 +22,6 @@ tags:
 - Microsoft Ignite
 - MSIgnite
 - PowerPoint Automation
-- Videos
 - Workplace Automation
 section_names:
 - ai

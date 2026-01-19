@@ -10,7 +10,6 @@ date: 2026-01-09 15:57:42 +00:00
 permalink: /azure/videos/Azure-Update-9th-January-2026
 tags:
 - AKS
-- Azure
 - Azure Cloud
 - Azure News
 - Azure Updates
@@ -27,7 +26,6 @@ tags:
 - Resource Provider Deprecation
 - Service Bus
 - TTS
-- Videos
 section_names:
 - azure
 ---

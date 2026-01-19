@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-02 17:36:29 +00:00
 permalink: /ai/videos/Understanding-AI-Agents-Turning-Plain-Language-into-Code-Execution
 tags:
-- AI
 - AI Agent
 - AI Architecture
 - AI Development
@@ -20,7 +19,6 @@ tags:
 - OneDevQuestion
 - Plain Language To Code
 - Seth Juarez
-- Videos
 section_names:
 - ai
 ---

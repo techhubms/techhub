@@ -9,10 +9,8 @@ feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-11-05 19:32:56 +00:00
 permalink: /github-copilot/news/Visual-Studio-AI-Roadmap-Copilot-Chat-Agents-and-Model-Integrations-November
 tags:
-- AI
 - AI Agents
 - AI Models
-- Coding
 - Copilot
 - Copilot Chat
 - Custom Agents
@@ -21,12 +19,10 @@ tags:
 - Development Workflow
 - Dynamic Tool Calling
 - GitHub
-- GitHub Copilot
 - GPT 5 Codex
 - IDE
 - MCP
 - Model Integrations
-- News
 - Programming Tools
 - Roadmap
 - Slash Commands

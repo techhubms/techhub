@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-15 12:53:46 +00:00
 permalink: /github-copilot/news/Auto-Model-Selection-for-GitHub-Copilot-in-VS-Code-Public-Preview
 tags:
-- AI
 - AI Models
 - Auto Model Selection
 - Billing
@@ -20,11 +19,9 @@ tags:
 - Copilot Pro
 - Copilot Pro+
 - Developer Tools
-- GitHub Copilot
 - GPT 4.1
 - GPT 5
 - Model Picker
-- News
 - Premium Request
 - Public Preview
 - Sonnet 4

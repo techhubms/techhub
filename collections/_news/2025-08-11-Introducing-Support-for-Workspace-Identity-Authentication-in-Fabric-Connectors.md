@@ -10,7 +10,6 @@ date: 2025-08-11 10:00:00 +00:00
 permalink: /ml/news/Introducing-Support-for-Workspace-Identity-Authentication-in-Fabric-Connectors
 tags:
 - Authentication
-- Azure
 - Azure Active Directory
 - Azure Blob Storage
 - Azure Data Lake Storage
@@ -24,11 +23,8 @@ tags:
 - Identity Management
 - Microsoft Entra ID
 - Microsoft Fabric
-- ML
-- News
 - Role Based Access Control
 - Secure Data Access
-- Security
 - Semantic Models
 - Service Principal
 - Workspace Identity

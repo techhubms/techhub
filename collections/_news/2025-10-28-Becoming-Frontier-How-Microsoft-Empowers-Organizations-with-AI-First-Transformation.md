@@ -9,11 +9,9 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-28 16:05:50 +00:00
 permalink: /ai/news/Becoming-Frontier-How-Microsoft-Empowers-Organizations-with-AI-First-Transformation
 tags:
-- AI
 - AI Transformation
 - Automation
 - Autonomous Agents
-- Azure
 - Azure AI Foundry
 - Azure AI Search
 - Azure Cosmos DB
@@ -28,7 +26,6 @@ tags:
 - Machine Learning
 - Microsoft Cloud
 - Natural Language Processing
-- News
 - Operational Efficiency
 - Predictive Analytics
 - Workflow Optimization

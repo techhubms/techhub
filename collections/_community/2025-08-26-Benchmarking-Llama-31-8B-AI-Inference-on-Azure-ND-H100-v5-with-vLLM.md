@@ -9,11 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-26 17:02:48 +00:00
 permalink: /ai/community/Benchmarking-Llama-31-8B-AI-Inference-on-Azure-ND-H100-v5-with-vLLM
 tags:
-- AI
 - AI Inference
-- Azure
 - Azure ND H100 V5
-- Community
 - Dynamo Inference Framework
 - FP8 Quantization
 - GPU Deployment
@@ -21,7 +18,6 @@ tags:
 - KV Cache
 - Large Language Models
 - Llama 3.1 8B
-- ML
 - PagedAttention
 - Performance Benchmarking
 - Python

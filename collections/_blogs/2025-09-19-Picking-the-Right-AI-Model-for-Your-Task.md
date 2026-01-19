@@ -9,14 +9,11 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-09-19 00:00:00 +00:00
 permalink: /github-copilot/blogs/Picking-the-Right-AI-Model-for-Your-Task
 tags:
-- AI
 - AI Models
-- Blogs
 - Claude 3.5 Sonnet
 - Claude Sonnet 4
 - Code Generation
 - Developer Tools
-- GitHub Copilot
 - GPT 4.1
 - GPT 5
 - Model Selection

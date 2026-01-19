@@ -9,20 +9,15 @@ feed_url: https://github.blog/feed/
 date: 2025-11-05 17:00:00 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Modern-AI-Coding-Workflows-Mission-Control-and-Best-Practices
 tags:
-- AI
 - AI & ML
 - AI Coding Assistant
 - Automated Testing
 - Code Refactoring
-- Coding
 - Continuous Integration
 - Copilot Agent Mode
 - Copilot CLI
 - Developer Productivity
-- DevOps
-- GitHub Copilot
 - Mission Control
-- News
 - Prompt Engineering
 - Pull Request Review
 - Python

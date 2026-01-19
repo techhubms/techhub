@@ -9,14 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-09-22 14:00:26 +00:00
 permalink: /github-copilot/videos/Use-Copilot-and-MCP-to-Query-Microsoft-Learn-Docs
 tags:
-- AI
 - API Integration
-- Coding
 - Demo
 - Developer Community
 - Developer Tools
 - Documentation Query
-- GitHub Copilot
 - Machine Learning
 - MCP
 - Microsoft
@@ -26,7 +23,6 @@ tags:
 - Promptdrivendevelopment
 - Python
 - Python Client
-- Videos
 - VS Code
 section_names:
 - ai

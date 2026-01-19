@@ -16,8 +16,6 @@ tags:
 - .NET Muxer
 - Apphost
 - BCL
-- Blogs
-- Coding
 - Context Switches
 - CoreCLR
 - Dependency Resolution

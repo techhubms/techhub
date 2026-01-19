@@ -11,16 +11,13 @@ permalink: /coding/news/Get-Started-with-Microsoft-Desired-State-Configuration-v
 tags:
 - Automation
 - CLI
-- Coding
 - Configuration Management
 - Cross Platform
 - Desired State Configuration
-- DevOps
 - DSC
 - Dsc Command
 - IaC
 - IIS
-- News
 - PowerShell
 - PowerShell DSC
 - PSDSC

@@ -9,10 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2026-01-13 22:35:21 +00:00
 permalink: /azure/community/Scaling-DCQCN-Based-Congestion-Control-for-RDMA-in-Azure-Storage-Networks
 tags:
-- Azure
 - Cloud Networking
 - Cloud Storage
-- Community
 - Congestion Control
 - Data Center
 - DCQCN

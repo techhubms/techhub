@@ -9,14 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-11 05:35:25 +00:00
 permalink: /azure/community/Calculating-Expiry-and-Retention-Days-for-Azure-Blob-Storage-Using-Inventory-and-Synapse
 tags:
-- Azure
 - Azure Blob Storage
 - Azure Data Lake Gen2
 - Azure Storage Actions
 - Azure Synapse Analytics
 - Blob Expiry
 - Blob Inventory
-- Community
 - Data Compliance
 - Data Management
 - Data Retention

@@ -9,16 +9,13 @@ feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-12-04 13:00:24 +00:00
 permalink: /github-copilot/news/Unlocking-Developer-Productivity-with-Copilot-Chats-New-URL-Context
 tags:
-- AI
 - AI Assistant
 - Code Assistance
 - Copilot Chat
 - Developer Productivity
 - Feature Limitations
-- GitHub Copilot
 - GitHub Copilot Chat
 - Model Training
-- News
 - Real Time Information
 - Reference URLs
 - Technical Documentation

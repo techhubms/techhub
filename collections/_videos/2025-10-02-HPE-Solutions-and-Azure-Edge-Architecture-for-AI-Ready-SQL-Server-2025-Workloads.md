@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-02 16:00:49 +00:00
 permalink: /ai/videos/HPE-Solutions-and-Azure-Edge-Architecture-for-AI-Ready-SQL-Server-2025-Workloads
 tags:
-- AI
 - AI Applications
 - Alletra Storage
-- Azure
 - Azure Arc
 - Cloud Computing
 - Cloud Infrastructure
@@ -26,13 +24,11 @@ tags:
 - Hybrid Workloads
 - Microsoft
 - Mission Critical Analytics
-- ML
 - Retrieval Augmented Generation
 - SQL Server
 - T SQL
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

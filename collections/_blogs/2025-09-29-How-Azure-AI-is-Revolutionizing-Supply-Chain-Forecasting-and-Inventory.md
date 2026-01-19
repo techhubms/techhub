@@ -9,9 +9,7 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-29 09:10:39 +00:00
 permalink: /ai/blogs/How-Azure-AI-is-Revolutionizing-Supply-Chain-Forecasting-and-Inventory
 tags:
-- AI
 - AutoML
-- Azure
 - Azure AI
 - Azure Cognitive Services
 - Azure Data Factory
@@ -20,10 +18,8 @@ tags:
 - Azure Machine Learning
 - Azure Stream Analytics
 - Azure Synapse Analytics
-- Blogs
 - Demand Forecasting
 - Inventory Management
-- ML
 - Power BI
 - Predictive Analytics
 - Real Time Data

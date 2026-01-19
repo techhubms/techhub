@@ -9,11 +9,9 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-06 13:10:10 +00:00
 permalink: /ai/news/OpenAIs-gptoss-Models-Now-Available-on-Azure-AI-Foundry-and-Windows-AI-Foundry
 tags:
-- AI
 - AI Customization
 - AI Model Catalog
 - AI Transparency
-- Azure
 - Azure AI Foundry
 - Company News
 - Enterprise AI
@@ -23,7 +21,6 @@ tags:
 - Intelligent Agents
 - Model Deployment
 - Model Fine Tuning
-- News
 - On Device Inference
 - Open Source AI
 - OpenAI

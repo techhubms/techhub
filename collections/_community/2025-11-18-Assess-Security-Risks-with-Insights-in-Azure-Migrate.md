@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-18 08:22:12 +00:00
 permalink: /azure/community/Assess-Security-Risks-with-Insights-in-Azure-Migrate
 tags:
-- Azure
 - Azure Migrate
 - Azure Update Manager
 - Cloud Migration
-- Community
 - Compliance
 - Datacenter Security
 - Defender For Cloud
@@ -22,7 +20,6 @@ tags:
 - On Premises Migration
 - Patch Management
 - Risk Mitigation
-- Security
 - Security Dashboard
 - Security Insights
 - Server Discovery

@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7
 date: 2025-09-10 16:04:17 +00:00
 permalink: /azure/videos/Understanding-the-New-File-Share-Resource-Type-in-Azure
 tags:
-- Azure
 - Azure Cloud
 - Azure File Share
 - Azure Storage
@@ -25,7 +24,6 @@ tags:
 - Scalability
 - Storage
 - Storage Management
-- Videos
 section_names:
 - azure
 ---

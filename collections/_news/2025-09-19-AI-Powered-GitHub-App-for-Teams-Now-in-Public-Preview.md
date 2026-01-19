@@ -9,21 +9,16 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-19 21:45:38 +00:00
 permalink: /github-copilot/news/AI-Powered-GitHub-App-for-Teams-Now-in-Public-Preview
 tags:
-- AI
 - AI Assistant
 - AI Coding Agent
 - ChatOps
 - Code Collaboration
-- Coding
 - Coding Productivity
 - Company News
 - Continuous Integration
-- DevOps
 - DevOps Automation
 - GitHub App
-- GitHub Copilot
 - Microsoft Teams
-- News
 - Pull Requests
 - Repository Analysis
 - Task Automation

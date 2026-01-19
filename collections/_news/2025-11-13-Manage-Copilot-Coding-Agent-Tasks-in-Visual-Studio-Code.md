@@ -10,18 +10,14 @@ date: 2025-11-13 13:46:13 +00:00
 permalink: /github-copilot/news/Manage-Copilot-Coding-Agent-Tasks-in-Visual-Studio-Code
 tags:
 - Agent Sessions
-- AI
 - Codespaces
-- Coding
 - Copilot
 - Copilot Chat
 - Copilot Coding Agent
 - Developer Tools
 - GitHub CLI
-- GitHub Copilot
 - GitHub Pull Requests
 - Improvement
-- News
 - Productivity
 - Session Logs
 - Task Management

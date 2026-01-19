@@ -9,11 +9,9 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-02 08:31:03 +00:00
 permalink: /ai/blogs/Using-Copilot-Studio-with-Dataverse-A-Developers-Guide
 tags:
-- AI
 - AI Agent
 - Authentication
 - Best Practices
-- Blogs
 - Copilot
 - Copilot Studio
 - Data Integration

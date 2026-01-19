@@ -13,8 +13,6 @@ tags:
 - Best Practices
 - C#
 - Clean Code
-- Coding
-- Community
 - Dependency Injection
 - Industry Standards
 - Maintainability

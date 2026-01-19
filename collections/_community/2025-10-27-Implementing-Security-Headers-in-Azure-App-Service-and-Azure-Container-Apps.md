@@ -12,11 +12,9 @@ tags:
 - .NET
 - App Security
 - Application Gateway
-- Azure
 - Azure App Service
 - Azure Container Apps
 - Azure Front Door
-- Community
 - Configuration
 - Content Security Policy
 - Express
@@ -26,7 +24,6 @@ tags:
 - Node.js
 - Permissions Policy
 - Referrer Policy
-- Security
 - Security Headers
 - Strict Transport Security
 - Web.config

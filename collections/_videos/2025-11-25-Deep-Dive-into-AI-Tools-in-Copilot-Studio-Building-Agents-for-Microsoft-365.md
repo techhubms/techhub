@@ -10,7 +10,6 @@ date: 2025-11-25 15:48:25 +00:00
 permalink: /ai/videos/Deep-Dive-into-AI-Tools-in-Copilot-Studio-Building-Agents-for-Microsoft-365
 tags:
 - Agent Demo
-- AI
 - AI Agents
 - AI Decision Making
 - Autonomous Agents
@@ -27,7 +26,6 @@ tags:
 - Retrieval Agents
 - RFI (request For Information)
 - Task Agents
-- Videos
 - Workflow Automation
 section_names:
 - ai

@@ -9,17 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-06 11:42:32 +00:00
 permalink: /ai/community/Deploying-LangChain-Applications-with-Azure-OpenAI-on-Azure-App-Service
 tags:
-- AI
 - AI Application Deployment
 - App Service
 - Authentication
 - Azd
-- Azure
 - Azure AI Foundry
 - Azure Developer CLI
 - Azure OpenAI Service
-- Coding
-- Community
 - Deployment Automation
 - FastAPI
 - GPT 4o

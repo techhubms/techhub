@@ -10,14 +10,11 @@ date: 2025-03-25 18:17:02 +00:00
 permalink: /devops/blogs/Repost-Protect-the-Repository-Hosting-Your-GitHub-Action
 tags:
 - Automation
-- Blogs
 - Changed Files Hack
 - CI/CD
-- DevOps
 - GitHub
 - GitHub Actions
 - Repository Protection
-- Security
 - Security Best Practices
 - Software Supply Chain
 - Token Security

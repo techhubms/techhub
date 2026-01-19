@@ -10,10 +10,8 @@ date: 2025-11-11 15:22:57 +00:00
 permalink: /ai/news/How-Frontier-Firms-Drive-Business-Transformation-with-Microsoft-AI
 tags:
 - Agentic AI
-- AI
 - AI Budgets
 - AI Transformation
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
 - Business Transformation
@@ -28,7 +26,6 @@ tags:
 - Industry Specific AI
 - Manufacturing
 - Microsoft AI
-- News
 - Retail AI
 section_names:
 - ai

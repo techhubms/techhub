@@ -9,10 +9,8 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-15 08:58:36 +00:00
 permalink: /ai/news/Hack-the-Future-of-Data-with-Microsoft-Fabric-Global-AI-and-Data-Hackathon
 tags:
-- AI
 - Analytics
 - AutoML
-- Azure
 - Azure Databases
 - Copilot Studio
 - Cosmos DB
@@ -23,8 +21,6 @@ tags:
 - Hackathon
 - Livestream Learning
 - Microsoft Fabric
-- ML
-- News
 - Open Mirroring
 - Power BI
 - Real Time Intelligence

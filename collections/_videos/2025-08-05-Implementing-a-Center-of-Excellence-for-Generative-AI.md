@@ -9,12 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-05 07:00:27 +00:00
 permalink: /ai/videos/Implementing-a-Center-of-Excellence-for-Generative-AI
 tags:
-- AI
 - AI Center Of Excellence
 - AI Governance
 - AI Resources
 - AI Strategy
-- Azure
 - Azure Essentials
 - Azure Well Architected Framework
 - Continuous Improvement
@@ -24,7 +22,6 @@ tags:
 - Microsoft Cloud Adoption Framework
 - Organizational Adoption
 - Team Structure
-- Videos
 section_names:
 - ai
 - azure

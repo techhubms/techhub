@@ -9,10 +9,8 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-05 09:26:10 +00:00
 permalink: /azure/blogs/Azure-Security-Basics-Network-Security-Groups-Firewalls-and-Defender-for-Cloud
 tags:
-- Azure
 - Azure Firewall
 - Azure Monitor
-- Blogs
 - Cloud Architecture
 - Cloud Security
 - Defense in Depth
@@ -23,7 +21,6 @@ tags:
 - Microsoft Defender For Cloud
 - Network Security Group
 - NSG
-- Security
 - Security Auditing
 - Security Posture Management
 - Security Recommendations

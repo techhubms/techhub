@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 13:17:27 +00:00
 permalink: /ai/videos/Advancing-Mainframe-Modernization-with-Slingshot-and-Microsoft-Azure
 tags:
-- AI
 - AI Powered Migration
-- Azure
 - Azure Infrastructure
 - Cloud Transformation
 - COBOL Migration
@@ -29,7 +27,6 @@ tags:
 - Slingshot
 - System Architecture
 - Technical Specification
-- Videos
 section_names:
 - ai
 - azure

@@ -11,10 +11,8 @@ permalink: /ai/videos/From-Prompt-to-Production-Scaling-Agentic-AI-with-NVIDIA-a
 tags:
 - Agentic AI
 - Agenticbusinessapplications
-- AI
 - AI Agents
 - AI Deployment
-- Azure
 - Azure AI
 - Business Innovation
 - Cloud Computing
@@ -27,7 +25,6 @@ tags:
 - NeMo Agent Toolkit
 - NVIDIA Nemotron
 - NVIDIA NIM
-- Videos
 - Workflow Orchestration
 section_names:
 - ai

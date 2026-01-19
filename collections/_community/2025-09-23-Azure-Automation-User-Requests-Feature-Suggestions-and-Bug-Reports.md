@@ -10,13 +10,9 @@ date: 2025-09-23 10:12:56 +00:00
 permalink: /coding/community/Azure-Automation-User-Requests-Feature-Suggestions-and-Bug-Reports
 tags:
 - Automation Account
-- Azure
 - Azure Automation
 - Bug Reports
-- Coding
-- Community
 - Community Feedback
-- DevOps
 - Feature Requests
 - GitHub Integration
 - Hybrid Workers

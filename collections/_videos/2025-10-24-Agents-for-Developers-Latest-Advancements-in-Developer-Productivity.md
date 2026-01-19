@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-24 17:48:26 +00:00
 permalink: /ai/videos/Agents-for-Developers-Latest-Advancements-in-Developer-Productivity
 tags:
-- AI
 - AI Developer Tools
 - Developer Agents
 - Developer Productivity
@@ -20,7 +19,6 @@ tags:
 - Software Engineering
 - SRE Agent
 - Task Automation
-- Videos
 section_names:
 - ai
 ---

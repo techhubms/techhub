@@ -9,21 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-29 14:00:30 +00:00
 permalink: /github-copilot/videos/The-Download-GitHub-Copilot-Agents-Actions-Security-and-Vites-npm-Milestone
 tags:
-- AI
 - AIBI Pocket
-- Coding
 - Continuous Integration
 - Developer News
-- DevOps
 - DevOps Security
 - GitHub Actions
-- GitHub Copilot
 - GitHub Universe
 - JavaScript
 - Linux Kernel
 - Next.js 15.5
 - npm
-- Videos
 - Vite
 - Web Development
 - Webpack

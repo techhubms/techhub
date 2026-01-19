@@ -10,7 +10,6 @@ date: 2025-05-20 20:01:23 +00:00
 permalink: /ai/videos/The-Agentic-Web-Part-1-with-Kevin-Scott
 tags:
 - Agentic Web
-- AI
 - AI Agents
 - AI Integration
 - AI Strategy
@@ -21,7 +20,6 @@ tags:
 - Microsoft Build
 - Microsoft Ignite
 - Technology Trends
-- Videos
 section_names:
 - ai
 ---

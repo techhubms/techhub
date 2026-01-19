@@ -9,20 +9,16 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-03 22:06:59 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-and-Visual-Studio-2026-November-Update-Highlights
 tags:
-- AI
 - AI Assisted Development
 - Cloud Coding Agent
 - Code Comments
 - Code Generation
-- Coding
 - Context Menu Features
 - Copilot
 - Copilot Actions
 - Copilot Cloud Agent
 - Developer Productivity
-- GitHub Copilot
 - Intent Detection
-- News
 - Refactoring
 - Release Notes
 - UI Cleanup

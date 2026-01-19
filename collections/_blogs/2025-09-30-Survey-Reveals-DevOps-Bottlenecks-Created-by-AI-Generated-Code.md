@@ -9,14 +9,11 @@ feed_url: https://devops.com/feed/
 date: 2025-09-30 15:59:01 +00:00
 permalink: /ai/blogs/Survey-Reveals-DevOps-Bottlenecks-Created-by-AI-Generated-Code
 tags:
-- AI
 - AI Adoption
 - AI Generated Code
 - AI Tools
-- Blogs
 - Code
 - Continuous Delivery
-- DevOps
 - Governance
 - Harness
 - Large Language Models

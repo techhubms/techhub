@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-08 15:29:40 +00:00
 permalink: /ai/news/Global-AI-Adoption-in-2025-Regional-Gaps-and-Diffusion-Metrics
 tags:
-- AI
 - AI Adoption
 - AI Diffusion
 - AI Infrastructure
@@ -26,7 +25,6 @@ tags:
 - Global AI Usage
 - Microsoft
 - Microsoft AI Economy Institute
-- News
 - Open Source AI
 - OpenAI
 - Policy

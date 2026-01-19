@@ -10,11 +10,9 @@ date: 2025-12-11 05:23:42 +00:00
 permalink: /azure/community/Capacity-Planning-with-Azure-Container-Apps-Workload-Profiles
 tags:
 - Autoscaling
-- Azure
 - Azure Container Apps
 - Capacity Planning
 - Cloud Infrastructure
-- Community
 - High Availability
 - Kubernetes
 - Microsoft Azure

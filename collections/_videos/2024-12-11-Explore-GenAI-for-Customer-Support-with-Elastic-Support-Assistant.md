@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2024-12-11 18:06:10 +00:00
 permalink: /ai/videos/Explore-GenAI-for-Customer-Support-with-Elastic-Support-Assistant
 tags:
-- AI
 - AI Driven Support
-- Azure
 - Azure OpenAI
 - Chatbot
 - Customer Support
@@ -23,7 +21,6 @@ tags:
 - MSIgnite
 - RAG Architecture
 - Support Automation
-- Videos
 section_names:
 - ai
 - azure

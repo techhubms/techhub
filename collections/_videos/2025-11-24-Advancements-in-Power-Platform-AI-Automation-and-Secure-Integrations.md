@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 11:20:28 +00:00
 permalink: /ai/videos/Advancements-in-Power-Platform-AI-Automation-and-Secure-Integrations
 tags:
-- AI
 - AI Integration
 - Automation
 - Copilot Studio
@@ -27,7 +26,6 @@ tags:
 - RPA
 - Secure Connectors
 - Server Side Logic
-- Videos
 section_names:
 - ai
 ---

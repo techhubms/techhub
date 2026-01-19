@@ -11,7 +11,6 @@ permalink: /coding/videos/NET-Conf-2025-Student-Zone
 tags:
 - .NET
 - .NET Conf
-- Coding
 - Community Sessions
 - Developer Conference
 - Developer Skills
@@ -23,7 +22,6 @@ tags:
 - Tech Talks
 - Trivia Games
 - Twitch
-- Videos
 - Virtual Event
 section_names:
 - coding

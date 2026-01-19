@@ -10,14 +10,11 @@ date: 2025-11-24 19:12:09 +00:00
 permalink: /ai/videos/Migrating-Microsoft-Foundry-Workflows-to-VS-Code-Web
 tags:
 - Agent Workflow
-- AI
-- Azure
 - Azure AI
 - Azure AI Foundry
 - Cloud Computing
 - Cloud Development
 - Code First Development
-- Coding
 - Dev
 - Developer Tools
 - Development
@@ -28,7 +25,6 @@ tags:
 - Tech
 - Technical Tutorial
 - Technology
-- Videos
 - VS Code
 - VS Code Web
 - Workflow Migration

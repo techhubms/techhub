@@ -9,13 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-07 18:46:27 +00:00
 permalink: /ai/community/Build-Your-Microsoft-Ignite-Schedule-Top-Sessions-for-IT-Pros
 tags:
-- AI
 - AI Agents
 - Automation
-- Azure
 - Azure CLI
 - Cloud Infrastructure
-- Community
 - Compliance
 - Enterprise Workloads
 - Governance
@@ -25,7 +22,6 @@ tags:
 - Migration
 - PowerShell
 - Resiliency
-- Security
 section_names:
 - ai
 - azure

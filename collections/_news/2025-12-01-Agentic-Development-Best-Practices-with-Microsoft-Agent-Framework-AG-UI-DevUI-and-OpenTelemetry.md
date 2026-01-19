@@ -15,8 +15,6 @@ tags:
 - Agent Workflow
 - Agentic Development
 - Agents
-- AI
-- Coding
 - CopilotKit Integration
 - Developer Tools
 - DevUI
@@ -25,7 +23,6 @@ tags:
 - LLM Debugging
 - Microsoft Agent Framework
 - Multi Agent Systems
-- News
 - Observability
 - OpenTelemetry
 - Python

@@ -12,7 +12,6 @@ tags:
 - Bitbucket Migration
 - Cloud Storage
 - Command Line Tools
-- DevOps
 - Enterprise Migration
 - GEI
 - Gh Bbs2gh
@@ -21,7 +20,6 @@ tags:
 - GitHub Enterprise Importer
 - GitHub Owned Blob Storage
 - GitLab Migration
-- News
 - Public Preview
 - Repository Migration
 section_names:

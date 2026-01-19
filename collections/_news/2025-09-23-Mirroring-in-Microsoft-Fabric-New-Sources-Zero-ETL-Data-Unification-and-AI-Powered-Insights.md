@@ -9,9 +9,7 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-23 10:00:00 +00:00
 permalink: /ai/news/Mirroring-in-Microsoft-Fabric-New-Sources-Zero-ETL-Data-Unification-and-AI-Powered-Insights
 tags:
-- AI
 - Analytics
-- Azure
 - Azure SQL Managed Instance
 - Data Agent
 - Data Governance
@@ -22,8 +20,6 @@ tags:
 - Google BigQuery
 - Microsoft Fabric
 - Mirroring
-- ML
-- News
 - On Premises Gateway
 - OneLake
 - Open Mirroring

@@ -9,22 +9,18 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-12 15:00:00 +00:00
 permalink: /ai/news/Microsoft-Recognized-as-a-Leader-in-the-2025-Gartner-Magic-Quadrant-for-Container-Management
 tags:
-- AI
 - AI Workloads
 - AKS
 - AKS Automatic
-- Azure
 - Azure Arc
 - Azure Container Apps
 - Azure Developer CLI
 - Azure Kubernetes Fleet Manager
 - Azure Machine Learning
 - Cloud Native
-- Coding
 - Compute
 - Container Management
 - Containers
-- DevOps
 - DevSecOps
 - Gartner Magic Quadrant
 - Gartner® Magic Quadrant™
@@ -33,9 +29,7 @@ tags:
 - Hybrid Cloud
 - Kubernetes
 - Microsoft Defender For Containers
-- News
 - Operational Simplicity
-- Security
 - VS Code
 section_names:
 - ai

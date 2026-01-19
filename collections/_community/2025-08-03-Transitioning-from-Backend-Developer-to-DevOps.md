@@ -14,9 +14,7 @@ tags:
 - Career Transition
 - CI/CD
 - Cloud
-- Community
 - Developer Skills
-- DevOps
 - Engineering Practices
 - Infrastructure
 - Software Engineering

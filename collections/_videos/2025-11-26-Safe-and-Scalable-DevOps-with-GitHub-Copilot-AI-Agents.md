@@ -10,27 +10,22 @@ date: 2025-11-26 00:45:29 +00:00
 permalink: /github-copilot/videos/Safe-and-Scalable-DevOps-with-GitHub-Copilot-AI-Agents
 tags:
 - Agentic Tasks
-- AI
 - AI Agents
 - Automation
 - Chris Patterson
 - CLI
 - Cloud Environments
-- Coding
 - Custom Copilot Agents
 - Demo
 - Developer Workflows
-- DevOps
 - Enterprise Adoption
 - GitHub
-- GitHub Copilot
 - Governance
 - InnovatewithAzureAIappsandagents
 - Luke Hoban
 - Microsoft Ignite
 - MSIgnite
 - Scalable Agent Deployment
-- Videos
 - VS Code
 section_names:
 - ai

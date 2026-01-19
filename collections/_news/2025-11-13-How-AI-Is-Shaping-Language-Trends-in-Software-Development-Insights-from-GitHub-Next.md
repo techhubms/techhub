@@ -10,16 +10,13 @@ date: 2025-11-13 16:00:00 +00:00
 permalink: /ai/news/How-AI-Is-Shaping-Language-Trends-in-Software-Development-Insights-from-GitHub-Next
 tags:
 - Agents
-- AI
 - AI Development Tools
 - AI Feedback Loop
 - Bash Scripting
-- Coding
 - Developer Productivity
 - Enterprise AI Adoption
 - GitHub Next
 - LLMs
-- News
 - News & Insights
 - Octoverse
 - Programming Languages

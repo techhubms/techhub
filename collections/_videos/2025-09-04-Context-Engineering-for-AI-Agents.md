@@ -10,7 +10,6 @@ date: 2025-09-04 16:00:23 +00:00
 permalink: /ai/videos/Context-Engineering-for-AI-Agents
 tags:
 - Agent Design
-- AI
 - AI Agents
 - AI Development
 - AI Engineering
@@ -25,7 +24,6 @@ tags:
 - Tech
 - Technical Tutorial
 - Technology
-- Videos
 section_names:
 - ai
 ---

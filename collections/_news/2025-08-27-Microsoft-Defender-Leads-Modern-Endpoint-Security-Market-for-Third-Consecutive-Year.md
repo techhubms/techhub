@@ -21,8 +21,6 @@ tags:
 - Linux Security
 - Market Share
 - Microsoft Defender
-- News
-- Security
 - Security Operations Center
 - Threat Protection
 - Zero Trust

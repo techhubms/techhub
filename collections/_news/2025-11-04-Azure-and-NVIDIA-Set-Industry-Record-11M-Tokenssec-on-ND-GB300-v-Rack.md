@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-04 03:36:00 +00:00
 permalink: /ai/news/Azure-and-NVIDIA-Set-Industry-Record-11M-Tokenssec-on-ND-GB300-v-Rack
 tags:
-- AI
 - AI At Scale
 - AI Infrastructure
-- Azure
 - Azure AI
 - Azure ND GB300 V
 - Cloud AI
@@ -24,7 +22,6 @@ tags:
 - Microsoft Azure
 - Model Optimization
 - Network Fabric
-- News
 - NVIDIA
 - Production Scale AI
 - Token Throughput

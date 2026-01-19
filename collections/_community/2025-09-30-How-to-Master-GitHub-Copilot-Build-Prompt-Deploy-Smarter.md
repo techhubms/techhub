@@ -9,18 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-30 05:00:00 +00:00
 permalink: /github-copilot/community/How-to-Master-GitHub-Copilot-Build-Prompt-Deploy-Smarter
 tags:
-- AI
 - AI Assisted Development
 - Automation
-- Azure
 - Best Practices
 - C#
 - Cloud Deployments
 - Code Quality
-- Coding
-- Community
 - Developer Productivity
-- GitHub Copilot
 - Hands On Workshop
 - JavaScript
 - Jupyter Notebooks

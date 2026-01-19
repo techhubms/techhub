@@ -9,18 +9,15 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-13 16:47:51 +00:00
 permalink: /ai/news/Building-Community-First-AI-Infrastructure-Microsofts-5-Point-Initiative
 tags:
-- AI
 - AI Infrastructure
 - AI Literacy
 - AI Training
-- Azure
 - Community Engagement
 - Company News
 - Electricity Policy
 - Environmental Responsibility
 - Job Creation
 - Microsoft Datacenters
-- News
 - Nonprofit Investment
 - Property Tax
 - Public Policy

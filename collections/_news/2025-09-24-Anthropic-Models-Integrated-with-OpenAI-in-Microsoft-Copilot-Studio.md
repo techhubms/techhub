@@ -11,7 +11,6 @@ permalink: /ai/news/Anthropic-Models-Integrated-with-OpenAI-in-Microsoft-Copilot
 tags:
 - Admin Controls
 - Agent Deployment
-- AI
 - AI Tools
 - Anthropic
 - Claude Opus 4.1
@@ -22,7 +21,6 @@ tags:
 - Microsoft Copilot Studio
 - Model Orchestration
 - Multi Agent Orchestration
-- News
 - OpenAI
 - Power Platform Admin Center
 - Prompt Engineering

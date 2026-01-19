@@ -9,7 +9,6 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-11-07 17:00:00 +00:00
 permalink: /ai/news/Whisper-Leak-Novel-Side-Channel-Attack-on-Remote-Language-Models-Uncovered-by-Microsoft
 tags:
-- AI
 - AI Security
 - BERT
 - Cyberattack Mitigation
@@ -22,12 +21,10 @@ tags:
 - Machine Learning
 - Microsoft Azure
 - Network Security
-- News
 - Obfuscation
 - OpenAI
 - Packet Size Analysis
 - Privacy
-- Security
 - Side Channel Attack
 - Streaming Model
 - TLS

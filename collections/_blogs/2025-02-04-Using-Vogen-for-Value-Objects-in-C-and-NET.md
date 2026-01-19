@@ -10,9 +10,7 @@ date: 2025-02-04 00:00:00 +00:00
 permalink: /coding/blogs/Using-Vogen-for-Value-Objects-in-C-and-NET
 tags:
 - .NET
-- Blogs
 - C#
-- Coding
 - Domain Modeling
 - NuGet
 - Pac Man

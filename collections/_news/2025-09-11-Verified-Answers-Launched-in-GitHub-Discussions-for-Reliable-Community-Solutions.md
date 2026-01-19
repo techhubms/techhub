@@ -17,11 +17,9 @@ tags:
 - Community Management
 - Copilot Readiness
 - Developer Collaboration
-- DevOps
 - GitHub Discussions
 - Knowledge Sharing
 - LLM Integration
-- News
 - Repository Administration
 - Verified Answers
 section_names:

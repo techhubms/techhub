@@ -10,9 +10,7 @@ date: 2025-11-20 11:23:30 +00:00
 permalink: /ai/videos/Accelerating-Agentic-Journeys-in-Financial-Services-with-Microsoft-AI
 tags:
 - Agentic Journeys
-- AI
 - AI Adoption
-- Azure
 - Azure AI Foundry
 - Client Agents
 - Copilot Studio
@@ -27,7 +25,6 @@ tags:
 - Morningstar Case Study
 - MSIgnite
 - Partner Program
-- Videos
 section_names:
 - ai
 - azure

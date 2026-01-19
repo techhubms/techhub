@@ -10,11 +10,9 @@ date: 2025-07-23 12:30:14 +00:00
 permalink: /ai/videos/Getting-Started-with-MCP-Model-Context-Protocol
 tags:
 - .NET
-- AI
 - AI Development
 - AI Integration
 - C#
-- Coding
 - Dan Clarke
 - Data Interface
 - Large Language Models
@@ -22,7 +20,6 @@ tags:
 - MCP
 - Microsoft
 - Nick Chapsas
-- Videos
 section_names:
 - ai
 - coding

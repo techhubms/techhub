@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 07:32:17 +00:00
 permalink: /ai/videos/Best-Practices-for-Always-On-AI-Agents-Using-Copilot-Studio-and-Power-Platform
 tags:
-- AI
 - AI Agents
 - Always On Agents
 - API Automation
@@ -31,7 +30,6 @@ tags:
 - Power Platform
 - Resilience
 - SSDR
-- Videos
 section_names:
 - ai
 ---

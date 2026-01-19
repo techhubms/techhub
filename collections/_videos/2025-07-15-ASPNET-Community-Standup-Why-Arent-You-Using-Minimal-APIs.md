@@ -13,7 +13,6 @@ tags:
 - API Architecture
 - ASP.NET
 - ASP.NET Core
-- Coding
 - Controller Based Apps
 - Daniel Roth
 - Developer Community
@@ -21,7 +20,6 @@ tags:
 - Minimal APIs
 - Minimalapis
 - Safia Abdalla
-- Videos
 - Web APIs
 - Web Development
 section_names:

@@ -10,7 +10,6 @@ date: 2025-10-07 17:00:00 +00:00
 permalink: /github-copilot/news/How-GitHub-Copilot-Automated-Accessibility-Governance-at-GitHub
 tags:
 - Accessibility
-- AI
 - AI & ML
 - AI Assisted Development
 - Automation
@@ -18,14 +17,11 @@ tags:
 - Compliance
 - Developer Experience
 - Developer Workflow
-- DevOps
 - DevOps Automation
 - GitHub Actions
-- GitHub Copilot
 - GitHub Issues
 - Governance
 - Idempotent Logic
-- News
 - Project Management
 - Remediation Workflow
 - Stakeholder Visibility

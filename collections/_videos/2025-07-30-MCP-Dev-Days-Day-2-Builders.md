@@ -10,21 +10,16 @@ date: 2025-07-30 20:16:44 +00:00
 permalink: /ai/videos/MCP-Dev-Days-Day-2-Builders
 tags:
 - Agent Integration
-- AI
 - AI Development
 - API Management
-- Azure
 - Azure Container Apps
 - Azure Functions
-- Coding
 - MCP
 - MCP Servers
 - MCPDevDays
 - Prompt Engineering
 - Scalability
-- Security
 - Security Best Practices
-- Videos
 section_names:
 - ai
 - azure

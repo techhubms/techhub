@@ -11,10 +11,7 @@ permalink: /ai/community/Transforming-City-Operations-Edge-RAG-and-Azure-Arc-in-
 tags:
 - Adaptive Cloud
 - Agentic Workflow
-- AI
-- Azure
 - Azure Arc
-- Community
 - Compliance
 - Conversational AI
 - DataON
@@ -30,7 +27,6 @@ tags:
 - Municipal AI
 - OCR
 - Offline Support
-- Security
 - SharePoint Integration
 - Smart Cities
 - Zero Trust

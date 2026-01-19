@@ -14,17 +14,14 @@ tags:
 - Benchmarking
 - C#
 - Code Improvement
-- Coding
 - CPU Tracing
 - Developer Tools
-- GitHub Copilot
 - Memory Allocation
 - Open Source
 - Performance Optimization
 - Performance Profiling
 - Profiling Techniques
 - Software Development
-- Videos
 - VS
 section_names:
 - coding

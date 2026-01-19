@@ -11,22 +11,18 @@ permalink: /github-copilot/videos/Generating-Agent-Code-Using-AI-Toolkit-and-Git
 tags:
 - Agent Builder
 - Agent Code Generation
-- AI
 - AI Toolkit
 - Cloud Computing
 - Code Refinement
-- Coding
 - Copilot Integration
 - Dev
 - Developer Tools
 - Development
-- GitHub Copilot
 - Local Environment Setup
 - Microsoft
 - Microsoft Foundry
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - coding

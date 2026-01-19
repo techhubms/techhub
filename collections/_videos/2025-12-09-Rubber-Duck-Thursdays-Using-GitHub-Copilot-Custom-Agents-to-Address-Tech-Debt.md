@@ -9,20 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-12-09 13:22:36 +00:00
 permalink: /github-copilot/videos/Rubber-Duck-Thursdays-Using-GitHub-Copilot-Custom-Agents-to-Address-Tech-Debt
 tags:
-- AI
 - Automation
 - CI/CD
 - Custom Agents
 - Developer Tools
-- DevOps
 - GitHub
 - GitHub Actions
-- GitHub Copilot
 - Live Coding
 - Refactoring
 - Software Maintenance
 - Tech Debt
-- Videos
 - Workflow Automation
 section_names:
 - ai

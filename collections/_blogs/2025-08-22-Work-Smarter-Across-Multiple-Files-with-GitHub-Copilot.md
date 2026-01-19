@@ -10,16 +10,13 @@ date: 2025-08-22 00:00:00 +00:00
 permalink: /github-copilot/blogs/Work-Smarter-Across-Multiple-Files-with-GitHub-Copilot
 tags:
 - Agent Mode
-- AI
 - Authentication
-- Blogs
 - Code Navigation
 - Code Refactoring
 - Copilot Chat
 - Cross File Editing
 - Developer Workflow
 - Edit Mode
-- GitHub Copilot
 - Multi File Context
 - Project Structure
 - Testing

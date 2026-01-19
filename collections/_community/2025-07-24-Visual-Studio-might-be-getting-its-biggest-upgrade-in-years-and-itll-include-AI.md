@@ -9,11 +9,8 @@ feed_url: https://www.reddit.com/r/VisualStudio/.rss
 date: 2025-07-24 11:14:13 +00:00
 permalink: /ai/community/Visual-Studio-might-be-getting-its-biggest-upgrade-in-years-and-itll-include-AI
 tags:
-- AI
 - AI Features
 - AI Integration
-- Coding
-- Community
 - Development Tools
 - IDE
 - Microsoft

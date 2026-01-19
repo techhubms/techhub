@@ -13,7 +13,6 @@ tags:
 - Audit Logs
 - Authentication Methods
 - Azure Active Directory
-- Blogs
 - Cloud Security
 - Conditional Access
 - Defender For Office 365
@@ -29,7 +28,6 @@ tags:
 - Phishing Protection
 - Privileged Identity Management
 - Purview
-- Security
 - Security Defaults
 - Threat Protection
 - Trial Tenant

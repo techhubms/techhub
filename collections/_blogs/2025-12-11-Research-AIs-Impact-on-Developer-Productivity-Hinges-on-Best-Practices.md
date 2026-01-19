@@ -9,12 +9,10 @@ feed_url: https://devclass.com/feed/
 date: 2025-12-11 11:32:34 +00:00
 permalink: /ai/blogs/Research-AIs-Impact-on-Developer-Productivity-Hinges-on-Best-Practices
 tags:
-- AI
 - AI Assisted Coding
 - AI/ML
 - Atlassian
 - Atlassian DX
-- Blogs
 - Code Hygiene
 - Code Quality
 - Developer Productivity

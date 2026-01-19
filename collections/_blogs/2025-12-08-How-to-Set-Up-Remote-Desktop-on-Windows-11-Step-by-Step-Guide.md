@@ -9,7 +9,6 @@ feed_url: https://dellenny.com/feed/
 date: 2025-12-08 12:11:18 +00:00
 permalink: /security/blogs/How-to-Set-Up-Remote-Desktop-on-Windows-11-Step-by-Step-Guide
 tags:
-- Blogs
 - Desktop Connection
 - Firewall
 - Microsoft Account
@@ -20,7 +19,6 @@ tags:
 - RDP
 - Remote Access
 - Remote Desktop
-- Security
 - System Administration
 - Technical Support
 - User Permissions

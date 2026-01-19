@@ -13,15 +13,12 @@ tags:
 - 1Password
 - ASP.NET Core
 - Authentication
-- Coding
 - Device Security
 - Passkeys
 - Passwordless Authentication
 - Phishing Resistance
 - Public Key Cryptography
-- Security
 - Security Key Integration
-- Videos
 - WebAuthn
 - Yubikey
 section_names:

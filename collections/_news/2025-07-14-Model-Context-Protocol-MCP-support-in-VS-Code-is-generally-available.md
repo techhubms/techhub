@@ -9,14 +9,11 @@ date: 2025-07-14 16:32:15 +00:00
 permalink: /github-copilot/news/Model-Context-Protocol-MCP-support-in-VS-Code-is-generally-available
 viewing_mode: external
 tags:
-- AI
 - AI Assistant
 - Data Sources
 - External Tools
-- GitHub Copilot
 - Integration
 - MCP
-- News
 - Production Environments
 - Software Development
 - VS Code

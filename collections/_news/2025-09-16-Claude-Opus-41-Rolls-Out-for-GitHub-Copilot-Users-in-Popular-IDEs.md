@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-16 16:57:42 +00:00
 permalink: /github-copilot/news/Claude-Opus-41-Rolls-Out-for-GitHub-Copilot-Users-in-Popular-IDEs
 tags:
-- AI
 - AI Model
 - Anthropic
 - Claude Opus 4.1
@@ -19,11 +18,9 @@ tags:
 - Copilot Pro+
 - Developer Tools
 - Eclipse
-- GitHub Copilot
 - IDE Integration
 - JetBrains
 - Model Picker
-- News
 - Product Release
 - VS
 - Xcode

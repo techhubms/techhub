@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 15:09:40 +00:00
 permalink: /ai/videos/Sentinel-Alert-to-Autonomous-Action-Controlled-AI-Response-Framework
 tags:
-- AI
 - AI Agents
 - Analyst Copilot
 - Automation
-- Azure
 - Blink Micro Agents
 - Builder Copilot
 - Incident Response
@@ -25,9 +23,7 @@ tags:
 - Microsoft Teams Alerts
 - MicrosoftAICloudPartnerProgram
 - MSIgnite
-- Security
 - Security Automation
-- Videos
 - Workflow Editor
 section_names:
 - ai

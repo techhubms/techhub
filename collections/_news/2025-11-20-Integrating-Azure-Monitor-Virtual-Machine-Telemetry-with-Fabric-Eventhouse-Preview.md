@@ -10,7 +10,6 @@ date: 2025-11-20 12:00:00 +00:00
 permalink: /ml/news/Integrating-Azure-Monitor-Virtual-Machine-Telemetry-with-Fabric-Eventhouse-Preview
 tags:
 - AD Hoc Query
-- Azure
 - Azure Data Explorer
 - Azure Monitor
 - Azure Monitor Agent
@@ -20,8 +19,6 @@ tags:
 - Fabric Eventhouse
 - Grafana
 - Infrastructure Monitoring
-- ML
-- News
 - OneLake
 - Operational Insights
 - Power BI Integration

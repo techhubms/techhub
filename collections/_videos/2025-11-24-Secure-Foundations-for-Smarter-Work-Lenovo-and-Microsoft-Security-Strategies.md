@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 10:33:11 +00:00
 permalink: /ai/videos/Secure-Foundations-for-Smarter-Work-Lenovo-and-Microsoft-Security-Strategies
 tags:
-- AI
 - AI Innovation
 - AI Security
-- Azure
 - Azure Stack HCI
 - Business Transformation
 - CISO
@@ -24,12 +22,10 @@ tags:
 - Microsoft Sentinel
 - MSIgnite
 - ScalewithcloudandAIendpoints
-- Security
 - Security Copilot
 - Security Services
 - ThinkAgile
 - TruScale
-- Videos
 section_names:
 - ai
 - azure

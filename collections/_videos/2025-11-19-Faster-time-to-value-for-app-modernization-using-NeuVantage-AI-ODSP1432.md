@@ -10,16 +10,13 @@ date: 2025-11-19 12:53:00 +00:00
 permalink: /ai/videos/Faster-time-to-value-for-app-modernization-using-NeuVantage-AI-ODSP1432
 tags:
 - Agenticbusinessapplications
-- AI
 - AI Driven Assessment
 - App Modernization
 - Artifact Packages
-- Azure
 - Azure Resource Breakdown
 - Azure Services Recommendation
 - Cost Savings
 - Deployment Scripts
-- DevOps
 - Infrastructure Assessment
 - Microsoft Ignite
 - Modernization Candidates
@@ -30,7 +27,6 @@ tags:
 - Rehost
 - Replatform
 - Terraform
-- Videos
 - Workflow Automation
 section_names:
 - ai

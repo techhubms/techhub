@@ -12,9 +12,7 @@ tags:
 - .NET Foundation
 - Apache License 2.0
 - AutoMapper
-- Blogs
 - BSD License
-- Coding
 - Commercial Services
 - Contributor License Agreement
 - Copyleft License

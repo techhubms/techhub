@@ -10,7 +10,6 @@ date: 2025-11-20 08:30:00 +00:00
 permalink: /ml/news/Fine-grained-ReadWrite-Access-to-Data-with-OneLake-Security-Preview
 tags:
 - Access Management
-- Azure
 - Data Access Control
 - Data Architecture
 - Data Collaboration
@@ -19,14 +18,11 @@ tags:
 - Lakehouse Security
 - Least Privilege
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - OneLakeFileExplorer
 - ReadWrite Permissions
 - RLS
 - Role Based Security
-- Security
 - Spark Notebooks
 - Structured Data
 - Unstructured Data

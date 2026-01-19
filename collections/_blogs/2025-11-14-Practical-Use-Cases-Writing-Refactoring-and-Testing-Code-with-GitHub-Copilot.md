@@ -9,18 +9,13 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-14 08:54:01 +00:00
 permalink: /github-copilot/blogs/Practical-Use-Cases-Writing-Refactoring-and-Testing-Code-with-GitHub-Copilot
 tags:
-- AI
 - AI Coding Assistant
-- Blogs
 - CI/CD
 - Code Refactoring
 - Code Review
-- Coding
 - Coding Productivity
-- DevOps
 - DevOps Automation
 - Flask
-- GitHub Copilot
 - JavaScript
 - Pair Programming
 - Python

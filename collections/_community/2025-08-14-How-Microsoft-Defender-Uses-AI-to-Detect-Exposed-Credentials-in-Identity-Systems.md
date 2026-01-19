@@ -10,11 +10,9 @@ date: 2025-08-14 14:42:00 +00:00
 permalink: /ai/community/How-Microsoft-Defender-Uses-AI-to-Detect-Exposed-Credentials-in-Identity-Systems
 tags:
 - Active Directory
-- AI
 - AI Powered Detection
 - AI Security
 - Attack Surface Reduction
-- Community
 - Credential Exposure
 - Cybersecurity
 - Exposed Credentials
@@ -26,7 +24,6 @@ tags:
 - Microsoft Entra ID
 - Non Human Identities
 - Posture Management
-- Security
 - Security Best Practices
 section_names:
 - ai

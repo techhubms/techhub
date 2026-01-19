@@ -10,11 +10,8 @@ date: 2025-08-03 10:49:12 +00:00
 permalink: /azure/community/Automating-Azure-DevOps-Service-Connection-Creation-via-Release-Pipelines
 tags:
 - Authentication
-- Azure
 - Azure DevOps
-- Community
 - Continuous Deployment
-- DevOps
 - GitHub
 - JSON
 - OIDC

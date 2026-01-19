@@ -9,21 +9,17 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-18 23:20:29 +00:00
 permalink: /ai/community/Azure-Networking-2025-Powering-Cloud-Innovation-and-AI-at-Global-Scale
 tags:
-- AI
 - AI Supercomputer
-- Azure
 - Azure Copilot
 - Azure Networking
 - Azure Route Server
 - Cloud Infrastructure
-- Community
 - DNS Security
 - ExpressRoute
 - Hybrid Cloud
 - Microsoft Azure
 - Network Resiliency
 - Network Security
-- Security
 - Traffic Manager
 - Virtual WAN
 - VPN Gateway

@@ -10,7 +10,6 @@ date: 2025-07-02 15:00:00 +00:00
 permalink: /ml/news/Running-high-performance-PostgreSQL-on-Azure-Kubernetes-Service
 tags:
 - AKS
-- Azure
 - Azure Blob Storage
 - Azure Container Storage
 - CloudNativePG
@@ -20,8 +19,6 @@ tags:
 - Database Performance
 - High Availability
 - Kubernetes
-- ML
-- News
 - NVMe
 - Persistent Storage
 - PostgreSQL

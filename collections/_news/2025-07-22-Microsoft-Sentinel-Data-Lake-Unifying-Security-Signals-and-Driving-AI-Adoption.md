@@ -9,17 +9,13 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-07-22 13:00:00 +00:00
 permalink: /ai/news/Microsoft-Sentinel-Data-Lake-Unifying-Security-Signals-and-Driving-AI-Adoption
 tags:
-- AI
 - AI Adoption
-- Azure
 - Cost Optimization
 - Cybersecurity
 - Data Lake
 - Incident Response
 - Microsoft Sentinel
-- News
 - Public Preview
-- Security
 - Security Operations
 - SIEM
 - Unified Security Data

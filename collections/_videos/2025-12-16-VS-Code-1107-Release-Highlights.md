@@ -12,7 +12,6 @@ tags:
 - Code
 - Code Editor
 - Codeeditor
-- Coding
 - Demo
 - Developer
 - Developer Tools
@@ -25,7 +24,6 @@ tags:
 - Rename Suggestions
 - Software Developer
 - Software Development
-- Videos
 - VS Code
 section_names:
 - coding

@@ -12,7 +12,6 @@ tags:
 - AI
 - AI Workflows
 - Automatic Synchronization
-- Azure
 - BI
 - Change Tracking
 - CSV Upload
@@ -22,8 +21,6 @@ tags:
 - Free Storage
 - Microsoft Fabric
 - Mirroring
-- ML
-- News
 - OneLake
 - Parquet Files
 - Primary Key

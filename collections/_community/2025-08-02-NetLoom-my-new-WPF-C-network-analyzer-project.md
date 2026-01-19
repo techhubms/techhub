@@ -11,8 +11,6 @@ permalink: /coding/community/NetLoom-my-new-WPF-C-network-analyzer-project
 tags:
 - .NET
 - C#
-- Coding
-- Community
 - Interface Monitoring
 - NetLoom
 - Network Analyzer

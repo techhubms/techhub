@@ -12,9 +12,7 @@ tags:
 - Account Disablement
 - Account Provisioning
 - Active Directory
-- Azure
 - Cloud Sync
-- Community
 - Entra Connect
 - Password Hash Sync
 - Resource Access

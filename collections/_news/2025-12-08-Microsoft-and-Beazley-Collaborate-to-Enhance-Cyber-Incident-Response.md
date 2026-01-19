@@ -21,8 +21,6 @@ tags:
 - Legal Compliance
 - Microsoft Incident Response
 - Microsoft Security
-- News
-- Security
 - Security Operations
 - Security Services
 - Threat Intelligence

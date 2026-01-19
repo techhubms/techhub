@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-10 18:23:11 +00:00
 permalink: /azure/videos/Azure-Cost-Estimation-Practical-Strategies-and-Tools-Explained
 tags:
-- Azure
 - Azure Advisor
 - Azure Architecture
 - Azure Cost Management
@@ -23,7 +22,6 @@ tags:
 - Cost Management Tools
 - Microsoft Copilot
 - Resource Configuration
-- Videos
 section_names:
 - azure
 ---

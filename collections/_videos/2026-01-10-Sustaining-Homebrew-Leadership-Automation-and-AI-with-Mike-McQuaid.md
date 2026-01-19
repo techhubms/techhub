@@ -9,18 +9,14 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2026-01-10 15:01:29 +00:00
 permalink: /github-copilot/videos/Sustaining-Homebrew-Leadership-Automation-and-AI-with-Mike-McQuaid
 tags:
-- AI
 - AI in Development
 - Automation
 - Bug Fixing
-- Coding
 - Community Management
 - Continuous Improvement
 - Developer Tools
-- DevOps
 - Documentation
 - GitHub
-- GitHub Copilot
 - Homebrew
 - Leadership
 - Linux
@@ -31,7 +27,6 @@ tags:
 - Pull Requests
 - Software Maintenance
 - Team Scaling
-- Videos
 - Volunteer Management
 section_names:
 - ai

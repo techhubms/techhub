@@ -8,26 +8,17 @@ permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
 - Agentic AI
-- AI
 - AI Tools
 - Application Security
-- Azure
 - Cloud Security
-- Coding
 - Copilot Studio
 - Data Analytics
-- DevOps
 - Enterprise Automation
-- GitHub Copilot
 - GPT 5
 - LLMs
-- Machine Learning
 - MCP
 - Microsoft Fabric
-- ML
 - Open Source
-- Roundups
-- Security
 - VS Code
 section_names:
 - ai

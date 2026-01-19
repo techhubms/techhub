@@ -9,15 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-15 16:12:57 +00:00
 permalink: /github-copilot/videos/GPT-5-and-Claude-41-Arrive-in-GitHub-Copilot-TypeScript-59-Updates-and-Community-News
 tags:
-- AI
 - AI Integration
 - Anthropic
 - Claude Opus 4.1
-- Coding
 - Developer Tools
 - DeveloperNews
 - GitHub
-- GitHub Copilot
 - GPT 5
 - JS13kGames
 - MCP
@@ -28,7 +25,6 @@ tags:
 - React Native
 - Reanimated 4
 - TypeScript 5.9
-- Videos
 - VS Code
 section_names:
 - ai

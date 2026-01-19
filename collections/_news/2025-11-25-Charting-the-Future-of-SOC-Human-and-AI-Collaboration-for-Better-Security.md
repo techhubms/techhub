@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-25 18:53:09 +00:00
 permalink: /ai/news/Charting-the-Future-of-SOC-Human-and-AI-Collaboration-for-Better-Security
 tags:
-- AI
 - AI Engineering
 - Autonomous AI Agents
 - Case Management
@@ -23,11 +22,9 @@ tags:
 - MDR Operations
 - Microsoft Defender Experts
 - Microsoft Security
-- News
 - Phishing
 - Prompt Engineering
 - Remediation
-- Security
 - Security Automation
 - Security Operations Center
 - SOC

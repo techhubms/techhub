@@ -9,25 +9,20 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-08-17 14:00:41 +00:00
 permalink: /github-copilot/videos/What-is-GitHub-Secret-Protection-GitHub-Explained
 tags:
-- AI
 - AI Security
 - API Keys
 - Continuous Integration
 - Copilot
 - Credential Protection
-- DevOps
 - DevOps Security
 - GitHub
-- GitHub Copilot
 - Password Detection
 - Secret Protection
 - SecretProtection
 - Secrets Scanning
 - Secure Development
-- Security
 - Security Automation
 - Token Security
-- Videos
 section_names:
 - ai
 - devops

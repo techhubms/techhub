@@ -9,8 +9,6 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-04-01 12:18:55 +00:00
 permalink: /azure/blogs/Video-Load-Balancing-in-Azure-Best-Practices-with-KEMP-LoadMaster
 tags:
-- Azure
-- Blogs
 - Cloud
 - Cloud Architecture
 - Cloud Computing

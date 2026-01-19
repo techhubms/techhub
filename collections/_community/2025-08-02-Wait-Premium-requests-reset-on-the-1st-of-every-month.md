@@ -9,13 +9,10 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-02 03:08:35 +00:00
 permalink: /github-copilot/community/Wait-Premium-requests-reset-on-the-1st-of-every-month
 tags:
-- AI
 - Billing Cycle
-- Community
 - Copilot Pro+
 - Fairness
 - Feature Clarity
-- GitHub Copilot
 - Monthly Reset
 - Premium Requests
 - Request Limits

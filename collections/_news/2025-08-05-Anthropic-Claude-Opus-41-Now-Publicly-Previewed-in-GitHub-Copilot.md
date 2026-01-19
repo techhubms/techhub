@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-08-05 16:13:48 +00:00
 permalink: /github-copilot/news/Anthropic-Claude-Opus-41-Now-Publicly-Previewed-in-GitHub-Copilot
 tags:
-- AI
 - AI Models
 - Anthropic
 - Claude Opus 4.1
@@ -17,10 +16,8 @@ tags:
 - Copilot Chat
 - Copilot Enterprise
 - Copilot Pro+
-- GitHub Copilot
 - Model Picker
 - Model Rollout
-- News
 - VS Code
 section_names:
 - ai

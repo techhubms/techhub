@@ -9,11 +9,9 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-06-18 15:00:00 +00:00
 permalink: /ai/news/Maximize-Your-ROI-for-Azure-OpenAI-Pricing-Deployment-and-Cost-Optimization-Strategies
 tags:
-- AI
 - AI + Machine Learning
 - AI Deployment
 - Analytics
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
 - Batch Processing
@@ -27,13 +25,10 @@ tags:
 - Management And Governance
 - Microsoft Cost Management
 - Migration
-- ML
 - Model Router
-- News
 - Pricing Models
 - Prompt Caching
 - Provisioned Throughput
-- Security
 section_names:
 - ai
 - azure

@@ -9,19 +9,14 @@ feed_url: https://code.visualstudio.com/feed.xml
 date: 2024-10-29 17:00:00 +00:00
 permalink: /github-copilot/news/Whats-New-in-Visual-Studio-Code-October-2024-v195-Copilot-Extensions-and-Productivity
 tags:
-- AI
 - AI Development
-- Coding
 - Copilot Chat
 - Copilot Edits
 - Copilot Extensions
 - Data Analysis
-- DevOps
 - Electron 32
 - ESLint 9
-- GitHub Copilot
 - Mermaid Diagrams
-- News
 - Open Source
 - Pull Requests
 - Pylance

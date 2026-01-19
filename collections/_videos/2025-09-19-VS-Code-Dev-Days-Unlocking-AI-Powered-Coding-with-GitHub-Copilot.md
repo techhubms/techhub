@@ -9,25 +9,21 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-09-19 21:26:13 +00:00
 permalink: /github-copilot/videos/VS-Code-Dev-Days-Unlocking-AI-Powered-Coding-with-GitHub-Copilot
 tags:
-- AI
 - AI Assisted Development
 - AI Integration
 - AI Workflow
 - Code
 - Code Completion
-- Coding
 - Coding Workflow
 - Demo
 - Developer
 - Developer Community
 - Developer Tools
-- GitHub Copilot
 - Microsoft
 - Productivity Tools
 - Programming Productivity
 - Software Developer
 - Software Development
-- Videos
 - VS Code
 - VS Code Extensions
 - Vscodelive

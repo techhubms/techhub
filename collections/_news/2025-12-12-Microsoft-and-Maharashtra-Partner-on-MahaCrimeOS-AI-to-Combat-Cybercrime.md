@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-12 06:45:00 +00:00
 permalink: /ai/news/Microsoft-and-Maharashtra-Partner-on-MahaCrimeOS-AI-to-Combat-Cybercrime
 tags:
-- AI
 - AI Deployment
 - AI in Policing
-- Azure
 - Azure Collaboration
 - Company News
 - Cybercrime
@@ -25,11 +23,9 @@ tags:
 - LinkedIn Post
 - MahaCrimeOS AI
 - Microsoft Azure
-- News
 - OpenAI
 - Public Safety
 - Satya Nadella
-- Security
 - Security Automation
 section_names:
 - ai

@@ -11,18 +11,14 @@ permalink: /ai/news/Announcing-NET-10-A-Major-Release-for-Modern-Productive-and-
 tags:
 - .NET
 - .NET 10
-- AI
 - AI Integration
 - AppHost
 - ASP.NET Core
-- Azure
 - Azure SQL
 - Blazor
 - C#
 - C# 14
-- Coding
 - Cosmos DB
-- DevOps
 - Entity Framework Core 10
 - F#
 - F# 10
@@ -33,7 +29,6 @@ tags:
 - Microsoft Agent Framework
 - Minimal APIs
 - NativeAOT
-- News
 - NuGet
 - OpenAPI
 - Performance

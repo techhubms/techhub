@@ -12,7 +12,6 @@ tags:
 - Beginner Guide
 - Branches
 - Developer Workflow
-- DevOps
 - Git
 - Git Checkout
 - GitHub
@@ -21,7 +20,6 @@ tags:
 - Source Control
 - Tutorial
 - Version Control
-- Videos
 section_names:
 - devops
 ---

@@ -9,18 +9,14 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-20 15:52:24 +00:00
 permalink: /ai/community/Automating-On-Call-Runbooks-with-Azure-SRE-Agent-for-Incident-Response
 tags:
-- AI
 - Application Insights
 - Automated Diagnostics
 - Az CLI
-- Azure
 - Azure App Service
 - Azure Container Apps
 - Azure Monitor
 - Azure SRE Agent
 - Cloud Operations
-- Community
-- DevOps
 - Email Integration
 - Incident Response
 - KQL

@@ -11,8 +11,6 @@ permalink: /ml/blogs/FabConEurope-Key-Announcements-and-Features-from-Microsofts
 tags:
 - AI
 - AI Skills
-- Azure
-- Blogs
 - Conference
 - Data & AI
 - Data Engineering
@@ -23,7 +21,6 @@ tags:
 - Fabric Community Conference
 - Fabric Runtime
 - Microsoft Fabric
-- ML
 - Network Security
 - Real Time Analytics
 - T SQL Notebooks

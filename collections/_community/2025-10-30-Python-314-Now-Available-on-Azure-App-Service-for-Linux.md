@@ -11,13 +11,10 @@ permalink: /coding/community/Python-314-Now-Available-on-Azure-App-Service-for-L
 tags:
 - App Service Deployment
 - ARM Templates
-- Azure
 - Azure App Service
 - Azure CLI
 - Azure Platform
 - Bicep Templates
-- Coding
-- Community
 - Developer Experience
 - Interpreter Enhancements
 - Linux Hosting

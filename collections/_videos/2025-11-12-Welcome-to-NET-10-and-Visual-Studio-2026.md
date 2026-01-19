@@ -17,16 +17,13 @@ tags:
 - ASP.NET Core 10
 - C# 14
 - Cloud Native
-- Coding
 - Cross Platform
 - Developer Tools
-- DevOps
 - F# 10
 - Language Enhancements
 - Modern Web Development
 - Orchestration
 - Productivity
-- Videos
 - VS
 section_names:
 - coding

@@ -11,19 +11,15 @@ permalink: /ai/news/Azure-Developer-CLI-azd-December-2025-Extensions-Foundry-and
 tags:
 - .NET
 - Agent Extensions
-- AI
 - Azd
-- Azure
 - Azure Developer CLI
 - Azure Pipelines
 - Azure SDK
 - Bicep CLI
 - CI/CD
 - Codespaces
-- Coding
 - Command Line Tools
 - Container Apps
-- DevOps
 - Docker
 - Error Handling
 - Extensions
@@ -33,7 +29,6 @@ tags:
 - JavaScript
 - Kubernetes
 - Microsoft Foundry
-- News
 - Python
 - Static Web Apps
 - Template Gallery

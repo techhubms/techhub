@@ -10,13 +10,10 @@ date: 2025-10-14 18:16:13 +00:00
 permalink: /ai/community/Building-Agents-on-Azure-Container-Apps-with-Goose-AI-Agent-Ollama-and-gpt-oss
 tags:
 - Agentic Frameworks
-- AI
 - AI Agents
 - Automation
-- Azure
 - Azure Container Apps
 - Cloud Security
-- Community
 - Containerization
 - Custom Models
 - Data Governance

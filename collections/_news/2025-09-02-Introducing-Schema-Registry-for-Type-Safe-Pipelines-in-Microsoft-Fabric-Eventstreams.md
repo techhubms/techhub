@@ -10,7 +10,6 @@ date: 2025-09-02 11:30:00 +00:00
 permalink: /ml/news/Introducing-Schema-Registry-for-Type-Safe-Pipelines-in-Microsoft-Fabric-Eventstreams
 tags:
 - Avro
-- Azure
 - Azure SQL CDC
 - Data Governance
 - Data Management
@@ -20,8 +19,6 @@ tags:
 - Eventhouse
 - Eventstream
 - Microsoft Fabric
-- ML
-- News
 - Preview Features
 - Real Time Intelligence
 - Schema Registry

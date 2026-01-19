@@ -11,14 +11,11 @@ permalink: /ai/news/Microsoft-Foundry-Empowering-Developers-with-a-Modular-and-S
 tags:
 - Agent Orchestration
 - Agent Stack
-- AI
 - AI + Machine Learning
 - AI Agents
 - Anthropic Claude
-- Azure
 - Azure App Service
 - Cohere
-- DevOps
 - Enterprise AI
 - Foundry Agent Service
 - Foundry IQ
@@ -28,11 +25,9 @@ tags:
 - Microsoft Ignite
 - Model Fine Tuning
 - Model Router
-- News
 - Observability
 - OpenAI
 - Retrieval Augmented Generation
-- Security
 - Security And Governance
 section_names:
 - ai

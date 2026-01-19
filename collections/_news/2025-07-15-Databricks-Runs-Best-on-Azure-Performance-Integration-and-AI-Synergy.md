@@ -9,12 +9,10 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-07-15 15:00:00 +00:00
 permalink: /ai/news/Databricks-Runs-Best-on-Azure-Performance-Integration-and-AI-Synergy
 tags:
-- AI
 - AI + Machine Learning
 - AI Integration
 - Analytics
 - Autoscaling
-- Azure
 - Azure AI Foundry
 - Azure Databricks
 - Azure DevOps
@@ -25,16 +23,11 @@ tags:
 - Cross Cloud Governance
 - Data Engineering
 - Data Lifecycle
-- DevOps
 - Governance
-- Machine Learning
 - Microsoft Entra ID
 - Microsoft Fabric
 - Microsoft Purview
-- ML
-- News
 - Power BI
-- Security
 - Unity Catalog
 section_names:
 - ai

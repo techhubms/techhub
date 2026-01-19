@@ -9,11 +9,8 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-20 10:30:00 +00:00
 permalink: /ai/news/Copilot-and-Query-Editor-Now-Generally-Available-in-SQL-Database-on-Microsoft-Fabric
 tags:
-- AI
 - AI Assistance
-- Azure
 - Azure SQL Database
-- Coding
 - Copilot
 - Data Engineering
 - Data Grid
@@ -21,9 +18,7 @@ tags:
 - Developer Tools
 - Keyboard Shortcuts
 - Microsoft Fabric
-- ML
 - Natural Language To SQL
-- News
 - Performance Optimization
 - Query Editor
 - SaaS

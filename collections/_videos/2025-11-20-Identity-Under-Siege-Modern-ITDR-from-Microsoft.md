@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-20 15:59:31 +00:00
 permalink: /azure/videos/Identity-Under-Siege-Modern-ITDR-from-Microsoft
 tags:
-- Azure
 - Cloud Security
 - Conditional Access
 - Cybersecurity
@@ -24,10 +23,8 @@ tags:
 - MSIgnite
 - Multi Factor Authentication
 - Risk Analysis
-- Security
 - Security Automation
 - Threat Protection
-- Videos
 - Zero Trust
 section_names:
 - azure

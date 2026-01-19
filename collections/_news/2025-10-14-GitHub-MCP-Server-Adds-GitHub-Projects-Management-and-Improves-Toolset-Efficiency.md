@@ -11,12 +11,10 @@ permalink: /devops/news/GitHub-MCP-Server-Adds-GitHub-Projects-Management-and-Im
 tags:
 - Copilot
 - Default Toolset
-- DevOps
 - DevOps Automation
 - GitHub MCP Server
 - GitHub Projects
 - Label Toolset
-- News
 - Project Management
 - Projects & Issues
 - Pull Request Tools

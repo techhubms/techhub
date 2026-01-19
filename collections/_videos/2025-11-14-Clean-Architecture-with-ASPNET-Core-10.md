@@ -16,7 +16,6 @@ tags:
 - C# 14
 - Clean Architecture
 - Cloud Native Apps
-- Coding
 - F# 10
 - Loosely Coupled Code
 - Maintainable Code
@@ -25,7 +24,6 @@ tags:
 - Software Architecture
 - Solution Organization
 - Testable Code
-- Videos
 - VS
 section_names:
 - coding

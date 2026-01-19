@@ -11,10 +11,8 @@ permalink: /ai/videos/Modernization-Made-Simple-Building-Agentic-Solutions-in-NE
 tags:
 - .NET
 - Agent Framework
-- AI
 - AI Agents
 - Application Development
-- Coding
 - Enterprise Application Modernization
 - Integration
 - Memory Persistence
@@ -23,7 +21,6 @@ tags:
 - Programming Demo
 - Software Modernization
 - Tool Orchestration
-- Videos
 section_names:
 - ai
 - coding

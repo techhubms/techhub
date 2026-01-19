@@ -10,11 +10,9 @@ date: 2025-08-18 17:04:36 +00:00
 permalink: /coding/news/Key-Updates-in-Git-251-Cruft-Free-MIDX-Stash-Interchange-and-More
 tags:
 - Bloom Filter
-- Coding
 - Commit Graph
 - Cruft Pack
 - Delta Compression
-- DevOps
 - Git
 - Git 2.51
 - Git Cat File
@@ -22,7 +20,6 @@ tags:
 - Git Switch
 - Git Whatchanged
 - Multi Pack Index
-- News
 - Open Source
 - Path Walk
 - RefTable

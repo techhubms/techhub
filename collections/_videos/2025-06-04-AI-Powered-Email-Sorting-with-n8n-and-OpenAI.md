@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS
 date: 2025-06-04 19:00:03 +00:00
 permalink: /ai/videos/AI-Powered-Email-Sorting-with-n8n-and-OpenAI
 tags:
-- AI
 - AI Agent
 - Automation
 - Classification Prompt
@@ -24,7 +23,6 @@ tags:
 - Productivity
 - Text Classification
 - Tutorial
-- Videos
 - Workflow Automation
 section_names:
 - ai

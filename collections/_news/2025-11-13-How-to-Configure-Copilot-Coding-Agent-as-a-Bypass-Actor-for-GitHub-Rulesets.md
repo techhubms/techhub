@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-13 22:30:49 +00:00
 permalink: /github-copilot/news/How-to-Configure-Copilot-Coding-Agent-as-a-Bypass-Actor-for-GitHub-Rulesets
 tags:
-- AI
 - Asynchronous Agents
 - Automation
 - Branch Protection
@@ -18,10 +17,7 @@ tags:
 - Commit Signing
 - Copilot
 - Copilot Coding Agent
-- DevOps
-- GitHub Copilot
 - Improvement
-- News
 - Platform Governance
 - Platform Improvement
 - Repository Governance

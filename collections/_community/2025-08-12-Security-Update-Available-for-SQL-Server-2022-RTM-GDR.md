@@ -9,7 +9,6 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-12 21:35:16 +00:00
 permalink: /security/community/Security-Update-Available-for-SQL-Server-2022-RTM-GDR
 tags:
-- Community
 - CVE 49759
 - Database Security
 - Denial Of Service
@@ -20,7 +19,6 @@ tags:
 - Patch Management
 - Release Notes
 - RTM GDR
-- Security
 - Security Update
 - SQL Server
 - SQL Server Patching

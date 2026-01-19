@@ -10,7 +10,6 @@ date: 2025-11-18 16:15:31 +00:00
 permalink: /github-copilot/news/Gemini-3-Pro-Model-Now-Available-in-GitHub-Copilot-Public-Preview
 tags:
 - Agent Mode
-- AI
 - AI Development
 - AI Model
 - API Key
@@ -21,10 +20,8 @@ tags:
 - Enterprise Subscription
 - Gemini 3 Pro
 - GitHub CLI
-- GitHub Copilot
 - GitHub Mobile
 - Model Picker
-- News
 - Pro+ Business Plan
 - VS Code
 section_names:

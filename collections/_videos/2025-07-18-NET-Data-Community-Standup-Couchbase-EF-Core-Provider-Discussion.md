@@ -11,7 +11,6 @@ permalink: /ml/videos/NET-Data-Community-Standup-Couchbase-EF-Core-Provider-Disc
 tags:
 - .NET
 - .NET Data Community
-- Coding
 - Couchbase
 - Data Access
 - Data Integration
@@ -20,11 +19,9 @@ tags:
 - Jeff Morris
 - Jiri Cincura
 - Linq2Couchbase
-- ML
 - NoSQL
 - Provider Development
 - Relational Databases
-- Videos
 section_names:
 - coding
 - ml

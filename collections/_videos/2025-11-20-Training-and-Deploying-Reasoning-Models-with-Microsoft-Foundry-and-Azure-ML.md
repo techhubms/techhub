@@ -10,10 +10,8 @@ date: 2025-11-20 10:21:15 +00:00
 permalink: /ai/videos/Training-and-Deploying-Reasoning-Models-with-Microsoft-Foundry-and-Azure-ML
 tags:
 - Agent Applications
-- AI
 - AI Production
 - Asynchronous Learning
-- Azure
 - Azure Machine Learning
 - Benchmarking
 - Business Insights
@@ -22,7 +20,6 @@ tags:
 - LLMs
 - Microsoft Foundry
 - Microsoft Ignite
-- ML
 - Model Deployment
 - Model Fine Tuning
 - MSIgnite
@@ -32,7 +29,6 @@ tags:
 - Reasoning Models
 - Reinforcement Learning
 - Synchronous Learning
-- Videos
 section_names:
 - ai
 - azure

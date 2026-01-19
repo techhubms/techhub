@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2026-01-14 15:49:33 +00:00
 permalink: /ai/news/Microsoft-Disrupts-Global-RedVDS-Cybercrime-as-a-Service-Platform-Enabling-Massive-Fraud
 tags:
-- AI
 - AI Enabled Fraud
 - Business Email Compromise
 - Cloud Infrastructure
@@ -22,11 +21,9 @@ tags:
 - Law Enforcement
 - Microsoft Digital Crimes Unit
 - Multifactor Authentication
-- News
 - On The Issues
 - Phishing
 - RedVDS
-- Security
 - Security Best Practices
 - Windows
 section_names:

@@ -10,21 +10,17 @@ date: 2025-12-12 20:43:37 +00:00
 permalink: /ai/news/Continuous-Efficiency-AI-Driven-Software-Optimization-with-GitHub-Agentic-Workflows
 tags:
 - Agentic Workflows
-- AI
 - AI Automation
 - CI/CD
 - Code Optimization
 - Code Quality
-- Coding
 - Continuous Efficiency
-- DevOps
 - DevOps Automation
 - GitHub Actions
 - GitHub Next
 - Green Software
 - LLM
 - Natural Language Programming
-- News
 - News & Insights
 - Open Source
 - Performance Engineering

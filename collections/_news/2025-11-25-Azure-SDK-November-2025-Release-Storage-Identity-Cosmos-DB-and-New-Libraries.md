@@ -14,7 +14,6 @@ tags:
 - AI
 - AI Agents
 - AKS
-- Azure
 - Azure Cosmos DB
 - Azure Identity
 - Azure SDK
@@ -22,7 +21,6 @@ tags:
 - C#
 - C++
 - Certificate Management
-- Coding
 - Confidential Ledger
 - DNS
 - Front Door
@@ -30,7 +28,6 @@ tags:
 - Java
 - JavaScript
 - Managed Identity
-- News
 - Python
 - Resource Management
 - SDK

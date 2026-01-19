@@ -11,13 +11,9 @@ permalink: /coding/community/Add-Sidecars-to-Azure-App-Service-for-Linuxvia-GitH
 tags:
 - .NET
 - App Service Runtime
-- Azure
 - Azure App Service
 - Azure Pipelines
 - CI/CD
-- Coding
-- Community
-- DevOps
 - GitHub Actions
 - Java
 - Linux Containers

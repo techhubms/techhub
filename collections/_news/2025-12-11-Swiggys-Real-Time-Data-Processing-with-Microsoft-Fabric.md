@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-11 04:10:00 +00:00
 permalink: /ml/news/Swiggys-Real-Time-Data-Processing-with-Microsoft-Fabric
 tags:
-- Azure
 - Azure Data
 - Batch Processing
 - Big Data
@@ -22,9 +21,7 @@ tags:
 - Innovation
 - LinkedIn Post
 - Microsoft Fabric
-- ML
 - Near Real Time
-- News
 - Operational Intelligence
 - Real Time Data Processing
 - Streaming Analytics

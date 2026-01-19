@@ -9,17 +9,13 @@ feed_url: https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/
 date: 2025-06-09 15:00:39 +00:00
 permalink: /github-copilot/news/Next-Edit-Suggestions-Now-Available-in-Visual-Studio-with-GitHub-Copilot
 tags:
-- AI
 - AI Assisted Coding
 - Code Editing
 - Code Refactoring
-- Coding
 - Copilot
 - Copilot Completions
 - Developer Tools
-- GitHub Copilot
 - NES
-- News
 - Next Edit Suggestions
 - Next Edits Suggestion
 - Productivity

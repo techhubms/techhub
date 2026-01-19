@@ -10,13 +10,10 @@ date: 2025-11-19 08:14:43 +00:00
 permalink: /ai/videos/Building-and-Evaluating-AI-Agents-with-Foundry-Agent-Service
 tags:
 - Agent Evaluation
-- AI
 - AI Agents
 - API Integration
-- Azure
 - Azure Functions
 - Cloud Scalability
-- Coding
 - InnovatewithAzureAIappsandagents
 - Live Data
 - Microsoft Foundry Agent Service
@@ -26,7 +23,6 @@ tags:
 - Secure Deployment
 - Session Recording
 - Tool Registration
-- Videos
 - W&B Weave
 section_names:
 - ai

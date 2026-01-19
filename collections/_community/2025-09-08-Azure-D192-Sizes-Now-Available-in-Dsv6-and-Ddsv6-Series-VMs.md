@@ -9,13 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-08 23:49:26 +00:00
 permalink: /azure/community/Azure-D192-Sizes-Now-Available-in-Dsv6-and-Ddsv6-Series-VMs
 tags:
-- Azure
 - Azure Boost
 - Azure Ddsv6 Series
 - Azure Dsv6 Series
 - Azure Pricing
 - Cloud Infrastructure
-- Community
 - D192 VM Size
 - Data Center
 - Enterprise Workloads

@@ -11,23 +11,17 @@ permalink: /github-copilot/news/From-Idea-to-Production-Building-Intelligent-Clo
 tags:
 - Agent Orchestration
 - Agentic DevOps
-- AI
 - AI Toolkit
-- Azure
 - Azure AI Foundry
 - Azure SRE Agent
 - CI/CD
 - Cloud Native
-- Coding
 - Developer Events
-- DevOps
-- GitHub Copilot
 - GitHub Spec Kit
 - Intelligent Applications
 - Microsoft Agent Framework
 - Microsoft For Developers
 - Natural Language Programming
-- News
 - Prompt Engineering
 - VS Code
 section_names:

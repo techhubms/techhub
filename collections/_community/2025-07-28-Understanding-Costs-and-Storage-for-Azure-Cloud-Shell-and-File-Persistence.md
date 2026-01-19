@@ -10,12 +10,10 @@ date: 2025-07-28 22:48:41 +00:00
 permalink: /azure/community/Understanding-Costs-and-Storage-for-Azure-Cloud-Shell-and-File-Persistence
 tags:
 - Admin.microsoft.com
-- Azure
 - Azure Cloud Shell
 - Azure Storage
 - Cloud Costs
 - Cloud Storage Pricing
-- Community
 - E5 License
 - Ephemeral Storage
 - File Persistence

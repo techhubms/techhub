@@ -9,21 +9,17 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-10-20 07:00:04 +00:00
 permalink: /github-copilot/videos/Mastering-Chat-Modes-in-VS-Code-with-Burke-Holland
 tags:
-- AI
 - AI Agents
 - AI Integration
 - Beast Mode
 - Burke Holland
 - Chat Agent Modes
-- Coding
 - Copilot Customization
 - Developer Tools
-- GitHub Copilot
 - GPT 4.1
 - Productivity
 - Programming
 - Prompt Engineering
-- Videos
 - VS Code
 section_names:
 - ai

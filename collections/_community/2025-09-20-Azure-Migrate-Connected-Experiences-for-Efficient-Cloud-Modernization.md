@@ -10,23 +10,18 @@ date: 2025-09-20 22:15:06 +00:00
 permalink: /ai/community/Azure-Migrate-Connected-Experiences-for-Efficient-Cloud-Modernization
 tags:
 - 6R Analysis
-- AI
 - AI Assistance
 - Arc Enabled
-- Azure
 - Azure Key Vault
 - Azure Migrate
 - Cloud Migration
-- Community
 - Database Migration Service
-- DevOps
 - Hybrid Cloud
 - IaC
 - Microsoft Defender For Cloud
 - Modernization
 - PostgreSQL
 - Private Link
-- Security
 - Security By Design
 - Sustainability
 section_names:

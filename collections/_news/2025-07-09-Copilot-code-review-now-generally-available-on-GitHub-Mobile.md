@@ -9,13 +9,10 @@ feed_url: https://github.blog/changelog/label/copilot/feed/
 date: 2025-07-09 10:00:23 +00:00
 permalink: /github-copilot/news/Copilot-code-review-now-generally-available-on-GitHub-Mobile
 tags:
-- AI
 - Code Review
 - Developer Productivity
-- GitHub Copilot
 - GitHub Mobile
 - Mobile Development
-- News
 section_names:
 - ai
 - github-copilot

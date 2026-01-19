@@ -9,15 +9,12 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-11-21 00:00:00 +00:00
 permalink: /github-copilot/blogs/Using-the-Cognitive-Verifier-Pattern-with-GitHub-Copilot
 tags:
-- AI
 - AI Assisted Development
-- Blogs
 - Clarifying Questions
 - Code Quality
 - Cognitive Verifier Pattern
 - Copilot Patterns
 - Developer Workflow
-- GitHub Copilot
 - Pro Tips
 - Prompt Engineering
 - Reflection

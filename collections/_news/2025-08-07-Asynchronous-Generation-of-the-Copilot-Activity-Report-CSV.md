@@ -10,14 +10,11 @@ date: 2025-08-07 23:17:25 +00:00
 permalink: /github-copilot/news/Asynchronous-Generation-of-the-Copilot-Activity-Report-CSV
 tags:
 - Admin Tools
-- AI
 - Asynchronous Processing
 - Copilot Activity Report
 - CSV Export
 - Email Notification
-- GitHub Copilot
 - GitHub Enterprise
-- News
 - Reliability
 - Report Generation
 - Scalability

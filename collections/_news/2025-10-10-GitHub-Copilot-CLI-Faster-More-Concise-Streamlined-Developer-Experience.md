@@ -9,24 +9,19 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-10 20:41:42 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-CLI-Faster-More-Concise-Streamlined-Developer-Experience
 tags:
-- AI
 - AI Coding Assistant
 - Bugfixes
 - CLI
 - Client Apps
-- Coding
 - Copilot
 - Copilot Updates
 - Developer Tools
-- DevOps
-- GitHub Copilot
 - GitHub Copilot CLI
 - Improvement
 - Kitty Protocol
 - Linux
 - MacOS
 - Markdown Rendering
-- News
 - Node.js
 - Performance
 - PowerShell

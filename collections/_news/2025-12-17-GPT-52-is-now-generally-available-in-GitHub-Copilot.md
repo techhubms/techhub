@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-17 18:12:19 +00:00
 permalink: /github-copilot/news/GPT-52-is-now-generally-available-in-GitHub-Copilot
 tags:
-- AI
 - AI Model
 - Chat Model
 - Copilot
@@ -17,12 +16,10 @@ tags:
 - Copilot Chat
 - Copilot Enterprise
 - Copilot Pro
-- GitHub Copilot
 - GPT 5.2
 - IDE Integration
 - JetBrains IDEs
 - Model Picker
-- News
 - VS Code
 section_names:
 - ai

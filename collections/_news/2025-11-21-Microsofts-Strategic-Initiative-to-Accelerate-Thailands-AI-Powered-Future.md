@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-21 13:57:14 +00:00
 permalink: /ai/news/Microsofts-Strategic-Initiative-to-Accelerate-Thailands-AI-Powered-Future
 tags:
-- AI
 - AI Infrastructure
 - AI Skills Development
-- Azure
 - Azure OpenAI
 - Cloud Region
 - Company News
@@ -25,7 +23,6 @@ tags:
 - KASIKORNBANK
 - Microsoft Azure
 - National AI Innovation Center
-- News
 - OECD
 - SCBX
 - Thailand

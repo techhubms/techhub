@@ -10,9 +10,7 @@ date: 2025-11-26 21:27:24 +00:00
 permalink: /ai/videos/Azure-AI-Infrastructure-Updates-for-High-Performance-Workloads
 tags:
 - Agent Mode
-- AI
 - Anthropic Models
-- Azure
 - Azure AI Infra
 - Azure AI Infra Updates To Power Frontier And Enterprise Workloads | BRK179
 - BRK179
@@ -36,7 +34,6 @@ tags:
 - Power Optimization
 - Quantum 2 InfiniBand
 - Technical
-- Videos
 section_names:
 - ai
 - azure

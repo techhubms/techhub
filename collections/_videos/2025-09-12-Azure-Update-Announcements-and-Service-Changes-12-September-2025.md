@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7
 date: 2025-09-12 14:44:04 +00:00
 permalink: /azure/videos/Azure-Update-Announcements-and-Service-Changes-12-September-2025
 tags:
-- Azure
 - Azure Cloud
 - Azure Databricks
 - Azure File Share
@@ -22,7 +21,6 @@ tags:
 - Cloud
 - Cloud Updates
 - Cosmos DB
-- DevOps
 - GQL in KQL
 - Microsoft
 - Microsoft Azure
@@ -30,7 +28,6 @@ tags:
 - PowerShell
 - Resource Migration
 - Standard HDD Retirement
-- Videos
 - VM SKU Updates
 section_names:
 - azure

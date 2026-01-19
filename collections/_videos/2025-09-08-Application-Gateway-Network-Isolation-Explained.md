@@ -10,7 +10,6 @@ date: 2025-09-08 11:41:29 +00:00
 permalink: /azure/videos/Application-Gateway-Network-Isolation-Explained
 tags:
 - Application Gateway
-- Azure
 - Azure Application Gateway
 - Azure Cloud
 - Azure Networking
@@ -22,9 +21,7 @@ tags:
 - Microsoft Azure
 - Network Architecture
 - Network Isolation
-- Security
 - Security Best Practices
-- Videos
 section_names:
 - azure
 - security

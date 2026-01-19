@@ -11,15 +11,12 @@ permalink: /ai/community/Enabling-API-Key-Authentication-for-Azure-Logic-Apps-MC
 tags:
 - Access Token
 - Agent Loop
-- AI
 - API Key Authentication
 - API Management
 - Az CLI
-- Azure
 - Azure AI Foundry
 - Azure API Center
 - Azure Logic Apps
-- Community
 - Conversational Agents
 - Host.json
 - Key Expiry
@@ -29,7 +26,6 @@ tags:
 - Primary/Secondary Key
 - Regenerate API Key
 - REST API
-- Security
 - Security Configuration
 - X API Key
 section_names:

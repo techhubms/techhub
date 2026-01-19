@@ -10,11 +10,9 @@ date: 2025-11-20 10:46:14 +00:00
 permalink: /ai/videos/Driving-Agentic-Innovation-with-Model-Context-Protocol-MCP-for-Tool-Aware-AI
 tags:
 - Agent 365
-- AI
 - AI Agents
 - API Management
 - Autonomous Agents
-- Azure
 - Connectors Catalog
 - Cross Cloud Support
 - GitHub
@@ -26,7 +24,6 @@ tags:
 - ServiceNow Integration
 - Tool Orchestration
 - Unified Access
-- Videos
 - VS Code
 section_names:
 - ai

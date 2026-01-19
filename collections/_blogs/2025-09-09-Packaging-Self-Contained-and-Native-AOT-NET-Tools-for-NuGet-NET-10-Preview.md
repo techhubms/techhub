@@ -12,9 +12,7 @@ tags:
 - .NET 10
 - .NET Tools
 - AOT
-- Blogs
 - C#
-- Coding
 - Cross Platform Deployment
 - Microsoft.Data.Sqlite
 - Microsoft.NET.Sdk

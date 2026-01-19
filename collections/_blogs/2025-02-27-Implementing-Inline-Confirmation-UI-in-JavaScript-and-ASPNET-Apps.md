@@ -11,11 +11,9 @@ permalink: /coding/blogs/Implementing-Inline-Confirmation-UI-in-JavaScript-and-A
 tags:
 - ASP.NET
 - ASP.NET MVC
-- Blogs
 - Button State Management
 - Client Side Scripting
 - CodePen
-- Coding
 - Dynamic UI
 - Event Handling
 - Front End Design

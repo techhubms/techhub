@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-11-13 08:00:29 +00:00
 permalink: /ai/blogs/JFrog-Adds-AI-Generated-Code-Detection-to-Secure-Software-Supply-Chains
 tags:
-- AI
 - AI API Management
 - AI Code Auditing
 - AI Code Detection
@@ -21,11 +20,9 @@ tags:
 - AI Model Inventory
 - AI Risk Mitigation
 - Application Security
-- Blogs
 - Code Auditing
 - Code Risk Detection
 - Compliance Tracking
-- DevOps
 - Devsecops
 - JFrog
 - Large Language Models
@@ -36,7 +33,6 @@ tags:
 - SCA Tools
 - Secure Coding
 - Secure Coding Practices
-- Security
 - Shadow AI
 - Shadow AI Detection
 - Social Facebook

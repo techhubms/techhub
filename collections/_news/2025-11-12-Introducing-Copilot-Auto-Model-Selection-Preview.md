@@ -9,7 +9,6 @@ feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-11-12 17:38:43 +00:00
 permalink: /github-copilot/news/Introducing-Copilot-Auto-Model-Selection-Preview
 tags:
-- AI
 - AI Development
 - AI Integration
 - AI Models
@@ -18,12 +17,10 @@ tags:
 - Claude Sonnet 4.5
 - Copilot
 - Copilot Chat
-- GitHub Copilot
 - GPT 4.1
 - GPT 5
 - Model Multiplier
 - Models
-- News
 - Premium Requests
 - Software Engineering
 - VS

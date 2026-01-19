@@ -14,13 +14,11 @@ tags:
 - API Development
 - Build Time Generation
 - Code Generation
-- Coding
 - Documentation
 - Linting
 - OneDevQuestion
 - OpenAPI
 - Spectral
-- Videos
 - Web API
 section_names:
 - coding

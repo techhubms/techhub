@@ -12,7 +12,6 @@ tags:
 - .gitignore
 - Beginner Guide
 - Development Best Practices
-- DevOps
 - File Exclusion
 - Git
 - GitHub
@@ -22,7 +21,6 @@ tags:
 - Repository Cleanliness
 - Source Control
 - Version Control
-- Videos
 - Workflow Tips
 section_names:
 - devops

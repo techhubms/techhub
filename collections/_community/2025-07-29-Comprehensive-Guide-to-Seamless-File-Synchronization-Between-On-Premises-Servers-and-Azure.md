@@ -9,18 +9,15 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-07-29 09:36:59 +00:00
 permalink: /azure/community/Comprehensive-Guide-to-Seamless-File-Synchronization-Between-On-Premises-Servers-and-Azure
 tags:
-- Azure
 - Azure File Sync
 - Cloud Security
 - Cloud Storage
-- Community
 - Data Reliability
 - File Synchronization
 - Hybrid Cloud
 - Infrastructure
 - Microsoft Azure
 - On Premises Servers
-- Security
 - Storage Scalability
 section_names:
 - azure

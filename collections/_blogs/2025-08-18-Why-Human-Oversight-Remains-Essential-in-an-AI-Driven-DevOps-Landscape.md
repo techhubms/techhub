@@ -10,16 +10,13 @@ date: 2025-08-18 07:57:21 +00:00
 permalink: /ai/blogs/Why-Human-Oversight-Remains-Essential-in-an-AI-Driven-DevOps-Landscape
 tags:
 - Agentic AI
-- AI
 - AI DevOps Risks
 - AI in Software Delivery
 - AI Oversight
 - AI Risk Management
-- Blogs
 - Business Of DevOps
 - CI/CD
 - CI/CD Automation
-- DevOps
 - DevOps Automation
 - DevOps Guardrails
 - Error Propagation
@@ -32,7 +29,6 @@ tags:
 - Pipeline Oversight
 - Regulatory Compliance
 - Responsible AI
-- Security
 - Security Compliance
 - Social Facebook
 - Social LinkedIn

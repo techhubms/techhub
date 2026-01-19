@@ -7,26 +7,17 @@ date: 2025-12-01 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - Agentic AI
-- AI
 - Automation
-- Azure
 - Cloud Native
-- Coding
 - Confidential Computing
 - Data Platform
 - Developer Productivity
 - Device Security
-- DevOps
 - Enterprise Migration
-- GitHub Copilot
 - Low Code
-- Machine Learning
 - Microsoft Foundry
-- ML
 - Observability
 - Power Platform
-- Roundups
-- Security
 - VS
 - Zero Trust
 section_names:

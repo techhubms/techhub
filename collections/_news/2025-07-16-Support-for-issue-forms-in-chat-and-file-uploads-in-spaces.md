@@ -9,17 +9,14 @@ date: 2025-07-16 16:04:14 +00:00
 permalink: /github-copilot/news/Support-for-issue-forms-in-chat-and-file-uploads-in-spaces
 viewing_mode: external
 tags:
-- AI
 - AI Assistance
 - Automation
 - Copilot Features
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - Github.com
 - Issue Creation
 - Issue Forms
-- News
 - Productivity
 section_names:
 - ai

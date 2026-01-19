@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-08-25 08:00:00 +00:00
 permalink: /ml/news/Copy-Job-Activity-Now-in-Preview-for-Microsoft-Fabric-Data-Factory-Pipelines
 tags:
-- Azure
 - Copy Job Activity
 - Data Factory
 - Data Ingestion
@@ -18,9 +17,7 @@ tags:
 - Incremental Copy
 - Medallion Architecture
 - Microsoft Fabric
-- ML
 - Monitoring
-- News
 - No Code Data Engineering
 - Pipeline Automation
 section_names:

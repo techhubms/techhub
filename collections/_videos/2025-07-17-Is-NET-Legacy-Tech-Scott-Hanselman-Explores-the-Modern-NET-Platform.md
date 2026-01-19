@@ -12,7 +12,6 @@ tags:
 - .NET
 - .NET 9
 - C#
-- Coding
 - Cross Platform
 - Legacy Technology
 - Modern Development
@@ -20,7 +19,6 @@ tags:
 - Open Source
 - Raspberry Pi
 - Scott Hanselman
-- Videos
 - Xbox
 section_names:
 - coding

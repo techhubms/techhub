@@ -9,25 +9,21 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-10-07 22:12:38 +00:00
 permalink: /github-copilot/videos/VS-Code-Live-Leveraging-GitHub-Copilot-and-Agents-in-Jupyter-Notebooks
 tags:
-- AI
 - AI Agents
 - Code
 - Code Integration
 - Codeeditor
-- Coding
 - Data Science
 - Datascience
 - Demo
 - Developer
 - Developer Community
 - Developer Tools
-- GitHub Copilot
 - Jupyter
 - Jupyter Notebooks
 - Live Demo
 - Microsoft
 - Python
-- Videos
 - VS Code
 section_names:
 - ai

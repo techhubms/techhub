@@ -9,17 +9,13 @@ feed_url: https://github.blog/feed/
 date: 2025-12-23 00:15:00 +00:00
 permalink: /ai/news/5-Podcast-Episodes-to-Help-You-Build-with-Confidence-in-2026
 tags:
-- AI
-- Coding
 - Community Contribution
 - Developer Trends
-- DevOps
 - DIY Tools
 - GitHub Podcast
 - Home Assistant
 - Maintainers
 - MCP
-- News
 - Octoverse
 - Open Source
 - Open Standards

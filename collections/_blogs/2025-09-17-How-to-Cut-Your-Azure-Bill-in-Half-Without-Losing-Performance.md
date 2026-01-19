@@ -9,13 +9,11 @@ feed_url: https://dellenny.com/feed/
 date: 2025-09-17 10:19:24 +00:00
 permalink: /azure/blogs/How-to-Cut-Your-Azure-Bill-in-Half-Without-Losing-Performance
 tags:
-- Azure
 - Azure Advisor
 - Azure Automation
 - Azure Blob Storage
 - Azure Cost Management
 - Azure Monitor
-- Blogs
 - Budgets And Alerts
 - Cloud Cost Optimization
 - Dev/Test Environments

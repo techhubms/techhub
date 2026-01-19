@@ -9,16 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-23 19:14:38 +00:00
 permalink: /ai/community/How-to-Host-ChatGPT-Apps-on-Azure-Functions-Developer-Guide
 tags:
-- AI
 - App Deployment
 - Authentication
-- Azure
 - Azure Developer CLI
 - Azure Functions
 - ChatGPT Apps
 - Cloud Hosting
-- Coding
-- Community
 - Developer Tools
 - FastMCP
 - MCP Server

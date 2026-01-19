@@ -10,10 +10,8 @@ date: 2024-08-06 00:00:00 +00:00
 permalink: /coding/blogs/Add-a-Property-to-the-Top-level-Statements-Program-Class
 tags:
 - .NET
-- Blogs
 - C#
 - Code Readability
-- Coding
 - Compiler
 - Console Application
 - Partial Class

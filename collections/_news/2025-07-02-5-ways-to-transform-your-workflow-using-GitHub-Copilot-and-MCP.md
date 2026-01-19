@@ -10,15 +10,10 @@ date: 2025-07-02 17:44:02 +00:00
 permalink: /github-copilot/news/5-ways-to-transform-your-workflow-using-GitHub-Copilot-and-MCP
 tags:
 - Agent Mode
-- AI
 - AI & ML
 - Automation
-- Coding
 - Development Workflow
-- DevOps
-- GitHub Copilot
 - MCP
-- News
 - Productivity
 - Use Cases
 section_names:

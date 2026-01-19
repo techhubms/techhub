@@ -11,17 +11,12 @@ permalink: /github-copilot/news/Visual-Studio-Code-December-2025-Release-v1108-N
 tags:
 - Accessibility
 - Agent Skills
-- AI
 - Chat Agents
 - Code Editing
-- Coding
 - Copilot Customization
 - Debugging
-- DevOps
 - Extension Development
 - Git Integration
-- GitHub Copilot
-- News
 - Productivity Tools
 - Release Notes
 - Source Control

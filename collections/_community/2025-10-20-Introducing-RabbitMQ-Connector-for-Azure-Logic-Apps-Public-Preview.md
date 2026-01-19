@@ -9,10 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-20 13:00:00 +00:00
 permalink: /azure/community/Introducing-RabbitMQ-Connector-for-Azure-Logic-Apps-Public-Preview
 tags:
-- Azure
 - Azure Logic Apps
 - Cloud Native
-- Community
 - Connectors
 - Exchange Routing
 - High Availability

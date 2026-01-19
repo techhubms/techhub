@@ -11,7 +11,6 @@ permalink: /azure/videos/Multi-Cloud-Storage-Migration-with-Azure-Storage-Mover
 tags:
 - AWS
 - AWS S3
-- Azure
 - Azure Arc
 - Azure Cloud
 - Azure Costs
@@ -31,7 +30,6 @@ tags:
 - S3
 - SMB
 - Storage
-- Videos
 section_names:
 - azure
 ---

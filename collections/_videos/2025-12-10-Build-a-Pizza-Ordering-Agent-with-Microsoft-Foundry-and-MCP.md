@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-12-10 23:58:13 +00:00
 permalink: /ai/videos/Build-a-Pizza-Ordering-Agent-with-Microsoft-Foundry-and-MCP
 tags:
-- AI
 - AI Agent
-- Azure
 - Azure Free Trial
 - Cloud Computing
 - Contoso PizzaBot
@@ -31,7 +29,6 @@ tags:
 - System Prompts
 - Tech
 - Technology
-- Videos
 - Workshop
 section_names:
 - ai

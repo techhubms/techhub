@@ -13,8 +13,6 @@ tags:
 - C#
 - C# Features
 - C# Language
-- Coding
-- Community
 - Language Design
 - Language Proposals
 - LDM

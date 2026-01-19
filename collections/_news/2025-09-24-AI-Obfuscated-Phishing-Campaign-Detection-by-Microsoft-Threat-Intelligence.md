@@ -9,7 +9,6 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-09-24 12:00:00 +00:00
 permalink: /ai/news/AI-Obfuscated-Phishing-Campaign-Detection-by-Microsoft-Threat-Intelligence
 tags:
-- AI
 - AI Generated Code
 - Browser Fingerprinting
 - CAPTCHA
@@ -19,11 +18,9 @@ tags:
 - Incident Response
 - Microsoft Defender
 - Microsoft Sentinel
-- News
 - Obfuscation
 - Office 365
 - Phishing
-- Security
 - Security Copilot
 - SVG Payload
 - Threat Intelligence

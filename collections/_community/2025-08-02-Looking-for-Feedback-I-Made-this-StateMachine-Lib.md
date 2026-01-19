@@ -12,8 +12,6 @@ tags:
 - Agent SDK
 - Architecture
 - C#
-- Coding
-- Community
 - Feedback
 - Library
 - LombdaAgentSDK

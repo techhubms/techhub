@@ -9,14 +9,11 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-01 15:37:50 +00:00
 permalink: /github-copilot/community/GitHub-Copilot-Changelog-Thread
 tags:
-- AI
 - AI Powered Coding
 - Automation
 - Bug Fixes
-- Community
 - Developer Tools
 - Enhancements
-- GitHub Copilot
 - Release Notes
 section_names:
 - ai

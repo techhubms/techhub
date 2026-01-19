@@ -10,7 +10,6 @@ date: 2025-11-21 08:12:56 +00:00
 permalink: /azure/videos/Best-Practices-for-Migration-and-Security-with-Azure-VMware-Solution
 tags:
 - AVS
-- Azure
 - Azure Security Tools
 - Azure VMware Solution
 - Case Study
@@ -25,9 +24,7 @@ tags:
 - Modernization
 - MSIgnite
 - Networking
-- Security
 - SQL Server
-- Videos
 - VMware
 - Windows Server
 section_names:

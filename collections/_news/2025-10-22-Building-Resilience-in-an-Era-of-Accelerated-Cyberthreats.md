@@ -9,10 +9,8 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-10-22 17:56:46 +00:00
 permalink: /ai/news/Building-Resilience-in-an-Era-of-Accelerated-Cyberthreats
 tags:
-- AI
 - AI Enabled Attacks
 - Automation
-- Azure
 - CISO
 - Cloud Security
 - Company News
@@ -22,11 +20,9 @@ tags:
 - Incident Response
 - Microsoft Digital Defense Report
 - Microsoft Entra ID
-- News
 - Operational Resilience
 - Phishing Resistant MFA
 - Secure Future Initiative
-- Security
 - Threat Intelligence
 - Zero Trust
 section_names:

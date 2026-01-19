@@ -9,9 +9,7 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
 permalink: /ai/news/Whats-New-in-OneLake-and-the-Fabric-Platform-Expanded-Sources-Security-and-Capacity-Management
 tags:
-- AI
 - AI Readiness
-- Azure
 - Capacity Management
 - Cosmos DB
 - Customer Managed Keys
@@ -23,14 +21,11 @@ tags:
 - Foundry IQ
 - Microsoft 365
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Outbound Access Protection
 - Power BI
 - Real Time Analytics
 - SAP Integration
-- Security
 - SQL Server
 - Zero ETL
 section_names:

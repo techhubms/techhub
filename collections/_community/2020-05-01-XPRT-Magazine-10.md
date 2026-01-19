@@ -6,17 +6,12 @@ author: Xebia
 viewing_mode: external
 permalink: /ai/community/XPRT-Magazine-10
 tags:
-- AI
 - Automation
-- Azure
 - Azure Cosmos DB
 - Cloud Migration
 - Cloud Native
-- Coding
-- Community
 - Dapr
 - Data Modeling
-- DevOps
 - Digital Transformation
 - Docker
 - Feature Toggles
@@ -26,7 +21,6 @@ tags:
 - Legacy Modernization
 - Magazines
 - Microservices
-- ML
 - Platform Engineering
 - Remote Work
 - SaaS

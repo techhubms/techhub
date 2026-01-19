@@ -10,29 +10,23 @@ date: 2025-10-28 16:07:06 +00:00
 permalink: /github-copilot/news/Octoverse-2025-AI-Adoption-and-TypeScript-Rise-Drive-Unprecedented-Developer-Growth-on-GitHub
 tags:
 - Agents
-- AI
 - AI Adoption
 - CI/CD
 - CodeQL
-- Coding
 - Copilot Autofix
 - Dependabot
 - Developer Productivity
-- DevOps
 - DevOps Automation
 - Generative AI
-- GitHub Copilot
 - Global Developer Growth
 - Jupyter Notebook
 - Language Trends
 - LLM SDKs
-- News
 - News & Insights
 - Octoverse
 - Open Source
 - Pull Requests
 - Python
-- Security
 - Security Automation
 - TypeScript
 section_names:

@@ -10,19 +10,14 @@ date: 2025-09-03 17:05:00 +00:00
 permalink: /github-copilot/news/Automating-NET-Development-with-GitHub-Copilot-Coding-Agent
 tags:
 - .NET
-- AI
 - AI in Development
 - Automation
 - C#
-- Coding
 - Continuous Integration
-- DevOps
 - Eshoplite
 - GitHub
-- GitHub Copilot
 - GitHub Copilot Coding Agent
 - MCP Server
-- News
 - Product Requirements Document
 - Pull Requests
 - Test Coverage

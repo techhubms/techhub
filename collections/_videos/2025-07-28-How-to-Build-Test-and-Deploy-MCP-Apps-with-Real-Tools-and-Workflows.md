@@ -9,15 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-07-28 16:01:33 +00:00
 permalink: /ai/videos/How-to-Build-Test-and-Deploy-MCP-Apps-with-Real-Tools-and-Workflows
 tags:
-- AI
 - API Management
 - App Security
-- Azure
 - Azure Functions
 - C#
-- Coding
 - Deployment
-- DevOps
 - Java
 - JavaScript
 - Live Debugging
@@ -26,9 +22,7 @@ tags:
 - Microsoft Entra ID
 - Python
 - SDK
-- Security
 - TypeScript
-- Videos
 section_names:
 - ai
 - azure

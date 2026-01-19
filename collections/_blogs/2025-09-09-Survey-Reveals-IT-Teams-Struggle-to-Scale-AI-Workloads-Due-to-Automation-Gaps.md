@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-09-09 13:00:22 +00:00
 permalink: /ai/blogs/Survey-Reveals-IT-Teams-Struggle-to-Scale-AI-Workloads-Due-to-Automation-Gaps
 tags:
-- AI
 - AI Deployment Challenges
 - AI Governance
 - AI Operations
@@ -18,10 +17,8 @@ tags:
 - AI Workload Observability
 - AI Workload Scaling
 - Automation Readiness
-- Blogs
 - Cloud Cost Management
 - ControlMonkey
-- DevOps
 - Governance
 - IaC
 - IaC Tools

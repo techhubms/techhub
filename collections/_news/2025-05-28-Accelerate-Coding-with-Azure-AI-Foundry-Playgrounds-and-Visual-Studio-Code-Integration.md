@@ -10,20 +10,16 @@ date: 2025-05-28 19:01:04 +00:00
 permalink: /ai/news/Accelerate-Coding-with-Azure-AI-Foundry-Playgrounds-and-Visual-Studio-Code-Integration
 tags:
 - Agent Workflow
-- AI
 - AI Development
 - AI Playground
 - API Endpoint
 - Azd Commands
-- Azure
 - Azure AI Foundry
 - C#
 - Code Samples
-- Coding
 - Entra ID Authentication
 - GitHub Integration
 - Model Deployment
-- News
 - Open in VS Code
 - Prototyping
 - Python

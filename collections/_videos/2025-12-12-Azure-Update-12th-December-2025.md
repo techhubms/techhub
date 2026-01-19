@@ -10,7 +10,6 @@ date: 2025-12-12 16:06:57 +00:00
 permalink: /azure/videos/Azure-Update-12th-December-2025
 tags:
 - App Gateway
-- Azure
 - Azure Batch
 - Azure Cloud
 - Azure Databricks
@@ -29,7 +28,6 @@ tags:
 - PowerShell
 - Service Retirement
 - Technical Training
-- Videos
 section_names:
 - azure
 ---

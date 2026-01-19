@@ -11,10 +11,8 @@ permalink: /ai/videos/Building-for-General-Purpose-AI-Agents-Sip-and-Sync-with-A
 tags:
 - Agent Integration
 - Agent Optimization
-- AI
 - AI Agents
 - Automation
-- Azure
 - Azure Roles
 - Cloud Computing
 - Cloud Development
@@ -30,7 +28,6 @@ tags:
 - Tech
 - Tech Demo
 - Technology
-- Videos
 - Warp
 section_names:
 - ai

@@ -9,18 +9,15 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-11 18:57:02 +00:00
 permalink: /ai/community/Transforming-Data-Migration-Decisions-with-Azure-Copilots-Storage-Migration-Solutions-Advisor
 tags:
-- AI
 - AI Driven Workflow
 - AWS S3
 - AzCopy
-- Azure
 - Azure Copilot
 - Azure Files
 - Azure Storage Discovery
 - Azure Storage Mover
 - Blob Storage
 - Cloud Migration
-- Community
 - Conversational Guidance
 - Data Box
 - Data Migration

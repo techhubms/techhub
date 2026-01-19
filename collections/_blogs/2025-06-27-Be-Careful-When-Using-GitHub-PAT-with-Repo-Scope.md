@@ -11,8 +11,6 @@ permalink: /devops/blogs/Be-Careful-When-Using-GitHub-PAT-with-Repo-Scope
 tags:
 - Access Control
 - Authentication
-- Blogs
-- DevOps
 - Enterprise Migration
 - GEI
 - GitHub
@@ -23,7 +21,6 @@ tags:
 - Privilege Escalation
 - Repo Scope
 - Scope Management
-- Security
 - Token Permissions
 section_names:
 - devops

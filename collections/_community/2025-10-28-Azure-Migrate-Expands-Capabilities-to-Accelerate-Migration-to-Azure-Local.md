@@ -10,22 +10,18 @@ date: 2025-10-28 20:23:03 +00:00
 permalink: /azure/community/Azure-Migrate-Expands-Capabilities-to-Accelerate-Migration-to-Azure-Local
 tags:
 - Agentless Migration
-- Azure
 - Azure Arc
 - Azure Local
 - Azure Migrate
 - Azure VMware Solution
 - Cloud Migration
-- Community
 - Compliance
 - Data Residency
-- DevOps
 - Edge Computing
 - Governance
 - Hybrid Cloud
 - Infrastructure Modernization
 - PowerShell Automation
-- Security
 - Unified Management
 - VMware
 section_names:

@@ -10,7 +10,6 @@ date: 2025-11-21 15:18:42 +00:00
 permalink: /ai/videos/Securing-Email-and-Collaboration-with-Microsoft-Defender-for-Office-365-and-Agentic-AI
 tags:
 - Agentic AI
-- AI
 - Collaboration Security
 - Continuous Learning
 - Detection Rules
@@ -23,12 +22,10 @@ tags:
 - MSIgnite
 - Phishing Detection
 - Posture Management
-- Security
 - Security Automation
 - SoC Automation
 - Social Engineering
 - Threat Remediation
-- Videos
 section_names:
 - ai
 - security

@@ -9,11 +9,9 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-26 16:00:00 +00:00
 permalink: /ai/news/How-Chemist-Warehouse-Uses-Azure-AI-Foundry-for-HR-Transformation
 tags:
-- AI
 - AI Integration
 - AI Solutions
 - AIHRA
-- Azure
 - Azure AI Foundry
 - Business Transformation
 - Company News
@@ -24,7 +22,6 @@ tags:
 - Insurgence AI
 - Microsoft Azure
 - Microsoft Partner
-- News
 - Power Platform
 - Workforce Productivity
 section_names:

@@ -12,10 +12,8 @@ tags:
 - ADLS Gen2
 - Agent Development
 - Agents
-- AI
 - AI Development
 - AI Indexing
-- Azure
 - Azure AI Foundry
 - Azure AI Search
 - Azure Blob Storage
@@ -26,7 +24,6 @@ tags:
 - Hybrid Retrieval
 - Knowledge Grounding
 - Microsoft OneLake
-- News
 - Retrieval Augmented Generation
 - Vector Search
 section_names:

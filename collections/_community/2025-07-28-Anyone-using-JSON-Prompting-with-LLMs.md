@@ -9,12 +9,8 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-07-28 05:12:26 +00:00
 permalink: /github-copilot/community/Anyone-using-JSON-Prompting-with-LLMs
 tags:
-- AI
 - API Design
 - Code Generation
-- Coding
-- Community
-- GitHub Copilot
 - JSON Prompting
 - LLMs
 - Prompt Engineering

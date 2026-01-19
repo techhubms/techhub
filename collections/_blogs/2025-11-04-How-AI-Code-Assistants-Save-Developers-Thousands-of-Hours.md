@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-11-04 11:15:51 +00:00
 permalink: /github-copilot/blogs/How-AI-Code-Assistants-Save-Developers-Thousands-of-Hours
 tags:
-- AI
 - AI Assisted Programming
 - AI Code Assistants
 - AI Code Generation
@@ -19,7 +18,6 @@ tags:
 - AI in Software Development
 - AI Pair Programming
 - Automation in Coding
-- Blogs
 - Business Of DevOps
 - Code Automation
 - Code Quality
@@ -29,11 +27,9 @@ tags:
 - Developer Efficiency
 - Developer Productivity
 - Developer Surveys
-- DevOps
 - Efficiency
 - Generative AI
 - Generative AI Tools
-- GitHub Copilot
 - IBM Watsonx Code Assistant
 - Innovation in DevOps
 - Social Facebook

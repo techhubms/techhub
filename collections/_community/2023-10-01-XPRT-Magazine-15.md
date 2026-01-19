@@ -6,14 +6,9 @@ author: Xebia
 viewing_mode: external
 permalink: /ai/community/XPRT-Magazine-15
 tags:
-- AI
-- Azure
 - Azure Policy
 - CKAD
 - Cloud Security
-- Coding
-- Community
-- DevOps
 - Escape Room
 - Fuzzing
 - GreenOps
@@ -23,7 +18,6 @@ tags:
 - Meditation
 - Platform Engineering
 - Playwright
-- Security
 - Sustainable Software Engineering
 - Value Stream Mapping
 section_names:

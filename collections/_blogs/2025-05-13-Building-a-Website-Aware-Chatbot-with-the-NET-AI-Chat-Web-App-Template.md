@@ -11,14 +11,11 @@ permalink: /ai/blogs/Building-a-Website-Aware-Chatbot-with-the-NET-AI-Chat-Web-A
 tags:
 - .NET
 - .NET Core
-- AI
 - AngleSharp
 - ASP.NET Core
 - Aspire
-- Blogs
 - Chatbot
 - Cite Answers
-- Coding
 - IIngestionSource
 - LLM
 - Microsoft.Extensions.AI.Templates

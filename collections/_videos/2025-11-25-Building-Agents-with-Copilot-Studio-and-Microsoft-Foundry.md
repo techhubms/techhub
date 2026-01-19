@@ -10,7 +10,6 @@ date: 2025-11-25 15:52:27 +00:00
 permalink: /ai/videos/Building-Agents-with-Copilot-Studio-and-Microsoft-Foundry
 tags:
 - Agent Deployment
-- AI
 - AI Integration
 - Copilot Studio
 - Cross Platform Orchestration
@@ -28,7 +27,6 @@ tags:
 - Session BRK314
 - Unified SDK
 - Unified Tracing
-- Videos
 section_names:
 - ai
 ---

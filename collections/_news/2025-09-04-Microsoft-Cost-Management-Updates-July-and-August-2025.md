@@ -9,7 +9,6 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-09-04 15:00:00 +00:00
 permalink: /azure/news/Microsoft-Cost-Management-Updates-July-and-August-2025
 tags:
-- Azure
 - Azure Documentation
 - Azure Firewall
 - Azure Pricing Calculator
@@ -23,7 +22,6 @@ tags:
 - Management And Governance
 - Microsoft Cost Management
 - Migration
-- News
 - Role Based Access Control
 - Savings Plan
 - Service Principal

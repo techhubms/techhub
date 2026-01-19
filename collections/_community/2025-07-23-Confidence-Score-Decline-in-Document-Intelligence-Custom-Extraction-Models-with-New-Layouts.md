@@ -9,11 +9,8 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-07-23 15:35:47 +00:00
 permalink: /ai/community/Confidence-Score-Decline-in-Document-Intelligence-Custom-Extraction-Models-with-New-Layouts
 tags:
-- AI
-- Azure
 - Azure AI
 - Azure Document Intelligence
-- Community
 - Confidence Score
 - Custom Extraction
 - Data Annotation
@@ -23,7 +20,6 @@ tags:
 - Holdout Set
 - Machine Learning Training
 - Microsoft Cognitive Services
-- ML
 - Model Evaluation
 - Model Generalization
 section_names:

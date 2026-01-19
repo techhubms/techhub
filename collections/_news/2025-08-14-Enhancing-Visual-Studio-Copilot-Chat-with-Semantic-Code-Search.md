@@ -9,21 +9,17 @@ feed_url: https://devblogs.microsoft.com/visualstudio/feed/
 date: 2025-08-14 12:00:59 +00:00
 permalink: /github-copilot/news/Enhancing-Visual-Studio-Copilot-Chat-with-Semantic-Code-Search
 tags:
-- AI
 - AI Models
 - Azure DevOps
 - BM25
 - Code Search
 - Codebase Awareness
-- Coding
 - Contextual Search
 - Copilot Chat
 - Developer Productivity
-- GitHub Copilot
 - GitHub Copilot Chat
 - GitHub Integration
 - Microsoft
-- News
 - Release 17.14.11
 - Remote Semantic Search
 - Semantic Search

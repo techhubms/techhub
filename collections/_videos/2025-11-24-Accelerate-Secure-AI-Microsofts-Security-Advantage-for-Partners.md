@@ -10,7 +10,6 @@ date: 2025-11-24 13:33:32 +00:00
 permalink: /ai/videos/Accelerate-Secure-AI-Microsofts-Security-Advantage-for-Partners
 tags:
 - Agent 365
-- AI
 - AI Governance
 - AI Security
 - Data Protection
@@ -23,13 +22,11 @@ tags:
 - MSIgnite
 - Partner Enablement
 - Resilient Systems
-- Security
 - Security AI Synergies
 - Security Copilot
 - SMB Security
 - Threat Protection
 - Unified Security
-- Videos
 section_names:
 - ai
 - security

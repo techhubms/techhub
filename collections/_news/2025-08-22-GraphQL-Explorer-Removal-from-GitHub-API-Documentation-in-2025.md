@@ -13,12 +13,10 @@ tags:
 - API Documentation
 - API Lifecycle
 - Developer Tools
-- DevOps
 - GitHub
 - GraphQL API
 - GraphQL Clients
 - GraphQL Explorer
-- News
 - Platform Update
 - Schema Introspection
 section_names:

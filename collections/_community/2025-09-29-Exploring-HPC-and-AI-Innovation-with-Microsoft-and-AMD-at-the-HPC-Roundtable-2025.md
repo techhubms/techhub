@@ -9,15 +9,12 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-09-29 20:12:58 +00:00
 permalink: /ai/community/Exploring-HPC-and-AI-Innovation-with-Microsoft-and-AMD-at-the-HPC-Roundtable-2025
 tags:
-- AI
 - AI Infrastructure
 - AMD
-- Azure
 - Azure HB Series
 - Azure HPC Blog
 - Azure Managed Lustre
 - Cloud Computing
-- Community
 - Engineering Innovation
 - High Performance Computing
 - HPC

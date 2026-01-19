@@ -7,20 +7,12 @@ date: 2025-07-28 09:00:00 +00:00
 permalink: /all/roundups/Weekly-AI-and-Tech-News-Roundup
 tags:
 - .NET
-- AI
 - AI Agents
-- Azure
 - Cloud Modernization
-- Coding
-- DevOps
 - Enterprise AI
-- GitHub Copilot
 - MCP Protocol
-- ML
 - Multi Agent Systems
 - Open Source
-- Roundups
-- Security
 - Test Automation
 - TypeScript
 - VS Code

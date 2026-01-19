@@ -10,19 +10,15 @@ date: 2025-09-05 16:00:00 +00:00
 permalink: /github-copilot/news/How-to-Debug-a-Web-App-Using-Playwright-MCP-and-GitHub-Copilot
 tags:
 - Agent Mode
-- AI
 - AI & ML
 - AI Assisted Testing
 - AI Debugging
 - Automation
 - Bug Reproduction
-- Coding
 - Configuration
 - End To End Testing
-- GitHub Copilot
 - JavaScript
 - MCP
-- News
 - Playwright MCP
 - Testing Frameworks
 - VS Code

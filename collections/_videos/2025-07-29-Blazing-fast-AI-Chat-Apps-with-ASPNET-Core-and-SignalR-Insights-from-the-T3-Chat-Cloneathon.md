@@ -10,12 +10,10 @@ date: 2025-07-29 18:12:29 +00:00
 permalink: /ai/videos/Blazing-fast-AI-Chat-Apps-with-ASPNET-Core-and-SignalR-Insights-from-the-T3-Chat-Cloneathon
 tags:
 - .NET
-- AI
 - AI Chat
 - Aichat
 - ASP.NET Core
 - C#
-- Coding
 - Connection Resumption
 - Deep Learning
 - Demo
@@ -29,7 +27,6 @@ tags:
 - Software Developer
 - Synchronization
 - T3 Chat Cloneathon
-- Videos
 - Web Development
 section_names:
 - ai

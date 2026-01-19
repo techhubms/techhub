@@ -9,13 +9,10 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-05-02 00:00:00 +00:00
 permalink: /github-copilot/blogs/Craft-Prompts-That-Get-Better-Results
 tags:
-- AI
 - Best Practices
-- Blogs
 - Code Quality
 - Developer Workflow
 - GitHub Actions
-- GitHub Copilot
 - Prompt Engineering
 - Python
 - React

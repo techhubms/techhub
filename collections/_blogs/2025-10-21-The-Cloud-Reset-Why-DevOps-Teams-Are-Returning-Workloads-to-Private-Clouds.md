@@ -10,7 +10,6 @@ date: 2025-10-21 08:04:27 +00:00
 permalink: /devops/blogs/The-Cloud-Reset-Why-DevOps-Teams-Are-Returning-Workloads-to-Private-Clouds
 tags:
 - Automation
-- Blogs
 - Business Of DevOps
 - Cloud First
 - Cloud Strategy
@@ -19,7 +18,6 @@ tags:
 - Cost Predictability
 - Data Governance
 - Data Sovereignty
-- DevOps
 - DevOps Tooling
 - DevOps Transformation
 - Devsecops

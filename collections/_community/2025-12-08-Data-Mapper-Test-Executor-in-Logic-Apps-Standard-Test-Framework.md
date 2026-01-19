@@ -10,12 +10,8 @@ date: 2025-12-08 16:00:00 +00:00
 permalink: /coding/community/Data-Mapper-Test-Executor-in-Logic-Apps-Standard-Test-Framework
 tags:
 - Automated Test Framework
-- Azure
 - Azure Integration Services
-- Coding
-- Community
 - Data Mapper Test Executor
-- DevOps
 - Integration Testing
 - Liquid Templates
 - Logic Apps Standard

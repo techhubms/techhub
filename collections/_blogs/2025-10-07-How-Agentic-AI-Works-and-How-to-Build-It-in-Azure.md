@@ -10,18 +10,15 @@ date: 2025-10-07 09:45:12 +00:00
 permalink: /ai/blogs/How-Agentic-AI-Works-and-How-to-Build-It-in-Azure
 tags:
 - Agentic AI
-- AI
 - AI Architecture
 - AI Orchestration
 - API Integration
 - Application Insights
 - Autonomous Agents
-- Azure
 - Azure Cognitive Search
 - Azure Functions
 - Azure Monitor
 - Azure OpenAI Service
-- Blogs
 - Cosmos DB
 - Event Grid
 - Large Language Models

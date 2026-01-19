@@ -10,15 +10,11 @@ date: 2025-11-18 17:27:09 +00:00
 permalink: /ai/community/Compose-for-Agents-on-Azure-Container-Apps-Serverless-GPU-and-Agentic-AI-Workloads
 tags:
 - Agentic Applications
-- AI
 - AI Frameworks
-- Azure
 - Azure Container Apps
 - Cloud Deployment
-- Community
 - Containerization
 - CrewAI
-- DevOps
 - DevOps Automation
 - Docker Compose
 - Dynamic Scaling

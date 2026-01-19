@@ -16,12 +16,10 @@ tags:
 - Microsoft Security
 - OneDevQuestion
 - Privilege Management
-- Security
 - Security Assessment
 - Security Best Practices
 - Security Blueprint
 - Threat Modeling
-- Videos
 section_names:
 - security
 ---

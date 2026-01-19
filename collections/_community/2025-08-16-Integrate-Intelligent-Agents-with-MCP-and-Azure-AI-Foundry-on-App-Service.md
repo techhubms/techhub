@@ -10,16 +10,13 @@ date: 2025-08-16 01:15:20 +00:00
 permalink: /ai/community/Integrate-Intelligent-Agents-with-MCP-and-Azure-AI-Foundry-on-App-Service
 tags:
 - Agent Service
-- AI
 - AI Agent Integration
 - App Deployment
 - Automation
-- Azure
 - Azure AI Foundry
 - Azure App Service
 - Azure Developer CLI
 - Cloud Hosting
-- Community
 - Developer Guide
 - FastAPI
 - LLMs

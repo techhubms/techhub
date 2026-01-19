@@ -12,7 +12,6 @@ tags:
 - AI
 - AI Transforms
 - Analytics
-- Azure
 - BI Integration
 - Data Governance
 - Data Virtualization
@@ -21,8 +20,6 @@ tags:
 - Fabric
 - Lakehouse
 - Microsoft OneLake
-- ML
-- News
 - OneDrive
 - Power BI
 - SharePoint

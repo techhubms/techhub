@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-11-20 15:01:12 +00:00
 permalink: /github-copilot/videos/How-to-Assign-and-Manage-Copilot-Agent-Tasks-from-Anywhere
 tags:
-- AI
 - AI Tools
 - Autonomous Agents
-- Coding
 - Coding Automation
 - CodingAgent
 - Copilot Agent
@@ -20,12 +18,10 @@ tags:
 - Custom Agents
 - Developer Productivity
 - GitHub
-- GitHub Copilot
 - Programming Workflow
 - Slack Integration
 - Software Development
 - Task Management
-- Videos
 - VS Code
 section_names:
 - ai

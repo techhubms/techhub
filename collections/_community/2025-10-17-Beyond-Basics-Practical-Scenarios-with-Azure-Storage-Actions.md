@@ -9,16 +9,13 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-17 17:00:29 +00:00
 permalink: /ai/community/Beyond-Basics-Practical-Scenarios-with-Azure-Storage-Actions
 tags:
-- AI
 - AI Workflows
 - Audit Readiness
-- Azure
 - Azure Blob Storage
 - Azure Storage Actions
 - Blob Tags
 - Blob Tiering
 - Cloud Automation
-- Community
 - Compliance
 - Content Archiving
 - Cost Management
@@ -26,7 +23,6 @@ tags:
 - Data Lifecycle
 - Data Retention
 - Immutability
-- ML
 - ML Data Pipelines
 - Operational Optimization
 - Policy Based Management

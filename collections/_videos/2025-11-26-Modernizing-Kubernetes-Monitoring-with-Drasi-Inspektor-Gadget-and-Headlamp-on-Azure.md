@@ -10,12 +10,10 @@ date: 2025-11-26 00:47:08 +00:00
 permalink: /azure/videos/Modernizing-Kubernetes-Monitoring-with-Drasi-Inspektor-Gadget-and-Headlamp-on-Azure
 tags:
 - AKS
-- Azure
 - Cloud Agnostic
 - Cloud Native
 - Cluster Management
 - Container Orchestration
-- DevOps
 - Drasi
 - Headlamp
 - Inspektor Gadget
@@ -28,7 +26,6 @@ tags:
 - Observability
 - Open Source Tools
 - Real Time Insights
-- Videos
 section_names:
 - azure
 - devops

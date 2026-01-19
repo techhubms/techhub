@@ -12,8 +12,6 @@ tags:
 - .NET
 - ASP.NET Core
 - Backend Development
-- Coding
-- Community
 - Dependency Injection
 - DTO
 - EF

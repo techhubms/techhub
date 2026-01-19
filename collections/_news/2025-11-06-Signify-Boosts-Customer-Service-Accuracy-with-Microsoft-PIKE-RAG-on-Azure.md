@@ -9,9 +9,7 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-06 17:14:37 +00:00
 permalink: /ai/news/Signify-Boosts-Customer-Service-Accuracy-with-Microsoft-PIKE-RAG-on-Azure
 tags:
-- AI
 - Algorithm Optimization
-- Azure
 - Company News
 - Customer Service AI
 - Document Intelligence
@@ -23,7 +21,6 @@ tags:
 - Microsoft Azure OpenAI
 - Microsoft Research Asia
 - Multimodal AI
-- News
 - PIKE RAG
 - Retrieval Augmented Generation
 - Signify

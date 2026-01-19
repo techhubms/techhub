@@ -11,13 +11,10 @@ permalink: /coding/community/Faster-Azure-Functions-Python-with-uvloop
 tags:
 - Asynchronous Workloads
 - AsyncIO
-- Azure
 - Azure App Service
 - Azure Functions
 - Benchmarking
 - Cloud Scalability
-- Coding
-- Community
 - Concurrency
 - Event Loop
 - Flex Consumption

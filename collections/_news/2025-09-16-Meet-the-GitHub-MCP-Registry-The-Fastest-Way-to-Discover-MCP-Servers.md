@@ -10,21 +10,17 @@ date: 2025-09-16 16:27:54 +00:00
 permalink: /github-copilot/news/Meet-the-GitHub-MCP-Registry-The-Fastest-Way-to-Discover-MCP-Servers
 tags:
 - Agentic Workflows
-- AI
 - AI & ML
 - AI Agents
 - AI Development
 - API Integration
 - Automation
 - Developer Tools
-- DevOps
 - Ecosystem
-- GitHub Copilot
 - GitHub MCP Registry
 - Interoperability
 - MCP
 - MCP Servers
-- News
 - Open Source
 - Registry Integration
 - VS Code

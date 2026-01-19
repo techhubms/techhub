@@ -9,15 +9,12 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-12-11 21:53:48 +00:00
 permalink: /github-copilot/videos/Plan-Specify-and-Implement-with-Spec-Kit-and-GitHub-Copilot
 tags:
-- AI
 - AI Development
 - Cloud Computing
-- Coding
 - Dev
 - Developer
 - Developer Tools
 - Development
-- GitHub Copilot
 - Microsoft
 - Microsoft Developer
 - Open Source
@@ -28,7 +25,6 @@ tags:
 - Tech
 - Technology
 - Toolkit
-- Videos
 - VS Code
 section_names:
 - ai

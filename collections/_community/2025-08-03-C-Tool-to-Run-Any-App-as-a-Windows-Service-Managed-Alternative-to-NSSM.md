@@ -11,8 +11,6 @@ permalink: /coding/community/C-Tool-to-Run-Any-App-as-a-Windows-Service-Managed-
 tags:
 - .NET
 - C#
-- Coding
-- Community
 - Custom Working Directory
 - NSSM Alternative
 - Open Source

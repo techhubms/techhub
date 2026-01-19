@@ -10,26 +10,19 @@ date: 2025-11-18 18:05:00 +00:00
 permalink: /github-copilot/news/Modernizing-NET-Applications-with-GitHub-Copilot-Agent-Mode-A-Step-by-Step-Guide
 tags:
 - .NET
-- AI
 - App Modernization
 - Authentication
 - Automated Testing
-- Azure
 - Azure Migration
 - CI/CD
 - Cloud
 - Cloud Readiness
 - Code Assessment
-- Coding
 - Dependency Management
-- DevOps
 - Framework Upgrade
 - Git Integration
-- GitHub Copilot
 - Identity Management
 - Monitoring
-- News
-- Security
 - Security Scanning
 - VS
 section_names:

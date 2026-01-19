@@ -23,9 +23,7 @@ tags:
 - MSIgnite
 - Multi Cloud Security
 - Network Segmentation
-- Security
 - Security Architecture
-- Videos
 - Windows 11
 - Zero Trust
 - ZT DNS

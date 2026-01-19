@@ -10,16 +10,11 @@ date: 2025-09-02 09:26:06 +00:00
 permalink: /github-copilot/blogs/How-to-Migrate-Legacy-Applications-Using-GitHub-Copilot
 tags:
 - .NET Modernization
-- AI
 - AI Pair Programming
 - Application Modernization
 - Architecture
-- Blogs
 - CI/CD
-- Coding
 - Developer Productivity
-- DevOps
-- GitHub Copilot
 - Incremental Migration
 - Legacy Migration
 - Python Migration

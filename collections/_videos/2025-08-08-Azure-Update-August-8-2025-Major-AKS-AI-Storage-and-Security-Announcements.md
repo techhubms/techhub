@@ -9,12 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7
 date: 2025-08-08 12:09:46 +00:00
 permalink: /ai/videos/Azure-Update-August-8-2025-Major-AKS-AI-Storage-and-Security-Announcements
 tags:
-- AI
 - AI Shell
 - AKS
 - Application Gateway WAF
 - AVNM
-- Azure
 - Azure Arc
 - Azure Backup
 - Azure Cloud
@@ -34,12 +32,9 @@ tags:
 - GPT Oss 120/20
 - Microsoft
 - Microsoft Azure
-- ML
 - Multi Disk Backup
 - Network Security Perimeter
-- Security
 - Vcpu Options
-- Videos
 - Virtual Network Mesh
 section_names:
 - ai

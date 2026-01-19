@@ -10,16 +10,13 @@ date: 2025-11-18 00:00:00 +00:00
 permalink: /coding/news/Introducing-the-Visual-Studio-Code-Private-Marketplace-Secure-Extension-Management-for-Teams
 tags:
 - Code Security
-- Coding
 - Developer Experience
-- DevOps
 - Enterprise Software
 - Extension Deployment
 - Extension Management
 - GitHub Enterprise
 - Internal Extensions
 - IT Security
-- News
 - Organization Tools
 - Private Marketplace
 - Secure Development

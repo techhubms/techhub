@@ -11,11 +11,9 @@ permalink: /azure/community/Defending-the-cloud-Azure-neutralized-a-record-break
 tags:
 - Aisuru Botnet
 - Australia Endpoint
-- Azure
 - Azure DDoS Protection
 - Azure Infrastructure
 - Cloud Security
-- Community
 - Cybersecurity
 - Distributed Denial Of Service
 - Internet Facing Applications
@@ -24,7 +22,6 @@ tags:
 - Network Protection
 - Operational Readiness
 - Provider Enforcement
-- Security
 - Turbo Mirai
 - UDP Flood
 section_names:

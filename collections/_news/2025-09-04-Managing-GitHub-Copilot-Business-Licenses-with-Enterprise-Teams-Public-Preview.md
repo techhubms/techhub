@@ -10,17 +10,13 @@ date: 2025-09-04 16:59:13 +00:00
 permalink: /github-copilot/news/Managing-GitHub-Copilot-Business-Licenses-with-Enterprise-Teams-Public-Preview
 tags:
 - Admin Tools
-- AI
 - Copilot Business
-- DevOps
 - Enterprise Managed Users
 - Enterprise Teams
-- GitHub Copilot
 - GitHub Enterprise Cloud
 - Group Management
 - Identity Provider
 - License Management
-- News
 - Public Preview
 - SCIM
 - User Management

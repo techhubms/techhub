@@ -9,20 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-11-04 01:00:50 +00:00
 permalink: /github-copilot/videos/Building-Intelligent-AI-Applications-with-Java-Spring-Boot-and-LangChain4j
 tags:
-- AI
 - AI Integration
 - AIApplications
 - AIIntegration
 - API Integration
 - Application Development
-- Azure
 - Azure AI
 - Azure AI Foundry
 - Chat Models
 - ChatModels
-- Coding
 - Dependency Management
-- GitHub Copilot
 - GPT 4o Mini
 - IntelligentApps
 - Java
@@ -38,7 +34,6 @@ tags:
 - OpenAI Java SDK
 - Spring Boot
 - SpringBoot
-- Videos
 section_names:
 - ai
 - azure

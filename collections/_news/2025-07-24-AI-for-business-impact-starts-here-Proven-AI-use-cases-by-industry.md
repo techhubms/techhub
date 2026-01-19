@@ -9,11 +9,9 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-24 13:46:56 +00:00
 permalink: /ai/news/AI-for-business-impact-starts-here-Proven-AI-use-cases-by-industry
 tags:
-- AI
 - AI Adoption
 - AI Impact
 - AI Solutions
-- Azure
 - Business Transformation
 - Cloud Services
 - Company News
@@ -21,7 +19,6 @@ tags:
 - Enterprise AI
 - Industry Use Cases
 - Microsoft AI
-- News
 - Sector Specific AI
 section_names:
 - ai

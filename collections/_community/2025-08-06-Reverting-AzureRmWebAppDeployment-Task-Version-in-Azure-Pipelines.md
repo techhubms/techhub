@@ -9,16 +9,13 @@ feed_url: https://www.reddit.com/r/azuredevops/.rss
 date: 2025-08-06 13:45:43 +00:00
 permalink: /azure/community/Reverting-AzureRmWebAppDeployment-Task-Version-in-Azure-Pipelines
 tags:
-- Azure
 - Azure DevOps
 - Azure Pipelines
 - Azure Pipelines Tasks
 - AzureRmWebAppDeployment
 - CI/CD
-- Community
 - Custom Tasks
 - Deployment Automation
-- DevOps
 - npm Packages
 - Pipeline Tasks
 - PowerShell

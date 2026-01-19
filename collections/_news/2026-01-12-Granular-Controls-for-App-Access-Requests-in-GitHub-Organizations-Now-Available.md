@@ -12,16 +12,13 @@ tags:
 - Access Control
 - App Access
 - Collaboration
-- DevOps
 - Enterprise Governance
 - Enterprise Management Tools
 - GitHub
 - Improvement
 - Integration Approval
-- News
 - OAuth
 - Organization Management
-- Security
 - Security Policy
 - Settings
 section_names:

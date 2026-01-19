@@ -11,9 +11,7 @@ permalink: /ai/community/6-Month-Field-Report-AI-Agents-in-SDR-and-L1-SupportWha
 tags:
 - A/B Testing
 - Agent Orchestration
-- AI
 - AI Agents
-- Community
 - CSAT
 - HubSpot
 - Human Handoff

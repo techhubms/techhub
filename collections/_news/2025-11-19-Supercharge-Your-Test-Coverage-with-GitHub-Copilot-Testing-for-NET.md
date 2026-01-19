@@ -10,17 +10,13 @@ date: 2025-11-19 18:05:00 +00:00
 permalink: /github-copilot/news/Supercharge-Your-Test-Coverage-with-GitHub-Copilot-Testing-for-NET
 tags:
 - .NET
-- AI
 - AI Testing
 - C#
 - Code Coverage
-- Coding
 - Copilot
-- GitHub Copilot
 - IDE Integration
 - MSBuild
 - MSTest
-- News
 - NUnit
 - Roslyn Analyzer
 - Software Quality

@@ -9,12 +9,10 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-28 17:06:32 +00:00
 permalink: /ai/blogs/The-Evolution-of-Conversational-AI-in-Microsofts-Ecosystem
 tags:
-- AI
 - AI Assistants
 - Azure Bot Framework
 - Azure Cognitive Services
 - Azure OpenAI Service
-- Blogs
 - Conversational AI
 - Copilot For Microsoft 365
 - Copilot Studio

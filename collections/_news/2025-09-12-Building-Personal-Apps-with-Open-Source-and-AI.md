@@ -9,17 +9,13 @@ feed_url: https://github.blog/feed/
 date: 2025-09-12 16:00:00 +00:00
 permalink: /github-copilot/news/Building-Personal-Apps-with-Open-Source-and-AI
 tags:
-- AI
 - Automation
-- Coding
 - Community Collaboration
 - Developer Tools
 - GitHub
-- GitHub Copilot
 - GitHub Podcast
 - Maintainers
 - Markdown Tools
-- News
 - Open Source
 - Open Source Community
 - Personal Apps

@@ -10,16 +10,13 @@ date: 2025-10-24 09:00:00 +00:00
 permalink: /ml/news/Fabric-Influencers-Spotlight-October-2025-Microsoft-Fabric-Community-Highlights
 tags:
 - Administration
-- Azure
 - Certification DP 600
 - Certification DP 700
-- Coding
 - Data Engineering
 - Data Science
 - Data Warehousing
 - DAX
 - DBSCAN
-- DevOps
 - Eventhouse
 - Fabric Data Agents
 - Fabric Notebooks
@@ -28,9 +25,7 @@ tags:
 - KMeans
 - Medallion Architecture
 - Microsoft Fabric
-- ML
 - MVP
-- News
 - Power BI
 - Real Time Intelligence
 - Semantic Models

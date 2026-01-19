@@ -10,7 +10,6 @@ date: 2025-12-15 17:00:39 +00:00
 permalink: /azure/videos/Performing-CICD-for-SQL-Databases-in-Fabric-Using-Azure-DevOps
 tags:
 - Automation
-- Azure
 - Azure DevOps
 - Azure SQL
 - CI/CD
@@ -21,7 +20,6 @@ tags:
 - Database Projects
 - Dev
 - Development
-- DevOps
 - Microsoft
 - Microsoft Developer
 - Microsoft Fabric
@@ -31,7 +29,6 @@ tags:
 - SqlPackage
 - Tech
 - Technology
-- Videos
 section_names:
 - azure
 - devops

@@ -12,9 +12,6 @@ tags:
 - .NET
 - ASP.NET
 - Backend
-- Coding
-- Community
-- DevOps
 - Frontend
 - Full Stack Development
 - GitHub

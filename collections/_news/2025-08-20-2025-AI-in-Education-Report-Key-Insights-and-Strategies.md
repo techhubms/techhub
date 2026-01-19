@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-08-20 19:27:23 +00:00
 permalink: /ai/news/2025-AI-in-Education-Report-Key-Insights-and-Strategies
 tags:
-- AI
 - AI Adoption
 - AI in Education
 - AI Literacy
@@ -26,7 +25,6 @@ tags:
 - Microsoft
 - Microsoft Copilot
 - Microsoft Education
-- News
 - Professional Development
 - Workforce Readiness
 section_names:

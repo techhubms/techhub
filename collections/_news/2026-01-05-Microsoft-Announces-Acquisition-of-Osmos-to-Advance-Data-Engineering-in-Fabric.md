@@ -10,10 +10,8 @@ date: 2026-01-05 18:40:45 +00:00
 permalink: /ai/news/Microsoft-Announces-Acquisition-of-Osmos-to-Advance-Data-Engineering-in-Fabric
 tags:
 - Agentic AI
-- AI
 - AI Infrastructure
 - Autonomous Agents
-- Azure
 - Azure Data Analytics
 - Big Data
 - Company News
@@ -22,8 +20,6 @@ tags:
 - Data Preparation
 - Data Unification
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Osmos
 - Power BI

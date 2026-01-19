@@ -11,8 +11,6 @@ permalink: /coding/community/Weird-Unhandled-Exception-Errors-in-Visual-Studio-A
 tags:
 - .NET
 - Build Error
-- Coding
-- Community
 - Debugging
 - Development Environment
 - Framework

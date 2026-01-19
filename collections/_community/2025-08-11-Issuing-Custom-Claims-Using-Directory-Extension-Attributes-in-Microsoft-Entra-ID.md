@@ -13,7 +13,6 @@ tags:
 - Azure Active Directory
 - Claims Issuance
 - Cloud Identity
-- Community
 - Conditional Access
 - Directory Extension Attributes
 - Enterprise Applications
@@ -23,7 +22,6 @@ tags:
 - Microsoft Graph API
 - OIDC
 - SAML
-- Security
 - Single Sign On
 - User Attributes
 section_names:

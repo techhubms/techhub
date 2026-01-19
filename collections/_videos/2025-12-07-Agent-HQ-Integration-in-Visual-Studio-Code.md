@@ -11,10 +11,8 @@ permalink: /ai/videos/Agent-HQ-Integration-in-Visual-Studio-Code
 tags:
 - Agent HQ
 - Agent Sessions
-- AI
 - AI Integration
 - Code Agents
-- Coding
 - Copilot CLI
 - Custom Agents
 - Developer Productivity
@@ -23,7 +21,6 @@ tags:
 - OpenAI Codex
 - Plan Agent
 - Session Management
-- Videos
 - VS Code
 - Workflow Automation
 section_names:

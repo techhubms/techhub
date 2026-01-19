@@ -10,13 +10,11 @@ date: 2025-09-30 09:26:23 +00:00
 permalink: /azure/community/How-to-Use-Exclude-Prefix-for-Smarter-Blob-Management-in-Azure-Storage-Actions
 tags:
 - Automation
-- Azure
 - Azure Portal
 - Azure Storage Actions
 - Blob Deletion
 - Blob Filtering
 - Blob Management
-- Community
 - Condition Filtering
 - Data Lake Storage
 - Exclude Prefix

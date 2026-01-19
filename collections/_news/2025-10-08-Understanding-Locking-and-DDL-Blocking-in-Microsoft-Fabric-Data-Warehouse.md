@@ -10,7 +10,6 @@ date: 2025-10-08 07:03:26 +00:00
 permalink: /ml/news/Understanding-Locking-and-DDL-Blocking-in-Microsoft-Fabric-Data-Warehouse
 tags:
 - ACID Transactions
-- Azure
 - Concurrency
 - Data Engineering
 - Data Warehouse
@@ -19,8 +18,6 @@ tags:
 - DML Operations
 - Locking
 - Microsoft Fabric
-- ML
-- News
 - Schema Modification Lock
 - Snapshot Isolation
 - Sys.dm Tran Locks

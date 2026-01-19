@@ -10,9 +10,7 @@ date: 2025-10-30 18:29:56 +00:00
 permalink: /github-copilot/news/Integrating-GitHub-Copilot-Coding-Agent-with-Azure-Using-the-azd-Extension
 tags:
 - .NET
-- AI
 - Azd
-- Azure
 - Azure App Service
 - Azure Cosmos DB
 - Azure Developer CLI
@@ -24,10 +22,8 @@ tags:
 - CI/CD
 - Codespaces
 - Copilot
-- DevOps
 - Docker
 - Federated Credentials
-- GitHub Copilot
 - GitHub Copilot Coding Agent
 - IaC
 - Java
@@ -35,12 +31,10 @@ tags:
 - Kubernetes
 - Managed Identity
 - MCP Configuration
-- News
 - OpenID Connect
 - Python
 - RBAC
 - Repository Configuration
-- Security
 - Typescript
 - VS Code
 - Workflow Automation

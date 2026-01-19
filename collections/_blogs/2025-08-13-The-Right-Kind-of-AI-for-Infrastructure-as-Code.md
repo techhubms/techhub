@@ -10,16 +10,13 @@ date: 2025-08-13 16:33:28 +00:00
 permalink: /ai/blogs/The-Right-Kind-of-AI-for-Infrastructure-as-Code
 tags:
 - Agentic AI
-- AI
 - AI in DevOps
 - Alert Fatigue
-- Blogs
 - CIS
 - Cloud
 - Cloud Compliance
 - Cloud Security
 - Contributed Content
-- DevOps
 - DevOps Automation
 - IaC
 - Merge Requests
@@ -27,7 +24,6 @@ tags:
 - Platform Engineering
 - Policy as Code
 - Remediation Tools
-- Security
 - Security Automation
 - Security Remediation
 - Social Facebook

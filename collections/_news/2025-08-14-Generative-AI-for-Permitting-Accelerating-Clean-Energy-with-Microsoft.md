@@ -10,9 +10,7 @@ date: 2025-08-14 14:25:12 +00:00
 permalink: /ai/news/Generative-AI-for-Permitting-Accelerating-Clean-Energy-with-Microsoft
 tags:
 - Agentic AI Workflows
-- AI
 - AI in Government
-- Azure
 - Azure OpenAI Service
 - Clean Energy
 - Company News
@@ -27,7 +25,6 @@ tags:
 - MCAPS Energy
 - Microsoft AI Solutions
 - Microsoft Garage
-- News
 - Nuclear Licensing
 - Permitting Automation
 - Productivity Gains

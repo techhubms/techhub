@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-10-22 14:01:34 +00:00
 permalink: /github-copilot/videos/Rapid-Database-Integration-in-VS-Code-with-Microsoft-Learn-MCP-Server-and-GitHub-Copilot
 tags:
-- AI
 - Automation
 - Beginner
 - Code Generation
-- Coding
 - Copilot
 - Database Deployment
 - Demo
@@ -21,14 +19,12 @@ tags:
 - Developer
 - Developer Productivity
 - GitHub
-- GitHub Copilot
 - Mcp
 - MCP Server
 - Microsoft Learn MCP
 - Postgres
 - Programming Tutorial
 - Software Developer
-- Videos
 - VS Code
 section_names:
 - ai

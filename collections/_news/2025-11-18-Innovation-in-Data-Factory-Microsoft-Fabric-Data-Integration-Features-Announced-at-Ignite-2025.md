@@ -9,12 +9,9 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
 permalink: /ai/news/Innovation-in-Data-Factory-Microsoft-Fabric-Data-Integration-Features-Announced-at-Ignite-2025
 tags:
-- AI
 - AI Function Transforms
 - Apache Airflow API
-- Azure
 - Azure Data Factory
-- Coding
 - Copilot Integration
 - CosmosDB
 - Data Factory
@@ -22,8 +19,6 @@ tags:
 - Dbt Fusion
 - Dbt Job
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Open Mirroring
 - Pipeline Automation

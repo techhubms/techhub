@@ -9,12 +9,10 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-08-18 21:00:00 +00:00
 permalink: /ai/news/Building-the-Frontier-Firm-with-Microsoft-Azure-The-Business-Case-for-Cloud-and-AI-Modernization
 tags:
-- AI
 - AI + Machine Learning
 - AI At Scale
 - AI Transformation
 - App Modernization Guidance
-- Azure
 - Azure Migration
 - Business Agility
 - Cloud Modernization
@@ -26,7 +24,6 @@ tags:
 - Innovation
 - IT Modernization
 - Microsoft Azure
-- News
 - ROI
 - Technical Debt
 section_names:

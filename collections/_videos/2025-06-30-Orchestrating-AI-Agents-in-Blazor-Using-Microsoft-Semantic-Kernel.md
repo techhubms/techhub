@@ -12,13 +12,11 @@ tags:
 - .NET
 - Agent Resolver
 - AgentOrchestration
-- AI
 - AI Agent Orchestration
 - AI in Blazor
 - AIinBlazor
 - Blazor
 - ChatCompletionAgents
-- Coding
 - Concurrent Orchestration
 - ConcurrentOrchestration
 - Dependency Injection
@@ -30,7 +28,6 @@ tags:
 - Orchestration Service
 - ProcessRuntime
 - Semantic Kernel
-- Videos
 section_names:
 - ai
 - coding

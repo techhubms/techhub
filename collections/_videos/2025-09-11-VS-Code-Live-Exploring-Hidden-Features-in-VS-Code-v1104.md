@@ -14,7 +14,6 @@ tags:
 - BYOK
 - Code
 - Code Editing
-- Coding
 - Copilot
 - Developer
 - Developer Community
@@ -26,7 +25,6 @@ tags:
 - Release Highlights
 - Software Developer
 - Software Development
-- Videos
 - VS Code
 - VS Code V1.104
 - Vscoderelease

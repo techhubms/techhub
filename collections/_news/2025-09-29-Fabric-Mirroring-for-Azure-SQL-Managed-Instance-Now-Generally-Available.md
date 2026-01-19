@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-29 11:00:00 +00:00
 permalink: /ml/news/Fabric-Mirroring-for-Azure-SQL-Managed-Instance-Now-Generally-Available
 tags:
-- Azure
 - Azure SQL Managed Instance
 - Data Engineering
 - Data Platform
@@ -22,8 +21,6 @@ tags:
 - Lakehouse
 - Microsoft Fabric
 - Mirroring
-- ML
-- News
 - Notebooks
 - OneLake
 - Power BI Direct Lake

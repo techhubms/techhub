@@ -10,14 +10,11 @@ date: 2025-11-10 17:54:01 +00:00
 permalink: /ai/community/How-SleekFlow-Uses-Azure-and-AI-to-Orchestrate-Enterprise-Customer-Conversations
 tags:
 - AgentFlow
-- AI
-- Azure
 - Azure AI Foundry
 - Azure Container Apps
 - Azure Cosmos DB
 - Azure OpenAI
 - Cloud Architecture
-- Community
 - Compliance
 - Conversational AI
 - DiskANN

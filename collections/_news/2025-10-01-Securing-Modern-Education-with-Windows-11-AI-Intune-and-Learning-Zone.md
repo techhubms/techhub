@@ -10,9 +10,7 @@ date: 2025-10-01 17:21:17 +00:00
 permalink: /ai/news/Securing-Modern-Education-with-Windows-11-AI-Intune-and-Learning-Zone
 tags:
 - Accessibility Tools
-- AI
 - AI Powered Learning
-- Azure
 - Classroom Security
 - Company News
 - Copilot+ PCs
@@ -25,9 +23,7 @@ tags:
 - Microsoft Defender
 - Microsoft Intune
 - Migration Planning
-- News
 - Performance Optimization
-- Security
 - Trusted Platform Module
 - Windows 11 Education
 section_names:

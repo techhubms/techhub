@@ -9,17 +9,14 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-07 18:00:25 +00:00
 permalink: /github-copilot/community/Unexpected-Code-Edits-by-Copilot-in-ASK-Mode
 tags:
-- AI
 - AI Powered IDE
 - Automated Code Edits
 - Code Review
 - Codebase Management
-- Community
 - Copilot Agent Mode
 - Copilot ASK Mode
 - Developer Tools
 - Git Changes
-- GitHub Copilot
 - Software Development
 - Source Control
 - VS Code

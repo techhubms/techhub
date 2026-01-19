@@ -9,15 +9,12 @@ feed_url: https://www.thomasmaurer.ch/feed/
 date: 2025-07-30 09:37:46 +00:00
 permalink: /ai/blogs/Design-AI-Workloads-with-the-Azure-Well-Architected-Framework
 tags:
-- AI
 - AI Workloads
 - Assessment Tools
-- Azure
 - Azure Essentials Show
 - Azure PaaS
 - Azure SaaS
 - Azure Well Architected Framework
-- Blogs
 - Cloud
 - Cloud Architecture
 - Cost Optimization

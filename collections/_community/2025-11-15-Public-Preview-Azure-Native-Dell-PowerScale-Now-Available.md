@@ -11,7 +11,6 @@ permalink: /azure/community/Public-Preview-Azure-Native-Dell-PowerScale-Now-Avai
 tags:
 - AI
 - AI Workloads
-- Azure
 - Azure Blob Storage
 - Azure CLI
 - Azure Marketplace
@@ -19,7 +18,6 @@ tags:
 - Azure Portal
 - Cloud Disaster Recovery
 - Cloud Pools
-- Community
 - Data Analytics
 - Data Replication
 - Dell PowerScale

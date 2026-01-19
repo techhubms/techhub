@@ -10,7 +10,6 @@ date: 2025-09-30 14:00:00 +00:00
 permalink: /ml/news/September-2025-Microsoft-Fabric-Influencers-Spotlight
 tags:
 - Administration
-- Azure
 - CI/CD
 - Data Engineering
 - Data Integration
@@ -21,10 +20,8 @@ tags:
 - Fabric Platform
 - Governance
 - Microsoft Fabric
-- ML
 - Model Metrics
 - MVP
-- News
 - Power BI
 - Python
 - Scikit Learn

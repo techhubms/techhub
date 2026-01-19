@@ -11,7 +11,6 @@ permalink: /ml/news/Autoscale-Billing-for-Spark-in-Microsoft-Fabric-Now-Generall
 tags:
 - Apache Spark
 - Autoscale Billing
-- Azure
 - Billing Model
 - Capacity Management
 - Cloud Computing
@@ -19,8 +18,6 @@ tags:
 - Data Workloads
 - General Availability
 - Microsoft Fabric
-- ML
-- News
 - Serverless
 section_names:
 - azure

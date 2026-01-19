@@ -11,14 +11,11 @@ permalink: /ai/community/Announcing-AI-Foundry-Agent-Service-Connector-v2-Previe
 tags:
 - Agent Loop
 - Agent Orchestration
-- AI
 - AI Foundry Agent Service
 - API Connector
 - Automation
-- Azure
 - Azure Logic Apps
 - Business Process Automation
-- Community
 - Enterprise Integration
 - Event Driven Integration
 - Integration Services

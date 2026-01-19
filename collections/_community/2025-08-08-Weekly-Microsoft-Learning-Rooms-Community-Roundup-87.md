@@ -10,26 +10,20 @@ date: 2025-08-08 18:40:34 +00:00
 permalink: /ai/community/Weekly-Microsoft-Learning-Rooms-Community-Roundup-87
 tags:
 - Access Control
-- AI
 - APIM Integration
-- Azure
 - Azure AI Foundry
 - Azure APIM
 - Cloud Security
-- Coding
-- Community
 - Dev Community
 - Domain Controller
 - Event Sourcing
 - Microsoft Community Hub
 - Microsoft Fabric
 - Microsoft Learning Rooms
-- ML
 - Multi Agent Systems
 - Power BI
 - Purview
 - Real Time Data
-- Security
 - Tech Events
 section_names:
 - ai

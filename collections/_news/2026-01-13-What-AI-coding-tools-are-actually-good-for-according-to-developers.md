@@ -9,7 +9,6 @@ feed_url: https://github.blog/feed/
 date: 2026-01-13 18:39:24 +00:00
 permalink: /github-copilot/news/What-AI-coding-tools-are-actually-good-for-according-to-developers
 tags:
-- AI
 - AI & ML
 - AI Coding Tools
 - AI Empowerment
@@ -21,8 +20,6 @@ tags:
 - Developer Feedback
 - Developer Workflow
 - Generative AI
-- GitHub Copilot
-- News
 - Productivity
 - Software Development
 - Telemetry

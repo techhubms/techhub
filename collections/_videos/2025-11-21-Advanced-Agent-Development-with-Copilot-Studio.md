@@ -11,7 +11,6 @@ permalink: /ai/videos/Advanced-Agent-Development-with-Copilot-Studio
 tags:
 - Advanced AI
 - Agent Orchestration
-- AI
 - AI Agents
 - AI Development
 - Anthropic Models
@@ -26,7 +25,6 @@ tags:
 - Multi Agent Systems
 - Scott Durow
 - UI Automation
-- Videos
 section_names:
 - ai
 ---

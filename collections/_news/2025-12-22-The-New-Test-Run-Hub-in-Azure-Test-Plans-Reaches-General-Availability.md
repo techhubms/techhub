@@ -10,16 +10,13 @@ date: 2025-12-22 13:06:01 +00:00
 permalink: /azure/news/The-New-Test-Run-Hub-in-Azure-Test-Plans-Reaches-General-Availability
 tags:
 - Agile
-- Azure
 - Azure DevOps
 - Azure Test Plans
 - Collaboration
 - Continuous Integration
 - Dashboards
 - Development Tools
-- DevOps
 - Manual Testing
-- News
 - Pipeline Integration
 - Release Management
 - REST API

@@ -11,15 +11,12 @@ permalink: /ml/community/Structuring-a-GNN-Based-Next-Activity-Prediction-for-Bu
 tags:
 - Batch Processing
 - Business Process Analysis
-- Community
 - CSV
 - GCN
 - GNN Training
 - Graph Neural Networks
 - Graph Representation
-- Machine Learning
 - MachineLearning
-- ML
 - Model Architecture
 - Next Activity Prediction
 - Node Classification

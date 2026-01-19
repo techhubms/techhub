@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-02 17:35:52 +00:00
 permalink: /ai/videos/What-is-an-AI-Agent
 tags:
-- AI
 - AI Agent
 - AI Development
 - Code Execution
@@ -21,7 +20,6 @@ tags:
 - Seth Juarez
 - Shorts
 - Software Automation
-- Videos
 section_names:
 - ai
 ---

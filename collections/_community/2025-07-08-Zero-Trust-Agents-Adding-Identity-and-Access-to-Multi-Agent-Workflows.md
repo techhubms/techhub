@@ -11,19 +11,15 @@ permalink: /ai/community/Zero-Trust-Agents-Adding-Identity-and-Access-to-Multi-A
 tags:
 - Access Management
 - Agent Orchestration
-- AI
 - Auditability
 - AutoGen
-- Azure
 - Azure AI Foundry
 - Azure OpenAI
-- Community
 - Enterprise Security
 - Entra Agent ID
 - Identity Management
 - JWT
 - OAuth2
-- Security
 - Security Best Practices
 - WSO2 Asgardeo
 - Zero Trust

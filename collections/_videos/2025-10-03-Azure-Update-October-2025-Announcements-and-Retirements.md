@@ -10,11 +10,9 @@ date: 2025-10-03 10:51:11 +00:00
 permalink: /ai/videos/Azure-Update-October-2025-Announcements-and-Retirements
 tags:
 - ACA Connector
-- AI
 - AKS
 - ARM Metrics
 - AVS AV36
-- Azure
 - Azure AI Foundry
 - Azure Cloud
 - Azure Compute Gallery
@@ -34,13 +32,10 @@ tags:
 - Microsoft Azure
 - Microsoft Fabric
 - Microsoft Sentinel
-- ML
 - MSSQL Extension
 - NVv4 VM
-- Security
 - SQL Database
 - Traffic Manager
-- Videos
 section_names:
 - ai
 - azure

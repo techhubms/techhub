@@ -10,21 +10,17 @@ date: 2025-07-24 16:00:00 +00:00
 permalink: /azure/news/How-to-Streamline-GitHub-API-Calls-in-Azure-Pipelines-Using-a-Custom-DevOps-Extension
 tags:
 - Automation
-- Azure
 - Azure DevOps
 - Azure DevOps Extension
 - Azure Pipelines
 - CI/CD
 - Company
 - Custom Task
-- DevOps
 - Enterprise Software
 - GitHub API
 - GitHub Apps
 - Integrations
 - JWT Authentication
-- News
-- Security
 - Service Connection
 - Token Management
 - YAML Pipeline

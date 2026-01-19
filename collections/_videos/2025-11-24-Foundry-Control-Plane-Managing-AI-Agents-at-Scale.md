@@ -9,12 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 06:39:24 +00:00
 permalink: /ai/videos/Foundry-Control-Plane-Managing-AI-Agents-at-Scale
 tags:
-- AI
 - AI Agents
 - AI Compliance
 - AI Governance
 - AI Lifecycle Management
-- Azure
 - Azure AI
 - Control Plane
 - Guardrails
@@ -27,9 +25,7 @@ tags:
 - Red Teaming
 - Responsible AI
 - Risk Management
-- Security
 - Security Integrations
-- Videos
 section_names:
 - ai
 - azure

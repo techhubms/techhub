@@ -9,25 +9,20 @@ feed_url: https://devblogs.microsoft.com/azure-sdk/feed/
 date: 2025-06-03 16:59:15 +00:00
 permalink: /ai/news/Azure-SDK-Release-Highlights-and-Notes-for-May-2025
 tags:
-- AI
 - AI Agents
-- Azure
 - Azure SDK
 - Beta Release
 - Carbon Optimization
 - Client Libraries
-- Coding
 - Dependency Map
 - Health Deidentification
 - Key Vault
 - Management Libraries
 - Neon Postgres
-- News
 - Release Notes
 - Resource Management
 - SAP Virtual Instance
 - SDK
-- Security
 - Stable Release
 - Storage Blob
 section_names:

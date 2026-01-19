@@ -10,18 +10,14 @@ date: 2025-10-08 00:58:44 +00:00
 permalink: /ai/news/Whats-New-in-Azure-AI-Foundry-September-2025-Feature-Roundup
 tags:
 - .NET SDK
-- AI
 - AI Agents
 - Avatar 4K
-- Azure
 - Azure AI Evaluation
 - Azure AI Foundry
 - Azure AI Search
 - BCDR
 - Browser Automation
-- Coding
 - Data Services
-- DevOps
 - Evaluations
 - Foundry Local
 - Function Calling
@@ -33,16 +29,13 @@ tags:
 - Key Vault
 - Knowledge Sources
 - Microsoft Agent Framework
-- ML
 - Model ORchestration
-- News
 - O4 Mini
 - OpenAI
 - Python SDK
 - Red Teaming
 - Reinforcement Fine Tuning
 - SDK Changelog
-- Security
 - Sora
 - Speech To Speech
 - Structured Output

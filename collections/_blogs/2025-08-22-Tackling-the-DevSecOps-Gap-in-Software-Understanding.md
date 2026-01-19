@@ -10,19 +10,16 @@ date: 2025-08-22 02:45:22 +00:00
 permalink: /devops/blogs/Tackling-the-DevSecOps-Gap-in-Software-Understanding
 tags:
 - Artifact Traceability
-- Blogs
 - Build Pipeline
 - CI/CD
 - CISA
 - Component Provenance
-- DevOps
 - DevSecOps
 - Lifecycle Management
 - Policy Collaboration
 - SBOM
 - SBOMs
 - Secure Software Development
-- Security
 - Security Automation
 - Social Facebook
 - Social LinkedIn

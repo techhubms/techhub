@@ -9,16 +9,13 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-07-18 20:19:41 +00:00
 permalink: /github-copilot/videos/Finish-your-work-without-touching-any-code
 tags:
-- AI
 - AI Powered Automation
 - Code Automation
 - Code Generation
 - Copilotcodingagent
 - Developer Tools
-- GitHub Copilot
 - No Code
 - Software Development
-- Videos
 - VS Code
 - Workflow Automation
 section_names:

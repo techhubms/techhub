@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-28 15:35:34 +00:00
 permalink: /coding/videos/You-open-sourced-WSL-What-does-that-mean
 tags:
-- Coding
 - Developer Tools
 - File Systems
 - GPU Access
@@ -17,7 +16,6 @@ tags:
 - Microsoft
 - Open Source
 - Platform Development
-- Videos
 - Virtual Machines
 - Windows Subsystem For Linux
 - WSL

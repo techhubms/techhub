@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-26 18:21:39 +00:00
 permalink: /ai/videos/Premier-Leagues-Data-Driven-Fan-Engagement-at-Scale
 tags:
-- AI
 - AI Orchestration
-- Azure
 - BRK227
 - Data Platform
 - Data Strategy
@@ -23,7 +21,6 @@ tags:
 - Microsoft Azure
 - Microsoft Fabric
 - Microsoft Ignite
-- ML
 - Ms Ignite
 - Msft Ignite
 - Personalization
@@ -34,7 +31,6 @@ tags:
 - Unify Your Data Platform
 - Unify Your Data Platform:microsoft Fabric
 - Video Analytics
-- Videos
 section_names:
 - ai
 - azure

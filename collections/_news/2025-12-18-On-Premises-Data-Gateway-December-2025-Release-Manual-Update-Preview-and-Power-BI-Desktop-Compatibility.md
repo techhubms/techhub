@@ -10,7 +10,6 @@ date: 2025-12-18 09:00:00 +00:00
 permalink: /ml/news/On-Premises-Data-Gateway-December-2025-Release-Manual-Update-Preview-and-Power-BI-Desktop-Compatibility
 tags:
 - API
-- Azure
 - Connector Updates
 - Data Integration
 - Data Platform
@@ -18,8 +17,6 @@ tags:
 - Gateway Maintenance
 - Manual Update
 - Microsoft Fabric
-- ML
-- News
 - On Premises Data Gateway
 - Power BI
 - Power BI Desktop

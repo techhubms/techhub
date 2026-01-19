@@ -9,21 +9,18 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-12 00:20:55 +00:00
 permalink: /github-copilot/news/Public-Preview-Bring-Your-Own-Key-BYOK-for-GitHub-Copilot-Chat-in-JetBrains-and-Xcode
 tags:
-- AI
 - Anthropic
 - API Key
 - BYOK
 - Copilot
 - Copilot Chat
 - Developer Tools
-- GitHub Copilot
 - Google Gemini
 - Groq
 - IDE Integration
 - Improvement
 - JetBrains
 - Model Flexibility
-- News
 - OpenAI
 - OpenRouter
 - Plugin

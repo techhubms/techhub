@@ -11,7 +11,6 @@ permalink: /azure/videos/Azure-Arc-Unified-Hybrid-and-Multi-Cloud-Management-fro
 tags:
 - Application Deployment
 - AWS Integration
-- Azure
 - Azure Arc
 - Azure Ignite
 - Azure Managed Flux
@@ -19,7 +18,6 @@ tags:
 - Cloud Management
 - Cloud Native Apps
 - Cluster Scaling
-- DevOps
 - Governance
 - Hybrid Cloud
 - Kubernetes Fleet Manager
@@ -29,11 +27,9 @@ tags:
 - MSIgnite
 - Multi Cloud
 - Policy Management
-- Security
 - Steven Bucher
 - System Center
 - Update Management
-- Videos
 - Windows Modernization
 section_names:
 - azure

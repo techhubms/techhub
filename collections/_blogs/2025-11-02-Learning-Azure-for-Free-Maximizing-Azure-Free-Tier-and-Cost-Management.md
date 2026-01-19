@@ -9,13 +9,11 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-02 09:06:01 +00:00
 permalink: /azure/blogs/Learning-Azure-for-Free-Maximizing-Azure-Free-Tier-and-Cost-Management
 tags:
-- Azure
 - Azure Account
 - Azure Cost Management
 - Azure Free Tier
 - Azure Functions
 - Blob Storage
-- Blogs
 - Budgeting
 - Cloud Learning
 - Cloud Skills

@@ -10,20 +10,16 @@ date: 2025-12-08 18:15:17 +00:00
 permalink: /github-copilot/news/The-New-Identity-of-a-Developer-in-the-AI-Era
 tags:
 - Agentic Workflow
-- AI
 - AI Adoption
 - AI Assisted Development
 - AI Fluency
 - AI Strategy
 - Architecture
-- Coding
 - Delegation
 - Developer Experience
 - Developer Tools
 - Developer Workflow
-- GitHub Copilot
 - IDE Integration
-- News
 - News & Insights
 - Octoverse
 - Quality Control

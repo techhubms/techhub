@@ -17,7 +17,6 @@ tags:
 - Apis
 - ASP.NET Core
 - Backend
-- Coding
 - Community Standup
 - Daniel Roth
 - Developer
@@ -31,7 +30,6 @@ tags:
 - Mike Kistler
 - Server Architecture
 - Software Developer
-- Videos
 section_names:
 - coding
 ---

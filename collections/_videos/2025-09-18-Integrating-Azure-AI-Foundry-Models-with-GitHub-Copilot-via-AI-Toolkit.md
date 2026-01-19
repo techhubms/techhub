@@ -9,27 +9,22 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-09-18 23:01:00 +00:00
 permalink: /github-copilot/videos/Integrating-Azure-AI-Foundry-Models-with-GitHub-Copilot-via-AI-Toolkit
 tags:
-- AI
 - AI Toolkit
 - Aitoolkit
-- Azure
 - Azure AI Foundry
 - Cloud AI
 - Code
-- Coding
 - Copilot Custom Models
 - Demo
 - Developer
 - Developer Tools
 - Extension
 - Foundry Local Models
-- GitHub Copilot
 - Microsoft
 - Model Deployment
 - Project Setup
 - Sign in Azure
 - Software Developer
-- Videos
 - VS Code
 section_names:
 - ai

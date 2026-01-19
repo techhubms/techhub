@@ -10,15 +10,12 @@ date: 2025-11-15 15:01:46 +00:00
 permalink: /ai/videos/5-Things-You-Need-to-Know-About-Model-Context-Protocol-MCP
 tags:
 - Agent Features
-- AI
-- Coding
 - Developer Tools
 - MCP
 - Programming Standards
 - Prompts
 - Resource Sharing
 - Tool Discovery
-- Videos
 - VS Code
 section_names:
 - ai

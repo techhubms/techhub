@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-10-30 11:50:54 +00:00
 permalink: /devops/blogs/How-to-Integrate-Quantum-Safe-Security-into-Your-DevOps-Workflow
 tags:
-- Blogs
 - Business Of DevOps
 - CI/CD Pipeline Security
 - CI/CD Pipelines
@@ -18,7 +17,6 @@ tags:
 - Crypto Agility
 - Cybersecurity
 - Cybersecurity Modernization
-- DevOps
 - DevOps Security
 - Devsecops
 - Encryption Protocols
@@ -39,7 +37,6 @@ tags:
 - Quantum Safe Security
 - Quantum Threats in DevOps
 - Secure DevOps Workflows
-- Security
 - Security Audits
 - Security Automation
 - Social Facebook

@@ -10,27 +10,21 @@ date: 2025-12-03 17:00:45 +00:00
 permalink: /github-copilot/news/Introducing-Custom-Agents-in-GitHub-Copilot-for-Developer-Workflows
 tags:
 - Agentic AI
-- AI
 - AI & ML
 - API Integration
 - Automation
 - CI/CD
-- Coding
 - Custom Agents
 - Database Migrations
-- DevOps
 - DevOps Workflows
 - Generative AI
-- GitHub Copilot
 - IaC
 - Incident Response
 - JFrog Security
-- News
 - News & Insights
 - Observability
 - PagerDuty
 - Product
-- Security
 - Security Automation
 - Terraform
 - VS Code

@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-29 16:43:59 +00:00
 permalink: /azure/community/Azure-Communication-Services-Now-Generally-Available-in-Azure-Government
 tags:
-- Azure
 - Azure Communication Services
 - Azure Government
 - Chat Integration
-- Community
 - Compliance
 - Digital Transformation
 - FedRAMP High

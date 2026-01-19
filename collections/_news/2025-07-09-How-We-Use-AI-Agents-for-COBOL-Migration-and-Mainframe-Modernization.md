@@ -11,12 +11,10 @@ permalink: /ai/news/How-We-Use-AI-Agents-for-COBOL-Migration-and-Mainframe-Moder
 tags:
 - Agent Orchestration
 - Agents
-- AI
 - AI Agents
 - All Things Azure
 - App Development
 - AutoGen
-- Azure
 - Bankdata
 - Cloud Native
 - COBOL Modernization
@@ -28,7 +26,6 @@ tags:
 - Legacy Systems
 - Mainframe Migration
 - Microsoft Azure
-- News
 - OpenAI
 - Semantic Kernel
 section_names:

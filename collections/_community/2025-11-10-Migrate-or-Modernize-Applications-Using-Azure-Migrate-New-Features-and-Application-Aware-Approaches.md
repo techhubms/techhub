@@ -10,12 +10,10 @@ date: 2025-11-10 16:03:15 +00:00
 permalink: /github-copilot/community/Migrate-or-Modernize-Applications-Using-Azure-Migrate-New-Features-and-Application-Aware-Approaches
 tags:
 - .NET Migration
-- AI
 - AKS
 - App Service
 - Application Assessment
 - Application Modernization
-- Azure
 - Azure Database Migration Service
 - Azure Migrate
 - Azure Security
@@ -23,18 +21,13 @@ tags:
 - Azure VM
 - CAST Highlight
 - Cloud Migration
-- Coding
-- Community
 - Dependency Mapping
-- DevOps
 - DevOps Tools
-- GitHub Copilot
 - GitHub Copilot Assessment
 - Microsoft Defender For Cloud
 - Refactor
 - Rehost
 - Replatform
-- Security
 - Wave Planning
 section_names:
 - ai

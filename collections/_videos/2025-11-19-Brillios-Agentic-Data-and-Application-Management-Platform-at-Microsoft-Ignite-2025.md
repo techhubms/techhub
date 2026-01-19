@@ -10,7 +10,6 @@ date: 2025-11-19 17:07:28 +00:00
 permalink: /ai/videos/Brillios-Agentic-Data-and-Application-Management-Platform-at-Microsoft-Ignite-2025
 tags:
 - Agentic Platforms
-- AI
 - AI Business Applications
 - AI Control Tower
 - AI Operations
@@ -25,7 +24,6 @@ tags:
 - MSIgnite
 - Prebuilt Agents
 - Self Learning Systems
-- Videos
 section_names:
 - ai
 ---

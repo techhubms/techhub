@@ -10,7 +10,6 @@ date: 2025-09-03 15:35:20 +00:00
 permalink: /azure/videos/Zero-Trust-Workshop-Implementing-Microsofts-Security-Framework
 tags:
 - Assessment Tools
-- Azure
 - Azure Security
 - Cloud
 - Cloud Security
@@ -21,11 +20,9 @@ tags:
 - Microsoft Security
 - Microsoft Sentinel
 - NIST
-- Security
 - Security Roadmap
 - Security Workshop
 - Sentinel
-- Videos
 - Zero Trust
 section_names:
 - azure

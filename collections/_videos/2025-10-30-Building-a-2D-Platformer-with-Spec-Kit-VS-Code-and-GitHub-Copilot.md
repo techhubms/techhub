@@ -10,11 +10,9 @@ date: 2025-10-30 21:51:25 +00:00
 permalink: /github-copilot/videos/Building-a-2D-Platformer-with-Spec-Kit-VS-Code-and-GitHub-Copilot
 tags:
 - 2D Platformer
-- AI
 - AI Assistance
 - Beginner
 - Code
-- Coding
 - Coding Demo
 - Demo
 - Den Delimarsky
@@ -24,7 +22,6 @@ tags:
 - Game Development
 - Gamedev
 - GitHub
-- GitHub Copilot
 - GitHub Universe
 - Githubuniverse
 - James Montemagno
@@ -32,7 +29,6 @@ tags:
 - Spec Driven Development
 - Spec Kit
 - Speckit
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

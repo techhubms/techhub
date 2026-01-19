@@ -11,14 +11,10 @@ permalink: /ai/community/Join-the-Microsoft-Ignite-2025-NYC-Community-Summit-in-
 tags:
 - .NET
 - Agentic AI
-- AI
 - Automation
-- Azure
 - Azure AI
 - Azure Load Balancer
 - Cloud Computing
-- Coding
-- Community
 - Copilot Studio
 - Microsoft Ignite
 - NAT Gateway

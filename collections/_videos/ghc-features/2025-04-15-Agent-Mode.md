@@ -13,9 +13,6 @@ plans:
 alt-collection: features
 tags:
 - Agent Mode
-- AI
-- GitHub Copilot
-- Videos
 section_names:
 - ai
 - github-copilot

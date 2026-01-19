@@ -9,22 +9,18 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-12-29 13:01:10 +00:00
 permalink: /github-copilot/videos/Scaling-Context-Aware-Workflows-with-GitHub-Copilot-in-VS-Code
 tags:
-- AI
 - AI Development
 - AI Pair Programming
 - Codebase Insights
-- Coding
 - Context Engineering
 - Copilot Enterprise
 - Custom Instructions
 - Enterprise Workflows
-- GitHub Copilot
 - MCP
 - Microsoft Foundry
 - Project Structure
 - Prompt Engineering
 - Template
-- Videos
 - VS Code
 section_names:
 - ai

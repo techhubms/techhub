@@ -9,9 +9,7 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-24 16:29:50 +00:00
 permalink: /ai/news/Microsoft-SAP-and-OpenAI-Partner-to-Bring-AI-Innovation-to-Germanys-Public-Sector
 tags:
-- AI
 - AI Innovation
-- Azure
 - Azure AI
 - Azure Security
 - Cloud Computing
@@ -22,14 +20,12 @@ tags:
 - Legal Compliance
 - LinkedIn Post
 - Microsoft Azure
-- News
 - OpenAI
 - Partnership
 - Privacy Compliance
 - Public Sector
 - Responsible AI
 - SAP
-- Security
 - Security Standards
 section_names:
 - ai

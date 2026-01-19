@@ -10,7 +10,6 @@ date: 2025-08-19 10:15:37 +00:00
 permalink: /devops/blogs/FinOps-as-Code-Unlocking-Cloud-Cost-Optimization
 tags:
 - Automation
-- Blogs
 - Business Of DevOps
 - CI/CD Cloud Cost Control
 - CI/CD Pipelines
@@ -27,7 +26,6 @@ tags:
 - Cost Aware Culture
 - Cost Management Policy
 - Cost Visibility
-- DevOps
 - DevOps in The Cloud
 - Financial Operations Automation
 - FinOps

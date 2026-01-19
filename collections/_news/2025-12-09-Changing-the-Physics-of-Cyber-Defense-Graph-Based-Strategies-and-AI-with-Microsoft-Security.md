@@ -9,10 +9,8 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-12-09 17:00:00 +00:00
 permalink: /ai/news/Changing-the-Physics-of-Cyber-Defense-Graph-Based-Strategies-and-AI-with-Microsoft-Security
 tags:
-- AI
 - AI in Security
 - Attack Graphs
-- Azure
 - Azure Data Explorer
 - Best Practices
 - Collaboration
@@ -25,8 +23,6 @@ tags:
 - Microsoft Security
 - Microsoft Threat Intelligence Center
 - Multifactor Authentication
-- News
-- Security
 - Security Analytics
 - Security Data Visualization
 - Security Frameworks

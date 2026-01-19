@@ -10,7 +10,6 @@ permalink: /github-copilot/news/Code-review-in-the-age-of-AI-Why-developers-will
 viewing_mode: external
 tags:
 - Agentic Workflows
-- AI
 - AI & ML
 - AI Agents
 - AI Assisted Coding
@@ -21,9 +20,7 @@ tags:
 - Collaboration
 - Developer Tools
 - Generative AI
-- GitHub Copilot
 - Merge Decisions
-- News
 - Programming Productivity
 - Software Development
 section_names:

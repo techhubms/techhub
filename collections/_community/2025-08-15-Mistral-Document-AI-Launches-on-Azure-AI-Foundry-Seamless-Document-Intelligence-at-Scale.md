@@ -9,12 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-15 18:03:37 +00:00
 permalink: /ai/community/Mistral-Document-AI-Launches-on-Azure-AI-Foundry-Seamless-Document-Intelligence-at-Scale
 tags:
-- AI
-- Azure
 - Azure AI Foundry
 - Azure Integration
 - Azure Security
-- Community
 - Compliance
 - Document Intelligence
 - Document Parsing

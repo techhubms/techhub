@@ -9,7 +9,6 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-09-05 15:00:00 +00:00
 permalink: /azure/news/Azure-Mandatory-Multifactor-Authentication-Phase-2-Launches-October-2025
 tags:
-- Azure
 - Azure CLI
 - Azure Policy
 - Azure Portal
@@ -20,10 +19,8 @@ tags:
 - MFA
 - Microsoft Entra ID
 - Multifactor Authentication
-- News
 - Resource Management
 - Safe Deployment
-- Security
 section_names:
 - azure
 - security

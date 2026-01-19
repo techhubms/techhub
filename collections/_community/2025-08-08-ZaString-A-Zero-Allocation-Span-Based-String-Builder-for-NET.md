@@ -15,8 +15,6 @@ tags:
 - Benchmarks
 - Buffer Management
 - C#
-- Coding
-- Community
 - Garbage Collection
 - ISpanFormattable
 - Logging

@@ -11,12 +11,9 @@ permalink: /ai/community/Multi-Agent-Orchestration-with-Azure-AI-Foundry-From-Id
 tags:
 - A2A
 - Agent Orchestration
-- AI
 - AI Architecture
-- Azure
 - Azure AI Foundry
 - Azure AI Search
-- Community
 - Compliance
 - Connected Agents
 - Enterprise AI

@@ -11,10 +11,8 @@ permalink: /coding/blogs/Troubleshooting-the-nul-Path-Error-in-Directory-Files-L
 tags:
 - .NET
 - Application Insights
-- Blogs
 - C#
 - Code Workarounds
-- Coding
 - Directory.GetFiles
 - EnumerationOptions
 - Error Handling

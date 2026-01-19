@@ -10,12 +10,9 @@ date: 2025-08-23 14:13:11 +00:00
 permalink: /azure/community/Kickstart-Conditional-Access-in-Microsoft-Entra-Free-Starter-Pack-with-Policies-and-Automation
 tags:
 - Automation
-- Azure
 - Azure AD
 - CI/CD
-- Community
 - Conditional Access
-- DevOps
 - GitHub Actions
 - Identity Management
 - Legacy Authentication
@@ -25,7 +22,6 @@ tags:
 - Policy Deployment
 - PowerShell
 - Report Only Mode
-- Security
 - Security Policy
 - Sign in Logs
 - Zero Trust

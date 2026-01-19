@@ -9,14 +9,11 @@ feed_url: https://devops.com/feed/
 date: 2025-11-13 14:53:34 +00:00
 permalink: /ai/blogs/Bridging-the-Gap-Between-ClickOps-and-Infrastructure-as-Code-in-DevOps
 tags:
-- AI
 - Approval Workflows
 - Audit Trails
 - Automation
-- Blogs
 - ClickOps
 - Cloud Operations
-- DevOps
 - Drift Detection
 - Experimentation
 - GitOps

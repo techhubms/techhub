@@ -10,14 +10,11 @@ date: 2025-08-14 07:00:00 +00:00
 permalink: /ai/community/Red-teaming-a-RAG-Application-with-Azure-AI-Evaluation-SDK
 tags:
 - Adversarial Testing
-- AI
 - AI Content Safety API
 - Automated Red Teaming
-- Azure
 - Azure AI Evaluation SDK
 - Azure AI Foundry
 - Azure OpenAI Service
-- Community
 - Content Safety
 - GPT 4o
 - Hermes3
@@ -33,7 +30,6 @@ tags:
 - Red Teaming
 - Retrieval Augmented Generation
 - RLHF
-- Security
 section_names:
 - ai
 - azure

@@ -14,8 +14,6 @@ tags:
 - C#
 - Choose
 - Code Readability
-- Coding
-- Community
 - DateTime Helpers
 - Developer Tips
 - Extension Methods

@@ -10,15 +10,12 @@ date: 2025-11-20 18:02:21 +00:00
 permalink: /github-copilot/news/Enhancing-GitHub-Copilots-Next-Edit-Suggestions-with-Custom-Model-Training
 tags:
 - A/B Testing
-- AI
 - AI & ML
 - AI Model Training
-- Coding
 - Coding Assistant
 - Data Pipeline
 - Developer Experience
 - Developer Tools
-- GitHub Copilot
 - IDE Enhancements
 - IDE Integration
 - LLMs
@@ -26,7 +23,6 @@ tags:
 - Model Evaluation
 - Model Training
 - NES
-- News
 - Next Edit Suggestions
 - Next Edit Suggestions (nes)
 - Prompt Engineering

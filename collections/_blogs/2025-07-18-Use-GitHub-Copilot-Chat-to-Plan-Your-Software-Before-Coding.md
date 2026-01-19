@@ -9,14 +9,10 @@ feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-07-18 00:00:00 +00:00
 permalink: /github-copilot/blogs/Use-GitHub-Copilot-Chat-to-Plan-Your-Software-Before-Coding
 tags:
-- AI
 - AI Assisted Development
-- Blogs
 - Code Planning
-- Coding
 - Developer Productivity
 - Edge Cases
-- GitHub Copilot
 - GitHub Copilot Chat
 - JavaScript
 - Logic Structuring

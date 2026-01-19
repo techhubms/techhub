@@ -9,15 +9,11 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-11 14:03:29 +00:00
 permalink: /ai/news/Real-time-Intelligence-with-Microsoft-Fabric-at-Swiggy
 tags:
-- AI
 - Cloud Data Platform
 - Data Analytics
 - Data Engineering
 - Food Delivery Platform
-- Machine Learning
 - Microsoft Fabric
-- ML
-- News
 - Operational Intelligence
 - Real Time Intelligence
 - Swiggy

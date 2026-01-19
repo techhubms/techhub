@@ -12,7 +12,6 @@ tags:
 - Advanced Security
 - Agent ID
 - Agent Runtime
-- AI
 - AI Agents
 - Atlas Framework
 - Conditional Access
@@ -29,9 +28,7 @@ tags:
 - MSIgnite
 - OWASP
 - ProtectcloudAIplatformandapps
-- Security
 - Security Posture
-- Videos
 section_names:
 - ai
 - security

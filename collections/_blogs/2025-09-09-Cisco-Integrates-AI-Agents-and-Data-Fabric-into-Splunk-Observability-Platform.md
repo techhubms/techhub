@@ -10,15 +10,12 @@ date: 2025-09-09 18:32:20 +00:00
 permalink: /ai/blogs/Cisco-Integrates-AI-Agents-and-Data-Fabric-into-Splunk-Observability-Platform
 tags:
 - Agentic AI
-- AI
 - AI Agents
 - AI Automation
 - APM
-- Blogs
 - Business Insights
 - Cisco
 - Cisco Data Fabric
-- DevOps
 - Digital Experience Analytics
 - IT Monitoring
 - Large Language Models

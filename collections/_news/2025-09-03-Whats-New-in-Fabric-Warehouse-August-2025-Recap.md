@@ -9,27 +9,20 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-03 10:30:00 +00:00
 permalink: /ai/news/Whats-New-in-Fabric-Warehouse-August-2025-Recap
 tags:
-- AI
 - AzCopy
-- Azure
 - Azure AI Foundry
 - CI/CD
-- Coding
 - Copilot Studio
 - Data Agents
 - Data Ingestion
 - Database Projects
-- DevOps
 - ETL
 - Fabric Warehouse
 - JSON Lines
 - Microsoft Fabric
-- ML
-- News
 - NuGet
 - Private Link
 - Scheduler
-- Security
 - SQL Analytics Endpoint
 - T SQL
 - VS Code

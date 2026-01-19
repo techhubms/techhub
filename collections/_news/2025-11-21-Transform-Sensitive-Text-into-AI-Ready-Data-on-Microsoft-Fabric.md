@@ -9,10 +9,8 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-21 10:00:00 +00:00
 permalink: /ai/news/Transform-Sensitive-Text-into-AI-Ready-Data-on-Microsoft-Fabric
 tags:
-- AI
 - AI Development
 - Anonymization
-- Azure
 - Azure AI Foundry
 - Azure AI Search
 - Azure Machine Learning
@@ -24,10 +22,7 @@ tags:
 - GDPR
 - HIPAA
 - Lakehouse
-- Machine Learning
 - Microsoft Fabric
-- ML
-- News
 - Redaction
 - Sensitive Data
 - Tonic Textual

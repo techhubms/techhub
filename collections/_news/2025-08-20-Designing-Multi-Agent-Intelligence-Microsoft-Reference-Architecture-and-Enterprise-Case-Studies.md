@@ -11,11 +11,9 @@ permalink: /ai/news/Designing-Multi-Agent-Intelligence-Microsoft-Reference-Archi
 tags:
 - Agent Orchestration
 - Agent Registry
-- AI
 - AI Co Innovation Labs
 - AI Governance
 - AI Security
-- Azure
 - Azure AI
 - Azure OpenAI Service
 - Enterprise AI
@@ -28,11 +26,9 @@ tags:
 - MSSP
 - Multi Agent
 - Multi Agent Systems
-- News
 - Operational Resilience
 - RAG (retrieval Augmented Generation)
 - Reference Architecture
-- Security
 - Semantic Kernel
 - SLM
 section_names:

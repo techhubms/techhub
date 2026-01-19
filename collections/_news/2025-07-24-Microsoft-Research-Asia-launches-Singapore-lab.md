@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-07-24 13:03:35 +00:00
 permalink: /ai/news/Microsoft-Research-Asia-launches-Singapore-lab
 tags:
-- AI
 - AI Innovation
 - Asia Pacific
 - Collaboration
@@ -17,7 +16,6 @@ tags:
 - Industrial Transformation
 - Microsoft
 - Microsoft Research Asia
-- News
 - Research Institution
 - Singapore Lab
 - Talent Development

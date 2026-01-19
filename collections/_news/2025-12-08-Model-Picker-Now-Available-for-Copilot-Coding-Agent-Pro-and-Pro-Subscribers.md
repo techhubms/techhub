@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-08 08:56:18 +00:00
 permalink: /github-copilot/news/Model-Picker-Now-Available-for-Copilot-Coding-Agent-Pro-and-Pro-Subscribers
 tags:
-- AI
 - AI Development
 - AI Models
 - Anthropic Claude Opus
@@ -19,10 +18,8 @@ tags:
 - Copilot Pro
 - Copilot Pro+
 - Developer Tools
-- GitHub Copilot
 - GitHub Mobile
 - Model Selection
-- News
 - OpenAI GPT 5.1 Codex Max
 - Product Update
 - Visual Studio Code Integration

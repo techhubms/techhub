@@ -10,13 +10,10 @@ date: 2025-10-01 23:25:57 +00:00
 permalink: /ai/community/Enhancing-Logic-Apps-with-Parse-and-Chunk-with-Metadata-for-AI-Powered-Document-Processing
 tags:
 - Agent Loop
-- AI
-- Azure
 - Azure AI Search
 - Azure OpenAI
 - Blob Storage
 - Chunk Text With Metadata
-- Community
 - Conversational AI
 - Document Indexing
 - Enterprise Contracts

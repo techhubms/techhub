@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-07-15 17:28:28 +00:00
 permalink: /ai/videos/Lets-Learn-MCP-Java
 tags:
-- AI
 - AI Models
 - Client Applications
 - Demo
@@ -17,7 +16,6 @@ tags:
 - Mcp
 - Server Creation
 - Standardization
-- Videos
 - VS Code
 - Workshop
 section_names:

@@ -9,8 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2026-01-08 11:00:00 +00:00
 permalink: /ai/news/Create-Embeddings-in-Fabric-Eventhouse-with-Built-in-Small-Language-Models-SLMs
 tags:
-- AI
-- Azure
 - Azure Data Explorer
 - E5 Small V2
 - Embedding Generation
@@ -18,9 +16,6 @@ tags:
 - Jina V2 Small
 - KQL
 - Kusto
-- Machine Learning
-- ML
-- News
 - NLP
 - Python Plugin
 - RAG Pipeline

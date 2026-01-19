@@ -11,7 +11,6 @@ permalink: /ai/videos/Enterprise-AI-Innovations-Agentic-AI-and-Small-Language-Mo
 tags:
 - Agentic AI
 - Agenticbusinessapplications
-- AI
 - AI Ethics
 - AI Governance
 - AI Orchestration
@@ -28,7 +27,6 @@ tags:
 - Responsible AI
 - SLM
 - Small Language Models
-- Videos
 section_names:
 - ai
 ---

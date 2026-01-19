@@ -10,8 +10,6 @@ date: 2025-10-03 14:09:54 +00:00
 permalink: /coding/blogs/Unlocking-the-Power-of-SharePoint-Embedded-A-Developer-Focused-Approach-to-Content-Management
 tags:
 - API Integration
-- Blogs
-- Coding
 - Compliance
 - Content Management
 - Developer Tools

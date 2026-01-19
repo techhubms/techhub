@@ -10,20 +10,16 @@ date: 2025-08-14 14:18:49 +00:00
 permalink: /ai/videos/Build-Next-Gen-AI-Apps-with-NET-and-Azure
 tags:
 - .NET
-- AI
 - AI Applications
 - AI Development
-- Azure
 - C#
 - Cloud Development
-- Coding
 - End To End Development
 - Frameworks
 - Microsoft AI
 - Production Deployment
 - Samples And Templates
 - Scalability
-- Videos
 - VS
 section_names:
 - ai

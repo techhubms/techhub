@@ -9,10 +9,8 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-11-18 08:00:00 +00:00
 permalink: /ai/news/Partner-Integrations-Boost-Microsoft-Fabric-for-AI-and-Analytics
 tags:
-- AI
 - AI Agents
 - Apache Iceberg
-- Azure
 - Business Intelligence
 - ClickHouse
 - Data Analytics
@@ -30,8 +28,6 @@ tags:
 - Lakehouse
 - Microsoft Fabric
 - Microsoft OneLake
-- ML
-- News
 - PuppyGraph
 - SAP
 - SAS Decision Builder

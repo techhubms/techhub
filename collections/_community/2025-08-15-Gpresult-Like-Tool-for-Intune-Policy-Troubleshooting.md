@@ -10,9 +10,6 @@ date: 2025-08-15 07:50:53 +00:00
 permalink: /coding/community/Gpresult-Like-Tool-for-Intune-Policy-Troubleshooting
 tags:
 - Administrative Scripts
-- Azure
-- Coding
-- Community
 - Defender
 - Device Management
 - EnterpriseDesktopAppManagement
@@ -29,7 +26,6 @@ tags:
 - PolicyScope
 - PowerShell
 - Registry
-- Security
 - Win32Apps
 - Windows
 section_names:

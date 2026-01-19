@@ -9,12 +9,10 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2026-01-15 16:00:00 +00:00
 permalink: /ai/news/Chart-Your-AI-and-Agent-Strategy-with-Microsoft-Marketplace
 tags:
-- AI
 - AI + Machine Learning
 - AI Agents
 - AI Strategy
 - Anthropic
-- Azure
 - Azure Consumption Commitment
 - Cloud Solutions
 - Copilot
@@ -22,14 +20,11 @@ tags:
 - Custom AI Applications
 - Fraud Detection
 - Low Code Development
-- Machine Learning
 - Microsoft Copilot
 - Microsoft Foundry
 - Microsoft Marketplace
-- ML
 - ML Models
 - Model Deployment
-- News
 - OpenAI
 - Pro Code Development
 section_names:

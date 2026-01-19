@@ -11,11 +11,9 @@ permalink: /devops/news/Managing-Issue-Dependencies-in-GitHub-Now-Generally-Avai
 tags:
 - Agile Practices
 - Blocked Issues
-- DevOps
 - GitHub
 - GraphQL API
 - Issue Dependencies
-- News
 - Project Management
 - REST API
 - Software Development

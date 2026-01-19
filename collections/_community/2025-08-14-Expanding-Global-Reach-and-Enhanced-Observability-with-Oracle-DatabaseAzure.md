@@ -9,12 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-14 22:42:37 +00:00
 permalink: /azure/community/Expanding-Global-Reach-and-Enhanced-Observability-with-Oracle-DatabaseAzure
 tags:
-- Azure
 - Azure Monitor
 - Azure Regions
 - Azure Security Center
 - Cloud Scalability
-- Community
 - Compliance
 - Exadata
 - Germany North
@@ -25,7 +23,6 @@ tags:
 - Observability
 - Operational Monitoring
 - Oracle Database@Azure
-- Security
 - Security Information And Event Management
 section_names:
 - azure

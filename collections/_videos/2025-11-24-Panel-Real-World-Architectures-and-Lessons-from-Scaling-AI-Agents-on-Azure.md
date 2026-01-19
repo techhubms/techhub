@@ -10,11 +10,9 @@ date: 2025-11-24 11:37:46 +00:00
 permalink: /ai/videos/Panel-Real-World-Architectures-and-Lessons-from-Scaling-AI-Agents-on-Azure
 tags:
 - Agent Architecture
-- AI
 - AI Agents
 - AI Governance
 - Autoscaling
-- Azure
 - Azure AI
 - Enterprise AI
 - Fault Tolerance
@@ -27,7 +25,6 @@ tags:
 - Observability
 - Panel Discussion
 - Production Challenges
-- Videos
 section_names:
 - ai
 - azure

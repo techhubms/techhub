@@ -9,19 +9,14 @@ feed_url: https://harrybin.de/rss.xml
 date: 2025-10-10 22:00:00 +00:00
 permalink: /github-copilot/blogs/Building-Buzzword-Bingo-with-GitHub-Spark-Copilot-and-Modern-Dev-Tools
 tags:
-- AI
 - AI Powered Development
 - Automation
 - Bingo Game
-- Blogs
 - Codespaces
-- Coding
 - Continuous Deployment
 - Copilot Coding Agent
 - Dependency Management
-- DevOps
 - GitHub Actions
-- GitHub Copilot
 - GitHub Pages
 - GitHub Spark
 - Rapid Prototyping

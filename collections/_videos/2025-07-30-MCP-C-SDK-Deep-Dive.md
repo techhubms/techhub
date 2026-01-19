@@ -11,13 +11,10 @@ permalink: /ai/videos/MCP-C-SDK-Deep-Dive
 tags:
 - 06 18 Spec
 - Agent Integration
-- AI
 - AI Development
-- Azure
 - Azure AI Foundry
 - C#
 - Cloud Computing
-- Coding
 - Custom Agents
 - Demo
 - Dev
@@ -30,7 +27,6 @@ tags:
 - SDK
 - Tech
 - Technology
-- Videos
 - VS Code
 section_names:
 - ai

@@ -10,7 +10,6 @@ date: 2025-11-24 06:32:15 +00:00
 permalink: /azure/videos/Resiliency-and-Recovery-with-Azure-Backup-and-Site-Recovery
 tags:
 - AKS
-- Azure
 - Azure Backup
 - Azure Site Recovery
 - Backup Orchestration
@@ -26,12 +25,10 @@ tags:
 - Resiliency
 - RPO
 - RTO
-- Security
 - SLA
 - Threat Aware Backups
 - Two Tier Architecture
 - Unstructured Data
-- Videos
 - Virtual Machines
 - Workload Protection
 section_names:

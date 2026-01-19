@@ -10,20 +10,16 @@ date: 2025-10-13 11:00:46 +00:00
 permalink: /ai/news/Azure-DevOps-Local-MCP-Server-Now-Generally-Available
 tags:
 - Agile
-- AI
 - Authorization
-- Azure
 - Azure DevOps
 - Community Feedback
 - Developer Tools
-- DevOps
 - GitHub Copilot
 - GitHub Copilot Integration
 - LLM Integration
 - Local Deployment
 - MCP Server
 - Model Context Provider
-- News
 - Open Source
 - Prompt Engineering
 - Tooling

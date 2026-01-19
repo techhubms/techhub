@@ -10,15 +10,11 @@ date: 2025-11-18 22:42:56 +00:00
 permalink: /ai/community/Scenario-Based-Feature-Flag-Management-in-Azure-App-Configuration-Portal
 tags:
 - A/B Testing
-- AI
 - AI Deployment
 - Application Insights
-- Azure
 - Azure App Configuration
 - Azure Portal
 - Canary Deployments
-- Community
-- DevOps
 - Experimentation
 - Feature Flags
 - Feature Management

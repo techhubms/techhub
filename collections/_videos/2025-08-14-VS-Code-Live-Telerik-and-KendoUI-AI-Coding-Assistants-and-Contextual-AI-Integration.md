@@ -9,21 +9,17 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-08-14 21:54:51 +00:00
 permalink: /github-copilot/videos/VS-Code-Live-Telerik-and-KendoUI-AI-Coding-Assistants-and-Contextual-AI-Integration
 tags:
-- AI
 - AI Coding Assistant
 - AI Integration
 - API Reference
 - Code
 - Code Generation
-- Coding
 - Contextual AI
 - Developer Productivity
-- GitHub Copilot
 - KendoUI
 - MCP Server
 - Sample Code
 - Telerik
-- Videos
 - VS Code
 section_names:
 - ai

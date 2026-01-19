@@ -10,10 +10,8 @@ date: 2025-11-21 07:28:24 +00:00
 permalink: /ai/videos/Microsoft-Fabric-IQ-Transforming-Unified-Data-into-Enterprise-Intelligence
 tags:
 - Agentic AI
-- AI
 - AI Collaboration
 - Automation
-- Azure
 - Digital Trust
 - Entity Relationship Modeling
 - Geospatial Analysis
@@ -21,7 +19,6 @@ tags:
 - Microsoft Fabric
 - Microsoft Fabric IQ
 - Microsoft Teams Integration
-- ML
 - MSIgnite
 - Ontology
 - Operational Intelligence
@@ -30,7 +27,6 @@ tags:
 - Semantic Model
 - Unified Data
 - Unifyyourdataplatform
-- Videos
 section_names:
 - ai
 - azure

@@ -11,26 +11,19 @@ permalink: /github-copilot/news/Azure-DevOps-and-GitHub-Repositories-Unlocking-A
 tags:
 - Agent HQ
 - Agentic AI
-- AI
 - Automation
-- Azure
 - Azure & Cloud
 - Azure Boards
 - Azure DevOps
 - Azure Pipelines
 - Code Quality
-- Coding
 - Continuous Integration
-- DevOps
 - Enterprise Cloud
-- GitHub Copilot
 - GitHub Enterprise Importer
 - Governance
 - IDE Integration
 - MCP Server
 - Migration
-- News
-- Security
 - VS
 section_names:
 - ai

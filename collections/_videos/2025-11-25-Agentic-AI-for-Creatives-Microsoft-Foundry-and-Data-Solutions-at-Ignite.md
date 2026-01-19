@@ -10,8 +10,6 @@ date: 2025-11-25 12:10:15 +00:00
 permalink: /ai/videos/Agentic-AI-for-Creatives-Microsoft-Foundry-and-Data-Solutions-at-Ignite
 tags:
 - Agentic AI
-- AI
-- Azure
 - Azure Cosmos DB
 - Azure SQL
 - Creative Pipeline
@@ -30,7 +28,6 @@ tags:
 - Semantic Search
 - Technical Demo
 - TomTom
-- Videos
 section_names:
 - ai
 - azure

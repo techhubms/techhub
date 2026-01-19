@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-16 17:34:39 +00:00
 permalink: /ai/news/Computer-Use-Public-Preview-Launches-in-Microsoft-Copilot-Studio
 tags:
-- AI
 - Allow List
 - Automation
 - Business Automation
@@ -19,7 +18,6 @@ tags:
 - Credentials Management
 - Desktop Automation
 - Microsoft Copilot
-- News
 - No Code
 - Power Automate
 - Public Preview

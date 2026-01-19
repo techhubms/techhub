@@ -10,18 +10,14 @@ date: 2025-12-01 17:00:00 +00:00
 permalink: /github-copilot/news/How-to-Orchestrate-Multiple-GitHub-Copilot-Agents-Using-Mission-Control
 tags:
 - Agent Orchestration
-- AI
 - AI & ML
 - AI Agents
 - Automation
 - Code Review
-- Coding
 - Copilot Mission Control
 - Custom Agents
-- GitHub Copilot
 - GitHub Copilot Coding Agent
 - Mission Control
-- News
 - Parallel Development
 - Prompt Engineering
 - Pull Requests

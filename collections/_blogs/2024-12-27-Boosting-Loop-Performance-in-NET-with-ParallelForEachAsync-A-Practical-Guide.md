@@ -11,9 +11,7 @@ permalink: /coding/blogs/Boosting-Loop-Performance-in-NET-with-ParallelForEachAs
 tags:
 - .NET
 - Asynchronous Programming
-- Blogs
 - C#
-- Coding
 - HTTP Requests
 - IO Bound Operations
 - Markdown Monster

@@ -11,7 +11,6 @@ permalink: /azure/news/GitHub-Secret-Protection-Expands-Default-Pattern-Support-
 tags:
 - API Keys
 - Application Security
-- Azure
 - Azure Communication Services
 - Azure IoT Hub
 - Azure Management Certificate
@@ -19,16 +18,13 @@ tags:
 - CI/CD
 - Code Security
 - Continuous Integration
-- DevOps
 - DevSecOps
 - GitHub
 - Improvement
-- News
 - OAuth
 - Push Protection
 - Repository Security
 - Secret Scanning
-- Security
 - Token Detection
 section_names:
 - azure

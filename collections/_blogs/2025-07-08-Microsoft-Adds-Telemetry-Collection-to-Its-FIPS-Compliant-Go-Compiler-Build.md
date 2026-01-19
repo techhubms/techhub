@@ -9,9 +9,7 @@ feed_url: https://devclass.com/feed/
 date: 2025-07-08 15:55:00 +00:00
 permalink: /azure/blogs/Microsoft-Adds-Telemetry-Collection-to-Its-FIPS-Compliant-Go-Compiler-Build
 tags:
-- Azure
 - Azure Linux
-- Blogs
 - BoringCrypto
 - BoringSSL
 - Container Images
@@ -29,7 +27,6 @@ tags:
 - Microsoft Go Build
 - MS GOTOOLCHAIN TELEMETRY ENABLED
 - NIST
-- Security
 - Telemetry
 section_names:
 - azure

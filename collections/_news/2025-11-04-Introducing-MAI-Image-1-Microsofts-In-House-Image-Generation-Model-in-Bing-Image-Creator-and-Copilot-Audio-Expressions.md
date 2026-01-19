@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-11-04 19:08:50 +00:00
 permalink: /ai/news/Introducing-MAI-Image-1-Microsofts-In-House-Image-Generation-Model-in-Bing-Image-Creator-and-Copilot-Audio-Expressions
 tags:
-- AI
 - AI Model Evaluation
 - AI Product Integration
 - Bing Image Creator
@@ -23,7 +22,6 @@ tags:
 - LMArena
 - MAI Image 1
 - Microsoft AI
-- News
 - Text To Image
 section_names:
 - ai

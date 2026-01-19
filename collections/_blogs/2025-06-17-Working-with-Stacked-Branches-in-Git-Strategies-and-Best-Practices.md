@@ -10,10 +10,8 @@ date: 2025-06-17 09:00:00 +00:00
 permalink: /devops/blogs/Working-with-Stacked-Branches-in-Git-Strategies-and-Best-Practices
 tags:
 - Automation
-- Blogs
 - Branch Management
 - Code Review
-- DevOps
 - Git
 - Git Absorb
 - Interactive Rebase

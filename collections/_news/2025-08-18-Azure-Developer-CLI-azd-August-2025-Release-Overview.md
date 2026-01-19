@@ -10,10 +10,8 @@ date: 2025-08-18 18:44:14 +00:00
 permalink: /ai/news/Azure-Developer-CLI-azd-August-2025-Release-Overview
 tags:
 - .NET
-- AI
 - API Management
 - Azd
-- Azure
 - Azure AI
 - Azure Aspire
 - Azure Developer CLI
@@ -22,9 +20,7 @@ tags:
 - Azure SDK
 - CI/CD
 - Codespaces
-- Coding
 - Container Apps
-- DevOps
 - Docker
 - Environment Variables
 - Java
@@ -34,15 +30,12 @@ tags:
 - Log Analytics
 - Microsoft Entra ID
 - Microsoft Sentinel
-- ML
-- News
 - OAuth2
 - PostgreSQL
 - PowerShell
 - Purview
 - Python
 - Resource Group Deployment
-- Security
 - Threat Detection
 - Typescript
 - VS Code

@@ -11,7 +11,6 @@ permalink: /ai/videos/Building-Intelligent-Agents-with-Copilot-Studio-and-Advanc
 tags:
 - Active Directory
 - Agent Development
-- AI
 - Azure AI Search
 - BRK318
 - Building The Most Intelligent Agents With The Latest Knowledge Sources | BRK318
@@ -34,7 +33,6 @@ tags:
 - Msft Ignite
 - Personalized Responses
 - Session BRK318
-- Videos
 - Visualization
 - Workflow Automation
 section_names:

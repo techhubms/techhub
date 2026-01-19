@@ -11,17 +11,14 @@ permalink: /devops/blogs/Improved-Dependency-Submission-for-GitHub-Actions
 tags:
 - Actions Dependency Submission
 - Automated Security
-- Blogs
 - CI/CD
 - Dependabot
 - Dependency Graph
 - Dependency Submission
-- DevOps
 - GitHub
 - GitHub Actions
 - Open Source Security
 - Permissions
-- Security
 - Security Advisories
 - Supply Chain Security
 - Supplychain Security

@@ -9,10 +9,8 @@ feed_url: https://dellenny.com/feed/
 date: 2025-08-08 10:18:44 +00:00
 permalink: /ai/blogs/Beginners-Guide-to-Microsoft-Copilot-Studio-Features-Uses-and-Getting-Started
 tags:
-- AI
 - AI Chatbots
 - Azure AI
-- Blogs
 - Bot Development
 - Conversational AI
 - Copilot

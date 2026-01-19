@@ -12,8 +12,6 @@ tags:
 - AWS
 - Certification
 - Cloud Computing
-- Community
-- DevOps
 - HashiCorp
 - IaC
 - Modules

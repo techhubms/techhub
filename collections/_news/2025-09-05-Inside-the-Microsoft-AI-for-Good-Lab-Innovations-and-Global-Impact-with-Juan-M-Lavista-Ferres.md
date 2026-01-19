@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-05 13:53:45 +00:00
 permalink: /ai/news/Inside-the-Microsoft-AI-for-Good-Lab-Innovations-and-Global-Impact-with-Juan-M-Lavista-Ferres
 tags:
-- AI
 - AI Ethics
 - AI For Good Lab
 - AI Research
@@ -24,7 +23,6 @@ tags:
 - Juan M. Lavista Ferres
 - Machine Learning
 - Microsoft
-- News
 - Project SPARROW
 - Synthetic Aperture Radar
 section_names:

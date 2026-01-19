@@ -10,15 +10,11 @@ date: 2025-09-05 00:00:00 +00:00
 permalink: /github-copilot/blogs/Using-GitHub-Copilot-Chat-to-Write-Better-Regex-Patterns
 tags:
 - Agent Mode
-- AI
-- Blogs
 - Code Automation
 - Code Review
-- Coding
 - Coding Productivity
 - Copilot Chat
 - Developer Tools
-- GitHub Copilot
 - Pattern Matching
 - Programming
 - Regex

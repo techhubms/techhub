@@ -9,22 +9,17 @@ feed_url: https://dellenny.com/feed/
 date: 2025-11-21 16:03:25 +00:00
 permalink: /github-copilot/blogs/Your-Guide-to-Debugging-and-Reviewing-Copilot-Generated-Code
 tags:
-- AI
 - AI Coding Assistant
 - Authentication
 - Authorization
 - Automated Testing
-- Blogs
 - Code Review
-- Coding
 - Debugging
 - GitHib Copilot
-- GitHub Copilot
 - Input Validation
 - Linters
 - Prompt Engineering
 - Sanity Check
-- Security
 - Security Best Practices
 - Software Development
 - Static Analysis

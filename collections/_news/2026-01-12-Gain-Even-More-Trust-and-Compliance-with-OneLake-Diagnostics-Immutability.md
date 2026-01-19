@@ -10,7 +10,6 @@ date: 2026-01-12 12:00:00 +00:00
 permalink: /azure/news/Gain-Even-More-Trust-and-Compliance-with-OneLake-Diagnostics-Immutability
 tags:
 - Audit Trails
-- Azure
 - Azure Blob Storage
 - Compliance
 - Data Governance
@@ -19,10 +18,8 @@ tags:
 - Lakehouse
 - Log Retention
 - Microsoft Fabric
-- News
 - OneLake Diagnostics
 - Operational Security
-- Security
 - Security Best Practices
 - Tamper Proof Logs
 - Workspace Administration

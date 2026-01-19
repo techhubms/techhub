@@ -11,11 +11,8 @@ permalink: /coding/blogs/How-to-Run-SQL-Server-on-Windows-ARM-Devices-Solutions-
 tags:
 - .NET
 - ARM64
-- Azure
 - Azure Data Studio
 - Azure SQL Edge
-- Blogs
-- Coding
 - Database Development
 - Docker
 - Emulation

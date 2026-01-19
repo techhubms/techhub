@@ -9,7 +9,6 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-12-11 19:11:15 +00:00
 permalink: /github-copilot/news/GPT-52-Integration-Across-Microsoft-Tools-AI-Model-Choice-and-Developer-Impact
 tags:
-- AI
 - AI Integration
 - AI Productivity
 - AI Reasoning
@@ -17,7 +16,6 @@ tags:
 - Copilot
 - Copilot Studio
 - Enterprise AI
-- GitHub Copilot
 - GPT 5.2
 - LinkedIn Post
 - Long Context AI
@@ -25,7 +23,6 @@ tags:
 - Microsoft Fabric
 - Microsoft Foundry
 - Model Selection
-- News
 - OpenAI
 - Work IQ
 section_names:

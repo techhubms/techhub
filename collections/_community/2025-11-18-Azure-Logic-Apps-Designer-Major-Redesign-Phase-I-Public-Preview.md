@@ -10,15 +10,11 @@ date: 2025-11-18 08:24:37 +00:00
 permalink: /coding/community/Azure-Logic-Apps-Designer-Major-Redesign-Phase-I-Public-Preview
 tags:
 - Auto Save
-- Azure
 - Azure Integration
 - Azure Logic Apps
-- Coding
-- Community
 - Debugging
 - Developer Tools
 - Development Loop
-- DevOps
 - Draft Mode
 - Logic Apps Designer
 - Monitoring

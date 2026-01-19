@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-12-04 16:00:37 +00:00
 permalink: /ai/videos/Evaluating-AI-Models-for-Coding-with-GitHub-Models
 tags:
-- AI
 - AI Code Assistants
 - AI Evaluation
 - AI For Developers
@@ -22,7 +21,6 @@ tags:
 - Machine Learning
 - Model Comparison
 - Prompt Engineering
-- Videos
 section_names:
 - ai
 ---

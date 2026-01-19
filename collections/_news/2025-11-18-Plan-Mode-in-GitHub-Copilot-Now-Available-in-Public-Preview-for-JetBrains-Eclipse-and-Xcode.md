@@ -9,18 +9,15 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-18 17:30:05 +00:00
 permalink: /github-copilot/news/Plan-Mode-in-GitHub-Copilot-Now-Available-in-Public-Preview-for-JetBrains-Eclipse-and-Xcode
 tags:
-- AI
 - Code Review
 - Copilot
 - Copilot Agent
 - Development Workflow
 - Eclipse
-- GitHub Copilot
 - IDE Integration
 - Implementation Strategy
 - Improvement
 - JetBrains IDEs
-- News
 - Plan Mode
 - Plugin Update
 - Productivity Tools

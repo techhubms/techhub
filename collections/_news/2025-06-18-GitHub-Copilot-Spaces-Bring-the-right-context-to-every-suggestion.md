@@ -9,13 +9,10 @@ feed_url: https://github.blog/feed/
 date: 2025-06-18 16:00:00 +00:00
 permalink: /github-copilot/news/GitHub-Copilot-Spaces-Bring-the-right-context-to-every-suggestion
 tags:
-- AI
 - AI & ML
 - Code Style
 - Customization
-- GitHub Copilot
 - GitHub Copilot Spaces
-- News
 - Space Setup
 - Team Workflows
 section_names:

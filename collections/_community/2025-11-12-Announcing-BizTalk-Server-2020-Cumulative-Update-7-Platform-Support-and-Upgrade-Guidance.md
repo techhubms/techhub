@@ -9,15 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-12 16:42:12 +00:00
 permalink: /coding/community/Announcing-BizTalk-Server-2020-Cumulative-Update-7-Platform-Support-and-Upgrade-Guidance
 tags:
-- Azure
 - Azure Logic Apps
 - BizTalk Migration
 - BizTalk Modernization
 - BizTalk Server
-- Coding
-- Community
 - Cumulative Update 7
-- DevOps
 - Infrastructure
 - Integration
 - Microsoft Knowledgebase

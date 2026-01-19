@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-09-29 19:11:52 +00:00
 permalink: /ai/videos/How-to-find-the-right-MCP-server-in-seconds-with-GitHub-MCP-registry
 tags:
-- AI
 - AI Agents
 - Automation
 - Developer Tools
-- DevOps
 - Figma
 - GitHub
 - Interoperability
@@ -25,7 +23,6 @@ tags:
 - Registry
 - Terraform
 - Tool Integration
-- Videos
 - Workflows
 section_names:
 - ai

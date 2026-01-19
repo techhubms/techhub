@@ -11,7 +11,6 @@ permalink: /ai/videos/AI-Enterprise-Value-Real-World-Applications-with-Microsoft
 tags:
 - Advanced AI Applications
 - Agentic AI
-- AI
 - AI For Traders
 - AI Integration
 - Business Value
@@ -23,7 +22,6 @@ tags:
 - MSIgnite
 - ScalewithcloudandAIendpoints
 - Speech To Form Technology
-- Videos
 - Windows
 - Workflow Automation
 section_names:

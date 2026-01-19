@@ -12,7 +12,6 @@ tags:
 - .NET
 - .NET 11
 - ASP.NET Core
-- Coding
 - Community Standup
 - Daniel Roth
 - Demo
@@ -31,7 +30,6 @@ tags:
 - Planning
 - Roadmap
 - Softaredeveloper
-- Videos
 section_names:
 - coding
 ---

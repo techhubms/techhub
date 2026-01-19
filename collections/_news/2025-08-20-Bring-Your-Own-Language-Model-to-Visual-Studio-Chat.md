@@ -9,7 +9,6 @@ feed_url: https://devblogs.microsoft.com/visualstudio/tag/copilot/feed/
 date: 2025-08-20 15:40:20 +00:00
 permalink: /ai/news/Bring-Your-Own-Language-Model-to-Visual-Studio-Chat
 tags:
-- AI
 - AI Providers
 - Anthropic
 - API Integration
@@ -17,7 +16,6 @@ tags:
 - BYOM
 - Chat
 - Claude
-- Coding
 - Copilot
 - Customization
 - Developer Tools
@@ -27,7 +25,6 @@ tags:
 - Key
 - Large Language Models
 - Models
-- News
 - OpenAI
 - VS
 section_names:

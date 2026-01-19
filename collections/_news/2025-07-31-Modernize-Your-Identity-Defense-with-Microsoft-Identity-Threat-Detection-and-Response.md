@@ -17,8 +17,6 @@ tags:
 - ITDR
 - Microsoft Identity Threat Detection And Response
 - Microsoft Security Operations
-- News
-- Security
 - SOC
 - Threat Detection
 section_names:

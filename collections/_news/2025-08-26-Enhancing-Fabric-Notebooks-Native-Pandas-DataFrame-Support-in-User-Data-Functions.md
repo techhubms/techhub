@@ -10,15 +10,12 @@ date: 2025-08-26 11:45:35 +00:00
 permalink: /ml/news/Enhancing-Fabric-Notebooks-Native-Pandas-DataFrame-Support-in-User-Data-Functions
 tags:
 - Apache Arrow
-- Azure
 - Cross Language Support
 - Data Analytics
 - Data Engineering
 - Data Processing
 - DataFrames
 - Microsoft Fabric
-- ML
-- News
 - Notebook
 - Pandas
 - Performance Optimization

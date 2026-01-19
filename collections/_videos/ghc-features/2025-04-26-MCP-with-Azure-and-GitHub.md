@@ -13,12 +13,8 @@ plans:
 alt-collection: features
 tags:
 - Agent Mode
-- AI
-- Azure
 - GitHub
-- GitHub Copilot
 - MCP
-- Videos
 section_names:
 - ai
 - azure

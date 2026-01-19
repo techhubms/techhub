@@ -9,19 +9,16 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-07-25 04:06:27 +00:00
 permalink: /ai/videos/Open-Source-and-AI-Special-with-francescociulla
 tags:
-- AI
 - AI Implementation
 - AI Tools
 - Developer Efficiency
 - Developer Workflow
-- DevOps
 - Francesco Ciulla
 - GitHub
 - Open Source
 - Practical AI
 - Relevant Skills
 - Software Development
-- Videos
 section_names:
 - ai
 - devops

@@ -12,7 +12,6 @@ tags:
 - .NET
 - C#
 - CharacterBody3D
-- Coding
 - Collision Detection
 - Game Development
 - Godot Engine
@@ -25,7 +24,6 @@ tags:
 - Scenes
 - SpringArm3D
 - Third Person Camera
-- Videos
 - VS Code
 section_names:
 - coding

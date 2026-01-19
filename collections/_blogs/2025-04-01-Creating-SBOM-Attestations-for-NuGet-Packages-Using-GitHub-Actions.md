@@ -11,16 +11,12 @@ permalink: /coding/blogs/Creating-SBOM-Attestations-for-NuGet-Packages-Using-Git
 tags:
 - .NET
 - Attestations
-- Blogs
-- Coding
 - CycloneDX
-- DevOps
 - GitHub
 - GitHub Actions
 - NuGet
 - Provenance
 - SBOM
-- Security
 - Sigstore
 - SPDX
 - Supply Chain Security

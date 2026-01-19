@@ -10,17 +10,13 @@ date: 2025-12-12 20:58:38 +00:00
 permalink: /coding/videos/A-Unified-Agent-Experience-in-Visual-Studio-Code
 tags:
 - Agent Fleet
-- Azure
 - Background Agents
 - Cloud Agents
-- Coding
 - Developer Experience
 - Developer Tools
-- DevOps
 - Local Agents
 - Microsoft Azure
 - Task Management
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

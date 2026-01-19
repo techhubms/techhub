@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 10:53:42 +00:00
 permalink: /ai/videos/Voices-You-Cant-Trust-Stopping-AI-Powered-Impersonation-Attacks-with-Microsoft-Verified-ID
 tags:
-- AI
 - AI Deepfakes
 - Decentralized Identity
 - Enterprise Security
@@ -19,11 +18,9 @@ tags:
 - MSIgnite
 - Organizational Change Management
 - ProtectcloudAIplatformandapps
-- Security
 - Social Engineering
 - Threat Protection
 - Verified ID
-- Videos
 section_names:
 - ai
 - security

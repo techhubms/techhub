@@ -12,9 +12,7 @@ tags:
 - Agile
 - Automation
 - CI/CD
-- Community
 - Development Processes
-- DevOps
 - IaC
 - Monitoring
 - Platform Engineering

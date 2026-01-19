@@ -9,15 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-17 17:58:05 +00:00
 permalink: /coding/community/Beyond-the-Desktop-The-Future-of-Development-with-Microsoft-Dev-Box-and-GitHub-Codespaces
 tags:
-- Azure
 - Best Practices
 - CI/CD
 - Cloud Workstations
-- Coding
-- Community
 - Devcontainer
 - Developer Platform
-- DevOps
 - Docker
 - Environment Automation
 - FastAPI

@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-08-13 08:48:58 +00:00
 permalink: /devops/blogs/From-Firefighting-to-Forward-Thinking-Real-World-Lessons-in-DevOps-and-Cloud-Engineering
 tags:
-- Blogs
 - Business Of DevOps
 - Checkov
 - CI/CD Pipelines
@@ -18,7 +17,6 @@ tags:
 - Continuous Testing
 - Contributed Content
 - Deployment Strategies
-- DevOps
 - DevOps Best Practices
 - DevOps Practice
 - Gatekeeper

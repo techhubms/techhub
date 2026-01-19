@@ -11,7 +11,6 @@ permalink: /ai/videos/Building-Intelligent-Apps-with-NET
 tags:
 - .NET
 - .NET Aspire
-- AI
 - AI Development
 - AI Integration
 - AI Powered Assistants
@@ -20,7 +19,6 @@ tags:
 - C# 14
 - Classification
 - Cloud Hosted AI
-- Coding
 - F# 10
 - Large Language Models
 - Local AI Models
@@ -29,7 +27,6 @@ tags:
 - Semantic Search
 - Summarization
 - Unified AI Abstractions
-- Videos
 - VS
 section_names:
 - ai

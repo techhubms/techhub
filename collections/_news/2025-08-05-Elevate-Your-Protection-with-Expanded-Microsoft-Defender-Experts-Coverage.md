@@ -9,15 +9,12 @@ feed_url: https://www.microsoft.com/en-us/security/blog/feed/
 date: 2025-08-05 16:00:00 +00:00
 permalink: /azure/news/Elevate-Your-Protection-with-Expanded-Microsoft-Defender-Experts-Coverage
 tags:
-- Azure
 - Cloud Security
 - Hybrid Cloud
 - Incident Detection
 - Microsoft Defender Experts
 - Microsoft Defender For Cloud
 - Multicloud
-- News
-- Security
 - Security Monitoring
 - Third Party Network Signals
 - Threat Response

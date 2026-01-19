@@ -11,8 +11,6 @@ permalink: /github-copilot/news/GitHub-Copilot-for-Azure-Public-Preview-Launched
 tags:
 - Agent Mode
 - Agents
-- AI
-- Azure
 - Azure CLI
 - Azure Container Registry
 - Azure Cosmos DB
@@ -23,15 +21,12 @@ tags:
 - Azure SQL Database
 - Cloud
 - Cloud Development
-- Coding
 - Copilot
 - Copilot Chat
 - Developer Productivity
-- GitHub Copilot
 - LLM
 - MCP
 - Microsoft
-- News
 - Visual Studio Extensions
 - VS
 section_names:

@@ -9,7 +9,6 @@ date: 2025-07-16 17:35:05 +00:00
 permalink: /ai/news/Microsoft-introduces-new-training-framework-that-enhances-human-LLM-collaboration
 viewing_mode: external
 tags:
-- AI
 - AI Enhancement
 - AI Research
 - Collaborative AI
@@ -19,7 +18,6 @@ tags:
 - Large Language Models
 - LLM
 - Microsoft
-- News
 - Source
 - Training Framework
 section_names:

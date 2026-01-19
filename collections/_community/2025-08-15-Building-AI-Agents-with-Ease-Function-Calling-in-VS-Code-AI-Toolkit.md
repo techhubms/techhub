@@ -10,13 +10,9 @@ date: 2025-08-15 17:00:24 +00:00
 permalink: /ai/community/Building-AI-Agents-with-Ease-Function-Calling-in-VS-Code-AI-Toolkit
 tags:
 - Agent Development
-- AI
 - AI Toolkit
 - API Integration
-- Azure
 - Azure AI Inference SDK
-- Coding
-- Community
 - Custom Tool Development
 - Function Calling
 - GitHub

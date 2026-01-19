@@ -10,14 +10,11 @@ date: 2025-08-14 18:55:15 +00:00
 permalink: /azure/community/Lower-Costs-and-Boost-Flexibility-with-Azure-Files-Provisioned-v2-for-SSD
 tags:
 - AKS
-- Azure
 - Azure Files
 - Azure Portal
 - Azure Storage Account
 - Cloud Storage
-- Community
 - Database Workloads
-- DevOps
 - Dynamic Scaling
 - EPIC
 - File Share

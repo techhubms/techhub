@@ -13,7 +13,6 @@ tags:
 - Authenticator App
 - Azure Active Directory
 - Cloud Authentication
-- Community
 - Hybrid Identity
 - Kerberos Cloud Trust
 - MFA
@@ -23,7 +22,6 @@ tags:
 - On Premises Integration
 - Passkeys
 - Passwordless Authentication
-- Security
 section_names:
 - security
 ---

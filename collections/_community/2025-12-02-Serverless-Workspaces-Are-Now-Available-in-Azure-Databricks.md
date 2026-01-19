@@ -9,23 +9,18 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-12-02 23:08:45 +00:00
 permalink: /ai/community/Serverless-Workspaces-Are-Now-Available-in-Azure-Databricks
 tags:
-- AI
 - AI Projects
-- Azure
 - Azure Databricks
 - Cloud Security
-- Community
 - Cost Management
 - Data Analytics
 - Data Governance
 - Managed Compute
-- ML
 - Network Security
 - Object Storage
 - Preview Features
 - Python
 - Region Availability
-- Security
 - Serverless Workspaces
 - SQL
 - Unity Catalog

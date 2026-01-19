@@ -10,7 +10,6 @@ date: 2026-01-13 17:00:00 +00:00
 permalink: /azure/news/How-Microsoft-Unifies-Privacy-and-Security-to-Build-Trust
 tags:
 - AI
-- Azure
 - Cloud Security
 - Compliance
 - Conditional Access
@@ -27,10 +26,8 @@ tags:
 - Microsoft Entra
 - Microsoft Entra ID
 - Microsoft Purview
-- News
 - NIS2
 - Privacy
-- Security
 - Zero Trust
 section_names:
 - azure

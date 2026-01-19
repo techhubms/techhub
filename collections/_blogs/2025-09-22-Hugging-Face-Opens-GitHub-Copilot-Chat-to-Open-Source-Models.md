@@ -9,18 +9,15 @@ feed_url: https://devops.com/feed/
 date: 2025-09-22 08:45:37 +00:00
 permalink: /github-copilot/blogs/Hugging-Face-Opens-GitHub-Copilot-Chat-to-Open-Source-Models
 tags:
-- AI
 - AI Assisted Development
 - AI Coding Assistants
 - AI Coding Tools
 - AI Model Switching in VS Code
-- Blogs
 - Business Of DevOps
 - Coding Assistant
 - DeepSeek V3.1
 - Developer Productivity
 - Developer Workflows Automation
-- GitHub Copilot
 - GitHub Copilot Chat
 - GLM 4.5
 - Hugging Face

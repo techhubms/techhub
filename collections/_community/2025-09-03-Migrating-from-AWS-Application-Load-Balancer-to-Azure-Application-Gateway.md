@@ -11,15 +11,12 @@ permalink: /azure/community/Migrating-from-AWS-Application-Load-Balancer-to-Azur
 tags:
 - Automation
 - AWS Application Load Balancer
-- Azure
 - Azure Application Gateway
 - Azure Key Vault
 - Azure Monitor
 - Certificate Management
 - Cloud Migration
 - Cloud Networking
-- Community
-- DevOps
 - DNS Cutover
 - Enterprise Migration
 - Health Probes
@@ -27,7 +24,6 @@ tags:
 - Log Analytics
 - Performance Optimization
 - Routing
-- Security
 - SSL/TLS Termination
 - Web Application Firewall
 - Zone Redundancy

@@ -9,17 +9,12 @@ feed_url: https://harrybin.de/rss.xml
 date: 2025-07-06 15:00:00 +00:00
 permalink: /github-copilot/blogs/GitHub-Copilot-Custom-Chat-Modes-for-Large-Complex-Projects-in-VS-Code
 tags:
-- AI
 - AI Configuration
 - API Design
-- Blogs
 - Code Review
-- Coding
 - Custom Chat Modes
 - Developer Workflow
-- DevOps
 - Documentation
-- GitHub Copilot
 - Instruction Files
 - Performance Optimization
 - Productivity

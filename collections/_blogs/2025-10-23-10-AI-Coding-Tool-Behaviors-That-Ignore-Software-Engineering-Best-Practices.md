@@ -9,21 +9,16 @@ feed_url: https://devops.com/feed/
 date: 2025-10-23 17:51:27 +00:00
 permalink: /ai/blogs/10-AI-Coding-Tool-Behaviors-That-Ignore-Software-Engineering-Best-Practices
 tags:
-- AI
 - AI Coding Tools
 - Anti Patterns
 - Application Security
 - Automation
 - Best Practices
-- Blogs
 - Code Quality
 - Code Review
-- Coding
 - Continuous Integration
-- DevOps
 - Open Source
 - OX Security
-- Security
 - Security Vulnerabilities
 - Social Facebook
 - Social LinkedIn

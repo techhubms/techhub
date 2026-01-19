@@ -12,9 +12,7 @@ tags:
 - .NET
 - .NET Core
 - .NET Standard
-- Blogs
 - CI/CD
-- Coding
 - FluentAssertions
 - IDE Support
 - Microsoft.Testing.Platform

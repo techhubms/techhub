@@ -10,14 +10,12 @@ date: 2025-12-09 14:10:47 +00:00
 permalink: /ai/news/Data-driven-Farming-and-AI-Transforming-Water-Management-in-Chile
 tags:
 - Agriculture Technology
-- AI
 - Analytics
 - Automation
 - Chile
 - Data Driven Farming
 - Irrigation
 - Microsoft
-- News
 - Sustainable Agriculture
 - Water Management
 section_names:

@@ -9,16 +9,12 @@ feed_url: https://www.cooknwithcopilot.com/rss.xml
 date: 2025-05-23 00:00:00 +00:00
 permalink: /github-copilot/blogs/Use-Copilot-in-VS-Code-to-Summarize-PRs
 tags:
-- AI
 - AI Tools
 - Automation
-- Blogs
 - Code Authoring
 - Code Review Best Practices
 - Code Summarization
-- Coding
 - Developer Workflow
-- GitHub Copilot
 - GitHub Copilot Chat
 - GitHub Integration
 - PR Summary

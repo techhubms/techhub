@@ -10,18 +10,14 @@ date: 2025-11-18 16:00:52 +00:00
 permalink: /ai/community/Advancing-Full-Stack-Observability-with-Azure-Monitor-at-Ignite-2025
 tags:
 - Agentic Workflows
-- AI
 - AI Observability
 - AKS
-- Azure
 - Azure Copilot
 - Azure Data Explorer
 - Azure Monitor
 - Azure Red Hat OpenShift
 - Cloud Operations
-- Community
 - Container Insights
-- DevOps
 - Dynamic Thresholding
 - Foundry Control Plane
 - Full Stack Troubleshooting

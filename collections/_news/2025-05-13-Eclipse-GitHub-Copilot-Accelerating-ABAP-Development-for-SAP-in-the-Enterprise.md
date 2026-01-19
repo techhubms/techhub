@@ -10,7 +10,6 @@ date: 2025-05-13 21:17:28 +00:00
 permalink: /github-copilot/news/Eclipse-GitHub-Copilot-Accelerating-ABAP-Development-for-SAP-in-the-Enterprise
 tags:
 - ABAP
-- AI
 - AI Integration
 - AI Powered Development
 - All Things Azure
@@ -20,9 +19,7 @@ tags:
 - Copilot For Business
 - Eclipse
 - Enterprise Workflows
-- GitHub Copilot
 - GitHub Copilot Business
-- News
 - Plugin Setup
 - Productivity
 - SAP

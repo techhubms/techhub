@@ -14,9 +14,7 @@ tags:
 - .NET 9
 - Access Modifiers
 - APIs
-- Blogs
 - C#
-- Coding
 - Field Access
 - Generics
 - Internal Classes

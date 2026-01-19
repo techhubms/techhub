@@ -13,8 +13,6 @@ tags:
 - C#
 - C# Language
 - C# Proposals
-- Coding
-- Community
 - Csharplang
 - Feature Adoption
 - Language Design

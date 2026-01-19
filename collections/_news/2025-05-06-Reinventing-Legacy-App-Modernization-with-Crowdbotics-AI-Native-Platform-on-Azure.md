@@ -10,13 +10,11 @@ date: 2025-05-06 09:15:41 +00:00
 permalink: /ai/news/Reinventing-Legacy-App-Modernization-with-Crowdbotics-AI-Native-Platform-on-Azure
 tags:
 - Agents
-- AI
 - AI Apps
 - AI Native Platform
 - AKS
 - App Development
 - Application Development
-- Azure
 - Azure App Service
 - Azure Functions
 - Azure OpenAI Service
@@ -27,7 +25,6 @@ tags:
 - Functional Decomposition
 - Legacy Modernization
 - Mainframe Migration
-- News
 - Requirements Generation
 - Software Architecture
 section_names:

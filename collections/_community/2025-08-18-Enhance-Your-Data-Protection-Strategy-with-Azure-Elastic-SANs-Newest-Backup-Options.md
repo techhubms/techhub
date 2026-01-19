@@ -9,13 +9,11 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-08-18 15:31:44 +00:00
 permalink: /azure/community/Enhance-Your-Data-Protection-Strategy-with-Azure-Elastic-SANs-Newest-Backup-Options
 tags:
-- Azure
 - Azure Backup
 - Azure Business Continuity Center
 - Azure Elastic SAN
 - Business Continuity
 - Cloud Storage
-- Community
 - Commvault
 - Cross Region Restore
 - Data Protection
@@ -25,7 +23,6 @@ tags:
 - Linux
 - Managed Disks
 - Restore Points
-- Security
 - Snapshot Retention
 - VM Data Recovery
 - Windows

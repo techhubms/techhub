@@ -11,11 +11,9 @@ permalink: /ai/videos/Exploring-Continuous-AI-with-GitHub-Next-Agentic-Workflows
 tags:
 - Accessibility Workflows
 - Agentic Workflows
-- AI
 - AI Agents
 - CI/CD
 - Continuous AI
-- DevOps
 - DevOps Automation
 - GitHub
 - GitHub Actions
@@ -30,7 +28,6 @@ tags:
 - Performance Optimization
 - Software Development
 - Test Coverage
-- Videos
 section_names:
 - ai
 - devops

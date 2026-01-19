@@ -9,13 +9,10 @@ feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-04 06:56:51 +00:00
 permalink: /azure/community/Logic-apps-how-do-you-export-it-to-vscode
 tags:
-- Azure
 - Azure Logic Apps
 - CI/CD
-- Community
 - Deployment
 - Designer
-- DevOps
 - Export
 - Integration
 - Local Development

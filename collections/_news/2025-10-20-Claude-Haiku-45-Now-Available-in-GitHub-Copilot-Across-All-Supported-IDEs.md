@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-10-20 22:46:44 +00:00
 permalink: /github-copilot/news/Claude-Haiku-45-Now-Available-in-GitHub-Copilot-Across-All-Supported-IDEs
 tags:
-- AI
 - AI Model
 - Chat Model Picker
 - Claude Haiku 4.5
@@ -21,10 +20,8 @@ tags:
 - Copilot Pro
 - Developer Tools
 - Eclipse
-- GitHub Copilot
 - IDEs
 - JetBrains
-- News
 - VS
 - Xcode
 section_names:

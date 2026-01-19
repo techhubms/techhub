@@ -13,7 +13,6 @@ tags:
 - Agent Academy
 - Agent Analytics
 - Agent Lifecycle Management
-- AI
 - AI Agents
 - Company News
 - Copilot Studio
@@ -21,7 +20,6 @@ tags:
 - File Upload
 - MCP Connectors
 - Microsoft 365
-- News
 - Power Fx
 - Power Platform
 - Prompt Engineering

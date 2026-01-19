@@ -11,9 +11,7 @@ permalink: /azure/community/Azure-Maps-Understanding-View-vs-Routing-Coordinates
 tags:
 - Access Points
 - API Usage
-- Azure
 - Azure Maps
-- Community
 - Display Coordinates
 - Geocoding
 - Location Intelligence

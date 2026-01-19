@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7
 date: 2025-11-21 17:57:53 +00:00
 permalink: /ai/videos/Azure-Update-Ignite-Special-Coverage-21st-November-2025
 tags:
-- AI
 - AKS
 - App Service
-- Azure
 - Azure AI
 - Azure Boost
 - Azure Cloud
@@ -29,16 +27,12 @@ tags:
 - Azure Storage
 - Cloud
 - Cloud Infrastructure
-- DevOps
 - Ignite
 - Kubernetes
 - Microsoft
 - Microsoft Azure
 - Microsoft Fabric
 - Microsoft Foundry
-- ML
-- Security
-- Videos
 section_names:
 - ai
 - azure

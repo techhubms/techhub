@@ -10,25 +10,19 @@ date: 2025-11-18 05:27:35 +00:00
 permalink: /ml/community/Azure-Functions-on-Azure-Container-Apps-Unified-Platform-for-Event-Driven-and-Finite-Workloads
 tags:
 - API
-- Azure
 - Azure Container Apps
 - Azure Functions
 - Blob Storage
 - Blue/Green Deployment
 - CI/CD
-- Coding
-- Community
 - Dapr
-- DevOps
 - Durable Functions
 - Event Driven Architecture
 - Event Hubs
 - FaaS
 - GPU Workloads
 - HTTP Triggers
-- Machine Learning
 - Microservices
-- ML
 - Queue Storage
 - Serverless
 - Stream Processing

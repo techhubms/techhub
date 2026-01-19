@@ -10,16 +10,13 @@ date: 2025-08-05 19:37:15 +00:00
 permalink: /ai/blogs/Survey-Shows-AI-Drives-Massive-Economic-Gains-in-Software-Development
 tags:
 - Agentic AI
-- AI
 - AI Adoption
 - AI Governance
 - Application Development
-- Blogs
 - Business Growth
 - C Level Executives
 - Cybersecurity
 - Developer Productivity
-- DevOps
 - DevOps Pipelines
 - Gitlab
 - Human AI Partnership

@@ -11,12 +11,9 @@ permalink: /azure/community/Optimizing-Azure-DevOps-and-Jira-Integration-5-Real-
 tags:
 - Agile Tools
 - Automated Ticket Creation
-- Azure
 - Azure DevOps
-- Community
 - Cross Platform Workflow
 - Development Teams
-- DevOps
 - DevOps Integration
 - Epics
 - Jira

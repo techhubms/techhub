@@ -11,8 +11,6 @@ permalink: /coding/community/WPF-XAML-Design-Preview-Issues-with-Dependency-Inje
 tags:
 - .NET
 - C#
-- Coding
-- Community
 - DataContext
 - Dependency Injection
 - Design Time Data

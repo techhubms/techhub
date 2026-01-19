@@ -11,7 +11,6 @@ permalink: /security/community/August-2025-Exchange-Server-Security-Updates-Rele
 tags:
 - AMSI Integration
 - August Update
-- Community
 - Cumulative Update (cu)
 - CVE 53786
 - Exchange Management Tools
@@ -21,7 +20,6 @@ tags:
 - Hybrid Deployment
 - Microsoft Security
 - On Premises Exchange
-- Security
 - Security Update
 - SetupAssist Script
 - Vulnerability

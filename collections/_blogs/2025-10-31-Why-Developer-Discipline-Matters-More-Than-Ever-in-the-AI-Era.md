@@ -9,18 +9,14 @@ feed_url: https://devops.com/feed/
 date: 2025-10-31 14:53:20 +00:00
 permalink: /ai/blogs/Why-Developer-Discipline-Matters-More-Than-Ever-in-the-AI-Era
 tags:
-- AI
 - AI Assistants
 - Automated Testing
-- Blogs
 - Dependency Scanning
 - Developer Workflows
-- DevOps
 - Devsecops
 - Generative AI
 - LLMs
 - Real Time Monitoring
-- Security
 - Security Automation
 - Snyk
 - Software Security

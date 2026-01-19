@@ -9,12 +9,10 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2026-01-05 23:00:00 +00:00
 permalink: /ai/news/How-Azure-Datacenter-Strategy-Powers-NVIDIA-Rubin-Platform-Deployments
 tags:
-- AI
 - AI + Machine Learning
 - AI Infrastructure
 - AI Superfactory
 - AKS
-- Azure
 - Azure Boost
 - Azure Fairwater
 - Cluster Orchestration
@@ -25,7 +23,6 @@ tags:
 - High Performance Computing
 - InfiniBand Networking
 - Liquid Cooling
-- News
 - NVIDIA Rubin
 - NVIDIA Superchips
 - NVLink

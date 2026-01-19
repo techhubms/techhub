@@ -10,7 +10,6 @@ date: 2025-08-29 16:14:42 +00:00
 permalink: /github-copilot/news/Inside-GitHub-Copilot-The-AI-Models-Behind-Your-Coding-Assistant
 tags:
 - Agentic Workflows
-- AI
 - AI & ML
 - AI Models
 - Anthropic Claude
@@ -20,13 +19,11 @@ tags:
 - Copilot Chat
 - Developer Experience
 - Generative AI
-- GitHub Copilot
 - Google Gemini
 - GPT 4.1
 - IDE Integration
 - LLM
 - Model Selection
-- News
 - OpenAI
 - Productivity Tools
 section_names:

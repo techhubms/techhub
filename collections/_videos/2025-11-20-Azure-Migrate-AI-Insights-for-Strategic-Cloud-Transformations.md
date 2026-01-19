@@ -10,9 +10,7 @@ date: 2025-11-20 10:57:03 +00:00
 permalink: /ai/videos/Azure-Migrate-AI-Insights-for-Strategic-Cloud-Transformations
 tags:
 - .NET
-- AI
 - AI Insights
-- Azure
 - Azure Copilot Migration Agent
 - Azure Migrate
 - Business Case
@@ -31,7 +29,6 @@ tags:
 - ROI Analysis
 - SQL Server
 - TCO Insights
-- Videos
 - Wave Planning
 - Windows Server
 section_names:

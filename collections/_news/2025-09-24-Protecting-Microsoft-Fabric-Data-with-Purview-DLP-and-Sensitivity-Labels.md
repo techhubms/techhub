@@ -11,7 +11,6 @@ permalink: /azure/news/Protecting-Microsoft-Fabric-Data-with-Purview-DLP-and-Sen
 tags:
 - Access Controls
 - Auditing
-- Azure
 - Azure Data
 - Compliance
 - Data Classification
@@ -23,8 +22,6 @@ tags:
 - Information Protection
 - Microsoft Fabric
 - Microsoft Purview
-- News
-- Security
 - Security Policies
 - Sensitivity Labels
 section_names:

@@ -9,13 +9,11 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-31 16:01:27 +00:00
 permalink: /github-copilot/videos/Context-Engineering-for-Java-Ecosystem
 tags:
-- AI
 - AI Assisted Development
 - AIAssisted
 - Bad Practice Analysis
 - Chat Modes
 - ChatModes
-- Coding
 - Context Engineering
 - ContextEngineering
 - Copilot Chat
@@ -23,7 +21,6 @@ tags:
 - CustomInstructions
 - Developer Productivity
 - DeveloperProductivity
-- GitHub Copilot
 - Hibernate
 - Java
 - Java 25
@@ -33,7 +30,6 @@ tags:
 - Prompt Engineering
 - PromptEngineering
 - Spring Framework
-- Videos
 - VS Code
 section_names:
 - ai

@@ -10,7 +10,6 @@ date: 2025-11-03 17:00:00 +00:00
 permalink: /ai/news/SesameOp-Novel-Backdoor-Abuses-OpenAI-Assistants-API-for-Stealth-Command-and-Control
 tags:
 - .NET
-- AI
 - API Abuse
 - AppDomainManager Injection
 - Backdoor
@@ -22,9 +21,7 @@ tags:
 - Malware
 - Microsoft DART
 - Microsoft Defender
-- News
 - OpenAI Assistants API
-- Security
 - SesameOp
 - Threat Intelligence
 - VS

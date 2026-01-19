@@ -10,11 +10,9 @@ date: 2024-10-09 20:59:51 +00:00
 permalink: /coding/news/Announcing-TypeScript-57-Beta
 tags:
 - Beta Release
-- Coding
 - JavaScript
 - Microsoft
 - Never Initialized Variables
-- News
 - npm
 - Programming Languages
 - Static Analysis

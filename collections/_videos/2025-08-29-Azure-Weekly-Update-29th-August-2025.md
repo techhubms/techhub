@@ -11,11 +11,9 @@ permalink: /ai/videos/Azure-Weekly-Update-29th-August-2025
 tags:
 - AGC
 - AGIC
-- AI
 - ANF
 - App Gateway
 - Application Gateway
-- Azure
 - Azure Arc
 - Azure Cloud
 - Azure CNI Overlay
@@ -27,9 +25,7 @@ tags:
 - Azure Updates
 - Cloud
 - Cloud Infrastructure
-- Coding
 - Cosmos DB
-- DevOps
 - Durable Functions
 - Entra ID
 - Hyper V
@@ -37,7 +33,6 @@ tags:
 - Microsoft
 - Microsoft Azure
 - Migration
-- ML
 - MongoDB
 - Monitoring
 - Node.js 22
@@ -47,9 +42,7 @@ tags:
 - Replication Lag
 - Roslyn Analyzer
 - Schema Migration
-- Security
 - SQL Server
-- Videos
 - VMware
 - WAF
 - ZRS Disk

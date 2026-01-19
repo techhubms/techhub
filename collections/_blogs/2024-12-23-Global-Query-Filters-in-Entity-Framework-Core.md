@@ -10,9 +10,7 @@ date: 2024-12-23 04:47:32 +00:00
 permalink: /coding/blogs/Global-Query-Filters-in-Entity-Framework-Core
 tags:
 - .NET
-- Blogs
 - C#
-- Coding
 - Database Filtering
 - DbContext
 - Dependency Injection

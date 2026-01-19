@@ -9,13 +9,11 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-11-06 17:50:59 +00:00
 permalink: /devops/news/Improved-Onboarding-Flow-for-GitHub-Projects
 tags:
-- DevOps
 - DevOps Tools
 - GitHub Projects
 - GraphQL API
 - Improvement
 - Issue Management
-- News
 - Onboarding
 - Project Templates
 - Projects & Issues

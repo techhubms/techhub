@@ -11,7 +11,6 @@ permalink: /ml/news/Adaptive-Target-File-Size-Management-in-Fabric-Spark
 tags:
 - Adaptive Target File Size
 - Auto Compaction
-- Azure
 - Cluster Configuration
 - Data Engineering
 - Delta Lake
@@ -20,8 +19,6 @@ tags:
 - File Size Optimization
 - Lakehouse
 - Microsoft Fabric
-- ML
-- News
 - Optimize Operation
 - Parallelism
 - Performance Tuning

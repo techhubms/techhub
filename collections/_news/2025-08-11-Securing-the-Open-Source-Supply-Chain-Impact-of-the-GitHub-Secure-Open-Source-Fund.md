@@ -9,12 +9,10 @@ feed_url: https://github.blog/feed/
 date: 2025-08-11 16:00:00 +00:00
 permalink: /ai/news/Securing-the-Open-Source-Supply-Chain-Impact-of-the-GitHub-Secure-Open-Source-Fund
 tags:
-- AI
 - AI Security
 - AutoGPT
 - CodeQL
 - Dependency Management
-- DevOps
 - DevOps Tooling
 - Fuzz Testing
 - GitHub Secure Open Source Fund
@@ -23,13 +21,11 @@ tags:
 - Log4j
 - Maintainers
 - Microsoft
-- News
 - Ollama
 - Open Source
 - Open Source Security
 - Secret Scanning
 - Secure Development
-- Security
 - Security Best Practices
 - Supply Chain Security
 - Threat Modeling

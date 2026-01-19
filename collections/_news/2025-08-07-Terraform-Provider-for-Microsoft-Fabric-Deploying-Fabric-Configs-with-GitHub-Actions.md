@@ -10,24 +10,19 @@ date: 2025-08-07 07:00:00 +00:00
 permalink: /ml/news/Terraform-Provider-for-Microsoft-Fabric-Deploying-Fabric-Configs-with-GitHub-Actions
 tags:
 - Automation
-- Azure
 - Azure AD
 - Azure Managed Identity
 - Azure Resource Management
 - Azure Storage
 - CI/CD
 - Cloud Deployment
-- Coding
 - Declarative Automation
-- DevOps
 - Environment Variables
 - Federated Credential
 - GitHub Actions
 - GitHub CLI
 - IaC
 - Microsoft Fabric
-- ML
-- News
 - OpenID Connect
 - RBAC
 - Terraform

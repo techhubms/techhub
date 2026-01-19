@@ -10,7 +10,6 @@ date: 2025-11-24 11:51:07 +00:00
 permalink: /ai/videos/Transforming-Enterprise-Workflows-with-C3-AI-Agentic-Process-Automation
 tags:
 - Agentic Process Automation
-- AI
 - AI Integration
 - Banking Ontology
 - C3 AI
@@ -26,7 +25,6 @@ tags:
 - RPA Alternative
 - Studio Interface
 - Supply Chain Analytics
-- Videos
 - Workflow Automation
 - Workflow Monitoring
 section_names:

@@ -20,10 +20,8 @@ tags:
 - Forrester TEI
 - Information Governance
 - Microsoft Purview
-- News
 - Regulatory Compliance
 - Risk Management
-- Security
 - Unified Security Platform
 section_names:
 - security

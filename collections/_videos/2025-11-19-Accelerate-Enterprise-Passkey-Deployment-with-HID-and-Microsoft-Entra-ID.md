@@ -11,7 +11,6 @@ permalink: /azure/videos/Accelerate-Enterprise-Passkey-Deployment-with-HID-and-M
 tags:
 - Access Management
 - Authentication Strategies
-- Azure
 - Credential Management
 - Enterprise Security
 - FIDO
@@ -25,8 +24,6 @@ tags:
 - Passwordless Authentication
 - Phishing Resistant MFA
 - Secureyourdata
-- Security
-- Videos
 section_names:
 - azure
 - security

@@ -11,14 +11,12 @@ permalink: /azure/community/Deploying-Third-Party-Firewalls-in-Azure-Landing-Zon
 tags:
 - Active Active Deployment
 - Active Passive Deployment
-- Azure
 - Azure Firewall
 - Azure Load Balancer
 - Azure Monitor
 - Azure Sentinel
 - BYOL
 - Check Point
-- Community
 - Fortinet
 - High Availability
 - Hub And Spoke Architecture
@@ -28,7 +26,6 @@ tags:
 - NAT Rules
 - Network Security
 - Palo Alto
-- Security
 - Third Party Firewall
 - User Defined Routes
 - Virtual Network

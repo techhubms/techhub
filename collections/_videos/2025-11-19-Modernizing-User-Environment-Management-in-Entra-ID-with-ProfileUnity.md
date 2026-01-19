@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-19 07:57:38 +00:00
 permalink: /azure/videos/Modernizing-User-Environment-Management-in-Entra-ID-with-ProfileUnity
 tags:
-- Azure
 - Azure Blob Storage
 - Cloud Workspace
 - Configuration Reports
@@ -25,9 +24,7 @@ tags:
 - Offline Capabilities
 - Policy Delivery
 - ProfileUnity
-- Security
 - User Data Synchronization
-- Videos
 - Zero Trust
 section_names:
 - azure

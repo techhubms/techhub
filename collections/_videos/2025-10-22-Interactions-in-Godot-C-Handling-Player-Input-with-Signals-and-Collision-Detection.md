@@ -12,7 +12,6 @@ tags:
 - .NET
 - Area3D
 - C#
-- Coding
 - Collision Detection
 - Crafting System
 - Custom Signals
@@ -25,7 +24,6 @@ tags:
 - Scripting
 - Signals
 - UI Communication
-- Videos
 - VS Code
 section_names:
 - coding

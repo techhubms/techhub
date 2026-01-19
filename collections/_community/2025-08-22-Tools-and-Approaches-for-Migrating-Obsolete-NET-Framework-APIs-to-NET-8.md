@@ -13,8 +13,6 @@ tags:
 - .NET Framework 4.8
 - API Migration
 - Code Modernization
-- Coding
-- Community
 - Dependency Analysis
 - Multi Project Solutions
 - Obsolete APIs

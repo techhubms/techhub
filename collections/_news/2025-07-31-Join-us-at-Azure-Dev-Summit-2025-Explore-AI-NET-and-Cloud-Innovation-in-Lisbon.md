@@ -10,23 +10,18 @@ date: 2025-07-31 18:49:52 +00:00
 permalink: /ai/news/Join-us-at-Azure-Dev-Summit-2025-Explore-AI-NET-and-Cloud-Innovation-in-Lisbon
 tags:
 - .NET
-- AI
 - AI Powered Apps
 - Architects
-- Azure
 - Azure Dev Summit
 - Blazor
 - C#
 - Cloud Native
-- Coding
 - Community Event
 - Developer Conference
 - Developer Events
 - Developer Productivity
-- DevOps
 - Generative AI
 - Microsoft AI
-- News
 - VS Code
 section_names:
 - ai

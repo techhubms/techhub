@@ -12,8 +12,6 @@ tags:
 - .NET
 - Binding Converter
 - BitmapImage
-- Blogs
-- Coding
 - Desktop Applications
 - File Locking
 - Image Caching

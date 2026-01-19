@@ -10,16 +10,13 @@ date: 2025-11-18 16:00:40 +00:00
 permalink: /ai/community/Azure-Resiliency-Proactive-Continuity-with-Agentic-Experiences-and-Frontier-Innovation
 tags:
 - Agentic Experiences
-- AI
 - AI Driven Automation
-- Azure
 - Azure Backup
 - Azure Copilot
 - Azure Monitor
 - Business Continuity
 - Chaos Studio
 - Cloud Architecture
-- Community
 - Compliance
 - Cyber Recovery
 - Data Recovery
@@ -32,7 +29,6 @@ tags:
 - Posture Assessment
 - Ransomware Protection
 - Resiliency Agent
-- Security
 - Site Recovery
 section_names:
 - ai

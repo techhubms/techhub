@@ -11,15 +11,11 @@ permalink: /coding/community/Best-Practices-and-Resources-for-Azure-Application-
 tags:
 - .NET
 - Aspire Dashboard
-- Azure
 - Azure Application Insights
 - Azure Monitor SDK
-- Coding
-- Community
 - Cost Optimization
 - Custom Metrics
 - Data Retention
-- DevOps
 - Distributed Tracing
 - ILogger
 - Instrumentation

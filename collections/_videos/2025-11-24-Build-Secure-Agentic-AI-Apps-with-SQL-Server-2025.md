@@ -10,12 +10,10 @@ date: 2025-11-24 14:27:24 +00:00
 permalink: /ai/videos/Build-Secure-Agentic-AI-Apps-with-SQL-Server-2025
 tags:
 - Agentic AI
-- AI
 - AI Capabilities
 - Alternative Vector Databases
 - Availability
 - ChromaDB
-- Coding
 - Developer Certification
 - Embeddings
 - Enterprise IT
@@ -27,7 +25,6 @@ tags:
 - Service Management
 - SQL Server
 - Vectorization
-- Videos
 section_names:
 - ai
 - coding

@@ -10,7 +10,6 @@ date: 2025-12-15 10:00:00 +00:00
 permalink: /ml/news/Fabric-Environment-Library-Management-Performance-Improvements-for-Developers
 tags:
 - Apache Spark
-- Azure
 - Custom Packages
 - Data Engineering
 - Developer Experience
@@ -18,8 +17,6 @@ tags:
 - JAR Files
 - Library Management
 - Microsoft Fabric
-- ML
-- News
 - Performance Improvement
 - Python Packages
 - Session Startup

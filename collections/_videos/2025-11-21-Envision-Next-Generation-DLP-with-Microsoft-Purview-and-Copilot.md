@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 10:47:15 +00:00
 permalink: /ai/videos/Envision-Next-Generation-DLP-with-Microsoft-Purview-and-Copilot
 tags:
-- AI
 - Automated Security
 - Compliance
 - Copilotandagentsatwork
@@ -23,10 +22,8 @@ tags:
 - Microsoft Purview
 - MSIgnite
 - Policy Enforcement
-- Security
 - Security Automation
 - Security Copilot
-- Videos
 section_names:
 - ai
 - security

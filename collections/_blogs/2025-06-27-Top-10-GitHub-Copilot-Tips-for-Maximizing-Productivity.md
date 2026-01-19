@@ -9,14 +9,11 @@ feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-06-27 00:00:00 +00:00
 permalink: /github-copilot/blogs/Top-10-GitHub-Copilot-Tips-for-Maximizing-Productivity
 tags:
-- AI
-- Blogs
 - Code Review
 - Coding Best Practices
 - Copilot Chat
 - Developer Productivity
 - Documentation
-- GitHub Copilot
 - Prompt Engineering
 - Pull Requests
 - Refactoring

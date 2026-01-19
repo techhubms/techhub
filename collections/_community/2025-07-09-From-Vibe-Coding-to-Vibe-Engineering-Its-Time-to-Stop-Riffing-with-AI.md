@@ -9,14 +9,11 @@ feed_url: https://thenewstack.io/feed/
 date: 2025-07-09 10:00:00 +00:00
 permalink: /ai/community/From-Vibe-Coding-to-Vibe-Engineering-Its-Time-to-Stop-Riffing-with-AI
 tags:
-- AI
 - AI Assisted Development
 - Architecture
 - Code Quality
-- Community
 - Development Practices
 - Engineering Standards
-- Security
 - Software Engineering
 - TDD
 - Technical Debt

@@ -11,13 +11,10 @@ permalink: /coding/community/JSON-Structure-A-Next-Gen-Schema-Language-for-Messa
 tags:
 - .NET
 - Avro
-- Azure
 - Azure Event Grid
 - Azure Event Hubs
 - Azure Service Bus
 - Code Generation
-- Coding
-- Community
 - Data Definition
 - Data Modeling
 - JSON Schema

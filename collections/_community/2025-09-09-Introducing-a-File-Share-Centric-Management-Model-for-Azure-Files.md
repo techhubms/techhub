@@ -11,11 +11,9 @@ permalink: /azure/community/Introducing-a-File-Share-Centric-Management-Model-fo
 tags:
 - Access Control
 - Automation
-- Azure
 - Azure Files
 - Billing
 - Cloud Storage
-- Community
 - Cost Management
 - File Share Management
 - Granular Security

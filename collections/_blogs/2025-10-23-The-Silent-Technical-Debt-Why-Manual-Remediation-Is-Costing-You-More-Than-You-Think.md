@@ -10,14 +10,12 @@ date: 2025-10-23 07:30:29 +00:00
 permalink: /devops/blogs/The-Silent-Technical-Debt-Why-Manual-Remediation-Is-Costing-You-More-Than-You-Think
 tags:
 - ActiveState Report
-- Blogs
 - Business Of DevOps
 - Continuous Remediation
 - Contributed Content
 - Cybersecurity Efficiency
 - Dependency Management
 - Developer Productivity
-- DevOps
 - Devsecops
 - Engineering Performance
 - Innovation Tax
@@ -29,7 +27,6 @@ tags:
 - Mttr
 - Open Source Security
 - Remediation Debt
-- Security
 - Security Automation
 - Social Facebook
 - Social LinkedIn

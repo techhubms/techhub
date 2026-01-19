@@ -11,7 +11,6 @@ permalink: /azure/videos/Securing-Data-Across-Microsoft-Environments-with-Micros
 tags:
 - Agent Driven Security
 - Auto Labeling
-- Azure
 - Compliance
 - Data Protection
 - Data Security
@@ -26,9 +25,7 @@ tags:
 - OneLake Catalog
 - Prompt DLP
 - Secureyourdata
-- Security
 - Security Insights
-- Videos
 section_names:
 - azure
 - security

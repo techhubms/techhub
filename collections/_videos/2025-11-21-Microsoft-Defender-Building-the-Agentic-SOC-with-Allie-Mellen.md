@@ -10,7 +10,6 @@ date: 2025-11-21 14:57:25 +00:00
 permalink: /ai/videos/Microsoft-Defender-Building-the-Agentic-SOC-with-Allie-Mellen
 tags:
 - Agentic AI
-- AI
 - AI Security
 - Alert Management
 - Defender XDR
@@ -23,14 +22,12 @@ tags:
 - ModernizeSecOpswithaunifiedplatform
 - MSIgnite
 - Runbooks
-- Security
 - Security Analysts
 - Security Automation
 - Security Operations Center
 - SOC
 - Threat Response
 - Vendor Transparency
-- Videos
 section_names:
 - ai
 - security

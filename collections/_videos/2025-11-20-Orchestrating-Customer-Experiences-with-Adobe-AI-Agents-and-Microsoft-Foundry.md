@@ -10,10 +10,8 @@ date: 2025-11-20 16:02:21 +00:00
 permalink: /ai/videos/Orchestrating-Customer-Experiences-with-Adobe-AI-Agents-and-Microsoft-Foundry
 tags:
 - Adobe
-- AI
 - AI Agents
 - AI Collaboration
-- Azure
 - Azure AI
 - Customer Experience
 - Dashboard Analytics
@@ -27,7 +25,6 @@ tags:
 - Personalization
 - Real Time Data
 - Responsible AI
-- Videos
 section_names:
 - ai
 - azure

@@ -9,18 +9,14 @@ feed_url: https://devops.com/feed/
 date: 2025-11-13 02:44:52 +00:00
 permalink: /ai/blogs/Survey-Reveals-Challenges-in-DevOps-Platform-Migrations-and-AI-Tool-Integration
 tags:
-- AI
 - AI Tool Integration
-- Blogs
 - Cloudbees
 - Compliance
 - Developer Productivity
-- DevOps
 - Enterprise IT
 - Platform Engineering
 - Platform Migration
 - Real Time Analytics
-- Security
 - Security Integrations
 - Social Facebook
 - Social LinkedIn

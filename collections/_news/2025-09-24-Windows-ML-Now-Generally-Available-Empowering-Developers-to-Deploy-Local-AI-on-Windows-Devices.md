@@ -9,13 +9,11 @@ feed_url: https://news.microsoft.com/source/feed/
 date: 2025-09-24 16:23:25 +00:00
 permalink: /ai/news/Windows-ML-Now-Generally-Available-Empowering-Developers-to-Deploy-Local-AI-on-Windows-Devices
 tags:
-- AI
 - AI Dev Gallery
 - AI Inference
 - AI Toolkit For VS Code
 - AMD Ryzen AI
 - App Development
-- Coding
 - Company News
 - CPU
 - Edge AI
@@ -24,7 +22,6 @@ tags:
 - Local AI
 - Model Deployment
 - Model Quantization
-- News
 - NPU
 - NVIDIA TensorRT
 - ONNX Runtime

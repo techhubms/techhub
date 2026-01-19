@@ -18,9 +18,7 @@ tags:
 - Microsoft Security
 - Microsoft Sentinel
 - Network Security
-- News
 - SecOps
-- Security
 - Security Operations
 - Security Posture
 - Security Workshop

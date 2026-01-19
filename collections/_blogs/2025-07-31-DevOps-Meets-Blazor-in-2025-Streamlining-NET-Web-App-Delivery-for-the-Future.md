@@ -11,11 +11,8 @@ permalink: /coding/blogs/DevOps-Meets-Blazor-in-2025-Streamlining-NET-Web-App-De
 tags:
 - .NET
 - Blazor
-- Blogs
 - Business Of DevOps
-- Coding
 - Contributed Content
-- DevOps
 - DevOps Practice
 - Doin' DevOps
 - Enterprise

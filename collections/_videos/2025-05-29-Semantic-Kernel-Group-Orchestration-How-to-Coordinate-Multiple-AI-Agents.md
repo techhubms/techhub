@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt
 date: 2025-05-29 13:30:25 +00:00
 permalink: /ai/videos/Semantic-Kernel-Group-Orchestration-How-to-Coordinate-Multiple-AI-Agents
 tags:
-- AI
 - AI Agents
 - AI Collaboration
 - AI Demo
-- Coding
 - Collaboration Automation
 - Copilot Development
 - Developer Tools
@@ -24,7 +22,6 @@ tags:
 - Round Robin Manager
 - Semantic Kernel
 - Team Based Problem Solving
-- Videos
 - VS
 section_names:
 - ai

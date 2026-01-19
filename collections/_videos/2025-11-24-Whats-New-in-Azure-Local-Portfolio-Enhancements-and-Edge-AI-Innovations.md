@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 12:00:15 +00:00
 permalink: /ai/videos/Whats-New-in-Azure-Local-Portfolio-Enhancements-and-Edge-AI-Innovations
 tags:
-- AI
 - AI Acceleration
-- Azure
 - Azure Local
 - Compliance
 - Data Sovereignty
@@ -26,8 +24,6 @@ tags:
 - NVIDIA RTX GPU
 - Private Cloud
 - Regulated Industries
-- Security
-- Videos
 section_names:
 - ai
 - azure

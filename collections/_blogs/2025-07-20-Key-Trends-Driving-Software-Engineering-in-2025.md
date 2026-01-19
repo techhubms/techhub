@@ -9,16 +9,12 @@ feed_url: https://dellenny.com/feed/
 date: 2025-07-20 18:32:49 +00:00
 permalink: /ai/blogs/Key-Trends-Driving-Software-Engineering-in-2025
 tags:
-- AI
 - AI Powered Development
 - Architecture
-- Blogs
 - Cloud Native
-- Coding
 - Composable Architecture
 - Containerization
 - Developer Experience
-- DevOps
 - DevSecOps
 - Edge Computing
 - ESG
@@ -31,7 +27,6 @@ tags:
 - Power Apps
 - Prompt Engineering
 - Quantum Software Engineering
-- Security
 - Serverless
 - Software Engineering
 - Sustainable Software

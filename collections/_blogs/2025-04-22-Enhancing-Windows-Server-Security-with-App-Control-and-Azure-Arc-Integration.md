@@ -12,11 +12,9 @@ tags:
 - App Control
 - Application Whitelisting
 - AppLocker
-- Azure
 - Azure Arc
 - Azure Management
 - Azure Monitor
-- Blogs
 - Centralized Governance
 - Cloud Security
 - Compliance
@@ -25,7 +23,6 @@ tags:
 - Microsoft
 - Microsoft Azure
 - PowerShell
-- Security
 - Securtiy
 - Windows Server
 section_names:

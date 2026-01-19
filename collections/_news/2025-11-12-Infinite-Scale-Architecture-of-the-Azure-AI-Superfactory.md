@@ -9,12 +9,10 @@ feed_url: https://azure.microsoft.com/en-us/blog/feed/
 date: 2025-11-12 17:33:00 +00:00
 permalink: /ai/news/Infinite-Scale-Architecture-of-the-Azure-AI-Superfactory
 tags:
-- AI
 - AI + Machine Learning
 - AI Infrastructure
 - AI Training
 - AI WAN
-- Azure
 - Azure AI
 - Cloud Infrastructure
 - Datacenter Architecture
@@ -23,7 +21,6 @@ tags:
 - High Density Compute
 - Liquid Cooling
 - Network Engineering
-- News
 - NVIDIA Blackwell
 - SONiC
 - Supercomputer

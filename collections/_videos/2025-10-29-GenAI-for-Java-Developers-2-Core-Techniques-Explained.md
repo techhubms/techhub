@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-10-29 00:00:14 +00:00
 permalink: /ai/videos/GenAI-for-Java-Developers-2-Core-Techniques-Explained
 tags:
-- AI
 - AI Applications
 - AI Tutorial
 - AITechniques
@@ -33,7 +32,6 @@ tags:
 - OpenAI
 - RAG
 - Retrieval Augmented Generation
-- Videos
 section_names:
 - ai
 ---

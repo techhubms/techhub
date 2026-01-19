@@ -10,9 +10,7 @@ date: 2025-10-15 17:17:17 +00:00
 permalink: /ai/news/Easily-Connect-AI-Workloads-to-Azure-Blob-Storage-with-adlfs
 tags:
 - Adlfs
-- AI
 - AI Workloads
-- Azure
 - Azure Blob Storage
 - Azure Data Lake Storage
 - Azure SDK
@@ -25,9 +23,6 @@ tags:
 - Data Pipelines
 - ETL
 - Fsspec
-- Machine Learning
-- ML
-- News
 - Pandas
 - Performance Optimization
 - Python

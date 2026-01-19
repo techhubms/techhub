@@ -9,15 +9,11 @@ feed_url: https://cooknwithcopilot.com/rss.xml
 date: 2025-07-04 00:00:00 +00:00
 permalink: /github-copilot/blogs/Avoid-These-Common-Copilot-Prompts-How-to-Get-Better-Results-with-Specific-Guidance
 tags:
-- AI
 - Best Practices
-- Blogs
 - Bug Fixing
 - Code Generation
 - Code Review
-- Coding
 - Developer Productivity
-- GitHub Copilot
 - Programming Languages
 - Prompt Engineering
 - Software Development

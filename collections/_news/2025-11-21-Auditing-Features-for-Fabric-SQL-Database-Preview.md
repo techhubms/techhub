@@ -12,18 +12,14 @@ tags:
 - Access Control
 - Audit Logs
 - Auditing
-- Azure
 - Compliance
 - Data Governance
 - Fabric SQL Database
 - HIPAA
 - Microsoft Fabric
-- ML
-- News
 - OneLake
 - Retention Policy
 - Role Based Access
-- Security
 - SOX
 - T SQL
 section_names:

@@ -9,11 +9,9 @@ feed_url: https://www.reddit.com/r/azure/.rss
 date: 2025-08-04 09:52:09 +00:00
 permalink: /azure/community/Azure-Virtual-Network-Gateway-Custom-BGP-IP-Configuration-Issue
 tags:
-- Azure
 - Azure Virtual Network Gateway
 - BGP
 - BGP Peer IP
-- Community
 - Custom APIPA IP
 - GatewaySubnet
 - Get AzVirtualNetworkGateway

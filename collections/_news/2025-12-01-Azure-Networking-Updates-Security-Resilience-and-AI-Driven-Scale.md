@@ -10,11 +10,9 @@ date: 2025-12-01 17:00:00 +00:00
 permalink: /ai/news/Azure-Networking-Updates-Security-Resilience-and-AI-Driven-Scale
 tags:
 - Advanced Container Networking
-- AI
 - AI Workloads
 - AKS
 - Application Gateway
-- Azure
 - Azure ExpressRoute
 - Azure Networking
 - Azure Private Link
@@ -25,8 +23,6 @@ tags:
 - NAT Gateway
 - Network Security
 - Networking
-- News
-- Security
 - Virtual WAN
 - VPN Gateway
 - Web Application Firewall

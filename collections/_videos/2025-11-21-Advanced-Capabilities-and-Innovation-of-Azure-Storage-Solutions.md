@@ -9,9 +9,7 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 08:28:54 +00:00
 permalink: /ai/videos/Advanced-Capabilities-and-Innovation-of-Azure-Storage-Solutions
 tags:
-- AI
 - AI Inference
-- Azure
 - Azure Files
 - Azure Storage
 - Blob Storage
@@ -31,7 +29,6 @@ tags:
 - NVMe
 - Priority Replication
 - Smart Tiering
-- Videos
 section_names:
 - ai
 - azure

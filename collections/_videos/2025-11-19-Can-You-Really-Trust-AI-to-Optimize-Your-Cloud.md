@@ -11,7 +11,6 @@ permalink: /ai/videos/Can-You-Really-Trust-AI-to-Optimize-Your-Cloud
 tags:
 - Agentic Business Applications
 - Agenticbusinessapplications
-- AI
 - AI Automation
 - AI Reliability
 - Autonomous Systems
@@ -28,7 +27,6 @@ tags:
 - Rightsizing
 - Session ODSP1433
 - Suresh Mathew
-- Videos
 section_names:
 - ai
 ---

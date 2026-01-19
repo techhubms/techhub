@@ -9,7 +9,6 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-09-29 09:00:00 +00:00
 permalink: /ml/news/Cross-Cloud-Data-Movement-with-Best-in-Class-Connectivity-in-Fabric-Data-Factory
 tags:
-- Azure
 - Change Data Capture
 - Cloud Data Migration
 - Connectors
@@ -25,8 +24,6 @@ tags:
 - Fabric Data Factory
 - Incremental Copy
 - Microsoft Fabric
-- ML
-- News
 - On Premises Integration
 - OneLake
 - SQL Database

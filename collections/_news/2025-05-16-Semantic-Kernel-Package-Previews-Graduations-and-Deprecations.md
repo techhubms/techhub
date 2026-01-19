@@ -10,14 +10,11 @@ date: 2025-05-16 08:32:47 +00:00
 permalink: /ai/news/Semantic-Kernel-Package-Previews-Graduations-and-Deprecations
 tags:
 - .NET
-- AI
 - API Updates
 - Azure Code Interpreter
-- Coding
 - HTTP Consistency
 - Integration Tests
 - Migration Guide
-- News
 - OpenAPI
 - Package Deprecation
 - Package Graduation

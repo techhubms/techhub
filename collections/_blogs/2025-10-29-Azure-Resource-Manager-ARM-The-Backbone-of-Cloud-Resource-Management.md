@@ -11,17 +11,14 @@ permalink: /azure/blogs/Azure-Resource-Manager-ARM-The-Backbone-of-Cloud-Resourc
 tags:
 - ARM
 - ARM Templates
-- Azure
 - Azure CLI
 - Azure Governance
 - Azure Monitor
 - Azure Policy
 - Azure Resource Manager
-- Blogs
 - Cloud Automation
 - Cloud Management
 - Cost Management
-- DevOps
 - IaC
 - PowerShell
 - RBAC

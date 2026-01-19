@@ -9,23 +9,17 @@ feed_url: https://devblogs.microsoft.com/feed
 date: 2025-08-14 17:00:24 +00:00
 permalink: /github-copilot/news/GPT-5-Integrations-for-Microsoft-Developers-GitHub-Copilot-Azure-AI-and-VS-Code
 tags:
-- AI
 - AI Toolkit
 - API Integration
-- Azure
 - Azure AI Foundry
 - Azure OpenAI Service
 - C#
-- Coding
 - Copilot Studio
-- DevOps
-- GitHub Copilot
 - GitHub Models
 - GPT 5
 - JavaScript
 - LLM
 - Model Evaluation
-- News
 - OpenAI .NET SDK
 - Python
 - RAG

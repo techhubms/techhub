@@ -11,7 +11,6 @@ permalink: /coding/videos/Distributed-Applications-with-Microsoft-Orleans-and-Ev
 tags:
 - .NET
 - C#
-- Coding
 - CQRS
 - Demo
 - Developer
@@ -28,7 +27,6 @@ tags:
 - Productivity
 - Sekiban
 - Software Developer
-- Videos
 - VS Code
 section_names:
 - coding

@@ -10,13 +10,9 @@ date: 2025-11-19 18:29:45 +00:00
 permalink: /ai/community/Implementing-GPT-5-FreeForm-Tool-Calling-with-Azure-AI-Foundry
 tags:
 - Agentic Workflow
-- AI
 - API Integration
-- Azure
 - Azure AI Foundry
 - Bar Chart
-- Coding
-- Community
 - CSV
 - Custom Tools
 - Data Analysis
@@ -25,7 +21,6 @@ tags:
 - GPT 5
 - Iris Dataset
 - JavaScript
-- ML
 - SQL
 - TypeScript
 - VM Sandbox

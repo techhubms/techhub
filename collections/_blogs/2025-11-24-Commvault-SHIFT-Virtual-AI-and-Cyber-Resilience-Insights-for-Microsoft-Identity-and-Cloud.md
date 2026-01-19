@@ -10,10 +10,8 @@ date: 2025-11-24 08:29:00 +00:00
 permalink: /ai/blogs/Commvault-SHIFT-Virtual-AI-and-Cyber-Resilience-Insights-for-Microsoft-Identity-and-Cloud
 tags:
 - Active Directory Recovery
-- AI
 - AI Driven Security
 - AI Governance
-- Blogs
 - Cloud Unity Platform
 - Commvault
 - Commvault Shift
@@ -25,7 +23,6 @@ tags:
 - Microsoft Entra ID
 - Proactive Recovery
 - Sanjay Mirchandani
-- Security
 - Shift Virtual
 - Threat Scan
 - Virtual Event

@@ -9,10 +9,8 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-21 17:22:46 +00:00
 permalink: /ai/videos/Scaling-Kubernetes-Securely-and-Reliably-with-AKS
 tags:
-- AI
 - AI Workloads
 - AKS
-- Azure
 - Azure Fleet Manager
 - Cloud Operations
 - Cluster Management
@@ -27,8 +25,6 @@ tags:
 - Multi Cluster
 - Scalability
 - Scheduling
-- Security
-- Videos
 section_names:
 - ai
 - azure

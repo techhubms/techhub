@@ -9,14 +9,10 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-06 14:45:00 +00:00
 permalink: /ai/community/Building-Adaptive-Multilingual-Apps-Using-TypeScript-and-Azure-AI-Translator-API
 tags:
-- AI
 - API Version 05 01 Preview
-- Azure
 - Azure AI Foundry
 - Azure AI Translator
 - Brand Voice
-- Coding
-- Community
 - Compliance
 - Gender Specificity
 - GPT 4o

@@ -9,9 +9,7 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-14 00:00:00 +00:00
 permalink: /azure/community/Caliptra-21-Advancing-Open-Source-Silicon-Root-of-Trust-for-Data-Protection
 tags:
-- Azure
 - Caliptra 2.1
-- Community
 - Confidential Computing
 - Cryptographic Hardware
 - FPV Verification
@@ -22,7 +20,6 @@ tags:
 - Open Compute Project
 - Quantum Cryptography
 - Root Of Trust
-- Security
 - Silicon Security
 - Trusted Execution Environments
 - Zero Trust

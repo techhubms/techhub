@@ -12,14 +12,12 @@ tags:
 - ABAC
 - Access Management
 - Attribute Based Access Control
-- Azure
 - Azure China
 - Azure Government
 - Azure Monitor Logs
 - Azure Observability
 - Azure Public Cloud
 - Azure RBAC
-- Community
 - Compliance
 - Data Security
 - Data Segregation
@@ -29,7 +27,6 @@ tags:
 - Log Analytics Data Reader
 - Role Based Access Control
 - Row Level Security
-- Security
 - Table Level Security
 - Workspace Security
 section_names:

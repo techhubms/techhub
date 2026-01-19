@@ -10,7 +10,6 @@ date: 2025-10-29 16:00:05 +00:00
 permalink: /ai/videos/Building-Three-AI-Powered-Applications-MCP-Browser-LLMs-and-Foundry-Local
 tags:
 - Agent Code Generation
-- AI
 - AI Application Development
 - AI Toolkit
 - AIApplications
@@ -20,7 +19,6 @@ tags:
 - Cloud AI
 - CloudAI
 - Code Integration
-- Coding
 - Foundry Local
 - FoundryLocal
 - GenerativeAI
@@ -34,7 +32,6 @@ tags:
 - Local AI
 - LocalAI
 - MCP
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

@@ -11,11 +11,9 @@ permalink: /coding/blogs/Hybrid-Caching-in-ASPNET-Core-Bridging-In-Memory-and-Di
 tags:
 - .NET
 - ASP.NET Core
-- Blogs
 - Cache Invalidation
 - Caching
 - Caching Patterns
-- Coding
 - Distributed Cache
 - Distributed Caching
 - Hybrid Caching

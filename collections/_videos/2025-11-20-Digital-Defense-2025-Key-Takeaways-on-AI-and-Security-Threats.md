@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-20 07:56:55 +00:00
 permalink: /ai/videos/Digital-Defense-2025-Key-Takeaways-on-AI-and-Security-Threats
 tags:
-- AI
 - AI Security
 - Business Email Compromise
 - Cybersecurity Trends
@@ -23,12 +22,10 @@ tags:
 - MSIgnite
 - Regional Threat Analysis
 - Regulatory Compliance
-- Security
 - Security Operations
 - Social Engineering
 - Threat Actors
 - Threat Intelligence
-- Videos
 section_names:
 - ai
 - security

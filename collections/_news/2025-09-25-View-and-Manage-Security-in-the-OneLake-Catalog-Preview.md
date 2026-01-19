@@ -10,20 +10,17 @@ date: 2025-09-25 15:00:00 +00:00
 permalink: /azure/news/View-and-Manage-Security-in-the-OneLake-Catalog-Preview
 tags:
 - Access Control
-- Azure
 - Azure Data Platform
 - Column Level Security
 - Data Governance
 - Fabric Governance
 - Least Privilege
 - Microsoft Fabric
-- News
 - OneLake Catalog
 - Permissions Management
 - Role Management
 - Row Level Security
 - Secure Tab
-- Security
 - Security Roles
 - Workspace Roles
 section_names:

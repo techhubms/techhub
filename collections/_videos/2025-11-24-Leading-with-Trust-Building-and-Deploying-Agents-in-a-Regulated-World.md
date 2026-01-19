@@ -10,7 +10,6 @@ date: 2025-11-24 13:52:17 +00:00
 permalink: /ai/videos/Leading-with-Trust-Building-and-Deploying-Agents-in-a-Regulated-World
 tags:
 - Agent Lifecycle
-- AI
 - AI Security
 - Compliance Automation
 - Compliance Manager
@@ -29,8 +28,6 @@ tags:
 - Regulatory Navigator
 - Regulatory Templates
 - Responsible AI
-- Security
-- Videos
 section_names:
 - ai
 - security

@@ -14,8 +14,6 @@ tags:
 - AsyncEnumerable
 - Automation
 - Base Class Library
-- Coding
-- Community
 - IObservable
 - NuGet Packages
 - Open Source Maintenance

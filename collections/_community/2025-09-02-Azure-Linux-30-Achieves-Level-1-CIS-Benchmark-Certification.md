@@ -10,20 +10,17 @@ date: 2025-09-02 16:28:04 +00:00
 permalink: /azure/community/Azure-Linux-30-Achieves-Level-1-CIS-Benchmark-Certification
 tags:
 - AKS
-- Azure
 - Azure Linux 3.0
 - Azure Security
 - Center For Internet Security
 - CIS Benchmarks
 - Cloud Compliance
-- Community
 - HIPAA
 - ISO 27001
 - Linux Workloads
 - NIST CSF
 - PCI DSS
 - Regulatory Standards
-- Security
 - Security Best Practices
 - Security Compliance
 section_names:

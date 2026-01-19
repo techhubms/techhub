@@ -9,12 +9,10 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVT
 date: 2025-08-25 16:00:16 +00:00
 permalink: /ai/videos/Context-Window-Answering-3-Developer-Questions-to-Save-on-AI-Costs
 tags:
-- AI
 - AI Best Practices
 - AI Cost Optimization
 - AI Development
 - AI Services
-- Azure
 - Azure AI Foundry
 - Cloud Computing
 - Dev
@@ -24,7 +22,6 @@ tags:
 - Microsoft AI
 - Tech
 - Technology
-- Videos
 section_names:
 - ai
 - azure

@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q
 date: 2025-06-11 08:57:55 +00:00
 permalink: /ai/videos/AI-Challenger-Loft-Orbital-Building-Smarter-Satellites-with-AI
 tags:
-- AI
 - AI For Aerospace
 - AI Transformation
 - Automation
@@ -25,7 +24,6 @@ tags:
 - Space
 - Space Operations
 - Space Technology
-- Videos
 section_names:
 - ai
 ---

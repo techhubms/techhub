@@ -9,7 +9,6 @@ feed_url: https://devops.com/feed/
 date: 2025-09-23 13:00:11 +00:00
 permalink: /ai/blogs/Harness-Adds-New-AI-Modules-to-Automate-DevOps-Pipelines-and-Maintenance
 tags:
-- AI
 - AI Agent
 - AI For DevOps
 - AI in Software Delivery
@@ -20,12 +19,10 @@ tags:
 - Architect Mode
 - Architect Mode DevOps
 - Autonomous Code Maintenance
-- Blogs
 - Code Maintenance
 - Compliance Automation
 - Deployment Rollback
 - Developer Portal
-- DevOps
 - DevOps Automation
 - DevOps Best Practices
 - Harness AI Platform

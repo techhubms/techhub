@@ -13,7 +13,6 @@ tags:
 - AI Integration
 - Analytics
 - Analytics Endpoints
-- Azure
 - Data Analytics
 - Data Integration
 - Data Platform
@@ -21,7 +20,6 @@ tags:
 - Fabric
 - Feature Comparison
 - Microsoft Fabric
-- ML
 - OneLake
 - Pricing
 - Purview Integration
@@ -32,7 +30,6 @@ tags:
 - SQL in Fabric
 - SQL Server
 - Transactional Databases
-- Videos
 section_names:
 - azure
 - ml

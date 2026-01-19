@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community
 date: 2025-08-14 13:13:08 +00:00
 permalink: /ai/community/Data-Intelligence-at-Your-Fingertips-Fabrics-AI-Functions-and-Data-Agents
 tags:
-- AI
 - AI Functions
 - Analytics Automation
 - Business Intelligence
-- Community
 - Conversational AI
 - Dashboarding
 - Data Agents
@@ -21,7 +19,6 @@ tags:
 - Data Workflows
 - Keyword Extraction
 - Microsoft Fabric
-- ML
 - Natural Language Processing
 - No Code AI
 - Productivity Tools

@@ -12,8 +12,6 @@ tags:
 - Base Class
 - C#
 - Code Puzzle
-- Coding
-- Community
 - Console Output
 - Constructor
 - Derived Class

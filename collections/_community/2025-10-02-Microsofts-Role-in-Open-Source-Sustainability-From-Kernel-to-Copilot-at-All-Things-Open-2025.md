@@ -9,28 +9,21 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-10-02 17:45:28 +00:00
 permalink: /github-copilot/community/Microsofts-Role-in-Open-Source-Sustainability-From-Kernel-to-Copilot-at-All-Things-Open-2025
 tags:
-- AI
 - AI Agents
 - AKS Automatic
 - App Modernization
 - Application Modernization
 - Automation
-- Azure
 - Azure Arc
 - Cloud Computing
 - Cloud Native
-- Coding
-- Community
-- DevOps
 - GitHub
-- GitHub Copilot
 - Infrastructure
 - Kubernetes
 - Linux On Azure
 - Microsoft
 - Open Source
 - OpenShift
-- Security
 - VS Code
 section_names:
 - ai

@@ -11,10 +11,7 @@ ghes_support: true
 plans:
 - Free
 alt-collection: features
-tags:
-- AI
-- GitHub Copilot
-- Videos
+tags: []
 section_names:
 - ai
 - github-copilot

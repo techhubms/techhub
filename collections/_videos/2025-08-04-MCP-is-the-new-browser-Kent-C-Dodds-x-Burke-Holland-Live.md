@@ -9,7 +9,6 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SL
 date: 2025-08-04 23:12:20 +00:00
 permalink: /ai/videos/MCP-is-the-new-browser-Kent-C-Dodds-x-Burke-Holland-Live
 tags:
-- AI
 - AI Tools
 - AI Workflows
 - Burke Holland
@@ -25,7 +24,6 @@ tags:
 - Pro Tips
 - Protips
 - Vibecoding
-- Videos
 - VS Code
 - Web Browser Analogy
 section_names:

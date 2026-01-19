@@ -9,7 +9,6 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-09-25 21:59:40 +00:00
 permalink: /github-copilot/news/Copilot-Can-Create-GitHub-Issues-with-Code-Snippets-Public-Preview
 tags:
-- AI
 - AI Powered Issue Creation
 - Code Snippets
 - Continuous Development
@@ -17,11 +16,9 @@ tags:
 - Copilot Features
 - Copilot Suggestions
 - Developer Tools
-- GitHub Copilot
 - GitHub Issues
 - Improvement
 - Issue Automation
-- News
 - Preview Release
 - Workflow Enhancement
 section_names:

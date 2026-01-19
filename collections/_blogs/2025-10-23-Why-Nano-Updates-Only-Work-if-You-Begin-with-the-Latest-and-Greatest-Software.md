@@ -10,7 +10,6 @@ date: 2025-10-23 06:00:19 +00:00
 permalink: /devops/blogs/Why-Nano-Updates-Only-Work-if-You-Begin-with-the-Latest-and-Greatest-Software
 tags:
 - Automated Updates
-- Blogs
 - Business Of DevOps
 - CI/CD
 - Container Updates
@@ -19,7 +18,6 @@ tags:
 - Contributed Content
 - CVE Reduction
 - Dependency Management
-- DevOps
 - Devsecops
 - Engineering And Security Collaboration
 - Engineering Collaboration
@@ -29,7 +27,6 @@ tags:
 - Modern Software Stacks
 - Nano Updates
 - Secure Development Practices
-- Security
 - Security Collaboration
 - Security Patching
 - Social Facebook

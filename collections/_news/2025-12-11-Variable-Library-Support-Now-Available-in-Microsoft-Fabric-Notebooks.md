@@ -9,18 +9,13 @@ feed_url: https://blog.fabric.microsoft.com/en-us/blog/feed/
 date: 2025-12-11 10:00:00 +00:00
 permalink: /ml/news/Variable-Library-Support-Now-Available-in-Microsoft-Fabric-Notebooks
 tags:
-- Azure
 - CI/CD
-- Coding
 - Configuration Management
 - Data Engineering
-- DevOps
 - Dynamic Runtime Settings
 - Enterprise Automation
 - Lakehouse
 - Microsoft Fabric
-- ML
-- News
 - Notebooks
 - NotebookUtils
 - Parameterization

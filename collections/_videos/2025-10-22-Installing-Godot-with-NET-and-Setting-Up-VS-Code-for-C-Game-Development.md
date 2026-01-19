@@ -13,7 +13,6 @@ tags:
 - Beginner Tutorial
 - C#
 - C# Tools For Godot
-- Coding
 - Debugging
 - Development Environment
 - Game Development
@@ -23,7 +22,6 @@ tags:
 - Indie Games
 - Microsoft
 - SDK Installation
-- Videos
 - VS Code
 - VS Code Extensions
 section_names:

@@ -10,13 +10,11 @@ date: 2026-02-04 17:00:00 +00:00
 permalink: /coding/news/Visual-Studio-Code-January-2026-Insiders-Update-v1109-Terminal-and-Chat-Improvements
 tags:
 - Chat View
-- Coding
 - Developer Tooling
 - Extension API
 - Kitty Keyboard Protocol
 - MCP Apps
 - Microsoft
-- News
 - npm Commands
 - Quick Input
 - Settings Editor

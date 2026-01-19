@@ -9,17 +9,12 @@ feed_url: https://www.reddit.com/r/GithubCopilot.rss
 date: 2025-08-07 18:06:13 +00:00
 permalink: /github-copilot/community/VS-Code-1103-Released-GPT-5-Tool-Limit-Increase-Checkpoints-Git-Worktrees
 tags:
-- AI
 - Checkpoints
-- Coding
 - Coding Agents
-- Community
 - Copilot Rollout
 - Development Tools
-- DevOps
 - Enterprise Plan
 - Git Worktrees
-- GitHub Copilot
 - GPT 5
 - Microsoft
 - Pro Subscription

@@ -9,7 +9,6 @@ date: 2025-07-16 14:14:45 +00:00
 permalink: /ai/news/Integrating-interactivity-with-Minecraft-Education-A-fun-approach-to-learning-coding-and-AI
 viewing_mode: external
 tags:
-- AI
 - Classroom Tools
 - Company News
 - Education
@@ -18,7 +17,6 @@ tags:
 - Interactivity
 - Microsoft
 - Minecraft Education
-- News
 - Programming
 - STEM
 section_names:

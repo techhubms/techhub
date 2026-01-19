@@ -10,9 +10,7 @@ date: 2025-08-04 15:03:28 +00:00
 permalink: /ai/news/UNSW-Simplifies-Student-Life-with-Agentic-AI-Scout-Powered-by-Microsoft-Azure-OpenAI-and-Copilot-Studio
 tags:
 - Agentic AI
-- AI
 - AI in Education
-- Azure
 - Chatbot
 - Company News
 - Copilot Studio
@@ -22,7 +20,6 @@ tags:
 - Microsoft
 - Microsoft Azure
 - Moodle
-- News
 - OpenAI
 - Power Platform
 - Pradhiban Duraisamy

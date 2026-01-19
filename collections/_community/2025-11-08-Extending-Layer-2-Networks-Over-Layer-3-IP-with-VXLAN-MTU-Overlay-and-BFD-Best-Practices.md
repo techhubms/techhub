@@ -9,11 +9,9 @@ feed_url: https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?categ
 date: 2025-11-08 17:44:18 +00:00
 permalink: /azure/community/Extending-Layer-2-Networks-Over-Layer-3-IP-with-VXLAN-MTU-Overlay-and-BFD-Best-Practices
 tags:
-- Azure
 - Azure Networking
 - Bidirectional Forwarding Detection
 - Cloud Networking
-- Community
 - IP Routing
 - Jumbo Frames
 - L2 Extension

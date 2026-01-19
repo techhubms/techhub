@@ -10,7 +10,6 @@ date: 2025-08-21 16:00:00 +00:00
 permalink: /azure/news/Analyzing-the-ClickFix-Social-Engineering-Technique-and-Defenses-with-Microsoft-Security
 tags:
 - Attack Chain
-- Azure
 - ClickFix
 - Detection
 - Drive By Compromise
@@ -26,11 +25,9 @@ tags:
 - Microsoft Defender XDR
 - Microsoft Security Copilot
 - Microsoft Threat Intelligence
-- News
 - Phishing
 - PowerShell
 - RunMRU
-- Security
 - Security Mitigation
 - Social Engineering
 - Windows Security

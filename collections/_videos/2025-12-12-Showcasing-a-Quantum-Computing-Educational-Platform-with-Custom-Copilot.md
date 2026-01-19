@@ -10,10 +10,7 @@ date: 2025-12-12 23:04:41 +00:00
 permalink: /ai/videos/Showcasing-a-Quantum-Computing-Educational-Platform-with-Custom-Copilot
 tags:
 - .NET
-- AI
 - ASP.NET Blazor
-- Azure
-- Coding
 - Custom Copilot
 - Educational Platform
 - Interactive Learning
@@ -24,7 +21,6 @@ tags:
 - Quantum Computing
 - Real Time Feedback
 - Simulator
-- Videos
 section_names:
 - ai
 - azure

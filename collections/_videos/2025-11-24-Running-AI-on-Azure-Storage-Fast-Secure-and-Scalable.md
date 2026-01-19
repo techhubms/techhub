@@ -9,11 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 10:26:37 +00:00
 permalink: /ai/videos/Running-AI-on-Azure-Storage-Fast-Secure-and-Scalable
 tags:
-- AI
 - AI Fine Tuning
 - AI Training
 - AKS
-- Azure
 - Azure AI Services
 - Azure Blob Storage
 - Azure Container Storage
@@ -31,7 +29,6 @@ tags:
 - Ray
 - Retrieval Augmented Generation
 - Unified Storage Management
-- Videos
 section_names:
 - ai
 - azure

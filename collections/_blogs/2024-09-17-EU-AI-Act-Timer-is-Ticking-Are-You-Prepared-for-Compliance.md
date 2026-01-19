@@ -9,14 +9,12 @@ feed_url: https://zure.com/category/blog/feed/?tag=dataai
 date: 2024-09-17 06:07:56 +00:00
 permalink: /ai/blogs/EU-AI-Act-Timer-is-Ticking-Are-You-Prepared-for-Compliance
 tags:
-- AI
 - AI Deployment
 - AI Innovation
 - AI Office
 - AI Penalties
 - AI Regulation
 - AI Roles
-- Blogs
 - Compliance
 - Conformity Assessment
 - Data & AI

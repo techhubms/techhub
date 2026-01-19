@@ -9,17 +9,14 @@ feed_url: https://github.blog/changelog/feed/
 date: 2025-12-11 16:07:42 +00:00
 permalink: /github-copilot/news/OpenAIs-GPT-52-Now-Available-in-GitHub-Copilot-Public-Preview
 tags:
-- AI
 - AI Models
 - API Key
 - Copilot
 - Copilot Chat
 - Copilot CLI
 - Enterprise Enablement
-- GitHub Copilot
 - GPT 5.2
 - Model Picker
-- News
 - OpenAI
 - VS Code
 section_names:

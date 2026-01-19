@@ -11,10 +11,8 @@ permalink: /coding/blogs/Avoiding-Closures-in-NET-ConcurrentDictionary-The-Effic
 tags:
 - .NET
 - Allocations
-- Blogs
 - C#
 - Closures
-- Coding
 - ConcurrentDictionary
 - Delegates
 - Lambda

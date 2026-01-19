@@ -9,12 +9,9 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_
 date: 2025-11-24 11:54:01 +00:00
 permalink: /ai/videos/Embedding-AI-in-Oracle-Workloads-with-Oracle-DatabaseAzure-and-Microsoft-Fabric
 tags:
-- AI
 - AI Agents
 - AI Integration
-- Azure
 - Azure AI Search
-- Coding
 - Copilot Studio
 - Custom Copilots
 - Data Analytics
@@ -24,12 +21,10 @@ tags:
 - Microsoft Foundry
 - Microsoft Purview
 - Migrateandmodernizeyourestate
-- ML
 - MSIgnite
 - Operational Analytics
 - Oracle Database@Azure
 - Vectorization
-- Videos
 section_names:
 - ai
 - azure

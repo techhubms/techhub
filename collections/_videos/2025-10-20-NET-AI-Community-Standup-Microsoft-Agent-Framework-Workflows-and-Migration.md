@@ -12,13 +12,10 @@ tags:
 - .NET
 - Agent Based Workflows
 - Agents
-- AI
 - AI Integration
 - Autonomous Agents
-- Azure
 - Azure AI
 - C#
-- Coding
 - Community Standup
 - Demo
 - Developer
@@ -32,7 +29,6 @@ tags:
 - Migration
 - Semantic Kernel
 - Software Developer
-- Videos
 - Workflow Automation
 - Workflows
 section_names:

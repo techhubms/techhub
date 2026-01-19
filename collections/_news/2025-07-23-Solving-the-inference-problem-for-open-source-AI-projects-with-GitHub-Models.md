@@ -9,20 +9,17 @@ feed_url: https://github.blog/feed/
 date: 2025-07-23 16:00:00 +00:00
 permalink: /ai/news/Solving-the-inference-problem-for-open-source-AI-projects-with-GitHub-Models
 tags:
-- AI
 - AI & ML
 - AI in Open Source
 - AI Models
 - CI/CD
 - DeepSeek R1
-- DevOps
 - GitHub Actions
 - GitHub Models
 - GPT 4o
 - Inference API
 - Llama 3
 - LLMs
-- News
 - OpenAI Compatible
 - Personal Access Token
 section_names:

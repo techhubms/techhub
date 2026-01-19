@@ -9,27 +9,21 @@ feed_url: https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHH
 date: 2025-11-19 15:00:51 +00:00
 permalink: /github-copilot/videos/Scaling-Code-Quality-in-the-Age-of-AI
 tags:
-- AI
 - AI in Development
 - AI Powered Development
 - Code Lifecycle Management
 - Code Quality
 - Code Review
-- Coding
 - Developer Workflow
 - Development Automation
-- DevOps
 - GitHub
 - GitHub Advanced Security
-- GitHub Copilot
 - GitHub Universe
 - GitHubUniverse
 - Pull Request Automation
 - Quality Assurance
-- Security
 - Security Standards
 - Software Engineering
-- Videos
 section_names:
 - ai
 - coding

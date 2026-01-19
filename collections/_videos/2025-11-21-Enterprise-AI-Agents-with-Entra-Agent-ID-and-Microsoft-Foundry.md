@@ -10,9 +10,7 @@ date: 2025-11-21 08:25:11 +00:00
 permalink: /ai/videos/Enterprise-AI-Agents-with-Entra-Agent-ID-and-Microsoft-Foundry
 tags:
 - Agent Lifecycle
-- AI
 - AI Agents
-- Azure
 - Compliance
 - Control Plane
 - Enterprise AI
@@ -25,10 +23,8 @@ tags:
 - Microsoft Ignite
 - MSIgnite
 - Networking
-- Security
 - Tenant Management
 - Tool Integration
-- Videos
 section_names:
 - ai
 - azure
