@@ -36,7 +36,9 @@ internal sealed class Program
         ["DevOps"] = "devops",
         ["Security"] = "security",
         ["Coding"] = "coding",
-        ["Cloud"] = "cloud"
+        ["Cloud"] = "cloud",
+        ["Machine Learning"] = "ml",
+        ["ML"] = "ml"
     };
 
     /// <summary>
@@ -53,6 +55,7 @@ internal sealed class Program
         ["security"] = ["Security"],
         ["coding"] = ["Coding"],
         ["cloud"] = ["Cloud"],
+        ["ml"] = ["Machine Learning", "ML"],
         ["machine-learning"] = ["Machine Learning", "ML"]
     };
 
