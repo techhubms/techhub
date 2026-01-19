@@ -23680,5 +23680,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-playwright-testing-service-preview-run-playwright-tests-on/ba-p/4487103",
     "collection": "community",
     "reason": "Succesfully added: Included 'Azure' because the content is focused on a cloud service in the Azure ecosystem, including detailed instructions for configuring and running tests with Azure Playwright Testing Service (Azure rule 1). Included 'DevOps' due to emphasis on automated testing, CI/CD pipeline integration, and workflow automation using Azure and Playwright (DevOps rules 3, 5, and 9). Included 'Coding' because the guide addresses TypeScript development, code-based test structures, and tool integration in Visual Studio/VS Code (Coding rules 1, 2, and 4). No AI, ML, GitHub Copilot, or Security content is present. The content is technical, hands-on, exceeds the 200-word minimum for community posts, and does not trigger any generic exclusion rules."
+  },
+  {
+    "timestamp": "2026-01-19 13:19:15 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-reporting-in-playwright-workspaces/ba-p/4487059",
+    "reason": "Succesfully added: I assigned the Azure category because the content describes features integrated directly with the Azure portal, storage, and App Testing services (Azure rule 1 and 2). DevOps is included due to its focus on streamlining continuous integration/continuous deployment (CI/CD) workflows through centralized reporting, artifact management, and team collaboration (DevOps rules 1, 5, 6, and 9). The content is not fundamentally about coding, AI, ML, Security, or GitHub Copilot, so those categories are excluded. No generic exclusion rules apply, and the announcement is technical and directly relevant to Azure-based testing workflows.",
+    "collection": "community"
   }
 ]

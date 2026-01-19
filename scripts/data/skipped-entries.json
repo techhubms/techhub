@@ -11379,5 +11379,11 @@
     "reason": "No categories found: All categories are excluded because the content does not meet category inclusion requirements. The description and title indicate the video focuses on the popularity and ranking of Visual Studio Code extensions, rather than technical implementation, coding practices, development methodologies, or Microsoft technology usage. There is no substantive technical detail about Microsoft developer tools or programming, no reference to any development workflow, and no mention of integration or configuration of Microsoft platforms. The content is quiz/trivia style and informational in a general, consumer-oriented way, which does not qualify under the Coding, DevOps, Azure, ML, AI, Security, or GitHub Copilot inclusion criteria. As per the rules, when in doubt, exclude.",
     "timestamp": "2026-01-18 20:03:32 +00:00",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2026-01-19 13:18:55 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=sg_pjLsqT34",
+    "reason": "No categories found: Content is excluded due to the generic exclusion rule for sales pitches and promotional content. The description and available content focus primarily on promoting a free C# course on Dometrain, encouraging viewers to comment, like, and subscribe, without offering substantive technical or educational depth on C# or .NET itself. There is no detailed technical content, tutorial, or hands-on guidance provided in the excerpt, making it ineligible for category assignment.",
+    "collection": "videos"
   }
 ]
