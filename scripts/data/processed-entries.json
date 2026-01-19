@@ -23656,5 +23656,11 @@
     "reason": "Succesfully added: Assigned the Security category. The article's primary focus is governing and securing external sharing in Microsoft 365 ecosystems, with extensive technical, policy, and compliance recommendations: configuring SharePoint/OneDrive/Teams settings, using Azure AD, enforcing Conditional Access, conducting audits, and preventing data leakage (Security inclusion rules 1, 2, 3, 4, 5, and 9). Microsoft 365, SharePoint, and Teams are covered, but the content is not developer-focused (no custom code, programming, or dev tools), so Coding, DevOps, or Azure categories do not apply. No AI or ML technologies are discussed. No exclusion rules trigger: the article is technical (not business/strategy-only), avoids purely business productivity or general end-user features, and is written in English with substantial length.",
     "collection": "blogs",
     "canonical_url": "https://dellenny.com/managing-external-sharing-in-microsoft-365-without-chaos/"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Azure' because the content focuses on Microsoft Entra ID (Azure Active Directory) for authentication, app registration, and management (Azure rule 1, 5). Assigned 'Security' for its thorough guidance on OAuth2, delegated authorization, app secrets, scope grants, and secure authentication/authorization patterns in an Azure/Microsoft context (Security rules 1, 2, 3). Assigned 'Coding' because the piece includes hands-on Python, FastMCP, and SDK code examples, as well as guidance on server registration and middleware integration (Coding rules 1, 2, 4, 5). Did not assign 'AI', 'ML', 'DevOps', or 'GitHub Copilot' as the article is focused on identity/auth and not on those topics. The article is primarily technical and the Microsoft platform is central throughout, exceeding the 40% threshold.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/using-on-behalf-of-flow-for-entra-based-mcp-servers/ba-p/4486760",
+    "timestamp": "2026-01-19 08:04:48 +00:00"
   }
 ]

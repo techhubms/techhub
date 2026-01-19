@@ -11373,5 +11373,11 @@
     "reason": "No categories found: Content excluded due to lack of substantive technical content related to Microsoft technology categories. The description indicates the video is about '8 quick VS Code UI tricks to make your editor cleaner, faster, and way more comfortable to use,' which focuses on user interface tips and usability enhancements in Visual Studio Code. There is no indication of developer tool usage at a technical depth, coding practices, automation, or any of the qualifying inclusion rules for 'Coding,' 'DevOps,' or other categories. The provided tags and description also do not describe development, programming, or integration for Microsoft technologies—only editor UI tricks (such as hidden features, navigation, or theme settings). Therefore, no categories qualify under the provided rules.",
     "collection": "videos",
     "timestamp": "2026-01-18 09:03:34 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/juSissWlmwI",
+    "reason": "No categories found: All categories are excluded because the content does not meet category inclusion requirements. The description and title indicate the video focuses on the popularity and ranking of Visual Studio Code extensions, rather than technical implementation, coding practices, development methodologies, or Microsoft technology usage. There is no substantive technical detail about Microsoft developer tools or programming, no reference to any development workflow, and no mention of integration or configuration of Microsoft platforms. The content is quiz/trivia style and informational in a general, consumer-oriented way, which does not qualify under the Coding, DevOps, Azure, ML, AI, Security, or GitHub Copilot inclusion criteria. As per the rules, when in doubt, exclude.",
+    "timestamp": "2026-01-18 20:03:32 +00:00",
+    "collection": "videos"
   }
 ]
