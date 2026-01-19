@@ -89,6 +89,7 @@
 
     /// <summary>
     /// Returns content items filtered by selected tags (if any)
+    /// Uses AND logic - content must have ALL selected tags
     /// </summary>
     private IEnumerable<ContentItemDto> FilteredContentItems
     {
@@ -99,12 +100,20 @@
                 return contentItems;
             }
 
-            // Filter items that have ANY of the selected tags (OR logic)
+            // Filter items that have ALL of the selected tags (AND logic)
             // Case-insensitive matching
             var normalizedTags = FilterTags.Select(t => t.ToLowerInvariant()).ToHashSet();
             return contentItems.Where(item =>
-            item.Tags != null &&
-            item.Tags.Any(tag => normalizedTags.Contains(tag.ToLowerInvariant())));
+            {
+                if (item.Tags == null || item.Tags.Count == 0)
+                {
+                    return false;
+                }
+
+                var itemTagsLower = item.Tags.Select(t => t.ToLowerInvariant()).ToHashSet();
+                // ALL selected tags must be present in the item's tags
+                return normalizedTags.All(selectedTag => itemTagsLower.Contains(selectedTag));
+            });
         }
     }
 

@@ -35,67 +35,35 @@ This directory contains **unit tests** for the Tech Hub Core domain layer using 
 
 ## Test Patterns
 
-### Testing Domain Model Methods
+### What to Test in Domain Models
 
-```csharp
-public class ContentItemTests
-{
-    [Theory]
-    [InlineData("ai", "/ai/videos/example.html")]
-    [InlineData("github-copilot", "/github-copilot/videos/example.html")]
-    public void GetUrlInSection_ReturnsCorrectUrl(string sectionUrl, string expectedUrl)
-    {
-        // Arrange
-        var item = new ContentItem
-        {
-            Slug = "example",
-            CollectionName = "videos",
-            // ... other required properties
-        };
-        
-        // Act
-        var url = item.GetUrlInSection(sectionUrl);
-        
-        // Assert
-        url.Should().Be(expectedUrl);
-    }
-}
-```
+**Methods and Behavior**:
 
-### Testing Record Equality
+- Test methods like `GetUrlInSection()` with various inputs
+- Use `[Theory]` with `[InlineData]` for multiple scenarios
+- Verify correct URL generation, property calculations, etc.
 
-```csharp
-[Fact]
-public void ContentItem_WithSameValues_AreEqual()
-{
-    // Arrange
-    var item1 = CreateContentItem("slug-1");
-    var item2 = CreateContentItem("slug-1");
-    
-    // Act & Assert
-    item1.Should().Be(item2);
-}
-```
+**Record Equality**:
 
-### Testing Edge Cases
+- Test that records with identical values are equal
+- Important for caching, comparison, and deduplication logic
 
-```csharp
-[Theory]
-[InlineData(null)]
-[InlineData("")]
-[InlineData("   ")]
-public void GetUrlInSection_WithInvalidSection_ThrowsException(string invalidSection)
-{
-    // Arrange
-    var item = CreateContentItem("test");
-    
-    // Act
-    Action act = () => item.GetUrlInSection(invalidSection);
-    
-    // Assert
-    act.Should().Throw<ArgumentException>();
-}
-```
+**Edge Cases**:
+
+- Null/empty string inputs
+- Boundary values
+- Invalid section/collection names
+- Missing required properties
+
+### Test Data Factories
+
+Use factory methods to create test objects consistently:
+
+- Create private helper methods like `CreateContentItem(string slug)`
+- Set all required properties with sensible defaults
+- Allow parameters for the properties being tested
+
+See actual tests in `Models/` for implementation examples.
 
 ## Running Tests
 
@@ -127,23 +95,6 @@ dotnet test tests/TechHub.Core.Tests --collect:"XPlat Code Coverage"
 ❌ **Don't use real file paths** (use test data factories)  
 ❌ **Don't mock what you're testing** (only mock external dependencies)  
 ❌ **Don't share state** between tests (each test should be isolated)
-
-## Test Data Factories
-
-```csharp
-private static ContentItem CreateContentItem(string slug) => new()
-{
-    Slug = slug,
-    Title = $"Test Title for {slug}",
-    Description = "Test description",
-    DateEpoch = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
-    CollectionName = "videos",
-    SectionNames = new[] { "ai" },
-    Tags = new[] { "test" },
-    RenderedHtml = "<p>Test content</p>",
-    Excerpt = "Test excerpt"
-};
-```
 
 ## Related Documentation
 

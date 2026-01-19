@@ -337,11 +337,14 @@ public static class BlazorHelpers
         // (navigation links, tag toggles, collection buttons, etc.)
         if (waitForUrlChange)
         {
-            await page.WaitForURLAsync(url => url != urlBeforeClick,
-                new() { Timeout = timeoutMs });
-
-            // Wait for any remaining network activity to settle
-            await page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+            // CRITICAL: Use WaitForFunctionAsync instead of WaitForURLAsync!
+            // Blazor Server updates URLs via pushState (history API), not HTTP navigation.
+            // WaitForURLAsync waits for navigation events which don't fire with pushState.
+            // WaitForFunctionAsync polls the DOM directly, which works for any URL change.
+            await page.WaitForFunctionAsync(
+                "expectedUrl => window.location.href !== expectedUrl",
+                urlBeforeClick,
+                new() { Timeout = timeoutMs, PollingInterval = 100 });
         }
     }
 

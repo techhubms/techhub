@@ -352,7 +352,7 @@ var href = await link.GetHrefAsync();                                // Get href
 
 ### Assertion Style
 
-Use FluentAssertions for readable assertions:
+Use FluentAssertions with descriptive reasons:
 
 ```csharp
 // ✅ Good - descriptive with reason
@@ -363,62 +363,25 @@ Page.Url.Should().EndWith("/github-copilot/all",
 Assert.Equal("/github-copilot/all", Page.Url);
 ```
 
-### Complete Test Example
+### Writing New Test Classes
+
+**Required structure for E2E test classes**:
+
+1. **Collection attribute**: `[Collection("Feature Name Tests")]` for browser sharing
+2. **Primary constructor**: Inject `PlaywrightCollectionFixture`
+3. **IAsyncLifetime**: Implement for async setup/teardown
+4. **Page property**: `private IPage Page => _page ?? throw ...` for clean access
+5. **InitializeAsync**: Create context and page with `NewPageWithDefaultsAsync()`
+6. **DisposeAsync**: Close page and dispose context
+
+**Add collection definition** to `PlaywrightCollectionFixture.cs`:
 
 ```csharp
-using Microsoft.Playwright;
-using Xunit;
-using FluentAssertions;
-using TechHub.E2E.Tests.Helpers;
-
-namespace TechHub.E2E.Tests.Web;
-
-[Collection("My Feature Tests")]
-public class MyFeatureTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
-{
-    private IBrowserContext? _context;
-    private IPage? _page;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
-    private const string BaseUrl = "http://localhost:5184";
-
-    public async Task InitializeAsync()
-    {
-        _context = await fixture.CreateContextAsync();
-        _page = await _context.NewPageWithDefaultsAsync();
-    }
-
-    public async Task DisposeAsync()
-    {
-        if (_page != null)
-            await _page.CloseAsync();
-        if (_context != null)
-            await _context.DisposeAsync();
-    }
-
-    [Fact]
-    public async Task MyFeature_Action_ExpectedResult()
-    {
-        // Navigate
-        await Page.GotoRelativeAsync("/github-copilot");
-        
-        // Interact - Using high-level ClickAndNavigateAsync helper
-        await Page.ClickAndNavigateAsync(".collection-nav a", text: "News",
-            expectedUrlSegment: "/github-copilot/news",
-            waitForActiveState: "News");
-        
-        // Assert - URL and active state already verified by ClickAndNavigateAsync
-        Page.Url.Should().EndWith("/github-copilot/news",
-            "clicking News should navigate to /github-copilot/news");
-    }
-}
+[CollectionDefinition("Feature Name Tests")]
+public class FeatureNameCollection : ICollectionFixture<PlaywrightCollectionFixture> { }
 ```
 
-**Don't forget**: Add collection definition to PlaywrightCollectionFixture.cs:
-
-```csharp
-[CollectionDefinition("My Feature Tests")]
-public class MyFeatureCollection : ICollectionFixture<PlaywrightCollectionFixture> { }
-```
+See existing test classes in `Web/` for complete examples.
 
 ## Maintenance
 

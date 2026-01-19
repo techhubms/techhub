@@ -131,30 +131,15 @@ public void GetUrlInSection_ValidSection_ReturnsCorrectUrl()
 
 ### Theory Tests for Parameterization
 
-**Use [Theory] for testing multiple scenarios with same logic**:
+**Use `[Theory]` with `[InlineData]` for testing multiple scenarios with the same logic**. Reduces test duplication while maintaining clarity.
 
-```csharp
-[Theory]
-[InlineData("ai", "/ai/blogs/2024-01-15-test")]
-[InlineData("github-copilot", "/github-copilot/blogs/2024-01-15-test")]
-[InlineData("azure", "/azure/blogs/2024-01-15-test")]
-public void GetUrlInSection_DifferentSections_ReturnsCorrectUrl(string sectionName, string expectedUrl)
-{
-    // Arrange
-    var item = new ContentItem
-    {
-        Id = "2024-01-15-test",
-        SectionNames = new[] { "ai", "github-copilot", "azure" },
-        Collection = "blogs"
-    };
-    
-    // Act
-    var url = item.GetUrlInSection(sectionName);
-    
-    // Assert
-    url.Should().Be(expectedUrl);
-}
-```
+**When to use**:
+
+- Testing the same method with different inputs
+- Verifying boundary conditions
+- Testing multiple valid/invalid cases
+
+See actual tests in the codebase for examples.
 
 ### Testing Singleton Services
 
@@ -231,66 +216,26 @@ public class MarkdownServiceTests
 - `MarkdownService` - Markdown rendering (stateless)
 - `SectionRepository` - Section data access (uses caching)
 - `ContentRepository` - Content data access (uses caching)
-- `RssService` - RSS feed generation (stateless)### Test Fixtures (IClassFixture\<T\>)
+- `RssService` - RSS feed generation (stateless)
 
-**Use fixtures for expensive setup shared across tests**:
+### Test Fixtures (IClassFixture\<T\>)
 
-```csharp
-// Fixture class - expensive setup
-public class ContentRepositoryFixture : IDisposable
-{
-    public string TestDataPath { get; }
-    public IMemoryCache Cache { get; }
-    
-    public ContentRepositoryFixture()
-    {
-        TestDataPath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
-        Directory.CreateDirectory(TestDataPath);
-        
-        // Create test data files
-        File.WriteAllText(
-            Path.Combine(TestDataPath, "test-article.md"),
-            "---\ntitle: Test\n---\nContent");
-        
-        Cache = new MemoryCache(new MemoryCacheOptions());
-    }
-    
-    public void Dispose()
-    {
-        if (Directory.Exists(TestDataPath))
-            Directory.Delete(TestDataPath, recursive: true);
-        
-        Cache.Dispose();
-    }
-}
+**Use fixtures for expensive setup shared across tests**.
 
-// Test class using fixture
-public class ContentRepositoryTests : IClassFixture<ContentRepositoryFixture>
-{
-    private readonly ContentRepositoryFixture _fixture;
-    
-    public ContentRepositoryTests(ContentRepositoryFixture fixture)
-    {
-        _fixture = fixture;
-    }
-    
-    [Fact]
-    public async Task GetAllAsync_WithTestData_ReturnsContent()
-    {
-        // Arrange
-        var repo = new FileBasedContentRepository(
-            _fixture.TestDataPath,
-            _fixture.Cache,
-            Mock.Of<ILogger<FileBasedContentRepository>>());
-        
-        // Act
-        var items = await repo.GetAllAsync(CancellationToken.None);
-        
-        // Assert
-        items.Should().HaveCount(1);
-    }
-}
-```
+**When to use**:
+
+- Creating temp directories with test files
+- Setting up shared caches or databases
+- Any setup that's expensive and can be safely shared
+
+**Key Rules**:
+
+- Fixture class implements `IDisposable` for cleanup
+- Test class uses `IClassFixture<TFixture>` interface
+- Fixture is injected via constructor
+- Each test class gets ONE shared fixture instance
+
+See xUnit documentation for implementation details.
 
 ## Integration Testing Patterns
 
@@ -325,66 +270,15 @@ tests/TechHub.Api.Tests/
 }
 ```
 
-### CORS Testing Pattern
+### HTTP Pipeline Testing
 
-**Verify CORS headers are properly configured**:
+Integration tests should verify HTTP pipeline configuration:
 
-```csharp
-[Fact]
-public async Task GetSections_FromBrowserOrigin_IncludesCorsHeaders()
-{
-    // Arrange
-    var request = new HttpRequestMessage(HttpMethod.Get, "/api/sections");
-    request.Headers.Add("Origin", "https://tech.hub.ms");
-    
-    // Act
-    var response = await _client.SendAsync(request);
-    
-    // Assert
-    response.Should().BeSuccessful();
-    response.Headers.Should().ContainKey("Access-Control-Allow-Origin");
-    response.Headers.GetValues("Access-Control-Allow-Origin")
-        .Should().Contain("https://tech.hub.ms");
-}
-```
+- **CORS headers**: Verify `Access-Control-Allow-Origin` is set for allowed origins
+- **Cache headers**: Verify `Cache-Control` has appropriate `max-age` values
+- **Security headers**: Verify `X-Content-Type-Options: nosniff` and other security headers
 
-### Response Caching Testing
-
-**Verify cache headers are set correctly**:
-
-```csharp
-[Fact]
-public async Task GetSections_CachedEndpoint_IncludesCacheHeaders()
-{
-    // Arrange
-    // Act
-    var response = await _client.GetAsync("/api/sections");
-    
-    // Assert
-    response.Should().BeSuccessful();
-    response.Headers.CacheControl.Should().NotBeNull();
-    response.Headers.CacheControl!.MaxAge.Should().BeGreaterThan(TimeSpan.Zero);
-}
-```
-
-### Middleware Pipeline Testing
-
-**Test middleware is properly configured**:
-
-```csharp
-[Fact]
-public async Task Api_Request_IncludesSecurityHeaders()
-{
-    // Arrange
-    // Act
-    var response = await _client.GetAsync("/api/sections");
-    
-    // Assert
-    response.Headers.Should().ContainKey("X-Content-Type-Options");
-    response.Headers.GetValues("X-Content-Type-Options")
-        .Should().Contain("nosniff");
-}
-```
+These tests send HTTP requests and assert on response headers. See actual tests for examples.
 
 ## Directory Structure
 

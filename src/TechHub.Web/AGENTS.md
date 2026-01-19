@@ -961,32 +961,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 
 **Testing Requirements**:
 
-```csharp
-// tests/TechHub.Web.Tests/Components/SectionTests.cs
-[Fact]
-public void Section_RendersWithSkeletonLayout()
-{
-    // Arrange: Mock API client with delayed response
-    var mockApi = new Mock<TechHubApiClient>();
-    var tcs = new TaskCompletionSource<SectionDto>();
-    mockApi.Setup(x => x.GetSectionAsync(It.IsAny<string>(), default))
-           .Returns(tcs.Task);
-
-    using var ctx = new TestContext();
-    ctx.Services.AddSingleton(mockApi.Object);
-
-    // Act: Render component (API hasn't responded yet)
-    var cut = ctx.RenderComponent<Section>(parameters => parameters
-        .Add(p => p.SectionName, "ai"));
-
-    // Assert: Verify page layout structure exists immediately
-    cut.MarkupMatches(@"<div class=""page-with-sidebar"">
-        <div diff:ignore></div> <!-- PageHeader -->
-        <aside class=""sidebar"" diff:ignore></aside>
-        <main class=""page-main-content"" diff:ignore></main>
-    </div>");
-}
-```
+Test that page structure renders immediately even before API responses arrive. Use delayed `TaskCompletionSource` to simulate pending API calls. Verify skeleton layout structure exists with proper CSS classes. See [tests/TechHub.Web.Tests/AGENTS.md](../../tests/TechHub.Web.Tests/AGENTS.md) for component testing patterns.
 
 **Best Practices**:
 
@@ -1176,34 +1151,7 @@ else
 
 **Why Proxies?**: The API backend will be secured and not publicly accessible. User-facing RSS feeds are served from the Web frontend domain (`https://tech.hub.ms`).
 
-**Pattern**: Minimal API endpoints in Program.cs that proxy to TechHubApiClient
-
-```csharp
-// RSS Feed Proxies - User-facing URLs
-app.MapGet("/all/feed.xml", async (TechHubApiClient apiClient) =>
-{
-    var content = await apiClient.GetAllContentRssFeedAsync();
-    return Results.Content(content, "application/xml; charset=utf-8");
-})
-.WithName("GetAllContentRssFeed")
-.WithOpenApi();
-
-app.MapGet("/all/roundups/feed.xml", async (TechHubApiClient apiClient) =>
-{
-    var content = await apiClient.GetCollectionRssFeedAsync("roundups");
-    return Results.Content(content, "application/xml; charset=utf-8");
-})
-.WithName("GetRoundupsRssFeed")
-.WithOpenApi();
-
-app.MapGet("/{sectionName}/feed.xml", async (string sectionName, TechHubApiClient apiClient) =>
-{
-    var content = await apiClient.GetSectionRssFeedAsync(sectionName);
-    return Results.Content(content, "application/xml; charset=utf-8");
-})
-.WithName("GetSectionRssFeed")
-.WithOpenApi();
-```
+**Pattern**: Minimal API endpoints in Program.cs that proxy to TechHubApiClient. See `Program.cs` for implementation.
 
 **User-Facing URLs**:
 
@@ -1252,23 +1200,9 @@ app.MapGet("/{sectionName}/feed.xml", async (string sectionName, TechHubApiClien
 
 ### Date Formatting
 
-**Pattern**: Use helper methods for relative dates
+**Pattern**: Use helper methods for relative dates ("Today", "Yesterday", "3 days ago", etc.) instead of absolute dates. Convert Unix epoch to `DateTimeOffset` and calculate difference from now.
 
-```csharp
-private string FormatDate(long dateEpoch)
-{
-    var date = DateTimeOffset.FromUnixTimeSeconds(dateEpoch).DateTime;
-    var now = DateTime.UtcNow;
-    var diff = now - date;
-    
-    if (diff.TotalDays < 1) return "Today";
-    if (diff.TotalDays < 2) return "Yesterday";
-    if (diff.TotalDays < 7) return $"{(int)diff.TotalDays} days ago";
-    if (diff.TotalDays < 30) return $"{(int)(diff.TotalDays / 7)} weeks ago";
-    if (diff.TotalDays < 365) return $"{(int)(diff.TotalDays / 30)} months ago";
-    return date.ToString("MMM dd, yyyy");
-}
-```
+See component code for implementation.
 
 ## File Structure
 

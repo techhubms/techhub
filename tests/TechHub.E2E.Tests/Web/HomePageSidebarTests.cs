@@ -82,6 +82,9 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
         // Act
         await Page.GotoRelativeAsync("/");
 
+        // Wait for Blazor Server interactivity to be ready (tag cloud uses InteractiveServer)
+        await Page.WaitForBlazorReadyAsync();
+
         // Assert - Wait for tag cloud to render, then count tag buttons
         var tagButtons = Page.Locator(".tag-cloud-item");
         await Assertions.Expect(tagButtons.First).ToBeVisibleAsync(new() { Timeout = 5000 });

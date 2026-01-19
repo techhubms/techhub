@@ -43,60 +43,35 @@ This directory contains **integration tests** for the Tech Hub REST API using **
 
 ### Using WebApplicationFactory
 
-```csharp
-public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
-{
-    private readonly HttpClient _client;
-    
-    public SectionsEndpointsTests(TechHubApiFactory factory)
-    {
-        _client = factory.CreateClient();
-    }
-    
-    [Fact]
-    public async Task GetAllSections_ReturnsOkWithSections()
-    {
-        // Act
-        var response = await _client.GetAsync("/api/sections");
-        
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var sections = await response.Content.ReadFromJsonAsync<List<SectionDto>>();
-        sections.Should().NotBeNull();
-        sections.Should().HaveCountGreaterThan(0);
-    }
-}
-```
+The `TechHubApiFactory` class configures `WebApplicationFactory<Program>` for integration testing:
 
-### Testing Query Parameters
+- Creates an in-memory test server
+- Allows dependency injection overrides for mocking
+- Produces `HttpClient` instances for making requests
 
-```csharp
-[Theory]
-[InlineData("ai")]
-[InlineData("github-copilot")]
-public async Task GetContentBySection_WithValidSection_ReturnsContent(string sectionUrl)
-{
-    // Act
-    var response = await _client.GetAsync($"/api/content?section={sectionUrl}");
-    
-    // Assert
-    response.StatusCode.Should().Be(HttpStatusCode.OK);
-}
-```
+Test classes use `IClassFixture<TechHubApiFactory>` to share the factory across tests.
 
-### Testing 404 Scenarios
+### What to Test
 
-```csharp
-[Fact]
-public async Task GetSectionByUrl_WithInvalidUrl_ReturnsNotFound()
-{
-    // Act
-    var response = await _client.GetAsync("/api/sections/nonexistent");
-    
-    // Assert
-    response.StatusCode.Should().Be(HttpStatusCode.NotFound);
-}
-```
+**HTTP Status Codes**:
+
+- 200 OK for successful requests
+- 404 Not Found for missing resources
+- 400 Bad Request for validation errors
+
+**Query Parameters**:
+
+- Filtering by section, collection, tags
+- Pagination parameters
+- Invalid parameter handling
+
+**Response Structure**:
+
+- Deserialize responses to DTOs
+- Verify expected properties are present
+- Validate collection counts and ordering
+
+See actual tests in `Endpoints/` for implementation examples.
 
 ## Running Tests
 

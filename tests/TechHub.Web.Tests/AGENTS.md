@@ -37,101 +37,40 @@ This directory contains **component tests** for Tech Hub Blazor components using
 
 ## Test Patterns
 
-### Basic Component Rendering
+### What to Test
 
-```csharp
-public class SectionCardTests : TestContext
-{
-    [Fact]
-    public void SectionCard_WithSection_RendersTitle()
-    {
-        // Arrange
-        var section = new SectionDto
-        {
-            Title = "Test Section",
-            Description = "Test description",
-            Url = "test-section"
-        };
-        
-        // Act
-        var cut = RenderComponent<SectionCard>(parameters => parameters
-            .Add(p => p.Section, section));
-        
-        // Assert
-        cut.Find("h2").TextContent.Should().Be("Test Section");
-    }
-}
-```
+**Component Rendering**:
 
-### Testing with Mocked Services
+- Verify expected HTML structure when given parameters
+- Use bUnit's `RenderComponent<T>()` with parameter builder
+- Find elements by CSS selectors and verify content
 
-```csharp
-public class SectionIndexTests : TestContext
-{
-    [Fact]
-    public async Task SectionIndex_OnInitialized_LoadsContent()
-    {
-        // Arrange
-        var mockApiClient = Substitute.For<ITechHubApiClient>();
-        var section = new SectionDto { Url = "ai", Title = "AI" };
-        var content = new List<ContentItemDto> { /* test data */ };
-        
-        mockApiClient.GetSectionAsync("ai").Returns(section);
-        mockApiClient.GetContentAsync("ai").Returns(content);
-        
-        Services.AddSingleton(mockApiClient);
-        
-        // Act
-        var cut = RenderComponent<SectionIndex>(parameters => parameters
-            .Add(p => p.SectionUrl, "ai"));
-        
-        // Assert
-        cut.WaitForState(() => cut.Instance.Section != null);
-        cut.Instance.Section.Should().NotBeNull();
-        cut.Instance.AllItems.Should().HaveCount(content.Count);
-    }
-}
-```
+**Injected Services**:
 
-### Testing Event Handlers
+- Mock `ITechHubApiClient` and other dependencies using `Services.AddSingleton()`
+- Configure mock return values before rendering
+- Use `WaitForState()` for components with async initialization
 
-```csharp
-[Fact]
-public void FilterButton_WhenClicked_UpdatesFilter()
-{
-    // Arrange
-    var cut = RenderComponent<FilterControls>();
-    var button = cut.Find("button.filter-tag");
-    
-    // Act
-    button.Click();
-    
-    // Assert
-    cut.Instance.SelectedTags.Should().Contain("ai");
-}
-```
+**Event Handlers**:
 
-### Testing Conditional Rendering
+- Trigger events with `.Click()`, `.Change()`, etc.
+- Assert component state changes after events
+- Verify callbacks are invoked
 
-```csharp
-[Fact]
-public void SectionIndex_WhenSectionIsNull_ShowsNotFound()
-{
-    // Arrange
-    var mockApiClient = Substitute.For<ITechHubApiClient>();
-    mockApiClient.GetSectionAsync(Arg.Any<string>()).Returns((SectionDto?)null);
-    
-    Services.AddSingleton(mockApiClient);
-    
-    // Act
-    var cut = RenderComponent<SectionIndex>(parameters => parameters
-        .Add(p => p.SectionUrl, "nonexistent"));
-    
-    // Assert
-    cut.WaitForState(() => cut.Instance.Section == null);
-    cut.Find(".not-found").Should().NotBeNull();
-}
-```
+**Conditional Rendering**:
+
+- Test both branches of `@if` statements
+- Verify loading states and error states
+- Test null/empty data scenarios
+
+### Key bUnit Patterns
+
+- **Test class inheritance**: Inherit from `TestContext` base class
+- **Service registration**: Use `Services.AddSingleton()` before rendering
+- **Async initialization**: Use `WaitForState()` for `OnInitializedAsync`
+- **Element selection**: Use CSS selectors with `.Find()` and `.FindAll()`
+
+See actual tests in `Components/` and bUnit documentation for examples.
 
 ## Running Tests
 
@@ -164,27 +103,9 @@ dotnet test tests/TechHub.Web.Tests --logger "console;verbosity=detailed"
 ❌ **Don't test browser APIs** (use E2E tests for localStorage, etc.)  
 ❌ **Don't forget async initialization** (use WaitForState for OnInitializedAsync)
 
-## bUnit Setup
-
-```csharp
-public class ComponentTestBase : TestContext
-{
-    public ComponentTestBase()
-    {
-        // Register common services
-        Services.AddSingleton(Substitute.For<NavigationManager>());
-        Services.AddSingleton(Substitute.For<ITechHubApiClient>());
-        
-        // Add logging (optional)
-        Services.AddLogging();
-    }
-}
-```
-
 ## Related Documentation
 
 - [tests/AGENTS.md](../AGENTS.md) - Complete testing strategy
 - [src/TechHub.Web/AGENTS.md](../../src/TechHub.Web/AGENTS.md) - Blazor component patterns
 - [Root AGENTS.md](/AGENTS.md#6-test--validate) - When to write tests
 - [bUnit Documentation](https://bunit.dev/) - Official bUnit docs
-

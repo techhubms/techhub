@@ -39,163 +39,35 @@ This directory contains **unit and integration tests** for the Tech Hub Infrastr
 
 ### Testing Singleton Services
 
-**🚨 CRITICAL RULE**: Services registered as **Singleton** in production MUST be tested with shared instances.
+**🚨 CRITICAL**: Services registered as **Singleton** in production MUST be tested with shared instances. See [tests/AGENTS.md](../AGENTS.md#testing-singleton-services) for the full pattern and rationale.
 
-**Why**: Production uses ONE instance shared across ALL requests. Tests must verify this is safe.
+**Key Points**:
 
-**Pattern**: Create shared instance in test constructor (mimics production)
+- Create shared instance in test constructor (mimics production)
+- Add parallel execution test to catch mutable state bugs
+- Services: `MarkdownService`, `SectionRepository`, `ContentRepository`, `RssService`
 
-```csharp
-public class MarkdownServiceTests
-{
-    // INTENTIONAL: Shared instance mirrors Singleton registration in Program.cs
-    // If someone adds mutable state, parallel execution tests will fail
-    private readonly MarkdownService _service;
+### What to Test
 
-    public MarkdownServiceTests()
-    {
-        _service = new MarkdownService();
-    }
+**File Parsing**:
 
-    [Fact]
-    public void RenderToHtml_BasicMarkdown_ConvertsToHtml()
-    {
-        // Arrange: Shared instance (like production Singleton)
-        var markdown = "# Heading";
+- Valid YAML front matter extracts correctly
+- Invalid YAML throws appropriate exceptions
+- Content body separated from front matter
 
-        // Act
-        var html = _service.RenderToHtml(markdown);
+**Repository Operations**:
 
-        // Assert
-        html.Should().Contain("<h1");
-    }
+- `GetAllAsync` returns content sorted by `DateEpoch` descending
+- Content is read from real `collections/` directory
+- Caching behavior works correctly
 
-    /// <summary>
-    /// Parallel execution test - CRITICAL for Singleton services
-    /// If someone adds mutable state, this test will fail
-    /// </summary>
-    [Fact]
-    public async Task RenderToHtml_ConcurrentCalls_ProducesConsistentResults()
-    {
-        // Arrange
-        var markdown = "# Test";
-        var expected = _service.RenderToHtml(markdown);
+**Error Handling**:
 
-        // Act: 100 parallel calls (would fail if service has state)
-        var tasks = Enumerable.Range(0, 100).Select(async _ =>
-        {
-            await Task.Yield();
-            return _service.RenderToHtml(markdown);
-        });
-        var results = await Task.WhenAll(tasks);
+- Missing end marker in YAML
+- Malformed front matter
+- Missing required fields
 
-        // Assert: All identical (proves stateless)
-        results.Should().AllSatisfy(r => r.Should().Be(expected));
-    }
-}
-```
-
-**Services Registered as Singleton**:
-
-- `MarkdownService` - MUST be stateless (pure transformations)
-- `SectionRepository` - Uses caching (cache is thread-safe)
-- `ContentRepository` - Uses caching (cache is thread-safe)
-- `RssService` - MUST be stateless
-
-**Key Rules**:
-
-- ✅ **Use shared instance** for Singleton services
-- ✅ **Add parallel execution test** to catch mutable state
-- ✅ **Document why instance is shared** in comments
-- ❌ **Never add mutable state** to Singleton services
-
-### Testing File Parsing
-
-```csharp
-public class FrontMatterParserTests
-{
-    [Fact]
-    public void ParseFrontMatter_WithValidYaml_ReturnsMetadata()
-    {
-        // Arrange
-        var markdown = @"---
-title: Test Article
-date: 2026-01-07
-categories: [""AI"", ""ML""]
----
-
-# Content here
-";
-        var parser = new FrontMatterParser();
-        
-        // Act
-        var result = parser.Parse(markdown);
-        
-        // Assert
-        result.FrontMatter.Should().ContainKey("title");
-        result.FrontMatter["title"].Should().Be("Test Article");
-        result.Content.Should().Contain("# Content here");
-    }
-}
-```
-
-### Testing Repository with Real Files
-
-```csharp
-public class ContentRepositoryTests
-{
-    private readonly IContentRepository _repository;
-    private readonly IOptions<ContentOptions> _options;
-    
-    public ContentRepositoryTests()
-    {
-        // Use test data directory
-        _options = Options.Create(new ContentOptions
-        {
-            CollectionsRootPath = "../../../../collections",
-            Timezone = "Europe/Brussels"
-        });
-        
-        _repository = new FileContentRepository(
-            _options,
-            new MemoryCache(Options.Create(new MemoryCacheOptions())),
-            new MarkdownService(),
-            NullLogger<FileContentRepository>.Instance
-        );
-    }
-    
-    [Fact]
-    public async Task GetAllAsync_ReturnsContentSortedByDateDescending()
-    {
-        // Act
-        var items = await _repository.GetAllAsync();
-        
-        // Assert
-        items.Should().NotBeEmpty();
-        items.Should().BeInDescending Order(x => x.DateEpoch);
-    }
-}
-```
-
-### Testing Error Handling
-
-```csharp
-[Fact]
-public void ParseFrontMatter_WithInvalidYaml_ThrowsException()
-{
-    // Arrange
-    var invalidMarkdown = @"---
-title: Missing end marker
-content here";
-    var parser = new FrontMatterParser();
-    
-    // Act
-    Action act = () => parser.Parse(invalidMarkdown);
-    
-    // Assert
-    act.Should().Throw<InvalidOperationException>();
-}
-```
+See actual tests for implementation examples.
 
 ## Running Tests
 

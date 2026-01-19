@@ -18,7 +18,7 @@
 /* Individual Tag Button - Base styling */
 .tag-cloud-item {
     display: inline-block;
-    padding: 0.125rem 0.5rem;
+    padding: 0.25rem 0.75rem;
     background: var(--color-card-bg);
     border: 1px solid var(--color-border-default);
     border-radius: var(--radius-sm);
@@ -62,20 +62,20 @@
 .tag-size-small {
     font-size: 0.75rem;
     /* 12px - noticeably smaller */
-    padding: 0.0625rem 0.375rem;
+    padding: 0.1875rem 0.5rem;
 }
 
 .tag-size-medium {
     font-size: 0.9375rem;
     /* 15px - default readable size */
-    padding: 0.125rem 0.5rem;
+    padding: 0.25rem 0.75rem;
 }
 
 .tag-size-large {
     font-size: 1.125rem;
     /* 18px - clearly prominent */
     font-weight: var(--font-weight-semibold);
-    padding: 0.1875rem 0.625rem;
+    padding: 0.3125rem 0.875rem;
 }
 
 /* Text/status messages within the sidebar section */
