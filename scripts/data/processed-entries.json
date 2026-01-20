@@ -23704,5 +23704,11 @@
     "reason": "Succesfully added: Assigned Azure because the article focuses on optimizing resources and automation using Azure services and APIs (Azure rule 1, 2, 4, and 5). Assigned Security because there is a significant focus on continuous security checks, best practice enforcement, and integration with Key Vault and NSGs (Security rules 1, 2, 4, and 5). Assigned DevOps because of the integration with GitHub, continuous monitoring, scheduled checks, notification automation, and discussion of operational workflows (DevOps rules 1, 2, 3, 5, and 7). Did not assign ML or AI, as the content does not discuss AI/ML workloads or development. Did not assign Coding, as it focuses on cloud operations and configuration rather than code or programming practices directly.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/proactive-cloud-ops-with-sre-agent-scheduled-checks-for-cloud/ba-p/4487261"
+  },
+  {
+    "reason": "Succesfully added: Assigned the DevOps category because the update focuses on administrative controls, budget management, and usage tracking within GitHub Enterprise, which is a DevOps and team collaboration platform (DevOps rule 2, 3, and 9). The content is technical, outlining REST API availability and audit log tracking, not just organizational or business strategy. There is no discussion of coding, AI, ML, Azure, or Security, so no other categories apply.",
+    "collection": "news",
+    "timestamp": "2026-01-20 01:32:07 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-01-19-enterprise-scoped-budgets-that-exclude-cost-center-usage-in-public-preview"
   }
 ]
