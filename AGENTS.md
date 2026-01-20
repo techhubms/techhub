@@ -2,7 +2,7 @@
 
 🚨 **ABSOLUTELY CRITICAL: FOLLOW THE PROCESS**: This file defines a **required 10-step process** for all development tasks in [AI Assistant Workflow](#ai-assistant-workflow). Always follow these steps in order for every request.
 
-🚫 **ABSOLUTELY CRITICAL: NEVER EXECUTE COMMANDS in the terminal running the `Run` command**: The `Run` command used for starting the website and running tests and anything else in that terminal will terminate the earlier executed `Run` command and whatever you are trying to do will FAIL. If you want to check if the servers are running or if tests succeeded, **ALWAYS** use the `get_terminal_output` tool. Keep checking by calling `get_terminal_output` and **NEVER** wait by doing a `Start-Sleep` or other wait commands.
+🚫 **ABSOLUTELY CRITICAL: NEVER EXECUTE COMMANDS in the terminal executing the `Run` command**: The `Run` command used for starting the website and running tests and anything else in that terminal will terminate the earlier executed `Run` command and whatever you are trying to do will FAIL. If you want to check if the servers are running or if tests succeeded, **ALWAYS** use the `get_terminal_output` tool. Keep checking by calling `get_terminal_output` and **NEVER** wait by doing a `Start-Sleep` or other wait commands.
 
 ## What is AGENTS.md?
 
@@ -583,33 +583,42 @@ See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-
 
 **ALWAYS use the Run function directly** (automatically loaded in PowerShell):
 
-**🚨 CRITICAL**: Just type `Run` commands directly - DO NOT use `pwsh -File` or `pwsh -Command`:
-
-```powershell
-# ✅ CORRECT - Call function directly
-Run -OnlyTests
-
-# 🚫 WRONG - Don't try to execute as a file
-pwsh -File scripts/TechHubRunner.psm1 -Command 'Run -OnlyTests'
-pwsh -Command 'Run -OnlyTests'
-```
-
 **Standard Run Commands**:
 
 ```powershell
-# Run tests only - stops servers after successful tests (CI/CD, validation)
-# This is the PRIMARY way to run tests
-Run -OnlyTests
+# ✅ CORRECT - Run tests only, exits when done (use isBackground=false)
+run_in_terminal(
+  command: "Run -OnlyTests",
+  isBackground: false  # Tests exit after completion
+)
 
+# ✅ CORRECT - Start servers for debugging (use isBackground=true)
+run_in_terminal(
+  command: "Run -WithoutTests",
+  isBackground: true  # Servers keep running
+)
+
+# Then monitor progress:
+get_terminal_output(id: "<terminal-id>")
+```
+
+Some more examples:
+
+```powershell
 # Run tests for specific area - stops servers after successful tests
-Run -OnlyTests -TestProject Web.Tests
-Run -OnlyTests -TestName SectionCard
+Run -OnlyTests -TestProject Web.Tests # Use isBackground=false
+Run -OnlyTests -TestName SectionCard # Use isBackground=false
 
 # Development mode - runs tests, then keeps servers running
-Run
+Run # Use isBackground=true
+```
 
-# Interactive debugging - skip tests, start servers directly
-Run -WithoutTests
+Simply call `Run`, do not wrap in pwsh:
+
+```powershell
+# 🚫 WRONG - Don't try to execute as a file
+pwsh -File scripts/TechHubRunner.psm1 -Command 'Run -OnlyTests'
+pwsh -Command 'Run -OnlyTests'
 ```
 
 **⚠️ CRITICAL E2E TEST WARNING**:
@@ -621,26 +630,29 @@ Run -WithoutTests
 
 When you execute a `Run` command in a terminal:
 
-✅ **DO**: Start website with `Run` in a dedicated terminal  
+✅ **DO**: Start website with `Run` using `isBackground=true` ALWAYS  
+✅ **DO**: Use `get_terminal_output` to monitor server startup progress  
 ✅ **DO**: **ONLY OBSERVE** the terminal output - NEVER interact with it  
 ✅ **DO**: Use Playwright MCP tools from GitHub Copilot Chat for all website testing  
 ✅ **DO**: Open NEW terminals for ANY other commands while website is running  
-✅ **DO**: Use `Run -WithoutTests` for interactive debugging (skip tests, start servers)  
-✅ **DO**: Use `Run -OnlyTests` to run tests and stop servers after completion  
+✅ **DO**: Use `Run -WithoutTests` with `isBackground=true` for interactive debugging  
+✅ **DO**: Use `Run -OnlyTests` with `isBackground=false` (tests exit after completion)  
 ✅ **DO**: Use `Run -OnlyTests -TestProject <project>` to run specific test projects  
 
+🚫 **NEVER**: Use `isBackground=false` for `Run` or `Run -WithoutTests` (servers never exit)  
 🚫 **NEVER**: Type `Start-Sleep`, `curl`, `wget`, or ANY command in the website terminal  
 🚫 **NEVER**: Run dotnet commands in the website terminal  
 🚫 **NEVER**: Press Enter, type anything, or interact with the website terminal  
-🚫 **NEVER**: Use `run_in_terminal` with `isBackground=false` to wait/sleep in the website terminal  
 🚫 **NEVER**: Execute ANY operation that sends input to the website terminal
 
 **Why This Matters**:
 
-- The `Run` command starts servers and **blocks** the terminal  
+- `Run` and `Run -WithoutTests` start servers and **block** the terminal indefinitely  
+- Using `isBackground=false` will cause your tool call to NEVER complete (deadlock)  
+- Using `isBackground=true` lets the command run while you continue with other operations  
 - ANY input to that terminal (typing, pressing Enter, Ctrl+C) **IMMEDIATELY SHUTS DOWN** the website  
 - This includes: `Start-Sleep`, `curl`, `Get-Process`, or any other command  
-- **SOLUTION**: Use `get_terminal_output` tool to READ output, open NEW terminals for commands  
+- **SOLUTION**: Use `isBackground=true` + `get_terminal_output` to monitor, open NEW terminals for other commands  
 
 **How to Monitor Progress**:
 

@@ -124,3 +124,8 @@ public class SectionPageKeyboardNavigationCollection : ICollectionFixture<Playwr
 public class TagFilteringCollection : ICollectionFixture<PlaywrightCollectionFixture>
 {
 }
+
+[CollectionDefinition("Custom Pages TOC Tests")]
+public class CustomPagesTocCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}
