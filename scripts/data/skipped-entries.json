@@ -11427,5 +11427,11 @@
     "timestamp": "2026-01-20 19:21:39 +00:00",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/bt8GkHAf0SI"
+  },
+  {
+    "timestamp": "2026-01-20 20:24:06 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=xY843hsozGo",
+    "collection": "videos",
+    "reason": "No categories found: No categories were assigned because the content does not include sufficient evidence that Microsoft technologies are central or comprise at least 40% of the substantive content. The input focuses on industrial AI and data solutions in manufacturing, featuring Cognite, but does not reference any specific Microsoft AI platform, Azure services, development tools, or coding/deployment practices. Without a detailed description, script, or technical breakdown showing Microsoft technology as central to the solution architecture—as required by Multi-Platform Content Threshold and Category Inclusion Rules—this is excluded. Furthermore, the content appears to be an overview about digital transformation and AI in manufacturing, and there are no technical details indicating developer-oriented implementation with Microsoft technology."
   }
 ]

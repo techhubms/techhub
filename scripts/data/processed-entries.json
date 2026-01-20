@@ -23806,5 +23806,23 @@
     "timestamp": "2026-01-20 19:21:59 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-jan-2026-forum-recap/ba-p/4487829"
+  },
+  {
+    "timestamp": "2026-01-20 20:23:05 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/expanding-real-time-intelligence-data-sources-with-cribl-source-preview/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the Azure category because Microsoft Fabric is a core Azure analytics platform and the content focuses on configuring and using Azure-based services. Assigned the ML category because Fabric Real-Time Intelligence and Eventstream are positioned for advanced real-time analytics, processing, and dashboarding of streaming telemetry data—a core data engineering and analytics use case. While the article covers integration and real-time analytics, there is not a focus on classic AI/ML model development or usage; rather, the content is oriented toward streaming data processing for analytics. The content does not fit the Coding, DevOps, Security, or GitHub Copilot categories because it does not involve code development practices, DevOps pipelines, security services/architecture, or AI/model implementation. All generic exclusion checks were reviewed and did not apply—the article is technical, English, non-biographical, and strictly focused on Microsoft developer/analytics technology."
+  },
+  {
+    "timestamp": "2026-01-20 20:23:34 +00:00",
+    "canonical_url": "https://github.blog/security/ai-supported-vulnerability-triage-with-the-github-security-lab-taskflow-agent/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because the post centers on the use of LLM-powered automation (AI rule 1 and 4) within security automation. Security is included due to the article's strong focus on vulnerability triage, CodeQL, and alert handling in development and operational pipelines (Security rules 1–5). DevOps is assigned because the content highlights streamlined engineering processes, automation workflows, and integrates security into development pipelines (DevOps rules 3, 5, and 6). Coding is not included as the article is focused on automation at the workflow/taskflow/process level rather than coding practices, language details, or frameworks. GitHub Copilot and ML categories are not included as neither Copilot nor custom ML/data science development is a primary focus."
+  },
+  {
+    "timestamp": "2026-01-20 20:24:30 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/connect-azure-sre-agent-to-servicenow-end-to-end-incident/ba-p/4487824",
+    "collection": "community",
+    "reason": "Succesfully added: Categories assigned as follows:\n- AI: The Azure SRE Agent leverages autonomous investigation and resolution, described as using AI ('Watch the AI agent automatically pick up, investigate, and resolve the incident'), meeting AI category rule 1 and 4.\n- Azure: The Azure SRE Agent is an Azure cloud service, setup is performed via the Azure Portal, and the workflow relies on several core Azure operations, matching Azure rules 1, 4, and 5.\n- DevOps: The content is focused on automated incident management, SRE (Site Reliability Engineering) practices, and the integration and orchestration between Azure, ServiceNow, and monitoring/incident workflows. Automated incident triage, operational platform configuration, and integration fit DevOps rules 1, 3, 5, and 7.\n'Coding', 'ML', 'Security', and 'GitHub Copilot' do not apply because there is no software development, custom machine learning, security implementation specifics, or GitHub Copilot content in the guide. All generic exclusion rules were checked and none were triggered."
   }
 ]
