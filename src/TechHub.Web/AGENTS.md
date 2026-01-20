@@ -70,7 +70,7 @@ This project implements the Blazor frontend with server-side rendering (SSR) and
   <header>                           <!-- Site navigation + section banner -->
   <main class="page-with-sidebar">   <!-- Main content wrapper -->
     <aside class="sidebar">          <!-- Tag cloud, RSS links -->
-    <section class="page-main-content">  <!-- Content items grid -->
+    <section>                        <!-- Content items grid (styled via parent selector) -->
   </main>
   <footer>                           <!-- Site footer -->
 </html>
@@ -83,7 +83,7 @@ This project implements the Blazor frontend with server-side rendering (SSR) and
   <header>                           <!-- Site navigation + section banner -->
   <main class="page-with-sidebar">   <!-- Main content wrapper -->
     <aside class="sidebar">          <!-- Tag cloud, table of contents -->
-    <article class="page-main-content content-detail">  <!-- Individual content item -->
+    <article>                        <!-- Individual content item (styled via parent selector) -->
   </main>
   <footer>                           <!-- Site footer -->
 </html>
@@ -96,7 +96,7 @@ This project implements the Blazor frontend with server-side rendering (SSR) and
   <header>                           <!-- Site navigation + section banner -->
   <main class="page-with-sidebar">   <!-- Main content wrapper -->
     <aside class="sidebar">          <!-- Video list, table of contents -->
-    <article class="page-main-content content-detail">  <!-- Selected video/content -->
+    <article class="article-body">   <!-- Selected video/content with article styling -->
   </main>
   <footer>                           <!-- Site footer -->
 </html>
@@ -108,7 +108,7 @@ This project implements the Blazor frontend with server-side rendering (SSR) and
 <html>
   <header>                           <!-- Site navigation + section banner -->
   <main class="page-without-sidebar">  <!-- Main content wrapper (no sidebar) -->
-    <section class="page-main-content">  <!-- Team member grid -->
+    <section>                        <!-- Team member grid -->
   </main>
   <footer>                           <!-- Site footer -->
 </html>
@@ -136,13 +136,13 @@ This project implements the Blazor frontend with server-side rendering (SSR) and
 
 - Use for: Section cards grid, content items grid, team members, about content
 - Has heading and represents thematic grouping
-- Classes: `home-main-content` (homepage) or `page-main-content` (other pages)
+- Classes: `home-main-content` (homepage only); other pages use no class (styled via `.page-with-sidebar > :is(article, section)`)
 
 **`<article>`**: Self-contained, independently distributable content
 
 - Use for: Individual blog posts, videos, content item details
 - Can be extracted and make sense on its own
-- Classes: `page-main-content content-detail`
+- Classes: `article-body` (for article content styling); no class needed for layout (styled via `.page-with-sidebar > :is(article, section)`)
 
 **`<footer>`**: Site footer
 
@@ -164,8 +164,8 @@ This project implements the Blazor frontend with server-side rendering (SSR) and
 
 ### Common Mistakes to Avoid
 
-❌ **Wrong**: `<div class="page-main-content">`  
-✅ **Correct**: `<section class="page-main-content">` (for grids) or `<article class="page-main-content">` (for detail pages)
+❌ **Wrong**: `<div>content</div>` inside `<main class="page-with-sidebar">`  
+✅ **Correct**: `<section>content</section>` (for grids) or `<article class="article-body">content</article>` (for detail pages)
 
 ❌ **Wrong**: `<div class="home-main-content">`  
 ✅ **Correct**: `<section class="home-main-content">`
@@ -241,16 +241,14 @@ Reusable design system components and site-wide styles:
 ```text
 wwwroot/css/
 ├── design-tokens.css         # ALL colors, typography, spacing (single source of truth)
-├── base.css                  # Reset, typography, links, focus states
-├── layout.css                # Header, footer, navigation, grid
-├── components/
-│   ├── sidebar.css          # Shared sidebar component (used across multiple pages)
-│   ├── buttons.css          # All button styles
-│   ├── navigation.css       # Breadcrumb navigation only
-│   ├── loading.css          # Skeleton loaders, loading states
-│   ├── page-container.css   # Page layout containers
-│   └── forms.css            # Form validation, Blazor errors
-└── utilities.css             # Utility classes
+├── base.css                  # Reset, typography, links, focus states, utilities, forms
+├── sidebar.css               # Shared sidebar component (used across multiple pages)
+├── nav-helpers.css           # Navigation helpers (back to top, back to previous)
+├── loading.css               # Skeleton loaders, loading states
+├── page-container.css        # Page layout containers
+├── tag-dropdown.css          # Tag dropdown component
+├── date-slider.css           # Date range slider component
+└── article.css               # Article content styling
 ```
 
 #### Component-Scoped CSS (.razor.css files)
@@ -270,7 +268,9 @@ Components/
 │   └── About.razor.css            # About page team grid
 ├── Shared/
 │   ├── PageHeader.razor.css       # Universal section header banner
-│   └── NavHeader.razor.css        # Site navigation header
+│   ├── NavHeader.razor.css        # Site navigation header
+│   ├── SidebarToc.razor.css       # Table of contents component
+│   └── SidebarTagCloud.razor.css  # Tag cloud component
 └── Root Components/
     ├── SectionCard.razor.css          # Section card styling
     ├── ContentItemCard.razor.css      # Content item card styling
@@ -309,14 +309,11 @@ Components/
     <!-- Development: Individual files for debugging -->
     <link rel="stylesheet" href="css/design-tokens.css" />
     <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/components/sidebar.css" />
-    <link rel="stylesheet" href="css/components/cards.css" />
-    <link rel="stylesheet" href="css/components/buttons.css" />
-    <link rel="stylesheet" href="css/components/navigation.css" />
-    <link rel="stylesheet" href="css/components/loading.css" />
-    <link rel="stylesheet" href="css/components/forms.css" />
-    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/article.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/page-container.css" />
+    <link rel="stylesheet" href="css/loading.css" />
+    <link rel="stylesheet" href="css/nav-helpers.css" />
 }
 else
 {
@@ -336,14 +333,11 @@ builder.Services.AddWebOptimizer(pipeline =>
     pipeline.AddCssBundle("/css/bundle.css",
         "css/design-tokens.css",
         "css/base.css",
-        "css/layout.css",
-        "css/components/sidebar.css",
-        "css/components/cards.css",
-        "css/components/buttons.css",
-        "css/components/navigation.css",
-        "css/components/loading.css",
-        "css/components/forms.css",
-        "css/utilities.css"
+        "css/article.css",
+        "css/sidebar.css",
+        "css/page-container.css",
+        "css/loading.css",
+        "css/nav-helpers.css"
     );
 });
 ```
@@ -388,8 +382,8 @@ Components/
 ├── SectionCard.razor.css              # Section card styling (unique to this component)
 └── ContentItemCard.razor.css          # Content item card styling (unique to this component)
 
-Note: Sidebar components (SidebarCollectionNav, SidebarRssLinks, SidebarTags) do NOT have 
-      .razor.css files - they use global styles from sidebar.css
+Note: Most sidebar components use global styles from sidebar.css, but SidebarToc and SidebarTagCloud
+      have component-scoped .razor.css files for their specific interactive patterns
 ```
 
 **Global CSS** (wwwroot/css/):
@@ -397,15 +391,14 @@ Note: Sidebar components (SidebarCollectionNav, SidebarRssLinks, SidebarTags) do
 ```text
 wwwroot/css/
 ├── design-tokens.css                  # Colors, typography, spacing (used everywhere)
-├── base.css                           # Reset, typography, links (used everywhere)
-├── layout.css                         # Site header, footer, nav (used everywhere)
-├── components/
-│   ├── page-container.css            # Page layout containers (.page-with-sidebar, .page-without-sidebar)
-│   ├── sidebar.css                   # Sidebar component styles (used on multiple pages)
-│   ├── buttons.css                   # Button styles (used everywhere)
-│   ├── forms.css                     # Form styles (used on multiple pages)
-│   └── loading.css                   # Skeleton loading states (used on multiple pages)
-└── utilities.css                      # Utility classes (used everywhere)
+├── base.css                           # Reset, typography, links, utilities, forms (used everywhere)
+├── page-container.css                 # Page layout containers (.page-with-sidebar, .page-without-sidebar)
+├── sidebar.css                        # Sidebar component styles (used on multiple pages)
+├── loading.css                        # Skeleton loading states (used on multiple pages)
+├── nav-helpers.css                    # Navigation helpers (back to top, back to previous)
+├── tag-dropdown.css                   # Tag dropdown component
+├── date-slider.css                    # Date range slider component
+└── article.css                        # Article content styling
 ```
 
 **🚨 CRITICAL RULE**: Shared layout classes (`.page-with-sidebar`, `.page-without-sidebar`) MUST be in global CSS (`page-container.css`), NEVER in component-scoped CSS, even if currently used by only one page. These are structural classes that define the fundamental page architecture.
@@ -452,14 +445,14 @@ Is this style specific to ONE component/page?
     </aside>
     
     <!-- For article content (blog posts, documentation): -->
-    <article class="page-main-content content-detail">
+    <article>
         <!-- Self-contained article content -->
     </article>
     
-    <!-- OR for component content (grids, lists): -->
-    <div class="page-main-content">
+    <!-- OR for section/list content (grids, listings): -->
+    <section>
         <!-- ContentItemsGrid, ContentItemDetail, etc. -->
-    </div>
+    </section>
 </main>
 ```
 
@@ -468,7 +461,7 @@ Is this style specific to ONE component/page?
 ```razor
 <Header SectionName="..." />
 
-<main class="page-main-content">
+<main class="page-without-sidebar">
     <!-- Centered content, no sidebar -->
 </main>
 ```
@@ -476,8 +469,8 @@ Is this style specific to ONE component/page?
 **CSS Classes** (defined in `page-container.css`):
 
 - **`.page-with-sidebar`** - Applied to `<main>` for two-column grid layout (300px sidebar + 1fr content)
-- **`.page-main-content`** - Applied to content area (article or div) within the grid
-- **`.content-detail`** - Applied to `<article>` for content detail pages (adds specific padding/typography)
+- **`.page-without-sidebar`** - Applied to `<main>` for single-column centered layout
+- **`.article-body`** - Applied to content container within `<article>` for typography styling (headings, code blocks, tables)
 
 **Why `<aside>` is INSIDE `<main>`**:
 
@@ -499,7 +492,7 @@ Per WAI-ARIA best practices, complementary content (`<aside>`) that's directly r
 - ✅ Control component order and composition
 - ✅ Pass required parameters to components
 
-**Sidebar Components** (`SidebarCollectionNav.razor`, `SidebarRssLinks.razor`, `SidebarTags.razor`):
+**Sidebar Components** (`SidebarCollectionNav.razor`, `SidebarRssLinks.razor`, `SidebarTagCloud.razor`):
 
 - ✅ Render their specific content (navigation, RSS links, tag clouds)
 - ✅ Use semantic HTML appropriate to their purpose (`<nav>`, `<div>`, etc.)
@@ -525,10 +518,10 @@ Per WAI-ARIA best practices, complementary content (`<aside>`) that's directly r
         <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink(\"RSS Feed\", $\"{sectionData.Url}/feed.xml\") })\" />
     </aside>
     
-    @* Use div for component content (not self-contained article) *@
-    <div class="page-main-content">
+    @* Use section for listing/grid content *@
+    <section>
         <ContentItemsGrid ... />
-    </div>
+    </section>
 </main>
 ```
 
@@ -544,7 +537,7 @@ Per WAI-ARIA best practices, complementary content (`<aside>`) that's directly r
     </aside>
     
     @* Use article for self-contained content *@
-    <article class="page-main-content content-detail">
+    <article>
         <ContentItemDetail Item="@contentItem" />
     </article>
 </main>
@@ -576,28 +569,35 @@ Per WAI-ARIA best practices, complementary content (`<aside>`) that's directly r
 </div>
 ```
 
-**SidebarTags.razor** (Component renders content only):
+**SidebarTagCloud.razor** (Component renders tag cloud):
 
 ```razor
-@* Uses <div> for tag cloud (not navigation) *@
+@* Fetches tag cloud from API and renders with size-based visualization *@
 <div class="sidebar-section">
-    <h2 class="sidebar-h2">@Title</h2>
+    <h2 class="sidebar-h2">Tags</h2>
     <div class="tags-cloud">
-        @foreach (var tag in displayTags)
+        @if (tagCloudItems != null)
         {
-            <a href="@($"{BaseUrl}?tag={Uri.EscapeDataString(tag)}")"
-               class="sidebar-tag">@tag</a>
+            @foreach (var tag in tagCloudItems)
+            {
+                <a href="@GenerateTagUrl(tag.NormalizedName)"
+                   class="sidebar-tag tag-size-@tag.TagSize @GetSelectedClass(tag.NormalizedName)"
+                   style="font-size: @(tag.FontSizePercent)%">
+                    @tag.DisplayName
+                </a>
+            }
         }
     </div>
 </div>
 ```
 
-**Parameters**:
+**Key Features**:
 
-- `Tags` (required): List of tag strings to display
-- `Title`: Heading text (default: "Tags")
-- `BaseUrl` (required): URL for tag filter links
-- `MaxTags`: Limit number of tags shown (default: null/all)
+- Fetches tag cloud data from API (`/api/tagcloud/{sectionName}` or `/api/tagcloud`)
+- Uses quantile-based sizing (5 size categories)
+- Supports tag selection from URL query parameters
+- Automatically refreshes on navigation
+- Located in Components/ (root), not Components/Shared/
 - `CssClass`: Additional CSS classes for container
 
 #### Sidebar Component Semantic HTML
@@ -617,7 +617,7 @@ Per WAI-ARIA best practices, complementary content (`<aside>`) that's directly r
 
 #### Shared Sidebar Styles
 
-**Global CSS** (`wwwroot/css/components/sidebar.css`):
+**Global CSS** (`wwwroot/css/sidebar.css`):
 
 - `.sidebar` - Container with sticky positioning (used by pages)
 - `.sidebar-section` - Section wrapper
@@ -653,36 +653,18 @@ Per WAI-ARIA best practices, complementary content (`<aside>`) that's directly r
   })" />
   ```
 
-**SidebarTags** - Interactive tag cloud for filtering content
+**SidebarTagCloud** - Interactive tag cloud for filtering content
 
-- **Used in**: Home page (popular tags), ContentItem pages (article tags)
-- **Parameters**:
-  - `Tags` (required) - Collection of tag strings
-  - `Title` (optional, default "Tags") - Section heading
-  - `BaseUrl` (required) - Base URL for tag filtering (e.g., "/ai" for section, "/all" for global)
-  - `MaxTags` (optional) - Maximum tags to display
-  - `CssClass` (optional) - Additional CSS class (e.g., "popular-tags", "article-tags")
-- **Examples**:
-
-  ```razor
-  @* Article tags - filter within section *@
-  <SidebarTags Tags="@item.Tags"
-               Title="Tags"
-               BaseUrl="@($"/{sectionName}")"
-               CssClass="article-tags" />
-  
-  @* Popular tags - filter across all content *@
-  <SidebarTags Tags="@popularTags"
-               Title="Popular Tags"
-               BaseUrl="/all"
-               MaxTags="15"
-               CssClass="popular-tags" />
-  ```
+- **Location**: Components/SidebarTagCloud.razor (root Components/, standard Blazor convention)
+- **Used in**: Section pages, ContentItem pages
+- **Purpose**: Displays tag cloud with size-based visualization and interactive filtering
+- **Data Source**: Fetches tag cloud from API with quantile-based sizing
+- **Implementation**: Uses code-behind pattern (SidebarTagCloud.razor.cs) for complex logic
 
 #### Benefits of This Architecture
 
 - ✅ **Clear separation of concerns** - Pages control structure, components provide functionality
-- ✅ **Reusable components** - SidebarCollectionNav, SidebarRssLinks, SidebarTags used across multiple pages
+- ✅ **Reusable components** - SidebarCollectionNav, SidebarRssLinks, SidebarTagCloud used across multiple pages
 - ✅ **Flexible composition** - Pages can mix and match sidebar components
 - ✅ **Semantic HTML** - Each component uses appropriate semantic tags
 - ✅ **No duplicate code** - Shared styles and components reduce duplication
@@ -830,11 +812,10 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
             @* ✅ CORRECT - Pass sectionData to sidebar components *@
             <SidebarCollectionNav Section="@sectionData" SelectedCollection="all" />
         </aside>
-        </aside>
         
-        <main class="page-main-content">
+        <section>
             <ContentItemsGrid SectionName="@sectionData.Name" />
-        </main>
+        </section>
     </div>
 }
 
@@ -1036,7 +1017,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 <PageTitle>@SectionName - Tech Hub</PageTitle>
 
 <!-- Page container with sidebar layout -->
-<div class="page-with-sidebar">
+<main class="page-with-sidebar">
     @* Header loads independently *@
     <PageHeader Section="@section" />
     
@@ -1048,10 +1029,10 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     </aside>
     
     @* Main content area *@
-    <main class="page-main-content">
+    <section>
         <ContentItemsGrid ... />
-    </main>
-</div>
+    </section>
+</main>
 
 @code {
     [Parameter]
@@ -1090,10 +1071,9 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
   padding: 0 var(--spacing-3) var(--spacing-6) var(--spacing-3);
 }
 
-/* Main content area */
-.page-main-content {
+/* Prevent grid blowout on content elements */
+.page-with-sidebar > :is(article, section) {
   min-width: 0;
-  /* Prevent grid blowout */
 }
 
 /* Standard page container without sidebar */
@@ -1470,9 +1450,13 @@ src/TechHub.Web/
 │   ├── css/                # Global CSS (design system)
 │   │   ├── design-tokens.css
 │   │   ├── base.css
-│   │   ├── layout.css
-│   │   ├── components/     # Reusable component styles
-│   │   └── utilities.css
+│   │   ├── sidebar.css
+│   │   ├── page-container.css
+│   │   ├── nav-helpers.css
+│   │   ├── loading.css
+│   │   ├── tag-dropdown.css
+│   │   ├── date-slider.css
+│   │   └── article.css
 │   └── images/             # Static images
 │       └── section-backgrounds/ # Section header images
 ├── Program.cs              # Application configuration (CSS bundling)
@@ -1483,6 +1467,7 @@ src/TechHub.Web/
 
 - **Layout/**: Application layout components
   - `MainLayout.razor` - Main application layout wrapper
+  - `ReconnectModal.razor` - Server connection state UI (Interactive Server/Auto modes)
 - **Pages/**: Routable pages (all have `@page` directive)
   - `Home.razor` - Homepage (`/`) - Shows all sections
   - `Section.razor` - Section page (`/{sectionName}`) - Shows all content in section
@@ -1490,51 +1475,56 @@ src/TechHub.Web/
   - `ContentItem.razor` - Detail page (`/{sectionName}/{collection}/{itemId}`) - Shows single content item
   - `About.razor` - About page (`/about`)
   - `NotFound.razor` - 404 page
-  - Custom pages - Feature-specific routable pages
-- **Shared/**: Layout-level reusable components (navigation, headers)
-  - `NavHeader.razor` - Global site navigation header
-  - `PageHeader.razor` - Page banner with section background
-  - `SubNav.razor` - Horizontal sub-navigation below page header
-- **Root Components/**: Domain-specific reusable components
-  - **Content Display**:
+  - Custom pages - Feature-specific routable pages (GenAI courses, GitHub Copilot resources, etc.)
+- **Components/ (root)**: Reusable non-routable components (standard Blazor convention)
+  - **Navigation & Layout Components**:
+    - `Header.razor` - Global site header wrapper
+    - `NavHeader.razor` - Global site navigation header
+    - `SectionBanner.razor` - Page banner with section background
+    - `SubNav.razor` - Horizontal sub-navigation below page header
+  - **Content Display Components**:
     - `SectionCard.razor` - Section display card (homepage)
     - `SectionCardsGrid.razor` - Grid of section cards (homepage)
     - `ContentItemCard.razor` - Content item display card (section/collection pages)
     - `ContentItemsGrid.razor` - Grid of content items with filtering
     - `ContentItemDetail.razor` - Full content rendering (detail page)
   - **Sidebar Components**:
-    - `SidebarBackButton.razor` - Back navigation button
-    - `SidebarCollectionNav.razor` - Collection navigation (deprecated - replaced by SubNav)
     - `SidebarRssLinks.razor` - RSS subscription links
-    - `SidebarTags.razor` - Tag cloud for filtering
+    - `SidebarTagCloud.razor` - Interactive tag cloud for filtering
     - `SidebarToc.razor` - Table of contents with scroll-spy
     - `SidebarPageInfo.razor` - Custom page metadata display
-- **Routes.razor**: Blazor router (framework requirement, stays in root)
-- **App.razor**: Application entry point (framework requirement, stays in root)
+  - **Utility Components**:
+    - `ConditionalScripts.razor` - Conditionally loads JavaScript libraries (syntax highlighting, Mermaid diagrams, TOC scroll-spy) based on page needs
+- **Framework Components** (must stay in root):
+  - `Routes.razor` - Blazor router (framework requirement)
+  - `App.razor` - Application entry point (framework requirement)
 
 **Why This Structure?**
 
-**Shared/** folder is for **cross-cutting layout components** used across ALL pages:
+This follows **Microsoft's official Blazor conventions** per ASP.NET Core documentation:
 
-- Navigation (NavHeader) - appears on every page
-- Page headers (PageHeader, SubNav) - layout elements common to all section pages
-- These are "infrastructure" components that define the page structure
+1. **Components/** (root) - Shared components used across the application
+   - Per Microsoft: "Shared components are often placed at the root of the Components folder"
+   - Navigation, content display, sidebar, and utility components all live here
+   - No functional difference from Components/Shared/ - both are valid per Microsoft docs
 
-**Root Components/** folder is for **domain-specific reusable components**:
+2. **Components/Pages/** - Routable page components with `@page` directive
+   - Per Microsoft: "Page components are usually placed in folders within the Components folder"
+   - Each file represents a URL route
 
-- Content display components - specific to content rendering (cards, grids, detail views)
-- Sidebar components - specific to sidebar functionality
-- These are "feature" components that implement specific business logic
+3. **Components/Layout/** - Application layout wrappers
+   - Per Microsoft: "Layouts can be placed in the app's Shared or Layout folder"
+   - MainLayout wraps all pages, ReconnectModal for server connection state
 
-**Pages/** folder is ONLY for **routable components** (`@page` directive):
+**Microsoft Guidance on Shared Components**:
 
-- Each file represents a URL route
-- No non-routable components here
+> "Shared components are often placed at the root of the Components folder, while layout and page components are usually placed in folders within the Components folder."
+>
+> "However, layouts can be placed in any location accessible to the components that use it. For example, a layout can be placed in the same folder as the components that use it."
 
-**Layout/** folder is for **wrapper components**:
+Source: [ASP.NET Core Blazor project structure](https://github.com/dotnet/aspnetcore.docs/blob/main/aspnetcore/blazor/project-structure.md) and [Blazor layouts](https://github.com/dotnet/aspnetcore.docs/blob/main/aspnetcore/blazor/components/layouts.md)
 
-- MainLayout - wraps all pages
-- Specialized layouts if needed
+**Key Takeaway**: Both `Components/` (root) and `Components/Shared/` are valid locations for shared components. We chose the root location to align with Microsoft's documented pattern that "shared components are often placed at the root of the Components folder."
 
 ## Image Conventions
 
@@ -1722,6 +1712,144 @@ window.setupInfiniteScroll = (elementId, dotNetRef) => {
     observer.observe(trigger);
 };
 ```
+
+### Conditional JavaScript Loading
+
+**Pattern**: Only load heavy JavaScript libraries on pages that actually need them, not globally on every page.
+
+**Problem**: Loading Highlight.js (~68KB + 8 language files), Mermaid diagrams, TOC scroll-spy, and custom page interactivity on every page significantly slows down initial page load for simple list/section pages that don't use them.
+
+**Solution**: `ConditionalScripts.razor` component provides selective script loading based on page requirements.
+
+#### ConditionalScripts Component
+
+**Location**: [Components/Shared/ConditionalScripts.razor](Components/Shared/ConditionalScripts.razor)
+
+**Purpose**: Conditionally loads JavaScript and CSS only when needed by the current page.
+
+**Parameters**:
+
+```csharp
+[Parameter] public bool LoadSyntaxHighlighting { get; set; } = false;  // Highlight.js for code blocks
+[Parameter] public bool LoadMermaid { get; set; } = false;              // Mermaid for diagrams
+[Parameter] public bool LoadTocScrollSpy { get; set; } = false;         // TOC active state tracking
+[Parameter] public bool LoadCustomPagesInteractivity { get; set; } = false; // Collapsible sections (AISDLC, DXSpace)
+```
+
+**Usage Pattern**:
+
+```razor
+@* ContentItem.razor - Loads syntax highlighting, Mermaid, and TOC scroll-spy *@
+<ConditionalScripts LoadSyntaxHighlighting="true" 
+                    LoadMermaid="true" 
+                    LoadTocScrollSpy="true" />
+
+@* AISDLC.razor - Loads custom page interactivity for collapsible sections *@
+<ConditionalScripts LoadCustomPagesInteractivity="true" />
+
+@* Home.razor, Section.razor - NO ConditionalScripts component = no extra JS loaded *@
+```
+
+**Pages Using ConditionalScripts**:
+
+- **Content Pages**: `ContentItem.razor` - All three content-related scripts (syntax, Mermaid, TOC)
+- **GenAI Courses**: `GenAIBasics.razor`, `GenAIApplied.razor`, `GenAIAdvanced.razor` - All three
+- **GitHub Copilot**: `GitHubCopilotHandbook.razor`, `GitHubCopilotFeatures.razor`, `GitHubCopilotLevels.razor`, `GitHubCopilotVSCodeUpdates.razor` - All three
+- **Custom Pages with Interactivity**: `AISDLC.razor` - LoadCustomPagesInteractivity only
+- **DXSpace**: `DXSpace.razor` - All three (has code examples and diagrams)
+
+**Pages WITHOUT ConditionalScripts** (fast load):
+
+- `Home.razor` - No code/diagrams
+- `Section.razor` - Just content list
+- `SectionCollection.razor` - Just content list
+- `About.razor` - Static content
+
+**Performance Impact**:
+
+- **Before**: ~200KB+ JavaScript loaded on every page (Highlight.js core + 8 languages + Mermaid + TOC + custom-pages)
+- **After**: ~30KB on list/section pages (just Blazor framework + nav-helpers), additional scripts only on content pages
+- **Result**: 85% reduction in JavaScript for simple navigation pages
+
+**Implementation Details**:
+
+```razor
+@* ConditionalScripts.razor structure *@
+
+@if (LoadSyntaxHighlighting)
+{
+    <HeadContent>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+    </HeadContent>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
+    @* Language-specific scripts... *@
+}
+
+@if (LoadMermaid)
+{
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    </script>
+}
+
+@if (LoadTocScrollSpy)
+{
+    <script src="/js/toc-scroll-spy.js" defer></script>
+}
+
+@if (LoadCustomPagesInteractivity)
+{
+    <script src="/js/custom-pages.js" defer></script>
+}
+```
+
+**Key Benefits**:
+
+- ✅ **Faster initial page load** - Simple pages load 85% less JavaScript
+- ✅ **Better performance** - Only pay for what you use
+- ✅ **Maintainable** - Single component manages all conditional scripts
+- ✅ **Type-safe** - Boolean parameters prevent configuration errors
+- ✅ **Progressive enhancement** - Scripts load with `defer` attribute for non-blocking parsing
+
+### JavaScript Utilities
+
+**Navigation Helpers** (wwwroot/js/nav-helpers.js):
+
+Provides sticky bottom navigation buttons for improved user experience:
+
+- **Back to Top**: Smooth scroll to top of page (appears after scrolling 300px)
+- **Back to Previous**: Navigate to previous page in browser history
+
+**Key Features**:
+
+- Automatic show/hide based on scroll position (300px threshold)
+- Blazor enhanced navigation support (pageshow event + MutationObserver)
+- Proper cleanup and re-initialization after page navigation
+- CSS fade-in/fade-out transitions
+
+**Integration**: Automatically loaded in `App.razor`, no manual setup required.
+
+**TOC Scroll-Spy** (wwwroot/js/toc-scroll-spy.js):
+
+Automatically highlights table of contents links based on scroll position:
+
+- **CRITICAL**: Uses `history.replaceState()` instead of `pushState()` to update URL hash
+- This prevents polluting browser history with scroll positions
+- Only actual TOC link clicks create history entries
+- Enables clean "back to previous page" navigation
+
+**Pattern**:
+
+```javascript
+// ❌ WRONG - Creates history entry for every scroll update
+history.pushState(null, '', newUrl);
+
+// ✅ CORRECT - Updates URL without creating history entry
+history.replaceState(null, '', newUrl);
+```
+
+**Why This Matters**: When users navigate through anchors and scroll through content, only intentional navigation (clicking TOC links) should create history entries. Automatic scroll-spy updates should use `replaceState` so the back button takes users to the previous page, not the previous scroll position.
 
 ### Component Catalog Organization
 

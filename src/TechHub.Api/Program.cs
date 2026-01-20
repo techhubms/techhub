@@ -55,7 +55,6 @@ builder.Services.Configure<FilteringOptions>(builder.Configuration.GetSection("A
 builder.Services.AddSingleton<IMarkdownService, MarkdownService>();
 builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>();
 builder.Services.AddSingleton<IContentRepository, FileBasedContentRepository>();
-builder.Services.AddSingleton<ICustomPageRepository, FileBasedCustomPageRepository>();
 builder.Services.AddSingleton<IRssService, RssService>();
 builder.Services.AddSingleton<ISectionMappingService, SectionMappingService>();
 

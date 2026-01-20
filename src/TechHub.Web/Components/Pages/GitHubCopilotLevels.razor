@@ -1,7 +1,7 @@
 @page "/github-copilot/levels-of-enlightenment"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
-@using TechHub.Web.Components.Shared
+
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
@@ -19,20 +19,10 @@
 
     <main class="page-with-sidebar">
         <aside class="sidebar">
-            <nav class="sidebar-toc" aria-label="Table of contents">
-                <h2>Levels</h2>
-                <ul>
-                    <li><a href="#overview">Overview</a></li>
-                    @foreach (var level in pageData.Levels)
-                    {
-                        <li><a href="#level-@level.Number">Level @level.Number: @level.Title</a></li>
-                    }
-                    <li><a href="#conclusion">Conclusion</a></li>
-                </ul>
-            </nav>
+            <SidebarToc Items="@GetTocItems()" Title="Levels" />
         </aside>
 
-        <article class="page-main-content content-detail">
+        <article class="article-body">
             <div class="content-detail-header">
                 <h1 class="page-h1" tabindex="-1">@pageData.Title</h1>
                 @if (!string.IsNullOrWhiteSpace(pageData.Description))
@@ -48,8 +38,8 @@
                 </div>
 
                 @* Overview Section *@
-                <section id="overview" class="levels-section">
-                    <h2>Overview</h2>
+                <section class="levels-section">
+                    <h2 id="overview">Overview</h2>
                     <p>@pageData.Overview.Content</p>
                     @if (!string.IsNullOrEmpty(pageData.Overview.ImageUrl))
                     {
@@ -61,8 +51,8 @@
                 @* Each Level *@
                 @foreach (var level in pageData.Levels)
                 {
-                    <section id="level-@level.Number" class="levels-section levels-level">
-                        <h2>Level @level.Number: @level.Title</h2>
+                    <section class="levels-section levels-level">
+                        <h2 id="level-@level.Number">Level @level.Number: @level.Title</h2>
                         <p>@level.Description</p>
                         @if (!string.IsNullOrEmpty(level.YoutubeId))
                         {
@@ -78,8 +68,8 @@
                 }
 
                 @* Conclusion *@
-                <section id="conclusion" class="levels-section levels-conclusion">
-                    <h2>Conclusion</h2>
+                <section class="levels-section levels-conclusion">
+                    <h2 id="conclusion">Conclusion</h2>
                     <p>@pageData.Conclusion</p>
                     @if (!string.IsNullOrEmpty(pageData.PlaylistUrl))
                     {
@@ -93,8 +83,30 @@
     </main>
 }
 
+<ConditionalScripts LoadSyntaxHighlighting="true" LoadMermaid="true" LoadTocScrollSpy="true" />
+
 @code {
     private LevelsPageData? pageData;
+
+    private List<SidebarToc.TocItem> GetTocItems()
+    {
+        if (pageData == null)
+            return [];
+
+        var items = new List<SidebarToc.TocItem>
+{
+new(2, "overview", "Overview")
+};
+
+        foreach (var level in pageData.Levels)
+        {
+            items.Add(new SidebarToc.TocItem(2, $"level-{level.Number}", $"Level {level.Number}: {level.Title}"));
+        }
+
+        items.Add(new SidebarToc.TocItem(2, "conclusion", "Conclusion"));
+
+        return items;
+    }
 
     protected override async Task OnInitializedAsync()
     {

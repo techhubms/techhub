@@ -2,7 +2,7 @@
 @page "/github-copilot/vscode-updates/{VideoSlug}"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
-@using TechHub.Web.Components.Shared
+
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
@@ -48,7 +48,7 @@
             }
         </aside>
 
-        <article class="page-main-content content-detail">
+        <article class="article-body">
             @if (selectedVideoDetail != null)
             {
                 <ContentItemDetail Item="@selectedVideoDetail" />
@@ -60,6 +60,8 @@
         </article>
     </main>
 }
+
+<ConditionalScripts LoadSyntaxHighlighting="true" LoadMermaid="true" LoadTocScrollSpy="true" />
 
 @code {
     [Parameter]

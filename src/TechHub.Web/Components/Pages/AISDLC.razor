@@ -1,7 +1,7 @@
 @page "/ai/sdlc"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
-@using TechHub.Web.Components.Shared
+
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
@@ -23,236 +23,245 @@
 
     <main class="page-with-sidebar">
         <aside class="sidebar">
-            <nav class="sidebar-toc" aria-label="Table of contents">
-                <h2>SDLC Phases</h2>
-                <ul>
-                    @foreach (var phase in pageData.Phases)
-                    {
-                        <li><a href="#phase-@phase.Id">@phase.Name</a></li>
-                    }
-                </ul>
-                <h2>More</h2>
-                <ul>
-                    <li><a href="#preconditions">Preconditions</a></li>
-                    <li><a href="#benefits">Benefits</a></li>
-                    <li><a href="#metrics">Metrics</a></li>
-                    <li><a href="#challenges">Challenges</a></li>
-                    <li><a href="#methodologies">Methodologies</a></li>
-                </ul>
-            </nav>
+            <SidebarToc Items="@GetTocItems()" Title="Table of Contents" />
         </aside>
 
-        <article class="page-main-content content-detail">
-                <div class="content-detail-header">
-                    <h1 class="page-h1" tabindex="-1">@pageData.Title</h1>
-                    @if (!string.IsNullOrWhiteSpace(pageData.Description))
-                    {
-                        <p class="page-description">@pageData.Description</p>
-                    }
+        <article class="article-body">
+            <div class="content-detail-header">
+                <h1 class="page-h1" tabindex="-1">@pageData.Title</h1>
+                @if (!string.IsNullOrWhiteSpace(pageData.Description))
+                {
+                    <p class="page-description">@pageData.Description</p>
+                }
+            </div>
+
+            <div class="custom-page-container">
+                <div class="custom-page-intro">
+                    <p>@pageData.Intro</p>
                 </div>
 
-                <div class="custom-page-container">
-                    <div class="custom-page-intro">
-                        <p>@pageData.Intro</p>
-                    </div>
+                @* SDLC Phases *@
+                <section class="sdlc-phases">
+                    <h2>SDLC Phases</h2>
+                    @foreach (var phase in pageData.Phases)
+                    {
+                        <div class="sdlc-phase-card" style="border-left-color: @phase.Color;">
+                            <button class="sdlc-phase-header" type="button" aria-expanded="false">
+                                <span class="sdlc-phase-icon">@phase.Icon</span>
+                                <h3 id="phase-@phase.Id">@phase.Name</h3>
+                                <span class="sdlc-phase-toggle">▼</span>
+                            </button>
 
-                    @* SDLC Phases *@
-                    <section class="sdlc-phases">
-                        <h2>SDLC Phases</h2>
-                        @foreach (var phase in pageData.Phases)
-                        {
-                            <div id="phase-@phase.Id" class="sdlc-phase-card" style="border-left-color: @phase.Color;">
-                                <div class="sdlc-phase-header">
-                                    <span class="sdlc-phase-icon">@phase.Icon</span>
-                                    <h3>@phase.Name</h3>
+                            <div class="sdlc-phase-content">
+                                <div class="sdlc-phase-what">
+                                    <h4>What</h4>
+                                    <p>@phase.What</p>
                                 </div>
 
-                                <div class="sdlc-phase-content">
-                                    <div class="sdlc-phase-what">
-                                        <h4>What</h4>
-                                        <p>@phase.What</p>
+                                @if (!string.IsNullOrEmpty(phase.How))
+                                {
+                                    <div class="sdlc-phase-how">
+                                        <h4>How</h4>
+                                        <p>@phase.How</p>
                                     </div>
+                                }
 
-                                    @if (!string.IsNullOrEmpty(phase.How))
-                                    {
-                                        <div class="sdlc-phase-how">
-                                            <h4>How</h4>
-                                            <p>@phase.How</p>
-                                        </div>
-                                    }
+                                <div class="sdlc-phase-tools">
+                                    <h4>Tools</h4>
+                                    <ul>
+                                        @foreach (var tool in phase.Tools)
+                                        {
+                                            <li><a href="@tool.Url" target="_blank" rel="noopener">@tool.Name</a></li>
+                                        }
+                                    </ul>
+                                </div>
 
-                                    <div class="sdlc-phase-tools">
-                                        <h4>Tools</h4>
-                                        <ul>
-                                            @foreach (var tool in phase.Tools)
-                                            {
-                                                <li><a href="@tool.Url" target="_blank" rel="noopener">@tool.Name</a></li>
-                                            }
-                                        </ul>
+                                <div class="sdlc-phase-ai">
+                                    <h4>AI Enhancements</h4>
+                                    <p>@phase.AIEnhancements.Intro</p>
+                                    <div class="sdlc-roles">
+                                        @foreach (var role in phase.AIEnhancements.Roles)
+                                        {
+                                            <div class="sdlc-role">
+                                                <strong>@role.Role:</strong> @role.Content
+                                            </div>
+                                        }
                                     </div>
+                                </div>
 
-                                    <div class="sdlc-phase-ai">
-                                        <h4>AI Enhancements</h4>
-                                        <p>@phase.AIEnhancements.Intro</p>
-                                        <div class="sdlc-roles">
-                                            @foreach (var role in phase.AIEnhancements.Roles)
+                                @if (phase.TestingTypes != null)
+                                {
+                                    <div class="sdlc-phase-testing">
+                                        <h4>Testing Types</h4>
+                                        <div class="sdlc-testing-types">
+                                            @foreach (var testType in phase.TestingTypes)
                                             {
-                                                <div class="sdlc-role">
-                                                    <strong>@role.Role:</strong> @role.Content
+                                                <div class="sdlc-testing-type">
+                                                    <strong>@testType.Name:</strong> @testType.Description
                                                 </div>
                                             }
                                         </div>
                                     </div>
+                                }
 
-                                    @if (phase.TestingTypes != null)
-                                    {
-                                        <div class="sdlc-phase-testing">
-                                            <h4>Testing Types</h4>
-                                            <div class="sdlc-testing-types">
-                                                @foreach (var testType in phase.TestingTypes)
-                                                {
-                                                    <div class="sdlc-testing-type">
-                                                        <strong>@testType.Name:</strong> @testType.Description
-                                                    </div>
-                                                }
-                                            </div>
-                                        </div>
-                                    }
-
-                                    @if (!string.IsNullOrEmpty(phase.Handover))
-                                    {
-                                        <div class="sdlc-phase-handover">
-                                            <h4>Handover</h4>
-                                            <p>@phase.Handover</p>
-                                        </div>
-                                    }
-
-                                    <div class="sdlc-phase-best-practices">
-                                        <h4>Best Practices</h4>
-                                        <p>@phase.BestPractices</p>
+                                @if (!string.IsNullOrEmpty(phase.Handover))
+                                {
+                                    <div class="sdlc-phase-handover">
+                                        <h4>Handover</h4>
+                                        <p>@phase.Handover</p>
                                     </div>
+                                }
+
+                                <div class="sdlc-phase-best-practices">
+                                    <h4>Best Practices</h4>
+                                    <p>@phase.BestPractices</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </section>
+
+                @* Preconditions *@
+                <section class="sdlc-preconditions">
+                    <h2 id="preconditions">Preconditions for Success</h2>
+                    <div class="sdlc-preconditions-grid">
+                        @foreach (var precondition in pageData.Preconditions)
+                        {
+                            <div id="precondition-@precondition.Id" class="sdlc-precondition-card">
+                                <div class="sdlc-precondition-header">
+                                    <span class="sdlc-precondition-icon">@precondition.Icon</span>
+                                    <h3>@precondition.Title</h3>
+                                </div>
+                                <p>@precondition.Description</p>
+                                <div class="sdlc-precondition-actions">
+                                    <h4>Actions</h4>
+                                    <ul>
+                                        @foreach (var action in precondition.Actions)
+                                        {
+                                            <li>@action</li>
+                                        }
+                                    </ul>
+                                </div>
+                                @if (!string.IsNullOrEmpty(precondition.Example))
+                                {
+                                    <div class="sdlc-precondition-example">
+                                        <h4>Example</h4>
+                                        <p>@precondition.Example</p>
+                                    </div>
+                                }
+                                @if (!string.IsNullOrEmpty(precondition.Why))
+                                {
+                                    <div class="sdlc-precondition-why">
+                                        <h4>Why</h4>
+                                        <p>@precondition.Why</p>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    </div>
+                </section>
+
+                @* Benefits *@
+                <section class="sdlc-benefits">
+                    <h2 id="benefits">Benefits of AI in SDLC</h2>
+                    <div class="sdlc-benefits-grid">
+                        @foreach (var benefit in pageData.AdditionalInfo.Benefits)
+                        {
+                            <div class="sdlc-benefit-card">
+                                <span class="sdlc-benefit-icon">@benefit.Icon</span>
+                                <h3>@benefit.Title</h3>
+                                <p>@benefit.Description</p>
+                            </div>
+                        }
+                    </div>
+                </section>
+
+                @* Metrics *@
+                <section class="sdlc-metrics">
+                    <h2 id="metrics">Measuring Success</h2>
+                    <p>@pageData.AdditionalInfo.Metrics.Intro</p>
+                    <div class="sdlc-metrics-frameworks">
+                        @foreach (var framework in pageData.AdditionalInfo.Metrics.Frameworks)
+                        {
+                            <div class="sdlc-framework-card">
+                                <span class="sdlc-framework-icon">@framework.Icon</span>
+                                <h3>@framework.Name</h3>
+                                <p>@framework.Description</p>
+                            </div>
+                        }
+                    </div>
+                    <div class="sdlc-metrics-see-also">
+                        <a
+                            href="@pageData.AdditionalInfo.Metrics.SeeAlso.Url">@pageData.AdditionalInfo.Metrics.SeeAlso.Text</a>
+                    </div>
+                </section>
+
+                @* Challenges *@
+                <section class="sdlc-challenges">
+                    <h2 id="challenges">Challenges</h2>
+                    <div class="sdlc-challenges-grid">
+                        @foreach (var challenge in pageData.AdditionalInfo.Challenges)
+                        {
+                            <div class="sdlc-challenge-card">
+                                <h3>@challenge.Title</h3>
+                                <p>@challenge.Description</p>
+                            </div>
+                        }
+                    </div>
+                </section>
+
+                @* Methodologies *@
+                <section class="sdlc-methodologies">
+                    <h2 id="methodologies">Methodologies</h2>
+                    <div class="sdlc-methodologies-grid">
+                        @foreach (var methodology in pageData.AdditionalInfo.Methodologies)
+                        {
+                            <div class="sdlc-methodology-card">
+                                <h3>@methodology.Name</h3>
+                                <span class="sdlc-methodology-type">@methodology.Type</span>
+                                <p>@methodology.Description</p>
+                                <div class="sdlc-methodology-details">
+                                    <div><strong>Best For:</strong> @methodology.BestFor</div>
+                                    <div><strong>Cycle Time:</strong> @methodology.CycleTime</div>
+                                    <div><strong>Flexibility:</strong> @methodology.Flexibility</div>
                                 </div>
                             </div>
                         }
-                    </section>
-
-                    @* Preconditions *@
-                    <section id="preconditions" class="sdlc-preconditions">
-                        <h2>Preconditions for Success</h2>
-                        <div class="sdlc-preconditions-grid">
-                            @foreach (var precondition in pageData.Preconditions)
-                            {
-                                <div id="precondition-@precondition.Id" class="sdlc-precondition-card">
-                                    <div class="sdlc-precondition-header">
-                                        <span class="sdlc-precondition-icon">@precondition.Icon</span>
-                                        <h3>@precondition.Title</h3>
-                                    </div>
-                                    <p>@precondition.Description</p>
-                                    <div class="sdlc-precondition-actions">
-                                        <h4>Actions</h4>
-                                        <ul>
-                                            @foreach (var action in precondition.Actions)
-                                            {
-                                                <li>@action</li>
-                                            }
-                                        </ul>
-                                    </div>
-                                    @if (!string.IsNullOrEmpty(precondition.Example))
-                                    {
-                                        <div class="sdlc-precondition-example">
-                                            <h4>Example</h4>
-                                            <p>@precondition.Example</p>
-                                        </div>
-                                    }
-                                    @if (!string.IsNullOrEmpty(precondition.Why))
-                                    {
-                                        <div class="sdlc-precondition-why">
-                                            <h4>Why</h4>
-                                            <p>@precondition.Why</p>
-                                        </div>
-                                    }
-                                </div>
-                            }
-                        </div>
-                    </section>
-
-                    @* Benefits *@
-                    <section id="benefits" class="sdlc-benefits">
-                        <h2>Benefits of AI in SDLC</h2>
-                        <div class="sdlc-benefits-grid">
-                            @foreach (var benefit in pageData.AdditionalInfo.Benefits)
-                            {
-                                <div class="sdlc-benefit-card">
-                                    <span class="sdlc-benefit-icon">@benefit.Icon</span>
-                                    <h3>@benefit.Title</h3>
-                                    <p>@benefit.Description</p>
-                                </div>
-                            }
-                        </div>
-                    </section>
-
-                    @* Metrics *@
-                    <section id="metrics" class="sdlc-metrics">
-                        <h2>Measuring Success</h2>
-                        <p>@pageData.AdditionalInfo.Metrics.Intro</p>
-                        <div class="sdlc-metrics-frameworks">
-                            @foreach (var framework in pageData.AdditionalInfo.Metrics.Frameworks)
-                            {
-                                <div class="sdlc-framework-card">
-                                    <span class="sdlc-framework-icon">@framework.Icon</span>
-                                    <h3>@framework.Name</h3>
-                                    <p>@framework.Description</p>
-                                </div>
-                            }
-                        </div>
-                        <div class="sdlc-metrics-see-also">
-                            <a
-                                href="@pageData.AdditionalInfo.Metrics.SeeAlso.Url">@pageData.AdditionalInfo.Metrics.SeeAlso.Text</a>
-                        </div>
-                    </section>
-
-                    @* Challenges *@
-                    <section id="challenges" class="sdlc-challenges">
-                        <h2>Challenges</h2>
-                        <div class="sdlc-challenges-grid">
-                            @foreach (var challenge in pageData.AdditionalInfo.Challenges)
-                            {
-                                <div class="sdlc-challenge-card">
-                                    <h3>@challenge.Title</h3>
-                                    <p>@challenge.Description</p>
-                                </div>
-                            }
-                        </div>
-                    </section>
-
-                    @* Methodologies *@
-                    <section id="methodologies" class="sdlc-methodologies">
-                        <h2>Methodologies</h2>
-                        <div class="sdlc-methodologies-grid">
-                            @foreach (var methodology in pageData.AdditionalInfo.Methodologies)
-                            {
-                                <div class="sdlc-methodology-card">
-                                    <h3>@methodology.Name</h3>
-                                    <span class="sdlc-methodology-type">@methodology.Type</span>
-                                    <p>@methodology.Description</p>
-                                    <div class="sdlc-methodology-details">
-                                        <div><strong>Best For:</strong> @methodology.BestFor</div>
-                                        <div><strong>Cycle Time:</strong> @methodology.CycleTime</div>
-                                        <div><strong>Flexibility:</strong> @methodology.Flexibility</div>
-                                    </div>
-                                </div>
-                            }
-                        </div>
-                    </section>
-                </div>
-            </article>
-        </main>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </main>
 }
+
+<ConditionalScripts LoadSyntaxHighlighting="true" LoadMermaid="true" LoadTocScrollSpy="true"
+    LoadCustomPagesInteractivity="true" />
 
 @code {
     private SectionDto? sectionData;
     private SDLCPageData? pageData;
+    private List<SidebarToc.TocItem> GetTocItems()
+    {
+        if (pageData == null)
+            return [];
 
+        var items = new List<SidebarToc.TocItem>();
+
+        // SDLC Phases
+        foreach (var phase in pageData.Phases)
+        {
+            items.Add(new SidebarToc.TocItem(2, $"phase-{phase.Id}", phase.Name));
+        }
+
+        // Additional sections
+        items.Add(new SidebarToc.TocItem(2, "preconditions", "Preconditions"));
+        items.Add(new SidebarToc.TocItem(2, "benefits", "Benefits"));
+        items.Add(new SidebarToc.TocItem(2, "metrics", "Metrics"));
+        items.Add(new SidebarToc.TocItem(2, "challenges", "Challenges"));
+        items.Add(new SidebarToc.TocItem(2, "methodologies", "Methodologies"));
+
+        return items;
+    }
     protected override async Task OnInitializedAsync()
     {
         try

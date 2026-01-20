@@ -1,7 +1,7 @@
 @page "/{sectionName}/{collectionName}/{itemId}"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
-@using TechHub.Web.Components.Shared
+
 @using static TechHub.Web.Services.SectionHelper
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
@@ -31,13 +31,15 @@
     </aside>
 
     @* Main content area *@
-    <article class="page-main-content content-detail">
+    <article>
         @if (item != null)
         {
             <ContentItemDetail Item="@item" />
         }
     </article>
 </main>
+
+<ConditionalScripts LoadSyntaxHighlighting="true" LoadMermaid="true" LoadTocScrollSpy="true" />
 
 @code {
     [Inject] public required ErrorService ErrorService { get; set; }

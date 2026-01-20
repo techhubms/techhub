@@ -1,7 +1,7 @@
 @page "/{sectionName}"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
-@using TechHub.Web.Components.Shared
+
 @using static TechHub.Web.Services.SectionHelper
 @inject SectionCache SectionCache
 @inject NavigationManager Navigation
@@ -23,7 +23,7 @@
         <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"/{SectionName}/feed.xml") })" />
     </aside>
 
-    <section class="page-main-content">
+    <section >
         <ContentItemsGrid SectionName="@SectionName" CollectionName="all" FilterTags="@selectedTags" />
     </section>
 </main>

@@ -6,8 +6,8 @@ using TechHub.E2E.Tests.Helpers;
 namespace TechHub.E2E.Tests.Web;
 
 /// <summary>
-/// E2E tests for tag filtering functionality including toggle behavior and visual state
-/// Tests both SidebarTags and SidebarTagCloud components
+/// E2E tests for tag filtering functionality including toggle behavior and visual state.
+/// Tests SidebarTagCloud component for tag-based content filtering.
 /// </summary>
 [Collection("Tag Filtering Tests")]
 public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime

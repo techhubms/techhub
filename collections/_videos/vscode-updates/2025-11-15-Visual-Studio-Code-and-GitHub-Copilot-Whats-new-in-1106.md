@@ -1,5 +1,5 @@
 ---
-external_url: https://www.youtube.com/watch?v=zsCBEVCQ98I
+external_url: https://www.youtube.com/watch?v=8za-H1fWjaM
 title: Visual Studio Code and GitHub Copilot - What's new in 1.106
 author: Fokko Veegens
 viewing_mode: internal
@@ -22,7 +22,7 @@ section_names:
 ---
 VS Code 1.106 brings major improvements to GitHub Copilot workflows with plan-mode for safer code changes, unified agent sessions across local and cloud environments, and open-sourced inline completions. Fokko Veegens walks through the new features including enhanced trust controls, better terminal integration, and MCP server governance.<!--excerpt_end-->
 
-{% youtube n1Nsu_RwJ44 %}
+{% youtube 8za-H1fWjaM %}
 
 ## Full summary based on transcript
 

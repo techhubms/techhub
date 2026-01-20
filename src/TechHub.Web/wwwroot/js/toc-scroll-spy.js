@@ -3,6 +3,12 @@
  * 
  * Automatically highlights the TOC link for the currently visible heading.
  * Uses scrollend event for clean, reliable detection when scrolling stops.
+ * 
+ * CRITICAL: Uses history.replaceState() instead of pushState() to update URL hash.
+ * This prevents polluting browser history with scroll positions - only actual
+ * TOC link clicks create history entries, enabling clean back button navigation.
+ * 
+ * @see {@link /workspaces/techhub/src/TechHub.Web/AGENTS.md} for integration patterns
  */
 
 // Configuration: Detection line position as percentage of content viewport (0.0 to 1.0)
@@ -28,6 +34,45 @@ export class TocScrollSpy {
         this.boundHandleWheel = this.handleWheel.bind(this);
         this.boundHandleTouch = this.handleTouch.bind(this);
         this.ticking = false; // RAF throttle flag
+        this.debugOverlay = null; // Visual debug line
+        this.debugEnabled = false;
+
+        // Expose toggle function globally for console access
+        window.toggleTocDebug = this.toggleDebug.bind(this);
+    }
+
+    /**
+     * Toggle debug visualization (call from console: toggleTocDebug())
+     */
+    toggleDebug() {
+        this.debugEnabled = !this.debugEnabled;
+
+        if (this.debugEnabled) {
+            if (!this.debugOverlay) {
+                this.debugOverlay = document.createElement('div');
+                this.debugOverlay.style.cssText = `
+                    position: fixed;
+                    left: 0;
+                    right: 0;
+                    height: 3px;
+                    background: rgba(255, 0, 0, 0.8);
+                    z-index: 99999;
+                    pointer-events: none;
+                    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+                `;
+                document.body.appendChild(this.debugOverlay);
+            }
+            this.debugOverlay.style.display = 'block';
+            console.log('TOC Debug Mode: ENABLED - Red line shows detection position (30% from top of content area)');
+            console.log('Call toggleTocDebug() again to disable');
+            // Update position immediately
+            this.updateActiveHeading();
+        } else {
+            if (this.debugOverlay) {
+                this.debugOverlay.style.display = 'none';
+            }
+            console.log('TOC Debug Mode: DISABLED');
+        }
     }
 
     /**
@@ -206,9 +251,11 @@ export class TocScrollSpy {
             }
         }, 2000);
 
-        // Update URL hash without triggering scroll, preserving current path
+        // Update URL hash without triggering scroll or creating history entry
+        // CRITICAL: Use replaceState (not pushState) to avoid polluting browser history
+        // with every scroll position. Only actual TOC link clicks should create history.
         const newUrl = window.location.pathname + window.location.search + `#${headingId}`;
-        history.pushState(null, '', newUrl);
+        history.replaceState(null, '', newUrl);
     }
 
     /**
@@ -258,35 +305,19 @@ export class TocScrollSpy {
         const contentViewportHeight = window.innerHeight - STICKY_HEADER_OFFSET;
         const detectionLineFromTop = STICKY_HEADER_OFFSET + (contentViewportHeight * DETECTION_LINE_PERCENT);
 
-        const scrollTop = window.scrollY || window.pageYOffset;
-        const viewportBottom = scrollTop + window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-
-        // Special case: If we're near bottom of page (within 50px), activate the last heading
-        if (viewportBottom >= documentHeight - 50) {
-            const lastHeading = this.headings[this.headings.length - 1];
-            if (lastHeading) {
-                const lastId = lastHeading.getAttribute('id');
-                this.setActive(lastId);
-                return;
-            }
+        // Update debug overlay if enabled
+        if (this.debugOverlay) {
+            this.debugOverlay.style.top = `${detectionLineFromTop}px`;
         }
 
-        // Special case: Very top of page (scrollTop < 300px), activate first heading
-        if (scrollTop < 300) {
-            if (this.headings.length > 0) {
-                const firstId = this.headings[0].getAttribute('id');
-                this.setActive(firstId);
-                return;
-            }
-        }
-
-        // Find the heading CLOSEST to our detection line (40% from top of content area)
+        // Find the heading CLOSEST to our detection line (30% from top of content area)
         // Pick the heading that's above the line and closest to it
         let targetId = null;
         let closestDistance = Infinity;
-        const tolerance = 5; // Allow 5px tolerance for r
+        const tolerance = 5; // Allow 5px tolerance
 
+        // CRITICAL: Check ALL headings, don't break early
+        // Headings might not be evenly distributed (e.g., h2s with large gaps between them)
         for (let i = 0; i < this.headings.length; i++) {
             const heading = this.headings[i];
             const rect = heading.getBoundingClientRect();
@@ -301,10 +332,9 @@ export class TocScrollSpy {
                     closestDistance = distance;
                     targetId = heading.getAttribute('id');
                 }
-            } else {
-                // This heading is below the line, so stop
-                break;
             }
+            // Don't break - continue checking all headings even if some are below the line
+            // This handles cases where headings have large gaps between them
         }
 
         if (targetId) {
@@ -420,6 +450,16 @@ export class TocScrollSpy {
         window.removeEventListener('wheel', this.boundHandleWheel);
         window.removeEventListener('touchstart', this.boundHandleTouch);
         window.removeEventListener('keydown', this.boundHandleWheel);
+
+        // Clean up debug overlay
+        if (this.debugOverlay && this.debugOverlay.parentNode) {
+            this.debugOverlay.parentNode.removeChild(this.debugOverlay);
+        }
+
+        // Clean up global function
+        if (window.toggleTocDebug === this.toggleDebug) {
+            delete window.toggleTocDebug;
+        }
     }
 }
 
@@ -442,11 +482,31 @@ export function initTocScrollSpy() {
             return;
         }
 
+        // Clean up existing instance if it exists
+        if (tocElement._tocScrollSpy) {
+            tocElement._tocScrollSpy.destroy();
+            tocElement._tocScrollSpy = null;
+        }
+
         // Create and initialize the scroll spy
         const scrollSpy = new TocScrollSpy(tocElement, contentElement);
         scrollSpy.init();
 
         // Store instance for cleanup if needed
         tocElement._tocScrollSpy = scrollSpy;
+    });
+}
+
+/**
+ * Clean up all TOC scroll spy instances
+ */
+export function cleanupAllTocScrollSpies() {
+    const tocElements = document.querySelectorAll('[data-toc-scroll-spy]');
+
+    tocElements.forEach(tocElement => {
+        if (tocElement._tocScrollSpy) {
+            tocElement._tocScrollSpy.destroy();
+            tocElement._tocScrollSpy = null;
+        }
     });
 }

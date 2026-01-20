@@ -25,7 +25,7 @@ section_names:
 ---
 In VS Code 1.107 features like the new agent sessions integration with chat, better integration with background agents and the introduction of Claude skills were introduced. This video explains the new features by demoing them. Keep in mind that some features might not be available to you due to enterprise policies or a different pricing plan.<!--excerpt_end-->
 
-{% youtube 9zBRZE7zQhc %}
+{% youtube Pi57sH7iuKY %}
 
 ## Full summary based on transcript
 

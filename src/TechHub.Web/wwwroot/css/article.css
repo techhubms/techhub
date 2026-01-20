@@ -1,7 +1,7 @@
 /**
- * Markdown Content Rendering Styles
+ * Article Content Styles
  * 
- * Comprehensive styling for markdown-rendered HTML content including:
+ * Comprehensive styling for article content including:
  * - Headings with proper hierarchy
  * - Code blocks with syntax highlighting
  * - Blockquotes and callouts
@@ -13,24 +13,23 @@
  */
 
 /* =================================================================
-   Markdown Content Container
+   Article Body Container
    ================================================================= */
 
-.markdown-content,
-.content-detail-body {
+.article-body {
     font-size: var(--font-size-base);
     line-height: 1.7;
     color: var(--color-text-primary);
     word-wrap: break-word;
 }
 
-.content-detail-body ul {
+.article-body ul {
     line-height: 1.5;
 }
 
 /* Add scrollable space so last content can reach the detection line (40% from top)
    Spacer should be approximately the reading position offset, not full viewport */
-.content-detail-body::after {
+.article-body::after {
     content: '';
     display: block;
     height: 50vh;
@@ -41,18 +40,12 @@
    Headings
    ================================================================= */
 
-.markdown-content h1,
-.markdown-content h2,
-.markdown-content h3,
-.markdown-content h4,
-.markdown-content h5,
-.markdown-content h6,
-.content-detail-body h1,
-.content-detail-body h2,
-.content-detail-body h3,
-.content-detail-body h4,
-.content-detail-body h5,
-.content-detail-body h6 {
+.article-body h1,
+.article-body h2,
+.article-body h3,
+.article-body h4,
+.article-body h5,
+.article-body h6 {
     margin-top: var(--spacing-4);
     margin-bottom: var(--spacing-2);
     font-weight: 600;
@@ -60,20 +53,17 @@
     color: var(--color-text-emphasis);
 }
 
-.markdown-content h1:first-child,
-.content-detail-body h1:first-child {
+.article-body h1:first-child {
     margin-top: 0;
 }
 
-.markdown-content h1,
-.content-detail-body h1 {
+.article-body h1 {
     font-size: var(--font-size-3xl);
     border-bottom: 1px solid var(--color-border-muted);
     padding-bottom: var(--spacing-2);
 }
 
-.markdown-content h2,
-.content-detail-body h2 {
+.article-body h2 {
     font-size: var(--font-size-2xl);
     border-bottom: none;
     padding-bottom: var(--spacing-1);
@@ -83,26 +73,22 @@
     background-repeat: no-repeat;
 }
 
-.markdown-content h3,
-.content-detail-body h3 {
+.article-body h3 {
     font-size: var(--font-size-xl);
     padding-bottom: var(--spacing-1);
 }
 
-.markdown-content h4,
-.content-detail-body h4 {
+.article-body h4 {
     font-size: var(--font-size-lg);
     padding-bottom: var(--spacing-1);
 }
 
-.markdown-content h5,
-.content-detail-body h5 {
+.article-body h5 {
     font-size: var(--font-size-base);
     padding-bottom: var(--spacing-1);
 }
 
-.markdown-content h6,
-.content-detail-body h6 {
+.article-body h6 {
     font-size: var(--font-size-sm);
     color: var(--color-text-muted);
     padding-bottom: var(--spacing-1);
@@ -112,19 +98,16 @@
    Paragraphs and Text
    ================================================================= */
 
-.markdown-content p,
-.content-detail-body p {
+.article-body p {
     margin-top: 0;
     margin-bottom: var(--spacing-2);
 }
 
-.markdown-content strong,
-.content-detail-body strong {
+.article-body strong {
     font-weight: 600;
 }
 
-.markdown-content em,
-.content-detail-body em {
+.article-body em {
     font-style: italic;
 }
 
@@ -132,21 +115,18 @@
    Links
    ================================================================= */
 
-.markdown-content a,
-.content-detail-body a {
+.article-body a {
     color: var(--color-purple-bright);
     text-decoration: none;
 }
 
-.markdown-content a:hover,
-.content-detail-body a:hover {
+.article-body a:hover {
     text-decoration: underline;
     text-decoration-color: var(--color-purple-bright);
     text-underline-offset: 2px;
 }
 
-.markdown-content a:focus,
-.content-detail-body a:focus {
+.article-body a:focus {
     outline: 2px solid var(--color-purple-bright);
     outline-offset: 2px;
     border-radius: var(--radius-sm);
@@ -156,8 +136,7 @@
    Code Blocks and Inline Code
    ================================================================= */
 
-.markdown-content code,
-.content-detail-body code {
+.article-body code {
     font-family: var(--font-family-mono);
     font-size: 0.875em;
     background: rgba(189, 147, 249, 0.1);
@@ -166,8 +145,7 @@
     padding: 0.125rem 0.375rem;
 }
 
-.markdown-content pre,
-.content-detail-body pre {
+.article-body pre {
     background: #0d1117;
     border: 1px solid var(--color-border-default);
     border-radius: var(--radius-md);
@@ -177,8 +155,7 @@
     line-height: 1.5;
 }
 
-.markdown-content pre code,
-.content-detail-body pre code {
+.article-body pre code {
     background: none;
     border: none;
     padding: 0;
@@ -187,8 +164,7 @@
 }
 
 /* Syntax highlighting adjustments */
-.markdown-content pre code.hljs,
-.content-detail-body pre code.hljs {
+.article-body pre code.hljs {
     display: block;
     padding: 0;
     background: transparent;
@@ -198,8 +174,7 @@
    Blockquotes
    ================================================================= */
 
-.markdown-content blockquote,
-.content-detail-body blockquote {
+.article-body blockquote {
     margin: var(--spacing-3) 0;
     padding: 0 var(--spacing-2);
     border-left: 4px solid var(--color-primary);
@@ -207,13 +182,11 @@
     font-style: italic;
 }
 
-.markdown-content blockquote p:last-child,
-.content-detail-body blockquote p:last-child {
+.article-body blockquote p:last-child {
     margin-bottom: 0;
 }
 
-.markdown-content blockquote cite,
-.content-detail-body blockquote cite {
+.article-body blockquote cite {
     display: block;
     margin-top: var(--spacing-1);
     font-size: var(--font-size-sm);
@@ -225,45 +198,35 @@
    Lists
    ================================================================= */
 
-.markdown-content ul,
-.markdown-content ol,
-.content-detail-body ul,
-.content-detail-body ol {
+.article-body ul,
+.article-body ol {
     margin: var(--spacing-2) 0;
     padding-left: var(--spacing-4);
 }
 
-.markdown-content li,
-.content-detail-body li {
+.article-body li {
     margin-bottom: var(--spacing-1);
 }
 
-.markdown-content li>p,
-.content-detail-body li>p {
+.article-body li > p {
     margin-bottom: var(--spacing-1);
 }
 
-.markdown-content ul ul,
-.markdown-content ul ol,
-.markdown-content ol ul,
-.markdown-content ol ol,
-.content-detail-body ul ul,
-.content-detail-body ul ol,
-.content-detail-body ol ul,
-.content-detail-body ol ol {
+.article-body ul ul,
+.article-body ul ol,
+.article-body ol ul,
+.article-body ol ol {
     margin-top: var(--spacing-1);
     margin-bottom: var(--spacing-1);
 }
 
 /* Task Lists (GitHub-style checkboxes) */
-.markdown-content .task-list-item,
-.content-detail-body .task-list-item {
+.article-body .task-list-item {
     list-style-type: none;
     margin-left: calc(-1 * var(--spacing-3));
 }
 
-.markdown-content .task-list-item input[type="checkbox"],
-.content-detail-body .task-list-item input[type="checkbox"] {
+.article-body .task-list-item input[type="checkbox"] {
     margin-right: var(--spacing-1);
 }
 
@@ -271,8 +234,7 @@
    Tables
    ================================================================= */
 
-.markdown-content table,
-.content-detail-body table {
+.article-body table {
     width: 100%;
     border-collapse: collapse;
     margin: var(--spacing-3) 0;
@@ -280,33 +242,27 @@
     display: block;
 }
 
-.markdown-content thead,
-.content-detail-body thead {
+.article-body thead {
     background: var(--color-bg-subtle);
 }
 
-.markdown-content th,
-.markdown-content td,
-.content-detail-body th,
-.content-detail-body td {
+.article-body th,
+.article-body td {
     padding: var(--spacing-2);
     border: 1px solid var(--color-border-default);
     text-align: left;
 }
 
-.markdown-content th,
-.content-detail-body th {
+.article-body th {
     font-weight: 600;
     color: var(--color-text-emphasis);
 }
 
-.markdown-content tr:nth-child(even),
-.content-detail-body tr:nth-child(even) {
+.article-body tr:nth-child(even) {
     background: var(--color-bg-subtle);
 }
 
-.markdown-content tr:hover,
-.content-detail-body tr:hover {
+.article-body tr:hover {
     background: rgba(189, 147, 249, 0.05);
 }
 
@@ -314,8 +270,7 @@
    Horizontal Rules
    ================================================================= */
 
-.markdown-content hr,
-.content-detail-body hr {
+.article-body hr {
     height: 0;
     margin: var(--spacing-4) 0;
     border: 0;
@@ -326,22 +281,19 @@
    Images and Figures
    ================================================================= */
 
-.markdown-content img,
-.content-detail-body img {
+.article-body img {
     max-width: 100%;
     height: auto;
     border-radius: var(--radius-md);
     margin: var(--spacing-2) 0;
 }
 
-.markdown-content figure,
-.content-detail-body figure {
+.article-body figure {
     margin: var(--spacing-3) 0;
     text-align: center;
 }
 
-.markdown-content figcaption,
-.content-detail-body figcaption {
+.article-body figcaption {
     margin-top: var(--spacing-1);
     font-size: var(--font-size-sm);
     color: var(--color-text-muted);
@@ -352,8 +304,7 @@
    Custom Containers / Alerts (Markdig)
    ================================================================= */
 
-.markdown-content .alert,
-.content-detail-body .alert {
+.article-body .alert {
     padding: var(--spacing-2) var(--spacing-3);
     margin: var(--spacing-3) 0;
     border-left: 4px solid;
@@ -361,32 +312,27 @@
     background: var(--color-bg-subtle);
 }
 
-.markdown-content .alert-note,
-.content-detail-body .alert-note {
+.article-body .alert-note {
     border-color: #0969da;
     background: rgba(9, 105, 218, 0.1);
 }
 
-.markdown-content .alert-tip,
-.content-detail-body .alert-tip {
+.article-body .alert-tip {
     border-color: #1a7f37;
     background: rgba(26, 127, 55, 0.1);
 }
 
-.markdown-content .alert-important,
-.content-detail-body .alert-important {
+.article-body .alert-important {
     border-color: #8250df;
     background: rgba(130, 80, 223, 0.1);
 }
 
-.markdown-content .alert-warning,
-.content-detail-body .alert-warning {
+.article-body .alert-warning {
     border-color: #9a6700;
     background: rgba(154, 103, 0, 0.1);
 }
 
-.markdown-content .alert-caution,
-.content-detail-body .alert-caution {
+.article-body .alert-caution {
     border-color: #cf222e;
     background: rgba(207, 34, 46, 0.1);
 }
@@ -395,25 +341,21 @@
    Abbreviations and Definitions
    ================================================================= */
 
-.markdown-content abbr,
-.content-detail-body abbr {
+.article-body abbr {
     text-decoration: underline dotted;
     cursor: help;
 }
 
-.markdown-content dl,
-.content-detail-body dl {
+.article-body dl {
     margin: var(--spacing-2) 0;
 }
 
-.markdown-content dt,
-.content-detail-body dt {
+.article-body dt {
     font-weight: 600;
     margin-top: var(--spacing-2);
 }
 
-.markdown-content dd,
-.content-detail-body dd {
+.article-body dd {
     margin-left: var(--spacing-4);
     margin-bottom: var(--spacing-1);
 }
@@ -422,8 +364,7 @@
    Footnotes
    ================================================================= */
 
-.markdown-content .footnotes,
-.content-detail-body .footnotes {
+.article-body .footnotes {
     margin-top: var(--spacing-5);
     padding-top: var(--spacing-3);
     border-top: 1px solid var(--color-border-default);
@@ -431,8 +372,7 @@
     color: var(--color-text-muted);
 }
 
-.markdown-content .footnote-ref,
-.content-detail-body .footnote-ref {
+.article-body .footnote-ref {
     font-size: 0.75em;
     vertical-align: super;
 }
@@ -441,8 +381,7 @@
    Mermaid Diagrams
    ================================================================= */
 
-.markdown-content .mermaid,
-.content-detail-body .mermaid {
+.article-body .mermaid {
     margin: var(--spacing-3) 0;
     text-align: center;
     background: var(--color-bg-subtle);
@@ -455,8 +394,7 @@
    Math Blocks
    ================================================================= */
 
-.markdown-content .math,
-.content-detail-body .math {
+.article-body .math {
     overflow-x: auto;
     margin: var(--spacing-2) 0;
 }
@@ -467,23 +405,19 @@
 
 @media (max-width: 768px) {
 
-    .markdown-content table,
-    .content-detail-body table {
+    .article-body table {
         font-size: var(--font-size-sm);
     }
 
-    .markdown-content pre,
-    .content-detail-body pre {
+    .article-body pre {
         padding: var(--spacing-2);
     }
 
-    .markdown-content h1,
-    .content-detail-body h1 {
+    .article-body h1 {
         font-size: var(--font-size-2xl);
     }
 
-    .markdown-content h2,
-    .content-detail-body h2 {
+    .article-body h2 {
         font-size: var(--font-size-xl);
     }
 }
@@ -492,8 +426,7 @@
    Video Embeds (YouTube)
    ================================================================= */
 
-.markdown-content .video-container,
-.content-detail-body .video-container {
+.article-body .video-container {
     position: relative;
     width: 100%;
     max-width: 960px;
@@ -504,8 +437,7 @@
     overflow: hidden;
 }
 
-.markdown-content .video-container iframe,
-.content-detail-body .video-container iframe {
+.article-body .video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -521,19 +453,16 @@
 
 @media print {
 
-    .markdown-content,
-    .content-detail-body {
+    .article-body {
         color: #000;
     }
 
-    .markdown-content a,
-    .content-detail-body a {
+    .article-body a {
         color: #000;
         text-decoration: underline;
     }
 
-    .markdown-content pre,
-    .content-detail-body pre {
+    .article-body pre {
         border: 1px solid #000;
         page-break-inside: avoid;
     }

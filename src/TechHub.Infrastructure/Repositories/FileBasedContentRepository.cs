@@ -28,8 +28,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         "_videos",
         "_community",
         "_blogs",
-        "_roundups",
-        "_custom"
+        "_roundups"
     ];
 
     public FileBasedContentRepository(
@@ -156,17 +155,25 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     /// Get content items filtered by collection name.
     /// Filters from cached in-memory data.
     /// Returns items sorted by date (DateEpoch) in descending order (newest first).
+    /// Special case: collectionName="all" returns all content across all collections.
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
         string collectionName,
         CancellationToken cancellationToken = default)
     {
         ArgumentNullException.ThrowIfNull(collectionName);
-        // Normalize collection name (add _ prefix if missing)
-        var normalizedCollection = collectionName.StartsWith('_') ? collectionName : $"_{collectionName}";
 
         // Load all items (from cache if available)
         var allItems = await GetAllAsync(cancellationToken);
+
+        // Handle virtual "all" collection - return all content
+        if (collectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            return [.. allItems.OrderByDescending(x => x.DateEpoch)];
+        }
+
+        // Normalize collection name (add _ prefix if missing)
+        var normalizedCollection = collectionName.StartsWith('_') ? collectionName : $"_{collectionName}";
 
         // Filter by collection
         return [.. allItems
@@ -179,14 +186,22 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     /// Matches against the SectionNames property which contains lowercase section names like "ai", "github-copilot".
     /// Filters from cached in-memory data.
     /// Returns items sorted by date (DateEpoch) in descending order (newest first).
+    /// Special case: sectionName="all" returns all content across all sections.
     /// </summary>
-    /// <param name="sectionName">Section name (lowercase, e.g., "ai", "github-copilot") - matches section.Name</param>
+    /// <param name="sectionName">Section name (lowercase, e.g., "ai", "github-copilot") or "all" for all sections</param>
     /// <param name="cancellationToken">Cancellation token</param>
     public async Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
         string sectionName,
         CancellationToken cancellationToken = default)
     {
         var allItems = await GetAllAsync(cancellationToken);
+
+        // Handle virtual "all" section - return all content
+        if (sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            return [.. allItems.OrderByDescending(x => x.DateEpoch)];
+        }
+
         return [.. allItems
             .Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
             .OrderByDescending(x => x.DateEpoch)];

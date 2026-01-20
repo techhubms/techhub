@@ -1,0 +1,75 @@
+/* ============================================================================
+   Navigation Helper Buttons
+   
+   Sticky bottom buttons for back to top and back to previous page
+   ============================================================================ */
+
+.nav-helper-buttons {
+    position: fixed;
+    bottom: var(--spacing-4);
+    right: var(--spacing-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+    z-index: 900;
+    /* Below modals (1000) but above content */
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity var(--duration-normal) var(--easing-ease),
+        transform var(--duration-normal) var(--easing-ease);
+}
+
+.nav-helper-buttons.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.nav-helper-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--color-purple-dark);
+    color: var(--color-text-on-emphasis);
+    border: 1px solid var(--color-purple-medium);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    transition: all var(--duration-fast) var(--easing-ease);
+}
+
+.nav-helper-btn:hover {
+    background: var(--color-purple-medium);
+    transform: scale(1.1);
+    box-shadow: var(--shadow-xl);
+}
+
+.nav-helper-btn:active {
+    transform: scale(0.95);
+}
+
+.nav-helper-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .nav-helper-buttons {
+        bottom: var(--spacing-3);
+        right: var(--spacing-3);
+    }
+
+    .nav-helper-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .nav-helper-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+}

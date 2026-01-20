@@ -1,7 +1,7 @@
 @page "/devops/dx-space"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
-@using TechHub.Web.Components.Shared
+
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
@@ -23,374 +23,382 @@
 
     <main class="page-with-sidebar">
         <aside class="sidebar">
-            <nav class="sidebar-toc" aria-label="Table of contents">
-                <h2>Table of Contents</h2>
-                <ul>
-                    <li><a href="#dx-card-dora">@pageData.Dora.Title</a></li>
-                    <li><a href="#dx-card-space">@pageData.Space.Title</a></li>
-                    <li><a href="#dx-card-devex">@pageData.DevEx.Title</a></li>
-                    <li><a href="#dx-card-relationships">@pageData.Relationships.Title</a></li>
-                    <li><a href="#dx-card-getting-started">@pageData.GettingStarted.Title</a></li>
-                    <li><a href="#dx-card-tools">@pageData.Tools.Title</a></li>
-                    <li><a href="#dx-card-best-practices">@pageData.BestPractices.Title</a></li>
-                </ul>
-            </nav>
+            <SidebarToc Items="@GetTocItems()" Title="Table of Contents" />
         </aside>
 
-        <article class="page-main-content content-detail">
-                <div class="content-detail-header">
-                    <h1 class="page-h1" tabindex="-1">@pageData.Title</h1>
-                    @if (!string.IsNullOrWhiteSpace(pageData.Description))
-                    {
-                        <p class="page-description">@pageData.Description</p>
-                    }
+        <article class="article-body">
+            <div class="content-detail-header">
+                <h1 class="page-h1" tabindex="-1">@pageData.Title</h1>
+                @if (!string.IsNullOrWhiteSpace(pageData.Description))
+                {
+                    <p class="page-description">@pageData.Description</p>
+                }
+            </div>
+
+            <div class="dx-container">
+                @* Intro Section *@
+                <div class="dx-intro">
+                    <p>@pageData.Intro.Content</p>
+                    <blockquote class="dx-quote">
+                        "@pageData.Intro.Quote.Text"
+                        <cite>— @pageData.Intro.Quote.Author</cite>
+                    </blockquote>
                 </div>
 
-                <div class="dx-container">
-                    @* Intro Section *@
-                    <div class="dx-intro">
-                        <p>@pageData.Intro.Content</p>
-                        <blockquote class="dx-quote">
-                            "@pageData.Intro.Quote.Text"
-                            <cite>— @pageData.Intro.Quote.Author</cite>
-                        </blockquote>
-                    </div>
-
-                    @* DORA Section *@
-                    <section class="dx-section-card" id="dx-card-dora">
-                        <button class="dx-card-header" @onclick="() => ToggleSection(0)" aria-expanded="@IsExpanded(0)">
-                            <span>@pageData.Dora.Title</span>
-                            <span class="dx-card-icon @(IsExpanded(0) ? "expanded" : "")">▼</span>
-                        </button>
-                        <div class="dx-card-content @(IsExpanded(0) ? "expanded" : "")">
-                            <div class="dx-section-intro">
-                                <h3>@pageData.Dora.IntroHeading</h3>
-                                @foreach (var paragraph in pageData.Dora.IntroContent)
-                                {
-                                    <p>@paragraph</p>
-                                }
-                            </div>
-
-                            <h3>@pageData.Dora.MetricsHeading</h3>
-                            <div class="dx-metrics-grid">
-                                @foreach (var metric in pageData.Dora.Metrics)
-                                {
-                                    <div class="dx-metric-card">
-                                        <span class="dx-metric-icon">@metric.Icon</span>
-                                        <div>
-                                            <strong>@metric.Name</strong>
-                                            <p class="dx-metric-question">@metric.Question</p>
-                                            <div class="dx-metric-detail">
-                                                <h4>Why it matters:</h4>
-                                                <p>@metric.WhyItMatters</p>
-                                                <h4>Elite performance:</h4>
-                                                <p>@metric.ElitePerformance</p>
-                                                <h4>How to improve:</h4>
-                                                <ul>
-                                                    @foreach (var improvement in metric.Improvements)
-                                                    {
-                                                        <li>@improvement</li>
-                                                    }
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                }
-                            </div>
-
-                            <div class="dx-insight-box">
-                                <h4>@pageData.Dora.Insight.Heading</h4>
-                                <p>@pageData.Dora.Insight.Content</p>
-                            </div>
+                @* DORA Section *@
+                <section class="dx-section-card">
+                    <button class="dx-card-header" @onclick="() => ToggleSection(0)" aria-expanded="@IsExpanded(0)">
+                        <h2 id="dx-card-dora">@pageData.Dora.Title</h2>
+                        <span class="dx-card-icon @(IsExpanded(0) ? "expanded" : "")">▼</span>
+                    </button>
+                    <div class="dx-card-content @(IsExpanded(0) ? "expanded" : "")">
+                        <div class="dx-section-intro">
+                            <h3>@pageData.Dora.IntroHeading</h3>
+                            @foreach (var paragraph in pageData.Dora.IntroContent)
+                            {
+                                <p>@paragraph</p>
+                            }
                         </div>
-                    </section>
 
-                    @* SPACE Section *@
-                    <section class="dx-section-card" id="dx-card-space">
-                        <button class="dx-card-header" @onclick="() => ToggleSection(1)" aria-expanded="@IsExpanded(1)">
-                            <span>@pageData.Space.Title</span>
-                            <span class="dx-card-icon @(IsExpanded(1) ? "expanded" : "")">▼</span>
-                        </button>
-                        <div class="dx-card-content @(IsExpanded(1) ? "expanded" : "")">
-                            <div class="dx-section-intro">
-                                <h3>@pageData.Space.IntroHeading</h3>
-                                @foreach (var paragraph in pageData.Space.IntroContent)
-                                {
-                                    <p>@paragraph</p>
-                                }
-                            </div>
-
-                            <h3>@pageData.Space.DimensionsHeading</h3>
-                            <div class="dx-space-grid">
-                                @foreach (var dimension in pageData.Space.Dimensions)
-                                {
-                                    <div class="dx-space-card" data-letter="@dimension.Letter">
-                                        <div class="dx-space-letter">@dimension.Letter</div>
-                                        <div class="dx-space-content">
-                                            <strong>@dimension.Name</strong>
-                                            <p>@dimension.Description</p>
-                                            <div class="dx-space-detail">
-                                                <h4>Why it matters:</h4>
-                                                <p>@dimension.WhyItMatters</p>
-                                                <h4>Example metrics:</h4>
-                                                <ul>
-                                                    @foreach (var metric in dimension.ExampleMetrics)
-                                                    {
-                                                        <li>@metric</li>
-                                                    }
-                                                </ul>
-                                                <h4>How to measure:</h4>
-                                                <p>@dimension.AdditionalInfo</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                }
-                            </div>
-
-                            <div class="dx-insight-box">
-                                <h4>@pageData.Space.Insight.Heading</h4>
-                                <p>@pageData.Space.Insight.Content</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    @* DevEx Section *@
-                    <section class="dx-section-card" id="dx-card-devex">
-                        <button class="dx-card-header" @onclick="() => ToggleSection(2)" aria-expanded="@IsExpanded(2)">
-                            <span>@pageData.DevEx.Title</span>
-                            <span class="dx-card-icon @(IsExpanded(2) ? "expanded" : "")">▼</span>
-                        </button>
-                        <div class="dx-card-content @(IsExpanded(2) ? "expanded" : "")">
-                            <div class="dx-section-intro">
-                                <h3>@pageData.DevEx.IntroHeading</h3>
-                                @foreach (var paragraph in pageData.DevEx.IntroContent)
-                                {
-                                    <p>@paragraph</p>
-                                }
-                            </div>
-
-                            <div class="dx-stats-grid">
-                                @foreach (var stat in pageData.DevEx.Stats)
-                                {
-                                    <div class="dx-stat-card">
-                                        <span class="dx-stat-number">@stat.Number</span>
-                                        <p>@stat.Description</p>
-                                    </div>
-                                }
-                            </div>
-
-                            <h3>@pageData.DevEx.DimensionsHeading</h3>
-                            <div class="dx-devex-grid">
-                                @foreach (var dimension in pageData.DevEx.Dimensions)
-                                {
-                                    <div class="dx-devex-card">
-                                        <span class="dx-devex-icon">@dimension.Icon</span>
-                                        <div>
-                                            <strong>@dimension.Name</strong>
-                                            <p>@dimension.Description</p>
-                                            <h4>@dimension.FactorsHeading</h4>
+                        <h3>@pageData.Dora.MetricsHeading</h3>
+                        <div class="dx-metrics-grid">
+                            @foreach (var metric in pageData.Dora.Metrics)
+                            {
+                                <div class="dx-metric-card">
+                                    <span class="dx-metric-icon">@metric.Icon</span>
+                                    <div>
+                                        <strong>@metric.Name</strong>
+                                        <p class="dx-metric-question">@metric.Question</p>
+                                        <div class="dx-metric-detail">
+                                            <h4>Why it matters:</h4>
+                                            <p>@metric.WhyItMatters</p>
+                                            <h4>Elite performance:</h4>
+                                            <p>@metric.ElitePerformance</p>
+                                            <h4>How to improve:</h4>
                                             <ul>
-                                                @foreach (var factor in dimension.Factors)
-                                                {
-                                                    <li>@factor</li>
-                                                }
-                                            </ul>
-                                            <h4>@dimension.ImprovementHeading</h4>
-                                            <ul>
-                                                @foreach (var improvement in dimension.Improvements)
+                                                @foreach (var improvement in metric.Improvements)
                                                 {
                                                     <li>@improvement</li>
                                                 }
                                             </ul>
                                         </div>
                                     </div>
-                                }
-                            </div>
-
-                            <div class="dx-insight-box">
-                                <h4>@pageData.DevEx.Insight.Heading</h4>
-                                <p>@pageData.DevEx.Insight.Content</p>
-                            </div>
+                                </div>
+                            }
                         </div>
-                    </section>
 
-                    @* Relationships Section *@
-                    <section class="dx-section-card" id="dx-card-relationships">
-                        <button class="dx-card-header" @onclick="() => ToggleSection(3)" aria-expanded="@IsExpanded(3)">
-                            <span>@pageData.Relationships.Title</span>
-                            <span class="dx-card-icon @(IsExpanded(3) ? "expanded" : "")">▼</span>
-                        </button>
-                        <div class="dx-card-content @(IsExpanded(3) ? "expanded" : "")">
-                            <div class="dx-section-intro">
-                                <h3>@pageData.Relationships.IntroHeading</h3>
-                                <p>@pageData.Relationships.IntroContent</p>
-                            </div>
+                        <div class="dx-insight-box">
+                            <h4>@pageData.Dora.Insight.Heading</h4>
+                            <p>@pageData.Dora.Insight.Content</p>
+                        </div>
+                    </div>
+                </section>
 
-                            <div class="dx-relationship-diagram">
-                                @foreach (var framework in pageData.Relationships.Frameworks)
-                                {
-                                    <div class="dx-relationship-item">
-                                        <div class="dx-relationship-header">
-                                            <span class="dx-relationship-icon">@framework.Icon</span>
-                                            <strong>@framework.Name</strong>
+                @* SPACE Section *@
+                <section class="dx-section-card">
+                    <button class="dx-card-header" @onclick="() => ToggleSection(1)" aria-expanded="@IsExpanded(1)">
+                        <h2 id="dx-card-space">@pageData.Space.Title</h2>
+                        <span class="dx-card-icon @(IsExpanded(1) ? "expanded" : "")">▼</span>
+                    </button>
+                    <div class="dx-card-content @(IsExpanded(1) ? "expanded" : "")">
+                        <div class="dx-section-intro">
+                            <h3>@pageData.Space.IntroHeading</h3>
+                            @foreach (var paragraph in pageData.Space.IntroContent)
+                            {
+                                <p>@paragraph</p>
+                            }
+                        </div>
+
+                        <h3>@pageData.Space.DimensionsHeading</h3>
+                        <div class="dx-space-grid">
+                            @foreach (var dimension in pageData.Space.Dimensions)
+                            {
+                                <div class="dx-space-card" data-letter="@dimension.Letter">
+                                    <div class="dx-space-letter">@dimension.Letter</div>
+                                    <div class="dx-space-content">
+                                        <strong>@dimension.Name</strong>
+                                        <p>@dimension.Description</p>
+                                        <div class="dx-space-detail">
+                                            <h4>Why it matters:</h4>
+                                            <p>@dimension.WhyItMatters</p>
+                                            <h4>Example metrics:</h4>
+                                            <ul>
+                                                @foreach (var metric in dimension.ExampleMetrics)
+                                                {
+                                                    <li>@metric</li>
+                                                }
+                                            </ul>
+                                            <h4>How to measure:</h4>
+                                            <p>@dimension.AdditionalInfo</p>
                                         </div>
-                                        <p><strong>Focus:</strong> @framework.Focus</p>
-                                        <p><strong>Scope:</strong> @framework.Scope</p>
-                                        <p><strong>Best for:</strong> @framework.BestFor</p>
-                                        <p><strong>Note:</strong> @framework.AdditionalInfo</p>
                                     </div>
-                                    @if (framework != pageData.Relationships.Frameworks.Last())
-                                    {
-                                        <div class="dx-relationship-arrow">↔</div>
-                                    }
-                                }
-                            </div>
+                                </div>
+                            }
+                        </div>
 
-                            <h3>@pageData.Relationships.ChoiceHeading</h3>
-                            <div class="dx-choice-grid">
-                                @foreach (var choice in pageData.Relationships.Choices)
-                                {
-                                    <div class="dx-choice-card">
-                                        <h4>@choice.Title</h4>
+                        <div class="dx-insight-box">
+                            <h4>@pageData.Space.Insight.Heading</h4>
+                            <p>@pageData.Space.Insight.Content</p>
+                        </div>
+                    </div>
+                </section>
+
+                @* DevEx Section *@
+                <section class="dx-section-card">
+                    <button class="dx-card-header" @onclick="() => ToggleSection(2)" aria-expanded="@IsExpanded(2)">
+                        <h2 id="dx-card-devex">@pageData.DevEx.Title</h2>
+                        <span class="dx-card-icon @(IsExpanded(2) ? "expanded" : "")">▼</span>
+                    </button>
+                    <div class="dx-card-content @(IsExpanded(2) ? "expanded" : "")">
+                        <div class="dx-section-intro">
+                            <h3>@pageData.DevEx.IntroHeading</h3>
+                            @foreach (var paragraph in pageData.DevEx.IntroContent)
+                            {
+                                <p>@paragraph</p>
+                            }
+                        </div>
+
+                        <div class="dx-stats-grid">
+                            @foreach (var stat in pageData.DevEx.Stats)
+                            {
+                                <div class="dx-stat-card">
+                                    <span class="dx-stat-number">@stat.Number</span>
+                                    <p>@stat.Description</p>
+                                </div>
+                            }
+                        </div>
+
+                        <h3>@pageData.DevEx.DimensionsHeading</h3>
+                        <div class="dx-devex-grid">
+                            @foreach (var dimension in pageData.DevEx.Dimensions)
+                            {
+                                <div class="dx-devex-card">
+                                    <span class="dx-devex-icon">@dimension.Icon</span>
+                                    <div>
+                                        <strong>@dimension.Name</strong>
+                                        <p>@dimension.Description</p>
+                                        <h4>@dimension.FactorsHeading</h4>
                                         <ul>
-                                            @foreach (var point in choice.Points)
+                                            @foreach (var factor in dimension.Factors)
                                             {
-                                                <li>@point</li>
+                                                <li>@factor</li>
+                                            }
+                                        </ul>
+                                        <h4>@dimension.ImprovementHeading</h4>
+                                        <ul>
+                                            @foreach (var improvement in dimension.Improvements)
+                                            {
+                                                <li>@improvement</li>
                                             }
                                         </ul>
                                     </div>
-                                }
-                            </div>
-
-                            <div class="dx-insight-box">
-                                <h4>@pageData.Relationships.Insight.Heading</h4>
-                                <p>@pageData.Relationships.Insight.Content</p>
-                            </div>
+                                </div>
+                            }
                         </div>
-                    </section>
 
-                    @* Getting Started Section *@
-                    <section class="dx-section-card" id="dx-card-getting-started">
-                        <button class="dx-card-header" @onclick="() => ToggleSection(4)" aria-expanded="@IsExpanded(4)">
-                            <span>@pageData.GettingStarted.Title</span>
-                            <span class="dx-card-icon @(IsExpanded(4) ? "expanded" : "")">▼</span>
-                        </button>
-                        <div class="dx-card-content @(IsExpanded(4) ? "expanded" : "")">
-                            <div class="dx-section-intro">
-                                <h3>@pageData.GettingStarted.IntroHeading</h3>
-                                <p>@pageData.GettingStarted.IntroContent</p>
-                            </div>
+                        <div class="dx-insight-box">
+                            <h4>@pageData.DevEx.Insight.Heading</h4>
+                            <p>@pageData.DevEx.Insight.Content</p>
+                        </div>
+                    </div>
+                </section>
 
-                            <h3>@pageData.GettingStarted.StepsHeading</h3>
-                            <div class="dx-steps-list">
-                                @foreach (var step in pageData.GettingStarted.Steps)
+                @* Relationships Section *@
+                <section class="dx-section-card">
+                    <button class="dx-card-header" @onclick="() => ToggleSection(3)" aria-expanded="@IsExpanded(3)">
+                        <h2 id="dx-card-relationships">@pageData.Relationships.Title</h2>
+                        <span class="dx-card-icon @(IsExpanded(3) ? "expanded" : "")">▼</span>
+                    </button>
+                    <div class="dx-card-content @(IsExpanded(3) ? "expanded" : "")">
+                        <div class="dx-section-intro">
+                            <h3>@pageData.Relationships.IntroHeading</h3>
+                            <p>@pageData.Relationships.IntroContent</p>
+                        </div>
+
+                        <div class="dx-relationship-diagram">
+                            @foreach (var framework in pageData.Relationships.Frameworks)
+                            {
+                                <div class="dx-relationship-item">
+                                    <div class="dx-relationship-header">
+                                        <span class="dx-relationship-icon">@framework.Icon</span>
+                                        <strong>@framework.Name</strong>
+                                    </div>
+                                    <p><strong>Focus:</strong> @framework.Focus</p>
+                                    <p><strong>Scope:</strong> @framework.Scope</p>
+                                    <p><strong>Best for:</strong> @framework.BestFor</p>
+                                    <p><strong>Note:</strong> @framework.AdditionalInfo</p>
+                                </div>
+                                @if (framework != pageData.Relationships.Frameworks.Last())
                                 {
-                                    <div class="dx-step">
-                                        <span class="dx-step-number">@step.Number</span>
-                                        <div class="dx-step-content">
-                                            <strong>@step.Title</strong>
-                                            <p>@step.Description</p>
-                                            <div class="dx-step-tips">
-                                                <h4>@step.TipsHeading</h4>
-                                                <ul>
-                                                    @foreach (var tip in step.Tips)
-                                                    {
-                                                        <li>@tip</li>
-                                                    }
-                                                </ul>
-                                            </div>
+                                    <div class="dx-relationship-arrow">↔</div>
+                                }
+                            }
+                        </div>
+
+                        <h3>@pageData.Relationships.ChoiceHeading</h3>
+                        <div class="dx-choice-grid">
+                            @foreach (var choice in pageData.Relationships.Choices)
+                            {
+                                <div class="dx-choice-card">
+                                    <h4>@choice.Title</h4>
+                                    <ul>
+                                        @foreach (var point in choice.Points)
+                                        {
+                                            <li>@point</li>
+                                        }
+                                    </ul>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="dx-insight-box">
+                            <h4>@pageData.Relationships.Insight.Heading</h4>
+                            <p>@pageData.Relationships.Insight.Content</p>
+                        </div>
+                    </div>
+                </section>
+
+                @* Getting Started Section *@
+                <section class="dx-section-card">
+                    <button class="dx-card-header" @onclick="() => ToggleSection(4)" aria-expanded="@IsExpanded(4)">
+                        <h2 id="dx-card-getting-started">@pageData.GettingStarted.Title</h2>
+                        <span class="dx-card-icon @(IsExpanded(4) ? "expanded" : "")">▼</span>
+                    </button>
+                    <div class="dx-card-content @(IsExpanded(4) ? "expanded" : "")">
+                        <div class="dx-section-intro">
+                            <h3>@pageData.GettingStarted.IntroHeading</h3>
+                            <p>@pageData.GettingStarted.IntroContent</p>
+                        </div>
+
+                        <h3>@pageData.GettingStarted.StepsHeading</h3>
+                        <div class="dx-steps-list">
+                            @foreach (var step in pageData.GettingStarted.Steps)
+                            {
+                                <div class="dx-step">
+                                    <span class="dx-step-number">@step.Number</span>
+                                    <div class="dx-step-content">
+                                        <strong>@step.Title</strong>
+                                        <p>@step.Description</p>
+                                        <div class="dx-step-tips">
+                                            <h4>@step.TipsHeading</h4>
+                                            <ul>
+                                                @foreach (var tip in step.Tips)
+                                                {
+                                                    <li>@tip</li>
+                                                }
+                                            </ul>
                                         </div>
                                     </div>
-                                }
-                            </div>
-                        </div>
-                    </section>
-
-                    @* Tools Section *@
-                    <section class="dx-section-card" id="dx-card-tools">
-                        <button class="dx-card-header" @onclick="() => ToggleSection(5)" aria-expanded="@IsExpanded(5)">
-                            <span>@pageData.Tools.Title</span>
-                            <span class="dx-card-icon @(IsExpanded(5) ? "expanded" : "")">▼</span>
-                        </button>
-                        <div class="dx-card-content @(IsExpanded(5) ? "expanded" : "")">
-                            <div class="dx-section-intro">
-                                <h3>@pageData.Tools.IntroHeading</h3>
-                                <p>@pageData.Tools.IntroContent</p>
-                            </div>
-
-                            <h3>@pageData.Tools.ToolsHeading</h3>
-                            <div class="dx-tools-grid">
-                                @foreach (var tool in pageData.Tools.Tools)
-                                {
-                                    <div class="dx-tool-card">
-                                        <strong>@tool.Name</strong>
-                                        <p class="dx-tool-type">@tool.Type</p>
-                                        <p>@tool.Description</p>
-                                    </div>
-                                }
-                            </div>
-
-                            <h3>@pageData.Tools.ResourcesHeading</h3>
-                            <div class="dx-resources-list">
-                                @foreach (var resource in pageData.Tools.Resources)
-                                {
-                                    <div class="dx-resource">
-                                        <strong>@resource.Icon @resource.Title</strong>
-                                        <p>@resource.Description</p>
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                    </section>
-
-                    @* Best Practices Section *@
-                    <section class="dx-section-card" id="dx-card-best-practices">
-                        <button class="dx-card-header" @onclick="() => ToggleSection(6)" aria-expanded="@IsExpanded(6)">
-                            <span>@pageData.BestPractices.Title</span>
-                            <span class="dx-card-icon @(IsExpanded(6) ? "expanded" : "")">▼</span>
-                        </button>
-                        <div class="dx-card-content @(IsExpanded(6) ? "expanded" : "")">
-                            <div class="dx-section-intro">
-                                <h3>@pageData.BestPractices.IntroHeading</h3>
-                                <p>@pageData.BestPractices.IntroContent</p>
-                            </div>
-
-                            <div class="dx-practices-grid">
-                                <div class="dx-practice-do">
-                                    <h4>@pageData.BestPractices.DoHeading</h4>
-                                    <ul>
-                                        @foreach (var practice in pageData.BestPractices.DoPractices)
-                                        {
-                                            <li>@practice</li>
-                                        }
-                                    </ul>
                                 </div>
-                                <div class="dx-practice-dont">
-                                    <h4>@pageData.BestPractices.DontHeading</h4>
-                                    <ul>
-                                        @foreach (var practice in pageData.BestPractices.DontPractices)
-                                        {
-                                            <li>@practice</li>
-                                        }
-                                    </ul>
-                                </div>
-                            </div>
+                            }
+                        </div>
+                    </div>
+                </section>
 
-                            <div class="dx-insight-box">
-                                <h4>@pageData.BestPractices.Insight.Heading</h4>
-                                <p>@pageData.BestPractices.Insight.Content</p>
+                @* Tools Section *@
+                <section class="dx-section-card">
+                    <button class="dx-card-header" @onclick="() => ToggleSection(5)" aria-expanded="@IsExpanded(5)">
+                        <h2 id="dx-card-tools">@pageData.Tools.Title</h2>
+                        <span class="dx-card-icon @(IsExpanded(5) ? "expanded" : "")">▼</span>
+                    </button>
+                    <div class="dx-card-content @(IsExpanded(5) ? "expanded" : "")">
+                        <div class="dx-section-intro">
+                            <h3>@pageData.Tools.IntroHeading</h3>
+                            <p>@pageData.Tools.IntroContent</p>
+                        </div>
+
+                        <h3>@pageData.Tools.ToolsHeading</h3>
+                        <div class="dx-tools-grid">
+                            @foreach (var tool in pageData.Tools.Tools)
+                            {
+                                <div class="dx-tool-card">
+                                    <strong>@tool.Name</strong>
+                                    <p class="dx-tool-type">@tool.Type</p>
+                                    <p>@tool.Description</p>
+                                </div>
+                            }
+                        </div>
+
+                        <h3>@pageData.Tools.ResourcesHeading</h3>
+                        <div class="dx-resources-list">
+                            @foreach (var resource in pageData.Tools.Resources)
+                            {
+                                <div class="dx-resource">
+                                    <strong>@resource.Icon @resource.Title</strong>
+                                    <p>@resource.Description</p>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </section>
+
+                @* Best Practices Section *@
+                <section class="dx-section-card">
+                    <button class="dx-card-header" @onclick="() => ToggleSection(6)" aria-expanded="@IsExpanded(6)">
+                        <h2 id="dx-card-best-practices">@pageData.BestPractices.Title</h2>
+                        <span class="dx-card-icon @(IsExpanded(6) ? "expanded" : "")">▼</span>
+                    </button>
+                    <div class="dx-card-content @(IsExpanded(6) ? "expanded" : "")">
+                        <div class="dx-section-intro">
+                            <h3>@pageData.BestPractices.IntroHeading</h3>
+                            <p>@pageData.BestPractices.IntroContent</p>
+                        </div>
+
+                        <div class="dx-practices-grid">
+                            <div class="dx-practice-do">
+                                <h4>@pageData.BestPractices.DoHeading</h4>
+                                <ul>
+                                    @foreach (var practice in pageData.BestPractices.DoPractices)
+                                    {
+                                        <li>@practice</li>
+                                    }
+                                </ul>
+                            </div>
+                            <div class="dx-practice-dont">
+                                <h4>@pageData.BestPractices.DontHeading</h4>
+                                <ul>
+                                    @foreach (var practice in pageData.BestPractices.DontPractices)
+                                    {
+                                        <li>@practice</li>
+                                    }
+                                </ul>
                             </div>
                         </div>
-                    </section>
-                </div>
-            </article>
-        </main>
+
+                        <div class="dx-insight-box">
+                            <h4>@pageData.BestPractices.Insight.Heading</h4>
+                            <p>@pageData.BestPractices.Insight.Content</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </main>
 }
+
+<ConditionalScripts LoadSyntaxHighlighting="true" LoadMermaid="true" LoadTocScrollSpy="true" />
 
 @code {
     private SectionDto? sectionData;
     private DXSpacePageData? pageData;
     private HashSet<int> expandedSections = new() { 0 }; // First section expanded by default
+
+    private List<SidebarToc.TocItem> GetTocItems()
+    {
+        if (pageData == null)
+            return [];
+
+        return
+        [
+        new SidebarToc.TocItem(2, "dx-card-dora", pageData.Dora.Title),
+new SidebarToc.TocItem(2, "dx-card-space", pageData.Space.Title),
+new SidebarToc.TocItem(2, "dx-card-devex", pageData.DevEx.Title),
+new SidebarToc.TocItem(2, "dx-card-relationships", pageData.Relationships.Title),
+new SidebarToc.TocItem(2, "dx-card-getting-started", pageData.GettingStarted.Title),
+new SidebarToc.TocItem(2, "dx-card-tools", pageData.Tools.Title),
+new SidebarToc.TocItem(2, "dx-card-best-practices", pageData.BestPractices.Title)
+        ];
+    }
 
     protected override async Task OnInitializedAsync()
     {

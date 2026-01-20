@@ -154,8 +154,8 @@ Users can discover the Developer Experience Space framework with pillars, metric
 ### Functional Requirements
 
 - **FR-001**: All 8 custom pages MUST use the `<SidebarToc>` component for table of contents generation
-- **FR-002**: All custom pages MUST wrap content in `.content-detail-body` container for scroll spy functionality
-- **FR-003**: All custom pages MUST include `.content-detail-body::after { height: 50vh }` spacer (via global CSS)
+- **FR-002**: All custom pages MUST wrap content in `.article-body` container for scroll spy functionality
+- **FR-003**: All custom pages MUST include `.article-body::after { height: 50vh }` spacer (via global CSS)
 - **FR-004**: TOC component MUST auto-extract headings from HTML content (h2 and h3 tags)
 - **FR-005**: TOC component MUST highlight the active section when corresponding heading crosses the detection point (~40% from viewport top)
 - **FR-006**: Clicking a TOC link MUST smooth-scroll to the corresponding heading and update browser URL with anchor
@@ -225,7 +225,7 @@ Users can discover the Developer Experience Space framework with pillars, metric
 **All pages must**:
 
 1. Replace manual `<nav class="sidebar-toc">` with `<SidebarToc HtmlContent="@renderedHtml" />` component
-2. Ensure content is wrapped in `<div class="content-detail-body">` for scroll spy
+2. Ensure content is wrapped in `<div class="article-body">` for scroll spy
 3. Verify 50vh spacer is present (global CSS, no per-page changes needed)
 4. Add proper page metadata (title, description, canonical URL)
 5. Implement proper semantic HTML structure
@@ -314,7 +314,7 @@ The sidebar is not limited to table of contents. Consider these additional uses:
 ## Dependencies
 
 - **Completed**: SidebarToc component (already exists and works correctly)
-- **Completed**: Global scroll spacer CSS (already in markdown-content.css)
+- **Completed**: Global scroll spacer CSS (already in article.css)
 - **Completed**: Blazor routing for custom page URLs (already configured)
 - **Optional**: New visual components if cards/timelines need custom implementation (can reuse existing or create new)
 

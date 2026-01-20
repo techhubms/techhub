@@ -85,7 +85,8 @@ public class SectionTests : TestContext
             var sidebar = cut.Find(".sidebar");
             sidebar.Should().NotBeNull();
 
-            var mainContent = cut.Find(".page-main-content");
+            // Main content is now a section element (styled via .page-with-sidebar > :is(article, section))
+            var mainContent = cut.Find(".page-with-sidebar > section");
             mainContent.Should().NotBeNull();
 
             // Verify section header is displayed

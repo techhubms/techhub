@@ -47,10 +47,10 @@ The scroll spy detection line is positioned at **~40% from the top of the viewpo
 
 **Critical**: Content pages with TOC must have sufficient vertical scroll space to allow the last content section to reach the detection point.
 
-**Implementation**: Global CSS pseudo-element in `markdown-content.css`:
+**Implementation**: Global CSS pseudo-element in `article.css`:
 
 ```css
-.content-detail-body::after {
+.article-body::after {
     content: '';
     display: block;
     height: 50vh;
@@ -62,12 +62,12 @@ The scroll spy detection line is positioned at **~40% from the top of the viewpo
 - Adds 50% of viewport height as empty space after content
 - Allows last heading to scroll to detection point (~40% from top)
 - Not full viewport to avoid excessive empty scrolling
-- Applied globally to all `.content-detail-body` containers
+- Applied globally to all `.article-body` containers
 
 ### How Scroll Spy Works
 
 1. **Setup**: Component marks itself with `data-toc-scroll-spy` attribute
-2. **Content selector**: Points to `.content-detail-body` container
+2. **Content selector**: Points to `.article-body` container
 3. **JavaScript observer**: Tracks heading positions relative to detection line
 4. **Highlighting**: Updates active TOC link when heading crosses detection point
 
@@ -77,7 +77,7 @@ The scroll spy detection line is positioned at **~40% from the top of the viewpo
 <nav class="sidebar-section sidebar-toc" 
      aria-label="@Title" 
      data-toc-scroll-spy
-     data-content-selector=".content-detail-body">
+     data-content-selector=".article-body">
     @* TOC content *@
 </nav>
 ```
@@ -86,10 +86,10 @@ The scroll spy detection line is positioned at **~40% from the top of the viewpo
 
 ### Required Structure
 
-Pages using `<SidebarToc>` must wrap content in `.content-detail-body` container:
+Pages using `<SidebarToc>` must wrap content in `.article-body` container:
 
 ```razor
-<div class="content-detail-body">
+<div class="article-body">
     @((MarkupString)renderedHtml)
 </div>
 ```

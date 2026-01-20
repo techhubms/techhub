@@ -1,0 +1,174 @@
+@* 
+    Conditionally loads JavaScript libraries based on page requirements
+    to improve initial page load performance by avoiding unnecessary script downloads
+*@
+
+@if (LoadSyntaxHighlighting)
+{
+    <HeadContent>
+        <!-- Syntax Highlighting -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+            integrity="sha512-rO+olRTkcf304DQBxSWxln8JXCzTHlKnIdnMUwYvQa9/Jd4cQaNkItIUj6Z4nvW1dqK0SKXLbn9h4KwZTNtAyw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </HeadContent>
+}
+
+@if (LoadSyntaxHighlighting)
+{
+    <!-- Syntax Highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
+        integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/csharp.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/typescript.min.js"
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/yaml.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/sql.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/powershell.min.js"
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
+    <script>
+        // Initialize Highlight.js for syntax highlighting
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof hljs !== 'undefined') {
+                hljs.highlightAll();
+            }
+        });
+
+        // Re-highlight after Blazor navigation
+        if (typeof Blazor !== 'undefined') {
+            Blazor.addEventListener('enhancedload', function () {
+                if (typeof hljs !== 'undefined') {
+                    hljs.highlightAll();
+                }
+            });
+        }
+    </script>
+}
+
+@if (LoadMermaid)
+{
+    <!-- Mermaid Diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
+
+    <script>
+        // Initialize Mermaid for diagrams with dark theme matching production
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof mermaid !== 'undefined') {
+                mermaid.initialize({
+                    startOnLoad: true,
+                    theme: 'dark',
+                    themeVariables: {
+                        primaryColor: '#2d2d4a',
+                        primaryTextColor: '#e0e0e0',
+                        primaryBorderColor: '#64b5f6',
+                        lineColor: '#64b5f6',
+                        secondaryColor: '#1a1a2e',
+                        tertiaryColor: '#16162a',
+                        background: '#1a1a2e',
+                        mainBkg: '#2d2d4a',
+                        secondBkg: '#1a1a2e',
+                        labelBackground: '#2d2d4a',
+                        labelColor: '#e0e0e0',
+                        nodeTextColor: '#e0e0e0',
+                        textColor: '#e0e0e0',
+                        titleColor: '#e0e0e0',
+                        edgeLabelBackground: '#2d2d4a',
+                        clusterBkg: '#16162a',
+                        clusterBorder: '#64b5f6',
+                        defaultLinkColor: '#64b5f6',
+                        activationBorderColor: '#64b5f6',
+                        activationBkgColor: '#2d2d4a',
+                        sequenceNumberColor: '#1a1a2e'
+                    },
+                    flowchart: {
+                        curve: 'basis',
+                        padding: 15
+                    }
+                });
+            }
+        });
+
+        // Re-render Mermaid diagrams after Blazor navigation
+        if (typeof Blazor !== 'undefined') {
+            Blazor.addEventListener('enhancedload', function () {
+                if (typeof mermaid !== 'undefined') {
+                    mermaid.init(undefined, '.mermaid');
+                }
+            });
+        }
+    </script>
+}
+
+@if (LoadTocScrollSpy)
+{
+    <!-- TOC Scroll Spy -->
+    <script type="module">
+        import { initTocScrollSpy, cleanupAllTocScrollSpies } from './js/toc-scroll-spy.js';
+
+        // Initialize on page load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                initTocScrollSpy();
+            });
+        } else {
+            initTocScrollSpy();
+        }
+
+        // Re-initialize after Blazor enhanced navigation
+        if (typeof Blazor !== 'undefined') {
+            Blazor.addEventListener('enhancedload', function () {
+                // CRITICAL: Clean up old instances before creating new ones
+                cleanupAllTocScrollSpies();
+                initTocScrollSpy();
+            });
+        }
+    </script>
+}
+
+@if (LoadCustomPagesInteractivity)
+{
+    <!-- Custom Pages Interactivity (collapsible sections) -->
+    <script src="js/custom-pages.js" defer></script>
+}
+
+@code {
+    /// <summary>
+    /// Whether to load syntax highlighting scripts (Highlight.js + language files).
+    /// Enable for pages with code blocks.
+    /// </summary>
+    [Parameter]
+    public bool LoadSyntaxHighlighting { get; set; } = false;
+
+    /// <summary>
+    /// Whether to load Mermaid diagram library.
+    /// Enable for pages with diagrams.
+    /// </summary>
+    [Parameter]
+    public bool LoadMermaid { get; set; } = false;
+
+    /// <summary>
+    /// Whether to load TOC scroll spy functionality.
+    /// Enable for pages with table of contents.
+    /// </summary>
+    [Parameter]
+    public bool LoadTocScrollSpy { get; set; } = false;
+
+    /// <summary>
+    /// Whether to load custom pages interactivity (collapsible sections).
+    /// Enable for AISDLC and similar pages with collapsible content.
+    /// </summary>
+    [Parameter]
+    public bool LoadCustomPagesInteractivity { get; set; } = false;
+}

@@ -622,6 +622,69 @@ function Run {
     }
 
     # Kill existing processes on ports
+    function Stop-AppHost {
+        <#
+        .SYNOPSIS
+            Gracefully stops the AppHost process and disposes resources.
+        
+        .DESCRIPTION
+            Sends SIGTERM for graceful shutdown, waits up to 5 seconds,
+            then forcefully kills if still running. Always disposes the process object.
+        #>
+        param(
+            [switch]$Silent
+        )
+        
+        if ($null -eq $script:appHostProcess) {
+            return
+        }
+        
+        if ($script:appHostProcess.HasExited) {
+            $script:appHostProcess.Dispose()
+            $script:appHostProcess = $null
+            return
+        }
+        
+        try {
+            if (-not $Silent) {
+                Write-Info "  Sending graceful shutdown signal to AppHost..."
+            }
+            
+            # Send SIGTERM for graceful shutdown
+            kill -TERM $script:appHostProcess.Id 2>$null
+            
+            # Wait up to 5 seconds for graceful shutdown
+            $waited = 0
+            while (-not $script:appHostProcess.HasExited -and $waited -lt 5000) {
+                Start-Sleep -Milliseconds 100
+                $waited += 100
+            }
+            
+            # If still running, force kill
+            if (-not $script:appHostProcess.HasExited) {
+                if (-not $Silent) {
+                    Write-Info "  AppHost didn't stop gracefully, forcing termination..."
+                }
+                $script:appHostProcess.Kill($true)
+            }
+            elseif (-not $Silent) {
+                Write-Info "  AppHost stopped gracefully"
+            }
+        }
+        catch {
+            # Process might have already exited - that's OK
+            if (-not $Silent) {
+                Write-Info "  AppHost process already exited"
+            }
+        }
+        finally {
+            if ($null -ne $script:appHostProcess) {
+                $script:appHostProcess.Dispose()
+                $script:appHostProcess = $null
+            }
+        }
+    }
+
     function Stop-ExistingProcesses {
         param(
             [switch]$Silent
@@ -943,15 +1006,7 @@ function Run {
                 $serversStarted = Start-AppHost
                 if ($serversStarted -ne $true) {
                     # Server startup failed - clean up and exit
-                    if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                        try {
-                            $script:appHostProcess.Kill($false)
-                        }
-                        catch { }
-                        finally {
-                            $script:appHostProcess.Dispose()
-                        }
-                    }
+                    Stop-AppHost
                     Stop-ExistingProcesses
                     return
                 }
@@ -964,15 +1019,7 @@ function Run {
                 if ($e2eSuccess -ne $true) {
                     # Tests failed - clean up and exit
                     Write-Info "Stopping servers..."
-                    if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                        try {
-                            $script:appHostProcess.Kill($false)
-                        }
-                        catch { }
-                        finally {
-                            $script:appHostProcess.Dispose()
-                        }
-                    }
+                    Stop-AppHost
                     Stop-ExistingProcesses
                     return
                 }
@@ -986,15 +1033,7 @@ function Run {
                 # Stop servers if they were started
                 if ($script:serversAlreadyRunning) {
                     Write-Info "Stopping servers..."
-                    if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                        try {
-                            $script:appHostProcess.Kill($false)
-                        }
-                        catch { }
-                        finally {
-                            $script:appHostProcess.Dispose()
-                        }
-                    }
+                    Stop-AppHost
                     Stop-ExistingProcesses
                     Write-Success "Servers stopped"
                 }
@@ -1009,15 +1048,7 @@ function Run {
             $serversStarted = Start-AppHost
             if ($serversStarted -ne $true) {
                 # Server startup failed - clean up and exit
-                if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                    try {
-                        $script:appHostProcess.Kill($false)
-                    }
-                    catch { }
-                    finally {
-                        $script:appHostProcess.Dispose()
-                    }
-                }
+                Stop-AppHost
                 Stop-ExistingProcesses
                 return
             }
@@ -1040,6 +1071,7 @@ function Run {
             }
         }
         finally {
+            Stop-AppHost -Silent
             Stop-ExistingProcesses
             Write-Success "All projects stopped"
         }

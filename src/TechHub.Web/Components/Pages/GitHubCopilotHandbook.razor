@@ -1,7 +1,7 @@
 @page "/github-copilot/handbook"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
-@using TechHub.Web.Components.Shared
+
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
@@ -19,123 +19,154 @@
 
     <main class="page-with-sidebar">
         <aside class="sidebar">
-            <nav class="sidebar-toc" aria-label="Table of contents">
-                <h2>Table of Contents</h2>
-                <ul>
-                    <li><a href="#about-book">About the Book</a></li>
-                    <li><a href="#learnings">What You'll Learn</a></li>
-                    <li><a href="#audience">Who Is This Book For</a></li>
-                    <li><a href="#key-features">Key Features</a></li>
-                    <li><a href="#toc">Table of Contents</a></li>
-                    <li><a href="#authors">About the Authors</a></li>
-                </ul>
-            </nav>
+            <SidebarToc Items="@GetTocItems()" Title="Table of Contents" />
         </aside>
 
-        <article class="page-main-content content-detail">
-                <div class="content-detail-header">
-                    <h1 class="page-h1" tabindex="-1">@pageData.Title</h1>
-                    @if (!string.IsNullOrWhiteSpace(pageData.Description))
-                    {
-                        <p class="page-description">@pageData.Description</p>
-                    }
-                </div>
+        <article class="article-body">
+            <div class="content-detail-header">
+                <h1 class="page-h1" tabindex="-1">@pageData.Title</h1>
+                @if (!string.IsNullOrWhiteSpace(pageData.Description))
+                {
+                    <p class="page-description">@pageData.Description</p>
+                }
+            </div>
 
-                <div class="handbook-container">
-                    @* Book Info Section *@
-                    <div class="handbook-intro">
-                        <div class="handbook-book-info">
-                            <p><strong>Authors:</strong> @string.Join(", ", pageData.Authors)</p>
-                            <p><strong>Publisher:</strong> @pageData.BookDetails.Publisher</p>
-                            <p><strong>Released:</strong> @pageData.BookDetails.Released</p>
-                            <p><strong>Pages:</strong> @pageData.BookDetails.Pages</p>
+            <div class="handbook-container">
+                @* Book Hero - Featured book presentation *@
+                <div class="handbook-hero">
+                    <div class="handbook-hero-cover">
+                        <img src="/images/ghc-handbook.jpg" alt="GitHub Copilot Handbook Book Cover" loading="lazy" />
+                        <div class="handbook-cover-glow"></div>
+                    </div>
+                    
+                    <div class="handbook-hero-content">
+                        <p class="handbook-tagline">Your Complete Guide to AI-Powered Development</p>
+                        
+                        <p class="handbook-description">@pageData.Intro</p>
+                        
+                        <div class="handbook-meta">
+                            <div class="handbook-meta-item">
+                                <span class="handbook-meta-label">Authors</span>
+                                <span class="handbook-meta-value">@string.Join(", ", pageData.Authors)</span>
+                            </div>
+                            <div class="handbook-meta-item">
+                                <span class="handbook-meta-label">Publisher</span>
+                                <span class="handbook-meta-value">@pageData.BookDetails.Publisher</span>
+                            </div>
+                            <div class="handbook-meta-item">
+                                <span class="handbook-meta-label">Released</span>
+                                <span class="handbook-meta-value">@pageData.BookDetails.Released</span>
+                            </div>
+                            <div class="handbook-meta-item">
+                                <span class="handbook-meta-label">Pages</span>
+                                <span class="handbook-meta-value">@pageData.BookDetails.Pages</span>
+                            </div>
                         </div>
-                        <p>@pageData.Intro</p>
+                        
                         @if (pageData.PurchaseLink != null)
                         {
-                            <a href="@pageData.PurchaseLink.Url" class="handbook-purchase-link" target="_blank" rel="noopener">
-                                @pageData.PurchaseLink.Text
+                            <a href="@pageData.PurchaseLink.Url" class="handbook-cta" target="_blank" rel="noopener">
+                                <span class="handbook-cta-text">@pageData.PurchaseLink.Text</span>
+                                <svg class="handbook-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
                             </a>
                         }
                     </div>
-
-                    @* About the Book *@
-                    <section id="about-book" class="handbook-section">
-                        <h2>About the Book</h2>
-                        @foreach (var paragraph in pageData.AboutBook)
-                        {
-                            <p>@paragraph</p>
-                        }
-                    </section>
-
-                    @* What You'll Learn *@
-                    <section id="learnings" class="handbook-section">
-                        <h2>What You'll Learn</h2>
-                        <ul class="handbook-learnings">
-                            @foreach (var learning in pageData.Learnings)
-                            {
-                                <li>@learning</li>
-                            }
-                        </ul>
-                    </section>
-
-                    @* Audience *@
-                    <section id="audience" class="handbook-section">
-                        <h2>Who Is This Book For</h2>
-                        <p>@pageData.Audience.Intro</p>
-                        <p>@pageData.Audience.Details</p>
-                    </section>
-
-                    @* Key Features *@
-                    <section id="key-features" class="handbook-section">
-                        <h2>Key Features</h2>
-                        <div class="handbook-features-grid">
-                            @foreach (var feature in pageData.KeyFeatures)
-                            {
-                                <div class="handbook-feature-card">
-                                    <h3>@feature.Title</h3>
-                                    <p>@feature.Description</p>
-                                </div>
-                            }
-                        </div>
-                    </section>
-
-                    @* Table of Contents *@
-                    <section id="toc" class="handbook-section">
-                        <h2>Table of Contents</h2>
-                        <ol class="handbook-toc">
-                            @foreach (var chapter in pageData.TableOfContents)
-                            {
-                                <li>@chapter</li>
-                            }
-                        </ol>
-                    </section>
-
-                    @* Authors *@
-                    <section id="authors" class="handbook-section">
-                        <h2>About the Authors</h2>
-                        <div class="handbook-authors">
-                            @foreach (var author in pageData.AuthorBios)
-                            {
-                                <div class="handbook-author-card">
-                                    <h3>@author.Name</h3>
-                                    <p>@author.Bio</p>
-                                </div>
-                            }
-                        </div>
-                    </section>
-
-                    @* Conclusion *@
-                    <section class="handbook-section handbook-conclusion">
-                        <p>@pageData.Conclusion</p>
-                    </section>
                 </div>
-            </article>
-        </main>
+
+                @* About the Book *@
+                <section class="handbook-section">
+                    <h2 id="about-book">About the Book</h2>
+                    @foreach (var paragraph in pageData.AboutBook)
+                    {
+                        <p>@paragraph</p>
+                    }
+                </section>
+
+                @* What You'll Learn *@
+                <section class="handbook-section">
+                    <h2 id="learnings">What You'll Learn</h2>
+                    <ul class="handbook-learnings">
+                        @foreach (var learning in pageData.Learnings)
+                        {
+                            <li>@learning</li>
+                        }
+                    </ul>
+                </section>
+
+                @* Audience *@
+                <section class="handbook-section">
+                    <h2 id="audience">Who Is This Book For</h2>
+                    <p>@pageData.Audience.Intro</p>
+                    <p>@pageData.Audience.Details</p>
+                </section>
+
+                @* Key Features *@
+                <section class="handbook-section">
+                    <h2 id="key-features">Key Features</h2>
+                    <div class="handbook-features-grid">
+                        @foreach (var feature in pageData.KeyFeatures)
+                        {
+                            <div class="handbook-feature-card">
+                                <h3>@feature.Title</h3>
+                                <p>@feature.Description</p>
+                            </div>
+                        }
+                    </div>
+                </section>
+
+                @* Table of Contents *@
+                <section class="handbook-section">
+                    <h2 id="toc">Table of Contents</h2>
+                    <ol class="handbook-toc">
+                        @foreach (var chapter in pageData.TableOfContents)
+                        {
+                            <li>@chapter</li>
+                        }
+                    </ol>
+                </section>
+
+                @* Authors *@
+                <section class="handbook-section">
+                    <h2 id="authors">About the Authors</h2>
+                    <div class="handbook-authors">
+                        @foreach (var author in pageData.AuthorBios)
+                        {
+                            <div class="handbook-author-card">
+                                <h3>@author.Name</h3>
+                                <p>@author.Bio</p>
+                            </div>
+                        }
+                    </div>
+                </section>
+
+                @* Conclusion *@
+                <section class="handbook-section handbook-conclusion">
+                    <p>@pageData.Conclusion</p>
+                </section>
+            </div>
+        </article>
+    </main>
 }
+
+<ConditionalScripts LoadSyntaxHighlighting="true" LoadMermaid="true" LoadTocScrollSpy="true" />
 
 @code {
     private HandbookPageData? pageData;
+
+private static List<SidebarToc.TocItem> GetTocItems()
+    {
+        return
+        [
+            new SidebarToc.TocItem(2, "about-book", "About the Book"),
+            new SidebarToc.TocItem(2, "learnings", "What You'll Learn"),
+            new SidebarToc.TocItem(2, "audience", "Who Is This Book For"),
+            new SidebarToc.TocItem(2, "key-features", "Key Features"),
+            new SidebarToc.TocItem(2, "toc", "Table of Contents"),
+            new SidebarToc.TocItem(2, "authors", "About the Authors")
+        ];
+    }
 
     protected override async Task OnInitializedAsync()
     {

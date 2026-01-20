@@ -31,11 +31,6 @@
     transform: translateY(-2px);
 }
 
-/* Main Content Area */
-.page-main-content {
-    min-width: 0; /* Prevent grid blowout */
-}
-
 /* Content Navigation Buttons */
 .content-navigation {
     display: flex;
@@ -125,7 +120,7 @@
         flex-direction: column;
         gap: var(--spacing-2);
     }
-    
+
     .nav-button {
         width: 100%;
     }
