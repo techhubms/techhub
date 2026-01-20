@@ -23788,5 +23788,23 @@
     "timestamp": "2026-01-20 18:06:07 +00:00",
     "reason": "Succesfully added: Assigned 'AI' category because the content centers on the use of AI-driven agents and AI-powered security within Microsoft Entra (AI rules 1 and 4). Assigned 'Security' because the entire article is focused on identity, access security, Zero Trust, and Microsoft Defender/Purview features (Security rules 1, 2, 3, 4, and 9). Did not assign 'Azure' as the focus is on cloud identity/security rather than Azure infrastructure. Did not assign 'DevOps', 'Coding', 'ML', or 'GitHub Copilot' because the topic does not cover software development or machine learning implementation. The content is news-type and comes directly from Microsoft, further matching category inclusion rules.",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category because the content centers on data security and role-based access in Microsoft Fabric (Security rule 1 and 7). Assigned Azure category due to the centrality of Microsoft Fabric and Azure SQL as integration targets (Azure rule 1). Assigned ML category because OneLake and Microsoft Fabric are analytics/data science platforms, and this update directly supports data governance and management for analytics/ML use cases (ML rule 1 and 5). AI and DevOps categories are not included, as the article does not cover AI models, coding, or DevOps methodologies.",
+    "timestamp": "2026-01-20 19:20:28 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/manage-onelake-security-for-mirrored-databases-preview/"
+  },
+  {
+    "reason": "Succesfully added: The content introduces GitHub features for linking build artifacts to code, enabling traceability from repository to production, and focuses on artifact metadata APIs, supply chain security, deployment context, and alert prioritization. 'DevOps' is assigned due to its relevance for CI/CD, deployment, and release pipeline workflows; 'Security' is assigned because the features center on vulnerability management, SLSA, runtime risk, and Microsoft Defender for Cloud integration. 'Azure' is not assigned because while Microsoft Defender is mentioned, Azure is not the central platform. 'AI', 'ML', 'Coding', and 'GitHub Copilot' are not relevant because there's no focus on AI tools or code development. All category assignments are based strictly on Chapter 4 rules.",
+    "timestamp": "2026-01-20 19:21:06 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/changelog/2026-01-20-strengthen-your-supply-chain-with-code-to-cloud-traceability-and-slsa-build-level-3-security"
+  },
+  {
+    "reason": "Succesfully added: Assigned the Azure category because the content centers on Azure Arc (an Azure service) and related technology updates and hybrid/multicloud management (Azure inclusion rule 1). No other categories qualify: no coding or DevOps technical details, no explicit security/ML/AI engineering, and no Copilot or developer-specific tools discussed. Community post exceeds 200-word threshold and provides technical value.",
+    "timestamp": "2026-01-20 19:21:59 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-jan-2026-forum-recap/ba-p/4487829"
   }
 ]

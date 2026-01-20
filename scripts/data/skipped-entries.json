@@ -11415,5 +11415,17 @@
     "timestamp": "2026-01-20 18:06:55 +00:00",
     "reason": "No categories found: Content excluded due to the following reasons: There is no substantive content provided; the 'content' field is null and the available description only discusses the any-llm open source library and a video event featuring a Mozilla engineer. The description does not indicate any direct relation to Microsoft technologies or development tools, nor does it mention any Microsoft AI, coding, Azure, ML, DevOps, Security products, or frameworks. As a result, none of the category inclusion rules are met and the generic threshold (40%+ Microsoft content or central to solution) is not reached.",
     "collection": "videos"
+  },
+  {
+    "reason": "No categories found: No categories assigned. This news post is primarily a corporate announcement about Microsoft's organizational partnership with the UN (UN80 initiative), focusing on corporate social responsibility, funding commitments, pricing programs, and high-level strategies for digital modernization. While it references support for digital and AI technology adoption (e.g., AI literacy training, AI for Good Lab examples), the narrative centers on philanthropy, partnerships, and executive-level decision-making and does not provide technical implementation details, development/deployment guidance, or hands-on engineering practices related to Microsoft AI products or platforms. This falls under the 'Business Strategy and Executive Content' and 'Corporate Announcements without Technical Depth' exclusions. There is no in-depth content on product usage, software development, coding examples, deployment patterns, or configuration of Microsoft or open-source technologies, as required for the inclusion of any technical categories ('AI', 'Azure', etc.).",
+    "timestamp": "2026-01-20 19:20:42 +00:00",
+    "collection": "news",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2026/01/20/a-renewed-commitment-to-strengthening-the-united-nations-for-its-next-era/"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content description specifically states that the discussion centers around Hans Obma using AI to market his film. This falls under the generic exclusion rules, specifically business/marketing usage of AI (not technical development or Microsoft platform implementation). There is no evidence of technical details, Microsoft technology specifics, developer-oriented implementation, or code-level integration. Generic tags and a lack of substantive content further reinforce that this is not technical/development content (see 'AI Category' and 'Business Strategy and Executive Content' exclusions in Chapters 3 and 4).",
+    "timestamp": "2026-01-20 19:21:39 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/bt8GkHAf0SI"
   }
 ]
