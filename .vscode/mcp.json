@@ -10,10 +10,9 @@
       "args": [
         "-y",
         "@playwright/mcp@latest",
-        "--vision",
-        "--headless",
         "--isolated",
-        "--no-sandbox"
+        "--no-sandbox",
+        "--config=/workspaces/techhub/.vscode/playwright-mcp-config.json"
       ]
     },
     "context7": {

@@ -96,10 +96,10 @@ Support for Copilot in JetBrains IDEs grows with better Model Context Protocol (
 Visual Studio's November AI roadmap brings extensions for automated testing, debugging agents, and advanced governance, evolving its planning mode. Multi-agent and chat enhancements help move Copilot towards thorough agent-driven development within both cloud and local IDE environments.
 
 - [VS Code Unifies Copilot AI Features in Open Source Extension](https://code.visualstudio.com/blogs/2025/11/04/openSourceAIEditorSecondMilestone)
-- [GitHub Copilot in JetBrains: Demo of MCP and Agent Mode](/videos/2025-11-04-GitHub-Copilot-in-JetBrains-Demo-of-MCP-and-Agent-Mode.html)
+- [GitHub Copilot in JetBrains: Demo of MCP and Agent Mode](/ai/videos/GitHub-Copilot-in-JetBrains-Demo-of-MCP-and-Agent-Mode)
 - [Visual Studio AI Roadmap: Copilot Chat, Agents, and Model Integrations (November)](https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-november/)
 - [A Unified Experience for All Coding Agents in VS Code](https://code.visualstudio.com/blogs/2025/11/03/unified-agent-experience)
-- [Behind the Scenes of VS Code’s Planning Agent](/videos/2025-11-03-Behind-the-Scenes-of-VS-Codes-Planning-Agent.html)
+- [Behind the Scenes of VS Code’s Planning Agent](/ai/videos/Behind-the-Scenes-of-VS-Codes-Planning-Agent)
 
 ### Copilot Agent Mode, CLI, and Workflow Automation
 
@@ -138,8 +138,8 @@ Expanded Copilot certification resources are now available, featuring a detailed
 
 Guides for application modernization and AI-based workflows continue from last week, focusing on Java upgrades, CI/CD automation, and review tools. The Copilot App Modernization tool and Azure Developer CLI now offer easier provisioning and deployment. Fresh resources for creating multi-agent AI applications in VS Code carry forward improvements in orchestrating cloud-native agents for scalable and observable solutions.
 
-- [Modernize Java Apps with AI: Deploy Your Applications to Azure](/videos/2025-11-03-Modernize-Java-Apps-with-AI-Deploy-Your-Applications-to-Azure.html)
-- [Building Scalable AI Apps and Agents with VS Code, GitHub Copilot, and Agent Framework](/videos/2025-11-05-Building-Scalable-AI-Apps-and-Agents-with-VS-Code-GitHub-Copilot-and-Agent-Framework.html)
+- [Modernize Java Apps with AI: Deploy Your Applications to Azure](/ai/videos/Modernize-Java-Apps-with-AI-Deploy-Your-Applications-to-Azure)
+- [Building Scalable AI Apps and Agents with VS Code, GitHub Copilot, and Agent Framework](/ai/videos/Building-Scalable-AI-Apps-and-Agents-with-VS-Code-GitHub-Copilot-and-Agent-Framework)
 
 ### Copilot Studio: Performance, Debugging, and Bot Reliability
 
@@ -170,18 +170,18 @@ AI updates this week extend recent trends in agent-based workflows, tighter Azur
 
 Technical comparisons for CPU and GPU containerized Stable Diffusion—using Spring Boot Java, ONNX Runtime, and CUDA—add to previous Azure GPU onboarding recommendations. ND GB200-v6 VMs and NVIDIA GB300 improvements show scalable deployment potential. Tutorials cover ONNX/CUDA version strategy and cloud deployment practices. Pipeline automation and session management with Copilot and Claude Sonnet 4.5 build on recent integration themes. The “Java and AI for Beginners” series continues, emphasizing modern Java app development and responsible GenAI use on Azure.
 
-- [Scaling Generative AI with GPU-Powered Containers on Azure](/videos/2025-11-05-Scaling-Generative-AI-with-GPU-Powered-Containers-on-Azure.html)
-- [Running GenAI in Containers: Dynamic Sessions with Azure Container Apps and LangChain4j](/videos/2025-11-05-Running-GenAI-in-Containers-Dynamic-Sessions-with-Azure-Container-Apps-and-LangChain4j.html)
-- [Java and AI for Beginners: Full Series on Building and Modernizing AI-Powered Java Apps](/videos/2025-11-07-Java-and-AI-for-Beginners-Full-Series-on-Building-and-Modernizing-AI-Powered-Java-Apps.html)
+- [Scaling Generative AI with GPU-Powered Containers on Azure](/ai/videos/Scaling-Generative-AI-with-GPU-Powered-Containers-on-Azure)
+- [Running GenAI in Containers: Dynamic Sessions with Azure Container Apps and LangChain4j](/ai/videos/Running-GenAI-in-Containers-Dynamic-Sessions-with-Azure-Container-Apps-and-LangChain4j)
+- [Java and AI for Beginners: Full Series on Building and Modernizing AI-Powered Java Apps](/ai/videos/Java-and-AI-for-Beginners-Full-Series-on-Building-and-Modernizing-AI-Powered-Java-Apps)
 
 ### AI Agents: Orchestration, Orchestration Patterns, and Integration
 
 Guides covering .NET 9 and the Microsoft Agent Framework describe approaches for architecting multi-agent systems, continuing last week’s progress on orchestration. The ChatClientAgent solution provides modular orchestration and repeatable DevOps deployment. LangChain4j continues as a primary tool for Java multi-agent orchestration, with new tutorials and workflow patterns. Recent analysis of agent vs. chatbot architectures supplies actionable insights for agent-enabled Azure development. AiGen adoption in .NET expands agent capabilities beyond traditional chat applications.
 
 - [Client-Side Multi-Agent Orchestration with ChatClientAgent on Azure App Service](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-3-client-side-multi-agent-orchestration-on-azure-app/ba-p/4466728)
-- [Building Multi-Agent AI Systems with LangChain4j and Java](/videos/2025-11-04-Building-Multi-Agent-AI-Systems-with-LangChain4j-and-Java.html)
-- [Armchair Architects: Defining AI Agents and Their Core Traits](/videos/2025-11-04-Armchair-Architects-Defining-AI-Agents-and-Their-Core-Traits.html)
-- [Beyond Chat: Building Smarter AI Agents in .NET with AiGen](/videos/2025-11-05-Beyond-Chat-Building-Smarter-AI-Agents-in-NET-with-AiGen.html)
+- [Building Multi-Agent AI Systems with LangChain4j and Java](/ai/videos/Building-Multi-Agent-AI-Systems-with-LangChain4j-and-Java)
+- [Armchair Architects: Defining AI Agents and Their Core Traits](/ai/videos/Armchair-Architects-Defining-AI-Agents-and-Their-Core-Traits)
+- [Beyond Chat: Building Smarter AI Agents in .NET with AiGen](/ai/videos/Beyond-Chat-Building-Smarter-AI-Agents-in-NET-with-AiGen)
 
 ### Enterprise AI and Real-World Case Studies
 
@@ -212,7 +212,7 @@ Guides emphasize practical steps for human-centered testing, maximizing cost-eff
 
 Extending last week's Java resources, new guides cover dependency management for Java 24, Maven BOM usage, cloud integration, and vendor-neutral APIs for chat models. These materials support productivity improvements for Java developers working with Copilot.
 
-- [Building Intelligent AI Applications with Java, Spring Boot, and LangChain4j](/videos/2025-11-04-Building-Intelligent-AI-Applications-with-Java-Spring-Boot-and-LangChain4j.html)
+- [Building Intelligent AI Applications with Java, Spring Boot, and LangChain4j](/ai/videos/Building-Intelligent-AI-Applications-with-Java-Spring-Boot-and-LangChain4j)
 
 ## ML
 
@@ -235,7 +235,7 @@ Microsoft and Anyscale introduced managed Ray support on Azure Kubernetes Servic
 The Spanish-language 'Python + IA' series offers nine practical sessions on building and deploying GenAI apps, addressing LLMs, RAG, agent engineering, and risk mitigation with code samples and community support on Azure and GitHub. The Cozy Kitchen guide demonstrates intelligent agent engineering with Azure AI Foundry, focusing on modular workflow design, persistence, GitHub integration, and advanced tuning.
 
 - [Recapitulación de la Serie Python + IA: Técnicas, Modelos y Recursos](https://techcommunity.microsoft.com/t5/microsoft-developer-community/python-ia-resumen-y-recursos/ba-p/4465152)
-- [From Building to Fine-Tuning: Coding Agents that Optimize AI Workflows](/videos/2025-11-04-From-Building-to-Fine-Tuning-Coding-Agents-that-Optimize-AI-Workflows.html)
+- [From Building to Fine-Tuning: Coding Agents that Optimize AI Workflows](/ai/videos/From-Building-to-Fine-Tuning-Coding-Agents-that-Optimize-AI-Workflows)
 
 ### Microsoft Fabric Data Services: Spatial Analytics, Workflow Automation, and Data Skills Development
 
@@ -322,7 +322,7 @@ Deployment guides detail ways to implement third-party firewalls in Landing Zone
 
 Azure Weekly Update covers new tools, VM and DevOps improvements, and a preview of Eventhouse KQL Database’s entity diagram for managing schemas. Instructions for Dev Box Catalog deployment using Terraform and GitHub support creating repeatable virtual workstations. App Service Managed Certificates now work for non-public sites, broadening support. Guides for troubleshooting Azure Virtual Desktop sign-in issues after tenant migration assist with practical authentication problems.
 
-- [Azure Weekly Update: November 7, 2025](/videos/2025-11-07-Azure-Weekly-Update-November-7-2025.html)
+- [Azure Weekly Update: November 7, 2025](/azure/videos/Azure-Weekly-Update-November-7-2025)
 - [Entity Diagram in Eventhouse KQL Database (Preview)](https://blog.fabric.microsoft.com/en-US/blog/entity-diagram-in-eventhouse-kql-database-preview/)
 - [Deploying and Syncing Microsoft Dev Box Catalogs with GitHub using Terraform](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deploying-dev-box-catalogs-and-synchronizing-with-github-using/ba-p/4467739)
 - [October 2025 Update: App Service Managed Certificates Support for Non-Publicly Accessible Sites](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/follow-up-to-important-changes-to-app-service-managed/ba-p/4466120)
@@ -337,15 +337,15 @@ This section highlights new developments in programming languages and frameworks
 .NET Conf 2025, running November 11–13, features tracks on security, NuGet, DevOps, and migrations to expedite adoption of .NET 10 and related AI tools. Demos for Model Context Protocol and Agent Framework support best practices for cloud-native, AI-enabled apps. Entity Framework 10’s release is spotlighted in the .NET Data Community Standup, including upgrade steps and new features. The .NET MAUI Standup marks Grial’s ten-year anniversary, tracing its development from Xamarin to .NET 10 controls.
 
 - [.NET Conf 2025: Launching .NET 10, Visual Studio 2026, and the Future of Cloud-Native and AI Development](https://devblogs.microsoft.com/dotnet/get-ready-for-dotnet-conf-2025/)
-- [.NET Data Community Standup: EF 10 Release Celebration](/videos/2025-11-06-NET-Data-Community-Standup-EF-10-Release-Celebration.html)
-- [.NET MAUI Community Standup: 10 Years of Grial](/videos/2025-11-05-NET-MAUI-Community-Standup-10-Years-of-Grial.html)
+- [.NET Data Community Standup: EF 10 Release Celebration](/coding/videos/NET-Data-Community-Standup-EF-10-Release-Celebration)
+- [.NET MAUI Community Standup: 10 Years of Grial](/coding/videos/NET-MAUI-Community-Standup-10-Years-of-Grial)
 
 ### Innovations in TypeScript, Language Trends, and AI Integration
 
 TypeScript remains the leading language on GitHub, a trend confirmed by architect Anders Hejlsberg. Its presence in React, Angular, and SvelteKit continues to grow, while migration to Go improves compiler performance and reliability. AI features increasingly shape language tools and design standards, with Model Context Protocol efforts driving further development of AI-ready programming environments.
 
 - [TypeScript’s Dominance in the AI Era: Insights from Lead Architect Anders Hejlsberg](https://github.blog/developer-skills/programming-languages-and-frameworks/typescripts-rise-in-the-ai-era-insights-from-lead-architect-anders-hejlsberg/)
-- [Anders Hejlsberg on Octoverse 2025: TypeScript Evolution, Go, and AI in Development](/videos/2025-11-06-Anders-Hejlsberg-on-Octoverse-2025-TypeScript-Evolution-Go-and-AI-in-Development.html)
+- [Anders Hejlsberg on Octoverse 2025: TypeScript Evolution, Go, and AI in Development](/ai/videos/Anders-Hejlsberg-on-Octoverse-2025-TypeScript-Evolution-Go-and-AI-in-Development)
 
 ### .NET Features: Reflection Improvements and Troubleshooting Runtime Issues
 
@@ -414,7 +414,7 @@ Security updates focus on integrating analysis tools (SonarQube, Semgrep), Depen
 
 Highlights from GitHub Universe 2025—including Agent HQ, Octoverse, and Game Off—are reviewed in "The Download." The episode examines open source security, project onboarding, and developer tooling, continuing community development coverage from prior roundups.
 
-- [The Download: Highlights from GitHub Universe 2025, Octoverse, and Game Off](/videos/2025-11-07-The-Download-Highlights-from-GitHub-Universe-2025-Octoverse-and-Game-Off.html)
+- [The Download: Highlights from GitHub Universe 2025, Octoverse, and Game Off](/devops/videos/The-Download-Highlights-from-GitHub-Universe-2025-Octoverse-and-Game-Off)
 
 ## Security
 
@@ -473,4 +473,4 @@ Security Copilot and generative AI enhance Security Operations Center workflows 
 Microsoft Edge now supports passkey-based sign-in, integrating FIDO2 and biometrics or PIN authentication with syncing across devices. Microsoft Fabric SQL Database will soon offer Customer-Managed Keys and auditing, strengthening encryption and compliance for cloud databases.
 
 - [Microsoft Edge Adds Passkey Support and Syncing with Password Manager](https://blogs.windows.com/msedgedev/2025/11/03/microsoft-edge-introduces-passkey-saving-and-syncing-with-microsoft-password-manager/)
-- [Secure by Design: Upcoming CMK and Auditing Features in Fabric SQL Database](/videos/2025-11-05-Secure-by-Design-Upcoming-CMK-and-Auditing-Features-in-Fabric-SQL-Database.html)
+- [Secure by Design: Upcoming CMK and Auditing Features in Fabric SQL Database](/azure/videos/Secure-by-Design-Upcoming-CMK-and-Auditing-Features-in-Fabric-SQL-Database)

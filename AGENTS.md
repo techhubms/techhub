@@ -1,5 +1,9 @@
 # Tech Hub Development Guide
 
+🚨 **ABSOLUTELY CRITICAL: FOLLOW THE PROCESS**: This file defines a **required 10-step process** for all development tasks in [AI Assistant Workflow](#ai-assistant-workflow). Always follow these steps in order for every request.
+
+🚫 **ABSOLUTELY CRITICAL: NEVER EXECUTE COMMANDS in the terminal running the `Run` command**: The `Run` command used for starting the website and running tests and anything else in that terminal will terminate the earlier executed `Run` command and whatever you are trying to do will FAIL. If you want to check if the servers are running or if tests succeeded, **ALWAYS** use the `get_terminal_output` tool. Keep checking by calling `get_terminal_output` and **NEVER** wait by doing a `Start-Sleep` or other wait commands.
+
 ## What is AGENTS.md?
 
 **This file is specifically for YOU - an AI coding agent.** AGENTS.md files provide the context, instructions, and conventions you need to work effectively on this project. Think of it as a README for agents.
@@ -20,8 +24,6 @@
 **Learn more about AGENTS.md**: <https://agents.md/>
 
 ---
-
-**🚨 ABSOLUTELY CRITICAL**: This file defines a **required 10-step process** for all development tasks in [AI Assistant Workflow](#ai-assistant-workflow). Always follow these steps in order for every request.
 
 ## Index
 
@@ -615,22 +617,41 @@ Run -WithoutTests
 🚫 **NEVER** run `dotnet test tests/TechHub.E2E.Tests` directly - it **WILL FAIL** without servers running!  
 ✅ **ALWAYS** use `Run -OnlyTests` (runs all tests) or `Run -OnlyTests -TestProject E2E.Tests` for E2E tests only.
 
-**CRITICAL RULES**:
+**🚨 CRITICAL TERMINAL INTERACTION RULES**:
+
+When you execute a `Run` command in a terminal:
 
 ✅ **DO**: Start website with `Run` in a dedicated terminal  
-✅ **DO**: Let it run in the background - NEVER touch that terminal again  
+✅ **DO**: **ONLY OBSERVE** the terminal output - NEVER interact with it  
 ✅ **DO**: Use Playwright MCP tools from GitHub Copilot Chat for all website testing  
 ✅ **DO**: Open NEW terminals for ANY other commands while website is running  
-✅ **DO**: Use `Run -WithoutTests` for interactive debugging (skip tests, start servers)
-✅ **DO**: Use `Run -OnlyTests` to run tests and stop servers after completion
-✅ **DO**: Use `Run -OnlyTests -TestProject <project>` to run specific test projects
+✅ **DO**: Use `Run -WithoutTests` for interactive debugging (skip tests, start servers)  
+✅ **DO**: Use `Run -OnlyTests` to run tests and stop servers after completion  
+✅ **DO**: Use `Run -OnlyTests -TestProject <project>` to run specific test projects  
 
-🚫 **NEVER**: Type ANY command in the terminal running the website  
-🚫 **NEVER**: Use curl, wget, or CLI tools in the website terminal  
+🚫 **NEVER**: Type `Start-Sleep`, `curl`, `wget`, or ANY command in the website terminal  
 🚫 **NEVER**: Run dotnet commands in the website terminal  
-🚫 **NEVER**: Execute ANY operation that interacts with the website terminal  
+🚫 **NEVER**: Press Enter, type anything, or interact with the website terminal  
+🚫 **NEVER**: Use `run_in_terminal` with `isBackground=false` to wait/sleep in the website terminal  
+🚫 **NEVER**: Execute ANY operation that sends input to the website terminal
 
-**Why This Matters**: ANY interaction with the terminal running the website (typing a command, pressing Enter, Ctrl+C accidentally) will **IMMEDIATELY SHUTDOWN** the website and cause the command to fail.
+**Why This Matters**:
+
+- The `Run` command starts servers and **blocks** the terminal  
+- ANY input to that terminal (typing, pressing Enter, Ctrl+C) **IMMEDIATELY SHUTS DOWN** the website  
+- This includes: `Start-Sleep`, `curl`, `Get-Process`, or any other command  
+- **SOLUTION**: Use `get_terminal_output` tool to READ output, open NEW terminals for commands  
+
+**How to Monitor Progress**:
+
+```powershell
+# ✅ CORRECT - Read output without interacting
+# Use get_terminal_output tool with the terminal ID
+# This reads output WITHOUT sending any input to the terminal
+
+# ✅ CORRECT - Execute other commands in a NEW terminal
+# Open a new terminal for any other operations
+```
 
 ### Testing Workflows and Strategies
 

@@ -4,13 +4,13 @@
    Component-specific styling for site-wide navigation header
    ============================================================================ */
 
-/* Main Navigation - Top level, sticky element */
+/* Main Navigation - Sticky at top of viewport */
 .main-nav {
-  background: var(--color-bg-subtle);
-  border-bottom: 1px solid var(--color-border-default);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  background: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border-default);
   width: 100%;
 }
 

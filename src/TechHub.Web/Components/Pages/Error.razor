@@ -10,8 +10,8 @@
     <SectionBanner Title="Error" Description="An error occurred while processing your request" />
 </Header>
 
-<div class="page-without-sidebar">
-    <main class="page-main-content">
+<main class="page-without-sidebar">
+    <section class="page-main-content">
         @if (IsDevelopmentOrTest)
         {
             @* Development/Test Mode: Show detailed exception information *@
@@ -90,8 +90,8 @@
                 }
             </div>
         }
-    </main>
-</div>
+    </section>
+</main>
 
 @code {
     [CascadingParameter]

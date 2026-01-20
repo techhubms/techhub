@@ -383,9 +383,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         {
             renderedHtml = _markdownService.RenderToHtml(
                 processedMarkdown,
-                currentPagePath,
-                primarySection,
-                tempItem.CollectionName);
+                currentPagePath);
         }
         catch (Exception ex)
         {

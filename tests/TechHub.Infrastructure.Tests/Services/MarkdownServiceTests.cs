@@ -111,8 +111,8 @@ public class MarkdownServiceTests
         // Act: Convert with auto-linking enabled
         var html = _service.RenderToHtml(markdown);
 
-        // Assert: URL wrapped in <a> tag
-        html.Should().Contain("<a href=\"https://github.com/features/copilot\">");
+        // Assert: URL wrapped in <a> tag with target="_blank" for external links
+        html.Should().Contain("<a href=\"https://github.com/features/copilot\" target=\"_blank\" rel=\"noopener noreferrer\">");
     }
 
     #endregion

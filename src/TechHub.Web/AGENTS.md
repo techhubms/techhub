@@ -24,6 +24,7 @@ This project implements the Blazor frontend with server-side rendering (SSR) and
 - **Progressive enhancement** - Core functionality works without JavaScript
 - **Use TechHubApiClient for all API calls** - Typed HTTP client in `Services/TechHubApiClient.cs`
 - **Follow Blazor component patterns** - See [Root AGENTS.md](../../AGENTS.md) for .NET/Blazor framework-specific guidance
+- **Follow semantic HTML structure** - Use `<main>`, `<section>`, `<article>`, `<aside>` instead of `<div>` (see Semantic HTML Structure section)
 - **Fix all linting errors** - Check with `get_errors` tool after editing files
 - **Add tests for components** - Use bUnit for component testing (see [tests/TechHub.Web.Tests/AGENTS.md](../../tests/TechHub.Web.Tests/AGENTS.md))
 
@@ -41,6 +42,191 @@ This project implements the Blazor frontend with server-side rendering (SSR) and
 - **Never skip error handling** - Use try-catch and display user-friendly messages
 - **Never create content without server-side rendering** - Initial load must show complete content
 - **Never use /assets/ paths for images** - Use `/images/` convention (e.g., `/images/section-backgrounds/`)
+- **Never use `<div>` for main content areas** - Use semantic HTML elements (`<main>`, `<section>`, `<article>`)
+
+## Semantic HTML Structure
+
+**CRITICAL**: All pages must use proper semantic HTML5 elements for accessibility, SEO, and maintainability.
+
+### Required Structure by Page Type
+
+**Homepage** (`Home.razor`):
+
+```html
+<html>
+  <header>                           <!-- Site navigation (NavHeader + SectionBanner) -->
+  <main class="page-with-sidebar">   <!-- Main content wrapper -->
+    <aside class="sidebar">          <!-- Latest roundup, latest content, RSS links, tag cloud -->
+    <section class="home-main-content">  <!-- Section cards grid -->
+  </main>
+  <footer>                           <!-- Site footer -->
+</html>
+```
+
+**Section Pages** (`Section.razor`, `SectionCollection.razor`):
+
+```html
+<html>
+  <header>                           <!-- Site navigation + section banner -->
+  <main class="page-with-sidebar">   <!-- Main content wrapper -->
+    <aside class="sidebar">          <!-- Tag cloud, RSS links -->
+    <section class="page-main-content">  <!-- Content items grid -->
+  </main>
+  <footer>                           <!-- Site footer -->
+</html>
+```
+
+**Content Item Pages** (`ContentItem.razor`):
+
+```html
+<html>
+  <header>                           <!-- Site navigation + section banner -->
+  <main class="page-with-sidebar">   <!-- Main content wrapper -->
+    <aside class="sidebar">          <!-- Tag cloud, table of contents -->
+    <article class="page-main-content content-detail">  <!-- Individual content item -->
+  </main>
+  <footer>                           <!-- Site footer -->
+</html>
+```
+
+**Custom Pages** (`GitHubCopilotVSCodeUpdates.razor`, `GitHubCopilotLevels.razor`, etc.):
+
+```html
+<html>
+  <header>                           <!-- Site navigation + section banner -->
+  <main class="page-with-sidebar">   <!-- Main content wrapper -->
+    <aside class="sidebar">          <!-- Video list, table of contents -->
+    <article class="page-main-content content-detail">  <!-- Selected video/content -->
+  </main>
+  <footer>                           <!-- Site footer -->
+</html>
+```
+
+**About Page** (`About.razor`):
+
+```html
+<html>
+  <header>                           <!-- Site navigation + section banner -->
+  <main class="page-without-sidebar">  <!-- Main content wrapper (no sidebar) -->
+    <section class="page-main-content">  <!-- Team member grid -->
+  </main>
+  <footer>                           <!-- Site footer -->
+</html>
+```
+
+### Semantic Element Usage Guidelines
+
+**`<header>`**: Site-wide navigation and page headers
+
+- Used by Header.razor component
+- Contains NavHeader, SectionBanner, SubNav
+- **CRITICAL**: Uses `display: contents` to allow sticky positioning relative to `<body>` (see Sticky Header Architecture)
+
+**`<main>`**: Primary content wrapper (one per page)
+
+- Container for sidebar + main content
+- Classes: `page-with-sidebar` (most pages) or `page-without-sidebar` (About page)
+
+**`<aside>`**: Sidebar content (supplementary information)
+
+- Tag clouds, RSS links, table of contents, latest items
+- Always in left column with class `sidebar`
+
+**`<section>`**: Thematic grouping of content
+
+- Use for: Section cards grid, content items grid, team members, about content
+- Has heading and represents thematic grouping
+- Classes: `home-main-content` (homepage) or `page-main-content` (other pages)
+
+**`<article>`**: Self-contained, independently distributable content
+
+- Use for: Individual blog posts, videos, content item details
+- Can be extracted and make sense on its own
+- Classes: `page-main-content content-detail`
+
+**`<footer>`**: Site footer
+
+- Copyright, links, authorship information
+
+### Choosing Between `<section>` and `<article>`
+
+**Use `<section>` when**:
+
+- Content is a thematic grouping (grid of cards, list of items)
+- Content depends on surrounding context
+- Examples: Section cards grid, content items grid, team members grid
+
+**Use `<article>` when**:
+
+- Content is self-contained and independently distributable
+- Could be extracted and still make sense
+- Examples: Blog post detail, video detail, content item detail
+
+### Common Mistakes to Avoid
+
+❌ **Wrong**: `<div class="page-main-content">`  
+✅ **Correct**: `<section class="page-main-content">` (for grids) or `<article class="page-main-content">` (for detail pages)
+
+❌ **Wrong**: `<div class="home-main-content">`  
+✅ **Correct**: `<section class="home-main-content">`
+
+❌ **Wrong**: `<main><div>content</div></main>`  
+✅ **Correct**: `<main><section>content</section></main>` or `<main><article>content</article></main>`
+
+## Sticky Header Architecture
+
+**CRITICAL**: The sticky navigation uses `display: contents` to achieve proper sticky behavior.
+
+### The Problem
+
+By default, `position: sticky` elements only stick while their parent container is visible. With a traditional `<header>` wrapper, navigation would disappear once you scrolled past the section banner.
+
+### The Solution
+
+We use `display: contents` on the `<header>` element to "remove" it from the box tree, allowing sticky children to stick relative to `<body>` instead of `<header>`.
+
+**Implementation** (Header.razor.css):
+
+```css
+header {
+    display: contents;
+    /* Removes header from box tree - nav/subnav become direct children of body for layout */
+}
+```
+
+**NavHeader** (NavHeader.razor.css):
+
+```css
+.main-nav {
+  position: sticky;
+  top: 0;              /* Sticks to very top of viewport */
+  z-index: 1000;       /* Above scrolling content */
+}
+```
+
+**SubNav** (SubNav.razor.css):
+
+```css
+.sub-nav {
+    position: sticky;
+    top: 76px;          /* Sticks below main-nav (76px = main-nav height) */
+    z-index: 999;       /* Slightly lower than main-nav */
+}
+```
+
+### How It Works
+
+1. **`display: contents`** makes the browser treat `<nav>`, `<section-banner>`, and `<subnav>` as direct children of `<body>` for layout purposes
+2. **`position: sticky`** on navigation elements makes them stick relative to the viewport scroll
+3. **Section banner scrolls normally** (no sticky positioning) and slides underneath the navigation
+4. **Layered sticking** achieved through `top` offsets: main-nav at `0`, sub-nav at `76px` (main-nav height)
+
+### Benefits
+
+- Navigation remains visible during entire page scroll (not just header height)
+- Section banner scrolls away naturally, revealing content
+- Clean HTML structure maintained (semantic `<header>` wrapper)
+- No JavaScript required
 
 ## Tech Hub Design System
 
@@ -242,25 +428,66 @@ Is this style specific to ONE component/page?
 - **Developer experience** - Individual files in dev mode for easy debugging
 - **Automatic optimization** - Blazor handles component CSS bundling and scoping
 
+### Page Structure and Semantic HTML
+
+**🚨 CRITICAL SEMANTIC HTML RULES**:
+
+- **ONE `<main>` per page** - Main content landmark (WAI-ARIA requirement)
+- **`<aside>` INSIDE `<main>`** when sidebar content is contextually related to main content (e.g., table of contents, related pages)
+- **`<article>` for self-contained content** - Blog posts, documentation pages, content items
+- **NO nested `<main>` elements** - Only one main landmark allowed per page
+
+#### Page Layout Patterns
+
+**Two standardized semantic structures**:
+
+**1. Pages with Sidebar** (Section, SectionCollection, ContentItem, Custom Pages):
+
+```razor
+<Header SectionName="..." />
+
+<main class="page-with-sidebar">
+    <aside class="sidebar">
+        <!-- Sidebar components: TOC, navigation, RSS links, tags -->
+    </aside>
+    
+    <!-- For article content (blog posts, documentation): -->
+    <article class="page-main-content content-detail">
+        <!-- Self-contained article content -->
+    </article>
+    
+    <!-- OR for component content (grids, lists): -->
+    <div class="page-main-content">
+        <!-- ContentItemsGrid, ContentItemDetail, etc. -->
+    </div>
+</main>
+```
+
+**2. Pages without Sidebar** (About, Error, NotFound):
+
+```razor
+<Header SectionName="..." />
+
+<main class="page-main-content">
+    <!-- Centered content, no sidebar -->
+</main>
+```
+
+**CSS Classes** (defined in `page-container.css`):
+
+- **`.page-with-sidebar`** - Applied to `<main>` for two-column grid layout (300px sidebar + 1fr content)
+- **`.page-main-content`** - Applied to content area (article or div) within the grid
+- **`.content-detail`** - Applied to `<article>` for content detail pages (adds specific padding/typography)
+
+**Why `<aside>` is INSIDE `<main>`**:
+
+Per WAI-ARIA best practices, complementary content (`<aside>`) that's directly related to the main content (like a table of contents or related pages navigation) should be nested within the `<main>` landmark. This semantic relationship helps assistive technologies understand the page structure.
+
 ### Sidebar Component Architecture
 
 **🚨 CRITICAL RESPONSIBILITY RULE**: Pages define layout structure with `<aside class="sidebar">`, sidebar components only render their content.
 
 **Pattern**: Composition-based sidebar design where pages control layout and components provide functionality.
-
-#### Page Layout Classes
-
-**Two standardized layouts** (defined in `page-container.css`):
-
-- **`.page-with-sidebar`** - Two-column grid layout (sidebar + main content)
-  - Used by: Section, SectionCollection, Home, ContentItem pages
-  - Grid: `300px 1fr` with responsive breakpoints
-  - Includes `<aside class="sidebar">` and `<main class="page-main-content">`
-
-- **`.page-without-sidebar`** - Single column centered layout
-  - Used by: About, Error, NotFound pages
-  - Max-width: `1400px`, centered with auto margins
-  - Only `<main class="page-main-content">` (no sidebar)
 
 #### Sidebar Layout Responsibility
 
@@ -283,10 +510,12 @@ Is this style specific to ONE component/page?
 
 #### Example: Section Page with Sidebar
 
-**Section.razor** (Page defines layout):
+**Section.razor** (Page defines semantic layout):
 
 ```razor
-<div class="page-with-sidebar">
+<Header SectionName="..." />
+
+<main class="page-with-sidebar">
     <PageHeader Section="@sectionData" />
     
     @* Page defines sidebar container *@
@@ -296,10 +525,29 @@ Is this style specific to ONE component/page?
         <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink(\"RSS Feed\", $\"{sectionData.Url}/feed.xml\") })\" />
     </aside>
     
-    <main class="page-main-content">
+    @* Use div for component content (not self-contained article) *@
+    <div class="page-main-content">
         <ContentItemsGrid ... />
-    </main>
-</div>
+    </div>
+</main>
+```
+
+**ContentItem.razor** (Page with article content):
+
+```razor
+<Header SectionName="..." />
+
+<main class="page-with-sidebar">
+    <aside class="sidebar">
+        <SidebarToc HtmlContent="@contentItem.RenderedHtml" />
+        <SidebarRssLinks ... />
+    </aside>
+    
+    @* Use article for self-contained content *@
+    <article class="page-main-content content-detail">
+        <ContentItemDetail Item="@contentItem" />
+    </article>
+</main>
 ```
 
 **SidebarCollectionNav.razor** (Component renders content only):

@@ -18,7 +18,6 @@
 html {
   overflow-y: scroll;
   overflow-x: hidden;
-  /* Prevent horizontal scroll */
   scroll-behavior: smooth;
 }
 

@@ -93,11 +93,11 @@ GitHub Copilot continues its transition from basic code completion toward agent-
 GitHub will remove support for Copilot Extensions as GitHub Apps by November 2025 and recommends full migration to MCP servers. This transition takes the ecosystem from initial registry features to a protocol-focused structure, allowing developers to reuse MCP integrations more easily across agents for increased interoperability. Recent registry changes reinforce this approach. The latest MCP IDE guides encourage developers to review migration documentation and shift to MCP standards—for scalable, maintainable workflows and future agentic development. The MCP registry is now positioned as a foundation for Copilot's ongoing development.
 
 - [Deprecation of GitHub Copilot Extensions in Favor of Model Context Protocol (MCP) Servers](https://github.blog/changelog/2025-09-24-deprecate-github-copilot-extensions-github-apps)
-- [What is Model Context Protocol (MCP)?](/videos/2025-09-24-What-is-Model-Context-Protocol-MCP.html)
-- [Understanding Model Context Protocol (MCP) for Developers](/videos/2025-09-24-Understanding-Model-Context-Protocol-MCP-for-Developers.html)
+- [What is Model Context Protocol (MCP)?](/ai/videos/What-is-Model-Context-Protocol-MCP)
+- [Understanding Model Context Protocol (MCP) for Developers](/ai/videos/Understanding-Model-Context-Protocol-MCP-for-Developers)
 - [How to Use GitHub Copilot Agent Mode and MCP to Query Microsoft Learn Docs in VS Code](https://techcommunity.microsoft.com/t5/microsoft-developer-community/use-copilot-and-mcp-to-query-microsoft-learn-docs/ba/p/4455835)
-- [Use Copilot and MCP to Query Microsoft Learn Docs](/videos/2025-09-22-Use-Copilot-and-MCP-to-Query-Microsoft-Learn-Docs.html)
-- [GitHub MCP Registry Integration with Playwright in VS Code Insiders](/videos/2025-09-23-GitHub-MCP-Registry-Integration-with-Playwright-in-VS-Code-Insiders.html)
+- [Use Copilot and MCP to Query Microsoft Learn Docs](/ai/videos/Use-Copilot-and-MCP-to-Query-Microsoft-Learn-Docs)
+- [GitHub MCP Registry Integration with Playwright in VS Code Insiders](/ai/videos/GitHub-MCP-Registry-Integration-with-Playwright-in-VS-Code-Insiders)
 
 ### Copilot Coding Agent: From Workflow Automation to IDE and CLI Integration
 
@@ -117,8 +117,8 @@ OpenAI's GPT-5-Codex and Claude Opus 4.1 are now available to additional Copilot
 - [Claude Opus 4.1 Now Generally Available in GitHub Copilot](https://github.blog/changelog/2025-09-23-claude-opus-4-1-is-now-generally-available-in-github-copilot)
 - [GitHub Copilot-SWE Model Launches in Visual Studio Code Insiders](https://github.blog/changelog/2025-09-22-copilot-swe-model-rolling-out-to-visual-studio-code-insiders)
 - [Upcoming Deprecation of Select Copilot Models from Claude, OpenAI, and Gemini](https://github.blog/changelog/2025-09-23-upcoming-deprecation-of-select-copilot-models-from-claude-openai-and-gemini)
-- [VS Code and GitHub Copilot: Exploring GPT-5-Codex and Copilot-SWE](/videos/2025-09-25-VS-Code-and-GitHub-Copilot-Exploring-GPT-5-Codex-and-Copilot-SWE.html)
-- [What's New: GitHub MCP Registry, Copilot CLI Public Preview, and Beast Mode for Copilot](/videos/2025-09-26-Whats-New-GitHub-MCP-Registry-Copilot-CLI-Public-Preview-and-Beast-Mode-for-Copilot.html)
+- [VS Code and GitHub Copilot: Exploring GPT-5-Codex and Copilot-SWE](/ai/videos/VS-Code-and-GitHub-Copilot-Exploring-GPT-5-Codex-and-Copilot-SWE)
+- [What's New: GitHub MCP Registry, Copilot CLI Public Preview, and Beast Mode for Copilot](/ai/videos/Whats-New-GitHub-MCP-Registry-Copilot-CLI-Public-Preview-and-Beast-Mode-for-Copilot)
 
 ### Copilot CLI and Extension Deprecations: Streamlining for the Future
 
@@ -140,21 +140,21 @@ Copilot Spaces is now available to all users, providing a platform for managing 
 The Copilot App Modernization toolkit is now generally available for Java and .NET projects, expanding on last week's agent-guided refactoring tutorials. The toolkit automates dependency analysis, code transformation, containerization, and incorporates security scanning—supporting recent compliance initiatives. Updated SQL workflows leverage AI for smarter query generation, analytics, and automation for both MSSQL and PostgreSQL, continuing the trend from last week's context-driven database improvements. Tutorials help teams upgrade legacy systems to modern infrastructure while prioritizing productivity and maintainability.
 
 - [GitHub Copilot App Modernization Now Available for Java and .NET Projects](https://github.blog/changelog/2025-09-22-github-copilot-app-modernization-is-now-generally-available-for-java-and-net)
-- [Modernize .NET Apps in Days with GitHub Copilot](/videos/2025-09-23-Modernize-NET-Apps-in-Days-with-GitHub-Copilot.html)
-- [Modernizing Java Applications with GitHub Copilot and Azure Deployment](/videos/2025-09-23-Modernizing-Java-Applications-with-GitHub-Copilot-and-Azure-Deployment.html)
+- [Modernize .NET Apps in Days with GitHub Copilot](/ai/videos/Modernize-NET-Apps-in-Days-with-GitHub-Copilot)
+- [Modernizing Java Applications with GitHub Copilot and Azure Deployment](/ai/videos/Modernizing-Java-Applications-with-GitHub-Copilot-and-Azure-Deployment)
 - [Modernizing Java Projects with GitHub Copilot Agent Mode: Step-by-Step Guide](https://github.blog/ai-and-ml/github-copilot/a-step-by-step-guide-to-modernizing-java-projects-with-github-copilot-agent-mode/)
-- [Quickly Modernize and Deploy Java Apps with AI and GitHub Copilot in VS Code](/videos/2025-09-26-Quickly-Modernize-and-Deploy-Java-Apps-with-AI-and-GitHub-Copilot-in-VS-Code.html)
-- [Modernize Java Apps in Days with GitHub Copilot](/videos/2025-09-23-Modernize-Java-Apps-in-Days-with-GitHub-Copilot.html)
+- [Quickly Modernize and Deploy Java Apps with AI and GitHub Copilot in VS Code](/ai/videos/Quickly-Modernize-and-Deploy-Java-Apps-with-AI-and-GitHub-Copilot-in-VS-Code)
+- [Modernize Java Apps in Days with GitHub Copilot](/ai/videos/Modernize-Java-Apps-in-Days-with-GitHub-Copilot)
 - [Microsoft’s AI Agents Target Technical Debt Crisis](https://devops.com/microsofts-ai-agents-target-technical-debt-crisis/)
-- [Enhancing SQL Development in VS Code with GitHub Copilot and Microsoft Fabric](/videos/2025-09-24-Enhancing-SQL-Development-in-VS-Code-with-GitHub-Copilot-and-Microsoft-Fabric.html)
+- [Enhancing SQL Development in VS Code with GitHub Copilot and Microsoft Fabric](/ai/videos/Enhancing-SQL-Development-in-VS-Code-with-GitHub-Copilot-and-Microsoft-Fabric)
 - [Boost Productivity with the PostgreSQL Extension and GitHub Copilot in VS Code](https://techcommunity.microsoft.com/t5/microsoft-developer-community/talk-to-your-data-postgresql-gets-a-voice-in-vs-code/ba/p/4453695)
 
 ### Agentic Workflows, Prompt-Driven Development, and IDE Innovations
 
 New guidance covers converting web apps to mobile apps using Copilot prompts, leveraging plan mode, voice input, and improved model management—continuing previous advances in MCP-powered IDE workflows and Spec Kit sessions. The VS Code Insiders podcast features the latest on IDE improvements, focusing on AI’s shift from pure code assistance to orchestrated workflow support. Ongoing updates in live preview, documentation access, and activity tracking build on former releases in XAML, collaborative coding, and agentic automation—marking positive change for developer workflows.
 
-- [Converting a Web App to Mobile Using GitHub Copilot Prompts](/videos/2025-09-24-Converting-a-Web-App-to-Mobile-Using-GitHub-Copilot-Prompts.html)
-- [The Future of Coding Agents in VS Code: Insights from VS Code Insiders Podcast](/videos/2025-09-22-The-Future-of-Coding-Agents-in-VS-Code-Insights-from-VS-Code-Insiders-Podcast.html)
+- [Converting a Web App to Mobile Using GitHub Copilot Prompts](/ai/videos/Converting-a-Web-App-to-Mobile-Using-GitHub-Copilot-Prompts)
+- [The Future of Coding Agents in VS Code: Insights from VS Code Insiders Podcast](/ai/videos/The-Future-of-Coding-Agents-in-VS-Code-Insights-from-VS-Code-Insiders-Podcast)
 - [Enhancements to XAML Live Preview in Visual Studio for .NET MAUI](https://devblogs.microsoft.com/visualstudio/enhancements-to-xaml-live-preview-in-visual-studio-for-net-maui/)
 - [GitHub Copilot: The Influence of Generative AI Assistants and Agents on Software Development - Netherlands](/2025-09-25-GitHub-Copilot-The-Influence-of-Generative-AI-Assistants-and-Agents-on-Software-Development-Netherlands.html)
 - [GitHub Copilot: The Influence of Generative AI Assistants and Agents on Software Development - Belgium](/2025-09-23-GitHub-Copilot-The-Influence-of-Generative-AI-Assistants-and-Agents-on-Software-Development-Belgium.html)
@@ -193,7 +193,7 @@ Azure's Model Context Protocol further embeds governance and security in AI work
 A video walkthrough introduces the GitHub MCP Registry, allowing developers to locate and connect MCP servers for agent development and modular design. Additional guidance outlines secure MCP server integration for Logic Apps and Copilot Studio, including authentication and deployment recommendations.
 
 - [Teaching the LLM Good Habits: How Azure MCP Uses Best-Practice Tools](https://devblogs.microsoft.com/all-things-azure/teaching-the-llm-good-habits-how-azure-mcp-uses-best-practice-tools/)
-- [A Deep Dive into the GitHub MCP Registry for AI Agents](/videos/2025-09-24-A-Deep-Dive-into-the-GitHub-MCP-Registry-for-AI-Agents.html)
+- [A Deep Dive into the GitHub MCP Registry for AI Agents](/ai/videos/A-Deep-Dive-into-the-GitHub-MCP-Registry-for-AI-Agents)
 - [Connecting Azure Logic Apps MCP Server to Copilot Studio Securely](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/calling-logic-apps-mcp-server-from-copilot-studio/ba/p/4456277)
 
 ### Microsoft Copilot Studio and Model Selection
@@ -226,8 +226,8 @@ SharePoint's Knowledge Agent (public preview) delivers AI-powered automation for
 
 Developers continue to build practical agents, with a tutorial on creating a resilience coach using Azure OpenAI and Python. Additional resources show agent memory management with Semantic Kernel and Azure AI Search, alongside customization guides for LLMs and Cognitive Services. An operational workflow demonstrates post-call analytics using Azure OpenAI to process transcripts and feed CRM systems.
 
-- [Building a Resilience Coach with AI on Cozy AI Kitchen](/videos/2025-09-23-Building-a-Resilience-Coach-with-AI-on-Cozy-AI-Kitchen.html)
-- [AI Agent Memory: Building Self-Improving Agents](/videos/2025-09-22-AI-Agent-Memory-Building-Self-Improving-Agents.html)
+- [Building a Resilience Coach with AI on Cozy AI Kitchen](/ai/videos/Building-a-Resilience-Coach-with-AI-on-Cozy-AI-Kitchen)
+- [AI Agent Memory: Building Self-Improving Agents](/ai/videos/AI-Agent-Memory-Building-Self-Improving-Agents)
 - [Generative AI in Azure: A Practical Guide to Getting Started](https://dellenny.com/generative-ai-in-azure-a-practical-guide-to-getting-started/)
 - [From Call Transcripts to CRM Gold: AI-Powered Post-Call Intelligence](https://techcommunity.microsoft.com/t5/azure-communication-services/from-call-transcripts-to-crm-gold-ai-powered-post-call/ba/p/4456337)
 
@@ -322,7 +322,7 @@ The September 26, 2025 Azure update covers service retirements, new AKS Fleet Ma
 
 Security features expand with Azure Integrated HSM in public preview, providing hardware-backed cryptography for trusted VMs and easier FIPS compliance. These updates underscore ongoing monitoring, centralized logging, and confidential compute improvements.
 
-- [Azure Update - 26th September 2025: Service Retirements, New Features, and GitHub Copilot Highlights](/videos/2025-09-26-Azure-Update-26th-September-2025-Service-Retirements-New-Features-and-GitHub-Copilot-Highlights.html)
+- [Azure Update - 26th September 2025: Service Retirements, New Features, and GitHub Copilot Highlights](/ai/videos/Azure-Update-26th-September-2025-Service-Retirements-New-Features-and-GitHub-Copilot-Highlights)
 - [Unlocking Real-Time Operational Intelligence: Azure Monitor Logs Integration in Fabric via Eventstream](https://blog.fabric.microsoft.com/en-US/blog/unlocking-real-time-operational-intelligence-azure-monitor-logs-integration-in-fabric-via-eventstream/)
 - [Enhanced Logging for Azure Application Gateway: Resource-Specific Tables, DCR, and Cost Optimization](https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-visibility-flexibility-and-cost-efficiency-with/ba/p/4456707)
 - [Announcing Azure Container Apps Azure Monitor Dashboards with Grafana (Public Preview)](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-the-public-preview-of-azure-container-apps-azure/ba/p/4450958)
@@ -344,11 +344,11 @@ Developer tooling updates include forums for Azure Automation feedback and bug r
 
 A deep-dive guide for Azure Database for PostgreSQL Flexible Server covers deployment, tuning, authentication, high availability, encryption, and cost optimization practices.
 
-- [Azure Database for PostgreSQL: Flexible Server Deep Dive](/videos/2025-09-22-Azure-Database-for-PostgreSQL-Flexible-Server-Deep-Dive.html)
+- [Azure Database for PostgreSQL: Flexible Server Deep Dive](/azure/videos/Azure-Database-for-PostgreSQL-Flexible-Server-Deep-Dive)
 
 A Rust SDK workshop demonstrates secure secret management and authentication for memory-safe cloud-native apps on Azure.
 
-- [Building Secure Applications with Azure SDK for Rust](/videos/2025-09-26-Building-Secure-Applications-with-Azure-SDK-for-Rust.html)
+- [Building Secure Applications with Azure SDK for Rust](/azure/videos/Building-Secure-Applications-with-Azure-SDK-for-Rust)
 
 Analysis of Azure API Management Developer Tier highlights self-hosted gateway capabilities, premium features, and cost considerations for dev/testing environments.
 
@@ -403,20 +403,20 @@ Visual Studio 2026 Insiders now supports Podman, enabling developers to use this
 .NET MAUI applications must update to MAUI 9 to comply with Google Play's 16 KB memory page rule for Android 15+. Guidance is available for checking dependencies and updating build tools. The MAUI Community Standup event in Prague continues focus on collaboration and ongoing platform improvements, reflecting recent compliance and migration support topics.
 
 - [Preparing Your .NET MAUI Apps for Google Play’s 16 KB Page Size Requirement](https://devblogs.microsoft.com/dotnet/maui-google-play-16-kb-page-size-support/)
-- [.NET MAUI Community Standup - Live in Prague with the .NET MAUI Team](/videos/2025-09-25-NET-MAUI-Community-Standup-Live-in-Prague-with-the-NET-MAUI-Team.html)
+- [.NET MAUI Community Standup - Live in Prague with the .NET MAUI Team](/coding/videos/NET-MAUI-Community-Standup-Live-in-Prague-with-the-NET-MAUI-Team)
 
 ### .NET Platform Strategy and Database Migrations
 
 Microsoft has clarified support timelines for .NET LTS/STS releases. Nick Chapsas provides migration planning guidance, helping developers minimize upgrade risk. Jeremy Miller’s Data Community Standup compares Marten/PostgreSQL and Entity Framework Core, offering real-world migration Q&A for developers planning database changes.
 
-- [Understanding Microsoft's LTS/STS Changes for .NET Support](/videos/2025-09-22-Understanding-Microsofts-LTSSTS-Changes-for-NET-Support.html)
-- [.NET Data Community Standup: Jeremy Miller on Marten and Database Migrations](/videos/2025-09-24-NET-Data-Community-Standup-Jeremy-Miller-on-Marten-and-Database-Migrations.html)
+- [Understanding Microsoft's LTS/STS Changes for .NET Support](/coding/videos/Understanding-Microsofts-LTSSTS-Changes-for-NET-Support)
+- [.NET Data Community Standup: Jeremy Miller on Marten and Database Migrations](/coding/videos/NET-Data-Community-Standup-Jeremy-Miller-on-Marten-and-Database-Migrations)
 
 ### Building Server-Side and CLI Tools with .NET
 
 The latest ASP.NET Community Standup demonstrates a multi-user MCP server, highlighting collaborative code review and refactoring workflows. Andrew Lock’s guide on 'sleep-pc' covers .NET Native AOT usage, Win32 integration, argument processing, and NuGet packaging for durable server-side and CLI tool creation.
 
-- [ASP.NET Community Standup - Vibe Coding a C# MCP Server](/videos/2025-09-26-ASPNET-Community-Standup-Vibe-Coding-a-C-MCP-Server.html)
+- [ASP.NET Community Standup - Vibe Coding a C# MCP Server](/coding/videos/ASPNET-Community-Standup-Vibe-Coding-a-C-MCP-Server)
 - [Building sleep-pc: A .NET Native AOT Tool for Automating Windows Sleep](https://andrewlock.net/sleep-pc-a-dotnet-tool-to-make-windows-sleep-after-a-timeout/)
 
 ## DevOps
@@ -451,7 +451,7 @@ Playwright Testing now runs on all major browsers and languages, offering manage
 GitHub’s beginner guide delivers video resources for repository management, pull requests, commands, licensing, and profile setup, providing a standardized approach to DevOps onboarding.
 
 - [Getting Started with Microsoft Playwright Testing Features and How to Use It](https://dellenny.com/getting-started-with-microsoft-playwright-testing-features-and-how-to-use-it/)
-- [The Ultimate Beginner's Guide to GitHub in 2025](/videos/2025-09-22-The-Ultimate-Beginners-Guide-to-GitHub-in-2025.html)
+- [The Ultimate Beginner's Guide to GitHub in 2025](/devops/videos/The-Ultimate-Beginners-Guide-to-GitHub-in-2025)
 
 ### Other DevOps News
 

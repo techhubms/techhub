@@ -1,14 +1,11 @@
 /* ============================================================================
    Header Component Styles
    
-   Ensures header container doesn't interfere with sticky child elements
+   Uses display: contents to make nav elements stick relative to body,
+   allowing them to remain sticky for entire page scroll (not just header height)
    ============================================================================ */
 
 header {
-    /* Allow sticky children to work properly */
-    position: relative;
-    /* Don't constrain sticky elements */
-    overflow: visible;
-    /* No height constraints */
-    height: auto;
+    display: contents;
+    /* Removes header from box tree - nav/subnav become direct children of body for layout */
 }

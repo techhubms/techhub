@@ -11,6 +11,34 @@ if ! dotnet dev-certs https --check; then
     dotnet dev-certs https
 fi
 
+# Export and trust the development certificate for Chrome/Chromium (used by Playwright)
+echo "Trusting development certificates for Playwright/Chrome..."
+
+# Install NSS tools for certificate management
+sudo apt-get update > /dev/null 2>&1
+sudo apt-get install -y libnss3-tools > /dev/null 2>&1
+
+CERT_PATH="$HOME/.aspnet/https/aspnetapp.pfx"
+CERT_PEM="$HOME/.aspnet/https/aspnetapp.pem"
+mkdir -p "$HOME/.aspnet/https"
+
+# Export the dev cert to a file (without --trust as it doesn't work in Linux containers)
+dotnet dev-certs https -ep "$CERT_PATH" -p "password"
+
+# Convert PFX to PEM format for Chrome's certificate store
+openssl pkcs12 -in "$CERT_PATH" -out "$CERT_PEM" -nodes -password pass:password
+
+# Initialize NSS database if it doesn't exist
+mkdir -p "$HOME/.pki/nssdb"
+if [ ! -f "$HOME/.pki/nssdb/cert9.db" ]; then
+    certutil -d sql:"$HOME/.pki/nssdb" -N --empty-password
+fi
+
+# Add certificate to NSS database (used by Chrome/Chromium)
+certutil -d sql:"$HOME/.pki/nssdb" -A -t "C,," -n "ASP.NET Core HTTPS Dev Cert" -i "$CERT_PEM" || true
+
+echo "✓ Development certificates configured"
+
 # ==================== .NET Global Tools ====================
 echo "Installing .NET global tools..."
 if ! dotnet tool list -g | grep -q dotnet-ef; then

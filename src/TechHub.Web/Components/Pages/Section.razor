@@ -15,7 +15,7 @@
 
 <Header SectionName="@SectionName" />
 
-<div class="page-with-sidebar">
+<main class="page-with-sidebar">
     <aside class="sidebar">
         <SidebarTagCloud Scope="TagCloudScope.Section" SectionName="@SectionName" Title="Popular Tags"
             NavigationMode="TagCloudNavigationMode.Filter" SelectedTags="@selectedTags"
@@ -23,10 +23,10 @@
         <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"/{SectionName}/feed.xml") })" />
     </aside>
 
-    <main class="page-main-content">
+    <section class="page-main-content">
         <ContentItemsGrid SectionName="@SectionName" CollectionName="all" FilterTags="@selectedTags" />
-    </main>
-</div>
+    </section>
+</main>
 
 @code {
     [Parameter]

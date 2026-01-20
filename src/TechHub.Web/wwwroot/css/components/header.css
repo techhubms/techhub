@@ -2,11 +2,8 @@
    Site Header Styles
    
    Global header wrapper that contains main-nav, section-banner, and sub-nav
+   No explicit positioning needed - allows sticky children (nav, subnav) to work
    ============================================================================ */
-
-.site-header {
-    position: relative;
-}
 
 /* Banner collapses when scrolling */
 .site-header.scrolled .section-banner {

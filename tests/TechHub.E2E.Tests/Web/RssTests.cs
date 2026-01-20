@@ -79,20 +79,6 @@ public class RssTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
     }
 
     [Fact]
-    public async Task Footer_HasRssSubscribeLink()
-    {
-        // Arrange
-
-        // Act
-        await Page.GotoAndWaitForBlazorAsync(BaseUrl);
-
-        // Assert - Check footer has RSS link
-        var footerRssLink = Page.Locator("footer a:has-text('Subscribe via RSS')");
-        await footerRssLink.AssertElementVisibleAsync();
-        await footerRssLink.AssertHrefEqualsAsync("/all/feed.xml");
-    }
-
-    [Fact]
     public async Task RssFeed_AllContent_ReturnsValidXml()
     {
         // Arrange

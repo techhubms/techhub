@@ -17,7 +17,7 @@
 
     <Header SectionName="github-copilot" />
 
-    <div class="page-with-sidebar">
+    <main class="page-with-sidebar">
         <aside class="sidebar">
             <nav class="sidebar-toc" aria-label="Table of contents">
                 <h2>Levels</h2>
@@ -32,67 +32,65 @@
             </nav>
         </aside>
 
-        <main class="page-main-content">
-            <article class="content-detail">
-                <header class="content-detail-header">
-                    <h1 class="page-h1" tabindex="-1">@pageData.Title</h1>
-                    @if (!string.IsNullOrWhiteSpace(pageData.Description))
-                    {
-                        <p class="page-description">@pageData.Description</p>
-                    }
-                </header>
+        <article class="page-main-content content-detail">
+            <div class="content-detail-header">
+                <h1 class="page-h1" tabindex="-1">@pageData.Title</h1>
+                @if (!string.IsNullOrWhiteSpace(pageData.Description))
+                {
+                    <p class="page-description">@pageData.Description</p>
+                }
+            </div>
 
-                <div class="levels-container">
-                    @* Introduction *@
-                    <div class="levels-intro">
-                        <p>@pageData.Intro</p>
-                    </div>
-
-                    @* Overview Section *@
-                    <section id="overview" class="levels-section">
-                        <h2>Overview</h2>
-                        <p>@pageData.Overview.Content</p>
-                        @if (!string.IsNullOrEmpty(pageData.Overview.ImageUrl))
-                        {
-                            <img src="@pageData.Overview.ImageUrl" alt="@pageData.Overview.ImageAlt"
-                                class="levels-overview-image" />
-                        }
-                    </section>
-
-                    @* Each Level *@
-                    @foreach (var level in pageData.Levels)
-                    {
-                        <section id="level-@level.Number" class="levels-section levels-level">
-                            <h2>Level @level.Number: @level.Title</h2>
-                            <p>@level.Description</p>
-                            @if (!string.IsNullOrEmpty(level.YoutubeId))
-                            {
-                                <div class="levels-video">
-                                    <iframe src="https://www.youtube.com/embed/@level.YoutubeId"
-                                        title="Level @level.Number: @level.Title" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen>
-                                    </iframe>
-                                </div>
-                            }
-                        </section>
-                    }
-
-                    @* Conclusion *@
-                    <section id="conclusion" class="levels-section levels-conclusion">
-                        <h2>Conclusion</h2>
-                        <p>@pageData.Conclusion</p>
-                        @if (!string.IsNullOrEmpty(pageData.PlaylistUrl))
-                        {
-                            <a href="@pageData.PlaylistUrl" class="levels-playlist-link" target="_blank" rel="noopener">
-                                Watch the full playlist on YouTube
-                            </a>
-                        }
-                    </section>
+            <div class="levels-container">
+                @* Introduction *@
+                <div class="levels-intro">
+                    <p>@pageData.Intro</p>
                 </div>
-            </article>
-        </main>
-    </div>
+
+                @* Overview Section *@
+                <section id="overview" class="levels-section">
+                    <h2>Overview</h2>
+                    <p>@pageData.Overview.Content</p>
+                    @if (!string.IsNullOrEmpty(pageData.Overview.ImageUrl))
+                    {
+                        <img src="@pageData.Overview.ImageUrl" alt="@pageData.Overview.ImageAlt"
+                            class="levels-overview-image" />
+                    }
+                </section>
+
+                @* Each Level *@
+                @foreach (var level in pageData.Levels)
+                {
+                    <section id="level-@level.Number" class="levels-section levels-level">
+                        <h2>Level @level.Number: @level.Title</h2>
+                        <p>@level.Description</p>
+                        @if (!string.IsNullOrEmpty(level.YoutubeId))
+                        {
+                            <div class="levels-video">
+                                <iframe src="https://www.youtube.com/embed/@level.YoutubeId"
+                                    title="Level @level.Number: @level.Title" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        }
+                    </section>
+                }
+
+                @* Conclusion *@
+                <section id="conclusion" class="levels-section levels-conclusion">
+                    <h2>Conclusion</h2>
+                    <p>@pageData.Conclusion</p>
+                    @if (!string.IsNullOrEmpty(pageData.PlaylistUrl))
+                    {
+                        <a href="@pageData.PlaylistUrl" class="levels-playlist-link" target="_blank" rel="noopener">
+                            Watch the full playlist on YouTube
+                        </a>
+                    }
+                </section>
+            </div>
+        </article>
+    </main>
 }
 
 @code {

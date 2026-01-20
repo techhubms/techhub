@@ -86,7 +86,7 @@ This week's updates bring new custom agents, enhanced models, deeper IDE integra
 Custom agents are now available in Copilot, extending beyond standard code completion to streamline DevOps, security, and automation workflows. Teams can define agents in markdown and manage them inside repositories. Integration examples include PagerDuty, JFrog, and Neon. These agents, which run in the terminal, VS Code, and on GitHub.com, provide automation for specific domains and support organization-wide policies or coding standards. Tutorials such as Rubber Duck Thursdays show how to build and set up agents tailored to the needs of your team. Strong vendor integrations and accessible setup options enable flexible AI-driven automation for software pipelines.
 
 - [Introducing Custom Agents in GitHub Copilot for Developer Workflows](https://github.blog/news-insights/product-news/your-stack-your-rules-introducing-custom-agents-in-github-copilot-for-observability-iac-and-security/)
-- [Rubber Duck Thursdays: Building with Copilot Custom Agents](/videos/2025-12-03-Rubber-Duck-Thursdays-Building-with-Copilot-Custom-Agents.html)
+- [Rubber Duck Thursdays: Building with Copilot Custom Agents](/ai/videos/Rubber-Duck-Thursdays-Building-with-Copilot-Custom-Agents)
 
 ### GitHub Copilot Spaces
 
@@ -116,40 +116,40 @@ The Visual Studio 2026 update boosts Copilot’s integration by adding a GitHub 
 Building on recent work around registry and deployment, new tutorials walk through setting up a private registry on Azure API Center, so only trusted models are accessible in Copilot and VS Code. There are demonstrations for the kit-dev MCP Server CLI, including code symbol extraction, abstract syntax tree searching, and inline documentation. The guides help teams securely automate Copilot and MCP tasks using compliant workflows.
 
 - [Locking Down MCP: Create a Private Registry on Azure API Center for GitHub Copilot and VS Code](https://devblogs.microsoft.com/all-things-azure/locking-down-mcp-create-a-private-registry-on-azure-api-center-and-enforce-it-in-github-copilot-and-vs-code/)
-- [Supercharging GitHub Copilot CLI with MCP Server](/videos/2025-12-03-Supercharging-GitHub-Copilot-CLI-with-MCP-Server.html)
+- [Supercharging GitHub Copilot CLI with MCP Server](/ai/videos/Supercharging-GitHub-Copilot-CLI-with-MCP-Server)
 
 ### Copilot Agent Automation, Orchestration, and Evaluation
 
 Step-by-step guides continue from last week’s agent orchestration materials, showing how to use Mission Control for Copilot agent assignment, prompt creation, and parallel execution. The ongoing AI Toolkit + Copilot Pet Planner series now covers agent setup, code output generation, iterative tracing, and results evaluation. Tutorials focus on reviewing trace data, comparing agents side by side, and scoring output, making agent development easier to manage.
 
 - [How to Orchestrate Multiple GitHub Copilot Agents Using Mission Control](https://github.blog/ai-and-ml/github-copilot/how-to-orchestrate-agents-using-mission-control/)
-- [Setting Up AI Toolkit and GitHub Copilot for Microsoft Foundry Projects](/videos/2025-12-01-Setting-Up-AI-Toolkit-and-GitHub-Copilot-for-Microsoft-Foundry-Projects.html)
-- [Generating Agent Code Using AI Toolkit and GitHub Copilot](/videos/2025-12-01-Generating-Agent-Code-Using-AI-Toolkit-and-GitHub-Copilot.html)
-- [Creating an Agent with AI Toolkit and GitHub Copilot: Pet Planner Workshop Part 3](/videos/2025-12-01-Creating-an-Agent-with-AI-Toolkit-and-GitHub-Copilot-Pet-Planner-Workshop-Part-3.html)
-- [Adding Tracing to an Agent with AI Toolkit and GitHub Copilot](/videos/2025-12-01-Adding-Tracing-to-an-Agent-with-AI-Toolkit-and-GitHub-Copilot.html)
-- [Evaluating AI Agent Output with GitHub Copilot and AI Toolkit (Pet Planner Workshop, Part 6)](/videos/2025-12-01-Evaluating-AI-Agent-Output-with-GitHub-Copilot-and-AI-Toolkit-Pet-Planner-Workshop-Part-6.html)
-- [AI Toolkit and GitHub Copilot: Model Recommendations Workshop](/videos/2025-12-01-AI-Toolkit-and-GitHub-Copilot-Model-Recommendations-Workshop.html)
-- [Evaluating AI Models for Coding with GitHub Models](/videos/2025-12-04-Evaluating-AI-Models-for-Coding-with-GitHub-Models.html)
+- [Setting Up AI Toolkit and GitHub Copilot for Microsoft Foundry Projects](/ai/videos/Setting-Up-AI-Toolkit-and-GitHub-Copilot-for-Microsoft-Foundry-Projects)
+- [Generating Agent Code Using AI Toolkit and GitHub Copilot](/ai/videos/Generating-Agent-Code-Using-AI-Toolkit-and-GitHub-Copilot)
+- [Creating an Agent with AI Toolkit and GitHub Copilot: Pet Planner Workshop Part 3](/ai/videos/Creating-an-Agent-with-AI-Toolkit-and-GitHub-Copilot-Pet-Planner-Workshop-Part-3)
+- [Adding Tracing to an Agent with AI Toolkit and GitHub Copilot](/ai/videos/Adding-Tracing-to-an-Agent-with-AI-Toolkit-and-GitHub-Copilot)
+- [Evaluating AI Agent Output with GitHub Copilot and AI Toolkit (Pet Planner Workshop, Part 6)](/ai/videos/Evaluating-AI-Agent-Output-with-GitHub-Copilot-and-AI-Toolkit-Pet-Planner-Workshop-Part-6)
+- [AI Toolkit and GitHub Copilot: Model Recommendations Workshop](/ai/videos/AI-Toolkit-and-GitHub-Copilot-Model-Recommendations-Workshop)
+- [Evaluating AI Models for Coding with GitHub Models](/ai/videos/Evaluating-AI-Models-for-Coding-with-GitHub-Models)
 
 ### Issue Assignment and Project Management Integrations
 
 Now, issues can be assigned directly to Copilot using GraphQL/REST APIs, streamlining automation for code review, triage, and routing CI/CD workflows. Teams can set up custom agent directions and use Copilot with Linear’s issue tracker for automatic code or pull request generation, expanding integrations with other tools.
 
 - [Assign Issues to GitHub Copilot Using the API](https://github.blog/changelog/2025-12-03-assign-issues-to-copilot-using-the-api)
-- [Assigning Linear Issues to GitHub Copilot Coding Agent](/videos/2025-12-01-Assigning-Linear-Issues-to-GitHub-Copilot-Coding-Agent.html)
+- [Assigning Linear Issues to GitHub Copilot Coding Agent](/ai/videos/Assigning-Linear-Issues-to-GitHub-Copilot-Coding-Agent)
 
 ### Administration, Auditing, and Code Generation Metrics
 
 New governance features allow organizations to see more code generation metrics with Copilot Insights Dashboard, breaking down activity by model, user, trigger, and language. Metrics can now be exported, and the Control Panel now provides a unified location for managing agent access, permissions, and audit logs. Better audit trails support secure deployments and help organizations meet compliance requirements.
 
 - [Track Copilot Code Generation Metrics in GitHub Insights Dashboard](https://github.blog/changelog/2025-12-05-track-copilot-code-generation-metrics-in-a-dashboard)
-- [Managing and Auditing GitHub Copilot Agents: Insights and Governance Tools](/videos/2025-12-03-Managing-and-Auditing-GitHub-Copilot-Agents-Insights-and-Governance-Tools.html)
+- [Managing and Auditing GitHub Copilot Agents: Insights and Governance Tools](/ai/videos/Managing-and-Auditing-GitHub-Copilot-Agents-Insights-and-Governance-Tools)
 
 ### Advanced Copilot Use Cases: Code Review, Performance Profiling, HPC Automation
 
 Pull request review integration now includes automated and custom review features, with CodeQL static analysis. Visual Studio 2026’s Profiler Agent enables natural-language performance analysis using BenchmarkDotNet for .NET projects. For high-performance computing, Copilot helps automate Slurm jobs via GPT-5-based models, reducing manual scripting in scientific workflows.
 
-- [Accelerating Pull Request Reviews with GitHub Copilot Code Review](/videos/2025-12-02-Accelerating-Pull-Request-Reviews-with-GitHub-Copilot-Code-Review.html)
+- [Accelerating Pull Request Reviews with GitHub Copilot Code Review](/ai/videos/Accelerating-Pull-Request-Reviews-with-GitHub-Copilot-Code-Review)
 - [Optimizing .NET Performance with Copilot Profiler Agent in Visual Studio 2026](https://devblogs.microsoft.com/visualstudio/delegate-the-analysis-not-the-performance/)
 - [Automating HPC Workflows with Copilot Agents](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/automating-hpc-workflows-with-copilot-agents/ba-p/4472610)
 
@@ -157,7 +157,7 @@ Pull request review integration now includes automated and custom review feature
 
 A Microsoft Ignite session highlighted ways to develop advanced Copilot Studio agents using Microsoft Graph, Azure AI Search, and Active Directory. Teams can use connectors and business logic to filter documents and analyze information, supporting enterprise automation and aligning with Microsoft security standards.
 
-- [Building Intelligent Agents with Copilot Studio and Advanced Knowledge Sources](/videos/2025-12-03-Building-Intelligent-Agents-with-Copilot-Studio-and-Advanced-Knowledge-Sources.html)
+- [Building Intelligent Agents with Copilot Studio and Advanced Knowledge Sources](/ai/videos/Building-Intelligent-Agents-with-Copilot-Studio-and-Advanced-Knowledge-Sources)
 
 ## AI
 
@@ -192,8 +192,8 @@ Developer education remained in focus, with AI Dev Days offering workshops on Co
 
 - [AI Dev Days: Virtual Event for Developers on Azure, GitHub, and AI with Microsoft Reactor](https://devblogs.microsoft.com/foundry/ai-dev-days-december-2025/)
 - [AI Dev Days 2025: Microsoft & GitHub Virtual Event for Developers](https://devblogs.microsoft.com/blog/join-us-for-ai-devdays)
-- [AI Dev Days: Using AI to Enhance Developer Productivity](/videos/2025-12-04-AI-Dev-Days-Using-AI-to-Enhance-Developer-Productivity.html)
-- [AI Dev Days: Building AI Applications with Azure and GitHub](/videos/2025-12-04-AI-Dev-Days-Building-AI-Applications-with-Azure-and-GitHub.html)
+- [AI Dev Days: Using AI to Enhance Developer Productivity](/ai/videos/AI-Dev-Days-Using-AI-to-Enhance-Developer-Productivity)
+- [AI Dev Days: Building AI Applications with Azure and GitHub](/ai/videos/AI-Dev-Days-Building-AI-Applications-with-Azure-and-GitHub)
 - [Hour of AI: Microsoft Launches Global AI Literacy Initiative for Computer Science Education Week 2025](https://www.microsoft.com/en-us/education/blog/2025/12/unlock-ai-learning-with-hour-of-ai-for-computer-science-education-week/)
 
 ### Enterprise AI Integration and Administration
@@ -202,28 +202,28 @@ Guides for using Claude Code, Foundry, and Spec Kit address requirement automati
 
 - [Enterprise AI Coding Agent Setup: Claude Code, Microsoft Foundry, Spec Kit, and GitHub Actions](https://devblogs.microsoft.com/all-things-azure/claude-code-microsoft-foundry-enterprise-ai-coding-agent-setup/)
 - [Unlocking Enterprise AI: Seamless Integration of OneLake Files in Microsoft Foundry Knowledge](https://blog.fabric.microsoft.com/en-US/blog/unlocking-enterprise-ai-seamless-integration-of-onelake-files-in-microsoft-foundry-knowledge/)
-- [AB-900 Study Cram: Microsoft 365 Copilot & Agent Administration Fundamentals](/videos/2025-12-01-AB-900-Study-Cram-Microsoft-365-Copilot-and-Agent-Administration-Fundamentals.html)
+- [AB-900 Study Cram: Microsoft 365 Copilot & Agent Administration Fundamentals](/ai/videos/AB-900-Study-Cram-Microsoft-365-Copilot-and-Agent-Administration-Fundamentals)
 
 ### AI Developer Workflows and Productivity Tools
 
 VS Code’s Agent HQ integration supports session management and Copilot CLI, making agent deployment and monitoring more efficient. GitHub Models now allow real-time comparisons between model outputs for coding tasks, while Copilot Studio’s latest roadmap covers debugging improvements, Microsoft 365 integration, and better cost tracking.
 
-- [Agent HQ Integration in Visual Studio Code](/videos/2025-12-07-Agent-HQ-Integration-in-Visual-Studio-Code.html)
-- [GitHub Models: Test and Compare AI Code Models](/videos/2025-12-04-GitHub-Models-Test-and-Compare-AI-Code-Models.html)
-- [What’s New in Copilot Studio and Roadmap](/videos/2025-12-03-Whats-New-in-Copilot-Studio-and-Roadmap.html)
+- [Agent HQ Integration in Visual Studio Code](/ai/videos/Agent-HQ-Integration-in-Visual-Studio-Code)
+- [GitHub Models: Test and Compare AI Code Models](/ai/videos/GitHub-Models-Test-and-Compare-AI-Code-Models)
+- [What’s New in Copilot Studio and Roadmap](/ai/videos/Whats-New-in-Copilot-Studio-and-Roadmap)
 
 ### AI Agents in Production Workflows and Medical Automation
 
 Guides describe how to embed AI voice agents into medical documentation for real-time productivity. Managed agentic apps in Foundry enable centralized control and cloud scaling, showcasing organizations moving their pilot projects to Azure for full production deployment.
 
-- [How AI Voice Agents Transform Medical Documentation in Real Time](/videos/2025-12-04-How-AI-Voice-Agents-Transform-Medical-Documentation-in-Real-Time.html)
-- [Building Connected Managed Agentic Apps with Microsoft Foundry (Ignite BRK113)](/videos/2025-12-02-Building-Connected-Managed-Agentic-Apps-with-Microsoft-Foundry-Ignite-BRK113.html)
+- [How AI Voice Agents Transform Medical Documentation in Real Time](/ai/videos/How-AI-Voice-Agents-Transform-Medical-Documentation-in-Real-Time)
+- [Building Connected Managed Agentic Apps with Microsoft Foundry (Ignite BRK113)](/ai/videos/Building-Connected-Managed-Agentic-Apps-with-Microsoft-Foundry-Ignite-BRK113)
 
 ### Responsible AI, Governance, and Engineering Collaboration
 
 The Armchair Architects series provides guidance on governance for agent and microservice architectures. Microsoft’s collaborative AI engineering framework, with examples like Entra SDK migration, puts process improvements into focus—integrating agents that support documentation and escalation.
 
-- [Armchair Architects: Governance Strategies for AI Agents](/videos/2025-12-02-Armchair-Architects-Governance-Strategies-for-AI-Agents.html)
+- [Armchair Architects: Governance Strategies for AI Agents](/ai/videos/Armchair-Architects-Governance-Strategies-for-AI-Agents)
 - [Collaborating with AI Agents: A Framework for Engineering Transformation at Microsoft](https://devblogs.microsoft.com/engineering-at-microsoft/the-interaction-changes-everything-treating-ai-agents-as-collaborators-not-automation/)
 
 ## ML
@@ -304,13 +304,13 @@ Azure Local can now be deployed within customer-owned data centers or edge locat
 
 - [Extending Azure: AI-Powered Innovation, Resiliency, and Control](https://azure.microsoft.com/en-us/blog/new-options-for-ai-powered-innovation-resiliency-and-control-with-microsoft-azure/)
 - [Manage Azure Local Updates](https://www.thomasmaurer.ch/2025/12/manage-azure-local-updates/)
-- [Azure Arc: Extending Azure for Hybrid and Multi-Cloud Management](/videos/2025-12-03-Azure-Arc-Extending-Azure-for-Hybrid-and-Multi-Cloud-Management.html)
+- [Azure Arc: Extending Azure for Hybrid and Multi-Cloud Management](/azure/videos/Azure-Arc-Extending-Azure-for-Hybrid-and-Multi-Cloud-Management)
 
 ### Other Azure News
 
 Further platform news this week includes detailed Load Balancer metrics, resumable SFTP for Azure Blob, PostgreSQL updates, and expanded Databricks workspace options. Additional support for confidential ledgers, Mistral Large 3 in Foundry, and the retirement of Azure ML SDK v1 (with migration guides) round out the update. New steps explain how to integrate Amazon S3/VPC with Entra ID for analytics in Microsoft Fabric. The Azure Resource Graph GET/LIST API is now GA, supporting scalable resource management, and SQL Server Management Studio 22 adds migration workflow improvements. Azure SRE Agent now enables proactive, scheduled checks feeding into incident workflows. Windows 2025 accessibility updates add enhanced dictation, voice, and magnification capabilities. There’s also a guide for deploying Bun + Hono + Vite JavaScript stacks on Azure Linux Web App.
 
-- [Azure Update - 5th December 2025: New Features, Metrics, and Services](/videos/2025-12-05-Azure-Update-5th-December-2025-New-Features-Metrics-and-Services.html)
+- [Azure Update - 5th December 2025: New Features, Metrics, and Services](/ai/videos/Azure-Update-5th-December-2025-New-Features-Metrics-and-Services)
 
 Learn how to enable audit-friendly, secure analytics in Microsoft Fabric with service principal authentication for VPC-protected S3 buckets.
 
@@ -322,7 +322,7 @@ Azure Resource Graph GET/LIST APIs support efficient scaling for resource querie
 
 SQL Server Management Studio 22 is now generally available with workflow and hybrid management enhancements.
 
-- [What's New in SQL Server Management Studio 22 GA](/videos/2025-12-04-Whats-New-in-SQL-Server-Management-Studio-22-GA.html)
+- [What's New in SQL Server Management Studio 22 GA](/azure/videos/Whats-New-in-SQL-Server-Management-Studio-22-GA)
 
 Scheduled monitoring from the Azure SRE Agent improves compliance and incident detection and works alongside OpenTelemetry tooling.
 
@@ -345,13 +345,13 @@ Updates include .NET 10, Visual Studio 2026, cross-platform frameworks, TypeScri
 .NET Conf 2025 introduced .NET 10 (with support until 2028), following last week’s modular IDE announcements and tighter Copilot/VS integration. Updates focus on performance, post-quantum cryptography, ASP.NET Core, Blazor, .NET MAUI, and C# 14. Aspire 13 CLI adds support for Python and JavaScript. Copilot and Agent Framework continue to grow alongside agent-based development. Progress in code quality and security guidance supports inclusive and streamlined development, and the MAUI Community Standup explored .NET 10’s impact and upgrade strategy.
 
 - [.NET Conf 2025 Recap: What's New in .NET 10, Visual Studio 2026, AI, and App Modernization](https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-recap/)
-- [.NET MAUI Community Standup - .NET 10 Announcements Roundup](/videos/2025-12-04-NET-MAUI-Community-Standup-NET-10-Announcements-Roundup.html)
+- [.NET MAUI Community Standup - .NET 10 Announcements Roundup](/coding/videos/NET-MAUI-Community-Standup-NET-10-Announcements-Roundup)
 
 ### Practical Guidance and Tooling for .NET Developers
 
 Stephen Toub and Scott Hanselman share recommendations for CancellationToken use in asynchronous .NET code, supporting robust and testable patterns. Age verification for .NET MAUI now aligns with current global regulations, providing platform-specific tips for Android, iOS, and Windows. The latest NetEscapades.EnumGenerators release adds support for [EnumMember] and improved analyzers.
 
-- [Deep Dive into Cancellation Tokens in .NET with Stephen Toub](/videos/2025-12-05-Deep-Dive-into-Cancellation-Tokens-in-NET-with-Stephen-Toub.html)
+- [Deep Dive into Cancellation Tokens in .NET with Stephen Toub](/coding/videos/Deep-Dive-into-Cancellation-Tokens-in-NET-with-Stephen-Toub)
 - [Cross-Platform Age Verification in .NET MAUI Applications](https://devblogs.microsoft.com/dotnet/cross-platform-age-verification-dotnet-maui/)
 - [Recent updates to NetEscapades.EnumGenerators: [EnumMember] support, analyzers, and bug fixes](https://andrewlock.net/recent-updates-to-netescapaades-enumgenerators/)
 
@@ -359,8 +359,8 @@ Stephen Toub and Scott Hanselman share recommendations for CancellationToken use
 
 Demonstrations show AG-UI and Blazor enabling interactive web components for agent-based apps. Updated tooling for MCP in VS Code improves developer onboarding, and features like in-depth keyboard shortcut analysis support improved workflow familiarity in Visual Studio 2026.
 
-- [Building Agentic UI with AG-UI and Blazor: ASP.NET Community Standup](/videos/2025-12-03-Building-Agentic-UI-with-AG-UI-and-Blazor-ASPNET-Community-Standup.html)
-- [Tooling Support for MCP in Visual Studio Code](/videos/2025-12-01-Tooling-Support-for-MCP-in-Visual-Studio-Code.html)
+- [Building Agentic UI with AG-UI and Blazor: ASP.NET Community Standup](/ai/videos/Building-Agentic-UI-with-AG-UI-and-Blazor-ASPNET-Community-Standup)
+- [Tooling Support for MCP in Visual Studio Code](/coding/videos/Tooling-Support-for-MCP-in-Visual-Studio-Code)
 - [Making Sense of Keyboard Shortcuts in Visual Studio 2026](https://devblogs.microsoft.com/visualstudio/why-changing-keyboard-shortcuts-in-visual-studio-isnt-as-simple-as-it-seems/)
 
 ### TypeScript Compiler and Language Service Modernization
@@ -391,7 +391,7 @@ GitHub Enterprise Server 3.19 Release Candidate brings added controls, better re
 
 GitHub Code Quality pulls together automated code insights, supporting maintainable code and fast feedback as part of the standard DevOps pipeline.
 
-- [How to Improve Code Health with GitHub Code Quality](/videos/2025-12-04-How-to-Improve-Code-Health-with-GitHub-Code-Quality.html)
+- [How to Improve Code Health with GitHub Code Quality](/devops/videos/How-to-Improve-Code-Health-with-GitHub-Code-Quality)
 
 ### DevOps Practices and the AI-Driven Evolution of Software Delivery
 
@@ -414,7 +414,7 @@ GitHub expanded secret scanning with new detection patterns for Azure, Databrick
 
 Guides now cover device-bound passkeys in Microsoft Entra ID for policy-driven identity and strong authentication. Device-Bound Request Signing (DBRS) for mobile apps is outlined, with recommendations for crypto, security modeling, and cross-platform deployments.
 
-- [Entra Synced Passkeys and Passkey Profiles](/videos/2025-12-03-Entra-Synced-Passkeys-and-Passkey-Profiles.html)
+- [Entra Synced Passkeys and Passkey Profiles](/azure/videos/Entra-Synced-Passkeys-and-Passkey-Profiles)
 - [Securing Sensitive Mobile Operations with Device-Bound Request Signing](https://devblogs.microsoft.com/blog/securing-sensitive-mobile-operations-with-device-bound-request-signing)
 
 ### Other Security News

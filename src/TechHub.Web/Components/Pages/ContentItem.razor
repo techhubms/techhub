@@ -17,7 +17,7 @@
 
 <Header SectionName="@SectionName" />
 
-<div class="page-with-sidebar">
+<main class="page-with-sidebar">
     <aside class="sidebar">
         @if (item != null)
         {
@@ -31,13 +31,13 @@
     </aside>
 
     @* Main content area *@
-    <main class="page-main-content">
+    <article class="page-main-content content-detail">
         @if (item != null)
         {
             <ContentItemDetail Item="@item" />
         }
-    </main>
-</div>
+    </article>
+</main>
 
 @code {
     [Inject] public required ErrorService ErrorService { get; set; }

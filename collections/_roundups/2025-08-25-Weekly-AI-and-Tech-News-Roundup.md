@@ -105,8 +105,8 @@ Refined Copilot controls in Visual Studio respond directly to developer feedback
 Model Context Protocol (MCP) integration in Visual Studio has reached general availability. Using `.mcp.json` files, developers can now connect to custom or community MCP servers, simplifying adoption of secure context automation.
 
 - [Copilot Diagnostics Toolset Enhances .NET Debugging in Visual Studio](https://devblogs.microsoft.com/dotnet/github-copilot-diagnostics-toolset-for-dotnet-in-visual-studio/)
-- [GitHub Copilot Integration in .NET Aspire 9.3 Dashboard](/videos/2025-08-21-GitHub-Copilot-Integration-in-NET-Aspire-93-Dashboard.html)
-- [GitHub Copilot Now Integrated Into .NET Aspire Dashboard](/videos/2025-08-21-GitHub-Copilot-Now-Integrated-Into-NET-Aspire-Dashboard.html)
+- [GitHub Copilot Integration in .NET Aspire 9.3 Dashboard](/ai/videos/GitHub-Copilot-Integration-in-NET-Aspire-93-Dashboard)
+- [GitHub Copilot Now Integrated Into .NET Aspire Dashboard](/ai/videos/GitHub-Copilot-Now-Integrated-Into-NET-Aspire-Dashboard)
 - [Better Control Over GitHub Copilot Code Suggestions in Visual Studio](https://devblogs.microsoft.com/visualstudio/better-control-over-your-copilot-code-suggestions/)
 - [Model Context Protocol (MCP) Is Now Generally Available in Visual Studio](https://devblogs.microsoft.com/visualstudio/mcp-is-now-generally-available-in-visualstudio/)
 
@@ -135,7 +135,7 @@ Recent case studies, such as Bank Galicia, demonstrate that Copilot is increasin
 - [Work Smarter Across Multiple Files with GitHub Copilot](https://cooknwithcopilot.com/blog/work-smarter-across-multiple-files.html)
 - [Boosting Productivity with GitHub Copilot: Real-World .NET Coding Examples](https://dellenny.com/boosting-productivity-with-github-copilot-real-world-net-coding-examples/)
 - [How GitHub Copilot Helps with Test-Driven Development (TDD)](https://dellenny.com/how-github-copilot-helps-with-test-driven-development-tdd/)
-- [How to Test Nonexistent Code with GitHub Copilot](/videos/2025-08-21-How-to-Test-Nonexistent-Code-with-GitHub-Copilot.html)
+- [How to Test Nonexistent Code with GitHub Copilot](/ai/videos/How-to-Test-Nonexistent-Code-with-GitHub-Copilot)
 - [Software Developers in Argentina’s Financial Sector Boost Innovation with GitHub Copilot and AI](https://news.microsoft.com/source/latam/features/ai/galicia-naranja-x-github-copilot/?lang=en)
 
 ### Copilot Customization: Bring Your Own Models and VS Code Personalization
@@ -145,7 +145,7 @@ Visual Studio Chat now lets developers integrate third-party models (such as Ope
 Recent guides for VS Code Joyride and Copilot demonstrate workflow personalization. Developers use Copilot within scripts and personalized tools, reflecting a wider trend of individualized automation routines.
 
 - [Bring Your Own Language Model to Visual Studio Chat](https://devblogs.microsoft.com/visualstudio/bring-your-own-model-visual-studio-chat/)
-- [VS Code Live: Scripting with Joyride and GitHub Copilot](/videos/2025-08-21-VS-Code-Live-Scripting-with-Joyride-and-GitHub-Copilot.html)
+- [VS Code Live: Scripting with Joyride and GitHub Copilot](/ai/videos/VS-Code-Live-Scripting-with-Joyride-and-GitHub-Copilot)
 
 ### Other GitHub Copilot News
 
@@ -180,9 +180,9 @@ Azure AI Foundry’s new GPT-5 freeform tool calling allows for flexible Python/
 
 In addition, a new tutorial on Mistral Document AI provides hands-on steps for incorporating document parsing into developer environments, supporting conversion of unstructured PDFs and handwriting to structured, AI-ready data.
 
-- [Hello GPT-5 & GPT-5 mini: New AI Features in VS Code Agent Mode](/videos/2025-08-18-Hello-GPT-5-and-GPT-5-mini-New-AI-Features-in-VS-Code-Agent-Mode.html)
+- [Hello GPT-5 & GPT-5 mini: New AI Features in VS Code Agent Mode](/ai/videos/Hello-GPT-5-and-GPT-5-mini-New-AI-Features-in-VS-Code-Agent-Mode)
 - [Unlocking GPT-5’s Freeform Tool Calling in Azure AI Foundry](https://devblogs.microsoft.com/foundry/unlocking-gpt-5s-freeform-tool-calling-a-new-era-of-seamless-integration/)
-- [Mistral Document AI Integration with Azure AI Foundry](/videos/2025-08-20-Mistral-Document-AI-Integration-with-Azure-AI-Foundry.html)
+- [Mistral Document AI Integration with Azure AI Foundry](/ai/videos/Mistral-Document-AI-Integration-with-Azure-AI-Foundry)
 
 ### Local Model Hosting and Deployment with .NET and Foundry Local
 
@@ -209,7 +209,7 @@ This week’s updates highlight the transition from traditional user experience 
 The discussion encourages a new focus on agent-centered design, emphasizing planning, orchestration, and domain expertise over simple chatbot-based systems. This builds on last week’s analysis of GPT-4-based planners and Semantic Kernel tools, demonstrating real-world adoption in risk and assumption management.
 
 - [The Future of AI: Developing Lacuna – An Agent for Revealing Quiet Assumptions in Product Design](https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/the-future-of-ai-developing-lacuna-an-agent-for-revealing-quiet/ba-p/4434633)
-- [From UX to AX: Why Agent Experience is the Next Frontier in Business AI](/videos/2025-08-19-From-UX-to-AX-Why-Agent-Experience-is-the-Next-Frontier-in-Business-AI.html)
+- [From UX to AX: Why Agent Experience is the Next Frontier in Business AI](/ai/videos/From-UX-to-AX-Why-Agent-Experience-is-the-Next-Frontier-in-Business-AI)
 
 ## ML
 
@@ -292,7 +292,7 @@ A new video walks through Fabric SQL database setup, OneLake and Purview managem
 
 These advances align with earlier efforts to unify and secure data connectivity across the Microsoft ecosystem.
 
-- [SQL Database in Microsoft Fabric](/videos/2025-08-18-SQL-Database-in-Microsoft-Fabric.html)
+- [SQL Database in Microsoft Fabric](/azure/videos/SQL-Database-in-Microsoft-Fabric)
 - [On-premises Data Gateway August 2025 Release: Entra ID Support for PostgreSQL](https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-august-2025-release/)
 
 ### Developer Experience and Tooling: Azure Developer CLI (azd)
@@ -309,7 +309,7 @@ Recent Azure updates include new VM options, improved diagnostics, and flexible 
 
 These enhancements build on work to make Azure’s platform more robust, adaptable, and cost-efficient.
 
-- [Azure Update - 22nd August 2025](/videos/2025-08-22-Azure-Update-22nd-August-2025.html)
+- [Azure Update - 22nd August 2025](/azure/videos/Azure-Update-22nd-August-2025)
 
 ### Other Azure News
 
@@ -321,9 +321,9 @@ A new entry in Azure Essentials covers saving costs with Azure Hybrid Benefit, g
 
 These updates underline Azure’s focus on managed identities, open source partnership, and actionable cost management advice—consistent with last week's directions.
 
-- [Azure File Sync Managed Identity: Enhanced Security and Simplified Operations](/videos/2025-08-20-Azure-File-Sync-Managed-Identity-Enhanced-Security-and-Simplified-Operations.html)
+- [Azure File Sync Managed Identity: Enhanced Security and Simplified Operations](/azure/videos/Azure-File-Sync-Managed-Identity-Enhanced-Security-and-Simplified-Operations)
 - [Microsoft’s Open Source Journey: From Linux Contributions to AI at Scale](https://azure.microsoft.com/en-us/blog/microsofts-open-source-journey-from-20000-lines-of-linux-code-to-ai-at-global-scale/)
-- [Your Guide to Saving with Azure Hybrid Benefit](/videos/2025-08-19-Your-Guide-to-Saving-with-Azure-Hybrid-Benefit.html)
+- [Your Guide to Saving with Azure Hybrid Benefit](/azure/videos/Your-Guide-to-Saving-with-Azure-Hybrid-Benefit)
 
 ## Coding
 
@@ -351,7 +351,7 @@ A new tutorial explains how to implement reliable email sending within .NET, cov
 
 - [Enhance your CLI testing workflow with the new dotnet test](https://devblogs.microsoft.com/dotnet/dotnet-test-with-mtp/)
 - [Migrating an xUnit Test Project to TUnit: Experience, Issues, and Practical Steps](https://andrewlock.net/converting-an-xunit-project-to-tunit/)
-- [Sending Email Correctly in .NET](/videos/2025-08-20-Sending-Email-Correctly-in-NET.html)
+- [Sending Email Correctly in .NET](/coding/videos/Sending-Email-Correctly-in-NET)
 
 ### .NET Application Modernization: Migration, WebView2, and Obsolete APIs
 
@@ -432,7 +432,7 @@ GitHub continues to extend secret scanning and push protection. Organizations no
 
 Integration of CodeQL and Copilot Autofix remains central, with security checks a routine part of CI. Security Campaigns and Dependency Review are more widely used to help mitigate supply chain risks as part of standard workflows.
 
-- [Enhancing Code Security with GitHub Tools](/videos/2025-08-19-Enhancing-Code-Security-with-GitHub-Tools.html)
+- [Enhancing Code Security with GitHub Tools](/devops/videos/Enhancing-Code-Security-with-GitHub-Tools)
 - [GitHub Secret Scanning: Custom Pattern Configuration in Push Protection Now Available](https://github.blog/changelog/2025-08-19-secret-scanning-configuring-patterns-in-push-protection-is-now-generally-available)
 
 ### Quantum-safe Cryptography: Preparing for a Post-Quantum Security Era

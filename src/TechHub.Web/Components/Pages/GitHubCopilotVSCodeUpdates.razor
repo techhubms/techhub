@@ -18,7 +18,7 @@
 
     <Header SectionName="github-copilot" />
 
-    <div class="page-with-sidebar">
+    <main class="page-with-sidebar">
         <aside class="sidebar">
             @if (videoItems.Any())
             {
@@ -48,19 +48,17 @@
             }
         </aside>
 
-        <main class="page-main-content">
+        <article class="page-main-content content-detail">
             @if (selectedVideoDetail != null)
             {
                 <ContentItemDetail Item="@selectedVideoDetail" />
             }
             else
             {
-                <article class="content-detail">
-                    <p class="no-content-message">No updates available yet.</p>
-                </article>
+                <p class="no-content-message">No updates available yet.</p>
             }
-        </main>
-    </div>
+        </article>
+    </main>
 }
 
 @code {
