@@ -23710,5 +23710,35 @@
     "collection": "news",
     "timestamp": "2026-01-20 01:32:07 +00:00",
     "canonical_url": "https://github.blog/changelog/2026-01-19-enterprise-scoped-budgets-that-exclude-cost-center-usage-in-public-preview"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/migrating-application-credentials-to-azure-key-vault-with-github/ba-p/4486482",
+    "timestamp": "2026-01-20 02:41:18 +00:00",
+    "reason": "Succesfully added: Included AI and GitHub Copilot categories because the content centers on GitHub Copilot app modernization and how AI-based tooling accelerates credential migration (AI rule 2; GitHub Copilot rule 1). Assigned Azure because Azure Key Vault is central to the migration (Azure rule 1). Assigned Security due to the focus on secret management, operational risk reduction, and secure coding practices (Security rule 2 and 3). Assigned Coding because the migration requires code changes, SDK usage, and development tools (Coding rules 1–5). Content meets all inclusion thresholds, is technical, actionable, and written in English. No generic exclusion rules apply.",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/modernizing-applications-by-migrating-code-to-use-managed/ba-p/4486481",
+    "timestamp": "2026-01-20 02:41:39 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories because the primary subject is GitHub Copilot App Modernization, which qualifies under both categories per the rules for developer tools (AI rule 2, GitHub Copilot rule 1). Assigned 'Azure' because the migration is specific to Azure Managed Identity (Azure rule 1). Included 'Coding' as it involves automated code changes, refactoring authentication logic, and updating SDKs (Coding rules 2 and 4). Included 'Security' because the focus is migrating away from credentials toward more secure authentication practices (Security rules 1 and 2). The content is substantial, technical, and falls within all category inclusion rules without triggering any generic exclusions.",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/modernizing-spring-boot-applications-with-github-copilot-app/ba-p/4486466",
+    "timestamp": "2026-01-20 02:42:00 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category as the core of the content is centered on GitHub Copilot app modernization, a Microsoft AI-powered code assistance and automation solution (AI inclusion rule 2 and 5). 'GitHub Copilot' category is included because the article directly discusses GitHub Copilot app modernization's features for upgrading Java/Spring Boot applications (GitHub Copilot rule 1 and 2). 'Coding' is included because the technical migration process, automated refactoring, and dependency alignment are performed on Java codebases using Microsoft/Visual Studio Code tooling, aligning with Coding rule 1 and 4. Excluded 'Azure', 'DevOps', 'Security', and 'ML' as the main content does not deal with Azure services, DevOps pipelines, security-focused implementation, or data/ML engineering.",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/modernizing-spring-framework-applications-with-github-copilot/ba-p/4486469",
+    "timestamp": "2026-01-20 02:42:21 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the central focus is using GitHub Copilot app modernization, a developer tool with AI-powered code transformation assistance (AI rules 2 and 5, GitHub Copilot rules 1–5). Assigned 'Azure' because Microsoft Learn's guidance and references are directed at Azure developers, and the solution architecture leverages Microsoft's modernization guidance (Azure rule 1). Assigned 'DevOps' due to detailed coverage of automated upgrades, iterative build/test cycles, dependency management, and continuous integration practices (DevOps rules 2, 5, 9). Did not assign 'Coding' since the content emphasizes tool-driven migration and automation rather than code-level development with Microsoft frameworks or languages. 'ML' and 'Security' aren't primary, as the focus isn't on data science or deep security implementation, though dependency/CVE scans are mentioned as part of the modernization process.",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/upgrade-your-java-jdk-8-11-17-21-or-25-with-github-copilot-app/ba-p/4486468",
+    "timestamp": "2026-01-20 02:42:42 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories because the content specifically centers on GitHub Copilot app modernization and its AI-powered features for code upgrades (AI rule 2 and GitHub Copilot rule 1). Included 'Coding' as it deals with upgrading codebases, managing dependencies, and using automated refactoring tools in the development flow (Coding rules 3 and 4). There is no substantive Microsoft Azure or ML/data science topic demonstrated, so those categories do not apply. DevOps is not directly addressed (no CI/CD, operational patterns, or DevOps methodologies here). Security is also not primary, though security checks are referenced, as they are not the main focus.",
+    "collection": "community"
   }
 ]
