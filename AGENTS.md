@@ -285,7 +285,7 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 **How to Run and Test**:
 
-See [Starting & Stopping the Website](#starting--stopping-the-website) for complete instructions on:
+See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-the-website) for complete instructions on:
 
 - How to start the website with the `Run` function
 - Using Playwright MCP tools for testing (CRITICAL: works directly in GitHub Copilot Chat)
@@ -819,18 +819,18 @@ Run -Rebuild            # Clean rebuild only, then exit
 **Testing Workflows**:
 
 ```powershell
-# Test specific projects
-Run -TestProject powershell     # PowerShell/Pester tests only (fast - no .NET build)
-Run -TestProject Web.Tests      # Web component tests only
-Run -TestProject E2E.Tests      # E2E tests only (requires servers)
+# Test specific projects (run tests, then exit)
+Run -OnlyTests -TestProject powershell     # PowerShell/Pester tests only (fast - no .NET build)
+Run -OnlyTests -TestProject Web.Tests      # Web component tests only
+Run -OnlyTests -TestProject E2E.Tests      # E2E tests only (requires servers)
 
 # Test by name pattern (substring match)
-Run -TestName SectionCard       # All tests with "SectionCard" in name
-Run -TestName Navigation        # All tests with "Navigation" in name
+Run -OnlyTests -TestName SectionCard       # All tests with "SectionCard" in name
+Run -OnlyTests -TestName Navigation        # All tests with "Navigation" in name
 
 # Combine project + name filters
-Run -TestProject E2E.Tests -TestName Navigation  # E2E navigation tests only
-Run -TestProject powershell -TestName FrontMatter  # PowerShell FrontMatter tests
+Run -OnlyTests -TestProject E2E.Tests -TestName Navigation  # E2E navigation tests only
+Run -OnlyTests -TestProject powershell -TestName FrontMatter  # PowerShell FrontMatter tests
 ```
 
 **Key Features**:

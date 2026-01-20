@@ -78,28 +78,13 @@ Run -WithoutTests
 - `Run -OnlyTests -TestProject pester`
 - `Run -OnlyTests -TestProject scripts`
 
-### Direct Script Execution (Only When Run Doesn't Support Operation)
+### Test Filtering Options
 
-```bash
-# All PowerShell tests
-
-./scripts/run-powershell-tests.ps1
-
-# Specific test file
-
-./scripts/run-powershell-tests.ps1 -TestFile "tests/powershell/Convert-RssToMarkdown.Tests.ps1"
-
-# With code coverage
-
-./scripts/run-powershell-tests.ps1 -Coverage
-
-# With detailed output
-
-./scripts/run-powershell-tests.ps1 -Detailed
-
-# Run specific test by name
-
-./scripts/run-powershell-tests.ps1 -TestName "should convert basic RSS"
+```powershell
+# Run tests matching a name pattern
+Run -OnlyTests -TestProject powershell -TestName "RSS"
+Run -OnlyTests -TestProject powershell -TestName "FrontMatter"
+Run -OnlyTests -TestProject powershell -TestName "should convert basic"
 ```
 
 ### From VS Code
@@ -264,7 +249,7 @@ Verify:
 
 ## Key Testing Rules
 
-1. **ALWAYS run tests after modifying PowerShell functions** - Use `./scripts/run-powershell-tests.ps1`
+1. **ALWAYS run tests after modifying PowerShell functions** - Use `Run -OnlyTests -TestProject powershell`
 2. **Write tests FIRST for bug fixes** - Reproduce the issue before fixing
 3. **Test real code, not mocks** - Don't replicate production logic in tests
 4. **Use meaningful assertions** - Make test failures easy to diagnose

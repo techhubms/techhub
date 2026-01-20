@@ -178,8 +178,8 @@ function Run {
     # Build configuration (always Debug for development)
     $configuration = "Debug"
 
-    # Verbosity level - "normal" shows project names as they build
-    $verbosityLevel = "normal"
+    # Verbosity level - "minimal" for clean output
+    $verbosityLevel = "minimal"
 
     # Color output helpers
     function Write-Step {
@@ -208,7 +208,7 @@ function Run {
             [string]$Command,
             [string[]]$Arguments
         )
-        & $Command @Arguments
+        & $Command @Arguments | Out-Host
         return $LASTEXITCODE -eq 0
     }
 
@@ -300,47 +300,63 @@ function Run {
         Write-Step "Running PowerShell/Pester tests"
         Write-Host ""
         
-        # Call the existing PowerShell test runner script
-        $pwshTestScript = Join-Path $workspaceRoot "scripts/run-powershell-tests.ps1"
+        $testDirectory = Join-Path $workspaceRoot "tests/powershell"
         
-        if (-not (Test-Path $pwshTestScript)) {
-            Write-Warning "PowerShell test script not found: $pwshTestScript"
+        # Check if test directory exists
+        if (-not (Test-Path $testDirectory)) {
+            Write-Host "  PowerShell test directory not found: $testDirectory" -ForegroundColor Red
             return $false
         }
         
+        # Ensure Pester is available
         try {
-            if ($TestName) {
-                Write-Info "Filtering PowerShell tests by name: $TestName"
-                & $pwshTestScript -TestName $TestName
-            }
-            else {
-                & $pwshTestScript
-            }
-            $pwshExitCode = $LASTEXITCODE
+            Import-Module Pester -Force -ErrorAction Stop
         }
         catch {
-            Write-Error "PowerShell test execution failed: $_"
-            $pwshExitCode = 1
+            Write-Host "  Failed to import Pester module: $($_.Exception.Message)" -ForegroundColor Red
+            return $false
+        }
+        
+        # Build Pester configuration
+        $pesterConfig = [PesterConfiguration]::Default
+        $pesterConfig.Run.Path = @($testDirectory)
+        $pesterConfig.Run.PassThru = $true
+        $pesterConfig.Output.Verbosity = 'Normal'
+        
+        # Apply test name filter if specified
+        if ($TestName) {
+            Write-Info "Filtering tests by name: *$TestName*"
+            $pesterConfig.Filter.FullName = "*$TestName*"
+        }
+        
+        # Run tests
+        try {
+            $result = Invoke-Pester -Configuration $pesterConfig
+        }
+        catch {
+            Write-Host "  Test execution failed: $($_.Exception.Message)" -ForegroundColor Red
+            return $false
+        }
+        
+        # Check results
+        if ($result -and $result.TotalCount -gt 0 -and $result.FailedCount -eq 0) {
+            Write-Host ""
+            Write-Success "PowerShell tests passed"
+            return $true
         }
         
         Write-Host ""
-        
-        if ($pwshExitCode -ne 0) {
-            Write-Host ""
-            Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
-            Write-Host "║                                                              ║" -ForegroundColor Red
-            Write-Host "║  ✗ POWERSHELL TESTS FAILED - Cannot continue                 ║" -ForegroundColor Red
-            Write-Host "║                                                              ║" -ForegroundColor Red
-            Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
-            Write-Host ""
-            Write-Host "  PowerShell tests failed with exit code $pwshExitCode" -ForegroundColor Yellow
-            Write-Host "  Fix the failing tests above and try again" -ForegroundColor Yellow
-            Write-Host ""
-            return $false
+        Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+        Write-Host "║                                                              ║" -ForegroundColor Red
+        Write-Host "║  ✗ POWERSHELL TESTS FAILED - Cannot continue                 ║" -ForegroundColor Red
+        Write-Host "║                                                              ║" -ForegroundColor Red
+        Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+        Write-Host ""
+        if ($result) {
+            Write-Host "  Failed: $($result.FailedCount), Passed: $($result.PassedCount), Total: $($result.TotalCount)" -ForegroundColor Yellow
         }
-        
-        Write-Success "PowerShell tests passed"
-        return $true
+        Write-Host ""
+        return $false
     }
 
     # Run unit and integration tests (no servers needed)

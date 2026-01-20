@@ -73,11 +73,11 @@ See actual tests in `Models/` for implementation examples.
 # Run all tests (recommended)
 Run
 
-# Run only Core unit tests
-Run -TestProject Core.Tests
+# Run only Core unit tests, then exit
+Run -OnlyTests -TestProject Core.Tests
 
 # Run specific test class
-Run -TestName ContentItem
+Run -OnlyTests -TestName ContentItem
 ```
 
 ## Best Practices

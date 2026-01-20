@@ -9,7 +9,7 @@
 
 - **Use backticks for escaping** (`` ` ``), NEVER backslashes
 - **Use subexpressions `$(...)` for complex interpolations** (dotted notation, array access, type casting)
-- **Test ALL script changes** - Run `scripts/run-powershell-tests.ps1` after modifications
+- **Test ALL script changes** - Run `Run -OnlyTests -TestProject powershell` after modifications
 - **Set error handling** - `$ErrorActionPreference = "Stop"` at script start
 - **Use strict mode** - `Set-StrictMode -Version Latest`
 - **Handle two execution contexts** - Script directory vs workspace root
@@ -38,7 +38,7 @@
 
 You are a PowerShell development specialist working with the Tech Hub's automation scripts. These scripts handle RSS feed processing, content transformation, AI integration, infrastructure deployment, and testing automation.
 
-⚠️ **CRITICAL TESTING RULE**: After making ANY changes to PowerShell scripts with tests, run `Run -TestProject powershell` to validate your changes.
+⚠️ **CRITICAL TESTING RULE**: After making ANY changes to PowerShell scripts with tests, run `Run -OnlyTests -TestProject powershell` to validate your changes.
 
 ## When to Use This Guide
 
@@ -250,18 +250,15 @@ For PowerShell script testing (Pester v5), see:
 
 **Running Tests**:
 
-```bash
+```powershell
 # All PowerShell tests for content processing scripts
+Run -OnlyTests -TestProject powershell
 
-./scripts/run-powershell-tests.ps1
+# Specific tests by name pattern
+Run -OnlyTests -TestProject powershell -TestName "RssToMarkdown"
 
-# Specific test file
-
-./scripts/run-powershell-tests.ps1 -TestFile "tests/powershell/Convert-RssToMarkdown.Tests.ps1"
-
-# With coverage
-
-./scripts/run-powershell-tests.ps1 -Coverage
+# All tests (PowerShell + .NET), then start servers
+Run
 ```
 
 ## PowerShell Testing Standards
@@ -283,8 +280,8 @@ tests/powershell/
 **Recommended** (via Run function - see [Root AGENTS.md - Using the Run Function](../AGENTS.md#using-the-run-function)):
 
 ```powershell
-# All PowerShell tests only (fast - no .NET build)
-Run -TestProject powershell
+# All PowerShell tests only, then exit (fast - no .NET build)
+Run -OnlyTests -TestProject powershell
 
 # All tests (PowerShell + .NET) then start servers
 Run
@@ -293,17 +290,17 @@ Run
 Run -WithoutTests
 ```
 
-**Direct script** (when Run function doesn't fit your needs):
+**Test Filtering Options**:
 
-```bash
-# All PowerShell tests
-./scripts/run-powershell-tests.ps1
+```powershell
+# Run all tests with "FrontMatter" in name, then exit
+Run -OnlyTests -TestProject powershell -TestName "FrontMatter"
 
-# Specific test file
-./scripts/run-powershell-tests.ps1 -TestFile "tests/powershell/Convert-RssToMarkdown.Tests.ps1"
+# Run all tests with "RSS" in name, then exit
+Run -OnlyTests -TestProject powershell -TestName "RSS"
 
-# With coverage
-./scripts/run-powershell-tests.ps1 -Coverage
+# Run PowerShell tests only, then exit
+Run -OnlyTests -TestProject powershell
 ```
 
 ## Common Functions
@@ -417,7 +414,8 @@ param(
 - name: Run Tests
   shell: pwsh
   run: |
-    ./scripts/run-powershell-tests.ps1
+    Import-Module ./scripts/TechHubRunner.psm1 -Force
+    Run -OnlyTests
 ```
 
 ## Data File Locations

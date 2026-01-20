@@ -35,10 +35,11 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 **Quick command reference** (see root AGENTS.md for full details):
 
 ```powershell
-Run                 # Clean build + tests + servers (default)
-Run -WithoutTests   # Clean build + servers (skip all tests)
-Run -WithoutClean   # Build + tests + servers (faster, no clean)
-Run -TestProject Web.Tests  # Run only Web component tests
+Run                     # Clean build + tests + servers (default)
+Run -WithoutTests       # Clean build + servers (skip all tests)
+Run -WithoutClean       # Build + tests + servers (faster, no clean)
+Run -OnlyTests          # Clean build + all tests, then exit
+Run -OnlyTests -TestProject Web.Tests  # Run only Web component tests, then exit
 ```
 
 ### ✅ Always Do
@@ -49,7 +50,7 @@ Run -TestProject Web.Tests  # Run only Web component tests
 - **Use file-scoped namespaces** in all C# files
 - **Enable nullable reference types** (already global)
 - **Write tests BEFORE or DURING implementation** (TDD)
-- **Run tests after code changes**: `Run` or `Run -TestProject <name>`
+- **Run tests after code changes**: `Run` or `Run -OnlyTests -TestProject <name>`
 - **Maintain 80%+ code coverage** for unit tests
 - **Use context7 MCP tool** for latest .NET/Blazor documentation
 - **Check ALL occurrences before renaming** (use `grep_search` to find all, then update each)

@@ -54,21 +54,23 @@ dotnet build TechHub.slnx /p:ErrorLog=analysis.sarif
 
 ## Test Commands
 
-**Use the Run function** (see [AGENTS.md - Using the Run Function](../../../AGENTS.md#using-the-run-function) for complete documentation):
+**Use the Run function** (see [AGENTS.md - Using the Run Function](../../../AGENTS.md#using-the-run-function) for complete documentation).
+The module is auto-loaded in devcontainer terminals. Only use `Import-Module` in CI or after making changes to the module.
 
-```bash
+```powershell
 # Common workflows
-pwsh -Command "Run"                              # Build + all tests + servers
-pwsh -Command "Run -WithoutTests"                # Build + servers (no tests)
-pwsh -Command "Run -WithoutClean"                # Build + all tests + servers (faster)
-pwsh -Command "Run -Rebuild"                     # Clean rebuild only
+Run                              # Build + all tests + servers
+Run -WithoutTests                # Build + servers (no tests)
+Run -WithoutClean                # Build + all tests + servers (faster)
+Run -Rebuild                     # Clean rebuild only
 
-# Testing workflows
-pwsh -Command "Run -TestProject powershell"      # PowerShell tests only (fast)
-pwsh -Command "Run -TestProject Web.Tests"       # Web component tests only
-pwsh -Command "Run -TestProject E2E.Tests"       # E2E tests only
-pwsh -Command "Run -TestName SectionCard"        # Tests matching 'SectionCard'
-pwsh -Command "Run -TestProject E2E.Tests -TestName Navigation"  # E2E navigation tests
+# Testing workflows (run tests, then exit)
+Run -OnlyTests                                   # All tests, then exit
+Run -OnlyTests -TestProject powershell           # PowerShell tests only (fast - no .NET build)
+Run -OnlyTests -TestProject Web.Tests            # Web component tests only
+Run -OnlyTests -TestProject E2E.Tests            # E2E tests only
+Run -OnlyTests -TestName SectionCard             # Tests matching 'SectionCard'
+Run -OnlyTests -TestProject E2E.Tests -TestName Navigation  # E2E navigation tests
 ```
 
 **Low-level dotnet test commands** (for reference only - use Run instead):
@@ -92,12 +94,12 @@ dotnet test TechHub.slnx --filter "FullyQualifiedName~ContentItem"
 
 ## PowerShell Script Tests
 
-```bash
-# Run PowerShell Pester tests
-pwsh -File scripts/run-powershell-tests.ps1
+```powershell
+# Run PowerShell Pester tests via Run function (module is auto-loaded)
+Run -OnlyTests -TestProject powershell
 
-# Run with detailed output
-pwsh -File scripts/run-powershell-tests.ps1 -Verbosity Detailed
+# Run with test name filter
+Run -OnlyTests -TestProject powershell -TestName "FrontMatter"
 ```
 
 ## Cleanup Skill Scripts
