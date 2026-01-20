@@ -32,7 +32,7 @@
 - **Never add functions only for tests** - Test real implementation
 - **Never leave scripts without error handling** - Always use try/catch
 - **Never assume execution context** - Support both script dir and workspace root
-- **Never skip testing after changes** - Run `Run -TestProject powershell`
+- **Never skip testing after changes** - Run `Run -OnlyTests -TestProject powershell`
 
 ## Overview
 
@@ -353,13 +353,7 @@ Transforms RSS feed items into markdown files with .NET Tech Hub frontmatter str
 - `{{SECTION_NAMES}}` - Normalized section identifiers array
 - `{{CONTENT}}` - Main content
 - `{{EXCERPT}}` - Summary excerpt
-
-**Note**: The following variables have been removed as they are no longer stored in frontmatter:
-
-- `{{CANONICAL_URL_FORMATTED}}` - Replaced by `{{EXTERNAL_URL}}`
 - `{{FEEDNAME}}` - Feed metadata not stored in frontmatter
-- `{{FEEDURL}}` - Feed metadata not stored in frontmatter
-- `{{PERMALINK}}` - Built dynamically from collection + section_names + slug
 
 ### Feed.ps1
 

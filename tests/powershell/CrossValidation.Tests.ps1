@@ -18,7 +18,7 @@ title: "GitHub Copilot: Advanced Features and Best Practices"
 description: "A comprehensive guide to GitHub Copilot's advanced features"
 author: "Jane Doe"
 excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://example.com/copilot-guide"
+external_url: "https://example.com/copilot-guide"
 viewing_mode: "external"
 feed_name: "Tech Blog"
 feed_url: "https://example.com/feed"
@@ -71,12 +71,14 @@ Here's the full article content.
             $fixedContent | Should -Not -Match "permalink:"
             $fixedContent | Should -Not -Match "canonical_url:"
             $fixedContent | Should -Not -Match "feed_url:"
-            $fixedContent | Should -Match "feed_name:"
             $fixedContent | Should -Not -Match "alt_collection:"
+            $fixedContent | Should -Not -Match "collection:"
             
             # Should have new required fields
             $fixedContent | Should -Match "external_url:"
-            $fixedContent | Should -Not -Match "collection:"
+
+            # Should only have removed feed_url, not feed_name
+            $fixedContent | Should -Match "feed_name:"
         }
     }
 

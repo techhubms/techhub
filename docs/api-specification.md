@@ -80,8 +80,8 @@ Represents individual content (articles, videos, blogs, etc.) in API responses.
 - `primarySectionName`: Highest-priority section name (lowercase identifier) used for URL routing (e.g., `"ai"`). Calculated using section priority: github-copilot > ai > ml > azure > coding > devops > security
 - `tags`: Content tags for filtering
 - `url`: Item detail page URL (format: `/{primarySectionName}/{collection}/{slug}`)
-- `externalUrl`: Original source URL from frontmatter `canonical_url` field (e.g., `"https://techcommunity.microsoft.com/..."`) - always present regardless of ViewingMode
-- `viewingMode`: Display mode - `"internal"` (show on our site) or `"external"` (link to source)
+- `externalUrl`: Original source URL (e.g., `"https://techcommunity.microsoft.com/..."`) - always present regardless of ViewingMode
+- `viewingMode`: Display mode - `"internal"` (show on our site) or `"external"` (link to source at externalUrl)
   - Videos and roundups: `"internal"` (content opens on site)
   - All other collections: `"external"` (links open in new tab)
 - `videoId`: YouTube video ID from frontmatter `youtube_id` field (for video embeds)

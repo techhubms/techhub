@@ -27,7 +27,11 @@ function Run {
         Skip clean build step. By default, Run does a clean build.
 
     .PARAMETER WithoutTests
-        Skip all tests and start servers directly.
+        Skip all tests and start servers directly (for debugging failing tests).
+
+    .PARAMETER OnlyTests
+        Run tests only, then exit. Stops servers after successful test completion.
+        Use this for CI/CD or when you only want to verify tests pass.
 
     .PARAMETER Rebuild
         Do a clean rebuild only, then exit (don't run tests or start servers).
@@ -46,28 +50,32 @@ function Run {
         Default: Clean build, run all tests (PowerShell + .NET), then start servers.
 
     .EXAMPLE
+        Run -OnlyTests
+        Clean build, run all tests, then exit (servers stop after tests pass).
+
+    .EXAMPLE
         Run -WithoutClean
         Build without cleaning, run all tests, then start servers.
 
     .EXAMPLE
         Run -WithoutTests
-        Clean build and start servers without running tests.
+        Clean build and start servers without running tests (for debugging).
 
     .EXAMPLE
         Run -Rebuild
         Clean rebuild only, then exit (for fixing build errors).
 
     .EXAMPLE
-        Run -TestProject TechHub.Web.Tests
-        Clean build, run only Web component tests, then start servers.
+        Run -OnlyTests -TestProject TechHub.Web.Tests
+        Clean build, run only Web component tests, then exit.
 
     .EXAMPLE
-        Run -TestName SectionCard
-        Clean build, run all tests matching "SectionCard" pattern, then start servers.
+        Run -OnlyTests -TestName SectionCard
+        Clean build, run all tests matching "SectionCard" pattern, then exit.
 
     .EXAMPLE
-        Run -TestProject TechHub.E2E.Tests -TestName Navigation
-        Clean build, run E2E tests matching "Navigation" pattern, then start servers.
+        Run -OnlyTests -TestProject TechHub.E2E.Tests -TestName Navigation
+        Clean build, run E2E tests matching "Navigation" pattern, then exit.
 
     .NOTES
         Author: Tech Hub Team
@@ -85,6 +93,9 @@ function Run {
 
         [Parameter(Mandatory = $false)]
         [switch]$WithoutTests,
+
+        [Parameter(Mandatory = $false)]
+        [switch]$OnlyTests,
 
         [Parameter(Mandatory = $false)]
         [switch]$Rebuild,
@@ -108,24 +119,27 @@ function Run {
         Write-Host "OPTIONS:" -ForegroundColor Yellow
         Write-Host "  -Help          Show this help message" -ForegroundColor White
         Write-Host "  -WithoutClean  Skip clean build step (faster)" -ForegroundColor White
-        Write-Host "  -WithoutTests  Skip all tests, start servers directly" -ForegroundColor White
+        Write-Host "  -WithoutTests  Skip all tests, start servers directly (for debugging)" -ForegroundColor White
+        Write-Host "  -OnlyTests     Run tests only, then exit (stops servers after tests pass)" -ForegroundColor White
         Write-Host "  -Rebuild       Clean rebuild only, then exit" -ForegroundColor White
         Write-Host "  -TestProject   Scope tests to specific project (e.g., TechHub.Web.Tests)" -ForegroundColor White
         Write-Host "  -TestName      Scope tests by name pattern (e.g., SectionCard)`n" -ForegroundColor White
         
         Write-Host "EXAMPLES:" -ForegroundColor Yellow
-        Write-Host "  Run                          Clean build + all tests + servers (default)" -ForegroundColor Gray
-        Write-Host "  Run -WithoutClean            Build + all tests + servers (faster)" -ForegroundColor Gray
-        Write-Host "  Run -WithoutTests            Clean build + servers (no tests)" -ForegroundColor Gray
-        Write-Host "  Run -Rebuild                 Clean rebuild only" -ForegroundColor Gray
-        Write-Host "  Run -TestProject powershell  Run only PowerShell/Pester tests" -ForegroundColor Gray
-        Write-Host "  Run -TestProject Web.Tests   Run only Web component tests" -ForegroundColor Gray
-        Write-Host "  Run -TestName SectionCard    Run tests matching 'SectionCard'" -ForegroundColor Gray
-        Write-Host "  Run -TestProject E2E -TestName Nav  Run E2E navigation tests`n" -ForegroundColor Gray
+        Write-Host "  Run                                  Clean build + all tests + servers (default)" -ForegroundColor Gray
+        Write-Host "  Run -OnlyTests                       Clean build + all tests, then exit" -ForegroundColor Gray
+        Write-Host "  Run -WithoutClean                    Build + all tests + servers (faster)" -ForegroundColor Gray
+        Write-Host "  Run -WithoutTests                    Clean build + servers (no tests, for debugging)" -ForegroundColor Gray
+        Write-Host "  Run -Rebuild                         Clean rebuild only" -ForegroundColor Gray
+        Write-Host "  Run -OnlyTests -TestProject powershell   Run only PowerShell tests, then exit" -ForegroundColor Gray
+        Write-Host "  Run -OnlyTests -TestProject Web.Tests    Run only Web tests, then exit" -ForegroundColor Gray
+        Write-Host "  Run -OnlyTests -TestName SectionCard     Run tests matching 'SectionCard', then exit" -ForegroundColor Gray
+        Write-Host "  Run -OnlyTests -TestProject E2E -TestName Nav  Run E2E navigation tests, then exit`n" -ForegroundColor Gray
         
         Write-Host "COMMON WORKFLOWS:" -ForegroundColor Yellow
-        Write-Host "  Automated testing:     Run" -ForegroundColor Gray
-        Write-Host "  Interactive debugging: Run -WithoutTests" -ForegroundColor Gray
+        Write-Host "  Run all tests (CI/CD): Run -OnlyTests" -ForegroundColor Gray
+        Write-Host "  Development mode:      Run" -ForegroundColor Gray
+        Write-Host "  Debug failing tests:   Run -WithoutTests" -ForegroundColor Gray
         Write-Host "  Fix build errors:      Run -Rebuild`n" -ForegroundColor Gray
         
         Write-Host "SERVICES:" -ForegroundColor Yellow
@@ -164,8 +178,8 @@ function Run {
     # Build configuration (always Debug for development)
     $configuration = "Debug"
 
-    # Verbosity level (always minimal for clean output)
-    $verbosityLevel = "minimal"
+    # Verbosity level - "normal" shows project names as they build
+    $verbosityLevel = "normal"
 
     # Color output helpers
     function Write-Step {
@@ -186,6 +200,16 @@ function Run {
     function Write-Info {
         param([string]$Message)
         Write-Host "  $Message" -ForegroundColor Gray
+    }
+
+    # Run external command, display output, return $true if exit code is 0
+    function Invoke-ExternalCommand {
+        param(
+            [string]$Command,
+            [string[]]$Arguments
+        )
+        & $Command @Arguments
+        return $LASTEXITCODE -eq 0
     }
 
     # Validate prerequisites
@@ -211,7 +235,7 @@ function Run {
             Write-Host "  .NET SDK not found or not working properly" -ForegroundColor Yellow
             Write-Host "  Please install .NET 10 SDK" -ForegroundColor Yellow
             Write-Host ""
-            return
+            return $false
         }
         
         # Check that solution file exists
@@ -226,40 +250,31 @@ function Run {
             Write-Host "  Expected: $solutionPath" -ForegroundColor Yellow
             Write-Host "  Make sure you're running from the workspace root" -ForegroundColor Yellow
             Write-Host ""
-            return
+            return $false
         }
         
         Write-Success "Prerequisites validated"
+        return $true
     }
 
     # Clean build artifacts
     function Invoke-Clean {
         Write-Step "Cleaning build artifacts"
         
-        dotnet clean $solutionPath --configuration $configuration --verbosity $verbosityLevel
-        if ($LASTEXITCODE -ne 0) {
-            Write-Host ""
-            Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
-            Write-Host "║                                                              ║" -ForegroundColor Red
-            Write-Host "║  ✗ CLEAN FAILED - Cannot continue                            ║" -ForegroundColor Red
-            Write-Host "║                                                              ║" -ForegroundColor Red
-            Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
-            Write-Host ""
-            Write-Host "  Clean failed with exit code $LASTEXITCODE" -ForegroundColor Yellow
-            Write-Host "  This is unusual - check file permissions or disk space" -ForegroundColor Yellow
-            Write-Host ""
-            return
-        }
+        # Fast recursive removal of bin/obj directories using native Linux find (faster than dotnet clean)
+        bash -c "find '$workspaceRoot' -type d \( -name bin -o -name obj \) -exec rm -rf {} + 2>/dev/null"
         
         Write-Success "Clean completed"
+        return $true
     }
 
     # Build solution
     function Invoke-Build {
         Write-Step "Building solution ($configuration)"
         
-        dotnet build $solutionPath --configuration $configuration --verbosity $verbosityLevel
-        if ($LASTEXITCODE -ne 0) {
+        $success = Invoke-ExternalCommand "dotnet" @("build", $solutionPath, "--configuration", $configuration, "--verbosity", $verbosityLevel)
+        
+        if (-not $success) {
             Write-Host ""
             Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
             Write-Host "║                                                              ║" -ForegroundColor Red
@@ -267,13 +282,13 @@ function Run {
             Write-Host "║                                                              ║" -ForegroundColor Red
             Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
             Write-Host ""
-            Write-Host "  Build failed with exit code $LASTEXITCODE" -ForegroundColor Yellow
-            Write-Host "  Fix the compilation errors above and try again" -ForegroundColor Yellow
+            Write-Host "  Build failed - fix the compilation errors above" -ForegroundColor Yellow
             Write-Host ""
-            return
+            return $false
         }
         
         Write-Success "Build completed"
+        return $true
     }
 
     # Run PowerShell/Pester tests
@@ -290,7 +305,7 @@ function Run {
         
         if (-not (Test-Path $pwshTestScript)) {
             Write-Warning "PowerShell test script not found: $pwshTestScript"
-            return
+            return $false
         }
         
         try {
@@ -321,94 +336,117 @@ function Run {
             Write-Host "  PowerShell tests failed with exit code $pwshExitCode" -ForegroundColor Yellow
             Write-Host "  Fix the failing tests above and try again" -ForegroundColor Yellow
             Write-Host ""
-            return
+            return $false
         }
         
         Write-Success "PowerShell tests passed"
+        return $true
     }
 
-    # Run tests
-    function Invoke-Tests {
+    # Run unit and integration tests (no servers needed)
+    function Invoke-UnitAndIntegrationTests {
         param(
             [string]$TestProject,
             [string]$TestName
         )
         
-        # PHASE 0: Run PowerShell tests FIRST (independent of .NET)
-        if (-not $TestProject -or $TestProject -match "powershell|pester|scripts") {
-            Invoke-PowerShellTests -TestName $TestName
-            Write-Host ""
-        }
+        Write-Step "Running unit and integration tests"
+        Write-Host ""
         
-        # Determine which .NET tests to run based on TestProject parameter
-        $runUnitTests = $true
-        $runE2ETests = $true
+        # Build filter expression
+        $filterParts = @("FullyQualifiedName!~E2E")
         
         if ($TestProject) {
-            # If TestProject specified, only run that project
-            if ($TestProject -notmatch "E2E") {
-                $runE2ETests = $false
-            }
-            if ($TestProject -match "E2E") {
-                $runUnitTests = $false
-            }
+            $filterParts += "FullyQualifiedName~$TestProject"
         }
         
-        # PHASE 1: Run all non-E2E tests (fast, no server needed)
-        if ($runUnitTests) {
-            Write-Step "Running unit and integration tests"
-            Write-Host ""
-            
-            # Build filter expression
-            $filterParts = @("FullyQualifiedName!~E2E")
-            
-            if ($TestProject) {
-                # Add project filter
-                $filterParts += "FullyQualifiedName~$TestProject"
-            }
-            
-            if ($TestName) {
-                # Add name filter
-                $filterParts += "FullyQualifiedName~$TestName"
-            }
-            
-            # Combine filters with & (AND logic)
-            $filter = $filterParts -join "&"
-            
-            # Run all tests except E2E using solution-level test with filter
-            # Integration tests use WebApplicationFactory which manages its own environment
-            $testArgs = @(
-                "test",
-                $solutionPath,
-                "--configuration", $configuration,
-                "--no-build",
-                "--filter", $filter,
-                "--settings", (Join-Path $workspaceRoot ".runsettings"),
-                "--blame-hang-timeout", "1m"
-            )
-            
-            & dotnet @testArgs
-            
-            if ($LASTEXITCODE -ne 0) {
-                Write-Host ""
-                Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
-                Write-Host "║                                                              ║" -ForegroundColor Red
-                Write-Host "║  ✗ UNIT/INTEGRATION TESTS FAILED - Cannot continue           ║" -ForegroundColor Red
-                Write-Host "║                                                              ║" -ForegroundColor Red
-                Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
-                Write-Host ""
-                Write-Host "  Tests failed with exit code $LASTEXITCODE" -ForegroundColor Yellow
-                Write-Host "  Fix the failing tests above and try again" -ForegroundColor Yellow
-                Write-Host ""
-                return
-            }
-            
-            Write-Host ""
-            Write-Success "Unit and integration tests passed"
+        if ($TestName) {
+            $filterParts += "FullyQualifiedName~$TestName"
         }
         
-        # PHASE 2: Run E2E tests (requires servers)
-        if ($runE2ETests) {
+        $filter = $filterParts -join "&"
+        
+        # Run all tests except E2E using solution-level test with filter
+        # Integration tests use WebApplicationFactory which manages its own environment
+        $testArgs = @(
+            "test",
+            $solutionPath,
+            "--configuration", $configuration,
+            "--no-build",
+            "--filter", $filter,
+            "--settings", (Join-Path $workspaceRoot ".runsettings"),
+            "--blame-hang-timeout", "1m"
+        )
+        
+        $success = Invoke-ExternalCommand "dotnet" $testArgs
+        
+        if (-not $success) {
+            Write-Host ""
+            Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "║  ✗ UNIT/INTEGRATION TESTS FAILED - Cannot continue           ║" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+            Write-Host ""
+            Write-Host "  Tests failed - fix the failing tests above" -ForegroundColor Yellow
+            Write-Host ""
+            return $false
+        }
+        
+        Write-Host ""
+        Write-Success "Unit and integration tests passed"
+        return $true
+    }
+    
+    # Run E2E tests (requires servers to be running)
+    function Invoke-E2ETests {
+        param(
+            [string]$TestName
+        )
+        
+        # Start AppHost for E2E tests
+        Write-Step "Starting Aspire AppHost for E2E tests"
+        
+        # Start AppHost in background with output capture
+        $script:appHostProcess = $null
+        $script:dashboardUrl = $null
+        
+        $appHostStartInfo = New-Object System.Diagnostics.ProcessStartInfo
+        $appHostStartInfo.FileName = "dotnet"
+        $appHostStartInfo.Arguments = "run --project `"$appHostProjectPath`" --no-build --configuration $configuration"
+        $appHostStartInfo.WorkingDirectory = Split-Path $appHostProjectPath -Parent
+        $appHostStartInfo.UseShellExecute = $false
+        $appHostStartInfo.RedirectStandardOutput = $false
+        $appHostStartInfo.RedirectStandardError = $false
+        $appHostStartInfo.CreateNoWindow = $false
+        # Use Test environment for E2E tests - API/Web will load appsettings.Test.json
+        # This provides cleaner console output (Error only) and proper test log files
+        $appHostStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Test"
+        # Keep Aspire orchestration logs (useful for debugging startup issues)
+        # but suppress noisy Microsoft.AspNetCore.* framework logs
+        $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft"] = "Warning"
+        $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft.AspNetCore"] = "Warning"
+        # Disable Aspire dashboard authentication for local development (no login token required)
+        $appHostStartInfo.EnvironmentVariables["DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS"] = "true"
+        # Disable automatic browser launch in DevContainer (prevents DBus errors)
+        $appHostStartInfo.EnvironmentVariables["DOTNET_DASHBOARD_OPEN_BROWSER"] = "false"
+        
+        $script:appHostProcess = [System.Diagnostics.Process]::Start($appHostStartInfo)
+        
+        Write-Info "  AppHost started (PID: $($script:appHostProcess.Id))"
+        
+        # Wait for services to be ready (Aspire orchestration is slower than direct dotnet watch)
+        Write-Info "Waiting for services to start (Aspire orchestration can take 30-60 seconds)..."
+        $maxAttempts = 60
+        $attempt = 0
+        $apiReady = $false
+        $webReady = $false
+        $lastApiError = ""
+        $lastWebError = ""
+        
+        while ($attempt -lt $maxAttempts -and (-not $apiReady -or -not $webReady)) {
+            Start-Sleep -Seconds 1
+            $attempt++
             # Start AppHost for E2E tests
             Write-Step "Starting Aspire AppHost for E2E tests"
             
@@ -559,12 +597,16 @@ function Run {
                     }
                 }
                 Stop-ExistingProcesses
-                return
+                return $false
             }
             
             Write-Success "Services ready"
             
-            # PHASE 3: Run E2E tests
+            # Wait for Aspire port forwarding to complete (DevContainer port forwarding takes a few seconds)
+            Write-Info "Waiting for port forwarding to complete..."
+            Start-Sleep -Seconds 5
+            
+            # Run E2E tests
             Write-Step "Running E2E tests"
             Write-Host ""
             
@@ -593,11 +635,10 @@ function Run {
                 $e2eTestArgs += "FullyQualifiedName~$TestName"
             }
             
-            # Run E2E tests with explicit error action to prevent terminal crash
-            & dotnet @e2eTestArgs
-            $e2eExitCode = $LASTEXITCODE
+            # Run E2E tests
+            $e2eSuccess = Invoke-ExternalCommand "dotnet" $e2eTestArgs
             
-            if ($e2eExitCode -ne 0) {
+            if (-not $e2eSuccess) {
                 Write-Host ""
                 Write-Host "════════════════════════════════════════" -ForegroundColor Red
                 Write-Host ""
@@ -607,7 +648,6 @@ function Run {
                 Write-Host "║                                                              ║" -ForegroundColor Red
                 Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
                 Write-Host ""
-                Write-Host "  Tests failed with exit code: $e2eExitCode" -ForegroundColor Yellow
                 Write-Host "  Run with 'Run -WithoutTests' to start servers for debugging" -ForegroundColor Cyan
                 Write-Host ""
                 
@@ -624,7 +664,7 @@ function Run {
                 }
                 Stop-ExistingProcesses
                 
-                return
+                return $false
             }
             
             Write-Host ""
@@ -635,9 +675,10 @@ function Run {
             # Mark that E2E tests already started the servers
             # so we don't restart them later
             $script:serversAlreadyRunning = $true
+            return $true
         }
-    }
 
+    }
     # Kill existing processes on ports
     function Stop-ExistingProcesses {
         param(
@@ -911,18 +952,27 @@ function Run {
         Write-Host "╚════════════════════════════════════════╝`n" -ForegroundColor Cyan
         
         # Validate prerequisites
-        Test-Prerequisites
+        $prereqsSucceeded = Test-Prerequisites
+        if ($prereqsSucceeded -eq $false) {
+            return
+        }
         
         # ALWAYS clean up orphaned processes at start (ports + browsers + test runners)
         Invoke-FullCleanup
         
         # Clean build artifacts by default (skip if -WithoutClean specified)
         if (-not $WithoutClean) {
-            Invoke-Clean
+            $cleanSucceeded = Invoke-Clean
+            if ($cleanSucceeded -eq $false) {
+                return
+            }
         }
         
         # Always build
-        Invoke-Build
+        $buildSucceeded = Invoke-Build
+        if ($buildSucceeded -eq $false) {
+            return
+        }
         
         # Rebuild mode: Clean rebuild only, then EXIT
         if ($Rebuild) {
@@ -930,11 +980,86 @@ function Run {
             return
         }
         
+        # Determine if this is a test-only run (explicit -OnlyTests OR any test-scoping parameter)
+        $isTestOnlyRun = $OnlyTests -or $TestProject -or $TestName
+        
         # Test by default unless -WithoutTests specified
         if (-not $WithoutTests) {
-            Invoke-Tests -TestProject $TestProject -TestName $TestName
+            # Determine which tests to run based on TestProject parameter
+            $runPowerShell = $false
+            $runUnitIntegration = $false
+            $runE2E = $false
             
-            # If servers are already running from E2E tests, we're done
+            if (-not $TestProject) {
+                # No TestProject specified - run ALL tests
+                $runPowerShell = $true
+                $runUnitIntegration = $true
+                $runE2E = $true
+            }
+            elseif ($TestProject -match "^(powershell|pester|scripts)$") {
+                # PowerShell tests only
+                $runPowerShell = $true
+            }
+            elseif ($TestProject -match "E2E") {
+                # E2E tests only
+                $runE2E = $true
+            }
+            else {
+                # Specific unit/integration test project
+                $runUnitIntegration = $true
+            }
+            
+            # PHASE 1: PowerShell tests (fast, independent)
+            if ($runPowerShell) {
+                $pwshSuccess = Invoke-PowerShellTests -TestName $TestName
+                if ($pwshSuccess -ne $true) {
+                    return
+                }
+                Write-Host ""
+            }
+            
+            # PHASE 2: Unit and integration tests (fast, no servers)
+            if ($runUnitIntegration) {
+                $unitSuccess = Invoke-UnitAndIntegrationTests -TestProject $TestProject -TestName $TestName
+                if ($unitSuccess -ne $true) {
+                    return
+                }
+            }
+            
+            # PHASE 3: E2E tests (slow, requires servers)
+            if ($runE2E) {
+                $e2eSuccess = Invoke-E2ETests -TestName $TestName
+                if ($e2eSuccess -ne $true) {
+                    # Tests failed - exit immediately without success message
+                    return
+                }
+            }
+            
+            # All tests passed - decide what to do next
+            if ($isTestOnlyRun) {
+                Write-Host ""
+                Write-Success "All tests passed!`n"
+                
+                # Stop servers if they were started by E2E tests
+                if ($script:serversAlreadyRunning) {
+                    Write-Info "Stopping servers..."
+                    if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
+                        try {
+                            $script:appHostProcess.Kill($false)
+                        }
+                        catch { }
+                        finally {
+                            $script:appHostProcess.Dispose()
+                        }
+                    }
+                    Stop-ExistingProcesses
+                    Write-Success "Servers stopped"
+                }
+                
+                return
+            }
+            
+            # If servers are already running from E2E tests, keep them running for development
             if ($script:serversAlreadyRunning) {
                 Write-Host ""
                 Write-Success "All tests passed! Servers are running and ready for development.`n"

@@ -157,8 +157,8 @@ try {
                 $allCurrentItems[$itemFilePath] = $true
 
                 # Check if item is in skipped or processed entries
-                $isSkipped = $skippedEntries | Where-Object { $_.canonical_url -eq $item.Link }
-                $isProcessed = $processedEntries | Where-Object { $_.canonical_url -eq $item.Link }
+                $isSkipped = $skippedEntries | Where-Object { $_.external_url -eq $item.Link }
+                $isProcessed = $processedEntries | Where-Object { $_.external_url -eq $item.Link }
 
                 # Check if file needs processing
                 $needsProcessing = $false

@@ -639,12 +639,12 @@ $articleContent
                     Write-Host "  📝 Reasoning: $($result.reasoning)"
                     
                     # Extract original title and link from frontmatter using existing function
-                    $canonicalUrl = Get-FrontMatterValue -Content $articleContent -Key "canonical_url"
+                    $externalUrl = Get-FrontMatterValue -Content $articleContent -Key "external_url"
                     $title = Get-FrontMatterValue -Content $articleContent -Key "title"
                     $viewingMode = Get-FrontMatterValue -Content $articleContent -Key "viewing_mode"
                     $permalink = Get-FrontMatterValue -Content $articleContent -Key "permalink"
                     
-                    $result | Add-Member -NotePropertyName "canonical_url" -NotePropertyValue $canonicalUrl
+                    $result | Add-Member -NotePropertyName "external_url" -NotePropertyValue $externalUrl
                     $result | Add-Member -NotePropertyName "title" -NotePropertyValue $title
                     $result | Add-Member -NotePropertyName "viewing_mode" -NotePropertyValue $viewingMode
                     $result | Add-Member -NotePropertyName "permalink" -NotePropertyValue $permalink
@@ -1050,7 +1050,7 @@ $step3SystemMessage
                         $sectionInput += "LINK: [$($article.title)]({{ `"$($article.permalink)`" | relative_url }})`n"
                     }
                     else {
-                        $sectionInput += "LINK: [$($article.title)]($($article.canonical_url))`n"
+                        $sectionInput += "LINK: [$($article.title)]($($article.external_url))`n"
                     }
                     $sectionInput += "`n"
                 }

@@ -82,10 +82,10 @@ See actual tests in `Endpoints/` for implementation examples.
 Run
 
 # Run only API integration tests
-Run -TestProject Api.Tests
+Run -OnlyTests -TestProject Api.Tests
 
 # Run specific test class
-Run -TestName SectionsEndpoints
+Run -OnlyTests -TestName SectionsEndpoints
 ```
 
 ## Best Practices

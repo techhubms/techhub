@@ -59,11 +59,11 @@ See [Root AGENTS.md - Using the Run Function](../../AGENTS.md#using-the-run-func
 
 ```powershell
 # All PowerShell tests only (fast - no .NET build)
-Run -TestProject powershell
+Run -OnlyTests -TestProject powershell
 
 # PowerShell tests by name pattern
-Run -TestProject powershell -TestName "RSS"
-Run -TestProject powershell -TestName "FrontMatter"
+Run -OnlyTests -TestProject powershell -TestName "RSS"
+Run -OnlyTests -TestProject powershell -TestName "FrontMatter"
 
 # All tests (PowerShell + .NET), then start servers
 Run
@@ -74,9 +74,9 @@ Run -WithoutTests
 
 **Aliases**: The following are equivalent:
 
-- `Run -TestProject powershell`
-- `Run -TestProject pester`
-- `Run -TestProject scripts`
+- `Run -OnlyTests -TestProject powershell`
+- `Run -OnlyTests -TestProject pester`
+- `Run -OnlyTests -TestProject scripts`
 
 ### Direct Script Execution (Only When Run Doesn't Support Operation)
 

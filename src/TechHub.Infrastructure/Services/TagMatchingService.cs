@@ -54,13 +54,13 @@ public class TagMatchingService : ITagMatchingService
         var itemTagsList = itemTags?.ToList();
 
         // No filters means show all
-        if (selectedTagsList == null || !selectedTagsList.Any())
+        if (selectedTagsList == null || selectedTagsList.Count == 0)
         {
             return true;
         }
 
         // No tags on item means no match
-        if (itemTagsList == null || !itemTagsList.Any())
+        if (itemTagsList == null || itemTagsList.Count == 0)
         {
             return false;
         }
@@ -77,6 +77,8 @@ public class TagMatchingService : ITagMatchingService
     /// <returns>Normalized tag</returns>
     public string Normalize(string tag)
     {
+        ArgumentNullException.ThrowIfNull(tag);
+
         return tag.Trim().ToLowerInvariant();
     }
 }

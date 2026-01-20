@@ -32,12 +32,12 @@ public class TagCloudServiceTests : IDisposable
         Directory.CreateDirectory(Path.Combine(_tempDirectory, "collections", "_news"));
 
         // Setup: Create test content files with various tag distributions
-        CreateTestContent("item1", "AI Section", new[] { "ai", "machine-learning", "copilot" }, "ai", "_blogs", DateTimeOffset.UtcNow.AddDays(-10));
-        CreateTestContent("item2", "AI Content 2", new[] { "ai", "copilot" }, "ai", "_blogs", DateTimeOffset.UtcNow.AddDays(-5));
-        CreateTestContent("item3", "AI Content 3", new[] { "ai", "machine-learning" }, "ai", "_news", DateTimeOffset.UtcNow.AddDays(-3));
-        CreateTestContent("item4", "Copilot Content", new[] { "copilot", "productivity" }, "github-copilot", "_blogs", DateTimeOffset.UtcNow.AddDays(-2));
-        CreateTestContent("item5", "ML Content", new[] { "machine-learning", "azure" }, "ml", "_news", DateTimeOffset.UtcNow.AddDays(-50)); // Old content
-        CreateTestContent("item6", "Rare Tag", new[] { "rare-tag" }, "ai", "_blogs", DateTimeOffset.UtcNow.AddHours(-12)); // Half day ago
+        CreateTestContent("item1", "AI Section", ["ai", "machine-learning", "copilot"], "ai", "_blogs", DateTimeOffset.UtcNow.AddDays(-10));
+        CreateTestContent("item2", "AI Content 2", ["ai", "copilot"], "ai", "_blogs", DateTimeOffset.UtcNow.AddDays(-5));
+        CreateTestContent("item3", "AI Content 3", ["ai", "machine-learning"], "ai", "_news", DateTimeOffset.UtcNow.AddDays(-3));
+        CreateTestContent("item4", "Copilot Content", ["copilot", "productivity"], "github-copilot", "_blogs", DateTimeOffset.UtcNow.AddDays(-2));
+        CreateTestContent("item5", "ML Content", ["machine-learning", "azure"], "ml", "_news", DateTimeOffset.UtcNow.AddDays(-50)); // Old content
+        CreateTestContent("item6", "Rare Tag", ["rare-tag"], "ai", "_blogs", DateTimeOffset.UtcNow.AddHours(-12)); // Half day ago
 
         // Setup: Create AppSettings
         var settings = new AppSettings
@@ -45,7 +45,7 @@ public class TagCloudServiceTests : IDisposable
             Content = new ContentSettings
             {
                 CollectionsPath = Path.Combine(_tempDirectory, "collections"),
-                Sections = new Dictionary<string, SectionConfig>(),
+                Sections = [],
                 Timezone = "Europe/Brussels"
             },
             Seo = new SeoSettings

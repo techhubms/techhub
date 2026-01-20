@@ -54,7 +54,8 @@ Describe "ConvertTo-YamlFrontMatter" {
             
             $result = ConvertTo-YamlFrontMatter -FrontMatter $frontMatter
             
-            $result | Should -Match "            $result | Should -Match "author: John Doe"
+            $result | Should -Match "layout: post"
+            $result | Should -Match "author: John Doe"
         }
         
         It "Should use single quotes for strings with special YAML characters" {
@@ -165,10 +166,11 @@ Describe "ConvertTo-YamlFrontMatter" {
     Context "Edge Cases" {
         It "Should handle frontmatter with only required fields" {
             $frontMatter = @{
-                layout = "post"
-                title  = "Minimal Article"
-                author = "Author"
-                date   = "2026-01-16 10:00:00 +00:00"tags          = @()
+                layout        = "post"
+                title         = "Minimal Article"
+                author        = "Author"
+                date          = "2026-01-16 10:00:00 +00:00"
+                tags          = @()
                 section_names = @("ai")
             }
             

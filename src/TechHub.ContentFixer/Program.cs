@@ -1,6 +1,5 @@
 using System.Text;
 using System.Text.RegularExpressions;
-using TechHub.Core.Helpers;
 using TechHub.Infrastructure.Services;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;

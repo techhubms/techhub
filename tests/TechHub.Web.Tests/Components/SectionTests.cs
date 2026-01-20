@@ -5,7 +5,6 @@ using Microsoft.Extensions.Logging;
 using Moq;
 using TechHub.Core.DTOs;
 using TechHub.Web.Components.Pages;
-using TechHub.Web.Components.Shared;
 using TechHub.Web.Services;
 
 namespace TechHub.Web.Tests.Components;

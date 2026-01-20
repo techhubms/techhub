@@ -289,7 +289,7 @@ See [Starting & Stopping the Website](#starting--stopping-the-website) for compl
 
 - How to start the website with the `Run` function
 - Using Playwright MCP tools for testing (CRITICAL: works directly in GitHub Copilot Chat)
-- When to use `-OnlyTests` vs `-SkipTests` parameters
+- When to use `-OnlyTests` vs `-WithoutTests` parameters
 - How to safely interact with the running website
 
 **When to Verify**:
@@ -453,8 +453,8 @@ See [Starting & Stopping the Website](#starting--stopping-the-website) for compl
 
 **Run Full Test Suite**:
 
-- **Default workflow**: Use `Run` to run all tests, then start servers
-- **Scoped testing**: Use `Run -TestProject <name>` to run specific test projects
+- **Primary workflow**: Use `Run -OnlyTests` to run all tests, then stop servers
+- **Scoped testing**: Use `Run -OnlyTests -TestProject <name>` to run specific test projects
 - Run ALL affected tests (unit, integration, component, E2E as appropriate)
 - **E2E tests are MANDATORY** for any UI/frontend changes - NO EXCEPTIONS
 - Tests should NOW PASS (they failed in step 5, you fixed in step 6)
@@ -582,19 +582,25 @@ See [Starting & Stopping the Website](#starting--stopping-the-website) for compl
 **ALWAYS use the Run function** (automatically loaded in PowerShell):
 
 ```powershell
-# Start both API and Web (browser never opens in DevContainer)
-# Default behavior: runs tests, then keeps servers running
+# Run tests only - stops servers after successful tests (CI/CD, validation)
+# This is the PRIMARY way to run tests
+Run -OnlyTests
+
+# Run tests for specific area - stops servers after successful tests
+Run -OnlyTests -TestProject Web.Tests
+Run -OnlyTests -TestName SectionCard
+
+# Development mode - runs tests, then keeps servers running
 Run
 
-# For interactive debugging with Playwright MCP (AI agents AND humans)
-# Skip all tests, start servers directly
+# Interactive debugging - skip tests, start servers directly
 Run -WithoutTests
 ```
 
 **⚠️ CRITICAL E2E TEST WARNING**:
 
 🚫 **NEVER** run `dotnet test tests/TechHub.E2E.Tests` directly - it **WILL FAIL** without servers running!  
-✅ **ALWAYS** use `Run` (runs all tests including E2E, then starts servers) or `Run -TestProject E2E.Tests` for E2E tests only.
+✅ **ALWAYS** use `Run -OnlyTests` (runs all tests) or `Run -OnlyTests -TestProject E2E.Tests` for E2E tests only.
 
 **CRITICAL RULES**:
 
@@ -603,7 +609,8 @@ Run -WithoutTests
 ✅ **DO**: Use Playwright MCP tools from GitHub Copilot Chat for all website testing  
 ✅ **DO**: Open NEW terminals for ANY other commands while website is running  
 ✅ **DO**: Use `Run -WithoutTests` for interactive debugging (skip tests, start servers)
-✅ **DO**: Use `Run -TestProject <project>` to run specific test projects
+✅ **DO**: Use `Run -OnlyTests` to run tests and stop servers after completion
+✅ **DO**: Use `Run -OnlyTests -TestProject <project>` to run specific test projects
 
 🚫 **NEVER**: Type ANY command in the terminal running the website  
 🚫 **NEVER**: Use curl, wget, or CLI tools in the website terminal  
@@ -630,7 +637,7 @@ Run -WithoutTests
   any code?         a bug?            Debugging?
         │               │                   │
         ▼               ▼                   ▼
-  Run               Run -WithoutTests  Run -WithoutTests
+  Run -OnlyTests    Run -WithoutTests  Run -WithoutTests
   (verify all       (debug first,      (explore with
    tests pass)       write test,        Playwright MCP
                      then fix)          interactively)
@@ -638,18 +645,24 @@ Run -WithoutTests
   📜 Changed PowerShell scripts only?
         │
         ▼
-  Run -TestProject powershell
+  Run -OnlyTests -TestProject powershell
   (fast - only PowerShell/Pester tests,
    no .NET build or E2E tests)
 ```
 
 #### Quick Reference
 
-**Run (default) - ✅ Most Common**:
+**Run -OnlyTests (default for testing) - ✅ PRIMARY**:
 
-- Use when: You changed ANY code (C#, JavaScript, PowerShell, templates)
-- What it does: Clean build, runs ALL tests (PowerShell, unit, integration, component, E2E), then starts servers
-- When: Default workflow - verifies tests pass then keeps servers running
+- Use when: Running tests for validation, CI/CD, or after code changes
+- What it does: Clean build, runs ALL tests (PowerShell, unit, integration, component, E2E), then STOPS servers
+- When: Default test workflow - verifies tests pass, then exits cleanly
+
+**Run (development mode)**:
+
+- Use when: Development workflow - want tests to run AND servers to stay running
+- What it does: Clean build, runs ALL tests, then KEEPS servers running for development
+- When: Working on features, want to test code AND interact with running site
 
 **Run -WithoutTests**:
 
@@ -687,23 +700,23 @@ All `Run` commands execute these test types (unless `-WithoutTests` is specified
 
 #### When to Run Specific Test Types
 
-**Changed C# backend code?** → `Run`
+**Changed C# backend code?** → `Run -OnlyTests`
 
-**Changed Blazor components?** → `Run` (E2E tests **MANDATORY**)
+**Changed Blazor components?** → `Run -OnlyTests` (E2E tests **MANDATORY**)
 
-**Changed PowerShell scripts?** → `Run -TestProject powershell` (fast - only PowerShell tests, no .NET build)
+**Changed PowerShell scripts?** → `Run -OnlyTests -TestProject powershell` (fast - only PowerShell tests, no .NET build)
 
 **Changed markdown/content?** → No tests needed
 
-**Not sure what you changed?** → `Run`
+**Not sure what you changed?** → `Run -OnlyTests`
 
-**Testing specific area?** → Use `-TestProject` and/or `-TestName`:
+**Testing specific area?** → Use `-OnlyTests -TestProject` and/or `-TestName`:
 
-- `Run -TestProject powershell` - Run only PowerShell/Pester tests (fast - no .NET build)
-- `Run -TestProject Web.Tests` - Run only Web component tests
-- `Run -TestName SectionCard` - Run tests matching 'SectionCard'
-- `Run -TestProject E2E -TestName Navigation` - Run E2E navigation tests
-- `Run -TestProject powershell -TestName FrontMatter` - Run PowerShell tests matching 'FrontMatter'
+- `Run -OnlyTests -TestProject powershell` - Run only PowerShell/Pester tests (fast - no .NET build)
+- `Run -OnlyTests -TestProject Web.Tests` - Run only Web component tests
+- `Run -OnlyTests -TestName SectionCard` - Run tests matching 'SectionCard'
+- `Run -OnlyTests -TestProject E2E -TestName Navigation` - Run E2E navigation tests
+- `Run -OnlyTests -TestProject powershell -TestName FrontMatter` - Run PowerShell tests matching 'FrontMatter'
 
 #### Testing Best Practices
 

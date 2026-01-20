@@ -434,7 +434,8 @@ public class FileBasedContentRepositoryTests : IDisposable
         var content = await _repository.GetAllAsync();
 
         // Assert: Video ID extracted from URL
-        content.Should().ContainSingle();    }
+        content.Should().ContainSingle();
+    }
 
     /// <summary>
     /// Test: YouTube shortcode in markdown is converted to iframe
@@ -799,7 +800,7 @@ public class FileBasedContentRepositoryTests : IDisposable
         {
             SectionName = null,
             CollectionName = null,
-            SelectedTags = new[] { "ai" },
+            SelectedTags = ["ai"],
             DateFrom = null,
             DateTo = null
         };
@@ -862,7 +863,7 @@ public class FileBasedContentRepositoryTests : IDisposable
         {
             SectionName = null,
             CollectionName = null,
-            SelectedTags = Array.Empty<string>(),
+            SelectedTags = [],
             DateFrom = dateFrom,
             DateTo = dateTo
         };
@@ -923,7 +924,7 @@ public class FileBasedContentRepositoryTests : IDisposable
         {
             SectionName = null,
             CollectionName = null,
-            SelectedTags = new[] { "ai" },
+            SelectedTags = ["ai"],
             DateFrom = dateFrom,
             DateTo = dateTo
         };
@@ -971,7 +972,7 @@ public class FileBasedContentRepositoryTests : IDisposable
         {
             SectionName = "ai",
             CollectionName = null,
-            SelectedTags = Array.Empty<string>(),
+            SelectedTags = [],
             DateFrom = null,
             DateTo = null
         };
@@ -1021,7 +1022,7 @@ public class FileBasedContentRepositoryTests : IDisposable
         {
             SectionName = null,
             CollectionName = "news",
-            SelectedTags = Array.Empty<string>(),
+            SelectedTags = [],
             DateFrom = null,
             DateTo = null
         };
@@ -1081,7 +1082,7 @@ public class FileBasedContentRepositoryTests : IDisposable
         {
             SectionName = "ai",
             CollectionName = "news",
-            SelectedTags = Array.Empty<string>(),
+            SelectedTags = [],
             DateFrom = null,
             DateTo = null
         };
@@ -1139,7 +1140,7 @@ public class FileBasedContentRepositoryTests : IDisposable
         {
             SectionName = null,
             CollectionName = null,
-            SelectedTags = Array.Empty<string>(),
+            SelectedTags = [],
             DateFrom = null,
             DateTo = null
         };
@@ -1201,7 +1202,7 @@ public class FileBasedContentRepositoryTests : IDisposable
         {
             SectionName = null,
             CollectionName = null,
-            SelectedTags = new[] { "ai", "azure" },
+            SelectedTags = ["ai", "azure"],
             DateFrom = null,
             DateTo = null
         };

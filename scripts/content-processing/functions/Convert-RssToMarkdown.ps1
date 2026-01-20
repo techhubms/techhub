@@ -44,16 +44,16 @@ function Convert-RssToMarkdown {
     $totalItems = $Items.Count
     $itemsToSkip = @($Items | Where-Object { 
             $currentLink = $_.Link
-            $skippedEntries | Where-Object { $_.canonical_url -eq $currentLink }
+            $skippedEntries | Where-Object { $_.external_url -eq $currentLink }
         })
     $itemsAlreadyProcessed = @($Items | Where-Object { 
             $currentLink = $_.Link
-            $processedEntries | Where-Object { $_.canonical_url -eq $currentLink }
+            $processedEntries | Where-Object { $_.external_url -eq $currentLink }
         })
     $itemsToProcess = @($Items | Where-Object { 
             $currentLink = $_.Link
-            -not ($skippedEntries | Where-Object { $_.canonical_url -eq $currentLink }) -and
-            -not ($processedEntries | Where-Object { $_.canonical_url -eq $currentLink })
+            -not ($skippedEntries | Where-Object { $_.external_url -eq $currentLink }) -and
+            -not ($processedEntries | Where-Object { $_.external_url -eq $currentLink })
         })
     
     # Display processing summary
@@ -106,8 +106,8 @@ function Convert-RssToMarkdown {
             if ($item.EnhancedContent -and $item.EnhancedContent.Length -lt $lengthRequirement) {
                 Write-Host "Skipping item due to insufficient content length: $($item.Link)" -ForegroundColor Yellow
                 
-                # Write canonical URL to skipped-entries.json to avoid reprocessing
-                Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "Insufficient content length" -Collection $collection_value
+                # Write external URL to skipped-entries.json to avoid reprocessing
+                Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason "Insufficient content length" -Collection $collection_value
                 
                 continue
             }
@@ -146,14 +146,14 @@ function Convert-RssToMarkdown {
                 elseif ($response.Type -eq "ContentFilter") {
                     Write-Host "Content filter error from pattern $($response.Pattern)" -ForegroundColor Yellow
                     # Add to skipped entries and continue to next item
-                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "Content blocked by safety filters" -Collection $collection_value
+                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason "Content blocked by safety filters" -Collection $collection_value
                     
                     continue
                 }
                 elseif ($response.Type -eq "RequestEntityTooLarge") {
                     Write-Host "Too many tokens for GPT 4.1" -ForegroundColor Yellow
                     # Add to skipped entries and continue to next item
-                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "Too many tokens in the request" -Collection $collection_value
+                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason "Too many tokens in the request" -Collection $collection_value
                     
                     continue
                 }
@@ -164,7 +164,7 @@ function Convert-RssToMarkdown {
                     Save-AiApiResult -InputData $inputData -Response $response -Url $item.Link -Model $Model -PubDate $item.PubDate -AiResultsPath (Join-Path $scriptsPath "airesults")
                 
                     # Add to skipped entries and continue to next item
-                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "AI model response could not be parsed as JSON" -Collection $collection_value
+                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason "AI model response could not be parsed as JSON" -Collection $collection_value
                     
                     continue
                 }
@@ -173,7 +173,7 @@ function Convert-RssToMarkdown {
                 
                     # Add to skipped entries and continue to next item
                     $errorMessage = if ($response.PSObject.Properties.Name -contains 'Message') { $response.Message } else { "Response parse error" }
-                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "AI API response parse error: $errorMessage" -Collection $collection_value
+                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason "AI API response parse error: $errorMessage" -Collection $collection_value
                     
                     continue
                 }
@@ -182,7 +182,7 @@ function Convert-RssToMarkdown {
                 
                     # Add to skipped entries and continue to next item
                     $errorMessage = if ($response.PSObject.Properties.Name -contains 'Message') { $response.Message } else { "All retries failed" }
-                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "API call retries failed: $errorMessage" -Collection $collection_value
+                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason "API call retries failed: $errorMessage" -Collection $collection_value
                     
                     continue
                 }
@@ -215,7 +215,7 @@ function Convert-RssToMarkdown {
             if (-not $categories -or $categories.Count -eq 0) {
                 Write-Host "No categories found, skipping item" -ForegroundColor Yellow
 
-                # Write canonical URL to skipped-entries.json to avoid reprocessing
+                # Write external URL to skipped-entries.json to avoid reprocessing
                 $explanation = if ($response.PSObject.Properties.Name -contains 'explanation') { $response.explanation } else { "" }
                 $finalReason = if ($explanation -and $explanation.Trim() -ne "") {
                     "No categories found: $explanation"
@@ -224,7 +224,7 @@ function Convert-RssToMarkdown {
                     "No categories found"
                 }
             
-                Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason $finalReason -Collection $collection_value
+                Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason $finalReason -Collection $collection_value
 
                 continue;
             }
@@ -333,7 +333,7 @@ function Convert-RssToMarkdown {
                     else {
                         "Succesfully added"
                     }
-                    Add-TrackingEntry -EntriesPath $processedEntriesPath -CanonicalUrl $item.Link -Collection $collection_value -Reason $finalReason
+                    Add-TrackingEntry -EntriesPath $processedEntriesPath -ExternalUrl $item.Link -Collection $collection_value -Reason $finalReason
                 }
                 else {
                     Write-Host "⚠️  File creation verification failed, not adding to processed entries" -ForegroundColor Yellow

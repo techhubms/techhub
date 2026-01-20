@@ -154,7 +154,7 @@ Describe "Convert-RssToMarkdown" {
 
 {{CONTENT}}
 
-This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{CANONICAL_URL}})
+This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{EXTERNAL_URL}})
 '@
         Set-Content -Path (Join-Path $script:TemplateSourcePath "template-generic.md") -Value $genericTemplate
         
@@ -269,7 +269,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{CANON
             $result | Should -Be 0
             
             # Check that the item was added to skipped entries
-            $skippedEntries = Get-Content $script:TestSkippedEntriesPath | ConvertFrom-Json
+            $skippedEntries = Get-SkippedEntries -SkippedEntriesPath $script:TestSkippedEntriesPath
             $skippedEntries | Should -HaveCount 1
             $skippedEntries[0].external_url | Should -Be "https://example.com/test-article"
             $skippedEntries[0].reason | Should -Be "Content blocked by safety filters"
@@ -404,7 +404,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{CANON
             $result | Should -Be 1
             
             # Check that the first item was added to skipped entries
-            $skippedEntries = Get-Content $script:TestSkippedEntriesPath | ConvertFrom-Json
+            $skippedEntries = Get-SkippedEntries -SkippedEntriesPath $script:TestSkippedEntriesPath
             $filteredEntry = $skippedEntries | Where-Object { $_.external_url -eq "https://example.com/filtered-article" }
             $filteredEntry | Should -Not -BeNullOrEmpty
             $filteredEntry.reason | Should -Be "Content blocked by safety filters"
@@ -470,7 +470,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{CANON
             $result | Should -Be 0
             
             # Should not add to skipped entries for rate limit (processing should stop)
-            $skippedEntries = Get-Content $script:TestSkippedEntriesPath | ConvertFrom-Json
+            $skippedEntries = Get-SkippedEntries -SkippedEntriesPath $script:TestSkippedEntriesPath
             $skippedEntries | Should -HaveCount 0
         }
         
@@ -509,7 +509,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{CANON
             $result | Should -Be 0
             
             # Check that the item was added to skipped entries
-            $skippedEntries = Get-Content $script:TestSkippedEntriesPath | ConvertFrom-Json
+            $skippedEntries = Get-SkippedEntries -SkippedEntriesPath $script:TestSkippedEntriesPath
             $skippedEntries | Should -HaveCount 1
             $skippedEntries[0].external_url | Should -Be "https://example.com/test-article"
             $skippedEntries[0].reason | Should -Be "AI model response could not be parsed as JSON"
@@ -521,9 +521,9 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{CANON
         }
     }
     
-    Context "Early File Removal Based on Canonical URL" {
+    Context "Early File Removal Based on External URL" {
         It "Should remove existing file early in processing before AI call" {
-            # Create an existing file with the same canonical URL
+            # Create an existing file with the same external URL
             $existingContent = @'
 ---
 title: "Old Title"
@@ -586,14 +586,14 @@ This is old content that should be replaced.
             $newFiles | Should -HaveCount 1
             $newFiles[0].Name | Should -Match "^2025-01-01-.*\.md$"
             
-            # Verify new file has correct canonical URL
+            # Verify new file has correct external URL
             $newContent = Get-Content $newFiles[0].FullName -Raw
-            $newContent | Should -Match 'external_url:\s*"?https://example\.com/test-article"?'
-            $newContent | Should -Match 'title:\s*"?New Updated Title"?'
+            $newContent | Should -Match 'external_url: https://example\.com/test-article'
+            $newContent | Should -Match 'title: New Updated Title'
         }
         
         It "Should remove existing file even if AI processing fails later" {
-            # Create an existing file with the same canonical URL
+            # Create an existing file with the same external URL
             $existingContent = @'
 ---
 title: "File That Will Be Removed"
@@ -644,12 +644,12 @@ This file should be removed even if AI processing fails.
             $newFiles | Should -HaveCount 0
             
             # Entry should be added to skipped entries
-            $skippedEntries = Get-Content $script:TestSkippedEntriesPath | ConvertFrom-Json
+            $skippedEntries = Get-SkippedEntries -SkippedEntriesPath $script:TestSkippedEntriesPath
             $skippedEntries | Should -HaveCount 1
             $skippedEntries[0].external_url | Should -Be "https://example.com/test-article"
         }
         
-        It "Should remove existing file with same canonical_url before creating new one" {
+        It "Should remove existing file with same external_url before creating new one" {
             # Mock network calls to simulate production behavior
             Mock Invoke-RestMethod {
                 if ($Uri -like "*api.openai.com*" -or $Uri -like "*api.azure.com*") {
@@ -667,7 +667,7 @@ This file should be removed even if AI processing fails.
                 throw "Unexpected REST call to: $Uri"
             }
             
-            # Create an existing file with the same canonical URL
+            # Create an existing file with the same external URL
             $existingContent = @'
 ---
 title: "Old Title"
@@ -713,13 +713,13 @@ This is old content that should be replaced.
             $newFiles | Should -HaveCount 1
             $newFiles[0].Name | Should -Match "^2025-01-01-.*\.md$"
             
-            # Verify new file has correct canonical URL
+            # Verify new file has correct external URL
             $newContent = Get-Content $newFiles[0].FullName -Raw
-            $newContent | Should -Match 'external_url:\s*"?https://example\.com/test-article"?'
-            $newContent | Should -Match 'title:\s*"?New Updated Title"?'
+            $newContent | Should -Match 'external_url: https://example\.com/test-article'
+            $newContent | Should -Match 'title: New Updated Title'
         }
         
-        It "Should handle multiple existing files but only remove the one with matching canonical_url" {
+        It "Should handle multiple existing files but only remove the one with matching external_url" {
             # Mock network calls to simulate production behavior
             Mock Invoke-RestMethod {
                 if ($Uri -like "*api.openai.com*" -or $Uri -like "*api.azure.com*") {
@@ -737,7 +737,7 @@ This is old content that should be replaced.
                 throw "Unexpected REST call to: $Uri"
             }
             
-            # Create multiple existing files with different canonical URLs
+            # Create multiple existing files with different external URLs
             $existingContent1 = @'
 ---
 title: "Different Article"
@@ -802,7 +802,7 @@ This is the target article that should be removed.
             $allFiles | Should -HaveCount 2
         }
         
-        It "Should handle malformed frontmatter gracefully when checking canonical_url" {
+        It "Should handle malformed frontmatter gracefully when checking external_url" {
             # Mock network calls to simulate production behavior
             Mock Invoke-RestMethod {
                 if ($Uri -like "*api.openai.com*" -or $Uri -like "*api.azure.com*") {
@@ -820,7 +820,7 @@ This is the target article that should be removed.
                 throw "Unexpected REST call to: $Uri"
             }
             
-            # Create file with malformed frontmatter but valid canonical_url line
+            # Create file with malformed frontmatter but valid external_url line
             $malformedContent = @'
 ---
 title: "Malformed File"
@@ -858,7 +858,7 @@ This file has malformed YAML but contains a different URL so should not be remov
             $allFiles | Should -HaveCount 2
         }
         
-        It "Should support both quoted and unquoted canonical_url formats" {
+        It "Should support both quoted and unquoted url formats" {
             # Mock network calls to simulate production behavior
             Mock Invoke-RestMethod {
                 if ($Uri -like "*api.openai.com*" -or $Uri -like "*api.azure.com*") {
@@ -876,7 +876,7 @@ This file has malformed YAML but contains a different URL so should not be remov
                 throw "Unexpected REST call to: $Uri"
             }
             
-            # Test with quoted canonical_url
+            # Test with quoted external_url
             $quotedContent = @'
 ---
 title: "Quoted URL Article"
@@ -887,7 +887,7 @@ section_names: ["ai"]
 tags: ["Quoted"]
 ---
 
-This has a quoted canonical URL.
+This has a quoted external URL.
 '@
             $quotedFile = Join-Path $script:TestOutputDir "2024-12-01-Quoted.md"
             Set-Content -Path $quotedFile -Value $quotedContent -Encoding UTF8
@@ -913,7 +913,7 @@ This has a quoted canonical URL.
             # Clean up for next test
             Get-ChildItem -Path $script:TestOutputDir -Filter "*.md" | Remove-Item -Force
             
-            # Test with unquoted canonical_url - create a new feed item for this test
+            # Test with unquoted external_url - create a new feed item for this test
             $unquotedContent = @'
 ---
 title: "Unquoted URL Article"
@@ -924,7 +924,7 @@ section_names: ["ai"]
 tags: ["Unquoted"]
 ---
 
-This has an unquoted canonical URL.
+This has an unquoted external URL.
 '@
             $unquotedFile = Join-Path $script:TestOutputDir "2024-12-01-Unquoted.md"
             Set-Content -Path $unquotedFile -Value $unquotedContent -Encoding UTF8
@@ -1047,7 +1047,7 @@ This has an unquoted canonical URL.
             $invalidContent = @'
 ---
 title: "File with Tricky Content"
-canonical_url
+external_url
 malformed content here that might cause regex issues
 ---
 Content
@@ -1090,7 +1090,7 @@ Content
         }
         
         It "Should use ShouldProcess correctly for file removal" {
-            # Create a real file with matching canonical URL
+            # Create a real file with matching external URL
             $existingContent = @'
 ---
 title: "File To Remove"
@@ -1189,7 +1189,7 @@ Content
             $markdownFiles | Should -HaveCount 1
 
             # Check that processed entries was updated
-            $processedEntries = Get-Content $script:TestProcessedEntriesPath | ConvertFrom-Json
+            $processedEntries = Get-ProcessedEntries -ProcessedEntriesPath $script:TestProcessedEntriesPath
             $processedEntries | Should -HaveCount 1
             $processedEntries[0].external_url | Should -Be "https://example.com/short-article"
         }
@@ -1281,7 +1281,7 @@ Content
             $markdownFiles | Should -HaveCount 1
 
             # Check that processed entries was updated
-            $processedEntries = Get-Content $script:TestProcessedEntriesPath | ConvertFrom-Json
+            $processedEntries = Get-ProcessedEntries -ProcessedEntriesPath $script:TestProcessedEntriesPath
             $processedEntries | Should -HaveCount 1
             $processedEntries[0].external_url | Should -Be "https://www.reddit.com/r/test/comments/123456/reddit_post_about_ai"
         }
@@ -1320,7 +1320,7 @@ Content
 
             # Check that processed entries was NOT updated (error handling)
             if (Test-Path $script:TestProcessedEntriesPath) {
-                $processedEntries = Get-Content $script:TestProcessedEntriesPath | ConvertFrom-Json
+                $processedEntries = Get-ProcessedEntries -ProcessedEntriesPath $script:TestProcessedEntriesPath
                 $processedEntries | Should -HaveCount 0
             }
         }
@@ -1364,7 +1364,7 @@ Content
             ($result | Measure-Object).Count | Should -Be 1
             
             # Should not add anything to skipped entries
-            $skippedEntries = Get-Content $script:TestSkippedEntriesPath | ConvertFrom-Json
+            $skippedEntries = Get-SkippedEntries -SkippedEntriesPath $script:TestSkippedEntriesPath
             $skippedEntries | Should -HaveCount 0
         }
     }

@@ -367,13 +367,13 @@ public class SidebarTagCloudTests : TestContext
     /// </summary>
     private static List<TagCloudItem> CreateTestTagCloud()
     {
-        return new List<TagCloudItem>
-        {
+        return
+        [
             new TagCloudItem { Tag = "AI", Count = 150, Size = TagSize.Large },
             new TagCloudItem { Tag = "Azure", Count = 120, Size = TagSize.Large },
             new TagCloudItem { Tag = "GitHub Copilot", Count = 100, Size = TagSize.Medium },
             new TagCloudItem { Tag = ".NET", Count = 80, Size = TagSize.Medium },
             new TagCloudItem { Tag = "Security", Count = 50, Size = TagSize.Small }
-        };
+        ];
     }
 }

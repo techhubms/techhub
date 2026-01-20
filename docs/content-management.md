@@ -285,7 +285,7 @@ Each RSS item creates a markdown file with:
 
 - AI-generated excerpt and summary
 - Proper categorization and tagging
-- External URL to original source (stored in frontmatter `canonical_url` field, mapped to `externalUrl` in DTOs)
+- External URL to original source (stored in frontmatter `external_url` field)
 - Viewing mode varies by collection:
   - Videos and roundups: `"internal"` (content opens on site)
   - All other collections: `"external"` (links open in new tab)

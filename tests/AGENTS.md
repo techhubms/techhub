@@ -38,7 +38,7 @@ You are a testing specialist for the Tech Hub .NET project. This directory conta
 Run                 # Run all tests, then keep servers running
 Run -WithoutTests   # Skip all tests, start servers (for debugging)
 Run -Rebuild        # Clean rebuild only, then exit (no tests, no servers)
-Run -TestProject Web.Tests  # Run only Web component tests
+Run -OnlyTests -TestProject Web.Tests  # Run only Web component tests
 ```
 
 **⚠️ CRITICAL E2E TEST WARNING**:
@@ -56,7 +56,7 @@ These apply to ALL tests across all layers:
 - Write regression test FIRST for bugs, then fix it
 - Test real implementation - NEVER duplicate production logic in tests
 - Mock only external dependencies (file system, HTTP clients, external APIs)
-- Run tests after code changes: `Run` or `Run -TestProject <project>` to scope tests
+- Run tests after code changes: `Run -OnlyTests` or `Run -OnlyTests -TestProject <project>` to scope tests
 - Use `async Task` for async tests - NEVER `async void`
 - Test public APIs - Don't test implementation details
 - Dispose resources in test cleanup

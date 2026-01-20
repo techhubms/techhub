@@ -8,18 +8,12 @@ namespace TechHub.Infrastructure.Services;
 /// <summary>
 /// Service for generating tag clouds with quantile-based sizing and scoping logic
 /// </summary>
-public class TagCloudService : ITagCloudService
+public class TagCloudService(
+    IContentRepository contentRepository,
+    IOptions<FilteringOptions> filteringOptions) : ITagCloudService
 {
-    private readonly IContentRepository _contentRepository;
-    private readonly FilteringOptions _filteringOptions;
-
-    public TagCloudService(
-        IContentRepository contentRepository,
-        IOptions<FilteringOptions> filteringOptions)
-    {
-        _contentRepository = contentRepository ?? throw new ArgumentNullException(nameof(contentRepository));
-        _filteringOptions = filteringOptions?.Value ?? throw new ArgumentNullException(nameof(filteringOptions));
-    }
+    private readonly IContentRepository _contentRepository = contentRepository ?? throw new ArgumentNullException(nameof(contentRepository));
+    private readonly FilteringOptions _filteringOptions = filteringOptions?.Value ?? throw new ArgumentNullException(nameof(filteringOptions));
 
     /// <summary>
     /// Generate tag cloud for the specified scope
@@ -67,7 +61,7 @@ public class TagCloudService : ITagCloudService
 
         if (tagsToInclude.Count == 0)
         {
-            return Array.Empty<TagCloudItem>();
+            return [];
         }
 
         // Apply quantile-based sizing
@@ -135,14 +129,14 @@ public class TagCloudService : ITagCloudService
     {
         if (string.IsNullOrWhiteSpace(collectionName) || string.IsNullOrWhiteSpace(contentItemId))
         {
-            return Array.Empty<TagCloudItem>();
+            return [];
         }
 
         var item = await _contentRepository.GetBySlugAsync(collectionName, contentItemId, cancellationToken);
 
         if (item == null)
         {
-            return Array.Empty<TagCloudItem>();
+            return [];
         }
 
         // Return all tags for the content item with Medium size (no quantile sizing for single item)
@@ -171,7 +165,7 @@ public class TagCloudService : ITagCloudService
                                          !string.IsNullOrWhiteSpace(request.SectionName) =>
                 await GetCollectionItemsAsync(request.SectionName, request.CollectionName, cancellationToken),
 
-            _ => Array.Empty<ContentItem>()
+            _ => []
         };
     }
 
@@ -219,7 +213,7 @@ public class TagCloudService : ITagCloudService
     {
         if (sortedTags.Count == 0)
         {
-            return Array.Empty<TagCloudItem>();
+            return [];
         }
 
         // Get quantile percentiles from configuration

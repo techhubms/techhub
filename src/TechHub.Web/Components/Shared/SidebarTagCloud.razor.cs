@@ -112,7 +112,7 @@ public partial class SidebarTagCloud : ComponentBase
     public int LastDays { get; set; } = 90;
 
     private IReadOnlyList<TagCloudItem>? tags;
-    private HashSet<string> selectedTagsInternal = new();
+    private HashSet<string> selectedTagsInternal = [];
     private bool isLoading = true;
     private bool hasError = false;
     private TagCloudScope? previousScope;
@@ -242,6 +242,7 @@ public partial class SidebarTagCloud : ComponentBase
         var normalizedTag = tag.Trim().ToLowerInvariant();
 
         // Toggle selection
+#pragma warning disable CA1868 // Unnecessary call to 'Contains(item)'
         if (selectedTagsInternal.Contains(normalizedTag))
         {
             selectedTagsInternal.Remove(normalizedTag);
@@ -252,6 +253,7 @@ public partial class SidebarTagCloud : ComponentBase
             selectedTagsInternal.Add(normalizedTag);
             Logger.LogDebug("Selected tag: {Tag}", normalizedTag);
         }
+#pragma warning restore CA1868 // Unnecessary call to 'Contains(item)'
 
         // Update URL with new tag selection
         UpdateUrlWithTags();

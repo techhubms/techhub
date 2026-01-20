@@ -117,7 +117,7 @@ author: "John Doe"
 date: 2026-01-07
 categories: [ai, github-copilot]
 tags: [machine-learning, productivity, vscode]
-canonical_url: "https://example.com/original-article"
+external_url: "https://example.com/original-article"
 viewing_mode: "external"
 video_id: "dQw4w9WgXcQ"
 ---
@@ -140,7 +140,7 @@ The rest of the markdown content...
 | `date`                      | `DateEpoch`      | `long`                  | Converted to Unix timestamp in Europe/Brussels timezone                                 |
 | `categories`                | `SectionNames`   | `IReadOnlyList<string>` | Frontmatter contains Section Titles ("AI"), mapped to lowercase section names ("ai")    |
 | `tags`                      | `Tags`           | `IReadOnlyList<string>` | Normalized to lowercase, hyphen-separated                                               |
-| `canonical_url`             | `ExternalUrl`    | `string?`               | Original source URL                                                                     |
+| `external_url`              | `ExternalUrl`    | `string?`               | Original source URL                                                                     |
 | `viewing_mode`              | `ViewingMode`    | `string`                | "internal" or "external" (default: "external")                                          |
 | `video_id`                  | `VideoId`        | `string?`               | YouTube video identifier                                                                |
 | Filename                    | `Slug`           | `string`                | `2025-01-15-article.md` → `2025-01-15-article`                                          |
