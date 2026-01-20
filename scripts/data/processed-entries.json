@@ -23764,5 +23764,17 @@
     "canonical_url": "https://www.microsoft.com/en-us/startups/blog/how-ai-powered-collaborations-are-transforming-healthcare-and-life-sciences/",
     "timestamp": "2026-01-20 16:07:14 +00:00",
     "reason": "Succesfully added: Assigned 'AI' category because the core focus is the application of artificial intelligence solutions, including discussions of AI startups, real-world AI use cases, and Microsoft Azure AI-powered platforms (AI rules 1, 4, and 5). Assigned 'Azure' category as the content explicitly describes the Azure platform's role in deploying and scaling these AI solutions across multiple healthcare collaborations (Azure rules 1 and 4). Other relevant categories (such as Coding, DevOps, ML, Security) were not assigned as the article does not delve into programming, DevOps pipelines, custom ML model building, or security architectures. The emphasis is on high-level AI infrastructure, collaboration, and solution deployment, directly matching the inclusion rules for AI and Azure."
+  },
+  {
+    "timestamp": "2026-01-20 17:08:55 +00:00",
+    "collection": "news",
+    "canonical_url": "https://github.blog/developer-skills/application-development/context-windows-plan-agent-and-tdd-what-i-learned-building-a-countdown-app-with-github-copilot/",
+    "reason": "Succesfully added: Assigned 'AI' category because the article focuses on practical usage of GitHub Copilot, Copilot Plan agent, and custom AI agents (AI inclusion rule 2, 3, 4, 5). Assigned 'GitHub Copilot' because the entire experience revolves around Copilot features, integrations, and best practices (GitHub Copilot inclusion rule 1, 2, 4). Assigned 'Coding' since the post details development workflows, code architecture, TDD, and tool usage (Coding inclusion rules 1, 2, 4, 5). Did NOT assign 'Azure', 'DevOps', 'ML', or 'Security' as the content's technical focus is not on cloud, deployment, data science, or security but on AI-assisted coding and app development."
+  },
+  {
+    "timestamp": "2026-01-20 17:09:23 +00:00",
+    "collection": "blogs",
+    "canonical_url": "https://devclass.com/2026/01/20/microsoft-updates-react-native-for-windows-developers-ask-why-not-use-maui/",
+    "reason": "Succesfully added: Assigned the 'Coding' category because the article focuses on the technical capabilities, architecture, and usage of Microsoft's React Native for Windows framework (see Coding rules 1, 2, and 4), as well as the comparison to MAUI, which is a .NET development framework. The primary content is on frameworks, debugging tools, component architecture, and cross-platform development with Microsoft technologies—all under development rather than general business productivity. AI, Azure, DevOps, ML, and Security categories are not included as those topics are not covered. The content is technical, detailed, and well within the inclusive scope without triggering any generic exclusion rules."
   }
 ]
