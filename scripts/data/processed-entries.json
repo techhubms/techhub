@@ -23746,5 +23746,11 @@
     "timestamp": "2026-01-20 08:04:38 +00:00",
     "reason": "Succesfully added: Assigned the AI category because the content is focused on building and managing AI workflows, prompt agents, and multi-agent systems with Microsoft Foundry and Azure AI Foundry (AI inclusion rules 1 and 4). The Azure category is included due to the central role of Azure AI Foundry in the tools and workflow (Azure rule 1). Coding, DevOps, ML, and Security categories are not directly applicable because, while developer tools and code file access are mentioned, there are no explicit details on programming languages, development frameworks, CI/CD, data science/analytics engineering, or security practices. The content clearly meets quality and technical thresholds, and no generic exclusion rules apply.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/microsoft-foundry-for-vs-code-january-2026-update/ba-p/4486132"
+  },
+  {
+    "timestamp": "2026-01-20 11:05:37 +00:00",
+    "canonical_url": "https://andrewlock.net/making-foreach-on-an-ienumerable-allocation-free-using-reflection-and-dynamic-methods/",
+    "collection": "blogs",
+    "reason": "Succesfully added: The content centers on advanced C# and .NET performance optimizations regarding heap allocation during foreach iteration on IEnumerable<T>. It thoroughly discusses enumerator boxing, compiler lowering, Reflection.Emit, and DynamicMethod approaches, all focused on low-level development in the Microsoft stack. Assigned 'Coding' category (Coding rule 1: Microsoft programming language focus, and Coding rule 4: architecture and performance patterns in .NET/C#). Not assigned Azure, DevOps, AI, ML, Security, or GitHub Copilot—as the post is not about those technologies or services. Tags were selected to highlight technical terms, frameworks, design techniques, and runtime versions."
   }
 ]
