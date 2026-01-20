@@ -23740,5 +23740,11 @@
     "timestamp": "2026-01-20 02:42:42 +00:00",
     "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories because the content specifically centers on GitHub Copilot app modernization and its AI-powered features for code upgrades (AI rule 2 and GitHub Copilot rule 1). Included 'Coding' as it deals with upgrading codebases, managing dependencies, and using automated refactoring tools in the development flow (Coding rules 3 and 4). There is no substantive Microsoft Azure or ML/data science topic demonstrated, so those categories do not apply. DevOps is not directly addressed (no CI/CD, operational patterns, or DevOps methodologies here). Security is also not primary, though security checks are referenced, as they are not the main focus.",
     "collection": "community"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-01-20 08:04:38 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the content is focused on building and managing AI workflows, prompt agents, and multi-agent systems with Microsoft Foundry and Azure AI Foundry (AI inclusion rules 1 and 4). The Azure category is included due to the central role of Azure AI Foundry in the tools and workflow (Azure rule 1). Coding, DevOps, ML, and Security categories are not directly applicable because, while developer tools and code file access are mentioned, there are no explicit details on programming languages, development frameworks, CI/CD, data science/analytics engineering, or security practices. The content clearly meets quality and technical thresholds, and no generic exclusion rules apply.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/microsoft-foundry-for-vs-code-january-2026-update/ba-p/4486132"
   }
 ]
