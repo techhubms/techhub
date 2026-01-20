@@ -31,10 +31,17 @@ public class ContentItem
     public required long DateEpoch { get; init; }
 
     /// <summary>
-    /// Collection name derived from directory path
-    /// (e.g., \"videos\" for _videos/, \"ghc-features\" for _videos/ghc-features/)
+    /// Collection name derived from parent directory
+    /// (e.g., \"videos\" for all items in _videos/, \"news\" for all items in _news/)
     /// </summary>
     public required string CollectionName { get; init; }
+
+    /// <summary>
+    /// Optional subcollection name from subfolder organization
+    /// (e.g., \"vscode-updates\" for _videos/vscode-updates/, null for _videos/ root files)
+    /// Used by custom pages to filter specific video series or content groupings
+    /// </summary>
+    public string? SubcollectionName { get; init; }
 
     /// <summary>
     /// Optional RSS feed name this content was sourced from (e.g., "Microsoft Tech Community", "Azure Updates")
@@ -134,7 +141,11 @@ public class ContentItem
 
         // Ensure section URL starts with slash
         var normalizedSectionUrl = sectionUrl.StartsWith('/') ? sectionUrl : $"/{sectionUrl}";
-        return $"{normalizedSectionUrl}/{CollectionName}/{Slug}";
+
+        // If item has a subcollection, use that for the URL path (e.g., /github-copilot/vscode-updates/slug)
+        // Otherwise use the collection name (e.g., /github-copilot/videos/slug)
+        var pathSegment = SubcollectionName ?? CollectionName;
+        return $"{normalizedSectionUrl}/{pathSegment}/{Slug}";
     }
 
     /// <summary>

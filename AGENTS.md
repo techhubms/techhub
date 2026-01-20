@@ -579,7 +579,20 @@ See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-
 
 ### Starting the Website
 
-**ALWAYS use the Run function** (automatically loaded in PowerShell):
+**ALWAYS use the Run function directly** (automatically loaded in PowerShell):
+
+**🚨 CRITICAL**: Just type `Run` commands directly - DO NOT use `pwsh -File` or `pwsh -Command`:
+
+```powershell
+# ✅ CORRECT - Call function directly
+Run -OnlyTests
+
+# 🚫 WRONG - Don't try to execute as a file
+pwsh -File scripts/TechHubRunner.psm1 -Command 'Run -OnlyTests'
+pwsh -Command 'Run -OnlyTests'
+```
+
+**Standard Run Commands**:
 
 ```powershell
 # Run tests only - stops servers after successful tests (CI/CD, validation)

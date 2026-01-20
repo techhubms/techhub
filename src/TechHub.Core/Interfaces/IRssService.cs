@@ -20,7 +20,7 @@ public interface IRssService
     /// Generate RSS feed for a specific collection
     /// </summary>
     Task<RssChannelDto> GenerateCollectionFeedAsync(
-        string collection,
+        string collectionName,
         IReadOnlyList<ContentItem> items,
         CancellationToken cancellationToken = default);
 

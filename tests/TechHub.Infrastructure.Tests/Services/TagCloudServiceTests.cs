@@ -95,14 +95,14 @@ public class TagCloudServiceTests : IDisposable
         _service = new TagCloudService(_repository, Options.Create(_filteringOptions));
     }
 
-    private void CreateTestContent(string slug, string title, string[] tags, string section, string collection, DateTimeOffset date)
+    private void CreateTestContent(string slug, string title, string[] tags, string sectionName, string collectionName, DateTimeOffset date)
     {
         var content = $@"---
 title: {title}
 slug: {slug}
 description: Test content
 section_names:
-  - {section}
+  - {sectionName}
 tags:
 {string.Join("\n", tags.Select(t => $"  - {t}"))}
 date: {date:yyyy-MM-dd}
@@ -111,7 +111,7 @@ date: {date:yyyy-MM-dd}
 Test content body.
 ";
 
-        var collectionPath = Path.Combine(_tempDirectory, "collections", collection);
+        var collectionPath = Path.Combine(_tempDirectory, "collections", collectionName);
         File.WriteAllText(Path.Combine(collectionPath, $"{date:yyyy-MM-dd}-{slug}.md"), content);
     }
 

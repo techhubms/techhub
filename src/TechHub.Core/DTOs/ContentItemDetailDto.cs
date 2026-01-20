@@ -14,6 +14,7 @@ public record ContentItemDetailDto
     public required long DateEpoch { get; init; }
     public required string DateIso { get; init; }
     public required string CollectionName { get; init; }
+    public string? SubcollectionName { get; init; }
     public string? FeedName { get; init; }
     public required IReadOnlyList<string> SectionNames { get; init; }
     public required string PrimarySection { get; init; }

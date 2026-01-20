@@ -286,5 +286,27 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         item.SectionNames.Should().NotBeEmpty();
         item.Tags.Should().NotBeEmpty();
         item.Excerpt.Should().NotBeNullOrEmpty();
-        item.Url.Should().NotBeNullOrEmpty();    }
+        item.Url.Should().NotBeNullOrEmpty();
+    }
+
+    [Fact]
+    public async Task GetContent_MapsSubcollectionNameAndFeedName()
+    {
+        // Arrange - test video has SubcollectionName="vscode-updates" and FeedName="Test Feed"
+
+        // Act
+        var response = await _client.GetAsync("/api/content?collectionName=videos");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        items.Should().NotBeNull();
+        items!.Should().HaveCount(1); // Only 1 video in test data
+
+        var videoItem = items[0];
+        videoItem.CollectionName.Should().Be("videos");
+        videoItem.SubcollectionName.Should().Be("vscode-updates", "SubcollectionName should be mapped from ContentItem");
+        videoItem.FeedName.Should().Be("Test Feed", "FeedName should be mapped from ContentItem");
+    }
 }

@@ -253,11 +253,11 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     /// Helper method for initial data loading.
     /// </summary>
     private async Task<List<ContentItem>> LoadCollectionItemsAsync(
-        string collection,
+        string collectionName,
         CancellationToken cancellationToken)
     {
         // Normalize collection name (add _ prefix if missing)
-        var normalizedCollection = collection.StartsWith('_') ? collection : $"_{collection}";
+        var normalizedCollection = collectionName.StartsWith('_') ? collectionName : $"_{collectionName}";
 
         var collectionPath = Path.Combine(_basePath, normalizedCollection);
 
@@ -285,7 +285,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     /// </summary>
     private async Task<ContentItem?> LoadContentItemAsync(
         string filePath,
-        string collection,
+        string collectionName,
         CancellationToken cancellationToken)
     {
         var fileContent = await File.ReadAllTextAsync(filePath, cancellationToken);
@@ -320,11 +320,12 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         var viewingMode = _frontMatterParser.GetValue<string>(frontMatter, "viewing_mode", "external");
         var feedName = _frontMatterParser.GetValue<string>(frontMatter, "feed_name", string.Empty);
 
-        // Derive collection from file path:
-        // - collections/_videos/file.md → "videos"
-        // - collections/_videos/ghc-features/file.md → "ghc-features"
-        // - collections/_news/file.md → "news"
-        var derivedCollection = DeriveCollectionFromPath(filePath, collection);
+        // Derive subcollection from file path:
+        // - collections/_videos/file.md → subcollection: null
+        // - collections/_videos/vscode-updates/file.md → subcollection: "vscode-updates"
+        // - collections/_news/file.md → subcollection: null
+        var subcollectionName = DeriveSubcollectionFromPath(filePath);
+        var derivedCollection = collectionName.TrimStart('_');
 
         // Parse sidebar-info if present (dynamic JSON data for custom sidebars)
         JsonElement? sidebarInfo = null;
@@ -362,6 +363,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             Author = author,
             DateEpoch = date.ToUnixTimeSeconds(),
             CollectionName = derivedCollection,
+            SubcollectionName = subcollectionName,
             FeedName = feedName,
             SectionNames = sectionNames,
             Tags = tags,
@@ -389,7 +391,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         {
             throw new InvalidOperationException(
                 $"Failed to render markdown for file: {filePath}. " +
-                $"Slug: '{fileName}', Collection: '{collection}', Sections: [{string.Join(", ", sectionNames)}]",
+                $"Slug: '{fileName}', Collection: '{collectionName}', Sections: [{string.Join(", ", sectionNames)}]",
                 ex);
         }
 
@@ -401,6 +403,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             Author = author,
             DateEpoch = date.ToUnixTimeSeconds(),
             CollectionName = derivedCollection,
+            SubcollectionName = subcollectionName,
             FeedName = feedName,
             SectionNames = sectionNames,
             Tags = tags,
@@ -477,12 +480,12 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     }
 
     /// <summary>
-    /// Derive collection name from file path
-    /// - collections/_videos/file.md → "videos"
-    /// - collections/_videos/ghc-features/file.md → "ghc-features"
-    /// - collections/_news/file.md → "news"
+    /// Derive subcollection name from file path based on subfolder structure
+    /// - collections/_videos/file.md → null
+    /// - collections/_videos/vscode-updates/file.md → "vscode-updates"
+    /// - collections/_news/file.md → null
     /// </summary>
-    private string DeriveCollectionFromPath(string filePath, string parentCollection)
+    private string? DeriveSubcollectionFromPath(string filePath)
     {
         // Normalize path separators
         var normalizedPath = filePath.Replace('\\', '/');
@@ -490,27 +493,19 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         // Get the relative path from the base path
         var relativePath = Path.GetRelativePath(_basePath, normalizedPath).Replace('\\', '/');
 
-        // Split into segments: ["_videos", "ghc-features", "file.md"] or ["_news", "file.md"]
+        // Split into segments: ["_videos", "vscode-updates", "file.md"] or ["_news", "file.md"]
         var segments = relativePath.Split('/', StringSplitOptions.RemoveEmptyEntries);
 
-        if (segments.Length < 2)
-        {
-            // Shouldn't happen, but fallback to parent collection
-            return parentCollection.TrimStart('_');
-        }
-
-        // If the file is in a subdirectory (segments.Length > 2), use subdirectory name as collection
-        // Otherwise use parent directory name
+        // If the file is in a subdirectory (segments.Length > 2), return subdirectory name as subcollection
+        // Otherwise return null
         if (segments.Length > 2)
         {
-            // Use the subdirectory name (e.g., "ghc-features" from ["_videos", "ghc-features", "file.md"])
+            // Use the subdirectory name (e.g., "vscode-updates" from ["_videos", "vscode-updates", "file.md"])
             return segments[1];
         }
-        else
-        {
-            // Use the parent directory name (e.g., "videos" from ["_videos", "file.md"])
-            return segments[0].TrimStart('_');
-        }
+
+        // File is in root of collection directory
+        return null;
     }
 
     /// <summary>

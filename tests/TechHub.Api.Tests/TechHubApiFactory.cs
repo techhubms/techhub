@@ -165,6 +165,8 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
                 Description = "Copilot video description",
                 Author = "Bob Johnson",
                 DateEpoch = 1705449600, CollectionName = "videos",
+                SubcollectionName = "vscode-updates",
+                FeedName = "Test Feed",
                 SectionNames = ["github-copilot"],
                 Tags = ["github copilot", "videos", "vs code", "productivity"],
                 RenderedHtml = "<h1>GitHub Copilot Video 1</h1><p>Copilot video content...</p>",

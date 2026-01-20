@@ -182,18 +182,18 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// Pass null for section to get all items in the collection regardless of section.
     /// </summary>
     public virtual async Task<IEnumerable<ContentItemDto>?> GetContentAsync(
-        string? section,
-        string collection,
+        string? sectionName,
+        string collectionName,
         CancellationToken cancellationToken = default)
     {
         try
         {
             _logger.LogInformation("Fetching content for section: {Section}, collection: {Collection}",
-                section ?? "(all)", collection);
+                sectionName ?? "(all)", collectionName);
 
-            var url = string.IsNullOrWhiteSpace(section)
-                ? $"/api/content?collectionName={Uri.EscapeDataString(collection)}"
-                : $"/api/content?sectionName={Uri.EscapeDataString(section)}&collectionName={Uri.EscapeDataString(collection)}";
+            var url = string.IsNullOrWhiteSpace(sectionName)
+                ? $"/api/content?collectionName={Uri.EscapeDataString(collectionName)}"
+                : $"/api/content?sectionName={Uri.EscapeDataString(sectionName)}&collectionName={Uri.EscapeDataString(collectionName)}";
 
             var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItemDto>>(
                 url,
@@ -205,7 +205,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to fetch content for section {Section}, collection {Collection}",
-                section ?? "(all)", collection);
+                sectionName ?? "(all)", collectionName);
             throw;
         }
     }
@@ -215,24 +215,24 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// </summary>
     public virtual async Task<ContentItemDetailDto?> GetContentDetailAsync(
         string sectionName,
-        string collection,
+        string collectionName,
         string itemId,
         CancellationToken cancellationToken = default)
     {
         try
         {
             _logger.LogInformation("Fetching content detail: {Section}/{Collection}/{ItemId}",
-                sectionName, collection, itemId);
+                sectionName, collectionName, itemId);
 
             var response = await _httpClient.GetAsync(
-                $"/api/content/{sectionName}/{collection}/{itemId}",
+                $"/api/content/{sectionName}/{collectionName}/{itemId}",
                 cancellationToken);
 
             // Return null for 404 (not found is a valid state)
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
                 _logger.LogWarning("Content not found: {Section}/{Collection}/{ItemId}",
-                    sectionName, collection, itemId);
+                    sectionName, collectionName, itemId);
                 return null;
             }
 
@@ -243,7 +243,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to fetch content detail for {Section}/{Collection}/{ItemId}",
-                sectionName, collection, itemId);
+                sectionName, collectionName, itemId);
             throw;
         }
     }

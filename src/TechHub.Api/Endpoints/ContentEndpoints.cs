@@ -221,6 +221,8 @@ internal static class ContentEndpoints
             DateEpoch = item.DateEpoch,
             DateIso = item.DateIso,
             CollectionName = item.CollectionName,
+            SubcollectionName = item.SubcollectionName,
+            FeedName = item.FeedName,
             SectionNames = item.SectionNames,
             PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName),
             Tags = item.Tags,

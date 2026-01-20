@@ -8,7 +8,7 @@
 @inject ErrorService ErrorService
 @inject ILogger<GitHubCopilotVSCodeUpdates> Logger
 
-<PageTitle>@(selectedVideoDetail?.Title ?? pageData?.Title ?? "VS Code Updates") - Tech Hub</PageTitle>
+<PageTitle>@GetPageTitle() - Tech Hub</PageTitle>
 
 @if (pageData != null)
 {
@@ -102,7 +102,7 @@
             {
                 var allVideos = await ApiClient.GetContentAsync(null, "videos");
                 videoItems = (allVideos ?? Enumerable.Empty<ContentItemDto>())
-                .Where(v => v.CollectionName == pageData.VideoCollection)
+                .Where(v => v.SubcollectionName == pageData.VideoCollection)
                 .OrderByDescending(v => v.DateEpoch)
                 .ToList();
 
@@ -141,5 +141,17 @@
     {
         var dateTime = DateTimeOffset.FromUnixTimeSeconds(epochSeconds);
         return dateTime.ToString("MMMM d, yyyy");
+    }
+
+    private string GetPageTitle()
+    {
+        // If a specific video is selected, use its title
+        if (selectedVideoDetail != null)
+        {
+            return selectedVideoDetail.Title;
+        }
+
+        // Otherwise use the page data title
+        return pageData?.Title ?? "Visual Studio Code Updates";
     }
 }

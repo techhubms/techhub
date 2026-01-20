@@ -49,11 +49,11 @@ public class RssService : IRssService
 
     /// <inheritdoc/>
     public Task<RssChannelDto> GenerateCollectionFeedAsync(
-        string collection,
+        string collectionName,
         IReadOnlyList<ContentItem> items,
         CancellationToken cancellationToken = default)
     {
-        ArgumentException.ThrowIfNullOrWhiteSpace(collection);
+        ArgumentException.ThrowIfNullOrWhiteSpace(collectionName);
         ArgumentNullException.ThrowIfNull(items);
 
         var sortedItems = items
@@ -65,9 +65,9 @@ public class RssService : IRssService
 
         var channel = new RssChannelDto
         {
-            Title = $"{SiteTitle} - {FormatCollectionTitle(collection)}",
-            Description = $"Latest {collection} from {SiteTitle}",
-            Link = $"{SiteUrl}/all/{collection}",
+            Title = $"{SiteTitle} - {FormatCollectionTitle(collectionName)}",
+            Description = $"Latest {collectionName} from {SiteTitle}",
+            Link = $"{SiteUrl}/all/{collectionName}",
             Language = Language,
             LastBuildDate = sortedItems.FirstOrDefault() != null
                 ? DateTimeOffset.FromUnixTimeSeconds(sortedItems.First().DateEpoch)
@@ -171,16 +171,16 @@ public class RssService : IRssService
         };
     }
 
-    private static string FormatCollectionTitle(string collection)
+    private static string FormatCollectionTitle(string collectionName)
     {
-        return collection switch
+        return collectionName switch
         {
             "news" => "News",
             "videos" => "Videos",
             "community" => "Community",
             "blogs" => "Blogs",
             "roundups" => "Roundups",
-            _ => collection.ToUpperInvariant()
+            _ => collectionName.ToUpperInvariant()
         };
     }
 }

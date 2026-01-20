@@ -1,4 +1,4 @@
-@page "/{sectionName}/{collection}/{itemId}"
+@page "/{sectionName}/{collectionName}/{itemId}"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
 @using TechHub.Web.Components.Shared
@@ -10,7 +10,7 @@
 
 <HeadContent>
     <link rel="canonical"
-        href="@($"https://tech.hub.ms/{SectionName.ToLowerInvariant()}/{Collection.ToLowerInvariant()}/{ItemId.ToLowerInvariant()}")" />
+        href="@($"https://tech.hub.ms/{SectionName.ToLowerInvariant()}/{CollectionName.ToLowerInvariant()}/{ItemId.ToLowerInvariant()}")" />
     <link rel="alternate" type="application/rss+xml" title="Tech Hub - @GetSectionDisplayName(SectionName) - RSS Feed"
         href="@($"/{SectionName}/feed.xml")" />
 </HeadContent>
@@ -23,7 +23,7 @@
         {
             var navigationUrl = GetPrimarySectionUrl();
             @* Tag cloud for this content item - navigate to primary section with tag filter *@
-            <SidebarTagCloud Scope="TagCloudScope.Content" SectionName="@SectionName" CollectionName="@Collection"
+            <SidebarTagCloud Scope="TagCloudScope.Content" SectionName="@SectionName" CollectionName="@CollectionName"
                 ContentItemId="@ItemId" Title="Tags" NavigationMode="TagCloudNavigationMode.Navigate"
                 NavigationBaseUrl="@navigationUrl" />
             <SidebarToc HtmlContent="@item.RenderedHtml" Title="Table of Contents" />
@@ -48,7 +48,7 @@
     public string SectionName { get; set; } = null!;
 
     [Parameter]
-    public string Collection { get; set; } = null!;
+    public string CollectionName { get; set; } = null!;
 
     [Parameter]
     public string ItemId { get; set; } = null!;
@@ -70,7 +70,7 @@
 
     protected override async Task OnParametersSetAsync()
     {
-        if (!string.IsNullOrEmpty(SectionName) && !string.IsNullOrEmpty(Collection) && !string.IsNullOrEmpty(ItemId))
+        if (!string.IsNullOrEmpty(SectionName) && !string.IsNullOrEmpty(CollectionName) && !string.IsNullOrEmpty(ItemId))
         {
             await LoadItem();
         }
@@ -80,7 +80,7 @@
     {
         try
         {
-            item = await ApiClient.GetContentDetailAsync(SectionName.ToLowerInvariant(), Collection.ToLowerInvariant(),
+            item = await ApiClient.GetContentDetailAsync(SectionName.ToLowerInvariant(), CollectionName.ToLowerInvariant(),
             ItemId.ToLowerInvariant());
 
             if (item == null)
