@@ -11433,5 +11433,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=xY843hsozGo",
     "collection": "videos",
     "reason": "No categories found: No categories were assigned because the content does not include sufficient evidence that Microsoft technologies are central or comprise at least 40% of the substantive content. The input focuses on industrial AI and data solutions in manufacturing, featuring Cognite, but does not reference any specific Microsoft AI platform, Azure services, development tools, or coding/deployment practices. Without a detailed description, script, or technical breakdown showing Microsoft technology as central to the solution architecture—as required by Multi-Platform Content Threshold and Category Inclusion Rules—this is excluded. Furthermore, the content appears to be an overview about digital transformation and AI in manufacturing, and there are no technical details indicating developer-oriented implementation with Microsoft technology."
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-01-20 22:03:58 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=VZrGAUkraE0",
+    "reason": "No categories found: All core content fields such as 'content' are missing (null), providing only a brief description, title, and tags. Without concrete technical details, substantive knowledge, or main body content to review, none of the inclusion rules can be reliably triggered. According to workflow chapter 2 and 3, if there is no meaningful content to evaluate, no categories can be assigned. This is a critical exclusion scenario."
   }
 ]
