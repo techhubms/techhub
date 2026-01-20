@@ -1,0 +1,21 @@
+{
+  "Link": "https://www.youtube.com/watch?v=L9UUCnnTQaM",
+  "EnhancedContent": null,
+  "Description": "Join us for Open Source Friday as we welcome Nathan Brake, Senior Machine Learning Engineer at Mozilla.ai and creator of the any-llm library!\n\nany-llm lets you communicate with any LLM provider through one unified interface. Switch between OpenAI, Anthropic, Mistral, Ollama, and more without changing your code.\n\nNathan is passionate about empowering the AI community with choice, whether it’s your LLM, provider, guardrails, or agentic framework. With any-llm, he’s making it easier to switch models seamlessly and helping push forward the future of local and open-source LLMs.\n\nDon’t forget to like, subscribe, and join the discussion in the chat!\n\n#OpenSourceFriday #anyllm #Mozilla #AICommunity #OpenSource #LLM",
+  "FeedLevelAuthor": "GitHub",
+  "OutputDir": "_videos",
+  "PubDate": "2026-01-20T17:36:11+00:00",
+  "ProcessedDate": "2026-01-20 18:04:33",
+  "Tags": [
+    "AICommunity",
+    "anyllm",
+    "LLM",
+    "Mozilla",
+    "OpenSource",
+    "OpenSourceFriday"
+  ],
+  "Title": "Open Source Friday with any-llm library",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Author": "GitHub",
+  "FeedName": "GitHub YouTube"
+}

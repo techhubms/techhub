@@ -11403,5 +11403,17 @@
     "canonical_url": "https://www.youtube.com/watch?v=al-JSC314dA",
     "timestamp": "2026-01-20 16:07:49 +00:00",
     "reason": "No categories found: No categories are assigned because the content is not primarily about Microsoft technologies, products, or development platforms. The episode focuses on Home Assistant, an open source smart home platform, the Open Home Foundation, privacy-first automations, and community building—not Microsoft technology. No substantial discussion of Azure, .NET, Microsoft AI/ML, GitHub Copilot, or related DevOps, Security, or Coding topics tied to Microsoft is provided in the description. While GitHub is owned by Microsoft, general GitHub usage and open source project discussions do not qualify for categories unless the focus is on Microsoft-aligned technologies, which is not the case here. Therefore, this content does not meet inclusion thresholds."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/kdoF4v-rEco",
+    "timestamp": "2026-01-20 18:06:42 +00:00",
+    "reason": "No categories found: No categories assigned. The content description focuses on creative and unexpected uses of Home Assistant for home automation, such as smart furniture and breweries. Home Assistant is not a Microsoft technology, product, or platform. There is no mention of Microsoft services, development with Microsoft tools, or integration with any Microsoft platforms in the provided title, description, author, tags, or type. Generic exclusion rules apply: content is not relevant to Microsoft developer/consultant ecosystem or any defined categories.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=L9UUCnnTQaM",
+    "timestamp": "2026-01-20 18:06:55 +00:00",
+    "reason": "No categories found: Content excluded due to the following reasons: There is no substantive content provided; the 'content' field is null and the available description only discusses the any-llm open source library and a video event featuring a Mozilla engineer. The description does not indicate any direct relation to Microsoft technologies or development tools, nor does it mention any Microsoft AI, coding, Azure, ML, DevOps, Security products, or frameworks. As a result, none of the category inclusion rules are met and the generic threshold (40%+ Microsoft content or central to solution) is not reached.",
+    "collection": "videos"
   }
 ]

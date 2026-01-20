@@ -23776,5 +23776,17 @@
     "collection": "blogs",
     "canonical_url": "https://devclass.com/2026/01/20/microsoft-updates-react-native-for-windows-developers-ask-why-not-use-maui/",
     "reason": "Succesfully added: Assigned the 'Coding' category because the article focuses on the technical capabilities, architecture, and usage of Microsoft's React Native for Windows framework (see Coding rules 1, 2, and 4), as well as the comparison to MAUI, which is a .NET development framework. The primary content is on frameworks, debugging tools, component architecture, and cross-platform development with Microsoft technologies—all under development rather than general business productivity. AI, Azure, DevOps, ML, and Security categories are not included as those topics are not covered. The content is technical, detailed, and well within the inclusive scope without triggering any generic exclusion rules."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-movement-across-multiple-clouds-with-copy-job-enhancements-on-incremental-copy-and-change-data-capture/",
+    "timestamp": "2026-01-20 18:05:37 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric Data Factory is a cloud-based Microsoft data integration service, qualifying under Azure (Azure rule 1). Assigned ML category because the updates enhance features used for data engineering and large-scale analytics workflows (ML rule 2, 3, and 5), such as CDC, incremental data movement, and integration with Data Lake/Lakehouse architectures which are foundational in data science and analytics engineering. AI, Coding, DevOps, GitHub Copilot, and Security categories do not apply, as there is no focus on AI features, code-level implementation, developer workflow, or security tools in this update. All generic exclusion rules were reviewed and none apply.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/20/four-priorities-for-ai-powered-identity-and-network-access-security-in-2026/",
+    "timestamp": "2026-01-20 18:06:07 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centers on the use of AI-driven agents and AI-powered security within Microsoft Entra (AI rules 1 and 4). Assigned 'Security' because the entire article is focused on identity, access security, Zero Trust, and Microsoft Defender/Purview features (Security rules 1, 2, 3, 4, and 9). Did not assign 'Azure' as the focus is on cloud identity/security rather than Azure infrastructure. Did not assign 'DevOps', 'Coding', 'ML', or 'GitHub Copilot' because the topic does not cover software development or machine learning implementation. The content is news-type and comes directly from Microsoft, further matching category inclusion rules.",
+    "collection": "news"
   }
 ]
