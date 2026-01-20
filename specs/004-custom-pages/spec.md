@@ -154,8 +154,8 @@ Users can discover the Developer Experience Space framework with pillars, metric
 ### Functional Requirements
 
 - **FR-001**: All 8 custom pages MUST use the `<SidebarToc>` component for table of contents generation
-- **FR-002**: All custom pages MUST wrap content in `.content-detail-body` container for scroll spy functionality
-- **FR-003**: All custom pages MUST include `.content-detail-body::after { height: 50vh }` spacer (via global CSS)
+- **FR-002**: All custom pages MUST wrap content in `.article-body` container for scroll spy functionality
+- **FR-003**: All custom pages MUST include `.article-body::after { height: 50vh }` spacer (via global CSS)
 - **FR-004**: TOC component MUST auto-extract headings from HTML content (h2 and h3 tags)
 - **FR-005**: TOC component MUST highlight the active section when corresponding heading crosses the detection point (~40% from viewport top)
 - **FR-006**: Clicking a TOC link MUST smooth-scroll to the corresponding heading and update browser URL with anchor
@@ -208,24 +208,71 @@ Users can discover the Developer Experience Space framework with pillars, metric
 **Completed**:
 
 - VS Code Updates page (reference implementation with SidebarToc component, 50vh spacer, styling)
+- GitHubCopilotHandbook.razor (implemented with styled hero section, SidebarToc - **NEEDS E2E TESTS**)
+- GitHubCopilotLevels.razor (implemented with SidebarToc - **NEEDS E2E TESTS**)
 
-**Needs Migration** (manual TOC → SidebarToc component):
+**Needs Implementation** (JSON verification + Razor component):
 
 - GitHubCopilotFeatures.razor
-- GitHubCopilotHandbook.razor
-- GitHubCopilotLevels.razor
 - GenAIBasics.razor
 - GenAIApplied.razor
 - GenAIAdvanced.razor
 - AISDLC.razor
 - DXSpace.razor
 
+### JSON Content Verification Required (CRITICAL)
+
+Before implementing each Razor component, **MUST** verify the corresponding JSON file in `collections/_custom/` contains ALL content from the original markdown file. Based on recent findings, JSON files are often missing:
+
+- **Table of Contents entries** (e.g., 6 sections in markdown but only 3 in TOC)
+- **Complete sections** (e.g., missing "Building Multi-Agent Systems", "Monitoring and Evaluating", etc.)
+- **Subsections and detailed content** (e.g., missing "Azure AI Services", "Languages and SDKs" subsections)
+- **Mermaid diagrams** (architecture diagrams, flowcharts, timelines)
+- **Resource links** ("More information" sections with extensive documentation links)
+- **FAQ blocks** (Q&A content with detailed answers)
+- **Detailed descriptions** (abbreviated summaries instead of full content)
+
+**JSON Verification Process** (MANDATORY before implementing each page):
+
+1. **Fetch the RAW markdown** from main branch:
+   - genai-basics: <https://raw.githubusercontent.com/techhubms/techhub/main/sections/ai/genai-basics.md>
+   - genai-applied: <https://raw.githubusercontent.com/techhubms/techhub/main/sections/ai/genai-applied.md>
+   - genai-advanced: <https://raw.githubusercontent.com/techhubms/techhub/main/sections/ai/genai-advanced.md>
+   - sdlc: <https://raw.githubusercontent.com/techhubms/techhub/main/sections/ai/sdlc.md>
+   - dx-space: <https://raw.githubusercontent.com/techhubms/techhub/main/sections/devops/dx-space.md>
+   - features: <https://raw.githubusercontent.com/techhubms/techhub/main/sections/github-copilot/features.md>
+
+2. **Compare markdown structure to JSON**:
+   - Count sections/subsections in markdown vs JSON
+   - Verify all headings (h2, h3) are represented in JSON structure
+   - Check for mermaid code blocks (```mermaid) and ensure they're in JSON
+   - Verify all link collections ("More information", "Resources", "FAQ") are present
+   - Confirm detailed descriptions match (not abbreviated summaries)
+
+3. **Update JSON to be complete**:
+   - Add missing sections with full content
+   - Add missing subsections and nested content
+   - Include mermaid diagrams as string properties (with \n for line breaks)
+   - Add all resource links with proper structure
+   - Include FAQ blocks with questions and detailed answers
+   - Preserve all content structure from markdown
+
+4. **Only THEN implement the Razor component** to render the complete JSON data
+
+**Example of Issues Found**:
+
+- `genai-applied.json` had only 3 TOC entries but markdown has 6 sections
+- Missing sections: "Building Multi-Agent Systems", "Monitoring and Evaluating AI Applications", "The AI-Native Web", "Learning Resources"
+- Missing mermaid architecture diagram in "Integrating AI" section
+- Missing extensive "Azure AI Services" and "Languages and SDKs" subsections with dozens of resource links
+- GitHub Copilot section missing detailed coding agent workflow and "More information" links
+
 ### Component Requirements
 
 **All pages must**:
 
 1. Replace manual `<nav class="sidebar-toc">` with `<SidebarToc HtmlContent="@renderedHtml" />` component
-2. Ensure content is wrapped in `<div class="content-detail-body">` for scroll spy
+2. Ensure content is wrapped in `<div class="article-body">` for scroll spy
 3. Verify 50vh spacer is present (global CSS, no per-page changes needed)
 4. Add proper page metadata (title, description, canonical URL)
 5. Implement proper semantic HTML structure
@@ -288,6 +335,15 @@ The sidebar is not limited to table of contents. Consider these additional uses:
 
 ### Testing Strategy
 
+**Test Order**:
+
+1. **First**: Write E2E tests for already-implemented pages (Handbook, Levels of Enlightenment)
+2. **Then**: For each new page implementation:
+   - Verify JSON completeness (see JSON Verification Process above)
+   - Implement Razor component with SidebarToc
+   - Write E2E tests immediately after component implementation
+   - Run all tests to ensure no regressions
+
 **Component Tests** (bUnit):
 
 - SidebarToc extracts headings correctly
@@ -314,7 +370,7 @@ The sidebar is not limited to table of contents. Consider these additional uses:
 ## Dependencies
 
 - **Completed**: SidebarToc component (already exists and works correctly)
-- **Completed**: Global scroll spacer CSS (already in markdown-content.css)
+- **Completed**: Global scroll spacer CSS (already in article.css)
 - **Completed**: Blazor routing for custom page URLs (already configured)
 - **Optional**: New visual components if cards/timelines need custom implementation (can reuse existing or create new)
 

@@ -235,6 +235,32 @@ Test content body.
         result.Should().NotContain(t => t.Tag == "productivity", "productivity is only in github-copilot section");
     }
 
+    [Fact]
+    public async Task GetTagCloud_SectionScope_AllSection_ReturnsTagsFromAllSections()
+    {
+        // Arrange - "all" is a virtual section that should show content from all sections
+        // This bug was discovered when /all showed "No tags available"
+        // The repository's GetBySectionAsync("all") returns empty because no content has sectionName="all"
+        var request = new TagCloudRequest
+        {
+            Scope = TagCloudScope.Section,
+            SectionName = "all", // Virtual section - should return all content across all sections
+            MaxTags = 20,
+            MinUses = 1,
+            LastDays = 90
+        };
+
+        // Act
+        var result = await _service.GetTagCloudAsync(request, CancellationToken.None);
+
+        // Assert - Should return tags from ALL sections (ai, github-copilot, ml, etc.)
+        result.Should().NotBeEmpty("'all' section should return tags from all sections");
+        result.Should().Contain(t => t.Tag == "ai");
+        result.Should().Contain(t => t.Tag == "copilot");
+        result.Should().Contain(t => t.Tag == "machine-learning");
+        result.Should().Contain(t => t.Tag == "productivity"); // From github-copilot section
+    }
+
     #endregion
 
     #region Collection Scope Tests

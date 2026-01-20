@@ -88,7 +88,7 @@ In addition, Copilot Coding Agent’s model switcher is now available for Pro an
 - [OpenAI’s GPT-5.2 Now Available in GitHub Copilot Public Preview](https://github.blog/changelog/2025-12-11-openais-gpt-5-2-is-now-in-public-preview-for-github-copilot)
 - [Auto Model Selection in GitHub Copilot Now Available in Visual Studio Code](https://github.blog/changelog/2025-12-10-auto-model-selection-is-generally-available-in-github-copilot-in-visual-studio-code)
 - [Model Picker Now Available for Copilot Coding Agent (Pro and Pro+ Subscribers)](https://github.blog/changelog/2025-12-08-model-picker-for-copilot-coding-agent-for-copilot-pro-and-pro-subscribers)
-- [Exploring AI Models and GitHub Copilot's Raptor Mini in VS Code](/videos/2025-12-08-Exploring-AI-Models-and-GitHub-Copilots-Raptor-Mini-in-VS-Code.html)
+- [Exploring AI Models and GitHub Copilot's Raptor Mini in VS Code](/ai/videos/Exploring-AI-Models-and-GitHub-Copilots-Raptor-Mini-in-VS-Code)
 
 ### Deep Copilot Integration Across Developer Workflows
 
@@ -97,12 +97,12 @@ With the release of Visual Studio Code November 2025 Insiders, CLI and agent ses
 Automated code review and chat capabilities in Visual Studio 2026 now help analyze code for quality and security concerns, making AI-based feedback more useful during pull requests and team collaboration. This continues progress from last week’s previews. New tutorials cover automation and agent workflows in DevOps, expanding on recent cases with detailed steps for migration, standards enforcement, and deployment automation.
 
 - [What's New in Visual Studio Code November 2025 Insiders Release (v1.107)](https://code.visualstudio.com/updates/v1_107)
-- [Agent HQ for VS Code: Unified Agent Experience with GitHub Copilot](/videos/2025-12-10-Agent-HQ-for-VS-Code-Unified-Agent-Experience-with-GitHub-Copilot.html)
+- [Agent HQ for VS Code: Unified Agent Experience with GitHub Copilot](/ai/videos/Agent-HQ-for-VS-Code-Unified-Agent-Experience-with-GitHub-Copilot)
 - [Streamlining Your Git Workflow with Visual Studio 2026](https://devblogs.microsoft.com/visualstudio/streamlining-your-git-workflow-with-visual-studio-2026/)
 - [Continuous Efficiency: AI-Driven Software Optimization with GitHub Agentic Workflows](https://github.blog/news-insights/policy-news-and-insights/the-future-of-ai-powered-software-optimization-and-how-it-can-help-your-team/)
 - [Tackling Tech Debt with the GitHub Copilot Cloud Agent](/2025-12-11-Tackling-Tech-Dev-with-the-GitHub-Copilot-Cloud-Agent.html)
-- [Rubber Duck Thursdays: Using GitHub Copilot Custom Agents to Address Tech Debt](/videos/2025-12-09-Rubber-Duck-Thursdays-Using-GitHub-Copilot-Custom-Agents-to-Address-Tech-Debt.html)
-- [Ship Faster: End-to-End Azure App Development with GitHub Copilot and Intelligent Agents](/videos/2025-12-10-Ship-Faster-End-to-End-Azure-App-Development-with-GitHub-Copilot-and-Intelligent-Agents.html)
+- [Rubber Duck Thursdays: Using GitHub Copilot Custom Agents to Address Tech Debt](/ai/videos/Rubber-Duck-Thursdays-Using-GitHub-Copilot-Custom-Agents-to-Address-Tech-Debt)
+- [Ship Faster: End-to-End Azure App Development with GitHub Copilot and Intelligent Agents](/ai/videos/Ship-Faster-End-to-End-Azure-App-Development-with-GitHub-Copilot-and-Intelligent-Agents)
 
 ### Copilot in Modernization and App Transformation
 
@@ -112,7 +112,7 @@ Visual Studio Code Insiders now offers a JavaScript/TypeScript App Modernizer pr
 
 - [Modernizing Microsoft Access: Migrating to Node.js, OpenAPI, SQL Server, and MongoDB with GitHub Copilot](https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-to-modernise-a-microsoft-access-database-forms-vba-to-node/ba-p/4473504)
 - [AI-Assisted JavaScript/TypeScript Modernizer Preview in VS Code Insiders](https://devblogs.microsoft.com/blog/jsts-modernizer-preview)
-- [Modernizing Legacy Apps with GitHub Copilot and Azure](/videos/2025-12-10-Modernizing-Legacy-Apps-with-GitHub-Copilot-and-Azure.html)
+- [Modernizing Legacy Apps with GitHub Copilot and Azure](/ai/videos/Modernizing-Legacy-Apps-with-GitHub-Copilot-and-Azure)
 
 ### Enhancing CLI and Terminal Developer Environments
 
@@ -121,7 +121,7 @@ Copilot CLI improvements continue the progress toward more productive terminal u
 New scripting patterns, automation for scaffolding, and tighter integration with Visual Studio Code and Azure illustrate how the CLI is evolving into a core productivity platform, continuing themes of seamless scripting and automation.
 
 - [Making Windows Terminal Awesome with GitHub Copilot CLI](https://devblogs.microsoft.com/blog/making-windows-terminal-awesome-with-github-copilot-cli)
-- [Scripting the GitHub Copilot CLI - Deep Dive](/videos/2025-12-11-Scripting-the-GitHub-Copilot-CLI-Deep-Dive.html)
+- [Scripting the GitHub Copilot CLI - Deep Dive](/ai/videos/Scripting-the-GitHub-Copilot-CLI-Deep-Dive)
 
 ### Copilot Ecosystem: Administration, Education, and Workflow Guides
 
@@ -130,13 +130,13 @@ The Copilot ecosystem now offers improved management, reporting, and educational
 Educational initiatives such as quantum computing learning with Copilot agents, Octoverse reports, and enablement stories extend Copilot’s reach for teams experimenting with advanced scenarios. These also reinforce onboarding and standards automation priorities introduced previously.
 
 - [GitHub Spark: Improvements, Dedicated SKU, and DPA Coverage](https://github.blog/changelog/2025-12-10-github-spark-improvements-dpa-coverage-dedicated-sku)
-- [Plan, Specify, and Implement with Spec Kit and GitHub Copilot](/videos/2025-12-11-Plan-Specify-and-Implement-with-Spec-Kit-and-GitHub-Copilot.html)
-- [Showcasing a Quantum Computing Educational Platform with Custom Copilot](/videos/2025-12-12-Showcasing-a-Quantum-Computing-Educational-Platform-with-Custom-Copilot.html)
+- [Plan, Specify, and Implement with Spec Kit and GitHub Copilot](/ai/videos/Plan-Specify-and-Implement-with-Spec-Kit-and-GitHub-Copilot)
+- [Showcasing a Quantum Computing Educational Platform with Custom Copilot](/ai/videos/Showcasing-a-Quantum-Computing-Educational-Platform-with-Custom-Copilot)
 - [Balancing Speed and Quality with AI and GitHub Copilot in Development](https://github.blog/ai-and-ml/generative-ai/speed-is-nothing-without-control-how-to-keep-quality-high-in-the-ai-era/)
-- [Eirini Kalliamvakou Discusses Copilot and AI Trends in the 2025 Octoverse Report](/videos/2025-12-12-Eirini-Kalliamvakou-Discusses-Copilot-and-AI-Trends-in-the-2025-Octoverse-Report.html)
+- [Eirini Kalliamvakou Discusses Copilot and AI Trends in the 2025 Octoverse Report](/ai/videos/Eirini-Kalliamvakou-Discusses-Copilot-and-AI-Trends-in-the-2025-Octoverse-Report)
 - [The New Identity of a Developer in the AI Era](https://github.blog/news-insights/octoverse/the-new-identity-of-a-developer-what-changes-and-what-doesnt-in-the-ai-era/)
-- [How I shipped more code and products than ever before with GitHub Copilot](/videos/2025-12-11-How-I-shipped-more-code-and-products-than-ever-before-with-GitHub-Copilot.html)
-- [Building AI Agents with VS Code, GitHub Copilot, and Azure](/videos/2025-12-10-Building-AI-Agents-with-VS-Code-GitHub-Copilot-and-Azure.html)
+- [How I shipped more code and products than ever before with GitHub Copilot](/ai/videos/How-I-shipped-more-code-and-products-than-ever-before-with-GitHub-Copilot)
+- [Building AI Agents with VS Code, GitHub Copilot, and Azure](/ai/videos/Building-AI-Agents-with-VS-Code-GitHub-Copilot-and-Azure)
 - [Gemini 3 Pro Model Launches for GitHub Copilot in Popular IDEs](https://github.blog/changelog/2025-12-12-gemini-3-pro-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse)
 - [Microsoft Learn MCP Server: Next-Level Copilot Integration for Developers](https://devblogs.microsoft.com/dotnet/microsoft-learn-mcp-server-elevates-development/)
 
@@ -152,12 +152,12 @@ Key updates at Ignite 2025 include access to Anthropic models, multi-model coord
 
 - [Exploring the Future of AI Agents with Microsoft Foundry](https://techcommunity.microsoft.com/t5/microsoft-developer-community/exploring-the-future-of-ai-agents-with-microsoft-foundry/ba-p/4476107)
 - [Agentic AI and Cloud Innovation: Key Takeaways from Microsoft Ignite 2025](https://azure.microsoft.com/en-us/blog/actioning-agentic-ai-5-ways-to-build-with-news-from-microsoft-ignite-2025/)
-- [Nasdaq Boardvantage: AI-Driven Governance Architecture with Azure PostgreSQL and Microsoft Foundry](/videos/2025-12-09-Nasdaq-Boardvantage-AI-Driven-Governance-Architecture-with-Azure-PostgreSQL-and-Microsoft-Foundry.html)
+- [Nasdaq Boardvantage: AI-Driven Governance Architecture with Azure PostgreSQL and Microsoft Foundry](/ai/videos/Nasdaq-Boardvantage-AI-Driven-Governance-Architecture-with-Azure-PostgreSQL-and-Microsoft-Foundry)
 - [From Large Semi-Structured Documents to Actionable Data: Azure-Powered Intelligent Document Processing Pipelines](https://techcommunity.microsoft.com/t5/azure-architecture-blog/from-large-semi-structured-docs-to-actionable-data-reusable/ba-p/4474054)
-- [Ignite BRK197: AI Powered Automation & Multi-Agent Orchestration in Foundry](/videos/2025-12-10-Ignite-BRK197-AI-Powered-Automation-and-Multi-Agent-Orchestration-in-Foundry.html)
-- [Build a Pizza Ordering Agent with Microsoft Foundry and MCP](/videos/2025-12-10-Build-a-Pizza-Ordering-Agent-with-Microsoft-Foundry-and-MCP.html)
+- [Ignite BRK197: AI Powered Automation & Multi-Agent Orchestration in Foundry](/ai/videos/Ignite-BRK197-AI-Powered-Automation-and-Multi-Agent-Orchestration-in-Foundry)
+- [Build a Pizza Ordering Agent with Microsoft Foundry and MCP](/ai/videos/Build-a-Pizza-Ordering-Agent-with-Microsoft-Foundry-and-MCP)
 - [AI Upskilling Framework Level 3: Building Agentic Workflows from Microsoft Ignite](https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-upskilling-framework-level-3-building/ba-p/4477472)
-- [Ignite BRK1706: Build and Manage AI Apps with Microsoft Foundry](/videos/2025-12-10-Ignite-BRK1706-Build-and-Manage-AI-Apps-with-Microsoft-Foundry.html)
+- [Ignite BRK1706: Build and Manage AI Apps with Microsoft Foundry](/ai/videos/Ignite-BRK1706-Build-and-Manage-AI-Apps-with-Microsoft-Foundry)
 
 ### GPT-5.2 Rollout and Integration
 
@@ -176,8 +176,8 @@ The GitHub MCP Server added more granular configuration, context management, a G
 
 - [GitHub MCP Server Adds Tool-Specific Configuration and Security Features](https://github.blog/changelog/2025-12-10-the-github-mcp-server-adds-support-for-tool-specific-configuration-and-more)
 - [MCP Transitions to Linux Foundation: Impact on AI Tool and Agent Development](https://github.blog/open-source/maintainers/mcp-joins-the-linux-foundation-what-this-means-for-developers-building-the-next-era-of-ai-tools-and-agents/)
-- [Unlock agentic workflows for your apps using MCP on Windows](/videos/2025-12-10-Unlock-agentic-workflows-for-your-apps-using-MCP-on-Windows.html)
-- [Model Context Protocol: From Concept to Linux Foundation Agentic AI](/videos/2025-12-09-Model-Context-Protocol-From-Concept-to-Linux-Foundation-Agentic-AI.html)
+- [Unlock agentic workflows for your apps using MCP on Windows](/ai/videos/Unlock-agentic-workflows-for-your-apps-using-MCP-on-Windows)
+- [Model Context Protocol: From Concept to Linux Foundation Agentic AI](/ai/videos/Model-Context-Protocol-From-Concept-to-Linux-Foundation-Agentic-AI)
 
 ### AI Integration in Developer Workflows and Cloud Automation
 
@@ -185,10 +185,10 @@ Guides released this week detail best practices for integrating AI into develope
 
 Azure Copilot Storage Migration Solutions Advisor and persistent memory in Azure SRE Agent continue the automation and troubleshooting focus for DevOps and cloud teams.
 
-- [Supercharge Your Apps with OpenAI: Secure Authentication, Azure Integration, and MCP Agents](/videos/2025-12-10-Supercharge-Your-Apps-with-OpenAI-Secure-Authentication-Azure-Integration-and-MCP-Agents.html)
-- [Secure and Smart AI Agents with Azure Redis in .NET](/videos/2025-12-10-Secure-and-Smart-AI-Agents-with-Azure-Redis-in-NET.html)
-- [Modernization Made Simple: Building Agentic Solutions in .NET](/videos/2025-12-10-Modernization-Made-Simple-Building-Agentic-Solutions-in-NET.html)
-- [Bulletproof Agents with the Durable Task Extension for Microsoft Agent Framework](/videos/2025-12-10-Bulletproof-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework.html)
+- [Supercharge Your Apps with OpenAI: Secure Authentication, Azure Integration, and MCP Agents](/ai/videos/Supercharge-Your-Apps-with-OpenAI-Secure-Authentication-Azure-Integration-and-MCP-Agents)
+- [Secure and Smart AI Agents with Azure Redis in .NET](/ai/videos/Secure-and-Smart-AI-Agents-with-Azure-Redis-in-NET)
+- [Modernization Made Simple: Building Agentic Solutions in .NET](/ai/videos/Modernization-Made-Simple-Building-Agentic-Solutions-in-NET)
+- [Bulletproof Agents with the Durable Task Extension for Microsoft Agent Framework](/ai/videos/Bulletproof-Agents-with-the-Durable-Task-Extension-for-Microsoft-Agent-Framework)
 - [Transforming Data Migration Decisions with Azure Copilot's Storage Migration Solutions Advisor](https://techcommunity.microsoft.com/t5/azure-storage-blog/transforming-data-migration-using-azure-copilot/ba-p/4476610)
 - [Never Explain Context Twice: Introducing Azure SRE Agent Memory](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/never-explain-context-twice-introducing-azure-sre-agent-memory/ba-p/4473059)
 
@@ -203,14 +203,14 @@ New features in Microsoft Fabric this week enable more unified analytics and AI-
 Convergence 2025 confirms that business platforms such as Dynamics 365, Copilot Studio, and Microsoft Fabric now include AI-driven automation for ERP, CRM, and business operations. Copilot Studio allows for custom agent design and integration, and new articles outline how to define agent identity, enforce governance, and use open protocols for scale-out deployments.
 
 - [Agentic Business Applications and AI Autonomy at Convergence 2025](https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2025/12/09/the-era-of-agentic-business-applications-arrives-at-convergence-2025/)
-- [AI-Driven Product Change Management with Copilot Studio for Manufacturing](/videos/2025-12-09-AI-Driven-Product-Change-Management-with-Copilot-Studio-for-Manufacturing.html)
+- [AI-Driven Product Change Management with Copilot Studio for Manufacturing](/ai/videos/AI-Driven-Product-Change-Management-with-Copilot-Studio-for-Manufacturing)
 
 ### Advances in AI Procurement and Developer Productivity
 
 Microsoft’s new Agent Pre-Purchase Plan (P3) gives organizations a way to purchase pooled agent credits for Foundry and Copilot Studio, which simplifies procurement across the AI portfolio and reflects last week’s preview. Developer tools like Aspire are now available to support monitoring AI applications and connecting to Azure, making it easier to adopt these in the enterprise.
 
 - [Microsoft Agent Pre-Purchase Plan: Unified AI Procurement for Foundry and Copilot Studio](https://techcommunity.microsoft.com/t5/finops-blog/microsoft-agent-pre-purchase-plan-one-unified-path-to-scale-ai/ba-p/4476052)
-- [Aspire for AI Applications](/videos/2025-12-10-Aspire-for-AI-Applications.html)
+- [Aspire for AI Applications](/ai/videos/Aspire-for-AI-Applications)
 - [AI Dev Days 2025: Your Gateway to the Future of AI Development](https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-dev-days-2025-your-gateway-to-the-future-of-ai-development/ba-p/4476113)
 
 ### Multi-Model Reasoning, Open Source, and AI Developer Research
@@ -220,7 +220,7 @@ A demonstration app showed how to run decisions across multiple AI models (GPT, 
 Research this week from Atlassian, Google DORA, and LaunchDarkly reinforces the importance of proven practices, trust, and discipline to maximize AI productivity gains, echoing prior coverage of the human side of developer work.
 
 - [Multi-Model Reasoning App Demoed at Bengaluru Dev Event: Decision Frameworks, Azure, and Copilot Vision](https://www.linkedin.com/posts/satyanadella_was-fun-to-be-at-a-dev-event-in-bengaluru-activity-7404820776195043329-A5vB)
-- [The Human Side of Octoverse 2025: Insights on Open Source, AI, and Collaboration](/videos/2025-12-08-The-Human-Side-of-Octoverse-2025-Insights-on-Open-Source-AI-and-Collaboration.html)
+- [The Human Side of Octoverse 2025: Insights on Open Source, AI, and Collaboration](/ai/videos/The-Human-Side-of-Octoverse-2025-Insights-on-Open-Source-AI-and-Collaboration)
 - [Research: AI's Impact on Developer Productivity Hinges on Best Practices](https://devclass.com/2025/12/11/research-ai-can-help-or-hinder-software-development-and-old-style-best-practices-make-the-difference/)
 
 ## ML
@@ -266,7 +266,7 @@ SQL Database in Microsoft Fabric is now generally available, providing a more in
 
 General availability of SSIS 2025 enables secure migration to the cloud, while updated tooling streamlines transitions to optimized architectures, continuing the series of migration and modernization resources.
 
-- [What's New and Generally Available in SQL Database in Microsoft Fabric](/videos/2025-12-11-Whats-New-and-Generally-Available-in-SQL-Database-in-Microsoft-Fabric.html)
+- [What's New and Generally Available in SQL Database in Microsoft Fabric](/azure/videos/Whats-New-and-Generally-Available-in-SQL-Database-in-Microsoft-Fabric)
 - [The Evolution of SSIS: SQL Server Integration Services 2025 General Availability and Microsoft Fabric Integration](https://blog.fabric.microsoft.com/en-US/blog/the-evolution-of-sql-server-integration-services-ssis-ssis-2025-generally-available/)
 - [Lakehouse Schemas Now Generally Available in Microsoft Fabric](https://blog.fabric.microsoft.com/en-US/blog/lakehouse-schemas-generally-available/)
 
@@ -287,7 +287,7 @@ Recent Azure Storage updates focus on enabling ML, analytics, and migration for 
 
 Azure’s SRE Agent now delivers enhanced .NET telemetry collection and automated incident rollback, moving beyond log collection into proactive reliability management. Private Preview of Azure Managed Prometheus extends monitoring to VMs and VMSS, while new integrations with Azure Monitor and Grafana add more options for metric analysis.
 
-- [Proactive .NET Reliability with Azure SRE Agent](/videos/2025-12-10-Proactive-NET-Reliability-with-Azure-SRE-Agent.html)
+- [Proactive .NET Reliability with Azure SRE Agent](/azure/videos/Proactive-NET-Reliability-with-Azure-SRE-Agent)
 - [Private Preview: Azure Managed Prometheus for VM & VMSS Monitoring](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/private-preview-azure-managed-prometheus-on-vm-vmss/ba-p/4473472)
 
 ### Microsoft Fabric Extensibility and Logic Apps: Integration and Testability
@@ -295,7 +295,7 @@ Azure’s SRE Agent now delivers enhanced .NET telemetry collection and automate
 The Fabric Extensibility Toolkit has been updated to simplify validation and publishing workflows for partners. Logic Apps now support MCP server hosting and a new Data Mapper Test Executor, expanding testable automation and transformation capabilities across integrated workflows.
 
 - [Microsoft Fabric Extensibility Toolkit: Streamlining Workload Publishing for Partners](https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-toolkit-publishing-workloads-announcements/)
-- [Using Logic Apps as Model Context Protocol (MCP) Servers for AI Applications](/videos/2025-12-09-Using-Logic-Apps-as-Model-Context-Protocol-MCP-Servers-for-AI-Applications.html)
+- [Using Logic Apps as Model Context Protocol (MCP) Servers for AI Applications](/ai/videos/Using-Logic-Apps-as-Model-Context-Protocol-MCP-Servers-for-AI-Applications)
 - [Data Mapper Test Executor in Logic Apps Standard Test Framework](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/data-mapper-test-executor-a-new-addition-to-logic-apps-standard/ba-p/4472440)
 
 ### AI Agent Backend Development with Model Context Protocol on Azure Functions
@@ -310,7 +310,7 @@ New step-by-step resources for app migration cover assessment, design, security,
 
 - [Key Considerations for Modernizing and Migrating Custom Applications to Azure](https://techcommunity.microsoft.com/t5/azure-migration-and/key-considerations-for-modernizing-and-migrating-custom/ba-p/4476580)
 - [Assessing Your Azure Data Factory for Migration to Fabric Data Factory](https://blog.fabric.microsoft.com/en-US/blog/assessing-your-azure-data-factory-for-migration-to-fabric-data-factory/)
-- [No-code Modernization for ASP.NET with Managed Instance on Azure App Service](/videos/2025-12-10-No-code-Modernization-for-ASPNET-with-Managed-Instance-on-Azure-App-Service.html)
+- [No-code Modernization for ASP.NET with Managed Instance on Azure App Service](/azure/videos/No-code-Modernization-for-ASPNET-with-Managed-Instance-on-Azure-App-Service)
 
 ### Other Azure News
 
@@ -318,7 +318,7 @@ General Azure updates continue to stress platform resilience, compliance, and on
 
 The updated .NET-to-Dataverse guide provides code samples for API use and identity management, supporting recent practices for secure application integration.
 
-- [Azure Update - 12th December 2025](/videos/2025-12-12-Azure-Update-12th-December-2025.html)
+- [Azure Update - 12th December 2025](/azure/videos/Azure-Update-12th-December-2025)
 
 - [How to Connect .NET Applications to Dataverse Using Microsoft.PowerPlatform.Dataverse.Client](https://techcommunity.microsoft.com/t5/web-development/connect-net-4-6-2-to-dataverse-using-the-dataverse-plugin/m-p/4476310#M682)
 
@@ -412,8 +412,8 @@ Azure DevOps Server is generally available, maintaining support for companies wi
 
 Recent posts and guides highlight best practices for orchestrating pipelines with .NET, Visual Studio, Azure MCP, SQL, and Azure Storage. Visual Studio Code’s new unified agent tools make it easier for developers to oversee multiple agents and improve orchestration, consistent with earlier updates to cloud-native automation.
 
-- [Agentic DevOps: Enhancing .NET Web Apps with Azure MCP](/videos/2025-12-10-Agentic-DevOps-Enhancing-NET-Web-Apps-with-Azure-MCP.html)
-- [A Unified Agent Experience in Visual Studio Code](/videos/2025-12-12-A-Unified-Agent-Experience-in-Visual-Studio-Code.html)
+- [Agentic DevOps: Enhancing .NET Web Apps with Azure MCP](/ai/videos/Agentic-DevOps-Enhancing-NET-Web-Apps-with-Azure-MCP)
+- [A Unified Agent Experience in Visual Studio Code](/azure/videos/A-Unified-Agent-Experience-in-Visual-Studio-Code)
 
 ## Security
 
@@ -460,9 +460,9 @@ Microsoft’s Security CTO advances the use of graph-based models—mapping iden
 
 A new video on security modeling highlights how storytelling improves understanding and training within teams, encouraging practical linkage between incidents and security improvements.
 
-- [Securely Unleashing AI Agents on Azure SQL and SQL Server](/videos/2025-12-10-Securely-Unleashing-AI-Agents-on-Azure-SQL-and-SQL-Server.html)
+- [Securely Unleashing AI Agents on Azure SQL and SQL Server](/ai/videos/Securely-Unleashing-AI-Agents-on-Azure-SQL-and-SQL-Server)
 - [Changing the Physics of Cyber Defense: Graph-Based Strategies and AI with Microsoft Security](https://www.microsoft.com/en-us/security/blog/2025/12/09/changing-the-physics-of-cyber-defense/)
-- [The Role of Storytelling in Security Modeling](/videos/2025-12-12-The-Role-of-Storytelling-in-Security-Modeling.html)
+- [The Role of Storytelling in Security Modeling](/security/videos/The-Role-of-Storytelling-in-Security-Modeling)
 
 ### Other Security News
 

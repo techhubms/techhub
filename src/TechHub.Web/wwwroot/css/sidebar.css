@@ -34,6 +34,13 @@
    Sidebar Sections - Headings and content structure
    ============================================================================ */
 
+.sidebar-h2 {
+  color: var(--color-text-primary);
+  margin: 0 0 var(--spacing-4) 0;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+}
+
 .sidebar-section h2 {
   color: var(--color-text-primary);
   margin: 0 0 var(--spacing-4) 0;
@@ -248,45 +255,6 @@
   color: var(--color-text-tertiary);
 }
 
-/* Tag Button - Interactive tags for filtering/navigation */
-.sidebar-tag-button {
-  display: inline-block;
-  padding: var(--spacing-1) var(--spacing-2);
-  background: var(--color-card-bg);
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-sm);
-  font-size: var(--font-size-xs);
-  text-decoration: none;
-  color: var(--color-text-primary);
-  transition: all var(--duration-fast) var(--easing-ease);
-  cursor: pointer;
-}
-
-.sidebar-tag-button:hover {
-  background: var(--color-purple-dark);
-  border-color: var(--color-purple-bright);
-  color: var(--color-text-on-emphasis);
-  transform: translateY(-2px);
-}
-
-.sidebar-tag-button.active {
-  background: var(--color-purple-dark);
-  border-color: var(--color-purple-bright);
-  color: var(--color-text-on-emphasis);
-}
-
-.sidebar-tag-button.active:hover {
-  background: var(--color-purple-medium);
-  border-color: var(--color-purple-bright);
-}
-
-/* Tags cloud container - spacing between tags */
-.sidebar-tags-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-1);
-}
-
 /* Highlight Button - Featured/highlighted content with accent */
 .sidebar-highlight-button,
 .sidebar-featured-link {
@@ -322,95 +290,4 @@
 .sidebar-featured-date {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
-}
-
-/* ============================================================================
-   Sidebar Table of Contents - Hierarchical navigation with scroll-spy
-   ============================================================================ */
-
-.sidebar-toc {
-  position: sticky;
-  top: 100px;
-  /* Stick below the header (70px) + SubNav (30px) */
-}
-
-.sidebar-toc-inner {
-  /* No max-height - let it grow naturally */
-}
-
-.sidebar-toc .toc-list {
-  list-style: none;
-  padding: var(--spacing-3);
-  margin: 0;
-  background: var(--color-card-bg);
-  border: 1px solid var(--color-border-default);
-  border-radius: var(--radius-md);
-}
-
-.sidebar-toc .toc-sublist {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-left: var(--spacing-3);
-  overflow: hidden;
-  /* No transition - instant collapse/expand */
-  /* Default collapsed state */
-  max-height: 0;
-}
-
-/* If there's only one h2 heading, auto-expand it by default */
-.sidebar-toc .toc-list:has(.toc-depth-0:only-child) .toc-depth-0 > .toc-sublist {
-  max-height: 2000px;
-}
-
-/* Expanded state only when explicitly set by JavaScript */
-.sidebar-toc .toc-item.expanded > .toc-sublist {
-  max-height: 2000px;
-}
-
-.sidebar-toc .toc-item {
-  margin: 0;
-}
-
-.sidebar-toc .toc-link {
-  display: block;
-  padding: var(--spacing-1) var(--spacing-2);
-  color: var(--color-text-secondary);
-  text-decoration: none;
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-snug);
-  border-radius: var(--radius-sm);
-  border-left: 2px solid transparent;
-  transition: all var(--duration-fast) var(--easing-ease);
-}
-
-.sidebar-toc .toc-link:hover {
-  color: var(--color-text-primary);
-  background: var(--color-bg-emphasis);
-}
-
-/* Active state for current section (scroll-spy) */
-.sidebar-toc .toc-link.active {
-  color: var(--color-purple-bright);
-  background: var(--color-bg-emphasis);
-  border-left-color: var(--color-purple-bright);
-}
-
-/* Depth-based styling for visual hierarchy */
-.sidebar-toc .toc-depth-0 > .toc-link {
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-primary);
-}
-
-.sidebar-toc .toc-depth-1 > .toc-link {
-  font-size: var(--font-size-sm);
-}
-
-.sidebar-toc .toc-depth-2 > .toc-link {
-  font-size: var(--font-size-xs);
-}
-
-/* All links fully visible */
-.sidebar-toc .toc-link {
-  opacity: 1;
 }

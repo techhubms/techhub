@@ -18,7 +18,6 @@
 html {
   overflow-y: scroll;
   overflow-x: hidden;
-  /* Prevent horizontal scroll */
   scroll-behavior: smooth;
 }
 
@@ -112,16 +111,17 @@ a:hover {
 }
 
 a:focus-visible {
-  outline: var(--focus-outline-width) solid var(--focus-outline-color);
-  outline-offset: var(--focus-outline-offset);
-  border-radius: var(--radius-sm);
+  outline: none;
+}
+
+/* Remove all focus outlines - cleaner visual experience */
+*:focus {
+  outline: none !important;
 }
 
 /* Focus States (WCAG 2.1 AA) - Site Color Scheme */
 :focus-visible {
-  outline: var(--focus-outline-width) solid var(--focus-outline-color);
-  outline-offset: var(--focus-outline-offset);
-  border-radius: var(--radius-sm);
+  outline: none;
 }
 
 /* Remove outline for mouse users, keep for keyboard users */
@@ -132,9 +132,8 @@ a:focus-visible {
 /* Buttons use purple focus */
 button:focus-visible,
 .button:focus-visible {
-  outline: var(--focus-outline-width) solid var(--color-purple-medium);
-  outline-offset: var(--focus-outline-offset);
-  box-shadow: 0 0 0 4px rgba(189, 147, 249, 0.2);
+  outline: none;
+  box-shadow: none;
 }
 
 /* Lists */
@@ -207,4 +206,75 @@ img {
     --color-border-default: #ffffff;
     --focus-outline-width: 3px;
   }
+}
+
+/* ============================================================================
+   Utility Classes
+   
+   - Accessibility Utilities
+   - Spacing Utilities
+   - Text Utilities
+   ============================================================================ */
+
+/* Accessibility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Sidebar Headings - Standardized across all sidebars */
+.sidebar-h2 {
+  font-size: var(--font-size-xl);
+  margin-top: 0;
+  margin-bottom: var(--spacing-3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-heading);
+}
+
+/* Page H1 - Standardized across all pages */
+.page-h1 {
+  font-size: var(--font-size-3xl);
+  margin-top: 0;
+  margin-bottom: var(--spacing-4);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  text-align: left;
+}
+
+/* Text Alignment */
+.u-text-center {
+  text-align: center;
+}
+
+/* Spacing Utilities */
+.u-mb-2 {
+  margin-bottom: var(--spacing-2);
+}
+
+.u-mb-4 {
+  margin-bottom: var(--spacing-4);
+}
+
+.u-mt-4 {
+  margin-top: var(--spacing-4);
+}
+
+/* Form Floating Labels */
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+  color: var(--color-text-secondary);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+  text-align: start;
 }

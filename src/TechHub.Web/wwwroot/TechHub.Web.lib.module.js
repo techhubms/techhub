@@ -8,7 +8,7 @@
  * This is a Blazor requirement - the framework auto-discovers and executes this file.
  * @see https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/startup
  * 
- * Other JavaScript files (filtering.js, header-scroll.js, etc.) are in wwwroot/js/
+ * Other JavaScript files (filtering.js, etc.) are in wwwroot/js/
  * because they are NOT Blazor initializers - they're loaded separately.
  * 
  * This module exposes lifecycle callbacks used by:

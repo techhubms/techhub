@@ -99,6 +99,11 @@ internal sealed class Program
         Console.WriteLine($"Found {files.Count} markdown files");
         Console.WriteLine();
 
+        // Build slug-to-article mapping for link rewriting
+        var slugMap = await BuildSlugMapAsync(files);
+        Console.WriteLine($"Built slug map with {slugMap.Count} entries");
+        Console.WriteLine();
+
         int processed = 0;
         int skipped = 0;
         int errors = 0;
@@ -107,7 +112,7 @@ internal sealed class Program
         {
             try
             {
-                var changed = await ProcessFileAsync(file, dryRun);
+                var changed = await ProcessFileAsync(file, slugMap, dryRun);
                 if (changed)
                 {
                     processed++;
@@ -167,7 +172,7 @@ internal sealed class Program
         throw new ArgumentException($"Path not found: {path}");
     }
 
-    private static async Task<bool> ProcessFileAsync(string filePath, bool dryRun)
+    private static async Task<bool> ProcessFileAsync(string filePath, Dictionary<string, ArticleInfo> slugMap, bool dryRun)
     {
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine($"Processing: {filePath}");
@@ -375,6 +380,17 @@ internal sealed class Program
             changed = true;
         }
 
+        // 6. Fix .html links to use correct /section/collection/slug URLs
+        var originalContentBeforeLinks = markdownContent;
+        markdownContent = FixHtmlLinks(markdownContent, slugMap);
+        if (markdownContent != originalContentBeforeLinks)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("  ✓ Fixed .html links");
+            Console.ResetColor();
+            changed = true;
+        }
+
         // 7. Replace template variables in content
         var originalContent = markdownContent;
         markdownContent = ReplaceTemplateVariables(markdownContent, frontMatter, description);
@@ -510,4 +526,104 @@ internal sealed class Program
         var yaml = serializer.Serialize(frontMatter);
         return $"---\n{yaml}---\n";
     }
+
+    /// <summary>
+    /// Build a mapping of slug → article info (primary section, collection)
+    /// This allows us to rewrite .html links to the correct /section/collection/slug URLs
+    /// </summary>
+    private static async Task<Dictionary<string, ArticleInfo>> BuildSlugMapAsync(List<string> files)
+    {
+        var map = new Dictionary<string, ArticleInfo>(StringComparer.OrdinalIgnoreCase);
+        var parser = new FrontMatterParser();
+
+        foreach (var file in files)
+        {
+            try
+            {
+                var content = await File.ReadAllTextAsync(file);
+                var (frontMatter, _) = parser.Parse(content);
+
+                // Extract slug from filename
+                var filename = Path.GetFileNameWithoutExtension(file);
+                var slugMatch = Regex.Match(filename, @"^\d{4}-\d{2}-\d{2}-(.+)$");
+                var slug = slugMatch.Success ? slugMatch.Groups[1].Value : filename;
+
+                // Get primary section (first in section_names)
+                var sectionNames = GetListValue(frontMatter, "section_names");
+                if (sectionNames.Count == 0)
+                {
+                    sectionNames = GetListValue(frontMatter, "categories").Select(NormalizeSectionName).ToList();
+                }
+
+                var primarySection = sectionNames.FirstOrDefault();
+                if (string.IsNullOrEmpty(primarySection))
+                {
+                    throw new InvalidOperationException($"File '{file}' has no section_names or categories in frontmatter");
+                }
+
+                // Get collection from file path
+                var collection = ExtractCollectionFromPath(file);
+
+                map[slug] = new ArticleInfo(primarySection, collection);
+            }
+            catch
+            {
+                // Skip files that can't be parsed
+            }
+        }
+
+        return map;
+    }
+
+    /// <summary>
+    /// Fix .html links to point to correct /section/collection/slug URLs
+    /// Example: [text](2024-06-05-GitHub-Copilot-Power-User-example.html) → [text](/github-copilot/blogs/GitHub-Copilot-Power-User-example)
+    /// </summary>
+    private static string FixHtmlLinks(string markdown, Dictionary<string, ArticleInfo> slugMap)
+    {
+        // Pattern to match markdown links: [text](url.html) or [text](url.html "title")
+        var linkPattern = @"\[([^\]]+)\]\(([^\s)]+\.html)(?:\s+""([^""]*)"")?\)";
+
+        return Regex.Replace(markdown, linkPattern, match =>
+        {
+            var text = match.Groups[1].Value;
+            var url = match.Groups[2].Value;
+            var title = match.Groups[3].Success ? match.Groups[3].Value : null;
+
+            // Only process local .html links (not external URLs)
+            if (url.Contains("://", StringComparison.Ordinal))
+            {
+                return match.Value; // Keep external links unchanged
+            }
+
+            // Extract filename from URL (handle relative paths)
+            var filename = Path.GetFileNameWithoutExtension(url);
+
+            // Extract slug
+            var slugMatch = Regex.Match(filename, @"^\d{4}-\d{2}-\d{2}-(.+)$");
+            var slug = slugMatch.Success ? slugMatch.Groups[1].Value : filename;
+
+            // Look up article in map
+            if (slugMap.TryGetValue(slug, out var articleInfo))
+            {
+                // Build correct URL
+                var newUrl = $"/{articleInfo.PrimarySection}/{articleInfo.Collection}/{slug}";
+
+                // Rebuild markdown link
+                var result = $"[{text}]({newUrl}";
+                if (!string.IsNullOrEmpty(title))
+                {
+                    result += $" \"{title}\"";
+                }
+
+                result += ")";
+                return result;
+            }
+
+            // If not found in map, keep original link (broken link - will be caught at runtime)
+            return match.Value;
+        });
+    }
+
+    private record ArticleInfo(string PrimarySection, string Collection);
 }

@@ -1,6 +1,5 @@
 using Markdig;
 using TechHub.Core.Interfaces;
-using TechHub.Infrastructure.Markdown;
 
 namespace TechHub.Infrastructure.Services;
 
@@ -10,24 +9,13 @@ namespace TechHub.Infrastructure.Services;
 /// </summary>
 public class MarkdownService : IMarkdownService
 {
-    private readonly MarkdownPipeline _defaultPipeline;
-    private readonly MarkdownPipeline _linkRewriterPipeline;
+    private readonly MarkdownPipeline _pipeline;
 
     public MarkdownService()
     {
-        // Build default pipeline once (without link rewriting)
-        _defaultPipeline = BuildPipeline(linkRewriter: null);
-
-        // Build pipeline with link rewriter once (accepts nullable parameters)
-        _linkRewriterPipeline = BuildPipeline(new LinkRewriterExtension(null, null, null));
-    }
-
-    /// <summary>
-    /// Build a Markdig pipeline with comprehensive GitHub Flavored Markdown extensions
-    /// </summary>
-    private static MarkdownPipeline BuildPipeline(LinkRewriterExtension? linkRewriter)
-    {
-        var builder = new MarkdownPipelineBuilder()
+        // Build single pipeline once - all Markdig extensions configured here
+        // Link rewriting handled via preprocessing (before render) and post-processing (after render)
+        _pipeline = new MarkdownPipelineBuilder()
             .UseAdvancedExtensions()      // Tables, task lists, footnotes, definition lists, abbreviations, etc.
             .UseEmojiAndSmiley()          // :emoji: support
             .UseYamlFrontMatter()         // YAML frontmatter parsing
@@ -45,14 +33,8 @@ public class MarkdownService : IMarkdownService
             .UseBootstrap()               // Bootstrap CSS classes
             .UseDiagrams()                // Mermaid diagram support
             .UseMathematics()             // LaTeX math support
-            .UseFigures();                // Figure and figcaption elements
-
-        if (linkRewriter != null)
-        {
-            builder.Use(linkRewriter);
-        }
-
-        return builder.Build();
+            .UseFigures()                 // Figure and figcaption elements
+            .Build();
     }
 
     /// <summary>
@@ -70,14 +52,12 @@ public class MarkdownService : IMarkdownService
     }
 
     /// <summary>
-    /// Convert markdown to HTML with link rewriting
+    /// Convert markdown to HTML
     /// </summary>
     /// <param name="markdown">Raw markdown content</param>
-    /// <param name="currentPagePath">Current page path for fixing hash links</param>
-    /// <param name="sectionName">Section name for internal link rewriting</param>
-    /// <param name="collectionName">Collection name for internal link rewriting</param>
+    /// <param name="currentPagePath">Current page path for fixing hash-only links (needed for Blazor routing)</param>
     /// <returns>Rendered HTML with properly formatted links</returns>
-    public string RenderToHtml(string markdown, string? currentPagePath = null, string? sectionName = null, string? collectionName = null)
+    public string RenderToHtml(string markdown, string? currentPagePath = null)
     {
         if (string.IsNullOrWhiteSpace(markdown))
         {
@@ -86,49 +66,134 @@ public class MarkdownService : IMarkdownService
 
         try
         {
-            // If context provided, use link rewriter pipeline (LinkRewriterExtension handles nullable params via context)
-            if (!string.IsNullOrEmpty(currentPagePath) || !string.IsNullOrEmpty(sectionName))
+            // Preprocess: Rewrite hash-only links for Blazor routing
+            if (!string.IsNullOrEmpty(currentPagePath))
             {
-                // Note: LinkRewriterExtension needs to be updated to accept context dynamically
-                // For now, rebuild pipeline (TODO: optimize by making LinkRewriterExtension stateless)
-                var customPipeline = new MarkdownPipelineBuilder()
-                    .UseAdvancedExtensions()
-                    .UseEmojiAndSmiley()
-                    .UseYamlFrontMatter()
-                    .UseAutoLinks()
-                    .UsePipeTables()
-                    .UseGridTables()
-                    .UseListExtras()
-                    .UseCitations()
-                    .UseCustomContainers()
-                    .UseGenericAttributes()
-                    .UseAutoIdentifiers()
-                    .UseTaskLists()
-                    .UseMediaLinks()
-                    .UseSmartyPants()
-                    .UseBootstrap()
-                    .UseDiagrams()
-                    .UseMathematics()
-                    .UseFigures()
-                    .Use(new LinkRewriterExtension(currentPagePath, sectionName, collectionName))
-                    .Build();
-
-                return Markdig.Markdown.ToHtml(markdown, customPipeline);
+                markdown = PreprocessMarkdownLinks(markdown, currentPagePath);
             }
 
-            // Use default pipeline without link rewriting
-            return Markdig.Markdown.ToHtml(markdown, _defaultPipeline);
+            // Render markdown to HTML using shared pipeline
+            var html = Markdig.Markdown.ToHtml(markdown, _pipeline);
+
+            // Post-process: Add target="_blank" to external links
+            html = AddTargetBlankToExternalLinks(html);
+
+            return html;
         }
         catch (Exception ex)
         {
             // Add context to Markdig exceptions to help identify problematic content
             var preview = markdown.Length > 200 ? markdown[..200] + "..." : markdown;
             throw new InvalidOperationException(
-                $"Failed to render markdown to HTML. " +
-                $"CurrentPagePath: '{currentPagePath}', SectionName: '{sectionName}', CollectionName: '{collectionName}'. " +
-                $"Markdown preview: {preview}",
+                $"Failed to render markdown to HTML. CurrentPagePath: '{currentPagePath}'. Markdown preview: {preview}",
                 ex);
         }
+    }
+
+    /// <summary>
+    /// Preprocess markdown to rewrite hash-only links before rendering
+    /// </summary>
+    private static string PreprocessMarkdownLinks(string markdown, string? currentPagePath)
+    {
+        // Pattern to match markdown links: [text](url) or [text](url "title")
+        var linkPattern = @"\[([^\]]+)\]\(([^\s)]+)(?:\s+""([^""]*)"")?\)";
+
+        return System.Text.RegularExpressions.Regex.Replace(markdown, linkPattern, match =>
+        {
+            var text = match.Groups[1].Value;
+            var url = match.Groups[2].Value;
+            var title = match.Groups[3].Success ? match.Groups[3].Value : null;
+
+            // Rewrite URL (only hash-only links)
+            var rewrittenUrl = RewriteUrl(url, currentPagePath);
+
+            // Rebuild markdown link
+            var result = $"[{text}]({rewrittenUrl}";
+            if (!string.IsNullOrEmpty(title))
+            {
+                result += $" \"{title}\"";
+            }
+
+            result += ")";
+
+            return result;
+        });
+    }
+
+    /// <summary>
+    /// Rewrite hash-only links to include current page path (for Blazor routing)
+    /// </summary>
+    private static string RewriteUrl(string url, string? currentPagePath)
+    {
+        // Hash-only links (#heading) - prepend current page path
+        if (url.StartsWith('#') && !string.IsNullOrEmpty(currentPagePath))
+        {
+            return $"{currentPagePath}{url}";
+        }
+
+        // Note: .html link rewriting is handled by ContentFixer at build time
+        // ContentFixer looks up actual article location by slug and rewrites to /section/collection/slug
+        // This ensures links always point to the correct section/collection
+
+        // No changes needed
+        return url;
+    }
+
+    /// <summary>
+    /// Post-process HTML to add target="_blank" and rel="noopener noreferrer" to external links
+    /// </summary>
+    private static string AddTargetBlankToExternalLinks(string html)
+    {
+        // Pattern to match <a href="..."> tags
+        var linkPattern = @"<a\s+href=""([^""]+)""([^>]*)>";
+
+        return System.Text.RegularExpressions.Regex.Replace(html, linkPattern, match =>
+        {
+            var url = match.Groups[1].Value;
+            var otherAttributes = match.Groups[2].Value;
+
+            // Check if external link
+            if (IsExternalLink(url))
+            {
+                // Add target and rel if not already present
+                if (!otherAttributes.Contains("target=", StringComparison.Ordinal))
+                {
+                    otherAttributes += " target=\"_blank\" rel=\"noopener noreferrer\"";
+                }
+            }
+
+            return $"<a href=\"{url}\"{otherAttributes}>";
+        });
+    }
+
+    /// <summary>
+    /// Check if a URL is external (different domain or protocol)
+    /// </summary>
+    private static bool IsExternalLink(string url)
+    {
+        if (string.IsNullOrEmpty(url))
+            return false;
+
+        // Hash-only links are internal
+        if (url.StartsWith('#'))
+            return false;
+
+        // Relative paths are internal
+        if (url.StartsWith('/'))
+            return false;
+
+        // Check if it has a protocol (http://, https://, mailto:, etc.)
+        if (url.Contains("://", StringComparison.Ordinal))
+        {
+            // URLs with protocols are external unless they're our own domains
+            var uri = new Uri(url, UriKind.Absolute);
+            return uri.Host != "tech.hub.ms"
+                && uri.Host != "tech.xebia.ms"
+                && uri.Host != "localhost";
+        }
+
+        // Relative paths without / are internal
+        return false;
     }
 
     /// <summary>

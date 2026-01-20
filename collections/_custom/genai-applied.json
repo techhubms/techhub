@@ -5,7 +5,6 @@
         "ai"
     ],
     "tags": [
-        "AI",
         "Generative AI",
         "Applications",
         "Use Cases",
@@ -118,6 +117,7 @@
                     "description": "Your sources of truth (docs, DBs, APIs) and authorization"
                 }
             ],
+            "architectureDiagram": "graph TB\n    subgraph Experience[\"Experience Layer\"]\n        Chat[\"Chat Interface\"]\n        Inline[\"Inline Suggestions\"]\n        Forms[\"Form Assistance\"]\n        Copilot[\"Copilot Features\"]\n    end\n    \n    subgraph Orchestration[\"Orchestration Layer\"]\n        Prompts[\"Prompt Engineering\"]\n        Tools[\"Tool/Function Calling\"]\n        RAG[\"RAG & Retrieval\"]\n        Guards[\"Guardrails & Eval\"]\n    end\n    \n    subgraph Data[\"Data & Systems Layer\"]\n        Docs[(\"Documentation\")]\n        DB[(\"Databases\")]\n        APIs[\"External APIs\"]\n        Auth[\"Authorization\"]\n    end\n    \n    Chat --> Prompts\n    Inline --> Prompts\n    Forms --> Prompts\n    Copilot --> Prompts\n    \n    Prompts --> Docs\n    Tools --> DB\n    RAG --> Docs\n    Guards --> APIs\n    Tools --> APIs\n    RAG --> DB\n    Prompts --> Auth\n    \n    style Chat fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Inline fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Forms fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Copilot fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Prompts fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Tools fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style RAG fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Guards fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Docs fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style DB fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style APIs fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Auth fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6",
             "tools": [
                 {
                     "name": "Visual Studio Code",
@@ -180,6 +180,200 @@
                 {
                     "question": "Which mode should I use for a complex feature implementation?",
                     "answer": "Start with Ask mode to discuss the approach, then use Agent mode for implementation, and Edit mode for refinements."
+                }
+            ]
+        },
+        {
+            "id": "building-multi-agent-systems",
+            "title": "Building Multi-Agent Systems",
+            "intro": "Multi-agent systems move beyond single 'do-everything' assistants to collaborative groups where each agent brings a specific skill.",
+            "whenToUse": [
+                "Large workloads can be divided into smaller tasks for parallel processing",
+                "Complex tasks require distinct competencies (retrieval vs. code generation vs. review)",
+                "Separation of duties matters (policy checking, compliance review)",
+                "Different expertise is needed for different aspects of a task",
+                "Stronger isolation is required (running agents under least-privilege identities)"
+            ],
+            "developmentPhases": [
+                {
+                    "name": "Phase 1: Design (Low-Code)",
+                    "description": "Use Microsoft Foundry Workflows to visually design agent orchestration with pre-built templates, node types, and Power Fx expressions for complex logic."
+                },
+                {
+                    "name": "Phase 2: Develop (Local SDLC)",
+                    "description": "Use the Microsoft Foundry VS Code Extension to pull workflow definitions locally for debugging, testing, and integration."
+                },
+                {
+                    "name": "Phase 3: Deploy (Runtime)",
+                    "description": "Microsoft Agent Framework natively ingests declarative workflow definitions (YAML) from Foundry for production deployment."
+                }
+            ],
+            "orchestrationPatterns": [
+                {
+                    "pattern": "Sequential",
+                    "useCase": "Tasks have dependencies and must run in order"
+                },
+                {
+                    "pattern": "Concurrent",
+                    "useCase": "Tasks are independent and can run in parallel"
+                },
+                {
+                    "pattern": "Group Chat",
+                    "useCase": "Multiple perspectives need to collaborate iteratively"
+                },
+                {
+                    "pattern": "Handoff",
+                    "useCase": "Context determines which specialist should handle the work"
+                }
+            ],
+            "designPrinciples": [
+                "Make handoffs explicit: Define schemas that capture goal, inputs, constraints, evidence, and success criteria",
+                "Pass artifacts by reference: Use file IDs or links rather than copying full content",
+                "Bound execution: Set token/turn caps and clear exit conditions to prevent runaway loops",
+                "Log everything: Capture every handoff and tool call for traceability",
+                "Build evaluation harnesses: Exercise end-to-end scenarios to quantify quality"
+            ],
+            "memory": {
+                "description": "Microsoft Foundry provides managed long-term memory that enables agents to retain and recall information across sessions.",
+                "types": [
+                    {
+                        "type": "User profile memory",
+                        "description": "Persistent information about users (name, preferences, dietary restrictions)"
+                    },
+                    {
+                        "type": "Chat summary memory",
+                        "description": "Distilled summaries of conversation topics"
+                    }
+                ],
+                "howItWorks": [
+                    "Extraction: Identifies key information from conversations",
+                    "Consolidation: Merges similar memories and resolves conflicts",
+                    "Retrieval: Hybrid search surfaces relevant memories when needed"
+                ]
+            }
+        },
+        {
+            "id": "monitoring-and-evaluating-ai-applications",
+            "title": "Monitoring and Evaluating AI Applications",
+            "intro": "Building AI applications is only half the challenge. You also need to monitor performance, evaluate quality, and ensure safety in production.",
+            "whyItMatters": "Without rigorous assessment, AI systems can produce outputs that are fabricated, irrelevant, harmful, or vulnerable to exploits.",
+            "evaluationPhases": [
+                {
+                    "phase": "Before deployment (preproduction)",
+                    "activities": [
+                        "Test with evaluation datasets that simulate realistic user interactions",
+                        "Identify edge cases where output quality might degrade",
+                        "Measure key metrics like groundedness, relevance, coherence, and safety",
+                        "Run AI red teaming to simulate adversarial attacks",
+                        "Generate synthetic data if you lack real test data"
+                    ]
+                },
+                {
+                    "phase": "After deployment (production)",
+                    "activities": [
+                        "Continuous evaluation: Sample production traffic and assess quality/safety",
+                        "Scheduled evaluation: Run periodic tests with fixed datasets to detect drift",
+                        "Operational metrics: Track latency, throughput, token consumption, error rates",
+                        "Alerting: Set up notifications when metrics drop below thresholds"
+                    ]
+                }
+            ],
+            "evaluatorTypes": [
+                {
+                    "type": "General quality",
+                    "measures": "Coherence, fluency, overall response quality"
+                },
+                {
+                    "type": "RAG quality",
+                    "measures": "Groundedness, relevance, how well responses use retrieved context"
+                },
+                {
+                    "type": "Safety",
+                    "measures": "Harmful content, bias, protected material, security vulnerabilities"
+                },
+                {
+                    "type": "Agent-specific",
+                    "measures": "Task adherence, task completion, tool call accuracy"
+                }
+            ],
+            "azureSetup": [
+                "Connect Application Insights to your Foundry project",
+                "Instrument tracing to capture detailed telemetry",
+                "Enable continuous evaluation to automatically assess production traffic",
+                "Use the dashboard to visualize metrics",
+                "Set up alerts for issue notifications"
+            ]
+        },
+        {
+            "id": "the-ai-native-web",
+            "title": "The AI-Native Web: NLWeb, llms.txt, and Semantic Search",
+            "intro": "AI is changing how we navigate websites and data. Instead of clicking through menus and forms, we'll increasingly describe what we want in natural language.",
+            "concepts": [
+                {
+                    "name": "Semantic search",
+                    "description": "Traditional search matches exact words. Semantic search matches meaning using embeddings (numeric representations of text).",
+                    "useCases": [
+                        "Retrieval-Augmented Generation (RAG)",
+                        "Site search that understands synonyms and context",
+                        "Cross-type discovery (e.g., 'the video that explains streaming tokens')"
+                    ]
+                },
+                {
+                    "name": "NLWeb (natural-language web)",
+                    "description": "Patterns that make the web conversational by default. Pages expose capabilities as structured affordances that AI agents can call.",
+                    "changes": [
+                        "Interfaces become intent-first rather than page-first",
+                        "Sites describe actions and data in machine-readable ways",
+                        "Results include sources, links, and artifacts you can reuse"
+                    ],
+                    "implementation": "Open-source project that simplifies building conversational interfaces using semi-structured formats (Schema.org, RSS), vector stores, and MCP."
+                },
+                {
+                    "name": "llms.txt",
+                    "description": "Like robots.txt for crawlers, a proposed convention for publishing an LLM-friendly index of a site.",
+                    "details": "A markdown file at /llms.txt that points to the most useful pages with summaries and optional 'nice to have' links."
+                }
+            ],
+            "bottomLine": "By adding llms.txt and shipping semantic search (or clean, machine-readable structure), you make your content easier for both people and agents to discover, cite, and reuse."
+        },
+        {
+            "id": "learning-resources",
+            "title": "Learning Resources",
+            "intro": "Resources to continue your GenAI learning journey, from structured courses to hands-on experimentation.",
+            "courses": [
+                {
+                    "title": "Microsoft Learn: Introduction to AI on Azure",
+                    "url": "https://learn.microsoft.com/en-us/training/paths/introduction-to-ai-on-azure/"
+                },
+                {
+                    "title": "Hugging Face courses",
+                    "url": "https://huggingface.co/learn"
+                },
+                {
+                    "title": "LinkedIn Learning: AI development with GitHub Models and Azure",
+                    "url": "https://www.linkedin.com/learning/enterprise-ai-development-with-github-models-and-azure"
+                },
+                {
+                    "title": "GitHub Skills",
+                    "url": "https://skills.github.com/"
+                },
+                {
+                    "title": "Let's build GPT: from scratch, in code, spelled out",
+                    "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY"
+                }
+            ],
+            "moreFromThisSite": [
+                {
+                    "title": "AI-focused videos and tutorials",
+                    "url": "/ai/videos"
+                },
+                {
+                    "title": "Blogs about AI implementation",
+                    "url": "/ai/blogs"
+                },
+                {
+                    "title": "Microsoft and Azure updates",
+                    "url": "/all/blogs"
                 }
             ]
         }

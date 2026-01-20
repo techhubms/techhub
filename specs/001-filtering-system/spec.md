@@ -286,7 +286,7 @@ Users see contextually-scoped tag clouds in the sidebar showing top 20 most-used
 
 ### Key Entities
 
-- **SidebarTags**: Component that displays available tags and manages selection state
+- **SidebarTagCloud**: Component that displays available tags with size-based rendering and manages selection state
 - **TagFilter**: Represents selected tags with OR logic (match any tag)
 - **DateRangeFilter**: Represents selected date range with preset options
 - **FilterState**: Combined state of tag filters, date range, and URL parameters
@@ -360,7 +360,7 @@ Users see contextually-scoped tag clouds in the sidebar showing top 20 most-used
 
 **Frontend Components (PLACEHOLDER)**:
 
-- `SidebarTags.razor` exists but is non-functional
+- `SidebarTagCloud.razor` implemented with quantile-based sizing and interactive filtering
 - Needs complete rewrite to support tag selection, URL parameters, and state management
 
 ### Component Architecture

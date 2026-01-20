@@ -99,9 +99,8 @@ src/
 │   │   ├── css/                      # Global CSS (design system, components)
 │   │   │   ├── design-tokens.css
 │   │   │   ├── base.css
-│   │   │   ├── layout.css
-│   │   │   ├── components/
-│   │   │   └── utilities.css
+│   │   │   ├── sidebar.css
+│   │   │   └── ...
 │   │   └── images/                   # Images (/images/ convention, NOT /assets/)
 │   └── TechHub.Web.csproj
 ├── TechHub.Core/                      # Domain Models & Interfaces

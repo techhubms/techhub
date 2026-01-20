@@ -163,6 +163,49 @@ public class FileBasedContentRepositoryTests : IDisposable
     }
 
     /// <summary>
+    /// Test: GetByCollectionAsync with "all" returns all content
+    /// Why: The /all/all collection page should show all content across all collections
+    ///      "all" is a virtual collection that returns all content from all collections
+    /// </summary>
+    [Fact]
+    public async Task GetByCollectionAsync_AllCollection_ReturnsAllContent()
+    {
+        // Arrange: Create content in different collections
+        var newsDir = Path.Combine(_collectionsPath, "_news");
+        var blogsDir = Path.Combine(_collectionsPath, "_blogs");
+        Directory.CreateDirectory(newsDir);
+        Directory.CreateDirectory(blogsDir);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "news1.md"), """
+            ---
+            title: News Item 1
+            date: 2025-01-01
+            section_names: [ai]
+            tags: [News]
+            ---
+            News content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(blogsDir, "blog1.md"), """
+            ---
+            title: Blog Post 1
+            date: 2025-01-02
+            section_names: [ai]
+            tags: [Blog]
+            ---
+            Blog content
+            """);
+
+        // Act: Get "all" collection (virtual collection)
+        var allContent = await _repository.GetByCollectionAsync("all");
+
+        // Assert: Returns all content from all collections
+        allContent.Should().HaveCount(2);
+        allContent.Should().Contain(item => item.Title == "News Item 1");
+        allContent.Should().Contain(item => item.Title == "Blog Post 1");
+    }
+
+    /// <summary>
     /// Test: GetBySectionAsync filters content by section name
     /// Why: Sections display content filtered by section name (ai, github-copilot, etc.)
     /// </summary>
@@ -200,6 +243,49 @@ public class FileBasedContentRepositoryTests : IDisposable
         aiContent.Should().ContainSingle();
         aiContent[0].Title.Should().Be("AI News");
         aiContent[0].SectionNames.Should().Contain("ai");
+    }
+
+    /// <summary>
+    /// Test: GetBySectionAsync with "all" returns all content
+    /// Why: The /all section page should show all content across all sections
+    ///      "all" is a virtual section that returns all content from all sections
+    /// </summary>
+    [Fact]
+    public async Task GetBySectionAsync_AllSection_ReturnsAllContent()
+    {
+        // Arrange: Create content with different sections
+        var newsDir = Path.Combine(_collectionsPath, "_news");
+        var blogsDir = Path.Combine(_collectionsPath, "_blogs");
+        Directory.CreateDirectory(newsDir);
+        Directory.CreateDirectory(blogsDir);
+
+        await File.WriteAllTextAsync(Path.Combine(newsDir, "ai-news.md"), """
+            ---
+            title: AI News
+            date: 2025-01-01
+            section_names: [ai]
+            tags: [AI]
+            ---
+            AI content
+            """);
+
+        await File.WriteAllTextAsync(Path.Combine(blogsDir, "ghc-blog.md"), """
+            ---
+            title: GitHub Copilot Blog
+            date: 2025-01-02
+            section_names: [github-copilot]
+            tags: [Copilot]
+            ---
+            Copilot content
+            """);
+
+        // Act: Get "all" section content (virtual section)
+        var allContent = await _repository.GetBySectionAsync("all");
+
+        // Assert: Returns all content from all sections
+        allContent.Should().HaveCount(2);
+        allContent.Should().Contain(item => item.Title == "AI News");
+        allContent.Should().Contain(item => item.Title == "GitHub Copilot Blog");
     }
 
     /// <summary>

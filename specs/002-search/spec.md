@@ -159,7 +159,7 @@ Users see clear feedback about search state, result counts, and empty result sce
 **Frontend Components**:
 
 - `SidebarSearch` component needs to be created
-- May be part of `SidebarTags` component or separate component
+- May be part of `SidebarTagCloud` component or separate component
 
 ### Component Architecture
 

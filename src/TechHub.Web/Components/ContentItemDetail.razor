@@ -1,26 +1,24 @@
 @using TechHub.Core.DTOs
 
-<article class="content-detail">
-    <header class="content-detail-header">
-        <h1 class="page-h1" tabindex="-1">@Item.Title</h1>
+<div class="content-detail-header">
+    <h1 class="page-h1" tabindex="-1">@Item.Title</h1>
 
-        <div class="article-metadata">
-            <time datetime="@Item.DateIso">@FormatDate(Item.DateEpoch)</time>
-            @if (!string.IsNullOrWhiteSpace(Item.Author))
-            {
-                <span class="metadata-separator">•</span>
-                <span class="author">@Item.Author</span>
-            }
-        </div>
-    </header>
+    <div class="article-metadata">
+        <time datetime="@Item.DateIso">@FormatDate(Item.DateEpoch)</time>
+        @if (!string.IsNullOrWhiteSpace(Item.Author))
+        {
+            <span class="metadata-separator">•</span>
+            <span class="author">@Item.Author</span>
+        }
+    </div>
+</div>
 
-    @if (!string.IsNullOrWhiteSpace(Item.RenderedHtml))
-    {
-        <div class="content-detail-body">
-            @((MarkupString)Item.RenderedHtml)
-        </div>
-    }
-</article>
+@if (!string.IsNullOrWhiteSpace(Item.RenderedHtml))
+{
+    <div class="article-body">
+        @((MarkupString)Item.RenderedHtml)
+    </div>
+}
 
 @code {
     [Parameter, EditorRequired]

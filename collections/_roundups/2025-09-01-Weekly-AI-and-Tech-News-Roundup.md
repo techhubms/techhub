@@ -101,15 +101,15 @@ Building on previous multi-model support, Copilot’s latest preview supports GP
 - [Public Preview: Grok Code Fast 1 Model Now Available in GitHub Copilot](https://github.blog/changelog/2025-08-26-grok-code-fast-1-is-rolling-out-in-public-preview-for-github-copilot)
 - [Copilot Coding Agent Adds AGENTS.md Custom Instruction Support](https://github.blog/changelog/2025-08-28-copilot-coding-agent-now-supports-agents-md-custom-instructions)
 - [Announcing Awesome Copilot MCP Server: Customizing GitHub Copilot Like a Pro](https://devblogs.microsoft.com/blog/announcing-awesome-copilot-mcp-server)
-- [MCP Servers in VS Code and GitHub Copilot](/videos/2025-08-27-MCP-Servers-in-VS-Code-and-GitHub-Copilot.html)
-- [Installing the GitHub MCP Server in Visual Studio Code](/videos/2025-08-28-Installing-the-GitHub-MCP-Server-in-Visual-Studio-Code.html)
+- [MCP Servers in VS Code and GitHub Copilot](/ai/videos/MCP-Servers-in-VS-Code-and-GitHub-Copilot)
+- [Installing the GitHub MCP Server in Visual Studio Code](/ai/videos/Installing-the-GitHub-MCP-Server-in-Visual-Studio-Code)
 
 ### Copilot as an Agent: Automated Coding, Code Review, and Collaborative Features
 
 Copilot’s functionality as a coding agent extends to GitHub Enterprise Cloud, now supporting data residency policies and improved security controls for business automation. The Agents Panel is expanding, Raycast integration adds desktop productivity options, and code review enhancements in Xcode give administrators new controls. Sub-issue management in Copilot Chat introduces a structured framework for conversation-based agile planning, supporting recent improvements in collaborative work.
 
 - [Copilot Coding Agent Now in GitHub Enterprise Cloud with Data Residency](https://github.blog/changelog/2025-08-27-copilot-coding-agent-is-now-available-in-github-enterprise-cloud-with-data-residency)
-- [The Download: GitHub Copilot Agents, Actions Security, and Vite's npm Milestone](/videos/2025-08-29-The-Download-GitHub-Copilot-Agents-Actions-Security-and-Vites-npm-Milestone.html)
+- [The Download: GitHub Copilot Agents, Actions Security, and Vite's npm Milestone](/ai/videos/The-Download-GitHub-Copilot-Agents-Actions-Security-and-Vites-npm-Milestone)
 - [Start and Track GitHub Copilot Coding Agent Tasks from Raycast](https://github.blog/changelog/2025-08-28-start-and-track-copilot-coding-agent-tasks-from-raycast)
 - [Copilot Code Review: Now Available in Xcode and Enterprise Admin Controls](https://github.blog/changelog/2025-08-27-copilot-code-review-generally-available-in-xcode-and-new-admin-control)
 - [Managing Sub-Issues with GitHub Copilot: Public Preview Update](https://github.blog/changelog/2025-08-27-create-sub-issues-with-copilot-in-public-preview)
@@ -127,12 +127,12 @@ Copilot now gives Pro+, Business, and Enterprise users the ability to choose bet
 
 - [Inside GitHub Copilot: The AI Models Behind Your Coding Assistant](https://github.blog/ai-and-ml/github-copilot/under-the-hood-exploring-the-ai-models-powering-github-copilot/)
 - [GitHub Copilot Code Completion Now Powered by GPT-4.1 Model](https://github.blog/changelog/2025-08-27-copilot-code-completion-now-uses-the-gpt-4-1-copilot-model)
-- [Create GitHub Copilot Instructions in Just One Click](/videos/2025-08-31-Create-GitHub-Copilot-Instructions-in-Just-One-Click.html)
+- [Create GitHub Copilot Instructions in Just One Click](/ai/videos/Create-GitHub-Copilot-Instructions-in-Just-One-Click)
 - [Mastering GitHub Copilot: Tips, Shortcuts, and Prompts That Work](https://dellenny.com/mastering-github-copilot-tips-shortcuts-and-prompts-that-work/)
 - [How to Use GitHub Copilot on github.com: A Power User’s Guide](https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-on-github-com-a-power-users-guide/)
 - [Boost Code Quality Fast with GitHub Copilot Edit Mode](https://cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html)
-- [How to Automate Code Reviews and Testing with GitHub Copilot](/videos/2025-08-27-How-to-Automate-Code-Reviews-and-Testing-with-GitHub-Copilot.html)
-- [Managing Your GitHub Enterprise: Policies, Copilot, and Security Settings](/videos/2025-08-28-Managing-Your-GitHub-Enterprise-Policies-Copilot-and-Security-Settings.html)
+- [How to Automate Code Reviews and Testing with GitHub Copilot](/ai/videos/How-to-Automate-Code-Reviews-and-Testing-with-GitHub-Copilot)
+- [Managing Your GitHub Enterprise: Policies, Copilot, and Security Settings](/ai/videos/Managing-Your-GitHub-Enterprise-Policies-Copilot-and-Security-Settings)
 - [Using GitHub Copilot to Teach Programming: A New Approach for Educators](https://dellenny.com/using-github-copilot-to-teach-programming-a-new-approach-for-educators/)
 
 ### Copilot Integrations and Developer Event Highlights
@@ -140,16 +140,16 @@ Copilot now gives Pro+, Business, and Enterprise users the ability to choose bet
 Broader public previews rolled out for Copilot integrations in Visual Studio 2022, JetBrains IDEs, and expanded MCP support in VS Code. JetBrains gets Next Edit Suggestions (NES); VS Code launches Spec Kit for specification-driven development, continuing efforts in workflow automation and collaboration. VS Code Dev Days offer educational events for practitioners, building on previous GitHub Universe gatherings to promote skill sharing and community learning.
 
 - [Next Edit Suggestions (NES) with GitHub Copilot for JetBrains IDEs: Public Preview](https://github.blog/changelog/2025-08-29-copilots-next-edit-suggestion-nes-in-public-preview-in-jetbrains)
-- [Introducing Spec Kit for Spec-Driven Development in VS Code](/videos/2025-08-29-Introducing-Spec-Kit-for-Spec-Driven-Development-in-VS-Code.html)
+- [Introducing Spec Kit for Spec-Driven Development in VS Code](/ai/videos/Introducing-Spec-Kit-for-Spec-Driven-Development-in-VS-Code)
 - [VS Code Dev Days: Explore AI-Assisted Development with GitHub Copilot](https://code.visualstudio.com/blogs/2025/08/27/vscode-dev-days)
 
 ### Other GitHub Copilot News
 
 Workflows remain a main focus, with fresh guides showing how to enable full agentic cycles and use advanced debugging features—expanding on coverage for agent scripting and MCP customization. The .NET AI Community Standup and a review of MCP comparisons provide additional insights for hybrid and enterprise Copilot implementation.
 
-- [End-to-End Agentic Development with GitHub Copilot: A Developer Workflow Demo](/videos/2025-08-26-End-to-End-Agentic-Development-with-GitHub-Copilot-A-Developer-Workflow-Demo.html)
-- [Automate Debugging with the Playwright MCP Server and GitHub Copilot](/videos/2025-08-25-Automate-Debugging-with-the-Playwright-MCP-Server-and-GitHub-Copilot.html)
-- [.NET AI Community Standup: AI Tools Every .NET Dev Needs](/videos/2025-08-25-NET-AI-Community-Standup-AI-Tools-Every-NET-Dev-Needs.html)
+- [End-to-End Agentic Development with GitHub Copilot: A Developer Workflow Demo](/ai/videos/End-to-End-Agentic-Development-with-GitHub-Copilot-A-Developer-Workflow-Demo)
+- [Automate Debugging with the Playwright MCP Server and GitHub Copilot](/ai/videos/Automate-Debugging-with-the-Playwright-MCP-Server-and-GitHub-Copilot)
+- [.NET AI Community Standup: AI Tools Every .NET Dev Needs](/ai/videos/NET-AI-Community-Standup-AI-Tools-Every-NET-Dev-Needs)
 
 ## AI
 
@@ -162,7 +162,7 @@ Azure AI Foundry released upgraded tools for orchestrating multi-agent systems, 
 - [Multi-Agent Orchestration with Azure AI Foundry: From Idea to Production](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/multi-agent-orchestration-with-azure-ai-foundry-from-idea-to/ba-p/4449925)
 - [Retrieval-Augmented Generation (RAG) in Azure AI: A Step-by-Step Guide](https://dellenny.com/retrieval-augmented-generation-rag-in-azure-ai-a-step-by-step-guide/)
 - [General Availability of the Responses API in Azure AI Foundry](https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/the-responses-api-in-azure-ai-foundry-is-now-generally-available/ba-p/4446567)
-- [Freeform Tool Calling with GPT-5 in Azure AI Foundry](/videos/2025-08-27-Freeform-Tool-Calling-with-GPT-5-in-Azure-AI-Foundry.html)
+- [Freeform Tool Calling with GPT-5 in Azure AI Foundry](/ai/videos/Freeform-Tool-Calling-with-GPT-5-in-Azure-AI-Foundry)
 
 ### Semantic Kernel: Security, Template Updates, and Azure Integration Changes
 
@@ -175,14 +175,14 @@ Semantic Kernel Python 1.36.0 now requires explicit credential configuration for
 
 Tutorials explain how to use MCP, A2A, and NLWeb agentic communication for improved context management. Analysis of API limitations continues the discussion of context-aware, intent-driven automation and its impact on lifecycle, versioning, and security—in line with recent best practices.
 
-- [Using Agentic Protocols (MCP, A2A, and NLWeb)](/videos/2025-08-27-Using-Agentic-Protocols-MCP-A2A-and-NLWeb.html)
+- [Using Agentic Protocols (MCP, A2A, and NLWeb)](/ai/videos/Using-Agentic-Protocols-MCP-A2A-and-NLWeb)
 - [Why APIs Alone Won’t Cut It in the AI Era](https://devops.com/why-apis-alone-wont-cut-it-in-the-ai-era/?utm_source=rss&utm_medium=rss&utm_campaign=why-apis-alone-wont-cut-it-in-the-ai-era)
 
 ### Advanced Search and Security: GraphRAG and Shadow AI Management
 
 GraphRAG combines RAG and semantic graph search, supporting richer enterprise AI search and analytics and deepening security analysis. Guidance on managing shadow AI risk builds on compliance discussions, offering steps for monitoring and regulatory alignment.
 
-- [Exploring GraphRAG: AI-Powered Graph Search for Security Data Analysis](/videos/2025-08-26-Exploring-GraphRAG-AI-Powered-Graph-Search-for-Security-Data-Analysis.html)
+- [Exploring GraphRAG: AI-Powered Graph Search for Security Data Analysis](/ai/videos/Exploring-GraphRAG-AI-Powered-Graph-Search-for-Security-Data-Analysis)
 - [Staying on Top of Shadow AI](https://devops.com/staying-on-top-of-shadow-ai/?utm_source=rss&utm_medium=rss&utm_campaign=staying-on-top-of-shadow-ai)
 
 ### Agent Observability, Cost Management, and HR Automation in the Enterprise
@@ -190,8 +190,8 @@ GraphRAG combines RAG and semantic graph search, supporting richer enterprise AI
 Agent observability and benchmarking resources provide practical recommendations for reliability, cost tracking, and compliance. Tutorials help teams manage AI project budgets and operational visibility. A case study details how Chemist Warehouse uses Azure AI Foundry to automate HR tasks, continuing documentation of AI adoption in specific business sectors.
 
 - [Agent Factory: Top 5 Agent Observability Best Practices for Reliable AI](https://azure.microsoft.com/en-us/blog/agent-factory-top-5-agent-observability-best-practices-for-reliable-ai/)
-- [Why Did the Cost of My AI Agent Exceed the Set Budget?](/videos/2025-08-25-Why-Did-the-Cost-of-My-AI-Agent-Exceed-the-Set-Budget.html)
-- [Context Window: Answering 3 Developer Questions to Save on AI Costs](/videos/2025-08-25-Context-Window-Answering-3-Developer-Questions-to-Save-on-AI-Costs.html)
+- [Why Did the Cost of My AI Agent Exceed the Set Budget?](/ai/videos/Why-Did-the-Cost-of-My-AI-Agent-Exceed-the-Set-Budget)
+- [Context Window: Answering 3 Developer Questions to Save on AI Costs](/ai/videos/Context-Window-Answering-3-Developer-Questions-to-Save-on-AI-Costs)
 - [How Chemist Warehouse Uses Azure AI Foundry for HR Transformation](https://news.microsoft.com/source/asia/features/a-digital-colleague-how-chemist-warehouse-and-insurgence-ai-are-rewriting-the-hr-playbook/)
 
 ### Developer Workflows: Tutorials, Email Agents, and Open Source Trends
@@ -200,7 +200,7 @@ New tutorials build on recent agent setup guidance, demonstrating how to create 
 
 - [Build an AI Email Agent with Microsoft Copilot Studio and Azure Communication Services](https://techcommunity.microsoft.com/t5/azure-communication-services/build-your-ai-email-agent-with-microsoft-copilot-studio/ba-p/4448724)
 - [Rediscovering Joy in Learning: Jason Lengstorf on AI, Open Source, and Developer Growth](https://github.blog/developer-skills/career-growth/rediscovering-joy-in-learning-jason-lengstorf-on-the-state-of-development/)
-- [AI, Project-Based Learning, and the Future of Tech Careers](/videos/2025-08-27-AI-Project-Based-Learning-and-the-Future-of-Tech-Careers.html)
+- [AI, Project-Based Learning, and the Future of Tech Careers](/ai/videos/AI-Project-Based-Learning-and-the-Future-of-Tech-Careers)
 
 ## ML
 
@@ -239,7 +239,7 @@ Azure CNI Overlay and AGIC for AKS (now GA) enable Kubernetes clusters to use ov
 
 - [Container Networking with Azure Application Gateway for Containers (AGC): Overlay vs. Flat AKS](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/container-networking-with-azure-application-gateway-for/ba-p/4449941)
 - [General Availability: Azure CNI Overlay for Application Gateway for Containers and AGIC](https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-cni-overlay-for-application-gateway-for-containers-and/ba-p/4449350)
-- [Azure Weekly Update – 29th August 2025](/videos/2025-08-29-Azure-Weekly-Update-29th-August-2025.html)
+- [Azure Weekly Update – 29th August 2025](/ai/videos/Azure-Weekly-Update-29th-August-2025)
 
 ### Microsoft Fabric: Data Engineering, Analytics, and Machine Learning Enhancements
 
@@ -260,8 +260,8 @@ Logic Apps Standard now support automated deployment from source control using D
 
 Azure Service Groups offer hierarchically organized resources—an upgrade from traditional resource groups—enabling better management, monitoring, and permission assignment. Setup instructions, best practice advice, and permission examples help architects organize large or multi-team environments with granular governance.
 
-- [Azure Service Groups: Flexible Resource Organization Explained](/videos/2025-08-25-Azure-Service-Groups-Flexible-Resource-Organization-Explained.html)
-- [Azure Service Groups Quick Overview](/videos/2025-08-26-Azure-Service-Groups-Quick-Overview.html)
+- [Azure Service Groups: Flexible Resource Organization Explained](/azure/videos/Azure-Service-Groups-Flexible-Resource-Organization-Explained)
+- [Azure Service Groups Quick Overview](/azure/videos/Azure-Service-Groups-Quick-Overview)
 
 ### Secure Configuration and Access Management across Hybrid Estates
 
@@ -282,7 +282,7 @@ Coverage includes Azure RHEL billing migration to vCPU pricing and relevant cost
 - [Azure Red Hat Enterprise Linux Billing Meter ID Migration: What You Need to Know](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/red-hat-enterprise-linux-billing-meter-id-updates-on-azure/ba-p/4449348)
 - [Mine Your Azure Backup Data to Identify Hidden Costs](https://techcommunity.microsoft.com/t5/azure/mine-your-azure-backup-data-it-could-save-you/m-p/4448003#M22143)
 - [Designing for Certainty: How Azure Capacity Reservations Safeguard Mission‑Critical Workloads](https://techcommunity.microsoft.com/t5/azure-governance-and-management/designing-for-certainty-how-azure-capacity-reservations/m-p/4447901#M347)
-- [Azure Top 3 Reliability Actions](/videos/2025-08-27-Azure-Top-3-Reliability-Actions.html)
+- [Azure Top 3 Reliability Actions](/azure/videos/Azure-Top-3-Reliability-Actions)
 
 ### Service Mesh and Advanced Architecture Patterns in AKS
 
@@ -321,7 +321,7 @@ Updates this week for coding include new features in .NET and C#, diagnostic too
 
 Nick Chapsas previews Discriminated Unions for C# 15/16, demonstrating better type safety and simplified code patterns akin to F#, TypeScript, and Rust. MauiReactor provides MVU architecture options for .NET MAUI UI development. EFCore.Visualizer lets Visual Studio users analyze Entity Framework Core query plans inside the IDE, continuing improvements in .NET tooling.
 
-- [Exploring Discriminated Unions Coming to C# 15 and 16](/videos/2025-08-27-Exploring-Discriminated-Unions-Coming-to-C-15-and-16.html)
+- [Exploring Discriminated Unions Coming to C# 15 and 16](/coding/videos/Exploring-Discriminated-Unions-Coming-to-C-15-and-16)
 - [MauiReactor: Introducing the MVU Pattern for .NET MAUI](https://devblogs.microsoft.com/dotnet/mauireactor-mvu-for-dotnet-maui/)
 - [EFCore.Visualizer: Analyze Entity Framework Core Query Plans in Visual Studio](https://devblogs.microsoft.com/dotnet/ef-core-visualizer-view-entity-framework-core-query-plan-inside-visual-studio/)
 
@@ -329,15 +329,15 @@ Nick Chapsas previews Discriminated Unions for C# 15/16, demonstrating better ty
 
 Microsoft has published the source code for WSL internals—including VM startup, filesystem mounting, and GPU handling—on GitHub, boosting community involvement and transparency. Developers have direct access for troubleshooting, customize workflow, and can contribute ideas for enhancements or fixes. Official resources welcome community collaboration and learning.
 
-- [You open sourced WSL. What does that mean?](/videos/2025-08-28-You-open-sourced-WSL-What-does-that-mean.html)
-- [Explaining the Open Sourcing of Windows Subsystem for Linux (WSL)](/videos/2025-08-28-Explaining-the-Open-Sourcing-of-Windows-Subsystem-for-Linux-WSL.html)
+- [You open sourced WSL. What does that mean?](/coding/videos/You-open-sourced-WSL-What-does-that-mean)
+- [Explaining the Open Sourcing of Windows Subsystem for Linux (WSL)](/coding/videos/Explaining-the-Open-Sourcing-of-Windows-Subsystem-for-Linux-WSL)
 
 ### Developer Experience and Workflow Tools
 
 Aspire CLI for .NET streamlines app configuration, integrates cloud dependencies, and supports easy deployment to Azure, Docker Compose, or Kubernetes. Step-by-step guides for installation and commands aim to make distributed development more approachable. VS Code’s August iteration plan previews new terminal enhancements, agent features, and automation, opening discussion for community feedback.
 
 - [Getting Started with the Aspire CLI](https://devblogs.microsoft.com/dotnet/getting-started-with-the-aspire-cli/)
-- [Upcoming Features and Terminal Improvements in Visual Studio Code: August Iteration](/videos/2025-08-25-Upcoming-Features-and-Terminal-Improvements-in-Visual-Studio-Code-August-Iteration.html)
+- [Upcoming Features and Terminal Improvements in Visual Studio Code: August Iteration](/coding/videos/Upcoming-Features-and-Terminal-Improvements-in-Visual-Studio-Code-August-Iteration)
 
 ### Other Coding News
 
@@ -435,7 +435,7 @@ Qwiet AI expands its support for Azure DevOps, Azure Boards, and GitHub, providi
 
 ASP.NET 10 APIs now return HTTP 401 Unauthorized instead of HTTP 302 for unauthenticated requests, streamlining client-side error handling per REST standards.
 
-- [ASP.NET Community Standup: Preventing Login Redirects for APIs](/videos/2025-08-25-ASPNET-Community-Standup-Preventing-Login-Redirects-for-APIs.html)
+- [ASP.NET Community Standup: Preventing Login Redirects for APIs](/coding/videos/ASPNET-Community-Standup-Preventing-Login-Redirects-for-APIs)
 
 A podcast with Kat Cosgrove examines common issues with vulnerability patching, container protection, and Kubernetes hardening, recommending daily automation practices for improved resilience.
 

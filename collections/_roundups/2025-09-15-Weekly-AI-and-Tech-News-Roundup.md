@@ -88,8 +88,8 @@ Following last week’s focus on MCP integration and workflow automation, the VS
 
 These improvements build on last week’s MCP-driven automation. Guides and documentation on Custom Modes offer hands-on prompt engineering instructions. Open sourcing welcomes contributions such as code fixes and feature suggestions, letting users directly affect Copilot’s development. Initial coverage explains the extensibility available for customizing Copilot behavior.
 
-- [VS Code Copilot Extension Goes Open Source: Deep Dive with Burke Holland](/videos/2025-09-09-VS-Code-Copilot-Extension-Goes-Open-Source-Deep-Dive-with-Burke-Holland.html)
-- [Deep Dive into the Open-Sourced VS Code Copilot Extension with Custom Modes](/videos/2025-09-09-Deep-Dive-into-the-Open-Sourced-VS-Code-Copilot-Extension-with-Custom-Modes.html)
+- [VS Code Copilot Extension Goes Open Source: Deep Dive with Burke Holland](/ai/videos/VS-Code-Copilot-Extension-Goes-Open-Source-Deep-Dive-with-Burke-Holland)
+- [Deep Dive into the Open-Sourced VS Code Copilot Extension with Custom Modes](/ai/videos/Deep-Dive-into-the-Open-Sourced-VS-Code-Copilot-Extension-with-Custom-Modes)
 
 ### GitHub Copilot in Visual Studio Code: New Features, AI Models, Security, and Workflow Enhancements
 
@@ -122,7 +122,7 @@ Copilot’s new repository rule allows separate automatic code review from merge
 The MCP remote server (now generally available) links Copilot agents, GitHub workflows, and large language models. Security features include secret scanning, code scanning, and automated advisories. Enterprises can set internal registry and allowlist controls for MCP servers via Copilot in VS Code Insiders, regulating AI endpoint access. These changes make configuration easier and anticipate broader tool support, showing Copilot’s focus on balancing useful AI and governance.
 
 - [Automatic Copilot Code Review: Standalone Repository Rule Now Available](https://github.blog/changelog/2025-09-10-copilot-code-review-independent-repository-rule-for-automatic-reviews)
-- [GitHub's Remote MCP Update: General Availability and Key Integrations](/videos/2025-09-10-GitHubs-Remote-MCP-Update-General-Availability-and-Key-Integrations.html)
+- [GitHub's Remote MCP Update: General Availability and Key Integrations](/ai/videos/GitHubs-Remote-MCP-Update-General-Availability-and-Key-Integrations)
 - [Configuring Internal MCP Registries and Allowlists for Copilot in VS Code Insiders](https://github.blog/changelog/2025-09-12-internal-mcp-registry-and-allowlist-controls-for-vs-code-insiders)
 
 ### Copilot for TM Forum Open API and Telco Workflows
@@ -140,7 +140,7 @@ A range of resources are now available. Tutorials in VS Code detail Copilot prom
 
 Building on last week’s beginner guides and prompt best practices, other guides cover Copilot’s use in open source app prototyping and Microsoft certification study, offering step-by-step automation for documentation, scripting, and custom workflows (like Markdown or PowerShell tasks for cloud automation). Copilot helps developers build skills, onboard to new stacks, and launch open source projects with community support.
 
-- [Introduction to Prompt-Driven Development in VS Code](/videos/2025-09-09-Introduction-to-Prompt-Driven-Development-in-VS-Code.html)
+- [Introduction to Prompt-Driven Development in VS Code](/ai/videos/Introduction-to-Prompt-Driven-Development-in-VS-Code)
 - [Building Personal Apps with Open Source and AI](https://github.blog/open-source/maintainers/building-personal-apps-with-open-source-and-ai/)
 - [How GitHub Copilot Can Boost Your Microsoft Certification Prep](https://dellenny.com/supercharge-your-it-certification-prep-how-github-copilot-can-be-your-study-buddy/)
 
@@ -174,8 +174,8 @@ New resources explain how Copilot Studio’s low-code conversational agent build
 
 These updates continue coverage of orchestration and automation, now connecting low-code agent design to pro deployment.
 
-- [Exploring the Connection Between Copilot Studio and Azure AI Foundry](/videos/2025-09-11-Exploring-the-Connection-Between-Copilot-Studio-and-Azure-AI-Foundry.html)
-- [Understanding the Connection Between Copilot Studio and Azure AI Foundry](/videos/2025-09-11-Understanding-the-Connection-Between-Copilot-Studio-and-Azure-AI-Foundry.html)
+- [Exploring the Connection Between Copilot Studio and Azure AI Foundry](/ai/videos/Exploring-the-Connection-Between-Copilot-Studio-and-Azure-AI-Foundry)
+- [Understanding the Connection Between Copilot Studio and Azure AI Foundry](/ai/videos/Understanding-the-Connection-Between-Copilot-Studio-and-Azure-AI-Foundry)
 
 ### Copilot Studio: Document Automation and Hybrid Development
 
@@ -183,7 +183,7 @@ Copilot Studio demonstrated automation with no-code agents integrated into Power
 
 Continuing last week’s coverage of hybrid workflow automation, this set of articles explores Copilot Studio's progress in team document workflows and solution scaling.
 
-- [Build AI Agents for Fast, High-Volume Document Automation in Copilot Studio](/videos/2025-09-09-Build-AI-Agents-for-Fast-High-Volume-Document-Automation-in-Copilot-Studio.html)
+- [Build AI Agents for Fast, High-Volume Document Automation in Copilot Studio](/ai/videos/Build-AI-Agents-for-Fast-High-Volume-Document-Automation-in-Copilot-Studio)
 - [Low-Code vs Pro-Code: How Copilot Studio Bridges the Gap](https://dellenny.com/low-code-vs-pro-code-how-copilot-studio-bridges-the-gap/)
 
 ### Language Model Updates and Migration
@@ -200,7 +200,7 @@ Visual Studio Code introduces the Language Model Chat Provider API (BYOK), letti
 
 These tools support easier daily AI integration in both IDE and CLI environments, following the trend of improving developer access to AI capabilities.
 
-- [Extending VS Code with the Language Model Chat Provider (BYOK) API: Insights from Logan Ramos](/videos/2025-09-08-Extending-VS-Code-with-the-Language-Model-Chat-Provider-BYOK-API-Insights-from-Logan-Ramos.html)
+- [Extending VS Code with the Language Model Chat Provider (BYOK) API: Insights from Logan Ramos](/ai/videos/Extending-VS-Code-with-the-Language-Model-Chat-Provider-BYOK-API-Insights-from-Logan-Ramos)
 - [Warp Integrates AI Coding Agents into CLI for Enhanced Developer Feedback](https://devops.com/warp-embeds-ai-agents-into-a-cli-to-provide-better-feedback-loop/?utm_source=rss&utm_medium=rss&utm_campaign=warp-embeds-ai-agents-into-a-cli-to-provide-better-feedback-loop)
 
 ### Azure AI Foundry Translation and No-Code AI Workflows
@@ -209,8 +209,8 @@ Azure AI Foundry's Translator API is now in public preview, enabling developers 
 
 These resources extend AI accessibility across technical and business user scenarios, complementing recent efforts to make AI more usable for non-developers.
 
-- [Translating Conversations with Azure AI Foundry Translator API](/videos/2025-09-11-Translating-Conversations-with-Azure-AI-Foundry-Translator-API.html)
-- [Blending AI Agents and Spreadsheets: No-Code Solutions in the Cozy AI Kitchen](/videos/2025-09-09-Blending-AI-Agents-and-Spreadsheets-No-Code-Solutions-in-the-Cozy-AI-Kitchen.html)
+- [Translating Conversations with Azure AI Foundry Translator API](/ai/videos/Translating-Conversations-with-Azure-AI-Foundry-Translator-API)
+- [Blending AI Agents and Spreadsheets: No-Code Solutions in the Cozy AI Kitchen](/ai/videos/Blending-AI-Agents-and-Spreadsheets-No-Code-Solutions-in-the-Cozy-AI-Kitchen)
 
 ### Avatar-Powered Education and AI Content Creation
 
@@ -259,7 +259,7 @@ These features build on previous improvements in resource management and more gr
 
 - [Azure Storage APIs Gain Microsoft Entra ID and RBAC Support](https://devblogs.microsoft.com/azure-sdk/azure-storage-apis-gain-entra-id-and-rbac-support/)
 - [Introducing a File Share-Centric Management Model for Azure Files](https://techcommunity.microsoft.com/t5/azure-storage-blog/simplifying-file-share-management-and-control-for-azure-files/ba-p/4452634)
-- [Understanding the New File Share Resource Type in Azure](/videos/2025-09-10-Understanding-the-New-File-Share-Resource-Type-in-Azure.html)
+- [Understanding the New File Share Resource Type in Azure](/azure/videos/Understanding-the-New-File-Share-Resource-Type-in-Azure)
 
 ### Azure Logic Apps Automation and Agentic Integrations
 
@@ -304,8 +304,8 @@ Application Gateway now enables private-only deployment and separate control/dat
 
 These features complement last week’s advice on hybrid network security and migration architecture.
 
-- [Application Gateway Network Isolation: New Architecture Deep Dive](/videos/2025-09-08-Application-Gateway-Network-Isolation-New-Architecture-Deep-Dive.html)
-- [Application Gateway Network Isolation Explained](/videos/2025-09-08-Application-Gateway-Network-Isolation-Explained.html)
+- [Application Gateway Network Isolation: New Architecture Deep Dive](/azure/videos/Application-Gateway-Network-Isolation-New-Architecture-Deep-Dive)
+- [Application Gateway Network Isolation Explained](/azure/videos/Application-Gateway-Network-Isolation-Explained)
 
 ### Developer-Focused Architecture, Integration Patterns, and Migration
 
@@ -314,7 +314,7 @@ The Microsoft Fabric Migration Guide offers in-depth data warehouse migration st
 These articles deepen migration and governance topics featured previously.
 
 - [Microsoft Fabric Migration Guide: Best Practices for Data Warehouse Migration](https://blog.fabric.microsoft.com/en-US/blog/migrating-to-fabric-data-warehouse-guide-now-available/)
-- [Building a Snapshot Backup Catalog with SQL Server 2025 and Pure Storage FlashArray](/videos/2025-09-11-Building-a-Snapshot-Backup-Catalog-with-SQL-Server-2025-and-Pure-Storage-FlashArray.html)
+- [Building a Snapshot Backup Catalog with SQL Server 2025 and Pure Storage FlashArray](/azure/videos/Building-a-Snapshot-Backup-Catalog-with-SQL-Server-2025-and-Pure-Storage-FlashArray)
 - [Enforcing and Auditing Policy Inheritance in Azure API Management](https://techcommunity.microsoft.com/t5/azure-integration-services-blog/enforce-or-audit-policy-inheritance-in-api-management/ba-p/4452204)
 
 ### Intelligent Workflows, Microservices Patterns, and Well-Architected AI
@@ -339,7 +339,7 @@ The latest Azure Update shares new service features, VM SKUs, updates in databas
 
 Regular briefings help developers stay up-to-date and support skill development.
 
-- [Azure Update: Announcements and Service Changes (12 September 2025)](/videos/2025-09-12-Azure-Update-Announcements-and-Service-Changes-12-September-2025.html)
+- [Azure Update: Announcements and Service Changes (12 September 2025)](/azure/videos/Azure-Update-Announcements-and-Service-Changes-12-September-2025)
 
 ## Coding
 
@@ -354,7 +354,7 @@ ASP.NET Core features new Blazor component state persistence, expanded identity 
 Developers are encouraged to validate their applications on RC1, check for breaking changes, join standups, and plan migrations. The .NET Unboxed event shares rollout details and technical Q&A.
 
 - [Announcing .NET 10 Release Candidate 1](https://devblogs.microsoft.com/dotnet/dotnet-10-rc-1/)
-- [.NET Unboxed - .NET 10 Release Candidate 1](/videos/2025-09-09-NET-Unboxed-NET-10-Release-Candidate-1.html)
+- [.NET Unboxed - .NET 10 Release Candidate 1](/coding/videos/NET-Unboxed-NET-10-Release-Candidate-1)
 
 ### Visual Studio 2026 Insiders and VS Code v1.104 Feature Enhancements
 
@@ -363,8 +363,8 @@ Visual Studio 2026 Insiders is a new early-access program for monthly IDE update
 VS Code v1.104 features Agent Mode for workspace automation—allowing developers to offload routine tasks and focus on coding. Additional updates include improved APIs for plugins, automated terminal approval, and new TODO management. Git Worktree support simplifies multi-branch reviews and development, enhancing last week’s prompt automation for collaboration.
 
 - [Visual Studio 2026 Insiders Launch: Integrated AI, Performance, and Developer-Centric Upgrades](https://devblogs.microsoft.com/visualstudio/visual-studio-2026-insiders-is-here/)
-- [Latest Features in Visual Studio Code: Agent Mode, Git Worktrees, and More](/videos/2025-09-12-Latest-Features-in-Visual-Studio-Code-Agent-Mode-Git-Worktrees-and-More.html)
-- [VS Code Live: Exploring Hidden Features in VS Code v1.104](/videos/2025-09-11-VS-Code-Live-Exploring-Hidden-Features-in-VS-Code-v1104.html)
+- [Latest Features in Visual Studio Code: Agent Mode, Git Worktrees, and More](/ai/videos/Latest-Features-in-Visual-Studio-Code-Agent-Mode-Git-Worktrees-and-More)
+- [VS Code Live: Exploring Hidden Features in VS Code v1.104](/coding/videos/VS-Code-Live-Exploring-Hidden-Features-in-VS-Code-v1104)
 
 ### .NET Tooling, Packaging, and Servicing Releases
 
@@ -379,7 +379,7 @@ Routine servicing for .NET 8 and .NET 9 in September 2025 brings bug fixes and r
 
 The .NET Data Community Standup compared Dapper and Entity Framework Core. Presenters shared concrete lessons—Dapper’s speed and simplicity versus EF Core’s feature set and maintainability. The session covered use cases, performance tips, pitfalls, and factors for teams deciding between direct SQL mapping and a higher-level ORM.
 
-- [.NET Data Community Standup: Practical Dapper vs Entity Framework Core Comparison](/videos/2025-09-09-NET-Data-Community-Standup-Practical-Dapper-vs-Entity-Framework-Core-Comparison.html)
+- [.NET Data Community Standup: Practical Dapper vs Entity Framework Core Comparison](/coding/videos/NET-Data-Community-Standup-Practical-Dapper-vs-Entity-Framework-Core-Comparison)
 
 ## DevOps
 
@@ -438,7 +438,7 @@ Teams migrating from Azure DevOps to GitHub now have guidance covering planning,
 
 A short GitHub video tutorial explains basic Git concepts for new developers, supporting best practices for onboarding and collaboration.
 
-- [7 Essential Git Concepts Every Beginner Needs to Know](/videos/2025-09-11-7-Essential-Git-Concepts-Every-Beginner-Needs-to-Know.html)
+- [7 Essential Git Concepts Every Beginner Needs to Know](/devops/videos/7-Essential-Git-Concepts-Every-Beginner-Needs-to-Know)
 
 ## Security
 
@@ -464,7 +464,7 @@ GitHub’s "The Download" covers an npm ecosystem attack, emphasizing ongoing su
 These developments reinforce the need for prompt, actionable security and supply chain vigilance.
 
 - [What Makes Vulnerability Scanning Effective in Fast-Moving DevSecOps Pipelines Today?](https://devops.com/what-makes-vulnerability-scanning-effective-in-fast-moving-devsecops-pipelines-today/?utm_source=rss&utm_medium=rss&utm_campaign=what-makes-vulnerability-scanning-effective-in-fast-moving-devsecops-pipelines-today)
-- [The Download: npm Supply Chain Attack, NVIDIA Rubin Platform, VS Code Dev Days & More](/videos/2025-09-12-The-Download-npm-Supply-Chain-Attack-NVIDIA-Rubin-Platform-VS-Code-Dev-Days-and-More.html)
+- [The Download: npm Supply Chain Attack, NVIDIA Rubin Platform, VS Code Dev Days & More](/ai/videos/The-Download-npm-Supply-Chain-Attack-NVIDIA-Rubin-Platform-VS-Code-Dev-Days-and-More)
 
 ### Automated Code and Secrets Security for Developers
 

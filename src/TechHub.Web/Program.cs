@@ -55,14 +55,11 @@ if (!builder.Environment.IsDevelopment() && !builder.Environment.IsEnvironment("
         pipeline.AddCssBundle("/css/bundle.css",
             "css/design-tokens.css",
             "css/base.css",
-            "css/layout.css",
-            "css/components/sidebar.css",
-            "css/components/page-container.css",
-            "css/components/buttons.css",
-            "css/components/navigation.css",
-            "css/components/loading.css",
-            "css/components/forms.css",
-            "css/utilities.css"
+            "css/article.css",
+            "css/sidebar.css",
+            "css/page-container.css",
+            "css/loading.css",
+            "css/nav-helpers.css"
         );
     });
 }

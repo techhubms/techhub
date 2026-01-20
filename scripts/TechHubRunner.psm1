@@ -414,30 +414,27 @@ function Run {
         return $true
     }
     
-    # Run E2E tests (requires servers to be running)
-    function Invoke-E2ETests {
+    # Start Aspire AppHost (orchestrates API + Web servers)
+    function Start-AppHost {
         param(
-            [string]$TestName
+            [string]$Environment = "Development"
         )
         
-        # Start AppHost for E2E tests
-        Write-Step "Starting Aspire AppHost for E2E tests"
+        Write-Step "Starting Aspire AppHost"
         
-        # Start AppHost in background with output capture
+        # Start AppHost in background
         $script:appHostProcess = $null
-        $script:dashboardUrl = $null
         
         $appHostStartInfo = New-Object System.Diagnostics.ProcessStartInfo
         $appHostStartInfo.FileName = "dotnet"
-        $appHostStartInfo.Arguments = "run --project `"$appHostProjectPath`" --no-build --configuration $configuration"
+        $appHostStartInfo.Arguments = "watch --project `"$appHostProjectPath`" --no-build --configuration $configuration"
         $appHostStartInfo.WorkingDirectory = Split-Path $appHostProjectPath -Parent
         $appHostStartInfo.UseShellExecute = $false
         $appHostStartInfo.RedirectStandardOutput = $false
         $appHostStartInfo.RedirectStandardError = $false
         $appHostStartInfo.CreateNoWindow = $false
-        # Use Test environment for E2E tests - API/Web will load appsettings.Test.json
-        # This provides cleaner console output (Error only) and proper test log files
-        $appHostStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Test"
+        # Use specified environment (defaults to Development for both E2E tests and normal dev)
+        $appHostStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = $Environment
         # Keep Aspire orchestration logs (useful for debugging startup issues)
         # but suppress noisy Microsoft.AspNetCore.* framework logs
         $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft"] = "Warning"
@@ -451,7 +448,7 @@ function Run {
         
         Write-Info "  AppHost started (PID: $($script:appHostProcess.Id))"
         
-        # Wait for services to be ready (Aspire orchestration is slower than direct dotnet watch)
+        # Wait for services to be ready (Aspire orchestration can take 30-60 seconds)
         Write-Info "Waiting for services to start (Aspire orchestration can take 30-60 seconds)..."
         $maxAttempts = 60
         $attempt = 0
@@ -463,239 +460,231 @@ function Run {
         while ($attempt -lt $maxAttempts -and (-not $apiReady -or -not $webReady)) {
             Start-Sleep -Seconds 1
             $attempt++
-            # Start AppHost for E2E tests
-            Write-Step "Starting Aspire AppHost for E2E tests"
-            
-            # Start AppHost in background with output capture
-            $script:appHostProcess = $null
-            $script:dashboardUrl = $null
-            
-            $appHostStartInfo = New-Object System.Diagnostics.ProcessStartInfo
-            $appHostStartInfo.FileName = "dotnet"
-            $appHostStartInfo.Arguments = "run --project `"$appHostProjectPath`" --no-build --configuration $configuration"
-            $appHostStartInfo.WorkingDirectory = Split-Path $appHostProjectPath -Parent
-            $appHostStartInfo.UseShellExecute = $false
-            $appHostStartInfo.RedirectStandardOutput = $false
-            $appHostStartInfo.RedirectStandardError = $false
-            $appHostStartInfo.CreateNoWindow = $false
-            # Use Test environment for E2E tests - API/Web will load appsettings.Test.json
-            # This provides cleaner console output (Error only) and proper test log files
-            $appHostStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = "Test"
-            # Keep Aspire orchestration logs (useful for debugging startup issues)
-            # but suppress noisy Microsoft.AspNetCore.* framework logs
-            $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft"] = "Warning"
-            $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft.AspNetCore"] = "Warning"
-            # Disable Aspire dashboard authentication for local development (no login token required)
-            $appHostStartInfo.EnvironmentVariables["DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS"] = "true"
-            # Disable automatic browser launch in DevContainer (prevents DBus errors)
-            $appHostStartInfo.EnvironmentVariables["DOTNET_DASHBOARD_OPEN_BROWSER"] = "false"
-            
-            $script:appHostProcess = [System.Diagnostics.Process]::Start($appHostStartInfo)
-            
-            Write-Info "  AppHost started (PID: $($script:appHostProcess.Id))"
-            
-            # Wait for services to be ready (Aspire orchestration is slower than direct dotnet watch)
-            Write-Info "Waiting for services to start (Aspire orchestration can take 30-60 seconds)..."
-            $maxAttempts = 60
-            $attempt = 0
-            $apiReady = $false
-            $webReady = $false
-            $lastApiError = ""
-            $lastWebError = ""
-            
-            while ($attempt -lt $maxAttempts -and (-not $apiReady -or -not $webReady)) {
-                Start-Sleep -Seconds 1
-                $attempt++
                 
-                # Show progress every 10 seconds with diagnostic info
-                if ($attempt % 10 -eq 0) {
-                    Write-Info "  Still waiting... ($attempt seconds elapsed)"
-                    if (-not $apiReady -and $lastApiError) {
-                        Write-Info "    API: $lastApiError"
-                    }
-                    if (-not $webReady -and $lastWebError) {
-                        Write-Info "    Web: $lastWebError"
-                    }
+            # Show progress every 10 seconds with diagnostic info
+            if ($attempt % 10 -eq 0) {
+                Write-Info "  Still waiting... ($attempt seconds elapsed)"
+                if (-not $apiReady -and $lastApiError) {
+                    Write-Info "    API: $lastApiError"
                 }
-                
-                # Check if AppHost is still alive
-                if ($script:appHostProcess.HasExited) {
-                    Write-Host ""
-                    Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
-                    Write-Host "║                                                              ║" -ForegroundColor Red
-                    Write-Host "║  ✗ APPHOST CRASHED DURING STARTUP - Cannot continue          ║" -ForegroundColor Red
-                    Write-Host "║                                                              ║" -ForegroundColor Red
-                    Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
-                    Write-Host ""
-                    Write-Host "  AppHost process exited unexpectedly" -ForegroundColor Yellow
-                    Write-Host "  Exit code: $($script:appHostProcess.ExitCode)" -ForegroundColor Yellow
-                    Write-Host ""
-                    Write-Host "  This usually means:" -ForegroundColor Cyan
-                    Write-Host "    1. A configuration error in appsettings" -ForegroundColor Gray
-                    Write-Host "    2. Missing dependencies or packages" -ForegroundColor Gray
-                    Write-Host "    3. Port conflicts (check ports 5029, 5184, 7153, 7190)" -ForegroundColor Gray
-                    Write-Host ""
-                    Stop-ExistingProcesses
-                    return
-                }
-                
-                if (-not $apiReady) {
-                    # Use HTTPS endpoint (Aspire configures HTTPS by default)
-                    # -k ignores self-signed certificate validation for local dev
-                    $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:7153/health" 2>&1
-                    $exitCode = $LASTEXITCODE
-                    
-                    if ($exitCode -eq 0 -and $curlOutput -match "200$") {
-                        $apiReady = $true
-                        Write-Info "  API ready ✓"
-                    }
-                    elseif ($exitCode -ne 0) {
-                        $lastApiError = "Connection failed (exit code: $exitCode)"
-                    }
-                    else {
-                        $httpCode = ($curlOutput -split "`n")[-1]
-                        $lastApiError = "HTTP $httpCode"
-                    }
-                }
-                
-                if (-not $webReady) {
-                    # Use HTTPS endpoint (Aspire configures HTTPS by default)
-                    # -k ignores self-signed certificate validation for local dev
-                    $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:7190/health" 2>&1
-                    $exitCode = $LASTEXITCODE
-                    
-                    if ($exitCode -eq 0 -and $curlOutput -match "200$") {
-                        $webReady = $true
-                        Write-Info "  Web ready ✓"
-                    }
-                    elseif ($exitCode -ne 0) {
-                        $lastWebError = "Connection failed (exit code: $exitCode)"
-                    }
-                    else {
-                        $httpCode = ($curlOutput -split "`n")[-1]
-                        $lastWebError = "HTTP $httpCode"
-                    }
+                if (-not $webReady -and $lastWebError) {
+                    Write-Info "    Web: $lastWebError"
                 }
             }
-            
-            if (-not $apiReady -or -not $webReady) {
+                
+            # Check if AppHost is still alive
+            if ($script:appHostProcess.HasExited) {
                 Write-Host ""
                 Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
                 Write-Host "║                                                              ║" -ForegroundColor Red
-                Write-Host "║  ✗ SERVERS FAILED TO START - Cannot continue                 ║" -ForegroundColor Red
+                Write-Host "║  ✗ APPHOST CRASHED DURING STARTUP - Cannot continue          ║" -ForegroundColor Red
                 Write-Host "║                                                              ║" -ForegroundColor Red
                 Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
                 Write-Host ""
-                Write-Host "  Services failed to start within $maxAttempts seconds" -ForegroundColor Yellow
-                if (-not $apiReady) {
-                    Write-Host "  API health check failed: $lastApiError" -ForegroundColor Yellow
-                    Write-Host "    Expected: https://localhost:7153/health" -ForegroundColor Gray
-                }
-                if (-not $webReady) {
-                    Write-Host "  Web health check failed: $lastWebError" -ForegroundColor Yellow
-                    Write-Host "    Expected: https://localhost:7190/health" -ForegroundColor Gray
-                }
+                Write-Host "  AppHost process exited unexpectedly" -ForegroundColor Yellow
+                Write-Host "  Exit code: $($script:appHostProcess.ExitCode)" -ForegroundColor Yellow
                 Write-Host ""
-                Write-Host "  Troubleshooting:" -ForegroundColor Cyan
-                Write-Host "    1. Check Aspire Dashboard logs (URL shown during startup)" -ForegroundColor Gray
-                Write-Host "    2. Try manually: curl -k https://localhost:7153/health" -ForegroundColor Gray
-                Write-Host "    3. Check if ports are already in use" -ForegroundColor Gray
+                Write-Host "  This usually means:" -ForegroundColor Cyan
+                Write-Host "    1. A configuration error in appsettings" -ForegroundColor Gray
+                Write-Host "    2. Missing dependencies or packages" -ForegroundColor Gray
+                Write-Host "    3. Port conflicts (check ports 5029, 5184, 7153, 7190)" -ForegroundColor Gray
                 Write-Host ""
-                
-                # Clean up on startup failure
-                if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                    try {
-                        $script:appHostProcess.Kill($false)
-                    }
-                    catch { }
-                    finally {
-                        $script:appHostProcess.Dispose()
-                    }
-                }
-                Stop-ExistingProcesses
                 return $false
             }
-            
-            Write-Success "Services ready"
-            
-            # Wait for Aspire port forwarding to complete (DevContainer port forwarding takes a few seconds)
-            Write-Info "Waiting for port forwarding to complete..."
-            Start-Sleep -Seconds 5
-            
-            # Run E2E tests
-            Write-Step "Running E2E tests"
-            Write-Host ""
-            
-            # Optimize thread count based on environment
-            if ($env:CI) {
-                Write-Info "CI environment detected - using default 4 threads from xunit.runner.json"
-            }
-            else {
-                Write-Info "Local environment - using 8 threads for faster execution"
-                $env:XUNIT_MAX_PARALLEL_THREADS = 8
-            }
-            
-            $e2eTestArgs = @(
-                "test",
-                $e2eTestProjectPath,
-                "--configuration", $configuration,
-                "--no-build",
-                "--settings", (Join-Path $workspaceRoot ".runsettings"),
-                "--logger", "console;verbosity=detailed",
-                "--blame-hang-timeout", "1m"
-            )
-            
-            # Add name filter if specified
-            if ($TestName) {
-                $e2eTestArgs += "--filter"
-                $e2eTestArgs += "FullyQualifiedName~$TestName"
-            }
-            
-            # Run E2E tests
-            $e2eSuccess = Invoke-ExternalCommand "dotnet" $e2eTestArgs
-            
-            if (-not $e2eSuccess) {
-                Write-Host ""
-                Write-Host "════════════════════════════════════════" -ForegroundColor Red
-                Write-Host ""
-                Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
-                Write-Host "║                                                              ║" -ForegroundColor Red
-                Write-Host "║  ✗ E2E TESTS FAILED                                          ║" -ForegroundColor Red
-                Write-Host "║                                                              ║" -ForegroundColor Red
-                Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
-                Write-Host ""
-                Write-Host "  Run with 'Run -WithoutTests' to start servers for debugging" -ForegroundColor Cyan
-                Write-Host ""
                 
-                # Stop AppHost on failure
-                Write-Info "Stopping AppHost..."
-                if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                    try {
-                        $script:appHostProcess.Kill($false)
-                    }
-                    catch { }
-                    finally {
-                        $script:appHostProcess.Dispose()
-                    }
+            if (-not $apiReady) {
+                # Use HTTPS endpoint (Aspire configures HTTPS by default)
+                # -k ignores self-signed certificate validation for local dev
+                $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:7153/health" 2>&1
+                $exitCode = $LASTEXITCODE
+                    
+                if ($exitCode -eq 0 -and $curlOutput -match "200$") {
+                    $apiReady = $true
+                    Write-Info "  API ready ✓"
                 }
-                Stop-ExistingProcesses
-                
-                return $false
+                elseif ($exitCode -ne 0) {
+                    $lastApiError = "Connection failed (exit code: $exitCode)"
+                }
+                else {
+                    $httpCode = ($curlOutput -split "`n")[-1]
+                    $lastApiError = "HTTP $httpCode"
+                }
             }
-            
-            Write-Host ""
-            Write-Host "════════════════════════════════════════" -ForegroundColor Green
-            Write-Host ""
-            Write-Success "E2E tests passed - servers will remain running for development"
-            
-            # Mark that E2E tests already started the servers
-            # so we don't restart them later
-            $script:serversAlreadyRunning = $true
-            return $true
+                
+            if (-not $webReady) {
+                # Use HTTPS endpoint (Aspire configures HTTPS by default)
+                # -k ignores self-signed certificate validation for local dev
+                $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:7190/health" 2>&1
+                $exitCode = $LASTEXITCODE
+                    
+                if ($exitCode -eq 0 -and $curlOutput -match "200$") {
+                    $webReady = $true
+                    Write-Info "  Web ready ✓"
+                }
+                elseif ($exitCode -ne 0) {
+                    $lastWebError = "Connection failed (exit code: $exitCode)"
+                }
+                else {
+                    $httpCode = ($curlOutput -split "`n")[-1]
+                    $lastWebError = "HTTP $httpCode"
+                }
+            }
         }
-
+            
+        if (-not $apiReady -or -not $webReady) {
+            Write-Host ""
+            Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "║  ✗ SERVERS FAILED TO START - Cannot continue                 ║" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+            Write-Host ""
+            Write-Host "  Services failed to start within $maxAttempts seconds" -ForegroundColor Yellow
+            if (-not $apiReady) {
+                Write-Host "  API health check failed: $lastApiError" -ForegroundColor Yellow
+                Write-Host "    Expected: https://localhost:7153/health" -ForegroundColor Gray
+            }
+            if (-not $webReady) {
+                Write-Host "  Web health check failed: $lastWebError" -ForegroundColor Yellow
+                Write-Host "    Expected: https://localhost:7190/health" -ForegroundColor Gray
+            }
+            Write-Host ""
+            Write-Host "  Troubleshooting:" -ForegroundColor Cyan
+            Write-Host "    1. Check Aspire Dashboard logs (URL shown during startup)" -ForegroundColor Gray
+            Write-Host "    2. Try manually: curl -k https://localhost:7153/health" -ForegroundColor Gray
+            Write-Host "    3. Check if ports are already in use" -ForegroundColor Gray
+            Write-Host ""
+            return $false
+        }
+            
+        Write-Success "Services ready"
+            
+        return $true
     }
+
+    # Run E2E tests (assumes servers are already running)
+    function Invoke-E2ETests {
+        param(
+            [string]$TestName
+        )
+        
+        Write-Step "Running E2E tests"
+        Write-Host ""
+            
+        # Optimize thread count based on environment
+        if ($env:CI) {
+            Write-Info "CI environment detected - using default 4 threads from xunit.runner.json"
+        }
+        else {
+            Write-Info "Local environment - using 8 threads for faster execution"
+            $env:XUNIT_MAX_PARALLEL_THREADS = 8
+        }
+            
+        $e2eTestArgs = @(
+            "test",
+            $e2eTestProjectPath,
+            "--configuration", $configuration,
+            "--no-build",
+            "--settings", (Join-Path $workspaceRoot ".runsettings"),
+            "--logger", "console;verbosity=detailed",
+            "--blame-hang-timeout", "1m"
+        )
+            
+        # Add name filter if specified
+        if ($TestName) {
+            $e2eTestArgs += "--filter"
+            $e2eTestArgs += "FullyQualifiedName~$TestName"
+        }
+            
+        # Run E2E tests
+        $e2eSuccess = Invoke-ExternalCommand "dotnet" $e2eTestArgs
+            
+        if (-not $e2eSuccess) {
+            Write-Host ""
+            Write-Host "════════════════════════════════════════" -ForegroundColor Red
+            Write-Host ""
+            Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "║  ✗ E2E TESTS FAILED                                          ║" -ForegroundColor Red
+            Write-Host "║                                                              ║" -ForegroundColor Red
+            Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+            Write-Host ""
+            Write-Host "  Run with 'Run -WithoutTests' to start servers for debugging" -ForegroundColor Cyan
+            Write-Host ""
+            return $false
+        }
+            
+        Write-Host ""
+        Write-Host "════════════════════════════════════════" -ForegroundColor Green
+        Write-Host ""
+        Write-Success "E2E tests passed"
+        return $true
+    }
+
     # Kill existing processes on ports
+    function Stop-AppHost {
+        <#
+        .SYNOPSIS
+            Gracefully stops the AppHost process and disposes resources.
+        
+        .DESCRIPTION
+            Sends SIGTERM for graceful shutdown, waits up to 5 seconds,
+            then forcefully kills if still running. Always disposes the process object.
+        #>
+        param(
+            [switch]$Silent
+        )
+        
+        if ($null -eq $script:appHostProcess) {
+            return
+        }
+        
+        if ($script:appHostProcess.HasExited) {
+            $script:appHostProcess.Dispose()
+            $script:appHostProcess = $null
+            return
+        }
+        
+        try {
+            if (-not $Silent) {
+                Write-Info "  Sending graceful shutdown signal to AppHost..."
+            }
+            
+            # Send SIGTERM for graceful shutdown
+            kill -TERM $script:appHostProcess.Id 2>$null
+            
+            # Wait up to 5 seconds for graceful shutdown
+            $waited = 0
+            while (-not $script:appHostProcess.HasExited -and $waited -lt 5000) {
+                Start-Sleep -Milliseconds 100
+                $waited += 100
+            }
+            
+            # If still running, force kill
+            if (-not $script:appHostProcess.HasExited) {
+                if (-not $Silent) {
+                    Write-Info "  AppHost didn't stop gracefully, forcing termination..."
+                }
+                $script:appHostProcess.Kill($true)
+            }
+            elseif (-not $Silent) {
+                Write-Info "  AppHost stopped gracefully"
+            }
+        }
+        catch {
+            # Process might have already exited - that's OK
+            if (-not $Silent) {
+                Write-Info "  AppHost process already exited"
+            }
+        }
+        finally {
+            if ($null -ne $script:appHostProcess) {
+                $script:appHostProcess.Dispose()
+                $script:appHostProcess = $null
+            }
+        }
+    }
+
     function Stop-ExistingProcesses {
         param(
             [switch]$Silent
@@ -923,41 +912,6 @@ function Run {
         }
     }
 
-    # Run both projects using Aspire AppHost
-    function Start-BothProjects {
-        Write-Step "Starting Tech Hub via Aspire AppHost"
-        
-        Write-Host ""
-        Write-Info "Services:"
-        Write-Info "  API: http://localhost:5029 (Swagger: http://localhost:5029/swagger)"
-        Write-Info "  Web: http://localhost:5184"
-        Write-Info "  Dashboard: https://localhost:17101 (URL with token shown below)"
-        Write-Host ""
-        Write-Info "Press Ctrl+C to stop"
-        
-        try {
-            Push-Location (Join-Path $workspaceRoot "src/TechHub.AppHost")
-            
-            $env:ASPNETCORE_ENVIRONMENT = "Development"
-            # Disable automatic browser launch in DevContainer (prevents DBus errors)
-            $env:DOTNET_DASHBOARD_OPEN_BROWSER = "false"
-            # Disable Aspire dashboard authentication for local development (no login token required)
-            $env:DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS = "true"
-            
-            # Run the AppHost with hot reload which orchestrates both API and Web
-            # AppHost includes a built-in Aspire Dashboard
-            dotnet watch --project $appHostProjectPath --no-build --configuration $configuration
-        }
-        finally {
-            Pop-Location
-            
-            # Final cleanup - kill any remaining processes on the ports
-            Stop-ExistingProcesses
-            
-            Write-Success "All projects stopped"
-        }
-    }
-
     # Main execution
     try {
         # Ensure we're in the workspace root
@@ -1042,11 +996,31 @@ function Run {
                 }
             }
             
-            # PHASE 3: E2E tests (slow, requires servers)
+            # PHASE 3: Start servers (if needed for E2E tests or development mode)
+            # Start servers BEFORE E2E tests if:
+            # - We're running E2E tests, OR
+            # - We're in development mode (not test-only run)
+            $needServers = $runE2E -or (-not $isTestOnlyRun)
+        
+            if ($needServers) {
+                $serversStarted = Start-AppHost
+                if ($serversStarted -ne $true) {
+                    # Server startup failed - clean up and exit
+                    Stop-AppHost
+                    Stop-ExistingProcesses
+                    return
+                }
+                $script:serversAlreadyRunning = $true
+            }
+        
+            # PHASE 4: E2E tests (servers already running)
             if ($runE2E) {
                 $e2eSuccess = Invoke-E2ETests -TestName $TestName
                 if ($e2eSuccess -ne $true) {
-                    # Tests failed - exit immediately without success message
+                    # Tests failed - clean up and exit
+                    Write-Info "Stopping servers..."
+                    Stop-AppHost
+                    Stop-ExistingProcesses
                     return
                 }
             }
@@ -1056,18 +1030,10 @@ function Run {
                 Write-Host ""
                 Write-Success "All tests passed!`n"
                 
-                # Stop servers if they were started by E2E tests
+                # Stop servers if they were started
                 if ($script:serversAlreadyRunning) {
                     Write-Info "Stopping servers..."
-                    if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                        try {
-                            $script:appHostProcess.Kill($false)
-                        }
-                        catch { }
-                        finally {
-                            $script:appHostProcess.Dispose()
-                        }
-                    }
+                    Stop-AppHost
                     Stop-ExistingProcesses
                     Write-Success "Servers stopped"
                 }
@@ -1075,38 +1041,40 @@ function Run {
                 return
             }
             
-            # If servers are already running from E2E tests, keep them running for development
-            if ($script:serversAlreadyRunning) {
-                Write-Host ""
-                Write-Success "All tests passed! Servers are running and ready for development.`n"
-                Write-Info "Services:"
-                Write-Info "  API: http://localhost:5029 (Swagger: http://localhost:5029/swagger)"
-                Write-Info "  Web: http://localhost:5184"
-                Write-Info "  Dashboard: https://localhost:17101 (Aspire Dashboard)"
-                Write-Host ""
-                Write-Info "Press Ctrl+C to stop"
-                Write-Host ""
-                
-                # Wait for user to stop (Ctrl+C)
-                # The AppHost process is already running, just wait for it to exit
-                try {
-                    if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                        $script:appHostProcess.WaitForExit()
-                    }
-                }
-                finally {
-                    Stop-ExistingProcesses
-                    Write-Success "All projects stopped"
-                }
-                
+            Write-Success "`nAll tests passed! Servers are running and ready for development.`n"
+        }
+        else {
+            # -WithoutTests: Start servers directly
+            $serversStarted = Start-AppHost
+            if ($serversStarted -ne $true) {
+                # Server startup failed - clean up and exit
+                Stop-AppHost
+                Stop-ExistingProcesses
                 return
             }
-            
-            Write-Success "`nAll tests passed! Starting servers...`n"
+            $script:serversAlreadyRunning = $true
         }
-        
-        # Run projects via Aspire AppHost (only if not already running from E2E tests)
-        Start-BothProjects
+    
+        # Servers are running - show info and wait for user to stop
+        Write-Host ""
+        Write-Info "Services:"
+        Write-Info "  API: http://localhost:5029 (Swagger: http://localhost:5029/swagger)"
+        Write-Info "  Web: http://localhost:5184"
+        Write-Info "  Dashboard: https://localhost:17101 (Aspire Dashboard)"
+        Write-Host ""
+        Write-Info "Press Ctrl+C to stop"
+        Write-Host ""
+    
+        try {
+            if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
+                $script:appHostProcess.WaitForExit()
+            }
+        }
+        finally {
+            Stop-AppHost -Silent
+            Stop-ExistingProcesses
+            Write-Success "All projects stopped"
+        }
     }
     catch {
         Write-Error "`nFunction failed: $($_.Exception.Message)"

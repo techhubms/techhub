@@ -1,0 +1,98 @@
+/* ============================================================================
+   SidebarToc Component - Table of Contents with Scroll-Spy
+   
+   Component-scoped styles for the sidebar table of contents widget.
+   Provides hierarchical navigation with active section highlighting.
+   
+   NOTE: Uses ::deep for elements created via RenderTreeBuilder in @code block.
+   Blazor CSS isolation only scopes markup elements, not programmatic ones.
+   ============================================================================ */
+
+.sidebar-toc {
+    position: sticky;
+    top: 100px;
+    /* Stick below the header (70px) + SubNav (30px) */
+}
+
+.sidebar-toc-inner {
+    /* No max-height - let it grow naturally */
+}
+
+/* toc-list is in markup, so scoping works directly */
+.toc-list {
+    list-style: none;
+    padding: var(--spacing-3);
+    margin: 0;
+    background: var(--color-card-bg);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+}
+
+/* All elements below are created via RenderTreeBuilder - use ::deep */
+::deep .toc-sublist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: var(--spacing-3);
+    overflow: hidden;
+    /* No transition - instant collapse/expand */
+    /* Default collapsed state */
+    max-height: 0;
+}
+
+/* If there's only one h2 heading, auto-expand it by default */
+.toc-list:has(.toc-depth-0:only-child) ::deep .toc-depth-0 > .toc-sublist {
+    max-height: 2000px;
+}
+
+/* Expanded state only when explicitly set by JavaScript */
+::deep .toc-item.expanded > .toc-sublist {
+    max-height: 2000px;
+}
+
+::deep .toc-item {
+    margin: 0;
+}
+
+::deep .toc-link {
+    display: block;
+    padding: var(--spacing-1) var(--spacing-2);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-snug);
+    border-radius: var(--radius-sm);
+    border-left: 2px solid transparent;
+    transition: all var(--duration-fast) var(--easing-ease);
+}
+
+::deep .toc-link:hover {
+    color: var(--color-text-primary);
+    background: var(--color-bg-emphasis);
+}
+
+/* Active state for current section (scroll-spy) */
+::deep .toc-link.active {
+    color: var(--color-purple-bright);
+    background: var(--color-bg-emphasis);
+    border-left-color: var(--color-purple-bright);
+}
+
+/* Depth-based styling for visual hierarchy */
+::deep .toc-depth-0 > .toc-link {
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+}
+
+::deep .toc-depth-1 > .toc-link {
+    font-size: var(--font-size-sm);
+}
+
+::deep .toc-depth-2 > .toc-link {
+    font-size: var(--font-size-xs);
+}
+
+/* All links fully visible */
+::deep .toc-link {
+    opacity: 1;
+}

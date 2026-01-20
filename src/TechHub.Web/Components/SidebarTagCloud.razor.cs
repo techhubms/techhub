@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Components;
 using TechHub.Core.DTOs;
 using TechHub.Web.Services;
 
-namespace TechHub.Web.Components.Shared;
+namespace TechHub.Web.Components;
 
 /// <summary>
 /// Defines how the tag cloud handles tag clicks
@@ -115,9 +115,6 @@ public partial class SidebarTagCloud : ComponentBase
     private HashSet<string> selectedTagsInternal = [];
     private bool isLoading = true;
     private bool hasError = false;
-    private TagCloudScope? previousScope;
-    private string? previousSectionName;
-    private string? previousCollectionName;
 
     protected override async Task OnInitializedAsync()
     {
@@ -129,11 +126,6 @@ public partial class SidebarTagCloud : ComponentBase
                 StringComparer.OrdinalIgnoreCase);
         }
 
-        // Store initial values to prevent double-load in OnParametersSetAsync
-        previousScope = Scope;
-        previousSectionName = SectionName;
-        previousCollectionName = CollectionName;
-
         await LoadTagsAsync();
     }
 
@@ -142,17 +134,6 @@ public partial class SidebarTagCloud : ComponentBase
         // Always sync selectedTagsInternal with SelectedTags parameter
         // This is critical for Filter mode where URL changes trigger parameter updates
         SyncSelectedTagsFromParameter();
-
-        // Only reload if scope/section/collection has actually changed
-        if (previousScope != Scope ||
-            previousSectionName != SectionName ||
-            previousCollectionName != CollectionName)
-        {
-            previousScope = Scope;
-            previousSectionName = SectionName;
-            previousCollectionName = CollectionName;
-            await LoadTagsAsync();
-        }
     }
 
     /// <summary>

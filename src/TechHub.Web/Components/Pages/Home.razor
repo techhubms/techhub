@@ -1,7 +1,7 @@
 @page "/"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
-@using TechHub.Web.Components.Shared
+
 @using static TechHub.Web.Services.SectionHelper
 
 <PageTitle>Tech Hub - Microsoft Technology News & Resources</PageTitle>
@@ -15,7 +15,7 @@
         Description="Your source for Microsoft technology news, tutorials, and community content" />
 </Header>
 
-<div class="page-with-sidebar">
+<main class="page-with-sidebar">
     @* Sidebar (Left Column) *@
     <aside class="sidebar">
         @* Latest Roundup *@
@@ -66,7 +66,7 @@
             NavigationMode="TagCloudNavigationMode.Navigate" NavigationBaseUrl="/all" />
     </aside>
 
-    <div class="home-main-content">
+    <section class="home-main-content">
         @if (sections != null && sections.Any())
         {
             <SectionCardsGrid Sections="@sections" />
@@ -77,8 +77,8 @@
                 <p>No sections available.</p>
             </div>
         }
-    </div>
-</div>
+    </section>
+</main>
 
 @code {
     [Inject] public required TechHubApiClient ApiClient { get; set; }

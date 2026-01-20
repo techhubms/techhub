@@ -1,7 +1,7 @@
 @page "/{sectionName}/{collectionName}"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
-@using TechHub.Web.Components.Shared
+
 @using static TechHub.Web.Services.SectionHelper
 @inject SectionCache SectionCache
 @inject NavigationManager Navigation
@@ -15,7 +15,7 @@
 
 <Header SectionName="@SectionName" />
 
-<div class="page-with-sidebar">
+<main class="page-with-sidebar">
     <aside class="sidebar">
         <SidebarTagCloud Scope="TagCloudScope.Collection" SectionName="@SectionName" CollectionName="@CollectionName"
             Title="Popular Tags" NavigationMode="TagCloudNavigationMode.Filter" SelectedTags="@selectedTags"
@@ -23,11 +23,11 @@
         <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"/{SectionName}/feed.xml") })" />
     </aside>
 
-    <main class="page-main-content">
+    <section >
         <ContentItemsGrid SectionName="@SectionName" CollectionName="@CollectionName" FilterTags="@selectedTags"
             @key="@CollectionName" />
-    </main>
-</div>
+    </section>
+</main>
 
 @code {
     [Parameter]

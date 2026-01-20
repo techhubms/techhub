@@ -25,18 +25,24 @@
     align-items: center;
     gap: 12px;
     background: rgba(45, 45, 74, 0.3);
+    border: none;
     border-bottom: 1px solid rgba(224, 224, 224, 0.1);
     cursor: pointer;
     user-select: none;
     transition: background 0.2s ease;
     position: relative;
+    width: 100%;
+    text-align: left;
+    color: inherit;
+    font-family: inherit;
 }
 
 ::deep .sdlc-phase-header:hover {
     background: rgba(45, 45, 74, 0.5);
 }
 
-::deep .sdlc-phase-header h2 {
+::deep .sdlc-phase-header h2,
+::deep .sdlc-phase-header h3 {
     margin: 0;
     font-size: 18px;
     font-weight: 600;
@@ -44,7 +50,8 @@
     flex: 1;
 }
 
-::deep .sdlc-phase-header h2::after {
+::deep .sdlc-phase-header h2::after,
+::deep .sdlc-phase-header h3::after {
     display: none;
 }
 
@@ -257,7 +264,7 @@
     border: 1px solid rgba(56, 142, 60, 0.3);
 }
 
-::deep .sdlc-benefit-card>div {
+::deep .sdlc-benefit-card > div {
     flex: 1;
 }
 
