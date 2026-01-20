@@ -23752,5 +23752,17 @@
     "canonical_url": "https://andrewlock.net/making-foreach-on-an-ienumerable-allocation-free-using-reflection-and-dynamic-methods/",
     "collection": "blogs",
     "reason": "Succesfully added: The content centers on advanced C# and .NET performance optimizations regarding heap allocation during foreach iteration on IEnumerable<T>. It thoroughly discusses enumerator boxing, compiler lowering, Reflection.Emit, and DynamicMethod approaches, all focused on low-level development in the Microsoft stack. Assigned 'Coding' category (Coding rule 1: Microsoft programming language focus, and Coding rule 4: architecture and performance patterns in .NET/C#). Not assigned Azure, DevOps, AI, ML, Security, or GitHub Copilot—as the post is not about those technologies or services. Tags were selected to highlight technical terms, frameworks, design techniques, and runtime versions."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/source/asia/2026/01/14/ai-for-social-impact-microsoft-escap-ccdkm-stou-depa-advance-ai-skills-training-to-empower-civil-society-and-support-sustainable-digital-growth/",
+    "timestamp": "2026-01-20 16:06:53 +00:00",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content centers on generative AI skills training for civil society, specifically referencing Microsoft-provided AI tools (such as Copilot) and responsible AI education. It discusses a specific Microsoft-led initiative and curriculum directly related to AI (AI inclusion rules 1, 4, 5, and 6). Although Copilot is mentioned, it is in the productivity and training context (not developer-focused), so the 'GitHub Copilot' or 'Coding' categories do not apply. There is no substantial technical implementation to justify Coding, DevOps, Security, or ML categories. None of the generic exclusion rules apply since this is not biographical, negative, sales-focused, or non-English content."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/startups/blog/how-ai-powered-collaborations-are-transforming-healthcare-and-life-sciences/",
+    "timestamp": "2026-01-20 16:07:14 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the core focus is the application of artificial intelligence solutions, including discussions of AI startups, real-world AI use cases, and Microsoft Azure AI-powered platforms (AI rules 1, 4, and 5). Assigned 'Azure' category as the content explicitly describes the Azure platform's role in deploying and scaling these AI solutions across multiple healthcare collaborations (Azure rules 1 and 4). Other relevant categories (such as Coding, DevOps, ML, Security) were not assigned as the article does not delve into programming, DevOps pipelines, custom ML model building, or security architectures. The emphasis is on high-level AI infrastructure, collaboration, and solution deployment, directly matching the inclusion rules for AI and Azure."
   }
 ]

@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": null,
+  "PubDate": "2026-01-20T15:00:08+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Link": "https://www.youtube.com/watch?v=al-JSC314dA",
+  "Description": "In this episode, recorded live at GitHub Universe 2025, Andrea sits down with Frank “Frenck” Nijhof, a GitHub Star and project lead for Home Assistant, one of the most active open source projects on the platform. They unpack how millions of households run privacy-first automations locally (no cloud required), why the Open Home Foundation exists to prevent vendor lock-in and e-waste, and how this famously welcoming community scaled to 21k+ contributors. Frank also shares insights about the development of “Assist,” an open, local-first voice assistant (with optional AI), as well as the new “Home Assist Green” hardware device, plus practical ways non-coders can meaningfully contribute to the project, too.\n\nLinks mentioned in the episode:\n\nhttps://github.com/frenck https://www.home-assistant.io https://www.home-assistant.io/green https://www.home-assistant.io/voice https://www.home-assistant.io/assist https://www.esphome.io https://github.com/home-assistant https://www.raspberrypi.com\n\nThe GitHub Podcast is hosted by Abigail Cabunoc Mayes, Kedasha Kerr and Cassidy Williams. The show is edited, mixed and produced by Victoria Marin. Thank you to our production partner, editaudio.\n\n— CHAPTERS — 00:00 - Live from GitHub Universe 01:47 - What is Home Assistant? 02:58 - Running a smart home on a Raspberry Pi 04:01 - Weirdest automations (the brick factory) 06:16 - The Open Home Foundation explained 10:50 - Assist: a local voice assistant 14:08 - Home Assistant hardware 16:52 - How to build a welcoming community 21:27 - Non-code contributions matter 22:26 - The future of the smart home\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "FeedName": "GitHub YouTube",
+  "Title": "Building a privacy-first smart home with Frank Nijhof | Episode 8 | The GitHub Podcast",
+  "Tags": [],
+  "ProcessedDate": "2026-01-20 16:06:00",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "GitHub",
+  "Author": "GitHub"
+}

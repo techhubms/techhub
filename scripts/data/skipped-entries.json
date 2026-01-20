@@ -11391,5 +11391,17 @@
     "collection": "blogs",
     "timestamp": "2026-01-19 14:07:00 +00:00",
     "canonical_url": "https://devclass.com/2026/01/19/jquery-4-0-released-first-major-version-since-2016/"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/kg1v1z6dHJw",
+    "collection": "videos",
+    "reason": "No categories found: Unable to assign categories because the 'content' field is null. Without substantive content, it's not possible to verify whether any category inclusion rules apply. Even though the title and tags reference relevant technologies (such as 'Foundry IQ', 'AI', 'azure'), the absence of actual content means categories cannot be justified per the guideline: 'Never fabricate information – Base decisions only on provided content.'",
+    "timestamp": "2026-01-20 12:04:23 +00:00"
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=al-JSC314dA",
+    "timestamp": "2026-01-20 16:07:49 +00:00",
+    "reason": "No categories found: No categories are assigned because the content is not primarily about Microsoft technologies, products, or development platforms. The episode focuses on Home Assistant, an open source smart home platform, the Open Home Foundation, privacy-first automations, and community building—not Microsoft technology. No substantial discussion of Azure, .NET, Microsoft AI/ML, GitHub Copilot, or related DevOps, Security, or Coding topics tied to Microsoft is provided in the description. While GitHub is owned by Microsoft, general GitHub usage and open source project discussions do not qualify for categories unless the focus is on Microsoft-aligned technologies, which is not the case here. Therefore, this content does not meet inclusion thresholds."
   }
 ]
