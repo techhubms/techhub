@@ -706,7 +706,7 @@ Provide an overall test quality grade based on findings:
 - [ ] Warnings significantly reduced (or properly suppressed)
 - [ ] All tests pass (same or better than Step 1)
 - [ ] Code formatting verified: [`./.github/skills/cleanup/scripts/format-code.ps1 -Verify`](/.github/skills/cleanup/scripts/format-code.ps1)
-- [ ] PowerShell tests pass: `Run -OnlyTests -TestProject powershell`
+- [ ] PowerShell tests pass: `Run -TestProject powershell`
 - [ ] No new VS Code diagnostics (`get_errors` tool)
 
 ---
@@ -790,5 +790,7 @@ After completing all steps, provide a summary report:
 **Project Scripts**:
 
 - Run function (`TechHubRunner.psm1`) - Build, test, and run the solution
-  - `Run -OnlyTests` - Run all tests then exit
-  - `Run -OnlyTests -TestProject powershell` - PowerShell tests only
+  - `Run` - Build + all tests + servers (validation workflow)
+  - `Run -TestRerun` - Fast iteration after fixes (rebuild tests only)
+  - `Run -TestProject powershell` - PowerShell tests only
+  - `Run -TestProject <name>` - Scope tests to specific project

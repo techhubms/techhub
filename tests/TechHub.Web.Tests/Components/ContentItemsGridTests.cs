@@ -23,7 +23,7 @@ public class ContentItemsGridTests : TestContext
     {
         _mockApiClient = new Mock<TechHubApiClient>(
             MockBehavior.Loose,
-            new HttpClient { BaseAddress = new Uri("http://localhost") },
+            new HttpClient { BaseAddress = new Uri("https://localhost") },
             Mock.Of<ILogger<TechHubApiClient>>()
         );
 

@@ -255,7 +255,7 @@ Developers can run the full application locally without any Azure connectivity u
 
 **Why this priority**: Essential for developer experience, CI/CD pipeline efficiency, and cost control.
 
-**Independent Test**: Run `Run -OnlyTests` without Azure credentials, verify all tests pass.
+**Independent Test**: Run `Run` without Azure credentials, verify all tests pass.
 
 **Acceptance Scenarios**:
 

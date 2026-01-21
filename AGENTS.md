@@ -289,10 +289,10 @@ When renaming ANY identifier, you **MUST** verify and update ALL occurrences acr
 
 See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-the-website) for complete instructions on:
 
-- How to start the website with the `Run` function
+- How to start the website with `Run -WithoutTests` for interactive debugging
 - Using Playwright MCP tools for testing (CRITICAL: works directly in GitHub Copilot Chat)
-- When to use `-OnlyTests` vs `-WithoutTests` parameters
-- How to safely interact with the running website
+- How to safely interact with the running website without breaking it
+- When to run tests vs when to skip them for exploration
 
 **When to Verify**:
 
@@ -304,7 +304,7 @@ See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-
 **Key Rules**:
 
 - Use Playwright MCP for browser testing and validation
-- Test local site (<http://localhost:5184>) for development
+- Test local site (<https://localhost:5003>) for development
 - Test live site (<https://tech.hub.ms>) when appropriate
 - Document unexpected behaviors you discover
 - Report any discrepancies between observed behavior and documentation
@@ -455,8 +455,8 @@ See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-
 
 **Run Full Test Suite**:
 
-- **Primary workflow**: Use `Run -OnlyTests` to run all tests, then stop servers
-- **Scoped testing**: Use `Run -OnlyTests -TestProject <name>` to run specific test projects
+- **Primary workflow**: Use `Run` to run all tests and keep servers running for development
+- **Scoped testing**: Use `Run -TestProject <name>` to run specific test projects
 - Run ALL affected tests (unit, integration, component, E2E as appropriate)
 - **E2E tests are MANDATORY** for any UI/frontend changes - NO EXCEPTIONS
 - Tests should NOW PASS (they failed in step 5, you fixed in step 6)
@@ -583,86 +583,60 @@ See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-
 
 **ALWAYS use the Run function directly** (automatically loaded in PowerShell):
 
-**Standard Run Commands**:
+**🚨 CRITICAL isBackground RULE**:
 
-```powershell
-# ✅ CORRECT - Run tests only, exits when done (use isBackground=false)
-run_in_terminal(
-  command: "Run -OnlyTests",
-  isBackground: false  # Tests exit after completion
-)
+✅ **ALWAYS use `isBackground=true` for Run commands** - Servers never exit on their own  
+✅ **ALWAYS use `get_terminal_output` to monitor progress** - Never wait or interact with terminal
+✅ **ALWAYS open NEW terminals for other commands** - Never reuse the Run terminal  
 
-# ✅ CORRECT - Start servers for debugging (use isBackground=true)
-run_in_terminal(
-  command: "Run -WithoutTests",
-  isBackground: true  # Servers keep running
-)
+🚫 **NEVER use `isBackground=false` for any `Run` commands** - They block forever  
+🚫 **NEVER type commands in Run terminal** - ANY input kills the servers  
+🚫 **NEVER use `Start-Sleep`, `curl`, or other commands in Run terminal** - Shuts down servers
 
-# Then monitor progress:
-get_terminal_output(id: "<terminal-id>")
-```
+**Why isBackground=true Matters**:
 
-Some more examples:
-
-```powershell
-# Run tests for specific area - stops servers after successful tests
-Run -OnlyTests -TestProject Web.Tests # Use isBackground=false
-Run -OnlyTests -TestName SectionCard # Use isBackground=false
-
-# Development mode - runs tests, then keeps servers running
-Run # Use isBackground=true
-```
-
-Simply call `Run`, do not wrap in pwsh:
-
-```powershell
-# 🚫 WRONG - Don't try to execute as a file
-pwsh -File scripts/TechHubRunner.psm1 -Command 'Run -OnlyTests'
-pwsh -Command 'Run -OnlyTests'
-```
+Run commands start servers that **block the terminal indefinitely**. ANY input to that terminal (typing commands, pressing Enter, Ctrl+C) **IMMEDIATELY SHUTS DOWN** the servers. Use `isBackground=true` + `get_terminal_output` to monitor progress, and open NEW terminals for any other commands.
 
 **⚠️ CRITICAL E2E TEST WARNING**:
 
-🚫 **NEVER** run `dotnet test tests/TechHub.E2E.Tests` directly - it **WILL FAIL** without servers running!  
-✅ **ALWAYS** use `Run -OnlyTests` (runs all tests) or `Run -OnlyTests -TestProject E2E.Tests` for E2E tests only.
+✅ **ALWAYS** use `Run` (default) or `Run -TestProject E2E.Tests` for E2E tests.  
+🚫 **NEVER** run `dotnet test tests/TechHub.E2E.Tests` directly - it **WILL FAIL** without servers running!
 
-**🚨 CRITICAL TERMINAL INTERACTION RULES**:
-
-When you execute a `Run` command in a terminal:
-
-✅ **DO**: Start website with `Run` using `isBackground=true` ALWAYS  
-✅ **DO**: Use `get_terminal_output` to monitor server startup progress  
-✅ **DO**: **ONLY OBSERVE** the terminal output - NEVER interact with it  
-✅ **DO**: Use Playwright MCP tools from GitHub Copilot Chat for all website testing  
-✅ **DO**: Open NEW terminals for ANY other commands while website is running  
-✅ **DO**: Use `Run -WithoutTests` with `isBackground=true` for interactive debugging  
-✅ **DO**: Use `Run -OnlyTests` with `isBackground=false` (tests exit after completion)  
-✅ **DO**: Use `Run -OnlyTests -TestProject <project>` to run specific test projects  
-
-🚫 **NEVER**: Use `isBackground=false` for `Run` or `Run -WithoutTests` (servers never exit)  
-🚫 **NEVER**: Type `Start-Sleep`, `curl`, `wget`, or ANY command in the website terminal  
-🚫 **NEVER**: Run dotnet commands in the website terminal  
-🚫 **NEVER**: Press Enter, type anything, or interact with the website terminal  
-🚫 **NEVER**: Execute ANY operation that sends input to the website terminal
-
-**Why This Matters**:
-
-- `Run` and `Run -WithoutTests` start servers and **block** the terminal indefinitely  
-- Using `isBackground=false` will cause your tool call to NEVER complete (deadlock)  
-- Using `isBackground=true` lets the command run while you continue with other operations  
-- ANY input to that terminal (typing, pressing Enter, Ctrl+C) **IMMEDIATELY SHUTS DOWN** the website  
-- This includes: `Start-Sleep`, `curl`, `Get-Process`, or any other command  
-- **SOLUTION**: Use `isBackground=true` + `get_terminal_output` to monitor, open NEW terminals for other commands  
-
-**How to Monitor Progress**:
+**Standard Run Commands**:
 
 ```powershell
-# ✅ CORRECT - Read output without interacting
-# Use get_terminal_output tool with the terminal ID
-# This reads output WITHOUT sending any input to the terminal
+# ✅ CORRECT - Default development workflow
+run_in_terminal(
+  command: "Run",
+  isBackground: true  # CRITICAL: Servers keep running after tests
+)
+# Then monitor: get_terminal_output(id: "<terminal-id>")
+# After tests pass, servers stay running for development
 
-# ✅ CORRECT - Execute other commands in a NEW terminal
-# Open a new terminal for any other operations
+# ✅ CORRECT - Fast test iteration (assumes servers already running)
+run_in_terminal(
+  command: "Run -TestRerun -TestProject E2E.Tests",
+  isBackground: true  # CRITICAL: Quick rebuild and test
+)
+# Servers must already be running from previous Run command
+# Only rebuilds E2E test project and runs those tests
+
+# ✅ CORRECT - Start servers for debugging (no tests)
+run_in_terminal(
+  command: "Run -WithoutTests",
+  isBackground: true  # CRITICAL: Servers keep running
+)
+# Then monitor: get_terminal_output(id: "<terminal-id>")
+
+# 🚫 WRONG - Don't use isBackground=false (blocks forever!)
+run_in_terminal(
+  command: "Run",
+  isBackground: false  # BLOCKS FOREVER - Run never exits!
+)
+
+# 🚫 WRONG - Don't try to execute as a file
+pwsh -File scripts/TechHubRunner.psm1 -Command 'Run'
+pwsh -Command 'Run'
 ```
 
 ### Testing Workflows and Strategies
@@ -683,7 +657,7 @@ When you execute a `Run` command in a terminal:
   any code?         a bug?            Debugging?
         │               │                   │
         ▼               ▼                   ▼
-  Run -OnlyTests    Run -WithoutTests  Run -WithoutTests
+  Run               Run -WithoutTests  Run -WithoutTests
   (verify all       (debug first,      (explore with
    tests pass)       write test,        Playwright MCP
                      then fix)          interactively)
@@ -691,36 +665,49 @@ When you execute a `Run` command in a terminal:
   📜 Changed PowerShell scripts only?
         │
         ▼
-  Run -OnlyTests -TestProject powershell
+  Run -TestProject powershell
   (fast - only PowerShell/Pester tests,
    no .NET build or E2E tests)
 ```
 
 #### Quick Reference
 
-**Run -OnlyTests (default for testing) - ✅ PRIMARY**:
+**Run (test-driven development) - ✅ PRIMARY**:
 
-- Use when: Running tests for validation, CI/CD, or after code changes
-- What it does: Clean build, runs ALL tests (PowerShell, unit, integration, component, E2E), then STOPS servers
-- When: Default test workflow - verifies tests pass, then exits cleanly
+- Use when: Running tests for validation or development
+- What it does: Build, runs ALL tests (PowerShell, unit, integration, component, E2E), then KEEPS servers running
+- When: Default workflow - verifies tests pass, servers stay ready for `-TestRerun`
+
+**Run -StopServers (CI/CD) - 🤖 CI/CD ONLY**:
+
+- Use when: Continuous integration pipelines where servers should exit after tests
+- What it does: Build, runs ALL tests, then STOPS servers and exits
+- When: CI/CD pipelines, automated test runs, NOT for local development
+
+**Run -TestRerun (fast test iteration) - ⚡ FASTEST**:
+
+- Use when: Fixing test failures, rapid test iteration
+- What it does: Only rebuilds test projects and runs tests (assumes servers already running from `Run` or `Run -WithoutTests`)
+- When: Servers already running, you just fixed a test and want to rerun quickly
+- Speed: ~5 seconds vs ~60 seconds for full rebuild
 
 **Run (development mode)**:
 
 - Use when: Development workflow - want tests to run AND servers to stay running
-- What it does: Clean build, runs ALL tests, then KEEPS servers running for development
+- What it does: Build, runs ALL tests, then KEEPS servers running for development
 - When: Working on features, want to test code AND interact with running site
 
 **Run -WithoutTests**:
 
 - Use when: Debugging, exploring behavior, using Playwright MCP interactively
-- What it does: Clean build, starts servers, skips all tests
+- What it does: Build, starts servers, skips all tests
 - When: Investigating bugs, manual testing, interactive exploration
 
-**Run -WithoutClean**:
+**Run -Clean**:
 
-- Use when: Quick iteration during development (tests already passing)
-- What it does: Build (without clean), runs all tests, then starts servers
-- When: Fast development loop when no major changes
+- Use when: Dependencies changed (NuGet packages, npm packages), build is broken
+- What it does: Clean bin/obj directories, then build, test, and start servers
+- When: Full clean rebuild needed (not needed for normal development)
 
 #### What Tests Get Run?
 
@@ -746,23 +733,32 @@ All `Run` commands execute these test types (unless `-WithoutTests` is specified
 
 #### When to Run Specific Test Types
 
-**Changed C# backend code?** → `Run -OnlyTests`
+**Changed C# backend code?** → `Run`
 
-**Changed Blazor components?** → `Run -OnlyTests` (E2E tests **MANDATORY**)
+**Changed Blazor components?** → `Run` (E2E tests **MANDATORY**)
 
-**Changed PowerShell scripts?** → `Run -OnlyTests -TestProject powershell` (fast - only PowerShell tests, no .NET build)
+**Changed PowerShell scripts?** → `Run -TestProject powershell` (fast - only PowerShell tests, no .NET build)
 
 **Changed markdown/content?** → No tests needed
 
-**Not sure what you changed?** → `Run -OnlyTests`
+**Not sure what you changed?** → `Run`
 
-**Testing specific area?** → Use `-OnlyTests -TestProject` and/or `-TestName`:
+**CI/CD pipeline?** → `Run -StopServers`
 
-- `Run -OnlyTests -TestProject powershell` - Run only PowerShell/Pester tests (fast - no .NET build)
-- `Run -OnlyTests -TestProject Web.Tests` - Run only Web component tests
-- `Run -OnlyTests -TestName SectionCard` - Run tests matching 'SectionCard'
-- `Run -OnlyTests -TestProject E2E -TestName Navigation` - Run E2E navigation tests
-- `Run -OnlyTests -TestProject powershell -TestName FrontMatter` - Run PowerShell tests matching 'FrontMatter'
+**Testing specific area?** → Use `-TestProject` and/or `-TestName`:
+
+- `Run -TestProject powershell` - Run only PowerShell/Pester tests (fast - no .NET build)
+- `Run -TestProject Web.Tests` - Run only Web component tests
+- `Run -TestName SectionCard` - Run tests matching 'SectionCard'
+- `Run -TestProject E2E -TestName Navigation` - Run E2E navigation tests
+- `Run -TestProject powershell -TestName FrontMatter` - Run PowerShell tests matching 'FrontMatter'
+
+**Fast test iteration after fixing failures?** → Use `-TestRerun`:
+
+- `Run -TestRerun` - Rebuild all test projects, run all tests (servers must be running)
+- `Run -TestRerun -TestProject E2E.Tests` - Only rebuild E2E tests, run them (~5 sec)
+- `Run -TestRerun -TestProject powershell` - Only rebuild PowerShell tests (~2 sec)
+- `Run -TestRerun -TestName SectionCard` - Rebuild all tests, run only matching tests
 
 #### Testing Best Practices
 
@@ -783,7 +779,7 @@ All `Run` commands execute these test types (unless `-WithoutTests` is specified
 
 ```plaintext
 # Navigate to page
-mcp_playwright_browser_navigate(url: "http://localhost:5184")
+mcp_playwright_browser_navigate(url: "https://localhost:5003")
 
 # Take snapshots to see page structure
 mcp_playwright_browser_snapshot()
@@ -817,7 +813,7 @@ mcp_playwright_browser_type(element: "input field", text: "test query")
 ```powershell
 # Open a NEW terminal (NEVER use the website terminal)
 # Then run your command
-curl http://localhost:5184/api/sections
+curl -k https://localhost:5001/api/sections
 ```
 
 **Terminal Safety Checklist**:
@@ -865,18 +861,18 @@ Run -Rebuild            # Clean rebuild only, then exit
 **Testing Workflows**:
 
 ```powershell
-# Test specific projects (run tests, then exit)
-Run -OnlyTests -TestProject powershell     # PowerShell/Pester tests only (fast - no .NET build)
-Run -OnlyTests -TestProject Web.Tests      # Web component tests only
-Run -OnlyTests -TestProject E2E.Tests      # E2E tests only (requires servers)
+# Test specific projects (run tests, keep servers running)
+Run -TestProject powershell     # PowerShell/Pester tests only (fast - no .NET build)
+Run -TestProject Web.Tests      # Web component tests only
+Run -TestProject E2E.Tests      # E2E tests only (requires servers)
 
 # Test by name pattern (substring match)
-Run -OnlyTests -TestName SectionCard       # All tests with "SectionCard" in name
-Run -OnlyTests -TestName Navigation        # All tests with "Navigation" in name
+Run -TestName SectionCard       # All tests with "SectionCard" in name
+Run -TestName Navigation        # All tests with "Navigation" in name
 
 # Combine project + name filters
-Run -OnlyTests -TestProject E2E.Tests -TestName Navigation  # E2E navigation tests only
-Run -OnlyTests -TestProject powershell -TestName FrontMatter  # PowerShell FrontMatter tests
+Run -TestProject E2E.Tests -TestName Navigation  # E2E navigation tests only
+Run -TestProject powershell -TestName FrontMatter  # PowerShell FrontMatter tests
 ```
 
 **Key Features**:
@@ -949,7 +945,7 @@ The Tech Hub uses a **multi-tier documentation system** organized by scope and d
 - Development workflow and process (10 steps, TDD, etc.)
 - Core rules and boundaries (always/ask/never rules)
 - .NET tech stack overview (what we use: .NET 10, Blazor, etc.)
-- .NET development commands (dotnet build, test, run, etc.)
+- Run function usage (build, test, run workflows)
 - Repository-wide principles (performance, accessibility, timezone, configuration-driven design)
 - Site terminology and concepts
 
@@ -1138,7 +1134,7 @@ Tech Hub uses Aspire for orchestration and observability:
 # Default - uses Aspire AppHost with built-in dashboard
 Run
 
-# Dashboard URL: https://localhost:17101 (URL with token shown in startup output)
+# Dashboard URL: https://localhost:18888 (URL with token shown in startup output)
 ```
 
 **Implementation Guidance**:

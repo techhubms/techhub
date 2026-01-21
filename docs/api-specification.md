@@ -14,7 +14,7 @@ The Tech Hub API provides RESTful access to content organized by sections and co
 ## Base URL
 
 ```http
-http://localhost:5029/api
+https://localhost:5001/api
 ```
 
 ## Authentication
@@ -122,7 +122,7 @@ Get all sections.
 **Example**:
 
 ```bash
-curl http://localhost:5029/api/sections
+curl -k https://localhost:5001/api/sections
 ```
 
 ---
@@ -140,7 +140,7 @@ Get a specific section by name.
 **Example**:
 
 ```bash
-curl http://localhost:5029/api/sections/ai
+curl -k https://localhost:5001/api/sections/ai
 ```
 
 ---
@@ -158,7 +158,7 @@ Get all content items in a section (across all collections).
 **Example**:
 
 ```bash
-curl http://localhost:5029/api/sections/ai/items
+curl -k https://localhost:5001/api/sections/ai/items
 
 # Returns 1378+ AI-related items across all collections
 ```
@@ -178,7 +178,7 @@ Get all collections available in a section.
 **Example**:
 
 ```bash
-curl http://localhost:5029/api/sections/github-copilot/collections
+curl -k https://localhost:5001/api/sections/github-copilot/collections
 
 # Returns: news, blogs, videos, community
 ```
@@ -199,7 +199,7 @@ Get details about a specific collection within a section.
 **Example**:
 
 ```bash
-curl http://localhost:5029/api/sections/ai/collections/news
+curl -k https://localhost:5001/api/sections/ai/collections/news
 ```
 
 ---
@@ -218,7 +218,7 @@ Get all items in a specific collection within a section.
 **Example**:
 
 ```bash
-curl http://localhost:5029/api/sections/ml/collections/videos
+curl -k https://localhost:5001/api/sections/ml/collections/videos
 
 # Returns only videos tagged with ML category
 ```
@@ -245,7 +245,7 @@ Filter content across multiple criteria with AND logic.
 Filter by sections only:
 
 ```bash
-curl "http://localhost:5029/api/content/filter?sections=ai,ml"
+curl -k "https://localhost:5001/api/content/filter?sections=ai,ml"
 
 # Returns 1519+ items from AI or ML sections
 ```
@@ -253,7 +253,7 @@ curl "http://localhost:5029/api/content/filter?sections=ai,ml"
 Filter by collections only:
 
 ```bash
-curl "http://localhost:5029/api/content/filter?collections=news,blogs"
+curl -k "https://localhost:5001/api/content/filter?collections=news,blogs"
 
 # Returns 1142+ news and blog items
 ```
@@ -261,7 +261,7 @@ curl "http://localhost:5029/api/content/filter?collections=news,blogs"
 Combine section and collection:
 
 ```bash
-curl "http://localhost:5029/api/content/filter?sections=ai&collections=news"
+curl -k "https://localhost:5001/api/content/filter?sections=ai&collections=news"
 
 # Returns 528+ AI news items
 ```
@@ -269,7 +269,7 @@ curl "http://localhost:5029/api/content/filter?sections=ai&collections=news"
 Complex multi-criteria filter:
 
 ```bash
-curl "http://localhost:5029/api/content/filter?sections=ai,ml&collections=news,blogs&tags=copilot"
+curl -k "https://localhost:5001/api/content/filter?sections=ai,ml&collections=news,blogs&tags=copilot"
 
 # Returns 144+ items with copilot tag in AI/ML news/blogs
 ```
@@ -277,7 +277,7 @@ curl "http://localhost:5029/api/content/filter?sections=ai,ml&collections=news,b
 Search within filtered results:
 
 ```bash
-curl "http://localhost:5029/api/content/filter?sections=github-copilot&q=vscode"
+curl -k "https://localhost:5001/api/content/filter?sections=github-copilot&q=vscode"
 
 # Returns 4+ GitHub Copilot items mentioning 'vscode'
 ```
@@ -303,7 +303,7 @@ Get all unique tags across all content.
 **Example**:
 
 ```bash
-curl http://localhost:5029/api/content/tags
+curl -k https://localhost:5001/api/content/tags
 
 # Returns 12,524+ unique tags
 ```
@@ -425,11 +425,11 @@ The previous flat structure has been **completely removed**:
 ```bash
 # Get section details
 
-curl http://localhost:5029/api/sections/ai
+curl -k https://localhost:5001/api/sections/ai
 
 # Get all items for the section
 
-curl http://localhost:5029/api/sections/ai/items
+curl -k https://localhost:5001/api/sections/ai/items
 ```
 
 ### 2. Display collection-specific content
@@ -437,7 +437,7 @@ curl http://localhost:5029/api/sections/ai/items
 ```bash
 # Get GitHub Copilot news
 
-curl http://localhost:5029/api/sections/github-copilot/collections/news/items
+curl -k https://localhost:5001/api/sections/github-copilot/collections/news/items
 ```
 
 ### 3. Complex content discovery
@@ -445,7 +445,7 @@ curl http://localhost:5029/api/sections/github-copilot/collections/news/items
 ```bash
 # Find all copilot-related content in AI and ML blogs
 
-curl "http://localhost:5029/api/content/filter?sections=ai,ml&collections=blogs&tags=copilot"
+curl -k "https://localhost:5001/api/content/filter?sections=ai,ml&collections=blogs&tags=copilot"
 ```
 
 ### 4. Build tag-based navigation
@@ -453,11 +453,11 @@ curl "http://localhost:5029/api/content/filter?sections=ai,ml&collections=blogs&
 ```bash
 # Get all tags
 
-curl http://localhost:5029/api/content/tags
+curl -k https://localhost:5001/api/content/tags
 
 # Filter by specific tags
 
-curl "http://localhost:5029/api/content/filter?tags=azure,copilot"
+curl -k "https://localhost:5001/api/content/filter?tags=azure,copilot"
 ```
 
 ### 5. Search functionality
@@ -465,11 +465,11 @@ curl "http://localhost:5029/api/content/filter?tags=azure,copilot"
 ```bash
 # Search across all content
 
-curl "http://localhost:5029/api/content/filter?q=blazor"
+curl -k "https://localhost:5001/api/content/filter?q=blazor"
 
 # Search within specific section
 
-curl "http://localhost:5029/api/content/filter?sections=coding&q=blazor"
+curl -k "https://localhost:5001/api/content/filter?sections=coding&q=blazor"
 ```
 
 ---
@@ -489,7 +489,7 @@ Healthy
 **Example**:
 
 ```bash
-curl http://localhost:5029/health
+curl -k https://localhost:5001/health
 ```
 
 **Use Case**: Kubernetes liveness/readiness probes, load balancer health checks
@@ -515,7 +515,7 @@ Get detailed content item by section, collection, and content slug.
 **Example**:
 
 ```bash
-curl "http://localhost:5029/api/content/ai/news/2024-06-introducing-copilot-extensions"
+curl -k "https://localhost:5001/api/content/ai/news/2024-06-introducing-copilot-extensions"
 ```
 
 **Use Case**: Single content page, detail view, full article rendering
@@ -535,7 +535,7 @@ Get RSS feed for all content across all sections.
 **Example**:
 
 ```bash
-curl http://localhost:5029/api/rss/all
+curl -k https://localhost:5001/api/rss/all
 ```
 
 ---
@@ -553,7 +553,7 @@ Get RSS feed for a specific section.
 **Example**:
 
 ```bash
-curl http://localhost:5029/api/rss/ai
+curl -k https://localhost:5001/api/rss/ai
 ```
 
 ---
@@ -571,7 +571,7 @@ Get RSS feed for a specific collection.
 **Example**:
 
 ```bash
-curl http://localhost:5029/api/rss/collection/roundups
+curl -k https://localhost:5001/api/rss/collection/roundups
 ```
 
 ---
@@ -765,7 +765,7 @@ Get RSS feed for all content across all sections.
 **Example**:
 
 ```bash
-curl http://localhost:5184/feed.xml
+curl -k https://localhost:5003/feed.xml
 ```
 
 **Discovery Link**: Available on Home page (`<link rel="alternate" type="application/rss+xml" href="/feed.xml">`)
@@ -785,9 +785,9 @@ Get RSS feed for a specific section.
 **Examples**:
 
 ```bash
-curl http://localhost:5184/ai/feed.xml
-curl http://localhost:5184/github-copilot/feed.xml
-curl http://localhost:5184/azure/feed.xml
+curl -k https://localhost:5003/ai/feed.xml
+curl -k https://localhost:5003/github-copilot/feed.xml
+curl -k https://localhost:5003/azure/feed.xml
 ```
 
 **Discovery Link**: Available on Section pages (`<link rel="alternate" type="application/rss+xml" href="/ai/feed.xml">`)
@@ -807,7 +807,7 @@ Get RSS feed for a specific collection.
 **Example**:
 
 ```bash
-curl http://localhost:5184/collection/roundups/feed.xml
+curl -k https://localhost:5003/collection/roundups/feed.xml
 ```
 
 **Usage**: Available for content collections (roundups is most common)
@@ -856,13 +856,13 @@ Get all tags with their usage counts across all content or within a specific sco
 
 ```bash
 # All tags across entire site
-curl http://localhost:5029/api/tags/all
+curl -k https://localhost:5001/api/tags/all
 
 # Tags only from AI section
-curl http://localhost:5029/api/tags/all?sectionName=ai
+curl -k https://localhost:5001/api/tags/all?sectionName=ai
 
 # Tags from blogs collection in GitHub Copilot section
-curl http://localhost:5029/api/tags/all?sectionName=github-copilot&collectionName=blogs
+curl -k https://localhost:5001/api/tags/all?sectionName=github-copilot&collectionName=blogs
 ```
 
 ---
@@ -902,19 +902,19 @@ Get a tag cloud with quantile-based sizing for visual representation.
 
 ```bash
 # Homepage tag cloud (top tags across all content)
-curl http://localhost:5029/api/tags/cloud?scope=Homepage
+curl -k https://localhost:5001/api/tags/cloud?scope=Homepage
 
 # Section-specific tag cloud
-curl http://localhost:5029/api/tags/cloud?scope=Section&sectionName=ai
+curl -k https://localhost:5001/api/tags/cloud?scope=Section&sectionName=ai
 
 # Collection-specific tag cloud
-curl http://localhost:5029/api/tags/cloud?scope=Collection&collectionName=blogs
+curl -k https://localhost:5001/api/tags/cloud?scope=Collection&collectionName=blogs
 
 # Content-specific tag cloud (section + collection)
-curl http://localhost:5029/api/tags/cloud?scope=Content&sectionName=github-copilot&collectionName=videos
+curl -k https://localhost:5001/api/tags/cloud?scope=Content&sectionName=github-copilot&collectionName=videos
 
 # Limit to top 10 tags from last 30 days
-curl "http://localhost:5029/api/tags/cloud?scope=Homepage&maxTags=10&lastDays=30"
+curl -k "https://localhost:5001/api/tags/cloud?scope=Homepage&maxTags=10&lastDays=30"
 ```
 
 **Validation**:

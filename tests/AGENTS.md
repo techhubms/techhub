@@ -35,17 +35,16 @@ You are a testing specialist for the Tech Hub .NET project. This directory conta
 **Quick command reference** (see root AGENTS.md for full details):
 
 ```powershell
-Run                     # Run all tests, then keep servers running
-Run -WithoutTests       # Skip all tests, start servers (for debugging)
-Run -OnlyTests          # Run all tests, then exit (CI/CD, validation)
-Run -Rebuild            # Clean rebuild only, then exit (no tests, no servers)
-Run -OnlyTests -TestProject Web.Tests  # Run only Web component tests, then exit
+Run                     # Run all tests, then keep servers running (default workflow)
+Run -WithoutTests       # Skip all tests, start servers (for interactive debugging)
+Run -TestProject Web.Tests  # Run only Web component tests, keep servers running
+Run -TestName SectionCard   # Run tests matching 'SectionCard', keep servers running
 ```
 
 **⚠️ CRITICAL E2E TEST WARNING**:
 
 🚫 **NEVER run `dotnet test tests/TechHub.E2E.Tests` directly** - it **WILL FAIL** without servers running!
-✅ **ALWAYS use `Run -OnlyTests -TestProject E2E.Tests`** which handles server startup, testing, and shutdown automatically.
+✅ **ALWAYS use `Run -TestProject E2E.Tests`** which handles server startup and testing automatically.
 
 ## Core Testing Rules
 
@@ -57,7 +56,7 @@ These apply to ALL tests across all layers:
 - Write regression test FIRST for bugs, then fix it
 - Test real implementation - NEVER duplicate production logic in tests
 - Mock only external dependencies (file system, HTTP clients, external APIs)
-- Run tests after code changes: `Run -OnlyTests` or `Run -OnlyTests -TestProject <project>` to scope tests
+- Run tests after code changes: `Run` or `Run -TestProject <project>` to scope tests
 - Use `async Task` for async tests - NEVER `async void`
 - Test public APIs - Don't test implementation details
 - Dispose resources in test cleanup

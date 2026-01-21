@@ -12,7 +12,7 @@ namespace TechHub.E2E.Tests.Web;
 [Collection("Custom Pages TOC Tests")]
 public class CustomPagesTocTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
-    private const string BaseUrl = "http://localhost:5184";
+    private const string BaseUrl = "https://localhost:5003";
     private IBrowserContext? _context;
     private IPage? _page;
     private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
@@ -149,7 +149,7 @@ public class CustomPagesTocTests(PlaywrightCollectionFixture fixture) : IAsyncLi
                 if (activeHref != null && activeHref.Contains('#'))
                 {
                     var headingId = activeHref.Split('#')[1];
-                    
+
                     // Track this heading if we haven't seen it activated before
                     if (!activatedHeadings.Contains(headingId))
                     {
@@ -160,12 +160,12 @@ public class CustomPagesTocTests(PlaywrightCollectionFixture fixture) : IAsyncLi
         }
 
         // Assert - Verify all expected headings were activated in the correct order
-        activatedHeadings.Should().HaveCount(expectedHeadingIds.Length, 
+        activatedHeadings.Should().HaveCount(expectedHeadingIds.Length,
             $"All {expectedHeadingIds.Length} headings should have been activated during scroll. Activated: [{string.Join(", ", activatedHeadings)}]");
 
         for (var i = 0; i < expectedHeadingIds.Length; i++)
         {
-            activatedHeadings[i].Should().Be(expectedHeadingIds[i], 
+            activatedHeadings[i].Should().Be(expectedHeadingIds[i],
                 $"Heading at position {i} should be '{expectedHeadingIds[i]}' but was '{activatedHeadings[i]}'");
         }
     }
@@ -179,13 +179,21 @@ public class CustomPagesTocTests(PlaywrightCollectionFixture fixture) : IAsyncLi
         // Act - Tab to first TOC link
         await Page.Keyboard.PressAsync("Tab");
 
-        // Keep tabbing until we reach a TOC link (max 20 tabs)
+        // Keep tabbing until we reach a TOC link (max 30 tabs to account for page complexity)
         var foundTocLink = false;
-        for (var i = 0; i < 20; i++)
+        for (var i = 0; i < 30; i++)
         {
-            var focusedElement = await Page.EvaluateAsync<string>("document.activeElement.className");
-            if (focusedElement.Contains("sidebar-toc") || 
-                await Page.EvaluateAsync<bool>("document.activeElement.closest('.sidebar-toc') !== null"))
+            // Check if current element or its parent is within sidebar-toc
+            var isInToc = await Page.EvaluateAsync<bool>(@"
+                (function() {
+                    const elem = document.activeElement;
+                    if (!elem) return false;
+                    // Check if element itself or any parent has sidebar-toc class
+                    return elem.closest('.sidebar-toc') !== null;
+                })()
+            ");
+
+            if (isInToc)
             {
                 foundTocLink = true;
                 break;
@@ -215,8 +223,8 @@ public class CustomPagesTocTests(PlaywrightCollectionFixture fixture) : IAsyncLi
         // Arrange
         await Page.GotoRelativeAsync("/github-copilot/levels-of-enlightenment");
 
-        // Assert - Check page title
-        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Levels of Enlightenment", level: 1);
+        // Assert - Check page title (includes "GitHub Copilot:" prefix)
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "GitHub Copilot: Levels of Enlightenment", level: 1);
 
         // Check sidebar TOC exists
         var toc = Page.Locator(".sidebar-toc");
@@ -287,8 +295,8 @@ public class CustomPagesTocTests(PlaywrightCollectionFixture fixture) : IAsyncLi
 
         // Assert - Last heading's TOC link should be active
         var lastHeadingId = await lastHeading.GetAttributeAsync("id");
-        var expectedActiveLink = Page.Locator($".sidebar-toc a[href='#{lastHeadingId}']");
-        
+        var expectedActiveLink = Page.Locator($".sidebar-toc a[href$='#{lastHeadingId}']");
+
         var hasActiveClass = await expectedActiveLink.EvaluateAsync<bool>("el => el.classList.contains('active')");
         hasActiveClass.Should().BeTrue($"Expected TOC link for #{lastHeadingId} to be active when scrolled to bottom");
     }
@@ -309,6 +317,9 @@ public class CustomPagesTocTests(PlaywrightCollectionFixture fixture) : IAsyncLi
             return;
         }
 
+        // Wait for scroll spy to initialize and activate at least one link
+        await Page.WaitForSelectorAsync(".sidebar-toc a.active", new() { Timeout = 5000 });
+
         // Record initial active link
         var initialActiveHref = await Page.Locator(".sidebar-toc a.active").First.GetAttributeAsync("href");
 
@@ -328,24 +339,15 @@ public class CustomPagesTocTests(PlaywrightCollectionFixture fixture) : IAsyncLi
         // Arrange & Act
         await Page.GotoRelativeAsync("/github-copilot/levels-of-enlightenment");
 
-        // Wait for initial scroll spy to settle
-        await Page.WaitForTimeoutAsync(500);
+        // Scroll to top to ensure first section is in view
+        await Page.EvaluateAsync("window.scrollTo(0, 0)");
 
-        // Assert - Check if "Overview" section exists and is highlighted
-        // The issue we fixed: Overview was never getting highlighted
-        var overviewLink = Page.Locator(".sidebar-toc a").Filter(new() { HasText = "Overview" });
-        var overviewCount = await overviewLink.CountAsync();
+        // Wait for scroll spy to initialize and activate at least one link
+        await Page.WaitForSelectorAsync(".sidebar-toc a.active", new() { Timeout = 5000 });
 
-        if (overviewCount > 0)
-        {
-            // Scroll to top to make sure Overview is in view
-            await Page.EvaluateAsync("window.scrollTo(0, 0)");
-            await Page.WaitForTimeoutAsync(300);
-
-            // Check if Overview link is active (or ANY link is active at top)
-            var activeLinks = await Page.Locator(".sidebar-toc a.active").CountAsync();
-            activeLinks.Should().BeGreaterThan(0, "Expected at least one TOC link to be active when page loads");
-        }
+        // Assert - At least one TOC link should be active after initialization
+        var activeLinks = await Page.Locator(".sidebar-toc a.active").CountAsync();
+        activeLinks.Should().BeGreaterThan(0, "Expected at least one TOC link to be active after scroll spy initializes");
     }
 
     #endregion

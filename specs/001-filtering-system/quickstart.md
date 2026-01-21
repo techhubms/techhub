@@ -332,7 +332,7 @@ public class FilteringTests : PlaywrightTest
     public async Task UserCanFilterByTag()
     {
         // Arrange
-        await Page.GotoAsync("http://localhost:5184/sections/ai");
+        await Page.GotoAsync("https://localhost:5003/sections/ai");
 
         // Act
         await Page.ClickAsync("button:has-text('Azure')");  // Click tag in cloud
@@ -347,7 +347,7 @@ public class FilteringTests : PlaywrightTest
     public async Task UserCanSelectDateRange()
     {
         // Arrange
-        await Page.GotoAsync("http://localhost:5184/sections/ai");
+        await Page.GotoAsync("https://localhost:5003/sections/ai");
 
         // Act
         await Page.ClickAsync("button:has-text('Last 30 days')");
@@ -462,42 +462,42 @@ Verify subset matching works correctly:
 
 ```bash
 # Single tag
-curl "http://localhost:5029/api/content/filter?tags=ai"
+curl -k "https://localhost:5001/api/content/filter?tags=ai"
 
 # Multiple tags (OR logic)
-curl "http://localhost:5029/api/content/filter?tags=ai&tags=azure"
+curl -k "https://localhost:5001/api/content/filter?tags=ai&tags=azure"
 
 # Date range
-curl "http://localhost:5029/api/content/filter?from=2025-10-01&to=2026-01-16"
+curl -k "https://localhost:5001/api/content/filter?from=2025-10-01&to=2026-01-16"
 
 # Combined filters
-curl "http://localhost:5029/api/content/filter?tags=ai&from=2025-10-01&section=ai"
+curl -k "https://localhost:5001/api/content/filter?tags=ai&from=2025-10-01&section=ai"
 ```
 
 ### Get Tag Cloud
 
 ```bash
 # Homepage tag cloud
-curl "http://localhost:5029/api/tags/cloud?scope=homepage&maxTags=20&lastDays=90"
+curl -k "https://localhost:5001/api/tags/cloud?scope=homepage&maxTags=20&lastDays=90"
 
 # Section tag cloud
-curl "http://localhost:5029/api/tags/cloud?scope=section&section=ai&maxTags=20"
+curl -k "https://localhost:5001/api/tags/cloud?scope=section&section=ai&maxTags=20"
 
 # Collection tag cloud
-curl "http://localhost:5029/api/tags/cloud?scope=collection&section=ai&collection=news"
+curl -k "https://localhost:5001/api/tags/cloud?scope=collection&section=ai&collection=news"
 ```
 
 ### Get All Tags (for dropdown)
 
 ```bash
 # All tags globally
-curl "http://localhost:5029/api/tags/all"
+curl -k "https://localhost:5001/api/tags/all"
 
 # All tags in section
-curl "http://localhost:5029/api/tags/all?section=ai"
+curl -k "https://localhost:5001/api/tags/all?section=ai"
 
 # All tags in collection
-curl "http://localhost:5029/api/tags/all?section=ai&collection=news"
+curl -k "https://localhost:5001/api/tags/all?section=ai&collection=news"
 ```
 
 ---

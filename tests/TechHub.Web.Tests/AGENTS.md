@@ -81,10 +81,10 @@ See actual tests in `Components/` and bUnit documentation for examples.
 Run
 
 # Run only Web component tests
-Run -OnlyTests -TestProject Web.Tests
+Run -TestProject Web.Tests
 
 # Run specific component tests
-Run -OnlyTests -TestName SectionCard
+Run -TestName SectionCard
 ```
 
 ## Best Practices

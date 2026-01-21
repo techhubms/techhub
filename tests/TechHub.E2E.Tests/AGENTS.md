@@ -14,11 +14,11 @@ End-to-end tests using Playwright to verify complete user workflows and function
 # Run all tests (clean build + all tests, then start servers)
 Run
 
-# Run only E2E tests (clean build + E2E tests, then stop servers)
-Run -OnlyTests -TestProject E2E.Tests
+# Run only E2E tests (clean build + E2E tests, then keep servers running)
+Run -TestProject E2E.Tests
 
 # Run specific E2E tests by name pattern
-Run -OnlyTests -TestProject E2E.Tests -TestName UrlRouting
+Run -TestProject E2E.Tests -TestName UrlRouting
 ```
 
 ⚠️ **WARNING**: Direct `dotnet test` commands **WILL FAIL** because servers aren't running. Always use `Run` which handles server startup automatically.

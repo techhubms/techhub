@@ -43,23 +43,23 @@
   },
   "postCreateCommand": "bash .devcontainer/post-create.sh",
   "forwardPorts": [
-    5029,
-    5184,
+    5001,
+    5003,
     18888,
     4317
   ],
   "portsAttributes": {
-    "5029": {
-      "label": "API (http://localhost:5029)"
+    "5001": {
+      "label": "API (https://localhost:5001)"
     },
-    "5184": {
-      "label": "Web (http://localhost:5184)"
+    "5003": {
+      "label": "Web (https://localhost:5003)"
     },
     "18888": {
-      "label": "Aspire Dashboard"
+      "label": "Aspire Dashboard (https://localhost:18888)"
     },
     "4317": {
-      "label": "OTLP (OpenTelemetry)"
+      "label": "OTLP (OpenTelemetry Protocol)"
     }
   }
 }

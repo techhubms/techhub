@@ -67,9 +67,10 @@ fi
 
 # ==================== Playwright ====================
 
-# Install Chrome browser for both E2E tests and Playwright MCP tools
+# Install Chrome browser with dependencies for both .NET E2E tests and Playwright MCP tools
+# This installs Chrome system-wide to /usr/bin/google-chrome
 echo "Installing Chrome browser for Playwright..."
-npx playwright install chrome --with-deps
+playwright install chrome --with-deps
 
 # ==================== PowerShell Modules ====================
 echo "Installing PowerShell modules..."
@@ -150,11 +151,17 @@ if (Test-Path $techHubRoot) {
 Write-Host "Tech Hub .NET Development Environment" -ForegroundColor Cyan
 Write-Host "✅ PowerShell profile loaded" -ForegroundColor Green
 Write-Host ""
-Write-Host "Quick start: Type 'Run -OnlyTests' to run all tests" -ForegroundColor Yellow
-Write-Host "  Run -OnlyTests         - Run all tests, then exit (CI/CD)" -ForegroundColor Gray
-Write-Host "  Run                    - Build + tests + servers (development)" -ForegroundColor Gray
-Write-Host "  Run -WithoutTests      - Skip tests, start servers (debugging)" -ForegroundColor Gray
-Write-Host "  Run -Help              - Show full usage information" -ForegroundColor Gray
+Write-Host "Quick start: Type 'Run' to build, test, and start servers" -ForegroundColor Yellow
+Write-Host ""
+Write-Host "OPTIONS:" -ForegroundColor Yellow
+Write-Host "  -Help          Show this help message" -ForegroundColor Gray
+Write-Host "  -Clean         Clean build artifacts before building (use when dependencies change)" -ForegroundColor Gray
+Write-Host "  -WithoutTests  Skip all tests, start servers directly (for debugging)" -ForegroundColor Gray
+Write-Host "  -StopServers   Stop servers after tests complete (for CI/CD pipelines)" -ForegroundColor Gray
+Write-Host "  -TestRerun     Fast test iteration: Only rebuild and run test projects (assumes servers running)" -ForegroundColor Gray
+Write-Host "  -Rebuild       Clean rebuild only, then exit" -ForegroundColor Gray
+Write-Host "  -TestProject   Scope tests to specific project (e.g., TechHub.Web.Tests, E2E.Tests, powershell)" -ForegroundColor Gray
+Write-Host "  -TestName      Scope tests by name pattern (e.g., SectionCard)" -ForegroundColor Gray
 Write-Host ""
 EOF
 

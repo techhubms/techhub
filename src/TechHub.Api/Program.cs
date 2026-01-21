@@ -66,7 +66,7 @@ builder.Services.AddSingleton<ITagMatchingService, TagMatchingService>();
 builder.Services.AddCors(options =>
 {
     var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>()
-        ?? ["https://localhost:7001"];
+        ?? ["https://localhost:5003"];
 
     options.AddDefaultPolicy(policy =>
         policy.WithOrigins(allowedOrigins)

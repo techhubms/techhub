@@ -59,11 +59,11 @@ See [Root AGENTS.md - Using the Run Function](../../AGENTS.md#using-the-run-func
 
 ```powershell
 # All PowerShell tests only (fast - no .NET build)
-Run -OnlyTests -TestProject powershell
+Run -TestProject powershell
 
 # PowerShell tests by name pattern
-Run -OnlyTests -TestProject powershell -TestName "RSS"
-Run -OnlyTests -TestProject powershell -TestName "FrontMatter"
+Run -TestProject powershell -TestName "RSS"
+Run -TestProject powershell -TestName "FrontMatter"
 
 # All tests (PowerShell + .NET), then start servers
 Run
@@ -74,17 +74,17 @@ Run -WithoutTests
 
 **Aliases**: The following are equivalent:
 
-- `Run -OnlyTests -TestProject powershell`
-- `Run -OnlyTests -TestProject pester`
-- `Run -OnlyTests -TestProject scripts`
+- `Run -TestProject powershell`
+- `Run -TestProject pester`
+- `Run -TestProject scripts`
 
 ### Test Filtering Options
 
 ```powershell
 # Run tests matching a name pattern
-Run -OnlyTests -TestProject powershell -TestName "RSS"
-Run -OnlyTests -TestProject powershell -TestName "FrontMatter"
-Run -OnlyTests -TestProject powershell -TestName "should convert basic"
+Run -TestProject powershell -TestName "RSS"
+Run -TestProject powershell -TestName "FrontMatter"
+Run -TestProject powershell -TestName "should convert basic"
 ```
 
 ### From VS Code
@@ -249,7 +249,7 @@ Verify:
 
 ## Key Testing Rules
 
-1. **ALWAYS run tests after modifying PowerShell functions** - Use `Run -OnlyTests -TestProject powershell`
+1. **ALWAYS run tests after modifying PowerShell functions** - Use `Run -TestProject powershell`
 2. **Write tests FIRST for bug fixes** - Reproduce the issue before fixing
 3. **Test real code, not mocks** - Don't replicate production logic in tests
 4. **Use meaningful assertions** - Make test failures easy to diagnose

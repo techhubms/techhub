@@ -77,14 +77,14 @@ See actual tests for implementation examples.
 # Run all tests (recommended)
 Run
 
-# Run only Infrastructure tests
-Run -OnlyTests -TestProject Infrastructure.Tests
+# Run only Infrastructure integration tests
+Run -TestProject Infrastructure.Tests
 
 # Run specific test class
-Run -OnlyTests -TestName FrontMatterParser
+Run -TestName FrontMatterParser
 
-# Run repository tests only
-Run -OnlyTests -TestName Repository
+# Or run repository tests only
+Run -TestName Repository
 ```
 
 ## Best Practices

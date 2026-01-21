@@ -7,7 +7,7 @@ namespace TechHub.E2E.Tests.Web;
 [Collection("Section Page Keyboard Navigation Tests")]
 public class SectionPageKeyboardNavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
-    private const string BaseUrl = "http://localhost:5184";
+    private const string BaseUrl = "https://localhost:5003";
     private IBrowserContext? _context;
     private IPage? _page;
     private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");

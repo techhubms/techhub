@@ -1,3 +1,6 @@
+# Disable progress bars for performance
+$ProgressPreference = 'SilentlyContinue'
+
 $functionsPath = Join-Path $PSScriptRoot "../../scripts/content-processing/functions"
 
 . (Join-Path $functionsPath "Write-ErrorDetails.ps1")

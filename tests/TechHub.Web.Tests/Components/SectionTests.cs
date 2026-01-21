@@ -20,7 +20,7 @@ public class SectionTests : TestContext
         // Arrange
         var mockApiClient = new Mock<TechHubApiClient>(
             MockBehavior.Loose,
-            new HttpClient { BaseAddress = new Uri("http://localhost") },
+            new HttpClient { BaseAddress = new Uri("https://localhost") },
             Mock.Of<ILogger<TechHubApiClient>>()
         );
 
@@ -101,7 +101,7 @@ public class SectionTests : TestContext
         // Arrange
         var mockApiClient = new Mock<TechHubApiClient>(
             MockBehavior.Loose,
-            new HttpClient { BaseAddress = new Uri("http://localhost") },
+            new HttpClient { BaseAddress = new Uri("https://localhost") },
             Mock.Of<ILogger<TechHubApiClient>>()
         );
 

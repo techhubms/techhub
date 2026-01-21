@@ -1,3 +1,6 @@
+# Disable progress bars for performance
+$ProgressPreference = 'SilentlyContinue'
+
 if (Test-Path $script:TempPath) {
     Remove-Item -Path $script:TempPath -Recurse -Force -ErrorAction SilentlyContinue
 }

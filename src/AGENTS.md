@@ -19,6 +19,24 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 - **Blazor**: Server-Side Rendering (SSR) + WebAssembly
 - **.NET Aspire**: Orchestration and telemetry
 
+## Port Configuration
+
+**Goal**: HTTPS everywhere, fixed ports, single source of truth (no redundant configuration).
+
+**Strategy**: Define ports in `launchSettings.json` only. Aspire reads these automatically - no explicit endpoint configuration needed in AppHost.
+
+**Fixed Ports**:
+
+- API: 5001 (HTTPS) - Defined in [src/TechHub.Api/Properties/launchSettings.json](src/TechHub.Api/Properties/launchSettings.json)
+- Web: 5003 (HTTPS) - Defined in [src/TechHub.Web/Properties/launchSettings.json](src/TechHub.Web/Properties/launchSettings.json)
+- Aspire Dashboard: 18888 (HTTPS)
+
+**Benefits**:
+
+- Same ports whether running via Aspire (`Run`) or directly (`dotnet run`)
+- No duplicate endpoint definitions
+- Single source of truth prevents configuration drift
+
 ## Critical Development Rules
 
 ### Starting, Running, and Testing
@@ -35,22 +53,25 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 **Quick command reference** (see root AGENTS.md for full details):
 
 ```powershell
-Run                     # Clean build + tests + servers (default)
-Run -WithoutTests       # Clean build + servers (skip all tests)
-Run -WithoutClean       # Build + tests + servers (faster, no clean)
-Run -OnlyTests          # Clean build + all tests, then exit
-Run -OnlyTests -TestProject Web.Tests  # Run only Web component tests, then exit
+Run                     # Build + all tests + servers (default development workflow)
+Run -WithoutTests       # Build + servers (skip tests for quick start/debugging)
+Run -TestRerun          # Fast iteration: only rebuild tests and rerun (servers must be running)
+Run -TestProject Web.Tests    # Run only Web tests, keep servers running
+Run -TestName SectionCard     # Run tests matching 'SectionCard', keep servers running
+Run -Clean              # Clean build + all tests + servers (when dependencies change)
 ```
 
 ### ✅ Always Do
 
-- **Run `dotnet build` after changes** to check for errors
+- **Run tests after code changes**: `Run -Clean` or `Run -Clean -TestProject <name>`
+- **Use -Clean to expose build warnings** so you can fix them
 - **Fix all build warnings** (0 warnings policy enforced)
 - **Follow EditorConfig rules** (auto-format code)
 - **Use file-scoped namespaces** in all C# files
 - **Enable nullable reference types** (already global)
+- **Use primary constructors** when possible
+- **Simplify collection initialization**: Only when its a simple collection, don't wrap larger statements in `[]`
 - **Write tests BEFORE or DURING implementation** (TDD)
-- **Run tests after code changes**: `Run` or `Run -OnlyTests -TestProject <name>`
 - **Maintain 80%+ code coverage** for unit tests
 - **Use context7 MCP tool** for latest .NET/Blazor documentation
 - **Check ALL occurrences before renaming** (use `grep_search` to find all, then update each)
@@ -254,19 +275,7 @@ See [Directory.Build.props](/Directory.Build.props) for complete list with detai
 
 **Command Line**:
 
-```bash
-# Build with code analysis
-
-dotnet build
-
-# Build treating warnings as errors (for CI)
-
-dotnet build /p:TreatWarningsAsErrors=true
-
-# Clean build (reveals all warnings)
-
-dotnet clean && dotnet build
-```
+Use `Run` instead - see [### Starting, Running, and Testing](#starting-running-and-testing)
 
 **Customizing Suppressions**:
 

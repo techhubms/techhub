@@ -55,51 +55,29 @@ dotnet build TechHub.slnx /p:ErrorLog=analysis.sarif
 ## Test Commands
 
 **Use the Run function** (see [AGENTS.md - Using the Run Function](../../../AGENTS.md#using-the-run-function) for complete documentation).
-The module is auto-loaded in devcontainer terminals. Only use `Import-Module` in CI or after making changes to the module.
+The module is auto-loaded in devcontainer terminals.
 
 ```powershell
-# Common workflows
-Run                              # Build + all tests + servers
-Run -WithoutTests                # Build + servers (no tests)
-Run -WithoutClean                # Build + all tests + servers (faster)
-Run -Rebuild                     # Clean rebuild only
+# Validation workflows
+Run                              # Build + all tests + servers (default validation)
+Run -TestRerun                   # Fast: Only rebuild and rerun tests (after fixes)
 
-# Testing workflows (run tests, then exit)
-Run -OnlyTests                                   # All tests, then exit
-Run -OnlyTests -TestProject powershell           # PowerShell tests only (fast - no .NET build)
-Run -OnlyTests -TestProject Web.Tests            # Web component tests only
-Run -OnlyTests -TestProject E2E.Tests            # E2E tests only
-Run -OnlyTests -TestName SectionCard             # Tests matching 'SectionCard'
-Run -OnlyTests -TestProject E2E.Tests -TestName Navigation  # E2E navigation tests
-```
-
-**Low-level dotnet test commands** (for reference only - use Run instead):
-
-```bash
-# ⚠️ WARNING: Use 'Run' function for normal workflows.
-# E2E tests WILL FAIL if you run them directly without servers.
-
-# Run all tests
-dotnet test TechHub.slnx
-
-# Run with verbose output
-dotnet test TechHub.slnx --verbosity normal
-
-# Run specific test project  
-dotnet test tests/TechHub.Core.Tests/TechHub.Core.Tests.csproj
-
-# Run tests matching a filter
-dotnet test TechHub.slnx --filter "FullyQualifiedName~ContentItem"
+# Scoped testing (when working on specific areas)
+Run -TestProject powershell                      # PowerShell tests only (fast - no .NET build)
+Run -TestProject Web.Tests                       # Web component tests only
+Run -TestProject E2E.Tests                       # E2E tests only
+Run -TestName SectionCard                        # Tests matching 'SectionCard'
+Run -TestProject E2E.Tests -TestName Navigation  # E2E navigation tests
 ```
 
 ## PowerShell Script Tests
 
 ```powershell
 # Run PowerShell Pester tests via Run function (module is auto-loaded)
-Run -OnlyTests -TestProject powershell
+Run -TestProject powershell
 
 # Run with test name filter
-Run -OnlyTests -TestProject powershell -TestName "FrontMatter"
+Run -TestProject powershell -TestName "FrontMatter"
 ```
 
 ## Cleanup Skill Scripts
@@ -143,13 +121,16 @@ dotnet format TechHub.slnx
 # 3. Fix unused usings
 dotnet format TechHub.slnx --diagnostics IDE0005
 
-# 4. Run all tests
+# 4. Run all tests to validate changes
 pwsh -Command "Run"
 
-# 5. Verify documentation
+# 5. After making fixes, rerun tests quickly
+pwsh -Command "Run -TestRerun"
+
+# 6. Verify documentation
 pwsh -File .github/skills/cleanup/scripts/verify-documentation.ps1
 
-# 6. Final verification
+# 7. Final verification
 dotnet format TechHub.slnx --verify-no-changes
 dotnet build TechHub.slnx -warnaserror
 ```

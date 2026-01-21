@@ -52,7 +52,7 @@ public static class BlazorHelpers
     public const int DefaultAssertionTimeout = 5000;
 
     /// <summary>Base URL for the Web frontend</summary>
-    public const string BaseUrl = "http://localhost:5184";
+    public const string BaseUrl = "https://localhost:5003";
 
     // ============================================================================
     // PAGE CREATION
@@ -220,7 +220,7 @@ public static class BlazorHelpers
     public static Task GotoRelativeAsync(
         this IPage page,
         string relativeUrl,
-        string baseUrl = "http://localhost:5184",
+        string baseUrl = "https://localhost:5003",
         PageGotoOptions? options = null)
     {
         var fullUrl = $"{baseUrl}{relativeUrl}";

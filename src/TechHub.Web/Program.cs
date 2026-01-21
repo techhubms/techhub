@@ -81,11 +81,11 @@ builder.Services.AddSignalR(options =>
 
 // Configure HTTP client for API with service discovery
 // When running via Aspire, "https+http://api" resolves via service discovery
-// When running standalone, falls back to ApiBaseUrl config (e.g., http://localhost:5029)
+// When running standalone, falls back to ApiBaseUrl config (e.g., https://localhost:5001)
 var apiBaseUrl = builder.Configuration["services:api:https:0"]
     ?? builder.Configuration["services:api:http:0"]
     ?? builder.Configuration["ApiBaseUrl"]
-    ?? "http://localhost:5029";
+    ?? "https://localhost:5001";
 
 builder.Services.AddHttpClient<TechHubApiClient>(client =>
 {

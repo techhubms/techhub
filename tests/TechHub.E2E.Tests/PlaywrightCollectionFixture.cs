@@ -19,7 +19,7 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
         Browser = await Playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
         {
             Headless = true,
-            Channel = "chrome",
+            ExecutablePath = "/usr/bin/google-chrome",
             Timeout = 5000,
             Args =
             [

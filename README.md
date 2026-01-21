@@ -11,8 +11,11 @@ This directory contains the .NET/Blazor implementation of Tech Hub.
 1. Open the project in VS Code
 2. Press **F5** (or click **Run > Start Debugging**)
 3. Select **"Tech Hub (API + Web)"** from the dropdown
-4. Web UI opens automatically at <http://localhost:5184>
-5. API available at <http://localhost:5029> (Swagger: <http://localhost:5029/swagger>)
+4. Web UI opens at <https://localhost:5003> (accept dev certificate warning)
+5. API available at <https://localhost:5001> (Swagger: <https://localhost:5001/swagger>)
+6. Aspire Dashboard at <https://localhost:18888> (token shown in console)
+
+> **Note**: You'll see browser warnings about self-signed certificates - this is normal for local development. Click "Advanced" → "Proceed" to continue.
 
 **Alternative - PowerShell Function**:
 
@@ -69,7 +72,7 @@ To start the dashboard:
 # Start with dashboard (runs as Docker container)
 Run -Dashboard
 
-# Dashboard URL: http://localhost:18888
+# Dashboard URL: https://localhost:18888
 # Note: Copy the login token from the terminal output
 ```
 
