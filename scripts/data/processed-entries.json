@@ -23914,5 +23914,11 @@
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-data-warehouse-named-a-leader-and-outperformer-in-gigaom-radar-for-data-warehouses/",
     "reason": "Succesfully added: Assigned 'Azure' because the article centers on Microsoft Fabric, a core Azure-based data service (Azure rule 1), and discusses fundamental architecture and service capabilities. Assigned 'ML' because the content details embedded data science and machine learning capabilities, native Spark integration, and model execution on data within Fabric (ML rule 1, 3, 6). Did not assign 'AI' because, while AI-powered innovation is mentioned, the article’s factual and technical focus is on the data warehouse/analytics platform—ML and data engineering are dominant. Did not assign 'Coding' or 'DevOps' because the post does not cover programming, software engineering practices, or DevOps pipelines. 'Security' was not assigned as there is no substantive content on access control, protection, or compliance. The content passes all generic inclusion and exclusion rules.",
     "collection": "news"
+  },
+  {
+    "timestamp": "2026-01-21 19:11:15 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the entire article centers on the implementation, impact, and use cases of Microsoft-powered AI and agentic (adaptive, interactive) AI in retail (AI inclusion rules 1, 4, 6). Assigned Azure category because the technical solution for the agentic robots (e.g., ADAM) is specifically described as powered by Microsoft Azure AI (Azure inclusion rule 1). Did not assign other categories as there is no focus on developer coding, DevOps practices, ML/data science engineering, or explicit security implementation. The article is technical and implementation-focused, not purely executive or business strategy, so generic exclusions do not apply.",
+    "collection": "news",
+    "canonical_url": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/01/20/frontier-transformation-in-retail-how-agentic-ai-robots-are-redefining-store-experiences/"
   }
 ]

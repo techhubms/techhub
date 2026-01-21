@@ -1,0 +1,14 @@
+{
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "EnhancedContent": "Hi, I toggled on the \"new\" AI foundry experience. But it just gives me a blank page.\n\nI cannot disable it and go back to the old view though.\n\nWhen I go to https://ai.azure.com/ it takes me to the \"nextgen\" page (e.g. https://ai.azure.com/nextgen/?wsid=%2Fsubscriptions...)\n\nRemoving \"nextgen\" from the URL just redirects me back to the \"nextgen\" version.\n\nThis also happens to my colleague, and we can't use the Foundry.\n\nCan you help?",
+  "Description": "Hi, I toggled on the \"new\" AI foundry experience. But it just gives me a blank page.\n\nI cannot disable it and go back to the old view though.\n\nWhen I go to [https://ai.azure.com/](https://ai.azure.com/) it takes me to the \"nextgen\" page (e.g. [https://ai.azure.com/nextgen/?wsid=%2Fsubscriptions...)](https://ai.azure.com/nextgen/?wsid=%2Fsubscriptions...%29)\n\nRemoving \"nextgen\" from the URL just redirects me back to the \"nextgen\" version.\n\nThis also happens to my colleague, and we can't use the Foundry.\n\nCan you help?",
+  "PubDate": "2026-01-20T20:39:06+00:00",
+  "FeedName": "Microsoft Tech Community",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/blank-screen-in-quot-new-quot-ai-foundry-and-unable-to-go-back/m-p/4487888#M22413",
+  "Tags": [],
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "ProcessedDate": "2026-01-21 19:10:39",
+  "Author": "MoeCPr",
+  "Title": "Blank screen in \"new\" AI Foundry and unable to go back to \"classic\" view",
+  "OutputDir": "_community"
+}

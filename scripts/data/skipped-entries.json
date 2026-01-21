@@ -11487,5 +11487,23 @@
     "canonical_url": "https://www.youtube.com/watch?v=fmiYJENxFZM",
     "reason": "No categories found: No categories assigned. The content discusses digital transformation, AI integration, and data foundations in the Consumer Packaged Goods (CPG) industry, focusing on Siemens' manufacturing and supply chain processes. There is no clear mention of specific Microsoft technologies, platforms, or development tools. The video is positioned at a high level, focusing on business transformation and innovation, rather than technical implementations or hands-on development detail. According to the generic exclusion rules, content that primarily targets business strategy, executive themes, or high-level industry trends without substantial technical detail about Microsoft products or related development is excluded. The minimum Microsoft technology threshold (≥40% substantive, central role) is not met based on the description provided.",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2026-01-21 19:11:42 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure/how-can-i-get-the-sign-in-logs-activated/m-p/4487302#M2191"
+  },
+  {
+    "timestamp": "2026-01-21 19:11:42 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute/corrupted-vt-transaction-files/m-p/4487567#M840"
+  },
+  {
+    "timestamp": "2026-01-21 19:11:42 +00:00",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/blank-screen-in-quot-new-quot-ai-foundry-and-unable-to-go-back/m-p/4487888#M22413"
   }
 ]

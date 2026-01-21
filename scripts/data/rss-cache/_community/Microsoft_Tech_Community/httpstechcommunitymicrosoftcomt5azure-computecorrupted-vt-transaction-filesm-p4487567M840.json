@@ -1,0 +1,14 @@
+{
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "EnhancedContent": "We are a small accounting company using VT+ Transaction on a local drive synchronized with OneDrive for backup and file storage. A few days ago when we tried to open the application, we suddenly started receiving the following error messages: Run Time Error 0 and Run Time Error 440, and the program does not start. According to VT+ support the program files are corrupted and the data can only be restored up to the year 2022, as the more recent backups are also affected. Somehow the system is overriding our backups, which makes the latest ones unusable. Any advice what could cause that and how to resolve the issue. Thanks",
+  "Description": "We are a small accounting company using VT+ Transaction on a local drive synchronized with OneDrive for backup and file storage. A few days ago when we tried to open the application, we suddenly started receiving the following error messages: Run Time Error 0 and Run Time Error 440, and the program does not start. According to VT+ support the program files are corrupted and the data can only be restored up to the year 2022, as the more recent backups are also affected. Somehow the system is overriding our backups, which makes the latest ones unusable. Any advice what could cause that and how to resolve the issue. Thanks",
+  "PubDate": "2026-01-20T11:43:49+00:00",
+  "FeedName": "Microsoft Tech Community",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-compute/corrupted-vt-transaction-files/m-p/4487567#M840",
+  "Tags": [],
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "ProcessedDate": "2026-01-21 19:10:39",
+  "Author": "20022026",
+  "Title": "Corrupted VT+ transaction files",
+  "OutputDir": "_community"
+}
