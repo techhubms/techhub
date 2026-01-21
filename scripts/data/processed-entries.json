@@ -23908,5 +23908,11 @@
     "canonical_url": "https://github.blog/ai-and-ml/github-copilot/a-cheat-sheet-to-slash-commands-in-github-copilot-cli/",
     "collection": "news",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the entire article focuses on Copilot CLI, a developer-oriented Copilot tool (AI rule 2, GitHub Copilot rules 1–4, and critical Copilot product distinction). Assigned 'Coding' since the content details command-line coding workflow enhancement using Copilot within a developer context (Coding rule 5, Developer Tools). Although the main topic is developer tooling, no other categories such as 'DevOps' or 'Azure' are covered as there are no deployment, CI/CD, or Azure-specific topics present."
+  },
+  {
+    "timestamp": "2026-01-21 18:12:49 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-data-warehouse-named-a-leader-and-outperformer-in-gigaom-radar-for-data-warehouses/",
+    "reason": "Succesfully added: Assigned 'Azure' because the article centers on Microsoft Fabric, a core Azure-based data service (Azure rule 1), and discusses fundamental architecture and service capabilities. Assigned 'ML' because the content details embedded data science and machine learning capabilities, native Spark integration, and model execution on data within Fabric (ML rule 1, 3, 6). Did not assign 'AI' because, while AI-powered innovation is mentioned, the article’s factual and technical focus is on the data warehouse/analytics platform—ML and data engineering are dominant. Did not assign 'Coding' or 'DevOps' because the post does not cover programming, software engineering practices, or DevOps pipelines. 'Security' was not assigned as there is no substantive content on access control, protection, or compliance. The content passes all generic inclusion and exclusion rules.",
+    "collection": "news"
   }
 ]

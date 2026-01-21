@@ -11481,5 +11481,11 @@
     "canonical_url": "https://www.youtube.com/watch?v=rWreWlS61gE",
     "collection": "videos",
     "reason": "No categories found: All fields were analyzed according to the content categorization workflow. The content spotlights an open source, offline speech-to-text application called Handy, created in response to a personal need for extensible speech-to-text solutions. There is no substantive mention of Microsoft technologies, platforms, development frameworks, or tools per the input fields (title, description, content, tags). It does not discuss Microsoft AI services, ML, Coding, Azure, Security, DevOps, or GitHub Copilot. The only possible link is the event series 'Open Source Friday,' which is hosted by GitHub, but the focus here is not on GitHub development practices or tooling, only on Handy as a project. Therefore, based on the generic exclusion rules and technology threshold, this content does not meet the inclusion criteria for any categories."
+  },
+  {
+    "timestamp": "2026-01-21 18:13:26 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=fmiYJENxFZM",
+    "reason": "No categories found: No categories assigned. The content discusses digital transformation, AI integration, and data foundations in the Consumer Packaged Goods (CPG) industry, focusing on Siemens' manufacturing and supply chain processes. There is no clear mention of specific Microsoft technologies, platforms, or development tools. The video is positioned at a high level, focusing on business transformation and innovation, rather than technical implementations or hands-on development detail. According to the generic exclusion rules, content that primarily targets business strategy, executive themes, or high-level industry trends without substantial technical detail about Microsoft products or related development is excluded. The minimum Microsoft technology threshold (≥40% substantive, central role) is not met based on the description provided.",
+    "collection": "videos"
   }
 ]
