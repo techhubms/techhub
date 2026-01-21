@@ -35,7 +35,9 @@ public class SectionMappingService : ISectionMappingService
     public string GetSectionTitle(string sectionUrl)
     {
         if (string.IsNullOrWhiteSpace(sectionUrl))
+        {
             return sectionUrl ?? string.Empty;
+        }
 
         return _urlToTitle.TryGetValue(sectionUrl, out var title)
             ? title
@@ -45,7 +47,9 @@ public class SectionMappingService : ISectionMappingService
     public string GetSectionUrl(string sectionName)
     {
         if (string.IsNullOrWhiteSpace(sectionName))
+        {
             return sectionName ?? string.Empty;
+        }
 
         return _nameToUrl.TryGetValue(sectionName, out var url)
             ? url
@@ -55,7 +59,9 @@ public class SectionMappingService : ISectionMappingService
     public string GetCollectionDisplayName(string collectionName)
     {
         if (string.IsNullOrWhiteSpace(collectionName))
+        {
             return collectionName ?? string.Empty;
+        }
 
         return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(collectionName.ToLowerInvariant());
     }

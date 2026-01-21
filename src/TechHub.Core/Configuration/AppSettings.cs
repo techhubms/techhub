@@ -135,7 +135,7 @@ public class PerformanceSettings
     /// <summary>
     /// Enable HTTP/3
     /// </summary>
-    public bool EnableHttp3 { get; init; } = false;
+    public bool EnableHttp3 { get; init; }
 
     /// <summary>
     /// Max concurrent requests

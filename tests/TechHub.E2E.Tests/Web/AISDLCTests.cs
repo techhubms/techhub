@@ -11,7 +11,6 @@ namespace TechHub.E2E.Tests.Web;
 [Collection("Custom Pages TOC Tests")]
 public class AISDLCTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
-    private const string BaseUrl = "https://localhost:5003";
     private const string PageUrl = "/ai-powered-sdlc";
     private IBrowserContext? _context;
     private IPage? _page;

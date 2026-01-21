@@ -6,7 +6,7 @@ namespace TechHub.Web.Services;
 /// Interface for Tech Hub API client
 /// Enables mocking in unit tests
 /// </summary>
-public interface ITechHubApiClient
+internal interface ITechHubApiClient
 {
     /// <summary>
     /// Get tag cloud for specified scope

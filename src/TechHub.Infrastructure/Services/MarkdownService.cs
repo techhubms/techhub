@@ -172,15 +172,21 @@ public class MarkdownService : IMarkdownService
     private static bool IsExternalLink(string url)
     {
         if (string.IsNullOrEmpty(url))
+        {
             return false;
+        }
 
         // Hash-only links are internal
         if (url.StartsWith('#'))
+        {
             return false;
+        }
 
         // Relative paths are internal
         if (url.StartsWith('/'))
+        {
             return false;
+        }
 
         // Check if it has a protocol (http://, https://, mailto:, etc.)
         if (url.Contains("://", StringComparison.Ordinal))

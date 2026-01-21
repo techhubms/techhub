@@ -21,38 +21,40 @@ public record ContentItemDto
     public required string Url { get; init; }
 
     /// <summary>
-    /// Determines if this content is from an external collection (links to original source)
+    /// Determines if this item links to an external source (vs linking internally to our site).
+    /// News, blogs, and community items redirect to the original source.
+    /// Videos and roundups (and custom pages) link internally since we can present them on our site.
     /// </summary>
-    public bool IsExternalCollection() =>
+    public bool LinksExternally() =>
         CollectionName is "news" or "blogs" or "community";
 
     /// <summary>
-    /// Gets the target URL for links (external URL for external collections, internal URL otherwise)
+    /// Gets the target URL for links (external URL for items that link externally, internal URL otherwise)
     /// </summary>
     public string GetHref() =>
-        IsExternalCollection() ? ExternalUrl ?? "" : Url;
+        LinksExternally() ? ExternalUrl ?? "" : Url;
 
     /// <summary>
-    /// Gets the link target attribute (opens in new tab for external collections)
+    /// Gets the link target attribute (opens in new tab for items that link externally)
     /// </summary>
     public string? GetTarget() =>
-        IsExternalCollection() ? "_blank" : null;
+        LinksExternally() ? "_blank" : null;
 
     /// <summary>
-    /// Gets the link rel attribute (security attributes for external links)
+    /// Gets the link rel attribute (security attributes for items that link externally)
     /// </summary>
     public string? GetRel() =>
-        IsExternalCollection() ? "noopener noreferrer" : null;
+        LinksExternally() ? "noopener noreferrer" : null;
 
     /// <summary>
     /// Gets the aria-label for accessibility
     /// </summary>
     public string GetAriaLabel() =>
-        IsExternalCollection() ? $"{Title} - opens in new tab" : Title;
+        LinksExternally() ? $"{Title} - opens in new tab" : Title;
 
     /// <summary>
-    /// Gets the data-enhance-nav attribute for Blazor navigation enhancement
+    /// Gets the data-enhance-nav attribute for Blazor navigation enhancement (only for internal links)
     /// </summary>
     public string? GetDataEnhanceNav() =>
-        IsExternalCollection() ? null : "true";
+        LinksExternally() ? null : "true";
 }

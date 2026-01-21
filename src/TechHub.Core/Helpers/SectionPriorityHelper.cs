@@ -34,10 +34,14 @@ public static class SectionPriorityHelper
 
         // Special case: Roundups always belong to "all" section
         if (collectionName?.Equals("roundups", StringComparison.OrdinalIgnoreCase) == true)
+        {
             return "all";
+        }
 
         if (sectionNames.Count == 0)
+        {
             return "all";
+        }
 
         // Find the first section that matches in priority order
         foreach (var sectionName in _sectionPriorityOrder)
@@ -64,10 +68,14 @@ public static class SectionPriorityHelper
 
         // Special case: Roundups always belong to "all" section
         if (collectionName?.Equals("roundups", StringComparison.OrdinalIgnoreCase) == true)
+        {
             return "all";
+        }
 
         if (sectionNames.Count == 0)
+        {
             return "all";
+        }
 
         // Find the first section that matches in priority order
         foreach (var sectionName in _sectionPriorityOrder)

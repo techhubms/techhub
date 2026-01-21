@@ -6,7 +6,7 @@ namespace TechHub.Web.Services;
 /// Service for handling errors and exceptions in the application.
 /// Provides methods to navigate to error pages with exception details.
 /// </summary>
-public class ErrorService
+internal class ErrorService
 {
     private Exception? _lastException;
 

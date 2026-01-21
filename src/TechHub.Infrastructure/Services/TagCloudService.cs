@@ -28,7 +28,6 @@ public class TagCloudService(
         if (request.Scope == TagCloudScope.Content)
         {
             return await GetContentItemTagsAsync(
-                request.SectionName,
                 request.CollectionName,
                 request.Slug,
                 cancellationToken);
@@ -120,7 +119,6 @@ public class TagCloudService(
     }
 
     private async Task<IReadOnlyList<TagCloudItem>> GetContentItemTagsAsync(
-        string? sectionName,
         string? collectionName,
         string? slug,
         CancellationToken cancellationToken)

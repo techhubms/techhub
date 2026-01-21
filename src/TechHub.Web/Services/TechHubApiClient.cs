@@ -130,13 +130,24 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
         {
             var queryParams = new List<string>();
             if (!string.IsNullOrWhiteSpace(sections))
+            {
                 queryParams.Add($"sections={Uri.EscapeDataString(sections)}");
+            }
+
             if (!string.IsNullOrWhiteSpace(collections))
+            {
                 queryParams.Add($"collections={Uri.EscapeDataString(collections)}");
+            }
+
             if (!string.IsNullOrWhiteSpace(tags))
+            {
                 queryParams.Add($"tags={Uri.EscapeDataString(tags)}");
+            }
+
             if (!string.IsNullOrWhiteSpace(searchQuery))
+            {
                 queryParams.Add($"q={Uri.EscapeDataString(searchQuery)}");
+            }
 
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
             var url = $"/api/content/filter{queryString}";
@@ -646,17 +657,34 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
             };
 
             if (!string.IsNullOrWhiteSpace(sectionName))
+            {
                 queryParams.Add($"section={Uri.EscapeDataString(sectionName)}");
+            }
+
             if (!string.IsNullOrWhiteSpace(collectionName))
+            {
                 queryParams.Add($"collection={Uri.EscapeDataString(collectionName)}");
+            }
+
             if (!string.IsNullOrWhiteSpace(slug))
+            {
                 queryParams.Add($"contentId={Uri.EscapeDataString(slug)}");
+            }
+
             if (maxTags.HasValue)
+            {
                 queryParams.Add($"maxTags={maxTags.Value}");
+            }
+
             if (minUses.HasValue)
+            {
                 queryParams.Add($"minUses={minUses.Value}");
+            }
+
             if (lastDays.HasValue)
+            {
                 queryParams.Add($"lastDays={lastDays.Value}");
+            }
 
             var queryString = string.Join("&", queryParams);
             var url = $"/api/tags/cloud?{queryString}";

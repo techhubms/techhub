@@ -38,15 +38,6 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
     }
 
     /// <summary>
-    /// Initialize the repository - no-op for configuration-based repository
-    /// Data is already loaded from IOptions in constructor
-    /// </summary>
-    public Task<IReadOnlyList<Section>> InitializeAsync(CancellationToken cancellationToken = default)
-    {
-        return Task.FromResult(_sections);
-    }
-
-    /// <summary>
     /// Get all sections from configuration
     /// Data is pre-loaded and cached in memory from constructor
     /// </summary>

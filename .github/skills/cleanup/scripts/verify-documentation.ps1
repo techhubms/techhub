@@ -1,89 +1,38 @@
-<#
-.SYNOPSIS
-    Lists all documentation files for AI agent review.
-
-.DESCRIPTION
-    Outputs all documentation files that should be reviewed to ensure they accurately
-    reflect the current state of the codebase. The AI agent should read and review
-    each file for accuracy, completeness, and consistency with the code.
-
-.PARAMETER SourceRoot
-    Root directory of the repository. Defaults to auto-detection.
-
-.EXAMPLE
-    ./verify-documentation.ps1
-    
-.EXAMPLE
-    ./verify-documentation.ps1 -SourceRoot /workspaces/techhub
-#>
-
 [CmdletBinding()]
-param(
-    [Parameter()]
-    [string]$SourceRoot
-)
+param()
 
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
-function Get-SourceRoot {
-    if ($SourceRoot) {
-        return $SourceRoot
-    }
-    
-    # Try to find the repository root
-    $current = $PSScriptRoot
-    while ($current -and -not (Test-Path (Join-Path $current "TechHub.slnx"))) {
-        $current = Split-Path $current -Parent
-    }
-    
-    if (-not $current) {
-        throw "Could not find repository root. Please specify -SourceRoot parameter."
-    }
-    
-    return $current
+# Find the repository root
+$root = $PSScriptRoot
+while ($root -and -not (Test-Path (Join-Path $root "TechHub.slnx"))) {
+    $root = Split-Path $root -Parent
 }
 
-$root = Get-SourceRoot
+if (-not $root) {
+    throw "Could not find repository root (TechHub.slnx)"
+}
 
-Write-Host @"
+Write-Host "Documentation Review Files" -ForegroundColor Cyan
+Write-Host "=========================`n" -ForegroundColor Cyan
 
-================================================================================
-DOCUMENTATION REVIEW REQUIRED
-================================================================================
+$allDocs = @()
 
-The following documentation files should be reviewed for accuracy and completeness.
-Please read each file and verify it reflects the current state of the codebase.
-
-INSTRUCTIONS FOR AI AGENT:
---------------------------
-1. Read each file listed below
-2. Compare documentation content with actual implementation
-3. Identify any outdated information, broken links, or inconsistencies
-4. Report discrepancies and suggest corrections
-5. Ensure all new features are documented
-6. Verify all code examples are accurate
-
-REPOSITORY ROOT DOCUMENTATION:
-"@ -ForegroundColor Cyan
-
-$rootDocs = @(
-    "README.md",
-    "AGENTS.md"
-)
-
+# Repository root documentation
+$rootDocs = @("README.md", "AGENTS.md")
 foreach ($doc in $rootDocs) {
     $path = Join-Path $root $doc
     if (Test-Path $path) {
-        Write-Host "  ✓ $doc" -ForegroundColor Green
+        $allDocs += $path
+        Write-Host "✓ $doc" -ForegroundColor Green
     }
     else {
-        Write-Host "  ✗ $doc (MISSING)" -ForegroundColor Red
+        Write-Host "✗ $doc (MISSING)" -ForegroundColor Red
     }
 }
 
-Write-Host "`nFUNCTIONAL DOCUMENTATION (docs/):" -ForegroundColor Cyan
-
+Write-Host "`nFunctional Documentation:" -ForegroundColor Cyan
 $functionalDocs = @(
     "docs/AGENTS.md",
     "docs/api-specification.md",
@@ -91,19 +40,18 @@ $functionalDocs = @(
     "docs/rss-feeds.md",
     "docs/toc-component.md"
 )
-
 foreach ($doc in $functionalDocs) {
     $path = Join-Path $root $doc
     if (Test-Path $path) {
-        Write-Host "  ✓ $doc" -ForegroundColor Green
+        $allDocs += $path
+        Write-Host "✓ $doc" -ForegroundColor Green
     }
     else {
-        Write-Host "  ✗ $doc (MISSING)" -ForegroundColor Red
+        Write-Host "✗ $doc (MISSING)" -ForegroundColor Red
     }
 }
 
-Write-Host "`nDOMAIN-SPECIFIC AGENTS.md FILES:" -ForegroundColor Cyan
-
+Write-Host "`nDomain-Specific AGENTS.md:" -ForegroundColor Cyan
 $domainDocs = @(
     "src/AGENTS.md",
     "src/TechHub.Api/AGENTS.md",
@@ -120,80 +68,130 @@ $domainDocs = @(
     "tests/TechHub.E2E.Tests/AGENTS.md",
     "tests/powershell/AGENTS.md"
 )
-
 foreach ($doc in $domainDocs) {
     $path = Join-Path $root $doc
     if (Test-Path $path) {
-        Write-Host "  ✓ $doc" -ForegroundColor Green
+        $allDocs += $path
+        Write-Host "✓ $doc" -ForegroundColor Green
     }
     else {
-        Write-Host "  ✗ $doc (MISSING)" -ForegroundColor Red
+        Write-Host "✗ $doc (MISSING)" -ForegroundColor Red
     }
 }
 
-Write-Host "`nCONTENT GUIDELINES:" -ForegroundColor Cyan
-
-$contentDocs = @(
-    "collections/writing-style-guidelines.md"
-)
-
+Write-Host "`nContent Guidelines:" -ForegroundColor Cyan
+$contentDocs = @("collections/writing-style-guidelines.md")
 foreach ($doc in $contentDocs) {
     $path = Join-Path $root $doc
     if (Test-Path $path) {
-        Write-Host "  ✓ $doc" -ForegroundColor Green
+        $allDocs += $path
+        Write-Host "✓ $doc" -ForegroundColor Green
     }
     else {
-        Write-Host "  ✗ $doc (MISSING)" -ForegroundColor Red
+        Write-Host "✗ $doc (MISSING)" -ForegroundColor Red
     }
 }
 
-Write-Host @"
+Write-Host "`n========================================" -ForegroundColor Cyan
+Write-Host "Total documentation files: $($allDocs.Count)" -ForegroundColor Cyan
+Write-Host "========================================" -ForegroundColor Cyan
 
-================================================================================
-REVIEW CHECKLIST FOR EACH FILE:
-================================================================================
+# Check for broken internal markdown links
+Write-Host "`n📎 Checking for Broken Links:" -ForegroundColor Cyan
+$brokenLinks = @()
 
-For each documentation file above, verify:
+foreach ($docPath in $allDocs) {
+    $content = Get-Content $docPath -Raw
+    $relativePath = $docPath -replace [regex]::Escape($root), '' -replace '^[\\/]', ''
+    
+    # Find markdown links [text](path)
+    $linkPattern = '\[([^\]]+)\]\(([^)]+)\)'
+    $matches = [regex]::Matches($content, $linkPattern)
+    
+    foreach ($match in $matches) {
+        $linkText = $match.Groups[1].Value
+        $linkPath = $match.Groups[2].Value
+        
+        # Skip external links (http/https)
+        if ($linkPath -match '^https?://') {
+            continue
+        }
+        
+        # Skip anchors only (#section)
+        if ($linkPath -match '^#') {
+            continue
+        }
+        
+        # Remove anchor from path
+        $cleanPath = $linkPath -replace '#.*$', ''
+        
+        # Resolve relative path
+        $docDir = Split-Path $docPath -Parent
+        $targetPath = Join-Path $docDir $cleanPath
+        $targetPath = [System.IO.Path]::GetFullPath($targetPath)
+        
+        # Check if target exists
+        if (-not (Test-Path $targetPath)) {
+            $brokenLinks += @{
+                SourceFile   = $relativePath
+                LinkText     = $linkText
+                LinkPath     = $linkPath
+                ResolvedPath = $targetPath -replace [regex]::Escape($root), '' -replace '^[\\/]', ''
+            }
+        }
+    }
+}
 
-1. ACCURACY: Does content match current code implementation?
-   - Check code examples are correct
-   - Verify API endpoints match actual routes
-   - Confirm patterns match current practices
+if ($brokenLinks.Count -gt 0) {
+    Write-Host "  Found $($brokenLinks.Count) potentially broken link(s):" -ForegroundColor Yellow
+    $brokenLinks | ForEach-Object {
+        Write-Host "    ❌ $($_.SourceFile): [$($_.LinkText)]($($_.LinkPath))" -ForegroundColor Red
+        Write-Host "       → Target not found: $($_.ResolvedPath)" -ForegroundColor Gray
+    }
+}
+else {
+    Write-Host "  ✓ All internal links appear valid" -ForegroundColor Green
+}
 
-2. COMPLETENESS: Are all features documented?
-   - New endpoints have documentation
-   - New components are described
-   - Configuration changes are explained
+# Check for missing AGENTS.md in code directories
+Write-Host "`n📁 Checking for Missing AGENTS.md:" -ForegroundColor Cyan
+$missingAgents = @()
 
-3. CONSISTENCY: Does documentation align across files?
-   - Terminology is consistent
-   - Cross-references are valid
-   - No conflicting information
+$codeDirs = @(
+    "src",
+    "src/TechHub.Api",
+    "src/TechHub.Web",
+    "src/TechHub.Core",
+    "src/TechHub.Infrastructure",
+    "tests",
+    "tests/TechHub.Api.Tests",
+    "tests/TechHub.Web.Tests",
+    "tests/TechHub.Core.Tests",
+    "tests/TechHub.Infrastructure.Tests",
+    "tests/TechHub.E2E.Tests",
+    "tests/powershell",
+    "scripts",
+    "collections",
+    "docs"
+)
 
-4. LINKS: Are all internal links working?
-   - Markdown links point to existing files
-   - Anchors are valid
-   - No orphaned references
+foreach ($dir in $codeDirs) {
+    $dirPath = Join-Path $root $dir
+    $agentsPath = Join-Path $dirPath "AGENTS.md"
+    
+    if ((Test-Path $dirPath) -and -not (Test-Path $agentsPath)) {
+        $missingAgents += $dir
+    }
+}
 
-5. EXAMPLES: Are code examples up-to-date?
-   - Examples compile and run
-   - Examples follow current patterns
-   - Examples use latest APIs
-
-================================================================================
-AFTER REVIEW:
-================================================================================
-
-Report any issues found using this format:
-
-FILE: [filename]
-ISSUE: [description of problem]
-SUGGESTED FIX: [proposed correction]
-
-Then update the documentation files as needed to ensure accuracy.
-
-================================================================================
-
-"@ -ForegroundColor Yellow
+if ($missingAgents.Count -gt 0) {
+    Write-Host "  Found $($missingAgents.Count) director(ies) missing AGENTS.md:" -ForegroundColor Yellow
+    $missingAgents | ForEach-Object {
+        Write-Host "    ❌ $_/AGENTS.md" -ForegroundColor Red
+    }
+}
+else {
+    Write-Host "  ✓ All code directories have AGENTS.md" -ForegroundColor Green
+}
 
 exit 0

@@ -1344,6 +1344,11 @@ All user interface components and interactions must be accessible to users with 
 
 **Alt-Collection**: Optional frontmatter field for content organized in subfolders (e.g., `_videos/ghc-features/`, `_videos/vscode-updates/`) that need special categorization beyond their parent collection.
 
+**Linking Strategy**: Collections have different link behaviors based on their content type:
+
+- **External Linking** (news, blogs, community): Always redirect users to the original source URL when clicked. These collections represent content that should be consumed at the original publisher's site.
+- **Internal Linking** (videos, roundups, custom): Link to pages within the Tech Hub site. These collections represent content that can be fully presented on our site, such as embedded videos or curated summaries.
+
 ### Filtering Systems
 
 **Date Filters**: Client-side filtering by publication date ranges (e.g., "Last 30 days").

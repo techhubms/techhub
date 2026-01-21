@@ -1,92 +1,25 @@
-# Dead Code Detection Report
+## Dead Code Found
 
-**Date**: {DATE}  
-**Branch**: {BRANCH}
+**Total**: {TOTAL_DEAD_CODE_COUNT} items
 
----
-
-## Summary
-
-| Category | Count | Confidence |
-| -------- | ----- | ---------- |
-| Unused Using Statements | {UNUSED_USINGS_COUNT} | High |
-| Unused Private Members | {UNUSED_MEMBERS_COUNT} | Medium-High |
-| Commented Code Blocks | {COMMENTED_CODE_COUNT} | Medium |
-| Unused CSS Classes | {UNUSED_CSS_COUNT} | Low-Medium |
-
-**Total Items**: {TOTAL_DEAD_CODE_COUNT}
-
----
-
-## 🟢 High Confidence (Safe to Remove)
-
-### Unused Using Statements ({UNUSED_USINGS_COUNT})
+### 🟢 High Confidence - Safe to Remove ({UNUSED_USINGS_COUNT})
 
 {UNUSED_USINGS_DETAILS}
 
----
-
-## 🟡 Medium Confidence (Review Before Removing)
-
-### Unused Private Members ({UNUSED_MEMBERS_COUNT})
+### 🟡 Medium Confidence - Review First ({UNUSED_MEMBERS_COUNT} members, {COMMENTED_CODE_COUNT} commented)
 
 {UNUSED_MEMBERS_DETAILS}
 
-### Commented Code Blocks ({COMMENTED_CODE_COUNT})
-
 {COMMENTED_CODE_DETAILS}
 
----
-
-## 🟠 Low Confidence (Manual Review Required)
-
-### Unused CSS Classes ({UNUSED_CSS_COUNT})
+### 🟠 Low Confidence - May be false positives ({UNUSED_CSS_COUNT})
 
 {UNUSED_CSS_DETAILS}
 
----
+### Recommendations
 
-## Common False Positives to Watch For
+{YOUR RECOMMENDATIONS}
 
-- ❌ xUnit test methods (discovered by reflection)
-- ❌ Blazor component parameters (set via Razor)
-- ❌ Minimal API handlers (registered in `Program.cs`)
-- ❌ Private fields only used in `Dispose()` methods
-- ❌ Reflection-based code (check for attributes)
+### Next steps
 
----
-
-## What To Do Next
-
-**Tell me what to remove**:
-
-1. Review the findings above
-2. Verify suspicious items if needed (ask "Show me [item]")
-3. Respond with one of:
-   - **"Remove all high confidence items"** - Remove unused usings
-   - **"Remove unused usings only"** - Safe cleanup
-   - **"Show me [specific item] before removing"** - Manual review
-   - **"Skip dead code removal"** - All items are false positives
-
-**Example responses**:
-
-- "Remove all high confidence items" - I'll remove unused usings
-- "Show me CalculateTotal method in PricingService.cs" - I'll show you the code
-- "Remove unused usings only" - I'll skip members/comments/CSS
-
----
-
-## Quick Response Template
-
-```markdown
-### My Decisions
-
-High Confidence Items:
-- {Action}: {Reason}
-
-Medium Confidence Items:
-- {Action}: {Reason}
-
-Low Confidence Items:
-- {Action}: {Reason}
-```
+{PRESENT USER WITH OPTIONS}

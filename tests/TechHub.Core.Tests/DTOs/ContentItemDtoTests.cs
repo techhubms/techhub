@@ -12,13 +12,13 @@ public class ContentItemDtoTests
     [InlineData("videos", false)]
     [InlineData("roundups", false)]
     [InlineData("custom", false)]
-    public void IsExternalCollection_ReturnsCorrectValue_BasedOnCollectionName(string collectionName, bool expected)
+    public void LinksExternally_ReturnsCorrectValue_BasedOnCollectionName(string collectionName, bool expected)
     {
         // Arrange
         var dto = CreateTestDto(collectionName);
 
         // Act
-        var result = dto.IsExternalCollection();
+        var result = dto.LinksExternally();
 
         // Assert
         Assert.Equal(expected, result);

@@ -94,22 +94,34 @@ public class ContentItem
     public void Validate()
     {
         if (string.IsNullOrWhiteSpace(Slug))
+        {
             throw new ArgumentException("Content slug cannot be empty", nameof(Slug));
+        }
 
         if (string.IsNullOrWhiteSpace(Title))
+        {
             throw new ArgumentException("Content title cannot be empty", nameof(Title));
+        }
 
         if (DateEpoch <= 0)
+        {
             throw new ArgumentException("Date epoch must be a valid Unix timestamp", nameof(DateEpoch));
+        }
 
         if (SectionNames.Count == 0)
+        {
             throw new ArgumentException("Content must have at least one section", nameof(SectionNames));
+        }
 
         if (string.IsNullOrWhiteSpace(RenderedHtml))
+        {
             throw new ArgumentException("Rendered HTML cannot be empty", nameof(RenderedHtml));
+        }
 
         if (Excerpt.Length > 1000)
+        {
             throw new ArgumentException("Excerpt should not exceed 1000 characters", nameof(Excerpt));
+        }
     }
 
     /// <summary>

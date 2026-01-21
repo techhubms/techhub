@@ -62,19 +62,29 @@ public class FilterState
         var parts = new List<string>();
 
         if (!string.IsNullOrWhiteSpace(DateRange))
+        {
             parts.Add($"dateRange={Uri.EscapeDataString(DateRange)}");
+        }
 
         if (SelectedTags.Count > 0)
+        {
             parts.Add($"tags={Uri.EscapeDataString(string.Join(",", SelectedTags))}");
+        }
 
         if (!string.IsNullOrWhiteSpace(SearchQuery))
+        {
             parts.Add($"search={Uri.EscapeDataString(SearchQuery)}");
+        }
 
         if (StartDateEpoch.HasValue)
+        {
             parts.Add($"startDate={StartDateEpoch}");
+        }
 
         if (EndDateEpoch.HasValue)
+        {
             parts.Add($"endDate={EndDateEpoch}");
+        }
 
         return parts.Count > 0 ? "?" + string.Join("&", parts) : string.Empty;
     }

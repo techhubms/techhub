@@ -270,12 +270,12 @@ public class ContentItemCardTests : TestContext
             Author = null,
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
             DateIso = "2024-01-15",
-            CollectionName = "blogs",
+            CollectionName = "videos",
             SectionNames = ["ai"],
             PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
-            ExternalUrl = "https://example.com/post",
+            ExternalUrl = "https://www.youtube.com/watch?v=example",
             Url = "/ai/videos/example-post"
         };
 
@@ -439,13 +439,13 @@ public class ContentItemCardTests : TestContext
             Author = null,
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
             DateIso = "2024-01-15",
-            CollectionName = "blogs",
+            CollectionName = "videos",
             SectionNames = ["ai"],
             PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
-            ExternalUrl = "https://example.com/post",
-            Url = "/ai/blogs/example-post"
+            ExternalUrl = "https://www.youtube.com/watch?v=example",
+            Url = "/ai/videos/example-post"
         };
 
         // Act

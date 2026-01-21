@@ -35,8 +35,8 @@
 
   <!-- Global package references -->
   <ItemGroup>
-    <!-- Use latest stable version of analyzers (10.x for .NET 10) -->
-    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="10.*">
+    <!-- Roslynator analyzers - comprehensive C# code analysis -->
+    <PackageReference Include="Roslynator.Analyzers" Version="4.12.11">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -48,8 +48,6 @@
     <NoWarn>$(NoWarn);CA1308</NoWarn>
     <!-- CA1720: Identifier contains type name - 'Guid' in RSS feeds is the RSS standard, not System.Guid -->
     <NoWarn>$(NoWarn);CA1720</NoWarn>
-    <!-- CA1805: Do not initialize unnecessarily - explicit initialization improves clarity -->
-    <NoWarn>$(NoWarn);CA1805</NoWarn>
     <!-- CA1822: Member does not access instance data - we prefer instance methods for consistency and testability -->
     <NoWarn>$(NoWarn);CA1822</NoWarn>
     <!-- CA1002: List vs Collection - internal API, List is more practical for LINQ operations -->
@@ -62,10 +60,6 @@
     <NoWarn>$(NoWarn);CS1591</NoWarn>
     <!-- CS1570: Malformed XML in doc comment - minor formatting issues don't affect functionality -->
     <NoWarn>$(NoWarn);CS1570</NoWarn>
-    <!-- IDE0011: Add braces - enforced by editorconfig, will auto-fix on format -->
-    <NoWarn>$(NoWarn);IDE0011</NoWarn>
-    <!-- IDE0060: Unused parameter - sometimes needed for interface/signature compatibility -->
-    <NoWarn>$(NoWarn);IDE0060</NoWarn>
     <!-- IDE0211: Top-level statements vs Program.Main - we prefer explicit Program class -->
     <NoWarn>$(NoWarn);IDE0211</NoWarn>
   </PropertyGroup>

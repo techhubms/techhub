@@ -14,7 +14,7 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
     private IBrowserContext? _context;
     private IPage? _page;
     private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
-    private const string BaseUrl = "https://localhost:5003";
+
     private const string ApiUrl = "https://localhost:5001";
 
     public async Task InitializeAsync()

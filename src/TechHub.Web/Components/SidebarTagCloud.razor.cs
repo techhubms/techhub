@@ -7,7 +7,7 @@ namespace TechHub.Web.Components;
 /// <summary>
 /// Defines how the tag cloud handles tag clicks
 /// </summary>
-public enum TagCloudNavigationMode
+internal enum TagCloudNavigationMode
 {
     /// <summary>
     /// Update URL query params in-place (stays on current page)
@@ -27,7 +27,7 @@ public enum TagCloudNavigationMode
 /// Displays tags with usage counts and size categories
 /// Supports multiple tag selection with OR logic
 /// </summary>
-public partial class SidebarTagCloud : ComponentBase
+internal partial class SidebarTagCloud : ComponentBase
 {
     [Inject]
     private ITechHubApiClient ApiClient { get; set; } = default!;
@@ -114,7 +114,7 @@ public partial class SidebarTagCloud : ComponentBase
     private IReadOnlyList<TagCloudItem>? tags;
     private HashSet<string> selectedTagsInternal = [];
     private bool isLoading = true;
-    private bool hasError = false;
+    private bool hasError;
 
     protected override async Task OnInitializedAsync()
     {

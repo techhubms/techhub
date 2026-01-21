@@ -52,7 +52,9 @@ internal static class SectionHelper
     public static string GetCollectionDisplayName(string collectionName)
     {
         if (string.IsNullOrWhiteSpace(collectionName))
+        {
             return collectionName ?? string.Empty;
+        }
 
         return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(collectionName.ToLowerInvariant());
     }
@@ -63,7 +65,9 @@ internal static class SectionHelper
     public static string ToTitleCase(this string text)
     {
         if (string.IsNullOrWhiteSpace(text))
+        {
             return text ?? string.Empty;
+        }
 
         return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(text.ToLowerInvariant());
     }

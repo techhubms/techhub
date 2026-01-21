@@ -1,23 +1,4 @@
 #!/usr/bin/env pwsh
-<#
-.SYNOPSIS
-    Formats all code in the solution using dotnet format.
-
-.DESCRIPTION
-    Applies consistent code formatting to all C# files in the TechHub solution.
-    Uses the formatting rules defined in .editorconfig and Directory.Build.props.
-
-.PARAMETER Verify
-    If specified, verifies formatting without making changes (dry-run mode).
-
-.EXAMPLE
-    .\format-code.ps1
-    Formats all code files in the solution.
-
-.EXAMPLE
-    .\format-code.ps1 -Verify
-    Verifies formatting without making changes.
-#>
 
 param(
     [switch]$Verify

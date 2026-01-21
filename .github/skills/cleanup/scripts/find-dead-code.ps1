@@ -1,28 +1,3 @@
-<#
-.SYNOPSIS
-    Detects potentially dead or unused code in the solution.
-
-.DESCRIPTION
-    Analyzes the codebase to find unused variables, methods, classes, and other
-    potentially dead code. Uses Roslyn analyzers and pattern matching.
-
-.PARAMETER SourceRoot
-    Root directory of the repository. Defaults to auto-detection.
-
-.PARAMETER OutputFormat
-    Format for output: 'Console', 'Markdown', or 'Json'. Defaults to 'Console'.
-
-.PARAMETER Category
-    Category of dead code to look for: 'All', 'Methods', 'Properties', 'Fields'.
-    Defaults to 'All'.
-
-.EXAMPLE
-    ./find-dead-code.ps1
-    
-.EXAMPLE
-    ./find-dead-code.ps1 -Category Methods -OutputFormat Markdown
-#>
-
 [CmdletBinding()]
 param(
     [Parameter()]
@@ -59,16 +34,51 @@ function Get-SourceRoot {
     return $current
 }
 
+function Get-SourceFiles {
+    param(
+        [string]$Path,
+        [string]$Filter
+    )
+    
+    # Get all files, then filter out build artifacts and generated code
+    $excludeDirs = @('bin', 'obj', '.tmp', 'node_modules', '.vs', '.vscode')
+    
+    Get-ChildItem -Path $Path -Filter $Filter -Recurse | Where-Object {
+        $file = $_
+        $shouldExclude = $false
+        
+        # Check if file is in any excluded directory
+        foreach ($excludeDir in $excludeDirs) {
+            if ($file.FullName -match "[\\/]$excludeDir[\\/]") {
+                $shouldExclude = $true
+                break
+            }
+        }
+        
+        -not $shouldExclude
+    }
+}
+
 # Find-UnusedUsings function removed - unused usings are already handled by dotnet format in Step 2
 
 function Find-UnusedPrivateMembers {
     param([string]$SourceRoot)
     
     $results = @()
-    $csFiles = @(Get-ChildItem -Path (Join-Path $SourceRoot "src") -Filter "*.cs" -Recurse)
+    $csFiles = @(Get-SourceFiles -Path (Join-Path $SourceRoot "src") -Filter "*.cs")
     
     foreach ($file in $csFiles) {
         $content = Get-Content $file.FullName -Raw
+        
+        # Skip Minimal API endpoint files - methods are registered via MapGet/MapPost/etc
+        if ($file.FullName -match '[\\/]Endpoints[\\/].*\.cs$') {
+            continue
+        }
+        
+        # Skip Blazor code-behind files - methods bound via @onclick, @onchange, etc
+        if ($file.FullName -match '\.razor\.cs$') {
+            continue
+        }
         
         # Find private fields
         $privateFieldPattern = 'private\s+(?:readonly\s+)?[\w<>\[\],\s]+\s+(_\w+)\s*[;=]'
@@ -123,11 +133,56 @@ function Find-UnusedPrivateMembers {
     return $results
 }
 
+function Find-EmptyClassesAndInterfaces {
+    param([string]$SourceRoot)
+    
+    $results = @()
+    $csFiles = @(Get-SourceFiles -Path (Join-Path $SourceRoot "src") -Filter "*.cs")
+    
+    foreach ($file in $csFiles) {
+        $content = Get-Content $file.FullName -Raw
+        
+        # Find empty classes (class with only opening/closing braces)
+        $emptyClassPattern = '(?:public|internal|private|protected)\s+(?:sealed\s+|static\s+|abstract\s+)?class\s+(\w+)[^{]*\{\s*\}'
+        $classMatches = [regex]::Matches($content, $emptyClassPattern)
+        
+        foreach ($match in $classMatches) {
+            $className = $match.Groups[1].Value
+            $results += [PSCustomObject]@{
+                Category   = "Empty Class"
+                File       = $file.Name
+                FullPath   = $file.FullName
+                Member     = $className
+                Confidence = "High"
+                Note       = "Class has no members"
+            }
+        }
+        
+        # Find empty interfaces
+        $emptyInterfacePattern = '(?:public|internal)\s+interface\s+(I\w+)[^{]*\{\s*\}'
+        $interfaceMatches = [regex]::Matches($content, $emptyInterfacePattern)
+        
+        foreach ($match in $interfaceMatches) {
+            $interfaceName = $match.Groups[1].Value
+            $results += [PSCustomObject]@{
+                Category   = "Empty Interface"
+                File       = $file.Name
+                FullPath   = $file.FullName
+                Member     = $interfaceName
+                Confidence = "High"
+                Note       = "Interface has no members"
+            }
+        }
+    }
+    
+    return $results
+}
+
 function Find-CommentedCode {
     param([string]$SourceRoot)
     
     $results = @()
-    $csFiles = @(Get-ChildItem -Path (Join-Path $SourceRoot "src") -Filter "*.cs" -Recurse)
+    $csFiles = @(Get-SourceFiles -Path (Join-Path $SourceRoot "src") -Filter "*.cs")
     
     foreach ($file in $csFiles) {
         $lines = Get-Content $file.FullName
@@ -147,13 +202,22 @@ function Find-CommentedCode {
             }
             
             # Check for commented code patterns
+            # Skip XML documentation comments (///)
+            if ($line -match '^\s*///') {
+                continue
+            }
+            
+            # Skip common explanatory comment patterns
+            if ($line -match '^\s*//\s*(Return|For now|Handle|Filter|Check|Verify|Get|Set|Skip|Find|Load|Create|Update|Delete|Add|Remove)') {
+                continue
+            }
+            
+            # Only flag actual code patterns (assignments, method calls with semicolons, control flow with braces)
             $codePatterns = @(
-                '//\s*(public|private|protected|internal)\s+',
-                '//\s*(var|int|string|bool|void)\s+\w+\s*[=;]',
-                '//\s*\w+\s*\.\s*\w+\s*\(',
-                '//\s*(if|for|foreach|while|switch)\s*\(',
-                '//\s*return\s+',
-                '//\s*throw\s+'
+                '//\s*(public|private|protected|internal)\s+\w+\s+\w+\s*[({;]',  # Method/property declarations
+                '//\s*(var|int|string|bool|void)\s+\w+\s*=.*[;)]',              # Variable assignments with semicolons
+                '//\s*\w+\s*\.\s*\w+\s*\([^)]*\)\s*;',                          # Method calls with semicolons
+                '//\s*(if|for|foreach|while|switch)\s*\([^)]+\)\s*\{'           # Control flow with opening brace
             )
             
             foreach ($pattern in $codePatterns) {
@@ -196,6 +260,83 @@ function Find-CommentedCode {
     return $results
 }
 
+function Find-UnusedParameters {
+    param([string]$SourceRoot)
+    
+    $results = @()
+    $csFiles = @(Get-SourceFiles -Path (Join-Path $SourceRoot "src") -Filter "*.cs")
+    
+    foreach ($file in $csFiles) {
+        $content = Get-Content $file.FullName -Raw
+        
+        # Skip certain file types with expected unused parameters
+        $skipFile = $false
+        
+        # Minimal API endpoint files often have injected parameters for future use
+        if ($file.FullName -match '[\\/]Endpoints[\\/].*\.cs$') {
+            $skipFile = $true
+        }
+        
+        # Middleware constructors have standard ASP.NET Core parameters
+        if ($file.FullName -match 'Middleware\.cs$') {
+            $skipFile = $true
+        }
+        
+        # ContentFixer is a utility tool with many placeholder parameters
+        if ($file.FullName -match '[\\/]TechHub\.ContentFixer[\\/]') {
+            $skipFile = $true
+        }
+        
+        if ($skipFile) {
+            continue
+        }
+        
+        # Find method signatures with parameters
+        $methodPattern = '(?:public|private|protected|internal)\s+(?:static\s+)?(?:async\s+)?[\w<>\[\],\s]+\s+(\w+)\s*\(([^)]*)\)\s*\{([^}]+)\}'
+        $methodMatches = [regex]::Matches($content, $methodPattern, [System.Text.RegularExpressions.RegexOptions]::Singleline)
+        
+        foreach ($match in $methodMatches) {
+            $methodName = $match.Groups[1].Value
+            $parameters = $match.Groups[2].Value
+            $methodBody = $match.Groups[3].Value
+            
+            # Skip empty parameter lists
+            if ([string]::IsNullOrWhiteSpace($parameters)) {
+                continue
+            }
+            
+            # Parse parameters
+            $paramList = $parameters -split ','
+            foreach ($param in $paramList) {
+                # Extract parameter name (last word before = or end)
+                if ($param -match '\s+(\w+)\s*(?:=|$)') {
+                    $paramName = $Matches[1]
+                    
+                    # Skip common parameter names that are typically used
+                    if ($paramName -in @('sender', 'e', 'args', 'cancellationToken')) {
+                        continue
+                    }
+                    
+                    # Check if parameter is used in method body
+                    if ($methodBody -notmatch "\b$([regex]::Escape($paramName))\b") {
+                        $results += [PSCustomObject]@{
+                            Category   = "Unused Parameter"
+                            File       = $file.Name
+                            FullPath   = $file.FullName
+                            Method     = $methodName
+                            Parameter  = $paramName
+                            Confidence = "Medium"
+                            Note       = "Parameter not referenced in method body"
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    return $results
+}
+
 function Find-UnusedCssClasses {
     param([string]$SourceRoot)
     
@@ -217,9 +358,9 @@ function Find-UnusedCssClasses {
         
         # Match class selectors (e.g., .class-name, .class-name:hover, etc.)
         $classPattern = '\.([a-zA-Z0-9_-]+)(?:[:\[,\s>+~{]|\s|$)'
-        $matches = [regex]::Matches($content, $classPattern)
+        $classMatches = [regex]::Matches($content, $classPattern)
         
-        foreach ($match in $matches) {
+        foreach ($match in $classMatches) {
             $className = $match.Groups[1].Value
             if (-not $allCssClasses.ContainsKey($className)) {
                 $allCssClasses[$className] = @{
@@ -283,10 +424,12 @@ $root = Get-SourceRoot
 Write-Host "Scanning for dead code in: $root" -ForegroundColor Cyan
 
 $allResults = @{
-    UnusedMembers = @()
-    CommentedCode = @()
-    UnusedCss     = @()
-    Summary       = @{
+    UnusedMembers    = @()
+    EmptyClasses     = @()
+    CommentedCode    = @()
+    UnusedParameters = @()
+    UnusedCss        = @()
+    Summary          = @{
         TotalIssues      = 0
         HighConfidence   = 0
         MediumConfidence = 0
@@ -309,16 +452,46 @@ if ($Category -in @('All', 'Methods', 'Properties', 'Fields')) {
     }
 }
 
+# Find empty classes and interfaces
+if ($Category -eq 'All') {
+    Write-Host "`nChecking for empty classes and interfaces..." -ForegroundColor Yellow
+    try {
+        $emptyClasses = @(Find-EmptyClassesAndInterfaces -SourceRoot $root)
+        $allResults.EmptyClasses = $emptyClasses
+        $count = if ($emptyClasses) { $emptyClasses.Count } else { 0 }
+        Write-Host "  Found $count empty classes/interfaces" -ForegroundColor $(if ($count -gt 0) { "Yellow" } else { "Green" })
+    }
+    catch {
+        Write-Warning "  Could not check empty classes: $($_.Exception.Message)"
+        Write-Host "  Skipping empty class check" -ForegroundColor Gray
+    }
+}
+
 # Find commented code
 if ($Category -eq 'All') {
     Write-Host "`nChecking for commented code..." -ForegroundColor Yellow
     try {
-        $allResults.CommentedCode = Find-CommentedCode -SourceRoot $root
-        Write-Host "  Found $($allResults.CommentedCode.Count) potential commented code blocks" -ForegroundColor $(if ($allResults.CommentedCode.Count -gt 0) { "Yellow" } else { "Green" })
+        $commentedCode = @(Find-CommentedCode -SourceRoot $root)
+        $allResults.CommentedCode = $commentedCode
+        $count = if ($commentedCode) { $commentedCode.Count } else { 0 }
+        Write-Host "  Found $count potential commented code blocks" -ForegroundColor $(if ($count -gt 0) { "Yellow" } else { "Green" })
     }
     catch {
         Write-Warning "  Could not check commented code: $($_.Exception.Message)"
         Write-Host "  Skipping commented code check" -ForegroundColor Gray
+    }
+}
+
+# Find unused parameters
+if ($Category -eq 'All') {
+    Write-Host "`nChecking for unused method parameters..." -ForegroundColor Yellow
+    try {
+        $allResults.UnusedParameters = Find-UnusedParameters -SourceRoot $root
+        Write-Host "  Found $($allResults.UnusedParameters.Count) potentially unused parameters" -ForegroundColor $(if ($allResults.UnusedParameters.Count -gt 0) { "Yellow" } else { "Green" })
+    }
+    catch {
+        Write-Warning "  Could not check unused parameters: $($_.Exception.Message)"
+        Write-Host "  Skipping unused parameter check" -ForegroundColor Gray
     }
 }
 
@@ -337,7 +510,9 @@ if ($Category -eq 'All') {
 # Calculate summary
 $allIssues = @()
 if ($allResults.UnusedMembers) { $allIssues += @($allResults.UnusedMembers) }
+if ($allResults.EmptyClasses) { $allIssues += @($allResults.EmptyClasses) }
 if ($allResults.CommentedCode) { $allIssues += @($allResults.CommentedCode) }
+if ($allResults.UnusedParameters) { $allIssues += @($allResults.UnusedParameters) }
 if ($allResults.UnusedCss) { $allIssues += @($allResults.UnusedCss) }
 
 $allResults.Summary.TotalIssues = $allIssues.Count
@@ -367,6 +542,28 @@ switch ($OutputFormat) {
             }
         }
         
+        $emptyClassesCount = @($allResults.EmptyClasses).Count
+        if ($emptyClassesCount -gt 0) {
+            Write-Host "`nEmpty Classes/Interfaces:" -ForegroundColor Yellow
+            foreach ($item in $allResults.EmptyClasses) {
+                Write-Host "  🔴 $($item.File): $($item.Member) ($($item.Category))" -ForegroundColor Yellow
+            }
+        }
+        
+        $unusedParametersCount = @($allResults.UnusedParameters).Count
+        if ($unusedParametersCount -gt 0) {
+            Write-Host "`nUnused Method Parameters:" -ForegroundColor Yellow
+            @($allResults.UnusedParameters) | Group-Object File | ForEach-Object {
+                Write-Host "  📁 $($_.Name): $($_.Count) unused parameter(s)" -ForegroundColor Yellow
+                $_.Group | Select-Object -First 3 | ForEach-Object {
+                    Write-Host "    🟡 $($_.Method): parameter '$($_.Parameter)'" -ForegroundColor Yellow
+                }
+                if ($_.Count -gt 3) {
+                    Write-Host "    ...and $($_.Count - 3) more"
+                }
+            }
+        }
+        
         $commentedCodeCount = @($allResults.CommentedCode).Count
         if ($commentedCodeCount -gt 0) {
             Write-Host "`nCommented Code:" -ForegroundColor Yellow
@@ -393,6 +590,8 @@ switch ($OutputFormat) {
         Write-Host "  Low Confidence: $($allResults.Summary.LowConfidence)" -ForegroundColor Green
         
         Write-Host "`n⚠️  Note: These are potential issues. Always verify manually before removing code." -ForegroundColor Cyan
+        
+
     }
     
     'Markdown' {

@@ -1,94 +1,74 @@
-# Project Analysis Summary
+## Project Analysis
 
-**Date**: {DATE}  
-**Branch**: {BRANCH}
-
----
-
-## Implementation Inventory
-
-### API Endpoints ({API_ENDPOINT_COUNT})
-
-{API_ENDPOINTS_LIST}
-
-### Blazor Components ({COMPONENT_COUNT})
-
-{COMPONENTS_LIST}
-
-### Services ({SERVICE_COUNT})
-
-{SERVICES_LIST}
-
-### Domain Models ({MODEL_COUNT})
-
-{MODELS_LIST}
-
-### Configuration
-
-{CONFIGURATION_SUMMARY}
+**Analysis Date**: {DATE}
 
 ---
 
-## Documentation Inventory
+## 1. Implementation Analysis
 
-### API Specification
+### API Endpoints
 
-{API_DOCS_STATUS}
+**Total Endpoints**: {ENDPOINT_COUNT}
 
-### Functional Docs ({FUNCTIONAL_DOCS_COUNT} files)
+{ENDPOINT_LIST}
 
-{FUNCTIONAL_DOCS_LIST}
+### Blazor Components
 
-### AGENTS.md Files ({AGENTS_FILES_COUNT} files)
+**Total Components**: {COMPONENT_COUNT}
 
-{AGENTS_FILES_LIST}
+{COMPONENT_LIST}
 
----
+### Services & Infrastructure
 
-## Test Coverage Inventory
+**Services**: {SERVICE_COUNT}  
+**Repositories**: {REPOSITORY_COUNT}  
+**Domain Models**: {MODEL_COUNT}
 
-### Unit Tests
-
-- **Total Tests**: {UNIT_TESTS_COUNT}
-- **Files**: {UNIT_TEST_FILES_COUNT}
-- **Coverage**: {UNIT_TEST_COVERAGE}
-
-{UNIT_TESTS_DETAILS}
-
-### Integration Tests
-
-- **Total Tests**: {INTEGRATION_TESTS_COUNT}
-- **Files**: {INTEGRATION_TEST_FILES_COUNT}
-- **Coverage**: {INTEGRATION_TEST_COVERAGE}
-
-{INTEGRATION_TESTS_DETAILS}
-
-### Component Tests
-
-- **Total Tests**: {COMPONENT_TESTS_COUNT}
-- **Files**: {COMPONENT_TEST_FILES_COUNT}
-- **Coverage**: {COMPONENT_TEST_COVERAGE}
-
-{COMPONENT_TESTS_DETAILS}
-
-### E2E Tests
-
-- **Total Tests**: {E2E_TESTS_COUNT}
-- **Files**: {E2E_TEST_FILES_COUNT}
-- **Coverage**: {E2E_TEST_COVERAGE}
-
-{E2E_TESTS_DETAILS}
-
-### PowerShell Tests
-
-- **Total Tests**: {POWERSHELL_TESTS_COUNT}
-- **Files**: {POWERSHELL_TEST_FILES_COUNT}
-
-{POWERSHELL_TESTS_DETAILS}
+{SERVICE_DETAILS}
 
 ---
 
-## Gap Analysis
+## 2. Documentation Analysis
+
+### API Documentation
+
+**Specification Status**: {API_SPEC_STATUS}
+
+{API_DOC_DETAILS}
+
+### AGENTS.md Files
+
+**Total Files**: {AGENTS_FILE_COUNT}
+
+{AGENTS_FILES_STATUS}
+
+### Functional Documentation
+
+**Total Docs**: {FUNCTIONAL_DOC_COUNT}
+
+{FUNCTIONAL_DOC_STATUS}
+
+---
+
+## 3. Test Coverage Analysis
+
+### Test Distribution
+
+| Type | Count | Coverage | Status |
+| --- | --- | --- | --- |
+| Unit Tests | {UNIT_TEST_COUNT} | {UNIT_COVERAGE}% | {UNIT_STATUS} |
+| Integration Tests | {INTEGRATION_TEST_COUNT} | {INTEGRATION_COVERAGE}% | {INTEGRATION_STATUS} |
+| Component Tests | {COMPONENT_TEST_COUNT} | {COMPONENT_COVERAGE}% | {COMPONENT_STATUS} |
+| E2E Tests | {E2E_TEST_COUNT} | {E2E_COVERAGE}% | {E2E_STATUS} |
+| **Total** | **{TOTAL_TEST_COUNT}** | **{OVERALL_COVERAGE}%** | **{OVERALL_STATUS}** |
+
+### Test Quality
+
+{TEST_QUALITY_DETAILS}
+
+---
+
+## 4. Gap Analysis
 
 ### 🔴 Critical Gaps
 
@@ -98,53 +78,44 @@
 
 {IMPORTANT_GAPS}
 
-### 🟢 Nice to Have
+### 🟢 Minor Gaps
 
 {MINOR_GAPS}
 
 ---
 
-## Summary
+## 5. Inconsistencies Found
 
-**Implementation**: {IMPLEMENTATION_SUMMARY}  
-**Documentation**: {DOCUMENTATION_SUMMARY}  
-**Testing**: {TESTING_SUMMARY}
+### Implementation vs Documentation
 
-**Overall Health**: {OVERALL_HEALTH_GRADE}
+{IMPLEMENTATION_DOC_GAPS}
 
----
+### Implementation vs Tests
 
-## What To Do Next
+{IMPLEMENTATION_TEST_GAPS}
 
-**Tell me how to proceed**:
+### Documentation Staleness
 
-1. Review the gap analysis above
-2. Respond with one of:
-   - **"Proceed with documentation review"** - Continue to Step 6
-   - **"Fix critical gaps first"** - Address gaps before continuing
-   - **"Add missing tests for [feature]"** - Fill specific test gaps
-   - **"Document [feature]"** - Fill specific documentation gaps
-   - **"Skip gap fixing"** - Note gaps but continue cleanup
-
-**Example responses**:
-
-- "Proceed with documentation review" - Continue with cleanup process
-- "Add E2E tests for section filtering" - I'll create missing E2E tests
-- "Document the RSS feed endpoints" - I'll add API documentation
+{STALE_DOCUMENTATION}
 
 ---
 
-## Quick Response Template
+## Recommendations
 
-```markdown
-### My Decisions
+### High Priority
 
-Critical Gaps:
-- {Action}: {Reason}
+{HIGH_PRIORITY_RECOMMENDATIONS}
 
-Important Gaps:
-- {Action}: {Reason}
+### Medium Priority
 
-Next Steps:
-- {Decision}
-```
+{MEDIUM_PRIORITY_RECOMMENDATIONS}
+
+### Low Priority
+
+{LOW_PRIORITY_RECOMMENDATIONS}
+
+---
+
+### Next steps
+
+{PRESENT USER WITH OPTIONS}

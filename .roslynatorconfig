@@ -1,0 +1,17 @@
+is_global = true
+
+# Refactoring
+
+roslynator_refactorings.enabled = true
+
+# Compiler diagnostic fixes
+
+roslynator_compiler_diagnostic_fixes.enabled = true
+
+# Formatting - let editorconfig handle this
+
+roslynator.formatting.enabled = false
+
+# Accessibility
+
+roslynator.accessibility.modifiers = explicit

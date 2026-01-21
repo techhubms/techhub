@@ -159,6 +159,57 @@ dotnet_diagnostic.IDE0058.severity = none
 # IDE0059: Unnecessary value assignment
 dotnet_diagnostic.IDE0059.severity = warning
 
+# IDE0051: Unused private members (methods, properties, fields, events)
+dotnet_diagnostic.IDE0051.severity = warning
+
+# IDE0052: Unread private members (assigned but never read)
+dotnet_diagnostic.IDE0052.severity = warning
+
+# IDE0080: Remove unnecessary suppression operator
+dotnet_diagnostic.IDE0080.severity = warning
+
+# IDE0100: Remove unnecessary equality operator
+dotnet_diagnostic.IDE0100.severity = warning
+
+##############################
+# Roslynator Analyzers - Dead Code Detection ONLY
+# Keep most Roslynator rules at 'none' severity - we rely on Microsoft.CodeAnalysis.NetAnalyzers
+# Only enable specific dead code detection rules that add value beyond built-in analyzers
+##############################
+
+# Enable dead code detection
+dotnet_analyzer.roslynator.suppress_unity_script_methods = false
+
+# RCS1163: Unused parameter (more comprehensive than IDE0060)
+dotnet_diagnostic.RCS1163.severity = warning
+
+# RCS1213: Remove unused member declaration (catches public unused members in sealed classes)
+dotnet_diagnostic.RCS1213.severity = warning
+
+# RCS1175: Unused 'this' parameter (extension methods)
+dotnet_diagnostic.RCS1175.severity = warning
+
+# RCS1018: Add accessibility modifiers
+dotnet_diagnostic.RCS1018.severity = none  # Handled by IDE analyzers
+
+# Suppress all other Roslynator rules - we use Microsoft.CodeAnalysis.NetAnalyzers for everything else
+dotnet_analyzer_diagnostic.category-roslynator.severity = none
+
+# Re-enable only the dead code rules above
+dotnet_diagnostic.RCS1163.severity = warning
+dotnet_diagnostic.RCS1213.severity = warning  
+dotnet_diagnostic.RCS1175.severity = warning
+
+##############################
+# File-specific overrides
+##############################
+
+# Minimal API Endpoints: Suppress unused parameter warnings
+# These are dependency-injected parameters reserved for future implementation
+[src/TechHub.Api/Endpoints/*.cs]
+dotnet_diagnostic.RCS1163.severity = none
+dotnet_diagnostic.IDE0060.severity = none
+
 # IDE0046: Convert to conditional expression (suggestion only)
 dotnet_diagnostic.IDE0046.severity = suggestion
 
@@ -185,10 +236,6 @@ dotnet_diagnostic.CA2234.severity = none
 # CA1711: Rename DevEx to not end in Ex (2 occurrences)
 # Suppressed: DevEx is the established name for Developer Experience
 dotnet_diagnostic.CA1711.severity = none
-
-# CA1508: Dead code analysis (2 occurrences)
-# Suppressed: False positives in conditional expressions
-dotnet_diagnostic.CA1508.severity = none
 
 # CA1024: Method vs property (2 occurrences)
 # Suppressed: Intentional design - methods perform operations, not simple accessors

@@ -48,21 +48,31 @@ public class CollectionReference
     public void Validate()
     {
         if (string.IsNullOrWhiteSpace(Name))
+        {
             throw new ArgumentException("Collection name cannot be empty", nameof(Name));
+        }
 
         // Only validate against known collections if this is not a custom collection
         if (!IsCustom && !_validCollections.Contains(Name))
+        {
             throw new ArgumentException(
                 $"Collection name must be one of: {string.Join(", ", _validCollections)} (or set IsCustom = true)",
                 nameof(Name));
+        }
 
         if (string.IsNullOrWhiteSpace(Title))
+        {
             throw new ArgumentException("Collection title cannot be empty", nameof(Title));
+        }
 
         if (string.IsNullOrWhiteSpace(Url))
+        {
             throw new ArgumentException("Collection URL cannot be empty", nameof(Url));
+        }
 
         if (!Url.StartsWith('/'))
+        {
             throw new ArgumentException("Collection URL must start with '/'", nameof(Url));
+        }
     }
 }

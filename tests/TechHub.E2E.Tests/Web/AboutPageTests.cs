@@ -6,7 +6,6 @@ namespace TechHub.E2E.Tests.Web;
 [Collection("About Page Tests")]
 public class AboutPageTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
-    private const string BaseUrl = "https://localhost:5003";
     private IBrowserContext? _context;
     private IPage? _page;
     private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
