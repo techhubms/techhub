@@ -111,6 +111,6 @@ The Project Pavilion is a vendor-neutral zone focused on open source collaborati
 
 ## Conclusion
 
-Microsoft’s KubeCon NA 2025 engagement reinforced its active contribution to cloud-native innovation and security, especially for Azure users. Teams exchanged technical insights, gathered feedback, and supported projects essential for modern infrastructure. Anyone interested in contributing to these efforts can contact project communities or reach Lexi Nadolski (lexinadolski@microsoft.com) for details.
+Microsoft’s KubeCon NA 2025 engagement reinforced its active contribution to cloud-native innovation and security, especially for Azure users. Teams exchanged technical insights, gathered feedback, and supported projects essential for modern infrastructure. Anyone interested in contributing to these efforts can contact project communities or reach Lexi Nadolski (<lexinadolski@microsoft.com>) for details.
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/project-pavilion-presence-at-kubecon-na-2025/ba-p/4472904)

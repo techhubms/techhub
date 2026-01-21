@@ -56,10 +56,10 @@ When MCP integrates with Playwright, teams gain:
 ### Prerequisites
 
 - **Node.js** (v18.0.0+ recommended)
-    - Download: [nodejs.org](https://nodejs.org/)
-    - Verify: `node --version`
+  - Download: [nodejs.org](https://nodejs.org/)
+  - Verify: `node --version`
 - **Playwright**:
-    - Install: `npm install @playwright/test`
+  - Install: `npm install @playwright/test`
 
 ### Step-by-Step Setup
 

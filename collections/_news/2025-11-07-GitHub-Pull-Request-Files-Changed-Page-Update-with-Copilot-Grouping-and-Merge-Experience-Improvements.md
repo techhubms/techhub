@@ -65,8 +65,8 @@ Users are encouraged to share feedback through the dedicated [discussion channel
 
 **References:**
 
-- [Pull request 'Files changed' public preview](https://github.blog/changelog/2025-06-26-improved-pull-request-files-changed-experience-now-in-public-preview/)
-- [Grouping changes with Copilot](https://github.blog/changelog/2025-10-28-grouping-changes-in-a-pull-request-with-copilot-in-public-preview/)
-- [Merge queue documentation](https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue)
++ [Pull request 'Files changed' public preview](https://github.blog/changelog/2025-06-26-improved-pull-request-files-changed-experience-now-in-public-preview/)
++ [Grouping changes with Copilot](https://github.blog/changelog/2025-10-28-grouping-changes-in-a-pull-request-with-copilot-in-public-preview/)
++ [Merge queue documentation](https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue)
 
 This post appeared first on "The GitHub Blog". [Read the entire article here](https://github.blog/changelog/2025-11-06-pull-request-files-changed-public-preview-and-merge-experience-november-6-updates)

@@ -140,8 +140,8 @@ def get_answer(question, context):
 ## Demo Project
 
 - **Foundry Local answering context-based questions offline:**
-    - Ran the Phi-4-mini model offline to retrieve answers.
-    - Indicated clearly when answers were not found in the local context.
+  - Ran the Phi-4-mini model offline to retrieve answers.
+  - Indicated clearly when answers were not found in the local context.
 
 ## Practical Use Cases
 

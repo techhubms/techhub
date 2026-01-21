@@ -106,9 +106,9 @@ def chat_request(prompt: str, keyVaultClient: fn.FabricItem, varLib: fn.FabricVa
 
 **Sample Variables to Configure:**
 
-- `KEY_VAULT_URL`: Your Key Vault URL (e.g., https://my-keyvault.vault.azure.net/)
+- `KEY_VAULT_URL`: Your Key Vault URL (e.g., <https://my-keyvault.vault.azure.net/>)
 - `API_KEY_SECRET_NAME`: Secret name for the API key (e.g., "openai-api-key")
-- `ENDPOINT`: Azure OpenAI endpoint (e.g., https://your-resource.openai.azure.com/)
+- `ENDPOINT`: Azure OpenAI endpoint (e.g., <https://your-resource.openai.azure.com/>)
 - `MODEL`: Deployed OpenAI model name (e.g., "gpt-4")
 
 ### CI/CD Integration

@@ -43,13 +43,13 @@ In this video conversation, Microsoft Developer interviews Nate and Wils, foundi
 - **Why MCP matters**: MCP is positioned as a critical protocol for AI-based systems that need dynamic data access, making security even more important in production environments.
 
 - **Security Patterns for MCP Servers:**
-    - **OAuth 2.1 Flows**: Learn how to implement modern OAuth for authenticating and authorizing external access.
-    - **Token Validation**: Best practices to validate and manage session and access tokens correctly.
-    - **Defending Against Attacks**:
-        - Confused deputy attacks
-        - Session hijacking
-        - Token passthrough vulnerabilities
-    - Strategies for server hardening and reducing common attack vectors in the AI context.
+  - **OAuth 2.1 Flows**: Learn how to implement modern OAuth for authenticating and authorizing external access.
+  - **Token Validation**: Best practices to validate and manage session and access tokens correctly.
+  - **Defending Against Attacks**:
+    - Confused deputy attacks
+    - Session hijacking
+    - Token passthrough vulnerabilities
+  - Strategies for server hardening and reducing common attack vectors in the AI context.
 
 - **Agentic AI Context**: As AI advances, new agentic patterns emerge where autonomous agents (not just humans) orchestrate and interact with systems via MCP. This changes the security landscape and requires forward-thinking implementation strategies.
 

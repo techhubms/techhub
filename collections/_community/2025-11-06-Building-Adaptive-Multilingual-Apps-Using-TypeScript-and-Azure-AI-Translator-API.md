@@ -75,7 +75,7 @@ async function translateWithNMT(text: string, from: string, to: string) {
 }
 ```
 
-Expected output: English translation — _I have a problem with my order._
+Expected output: English translation — *I have a problem with my order.*
 
 ### LLM Translation with Tone & Gender
 

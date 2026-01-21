@@ -46,12 +46,12 @@ To configure this feature, users need the "Advanced Security: manage settings" p
 2. **Setting up for Standalone Products:**
    - Enable Code Security.
    - In **Options**, confirm the selection of **Dependency alerts default setup**.
-   
+
    ![Advanced Security repository options for Code Security plan](https://devblogs.microsoft.com/devops/wp-content/uploads/sites/6/2025/05/2025-05-28-15_48_55-advsec-repository-settings-code-security-options.png)
 
 3. **Bundled Advanced Security:**
    - Use the checkbox to enable **Scan default branch for vulnerable dependencies**.
-   
+
    ![Advanced Security repository enablement options](https://devblogs.microsoft.com/devops/wp-content/uploads/sites/6/2025/05/2025-02-24-14_20_55-Clipboard.png)
 
 ## How Dependency Scanning Works

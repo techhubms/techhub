@@ -44,23 +44,23 @@ This session explores the essential aspects of Redis and provides a practical de
 - **What is Redis**: Introduction to Redis fundamentals and its use cases as an in-memory key-value store.
 - **Redis Data Types**: Coverage of standard Redis data types and their application in real-world scenarios.
 - **Application Architectures**:
-    - Common ways Redis is adopted in scalable applications
-    - Case study: Redis in AI inferencing scenarios
+  - Common ways Redis is adopted in scalable applications
+  - Case study: Redis in AI inferencing scenarios
 - **Azure Managed Redis**:
-    - Overview of deployment options (Single node, HA, Clusters)
-    - Explains sharding mechanics and cluster policy
-    - Configuration options for redundancy, durability, and geo-replication
-    - Details on SLAs, active replicas, and multi-region support
-    - SKU types, scaling strategies, and node management
+  - Overview of deployment options (Single node, HA, Clusters)
+  - Explains sharding mechanics and cluster policy
+  - Configuration options for redundancy, durability, and geo-replication
+  - Details on SLAs, active replicas, and multi-region support
+  - SKU types, scaling strategies, and node management
 - **Advanced Topics**:
-    - Shard configuration
-    - Replication meshes
-    - Conflict-free Data Resolution
-    - Client usage patterns
+  - Shard configuration
+  - Replication meshes
+  - Conflict-free Data Resolution
+  - Client usage patterns
 - **Operational Aspects**:
-    - Data durability with HA
-    - Maintenance modes
-    - Security considerations (authentication, networking options)
+  - Data durability with HA
+  - Maintenance modes
+  - Security considerations (authentication, networking options)
 
 ### Useful Resources
 

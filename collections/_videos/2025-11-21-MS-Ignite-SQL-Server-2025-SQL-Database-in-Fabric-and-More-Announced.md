@@ -33,7 +33,7 @@ Presented by Microsoft Developer, this video covers all key SQL-related product 
 
 {% youtube -6RoQm6Wwyo %}
 
-# MS Ignite: SQL Server 2025 GA, SQL DB in Fabric GA & More!
+# MS Ignite: SQL Server 2025 GA, SQL DB in Fabric GA & More
 
 Discover everything new in the Microsoft SQL technology space as announced at Microsoft Ignite 2025.
 

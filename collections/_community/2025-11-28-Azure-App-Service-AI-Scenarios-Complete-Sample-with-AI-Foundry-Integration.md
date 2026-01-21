@@ -93,7 +93,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-- Use http://localhost:5000 or /settings for configuration
+- Use <http://localhost:5000> or /settings for configuration
 - Provide Azure AI Foundry endpoint and API key; for production, managed identity is used
 - Review [Setup Guide](https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/create-projects) for deploying Azure AI Foundry models
 

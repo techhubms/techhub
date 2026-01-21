@@ -75,11 +75,11 @@ Organizations adopting these technologies report:
 - Cost savings through early detection
 - Built-in trust and compliance with healthcare data standards
 
-> _"AI-powered automation is redefining how healthcare operates. Partnering with Microsoft and UiPath allows us to transcend data silos and create intelligent workflows that truly serve patients." - Robin Spraul, Mercy_
+> *"AI-powered automation is redefining how healthcare operates. Partnering with Microsoft and UiPath allows us to transcend data silos and create intelligent workflows that truly serve patients." - Robin Spraul, Mercy*
 
-> _"With UiPath Maestro and Azure AI Foundry working together, we’re helping enterprises operationalize AI in essential workflows." - Asha Sharma, Microsoft_
+> *"With UiPath Maestro and Azure AI Foundry working together, we’re helping enterprises operationalize AI in essential workflows." - Asha Sharma, Microsoft*
 
-> _"UiPath and Microsoft enable organizations to bring automation and AI into real-world business processes, not just in healthcare, but across all industries." - Graham Sheldon, UiPath_
+> *"UiPath and Microsoft enable organizations to bring automation and AI into real-world business processes, not just in healthcare, but across all industries." - Graham Sheldon, UiPath*
 
 ### Looking Forward
 

@@ -63,40 +63,40 @@ Below, we break down Azure’s most popular container services—ACI, ACA, and A
 
 ### **1. Azure Container Instances (ACI)**
 
-  - **Category:** Platform-as-a-Service (PaaS), bordering on Infrastructure-as-a-Service (IaaS) for certain layers.
-  - **Description:** ACI allows users to run individual containers or container groups (similar to pods) without managing underlying infrastructure—providing serverless, on-demand workloads.
-  - **Operational Model:**
-    - Azure handles: Security "OF" the cloud and runtime environment (physical servers, host OS, container runtime).
-    - You handle: Security "IN" the container and application (your app, container config).
-  - **Example Use Cases:**
-    - Isolated workloads like unit testing, CI/CD pipelines, or batch/data processing scripts.
-    - You provide the application inside the container, Azure manages infrastructure below it.
-  - **When to choose ACI:**
-    - For simple, short-lived, isolated tasks. If autoscaling or advanced orchestration are needed, consider other services.
+- **Category:** Platform-as-a-Service (PaaS), bordering on Infrastructure-as-a-Service (IaaS) for certain layers.
+- **Description:** ACI allows users to run individual containers or container groups (similar to pods) without managing underlying infrastructure—providing serverless, on-demand workloads.
+- **Operational Model:**
+  - Azure handles: Security "OF" the cloud and runtime environment (physical servers, host OS, container runtime).
+  - You handle: Security "IN" the container and application (your app, container config).
+- **Example Use Cases:**
+  - Isolated workloads like unit testing, CI/CD pipelines, or batch/data processing scripts.
+  - You provide the application inside the container, Azure manages infrastructure below it.
+- **When to choose ACI:**
+  - For simple, short-lived, isolated tasks. If autoscaling or advanced orchestration are needed, consider other services.
 
 ### **2. Azure Container Apps (ACA)**
 
-  - **Category:** PaaS
-  - **Description:** ACA adds advanced capabilities (autoscaling, traffic management, native integrations with Dapr/KEDA) for web APIs and microservices—building on the serverless principles of ACI but designed for complex, dynamic workloads.
-  - **Operational Model:**
-    - Azure handles: Security "OF" the platform, underlying infrastructure, high availability, integrated ingress controller, Kubernetes management.
-    - You handle: Security "IN" the application and container, container image, autoscaling configuration.
-  - **Example Use Cases:**
-    - API backends and microservices needing to handle unpredictable traffic, integrate with pub/sub messaging, autoscale on demand.
-  - **When to choose ACA:**
-    - If you want managed scaling and modern microservice patterns but don’t require direct orchestrator control or extensive open-source plugin support.
+- **Category:** PaaS
+- **Description:** ACA adds advanced capabilities (autoscaling, traffic management, native integrations with Dapr/KEDA) for web APIs and microservices—building on the serverless principles of ACI but designed for complex, dynamic workloads.
+- **Operational Model:**
+  - Azure handles: Security "OF" the platform, underlying infrastructure, high availability, integrated ingress controller, Kubernetes management.
+  - You handle: Security "IN" the application and container, container image, autoscaling configuration.
+- **Example Use Cases:**
+  - API backends and microservices needing to handle unpredictable traffic, integrate with pub/sub messaging, autoscale on demand.
+- **When to choose ACA:**
+  - If you want managed scaling and modern microservice patterns but don’t require direct orchestrator control or extensive open-source plugin support.
 
 ### **3. Azure Kubernetes Service (AKS)**
 
-  - **Category:** PaaS with significant IaaS elements
-  - **Description:** AKS offers a managed Kubernetes cluster for full control over container orchestration and scaling. Azure manages the Kubernetes control plane, while you manage the worker node VMs and Kubernetes objects deployed on them.
-  - **Operational Model:**
-    - Azure handles: Security "OF" the managed control plane, availability and patching, and lower-level infrastructure.
-    - You handle: Security "IN" the worker node VMs, Kubernetes configurations and objects, custom networking, and advanced setups.
-  - **Example Use Cases:**
-    - Complex workloads needing Kubernetes orchestration—such as microservices architectures, distributed systems, custom networking, integrations from the CNCF ecosystem, and bespoke security or resource governance.
-  - **When to choose AKS:**
-    - For maximum control, extensibility, and flexibility at the cost of additional operational overhead.
+- **Category:** PaaS with significant IaaS elements
+- **Description:** AKS offers a managed Kubernetes cluster for full control over container orchestration and scaling. Azure manages the Kubernetes control plane, while you manage the worker node VMs and Kubernetes objects deployed on them.
+- **Operational Model:**
+  - Azure handles: Security "OF" the managed control plane, availability and patching, and lower-level infrastructure.
+  - You handle: Security "IN" the worker node VMs, Kubernetes configurations and objects, custom networking, and advanced setups.
+- **Example Use Cases:**
+  - Complex workloads needing Kubernetes orchestration—such as microservices architectures, distributed systems, custom networking, integrations from the CNCF ecosystem, and bespoke security or resource governance.
+- **When to choose AKS:**
+  - For maximum control, extensibility, and flexibility at the cost of additional operational overhead.
 
 #### **Shared Responsibility Model Summary Table**
 

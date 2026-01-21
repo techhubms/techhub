@@ -66,9 +66,9 @@ The SQL database in Microsoft Fabric has reached general availability, introduci
 - Twitter: [Anna Hoffman](https://twitter.com/AnalyticAnna) | [Azure SQL](https://aka.ms/azuresqltw)
 - Watch additional Data Exposed episodes: [Playlist](https://aka.ms/dataexposedyt)
 - Subscribe for ongoing SQL updates:
-    - [Microsoft Azure SQL](https://aka.ms/msazuresqlyt)
-    - [Microsoft SQL Server](https://aka.ms/mssqlserveryt)
-    - [Microsoft Developer](https://aka.ms/microsoftdeveloperyt)
+  - [Microsoft Azure SQL](https://aka.ms/msazuresqlyt)
+  - [Microsoft SQL Server](https://aka.ms/mssqlserveryt)
+  - [Microsoft Developer](https://aka.ms/microsoftdeveloperyt)
 
 ---
 

@@ -28,7 +28,7 @@ section_names:
 ---
 Rafia_Aqil provides an in-depth guide comparing approaches to integrate Azure Databricks with Microsoft Fabric, helping technical teams select the best method for unified data analytics and governance.<!--excerpt_end-->
 
-# Approaches to Integrating Azure Databricks with Microsoft Fabric: The Better Together Story!
+# Approaches to Integrating Azure Databricks with Microsoft Fabric: The Better Together Story
 
 **Author:** Rafia_Aqil  
 **Peer Reviewers:** ArvindPeriyasamy, Hamood_Aleem, jbarry15

@@ -110,6 +110,6 @@ Explore the documentation and repository for more guidance:
 If you encounter issues or have feedback, open an issue in the [GitHub MCP Server repository](https://github.com/github/github-mcp-server).
 
 ---
-_These updates help developers, DevOps engineers, and AI builders to work more securely and efficiently with GitHub-integrated AI tools._
+*These updates help developers, DevOps engineers, and AI builders to work more securely and efficiently with GitHub-integrated AI tools.*
 
 This post appeared first on "The GitHub Blog". [Read the entire article here](https://github.blog/changelog/2025-12-10-the-github-mcp-server-adds-support-for-tool-specific-configuration-and-more)

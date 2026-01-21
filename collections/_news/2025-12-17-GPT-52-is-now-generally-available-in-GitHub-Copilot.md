@@ -43,10 +43,10 @@ All users can choose GPT-5.2 using the chat model picker, covering agent, ask, a
 ## Enabling Access
 
 - **Enterprise and Business Plans:**
-    - Administrators must opt in by enabling the GPT-5.2 policy in Copilot settings.
-    - Once enabled, the model appears for all supported IDEs within the organization.
+  - Administrators must opt in by enabling the GPT-5.2 policy in Copilot settings.
+  - Once enabled, the model appears for all supported IDEs within the organization.
 - **Individual Plans:**
-    - Enable GPT-5.2 by selecting it in any supported IDE and confirming the one-time prompt.
+  - Enable GPT-5.2 by selecting it in any supported IDE and confirming the one-time prompt.
 
 ## Additional Resources
 

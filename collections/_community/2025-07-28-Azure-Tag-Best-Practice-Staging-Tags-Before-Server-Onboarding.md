@@ -36,8 +36,8 @@ The author is conducting a proof-of-concept (POC) with Azure Arc, utilizing Azur
 - **POC with Azure Arc:** The setup involves using Azure tags for various maintenance tasks, including scheduling and patching.
 - **Tag Management Plan:** There is already a plan in place for how to leverage tags effectively.
 - **Key Question:** Can tags and associated schedules (like patching windows) be created and managed in Azure *in advance*, before any servers are actually onboarded?
-    - The requester wants to create a specific 'Patching' tag, including all relevant keys and even maintenance schedules, so that when servers are onboarded, they can be simply tagged accordingly.
-    - They haven’t found a way in the Azure Portal to stage tags or manage them globally before resources exist.
+  - The requester wants to create a specific 'Patching' tag, including all relevant keys and even maintenance schedules, so that when servers are onboarded, they can be simply tagged accordingly.
+  - They haven’t found a way in the Azure Portal to stage tags or manage them globally before resources exist.
 - **Current Understanding:** The author notes that tags seem to be created only when actually assigned to a resource, and wonders whether there’s a way to establish them as reusable sets without having resources already present.
 
 ---

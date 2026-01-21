@@ -78,9 +78,9 @@ GitHub’s [global survey](https://github.blog/news-insights/research/survey-ai-
 
 ## Real-World Case Studies
 
-* **IBM Software Team:** Internal testing with watsonx Code Assistant reduced code summarization time by over 90%, from three minutes to just 12 seconds per file.
-* **rKube (Morocco):** Leveraged AI to automatically modernize 80% of legacy WebSphere application code.
-* **Westfield:** Achieved savings of 150 developer hours within eight weeks during an application modernization pilot.
+- **IBM Software Team:** Internal testing with watsonx Code Assistant reduced code summarization time by over 90%, from three minutes to just 12 seconds per file.
+- **rKube (Morocco):** Leveraged AI to automatically modernize 80% of legacy WebSphere application code.
+- **Westfield:** Achieved savings of 150 developer hours within eight weeks during an application modernization pilot.
 
 These cases illustrate the scale of efficiency and modernization that AI code assistants enable.
 

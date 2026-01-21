@@ -23,7 +23,7 @@ section_names:
 ---
 kenieva introduces Azure Service Groups, now in public preview. This Azure feature allows flexible grouping and monitoring of resources at the tenant level, offering low-privilege management with support for varied hierarchies.<!--excerpt_end-->
 
-# Announcing Public Preview for Azure Service Groups!
+# Announcing Public Preview for Azure Service Groups
 
 Azure has introduced **Service Groups (SGs)**, a new resource container available for all Azure customers. Service Groups enhance flexibility in grouping, managing, and observing resources spread across the Azure tenant.
 

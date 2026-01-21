@@ -47,9 +47,9 @@ Your experience and feedback shape the evolution of Copilot custom agents:
 
 - **In-Product Feedback**: Use the built-in options in your IDE.
 - **GitHub Discussions**: Engage with product teams and share thoughts in dedicated feedback repositories for each IDE:
-    - [JetBrains Copilot Feedback](https://github.com/microsoft/copilot-intellij-feedback/issues)
-    - [Eclipse Copilot Feedback](https://github.com/microsoft/copilot-eclipse-feedback/issues)
-    - [Xcode Copilot Feedback](https://github.com/github/CopilotForXcode/issues)
+  - [JetBrains Copilot Feedback](https://github.com/microsoft/copilot-intellij-feedback/issues)
+  - [Eclipse Copilot Feedback](https://github.com/microsoft/copilot-eclipse-feedback/issues)
+  - [Xcode Copilot Feedback](https://github.com/github/CopilotForXcode/issues)
 
 Deploy, configure, and tailor AI agents to optimize your development workflow and enforce project-specific standards using GitHub Copilot's new custom agents feature.
 

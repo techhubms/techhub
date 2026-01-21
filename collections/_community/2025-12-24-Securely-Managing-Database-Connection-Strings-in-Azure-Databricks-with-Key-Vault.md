@@ -60,7 +60,7 @@ Azure Key Vault provides a secure mechanism for storing secrets such as database
    from azure.identity import ClientSecretCredential
    from azure.keyvault.secrets import SecretClient
    ```
-   
+
 3. **Initialize Credentials and Fetch Secrets**
    Replace placeholders with your values:
 

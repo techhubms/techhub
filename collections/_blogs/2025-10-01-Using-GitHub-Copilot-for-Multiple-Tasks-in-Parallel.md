@@ -100,7 +100,7 @@ A developer can coordinate up to four simultaneous Copilot tools:
 
 This allows you to divide your workload, speed up delivery, and maintain focus on complex or strategic aspects of your project.
 
-## Try It Yourself!
+## Try It Yourself
 
 Next time you start a new project, split your work into discrete, independent tasks. Open several terminals, launch Copilot CLI sessions, and empower Copilot agents to handle the repetitive work—all in parallel. See how much more efficiently you can deliver results.
 

@@ -31,7 +31,7 @@ John Savill's Technical Training presents an introductory video on AI and ML con
 
 {% youtube C7Iu2lcoAQ4 %}
 
-# Artificial Intelligence (AI) and Machine Learning (ML) for Everyone!
+# Artificial Intelligence (AI) and Machine Learning (ML) for Everyone
 
 *Author: John Savill's Technical Training*
 

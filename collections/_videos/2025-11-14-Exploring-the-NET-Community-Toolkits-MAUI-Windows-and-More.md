@@ -43,22 +43,22 @@ The .NET Community Toolkit, MAUI Community Toolkit, and Windows Community Toolki
 
 ## Major Announcements
 
-- [ .NET 10](https://aka.ms/dotnet10/): Unified and intelligent .NET platform.
-- [ .NET Aspire 13](https://aka.ms/aspire13/announcement): Orchestration for cloud-native apps.
-- [ ASP.NET Core 10](https://aka.ms/asp/dotnet/2025): Modern, secure web development.
-- [ .NET MAUI 10](https://aka.ms/dotnet/maui/2025): Cross-platform with advanced capabilities.
-- [ C# 14](https://aka.ms/csharp14/announcement/2025): New language features.
-- [ F# 10](https://aka.ms/fsharp10/2025/announcement): Functional programming enhancements.
-- [ Visual Studio 2026](https://aka.ms/visualstudio2026/announcement): IDE advancements.
-- [ .NET Conf 2025](https://aka.ms/dotnotconf2025/recap): Insights into community innovation.
+- [.NET 10](https://aka.ms/dotnet10/): Unified and intelligent .NET platform.
+- [.NET Aspire 13](https://aka.ms/aspire13/announcement): Orchestration for cloud-native apps.
+- [ASP.NET Core 10](https://aka.ms/asp/dotnet/2025): Modern, secure web development.
+- [.NET MAUI 10](https://aka.ms/dotnet/maui/2025): Cross-platform with advanced capabilities.
+- [C# 14](https://aka.ms/csharp14/announcement/2025): New language features.
+- [F# 10](https://aka.ms/fsharp10/2025/announcement): Functional programming enhancements.
+- [Visual Studio 2026](https://aka.ms/visualstudio2026/announcement): IDE advancements.
+- [.NET Conf 2025](https://aka.ms/dotnotconf2025/recap): Insights into community innovation.
 
 ## Get Involved
 
-- [ Blog](https://aka.ms/dotnet/blog)
-- [ Docs](https://learn.microsoft.com/dotnet)
-- [ Forums](https://aka.ms/dotnet/forums)
-- [ Q&A](https://aka.ms/dotnet-qa)
-- [ Microsoft Learn](https://aka.ms/learndotnet)
+- [Blog](https://aka.ms/dotnet/blog)
+- [Docs](https://learn.microsoft.com/dotnet)
+- [Forums](https://aka.ms/dotnet/forums)
+- [Q&A](https://aka.ms/dotnet-qa)
+- [Microsoft Learn](https://aka.ms/learndotnet)
 - Community presence on [Twitter](https://aka.ms/dotnet/twitter), [TikTok](https://aka.ms/dotnet/tiktok), [Mastodon](https://aka.ms/dotnet/mastodon), [LinkedIn](https://aka.ms/dotnet/linkedin), [Facebook](https://aka.ms/dotnet/facebook)
 
 ## Key Takeaways

@@ -82,6 +82,6 @@ Microsoft Azure and Qumulo have partnered to address long-standing challenges in
 
 Azure Native Qumulo and Cloud Native Qumulo offer next-generation, cloud-native file storage for enterprises, unlocking new capacity, performance, and flexibility while integrating seamlessly into the Azure ecosystem. With support for next-gen workloads like machine learning and HPC, advanced data management, and global collaboration, these solutions position organizations for future-ready data infrastructure.
 
-For tailored architectural advice and to see how these solutions can fit your enterprise, Qumulo offers free assessments; reach out via Azure@qumulo.com.
+For tailored architectural advice and to see how these solutions can fit your enterprise, Qumulo offers free assessments; reach out via <Azure@qumulo.com>.
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/azure-storage-blog/how-microsoft-azure-and-qumulo-deliver-a-truly-cloud-native-file/ba-p/4426321)

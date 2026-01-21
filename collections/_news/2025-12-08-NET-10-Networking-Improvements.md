@@ -81,9 +81,9 @@ throw new CookieException("🍪");
 
 - **Benefit:** Simplifies data reads/writes via Streams, removing manual buffering and message boundary logic.
 - **Common Patterns:**
-    - Read JSON messages: `CreateReadableMessageStream` with `JsonSerializer.DeserializeAsync`
-    - Stream text protocols: `Create`, layer with `StreamReader`
-    - Write binary messages: `CreateWritableMessageStream`, chunk writes, automatic EOM signaling
+  - Read JSON messages: `CreateReadableMessageStream` with `JsonSerializer.DeserializeAsync`
+  - Stream text protocols: `Create`, layer with `StreamReader`
+  - Write binary messages: `CreateWritableMessageStream`, chunk writes, automatic EOM signaling
 - **Before vs After Example:**
   - **Previously:** Manual buffering and EOM checks
   - **Now:** Stream-based read with clear API boundaries

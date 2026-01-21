@@ -49,12 +49,12 @@ Join engineering leaders as they introduce Microsoft Foundry’s approach to mod
 - **Model and Tool Unification:** Strategies for leveraging diverse models and integrating different data sources for flexible solutions.
 - **Scalability and Agent Management:** Techniques for managing hundreds of agents at scale using the Foundry Hub.
 - **Demonstrations:**
-    - Workflow and agent integration using LangGraph.
-    - Inventory analysis agent set up with a human-in-the-loop workflow.
-    - Showcasing Lufthansa’s use of the Microsoft Agent Framework for scalable operations.
+  - Workflow and agent integration using LangGraph.
+  - Inventory analysis agent set up with a human-in-the-loop workflow.
+  - Showcasing Lufthansa’s use of the Microsoft Agent Framework for scalable operations.
 - **Developer Enablement:**
-    - How GitHub Copilot is integrated for agent evaluations.
-    - CI/CD integration to streamline agent testing and deployment.
+  - How GitHub Copilot is integrated for agent evaluations.
+  - CI/CD integration to streamline agent testing and deployment.
 
 ## Detailed Agenda Highlights
 

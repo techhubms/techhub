@@ -67,7 +67,7 @@ The Model Context Protocol (MCP), pioneered by Anthropic, is drawing attention i
 - AI agents can significantly raise productivity in CI/CD, but require careful setup and oversight.
 - Teams should be proactive and critical in their adoption of AI in DevOps.
 
-### For more details, watch the [Techstrong Gang Interview](https://youtu.be/Fojn5NFwaw8).
+### For more details, watch the [Techstrong Gang Interview](https://youtu.be/Fojn5NFwaw8)
 
 ---
 

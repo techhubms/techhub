@@ -39,8 +39,8 @@ Developers have already been using custom instruction files located in the `.git
 ## Introducing Agent-Specific Instructions with `excludeAgent`
 
 - The new `excludeAgent` property in the frontmatter of `.instructions.md` files allows instructions to be omitted for designated agents.
-    - `excludeAgent: "code-review"` prevents a file from being used in Copilot code review.
-    - `excludeAgent: "coding-agent"` restricts usage from Copilot coding agent.
+  - `excludeAgent: "code-review"` prevents a file from being used in Copilot code review.
+  - `excludeAgent: "coding-agent"` restricts usage from Copilot coding agent.
 - If `excludeAgent` is not specified, the instructions file applies to all Copilot agents by default.
 - This feature empowers developers to offer focused guidance for each agent, minimizing unwanted overlap and clarifying instructions context.
 

@@ -117,6 +117,7 @@ Key points for chunking:
 - `CookieOptions` can be used to set options like `Domain`, `Expires`, and `Secure` for each chunk.
 
 **Browser DevTools display:**
+
 | Name                | Value                             |
 |---------------------|-----------------------------------|
 | chunky_monster      | chunks-2                          |

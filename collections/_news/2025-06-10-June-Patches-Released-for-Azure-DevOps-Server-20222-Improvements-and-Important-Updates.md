@@ -41,6 +41,7 @@ Today, Microsoft has released new patches that impact the latest version of the 
 - The current version is **Azure DevOps Server 2022.2**, available from the [Azure DevOps Server download page](https://learn.microsoft.com/azure/devops/server/download/azuredevopsserver?view=azure-devops).
 
 > **Note:**
+>
 > - Azure DevOps Server 2022.2 is the latest version.
 > - If you have previously installed Azure DevOps Server 2022 or Azure DevOps Server 2022.1, you should upgrade to Azure DevOps Server 2022.2 and then install Patch 6 for best security and latest features.
 

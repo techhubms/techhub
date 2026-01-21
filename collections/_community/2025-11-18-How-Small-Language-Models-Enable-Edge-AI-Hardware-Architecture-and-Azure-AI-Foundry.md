@@ -56,10 +56,10 @@ Edge AI shifts artificial intelligence processing from centralized cloud servers
 
 - SLMs use streamlined Transformer architectures with fewer layers and efficient attention mechanisms (e.g., linear/sparse attention).
 - Techniques include:
-    - **Quantization** (e.g., FP16 to INT8) to minimize memory/compute use
-    - **Pruning** to remove redundant weights
-    - **Knowledge Distillation** (teacher-student modeling)
-    - **ONNX Runtime** and **TensorRT** for hardware optimization
+  - **Quantization** (e.g., FP16 to INT8) to minimize memory/compute use
+  - **Pruning** to remove redundant weights
+  - **Knowledge Distillation** (teacher-student modeling)
+  - **ONNX Runtime** and **TensorRT** for hardware optimization
 - Common trade-off: Smaller SLMs are faster/more efficient, but offer less reasoning depth than LLMs.
 
 ## Performance Benchmarks

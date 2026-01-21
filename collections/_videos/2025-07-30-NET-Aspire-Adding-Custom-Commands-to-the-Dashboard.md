@@ -45,10 +45,10 @@ Do you have scripts and tools that help configure your development environment? 
 - **Introduction to .NET Aspire:** Learn what Aspire offers for modern .NET development workflows.
 - **Why Automate with Custom Commands:** Understand the benefits of integrating frequently-used scripts and setup procedures into a central dashboard accessible to all team members.
 - **Step-by-Step Guide:**
-    - Creating and registering custom commands using .NET Aspire APIs
-    - Assigning scripts or routines for environment configuration tasks
-    - Demonstrations of running these commands directly from the dashboard
-    - Sharing the setup with teammates for consistent environments
+  - Creating and registering custom commands using .NET Aspire APIs
+  - Assigning scripts or routines for environment configuration tasks
+  - Demonstrations of running these commands directly from the dashboard
+  - Sharing the setup with teammates for consistent environments
 - **Collaboration:** Explore mechanisms for safe sharing and re-use of environment scripts to accelerate onboarding and reduce manual errors.
 
 ---

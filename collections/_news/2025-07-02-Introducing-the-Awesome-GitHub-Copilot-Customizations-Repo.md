@@ -115,6 +115,7 @@ _... and so on_
 **Result:** Copilot follows established conventions from your custom instructions. For instance:
 
 > The page follows the development standards from your instructions:
+>
 > - Uses React Server Components
 > - Implements proper TypeScript typing
 > - Follows Tailwind CSS styling patterns

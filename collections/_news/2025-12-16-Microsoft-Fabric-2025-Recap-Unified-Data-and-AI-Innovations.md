@@ -53,21 +53,21 @@ As 2025 ends, Microsoft Fabric celebrates its second year with notable growth an
 ## Breakthrough Platform Advancements in 2025
 
 - **Security**:
-    - Outbound Access Protection: Organizations can now govern outbound connections for compliance.
-    - Private Links: Workspaces accessible exclusively through private Azure endpoints enhance network security.
-    - OneLake Security (preview): Role-based access control for granular data governance in Fabric compute engines.
+  - Outbound Access Protection: Organizations can now govern outbound connections for compliance.
+  - Private Links: Workspaces accessible exclusively through private Azure endpoints enhance network security.
+  - OneLake Security (preview): Role-based access control for granular data governance in Fabric compute engines.
 - **Modernization**:
-    - Migration Assistant: Streamlines workload transfer from Azure Synapse SQL pools to Fabric's lake-native environment.
-    - Azure Data Factory Pipeline Assessment (Preview): Evaluates readiness for migration to Fabric Data Factory, guiding modernization choices.
-    - Continued support for transforming and landing data into Fabric lakehouses and warehouses.
+  - Migration Assistant: Streamlines workload transfer from Azure Synapse SQL pools to Fabric's lake-native environment.
+  - Azure Data Factory Pipeline Assessment (Preview): Evaluates readiness for migration to Fabric Data Factory, guiding modernization choices.
+  - Continued support for transforming and landing data into Fabric lakehouses and warehouses.
 - **AI and Copilot Integration**:
-    - Copilot available across all paid SKUs: Generative AI for coding, SQL completions, KQL queries, orchestration troubleshooting, and conversational data exploration.
-    - General availability of AI functions: Developers (pro-code and no-code) can apply summarization, extraction, and classification directly in workflows.
+  - Copilot available across all paid SKUs: Generative AI for coding, SQL completions, KQL queries, orchestration troubleshooting, and conversational data exploration.
+  - General availability of AI functions: Developers (pro-code and no-code) can apply summarization, extraction, and classification directly in workflows.
 - **Developer Tooling and Productivity**:
-    - Browser-based advancements: IDE-like multitasking tabs, object explorer, focus mode for streamlined development.
-    - Fabric CLI: Programmatic resource management and CI/CD pipeline integration.
-    - VS Code & SSMS extensions: Familiar environment integrations for developers.
-    - DevOps enhancements: Terraform support and the fabric-cicd tool for declarative deployments and workflow automation.
+  - Browser-based advancements: IDE-like multitasking tabs, object explorer, focus mode for streamlined development.
+  - Fabric CLI: Programmatic resource management and CI/CD pipeline integration.
+  - VS Code & SSMS extensions: Familiar environment integrations for developers.
+  - DevOps enhancements: Terraform support and the fabric-cicd tool for declarative deployments and workflow automation.
 
 ## Upcoming Conferences
 

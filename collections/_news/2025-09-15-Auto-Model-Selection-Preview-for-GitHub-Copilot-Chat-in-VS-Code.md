@@ -33,6 +33,7 @@ Isidor Nikolic details the auto model selection feature preview for GitHub Copil
 The new auto model selection feature, now available in preview for GitHub Copilot users in VS Code, brings faster responses, reduced rate limiting, and cost savings through automatic discounting on select premium requests. With auto model selection, Copilot Chat automatically chooses the best available AI model for each request—such as Claude Sonnet 4, GPT-5, or GPT-5 mini—based on current capacity and performance, instead of requiring users to pick models manually.
 
 > **Key benefits:**
+>
 > - Optimizes performance by dynamically choosing between large and small models
 > - Minimizes your risk of hitting rate limits
 > - Applies a 10% discount on premium requests for paid users

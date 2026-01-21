@@ -90,10 +90,10 @@ For more details and discussion, visit the [March release discussion on GitHub](
 
 A range of new templates further enhances developer productivity and enterprise readiness:
 
-  - [**Azure Functions – TextCompletion using OpenAI Input Binding (Java)**](https://github.com/Azure-Samples/azure-functions-completion-openai-java) by [Thiago Almeida](https://github.com/nzthiago)
-  - [**Agentic Voice Assistant**](https://github.com/Azure-Samples/agentic-voice-assistant): Built with Azure Container Apps, Azure OpenAI, and Azure Logic Apps by [Evgeny Minkevich](https://github.com/evmin)
-  - [**Azure OpenAI RAG with Java, LangChain4j, Quarkus**](https://github.com/Azure-Samples/azure-openai-rag-workshop-java) by [Sandra Ahlgrimm](https://github.com/SandraAhlgrimm)
-  - [**Azure Integration Services Quickstart**](https://github.com/ronaldbosma/azure-integration-services-quickstart) by [Ronald Bosma](https://github.com/ronaldbosma)
+- [**Azure Functions – TextCompletion using OpenAI Input Binding (Java)**](https://github.com/Azure-Samples/azure-functions-completion-openai-java) by [Thiago Almeida](https://github.com/nzthiago)
+- [**Agentic Voice Assistant**](https://github.com/Azure-Samples/agentic-voice-assistant): Built with Azure Container Apps, Azure OpenAI, and Azure Logic Apps by [Evgeny Minkevich](https://github.com/evmin)
+- [**Azure OpenAI RAG with Java, LangChain4j, Quarkus**](https://github.com/Azure-Samples/azure-openai-rag-workshop-java) by [Sandra Ahlgrimm](https://github.com/SandraAhlgrimm)
+- [**Azure Integration Services Quickstart**](https://github.com/ronaldbosma/azure-integration-services-quickstart) by [Ronald Bosma](https://github.com/ronaldbosma)
 
 **Thank you to all template authors and contributors!**
 

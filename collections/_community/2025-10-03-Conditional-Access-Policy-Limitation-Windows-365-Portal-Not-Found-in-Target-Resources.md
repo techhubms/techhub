@@ -40,7 +40,7 @@ WF-PHG describes a scenario where Conditional Access (CA) policies are set for e
 With Microsoft rolling out the new Windows App (intended to replace the old Remote Desktop app and web interface), the author attempted to use:
 
 - **Windows App installed on a PC**: Accessed Azure Virtual Desktop successfully using `Windows 365 Client` (Application ID: 4fb5cc57-dbbc-4cdc-9595-748adff5f414, Resource ID matches Azure Virtual Desktop).
-- **Windows App web interface** (https://windows.cloud.microsoft/): Attempted sign-in results in access denied. The sign-in logs show the attempted resource is:
+- **Windows App web interface** (<https://windows.cloud.microsoft/>): Attempted sign-in results in access denied. The sign-in logs show the attempted resource is:
   - Application: Windows 365 Portal
   - Application ID: 3b511579-5e00-46e1-a89e-a6f0870e2f5a
   - Resource: Windows 365 Portal

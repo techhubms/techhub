@@ -160,7 +160,7 @@ resource "azurerm_stream_analytics_job_schedule" "example" { ... }
 
 ## Disclaimer
 
-This article provides general best practices and configuration guidance for Azure Stream Analytics jobs in production. Always validate steps in your own environment and consult current Microsoft documentation at https://learn.microsoft.com/azure/ as cloud services evolve.
+This article provides general best practices and configuration guidance for Azure Stream Analytics jobs in production. Always validate steps in your own environment and consult current Microsoft documentation at <https://learn.microsoft.com/azure/> as cloud services evolve.
 
 ## References
 

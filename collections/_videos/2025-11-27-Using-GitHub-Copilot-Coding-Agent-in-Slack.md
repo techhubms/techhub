@@ -51,13 +51,13 @@ The GitHub app for Slack now allows direct collaboration with GitHub Copilot. Wi
 ## Get Started Resources
 
 - Follow GitHub for updates and more guides:
-    - [GitHub YouTube Channel](http://bit.ly/subgithub)
-    - [GitHub Blog](https://github.blog)
-    - [GitHub Twitter/X](https://twitter.com/github)
-    - [GitHub LinkedIn](https://linkedin.com/company/github)
-    - [GitHub Instagram](https://www.instagram.com/github)
-    - [GitHub TikTok](https://www.tiktok.com/@github)
-    - [GitHub Facebook](https://www.facebook.com/GitHub/)
+  - [GitHub YouTube Channel](http://bit.ly/subgithub)
+  - [GitHub Blog](https://github.blog)
+  - [GitHub Twitter/X](https://twitter.com/github)
+  - [GitHub LinkedIn](https://linkedin.com/company/github)
+  - [GitHub Instagram](https://www.instagram.com/github)
+  - [GitHub TikTok](https://www.tiktok.com/@github)
+  - [GitHub Facebook](https://www.facebook.com/GitHub/)
 
 ## About GitHub
 

@@ -74,7 +74,7 @@ Copilot's core models are trained on public datasets and may not have knowledge 
 1. Type `/mcp add` in the Copilot CLI.
 2. Name the server "microsoft-docs".
 3. Choose HTTP as the connection type.
-4. Enter: https://learn.microsoft.com/api/mcp
+4. Enter: <https://learn.microsoft.com/api/mcp>
 5. Save the configuration.
 
 ### Copilot Coding Agent

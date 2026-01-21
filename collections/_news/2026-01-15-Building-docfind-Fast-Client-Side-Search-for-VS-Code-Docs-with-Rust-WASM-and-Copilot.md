@@ -50,11 +50,11 @@ This article explores the journey behind creating **docfind**, the fast client-s
 - **Rust CLI Tool:** Builds the search index from a JSON dump of documentation, extracting keywords and compressing document data.
 - **WebAssembly (WASM) Module:** The index is embedded directly into the WASM module, loaded by end users’ browsers at search time—no extra server calls needed.
 - **Technical Data Flow:**
-    - 1. Gather docs data → extract/score keywords with RAKE
-    - 2. Build FST mapping keywords to docs
-    - 3. Compress strings with FSST
-    - 4. Embed everything into a WASM module
-    - 5. In-browser, WASM exposes search APIs leveraging Levenshtein automata for typo tolerance
+  - 1. Gather docs data → extract/score keywords with RAKE
+  - 1. Build FST mapping keywords to docs
+  - 1. Compress strings with FSST
+  - 1. Embed everything into a WASM module
+  - 1. In-browser, WASM exposes search APIs leveraging Levenshtein automata for typo tolerance
 
 ```rust
 pub struct Index {
@@ -73,11 +73,11 @@ pub struct Index {
 ## Developer Tools and GitHub Copilot
 
 - **Copilot’s Role:** The author, not a daily Rust developer, used GitHub Copilot extensively for:
-    - Learning Rust idioms and unfamiliar libraries
-    - WASM toolchain setup and WASM-specific Rust patterns
-    - Scaffold and documentation creation
-    - Navigating and patching intricate WASM binaries
-    - Copilot’s code suggestions, explanations, and even project structuring saved substantial time
+  - Learning Rust idioms and unfamiliar libraries
+  - WASM toolchain setup and WASM-specific Rust patterns
+  - Scaffold and documentation creation
+  - Navigating and patching intricate WASM binaries
+  - Copilot’s code suggestions, explanations, and even project structuring saved substantial time
 - **Takeaway:** Copilot served as an AI mentor, unlocking productivity and enabling the author to build production-quality solutions outside his main tech stack.
 
 ## Results

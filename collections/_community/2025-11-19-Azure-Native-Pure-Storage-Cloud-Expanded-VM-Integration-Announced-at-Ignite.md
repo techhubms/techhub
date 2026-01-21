@@ -53,10 +53,10 @@ Microsoft continues to grow its validated partner catalog, now surfacing solutio
 - Purity OS features are accessible natively in Azure.
 - Management via Portal, CLI, ARM for simplified deployment and scaling.
 - Reference links:
-   - [Pure Storage Cloud Documentation](https://aka.ms/ani/purestorage)
-   - [Azure Marketplace Offer](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/purestoragemarketplaceadmin.krypton_3_plan?tab=Overview)
-   - [Technical Details](https://techcommunity.microsoft.com/blog/azurestorageblog/azure-native-pure-storage-cloud-brings-the-best-of-pure-and-azure-to-our-custome/4456246)
-   - [Step-by-Step Demos](https://www.youtube.com/playlist?list=PLVr149Yb_wxGpN_Y6fEMkh_D_SYzWtl13)
+  - [Pure Storage Cloud Documentation](https://aka.ms/ani/purestorage)
+  - [Azure Marketplace Offer](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/purestoragemarketplaceadmin.krypton_3_plan?tab=Overview)
+  - [Technical Details](https://techcommunity.microsoft.com/blog/azurestorageblog/azure-native-pure-storage-cloud-brings-the-best-of-pure-and-azure-to-our-custome/4456246)
+  - [Step-by-Step Demos](https://www.youtube.com/playlist?list=PLVr149Yb_wxGpN_Y6fEMkh_D_SYzWtl13)
 
 ## Customer Stories
 

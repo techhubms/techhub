@@ -114,6 +114,7 @@ The SRE Agent in Azure simplified production monitoring:
 This process, previously requiring hours, was accomplished autonomously within minutes.
 
 > **Example Incident Log**
+>
 > ```
 > // SRE Agent: 500 errors detected in Octopets pet-locations-api service
 > // Time: Saturday, 6:17 AM

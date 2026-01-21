@@ -46,7 +46,7 @@ The MCP [server list](https://github.com/modelcontextprotocol/servers) is rapidl
 
 VS Code's design around user empowerment shaped its MCP integration:
 
-- **Setup is easy**: Add servers straight from NPM, PyPI, or Docker using the `MCP: Add Server` command, or onboard via _Install in VS Code_ shortcuts.
+- **Setup is easy**: Add servers straight from NPM, PyPI, or Docker using the `MCP: Add Server` command, or onboard via *Install in VS Code* shortcuts.
 - **Security first**: Store secrets securely using input variables and reference trusted `.env` files, minimizing risk.
 - **User control**: With the tool picker, users decide what tools the agent can access in each session. Server logs and controls simplify development and debugging.
 

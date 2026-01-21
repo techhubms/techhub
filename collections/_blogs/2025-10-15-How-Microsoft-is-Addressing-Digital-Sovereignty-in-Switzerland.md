@@ -53,9 +53,9 @@ Microsoft Switzerland has introduced a focused set of cloud solutions and invest
 - **Sovereign Public Cloud:** All European regions, including Switzerland, offer features such as data residency, encryption controls, and regulated environment management. No migration to standalone datacenters is needed.
 - **Sovereign Private Cloud:** For maximum autonomy, Azure Local and Microsoft 365 Local allow workloads to run in on-premises or customer-controlled environments with unified security and management.
 - **Key capabilities:**
-    - **Data Guardian:** Local (Europe-based) access approval and monitoring
-    - **External Key Management:** Customers hold their own encryption keys (on-premises or with trusted third parties)
-    - **Regulated Environment Management:** Centralized oversight for all sovereignty features
+  - **Data Guardian:** Local (Europe-based) access approval and monitoring
+  - **External Key Management:** Customers hold their own encryption keys (on-premises or with trusted third parties)
+  - **Regulated Environment Management:** Centralized oversight for all sovereignty features
 - **Open and hybrid design:** Azure Arc allows unified management of resources across multi-cloud and hybrid environments, giving organizations flexibility and choice in their infrastructure strategy.
 - **Compliance and regulatory support:** The Sovereign Landing Zone (SLZ) is a specialized Azure Landing Zone with built-in policies and Infrastructure-as-Code to enforce regulatory requirements.
 - **Advanced security features:** Azure Confidential Computing keeps data encrypted even during processing; Microsoft enables bring-your-own-key scenarios for further security assurance.
@@ -67,8 +67,8 @@ Microsoft Switzerland has introduced a focused set of cloud solutions and invest
 - **Azure Regions:** Select appropriate cloud regions for physical data residency.
 - **EU Data Boundary:** Store and process public sector and commercial customer data (including for Microsoft 365, Dynamics 365, Power Platform, and most Azure services) within EU/EFTA regions, including Switzerland.
 - **Management Tools:**
-    - **Azure Arc:** Single-pane-of-glass management across cloud/on-prem/hybrid
-    - **Azure Policy & Sovereign Landing Zone:** Automated compliance enforcement for infrastructure deployments
+  - **Azure Arc:** Single-pane-of-glass management across cloud/on-prem/hybrid
+  - **Azure Policy & Sovereign Landing Zone:** Automated compliance enforcement for infrastructure deployments
 - **Confidential Computing:** Data remains encrypted during processing for higher protection
 - **Encryption Control:** Bring and control your own encryption keys with External Key Management and built-in Azure tools
 

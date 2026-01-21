@@ -40,8 +40,8 @@ This post shares a detailed account of running ESXi on a Microsoft Azure VM usin
 - **Azure Subscription Flexibility:** You can perform this setup using a pay-as-you-go, student, or Visual Studio subscription.
 - **Production vs Lab:** For production workloads requiring high availability and resiliency, Microsoft offers Azure VMware Solution (AVS), which mandates EA or CSP subscriptions.
 - **Benefits and Limitations:**
-    - Running ESXi on an Azure VM may help those limited by local hardware resources.
-    - This approach is not recommended for production due to feature limitations and the experimental nature of nested virtualization in Azure.
+  - Running ESXi on an Azure VM may help those limited by local hardware resources.
+  - This approach is not recommended for production due to feature limitations and the experimental nature of nested virtualization in Azure.
 - **Unresolved Challenges:** The process did not reach full success, reflecting platform constraints or missing features, but documents all encountered blocks so others can learn or help resolve them.
 - **Community Mindset:** The author encourages collaborative problem-solving and welcomes feedback or suggestions for overcoming remaining hurdles.
 - **Practical Use Case:** One potential use is to utilize Azure Migrate for VMware, allowing users to test migration scenarios in a lab environment.

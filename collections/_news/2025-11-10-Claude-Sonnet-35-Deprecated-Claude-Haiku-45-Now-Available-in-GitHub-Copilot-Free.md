@@ -36,8 +36,8 @@ As of November 10th, 2025, GitHub Copilot has deprecated the Claude Sonnet 3.5 m
 
 - **Update workflows and integrations** to use the supported models.
 - **Copilot Enterprise administrators** may need to enable access to alternative models through their Copilot settings’ model policy features.
-    - To confirm availability, check your individual Copilot settings and verify that the policy for the new model is enabled.
-    - Once enabled, the new model will appear in the Copilot Chat model selector in Visual Studio Code and on github.com.
+  - To confirm availability, check your individual Copilot settings and verify that the policy for the new model is enabled.
+  - Once enabled, the new model will appear in the Copilot Chat model selector in Visual Studio Code and on github.com.
 - **No action is required to remove deprecated models;** they are no longer available by default.
 
 **Further Resources:**

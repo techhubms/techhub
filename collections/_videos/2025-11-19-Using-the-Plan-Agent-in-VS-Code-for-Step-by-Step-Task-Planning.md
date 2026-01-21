@@ -69,11 +69,11 @@ Explore detailed documentation:
 
 ## Connect
 
-- X: https://x.com/code
-- Bluesky: https://bsky.app/profile/vscode.dev
-- YouTube: https://youtube.com/code
-- LinkedIn: https://www.linkedin.com/showcase/104107263
-- GitHub: https://github.com/microsoft/vscode
+- X: <https://x.com/code>
+- Bluesky: <https://bsky.app/profile/vscode.dev>
+- YouTube: <https://youtube.com/code>
+- LinkedIn: <https://www.linkedin.com/showcase/104107263>
+- GitHub: <https://github.com/microsoft/vscode>
 
 ---
 

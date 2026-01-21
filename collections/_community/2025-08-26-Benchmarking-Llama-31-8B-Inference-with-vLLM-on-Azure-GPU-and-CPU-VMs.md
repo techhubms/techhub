@@ -92,12 +92,12 @@ Hardware choice on Azure directly impacts both AI inference speed and cost. The 
 
 ## References and Resources
 
-- Hugging Face Inference Benchmarker: https://github.com/huggingface/inference-benchmarker
-- Llama 3.1 8B Model: https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct
-- vLLM Engine: https://github.com/vllm-project/vllm
-- Azure ND-Series GPU Docs: https://learn.microsoft.com/en-us/azure/virtual-machines/nd-series
-- Azure Pricing Calculator: https://azure.microsoft.com/en-us/pricing/calculator
-- CPU vLLM Install: https://docs.vllm.ai/en/latest/getting_started/installation/cpu.html
+- Hugging Face Inference Benchmarker: <https://github.com/huggingface/inference-benchmarker>
+- Llama 3.1 8B Model: <https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct>
+- vLLM Engine: <https://github.com/vllm-project/vllm>
+- Azure ND-Series GPU Docs: <https://learn.microsoft.com/en-us/azure/virtual-machines/nd-series>
+- Azure Pricing Calculator: <https://azure.microsoft.com/en-us/pricing/calculator>
+- CPU vLLM Install: <https://docs.vllm.ai/en/latest/getting_started/installation/cpu.html>
 
 ## Appendix: vLLM on CPU VMs
 

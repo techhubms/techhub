@@ -56,10 +56,10 @@ The open-source community is facing significant challenges as unpaid maintainers
 ### Key Sessions & Themes
 
 - **From Kernel to Copilot: Microsoft's Open-Source Journey to AI at Scale**
-    - Examines evolution from Linux contributions to AI-powered services (Copilot, Azure AI, VS Code)
-    - Discusses projects like Radius, Dalec, Copacetic
+  - Examines evolution from Linux contributions to AI-powered services (Copilot, Azure AI, VS Code)
+  - Discusses projects like Radius, Dalec, Copacetic
 - **Using AI Agents to Empower Application Modernization for Kubernetes**
-    - Demonstrates modernizing legacy apps with open-source tools, AI, and reducing skill barriers
+  - Demonstrates modernizing legacy apps with open-source tools, AI, and reducing skill barriers
 
 ### In-Booth Demonstrations
 

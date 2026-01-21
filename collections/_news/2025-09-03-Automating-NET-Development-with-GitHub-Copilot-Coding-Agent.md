@@ -63,10 +63,10 @@ The GitHub Copilot Coding Agent is changing the way .NET developers approach day
 #### Automatic Feature Implementation
 
 - Once the PRD is approved, Copilot Coding Agent proceeds to implement the feature:
-    - Generates code changes and configuration updates
-    - Creates or updates UI as needed
-    - Utilizes tools like Playwright for validation and screenshots
-    - Opens pull requests for review ([Example PR](https://github.com/Azure-Samples/eShopLite/pull/49))
+  - Generates code changes and configuration updates
+  - Creates or updates UI as needed
+  - Utilizes tools like Playwright for validation and screenshots
+  - Opens pull requests for review ([Example PR](https://github.com/Azure-Samples/eShopLite/pull/49))
 
 ## Integrations and Best Practices
 

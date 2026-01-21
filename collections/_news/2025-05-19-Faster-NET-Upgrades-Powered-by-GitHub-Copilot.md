@@ -66,7 +66,7 @@ There are two primary ways to start upgrading your .NET solution:
 ## Key Features
 
 - **Automated Code Transformations**: Copilot performs necessary changes to your codebase, moving applications to modern .NET versions.
-    - See progress with [upgrade process media](https://devblogs.microsoft.com/visualstudio/wp-content/uploads/sites/4/2025/05/GHCPUA-Update-Progress-Focus-1.mp4).
+  - See progress with [upgrade process media](https://devblogs.microsoft.com/visualstudio/wp-content/uploads/sites/4/2025/05/GHCPUA-Update-Progress-Focus-1.mp4).
 - **Customizable Workflows**: Choose specific projects to upgrade, opt to address vulnerable packages, and personalize upgrade paths.
 - **Learning from Manual Changes**: If manual updates are required, Copilot records and learns from your interventions, reusing this knowledge for similar scenarios in the same upgrade.
 - **Git Integration**: Automatic commits are created for upgraded files, supporting incremental adoption and testing.

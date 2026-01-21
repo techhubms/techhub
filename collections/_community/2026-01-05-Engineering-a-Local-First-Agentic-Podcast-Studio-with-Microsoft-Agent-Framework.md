@@ -90,8 +90,8 @@ By combining Microsoft’s advanced frameworks with modular, agentic orchestrati
 
 - **Download sample project:** [GitHub - edgeai-for-beginners/WorkshopForAgentic](https://github.com/microsoft/edgeai-for-beginners/tree/main/WorkshopForAgentic)
 - Additional Microsoft resources:
-    - [EdgeAI for Beginners](https://github.com/microsoft/edgeai-for-beginners)
-    - [Microsoft Agent Framework](https://github.com/microsoft/agent-framework)
-    - [Microsoft Agent Framework Samples](https://github.com/microsoft/agent-framework-samples)
+  - [EdgeAI for Beginners](https://github.com/microsoft/edgeai-for-beginners)
+  - [Microsoft Agent Framework](https://github.com/microsoft/agent-framework)
+  - [Microsoft Agent Framework Samples](https://github.com/microsoft/agent-framework-samples)
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/microsoft-developer-community/engineering-a-local-first-agentic-podcast-studio-a-deep-dive/ba-p/4482839)

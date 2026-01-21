@@ -77,8 +77,8 @@ Azure Arc Site Manager is now available in refreshed public preview, providing a
 - Comments and feedback are invited directly on the blog.
 - Feedback forms and contact channels are available, with the team actively monitoring responses and considering user input for future improvements.
 - Links provided for deeper technical exploration:
-    - [Site Manager Documentation](https://learn.microsoft.com/en-us/azure/azure-arc/site-manager/)
-    - [Az.Site CLI Module Reference](https://learn.microsoft.com/en-us/powershell/module/az.site/?view=azps-14.6.0)
+  - [Site Manager Documentation](https://learn.microsoft.com/en-us/azure/azure-arc/site-manager/)
+  - [Az.Site CLI Module Reference](https://learn.microsoft.com/en-us/powershell/module/az.site/?view=azps-14.6.0)
 
 ## Conclusion
 

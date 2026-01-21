@@ -68,6 +68,7 @@ Microsoft introduces GPT-5, OpenAI’s most advanced large language model, now g
 - **Reliability and Monitoring**: Azure AI Foundry delivers real-time observability, built-in monitoring, and secure production readiness, helping organizations swiftly move from pilot to production.
 
 > **Customer Endorsements**:
+>
 > - **SAP**: Empowering developer communities in their generative AI hub.
 > - **Relativity**: Enhancing legal data intelligence and decision-making with GPT-5.
 > - **Hebbia**: Enabling fast and accurate financial analysis at scale.

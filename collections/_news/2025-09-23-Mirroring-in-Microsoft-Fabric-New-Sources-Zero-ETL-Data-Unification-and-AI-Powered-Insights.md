@@ -54,13 +54,13 @@ Microsoft Fabric has significantly evolved its Mirroring functionality, making d
   - The Open Mirroring platform allows developers and ISVs to create custom mirroring solutions, including UI support for delimited files (.csv, .txt), with ongoing partner ecosystem expansion.
 
 - **Enabling Advanced Analytics and AI:**
-   - Users can create semantic models directly from the Mirrored Database UI or in Power BI Desktop.
-   - Chat-driven analytics now in Data Agent (preview): users can interact with mirrored data conversationally for rapid insights, similar to querying Lakehouse data.
+  - Users can create semantic models directly from the Mirrored Database UI or in Power BI Desktop.
+  - Chat-driven analytics now in Data Agent (preview): users can interact with mirrored data conversationally for rapid insights, similar to querying Lakehouse data.
 
 - **Upcoming Features:**
-   - Delta Change Data Feed (CDF) will simplify historical change tracking.
-   - Snowflake Mirroring will expand to additional asset types (starting with views).
-   - Enhanced security/governance with OneLake Security and improved partition handling in Open Mirroring.
+  - Delta Change Data Feed (CDF) will simplify historical change tracking.
+  - Snowflake Mirroring will expand to additional asset types (starting with views).
+  - Enhanced security/governance with OneLake Security and improved partition handling in Open Mirroring.
 
 ## Getting Started
 
@@ -68,8 +68,8 @@ Microsoft Fabric has significantly evolved its Mirroring functionality, making d
 - **Secure and Manage:** Use workspace identity authentication for improved control. Leverage on-premises gateway and VNet support for secure connections.
 - **Build and Extend:** Developers can integrate custom mirroring solutions using Open Mirroring, with support for a broader range of partners.
 - **Analytics and AI Enablement:**  
-   - Build semantic models from mirrored databases for use in Power BI.
-   - Leverage chat capabilities within Data Agent for interactive insights.
+  - Build semantic models from mirrored databases for use in Power BI.
+  - Leverage chat capabilities within Data Agent for interactive insights.
 
 ## Roadmap Highlights
 

@@ -40,9 +40,11 @@ Sidecars on [Azure App Service](https://learn.microsoft.com/en-us/azure/app-serv
 We've published plug-and-play templates for:
 
 - ### GitHub Actions
+
   [Sample workflows](https://azure.github.io/AppService/2025/09/08/GHA-templates-sidecars.html) for both built-in runtimes (Python, Node.js, .NET, Java, PHP) and custom containers. Attach sidecars using the sitecontainers config.
 
 - ### Azure Pipelines (VSTS)
+
   [YAML templates](https://azure.github.io/AppService/2025/10/29/VSTS-tasks-for-sidecars.html) enable builds/deploys for code-based apps (AzureWebApp@1) and containerized apps (AzureWebAppContainer@1). Sidecars are declared in the same run—mark one container as isMain: true and others as sidecars.
 
 ## When to Use Which Template

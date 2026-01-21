@@ -46,9 +46,9 @@ This session demonstrates how the Azure SDK for Rust enables developers to creat
   - Integrating Azure services with Rust applications
 - **Performance Considerations:** Achieving high performance in the cloud with Rust
 - **Developer Experience:**
-   - Getting started with the Azure SDK for Rust
-   - Who should consider Rust for Azure applications
-   - Resources for learning more
+  - Getting started with the Azure SDK for Rust
+  - Who should consider Rust for Azure applications
+  - Resources for learning more
 
 ## Example Scenario: Managing Secrets with Azure Key Vault
 

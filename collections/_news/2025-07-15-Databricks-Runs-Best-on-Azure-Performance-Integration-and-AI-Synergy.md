@@ -123,6 +123,6 @@ Azure Databricks now enables **cross-cloud data governance**:
 
 ---
 
-_This article is a supplement to the [Azure Databricks: Differentiated Synergy](https://azure.microsoft.com/en-us/blog/azure-databricks-differentiated-synergy/) post, providing a deeper look at Azure Databricks’ technical and business advantages._
+*This article is a supplement to the [Azure Databricks: Differentiated Synergy](https://azure.microsoft.com/en-us/blog/azure-databricks-differentiated-synergy/) post, providing a deeper look at Azure Databricks’ technical and business advantages.*
 
 This post appeared first on "The Azure Blog". [Read the entire article here](https://azure.microsoft.com/en-us/blog/databricks-runs-best-on-azure/)

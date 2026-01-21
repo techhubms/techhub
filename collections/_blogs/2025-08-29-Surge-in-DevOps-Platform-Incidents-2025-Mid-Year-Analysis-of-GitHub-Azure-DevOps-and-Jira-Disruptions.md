@@ -56,21 +56,21 @@ Authored by Alan Shimel, this article examines data from GitProtect.io’s 'DevO
 ## Azure DevOps: Stability Concerns Deepen
 
 - **74 incidents** recorded (Jan–Jun 2025), more than any other platform analyzed.
-    - **Pipelines:** 31 disruptions (21% of issues)
-    - **Boards:** 28 incidents
-    - **Test Plans:** 28 incidents
-    - **Repos:** 27 incidents
-    - **Artifacts:** 6 incidents
-    - **Core Services:** 16 incidents
+  - **Pipelines:** 31 disruptions (21% of issues)
+  - **Boards:** 28 incidents
+  - **Test Plans:** 28 incidents
+  - **Repos:** 27 incidents
+  - **Artifacts:** 6 incidents
+  - **Core Services:** 16 incidents
 - **Notable Event:** 159-hour global degradation in January, slowing builds and deployments.
 - **Geographic Impact:** 34% of incidents in Europe; lower impact in India and Australia.
 
 ## GitHub: Major Rise in Operational Disruptions
 
 - **109 incidents** (58% increase over H1 2024).
-    - 17 major, 78 minor disruptions
-    - Over **330 hours** of downtime in April
-    - Both open source and enterprise repositories affected
+  - 17 major, 78 minor disruptions
+  - Over **330 hours** of downtime in April
+  - Both open source and enterprise repositories affected
 - Reliability issues are impacting commit velocity and CI/CD reliability.
 
 ## GitLab and Jira: Data Breaches & Ransomware

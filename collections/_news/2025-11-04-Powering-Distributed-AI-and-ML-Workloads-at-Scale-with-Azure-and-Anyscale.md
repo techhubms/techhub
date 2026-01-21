@@ -43,10 +43,10 @@ Ray is an open-source framework designed to make distributed computing accessibl
 - Scale applications from a single laptop to large clusters with minimal code changes
 - Leverage Pythonic APIs that transform functions and classes into distributed tasks and actors
 - Use native libraries for:
-   - **Ray Train** (distributed training)
-   - **Ray Data** (data processing)
-   - **Ray Serve** (model serving)
-   - **Ray Tune** (hyperparameter tuning)
+  - **Ray Train** (distributed training)
+  - **Ray Data** (data processing)
+  - **Ray Serve** (model serving)
+  - **Ray Tune** (hyperparameter tuning)
 - Integrate with PyTorch, TensorFlow, and other ML libraries
 
 Ray abstracts distributed infrastructure concerns, enabling teams to focus on model development and innovation.

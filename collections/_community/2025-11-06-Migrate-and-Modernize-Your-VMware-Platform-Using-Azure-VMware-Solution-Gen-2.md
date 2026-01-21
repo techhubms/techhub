@@ -46,6 +46,7 @@ This ongoing video series offers step-by-step guidance for organizations looking
 - Support for continuous improvement through additional upcoming episodes
 
 > **Contributors:**
+>
 > - [tredavis](https://techcommunity.microsoft.com/users/tredavis/423075) (Azure VMware Solution Black Belt Team)
 > - Carlos Villuendas
 

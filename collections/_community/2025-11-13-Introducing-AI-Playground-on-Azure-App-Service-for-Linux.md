@@ -100,6 +100,6 @@ AI Playground helps you deliver and test AI-powered features quickly on Azure Ap
 
 For detailed configuration and ongoing updates, check the official [Azure App Service documentation](https://learn.microsoft.com/en-us/azure/app-service/tutorial-ai-slm-dotnet).
 
-*Author: TulikaC*
+_Author: TulikaC_
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-ai-playground-on-azure-app-service-for-linux/ba-p/4469497)

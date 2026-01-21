@@ -33,11 +33,12 @@ Generative-AI agents only become useful when they can **do** things—such as qu
 
 ## Introducing MCP: Streamlining AI Agent Integration
 
-The **Model Context Protocol (MCP)**, an open, JSON-RPC–based protocol originally proposed by Anthropic, changes this paradigm. MCP allows a “server” to publish *tools* (i.e., functions) and *resources* (i.e., context) once. Any compliant “client,” such as your AI agent runtime, can then discover and call these tools and resources automatically—think of it as the "USB-C for AI integrations."
+The **Model Context Protocol (MCP)**, an open, JSON-RPC–based protocol originally proposed by Anthropic, changes this paradigm. MCP allows a “server” to publish _tools_ (i.e., functions) and _resources_ (i.e., context) once. Any compliant “client,” such as your AI agent runtime, can then discover and call these tools and resources automatically—think of it as the "USB-C for AI integrations."
 
 With the preview release, **Azure AI Foundry Agent Service** has become a first-class MCP client. This means you can bring any remote MCP server—whether self-hosted or SaaS—and Azure AI Foundry will import its capabilities in seconds, keep them updated, and seamlessly route calls through the service's enterprise envelope.
 
 > **Model Context Protocol (MCP)** enables:
+>
 > - Developers, organizations, and service providers to host services and APIs on MCP servers.
 > - Easy exposure and connection of tools to MCP-compatible clients (like Foundry Agent Service).
 > - Automatic addition and update of actions and knowledge in agents as MCP server functionality evolves.
@@ -187,7 +188,7 @@ print(f"Deleted agent, agent ID: {agent.id}")
 
 ## MCP and Open-by-Design AI: Microsoft Build 2025 Announcement
 
-At **Microsoft Build 2025**, Satya Nadella shared Microsoft's vision for an *open-by-design* AI ecosystem, announcing a partnership with **Anthropic** to make MCP a first-class standard across Windows 11, GitHub, Copilot Studio, and Azure AI Foundry.
+At **Microsoft Build 2025**, Satya Nadella shared Microsoft's vision for an _open-by-design_ AI ecosystem, announcing a partnership with **Anthropic** to make MCP a first-class standard across Windows 11, GitHub, Copilot Studio, and Azure AI Foundry.
 
 Preview support for MCP in Azure AI Foundry Agent Service is a major step, enabling “connect once, integrate anywhere” for cloud-hosted agents. Now, plugging an MCP server into Foundry can be accomplished without custom code.
 

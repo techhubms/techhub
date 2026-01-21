@@ -60,11 +60,11 @@ Financial services organizations are increasingly leveraging Azure's expansive n
 ### For US-based Financial Institutions
 
 - **Central US** is highlighted for:
-    - Low latency and broad North American reach
-    - Capacity and availability zones for mission-critical workloads
-    - Cost efficiencies and discounts
-    - Regulatory certifications (PCI, SOC, ISO)
-    - Scaling advantage versus more saturated regions
+  - Low latency and broad North American reach
+  - Capacity and availability zones for mission-critical workloads
+  - Cost efficiencies and discounts
+  - Regulatory certifications (PCI, SOC, ISO)
+  - Scaling advantage versus more saturated regions
 
 ### For EU-based Organizations
 

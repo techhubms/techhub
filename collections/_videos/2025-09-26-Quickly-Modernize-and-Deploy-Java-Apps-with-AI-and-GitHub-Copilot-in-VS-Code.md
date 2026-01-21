@@ -57,9 +57,9 @@ This video demonstrates an efficient workflow for modernizing and deploying Java
 
 - [GitHub Copilot App Modernization Tool for Java](https://aka.ms/ghcp-appmod/java-video)
 - Follow Visual Studio Code for more resources:
-   - [YouTube](https://youtube.com/code)
-   - [LinkedIn](https://www.linkedin.com/showcase/104107263)
-   - [GitHub](https://github.com/microsoft/vscode)
+  - [YouTube](https://youtube.com/code)
+  - [LinkedIn](https://www.linkedin.com/showcase/104107263)
+  - [GitHub](https://github.com/microsoft/vscode)
 
 ## Tags
 

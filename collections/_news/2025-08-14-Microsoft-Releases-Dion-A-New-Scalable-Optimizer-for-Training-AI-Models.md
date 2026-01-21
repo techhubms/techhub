@@ -38,7 +38,7 @@ AI model training commonly relies on optimizers like Adam and AdamW. While effec
 
 ## What Makes Dion Different?
 
-Dion introduces **orthonormal updates**, a method that equalizes how a weight matrix update affects model activations across all input directions. This is achieved by enforcing *orthonormality* on the update matrix, rather than relying on the most conservative learning rate. Whereas Muon required full orthonormalization (and associated computational cost), Dion orthonormalizes only the top _r_ singular vector space—*rank approximation*—which reduces overhead yet maintains performance. This rank can remain small relative to model size, enabling scalability.
+Dion introduces **orthonormal updates**, a method that equalizes how a weight matrix update affects model activations across all input directions. This is achieved by enforcing *orthonormality* on the update matrix, rather than relying on the most conservative learning rate. Whereas Muon required full orthonormalization (and associated computational cost), Dion orthonormalizes only the top *r* singular vector space—*rank approximation*—which reduces overhead yet maintains performance. This rank can remain small relative to model size, enabling scalability.
 
 ### Technical Highlights
 

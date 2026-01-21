@@ -63,9 +63,9 @@ Modern DevOps practices enable faster release cycles and continuous delivery, bu
 ## Human Testing is Still Essential
 
 - Human QA is particularly valuable for:
-    - UI/UX validation
-    - Exploratory testing
-    - Integration and real-world scenario testing
+  - UI/UX validation
+  - Exploratory testing
+  - Integration and real-world scenario testing
 - Combining automated and manual testing ensures fast feedback without sacrificing coverage of new features or unexpected behaviors.
 - Example: In a payroll system upgrade, automation maintained regression coverage, while humans validated integration and novel scenarios.
 

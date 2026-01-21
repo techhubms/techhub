@@ -52,11 +52,11 @@ To enforce disciplined development with Copilot, use these two main features:
 - Define persistent coding standards, technology stacks, naming conventions, and overall process guidance.
 - Modularize instructions by splitting into multiple referenced files (e.g., architecture, coding standards).
 - Ensure clear documentation on:
-    - Product overview
-    - Technology stack (e.g., .NET, Azure SQL)
-    - Directory structure
-    - Coding rules (exceptions, naming conventions)
-    - Project-specific terminology
+  - Product overview
+  - Technology stack (e.g., .NET, Azure SQL)
+  - Directory structure
+  - Coding rules (exceptions, naming conventions)
+  - Project-specific terminology
 - Example best practice: Rather than a single monolithic instruction file, use references to maintain clarity and avoid length issues. Example rules might include enforcing camelCase, React error boundaries, or mandatory TypeScript adoption.
 - [GitHub Docs: Add repository instructions](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions)
 
@@ -73,7 +73,7 @@ To enforce disciplined development with Copilot, use these two main features:
 ### Custom Instructions Setup
 
 - Structure KRM (Knowledge, Rules, Metadata) into separate files:
-    - Product details, tech stack, standards, and glossary
+  - Product details, tech stack, standards, and glossary
 - Define development flows such as:
     1. Requirements →
     2. Design →
@@ -105,8 +105,8 @@ To enforce disciplined development with Copilot, use these two main features:
 ### Practical Integration Tips
 
 - To improve Copilot’s context:
-    - Explicitly reference architecture and schema files in both instructions and chat modes
-    - Store database schema as DDL or ORM files within source control for easy LLM access
+  - Explicitly reference architecture and schema files in both instructions and chat modes
+  - Store database schema as DDL or ORM files within source control for easy LLM access
 - Prefer text-based docs (Markdown, Mermaid) over office formats
 - Align folder structure so documentation and code updates remain in sync
 - Emphasize "documentation-first" (Doc-First) workflow for changes

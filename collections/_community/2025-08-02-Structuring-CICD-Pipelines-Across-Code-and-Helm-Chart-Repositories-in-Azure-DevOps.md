@@ -57,7 +57,7 @@ Implement clean, automated CI/CD flow for deployment to AKS, given the separate 
 
 ## Solutions and Community Insights
 
-- **Azure DevOps does not provide out-of-the-box triggers across repos. Workarounds involve: **
+- **Azure DevOps does not provide out-of-the-box triggers across repos. Workarounds involve:**
   - Use pipeline resources to trigger repoB's pipeline after repoA's completes, passing artifact information via variables or files
   - Checking out repoB in repoA's pipeline, programmatically updating the relevant Helm values file with the new image tag
   - Example includes installing tools like yq for YAML manipulation, and committing changes to trigger a downstream pipeline in repoB (though this is controversial)

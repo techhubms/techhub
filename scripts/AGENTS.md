@@ -212,11 +212,12 @@ For complete frontmatter schema, see [collections/frontmatter-schema.md](../coll
 
 #### fix-markdown-files.ps1
 
-- **Purpose**: Fixes AI-generated markdown formatting issues ONLY
-- **What it does**: Repairs markdown formatting (missing blank lines, heading spacing, list formatting, etc.)
+- **Purpose**: Fixes markdown formatting issues in collections directory using markdownlint-cli2
+- **What it does**: Runs `npx markdownlint-cli2 --fix` on markdown files in `collections/` directory
 - **What it does NOT do**: Modify frontmatter (templates already generate correct .NET format)
 - **When to use**: After AI processes content that has markdown formatting issues
 - **Note**: New content from RSS pipeline already has correct frontmatter structure (section_names)
+- **Manual usage**: Run `npx markdownlint-cli2 --fix <file-path>` on any markdown file
 
 #### iterative-roundup-generation.ps1
 

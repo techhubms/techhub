@@ -46,13 +46,13 @@ This guide walks through building a TODO application end-to-end using Aspire (a 
 ### Installing Aspire
 
 - Use the provided PowerShell or bash script:
-    - **Windows:**
+  - **Windows:**
 
       ```powershell
       iex "& { $(irm https://aspire.dev/install.ps1) }"
       ```
 
-    - **Linux/macOS:**
+  - **Linux/macOS:**
 
       ```sh
       curl -sSL https://aspire.dev/install.sh | bash -s
@@ -102,12 +102,12 @@ This guide walks through building a TODO application end-to-end using Aspire (a 
     ```
 
 - Add two additional endpoints for reordering tasks:
-    - `MoveTaskUp`: swaps position with the prior task
-    - `MoveTaskDown`: swaps position with next task
+  - `MoveTaskUp`: swaps position with the prior task
+  - `MoveTaskDown`: swaps position with next task
 
 - Fix endpoint behaviors:
-    - Ensure returned todos are sorted by `Position`.
-    - Handle zero/missing `Position` on POST by assigning next available number.
+  - Ensure returned todos are sorted by `Position`.
+  - Handle zero/missing `Position` on POST by assigning next available number.
 
 ---
 

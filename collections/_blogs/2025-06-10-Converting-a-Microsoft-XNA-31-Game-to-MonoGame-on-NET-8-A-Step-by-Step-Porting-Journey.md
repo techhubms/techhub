@@ -69,14 +69,14 @@ dotnet sln add ./Trash/
 ### 2. Transferring Game Files
 
 - Copied all C# code files and content (such as .wav and .png assets) except:
-    - The legacy `.csproj` project file (used MonoGame’s instead).
-    - The old `AssemblyInfo.cs` (attributes handled by SDK now).
+  - The legacy `.csproj` project file (used MonoGame’s instead).
+  - The old `AssemblyInfo.cs` (attributes handled by SDK now).
 
 #### Compiling: Version Issues
 
 - Only one initial build error: Use of `GraphicsDevice.RenderState` not found in MonoGame/XNA 4.0.
-    - Solution: Replace `RenderState` with `RasterizerState` as per XNA 4.0 changes.
-    - Example fix:
+  - Solution: Replace `RenderState` with `RasterizerState` as per XNA 4.0 changes.
+  - Example fix:
 
       ```csharp
       // XNA 3.1:
@@ -95,8 +95,8 @@ dotnet sln add ./Trash/
 
 - On first run, the game crashed due to missing `.xgs` (XACT Game Studio) files.
 - Instead of porting XACT directly (unsupported by MonoGame), switched to MonoGame’s sound APIs:
-    - Used `SoundEffect`, `SoundEffectInstance`, and `Song` types for audio.
-    - Relied on the MonoGame Content Builder (MGCB) to import and process assets.
+  - Used `SoundEffect`, `SoundEffectInstance`, and `Song` types for audio.
+  - Relied on the MonoGame Content Builder (MGCB) to import and process assets.
 
 - Ran the MGCB content editor:
 

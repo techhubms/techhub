@@ -60,6 +60,7 @@ GitHub's video is a starting point for anyone new to version control, offering a
 For more resources and community updates, connect with GitHub on YouTube, X (Twitter), LinkedIn, Instagram, and TikTok.
 
 > **Links:**
+>
 > - [GitHub YouTube](https://gh.io/subgithub)
 > - [Blog](https://github.blog)
 > - [Twitter](https://twitter.com/github)

@@ -40,12 +40,12 @@ This post documents the hands-on experience and troubleshooting steps involved i
 ## Setup Steps Taken
 
 - **Certificate Installation:**
-    - Installed user .pfx certificates on Windows and macOS devices using the provided password.
+  - Installed user .pfx certificates on Windows and macOS devices using the provided password.
 - **Root/Intermediate Certificate Deployment:**
-    - Deployed the root and intermediate CA certificates to endpoints using Microsoft Intune for both platforms.
+  - Deployed the root and intermediate CA certificates to endpoints using Microsoft Intune for both platforms.
 - **Publishing to Exchange Online:**
-    - Exported the root and intermediate CA certificates from Windows (using certmgr.msc).
-    - Uploaded the CA certificates into Exchange Online via PowerShell:
+  - Exported the root and intermediate CA certificates from Windows (using certmgr.msc).
+  - Uploaded the CA certificates into Exchange Online via PowerShell:
 
     ```powershell
     Connect-ExchangeOnline
@@ -53,7 +53,7 @@ This post documents the hands-on experience and troubleshooting steps involved i
     ```
 
 - **GAL Publication:**
-    - Published the S/MIME public certificate for each user into the Global Address List (GAL) via classic Outlook manually (Windows users only).
+  - Published the S/MIME public certificate for each user into the Global Address List (GAL) via classic Outlook manually (Windows users only).
 
 ## Current Functionality
 

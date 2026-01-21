@@ -85,7 +85,7 @@ Microsoft continues advancing cloud and AI innovation with a sharp focus on secu
 
 Sudhanva
 
-_Last updated: Nov 18, 2025_
+*Last updated: Nov 18, 2025*
 
 ---
 

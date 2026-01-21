@@ -58,7 +58,7 @@ Manual management is complex, error-prone, and inefficient at scale.
    - Automatically scans subscriptions for all model deployments
    - Builds a centralized, searchable inventory
    - Example output:
-     
+
      | Account Name     | Resource Group | Location | Deployment   | Model        | Version   | SKU       | Capacity |
      |-----------------|---------------|----------|--------------|--------------|-----------|-----------|----------|
      | foundry-eastus  | rg-prod       | eastus   | gpt4-prod    | gpt-4o       | 2024-05-13| Standard  | 10       |

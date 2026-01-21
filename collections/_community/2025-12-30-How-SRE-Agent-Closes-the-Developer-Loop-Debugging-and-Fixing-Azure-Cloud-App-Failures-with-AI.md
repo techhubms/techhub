@@ -82,7 +82,7 @@ The post presents an integrated workflow utilizing:
 
 - Traces error back via source, Bicep, and resource graph
 - Identifies multi-layer issues through logical elimination
-    - Examples:
+  - Examples:
         1. Missing private DNS zone link to VNet
         2. Managed identity not provisioned as SQL user
 - SRE Agent documents root causes and suggested fixes as a GitHub issue
@@ -91,8 +91,8 @@ The post presents an integrated workflow utilizing:
 
 - Assign the GitHub issue to Coding Agent
 - Coding Agent generates a PR with Bicep and SQL fixes:
-    - Adds `virtualNetworkLinks` resource to connect DNS zone and VNet
-    - Appends SQL script to add managed identity as SQL user with roles
+  - Adds `virtualNetworkLinks` resource to connect DNS zone and VNet
+  - Appends SQL script to add managed identity as SQL user with roles
 - Review and merge PR
 - Deploy the updated code & infra; application health check succeeds
 

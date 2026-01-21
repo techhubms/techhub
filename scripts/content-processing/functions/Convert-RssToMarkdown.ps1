@@ -321,7 +321,13 @@ function Convert-RssToMarkdown {
                 Write-Host "✅ Created file: $filePath" -ForegroundColor Green
 
                 # Fix markdown formatting only - new files already have correct .NET frontmatter
-                $null = npx --yes markdownlint-cli2 --fix $filePath 2>&1
+                $lintResult = npx --yes markdownlint-cli2 --fix $filePath 2>&1
+                if ($LASTEXITCODE -ne 0) {
+                    Write-Host "⚠️  Markdownlint reported issues (exit code: $LASTEXITCODE)" -ForegroundColor Yellow
+                    Write-Host "   File: $filePath" -ForegroundColor Yellow
+                    Write-Host "   Output: $lintResult" -ForegroundColor Yellow
+                    # Continue processing - linting issues shouldn't block content creation
+                }
                 
                 # Verify file was created successfully before adding to processed entries
                 if (Test-Path $filePath) {

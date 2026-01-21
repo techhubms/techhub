@@ -46,8 +46,8 @@ Code reviews can be time-consuming, especially when manually parsing through eve
 
 - **Open the pull request** in VS Code.
 - **Access Copilot Chat:**
-    - Press `Ctrl + I` (Windows/Linux)
-    - Press `Cmd + I` (Mac)
+  - Press `Ctrl + I` (Windows/Linux)
+  - Press `Cmd + I` (Mac)
 - **Ask Copilot:**
 
     ```

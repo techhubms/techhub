@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://code-maze.com/csharp-snapshot-testing-with-verify/
 title: How to Perform Snapshot Testing With Verify in C#
 author: Januarius Njoku

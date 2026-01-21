@@ -55,7 +55,7 @@ This Microsoft Ignite 2025 session features Tim Denley and Microsoft Events, hig
 
 - **Speaker:** Tim Denley
 - **Event:** Microsoft Ignite 2025
-- **On-Demand Access:** https://ignite.microsoft.com
+- **On-Demand Access:** <https://ignite.microsoft.com>
 
 ## How Organizations Benefit
 

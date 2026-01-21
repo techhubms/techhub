@@ -33,17 +33,17 @@ Microsoft, together with the Federal Government of Nigeria, Data Science Nigeria
 ## Key Programme Highlights
 
 - **Policy and Leadership Training:**
-    - Microsoft has partnered with Lagos Business School and several Nigerian government ministries to advance ethical, inclusive AI leadership.
-    - The initiative has trained 99 public sector leaders, including National Assembly members and ministry executives, focusing on strategic AI adoption and sector-specific roadmaps.
+  - Microsoft has partnered with Lagos Business School and several Nigerian government ministries to advance ethical, inclusive AI leadership.
+  - The initiative has trained 99 public sector leaders, including National Assembly members and ministry executives, focusing on strategic AI adoption and sector-specific roadmaps.
 
 - **Developer Talent Pipeline:**
-    - Initiatives such as Developers in Government (DevsInGov) and the Ministry of Communications' 3 Million Technical Talent effort provided analytics and AI skills to around 645 participants, with an additional 1,000 developers gaining advanced knowledge in DevOps, machine learning, and data science.
-    - These trainings strengthen Nigeria’s technical workforce, preparing for AI-powered innovation and services.
+  - Initiatives such as Developers in Government (DevsInGov) and the Ministry of Communications' 3 Million Technical Talent effort provided analytics and AI skills to around 645 participants, with an additional 1,000 developers gaining advanced knowledge in DevOps, machine learning, and data science.
+  - These trainings strengthen Nigeria’s technical workforce, preparing for AI-powered innovation and services.
 
 - **Broad Digital Literacy Outreach:**
-    - Microsoft’s AI Skills Week engaged over 235,000 Nigerians in digital literacy workshops, business leader sessions, and an Agentic AI hackathon.
-    - Partnerships with organizations like VISA, TeKnowledge, UNICEF, and others enabled training for over 11,400 people and AI certification for 1,700+.
-    - The hackathon spotlighted solutions in document verification, risk assessment, and fintech fraud detection.
+  - Microsoft’s AI Skills Week engaged over 235,000 Nigerians in digital literacy workshops, business leader sessions, and an Agentic AI hackathon.
+  - Partnerships with organizations like VISA, TeKnowledge, UNICEF, and others enabled training for over 11,400 people and AI certification for 1,700+.
+  - The hackathon spotlighted solutions in document verification, risk assessment, and fintech fraud detection.
 
 ## Leadership Perspectives
 

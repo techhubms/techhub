@@ -79,8 +79,8 @@ See [Microsoft documentation](https://learn.microsoft.com/fabric/real-time-intel
 ### Scenario 3: Aggregation with scaling traffic
 
 - Common setup, data volume varies
-    - 3A: 1 GB/hour → 2.28 CU/hour (F4)
-    - 3B: 10 GB/hour → 10.00 CU/hour (F16)
+  - 3A: 1 GB/hour → 2.28 CU/hour (F4)
+  - 3B: 10 GB/hour → 10.00 CU/hour (F16)
 - Processing and data egress drive consumption/cost
 
 ## Factors Impacting Cost

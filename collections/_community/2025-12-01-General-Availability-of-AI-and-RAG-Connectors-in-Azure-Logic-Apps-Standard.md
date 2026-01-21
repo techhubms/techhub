@@ -39,44 +39,44 @@ Azure Logic Apps Standard now features comprehensive, generally available **AI a
 ### 1. Azure OpenAI Connector
 
 - **Actions:**
-    - Get an embedding
-    - Get chat completions
-    - Get chat completions using prompt templates
-    - Get completion
-    - Get multiple chat completions
-    - Get multiple embeddings
+  - Get an embedding
+  - Get chat completions
+  - Get chat completions using prompt templates
+  - Get completion
+  - Get multiple chat completions
+  - Get multiple embeddings
 - **Use cases:**
-    - Integrate natural language understanding and structured AI responses
-    - Enable guided decisioning, user-facing assistants, semantic search, classification, and routing tasks
+  - Integrate natural language understanding and structured AI responses
+  - Enable guided decisioning, user-facing assistants, semantic search, classification, and routing tasks
 
 ### 2. Azure AI Search Connector
 
 - **Actions:**
-    - Index documents
-    - Delete documents
-    - Search vectors (including natural language)
-    - Merge documents
-    - Agentic retrieval output (Preview)
+  - Index documents
+  - Delete documents
+  - Search vectors (including natural language)
+  - Merge documents
+  - Agentic retrieval output (Preview)
 - **Use cases:**
-    - Hybrid semantic and vector search embedded in workflows
-    - Retrieval of enterprise data for grounding AI responses
+  - Hybrid semantic and vector search embedded in workflows
+  - Retrieval of enterprise data for grounding AI responses
 
 ### 3. Azure AI Document Intelligence Connector
 
 - **Action:**
-    - Analyze document
+  - Analyze document
 - **Use cases:**
-    - Extract structured data from diverse formats (PDFs, images, forms)
-    - Kick off validation, downstream process automation, or content enrichment
+  - Extract structured data from diverse formats (PDFs, images, forms)
+  - Kick off validation, downstream process automation, or content enrichment
 
 ### 4. AI Operations Connector
 
 - **Actions:**
-    - Chunk text with metadata
-    - Parse document with metadata
+  - Chunk text with metadata
+  - Parse document with metadata
 - **Use cases:**
-    - Transform unstructured documents into structured, enriched content for semantic search and embeddings
-    - Page-level, token-aware chunking for optimal AI workflow preparation
+  - Transform unstructured documents into structured, enriched content for semantic search and embeddings
+  - Page-level, token-aware chunking for optimal AI workflow preparation
 
 ## Agentic and Advanced AI Orchestration
 

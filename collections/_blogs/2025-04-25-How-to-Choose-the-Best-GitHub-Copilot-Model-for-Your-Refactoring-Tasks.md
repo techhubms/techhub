@@ -54,23 +54,23 @@ Copilot responded with a thoughtful suggestion, comparing the two leading models
 #### GPT-4.5
 
 - **Pros:**
-    - Excels at handling complex logic and multi-step reasoning.
-    - Retains and processes context across multiple files, aiding in understanding dependencies and relationships in large codebases.
-    - Produces reliable, consistent, high-quality suggestions for improving maintainability and modularity.
-    - Effective at handling ambiguous or incomplete requirements (useful when no working examples exist).
+  - Excels at handling complex logic and multi-step reasoning.
+  - Retains and processes context across multiple files, aiding in understanding dependencies and relationships in large codebases.
+  - Produces reliable, consistent, high-quality suggestions for improving maintainability and modularity.
+  - Effective at handling ambiguous or incomplete requirements (useful when no working examples exist).
 - **Cons:**
-    - Higher latency; responses are slightly slower than smaller models.
-    - More resource-intensive, potentially costlier.
+  - Higher latency; responses are slightly slower than smaller models.
+  - More resource-intensive, potentially costlier.
 
 #### GPT-4o
 
 - **Pros:**
-    - Faster response times, enabling quicker iteration during refactoring.
-    - Balances reasoning ability with speed for lightweight or smaller refactoring tasks.
-    - More cost-effective, fitting for budget-conscious scenarios.
+  - Faster response times, enabling quicker iteration during refactoring.
+  - Balances reasoning ability with speed for lightweight or smaller refactoring tasks.
+  - More cost-effective, fitting for budget-conscious scenarios.
 - **Cons:**
-    - May struggle with complex, deeply nuanced, or interconnected refactoring tasks.
-    - Handles multi-file or dependency-rich contexts less effectively compared to GPT-4.5.
+  - May struggle with complex, deeply nuanced, or interconnected refactoring tasks.
+  - Handles multi-file or dependency-rich contexts less effectively compared to GPT-4.5.
 
 ---
 

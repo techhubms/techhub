@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://code-maze.com/csharp-chain-of-responsibility-design-pattern/
 title: Chain of Responsibility Design Pattern in C#
 author: Ahsan Ullah

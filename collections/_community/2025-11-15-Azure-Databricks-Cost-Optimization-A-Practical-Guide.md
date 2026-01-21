@@ -60,8 +60,8 @@ This technical guide provides a proven methodology for optimizing Databricks cos
 ### Understanding Databricks Cost Structure
 
 - **Total Cost = Cloud Cost + DBU Cost**
-    - *Cloud*: Compute (VMs, networking, storage/ADLS, MLflow, firewalls, type of compute)
-    - *DBU*: Size of cluster, photon acceleration, runtime, workspace tier, SKU, model serving, query execution, execution time
+  - *Cloud*: Compute (VMs, networking, storage/ADLS, MLflow, firewalls, type of compute)
+  - *DBU*: Size of cluster, photon acceleration, runtime, workspace tier, SKU, model serving, query execution, execution time
 
 ---
 

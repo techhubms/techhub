@@ -265,6 +265,6 @@ For extensions such as role-based authorization, refer to [how to use roles with
 
 ---
 
-*This article is adapted for technical reference and is authored by Marinko Spasojević on Code Maze.*
+_This article is adapted for technical reference and is authored by Marinko Spasojević on Code Maze._
 
 This post appeared first on "Code Maze Blog". [Read the entire article here](https://code-maze.com/keycloak-authentication-with-asp-net-core-web-api-and-blazor-webassembly/)

@@ -120,6 +120,6 @@ Please create a new branch and add a GitHub Actions workflow that does X, Y, and
 
 ---
 
-*This guide by Rob Bos offers hands-on examples and lessons learned for developers seeking to automate everyday coding and DevOps tasks using the GitHub Copilot Coding Agent.*
+_This guide by Rob Bos offers hands-on examples and lessons learned for developers seeking to automate everyday coding and DevOps tasks using the GitHub Copilot Coding Agent._
 
 This post appeared first on "Rob Bos' Blog". [Read the entire article here](https://devopsjournal.io/blog/2025/12/20/Copilot-Agent-example)

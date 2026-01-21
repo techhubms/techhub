@@ -59,22 +59,22 @@ Quick access: Visit the [Azure SDK Releases page](https://aka.ms/azsdk/releases)
 ### Azure Identity: DefaultAzureCredential Customization
 
 - Azure Identity libraries have added support for the `AZURE_TOKEN_CREDENTIALS` environment variable in `DefaultAzureCredential`.
-    - Allows selection between ‘Deployed service’ or ‘Developer tool’ credentials via `prod` or `dev` values.
+  - Allows selection between ‘Deployed service’ or ‘Developer tool’ credentials via `prod` or `dev` values.
 - Minimum version requirements for various languages:
-    - [.NET 1.14.0](https://aka.ms/azsdk/net/identity/credential-chains#exclude-a-credential-type-category)
-    - [C++ 1.12.0](https://aka.ms/azsdk/cpp/identity/credential-chains#how-to-customize-defaultazurecredential)
-    - [Go 1.10.0](https://aka.ms/azsdk/go/identity/credential-chains#how-to-customize-defaultazurecredential)
-    - [Java 1.16.1](https://aka.ms/azsdk/java/identity/credential-chains#how-to-customize-defaultazurecredential)
-    - [JavaScript 4.10.0](https://aka.ms/azsdk/js/identity/credential-chains#how-to-customize-defaultazurecredential)
-    - [Python 1.23.0](https://aka.ms/azsdk/python/identity/credential-chains#exclude-a-credential-type-category)
+  - [.NET 1.14.0](https://aka.ms/azsdk/net/identity/credential-chains#exclude-a-credential-type-category)
+  - [C++ 1.12.0](https://aka.ms/azsdk/cpp/identity/credential-chains#how-to-customize-defaultazurecredential)
+  - [Go 1.10.0](https://aka.ms/azsdk/go/identity/credential-chains#how-to-customize-defaultazurecredential)
+  - [Java 1.16.1](https://aka.ms/azsdk/java/identity/credential-chains#how-to-customize-defaultazurecredential)
+  - [JavaScript 4.10.0](https://aka.ms/azsdk/js/identity/credential-chains#how-to-customize-defaultazurecredential)
+  - [Python 1.23.0](https://aka.ms/azsdk/python/identity/credential-chains#exclude-a-credential-type-category)
 
 ### Cosmos DB 4.4.0 for JavaScript
 
 - [Cosmos DB JavaScript library (4.4.0)](https://www.npmjs.com/package/@azure/cosmos/v/4.4.0) brings a new Bulk API with these enhancements:
-    - Removes the prior 100-operation cap.
-    - Introduces per-operation retries for resilience.
-    - Implements dynamic congestion control for real-time system adaptation.
-    - Adds ‘WeightedRankFusion’ in Hybrid Search for ranked query results.
+  - Removes the prior 100-operation cap.
+  - Introduces per-operation retries for resilience.
+  - Implements dynamic congestion control for real-time system adaptation.
+  - Adds ‘WeightedRankFusion’ in Hybrid Search for ranked query results.
 
 ## Major Initial Stable Releases
 
@@ -110,22 +110,22 @@ Quick access: Visit the [Azure SDK Releases page](https://aka.ms/azsdk/releases)
 Selected highlights among initial beta libraries:
 
 - **.NET:**
-    - [Analytics – Online Experimentation 1.0.0-beta.1](https://www.nuget.org/packages/Azure.Analytics.OnlineExperimentation/1.0.0-beta.1)
-    - Various Resource Management betas: Dependency Map, Carbon Optimization, Secrets Store Extension, Pure Storage Block, and more.
+  - [Analytics – Online Experimentation 1.0.0-beta.1](https://www.nuget.org/packages/Azure.Analytics.OnlineExperimentation/1.0.0-beta.1)
+  - Various Resource Management betas: Dependency Map, Carbon Optimization, Secrets Store Extension, Pure Storage Block, and more.
 - **Java:**
-    - [AI Agents Persistent 1.0.0-beta.1](https://mvnrepository.com/artifact/com.azure/azure-ai-agents-persistent/1.0.0-beta.1)
-    - [AI Projects 1.0.0-beta.1](https://mvnrepository.com/artifact/com.azure/azure-ai-projects/1.0.0-beta.1)
-    - Analytics, Resource Management, Kubernetes and more.
+  - [AI Agents Persistent 1.0.0-beta.1](https://mvnrepository.com/artifact/com.azure/azure-ai-agents-persistent/1.0.0-beta.1)
+  - [AI Projects 1.0.0-beta.1](https://mvnrepository.com/artifact/com.azure/azure-ai-projects/1.0.0-beta.1)
+  - Analytics, Resource Management, Kubernetes and more.
 - **JavaScript:**
-    - [AI Agents 1.0.0-beta.1](https://www.npmjs.com/package/@azure/ai-agents/v/1.0.0-beta.1)
-    - [Online Experimentation 1.0.0-beta.1](https://www.npmjs.com/package/@azure-rest/onlineexperimentation/v/1.0.0-beta.1)
-    - Resource Manager: Carbon Optimization, Extensions, Site Manager.
+  - [AI Agents 1.0.0-beta.1](https://www.npmjs.com/package/@azure/ai-agents/v/1.0.0-beta.1)
+  - [Online Experimentation 1.0.0-beta.1](https://www.npmjs.com/package/@azure-rest/onlineexperimentation/v/1.0.0-beta.1)
+  - Resource Manager: Carbon Optimization, Extensions, Site Manager.
 - **Python:**
-    - [Online Experimentation 1.0.0b1](https://pypi.org/project/azure-onlineexperimentation/1.0.0b1)
-    - Resource Management: Kubernetes Configuration, Site Manager, Secrets Store, MongoDB Atlas, and others.
+  - [Online Experimentation 1.0.0b1](https://pypi.org/project/azure-onlineexperimentation/1.0.0b1)
+  - Resource Management: Kubernetes Configuration, Site Manager, Secrets Store, MongoDB Atlas, and others.
 - **Go:**
-    - Resource manager betas for Lambda Test Hyper Execute, Programmable Connectivity, Kubernetes, and more.
-    
+  - Resource manager betas for Lambda Test Hyper Execute, Programmable Connectivity, Kubernetes, and more.
+
   For detailed links, see the release notes below.
 
 ## Release Notes by Language

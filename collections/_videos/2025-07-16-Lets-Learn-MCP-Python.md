@@ -48,9 +48,9 @@ This workshop video, presented under the "Let's Learn MCP: Python" series, focus
 
 ### Additional Resources
 
-- **Demo code is available at**: http://aka.ms/lets-learn-mcp-python
-- **Sessions are accessible in different programming and spoken languages at**: https://aka.ms/letslearnmcp
-- **Information on registering for MCP Dev Days (July 29 & 30):** https://aka.ms/mcpdevdays
+- **Demo code is available at**: <http://aka.ms/lets-learn-mcp-python>
+- **Sessions are accessible in different programming and spoken languages at**: <https://aka.ms/letslearnmcp>
+- **Information on registering for MCP Dev Days (July 29 & 30):** <https://aka.ms/mcpdevdays>
 
 ### Featured Presenters
 

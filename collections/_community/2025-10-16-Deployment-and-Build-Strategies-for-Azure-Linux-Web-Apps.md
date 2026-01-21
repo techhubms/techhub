@@ -61,20 +61,20 @@ Azure Linux Web Apps support multiple deployment and build methods, each with sp
 
 - **Best for**: Proof of concept, fast local development.
 - **Advantages**:
-    - Rapid iteration
-    - Minimal setup
+  - Rapid iteration
+  - Minimal setup
 - **Limitations**:
-    - Difficult for local environments to interact with cloud resources
-    - OS and dependency mismatches between local and cloud
+  - Difficult for local environments to interact with cloud resources
+  - OS and dependency mismatches between local and cloud
 
 ### From CI/CD Tools
 
 - **Best for**: Version-controlled projects requiring automation.
 - **Advantages**:
-    - Focus on code, not deployment details
-    - Automation on branch commits
+  - Focus on code, not deployment details
+  - Automation on branch commits
 - **Limitations**:
-    - Build and runtime environments may diverge in subtle OS/package ways
+  - Build and runtime environments may diverge in subtle OS/package ways
 
 ## 3. Build Source
 
@@ -82,27 +82,27 @@ Azure Linux Web Apps support multiple deployment and build methods, each with sp
 
 - **Scenario**: Offload builds from local or CI/CD to Azure platform
 - **Advantages**:
-    - Simple configuration
-    - Multi-language support
+  - Simple configuration
+  - Multi-language support
 - **Limitations**:
-    - Build performance limited by App Service SKU
-    - Potential mismatches between build and runtime environments for sensitive packages
+  - Build performance limited by App Service SKU
+  - Potential mismatches between build and runtime environments for sensitive packages
 
 ### Runtime Build
 
 - **Scenario**: Run build during app startup in its own environment
 - **Advantages**:
-    - High control over system-level operations
+  - High control over system-level operations
 - **Limitations**:
-    - Some settings, like system time sync, are inaccessible
+  - Some settings, like system time sync, are inaccessible
 
 ### Deployment Source Build
 
 - **Scenario**: Pre-package dependencies before deployment
 - **Advantages**:
-    - Can include proprietary packages
+  - Can include proprietary packages
 - **Limitations**:
-    - Risks if dev/runtime OS or package support diverges
+  - Risks if dev/runtime OS or package support diverges
 
 #### Comparison Table
 
@@ -136,6 +136,7 @@ bash /home/site/wwwroot/run.sh
 
     ```
     Flask==3.0.3
+
 gunicorn==23.0.0
     ```
 

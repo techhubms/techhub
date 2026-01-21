@@ -62,8 +62,8 @@ Microsoft's existing services remain key to building resilience:
 
 - **Compromise Assessment**: Deep forensic investigations uncover indicators of compromise (IOCs), threat actor activity, and vulnerabilities. Includes threat hunting and clear remediation recommendations.
 - **Identity Assessment & Hardening**:
-    - Assessments evaluate weaknesses in authentication and access controls.
-    - Identity hardening covers policy and configuration updates to guard against unauthorized access and credential-based attacks.
+  - Assessments evaluate weaknesses in authentication and access controls.
+  - Identity hardening covers policy and configuration updates to guard against unauthorized access and credential-based attacks.
 - **Tabletop Exercises**: Realistic incident scenarios for executive, legal, and technical teams, revealing response gaps and enhancing alignment on obligations and communication.
 
 ## Making Resilience Your Strongest Defense

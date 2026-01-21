@@ -74,8 +74,8 @@ This Microsoft Ignite 2025 breakout session, led by Karl Abbott and Lachlan Even
 
 ## Resources and Next Steps
 
-- Microsoft documentation: https://aka.ms/ignite25-plans-migrateLinuxPostgreSQL
-- Explore more on Microsoft Ignite: https://ignite.microsoft.com
+- Microsoft documentation: <https://aka.ms/ignite25-plans-migrateLinuxPostgreSQL>
+- Explore more on Microsoft Ignite: <https://ignite.microsoft.com>
 
 ## Conclusion
 

@@ -150,9 +150,9 @@ private async Task<DataTable> FetchDataAsync()
 ## Entra ID App Registration Steps
 
 1. Register a new app in Azure AD.
-2. Add "http://localhost" as a Redirect URI.
+2. Add "<http://localhost>" as a Redirect URI.
 3. Add API permissions:
-    - https://database.windows.net/.default
+    - <https://database.windows.net/.default>
     - Microsoft Graph: User.Read.All, Application.Read.All, Group.Read.All
     - Azure SQL Database: user_impersonation (delegated)
     - Verify Microsoft.Sql Resource Provider is registered

@@ -51,15 +51,15 @@ The author seeks advice for any process or escalation pathway, outside the Azure
 ## Community Suggestions and Solutions
 
 - **Elevate Access for Entra Global Admin**: Use the documented process ([see Microsoft Docs](https://learn.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin?$WT.mc_id=AZ-MVP-5003556)) to temporarily grant a Global Admin the ability to manage all subscriptions and management groups. This can help regain access if there is a Global Admin in the tenant.
-    - Check the Entra ID (formerly Azure AD) tenant's properties for the feature flag indicating which account (potentially a Global Admin) can manage all resources.
+  - Check the Entra ID (formerly Azure AD) tenant's properties for the feature flag indicating which account (potentially a Global Admin) can manage all resources.
 - **Provide Documentation to Azure Support**: If able to reach a human via alternate Microsoft channels, prepare:
-    - Proof of business and/or IP ownership
-    - Ownership contracts
-    - Payment records
+  - Proof of business and/or IP ownership
+  - Ownership contracts
+  - Payment records
 - **Contact Microsoft Through Other Subscriptions or Channels**:
-    - Submit a ticket referencing another active subscription, but explain in the issue that help is needed with the orphaned subscription
-    - Use a Microsoft Gold Partner ([Find a Partner](https://partner.microsoft.com/en-us/partnership/find-a-partner)) for assistance
-    - Contact Microsoft MVPs via [MVP search](https://mvp.microsoft.com/en-US/search?target=Profile&program=MVP) or LinkedIn—they may have direct escalation contacts
+  - Submit a ticket referencing another active subscription, but explain in the issue that help is needed with the orphaned subscription
+  - Use a Microsoft Gold Partner ([Find a Partner](https://partner.microsoft.com/en-us/partnership/find-a-partner)) for assistance
+  - Contact Microsoft MVPs via [MVP search](https://mvp.microsoft.com/en-US/search?target=Profile&program=MVP) or LinkedIn—they may have direct escalation contacts
 - **Payment-Based Escalation**: The individual or company paying the Azure bill should have a contact path with Microsoft for billing that may provide a route for escalation, even without subscription Owner role
 
 ## References

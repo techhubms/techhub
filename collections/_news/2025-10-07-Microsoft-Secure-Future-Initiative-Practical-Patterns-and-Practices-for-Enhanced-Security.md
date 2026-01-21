@@ -40,34 +40,34 @@ The SFI patterns and practices are designed by practitioners for practitioners. 
 Here are the highlights from this release, each linking to detailed Microsoft resources:
 
 - **Network Isolation**:
-    - [Pattern Details](https://aka.ms/SFI_NetworkIsolation)
-    - *SFI Pillar*: Protect networks
-    - **Purpose**: Contain breaches by segmenting networks with per-service ACLs and isolated virtual networks, preventing lateral attacker movement.
+  - [Pattern Details](https://aka.ms/SFI_NetworkIsolation)
+  - *SFI Pillar*: Protect networks
+  - **Purpose**: Contain breaches by segmenting networks with per-service ACLs and isolated virtual networks, preventing lateral attacker movement.
 
 - **Secure All Tenants and Resources**:
-    - [Pattern Details](https://aka.ms/SFI_SecureAllTenantsAndResources)
-    - *SFI Pillar*: Protect tenants and isolate systems
-    - **Purpose**: Apply strong baseline security, including multifactor authentication (MFA) and Conditional Access, eliminate unused tenants, and reduce the attack surface.
+  - [Pattern Details](https://aka.ms/SFI_SecureAllTenantsAndResources)
+  - *SFI Pillar*: Protect tenants and isolate systems
+  - **Purpose**: Apply strong baseline security, including multifactor authentication (MFA) and Conditional Access, eliminate unused tenants, and reduce the attack surface.
 
 - **Higher Security for Entra ID (Azure AD) Apps**:
-    - [Pattern Details](https://aka.ms/SFI_HigherSecurityEntraIDApps)
-    - *SFI Pillar*: Protect tenants and isolate systems
-    - **Purpose**: Enforce strict security for applications, remove unused apps, and apply strong permissions to reduce risk of cross-tenant exploits.
+  - [Pattern Details](https://aka.ms/SFI_HigherSecurityEntraIDApps)
+  - *SFI Pillar*: Protect tenants and isolate systems
+  - **Purpose**: Enforce strict security for applications, remove unused apps, and apply strong permissions to reduce risk of cross-tenant exploits.
 
 - **Zero Trust for Source Code Access**:
-    - [Pattern Details](https://aka.ms/SFI_ZeroTrustSourceCodeAccess)
-    - *SFI Pillar*: Protecting engineering systems
-    - **Purpose**: Secure development pipelines with proof-of-presence MFA for critical code merges and commits, minimizing insider and supply chain threats.
+  - [Pattern Details](https://aka.ms/SFI_ZeroTrustSourceCodeAccess)
+  - *SFI Pillar*: Protecting engineering systems
+  - **Purpose**: Secure development pipelines with proof-of-presence MFA for critical code merges and commits, minimizing insider and supply chain threats.
 
 - **Protect the Software Supply Chain**:
-    - [Pattern Details](https://aka.ms/SFI_ProtectSoftwareSupplyChain)
-    - *SFI Pillar*: Protecting engineering systems
-    - **Purpose**: Lock down CI/CD pipelines using standardized build templates, internal feeds, and automated scans to block malicious dependencies and attacks before deployment.
+  - [Pattern Details](https://aka.ms/SFI_ProtectSoftwareSupplyChain)
+  - *SFI Pillar*: Protecting engineering systems
+  - **Purpose**: Lock down CI/CD pipelines using standardized build templates, internal feeds, and automated scans to block malicious dependencies and attacks before deployment.
 
 - **Centralize Access to Security Logs**:
-    - [Pattern Details](https://aka.ms/SFI_CentralizeAccessToSecurityLogs)
-    - *SFI Pillar*: Monitoring and detecting threats
-    - **Purpose**: Standardize log aggregation and retention to give security teams a unified view, enabling faster detection and investigation of security incidents across multi-cloud environments.
+  - [Pattern Details](https://aka.ms/SFI_CentralizeAccessToSecurityLogs)
+  - *SFI Pillar*: Monitoring and detecting threats
+  - **Purpose**: Standardize log aggregation and retention to give security teams a unified view, enabling faster detection and investigation of security incidents across multi-cloud environments.
 
 ## Pattern Structure and Application
 

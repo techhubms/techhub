@@ -144,8 +144,8 @@ The post closes with advice:
 
 ### 8. Resources
 
-- Spec-Kit GitHub: https://github.com/github/spec-kit
-- Example projects: https://github.com/hiddedesmet/spec-kit-task-manager
+- Spec-Kit GitHub: <https://github.com/github/spec-kit>
+- Example projects: <https://github.com/hiddedesmet/spec-kit-task-manager>
 - .NET, Blazor, Entity Framework, and SignalR official docs
 
 ---

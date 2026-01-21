@@ -63,7 +63,7 @@ This post documents the process and associated logs for installing Microsoft Con
 
 - Install commands run inside Ubuntu WSL Distro
 - MCC container (pulled from Azure Container Registry):
-    - `msconnectedcacheprod1.azurecr.io/mcc/linux/iot/mcc-ubuntu-iot-amd64:2.0.0.2112_e`
+  - `msconnectedcacheprod1.azurecr.io/mcc/linux/iot/mcc-ubuntu-iot-amd64:2.0.0.2112_e`
   - Container startup detected, confirmed with status code 200.
 
 ### 5. Directory, Symlink, and gMSA Account Handling
@@ -72,8 +72,8 @@ This post documents the process and associated logs for installing Microsoft Con
 - Symlinks set inside the WSL instance: `windowsCerts -> /mnt/c/mccwsl02/Certificates`
 - Config file verification successful. All steps reported as OK.
 - WSL distribution checks reference:
-    - `Ubuntu-24.04-Mcc-Base`
-    - `Ubuntu-24.04-Mcc`
+  - `Ubuntu-24.04-Mcc-Base`
+  - `Ubuntu-24.04-Mcc`
 - All properties for TLS and symlink infrastructure report as True/Success.
 
 ### 6. Finalization & Cleanup

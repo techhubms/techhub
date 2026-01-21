@@ -36,10 +36,10 @@ The article, published on Microsoft's official blog, examines the growing busine
 - **Microsoft AI Solutions:** The focus is on deployment of Microsoft AI technologies, including Azure AI, cloud services, and industry-specific tools, which help enterprises streamline processes and innovate.
 
 - **Sector-Specific Examples:**
-    - **Healthcare:** Predictive analytics for patient care and diagnostics.
-    - **Manufacturing:** AI-driven quality control and supply chain automation.
-    - **Retail:** Personalized product recommendations and demand forecasting.
-    - **Finance:** Fraud detection and automated customer interactions.
+  - **Healthcare:** Predictive analytics for patient care and diagnostics.
+  - **Manufacturing:** AI-driven quality control and supply chain automation.
+  - **Retail:** Personalized product recommendations and demand forecasting.
+  - **Finance:** Fraud detection and automated customer interactions.
 
 - **Encouragement for Innovation:** The article serves as an inspiration for other organizations looking to begin or accelerate their AI journeys, emphasizing the importance of data strategy, responsible AI, and scalable solutions.
 

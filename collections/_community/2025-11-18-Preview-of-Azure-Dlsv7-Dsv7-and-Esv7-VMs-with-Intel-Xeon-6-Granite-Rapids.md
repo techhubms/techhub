@@ -42,9 +42,9 @@ Azure has introduced the next generation of virtual machines: Dlsv7/Dsv7 General
 - **Performance:** Up to 15% improvement over previous v6 VMs, with Xeon® 6 CPUs (up to 4.2 GHz turbo, 2x memory bandwidth)
 - **Scalability:** Dsv7/Esv7 VMs offer up to 372 vCPUs and up to 2.8TiB of memory
 - **Networking/Storage:**
-   - Up to 400 Gbps networking bandwidth
-   - Up to 800,000 IOPS and 20 GBps storage throughput (Premium v2, Ultra Disk)
-   - Azure Boost for enhanced remote storage
+  - Up to 400 Gbps networking bandwidth
+  - Up to 800,000 IOPS and 20 GBps storage throughput (Premium v2, Ultra Disk)
+  - Azure Boost for enhanced remote storage
 - **Configurable Memory-to-vCPU Ratios:** Choose from 2:1 (Dlsv7, Dldsv7), 4:1 (Dsv7, Ddsv7), and 8:1 (Esv7, Edsv7)
 - **Disk Options:** Both local NVMe temp disk and remote persistent disk configurations (Premium Disk v1/v2, Ultra Disk)
 

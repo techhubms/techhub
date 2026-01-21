@@ -38,9 +38,9 @@ With hybrid infrastructure and internet-based dependencies now standard parts of
 - **Shift to Hybrid Infrastructure:** Most organizations today use a mix of on-premises and cloud resources, making conventional monitoring insufficient.
 - **Internet Dependencies:** The growing reliance on SaaS, cloud platforms, and external APIs means that performance bottlenecks or failures might occur outside organizational firewalls, requiring visibility across network boundaries.
 - **Observability Tools:** Dada highlights the importance of leveraging modern observability solutions:
-    - **Internet Performance Monitoring (IPM):** Tracks the performance and reliability of internet connections and dependencies.
-    - **Real User Monitoring (RUM):** Captures actual user experiences from browsers or apps.
-    - **Synthetic Monitoring:** Uses automated scripts to simulate user interactions and proactively detect issues.
+  - **Internet Performance Monitoring (IPM):** Tracks the performance and reliability of internet connections and dependencies.
+  - **Real User Monitoring (RUM):** Captures actual user experiences from browsers or apps.
+  - **Synthetic Monitoring:** Uses automated scripts to simulate user interactions and proactively detect issues.
 - **DevSecOps Integration:** Advanced observability is crucial not just for reliability, but also for security and compliance across distributed infrastructures.
 - **Vendor Ecosystem:** The article references leading observability vendors and platforms such as Cisco, Chronosphere, Observe, Google, Splunk, ServiceNow, Logz.io, and CodeSee, reflecting the diverse tool landscape available to modern DevOps teams.
 

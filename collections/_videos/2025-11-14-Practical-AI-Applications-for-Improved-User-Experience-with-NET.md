@@ -46,14 +46,14 @@ This session, presented by the .NET team, explores how AI can be used to innovat
 
 ## Highlights from the .NET Platform
 
-- **.NET 10**: Intelligent, unified platform (See: https://aka.ms/dotnet10/)
-- **.NET Aspire 13**: Simplified orchestration for cloud-native apps (https://aka.ms/aspire13/announcement)
-- **ASP.NET Core 10**: Secure, modern, full-stack web development (https://aka.ms/asp/dotnet/2025)
-- **.NET MAUI 10**: Build beautiful apps for every platform (https://aka.ms/dotnet/maui/2025)
-- **C# 14**: Expressive, productive language enhancements (https://aka.ms/csharp14/announcement/2025)
-- **F# 10**: More functional and safer (https://aka.ms/fsharp10/2025/announcement)
-- **Visual Studio 2026**: Faster, smarter developer tooling (https://aka.ms/visualstudio2026/announcement)
-- **.NET Conf 2025**: Celebrate .NET innovation (https://aka.ms/dotnotconf2025/recap)
+- **.NET 10**: Intelligent, unified platform (See: <https://aka.ms/dotnet10/>)
+- **.NET Aspire 13**: Simplified orchestration for cloud-native apps (<https://aka.ms/aspire13/announcement>)
+- **ASP.NET Core 10**: Secure, modern, full-stack web development (<https://aka.ms/asp/dotnet/2025>)
+- **.NET MAUI 10**: Build beautiful apps for every platform (<https://aka.ms/dotnet/maui/2025>)
+- **C# 14**: Expressive, productive language enhancements (<https://aka.ms/csharp14/announcement/2025>)
+- **F# 10**: More functional and safer (<https://aka.ms/fsharp10/2025/announcement>)
+- **Visual Studio 2026**: Faster, smarter developer tooling (<https://aka.ms/visualstudio2026/announcement>)
+- **.NET Conf 2025**: Celebrate .NET innovation (<https://aka.ms/dotnotconf2025/recap>)
 
 ## Resources and Community
 

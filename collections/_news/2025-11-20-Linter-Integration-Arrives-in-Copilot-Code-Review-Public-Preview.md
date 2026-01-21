@@ -59,6 +59,6 @@ _For more information, see the [GitHub documentation](https://docs.github.com/en
 
 Join the community conversation on [Copilot Conversations](https://github.com/orgs/community/discussions/categories/copilot-conversations) to share your experience or ask questions.
 
-*Disclaimer: UI and available features in public preview may change before general release.*
+_Disclaimer: UI and available features in public preview may change before general release._
 
 This post appeared first on "The GitHub Blog". [Read the entire article here](https://github.blog/changelog/2025-11-20-linter-integration-with-copilot-code-review-now-in-public-preview)

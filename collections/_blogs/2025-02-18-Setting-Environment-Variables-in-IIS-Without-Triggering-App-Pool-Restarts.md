@@ -190,6 +190,7 @@ Changing this attribute does not itself trigger recycling, providing a method to
 ---
 
 > **References and Links:**
+>
 >- [Introduction to IIS Architecture (Microsoft Learn)](https://learn.microsoft.com/en-us/iis/get-started/introduction-to-iis/introduction-to-iis-architecture)
 >- [Managing environment variables in applicationHost.config](https://learn.microsoft.com/en-us/iis/configuration/system.applicationHost/applicationPools/add/environmentVariables/)
 >- [IIS.Administration REST API (GitHub)](https://github.com/microsoft/IIS.Administration/)

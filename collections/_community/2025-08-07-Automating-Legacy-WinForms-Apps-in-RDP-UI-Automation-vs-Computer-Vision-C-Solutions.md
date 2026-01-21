@@ -62,8 +62,8 @@ A legacy Windows Forms insurance management system, running inside a Remote Desk
 ### 1. Computer Vision Techniques
 
 - **OpenCV/ML.NET:** Use template matching or ML models (like YOLO) for control detection.
-   - Extract controls or buttons visually within the RDP bitmap.
-   - OCR (including non-English support; the app is in Italian) for reading UI text.
+  - Extract controls or buttons visually within the RDP bitmap.
+  - OCR (including non-English support; the app is in Italian) for reading UI text.
 - **Windows OCR API:** For extracting on-screen text.
 - **Tools like WinAutomation:** Can click based on image matching.
 - **Limitations:** CPU intensive, can be less reliable due to UI changes, requires model/template maintenance.
@@ -72,7 +72,7 @@ A legacy Windows Forms insurance management system, running inside a Remote Desk
 
 - **DLL Hunting:** Investigate application directory for DLLs doing the real work—possible to PInvoke/export to interface directly, *if* allowed.
 - **Database Access:** Old WinForms apps may use local databases (e.g., MS Access MDB/ACCDB or SQLite). If accessible, you may automate at the data layer (read/write directly to DB).
-   - Use Process Monitor to identify file access patterns.
+  - Use Process Monitor to identify file access patterns.
 - **API Monitor/PE Explorer/IDA Pro/Ghidra:** For static/dynamic analysis to discover hidden integration points.
 - **Limitation:** Most options off-limits because you can't install/run extra tools remotely.
 

@@ -53,7 +53,7 @@ Andrew outlines the requirements for pooled lifetimes as follows:
 - Pooled services should have scoped semantics: used for the entirety of a request but not shared between parallel requests.
 - The pool is preferred when servicing requests: if no instance is available, a new one is created.
 - When a scope is disposed, pooled services are returned to the pool.
-- The DI container should maintain at most _N_ instances for each service. If the pool is full, returned instances are discarded (disposed if necessary).
+- The DI container should maintain at most *N* instances for each service. If the pool is full, returned instances are discarded (disposed if necessary).
 - Pooled services must implement `IResettableService` with a `Reset()` method, ensuring they're safe to re-use.
 - Aside from `IResettableService`, no additional requirements for pooled services.
 - `IDisposable` is honored: non-pooled instances are disposed when appropriate.

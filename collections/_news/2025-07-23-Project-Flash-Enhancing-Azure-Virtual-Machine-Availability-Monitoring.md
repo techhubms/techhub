@@ -116,8 +116,8 @@ Future enhancements planned for Project Flash include:
 **Recommended Approach:**
 
 - Use both Flash Health events (real-time insights and historical disruption logging) and [Scheduled Events](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/scheduled-event-service) (for proactive, prioritized responses to planned maintenance and migrations).
-    - Flash Health: Real-time and historical VM disruption analysis, root cause, and downtime management
-    - Scheduled Events: Advance notice (up to 15 minutes) for upcoming maintenance or actions
+  - Flash Health: Real-time and historical VM disruption analysis, root cause, and downtime management
+  - Scheduled Events: Advance notice (up to 15 minutes) for upcoming maintenance or actions
 
 ## Learn More
 

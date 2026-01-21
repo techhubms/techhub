@@ -78,23 +78,23 @@ Stay up-to-date with the latest features, improvements, and announcements across
 - **Entra ID and RBAC for GetAccountInfo**: Improved Azure identity management and permissions granularity for accessing account info.
 
 - **Azure SQL DB and SQL Server Enhancements**:
-    - Replication lag metric for Azure SQL DB
-    - Local container support for SQL workloads
-    - New SQL schema tools and migrations via ADMS
-    - SQL Server enabled by Azure Arc for US Gov
+  - Replication lag metric for Azure SQL DB
+  - Local container support for SQL workloads
+  - New SQL schema tools and migrations via ADMS
+  - SQL Server enabled by Azure Arc for US Gov
 
 - **Database Innovations**:
-    - Cosmos DB (for MongoDB): New sharding/rebalancing features
-    - PostgreSQL: Entra group login for identity-based access
+  - Cosmos DB (for MongoDB): New sharding/rebalancing features
+  - PostgreSQL: Entra group login for identity-based access
 
 - **New Azure Region**: Austria is now available for regional deployments.
 
 - **Azure AI and ML**:
-    - Provisioned spillover for Azure OpenAI
-    - New voice models: MAI-Voice-1 and MAI-1-preview
+  - Provisioned spillover for Azure OpenAI
+  - New voice models: MAI-Voice-1 and MAI-1-preview
 
 - **Migration Enhancements**:
-    - VMware to Hyper-V migration improvements for streamlined cloud onboarding
+  - VMware to Hyper-V migration improvements for streamlined cloud onboarding
 
 ## Additional Resources
 

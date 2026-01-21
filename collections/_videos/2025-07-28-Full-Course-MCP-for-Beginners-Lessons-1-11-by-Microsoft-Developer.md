@@ -32,7 +32,7 @@ This video course, presented by Microsoft Developer and instructed by April Gitt
 
 1. **Introduction to Model Context Protocol (MCP)**
    - What MCP is and why it is important for AI applications.
-   
+
 2. **MCP Core Concepts**
    - Detailed explanation of foundational elements in MCP.
 
@@ -75,4 +75,4 @@ This video course, presented by Microsoft Developer and instructed by April Gitt
 
 This comprehensive course is suitable for developers and consultants interested in building secure, scalable, and real-world AI powered solutions using MCP. The structured lessons, real code samples, security insights, and hands-on labs offer both foundational knowledge and advanced applications.
 
-**Full resources and code samples can be accessed at:** https://aka.ms/MCP-for-Beginners
+**Full resources and code samples can be accessed at:** <https://aka.ms/MCP-for-Beginners>

@@ -40,11 +40,11 @@ GitHub has introduced enterprise access restrictions for GitHub Enterprise Cloud
 1. In GitHub Enterprise Cloud, navigate to your enterprise account's **Settings → Authentication security → 'Enterprise access restrictions'**.
 2. Enable the feature by selecting the corresponding option.
 3. Configure your network proxy or firewall to inject a custom header into all relevant web and API requests:
-   
+
    ```http
    sec-GitHub-allowed-enterprise: ENTERPRISE-ID
    ```
-   
+
    This header must carry your valid EMU enterprise ID. GitHub uses the presence and value of this header to determine if a request should be permitted.
 
 ## Scope and Integration

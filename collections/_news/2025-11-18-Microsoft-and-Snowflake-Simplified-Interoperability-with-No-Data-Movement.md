@@ -45,11 +45,11 @@ Data is spread across apps, services, and clouds, creating a complex web of syst
 
 ## Interoperability Features Already Delivered
 
-- **General Availability**   
+- **General Availability**
   - Bidirectional data sharing between Snowflake and OneLake (no duplication)
   - Automatic translation of Iceberg metadata to Delta Lake metadata for all Fabric engines
   - Shortcut Snowflake Iceberg data (Azure, Amazon S3, GCS) into OneLake
-- **Preview Features**   
+- **Preview Features**
   - Native storage of Snowflake Iceberg data in OneLake
   - Automatic conversion of Fabric data into Iceberg format for use in Snowflake
   - New OneLake table APIs supporting Snowflake catalog-linked databases

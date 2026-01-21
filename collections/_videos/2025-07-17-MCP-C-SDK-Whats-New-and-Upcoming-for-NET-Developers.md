@@ -26,7 +26,7 @@ In this expert-led developer session, featuring Bruno Capuano, Mike Kistler, and
 
 {% youtube DoezQYWzRBw %}
 
-## MCP C# SDK: What’s New, What’s Next!
+## MCP C# SDK: What’s New, What’s Next
 
 **Presented by:** dotnet (featuring Bruno Capuano, Mike Kistler, Stephen Halter)
 

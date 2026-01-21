@@ -32,7 +32,7 @@ The July 2025 release of the on-premises data gateway (version 3000.278) brings 
 ## Bug Fixes
 
 - **Fix for Custom Proxy Settings Loss During Upgrade from Pre-3000.258 Versions:**
-    - Resolved an issue where custom proxy settings for Fabric Pipelines services could be lost during gateway upgrades from versions prior to 3000.258. This fix helps maintain custom configurations for smoother upgrades.
+  - Resolved an issue where custom proxy settings for Fabric Pipelines services could be lost during gateway upgrades from versions prior to 3000.258. This fix helps maintain custom configurations for smoother upgrades.
 
 ## Power BI Desktop Compatibility
 

@@ -117,9 +117,9 @@ curl -X POST "https://<your-resource>.cognitiveservices.azure.com/translator/cus
 - **TSV (Tab-Separated Values) Example:**
 
 ```
-en	fr
-Click the submit button	Cliquez sur le bouton soumettre
-Upload your file	Téléchargez votre fichier
+en fr
+Click the submit button Cliquez sur le bouton soumettre
+Upload your file Téléchargez votre fichier
 ```
 
 ## Decision Matrix: AdaptCT vs. Custom Translator

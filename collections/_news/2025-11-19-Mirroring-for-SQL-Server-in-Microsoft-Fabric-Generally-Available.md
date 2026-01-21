@@ -43,13 +43,18 @@ Mirroring is now Generally Available for all in-market SQL Server releases from 
 ## Technical Capabilities
 
 - ## Real-Time Analytics Foundation
+
   - Immediate synchronization of source SQL Server data into OneLake
   - No complex setup or ETL transformations required
   - User selects eligible tables or mirrors entire databases
+
 - ## Version Support and Architecture Differences
+
   - **SQL Server 2016-2022:** Relies on [Change Data Capture (CDC)](https://learn.microsoft.com/sql/relational-databases/track-changes/about-change-data-capture-sql-server?view=sql-server-ver16) to snapshot and replicate changes. Requires [on-premises data gateway (OPDG)](https://learn.microsoft.com/power-bi/connect-data/service-gateway-onprem) or [VNet data gateway](https://learn.microsoft.com/data-integration/vnet/overview) for connectivity.
   - **SQL Server 2025:** Uses 'change feed' technology (same as Azure SQL mirroring). [Arc Agent](https://aka.ms/sqlservermirroring) is required for outbound authentication.
+
 - ## Integration with Fabric Analytics and BI Tools
+
   - Mirrored data in delta format is instantly available for:
     - Power BI (Direct Lake mode)
     - Data Warehouse

@@ -30,7 +30,7 @@ dotnet and the .NET team present a keynote introducing .NET 10, C# 14, and Visua
 
 {% youtube kbW7qHMBM6A %}
 
-# Welcome to .NET 10 & Visual Studio 2026!
+# Welcome to .NET 10 & Visual Studio 2026
 
 ## Keynote Highlights
 

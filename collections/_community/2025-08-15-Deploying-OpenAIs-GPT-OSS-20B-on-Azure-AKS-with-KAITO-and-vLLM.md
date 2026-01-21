@@ -219,6 +219,7 @@ The [llm-load-test-azure](https://github.com/maljazaery/llm-load-test-azure) too
 - Concurrency: 10
 
 **Key Metrics:**
+
 | Metric                  | Value     | Description                                |
 |-------------------------|-----------|--------------------------------------------|
 | TT_ACK                  | 0.60 s    | Time to acknowledge the request            |

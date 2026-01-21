@@ -44,9 +44,9 @@ This guide outlines a step-by-step solution:
 - Configure a **Blob Inventory rule** in your storage account.
 - Inventory jobs output a CSV file listing metadata for each blob, such as name, deletion status, expiry time, etc.
 - To download the report:
-    - Go to the dedicated inventory container.
-    - Navigate to the latest date folder.
-    - Obtain the CSV file URL.
+  - Go to the dedicated inventory container.
+  - Navigate to the latest date folder.
+  - Obtain the CSV file URL.
 
 ## 4. Querying Blob Inventory with Azure Synapse Analytics
 

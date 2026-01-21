@@ -54,6 +54,7 @@ OpenAI has introduced the open-source gpt-oss-20b and gpt-oss-120b models, givin
 2. **Add Model**: Find gpt-oss-20b and select 'Add Model'.
 3. **Deployment**: Toolkit downloads and sets up the model locally. Time: ~15-30 minutes (network dependent).
 4. **Verify**: Use the model management interface to confirm operational status.
+
 - Note: Current release requires GPU; CPU support slated for future updates.
 
 ### B. Deployment with Ollama Integration

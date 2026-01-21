@@ -85,9 +85,9 @@ Voting runs until January 8, 2026. Winners are announced January 10, 2026.
 
 - **Game Engines:** Godot, Unity, Unreal Engine, Phaser, Pygame, Bevy, LÖVE, Flame, Ebitengine, Defold, libGDX, HaxeFlixel
 - **New to git or GitHub?:**
-    - [Git docs](https://git-scm.com/doc)
-    - [GitHub Help](https://help.github.com/)
-    - [GitHub Community Forum](https://github.com/orgs/community/discussions/)
+  - [Git docs](https://git-scm.com/doc)
+  - [GitHub Help](https://help.github.com/)
+  - [GitHub Community Forum](https://github.com/orgs/community/discussions/)
 
 The [Game Off 2025 Community](https://itch.io/jam/game-off-2025/community) is available for support, collaboration, and team formation.
 

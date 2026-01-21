@@ -70,7 +70,7 @@ Atos faced a challenge: several services needed to remain on-premises, but many 
 
 ## Conclusion
 
-Atos’s customer zero story is a practical example of modernizing legacy infrastructure with Microsoft’s hybrid solutions. Their experience demonstrates accelerated migration timelines, improved service reliability, and strategic use of Azure Local and Azure Arc. For further information or related sessions, visit the Microsoft Ignite 2025 portal at https://ignite.microsoft.com.
+Atos’s customer zero story is a practical example of modernizing legacy infrastructure with Microsoft’s hybrid solutions. Their experience demonstrates accelerated migration timelines, improved service reliability, and strategic use of Azure Local and Azure Arc. For further information or related sessions, visit the Microsoft Ignite 2025 portal at <https://ignite.microsoft.com>.
 
 ---
 *Speaker: Adam Dolman (Microsoft Events)*

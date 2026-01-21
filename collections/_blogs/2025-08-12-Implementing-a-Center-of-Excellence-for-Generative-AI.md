@@ -53,11 +53,11 @@ In this Azure Essentials Show episode, Thomas Maurer is joined by Ben Brauer fro
 ## Microsoft Frameworks and Azure Tools
 
 - **Cloud Adoption Framework (CAF):** Provides a step-by-step process for cloud-native transformation, recommended by Microsoft to structure AI CoEs.
-   - *Define Strategy*: Link AI goals to strategic KPIs.
-   - *Plan and Ready*: Evaluate readiness, select Azure services (e.g., Azure Machine Learning, Azure OpenAI).
-   - *Adopt*: Standardize deployment and CI/CD processes.
-   - *Govern and Manage*: Use Azure policies for cost, compliance, and security.
-   - *Optimize*: Monitor and refine AI workloads for accuracy and efficiency.
+  - *Define Strategy*: Link AI goals to strategic KPIs.
+  - *Plan and Ready*: Evaluate readiness, select Azure services (e.g., Azure Machine Learning, Azure OpenAI).
+  - *Adopt*: Standardize deployment and CI/CD processes.
+  - *Govern and Manage*: Use Azure policies for cost, compliance, and security.
+  - *Optimize*: Monitor and refine AI workloads for accuracy and efficiency.
 - **Azure Well-Architected Framework:** Use these principles for designing scalable, robust AI architectures.
 - **AI Landing Zones:** Enterprise-ready Azure environments, specialized for rapid and secure AI development.
 

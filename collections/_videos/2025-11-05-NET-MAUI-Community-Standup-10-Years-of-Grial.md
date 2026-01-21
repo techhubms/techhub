@@ -40,16 +40,16 @@ Grial, developed by UX Divers, has played an influential role in the .NET commun
 ## Topics Covered
 
 - **Grial’s Legacy:**
-   - How Grial has assisted developers in designing mobile and desktop UIs over the past decade.
-   - Evolution from Xamarin compatibility to fully supporting .NET MAUI.
+  - How Grial has assisted developers in designing mobile and desktop UIs over the past decade.
+  - Evolution from Xamarin compatibility to fully supporting .NET MAUI.
 - **What's New in Grial for .NET 10:**
-   - Overview of latest features and design patterns.
-   - Enhancements that help streamline cross-platform UI development.
+  - Overview of latest features and design patterns.
+  - Enhancements that help streamline cross-platform UI development.
 - **Community Engagement:**
-   - Tips for leveraging Grial in modern projects.
-   - Q&A and shared advice from experienced community members and the UX Divers team.
+  - Tips for leveraging Grial in modern projects.
+  - Q&A and shared advice from experienced community members and the UX Divers team.
 - **Resources:**
-   - [Community Links](https://www.theurlist.com/maui-standup-nov2025) with demos, documentation, and further discussion.
+  - [Community Links](https://www.theurlist.com/maui-standup-nov2025) with demos, documentation, and further discussion.
 
 ## Panelists
 

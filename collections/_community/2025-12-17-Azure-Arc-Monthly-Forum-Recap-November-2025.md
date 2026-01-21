@@ -39,21 +39,21 @@ Missed the live session? All forum sessions are recorded and uploaded to [the Az
 
 - **Status:** Public Preview
 - **Capability:** Automatically updates the Azure Connected Machine (AZCM) Agent for simplified lifecycle management.
-- **Feedback/Support:** arcautoupgradefeedback@microsoft.com
+- **Feedback/Support:** <arcautoupgradefeedback@microsoft.com>
 
 ### Essential Machine Management (EMM)
 
 - **Status:** Private Preview
 - **Capability:** Delivers a simple, unified experience for managing machines across environments with the new Operations Center interface.
 - **Lab Access:** [Operations Center Lab](https://aka.ms/operationsCenterLab)
-- **Feedback/Support:** machineEnrollmentSupport@microsoft.com
+- **Feedback/Support:** <machineEnrollmentSupport@microsoft.com>
 
 ### Machine Configuration – CIS Baseline Compliance
 
 - **Status:** Public Preview
 - **Capability:** Filter, search, exclude, and modify CIS baseline settings through Azure Policy for enhanced compliance.
 - **Insiders Program:** aka.ms/machine-config-insiders
-- **Feedback/Support:** machineconfig@microsoft.com
+- **Feedback/Support:** <machineconfig@microsoft.com>
 
 ## FAQs from November 2025
 

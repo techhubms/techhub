@@ -59,11 +59,11 @@ Over the last two decades, Microsoft has played a pivotal role in the evolution 
 ## 5. The Copilot Ecosystem: AI Integration Everywhere
 
 - Today, Copilot is embedded across the Microsoft ecosystem:
-    - **Copilot for Microsoft 365**: LLM-powered productivity inside Word, Excel, Outlook, and Teams.
-    - **Copilot Studio**: A low/no-code platform for building and deploying custom AI-powered bots and workflows.
-    - **GitHub Copilot**: Developer-focused code generation and chat, transforming how developers write and review code.
-    - **Security Copilot**: Deployed in Microsoft Defender and Sentinel, helping security professionals analyze threats conversationally.
-    - **Windows Copilot and Dynamics 365 Copilot**: Streamlined assistance for end-user productivity and business process automation.
+  - **Copilot for Microsoft 365**: LLM-powered productivity inside Word, Excel, Outlook, and Teams.
+  - **Copilot Studio**: A low/no-code platform for building and deploying custom AI-powered bots and workflows.
+  - **GitHub Copilot**: Developer-focused code generation and chat, transforming how developers write and review code.
+  - **Security Copilot**: Deployed in Microsoft Defender and Sentinel, helping security professionals analyze threats conversationally.
+  - **Windows Copilot and Dynamics 365 Copilot**: Streamlined assistance for end-user productivity and business process automation.
 - Microsoft's technical focus is on secure, contextual, collaborative conversational AI—not just chat, but operational empowerment across all major platforms.
 
 ## 6. Key Technical Insights and Trends

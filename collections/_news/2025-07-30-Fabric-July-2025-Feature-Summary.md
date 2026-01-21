@@ -75,8 +75,8 @@ The July 2025 update for Microsoft Fabric brings several enhancements across the
 ### Updated Default Category in OneLake Catalog
 
 - OneLake catalog introduces dynamic default category assignment based on user roles:
-    - Power BI users default to the 'Insights' category for analytics and visualization tools.
-    - Fabric users default to the 'Data' category for raw and structured data assets.
+  - Power BI users default to the 'Insights' category for analytics and visualization tools.
+  - Fabric users default to the 'Data' category for raw and structured data assets.
 - User selections are preserved across sessions for a smoother experience.
 
 ---

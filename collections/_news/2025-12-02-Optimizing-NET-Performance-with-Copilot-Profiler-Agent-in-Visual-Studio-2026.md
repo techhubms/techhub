@@ -94,8 +94,8 @@ public class BenchmarkWriteCsv {
 - Agent runs the benchmark, applies `BenchmarkSwitcher` for flexible test selection
 - Presents diagnostic session results and identifies performance bottlenecks (e.g., delegate compilation and invocation overhead)
 - Profiler Agent explains issues and suggests optimizations via chat:
-    - Recognizes frequent delegate invocation as a hot path due to high frequency (40,000 invocations over 10,000 records and 4 fields)
-    - Recommends combining field writes into a single delegate using `Expression.Block` to reduce multicast delegate overhead
+  - Recognizes frequent delegate invocation as a hot path due to high frequency (40,000 invocations over 10,000 records and 4 fields)
+  - Recommends combining field writes into a single delegate using `Expression.Block` to reduce multicast delegate overhead
 
 ```csharp
 var expressions = new List<Expression>(members.Count);

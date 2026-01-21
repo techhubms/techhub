@@ -90,7 +90,7 @@ As demands grow and hours remain limited, Malaysian workers are finding their ad
 - **New Capabilities:** [Upcoming features in Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365/blog/2025/04/23/microsoft-365-copilot-built-for-the-era-of-human-agent-collaboration/) include Copilot Search, Agent Store, Create and Notebook, and the introduction of frontier agents such as Researcher and Analyst, supporting human-agent collaboration.
 - **Monthly Recap:** Users can [view the latest Copilot updates](https://aka.ms/M365CopilotWhatsNew) each month.
 
-To start your Copilot journey, visit: https://www.microsoft.com/en-us/microsoft-365/copilot
+To start your Copilot journey, visit: <https://www.microsoft.com/en-us/microsoft-365/copilot>
 
 *Note: Bahasa Malaysia support has been available in Copilot Chat since launch. Microsoft 365 Copilot is also accessible in English and Chinese languages.*
 

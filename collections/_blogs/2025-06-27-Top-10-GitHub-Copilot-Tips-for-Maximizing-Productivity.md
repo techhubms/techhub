@@ -91,7 +91,7 @@ in Visual Studio Code and on GitHub.com, accelerating review processes.
 
 Copilot suggests code but isn’t infallible. Always review generated output before merging; carefully check for logical mistakes, security vulnerabilities, or overlooked context.
 
-### 10. Share Your Own Pro Tips!
+### 10. Share Your Own Pro Tips
 
 Feedback helps refine Copilot and the broader ecosystem. Share your experiences and useful patterns by contributing to the GitHub Copilot repository.
 

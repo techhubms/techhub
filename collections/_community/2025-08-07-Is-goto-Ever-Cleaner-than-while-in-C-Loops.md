@@ -93,7 +93,7 @@ The argument is that `goto` can sometimes make loops "explicit" and potentially 
 
 - **`goto` has rare use cases:** Only use `goto` to break out of complex, deeply nested logic where restructuring would otherwise greatly complicate the code. Even then, alternatives like extracting code into a function (and using `return`) are preferred.
 
-    - _Example: "Even then, I think I've only had to do that once in 22 years of using C#."_
+  - _Example: "Even then, I think I've only had to do that once in 22 years of using C#."_
 
 - **Readability beats "cleanness":** The term "cleaner" is vague—what matters more is readability and maintainability. Indentation and structured blocks let you quickly see scope and control flow.
 

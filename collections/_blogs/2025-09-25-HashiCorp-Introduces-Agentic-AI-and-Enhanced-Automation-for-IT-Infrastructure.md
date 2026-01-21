@@ -57,16 +57,16 @@ HashiCorp has unveiled several significant upgrades to its platform at HashiConf
 - **Project Infragraph**: A foundation for future expansion of AI-driven infrastructure management, setting the stage for further cross-platform integrations.
 
 - **Lifecycle and Security Enhancements**:
-    - **HCP Terraform Stacks**: Generally available, this enables deployment and management of interdependent Terraform configurations as cohesive units.
-    - **HCP Terraform Search and Actions**: New beta features expedite infrastructure discovery, resource import, and Day 2 operations automation.
-    - **SBOM Management with HCP Packer**: Provides increased visibility and secure storage for software builds of material.
-    - **Model Context Protocol (MCP) Server**: Beta feature that eases AI agent accessibility to HCP.
-    - **HCP Boundary RDP Credential Injection (Beta)**: Secures Windows Remote Desktop sessions.
-    - **HCP Vault Radar MCP Server (Beta)**: Allows AI tools to analyze for leaks and misconfigurations.
-    - **HCP Vault Dedicated**: Aids in secrets inventory reporting.
-    - **Vault Enterprise 1.21**: Automates cryptographic workflows, enforces post-quantum readiness, and supports zero trust principles via new APIs.
-    - **HCP Vault Radar Jira SaaS Scanning**: Generally available for SaaS-focused vulnerability scanning.
-    - **IDEs Plugins (Beta)**: Plugin ecosystem aimed at integrated development environments for better secrets/security management.
+  - **HCP Terraform Stacks**: Generally available, this enables deployment and management of interdependent Terraform configurations as cohesive units.
+  - **HCP Terraform Search and Actions**: New beta features expedite infrastructure discovery, resource import, and Day 2 operations automation.
+  - **SBOM Management with HCP Packer**: Provides increased visibility and secure storage for software builds of material.
+  - **Model Context Protocol (MCP) Server**: Beta feature that eases AI agent accessibility to HCP.
+  - **HCP Boundary RDP Credential Injection (Beta)**: Secures Windows Remote Desktop sessions.
+  - **HCP Vault Radar MCP Server (Beta)**: Allows AI tools to analyze for leaks and misconfigurations.
+  - **HCP Vault Dedicated**: Aids in secrets inventory reporting.
+  - **Vault Enterprise 1.21**: Automates cryptographic workflows, enforces post-quantum readiness, and supports zero trust principles via new APIs.
+  - **HCP Vault Radar Jira SaaS Scanning**: Generally available for SaaS-focused vulnerability scanning.
+  - **IDEs Plugins (Beta)**: Plugin ecosystem aimed at integrated development environments for better secrets/security management.
 
 - **Security and Zero Trust Focus**: Many of the new features target improved secrets management, credential security, and automation of zero-trust controls—crucial for organizations with distributed, hybrid, or multi-cloud architectures.
 

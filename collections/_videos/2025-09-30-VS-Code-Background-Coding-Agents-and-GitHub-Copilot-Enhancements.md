@@ -40,20 +40,20 @@ In this video, the VS Code team dives into the latest developments around backgr
 ## Key Topics Covered
 
 - **Overview of Background Coding Agents**
-    - Explanation of what background agents are and how they support developers
-    - Live demo showing use cases (e.g., automated code suggestions, background code processing)
+  - Explanation of what background agents are and how they support developers
+  - Live demo showing use cases (e.g., automated code suggestions, background code processing)
 
 - **VS Code Enhancements**
-    - Recent and anticipated updates to VS Code for working with agents
-    - How the interface adapts to background agent feedback
-    - Customization and configuration options
+  - Recent and anticipated updates to VS Code for working with agents
+  - How the interface adapts to background agent feedback
+  - Customization and configuration options
 
 - **GitHub Copilot Integration**
-    - Demonstrating Copilot's capabilities when used as a coding agent within the VS Code environment
-    - Discussion on productivity, code quality, and developer empowerment
+  - Demonstrating Copilot's capabilities when used as a coding agent within the VS Code environment
+  - Discussion on productivity, code quality, and developer empowerment
 
 - **Getting Started Links**
-    - [Copilot Coding Agent Docs](https://code.visualstudio.com/docs/copilot/copilot-coding-agent)
+  - [Copilot Coding Agent Docs](https://code.visualstudio.com/docs/copilot/copilot-coding-agent)
 
 ## Featured Contributors
 

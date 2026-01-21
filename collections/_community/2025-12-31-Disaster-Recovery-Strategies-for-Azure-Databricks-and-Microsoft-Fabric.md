@@ -81,10 +81,10 @@ Azure Databricks relies on a customer-driven approach for DR. Organizations are 
 Microsoft Fabric offers built-in DR tailored for analytics workloads (including Power BI):
 
 - **Power BI** provides out-of-the-box DR:
-    - Azure storage geo-redundancy and read-only access to models and dashboards during disasters.
+  - Azure storage geo-redundancy and read-only access to models and dashboards during disasters.
 - **Cross-region DR** uses a shared Microsoft-customer model:
-    - Microsoft: maintains infra and pairing
-    - Customer: enables DR in admin settings, configures secondary capacities/workspaces, and replicates data and configs
+  - Microsoft: maintains infra and pairing
+  - Customer: enables DR in admin settings, configures secondary capacities/workspaces, and replicates data and configs
 - **Enabling DR in Fabric**:
     1. Go to Admin portal → Capacity settings
     2. Select Fabric Capacity and enable Disaster Recovery

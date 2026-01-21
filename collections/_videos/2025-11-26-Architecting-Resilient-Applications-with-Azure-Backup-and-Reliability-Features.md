@@ -51,13 +51,13 @@ This advanced session showcases how to leverage Azure's robust backup and reliab
 
 - **Zonal Resiliency:** Techniques to strengthen availability and resilience for critical workloads across Azure Availability Zones.
 - **Self-Serve Tools:** Guidance on using Azure native tools to assess and validate resiliency for:
-   - Virtual Machines (VMs)
-   - Databases (DBs)
-   - Containers (Azure Kubernetes Service, Linux VMs)
+  - Virtual Machines (VMs)
+  - Databases (DBs)
+  - Containers (Azure Kubernetes Service, Linux VMs)
 - **Backup and Recovery:** Best practices for implementing Azure Backup for all major workloads to ensure rapid recovery and minimal data loss.
 - **Immutability & Ransomware Protection:**
-   - Enhance data and cyber resiliency with immutable backups
-   - Built-in threat detection to defend against ransomware attacks
+  - Enhance data and cyber resiliency with immutable backups
+  - Built-in threat detection to defend against ransomware attacks
 - **Expanded Workload Coverage:** Addressing resilience strategies for a broad array of applications and services within Azure.
 - **Actionable Insights:** Utilizing real-time monitoring and analytics to proactively safeguard applications and infrastructure against threats and failures.
 

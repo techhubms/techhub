@@ -133,8 +133,8 @@ MCP servers give AI assistants real-time access to external tools and data sourc
 - Manage your MCP servers directly from the Extensions UI in VS Code.
 - Each server may require its own authentication/configuration.
 - For more detail, consult:
-   - [VS Code MCP Documentation](https://code.visualstudio.com/docs/copilot/chat/mcp-servers)
-   - [Visual Studio MCP Documentation](https://learn.microsoft.com/visualstudio/ide/mcp-servers)
+  - [VS Code MCP Documentation](https://code.visualstudio.com/docs/copilot/chat/mcp-servers)
+  - [Visual Studio MCP Documentation](https://learn.microsoft.com/visualstudio/ide/mcp-servers)
 
 ## Looking Ahead
 

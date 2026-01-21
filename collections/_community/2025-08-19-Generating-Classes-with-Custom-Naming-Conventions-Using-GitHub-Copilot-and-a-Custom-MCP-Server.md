@@ -96,7 +96,7 @@ public class NamingConventionManagerTool {
 
 ## Connecting to Copilot Agent
 
-- In Visual Studio Code, select Agent mode for Copilot, click the wrench, and add the MCP server endpoint (e.g., http://localhost:8888/sse).
+- In Visual Studio Code, select Agent mode for Copilot, click the wrench, and add the MCP server endpoint (e.g., <http://localhost:8888/sse>).
 - Configure in workspace or user settings; for team sharing use workspace settings.
 - VS Code will save `.vscode/mcp.json` like:
 

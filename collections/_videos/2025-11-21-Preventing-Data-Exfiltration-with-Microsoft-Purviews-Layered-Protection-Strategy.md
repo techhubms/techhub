@@ -44,18 +44,22 @@ This advanced breakout session demonstrates how Microsoft Purview enables a unif
 ## Key Topics
 
 - ### Innovations in Purview for Unified Data Security
+
   - New features supporting both AI-driven and traditional data protection
   - Integration with Edge browser for secure enterprise browsing
 
 - ### Emerging Data Exfiltration Scenarios
+
   - Trends in data leakage across clouds, apps, and unmanaged endpoints
   - Risks posed by consumer AI tools in workplace settings
 
 - ### Adaptive DLP Policies
+
   - Defining application scopes to target unmanaged and AI applications
   - Real-world example walkthrough (Miguel's sensitive data handling)
 
 - ### Securing Unmanaged Devices
+
   - Techniques for managing security on BYOD and non-corporate devices
   - Challenges and solutions for protection in cloud environments
 

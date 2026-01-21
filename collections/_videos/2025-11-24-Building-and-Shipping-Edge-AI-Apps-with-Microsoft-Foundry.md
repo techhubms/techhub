@@ -80,8 +80,8 @@ This Microsoft Ignite 2025 session explores how Edge AI is evolving and how Micr
 
 #### Related Resources
 
-- Microsoft Ignite event details: https://ignite.microsoft.com
-- Model deployment demos and session resources: https://aka.ms/ignite25-plans-BestModelGenAISolution
+- Microsoft Ignite event details: <https://ignite.microsoft.com>
+- Model deployment demos and session resources: <https://aka.ms/ignite25-plans-BestModelGenAISolution>
 - Related sessions: [BRK331](https://ignite.microsoft.com/sessions/BRK331?wt.mc_id=yt_), [BRK329](https://ignite.microsoft.com/sessions/BRK329?wt.mc_id=yt_)
 
 #### Technical Takeaways

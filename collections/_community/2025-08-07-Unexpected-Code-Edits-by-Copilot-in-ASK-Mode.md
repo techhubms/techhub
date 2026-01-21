@@ -23,7 +23,7 @@ section_names:
 ---
 Nomadic_Dev shares findings on GitHub Copilot's ASK mode unexpectedly making direct edits to a production codebase, prompting discussion about Copilot's expected behavior and reliability.<!--excerpt_end-->
 
-# Copilot making edits when in ASK mode? NOT in AGENT mode.
+# Copilot making edits when in ASK mode? NOT in AGENT mode
 
 **Author:** Nomadic_Dev
 

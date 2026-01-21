@@ -136,9 +136,9 @@ flowchart TD
 - **CNN Architecture:** Custom or pre-trained networks (transfer learning recommended for small datasets)
 - **Layers:** Input → Conv2D + Activation → MaxPooling → Flatten → Dense (classification) → Output (softmax)
 - **Compile:**
-    - Optimizer (e.g., Adam, SGD)
-    - Loss function (`categorical_crossentropy` for multi-class)
-    - Metrics (e.g., `accuracy`)
+  - Optimizer (e.g., Adam, SGD)
+  - Loss function (`categorical_crossentropy` for multi-class)
+  - Metrics (e.g., `accuracy`)
 
 **Sample TensorFlow/Keras Model Code:**
 

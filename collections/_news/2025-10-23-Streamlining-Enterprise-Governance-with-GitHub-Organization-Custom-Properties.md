@@ -60,10 +60,10 @@ layout: "post"
 title: "Streamlining Enterprise Governance with GitHub Organization Custom Properties"
 author: "Allison"
 excerpt_separator: "<!--excerpt_end-->"
-canonical_url: "https://github.blog/changelog/2025-10-23-organization-custom-properties-are-now-available-in-public-preview"
+canonical_url: "<https://github.blog/changelog/2025-10-23-organization-custom-properties-are-now-available-in-public-preview>"
 viewing_mode: "external"
 feed_name: "The GitHub Blog"
-feed_url: https://github.blog/changelog/feed/
+feed_url: <https://github.blog/changelog/feed/>
 date: "2025-10-23 16:58:12 +00:00"
 permalink: "2025-10-23-Streamlining-Enterprise-Governance-with-GitHub-Organization-Custom-Properties.html"
 categories: ["DevOps"]

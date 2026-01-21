@@ -138,6 +138,6 @@ While the process of supporting both x64 and Arm64 in .NET is more complicated t
 
 ---
 
-_Is this content useful to you? Consider making a small donation to support future articles._
+*Is this content useful to you? Consider making a small donation to support future articles.*
 
 This post appeared first on "Rick Strahl's Blog". [Read the entire article here](https://weblog.west-wind.com/posts/2025/Apr/18/The-Strong-ARM-of-NET-Wrestling-with-x64-and-Arm64-Desktop-App-Deployment)

@@ -35,9 +35,9 @@ Eirini Kalliamvakou examines a significant trend in the developer landscape: the
 - **AI Fluency**: The video highlights the growing importance of possessing the skills to understand, interact with, and effectively harness AI-powered tools. It's not just about learning to use new features, but gaining the judgment to understand what AI can and cannot do.
 - **Developer Mindset Shift**: The emergence of a developer who is comfortable co-creating alongside AI assistants, maintaining an awareness of where human expertise and critical thinking remain essential.
 - **Impact on Developer Experience**:
-    - Increased productivity through Copilot
-    - Evolvement in onboarding and learning coding concepts
-    - The need for responsible and well-informed usage of AI
+  - Increased productivity through Copilot
+  - Evolvement in onboarding and learning coding concepts
+  - The need for responsible and well-informed usage of AI
 
 ## Additional Resources
 

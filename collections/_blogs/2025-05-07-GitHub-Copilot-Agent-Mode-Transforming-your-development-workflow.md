@@ -40,9 +40,9 @@ GitHub Copilot Agent Mode enhances the developer experience by providing natural
    2. [Context-Aware Assistance](#context-aware-assistance)
    3. [Intelligent Problem Solving](#intelligent-problem-solving)
    4. [Learning and Documentation](#learning-and-documentation)
-1. [Best Practices](#best-practices-for-using-agent-mode)
-2. [Real-world Applications](#real-world-applications)
-3. [The Future of AI Pair Programming](#the-future-of-ai-pair-programming)
+3. [Best Practices](#best-practices-for-using-agent-mode)
+4. [Real-world Applications](#real-world-applications)
+5. [The Future of AI Pair Programming](#the-future-of-ai-pair-programming)
 
 ---
 

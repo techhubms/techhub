@@ -119,6 +119,7 @@ function myFunction() { ... }
 function My_function() { ... }
 
 ```
+
 ## [Optional] Advanced Sections
 
 ### Framework-Specific Rules
@@ -128,11 +129,13 @@ function My_function() { ... }
 ### Advanced Tips & Edge Cases
 
 - [Document important exceptions/caveats.]
+
 ```
 
 ## Example: `typescript.instructions.md`
 
 ```
+
 --- applyTo: "**/*.ts" ---
 
 # TypeScript Coding Standards
@@ -160,6 +163,7 @@ function My_function() { ... }
 - Write unit tests for exported functions.
 - Use Jest for testing.
 - Name test files as <filename>.test.ts.
+
 ```
 
 ## Getting Started and Editing Instructions

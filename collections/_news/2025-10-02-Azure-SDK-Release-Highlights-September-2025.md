@@ -60,10 +60,10 @@ Each month, Microsoft releases updates for the Azure SDKs to provide developers 
 - Management libraries released for .NET, Go, Java, JavaScript, and Python.
 - Includes Playwright NUnit for .NET projects.
 - Example package links:
-    - [Azure.Developer.Playwright for .NET](https://www.nuget.org/packages/Azure.Developer.Playwright/1.0.0)
-    - [@azure/playwright for JavaScript](https://www.npmjs.com/package/@azure/playwright/v/1.0.0)
-    - [Azure.ResourceManager.Playwright for .NET](https://www.nuget.org/packages/Azure.ResourceManager.Playwright/1.0.0)
-    - [azure-mgmt-playwright for Python](https://pypi.org/project/azure-mgmt-playwright/1.0.0/)
+  - [Azure.Developer.Playwright for .NET](https://www.nuget.org/packages/Azure.Developer.Playwright/1.0.0)
+  - [@azure/playwright for JavaScript](https://www.npmjs.com/package/@azure/playwright/v/1.0.0)
+  - [Azure.ResourceManager.Playwright for .NET](https://www.nuget.org/packages/Azure.ResourceManager.Playwright/1.0.0)
+  - [azure-mgmt-playwright for Python](https://pypi.org/project/azure-mgmt-playwright/1.0.0/)
 
 ## Notable Initial Stable Releases
 
@@ -75,9 +75,9 @@ Each month, Microsoft releases updates for the Azure SDKs to provide developers 
 - **AI VoiceLive** 1.0.0-beta.1 (.NET, Python): SDKs for voice-based AI scenarios.
 - **AI Language Conversations Authoring** 1.0.0b1 (Python): Conversational AI authoring.
 - **Resource Management Libraries**:
-    - Workload Orchestration, Cloud Health, Azure Stack HCI VM, Bicep, Compute Recommender in Go, Java, JavaScript, and Python.
-    - Container Service Safeguards and Resources Bicep for Java and JavaScript.
-    - EventHubs Checkpoint Store for Rust.
+  - Workload Orchestration, Cloud Health, Azure Stack HCI VM, Bicep, Compute Recommender in Go, Java, JavaScript, and Python.
+  - Container Service Safeguards and Resources Bicep for Java and JavaScript.
+  - EventHubs Checkpoint Store for Rust.
 
 ## Release Notes and Further Information
 

@@ -98,6 +98,6 @@ Good cloud cost management starts with planning, and the Azure Pricing Calculato
 
 ---
 
-_For more detailed Azure technical guides, visit [Dellenny](https://dellenny.com)._
+*For more detailed Azure technical guides, visit [Dellenny](https://dellenny.com).*
 
 This post appeared first on "Dellenny's Blog". [Read the entire article here](https://dellenny.com/how-to-use-the-azure-pricing-calculator-effectively-a-step-by%e2%80%90step-guide/)

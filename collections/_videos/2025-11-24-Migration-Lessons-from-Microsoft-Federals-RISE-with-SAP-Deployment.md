@@ -78,7 +78,7 @@ The session concludes with questions and answers addressing technical details in
 ## Further Resources
 
 - [Migrate SAP Plan - Ignite](https://aka.ms/ignite25-plans-MigrateSAPPlan)
-- More on-demand sessions: https://ignite.microsoft.com
+- More on-demand sessions: <https://ignite.microsoft.com>
 
 ## Session Chapters
 

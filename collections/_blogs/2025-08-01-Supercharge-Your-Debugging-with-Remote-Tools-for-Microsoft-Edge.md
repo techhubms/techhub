@@ -75,7 +75,7 @@ Remote Tools support Edge on Xbox and HoloLens, so you can debug web experiences
 
 1. **Enable Remote Debugging**
    - Start Edge on the remote device with the `--remote-debugging-port=<PORT>` flag. Example:
-   
+
      ```bash
      msedge --remote-debugging-port=9222
      ```

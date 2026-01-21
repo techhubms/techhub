@@ -44,7 +44,7 @@ Defiant_Priority_801 is seeking assistance with deploying a full-stack applicati
 
 ## Problem Encountered
 
-When visiting the assigned server IP (e.g., http://SERVERIP), a 404 Not Found error is shown instead of the expected application pages.
+When visiting the assigned server IP (e.g., <http://SERVERIP>), a 404 Not Found error is shown instead of the expected application pages.
 
 ## Possible Issues and Best Practices
 

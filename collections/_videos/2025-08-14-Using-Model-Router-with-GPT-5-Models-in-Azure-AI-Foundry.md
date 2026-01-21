@@ -58,8 +58,8 @@ In this episode, Microsoft Developer's April walks you through the latest advanc
 
 - [Model Router documentation](https://aka.ms/insideAIF/model-router)
 - [Azure AI Foundry portal](https://ai.azure.com)
-- Discord community: https://aka.ms/insideAIF/discord
-- Community forum: https://aka.ms/insideAIF/forum
+- Discord community: <https://aka.ms/insideAIF/discord>
+- Community forum: <https://aka.ms/insideAIF/forum>
 
 ## Conclusion
 

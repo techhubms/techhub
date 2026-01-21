@@ -214,6 +214,6 @@ These extensions mean configurations can precisely control which terminal comman
 - [VS Code July 2025 Milestone](https://github.com/microsoft/vscode/milestone/319)
 - [Customize Copilot with Instructions and Prompts](https://code.visualstudio.com/docs/copilot/copilot-customization)
 
-*This article was co-written with GitHub Copilot Chat.*
+_This article was co-written with GitHub Copilot Chat._
 
 This post appeared first on "Reinier van Maanen's blog". [Read the entire article here](https://r-vm.com/improved-git-workflow-custom-prompt-upcoming-vscode-change-warning.html)

@@ -82,10 +82,10 @@ Microsoft, as a Gold sponsor at KubeCon + CloudNativeCon India 2025, unveiled su
 
 - **Booth G4**: Live demos, AKS expertise, and Azure technical Q&A.
 - **Breakout Sessions by Microsoft Engineers:**
-    - [Keynote: The Last Mile Problem: Why AI Won’t Replace You (Yet)](https://sched.co/23HAM)
-    - [Lightning Talk: Optimizing SNAT Port and IP Address Management in Kubernetes](https://sched.co/23Esy)
-    - [Smart Capacity-Aware Volume Provisioning for LVM Local Storage Across Multi-Cluster Kubernetes Fleet](https://sched.co/23EuB)
-    - [Minimal OS, Maximum Impact: Journey To a Flatcar Maintainer](https://sched.co/23Ev3)
+  - [Keynote: The Last Mile Problem: Why AI Won’t Replace You (Yet)](https://sched.co/23HAM)
+  - [Lightning Talk: Optimizing SNAT Port and IP Address Management in Kubernetes](https://sched.co/23Esy)
+  - [Smart Capacity-Aware Volume Provisioning for LVM Local Storage Across Multi-Cluster Kubernetes Fleet](https://sched.co/23EuB)
+  - [Minimal OS, Maximum Impact: Journey To a Flatcar Maintainer](https://sched.co/23Ev3)
 
 ---
 

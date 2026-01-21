@@ -112,7 +112,7 @@ workspace = Workspace(
 provider = AzureQuantumProvider(workspace)
 ```
 
-   - Prepare a teleportation circuit with 3 qubits and 3 classical bits. Qubit 0: state to teleport, Qubit 1: Alice's entangled, Qubit 2: Bob's entangled.
+- Prepare a teleportation circuit with 3 qubits and 3 classical bits. Qubit 0: state to teleport, Qubit 1: Alice's entangled, Qubit 2: Bob's entangled.
 
 ```python
 circuit = QuantumCircuit(3,3)
@@ -132,14 +132,14 @@ circuit.measure([2], [2])
 circuit.draw(output='mpl')
 ```
 
-   - List available simulators:
+- List available simulators:
 
 ```python
 for backend in provider.backends():
     print("- " + backend.name())
 ```
 
-   - Pick a backend (e.g., "quantinuum.sim.h1-1e") and run the circuit:
+- Pick a backend (e.g., "quantinuum.sim.h1-1e") and run the circuit:
 
 ```python
 simulator_backend = provider.get_backend("quantinuum.sim.h1-1e")
@@ -151,7 +151,7 @@ print(counts)
 plot_histogram(counts)
 ```
 
-  - Analyze results: Successful teleportation puts Bob's qubit in the transferred state (look for output patterns like 100, 101, 110, 111 in Qiskit's convention).
+- Analyze results: Successful teleportation puts Bob's qubit in the transferred state (look for output patterns like 100, 101, 110, 111 in Qiskit's convention).
 
 ## Conclusion
 

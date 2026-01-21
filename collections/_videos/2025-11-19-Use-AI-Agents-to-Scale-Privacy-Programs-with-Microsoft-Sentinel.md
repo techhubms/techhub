@@ -41,9 +41,9 @@ In this advanced Microsoft Ignite 2025 session, speakers Kevin Jones and Ojas Re
 - **Privacy as a Data Problem**: Examination of privacy challenges related to sprawling documents, diverse regulations, and expansive data sets, underscoring the need for automated solutions.
 - **Microsoft Sentinel's Role**: Microsoft Sentinel is highlighted as a core Microsoft tool for privacy risk monitoring, integration, and automation within enterprise environments.
 - **Agent Workflow**:
-   - File upload and agent processing
-   - Automated selection and initiation of privacy risk assessments
-   - Pulling relevant data from inventories and supporting documentation
+  - File upload and agent processing
+  - Automated selection and initiation of privacy risk assessments
+  - Pulling relevant data from inventories and supporting documentation
 - **Product Demo**: Practical walkthrough showing OneTrust's platform capabilities integrated with Microsoft technologies for privacy scalability.
 - **Strategy Overview**: Insights into privacy program scaling and regulatory compliance through AI and Microsoft ecosystem integration.
 

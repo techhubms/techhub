@@ -248,6 +248,6 @@ This approach ensures there’s always an opportunity to review or cancel before
 - [VS Code v1.102 Release Notes](https://code.visualstudio.com/updates/v1_102#_terminal-auto-approval-experimental)
 - [Customize Copilot with Instructions and Prompts](https://code.visualstudio.com/docs/copilot/copilot-customization)
 
-*This article was co-written with GitHub Copilot Chat*
+_This article was co-written with GitHub Copilot Chat_
 
 This post appeared first on "Reinier van Maanen's blog". [Read the entire article here](https://r-vm.com/automating-my-git-workflow-vscode-copilot-chat-terminal-auto-approval.html)

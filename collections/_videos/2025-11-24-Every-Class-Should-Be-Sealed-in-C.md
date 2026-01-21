@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=u79quQu4t_s
 title: Every Class Should Be Sealed in C#
 author: Nick Chapsas

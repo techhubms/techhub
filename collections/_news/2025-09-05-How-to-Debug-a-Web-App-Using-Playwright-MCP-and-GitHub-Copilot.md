@@ -69,9 +69,9 @@ By integrating the Playwright MCP server with GitHub Copilot, you allow Copilot�
 
 Suppose you’re working on a crowdfunding platform for DevOps-themed board games, and a user reports that the "publisher filter" isn’t working. The issue provides full reproduction steps. Instead of manually testing, you prompt Copilot’s agent mode to:
 
-* Use Playwright MCP to walk through the repro steps
-* Confirm whether the bug exists
-* Inspect the relevant frontend and backend code
+- Use Playwright MCP to walk through the repro steps
+- Confirm whether the bug exists
+- Inspect the relevant frontend and backend code
 
 Copilot, aided by Playwright MCP, follows those steps in an isolated test, confirms the bug, and even suggests a fix (such as correcting a typo in the backend code). It then re-tests after applying the fix, verifying that the issue is resolved.
 

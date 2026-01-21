@@ -66,6 +66,7 @@ The TypeScript 7 native compiler is available for preview via npm as [`@typescri
 - Dramatically improved build speeds (up to 10x faster in tests compared to 6.0 JavaScript-based compiler)
 
 Performance benchmarks show major reductions in build times:
+
 | Project   | tsc (6.0) | tsgo (7.0) | Speedup |
 |-----------|-----------|------------|---------|
 | sentry    | 133.08s   | 16.25s     | 8.19x   |

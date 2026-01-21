@@ -44,30 +44,30 @@ Operating hundreds of services in an enterprise cloud is costly and labor-intens
 ## Key Topics
 
 - **The Case for AI in Cloud Optimization**
-    - Examines why AI-guided automation is increasingly seen as the safest and most efficient method for optimizing cloud operations.
+  - Examines why AI-guided automation is increasingly seen as the safest and most efficient method for optimizing cloud operations.
 - **Definition of Autonomous Systems**
-    - Clarifies what intelligent automation entails in large-scale environments.
+  - Clarifies what intelligent automation entails in large-scale environments.
 - **Accuracy Challenges**
-    - Highlights common causes of automation errors, including erroneous metrics and missing data spikes.
+  - Highlights common causes of automation errors, including erroneous metrics and missing data spikes.
 - **AI’s Role in Reliability**
-    - Details how AI strengthens automation reliability.
+  - Details how AI strengthens automation reliability.
 - **Protecting Engineers and Improving Productivity**
-    - Discusses how AI can safeguard engineering resources and free up time for critical work.
+  - Discusses how AI can safeguard engineering resources and free up time for critical work.
 - **AI ‘Autopilot’ Capabilities**
-    - Explores fully autonomous execution, removing the need for manual intervention.
+  - Explores fully autonomous execution, removing the need for manual intervention.
 - **Unified Command Center**
-    - Reviews the concept of an AI-driven, consolidated dashboard for cloud optimization and oversight.
+  - Reviews the concept of an AI-driven, consolidated dashboard for cloud optimization and oversight.
 
 ## Benefits and Risks
 
 - **Benefits**
-    - Cost savings through automated rightsizing
-    - Enhanced availability management
-    - Unified control and visibility of services
-    - Reduced manual workload for operations teams
+  - Cost savings through automated rightsizing
+  - Enhanced availability management
+  - Unified control and visibility of services
+  - Reduced manual workload for operations teams
 - **Risks**
-    - Reliability issues stemming from inaccurate data or misconfigured metrics
-    - Potential operational failures if AI automation is not properly managed
+  - Reliability issues stemming from inaccurate data or misconfigured metrics
+  - Potential operational failures if AI automation is not properly managed
 
 ## Conclusion
 

@@ -48,6 +48,7 @@ With automatic doc comment generation enabled in your settings, you can type the
 You can accept these suggestions simply by pressing the Tab key, just as you would when using regular Copilot code completions.
 
 ---
+
 ![Gif showcasing Copilot generating a summary in the comments](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwAAAAEnAQMAAAAkebZqAAAAA1BMVEXW1taWrGEgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAMklEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwI0Bb8cAAVAQnJ8AAAAASUVORK5CYII=)
 ---
 

@@ -53,4 +53,4 @@ In this session, Den Delimarsky appears alongside James Montemagno, Burke Hollan
 
 ---
 
-*Featuring: Den Delimarsky, James Montemagno, Burke Holland, and Pierce Boggan from the Visual Studio Code community.*
+_Featuring: Den Delimarsky, James Montemagno, Burke Holland, and Pierce Boggan from the Visual Studio Code community._

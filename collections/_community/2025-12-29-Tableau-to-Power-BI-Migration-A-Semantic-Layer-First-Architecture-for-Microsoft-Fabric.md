@@ -49,54 +49,54 @@ Traditional dashboard-centric migrations slavishly replicate Tableau workbooks a
 
 **1. Audit Tableau Assets:**
 
-  - Inventory workbooks, data sources, dashboards
-  - Prioritize high-value, widely used reports
-  - Retire redundant content
+- Inventory workbooks, data sources, dashboards
+- Prioritize high-value, widely used reports
+- Retire redundant content
 
 **2. Proof-of-Concept:**
 
-  - Select a representative complex dashboard for pilot migration
-  - Validate Power BI connectivity, data refresh modes, and DAX recreation of calculations
+- Select a representative complex dashboard for pilot migration
+- Validate Power BI connectivity, data refresh modes, and DAX recreation of calculations
 
 **3. Phased Migration:**
 
-  - Operate Tableau and Power BI in parallel temporarily
-  - Migrate gradually by business unit/subject
-  - Gather user feedback after each phase
+- Operate Tableau and Power BI in parallel temporarily
+- Migrate gradually by business unit/subject
+- Gather user feedback after each phase
 
 **4. Migrate High-Impact Dashboards First:**
 
-  - Early wins surface technical challenges
-  - Demonstrate Power BI feature value
+- Early wins surface technical challenges
+- Demonstrate Power BI feature value
 
 **5. Reimagine, Don’t Replicate:**
 
-  - Focus on business goals and user experience
-  - Incorporate Power BI-native features (bookmarks, drilldowns, navigation enhancements)
+- Focus on business goals and user experience
+- Incorporate Power BI-native features (bookmarks, drilldowns, navigation enhancements)
 
 **6. Enable Dataset Reusability:**
 
-  - Build central semantic models (datasets/dataflows)
-  - Report creators can construct multiple reports from a single source, reducing duplication
+- Build central semantic models (datasets/dataflows)
+- Report creators can construct multiple reports from a single source, reducing duplication
 
 **7. Training & Support:**
 
-  - Upskill Tableau users
-  - Establish a community or Center of Excellence
+- Upskill Tableau users
+- Establish a community or Center of Excellence
 
 **8. Change Management:**
 
-  - Communicate the rationale, collect feedback, and grow adoption through stakeholder engagement
+- Communicate the rationale, collect feedback, and grow adoption through stakeholder engagement
 
 **9. Governance from Day 1:**
 
-  - Assign roles, plan workspace strategy, enforce naming conventions
-  - Design security (e.g., RLS) and data access strategies
+- Assign roles, plan workspace strategy, enforce naming conventions
+- Design security (e.g., RLS) and data access strategies
 
 **10. Iterative Adjustment:**
 
-  - Plan for co-existence and continuous refinement
-  - Leverage Power BI’s frequent updates to modernize
+- Plan for co-existence and continuous refinement
+- Leverage Power BI’s frequent updates to modernize
 
 ## Semantic Model Architecture Planning
 

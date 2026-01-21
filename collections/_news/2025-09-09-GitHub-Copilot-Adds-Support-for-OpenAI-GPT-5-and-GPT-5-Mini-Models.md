@@ -37,22 +37,22 @@ OpenAI’s GPT-5 and GPT-5 mini models are now available within GitHub Copilot, 
 - **GPT-5 mini**: Accessible to all Copilot plans, including Copilot Free.
 - **GPT-5**: Restricted to paid Copilot plans (Individual, Business, Enterprise).
 - Supported within Copilot Chat on platforms such as:
-    - github.com
-    - Visual Studio Code (VS Code)
-    - Visual Studio
-    - JetBrains IDEs
-    - Xcode
-    - Eclipse
-    - GitHub Mobile (via chat model picker)
+  - github.com
+  - Visual Studio Code (VS Code)
+  - Visual Studio
+  - JetBrains IDEs
+  - Xcode
+  - Eclipse
+  - GitHub Mobile (via chat model picker)
 
 ## Enabling Access to the New Models
 
 - **Enterprise and Business Administrators**:
-    - Must opt-in via Copilot settings by enabling the GPT-5 and GPT-5 mini policy.
-    - Once enabled, these models appear in the model picker for users across all supported IDEs.
+  - Must opt-in via Copilot settings by enabling the GPT-5 and GPT-5 mini policy.
+  - Once enabled, these models appear in the model picker for users across all supported IDEs.
 - **Individual Paid Plans**:
-    - Users can select either model directly through the model picker in any supported IDE.
-    - A one-time confirmation prompt is shown upon selection.
+  - Users can select either model directly through the model picker in any supported IDE.
+  - A one-time confirmation prompt is shown upon selection.
 
 ## Learn More and Provide Feedback
 

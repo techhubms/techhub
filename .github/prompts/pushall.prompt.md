@@ -15,10 +15,11 @@ model: "Claude Sonnet 4.5"
 **🚨 ABSOLUTE CRITICAL REQUIREMENT 5**: ALWAYS start with step 1, then execute the steps in this prompt in EXACTLY the order specified by the checkpoints. Do NOT improvise, optimize, skip, merge or deviate in ANY other way from the workflow.
 
 **🚨 ABSOLUTE CRITICAL REQUIREMENT 6**: After each step, you must:
+
 - Confirm the step completed successfully and you followed all instructions. If not, go back and do what you missed.
 - State which step you're moving to next  
 - Verify all required outputs exist before proceeding
-- Verify you satisfied the conditions for the checkpoint and then write them out to the user: "✅ Step [X] completed successfully. Moving to Step [Y].". 
+- Verify you satisfied the conditions for the checkpoint and then write them out to the user: "✅ Step [X] completed successfully. Moving to Step [Y].".
 - If you find yourself thinking "I know what this step wants me to accomplish" - STOP. Read the step again and follow the literal instructions.
 - Never substitute your own interpretation for the written instructions, even if you think your approach is better or more efficient.
 
@@ -29,6 +30,7 @@ model: "Claude Sonnet 4.5"
 **🚨 ABSOLUTE CRITICAL REQUIREMENT 9**: Exclusivly use the GitHub MCP tools for GitHub related actions, such as listing and creating pull and updating pull requests requests. Or listing and requesting code reviews. **Never** use `gh`
 
 **🚨 ABSOLUTE CRITICAL REQUIREMENT 10**: Throughout this workflow, maintain these variables:
+
 - `[BRANCHNAME]`: Current branch name (from step 2 analysis, updated in step 7 if branch operations performed)
 - Update this section when variables change
 
@@ -45,11 +47,11 @@ model: "Claude Sonnet 4.5"
     ```
 
     **CRITICAL**: Set variable: [BRANCHNAME] = current branch name
-    
+
     **CHECKPOINT**: "✅ Step 2 completed successfully. Current branch: [BRANCHNAME]. Moving to Step 3."
-    
+
 3. **Branch decision point:** Based on the current branch information gathered in step 2, determine next steps.
-    
+
     **CHECKPOINT**: State either:
     - "✅ Step 3 completed successfully. On main branch. Moving to Step 4 to handle main branch protection steps."
     - "✅ Step 3 completed successfully. On feature branch [BRANCHNAME]. Moving to Step 8 to confirm the current branch."
@@ -80,7 +82,7 @@ model: "Claude Sonnet 4.5"
     ```pwsh
     git reset --soft HEAD~$(git rev-list --count HEAD ^origin/main)
     ```
-    
+
     Then create and switch to a new branch:
 
     ```pwsh
@@ -120,15 +122,15 @@ model: "Claude Sonnet 4.5"
     ```
 
     This script captures comprehensive git changes analysis, including git status, individual diff files, and branch information, saving it to `.tmp/git-changes-analysis/` directory. The main analysis data is in `git-changes-analysis.json` and individual `.diff` files are created for each changed file.
-    
+
     After the script completes, check if the file exists:
-    
+
     ```pwsh
     pwsh -Command 'if (-not (Test-Path ".tmp/git-changes-analysis/git-changes-analysis.json")) { throw "Analysis file was not created. Script may have failed." }'
     ```
-    
+
     **CRITICAL**: After successful verification, perform a really thorough analysis of ALL changes:**
-    
+
     - Review the `summary` object to understand the scope of changes (totalFiles, new, modified, deleted, renamed)
     - Check the `files` object for individual file changes grouped by change type:
       - `files.new[]`: Array of new files - each object contains:
@@ -154,7 +156,7 @@ model: "Claude Sonnet 4.5"
     - If any of the properties are missing or appear invalid, let the user know and do NOT continue!
 
     **CHECKPOINT**: "✅ Step 8 completed successfully. Comprehensive git analysis complete. Current branch: [BRANCHNAME]. Moving to Step 9."
-    
+
 9. **Create commit MESSAGE:** Based on the comprehensive changes analysis from step 8, prepare a structured commit message:
 
     **Commit Message Structure:**
@@ -186,13 +188,14 @@ model: "Claude Sonnet 4.5"
     ```
 
     **CRITICAL**: After creating the structured commit message, write it directly to `.tmp/git-changes-analysis/commit-message.txt` file using this exact command format:
-    
+
     ```pwsh
     pwsh -Command '@"
+
 [Your actual commit message content here]
 "@ | Out-File -FilePath ".tmp/git-changes-analysis/commit-message.txt" -Encoding utf8'
     ```
-    
+
     Replace `[Your actual commit message content here]` with the commit message you prepared.
 
     **CHECKPOINT**: "✅ Step 9 completed successfully. Commit message prepared and saved. Moving to Step 10."
@@ -294,7 +297,7 @@ model: "Claude Sonnet 4.5"
     **CHECKPOINT**: Based on exit code, state either:
     - **Exit code 0 (user did not abort):** "✅ Step 16 completed successfully. User wants to proceed with PR operations. Moving to Step 17."
     - **Exit code 1 (user aborted):** "✅ Step 16 completed successfully. User aborted PR operations. Moving to Step 22."
- 
+
 17. **PREPARE for data analysis:**
 
     **CRITICAL**: This step is about data PREPARATION only. Do NOT analyze or create PR content yet.
@@ -355,8 +358,8 @@ model: "Claude Sonnet 4.5"
 
     **CHECKPOINT**: "✅ Step 18 completed successfully. Pull request PREPARATION complete. Moving to Step 19."
 
-19. **CHECK for existing pull requests:** 
-    
+19. **CHECK for existing pull requests:**
+
     Read the `branch.remote.exists` field from `.tmp/git-changes-analysis/git-changes-analysis.json` to determine if there can be existing pull requests.
 
     **CRITICAL**: Do NOT create or update a PR yet, we will do that in the next step.
@@ -415,16 +418,19 @@ This step provides the final workflow summary and completion status.
 **Execute the following actions:**
 
 a. **Display completion header:**
+
    ```
    ✅ **PUSHALL WORKFLOW COMPLETED SUCCESSFULLY** ✅
    ```
 
 b. **Provide final workflow summary** with the following sections:
-   - **🎯 Final Workflow Summary**: Brief overview of what was accomplished
-   - **🎉 Workflow Execution**: Steps completed, execution mode, duration, final result
+
+- **🎯 Final Workflow Summary**: Brief overview of what was accomplished
+- **🎉 Workflow Execution**: Steps completed, execution mode, duration, final result
 
 c. **Include relevant links** (if PR was created/updated):
-   - Link to the pull request with descriptive text
+
+- Link to the pull request with descriptive text
 
 **Checkpoint:** ✅ Step 22 completed successfully. Workflow execution summary provided and pushall process is complete.
 
@@ -459,10 +465,11 @@ a. **Check rebase status:** Determine why the rebase stopped:
 b. **Handle different scenarios:**
 
    **Scenario 1: Merge conflicts:**
-   - Identify and investigate conflicted files (marked as "both modified" in git status)
-   - **CRITICAL** Inform the user about the conflicts, give them your suggestion on what to do and **ask them what you should do**.
-   - Wait for user confirmation that conflicts are resolved
-   - Stage resolved files and continue:
+
+- Identify and investigate conflicted files (marked as "both modified" in git status)
+- **CRITICAL** Inform the user about the conflicts, give them your suggestion on what to do and **ask them what you should do**.
+- Wait for user confirmation that conflicts are resolved
+- Stage resolved files and continue:
 
      ```pwsh
      git add .
@@ -471,36 +478,39 @@ b. **Handle different scenarios:**
 
    **Scenario 2: Rebase paused but no issues:**
 
-   - If git status shows "rebase in progress" but no conflicts or changes, simply continue:
+- If git status shows "rebase in progress" but no conflicts or changes, simply continue:
 
      ```pwsh
      git rebase --continue
      ```
 
-   - This happens when Git pauses for review or when commits apply cleanly but Git wants confirmation
+- This happens when Git pauses for review or when commits apply cleanly but Git wants confirmation
 
    **Scenario 3: Empty commits:**
-   - If git specifically reports "No changes - did you forget to use 'git add'?" or "nothing to commit":
+
+- If git specifically reports "No changes - did you forget to use 'git add'?" or "nothing to commit":
 
      ```pwsh
      git rebase --skip
      ```
 
-   - This happens when a commit becomes empty during rebase (e.g., changes were already applied)
+- This happens when a commit becomes empty during rebase (e.g., changes were already applied)
 
    **Scenario 4: Other unexpected issues:**
-   - For any other problems, STOP and ask the user how to proceed
-   - Do NOT automatically skip commits or make assumptions
-   - Common options: continue, skip (only if user confirms), or abort
+
+- For any other problems, STOP and ask the user how to proceed
+- Do NOT automatically skip commits or make assumptions
+- Common options: continue, skip (only if user confirms), or abort
 
    **Scenario 5: If rebase needs to be aborted:**
-   - User can choose to abort the rebase:
+
+- User can choose to abort the rebase:
 
      ```pwsh
      git rebase --abort
      ```
 
-   - This returns to the state before the rebase started
+- This returns to the state before the rebase started
 c. **Repeat until rebase completes:** Continue handling interruptions until git rebase finishes successfully
 d. **Rebase completion:** The rebase is complete when git no longer reports conflicts and returns to the normal prompt
 

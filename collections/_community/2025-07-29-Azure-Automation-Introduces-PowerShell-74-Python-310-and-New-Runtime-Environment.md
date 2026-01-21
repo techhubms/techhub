@@ -63,6 +63,6 @@ Legacy environments such as PowerShell 7.1/7.2 and Python 2.7/3.8 are retiring. 
 - [Upgrade runbook to latest language version](https://learn.microsoft.com/en-us/azure/automation/quickstart-update-runbook-in-runtime-environment)
 - [PowerShell runbooks with Azure CLI](https://learn.microsoft.com/en-us/azure/automation/quickstart-cli-support-powershell-runbook-runtime-environment)
 
-For additional information, feedback, or questions, readers are encouraged to contact askazureautomation@microsoft.com.
+For additional information, feedback, or questions, readers are encouraged to contact <askazureautomation@microsoft.com>.
 
 This post appeared first on Microsoft Tech Community. [Read the entire article here](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-automation-general-availability-of-powershell-7-4-python-3/ba-p/4437732)

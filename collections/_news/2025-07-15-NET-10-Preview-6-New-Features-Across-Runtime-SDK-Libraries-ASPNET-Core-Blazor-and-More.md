@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-10-preview-6/
 title: '.NET 10 Preview 6: New Features Across Runtime, SDK, Libraries, ASP.NET Core, Blazor, and More'
 author: .NET Team
@@ -60,12 +60,12 @@ This blog provides an overview of what's new in this preview. For comprehensive 
 - **File-based apps improvements**: Expands platform and deployment support for file-based apps.
 - [Full SDK Release Notes](https://github.com/dotnet/core/blob/main/release-notes/10.0/preview/preview6/sdk.md)
 
-## C#
+## C #
 
 - No new language features were added in this preview.
 - [Full C# Release Notes](https://github.com/dotnet/core/blob/main/release-notes/10.0/preview/preview6/csharp.md)
 
-## F#
+## F #
 
 - No new features in this preview.
 - [F# Release Notes](https://github.com/dotnet/core/blob/main/release-notes/10.0/preview/preview6/fsharp.md)

@@ -63,10 +63,10 @@ The Model Context Protocol (MCP) is a protocol and tooling from Microsoft design
 
 ## Connect with VS Code
 
-- **X:** https://x.com/code
-- **Bluesky:** https://bsky.app/profile/vscode.dev
-- **YouTube:** https://youtube.com/code
-- **LinkedIn:** https://www.linkedin.com/showcase/104107263
-- **GitHub:** https://github.com/microsoft/vscode
+- **X:** <https://x.com/code>
+- **Bluesky:** <https://bsky.app/profile/vscode.dev>
+- **YouTube:** <https://youtube.com/code>
+- **LinkedIn:** <https://www.linkedin.com/showcase/104107263>
+- **GitHub:** <https://github.com/microsoft/vscode>
 
 > This session provides developers with practical steps and best practices for leveraging AI-powered tools in a documentation-driven context. The demo highlights prompt-driven development and the ability to ground AI responses directly on product documentation for improved accuracy and productivity.

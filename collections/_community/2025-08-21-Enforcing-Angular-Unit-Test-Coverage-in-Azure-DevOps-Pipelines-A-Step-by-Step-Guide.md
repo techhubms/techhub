@@ -198,8 +198,8 @@ Unit tests aren’t just for show — they give teams confidence in every code c
 
 ---
 
-_Last updated: Aug 21, 2025_
+*Last updated: Aug 21, 2025*
 
-_Version 1.0_
+*Version 1.0*
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enforcing-angular-unit-test-coverage-in-azure-devops-pipelines-a/ba-p/4446485)

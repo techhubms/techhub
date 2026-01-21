@@ -71,7 +71,7 @@ AzureNewbie1 has been tasked with integrating third-party iLevel data into SQL S
 - **Content-Type:** Must be `application/x-www-form-urlencoded`
 - **Authorization:** Unless iLevel specifically requires a Basic Auth header, you usually do **not** need it for client credentials.
   - **If required:** The header should look like `Authorization: Basic <base64(client_id:client_secret)>`
-  - To generate: base64-encode the string `client_id:client_secret` (no spaces), then prepend with `Basic `.
+  - To generate: base64-encode the string `client_id:client_secret` (no spaces), then prepend with `Basic`.
 - **Check iLevel docs closely for explicit Auth header requirements.**
 
 ### 4. Using ADF Web Activity
@@ -106,8 +106,8 @@ AzureNewbie1 has been tasked with integrating third-party iLevel data into SQL S
 - **Method:** POST
 - **URL:** `https://ilevel.api/token` (replace with actual)
 - **Headers:**
-    - `Content-Type`: `application/x-www-form-urlencoded`
-    - If required: `Authorization: Basic <base64encoded>`
+  - `Content-Type`: `application/x-www-form-urlencoded`
+  - If required: `Authorization: Basic <base64encoded>`
 - **Body:**
 
     ```

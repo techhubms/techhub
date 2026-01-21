@@ -47,16 +47,16 @@ This session from Microsoft Ignite 2025 brings forward a new suite of Microsoft 
 ### Key Topics Covered
 
 - **Live Demo**: Insurance claim processing agent
-    - Retrieval of historical data from Azure Databases
-    - Claim approval time calculation
-    - Use of Cosmos DB for storage and data integration
+  - Retrieval of historical data from Azure Databases
+  - Claim approval time calculation
+  - Use of Cosmos DB for storage and data integration
 - **Document-Centric Workflows**
-    - Content understanding tools for automating document review and data extraction
+  - Content understanding tools for automating document review and data extraction
 - **Model Version Control**
-    - Introducing support for different model versions allowing users to select GPT models aligning with their needs
+  - Introducing support for different model versions allowing users to select GPT models aligning with their needs
 - **Privacy and Security**
-    - Redaction of sensitive information in translated documents
-    - Data privacy focus throughout the workflow
+  - Redaction of sensitive information in translated documents
+  - Data privacy focus throughout the workflow
 
 ### Technical Highlights
 

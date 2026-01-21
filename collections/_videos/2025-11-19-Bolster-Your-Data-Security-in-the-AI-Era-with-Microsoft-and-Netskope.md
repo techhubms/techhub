@@ -64,8 +64,8 @@ This session helps organizations achieve consistent data security and regulatory
 ## Additional Resources
 
 - [Microsoft Ignite](https://ignite.microsoft.com)
-- Microsoft Purview Documentation: https://learn.microsoft.com/en-us/microsoftpurview/
-- Netskope Overview: https://www.netskope.com/
+- Microsoft Purview Documentation: <https://learn.microsoft.com/en-us/microsoftpurview/>
+- Netskope Overview: <https://www.netskope.com/>
 
 ---
 *For on-demand sessions and more technical content, visit [Microsoft Ignite](https://ignite.microsoft.com).*

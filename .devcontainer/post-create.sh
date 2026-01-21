@@ -72,6 +72,10 @@ fi
 echo "Installing Chrome browser for Playwright..."
 playwright install chrome --with-deps
 
+# ==================== Markdown Linting ====================
+echo "Installing markdownlint-cli2 for markdown formatting..."
+npm install -g markdownlint-cli2
+
 # ==================== PowerShell Modules ====================
 echo "Installing PowerShell modules..."
 pwsh -Command 'Install-Module HtmlToMarkdown -AcceptLicense -Force'

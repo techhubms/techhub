@@ -80,8 +80,8 @@ Agentic AI cannot resolve these, but reduces the cost of understanding, making i
 
 **In practice:**
 
-- Generative AI supports *tasks*
-- Agentic AI supports *processes*
+- Generative AI supports _tasks_
+- Agentic AI supports _processes_
 
 ## Where Agentic AI Helps (and Where It Doesn't)
 
@@ -105,7 +105,7 @@ Agentic AI is most effective as a multiplier for skilled teams. It accelerates e
 ## Key Takeaways
 
 - Code is rarely the real blocker—knowledge and organizational factors matter more
-- Migration and modernization are *different* efforts
+- Migration and modernization are _different_ efforts
 - Foundational analysis is essential—AI can't replace it
 - Agentic AI accelerates discovery and safe, incremental modernization
 - Human judgment is essential for success

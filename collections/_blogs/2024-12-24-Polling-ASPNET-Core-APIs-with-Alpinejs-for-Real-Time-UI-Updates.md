@@ -27,7 +27,7 @@ In this post, Khalid Abuhakmeh guides readers through building a real-time updat
 
 ![Alpine.Js Polling ASP.NET Core APIs For Updates](https://res.cloudinary.com/abuhakmeh/image/fetch/c_limit,f_auto,q_auto,w_800/https://khalidabuhakmeh.com/assets/images/posts/misc/alpinejs-aspnet-core-api-updates-polling.jpg)
 
-_Photo by [Zinko Hein](https://unsplash.com/@zinkohein)_
+*Photo by [Zinko Hein](https://unsplash.com/@zinkohein)*
 
 ## Introduction
 

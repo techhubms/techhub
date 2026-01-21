@@ -63,8 +63,8 @@ Developing robust, scalable, and secure servers using the Model Context Protocol
 
 - **Beginner Resources**: [MCP for Beginners](https://aka.ms/MCP-for-Beginners)
 - **Community Events**: Join the conversation and deepen your knowledge at MCP Dev Days:
-    - [Day 1](https://aka.ms/MCPDevDays-Day1)
-    - [Day 2](https://aka.ms/MCPDevDays-Day2)
-    - [Registration](https://aka.ms/mcpdevdays)
+  - [Day 1](https://aka.ms/MCPDevDays-Day1)
+  - [Day 2](https://aka.ms/MCPDevDays-Day2)
+  - [Registration](https://aka.ms/mcpdevdays)
 
 By following these best practices, developers can build maintainable, resilient, and secure MCP solutions, ensuring high performance and reliability in both development and production environments.

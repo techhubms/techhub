@@ -52,9 +52,9 @@ This episode delves into the practical adoption of the Model Context Protocol (M
 
 - [MCP for Beginners](https://aka.ms/MCP-for-Beginners): A starting point for those new to the Model Context Protocol.
 - **MCP Dev Days:**
-   - [Day 1](https://aka.ms/MCPDevDays-Day1)
-   - [Day 2](https://aka.ms/MCPDevDays-Day2)
-   - [Registration Page](https://aka.ms/mcpdevdays): Sign up for in-depth workshops and hands-on sessions.
+  - [Day 1](https://aka.ms/MCPDevDays-Day1)
+  - [Day 2](https://aka.ms/MCPDevDays-Day2)
+  - [Registration Page](https://aka.ms/mcpdevdays): Sign up for in-depth workshops and hands-on sessions.
 
 ### Conclusion
 

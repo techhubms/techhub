@@ -38,7 +38,7 @@ Apache Spark's distributed power can only be fully tapped with rigorous optimiza
 
 ## Accessing and Navigating the Spark UI
 
-- **Local Mode:** Available at http://localhost:4040 by default.
+- **Local Mode:** Available at <http://localhost:4040> by default.
 - **Cluster Mode:** Access via Spark History Server (typically port 18080) or the application master's UI link.
 - **Cloud Platforms:** Integrated via consoles on platforms like Azure Databricks, AWS Glue, or EMR; ensure Spark event logging is configured for long job histories.
 

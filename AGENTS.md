@@ -545,8 +545,8 @@ See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-
 **Key Rules**:
 
 - This is NOT optional - always update docs
-- Check for linting errors in markdown files
-- Fix any MD032 or other markdown issues
+- Check for linting errors in markdown files with `get_errors` tool
+- Fix markdown issues by running: `npx markdownlint-cli2 --fix <file-path>`
 - Documentation is part of "task complete"
 - Work is NOT done until documentation is updated
 

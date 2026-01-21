@@ -78,7 +78,7 @@ A new public API lets plugin developers automatically start Copilot chat session
 
 Example: The Spring Tools plugin uses this API to launch Copilot-powered chat directly from its workflow, enabling deeper IDE integration.
 
-## 🛠 Try It Out!
+## 🛠 Try It Out
 
 Start using these enhancements by exploring the [documentation](https://docs.github.com/copilot/how-tos/chat/asking-github-copilot-questions-in-your-ide?tool=eclipse).
 

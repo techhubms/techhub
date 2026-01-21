@@ -46,9 +46,9 @@ This Microsoft Ignite 2025 breakout (BRK135) delivers an advanced look at archit
 - **Agentic Memory Architecture**: Explanation of both short-term and long-term memory paradigms in agentic applications, including design requirements and strategies for each.
 - **Efficient Retrieval with Summarization and Semantic Search**: Techniques to utilize summarization for storing long-term memory, and leveraging semantic hybrid queries within Cosmos DB for efficient AI data retrieval.
 - **Query Patterns**:
-    - SQL-like queries
-    - Semantic queries
-    - Hybrid approaches for flexible data access
+  - SQL-like queries
+  - Semantic queries
+  - Hybrid approaches for flexible data access
 - **Latency and Architectural Considerations**: Discussion of potential latency pitfalls, especially in on-premise environments, and functional requirements to address them.
 - **Compliance, Security, and Governance**: Best practices to prevent data oversharing, manage sprawl, safeguard AI workloads from threats, and ensure regulatory compliance and responsible data governance throughout the application lifecycle.
 - **Real-World Implementation**: Case study featuring Walmart Chile on customer-centric AI strategies leveraging these capabilities.

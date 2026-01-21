@@ -81,7 +81,7 @@ Microsoft Defender provides layered protection for these scenarios:
 
 Example KQL queries for threat hunting include:
 
-- Finding malicious JS execution: ```DeviceProcessEvents | where FileName has "node" and ProcessCommandLine has_any ("setup_bun.js", "bun_environment.js") ```
+- Finding malicious JS execution: ```DeviceProcessEvents | where FileName has "node" and ProcessCommandLine has_any ("setup_bun.js", "bun_environment.js")```
 - Detecting suspicious process launches: See article for advanced KQL patterns.
 - Mapping attack paths: Queries leveraging the Exposure Graph to track credential theft and lateral movement to Key Vaults.
 - Monitoring container images: Use Cloud Security Explorer templates to surface vulnerable containers.

@@ -77,6 +77,6 @@ The Microsoft Fabric Blog team presents the August 2025 highlights for Fabric Wa
 
 ## Next Steps
 
-Look forward to major announcements at FabCon Vienna and continued innovation in Fabric Warehouse. Feedback is welcomed at https://aka.ms/fabricideas.
+Look forward to major announcements at FabCon Vienna and continued innovation in Fabric Warehouse. Feedback is welcomed at <https://aka.ms/fabricideas>.
 
 This post appeared first on "Microsoft Fabric Blog". [Read the entire article here](https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-august-2025/)

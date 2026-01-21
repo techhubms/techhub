@@ -91,12 +91,12 @@ Additionally, the language service will move to the Language Server Protocol (LS
 - **JS codebase:** Will progress into TypeScript 6.x, introducing some deprecations and breaking changes as preparation for native migration.
 - **Native codebase:** Will appear as TypeScript 7.0, released when it achieves sufficient feature parity and stability.
 
-_Naming conventions:_
+*Naming conventions:*
 
 - **TypeScript 6 (JS)** and **TypeScript 7 (native)**
 - Internal codenames: “Strada” (original TypeScript), “Corsa” (native port effort)
 
-_Joint maintenance:_ TypeScript 6.x (JS) will be supported until TypeScript 7+ (native) achieves maturity and widespread adoption, enabling projects to transition at their own pace.
+*Joint maintenance:* TypeScript 6.x (JS) will be supported until TypeScript 7+ (native) achieves maturity and widespread adoption, enabling projects to transition at their own pace.
 
 ## What’s Next
 

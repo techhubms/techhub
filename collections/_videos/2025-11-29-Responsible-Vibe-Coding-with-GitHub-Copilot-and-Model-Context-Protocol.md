@@ -76,7 +76,7 @@ This session at GitHub Universe 2025 dives into the concept of 'vibe coding'—u
 
 ## Links
 
-- GitHub Copilot: https://github.com/features/copilot
+- GitHub Copilot: <https://github.com/features/copilot>
 - MCP overview and resources: (Search official MCP documentation on GitHub)
 
 ---

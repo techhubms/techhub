@@ -58,9 +58,9 @@ BMC has announced enhancements to its DevOps analytics solutions for mainframe e
 ### Cloud Data Management and Advanced Protections
 
 - **BMC AMI Cloud**, the data management platform, now supports:
-    - Enforced password and IBM zMFA token entry for enhanced access control.
-    - Advanced support for protecting both on-premises and public cloud object storage data.
-    - Multi-volume capabilities, allowing for storage of up to 255TB in data sets within cloud object storage services.
+  - Enforced password and IBM zMFA token entry for enhanced access control.
+  - Advanced support for protecting both on-premises and public cloud object storage data.
+  - Multi-volume capabilities, allowing for storage of up to 255TB in data sets within cloud object storage services.
 
 ## Strategic Impact and Market Context
 

@@ -99,8 +99,8 @@ Microsoft Ignite 2025 is approaching fast, and this guide is your one-stop resou
 
 **Author:** melissahollingshed
 
-_Updated November 10, 2025_  
-_Version 1.0_
+*Updated November 10, 2025*  
+*Version 1.0*
 
 For more information, follow the [Azure Compute Blog](https://techcommunity.microsoft.com/t5/s/gxcuf89792/m_assets/avatars/default/avatar-1.svg?image-dimensions=50x50).
 

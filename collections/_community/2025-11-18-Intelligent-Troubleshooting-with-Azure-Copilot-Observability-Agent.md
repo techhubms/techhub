@@ -89,7 +89,7 @@ Planned updates will expand the agent’s intelligence, enable advanced scenario
 
 ## Feedback and Support
 
-Microsoft encourages user feedback via azmoninvestigation@microsoft.com and built-in feedback forms. The team is committed to evolving capabilities based on practitioner needs.
+Microsoft encourages user feedback via <azmoninvestigation@microsoft.com> and built-in feedback forms. The team is committed to evolving capabilities based on practitioner needs.
 
 ---
 

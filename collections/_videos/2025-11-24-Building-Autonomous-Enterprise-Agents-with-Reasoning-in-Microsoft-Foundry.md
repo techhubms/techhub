@@ -67,7 +67,7 @@ Attendees will learn how to leverage Microsoft Foundry for agent development, en
 ## Resources
 
 - [Agentic Solutions Documentation](https://aka.ms/ignite25-plans-agenticsolutions)
-- More Microsoft Ignite sessions: https://ignite.microsoft.com
+- More Microsoft Ignite sessions: <https://ignite.microsoft.com>
 
 ## Session Info
 

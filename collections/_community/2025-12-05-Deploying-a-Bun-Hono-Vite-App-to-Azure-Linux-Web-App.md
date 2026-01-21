@@ -42,9 +42,9 @@ This guide demonstrates how to deploy a full-stack JavaScript application built 
 * Use a Docker container for consistent project creation and development.
 * Technologies: **Bun**, **Hono**, **Vite**.
 * Endpoints to implement:
-  - `/` : Root - displays *Hello Bun Hono Vite*
-  - `/api/hello` : Static API endpoint
-  - `/api/backend` : Dynamic API endpoint returning computed data
+  * `/` : Root - displays *Hello Bun Hono Vite*
+  * `/api/hello` : Static API endpoint
+  * `/api/backend` : Dynamic API endpoint returning computed data
 
 ### Initialize Project
 
@@ -62,10 +62,10 @@ docker run --rm -it -v "$PWD":/app -w /app oven/bun:latest bun add hono
 
 ### Key File Operations
 
-- **.vscode/settings.json**: Prevent uploads of `node_modules` and disables in-service build prompts.
-- **vite.config.ts**: Configures Vite to use relative base paths.
-- **server.ts**: Sets up API routes and static serving via Hono and Bun.
-- **startup.sh**: Custom script for Azure startup, handling Bun installation, cleanup, and server launch.
+* **.vscode/settings.json**: Prevent uploads of `node_modules` and disables in-service build prompts.
+* **vite.config.ts**: Configures Vite to use relative base paths.
+* **server.ts**: Sets up API routes and static serving via Hono and Bun.
+* **startup.sh**: Custom script for Azure startup, handling Bun installation, cleanup, and server launch.
 
 #### Sample server.ts minimal setup
 
@@ -105,8 +105,8 @@ Test in browser at `http://127.0.0.1:3000/`, `/api/hello`, `/api/backend`.
 
 ### Prerequisites
 
-- Azure Linux Web App with **Premium SKU**
-- Deploy via VS Code or Azure CLI
+* Azure Linux Web App with **Premium SKU**
+* Deploy via VS Code or Azure CLI
 
 ### Environment Variables
 
@@ -124,10 +124,10 @@ bash /home/site/wwwroot/startup.sh
 
 This script handles:
 
-- Cleaning Oryx-generated artifacts
-- Installing Bun if missing
-- Performing dependency install and build
-- Starting the Bun server
+* Cleaning Oryx-generated artifacts
+* Installing Bun if missing
+* Performing dependency install and build
+* Starting the Bun server
 
 ### Deployment Workflow
 
@@ -143,9 +143,9 @@ The Bun + Hono + Vite stack is well-suited for high-performance modern JavaScrip
 
 **Further Reading**:
 
-- [Azure App Service Documentation](https://learn.microsoft.com/azure/app-service/)
-- [Bun.js Documentation](https://bun.sh/docs)
-- [Hono Framework](https://hono.dev/)
-- [Vite](https://vitejs.dev/)
+* [Azure App Service Documentation](https://learn.microsoft.com/azure/app-service/)
+* [Bun.js Documentation](https://bun.sh/docs)
+* [Hono Framework](https://hono.dev/)
+* [Vite](https://vitejs.dev/)
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploying-a-bun-hono-vite-app-to-azure-app-service/ba-p/4475356)

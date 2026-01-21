@@ -49,10 +49,10 @@ AI training at hyperscale involves enormous supercomputing clusters. Microsoft, 
 To ensure safe and continuous operations, solutions must meet:
 
 - **Time-Domain Constraints:**
-    - **Ramp Rate:** How quickly a datacenter’s power draw can increase/decrease (MW/sec).
-    - **Dynamic Power Range:** Acceptable levels of short-term power fluctuation.
+  - **Ramp Rate:** How quickly a datacenter’s power draw can increase/decrease (MW/sec).
+  - **Dynamic Power Range:** Acceptable levels of short-term power fluctuation.
 - **Frequency-Domain Constraints:**
-    - **Oscillation Limits:** Magnitude of oscillations within specific frequency bands (e.g., 0.1–20 Hz), which vary based on utility equipment.
+  - **Oscillation Limits:** Magnitude of oscillations within specific frequency bands (e.g., 0.1–20 Hz), which vary based on utility equipment.
 
 ## Mitigation Strategies
 

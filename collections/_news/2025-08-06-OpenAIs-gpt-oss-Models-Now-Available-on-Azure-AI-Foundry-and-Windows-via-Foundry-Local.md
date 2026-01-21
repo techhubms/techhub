@@ -40,9 +40,9 @@ Satya Nadella, Chairman and CEO of Microsoft, recently announced the addition of
 - **Availability on Windows via Foundry Local**: Leveraging Foundry Local, organizations can also run these generative AI models on Windows, supporting scenarios where computation and inference must happen on-premises or in hybrid configurations.
 - **Hybrid AI Architecture**: This integration supports hybrid AI deployments, giving enterprises flexibility to combine different models according to requirements and manage their operational costs and data locality efficiently.
 - **Practical Benefits**:
-    - **Model Choice and Flexibility**: Users may select from a set of open-source and proprietary models, tailoring AI workloads to specific performance and cost needs.
-    - **Data Sovereignty and Security**: Enables data to remain on-premises where required, addressing regulatory and compliance considerations.
-    - **Cost Optimization**: Organizations can optimize their AI workflows for cost by selecting the right compute and model hosting options.
+  - **Model Choice and Flexibility**: Users may select from a set of open-source and proprietary models, tailoring AI workloads to specific performance and cost needs.
+  - **Data Sovereignty and Security**: Enables data to remain on-premises where required, addressing regulatory and compliance considerations.
+  - **Cost Optimization**: Organizations can optimize their AI workflows for cost by selecting the right compute and model hosting options.
 
 ### Community and Industry Reception
 

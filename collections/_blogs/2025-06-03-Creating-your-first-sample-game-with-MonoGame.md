@@ -102,9 +102,9 @@ This post introduces the [MonoGame](https://monogame.net/) framework—an open-s
   ```
 
 - *Game1.cs* sets up graphics device, sprite batch, and core override methods:
-    - `Initialize()`, `LoadContent()`, `Update()`, `Draw()`
-    - Responds to Escape key or Back button to exit
-    - Fills the screen with Cornflower Blue as the default background
+  - `Initialize()`, `LoadContent()`, `Update()`, `Draw()`
+  - Responds to Escape key or Back button to exit
+  - Fills the screen with Cornflower Blue as the default background
 
 ## Running the Sample
 

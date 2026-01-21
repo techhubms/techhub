@@ -23,7 +23,7 @@ Randy Pagels compares GitHub Copilot's inline code suggestions with chatbot-base
 
 # Copilot vs. Chat: Sidekick Showdown
 
-*By Randy Pagels (randy.pagels@xebia.com), posted on Jul 11, 2025*
+*By Randy Pagels (<randy.pagels@xebia.com>), posted on Jul 11, 2025*
 
 ## Introduction
 

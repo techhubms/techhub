@@ -76,7 +76,7 @@ You can replace standard confirm dialogs with SweetAlert modals for better clari
      Delete Important Stuff
    </button>
    ```
-   
+
    The `confirm-with-sweet-alert` attribute is optional—use it if you want to selectively apply SweetAlert only to certain actions. Otherwise, the event handler can intercept all requests globally.
 
 3. **Write an event handler for selective confirmation**

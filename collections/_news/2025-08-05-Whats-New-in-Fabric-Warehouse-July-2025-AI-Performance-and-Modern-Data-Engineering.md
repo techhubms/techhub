@@ -115,11 +115,11 @@ The July 2025 Fabric Warehouse update highlights quality improvements, major per
 
 ### Next Steps
 
-- **Try Microsoft Fabric for Free:** https://aka.ms/tryfabric
+- **Try Microsoft Fabric for Free:** <https://aka.ms/tryfabric>
 - **Community & Feedback:** Join the [Fabric Community](https://community.fabric.microsoft.com/) or Reddit ([/r/MicrosoftFabric](https://www.reddit.com/r/MicrosoftFabric)) to share ideas.
 
 ---
 
-#### For full documentation and feature links, refer to the original [Microsoft Fabric Blog post](https://blog.fabric.microsoft.com/en-us/blog/whats-new-in-fabric-warehouse-july-2025/).
+#### For full documentation and feature links, refer to the original [Microsoft Fabric Blog post](https://blog.fabric.microsoft.com/en-us/blog/whats-new-in-fabric-warehouse-july-2025/)
 
 This post appeared first on "Microsoft Fabric Blog". [Read the entire article here](https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-july-2025/)

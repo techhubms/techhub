@@ -48,23 +48,23 @@ This Microsoft Ignite 2025 session highlights the transformation of security ope
 ### Session Highlights
 
 - **Microsoft’s Secure Future Initiative and Internal Learnings**
-    - Insights into Microsoft's evolving security strategy
+  - Insights into Microsoft's evolving security strategy
 - **Attack Disruption & Predictive Attack Path Prevention**
-    - How Microsoft Defender integrates predictive disruption
+  - How Microsoft Defender integrates predictive disruption
 - **Advanced Threat Hunting**
-    - Interactive experiences and empowering security analysts
+  - Interactive experiences and empowering security analysts
 - **Predictive SOC Technology Investments**
-    - Future-focused predictive models and enterprise graph integrations
+  - Future-focused predictive models and enterprise graph integrations
 - **Microsoft Sentinel Innovations**
-    - Data lake and enterprise graph for scalable cyber risk modeling
-    - Real-world case: Nationwide’s Sentinel implementation
+  - Data lake and enterprise graph for scalable cyber risk modeling
+  - Real-world case: Nationwide’s Sentinel implementation
 - **Role-Based AI Agent Strategy with Security Copilot**
-    - Streamlining security tasks with AI-powered agents
+  - Streamlining security tasks with AI-powered agents
 - **Partner GTM Resources & Incentives**
-    - Practical guidance on leveraging Microsoft incentives, specialization, immersion briefings, and deployment accelerators
-    - Links to official resources for partners ([Specialization](https://partner.microsoft.com/en-us/partnership/specialization/#tab-6), [Immersion Briefings](https://microsoftpartners.microsoft.com/Microsoft-Security-Partners/Immersion-Briefings/), [Incentives Guide](https://aka.ms/incentivesguide), [Envisioning Workshops](https://microsoftpartners.microsoft.com/Microsoft-Security-Partners/Envisioning-Workshops/), [Deployment Accelerators](https://microsoftpartners.microsoft.com/Microsoft-Security-Partners/Deployment-Accelerators/))
+  - Practical guidance on leveraging Microsoft incentives, specialization, immersion briefings, and deployment accelerators
+  - Links to official resources for partners ([Specialization](https://partner.microsoft.com/en-us/partnership/specialization/#tab-6), [Immersion Briefings](https://microsoftpartners.microsoft.com/Microsoft-Security-Partners/Immersion-Briefings/), [Incentives Guide](https://aka.ms/incentivesguide), [Envisioning Workshops](https://microsoftpartners.microsoft.com/Microsoft-Security-Partners/Envisioning-Workshops/), [Deployment Accelerators](https://microsoftpartners.microsoft.com/Microsoft-Security-Partners/Deployment-Accelerators/))
 - **Business Premium & SMB Security Offerings**
-    - Strategies for different customer sizes; Second Win Formula for SMB and Business Premium clients
+  - Strategies for different customer sizes; Second Win Formula for SMB and Business Premium clients
 
 ### Real-World Successes
 

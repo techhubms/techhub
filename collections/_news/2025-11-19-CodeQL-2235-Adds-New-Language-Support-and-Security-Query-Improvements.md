@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-19-codeql-2-23-5-adds-support-for-swift-6-2-new-java-queries-and-improved-analysis-accuracy
 title: CodeQL 2.23.5 Adds New Language Support and Security Query Improvements
 author: Allison

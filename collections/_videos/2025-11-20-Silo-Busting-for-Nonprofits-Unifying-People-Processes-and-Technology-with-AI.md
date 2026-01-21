@@ -33,7 +33,7 @@ Presented by Bob Benoit and Colin Corbin at Microsoft Ignite, this session explo
 
 ---
 
-## Introduction: Overcoming Siloed Environments in Nonprofits   
+## Introduction: Overcoming Siloed Environments in Nonprofits
 
 AI adoption in nonprofits often fails to take off—not for lack of vision, but due to fragmented data environments, siloed teams, and uneven digital readiness. This session addresses those challenges and explores how strategic training and process alignment can accelerate transformation.
 

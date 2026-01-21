@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-great-engineers-make-architectural-decisions-adrs-trade-offs/ba-p/4463013
 title: How Great Engineers Make Architectural Decisions — ADRs, Trade-offs, and an ATAM-Lite Checklist
 author: Antony_nganga
@@ -108,7 +108,7 @@ Consequences:
 - Improved read latency and reduced RU/s cost
 - Risk of data staleness during cache invalidation
 - Added operational complexity
-Links: PR#3421, Design Doc #204, Azure Monitor dashboard
+Links: PR#3421, Design DoC#204, Azure Monitor dashboard
 ```
 
 ### Decision Matrix Example

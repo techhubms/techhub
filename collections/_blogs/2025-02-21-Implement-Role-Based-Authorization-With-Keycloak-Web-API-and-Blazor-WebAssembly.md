@@ -44,11 +44,11 @@ If you haven’t read the previous article on [Keycloak authentication with ASP.
 - Navigate to your Keycloak admin console.
 - Select the `BlazorWebApiRealm` realm.
 - Under the “Realm roles” menu, create roles:
-    - `Administrator`
-    - `Visitor`
+  - `Administrator`
+  - `Visitor`
 - Assign these roles to users as needed:
-    - Go to the **Users** menu, select a user.
-    - Under the **Role mapping** tab, assign roles (e.g., assign `Administrator` to your admin user).
+  - Go to the **Users** menu, select a user.
+  - Under the **Role mapping** tab, assign roles (e.g., assign `Administrator` to your admin user).
 
 ![Creating Roles With Keycloak](https://code-maze.com/wp-content/uploads/2025/02/Creating-Roles-With-Keycloack.png)
 
@@ -79,10 +79,10 @@ However, for better compatibility with Blazor and .NET, a role claim mapping is 
 
 - In Keycloak, under **Client Scopes**, locate the `roles` scope.
 - Go to the **Mappers** tab, select `realm roles` mapper, and change settings:
-    - **Token Claim Name**: `role` (Blazor expects `role`, not `roles`)
-    - **Add to ID Token**: Yes
-    - **Add to Access Token** and **Multivalued**: Already set to Yes
-    - **Add to UserInfo**: Yes
+  - **Token Claim Name**: `role` (Blazor expects `role`, not `roles`)
+  - **Add to ID Token**: Yes
+  - **Add to Access Token** and **Multivalued**: Already set to Yes
+  - **Add to UserInfo**: Yes
 
 This ensures roles are properly mapped to the OIDC token for client-side processing.
 

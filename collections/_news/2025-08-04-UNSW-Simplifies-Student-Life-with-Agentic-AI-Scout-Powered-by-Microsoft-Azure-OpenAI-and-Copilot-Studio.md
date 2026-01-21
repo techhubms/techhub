@@ -79,8 +79,8 @@ The pilot expanded from 1,000 to 7,500 students due to positive results. Notable
 - 58% of Scout usage occurs outside normal hours, bridging support gaps and reducing staff pressure
 - Routine testing has shown no issues with accuracy among surveyed students
 - Students are enthusiastic about expanded capabilities, such as:
-    - Course recommendations tailored to career goals
-    - Suggestions for prerequisite or complementary subjects
+  - Course recommendations tailored to career goals
+  - Suggestions for prerequisite or complementary subjects
 
 ## Benefits to Lecturers and Academics
 

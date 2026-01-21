@@ -78,8 +78,8 @@ This episode from Microsoft Developer introduces the Azure AI Foundry Translator
 - **Sample code**: [Get the code](https://aka.ms/insideAIF/code)
 - **API Documentation**: [Translator API](https://aka.ms/insideAIF/translator-API)
 - **Community**:
-    - [Discord](https://aka.ms/insideAIF/discord)
-    - [Forum](https://aka.ms/insideAIF/forum)
+  - [Discord](https://aka.ms/insideAIF/discord)
+  - [Forum](https://aka.ms/insideAIF/forum)
 
 ## Practical Use Cases
 

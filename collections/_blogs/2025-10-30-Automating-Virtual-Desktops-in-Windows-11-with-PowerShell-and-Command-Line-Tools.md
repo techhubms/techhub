@@ -59,38 +59,38 @@ Windows 11 lacks native command-line tools for virtual desktop management, but c
   ```
 
 - Core commands:
-    - **Create new desktop:**
+  - **Create new desktop:**
 
       ```powershell
       New-Desktop
       ```
 
-    - **List desktops:**
+  - **List desktops:**
 
       ```powershell
       Get-Desktop
       ```
 
-    - **Switch desktops:**
+  - **Switch desktops:**
 
       ```powershell
       (Get-Desktop | Select-Object -First 1).Switch()
       ```
 
-    - **Move window between desktops:**
+  - **Move window between desktops:**
 
       ```powershell
       Move-WindowToDesktop -Desktop (Get-Desktop | Select-Object -Last 1)
       ```
 
-    - **Rename desktops:**
+  - **Rename desktops:**
 
       ```powershell
       (Get-Desktop)[0].Name = "Work"
       (Get-Desktop)[1].Name = "Research"
       ```
 
-    - **Remove a desktop:**
+  - **Remove a desktop:**
 
       ```powershell
       (Get-Desktop | Select-Object -Last 1).Remove()

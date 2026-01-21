@@ -197,10 +197,12 @@ async def get_response_from_agent(message, history):
 
 **Web Automation:**
 > User: “Navigate to github.com/microsoft and take a screenshot”
+>
 > - Routed to Playwright Agent via A2A, which automates browser and returns results
 
 **Development Workflow:**
-> User: “Clone https://github.com/microsoft/semantic-kernel and open it in VS Code”
+> User: “Clone <https://github.com/microsoft/semantic-kernel> and open it in VS Code”
+>
 > - Routed to Tool Agent, which coordinates git clone and IDE operations
 
 See the [sample on GitHub](https://github.com/a2aproject/a2a-samples/blob/main/samples/python/agents/azureaifoundry_sdk/multi_agent/README.md)

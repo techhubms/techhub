@@ -44,20 +44,20 @@ Microsoft Ignite 2025 brought together experts to address the new security lands
 ## Key Discussion Points
 
 - **Blind Spots in Cloud AI Workloads**
-    - Attackers exploit east-west traffic, encrypted communications, and limited visibility to move laterally and evade detection.
-    - Compliance risks escalate as traditional monitoring falls short in dynamic cloud and AI scenarios.
+  - Attackers exploit east-west traffic, encrypted communications, and limited visibility to move laterally and evade detection.
+  - Compliance risks escalate as traditional monitoring falls short in dynamic cloud and AI scenarios.
 
 - **Network Security Evolution**
-    - Overview of connectivity trends: SD-WAN, VPN, and Virtual WAN architectures.
-    - Introduction to corporate gateways and application-level access controls for AI workloads.
+  - Overview of connectivity trends: SD-WAN, VPN, and Virtual WAN architectures.
+  - Introduction to corporate gateways and application-level access controls for AI workloads.
 
 - **AI-Specific Attack Vectors**
-    - Generative AI and LLMs bring new vulnerabilities and require adapted security postures.
-    - Existing firewall and Web Application Firewall (WAF) protections can still mitigate risks for Gen AI APIs.
+  - Generative AI and LLMs bring new vulnerabilities and require adapted security postures.
+  - Existing firewall and Web Application Firewall (WAF) protections can still mitigate risks for Gen AI APIs.
 
 - **Practical Demonstration**
-    - Live setup using Check Point CloudGuard Network Security within Microsoft Azure.
-    - Integration of CNAPP (Cloud-Native Application Protection Platform) supporting 70+ solutions to enhance Azure AI security.
+  - Live setup using Check Point CloudGuard Network Security within Microsoft Azure.
+  - Integration of CNAPP (Cloud-Native Application Protection Platform) supporting 70+ solutions to enhance Azure AI security.
 
 ## Recommended Practices
 

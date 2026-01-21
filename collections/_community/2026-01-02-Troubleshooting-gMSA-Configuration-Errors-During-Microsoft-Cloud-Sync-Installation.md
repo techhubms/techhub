@@ -76,6 +76,6 @@ Despite following common troubleshooting approaches, the installation error pers
 - Ensure all required AD modules and PowerShell cmdlets are using compatible versions
 - Review Microsoft documentation for any newly published requirements or bug reports regarding group writeback and Cloud Sync
 
-### Community feedback, successful configurations, or additional troubleshooting tests are highly encouraged.
+### Community feedback, successful configurations, or additional troubleshooting tests are highly encouraged
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/azure/issue-with-gmsa-when-installing-cloud-sync/m-p/4482486#M22398)

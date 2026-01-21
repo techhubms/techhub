@@ -61,8 +61,8 @@ Generative AI tools have the potential to greatly accelerate code writing, but t
 
 **References:**
 
-- Atlassian DX guide to AI-assisted engineering: https://getdx.com/guide/ai-assisted-engineering/
-- LaunchDarkly AI control gap report: https://launchdarkly.com/ai-control-gap/
+- Atlassian DX guide to AI-assisted engineering: <https://getdx.com/guide/ai-assisted-engineering/>
+- LaunchDarkly AI control gap report: <https://launchdarkly.com/ai-control-gap/>
 - Google DORA Reports
 
 ---

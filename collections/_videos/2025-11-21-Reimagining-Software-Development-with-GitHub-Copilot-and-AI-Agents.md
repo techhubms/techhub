@@ -49,10 +49,10 @@ This session demonstrates how organizations with robust DevOps practices can max
 
 - **Impact of Coding Agents**: Productivity and workflow improvements across Microsoft and GitHub
 - **Demos**:
-    - Cross-device developer experiences with AI agents
-    - Using GitHub Mission Control for managing cloud-based agent tasks
-    - SRE agents automatically responding to incidents
-    - Automating PR feedback and implementation
+  - Cross-device developer experiences with AI agents
+  - Using GitHub Mission Control for managing cloud-based agent tasks
+  - SRE agents automatically responding to incidents
+  - Automating PR feedback and implementation
 - **Security & Controls**: Deep dive into Copilot controls and MCP registry options
 - **Enterprise Considerations**: Permissions, deployment strategies, and future directions for collaboration between GitHub and Azure DevOps
 

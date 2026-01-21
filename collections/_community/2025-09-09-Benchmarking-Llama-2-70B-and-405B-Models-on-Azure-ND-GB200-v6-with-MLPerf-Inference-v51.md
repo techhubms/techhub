@@ -60,7 +60,9 @@ This guide covers Azure's MLPerf Inference v5.1 benchmarking results for the lat
 3. **Clone MLPerf Repo**:
 
    ```bash
-git clone https://github.com/mlcommons/submissions_inference_v5.1 $MLPERF_SCRATCH_PATH
+
+git clone <https://github.com/mlcommons/submissions_inference_v5.1> $MLPERF_SCRATCH_PATH
+
    ```
 
 ### Downloading Models and Datasets
@@ -82,7 +84,7 @@ git clone https://github.com/mlcommons/submissions_inference_v5.1 $MLPERF_SCRATC
    export SUBMITTER=Azure SYSTEM_NAME=ND_GB200_v6
    ```
 
-2. **Build MLPerf Container:**
+1. **Build MLPerf Container:**
    - Navigate to the closed/Azure directory and execute:
 
      ```bash
@@ -90,7 +92,7 @@ git clone https://github.com/mlcommons/submissions_inference_v5.1 $MLPERF_SCRATC
      make build
      ```
 
-3. **Build Engines and Run Benchmarks:**
+2. **Build Engines and Run Benchmarks:**
    - Build engines for Llama models:
 
      ```bash

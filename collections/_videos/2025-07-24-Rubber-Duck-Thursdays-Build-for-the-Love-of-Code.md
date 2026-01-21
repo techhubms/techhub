@@ -28,7 +28,7 @@ Rubber Duck Thursdays, organized by GitHub, is a recurring livestream dedicated 
 
 ## What to Expect
 
-- **Live Coding on Projects:** Each stream focuses on projects sourced from the 'love of code' list (https://gh.io/love-of-code). The hosts and audience members explore, discuss, and build new ideas together.
+- **Live Coding on Projects:** Each stream focuses on projects sourced from the 'love of code' list (<https://gh.io/love-of-code>). The hosts and audience members explore, discuss, and build new ideas together.
 - **Idea Generation:** Participants chat about various fun and innovative concepts, selecting projects that intrigue the community for live development.
 - **Collaborative Environment:** The atmosphere is relaxed and welcoming, encouraging viewer interaction, questions, and suggestions. Whether you are an experienced developer or a beginner, the streams aim to include everyone.
 - **Learning Opportunity:** By watching the coding process live, viewers gain insights into coding practices, problem-solving, and collaborative development—perfect for those looking to learn or get inspired.

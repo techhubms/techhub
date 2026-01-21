@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=l7q6w6eICgw
 title: Securing AI Deployments with HashiCorp Vault & Azure
 author: Microsoft Developer
@@ -102,4 +102,4 @@ This episode addresses "last-mile" automation and security challenges for produc
 
 ## Hashtags
 
-# SipAndSync #HashiCorpVault #Azure #AI #DevOps #Terraform #Security #CloudComputing #VaultRadar #Kubernetes #AzureVerifiedModules #AIProduction #ConfusedDeputy
+# SipAndSynC#HashiCorpVault #Azure #AI #DevOps #Terraform #Security #CloudComputing #VaultRadar #Kubernetes #AzureVerifiedModules #AIProduction #ConfusedDeputy

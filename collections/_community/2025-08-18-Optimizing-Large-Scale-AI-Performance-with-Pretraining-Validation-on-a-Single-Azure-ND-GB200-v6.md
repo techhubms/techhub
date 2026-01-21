@@ -108,8 +108,8 @@ Small inefficiencies in VM configuration can cause significant performance losse
 
 For more on model validation and infrastructure benchmarking, visit the [Azure High Performance Computing (HPC) Blog](/category/azure/blog/azurehighperformancecomputingblog).
 
-_Updated Aug 18, 2025_
+*Updated Aug 18, 2025*
 
-_Author: Hugo Affaticati, Microsoft. Contributor: Mishty Dhekial._
+*Author: Hugo Affaticati, Microsoft. Contributor: Mishty Dhekial.*
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimizing-large-scale-ai-performance-with-pretraining/ba-p/4445273)

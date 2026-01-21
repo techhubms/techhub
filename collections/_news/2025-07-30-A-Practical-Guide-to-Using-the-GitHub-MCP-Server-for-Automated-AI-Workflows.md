@@ -168,6 +168,6 @@ GitHub's managed MCP server minimizes infrastructure management, letting you foc
 
 ---
 
-*“The best infrastructure is the infrastructure you don’t have to manage.”*
+_“The best infrastructure is the infrastructure you don’t have to manage.”_
 
 This post appeared first on "The GitHub Blog". [Read the entire article here](https://github.blog/ai-and-ml/generative-ai/a-practical-guide-on-how-to-use-the-github-mcp-server/)

@@ -62,28 +62,28 @@ Stay up to date with all the significant changes and new features rolled out to 
 - **Durable Functions Orchestration Versioning**: Best practices for version handling when orchestrating complex workflows.
 - **Azure Functions Kafka Triggers**: Now support direct event-driven integration for Kafka, broadening event source options for serverless workloads.
 - **AKS (Azure Kubernetes Service) Enhancements**:
-    - Node auto-provisioning
-    - VM node pool options
-    - Simplified migration commands
-    - Maximum blocked nodes configuration
-    - Extension manager now controlled from the AKS control plane
+  - Node auto-provisioning
+  - VM node pool options
+  - Simplified migration commands
+  - Maximum blocked nodes configuration
+  - Extension manager now controlled from the AKS control plane
 - **Networking**:
-    - HOBO public IP for ExpressRoute Gateway
-    - AFD (classic) and Azure CDN (classic) onboarding retirements
+  - HOBO public IP for ExpressRoute Gateway
+  - AFD (classic) and Azure CDN (classic) onboarding retirements
 - **Storage and Data**:
-    - Major update to BlobNFS (NFS support for Azure Blob Storage)
-    - Event Hub geo-replication for higher availability
-    - SSD storage for ephemeral OS disks
-    - Cosmos DB integration with Microsoft Fabric
-    - Databricks Unity Catalog support for Fabric OneLake storage
-    - PostgreSQL Flexible Server availability in new regions
+  - Major update to BlobNFS (NFS support for Azure Blob Storage)
+  - Event Hub geo-replication for higher availability
+  - SSD storage for ephemeral OS disks
+  - Cosmos DB integration with Microsoft Fabric
+  - Databricks Unity Catalog support for Fabric OneLake storage
+  - PostgreSQL Flexible Server availability in new regions
 - **Backup and Security**:
-    - Migrations from standard to enhanced backup policies
-    - Trusted launch support added to standard backup
-    - Premium SSD backup gains GRS and CRR in more regions
-    - Azure Cloud Hardware Security Module (HSM) news
+  - Migrations from standard to enhanced backup policies
+  - Trusted launch support added to standard backup
+  - Premium SSD backup gains GRS and CRR in more regions
+  - Azure Cloud Hardware Security Module (HSM) news
 - **AI and Platform Changes**:
-    - Azure AI Speaker Recognition retirement notice
+  - Azure AI Speaker Recognition retirement notice
 
 ## Further Learning
 

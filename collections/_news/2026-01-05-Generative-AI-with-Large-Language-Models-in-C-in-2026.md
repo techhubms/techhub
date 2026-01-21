@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/generative-ai-with-large-language-models-in-dotnet-and-csharp/
 title: Generative AI with Large Language Models in C# in 2026
 author: Jeremy Likness

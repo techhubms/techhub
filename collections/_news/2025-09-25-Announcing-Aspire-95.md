@@ -50,9 +50,9 @@ Aspire 9.5 introduces major enhancements for developers building distributed app
 
 - Improved Aspire CLI for a better developer workflow
 - **Single-File AppHost (Preview):**
-    - Supports defining distributed applications in a single `apphost.cs` file
-    - Reduces startup complexity—no project file needed
-    - Requires .NET SDK 10.0.100 RC1 or later and enabling feature flags
+  - Supports defining distributed applications in a single `apphost.cs` file
+  - Reduces startup complexity—no project file needed
+  - Requires .NET SDK 10.0.100 RC1 or later and enabling feature flags
 - Example:
 
     ```bash

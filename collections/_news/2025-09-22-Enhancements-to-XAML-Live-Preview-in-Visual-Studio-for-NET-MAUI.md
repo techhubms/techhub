@@ -50,11 +50,11 @@ The XAML Live Preview feature in Visual Studio 2022 version 17.14 introduces a m
 ## Getting Started
 
 - **Supported versions:**
-    - Visual Studio 2022 version 17.14
-    - Visual Studio 2026 Insiders release
+  - Visual Studio 2022 version 17.14
+  - Visual Studio 2026 Insiders release
 - **Documentation & video:**
-    - [Official XAML Live Preview Documentation](https://learn.microsoft.com/visualstudio/xaml-tools/xaml-live-preview)
-    - [Feature walkthrough video](https://devblogs.microsoft.com/visualstudio/wp-content/uploads/sites/4/2025/09/25166_MauiAgentVS2026_v2.mp4)
+  - [Official XAML Live Preview Documentation](https://learn.microsoft.com/visualstudio/xaml-tools/xaml-live-preview)
+  - [Feature walkthrough video](https://devblogs.microsoft.com/visualstudio/wp-content/uploads/sites/4/2025/09/25166_MauiAgentVS2026_v2.mp4)
 
 These enhancements provide a faster, more visual workflow for .NET MAUI developers, leveraging both manual tools and GitHub Copilot’s AI capabilities for a modern, productive experience.
 

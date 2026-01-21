@@ -53,7 +53,7 @@ It appears that ARM templates do not natively support establishing a `dependsOn`
    ```json
    "[if(greater(copyIndex(), 0), concat('Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/', parameters('protectedItemsArray')[sub(copyIndex(), 1)].vaultName, '/Azure/', variables('containerSuffix'), ';', parameters('protectedItemsArray')[sub(copyIndex(), 1)].storageAccountResourceGroup, ';', parameters('protectedItemsArray')[sub(copyIndex(), 1)].storageAccountName, '/AzureFileShare;', parameters('protectedItemsArray')[sub(copyIndex(), 1)].fileShareName), json('[]'))]"
    ```
-   
+
    **Failure:** This approach fails because `json('[]')` returns an array whereas a resource ID string is expected.
 
 2. **Using `json(null())` or Empty String:**
@@ -61,11 +61,11 @@ It appears that ARM templates do not natively support establishing a `dependsOn`
    ```json
    "[if(greater(copyIndex(), 0), concat(...), json(null()))]"
    ```
-   
+
    **Failure:** `json(null())` is invalid for this context.
 
 3. **Returning `json('[]')`, `json('')`, or `string('')`:**
-   
+
    All these variants result in validation errors because ARM requires a valid string for a resource ID in `dependsOn`, not an array or an empty value.
 
 #### Questions for the Community

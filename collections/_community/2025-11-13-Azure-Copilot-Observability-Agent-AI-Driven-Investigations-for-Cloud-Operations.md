@@ -72,7 +72,7 @@ Cloud environments demand intelligent, scalable observability solutions. The Azu
 
 ## Feedback
 
-Microsoft encourages user feedback via azmoninvestigation@microsoft.com and the product feedback form.
+Microsoft encourages user feedback via <azmoninvestigation@microsoft.com> and the product feedback form.
 
 ---
 **Author:** EfratNauerman

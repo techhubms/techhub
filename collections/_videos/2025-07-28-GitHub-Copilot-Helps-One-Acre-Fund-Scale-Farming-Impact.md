@@ -51,13 +51,13 @@ The video highlights how One Acre Fund is harnessing technology to realize their
 
 To explore more about how GitHub and Copilot are being used to drive meaningful change across industries, check out:
 
-- YouTube: http://bit.ly/subgithub
-- Blog: https://github.blog
-- Twitter (X): https://twitter.com/github
-- LinkedIn: https://linkedin.com/company/github
-- Instagram: https://www.instagram.com/github
-- TikTok: https://www.tiktok.com/@github
-- Facebook: https://www.facebook.com/GitHub/
+- YouTube: <http://bit.ly/subgithub>
+- Blog: <https://github.blog>
+- Twitter (X): <https://twitter.com/github>
+- LinkedIn: <https://linkedin.com/company/github>
+- Instagram: <https://www.instagram.com/github>
+- TikTok: <https://www.tiktok.com/@github>
+- Facebook: <https://www.facebook.com/GitHub/>
 
 ## Learn More
 

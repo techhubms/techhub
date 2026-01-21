@@ -46,7 +46,7 @@ While Copilot may respond to these, the responses often lack quality or miss the
 
 ---
 
-## Pro Tip: Be Specific!
+## Pro Tip: Be Specific
 
 To make the most of Copilot, be detailed in your prompts. Here are ways to provide the needed context:
 

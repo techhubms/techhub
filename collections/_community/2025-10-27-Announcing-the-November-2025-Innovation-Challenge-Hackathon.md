@@ -73,7 +73,7 @@ This is the sixth iteration of the Innovation Challenge. The program has created
 - [Innovation Challenge YouTube playlist](https://www.youtube.com/playlist?list=PLtvmFy4Ed_DKO2Xj4JimhyfXFLPhcvSeW)
 - Past winners from [June 2025](https://techcommunity.microsoft.com/discussions/azure/announcing-the-winners-of-the-june-innovation-challenge/4427978), [March 2025](https://techcommunity.microsoft.com/discussions/azure/announcing-the-winners-of-the-march-innovation-challenge-hackathon/4398522), [December 2024](https://techcommunity.microsoft.com/discussions/azure/announcing-the-winners-of-the-december-2024-innovation-challenge/4360908), and [October 2024](https://techcommunity.microsoft.com/discussions/azure/announcing-the-winners-of-the-october-innovation-challenge-hackathon/4296922).
 
-## Get Involved!
+## Get Involved
 
 If you meet the eligibility criteria and are passionate about using Azure and AI to solve real-world problems, consider reaching out to join the upcoming Innovation Challenge Hackathon.
 

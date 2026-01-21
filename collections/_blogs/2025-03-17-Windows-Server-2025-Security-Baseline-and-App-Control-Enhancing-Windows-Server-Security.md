@@ -57,10 +57,10 @@ This in-depth article presents a conversation between Thomas Maurer and Carlos M
   The discussion highlights approaches and tools that help ensure robust server security, from leveraging built-in Windows Server controls to integrating with Microsoft's cloud management solutions.
 
 - **Demos & Practical Guidance**:
-  The video component, referenced in the article, walks viewers through:    
-    - How to deploy and manage the Windows Server 2025 Security Baseline.    
-    - Using App Control to restrict unauthorized applications.    
-    - Streamlining configuration via PowerShell scripts and Windows Admin Center.
+  The video component, referenced in the article, walks viewers through:
+  - How to deploy and manage the Windows Server 2025 Security Baseline.
+  - Using App Control to restrict unauthorized applications.
+  - Streamlining configuration via PowerShell scripts and Windows Admin Center.
 
 ## Why These Features Matter
 

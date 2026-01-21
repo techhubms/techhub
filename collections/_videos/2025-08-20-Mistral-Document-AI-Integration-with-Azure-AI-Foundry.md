@@ -70,8 +70,8 @@ In this episode, April demonstrates the capabilities of the Mistral Document AI 
 - Explore Azure AI Foundry: [ai.azure.com](https://ai.azure.com)
 - Learn more about Mistral Document AI: [Documentation](https://aka.ms/insideAIF/mistral-document-AI)
 - Join the community:
-   - Discord: [insideAIF/discord](https://aka.ms/insideAIF/discord)
-   - Forum: [insideAIF/forum](https://aka.ms/insideAIF/forum)
+  - Discord: [insideAIF/discord](https://aka.ms/insideAIF/discord)
+  - Forum: [insideAIF/forum](https://aka.ms/insideAIF/forum)
 
 ---
 

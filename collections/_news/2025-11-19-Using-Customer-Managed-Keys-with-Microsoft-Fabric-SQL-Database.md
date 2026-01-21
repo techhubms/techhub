@@ -42,9 +42,9 @@ Microsoft Fabric has rolled out Customer-Managed Keys (CMK) in SQL Database, giv
 - **Key Ownership and Rotation**: Organizations can manage their own keys, rotate them as needed, and customize access policies.
 - **Granular Access Management & Auditability**: Full control over who accesses encryption keys and detailed tracking of key usage.
 - **Transparent Data Encryption (TDE)**: Automatically enabled when CMK is configured in a Fabric workspace. This covers:
-   - Real-time encryption of databases, backups, and transaction logs.
-   - Page-level encryption using a symmetric DEK.
-   - DEK protected by customer-managed asymmetric key from Azure Key Vault.
+  - Real-time encryption of databases, backups, and transaction logs.
+  - Page-level encryption using a symmetric DEK.
+  - DEK protected by customer-managed asymmetric key from Azure Key Vault.
 - **Automatic Activation**: No manual steps required—encryption applies to existing/new databases in the Fabric workspace.
 
 ## What Customers Are Saying

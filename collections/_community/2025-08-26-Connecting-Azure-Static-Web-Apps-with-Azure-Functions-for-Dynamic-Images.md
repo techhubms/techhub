@@ -126,7 +126,7 @@ When you deploy both static and Functions code together with Azure Static Web Ap
 
 ## Troubleshooting Checklist
 
-- Double check all backend endpoints work directly (e.g., http://localhost:7071/api/image/123).
+- Double check all backend endpoints work directly (e.g., <http://localhost:7071/api/image/123>).
 - Confirm your staticwebapp.config.json matches your deployed folders and routes.
 - During local development, use the SWA CLI for a seamless dev experience.
 

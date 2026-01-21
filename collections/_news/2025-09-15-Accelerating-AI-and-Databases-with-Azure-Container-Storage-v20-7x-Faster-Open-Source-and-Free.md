@@ -95,7 +95,7 @@ Key features include:
 - **Open-Source Usage?** [GitHub repository](https://github.com/Azure/local-csi-driver).
 - **More information:** Find out about [AKS storage integration](https://learn.microsoft.com/en-us/azure/aks/azure-disk-csi) and [Azure Arc support](https://learn.microsoft.com/en-us/azure/azure-arc/container-storage/).
 
-For questions or feedback, contact the Azure team at AskContainerStorage@microsoft.com.
+For questions or feedback, contact the Azure team at <AskContainerStorage@microsoft.com>.
 
 ## Visual Benchmarks
 

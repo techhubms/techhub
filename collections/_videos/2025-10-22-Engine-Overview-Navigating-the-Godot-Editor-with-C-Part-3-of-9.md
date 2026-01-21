@@ -59,12 +59,12 @@ In this episode of our Godot C# training series, we give you a guided tour of th
 
 ## Connect with .NET
 
-- Blog: https://aka.ms/dotnet/blog
-- Twitter: https://aka.ms/dotnet/twitter
-- Docs: https://learn.microsoft.com/dotnet
-- Forums: https://aka.ms/dotnet/forums
-- Q&A: https://aka.ms/dotnet-qa
-- Microsoft Learn: https://aka.ms/learndotnet
+- Blog: <https://aka.ms/dotnet/blog>
+- Twitter: <https://aka.ms/dotnet/twitter>
+- Docs: <https://learn.microsoft.com/dotnet>
+- Forums: <https://aka.ms/dotnet/forums>
+- Q&A: <https://aka.ms/dotnet-qa>
+- Microsoft Learn: <https://aka.ms/learndotnet>
 
 **Author:** dotnet
 

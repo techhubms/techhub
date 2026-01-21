@@ -44,17 +44,17 @@ MCP is an open protocol that enables AI assistants to securely access and intera
 ## Session Highlights
 
 - **Core Concepts**:
-    - *Resources*: Defining what your app or service makes available to AI systems (APIs, data sources, actions).
-    - *Tools*: Components that AI assistants use to connect with resources.
-    - *Prompts*: Mechanisms for AI to discover and utilize resources effectively.
+  - *Resources*: Defining what your app or service makes available to AI systems (APIs, data sources, actions).
+  - *Tools*: Components that AI assistants use to connect with resources.
+  - *Prompts*: Mechanisms for AI to discover and utilize resources effectively.
 - **MCP Server Lifecycle**:
     1. Designing and defining resources with proper metadata
     2. Implementing endpoints to publish those resources
     3. Enabling discovery and secure access for AI assistants
 - **Live Walkthrough**:
-    - Building a simple MCP server using Visual Studio
-    - Demonstrating server configuration for exposing APIs or databases
-    - Overview of testing and validating MCP integrations
+  - Building a simple MCP server using Visual Studio
+  - Demonstrating server configuration for exposing APIs or databases
+  - Overview of testing and validating MCP integrations
 
 ## Why Use MCP?
 

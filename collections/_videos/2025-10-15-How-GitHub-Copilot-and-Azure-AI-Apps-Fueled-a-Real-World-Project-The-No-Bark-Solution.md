@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=UUcdEfk2G7o
 title: "How GitHub Copilot and Azure AI Apps Fueled a Real-World Project: The 'No Bark' Solution"
 author: Microsoft Developer
@@ -92,4 +92,4 @@ Host Govind Kamtamneni sits down with Damian Hasak, the AI Apps GBB Lead at Micr
 
 ## Hashtags
 
-# GitHubCopilot #AzureAI #MachineLearning #AIApps #DogTech #OpenSource #SipAndSync #MicrosoftDeveloper #Azure #AI #CloudComputing #LiveDemo #Tutorial #GitHub #Innovation
+# GitHubCopilot #AzureAI #MachineLearning #AIApps #DogTech #OpenSource #SipAndSynC#MicrosoftDeveloper #Azure #AI #CloudComputing #LiveDemo #Tutorial #GitHub #Innovation

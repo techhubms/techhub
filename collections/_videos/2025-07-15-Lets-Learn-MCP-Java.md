@@ -38,7 +38,7 @@ In this video workshop, the Visual Studio Code team introduces the Model Context
     - Key benefits: interoperability, easier integration, and consistency across implementations.
 2. **Demo: Monkey MCP Server in Java**
     - Step-by-step demonstration of building a basic MCP server in Java.
-    - Guide to using the official demo code (available at http://aka.ms/lets-learn-mcp-java).
+    - Guide to using the official demo code (available at <http://aka.ms/lets-learn-mcp-java>).
     - Highlights core MCP concepts as they are implemented in code.
 3. **Q&A Session**
     - Interactive questions from the audience answered by presenters Bruno Borges and Sandra Ahlgrimm.
@@ -46,7 +46,7 @@ In this video workshop, the Visual Studio Code team introduces the Model Context
 ### Additional Resources and Participation
 
 - Links to demo code and further workshops.
-- Option to watch the session in other programming or spoken languages: https://aka.ms/letslearnmcp
+- Option to watch the session in other programming or spoken languages: <https://aka.ms/letslearnmcp>
 - Invitation to register for MCP Dev Days, a related development event.
 
 ### Who Should Watch?

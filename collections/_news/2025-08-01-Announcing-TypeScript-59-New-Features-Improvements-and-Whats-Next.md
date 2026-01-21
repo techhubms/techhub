@@ -85,7 +85,7 @@ console.log(feature.specialConstant); // Module is evaluated at this moment
 
 Named and default imports are not supported with `import defer`.
 
-> _Note:_ `import defer` is not transformed by TypeScript and is meant for runtimes or bundlers that support this feature. It is available under `--module` modes `preserve` and `esnext`.
+> *Note:* `import defer` is not transformed by TypeScript and is meant for runtimes or bundlers that support this feature. It is available under `--module` modes `preserve` and `esnext`.
 
 Implementation championed by [Nicolò Ribaudo](https://github.com/nicolo-ribaudo). [See the pull request.](https://github.com/microsoft/TypeScript/pull/60757)
 

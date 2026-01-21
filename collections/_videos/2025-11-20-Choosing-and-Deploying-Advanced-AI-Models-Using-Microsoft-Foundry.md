@@ -53,23 +53,23 @@ This advanced session from Microsoft Ignite 2025 explores how Microsoft Foundry 
 ## Key Topics Covered
 
 - Introduction to Microsoft Foundry and unified AI framework
-    - Secure, scalable deployment of multiple models
-    - Chapter highlight: Tools for global collaboration, including RF3 for protein modeling
+  - Secure, scalable deployment of multiple models
+  - Chapter highlight: Tools for global collaboration, including RF3 for protein modeling
 - Latest model integrations
-    - Anthropic Claude models now available in Foundry
-    - Cohere models integrated via direct Azure connection
-    - Access to providers like Black Forest Labs, Mistral AI, Meta, xAI
+  - Anthropic Claude models now available in Foundry
+  - Cohere models integrated via direct Azure connection
+  - Access to providers like Black Forest Labs, Mistral AI, Meta, xAI
 - Model Router and API Tools
-    - How the Foundry router intelligently directs requests to the most suitable model based on cost, latency, and accuracy requirements
-    - API utilization and automation examples
+  - How the Foundry router intelligently directs requests to the most suitable model based on cost, latency, and accuracy requirements
+  - API utilization and automation examples
 - Building General-Purpose AI Agents
-    - Leveraging multimodal models for versatile AI agent applications
-    - Workflow architecture and deployment patterns
+  - Leveraging multimodal models for versatile AI agent applications
+  - Workflow architecture and deployment patterns
 - Governance and Responsible AI
-    - Ensuring enterprise-grade security for every workload
-    - Built-in governance practices for responsible usage
+  - Ensuring enterprise-grade security for every workload
+  - Built-in governance practices for responsible usage
 - Scaling AI Adoption
-    - Approaches for organizations to scale AI model use with variety and robust deployment options
+  - Approaches for organizations to scale AI model use with variety and robust deployment options
 
 ## Additional Resources
 

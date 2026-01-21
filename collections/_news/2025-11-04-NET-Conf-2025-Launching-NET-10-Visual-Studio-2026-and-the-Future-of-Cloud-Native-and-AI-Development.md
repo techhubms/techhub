@@ -65,30 +65,30 @@ Jon Galloway previews .NET Conf 2025, spotlighting the release of .NET 10, Visua
 
 - **Keynote:** Led by Scott Hanselman and the .NET/Visual Studio team, covering major features in .NET 10—performance, new APIs, Blazor and ASP.NET Core improvements, C# 14, AI-powered productivity tools, and more.
 - **Breakout Sessions:**
-    - *What's New in C# 14* (Dustin Campbell): Language improvements for code clarity and productivity.
-    - *Performance Improvements in .NET 10* (Stephen Toub): Deep dive into .NET runtime and library enhancements.
-    - *Build Better Web Apps with Blazor in .NET 10* (Daniel Roth): WebAuthN, diagnostics, and UI performance.
-    - *Aspire: Cloud-Native Development Simplified* (Maddy Montaquila, Damian Edwards): Opinionated framework for distributed, observable, production-ready .NET solutions.
-    - *Understanding Agentic Development* (Jeremy Likness): Patterns for building reasoning AI agents using agentic methodologies.
-    - *What’s New in .NET MAUI* (David Ortinau): Improvements for cross-platform UI and mobile.
+  - *What's New in C# 14* (Dustin Campbell): Language improvements for code clarity and productivity.
+  - *Performance Improvements in .NET 10* (Stephen Toub): Deep dive into .NET runtime and library enhancements.
+  - *Build Better Web Apps with Blazor in .NET 10* (Daniel Roth): WebAuthN, diagnostics, and UI performance.
+  - *Aspire: Cloud-Native Development Simplified* (Maddy Montaquila, Damian Edwards): Opinionated framework for distributed, observable, production-ready .NET solutions.
+  - *Understanding Agentic Development* (Jeremy Likness): Patterns for building reasoning AI agents using agentic methodologies.
+  - *What’s New in .NET MAUI* (David Ortinau): Improvements for cross-platform UI and mobile.
 - **Code Party:** Live engagement and community interaction, with opportunities to win prizes.
 
 ### Day Two: Azure, Cloud, and Deep Dives
 
 - **Azure Keynote:** (Scott Hunter, Paul Yuknewicz): Azure Container Apps, Kubernetes Service, Functions, and AI services for .NET developers.
 - **Technical Sessions:**
-    - Building remote MCP servers and integrating Redis with .NET.
-    - Extending Aspire for custom dashboards and advanced integration (David Fowler, Damian Edwards).
-    - Using AI Foundry and Copilot for advanced .NET testing and automation workflows.
-    - Security investigations, NuGet updates, container optimizations, and best practices.
+  - Building remote MCP servers and integrating Redis with .NET.
+  - Extending Aspire for custom dashboards and advanced integration (David Fowler, Damian Edwards).
+  - Using AI Foundry and Copilot for advanced .NET testing and automation workflows.
+  - Security investigations, NuGet updates, container optimizations, and best practices.
 
 ### Day Three: Community Day
 
 - **Live and YouTube Premiere Tracks:**
-    - Clean architecture in ASP.NET Core 10.
-    - Complex migration case studies (e.g., Xamarin.Forms to .NET MAUI).
-    - Observability via OpenTelemetry, security-first development, F# integration, and JSON parser migrations.
-    - Real-world and innovative uses of .NET in domains from IoT to high-performance simulations.
+  - Clean architecture in ASP.NET Core 10.
+  - Complex migration case studies (e.g., Xamarin.Forms to .NET MAUI).
+  - Observability via OpenTelemetry, security-first development, F# integration, and JSON parser migrations.
+  - Real-world and innovative uses of .NET in domains from IoT to high-performance simulations.
 
 ## Student Zone (November 14th)
 

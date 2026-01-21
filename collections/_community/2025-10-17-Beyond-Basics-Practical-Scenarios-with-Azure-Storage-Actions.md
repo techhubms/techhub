@@ -130,6 +130,6 @@ Storage Actions leverages blob tags (`embeddings=true`, `modelVersion=latest`, e
 - [GA announcement blog](https://azure.microsoft.com/en-us/blog/unlock-seamless-data-management-with-azure-storage-actions-now-generally-available/)
 - [Skilling video walkthrough](https://www.youtube.com/watch?v=CNdMFhdiNo8)
 
-For further questions or to share your scenarios, reach out to storageactions@microsoft.com.
+For further questions or to share your scenarios, reach out to <storageactions@microsoft.com>.
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/azure-storage-blog/beyond-basics-practical-scenarios-with-azure-storage-actions/ba-p/4447151)

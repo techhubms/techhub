@@ -100,6 +100,6 @@ Great for building a comprehensive, reusable README prompt before engaging Copil
 Promptception is a practical and effective technique: ask GitHub Copilot to help you craft the right prompt before running it in Chat, Edit, or Agent Mode. This simple strategy can greatly enhance the utility and accuracy of Copilot’s responses.
 
 ---
-_Article originally by Randy Pagels_
+*Article originally by Randy Pagels*
 
 This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://cooknwithcopilot.com/blog/promptception-improve-prompts-with-copilot.html)

@@ -54,4 +54,4 @@ In this session, dotnet presents a technical walkthrough of bringing John Florio
 
 ---
 
-For more technical talks like this, visit the .NET Conf 2025 playlist: https://www.youtube.com/playlist?list=PLdo4fOcmZ0oXtIlvq1tuORUtZqVG-HdCt
+For more technical talks like this, visit the .NET Conf 2025 playlist: <https://www.youtube.com/playlist?list=PLdo4fOcmZ0oXtIlvq1tuORUtZqVG-HdCt>

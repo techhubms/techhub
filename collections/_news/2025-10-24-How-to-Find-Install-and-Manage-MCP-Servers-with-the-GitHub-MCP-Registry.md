@@ -74,7 +74,7 @@ To add your server to the registry:
    - GitHub namespaces use `mcp-publisher login github`; custom domains require DNS verification.
 5. **Publish:**
    - Run `mcp-publisher publish`. On success, your server appears in the registry.
-   - To increase visibility, email partnerships@github.com to nominate your server for listing.
+   - To increase visibility, email <partnerships@github.com> to nominate your server for listing.
 
 ### Automation with GitHub Actions
 

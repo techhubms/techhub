@@ -50,7 +50,7 @@ Kinfey Lo explores best practices for building intelligent, multi-agent applicat
 - **DevUI** provides:
   - Chain-of-thought visualization, making each step of agent reasoning and action transparent.
   - Real-time memory and state inspection, diagnosing context overflow and hallucinations.
-- Available for Python and .NET agents, instantly accessible at local endpoints (http://localhost:8090 / https://localhost:50516/devui).
+- Available for Python and .NET agents, instantly accessible at local endpoints (<http://localhost:8090> / <https://localhost:50516/devui>).
 
 ## Phase 3: Demoing and User Interaction via AG-UI
 

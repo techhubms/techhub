@@ -78,13 +78,13 @@ SemanticPluginForge solves these challenges through a dynamic, extensible approa
 ### 2. Extensible Architecture
 
 - Provides an `IPluginMetadataProvider` interface, allowing custom metadata provider implementations.
-    - Fetch metadata from a database or external source.
-    - Tailor metadata based on business logic.
+  - Fetch metadata from a database or external source.
+  - Tailor metadata based on business logic.
 
 ### 3. Suppressing Functions and Parameters
 
 - Option to conditionally suppress (hide) specific functions or parameters in the plugin metadata.
-    - Useful for hiding sensitive or irrelevant details while maintaining functionality.
+  - Useful for hiding sensitive or irrelevant details while maintaining functionality.
 
 ### 4. Improved User Experience
 

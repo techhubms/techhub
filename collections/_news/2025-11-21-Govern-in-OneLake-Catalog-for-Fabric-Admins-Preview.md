@@ -77,6 +77,6 @@ The preview release of enhanced governance in OneLake catalog equips Fabric admi
 
 ---
 
-For feedback and suggestions, contact: OLC_Feedback@microsoft.com
+For feedback and suggestions, contact: <OLC_Feedback@microsoft.com>
 
 This post appeared first on "Microsoft Fabric Blog". [Read the entire article here](https://blog.fabric.microsoft.com/en-US/blog/onelake-catalog-govern-for-fabric-admins/)

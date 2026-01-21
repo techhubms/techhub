@@ -80,10 +80,10 @@ This step-by-step guide is designed for cloud solution architects and data engin
 
 All steps and best practices are sourced from Microsoft Learn:
 
-- Azure Data Factory documentation: https://learn.microsoft.com/en-us/azure/data-factory/
-- SQL Managed Instance: https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/
-- SSIS on Azure: https://learn.microsoft.com/en-us/azure/data-factory/ssis-overview
-- Microsoft Fabric integration: https://learn.microsoft.com/en-us/fabric/data-factory/
+- Azure Data Factory documentation: <https://learn.microsoft.com/en-us/azure/data-factory/>
+- SQL Managed Instance: <https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/>
+- SSIS on Azure: <https://learn.microsoft.com/en-us/azure/data-factory/ssis-overview>
+- Microsoft Fabric integration: <https://learn.microsoft.com/en-us/fabric/data-factory/>
 
 ---
 *Published by PeterLo, October 6, 2025*

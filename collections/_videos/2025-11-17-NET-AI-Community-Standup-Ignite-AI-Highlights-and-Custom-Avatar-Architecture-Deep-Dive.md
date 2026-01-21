@@ -47,15 +47,15 @@ This session recaps major AI announcements from Microsoft Ignite 2025, focusing 
 
 - **Ignite 2025 AI Announcements**: Summary of new services and features revealed by Microsoft, including updates to Azure AI Foundry, enhanced Chat Completion, Agents, and Speech capabilities.
 - **Custom Avatar Solution**: Technical walkthrough of the end-to-end solution, highlighting:
-    - Architecture orchestrated with **Aspire 13** for robust service composition.
-    - Integration of **Azure AI Foundry** for avatar creation and interaction.
-    - Usage of **Chat Completion** and **Agents** to power conversational and intelligent behaviors.
-    - Implementation of **Speech Services** for natural language interaction.
-    - Frontend development with **Blazor**, enabling real-time, multimodal user experiences.
+  - Architecture orchestrated with **Aspire 13** for robust service composition.
+  - Integration of **Azure AI Foundry** for avatar creation and interaction.
+  - Usage of **Chat Completion** and **Agents** to power conversational and intelligent behaviors.
+  - Implementation of **Speech Services** for natural language interaction.
+  - Frontend development with **Blazor**, enabling real-time, multimodal user experiences.
 - **How-To for Developers**:
-    - Infusing .NET applications with intelligent agents.
-    - Architecting multimodal user interfaces using Azure AI features.
-    - Best practices for orchestrating AI services within .NET Aspire solutions.
+  - Infusing .NET applications with intelligent agents.
+  - Architecting multimodal user interfaces using Azure AI features.
+  - Best practices for orchestrating AI services within .NET Aspire solutions.
 
 ## Featured Speakers
 

@@ -54,11 +54,11 @@ This post announces the February 2025 release (version 1.12.0) of the Azure Deve
 - **PowerShell Custom Command Format:** Enhanced support for `pwsh` in hook scripts, now including `-NoProfile` and additional arguments ([details](https://github.com/Azure/azure-dev/pull/4595), by [YTiancheng Zhang](https://github.com/Yionse)).
 - **Database Addition:** Fixed issues with `azd add` for databases lacking a host ([#4692](https://github.com/Azure/azure-dev/pull/4692)).
 - **Bicep Improvements:**
-    - Full support for Bicep `@sealed()` decorator on user-defined types ([#4684](https://github.com/Azure/azure-dev/pull/4684)).
-    - Reliable deployment using provision with `sealed()` decorators.
-    - Support for nullable Bicep parameters ([#4722](https://github.com/Azure/azure-dev/pull/4722)).
-    - Key Vault references in parameter files for Bicep ([#4744](https://github.com/Azure/azure-dev/pull/4744)).
-    - Respect for location picker options using `@allowed` and `@metadata` decorators ([#4752](https://github.com/Azure/azure-dev/pull/4752)).
+  - Full support for Bicep `@sealed()` decorator on user-defined types ([#4684](https://github.com/Azure/azure-dev/pull/4684)).
+  - Reliable deployment using provision with `sealed()` decorators.
+  - Support for nullable Bicep parameters ([#4722](https://github.com/Azure/azure-dev/pull/4722)).
+  - Key Vault references in parameter files for Bicep ([#4744](https://github.com/Azure/azure-dev/pull/4744)).
+  - Respect for location picker options using `@allowed` and `@metadata` decorators ([#4752](https://github.com/Azure/azure-dev/pull/4752)).
 
 ### Other Updates
 

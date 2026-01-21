@@ -53,9 +53,9 @@ To connect your .NET application to Dataverse using OAuth and service principals
 
 - In Azure Portal, go to **Microsoft Entra ID** (formerly Azure AD).
 - Navigate to **App registrations > New registration**.
-    - Name: Choose a descriptive name (e.g., "Dataverse .NET Integration")
-    - Supported account types: Typically, "Accounts in this organizational directory only"
-    - Redirect URI: Use `app://58145B91-0C36-4500-8554-080854F2AC97` if you plan to use the sample code, or leave blank for now.
+  - Name: Choose a descriptive name (e.g., "Dataverse .NET Integration")
+  - Supported account types: Typically, "Accounts in this organizational directory only"
+  - Redirect URI: Use `app://58145B91-0C36-4500-8554-080854F2AC97` if you plan to use the sample code, or leave blank for now.
 - After creation, **note the Application (client) ID** and **Directory (tenant) ID**.
 
 ### 2. Create a Client Secret
@@ -67,12 +67,12 @@ To connect your .NET application to Dataverse using OAuth and service principals
 ### 3. Assign API Permissions to the App Registration
 
 - Go to **API permissions > Add a permission > APIs my organization uses > search for "Dataverse"** (or "Dynamics CRM")
-    - Select the API and add "user_impersonation" (for delegated, if acting as a user), or "Application permissions" for app-only access.
+  - Select the API and add "user_impersonation" (for delegated, if acting as a user), or "Application permissions" for app-only access.
 - You may need to grant admin consent for the tenant.
 
 ### 4. Add the App Registration as an Application User in Dataverse/Power Platform
 
-- Go to **Power Platform admin center** (https://admin.powerplatform.microsoft.com/)
+- Go to **Power Platform admin center** (<https://admin.powerplatform.microsoft.com/>)
 - Select the correct environment > **Settings** > **Users + permissions > Application users**
 - Click **+ New app user**, then search for your app registration
 - Assign an appropriate security role (e.g., System Customizer, or a custom role for least privilege)

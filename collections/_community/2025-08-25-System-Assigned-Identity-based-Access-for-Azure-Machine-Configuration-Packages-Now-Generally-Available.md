@@ -28,7 +28,7 @@ section_names:
 ---
 mutemwamasheke details the new support for System Assigned Identities to enable secure, private access to configuration packages in Azure Machine Configuration, making it easier to manage and secure VMs and Arc-enabled servers.<!--excerpt_end-->
 
-# System-Assigned Identity-based Access for Azure Machine Configuration Packages – GA on both Azure and Arc!
+# System-Assigned Identity-based Access for Azure Machine Configuration Packages – GA on both Azure and Arc
 
 Azure Machine Configuration now supports System Assigned Identities for secure, private access to configuration packages stored in Azure Storage. This simplifies access management and enhances security for both Azure and Arc-enabled servers, superseding the previous reliance on Shared Access Signature (SAS) Tokens.
 

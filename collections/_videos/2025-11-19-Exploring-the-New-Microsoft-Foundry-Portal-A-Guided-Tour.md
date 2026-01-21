@@ -42,7 +42,7 @@ In this video, April demonstrates the upgraded Microsoft Foundry portal, focusin
 
 ## Key Topics Covered
 
-- **Accessing the New Portal:** Instructions for logging into https://ai.azure.com and an orientation to the welcome screen.
+- **Accessing the New Portal:** Instructions for logging into <https://ai.azure.com> and an orientation to the welcome screen.
 - **Project Creation:** Step-by-step on starting new projects and setting up your workspace.
 - **Navigation Tour:**
   - **Discover:** Explore what’s possible in Foundry, find resources, and get inspiration.

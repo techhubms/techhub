@@ -53,11 +53,11 @@ Aspire manages your application in two primary modes:
 
 - **Artifact Generation:** Compiles the application model into deployable artifacts for handoff to deployment pipelines.
 - **Supported Artifacts:**
-    - Kubernetes manifests
-    - Terraform configuration files
-    - Bicep/ARM templates
-    - Docker Compose files
-    - CDK-based constructs
+  - Kubernetes manifests
+  - Terraform configuration files
+  - Bicep/ARM templates
+  - Docker Compose files
+  - CDK-based constructs
 - **Publishing:** The publishing action is carried out by units called *publishers*. The overall process draws architectural parallels from traditional software compilers.
 
 ---

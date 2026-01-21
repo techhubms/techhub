@@ -41,9 +41,9 @@ CodeQL, the static analysis engine powering [GitHub code scanning](https://docs.
 ## Query Changes
 
 - **JavaScript**: Three previous queries for JavaScript have been retired, replaced by improved queries in the actions QL pack:
-    - `js/actions/pull-request-target` superseded by `actions/untrusted-checkout`
-    - `js/actions/actions-artifact-leak` superseded by `actions/secrets-in-artifacts`
-    - `js/actions/command-injection` superseded by an updated `actions/command-injection`
+  - `js/actions/pull-request-target` superseded by `actions/untrusted-checkout`
+  - `js/actions/actions-artifact-leak` superseded by `actions/secrets-in-artifacts`
+  - `js/actions/command-injection` superseded by an updated `actions/command-injection`
 
 Consult the [CodeQL 2.22.2](https://codeql.github.com/docs/codeql-overview/codeql-changelog/codeql-cli-2.22.2/) and [CodeQL 2.22.3](https://codeql.github.com/docs/codeql-overview/codeql-changelog/codeql-cli-2.22.3/) changelogs for more technical details.
 

@@ -42,15 +42,15 @@ In this engaging episode, Julia Kasper transforms Visual Studio Code (VS Code) i
 
 - **Introduction to Tone.js**: Understand the basics of Tone.js, a powerful framework for interactive music in the browser.
 - **Building a DJ App from Scratch**:
-    - Setting up VS Code for live music-coding sessions.
-    - Writing and experimenting with code to create and layer beats, patterns, and effects.
-    - Testing the web app and refining the music experience with real-time feedback.
+  - Setting up VS Code for live music-coding sessions.
+  - Writing and experimenting with code to create and layer beats, patterns, and effects.
+  - Testing the web app and refining the music experience with real-time feedback.
 - **GitHub Copilot in Action**:
-    - Using Copilot's AI-powered code suggestions to generate music logic and rhythm structures quickly.
-    - Leveraging prompt files within VS Code to experiment and customize Copilot's assistance for creative coding tasks.
+  - Using Copilot's AI-powered code suggestions to generate music logic and rhythm structures quickly.
+  - Leveraging prompt files within VS Code to experiment and customize Copilot's assistance for creative coding tasks.
 - **Real-Time Creativity**:
-    - Demonstrating live composition, remixing, and experimenting with techno sounds—all using code.
-    - Tips for developers interested in coding generative music or integrating AI into their creative workflow.
+  - Demonstrating live composition, remixing, and experimenting with techno sounds—all using code.
+  - Tips for developers interested in coding generative music or integrating AI into their creative workflow.
 
 ## Useful Links
 

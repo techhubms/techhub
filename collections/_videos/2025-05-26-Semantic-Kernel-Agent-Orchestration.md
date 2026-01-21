@@ -61,8 +61,8 @@ Modern problems often demand coordination between multiple intelligent software 
 ## Resources
 
 - [Semantic Kernel Documentation](https://github.com/microsoft/semantic-kernel)
-- Author’s LinkedIn: https://www.linkedin.com/in/rvinothrajendran/
-- Author’s GitHub: https://github.com/rvinothrajendran
+- Author’s LinkedIn: <https://www.linkedin.com/in/rvinothrajendran/>
+- Author’s GitHub: <https://github.com/rvinothrajendran>
 
 ## Summary
 

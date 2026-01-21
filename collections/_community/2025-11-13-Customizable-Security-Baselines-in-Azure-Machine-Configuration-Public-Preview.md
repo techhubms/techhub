@@ -90,7 +90,7 @@ Customizable security baselines are available in all public Azure regions. Suppo
 
 ---
 
-_Post by mutemwamasheke_
+*Post by mutemwamasheke*
 
 Version 2.0 · Updated Nov 13, 2025
 

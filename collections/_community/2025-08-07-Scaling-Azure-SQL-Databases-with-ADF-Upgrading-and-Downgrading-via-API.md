@@ -48,7 +48,7 @@ Relative_Wear2650 and the community discuss how to use Azure Data Factory to pro
   PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}?api-version=2022-02-01-preview
   ```
 
-- Always check official Azure REST API documentation for updates: https://learn.microsoft.com/en-us/rest/api/sql/
+- Always check official Azure REST API documentation for updates: <https://learn.microsoft.com/en-us/rest/api/sql/>
 
 ### 2. **Does this scale the database to a different tier/size?**
 

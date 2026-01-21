@@ -97,6 +97,6 @@ Scott Woodgate summarizes the 2025 Forrester Total Economic Impact™ (TEI) stud
 - Explore [AI-powered security operations](https://www.microsoft.com/security/business/solutions/ai-powered-unified-secops-defender).
 - Follow updates on the [Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/).
 
-_For further information about methodology and financial calculations, see the full Forrester TEI report._
+*For further information about methodology and financial calculations, see the full Forrester TEI report.*
 
 This post appeared first on "Microsoft Security Blog". [Read the entire article here](https://www.microsoft.com/en-us/security/blog/2025/09/18/microsoft-defender-delivered-242-return-on-investment-over-three-years/)

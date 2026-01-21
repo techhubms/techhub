@@ -66,6 +66,6 @@ Whenever you open a blank file, let GitHub Copilot jumpstart your work. A strong
 
 ---
 
-*Authored by Randy Pagels (randy.pagels@xebia.com)*
+*Authored by Randy Pagels (<randy.pagels@xebia.com>)*
 
 This post appeared first on "Randy Pagels's Blog". [Read the entire article here](https://www.cooknwithcopilot.com/blog/start-new-files-faster-with-github-copilot.html)

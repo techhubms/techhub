@@ -84,9 +84,9 @@ OS Guard draws on open source components (**dm-verity**, SELinux, IPE) and upstr
 Azure Linux with OS Guard will soon be offered as an official OS SKU for AKS, enabling preview deployments via feature flags and Azure CLI. The initial community image—publicly available via Microsoft Container Registry—enables exploration of Secure Boot, immutable */usr*, and enforced IPE/SELinux on Azure VMs.
 
 - **Community Edition Details:**
-    - Trusted Launch VMs, ephemeral keys
-    - *dm-verity* backed, read-only */usr*
-    - IPE and SELinux in enforcing mode
+  - Trusted Launch VMs, ephemeral keys
+  - *dm-verity* backed, read-only */usr*
+  - IPE and SELinux in enforcing mode
 - [Try OS Guard: Step-by-step instructions](https://aka.ms/azurelinux-osguard-howto)
 
 ## Conclusion

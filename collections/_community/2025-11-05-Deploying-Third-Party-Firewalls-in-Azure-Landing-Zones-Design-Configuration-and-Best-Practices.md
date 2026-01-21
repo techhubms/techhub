@@ -48,8 +48,8 @@ As enterprises migrate and scale workloads in Microsoft Azure, robust network se
   - **Hub** centralizes shared services (DNS, VPN/ExpressRoute, Azure Firewall or third-party appliances, Bastion, monitoring).
   - **Spokes** house workloads (e.g., web apps, data platforms) in isolated VNets, connected via the hub for policy consistency.
 - **Traffic Flow:**
-  - *North-South*: Internet ↔ Azure workloads, routed through the external firewall.
-  - *East-West*: Intra-cloud communications, routed through an internal firewall for segmentation and threat prevention.
+  - _North-South_: Internet ↔ Azure workloads, routed through the external firewall.
+  - _East-West_: Intra-cloud communications, routed through an internal firewall for segmentation and threat prevention.
 
 ### Why Use Firewalls Above NSGs & Route Tables?
 
@@ -67,7 +67,7 @@ Organizations gravitate towards third-party appliances for:
 - **Customization**: Greater control of OS, routing, integrations, and patch cycles.
 - **Licensing flexibility**: BYOL options via Azure Marketplace images.
 
-*Azure Firewall* remains a strong option for:
+_Azure Firewall_ remains a strong option for:
 
 - Simpler use cases.
 - Teams preferring managed PaaS and minimal infrastructure overhead.

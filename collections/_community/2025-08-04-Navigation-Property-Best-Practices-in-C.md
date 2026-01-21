@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mh9139/navigation_property_best_practice/
 title: Navigation Property Best Practices in C#
 author: drld21

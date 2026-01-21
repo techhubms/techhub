@@ -33,7 +33,7 @@ In this post, Khalid Abuhakmeh showcases how to implement Server-Sent Events wit
 
 ![Server-Sent Events in ASP.NET Core and .NET 10](https://res.cloudinary.com/abuhakmeh/image/fetch/c_limit,f_auto,q_auto,w_800/https://khalidabuhakmeh.com/assets/images/posts/misc/server-sent-events-dotnet-10-aspnetcore-minimal-apis.jpg)
 
-_Photo by [Allen Rad](https://unsplash.com/photos/cheese-burger-on-a-wooden-surface-9G_oJBKwi1c)_
+*Photo by [Allen Rad](https://unsplash.com/photos/cheese-burger-on-a-wooden-surface-9G_oJBKwi1c)*
 
 ## Introduction
 

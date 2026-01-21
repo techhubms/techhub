@@ -62,18 +62,18 @@ At Microsoft Ignite, the General Availability (GA) of Agent Loop in Azure Logic 
 
 - Use any AI model within Agent Loop—Foundry, on-prem, or private cloud supported.
 - **Deep integration with Azure API Management (APIM) AI Gateway:**
-    - Central control plane for agent-model connections.
-    - Unified, governed API endpoint for authentication, rate limits, monitoring, and observability.
-    - Allows model upgrades or config updates without changing app workflows.
+  - Central control plane for agent-model connections.
+  - Unified, governed API endpoint for authentication, rate limits, monitoring, and observability.
+  - Allows model upgrades or config updates without changing app workflows.
 - Direct external and local/VNET model integration supported, enabling high flexibility and data residency compliance.
 
 ### 4. Model Context Protocol (MCP) Tool Integration
 
 - New support for **MCP** in Logic Apps Standard lets agents discover and invoke external tools through standardized interfaces.
 - _Three integration modes:_
-    - Bring Your Own MCP connector (custom external server)
-    - Managed MCP connector (Azure-hosted, managed experience)
-    - Custom MCP connector (OpenAPI-based, tenant/private use)
+  - Bring Your Own MCP connector (custom external server)
+  - Managed MCP connector (Azure-hosted, managed experience)
+  - Custom MCP connector (OpenAPI-based, tenant/private use)
 - Managed and custom MCP connectors support on-behalf-of (OBO) authentication for user-context-aware tool use across workflows.
 
 ### 5. Deploy Conversational Agents to Teams and Microsoft 365
@@ -100,11 +100,11 @@ At Microsoft Ignite, the General Availability (GA) of Agent Loop in Azure Logic 
 
 - Major UI and UX update for the Logic Apps designer is now available.
 - Enhancements include:
-    - Unified interface for visual canvas, code view, settings, and run history
-    - Draft Mode with auto-save and safe testing
-    - Sticky notes and markdown support for inline documentation
-    - Improved search (backend indexed)
-    - Monitoring and debugging features, including hierarchical timeline view
+  - Unified interface for visual canvas, code view, settings, and run history
+  - Draft Mode with auto-save and safe testing
+  - Sticky notes and markdown support for inline documentation
+  - Improved search (backend indexed)
+  - Monitoring and debugging features, including hierarchical timeline view
 
 ---
 

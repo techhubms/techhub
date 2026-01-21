@@ -54,7 +54,7 @@ Improvements to edit chat requests offer smoother editing cycles, utilizing conv
 
 ### Community Links and Engagement
 
-For more details, viewers are encouraged to explore community links at https://aka.ms/VSCodeRelease.
+For more details, viewers are encouraged to explore community links at <https://aka.ms/VSCodeRelease>.
 
 ---
 

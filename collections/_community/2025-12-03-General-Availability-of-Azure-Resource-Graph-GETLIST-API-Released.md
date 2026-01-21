@@ -101,6 +101,6 @@ For more samples and details, consult [Documentation](https://learn.microsoft.co
 
 **Happy Querying!**
 
-_Last updated: Dec 03, 2025_
+*Last updated: Dec 03, 2025*
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-general-availability-for-azure-resource-graph-arg-get/ba-p/4474188)

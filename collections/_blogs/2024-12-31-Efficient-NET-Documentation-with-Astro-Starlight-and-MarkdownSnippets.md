@@ -160,17 +160,21 @@ Your first .NET application will be a console application. Create a new project:
 dotnet new console -o HelloWorld && cd ./HelloWorld
 
 ```
+
 Add the following code in `Program.cs`:
 
 snippet: App:HelloWorld
 
 Run the app:
+
 ```bash title="Terminal"
 
 dotnet run
 
 ```
+
 Congratulations!
+
 ```
 
 After running `npm run dev`, MarkdownSnippets replaces `snippet: App:HelloWorld` with the latest actual code:

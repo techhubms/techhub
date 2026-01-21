@@ -43,10 +43,10 @@ Explore how Blazor in .NET 10 is transforming web development by introducing new
 - **Improved App Diagnostics**: Benefit from enhanced diagnostics that make monitoring and troubleshooting Blazor applications more accessible, enabling developers to identify and resolve issues with greater efficiency.
 - **Performance Improvements**: Experience faster load times and more responsive apps, thanks to optimizations in the Blazor framework and runtime for .NET 10.
 - **Developer Productivity Enhancements**:
-    - Faster Hot Reload for rapid development cycles
-    - Component state persistence to maintain user interactions during refreshes
-    - QuickGrid enhancements for better data grid capabilities
-    - Simplified integration testing to streamline quality assurance
+  - Faster Hot Reload for rapid development cycles
+  - Component state persistence to maintain user interactions during refreshes
+  - QuickGrid enhancements for better data grid capabilities
+  - Simplified integration testing to streamline quality assurance
 
 ## Additional Resources
 

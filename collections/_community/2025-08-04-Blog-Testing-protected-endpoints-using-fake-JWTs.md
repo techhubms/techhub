@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mhd2xz/blog_testing_protected_endpoints_using_fake_jwts/
 title: (Blog) Testing protected endpoints using fake JWTs
 author: Kralizek82

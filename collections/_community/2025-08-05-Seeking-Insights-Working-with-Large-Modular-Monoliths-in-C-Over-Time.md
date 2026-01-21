@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mhzuoj/long_term_experience_with_large_modular_monolith/
 title: 'Seeking Insights: Working with Large Modular Monoliths in C# Over Time'
 author: Background-Brick-157

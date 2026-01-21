@@ -167,10 +167,10 @@ This pattern supports repeated navigations and tight coordination between UI act
 ## Real-World Scenarios
 
 - **User Interactivity:**
-    - In applications like Markdown Monster, dialogs using WebView might encounter user input before the window is fully initialized. Wrapping event handlers with `await WebViewHandler.WaitForDocumentLoaded(1000)` avoids referencing uninitialized objects, preventing crashes and null reference faults.
+  - In applications like Markdown Monster, dialogs using WebView might encounter user input before the window is fully initialized. Wrapping event handlers with `await WebViewHandler.WaitForDocumentLoaded(1000)` avoids referencing uninitialized objects, preventing crashes and null reference faults.
 
 - **Multiple Coordinated Loads:**
-    - When loading editors and previews simultaneously—such as in markdown authoring tools—it's critical to ensure each WebView is loaded in sequence before querying or updating their content, improving correctness and reliability.
+  - When loading editors and previews simultaneously—such as in markdown authoring tools—it's critical to ensure each WebView is loaded in sequence before querying or updating their content, improving correctness and reliability.
 
 Example:
 

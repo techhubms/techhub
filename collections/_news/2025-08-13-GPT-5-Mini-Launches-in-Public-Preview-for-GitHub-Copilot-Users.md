@@ -37,7 +37,7 @@ GitHub Copilot has rolled out GPT-5 mini, a new OpenAI model designed to deliver
 - **Speed and Efficiency**: GPT-5 mini processes coding requests faster and more cost-effectively than previous models, with lower latency and strong performance on focused tasks.
 - **Optimized for Precision**: Particularly effective for well-defined prompts and quick coding edits, helping developers get accurate results rapidly.
 
-## Availability.
+## Availability
 
 - **Universal Access**: GPT-5 mini is rolling out to all GitHub Copilot plans, including Copilot Free.
 - **Platform Integration**: Access is available in Copilot Chat on github.com, Visual Studio Code (via the chat model picker), and GitHub Mobile on both iOS and Android. Future releases plan to support additional IDEs.

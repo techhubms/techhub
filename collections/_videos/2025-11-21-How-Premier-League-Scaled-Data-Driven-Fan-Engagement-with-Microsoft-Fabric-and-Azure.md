@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=jXb9A20Ysdc
 title: How Premier League Scaled Data-Driven Fan Engagement with Microsoft Fabric and Azure
 author: Microsoft Events
@@ -74,4 +74,4 @@ In this session from Microsoft Ignite 2025, Microsoft and Premier League technol
 
 **Session Info**: BRK227 | Intermediate (200) | Track: Unify your data platform, Microsoft Fabric Breakout
 
-# MSIgnite #MicrosoftFabric #Unifyyourdataplatform
+# MSIgnite #MicrosoftFabriC#Unifyyourdataplatform

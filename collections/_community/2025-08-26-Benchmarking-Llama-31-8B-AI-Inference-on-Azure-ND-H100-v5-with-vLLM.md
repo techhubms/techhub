@@ -43,12 +43,12 @@ Inference in transformer-based LLMs consists of two main stages:
 
 ### Optimization Techniques
 
-* **KV Cache Management:** Use of vLLM’s PagedAttention for dynamic HBM memory allocation and high cache hit rates.
-* **Batching/Scheduling:** Parameters like `MAX_NUM_SEQS` and `MAX_NUM_BATCHED_TOKENS` control how requests are grouped for efficient GPU utilization.
-* **Weight/Activation Quantization:** FP8 quantization enables more memory usage for models or larger KV cache, offering performance gains via higher FLOPS units.
-* **Parallelism:** Tensor, pipeline, expert, and data parallel strategies split models across GPUs to maximize resource use.
-* **Speculative Decoding:** Predicts future tokens to reduce compute passes.
-* **Prefill/Decode Decoupling:** Assigns separate resources to each phase for parallel processing, as seen with vLLM and NVIDIA Dynamo.
+- **KV Cache Management:** Use of vLLM’s PagedAttention for dynamic HBM memory allocation and high cache hit rates.
+- **Batching/Scheduling:** Parameters like `MAX_NUM_SEQS` and `MAX_NUM_BATCHED_TOKENS` control how requests are grouped for efficient GPU utilization.
+- **Weight/Activation Quantization:** FP8 quantization enables more memory usage for models or larger KV cache, offering performance gains via higher FLOPS units.
+- **Parallelism:** Tensor, pipeline, expert, and data parallel strategies split models across GPUs to maximize resource use.
+- **Speculative Decoding:** Predicts future tokens to reduce compute passes.
+- **Prefill/Decode Decoupling:** Assigns separate resources to each phase for parallel processing, as seen with vLLM and NVIDIA Dynamo.
 
 ## Benchmarking Environment
 
@@ -103,11 +103,11 @@ Efficient LLM inference on Azure requires understanding both hardware and softwa
 
 **References:**
 
-- vLLM Documentation: https://docs.vllm.ai/en/v0.8.1/index.html
-- NVIDIA Tech Blog on LLM Optimization: https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/
-- HuggingFace Inference Benchmarker: https://github.com/huggingface/inference-benchmarker/
-- Meta Llama Model Utilities: https://github.com/meta-llama/llama-models
-- Azure ND-H100-v5 series: https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/ndh100v5-series?tabs=sizebasic
+- vLLM Documentation: <https://docs.vllm.ai/en/v0.8.1/index.html>
+- NVIDIA Tech Blog on LLM Optimization: <https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/>
+- HuggingFace Inference Benchmarker: <https://github.com/huggingface/inference-benchmarker/>
+- Meta Llama Model Utilities: <https://github.com/meta-llama/llama-models>
+- Azure ND-H100-v5 series: <https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/ndh100v5-series?tabs=sizebasic>
 
 ## Appendix: Setup Guides
 

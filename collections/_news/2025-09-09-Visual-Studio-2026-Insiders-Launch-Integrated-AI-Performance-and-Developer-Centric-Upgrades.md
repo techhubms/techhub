@@ -25,7 +25,7 @@ section_names:
 ---
 Mads Kristensen introduces Visual Studio 2026 Insiders, highlighting major advances in AI-powered development, improved performance, and a reimagined user experience for professional developers.<!--excerpt_end-->
 
-# Visual Studio 2026 Insiders is here!
+# Visual Studio 2026 Insiders is here
 
 Visual Studio 2026 Insiders marks a bold new chapter in Microsoft's leading IDE, focusing on deeper integration of AI, enhanced performance, and a refreshed look that prioritizes developer productivity.
 

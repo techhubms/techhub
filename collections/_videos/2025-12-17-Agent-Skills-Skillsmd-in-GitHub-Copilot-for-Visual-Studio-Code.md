@@ -52,7 +52,7 @@ Agent Skills, formalized in the `Skills.md` format, let developers define collec
 
 ## Interoperability
 
-- The Agent Skills open standard enables reusing the same skills with:   
+- The Agent Skills open standard enables reusing the same skills with:
   - GitHub Copilot in VS Code  
   - GitHub Copilot CLI  
   - Copilot Coding Agent

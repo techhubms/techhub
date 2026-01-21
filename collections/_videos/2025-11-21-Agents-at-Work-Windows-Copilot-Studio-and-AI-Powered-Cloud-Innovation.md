@@ -63,8 +63,8 @@ Presented by Phil Gerity, Stefan Kinnestrand, and Navjot Virk at Microsoft Ignit
 
 ## Further Resources
 
-- Scale with Cloud and AI endpoints: https://aka.ms/ignite25-plans-scalecloud
-- On-demand Ignite sessions: https://ignite.microsoft.com
+- Scale with Cloud and AI endpoints: <https://aka.ms/ignite25-plans-scalecloud>
+- On-demand Ignite sessions: <https://ignite.microsoft.com>
 
 ## Speakers
 

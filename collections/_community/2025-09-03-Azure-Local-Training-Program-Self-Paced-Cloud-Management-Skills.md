@@ -59,12 +59,12 @@ The program covers core Azure Local management topics, including:
 
 ## Access and Support
 
-The Azure Local Training Program is free of charge and updated annually to reflect new Azure Local capabilities. Interested users can [access the training here](https://360.articulate.com/review/content/6c4554d6-8ccc-4b9b-bc6b-328c7429efce/review). For a downloadable training package or to provide feedback, reach out via email at azurelocaltraining@service.microsoft.com.
+The Azure Local Training Program is free of charge and updated annually to reflect new Azure Local capabilities. Interested users can [access the training here](https://360.articulate.com/review/content/6c4554d6-8ccc-4b9b-bc6b-328c7429efce/review). For a downloadable training package or to provide feedback, reach out via email at <azurelocaltraining@service.microsoft.com>.
 
 _Last updated: September 3, 2025; Version 1.0_
 
 ---
 
-*Announcement by ShireenIsab (Microsoft)*
+_Announcement by ShireenIsab (Microsoft)_
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/azure-architecture-blog/introducing-azure-local-training-empowering-you-to-succeed/ba-p/4447957)

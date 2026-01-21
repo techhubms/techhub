@@ -71,15 +71,15 @@ This session explores how Microsoft and SAP are combining efforts to unlock ente
 - **Length:** Advanced (300-level technical content)
 - **Target Audience:** Technical leaders, architects, and enterprise IT professionals exploring unified data, automation, and AI strategies with Microsoft and SAP technologies
 - **Session Chapters:**
-    - Introduction
-    - Data, productivity, and security integration
-    - SAP data expansion in Azure
-    - SAP and non-SAP data unification
-    - Connectivity enhancements with Jewel
-    - MCP for LLM integrations
-    - AI data agents and live demonstration
-    - Role of data in digital transformation
-    - Panel discussion
+  - Introduction
+  - Data, productivity, and security integration
+  - SAP data expansion in Azure
+  - SAP and non-SAP data unification
+  - Connectivity enhancements with Jewel
+  - MCP for LLM integrations
+  - AI data agents and live demonstration
+  - Role of data in digital transformation
+  - Panel discussion
 
 ---
 

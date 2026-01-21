@@ -49,7 +49,7 @@ This community-sourced discussion focuses on organizing and optimizing C# script
 ### 2. Leveraging Shared Libraries
 
 - **Use DLLs for Shared Functions**: If your SCADA system allows DLL integration, bundle common code into assemblies to improve maintainability and reduce duplication.
-  - _Tip_: Test DLL loading/performance overhead within your framework first as some SCADA products restrict this or have specific requirements.
+  - *Tip*: Test DLL loading/performance overhead within your framework first as some SCADA products restrict this or have specific requirements.
 - **Shared Classes and Methods**: Even within scripts, structure code using static classes or helper methods for common operations. This keeps scripts concise and easier to update.
 
 ### 3. Performance and Complexity

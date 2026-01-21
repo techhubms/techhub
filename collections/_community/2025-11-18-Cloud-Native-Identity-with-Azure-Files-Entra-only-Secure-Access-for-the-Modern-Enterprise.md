@@ -60,7 +60,7 @@ Large distributed workforces benefit from seamless, secure SMB access without do
 
 ## Getting Started
 
-Organizations can begin using Entra-only identity support with Azure Files at no additional cost. Step-by-step documentation is available [here](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable?tabs=azure-portal%2Cintune). For questions, contact the Microsoft Azure Files team at azurefiles@microsoft.com.
+Organizations can begin using Entra-only identity support with Azure Files at no additional cost. Step-by-step documentation is available [here](https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-auth-hybrid-identities-enable?tabs=azure-portal%2Cintune). For questions, contact the Microsoft Azure Files team at <azurefiles@microsoft.com>.
 
 ---
 

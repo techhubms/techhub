@@ -61,12 +61,12 @@ Developers often face complex .NET systems and wonder why a particular design or
 
 ## Community & Further Learning
 
-- Official Blog: https://aka.ms/dotnet/blog
+- Official Blog: <https://aka.ms/dotnet/blog>
 - Social: [Twitter](https://aka.ms/dotnet/twitter) | [TikTok](https://aka.ms/dotnet/tiktok) | [Mastodon](https://aka.ms/dotnet/mastodon) | [LinkedIn](https://aka.ms/dotnet/linkedin) | [Facebook](https://aka.ms/dotnet/facebook)
-- Documentation: https://learn.microsoft.com/dotnet
-- Q&A: https://aka.ms/dotnet-qa
-- Forums: https://aka.ms/dotnet/forums
-- Microsoft Learn: https://aka.ms/learndotnet
+- Documentation: <https://learn.microsoft.com/dotnet>
+- Q&A: <https://aka.ms/dotnet-qa>
+- Forums: <https://aka.ms/dotnet/forums>
+- Microsoft Learn: <https://aka.ms/learndotnet>
 
 ## Conclusion
 

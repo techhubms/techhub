@@ -40,25 +40,25 @@ Cisco announced at Splunk .Conf25 a suite of artificial intelligence (AI) agents
 ## Key Highlights
 
 - **AI Agents for Observability:**
-    - Automate collection of telemetry data
-    - Detect IT issues and root causes
-    - Apply fixes, reducing manual intervention
-    - Leverage open source OpenTelemetry
+  - Automate collection of telemetry data
+  - Detect IT issues and root causes
+  - Apply fixes, reducing manual intervention
+  - Leverage open source OpenTelemetry
 
 - **Cisco Data Fabric:**
-    - Launched as a scalable platform to aggregate and analyze machine data
-    - Enables analytics without pre-ingestion into a single platform
-    - Will add support for time-series data analysis via multiple AI toolkits
+  - Launched as a scalable platform to aggregate and analyze machine data
+  - Enables analytics without pre-ingestion into a single platform
+  - Will add support for time-series data analysis via multiple AI toolkits
 
 - **Enhanced Splunk Platform Features:**
-    - Application Performance Management (APM) added
-    - New Digital Experience Analytics (DEA) module
-    - Business transaction monitoring (from AppDynamics origins)
-    - Tightened integration between Splunk Real User Monitoring (RUM) and Cisco ThousandEyes
+  - Application Performance Management (APM) added
+  - New Digital Experience Analytics (DEA) module
+  - Business transaction monitoring (from AppDynamics origins)
+  - Tightened integration between Splunk Real User Monitoring (RUM) and Cisco ThousandEyes
 
 - **Agentic Collaboration and AI Canvas:**
-    - Demonstration of Cisco AI Canvas, an agentic AI framework promoting collaboration across network, security, and DevOps teams
-    - Unified interface for real-time telemetry and AI insights
+  - Demonstration of Cisco AI Canvas, an agentic AI framework promoting collaboration across network, security, and DevOps teams
+  - Unified interface for real-time telemetry and AI insights
 
 ## Industry Perspective
 

@@ -62,17 +62,17 @@ This post documents a practical journey in evolving Terraform-based Azure infras
 **Version 0.1.0 - The Basic Foundation**
 
 - Monolithic `main.tf` containing all Azure resources:
-    - Resource Group
-    - Virtual Network and Subnet
-    - Network Security Group
-    - Storage Account and Container
-    - App Service Plan and Linux Web App
-    - Key Vault
+  - Resource Group
+  - Virtual Network and Subnet
+  - Network Security Group
+  - Storage Account and Container
+  - App Service Plan and Linux Web App
+  - Key Vault
 - Pain Points:
-    - One massive file, no modularity or reusability
-    - Manual, error-prone deployment
-    - No standardized naming or documentation
-    - Scaling and collaboration are difficult
+  - One massive file, no modularity or reusability
+  - Manual, error-prone deployment
+  - No standardized naming or documentation
+  - Scaling and collaboration are difficult
 
 ---
 
@@ -81,10 +81,10 @@ This post documents a practical journey in evolving Terraform-based Azure infras
 **Version 0.2.0 – Modular Architecture**
 
 - Split resources into logical, reusable modules:
-    - `modules/network` (VNet, Subnet, NSG)
-    - `modules/storage` (Storage Account, Containers)
-    - `modules/webapp` (App Service Plan & Web App)
-    - `modules/keyvault` (Key Vault)
+  - `modules/network` (VNet, Subnet, NSG)
+  - `modules/storage` (Storage Account, Containers)
+  - `modules/webapp` (App Service Plan & Web App)
+  - `modules/keyvault` (Key Vault)
 
 **Key Improvements:**
 
@@ -128,9 +128,9 @@ locals {
 
 - **Terraform Workspaces:** Shared state, easy setup, but increased risk and limited environment isolation
 - **Separate Directories (Recommended):**
-    - Full state isolation
-    - Siloed configs for CI/CD and security
-    - Slight code duplication, but safer for enterprise
+  - Full state isolation
+  - Siloed configs for CI/CD and security
+  - Slight code duplication, but safer for enterprise
 
 **Lesson:** Start with workspaces for simplicity, migrate to separate directories/backends as needs grow.
 
@@ -142,9 +142,9 @@ locals {
 
 - Implemented CI/CD with environment-specific protection rules
 - Branch-based strategy:
-    - `develop` branch → deploys to development
-    - `main` branch → deploys to production
-    - Feature branches → PR validations only
+  - `develop` branch → deploys to development
+  - `main` branch → deploys to production
+  - Feature branches → PR validations only
 - Integrated GitHub environment protection & Azure Service Principal auth
 - Automated plan & apply, manual dispatch for emergencies
 
@@ -228,8 +228,8 @@ func TestNamingConventions(t *testing.T) {
 
 - **Cost Management Foundation:** Infracost integration for cost estimation, reporting, and optimization tracking
 - **Monitoring Tools:**
-    - Drift detection comparing state vs. actual
-    - Automated notifications & markdown reporting
+  - Drift detection comparing state vs. actual
+  - Automated notifications & markdown reporting
 
 ### Alternative Approaches
 

@@ -66,9 +66,9 @@ Before `dotnet.exe` can hand over control, it must resolve the correct version o
 ### Platform Library Naming
 
 - The actual file sought depends on the platform:
-    - **Windows:** `hostfxr.dll`
-    - **macOS:** `libhostfxr.dylib`
-    - **Linux:** `libhostfxr.so`
+  - **Windows:** `hostfxr.dll`
+  - **macOS:** `libhostfxr.dylib`
+  - **Linux:** `libhostfxr.so`
 - Macros in the code ensure the correct filename is built for the host OS.
 
 ### Loading the Library

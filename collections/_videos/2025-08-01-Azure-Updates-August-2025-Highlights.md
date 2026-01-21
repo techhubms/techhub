@@ -97,7 +97,7 @@ Power BI now supports authentication to PostgreSQL databases using Microsoft Ent
 
 ### Azure Arc Powered SQL Migration
 
-A streamlined solution for migrating SQL workloads to Azure using Azure Arc, with a direct link: https://aka.ms/ArcSQL/migration
+A streamlined solution for migrating SQL workloads to Azure using Azure Arc, with a direct link: <https://aka.ms/ArcSQL/migration>
 
 ### Azure SQL: New String Functions
 

@@ -53,10 +53,10 @@ Andrea Griffiths interviews Jason Lengstorf on the GitHub Podcast, where he disc
 - **Web Innovation and the Next Wave:** Jason anticipates an industry transition, seeing opportunity for developers as AI blends into UX concepts—enabling more conversational experiences, local models in browsers, and democratizing capabilities once reserved for large organizations.
 
 - **Action Steps for Developers:**
-    - Prioritize joyful learning over panic
-    - Support and recognize open source maintainers
-    - Stay curious about new standards and patterns (e.g., MCP, autonomous agents)
-    - Embrace AI as an accelerator, not a replacement
+  - Prioritize joyful learning over panic
+  - Support and recognize open source maintainers
+  - Stay curious about new standards and patterns (e.g., MCP, autonomous agents)
+  - Embrace AI as an accelerator, not a replacement
 
 ## Listen to the Podcast
 

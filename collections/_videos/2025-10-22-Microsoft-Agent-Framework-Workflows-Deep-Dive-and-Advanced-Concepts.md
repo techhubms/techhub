@@ -68,7 +68,7 @@ This video provides a detailed exploration of Microsoft Agent Framework Workflow
 
 ## Community and Contribution
 
-- Submit your OSS projects for Open at Microsoft: https://aka.ms/OpenAtMsCFP
+- Submit your OSS projects for Open at Microsoft: <https://aka.ms/OpenAtMsCFP>
 - Connect with experts on LinkedIn:
   - [Evan Mattson](https://www.linkedin.com/in/evanrmattson)
   - [Victor Dibia](https://www.linkedin.com/in/dibiavictor)

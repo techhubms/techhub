@@ -89,8 +89,8 @@ Conditional Access (CA) policies or Sign-In Frequency policies can shorten token
     ```
 
 - **Option 2 – Manual Token Cleanup:**
-    - Have users delete cached credentials/MSAL tokens from Keychain.
-    - Users must re-sign in to establish an updated authentication context.
+  - Have users delete cached credentials/MSAL tokens from Keychain.
+  - Users must re-sign in to establish an updated authentication context.
 
 ## Key Learnings
 

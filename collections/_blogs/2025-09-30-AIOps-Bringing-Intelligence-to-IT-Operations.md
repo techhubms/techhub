@@ -60,10 +60,10 @@ Modern digital systems have become increasingly complex, stretching traditional 
 
 - **Scenario:** An e-commerce company struggles with high alert volume and lengthy incident resolution.
 - **AIOps Approach:**
-   - Aggregate logs and metrics from Kubernetes clusters to an ELK pipeline.
-   - Use anomaly detection to identify latency spikes in the checkout service.
-   - Correlate incidents to uncover a database connection leak.
-   - Automate a Kubernetes-based service restart upon detection.
+  - Aggregate logs and metrics from Kubernetes clusters to an ELK pipeline.
+  - Use anomaly detection to identify latency spikes in the checkout service.
+  - Correlate incidents to uncover a database connection leak.
+  - Automate a Kubernetes-based service restart upon detection.
 - **Outcome:** Achieved a 40% reduction in MTTR and delivered an improved customer experience.
 
 ## Practical Advice
