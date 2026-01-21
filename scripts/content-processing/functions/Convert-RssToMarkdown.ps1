@@ -321,7 +321,7 @@ function Convert-RssToMarkdown {
                 Write-Host "✅ Created file: $filePath" -ForegroundColor Green
 
                 # Fix markdown formatting only - new files already have correct .NET frontmatter
-                Repair-MarkdownFormatting -FilePath $filePath
+                $null = npx --yes markdownlint-cli2 --fix $filePath 2>&1
                 
                 # Verify file was created successfully before adding to processed entries
                 if (Test-Path $filePath) {

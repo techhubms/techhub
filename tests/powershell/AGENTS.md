@@ -41,7 +41,6 @@ scripts/content-processing/functions/
 ├── Invoke-AiApiCall.ps1
 ├── Invoke-ProcessWithAiModel.ps1
 ├── Repair-JsonResponse.ps1
-├── Repair-MarkdownFormatting.ps1
 ├── Set-FrontMatterValue.ps1
 ├── Test-RateLimitInEffect.ps1
 └── Write-ErrorDetails.ps1

@@ -8,8 +8,8 @@
 
 The repository includes automated scripts that validate and repair markdown formatting:
 
-- **Repair-MarkdownFormatting**: Fixes AI-generated markdown formatting (headings, lists, whitespace, code blocks)
-- **fix-markdown-files.ps1**: Batch processes files to fix markdown formatting issues
+- **markdownlint-cli2**: Industry-standard markdown linting and auto-fixing tool (headings, lists, whitespace, code blocks)
+- **fix-markdown-files.ps1**: Batch processes files using markdownlint-cli2 to fix markdown formatting issues
 
 **NOTE**: Frontmatter repair is NOT needed - templates already generate correct .NET format.
 

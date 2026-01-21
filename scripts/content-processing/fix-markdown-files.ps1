@@ -64,15 +64,34 @@ try {
         }
         
         Write-Host "🔍 Processing single file: $FilePath"
-        Write-Host "🔧 Fixing AI-generated markdown formatting issues..."
-        Repair-MarkdownFormatting -FilePath $absoluteFilePath
+        Write-Host "🔧 Fixing markdown formatting with markdownlint-cli2..."
+        
+        $result = npx --yes markdownlint-cli2 --fix $absoluteFilePath 2>&1
+        if ($LASTEXITCODE -ne 0) {
+            Write-Host "⚠️  Markdownlint reported issues (exit code: $LASTEXITCODE)" -ForegroundColor Yellow
+            Write-Host $result
+        }
         
         Write-Host "✅ Fixed: $FilePath"
     }
     else {
         Write-Host "🔍 Source root detected: $sourceRoot"
-        Write-Host "🔧 Fixing AI-generated markdown formatting issues..."
-        Repair-MarkdownFormatting -Path $sourceRoot
+        Write-Host "🔧 Fixing markdown formatting in collections directory with markdownlint-cli2..."
+        
+        # Fix markdown files in collections directory only (content pipeline scope)
+        $collectionsPath = Join-Path $sourceRoot "collections"
+        Push-Location $sourceRoot
+        try {
+            $result = npx --yes markdownlint-cli2 --fix "collections/**/*.md" 2>&1
+            if ($LASTEXITCODE -ne 0) {
+                Write-Host "⚠️  Markdownlint reported issues (exit code: $LASTEXITCODE)" -ForegroundColor Yellow
+                Write-Host $result
+            }
+        }
+        finally {
+            Pop-Location
+        }
+        
         Write-Host "✅ Markdown formatting complete"
     }
 }
