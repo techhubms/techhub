@@ -23920,5 +23920,11 @@
     "reason": "Succesfully added: Assigned AI category because the entire article centers on the implementation, impact, and use cases of Microsoft-powered AI and agentic (adaptive, interactive) AI in retail (AI inclusion rules 1, 4, 6). Assigned Azure category because the technical solution for the agentic robots (e.g., ADAM) is specifically described as powered by Microsoft Azure AI (Azure inclusion rule 1). Did not assign other categories as there is no focus on developer coding, DevOps practices, ML/data science engineering, or explicit security implementation. The article is technical and implementation-focused, not purely executive or business strategy, so generic exclusions do not apply.",
     "collection": "news",
     "canonical_url": "https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/01/20/frontier-transformation-in-retail-how-agentic-ai-robots-are-redefining-store-experiences/"
+  },
+  {
+    "timestamp": "2026-01-21 21:08:18 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content is specifically about the GitHub Copilot CLI, which is a developer-focused AI assistant tool (see AI inclusion rule 2 and GitHub Copilot inclusion rule 1). The integration described is intended for developers using the GitHub CLI and directly relates to AI-powered developer workflows. No Coding, DevOps, Azure, ML, or Security categories apply, as the focus is on tool integration rather than application development, DevOps pipelines, or security features.",
+    "canonical_url": "https://github.blog/changelog/2026-01-21-install-and-use-github-copilot-cli-directly-from-the-github-cli"
   }
 ]
