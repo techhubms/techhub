@@ -11445,5 +11445,17 @@
     "reason": "No categories found: No categories assigned because the provided content field is null. Per the workflow, critical content for assessment and category inclusion must be present in the 'content' field. While the description references AI and Microsoft, the absence of actual content means technical depth, Microsoft technology centrality, and category inclusion criteria cannot be properly evaluated. Categories must not be assigned based solely on title, tags, or description when content is unavailable.",
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=_ODYnb58iSU"
+  },
+  {
+    "canonical_url": "https://zure.com/blog/one-year-of-zure-uk",
+    "reason": "No categories found: Content excluded due to generic exclusion rule – this is a biographical and organizational reflection post. The content focuses on the history, achievements, and future goals of Zure UK, including hiring, organizational growth, financial stability, and values. There is no technical depth, no discussion of Microsoft technologies, platforms, architectures, or any development-related implementation details. It primarily covers company milestones, culture, and management strategy, which falls under business strategy and workplace content exclusions.",
+    "timestamp": "2026-01-21 07:09:17 +00:00",
+    "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-sre-agent/diagnosing-java-performance-issues-in-kubernetes-just-got-easier/m-p/4488015#M3",
+    "reason": "Insufficient content length",
+    "timestamp": "2026-01-21 07:09:44 +00:00",
+    "collection": "community"
   }
 ]

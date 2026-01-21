@@ -23842,5 +23842,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-tools-blog/release-of-bicep-azure-verified-modules-for-platform-landing/ba-p/4487932",
     "collection": "community",
     "reason": "Succesfully added: Assigned Azure because the entire content is about deploying and managing Azure environments using Bicep and Azure Verified Modules (Azure rule 1 and 4). Assigned DevOps since the post focuses on automating infrastructure deployment, lifecycle management, and integration with CI/CD tools such as Azure Pipelines and GitHub Actions (DevOps rules 1, 5, 6). Assigned Coding due to the technical depth on Bicep syntax, parameter files, module customization, and YAML configurations (Coding rules 2, 4, 5). Assigned Security because the architecture covers secure deployments, management group hierarchies for governance, security modules, and policy integration with governance best practices (Security rules 1, 2, 3, and 9). No ML or AI categories apply as there is no data science or AI/ML engineering content present, and the focus is entirely on infrastructure, DevOps, and governance."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/automated-java-performance-diagnostics-in-kubernetes-using-azure/ba-p/4488027",
+    "reason": "Succesfully added: Assigned 'Azure' because the main focus is on a diagnostics tool integrated with Azure SRE Agent and intended for use on Azure Kubernetes Service (Azure Rule 1, 4). Assigned 'DevOps' because the content addresses continuous diagnostics, automation, and reliability improvements for mission-critical applications, aligning with DevOps practices (DevOps Rules 3, 5, 6, and 7). 'Coding', 'ML', 'AI', 'Security', and 'GitHub Copilot' were not assigned because the content does not focus on programming, machine learning, AI, security, or GitHub Copilot-based development. The blog is technical and implementation-focused, with no generic exclusion rules triggered (no biographical, job, business productivity, sales, or negative content).",
+    "timestamp": "2026-01-21 07:09:43 +00:00",
+    "collection": "community"
   }
 ]
