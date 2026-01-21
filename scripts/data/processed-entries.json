@@ -23854,5 +23854,47 @@
     "collection": "news",
     "canonical_url": "https://devblogs.microsoft.com/all-things-azure/context-driven-development-agent-skills-for-microsoft-foundry-and-azure/",
     "timestamp": "2026-01-21 14:08:36 +00:00"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/faster-smoother-more-delightful-real-time-dashboards-performance-improvements/",
+    "timestamp": "2026-01-21 16:08:15 +00:00",
+    "reason": "Succesfully added: Assigned the ML category because Microsoft Fabric Real-Time Dashboards are directly used in analytics and business intelligence scenarios, which aligns with ML rule 1 and rule 4 (advanced data analytics/BI development, data engineering for analytics). The content describes performance improvements to data visualization and live data exploration, central to analytics engineering. Azure, AI, Coding, DevOps, and Security categories do not apply, as the content does not discuss those respective technologies or contexts. Tags were chosen for technical relevance, focusing on performance, real-time analytics, dashboarding, and Microsoft Fabric features.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://news.microsoft.com/source/asia/2026/01/21/code-of-law-how-ai-is-helping-indias-lawyers-work-faster/",
+    "timestamp": "2026-01-21 16:08:36 +00:00",
+    "reason": "Succesfully added: AI category assigned because the article centers on AI-powered legal research solutions, including conversational assistants and automation, built on Microsoft technologies (AI rule 1). Azure category added due to prominent use of Azure OpenAI Service, Azure AI Search, Cosmos DB, and Document Intelligence (Azure rule 1). Coding, DevOps, ML, Security, and GitHub Copilot categories were not assigned; the content focuses on AI application and cloud deployment within the legal sector, not custom coding, DevOps practices, machine learning frameworks, or security architectures. Although Microsoft 365 Copilot is mentioned, it's described in the context of business/productivity features, which are explicitly excluded per rules.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_introducing-rho-alpha-the-new-robotics-model-activity-7419757666660466688-jSpD",
+    "timestamp": "2026-01-21 16:08:55 +00:00",
+    "reason": "Succesfully added: Assigned the AI category because the main focus is on Microsoft's new robotics model, Rho-alpha, which turns natural language into robotic control using machine learning and AI algorithms. The content introduces and summarizes a technical advancement in AI-driven robotics, meeting the inclusion criteria for 'AI' (AI rule 1 and rule 4). There is no substantial coverage of coding, DevOps, Azure, ML (data science/analytics), or Security in the post, so only 'AI' is assigned. All generic exclusion rules were reviewed and do not apply.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/21/new-era-of-agents-new-era-of-posture/",
+    "timestamp": "2026-01-21 16:09:18 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the article centers on AI agents and their operational challenges (AI rule 1 and rule 4). 'Security' was included because securing these agents is the core focus, specifically through security posture management, attack vectors, and Microsoft Defender capabilities (Security rules 1, 2, and 4). 'Azure' is included since the content references Azure-specific tools (Azure AI Foundry and Defender for Cloud) and scenarios in Microsoft's cloud. No other categories apply, as the article does not focus on coding practices, DevOps, GitHub Copilot, or ML (in the sense of custom model development).",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/usaNdfT1hP8",
+    "timestamp": "2026-01-21 16:09:54 +00:00",
+    "reason": "Succesfully added: Added 'DevOps' category because the content is a practical tutorial on version control operations (DevOps rule 8), specifically showing how to use git and GitHub for branching, staging, and committing—key collaboration practices in DevOps workflows. Did not include Coding, as no programming language or framework-specific development is covered. Content is focused on essential source control usage for developers with GitHub.",
+    "collection": "videos"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-compute-blog/improving-efficiency-through-adaptive-cpu-uncore-power/ba-p/4486456",
+    "timestamp": "2026-01-21 16:10:21 +00:00",
+    "reason": "Succesfully added: The article centers on advanced power management for Microsoft Azure's server infrastructure, highlighting hardware/software co-design (Efficiency Latency Control) for greater energy efficiency in datacenters. This fits 'Azure' category (Azure rule 1: Any Azure service/technology and Azure rule 4: Azure development, deployment, management practices). No other category fits because there is no hands-on development, coding, DevOps, AI, ML, or Security-specific content. Tags were derived from key technical concepts, platform names, and architectural topics mentioned throughout the text. The content is entirely technical, practitioner-focused, and free of generic exclusion triggers.",
+    "collection": "community"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-paas-blog/redis-keys-statistics/ba-p/4486079",
+    "timestamp": "2026-01-21 16:10:47 +00:00",
+    "reason": "Succesfully added: Assigned 'Azure' because the majority of the content and all example/test cases use Azure Cache for Redis, and specific Azure guidelines are referenced (Azure rule 1, 2, 4). 'DevOps' applies as the solution involves operational monitoring, scripts, cache management automation, and best practices for production environments (DevOps rules 3, 7, and 11). 'Coding' is included because the article contains custom Bash and Lua scripting for client-side automation (Coding rules 4 and 5). No ML, AI, or Security categories apply, as the content does not involve those areas.",
+    "collection": "community"
   }
 ]

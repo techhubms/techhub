@@ -11457,5 +11457,11 @@
     "reason": "Insufficient content length",
     "timestamp": "2026-01-21 07:09:44 +00:00",
     "collection": "community"
+  },
+  {
+    "reason": "No categories found: No categories assigned. The content reports on the LLVM project's adoption of a policy about AI-generated code contributions in its open source workflows. While AI and development practices are mentioned, the entire article focuses on project governance, AI policy adoption, code review processes, and community debates, rather than any Microsoft technology, Azure platform, GitHub Copilot, or technical development with Microsoft tools. No Microsoft technologies or products are discussed, and the 40% Microsoft-centric threshold is not met. Therefore, by the strict predefined inclusion rules, the content doesn't qualify for any category.",
+    "timestamp": "2026-01-21 15:07:22 +00:00",
+    "canonical_url": "https://devclass.com/2026/01/21/llvm-project-adopts-human-in-the-loop-policy-following-ai-driven-nuisance-contributions/",
+    "collection": "blogs"
   }
 ]
