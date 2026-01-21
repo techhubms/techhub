@@ -38,7 +38,7 @@
                 </nav>
             }
 
-            <SidebarToc Items="@ConvertToTocItems(pageData.TableOfContents)" Title="Table of Contents" />
+            <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
         </aside>
 
         <article class="article-body">
@@ -186,9 +186,21 @@
     private SectionDto? sectionData;
     private GenAIBasicsPageData? pageData;
 
-    private static List<SidebarToc.TocItem> ConvertToTocItems(List<TableOfContentsItem> items)
+    /// <summary>
+    /// Generate HTML content for TOC extraction.
+    /// SidebarToc will extract headings from this HTML automatically.
+    /// </summary>
+    private string GetRenderedContent()
     {
-        return items.Select(item => new SidebarToc.TocItem(2, item.Id, item.Title)).ToList();
+        if (pageData == null)
+            return string.Empty;
+
+        var sb = new System.Text.StringBuilder();
+        foreach (var section in pageData.Sections)
+        {
+            sb.Append($"<h2 id=\"{section.Id}\">{section.Title}</h2>");
+        }
+        return sb.ToString();
     }
 
     protected override async Task OnInitializedAsync()

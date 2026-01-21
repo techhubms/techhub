@@ -23,7 +23,7 @@
 
     <main class="page-with-sidebar">
         <aside class="sidebar">
-            <SidebarToc Items="@GetTocItems()" Title="Table of Contents" />
+            <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
         </aside>
 
         <article class="article-body">
@@ -240,27 +240,27 @@
 @code {
     private SectionDto? sectionData;
     private SDLCPageData? pageData;
-    private List<SidebarToc.TocItem> GetTocItems()
+    private string GetRenderedContent()
     {
         if (pageData == null)
-            return [];
+            return string.Empty;
 
-        var items = new List<SidebarToc.TocItem>();
+        var sb = new System.Text.StringBuilder();
 
         // SDLC Phases
         foreach (var phase in pageData.Phases)
         {
-            items.Add(new SidebarToc.TocItem(2, $"phase-{phase.Id}", phase.Name));
+            sb.Append($"<h2 id=\"phase-{phase.Id}\">{phase.Name}</h2>");
         }
 
         // Additional sections
-        items.Add(new SidebarToc.TocItem(2, "preconditions", "Preconditions"));
-        items.Add(new SidebarToc.TocItem(2, "benefits", "Benefits"));
-        items.Add(new SidebarToc.TocItem(2, "metrics", "Metrics"));
-        items.Add(new SidebarToc.TocItem(2, "challenges", "Challenges"));
-        items.Add(new SidebarToc.TocItem(2, "methodologies", "Methodologies"));
+        sb.Append("<h2 id=\"preconditions\">Preconditions</h2>");
+        sb.Append("<h2 id=\"benefits\">Benefits</h2>");
+        sb.Append("<h2 id=\"metrics\">Metrics</h2>");
+        sb.Append("<h2 id=\"challenges\">Challenges</h2>");
+        sb.Append("<h2 id=\"methodologies\">Methodologies</h2>");
 
-        return items;
+        return sb.ToString();
     }
     protected override async Task OnInitializedAsync()
     {

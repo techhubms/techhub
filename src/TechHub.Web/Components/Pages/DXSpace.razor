@@ -23,7 +23,7 @@
 
     <main class="page-with-sidebar">
         <aside class="sidebar">
-            <SidebarToc Items="@GetTocItems()" Title="Table of Contents" />
+            <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
         </aside>
 
         <article class="article-body">
@@ -383,21 +383,20 @@
     private DXSpacePageData? pageData;
     private HashSet<int> expandedSections = new() { 0 }; // First section expanded by default
 
-    private List<SidebarToc.TocItem> GetTocItems()
+    private string GetRenderedContent()
     {
         if (pageData == null)
-            return [];
+            return string.Empty;
 
-        return
-        [
-        new SidebarToc.TocItem(2, "dx-card-dora", pageData.Dora.Title),
-new SidebarToc.TocItem(2, "dx-card-space", pageData.Space.Title),
-new SidebarToc.TocItem(2, "dx-card-devex", pageData.DevEx.Title),
-new SidebarToc.TocItem(2, "dx-card-relationships", pageData.Relationships.Title),
-new SidebarToc.TocItem(2, "dx-card-getting-started", pageData.GettingStarted.Title),
-new SidebarToc.TocItem(2, "dx-card-tools", pageData.Tools.Title),
-new SidebarToc.TocItem(2, "dx-card-best-practices", pageData.BestPractices.Title)
-        ];
+        var sb = new System.Text.StringBuilder();
+        sb.Append($"<h2 id=\"dx-card-dora\">{pageData.Dora.Title}</h2>");
+        sb.Append($"<h2 id=\"dx-card-space\">{pageData.Space.Title}</h2>");
+        sb.Append($"<h2 id=\"dx-card-devex\">{pageData.DevEx.Title}</h2>");
+        sb.Append($"<h2 id=\"dx-card-relationships\">{pageData.Relationships.Title}</h2>");
+        sb.Append($"<h2 id=\"dx-card-getting-started\">{pageData.GettingStarted.Title}</h2>");
+        sb.Append($"<h2 id=\"dx-card-tools\">{pageData.Tools.Title}</h2>");
+        sb.Append($"<h2 id=\"dx-card-best-practices\">{pageData.BestPractices.Title}</h2>");
+        return sb.ToString();
     }
 
     protected override async Task OnInitializedAsync()

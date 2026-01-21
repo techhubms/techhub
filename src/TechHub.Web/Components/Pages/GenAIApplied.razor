@@ -38,7 +38,7 @@
                 </nav>
             }
 
-            <SidebarToc Items="@ConvertToTocItems(pageData.TableOfContents)" Title="Table of Contents" />
+            <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
         </aside>
 
         <article class="article-body">
@@ -199,9 +199,17 @@
     private SectionDto? sectionData;
     private GenAIAppliedPageData? pageData;
 
-    private static List<SidebarToc.TocItem> ConvertToTocItems(List<TableOfContentsItem> items)
+    private string GetRenderedContent()
     {
-        return items.Select(item => new SidebarToc.TocItem(2, item.Id, item.Title)).ToList();
+        if (pageData?.TableOfContents == null)
+            return string.Empty;
+
+        var sb = new System.Text.StringBuilder();
+        foreach (var item in pageData.TableOfContents)
+        {
+            sb.Append($"<h2 id=\"{item.Id}\">{item.Title}</h2>");
+        }
+        return sb.ToString();
     }
 
     protected override async Task OnInitializedAsync()

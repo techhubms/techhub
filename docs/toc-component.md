@@ -13,23 +13,41 @@ The `<SidebarToc>` component provides automatic table of contents generation fro
 ### Basic Usage
 
 ```razor
-@* Auto-extract from rendered HTML *@
+@* Extract from rendered HTML content *@
 <SidebarToc HtmlContent="@item.RenderedHtml" />
 
 @* With custom title *@
-<SidebarToc HtmlContent="@html" Title="On This Page" />
-
-@* With manual items *@
-<SidebarToc Items="@tocItems" />
+<SidebarToc HtmlContent="@GetRenderedContent()" Title="On This Page" />
 ```
+
+### Generating HTML Content
+
+The component extracts headings from HTML strings. For pages with dynamic content, generate HTML in a method:
+
+```csharp
+private string GetRenderedContent()
+{
+    if (pageData == null)
+        return string.Empty;
+
+    var sb = new System.Text.StringBuilder();
+    sb.Append("<h2 id=\"overview\">Overview</h2>");
+    sb.Append("<h2 id=\"features\">Features</h2>");
+    sb.Append("<h2 id=\"conclusion\">Conclusion</h2>");
+    return sb.ToString();
+}
+```
+
+**Important**: The heading IDs in the generated HTML must match the actual heading IDs in your rendered content.
 
 ### Component Features
 
-- **Auto-extraction**: Parses `<h2>` and `<h3>` tags from HTML content
-- **Hierarchical nesting**: Proper parent-child relationships for nested headings
-- **Scroll spy**: Highlights active TOC link based on scroll position
-- **Accessibility**: ARIA labels and semantic navigation markup
+- **HTML extraction**: Parses heading tags (h2-h6) with IDs from HTML strings
+- **Hierarchical nesting**: Automatically builds parent-child relationships for nested headings
+- **Scroll spy integration**: Highlights active TOC link based on scroll position
+- **Accessibility**: ARIA labels, semantic navigation markup, keyboard-accessible
 - **Consistent styling**: Tech Hub design system integration
+- **Automatic ID generation**: Generates IDs from heading text if not explicitly provided
 
 ## Scroll Spy Architecture
 
@@ -101,29 +119,38 @@ Pages using `<SidebarToc>` must wrap content in `.article-body` container:
 - Ensures consistent styling across content pages
 - Enables scroll spy JavaScript to find headings
 
-### Automatic vs Manual TOC
+### HTML Content Generation
 
-**Always prefer automatic extraction**:
+**For static markdown content**:
 
 ```razor
-@* CORRECT - Auto-extract from HTML *@
+@* Content already rendered to HTML *@
 <SidebarToc HtmlContent="@item.RenderedHtml" />
 ```
 
-**Avoid manual TOC**:
+**For dynamic Blazor pages**:
 
 ```razor
-@* INCORRECT - Manual TOC (maintenance burden) *@
-<nav class="sidebar-toc">
-    <h2>Table of Contents</h2>
-    <ul>
-        <li><a href="#section1">Section 1</a></li>
-        <li><a href="#section2">Section 2</a></li>
-    </ul>
-</nav>
+@* Generate HTML string matching your page structure *@
+<SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
+
+@code {
+    private string GetRenderedContent()
+    {
+        var sb = new System.Text.StringBuilder();
+        
+        // Generate headings that match your actual page structure
+        foreach (var section in pageData.Sections)
+        {
+            sb.Append($"<h2 id=\"{section.Id}\">{section.Title}</h2>");
+        }
+        
+        return sb.ToString();
+    }
+}
 ```
 
-**Exceptions**: Manual TOC only when content structure doesn't follow standard heading hierarchy.
+**Key principle**: The generated HTML must mirror your actual page heading structure with matching IDs.
 
 ## Expected Behavior
 

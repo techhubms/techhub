@@ -19,7 +19,8 @@
 
     <main class="page-with-sidebar">
         <aside class="sidebar">
-            <SidebarToc Items="@GetTocItems()" Title="Levels" />
+            @* No need to pass Items - let SidebarToc extract from rendered HTML *@
+            <SidebarToc HtmlContent="@GetRenderedContent()" Title="Levels" />
         </aside>
 
         <article class="article-body">
@@ -88,24 +89,30 @@
 @code {
     private LevelsPageData? pageData;
 
-    private List<SidebarToc.TocItem> GetTocItems()
+    /// <summary>
+    /// Generate HTML content for TOC extraction.
+    /// SidebarToc will extract headings from this HTML automatically.
+    /// </summary>
+    private string GetRenderedContent()
     {
         if (pageData == null)
-            return [];
+            return string.Empty;
 
-        var items = new List<SidebarToc.TocItem>
-{
-new(2, "overview", "Overview")
-};
+        var sb = new System.Text.StringBuilder();
 
+        // Overview heading
+        sb.Append($"<h2 id=\"overview\">Overview</h2>");
+
+        // All level headings
         foreach (var level in pageData.Levels)
         {
-            items.Add(new SidebarToc.TocItem(2, $"level-{level.Number}", $"Level {level.Number}: {level.Title}"));
+            sb.Append($"<h2 id=\"level-{level.Number}\">Level {level.Number}: {level.Title}</h2>");
         }
 
-        items.Add(new SidebarToc.TocItem(2, "conclusion", "Conclusion"));
+        // Conclusion heading
+        sb.Append($"<h2 id=\"conclusion\">Conclusion</h2>");
 
-        return items;
+        return sb.ToString();
     }
 
     protected override async Task OnInitializedAsync()

@@ -337,6 +337,12 @@ export class TocScrollSpy {
             // This handles cases where headings have large gaps between them
         }
 
+        // Fallback: If no heading is above the detection line (e.g., page just loaded),
+        // activate the first heading to provide visual feedback
+        if (!targetId && this.headings.length > 0) {
+            targetId = this.headings[0].getAttribute('id');
+        }
+
         if (targetId) {
             this.setActive(targetId);
         }

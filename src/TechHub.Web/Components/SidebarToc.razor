@@ -4,23 +4,25 @@
 @* 
    Table of Contents Sidebar Component
    
-   Renders a hierarchical table of contents with proper nesting and indentation.
+   Automatically extracts and renders a hierarchical table of contents from HTML content.
+   Parses heading tags (h2-h6) with IDs and generates a navigable TOC with proper nesting.
    
    Usage:
-     Auto-extract from HTML content:
-       <SidebarToc HtmlContent="@renderedHtml" />
-     
-     Pass explicit items:
-       <SidebarToc Items="@tocItems" />
-     
-     With custom title:
-       <SidebarToc HtmlContent="@html" Title="Table of Contents" />
+     <SidebarToc HtmlContent="@GetRenderedContent()" />
+     <SidebarToc HtmlContent="@htmlString" Title="TOC" />
+   
+   Where GetRenderedContent() returns HTML with headings:
+     private string GetRenderedContent() {
+       var sb = new System.Text.StringBuilder();
+       sb.Append("<h2 id=\"overview\">Overview</h2>");
+       sb.Append("<h2 id=\"details\">Details</h2>");
+       return sb.ToString();
+     }
 *@
 
 @if (effectiveItems.Count > 0)
 {
-    <nav class="sidebar-section sidebar-toc" aria-label="@Title" data-toc-scroll-spy
-        data-content-selector=".article-body">
+    <nav class="sidebar-section sidebar-toc" aria-label="@Title" data-toc-scroll-spy data-content-selector=".article-body">
         <div class="sidebar-toc-inner">
             <h2 class="sidebar-h2">@Title</h2>
             <ul class="toc-list">
@@ -32,16 +34,10 @@
 
 @code {
     /// <summary>
-    /// HTML content to extract headings from (auto-extraction mode).
+    /// HTML content to extract headings from.
     /// </summary>
     [Parameter]
     public string? HtmlContent { get; set; }
-
-    /// <summary>
-    /// Explicit TOC items to display (manual mode). Takes precedence over HtmlContent.
-    /// </summary>
-    [Parameter]
-    public IReadOnlyList<TocItem>? Items { get; set; }
 
     /// <summary>
     /// Title displayed above the TOC.
@@ -65,19 +61,9 @@
 
     protected override void OnParametersSet()
     {
-        // Manual items take precedence
-        if (Items != null && Items.Count > 0)
-        {
-            effectiveItems = Items.ToList();
-        }
-        else if (!string.IsNullOrWhiteSpace(HtmlContent))
-        {
-            effectiveItems = ExtractHeadings(HtmlContent);
-        }
-        else
-        {
-            effectiveItems = [];
-        }
+        effectiveItems = !string.IsNullOrWhiteSpace(HtmlContent)
+        ? ExtractHeadings(HtmlContent)
+        : [];
     }
 
     private List<TocItem> ExtractHeadings(string html)
@@ -198,12 +184,12 @@
     };
 
     /// <summary>
-    /// Represents a table of contents item.
+    /// Internal representation of a table of contents item extracted from HTML.
     /// </summary>
-    public record TocItem(int Level, string Id, string Text);
+    private record TocItem(int Level, string Id, string Text);
 
     /// <summary>
-    /// Internal node for building hierarchy.
+    /// Internal node for building hierarchical tree structure from flat TOC items.
     /// </summary>
     private class TocNode(TocItem item)
     {

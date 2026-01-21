@@ -19,7 +19,7 @@
 
     <main class="page-with-sidebar">
         <aside class="sidebar">
-            <SidebarToc Items="@GetTocItems()" Title="Table of Contents" />
+            <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
         </aside>
 
         <article class="article-body">
@@ -38,12 +38,12 @@
                         <img src="/images/ghc-handbook.jpg" alt="GitHub Copilot Handbook Book Cover" loading="lazy" />
                         <div class="handbook-cover-glow"></div>
                     </div>
-                    
+
                     <div class="handbook-hero-content">
                         <p class="handbook-tagline">Your Complete Guide to AI-Powered Development</p>
-                        
+
                         <p class="handbook-description">@pageData.Intro</p>
-                        
+
                         <div class="handbook-meta">
                             <div class="handbook-meta-item">
                                 <span class="handbook-meta-label">Authors</span>
@@ -62,13 +62,14 @@
                                 <span class="handbook-meta-value">@pageData.BookDetails.Pages</span>
                             </div>
                         </div>
-                        
+
                         @if (pageData.PurchaseLink != null)
                         {
                             <a href="@pageData.PurchaseLink.Url" class="handbook-cta" target="_blank" rel="noopener">
                                 <span class="handbook-cta-text">@pageData.PurchaseLink.Text</span>
-                                <svg class="handbook-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                <svg class="handbook-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
                                 </svg>
                             </a>
                         }
@@ -155,17 +156,20 @@
 @code {
     private HandbookPageData? pageData;
 
-private static List<SidebarToc.TocItem> GetTocItems()
+    /// <summary>
+    /// Generate HTML content for TOC extraction.
+    /// SidebarToc will extract headings from this HTML automatically.
+    /// </summary>
+    private static string GetRenderedContent()
     {
-        return
-        [
-            new SidebarToc.TocItem(2, "about-book", "About the Book"),
-            new SidebarToc.TocItem(2, "learnings", "What You'll Learn"),
-            new SidebarToc.TocItem(2, "audience", "Who Is This Book For"),
-            new SidebarToc.TocItem(2, "key-features", "Key Features"),
-            new SidebarToc.TocItem(2, "toc", "Table of Contents"),
-            new SidebarToc.TocItem(2, "authors", "About the Authors")
-        ];
+        var sb = new System.Text.StringBuilder();
+        sb.Append("<h2 id=\"about-book\">About the Book</h2>");
+        sb.Append("<h2 id=\"learnings\">What You'll Learn</h2>");
+        sb.Append("<h2 id=\"audience\">Who Is This Book For</h2>");
+        sb.Append("<h2 id=\"key-features\">Key Features</h2>");
+        sb.Append("<h2 id=\"toc\">Table of Contents</h2>");
+        sb.Append("<h2 id=\"authors\">About the Authors</h2>");
+        return sb.ToString();
     }
 
     protected override async Task OnInitializedAsync()

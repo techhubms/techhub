@@ -19,7 +19,7 @@
 
     <main class="page-with-sidebar">
         <aside class="sidebar">
-            <SidebarToc Items="@GetTocItems()" Title="Table of Contents" />
+            <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
         </aside>
 
         <article class="article-body">
@@ -108,26 +108,30 @@
     private FeaturesPageData? pageData;
     private List<ContentItemDto> videoItems = new();
 
-    private List<SidebarToc.TocItem> GetTocItems()
+    /// <summary>
+    /// Generate HTML content for TOC extraction.
+    /// SidebarToc will extract headings from this HTML automatically.
+    /// </summary>
+    private string GetRenderedContent()
     {
         if (pageData == null)
-            return [];
+            return string.Empty;
 
-        var items = new List<SidebarToc.TocItem>();
+        var sb = new System.Text.StringBuilder();
 
-        // Plans section
+        // Subscription tiers
         foreach (var tier in pageData.SubscriptionTiers)
         {
-            items.Add(new SidebarToc.TocItem(2, $"tier-{tier.Id}", tier.Name));
+            sb.Append($"<h2 id=\"tier-{tier.Id}\">{tier.Name}</h2>");
         }
 
-        // Feature Videos sections
+        // Feature sections
         foreach (var featureSection in pageData.FeatureSections)
         {
-            items.Add(new SidebarToc.TocItem(2, featureSection.Id, featureSection.Title));
+            sb.Append($"<h2 id=\"{featureSection.Id}\">{featureSection.Title}</h2>");
         }
 
-        return items;
+        return sb.ToString();
     }
 
     protected override async Task OnInitializedAsync()
