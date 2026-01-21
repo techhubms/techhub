@@ -97,9 +97,11 @@ The AI in SDLC page explores how AI integrates into software development lifecyc
 
 ## Implementation Tasks
 
-### Task 1: Verify JSON Completeness
+### Task 1: Verify JSON Completeness (REQUIRED)
 
 **File**: `collections/_custom/sdlc.json`
+
+**CRITICAL**: This is MANDATORY - JSON must match original markdown exactly
 
 **Subtasks**:
 
@@ -152,6 +154,8 @@ The AI in SDLC page explores how AI integrates into software development lifecyc
 ### Task 3: Create E2E Tests
 
 **File**: `tests/TechHub.E2E.Tests/Web/AISDLCTests.cs`
+
+**Reference Pattern**: `HandbookTests.cs`, `LevelsOfEnlightenmentTests.cs` for page-specific tests; `CustomPagesTests.cs` for general tests
 
 **Test Methods**:
 

@@ -100,9 +100,11 @@ GenAI Advanced covers sophisticated AI concepts including embeddings, RAG, funct
 
 ## Implementation Tasks
 
-### Task 1: JSON Content Update (CRITICAL)
+### Task 1: JSON Content Update (REQUIRED)
 
 **File**: `collections/_custom/genai-advanced.json`
+
+**CRITICAL**: This is MANDATORY - JSON must match original markdown exactly
 
 **Subtasks**:
 
@@ -158,6 +160,8 @@ GenAI Advanced covers sophisticated AI concepts including embeddings, RAG, funct
 ### Task 3: Create E2E Tests
 
 **File**: `tests/TechHub.E2E.Tests/Web/GenAIAdvancedTests.cs`
+
+**Reference Pattern**: `HandbookTests.cs`, `LevelsOfEnlightenmentTests.cs` for page-specific tests; `CustomPagesTests.cs` for general tests
 
 **Test Methods**:
 

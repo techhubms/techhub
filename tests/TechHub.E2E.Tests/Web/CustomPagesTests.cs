@@ -5,6 +5,16 @@ using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
 
+/// <summary>
+/// General tests for all custom pages.
+/// Tests common functionality: page loading, content display, and shared TOC behavior.
+/// 
+/// Page-specific tests are in separate files:
+/// - HandbookTests.cs: GitHub Copilot Handbook-specific tests
+/// - LevelsOfEnlightenmentTests.cs: Levels of Enlightenment-specific tests
+/// - VSCodeUpdatesTests.cs: VS Code Updates-specific tests
+/// - AISDLCTests.cs: AI-Powered SDLC-specific tests
+/// </summary>
 [Collection("Custom Pages Tests")]
 public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
@@ -120,4 +130,60 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         pageContent.Should().Contain("SPACE Framework");
         pageContent.Should().Contain("Developer Experience");  // Part of the DevEx/DX section title
     }
+
+    #region General TOC Behavior Tests
+
+    [Theory]
+    [InlineData("/github-copilot/handbook")]
+    [InlineData("/github-copilot/levels-of-enlightenment")]
+    [InlineData("/github-copilot/vscode-updates")]
+    public async Task CustomPageWithToc_Should_Not_HaveConsoleErrors(string url)
+    {
+        // Arrange - Collect console errors
+        var consoleErrors = new List<string>();
+        Page.Console += (_, msg) =>
+        {
+            if (msg.Type == "error")
+            {
+                consoleErrors.Add(msg.Text);
+            }
+        };
+
+        // Act
+        await Page.GotoRelativeAsync(url);
+        await Page.WaitForTimeoutAsync(1000); // Wait for JS to execute
+
+        // Assert
+        consoleErrors.Should().BeEmpty($"Expected no console errors on {url}, but found: {string.Join(", ", consoleErrors)}");
+    }
+
+    [Theory]
+    [InlineData("/github-copilot/handbook")]
+    [InlineData("/github-copilot/levels-of-enlightenment")]
+    [InlineData("/github-copilot/vscode-updates")]
+    public async Task CustomPageWithToc_TocLinks_ShouldBe_KeyboardAccessible(string url)
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(url);
+
+        // Act - Tab through page until we hit a TOC link
+        var foundTocLink = false;
+        for (var i = 0; i < 30; i++)
+        {
+            await Page.Keyboard.PressAsync("Tab");
+            var isTocLink = await Page.EvaluateAsync<bool>(
+                "document.activeElement && (document.activeElement.closest('.sidebar-toc') !== null)"
+            );
+            if (isTocLink)
+            {
+                foundTocLink = true;
+                break;
+            }
+        }
+
+        // Assert
+        foundTocLink.Should().BeTrue($"Should be able to reach TOC links via keyboard on {url}");
+    }
+
+    #endregion
 }

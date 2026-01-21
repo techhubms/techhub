@@ -11,4 +11,3 @@ Mock Invoke-WebRequest { throw "Should not make HTTP calls" }
 Mock Invoke-RestMethod { throw "Should not make HTTP calls" }
 Mock Write-ErrorDetails { }
 Mock Get-ContentFromUrl { }
-Mock Get-ContentFromUrlWithPlaywright { }

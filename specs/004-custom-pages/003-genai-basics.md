@@ -105,9 +105,11 @@ GenAI Basics is the **first page needing full JSON update** with significant mis
 
 ## Implementation Tasks
 
-### Task 1: JSON Content Update (CRITICAL)
+### Task 1: JSON Content Update (REQUIRED)
 
 **File**: `collections/_custom/genai-basics.json`
+
+**CRITICAL**: This is MANDATORY - JSON must match original markdown exactly
 
 **Subtasks**:
 
@@ -226,7 +228,7 @@ public async Task GenAIBasics_FaqBlocks_ShouldDisplay()
 public async Task GenAIBasics_ResourceLinks_ShouldBeClickable()
 ```
 
-**Reference Pattern**: `CustomPagesTocTests.cs` for TOC tests
+**Reference Pattern**: `HandbookTests.cs`, `LevelsOfEnlightenmentTests.cs` for page-specific tests; `CustomPagesTests.cs` for general tests
 
 **Estimated Time**: 3-4 hours
 

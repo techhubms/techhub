@@ -92,9 +92,11 @@ GenAI Applied builds on GenAI Basics with practical applications and real-world 
 
 ## Implementation Tasks
 
-### Task 1: JSON Content Update (CRITICAL)
+### Task 1: JSON Content Update (REQUIRED)
 
 **File**: `collections/_custom/genai-applied.json`
+
+**CRITICAL**: This is MANDATORY - JSON must match original markdown exactly
 
 **Subtasks**:
 
@@ -160,6 +162,8 @@ GenAI Applied builds on GenAI Basics with practical applications and real-world 
 ### Task 3: Create E2E Tests
 
 **File**: `tests/TechHub.E2E.Tests/Web/GenAIAppliedTests.cs`
+
+**Reference Pattern**: `HandbookTests.cs`, `LevelsOfEnlightenmentTests.cs` for page-specific tests; `CustomPagesTests.cs` for general tests
 
 **Test Methods**:
 

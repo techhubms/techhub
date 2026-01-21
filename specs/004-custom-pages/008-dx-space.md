@@ -102,9 +102,11 @@ The Developer Experience Space page presents the DX Space framework with pillars
 
 ## Implementation Tasks
 
-### Task 1: Verify JSON Completeness
+### Task 1: Verify JSON Completeness (REQUIRED)
 
 **File**: `collections/_custom/dx-space.json`
+
+**CRITICAL**: This is MANDATORY - JSON must match original markdown exactly
 
 **Subtasks**:
 
@@ -157,6 +159,8 @@ The Developer Experience Space page presents the DX Space framework with pillars
 ### Task 3: Create E2E Tests
 
 **File**: `tests/TechHub.E2E.Tests/Web/DXSpaceTests.cs`
+
+**Reference Pattern**: `HandbookTests.cs`, `LevelsOfEnlightenmentTests.cs` for page-specific tests; `CustomPagesTests.cs` for general tests
 
 **Test Methods**:
 

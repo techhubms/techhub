@@ -94,9 +94,11 @@ The GitHub Copilot Features page is the **most visited custom page** and serves 
 
 ## Implementation Tasks
 
-### Task 1: Verify JSON Completeness
+### Task 1: Verify JSON Completeness (REQUIRED)
 
 **File**: `collections/_custom/features.json`
+
+**CRITICAL**: This is MANDATORY - JSON must match original markdown exactly
 
 **Subtasks**:
 
@@ -144,6 +146,8 @@ The GitHub Copilot Features page is the **most visited custom page** and serves 
 ### Task 3: Create E2E Tests
 
 **File**: `tests/TechHub.E2E.Tests/Web/GitHubCopilotFeaturesTests.cs`
+
+**Reference Pattern**: `HandbookTests.cs`, `LevelsOfEnlightenmentTests.cs` for page-specific tests; `CustomPagesTests.cs` for general tests
 
 **Test Methods**:
 

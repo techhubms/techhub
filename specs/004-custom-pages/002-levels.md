@@ -8,7 +8,7 @@
 
 ## Overview
 
-The Levels of Enlightenment page is **already implemented** with comprehensive E2E tests in `CustomPagesTocTests.cs`. This spec focuses on **verifying test coverage is complete** and adding any missing tests.
+The Levels of Enlightenment page is **already implemented** with comprehensive E2E tests in `LevelsOfEnlightenmentTests.cs`. This spec focuses on **verifying test coverage is complete** and adding any missing tests.
 
 **Live Site Reference**: <https://tech.hub.ms/github-copilot/levels-of-enlightenment>
 
@@ -19,7 +19,7 @@ The Levels of Enlightenment page is **already implemented** with comprehensive E
 - Razor component exists: `src/TechHub.Web/Components/Pages/GitHubCopilotLevels.razor`
 - SidebarToc component integrated
 - JSON data file: `collections/_custom/levels.json`
-- E2E tests exist in `CustomPagesTocTests.cs` with 5 test methods
+- E2E tests exist in `LevelsOfEnlightenmentTests.cs` with 5 test methods
 
 ✅ **Existing E2E Tests**:
 
@@ -70,7 +70,7 @@ Verify all 5 tests pass with green status.
 
 ### Task 2: Review Test Coverage
 
-**File**: `tests/TechHub.E2E.Tests/Web/CustomPagesTocTests.cs`
+**File**: `tests/TechHub.E2E.Tests/Web/LevelsOfEnlightenmentTests.cs`
 
 Review lines 221-360 to ensure tests cover:
 
@@ -86,9 +86,13 @@ Review lines 221-360 to ensure tests cover:
 - Visual element rendering (icons, cards)
 - Progression indicator functionality
 
-### Task 3: Verify JSON Completeness
+### Task 3: Verify JSON Completeness (REQUIRED)
 
 **File**: `collections/_custom/levels.json`
+
+**Source**: `https://raw.githubusercontent.com/techhubms/techhub/main/sections/github-copilot/levels-of-enlightenment.md`
+
+**CRITICAL**: This is MANDATORY - JSON must match original markdown exactly
 
 Compare against original markdown to ensure all content is present:
 
@@ -96,8 +100,6 @@ Compare against original markdown to ensure all content is present:
 - Level criteria and descriptions
 - Skills required for each level
 - Progression guidance
-
-**Original Markdown**: Check if exists in main branch at `sections/github-copilot/levels-of-enlightenment.md`
 
 ### Task 4: Add Missing Tests (if needed)
 
@@ -114,7 +116,7 @@ public async Task Levels_LevelIconsShouldRender()
 public async Task Levels_KeyboardNavigation_ShouldWork()
 ```
 
-**Location**: Either add to `CustomPagesTocTests.cs` or create new `GitHubCopilotLevelsTests.cs`
+**Location**: Add to `LevelsOfEnlightenmentTests.cs`
 
 ## Success Metrics
 
@@ -130,7 +132,7 @@ public async Task Levels_KeyboardNavigation_ShouldWork()
 - ✅ SidebarToc component (already exists)
 - ✅ GitHubCopilotLevels.razor (already implemented)
 - ✅ levels.json (already exists)
-- ✅ Existing E2E tests in CustomPagesTocTests.cs
+- ✅ Existing E2E tests in LevelsOfEnlightenmentTests.cs
 
 ## Out of Scope
 
