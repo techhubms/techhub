@@ -23932,5 +23932,11 @@
     "timestamp": "2026-01-21 22:05:14 +00:00",
     "reason": "Succesfully added: Included 'GitHub Copilot' and 'AI' categories because the content centers around live usage of GitHub Copilot CLI, as described in the title ('Let's build with GitHub Copilot CLI') and the description ('build with agents from the command line and integrate them into workflows'). Per AI Inclusion Rules (AI rule 2) and GitHub Copilot Inclusion Rules, any GitHub Copilot (developer tool) content receives both 'AI' and 'GitHub Copilot'. No other categories qualify, as the focus is not on general coding or DevOps, but specifically on Copilot CLI as an AI-powered coding assistant from GitHub. No generic exclusion rules apply (there is no biographical, sales, business, or negative content, and the language is English).",
     "collection": "videos"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-21 23:05:14 +00:00",
+    "reason": "Succesfully added: Categories assigned: 'AI' because the content is about GitHub Copilot CLI, an AI-powered coding assistant (AI rule 2, Microsoft AI products and developer tools). 'GitHub Copilot' assigned, as the focus is on GitHub Copilot CLI, including its features, usage, and developer workflow impact (GitHub Copilot rules 1-4). Did not assign 'Coding' because the content focuses on new CLI and AI-driven workflow features, not direct code creation, code patterns, or language-specific tutorials. Not 'DevOps', since workflow/process automations are within the Copilot CLI and not about CI/CD, infra, or team methodology. Not 'Azure', 'ML', or 'Security', as these topics are not substantively addressed in the update.",
+    "canonical_url": "https://github.blog/changelog/2026-01-21-github-copilot-cli-plan-before-you-build-steer-as-you-go"
   }
 ]
