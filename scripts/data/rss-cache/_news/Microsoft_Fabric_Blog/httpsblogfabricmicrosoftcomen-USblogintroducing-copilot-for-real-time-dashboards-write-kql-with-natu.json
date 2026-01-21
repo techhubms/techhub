@@ -1,0 +1,14 @@
+{
+  "Description": "Turning questions into KQL queries just became part of Real-Time Dashboard tile editing experience, using Copilot. This new feature brings the power of AI directly into the tile editing workflow. When editing a tile, you’ll now see the Copilot assistant pane ready to help you turn natural language into actionable queries. Whether you’re new to …\n\n[Continue reading “Introducing Copilot for Real-Time Dashboards: Write KQL with natural language”](https://blog.fabric.microsoft.com/en-us/blog/introducing-copilot-for-real-time-dashboards-write-kql-with-natural-language/)",
+  "Link": "https://blog.fabric.microsoft.com/en-US/blog/introducing-copilot-for-real-time-dashboards-write-kql-with-natural-language/",
+  "Tags": [],
+  "Title": "Introducing Copilot for Real-Time Dashboards: Write KQL with natural language",
+  "FeedName": "Microsoft Fabric Blog",
+  "Author": "Microsoft Fabric Blog",
+  "ProcessedDate": "2026-01-21 17:20:58",
+  "PubDate": "2026-01-21T10:00:00+00:00",
+  "FeedUrl": "https://blog.fabric.microsoft.com/en-us/blog/feed/",
+  "OutputDir": "_news",
+  "EnhancedContent": "Turning questions into KQL queries just became part of Real-Time Dashboard tile editing experience, using Copilot.\n\nThis new feature brings the power of AI directly into the tile editing workflow. When editing a tile, you’ll now see the Copilot assistant pane ready to help you turn natural language into actionable queries. Whether you’re new to Kusto Query Language (KQL) or an experienced user looking to save time, Copilot makes query authoring faster and more intuitive than ever.\n\n![Screenshot of Edit Tile screen with Copilot pane opened](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/07/image-1.png)Copilot – turning questions to KQL queries\n\n## What you can do with Copilot in Real-Time Dashboards\n\n- **Ask questions in natural language** – *“Show me the top 5 services by error rate in the last 30 minutes.”*\n- **Instantly generate working KQL queries** – Copilot translates your question into a query that powers your dashboard tile.\n- **Replace or refine tile queries** – Use the generated query as-is or modify it further to suit your needs.\n\nThis feature unlocks a whole new level of productivity and lowers the barrier to creating insightful, real-time visualizations.\n\nTo learn more about how Copilot helps you write queries, check out the [official documentation](https://learn.microsoft.com/fabric/fundamentals/copilot-for-writing-queries).",
+  "FeedLevelAuthor": "Microsoft Fabric Blog"
+}

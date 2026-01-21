@@ -11463,5 +11463,23 @@
     "timestamp": "2026-01-21 15:07:22 +00:00",
     "canonical_url": "https://devclass.com/2026/01/21/llvm-project-adopts-human-in-the-loop-policy-following-ai-driven-nuisance-contributions/",
     "collection": "blogs"
+  },
+  {
+    "timestamp": "2026-01-21 17:23:56 +00:00",
+    "canonical_url": "https://blogs.windows.com/windowsexperience/2026/01/21/play-more-xbox-app-is-now-available-on-arm-based-windows-11-pcs/",
+    "collection": "news",
+    "reason": "No categories found: All evaluated category inclusion rules do not apply. The content focuses on the general availability of the Xbox app for Arm-based Windows 11 PCs and associated gaming improvements, not on software development, coding, Azure, DevOps, ML, AI, or security implementation. It summarizes product compatibility for end-users and gamers, rather than technical development processes or architecture. There are no references to software development tools, code, DevOps practices, Azure or ML services, security architecture or Microsoft developer technologies. Per generic exclusion rules for non-development Microsoft products and content aimed at general consumers/business productivity rather than developers, all categories are excluded."
+  },
+  {
+    "timestamp": "2026-01-21 17:24:09 +00:00",
+    "canonical_url": "https://news.microsoft.com/signal/articles/what-ai-means-for-higher-education/",
+    "collection": "news",
+    "reason": "No categories found: The content primarily discusses the societal, educational, and organizational impacts of AI on higher education, based on insights from a new book. While it references Microsoft figures (Juan M. Lavista Ferres and Microsoft's AI Economy Institute), the article does not provide technical detail related to Microsoft AI products, developer tools, integration, coding, or implementation details. It focuses on ethics, curriculum changes, and educational policy. According to the Generic Exclusion Rules (Business Strategy and Executive Content, Industry Trends and Market Analysis without technical implementation details, and content targeting executives, managers, or business decision-makers rather than practitioners), as well as the Non-Development Microsoft Products exclusion, this content is considered business/strategy/education-focused rather than technical or developer-centric. No categories are assigned."
+  },
+  {
+    "timestamp": "2026-01-21 17:25:09 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=rWreWlS61gE",
+    "collection": "videos",
+    "reason": "No categories found: All fields were analyzed according to the content categorization workflow. The content spotlights an open source, offline speech-to-text application called Handy, created in response to a personal need for extensible speech-to-text solutions. There is no substantive mention of Microsoft technologies, platforms, development frameworks, or tools per the input fields (title, description, content, tags). It does not discuss Microsoft AI services, ML, Coding, Azure, Security, DevOps, or GitHub Copilot. The only possible link is the event series 'Open Source Friday,' which is hosted by GitHub, but the focus here is not on GitHub development practices or tooling, only on Handy as a project. Therefore, based on the generic exclusion rules and technology threshold, this content does not meet the inclusion criteria for any categories."
   }
 ]

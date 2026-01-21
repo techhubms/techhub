@@ -23896,5 +23896,17 @@
     "timestamp": "2026-01-21 16:10:47 +00:00",
     "reason": "Succesfully added: Assigned 'Azure' because the majority of the content and all example/test cases use Azure Cache for Redis, and specific Azure guidelines are referenced (Azure rule 1, 2, 4). 'DevOps' applies as the solution involves operational monitoring, scripts, cache management automation, and best practices for production environments (DevOps rules 3, 7, and 11). 'Coding' is included because the article contains custom Bash and Lua scripting for client-side automation (Coding rules 4 and 5). No ML, AI, or Security categories apply, as the content does not involve those areas.",
     "collection": "community"
+  },
+  {
+    "timestamp": "2026-01-21 17:23:43 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-copilot-for-real-time-dashboards-write-kql-with-natural-language/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because the article introduces a feature that uses Copilot (AI-driven assistant) to generate KQL queries from natural language within Microsoft Fabric's Real-Time Dashboards (AI rule 1 and 5). Did not assign 'GitHub Copilot' because the Copilot discussed here is not the GitHub developer tool but a platform-integrated AI feature for query authoring, per the Copilot product distinction rules. Coding, DevOps, Azure, ML, and Security categories do not apply because the content is focused on dashboard assembly and AI-assisted query writing, rather than code development, cloud or security implementation, or data science workloads."
+  },
+  {
+    "timestamp": "2026-01-21 17:24:37 +00:00",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/a-cheat-sheet-to-slash-commands-in-github-copilot-cli/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the entire article focuses on Copilot CLI, a developer-oriented Copilot tool (AI rule 2, GitHub Copilot rules 1–4, and critical Copilot product distinction). Assigned 'Coding' since the content details command-line coding workflow enhancement using Copilot within a developer context (Coding rule 5, Developer Tools). Although the main topic is developer tooling, no other categories such as 'DevOps' or 'Azure' are covered as there are no deployment, CI/CD, or Azure-specific topics present."
   }
 ]
