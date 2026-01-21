@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/a-developers-guide-to-writing-debugging-reviewing-and-shipping-code-faster-with-github-copilot/
 title: 'GitHub Copilot: Modern AI Coding Workflows, Mission Control, and Best Practices'
 author: Aaron Winston
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-05 17:00:00 +00:00
 tags:

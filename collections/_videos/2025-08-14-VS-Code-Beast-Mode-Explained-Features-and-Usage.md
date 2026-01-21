@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=0Muxg3xhRLo
 title: 'VS Code Beast Mode Explained: Features and Usage'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-08-14 20:17:42 +00:00
 tags:

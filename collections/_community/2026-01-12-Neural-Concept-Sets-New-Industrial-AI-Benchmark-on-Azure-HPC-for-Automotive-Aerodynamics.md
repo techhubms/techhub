@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/scaling-physics-based-digital-twins-neural-concept-on-azure/ba-p/4483403
 title: Neural Concept Sets New Industrial AI Benchmark on Azure HPC for Automotive Aerodynamics
 author: lmiroslaw
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-12 12:10:23 +00:00
 tags:

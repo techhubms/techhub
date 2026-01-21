@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/why-nano-updates-only-work-if-you-begin-with-the-latest-and-greatest-software/
 title: Why Nano Updates Only Work if You Begin with the Latest and Greatest Software
 author: Dustin Kirkland
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-23 06:00:19 +00:00
 tags:

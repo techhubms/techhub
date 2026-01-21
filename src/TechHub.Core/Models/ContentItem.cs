@@ -16,11 +16,6 @@ public class ContentItem
     public required string Title { get; init; }
 
     /// <summary>
-    /// Brief summary/description
-    /// </summary>
-    public required string Description { get; init; }
-
-    /// <summary>
     /// Optional author name
     /// </summary>
     public string? Author { get; init; }
@@ -78,11 +73,6 @@ public class ContentItem
     public string? ExternalUrl { get; init; }
 
     /// <summary>
-    /// Viewing mode for content (internal or external)
-    /// </summary>
-    public string? ViewingMode { get; init; }
-
-    /// <summary>
     /// Dynamic sidebar info as JSON (from 'sidebar-info' frontmatter field)
     /// Can be deserialized into custom structures as needed per page
     /// </summary>
@@ -127,7 +117,7 @@ public class ContentItem
     /// </summary>
     public string GetPrimarySectionUrl()
     {
-        return TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(SectionNames, CollectionName);
+        return Helpers.SectionPriorityHelper.GetPrimarySectionUrl(SectionNames, CollectionName);
     }
 
     /// <summary>
@@ -146,14 +136,5 @@ public class ContentItem
         // Otherwise use the collection name (e.g., /github-copilot/videos/slug)
         var pathSegment = SubcollectionName ?? CollectionName;
         return $"{normalizedSectionUrl}/{pathSegment}/{Slug}";
-    }
-
-    /// <summary>
-    /// Gets the content item URL in its primary section
-    /// </summary>
-    public string GetUrl()
-    {
-        var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(SectionNames, CollectionName);
-        return GetUrlInSection(primarySectionUrl);
     }
 }

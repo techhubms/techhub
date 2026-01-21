@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=cFJH00a12lo
 title: 'From Code to Care: Empowering Healthcare with Agentic AI'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 16:37:26 +00:00
 tags:

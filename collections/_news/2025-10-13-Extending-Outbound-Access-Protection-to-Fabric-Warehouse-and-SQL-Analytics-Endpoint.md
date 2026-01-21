@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/extending-outbound-access-protection-to-fabric-warehouse-and-sql-analytics-endpoint/
 title: Extending Outbound Access Protection to Fabric Warehouse and SQL Analytics Endpoint
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-10-13 09:00:00 +00:00
 tags:

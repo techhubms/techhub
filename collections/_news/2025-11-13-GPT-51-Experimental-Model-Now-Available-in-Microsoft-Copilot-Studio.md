@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/available-now-gpt-5-1-in-microsoft-copilot-studio/
 title: GPT-5.1 Experimental Model Now Available in Microsoft Copilot Studio
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-13 18:41:10 +00:00
 tags:

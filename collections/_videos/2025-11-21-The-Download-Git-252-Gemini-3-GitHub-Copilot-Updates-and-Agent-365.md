@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=wc2y1HS2a4I
 title: 'The Download: Git 2.52, Gemini 3, GitHub Copilot Updates & Agent 365'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-21 18:18:02 +00:00
 tags:

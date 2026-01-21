@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=WbFivYJ7_Fo
 title: Building Enterprise AI Apps with C3 Agentic AI Platform at Microsoft Ignite
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 10:36:33 +00:00
 tags:

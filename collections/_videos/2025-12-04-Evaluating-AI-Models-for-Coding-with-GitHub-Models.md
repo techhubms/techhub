@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=5eCkVjQM9XA
 title: Evaluating AI Models for Coding with GitHub Models
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-04 16:00:37 +00:00
 tags:

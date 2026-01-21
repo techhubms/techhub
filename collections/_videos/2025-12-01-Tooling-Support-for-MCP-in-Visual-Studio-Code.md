@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/TGICP4NS5tc
 title: Tooling Support for MCP in Visual Studio Code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-12-01 18:00:38 +00:00
 tags:

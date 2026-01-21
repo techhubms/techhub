@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture/boosting-performance-with-the-materialized-view-pattern-in-azure/m-p/4438105#M776
 title: Boosting Performance with the Materialized View Pattern in Azure
 author: JohnNaguib
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-07-30 07:46:20 +00:00
 tags:

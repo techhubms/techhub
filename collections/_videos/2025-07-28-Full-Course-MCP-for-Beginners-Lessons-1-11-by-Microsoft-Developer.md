@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=VfZlglOWWZw
 title: 'Full Course: MCP for Beginners (Lessons 1-11) by Microsoft Developer'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Build 2025 YouTube
 date: 2025-07-28 16:00:51 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/system-initiative-adds-ai-agents-to-infrastructure-automation-platform/?utm_source=rss&utm_medium=rss&utm_campaign=system-initiative-adds-ai-agents-to-infrastructure-automation-platform
 title: System Initiative Introduces Autonomous AI Agents for Infrastructure Automation
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-27 15:00:22 +00:00
 tags:

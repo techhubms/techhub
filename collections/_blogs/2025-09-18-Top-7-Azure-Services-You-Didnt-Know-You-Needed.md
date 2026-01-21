@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/top-7-azure-services-you-didnt-know-you-needed/
 title: Top 7 Azure Services You Didn’t Know You Needed
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-18 10:55:59 +00:00
 tags:

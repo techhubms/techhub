@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=jVbBXjOsKzw
 title: Build a Responsive UI through Prompt Driven Development with GitHub Copilot
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-10-06 14:01:17 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/11/introducing-the-digital-sovereignty-specialization-for-the-microsoft-ai-cloud-partner-program/
 title: Introducing the Digital Sovereignty Specialization for the Microsoft AI Cloud Partner Program
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-11-13 14:50:54 +00:00
 tags:

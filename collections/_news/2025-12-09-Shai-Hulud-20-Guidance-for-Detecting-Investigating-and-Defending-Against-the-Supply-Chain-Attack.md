@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/12/09/shai-hulud-2-0-guidance-for-detecting-investigating-and-defending-against-the-supply-chain-attack/
 title: 'Shai-Hulud 2.0: Guidance for Detecting, Investigating, and Defending Against the Supply Chain Attack'
 author: Microsoft Defender Security Research Team
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-12-09 21:41:32 +00:00
 tags:

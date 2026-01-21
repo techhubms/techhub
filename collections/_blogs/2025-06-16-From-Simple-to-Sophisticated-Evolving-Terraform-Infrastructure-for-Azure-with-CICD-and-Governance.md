@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://hiddedesmet.com/terraform-evolution
 title: 'From Simple to Sophisticated: Evolving Terraform Infrastructure for Azure with CI/CD and Governance'
 author: Hidde de Smet
-viewing_mode: external
 feed_name: Hidde de Smet's Blog
 date: 2025-06-16 05:00:00 +00:00
 tags:

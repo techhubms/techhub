@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-15-configure-internet-access-for-copilot-coding-agent
 title: Configure internet access for Copilot coding agent
 author: Allison
 feed_name: The GitHub Blog
 date: 2025-07-16 12:00:38 +00:00
-viewing_mode: external
 tags:
 - Coding Assistant
 - Data Protection

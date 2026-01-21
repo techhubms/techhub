@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/F8CFwNnr10s
 title: 'Advancements in Developer Agents: Task Automation and Open Source Extensions'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-24 17:49:02 +00:00
 tags:

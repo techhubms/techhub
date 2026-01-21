@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=PWELkVJbb7Y
 title: Unlock agentic workflows for your apps using MCP on Windows
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-10 22:07:54 +00:00
 tags:

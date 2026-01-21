@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/29410/
 title: 'Integrating SAP Business Data Cloud with Microsoft Fabric: Accelerating AI and Analytics'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-18 08:00:00 +00:00
 tags:

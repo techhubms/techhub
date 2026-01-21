@@ -109,5 +109,5 @@ Run -TestName SectionCard
 
 - [tests/AGENTS.md](../AGENTS.md) - Complete testing strategy
 - [src/TechHub.Web/AGENTS.md](../../src/TechHub.Web/AGENTS.md) - Blazor component patterns
-- [Root AGENTS.md](/AGENTS.md#6-test--validate) - When to write tests
+- [Root AGENTS.md](../../AGENTS.md#6-write-tests-first-tdd) - When to write tests
 - [bUnit Documentation](https://bunit.dev/) - Official bUnit docs

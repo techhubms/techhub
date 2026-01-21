@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=hPKDV5N99GU
 title: 'The Future of Coding Agents in VS Code: Insights from VS Code Insiders Podcast'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-09-22 07:00:47 +00:00
 tags:

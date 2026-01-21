@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_real-time-intelligence-how-indias-swiggy-activity-7404753089972535299-0NPA
 title: Swiggy's Real-Time Data Processing with Microsoft Fabric
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-11 04:10:00 +00:00
 tags:

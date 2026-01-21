@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-azure-service-groups/ba-p/4446572
 title: Announcing Public Preview for Azure Service Groups
 author: kenieva
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-21 17:58:39 +00:00
 tags:

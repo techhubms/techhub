@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/09/16/microsoft-purview-innovations-for-your-fabric-data-unify-data-security-and-governance-for-the-ai-era/
 title: 'Microsoft Purview Innovations for Fabric: Unifying Data Security and Governance for AI'
 author: Rudra Mitra
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-09-16 16:00:00 +00:00
 tags:

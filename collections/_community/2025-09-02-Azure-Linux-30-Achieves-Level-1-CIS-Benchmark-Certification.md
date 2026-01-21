@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-3-0-achieves-level-1-cis-benchmark-certification/ba-p/4450410
 title: Azure Linux 3.0 Achieves Level 1 CIS Benchmark Certification
 author: Sudhanva
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-02 16:28:04 +00:00
 tags:

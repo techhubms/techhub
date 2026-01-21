@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=q4NhguFDP5s
 title: 'Rolling Your Own SSO: Centralized Authentication with OpenIddict'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 07:30:06 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/reimagining-ai-at-scale-nvidia-gb300-nvl72-on-azure/ba-p/4464556
 title: 'Reimagining AI at Scale: Deploying NVIDIA GB300 NVL72 on Azure'
 author: gwaqar
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-28 18:30:02 +00:00
 tags:

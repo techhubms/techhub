@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/the-new-era-of-azure-ultra-disk-experience-the-next-generation-of-mission-critical-block-storage/
 title: 'The New Era of Azure Ultra Disk: Next-Gen Mission-Critical Block Storage'
 author: Aung Oo
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-11-06 17:00:00 +00:00
 tags:

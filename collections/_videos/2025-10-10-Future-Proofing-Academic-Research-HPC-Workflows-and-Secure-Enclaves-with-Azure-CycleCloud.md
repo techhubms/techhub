@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=FTHUFYMIoj8
 title: 'Future-Proofing Academic Research: HPC Workflows and Secure Enclaves with Azure CycleCloud'
 author: Microsoft Cloud
-viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
 date: 2025-10-10 15:46:45 +00:00
 tags:

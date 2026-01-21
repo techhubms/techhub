@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-small-language-modes/ba-p/4462827
 title: 'Understanding Small Language Models: The Role of SLMs and Microsoft Azure AI Foundry'
 author: Sherrylist
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-28 07:00:00 +00:00
 tags:

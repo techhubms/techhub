@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/25332/
 title: Decoupling Semantic Models from Mirrored Artifacts in Microsoft Fabric
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-08-05 11:30:00 +00:00
 tags:

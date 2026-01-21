@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/layer-7-network-policies-for-aks-now-generally-available-for/ba-p/4467598
 title: 'Layer 7 Network Policies for AKS: General Availability for Enterprise-Grade Security'
 author: KhushbuP
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-08 03:12:57 +00:00
 tags:

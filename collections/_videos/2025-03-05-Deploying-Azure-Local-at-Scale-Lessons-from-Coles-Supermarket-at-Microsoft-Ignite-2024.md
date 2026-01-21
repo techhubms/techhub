@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=nPe4_ef8zFg
 title: 'Deploying Azure Local at Scale: Lessons from Coles Supermarket at Microsoft Ignite 2024'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-03-05 22:00:38 +00:00
 tags:

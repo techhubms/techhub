@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/concurrency-control-and-conflict-resolution-in-microsoft-fabric-data-warehouse/
 title: Resolving Write Conflicts in Microsoft Fabric Data Warehouse
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-10-08 07:00:00 +00:00
 tags:

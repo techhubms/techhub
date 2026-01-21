@@ -93,7 +93,7 @@ public static class TagEndpoints
             Scope = tagCloudScope,
             SectionName = section,
             CollectionName = collection,
-            ContentItemId = contentId,
+            Slug = contentId,
             MaxTags = maxTags ?? config.DefaultMaxTags,
             MinUses = minUses ?? config.MinimumTagUses,
             LastDays = lastDays ?? config.DefaultDateRangeDays

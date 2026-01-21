@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-july-2025-release/
 title: On-premises Data Gateway July 2025 Release Overview
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-07-30 11:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-on-azure-container-apps-the-unified-platform-for/ba-p/4467698
 title: 'Azure Functions on Azure Container Apps: The Unified Platform for Event-Driven and Finite Workloads'
 author: DeepGanguly
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-26 05:04:27 +00:00
 tags:

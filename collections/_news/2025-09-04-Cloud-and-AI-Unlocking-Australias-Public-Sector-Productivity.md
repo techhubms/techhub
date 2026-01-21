@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/asia/features/unlocking-the-productivity-dividend-of-digital-government/
 title: "Cloud and AI: Unlocking Australia's Public Sector Productivity"
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-09-04 14:32:28 +00:00
 tags:

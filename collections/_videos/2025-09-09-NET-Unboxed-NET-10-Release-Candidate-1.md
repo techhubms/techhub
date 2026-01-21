@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=YuuWHkQAsFY
 title: .NET Unboxed - .NET 10 Release Candidate 1
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-09-09 17:26:23 +00:00
 tags:

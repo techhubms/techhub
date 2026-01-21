@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/microsoft/comments/1mjyjre/passwordless_signons_mfa_app_hybrid_mode/
 title: Passwordless Sign-On and MFA in Microsoft Hybrid Environments
 author: SmoothRunnings
-viewing_mode: external
 feed_name: Reddit Microsoft
 date: 2025-08-07 12:19:51 +00:00
 tags:

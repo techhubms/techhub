@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=s8xJTAu5icM
 title: 'Ctrl Shift - MCP & A2A: Why Business Leaders Should Care'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-07-28 14:15:52 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-scalable-cost-effective-real-time-multiplayer-games/ba-p/4483584
 title: Building scalable, cost-effective real-time multiplayer games with Azure Web PubSub
 author: kevinguo
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-07 05:27:21 +00:00
 tags:

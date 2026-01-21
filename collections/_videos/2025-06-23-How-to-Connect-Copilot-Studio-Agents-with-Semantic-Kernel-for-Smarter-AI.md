@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=HWKCvr-JBfQ
 title: How to Connect Copilot Studio Agents with Semantic Kernel for Smarter AI
 author: Learn Microsoft AI
-viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
 date: 2025-06-23 12:02:12 +00:00
 tags:

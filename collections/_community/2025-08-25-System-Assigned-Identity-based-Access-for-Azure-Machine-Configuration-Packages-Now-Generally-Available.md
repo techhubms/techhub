@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/system-assigned-identity-based-access-for-machine-configuration/ba-p/4446603
 title: System-Assigned Identity-based Access for Azure Machine Configuration Packages Now Generally Available
 author: mutemwamasheke
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-25 14:30:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=U4_KcjJOxOE
 title: 'Going Passwordless: Implementing Passkeys in ASP.NET Core'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 09:00:06 +00:00
 tags:

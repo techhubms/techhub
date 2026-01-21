@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=7YEi5SoVzNQ
 title: Enterprise-Grade AI Governance with GitHub Copilot and Advanced Security
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-31 14:00:21 +00:00
 tags:

@@ -125,18 +125,16 @@ internal static class ContentEndpoints
         {
             Slug = item.Slug,
             Title = item.Title,
-            Description = item.Description,
             Author = item.Author,
             DateEpoch = item.DateEpoch,
             DateIso = item.DateIso,
             CollectionName = item.CollectionName,
             SectionNames = item.SectionNames,
-            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName),
+            PrimarySectionName = Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName),
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             RenderedHtml = item.RenderedHtml,
             ExternalUrl = item.ExternalUrl,
-            ViewingMode = item.ViewingMode,
             Url = $"/{sectionName}/{collectionName}/{slug}"
         };
 
@@ -197,7 +195,7 @@ internal static class ContentEndpoints
             var query = q.ToLowerInvariant();
             results = results.Where(c =>
                 c.Title.Contains(query, StringComparison.OrdinalIgnoreCase) ||
-                (c.Description?.Contains(query, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                c.Excerpt.Contains(query, StringComparison.OrdinalIgnoreCase) ||
                 c.Tags.Any(tag => tag.Contains(query, StringComparison.OrdinalIgnoreCase)));
         }
 
@@ -210,13 +208,12 @@ internal static class ContentEndpoints
     /// </summary>
     private static ContentItemDto MapToDto(Core.Models.ContentItem item)
     {
-        var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.SectionNames, item.CollectionName);
+        var primarySectionUrl = Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.SectionNames, item.CollectionName);
 
         return new ContentItemDto
         {
             Slug = item.Slug,
             Title = item.Title,
-            Description = item.Description,
             Author = item.Author,
             DateEpoch = item.DateEpoch,
             DateIso = item.DateIso,
@@ -224,11 +221,10 @@ internal static class ContentEndpoints
             SubcollectionName = item.SubcollectionName,
             FeedName = item.FeedName,
             SectionNames = item.SectionNames,
-            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName),
+            PrimarySectionName = Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName),
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
-            ViewingMode = item.ViewingMode,
             Url = $"/{primarySectionUrl.ToLowerInvariant()}/{item.CollectionName.ToLowerInvariant()}/{item.Slug.ToLowerInvariant()}"
         };
     }

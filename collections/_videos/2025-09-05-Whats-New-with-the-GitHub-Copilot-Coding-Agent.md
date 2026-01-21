@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=t4ERV6aHCPM
 title: What's New with the GitHub Copilot Coding Agent
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-09-05 18:01:32 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/news-insights/company-news/github-availability-report-november-2025/
 title: 'GitHub Availability Report: November 2025'
 author: Jakub Oleksy
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-11 16:03:53 +00:00
 tags:

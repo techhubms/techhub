@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/azure-intel-tdx-confidential-vms-momentum/ba-p/4470736
 title: Momentum for Azure Confidential VMs with Intel® TDX
 author: simranparkhe
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 17:00:00 +00:00
 tags:

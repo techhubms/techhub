@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=s5GLjE13cUI
 title: Getting Started with PowerToys Command Palette Extension Development
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-31 16:41:45 +00:00
 tags:

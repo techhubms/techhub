@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/asia/2025/12/19/nz-north-one-year-on-building-the-foundations-of-new-zealands-ai-future/
 title: "NZ North: One Year of Building New Zealand's AI Future with Microsoft Cloud"
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-19 14:34:22 +00:00
 tags:

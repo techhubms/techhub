@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/whitecobra-targets-developers-with-dozens-of-malicious-extensions/
 title: WhiteCobra’s Malicious VSCode Extensions Pose Major Security Risk for Developers
 author: Jeff Burt
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-15 16:56:48 +00:00
 tags:

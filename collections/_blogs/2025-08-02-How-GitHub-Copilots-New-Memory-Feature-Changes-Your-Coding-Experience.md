@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/copilot-now-remembers-you-heres-why-that-matters/
 title: How GitHub Copilot's New Memory Feature Changes Your Coding Experience
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-02 09:49:32 +00:00
 tags:

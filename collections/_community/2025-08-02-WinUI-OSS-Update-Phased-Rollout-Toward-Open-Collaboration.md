@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mfx9wm/winui_oss_update_phased_rollout_toward_open/
 title: 'WinUI OSS Update: Phased Rollout Toward Open Collaboration'
 author: nguyenkien
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-02 18:13:16 +00:00
 tags:

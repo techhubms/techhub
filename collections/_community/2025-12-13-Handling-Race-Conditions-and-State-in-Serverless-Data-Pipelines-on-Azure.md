@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture/design-pattern-handling-race-conditions-and-state-in-serverless/m-p/4477664#M820
 title: Handling Race Conditions and State in Serverless Data Pipelines on Azure
 author: Chameseddine
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-13 12:22:51 +00:00
 tags:

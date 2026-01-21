@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/top-dotnet-videos-live-streams-of-2025/
 title: 'Top .NET Videos and Live Streams of 2025: A Year in Review'
 author: Jon Galloway
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-12-31 18:05:00 +00:00
 tags:

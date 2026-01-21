@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/agentic-ai-the-next-evolution-beyond-generative-ai-for-solution-architects/
 title: 'Agentic AI: The Next Evolution Beyond Generative AI for Solution Architects'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-07-20 11:52:33 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ArHfPM4lnPA
 title: 'Managing Your GitHub Enterprise: Policies, Copilot, and Security Settings'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-28 14:00:18 +00:00
 tags:

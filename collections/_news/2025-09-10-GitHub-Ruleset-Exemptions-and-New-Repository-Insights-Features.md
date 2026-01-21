@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-10-github-ruleset-exemptions-and-repository-insights-updates
 title: GitHub Ruleset Exemptions and New Repository Insights Features
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-10 17:25:36 +00:00
 tags:

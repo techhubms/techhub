@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=-8sH0QFhvkQ
 title: 'Azure Updates: August 2025 Highlights'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-08-01 14:54:51 +00:00
 tags:

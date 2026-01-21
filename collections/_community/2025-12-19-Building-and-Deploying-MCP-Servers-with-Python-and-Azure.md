@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-how-to-build-mcp-servers-with-python-and-azure/ba-p/4479402
 title: Building and Deploying MCP Servers with Python and Azure
 author: Pamela_Fox
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-19 15:13:45 +00:00
 tags:

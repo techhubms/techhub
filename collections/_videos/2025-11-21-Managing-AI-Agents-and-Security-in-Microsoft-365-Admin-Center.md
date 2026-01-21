@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=S6JHew4W3Ik
 title: Managing AI Agents and Security in Microsoft 365 Admin Center
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 13:28:16 +00:00
 tags:

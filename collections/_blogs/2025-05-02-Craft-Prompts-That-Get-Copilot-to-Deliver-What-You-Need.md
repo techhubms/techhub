@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://cooknwithcopilot.com/blog/craft-prompts-that-get-better-results.html
 title: Craft Prompts That Get Copilot to Deliver What You Need
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-05-02 00:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/news-insights/product-news/copilot-new-embedding-model-vs-code/
 title: GitHub Copilot’s New Embedding Model Improves Code Search in VS Code
 author: Shengyu Fu
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-24 20:24:18 +00:00
 tags:

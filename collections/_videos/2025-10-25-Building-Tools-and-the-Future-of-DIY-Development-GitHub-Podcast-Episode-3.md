@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=08Guz739IZI
 title: 'Building Tools and the Future of DIY Development: GitHub Podcast Episode 3'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-25 14:00:00 +00:00
 tags:

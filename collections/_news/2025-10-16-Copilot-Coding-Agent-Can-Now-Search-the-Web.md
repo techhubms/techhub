@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-16-copilot-coding-agent-can-now-search-the-web
 title: Copilot Coding Agent Can Now Search the Web
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-16 20:32:55 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-timeouts-to-triumph-optimizing-gpt-4o-mini-for-speed/ba-p/4461531
 title: 'From Timeouts to Triumph: Optimizing GPT-4o-mini for Speed, Efficiency, and Reliability'
 author: psundars
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-14 17:26:18 +00:00
 tags:

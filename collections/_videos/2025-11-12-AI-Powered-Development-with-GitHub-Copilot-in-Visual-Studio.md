@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=imTARwNQuA4
 title: AI-Powered Development with GitHub Copilot in Visual Studio
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-12 19:18:28 +00:00
 tags:

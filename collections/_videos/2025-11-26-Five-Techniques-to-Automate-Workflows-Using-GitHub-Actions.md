@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=2p1D29zJdBI
 title: Five Techniques to Automate Workflows Using GitHub Actions
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-26 15:00:05 +00:00
 tags:

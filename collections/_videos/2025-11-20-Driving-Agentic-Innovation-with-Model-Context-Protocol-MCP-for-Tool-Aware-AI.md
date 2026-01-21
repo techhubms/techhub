@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=dUSaFR-fL-c
 title: Driving Agentic Innovation with Model Context Protocol (MCP) for Tool-Aware AI
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 10:46:14 +00:00
 tags:

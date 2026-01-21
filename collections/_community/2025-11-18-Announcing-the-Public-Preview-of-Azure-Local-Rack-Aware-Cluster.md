@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-preview-of-azure-local-rack-aware-cluster/ba-p/4469435
 title: Announcing the Public Preview of Azure Local Rack Aware Cluster
 author: mindydiep
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:33:51 +00:00
 tags:

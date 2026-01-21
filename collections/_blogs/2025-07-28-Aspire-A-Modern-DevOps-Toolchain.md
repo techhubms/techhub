@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://medium.com/@davidfowl/aspire-a-modern-devops-toolchain-fa5aac019d64?source=rss-8163234c98f0------2
 title: 'Aspire: A Modern DevOps Toolchain'
 author: David Fowler
-viewing_mode: external
 feed_name: David Fowler's Blog
 date: 2025-07-28 15:03:49 +00:00
 tags:

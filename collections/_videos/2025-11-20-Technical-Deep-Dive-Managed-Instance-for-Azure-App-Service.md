@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=biO3I2mFvV4
 title: 'Technical Deep Dive: Managed Instance for Azure App Service'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 16:42:03 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/all-things-azure/ai-genius-challenge-flex-your-ai-skills-and-beat-the-clock/
 title: 'AI Genius Challenge: Flex Your AI Skills and Beat the Clock'
 author: Priyanka Vergadia
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-06-11 23:38:57 +00:00
 tags:

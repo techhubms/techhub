@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/2026/01/08/microsoft-propels-retail-forward-with-agentic-ai-capabilities-that-power-intelligent-automation-for-every-retail-function/
 title: Microsoft Launches Agentic AI Solutions to Transform Retail Automation and Personalization
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2026-01-08 15:00:05 +00:00
 tags:

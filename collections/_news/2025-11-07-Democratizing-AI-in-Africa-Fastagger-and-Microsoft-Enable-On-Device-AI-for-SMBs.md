@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/emea/features/connecting-africa-to-opportunities-by-closing-the-digital-divide/
 title: 'Democratizing AI in Africa: Fastagger and Microsoft Enable On-Device AI for SMBs'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-07 14:02:38 +00:00
 tags:

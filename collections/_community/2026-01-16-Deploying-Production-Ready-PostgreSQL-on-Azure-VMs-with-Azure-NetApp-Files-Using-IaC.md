@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/deploy-postgresql-on-azure-vms-with-azure-netapp-files/ba-p/4486114
 title: Deploying Production-Ready PostgreSQL on Azure VMs with Azure NetApp Files Using IaC
 author: GeertVanTeylingen
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-16 00:05:44 +00:00
 tags:

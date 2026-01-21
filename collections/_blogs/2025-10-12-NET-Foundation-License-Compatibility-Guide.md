@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dotnetfoundation.org/news-events/detail/license-compatibility-guide
 title: .NET Foundation License Compatibility Guide
 author: .NET Foundation News and Blog
-viewing_mode: external
 feed_name: .NET Foundation's Blog
 date: 2025-10-12 02:22:03 +00:00
 tags:

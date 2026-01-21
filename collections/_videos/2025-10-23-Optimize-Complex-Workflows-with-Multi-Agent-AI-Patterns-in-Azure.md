@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=eobRfdy8tu4
 title: Optimize Complex Workflows with Multi-Agent AI Patterns in Azure
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-23 07:00:39 +00:00
 tags:

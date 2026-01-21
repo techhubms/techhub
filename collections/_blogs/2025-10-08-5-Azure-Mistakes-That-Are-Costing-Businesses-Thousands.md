@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/5-azure-mistakes-that-are-costing-businesses-thousands/
 title: 5 Azure Mistakes That Are Costing Businesses Thousands
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-08 07:25:16 +00:00
 tags:

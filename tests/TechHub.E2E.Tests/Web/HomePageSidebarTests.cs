@@ -60,7 +60,6 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
 
         // Assert - Find latest items section
         var latestSection = Page.Locator(".latest-items, .sidebar-latest");
-        _ = latestSection.Locator("a").Filter(new() { HasNotText = "Latest" });
 
         var count = await latestSection.GetElementCountBySelectorAsync("a");
         count.Should().BeInRange(1, 10, $"Expected 1-10 latest item links, but found {count}");
@@ -126,7 +125,6 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
 
         if (count > 0)
         {
-            _ = await tagLinks.First.TextContentWithTimeoutAsync();
             await tagLinks.First.ClickBlazorElementAsync();
 
             // Assert - Should navigate to filtered view or section with tag parameter

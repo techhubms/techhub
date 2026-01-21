@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/open-source/maintainers/how-github-models-can-help-open-source-maintainers-focus-on-what-matters/
 title: Automating Open Source Maintenance with GitHub Models and AI Workflows
 author: Ashley Wolf
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-28 19:02:44 +00:00
 tags:

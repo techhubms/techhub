@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-january-2026/ba-p/4482877
 title: Logic Apps Aviators Newsletter - January 2026
 author: WSilveira
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-05 16:00:00 +00:00
 tags:

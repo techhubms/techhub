@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/hashicorp-embraces-agentic-ai-to-streamline-management-of-it/
 title: HashiCorp Introduces Agentic AI and Enhanced Automation for IT Infrastructure
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-25 16:00:10 +00:00
 tags:

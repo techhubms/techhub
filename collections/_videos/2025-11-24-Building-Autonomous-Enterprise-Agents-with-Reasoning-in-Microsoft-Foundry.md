@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=sqvxKIPB8W4
 title: Building Autonomous Enterprise Agents with Reasoning in Microsoft Foundry
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 08:29:58 +00:00
 tags:

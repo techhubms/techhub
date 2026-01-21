@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/09/23/accelerating-sustainability-and-resilience-with-ai-powered-innovation/
 title: Accelerating Sustainability and Resilience with AI-Powered Innovation
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-09-24 14:53:38 +00:00
 tags:

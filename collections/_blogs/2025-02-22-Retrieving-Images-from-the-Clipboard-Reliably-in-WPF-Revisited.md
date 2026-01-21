@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://weblog.west-wind.com/posts/2025/Feb/21/Retrieving-Images-from-the-Clipboard-Reliably-in-WPF-Revisited
 title: Retrieving Images from the Clipboard Reliably in WPF Revisited
 author: Rick Strahl
-viewing_mode: external
 feed_name: Rick Strahl's Blog
 date: 2025-02-22 08:09:36 +00:00
 tags:

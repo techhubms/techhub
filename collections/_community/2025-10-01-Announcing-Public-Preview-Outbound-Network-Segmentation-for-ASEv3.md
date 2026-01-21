@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-public-preview-asev3-outbound-network-segmentation/ba-p/4458398
 title: 'Announcing Public Preview: Outbound Network Segmentation for ASEv3'
 author: jordanselig
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-01 16:12:36 +00:00
 tags:

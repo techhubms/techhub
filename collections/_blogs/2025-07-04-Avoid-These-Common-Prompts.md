@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/avoid-these-common-prompts.html
 title: Avoid These Common Prompts
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-07-04 00:00:00 +00:00
 tags:

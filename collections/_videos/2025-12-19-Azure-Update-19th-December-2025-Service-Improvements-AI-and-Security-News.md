@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=mk6vwol-Za0
 title: 'Azure Update - 19th December 2025: Service Improvements, AI, and Security News'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-12-19 15:51:48 +00:00
 tags:

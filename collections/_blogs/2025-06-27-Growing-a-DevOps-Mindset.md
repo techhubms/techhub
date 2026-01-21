@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://roadtoalm.com/2025/06/27/growing-a-devops-mindset/
 title: Growing a DevOps Mindset
 author: Rene van Osnabrugge
-viewing_mode: external
 feed_name: René van Osnabrugge's Blog
 date: 2025-06-27 07:05:44 +00:00
 tags:

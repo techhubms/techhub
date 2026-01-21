@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/ArtificialInteligence/comments/1mkqmeg/i_built_a_master_prompt_for_generating_seo_blogs/
 title: Building a Master Prompt System for SEO Blog Generation with Psychological Engagement
 author: Sajil_ali
-viewing_mode: external
 feed_name: Reddit Artificial Inteligence
 date: 2025-08-08 09:28:36 +00:00
 tags:

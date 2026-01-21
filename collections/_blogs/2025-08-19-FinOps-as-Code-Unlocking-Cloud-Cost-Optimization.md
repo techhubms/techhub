@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/finops-as-code-unlocking-cloud-cost-optimization/?utm_source=rss&utm_medium=rss&utm_campaign=finops-as-code-unlocking-cloud-cost-optimization
 title: FinOps as Code – Unlocking Cloud Cost Optimization
 author: Joydip Kanjilal
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-19 10:15:37 +00:00
 tags:

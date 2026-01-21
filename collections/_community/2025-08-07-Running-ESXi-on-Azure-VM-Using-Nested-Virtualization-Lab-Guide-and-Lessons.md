@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mkatqa/esxi_on_azure_vm/
 title: 'Running ESXi on Azure VM Using Nested Virtualization: Lab Guide and Lessons'
 author: delecoute
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-07 20:18:01 +00:00
 tags:

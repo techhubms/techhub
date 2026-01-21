@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://zure.com/blog/securing-azure-networks-with-network-security-perimeter
 title: Securing Azure Networks with Network Security Perimeter
 author: jere.haavisto@zure.com (Jere Haavisto)
-viewing_mode: external
 feed_name: Zure Data & AI Blog
 date: 2025-04-10 04:40:00 +00:00
 tags:

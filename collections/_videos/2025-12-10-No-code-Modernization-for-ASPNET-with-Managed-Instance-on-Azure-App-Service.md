@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ZtHjLHwgy68
 title: No-code Modernization for ASP.NET with Managed Instance on Azure App Service
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-12-10 00:00:42 +00:00
 tags:

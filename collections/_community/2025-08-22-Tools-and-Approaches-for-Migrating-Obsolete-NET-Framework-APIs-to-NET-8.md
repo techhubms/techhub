@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/tools/tool-or-approach-to-identify-and-replace-obsolete-net-framework/m-p/4446845#M161
 title: Tools and Approaches for Migrating Obsolete .NET Framework APIs to .NET 8
 author: GopalKrishnan
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-22 09:39:46 +00:00
 tags:

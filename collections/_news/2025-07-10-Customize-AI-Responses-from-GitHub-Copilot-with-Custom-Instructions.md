@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/customize-ai-responses-from-github-copilot/
 title: Customize AI Responses from GitHub Copilot with Custom Instructions
 author: Matt Soucoup
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-07-10 17:15:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=MaOGP2JNs2E
 title: Microsoft Security Copilot Entra Update and Conditional Access Agent
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-07-14 14:12:06 +00:00
 tags:

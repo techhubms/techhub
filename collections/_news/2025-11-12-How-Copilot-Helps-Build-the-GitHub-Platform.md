@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-copilot-helps-build-the-github-platform/
 title: How Copilot Helps Build the GitHub Platform
 author: Matt Nigh
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-12 17:00:00 +00:00
 tags:

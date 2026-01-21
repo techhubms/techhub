@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1memjhl/come_discuss_your_side_projects_august_2025/
 title: 'August 2025 Community Project Showcase: C# Side Projects'
 author: AutoModerator
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-01 04:00:55 +00:00
 tags:

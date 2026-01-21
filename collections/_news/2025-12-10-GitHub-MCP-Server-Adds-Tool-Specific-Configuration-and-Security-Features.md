@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-10-the-github-mcp-server-adds-support-for-tool-specific-configuration-and-more
 title: GitHub MCP Server Adds Tool-Specific Configuration and Security Features
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-10 11:01:02 +00:00
 tags:

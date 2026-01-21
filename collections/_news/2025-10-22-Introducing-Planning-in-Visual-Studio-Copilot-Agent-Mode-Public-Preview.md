@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/introducing-planning-in-visual-studio-public-preview/
 title: 'Introducing Planning in Visual Studio: Copilot Agent Mode Public Preview'
 author: Rhea Patel
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-10-22 15:54:18 +00:00
 tags:

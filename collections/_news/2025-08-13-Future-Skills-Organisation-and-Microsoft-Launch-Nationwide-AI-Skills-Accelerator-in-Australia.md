@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/asia/features/fso-microsoft-skills-accelerator-ai/
 title: Future Skills Organisation and Microsoft Launch Nationwide AI Skills Accelerator in Australia
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-13 17:15:39 +00:00
 tags:

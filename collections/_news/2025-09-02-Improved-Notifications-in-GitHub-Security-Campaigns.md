@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-01-improved-notifications-in-security-campaigns
 title: Improved Notifications in GitHub Security Campaigns
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-02 09:29:30 +00:00
 tags:

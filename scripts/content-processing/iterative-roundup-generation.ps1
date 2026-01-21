@@ -641,12 +641,10 @@ $articleContent
                     # Extract original title and link from frontmatter using existing function
                     $externalUrl = Get-FrontMatterValue -Content $articleContent -Key "external_url"
                     $title = Get-FrontMatterValue -Content $articleContent -Key "title"
-                    $viewingMode = Get-FrontMatterValue -Content $articleContent -Key "viewing_mode"
                     $permalink = Get-FrontMatterValue -Content $articleContent -Key "permalink"
                     
                     $result | Add-Member -NotePropertyName "external_url" -NotePropertyValue $externalUrl
                     $result | Add-Member -NotePropertyName "title" -NotePropertyValue $title
-                    $result | Add-Member -NotePropertyName "viewing_mode" -NotePropertyValue $viewingMode
                     $result | Add-Member -NotePropertyName "permalink" -NotePropertyValue $permalink
                     $result | Add-Member -NotePropertyName "filename" -NotePropertyValue $articleFilePath
                     
@@ -1045,8 +1043,13 @@ $step3SystemMessage
                         $sectionInput += "TAGS: $($article.tags -join ', ')`n"
                     }
                 
-                    # Use appropriate URL based on viewing_mode
-                    if ($article.viewing_mode -eq "internal") {
+                    # Determine collection from permalink path (e.g., /ai/videos/slug)
+                    $collection = if ($article.permalink -match '/([^/]+)/[^/]+$') { $matches[1] } else { "" }
+                    # Internal collections: videos, roundups, custom
+                    # External collections: news, blogs, community
+                    $isInternal = $collection -in @("videos", "roundups", "custom")
+                    
+                    if ($isInternal) {
                         $sectionInput += "LINK: [$($article.title)]({{ `"$($article.permalink)`" | relative_url }})`n"
                     }
                     else {
@@ -1677,7 +1680,6 @@ Return only JSON with fields: title, tags, description, introduction
 layout: "post"
 title: "$($metadata.title)"
 author: "Tech Hub Team"
-viewing_mode: "internal"
 date: $publishDate
 permalink: "/$filename.html"
 tags: $($metadata.tags | ConvertTo-Json -Compress)

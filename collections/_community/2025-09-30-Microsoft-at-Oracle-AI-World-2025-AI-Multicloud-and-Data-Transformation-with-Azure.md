@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-is-headed-to-oracle-ai-world-2025-in-las-vegas/ba-p/4457390
 title: 'Microsoft at Oracle AI World 2025: AI, Multicloud, and Data Transformation with Azure'
 author: AlexStairs
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-30 16:33:49 +00:00
 tags:

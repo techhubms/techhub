@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/running-a-load-test-within-a-chaos-experiment/ba-p/4463344
 title: Running Load Tests as Part of Azure Chaos Studio Experiments
 author: Nikita_Nallamothu
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-22 15:00:00 +00:00
 tags:

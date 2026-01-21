@@ -199,7 +199,8 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         items.Should().NotBeNull();
         items!.Should().HaveCount(1);
         items![0].CollectionName.Should().Be("videos");
-        items[0].SectionNames.Should().Contain("github-copilot");    }
+        items[0].SectionNames.Should().Contain("github-copilot");
+    }
 
     [Fact]
     public async Task GetSectionCollectionItems_WithInvalidSection_ReturnsNotFound()

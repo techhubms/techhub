@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/context-engineering-recipes-the-refusal-breaker-pattern.html
 title: 'Context Engineering Recipes: The Refusal Breaker Pattern for GitHub Copilot'
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-11-07 00:00:00 +00:00
 tags:

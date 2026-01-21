@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=fXDaDGKoGg0
 title: A Unified Agent Experience in Visual Studio Code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-12-12 20:58:38 +00:00
 tags:

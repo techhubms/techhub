@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/running-dotnet-in-the-browser-without-blazor/
 title: Running .NET in the Browser Without Blazor Using WASM
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2025-08-12 10:00:00 +00:00
 tags:

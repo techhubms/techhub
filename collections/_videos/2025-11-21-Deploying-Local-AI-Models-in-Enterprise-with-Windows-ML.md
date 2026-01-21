@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=FxwkjmKJdC0
 title: Deploying Local AI Models in Enterprise with Windows ML
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 11:43:02 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://medium.com/@davidfowl/the-aspire-compiler-f8ccdf4bca0c?source=rss-8163234c98f0------2
 title: 'The Aspire Compiler: Bridging Local Development and Production Deployments'
 author: David Fowler
-viewing_mode: external
 feed_name: David Fowler's Blog
 date: 2025-04-04 14:01:15 +00:00
 tags:

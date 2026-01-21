@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=onVn-lnHZ9s
 title: 'End-to-End Agentic Development with GitHub Copilot: A Developer Workflow Demo'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-26 14:01:29 +00:00
 tags:

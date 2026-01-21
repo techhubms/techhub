@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mkrlcc/what_is_the_lowest_effort_highest_impact_helper/
 title: 'Developer Discussion: Most Impactful Low-Effort C# Helper Methods'
 author: zigs
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-08 10:28:57 +00:00
 tags:

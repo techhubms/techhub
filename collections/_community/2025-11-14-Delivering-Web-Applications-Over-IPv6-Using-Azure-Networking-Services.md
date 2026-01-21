@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/delivering-web-applications-over-ipv6/ba-p/4469638
 title: Delivering Web Applications Over IPv6 Using Azure Networking Services
 author: Marc de Droog
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-14 13:57:25 +00:00
 tags:

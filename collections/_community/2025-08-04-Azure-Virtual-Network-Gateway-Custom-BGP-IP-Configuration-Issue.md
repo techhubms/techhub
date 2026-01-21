@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mh967w/azure_virtual_network_gateway_with_custom_bgp/
 title: 'Azure Virtual Network Gateway: Custom BGP IP Configuration Issue'
 author: FewActivity9721
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-04 09:52:09 +00:00
 tags:

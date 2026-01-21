@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/finops-blog/what-s-new-in-finops-toolkit-12-july-2025/ba-p/4438562
 title: What’s New in FinOps Toolkit 12 – July 2025
 author: Michael_Flanakin
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-07 17:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-05-track-copilot-code-generation-metrics-in-a-dashboard
 title: Track Copilot Code Generation Metrics in GitHub Insights Dashboard
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-05 18:40:33 +00:00
 tags:

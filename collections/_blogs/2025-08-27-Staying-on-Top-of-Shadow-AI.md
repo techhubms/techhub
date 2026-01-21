@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/staying-on-top-of-shadow-ai/?utm_source=rss&utm_medium=rss&utm_campaign=staying-on-top-of-shadow-ai
 title: Staying on Top of Shadow AI
 author: Alexander Williams
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-27 08:18:31 +00:00
 tags:

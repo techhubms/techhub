@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Zaew1UDiOPs
 title: Securing AI Agents in Microsoft Foundry with Microsoft Security
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 07:11:07 +00:00
 tags:

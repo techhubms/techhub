@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/observability-in-retail-how-to-monitor-and-manage-interactive-kiosk-fleets/?utm_source=rss&utm_medium=rss&utm_campaign=observability-in-retail-how-to-monitor-and-manage-interactive-kiosk-fleets
 title: 'Observability in Retail: How to Monitor and Manage Interactive Kiosk Fleets'
 author: Cheryl Lesniak
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-07-30 11:54:54 +00:00
 tags:

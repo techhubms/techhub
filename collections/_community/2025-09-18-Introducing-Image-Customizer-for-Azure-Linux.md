@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/introducing-image-customizer-for-azure-linux/ba-p/4454859
 title: Introducing Image Customizer for Azure Linux
 author: Kavya_Nagalakunta
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-18 15:00:00 +00:00
 tags:

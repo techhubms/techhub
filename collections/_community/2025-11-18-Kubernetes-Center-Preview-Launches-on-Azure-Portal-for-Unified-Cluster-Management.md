@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-kubernetes-center-preview-on-azure-portal/ba-p/4471110
 title: Kubernetes Center (Preview) Launches on Azure Portal for Unified Cluster Management
 author: Harsha_Nair
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 20:45:45 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/agent-loop-ignite-update-new-set-of-ai-features-arrive-in-public/ba-p/4470764
 title: 'Agent Loop: New AI Features in Logic Apps Standard and Public Preview Announced at Ignite'
 author: DivSwa
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 23:47:06 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ogDdTHhDZSE
 title: Bolster Your Data Security in the AI Era with Microsoft and Netskope
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 08:39:18 +00:00
 tags:

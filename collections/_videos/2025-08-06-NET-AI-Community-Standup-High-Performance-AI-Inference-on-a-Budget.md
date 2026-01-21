@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ptdNWGj8CN8
 title: '.NET AI Community Standup: High-Performance AI Inference on a Budget'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-08-06 20:46:02 +00:00
 tags:

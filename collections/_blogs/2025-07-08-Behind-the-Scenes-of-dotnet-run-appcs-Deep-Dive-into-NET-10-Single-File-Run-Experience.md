@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-2-behind-the-scenes-of-dotnet-run-app.cs/
 title: 'Behind the Scenes of dotnet run app.cs: Deep Dive into .NET 10 Single-File Run Experience'
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2025-07-08 10:00:00 +00:00
 tags:

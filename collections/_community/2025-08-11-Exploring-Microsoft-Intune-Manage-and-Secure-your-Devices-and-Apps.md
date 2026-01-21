@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/events/exploring-microsoft-intune-manage-and-secure-your-devices-and/ec-p/4441982#M9
 title: 'Exploring Microsoft Intune: Manage and Secure your Devices and Apps'
 author: Pouya
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-11 05:58:39 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/news-insights/product-news/lets-talk-about-github-actions/
 title: 'How GitHub Actions Evolved: Architecture, Key Upgrades & What’s Next'
 author: Ben De St Paer-Gotch
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-11 17:40:52 +00:00
 tags:

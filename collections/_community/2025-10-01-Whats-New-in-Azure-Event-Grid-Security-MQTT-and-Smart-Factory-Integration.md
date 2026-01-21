@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/what-s-new-in-azure-event-grid/ba-p/4458299
 title: "What's New in Azure Event Grid: Security, MQTT, and Smart Factory Integration"
 author: Connected-Seth
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-01 23:22:50 +00:00
 tags:

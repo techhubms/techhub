@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Rvp_oQXia_8
 title: Building a Resilience Coach with AI on Cozy AI Kitchen
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-23 18:25:56 +00:00
 tags:

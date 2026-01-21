@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/devops/new-test-run-hub/
 title: Introducing the New Test Run Hub in Azure Test Plans
 author: Panagiotis Liaros
-viewing_mode: external
 feed_name: Microsoft DevOps Blog
 date: 2025-09-04 09:58:58 +00:00
 tags:

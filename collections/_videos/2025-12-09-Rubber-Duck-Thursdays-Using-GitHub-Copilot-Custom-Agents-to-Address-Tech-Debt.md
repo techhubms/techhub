@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=OgFacJ6lIBc
 title: 'Rubber Duck Thursdays: Using GitHub Copilot Custom Agents to Address Tech Debt'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-12-09 13:22:36 +00:00
 tags:

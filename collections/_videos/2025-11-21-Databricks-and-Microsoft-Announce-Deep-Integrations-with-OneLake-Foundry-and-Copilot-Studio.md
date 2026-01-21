@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=5URsKnZOFuM
 title: Databricks and Microsoft Announce Deep Integrations with OneLake, Foundry, and Copilot Studio
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 12:54:50 +00:00
 tags:

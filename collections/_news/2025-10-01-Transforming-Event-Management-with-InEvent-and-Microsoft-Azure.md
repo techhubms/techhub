@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/startups/blog/building-effortless-events-how-inevent-and-microsoft-for-startups-are-transforming-event-management/
 title: Transforming Event Management with InEvent and Microsoft Azure
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-01 16:42:33 +00:00
 tags:

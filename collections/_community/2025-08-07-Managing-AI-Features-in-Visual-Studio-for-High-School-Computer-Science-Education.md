@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/VisualStudio/comments/1mk0wi2/as_a_hs_computer_science_teacher/
 title: Managing AI Features in Visual Studio for High School Computer Science Education
 author: misterebs
-viewing_mode: external
 feed_name: Reddit Visual Studio
 date: 2025-08-07 14:01:25 +00:00
 tags:

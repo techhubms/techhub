@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/09/investigating-targeted-payroll-pirate-attacks-affecting-us-universities/
 title: Investigating Storm-2657 'Payroll Pirate' Attacks Targeting US Universities
 author: Microsoft Threat Intelligence
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-10-09 15:00:00 +00:00
 tags:

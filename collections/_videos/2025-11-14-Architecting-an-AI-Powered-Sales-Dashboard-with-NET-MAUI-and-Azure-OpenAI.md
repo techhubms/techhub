@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=vFSHgAlr9oE
 title: Architecting an AI-Powered Sales Dashboard with .NET MAUI and Azure OpenAI
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 07:00:07 +00:00
 tags:

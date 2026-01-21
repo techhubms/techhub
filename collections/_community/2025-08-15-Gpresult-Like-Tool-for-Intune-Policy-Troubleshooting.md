@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/gpresult-like-tool-for-intune/ba-p/4437008
 title: Gpresult-Like Tool for Intune Policy Troubleshooting
 author: jonasoh
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-15 07:50:53 +00:00
 tags:

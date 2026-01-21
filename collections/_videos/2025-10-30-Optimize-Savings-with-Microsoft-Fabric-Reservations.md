@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=B7TUkcCDTOg
 title: Optimize Savings with Microsoft Fabric Reservations
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-30 07:00:09 +00:00
 tags:

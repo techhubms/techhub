@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=gnLLC4mQl4s
 title: The Agentic Web [Part 1] with Kevin Scott
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-05-20 20:01:23 +00:00
 tags:

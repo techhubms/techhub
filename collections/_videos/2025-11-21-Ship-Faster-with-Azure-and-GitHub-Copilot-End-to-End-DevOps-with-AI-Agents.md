@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=JxoC8siCf8Y
 title: 'Ship Faster with Azure and GitHub Copilot: End-to-End DevOps with AI Agents'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 17:19:32 +00:00
 tags:

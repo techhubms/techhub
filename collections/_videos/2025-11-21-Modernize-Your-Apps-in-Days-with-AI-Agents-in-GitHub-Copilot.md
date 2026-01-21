@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=j8tOnA7GcZw
 title: Modernize Your Apps in Days with AI Agents in GitHub Copilot
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 08:07:34 +00:00
 tags:

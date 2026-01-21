@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Cszz3XsAMAg
 title: 'AI + Creativity: The New Media Blueprint | BRK378'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 14:55:21 +00:00
 tags:

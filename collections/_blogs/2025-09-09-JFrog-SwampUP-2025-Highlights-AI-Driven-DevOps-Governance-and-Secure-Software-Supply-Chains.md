@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/jfrog-continues-leaping-at-swampup/?utm_source=rss&utm_medium=rss&utm_campaign=jfrog-continues-leaping-at-swampup
 title: 'JFrog SwampUP 2025 Highlights: AI-Driven DevOps, Governance, and Secure Software Supply Chains'
 author: Alan Shimel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-09 15:02:04 +00:00
 tags:

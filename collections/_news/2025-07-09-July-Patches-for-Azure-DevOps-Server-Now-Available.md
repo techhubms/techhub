@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/devops/july-patches-for-azure-devops-server-2/
 title: July Patches for Azure DevOps Server Now Available
 author: Gloridel Morales
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-07-09 15:37:13 +00:00
 tags:

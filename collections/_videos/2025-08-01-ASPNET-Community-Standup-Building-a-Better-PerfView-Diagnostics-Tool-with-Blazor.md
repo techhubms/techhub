@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=H_gOSliozjM
 title: 'ASP.NET Community Standup: Building a Better PerfView Diagnostics Tool with Blazor'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-08-01 21:55:53 +00:00
 tags:

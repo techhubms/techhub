@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-28-a-mission-control-to-assign-steer-and-track-copilot-coding-agent-tasks
 title: A Mission Control for Managing Copilot Coding Agent Tasks on GitHub
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-28 15:29:08 +00:00
 tags:

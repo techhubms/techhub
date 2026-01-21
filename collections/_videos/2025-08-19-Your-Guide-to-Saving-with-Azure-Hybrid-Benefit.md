@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=1LgV-kfnUAA
 title: Your Guide to Saving with Azure Hybrid Benefit
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-19 07:00:05 +00:00
 tags:

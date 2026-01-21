@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=FkPyaJo5X08
 title: Provisioning SQL Server 2025 Databases to Kubernetes with Pure Storage Snapshots
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-12 17:00:34 +00:00
 tags:

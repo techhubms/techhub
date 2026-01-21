@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/azuredevops/comments/1mdxkd8/devops_for_teams_managing_tasks_across_operations/
 title: Integrating PMO Project and Operational Backlogs with Azure DevOps Boards
 author: Acrobatic-Lychee3314
-viewing_mode: external
 feed_name: Reddit Azure DevOps
 date: 2025-07-31 10:06:16 +00:00
 tags:

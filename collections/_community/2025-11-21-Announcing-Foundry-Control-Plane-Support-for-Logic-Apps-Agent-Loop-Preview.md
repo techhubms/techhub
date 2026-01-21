@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-foundry-control-plane-support-for-logic-apps-agent/ba-p/4472182
 title: Announcing Foundry Control Plane Support for Logic Apps Agent Loop (Preview)
 author: KentWeareMSFT
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-21 20:51:32 +00:00
 tags:

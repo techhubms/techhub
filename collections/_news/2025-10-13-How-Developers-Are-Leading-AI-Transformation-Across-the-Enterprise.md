@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/10/13/fyai-why-developers-will-lead-ai-transformation-across-the-enterprise/
 title: How Developers Are Leading AI Transformation Across the Enterprise
 author: Toby Bowers
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-10-13 15:10:00 +00:00
 tags:

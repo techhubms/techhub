@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mfy7yk/sanity_check_on_net_framework_mono_macos/
 title: Sanity Check On .NET Framework / Mono / MacOS
 author: tparikka
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-02 18:53:34 +00:00
 tags:

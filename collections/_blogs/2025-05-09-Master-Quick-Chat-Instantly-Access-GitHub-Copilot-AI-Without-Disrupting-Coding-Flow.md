@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://cooknwithcopilot.com/blog/quick-chat-is-your-instant-ai-sidekick.html
 title: 'Master Quick Chat: Instantly Access GitHub Copilot AI Without Disrupting Coding Flow'
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-05-09 00:00:00 +00:00
 tags:

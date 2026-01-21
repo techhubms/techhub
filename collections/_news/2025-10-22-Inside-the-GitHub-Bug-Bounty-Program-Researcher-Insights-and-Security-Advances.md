@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/security/top-security-researcher-shares-their-bug-bounty-process/
 title: 'Inside the GitHub Bug Bounty Program: Researcher Insights and Security Advances'
 author: Shilpa Kumari
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-22 16:00:00 +00:00
 tags:

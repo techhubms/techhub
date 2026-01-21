@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ZDaog_MJGS8
 title: Protect Sensitive Data with Azure AI Language PII Redaction
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2026-01-13 17:10:44 +00:00
 tags:

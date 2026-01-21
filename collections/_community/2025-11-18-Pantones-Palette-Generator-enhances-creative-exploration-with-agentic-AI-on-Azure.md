@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-customer-innovation-blog/pantone-s-palette-generator-enhances-creative-exploration-with/ba-p/4469830
 title: Pantone’s Palette Generator enhances creative exploration with agentic AI on Azure
 author: mtoiba
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:54:22 +00:00
 tags:

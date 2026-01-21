@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-in-azure-app-service-at-msignite-2025/ba-p/4468207
 title: "What's New in Azure App Service: Managed Instance, Aspire, AI, and Developer Platform Updates at MS Ignite 2025"
 author: Stefan_Schackow
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:27:30 +00:00
 tags:

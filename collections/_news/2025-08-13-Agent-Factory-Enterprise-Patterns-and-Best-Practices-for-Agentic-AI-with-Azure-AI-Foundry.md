@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/agent-factory-the-new-era-of-agentic-ai-common-use-cases-and-design-patterns/
 title: 'Agent Factory: Enterprise Patterns and Best Practices for Agentic AI with Azure AI Foundry'
 author: Yina Arenas
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-08-13 15:00:00 +00:00
 tags:

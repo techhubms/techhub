@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-12-internal-mcp-registry-and-allowlist-controls-for-vs-code-insiders
 title: Configuring Internal MCP Registries and Allowlists for Copilot in VS Code Insiders
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-12 18:31:57 +00:00
 tags:

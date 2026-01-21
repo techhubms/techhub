@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/why-microsoft-copilot-studio-is-the-foundation-for-agentic-business-transformation/
 title: 'Copilot Studio: Empowering Agentic Business Transformation at Scale'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-20 19:57:03 +00:00
 tags:

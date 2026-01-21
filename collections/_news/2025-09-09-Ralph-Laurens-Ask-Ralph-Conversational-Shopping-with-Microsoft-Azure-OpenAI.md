@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/industry/blog/retail/2025/09/09/ask-ralph-where-style-meets-ai-a-new-era-of-conversational-commerce/
 title: "Ralph Lauren's Ask Ralph: Conversational Shopping with Microsoft Azure OpenAI"
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-09-09 13:20:25 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=24o_LuUEhhk
 title: On .NET Live – Practical Use of Source Generators in Jinget
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-07-29 05:04:52 +00:00
 tags:

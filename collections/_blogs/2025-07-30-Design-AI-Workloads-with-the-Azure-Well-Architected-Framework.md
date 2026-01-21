@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/07/design-ai-workloads-with-the-azure-well-architected-framework/
 title: Design AI Workloads with the Azure Well-Architected Framework
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-07-30 09:37:46 +00:00
 tags:

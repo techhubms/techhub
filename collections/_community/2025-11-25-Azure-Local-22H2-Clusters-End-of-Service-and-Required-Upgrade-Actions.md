@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-local-22h2-clusters-end-of-service-and-feature-degradation/ba-p/4470129
 title: 'Azure Local 22H2 Clusters: End of Service and Required Upgrade Actions'
 author: Arpita Duppala
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-25 15:17:52 +00:00
 tags:

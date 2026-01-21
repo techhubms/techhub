@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/advancing-full-stack-observability-with-azure-monitor-at-ignite/ba-p/4469041
 title: Advancing Full-Stack Observability with Azure Monitor at Ignite 2025
 author: Shiva_Sivakumar
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:00:52 +00:00
 tags:

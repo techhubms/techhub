@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=3lIrMl2Y8f0
 title: Overview of Managed Solutions and Secure Operations in Power Platform
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 13:29:26 +00:00
 tags:

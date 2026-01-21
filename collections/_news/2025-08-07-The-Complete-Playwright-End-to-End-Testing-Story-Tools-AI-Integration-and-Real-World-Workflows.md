@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/the-complete-playwright-end-to-end-story-tools-ai-and-real-world-workflows
 title: 'The Complete Playwright End-to-End Testing Story: Tools, AI Integration, and Real-World Workflows'
 author: Debbie O'Brien
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-08-07 18:00:52 +00:00
 tags:

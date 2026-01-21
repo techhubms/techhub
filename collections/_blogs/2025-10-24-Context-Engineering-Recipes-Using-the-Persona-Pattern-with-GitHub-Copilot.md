@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/context-engineering-recipes-persona-pattern.html
 title: 'Context Engineering Recipes: Using the Persona Pattern with GitHub Copilot'
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-10-24 00:00:00 +00:00
 tags:

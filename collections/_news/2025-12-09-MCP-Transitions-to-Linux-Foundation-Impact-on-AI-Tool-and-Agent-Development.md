@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/open-source/maintainers/mcp-joins-the-linux-foundation-what-this-means-for-developers-building-the-next-era-of-ai-tools-and-agents/
 title: 'MCP Transitions to Linux Foundation: Impact on AI Tool and Agent Development'
 author: Martin Woodward
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-09 21:00:13 +00:00
 tags:

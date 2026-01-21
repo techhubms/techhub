@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/uOx286VTAwM
 title: GitHub Copilot Surpasses ChatGPT as Top Developer AI Tool
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-08 18:01:03 +00:00
 tags:

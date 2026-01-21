@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mccydp/moving_backup_data_from_datto_cloud_to_azure/
 title: Strategies for Migrating Backup Data from Datto Cloud to Azure
 author: Armlessbastard
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-07-29 14:29:22 +00:00
 tags:

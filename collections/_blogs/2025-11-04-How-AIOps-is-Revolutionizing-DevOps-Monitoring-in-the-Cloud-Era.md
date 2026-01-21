@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/how-aiops-is-revolutionizing-devops-monitoring-in-the-cloud-era/
 title: How AIOps is Revolutionizing DevOps Monitoring in the Cloud Era
 author: Joydip Kanjilal
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-11-04 10:55:16 +00:00
 tags:

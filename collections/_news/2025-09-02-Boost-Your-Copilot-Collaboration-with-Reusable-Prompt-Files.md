@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/boost-your-copilot-collaboration-with-reusable-prompt-files/
 title: Boost Your Copilot Collaboration with Reusable Prompt Files
 author: Jessie Houghton
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-09-02 12:00:42 +00:00
 tags:

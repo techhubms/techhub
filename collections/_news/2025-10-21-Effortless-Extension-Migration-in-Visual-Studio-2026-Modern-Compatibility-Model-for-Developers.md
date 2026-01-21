@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/modernizing-visual-studio-extension-compatibility-effortless-migration-for-extension-developers-and-users/
 title: 'Effortless Extension Migration in Visual Studio 2026: Modern Compatibility Model for Developers'
 author: Tina Schrepfer (LI)
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-10-21 14:00:36 +00:00
 tags:

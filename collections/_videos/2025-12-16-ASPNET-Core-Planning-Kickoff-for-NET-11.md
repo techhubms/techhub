@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=N7MZdRjDD4c
 title: ASP.NET Core Planning Kickoff for .NET 11
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-12-16 03:08:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=rQBFAKJ-Ea8
 title: 'Azure Arc: Extending Azure for Hybrid and Multi-Cloud Management'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-12-03 21:32:15 +00:00
 tags:

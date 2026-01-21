@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/11/04/learn-what-generative-ai-can-do-for-your-security-operations-center-soc/
 title: How Generative AI Transforms Security Operations Centers with Microsoft Security Copilot
 author: Rob Lefferts
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-11-04 17:00:00 +00:00
 tags:

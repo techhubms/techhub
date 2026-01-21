@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/beyond-the-platform-how-enterprises-can-unify-their-devops-toolchains-for-better-governance-and-ai-readiness/
 title: 'Beyond the Platform: How Enterprises Can Unify Their DevOps Toolchains for Better Governance and AI Readiness'
 author: Shawn Ahmed
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-16 19:44:14 +00:00
 tags:

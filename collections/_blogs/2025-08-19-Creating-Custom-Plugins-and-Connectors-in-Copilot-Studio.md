@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/creating-custom-plugins-and-connectors-in-copilot-studio/
 title: Creating Custom Plugins and Connectors in Copilot Studio
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-19 14:52:34 +00:00
 tags:

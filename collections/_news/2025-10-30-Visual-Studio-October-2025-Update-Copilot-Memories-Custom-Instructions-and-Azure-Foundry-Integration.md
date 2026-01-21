@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-october-update/
 title: 'Visual Studio October 2025 Update: Copilot Memories, Custom Instructions, and Azure Foundry Integration'
 author: Jessie Houghton
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-10-30 12:00:36 +00:00
 tags:

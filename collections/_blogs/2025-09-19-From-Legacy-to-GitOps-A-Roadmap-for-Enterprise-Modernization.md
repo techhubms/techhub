@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/from-legacy-to-gitops-a-roadmap-for-enterprise-modernization/
 title: 'From Legacy to GitOps: A Roadmap for Enterprise Modernization'
 author: Ekambar Kumar Singirikonda
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-19 10:59:49 +00:00
 tags:

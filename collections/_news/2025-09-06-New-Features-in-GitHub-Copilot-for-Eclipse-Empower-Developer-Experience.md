@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-05-new-features-in-github-copilot-in-eclipse
 title: New Features in GitHub Copilot for Eclipse Empower Developer Experience
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-06 02:56:23 +00:00
 tags:

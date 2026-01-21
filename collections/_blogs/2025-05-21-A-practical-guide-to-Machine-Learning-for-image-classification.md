@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://hiddedesmet.com/iasa-ai-course
 title: A Practical Guide to Machine Learning for Image Classification
 author: Hidde de Smet
-viewing_mode: external
 feed_name: Hidde de Smet's Blog
 date: 2025-05-21 07:00:00 +00:00
 tags:

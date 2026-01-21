@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/QHQ0GCyyAjo
 title: "MapYourGrid: Contributing to an Open Map of the World's Energy Grid"
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-09-30 20:06:00 +00:00
 tags:

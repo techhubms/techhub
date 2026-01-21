@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-18-github-copilot-now-supports-agent-skills
 title: GitHub Copilot Now Supports Agent Skills
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-18 17:26:18 +00:00
 tags:

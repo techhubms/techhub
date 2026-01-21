@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=xoUCZj4ZMRs
 title: 'Azure File Sync Managed Identity: Enhanced Security and Simplified Operations'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-08-20 14:56:24 +00:00
 tags:

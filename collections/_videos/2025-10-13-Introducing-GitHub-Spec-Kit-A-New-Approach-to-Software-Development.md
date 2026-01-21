@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/AQwwrxyQfA0
 title: 'Introducing GitHub Spec Kit: A New Approach to Software Development'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-13 14:00:12 +00:00
 tags:

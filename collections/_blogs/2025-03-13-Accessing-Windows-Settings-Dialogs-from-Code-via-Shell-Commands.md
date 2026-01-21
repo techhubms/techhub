@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://weblog.west-wind.com/posts/2025/Mar/13/Accessing-Windows-Settings-Dialogs-from-Code-via-Shell-Commands
 title: Accessing Windows Settings Dialogs from Code via Shell Commands
 author: Rick Strahl
-viewing_mode: external
 feed_name: Rick Strahl's Blog
 date: 2025-03-13 22:40:22 +00:00
 tags:

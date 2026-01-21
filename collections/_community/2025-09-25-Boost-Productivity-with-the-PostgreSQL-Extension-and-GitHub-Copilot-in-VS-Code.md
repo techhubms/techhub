@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/talk-to-your-data-postgresql-gets-a-voice-in-vs-code/ba-p/4453695
 title: Boost Productivity with the PostgreSQL Extension and GitHub Copilot in VS Code
 author: TELAWRENCE
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-25 05:00:00 +00:00
 tags:

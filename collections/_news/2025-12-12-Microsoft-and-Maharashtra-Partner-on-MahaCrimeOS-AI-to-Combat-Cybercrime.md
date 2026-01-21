@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_a-race-against-time-maharashtra-police-get-activity-7405143430328258560-Bzph
 title: Microsoft and Maharashtra Partner on MahaCrimeOS AI to Combat Cybercrime
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-12 06:45:00 +00:00
 tags:

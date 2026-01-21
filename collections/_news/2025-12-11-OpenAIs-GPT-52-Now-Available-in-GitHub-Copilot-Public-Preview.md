@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-11-openais-gpt-5-2-is-now-in-public-preview-for-github-copilot
 title: OpenAI’s GPT-5.2 Now Available in GitHub Copilot Public Preview
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-11 16:07:42 +00:00
 tags:

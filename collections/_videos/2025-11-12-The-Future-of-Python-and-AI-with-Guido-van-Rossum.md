@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=cMRvgR8EpOE
 title: The Future of Python and AI with Guido van Rossum
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-12 15:01:22 +00:00
 tags:

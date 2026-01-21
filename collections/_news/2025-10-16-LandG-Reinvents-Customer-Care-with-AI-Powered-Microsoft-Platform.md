@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://ukstories.microsoft.com/features/how-lg-is-reinventing-customer-care-with-ai/
 title: L&G Reinvents Customer Care with AI-Powered Microsoft Platform
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-16 15:55:53 +00:00
 tags:

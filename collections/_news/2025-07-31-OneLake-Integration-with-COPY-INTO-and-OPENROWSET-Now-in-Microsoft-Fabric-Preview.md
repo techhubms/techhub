@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-onelake-as-a-source-for-copy-into-and-openrowset/
 title: OneLake Integration with COPY INTO and OPENROWSET Now in Microsoft Fabric Preview
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-07-31 09:00:00 +00:00
 tags:

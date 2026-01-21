@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-25-secret-scanning-alert-assignees-security-campaigns-are-generally-available
 title: Secret Scanning Alert Assignees and Security Campaigns Now Available in GitHub
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-25 17:51:00 +00:00
 tags:

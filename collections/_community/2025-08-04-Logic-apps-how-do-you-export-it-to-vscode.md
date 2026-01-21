@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mh6hop/logic_apps_how_do_you_export_it_to_vscode/
 title: Logic apps - how do you export it to vscode?
 author: your-lost-elephant
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-04 06:56:51 +00:00
 tags:

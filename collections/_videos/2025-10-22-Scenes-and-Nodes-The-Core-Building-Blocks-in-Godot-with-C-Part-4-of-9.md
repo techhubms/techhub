@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=o4uqehEAu3M
 title: Scenes and Nodes - The Core Building Blocks in Godot with C# (Part 4 of 9)
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-10-22 16:30:21 +00:00
 tags:

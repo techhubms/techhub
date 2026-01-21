@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mk7faj/non_printable_space/
 title: Overlaying Strings in C# Console Applications Without Clearing Characters
 author: 06Hexagram
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-07 18:08:40 +00:00
 tags:

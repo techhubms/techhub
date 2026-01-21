@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=nHVwGyxP_Fg
 title: Embedding AI in Oracle Workloads with Oracle Database@Azure and Microsoft Fabric
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 11:54:01 +00:00
 tags:

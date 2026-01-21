@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devopsjournal.io/blog/2024/06/19/GitHub-Copilot-Chat-Power-User
 title: GitHub Copilot Chat - Power User example
 author: Rob Bos
-viewing_mode: external
 feed_name: Rob Bos' Blog
 date: 2024-06-19 00:00:00 +00:00
 tags:

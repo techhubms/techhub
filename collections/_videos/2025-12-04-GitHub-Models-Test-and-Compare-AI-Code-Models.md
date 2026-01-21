@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/u7sEMJTIQCw
 title: 'GitHub Models: Test and Compare AI Code Models'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-04 16:00:27 +00:00
 tags:

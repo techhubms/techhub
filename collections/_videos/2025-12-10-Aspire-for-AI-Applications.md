@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=7nQCRRYp44k
 title: Aspire for AI Applications
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-10 22:07:54 +00:00
 tags:

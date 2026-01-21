@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/john-willis-the-true-north-of-devops-and-devsecops/?utm_source=rss&utm_medium=rss&utm_campaign=john-willis-the-true-north-of-devops-and-devsecops
 title: 'John Willis: The True North of DevOps and DevSecOps'
 author: Alan Shimel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-25 15:19:02 +00:00
 tags:

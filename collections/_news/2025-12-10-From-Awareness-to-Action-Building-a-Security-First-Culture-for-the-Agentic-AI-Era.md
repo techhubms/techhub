@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/12/10/from-awareness-to-action-building-a-security-first-culture-for-the-agentic-ai-era/
 title: 'From Awareness to Action: Building a Security-First Culture for the Agentic AI Era'
 author: Mark Miller
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-12-10 18:00:00 +00:00
 tags:

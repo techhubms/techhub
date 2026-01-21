@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/key-trends-driving-software-engineering-in-2025/
 title: Key Trends Driving Software Engineering in 2025
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-07-20 18:32:49 +00:00
 tags:

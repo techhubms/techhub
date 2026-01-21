@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_fridayevening-reflectionadjusting-my-cloud-activity-7380046678944522240-d6O4
 title: 'Adjusting Cloud Infrastructure for the AI Era: AI WAN Expansion at Microsoft'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-04 02:01:00 +00:00
 tags:

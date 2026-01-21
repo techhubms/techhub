@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=2H8cvsjJ8ao
 title: AI-Powered Data Security with Security Copilot and Microsoft Purview
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 05:10:08 +00:00
 tags:

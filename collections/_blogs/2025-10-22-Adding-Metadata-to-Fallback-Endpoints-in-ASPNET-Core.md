@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/adding-metadata-to-fallback-endpoints-in-aspnetcore/
 title: Adding Metadata to Fallback Endpoints in ASP.NET Core
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2025-10-22 10:00:00 +00:00
 tags:

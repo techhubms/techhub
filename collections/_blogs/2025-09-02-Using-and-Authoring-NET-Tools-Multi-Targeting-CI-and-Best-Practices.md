@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/using-and-authoring-dotnet-tools/
 title: 'Using and Authoring .NET Tools: Multi-Targeting, CI, and Best Practices'
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2025-09-02 10:00:00 +00:00
 tags:

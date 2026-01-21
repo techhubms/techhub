@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/app-development/how-to-decouple-views-from-view-models-using-communitytoolkit/m-p/4432591#M1261
 title: Decoupling Views and ViewModels in CommunityToolkit.Mvvm
 author: CSharpDev
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-07-12 17:03:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=I2wFjDrZAPo
 title: 'Azure Weekly Update: Python 3.13 Functions, AKS Linux 3.0, Storage Mover, and More (24th October 2025)'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-10-24 14:44:20 +00:00
 tags:

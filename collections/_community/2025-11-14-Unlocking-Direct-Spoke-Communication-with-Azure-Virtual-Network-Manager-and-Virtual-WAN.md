@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-virtual-network-manager-azure-virtual-wan/ba-p/4469991
 title: Unlocking Direct Spoke Communication with Azure Virtual Network Manager and Virtual WAN
 author: SimonaTarantola
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-14 14:09:16 +00:00
 tags:

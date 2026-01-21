@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-07-upcoming-deprecation-of-claude-sonnet-3-5
 title: 'Deprecation of Claude Sonnet 3.5 in GitHub Copilot: What You Need to Know'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-08 00:34:21 +00:00
 tags:

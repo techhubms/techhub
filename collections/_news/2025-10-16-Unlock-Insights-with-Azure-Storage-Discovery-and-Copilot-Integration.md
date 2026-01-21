@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/
 title: Unlock Insights with Azure Storage Discovery and Copilot Integration
 author: Maneesh Sah
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-10-16 15:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=m293_EsOs7I
 title: How to Use AI Models in Your GitHub Actions Workflows
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-04 14:01:12 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=cWIHcbOihY4
 title: 'AI on the Go for Microsoft Partners: Series Trailer'
 author: Microsoft Cloud
-viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
 date: 2025-06-10 14:01:04 +00:00
 tags:

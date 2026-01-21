@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=kZqGsoeP0kU
 title: 'AI Dev Days: Building AI Applications with Azure and GitHub'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-04 01:05:19 +00:00
 tags:

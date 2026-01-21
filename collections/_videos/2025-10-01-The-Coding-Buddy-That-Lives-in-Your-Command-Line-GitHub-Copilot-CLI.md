@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/ZnZBxZC8WSA
 title: 'The Coding Buddy That Lives in Your Command Line: GitHub Copilot CLI'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-01 14:01:04 +00:00
 tags:

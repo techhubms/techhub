@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/partner-news/partner-case-study-adastra/ba-p/4442288
 title: How Adastra Used Microsoft Fabric and Azure OpenAI Service to Transform Heritage Grocers Group’s Data Analytics
 author: JillArmourMicrosoft
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-12 17:00:00 +00:00
 tags:

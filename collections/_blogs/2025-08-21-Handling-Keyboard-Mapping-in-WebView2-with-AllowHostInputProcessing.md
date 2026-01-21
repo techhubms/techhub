@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://weblog.west-wind.com/posts/2025/Aug/20/Using-the-new-WebView2-AllowHostInputProcessing-Keyboard-Mapping-Feature
 title: Handling Keyboard Mapping in WebView2 with AllowHostInputProcessing
 author: Rick Strahl
-viewing_mode: external
 feed_name: Rick Strahl's Blog
 date: 2025-08-21 03:17:34 +00:00
 tags:

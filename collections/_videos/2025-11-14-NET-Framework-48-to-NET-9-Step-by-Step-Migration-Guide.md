@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=AEbJzTF03F0
 title: .NET Framework 4.8 to .NET 9 Step by Step Migration Guide
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 03:30:06 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/end-to-end-confidence-in-the-cloud-a-walkthrough-of-azure-playwright-testing-preview/
 title: Scaling Playwright End-to-End Tests with Azure Playwright Testing
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-25 08:36:33 +00:00
 tags:

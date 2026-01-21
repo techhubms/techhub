@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/securing-confidential-vm-backups-with-azure-recovery-services/ba-p/4458965
 title: Securing Azure Confidential VM Backups with Recovery Services Vault and Private Endpoints
 author: PramodPalukuru
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-29 08:26:10 +00:00
 tags:

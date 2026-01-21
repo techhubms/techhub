@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/open-source/social-impact/from-private-to-public-how-a-united-nations-organization-open-sourced-its-tech-in-four-steps/
 title: 'How the International Telecommunication Union Open Sourced Its Tech: A Four-Step Guide'
 author: Joshua Ku
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-13 16:00:00 +00:00
 tags:

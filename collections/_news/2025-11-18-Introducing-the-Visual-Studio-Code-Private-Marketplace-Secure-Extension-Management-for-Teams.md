@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/blogs/2025/11/18/PrivateMarketplace
 title: 'Introducing the Visual Studio Code Private Marketplace: Secure Extension Management for Teams'
 author: Sean Iyer
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-11-18 00:00:00 +00:00
 tags:

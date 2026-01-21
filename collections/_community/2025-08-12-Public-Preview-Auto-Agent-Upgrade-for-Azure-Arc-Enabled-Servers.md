@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-auto-agent-upgrade-for-azure-arc-enabled-servers/ba-p/4442556
 title: 'Public Preview: Auto Agent Upgrade for Azure Arc-Enabled Servers'
 author: Aurnov_Chattopadhyay
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-12 15:30:41 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-events/join-the-microsoft-ignite-2025-nyc-community-summit-in-times/ec-p/4459801#M661
 title: Join the Microsoft Ignite 2025 NYC Community Summit in Times Square
 author: MariselaC
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-09 20:38:13 +00:00
 tags:

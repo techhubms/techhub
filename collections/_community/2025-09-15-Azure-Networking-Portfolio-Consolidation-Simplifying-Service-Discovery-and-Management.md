@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-networking-portfolio-consolidation/ba-p/4454248
 title: 'Azure Networking Portfolio Consolidation: Simplifying Service Discovery and Management'
 author: Sudha_Mahajan
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-15 20:02:36 +00:00
 tags:

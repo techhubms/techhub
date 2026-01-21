@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_today-we-announced-our-new-fairwater-datacenter-activity-7394420047294648321-RQ77
 title: 'Microsoft Announces Fairwater Datacenter: Building an AI Superfactory with Azure'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-12 17:41:13 +00:00
 tags:

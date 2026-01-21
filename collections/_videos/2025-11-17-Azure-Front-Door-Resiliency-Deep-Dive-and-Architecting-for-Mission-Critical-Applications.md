@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ufxFlmjS9dU
 title: Azure Front Door Resiliency Deep Dive and Architecting for Mission Critical Applications
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-11-17 10:53:28 +00:00
 tags:

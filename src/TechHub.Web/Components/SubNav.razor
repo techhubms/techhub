@@ -59,7 +59,7 @@ else
         var currentPath = currentUri.AbsolutePath.TrimEnd('/');
         var targetPath = url.TrimEnd('/');
 
-        // For section root (e.g., /ai), also match /{section}/all
+        // For section root (e.g., /ai), also match /{sectionName}/all
         if (targetPath.EndsWith("/all", StringComparison.OrdinalIgnoreCase))
         {
             var sectionPath = targetPath[..^4]; // Remove "/all"

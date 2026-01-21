@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/devops/from-manual-testing-to-ai-generated-automation-our-azure-devops-mcp-playwright-success-story/
 title: 'From Manual Testing to AI-Generated Automation: Azure DevOps MCP & Playwright with GitHub Copilot'
 author: Igor Najdenovski
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-07-25 06:47:36 +00:00
 tags:

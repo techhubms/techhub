@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/mlops-at-scale-how-community-is-driving-ai-into-production/
 title: 'MLOps at Scale: How Community Is Driving AI Into Production'
 author: Alan Shimel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-26 16:20:05 +00:00
 tags:

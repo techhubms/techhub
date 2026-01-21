@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=VcLOXhpd_-A
 title: Building the Most Intelligent Agents with the Latest Knowledge Sources
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 15:51:30 +00:00
 tags:

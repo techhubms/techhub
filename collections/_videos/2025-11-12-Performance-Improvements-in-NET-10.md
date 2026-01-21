@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=snnULnTWcNM
 title: Performance Improvements in .NET 10
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-12 19:18:28 +00:00
 tags:

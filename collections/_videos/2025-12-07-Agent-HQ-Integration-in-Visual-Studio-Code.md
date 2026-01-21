@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Qfnod4Sw0gY
 title: Agent HQ Integration in Visual Studio Code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-12-07 15:00:56 +00:00
 tags:

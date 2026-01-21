@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=MUC0nVbeLKM
 title: 'ERP Transformation with AI: Building Autonomous Agents (Microsoft Ignite 2025 Session PBRK361)'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 13:44:32 +00:00
 tags:

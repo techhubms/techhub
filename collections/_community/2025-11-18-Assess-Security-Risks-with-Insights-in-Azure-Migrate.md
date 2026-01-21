@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/assess-security-risks-with-insights-in-azure-migrate/ba-p/4470866
 title: Assess Security Risks with Insights in Azure Migrate
 author: Nikita_Bajaj
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 08:22:12 +00:00
 tags:

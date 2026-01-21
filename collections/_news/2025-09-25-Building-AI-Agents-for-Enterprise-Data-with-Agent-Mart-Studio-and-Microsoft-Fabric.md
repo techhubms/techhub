@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/27082/
 title: Building AI Agents for Enterprise Data with Agent Mart Studio and Microsoft Fabric
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-09-25 11:00:00 +00:00
 tags:

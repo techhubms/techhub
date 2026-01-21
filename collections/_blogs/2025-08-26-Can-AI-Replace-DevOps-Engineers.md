@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/can-ai-replace-devops-engineers-3/?utm_source=rss&utm_medium=rss&utm_campaign=can-ai-replace-devops-engineers-3
 title: Can AI Replace DevOps Engineers?
 author: Ian Amit
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-26 15:14:00 +00:00
 tags:

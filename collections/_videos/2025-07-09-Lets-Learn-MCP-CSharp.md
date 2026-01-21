@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=4zkIBMFdL2w
 title: "Let's Learn MCP: C#"
 author: Dotnet's Youtube channel
-viewing_mode: internal
 feed_name: dotnet
 date: 2025-07-09 17:53:52 +00:00
 tags:

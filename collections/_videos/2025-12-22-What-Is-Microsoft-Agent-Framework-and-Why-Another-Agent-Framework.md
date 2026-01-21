@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=RM5LjmqKryA
 title: What Is Microsoft Agent Framework & Why Another Agent Framework?
 author: Learn Microsoft AI
-viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
 date: 2025-12-22 09:14:22 +00:00
 tags:

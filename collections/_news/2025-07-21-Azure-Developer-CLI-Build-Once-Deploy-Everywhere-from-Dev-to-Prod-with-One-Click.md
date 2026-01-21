@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/devops/azure-developer-cli-from-dev-to-prod-with-one-click/
 title: 'Azure Developer CLI: Build Once, Deploy Everywhere from Dev to Prod with One Click'
 author: PuiChee (PC) Chan, Kristen Womack
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-07-21 16:17:37 +00:00
 tags:

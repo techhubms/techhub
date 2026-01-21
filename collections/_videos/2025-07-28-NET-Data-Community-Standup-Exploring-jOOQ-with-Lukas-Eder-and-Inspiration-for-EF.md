@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=EbFqlYPvAE4
 title: '.NET Data Community Standup: Exploring jOOQ with Lukas Eder and Inspiration for EF'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-07-28 15:50:14 +00:00
 tags:

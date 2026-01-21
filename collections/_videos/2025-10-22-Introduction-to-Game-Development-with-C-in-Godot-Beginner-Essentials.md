@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=f0-ucs37ASQ
 title: 'Introduction to Game Development with C# in Godot: Beginner Essentials'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-10-22 16:30:13 +00:00
 tags:

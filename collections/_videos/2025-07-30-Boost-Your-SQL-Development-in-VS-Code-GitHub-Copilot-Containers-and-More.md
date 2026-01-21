@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=pq2drN2Qw5w
 title: 'Boost Your SQL Development in VS Code: GitHub Copilot, Containers, and More'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-07-30 21:09:28 +00:00
 tags:

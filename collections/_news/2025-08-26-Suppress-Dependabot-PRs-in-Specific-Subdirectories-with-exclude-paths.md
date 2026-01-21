@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-26-dependabot-can-now-exclude-automatic-pull-requests-for-manifests-in-selected-subdirectories
 title: Suppress Dependabot PRs in Specific Subdirectories with `exclude-paths`
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-26 17:53:23 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=DoezQYWzRBw
 title: 'MCP C# SDK: What’s New and Upcoming for .NET Developers'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-07-17 06:05:33 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-to-build-frontier-ai-solutions-with-azure-ai-landing-zone/ba-p/4460199
 title: How to Build Frontier AI Solutions with Azure AI Landing Zone
 author: VimalVerma
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-09 00:09:13 +00:00
 tags:

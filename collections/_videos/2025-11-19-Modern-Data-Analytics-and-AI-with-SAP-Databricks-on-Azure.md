@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=wsLgjpQZx6U
 title: Modern Data Analytics and AI with SAP Databricks on Azure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 14:03:01 +00:00
 tags:

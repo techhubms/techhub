@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-small-language-modes/ba-p/4466170
 title: 'How Small Language Models Enable Edge AI: Hardware, Architecture, and Azure AI Foundry'
 author: Sherrylist
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 08:23:25 +00:00
 tags:

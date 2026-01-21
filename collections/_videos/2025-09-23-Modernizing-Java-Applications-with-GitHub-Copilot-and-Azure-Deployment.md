@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=r3iTEqujO1s
 title: Modernizing Java Applications with GitHub Copilot and Azure Deployment
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-23 13:01:50 +00:00
 tags:

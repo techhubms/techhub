@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/enforce-or-audit-policy-inheritance-in-api-management/ba-p/4452204
 title: Enforcing and Auditing Policy Inheritance in Azure API Management
 author: budzynski
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-09 14:47:14 +00:00
 tags:

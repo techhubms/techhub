@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://harrybin.de/posts/parallel-github-copilot-workflow/
 title: Using GitHub Copilot for Multiple Tasks in Parallel
 author: Harald Binkle
-viewing_mode: external
 feed_name: Harald Binkle's blog
 date: 2025-10-01 23:51:00 +00:00
 tags:

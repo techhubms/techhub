@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://jessehouwing.net/github-copilot-free-use-inline-completions-for-more-answers/
 title: 'Maximize GitHub Copilot Free Tier: Using Inline Completions for More Answers'
 author: Jesse Houwing
-viewing_mode: external
 feed_name: Jesse Houwing's Blog
 date: 2025-02-10 16:03:31 +00:00
 tags:

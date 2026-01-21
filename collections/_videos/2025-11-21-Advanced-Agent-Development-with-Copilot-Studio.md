@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=FQfjBTR7nsQ
 title: Advanced Agent Development with Copilot Studio
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 13:00:16 +00:00
 tags:

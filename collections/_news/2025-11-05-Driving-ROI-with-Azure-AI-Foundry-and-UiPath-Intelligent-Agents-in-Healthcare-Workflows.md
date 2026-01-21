@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/driving-roi-with-azure-ai-foundry-and-uipath-intelligent-agents-in-real-world-healthcare-workflows/
 title: 'Driving ROI with Azure AI Foundry and UiPath: Intelligent Agents in Healthcare Workflows'
 author: Marco Casalaina
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-11-05 18:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=wm1yjcTk50w
 title: A Deep Dive into the GitHub MCP Registry for AI Agents
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-09-24 20:33:32 +00:00
 tags:

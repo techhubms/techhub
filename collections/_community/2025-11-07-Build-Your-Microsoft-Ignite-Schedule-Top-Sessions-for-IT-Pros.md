@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-events/build-your-microsoft-ignite-schedule-top-sessions-for-it-pros/ba-p/4468165
 title: 'Build Your Microsoft Ignite Schedule: Top Sessions for IT Pros'
 author: GalimahB
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-07 18:46:27 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/12/09/changing-the-physics-of-cyber-defense/
 title: 'Changing the Physics of Cyber Defense: Graph-Based Strategies and AI with Microsoft Security'
 author: John Lambert
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-12-09 17:00:00 +00:00
 tags:

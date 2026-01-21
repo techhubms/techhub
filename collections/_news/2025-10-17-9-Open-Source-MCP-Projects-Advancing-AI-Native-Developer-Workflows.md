@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/open-source/accelerate-developer-productivity-with-these-9-open-source-ai-and-mcp-projects/
 title: 9 Open Source MCP Projects Advancing AI-Native Developer Workflows
 author: Kevin Crosby
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-17 16:00:00 +00:00
 tags:

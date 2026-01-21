@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/devops/june-patches-for-azure-devops-server-4/
 title: 'June Patches Released for Azure DevOps Server 2022.2: Improvements & Important Updates'
 author: Gloridel Morales
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-06-10 19:13:51 +00:00
 tags:

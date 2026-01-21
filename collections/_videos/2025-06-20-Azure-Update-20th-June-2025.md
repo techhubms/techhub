@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=2L4cSig9Y4Y
 title: Azure Update - 20th June 2025
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-06-20 14:50:36 +00:00
 tags:

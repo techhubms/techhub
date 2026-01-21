@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=sCv_noSKIBw
 title: 'Supercharge Your Apps with OpenAI: Secure Authentication, Azure Integration, and MCP Agents'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-10 23:42:25 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=6ZfVssHBvUw
 title: 'Azure Update: Announcements and Service Changes (12 September 2025)'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-09-12 14:44:04 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mjx1ga/application_insights_diagnostic_setting_to/
 title: Challenges with Application Insights Diagnostic Settings and Stream Analytics File Updates
 author: GarseBo
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-07 11:02:14 +00:00
 tags:

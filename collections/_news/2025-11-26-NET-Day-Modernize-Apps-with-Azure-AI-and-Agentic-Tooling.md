@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-day-on-agentic-modernization-coming-soon/
 title: '.NET Day: Modernize Apps with Azure, AI, and Agentic Tooling'
 author: Matt Soucoup
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-11-26 21:00:00 +00:00
 tags:

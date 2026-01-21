@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=_0SQuGw9JgE
 title: Building Space Invaders from Scratch with GitHub Copilot, AI Toolkit, and Azure Deployment
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2026-01-05 22:53:34 +00:00
 tags:

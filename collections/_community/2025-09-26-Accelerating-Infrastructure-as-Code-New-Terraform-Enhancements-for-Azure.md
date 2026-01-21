@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/accelerating-infrastructure-as-code-introducing-game-changing/ba-p/4457341
 title: 'Accelerating Infrastructure as Code: New Terraform Enhancements for Azure'
 author: stevenjma
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-26 15:53:50 +00:00
 tags:

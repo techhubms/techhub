@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mkujgo/starting_to_understand_the_differences_of_dotnet/
 title: Reflections on .NET Project Structure and Complexity for Beginners
 author: jeddthedoge
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-08 12:59:42 +00:00
 tags:

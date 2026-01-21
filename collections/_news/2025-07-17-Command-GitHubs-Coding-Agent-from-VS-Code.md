@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/blogs/2025/07/17/copilot-coding-agent
 title: Command GitHub's Coding Agent from VS Code
 author: Burke Holland
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-07-17 00:00:00 +00:00
 tags:

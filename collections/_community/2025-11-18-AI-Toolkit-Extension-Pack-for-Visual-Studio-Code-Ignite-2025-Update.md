@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-extension-pack-for-visual-studio-code-ignite-2025/ba-p/4471050
 title: 'AI Toolkit Extension Pack for Visual Studio Code: Ignite 2025 Update'
 author: leoyao
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 17:09:41 +00:00
 tags:

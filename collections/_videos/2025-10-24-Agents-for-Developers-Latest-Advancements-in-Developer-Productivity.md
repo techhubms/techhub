@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=2A7gO9Tf-Vg
 title: 'Agents for Developers: Latest Advancements in Developer Productivity'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-24 17:48:26 +00:00
 tags:

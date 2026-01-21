@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/announcing-awesome-copilot-mcp-server
 title: 'Announcing Awesome Copilot MCP Server: Customizing GitHub Copilot Like a Pro'
 author: Justin Yoo
-viewing_mode: external
 feed_name: Microsoft Blog
 date: 2025-08-28 17:00:18 +00:00
 tags:

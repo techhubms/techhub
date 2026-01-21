@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=8FWdFG55nXw
 title: Deploying AI Solutions with Azure AI Landing Zones
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-11 08:00:07 +00:00
 tags:

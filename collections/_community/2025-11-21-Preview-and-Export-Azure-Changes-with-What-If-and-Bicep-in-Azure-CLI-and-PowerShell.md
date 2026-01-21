@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/gaining-confidence-with-az-cli-and-az-powershell-introducing/ba-p/4472147
 title: Preview and Export Azure Changes with 'What If' and Bicep in Azure CLI & PowerShell
 author: stevenbucher
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-21 18:39:06 +00:00
 tags:

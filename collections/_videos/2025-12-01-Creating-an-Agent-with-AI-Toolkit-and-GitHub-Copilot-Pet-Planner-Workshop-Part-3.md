@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=6Dvfn2lfTnU
 title: 'Creating an Agent with AI Toolkit and GitHub Copilot: Pet Planner Workshop Part 3'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-01 21:00:05 +00:00
 tags:

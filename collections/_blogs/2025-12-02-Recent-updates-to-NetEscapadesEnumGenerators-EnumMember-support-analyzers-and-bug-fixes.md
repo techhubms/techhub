@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/recent-updates-to-netescapaades-enumgenerators/
 title: 'Recent updates to NetEscapades.EnumGenerators: [EnumMember] support, analyzers, and bug fixes'
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2025-12-02 09:00:00 +00:00
 tags:

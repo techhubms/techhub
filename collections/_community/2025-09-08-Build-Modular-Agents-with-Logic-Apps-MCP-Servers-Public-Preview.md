@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-logic-apps-mcp-servers-public-preview/ba-p/4450419
 title: Build Modular Agents with Logic Apps MCP Servers (Public Preview)
 author: KentWeareMSFT
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-08 20:37:35 +00:00
 tags:

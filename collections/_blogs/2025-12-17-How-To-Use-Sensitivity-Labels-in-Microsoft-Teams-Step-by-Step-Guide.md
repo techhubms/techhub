@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-to-use-sensitivity-labels-in-microsoft-teams-step-by-step-guide/
 title: How To Use Sensitivity Labels in Microsoft Teams (Step-by-Step Guide)
 author: John Edward
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-12-17 16:11:16 +00:00
 tags:

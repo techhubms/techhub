@@ -20,7 +20,7 @@ This command will:
 - Automatically extract and process the content
 - Generate appropriate frontmatter and structure
 - Create the markdown file in the correct location
-- Apply proper formatting according to [Markdown Guidelines](../collections/markdown-guidelines.md)
+- Apply proper formatting (use `npx markdownlint-cli2 --fix` to fix issues)
 
 ### 2. Manual File Creation
 
@@ -28,7 +28,7 @@ For direct file creation:
 
 1. **Choose Content Type**: Select the appropriate collection directory (see root [AGENTS.md](../AGENTS.md) Site Terminology section for complete list with descriptions)
 2. **Create the File**: Use naming convention `YYYY-MM-DD-title-slug.md`
-3. **Add Content**: Follow the structure and formatting rules in [Markdown Guidelines](../collections/markdown-guidelines.md)
+3. **Add Content**: Follow the structure and formatting rules in [collections/AGENTS.md](../collections/AGENTS.md#frontmatter-schema) and [writing-style-guidelines.md](../collections/writing-style-guidelines.md)
 
 ### 3. GitHub Copilot Features Content
 
@@ -100,7 +100,7 @@ For detailed information about site structure and terminology, see:
 
 ### Common Issues
 
-- **Missing Frontmatter**: Check requirements in [Markdown Guidelines](../collections/markdown-guidelines.md)
+- **Missing Frontmatter**: Check requirements in [collections/AGENTS.md](../collections/AGENTS.md#frontmatter-schema)
 - **File Naming**: Use `YYYY-MM-DD-title.md` pattern
 - **Sections/Tags**: Verify against site configuration in root [AGENTS.md](../AGENTS.md) Site Terminology section. Note: frontmatter uses `section_names` field with normalized section identifiers ("ai", "github-copilot")
 - **Date Formats**: Use ISO 8601 format: `YYYY-MM-DD HH:MM:SS +00:00`
@@ -289,7 +289,7 @@ Each RSS item creates a markdown file with:
 - Viewing mode varies by collection:
   - Videos and roundups: `"internal"` (content opens on site)
   - All other collections: `"external"` (links open in new tab)
-- Standardized front matter (see [Markdown Guidelines](../collections/markdown-guidelines.md))
+- Standardized front matter (see [collections/AGENTS.md](../collections/AGENTS.md#frontmatter-schema))
 
 ### Processing Scripts
 

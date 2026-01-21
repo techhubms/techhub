@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=GcEHiY6Vp-8
 title: 'Smatterings of F#: Integrating F# in a C#-Focused World'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 01:40:06 +00:00
 tags:

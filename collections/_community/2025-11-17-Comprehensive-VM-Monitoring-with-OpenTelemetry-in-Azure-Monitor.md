@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/comprehensive-vm-monitoring-with-opentelemetry-performance/ba-p/4470122
 title: Comprehensive VM Monitoring with OpenTelemetry in Azure Monitor
 author: viviandiec
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-17 23:17:57 +00:00
 tags:

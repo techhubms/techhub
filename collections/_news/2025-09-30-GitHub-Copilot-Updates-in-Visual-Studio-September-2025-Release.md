@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-30-github-copilot-in-visual-studio-september-update
 title: GitHub Copilot Updates in Visual Studio September 2025 Release
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-30 17:34:58 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/from-large-semi-structured-docs-to-actionable-data-reusable/ba-p/4474054
 title: 'From Large Semi-Structured Documents to Actionable Data: Azure-Powered Intelligent Document Processing Pipelines'
 author: anishganguli
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-09 07:35:03 +00:00
 tags:

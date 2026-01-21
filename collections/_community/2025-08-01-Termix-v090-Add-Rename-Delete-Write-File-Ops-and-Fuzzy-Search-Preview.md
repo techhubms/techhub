@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mf1szg/termix_v090_add_rename_delete_write_file_ops/
 title: Termix v0.9.0 – Add Rename, Delete, Write File Ops & Fuzzy Search (Preview)
 author: amrohann
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-01 16:55:30 +00:00
 tags:

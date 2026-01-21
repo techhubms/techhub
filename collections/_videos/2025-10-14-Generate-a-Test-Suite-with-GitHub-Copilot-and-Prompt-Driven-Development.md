@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=f-4NNlIQzQw
 title: Generate a Test Suite with GitHub Copilot and Prompt-Driven Development
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-10-14 16:30:26 +00:00
 tags:

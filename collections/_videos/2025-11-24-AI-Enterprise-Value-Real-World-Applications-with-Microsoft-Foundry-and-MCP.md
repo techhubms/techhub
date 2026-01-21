@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=E7JJ8JLqlf8
 title: 'AI Enterprise Value: Real-World Applications with Microsoft Foundry and MCP'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 12:08:44 +00:00
 tags:

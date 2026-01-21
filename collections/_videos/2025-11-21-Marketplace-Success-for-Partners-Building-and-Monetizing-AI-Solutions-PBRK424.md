@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=tdouicsPTAk
 title: 'Marketplace Success for Partners: Building and Monetizing AI Solutions | PBRK424'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 13:01:21 +00:00
 tags:

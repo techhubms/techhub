@@ -122,5 +122,5 @@ collections/
 
 - [tests/AGENTS.md](../AGENTS.md) - Complete testing strategy
 - [src/TechHub.Infrastructure/AGENTS.md](../../src/TechHub.Infrastructure/AGENTS.md) - Infrastructure patterns
-- [Root AGENTS.md](/AGENTS.md#6-test--validate) - When to write tests
-- [Root AGENTS.md](/AGENTS.md#timezone--date-handling) - Timezone requirements
+- [Root AGENTS.md](../../AGENTS.md#6-write-tests-first-tdd) - When to write tests
+- [Root AGENTS.md](../../AGENTS.md#timezone--date-handling) - Timezone requirements

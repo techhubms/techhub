@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/identity-in-azure-understanding-azure-ad-authentication-and-authorization/
 title: 'Identity in Azure: Understanding Azure AD, Authentication, and Authorization'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-05 10:44:47 +00:00
 tags:

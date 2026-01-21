@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mfzmdu/looking_for_feedback_i_made_this_statemachine_lib/
 title: '[Looking for Feedback]: I Made this StateMachine Lib!'
 author: UnityDever
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-02 19:53:28 +00:00
 tags:

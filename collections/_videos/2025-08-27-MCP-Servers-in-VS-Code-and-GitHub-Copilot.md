@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=vUQfqW5GKAQ
 title: MCP Servers in VS Code and GitHub Copilot
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-08-27 18:42:25 +00:00
 tags:

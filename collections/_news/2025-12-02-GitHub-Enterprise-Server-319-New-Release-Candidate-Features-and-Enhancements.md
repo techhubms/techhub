@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-02-github-enterprise-server-3-19-release-candidate-is-now-available
 title: 'GitHub Enterprise Server 3.19: New Release Candidate Features and Enhancements'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-02 20:55:34 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=0Ly34nFESQk
 title: Choosing Your First AI Application
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-07-21 08:20:00 +00:00
 tags:

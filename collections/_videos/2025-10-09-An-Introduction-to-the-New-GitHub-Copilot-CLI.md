@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/rx_e9RDL1c8
 title: An Introduction to the New GitHub Copilot CLI
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-09 14:01:23 +00:00
 tags:

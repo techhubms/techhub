@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unlocking-client-side-configuration-at-scale-with-azure-app/ba-p/4470781
 title: Delivering Scalable Client-Side Configuration with Azure App Configuration and Azure Front Door
 author: mukta
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 23:02:36 +00:00
 tags:

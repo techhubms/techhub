@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=qeRDuU1XnwE
 title: Accelerate Partner Innovation in Every Industry with Microsoft AI
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 13:16:13 +00:00
 tags:

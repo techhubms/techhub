@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: ''
 title: Path-specific Custom Instructions
 author: TBD
 date: 2026-08-29 09:39:32 +00:00
-viewing_mode: internal
 ghes_support: true
 plans:
 - Pro

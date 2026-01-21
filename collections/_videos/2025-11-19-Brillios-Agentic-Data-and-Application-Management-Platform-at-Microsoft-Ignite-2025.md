@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=3Ui1Ol9lXmk
 title: Brillio's Agentic Data and Application Management Platform at Microsoft Ignite 2025
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 17:07:28 +00:00
 tags:

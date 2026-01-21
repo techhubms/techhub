@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://zure.com/blog/what-are-you-doing-how-i-tried-to-explain-coding-to-normal-people
 title: 'Explaining Coding to Non-Developers: A Developer’s WFH Reflections'
 author: Wouter.Vercruysse@zure.com (Wouter Vercruysse)
-viewing_mode: external
 feed_name: Zure Data & AI Blog
 date: 2025-11-07 04:45:01 +00:00
 tags:

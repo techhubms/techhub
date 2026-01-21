@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/dora-2025-faster-but-are-we-any-better/
 title: 'DORA 2025: AI’s Impact on DevOps — Speed, Trust, and the Platform Effect'
 author: Alan Shimel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-29 07:37:10 +00:00
 tags:

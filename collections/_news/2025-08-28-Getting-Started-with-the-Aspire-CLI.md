@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/getting-started-with-the-aspire-cli/
 title: Getting Started with the Aspire CLI
 author: Jeffrey Fritz
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-08-28 17:05:00 +00:00
 tags:

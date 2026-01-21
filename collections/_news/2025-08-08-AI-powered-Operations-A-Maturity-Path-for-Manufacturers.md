@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/industry/blog/manufacturing-and-mobility/manufacturing/2025/08/07/embracing-ai-powered-operations-a-maturity-path-for-manufacturers/
 title: 'AI-powered Operations: A Maturity Path for Manufacturers'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-08 00:34:33 +00:00
 tags:

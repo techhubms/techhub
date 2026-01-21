@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=e8mQhReST3s
 title: 'What’s New in Azure Local: Portfolio Enhancements & Edge AI Innovations'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 12:00:15 +00:00
 tags:

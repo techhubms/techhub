@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ama-spotlight-build-smarter-with-azure-developer-cli-azd/ba-p/4462308
 title: "AMA Spotlight: Build Smarter with Azure Developer CLI 'AZD'"
 author: Lee_Stott
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-20 07:00:00 +00:00
 tags:

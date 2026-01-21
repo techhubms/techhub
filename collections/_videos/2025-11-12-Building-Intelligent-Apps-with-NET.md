@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=N0DzWMkEnzk
 title: Building Intelligent Apps with .NET
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-12 19:18:19 +00:00
 tags:

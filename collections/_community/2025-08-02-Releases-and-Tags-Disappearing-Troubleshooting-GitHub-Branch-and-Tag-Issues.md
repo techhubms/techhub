@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/github/comments/1mfuewy/releases_and_tags_disappearing/
 title: 'Releases and Tags Disappearing: Troubleshooting GitHub Branch and Tag Issues'
 author: Discommodian
-viewing_mode: external
 feed_name: Reddit GitHub
 date: 2025-08-02 16:13:34 +00:00
 tags:

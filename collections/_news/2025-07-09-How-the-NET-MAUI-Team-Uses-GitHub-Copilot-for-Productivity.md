@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/maui-team-copilot-tips/
 title: How the .NET MAUI Team Uses GitHub Copilot for Productivity
 author: Jonathan Peppers
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-07-09 17:15:00 +00:00
 tags:

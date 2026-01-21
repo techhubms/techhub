@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-october-25/ba-p/4458456
 title: Logic Apps Aviators Newsletter - October 25
 author: WSilveira
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-06 15:00:00 +00:00
 tags:

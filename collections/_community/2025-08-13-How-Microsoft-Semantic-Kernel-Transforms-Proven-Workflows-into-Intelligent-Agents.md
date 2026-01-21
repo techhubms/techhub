@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/how-microsoft-semantic-kernel-transforms-proven-workflows-into/ba-p/4434731
 title: How Microsoft Semantic Kernel Transforms Proven Workflows into Intelligent Agents
 author: Abdulhamid_Onawole
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-13 07:00:00 +00:00
 tags:

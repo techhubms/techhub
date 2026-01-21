@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_jobs-security-skills-how-indias-giant-activity-7404408432293969921-BJHX
 title: Microsoft and India’s Ministry of Labour Harness AI for Social Impact at Scale
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-10 02:11:00 +00:00
 tags:

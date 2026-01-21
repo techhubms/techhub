@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-mission-critical-blog/a-deep-dive-into-spark-ui-for-job-optimization/ba-p/4442229
 title: A Deep Dive into Spark UI for Job Optimization
 author: anishekkamal
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-11 18:59:33 +00:00
 tags:

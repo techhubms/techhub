@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=kyb-ZISRa48
 title: 'AI Frontiers with Foundry Labs at Microsoft Ignite: Experimenting with Multi-Agent Orchestration'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 16:34:55 +00:00
 tags:

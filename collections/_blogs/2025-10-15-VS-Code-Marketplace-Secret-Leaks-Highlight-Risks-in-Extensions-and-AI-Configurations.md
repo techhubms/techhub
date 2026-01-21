@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/massive-vs-code-secrets-leak-puts-focus-on-extensions-ai-wiz/
 title: VS Code Marketplace Secret Leaks Highlight Risks in Extensions and AI Configurations
 author: Jeff Burt
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-15 18:35:27 +00:00
 tags:

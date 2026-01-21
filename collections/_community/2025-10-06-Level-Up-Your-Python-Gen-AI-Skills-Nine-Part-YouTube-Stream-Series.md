@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/level-up-your-python-gen-ai-skills-from-our-free-nine-part/ba-p/4459464
 title: 'Level Up Your Python Gen AI Skills: Nine-Part YouTube Stream Series'
 author: Pamela_Fox
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-06 17:46:34 +00:00
 tags:

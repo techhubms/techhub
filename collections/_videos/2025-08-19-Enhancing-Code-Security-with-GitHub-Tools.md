@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=pZ2Nu8LqJvE
 title: Enhancing Code Security with GitHub Tools
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-19 14:01:23 +00:00
 tags:

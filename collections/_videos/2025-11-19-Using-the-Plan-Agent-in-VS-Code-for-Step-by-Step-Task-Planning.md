@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=xR3fuKtWGN0
 title: Using the Plan Agent in VS Code for Step-by-Step Task Planning
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-11-19 19:14:53 +00:00
 tags:

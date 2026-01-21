@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=5eUbaOGbFpk
 title: 'VS Code: Background Coding Agents and GitHub Copilot Enhancements'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-09-30 19:14:54 +00:00
 tags:

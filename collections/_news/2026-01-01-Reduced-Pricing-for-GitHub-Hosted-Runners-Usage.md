@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2026-01-01-reduced-pricing-for-github-hosted-runners-usage
 title: Reduced Pricing for GitHub-Hosted Runners Usage
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2026-01-01 17:00:03 +00:00
 tags:

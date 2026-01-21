@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mehnkp/free_post_fridays_is_now_live_please_follow_these/
 title: Free Post Fridays is now live, please follow these rules!
 author: AutoModerator
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-01 00:01:37 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devclass.com/2026/01/07/microsoft-open-sources-xaml-studio-amid-developer-discontent-with-visual-studio-designers/
 title: Microsoft Open Sources XAML Studio and Highlights Visual Studio Designer Challenges
 author: Tim Anderson
-viewing_mode: external
 feed_name: DevClass
 date: 2026-01-07 14:58:24 +00:00
 tags:

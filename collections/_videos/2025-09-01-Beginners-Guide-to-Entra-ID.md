@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=UP2kzp14WA0
 title: Beginners Guide to Entra ID
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-09-01 14:09:40 +00:00
 tags:

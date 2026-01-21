@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/next-generation-hxu-doubling-cooling-power-for-the-ai-era/ba-p/4460953
 title: 'Next Generation HXU: Doubling Cooling Power for the AI Era'
 author: andy_reg
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-14 00:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=UZsjChTrC3c
 title: Key Learnings and Best Practices for Microsoft Fabric Migrations
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 11:53:10 +00:00
 tags:

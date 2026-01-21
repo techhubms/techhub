@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/the-eus-cyber-resilience-act-redefining-secure-software-development/?utm_source=rss&utm_medium=rss&utm_campaign=the-eus-cyber-resilience-act-redefining-secure-software-development
 title: 'The EU’s Cyber Resilience Act: Redefining Secure Software Development'
 author: Thabang Mashologu
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-26 13:55:02 +00:00
 tags:

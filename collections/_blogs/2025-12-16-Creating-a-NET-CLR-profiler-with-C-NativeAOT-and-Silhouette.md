@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/creating-a-dotnet-profiler-using-csharp-with-silhouette/
 title: Creating a .NET CLR profiler with C# NativeAOT and Silhouette
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2025-12-16 10:00:00 +00:00
 tags:

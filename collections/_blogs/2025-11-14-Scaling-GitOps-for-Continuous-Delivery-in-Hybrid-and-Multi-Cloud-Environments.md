@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/gitops-in-the-wild-scaling-continuous-delivery-in-hybrid-cloud-environments/
 title: Scaling GitOps for Continuous Delivery in Hybrid and Multi-Cloud Environments
 author: Ankur Mahida
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-11-14 09:47:50 +00:00
 tags:

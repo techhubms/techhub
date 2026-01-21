@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=tCjQvi6qkHA
 title: Deliver Smart Secure and Scalable Agents with MongoDB on Azure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 11:00:59 +00:00
 tags:

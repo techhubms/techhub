@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/10/optimize-complex-workflows-using-multi-agent-ai-patterns/
 title: Optimize Complex Workflows Using Multi-Agent AI Patterns
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-10-24 06:54:19 +00:00
 tags:

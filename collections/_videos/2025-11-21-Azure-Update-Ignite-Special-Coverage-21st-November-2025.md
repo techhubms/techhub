@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ayWSbRDQ1ds
 title: Azure Update - Ignite Special Coverage (21st November 2025)
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-11-21 17:57:53 +00:00
 tags:

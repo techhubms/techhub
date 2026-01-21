@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-03-github-copilot-in-visual-studio-november-update
 title: 'GitHub Copilot and Visual Studio 2026: November Update Highlights'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-03 22:06:59 +00:00
 tags:

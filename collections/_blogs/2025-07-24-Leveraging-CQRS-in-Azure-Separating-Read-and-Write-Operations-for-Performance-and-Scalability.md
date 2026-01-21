@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/leveraging-cqrs-in-azure-separating-read-and-write-operations-for-performance-and-scalability/
 title: 'Leveraging CQRS in Azure: Separating Read and Write Operations for Performance and Scalability'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-07-24 09:10:36 +00:00
 tags:

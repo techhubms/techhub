@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/ai-powered-migration-modernization-secure-resilient-and-ready/ba-p/4454849
 title: AI-Powered Migration and Modernization with Azure Essentials, Azure Migrate, and GitHub Copilot
 author: GabiPacheco
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-17 17:45:09 +00:00
 tags:

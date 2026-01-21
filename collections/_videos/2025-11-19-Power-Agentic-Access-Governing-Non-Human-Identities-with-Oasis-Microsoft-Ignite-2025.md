@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=FsD1p_LPZWE
 title: 'Power Agentic Access: Governing Non-Human Identities with Oasis | Microsoft Ignite 2025'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 12:31:45 +00:00
 tags:

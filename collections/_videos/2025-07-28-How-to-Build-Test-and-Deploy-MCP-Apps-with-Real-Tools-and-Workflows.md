@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=vCN9-mKBDfQ
 title: How to Build, Test & Deploy MCP Apps with Real Tools and Workflows
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Build 2025 YouTube
 date: 2025-07-28 16:01:33 +00:00
 tags:

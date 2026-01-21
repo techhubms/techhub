@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/introducing-metadata-security-protocol-msp-elevating-platform/ba-p/4471204
 title: Metadata Security Protocol (MSP) General Availability Secures Azure VM Metadata
 author: Amjad_Shaik
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-19 19:36:55 +00:00
 tags:

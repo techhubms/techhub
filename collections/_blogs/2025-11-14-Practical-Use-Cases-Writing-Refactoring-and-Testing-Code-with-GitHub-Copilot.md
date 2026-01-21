@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/practical-use-cases-writing-refactoring-and-testing-code-with-github-copilot/
 title: 'Practical Use Cases: Writing, Refactoring, and Testing Code with GitHub Copilot'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-14 08:54:01 +00:00
 tags:

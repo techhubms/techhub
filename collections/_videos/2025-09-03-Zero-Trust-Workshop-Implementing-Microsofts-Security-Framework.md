@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=xVWr1ml47_g
 title: "Zero Trust Workshop: Implementing Microsoft's Security Framework"
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-09-03 15:35:20 +00:00
 tags:

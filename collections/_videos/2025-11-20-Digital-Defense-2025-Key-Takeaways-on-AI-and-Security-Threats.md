@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=4G2pOwGusGs
 title: 'Digital Defense 2025: Key Takeaways on AI and Security Threats'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 07:56:55 +00:00
 tags:

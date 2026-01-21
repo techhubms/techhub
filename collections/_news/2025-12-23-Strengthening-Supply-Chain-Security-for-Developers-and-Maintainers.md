@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/security/supply-chain-security/strengthening-supply-chain-security-preparing-for-the-next-malware-campaign/
 title: Strengthening Supply Chain Security for Developers and Maintainers
 author: Madison Oliver
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-23 23:52:08 +00:00
 tags:

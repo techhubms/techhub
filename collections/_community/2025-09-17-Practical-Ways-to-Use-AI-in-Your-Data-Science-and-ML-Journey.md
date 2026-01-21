@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/practical-ways-to-use-ai-in-your-data-science-and-ml-journey/ba-p/4454764
 title: Practical Ways to Use AI in Your Data Science and ML Journey
 author: bethanyjep
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-17 12:52:18 +00:00
 tags:

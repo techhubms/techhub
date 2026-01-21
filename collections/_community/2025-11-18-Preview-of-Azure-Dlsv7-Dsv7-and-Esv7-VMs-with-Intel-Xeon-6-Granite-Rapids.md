@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-preview-of-new-azure-dlsv7-dsv7-and-esv7-vms-based-on/ba-p/4467928
 title: Preview of Azure Dlsv7, Dsv7, and Esv7 VMs with Intel Xeon 6 Granite Rapids
 author: RishiGomatam
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:00:00 +00:00
 tags:

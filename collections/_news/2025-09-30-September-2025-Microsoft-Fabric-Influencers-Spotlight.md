@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-september-2025/
 title: September 2025 Microsoft Fabric Influencers Spotlight
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-09-30 14:00:00 +00:00
 tags:

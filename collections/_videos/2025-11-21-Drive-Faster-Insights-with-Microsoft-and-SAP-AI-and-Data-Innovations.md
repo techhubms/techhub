@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=QfQWsFaY8G8
 title: Drive Faster Insights with Microsoft and SAP AI and Data Innovations
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 17:09:54 +00:00
 tags:

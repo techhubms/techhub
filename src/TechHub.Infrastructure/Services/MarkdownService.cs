@@ -73,7 +73,7 @@ public class MarkdownService : IMarkdownService
             }
 
             // Render markdown to HTML using shared pipeline
-            var html = Markdig.Markdown.ToHtml(markdown, _pipeline);
+            var html = Markdown.ToHtml(markdown, _pipeline);
 
             // Post-process: Add target="_blank" to external links
             html = AddTargetBlankToExternalLinks(html);

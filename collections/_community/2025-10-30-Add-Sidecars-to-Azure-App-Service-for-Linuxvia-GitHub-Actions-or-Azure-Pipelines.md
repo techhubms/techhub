@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/add-sidecars-to-azure-app-service-for-linux-via-github-actions/ba-p/4465419
 title: Add Sidecars to Azure App Service for Linux—via GitHub Actions or Azure Pipelines
 author: TulikaC
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-30 04:08:13 +00:00
 tags:

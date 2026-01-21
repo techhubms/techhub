@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/secure-medallion-architecture-pattern-on-azure-databricks-part-i/ba-p/4459268
 title: Secure Medallion Architecture Pattern on Azure Databricks (Part I)
 author: mscagliola
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-07 06:25:50 +00:00
 tags:

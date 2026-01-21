@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mjtpn1/adf_scale_up_and_scale_down_azure_sql_database/
 title: 'Scaling Azure SQL Databases with ADF: Upgrading and Downgrading via API'
 author: Relative_Wear2650
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-07 07:35:40 +00:00
 tags:

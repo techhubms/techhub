@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/common-iac-security-issues-and-how-to-fix-them/
 title: Common IaC Security Issues and How to Fix Them
 author: Durojaye Olusegun
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-08 08:55:21 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-03-copilot-code-review-path-scoped-custom-instruction-file-support
 title: Path-Scoped Custom Instructions for Copilot Code Review
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-03 20:41:26 +00:00
 tags:

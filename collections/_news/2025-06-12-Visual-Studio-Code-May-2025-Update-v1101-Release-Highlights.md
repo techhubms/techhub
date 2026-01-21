@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/updates/v1_101
 title: 'Visual Studio Code May 2025 Update: v1.101 Release Highlights'
 author: Visual Studio Code Team
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-06-12 17:00:00 +00:00
 tags:

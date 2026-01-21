@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=JilqJR1aZLs
 title: 'VS Code 2025: Year in Review with Burke Holland & Pierce Boggan'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-12-23 08:00:28 +00:00
 tags:

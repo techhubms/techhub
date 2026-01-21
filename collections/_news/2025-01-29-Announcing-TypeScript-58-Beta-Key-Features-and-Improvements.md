@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-beta/
 title: 'Announcing TypeScript 5.8 Beta: Key Features and Improvements'
 author: Daniel Rosenwasser
-viewing_mode: external
 feed_name: Microsoft TypeScript Blog
 date: 2025-01-29 18:51:38 +00:00
 tags:

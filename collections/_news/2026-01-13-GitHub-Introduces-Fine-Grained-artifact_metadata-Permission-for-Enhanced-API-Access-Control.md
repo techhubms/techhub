@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2026-01-13-new-fine-grained-permission-for-artifact-metadata-is-now-generally-available
 title: GitHub Introduces Fine-Grained artifact_metadata Permission for Enhanced API Access Control
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2026-01-13 13:30:02 +00:00
 tags:

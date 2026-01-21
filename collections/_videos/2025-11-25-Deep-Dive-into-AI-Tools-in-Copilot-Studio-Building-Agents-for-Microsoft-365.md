@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=BLQ8XZ5PXF4
 title: 'Deep Dive into AI Tools in Copilot Studio: Building Agents for Microsoft 365'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 15:48:25 +00:00
 tags:

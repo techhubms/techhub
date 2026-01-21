@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/sql-server/blog/2025/10/20/innovation-spotlight-how-3-customers-are-driving-change-with-migration-to-azure-sql/
 title: Driving Change with Migration to Azure SQL Managed Instance
 author: Debbi Lyons
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-10-20 16:00:00 +00:00
 tags:

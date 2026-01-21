@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=S6zKiJSwgjE
 title: 'Armchair Architects: Defining AI Agents and Their Core Traits'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-04 08:00:39 +00:00
 tags:

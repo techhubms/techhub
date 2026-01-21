@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/azure-sdk/introducing-the-azure-mcp-server/
 title: 'Introducing the Azure MCP Server: Empowering AI Agents with Azure Services'
 author: Rohit Ganguly
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-04-17 19:59:42 +00:00
 tags:

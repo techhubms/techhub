@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/join-us-at-azure-dev-summit-2025
 title: 'Join us at Azure Dev Summit 2025: Explore AI, .NET, and Cloud Innovation in Lisbon'
 author: Mike Hulme
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-07-31 18:49:52 +00:00
 tags:

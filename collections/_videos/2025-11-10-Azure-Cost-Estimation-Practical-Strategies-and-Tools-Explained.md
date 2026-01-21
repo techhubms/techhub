@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=36bbMNatZHI
 title: 'Azure Cost Estimation: Practical Strategies and Tools Explained'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-10 18:23:11 +00:00
 tags:

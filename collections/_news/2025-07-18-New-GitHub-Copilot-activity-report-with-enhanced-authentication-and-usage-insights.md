@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-18-new-github-copilot-activity-report-with-enhanced-authentication-and-usage-insights
 title: New GitHub Copilot activity report with enhanced authentication and usage insights
 author: Allison
 feed_name: The GitHub Blog
 date: 2025-07-18 19:50:29 +00:00
-viewing_mode: external
 tags:
 - Activity Report
 - Administrators

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/devops/comments/1mfq8ri/long_running_celery_tasks_with_zero_downtime/
 title: Long Running Celery Tasks with Zero Downtime Updates
 author: Lazy_Economy_6851
-viewing_mode: external
 feed_name: Reddit DevOps
 date: 2025-08-02 13:13:29 +00:00
 tags:

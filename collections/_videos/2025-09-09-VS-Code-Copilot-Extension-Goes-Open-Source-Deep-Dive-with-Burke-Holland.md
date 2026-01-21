@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=GfVnJO8fwwk
 title: 'VS Code Copilot Extension Goes Open Source: Deep Dive with Burke Holland'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-09 13:00:35 +00:00
 tags:

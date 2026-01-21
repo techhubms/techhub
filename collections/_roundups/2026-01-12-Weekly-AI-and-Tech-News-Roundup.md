@@ -1,7 +1,6 @@
-﻿---
+---
 title: Agentic AI, GitHub Copilot Updates, Azure Platform Features, and Improving Secure Cloud Workflows
 author: Tech Hub Team
-viewing_mode: internal
 date: 2026-01-12 09:00:00 +00:00
 tags:
 - .NET

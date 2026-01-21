@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/new-portal-experience-for-feature-management/ba-p/4467748
 title: Scenario-Based Feature Flag Management in Azure App Configuration Portal
 author: nuzhat-minhaz
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 22:42:56 +00:00
 tags:

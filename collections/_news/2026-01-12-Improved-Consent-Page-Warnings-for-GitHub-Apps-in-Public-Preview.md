@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2026-01-12-selectively-showing-act-on-your-behalf-warning-for-github-apps-is-in-public-preview
 title: Improved Consent Page Warnings for GitHub Apps in Public Preview
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2026-01-12 22:16:06 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mfyig0/spotifylikebutton/
 title: 'SpotifyLikeButton: Global Hotkey Utility to Like/Unlike Songs on Spotify'
 author: BuildBazaar
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-02 19:05:44 +00:00
 tags:

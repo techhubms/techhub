@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/find-the-alerts-you-didn-t-know-you-were-missing-with-azure-sre/ba-p/4483494
 title: Identifying Missed Alerts in Azure Kubernetes Deployments with SRE Agent
 author: dchelupati
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-06 17:39:38 +00:00
 tags:

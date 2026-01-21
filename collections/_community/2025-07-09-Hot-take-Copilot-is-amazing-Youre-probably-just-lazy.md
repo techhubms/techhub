@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1lvt549/hot_take_copilot_is_amazing_youre_probably_just/
 title: Hot take - Copilot is amazing! You're probably just lazy.
 author: shifty303
 feed_name: Reddit Github Copilot
 date: 2025-07-09 20:18:19 +00:00
-viewing_mode: external
 tags:
 - .NET
 - Angular

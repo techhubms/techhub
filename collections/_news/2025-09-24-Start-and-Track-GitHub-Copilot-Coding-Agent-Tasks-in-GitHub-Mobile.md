@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-24-start-and-track-copilot-coding-agent-tasks-in-github-mobile
 title: Start and Track GitHub Copilot Coding Agent Tasks in GitHub Mobile
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-24 16:16:48 +00:00
 tags:

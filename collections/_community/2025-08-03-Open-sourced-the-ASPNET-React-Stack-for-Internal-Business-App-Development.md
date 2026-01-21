@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mgk8cw/opensourced_the_aspnet_react_stack_we_use_to/
 title: Open-sourced the ASP.NET + React Stack for Internal Business App Development
 author: blabmight
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-03 14:10:53 +00:00
 tags:

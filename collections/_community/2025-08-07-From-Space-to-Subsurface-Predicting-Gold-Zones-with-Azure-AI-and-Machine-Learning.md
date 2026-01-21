@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/ai-machine-learning/from-space-to-subsurface-using-azure-ai-to-predict-gold-rich/m-p/4441134#M258
 title: 'From Space to Subsurface: Predicting Gold Zones with Azure AI and Machine Learning'
 author: MeysamRouhnavaz
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-07 15:26:36 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/hush-security-emerges-to-eliminate-need-for-application-secrets/?utm_source=rss&utm_medium=rss&utm_campaign=hush-security-emerges-to-eliminate-need-for-application-secrets
 title: Hush Security Unveils Platform to Eliminate Application Secrets
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-10 11:27:59 +00:00
 tags:

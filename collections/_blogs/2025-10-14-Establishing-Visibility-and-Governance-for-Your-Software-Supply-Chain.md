@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/establishing-visibility-and-governance-for-your-software-supply-chain/
 title: Establishing Visibility and Governance for Your Software Supply Chain
 author: Parth Patel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-14 12:27:14 +00:00
 tags:

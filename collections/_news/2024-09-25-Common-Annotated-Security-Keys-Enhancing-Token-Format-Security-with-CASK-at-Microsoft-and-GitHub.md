@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/engineering-at-microsoft/common-annotated-security-keys/
 title: 'Common Annotated Security Keys: Enhancing Token Format Security with CASK at Microsoft and GitHub'
 author: Michael C. Fanning
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2024-09-25 18:50:15 +00:00
 tags:

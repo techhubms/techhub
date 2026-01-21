@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/write-unit-tests-without-the-guesswork.html
 title: Write Unit Tests Without the Guesswork
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-04-18 00:00:00 +00:00
 tags:

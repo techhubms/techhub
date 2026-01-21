@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/streamline-cloud-spend-with-azure-reserved-vm-instances/ba-p/4464773
 title: Streamline Cloud Spend with Azure Reserved VM Instances
 author: kyleikeda
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-29 17:26:23 +00:00
 tags:

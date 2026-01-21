@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=WBPFjYLIhsA
 title: Implementing Vector Search in Your Application with SQL Server 2025
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-27 15:57:28 +00:00
 tags:

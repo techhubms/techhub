@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=4yjmGvJzYdY
 title: 'Advanced MCP: Secure, Scalable, and Multi-Modal AI Agents'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Build 2025 YouTube
 date: 2025-07-28 16:00:13 +00:00
 tags:

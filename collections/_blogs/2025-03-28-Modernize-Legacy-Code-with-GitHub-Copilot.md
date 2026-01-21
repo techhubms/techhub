@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/modernize-legacy-code-with-github-copilot.html
 title: Modernize Legacy Code with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-03-28 00:00:00 +00:00
 tags:

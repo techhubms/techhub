@@ -102,13 +102,15 @@ Minimal getting started guide. **Read LAST** for general orientation.
 
 **Functional Documentation** (in `docs/` - this directory):
 
-- [filtering-system.md](filtering-system.md) - How filtering works
-- [content-management.md](content-management.md) - Content workflows
+- [content-management.md](content-management.md) - Content workflows and RSS processing
 - [api-specification.md](api-specification.md) - REST API contracts
+- [rss-feeds.md](rss-feeds.md) - RSS feed system and available feeds
+- [toc-component.md](toc-component.md) - Table of contents component architecture
+- `filtering-system.md` - **TO BE CREATED** - Tag and date filtering logic (see specs/001-filtering-system)
 
 **Content Guidelines** (in `collections/`):
 
-- [markdown-guidelines.md](../collections/markdown-guidelines.md) - Markdown formatting
+- [AGENTS.md](../collections/AGENTS.md#frontmatter-schema) - Content management with frontmatter schema
 - [writing-style-guidelines.md](../collections/writing-style-guidelines.md) - Writing standards
 
 **Purpose**: Framework-agnostic descriptions of system behavior and content standards.
@@ -129,7 +131,7 @@ These files are framework-agnostic and describe system behavior, not implementat
 
 - Development patterns → Domain-specific AGENTS.md files
 - Repository-wide standards → Root AGENTS.md
-- Writing/quality standards → `collections/markdown-guidelines.md`, `collections/writing-style-guidelines.md`
+- Writing/quality standards → `collections/writing-style-guidelines.md`
 - Terminology/architecture → Root `AGENTS.md` (Site Terminology and Repository Organization sections)
 
 **Rationale**: Only files that explain system functionality (not development, not writing, not architecture) remain in docs/.
@@ -153,8 +155,7 @@ These files are framework-agnostic and describe system behavior, not implementat
 
 **Content Writing** (in `collections/`):
 
-- **[`collections/AGENTS.md`](../collections/AGENTS.md)** - Content management overview and requirements
-- **[`collections/markdown-guidelines.md`](../collections/markdown-guidelines.md)** - Markdown formatting standards
+- **[`collections/AGENTS.md`](../collections/AGENTS.md)** - Content management overview and frontmatter schema
 - **[`collections/writing-style-guidelines.md`](../collections/writing-style-guidelines.md)** - Writing tone and style standards
 
 ## Content Placement Hierarchy
@@ -230,7 +231,6 @@ When adding documentation, place it in the most specific appropriate location:
 - **API endpoint patterns** → `src/TechHub.Api/AGENTS.md` (domain-specific)
 - **PowerShell script patterns** → `scripts/AGENTS.md` (domain-specific)
 - **Testing patterns** → `tests/AGENTS.md` and test subdirectory AGENTS.md files
-- **Markdown formatting** → `collections/markdown-guidelines.md` (content writing)
 - **Writing style** → `collections/writing-style-guidelines.md` (content writing)
 
 #### ❌ **Incorrect Placements**
@@ -238,12 +238,12 @@ When adding documentation, place it in the most specific appropriate location:
 - **Terminology/concepts** → `docs/` (belongs in root `AGENTS.md`)
 - **Architecture overview** → `docs/` (belongs in root `AGENTS.md`)
 - **.NET-specific patterns** → `docs/` (belongs in root `AGENTS.md` .NET sections)
-- **Writing standards** → `docs/` (belongs in `collections/markdown-guidelines.md` or `collections/writing-style-guidelines.md`)
+- **Writing standards** → `docs/` (belongs in `collections/writing-style-guidelines.md`)
 - **Code examples** → `docs/` (belongs in AGENTS.md files)
 - **Development how-tos** → `docs/` (belongs in AGENTS.md files)
 - **API implementation code** → `docs/` (belongs in `src/TechHub.Api/AGENTS.md`)
 - **Domain-specific patterns** → Root AGENTS.md (belongs in domain AGENTS.md files)
-- **Content formatting** → `docs/` (belongs in `collections/markdown-guidelines.md`)
+- **Content formatting** → `docs/` (use `npx markdownlint-cli2 --fix` for automated fixes)
 
 ## When to Update Documentation Types
 
@@ -325,7 +325,8 @@ Functional documentation describes WHAT the system does (behavior, contracts, ru
 **For content files** (news, blogs, videos, community, roundups in `collections/`):
 
 - Follow [../collections/writing-style-guidelines.md](../collections/writing-style-guidelines.md) for tone, voice, and language standards
-- Follow [../collections/markdown-guidelines.md](../collections/markdown-guidelines.md) for markdown formatting and structure
+- Follow [../collections/AGENTS.md](../collections/AGENTS.md#frontmatter-schema) for frontmatter structure
+- Use `npx markdownlint-cli2 --fix <file-path>` to fix markdown formatting issues
 
 **For documentation files** (in `docs/`):
 

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://roadtoalm.com/2025/07/11/your-new-rubber-duck-is-an-ai/
 title: Your New Rubber Duck is an AI
 author: Rene van Osnabrugge
-viewing_mode: external
 feed_name: René van Osnabrugge's Blog
 date: 2025-07-11 07:29:51 +00:00
 tags:

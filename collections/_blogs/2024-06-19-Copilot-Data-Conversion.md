@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://sswart.github.io/post/copilot-data-conversion/
 title: Copilot Data Conversion
 author: Jesse Swart Coding Blog
-viewing_mode: external
 feed_name: Jesse Swart's Blog
 date: 2024-06-19 11:47:56 +00:00
 tags:

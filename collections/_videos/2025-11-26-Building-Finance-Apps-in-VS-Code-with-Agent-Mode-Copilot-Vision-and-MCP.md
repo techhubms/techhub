@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=5NxGqnTazR8
 title: Building Finance Apps in VS Code with Agent Mode, Copilot Vision, and MCP
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-11-26 15:00:12 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/foundry-local-meets-more-silicon/
 title: 'Foundry Local Meets More Silicon: Expanded AI Runtime and NPU Support'
 author: Meng Tang
-viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
 date: 2025-09-23 19:01:15 +00:00
 tags:

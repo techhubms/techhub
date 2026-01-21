@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/guide-your-ai-with-copilot-instructions-md.html
 title: Guide Your AI with copilot-instructions.md
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-09-26 00:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/what-s-new-in-azure-local-cloud-infrastructure-for-distributed/ba-p/4469773
 title: 'What’s New in Azure Local: Cloud Infrastructure for Distributed Locations Managed by Azure Arc'
 author: meenagowdar
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:05:17 +00:00
 tags:

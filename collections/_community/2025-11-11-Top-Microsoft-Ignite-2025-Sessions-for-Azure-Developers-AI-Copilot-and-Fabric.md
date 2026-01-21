@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-events/build-your-ignite-schedule-top-sessions-for-developers/ba-p/4469064
 title: 'Top Microsoft Ignite 2025 Sessions for Azure Developers: AI, Copilot, and Fabric'
 author: GalimahB
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-11 21:32:57 +00:00
 tags:

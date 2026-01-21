@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-communication-services/building-an-ai-receptionist-a-hands-on-demo-with-azure/ba-p/4442959
 title: 'Building an AI Receptionist: Hands-On Demo with Azure Communication Services and OpenAI'
 author: seankeegan
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-13 16:35:46 +00:00
 tags:

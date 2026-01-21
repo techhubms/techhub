@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-23-pick-the-repository-and-base-branch-when-assigning-issues-to-copilot
 title: 'Enhanced Copilot Issue Assignment: Pick Repository and Base Branch'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-24 09:30:06 +00:00
 tags:

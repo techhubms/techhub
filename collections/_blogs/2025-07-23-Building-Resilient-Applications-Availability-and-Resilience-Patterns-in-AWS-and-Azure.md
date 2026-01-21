@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/building-resilient-applications-availability-resilience-patterns-in-aws-and-azure/
 title: 'Building Resilient Applications: Availability & Resilience Patterns in AWS and Azure'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-07-23 11:04:36 +00:00
 tags:

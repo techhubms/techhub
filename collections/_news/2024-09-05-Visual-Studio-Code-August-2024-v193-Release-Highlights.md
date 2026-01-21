@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/updates/v1_93
 title: Visual Studio Code August 2024 (v1.93) Release Highlights
 author: Visual Studio Code Team
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2024-09-05 17:00:00 +00:00
 tags:

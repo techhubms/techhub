@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=kCYxdboNZbA
 title: 'Azure Infrastructure for Cloud Native Solutions: Enterprise-Grade Design Patterns'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 17:22:14 +00:00
 tags:

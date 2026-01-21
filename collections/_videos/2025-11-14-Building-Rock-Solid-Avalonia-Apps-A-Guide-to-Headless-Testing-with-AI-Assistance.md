@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=0Z1plDp_rvI
 title: 'Building Rock-Solid Avalonia Apps: A Guide to Headless Testing with AI Assistance'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 06:30:06 +00:00
 tags:

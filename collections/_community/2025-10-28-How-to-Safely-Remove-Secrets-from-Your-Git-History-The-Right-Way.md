@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/how-to-safely-remove-secrets-from-your-git-history-the-right-way/ba-p/4464722
 title: How to Safely Remove Secrets from Your Git History (The Right Way)
 author: Sakshi_Gupta22
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-28 11:05:12 +00:00
 tags:

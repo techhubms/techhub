@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=HhtEAfo3cb4
 title: Accelerate Data and AI Transformation with Azure Databricks
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 08:32:26 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/enhanced-security-is-here-with-the-new-trust-publishing-on-nuget-org/
 title: New Trusted Publishing Enhances Security on NuGet.org
 author: Evgeny Tvorun, Sean
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-09-22 15:40:00 +00:00
 tags:

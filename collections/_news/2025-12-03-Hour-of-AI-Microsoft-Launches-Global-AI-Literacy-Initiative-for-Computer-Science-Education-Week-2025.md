@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/education/blog/2025/12/unlock-ai-learning-with-hour-of-ai-for-computer-science-education-week/
 title: 'Hour of AI: Microsoft Launches Global AI Literacy Initiative for Computer Science Education Week 2025'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-03 15:06:57 +00:00
 tags:

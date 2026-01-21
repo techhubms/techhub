@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=pABc7L9hWjU
 title: Get Data into Fabric Eventhouse with No-Code Ingestion Wizard
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-07-31 18:16:15 +00:00
 tags:

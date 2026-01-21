@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/a-comprehensive-guide-to-getting-started-with-github-copilot-for-end-users/
 title: A Comprehensive Guide to Getting Started with GitHub Copilot
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-03 08:24:29 +00:00
 tags:

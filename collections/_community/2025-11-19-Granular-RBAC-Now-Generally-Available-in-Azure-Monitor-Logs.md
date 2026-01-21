@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/general-availability-granular-rbac-in-azure-monitor-logs/ba-p/4471299
 title: Granular RBAC Now Generally Available in Azure Monitor Logs
 author: Ron Frenkel
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-19 09:55:04 +00:00
 tags:

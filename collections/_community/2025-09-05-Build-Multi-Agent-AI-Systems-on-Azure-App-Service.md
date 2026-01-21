@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-multi-agent-ai-systems-on-azure-app-service/ba-p/4451373
 title: Build Multi-Agent AI Systems on Azure App Service
 author: jordanselig
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-05 16:37:30 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/ENFNweRg8SU
 title: "GitHub's Remote MCP Update: General Availability and Key Integrations"
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-09-10 14:00:32 +00:00
 tags:

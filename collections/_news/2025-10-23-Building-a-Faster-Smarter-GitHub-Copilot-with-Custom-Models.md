@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/the-road-to-better-completions-building-a-faster-smarter-github-copilot-with-a-new-custom-model/
 title: Building a Faster, Smarter GitHub Copilot with Custom Models
 author: Shengyu Fu
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-23 18:31:12 +00:00
 tags:

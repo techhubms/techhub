@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/understanding-windows-11-security-features-a-shield-for-your-digital-life/
 title: 'Windows 11 Security Features: Protecting Your PC and Data'
 author: John Edward
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-22 08:14:41 +00:00
 tags:

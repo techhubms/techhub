@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/survey-most-it-teams-not-prepared-to-manage-ai-workloads/?utm_source=rss&utm_medium=rss&utm_campaign=survey-most-it-teams-not-prepared-to-manage-ai-workloads
 title: Survey Reveals IT Teams Struggle to Scale AI Workloads Due to Automation Gaps
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-09 13:00:22 +00:00
 tags:

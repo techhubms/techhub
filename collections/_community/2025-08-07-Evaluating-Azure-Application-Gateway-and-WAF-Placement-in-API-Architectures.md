@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mjvyr1/application_gateway_thoughts/
 title: Evaluating Azure Application Gateway and WAF Placement in API Architectures
 author: TheCitrixGuy
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-07 10:00:00 +00:00
 tags:

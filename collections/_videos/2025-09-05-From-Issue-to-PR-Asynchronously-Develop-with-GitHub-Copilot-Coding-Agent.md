@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=jq7Ls6T0LYM
 title: 'From Issue to PR: Asynchronously Develop with GitHub Copilot Coding Agent'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-05 17:29:28 +00:00
 tags:

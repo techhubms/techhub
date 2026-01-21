@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/04/video-windows-server-app-control-and-azure-arc/
 title: Enhancing Windows Server Security with App Control and Azure Arc Integration
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-04-22 13:50:08 +00:00
 tags:

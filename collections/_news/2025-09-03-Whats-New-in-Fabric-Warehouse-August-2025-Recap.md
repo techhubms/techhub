@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-august-2025/
 title: 'What’s New in Fabric Warehouse: August 2025 Recap'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-09-03 10:30:00 +00:00
 tags:

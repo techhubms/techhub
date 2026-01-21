@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=FcAi-kqo3ps
 title: 'Taking .NET out of .NET Aspire: Working with Non-.NET Applications'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 03:00:06 +00:00
 tags:

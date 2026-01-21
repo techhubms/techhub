@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/oLF1Z8DcqaA
 title: GitHub Copilot Integration in .NET Aspire 9.3 Dashboard
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-21 20:04:17 +00:00
 tags:

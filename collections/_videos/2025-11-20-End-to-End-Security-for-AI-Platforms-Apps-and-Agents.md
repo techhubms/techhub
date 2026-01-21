@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=R3zFGy8hluE
 title: End-to-End Security for AI Platforms, Apps, and Agents
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 14:35:23 +00:00
 tags:

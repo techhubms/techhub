@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/beyond-basics-practical-scenarios-with-azure-storage-actions/ba-p/4447151
 title: 'Beyond Basics: Practical Scenarios with Azure Storage Actions'
 author: ShashankKumarShankar
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-17 17:00:29 +00:00
 tags:

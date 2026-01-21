@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.jesseswart.nl/post/copilot-data-conversion
 title: Converting data into a different format
 author: Jesse Swart
-viewing_mode: external
 tags:
 - Data Conversion
 - Markdown

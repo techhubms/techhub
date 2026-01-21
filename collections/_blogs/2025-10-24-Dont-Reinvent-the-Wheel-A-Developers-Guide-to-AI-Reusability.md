@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/dont-reinvent-the-wheel-a-developers-guide-to-ai-reusability/
 title: 'Don’t Reinvent the Wheel: A Developer’s Guide to AI Reusability'
 author: Daniel Helfand
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-24 08:02:18 +00:00
 tags:

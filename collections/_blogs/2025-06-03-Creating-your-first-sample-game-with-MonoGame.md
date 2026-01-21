@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/creating-your-first-sample-game-with-monogame/
 title: Creating your first sample game with MonoGame
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2025-06-03 09:00:00 +00:00
 tags:

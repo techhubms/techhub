@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-sql-database-in-fabric-is-now-generally-available-ga/
 title: SQL Database in Microsoft Fabric Now Generally Available
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-18 08:00:00 +00:00
 tags:

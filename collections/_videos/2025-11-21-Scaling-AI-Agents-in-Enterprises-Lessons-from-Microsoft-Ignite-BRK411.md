@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Ly-QiRuq7cg
 title: 'Scaling AI Agents in Enterprises: Lessons from Microsoft Ignite BRK411'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 11:45:08 +00:00
 tags:

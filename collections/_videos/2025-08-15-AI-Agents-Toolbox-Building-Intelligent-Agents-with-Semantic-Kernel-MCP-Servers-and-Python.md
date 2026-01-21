@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=yDy6Y4h-RxI
 title: "AI Agent's Toolbox: Building Intelligent Agents with Semantic Kernel, MCP Servers, and Python"
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-15 16:13:20 +00:00
 tags:

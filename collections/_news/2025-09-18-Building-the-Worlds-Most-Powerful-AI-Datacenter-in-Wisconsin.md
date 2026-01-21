@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/09/18/made-in-wisconsin-the-worlds-most-powerful-ai-datacenter/
 title: Building the World's Most Powerful AI Datacenter in Wisconsin
 author: sbaynes
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-09-18 16:31:52 +00:00
 tags:

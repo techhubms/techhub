@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=aAZZD_sXNg8
 title: 'Blazor Community Standup: Planning the Future of Blazor in .NET 11'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2026-01-06 18:30:09 +00:00
 tags:

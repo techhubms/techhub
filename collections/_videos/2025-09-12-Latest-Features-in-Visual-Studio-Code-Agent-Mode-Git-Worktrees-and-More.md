@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=9qAkd2mGYCo
 title: 'Latest Features in Visual Studio Code: Agent Mode, Git Worktrees, and More'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-09-12 16:22:57 +00:00
 tags:

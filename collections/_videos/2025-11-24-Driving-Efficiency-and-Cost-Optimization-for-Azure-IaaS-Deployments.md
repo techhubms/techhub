@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=FJIWbOczakQ
 title: Driving Efficiency and Cost Optimization for Azure IaaS Deployments
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 07:24:25 +00:00
 tags:

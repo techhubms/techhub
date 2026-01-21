@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=jV570EFcC9o
 title: 'The Human Side of Octoverse 2025: Insights on Open Source, AI, and Collaboration'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-12-08 17:12:15 +00:00
 tags:

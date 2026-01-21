@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://r-vm.com/new-website-tech-hub-ms.html
 title: 'Announcing tech.hub.ms: Curated Microsoft Tech Content Platform'
 author: Reinier van Maanen
-viewing_mode: external
 feed_name: Reinier van Maanen's blog
 date: 2025-08-19 00:00:00 +00:00
 tags:

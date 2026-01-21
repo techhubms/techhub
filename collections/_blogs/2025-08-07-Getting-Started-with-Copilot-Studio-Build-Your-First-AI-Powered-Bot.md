@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/getting-started-with-copilot-studio-build-your-first-ai-powered-bot/
 title: 'Getting Started with Copilot Studio: Build Your First AI-Powered Bot'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-07 06:43:47 +00:00
 tags:

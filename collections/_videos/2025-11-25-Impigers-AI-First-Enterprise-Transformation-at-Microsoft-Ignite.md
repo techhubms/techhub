@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=o63_MuktA78
 title: Impiger’s AI-First Enterprise Transformation at Microsoft Ignite
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 12:02:39 +00:00
 tags:

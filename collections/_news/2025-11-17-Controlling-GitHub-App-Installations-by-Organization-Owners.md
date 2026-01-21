@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-17-block-repository-administrators-from-installing-github-apps-on-their-own-now-in-public-preview
 title: Controlling GitHub App Installations by Organization Owners
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-17 17:24:55 +00:00
 tags:

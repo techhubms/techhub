@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-assisted-load-test-authoring-in-azure-load-testing/ba-p/4480652
 title: AI-assisted load test authoring in Azure Load Testing
 author: Nikita_Nallamothu
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-23 21:50:11 +00:00
 tags:

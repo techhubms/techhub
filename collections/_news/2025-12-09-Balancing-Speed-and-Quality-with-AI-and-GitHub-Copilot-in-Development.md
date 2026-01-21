@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/generative-ai/speed-is-nothing-without-control-how-to-keep-quality-high-in-the-ai-era/
 title: Balancing Speed and Quality with AI and GitHub Copilot in Development
 author: Gwen Davis
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-09 17:00:00 +00:00
 tags:

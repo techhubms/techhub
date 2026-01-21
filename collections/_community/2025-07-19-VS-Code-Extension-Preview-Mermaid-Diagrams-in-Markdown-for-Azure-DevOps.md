@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m42lmi/vs_code_extension_preview_mermaid_diagrams_in/
 title: 'VS Code Extension: Preview Mermaid Diagrams in Markdown for Azure DevOps'
 author: mavsankar
-viewing_mode: external
 feed_name: Reddit Azure DevOps
 date: 2025-07-19 17:58:00 +00:00
 tags:

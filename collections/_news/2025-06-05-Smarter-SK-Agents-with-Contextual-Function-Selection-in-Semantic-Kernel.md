@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/semantic-kernel/smarter-sk-agents-with-contextual-function-selection/
 title: Smarter SK Agents with Contextual Function Selection in Semantic Kernel
 author: Sergey Menshykh
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-06-05 09:28:47 +00:00
 tags:

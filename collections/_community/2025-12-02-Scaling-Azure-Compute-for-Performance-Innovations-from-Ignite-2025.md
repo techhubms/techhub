@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/scaling-azure-compute-for-performance/ba-p/4474662
 title: 'Scaling Azure Compute for Performance: Innovations from Ignite 2025'
 author: DanaCozmei
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-02 21:20:46 +00:00
 tags:

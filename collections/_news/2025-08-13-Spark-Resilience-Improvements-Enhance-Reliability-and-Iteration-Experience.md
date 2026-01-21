@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-13-spark-resilience-improvements
 title: Spark Resilience Improvements Enhance Reliability and Iteration Experience
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-13 20:53:55 +00:00
 tags:

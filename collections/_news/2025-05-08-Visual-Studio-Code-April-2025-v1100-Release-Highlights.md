@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/updates/v1_100
 title: Visual Studio Code April 2025 (v1.100) Release Highlights
 author: Visual Studio Code Team
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-05-08 17:00:00 +00:00
 tags:

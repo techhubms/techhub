@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=WgFGGS_yKmE
 title: Introducing the new Azure Copilot for the new era of Intelligent Agents | BRK145
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 11:16:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-general-availability-of-azure-local-on-microsoft/ba-p/4458013
 title: Azure Local Now Generally Available for Government Cloud Customers
 author: meenagowdar
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-30 19:12:33 +00:00
 tags:

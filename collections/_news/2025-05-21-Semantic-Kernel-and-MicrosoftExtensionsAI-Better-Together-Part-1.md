@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-and-microsoft-extensions-ai-better-together-part-1/
 title: Semantic Kernel and Microsoft.Extensions.AI - Better Together, Part 1
 author: Roger Barreto
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-05-21 14:47:05 +00:00
 tags:

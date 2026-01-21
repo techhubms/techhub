@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-06-spark-improvements-enhanced-reliability-seed-data-and-performance-updates
 title: 'Spark Updates: Enhanced Reliability, Seed Data, and Improved Performance'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-06 15:15:39 +00:00
 tags:

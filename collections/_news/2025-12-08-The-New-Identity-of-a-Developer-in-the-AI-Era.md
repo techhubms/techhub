@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/news-insights/octoverse/the-new-identity-of-a-developer-what-changes-and-what-doesnt-in-the-ai-era/
 title: The New Identity of a Developer in the AI Era
 author: Eirini Kalliamvakou
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-08 18:15:17 +00:00
 tags:

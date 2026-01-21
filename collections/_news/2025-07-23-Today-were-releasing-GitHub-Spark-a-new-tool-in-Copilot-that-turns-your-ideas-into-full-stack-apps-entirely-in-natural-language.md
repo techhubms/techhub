@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_today-were-releasing-github-spark-a-new-activity-7353868825320214529-o3C5
 title: Today we're releasing GitHub Spark — a new tool in Copilot that turns your ideas into full-stack apps, entirely in natural language
 author: stclarke
 feed_name: Microsoft News
 date: 2025-07-23 21:14:13 +00:00
-viewing_mode: external
 page: news
 tags:
 - AI Tools

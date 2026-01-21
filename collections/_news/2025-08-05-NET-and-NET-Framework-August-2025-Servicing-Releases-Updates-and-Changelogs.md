@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-august-2025-servicing-updates/
 title: '.NET and .NET Framework August 2025 Servicing Releases: Updates and Changelogs'
 author: Tara Overfield, Victor Israel-Bolarinwa
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-08-05 22:54:56 +00:00
 tags:

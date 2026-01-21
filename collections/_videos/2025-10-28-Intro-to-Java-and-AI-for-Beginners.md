@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=I0yhGsozx8o
 title: Intro to Java and AI for Beginners
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-28 16:00:28 +00:00
 tags:

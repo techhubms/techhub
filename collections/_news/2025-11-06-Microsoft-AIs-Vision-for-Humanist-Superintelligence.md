@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://microsoft.ai/news/towards-humanist-superintelligence/
 title: Microsoft AI’s Vision for Humanist Superintelligence
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-06 14:07:20 +00:00
 tags:

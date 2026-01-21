@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-05-copilot-coding-agent-improved-pull-request-review-experience
 title: 'Copilot Coding Agent: Enhanced Pull Request Review Workflow'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-05 20:05:53 +00:00
 tags:

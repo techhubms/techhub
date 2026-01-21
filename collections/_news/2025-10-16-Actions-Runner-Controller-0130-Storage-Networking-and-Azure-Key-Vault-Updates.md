@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-16-actions-runner-controller-release-0-13-0
 title: 'Actions Runner Controller 0.13.0: Storage, Networking, and Azure Key Vault Updates'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-16 14:01:35 +00:00
 tags:

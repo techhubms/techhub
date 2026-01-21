@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=lYMuKxR5JLY
 title: "Microsoft Entra: What's New in Secure Access on the AI Frontier"
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 16:57:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-public-preview-of-vm-customization-in-azure-disable/ba-p/4462417
 title: 'Public Preview: VM Customization in Azure Enables Disabling Multithreading and Constrained Cores'
 author: eehindero
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-17 21:52:05 +00:00
 tags:

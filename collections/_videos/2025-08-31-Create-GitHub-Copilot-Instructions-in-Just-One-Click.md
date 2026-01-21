@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/wOV0ebsqb88
 title: Create GitHub Copilot Instructions in Just One Click
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-31 14:01:22 +00:00
 tags:

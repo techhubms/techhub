@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=9RwCgcYL-PQ
 title: Smarter AI Agents with Azure Managed Redis
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 15:58:08 +00:00
 tags:

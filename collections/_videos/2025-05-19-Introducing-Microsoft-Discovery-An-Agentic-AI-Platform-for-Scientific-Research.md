@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=k3S4lPbUWng
 title: 'Introducing Microsoft Discovery: An Agentic AI Platform for Scientific Research'
 author: Microsoft Cloud
-viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
 date: 2025-05-19 15:45:06 +00:00
 tags:

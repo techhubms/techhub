@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=MQOaBXwRfYo
 title: 'How AI and TypeScript Are Shaping the Future of Software Development: Insights from GitHub Octoverse 2025'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-13 15:00:42 +00:00
 tags:

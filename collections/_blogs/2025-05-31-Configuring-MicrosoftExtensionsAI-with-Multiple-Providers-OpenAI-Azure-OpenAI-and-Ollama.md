@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://weblog.west-wind.com/posts/2025/May/30/Configuring-MicrosoftAIExtension-with-multiple-providers
 title: 'Configuring Microsoft.Extensions.AI with Multiple Providers: OpenAI, Azure OpenAI, and Ollama'
 author: Rick Strahl
-viewing_mode: external
 feed_name: Rick Strahl's Blog
 date: 2025-05-31 08:56:33 +00:00
 tags:

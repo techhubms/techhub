@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=crHR6sEnTpE
 title: Build AI Agents for Fast, High-Volume Document Automation in Copilot Studio
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-09 07:00:27 +00:00
 tags:

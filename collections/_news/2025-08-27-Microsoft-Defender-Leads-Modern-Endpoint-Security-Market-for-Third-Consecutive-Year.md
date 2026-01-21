@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/08/27/microsoft-ranked-number-one-in-modern-endpoint-security-market-share-third-year-in-a-row/
 title: Microsoft Defender Leads Modern Endpoint Security Market for Third Consecutive Year
 author: Rob Lefferts
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-08-27 15:00:00 +00:00
 tags:

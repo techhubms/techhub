@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/scaling-azure-functions-python-with-orjson/ba-p/4445780
 title: Scaling Azure Functions Python with orjson
 author: eroman
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-24 18:26:31 +00:00
 tags:

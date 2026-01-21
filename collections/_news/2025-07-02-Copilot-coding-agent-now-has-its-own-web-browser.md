@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-02-copilot-coding-agent-now-has-its-own-web-browser
 title: Copilot coding agent now has its own web browser
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-02 18:45:04 +00:00
 tags:

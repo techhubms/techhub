@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/microsoft-foundry-scale-innovation-on-a-modular-interoperable-and-secure-agent-stack/
 title: 'Microsoft Foundry: Empowering Developers with a Modular and Secure AI Agent Platform'
 author: Asha Sharma
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-11-18 16:00:00 +00:00
 tags:

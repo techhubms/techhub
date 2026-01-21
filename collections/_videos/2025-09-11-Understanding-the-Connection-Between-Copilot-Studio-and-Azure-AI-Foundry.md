@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/dz-hOAMAJhE
 title: Understanding the Connection Between Copilot Studio and Azure AI Foundry
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-11 15:35:34 +00:00
 tags:

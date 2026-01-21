@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=4ynkbF7oImM
 title: Top 3 AI Use Cases Shaping Customer Experience
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 14:49:05 +00:00
 tags:

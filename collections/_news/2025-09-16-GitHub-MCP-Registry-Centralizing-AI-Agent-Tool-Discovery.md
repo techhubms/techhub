@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-16-github-mcp-registry-the-fastest-way-to-discover-ai-tools
 title: 'GitHub MCP Registry: Centralizing AI Agent Tool Discovery'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-16 15:55:14 +00:00
 tags:

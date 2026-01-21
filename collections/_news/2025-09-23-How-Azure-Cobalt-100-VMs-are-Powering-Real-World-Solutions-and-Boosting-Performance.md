@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/how-azure-cobalt-100-vms-are-powering-real-world-solutions-delivering-performance-and-efficiency-results/
 title: How Azure Cobalt 100 VMs are Powering Real-World Solutions and Boosting Performance
 author: Omar Khan, Rani Borkar and Arun Kishan
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-09-23 15:00:00 +00:00
 tags:

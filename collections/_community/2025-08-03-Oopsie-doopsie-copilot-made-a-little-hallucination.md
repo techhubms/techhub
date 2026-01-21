@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mg5oty/oopsie_doopsie_copilot_made_a_little_hallucination/
 title: "Oopsie doopsie copilot made a little hallucination \U0001F923"
 author: alexanderriccio
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-03 00:29:28 +00:00
 tags:

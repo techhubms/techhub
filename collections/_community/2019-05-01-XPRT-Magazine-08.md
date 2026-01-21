@@ -1,8 +1,7 @@
-﻿---
+---
 title: XPRT Magazine 08
 date: 2019-05-01 00:00:00 +00:00
 author: Xebia
-viewing_mode: external
 tags:
 - APIs
 - Automation

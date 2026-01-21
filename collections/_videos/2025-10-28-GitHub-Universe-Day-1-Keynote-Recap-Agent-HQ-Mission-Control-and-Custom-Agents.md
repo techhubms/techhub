@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/jH_ub5Trsi4
 title: 'GitHub Universe Day 1 Keynote Recap: Agent HQ, Mission Control, and Custom Agents'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-28 22:06:09 +00:00
 tags:

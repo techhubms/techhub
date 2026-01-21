@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-9/
 title: 'Announcing TypeScript 5.9: New Features, Improvements, and What’s Next'
 author: Daniel Rosenwasser
-viewing_mode: external
 feed_name: Microsoft TypeScript Blog
 date: 2025-08-01 16:19:25 +00:00
 tags:

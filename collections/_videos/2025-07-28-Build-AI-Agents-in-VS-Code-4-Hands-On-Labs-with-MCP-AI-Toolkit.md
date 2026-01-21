@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=r34Csn3rkeQ
 title: 'Build AI Agents in VS Code: 4 Hands-On Labs with MCP + AI Toolkit'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Build 2025 YouTube
 date: 2025-07-28 16:01:31 +00:00
 tags:

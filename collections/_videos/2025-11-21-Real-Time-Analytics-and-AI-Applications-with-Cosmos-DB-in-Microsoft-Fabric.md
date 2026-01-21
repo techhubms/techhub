@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=UKJE1eJYtkA
 title: Real-Time Analytics and AI Applications with Cosmos DB in Microsoft Fabric
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 16:45:53 +00:00
 tags:

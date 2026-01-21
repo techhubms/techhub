@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/on-the-issues/2026/01/08/global-ai-adoption-in-2025/
 title: 'Global AI Adoption in 2025: Regional Gaps and Diffusion Metrics'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2026-01-08 15:29:40 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=PRGo-RH-sL4
 title: Optimize Azure Costs with Reserved VM Instances
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-28 07:00:24 +00:00
 tags:

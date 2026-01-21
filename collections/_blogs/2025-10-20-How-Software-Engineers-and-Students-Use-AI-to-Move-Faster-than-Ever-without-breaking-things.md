@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/how-software-engineers-and-students-use-ai-to-move-faster-than-ever-without-breaking-things/
 title: How Software Engineers and Students Use AI to Move Faster than Ever (without breaking things)
 author: Vivek Vaidya
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-20 11:40:15 +00:00
 tags:

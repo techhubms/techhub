@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=F5zqRV7gEag
 title: Context Engineering for AI Agents
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-04 16:00:23 +00:00
 tags:

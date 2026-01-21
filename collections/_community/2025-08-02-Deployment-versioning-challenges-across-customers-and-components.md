@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/devops/comments/1mfy3o0/deployment_versioning_problems/
 title: Deployment versioning challenges across customers and components
 author: wesleyada
-viewing_mode: external
 feed_name: Reddit DevOps
 date: 2025-08-02 18:48:29 +00:00
 tags:

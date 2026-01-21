@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=noVdaj7sEWA
 title: How Copilot Spaces gives your AI the right project context
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-18 15:01:39 +00:00
 tags:

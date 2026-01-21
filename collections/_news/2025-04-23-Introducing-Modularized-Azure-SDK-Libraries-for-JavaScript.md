@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-modularized-libraries-for-javascript/
 title: Introducing Modularized Azure SDK Libraries for JavaScript
 author: Qiaoqiao Zhang
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-04-23 16:25:10 +00:00
 tags:

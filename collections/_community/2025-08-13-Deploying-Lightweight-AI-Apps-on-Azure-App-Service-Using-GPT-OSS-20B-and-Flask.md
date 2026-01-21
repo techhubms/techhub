@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-lightweight-ai-apps-on-azure-app-service-with-gpt-oss-20b/ba-p/4442885
 title: Deploying Lightweight AI Apps on Azure App Service Using GPT-OSS-20B and Flask
 author: TulikaC
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-13 13:06:16 +00:00
 tags:

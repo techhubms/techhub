@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Ph-zrJNhl_M
 title: 'Accelerate Secure AI: Microsoft’s Security Advantage for Partners'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 13:33:32 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mf2xll/more_type_union_proposals_adopted_by_the_language/
 title: More type union proposals adopted by the language design team!
 author: DayYam
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-01 17:38:03 +00:00
 tags:

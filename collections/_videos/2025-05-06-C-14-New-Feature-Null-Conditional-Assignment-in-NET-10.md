@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=q0xyeA1xPng
 title: 'C# 14 New Feature: Null-Conditional Assignment in .NET 10'
 author: Learn Microsoft AI
-viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
 date: 2025-05-06 05:27:38 +00:00
 tags:

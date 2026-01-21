@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mhnybo/file_share_that_the_system_user_can_access/
 title: File Share Access for SYSTEM User with PowerShell Across Multiple Devices
 author: LordLoss01
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-04 19:57:43 +00:00
 tags:

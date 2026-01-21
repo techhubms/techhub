@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-june-2025/
 title: 'What’s New in Azure AI Foundry: June 2025 Major Model Releases, Agent Service GA, and Developer Tools'
 author: Nick Brady
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-06-30 15:00:36 +00:00
 tags:

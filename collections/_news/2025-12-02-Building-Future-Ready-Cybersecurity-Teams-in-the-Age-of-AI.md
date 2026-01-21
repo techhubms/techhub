@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/12/02/how-to-build-forward-thinking-cybersecurity-teams-for-tomorrow/
 title: Building Future-Ready Cybersecurity Teams in the Age of AI
 author: Ann Johnson
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-12-02 17:00:00 +00:00
 tags:

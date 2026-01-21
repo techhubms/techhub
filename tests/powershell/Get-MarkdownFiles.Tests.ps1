@@ -52,7 +52,6 @@ _site/
             "docs/AGENTS.md",
             
             # Guidelines files (should be excluded by default)
-            "collections/markdown-guidelines.md",
             "collections/writing-style-guidelines.md",
             
             # Regular docs files
@@ -258,7 +257,7 @@ _site/
     }
     
     Context "Regression Tests" {
-        It "Should exclude collections/AGENTS.md to prevent 'No viewingmode found' error" {
+        It "Should exclude collections/AGENTS.md to prevent errors" {
             # This test specifically validates the bug fix
             $result = @(Get-MarkdownFiles -Root $script:testRoot `
                     -IncludeDirectoryPatterns @('collections/*') `
@@ -269,7 +268,7 @@ _site/
                     $_.FullName -match "collections[\\/]AGENTS\.md$" 
                 })
             
-            $collectionsAgents | Should -BeNullOrEmpty -Because "collections/AGENTS.md must be excluded to prevent viewingmode errors"
+            $collectionsAgents | Should -BeNullOrEmpty -Because "collections/AGENTS.md must be excluded to prevent errors"
         }
     }
 }

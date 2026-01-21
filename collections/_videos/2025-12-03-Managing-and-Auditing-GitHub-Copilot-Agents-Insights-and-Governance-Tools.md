@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=boviC841YWs
 title: 'Managing and Auditing GitHub Copilot Agents: Insights and Governance Tools'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-12-03 15:01:14 +00:00
 tags:

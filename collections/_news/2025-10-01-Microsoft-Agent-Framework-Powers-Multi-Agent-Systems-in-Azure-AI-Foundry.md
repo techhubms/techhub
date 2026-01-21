@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_introducing-microsoft-agent-framework-microsoft-activity-7379202146988318720-WDPf
 title: Microsoft Agent Framework Powers Multi-Agent Systems in Azure AI Foundry
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-01 17:35:44 +00:00
 tags:

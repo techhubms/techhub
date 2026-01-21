@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=fBjk4CQG6Hw
 title: Multi-Cloud Storage Migration with Azure Storage Mover
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-07-07 13:45:44 +00:00
 tags:

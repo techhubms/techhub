@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/5nffupc2peM
 title: 'GPT-5 Now Available in GitHub Copilot: Advanced Features and How to Enable'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-16 14:00:07 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=N3gg-6NYhIs
 title: Reimagine Finance with AI and Agents
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 17:08:37 +00:00
 tags:

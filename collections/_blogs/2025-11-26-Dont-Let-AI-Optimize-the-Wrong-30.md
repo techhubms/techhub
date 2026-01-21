@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://roadtoalm.com/2025/11/26/dont-let-ai-optimize-the-wrong-30/
 title: Don’t Let AI Optimize the Wrong 30%
 author: Rene van Osnabrugge
-viewing_mode: external
 feed_name: René van Osnabrugge's Blog
 date: 2025-11-26 11:01:39 +00:00
 tags:

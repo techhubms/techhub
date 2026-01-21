@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-communication-services/azure-communication-services-is-now-generally-available-in-azure/ba-p/4448034
 title: Azure Communication Services Now Generally Available in Azure Government
 author: hrazi
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-29 16:43:59 +00:00
 tags:

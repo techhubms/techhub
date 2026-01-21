@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-02-claude-sonnet-4-5-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
 title: Claude Sonnet 4.5 Now Available to GitHub Copilot Users in Visual Studio and Other IDEs
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-02 19:20:00 +00:00
 tags:

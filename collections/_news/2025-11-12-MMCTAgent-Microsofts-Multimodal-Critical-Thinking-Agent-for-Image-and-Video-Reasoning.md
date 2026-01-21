@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/research/blog/mmctagent-enabling-multimodal-reasoning-over-large-video-and-image-collections/
 title: 'MMCTAgent: Microsoft’s Multimodal Critical Thinking Agent for Image and Video Reasoning'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-12 16:23:01 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-ensure-seamless-data-recovery-and-deployment-in-microsoft/ba-p/4478395
 title: How to Ensure Seamless Data Recovery and Deployment in Microsoft Azure
 author: ravimodi
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-30 08:00:00 +00:00
 tags:

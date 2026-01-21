@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/on-the-issues/2026/01/14/microsoft-disrupts-cybercrime/
 title: Microsoft Disrupts Global RedVDS Cybercrime-as-a-Service Platform Enabling Massive Fraud
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2026-01-14 15:49:33 +00:00
 tags:

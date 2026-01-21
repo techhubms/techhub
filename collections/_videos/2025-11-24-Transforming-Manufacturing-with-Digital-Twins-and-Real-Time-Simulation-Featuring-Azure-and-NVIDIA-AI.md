@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=vVZvVpS0KMk
 title: Transforming Manufacturing with Digital Twins and Real-Time Simulation Featuring Azure and NVIDIA AI
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 14:31:52 +00:00
 tags:

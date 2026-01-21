@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-native-previews/
 title: 'Announcing TypeScript Native Previews: A Faster, Native Compiler and Toolset'
 author: Daniel Rosenwasser
-viewing_mode: external
 feed_name: Microsoft TypeScript Blog
 date: 2025-05-22 15:04:21 +00:00
 tags:

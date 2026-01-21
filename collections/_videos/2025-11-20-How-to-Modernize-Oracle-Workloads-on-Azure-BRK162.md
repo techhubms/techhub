@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=dTRL3tlaj5g
 title: How to Modernize Oracle Workloads on Azure | BRK162
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 15:46:06 +00:00
 tags:

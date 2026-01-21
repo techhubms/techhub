@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-28-github-copilot-in-visual-studio-august-update
 title: 'August 2025 Update: GitHub Copilot Advancements in Visual Studio 2022'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-28 17:18:55 +00:00
 tags:

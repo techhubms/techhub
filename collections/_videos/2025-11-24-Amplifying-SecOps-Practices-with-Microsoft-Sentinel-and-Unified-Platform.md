@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=DjUkc7jWsQ0
 title: Amplifying SecOps Practices with Microsoft Sentinel and Unified Platform
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 13:48:44 +00:00
 tags:

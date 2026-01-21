@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-17-share-read-only-sparks-with-controlled-data-access
 title: Share Read-Only Sparks with Controlled Data Access
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-17 20:00:28 +00:00
 tags:

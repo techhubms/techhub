@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/explore-text-to-image-dotnet/
 title: Exploring Text-to-Image Capabilities in .NET with Microsoft Extensions for AI
 author: Jeremy Likness
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-09-24 23:30:00 +00:00
 tags:

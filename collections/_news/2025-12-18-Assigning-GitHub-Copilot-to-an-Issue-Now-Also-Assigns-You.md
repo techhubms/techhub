@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-18-assigning-github-copilot-to-an-issue-now-adds-you-as-an-assignee
 title: Assigning GitHub Copilot to an Issue Now Also Assigns You
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-18 17:46:17 +00:00
 tags:

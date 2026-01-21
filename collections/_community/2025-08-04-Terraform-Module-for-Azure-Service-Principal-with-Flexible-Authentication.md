@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mhsqun/service_principal/
 title: Terraform Module for Azure Service Principal with Flexible Authentication
 author: Unlikely-Ad4624
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-04 23:04:18 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/announcing-the-public-preview-of-standardv2-nat-gateway-and/ba-p/4458292
 title: Announcing the Public Preview of Azure StandardV2 NAT Gateway and Public IPs
 author: aimeelittleton
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 17:30:00 +00:00
 tags:

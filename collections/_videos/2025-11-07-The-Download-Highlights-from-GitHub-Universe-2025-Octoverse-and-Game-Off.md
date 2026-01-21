@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=1JxLIxbEzxQ
 title: 'The Download: Highlights from GitHub Universe 2025, Octoverse, and Game Off'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-07 17:54:56 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/transforming-data-migration-using-azure-copilot/ba-p/4476610
 title: Transforming Data Migration Decisions with Azure Copilot's Storage Migration Solutions Advisor
 author: madhurinrao
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-11 18:57:02 +00:00
 tags:

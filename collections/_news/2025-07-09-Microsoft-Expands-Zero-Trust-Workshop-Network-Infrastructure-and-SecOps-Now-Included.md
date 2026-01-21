@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/07/09/microsoft-expands-zero-trust-workshop-to-cover-network-secops-and-more/
 title: 'Microsoft Expands Zero Trust Workshop: Network, Infrastructure, and SecOps Now Included'
 author: Rob Lefferts
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-07-09 16:00:00 +00:00
 tags:

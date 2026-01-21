@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/windows-server-insiders/windows-server-datacenter-azure-edition-preview-build-26461-now/m-p/4442961#M4197
 title: 'Windows Server Datacenter: Azure Edition Preview Build 26461 in Azure'
 author: StaceyCL_RM
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-13 16:41:57 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=xf65vxjNWdk
 title: Using GitHub Copilot for Code Reviews - From VS Code to GitHub.com
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub's Youtube channel
 date: 2025-07-26 14:01:31 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-18-auto-model-selection-for-copilot-in-jetbrains-ides-xcode-and-eclipse-in-public-preview
 title: Auto Model Selection for GitHub Copilot in JetBrains, Xcode, and Eclipse
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-18 17:30:57 +00:00
 tags:

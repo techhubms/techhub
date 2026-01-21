@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/7_MaC7CabkM
 title: AI, Project-Based Learning, and the Future of Tech Careers
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-27 14:00:09 +00:00
 tags:

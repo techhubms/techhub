@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/microsoft-morphs-fusion-developers-to-full-stack-builders/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-morphs-fusion-developers-to-full-stack-builders
 title: Microsoft Morphs Fusion Developers To Full Stack Builders
 author: Adrian Bridgwater
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-18 11:47:55 +00:00
 tags:

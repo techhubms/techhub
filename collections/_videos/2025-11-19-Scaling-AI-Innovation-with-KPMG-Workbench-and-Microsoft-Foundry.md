@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Benn2rBdZwA
 title: Scaling AI Innovation with KPMG Workbench and Microsoft Foundry
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 11:48:33 +00:00
 tags:

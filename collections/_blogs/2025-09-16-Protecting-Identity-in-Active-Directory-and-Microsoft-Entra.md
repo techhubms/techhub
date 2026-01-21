@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/09/protecting-identity-in-active-directory-microsoft-entra/
 title: Protecting Identity in Active Directory & Microsoft Entra
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-09-16 12:29:00 +00:00
 tags:

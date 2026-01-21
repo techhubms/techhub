@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/-LJYU75wwrw
 title: The Future of Web Development with AI Integration
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-21 16:00:01 +00:00
 tags:

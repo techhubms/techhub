@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-9-easier-reflection-with-unsafeaccessortype/
 title: Easier Reflection with [UnsafeAccessorType] in .NET 10
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2025-11-04 10:00:00 +00:00
 tags:

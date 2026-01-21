@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=9HEwtaepw1E
 title: Building a 2D Platformer with Spec Kit, VS Code, and GitHub Copilot
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-10-30 21:51:25 +00:00
 tags:

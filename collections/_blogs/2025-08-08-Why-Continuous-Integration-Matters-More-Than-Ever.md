@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/why-continuous-integration-matters-more-than-ever/?utm_source=rss&utm_medium=rss&utm_campaign=why-continuous-integration-matters-more-than-ever
 title: Why Continuous Integration Matters More Than Ever
 author: Michael Chukwube
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-08 11:02:25 +00:00
 tags:

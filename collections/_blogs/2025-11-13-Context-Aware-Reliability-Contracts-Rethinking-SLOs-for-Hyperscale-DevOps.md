@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/why-traditional-slos-are-failing-at-hyperscale-building-context-aware-reliability-contracts/
 title: 'Context-Aware Reliability Contracts: Rethinking SLOs for Hyperscale DevOps'
 author: Muhammad Yawar Malik
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-11-13 12:01:48 +00:00
 tags:

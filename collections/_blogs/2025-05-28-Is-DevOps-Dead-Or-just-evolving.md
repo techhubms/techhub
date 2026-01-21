@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://roadtoalm.com/2025/05/28/is-devops-dead-or-just-evolving/
 title: Is DevOps Dead? Or Just Evolving?
 author: Rene van Osnabrugge
-viewing_mode: external
 feed_name: René van Osnabrugge's Blog
 date: 2025-05-28 07:48:00 +00:00
 tags:

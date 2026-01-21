@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/blogs/2026/01/15/docfind
 title: 'Building docfind: Fast Client-Side Search for VS Code Docs with Rust, WASM, and Copilot'
 author: João Moreno
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2026-01-15 00:00:00 +00:00
 tags:

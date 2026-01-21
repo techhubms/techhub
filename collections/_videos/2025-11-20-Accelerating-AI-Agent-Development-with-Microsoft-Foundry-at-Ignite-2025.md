@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=hBpbKMEOVEw
 title: Accelerating AI Agent Development with Microsoft Foundry at Ignite 2025
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 14:49:27 +00:00
 tags:

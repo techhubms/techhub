@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-06-24-github-copilot-coding-agent-is-now-available-for-copilot-business-users
 title: GitHub Copilot coding agent is now available for Copilot Business users
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-06-24 20:40:34 +00:00
 tags:

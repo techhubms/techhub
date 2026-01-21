@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/running-an-aspnetcore-app-behind-iis-in-a-windows-container/
 title: Running an ASP.NET Core App Inside IIS in a Windows Docker Container
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2025-03-11 09:00:00 +00:00
 tags:

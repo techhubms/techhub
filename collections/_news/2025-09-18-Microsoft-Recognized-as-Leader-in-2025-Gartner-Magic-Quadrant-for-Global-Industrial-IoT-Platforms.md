@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-global-industrial-iot-platforms/
 title: Microsoft Recognized as Leader in 2025 Gartner Magic Quadrant for Global Industrial IoT Platforms
 author: Michael MacKenzie
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-09-18 15:00:00 +00:00
 tags:

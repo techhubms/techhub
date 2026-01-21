@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code-maze.com/dotnet-imeterfactory-application-performance/
 title: Measure Application Performance in .NET Using IMeterFactory
 author: Muhammed Saleem
-viewing_mode: external
 feed_name: Code Maze Blog
 date: 2025-02-26 08:47:52 +00:00
 tags:

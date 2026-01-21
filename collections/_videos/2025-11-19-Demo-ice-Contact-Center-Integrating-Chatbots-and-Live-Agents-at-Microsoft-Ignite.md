@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=lfEjSOsWvoY
 title: 'Demo: ice Contact Center Integrating Chatbots and Live Agents at Microsoft Ignite'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 15:06:19 +00:00
 tags:

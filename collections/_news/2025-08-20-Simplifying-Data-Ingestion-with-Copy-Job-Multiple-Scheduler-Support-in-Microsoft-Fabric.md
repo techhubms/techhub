@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-multiple-scheduler-support/
 title: 'Simplifying Data Ingestion with Copy Job: Multiple Scheduler Support in Microsoft Fabric'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-08-20 09:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/all-things-azure/get-started-with-vs-code-for-the-web/
 title: Accelerate Development with VS Code for the Web – Azure Integration
 author: Meera Haridasa
-viewing_mode: external
 feed_name: Microsoft All Things Azure Blog
 date: 2025-11-20 16:40:49 +00:00
 tags:

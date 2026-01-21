@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=wh8xquMkVOE
 title: Preparing Enterprise Workflows for AI-Driven Transformation
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 10:52:21 +00:00
 tags:

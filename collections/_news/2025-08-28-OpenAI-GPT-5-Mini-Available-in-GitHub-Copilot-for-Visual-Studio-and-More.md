@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-28-openai-gpt-5-mini-is-now-available-in-public-preview-in-visual-studio-jetbrains-ides-xcode-and-eclipse
 title: OpenAI GPT-5 Mini Available in GitHub Copilot for Visual Studio and More
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-28 17:40:59 +00:00
 tags:

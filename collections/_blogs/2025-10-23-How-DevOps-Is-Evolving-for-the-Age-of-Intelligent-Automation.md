@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/how-devops-is-evolving-for-the-age-of-intelligent-automation/
 title: How DevOps Is Evolving for the Age of Intelligent Automation
 author: Alan Shimel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-23 18:56:50 +00:00
 tags:

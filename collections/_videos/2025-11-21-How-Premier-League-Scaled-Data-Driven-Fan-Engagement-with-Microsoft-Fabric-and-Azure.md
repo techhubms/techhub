@@ -2,7 +2,6 @@
 external_url: https://www.youtube.com/watch?v=jXb9A20Ysdc
 title: How Premier League Scaled Data-Driven Fan Engagement with Microsoft Fabric and Azure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 08:26:43 +00:00
 tags:

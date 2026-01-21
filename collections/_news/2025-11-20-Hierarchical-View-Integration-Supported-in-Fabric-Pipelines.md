@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/hierarchical-view-integration-supported-in-pipelines/
 title: Hierarchical View Integration Supported in Fabric Pipelines
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-20 10:00:00 +00:00
 tags:

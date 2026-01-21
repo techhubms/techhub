@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/it-s-time-to-secure-your-mcp-servers-here-s-how/ba-p/4434308
 title: Securing Your MCP Server with JWT Authentication and Authorization
 author: wassimchegham
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-25 07:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=gjKq4KMEYkI
 title: Exploring AI Models and GitHub Copilot's Raptor Mini in VS Code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-12-08 08:01:01 +00:00
 tags:

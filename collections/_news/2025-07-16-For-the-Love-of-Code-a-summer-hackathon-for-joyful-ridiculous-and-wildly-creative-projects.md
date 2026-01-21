@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/open-source/for-the-love-of-code-2025/
 title: For the Love of Code - A Summer Hackathon for Joyful and Creative Projects
 author: Lee Reilly
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-16 15:00:00 +00:00
 tags:

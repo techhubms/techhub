@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/shared-responsibility-model-in-azure-explained-with-real-examples/
 title: Shared Responsibility Model in Azure Explained with Real Examples
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-05 11:06:55 +00:00
 tags:

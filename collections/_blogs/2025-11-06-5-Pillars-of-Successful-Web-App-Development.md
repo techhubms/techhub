@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/5-pillars-of-successful-web-app-development/
 title: 5 Pillars of Successful Web App Development
 author: Roman Davydov
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-11-06 09:26:43 +00:00
 tags:

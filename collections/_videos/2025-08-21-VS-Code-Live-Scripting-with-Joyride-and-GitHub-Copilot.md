@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Nt1p6yreAUU
 title: 'VS Code Live: Scripting with Joyride and GitHub Copilot'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-08-21 23:04:36 +00:00
 tags:

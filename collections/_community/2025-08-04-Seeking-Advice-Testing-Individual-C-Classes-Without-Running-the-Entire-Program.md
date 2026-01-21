@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mhd7tp/i_want_to_test_my_program_but_couldnt_figure_out/
 title: 'Seeking Advice: Testing Individual C# Classes Without Running the Entire Program'
 author: RutabagaJumpy3956
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-04 13:18:37 +00:00
 tags:

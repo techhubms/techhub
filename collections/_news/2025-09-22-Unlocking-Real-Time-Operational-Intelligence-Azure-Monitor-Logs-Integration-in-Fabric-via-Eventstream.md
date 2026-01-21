@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-real-time-operational-intelligence-azure-monitor-logs-integration-in-fabric-via-eventstream/
 title: 'Unlocking Real-Time Operational Intelligence: Azure Monitor Logs Integration in Fabric via Eventstream'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-09-22 17:00:00 +00:00
 tags:

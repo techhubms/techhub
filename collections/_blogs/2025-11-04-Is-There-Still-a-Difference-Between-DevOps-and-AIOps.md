@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/is-there-still-a-difference-between-devops-and-aiops/
 title: Is There Still a Difference Between DevOps and AIOps?
 author: Alexander Williams
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-11-04 09:58:00 +00:00
 tags:

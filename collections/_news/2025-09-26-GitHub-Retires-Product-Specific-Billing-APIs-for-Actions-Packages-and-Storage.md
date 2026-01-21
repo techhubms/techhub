@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-26-product-specific-billing-apis-are-closing-down
 title: GitHub Retires Product-Specific Billing APIs for Actions, Packages, and Storage
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-26 14:10:33 +00:00
 tags:

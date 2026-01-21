@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=5N3FR8lzC3Q
 title: Adecco's AI-First Approach to Recruitment with Microsoft Cloud
 author: Microsoft Cloud
-viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
 date: 2025-07-18 16:20:01 +00:00
 tags:

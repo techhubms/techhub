@@ -1,7 +1,6 @@
-﻿---
+---
 title: AI-Integrated Developer Tools, .NET 10 Release, and Cloud Updates Enhance Modern Workflows
 author: Tech Hub Team
-viewing_mode: internal
 date: 2025-11-17 09:00:00 +00:00
 tags:
 - .NET 10

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://zure.com/blog/integrating-security-into-devops-workflows-with-microsoft-defender-cspm
 title: Integrating Security into DevOps Workflows with Microsoft Defender CSPM
 author: petrus.vasenius@zure.com (Petrus Vasenius)
-viewing_mode: external
 feed_name: Zure Data & AI Blog
 date: 2025-04-15 06:15:25 +00:00
 tags:

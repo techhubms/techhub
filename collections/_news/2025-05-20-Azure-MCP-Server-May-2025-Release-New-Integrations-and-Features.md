@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-mcp-server-may-2025-release/
 title: 'Azure MCP Server – May 2025 Release: New Integrations and Features'
 author: Rohit Ganguly
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-05-20 19:40:20 +00:00
 tags:

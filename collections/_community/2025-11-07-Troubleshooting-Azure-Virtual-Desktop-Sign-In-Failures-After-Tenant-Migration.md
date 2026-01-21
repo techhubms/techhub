@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/troubleshooting-azure-virtual-desktop-sign-in-failures-after/ba-p/4467953
 title: Troubleshooting Azure Virtual Desktop Sign-In Failures After Tenant Migration
 author: psundars
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-07 05:32:56 +00:00
 tags:

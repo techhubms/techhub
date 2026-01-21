@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/azure-notification-hubs/security-update-changes-to-uri-expiry-time-in-azure-notification-hubs/
 title: 'Security Update: Changes to URI Expiry Time in Azure Notification Hubs'
 author: Sreehari R
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2024-09-25 09:35:26 +00:00
 tags:

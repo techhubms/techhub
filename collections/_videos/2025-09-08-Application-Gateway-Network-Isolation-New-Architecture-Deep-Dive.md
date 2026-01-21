@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=zQNk1BjhwQI
 title: 'Application Gateway Network Isolation: New Architecture Deep Dive'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-09-08 11:48:33 +00:00
 tags:

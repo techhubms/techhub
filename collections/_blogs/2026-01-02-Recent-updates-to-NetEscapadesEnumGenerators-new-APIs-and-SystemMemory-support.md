@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/updates-to-netescapaades-enumgenerators-new-apis-and-system-memory-support/
 title: 'Recent updates to NetEscapades.EnumGenerators: new APIs and System.Memory support'
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2026-01-02 09:00:00 +00:00
 tags:

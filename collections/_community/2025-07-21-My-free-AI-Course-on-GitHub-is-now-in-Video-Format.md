@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AI_Agents/comments/1m5ucwp/my_free_ai_course_on_github_is_now_in_video_format/
 title: My free AI Course on GitHub is now in Video Format
 author: Tailor-Equivalent
 feed_name: Reddit AI Agents
 date: 2025-07-21 20:40:28 +00:00
-viewing_mode: external
 tags:
 - AI Agents
 - AI Applications

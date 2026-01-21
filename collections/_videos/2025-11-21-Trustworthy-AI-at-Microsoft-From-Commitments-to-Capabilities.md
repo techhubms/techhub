@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=QQCQyq48USM
 title: 'Trustworthy AI at Microsoft: From Commitments to Capabilities'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 10:17:57 +00:00
 tags:

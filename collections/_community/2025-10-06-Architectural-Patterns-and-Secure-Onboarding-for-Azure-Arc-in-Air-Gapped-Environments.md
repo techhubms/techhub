@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/addressing-air-gap-requirements-through-secure-azure-arc/ba-p/4458748
 title: Architectural Patterns and Secure Onboarding for Azure Arc in Air-Gapped Environments
 author: AkashKumarSingh
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-06 14:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/whose-ops-is-it-anyway-how-idps-ai-and-security-are-evolving-developer-culture/
 title: How IDPs, AI, and Security Are Evolving DevOps Culture
 author: Olivier de Turckheim
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-09 10:16:52 +00:00
 tags:

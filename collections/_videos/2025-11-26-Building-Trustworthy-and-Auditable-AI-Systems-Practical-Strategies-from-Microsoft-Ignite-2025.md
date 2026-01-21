@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=kV3yjDYC8Hg
 title: 'Building Trustworthy and Auditable AI Systems: Practical Strategies from Microsoft Ignite 2025'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-26 20:02:48 +00:00
 tags:

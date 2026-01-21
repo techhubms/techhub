@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=dxa_juNDoS4
 title: 'Scale Smarter: Azure Infrastructure for the Agentic Era'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 12:50:49 +00:00
 tags:

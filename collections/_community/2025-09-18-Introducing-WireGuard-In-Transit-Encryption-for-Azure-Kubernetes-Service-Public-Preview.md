@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/introducing-wireguard-in-transit-encryption-for-aks-public/ba-p/4421057
 title: Introducing WireGuard In-Transit Encryption for Azure Kubernetes Service (Public Preview)
 author: josephyostos
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-18 10:43:54 +00:00
 tags:

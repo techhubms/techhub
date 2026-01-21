@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/blogs/2025/05/12/agent-mode-meets-mcp
 title: Integrating Model Context Protocol (MCP) in VS Code Agent Mode
 author: Harald Kirschner
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-05-14 00:00:00 +00:00
 tags:

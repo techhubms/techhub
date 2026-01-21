@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=8Z0dCQWApg8
 title: 'App Modernization Automation: Migrating Windows, Intune, and Azure Virtual Desktop'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 14:44:36 +00:00
 tags:

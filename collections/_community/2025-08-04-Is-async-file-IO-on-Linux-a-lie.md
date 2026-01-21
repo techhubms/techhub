@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mh1hmv/is_async_file_io_on_linux_a_lie/
 title: Is async file I/O on Linux a lie?
 author: FergoTheGreat
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-04 02:19:06 +00:00
 tags:

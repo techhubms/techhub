@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=BJxrSKAvCis
 title: 'Azure HorizonDB: Deep Dive into a New Enterprise-Scale PostgreSQL'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 17:11:56 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=GkqKMwhadB0
 title: 'Secure Foundations for Smarter Work: Lenovo and Microsoft Security Strategies'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 10:33:11 +00:00
 tags:

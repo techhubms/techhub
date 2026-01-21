@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-18-github-copilot-next-edit-suggestions-nes-now-in-public-preview-for-xcode-and-eclipse
 title: GitHub Copilot Next Edit Suggestions (NES) Public Preview for Xcode and Eclipse
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-18 17:30:11 +00:00
 tags:

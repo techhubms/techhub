@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/microsoft-learn-mcp-server-elevates-development/
 title: 'Microsoft Learn MCP Server: Next-Level Copilot Integration for Developers'
 author: Wendy Breiding (SHE/HER), Eric Imasogie
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-12-08 20:00:00 +00:00
 tags:

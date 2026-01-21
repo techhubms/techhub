@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Xam_QQnb5wQ
 title: Translating Conversations with Azure AI Foundry Translator API
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-11 17:57:05 +00:00
 tags:

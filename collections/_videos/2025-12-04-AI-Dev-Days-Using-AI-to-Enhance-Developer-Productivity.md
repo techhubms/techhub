@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=GCLYC5d7kpI
 title: 'AI Dev Days: Using AI to Enhance Developer Productivity'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-04 01:07:13 +00:00
 tags:

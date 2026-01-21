@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/agent-factory-from-prototype-to-production-developer-tools-and-rapid-agent-development/
 title: 'Agent Factory: From Prototype to Production—Developer Tools and Rapid Agent Development'
 author: Yina Arenas
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-09-03 15:00:00 +00:00
 tags:

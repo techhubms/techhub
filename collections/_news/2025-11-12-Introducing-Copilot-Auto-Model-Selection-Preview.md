@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/introducing-copilot-auto-model-selection-preview/
 title: Introducing Copilot Auto Model Selection (Preview)
 author: Rhea Patel, Nhu Do
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-11-12 17:38:43 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mjojrz/how_are_you_guys_upskilling/
 title: 'Community Insights: Upskilling Strategies for C# Developers'
 author: Ok_Finish_1661
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-07 02:45:02 +00:00
 tags:

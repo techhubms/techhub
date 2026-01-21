@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=oF5ib8AIVCE
 title: Building and Evaluating AI Agents with Foundry Agent Service
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 08:14:43 +00:00
 tags:

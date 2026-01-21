@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/join-the-oss-ai-summit-building-with-langchain-event
 title: 'Join the OSS AI Summit: Building with LangChain and Microsoft AI'
 author: Dan Wahlin
-viewing_mode: external
 feed_name: Microsoft Blog
 date: 2025-12-01 18:00:07 +00:00
 tags:

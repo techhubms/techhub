@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-23-github-copilot-coding-agent-now-supports-instructions-md-custom-instructions
 title: GitHub Copilot Coding Agent Now Supports .instructions.md Custom Instructions
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-23 16:11:38 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-logic-apps-ushering-in-the-era-of-multi-agentic-business/ba-p/4452275
 title: 'Azure Logic Apps: Multi-Agentic Business Process Automation Platform Enhancements'
 author: DivSwa
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-09 18:11:58 +00:00
 tags:

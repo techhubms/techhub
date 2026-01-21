@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-17-gpt-5-1-codex-max-is-now-generally-available-in-github-copilot
 title: GPT-5.1-Codex-Max Now Available in GitHub Copilot Across Platforms
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-17 17:28:26 +00:00
 tags:

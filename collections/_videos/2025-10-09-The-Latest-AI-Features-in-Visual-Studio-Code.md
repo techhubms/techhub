@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=EGZKvuB5jWw
 title: The Latest AI Features in Visual Studio Code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-10-09 17:41:40 +00:00
 tags:

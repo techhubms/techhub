@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.matt-o.com/GitHub-Copilot-Custom-Instructions
 title: VS Code supports user input as extra prompt instructions
 author: Matt Olson
-viewing_mode: external
 tags:
 - Configuration
 - Custom Instructions

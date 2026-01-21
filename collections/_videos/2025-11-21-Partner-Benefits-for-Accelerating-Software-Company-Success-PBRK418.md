@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=uutyZeRddiQ
 title: 'Partner: Benefits for Accelerating Software Company Success | PBRK418'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 13:03:14 +00:00
 tags:

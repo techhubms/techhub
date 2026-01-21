@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-02-one-click-merge-conflict-resolution-now-in-the-web-interface
 title: One-Click Merge Conflict Resolution in GitHub Web Interface
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-02 18:07:10 +00:00
 tags:

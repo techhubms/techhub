@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=8JU5B4vTxsg
 title: 'Enveda: Accelerating Pharmaceutical Discovery with Microsoft AI'
 author: Microsoft Cloud
-viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
 date: 2025-06-23 14:00:22 +00:00
 tags:

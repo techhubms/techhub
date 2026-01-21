@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/how-model-context-protocol-mcp-is-fueling-the-next-era-of-developer-productivity/
 title: How Model Context Protocol (MCP) Is Transforming AI-Driven Development Productivity
 author: Mohith Shrivastava
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-01 09:06:03 +00:00
 tags:

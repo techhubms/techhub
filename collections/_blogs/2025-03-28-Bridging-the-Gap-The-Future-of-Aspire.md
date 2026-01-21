@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://medium.com/@davidfowl/bridging-the-gap-the-future-of-aspire-6eb421a92ab8?source=rss-8163234c98f0------2
 title: 'Bridging the Gap: The Future of Aspire'
 author: David Fowler
-viewing_mode: external
 feed_name: David Fowler's Blog
 date: 2025-03-28 01:13:30 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=U43XsJhKMhQ
 title: Advancing Windows Device Security with Surface Innovation and Memory-Safe Rust Drivers
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 04:58:05 +00:00
 tags:

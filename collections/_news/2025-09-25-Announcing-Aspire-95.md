@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/announcing-dotnet-aspire-95/
 title: Announcing Aspire 9.5
 author: Jeffrey Fritz
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-09-25 17:25:00 +00:00
 tags:

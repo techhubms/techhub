@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/
 title: Azure AI Foundry Launches Multimodal AI Models for Developers
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-06 20:20:36 +00:00
 tags:

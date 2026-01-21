@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.stevejgordon.co.uk/implementing-aspnetcore-span-linking-for-redirects-with-middleware
 title: Implementing ASP.NET Core Automatic Span Linking for Internal Redirects with Middleware on .NET 9
 author: Steve Gordon
-viewing_mode: external
 feed_name: Steve Gordon's Blog
 date: 2024-10-08 07:20:31 +00:00
 tags:

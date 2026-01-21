@@ -1,7 +1,6 @@
-﻿---
+---
 title: 'Streamlining Development: Updates in Copilot, AI Platforms, and Secure Automation'
 author: Tech Hub Team
-viewing_mode: internal
 date: 2025-12-15 09:00:00 +00:00
 tags:
 - Agentic AI

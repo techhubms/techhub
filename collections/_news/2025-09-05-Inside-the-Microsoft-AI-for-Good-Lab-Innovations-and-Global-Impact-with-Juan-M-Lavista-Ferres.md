@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/08/25/fyai-explore-the-microsoft-ai-for-good-lab-with-juan-m-lavista-ferres/
 title: 'Inside the Microsoft AI for Good Lab: Innovations and Global Impact with Juan M. Lavista Ferres'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-09-05 13:53:45 +00:00
 tags:

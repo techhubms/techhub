@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/finops-blog/smarter-cloud-smarter-spend-how-azure-powers-cost-efficient/ba-p/4465687
 title: 'Smarter Cloud, Smarter Spend: How Azure Powers Cost-Efficient Innovation'
 author: kyleikeda
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-30 17:05:07 +00:00
 tags:

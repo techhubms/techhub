@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=TG4ZULpS81w
 title: 'Govern AI Agents with Azure API Management: Secure, Monitor, and Scale AI Workloads'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 08:08:59 +00:00
 tags:

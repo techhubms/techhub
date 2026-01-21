@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/blog/microsoft-security-blog/microsoft-named-an-overall-leader-in-kuppingercole-leadership-compass-for-genera/4478093
 title: Microsoft Recognized as Leader in KuppingerCole Leadership Compass for Generative AI Defense
 author: Herain Oberoi
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-12-15 18:05:00 +00:00
 tags:

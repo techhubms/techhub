@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-databases-a-unified-saas-native-experience-for-modern-data-workloads-generally-available/
 title: 'Fabric Databases Now Generally Available: Unified Data Experience in Microsoft Fabric'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-18 08:00:00 +00:00
 tags:

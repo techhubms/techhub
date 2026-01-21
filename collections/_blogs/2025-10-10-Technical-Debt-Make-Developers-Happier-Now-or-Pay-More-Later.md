@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/technical-debt-make-developers-happier-now-or-pay-more-later/
 title: 'Technical Debt: Make Developers Happier Now or Pay More Later'
 author: Ernesto Tagwerker
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-10 20:18:35 +00:00
 tags:

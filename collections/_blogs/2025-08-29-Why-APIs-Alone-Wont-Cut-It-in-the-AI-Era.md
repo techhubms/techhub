@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/why-apis-alone-wont-cut-it-in-the-ai-era/?utm_source=rss&utm_medium=rss&utm_campaign=why-apis-alone-wont-cut-it-in-the-ai-era
 title: Why APIs Alone Won’t Cut It in the AI Era
 author: Alan Shimel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-29 16:03:12 +00:00
 tags:

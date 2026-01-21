@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/github-copilot-highlights-in-visual-studio-17-14-preview-3-available-now/
 title: 'GitHub Copilot Highlights in Visual Studio 17.14 Preview 3: New Features and Improvements'
 author: Katie Savage
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-04-16 18:24:10 +00:00
 tags:

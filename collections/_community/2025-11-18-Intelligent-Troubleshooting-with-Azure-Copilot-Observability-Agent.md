@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-copilot-observability-agent-intelligent-investigations/ba-p/4469719
 title: Intelligent Troubleshooting with Azure Copilot Observability Agent
 author: EfratNauerman
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:02:34 +00:00
 tags:

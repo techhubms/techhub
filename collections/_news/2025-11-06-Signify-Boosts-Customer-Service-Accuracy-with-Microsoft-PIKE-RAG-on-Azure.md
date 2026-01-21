@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/research/blog/when-industry-knowledge-meets-pike-rag-the-innovation-behind-signifys-customer-service-boost/
 title: Signify Boosts Customer Service Accuracy with Microsoft PIKE-RAG on Azure
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-06 17:14:37 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2026/01/06/introducing-the-microsoft-defender-experts-suite-elevate-your-security-with-expert-led-services/
 title: 'Introducing the Microsoft Defender Experts Suite: Expert-Led Integrated Security Services'
 author: Aarti Borkar and Andrew Conway
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2026-01-06 17:00:00 +00:00
 tags:

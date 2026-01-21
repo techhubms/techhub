@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=VpRDtulXcUw
 title: Entra Group Source of Authority Conversion and Security Copilot Update
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-08-04 13:59:18 +00:00
 tags:

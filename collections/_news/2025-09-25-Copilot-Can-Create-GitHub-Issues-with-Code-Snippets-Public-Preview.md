@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-25-copilot-can-create-issues-with-code-snippets-in-public-preview
 title: 'Copilot Can Create GitHub Issues with Code Snippets: Public Preview'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-25 21:59:40 +00:00
 tags:

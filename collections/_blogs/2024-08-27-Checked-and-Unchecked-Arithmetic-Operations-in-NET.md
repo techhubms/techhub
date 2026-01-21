@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://khalidabuhakmeh.com/checked-and-unchecked-arithmetic-operations-in-dotnet
 title: Checked and Unchecked Arithmetic Operations in .NET
 author: Khalid Abuhakmeh
-viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
 date: 2024-08-27 00:00:00 +00:00
 tags:

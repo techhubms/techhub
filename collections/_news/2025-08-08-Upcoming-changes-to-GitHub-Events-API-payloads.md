@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-08-upcoming-changes-to-github-events-api-payloads
 title: Upcoming changes to GitHub Events API payloads
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-08 17:41:32 +00:00
 tags:

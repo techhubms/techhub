@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/reduce-latency-and-enhance-resilience-with-azure-files-zonal/ba-p/4470811
 title: Enhancing Workload Resilience with Azure Files Zonal Placement
 author: hanagpal
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 18:18:59 +00:00
 tags:

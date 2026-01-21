@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=mQHsytPpHmU
 title: Building Agentic Apps with Azure Speech and Voice Live API
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 10:30:56 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=J8esrUr6iDQ
 title: Modernizing Cloud Desktop and Endpoint Management with Nerdio Manager
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 08:27:24 +00:00
 tags:

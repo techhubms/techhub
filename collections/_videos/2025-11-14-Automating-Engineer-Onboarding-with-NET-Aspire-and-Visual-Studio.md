@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=etF5w3Aogh0
 title: Automating Engineer Onboarding with .NET Aspire and Visual Studio
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 19:21:22 +00:00
 tags:

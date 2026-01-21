@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ruxjC9rDYqI
 title: "Upgrading to GitHub's Remote MCP Server: From Docker Setup to OAuth Simplicity"
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub's Youtube channel
 date: 2025-07-24 16:37:37 +00:00
 tags:

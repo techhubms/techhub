@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure/issue-with-gmsa-when-installing-cloud-sync/m-p/4482486#M22398
 title: Troubleshooting gMSA Configuration Errors During Microsoft Cloud Sync Installation
 author: CheesePizza
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-02 13:05:17 +00:00
 tags:

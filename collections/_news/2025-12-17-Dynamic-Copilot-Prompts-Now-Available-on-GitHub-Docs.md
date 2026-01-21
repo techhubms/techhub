@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-17-dynamic-copilot-prompts-on-github-docs
 title: Dynamic Copilot Prompts Now Available on GitHub Docs
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-17 15:19:18 +00:00
 tags:

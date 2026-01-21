@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/from-idea-to-pr-a-guide-to-github-copilots-agentic-workflows/
 title: From idea to PR - A guide to GitHub Copilot’s agentic workflows
 author: Chris Reddington
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-01 18:57:22 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code-maze.com/csharp-persist-values-with-asynclocal-in-async-flow/
 title: Persist Values With AsyncLocal in C# Async Flow
 author: Bozo Spoljaric
-viewing_mode: external
 feed_name: Code Maze Blog
 date: 2025-01-06 05:55:32 +00:00
 tags:

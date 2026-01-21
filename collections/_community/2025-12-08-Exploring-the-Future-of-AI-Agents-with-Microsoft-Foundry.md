@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/exploring-the-future-of-ai-agents-with-microsoft-foundry/ba-p/4476107
 title: Exploring the Future of AI Agents with Microsoft Foundry
 author: Lee_Stott
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-08 17:13:27 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/asia/features/real-time-intelligence-how-indias-swiggy-serves-millions-with-microsoft-fabric/
 title: Real-time Intelligence with Microsoft Fabric at Swiggy
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-11 14:03:29 +00:00
 tags:

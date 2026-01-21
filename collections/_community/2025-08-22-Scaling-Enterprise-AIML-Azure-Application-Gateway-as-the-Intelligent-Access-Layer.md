@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-enterprise-ai-ml-with-confidence-azure-application/ba-p/4445691
 title: 'Scaling Enterprise AI/ML: Azure Application Gateway as the Intelligent Access Layer'
 author: reyjordi
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-22 14:18:34 +00:00
 tags:

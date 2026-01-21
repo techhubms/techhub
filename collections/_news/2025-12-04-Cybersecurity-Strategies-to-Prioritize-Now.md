@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/12/04/cybersecurity-strategies-to-prioritize-now/
 title: Cybersecurity Strategies to Prioritize Now
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-04 19:01:12 +00:00
 tags:

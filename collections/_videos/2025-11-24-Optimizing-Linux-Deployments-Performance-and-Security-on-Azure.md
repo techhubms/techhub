@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=scrkmm03K88
 title: 'Optimizing Linux Deployments: Performance and Security on Azure'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 12:01:44 +00:00
 tags:

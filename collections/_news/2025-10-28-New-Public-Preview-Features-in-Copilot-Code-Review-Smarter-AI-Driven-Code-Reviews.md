@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-28-new-public-preview-features-in-copilot-code-review-ai-reviews-that-see-the-full-picture
 title: 'New Public Preview Features in Copilot Code Review: Smarter, AI-Driven Code Reviews'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-28 15:27:44 +00:00
 tags:

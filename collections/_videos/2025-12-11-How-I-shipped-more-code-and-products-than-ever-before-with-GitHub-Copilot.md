@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=g658oC4nuMQ
 title: How I shipped more code and products than ever before with GitHub Copilot
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-11 23:09:57 +00:00
 tags:

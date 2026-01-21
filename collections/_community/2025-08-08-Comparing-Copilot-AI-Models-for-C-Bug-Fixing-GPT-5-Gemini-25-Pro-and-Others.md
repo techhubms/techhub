@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mkqvpn/vibe_debugging_gpt5_is_worse_than_o3gemini25_pro/
 title: 'Comparing Copilot AI Models for C# Bug Fixing: GPT-5, Gemini 2.5 Pro, and Others'
 author: Sea-Key3106
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-08 09:45:28 +00:00
 tags:

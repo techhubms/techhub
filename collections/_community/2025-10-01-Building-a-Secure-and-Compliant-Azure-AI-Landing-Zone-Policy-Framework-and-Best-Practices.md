@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-a-secure-and-compliant-azure-ai-landing-zone-policy/ba-p/4457165
 title: 'Building a Secure and Compliant Azure AI Landing Zone: Policy Framework & Best Practices'
 author: Madhur_Shukla
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-01 04:36:49 +00:00
 tags:

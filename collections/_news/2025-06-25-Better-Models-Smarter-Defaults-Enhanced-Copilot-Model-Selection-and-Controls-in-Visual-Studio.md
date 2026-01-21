@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/better-models-smarter-defaults-claude-sonnet-4-gpt-4-1-and-more-control-in-visual-studio/
 title: 'Better Models, Smarter Defaults: Enhanced Copilot Model Selection and Controls in Visual Studio'
 author: Rhea Patel
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-06-25 23:24:03 +00:00
 tags:

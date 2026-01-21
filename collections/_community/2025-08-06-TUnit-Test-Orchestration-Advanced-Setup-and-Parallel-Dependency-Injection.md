@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mjgiuq/tunit_test_orchestration/
 title: 'TUnit Test Orchestration: Advanced Setup and Parallel Dependency Injection'
 author: thomhurst
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-06 20:59:12 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-28-copilot-usage-metrics-dashboard-and-api-in-public-preview
 title: Copilot Usage Metrics Dashboard and API in Public Preview for GitHub Enterprise
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-28 15:23:43 +00:00
 tags:

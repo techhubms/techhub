@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/find-and-fix-typos-faster-with-github-copilot.html
 title: Find and Fix Typos Faster with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-08-08 00:00:00 +00:00
 tags:

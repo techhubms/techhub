@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/custom-script-extensions-and-session-host-configuration/m-p/4476435#M13956
 title: Challenges with Custom Script Extensions Authentication in Azure Session Host Configuration
 author: kristokruuser
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-09 13:51:03 +00:00
 tags:

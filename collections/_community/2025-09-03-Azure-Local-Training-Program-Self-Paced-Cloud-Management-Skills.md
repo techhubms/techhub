@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/introducing-azure-local-training-empowering-you-to-succeed/ba-p/4447957
 title: 'Azure Local Training Program: Self-Paced Cloud Management Skills'
 author: ShireenIsab
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-03 22:50:03 +00:00
 tags:

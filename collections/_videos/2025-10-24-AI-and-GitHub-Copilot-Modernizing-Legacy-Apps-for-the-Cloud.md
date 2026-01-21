@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=a9glyQs6cbE
 title: 'AI & GitHub Copilot: Modernizing Legacy Apps for the Cloud'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-24 23:58:52 +00:00
 tags:

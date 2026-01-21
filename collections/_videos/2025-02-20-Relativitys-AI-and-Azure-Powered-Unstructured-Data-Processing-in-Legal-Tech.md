@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=cr8I4Z2RsS0
 title: Relativity's AI and Azure-Powered Unstructured Data Processing in Legal Tech
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-02-20 14:00:51 +00:00
 tags:

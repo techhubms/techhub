@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=2EJR1xhTtBs
 title: 'Developing Social Media Commander: Real-World .NET App with GitHub Copilot and Agent Instructions'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-16 17:00:10 +00:00
 tags:

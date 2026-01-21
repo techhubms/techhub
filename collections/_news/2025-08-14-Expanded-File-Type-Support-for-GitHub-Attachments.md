@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-13-expanded-file-type-support-for-attachments-across-issues-pull-requests-and-discussions
 title: Expanded File Type Support for GitHub Attachments
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-14 07:00:31 +00:00
 tags:

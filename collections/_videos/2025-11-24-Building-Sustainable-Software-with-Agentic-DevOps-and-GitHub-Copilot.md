@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Bg-OfUzwVdo
 title: Building Sustainable Software with Agentic DevOps and GitHub Copilot
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 11:57:55 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/breaking-the-million-token-barrier-the-technical-achievement-of/ba-p/4466080
 title: 'Azure ND GB300 v6: Achieving Over 1 Million Tokens/sec on Llama2 70B Inference'
 author: HugoAffaticati
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-03 17:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://harrybin.de/posts/github-copilot-custom-chat-modes/
 title: GitHub Copilot Custom Chat Modes for Large, Complex Projects in VS Code
 author: Harald Binkle
-viewing_mode: external
 feed_name: Harald Binkle's blog
 date: 2025-07-06 15:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mhajoh/asp_nightmare_2025/
 title: Challenges and Frustrations with Modern ASP.NET for Web Development
 author: Kingside2
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-04 11:12:31 +00:00
 tags:

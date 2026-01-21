@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/azure-at-microsoft-ignite-2025-all-the-intelligent-cloud-news-explained/
 title: 'Azure at Microsoft Ignite 2025: Intelligent Cloud Innovations Explained'
 author: Jessica Hawk
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-11-18 16:00:00 +00:00
 tags:

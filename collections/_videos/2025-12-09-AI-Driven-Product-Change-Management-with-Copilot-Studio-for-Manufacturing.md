@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=tyV3Yn5hsKw
 title: AI-Driven Product Change Management with Copilot Studio for Manufacturing
 author: Microsoft Cloud
-viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
 date: 2025-12-09 16:01:36 +00:00
 tags:

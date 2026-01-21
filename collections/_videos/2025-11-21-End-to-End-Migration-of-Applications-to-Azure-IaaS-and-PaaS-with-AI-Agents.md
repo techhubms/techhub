@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=YXE880TLsfk
 title: End-to-End Migration of Applications to Azure IaaS and PaaS with AI Agents
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 07:14:34 +00:00
 tags:

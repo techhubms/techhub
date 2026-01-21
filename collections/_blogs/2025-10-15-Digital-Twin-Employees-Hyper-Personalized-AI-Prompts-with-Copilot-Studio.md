@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/the-digital-twin-employee-creating-hyper-personalized-copilot-prompts-with-copilot-studio/
 title: 'Digital Twin Employees: Hyper-Personalized AI Prompts with Copilot Studio'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-15 08:38:47 +00:00
 tags:

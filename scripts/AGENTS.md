@@ -208,7 +208,7 @@ catch {
 - **Field mapping**: AI returns categories (display names) → converted to section_names (lowercase identifiers)
   - Example: `"GitHub Copilot"` → `"github-copilot"`, `"AI"` → `"ai"`, `".NET"` → `"dotnet"`
 
-For complete frontmatter schema, see [collections/frontmatter-schema.md](../collections/frontmatter-schema.md).
+For complete frontmatter schema, see [collections/AGENTS.md - Frontmatter Schema](../collections/AGENTS.md#frontmatter-schema).
 
 #### fix-markdown-files.ps1
 
@@ -322,7 +322,7 @@ Transforms RSS feed items into markdown files with .NET Tech Hub frontmatter str
 
 - Generates `section_names` from AI-provided categories (normalized to lowercase identifiers)
 - Uses .NET frontmatter schema (never includes legacy `categories`, `tags_normalized`, `description`, `excerpt_separator` fields)
-- Uses proper field ordering per [frontmatter-schema.md](../collections/frontmatter-schema.md)
+- Follows frontmatter schema in [collections/AGENTS.md](../collections/AGENTS.md#frontmatter-schema)
 - Applies markdown formatting repairs as needed
 - Tracks processed/skipped entries to avoid reprocessing
 

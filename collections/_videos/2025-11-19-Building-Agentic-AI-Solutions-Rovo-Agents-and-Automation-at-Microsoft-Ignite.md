@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=FUJ8xSNvK1Q
 title: 'Building Agentic AI Solutions: Rovo Agents and Automation at Microsoft Ignite'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 15:08:11 +00:00
 tags:

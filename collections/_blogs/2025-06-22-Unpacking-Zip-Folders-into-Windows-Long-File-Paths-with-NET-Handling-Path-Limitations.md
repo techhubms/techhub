@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://weblog.west-wind.com/posts/2025/Jun/22/Unpacking-Zip-Folders-into-Windows-Long-File-Paths
 title: 'Unpacking Zip Folders into Windows Long File Paths with .NET: Handling Path Limitations'
 author: Rick Strahl
-viewing_mode: external
 feed_name: Rick Strahl's Blog
 date: 2025-06-22 11:00:48 +00:00
 tags:

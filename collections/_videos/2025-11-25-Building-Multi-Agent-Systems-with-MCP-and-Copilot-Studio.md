@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=vpJKxsolaGc
 title: Building Multi-Agent Systems with MCP and Copilot Studio
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 15:49:32 +00:00
 tags:

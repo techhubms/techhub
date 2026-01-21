@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=-IZ-PLSvDgU
 title: Unlock Cloud-Scale Observability and Optimization with Azure Monitor
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 07:42:13 +00:00
 tags:

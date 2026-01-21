@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/5-ways-to-transform-your-workflow-using-github-copilot-and-mcp/
 title: 5 ways to transform your workflow using GitHub Copilot and MCP
 author: Klint Finley
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-02 17:44:02 +00:00
 tags:

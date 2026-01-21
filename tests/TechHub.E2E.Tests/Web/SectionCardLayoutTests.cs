@@ -83,7 +83,6 @@ public class SectionCardLayoutTests(PlaywrightCollectionFixture fixture) : IAsyn
         await grid.AssertElementVisibleAsync();
 
         // All section card containers should be direct children of the grid
-        _ = grid.Locator("> .section-card-container");
         var count = await grid.GetElementCountBySelectorAsync("> .section-card-container");
 
         (count > 0).Should().BeTrue("Expected section card containers to be direct children of grid");

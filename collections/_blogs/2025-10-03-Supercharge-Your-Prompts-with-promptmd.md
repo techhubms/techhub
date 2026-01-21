@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/supercharge-your-prompts-with-prompt-md.html
 title: Supercharge Your Prompts with .prompt.md
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-10-03 00:00:00 +00:00
 tags:

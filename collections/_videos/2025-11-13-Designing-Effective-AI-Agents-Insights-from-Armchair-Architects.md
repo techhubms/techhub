@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=wTg9tFwjAOc
 title: 'Designing Effective AI Agents: Insights from Armchair Architects'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-13 08:01:10 +00:00
 tags:

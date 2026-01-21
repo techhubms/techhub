@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=cZoOmcbsX-4
 title: 'Azure Update - August 8, 2025: Major AKS, AI, Storage, and Security Announcements'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-08-08 12:09:46 +00:00
 tags:

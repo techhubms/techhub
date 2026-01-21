@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/what-microsoft-entra-really-means-for-identity-and-security/
 title: What Microsoft Entra Really Means for Identity and Security
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-04 09:32:05 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-microsoft-azure-ensures-data-privacy-and-global-compliance-secure-cloud-solutions/
 title: How Microsoft Azure Ensures Data Privacy and Global Compliance
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-05 10:05:40 +00:00
 tags:

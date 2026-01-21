@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/cross-platform-age-verification-dotnet-maui/
 title: Cross-Platform Age Verification in .NET MAUI Applications
 author: Gerald Versluis
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-12-01 18:05:00 +00:00
 tags:

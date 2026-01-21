@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/garage/wall-of-fame/generative-ai-for-permitting/
 title: 'Generative AI for Permitting: Accelerating Clean Energy with Microsoft'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-14 14:25:12 +00:00
 tags:

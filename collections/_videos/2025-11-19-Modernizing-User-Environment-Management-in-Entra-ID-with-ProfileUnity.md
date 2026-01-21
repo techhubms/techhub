@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=p-0ikIK3-l8
 title: Modernizing User Environment Management in Entra ID with ProfileUnity
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 07:57:38 +00:00
 tags:

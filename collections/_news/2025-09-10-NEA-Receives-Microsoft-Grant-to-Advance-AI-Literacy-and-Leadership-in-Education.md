@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/2025/09/10/nea-receives-microsoft-grant-to-expand-ai-literacy-and-leadership/
 title: NEA Receives Microsoft Grant to Advance AI Literacy and Leadership in Education
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-09-10 15:16:47 +00:00
 tags:

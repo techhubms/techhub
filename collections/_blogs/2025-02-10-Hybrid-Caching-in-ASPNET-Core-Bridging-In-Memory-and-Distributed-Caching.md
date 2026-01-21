@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code-maze.com/dotnet-hybrid-caching/
 title: 'Hybrid Caching in ASP.NET Core: Bridging In-Memory and Distributed Caching'
 author: Bozo Spoljaric
-viewing_mode: external
 feed_name: Code Maze Blog
 date: 2025-02-10 07:02:05 +00:00
 tags:

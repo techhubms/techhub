@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/11/strengthen-server-resilience-windows-recovery-environment-winre-for-windows-server-with-azure-arc/
 title: 'Strengthen Server Resilience: Enabling WinRE for Windows Server with Azure Arc'
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-11-11 13:16:43 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=1DwXS__CVzg
 title: 'VS Code Live: Integrating Figma MCP Server with Code Connect'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-10-16 18:04:49 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides
 title: Claude Haiku 4.5 Now Available in GitHub Copilot Across All Supported IDEs
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-20 22:46:44 +00:00
 tags:

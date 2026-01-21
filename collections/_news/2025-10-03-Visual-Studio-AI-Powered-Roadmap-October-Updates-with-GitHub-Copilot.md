@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-october/
 title: 'Visual Studio AI-Powered Roadmap: October Updates with GitHub Copilot'
 author: Rhea Patel
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-10-03 19:29:09 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-02-secret-scanning-updates-november-2025
 title: GitHub Secret Scanning Updates and New Patterns — November 2025
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-02 16:50:31 +00:00
 tags:

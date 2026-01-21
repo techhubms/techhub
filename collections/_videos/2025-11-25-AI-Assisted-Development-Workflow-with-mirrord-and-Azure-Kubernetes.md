@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=p43HWjZFycs
 title: AI-Assisted Development Workflow with mirrord and Azure Kubernetes
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-25 17:24:34 +00:00
 tags:

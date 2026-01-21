@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/using-copilot-studio-with-dataverse-a-developers-guide/
 title: 'Using Copilot Studio with Dataverse: A Developer’s Guide'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-02 08:31:03 +00:00
 tags:

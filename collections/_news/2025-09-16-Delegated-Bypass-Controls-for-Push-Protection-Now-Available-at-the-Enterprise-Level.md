@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-16-delegated-bypass-controls-for-push-protection-now-available-at-the-enterprise-level
 title: Delegated Bypass Controls for Push Protection Now Available at the Enterprise Level
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-16 21:29:55 +00:00
 tags:

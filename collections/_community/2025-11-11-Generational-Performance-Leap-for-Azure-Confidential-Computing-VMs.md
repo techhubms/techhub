@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/generational-performance-leap-for-azure-confidential-computing/ba-p/4468989
 title: Generational Performance Leap for Azure Confidential Computing VMs
 author: Rakeshginjupalli
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-11 17:38:14 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-20-pull-request-files-changed-public-preview-november-20-updates
 title: 'Pull Request “Files Changed” Public Preview: November 20 Updates'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-20 21:29:04 +00:00
 tags:

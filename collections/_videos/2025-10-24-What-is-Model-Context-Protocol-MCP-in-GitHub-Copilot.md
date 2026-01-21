@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/pqXzK8MjH2c
 title: What is Model Context Protocol (MCP) in GitHub Copilot?
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-10-24 18:20:31 +00:00
 tags:

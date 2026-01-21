@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/windows-server-2019-retirement-on-aks-enabled-by-azure-arc/ba-p/4470184
 title: 'Windows Server 2019 Retirement on AKS enabled by Azure Arc: Migration Guidance'
 author: ssarwa
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 05:18:55 +00:00
 tags:

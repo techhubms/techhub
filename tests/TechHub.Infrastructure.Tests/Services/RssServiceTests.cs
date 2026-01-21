@@ -30,7 +30,6 @@ public class RssServiceTests
         {
             Slug = "2024-01-15-test-article-1",
             Title = "Test Article 1",
-            Description = "Test description 1",
             Author = "John Doe",
             DateEpoch = 1705305600, // 2024-01-15
             CollectionName = "news",
@@ -38,13 +37,12 @@ public class RssServiceTests
             Tags = ["AI", "News", "Machine Learning", "Testing"],
             RenderedHtml = "<p>Test content 1</p>",
             Excerpt = "Test excerpt 1",
-            ViewingMode = null,
-            ExternalUrl = null,        },
+            ExternalUrl = null,
+            },
         new ContentItem
         {
             Slug = "2024-01-10-test-article-2",
             Title = "Test Article 2",
-            Description = "Test description 2",
             Author = "Jane Smith",
             DateEpoch = 1704844800, // 2024-01-10
             CollectionName = "news",
@@ -52,7 +50,6 @@ public class RssServiceTests
             Tags = ["AI", "News", "Deep Learning"],
             RenderedHtml = "<p>Test content 2</p>",
             Excerpt = "Test excerpt 2",
-            ViewingMode = "external",
             ExternalUrl = "https://example.com/article-2",        }
     ];
 
@@ -100,14 +97,13 @@ public class RssServiceTests
             {
                 Slug = $"2024-01-{i:D2}-article-{i}",
                 Title = $"Article {i}",
-                Description = $"Description {i}",
                 Author = "Test Author",
                 DateEpoch = 1705305600 + (i * 86400), // Increment by 1 day
                 CollectionName = "news",
                 SectionNames = ["AI"],
                 Tags = ["test"],
                 RenderedHtml = $"<p>Content {i}</p>",
-                Excerpt = $"Excerpt {i}",                ViewingMode = null,
+                Excerpt = $"Excerpt {i}",
                 ExternalUrl = null
             })
             .ToList();
@@ -200,21 +196,7 @@ public class RssServiceTests
     }
 
     [Fact]
-    public async Task RssItem_UsesExcerptWhenAvailable()
-    {
-        // Arrange
-        var section = CreateTestSection();
-        var items = CreateTestItems();
-
-        // Act
-        var channel = await _rssService.GenerateSectionFeedAsync(section, items);
-
-        // Assert
-        channel.Items.First().Description.Should().Be("Test excerpt 1");
-    }
-
-    [Fact]
-    public async Task RssItem_FallsBackToDescriptionWhenExcerptEmpty()
+    public async Task RssItem_UsesExcerptForDescription()
     {
         // Arrange
         var section = CreateTestSection();
@@ -224,13 +206,12 @@ public class RssServiceTests
             {
                 Slug = "test",
                 Title = "Test",
-                Description = "Description only",
                 DateEpoch = 1705305600,
                 CollectionName = "news",
                 SectionNames = ["AI"],
                 Tags = [],
                 RenderedHtml = "<p>Content</p>",
-                Excerpt = "", // Empty excerpt                ViewingMode = null,
+                Excerpt = "Test excerpt",
                 ExternalUrl = null,
                 Author = null
             }
@@ -240,7 +221,7 @@ public class RssServiceTests
         var channel = await _rssService.GenerateSectionFeedAsync(section, items);
 
         // Assert
-        channel.Items.First().Description.Should().Be("Description only");
+        channel.Items.First().Description.Should().Be("Test excerpt");
     }
 
     [Fact]
@@ -359,13 +340,12 @@ public class RssServiceTests
             {
                 Slug = "test",
                 Title = "Test & Special <Characters>",
-                Description = "Description with \"quotes\" & <tags>",
                 DateEpoch = 1705305600,
                 CollectionName = "news",
                 SectionNames = ["AI"],
                 Tags = ["tag&special"],
                 RenderedHtml = "<p>Content</p>",
-                Excerpt = "Excerpt with 'quotes'",                ViewingMode = null,
+                Excerpt = "Excerpt with \"quotes\" & <tags>",
                 ExternalUrl = null,
                 Author = null
             }

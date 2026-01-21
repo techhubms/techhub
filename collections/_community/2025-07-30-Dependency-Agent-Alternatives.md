@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability/dependency-agent-alternatives/m-p/4438361#M4649
 title: Dependency Agent Alternatives
 author: Cory_Matieyshen
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-07-30 19:21:45 +00:00
 tags:

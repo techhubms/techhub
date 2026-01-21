@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-ai-playground-on-azure-app-service-for-linux/ba-p/4469497
 title: Introducing AI Playground on Azure App Service for Linux
 author: TulikaC
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-13 04:36:41 +00:00
 tags:

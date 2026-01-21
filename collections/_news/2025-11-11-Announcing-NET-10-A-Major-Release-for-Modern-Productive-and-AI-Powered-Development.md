@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/announcing-dotnet-10/
 title: 'Announcing .NET 10: A Major Release for Modern, Productive, and AI-Powered Development'
 author: .NET Team
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-11-11 15:38:00 +00:00
 tags:

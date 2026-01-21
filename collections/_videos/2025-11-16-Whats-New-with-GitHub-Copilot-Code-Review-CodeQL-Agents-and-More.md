@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ikIosF_iiz4
 title: "What's New with GitHub Copilot Code Review: CodeQL, Agents & More"
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-16 14:01:16 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ZpRsjGkwWbA
 title: Best Practices for Modernizing Apps and Databases at Scale with Azure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 15:42:31 +00:00
 tags:

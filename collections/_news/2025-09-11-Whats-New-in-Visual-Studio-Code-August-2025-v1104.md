@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/updates/v1_104
 title: What's New in Visual Studio Code August 2025 (v1.104)
 author: Visual Studio Code Team
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-09-11 17:00:00 +00:00
 tags:

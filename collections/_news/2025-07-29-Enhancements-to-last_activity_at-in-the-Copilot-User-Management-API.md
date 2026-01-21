@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-29-enhancements-to-last_activity_at-in-the-user-management-api
 title: Enhancements to last_activity_at in the Copilot User Management API
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-29 16:05:17 +00:00
 tags:

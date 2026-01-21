@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/2025/12/01/national-4-h-council-and-microsoft-extend-10m-partnership-to-expand-ai-education-for-rural-youth-and-educators/
 title: National 4-H Council and Microsoft Extend Partnership to Expand AI Education for Rural Youth
 author: sbaynes
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-01 14:30:17 +00:00
 tags:

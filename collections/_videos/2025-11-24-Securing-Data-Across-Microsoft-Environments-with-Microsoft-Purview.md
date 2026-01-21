@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=QhnYj80YdrE
 title: Securing Data Across Microsoft Environments with Microsoft Purview
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 05:11:39 +00:00
 tags:

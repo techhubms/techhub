@@ -2,7 +2,6 @@
 external_url: https://www.youtube.com/watch?v=l7q6w6eICgw
 title: Securing AI Deployments with HashiCorp Vault & Azure
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-30 16:24:14 +00:00
 tags:

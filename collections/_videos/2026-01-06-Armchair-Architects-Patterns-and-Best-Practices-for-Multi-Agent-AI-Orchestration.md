@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Dwyx8GomVvQ
 title: 'Armchair Architects: Patterns and Best Practices for Multi-Agent AI Orchestration'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2026-01-06 08:00:14 +00:00
 tags:

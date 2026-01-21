@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-18-github-enterprise-cloud-data-residency-in-japan-is-generally-available
 title: GitHub Enterprise Cloud Data Residency Now Available in Japan
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-18 17:00:58 +00:00
 tags:

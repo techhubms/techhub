@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=e-DX_w9Kdps
 title: Azure Networking Innovations for Scalable and Secure Cloud Transformations
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-26 00:46:43 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/how-to-eliminate-devops-toil-using-automation-scripts/
 title: How to Eliminate DevOps Toil Using Automation Scripts
 author: Durojaye Olusegun
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-10 11:59:37 +00:00
 tags:

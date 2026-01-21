@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html
 title: Boost Code Quality Fast with GitHub Copilot Edit Mode
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-08-29 00:00:00 +00:00
 tags:

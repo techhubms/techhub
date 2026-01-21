@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=RbVZNijijpo
 title: Accelerate and Scale Physical AI Development with Simulation
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 10:21:47 +00:00
 tags:

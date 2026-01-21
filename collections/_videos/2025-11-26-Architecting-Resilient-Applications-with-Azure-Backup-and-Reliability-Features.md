@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=UQRAs0k978k
 title: Architecting Resilient Applications with Azure Backup and Reliability Features
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-26 17:47:15 +00:00
 tags:

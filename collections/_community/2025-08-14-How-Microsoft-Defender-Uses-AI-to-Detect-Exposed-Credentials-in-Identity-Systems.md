@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/leaving-the-key-under-the-doormat-how-microsoft-defender-uses-ai/ba-p/4439870
 title: How Microsoft Defender Uses AI to Detect Exposed Credentials in Identity Systems
 author: Tal_Guetta
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-14 14:42:00 +00:00
 tags:

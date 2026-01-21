@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=LPbKU_rs-P0
 title: Modernizing Oracle Workloads with Oracle Database@Azure and Native Azure AI Services
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 11:21:00 +00:00
 tags:

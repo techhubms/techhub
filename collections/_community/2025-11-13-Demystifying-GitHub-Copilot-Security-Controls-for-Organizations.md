@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/demystifying-github-copilot-security-controls-easing-concerns/ba-p/4468193
 title: Demystifying GitHub Copilot Security Controls for Organizations
 author: jorgebalderas
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-13 08:00:00 +00:00
 tags:

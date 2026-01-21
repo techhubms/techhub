@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/introducing-azure-storage-discovery-transform-data-management-with-storage-insights/
 title: 'Introducing Azure Storage Discovery: Enterprise-Wide Insights for Azure Blob Storage'
 author: Aung Oo
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-08-06 15:00:00 +00:00
 tags:

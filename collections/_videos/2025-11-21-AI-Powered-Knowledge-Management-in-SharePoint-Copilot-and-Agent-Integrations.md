@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=uRit_4gcvDM
 title: 'AI-Powered Knowledge Management in SharePoint: Copilot and Agent Integrations'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 14:34:13 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-for-vs-code-january-2026-update/ba-p/4485205
 title: 'AI Toolkit for VS Code: January 2026 Update — Copilot Skills, Foundry Integration, and Dev Enhancements'
 author: junjieli
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-13 08:34:38 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/announcing-model-context-protocol-support-preview-in-azure-ai-foundry-agent-service/
 title: Announcing Model Context Protocol Support in Azure AI Foundry Agent Service (Preview)
 author: Linda Li
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-06-27 22:30:03 +00:00
 tags:

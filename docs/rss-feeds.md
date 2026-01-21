@@ -99,18 +99,13 @@ Content-Type: application/rss+xml; charset=utf-8
 
 - Section pages include an RSS icon link in the page header
 - Footer includes "Subscribe via RSS" link to the everything feed (`/all/feed.xml`)
-- RSS links navigate to the frontend feed URLs (e.g., `/{section}/feed.xml`)
+- RSS links navigate to the frontend feed URLs (e.g., `/{sectionName}/feed.xml`)
 
 ### Feed Architecture
 
-- **Frontend Proxy**: RSS feeds are served from the web frontend at `https://tech.hub.ms/{section}/feed.xml`
+- **Frontend Proxy**: RSS feeds are served from the web frontend at `https://tech.hub.ms/{sectionName}/feed.xml`
 - **Backend API**: The frontend proxies requests to the secured API backend (`/api/rss/*` endpoints)
 - **Same-Origin**: Feeds are served from the same domain as the website for security and simplicity
-
-### Viewing Mode
-
-- Items with `viewingMode: "external"` link to the original source URL
-- Items with `viewingMode: "internal"` link to the Tech Hub detail page
 
 ## Technical Implementation
 

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/vYuuCiAYOP4
 title: Supercharging GitHub Copilot CLI with MCP Server
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-12-03 18:01:15 +00:00
 tags:

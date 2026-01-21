@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-to-enable-ransomware-protection-in-windows-11/
 title: How to Enable Ransomware Protection in Windows 11
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-30 10:50:23 +00:00
 tags:

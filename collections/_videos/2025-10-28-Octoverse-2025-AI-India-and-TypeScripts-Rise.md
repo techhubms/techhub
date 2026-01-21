@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=4-u6dUg6IJk
 title: "Octoverse 2025: AI, India, and TypeScript's Rise"
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-28 16:05:04 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mjgvq3/want_to_make_it_easier_to_get_startedstay_up_to/
 title: 'Discussion: New CLI Tool for .NET SDK Management and Updates'
 author: chusk3
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-06 21:13:04 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/agent-loop-new-set-of-ai-features-arrive-in-public-preview/ba-p/4470764
 title: Agent Loop Expands AI Automation in Azure Logic Apps with New Features
 author: DivSwa
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 18:43:59 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=tyiDMlKXLwU
 title: Building Event-Driven Apps with Fabric Real-Time Intelligence and SQL
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-30 16:01:35 +00:00
 tags:

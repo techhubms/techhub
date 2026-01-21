@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=LdCExagKS4Y
 title: 'AI-assisted Migration: Enhancing Performance on Azure Database for PostgreSQL'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 16:23:57 +00:00
 tags:

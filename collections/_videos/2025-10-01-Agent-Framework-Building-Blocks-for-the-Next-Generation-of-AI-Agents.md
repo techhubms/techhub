@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=AAgdMhftj8w
 title: 'Agent Framework: Building Blocks for the Next Generation of AI Agents'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-01 14:00:15 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/updates/v1_108
 title: 'Visual Studio Code December 2025 Release (v1.108): New Features and Improvements'
 author: Visual Studio Code Team
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2026-01-08 17:00:00 +00:00
 tags:

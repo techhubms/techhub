@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/advancing-data-integration-innovations-in-data-factory-in-ms-fabric-at-ignite-2025/
 title: 'Innovation in Data Factory: Microsoft Fabric Data Integration Features Announced at Ignite 2025'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-18 08:00:00 +00:00
 tags:

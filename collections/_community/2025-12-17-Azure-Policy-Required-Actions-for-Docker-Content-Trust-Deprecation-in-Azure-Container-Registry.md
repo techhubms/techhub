@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-policy-required-actions-for-docker-content-trust/ba-p/4478951
 title: 'Azure Policy: Required Actions for Docker Content Trust Deprecation in Azure Container Registry'
 author: ShannonHicks
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-17 22:36:46 +00:00
 tags:

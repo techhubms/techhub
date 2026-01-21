@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/from-tool-to-teammate.html
 title: 'From Tool to Teammate: Using GitHub Copilot as a Collaborative Partner'
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2026-01-02 00:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=SiF5YDHaw6Y
 title: 'Empowering the SOC: Security Copilot and the Rise of Agentic Defense'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 13:50:45 +00:00
 tags:

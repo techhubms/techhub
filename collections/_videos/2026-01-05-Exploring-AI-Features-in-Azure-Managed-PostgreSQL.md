@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=daDtYv94bN8
 title: Exploring AI Features in Azure Managed PostgreSQL
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2026-01-05 09:39:54 +00:00
 tags:

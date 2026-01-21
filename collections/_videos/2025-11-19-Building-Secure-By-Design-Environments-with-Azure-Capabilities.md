@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=dQz01rHnLW0
 title: Building Secure-By-Design Environments with Azure Capabilities
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 08:05:37 +00:00
 tags:

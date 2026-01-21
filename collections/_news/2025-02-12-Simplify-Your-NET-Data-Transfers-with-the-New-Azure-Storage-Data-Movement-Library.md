@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/azure-sdk/simplify-your-net-data-transfers-with-the-new-azure-storage-data-movement-library/
 title: Simplify Your .NET Data Transfers with the New Azure Storage Data Movement Library
 author: Charles Barnett
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-02-12 17:34:48 +00:00
 tags:

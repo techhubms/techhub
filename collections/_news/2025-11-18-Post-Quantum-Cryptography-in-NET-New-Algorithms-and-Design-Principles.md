@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/post-quantum-cryptography-in-dotnet/
 title: 'Post-Quantum Cryptography in .NET: New Algorithms and Design Principles'
 author: Jeremy Barton
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-11-18 16:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode
 title: Introducing GitHub Copilot Agent Mode (Preview) for VS Code
 author: Isidor Nikolic
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-02-24 00:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-customer-innovation-blog/staying-in-the-flow-sleekflow-and-azure-turn-customer/ba-p/4467945
 title: How SleekFlow Uses Azure and AI to Orchestrate Enterprise Customer Conversations
 author: mtoiba
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-10 17:54:01 +00:00
 tags:

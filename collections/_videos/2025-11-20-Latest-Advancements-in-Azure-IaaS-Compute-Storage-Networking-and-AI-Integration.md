@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=SXLc-pCUpzg
 title: 'Latest Advancements in Azure IaaS: Compute, Storage, Networking, and AI Integration'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 10:13:27 +00:00
 tags:

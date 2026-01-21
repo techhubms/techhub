@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-connected-cache-for/mcc-phantom-install/m-p/4444201#M108
 title: Troubleshooting MCC Phantom Install Issues on Windows Server 2022 with WSL
 author: jjmehren
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-15 13:49:08 +00:00
 tags:

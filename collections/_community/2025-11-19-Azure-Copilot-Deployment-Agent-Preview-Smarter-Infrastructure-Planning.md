@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-deployment-capabilities-preview-in-azure-copilot/ba-p/4471169
 title: 'Azure Copilot Deployment Agent Preview: Smarter Infrastructure Planning'
 author: Marvin_Morales
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-19 00:57:37 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/patch-management-is-essential-for-securing-devops/
 title: Patch Management is Essential for Securing DevOps
 author: Alexander Williams
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-27 11:29:13 +00:00
 tags:

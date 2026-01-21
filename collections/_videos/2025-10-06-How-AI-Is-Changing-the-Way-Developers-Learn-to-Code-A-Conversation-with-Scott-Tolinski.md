@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=q7YLP6e0kXA
 title: 'How AI Is Changing the Way Developers Learn to Code: A Conversation with Scott Tolinski'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-10-06 07:00:50 +00:00
 tags:

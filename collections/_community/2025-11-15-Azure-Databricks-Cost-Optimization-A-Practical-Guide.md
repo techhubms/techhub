@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-cost-optimization-a-practical-guide/ba-p/4470235
 title: 'Azure Databricks Cost Optimization: A Practical Guide'
 author: Rafia_Aqil
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-15 08:01:17 +00:00
 tags:

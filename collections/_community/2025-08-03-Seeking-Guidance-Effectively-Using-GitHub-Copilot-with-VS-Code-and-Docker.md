@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mg6uu8/am_i_using_it_wrong/
 title: 'Seeking Guidance: Effectively Using GitHub Copilot with VS Code and Docker'
 author: MaxellVideocassette
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-03 01:29:08 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/devops/azure-developer-cli-from-dev-to-prod-with-azure-devops-pipelines/
 title: 'Azure Developer CLI: Dev to Production with Azure DevOps Pipelines'
 author: PuiChee (PC) Chan, Kristen Womack
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-08-13 18:29:24 +00:00
 tags:

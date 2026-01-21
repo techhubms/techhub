@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/your-guide-to-azure-compute-at-microsoft-ignite-2025/ba-p/4468633
 title: Your Guide to Azure Compute at Microsoft Ignite 2025
 author: melissahollingshed
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-10 20:41:35 +00:00
 tags:

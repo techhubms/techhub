@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/openapi/welcome-post/
 title: 'Welcome to the OpenAPI Blog: Microsoft’s Hub for API Development, Tools, and Best Practices'
 author: Darrel Miller
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2024-10-01 18:48:35 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/enhance-your-data-protection-strategy-with-azure-elastic-san-s/ba-p/4443607
 title: Enhance Your Data Protection Strategy with Azure Elastic SAN’s Newest Backup Options
 author: adarsh_v
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-18 15:31:44 +00:00
 tags:

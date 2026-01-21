@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2026/01/13/how-microsoft-builds-privacy-and-security-to-work-hand-in-hand/
 title: How Microsoft Unifies Privacy and Security to Build Trust
 author: Terrell Cox
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2026-01-13 17:00:00 +00:00
 tags:

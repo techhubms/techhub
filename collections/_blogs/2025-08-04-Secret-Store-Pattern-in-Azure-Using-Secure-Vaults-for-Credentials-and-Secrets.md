@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/secret-store-pattern-in-azure-using-secure-vaults-for-credentials-and-secrets/
 title: Secret Store Pattern in Azure Using Secure Vaults for Credentials and Secrets
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-04 14:47:40 +00:00
 tags:

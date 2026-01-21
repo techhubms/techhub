@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=gAmgPEj7JoU
 title: How AI Voice Agents Transform Medical Documentation in Real Time
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-04 00:00:52 +00:00
 tags:

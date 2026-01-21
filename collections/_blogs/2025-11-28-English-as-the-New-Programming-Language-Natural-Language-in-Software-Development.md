@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://roadtoalm.com/2025/11/28/english-as-the-new-programming-language/
 title: 'English as the New Programming Language: Natural Language in Software Development'
 author: Rene van Osnabrugge
-viewing_mode: external
 feed_name: René van Osnabrugge's Blog
 date: 2025-11-28 13:27:50 +00:00
 tags:

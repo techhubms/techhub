@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-11-verified-answers-generally-available-in-github-discussions
 title: Verified Answers Launched in GitHub Discussions for Reliable Community Solutions
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-11 20:32:02 +00:00
 tags:

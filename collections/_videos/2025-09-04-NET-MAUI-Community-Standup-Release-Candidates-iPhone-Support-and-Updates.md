@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Y8W56JPCqQo
 title: '.NET MAUI Community Standup: Release Candidates, iPhone Support, and Updates'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-09-04 19:05:16 +00:00
 tags:

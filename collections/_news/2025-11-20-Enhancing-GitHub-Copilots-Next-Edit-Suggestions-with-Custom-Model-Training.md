@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/evolving-github-copilots-next-edit-suggestions-through-custom-model-training/
 title: Enhancing GitHub Copilot’s Next Edit Suggestions with Custom Model Training
 author: Kevin Merchant
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-20 18:02:21 +00:00
 tags:

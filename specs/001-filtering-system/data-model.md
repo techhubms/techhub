@@ -196,9 +196,9 @@ public record TagCloudRequest
     public string? CollectionName { get; init; }
 
     /// <summary>
-    /// Content item identifier (required for Content scope)
+    /// Content item slug (required for Content scope)
     /// </summary>
-    public string? ContentId { get; init; }
+    public string? Slug { get; init; }
 
     /// <summary>
     /// Maximum number of tags to return (default: 20)

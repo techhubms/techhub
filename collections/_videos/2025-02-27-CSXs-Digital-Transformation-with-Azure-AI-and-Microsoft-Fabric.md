@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=e86IqIkxVhU
 title: CSX's Digital Transformation with Azure, AI, and Microsoft Fabric
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-02-27 14:00:47 +00:00
 tags:

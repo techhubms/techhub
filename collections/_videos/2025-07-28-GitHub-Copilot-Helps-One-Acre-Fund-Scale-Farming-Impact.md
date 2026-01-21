@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ol_un2Nam2E
 title: GitHub Copilot Helps One Acre Fund Scale Farming Impact
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-07-28 19:14:13 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=SpEHo-Wwzyg
 title: Secure and Smart AI Agents with Azure Redis in .NET
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-12-10 00:01:01 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/web-development/implementation-smtp-using-mailkit-in-asp-net-core-mvc/m-p/4408125#M657
 title: Implementation SMTP using MailKit in ASP .NET Core MVC
 author: soumyadipmajumder03
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-04-25 20:17:18 +00:00
 tags:

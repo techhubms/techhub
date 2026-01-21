@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=v6GKH_JoGDw
 title: 'Reimagined Microsoft Marketplace: Unified Cloud and AI Solutions'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 17:05:21 +00:00
 tags:

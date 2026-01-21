@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/09/24/ai-vs-ai-detecting-an-ai-obfuscated-phishing-campaign/
 title: AI-Obfuscated Phishing Campaign Detection by Microsoft Threat Intelligence
 author: Microsoft Threat Intelligence
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-09-24 12:00:00 +00:00
 tags:

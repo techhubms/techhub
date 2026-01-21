@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-24-claude-opus-4-5-is-in-public-preview-for-github-copilot
 title: Claude Opus 4.5 Public Preview Launches for GitHub Copilot
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-24 18:12:32 +00:00
 tags:

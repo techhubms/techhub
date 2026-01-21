@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mhhye8/why_do_i_need_to_specify_the_net_version_in/
 title: Why do I need to specify the .Net version in global.json
 author: LondonPilot
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-04 16:19:57 +00:00
 tags:

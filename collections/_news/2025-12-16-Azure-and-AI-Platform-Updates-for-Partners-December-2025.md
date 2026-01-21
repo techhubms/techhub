@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://partner.microsoft.com/en-us/blog/article/azure-updates-december-2025
 title: 'Azure and AI Platform Updates for Partners: December 2025'
 author: Cyril Belikoff
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-12-16 18:23:05 +00:00
 tags:

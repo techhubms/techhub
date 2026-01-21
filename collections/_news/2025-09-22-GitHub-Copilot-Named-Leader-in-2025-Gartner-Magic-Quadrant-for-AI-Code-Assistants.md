@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/gartner-positions-github-as-a-leader-in-the-2025-magic-quadrant-for-ai-code-assistants-for-the-second-year-in-a-row/
 title: GitHub Copilot Named Leader in 2025 Gartner Magic Quadrant for AI Code Assistants
 author: GitHub Staff
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-22 18:24:17 +00:00
 tags:

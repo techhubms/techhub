@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-monthly-forum-recap-november-2025/ba-p/4478127
 title: Azure Arc Monthly Forum Recap – November 2025
 author: yunishussein
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-17 17:55:17 +00:00
 tags:

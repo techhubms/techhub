@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/actioning-agentic-ai-5-ways-to-build-with-news-from-microsoft-ignite-2025/
 title: 'Agentic AI and Cloud Innovation: Key Takeaways from Microsoft Ignite 2025'
 author: Natalie Wossene
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-12-10 17:00:00 +00:00
 tags:

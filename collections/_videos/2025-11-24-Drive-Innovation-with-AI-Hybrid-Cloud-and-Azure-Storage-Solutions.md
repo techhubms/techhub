@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=bJ7Hsg8hxwM
 title: Drive Innovation with AI, Hybrid Cloud, and Azure Storage Solutions
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 14:33:12 +00:00
 tags:

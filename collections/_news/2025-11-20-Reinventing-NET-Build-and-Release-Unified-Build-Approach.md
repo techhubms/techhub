@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/reinventing-how-dotnet-builds-and-ships-again/
 title: 'Reinventing .NET Build and Release: Unified Build Approach'
 author: Matt Mitchell
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-11-20 18:05:00 +00:00
 tags:

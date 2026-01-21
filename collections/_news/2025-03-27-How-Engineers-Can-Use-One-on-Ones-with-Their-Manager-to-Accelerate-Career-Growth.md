@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/developer-skills/career-growth/how-engineers-can-use-one-on-ones-with-their-manager-to-accelerate-career-growth/
 title: How Engineers Can Use One-on-Ones with Their Manager to Accelerate Career Growth
 author: Dalia Abuadas
-viewing_mode: external
 feed_name: GitHub Engineering Blog
 date: 2025-03-27 15:31:22 +00:00
 tags:

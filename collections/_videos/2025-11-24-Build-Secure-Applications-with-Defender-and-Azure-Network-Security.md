@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=fjXZx1HrH2g
 title: Build Secure Applications with Defender and Azure Network Security
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 07:38:59 +00:00
 tags:

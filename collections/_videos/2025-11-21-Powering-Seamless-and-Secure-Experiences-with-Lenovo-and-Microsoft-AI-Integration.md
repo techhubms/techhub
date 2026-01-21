@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=WJdoMr0juZ8
 title: Powering Seamless and Secure Experiences with Lenovo and Microsoft AI Integration
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 12:50:52 +00:00
 tags:

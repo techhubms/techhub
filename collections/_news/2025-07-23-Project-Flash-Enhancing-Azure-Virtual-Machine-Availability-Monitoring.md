@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/project-flash-update-advancing-azure-virtual-machine-availability-monitoring-2/
 title: 'Project Flash: Enhancing Azure Virtual Machine Availability Monitoring'
 author: Mark Russinovich
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-07-23 16:00:00 +00:00
 tags:

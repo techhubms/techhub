@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=SkmluS-xzmM
 title: 'Open Source Friday: Archestra – Secure Platform for Enterprise Agents with MCP'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-14 21:10:06 +00:00
 tags:

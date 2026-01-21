@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-monitoring-coverage-assess-and-improve-your/ba-p/4470752
 title: 'Introducing Monitoring Coverage: Centralized Monitoring Enhancement in Azure Monitor'
 author: Nathan_Mangum
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:00:00 +00:00
 tags:

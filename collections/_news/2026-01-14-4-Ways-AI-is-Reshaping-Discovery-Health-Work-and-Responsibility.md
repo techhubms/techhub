@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/signal/articles/4-ways-ai-is-reshaping-discovery-health-work-and-responsibility/
 title: 4 Ways AI is Reshaping Discovery, Health, Work, and Responsibility
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2026-01-14 17:15:11 +00:00
 tags:

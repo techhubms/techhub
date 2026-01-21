@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/designing-ai-workloads-with-the-azure-well-architected-framework/ba-p/4452252
 title: Designing AI Workloads with the Azure Well-Architected Framework
 author: brauerblogs
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-08 23:35:59 +00:00
 tags:

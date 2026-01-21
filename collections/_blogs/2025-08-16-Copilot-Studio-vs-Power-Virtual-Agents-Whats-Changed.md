@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/copilot-studio-vs-power-virtual-agents-whats-changed/
 title: 'Copilot Studio vs. Power Virtual Agents: What’s Changed?'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-16 08:22:07 +00:00
 tags:

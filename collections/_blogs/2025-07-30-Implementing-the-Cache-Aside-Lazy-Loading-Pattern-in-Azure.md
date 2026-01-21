@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/cache-aside-lazy-loading-load-data-into-a-cache-on-demand-in-azure/
 title: Implementing the Cache-Aside (Lazy Loading) Pattern in Azure
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-07-30 07:42:57 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/research/blog/dion-the-distributed-orthonormal-update-revolution-is-here/
 title: 'Microsoft Releases Dion: A New Scalable Optimizer for Training AI Models'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-14 15:28:24 +00:00
 tags:

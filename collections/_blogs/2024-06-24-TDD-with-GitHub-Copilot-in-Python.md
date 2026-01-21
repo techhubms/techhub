@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://sswart.github.io/post/tdd-python-copilot/
 title: TDD with GitHub Copilot in Python
 author: Jesse Swart Coding Blog
-viewing_mode: external
 feed_name: Jesse Swart's Blog
 date: 2024-06-24 14:06:14 +00:00
 tags:

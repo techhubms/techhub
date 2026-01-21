@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/sP-SQEE7K-Y
 title: 'Introducing Agent HQ: Your Mission Control for AI Agents'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-28 21:17:43 +00:00
 tags:

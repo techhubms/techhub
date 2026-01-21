@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/oL9wOFW4p9o
 title: Explaining the Open Sourcing of Windows Subsystem for Linux (WSL)
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-28 15:39:03 +00:00
 tags:

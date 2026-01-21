@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/supercharge-your-debugging-with-remote-tools-for-microsoft-edge/
 title: Supercharge Your Debugging with Remote Tools for Microsoft Edge
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-01 18:10:17 +00:00
 tags:

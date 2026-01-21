@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/azure-enterprise-scale-landing-zone-building-a-future-ready-cloud-foundation/
 title: 'Building an Azure Enterprise-Scale Landing Zone: Foundation for Cloud Governance'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-12 08:10:44 +00:00
 tags:

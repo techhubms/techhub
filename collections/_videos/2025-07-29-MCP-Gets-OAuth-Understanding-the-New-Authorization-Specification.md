@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=EXxIeOfJsqA
 title: 'MCP Gets OAuth: Understanding the New Authorization Specification'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-07-29 22:42:02 +00:00
 tags:

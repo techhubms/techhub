@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=t3Y3Kg4BU3w
 title: Securely Unleashing AI Agents on Azure SQL and SQL Server
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-12-10 00:00:56 +00:00
 tags:

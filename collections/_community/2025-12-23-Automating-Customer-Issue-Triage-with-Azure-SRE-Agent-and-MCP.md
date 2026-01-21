@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/extend-sre-agent-with-mcp-build-an-agentic-workflow-to-triage/ba-p/4480710
 title: Automating Customer Issue Triage with Azure SRE Agent and MCP
 author: dchelupati
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-23 22:08:48 +00:00
 tags:

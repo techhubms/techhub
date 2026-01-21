@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk66by/openai_gpt5_is_now_in_public_preview_for_github/
 title: OpenAI GPT-5 Public Preview Announcement for GitHub Copilot
 author: fishchar
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-07 17:22:08 +00:00
 tags:

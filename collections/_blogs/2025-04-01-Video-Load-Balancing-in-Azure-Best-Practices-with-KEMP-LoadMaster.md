@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/04/video-load-balancing-in-azure/
 title: 'Video: Load Balancing in Azure – Best Practices with KEMP LoadMaster'
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-04-01 12:18:55 +00:00
 tags:

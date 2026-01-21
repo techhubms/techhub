@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=UB6QNYKStVI
 title: 'Upcoming Features and Terminal Improvements in Visual Studio Code: August Iteration'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-08-25 07:00:26 +00:00
 tags:

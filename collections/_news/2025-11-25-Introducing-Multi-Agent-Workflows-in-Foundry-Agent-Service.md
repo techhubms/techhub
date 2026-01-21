@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/introducing-multi-agent-workflows-in-foundry-agent-service/
 title: Introducing Multi-Agent Workflows in Foundry Agent Service
 author: Mona Whalin
-viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
 date: 2025-11-25 16:00:37 +00:00
 tags:

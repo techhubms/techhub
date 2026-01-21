@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/blog/microsoftsecurityexperts/charting-the-future-of-soc-human-and-ai-collaboration-for-better-security/4470688
 title: 'Charting the Future of SOC: Human and AI Collaboration for Better Security'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-25 18:53:09 +00:00
 tags:

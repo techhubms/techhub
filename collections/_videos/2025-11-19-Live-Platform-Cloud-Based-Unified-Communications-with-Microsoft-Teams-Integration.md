@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=P1BLUYik7SM
 title: 'Live Platform: Cloud-Based Unified Communications with Microsoft Teams Integration'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 12:23:59 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-security-community/announcing-a-new-microsoft-security-virtual-training-day/ba-p/4440347
 title: 'Announcing Microsoft Defender for Cloud: Virtual Training Day on Cloud Security'
 author: ShirleyseHaley
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-08 19:50:59 +00:00
 tags:

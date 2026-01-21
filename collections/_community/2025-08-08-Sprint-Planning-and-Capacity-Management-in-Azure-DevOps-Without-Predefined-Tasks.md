@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/azuredevops/comments/1mks3po/planning_without_tasks/
 title: Sprint Planning and Capacity Management in Azure DevOps Without Predefined Tasks
 author: TimePerfect8403
-viewing_mode: external
 feed_name: Reddit Azure DevOps
 date: 2025-08-08 10:59:17 +00:00
 tags:

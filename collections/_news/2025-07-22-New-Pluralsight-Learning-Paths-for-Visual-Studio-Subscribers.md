@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/vss-pluralsight-2025-2/
 title: New Pluralsight Learning Paths for Visual Studio Subscribers
 author: Jim Harrer
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-07-22 14:00:40 +00:00
 tags:

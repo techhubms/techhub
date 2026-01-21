@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/devops/the-new-test-run-hub-is-going-generally-available/
 title: The New Test Run Hub in Azure Test Plans Reaches General Availability
 author: Panagiotis Liaros
-viewing_mode: external
 feed_name: Microsoft DevOps Blog
 date: 2025-12-22 13:06:01 +00:00
 tags:

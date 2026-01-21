@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=0jEzUhU8bLc
 title: 'Your codebase, your rules: Customizing Copilot with context engineering'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-12 15:00:02 +00:00
 tags:

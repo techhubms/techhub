@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=6Gp21z39nQU
 title: 'Maximizing Microsoft Purview Data Security Solutions: Best Practices and Implementation Stories'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 15:19:45 +00:00
 tags:

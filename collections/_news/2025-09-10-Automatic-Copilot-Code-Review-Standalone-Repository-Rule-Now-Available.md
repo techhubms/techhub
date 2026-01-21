@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-10-copilot-code-review-independent-repository-rule-for-automatic-reviews
 title: 'Automatic Copilot Code Review: Standalone Repository Rule Now Available'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-10 20:08:07 +00:00
 tags:

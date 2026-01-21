@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mkscyx/can_i_deploy_an_agent_made_in_azure_foundry_ai/
 title: Deploying Azure Foundry AI Agents via API for Web Integration
 author: Luisio93
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-08 11:12:45 +00:00
 tags:

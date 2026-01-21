@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=-LSrJtikrh8
 title: 'Microsoft Agent 365: Managing AI Agents with Enterprise Controls'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 07:08:08 +00:00
 tags:

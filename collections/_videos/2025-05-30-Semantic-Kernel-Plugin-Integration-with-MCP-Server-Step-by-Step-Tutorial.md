@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=r2Wg6xIwIvo
 title: 'Semantic Kernel Plugin Integration with MCP Server: Step-by-Step Tutorial'
 author: Learn Microsoft AI
-viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
 date: 2025-05-30 07:07:03 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/blogs/2024/12/18/free-github-copilot
 title: Free GitHub Copilot Plan Now Available for Visual Studio Code
 author: Burke Holland
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2024-12-18 00:00:00 +00:00
 tags:

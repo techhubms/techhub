@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=c5RGwxxUYGE
 title: Modernizing and Upgrading Your .NET Apps with Visual Studio and Copilot-Powered AI Tools
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-08-14 14:32:40 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=JAHevcsT7pQ
 title: 'The Future of Integration: Agentic Workflows and AI-Driven Patterns with Azure Logic Apps'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 07:27:04 +00:00
 tags:

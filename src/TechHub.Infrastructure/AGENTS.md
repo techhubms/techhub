@@ -133,33 +133,14 @@ TechHub.Infrastructure/
 
 ### Memory Cache Pattern
 
-```csharp
-// Check cache first
-if (_cache.TryGetValue(cacheKey, out T? cached))
-{
-    _logger.LogDebug("Cache hit for key: {CacheKey}", cacheKey);
-    return cached!;
-}
+**Check-Load-Store Pattern**:
 
-// Load from source
-_logger.LogDebug("Cache miss for key: {CacheKey}", cacheKey);
-var data = await LoadDataAsync(ct);
-
-// Store in cache with expiration
-_cache.Set(cacheKey, data, TimeSpan.FromMinutes(30));
-
-return data;
-```
+1. Check cache with `_cache.TryGetValue(cacheKey, out T? cached)`
+2. If miss, load data from source
+3. Store in cache with `_cache.Set(cacheKey, data, TimeSpan.FromMinutes(30))`
+4. Log cache hits/misses for monitoring
 
 ### Cache Invalidation
-
-```csharp
-public void InvalidateCache()
-{
-    _cache.Remove(AllContentCacheKey);
-    _logger.LogInformation("Content cache invalidated");
-}
-```
 
 **When to invalidate**:
 
@@ -167,57 +148,33 @@ public void InvalidateCache()
 - Configuration updates
 - Administrative actions
 
+**See**: [Repositories/FileBasedContentRepository.cs](Repositories/FileBasedContentRepository.cs) for complete caching implementation
+
 ## Service Lifetimes
 
-**Register in Program.cs**:
+**Registration Pattern**:
 
-```csharp
-// Singleton - stateless, cache internally
-builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>();
-builder.Services.AddSingleton<IContentRepository, FileBasedContentRepository>();
-builder.Services.AddSingleton<IMarkdownService, MarkdownService>();
-builder.Services.AddSingleton<ITagMatchingService, TagMatchingService>();
-builder.Services.AddSingleton<ITagCloudService, TagCloudService>();
+- **Singleton**: Stateless services that cache internally (repositories, markdown service, tag services)
+- **Scoped**: Per-request services (RSS service)
+- **Built-in**: `AddMemoryCache()`, `AddSingleton(TimeProvider.System)`
 
-// Scoped - per-request generation
-builder.Services.AddScoped<IRssService, RssService>();
-
-// Built-in services
-builder.Services.AddMemoryCache();
-builder.Services.AddSingleton(TimeProvider.System);
-```
+**See**: [Program.cs](../TechHub.Api/Program.cs) service registration section
 
 ## Error Handling
 
 **Always log errors and handle gracefully**:
 
-```csharp
-try
-{
-    var content = await _markdownService.ProcessMarkdownFileAsync(filePath, collection, ct);
-    if (content is not null)
-    {
-        items.Add(content);
-    }
-}
-catch (IOException ex)
-{
-    _logger.LogError(ex, "I/O error reading file: {FilePath}", filePath);
-    // Continue processing other files
-}
-catch (YamlException ex)
-{
-    _logger.LogError(ex, "Invalid YAML frontmatter in file: {FilePath}", filePath);
-    // Continue processing other files
-}
-catch (Exception ex)
-{
-    _logger.LogError(ex, "Unexpected error processing file: {FilePath}", filePath);
-    // Continue processing other files
-}
-```
+**Error Handling Pattern**:
+
+- Wrap file operations in try-catch blocks
+- Catch specific exceptions (`IOException`, `YamlException`)
+- Log with context (file path, error details)
+- Continue processing other files (don't let one bad file crash system)
+- Use catch-all for unexpected errors
 
 **Principle**: One bad file should not crash the entire system. Log the error and continue.
+
+**See**: [Services/MarkdownService.cs](Services/MarkdownService.cs) file processing loop for error handling pattern
 
 ## Testing
 

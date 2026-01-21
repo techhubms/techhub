@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-1-exploring-the-dotnet-run-app.cs/
 title: Exploring Single-File .NET Apps with dotnet run app.cs in .NET 10 Preview
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2025-07-01 10:00:00 +00:00
 tags:

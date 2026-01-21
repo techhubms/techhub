@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/env-zero-revamps-infrastructure-automation-platform-for-ai-era/
 title: env zero Revamps Infrastructure Automation Platform for AI Era
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-30 14:06:39 +00:00
 tags:

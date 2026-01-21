@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-25-code-scanning-default-setup-bypasses-github-actions-policy-blocks
 title: GitHub Code Scanning Default Setup Bypasses Restrictive Actions Policies
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-25 16:09:17 +00:00
 tags:

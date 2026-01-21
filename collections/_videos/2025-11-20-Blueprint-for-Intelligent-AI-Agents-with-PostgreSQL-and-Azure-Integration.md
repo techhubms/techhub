@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=LD0Emp7Gr40
 title: Blueprint for Intelligent AI Agents with PostgreSQL and Azure Integration
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 16:01:00 +00:00
 tags:

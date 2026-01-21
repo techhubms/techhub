@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/m6XBVRXfFN8
 title: MCP with Azure and GitHub
 author: Rob Bos
 date: 2025-04-26 20:44:28 +00:00
-viewing_mode: internal
 ghes_support: true
 plans:
 - Free

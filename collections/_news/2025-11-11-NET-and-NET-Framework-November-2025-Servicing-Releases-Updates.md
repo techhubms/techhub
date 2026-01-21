@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-november-2025-servicing-updates/
 title: .NET and .NET Framework November 2025 Servicing Releases Updates
 author: Tara Overfield, Victor Israel-Bolarinwa
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-11-11 15:30:00 +00:00
 tags:

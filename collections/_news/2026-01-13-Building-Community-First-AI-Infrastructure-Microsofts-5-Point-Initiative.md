@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/on-the-issues/2026/01/13/community-first-ai-infrastructure/
 title: 'Building Community-First AI Infrastructure: Microsoft’s 5-Point Initiative'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2026-01-13 16:47:51 +00:00
 tags:

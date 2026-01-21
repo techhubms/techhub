@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=janSWREvB3U
 title: 'How AI and Microsoft Are Transforming the Energy Sector: Insights from EPRI'
 author: Microsoft Cloud
-viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
 date: 2025-06-24 15:01:15 +00:00
 tags:

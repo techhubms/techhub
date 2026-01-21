@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=S9GZWSNOPK8
 title: Behind the Scenes of VS Code’s Planning Agent
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-11-03 08:00:35 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-03-assign-issues-to-copilot-using-the-api
 title: Assign Issues to GitHub Copilot Using the API
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-03 19:21:25 +00:00
 tags:

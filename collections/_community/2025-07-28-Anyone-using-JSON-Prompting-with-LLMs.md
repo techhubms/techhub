@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mb7lpn/anyone_using_json_prompting_with_llms/
 title: Anyone using JSON Prompting with LLMs?
 author: Abhishekmiz
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-07-28 05:12:26 +00:00
 tags:

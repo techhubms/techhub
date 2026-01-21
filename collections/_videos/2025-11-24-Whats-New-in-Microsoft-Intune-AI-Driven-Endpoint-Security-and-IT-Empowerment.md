@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=fotUEeeC_H0
 title: "What's New in Microsoft Intune: AI-Driven Endpoint Security and IT Empowerment"
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 04:55:05 +00:00
 tags:

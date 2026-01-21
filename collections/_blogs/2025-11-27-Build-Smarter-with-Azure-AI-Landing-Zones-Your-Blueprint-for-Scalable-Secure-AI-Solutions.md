@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/11/__trashed/
 title: 'Build Smarter with Azure AI Landing Zones: Your Blueprint for Scalable, Secure AI Solutions'
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-11-27 18:21:50 +00:00
 tags:

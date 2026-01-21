@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/before-you-go-agentic-top-guardrails-to-safely-deploy-ai-agents-in-observability/
 title: 'Before You Deploy AI Agents in Observability: Nine Key Guardrails for Safety'
 author: Pankaj Thakkar
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-23 07:00:21 +00:00
 tags:

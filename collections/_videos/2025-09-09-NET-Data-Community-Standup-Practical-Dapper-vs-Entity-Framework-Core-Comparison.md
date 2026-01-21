@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ppaf8CZjRkI
 title: '.NET Data Community Standup: Practical Dapper vs Entity Framework Core Comparison'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-09-09 17:07:40 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faster-python-on-azure-functions-with-uvloop/ba-p/4455323
 title: Boosting Python Performance on Azure Functions with uvloop
 author: eroman
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-01 21:11:10 +00:00
 tags:

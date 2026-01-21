@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-26-secret-scanning-adds-10-new-validators-including-square-wakatime-and-yandex
 title: GitHub Secret Scanning Expands with New Validators and Validity Checks
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-26 17:49:15 +00:00
 tags:

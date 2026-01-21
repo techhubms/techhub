@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/KgY5OQqMGms
 title: 'Exploring GitHub Copilot Coding Agent: Beyond Code Suggestions'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-30 18:08:46 +00:00
 tags:

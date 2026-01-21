@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=LafpndhNC_E
 title: Tackling Your Tech Debt with Copilot Coding Agent
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-15 14:12:13 +00:00
 tags:

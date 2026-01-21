@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=DKEo7LqpVAM
 title: From Zero to Kubernetes with AKS Automatic
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 15:40:19 +00:00
 tags:

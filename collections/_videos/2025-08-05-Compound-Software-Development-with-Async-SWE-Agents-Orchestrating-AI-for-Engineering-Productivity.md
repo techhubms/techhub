@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=A3YdGa95rrQ
 title: 'Compound Software Development with Async SWE Agents: Orchestrating AI for Engineering Productivity'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-05 15:02:29 +00:00
 tags:

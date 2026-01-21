@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=W4Zik7qcnz0
 title: Rubber Duck Thursday - Building an App with GitHub Copilot Agent Mode for the Competition
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub's Youtube channel
 date: 2025-07-25 07:09:39 +00:00
 tags:

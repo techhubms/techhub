@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mbrt66/azure_tag_best_practice/
 title: 'Azure Tag Best Practice: Staging Tags Before Server Onboarding'
 author: jyoungii
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-07-28 20:43:49 +00:00
 tags:

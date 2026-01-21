@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/avoiding-sharepoint-sprawl-without-killing-collaboration/
 title: Avoiding SharePoint Sprawl Without Killing Collaboration
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-04 13:53:43 +00:00
 tags:

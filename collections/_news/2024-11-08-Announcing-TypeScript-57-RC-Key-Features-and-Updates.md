@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7-rc/
 title: 'Announcing TypeScript 5.7 RC: Key Features and Updates'
 author: Daniel Rosenwasser
-viewing_mode: external
 feed_name: Microsoft TypeScript Blog
 date: 2024-11-08 21:01:44 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-30-premium-requests-analytics-page-is-now-generally-available
 title: 'Premium Requests Analytics Dashboard for GitHub Copilot: General Availability'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-30 18:05:46 +00:00
 tags:

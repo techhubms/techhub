@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=km1bLnw_zm4
 title: 'ASP.NET Community Standup: .NET 10 WebAssembly Performance Enhancements'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-09-15 17:03:05 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=VmPz_PIeAuc
 title: 'Azure Updates: Key Announcements for July 2025'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-07-04 14:16:55 +00:00
 tags:

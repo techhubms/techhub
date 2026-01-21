@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html
 title: Draft Smarter Regex Without the Headaches
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-09-05 00:00:00 +00:00
 tags:

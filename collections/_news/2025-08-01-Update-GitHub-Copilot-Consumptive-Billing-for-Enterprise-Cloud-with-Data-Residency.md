@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-01-update-on-github-copilot-consumptive-billing-for-github-enterprise-cloud-with-data-residency
 title: 'Update: GitHub Copilot Consumptive Billing for Enterprise Cloud with Data Residency'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-01 16:08:03 +00:00
 tags:

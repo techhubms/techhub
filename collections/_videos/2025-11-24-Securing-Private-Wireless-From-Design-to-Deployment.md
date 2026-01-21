@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=SI6P5ljakrw
 title: 'Securing Private Wireless: From Design to Deployment'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 07:17:15 +00:00
 tags:

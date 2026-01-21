@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/t74rlukNevM
 title: Local In-Editor Code Reviews
 author: Randy Pagels
 date: 2024-12-16 22:13:51 +00:00
-viewing_mode: internal
 ghes_support: false
 plans:
 - Pro

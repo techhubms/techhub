@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-advanced-kubernetes-troubleshooting-agent/ba-p/4471066
 title: Azure Copilot Adds Advanced Kubernetes Troubleshooting Agents for AKS
 author: Samantha_Fernandez
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 19:20:27 +00:00
 tags:

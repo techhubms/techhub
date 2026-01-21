@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/treat-your-ai-prompts-like-code.html
 title: Treat Your AI Prompts Like Code
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-10-17 00:00:00 +00:00
 tags:

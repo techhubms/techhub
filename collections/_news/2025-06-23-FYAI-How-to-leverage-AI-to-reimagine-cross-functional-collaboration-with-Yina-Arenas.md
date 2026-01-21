@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/06/23/fyai-how-to-leverage-ai-to-reimagine-cross-functional-collaboration-with-yina-arenas/
 title: 'FYAI: How to leverage AI to reimagine cross-functional collaboration with Yina Arenas'
 author: Toby Bowers
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-06-23 21:10:28 +00:00
 tags:

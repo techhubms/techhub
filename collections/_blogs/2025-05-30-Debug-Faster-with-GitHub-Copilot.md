@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/debug-faster-with-github-copilot.html
 title: Debug Faster with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-05-30 00:00:00 +00:00
 tags:

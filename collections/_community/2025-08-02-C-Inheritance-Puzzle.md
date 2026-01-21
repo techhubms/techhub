@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mfzryw/c_inheritance_puzzle/
 title: C# Inheritance Puzzle
 author: calorap99
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-02 20:00:17 +00:00
 tags:

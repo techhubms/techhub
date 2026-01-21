@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/github-copilot-for-python-real-world-coding-scenarios-practical-examples/
 title: 'GitHub Copilot for Python: Real-World Coding Scenarios and Practical Examples'
 author: John Edward
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-28 17:38:36 +00:00
 tags:

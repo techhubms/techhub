@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Ra8_emjhRD0
 title: How Sitecore Built a Scalable Isolated SaaS Platform on Azure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 15:44:34 +00:00
 tags:

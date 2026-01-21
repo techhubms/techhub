@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/azure-for-beginners-how-to-launch-your-first-cloud-project-in-30-minutes/
 title: 'Azure for Beginners: How to Launch Your First Cloud Project in 30 Minutes'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-17 10:07:13 +00:00
 tags:

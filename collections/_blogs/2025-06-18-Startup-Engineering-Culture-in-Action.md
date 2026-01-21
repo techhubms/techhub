@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://roadtoalm.com/2025/06/18/startup-engineering-culture-in-action/
 title: Startup Engineering Culture in Action
 author: Rene van Osnabrugge
-viewing_mode: external
 feed_name: René van Osnabrugge's Blog
 date: 2025-06-18 07:18:00 +00:00
 tags:

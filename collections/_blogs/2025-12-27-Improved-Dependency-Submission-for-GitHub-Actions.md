@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://jessehouwing.net/github-actions-improved-dependency-submission/
 title: Improved Dependency Submission for GitHub Actions
 author: Jesse Houwing
-viewing_mode: external
 feed_name: Jesse Houwing's Blog
 date: 2025-12-27 18:47:09 +00:00
 tags:

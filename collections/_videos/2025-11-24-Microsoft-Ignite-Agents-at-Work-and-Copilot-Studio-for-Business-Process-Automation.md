@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=_rfg-YKhDVE
 title: 'Microsoft Ignite: Agents at Work and Copilot Studio for Business Process Automation'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 12:54:49 +00:00
 tags:

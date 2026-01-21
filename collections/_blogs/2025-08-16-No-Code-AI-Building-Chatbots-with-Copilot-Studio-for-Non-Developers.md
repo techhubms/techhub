@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/no-code-ai-how-non-developers-can-build-smart-chatbots-with-copilot-studio/
 title: 'No-Code AI: Building Chatbots with Copilot Studio for Non-Developers'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-16 08:46:54 +00:00
 tags:

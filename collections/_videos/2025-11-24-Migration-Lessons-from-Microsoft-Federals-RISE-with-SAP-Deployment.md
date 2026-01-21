@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=bhN_v449nVM
 title: Migration Lessons from Microsoft Federal's RISE with SAP Deployment
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 07:28:33 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=V_sIYwc9Tvs
 title: Understanding Agentic Development for .NET Developers
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-12 19:18:19 +00:00
 tags:

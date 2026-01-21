@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-10-github-enterprise-server-3-19-is-now-generally-available
 title: GitHub Enterprise Server 3.19 Release Highlights
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-10 16:20:41 +00:00
 tags:

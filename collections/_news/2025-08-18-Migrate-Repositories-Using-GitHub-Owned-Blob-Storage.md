@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-18-migrate-repositories-with-github-owned-blob-storage
 title: Migrate Repositories Using GitHub-Owned Blob Storage
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-18 17:35:15 +00:00
 tags:

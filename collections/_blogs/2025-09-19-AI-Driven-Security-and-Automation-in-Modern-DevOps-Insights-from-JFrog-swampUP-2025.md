@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/empowering-secure-agentic-software-delivery/
 title: 'AI-Driven Security and Automation in Modern DevOps: Insights from JFrog swampUP 2025'
 author: Alan Shimel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-19 14:51:16 +00:00
 tags:

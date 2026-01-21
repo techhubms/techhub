@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=kSElHY8MWwc
 title: Context Engineering for Java Ecosystem
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-31 16:01:27 +00:00
 tags:

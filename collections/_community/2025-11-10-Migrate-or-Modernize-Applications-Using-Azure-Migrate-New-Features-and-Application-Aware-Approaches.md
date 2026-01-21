@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-or-modernize-your-applications-using-azure-migrate/ba-p/4468587
 title: 'Migrate or Modernize Applications Using Azure Migrate: New Features and Application-Aware Approaches'
 author: Shikher
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-10 16:03:15 +00:00
 tags:

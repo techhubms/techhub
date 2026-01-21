@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mfyx6o/netloom_my_new_wpf_c_project/
 title: NetLoom - my new WPF C# network analyzer project
 author: Rywent
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-02 19:23:25 +00:00
 tags:

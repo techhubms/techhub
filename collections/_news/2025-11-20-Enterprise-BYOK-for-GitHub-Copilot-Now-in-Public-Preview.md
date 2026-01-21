@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-20-enterprise-bring-your-own-key-byok-for-github-copilot-is-now-in-public-preview
 title: Enterprise BYOK for GitHub Copilot Now in Public Preview
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-20 15:46:54 +00:00
 tags:

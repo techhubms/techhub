@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/secure-by-design-secure-by-default/
 title: "Why 'Shift Left' Alone Isn't Enough: Embedding Security Across Software Delivery"
 author: Julian Browne
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-14 11:31:30 +00:00
 tags:

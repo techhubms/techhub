@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-more-file-formats-with-enhancements/
 title: 'Simplifying Data Ingestion with Copy Job: Enhanced File Format Support in Microsoft Fabric Data Factory'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-10-29 11:00:00 +00:00
 tags:

@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/zZI34xmoWbw
 title: GPT-4o Copilot Suggestions Model
 author: Fokko Veegens
 date: 2025-04-09 09:32:20 +00:00
-viewing_mode: internal
 ghes_support: true
 plans:
 - Free

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/nuget-mcp-server-preview/
 title: 'Announcing the NuGet MCP Server Preview: Real-Time NuGet Package Management with AI Integration'
 author: Jeff Kluge
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-08-14 17:00:00 +00:00
 tags:

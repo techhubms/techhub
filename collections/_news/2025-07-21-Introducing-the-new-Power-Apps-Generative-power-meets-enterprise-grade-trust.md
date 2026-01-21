@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/power-platform/blog/power-apps/introducing-the-new-power-apps-generative-power-meets-enterprise-grade-trust/
 title: Introducing the new Power Apps - Generative power meets enterprise-grade trust
 author: stclarke
 feed_name: Microsoft News
 date: 2025-07-21 16:52:37 +00:00
-viewing_mode: external
 tags:
 - AI Integration
 - Automation

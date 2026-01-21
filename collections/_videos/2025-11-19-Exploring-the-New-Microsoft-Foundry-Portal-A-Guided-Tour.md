@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=BpOAxKzvrPA
 title: 'Exploring the New Microsoft Foundry Portal: A Guided Tour'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-19 23:05:48 +00:00
 tags:

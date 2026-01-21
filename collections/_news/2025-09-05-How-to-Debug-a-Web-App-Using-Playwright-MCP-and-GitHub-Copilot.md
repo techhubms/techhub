@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-to-debug-a-web-app-with-playwright-mcp-and-github-copilot/
 title: How to Debug a Web App Using Playwright MCP and GitHub Copilot
 author: Christopher Harrison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-05 16:00:00 +00:00
 tags:

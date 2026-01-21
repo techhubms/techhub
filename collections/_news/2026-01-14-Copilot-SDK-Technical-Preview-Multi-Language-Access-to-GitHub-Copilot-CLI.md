@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2026-01-14-copilot-sdk-in-technical-preview
 title: 'Copilot SDK Technical Preview: Multi-Language Access to GitHub Copilot CLI'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2026-01-14 23:00:28 +00:00
 tags:

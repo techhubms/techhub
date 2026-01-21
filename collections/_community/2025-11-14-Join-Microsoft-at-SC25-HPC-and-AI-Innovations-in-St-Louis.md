@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/join-microsoft-sc25-experience-hpc-and-ai-innovation/ba-p/4467935
 title: 'Join Microsoft at SC25: HPC and AI Innovations in St. Louis'
 author: Fernando_Aznar
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-14 20:46:40 +00:00
 tags:

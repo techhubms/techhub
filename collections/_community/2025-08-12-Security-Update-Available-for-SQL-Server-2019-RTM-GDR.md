@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/sql-server-blog/security-update-for-sql-server-2019-rtm-gdr/ba-p/4441689
 title: Security Update Available for SQL Server 2019 RTM GDR
 author: HarveyMoraSQL
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-12 21:35:08 +00:00
 tags:

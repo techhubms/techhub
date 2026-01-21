@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/typescript-7-native-preview-in-visual-studio-2026
 title: TypeScript 7 Native Preview Now Available in Visual Studio 2026 Insiders
 author: Sayed Ibrahim Hashimi
-viewing_mode: external
 feed_name: Microsoft Blog
 date: 2025-09-30 16:04:20 +00:00
 tags:

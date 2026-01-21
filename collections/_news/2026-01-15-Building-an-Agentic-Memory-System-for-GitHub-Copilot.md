@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/building-an-agentic-memory-system-for-github-copilot/
 title: Building an Agentic Memory System for GitHub Copilot
 author: Tiferet Gazit
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2026-01-15 21:31:10 +00:00
 tags:

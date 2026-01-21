@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-23-agents-page-set-the-base-branch-for-github-copilot-coding-agent-tasks
 title: 'Agents Page Update: Choose Base Branch for GitHub Copilot Coding Agent Tasks'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-23 16:12:28 +00:00
 tags:

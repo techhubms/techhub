@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/xf6i-eOnQE4
 title: Model selection
 author: Liuba Gonta
 date: 2025-07-16 12:45:13 +00:00
-viewing_mode: internal
 ghes_support: true
 plans:
 - Free

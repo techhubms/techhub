@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/how-graph-intelligence-is-transforming-software-supply-chain-visibility/
 title: How Graph Intelligence Is Transforming Software Supply Chain Visibility
 author: Alan Shimel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-06 17:37:15 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-package-previews-graduations-deprecations/
 title: 'Semantic Kernel: Package Previews, Graduations & Deprecations'
 author: Sophia Lagerkrans-Pandey, Sergey Menshykh
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-05-16 08:32:47 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dalec-declarative-package-and-container-builds/ba-p/4465290
 title: 'Dalec: Declarative Linux Package and Container Builds with Azure Linux and Docker BuildKit'
 author: SertacOzercan
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-29 20:33:52 +00:00
 tags:

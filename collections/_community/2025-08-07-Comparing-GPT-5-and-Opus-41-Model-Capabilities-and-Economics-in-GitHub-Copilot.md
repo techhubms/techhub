@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk8f03/gpt5_only_matches_opus_41/
 title: Comparing GPT-5 and Opus 4.1 Model Capabilities and Economics in GitHub Copilot
 author: fishchar
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-07 18:46:10 +00:00
 tags:

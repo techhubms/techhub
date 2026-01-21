@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=tcufxS5p1RM
 title: 'Secure Your AI Agents with Microsoft Defender: Best Practices from Ignite 2025'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 14:59:32 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=4SA8Iu5su6c
 title: From Legacy to Modern .NET on Azure with Visual Studio 2026, Azure App Service, and GitHub Copilot
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 10:37:23 +00:00
 tags:

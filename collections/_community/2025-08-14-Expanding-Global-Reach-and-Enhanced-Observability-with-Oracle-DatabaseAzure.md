@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/expanding-global-reach-and-enhancing-observability-with-oracle/ba-p/4443650
 title: Expanding Global Reach and Enhanced Observability with Oracle Database@Azure
 author: bhbandam
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-14 22:42:37 +00:00
 tags:

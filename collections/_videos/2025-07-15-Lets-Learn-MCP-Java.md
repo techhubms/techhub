@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=xek__V_Dt84
 title: "Let's Learn MCP: Java"
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-07-15 17:28:28 +00:00
 tags:

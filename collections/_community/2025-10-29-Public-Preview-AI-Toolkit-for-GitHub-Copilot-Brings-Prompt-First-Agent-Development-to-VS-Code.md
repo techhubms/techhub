@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/announcing-public-preview-ai-toolkit-for-github-copilot-prompt/ba-p/4465069
 title: 'Public Preview: AI Toolkit for GitHub Copilot Brings Prompt-First Agent Development to VS Code'
 author: Lee_Stott
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-29 17:48:03 +00:00
 tags:

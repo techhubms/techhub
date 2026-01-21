@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/12/11/imposter-for-hire-how-fake-people-can-gain-very-real-access/
 title: 'Imposter for Hire: How Fake Employees Breach Security'
 author: Microsoft Incident Response
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-12-11 17:00:00 +00:00
 tags:

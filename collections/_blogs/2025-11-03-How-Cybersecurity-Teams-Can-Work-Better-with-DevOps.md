@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/how-cybersecurity-teams-can-work-better-with-devops/
 title: How Cybersecurity Teams Can Work Better with DevOps
 author: Samuel Ogbonna
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-11-03 19:50:57 +00:00
 tags:

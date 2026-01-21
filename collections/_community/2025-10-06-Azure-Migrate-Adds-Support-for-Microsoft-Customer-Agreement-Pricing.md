@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/empower-your-migration-decisions-with-negotiated-agreements-ea/ba-p/4459425
 title: Azure Migrate Adds Support for Microsoft Customer Agreement Pricing
 author: ankitsurkar
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-06 16:19:44 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.stevejgordon.co.uk/a-brief-introduction-to-the-dotnet-muxer
 title: A Brief Introduction to the .NET Muxer (aka dotnet.exe)
 author: Steve Gordon
-viewing_mode: external
 feed_name: Steve Gordon's Blog
 date: 2024-10-25 08:57:43 +00:00
 tags:

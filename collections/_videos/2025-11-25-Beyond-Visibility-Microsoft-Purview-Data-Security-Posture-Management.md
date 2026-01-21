@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=MqNgGkXJ5bc
 title: 'Beyond Visibility: Microsoft Purview Data Security Posture Management'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 18:09:25 +00:00
 tags:

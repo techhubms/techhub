@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=LZIRB-gu-gE
 title: Blueprint for Building the SOC of the Future
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 14:27:33 +00:00
 tags:

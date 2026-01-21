@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/0F8tFJncsxQ
 title: 7 Essential Git Concepts Every Beginner Needs to Know
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-09-11 14:00:01 +00:00
 tags:

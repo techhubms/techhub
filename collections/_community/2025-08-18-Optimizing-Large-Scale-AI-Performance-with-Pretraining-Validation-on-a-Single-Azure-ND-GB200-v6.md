@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimizing-large-scale-ai-performance-with-pretraining/ba-p/4445273
 title: Optimizing Large-Scale AI Performance with Pretraining Validation on a Single Azure ND GB200 v6
 author: HugoAffaticati
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-18 22:45:01 +00:00
 tags:

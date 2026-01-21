@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/generating-classes-with-custom-naming-conventions-using-github/ba-p/4444837
 title: Generating Classes with Custom Naming Conventions Using GitHub Copilot and a Custom MCP Server
 author: daisami
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-19 16:26:20 +00:00
 tags:

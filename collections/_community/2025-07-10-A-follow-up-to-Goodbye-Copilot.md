@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1lwecec/a_followup_to_goodbye_copilot/
 title: A follow-up to 'Goodbye Copilot!'...
 author: UsualResult
 feed_name: Reddit Github Copilot
 date: 2025-07-10 14:36:36 +00:00
-viewing_mode: external
 tags:
 - AI Models
 - Code Completion

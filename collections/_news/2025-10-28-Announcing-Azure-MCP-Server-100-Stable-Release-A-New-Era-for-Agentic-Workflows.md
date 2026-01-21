@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/azure-sdk/announcing-azure-mcp-server-stable-release/
 title: Announcing Azure MCP Server 1.0.0 Stable Release – A New Era for Agentic Workflows
 author: Sandeep Sen
-viewing_mode: external
 feed_name: Microsoft Azure SDK Blog
 date: 2025-10-28 18:00:57 +00:00
 tags:

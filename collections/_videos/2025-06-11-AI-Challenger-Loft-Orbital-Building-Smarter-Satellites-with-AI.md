@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=lGtTnFlI6yA
 title: 'AI Challenger | Loft Orbital: Building Smarter Satellites with AI'
 author: Microsoft Cloud
-viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
 date: 2025-06-11 08:57:55 +00:00
 tags:

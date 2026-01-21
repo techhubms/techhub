@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-data-factory/help-with-partial-mongodb-update-via-azure-data-factory-data/m-p/4443596#M937
 title: 'Partial Updates in MongoDB via Azure Data Factory Data Flow: Nested Field Modification'
 author: leopoldinoex
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-14 16:29:48 +00:00
 tags:

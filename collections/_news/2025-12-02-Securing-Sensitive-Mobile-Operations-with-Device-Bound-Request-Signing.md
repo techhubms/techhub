@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/securing-sensitive-mobile-operations-with-device-bound-request-signing
 title: Securing Sensitive Mobile Operations with Device-Bound Request Signing
 author: Fernando de Oliveira, Daiane Galvão, Wesley Rodrigues
-viewing_mode: external
 feed_name: Microsoft Blog
 date: 2025-12-02 18:00:18 +00:00
 tags:

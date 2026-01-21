@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-july-2025-feature-summary/
 title: Fabric July 2025 Feature Summary
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-07-30 09:05:00 +00:00
 tags:

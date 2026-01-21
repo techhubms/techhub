@@ -76,7 +76,6 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         await mainHeading.AssertElementVisibleAsync();
 
         // Should have some content (paragraphs, lists, etc.)
-        _ = Page.Locator("p");
         var count = await Page.GetElementCountBySelectorAsync("p");
         count.Should().BeGreaterThan(0, $"Expected at least one paragraph on {url}, but found {count}");
     }

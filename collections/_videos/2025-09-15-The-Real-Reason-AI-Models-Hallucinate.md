@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/4L0V_TYs7So
 title: The Real Reason AI Models Hallucinate
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-09-15 20:14:54 +00:00
 tags:

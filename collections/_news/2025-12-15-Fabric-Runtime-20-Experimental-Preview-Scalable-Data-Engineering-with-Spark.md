@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-runtime-2-0-experimental-public-preview/
 title: 'Fabric Runtime 2.0 Experimental Preview: Scalable Data Engineering with Spark'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-12-15 09:00:00 +00:00
 tags:

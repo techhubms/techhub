@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=mJQxAKYkCBk
 title: 'Windows 11 Developer Productivity Tools: WSL, Terminal, PowerToys & Enterprise Security'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 11:56:18 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/aks-automatic-with-azure-linux/ba-p/4454284
 title: 'AKS Automatic with Azure Linux: Streamlining Kubernetes Operations'
 author: FloraTaagen
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-16 17:37:20 +00:00
 tags:

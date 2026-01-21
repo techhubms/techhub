@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/mpi-stage-high-performance-file-distribution-for-hpc-clusters/ba-p/4484366
 title: 'mpi-stage: High-Performance File Distribution for HPC Clusters'
 author: pauledwards
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-09 09:49:38 +00:00
 tags:

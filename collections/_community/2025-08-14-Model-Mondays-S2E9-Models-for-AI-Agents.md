@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/model-mondays-s2e9-models-for-ai-agents/ba-p/4443162
 title: 'Model Mondays S2E9: Models for AI Agents'
 author: Sharda_Kaur
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-14 10:01:06 +00:00
 tags:

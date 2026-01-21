@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=uU0Fyde1yFo
 title: Build Smarter Agents with Azure AI Search
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-18 07:00:52 +00:00
 tags:

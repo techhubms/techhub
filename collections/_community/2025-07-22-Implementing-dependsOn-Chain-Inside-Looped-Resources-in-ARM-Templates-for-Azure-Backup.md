@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m6d7gm/implementing_dependson_chain_inside_looped/
 title: Implementing dependsOn Chain Inside Looped Resources in ARM Templates for Azure Backup
 author: AdPsychological9128
-viewing_mode: external
 feed_name: Reddit Azure DevOps
 date: 2025-07-22 12:49:16 +00:00
 tags:

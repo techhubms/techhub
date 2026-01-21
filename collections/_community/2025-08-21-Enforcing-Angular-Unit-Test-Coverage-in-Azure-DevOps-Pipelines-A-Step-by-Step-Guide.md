@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enforcing-angular-unit-test-coverage-in-azure-devops-pipelines-a/ba-p/4446485
 title: 'Enforcing Angular Unit Test Coverage in Azure DevOps Pipelines: A Step-by-Step Guide'
 author: Sakshi_Gupta22
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-21 15:04:06 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/performance-and-scalability-of-azure-hbv5-series-virtual/ba-p/4467230
 title: Performance and Scalability of Azure HBv5-series Virtual Machines
 author: jvenkatesh
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-05 06:42:40 +00:00
 tags:

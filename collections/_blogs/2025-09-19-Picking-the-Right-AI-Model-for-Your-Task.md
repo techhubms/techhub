@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/picking-the-right-ai-model-for-your-task.html
 title: Picking the Right AI Model for Your Task
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-09-19 00:00:00 +00:00
 tags:

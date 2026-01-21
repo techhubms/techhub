@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_ai-generated-population-scale-is-changing-activity-7404189540757831680-VtoO
 title: AI-Powered Spatial Proteomics Platform GigaTIME Accelerates Cancer Discovery
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-09 18:16:44 +00:00
 tags:

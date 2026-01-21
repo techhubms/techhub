@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/hFM9gtIzBMI
 title: Bring Your Own LLM
 author: Matt Olson
 date: 2025-05-02 14:08:17 +00:00
-viewing_mode: internal
 ghes_support: true
 plans:
 - Free

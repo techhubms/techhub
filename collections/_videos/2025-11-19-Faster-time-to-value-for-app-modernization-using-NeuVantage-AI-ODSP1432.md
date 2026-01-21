@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=dTJD9krRln8
 title: Faster time-to-value for app modernization using NeuVantage AI | ODSP1432
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 12:53:00 +00:00
 tags:

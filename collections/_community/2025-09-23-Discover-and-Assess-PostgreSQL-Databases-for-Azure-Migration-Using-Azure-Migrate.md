@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/discover-and-assess-postgresql-databases-for-migration-to-azure/ba-p/4456108
 title: Discover and Assess PostgreSQL Databases for Azure Migration Using Azure Migrate
 author: ShradhaKalra
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-23 08:09:24 +00:00
 tags:

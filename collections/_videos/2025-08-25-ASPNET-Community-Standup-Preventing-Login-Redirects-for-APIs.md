@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=csueqgXEroM
 title: 'ASP.NET Community Standup: Preventing Login Redirects for APIs'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-08-25 22:49:37 +00:00
 tags:

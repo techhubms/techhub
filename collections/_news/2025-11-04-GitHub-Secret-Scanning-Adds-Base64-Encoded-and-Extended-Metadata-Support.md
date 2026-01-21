@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-04-secret-scanning-now-detects-base64-encoded-secrets
 title: GitHub Secret Scanning Adds Base64-Encoded and Extended Metadata Support
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-04 19:21:06 +00:00
 tags:

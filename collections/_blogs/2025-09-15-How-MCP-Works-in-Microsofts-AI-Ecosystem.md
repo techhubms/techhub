@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-mcp-works-in-microsofts-ai-ecosystem/
 title: How MCP Works in Microsoft’s AI Ecosystem
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-15 07:41:15 +00:00
 tags:

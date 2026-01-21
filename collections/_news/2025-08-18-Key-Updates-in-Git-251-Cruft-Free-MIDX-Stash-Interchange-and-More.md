@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/open-source/git/highlights-from-git-2-51/
 title: 'Key Updates in Git 2.51: Cruft-Free MIDX, Stash Interchange, and More'
 author: Taylor Blau
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-18 17:04:36 +00:00
 tags:

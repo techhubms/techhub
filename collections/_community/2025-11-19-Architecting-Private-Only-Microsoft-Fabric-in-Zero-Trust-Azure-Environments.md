@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-private-connectivity-for-microsoft-fabric-a-practical/ba-p/4471190
 title: Architecting Private-Only Microsoft Fabric in Zero-Trust Azure Environments
 author: mohit-kanojia
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-19 03:49:00 +00:00
 tags:

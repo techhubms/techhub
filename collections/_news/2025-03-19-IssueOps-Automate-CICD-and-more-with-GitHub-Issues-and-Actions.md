@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/engineering/issueops-automate-ci-cd-and-more-with-github-issues-and-actions/
 title: 'IssueOps: Automate CI/CD (and more!) with GitHub Issues and Actions'
 author: Nick Alteen
-viewing_mode: external
 feed_name: GitHub Engineering Blog
 date: 2025-03-19 16:00:24 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-03-required-review-by-specific-teams-now-available-in-rulesets
 title: Require Team Approvals for Protected Branches in GitHub Rulesets
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-04 00:47:20 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=__RLpdxThEE
 title: How to Assign and Manage Copilot Agent Tasks from Anywhere
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-20 15:01:12 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/update-to-api-management-workspaces-breaking-changes-built-in/ba-p/4443668
 title: 'Azure API Management Workspaces Breaking Changes Update: Built-in Gateway & Tier Support'
 author: budzynski
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-14 20:52:17 +00:00
 tags:

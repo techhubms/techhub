@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.arresteddevops.com/digging-into-security/
 title: Digging Into Security With Kat Cosgrove
 author: Arrested DevOps
-viewing_mode: external
 feed_name: Arrested DevOps
 date: 2025-08-25 17:22:54 +00:00
 tags:

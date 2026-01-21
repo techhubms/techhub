@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-front-door-implementing-lessons-learned-following-october/ba-p/4479416
 title: 'Azure Front Door: Hardening Configuration Resiliency After October Outages'
 author: AbhishekTiwari
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-19 02:15:12 +00:00
 tags:

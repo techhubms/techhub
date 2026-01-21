@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/from-signals-to-insights-building-a-real-time-streaming-data-platform-with-fabric-eventstream/
 title: 'From Signals to Insights: Building a Real-Time Streaming Data Platform with Fabric Eventstream'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-07-24 09:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview
 title: GitHub Copilot CLI Now Available in Public Preview
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-25 19:22:27 +00:00
 tags:

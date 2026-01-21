@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=NiZTe2l6LMU
 title: 'Deploying MCP Server to Azure and Connecting with Semantic Kernel: A Step-by-Step Tutorial'
 author: Learn Microsoft AI
-viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
 date: 2025-06-04 11:17:38 +00:00
 tags:

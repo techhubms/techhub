@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mhees0/group_source_of_authority_conversion/
 title: 'Group Source of Authority Conversion: Shifting from AD to Entra ID'
 author: JohnSavill
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-04 14:06:29 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Ze0v1HkIk-o
 title: Accelerating Zero Trust and Securing AI Access with Microsoft Entra Suite
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 12:03:52 +00:00
 tags:

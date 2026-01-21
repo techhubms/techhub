@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/introducing-customizable-security-baselines-in-azure-policy-and/ba-p/4469678
 title: Customizable Security Baselines Now in Preview for Azure Policy and Machine Configuration
 author: mutemwamasheke
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-13 16:44:41 +00:00
 tags:

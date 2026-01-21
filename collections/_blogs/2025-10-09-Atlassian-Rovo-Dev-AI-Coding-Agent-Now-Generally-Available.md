@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/atlassian-makes-ai-coding-agent-generally-available/
 title: 'Atlassian Rovo Dev: AI Coding Agent Now Generally Available'
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-09 12:45:40 +00:00
 tags:

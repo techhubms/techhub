@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-winners-of-the-microsoft-fabric-fabcon-global-hack/
 title: 'Microsoft Fabric FabCon Global Hackathon: AI Innovation Winners Announced'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-21 09:00:00 +00:00
 tags:

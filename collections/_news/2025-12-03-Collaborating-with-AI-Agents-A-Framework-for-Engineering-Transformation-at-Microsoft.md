@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/engineering-at-microsoft/the-interaction-changes-everything-treating-ai-agents-as-collaborators-not-automation/
 title: 'Collaborating with AI Agents: A Framework for Engineering Transformation at Microsoft'
 author: Jenny Ferries
-viewing_mode: external
 feed_name: Microsoft Engineering Blog
 date: 2025-12-03 01:46:50 +00:00
 tags:

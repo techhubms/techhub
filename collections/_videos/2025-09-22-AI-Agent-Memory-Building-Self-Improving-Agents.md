@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=QrYbHesIxpw
 title: 'AI Agent Memory: Building Self-Improving Agents'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-22 18:59:37 +00:00
 tags:

@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AI_Agents/comments/1m7ldl2/agent_feedback_is_the_new_user_feedback/
 title: Agent feedback is the new User feedback
 author: lchoquel
 feed_name: Reddit AI Agents
 date: 2025-07-23 21:11:28 +00:00
-viewing_mode: external
 page: community
 tags:
 - Agent Feedback

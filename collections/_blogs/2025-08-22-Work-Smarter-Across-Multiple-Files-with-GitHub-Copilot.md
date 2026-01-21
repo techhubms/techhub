@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/work-smarter-across-multiple-files.html
 title: Work Smarter Across Multiple Files with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-08-22 00:00:00 +00:00
 tags:

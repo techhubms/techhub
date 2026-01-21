@@ -6,7 +6,7 @@ The Tech Hub API provides RESTful access to content organized by sections and co
 
 **Key Design Principles**:
 
-- **Resource hierarchy**: Routes mirror domain model (`/sections/{section}/collections/{collection}/items`)
+- **Resource hierarchy**: Routes mirror domain model (`/sections/{sectionName}/collections/{collectionName}/items`)
 - **Consistent naming**: Both sections and collections use human-readable slugs (no arbitrary IDs)
 - **Self-documenting**: URL structure explains what data is returned
 - **Flexible filtering**: Combine multiple criteria via `/api/content/filter` endpoint
@@ -65,7 +65,6 @@ Represents individual content (articles, videos, blogs, etc.) in API responses.
   "excerpt": "First paragraph excerpt...",
   "externalUrl": "https://techcommunity.microsoft.com/example-post",
   "videoId": null,
-  "viewingMode": "external",
   "url": "/ai/news/2024-01-15-example-post"
 }
 ```
@@ -79,22 +78,19 @@ Represents individual content (articles, videos, blogs, etc.) in API responses.
 - `sectionNames`: Array of lowercase section identifiers this content belongs to (e.g., `["ai", "github-copilot"]`) - mapped from frontmatter `categories` field (which contains Section Titles like "AI", "GitHub Copilot")
 - `primarySectionName`: Highest-priority section name (lowercase identifier) used for URL routing (e.g., `"ai"`). Calculated using section priority: github-copilot > ai > ml > azure > coding > devops > security
 - `tags`: Content tags for filtering
-- `url`: Item detail page URL (format: `/{primarySectionName}/{collection}/{slug}`)
-- `externalUrl`: Original source URL (e.g., `"https://techcommunity.microsoft.com/..."`) - always present regardless of ViewingMode
-- `viewingMode`: Display mode - `"internal"` (show on our site) or `"external"` (link to source at externalUrl)
-  - Videos and roundups: `"internal"` (content opens on site)
-  - All other collections: `"external"` (links open in new tab)
+- `url`: Item detail page URL (format: `/{primarySectionName}/{collectionName}/{slug}`)
+- `externalUrl`: Original source URL (e.g., `"https://techcommunity.microsoft.com/..."`) - present for content that links to external sources
 - `videoId`: YouTube video ID from frontmatter `youtube_id` field (for video embeds)
 
 **Important Behaviors**:
 
 - **Section Mapping**: Frontmatter `categories` field contains Section Titles (e.g., "AI", "GitHub Copilot") which are automatically mapped to Section Names (lowercase identifiers like "ai", "github-copilot") and stored in `sectionNames` property
 - **Primary Section**: Calculated using section priority: github-copilot > ai > ml > azure > coding > devops > security. The highest-priority section name is used for URL routing
-- **URL Routing**: URLs always use `primarySectionName` for consistent navigation (e.g., item with `["ai", "ml"]` sectionNames → `/ai/videos/item`)
-- **ViewingMode**: Determines link behavior
-  - `"internal"` - navigates to detail page on site (videos, roundups)
-  - `"external"` - opens source URL in new tab (news, blogs, community)
-- **ExternalUrl**: Always contains original source regardless of ViewingMode (used for attribution and external links)
+- **URL Routing**: URLs always use `primarySectionName` for consistent navigation (e.g., item with `["ai", "ml"]` sectionNames → `/ai/videos/slug`)
+- **Collection-Based Links**: Content rendering determined by collection type:
+  - External collections (news, blogs, community) - link to original source in new tab
+  - Internal collections (videos, roundups, custom) - navigate to detail page on site
+- **ExternalUrl**: Contains original source URL for external collections (used for attribution and external links)
 
 ## Endpoints
 
@@ -354,7 +350,7 @@ Returned when a section, collection, or item does not exist.
 
 The API follows RESTful conventions:
 
-1. **Resource hierarchy**: `/sections/{section}/collections/{collection}/items`
+1. **Resource hierarchy**: `/sections/{sectionName}/collections/{collectionName}/items`
 2. **Consistent naming**: Both sections and collections use human-readable names (slugs), not arbitrary IDs
 3. **HTTP methods**: GET for retrieval (POST/PUT/DELETE not yet implemented)
 4. **Status codes**: 200 OK for success, 404 Not Found for missing resources
@@ -369,9 +365,9 @@ The nested route structure was chosen over a flat structure for several reasons:
 
 ```http
 GET /api/content                          # All content
-GET /api/content/collection/{collection}  # Filter by collection
+GET /api/content/collection/{collectionName}  # Filter by collection
 GET /api/content/category/{category}      # Filter by category
-GET /api/content/{collection}/{id}        # Single item
+GET /api/content/{collectionName}/{id}        # Single item
 GET /api/content/search?q={query}         # Text search
 ```
 
@@ -408,14 +404,14 @@ The previous flat structure has been **completely removed**:
 **Old** (deprecated):
 
 - ❌ `GET /api/content` → Use `/api/content/filter` (no params = all content)
-- ❌ `GET /api/content/collection/{collection}` → Use `/api/sections/{section}/collections/{collection}/items`
-- ❌ `GET /api/content/category/{category}` → Use `/api/sections/{section}/items`
+- ❌ `GET /api/content/collection/{collectionName}` → Use `/api/sections/{sectionName}/collections/{collectionName}/items`
+- ❌ `GET /api/content/category/{category}` → Use `/api/sections/{sectionName}/items`
 - ❌ `GET /api/content/search?q={query}` → Use `/api/content/filter?q={query}`
 
 **New** (current):
 
-- ✅ `GET /api/sections/{section}/items` - All items in a section
-- ✅ `GET /api/sections/{section}/collections/{collection}/items` - Items in specific collection
+- ✅ `GET /api/sections/{sectionName}/items` - All items in a section
+- ✅ `GET /api/sections/{sectionName}/collections/{collectionName}/items` - Items in specific collection
 - ✅ `GET /api/content/filter` - Advanced multi-criteria filtering with query parameters
 
 ## Example Use Cases
@@ -934,6 +930,6 @@ Planned features (not yet implemented):
 - **Sorting**: `?sortBy=date&order=desc` for custom ordering
 - **Tag filtering modes**: `?tagMatch=any` for OR logic (currently AND only)
 - **Caching headers**: ETag and Last-Modified for efficient caching
-- **Individual items**: `/api/items/{collection}/{id}` for direct item access
+- **Individual items**: `/api/items/{collectionName}/{id}` for direct item access
 - **Rate limiting**: Protect against abuse
 - **Authentication/Authorization**: Secure access control

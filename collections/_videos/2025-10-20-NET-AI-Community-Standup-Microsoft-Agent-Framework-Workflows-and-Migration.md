@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=2F8qDdqzClg
 title: '.NET AI Community Standup: Microsoft Agent Framework Workflows & Migration'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-10-20 15:47:52 +00:00
 tags:

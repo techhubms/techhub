@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=pqc2g13vG0w
 title: Optimizing Cloud and AI ROI with Microsoft Marketplace Strategies
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 11:28:05 +00:00
 tags:

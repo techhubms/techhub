@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/copilot-memories/
 title: 'Copilot Memories: Streamlining Team Coding with Visual Studio'
 author: Jessie Houghton
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2026-01-15 13:00:33 +00:00
 tags:

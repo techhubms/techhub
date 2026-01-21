@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/exchange/smime-not-working-in-owa/m-p/4443230#M16650
 title: 'Troubleshooting S/MIME Setup in Exchange Online and M365: OWA and Outlook Certificate Issues'
 author: JChristiansen
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-14 09:58:31 +00:00
 tags:

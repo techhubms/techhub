@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/unleash-the-power-of-windows-security-a-simple-guide-to-using-defender-effectively/
 title: Guide to Using Microsoft Defender Effectively in Windows Security
 author: John Edward
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-22 08:19:01 +00:00
 tags:

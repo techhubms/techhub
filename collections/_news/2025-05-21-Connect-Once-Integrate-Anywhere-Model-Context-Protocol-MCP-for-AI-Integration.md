@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/connect-once-integrate-anywhere-with-mcps
 title: 'Connect Once, Integrate Anywhere: Model Context Protocol (MCP) for AI Integration'
 author: Maria Naggaga
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-05-21 17:00:09 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=9_ELo9f9hXk
 title: Preventing Data Exfiltration with Microsoft Purview's Layered Protection Strategy
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 15:23:41 +00:00
 tags:

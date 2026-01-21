@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/when-metrics-overwhelm-how-sres-help-engineers-reclaim-focus/
 title: 'When Metrics Overwhelm: How SREs Help Engineers Reclaim Focus'
 author: Neel Shah
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-13 09:21:17 +00:00
 tags:

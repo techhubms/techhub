@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-of-the-xml-parse-and-compose/ba-p/4470825
 title: General Availability of XML Parse and Compose Actions for Azure Logic Apps
 author: hcamposu
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-25 03:45:25 +00:00
 tags:

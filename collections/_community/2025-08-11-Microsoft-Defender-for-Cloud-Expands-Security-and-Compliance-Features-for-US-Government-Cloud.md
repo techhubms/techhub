@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-cloud-expands-u-s-gov-cloud-support-for/ba-p/4441118
 title: Microsoft Defender for Cloud Expands Security and Compliance Features for U.S. Government Cloud
 author: lgoduti
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-11 16:00:00 +00:00
 tags:

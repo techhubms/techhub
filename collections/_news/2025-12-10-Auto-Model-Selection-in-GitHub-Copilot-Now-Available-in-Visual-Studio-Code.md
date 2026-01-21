@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-10-auto-model-selection-is-generally-available-in-github-copilot-in-visual-studio-code
 title: Auto Model Selection in GitHub Copilot Now Available in Visual Studio Code
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-10 19:09:43 +00:00
 tags:

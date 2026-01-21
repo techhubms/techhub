@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=8d2v6OMhkmQ
 title: Unlocking Your Agents' Potential with Model Context Protocol in Azure AI Foundry
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-07-30 22:35:15 +00:00
 tags:

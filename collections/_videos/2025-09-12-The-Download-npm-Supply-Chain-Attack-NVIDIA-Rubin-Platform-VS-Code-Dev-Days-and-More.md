@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=GQ0tqZXxaIk
 title: 'The Download: npm Supply Chain Attack, NVIDIA Rubin Platform, VS Code Dev Days & More'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-09-12 14:00:22 +00:00
 tags:

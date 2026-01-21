@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/powershell/announcing-powershell-7-5-ga/
 title: PowerShell 7.5 GA is now available
 author: Jason Helmick
-viewing_mode: external
 feed_name: Microsoft PowerShell Blog
 date: 2025-02-12 21:34:13 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/overload-to-optimal-tuning-microsoft-fabric-capacity/ba-p/4464639
 title: 'Overload to Optimal: Tuning Microsoft Fabric Capacity'
 author: Rafia_Aqil
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-28 16:48:43 +00:00
 tags:

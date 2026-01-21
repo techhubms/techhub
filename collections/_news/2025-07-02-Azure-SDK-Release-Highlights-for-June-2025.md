@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-june-2025/
 title: Azure SDK Release Highlights for June 2025
 author: Ronnie Geraghty
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-07-02 15:00:43 +00:00
 tags:

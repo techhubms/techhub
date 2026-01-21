@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/the-evolution-of-sql-server-integration-services-ssis-ssis-2025-generally-available/
 title: 'The Evolution of SSIS: SQL Server Integration Services 2025 General Availability and Microsoft Fabric Integration'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-12-10 13:32:43 +00:00
 tags:

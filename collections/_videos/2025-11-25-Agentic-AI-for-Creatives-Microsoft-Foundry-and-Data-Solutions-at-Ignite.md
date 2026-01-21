@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=38ZPYhN5N8E
 title: 'Agentic AI for Creatives: Microsoft Foundry and Data Solutions at Ignite'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 12:10:15 +00:00
 tags:

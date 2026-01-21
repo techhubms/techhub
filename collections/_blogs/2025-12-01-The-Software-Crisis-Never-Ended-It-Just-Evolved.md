@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://roadtoalm.com/2025/12/01/the-software-crisis-never-ended-it-just-evolved/
 title: The Software Crisis Never Ended, It Just Evolved
 author: Rene van Osnabrugge
-viewing_mode: external
 feed_name: René van Osnabrugge's Blog
 date: 2025-12-01 13:45:01 +00:00
 tags:

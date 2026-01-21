@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/11/18/ambient-and-autonomous-security-for-the-agentic-era/
 title: Ambient and Autonomous Security for the Agentic AI Era
 author: Vasu Jakkal
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-11-18 16:00:00 +00:00
 tags:

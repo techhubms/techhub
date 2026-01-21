@@ -224,9 +224,9 @@
                         "example": "news"
                     },
                     {
-                        "name": "contentId",
+                        "name": "slug",
                         "in": "query",
-                        "description": "Content item ID (required for content scope)",
+                        "description": "Content item slug (required for content scope)",
                         "required": false,
                         "schema": {
                             "type": "string"

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://khalidabuhakmeh.com/generic-csharp-methods-with-enum-constraints-for-dotnet
 title: Generic C# Methods with Enum Constraints for .NET
 author: Khalid Abuhakmeh
-viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
 date: 2025-03-04 00:00:00 +00:00
 tags:

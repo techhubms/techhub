@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/M_BNfo01YsQ
 title: '@github Chat Participant'
 author: Fokko Veegens
 date: 2024-12-24 07:38:40 +00:00
-viewing_mode: internal
 ghes_support: false
 plans:
 - Free

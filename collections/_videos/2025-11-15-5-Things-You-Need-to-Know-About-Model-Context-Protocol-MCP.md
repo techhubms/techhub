@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/une3Ba19EQM
 title: 5 Things You Need to Know About Model Context Protocol (MCP)
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-11-15 15:01:46 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-scheduled-actions-for-azure/ba-p/4470797
 title: Announcing General Availability of Scheduled Actions for Azure Virtual Machines
 author: TravisCragg_MSFT
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 17:35:21 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=8hyvYP5PCks
 title: Accelerating Pull Request Reviews with GitHub Copilot Code Review
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-12-02 15:00:17 +00:00
 tags:

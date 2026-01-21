@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=UtSAXb0M4Ek
 title: Turn Copilot into a subject matter expert with GitHub Copilot Spaces
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub's Youtube channel
 date: 2025-07-21 14:00:59 +00:00
 tags:

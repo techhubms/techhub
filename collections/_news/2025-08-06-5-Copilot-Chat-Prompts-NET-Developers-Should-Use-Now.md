@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/5-copilot-chat-prompts-dotnet-devs-should-steal-today/
 title: 5 Copilot Chat Prompts .NET Developers Should Use Now
 author: Wendy Breiding (SHE/HER)
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-08-06 17:05:00 +00:00
 tags:

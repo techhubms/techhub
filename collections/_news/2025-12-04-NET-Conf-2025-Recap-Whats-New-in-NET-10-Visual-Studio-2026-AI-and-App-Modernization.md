@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-recap/
 title: ".NET Conf 2025 Recap: What's New in .NET 10, Visual Studio 2026, AI, and App Modernization"
 author: .NET Team
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-12-04 18:05:00 +00:00
 tags:

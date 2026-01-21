@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-21-dependencies-on-issues
 title: Managing Issue Dependencies in GitHub Now Generally Available
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-21 16:32:58 +00:00
 tags:

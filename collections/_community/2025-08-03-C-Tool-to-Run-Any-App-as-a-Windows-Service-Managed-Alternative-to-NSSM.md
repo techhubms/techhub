@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mgewsc/just_built_a_tool_that_turns_any_app_into_a/
 title: 'C# Tool to Run Any App as a Windows Service: Managed Alternative to NSSM'
 author: AdUnhappy5308
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-03 09:21:26 +00:00
 tags:

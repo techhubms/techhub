@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/creating-custom-microsoft-teams-apps-and-tabs/
 title: Creating Custom Microsoft Teams Apps and Tabs
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-01 08:33:00 +00:00
 tags:

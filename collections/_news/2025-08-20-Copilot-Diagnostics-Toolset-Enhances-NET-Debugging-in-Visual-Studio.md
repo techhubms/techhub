@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/github-copilot-diagnostics-toolset-for-dotnet-in-visual-studio/
 title: Copilot Diagnostics Toolset Enhances .NET Debugging in Visual Studio
 author: Harshada Hole
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-08-20 17:05:00 +00:00
 tags:

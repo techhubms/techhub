@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-27-create-sub-issues-with-copilot-in-public-preview
 title: 'Managing Sub-Issues with GitHub Copilot: Public Preview Update'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-27 23:37:22 +00:00
 tags:

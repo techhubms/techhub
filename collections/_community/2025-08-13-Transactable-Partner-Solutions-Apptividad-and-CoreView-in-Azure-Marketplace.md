@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/marketplace-blog/apptividad-and-coreview-offer-transactable-partner-solutions-in/ba-p/4431278
 title: 'Transactable Partner Solutions: Apptividad and CoreView in Azure Marketplace'
 author: Luxmi_Nagaraj
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-13 13:00:00 +00:00
 tags:

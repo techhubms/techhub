@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=OhmtV7-djMk
 title: Azure Update - 6th June 2025
 author: John Savill's Technical Training
 feed_name: John Savill's Technical Training
 date: 2025-06-06 14:35:12 +00:00
-viewing_mode: internal
 tags:
 - AI Managed Network
 - ASR Premium SSD

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=xGYHPN5NNd0
 title: Coding Agent Integration in Visual Studio Code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-07-25 14:01:36 +00:00
 tags:

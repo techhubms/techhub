@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/grafana-labs-extends-ai-capabilities-of-observability-platform/
 title: Grafana Labs Extends AI Capabilities of Observability Platform
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-10 10:02:58 +00:00
 tags:

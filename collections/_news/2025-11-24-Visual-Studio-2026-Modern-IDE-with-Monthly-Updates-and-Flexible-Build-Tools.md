@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-built-for-the-speed-of-modern-development/
 title: 'Visual Studio 2026: Modern IDE with Monthly Updates and Flexible Build Tools'
 author: Paul Chapman
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-11-24 15:00:06 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.windows.com/windowsexperience/2025/12/09/windows-pc-gaming-in-2025-handheld-innovation-arm-progress-and-directx-advances/
 title: 'Windows PC Gaming Innovations in 2025: Handheld Devices, Arm Expansion, and DirectX Upgrades'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-09 19:17:58 +00:00
 tags:

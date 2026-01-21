@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/oZR41osK57w
 title: Are You Using All 3 GitHub Copilot Modes?
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-03 14:01:06 +00:00
 tags:

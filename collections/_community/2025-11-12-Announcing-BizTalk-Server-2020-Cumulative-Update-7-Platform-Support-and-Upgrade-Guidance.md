@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-biztalk-server-2020-cumulative-update-7/ba-p/4469100
 title: 'Announcing BizTalk Server 2020 Cumulative Update 7: Platform Support and Upgrade Guidance'
 author: hcamposu
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-12 16:42:12 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-12-gemini-3-pro-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
 title: Gemini 3 Pro Model Launches for GitHub Copilot in Popular IDEs
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-12 20:22:35 +00:00
 tags:

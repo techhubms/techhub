@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-5-running-one-off-dotnet-tools-with-dnx/
 title: 'Running One-Off .NET Tools with dnx: Exploring the .NET 10 Preview'
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2025-07-29 10:00:00 +00:00
 tags:

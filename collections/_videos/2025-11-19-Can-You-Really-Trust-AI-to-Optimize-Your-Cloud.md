@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=XY4na9h5dEY
 title: Can You Really Trust AI to Optimize Your Cloud?
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 12:34:17 +00:00
 tags:

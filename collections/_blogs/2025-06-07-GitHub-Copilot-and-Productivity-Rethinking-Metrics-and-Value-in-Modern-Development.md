@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devopsjournal.io/blog/2025/06/07/Copilot-and-productivity
 title: 'GitHub Copilot & Productivity: Rethinking Metrics and Value in Modern Development'
 author: Rob Bos
-viewing_mode: external
 feed_name: Rob Bos' Blog
 date: 2025-06-07 00:00:00 +00:00
 tags:

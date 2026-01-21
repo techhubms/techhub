@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=EeaDXQEhy_o
 title: 'Modernizing DNS/DHCP: Micetro for Hybrid and Cloud Environments'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 08:41:16 +00:00
 tags:

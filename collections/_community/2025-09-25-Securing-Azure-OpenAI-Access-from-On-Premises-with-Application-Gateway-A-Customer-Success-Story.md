@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/using-application-gateway-to-secure-access-to-the-azure-openai/ba-p/4456696
 title: 'Securing Azure OpenAI Access from On-Premises with Application Gateway: A Customer Success Story'
 author: vnamani
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-25 21:12:24 +00:00
 tags:

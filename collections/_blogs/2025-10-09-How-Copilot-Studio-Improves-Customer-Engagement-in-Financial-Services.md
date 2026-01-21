@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-copilot-studio-improves-customer-engagement-in-financial-services/
 title: How Copilot Studio Improves Customer Engagement in Financial Services
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-09 07:16:46 +00:00
 tags:

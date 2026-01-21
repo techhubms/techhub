@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-hpc-and-eda-with-powerful-azure-netapp-files/ba-p/4469739
 title: Accelerating HPC and EDA Innovation with Azure NetApp Files Enhancements
 author: GeertVanTeylingen
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-14 16:52:12 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devclass.com/2025/07/10/docker-adds-ai-agents-to-compose-along-with-gpu-powered-cloud-offload-service/
 title: Docker Adds AI Agent Support and GPU-Powered Offload Service to Compose
 author: Tim Anderson
-viewing_mode: external
 feed_name: DevClass
 date: 2025-07-10 09:57:01 +00:00
 tags:

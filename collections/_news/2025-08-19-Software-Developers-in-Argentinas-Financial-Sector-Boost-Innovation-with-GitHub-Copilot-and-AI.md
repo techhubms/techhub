@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/latam/features/ai/galicia-naranja-x-github-copilot/?lang=en
 title: Software Developers in Argentina’s Financial Sector Boost Innovation with GitHub Copilot and AI
 author: sbaynes
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-19 14:24:43 +00:00
 tags:

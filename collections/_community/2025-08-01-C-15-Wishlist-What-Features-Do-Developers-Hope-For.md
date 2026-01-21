@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1meqqrk/c_15_wishlist/
 title: 'C# 15 Wishlist: What Features Do Developers Hope For?'
 author: OnionDeluxe
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-01 08:13:28 +00:00
 tags:

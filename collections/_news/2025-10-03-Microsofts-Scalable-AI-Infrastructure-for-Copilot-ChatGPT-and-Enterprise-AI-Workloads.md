@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_our-approach-to-ai-infra-is-simple-build-activity-7379681735934083073-Scma
 title: Microsoft's Scalable AI Infrastructure for Copilot, ChatGPT, and Enterprise AI Workloads
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-03 01:48:00 +00:00
 tags:

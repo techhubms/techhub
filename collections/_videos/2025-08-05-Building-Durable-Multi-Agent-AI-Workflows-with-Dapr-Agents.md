@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=VLRg4TKtLBc
 title: Building Durable Multi-Agent AI Workflows with Dapr Agents
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-05 15:01:00 +00:00
 tags:

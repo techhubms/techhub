@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-11-multiple-assignees-for-issues-and-pull-requests-now-available-in-all-repositories
 title: Multiple Assignees for Issues and Pull Requests Now Available in All GitHub Repositories
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-11 20:11:25 +00:00
 tags:

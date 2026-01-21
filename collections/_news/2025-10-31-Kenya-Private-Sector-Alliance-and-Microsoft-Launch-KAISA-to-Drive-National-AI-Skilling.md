@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/emea/features/kepsa-launches-the-kenya-ai-skilling-alliance-kaisa-a-national-platform-to-accelerate-inclusive-and-responsible-ai-adoption/
 title: Kenya Private Sector Alliance and Microsoft Launch KAISA to Drive National AI Skilling
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-31 14:03:18 +00:00
 tags:

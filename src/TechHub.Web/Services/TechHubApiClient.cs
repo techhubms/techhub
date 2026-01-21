@@ -98,19 +98,19 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     {
         try
         {
-            _logger.LogInformation("Fetching {Collection} items for section: {SectionName}",
+            _logger.LogInformation("Fetching {CollectionName} items for section: {SectionName}",
                 collectionName, sectionName);
             var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItemDto>>(
                 $"/api/sections/{sectionName}/collections/{collectionName}/items",
                 cancellationToken);
 
-            _logger.LogInformation("Successfully fetched {Count} {Collection} items for section {SectionName}",
+            _logger.LogInformation("Successfully fetched {Count} {CollectionName} items for section {SectionName}",
                 items?.Count() ?? 0, collectionName, sectionName);
             return items;
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to fetch {Collection} items for section {SectionName}",
+            _logger.LogError(ex, "Failed to fetch {CollectionName} items for section {SectionName}",
                 collectionName, sectionName);
             throw;
         }
@@ -188,7 +188,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     {
         try
         {
-            _logger.LogInformation("Fetching content for section: {Section}, collection: {Collection}",
+            _logger.LogInformation("Fetching content for section: {SectionName}, collection: {CollectionName}",
                 sectionName ?? "(all)", collectionName);
 
             var url = string.IsNullOrWhiteSpace(sectionName)
@@ -204,35 +204,35 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to fetch content for section {Section}, collection {Collection}",
+            _logger.LogError(ex, "Failed to fetch content for section {SectionName}, collection {CollectionName}",
                 sectionName ?? "(all)", collectionName);
             throw;
         }
     }
 
     /// <summary>
-    /// Get detailed content item by section, collection, and item ID
+    /// Get detailed content item by sectionName, collectionName, and slug
     /// </summary>
     public virtual async Task<ContentItemDetailDto?> GetContentDetailAsync(
         string sectionName,
         string collectionName,
-        string itemId,
+        string slug,
         CancellationToken cancellationToken = default)
     {
         try
         {
-            _logger.LogInformation("Fetching content detail: {Section}/{Collection}/{ItemId}",
-                sectionName, collectionName, itemId);
+            _logger.LogInformation("Fetching content detail: {SectionName}/{CollectionName}/{Slug}",
+                sectionName, collectionName, slug);
 
             var response = await _httpClient.GetAsync(
-                $"/api/content/{sectionName}/{collectionName}/{itemId}",
+                $"/api/content/{sectionName}/{collectionName}/{slug}",
                 cancellationToken);
 
             // Return null for 404 (not found is a valid state)
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                _logger.LogWarning("Content not found: {Section}/{Collection}/{ItemId}",
-                    sectionName, collectionName, itemId);
+                _logger.LogWarning("Content not found: {SectionName}/{CollectionName}/{Slug}",
+                    sectionName, collectionName, slug);
                 return null;
             }
 
@@ -242,8 +242,8 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to fetch content detail for {Section}/{Collection}/{ItemId}",
-                sectionName, collectionName, itemId);
+            _logger.LogError(ex, "Failed to fetch content detail for {SectionName}/{CollectionName}/{Slug}",
+                sectionName, collectionName, slug);
             throw;
         }
     }
@@ -623,7 +623,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// <param name="scope">Scope for tag cloud (Homepage/Section/Collection/Content)</param>
     /// <param name="sectionName">Section name (required for Section/Collection/Content scopes)</param>
     /// <param name="collectionName">Collection name (required for Collection scope)</param>
-    /// <param name="contentItemId">Content item ID (required for Content scope)</param>
+    /// <param name="slug">Content item slug (required for Content scope)</param>
     /// <param name="maxTags">Maximum number of tags to return (default: 20)</param>
     /// <param name="minUses">Minimum usage count for tag inclusion (default: 1)</param>
     /// <param name="lastDays">Only include tags from content published within this many days (default: 90)</param>
@@ -632,7 +632,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
         TagCloudScope scope,
         string? sectionName = null,
         string? collectionName = null,
-        string? contentItemId = null,
+        string? slug = null,
         int? maxTags = null,
         int? minUses = null,
         int? lastDays = null,
@@ -649,8 +649,8 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
                 queryParams.Add($"section={Uri.EscapeDataString(sectionName)}");
             if (!string.IsNullOrWhiteSpace(collectionName))
                 queryParams.Add($"collection={Uri.EscapeDataString(collectionName)}");
-            if (!string.IsNullOrWhiteSpace(contentItemId))
-                queryParams.Add($"contentId={Uri.EscapeDataString(contentItemId)}");
+            if (!string.IsNullOrWhiteSpace(slug))
+                queryParams.Add($"contentId={Uri.EscapeDataString(slug)}");
             if (maxTags.HasValue)
                 queryParams.Add($"maxTags={maxTags.Value}");
             if (minUses.HasValue)
@@ -661,7 +661,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
             var queryString = string.Join("&", queryParams);
             var url = $"/api/tags/cloud?{queryString}";
 
-            _logger.LogInformation("Fetching tag cloud for scope: {Scope}, section: {Section}, collection: {Collection}",
+            _logger.LogInformation("Fetching tag cloud for scope: {Scope}, section: {SectionName}, collection: {CollectionName}",
                 scope, sectionName ?? "(none)", collectionName ?? "(none)");
 
             var tagCloud = await _httpClient.GetFromJsonAsync<IReadOnlyList<TagCloudItem>>(url, cancellationToken);

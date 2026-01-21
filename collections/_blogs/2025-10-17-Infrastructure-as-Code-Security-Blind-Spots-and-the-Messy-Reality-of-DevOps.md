@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/infrastructure-as-code-security-blind-spots-and-the-messy-reality-of-devops/
 title: Infrastructure as Code, Security Blind Spots, and the Messy Reality of DevOps
 author: Marcin Wyszynski
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-17 15:19:37 +00:00
 tags:

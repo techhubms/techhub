@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=OqzC9b3ueX0
 title: Unlocking the Power of VS Code's Simple Browser Feature
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-12-22 16:13:08 +00:00
 tags:

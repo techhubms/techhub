@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=8NoetLolw-0
 title: Automating .NET Aspire Architecture Documentation with GitHub Copilot
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 04:00:06 +00:00
 tags:

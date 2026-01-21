@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/qScA4ypf-HM
 title: MCP Support Now Generally Available in Visual Studio Code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-07-10 21:30:10 +00:00
 tags:

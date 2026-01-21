@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/asia/features/ai-power-users-in-malaysia-are-working-smarter-and-achieving-more-with-microsoft-365-copilot/
 title: How AI Power Users in Malaysia Achieve More with Microsoft 365 Copilot
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-01 16:45:01 +00:00
 tags:

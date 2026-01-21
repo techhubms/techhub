@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=oCNqsEXKnoA
 title: 'Running GenAI in Containers: Dynamic Sessions with Azure Container Apps and LangChain4j'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-05 17:01:32 +00:00
 tags:

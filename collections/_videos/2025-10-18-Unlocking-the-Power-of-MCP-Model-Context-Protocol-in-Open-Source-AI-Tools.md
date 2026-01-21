@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=TjnFXtUDKNg
 title: 'Unlocking the Power of MCP: Model Context Protocol in Open Source AI Tools'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-18 14:00:52 +00:00
 tags:

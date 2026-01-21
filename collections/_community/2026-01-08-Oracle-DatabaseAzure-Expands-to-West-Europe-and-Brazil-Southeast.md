@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/global-expansion-now-available-in-west-europe-netherlands/ba-p/4479671
 title: Oracle Database@Azure Expands to West Europe and Brazil Southeast
 author: SparshAgrawat
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-08 00:06:13 +00:00
 tags:

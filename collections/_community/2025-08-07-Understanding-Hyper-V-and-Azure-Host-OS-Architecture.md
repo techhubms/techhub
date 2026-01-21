@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mjo656/is_hyperv_running_on_azure_host_os_or_azure_host/
 title: Understanding Hyper-V and Azure Host OS Architecture
 author: mogeko233
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-07 02:26:59 +00:00
 tags:

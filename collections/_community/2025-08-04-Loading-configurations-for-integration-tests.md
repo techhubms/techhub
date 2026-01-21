@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mhmsj5/loading_configurations_for_integration_tests/
 title: Loading configurations for integration tests
 author: LazyChief_117
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-04 19:14:27 +00:00
 tags:

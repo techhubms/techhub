@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ix0kJMVI0tk
 title: Chatting with Microsoft Foundry AI Models Using Python in VS Code
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-19 23:05:59 +00:00
 tags:

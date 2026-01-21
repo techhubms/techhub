@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=GWV7VXjYeFM
 title: Building Secure AI Agents with Microsoft’s Security Stack
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 07:40:30 +00:00
 tags:

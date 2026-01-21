@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?reload=9&v=kCc8FmEb1nY
 title: Let's build GPT from scratch, in code, spelled out.
 author: Andrej Karpathy
-viewing_mode: internal
 tags:
 - GPT
 - Language Models

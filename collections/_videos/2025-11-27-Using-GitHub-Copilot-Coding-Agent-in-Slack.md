@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=l37u8FrdhY0
 title: Using GitHub Copilot Coding Agent in Slack
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-27 16:48:43 +00:00
 tags:

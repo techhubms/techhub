@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-the-public-preview-of-the-new-app-service-quota-self/ba-p/4450415
 title: 'Public Preview: Self-Service Quota Management for Azure App Service'
 author: jordanselig
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-04 21:49:24 +00:00
 tags:

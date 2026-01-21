@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=VvOWQQiSRxw
 title: Introducing GitHub Copilot Integration in SQL Server Management Studio 22
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-16 15:10:09 +00:00
 tags:

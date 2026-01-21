@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracledatabase-azure-expands-footprint-to-31-regions-and/ba-p/4471109
 title: Oracle Database@Azure Now Available in 31 Regions With Enhanced Security and AI Integration
 author: KalyanKaki
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 20:29:14 +00:00
 tags:

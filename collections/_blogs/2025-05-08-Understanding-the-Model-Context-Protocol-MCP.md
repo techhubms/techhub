@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://hiddedesmet.com/model-context-protocol-mcp
 title: Understanding the Model Context Protocol (MCP)
 author: Hidde de Smet
-viewing_mode: external
 feed_name: Hidde de Smet's Blog
 date: 2025-05-08 07:00:00 +00:00
 tags:

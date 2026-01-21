@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-28-start-and-track-copilot-coding-agent-tasks-from-raycast
 title: Start and Track GitHub Copilot Coding Agent Tasks from Raycast
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-28 17:55:41 +00:00
 tags:

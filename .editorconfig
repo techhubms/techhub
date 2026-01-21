@@ -321,6 +321,14 @@ dotnet_naming_style.begins_with_underscore.word_separator =
 dotnet_naming_style.begins_with_underscore.capitalization = camel_case
 
 ##############################
+# Code Analysis Suppressions
+##############################
+
+# CA1056: Properties should use System.Uri instead of string
+# Suppressed: NavigationBaseUrl uses string for simplicity and URL construction
+dotnet_diagnostic.CA1056.severity = none
+
+##############################
 # JSON, YAML, XML files
 ##############################
 [*.{json,yaml,yml}]

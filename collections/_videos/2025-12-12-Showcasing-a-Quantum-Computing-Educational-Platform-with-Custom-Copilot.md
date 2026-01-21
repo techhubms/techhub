@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=qzZTCPiXJtY
 title: Showcasing a Quantum Computing Educational Platform with Custom Copilot
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-12-12 23:04:41 +00:00
 tags:

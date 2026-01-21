@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/devops/comments/1mfshis/kubeseal_built_a_small_tool_to_make_bitnamis/
 title: "[kubeseal] Built a small tool to make bitnami's sealed-secrets less painful in GitOps"
 author: MrFr0z01
-viewing_mode: external
 feed_name: Reddit DevOps
 date: 2025-08-02 14:53:52 +00:00
 tags:

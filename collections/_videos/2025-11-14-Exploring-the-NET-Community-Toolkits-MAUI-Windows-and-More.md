@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=i_-dZEifOQQ
 title: 'Exploring the .NET Community Toolkits: MAUI, Windows, and More'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 19:21:55 +00:00
 tags:

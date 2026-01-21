@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mgbojy/build_smarter_llms_with_local_mcp_servers_in_net/
 title: Build Smarter LLMs with Local MCP Servers in .NET
 author: HassanRezkHabib
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-03 05:51:52 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/blogs/2025/05/27/ai-and-remote
 title: Enhancing Productivity with AI and Remote Development in VS Code
 author: Brigit Murtaugh, Christof Marti, Josh Spicer, Olivia Guzzardo McVicker
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-05-27 00:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/amba-alz-pattern-learn-about-the-latest-and-greatest/ba-p/4458320
 title: 'AMBA-ALZ Pattern: Recent Enhancements to Built-in Policies and Role-Based Access in Azure'
 author: BrunoGabrielli
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-08 13:49:40 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/Nj2c3qPJ1Ng
 title: How to Get the Most Out of Your AI with Vibe Coding
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-09-02 14:00:38 +00:00
 tags:

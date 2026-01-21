@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2026-01-15-agentic-memory-for-github-copilot-is-in-public-preview
 title: Agentic Memory Now in Public Preview for GitHub Copilot
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2026-01-15 21:57:44 +00:00
 tags:

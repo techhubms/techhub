@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://zure.com/blog/ignite-2025-how-fabric-iq-transforms-data-into-real-understanding
 title: 'Ignite 2025: How Fabric IQ Transforms Data Into Real Understanding'
 author: henri.vuorenpaa@zure.com (Henri Vuorenpää)
-viewing_mode: external
 feed_name: Zure Data & AI Blog
 date: 2025-11-24 07:26:49 +00:00
 tags:

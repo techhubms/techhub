@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=mVZqmcmB6FU
 title: 'Active Directory Disaster Recovery: Modern Approaches for Secure Forest Restoration'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 15:05:04 +00:00
 tags:

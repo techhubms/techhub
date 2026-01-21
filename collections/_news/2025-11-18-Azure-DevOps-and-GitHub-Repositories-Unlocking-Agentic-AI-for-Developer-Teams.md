@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/devops/azure-devops-and-github-repositories-next-steps-in-the-path-to-agentic-ai/
 title: 'Azure DevOps and GitHub Repositories: Unlocking Agentic AI for Developer Teams'
 author: Rajesh Ramamurthy
-viewing_mode: external
 feed_name: Microsoft DevOps Blog
 date: 2025-11-18 17:21:58 +00:00
 tags:

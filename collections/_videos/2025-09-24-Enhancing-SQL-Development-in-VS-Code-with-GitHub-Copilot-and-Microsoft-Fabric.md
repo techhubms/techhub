@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=jj9O5FR7v3A
 title: Enhancing SQL Development in VS Code with GitHub Copilot and Microsoft Fabric
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-24 16:01:28 +00:00
 tags:

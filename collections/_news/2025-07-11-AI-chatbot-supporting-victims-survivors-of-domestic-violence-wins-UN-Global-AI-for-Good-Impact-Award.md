@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/de-ch/2025/07/10/ai-chatbot-sophia-supporting-victim-survivors-of-domestic-violence-wins-the-united-nations-global-ai-for-good-impact-award-2025/
 title: AI chatbot supporting victims-survivors of domestic violence wins UN Global AI for Good Impact Award
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-07-11 14:09:12 +00:00
 tags:

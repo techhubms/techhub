@@ -30,7 +30,7 @@ public class TagCloudService(
             return await GetContentItemTagsAsync(
                 request.SectionName,
                 request.CollectionName,
-                request.ContentItemId,
+                request.Slug,
                 cancellationToken);
         }
 
@@ -44,7 +44,7 @@ public class TagCloudService(
                 .AddDays(-request.LastDays.Value)
                 .ToUnixTimeSeconds();
 
-            items = items.Where(item => item.DateEpoch >= cutoffEpoch).ToList();
+            items = [.. items.Where(item => item.DateEpoch >= cutoffEpoch)];
         }
 
         // Count tag occurrences
@@ -85,9 +85,7 @@ public class TagCloudService(
         {
             // Collection scope: filter by collection AND section
             var allCollectionItems = await _contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
-            items = allCollectionItems
-                .Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
-                .ToList();
+            items = [.. allCollectionItems.Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))];
         }
         else if (!string.IsNullOrWhiteSpace(sectionName))
         {
@@ -124,15 +122,15 @@ public class TagCloudService(
     private async Task<IReadOnlyList<TagCloudItem>> GetContentItemTagsAsync(
         string? sectionName,
         string? collectionName,
-        string? contentItemId,
+        string? slug,
         CancellationToken cancellationToken)
     {
-        if (string.IsNullOrWhiteSpace(collectionName) || string.IsNullOrWhiteSpace(contentItemId))
+        if (string.IsNullOrWhiteSpace(collectionName) || string.IsNullOrWhiteSpace(slug))
         {
             return [];
         }
 
-        var item = await _contentRepository.GetBySlugAsync(collectionName, contentItemId, cancellationToken);
+        var item = await _contentRepository.GetBySlugAsync(collectionName, slug, cancellationToken);
 
         if (item == null)
         {
@@ -140,14 +138,13 @@ public class TagCloudService(
         }
 
         // Return all tags for the content item with Medium size (no quantile sizing for single item)
-        return item.Tags
+        return [.. item.Tags
             .Select(tag => new TagCloudItem
             {
                 Tag = tag,
                 Count = 1,
                 Size = TagSize.Medium
-            })
-            .ToList();
+            })];
     }
 
     private async Task<IReadOnlyList<ContentItem>> GetItemsByScopeAsync(
@@ -182,9 +179,7 @@ public class TagCloudService(
 
         var allCollectionItems = await _contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
 
-        return allCollectionItems
-            .Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
-            .ToList();
+        return [.. allCollectionItems.Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))];
     }
 
     private Dictionary<string, int> CountTags(IEnumerable<ContentItem> items)
@@ -195,9 +190,9 @@ public class TagCloudService(
         {
             foreach (var tag in item.Tags)
             {
-                if (tagCounts.ContainsKey(tag))
+                if (tagCounts.TryGetValue(tag, out var count))
                 {
-                    tagCounts[tag]++;
+                    tagCounts[tag] = count + 1;
                 }
                 else
                 {
@@ -209,7 +204,7 @@ public class TagCloudService(
         return tagCounts;
     }
 
-    private IReadOnlyList<TagCloudItem> ApplyQuantileSizing(List<KeyValuePair<string, int>> sortedTags)
+    private List<TagCloudItem> ApplyQuantileSizing(List<KeyValuePair<string, int>> sortedTags)
     {
         if (sortedTags.Count == 0)
         {

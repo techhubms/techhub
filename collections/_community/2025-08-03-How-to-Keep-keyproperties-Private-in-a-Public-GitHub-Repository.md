@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/github/comments/1mgrtc3/private_file_in_github_repo/
 title: How to Keep key.properties Private in a Public GitHub Repository
 author: el_psy_kongree
-viewing_mode: external
 feed_name: Reddit GitHub
 date: 2025-08-03 19:16:38 +00:00
 tags:

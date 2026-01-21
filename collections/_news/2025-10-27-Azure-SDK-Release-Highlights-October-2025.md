@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-october-2025/
 title: Azure SDK Release Highlights – October 2025
 author: Ronnie Geraghty
-viewing_mode: external
 feed_name: Microsoft Azure SDK Blog
 date: 2025-10-27 18:59:41 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/deploying-openai-s-first-open-source-model-on-azure-aks-with/ba-p/4444234
 title: Deploying OpenAI’s GPT-OSS-20B on Azure AKS with KAITO and vLLM
 author: maljazaery
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-15 17:08:39 +00:00
 tags:

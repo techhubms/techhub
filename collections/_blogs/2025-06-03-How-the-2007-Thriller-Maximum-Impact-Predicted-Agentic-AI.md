@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://roadtoalm.com/2025/06/03/how-a-2007-thriller-maximum-impact-predicted-agentic-ai-without-knowing-it/
 title: How the 2007 Thriller Maximum Impact Predicted Agentic AI
 author: Rene van Osnabrugge
-viewing_mode: external
 feed_name: René van Osnabrugge's Blog
 date: 2025-06-03 12:34:16 +00:00
 tags:

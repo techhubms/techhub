@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-03-delegate-ai-controls-management-to-members-of-your-enterprise
 title: Delegating AI and Copilot Controls in GitHub Enterprises
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-03 20:55:24 +00:00
 tags:

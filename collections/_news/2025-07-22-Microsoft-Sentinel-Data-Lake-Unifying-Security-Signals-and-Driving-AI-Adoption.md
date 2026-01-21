@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/07/22/microsoft-sentinel-data-lake-unify-signals-cut-costs-and-power-agentic-ai/
 title: 'Microsoft Sentinel Data Lake: Unifying Security Signals and Driving AI Adoption'
 author: Scott Woodgate and Krishna Kumar Parthasarathy
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-07-22 13:00:00 +00:00
 tags:

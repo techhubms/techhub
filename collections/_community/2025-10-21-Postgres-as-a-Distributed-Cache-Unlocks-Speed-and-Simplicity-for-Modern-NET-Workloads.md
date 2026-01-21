@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/postgres-as-a-distributed-cache-unlocks-speed-and-simplicity-for/ba-p/4462139
 title: Postgres as a Distributed Cache Unlocks Speed and Simplicity for Modern .NET Workloads
 author: JaredMeade
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-21 07:00:00 +00:00
 tags:

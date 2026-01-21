@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-04-github-copilot-policy-update-for-unconfigured-policies
 title: GitHub Copilot Policy Update for Unconfigured Enterprise Policies
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-04 17:59:50 +00:00
 tags:

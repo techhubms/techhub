@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=87AlzE53bxA
 title: 'Orleans Deep Dive: Routing, Placement & Balancing'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2026-01-05 22:35:41 +00:00
 tags:

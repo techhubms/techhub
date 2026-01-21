@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/reimagining-ai-ops-with-azure-sre-agent-new-automation/ba-p/4462613
 title: AI-Driven Automation and Incident Response with Azure SRE Agent
 author: vyomnagrani
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:00:00 +00:00
 tags:

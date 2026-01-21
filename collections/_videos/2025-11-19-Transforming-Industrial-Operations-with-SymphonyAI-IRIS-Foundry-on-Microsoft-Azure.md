@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=t37ZpdNQmAM
 title: Transforming Industrial Operations with SymphonyAI IRIS Foundry on Microsoft Azure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 14:50:50 +00:00
 tags:

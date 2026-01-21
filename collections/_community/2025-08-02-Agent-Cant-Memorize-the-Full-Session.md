@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mfu87w/agent_cant_memorize_the_full_session/
 title: Agent Can't Memorize the Full Session?
 author: Own-Dark14
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-02 16:05:40 +00:00
 tags:

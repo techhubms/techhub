@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/updates/v1_105
 title: 'Visual Studio Code September 2025 Release (v1.105): AI, MCP, and Developer Enhancements'
 author: Visual Studio Code Team
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-10-09 17:00:00 +00:00
 tags:

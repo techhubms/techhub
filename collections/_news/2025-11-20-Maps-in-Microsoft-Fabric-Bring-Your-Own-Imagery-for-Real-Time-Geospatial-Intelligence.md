@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/maps-in-microsoft-fabric-bring-your-own-imagery-into-real-time-intelligence/
 title: 'Maps in Microsoft Fabric: Bring Your Own Imagery for Real-Time Geospatial Intelligence'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-20 03:00:00 +00:00
 tags:

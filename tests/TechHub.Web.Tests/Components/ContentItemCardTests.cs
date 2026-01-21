@@ -33,16 +33,15 @@ public class ContentItemCardTests : TestContext
         {
             Slug = "example-post",
             Title = "Example Post",
-            Description = "",
             Author = null,
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
             DateIso = "2024-01-15",
-            CollectionName = "blogs",            SectionNames = ["ai"],
-            PrimarySection = "ai",
+            CollectionName = "blogs",
+            SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "<p>This is the excerpt of the post.</p>",
             ExternalUrl = "https://example.com/post",
-            ViewingMode = "external",
             Url = "/ai/blogs/example-post"
         };
 
@@ -56,36 +55,6 @@ public class ContentItemCardTests : TestContext
     }
 
     [Fact]
-    public void ContentItemCard_RendersDescription_WhenExcerptNotProvided()
-    {
-        // Arrange
-        var item = new ContentItemDto
-        {
-            Slug = "example-post",
-            Title = "Example Post",
-            Description = "This is the description of the post.",
-            Author = null,
-            DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
-            DateIso = "2024-01-15",
-            CollectionName = "blogs",            SectionNames = ["ai"],
-            PrimarySection = "ai",
-            Tags = [],
-            Excerpt = "",
-            ExternalUrl = "https://example.com/post",
-            ViewingMode = "external",
-            Url = "/ai/blogs/example-post"
-        };
-
-        // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
-            .Add(p => p.Item, item));
-
-        // Assert
-        var description = cut.Find(".content-description");
-        description.TextContent.Should().Be("This is the description of the post.");
-    }
-
-    [Fact]
     public void ContentItemCard_ShowsAuthor_WhenProvided()
     {
         // Arrange
@@ -93,16 +62,16 @@ public class ContentItemCardTests : TestContext
         {
             Slug = "example-post",
             Title = "Example Post",
-            Description = "",
+
             Author = "John Doe",
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
             DateIso = "2024-01-15",
-            CollectionName = "blogs",            SectionNames = ["ai"],
-            PrimarySection = "ai",
+            CollectionName = "blogs",
+            SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            ViewingMode = "external",
             Url = "/ai/blogs/example-post"
         };
 
@@ -138,16 +107,16 @@ public class ContentItemCardTests : TestContext
         {
             Slug = "example-post",
             Title = "Example Post",
-            Description = "",
+
             Author = null,
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
             DateIso = "2024-01-15",
-            CollectionName = "blogs",            SectionNames = ["ai"],
-            PrimarySection = "ai",
+            CollectionName = "blogs",
+            SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = ["ai", "copilot", "productivity", "dotnet"],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            ViewingMode = "external",
             Url = "/ai/blogs/example-post"
         };
 
@@ -170,16 +139,16 @@ public class ContentItemCardTests : TestContext
         {
             Slug = "example-post",
             Title = "Example Post",
-            Description = "",
+
             Author = null,
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
             DateIso = "2024-01-15",
-            CollectionName = "blogs",            SectionNames = ["ai"],
-            PrimarySection = "ai",
+            CollectionName = "blogs",
+            SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = ["ai", "copilot", "productivity", "dotnet", "azure", "github", "vscode"],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            ViewingMode = "external",
             Url = "/ai/blogs/example-post"
         };
 
@@ -203,16 +172,16 @@ public class ContentItemCardTests : TestContext
         {
             Slug = "example-post",
             Title = "Example Post",
-            Description = "",
+
             Author = null,
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
             DateIso = "2024-01-15",
-            CollectionName = "news",            SectionNames = ["ai"],
-            PrimarySection = "ai",
+            CollectionName = "news",
+            SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            ViewingMode = "external",
             Url = "/ai/blogs/example-post"
         };
 
@@ -234,16 +203,16 @@ public class ContentItemCardTests : TestContext
         {
             Slug = "example-post",
             Title = "Example Post",
-            Description = "",
+
             Author = null,
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
             DateIso = "2024-01-15",
-            CollectionName = "news",            SectionNames = ["ai"],
-            PrimarySection = "ai",
+            CollectionName = "news",
+            SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            ViewingMode = "external",
             Url = "/ai/blogs/example-post"
         };
 
@@ -265,16 +234,16 @@ public class ContentItemCardTests : TestContext
         {
             Slug = "example-post",
             Title = "Example Post",
-            Description = "",
+
             Author = null,
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
             DateIso = "2024-01-15",
-            CollectionName = "blogs",            SectionNames = ["ai"],
-            PrimarySection = "ai",
+            CollectionName = "blogs",
+            SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://techcommunity.microsoft.com/example",
-            ViewingMode = "external",
             Url = "/ai/blogs/example-post"
         };
 
@@ -297,16 +266,16 @@ public class ContentItemCardTests : TestContext
         {
             Slug = "example-post",
             Title = "Example Post",
-            Description = "",
+
             Author = null,
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
             DateIso = "2024-01-15",
-            CollectionName = "blogs",            SectionNames = ["ai"],
-            PrimarySection = "ai",
+            CollectionName = "blogs",
+            SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            ViewingMode = "internal",
             Url = "/ai/videos/example-post"
         };
 
@@ -329,16 +298,16 @@ public class ContentItemCardTests : TestContext
         {
             Slug = "example-post",
             Title = "Example Post",
-            Description = "",
+
             Author = null,
             DateEpoch = twoDaysAgo,
             DateIso = "2024-01-15",
-            CollectionName = "blogs",            SectionNames = ["ai"],
-            PrimarySection = "ai",
+            CollectionName = "blogs",
+            SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            ViewingMode = "external",
             Url = "/ai/blogs/example-post"
         };
 
@@ -360,16 +329,16 @@ public class ContentItemCardTests : TestContext
         {
             Slug = "example-post",
             Title = "Example Post",
-            Description = "",
+
             Author = null,
             DateEpoch = today,
             DateIso = "2024-01-15",
-            CollectionName = "blogs",            SectionNames = ["ai"],
-            PrimarySection = "ai",
+            CollectionName = "blogs",
+            SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            ViewingMode = "external",
             Url = "/ai/blogs/example-post"
         };
 
@@ -390,16 +359,16 @@ public class ContentItemCardTests : TestContext
         {
             Slug = "example-post",
             Title = "Example Post",
-            Description = "",
+
             Author = null,
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
             DateIso = "2024-01-15",
-            CollectionName = "community",            SectionNames = ["ai"],
-            PrimarySection = "ai",
+            CollectionName = "community",
+            SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            ViewingMode = "external",
             Url = "/ai/blogs/example-post"
         };
 
@@ -436,16 +405,16 @@ public class ContentItemCardTests : TestContext
         {
             Slug = "example-post",
             Title = "Example Post",
-            Description = "",
+
             Author = null,
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
             DateIso = "2024-01-15",
-            CollectionName = "blogs",            SectionNames = ["ai"],
-            PrimarySection = "ai",
+            CollectionName = "blogs",
+            SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com",
-            ViewingMode = "external",
             Url = "/ai/blogs/example-post"
         };
 
@@ -466,16 +435,16 @@ public class ContentItemCardTests : TestContext
         {
             Slug = "example-post",
             Title = "Example Post",
-            Description = "",
+
             Author = null,
             DateEpoch = DateTimeOffset.Parse("2024-01-15").ToUnixTimeSeconds(),
             DateIso = "2024-01-15",
-            CollectionName = "blogs",            SectionNames = ["ai"],
-            PrimarySection = "ai",
+            CollectionName = "blogs",
+            SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            ViewingMode = "internal",
             Url = "/ai/blogs/example-post"
         };
 
@@ -494,16 +463,16 @@ public class ContentItemCardTests : TestContext
         {
             Slug = title.ToLowerInvariant().Replace(" ", "-"),
             Title = title,
-            Description = "",
+
             Author = null,
             DateEpoch = DateTimeOffset.Parse(dateIso).ToUnixTimeSeconds(),
             DateIso = dateIso,
-            CollectionName = "blogs",            SectionNames = ["ai"],
-            PrimarySection = "ai",
+            CollectionName = "blogs",
+            SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = [],
             Excerpt = "",
             ExternalUrl = "https://example.com/post",
-            ViewingMode = "external",
             Url = "/ai/blogs/example-post"
         };
     }

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-genie-integration-with-copilot-studio-and/ba-p/4471087
 title: 'Integrating Azure Databricks Genie with Copilot Studio and Microsoft Foundry: Public Preview'
 author: AnaviNahar
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 18:48:18 +00:00
 tags:

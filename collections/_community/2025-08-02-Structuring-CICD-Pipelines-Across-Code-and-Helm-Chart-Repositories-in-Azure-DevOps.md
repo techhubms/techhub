@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/azuredevops/comments/1mfmw05/how_to_structure_cicd_pipelines_across_two_repos/
 title: Structuring CI/CD Pipelines Across Code and Helm Chart Repositories in Azure DevOps
 author: machosalade
-viewing_mode: external
 feed_name: Reddit Azure DevOps
 date: 2025-08-02 10:03:38 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m2vtfz/looking_for_advice_on_architecting_a_deployment/
 title: Seeking Advice on Deployment Pipeline Design for Multi-Environment, Role-Based Server Setups
 author: Effective_Being_8048
-viewing_mode: external
 feed_name: Reddit Azure DevOps
 date: 2025-07-18 07:20:38 +00:00
 tags:

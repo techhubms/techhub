@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=_kYXkZxSTHc
 title: Scaling Innovation in Smart Eyewear and Connected Retail with Azure and AI
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 12:47:53 +00:00
 tags:

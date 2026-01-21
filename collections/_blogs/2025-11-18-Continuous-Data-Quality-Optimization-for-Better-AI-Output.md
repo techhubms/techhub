@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/continuous-data-quality-optimization-for-ai-the-essential-guide/
 title: Continuous Data Quality Optimization for Better AI Output
 author: John Edward
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-18 15:40:33 +00:00
 tags:

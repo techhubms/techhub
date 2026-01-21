@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/accelerating-open-source-infrastructure-development-for-frontier-ai-at-scale/
 title: Microsoft Advances Open-Source Infrastructure for Frontier-Scale AI
 author: Rani Borkar and Saurabh Dighe
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-10-14 00:35:00 +00:00
 tags:

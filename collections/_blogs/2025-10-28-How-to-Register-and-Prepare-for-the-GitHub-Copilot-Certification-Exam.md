@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-to-register-and-prepare-for-the-github-copilot-exam-step-by-step-guide/
 title: How to Register and Prepare for the GitHub Copilot Certification Exam
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-28 08:45:55 +00:00
 tags:

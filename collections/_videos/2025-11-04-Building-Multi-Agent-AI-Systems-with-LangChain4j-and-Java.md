@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=YlbeQkTRbAY
 title: Building Multi-Agent AI Systems with LangChain4j and Java
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-04 17:00:57 +00:00
 tags:

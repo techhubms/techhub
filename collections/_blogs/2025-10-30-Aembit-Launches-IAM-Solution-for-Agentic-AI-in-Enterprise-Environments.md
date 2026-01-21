@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/aembit-introduces-identity-and-access-management-for-agentic-ai/
 title: Aembit Launches IAM Solution for Agentic AI in Enterprise Environments
 author: cybernewswire
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-30 12:02:04 +00:00
 tags:

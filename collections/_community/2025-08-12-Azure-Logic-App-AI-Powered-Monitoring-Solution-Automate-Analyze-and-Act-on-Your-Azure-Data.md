@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/healthcare-and-life-sciences/azure-logic-app-ai-powered-monitoring-solution-automate-analyze/ba-p/4442665
 title: 'Azure Logic App AI-Powered Monitoring Solution: Automate, Analyze, and Act on Your Azure Data'
 author: VinodSoni
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-12 21:37:11 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=RsCz57M2SMc
 title: Explore Microsoft Agent 365 Security and Governance Capabilities
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 06:28:51 +00:00
 tags:

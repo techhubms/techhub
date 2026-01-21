@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-modernize-your-vmware-platform-using-azure-vmware/ba-p/4467872
 title: Migrate & Modernize Your VMware Platform Using Azure VMware Solution Gen 2
 author: tredavis
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-06 19:17:51 +00:00
 tags:

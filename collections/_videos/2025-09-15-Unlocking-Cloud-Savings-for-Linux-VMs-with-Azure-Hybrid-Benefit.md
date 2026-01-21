@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Y46PRzzqsMw
 title: Unlocking Cloud Savings for Linux VMs with Azure Hybrid Benefit
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-15 07:00:26 +00:00
 tags:

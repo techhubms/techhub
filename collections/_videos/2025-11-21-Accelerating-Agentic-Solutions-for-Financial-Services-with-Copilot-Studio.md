@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=oG2oJP0fpg0
 title: Accelerating Agentic Solutions for Financial Services with Copilot Studio
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 07:25:32 +00:00
 tags:

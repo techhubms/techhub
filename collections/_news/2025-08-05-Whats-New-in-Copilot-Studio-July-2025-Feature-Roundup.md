@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/whats-new-in-copilot-studio-july-2025/
 title: 'What’s New in Copilot Studio: July 2025 Feature Roundup'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-05 15:42:51 +00:00
 tags:

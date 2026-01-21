@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://harrybin.de/posts/do-epic-shit-chat-mode/
 title: 'Do Epic Shit Chat Mode: Beast Mode for GitHub Copilot'
 author: Harald Binkle
-viewing_mode: external
 feed_name: Harald Binkle's blog
 date: 2025-08-15 10:30:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/VisualStudio/comments/1mkw756/copilot_does_not_remove_old_code/
 title: Understanding GitHub Copilot's Code Modification Behavior in Visual Studio
 author: BusyCode
-viewing_mode: external
 feed_name: Reddit Visual Studio
 date: 2025-08-08 14:07:47 +00:00
 tags:

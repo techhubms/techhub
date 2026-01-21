@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/the-developer-role-is-evolving-heres-how-to-stay-ahead/
 title: 'The Developer Role Is Evolving: How to Stay Ahead with AI and GitHub Copilot'
 author: Gwen Davis
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-06 20:12:49 +00:00
 tags:

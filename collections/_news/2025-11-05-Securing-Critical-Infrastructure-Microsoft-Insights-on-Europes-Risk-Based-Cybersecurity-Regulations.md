@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/11/05/securing-critical-infrastructure-why-europes-risk-based-regulations-matter/
 title: "Securing Critical Infrastructure: Microsoft Insights on Europe's Risk-Based Cybersecurity Regulations"
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-05 18:09:51 +00:00
 tags:

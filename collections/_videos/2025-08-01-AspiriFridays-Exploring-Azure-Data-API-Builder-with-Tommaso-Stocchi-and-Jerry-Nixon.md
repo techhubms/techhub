@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Def3zt5RFpA
 title: 'AspiriFridays: Exploring Azure Data API Builder with Tommaso Stocchi and Jerry Nixon'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-08-01 21:43:53 +00:00
 tags:

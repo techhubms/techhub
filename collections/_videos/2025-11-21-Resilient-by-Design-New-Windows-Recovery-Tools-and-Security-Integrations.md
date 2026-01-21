@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=U0P_Js91VjQ
 title: 'Resilient by Design: New Windows Recovery Tools and Security Integrations'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 14:26:07 +00:00
 tags:

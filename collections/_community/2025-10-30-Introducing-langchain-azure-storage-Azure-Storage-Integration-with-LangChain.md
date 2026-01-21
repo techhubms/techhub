@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-langchain-azure-storage-azure-storage-integrations/ba-p/4465268
 title: 'Introducing langchain-azure-storage: Azure Storage Integration with LangChain'
 author: kyleknapp
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-30 16:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/cross-region-zero-trust-connecting-power-platform-to-azure-paas/ba-p/4484995
 title: 'Cross-Region Zero Trust: Secure Power Platform Connectivity to Azure PaaS Without Public Exposure'
 author: Idit_Bnaya
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-13 19:09:12 +00:00
 tags:

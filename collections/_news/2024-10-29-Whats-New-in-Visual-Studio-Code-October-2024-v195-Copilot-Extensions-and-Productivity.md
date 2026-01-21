@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/updates/v1_95
 title: "What's New in Visual Studio Code October 2024 (v1.95): Copilot, Extensions & Productivity"
 author: Visual Studio Code Team
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2024-10-29 17:00:00 +00:00
 tags:

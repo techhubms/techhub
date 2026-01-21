@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/top-10-azure-services-everyone-should-know-2025-edition/
 title: Top 10 Azure Services Everyone Should Know (2025 Edition)
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-29 07:52:42 +00:00
 tags:

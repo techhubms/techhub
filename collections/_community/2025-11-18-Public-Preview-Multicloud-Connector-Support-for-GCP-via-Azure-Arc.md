@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-multicloud-connector-support-for-google-cloud/ba-p/4470700
 title: 'Public Preview: Multicloud Connector Support for GCP via Azure Arc'
 author: Meagan McCrory
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:23:35 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-security-is-now-available-in-public-preview/
 title: 'Announcing OneLake Security (Preview): Fine-Grained Data Access Control in Microsoft Fabric'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-09-08 08:00:00 +00:00
 tags:

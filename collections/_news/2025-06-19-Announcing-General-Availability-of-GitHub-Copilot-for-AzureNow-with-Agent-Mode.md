@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/all-things-azure/announcing-general-availability-of-github-copilot-for-azure-now-with-agent-mode/
 title: Announcing General Availability of GitHub Copilot for Azure—Now with Agent Mode
 author: Yun Jung Choi
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-06-19 21:19:28 +00:00
 tags:

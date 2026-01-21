@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=3Aqd_arD6Vo
 title: '.NET Data Community Standup: EF 10 Release Celebration'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-06 19:41:56 +00:00
 tags:

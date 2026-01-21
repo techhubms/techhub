@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/VisualStudio/comments/1m1l1lc/visual_studio_has_most_git_features_i_need_except/
 title: Visual Studio Has Most Git Features I Need—Except Worktree, So I Built an Extension for It
 author: Creative-Paper1007
-viewing_mode: external
 feed_name: Reddit Visual Studio
 date: 2025-07-16 18:50:36 +00:00
 tags:

@@ -184,14 +184,15 @@
             else if (SectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
             {
                 // /all/news - get all news across all sections
-                Logger.LogDebug("Calling ApiClient.GetContentAsync('', {Collection}) for collection={Collection}", CollectionName,
+                Logger.LogDebug("Calling ApiClient.GetContentAsync('', {collectionName}) for collection={collectionName}",
+                CollectionName,
                 CollectionName);
                 items = await ApiClient.GetContentAsync("", CollectionName);
             }
             else
             {
                 // /section/collection - get specific collection for specific section (use SectionName)
-                Logger.LogDebug("Calling ApiClient.GetContentAsync({SectionName}, {Collection}) for section={SectionName}, collection={Collection}",
+                Logger.LogDebug("Calling ApiClient.GetContentAsync({SectionName}, {collectionName}) for section={SectionName}, collection={collectionName}",
                 SectionName, CollectionName, SectionName, CollectionName);
                 items = await ApiClient.GetContentAsync(SectionName, CollectionName);
             }

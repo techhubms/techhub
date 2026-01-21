@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=pMFnaPg3TTQ
 title: Powering Modern Cloud Workloads with Azure Compute
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 08:12:27 +00:00
 tags:

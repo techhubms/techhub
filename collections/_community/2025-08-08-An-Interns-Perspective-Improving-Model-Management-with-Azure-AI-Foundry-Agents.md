@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/the-future-of-ai-an-intern-s-adventure-improving-usability-with/ba-p/4440857
 title: "An Intern's Perspective: Improving Model Management with Azure AI Foundry Agents"
 author: Harry-Cheng
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-08 13:31:56 +00:00
 tags:

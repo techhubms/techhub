@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/03/windows-server-2025-security-baseline-and-app-control/
 title: 'Windows Server 2025 Security Baseline and App Control: Enhancing Windows Server Security'
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-03-17 10:33:20 +00:00
 tags:

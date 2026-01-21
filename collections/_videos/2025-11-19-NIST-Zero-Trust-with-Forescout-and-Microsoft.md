@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=eKVJ-Rw8R0I
 title: NIST Zero Trust with Forescout and Microsoft
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 13:08:33 +00:00
 tags:

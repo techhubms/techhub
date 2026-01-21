@@ -148,7 +148,7 @@ For .NET development patterns, component architecture, API design, and all code 
 - **Always use configuration-driven design**: Update configuration in `appsettings.json`, not hardcoded values
 - **Always server-side render all content**: Initial page load must show complete content
 - **Always add tests for new functionality**: According to domain-specific AGENTS.md files
-- **Always follow markdown guidelines**: See [collections/markdown-guidelines.md](collections/markdown-guidelines.md) and [collections/writing-style-guidelines.md](collections/writing-style-guidelines.md)
+- **Always follow writing style guidelines**: See [collections/writing-style-guidelines.md](collections/writing-style-guidelines.md) for content writing standards
 - **Always be direct and concise**: Avoid exaggerated language
 - **Always maintain professional yet approachable tone**: Clear and authoritative without being overly formal
 - **Always avoid filler phrases**: Don't use "Sure!" or "You're right!"
@@ -539,7 +539,7 @@ See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-
 - Search for existing docs before assuming none exist
 - Keep docs accurate and up-to-date
 - Follow markdown formatting guidelines (wrap symbol names in backticks, use KaTeX for equations)
-- Follow [`collections/markdown-guidelines.md`](collections/markdown-guidelines.md) and [`collections/writing-style-guidelines.md`](collections/writing-style-guidelines.md)
+- Follow [`collections/writing-style-guidelines.md`](collections/writing-style-guidelines.md) for writing standards
 - See [Documentation Architecture](#documentation-architecture) for complete doc map
 
 **Key Rules**:
@@ -1026,13 +1026,14 @@ The Tech Hub uses a **multi-tier documentation system** organized by scope and d
 
 **Functional Documentation** (in `docs/`):
 
-- **[filtering-system.md](docs/filtering-system.md)** - How tag and date filtering works
 - **[content-management.md](docs/content-management.md)** - Content workflows and RSS processing
 - **[api-specification.md](docs/api-specification.md)** - REST API contracts and endpoints
+- **[rss-feeds.md](docs/rss-feeds.md)** - RSS feed system and available feeds
+- **[toc-component.md](docs/toc-component.md)** - Table of contents component architecture
 
 **Content Guidelines** (in `collections/`):
 
-- **[markdown-guidelines.md](collections/markdown-guidelines.md)** - Markdown formatting rules
+- **[AGENTS.md](collections/AGENTS.md)** - Content management guide with frontmatter schema
 - **[writing-style-guidelines.md](collections/writing-style-guidelines.md)** - Writing tone and style
 
 ### Quick Reference Guide
@@ -1057,8 +1058,8 @@ The Tech Hub uses a **multi-tier documentation system** organized by scope and d
 **Working on content?**
 
 1. Read [collections/AGENTS.md](collections/AGENTS.md)
-2. Follow [markdown-guidelines.md](collections/markdown-guidelines.md)
-3. Follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
+2. Follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
+3. Use `npx markdownlint-cli2 --fix <file-path>` to fix formatting
 
 **Working on tests?**
 
@@ -1074,9 +1075,10 @@ The Tech Hub uses a **multi-tier documentation system** organized by scope and d
 
 **Understanding system behavior?**
 
-1. Read [docs/filtering-system.md](docs/filtering-system.md) for filtering
-2. Read [docs/content-management.md](docs/content-management.md) for content workflows
-3. Read [docs/api-specification.md](docs/api-specification.md) for API contracts
+1. Read [docs/content-management.md](docs/content-management.md) for content workflows and RSS processing
+2. Read [docs/api-specification.md](docs/api-specification.md) for API contracts
+3. Read [docs/rss-feeds.md](docs/rss-feeds.md) for RSS feed system
+4. Read [docs/toc-component.md](docs/toc-component.md) for TOC component architecture
 
 ## Core Development Principles
 

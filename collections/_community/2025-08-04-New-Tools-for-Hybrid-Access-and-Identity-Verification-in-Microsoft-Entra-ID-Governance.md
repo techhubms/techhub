@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-entra-blog/new-governance-tools-for-hybrid-access-and-identity-verification/ba-p/4422534
 title: New Tools for Hybrid Access and Identity Verification in Microsoft Entra ID Governance
 author: Joseph Dadzie
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-04 17:10:48 +00:00
 tags:

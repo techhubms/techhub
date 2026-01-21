@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=1EBXoFZO6Kk
 title: Refactor an Existing Codebase Using Prompt-Driven Development with GitHub Copilot
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-09-15 14:00:03 +00:00
 tags:

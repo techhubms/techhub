@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-17-gpt-4-1-copilot-code-completion-model-october-update
 title: GPT-4.1 Copilot Code Completion Model – October Update
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-17 15:29:48 +00:00
 tags:

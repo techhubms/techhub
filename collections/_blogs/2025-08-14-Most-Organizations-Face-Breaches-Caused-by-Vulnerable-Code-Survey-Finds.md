@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/survey-traces-large-amount-of-breaches-back-to-vulnerable-code/?utm_source=rss&utm_medium=rss&utm_campaign=survey-traces-large-amount-of-breaches-back-to-vulnerable-code
 title: Most Organizations Face Breaches Caused by Vulnerable Code, Survey Finds
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-14 11:00:40 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-11-post-as-admin-now-available-in-github-discussions
 title: Post as Admin Feature in GitHub Discussions
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-11 16:45:28 +00:00
 tags:

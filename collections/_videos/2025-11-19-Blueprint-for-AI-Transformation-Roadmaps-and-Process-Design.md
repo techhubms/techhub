@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=looF4pizVps
 title: 'Blueprint for AI Transformation: Roadmaps and Process Design'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 15:14:30 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=LO1fQDWt2iI
 title: Reimagining IT Operations with Agentic AI on Microsoft Azure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 14:53:29 +00:00
 tags:

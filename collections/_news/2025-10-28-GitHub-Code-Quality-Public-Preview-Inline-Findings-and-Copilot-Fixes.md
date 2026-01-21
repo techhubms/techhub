@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-28-github-code-quality-in-public-preview
 title: 'GitHub Code Quality Public Preview: Inline Findings and Copilot Fixes'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-28 15:28:45 +00:00
 tags:

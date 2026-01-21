@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=l2_Dnh1a2IY
 title: Empowering Partners to Navigate the New Security Landscape
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-26 10:13:41 +00:00
 tags:

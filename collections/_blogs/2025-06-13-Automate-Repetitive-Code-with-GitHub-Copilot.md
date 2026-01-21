@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/automate-repetitive-code-with-github-copilot.html
 title: Automate Repetitive Code with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-06-13 00:00:00 +00:00
 tags:

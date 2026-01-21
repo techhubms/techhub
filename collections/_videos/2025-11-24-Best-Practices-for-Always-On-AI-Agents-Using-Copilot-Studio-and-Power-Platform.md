@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=_rCws3fowj8
 title: Best Practices for Always-On AI Agents Using Copilot Studio and Power Platform
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 07:32:17 +00:00
 tags:

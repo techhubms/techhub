@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/serverless-workspaces-are-live-in-azure-databricks/ba-p/4474712
 title: Serverless Workspaces Are Now Available in Azure Databricks
 author: AnaviNahar
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-02 23:08:45 +00:00
 tags:

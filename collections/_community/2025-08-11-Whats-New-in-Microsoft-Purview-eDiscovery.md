@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-security-community/what-s-new-in-microsoft-purview-ediscovery/ba-p/4441676
 title: What’s New in Microsoft Purview eDiscovery
 author: Aaron_Thorp
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-11 16:00:00 +00:00
 tags:

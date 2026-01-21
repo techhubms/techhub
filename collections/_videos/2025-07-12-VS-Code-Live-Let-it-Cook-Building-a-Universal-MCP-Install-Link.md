@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=JybSsLEJ-hg
 title: 'VS Code Live - Let it Cook: Building a Universal MCP Install Link'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-07-12 04:27:01 +00:00
 tags:

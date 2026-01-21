@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/ai-azure-landing-zone-shared-capabilities-and-models-to-enable/ba-p/4455951
 title: 'Azure AI Landing Zone: Enterprise-Scale, Secure, and Governed AI Deployment Architecture'
 author: Rohon_Mohapatra
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-25 18:32:35 +00:00
 tags:

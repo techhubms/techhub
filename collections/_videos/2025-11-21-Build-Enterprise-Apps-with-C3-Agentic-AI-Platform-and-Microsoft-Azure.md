@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=xRApEkWYsq4
 title: Build Enterprise Apps with C3 Agentic AI Platform and Microsoft Azure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 12:49:52 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-from-amazon-api-gateway-to-azure-api-management/ba-p/4471524
 title: 'Migrating from Amazon API Gateway to Azure API Management: Technical Guide'
 author: dan_lepow
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-04 21:23:07 +00:00
 tags:

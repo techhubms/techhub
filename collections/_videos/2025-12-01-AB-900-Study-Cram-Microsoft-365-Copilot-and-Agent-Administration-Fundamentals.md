@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=DUydgD7SkEo
 title: 'AB-900 Study Cram: Microsoft 365 Copilot & Agent Administration Fundamentals'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-12-01 15:29:31 +00:00
 tags:

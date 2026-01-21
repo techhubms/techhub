@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-05-enterprise-qualifier-is-now-generally-available-in-github-code-search
 title: GitHub Introduces 'enterprise:' Qualifier for Enhanced Code Search
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-05 19:49:17 +00:00
 tags:

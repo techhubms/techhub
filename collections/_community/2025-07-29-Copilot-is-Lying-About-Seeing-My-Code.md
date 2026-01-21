@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mc7cof/copilot_is_lying_about_seeing_my_code/
 title: Copilot is Lying About Seeing My Code
 author: KingPvzYT
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-07-29 09:59:08 +00:00
 tags:

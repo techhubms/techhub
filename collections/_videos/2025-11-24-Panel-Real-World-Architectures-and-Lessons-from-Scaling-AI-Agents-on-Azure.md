@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=baPvHB27gwY
 title: 'Panel: Real-World Architectures and Lessons from Scaling AI Agents on Azure'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 11:37:46 +00:00
 tags:

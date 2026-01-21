@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/generative-ai/how-to-find-install-and-manage-mcp-servers-with-the-github-mcp-registry/
 title: How to Find, Install, and Manage MCP Servers with the GitHub MCP Registry
 author: Andrea Griffiths
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-24 16:00:00 +00:00
 tags:

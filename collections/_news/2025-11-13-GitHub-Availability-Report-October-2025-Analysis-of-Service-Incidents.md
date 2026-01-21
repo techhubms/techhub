@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/news-insights/company-news/github-availability-report-october-2025/
 title: 'GitHub Availability Report: October 2025 – Analysis of Service Incidents'
 author: Jakub Oleksy
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-13 17:28:48 +00:00
 tags:

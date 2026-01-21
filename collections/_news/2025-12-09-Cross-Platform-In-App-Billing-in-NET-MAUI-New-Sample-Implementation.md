@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/cross-platform-billing-dotnet-maui/
 title: 'Cross-Platform In-App Billing in .NET MAUI: New Sample Implementation'
 author: Gerald Versluis
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-12-09 18:05:00 +00:00
 tags:

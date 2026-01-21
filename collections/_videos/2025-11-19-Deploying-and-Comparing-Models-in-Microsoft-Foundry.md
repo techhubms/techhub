@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=zPvEYmj8Mi4
 title: Deploying and Comparing Models in Microsoft Foundry
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-19 23:05:52 +00:00
 tags:

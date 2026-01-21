@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-14-github-enterprise-server-3-18-is-now-generally-available
 title: GitHub Enterprise Server 3.18 Release Overview
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-14 17:28:22 +00:00
 tags:

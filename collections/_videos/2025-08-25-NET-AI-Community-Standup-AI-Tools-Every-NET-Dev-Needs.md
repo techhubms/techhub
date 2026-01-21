@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=dASHCBVyrnQ
 title: '.NET AI Community Standup: AI Tools Every .NET Dev Needs'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-08-25 22:38:30 +00:00
 tags:

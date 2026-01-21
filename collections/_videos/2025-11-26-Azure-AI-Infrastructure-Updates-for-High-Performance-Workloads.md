@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=MWid8VX6PZ4
 title: Azure AI Infrastructure Updates for High-Performance Workloads
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-26 21:27:24 +00:00
 tags:

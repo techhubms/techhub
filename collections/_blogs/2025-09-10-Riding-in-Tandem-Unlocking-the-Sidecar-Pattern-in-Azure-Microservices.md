@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/riding-in-tandem-unlocking-the-sidecar-pattern-in-azure-microservices/
 title: 'Riding in Tandem: Unlocking the Sidecar Pattern in Azure Microservices'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-10 07:32:19 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mfnu3z/net80_maui_size_of_my_applications_window/
 title: '.NET 8.0 MAUI: How to Set Minimum Window Size for Your Application'
 author: Vor__texx
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-02 11:04:25 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=mTfjrZbUkts
 title: 'Unleashing Telco Innovation: Agentic AI & Connected Intelligence with Microsoft Cloud'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 17:01:31 +00:00
 tags:

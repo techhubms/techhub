@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/join-us-for-mcp-dev-days-july-29-30
 title: 'Join Us for MCP Dev Days – July 29-30: Deep Dive into the Model Context Protocol'
 author: Katie Savage, Marc Baiza
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-07-01 22:00:46 +00:00
 tags:

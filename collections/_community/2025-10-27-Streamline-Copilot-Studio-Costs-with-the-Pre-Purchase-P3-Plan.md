@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/finops-blog/unlock-savings-with-copilot-credit-pre-purchase-plan/ba-p/4464511
 title: Streamline Copilot Studio Costs with the Pre-Purchase (P3) Plan
 author: kyleikeda
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-27 21:53:23 +00:00
 tags:

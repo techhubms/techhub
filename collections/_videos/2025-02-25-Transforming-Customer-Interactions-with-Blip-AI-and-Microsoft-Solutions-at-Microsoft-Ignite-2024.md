@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=bIagcv0Ohz4
 title: 'Transforming Customer Interactions with Blip: AI and Microsoft Solutions at Microsoft Ignite 2024'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-02-25 14:00:41 +00:00
 tags:

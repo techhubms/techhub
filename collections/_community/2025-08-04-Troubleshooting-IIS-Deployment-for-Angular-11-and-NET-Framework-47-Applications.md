@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mhjloq/deployment_to_iis/
 title: Troubleshooting IIS Deployment for Angular 11 and .NET Framework 4.7 Applications
 author: Defiant_Priority_801
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-04 17:20:05 +00:00
 tags:

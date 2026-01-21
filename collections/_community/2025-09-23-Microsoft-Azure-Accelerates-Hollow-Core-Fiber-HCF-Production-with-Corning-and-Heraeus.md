@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/microsoft-azure-scales-hollow-core-fiber-hcf-production-through/ba-p/4455953
 title: Microsoft Azure Accelerates Hollow Core Fiber (HCF) Production with Corning and Heraeus
 author: frrey
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-23 15:00:12 +00:00
 tags:

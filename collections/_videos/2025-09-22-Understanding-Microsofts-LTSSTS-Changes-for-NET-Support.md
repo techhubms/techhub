@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=3i6YASbyuHw
 title: Understanding Microsoft's LTS/STS Changes for .NET Support
 author: Nick Chapsas
-viewing_mode: internal
 feed_name: Nick Chapsas YouTube
 date: 2025-09-22 11:00:16 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/09/24/retail-at-risk-how-one-alert-uncovered-a-persistent-cyberthreat/
 title: 'Retail at Risk: How a Single Alert Uncovered a Major Cyberthreat'
 author: Microsoft Incident Response
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-09-24 17:00:00 +00:00
 tags:

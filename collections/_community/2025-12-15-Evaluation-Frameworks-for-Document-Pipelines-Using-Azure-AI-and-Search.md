@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/from-large-semi-structured-docs-to-actionable-data-in-depth/ba-p/4474060
 title: Evaluation Frameworks for Document Pipelines Using Azure AI & Search
 author: anishganguli
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-15 20:24:10 +00:00
 tags:

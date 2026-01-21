@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=V-sdNfETPYQ
 title: 'Exploring Continuous AI with GitHub Next: Agentic Workflows for Developers'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-17 15:01:02 +00:00
 tags:

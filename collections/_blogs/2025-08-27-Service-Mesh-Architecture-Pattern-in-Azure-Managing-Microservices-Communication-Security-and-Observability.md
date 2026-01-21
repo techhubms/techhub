@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/service-mesh-architecture-pattern-in-azure-handling-service-to-service-communication-security-and-observability/
 title: 'Service Mesh Architecture Pattern in Azure: Managing Microservices Communication, Security, and Observability'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-27 07:40:16 +00:00
 tags:

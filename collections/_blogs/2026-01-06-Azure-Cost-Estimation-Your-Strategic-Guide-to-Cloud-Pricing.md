@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2026/01/azure-cost-estimation-your-strategic-guide-to-cloud-pricing/
 title: 'Azure Cost Estimation: Your Strategic Guide to Cloud Pricing'
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2026-01-06 06:23:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devopsjournal.io/blog/2024/06/05/GitHub-Copilot-Power-User
 title: GitHub Copilot Power User example
 author: Rob Bos
-viewing_mode: external
 feed_name: Rob Bos' Blog
 date: 2024-06-05 00:00:00 +00:00
 tags:

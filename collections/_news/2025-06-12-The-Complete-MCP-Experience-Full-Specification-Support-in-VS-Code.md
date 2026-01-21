@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/blogs/2025/06/12/full-mcp-spec-support
 title: 'The Complete MCP Experience: Full Specification Support in VS Code'
 author: Harald Kirschner
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-06-12 00:00:00 +00:00
 tags:

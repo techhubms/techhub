@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-14-clearer-pull-request-reviewer-status-and-enhanced-email-filtering
 title: Clearer Pull Request Reviewer Status and Enhanced Email Filtering in GitHub
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-14 20:27:11 +00:00
 tags:

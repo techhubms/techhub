@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/generative-ai-in-azure-a-practical-guide-to-getting-started/
 title: 'Generative AI in Azure: A Practical Guide to Getting Started'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-22 08:40:58 +00:00
 tags:

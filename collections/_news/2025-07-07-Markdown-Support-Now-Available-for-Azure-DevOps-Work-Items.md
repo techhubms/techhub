@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/devops/markdown-support-arrives-for-work-items/
 title: Markdown Support Now Available for Azure DevOps Work Items
 author: Dan Hellem
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-07-07 19:32:46 +00:00
 tags:

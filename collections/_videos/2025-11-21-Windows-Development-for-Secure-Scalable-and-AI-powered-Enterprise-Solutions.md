@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=zOy-tA1Zb0g
 title: Windows Development for Secure, Scalable, & AI-powered Enterprise Solutions
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 06:32:50 +00:00
 tags:

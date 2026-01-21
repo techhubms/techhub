@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=wy7khJTIv3w
 title: Open Source Friday Brasil with Ana Carolyne from Codaqui
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub's Youtube channel
 date: 2025-07-26 05:06:15 +00:00
 tags:

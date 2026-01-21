@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=HDEGFNAUkX8
 title: How to Automate Code Reviews and Testing with GitHub Copilot
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-27 14:00:27 +00:00
 tags:

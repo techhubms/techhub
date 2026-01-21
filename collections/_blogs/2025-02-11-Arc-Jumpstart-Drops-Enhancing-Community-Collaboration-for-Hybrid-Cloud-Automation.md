@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/02/arc-jumpstart-drops-empowering-innovation-and-collaboration/
 title: 'Arc Jumpstart Drops: Enhancing Community Collaboration for Hybrid Cloud Automation'
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-02-11 13:40:43 +00:00
 tags:

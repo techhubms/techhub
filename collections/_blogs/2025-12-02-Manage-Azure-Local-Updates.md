@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/12/manage-azure-local-updates/
 title: Manage Azure Local Updates
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-12-02 12:34:53 +00:00
 tags:

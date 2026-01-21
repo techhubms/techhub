@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/defining-the-raw-data-vault-with-artificial-intelligence/ba-p/4453557
 title: 'Defining the Raw Data Vault with Artificial Intelligence: Automating Data Warehouse Modeling'
 author: Naveed-Hussain
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-10 12:33:30 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=yIswUU7lKpk
 title: Modern C# Features to Enhance Your Coding Habits
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 01:15:07 +00:00
 tags:

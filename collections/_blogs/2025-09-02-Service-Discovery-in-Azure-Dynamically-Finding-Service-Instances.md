@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/service-discovery-in-azure-dynamically-finding-service-instances/
 title: 'Service Discovery in Azure: Dynamically Finding Service Instances'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-02 07:45:25 +00:00
 tags:

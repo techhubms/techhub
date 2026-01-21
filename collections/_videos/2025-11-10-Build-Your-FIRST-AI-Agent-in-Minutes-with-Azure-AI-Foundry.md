@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=WFgGGl5C4PI
 title: Build Your FIRST AI Agent in Minutes with Azure AI Foundry
 author: Alireza Chegini | AI Skills for Your Career
-viewing_mode: internal
 feed_name: Alireza Chegini's YouTube
 date: 2025-11-10 15:21:11 +00:00
 tags:

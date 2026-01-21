@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mfsv2g/what_does_professional_code_look_like/
 title: What does professional code look like?
 author: RipeTide18
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-02 15:09:10 +00:00
 tags:

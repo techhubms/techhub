@@ -326,21 +326,14 @@ else
 
 **Program.cs** - WebOptimizer bundle configuration:
 
-```csharp
-builder.Services.AddWebOptimizer(pipeline =>
-{
-    // Bundle all global CSS files - MUST match App.razor references
-    pipeline.AddCssBundle("/css/bundle.css",
-        "css/design-tokens.css",
-        "css/base.css",
-        "css/article.css",
-        "css/sidebar.css",
-        "css/page-container.css",
-        "css/loading.css",
-        "css/nav-helpers.css"
-    );
-});
-```
+**CSS Bundling Pattern**:
+
+- Use `AddWebOptimizer()` in Program.cs
+- Call `AddCssBundle("/css/bundle.css", ...files)` with all global CSS
+- List files in dependency order (tokens first, base second, components last)
+- Bundle path MUST match App.razor `<link>` reference
+
+**See**: [Program.cs](Program.cs) lines 20-30 for complete bundle configuration
 
 **CRITICAL**: App.razor and Program.cs MUST reference the exact same CSS files in the same order.
 
@@ -1472,7 +1465,7 @@ src/TechHub.Web/
   - `Home.razor` - Homepage (`/`) - Shows all sections
   - `Section.razor` - Section page (`/{sectionName}`) - Shows all content in section
   - `SectionCollection.razor` - Collection page (`/{sectionName}/{collectionName}`) - Shows filtered content
-  - `ContentItem.razor` - Detail page (`/{sectionName}/{collection}/{itemId}`) - Shows single content item
+  - `ContentItem.razor` - Detail page (`/{sectionName}/{collectionName}/{slug}`) - Shows single content item
   - `About.razor` - About page (`/about`)
   - `NotFound.razor` - 404 page
   - Custom pages - Feature-specific routable pages (GenAI courses, GitHub Copilot resources, etc.)
@@ -1569,25 +1562,13 @@ Source: [ASP.NET Core Blazor project structure](https://github.com/dotnet/aspnet
 
 ## Testing Components
 
-**See**: `tests/TechHub.Web.Tests/AGENTS.md` for bUnit testing patterns
+**See**: [tests/TechHub.Web.Tests/AGENTS.md](../../tests/TechHub.Web.Tests/AGENTS.md) for bUnit testing patterns
 
-**Basic Test Pattern**:
+**Test Pattern**:
 
-```csharp
-[Fact]
-public void SectionCard_RendersTitle()
-{
-    // Arrange
-    var section = new SectionDto { Title = "AI", /* ... */ };
-    
-    // Act
-    var cut = RenderComponent<SectionCard>(parameters => parameters
-        .Add(p => p.Section, section));
-    
-    // Assert
-    cut.Find("h2").TextContent.Should().Be("AI");
-}
-```
+- Arrange: Create test data (DTOs, models)
+- Act: Render component with `RenderComponent<T>(parameters => ...)`
+- Assert: Use `Find()`, `FindAll()` and FluentAssertions
 
 ## Common Patterns
 
@@ -1729,12 +1710,10 @@ window.setupInfiniteScroll = (elementId, dotNetRef) => {
 
 **Parameters**:
 
-```csharp
-[Parameter] public bool LoadSyntaxHighlighting { get; set; } = false;  // Highlight.js for code blocks
-[Parameter] public bool LoadMermaid { get; set; } = false;              // Mermaid for diagrams
-[Parameter] public bool LoadTocScrollSpy { get; set; } = false;         // TOC active state tracking
-[Parameter] public bool LoadCustomPagesInteractivity { get; set; } = false; // Collapsible sections (AISDLC, DXSpace)
-```
+- `LoadSyntaxHighlighting` - Highlight.js for code blocks
+- `LoadMermaid` - Mermaid for diagrams
+- `LoadTocScrollSpy` - TOC active state tracking
+- `LoadCustomPagesInteractivity` - Collapsible sections (AISDLC, DXSpace)
 
 **Usage Pattern**:
 
@@ -1865,7 +1844,7 @@ history.replaceState(null, '', newUrl);
 - `Home.razor` - Homepage (`/`)
 - `Section.razor` - Section index (`/{sectionName}`)
 - `SectionCollection.razor` - Collection page (`/{sectionName}/{collectionName}`)
-- `ContentItem.razor` - Detail page (`/{sectionName}/{collection}/{itemId}`)
+- `ContentItem.razor` - Detail page (`/{sectionName}/{collectionName}/{slug}`)
 - `About.razor` - About page (`/about`)
 - `NotFound.razor` - 404 page
 
@@ -1895,7 +1874,7 @@ history.replaceState(null, '', newUrl);
 **Pattern**: Add JSON-LD structured data to content pages for SEO
 
 ```razor
-@page "/{sectionName}/{collection}/{itemId}"
+@page "/{sectionName}/{collectionName}/{slug}"
 
 <HeadContent>
     <script type="application/ld+json">
@@ -2126,61 +2105,22 @@ The `SidebarTagCloud` component provides interactive tag filtering with toggle b
 
 **Implementation Pattern**:
 
-```csharp
-// In SidebarTagCloud.razor.cs
-private HashSet<string> selectedTagsInternal = new();
+**Tag Selection State**:
 
-protected override async Task OnInitializedAsync()
-{
-    // Initialize from URL with deduplication and normalization
-    if (SelectedTags != null)
-    {
-        selectedTagsInternal = new HashSet<string>(
-            SelectedTags.Select(t => t.Trim().ToLowerInvariant()),
-            StringComparer.OrdinalIgnoreCase);
-    }
-}
+- Store in `HashSet<string>` with `StringComparer.OrdinalIgnoreCase`
+- Initialize from URL with deduplication and normalization (`.ToLowerInvariant()`)
+- Toggle adds/removes tags from set
+- Update URL after each toggle
 
-private async Task ToggleTagAndUpdateUrl(string tag)
-{
-    // Normalize for consistent comparison
-    var normalizedTag = tag.Trim().ToLowerInvariant();
-    
-    // Toggle selection
-    if (selectedTagsInternal.Contains(normalizedTag))
-    {
-        selectedTagsInternal.Remove(normalizedTag);
-    }
-    else
-    {
-        selectedTagsInternal.Add(normalizedTag);
-    }
-    
-    // Update URL with new selection
-    UpdateUrlWithTags();
-}
-```
+**Page Integration**:
 
-**Page Integration Pattern** (Section.razor, SectionCollection.razor):
+- Use `[SupplyParameterFromQuery(Name = "tags")]` for URL binding
+- Parse comma-separated tags with `Uri.UnescapeDataString()`
+- Normalize and deduplicate on parse
+- Use `Distinct(StringComparer.OrdinalIgnoreCase)`
 
-```csharp
-[SupplyParameterFromQuery(Name = "tags")]
-public string? TagsParam { get; set; }
-
-private List<string> selectedTags = new();
-
-private void ParseTagsFromUrl()
-{
-    if (!string.IsNullOrEmpty(TagsParam))
-    {
-        // Parse, deduplicate, and normalize tags
-        selectedTags = TagsParam.Split(',', StringSplitOptions.RemoveEmptyEntries)
-            .Select(t => Uri.UnescapeDataString(t.Trim()).ToLowerInvariant())
-            .Distinct(StringComparer.OrdinalIgnoreCase)
-            .ToList();
-    }
-}
-```
+**See**: [Components/Shared/SidebarTagCloud.razor.cs](Components/Shared/SidebarTagCloud.razor.cs) for toggle implementation  
+**See**: [Pages/Section.razor.cs](Pages/Section.razor.cs) for URL parameter parsing
 
 **CSS Active State** (`SidebarTagCloud.razor.css`):
 

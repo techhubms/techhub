@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=KQ09sMHeFQY
 title: 'Microsoft Agent Framework Workflows: Deep Dive and Advanced Concepts'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-22 22:52:22 +00:00
 tags:

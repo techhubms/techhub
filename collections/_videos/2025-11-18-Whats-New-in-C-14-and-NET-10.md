@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=M5BOO35688A
 title: What's New in C# 14 and .NET 10
 author: Nick Chapsas
-viewing_mode: internal
 feed_name: Nick Chapsas YouTube
 date: 2025-11-18 12:01:01 +00:00
 tags:

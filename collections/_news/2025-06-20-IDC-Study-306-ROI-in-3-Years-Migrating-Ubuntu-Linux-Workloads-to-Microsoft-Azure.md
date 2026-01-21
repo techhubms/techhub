@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/idc-business-value-study-a-306-roi-within-3-years-using-ubuntu-linux-on-azure/
 title: 'IDC Study: 306% ROI in 3 Years Migrating Ubuntu Linux Workloads to Microsoft Azure'
 author: Omar Khan
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-06-20 15:00:00 +00:00
 tags:

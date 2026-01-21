@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/semantic-kernel/enhancing-plugin-metadata-management-with-semanticpluginforge/
 title: Enhancing Plugin Metadata Management with SemanticPluginForge
 author: Likhan Siddiquee
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-06-05 09:44:38 +00:00
 tags:

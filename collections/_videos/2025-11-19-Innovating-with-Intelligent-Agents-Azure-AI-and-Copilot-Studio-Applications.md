@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=MV8nhQ3pAqo
 title: 'Innovating with Intelligent Agents: Azure AI and Copilot Studio Applications'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 17:09:31 +00:00
 tags:

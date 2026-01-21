@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-14-start-and-track-github-copilot-coding-agent-sessions-from-visual-studio-code
 title: Start and track GitHub Copilot coding agent sessions from Visual Studio Code
 author: Allison
 feed_name: The GitHub Blog
 date: 2025-07-14 14:57:20 +00:00
-viewing_mode: external
 tags:
 - AI Assistant
 - Automation

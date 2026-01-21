@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/new-aspire-app-with-react/
 title: 'Building a Full-Stack App with React and Aspire: Step-by-Step Integration with ASP.NET Core Web API'
 author: Sayed Ibrahim Hashimi
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-07-30 17:00:00 +00:00
 tags:

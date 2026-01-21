@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-26-grok-code-fast-1-is-rolling-out-in-public-preview-for-github-copilot
 title: 'Public Preview: Grok Code Fast 1 Model Now Available in GitHub Copilot'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-26 21:00:52 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/configuring-windows-firewall-for-maximum-safety/
 title: Configuring Windows Firewall for Maximum Safety
 author: John Edward
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-23 17:26:01 +00:00
 tags:

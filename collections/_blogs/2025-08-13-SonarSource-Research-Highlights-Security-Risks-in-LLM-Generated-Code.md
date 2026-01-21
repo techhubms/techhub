@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/sonar-surfaces-multiple-caveats-when-relying-on-llms-to-write-code/?utm_source=rss&utm_medium=rss&utm_campaign=sonar-surfaces-multiple-caveats-when-relying-on-llms-to-write-code
 title: SonarSource Research Highlights Security Risks in LLM-Generated Code
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-13 13:43:07 +00:00
 tags:

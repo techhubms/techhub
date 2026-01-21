@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://hiddedesmet.com/github-copilot-agent-mode
 title: GitHub Copilot Agent Mode - Transforming your development workflow
 author: Hidde de Smet
-viewing_mode: external
 feed_name: Hidde de Smet's Blog
 date: 2025-05-07 07:00:00 +00:00
 tags:

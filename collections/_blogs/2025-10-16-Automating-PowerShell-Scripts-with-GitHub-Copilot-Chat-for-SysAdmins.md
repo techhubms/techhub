@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/copilot-for-sysadmins-automating-powershell-script-generation-from-plain-english-prompts/
 title: Automating PowerShell Scripts with GitHub Copilot Chat for SysAdmins
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-16 06:12:17 +00:00
 tags:

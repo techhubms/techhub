@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-23-managing-roles-and-governance-via-enterprise-teams-is-in-public-preview
 title: 'Enterprise Teams Public Preview: Centralized Role and Security Management in GitHub Enterprise Cloud'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-23 17:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/troubleshooting-network-issues-with-retina/ba-p/4446071
 title: Troubleshooting Kubernetes Network Issues with Retina and eBPF
 author: kamilp
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-22 16:38:59 +00:00
 tags:

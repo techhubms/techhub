@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-10-codeql-2-23-0-adds-support-for-rust-log-injection-and-other-security-detection-improvements
 title: 'CodeQL 2.23.0: New Rust Log Injection Detection and Security Improvements'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-10 18:04:45 +00:00
 tags:

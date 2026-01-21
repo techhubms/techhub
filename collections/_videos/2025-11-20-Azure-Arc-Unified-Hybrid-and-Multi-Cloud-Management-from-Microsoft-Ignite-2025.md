@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=zjfWn4_xSV4
 title: 'Azure Arc: Unified Hybrid and Multi-Cloud Management from Microsoft Ignite 2025'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 16:58:22 +00:00
 tags:

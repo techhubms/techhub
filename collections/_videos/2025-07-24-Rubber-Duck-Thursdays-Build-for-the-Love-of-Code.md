@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=DcIlavh44bM
 title: Rubber Duck Thursdays - Build for the Love of Code
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub's Youtube channel
 date: 2025-07-24 23:35:30 +00:00
 tags:

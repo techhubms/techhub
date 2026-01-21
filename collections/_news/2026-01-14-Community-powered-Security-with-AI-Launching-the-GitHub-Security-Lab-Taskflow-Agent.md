@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/security/community-powered-security-with-ai-an-open-source-framework-for-security-research/
 title: 'Community-powered Security with AI: Launching the GitHub Security Lab Taskflow Agent'
 author: Kevin Backhouse
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2026-01-14 18:45:09 +00:00
 tags:

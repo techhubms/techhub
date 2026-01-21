@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=LuA4WbZY7tw
 title: .NET MAUI Community Standup - .NET 10 Announcements Roundup
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-12-04 16:48:58 +00:00
 tags:

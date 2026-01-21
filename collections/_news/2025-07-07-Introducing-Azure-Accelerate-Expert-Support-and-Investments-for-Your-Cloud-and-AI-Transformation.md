@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/introducing-azure-accelerate-fueling-transformation-with-experts-and-investments-across-your-cloud-and-ai-journey/
 title: 'Introducing Azure Accelerate: Expert Support and Investments for Your Cloud and AI Transformation'
 author: Cyril Belikoff
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-07-07 15:00:00 +00:00
 tags:

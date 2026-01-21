@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=tGbcQZ4WeZ0
 title: Building Agents with Copilot Studio and Microsoft Foundry
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 15:52:27 +00:00
 tags:

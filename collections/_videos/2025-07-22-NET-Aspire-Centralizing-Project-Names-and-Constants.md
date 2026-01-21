@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Jt39GzYCRgo
 title: '.NET Aspire: Centralizing Project Names and Constants'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-07-22 18:49:25 +00:00
 tags:

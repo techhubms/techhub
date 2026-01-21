@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mfg0ta/wait_premium_requests_reset_on_the_1st_of_every/
 title: Wait… Premium requests reset on the 1st of every month??!
 author: livejc
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-02 03:08:35 +00:00
 tags:

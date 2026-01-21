@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/KPa9PE27ESU
 title: 'Understanding Azure AI Foundry Local: On-Premises AI for Privacy and Security'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-22 16:49:42 +00:00
 tags:

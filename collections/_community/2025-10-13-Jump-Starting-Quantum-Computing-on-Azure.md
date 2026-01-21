@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/jump-starting-quantum-computing-on-azure/ba-p/4459053
 title: Jump Starting Quantum Computing on Azure
 author: notanaha
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-13 23:40:03 +00:00
 tags:

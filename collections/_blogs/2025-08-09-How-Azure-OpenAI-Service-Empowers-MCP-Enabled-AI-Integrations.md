@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/mcp-ai-unlocking-agentic-intelligence-with-a-usb-c-connector-for-ai/
 title: How Azure OpenAI Service Empowers MCP-Enabled AI Integrations
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-09 06:58:28 +00:00
 tags:

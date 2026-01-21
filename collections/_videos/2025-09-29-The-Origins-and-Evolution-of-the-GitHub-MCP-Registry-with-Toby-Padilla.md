@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=rafl28faFec
 title: The Origins & Evolution of the GitHub MCP Registry with Toby Padilla
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-09-29 07:01:00 +00:00
 tags:

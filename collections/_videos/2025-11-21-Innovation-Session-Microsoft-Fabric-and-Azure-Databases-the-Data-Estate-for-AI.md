@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=wXeHChqpxDo
 title: 'Innovation Session: Microsoft Fabric and Azure Databases - the Data Estate for AI'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 12:58:10 +00:00
 tags:

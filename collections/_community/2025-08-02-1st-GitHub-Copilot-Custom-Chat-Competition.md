@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mfjlie/1st_github_copilot_custom_chat_competition/
 title: 1st GitHub Copilot Custom Chat Competition
 author: Outrageous_Permit154
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-02 06:29:17 +00:00
 tags:

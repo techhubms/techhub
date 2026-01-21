@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-ai-is-transforming-devops-smarter-faster-and-more-reliable-software-delivery/
 title: 'How AI is Transforming DevOps: Smarter, Faster, and More Reliable Software Delivery'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-30 08:24:48 +00:00
 tags:

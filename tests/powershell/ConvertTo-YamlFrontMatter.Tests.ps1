@@ -215,8 +215,6 @@ Describe "ConvertTo-YamlFrontMatter" {
             
             $result = ConvertTo-YamlFrontMatter -FrontMatter $frontMatter
             
-            # Should use underscored names (viewing_mode, not viewingMode)
-            $result | Should -Match "viewing_mode:"
             $result | Should -Match "section_names:"
         }
     }

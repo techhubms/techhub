@@ -1,7 +1,6 @@
-﻿---
+---
 title: 'AI Agents, DevOps Changes, and Platform Security: Weekly Technology Update'
 author: Tech Hub Team
-viewing_mode: internal
 date: 2025-12-22 09:00:00 +00:00
 tags:
 - Automation

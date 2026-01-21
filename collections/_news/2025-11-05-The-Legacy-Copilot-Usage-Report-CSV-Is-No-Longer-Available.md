@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-05-the-legacy-copilot-usage-report-csv-is-no-longer-available
 title: The Legacy Copilot Usage Report CSV Is No Longer Available
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-05 20:25:52 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=asqAei6gw1s
 title: Building Agent-Ready Tools with API Center and API Management
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-07-30 22:30:19 +00:00
 tags:

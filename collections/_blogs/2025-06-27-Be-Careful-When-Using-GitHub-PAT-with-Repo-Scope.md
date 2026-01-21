@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: http://spindev.net/post/be-careful-with-repo-scope/
 title: Be Careful When Using GitHub PAT with Repo Scope
 author: Home on
-viewing_mode: external
 feed_name: Spindev's Blog
 date: 2025-06-27 07:38:30 +00:00
 tags:

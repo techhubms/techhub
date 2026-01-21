@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/asia/2025/07/01/deped-and-microsoft-expand-ai-powered-literacy-initiatives-across-the-philippines/
 title: DepEd and Microsoft expand AI-powered literacy initiatives across the Philippines
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-07-03 13:53:26 +00:00
 tags:

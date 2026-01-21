@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://roadtoalm.com/2025/06/05/developer-experience-more-than-a-buzzword/
 title: 'Developer Experience: More Than a Buzzword'
 author: Rene van Osnabrugge
-viewing_mode: external
 feed_name: René van Osnabrugge's Blog
 date: 2025-06-05 08:31:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/microsoft-biztalk-server-product-lifecycle-update/ba-p/4478559
 title: 'Microsoft BizTalk Server Product Lifecycle Update: Modernization and Migration Guidance'
 author: hcamposu
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-17 15:02:12 +00:00
 tags:

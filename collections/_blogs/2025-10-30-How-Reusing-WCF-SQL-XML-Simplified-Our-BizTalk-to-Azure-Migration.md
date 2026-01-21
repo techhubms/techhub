@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://zure.com/blog/how-reusing-wcf-sql-xml-simplified-our-biztalk-to-azure-migration
 title: How Reusing WCF-SQL XML Simplified Our BizTalk to Azure Migration
 author: tim.dhaeyer@zure.com (Tim D'haeyer)
-viewing_mode: external
 feed_name: Zure Data & AI Blog
 date: 2025-10-30 12:50:02 +00:00
 tags:

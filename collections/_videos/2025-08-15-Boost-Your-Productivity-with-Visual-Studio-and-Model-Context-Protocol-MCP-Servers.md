@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Mz5iSGA6L4g
 title: Boost Your Productivity with Visual Studio & Model Context Protocol (MCP) Servers
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-15 20:17:18 +00:00
 tags:

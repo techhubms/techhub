@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=S7NzOIiqU2E
 title: Redefining the SDLC with GitHub Copilot and Context-Driven AI
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 14:51:59 +00:00
 tags:

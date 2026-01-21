@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-23-selected-claude-openai-and-gemini-copilot-models-are-now-deprecated
 title: GitHub Copilot Deprecates Legacy Claude, OpenAI, and Gemini Models
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-23 18:05:54 +00:00
 tags:

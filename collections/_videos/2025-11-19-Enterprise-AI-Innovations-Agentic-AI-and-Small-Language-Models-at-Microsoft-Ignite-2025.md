@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=K9lFKmpeitI
 title: 'Enterprise AI Innovations: Agentic AI and Small Language Models at Microsoft Ignite 2025'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 13:42:19 +00:00
 tags:

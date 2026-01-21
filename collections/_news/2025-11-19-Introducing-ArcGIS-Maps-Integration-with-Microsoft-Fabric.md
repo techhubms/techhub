@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-geospatial-intelligence-in-microsoft-fabric-with-esris-arcgis-maps-workload-preview/
 title: Introducing ArcGIS Maps Integration with Microsoft Fabric
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-19 12:00:00 +00:00
 tags:

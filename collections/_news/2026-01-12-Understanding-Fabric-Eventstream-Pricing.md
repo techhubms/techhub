@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/understanding-fabric-eventstream-pricing/
 title: Understanding Fabric Eventstream Pricing
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2026-01-12 14:00:00 +00:00
 tags:

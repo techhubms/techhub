@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/accelerating-ai-and-databases-with-azure-container-storage-now-7-times-faster-and-open-source/
 title: 'Accelerating AI and Databases with Azure Container Storage v2.0: 7x Faster, Open Source, and Free'
 author: Aung Oo
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-09-15 15:00:00 +00:00
 tags:

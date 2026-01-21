@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-resource-scope-query-for-azure-monitor-workspaces/ba-p/4460567
 title: Announcing Resource-Scope Query for Azure Monitor Workspaces
 author: Tyler_Kight
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-10 01:32:21 +00:00
 tags:

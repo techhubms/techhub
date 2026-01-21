@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-code-to-cloud-python-driven-microsoft-fabric-deployments/ba-p/4470447
 title: Automating Microsoft Fabric Deployments with Azure DevOps and Python
 author: Paulams732
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-17 06:10:49 +00:00
 tags:

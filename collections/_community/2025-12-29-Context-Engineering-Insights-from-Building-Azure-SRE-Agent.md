@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-sre-agent/yearinreview-insights-from-the-last-few-months-building-azure/m-p/4481823#M2
 title: Context Engineering Insights from Building Azure SRE Agent
 author: Mayunk_Jain
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-29 21:13:43 +00:00
 tags:

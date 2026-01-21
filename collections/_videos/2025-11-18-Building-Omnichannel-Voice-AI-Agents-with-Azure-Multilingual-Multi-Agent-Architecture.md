@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=H_uAA5_h40E
 title: 'Building Omnichannel Voice AI Agents with Azure: Multilingual Multi-Agent Architecture'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-18 19:13:32 +00:00
 tags:

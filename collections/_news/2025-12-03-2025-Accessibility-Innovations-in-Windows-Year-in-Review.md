@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.windows.com/windowsexperience/2025/12/03/2025-a-year-in-recap-windows-accessibility/
 title: '2025 Accessibility Innovations in Windows: Year in Review'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-03 14:23:49 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/azure-skilling-at-microsoft-ignite-2025/ba-p/4472678
 title: 'Azure Skilling at Microsoft Ignite 2025: Elevate Your Cloud and AI Expertise'
 author: AaronStark
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-26 22:14:11 +00:00
 tags:

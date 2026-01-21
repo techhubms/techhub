@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-optimized-compaction-in-fabric-spark/
 title: Introducing Optimized Compaction in Fabric Spark
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-10-06 11:00:00 +00:00
 tags:

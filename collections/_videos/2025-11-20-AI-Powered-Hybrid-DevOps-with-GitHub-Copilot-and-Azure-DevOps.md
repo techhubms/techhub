@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=LP9Z8iF6TYs
 title: AI-Powered Hybrid DevOps with GitHub Copilot and Azure DevOps
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 10:23:43 +00:00
 tags:

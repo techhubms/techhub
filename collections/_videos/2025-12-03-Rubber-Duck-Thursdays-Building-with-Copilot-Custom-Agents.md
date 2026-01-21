@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=X9jbNK1006E
 title: 'Rubber Duck Thursdays: Building with Copilot Custom Agents'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-12-03 09:21:56 +00:00
 tags:

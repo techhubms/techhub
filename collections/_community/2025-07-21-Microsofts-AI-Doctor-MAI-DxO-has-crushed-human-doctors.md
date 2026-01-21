@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/ArtificialInteligence/comments/1m5ig5j/microsofts_ai_doctor_maidxo_has_crushed_human/
 title: Microsoft's AI Doctor MAI-DxO has crushed human doctors
 author: deen1802
 feed_name: Reddit Artificial Inteligence
 date: 2025-07-21 13:08:03 +00:00
-viewing_mode: external
 tags:
 - Accuracy Comparison
 - AI Healthcare

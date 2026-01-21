@@ -90,29 +90,14 @@ API E2E tests are organized by endpoint group for maintainability:
 
 **Pattern**: One test file per logical endpoint group, all sharing the same test factory.
 
-**Example**:
+**Test Class Structure**:
 
-```csharp
-namespace TechHub.E2E.Tests.Api;
+- Primary constructor: Inject `ApiTestFactory`
+- Create HttpClient from factory
+- Test methods use FluentAssertions for validation
+- Deserialize responses with `ReadFromJsonAsync<T>()`
 
-public class TagEndpointsE2ETests(ApiTestFactory factory) : IClassFixture<ApiTestFactory>
-{
-    private readonly HttpClient _client = factory.CreateClient();
-    
-    [Fact]
-    public async Task GetAllTags_WithNoParameters_ReturnsAllTagsWithCounts()
-    {
-        // Act
-        var response = await _client.GetAsync("/api/tags/all");
-        
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
-        var result = await response.Content.ReadFromJsonAsync<AllTagsResponse>();
-        result.Should().NotBeNull();
-        result!.Tags.Should().NotBeEmpty();
-    }
-}
-```
+**See**: [Api/TagEndpointsE2ETests.cs](Api/TagEndpointsE2ETests.cs), [Api/ContentEndpointsE2ETests.cs](Api/ContentEndpointsE2ETests.cs), [Api/SectionEndpointsE2ETests.cs](Api/SectionEndpointsE2ETests.cs) for complete examples
 
 **Total**: 72 E2E test cases across all Web test files
 
@@ -120,43 +105,15 @@ public class TagEndpointsE2ETests(ApiTestFactory factory) : IClassFixture<ApiTes
 
 **CRITICAL**: All test classes use a consistent shared page pattern:
 
-```csharp
-[Collection("My Feature Tests")]
-public class MyFeatureTests : IAsyncLifetime
-{
-    private readonly PlaywrightCollectionFixture _fixture;
-    private IBrowserContext? _context;
-    private IPage? _page;
-    private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
+**Key Elements**:
 
-    public MyFeatureTests(PlaywrightCollectionFixture fixture)
-    {
-        _fixture = fixture;
-    }
-
-    public async Task InitializeAsync()
-    {
-        _context = await _fixture.CreateContextAsync();
-        _page = await _context.NewPageWithDefaultsAsync();
-    }
-
-    public async Task DisposeAsync()
-    {
-        if (_page != null)
-            await _page.CloseAsync();
-        if (_context != null)
-            await _context.DisposeAsync();
-    }
-
-    [Fact]
-    public async Task MyTest()
-    {
-        // Use Page property - clean, no ! everywhere
-        await Page.GotoRelativeAsync("/github-copilot");
-        await Page.AssertUrlEndsWithAsync("/github-copilot");
-    }
-}
-```
+- `[Collection("Feature Name")]` attribute for browser sharing
+- `IAsyncLifetime` interface for async setup/teardown  
+- Primary constructor: Inject `PlaywrightCollectionFixture`
+- Private fields: `_fixture`, `_context`, `_page`
+- Property: `IPage Page => _page ?? throw ...` (clean access, no `!` operators)
+- `InitializeAsync()`: Create context and page with `NewPageWithDefaultsAsync()`
+- `DisposeAsync()`: Close page and dispose context
 
 **Benefits**:
 
@@ -165,40 +122,28 @@ public class MyFeatureTests : IAsyncLifetime
 - Clean test code - use `Page` property instead of `_page!` everywhere
 - No manual page cleanup in test methods
 
+**See**: [Web/UrlRoutingTests.cs](Web/UrlRoutingTests.cs), [Web/NavigationTests.cs](Web/NavigationTests.cs) for complete examples
+
 ### Browser Configuration
 
 All browser launch options are centralized in [PlaywrightCollectionFixture.cs](PlaywrightCollectionFixture.cs):
 
-```csharp
-Browser = await Playwright.Chromium.LaunchAsync(new()
-{
-    Headless = true,
-    Channel = "chrome",              // Use Chrome browser (not chromium-headless-shell)
-    Timeout = 5000,
-    Args =
-    [
-        "--no-sandbox",              // Required for DevContainer
-        "--disable-setuid-sandbox",  // Required for DevContainer
-        "--disable-web-security",    // Allow CORS for local testing
-        "--disable-features=IsolateOrigins,site-per-process",
-        "--disable-blink-features=AutomationControlled",
-        "--disable-dev-shm-usage",   // Prevent shared memory issues
-        "--disable-gpu"              // Not needed in headless
-    ]
-});
-```
+**Launch Options**:
+
+- `Headless: true` - No GUI
+- `Channel: "chrome"` - Use Chrome (not chromium-headless-shell)
+- `Timeout: 5000` - 5-second launch timeout
+- DevContainer compatibility args: `--no-sandbox`, `--disable-setuid-sandbox`
+- CORS for local testing: `--disable-web-security`
 
 **Browser Context Settings**:
 
-```csharp
-return await Browser.NewContextAsync(new()
-{
-    ViewportSize = new ViewportSize { Width = 1920, Height = 1080 },
-    Locale = "en-US",
-    TimezoneId = "Europe/Brussels",
-    IgnoreHTTPSErrors = true
-});
-```
+- Viewport: `1920x1080` (common desktop resolution)
+- Locale: `en-US`
+- Timezone: `Europe/Brussels` (matches application)
+- `IgnoreHTTPSErrors: true` (allow self-signed certs)
+
+**See**: [PlaywrightCollectionFixture.cs](PlaywrightCollectionFixture.cs) lines 40-60 for complete configuration
 
 **Why these settings?**
 
@@ -243,32 +188,13 @@ Until step 3 completes, clicking buttons does nothing. Tests that click too earl
 
 **File**: [TechHub.Web.lib.module.js](../../src/TechHub.Web/wwwroot/TechHub.Web.lib.module.js) (MUST be in wwwroot root, not wwwroot/js)
 
-```javascript
-// Called when Blazor Web starts (SSR complete)
-export function afterWebStarted(blazor) {
-    window.__blazorWebReady = true;
-}
+**JavaScript Initializer Functions**:
 
-// Called when Blazor Server circuit is ready (event handlers attached)
-export function afterServerStarted(blazor) {
-    window.__blazorServerReady = true;
-}
+- `afterWebStarted()` - Sets `window.__blazorWebReady = true`
+- `afterServerStarted()` - Sets `window.__blazorServerReady = true`  
+- `afterWebAssemblyStarted()` - Sets `window.__blazorWasmReady = true`
 
-// Called when WebAssembly runtime is ready
-export function afterWebAssemblyStarted(blazor) {
-    window.__blazorWasmReady = true;
-}
-```
-
-**Test Detection**: `BlazorHelpers.WaitForBlazorReadyAsync()` waits for these flags:
-
-```csharp
-await page.WaitForFunctionAsync(@"
-    () => window.__blazorServerReady === true || 
-          window.__blazorWasmReady === true || 
-          window.__blazorWebReady === true
-");
-```
+**Test Detection**: `BlazorHelpers.WaitForBlazorReadyAsync()` waits for these flags using `page.WaitForFunctionAsync()`
 
 **Key Methods That Use This**:
 
@@ -298,26 +224,11 @@ Examples:
 
 **ALWAYS use helper methods** from BlazorHelpers.cs for consistent timeout management:
 
-```csharp
-// Navigation
-await Page.GotoRelativeAsync("/github-copilot");                    // Navigate with Blazor wait
-await Page.WaitForBlazorUrlContainsAsync("/news");                  // Wait for SPA navigation
+**Navigation**: `GotoRelativeAsync()`, `WaitForBlazorUrlContainsAsync()`, `ClickAndNavigateAsync()`  
+**Assertions**: `AssertUrlEndsWithAsync()`, `AssertElementVisibleAsync()`, `AssertElementContainsTextBySelectorAsync()`  
+**Interactions**: `ClickBlazorElementAsync()`, `TextContentWithTimeoutAsync()`, `GetHrefAsync()`
 
-// High-level navigation pattern (consolidates click + wait + verify)
-await Page.ClickAndNavigateAsync(".collection-nav a", text: "News",
-    expectedUrlSegment: "/news", waitForActiveState: "News");        // Click + navigate + verify
-
-// Assertions
-await Page.AssertUrlEndsWithAsync("/github-copilot");               // Assert URL suffix
-await element.AssertElementVisibleAsync();                           // Assert element visible
-await Page.AssertElementVisibleBySelectorAsync(".sidebar");         // Assert by selector
-await Page.AssertElementContainsTextBySelectorAsync("h1", "Title"); // Assert text content
-
-// Interactions
-await button.ClickBlazorElementAsync();                              // Click with Blazor handling
-var text = await element.TextContentWithTimeoutAsync();              // Get text with timeout
-var href = await link.GetHrefAsync();                                // Get href attribute
-```
+**See**: [Helpers/BlazorHelpers.cs](Helpers/BlazorHelpers.cs) and [Helpers/PlaywrightExtensions.cs](Helpers/PlaywrightExtensions.cs) for complete method list
 
 **Available Helper Methods**:
 
@@ -392,6 +303,6 @@ All tests should be:
 
 ## Related Documentation
 
-- [Root AGENTS.md](/AGENTS.md) - Overall development workflow and TDD approach
-- [tests/AGENTS.md](/tests/AGENTS.md) - Testing strategies across all layers
-- [src/TechHub.Web/AGENTS.md](/src/TechHub.Web/AGENTS.md) - Blazor component patterns
+- [Root AGENTS.md](../../AGENTS.md) - Overall development workflow and TDD approach
+- [tests/AGENTS.md](../AGENTS.md) - Testing strategies across all layers
+- [src/TechHub.Web/AGENTS.md](../../src/TechHub.Web/AGENTS.md) - Blazor component patterns

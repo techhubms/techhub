@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=4Hfx6QLyIag
 title: 'Build Partner Advantage: Drive Key AI Use-Cases with Azure Tech Stack'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 13:23:06 +00:00
 tags:

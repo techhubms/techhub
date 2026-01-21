@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=0iROrkufO3E
 title: Exploring MCP Workflow for Database Management without SQL
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-12 19:52:53 +00:00
 tags:

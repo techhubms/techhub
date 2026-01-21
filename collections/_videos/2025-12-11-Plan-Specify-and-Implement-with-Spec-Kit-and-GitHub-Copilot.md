@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=VfBLlAN5zdQ
 title: Plan, Specify, and Implement with Spec Kit and GitHub Copilot
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-11 21:53:48 +00:00
 tags:

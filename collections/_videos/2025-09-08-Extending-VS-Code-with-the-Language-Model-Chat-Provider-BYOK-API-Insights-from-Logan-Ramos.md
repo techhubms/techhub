@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=9pMJdzHVaNE
 title: 'Extending VS Code with the Language Model Chat Provider (BYOK) API: Insights from Logan Ramos'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-09-08 07:00:18 +00:00
 tags:

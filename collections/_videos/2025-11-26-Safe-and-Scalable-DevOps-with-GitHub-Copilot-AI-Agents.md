@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=16_x7e0d_SY
 title: Safe and Scalable DevOps with GitHub Copilot AI Agents
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-26 00:45:29 +00:00
 tags:

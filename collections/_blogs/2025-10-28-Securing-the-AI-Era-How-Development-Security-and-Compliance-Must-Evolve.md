@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/securing-the-ai-era-how-development-security-and-compliance-must-evolve/
 title: 'Securing the AI Era: How Development, Security, and Compliance Must Evolve'
 author: Sumeet Singh
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-28 18:29:14 +00:00
 tags:

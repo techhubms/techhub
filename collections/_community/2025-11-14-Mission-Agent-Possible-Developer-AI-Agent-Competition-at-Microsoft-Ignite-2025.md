@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/mission-agent-possible-your-chance-to-build-solve-and-win-at/ba-p/4467585
 title: 'Mission Agent Possible: Developer AI Agent Competition at Microsoft Ignite 2025'
 author: williamsrabia
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-14 08:00:00 +00:00
 tags:

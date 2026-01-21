@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/the-open-source-paradox-how-microsoft-is-giving-back/ba-p/4458630
 title: "Microsoft's Role in Open-Source Sustainability: From Kernel to Copilot at All Things Open 2025"
 author: LachlanEvenson
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-02 17:45:28 +00:00
 tags:

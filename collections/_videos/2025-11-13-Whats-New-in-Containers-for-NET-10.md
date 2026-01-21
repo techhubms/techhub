@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=IfhxdKKd4GU
 title: What's New in Containers for .NET 10
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-13 17:40:46 +00:00
 tags:

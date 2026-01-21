@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bring-your-own-license-byol-support-for-jboss-eap-on-azure-app/ba-p/4452152
 title: Bring Your Own License (BYOL) Now Available for JBoss EAP on Azure App Service
 author: Byron Tardif
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-09 16:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/azure-migrate-connected-experiences/ba-p/4454927
 title: 'Azure Migrate: Connected Experiences for Efficient Cloud Modernization'
 author: SShastri
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-20 22:15:06 +00:00
 tags:

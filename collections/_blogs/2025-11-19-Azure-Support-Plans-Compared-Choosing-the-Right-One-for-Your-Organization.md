@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/azure-support-plans-compared-choosing-the-right-one-for-your-organization/
 title: 'Azure Support Plans Compared: Choosing the Right One for Your Organization'
 author: John Edward
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-19 09:57:36 +00:00
 tags:

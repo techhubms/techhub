@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-githubs-agentic-security-principles-make-our-ai-agents-as-secure-as-possible/
 title: How GitHub’s Agentic Security Principles Make Copilot AI Agents Secure
 author: Rahul Zhade
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-25 16:00:00 +00:00
 tags:

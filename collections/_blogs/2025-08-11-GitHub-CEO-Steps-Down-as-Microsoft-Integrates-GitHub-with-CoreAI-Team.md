@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/github-ceo-to-step-down-as-company-is-more-tightly-embraced-by-microsofts-coreai-team/?utm_source=rss&utm_medium=rss&utm_campaign=github-ceo-to-step-down-as-company-is-more-tightly-embraced-by-microsofts-coreai-team
 title: GitHub CEO Steps Down as Microsoft Integrates GitHub with CoreAI Team
 author: Jon Swartz
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-11 19:55:55 +00:00
 tags:

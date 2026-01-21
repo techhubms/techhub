@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=CdrXTcpTAhI
 title: 'Context Window: Answering 3 Developer Questions to Save on AI Costs'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-25 16:00:16 +00:00
 tags:

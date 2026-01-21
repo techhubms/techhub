@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-python-gets-a-major-vector-store-upgrade/
 title: 'Semantic Kernel Python 1.34: Major Vector Store Overhaul Simplifies AI Workflows'
 author: Eduard van Valkenburg
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-06-25 00:40:21 +00:00
 tags:

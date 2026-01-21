@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-07-openai-gpt-5-is-now-in-public-preview-for-github-copilot
 title: OpenAI GPT-5 Public Preview Launches for GitHub Copilot Users
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-07 17:00:02 +00:00
 tags:

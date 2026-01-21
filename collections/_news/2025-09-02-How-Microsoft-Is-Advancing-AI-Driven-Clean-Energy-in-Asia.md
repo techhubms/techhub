@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/asia/2025/09/02/powering-progress-in-asia-ai-and-energy/
 title: How Microsoft Is Advancing AI-Driven Clean Energy in Asia
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-09-02 14:43:12 +00:00
 tags:

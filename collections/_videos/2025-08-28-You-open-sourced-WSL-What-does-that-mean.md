@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=FKanhfIwK-0
 title: You open sourced WSL. What does that mean?
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-28 15:35:34 +00:00
 tags:

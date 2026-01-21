@@ -151,18 +151,17 @@ public class RssService : IRssService
 
     private static RssItemDto CreateRssItem(ContentItem item)
     {
-        var link = item.ViewingMode == "external" && !string.IsNullOrWhiteSpace(item.ExternalUrl)
+        // External collections (news, blogs, community) link to original source
+        // Internal collections (videos, roundups, custom) link to our site
+        var isExternal = item.CollectionName is "news" or "blogs" or "community";
+        var link = isExternal && !string.IsNullOrWhiteSpace(item.ExternalUrl)
             ? item.ExternalUrl
             : $"{SiteUrl}/{item.CollectionName}/{item.Slug}";
-
-        var description = !string.IsNullOrWhiteSpace(item.Excerpt)
-            ? item.Excerpt
-            : item.Description;
 
         return new RssItemDto
         {
             Title = item.Title,
-            Description = description,
+            Description = item.Excerpt,
             Link = link,
             Guid = link,
             PubDate = DateTimeOffset.FromUnixTimeSeconds(item.DateEpoch),

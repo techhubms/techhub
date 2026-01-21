@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=5K1NiGtUrhw
 title: '.NET Libraries: Monetization Models and Open Source Challenges'
 author: Nick Chapsas
-viewing_mode: internal
 feed_name: Nick Chapsas YouTube
 date: 2025-10-28 12:00:14 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=yFFMGDNVMZ8
 title: Advanced Capabilities and Innovation of Azure Storage Solutions
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 08:28:54 +00:00
 tags:

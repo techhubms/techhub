@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=7KXUlnq1tQg
 title: Powering Azure Fabric and AI with Eon’s Data Lake
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 15:01:51 +00:00
 tags:

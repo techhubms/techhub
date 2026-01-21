@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=dxDqelvVc2U
 title: 'Hands-On Lab: The Power of GitHub Copilot in Visual Studio Code'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2026-01-05 13:01:17 +00:00
 tags:

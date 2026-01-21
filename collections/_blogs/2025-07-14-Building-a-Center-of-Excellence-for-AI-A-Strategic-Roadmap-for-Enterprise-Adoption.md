@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://hiddedesmet.com/creating-ccoe-for-ai
 title: 'Building a Center of Excellence for AI: A Strategic Roadmap for Enterprise Adoption'
 author: Hidde de Smet
-viewing_mode: external
 feed_name: Hidde de Smet's Blog
 date: 2025-07-14 09:00:00 +00:00
 tags:

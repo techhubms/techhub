@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=EXu8QLEvulM
 title: Simplifying ASP.NET API Design with the REPR Pattern and FastEndpoints
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-10-01 18:37:47 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-iii-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469589
 title: 'OTEL Sidecar Extension Cheat-Sheet on Azure App Service for Linux: PHP, Python, Node.js, .NET'
 author: TulikaC
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-13 10:17:50 +00:00
 tags:

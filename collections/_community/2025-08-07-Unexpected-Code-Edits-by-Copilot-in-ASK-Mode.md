@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk7764/copilot_making_edits_when_in_ask_mode_not_in/
 title: Unexpected Code Edits by Copilot in ASK Mode
 author: Nomadic_Dev
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-07 18:00:25 +00:00
 tags:

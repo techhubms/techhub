@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=lHWKy2GFWi0
 title: Leveraging the Model Context Protocol (MCP) in Visual Studio Code for Enhanced Development
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-12-18 13:01:34 +00:00
 tags:

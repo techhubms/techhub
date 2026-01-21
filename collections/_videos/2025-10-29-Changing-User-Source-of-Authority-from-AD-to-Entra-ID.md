@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=QnY-D5bdh4Y
 title: Changing User Source of Authority from AD to Entra ID
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-10-29 12:47:36 +00:00
 tags:

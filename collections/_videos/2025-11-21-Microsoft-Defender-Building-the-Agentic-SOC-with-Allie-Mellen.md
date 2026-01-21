@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=X1bYxfpaP9w
 title: 'Microsoft Defender: Building the Agentic SOC with Allie Mellen'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 14:57:25 +00:00
 tags:

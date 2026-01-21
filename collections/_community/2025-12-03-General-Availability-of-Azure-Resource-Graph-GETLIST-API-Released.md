@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-general-availability-for-azure-resource-graph-arg-get/ba-p/4474188
 title: General Availability of Azure Resource Graph GET/LIST API Released
 author: JaspreetKaur
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-03 04:39:28 +00:00
 tags:

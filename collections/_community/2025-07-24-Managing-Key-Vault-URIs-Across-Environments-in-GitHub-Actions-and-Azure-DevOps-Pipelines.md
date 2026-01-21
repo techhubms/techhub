@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m886qz/pipeline_parameters/
 title: Managing Key Vault URIs Across Environments in GitHub Actions and Azure DevOps Pipelines
 author: Azure DevOps
-viewing_mode: external
 feed_name: Reddit Azure DevOps
 date: 2025-07-24 15:56:04 +00:00
 tags:

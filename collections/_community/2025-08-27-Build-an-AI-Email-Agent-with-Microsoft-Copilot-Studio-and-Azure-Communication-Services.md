@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-communication-services/build-your-ai-email-agent-with-microsoft-copilot-studio/ba-p/4448724
 title: Build an AI Email Agent with Microsoft Copilot Studio and Azure Communication Services
 author: farhanhussain
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-27 22:49:57 +00:00
 tags:

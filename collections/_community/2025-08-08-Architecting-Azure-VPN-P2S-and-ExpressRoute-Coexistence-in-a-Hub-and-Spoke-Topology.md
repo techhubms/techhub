@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mkt2tk/azure_vpn_p2s_and_expressroute_coexistence/
 title: Architecting Azure VPN P2S and ExpressRoute Coexistence in a Hub & Spoke Topology
 author: tampasmix
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-08 11:50:57 +00:00
 tags:

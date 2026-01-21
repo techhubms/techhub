@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2026-01-15-github-copilot-bring-your-own-key-byok-enhancements
 title: Enhancements to GitHub Copilot Bring Your Own Key (BYOK) Capabilities
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2026-01-15 20:01:40 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/finops-blog/provider-managed-azure-subscriptions-cost-control-and-commitment/ba-p/4448688
 title: 'Provider-Managed Azure Subscriptions: Cost Control and Commitment Clarity'
 author: Dirk_Brinkmann
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-29 04:48:21 +00:00
 tags:

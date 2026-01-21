@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-22-copilot-swe-model-rolling-out-to-visual-studio-code-insiders
 title: GitHub Copilot-SWE Model Launches in Visual Studio Code Insiders
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-22 23:12:41 +00:00
 tags:

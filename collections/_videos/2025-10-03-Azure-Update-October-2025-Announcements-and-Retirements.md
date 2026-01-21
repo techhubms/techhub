@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=DPYO8hxqCcs
 title: Azure Update - October 2025 Announcements and Retirements
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-10-03 10:51:11 +00:00
 tags:

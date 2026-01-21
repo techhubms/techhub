@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=mFgM0CtOtdw
 title: Imagine the Future of Industry Blueprinting with AI Agents
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 12:47:00 +00:00
 tags:

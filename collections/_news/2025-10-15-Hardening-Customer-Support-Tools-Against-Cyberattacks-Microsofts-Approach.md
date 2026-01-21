@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/15/the-importance-of-hardening-customer-support-tools-against-attack/
 title: 'Hardening Customer Support Tools Against Cyberattacks: Microsoft’s Approach'
 author: Raji Dani
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-10-15 16:00:00 +00:00
 tags:

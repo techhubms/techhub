@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_10-print-anthropic-microsoft-nvidia-activity-7396565254328995840-i9JX
 title: Microsoft, Anthropic, and NVIDIA Announce Strategic AI Partnership
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-18 16:53:27 +00:00
 tags:

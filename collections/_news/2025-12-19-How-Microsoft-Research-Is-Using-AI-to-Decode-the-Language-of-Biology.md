@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/signal/articles/can-ai-learn-the-language-of-biology-to-reimagine-medicine/
 title: How Microsoft Research Is Using AI to Decode the Language of Biology
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-19 16:07:02 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-10-github-copilot-coding-agent-now-uses-one-premium-request-per-session
 title: GitHub Copilot coding agent now uses one premium request per session
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-10 18:23:43 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/30/the-5-generative-ai-security-threats-you-need-to-know-about-detailed-in-new-e-book/
 title: '5 Critical Generative AI Security Threats: Insights from Microsoft'
 author: Microsoft Security Team
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-10-30 18:00:00 +00:00
 tags:

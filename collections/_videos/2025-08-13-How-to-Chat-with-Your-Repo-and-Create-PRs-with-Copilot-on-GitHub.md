@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=HUZqoVeJ0uA
 title: How to Chat with Your Repo & Create PRs with Copilot on GitHub
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-13 14:00:33 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=q1IxyisKcZI
 title: Collapsing the Distance from Idea to Impact with GitHub Copilot and AI-Powered Development
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-29 22:06:44 +00:00
 tags:

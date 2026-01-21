@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/semantic-kernel/the-golden-triangle-of-agentic-development-with-microsoft-agent-framework-ag-ui-devui-opentelemetry-deep-dive/
 title: 'Agentic Development Best Practices with Microsoft Agent Framework: AG-UI, DevUI & OpenTelemetry'
 author: Kinfey Lo
-viewing_mode: external
 feed_name: Microsoft Semantic Kernel Blog
 date: 2025-12-01 17:08:48 +00:00
 tags:

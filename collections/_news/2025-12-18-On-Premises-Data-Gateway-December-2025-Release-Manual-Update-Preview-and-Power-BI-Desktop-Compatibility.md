@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-december-2025-release/
 title: 'On-Premises Data Gateway December 2025 Release: Manual Update Preview and Power BI Desktop Compatibility'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-12-18 09:00:00 +00:00
 tags:

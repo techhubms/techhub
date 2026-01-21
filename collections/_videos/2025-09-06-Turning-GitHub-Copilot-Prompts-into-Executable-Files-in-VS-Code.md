@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/bz-e_c21Eek
 title: Turning GitHub Copilot Prompts into Executable Files in VS Code
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-09-06 14:01:05 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/engineering-at-microsoft/dev-box-ready-to-code-dev-box-images-template/
 title: 'Dev Box Ready-To-Code: Microsoft’s 1ES Image Templates Streamline Team Development Environments'
 author: Dmitry Goncharenko
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2024-12-11 17:00:17 +00:00
 tags:

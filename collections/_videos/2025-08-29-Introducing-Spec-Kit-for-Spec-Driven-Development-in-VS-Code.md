@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=DTw9X7MtU5s
 title: Introducing Spec Kit for Spec-Driven Development in VS Code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-08-29 19:51:24 +00:00
 tags:

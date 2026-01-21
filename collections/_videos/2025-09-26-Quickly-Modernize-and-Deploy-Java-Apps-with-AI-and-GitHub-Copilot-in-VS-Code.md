@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=A_Uf_4jO43k
 title: Quickly Modernize and Deploy Java Apps with AI and GitHub Copilot in VS Code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-09-26 20:19:30 +00:00
 tags:

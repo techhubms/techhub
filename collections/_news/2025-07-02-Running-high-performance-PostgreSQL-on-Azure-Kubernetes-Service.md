@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/running-high-performance-postgresql-on-azure-kubernetes-service/
 title: Running High-Performance PostgreSQL on Azure Kubernetes Service
 author: Qi Ke
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-07-02 15:00:00 +00:00
 tags:

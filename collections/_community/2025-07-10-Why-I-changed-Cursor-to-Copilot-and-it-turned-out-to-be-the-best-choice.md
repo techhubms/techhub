@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1lwosq7/why_i_changed_cursor_to_copilot_and_it_turned_out/
 title: Why I changed Cursor to Copilot and it turned out to be the best choice
 author: Cobuter_Man
 feed_name: Reddit Github Copilot
 date: 2025-07-10 21:28:42 +00:00
-viewing_mode: external
 tags:
 - Agentic Behavior
 - AI Assistants

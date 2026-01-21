@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mkqa37/stop_allocating_strings_i_built_a_spanpowered/
 title: 'ZaString: A Zero-Allocation Span-Based String Builder for .NET'
 author: typicalyume
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-08 09:05:50 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=HqqzOZA8Hs0
 title: "The Download: GitHub Copilot Agents, Actions Security, and Vite's npm Milestone"
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-29 14:00:30 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/developer-and-ai-code-reviewer-reviewing-ai-generated-code-in-dotnet/
 title: 'Reviewing AI-Generated Code in .NET: Best Practices for Developers'
 author: Wendy Breiding (SHE/HER)
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-10-07 17:05:00 +00:00
 tags:

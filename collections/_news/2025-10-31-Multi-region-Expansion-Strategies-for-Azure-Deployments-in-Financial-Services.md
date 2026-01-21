@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/all-things-azure/multi-region-expansion-for-azure-deployments/
 title: Multi-region Expansion Strategies for Azure Deployments in Financial Services
 author: Julian Tanushi
-viewing_mode: external
 feed_name: Microsoft All Things Azure Blog
 date: 2025-10-31 16:11:13 +00:00
 tags:

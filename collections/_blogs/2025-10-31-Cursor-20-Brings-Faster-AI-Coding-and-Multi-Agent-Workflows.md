@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/cursor-2-0-brings-faster-ai-coding-and-multi-agent-workflows/
 title: Cursor 2.0 Brings Faster AI Coding and Multi-Agent Workflows
 author: Tom Smith
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-31 09:08:09 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/mastering-event-sourcing-in-azure-storing-system-state-as-a-sequence-of-events/
 title: 'Mastering Event Sourcing in Azure: Storing System State as a Sequence of Events'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-07-27 11:22:04 +00:00
 tags:

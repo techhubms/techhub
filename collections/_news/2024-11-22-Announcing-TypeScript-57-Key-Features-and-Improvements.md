@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7/
 title: 'Announcing TypeScript 5.7: Key Features and Improvements'
 author: Daniel Rosenwasser
-viewing_mode: external
 feed_name: Microsoft TypeScript Blog
 date: 2024-11-22 18:15:19 +00:00
 tags:

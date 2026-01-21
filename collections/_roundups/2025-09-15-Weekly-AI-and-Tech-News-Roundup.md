@@ -1,7 +1,6 @@
-﻿---
+---
 title: Updates in AI Coding, Azure Features, and Secure DevOps for Modern Teams
 author: Tech Hub Team
-viewing_mode: internal
 date: 2025-09-15 09:00:00 +00:00
 tags:
 - AI Coding

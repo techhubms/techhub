@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=2r2SxVa70JQ
 title: ASP.NET Community Standup - Razor Reloaded
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-09-30 19:33:50 +00:00
 tags:

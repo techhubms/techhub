@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/build-your-own-custom-copilots-with-microsoft-copilot-studio-and/ba-p/4468211
 title: Build Custom AI Copilots Using Microsoft Copilot Studio and Oracle Database@Azure
 author: RajyaLaxmiYellajosyula
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-11 22:04:57 +00:00
 tags:

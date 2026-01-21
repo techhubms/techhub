@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-20-sunset-notice-copilot-knowledge-bases
 title: 'GitHub Copilot Knowledge Bases Retiring: Transition to Copilot Spaces'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-20 21:43:40 +00:00
 tags:

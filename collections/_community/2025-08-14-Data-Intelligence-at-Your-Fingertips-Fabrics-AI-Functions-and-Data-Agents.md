@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/events/data-intelligence-at-your-fingertips-fabric-s-ai-functions-data/ec-p/4443431#M10
 title: 'Data Intelligence at Your Fingertips: Fabric’s AI Functions & Data Agents'
 author: Pouya
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-14 13:13:08 +00:00
 tags:

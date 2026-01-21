@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/the-ai-powered-evolution-of-software-development/
 title: The AI-Powered Evolution of Software Development
 author: Vishwanath Krishnamurthy
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-11-04 10:44:45 +00:00
 tags:

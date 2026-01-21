@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=hTV5jgjvYiY
 title: 'MCP In Production: Building Secure and Agent-Ready Model Context Protocol Servers'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-07-30 22:32:10 +00:00
 tags:

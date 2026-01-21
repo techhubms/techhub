@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-31-copilot-chat-unlocks-new-repository-management-skills
 title: Copilot Chat Unlocks Powerful Repository Management Skills in GitHub
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-31 20:38:46 +00:00
 tags:

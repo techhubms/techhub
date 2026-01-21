@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/let-copilot-help-you-name-things.html
 title: Let Copilot Help You Name Things
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-04-04 00:00:00 +00:00
 tags:

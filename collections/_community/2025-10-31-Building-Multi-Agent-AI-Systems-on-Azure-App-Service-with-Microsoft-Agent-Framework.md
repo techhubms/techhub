@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-2-build-long-running-ai-agents-on-azure-app-service-with/ba-p/4465825
 title: Building Multi-Agent AI Systems on Azure App Service with Microsoft Agent Framework
 author: jordanselig
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-31 15:44:05 +00:00
 tags:

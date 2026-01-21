@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1ltr8tf/building_a_multiagent_system_with_semantic_kernel/
 title: Building a multi-agent system with Semantic Kernel
 author: Geekodon
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-07-07 11:01:49 +00:00
 tags:

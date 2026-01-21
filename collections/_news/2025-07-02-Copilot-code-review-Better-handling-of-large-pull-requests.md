@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-02-copilot-code-review-better-handling-of-large-pull-requests
 title: Copilot code review - Better handling of large pull requests
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-02 18:02:20 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/oracle-databaseazure-offers-new-features-regions-and-programs-to-unlock-data-and-ai-innovation/
 title: 'New Features and Global Expansion for Oracle Database@Azure: Unlocking Hybrid Data and AI Innovation'
 author: Brett Tanzer
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-10-14 18:00:00 +00:00
 tags:

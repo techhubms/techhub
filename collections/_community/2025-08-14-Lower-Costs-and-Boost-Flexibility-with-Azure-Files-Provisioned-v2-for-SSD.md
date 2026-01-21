@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/lower-costs-and-boost-flexibility-with-azure-files-provisioned/ba-p/4443621
 title: Lower Costs and Boost Flexibility with Azure Files Provisioned v2 for SSD
 author: wmgries
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-14 18:55:15 +00:00
 tags:

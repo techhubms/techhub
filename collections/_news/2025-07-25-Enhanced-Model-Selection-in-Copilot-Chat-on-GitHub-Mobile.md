@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-25-enhanced-model-selection-experience-in-copilot-chat-on-github-mobile
 title: Enhanced Model Selection in Copilot Chat on GitHub Mobile
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-25 19:24:19 +00:00
 tags:

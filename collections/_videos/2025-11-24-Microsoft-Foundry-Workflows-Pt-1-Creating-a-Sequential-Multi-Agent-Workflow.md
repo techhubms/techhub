@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=AqM5WLq2VtY
 title: 'Microsoft Foundry Workflows - Pt. 1: Creating a Sequential Multi-Agent Workflow'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-24 19:12:00 +00:00
 tags:

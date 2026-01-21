@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code-maze.com/efcore-global-query-filters/
 title: Global Query Filters in Entity Framework Core
 author: Gergő Vándor
-viewing_mode: external
 feed_name: Code Maze Blog
 date: 2024-12-23 04:47:32 +00:00
 tags:

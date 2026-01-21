@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=bIl83DdhWoo
 title: '.NET MAUI Community Standup: 10 Years of Grial'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-05 19:50:05 +00:00
 tags:

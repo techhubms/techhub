@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2026-insiders-is-here/
 title: 'Visual Studio 2026 Insiders Launch: Integrated AI, Performance, and Developer-Centric Upgrades'
 author: Mads Kristensen
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-09-09 16:52:29 +00:00
 tags:

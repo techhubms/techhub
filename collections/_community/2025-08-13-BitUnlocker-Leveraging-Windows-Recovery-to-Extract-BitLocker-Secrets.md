@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-security-community/bitunlocker-leveraging-windows-recovery-to-extract-bitlocker/ba-p/4442806
 title: 'BitUnlocker: Leveraging Windows Recovery to Extract BitLocker Secrets'
 author: alon-leviev
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-13 17:04:05 +00:00
 tags:

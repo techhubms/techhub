@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/startups/blog/could-your-startup-be-the-next-imagine-cup-world-champion/
 title: 'Argus and Azure AI: Inclusive Assistive Tech Triumphs at Imagine Cup'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-09-02 17:04:06 +00:00
 tags:

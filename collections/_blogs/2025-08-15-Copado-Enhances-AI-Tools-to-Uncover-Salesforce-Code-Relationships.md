@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/copado-extends-ai-reach-to-surface-relationships-between-salesforce-code/?utm_source=rss&utm_medium=rss&utm_campaign=copado-extends-ai-reach-to-surface-relationships-between-salesforce-code
 title: Copado Enhances AI Tools to Uncover Salesforce Code Relationships
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-15 12:50:22 +00:00
 tags:

@@ -8,7 +8,7 @@ public record FilterRequest
     /// <summary>
     /// Selected tags for filtering (OR logic within tags)
     /// </summary>
-    public string[] SelectedTags { get; init; } = [];
+    public IReadOnlyList<string> SelectedTags { get; init; } = [];
 
     /// <summary>
     /// Start of date range filter (inclusive)

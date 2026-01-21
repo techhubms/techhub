@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/open-source/maintainers/securing-the-supply-chain-at-scale-starting-with-71-important-open-source-projects/
 title: 'Securing the Open Source Supply Chain: Impact of the GitHub Secure Open Source Fund'
 author: Kevin Crosby
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-11 16:00:00 +00:00
 tags:

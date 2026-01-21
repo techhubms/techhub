@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/introducing-ebpf-host-routing-high-performance-ai-networking/ba-p/4468216
 title: 'High-Performance AI Networking on AKS: eBPF Host Routing with Azure CNI Powered by Cilium'
 author: Sam_Foo
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-08 00:45:49 +00:00
 tags:

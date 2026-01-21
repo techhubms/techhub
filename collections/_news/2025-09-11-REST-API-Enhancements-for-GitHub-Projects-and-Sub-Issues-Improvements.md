@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-11-a-rest-api-for-github-projects-sub-issues-improvements-and-more
 title: REST API Enhancements for GitHub Projects and Sub-Issues Improvements
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-11 18:42:31 +00:00
 tags:

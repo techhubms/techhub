@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=sCg7oSTiW1M
 title: 'Customer Chats: Chris Quinn from Fujitsu at Microsoft Ignite 2024'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-03-14 15:01:17 +00:00
 tags:

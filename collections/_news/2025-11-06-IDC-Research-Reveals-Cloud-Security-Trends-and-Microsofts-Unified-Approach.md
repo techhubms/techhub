@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/11/06/new-idc-research-highlights-a-major-cloud-security-shift/
 title: IDC Research Reveals Cloud Security Trends and Microsoft’s Unified Approach
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-06 18:12:32 +00:00
 tags:

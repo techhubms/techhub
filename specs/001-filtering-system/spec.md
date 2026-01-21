@@ -44,8 +44,8 @@ When clicking a tag, the navigation behavior depends on the current page context
 | Current Page                                     | Navigation Behavior                                                              | Example                                                   |
 | ------------------------------------------------ | -------------------------------------------------------------------------------- | --------------------------------------------------------- |
 | Homepage (`/`)                                   | Navigate to `/all?tags={tag}`                                                    | Click "AI" → `/all?tags=ai`                               |
-| Section page (`/github-copilot`)                 | Stay on section, add filter: `/{section}?tags={tag}`                             | Click "VS Code" → `/github-copilot?tags=vs-code`          |
-| Collection page (`/github-copilot/videos`)       | Stay on collection, add filter: `/{section}/{collection}?tags={tag}`             | Click "Tutorial" → `/github-copilot/videos?tags=tutorial` |
+| Section page (`/github-copilot`)                 | Stay on section, add filter: `/{sectionName}?tags={tag}`                             | Click "VS Code" → `/github-copilot?tags=vs-code`          |
+| Collection page (`/github-copilot/videos`)       | Stay on collection, add filter: `/{sectionName}/{collectionName}?tags={tag}`             | Click "Tutorial" → `/github-copilot/videos?tags=tutorial` |
 | Content item (`/github-copilot/videos/my-video`) | Navigate to content's primarySection with filter: `/{primarySection}?tags={tag}` | Click "AI" → `/github-copilot?tags=ai`                    |
 
 **Rationale**:

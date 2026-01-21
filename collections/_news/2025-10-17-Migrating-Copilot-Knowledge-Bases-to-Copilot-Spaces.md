@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-17-copilot-knowledge-bases-can-now-be-converted-to-copilot-spaces
 title: Migrating Copilot Knowledge Bases to Copilot Spaces
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-17 20:49:48 +00:00
 tags:

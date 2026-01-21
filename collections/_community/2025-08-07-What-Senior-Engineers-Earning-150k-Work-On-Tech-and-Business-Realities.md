@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mkfsxw/those_of_you_who_are_making_150k_what_are_you/
 title: 'What Senior Engineers Earning 150k+ Work On: Tech and Business Realities'
 author: Legitimate-School-59
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-07 23:40:52 +00:00
 tags:

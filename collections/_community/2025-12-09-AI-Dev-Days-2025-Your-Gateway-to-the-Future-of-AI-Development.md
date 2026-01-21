@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-dev-days-2025-your-gateway-to-the-future-of-ai-development/ba-p/4476113
 title: 'AI Dev Days 2025: Your Gateway to the Future of AI Development'
 author: Lee_Stott
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-09 08:00:00 +00:00
 tags:

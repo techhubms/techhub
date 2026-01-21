@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/adaptive-model-selection-in-typescript-with-the-model-router/ba-p/4465192
 title: Adaptive Model Selection with Azure AI Foundry Model Router in TypeScript
 author: Julia_Muiruri
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-11 08:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/EZBU4zCCaoM
 title: A New Kind of Developer is Emerging on GitHub
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-12-21 15:00:26 +00:00
 tags:

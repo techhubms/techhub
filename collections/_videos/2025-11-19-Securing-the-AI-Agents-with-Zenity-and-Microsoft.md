@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=tOF4_bqLCiQ
 title: Securing the AI Agents with Zenity and Microsoft
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 12:41:34 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/github/comments/1mkne30/capped_context_length_issues_in_copilot_anyone/
 title: 'Discussion: Capped Context Length in GitHub Copilot Models'
 author: EfficientApartment52
-viewing_mode: external
 feed_name: Reddit GitHub
 date: 2025-08-08 06:02:15 +00:00
 tags:

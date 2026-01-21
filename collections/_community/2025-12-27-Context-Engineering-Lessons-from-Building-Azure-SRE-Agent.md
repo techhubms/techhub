@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/context-engineering-lessons-from-building-azure-sre-agent/ba-p/4481200
 title: Context Engineering Lessons from Building Azure SRE Agent
 author: sanchitmehta
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-27 20:07:30 +00:00
 tags:

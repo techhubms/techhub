@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/devops/comments/1mktxxc/semantic_clinic_a_reproducible_map_of_ai_failures/
 title: 'Semantic Clinic: A Math-First, Model-Agnostic Map for Diagnosing AI Failures'
 author: wfgy_engine
-viewing_mode: external
 feed_name: Reddit DevOps
 date: 2025-08-08 12:32:38 +00:00
 tags:

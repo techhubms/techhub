@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/unlocking-storage-optimizations-smart-tiering-for-blobs-and-adls/ba-p/4469811
 title: 'Smart Tiering for Azure Blob and Data Lake Storage: Automated Cost Optimization'
 author: BenedictBerger
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 18:53:55 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=jIpJplSaFQM
 title: Azure Managed Redis Deep Dive
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-10-20 12:00:52 +00:00
 tags:

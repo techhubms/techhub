@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/architecting-multi-region-solution-in-azure-lessons-learned/ba-p/4415554
 title: 'Architecting Multi-Region Solutions in Azure: Practical Lessons Learned'
 author: prjelesi-msft
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-22 11:00:00 +00:00
 tags:

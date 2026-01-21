@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/github/comments/1mgvust/promting_to_login_circumventing_that_leaves_me/
 title: "Login Prompts and Access Restrictions on GitHub: Privacy Concerns From a User's Perspective"
 author: Mabymaster
-viewing_mode: external
 feed_name: Reddit GitHub
 date: 2025-08-03 21:58:23 +00:00
 tags:

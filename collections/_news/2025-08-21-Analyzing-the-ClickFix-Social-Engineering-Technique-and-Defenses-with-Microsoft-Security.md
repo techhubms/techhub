@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/
 title: Analyzing the ClickFix Social Engineering Technique and Defenses with Microsoft Security
 author: Microsoft Threat Intelligence and Microsoft Defender Experts
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-08-21 16:00:00 +00:00
 tags:

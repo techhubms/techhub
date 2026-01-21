@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/open-source/maintainers/5-podcast-episodes-to-help-you-build-with-confidence-in-2026/
 title: 5 Podcast Episodes to Help You Build with Confidence in 2026
 author: Cassidy Williams
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-23 00:15:00 +00:00
 tags:

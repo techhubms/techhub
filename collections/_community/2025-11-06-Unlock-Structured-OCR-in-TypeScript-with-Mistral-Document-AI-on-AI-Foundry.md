@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlock-structured-ocr-in-typescript-with-mistral-document-ai-on/ba-p/4466039
 title: Unlock Structured OCR in TypeScript with Mistral Document AI on AI Foundry
 author: Julia_Muiruri
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-06 14:15:35 +00:00
 tags:

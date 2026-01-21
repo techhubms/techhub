@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=UAIic-vzcac
 title: Enhanced Performance Dashboard for SQL Databases in Microsoft Fabric
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-23 19:06:55 +00:00
 tags:

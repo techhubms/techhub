@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=YK_MNYAmpVA
 title: Modernizing Windows Server Workloads with Azure Administration, AI, and Security Tools
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 10:43:53 +00:00
 tags:

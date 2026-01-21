@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-10-networking-improvements/
 title: .NET 10 Networking Improvements
 author: Máňa
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-12-08 18:05:00 +00:00
 tags:

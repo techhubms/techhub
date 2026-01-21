@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=nJk-O5DQzkI
 title: Enhancing IT Operations with Apptio on Azure for Real-Time Insights
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-26 00:48:56 +00:00
 tags:

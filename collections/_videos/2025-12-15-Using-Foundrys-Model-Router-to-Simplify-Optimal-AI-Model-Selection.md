@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=xQRjb7V8OCg
 title: Using Foundry's Model Router to Simplify Optimal AI Model Selection
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-12-15 12:57:07 +00:00
 tags:

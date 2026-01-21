@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/broadcom-adds-argo-and-ubuntu-support-to-vmware-cloud-foundation/?utm_source=rss&utm_medium=rss&utm_campaign=broadcom-adds-argo-and-ubuntu-support-to-vmware-cloud-foundation
 title: Broadcom Expands VMware Cloud Foundation with Argo CD and Ubuntu Support
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-26 19:42:36 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/azuredevops/comments/1me1ts0/devops_backlog_questions/
 title: 'Questions About Azure DevOps Backlogs: Closed Work Items & Iteration Filtering'
 author: Ozzy_Lemmy_is_god
-viewing_mode: external
 feed_name: Reddit Azure DevOps
 date: 2025-07-31 13:38:24 +00:00
 tags:

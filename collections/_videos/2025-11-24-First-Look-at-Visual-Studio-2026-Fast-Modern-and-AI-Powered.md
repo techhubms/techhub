@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=xSioblHhYL8
 title: 'First Look at Visual Studio 2026: Fast, Modern, and AI-Powered'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 08:17:17 +00:00
 tags:

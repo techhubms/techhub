@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/clickops-iac-and-the-excluded-avocado-middle/
 title: Bridging the Gap Between ClickOps and Infrastructure-as-Code in DevOps
 author: Marcin Wyszynski
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-11-13 14:53:34 +00:00
 tags:

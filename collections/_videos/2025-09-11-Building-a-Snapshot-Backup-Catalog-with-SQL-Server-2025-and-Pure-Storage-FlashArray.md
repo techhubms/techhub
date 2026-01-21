@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=gFOduTsR3kE
 title: Building a Snapshot Backup Catalog with SQL Server 2025 and Pure Storage FlashArray
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-11 16:01:15 +00:00
 tags:

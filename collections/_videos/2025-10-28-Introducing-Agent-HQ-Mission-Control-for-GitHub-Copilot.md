@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=KniyIrpTDE8
 title: Introducing Agent HQ Mission Control for GitHub Copilot
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-28 16:05:02 +00:00
 tags:

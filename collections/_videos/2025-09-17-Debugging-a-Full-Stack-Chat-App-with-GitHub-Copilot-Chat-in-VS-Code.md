@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=QLAIww-Vhqo
 title: Debugging a Full-Stack Chat App with GitHub Copilot Chat in VS Code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-09-17 14:00:51 +00:00
 tags:

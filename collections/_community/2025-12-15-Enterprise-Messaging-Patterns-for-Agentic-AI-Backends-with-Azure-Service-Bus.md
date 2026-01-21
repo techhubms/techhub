@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/message-brokers-as-the-cornerstone-of-the-next-generation-of/ba-p/4478088
 title: Enterprise Messaging Patterns for Agentic AI Backends with Azure Service Bus
 author: EldertGrootenboer
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-15 19:00:00 +00:00
 tags:

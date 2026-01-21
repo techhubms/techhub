@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/introducing-claude-opus-4-5-in-microsoft-foundry/
 title: Introducing Anthropic’s Claude Opus 4.5 in Microsoft Foundry for Enterprise AI Development
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-25 16:10:35 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=GlEiDHHYCao
 title: 'Modernize Java Apps with AI: Deploy Your Applications to Azure'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-03 17:00:34 +00:00
 tags:

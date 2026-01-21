@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/announcing-sponsorship-on-nugetdotorg-for-maintainer-appreciation/
 title: Announcing Sponsorship on NuGet.org
 author: Sean
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-10-23 22:18:00 +00:00
 tags:

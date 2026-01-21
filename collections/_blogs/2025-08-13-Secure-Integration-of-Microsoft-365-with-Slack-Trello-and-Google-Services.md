@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-to-integrate-m365-with-third-party-saas-tools-slack-trello-google-services-without-breaking-security/
 title: Secure Integration of Microsoft 365 with Slack, Trello, and Google Services
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-13 08:24:46 +00:00
 tags:

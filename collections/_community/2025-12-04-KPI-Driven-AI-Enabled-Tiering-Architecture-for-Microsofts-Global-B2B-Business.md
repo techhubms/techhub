@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/architecting-the-next-generation-customer-tiering-system/ba-p/4475326
 title: KPI-Driven, AI-Enabled Tiering Architecture for Microsoft’s Global B2B Business
 author: BonnieAo
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-04 21:00:36 +00:00
 tags:

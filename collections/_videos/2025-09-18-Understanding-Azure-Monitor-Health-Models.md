@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=I39PSkDmfHQ
 title: Understanding Azure Monitor Health Models
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-18 15:35:24 +00:00
 tags:

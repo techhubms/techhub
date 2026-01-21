@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-public-preview-of-agent-loop-in-azure-logic-apps/ba-p/4471056
 title: Agent Loop Public Preview Now Available in Azure Logic Apps Consumption
 author: Shree_Divya_M_V
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 18:36:23 +00:00
 tags:

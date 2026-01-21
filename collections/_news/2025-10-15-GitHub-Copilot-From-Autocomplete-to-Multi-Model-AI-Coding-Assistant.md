@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/copilot-faster-smarter-and-built-for-how-you-work-now/
 title: 'GitHub Copilot: From Autocomplete to Multi-Model AI Coding Assistant'
 author: Ashley Willis
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-15 15:00:00 +00:00
 tags:

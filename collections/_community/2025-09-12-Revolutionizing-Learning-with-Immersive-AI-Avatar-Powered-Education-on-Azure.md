@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/revolutionizing-learning-with-immersive-ai/ba-p/4453680
 title: 'Revolutionizing Learning with Immersive AI: Avatar-Powered Education on Azure'
 author: Matt_Kazanowsky
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-12 20:31:23 +00:00
 tags:

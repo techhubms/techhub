@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=TaTPDLl0I-Q
 title: 'VS Code as an AI-Native Editor: Insights from GitHub Universe 2025'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-11-10 08:00:41 +00:00
 tags:

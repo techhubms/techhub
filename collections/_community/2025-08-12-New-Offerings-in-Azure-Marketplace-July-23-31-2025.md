@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/marketplace-blog/new-in-azure-marketplace-july-23-31-2025/ba-p/4431277
 title: 'New Offerings in Azure Marketplace: July 23-31, 2025'
 author: Luxmi_Nagaraj
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-12 13:00:00 +00:00
 tags:

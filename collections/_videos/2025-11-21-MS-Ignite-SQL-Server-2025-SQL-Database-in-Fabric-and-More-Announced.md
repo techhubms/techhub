@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=-6RoQm6Wwyo
 title: 'MS Ignite: SQL Server 2025, SQL Database in Fabric, and More Announced'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-21 20:06:07 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Zi9oTBjqU70
 title: 'Cloud without Compromise: Redefining Private and Hybrid Cloud with Dell and Microsoft'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 10:50:59 +00:00
 tags:

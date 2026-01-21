@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=a5zof3lPOBE
 title: Partner Innovation with Low-Code AI Agents Using Power Platform
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-26 20:02:33 +00:00
 tags:

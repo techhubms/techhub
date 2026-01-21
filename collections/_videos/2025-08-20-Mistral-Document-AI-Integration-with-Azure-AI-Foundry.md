@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=MUu9o8tDwi0
 title: Mistral Document AI Integration with Azure AI Foundry
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-20 20:45:25 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=G29pCOwteb4
 title: Transform Manufacturing with Digital Twins and Real-Time Simulation | Microsoft Ignite 2025
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-26 20:19:12 +00:00
 tags:

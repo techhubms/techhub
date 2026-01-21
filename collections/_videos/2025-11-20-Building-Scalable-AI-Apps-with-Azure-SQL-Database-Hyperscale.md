@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=AoB4xR0Is9Y
 title: Building Scalable AI Apps with Azure SQL Database Hyperscale
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 16:38:24 +00:00
 tags:

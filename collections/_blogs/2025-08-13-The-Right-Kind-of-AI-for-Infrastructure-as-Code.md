@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/the-right-kind-of-ai-for-infrastructure-as-code/?utm_source=rss&utm_medium=rss&utm_campaign=the-right-kind-of-ai-for-infrastructure-as-code
 title: The Right Kind of AI for Infrastructure as Code
 author: Ian Amit
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-13 16:33:28 +00:00
 tags:

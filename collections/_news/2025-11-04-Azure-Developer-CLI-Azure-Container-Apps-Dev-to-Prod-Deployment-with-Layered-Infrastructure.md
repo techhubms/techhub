@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/devops/azure-developer-cli-azure-container-apps-dev-to-prod-deployment-with-layered-infrastructure/
 title: 'Azure Developer CLI: Azure Container Apps Dev-to-Prod Deployment with Layered Infrastructure'
 author: PuiChee (PC) Chan
-viewing_mode: external
 feed_name: Microsoft DevOps Blog
 date: 2025-11-04 22:45:46 +00:00
 tags:

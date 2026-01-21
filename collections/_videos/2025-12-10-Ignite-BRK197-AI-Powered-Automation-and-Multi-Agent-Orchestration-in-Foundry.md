@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=v1Q7rEE3StM
 title: 'Ignite BRK197: AI Powered Automation & Multi-Agent Orchestration in Foundry'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-10 22:07:54 +00:00
 tags:

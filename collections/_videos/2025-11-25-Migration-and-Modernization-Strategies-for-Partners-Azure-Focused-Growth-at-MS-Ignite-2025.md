@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=6JAurnFr5e4
 title: 'Migration & Modernization Strategies for Partners: Azure-Focused Growth at MS Ignite 2025'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 12:13:05 +00:00
 tags:

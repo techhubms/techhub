@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mi1ffw/hybrid_users_entra_joined_laptops_force_password/
 title: Managing First Login Password Change for Hybrid Users on Entra Joined Laptops
 author: simdre79
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-05 06:09:28 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/devops/comments/1mh3s57/our_infra_was_fine_the_ai_pipeline_wasnt_3_silent/
 title: Our Infra Was Fine. The AI Pipeline Wasn’t — 3 Silent Crashes We Kept Missing
 author: wfgy_engine
-viewing_mode: external
 feed_name: Reddit DevOps
 date: 2025-08-04 04:16:15 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_super-excited-about-gpt-52-from-our-partners-activity-7404949433819463680-VyMD
 title: 'GPT-5.2 Integration Across Microsoft Tools: AI Model Choice and Developer Impact'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-11 19:11:15 +00:00
 tags:

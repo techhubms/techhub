@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/rTW1eM0T_90
 title: Understanding Model Context Protocol (MCP) for Developers
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-24 15:59:41 +00:00
 tags:

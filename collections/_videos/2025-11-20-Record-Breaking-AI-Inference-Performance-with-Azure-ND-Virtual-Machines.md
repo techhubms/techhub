@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=hcleQSEfK9g
 title: Record-Breaking AI Inference Performance with Azure ND Virtual Machines
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 16:14:48 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mgm8gy/nva_and_vnet_routing/
 title: Implementing NVA for Internet Egress and Inter-Subnet Routing in Azure Hub-Spoke Topology
 author: HDClown
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-03 15:34:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/emea/features/tapping-into-africas-230-million-ai-powered-jobs-opportunity/
 title: AI Skilling Initiatives and Africa’s 230 Million Job Opportunity
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-24 14:56:02 +00:00
 tags:

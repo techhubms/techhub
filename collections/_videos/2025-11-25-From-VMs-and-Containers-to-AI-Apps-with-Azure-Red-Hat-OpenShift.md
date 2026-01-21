@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=CV1SP3VN_dA
 title: From VMs and Containers to AI Apps with Azure Red Hat OpenShift
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 15:54:09 +00:00
 tags:

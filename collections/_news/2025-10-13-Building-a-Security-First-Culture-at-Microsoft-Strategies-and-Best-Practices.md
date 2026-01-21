@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/13/building-a-lasting-security-culture-at-microsoft/
 title: 'Building a Security-First Culture at Microsoft: Strategies and Best Practices'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-13 16:48:07 +00:00
 tags:

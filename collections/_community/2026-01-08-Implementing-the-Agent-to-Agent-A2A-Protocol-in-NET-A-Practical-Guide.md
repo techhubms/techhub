@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/implementing-a2a-protocol-in-net-a-practical-guide/ba-p/4480232
 title: 'Implementing the Agent-to-Agent (A2A) Protocol in .NET: A Practical Guide'
 author: MariyamAshai
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-08 08:00:00 +00:00
 tags:

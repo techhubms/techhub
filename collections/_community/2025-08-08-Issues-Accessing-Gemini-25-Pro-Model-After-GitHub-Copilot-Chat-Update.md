@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mki944/lost_access_to_gemini_25_pro_after_update/
 title: Issues Accessing Gemini 2.5 Pro Model After GitHub Copilot Chat Update
 author: EchoingAngel
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-08 01:34:26 +00:00
 tags:

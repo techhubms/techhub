@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/devops-workflow-the-key-elements-and-tools-involved/
 title: 'DevOps Workflow: The Key Elements and Tools Involved'
 author: Peter Baker
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-11-04 09:46:20 +00:00
 tags:

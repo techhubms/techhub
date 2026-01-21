@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/reimagining-every-phase-of-the-developer-lifecycle
 title: 'Agentic DevOps in Action: Transforming Every Phase of the Developer Lifecycle with GitHub Copilot'
 author: Amanda Silver, Mario Rodriguez, Den Delimarsky
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-05-29 19:16:40 +00:00
 tags:

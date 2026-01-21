@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=0r-ZypiCtFk
 title: Integrating Local AI in Enterprise Apps with Windows AI APIs and Microsoft Foundry
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 12:06:23 +00:00
 tags:

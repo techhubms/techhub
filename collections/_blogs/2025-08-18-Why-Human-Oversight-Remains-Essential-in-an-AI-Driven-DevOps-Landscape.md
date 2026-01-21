@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/keeping-humans-in-the-loop-why-human-oversight-still-matters-in-an-ai-driven-devops-future/?utm_source=rss&utm_medium=rss&utm_campaign=keeping-humans-in-the-loop-why-human-oversight-still-matters-in-an-ai-driven-devops-future
 title: Why Human Oversight Remains Essential in an AI-Driven DevOps Landscape
 author: Alan Shimel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-18 07:57:21 +00:00
 tags:

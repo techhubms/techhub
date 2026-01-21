@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-enterprise-ai-adoption-with-azure-ai-landing-zone/ba-p/4460199
 title: Accelerating Enterprise AI Adoption with Azure AI Landing Zone
 author: VimalVerma
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-10 02:35:21 +00:00
 tags:

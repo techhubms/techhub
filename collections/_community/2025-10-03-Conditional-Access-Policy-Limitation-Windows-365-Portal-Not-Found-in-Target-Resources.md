@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/ca-policy-application-not-found-in-target-resources/m-p/4458834#M13916
 title: 'Conditional Access Policy Limitation: Windows 365 Portal Not Found in Target Resources'
 author: WF-PHG
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-03 14:06:51 +00:00
 tags:

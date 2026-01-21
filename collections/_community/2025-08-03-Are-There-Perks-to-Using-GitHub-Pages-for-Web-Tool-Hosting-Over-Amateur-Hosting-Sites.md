@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/github/comments/1mgjz65/are_there_perks_to_using_github_pages_for_web/
 title: Are There Perks to Using GitHub Pages for Web Tool Hosting Over Amateur Hosting Sites?
 author: Qwert-4
-viewing_mode: external
 feed_name: Reddit GitHub
 date: 2025-08-03 14:00:17 +00:00
 tags:

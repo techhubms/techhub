@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=SJqGYwRq0uc
 title: "How to Use GitHub Copilot: The Complete Beginner's Guide"
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-07-30 17:00:40 +00:00
 tags:

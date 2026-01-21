@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/azure-resource-manager-arm-streamline-and-secure-cloud-resource-management/
 title: 'Azure Resource Manager (ARM): The Backbone of Cloud Resource Management'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-29 07:59:57 +00:00
 tags:

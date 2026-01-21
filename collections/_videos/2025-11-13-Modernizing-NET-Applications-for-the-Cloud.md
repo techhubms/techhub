@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=vrxn-y0tFTI
 title: Modernizing .NET Applications for the Cloud
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-13 17:40:49 +00:00
 tags:

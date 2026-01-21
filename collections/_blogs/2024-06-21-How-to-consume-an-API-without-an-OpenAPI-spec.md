@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.jesseswart.nl/post/consume-api-copilot
 title: How to consume an API without an OpenAPI spec
 author: Jesse Swart
-viewing_mode: external
 tags:
 - API
 - Development

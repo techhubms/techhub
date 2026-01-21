@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/engineering/user-experience/design-system-annotations-part-2-advanced-methods-of-annotating-components/
 title: 'Advanced Methods for Annotating Design System Components: Making Accessibility a Priority'
 author: Jan Maarten
-viewing_mode: external
 feed_name: GitHub Engineering Blog
 date: 2025-05-09 16:56:57 +00:00
 tags:

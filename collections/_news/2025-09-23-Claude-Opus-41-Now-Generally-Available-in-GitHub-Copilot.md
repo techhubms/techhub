@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-23-claude-opus-4-1-is-now-generally-available-in-github-copilot
 title: Claude Opus 4.1 Now Generally Available in GitHub Copilot
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-23 20:42:15 +00:00
 tags:

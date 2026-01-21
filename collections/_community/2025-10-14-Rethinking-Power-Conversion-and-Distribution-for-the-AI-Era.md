@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/rethinking-power-conversion-and-distribution-for-the-ai-era/ba-p/4460759
 title: Rethinking Power Conversion and Distribution for the AI Era
 author: EhsanNasr
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-14 00:00:00 +00:00
 tags:

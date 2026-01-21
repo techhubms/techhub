@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=T5eKHDwZe3M
 title: Understanding the New File Share Resource Type in Azure
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-09-10 16:04:17 +00:00
 tags:

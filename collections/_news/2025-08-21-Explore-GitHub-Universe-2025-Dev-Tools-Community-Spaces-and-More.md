@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/news-insights/company-news/explore-the-best-of-github-universe-9-spaces-built-to-spark-creativity-connection-and-joy/
 title: 'Explore GitHub Universe 2025: Dev Tools, Community Spaces, and More'
 author: Jeimy Ruiz
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-21 18:02:34 +00:00
 tags:

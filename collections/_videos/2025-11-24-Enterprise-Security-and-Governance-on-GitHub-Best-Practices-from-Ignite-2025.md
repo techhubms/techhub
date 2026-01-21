@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=eXwqw2RSen8
 title: 'Enterprise Security and Governance on GitHub: Best Practices from Ignite 2025'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 10:27:37 +00:00
 tags:

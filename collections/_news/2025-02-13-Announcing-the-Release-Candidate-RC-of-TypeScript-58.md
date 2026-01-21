@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-rc/
 title: Announcing the Release Candidate (RC) of TypeScript 5.8
 author: Daniel Rosenwasser
-viewing_mode: external
 feed_name: Microsoft TypeScript Blog
 date: 2025-02-13 22:27:05 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/context-engineering-recipes-recap.html
 title: 'Cook’n with GitHub Copilot: Recap of Context Engineering Prompt Patterns'
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-12-19 00:00:00 +00:00
 tags:

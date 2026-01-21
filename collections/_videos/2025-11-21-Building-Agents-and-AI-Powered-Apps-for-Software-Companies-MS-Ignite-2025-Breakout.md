@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=DBrfh0vOBxY
 title: Building Agents and AI-Powered Apps for Software Companies (MS Ignite 2025 Breakout)
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 11:27:10 +00:00
 tags:

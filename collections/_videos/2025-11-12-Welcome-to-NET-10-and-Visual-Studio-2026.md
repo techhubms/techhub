@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=kbW7qHMBM6A
 title: Welcome to .NET 10 & Visual Studio 2026!
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-12 19:18:28 +00:00
 tags:

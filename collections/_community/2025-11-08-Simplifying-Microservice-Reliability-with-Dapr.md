@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/simplifying-microservice-reliability-with-dapr/ba-p/4468296
 title: Simplifying Microservice Reliability with Dapr
 author: riturajjana
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-08 14:39:53 +00:00
 tags:

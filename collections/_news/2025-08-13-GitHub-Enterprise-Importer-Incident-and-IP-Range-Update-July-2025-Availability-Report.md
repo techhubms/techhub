@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/news-insights/company-news/github-availability-report-july-2025/
 title: 'GitHub Enterprise Importer Incident and IP Range Update: July 2025 Availability Report'
 author: Jakub Oleksy
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-13 21:00:00 +00:00
 tags:

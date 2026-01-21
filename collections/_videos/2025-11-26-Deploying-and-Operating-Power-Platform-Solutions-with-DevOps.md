@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=KZ5ePLtasAQ
 title: Deploying and Operating Power Platform Solutions with DevOps
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-26 10:01:45 +00:00
 tags:

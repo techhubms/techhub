@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ejAZOppy2os
 title: 'Transforming IT at AT&T with Agentic AI: Microsoft & IBM Partnership'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 10:35:17 +00:00
 tags:

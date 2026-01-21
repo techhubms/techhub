@@ -1,8 +1,7 @@
-﻿---
+---
 title: XPRT Magazine 02
 date: 2016-05-01 00:00:00 +00:00
 author: Xebia
-viewing_mode: external
 tags:
 - .NET Core
 - Agile

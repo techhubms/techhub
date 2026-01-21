@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/fix-broken-migrations-with-ai-powered-debugging-in-vs-code-using/ba-p/4439418
 title: Fix Broken Migrations with AI Debugging in VS Code Using GitHub Copilot
 author: MuhammadSamiullah
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-12 07:00:00 +00:00
 tags:

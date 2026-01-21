@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/what-s-new-with-azure-netapp-files-vs-code-extension/ba-p/4485989
 title: What's New with Azure NetApp Files VS Code Extension
 author: GeertVanTeylingen
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-15 21:04:04 +00:00
 tags:

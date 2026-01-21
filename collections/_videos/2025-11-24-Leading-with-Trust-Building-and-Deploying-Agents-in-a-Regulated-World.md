@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=2srbflqimJQ
 title: 'Leading with Trust: Building & Deploying Agents in a Regulated World'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 13:52:17 +00:00
 tags:

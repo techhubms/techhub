@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-26-the-secret-risk-assessment-is-generally-available
 title: GitHub Introduces Free Secret Risk Assessment Tool for Organizations
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-26 21:21:48 +00:00
 tags:

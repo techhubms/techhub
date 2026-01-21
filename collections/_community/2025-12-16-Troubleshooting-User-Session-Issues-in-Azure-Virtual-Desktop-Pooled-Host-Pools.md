@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-virtual-desktop-pooled-sessions-ending-unexpectedly-and/m-p/4478548#M13967
 title: Troubleshooting User Session Issues in Azure Virtual Desktop (Pooled Host Pools)
 author: StormShadow007
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-16 22:47:32 +00:00
 tags:

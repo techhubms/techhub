@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/selecting-the-right-agentic-solution-on-azure-part-2-security/ba-p/4461215
 title: Selecting the Right Agentic Solution on Azure – Security Deep Dive
 author: pranabpaul
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-22 18:10:53 +00:00
 tags:

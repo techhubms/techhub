@@ -2,7 +2,6 @@
 external_url: https://www.youtube.com/watch?v=8za-H1fWjaM
 title: Visual Studio Code and GitHub Copilot - What's new in 1.106
 author: Fokko Veegens
-viewing_mode: internal
 feed_name: Fokko at Work
 date: 2025-11-15 23:00:00 +00:00
 tags:

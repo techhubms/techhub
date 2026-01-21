@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/aks-enabled-by-azure-arc-powering-ai-applications-from-cloud-to/ba-p/4471511
 title: 'AKS Enabled by Azure Arc: Powering Hybrid AI Applications from Cloud to Edge'
 author: SchumannGE
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-20 00:36:19 +00:00
 tags:

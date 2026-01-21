@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/ansys-minerva-simulation-process-data-management-architecture-on/ba-p/4432098
 title: Ansys Minerva Simulation & Process Data Management Architecture on Azure
 author: Sunita_AZ0708
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-07-30 21:17:02 +00:00
 tags:

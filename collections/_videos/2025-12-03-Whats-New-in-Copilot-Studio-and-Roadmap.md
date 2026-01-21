@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=6sI5jrNVz70
 title: What’s New in Copilot Studio and Roadmap
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-12-03 21:38:26 +00:00
 tags:

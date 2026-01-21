@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/github-copilot-for-students-how-it-can-help-you-learn-faster/
 title: 'GitHub Copilot for Students: How It Can Help You Learn Faster'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-06 11:19:20 +00:00
 tags:

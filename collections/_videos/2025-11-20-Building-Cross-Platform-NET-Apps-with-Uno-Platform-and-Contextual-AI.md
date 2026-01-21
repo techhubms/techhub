@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=R7p_lGtNvMw
 title: Building Cross-Platform .NET Apps with Uno Platform and Contextual AI
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-20 17:46:59 +00:00
 tags:

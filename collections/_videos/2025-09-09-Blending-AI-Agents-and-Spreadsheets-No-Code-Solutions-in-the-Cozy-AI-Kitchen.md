@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=koBGu8PNeds
 title: 'Blending AI Agents and Spreadsheets: No-Code Solutions in the Cozy AI Kitchen'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-09 15:19:04 +00:00
 tags:

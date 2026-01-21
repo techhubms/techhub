@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/agent-factory-designing-the-open-agentic-web-stack/
 title: 'Agent Factory: Designing the Open Agentic Web Stack'
 author: Yina Arenas and Ulrich Homann
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-09-24 15:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/emea/features/the-benefits-of-ai-in-healthcare-extend-far-beyond-improved-patient-care/
 title: 'How AI Is Transforming Healthcare in Kenya: Beyond Patient Care'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-09-02 14:37:57 +00:00
 tags:

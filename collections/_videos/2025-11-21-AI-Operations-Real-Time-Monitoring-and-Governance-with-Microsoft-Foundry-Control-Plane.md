@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=oOO6OG4biEY
 title: 'AI Operations: Real-Time Monitoring and Governance with Microsoft Foundry Control Plane'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 16:29:22 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://hiddedesmet.com/ai-project-validation-framework-part3
 title: 'Is AI the right solution? Part 3: Metrics, piloting, and key takeaways'
 author: Hidde de Smet
-viewing_mode: external
 feed_name: Hidde de Smet's Blog
 date: 2025-06-09 08:00:00 +00:00
 tags:

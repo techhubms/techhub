@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=9NKNNHCsykQ
 title: Live-Coding a DJ App with VS Code and GitHub Copilot
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-10-21 14:00:16 +00:00
 tags:

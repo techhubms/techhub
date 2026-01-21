@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Izrmr4VM4a8
 title: 'Context Window: 3 Azure AI Foundry Community Questions Answered'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-02 19:16:29 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/branding-your-sharepoint-site-for-your-organization/
 title: Branding Your SharePoint Site for Your Organization
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-25 10:06:56 +00:00
 tags:

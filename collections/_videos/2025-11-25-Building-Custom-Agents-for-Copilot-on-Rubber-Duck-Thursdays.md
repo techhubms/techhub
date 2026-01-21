@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=-eRjenGV2OM
 title: Building Custom Agents for Copilot on Rubber Duck Thursdays
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-25 08:44:19 +00:00
 tags:

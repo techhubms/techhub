@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=dJdXdRiIfDw
 title: 'Aspire Unplugged: David Fowler Discusses .NET Aspire’s Vision and Future'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-13 17:40:50 +00:00
 tags:

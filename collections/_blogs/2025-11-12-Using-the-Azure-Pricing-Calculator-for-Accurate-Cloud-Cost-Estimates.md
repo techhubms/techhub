@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-to-use-the-azure-pricing-calculator-effectively-a-step-by%e2%80%90step-guide/
 title: Using the Azure Pricing Calculator for Accurate Cloud Cost Estimates
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-12 16:05:06 +00:00
 tags:

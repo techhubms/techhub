@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-how-to-get-started/
 title: Getting Started with GitHub Copilot CLI in the Terminal
 author: Andrea Griffiths
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-13 22:40:04 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/hzjkGgkI9H8
 title: Never lose your GitHub Copilot session history again
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-07-30 14:01:12 +00:00
 tags:

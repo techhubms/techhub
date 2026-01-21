@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-public-preview-of-query-based-metric-alerts-in-azure/ba-p/4469290
 title: 'Public Preview: Query-Based Metric Alerts Now in Azure Monitor'
 author: yairgil
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-12 17:43:31 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=UXeU4PKrQUw
 title: Design AI Workloads with the Azure Well-Architected Framework
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Build 2025 YouTube
 date: 2025-07-29 07:00:24 +00:00
 tags:

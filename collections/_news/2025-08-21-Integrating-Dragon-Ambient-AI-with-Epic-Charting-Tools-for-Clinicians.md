@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_aiinhealthcare-dragoncopilot-epic-activity-7364045330037817345-y8cF
 title: Integrating Dragon Ambient AI with Epic Charting Tools for Clinicians
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-21 15:09:00 +00:00
 tags:

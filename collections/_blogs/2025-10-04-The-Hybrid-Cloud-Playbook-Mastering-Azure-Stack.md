@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/the-hybrid-cloud-playbook-mastering-azure-stack/
 title: 'The Hybrid Cloud Playbook: Mastering Azure Stack'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-04 09:14:50 +00:00
 tags:

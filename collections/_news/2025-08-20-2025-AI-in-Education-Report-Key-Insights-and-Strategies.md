@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/education/blog/2025/08/ai-in-education-report-insights-to-support-teaching-and-learning/
 title: '2025 AI in Education Report: Key Insights and Strategies'
 author: sbaynes
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-20 19:27:23 +00:00
 tags:

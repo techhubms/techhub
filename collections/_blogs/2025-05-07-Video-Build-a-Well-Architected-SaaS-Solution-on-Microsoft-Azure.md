@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/05/video-build-a-well-architected-saas-solution-on-microsoft-azure/
 title: 'Video: Build a Well-Architected SaaS Solution on Microsoft Azure'
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-05-07 10:44:34 +00:00
 tags:

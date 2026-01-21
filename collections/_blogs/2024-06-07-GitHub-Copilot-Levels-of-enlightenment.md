@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devopsjournal.io/blog/2024/06/07/GitHub-Copilot-Levels-of-enlightenment
 title: GitHub Copilot - Levels of enlightenment
 author: Rob Bos
-viewing_mode: external
 feed_name: Rob Bos' Blog
 date: 2024-06-07 00:00:00 +00:00
 tags:

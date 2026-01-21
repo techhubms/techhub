@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-to-cut-your-azure-bill-in-half-without-losing-performance/
 title: How to Cut Your Azure Bill in Half Without Losing Performance
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-17 10:19:24 +00:00
 tags:

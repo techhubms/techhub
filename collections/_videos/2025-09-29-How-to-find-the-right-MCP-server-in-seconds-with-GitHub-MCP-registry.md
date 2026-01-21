@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/A2ERvKTml98
 title: How to find the right MCP server in seconds with GitHub MCP registry
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-09-29 19:11:52 +00:00
 tags:

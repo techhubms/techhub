@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-storage-apis-gain-entra-id-and-rbac-support/
 title: Azure Storage APIs Gain Microsoft Entra ID and RBAC Support
 author: Christine Chen
-viewing_mode: external
 feed_name: Microsoft Azure SDK Blog
 date: 2025-09-10 18:24:47 +00:00
 tags:

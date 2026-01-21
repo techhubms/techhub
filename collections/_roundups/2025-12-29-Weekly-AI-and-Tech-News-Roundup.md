@@ -1,7 +1,6 @@
-﻿---
+---
 title: 'AI Agent Frameworks, Copilot Automation, and Security Improvements: Weekly Tech Highlights'
 author: Tech Hub Team
-viewing_mode: internal
 date: 2025-12-29 09:00:00 +00:00
 tags:
 - Agent Framework

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/09/17/our-new-collaboration-with-maryland-will-accelerate-scalable-quantum-computing/
 title: Microsoft Opens Quantum Research Center with Maryland Partnership
 author: sbaynes
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-09-17 15:45:54 +00:00
 tags:

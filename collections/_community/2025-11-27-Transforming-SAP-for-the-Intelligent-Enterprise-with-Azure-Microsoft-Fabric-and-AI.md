@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/transforming-sap-for-the-intelligent-enterprise-with-azure/ba-p/4473309
 title: Transforming SAP for the Intelligent Enterprise with Azure, Microsoft Fabric, and AI
 author: srhulsus
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-27 15:51:55 +00:00
 tags:

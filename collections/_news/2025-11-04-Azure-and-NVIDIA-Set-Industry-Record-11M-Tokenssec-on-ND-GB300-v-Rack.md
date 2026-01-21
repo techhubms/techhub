@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_breaking-the-million-token-barrier-activity-7391283043765952512-guP3
 title: 'Azure and NVIDIA Set Industry Record: 1.1M Tokens/sec on ND GB300 v Rack'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-04 03:36:00 +00:00
 tags:

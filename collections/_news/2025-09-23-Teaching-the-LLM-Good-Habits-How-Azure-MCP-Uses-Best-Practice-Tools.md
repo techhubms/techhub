@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/all-things-azure/teaching-the-llm-good-habits-how-azure-mcp-uses-best-practice-tools/
 title: 'Teaching the LLM Good Habits: How Azure MCP Uses Best-Practice Tools'
 author: Chris Harris
-viewing_mode: external
 feed_name: Microsoft All Things Azure Blog
 date: 2025-09-23 23:02:30 +00:00
 tags:

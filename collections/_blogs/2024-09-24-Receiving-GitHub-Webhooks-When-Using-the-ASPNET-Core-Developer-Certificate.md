@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.stevejgordon.co.uk/receiving-github-webhooks-when-using-the-aspnetcore-developer-certificate
 title: Receiving GitHub Webhooks When Using the ASP.NET Core Developer Certificate
 author: Steve Gordon
-viewing_mode: external
 feed_name: Steve Gordon's Blog
 date: 2024-09-24 09:46:37 +00:00
 tags:

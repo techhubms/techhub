@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-10-preview-7/
 title: '.NET 10 Preview 7 Released: Key Updates for Libraries, ASP.NET Core, Blazor, and MAUI'
 author: .NET Team
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-08-12 19:20:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=gv5fRtBk8IM
 title: 'Exploring GraphRAG: AI-Powered Graph Search for Security Data Analysis'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-26 18:29:14 +00:00
 tags:

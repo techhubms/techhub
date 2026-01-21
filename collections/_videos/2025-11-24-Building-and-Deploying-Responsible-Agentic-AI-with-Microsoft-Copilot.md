@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=eLCQ9qlOzWo
 title: Building and Deploying Responsible Agentic AI with Microsoft Copilot
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 11:17:13 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-upskilling-framework-level-3-building/ba-p/4477472
 title: 'AI Upskilling Framework Level 3: Building Agentic Workflows from Microsoft Ignite'
 author: carlottacaste
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-12 17:31:50 +00:00
 tags:

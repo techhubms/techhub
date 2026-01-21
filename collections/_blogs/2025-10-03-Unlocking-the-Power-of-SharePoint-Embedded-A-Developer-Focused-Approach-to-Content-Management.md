@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/unlocking-the-power-of-sharepoint-embedded-a-modern-approach-to-content-management/
 title: 'Unlocking the Power of SharePoint Embedded: A Developer-Focused Approach to Content Management'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-03 14:09:54 +00:00
 tags:

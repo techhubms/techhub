@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/announcing-aspire-9-4/
 title: 'Aspire 9.4: CLI, Interactive Dashboard, AI Integrations, and New Features'
 author: Maddy Montaquila
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-07-29 18:05:00 +00:00
 tags:

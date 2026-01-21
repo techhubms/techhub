@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/how-microsoft-azure-and-qumulo-deliver-a-truly-cloud-native-file/ba-p/4426321
 title: How Microsoft Azure and Qumulo Enable Cloud-Native File Systems for Enterprise Data Management
 author: dukicn
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-05 21:25:58 +00:00
 tags:

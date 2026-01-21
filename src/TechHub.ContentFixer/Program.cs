@@ -21,6 +21,7 @@ namespace TechHub.ContentFixer;
 /// - Remove 'alt_collection' and 'alt-collection' frontmatter fields (collection derived from directory path)
 /// - Remove 'section' frontmatter field (singular - replaced by section_names)
 /// - Remove 'description' field from frontmatter
+/// - Remove 'viewing_mode' frontmatter field
 /// - Replace template variables ({{ page.variable }}) with actual values
 /// - Expand template variables inside tags ({% youtube page.variable %} → {% youtube VALUE %})
 /// - Remove {% raw %} and {% endraw %} tags
@@ -370,6 +371,15 @@ internal sealed class Program
             changed = true;
         }
 
+        // 4i. Remove viewing_mode
+        if (frontMatter.Remove("viewing_mode"))
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("  ✓ Removed viewing_mode");
+            Console.ResetColor();
+            changed = true;
+        }
+
         // 5. Save description for variable replacement, then remove from frontmatter
         var description = frontMatter.TryGetValue("description", out var descObj) ? descObj?.ToString() : null;
         if (frontMatter.Remove("description"))
@@ -552,7 +562,7 @@ internal sealed class Program
                 var sectionNames = GetListValue(frontMatter, "section_names");
                 if (sectionNames.Count == 0)
                 {
-                    sectionNames = GetListValue(frontMatter, "categories").Select(NormalizeSectionName).ToList();
+                    sectionNames = [.. GetListValue(frontMatter, "categories").Select(NormalizeSectionName)];
                 }
 
                 var primarySection = sectionNames.FirstOrDefault();
@@ -607,7 +617,7 @@ internal sealed class Program
             if (slugMap.TryGetValue(slug, out var articleInfo))
             {
                 // Build correct URL
-                var newUrl = $"/{articleInfo.PrimarySection}/{articleInfo.Collection}/{slug}";
+                var newUrl = $"/{articleInfo.PrimarySectionName}/{articleInfo.CollectionName}/{slug}";
 
                 // Rebuild markdown link
                 var result = $"[{text}]({newUrl}";
@@ -625,5 +635,5 @@ internal sealed class Program
         });
     }
 
-    private record ArticleInfo(string PrimarySection, string Collection);
+    private sealed record ArticleInfo(string PrimarySectionName, string CollectionName);
 }

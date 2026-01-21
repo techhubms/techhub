@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-spaces-to-debug-issues-faster/
 title: Accelerate Debugging with GitHub Copilot Spaces and Copilot Coding Agent
 author: Andrea Griffiths
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-04 20:35:36 +00:00
 tags:

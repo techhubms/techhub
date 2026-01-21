@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/blog/2025/11/12/infinite-scale-the-architecture-behind-the-azure-ai-superfactory/
 title: 'Infinite Scale: The Architecture Behind the Azure AI Superfactory'
 author: Vanessa Ho
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-19 21:19:14 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://jessehouwing.net/troubleshooting-github-copilot-keyboard-shortcuts-in-jetbrains-ides/
 title: Troubleshooting GitHub Copilot Keyboard Shortcuts in JetBrains IDEs
 author: Jesse Houwing
-viewing_mode: external
 feed_name: Jesse Houwing's Blog
 date: 2025-01-22 18:39:29 +00:00
 tags:

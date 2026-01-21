@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-18-teams-management-now-moved-to-settings
 title: Teams Management Relocated to Settings in GitHub
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-18 16:51:29 +00:00
 tags:

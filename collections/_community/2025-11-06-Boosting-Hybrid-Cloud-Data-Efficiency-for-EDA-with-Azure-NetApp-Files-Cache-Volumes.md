@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/boosting-hybrid-cloud-data-efficiency-for-eda-the-power-of-azure/ba-p/4467790
 title: Boosting Hybrid Cloud Data Efficiency for EDA with Azure NetApp Files Cache Volumes
 author: GeertVanTeylingen
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-06 20:55:11 +00:00
 tags:

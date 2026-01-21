@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/why-changing-keyboard-shortcuts-in-visual-studio-isnt-as-simple-as-it-seems/
 title: Making Sense of Keyboard Shortcuts in Visual Studio 2026
 author: Mads Kristensen
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-12-03 15:00:13 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-us-for-a-technical-deep-dive-and-q-a-on-foundry-local-llms/ba-p/4455060
 title: 'Technical AMA: Foundry Local and On-Device LLMs with Azure AI Foundry'
 author: Lee_Stott
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-19 07:00:00 +00:00
 tags:

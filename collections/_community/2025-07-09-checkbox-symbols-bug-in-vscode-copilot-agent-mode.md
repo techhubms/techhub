@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1lvekgv/visual_studio_code_github_copilot_agent_mode/
 title: Checkbox Symbols Bug in VS Code Copilot Agent Mode
 author: ZomboBrain
-viewing_mode: external
 date: 2025-07-09 09:41:14 +00:00
 tags:
 - Bug Report

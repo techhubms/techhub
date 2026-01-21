@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/data-integration-with-microsoft-fabric-unifying-your-data-universe/
 title: 'Data Integration with Microsoft Fabric: Unifying Your Data Universe'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-03 08:17:00 +00:00
 tags:

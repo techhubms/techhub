@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=5-HRDXO3iC0
 title: Mastering Chat Modes in VS Code with Burke Holland
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-10-20 07:00:04 +00:00
 tags:

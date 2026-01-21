@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/11/10/securing-our-future-november-2025-progress-report-on-microsofts-secure-future-initiative/
 title: November 2025 Progress Report on Microsoft’s Secure Future Initiative
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-10 17:55:11 +00:00
 tags:

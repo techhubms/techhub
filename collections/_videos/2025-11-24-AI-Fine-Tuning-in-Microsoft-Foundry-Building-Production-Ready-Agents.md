@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=dXUy9evg1yo
 title: 'AI Fine-Tuning in Microsoft Foundry: Building Production-Ready Agents'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 10:25:11 +00:00
 tags:

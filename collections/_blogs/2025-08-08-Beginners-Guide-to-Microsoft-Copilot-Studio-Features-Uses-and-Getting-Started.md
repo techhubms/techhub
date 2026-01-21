@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/what-is-microsoft-copilot-studio-a-beginners-guide/
 title: 'Beginner’s Guide to Microsoft Copilot Studio: Features, Uses, and Getting Started'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-08 10:18:44 +00:00
 tags:

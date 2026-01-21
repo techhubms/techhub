@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/devops/november-patches-for-azure-devops-server-2/
 title: November Security Patches Released for Azure DevOps Server
 author: Gloridel Morales
-viewing_mode: external
 feed_name: Microsoft DevOps Blog
 date: 2025-11-11 17:25:03 +00:00
 tags:

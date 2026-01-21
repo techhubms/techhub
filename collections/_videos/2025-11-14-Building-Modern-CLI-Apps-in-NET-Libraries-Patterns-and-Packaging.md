@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Z6e5ZP9y3_8
 title: 'Building Modern CLI Apps in .NET: Libraries, Patterns, and Packaging'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 19:21:02 +00:00
 tags:

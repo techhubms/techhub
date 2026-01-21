@@ -245,14 +245,14 @@ public class ContentEndpointsE2ETests(ApiTestFactory factory) : IClassFixture<Ap
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
 
-        // Items should contain "copilot" in title, description, or tags
+        // Items should contain "copilot" in title, excerpt, or tags
         items.Should().AllSatisfy(item =>
         {
             var containsInTitle = item.Title.Contains("copilot", StringComparison.OrdinalIgnoreCase);
-            var containsInDescription = item.Description.Contains("copilot", StringComparison.OrdinalIgnoreCase);
+            var containsInExcerpt = item.Excerpt.Contains("copilot", StringComparison.OrdinalIgnoreCase);
             var containsInTags = item.Tags.Any(tag => tag.Contains("copilot", StringComparison.OrdinalIgnoreCase));
 
-            (containsInTitle || containsInDescription || containsInTags).Should().BeTrue();
+            (containsInTitle || containsInExcerpt || containsInTags).Should().BeTrue();
         });
     }
 
@@ -314,7 +314,6 @@ public class ContentEndpointsE2ETests(ApiTestFactory factory) : IClassFixture<Ap
         {
             item.Slug.Should().NotBeNullOrEmpty();
             item.Title.Should().NotBeNullOrEmpty();
-            item.Description.Should().NotBeNullOrEmpty();
             item.Author.Should().NotBeNullOrEmpty();
             item.DateEpoch.Should().BeGreaterThan(0);
             item.DateIso.Should().NotBeNullOrEmpty();

@@ -102,4 +102,4 @@ Run -TestName ContentItem
 
 - [tests/AGENTS.md](../AGENTS.md) - Complete testing strategy
 - [src/TechHub.Core/AGENTS.md](../../src/TechHub.Core/AGENTS.md) - Domain model patterns
-- [Root AGENTS.md](/AGENTS.md#6-test--validate) - When to write tests
+- [Root AGENTS.md](../../AGENTS.md#6-write-tests-first-tdd) - When to write tests

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/build-secure-launch-your-private-mcp-registry-with-azure-api/ba-p/4438016
 title: Build. Secure. Launch Your Private MCP Registry with Azure API Center.
 author: JuliaKa
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-07-30 17:46:12 +00:00
 tags:

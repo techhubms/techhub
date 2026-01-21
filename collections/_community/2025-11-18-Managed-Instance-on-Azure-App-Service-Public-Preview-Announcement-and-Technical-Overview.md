@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-public-preview-of-managed-instance-on-azure-app/ba-p/4469930
 title: 'Managed Instance on Azure App Service: Public Preview Announcement and Technical Overview'
 author: apwestgarth
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:00:00 +00:00
 tags:

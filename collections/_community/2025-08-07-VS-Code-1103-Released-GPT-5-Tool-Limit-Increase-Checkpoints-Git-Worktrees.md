@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk7d03/vs_code_1103_released_with_gpt5_tool_limit/
 title: 'VS Code 1.103 Released: GPT-5, Tool Limit Increase, Checkpoints, Git Worktrees'
 author: connor4312
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-07 18:06:13 +00:00
 tags:

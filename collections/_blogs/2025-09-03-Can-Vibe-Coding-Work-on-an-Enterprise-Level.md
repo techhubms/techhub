@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/can-vibe-codingwork-on-an-enterprise-level/?utm_source=rss&utm_medium=rss&utm_campaign=can-vibe-codingwork-on-an-enterprise-level
 title: Can Vibe Coding Work on an Enterprise Level?
 author: Armelle Dawson
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-03 10:12:37 +00:00
 tags:

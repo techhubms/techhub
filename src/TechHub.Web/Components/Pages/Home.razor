@@ -38,13 +38,13 @@
                 <ul class="sidebar-list">
                     @foreach (var item in latestItems.Take(5))
                     {
-                        var sectionUrl = GetSectionUrl(item.PrimarySection);
+                        var sectionUrl = GetSectionUrl(item.PrimarySectionName);
                         <li>
                             <a href="/@(sectionUrl)/@(item.CollectionName.ToLowerInvariant())/@(item.Slug.ToLowerInvariant())"
                                 class="sidebar-content-button">
                                 <span class="sidebar-content-button-title">@item.Title</span>
                                 <span class="sidebar-content-button-meta">
-                                    <span class="sidebar-item-section">@item.PrimarySection</span>
+                                    <span class="sidebar-item-section">@item.PrimarySectionName</span>
                                     <span class="sidebar-content-button-meta-separator">•</span>
                                     <span
                                         class="sidebar-item-collection">@(GetCollectionDisplayName(item.CollectionName))</span>

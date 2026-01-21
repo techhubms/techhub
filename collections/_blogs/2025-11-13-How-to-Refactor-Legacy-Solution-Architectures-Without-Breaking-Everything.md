@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-to-refactor-legacy-solution-architectures-without-breaking-everything/
 title: How to Refactor Legacy Solution Architectures Without Breaking Everything
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-13 09:44:47 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/MachineLearning/comments/1miev16/p_from_business_processes_to_gnn_for_next/
 title: Structuring a GNN-Based Next Activity Prediction for Business Process Mining
 author: Street_Car_1297
-viewing_mode: external
 feed_name: Reddit Machine Learning
 date: 2025-08-05 17:05:11 +00:00
 tags:

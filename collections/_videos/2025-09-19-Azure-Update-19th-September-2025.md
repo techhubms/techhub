@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Umvbk3sBXn8
 title: Azure Update - 19th September 2025
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-09-19 14:42:14 +00:00
 tags:

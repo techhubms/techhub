@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-september-2025-release/
 title: 'On-premises Data Gateway September 2025 Release: New Features & Power BI Desktop Compatibility'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-09-30 13:30:00 +00:00
 tags:

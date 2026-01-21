@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/understanding-the-github-copilot-exam-blueprint-skills-measured-topics-covered/
 title: 'Understanding the GitHub Copilot Exam: Blueprint, Skills, and Key Domains'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-07 09:41:13 +00:00
 tags:

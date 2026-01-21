@@ -240,23 +240,23 @@ internal static class SectionsEndpoints
     /// </summary>
     private static ContentItemDto MapContentToDto(Core.Models.ContentItem item)
     {
-        var primarySectionUrl = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.SectionNames, item.CollectionName);
+        var primarySectionUrl = Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.SectionNames, item.CollectionName);
 
         return new ContentItemDto
         {
             Slug = item.Slug,
             Title = item.Title,
-            Description = item.Description,
             Author = item.Author,
             DateEpoch = item.DateEpoch,
             DateIso = item.DateIso,
             CollectionName = item.CollectionName,
+            SubcollectionName = item.SubcollectionName,
+            FeedName = item.FeedName,
             SectionNames = item.SectionNames,
-            PrimarySection = TechHub.Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName),
+            PrimarySectionName = Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName),
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
-            ViewingMode = item.ViewingMode,
             Url = $"/{primarySectionUrl.ToLowerInvariant()}/{item.CollectionName.ToLowerInvariant()}/{item.Slug.ToLowerInvariant()}"
         };
     }

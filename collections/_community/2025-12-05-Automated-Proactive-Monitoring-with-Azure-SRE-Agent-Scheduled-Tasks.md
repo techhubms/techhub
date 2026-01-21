@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/proactive-monitoring-made-simple-with-azure-sre-agent/ba-p/4471205
 title: Automated Proactive Monitoring with Azure SRE Agent Scheduled Tasks
 author: dchelupati
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-05 06:00:35 +00:00
 tags:

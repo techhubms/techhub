@@ -194,6 +194,8 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         string sectionName,
         CancellationToken cancellationToken = default)
     {
+        ArgumentNullException.ThrowIfNull(sectionName);
+
         var allItems = await GetAllAsync(cancellationToken);
 
         // Handle virtual "all" section - return all content
@@ -222,7 +224,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
     }
 
     /// <summary>
-    /// Search content items by text query (title, description, tags).
+    /// Search content items by text query (title, excerpt, tags).
     /// Searches cached in-memory data.
     /// Case-insensitive search across multiple fields.
     /// Returns items sorted by date (DateEpoch) in descending order (newest first).
@@ -242,7 +244,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         return [.. allItems
             .Where(item =>
                 item.Title.Contains(lowerQuery, StringComparison.OrdinalIgnoreCase) ||
-                item.Description.Contains(lowerQuery, StringComparison.OrdinalIgnoreCase) ||
+                item.Excerpt.Contains(lowerQuery, StringComparison.OrdinalIgnoreCase) ||
                 item.Tags.Any(tag => tag.Contains(lowerQuery, StringComparison.OrdinalIgnoreCase)))
             .OrderByDescending(x => x.DateEpoch)];
     }
@@ -324,7 +326,6 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 
         // Extract optional fields
         var author = _frontMatterParser.GetValue<string>(frontMatter, "author", "Microsoft");
-        var description = _frontMatterParser.GetValue<string>(frontMatter, "description", string.Empty);
         var excerpt = _frontMatterParser.GetValue<string>(frontMatter, "excerpt", string.Empty);
 
         // Read section_names directly (ContentFixer has already normalized these to lowercase with hyphens)
@@ -332,7 +333,6 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 
         var tags = _frontMatterParser.GetListValue(frontMatter, "tags");
         var externalUrl = _frontMatterParser.GetValue<string>(frontMatter, "external_url", string.Empty);
-        var viewingMode = _frontMatterParser.GetValue<string>(frontMatter, "viewing_mode", "external");
         var feedName = _frontMatterParser.GetValue<string>(frontMatter, "feed_name", string.Empty);
 
         // Derive subcollection from file path:
@@ -347,8 +347,8 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         if (frontMatter.TryGetValue("sidebar-info", out var sidebarData))
         {
             // Convert to JSON for flexible client-side consumption
-            var json = System.Text.Json.JsonSerializer.Serialize(sidebarData);
-            sidebarInfo = System.Text.Json.JsonSerializer.Deserialize<JsonElement>(json);
+            var json = JsonSerializer.Serialize(sidebarData);
+            sidebarInfo = JsonSerializer.Deserialize<JsonElement>(json);
         }
 
         // Generate ID from filename (without extension)
@@ -360,38 +360,13 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             excerpt = _markdownService.ExtractExcerpt(content);
         }
 
-        // Use description if provided, otherwise use excerpt
-        if (string.IsNullOrWhiteSpace(description))
-        {
-            description = excerpt;
-        }
-
         // Process YouTube embeds and render markdown to HTML
         var processedMarkdown = _markdownService.ProcessYouTubeEmbeds(content);
 
-        // Create temporary ContentItem to get primary section and URL
-        var tempItem = new ContentItem
-        {
-            Slug = fileName,
-            Title = title,
-            Description = description,
-            Author = author,
-            DateEpoch = date.ToUnixTimeSeconds(),
-            CollectionName = derivedCollection,
-            SubcollectionName = subcollectionName,
-            FeedName = feedName,
-            SectionNames = sectionNames,
-            Tags = tags,
-            RenderedHtml = string.Empty, // Will be set below
-            Excerpt = excerpt,
-            ExternalUrl = externalUrl,
-            ViewingMode = viewingMode,
-            SidebarInfo = sidebarInfo
-        };
-
-        // Get primary section and current page path using existing functionality
-        var primarySection = tempItem.GetPrimarySectionUrl();
-        var currentPagePath = tempItem.GetUrl();
+        // Calculate URL directly without creating temporary object (performance optimization for 4000+ items)
+        var primarySectionUrl = Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(sectionNames, derivedCollection);
+        var pathSegment = subcollectionName ?? derivedCollection;
+        var currentPagePath = $"/{primarySectionUrl}/{pathSegment}/{fileName}";
 
         string renderedHtml;
         try
@@ -412,7 +387,6 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         {
             Slug = fileName,
             Title = title,
-            Description = description,
             Author = author,
             DateEpoch = date.ToUnixTimeSeconds(),
             CollectionName = derivedCollection,
@@ -423,7 +397,6 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
             RenderedHtml = renderedHtml,
             Excerpt = excerpt,
             ExternalUrl = externalUrl,
-            ViewingMode = viewingMode,
             SidebarInfo = sidebarInfo
         };
 
@@ -446,9 +419,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         {
             // Collection scope: filter by collection AND section
             var collectionItems = await GetByCollectionAsync(request.CollectionName, cancellationToken);
-            items = collectionItems
-                .Where(item => item.SectionNames.Contains(request.SectionName, StringComparer.OrdinalIgnoreCase))
-                .ToList();
+            items = [.. collectionItems.Where(item => item.SectionNames.Contains(request.SectionName, StringComparer.OrdinalIgnoreCase))];
         }
         else if (!string.IsNullOrWhiteSpace(request.SectionName))
         {
@@ -467,29 +438,27 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         }
 
         // Apply tag filter if tags are specified
-        if (request.SelectedTags.Length > 0)
+        if (request.SelectedTags.Count > 0)
         {
-            items = items
-                .Where(item => _tagMatchingService.MatchesAny(request.SelectedTags, item.Tags))
-                .ToList();
+            items = [.. items.Where(item => _tagMatchingService.MatchesAny(request.SelectedTags, item.Tags))];
         }
 
         // Apply date range filter
         if (request.DateFrom.HasValue)
         {
             var fromEpoch = request.DateFrom.Value.ToUnixTimeSeconds();
-            items = items.Where(item => item.DateEpoch >= fromEpoch).ToList();
+            items = [.. items.Where(item => item.DateEpoch >= fromEpoch)];
         }
 
         if (request.DateTo.HasValue)
         {
             var toEpoch = request.DateTo.Value.ToUnixTimeSeconds();
-            items = items.Where(item => item.DateEpoch <= toEpoch).ToList();
+            items = [.. items.Where(item => item.DateEpoch <= toEpoch)];
         }
 
         // Results are already sorted by DateEpoch descending from GetAllAsync
         // If we filtered, maintain that order
-        return items.OrderByDescending(x => x.DateEpoch).ToList();
+        return [.. items.OrderByDescending(x => x.DateEpoch)];
     }
 
     /// <summary>

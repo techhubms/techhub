@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/01/cybersecurity-awareness-month-security-starts-with-you/
 title: 'Cybersecurity Awareness Month: Elevating Security Culture with Microsoft Resources'
 author: Vasu Jakkal
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-10-01 16:00:00 +00:00
 tags:

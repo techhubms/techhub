@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/documenting-architecture-using-ai-from-painful-chore-to-strategic-advantage/
 title: 'Documenting Architecture Using AI: From Painful Chore to Strategic Advantage'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-30 08:03:16 +00:00
 tags:

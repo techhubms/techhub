@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=nQLdmy50cb0
 title: 'VS Code Private Marketplace: Enterprise Control Meets Developer Speed'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-11-18 16:15:06 +00:00
 tags:

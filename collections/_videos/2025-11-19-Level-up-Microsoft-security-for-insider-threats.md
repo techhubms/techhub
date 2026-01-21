@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=OhXZa5NzJ5Y
 title: Level up Microsoft security for insider threats
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 14:45:42 +00:00
 tags:

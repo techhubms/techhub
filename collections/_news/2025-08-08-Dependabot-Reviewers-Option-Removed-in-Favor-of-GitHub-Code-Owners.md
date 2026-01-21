@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-08-dependabot-reviewers-configuration-option-is-replaced-by-code-owners
 title: Dependabot Reviewers Option Removed in Favor of GitHub Code Owners
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-08 18:53:03 +00:00
 tags:

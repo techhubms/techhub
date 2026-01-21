@@ -2,7 +2,6 @@
 external_url: https://khalidabuhakmeh.com/htmx-and-playwright-tests-in-csharp
 title: How to Reliably Test Htmx Applications with Playwright in C#
 author: Khalid Abuhakmeh
-viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
 date: 2024-09-24 00:00:00 +00:00
 tags:

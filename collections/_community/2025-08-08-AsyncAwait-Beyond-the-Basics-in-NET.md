@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mkxmt5/asyncawait_beyond_the_basics/
 title: Async/Await - Beyond the Basics in .NET
 author: Delicious_Jaguar_341
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-08 15:04:02 +00:00
 tags:

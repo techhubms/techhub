@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-hits-the-road-with-oracle-ai-world-tour-2026/ba-p/4477598
 title: Modernizing Oracle Workloads with Oracle Database@Azure and AI Solutions
 author: NadineSalem
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-15 19:23:38 +00:00
 tags:

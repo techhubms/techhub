@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-02-agents-page-for-copilot-coding-agent-in-public-preview
 title: Agents page for GitHub Copilot coding agent
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-03 12:00:54 +00:00
 tags:

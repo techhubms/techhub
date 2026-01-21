@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.mindbyte.nl/2025/06/02/dynamic-iis-server-deployments-github-actions.html
 title: Dynamic IIS Server Deployments with GitHub Actions
 author: Michiel van Oudheusden
-viewing_mode: external
 feed_name: Michiel van Oudheusden's Blog
 date: 2025-06-01 22:00:00 +00:00
 tags:

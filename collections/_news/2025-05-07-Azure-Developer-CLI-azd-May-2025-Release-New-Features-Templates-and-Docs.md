@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-may-2025/
 title: 'Azure Developer CLI (azd) May 2025 Release: New Features, Templates, and Docs'
 author: Kristen Womack
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-05-07 17:30:53 +00:00
 tags:

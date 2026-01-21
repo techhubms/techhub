@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-19-dependabot-now-supports-rust-toolchain-updates
 title: Dependabot Adds Support for Automated Rust Toolchain Updates
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-19 15:56:42 +00:00
 tags:

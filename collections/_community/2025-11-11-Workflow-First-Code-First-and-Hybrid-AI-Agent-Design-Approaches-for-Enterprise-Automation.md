@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-ai-agents-workflow-first-vs-code-first-vs-hybrid/ba-p/4466788
 title: 'Workflow-First, Code-First, and Hybrid AI Agent Design: Approaches for Enterprise Automation'
 author: PradyH
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-11 18:36:18 +00:00
 tags:

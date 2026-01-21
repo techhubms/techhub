@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-09-new-copilot-chat-features-now-generally-available-on-github
 title: New Copilot Chat features now generally available on GitHub
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-10 06:25:57 +00:00
 tags:

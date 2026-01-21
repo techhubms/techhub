@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/azure-ai-studio-azure-ai-foundry-a-powerful-platform-for-generative-ai/
 title: 'Azure AI Studio and AI Foundry: Microsoft’s Generative AI Platform Explained'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-22 09:11:05 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=UfOY9RXHFiw
 title: What is GitHub Secret Protection?
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-17 14:00:41 +00:00
 tags:

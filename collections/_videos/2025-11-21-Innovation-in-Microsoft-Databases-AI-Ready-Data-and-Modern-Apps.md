@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Y17b0rJ_psk
 title: 'Innovation in Microsoft Databases: AI-Ready Data and Modern Apps'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 07:12:58 +00:00
 tags:

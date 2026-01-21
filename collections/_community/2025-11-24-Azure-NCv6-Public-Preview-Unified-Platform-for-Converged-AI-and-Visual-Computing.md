@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-ncv6-public-preview-the-new-unified-platform-for-converged/ba-p/4472704
 title: 'Azure NCv6 Public Preview: Unified Platform for Converged AI & Visual Computing'
 author: rishabv90
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-24 22:05:04 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-concept-to-code-building-production-ready-multi-agent/ba-p/4472752
 title: 'From Concept to Code: Building Production-Ready Multi-Agent Systems with Microsoft Foundry'
 author: kinfey
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-25 08:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=2QXzxOLtCHM
 title: 'Building Three AI-Powered Applications: MCP, Browser LLMs, and Foundry Local'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-29 16:00:05 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=VC6nM0t-bUw
 title: 'From UX to AX: Why Agent Experience is the Next Frontier in Business AI'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-19 16:00:48 +00:00
 tags:

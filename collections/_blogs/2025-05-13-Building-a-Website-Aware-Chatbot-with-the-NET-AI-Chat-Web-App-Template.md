@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/using-the-new-ai-template-to-create-a-chatbot-about-a-website/
 title: Building a Website-Aware Chatbot with the .NET AI Chat Web App Template
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2025-05-13 09:00:00 +00:00
 tags:

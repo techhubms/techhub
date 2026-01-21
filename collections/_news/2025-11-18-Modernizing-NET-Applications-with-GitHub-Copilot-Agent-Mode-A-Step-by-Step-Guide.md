@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/modernizing-dotnet-with-github-copilot-agent-mode/
 title: 'Modernizing .NET Applications with GitHub Copilot Agent Mode: A Step-by-Step Guide'
 author: Mika Dumont
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-11-18 18:05:00 +00:00
 tags:

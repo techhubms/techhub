@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-25-upcoming-deprecation-of-gh-copilot-cli-extension
 title: GitHub Copilot CLI Extension Deprecation Announcement
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-25 20:32:31 +00:00
 tags:

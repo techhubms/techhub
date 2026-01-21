@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/common-misconceptions-when-running-locally-vs-deploying-to-azure/ba-p/4473938
 title: 'Troubleshooting Azure Linux Web App Deployment: Compatibility, Environment Variables, and Memory'
 author: theringe
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-30 09:14:23 +00:00
 tags:

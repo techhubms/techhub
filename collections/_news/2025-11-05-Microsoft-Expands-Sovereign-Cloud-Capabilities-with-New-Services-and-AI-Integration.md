@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/microsoft-strengthens-sovereign-cloud-capabilities-with-new-services/
 title: Microsoft Expands Sovereign Cloud Capabilities with New Services and AI Integration
 author: Douglas Phillips
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-11-05 07:00:00 +00:00
 tags:

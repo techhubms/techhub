@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-maps-blog/introducing-the-azure-maps-geocode-autocomplete-api/ba-p/4455780
 title: Introducing the Azure Maps Geocode Autocomplete API
 author: sinnypan
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-22 03:33:28 +00:00
 tags:

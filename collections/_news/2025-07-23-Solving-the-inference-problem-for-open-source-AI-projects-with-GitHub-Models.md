@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/llms/solving-the-inference-problem-for-open-source-ai-projects-with-github-models/
 title: Solving the Inference Problem for Open Source AI Projects with GitHub Models
 author: Sean Goedecke
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-23 16:00:00 +00:00
 tags:

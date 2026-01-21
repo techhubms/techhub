@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/0qdRS3xYwIY
 title: 'Understanding .gitignore: Keeping Your Git Repository Clean'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-28 15:00:03 +00:00
 tags:

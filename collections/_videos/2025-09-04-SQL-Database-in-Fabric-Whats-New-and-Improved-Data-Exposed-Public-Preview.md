@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=MLpGP_L7ZRU
 title: "SQL Database in Fabric: What's New and Improved (Data Exposed Public Preview)"
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-04 21:03:39 +00:00
 tags:

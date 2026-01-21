@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/when-words-matter-noise-free-domain-specific-voice-recognition-with-azure-custom-speech/
 title: Noise-Free, Domain-Specific Voice Recognition with Azure Custom Speech
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-12 08:14:12 +00:00
 tags:

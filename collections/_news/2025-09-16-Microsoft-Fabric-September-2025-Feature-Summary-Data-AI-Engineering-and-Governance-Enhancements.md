@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/september-2025-fabric-feature-summary/
 title: 'Microsoft Fabric September 2025 Feature Summary: Data, AI, Engineering and Governance Enhancements'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-09-16 00:00:00 +00:00
 tags:

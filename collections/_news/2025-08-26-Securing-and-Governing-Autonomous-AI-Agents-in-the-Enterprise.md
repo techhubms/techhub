@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/08/26/securing-and-governing-the-rise-of-autonomous-agents/
 title: Securing and Governing Autonomous AI Agents in the Enterprise
 author: Igor Sakhnov
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-08-26 16:00:00 +00:00
 tags:

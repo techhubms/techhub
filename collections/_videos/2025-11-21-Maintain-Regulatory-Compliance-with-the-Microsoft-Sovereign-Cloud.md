@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ALNbqZzuBHg
 title: Maintain Regulatory Compliance with the Microsoft Sovereign Cloud
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 17:11:09 +00:00
 tags:

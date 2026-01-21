@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_was-fun-to-be-at-a-dev-event-in-bengaluru-activity-7404820776195043329-A5vB
 title: 'Multi-Model Reasoning App Demoed at Bengaluru Dev Event: Decision Frameworks, Azure, and Copilot Vision'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-11 14:12:06 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/gpt-5-in-azure-ai-foundry-the-future-of-ai-apps-and-agents-starts-here/
 title: 'GPT-5 Launches in Azure AI Foundry: New Era for AI Apps, Agents, and Developers'
 author: Steve Sweetman
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-08-07 17:00:00 +00:00
 tags:

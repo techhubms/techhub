@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-29-anthropic-claude-sonnet-4-5-is-in-public-preview-for-github-copilot
 title: Anthropic Claude Sonnet 4.5 Launches for GitHub Copilot Chat and CLI
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-29 16:37:42 +00:00
 tags:

@@ -14,7 +14,6 @@ public class ContentItemTests
         {
             Slug = "2024-01-15-test-article",
             Title = "Test Article",
-            Description = "Test description",
             Author = "Test Author",
             DateEpoch = 1705305600, // 2024-01-15 00:00:00 UTC
             CollectionName = "news",
@@ -22,8 +21,7 @@ public class ContentItemTests
             Tags = ["AI", "News", "Machine Learning"],
             RenderedHtml = "<p>Test content</p>",
             Excerpt = "Test excerpt",
-            ExternalUrl = null,
-            ViewingMode = null
+            ExternalUrl = null
         };
     }
 
@@ -54,7 +52,6 @@ public class ContentItemTests
         {
             Slug = "test-slug",
             Title = "Test Title",
-            Description = "Test Description",
             DateEpoch = 1704844800,
             CollectionName = "news",
             SectionNames = ["ai"],
@@ -82,7 +79,6 @@ public class ContentItemTests
         {
             Slug = "test-slug",
             Title = "Test Title",
-            Description = "Test Description",
             Author = "Test Author",
             DateEpoch = 1705305600,
             CollectionName = "news",

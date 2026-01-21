@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/preview-govern-secure-and-observe-a2a-apis-with-azure-api/ba-p/4469800
 title: 'Preview: Govern, Secure, and Observe A2A APIs with Azure API Management'
 author: budzynski
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-19 19:21:35 +00:00
 tags:

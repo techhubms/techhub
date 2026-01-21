@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure/azure-automation-feature-improvements-and-bugs/m-p/4456195#M22242
 title: 'Azure Automation: User Requests, Feature Suggestions, and Bug Reports'
 author: mynster
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-23 10:12:56 +00:00
 tags:

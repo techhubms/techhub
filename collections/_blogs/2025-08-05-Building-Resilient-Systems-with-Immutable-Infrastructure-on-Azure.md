@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/building-resilient-systems-with-immutable-infrastructure-on-azure/
 title: Building Resilient Systems with Immutable Infrastructure on Azure
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-05 09:46:27 +00:00
 tags:

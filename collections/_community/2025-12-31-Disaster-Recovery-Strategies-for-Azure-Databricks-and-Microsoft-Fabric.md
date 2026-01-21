@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-fabric-disaster-recovery-the-better-together/ba-p/4481323
 title: Disaster Recovery Strategies for Azure Databricks and Microsoft Fabric
 author: Rafia_Aqil
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-31 18:59:48 +00:00
 tags:

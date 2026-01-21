@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/search-less-build-more-inner-sourcing-with-github-copilot-and/ba-p/4454560
 title: 'Search Less, Build More: Inner Sourcing with GitHub Copilot and Azure DevOps MCP Server'
 author: owaino
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-16 16:39:16 +00:00
 tags:

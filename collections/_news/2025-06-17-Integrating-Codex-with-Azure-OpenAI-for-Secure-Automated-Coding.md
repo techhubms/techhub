@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/all-things-azure/codex-azure-openai-integration-fast-secure-code-development/
 title: Integrating Codex with Azure OpenAI for Secure Automated Coding
 author: Govind Kamtamneni
-viewing_mode: external
 feed_name: Microsoft All Things Azure Blog
 date: 2025-06-17 22:54:11 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/supercharging-your-workflow-using-an-ai-agent-to-automate-jira-updates-pr-reviews-and-code-deployment/
 title: Automating Jira, PR Reviews, and Deployment with AI Agents
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-18 08:30:25 +00:00
 tags:

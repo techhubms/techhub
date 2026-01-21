@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/introducing-microsoft-s-network-operations-agent-a-telco/ba-p/4471185
 title: 'Introducing Microsoft’s Network Operations Agent: A Telco Framework for Autonomous Networks'
 author: bryangrimm
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-19 02:44:20 +00:00
 tags:

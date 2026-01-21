@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=twQTixBZen8
 title: GitHub Copilot Build Performance Analysis in Visual Studio 2026
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-12 16:01:32 +00:00
 tags:

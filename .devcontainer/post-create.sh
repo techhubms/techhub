@@ -70,11 +70,18 @@ fi
 # Install Chrome browser with dependencies for both .NET E2E tests and Playwright MCP tools
 # This installs Chrome system-wide to /usr/bin/google-chrome
 echo "Installing Chrome browser for Playwright..."
+# Run from E2E test project directory to find the Playwright package reference
+cd tests/TechHub.E2E.Tests
 playwright install chrome --with-deps
+cd ../..
 
-# ==================== Markdown Linting ====================
-echo "Installing markdownlint-cli2 for markdown formatting..."
-npm install -g markdownlint-cli2
+# ==================== npm Dependencies ====================
+echo "Installing npm dependencies..."
+npm install
+
+# Install markdownlint-cli2 globally for CLI access
+echo "Installing markdownlint-cli2 globally..."
+npm install -g markdownlint-cli2 || echo "Warning: Failed to install markdownlint-cli2 globally, using local version from package.json"
 
 # ==================== PowerShell Modules ====================
 echo "Installing PowerShell modules..."
@@ -119,6 +126,14 @@ $env:PATH = "$HOME/.aspire/bin:$env:PATH"
 
 # Add .NET global tools
 $env:PATH = "$HOME/.dotnet/tools:$env:PATH"
+
+# Add npm global packages
+$env:PATH = "/usr/local/share/nvm/versions/node/v24.13.0/bin:$env:PATH"
+
+# Add local npm packages (for project-specific tools like markdownlint-cli2)
+if (Test-Path "/workspaces/techhub/node_modules/.bin") {
+    $env:PATH = "/workspaces/techhub/node_modules/.bin:$env:PATH"
+}
 
 # ==================== Opt-Out Settings ====================
 # Disable .NET CLI telemetry

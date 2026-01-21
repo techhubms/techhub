@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/garage/wall-of-fame/cx-observe-product-feedback/
 title: 'CX Observe Product Feedback Copilot: AI-Powered Insights for Azure Product Leaders'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-17 15:17:46 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=a7jj0PvvGMk
 title: VS Code 1.107 Release Highlights
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-12-16 22:09:59 +00:00
 tags:

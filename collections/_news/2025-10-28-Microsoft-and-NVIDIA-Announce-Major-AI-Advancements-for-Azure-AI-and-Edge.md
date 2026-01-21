@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/building-the-future-together-microsoft-and-nvidia-announce-ai-advancements-at-gtc-dc/
 title: Microsoft and NVIDIA Announce Major AI Advancements for Azure AI and Edge
 author: Omar Khan
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-10-28 18:30:00 +00:00
 tags:

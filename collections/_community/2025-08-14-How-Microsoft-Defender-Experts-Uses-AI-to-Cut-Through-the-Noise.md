@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-security-experts-blog/how-microsoft-defender-experts-uses-ai-to-cut-through-the-noise/ba-p/4443601
 title: How Microsoft Defender Experts Uses AI to Cut Through the Noise
 author: ShailyGoel
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-14 17:33:20 +00:00
 tags:

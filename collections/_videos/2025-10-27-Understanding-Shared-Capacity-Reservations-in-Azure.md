@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=vxBpbNCLANM
 title: Understanding Shared Capacity Reservations in Azure
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-10-27 14:02:29 +00:00
 tags:

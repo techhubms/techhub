@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-cobalt-200-azure-s-next-cloud-native-cpu/ba-p/4469807
 title: 'Announcing Azure Cobalt 200: Next-Generation Arm-Based CPU for Cloud Workloads'
 author: sebilgin
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:00:05 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/2025/08/20/nfl-and-microsoft-expand-partnership-to-bring-copilot-to-the-sidelines-and-beyond/
 title: 'NFL and Microsoft Expand Partnership: Copilot and Azure AI Transform Sidelines and Operations'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-20 13:31:20 +00:00
 tags:

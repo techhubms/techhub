@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-06-pull-request-files-changed-public-preview-and-merge-experience-november-6-updates
 title: GitHub Pull Request Files Changed Page Update with Copilot Grouping and Merge Experience Improvements
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-07 01:12:34 +00:00
 tags:

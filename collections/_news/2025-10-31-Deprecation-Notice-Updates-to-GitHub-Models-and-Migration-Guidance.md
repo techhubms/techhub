@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-31-deprecated-models-in-github-models
 title: 'Deprecation Notice: Updates to GitHub Models and Migration Guidance'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-31 15:49:41 +00:00
 tags:

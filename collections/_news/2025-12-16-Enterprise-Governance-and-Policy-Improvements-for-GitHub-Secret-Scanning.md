@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-16-enterprise-governance-and-policy-improvements-for-secret-scanning-now-generally-available
 title: Enterprise Governance and Policy Improvements for GitHub Secret Scanning
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-16 20:46:09 +00:00
 tags:

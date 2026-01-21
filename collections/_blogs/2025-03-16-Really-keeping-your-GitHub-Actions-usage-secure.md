@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devopsjournal.io/blog/2025/03/16/Really-keepingyour-GitHub-Actions-usage-secure
 title: Really Keeping Your GitHub Actions Usage Secure
 author: Rob Bos
-viewing_mode: external
 feed_name: Rob Bos' Blog
 date: 2025-03-16 00:00:00 +00:00
 tags:

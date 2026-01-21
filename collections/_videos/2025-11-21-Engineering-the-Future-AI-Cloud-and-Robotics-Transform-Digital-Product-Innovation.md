@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=_kkIFY0G9FE
 title: 'Engineering the Future: AI, Cloud, and Robotics Transform Digital Product Innovation'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 11:47:07 +00:00
 tags:

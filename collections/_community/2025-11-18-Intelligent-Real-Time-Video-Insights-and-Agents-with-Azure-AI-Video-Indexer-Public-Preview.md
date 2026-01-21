@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/ignite-2025-preview-intelligent-real-time-video-insights-and/ba-p/4470704
 title: 'Intelligent Real-Time Video Insights and Agents with Azure AI Video Indexer: Public Preview'
 author: MaayanYedidia
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:00:14 +00:00
 tags:

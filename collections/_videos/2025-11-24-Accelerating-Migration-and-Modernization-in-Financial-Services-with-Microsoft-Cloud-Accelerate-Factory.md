@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=nV0UF_wyJN8
 title: Accelerating Migration and Modernization in Financial Services with Microsoft Cloud Accelerate Factory
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 08:25:12 +00:00
 tags:

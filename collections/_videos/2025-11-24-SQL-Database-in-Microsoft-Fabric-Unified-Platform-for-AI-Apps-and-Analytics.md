@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ni4CZDbe15U
 title: 'SQL Database in Microsoft Fabric: Unified Platform for AI Apps and Analytics'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 07:19:39 +00:00
 tags:

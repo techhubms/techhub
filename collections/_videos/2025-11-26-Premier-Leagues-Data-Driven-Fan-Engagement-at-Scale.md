@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=dPuLe0r96uU
 title: Premier League’s Data-Driven Fan Engagement at Scale
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-26 18:21:39 +00:00
 tags:

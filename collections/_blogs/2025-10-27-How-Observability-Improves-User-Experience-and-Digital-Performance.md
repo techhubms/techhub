@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/how-observability-improves-user-experience-and-digital-performance/
 title: How Observability Improves User Experience and Digital Performance
 author: Neel Shah
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-27 11:13:55 +00:00
 tags:

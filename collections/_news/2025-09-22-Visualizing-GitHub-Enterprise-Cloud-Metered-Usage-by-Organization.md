@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-22-visualize-metered-usage-by-organization-in-github-enterprise-cloud
 title: Visualizing GitHub Enterprise Cloud Metered Usage by Organization
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-22 14:22:35 +00:00
 tags:

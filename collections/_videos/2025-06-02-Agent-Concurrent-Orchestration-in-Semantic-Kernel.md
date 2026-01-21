@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ixhQyZEpwWk
 title: 'Agent: Concurrent Orchestration in Semantic Kernel'
 author: Learn Microsoft AI
-viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
 date: 2025-06-02 06:45:23 +00:00
 tags:

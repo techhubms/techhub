@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.arresteddevops.com/using-ai/
 title: 'AI, Ethics, and Empathy: A Deep Dive With Kat Morgan on Arrested DevOps'
 author: Arrested DevOps
-viewing_mode: external
 feed_name: Arrested DevOps
 date: 2025-06-03 10:18:43 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=te_om7KPb8k
 title: 'Armchair Architects: Governance Strategies for AI Agents'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-02 08:01:12 +00:00
 tags:

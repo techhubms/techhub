@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/research/blog/bluecodeagent-a-blue-teaming-agent-enabled-by-automated-red-teaming-for-codegen-ai/
 title: 'BlueCodeAgent: AI-Powered Blue Teaming for Secure Code Generation'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-14 16:48:52 +00:00
 tags:

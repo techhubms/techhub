@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-19-gemini-2-5-pro-is-generally-available-in-copilot
 title: Gemini 2.5 Pro Model Now Available for GitHub Copilot Users
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-20 13:46:28 +00:00
 tags:

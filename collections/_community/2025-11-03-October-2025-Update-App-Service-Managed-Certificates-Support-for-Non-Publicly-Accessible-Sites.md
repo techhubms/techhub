@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/follow-up-to-important-changes-to-app-service-managed/ba-p/4466120
 title: 'October 2025 Update: App Service Managed Certificates Support for Non-Publicly Accessible Sites'
 author: YutangLin
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-03 15:30:00 +00:00
 tags:

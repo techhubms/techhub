@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/engineering-at-microsoft/enhancing-code-quality-at-scale-with-ai-powered-code-reviews/
 title: Enhancing Code Quality at Scale with AI-Powered Code Reviews
 author: Sneha Tuli
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-07-14 15:21:05 +00:00
 tags:

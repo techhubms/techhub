@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure/how-to-update-the-proxyaddresses-of-a-cloud-only-entra-id-user/m-p/4454763#M22217
 title: How to Update proxyAddresses for a Cloud-Only Entra ID User
 author: JMSHW0420
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-17 12:42:16 +00:00
 tags:

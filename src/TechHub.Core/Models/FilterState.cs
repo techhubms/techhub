@@ -17,7 +17,7 @@ public class FilterState
     public IReadOnlyList<string> SelectedTags { get; init; } = [];
 
     /// <summary>
-    /// Text search query (searches title, description, and tags)
+    /// Text search query (searches title, excerpt, and tags)
     /// </summary>
     public string? SearchQuery { get; init; }
 

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Sd-3KpSNJzo
 title: 'Next-Level SQL in VS Code: GitHub Copilot GA and AI-Ready SQL'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-17 17:00:47 +00:00
 tags:

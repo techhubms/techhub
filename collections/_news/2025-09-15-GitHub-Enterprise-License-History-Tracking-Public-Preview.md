@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-15-github-enterprise-license-history-tracking-now-available-in-public-preview
 title: GitHub Enterprise License History Tracking Public Preview
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-15 15:29:58 +00:00
 tags:

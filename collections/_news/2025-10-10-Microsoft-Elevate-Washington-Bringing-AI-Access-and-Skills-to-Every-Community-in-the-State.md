@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/10/09/microsoft-elevate-washington/
 title: 'Microsoft Elevate Washington: Bringing AI Access and Skills to Every Community in the State'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-10 17:50:49 +00:00
 tags:

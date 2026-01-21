@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://khalidabuhakmeh.com/add-a-property-to-the-top-level-statements-program-class
 title: Add a Property to the Top-level Statements Program Class
 author: Khalid Abuhakmeh
-viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
 date: 2024-08-06 00:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mhgcod/beautiful_terminal_based_file_manager_now/
 title: 'Termix v1.2.0: .NET Terminal File Manager Adds Cut, Copy, Move, and Stable Fuzzy Search'
 author: amrohann
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-04 15:20:46 +00:00
 tags:

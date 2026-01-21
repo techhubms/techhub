@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/ground-your-agents-faster-native-azure-ai-search-indexing-foundry/
 title: Ground Your Agents Faster with Native Azure AI Search Indexing in Foundry
 author: Farzad Sunavala
-viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
 date: 2025-09-17 08:00:51 +00:00
 tags:

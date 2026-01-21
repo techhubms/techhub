@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-the-public-preview-of-azure-container-apps-azure/ba-p/4450958
 title: Announcing Azure Container Apps Azure Monitor Dashboards with Grafana (Public Preview)
 author: carolinauribe
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-24 17:52:49 +00:00
 tags:

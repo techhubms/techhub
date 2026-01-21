@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ofWdnCHY_LY
 title: Build AI Apps Fast with GitHub and Microsoft Foundry in Action (MS Ignite BRK110)
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 07:11:10 +00:00
 tags:

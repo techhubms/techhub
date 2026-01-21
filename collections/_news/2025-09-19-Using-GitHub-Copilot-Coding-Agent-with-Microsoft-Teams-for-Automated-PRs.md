@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-19-work-with-copilot-coding-agent-in-microsoft-teams
 title: Using GitHub Copilot Coding Agent with Microsoft Teams for Automated PRs
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-19 14:07:53 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=j1xslVn_dMU
 title: 'Copilot Studio Innovations and Roadmap: Building Agents and Future Features (BRK313)'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-26 21:58:57 +00:00
 tags:

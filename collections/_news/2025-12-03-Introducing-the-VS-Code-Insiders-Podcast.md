@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/blogs/2025/12/03/introducing-vs-code-insiders-podcast
 title: Introducing the VS Code Insiders Podcast
 author: James Montemagno
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-12-03 00:00:00 +00:00
 tags:

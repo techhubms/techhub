@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=5Y0ohd4gKxA
 title: Explore GenAI for Customer Support with Elastic Support Assistant
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2024-12-11 18:06:10 +00:00
 tags:

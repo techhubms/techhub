@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/determine-onboarding-methods-in-defender-for-endpoint-part-1/ba-p/4437782
 title: Determine Onboarding Methods in Defender for Endpoint - Part 1
 author: edgarus71
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-07-29 14:00:39 +00:00
 tags:

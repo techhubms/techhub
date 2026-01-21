@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-jdbc-driver-for-microsoft-fabric-data-engineering-preview/
 title: Enterprise-Grade JDBC Driver for Microsoft Fabric Data Engineering Preview
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-25 11:00:00 +00:00
 tags:

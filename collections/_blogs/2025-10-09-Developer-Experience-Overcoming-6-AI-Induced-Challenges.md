@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/developer-experience-overcoming-6-ai-induced-challenges/
 title: 'Developer Experience: Overcoming 6 AI-Induced Challenges'
 author: Yaniv Sayers
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-09 07:00:06 +00:00
 tags:

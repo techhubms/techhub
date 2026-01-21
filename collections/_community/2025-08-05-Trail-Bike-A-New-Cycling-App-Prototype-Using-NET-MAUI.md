@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mib177/trail_bike_my_new_maui_app/
 title: 'Trail Bike: A New Cycling App Prototype Using .NET MAUI'
 author: Rywent
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-05 14:40:13 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-reliable-ai-travel-agents-with-the-durable-task/ba-p/4478913
 title: Building Reliable AI Travel Agents with the Durable Task Extension for Microsoft Agent Framework
 author: greenie-msft
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-18 18:35:34 +00:00
 tags:

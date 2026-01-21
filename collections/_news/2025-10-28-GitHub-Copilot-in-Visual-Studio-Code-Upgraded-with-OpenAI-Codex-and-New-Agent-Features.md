@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded
 title: GitHub Copilot in Visual Studio Code Upgraded with OpenAI Codex and New Agent Features
 author: Dylan Birtolo
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-28 15:30:02 +00:00
 tags:

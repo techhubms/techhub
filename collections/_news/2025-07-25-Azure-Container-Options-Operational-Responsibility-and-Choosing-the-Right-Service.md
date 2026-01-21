@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/all-things-azure/azure-container-options-matching-services-to-operational-responsibility/
 title: 'Azure Container Options: Operational Responsibility and Choosing the Right Service'
 author: Shree Chinnasamy, Priyanka Vergadia
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-07-25 21:01:29 +00:00
 tags:

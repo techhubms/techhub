@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/azuredevops/comments/1malfn3/best_practice_for_yaml_pipelines/
 title: Migrating Classic Azure DevOps Pipelines to YAML for Multi-Repo Apps
 author: DrippinInSuccess
-viewing_mode: external
 feed_name: Reddit Azure DevOps
 date: 2025-07-27 12:47:44 +00:00
 tags:

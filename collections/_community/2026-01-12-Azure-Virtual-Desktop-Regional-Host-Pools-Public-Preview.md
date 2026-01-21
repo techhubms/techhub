@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/now-in-public-preview-azure-virtual-desktop-regional-host-pools/ba-p/4474598
 title: Azure Virtual Desktop Regional Host Pools Public Preview
 author: TomHickling
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-12 20:30:42 +00:00
 tags:

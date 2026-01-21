@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_we-just-wrapped-our-earnings-call-it-was-activity-7356452669235875840-A-0W
 title: 'Microsoft Fiscal Year Close: Azure and Copilot Milestones Announced'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-07-31 01:44:00 +00:00
 tags:

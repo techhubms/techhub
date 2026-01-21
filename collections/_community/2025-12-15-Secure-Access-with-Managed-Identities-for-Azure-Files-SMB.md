@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/secure-seamless-access-using-managed-identities-with-azure-files/ba-p/4477565
 title: Secure Access with Managed Identities for Azure Files SMB
 author: Priyanka-Gangal
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-15 17:46:43 +00:00
 tags:

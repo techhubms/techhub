@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/github-universe-2025-where-developer-innovation-took-center-stage/
 title: 'GitHub Universe 2025: AI-Driven Developer Innovation Takes Center Stage'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-30 15:38:23 +00:00
 tags:

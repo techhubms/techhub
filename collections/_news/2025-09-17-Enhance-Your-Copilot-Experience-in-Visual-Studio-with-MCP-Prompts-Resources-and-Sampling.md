@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/mcp-prompts-resources-sampling/
 title: Enhance Your Copilot Experience in Visual Studio with MCP Prompts, Resources, and Sampling
 author: Allie Barry, Praveen Sethuraman
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-09-17 17:30:37 +00:00
 tags:

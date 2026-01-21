@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-16-c-code-editing-tools-for-github-copilot-in-public-preview
 title: C++ Code Editing Tools for GitHub Copilot in Visual Studio 2026 Insiders Public Preview
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-16 18:28:30 +00:00
 tags:

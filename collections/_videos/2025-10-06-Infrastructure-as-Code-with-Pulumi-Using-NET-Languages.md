@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=4ljqB21s5L8
 title: Infrastructure as Code with Pulumi Using .NET Languages
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-10-06 22:41:41 +00:00
 tags:

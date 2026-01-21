@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=0Epo_gRJJ1s
 title: 'Let it Cook with GPT-5: Using GPT-5 in Visual Studio Code and GitHub Copilot'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-08-07 23:16:05 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=MYaFPDjbd3k
 title: .NET Conf Student Zone 2025
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-17 20:12:59 +00:00
 tags:

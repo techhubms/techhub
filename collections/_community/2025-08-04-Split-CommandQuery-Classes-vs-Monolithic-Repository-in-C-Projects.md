@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mhdqbc/split_commandquery_classes_vs_monolithic/
 title: Split Command/Query Classes vs Monolithic Repository in C# Projects
 author: Square_Potato6312
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-04 13:39:41 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-resiliency-proactive-continuity-with-agentic-experiences/ba-p/4469693
 title: 'Azure Resiliency: Proactive Continuity with Agentic Experiences and Frontier Innovation'
 author: molina_sharma
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:00:40 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://cooknwithcopilot.com/blog/top-10-copilot-tips.html
 title: Top 10 GitHub Copilot Tips for Maximizing Productivity
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-06-27 00:00:00 +00:00
 tags:

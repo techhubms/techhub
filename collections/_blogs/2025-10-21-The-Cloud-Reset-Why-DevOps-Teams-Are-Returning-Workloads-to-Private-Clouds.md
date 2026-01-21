@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/the-cloud-reset-devops-brings-workloads-back-to-private-clouds/
 title: 'The Cloud Reset: Why DevOps Teams Are Returning Workloads to Private Clouds'
 author: Janakiram MSV
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-21 08:04:27 +00:00
 tags:

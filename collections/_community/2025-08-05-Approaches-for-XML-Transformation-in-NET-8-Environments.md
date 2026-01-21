@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mi1ek5/dealing_with_xml_and_transformations/
 title: Approaches for XML Transformation in .NET 8+ Environments
 author: technically_a_user
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-05 06:07:55 +00:00
 tags:

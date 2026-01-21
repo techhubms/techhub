@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=w3kI6XlZXZQ
 title: Running AI Coding Agents with Dev Containers and GitHub Codespaces
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2026-01-14 15:01:54 +00:00
 tags:

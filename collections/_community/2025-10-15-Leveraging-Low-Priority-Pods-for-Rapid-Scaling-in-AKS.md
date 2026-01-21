@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/leveraging-low-priority-pods-for-rapid-scaling-in-aks/ba-p/4461670
 title: Leveraging Low Priority Pods for Rapid Scaling in AKS
 author: samcogan
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-15 09:46:02 +00:00
 tags:

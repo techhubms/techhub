@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-do-i-choose-the-right-model-for-my-agent/ba-p/4445267
 title: 'How to Choose the Right Model for Your AI Agent: A Developer’s Guide'
 author: April_Gittens
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-18 21:56:23 +00:00
 tags:

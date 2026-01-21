@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-we-automated-accessibility-compliance-in-five-hours-with-github-copilot/
 title: How GitHub Copilot Automated Accessibility Governance at GitHub
 author: Janice Rimmer
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-07 17:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=7FpeYx0f1ck
 title: Comprehensive Data Security and Governance in AI Workloads with Microsoft Purview
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 10:41:43 +00:00
 tags:

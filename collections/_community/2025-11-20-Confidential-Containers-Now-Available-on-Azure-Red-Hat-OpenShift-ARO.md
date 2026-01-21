@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-red-hat-openshift-confidential-containers-general/ba-p/4469089
 title: Confidential Containers Now Available on Azure Red Hat OpenShift (ARO)
 author: MelanieKraintz007
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-20 14:06:03 +00:00
 tags:

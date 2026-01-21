@@ -1,7 +1,6 @@
-﻿---
+---
 title: Updates in Agent-Based AI, Secure Automation, and Developer Tools Modernization
 author: Tech Hub Team
-viewing_mode: internal
 date: 2025-11-24 09:00:00 +00:00
 tags:
 - .NET

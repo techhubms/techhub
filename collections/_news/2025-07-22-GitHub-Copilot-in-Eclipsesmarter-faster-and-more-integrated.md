@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-22-github-copilot-in-eclipse-smarter-faster-and-more-integrated
 title: GitHub Copilot in Eclipse—smarter, faster, and more integrated
 author: Allison
 feed_name: The GitHub Blog
 date: 2025-07-22 17:41:06 +00:00
-viewing_mode: external
 page: news
 tags:
 - AI Assisted Coding

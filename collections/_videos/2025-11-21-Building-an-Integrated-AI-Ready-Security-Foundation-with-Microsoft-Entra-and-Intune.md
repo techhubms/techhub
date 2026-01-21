@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=tHnILyOs_8I
 title: Building an Integrated, AI-Ready Security Foundation with Microsoft Entra and Intune
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 15:04:28 +00:00
 tags:

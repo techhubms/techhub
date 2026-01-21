@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=mY2qaeYN_CQ
 title: Building Intelligent Agents with Copilot Studio and Advanced Knowledge Sources
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-12-03 21:30:48 +00:00
 tags:

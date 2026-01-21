@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/mcp-emerges-as-a-catalyst-for-modern-devops-processes/?utm_source=rss&utm_medium=rss&utm_campaign=mcp-emerges-as-a-catalyst-for-modern-devops-processes
 title: How MCP Is Shaping the Future of DevOps Processes
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-21 16:53:01 +00:00
 tags:

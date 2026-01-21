@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_if-intelligence-is-the-log-of-compute-it-activity-7374444167059468288-wxxV
 title: "Microsoft Announces Fairwater: World's Most Powerful AI Datacenter Launches in Wisconsin"
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-09-19 01:19:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=P2XxiXNwXF8
 title: 'Cloud AI Security Challenges: Protecting AI Workloads in Microsoft Azure'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 12:09:27 +00:00
 tags:

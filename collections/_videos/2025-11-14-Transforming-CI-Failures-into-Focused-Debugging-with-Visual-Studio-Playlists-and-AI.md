@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=6RNTltZuaFs
 title: Transforming CI Failures into Focused Debugging with Visual Studio Playlists and AI
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 19:21:14 +00:00
 tags:

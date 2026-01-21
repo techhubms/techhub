@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=MH-_J8gLZn4
 title: '.NET AI Community Standup: Building AI Apps with the New .NET AI Stack'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2026-01-12 23:01:43 +00:00
 tags:

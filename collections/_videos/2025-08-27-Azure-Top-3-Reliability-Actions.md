@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=UDrjP8sBI94
 title: Azure Top 3 Reliability Actions
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-08-27 21:22:32 +00:00
 tags:

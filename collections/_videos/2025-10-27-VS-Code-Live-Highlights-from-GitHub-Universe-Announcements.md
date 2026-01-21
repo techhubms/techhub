@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=u-YQ624i8qE
 title: 'VS Code Live: Highlights from GitHub Universe Announcements'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-10-27 16:35:14 +00:00
 tags:

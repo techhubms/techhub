@@ -1,8 +1,7 @@
-﻿---
+---
 title: XPRT Magazine 01
 date: 2015-05-01 00:00:00 +00:00
 author: Xebia
-viewing_mode: external
 tags:
 - API Management
 - Application Insights

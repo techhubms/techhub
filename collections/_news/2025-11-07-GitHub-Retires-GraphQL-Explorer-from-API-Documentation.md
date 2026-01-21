@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-07-graphql-explorer-removal-from-api-documentation-on-november-7-2025
 title: GitHub Retires GraphQL Explorer from API Documentation
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-07 08:00:06 +00:00
 tags:

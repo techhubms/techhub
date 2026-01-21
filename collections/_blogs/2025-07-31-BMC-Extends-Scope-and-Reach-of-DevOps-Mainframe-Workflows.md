@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/bmc-extends-scope-and-reach-of-devops-mainframe-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=bmc-extends-scope-and-reach-of-devops-mainframe-workflows
 title: BMC Extends Scope and Reach of DevOps Mainframe Workflows
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-07-31 12:58:31 +00:00
 tags:

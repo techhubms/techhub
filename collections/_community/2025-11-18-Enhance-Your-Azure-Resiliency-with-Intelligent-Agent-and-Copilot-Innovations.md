@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/improve-your-resiliency-posture-with-new-capabilities-and/ba-p/4469771
 title: Enhance Your Azure Resiliency with Intelligent Agent and Copilot Innovations
 author: rochakm
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:03:51 +00:00
 tags:

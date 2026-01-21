@@ -1,13 +1,6 @@
 ---
 name: cleanup
-description: Comprehensive code cleanup and quality assurance skill. Compiles, formats, lints, and synchronizes code with documentation. Use when asked to clean the entire solution or repository.
-license: MIT
-compatibility: Requires .NET 10+, PowerShell 7+. Works with GitHub Copilot coding agent, CLI, and VS Code.
-metadata:
-  author: techhubms
-  version: "1.0"
-  category: code-quality
-allowed-tools: Bash(dotnet:*) Bash(pwsh:*) Read Write
+description: Comprehensive code cleanup and quality assurance for .NET solutions. Compiles, formats, lints, removes dead code, and synchronizes documentation with code. Use when asked to clean the entire solution, fix code quality issues, or ensure documentation accuracy.
 ---
 
 # Code Cleanup Skill
@@ -36,6 +29,21 @@ Follow these steps in order. Do not skip steps or proceed if a step fails.
 ### Step 1: Build and Test Verification
 
 **Execute**: `Run`
+
+**How to Run in Background**:
+
+```powershell
+# Run in background (servers keep running indefinitely)
+run_in_terminal(
+  command: "Run",
+  isBackground: true  # CRITICAL: Always use true for Run commands
+)
+
+# Monitor progress
+get_terminal_output(id: "<terminal-id>")
+```
+
+**🚨 CRITICAL**: Always use `isBackground=true` for `Run` commands - servers block the terminal indefinitely and ANY input to that terminal kills the servers. Use `get_terminal_output` to monitor progress.
 
 **Purpose**: Ensure the solution compiles without errors and all tests pass before making any changes.
 
@@ -140,9 +148,29 @@ The template includes a "Quick Response Guide" section that helps users respond 
 
 **After making changes**:
 
-- Run `Run` to verify changes
+- Run `Run` to verify changes (use `isBackground=true`)
 - Use `get_errors` tool to check for new VS Code diagnostics
 - Fix any new issues introduced by changes
+
+**Fast Test Rerun** (after fixing issues):
+
+If servers are already running from the initial `Run` command:
+
+```powershell
+# Fast rerun - only rebuilds test projects (~5 seconds)
+run_in_terminal(
+  command: "Run -TestRerun",
+  isBackground: true
+)
+
+# Or for specific test project
+run_in_terminal(
+  command: "Run -TestRerun -TestProject E2E.Tests",
+  isBackground: true
+)
+```
+
+This is much faster than full `Run` (~5 sec vs ~60 sec) because it skips rebuilding all projects.
 
 ---
 
@@ -159,7 +187,7 @@ The template includes a "Quick Response Guide" section that helps users respond 
 - Commented-out code blocks
 - Unused CSS classes
 
-**Output**: Console report of all potentially dead code with confidence levels
+**Output**: Creates a detailed report at `.tmp/dead-code-report.md` using the [dead code template](/.github/skills/cleanup/templates/dead-code-report-template.md).
 
 **Action Required**:
 
@@ -182,7 +210,8 @@ The template includes a "Quick Response Guide" section that helps users respond 
 **After user approval**:
 
 - Execute `find-dead-code.ps1 -Fix` (if user confirmed)
-- Run `Run` to verify nothing broke
+- Run `Run` to verify nothing broke (use `isBackground=true`)
+- Or use `Run -TestRerun` if servers already running (faster)
 - Use `get_errors` to check for new compilation issues
 
 ---
@@ -274,37 +303,7 @@ Compare implementation, documentation, and tests:
 - **Misplaced Tests**: Tests in wrong layer (e.g., E2E tests with mocks)
 - **Missing E2E Coverage**: UI changes without E2E tests
 
-**Output**:
-
-Create a summary report at `.tmp/project-analysis.md`:
-
-```markdown
-## Project Analysis Summary
-
-### Implementation Inventory
-- **API Endpoints**: 14 endpoints (list with paths)
-- **Blazor Components**: 8 components (list with names)
-- **Services**: 5 services (list with names)
-- **Domain Models**: 6 models (list with names)
-
-### Documentation Inventory
-- **API Specification**: Documents 14 endpoints (✅ complete)
-- **Functional Docs**: 4 files covering filtering, content, RSS
-- **AGENTS.md Files**: 17 files covering all domains
-
-### Test Coverage Inventory
-- **Unit Tests**: 155 tests across 8 test files
-- **Integration Tests**: 100 tests across 6 test files
-- **Component Tests**: 0 tests (⚠️ missing)
-- **E2E Tests**: 103 tests across 13 test files
-
-### Gap Analysis
-- **Undocumented**: (list features)
-- **Untested**: (list features)
-- **Stale Docs**: (list outdated content)
-- **Misplaced Tests**: (list tests in wrong layer)
-- **Missing E2E**: (list UI changes without E2E tests)
-```
+**Output**: Creates a comprehensive analysis report at `.tmp/project-analysis.md` using the [project analysis template](/.github/skills/cleanup/templates/project-analysis-template.md).
 
 **Action Required**:
 
@@ -327,57 +326,77 @@ Create a summary report at `.tmp/project-analysis.md`:
 
 **Execute**: [`./.github/skills/cleanup/scripts/verify-documentation.ps1`](/.github/skills/cleanup/scripts/verify-documentation.ps1)
 
-**Purpose**: Ensure documentation matches current code and follows [documentation strategy](/workspaces/techhub/docs/AGENTS.md).
+**Purpose**: List all documentation files that need review to ensure they accurately reflect the current codebase.
 
-**What it checks**:
+**What the script does**:
 
-1. **File existence**: All required AGENTS.md and functional docs exist
-2. **Broken links**: Markdown links point to existing files
-3. **API coverage**: Endpoints are documented in api-specification.md
-4. **Documentation completeness**: Based on docs/AGENTS.md strategy
-5. **Content placement**: Docs in correct locations per hierarchy
-6. **Staleness**: Documentation reflects current implementation
-7. **Duplication**: Content isn't duplicated across files
-8. **Consistency**: Terminology matches Site Terminology in root AGENTS.md
+1. **Lists all documentation files** that should be reviewed
+2. **Provides AI agent instructions** for what to check in each file
+3. **Groups files by category**:
+   - Repository root documentation (README.md, AGENTS.md)
+   - Functional documentation (docs/ directory)
+   - Domain-specific AGENTS.md files (src/, tests/, etc.)
+   - Content guidelines (collections/)
 
-**Output**: Verification report with file checks, broken links, and API documentation gaps
+**Output**: Console output listing all documentation files with review checklist
 
-**Enhanced Documentation Review**:
+**What to review for each file**:
 
-After running the basic verification script, perform comprehensive review:
+1. **ACCURACY**: Does content match current code implementation?
+   - Code examples are correct and compile
+   - API endpoints match actual routes
+   - Patterns match current practices
 
-1. **Read [/workspaces/techhub/docs/AGENTS.md](/workspaces/techhub/docs/AGENTS.md)** to understand documentation strategy
-2. **Use project analysis from Step 5a** to identify undocumented features
-3. **Review existing docs** for:
-   - **Completeness**: Missing sections or outdated information
-   - **Staleness**: References to removed features or old patterns
-   - **Consistency**: Terminology matches root AGENTS.md Site Terminology
-   - **Duplication**: Same content in multiple files (should link instead)
-   - **Placement**: Content in correct file per docs/AGENTS.md hierarchy
-4. **Check AGENTS.md files** against implementation:
-   - Patterns still match current code
-   - Commands still work
-   - Examples are up-to-date
+2. **COMPLETENESS**: Are all features documented?
+   - New endpoints have documentation
+   - New components are described
+   - Configuration changes are explained
+
+3. **CONSISTENCY**: Does documentation align across files?
+   - Terminology is consistent (matches Site Terminology in root AGENTS.md)
+   - Cross-references are valid
+   - No conflicting information
+
+4. **LINKS**: Are all internal links working?
+   - Markdown links point to existing files
+   - Anchors are valid
+   - No orphaned references
+
+5. **EXAMPLES**: Are code examples up-to-date?
+   - Examples compile and run
+   - Examples follow current patterns
+   - Examples use latest APIs
+
+6. **PLACEMENT**: Is content in the correct file? (per [docs/AGENTS.md](docs/AGENTS.md))
+   - Functional docs (WHAT) in docs/ directory
+   - Technical docs (HOW) in domain AGENTS.md files
+   - Content guidelines in collections/
+   - No duplication across files
 
 **Action Required**:
 
-1. **Present verification results** to user
-2. **Show any documentation gaps** found during implementation scan
-3. **List inconsistencies** or stale content discovered
-4. **Wait for user decisions**:
-   - "Fix broken links"
-   - "Update API specification for [endpoint]"
-   - "Remove stale references to [feature]"
-   - "Document [new feature]"
-   - "Skip documentation updates" (if all is current)
+1. **Run the script** to see the full list of files
+2. **Read each file** listed in the output
+3. **Compare with actual implementation** from Step 5a analysis
+4. **Report issues** using format:
 
-**Update as needed**:
+   ```text
+   FILE: [filename]
+   ISSUE: [description of problem]
+   SUGGESTED FIX: [proposed correction]
+   ```
 
-- Sync outdated documentation
-- Add missing documentation for new features
-- Remove documentation for deleted code
-- Fix broken links
-- Consolidate duplicated content
+5. **Wait for user decisions** on which fixes to make
+6. **Update documentation** as approved by user
+
+**Common Issues to Fix**:
+
+- Broken internal links
+- Outdated code examples
+- Missing new features
+- Stale references to removed code
+- Duplicated content across files
+- Content in wrong file (should be moved per docs/AGENTS.md hierarchy)
 
 ---
 
@@ -386,6 +405,8 @@ After running the basic verification script, perform comprehensive review:
 **Read First**: [/workspaces/techhub/tests/AGENTS.md](/workspaces/techhub/tests/AGENTS.md)
 
 **Purpose**: Review all tests for correctness, completeness, proper positioning, and adherence to testing standards defined in tests/AGENTS.md.
+
+**Output**: Creates a detailed test review report at `.tmp/test-review.md` using the [test review template](/.github/skills/cleanup/templates/test-review-template.md).
 
 **What to review**:
 
@@ -550,7 +571,8 @@ Provide an overall test quality grade based on findings:
 - Fix test issues using `replace_string_in_file` or `multi_replace_string_in_file`
 - Move misplaced tests to correct projects
 - Add missing test coverage
-- Run `Run` to verify all tests still pass
+- Run `Run` to verify all tests still pass (use `isBackground=true`)
+- Or use `Run -TestRerun` if servers already running (faster)
 - Use `get_errors` to check for new issues
 
 ---
@@ -558,6 +580,8 @@ Provide an overall test quality grade based on findings:
 ### Step 8: Best Practices Review
 
 **Purpose**: Review source code for common anti-patterns, performance issues, and coding best practices violations.
+
+**Output**: Creates a detailed best practices report at `.tmp/best-practices-review.md` using the [best practices template](/.github/skills/cleanup/templates/best-practices-template.md).
 
 **What to review**:
 
@@ -682,14 +706,31 @@ Provide an overall test quality grade based on findings:
 **After user approval**:
 
 - Fix issues using `replace_string_in_file` or `multi_replace_string_in_file`
-- Run `Run` to verify changes
+- Run `Run` to verify changes (use `isBackground=true`)
+- Or use `Run -TestRerun` if servers already running (faster)
 - Use `get_errors` to check for new issues
 
 ---
 
 ### Step 9: Final Validation
 
-**Execute**: `Run`
+**Execute**: `Run` (or `Run -TestRerun` if servers already running)
+
+**How to Run**:
+
+```powershell
+# Full run (if servers not running)
+run_in_terminal(
+  command: "Run",
+  isBackground: true
+)
+
+# Fast rerun (if servers already running from earlier steps)
+run_in_terminal(
+  command: "Run -TestRerun",
+  isBackground: true
+)
+```
 
 **Purpose**: Final verification that all changes are correct and nothing is broken.
 
@@ -713,38 +754,9 @@ Provide an overall test quality grade based on findings:
 
 ## Output Format
 
-After completing all steps, provide a summary report:
+After completing all steps, generate a final summary report at `.tmp/cleanup-complete.md` using the [final report template](/.github/skills/cleanup/templates/final-report-template.md).
 
-```markdown
-## Cleanup Complete
-
-**Date**: {Date}  
-**Branch**: {Branch}
-
-### Results
-
-| Metric | Before | After | Change |
-|--------|--------|-------|--------|
-| Compilation Errors | {N} | 0 | ✅ -{N} |
-| Warnings | {N} | {N} | ✅ -{N} / ⚠️ {N} suppressed |
-| Test Failures | {N} | 0 | ✅ -{N} |
-| Dead Code Items | {N} | 0 | ✅ Removed {N} |
-
-### Changes Made
-
-- Fixed {N} high priority issues
-- Fixed {N} medium priority issues  
-- Suppressed {N} low priority warnings
-- Removed {N} dead code items
-- Updated {N} documentation files
-
-### Validation
-
-- ✅ Build succeeds
-- ✅ All tests pass
-- ✅ Formatting verified
-- ✅ Documentation synchronized
-```
+**Present this report to the user** showing all metrics, changes made, and validation status.
 
 ---
 
@@ -785,7 +797,12 @@ After completing all steps, provide a summary report:
 
 **Templates**:
 
-- [overview-template.md](/.github/skills/cleanup/templates/overview-template.md) - Standard format for quality overviews
+- [overview-template.md](/.github/skills/cleanup/templates/overview-template.md) - Code quality analysis (Step 3)
+- [dead-code-report-template.md](/.github/skills/cleanup/templates/dead-code-report-template.md) - Dead code findings (Step 5)
+- [project-analysis-template.md](/.github/skills/cleanup/templates/project-analysis-template.md) - Project inventory and gaps (Step 5a)
+- [test-review-template.md](/.github/skills/cleanup/templates/test-review-template.md) - Test quality assessment (Step 7)
+- [best-practices-template.md](/.github/skills/cleanup/templates/best-practices-template.md) - Code quality patterns (Step 8)
+- [final-report-template.md](/.github/skills/cleanup/templates/final-report-template.md) - Cleanup completion summary
 
 **Project Scripts**:
 

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-08-enterprise-teams-product-limits-increased-by-over-10x
 title: Enterprise Teams Product Limits Increased by Over 10x
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-08 19:40:44 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Vo647KQyMus
 title: 'HEINEKEN: Leveraging Microsoft AI for Business Transformation'
 author: Microsoft Cloud
-viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
 date: 2025-06-06 17:34:50 +00:00
 tags:

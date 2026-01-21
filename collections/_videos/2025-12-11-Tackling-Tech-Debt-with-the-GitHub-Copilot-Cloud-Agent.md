@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=gaejtW5dKsY
 title: Tackling Tech Debt with the GitHub Copilot Cloud Agent
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-11 22:29:20 +00:00
 tags:

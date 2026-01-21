@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-06-grok-code-fast-1-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
 title: Grok Code Fast 1 Public Preview Launched for GitHub Copilot Plans
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-06 16:11:26 +00:00
 tags:

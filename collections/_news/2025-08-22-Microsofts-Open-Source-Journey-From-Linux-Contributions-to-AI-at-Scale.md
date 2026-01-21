@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/microsofts-open-source-journey-from-20000-lines-of-linux-code-to-ai-at-global-scale/
 title: 'Microsoft’s Open Source Journey: From Linux Contributions to AI at Scale'
 author: Ryan Waite
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-08-22 15:00:00 +00:00
 tags:

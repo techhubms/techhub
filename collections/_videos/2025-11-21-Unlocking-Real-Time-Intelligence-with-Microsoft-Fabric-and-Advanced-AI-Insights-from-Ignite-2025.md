@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=AAm9mhhrNec
 title: 'Unlocking Real-Time Intelligence with Microsoft Fabric and Advanced AI: Insights from Ignite 2025'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 07:23:30 +00:00
 tags:

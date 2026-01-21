@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-cloud-migration-with-wave-planning-in-azure-migrate/ba-p/4467959
 title: Accelerate Cloud Migration with Wave Planning in Azure Migrate
 author: ShubhamJain92
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-11 16:46:02 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=2NL2XpigH0A
 title: Using Model Router with GPT-5 Models in Azure AI Foundry
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-14 15:59:58 +00:00
 tags:

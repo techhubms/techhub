@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/7-proven-benefits-of-devops-implementation-in-modern-software-development/
 title: 7 Proven Benefits of DevOps Implementation in Modern Software Development
 author: Albert Hilton
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-28 12:09:02 +00:00
 tags:

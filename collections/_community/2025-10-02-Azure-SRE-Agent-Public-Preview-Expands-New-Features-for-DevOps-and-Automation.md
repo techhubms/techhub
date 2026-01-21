@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/expanding-the-public-preview-of-the-azure-sre-agent/ba-p/4458514
 title: 'Azure SRE Agent Public Preview Expands: New Features for DevOps and Automation'
 author: Mayunk_Jain
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-02 02:24:40 +00:00
 tags:

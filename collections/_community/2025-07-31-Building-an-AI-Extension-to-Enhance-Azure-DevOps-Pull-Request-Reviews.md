@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/azuredevops/comments/1mdoa94/built_an_ai_extension_that_actually_makes_azure/
 title: Building an AI Extension to Enhance Azure DevOps Pull Request Reviews
 author: TechieRedditer
-viewing_mode: external
 feed_name: Reddit Azure DevOps
 date: 2025-07-31 01:16:09 +00:00
 tags:

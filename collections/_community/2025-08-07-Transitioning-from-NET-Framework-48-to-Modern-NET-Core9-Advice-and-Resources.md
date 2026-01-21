@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mk1z6x/studying_net_coming_from_net_framework/
 title: 'Transitioning from .NET Framework 4.8 to Modern .NET (Core/9): Advice & Resources'
 author: RemoveFun747
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-07 14:44:05 +00:00
 tags:

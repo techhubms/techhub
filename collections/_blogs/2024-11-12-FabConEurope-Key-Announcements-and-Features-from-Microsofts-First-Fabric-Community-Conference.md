@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://zure.com/blog/fabconeurope-onsite-reporting-from-microsoft-fabrics-first-community-conference/
 title: "#FabConEurope: Key Announcements and Features from Microsoft's First Fabric Community Conference"
 author: Samu Niemelä
-viewing_mode: external
 feed_name: Zure Data & AI Blog
 date: 2024-11-12 06:28:18 +00:00
 tags:

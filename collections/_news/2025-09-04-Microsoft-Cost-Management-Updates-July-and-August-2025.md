@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/microsoft-cost-management-updates-july-august-2025/
 title: 'Microsoft Cost Management Updates: July & August 2025'
 author: Britt Henderson
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-09-04 15:00:00 +00:00
 tags:

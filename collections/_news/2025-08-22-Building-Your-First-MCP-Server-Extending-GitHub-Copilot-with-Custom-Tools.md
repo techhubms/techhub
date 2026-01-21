@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/building-your-first-mcp-server-how-to-extend-ai-tools-with-custom-capabilities/
 title: 'Building Your First MCP Server: Extending GitHub Copilot with Custom Tools'
 author: Chris Reddington
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-22 16:52:27 +00:00
 tags:

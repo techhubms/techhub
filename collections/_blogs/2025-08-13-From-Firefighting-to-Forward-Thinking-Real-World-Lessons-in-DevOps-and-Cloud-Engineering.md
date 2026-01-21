@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/from-firefighting-to-forward-thinking-my-real-world-lessons-in-devops-and-cloud-engineering/?utm_source=rss&utm_medium=rss&utm_campaign=from-firefighting-to-forward-thinking-my-real-world-lessons-in-devops-and-cloud-engineering
 title: 'From Firefighting to Forward-Thinking: Real-World Lessons in DevOps and Cloud Engineering'
 author: Bhanuteja Somarouthu
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-13 08:48:58 +00:00
 tags:

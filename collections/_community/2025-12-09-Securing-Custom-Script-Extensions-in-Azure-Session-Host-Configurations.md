@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/more-security-around-using-custom-script-extensions-and-session/idi-p/4476426
 title: Securing Custom Script Extensions in Azure Session Host Configurations
 author: kristokruuser
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-09 13:01:13 +00:00
 tags:

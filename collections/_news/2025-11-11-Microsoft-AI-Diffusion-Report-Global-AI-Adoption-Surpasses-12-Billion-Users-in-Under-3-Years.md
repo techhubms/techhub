@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/11/10/understanding-global-ai-diffusion/
 title: 'Microsoft AI Diffusion Report: Global AI Adoption Surpasses 1.2 Billion Users in Under 3 Years'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-11 18:10:45 +00:00
 tags:

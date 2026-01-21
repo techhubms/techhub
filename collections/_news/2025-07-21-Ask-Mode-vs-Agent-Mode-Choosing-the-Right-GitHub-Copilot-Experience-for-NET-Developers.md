@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/ask-mode-vs-agent-mode/
 title: 'Ask Mode vs Agent Mode: Choosing the Right GitHub Copilot Experience for .NET Developers'
 author: Wendy Breiding (SHE/HER)
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-07-21 17:05:00 +00:00
 tags:

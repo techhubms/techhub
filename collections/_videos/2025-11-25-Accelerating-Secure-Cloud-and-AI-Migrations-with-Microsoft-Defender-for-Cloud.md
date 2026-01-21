@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Ea1Sxfz20d0
 title: Accelerating Secure Cloud and AI Migrations with Microsoft Defender for Cloud
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 15:58:47 +00:00
 tags:

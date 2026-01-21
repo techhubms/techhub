@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/making-windows-terminal-awesome-with-github-copilot-cli
 title: Making Windows Terminal Awesome with GitHub Copilot CLI
 author: Kayla Cinnamon
-viewing_mode: external
 feed_name: Microsoft Blog
 date: 2025-12-11 17:00:28 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/a-decade-of-open-innovation-celebrating-10-years-of-microsoft-and-red-hat-partnership/
 title: 'Celebrating 10 Years of Microsoft and Red Hat Partnership: Hybrid Cloud and Enterprise Innovation'
 author: Brendan Burns
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-12-02 16:00:00 +00:00
 tags:

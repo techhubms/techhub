@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-driving-security-in-the-era-of-ai-innovation/ba-p/4471034
 title: 'Azure Linux: Security-Focused Cloud Innovation at Ignite 2025'
 author: Sudhanva
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:49:02 +00:00
 tags:

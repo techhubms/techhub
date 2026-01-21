@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/coderabbit-adds-cli-support-to-code-review-platform-based-on-ai/
 title: CodeRabbit Adds CLI and AI-Powered Enhancements to Code Review Platform
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-16 13:00:03 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=fUuTvoDPyzo
 title: Building an AI Agent with Microsoft Foundry Models in Python
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-19 23:05:55 +00:00
 tags:

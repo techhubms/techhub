@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/enterprise-ready-and-extensible-update-on-the-azure-sre-agent/ba-p/4444299
 title: 'Enterprise-Ready and Extensible: Update on the Azure SRE Agent Preview'
 author: Mayunk_Jain
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-01 19:17:04 +00:00
 tags:

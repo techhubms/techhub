@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/ga-dcasv6-and-ecasv6-confidential-vms-based-on-4th-generation/ba-p/4451460
 title: 'GA: DCasv6 and ECasv6 Confidential VMs with 4th Gen AMD EPYC for Azure'
 author: Rakeshginjupalli
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-16 23:00:00 +00:00
 tags:

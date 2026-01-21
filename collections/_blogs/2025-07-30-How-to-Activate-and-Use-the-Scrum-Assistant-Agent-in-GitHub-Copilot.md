@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-to-activate-and-use-the-scrum-assistant-agent-in-github-copilot/
 title: How to Activate and Use the Scrum Assistant Agent in GitHub Copilot
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-07-30 08:08:05 +00:00
 tags:

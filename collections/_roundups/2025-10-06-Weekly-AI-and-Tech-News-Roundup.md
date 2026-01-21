@@ -1,7 +1,6 @@
-﻿---
+---
 title: Agentic AI, Copilot Updates, and Platform Integration Drive Tech Ecosystem Developments
 author: Tech Hub Team
-viewing_mode: internal
 date: 2025-10-06 09:00:00 +00:00
 tags:
 - AI Agents

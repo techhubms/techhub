@@ -23,7 +23,6 @@ public static class ContentItemExtensions
         {
             Slug = item.Slug,
             Title = item.Title,
-            Description = item.Description,
             Author = item.Author,
             DateEpoch = item.DateEpoch,
             DateIso = item.DateIso,
@@ -31,11 +30,10 @@ public static class ContentItemExtensions
             SubcollectionName = item.SubcollectionName,
             FeedName = item.FeedName,
             SectionNames = item.SectionNames,
-            PrimarySection = primarySectionName,
+            PrimarySectionName = primarySectionName,
             Tags = item.Tags,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
-            ViewingMode = item.ViewingMode,
             Url = item.GetUrlInSection(sectionUrl)
         };
     }
@@ -54,7 +52,6 @@ public static class ContentItemExtensions
         {
             Slug = item.Slug,
             Title = item.Title,
-            Description = item.Description,
             Author = item.Author,
             DateEpoch = item.DateEpoch,
             DateIso = item.DateIso,
@@ -62,12 +59,11 @@ public static class ContentItemExtensions
             SubcollectionName = item.SubcollectionName,
             FeedName = item.FeedName,
             SectionNames = item.SectionNames,
-            PrimarySection = primarySectionName,
+            PrimarySectionName = primarySectionName,
             Tags = item.Tags,
             RenderedHtml = item.RenderedHtml,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
-            ViewingMode = item.ViewingMode,
             Url = item.GetUrlInSection(sectionUrl),
             SidebarInfo = item.SidebarInfo
         };

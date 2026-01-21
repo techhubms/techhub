@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=XHcb_XNq9vw
 title: Transforming Public Sector Services with Microsoft Cloud and AI
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 07:29:55 +00:00
 tags:

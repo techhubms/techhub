@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/follow-the-thread-distributed-tracing-patterns-for-microservices-in-azure/
 title: Distributed Tracing Patterns for Microservices in Azure
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-22 07:43:11 +00:00
 tags:

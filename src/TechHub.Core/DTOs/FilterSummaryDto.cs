@@ -8,7 +8,7 @@ public record FilterSummaryDto
     /// <summary>
     /// Tags used in filtering
     /// </summary>
-    public required string[] Tags { get; init; }
+    public required IReadOnlyList<string> Tags { get; init; }
 
     /// <summary>
     /// Date range start (if applied)
@@ -33,5 +33,5 @@ public record FilterSummaryDto
     /// <summary>
     /// Whether any filters are active
     /// </summary>
-    public bool HasActiveFilters => Tags.Length > 0 || DateFrom.HasValue || DateTo.HasValue;
+    public bool HasActiveFilters => Tags.Count > 0 || DateFrom.HasValue || DateTo.HasValue;
 }

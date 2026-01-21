@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=_fZZz_gIE8A
 title: Scaling Context-Aware Workflows with GitHub Copilot in VS Code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-12-29 13:01:10 +00:00
 tags:

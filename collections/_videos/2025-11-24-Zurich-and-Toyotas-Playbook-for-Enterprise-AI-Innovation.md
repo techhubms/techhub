@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=iRQcoiEJyKE
 title: Zurich and Toyota’s Playbook for Enterprise AI Innovation
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 10:32:04 +00:00
 tags:

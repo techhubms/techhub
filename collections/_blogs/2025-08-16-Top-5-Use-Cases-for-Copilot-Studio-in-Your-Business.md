@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/top-5-use-cases-for-copilot-studio-in-your-business/
 title: Top 5 Use Cases for Copilot Studio in Your Business
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-16 08:33:06 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/fully-managed-cloud-to-cloud-transfers-with-azure-storage-mover/
 title: Fully Managed Cloud-to-Cloud Transfers with Azure Storage Mover
 author: Aung Oo
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-10-23 16:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devclass.com/2025/11/20/copilot-net-modernization-tool-a-huge-downgrade-devs-say-and-no-longer-free/
 title: 'Migrating .NET Framework Apps with GitHub Copilot in Visual Studio: Developer Feedback and Licensing Changes'
 author: Tim Anderson
-viewing_mode: external
 feed_name: DevClass
 date: 2025-11-20 14:36:31 +00:00
 tags:

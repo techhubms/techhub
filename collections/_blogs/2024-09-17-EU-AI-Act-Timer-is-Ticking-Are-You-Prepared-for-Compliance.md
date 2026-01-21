@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://zure.com/blog/eu-ai-act-timer-is-ticking-are-you-prepared/
 title: 'EU AI Act Timer is Ticking: Are You Prepared for Compliance?'
 author: Matias Näveri
-viewing_mode: external
 feed_name: Zure Data & AI Blog
 date: 2024-09-17 06:07:56 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2026/01/14/inside-redvds-how-a-single-virtual-desktop-provider-fueled-worldwide-cybercriminal-operations/
 title: 'Inside RedVDS: Investigating How a Criminal VDS Provider Empowered Global Cyberattacks'
 author: Microsoft Threat Intelligence
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2026-01-14 15:03:31 +00:00
 tags:

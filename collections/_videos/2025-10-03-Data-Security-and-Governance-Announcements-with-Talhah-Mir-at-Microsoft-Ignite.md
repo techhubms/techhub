@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=MGQegwNKRS4
 title: Data Security and Governance Announcements with Talhah Mir at Microsoft Ignite
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-10-03 17:00:26 +00:00
 tags:

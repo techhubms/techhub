@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/devops/comments/1mk0s1l/how_much_of_your_job_involves_administering_tools/
 title: DevOps Engineers and the Reality of Tool and User Management in SaaS-Heavy Orgs
 author: Coffeebrain695
-viewing_mode: external
 feed_name: Reddit DevOps
 date: 2025-08-07 13:56:26 +00:00
 tags:

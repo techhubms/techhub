@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/designing-for-certainty-how-azure-capacity-reservations/m-p/4447901#M347
 title: 'Designing for Certainty: How Azure Capacity Reservations Safeguard Mission‑Critical Workloads'
 author: Goutham_Bandapati
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-25 15:04:26 +00:00
 tags:

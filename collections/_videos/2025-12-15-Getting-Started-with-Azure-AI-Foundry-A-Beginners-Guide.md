@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=yZgC1KhfSxo
 title: 'Getting Started with Azure AI Foundry: A Beginner’s Guide'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-15 17:29:32 +00:00
 tags:

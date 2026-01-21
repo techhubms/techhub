@@ -1,7 +1,6 @@
-﻿---
+---
 title: Updated AI Tools, Open-Source Security, and Azure Integration
 author: Tech Hub Team
-viewing_mode: internal
 date: 2025-10-20 09:00:00 +00:00
 tags:
 - Agentic AI

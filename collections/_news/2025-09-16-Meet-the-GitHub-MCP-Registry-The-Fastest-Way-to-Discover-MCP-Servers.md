@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/meet-the-github-mcp-registry-the-fastest-way-to-discover-mcp-servers/
 title: 'Meet the GitHub MCP Registry: The Fastest Way to Discover MCP Servers'
 author: Toby Padilla
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-16 16:27:54 +00:00
 tags:

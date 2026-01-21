@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=F4Alob9iYnQ
 title: Empowering Healthcare Through Scalable AI for Trusted Partners
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 13:04:53 +00:00
 tags:

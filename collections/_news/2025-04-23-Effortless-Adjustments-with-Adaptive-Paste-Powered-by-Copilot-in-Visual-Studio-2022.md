@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/effortless-adjustments-with-an-adaptive-paste/
 title: Effortless Adjustments with Adaptive Paste Powered by Copilot in Visual Studio 2022
 author: Leah Tran
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-04-23 14:51:46 +00:00
 tags:

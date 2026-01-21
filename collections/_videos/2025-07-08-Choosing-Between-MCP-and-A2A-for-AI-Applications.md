@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=IMcDEvXRBkY
 title: Choosing Between MCP and A2A for AI Applications
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-07-08 15:19:43 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-visibility-flexibility-and-cost-efficiency-with/ba-p/4456707
 title: 'Enhanced Logging for Azure Application Gateway: Resource-Specific Tables, DCR, and Cost Optimization'
 author: vnamani
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-25 21:12:08 +00:00
 tags:

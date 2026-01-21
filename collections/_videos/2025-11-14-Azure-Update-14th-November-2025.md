@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=zC9pEiIf46k
 title: Azure Update - 14th November 2025
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-11-14 16:32:17 +00:00
 tags:

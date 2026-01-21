@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://aka.ms/AAyjgcy
 title: 'Infinite Scale: Architecture of the Azure AI Superfactory'
 author: Scott Guthrie
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-11-12 17:33:00 +00:00
 tags:

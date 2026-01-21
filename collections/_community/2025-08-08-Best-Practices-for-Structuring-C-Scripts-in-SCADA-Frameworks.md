@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mkiokh/c_script_best_practices/
 title: Best Practices for Structuring C# Scripts in SCADA Frameworks
 author: DouglasRoldan
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-08 01:55:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/scaling-generative-ai-in-the-cloud-enterprise-use-cases-for-driving-secure-innovation/
 title: 'Scaling Generative AI in the Cloud: Enterprise Use Cases for Secure Innovation'
 author: Maria Bledsoe
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-07-29 15:00:00 +00:00
 tags:

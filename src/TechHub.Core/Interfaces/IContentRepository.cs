@@ -38,7 +38,7 @@ public interface IContentRepository
         CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Search content items by text query (title, description, tags)
+    /// Search content items by text query (title, excerpt, tags)
     /// </summary>
     Task<IReadOnlyList<ContentItem>> SearchAsync(
         string query,

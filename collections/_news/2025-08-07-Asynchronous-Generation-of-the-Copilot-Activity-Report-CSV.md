@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-07-asynchronous-generation-of-the-copilot-activity-report-csv
 title: Asynchronous Generation of the Copilot Activity Report CSV
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-07 23:17:25 +00:00
 tags:

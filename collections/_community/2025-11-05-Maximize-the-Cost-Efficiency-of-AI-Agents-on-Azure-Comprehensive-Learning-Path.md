@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/empower-smarter-ai-agent-investments/ba-p/4466010
 title: 'Maximize the Cost Efficiency of AI Agents on Azure: Comprehensive Learning Path'
 author: Fernando_Vasconcellos
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-05 14:46:02 +00:00
 tags:

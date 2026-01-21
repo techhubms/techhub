@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=iYHh5n-6ez4
 title: Connecting to a Local MCP Server Using Microsoft.Extensions.AI
 author: Learn Microsoft AI
-viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
 date: 2025-04-30 02:30:13 +00:00
 tags:

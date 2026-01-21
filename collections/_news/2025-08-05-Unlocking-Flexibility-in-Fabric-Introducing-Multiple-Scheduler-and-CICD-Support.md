@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-flexibility-in-fabric-introducing-multiple-scheduler-and-ci-cd-support/
 title: 'Unlocking Flexibility in Fabric: Introducing Multiple Scheduler and CI/CD Support'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-08-05 09:00:00 +00:00
 tags:

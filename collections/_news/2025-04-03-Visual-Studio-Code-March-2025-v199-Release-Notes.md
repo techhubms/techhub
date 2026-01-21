@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/updates/v1_99
 title: Visual Studio Code March 2025 (v1.99) Release Notes
 author: Visual Studio Code Team
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-04-03 17:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=v6j0lJYdPU4
 title: Azure Container Storage v2 Overview
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-09-29 13:13:51 +00:00
 tags:

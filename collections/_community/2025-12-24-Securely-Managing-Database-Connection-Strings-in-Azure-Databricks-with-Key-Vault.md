@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/data-security-azure-key-vault-in-data-bricks/ba-p/4479785
 title: Securely Managing Database Connection Strings in Azure Databricks with Key Vault
 author: bhramesh
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-24 08:00:00 +00:00
 tags:

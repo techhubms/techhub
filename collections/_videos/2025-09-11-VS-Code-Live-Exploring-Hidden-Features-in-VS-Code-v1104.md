@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Vm12PGJtQNs
 title: 'VS Code Live: Exploring Hidden Features in VS Code v1.104'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-09-11 21:17:09 +00:00
 tags:

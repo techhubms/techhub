@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=aXouOsBh4ro
 title: Simplifying Cloud-Native Development with .NET Aspire
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-12 22:51:40 +00:00
 tags:

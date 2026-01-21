@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=KbsotdOgr5c
 title: 'Copilot Studio Innovations and Roadmap: Building Low-Code AI Agents (BRK313)'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 06:26:53 +00:00
 tags:

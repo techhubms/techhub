@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/powershell/ai-shell-preview-2/
 title: 'Announcing AI Shell Preview 2: Enhanced Azure PowerShell Integration and More'
 author: Steven Bucher
-viewing_mode: external
 feed_name: Microsoft PowerShell Blog
 date: 2025-02-28 20:49:30 +00:00
 tags:

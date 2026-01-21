@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=HhFdQS0TtGc
 title: 'VS Code Live: Leveraging GitHub Copilot and Agents in Jupyter Notebooks'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-10-07 22:12:38 +00:00
 tags:

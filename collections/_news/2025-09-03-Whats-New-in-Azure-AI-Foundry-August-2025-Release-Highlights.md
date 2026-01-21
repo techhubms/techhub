@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-august-2025/
 title: 'What’s New in Azure AI Foundry: August 2025 Release Highlights'
 author: Nick Brady
-viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
 date: 2025-09-03 15:00:50 +00:00
 tags:

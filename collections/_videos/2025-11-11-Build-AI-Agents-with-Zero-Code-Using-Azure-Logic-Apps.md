@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=6YFN25o9jn4
 title: Build AI Agents with Zero Code Using Azure Logic Apps
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-11 21:47:17 +00:00
 tags:

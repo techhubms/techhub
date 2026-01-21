@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-general-availability-azure-monitor-dashboards-with/ba-p/4468972
 title: General Availability of Azure Monitor Dashboards with Grafana
 author: KayodePrince
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:56:24 +00:00
 tags:

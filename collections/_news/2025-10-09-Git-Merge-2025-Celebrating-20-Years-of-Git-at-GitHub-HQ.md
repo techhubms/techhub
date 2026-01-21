@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/open-source/git/20-years-of-git-2-days-at-github-hq-git-merge-2025-highlights-%f0%9f%8e%89/
 title: 'Git Merge 2025: Celebrating 20 Years of Git at GitHub HQ'
 author: Lee Reilly
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-09 08:00:00 +00:00
 tags:

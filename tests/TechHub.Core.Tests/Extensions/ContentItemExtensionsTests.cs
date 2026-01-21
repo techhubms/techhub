@@ -15,7 +15,6 @@ public class ContentItemExtensionsTests
         {
             Slug = "2024-01-15-test-article",
             Title = "Test Article",
-            Description = "Test description",
             Author = "Test Author",
             DateEpoch = 1705305600, // 2024-01-15 00:00:00 UTC
             CollectionName = "news",
@@ -23,8 +22,7 @@ public class ContentItemExtensionsTests
             Tags = ["AI", "Azure", "News", "Machine Learning", "Cloud"],
             RenderedHtml = "<p>Test content</p>",
             Excerpt = "Test excerpt",
-            ExternalUrl = "https://example.com",
-            ViewingMode = null
+            ExternalUrl = "https://example.com"
         };
     }
 
@@ -41,14 +39,14 @@ public class ContentItemExtensionsTests
         // Assert
         dto.Slug.Should().Be("2024-01-15-test-article");
         dto.Title.Should().Be("Test Article");
-        dto.Description.Should().Be("Test description");
         dto.Author.Should().Be("Test Author");
         dto.DateEpoch.Should().Be(1705305600);
         dto.DateIso.Should().Be("2024-01-15");
         dto.CollectionName.Should().Be("news");
         dto.SectionNames.Should().BeEquivalentTo(["ai", "azure"]);
-        dto.PrimarySection.Should().Be("ai"); // First section in priority order
+        dto.PrimarySectionName.Should().Be("ai"); // First section in priority order
         dto.Tags.Should().BeEquivalentTo(["AI", "Azure", "News", "Machine Learning", "Cloud"]);
+        dto.Excerpt.Should().Be("Test excerpt");
         dto.Excerpt.Should().Be("Test excerpt");
         dto.ExternalUrl.Should().Be("https://example.com");
         // dto.Url.Should().Be("/ai/news/2024-01-15-test-article");
@@ -81,13 +79,12 @@ public class ContentItemExtensionsTests
         // Assert
         dto.Slug.Should().Be("2024-01-15-test-article");
         dto.Title.Should().Be("Test Article");
-        dto.Description.Should().Be("Test description");
         dto.Author.Should().Be("Test Author");
         dto.DateEpoch.Should().Be(1705305600);
         dto.DateIso.Should().Be("2024-01-15");
         dto.CollectionName.Should().Be("news");
         dto.SectionNames.Should().BeEquivalentTo(["ai", "azure"]);
-        dto.PrimarySection.Should().Be("ai");
+        dto.PrimarySectionName.Should().Be("ai");
         dto.Tags.Should().BeEquivalentTo(["AI", "Azure", "News", "Machine Learning", "Cloud"]);
         dto.RenderedHtml.Should().Be("<p>Test content</p>");
         dto.Excerpt.Should().Be("Test excerpt");
@@ -120,7 +117,6 @@ public class ContentItemExtensionsTests
             {
                 Slug = "2024-01-16-test-article-2",
                 Title = "Test Article 2",
-                Description = "Test description",
                 Author = "Test Author",
                 DateEpoch = 1705305600,
                 CollectionName = "news",
@@ -139,10 +135,10 @@ public class ContentItemExtensionsTests
         dtos.Should().HaveCount(2);
         dtos[0].Slug.Should().Be("2024-01-15-test-article");
         dtos[0].Title.Should().Be("Test Article");
-        dtos[0].PrimarySection.Should().Be("ai");
+        dtos[0].PrimarySectionName.Should().Be("ai");
         dtos[1].Slug.Should().Be("2024-01-16-test-article-2");
         dtos[1].Title.Should().Be("Test Article 2");
-        dtos[1].PrimarySection.Should().Be("ai");
+        dtos[1].PrimarySectionName.Should().Be("ai");
     }
 
     [Fact]

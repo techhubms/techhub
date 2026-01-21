@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-13-github-mcp-server-secret-scanning-push-protection-and-more
 title: GitHub MCP Server Enhances Secret Scanning and Push Protection for Public Repositories
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-13 17:31:10 +00:00
 tags:

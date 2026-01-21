@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=E50EsAAd8qI
 title: Building an MCP Inside VS Code and Exploring AI's Impact with Kent C. Dodds
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-09-01 07:00:11 +00:00
 tags:

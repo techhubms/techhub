@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-december-2025/ba-p/4474048
 title: Logic Apps Aviators Newsletter - December 2025
 author: WSilveira
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-01 16:00:00 +00:00
 tags:

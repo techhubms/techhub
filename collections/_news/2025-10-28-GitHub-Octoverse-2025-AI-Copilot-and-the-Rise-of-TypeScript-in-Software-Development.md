@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.linkedin.com/posts/satyanadella_i-love-how-easy-its-becoming-to-learn-on-activity-7389085159972593664-d87n
 title: 'GitHub Octoverse 2025: AI, Copilot, and the Rise of TypeScript in Software Development'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-28 23:12:00 +00:00
 tags:

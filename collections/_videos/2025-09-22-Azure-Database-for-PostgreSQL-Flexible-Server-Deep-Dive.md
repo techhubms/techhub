@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=aP-kn76-emI
 title: 'Azure Database for PostgreSQL: Flexible Server Deep Dive'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-09-22 13:17:22 +00:00
 tags:

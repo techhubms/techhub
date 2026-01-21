@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/build-vs-buy-what-it-really-takes-to-harden-your-software-supply-chain/
 title: 'Build vs. Buy: What it Really Takes to Harden Your Software Supply Chain'
 author: Matt Moore
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-03 06:30:32 +00:00
 tags:

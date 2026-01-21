@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/announcing-the-browser-automation-tool-preview-in-azure-ai-foundry-agent-service/
 title: Announcing the Browser Automation Tool (Preview) in Azure AI Foundry Agent Service
 author: Linda Li
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-08-06 15:00:56 +00:00
 tags:

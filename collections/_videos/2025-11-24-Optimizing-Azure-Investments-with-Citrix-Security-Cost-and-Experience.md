@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=mgChCdqRxLw
 title: 'Optimizing Azure Investments with Citrix: Security, Cost, and Experience'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 11:18:51 +00:00
 tags:

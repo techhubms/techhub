@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/cyclecloud-hammerspace/ba-p/4457043
 title: Simplifying HPC Deployments with Azure CycleCloud and Hammerspace
 author: anhoward
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-25 19:01:20 +00:00
 tags:

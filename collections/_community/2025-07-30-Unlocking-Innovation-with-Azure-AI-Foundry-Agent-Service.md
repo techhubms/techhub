@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure/unlocking-innovation-with-azure-ai-foundry-agent-service/m-p/4438322#M22030
 title: Unlocking Innovation with Azure AI Foundry Agent Service
 author: JohnNaguib
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-07-30 17:41:02 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=H0SGK1yPHD0
 title: 'ASP.NET Community Standup: Understanding the MCP Authorization Flow'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-10-21 15:15:54 +00:00
 tags:

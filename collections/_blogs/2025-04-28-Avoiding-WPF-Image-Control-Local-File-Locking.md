@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://weblog.west-wind.com/posts/2025/Apr/28/WPF-Image-Control-Local-File-Locking
 title: Avoiding WPF Image Control Local File Locking
 author: Rick Strahl
-viewing_mode: external
 feed_name: Rick Strahl's Blog
 date: 2025-04-28 22:01:46 +00:00
 tags:

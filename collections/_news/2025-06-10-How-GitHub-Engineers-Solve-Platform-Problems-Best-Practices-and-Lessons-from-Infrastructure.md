@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/engineering/infrastructure/how-github-engineers-tackle-platform-problems/
 title: 'How GitHub Engineers Solve Platform Problems: Best Practices and Lessons from Infrastructure'
 author: Fabian Aguilar Gomez
-viewing_mode: external
 feed_name: GitHub Engineering Blog
 date: 2025-06-10 16:00:00 +00:00
 tags:

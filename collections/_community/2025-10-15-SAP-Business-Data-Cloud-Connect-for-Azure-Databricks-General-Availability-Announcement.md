@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/sap-business-data-cloud-connect-with-azure-databricks-is-now/ba-p/4459490
 title: 'SAP Business Data Cloud Connect for Azure Databricks: General Availability Announcement'
 author: AnaviNahar
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-15 16:00:00 +00:00
 tags:

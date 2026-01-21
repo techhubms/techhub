@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/retrieval-augmented-generation-rag-in-azure-ai-a-step-by-step-guide/
 title: 'Retrieval-Augmented Generation (RAG) in Azure AI: A Step-by-Step Guide'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-25 16:04:13 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/all-things-azure/powering-distributed-aiml-at-scale-with-azure-and-anyscale/
 title: Powering Distributed AI and ML Workloads at Scale with Azure and Anyscale
 author: Brendan Burns
-viewing_mode: external
 feed_name: Microsoft All Things Azure Blog
 date: 2025-11-04 12:30:11 +00:00
 tags:

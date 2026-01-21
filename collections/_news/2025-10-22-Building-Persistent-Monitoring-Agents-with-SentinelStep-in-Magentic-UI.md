@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/research/blog/tell-me-when-building-agents-that-can-wait-monitor-and-act/
 title: Building Persistent Monitoring Agents with SentinelStep in Magentic-UI
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-22 15:43:25 +00:00
 tags:

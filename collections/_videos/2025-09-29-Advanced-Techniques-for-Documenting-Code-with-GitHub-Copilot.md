@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=zRZLBiO4DYA
 title: Advanced Techniques for Documenting Code with GitHub Copilot
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-09-29 14:01:44 +00:00
 tags:

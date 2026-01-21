@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-18-customers-can-now-add-users-to-a-cost-center-from-both-the-ui-and-api-2
 title: Manage Cost Center Users in GitHub Enterprise Cloud via Billing UI and API
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-18 15:01:58 +00:00
 tags:

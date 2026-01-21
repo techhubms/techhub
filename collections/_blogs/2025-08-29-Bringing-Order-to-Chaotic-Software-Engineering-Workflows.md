@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/bringing-order-to-chaotic-software-engineering-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=bringing-order-to-chaotic-software-engineering-workflows
 title: Bringing Order to Chaotic Software Engineering Workflows
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-29 16:16:47 +00:00
 tags:

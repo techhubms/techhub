@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-17-gpt-5-2-is-now-generally-available-in-github-copilot
 title: GPT-5.2 is now generally available in GitHub Copilot
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-17 18:12:19 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-at-oracle-ai-world-2025-powering-the-next/ba-p/4460749
 title: 'Oracle Database@Azure Advances at Oracle AI World 2025: Integration, AI, and Security Enhancements'
 author: KalyanKaki
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-14 18:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mjcixd/azure_resource_naming_conventions_not_maintained/
 title: Challenges with Azure Resource Naming Convention Maintenance in Bicep and Infrastructure as Code
 author: d2peak
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-06 18:27:00 +00:00
 tags:

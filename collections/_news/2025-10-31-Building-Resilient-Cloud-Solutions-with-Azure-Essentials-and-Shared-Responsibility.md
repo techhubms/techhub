@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/resiliency-in-the-cloud-empowered-by-shared-responsibility-and-azure-essentials/
 title: Building Resilient Cloud Solutions with Azure Essentials and Shared Responsibility
 author: Cyril Belikoff
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-10-31 16:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=QHBc5hh4gKk
 title: "Voices You Can't Trust: Stopping AI-Powered Impersonation Attacks with Microsoft Verified ID"
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 10:53:42 +00:00
 tags:

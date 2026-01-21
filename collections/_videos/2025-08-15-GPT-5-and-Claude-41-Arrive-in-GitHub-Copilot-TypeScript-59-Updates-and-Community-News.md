@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=lhpQBp9I80w
 title: GPT-5 and Claude 4.1 Arrive in GitHub Copilot, TypeScript 5.9 Updates, and Community News
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-15 16:12:57 +00:00
 tags:

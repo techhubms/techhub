@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/generative-ai/automate-your-project-with-github-models-in-actions/
 title: 'Automate Your Project with GitHub Models in Actions: AI Integration for Workflows'
 author: Kevin Lewis
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-04 16:00:00 +00:00
 tags:

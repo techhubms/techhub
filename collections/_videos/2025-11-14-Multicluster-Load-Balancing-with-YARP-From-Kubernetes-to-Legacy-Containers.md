@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=VIroNVbY0qI
 title: 'Multicluster Load Balancing with YARP: From Kubernetes to Legacy Containers'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 19:20:50 +00:00
 tags:

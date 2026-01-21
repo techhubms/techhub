@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html
 title: Using GitHub Copilot Chat to Write Better Regex Patterns
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-09-05 00:00:00 +00:00
 tags:

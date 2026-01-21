@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/multi-file-edits-made-simple.html
 title: Multi-File Edits Made Simple
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-09-12 00:00:00 +00:00
 tags:

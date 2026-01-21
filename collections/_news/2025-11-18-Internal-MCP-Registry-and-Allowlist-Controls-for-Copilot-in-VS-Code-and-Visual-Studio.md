@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-18-internal-mcp-registry-and-allowlist-controls-for-vs-code-stable-in-public-preview
 title: Internal MCP Registry and Allowlist Controls for Copilot in VS Code and Visual Studio
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-18 16:39:20 +00:00
 tags:

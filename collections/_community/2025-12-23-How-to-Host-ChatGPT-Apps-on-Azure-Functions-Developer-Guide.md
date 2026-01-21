@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/host-chatgpt-apps-on-azure-functions/ba-p/4480696
 title: 'How to Host ChatGPT Apps on Azure Functions: Developer Guide'
 author: lily-ma
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-23 19:14:38 +00:00
 tags:

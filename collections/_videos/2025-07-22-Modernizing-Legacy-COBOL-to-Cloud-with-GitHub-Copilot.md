@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=xWA0xYttWMo
 title: 'Modernizing Legacy: COBOL to Cloud with GitHub Copilot'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub's Youtube channel
 date: 2025-07-22 14:14:11 +00:00
 tags:

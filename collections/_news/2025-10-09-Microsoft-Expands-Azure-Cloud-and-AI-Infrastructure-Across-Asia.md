@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/microsofts-commitment-to-supporting-cloud-infrastructure-demand-in-asia/
 title: Microsoft Expands Azure Cloud and AI Infrastructure Across Asia
 author: Omar Khan
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-10-09 15:00:00 +00:00
 tags:

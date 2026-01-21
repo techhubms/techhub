@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=lXvHXA_vuro
 title: ASP.NET Community Standup - Why Aren't You Using Minimal APIs?
 author: dotnet
-viewing_mode: internal
 feed_name: Dotnet's Youtube channel
 date: 2025-07-15 17:09:35 +00:00
 tags:

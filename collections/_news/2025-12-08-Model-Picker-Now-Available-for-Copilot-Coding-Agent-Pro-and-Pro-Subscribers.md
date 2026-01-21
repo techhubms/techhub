@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-08-model-picker-for-copilot-coding-agent-for-copilot-pro-and-pro-subscribers
 title: Model Picker Now Available for Copilot Coding Agent (Pro and Pro+ Subscribers)
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-08 08:56:18 +00:00
 tags:

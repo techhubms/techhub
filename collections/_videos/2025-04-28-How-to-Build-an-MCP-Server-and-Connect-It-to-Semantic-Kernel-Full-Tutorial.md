@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=i3UfPHg8hM8
 title: 'How to Build an MCP Server and Connect It to Semantic Kernel: Full Tutorial'
 author: Learn Microsoft AI
-viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
 date: 2025-04-28 06:47:49 +00:00
 tags:

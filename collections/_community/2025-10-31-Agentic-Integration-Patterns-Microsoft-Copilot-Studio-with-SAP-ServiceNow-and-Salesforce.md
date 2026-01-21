@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/agentic-integration-with-sap-servicenow-and-salesforce/ba-p/4466049
 title: 'Agentic Integration Patterns: Microsoft Copilot Studio with SAP, ServiceNow, and Salesforce'
 author: pranabpaul
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-31 20:41:25 +00:00
 tags:

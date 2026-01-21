@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot-cli-101-how-to-use-github-copilot-from-the-command-line/
 title: 'GitHub Copilot CLI 101: How to use GitHub Copilot from the command line'
 author: Alexandra Lietzke
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-06 20:30:00 +00:00
 tags:

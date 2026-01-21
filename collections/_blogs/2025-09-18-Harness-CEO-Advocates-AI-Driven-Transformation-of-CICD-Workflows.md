@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/harness-ceo-calls-for-reimagining-of-ci-cd-workflows-in-the-ai-era/
 title: Harness CEO Advocates AI-Driven Transformation of CI/CD Workflows
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-18 16:10:22 +00:00
 tags:

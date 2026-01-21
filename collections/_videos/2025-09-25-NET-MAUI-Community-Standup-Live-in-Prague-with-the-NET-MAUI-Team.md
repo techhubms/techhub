@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=4EXGyCgVNp4
 title: .NET MAUI Community Standup - Live in Prague with the .NET MAUI Team
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-09-25 21:07:04 +00:00
 tags:

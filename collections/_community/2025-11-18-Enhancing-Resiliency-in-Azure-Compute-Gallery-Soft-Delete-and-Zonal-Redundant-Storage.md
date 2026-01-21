@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/enhancing-resiliency-in-azure-compute-gallery/ba-p/4470082
 title: 'Enhancing Resiliency in Azure Compute Gallery: Soft Delete and Zonal Redundant Storage'
 author: Sandeep-Raichura
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 17:24:09 +00:00
 tags:

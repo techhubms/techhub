@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/open-in-vscode/
 title: Accelerate Coding with Azure AI Foundry Playgrounds and Visual Studio Code Integration
 author: Thasmika Gokal
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-05-28 19:01:04 +00:00
 tags:

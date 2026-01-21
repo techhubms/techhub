@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devclass.com/2025/12/16/cursor-ai-editor-gets-visual-designer-but-bugs-and-ever-changing-ui-irk-developers/
 title: AI-Driven Cursor Editor Adds Visual Designer Amid Developer Frustrations
 author: Tim Anderson
-viewing_mode: external
 feed_name: DevClass
 date: 2025-12-16 12:49:25 +00:00
 tags:

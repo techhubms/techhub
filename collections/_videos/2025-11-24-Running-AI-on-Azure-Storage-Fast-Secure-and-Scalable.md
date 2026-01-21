@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=6-UKEiqm53c
 title: 'Running AI on Azure Storage: Fast, Secure, and Scalable'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 10:26:37 +00:00
 tags:

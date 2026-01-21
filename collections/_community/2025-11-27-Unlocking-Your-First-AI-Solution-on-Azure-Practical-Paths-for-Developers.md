@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlocking-your-first-ai-solution-on-azure-practical-paths-for/ba-p/4472327
 title: 'Unlocking Your First AI Solution on Azure: Practical Paths for Developers'
 author: JoshuaHuang
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-27 08:00:00 +00:00
 tags:

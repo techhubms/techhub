@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/survey-surfaces-multiple-mobile-application-release-management-headaches/?utm_source=rss&utm_medium=rss&utm_campaign=survey-surfaces-multiple-mobile-application-release-management-headaches
 title: Survey Reveals Major Challenges in Mobile Application Release Management
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-12 16:49:27 +00:00
 tags:

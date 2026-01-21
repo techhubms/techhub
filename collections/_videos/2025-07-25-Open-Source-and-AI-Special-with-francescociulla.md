@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=I8acOcHuE_I
 title: Open Source and AI Special with @francescociulla
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub's Youtube channel
 date: 2025-07-25 04:06:27 +00:00
 tags:

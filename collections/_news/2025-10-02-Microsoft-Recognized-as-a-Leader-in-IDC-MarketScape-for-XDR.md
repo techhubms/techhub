@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/02/microsoft-named-a-leader-in-the-idc-marketscape-for-xdr/
 title: Microsoft Recognized as a Leader in IDC MarketScape for XDR
 author: Rob Lefferts
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-10-02 17:00:00 +00:00
 tags:

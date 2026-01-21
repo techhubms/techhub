@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-sql-pool-insights-in-microsoft-fabric-data-warehouse/
 title: 'SQL Pool Insights: Monitoring Microsoft Fabric Data Warehouse Performance'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-21 08:45:00 +00:00
 tags:

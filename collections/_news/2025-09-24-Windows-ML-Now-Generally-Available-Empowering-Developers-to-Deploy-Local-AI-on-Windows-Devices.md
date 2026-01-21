@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.windows.com/windowsdeveloper/2025/09/23/windows-ml-is-generally-available-empowering-developers-to-scale-local-ai-across-windows-devices/
 title: 'Windows ML Now Generally Available: Empowering Developers to Deploy Local AI on Windows Devices'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-09-24 16:23:25 +00:00
 tags:

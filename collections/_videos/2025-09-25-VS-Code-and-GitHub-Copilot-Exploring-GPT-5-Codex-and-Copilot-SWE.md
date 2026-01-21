@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Rz3ucRzuUHc
 title: 'VS Code and GitHub Copilot: Exploring GPT-5-Codex and Copilot-SWE'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-09-25 17:48:26 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/issuing-custom-claims-using-directory-extension-attributes-in/ba-p/4441980
 title: Issuing Custom Claims Using Directory Extension Attributes in Microsoft Entra ID
 author: Farooque
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-11 05:54:53 +00:00
 tags:

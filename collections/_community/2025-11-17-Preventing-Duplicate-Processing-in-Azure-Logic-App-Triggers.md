@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/duplicate-detection-in-logic-app-trigger/ba-p/4470365
 title: Preventing Duplicate Processing in Azure Logic App Triggers
 author: Mohammed_Barqawi
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-17 08:58:53 +00:00
 tags:

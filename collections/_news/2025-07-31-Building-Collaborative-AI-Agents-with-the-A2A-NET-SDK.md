@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/building-ai-agents-a2a-dotnet-sdk/
 title: Building Collaborative AI Agents with the A2A .NET SDK
 author: Sergey Menshykh, Adam Sitnik, Brandon H
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-07-31 10:08:49 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-16-track-organization-copilot-usage
 title: Track Organization Copilot Usage with Copilot Usage APIs
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-16 15:08:56 +00:00
 tags:

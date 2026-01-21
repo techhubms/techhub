@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/ask-better-questions-get-better-code.html
 title: Ask Better Questions, Get Better Code
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-03-21 00:00:00 +00:00
 tags:

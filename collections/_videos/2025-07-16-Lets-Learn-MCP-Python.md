@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=qQZFvz4BTCY
 title: "Let's Learn MCP: Python"
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-07-16 17:44:49 +00:00
 tags:

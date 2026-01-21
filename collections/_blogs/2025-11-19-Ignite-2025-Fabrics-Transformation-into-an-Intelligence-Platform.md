@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://zure.com/blog/ignite-2025-fabrics-evolution-from-data-platform-to-intelligence-platform
 title: 'Ignite 2025: Fabric’s Transformation into an Intelligence Platform'
 author: markus.lehtola@zure.com (Markus Lehtola)
-viewing_mode: external
 feed_name: Zure Data & AI Blog
 date: 2025-11-19 08:32:01 +00:00
 tags:

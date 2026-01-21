@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/all-things-azure/how-we-use-ai-agents-for-cobol-migration-and-mainframe-modernization/
 title: How We Use AI Agents for COBOL Migration and Mainframe Modernization
 author: jkordick, gkaleta
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-07-09 17:10:30 +00:00
 tags:

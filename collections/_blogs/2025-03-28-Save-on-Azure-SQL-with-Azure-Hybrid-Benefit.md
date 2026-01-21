@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/03/save-on-azure-sql-with-azure-hybrid-benefit/
 title: Save on Azure SQL with Azure Hybrid Benefit
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-03-28 10:18:12 +00:00
 tags:

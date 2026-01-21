@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/blogs/2025/05/19/openSourceAIEditor
 title: VS Code to Open Source GitHub Copilot Chat Extension and Advance Open AI Editing
 author: The VS Code team
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-05-19 00:00:00 +00:00
 tags:

@@ -108,4 +108,4 @@ Run -TestName SectionsEndpoints
 
 - [tests/AGENTS.md](../AGENTS.md) - Complete testing strategy
 - [src/TechHub.Api/AGENTS.md](../../src/TechHub.Api/AGENTS.md) - API development patterns
-- [Root AGENTS.md](/AGENTS.md#6-test--validate) - When to write tests
+- [Root AGENTS.md](../../AGENTS.md#6-write-tests-first-tdd) - When to write tests

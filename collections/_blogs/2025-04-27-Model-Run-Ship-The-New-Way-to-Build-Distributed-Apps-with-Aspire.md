@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://medium.com/@davidfowl/model-run-ship-the-new-way-to-build-distributed-apps-48d67286a665?source=rss-8163234c98f0------2
 title: Model. Run. Ship. The New Way to Build Distributed Apps with Aspire
 author: David Fowler
-viewing_mode: external
 feed_name: David Fowler's Blog
 date: 2025-04-27 22:27:35 +00:00
 tags:

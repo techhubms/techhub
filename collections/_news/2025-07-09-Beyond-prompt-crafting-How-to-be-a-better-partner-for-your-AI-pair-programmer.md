@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/beyond-prompt-crafting-how-to-be-a-better-partner-for-your-ai-pair-programmer/
 title: Beyond prompt crafting - How to be a better partner for your AI pair programmer
 author: Christopher Harrison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-09 16:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/improving-codebase-awareness-in-visual-studio-chat/
 title: Enhancing Visual Studio Copilot Chat with Semantic Code Search
 author: Pablo Gonzalez
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-08-14 12:00:59 +00:00
 tags:

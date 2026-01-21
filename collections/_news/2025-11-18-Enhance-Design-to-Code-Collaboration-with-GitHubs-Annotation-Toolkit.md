@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/enterprise-software/collaboration/level-up-design-to-code-collaboration-with-githubs-open-source-annotation-toolkit/
 title: Enhance Design-to-Code Collaboration with GitHub's Annotation Toolkit
 author: Andrea Griffiths
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-18 18:05:17 +00:00
 tags:

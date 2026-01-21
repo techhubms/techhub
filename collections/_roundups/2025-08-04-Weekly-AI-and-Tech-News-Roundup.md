@@ -1,7 +1,6 @@
-﻿---
+---
 title: Agentic AI and Developer Workflows Leap Forward
 author: Tech Hub Team
-viewing_mode: internal
 date: 2025-08-04 09:00:00 +00:00
 tags:
 - .NET Aspire

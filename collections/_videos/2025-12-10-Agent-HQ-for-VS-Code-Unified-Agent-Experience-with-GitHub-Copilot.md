@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=PAgLzv1Lp1o
 title: 'Agent HQ for VS Code: Unified Agent Experience with GitHub Copilot'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-12-10 21:01:49 +00:00
 tags:

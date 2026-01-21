@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-azure-app-testing-scalable-end-to-end-app-validation/ba-p/4440496
 title: 'Azure App Testing: Unified AI-Driven Load and E2E Testing in the Cloud'
 author: John_Stallo
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-07 17:43:18 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=zTlJqnAns3E
 title: Open Source Friday with Suricata - Real-Time Threat Detection
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-01 20:29:23 +00:00
 tags:

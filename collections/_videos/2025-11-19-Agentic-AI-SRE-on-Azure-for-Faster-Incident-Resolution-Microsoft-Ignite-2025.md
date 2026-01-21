@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=-YopB25sPec
 title: Agentic AI SRE on Azure for Faster Incident Resolution (Microsoft Ignite 2025)
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 15:13:35 +00:00
 tags:

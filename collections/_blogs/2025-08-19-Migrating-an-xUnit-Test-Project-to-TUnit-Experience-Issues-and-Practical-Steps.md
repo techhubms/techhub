@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/converting-an-xunit-project-to-tunit/
 title: 'Migrating an xUnit Test Project to TUnit: Experience, Issues, and Practical Steps'
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2025-08-19 10:00:00 +00:00
 tags:

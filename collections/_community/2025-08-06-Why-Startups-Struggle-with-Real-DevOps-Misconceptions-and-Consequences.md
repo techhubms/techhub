@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/devops/comments/1mj39oo/every_startup_wants_devops_until_they_realize/
 title: 'Why Startups Struggle with Real DevOps: Misconceptions and Consequences'
 author: Pichipaul
-viewing_mode: external
 feed_name: Reddit DevOps
 date: 2025-08-06 12:26:20 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=UNJm-ipuQE8
 title: 'Levi’s Global IT Transformation: Migration and Modernization with Azure'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 12:08:40 +00:00
 tags:

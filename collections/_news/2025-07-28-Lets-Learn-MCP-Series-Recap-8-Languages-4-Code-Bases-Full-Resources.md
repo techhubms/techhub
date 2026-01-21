@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/lets-learn-mcp-series-recap-8-languages-4-code-bases-full-resources
 title: 'Let’s Learn MCP Series Recap: 8 Languages, 4 Code Bases, Full Resources'
 author: Katie Savage
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-07-28 16:00:02 +00:00
 tags:

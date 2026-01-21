@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/performance-of-llama-3-1-8b-ai-inference-using-vllm-on-nd-h100/ba-p/4448355
 title: Benchmarking Llama 3.1 8B AI Inference on Azure ND-H100-v5 with vLLM
 author: CormacGarvey
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-26 17:02:48 +00:00
 tags:

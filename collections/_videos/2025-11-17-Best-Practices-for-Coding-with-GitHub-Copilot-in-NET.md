@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=umRy69br51E
 title: Best Practices for Coding with GitHub Copilot in .NET
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-17 20:39:34 +00:00
 tags:

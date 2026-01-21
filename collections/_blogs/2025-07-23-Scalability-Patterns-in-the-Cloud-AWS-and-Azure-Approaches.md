@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/scalability-patterns-in-the-cloud-aws-azure-approaches/
 title: 'Scalability Patterns in the Cloud: AWS & Azure Approaches'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-07-23 08:34:05 +00:00
 tags:

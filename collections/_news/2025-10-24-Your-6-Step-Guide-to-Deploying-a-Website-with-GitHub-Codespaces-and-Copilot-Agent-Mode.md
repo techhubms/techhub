@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/all-things-azure/your-6-step-guide-to-deploying-a-website-with-github-codespaces-and-copilot-agent-mode/
 title: Your 6-Step Guide to Deploying a Website with GitHub Codespaces and Copilot Agent Mode
 author: Shree Chinnasamy, Priyanka Vergadia
-viewing_mode: external
 feed_name: Microsoft All Things Azure Blog
 date: 2025-10-24 22:38:54 +00:00
 tags:

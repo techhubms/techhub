@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/black-duck-software-extends-ai-reach-to-ide-to-better-secure-code/?utm_source=rss&utm_medium=rss&utm_campaign=black-duck-software-extends-ai-reach-to-ide-to-better-secure-code
 title: Black Duck Software Brings AI-Powered Security to IDEs
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-07 13:56:07 +00:00
 tags:

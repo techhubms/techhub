@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/11/21/microsoft-named-a-leader-in-the-gartner-magic-quadrant-for-access-management-for-the-ninth-consecutive-year/
 title: Microsoft Entra ID Recognized for Access Management Leadership in Gartner’s 2025 Magic Quadrant
 author: Joy Chik
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-11-21 17:00:00 +00:00
 tags:

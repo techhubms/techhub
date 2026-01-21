@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-30-start-your-new-repository-with-copilot-coding-agent
 title: Kickstart Repositories Using Copilot Coding Agent
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-30 22:58:07 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=jRJa83DeOd8
 title: 'Highlights and Upcoming Features in C#: A Deep Dive into C# 14'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-08-14 14:27:34 +00:00
 tags:

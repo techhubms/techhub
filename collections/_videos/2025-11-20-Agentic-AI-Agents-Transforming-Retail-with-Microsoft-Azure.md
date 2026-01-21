@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=08SaJOoqEho
 title: 'Agentic AI Agents: Transforming Retail with Microsoft Azure'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 17:14:03 +00:00
 tags:

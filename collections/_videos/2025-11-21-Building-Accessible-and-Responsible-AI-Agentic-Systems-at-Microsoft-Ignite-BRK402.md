@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=boFoMk9dEVk
 title: 'Building Accessible and Responsible AI: Agentic Systems at Microsoft Ignite BRK402'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 08:09:41 +00:00
 tags:

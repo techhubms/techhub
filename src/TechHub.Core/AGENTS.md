@@ -48,17 +48,11 @@ TechHub.Core/
 
 ### Immutability by Default
 
-**Use `init` accessors and `required` properties**:
+**Use `init` accessors and `required` properties** for all domain models:
 
-```csharp
-public class Section
-{
-    public required string Id { get; init; }
-    public required string Title { get; init; }
-    public required string Description { get; init; }
-    public required IReadOnlyList<Collection> Collections { get; init; }
-}
-```
+- Properties use `init` instead of `set`
+- Mark mandatory fields with `required`
+- Use `IReadOnlyList<T>` for collections
 
 **Benefits**:
 
@@ -66,6 +60,8 @@ public class Section
 - Prevents accidental mutations
 - Clear intent (values set once at creation)
 - Works perfectly with record types
+
+**See**: [Models/Section.cs](Models/Section.cs) for implementation
 
 ## Domain Model Patterns
 
@@ -153,40 +149,18 @@ The rest of the markdown content...
 
 **Use DTOs for API responses and client communication**:
 
-```csharp
-namespace TechHub.Core.DTOs;
+**DTO Structure**:
 
-/// <summary>
-/// Data transfer object for section API responses.
-/// </summary>
-public record SectionDto
-{
-    public required string Name { get; init; }
-    public required string Title { get; init; }
-    public required string Description { get; init; }
-    public required string Url { get; init; }
-    public required string BackgroundImage { get; init; }
-    public required IReadOnlyList<CollectionReferenceDto> Collections { get; init; }
-}
+- Use `record` types for value equality and immutability
+- Mark mandatory fields with `required`
+- Use `init` accessors
+- Add XML documentation comments
 
-/// <summary>
-/// Data transfer object for content item API responses.
-/// </summary>
-public record ContentItemDto
-{
-    public required string Slug { get; init; }
-    public required string Title { get; init; }
-    public string? Author { get; init; }
-    public required long DateEpoch { get; init; }
-    public required string CollectionName { get; init; }
-    public required IReadOnlyList<string> SectionNames { get; init; }
-    public required IReadOnlyList<string> Tags { get; init; }
-    public required string Excerpt { get; init; }
-    public string? ExternalUrl { get; init; }
-    public string ViewingMode { get; init; } = "external";
-    public string? VideoId { get; init; }
-}
-```
+**Key DTOs**:
+
+- `SectionDto` - Section data with collections ([DTOs/SectionDto.cs](DTOs/SectionDto.cs))
+- `ContentItemDto` - Content item with metadata ([DTOs/ContentItemDto.cs](DTOs/ContentItemDto.cs))
+- `CollectionDto` - Collection reference ([DTOs/CollectionDto.cs](DTOs/CollectionDto.cs))
 
 **DTO vs Domain Model**:
 
@@ -198,51 +172,19 @@ public record ContentItemDto
 
 **Define contracts for data access**:
 
-```csharp
-namespace TechHub.Core.Interfaces;
+**Key Repository Interfaces**:
 
-/// <summary>
-/// Repository for section data access.
-/// </summary>
-public interface ISectionRepository
-{
-    /// <summary>
-    /// Initializes the repository (loads data from configuration/files).
-    /// </summary>
-    Task<IReadOnlyList<Section>> InitializeAsync(CancellationToken ct = default);
-    
-    /// <summary>
-    /// Gets all sections.
-    /// </summary>
-    Task<IReadOnlyList<Section>> GetAllAsync(CancellationToken ct = default);
-    
-    /// <summary>
-    /// Gets a section by its URL.
-    /// </summary>
-    Task<Section?> GetByUrlAsync(string sectionUrl, CancellationToken ct = default);
-}
+- `ISectionRepository` - Section data access ([Interfaces/ISectionRepository.cs](Interfaces/ISectionRepository.cs))
+- `IContentRepository` - Content item data access ([Interfaces/IContentRepository.cs](Interfaces/IContentRepository.cs))
+- `IMarkdownService` - Markdown processing ([Interfaces/IMarkdownService.cs](Interfaces/IMarkdownService.cs))
+- `IRssService` - RSS feed generation ([Interfaces/IRssService.cs](Interfaces/IRssService.cs))
 
-/// <summary>
-/// Repository for content item data access.
-/// </summary>
-public interface IContentRepository
-{
-    /// <summary>
-    /// Gets all content items across all collections, sorted by date (newest first).
-    /// </summary>
-    Task<IReadOnlyList<ContentItem>> GetAllAsync(CancellationToken ct = default);
-    
-    /// <summary>
-    /// Gets content items for a specific section, sorted by date (newest first).
-    /// </summary>
-    Task<IReadOnlyList<ContentItem>> GetBySectionAsync(string sectionUrl, CancellationToken ct = default);
-    
-    /// <summary>
-    /// Gets a single content item by its slug.
-    /// </summary>
-    Task<ContentItem?> GetBySlugAsync(string slug, CancellationToken ct = default);
-}
-```
+**Repository Method Patterns**:
+
+- All methods async with `CancellationToken ct = default`
+- Return `Task<IReadOnlyList<T>>` for collections
+- Return `Task<T?>` for single items (null if not found)
+- Include XML documentation for each method
 
 **CRITICAL Repository Contract**:
 
@@ -250,31 +192,22 @@ public interface IContentRepository
 - This sorting happens at repository layer, before caching
 - Clients should never need to sort content themselves
 
+**See**: [Interfaces/](Interfaces/) for complete interface definitions
+
 ## URL Generation Methods
 
-**ContentItem methods for URL generation**:
+**ContentItem includes URL generation methods**:
 
-```csharp
-namespace TechHub.Core.Models;
+**`GetUrlInSection(string sectionName)`**:
 
-public class ContentItem
-{
-    // ... properties ...
-    
-    /// <summary>
-    /// Generates the URL for this content item within a specific section.
-    /// </summary>
-    /// <param name="sectionName">The section URL (e.g., "github-copilot").</param>
-    /// <returns>Full URL path (e.g., "/github-copilot/blogs/2024-01-15-article").</returns>
-    public string GetUrlInSection(string sectionName)
-    {
-        if (!SectionNames.Contains(sectionName))
-            throw new ArgumentException($"Content not in section '{sectionName}'", nameof(sectionName));
-        
-        return $"/{sectionName}/{Collection}/{Slug}";
-    }
-}
-```
+- Generates full URL path for content item
+- Pattern: `/{sectionName}/{collectionName}/{slug}`
+- Validates section name exists in item's `SectionNames`
+- Throws `ArgumentException` if section not found
+
+**Example**: `GetUrlInSection("github-copilot")` → `"/github-copilot/blogs/2024-01-15-article"`
+
+**See**: [Models/ContentItem.cs](Models/ContentItem.cs) for implementation
 
 ## Unix Epoch Timestamp Usage
 
@@ -286,29 +219,11 @@ public class ContentItem
 public required long DateEpoch { get; init; }  // Seconds since Unix epoch
 ```
 
-**Conversion from DateTime**:
+**Conversion Examples**:
 
-```csharp
-var date = new DateTime(2026, 1, 7, 10, 30, 0, DateTimeKind.Utc);
-long epochSeconds = new DateTimeOffset(date).ToUnixTimeSeconds();
-```
-
-**Conversion from frontmatter string** (see Infrastructure/AGENTS.md):
-
-```csharp
-// Frontmatter: "date: 2026-01-07" or "date: 2026-01-07 14:30:00 +0100"
-var dateString = "2026-01-07";
-var date = DateTime.Parse(dateString);
-var brusselsTime = TimeZoneInfo.ConvertTimeToUtc(date, 
-    TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels"));
-long epochSeconds = new DateTimeOffset(brusselsTime).ToUnixTimeSeconds();
-```
-
-**Conversion to DateTime**:
-
-```csharp
-var dateTime = DateTimeOffset.FromUnixTimeSeconds(item.DateEpoch).DateTime;
-```
+- **From DateTime**: `new DateTimeOffset(date).ToUnixTimeSeconds()`
+- **To DateTime**: `DateTimeOffset.FromUnixTimeSeconds(epochSeconds).DateTime`
+- **From frontmatter**: See [src/TechHub.Infrastructure/AGENTS.md](../TechHub.Infrastructure/AGENTS.md) for parsing logic
 
 **Why Unix Epoch?**:
 
@@ -321,92 +236,41 @@ var dateTime = DateTimeOffset.FromUnixTimeSeconds(item.DateEpoch).DateTime;
 
 **Pattern**: Use extension methods for converting domain models to DTOs
 
-```csharp
-namespace TechHub.Core.Extensions;
+**Extension Method Structure**:
 
-public static class ContentItemExtensions
-{
-    public static ContentItemDto ToDto(this ContentItem item)
-    {
-        return new ContentItemDto
-        {
-            Slug = item.Slug,
-            Title = item.Title,
-            Author = item.Author,
-            Description = item.Description,
-            Date = item.DateEpoch,
-            SectionNames = item.SectionNames.ToList(),
-            PrimarySectionName = item.SectionNames.FirstOrDefault() ?? "",
-            Collection = item.Collection,
-            Tags = item.Tags.ToList(),
-            Excerpt = item.Excerpt,
-            RenderedHtml = item.RenderedHtml,
-            ExternalUrl = item.ExternalUrl,
-            ViewingMode = item.ViewingMode,
-            VideoId = item.VideoId
-        };
-    }
-    
-    public static IEnumerable<ContentItemDto> ToDtos(this IEnumerable<ContentItem> items)
-    {
-        return items.Select(i => i.ToDto());
-    }
-}
-```
+- `ToDto(this ContentItem)` - Convert single item
+- `ToDtos(this IEnumerable<ContentItem>)` - Convert collection
+- Map all properties from domain model to DTO
+- Handle nullable properties appropriately
 
-**Usage in repositories**:
+**Usage Examples**:
 
-```csharp
-public async Task<ContentItemDto?> GetBySlugAsync(string slug, CancellationToken ct)
-{
-    var item = await _repository.GetBySlugAsync(slug, ct);
-    return item?.ToDto();
-}
-```
+- **In repositories**: `return item?.ToDto();`
+- **In API endpoints**: `Results.Ok(item.ToDto())`
+- **For collections**: `items.ToDtos()`
 
-**Usage in API endpoints**:
-
-```csharp
-public async Task<IResult> GetContent(string slug, IContentRepository repo)
-{
-    var item = await repo.GetBySlugAsync(slug);
-    return item != null 
-        ? Results.Ok(item.ToDto()) 
-        : Results.NotFound();
-}
-```
+**See**: [Extensions/ContentItemExtensions.cs](Extensions/ContentItemExtensions.cs) for implementation
 
 ## Validation Patterns
 
 **Add validation methods to domain models**:
 
-```csharp
-public class ContentItem
-{
-    // ... properties ...
-    
-    /// <summary>
-    /// Validates that all required properties are correctly formatted.
-    /// </summary>
-    public void Validate()
-    {
-        if (string.IsNullOrWhiteSpace(Slug))
-            throw new ArgumentException("Slug cannot be empty", nameof(Slug));
-        
-        if (string.IsNullOrWhiteSpace(Title))
-            throw new ArgumentException("Title cannot be empty", nameof(Title));
-        
-        if (DateEpoch <= 0)
-            throw new ArgumentException("DateEpoch must be positive", nameof(DateEpoch));
-        
-        if (SectionNames.Count == 0)
-            throw new ArgumentException("Must have at least one section", nameof(SectionNames));
-        
-        if (ViewingMode is not "internal" and not "external")
-            throw new ArgumentException("ViewingMode must be 'internal' or 'external'", nameof(ViewingMode));
-    }
-}
-```
+**Validation Method Pattern**:
+
+- Method name: `Validate()`
+- Throws `ArgumentException` for invalid state
+- Validates required fields are not empty
+- Validates numeric fields are in valid range
+- Validates enum-like fields have allowed values
+
+**Common Validations**:
+
+- String fields: Check `IsNullOrWhiteSpace`
+- Numeric fields: Check positive values
+- Collections: Check minimum count
+- Enums: Check allowed values
+
+**See**: [Models/ContentItem.cs](Models/ContentItem.cs) `Validate()` method for implementation
 
 ## Testing
 

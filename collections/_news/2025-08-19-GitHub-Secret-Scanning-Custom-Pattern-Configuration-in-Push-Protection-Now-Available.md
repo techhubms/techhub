@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-19-secret-scanning-configuring-patterns-in-push-protection-is-now-generally-available
 title: 'GitHub Secret Scanning: Custom Pattern Configuration in Push Protection Now Available'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-19 21:49:26 +00:00
 tags:

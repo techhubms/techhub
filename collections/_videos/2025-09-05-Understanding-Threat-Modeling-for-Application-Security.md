@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=sDLrub3WyG4
 title: Understanding Threat Modeling for Application Security
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-05 16:54:20 +00:00
 tags:

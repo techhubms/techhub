@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/the-new-metrics-of-devops-speed-trust-and-transparency/
 title: 'The New Metrics of DevOps: Speed, Trust and Transparency'
 author: Alan Shimel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-23 19:33:45 +00:00
 tags:

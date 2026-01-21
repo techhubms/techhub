@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=TY0uDOnFzPY
 title: 'Inside Windows Security from Client to Cloud: Innovations in Windows 11 and Windows 365 | BRK258'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 17:15:06 +00:00
 tags:

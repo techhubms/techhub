@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=slDdNIQCJBQ
 title: 'Foundry IQ: The Future of Retrieval-Augmented Generation with Azure AI Search and Knowledge Retrieval'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 07:32:34 +00:00
 tags:

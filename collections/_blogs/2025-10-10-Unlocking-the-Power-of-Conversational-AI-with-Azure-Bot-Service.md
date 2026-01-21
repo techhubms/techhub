@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/unlocking-the-power-of-conversational-ai-with-azure-bot-service/
 title: Unlocking the Power of Conversational AI with Azure Bot Service
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-10 14:06:46 +00:00
 tags:

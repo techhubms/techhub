@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/vibing-with-the-future-why-vibe-coding-is-the-next-big-wave-for-devops-and-ci-cd-teams/?utm_source=rss&utm_medium=rss&utm_campaign=vibing-with-the-future-why-vibe-coding-is-the-next-big-wave-for-devops-and-ci-cd-teams
 title: 'Vibe Coding: Transforming DevOps and CI/CD Teams with AI-Powered Collaboration'
 author: Alan Shimel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-02 11:05:25 +00:00
 tags:

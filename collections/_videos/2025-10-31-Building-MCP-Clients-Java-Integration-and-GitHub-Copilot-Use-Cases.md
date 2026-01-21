@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=HQQavvdrAA0
 title: 'Building MCP Clients: Java Integration and GitHub Copilot Use Cases'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-31 00:00:22 +00:00
 tags:

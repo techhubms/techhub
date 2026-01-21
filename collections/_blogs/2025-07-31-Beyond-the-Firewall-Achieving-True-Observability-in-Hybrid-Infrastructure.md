@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/beyond-the-firewall-achieving-true-observability-in-the-era-of-hybrid-infrastructure/?utm_source=rss&utm_medium=rss&utm_campaign=beyond-the-firewall-achieving-true-observability-in-the-era-of-hybrid-infrastructure
 title: Beyond the Firewall - Achieving True Observability in Hybrid Infrastructure
 author: Gerardo Dada
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-07-31 05:00:01 +00:00
 tags:

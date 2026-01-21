@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=MB5uMCCGpMY
 title: "What's New: GitHub MCP Registry, Copilot CLI Public Preview, and Beast Mode for Copilot"
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-09-26 23:13:32 +00:00
 tags:

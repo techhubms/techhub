@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-toolkit-for-intellij-introducing-the-enhanced-java-code-quality-analyzer/
 title: Azure Toolkit for IntelliJ Brings Enhanced Java Code Quality Analyzer for Azure SDK Development
 author: Sameeksha Vaity
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-04-18 17:49:56 +00:00
 tags:

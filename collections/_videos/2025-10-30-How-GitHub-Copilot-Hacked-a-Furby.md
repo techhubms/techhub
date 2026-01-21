@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/oETSqqi4CqU
 title: How GitHub Copilot Hacked a Furby
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-30 14:01:27 +00:00
 tags:

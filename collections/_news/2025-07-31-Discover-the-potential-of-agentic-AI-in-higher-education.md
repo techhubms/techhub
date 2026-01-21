@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/education/blog/2025/07/discover-the-potential-of-agentic-ai-in-higher-education/
 title: Discover the Potential of Agentic AI in Higher Education
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-07-31 19:34:18 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-28-work-with-copilot-coding-agent-in-slack
 title: Use GitHub Copilot Coding Agent with Slack to Generate Pull Requests
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-28 15:26:45 +00:00
 tags:

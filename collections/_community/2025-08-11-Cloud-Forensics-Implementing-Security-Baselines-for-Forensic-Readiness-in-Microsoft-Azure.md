@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-security-experts-blog/cloud-forensics-prepare-for-the-worst-implement-security/ba-p/4440310
 title: 'Cloud Forensics: Implementing Security Baselines for Forensic Readiness in Microsoft Azure'
 author: Mary_Asaolu
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-11 07:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/research/blog/crescent-library-brings-privacy-to-digital-identity-systems/
 title: "Introducing Crescent: Microsoft's Cryptographic Library for Privacy-Preserving Digital Identity"
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-26 18:56:40 +00:00
 tags:

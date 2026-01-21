@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/hosting-remote-mcp-server-on-azure-container-apps-aca-using/ba-p/4459263
 title: Hosting Remote MCP Server on Azure Container Apps Using HTTP Transport
 author: DeepGanguly
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-15 04:22:11 +00:00
 tags:

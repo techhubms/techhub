@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/unlocking-the-future-azure-networking-updates-on-security-reliability-and-high-availability-2/
 title: 'Azure Networking Updates: Security, Resilience, and AI-Driven Scale'
 author: Narayan Annamalai
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-12-01 17:00:00 +00:00
 tags:

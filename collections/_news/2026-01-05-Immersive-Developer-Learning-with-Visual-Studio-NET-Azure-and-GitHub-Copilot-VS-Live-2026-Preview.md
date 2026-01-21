@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/vs-live-2026-immersive-learning-for-vs2026/
 title: 'Immersive Developer Learning with Visual Studio, .NET, Azure, and GitHub Copilot: VS Live! 2026 Preview'
 author: Jim Harrer
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2026-01-05 14:29:43 +00:00
 tags:

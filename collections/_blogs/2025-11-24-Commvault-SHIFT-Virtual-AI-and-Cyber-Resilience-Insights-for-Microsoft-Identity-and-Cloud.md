@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/11/commvault-shift-virtual-a-new-era-of-ai-driven-cyber-resilience-on-demand/
 title: 'Commvault SHIFT Virtual: AI and Cyber Resilience Insights for Microsoft Identity and Cloud'
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-11-24 08:29:00 +00:00
 tags:

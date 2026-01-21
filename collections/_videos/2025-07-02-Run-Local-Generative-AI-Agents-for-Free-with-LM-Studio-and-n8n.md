@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=hsPMSAzxdtU
 title: Run Local Generative AI Agents for Free with LM Studio and n8n
 author: Alireza Chegini | AI Skills for Your Career
-viewing_mode: internal
 feed_name: Alireza Chegini's YouTube
 date: 2025-07-02 16:01:27 +00:00
 tags:

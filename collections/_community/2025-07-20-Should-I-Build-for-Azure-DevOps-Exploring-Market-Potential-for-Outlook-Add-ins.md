@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m4jkch/should_i_build_for_ado/
 title: Should I Build for Azure DevOps? Exploring Market Potential for Outlook Add-ins
 author: Floating-pointer
-viewing_mode: external
 feed_name: Reddit Azure DevOps
 date: 2025-07-20 08:10:49 +00:00
 tags:

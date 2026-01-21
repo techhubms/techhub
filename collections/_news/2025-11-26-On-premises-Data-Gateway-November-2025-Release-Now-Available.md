@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-november-2025-release/
 title: On-premises Data Gateway November 2025 Release Now Available
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-26 09:00:00 +00:00
 tags:

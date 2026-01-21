@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-06-25-github-copilot-coding-agent-is-available-for-copilot-pro-users-in-public-preview
 title: GitHub Copilot coding agent is available for Copilot Pro users in public preview
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-06-26 13:23:05 +00:00
 tags:

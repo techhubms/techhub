@@ -1,7 +1,6 @@
-﻿---
+---
 title: GitHub Copilot Agent Preview, Azure AI Foundry GA, and Smarter .NET Workflows
 author: Tech Hub Team
-viewing_mode: internal
 date: 2025-07-07 09:00:00 +00:00
 tags:
 - .NET 10

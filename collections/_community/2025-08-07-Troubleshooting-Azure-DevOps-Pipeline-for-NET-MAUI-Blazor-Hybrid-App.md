@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/azuredevops/comments/1mjui7y/dotnet_maui_pipeline/
 title: Troubleshooting Azure DevOps Pipeline for .NET MAUI Blazor Hybrid App
 author: Background_March7229
-viewing_mode: external
 feed_name: Reddit Azure DevOps
 date: 2025-08-07 08:26:59 +00:00
 tags:

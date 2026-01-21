@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/closing-the-loop-interactive-write-back-from-power-bi-to-azure/ba-p/4442999
 title: Interactive Write-back from Power BI to Azure Databricks with Power Platform Connector
 author: AnaviNahar
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-15 00:12:37 +00:00
 tags:

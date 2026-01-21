@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/enhancing-conversational-agents-with-azure-ai-language-conversational-language-understanding-and-custom-question-answering/
 title: 'Enhancing Conversational Agents with Azure AI Language: CLU and Custom Question Answering'
 author: peytonfraser
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-06-03 22:20:12 +00:00
 tags:

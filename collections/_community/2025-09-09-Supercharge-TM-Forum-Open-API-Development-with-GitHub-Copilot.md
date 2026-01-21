@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/supercharge-your-tm-forum-open-api-development-with-github/ba-p/4451366
 title: Supercharge TM Forum Open API Development with GitHub Copilot
 author: 6192751
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-09 13:42:07 +00:00
 tags:

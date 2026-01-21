@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=kpY9N1bWI-M
 title: 'How AI Transforms Network Operations: Real-Time Insights at Microsoft Ignite'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 13:03:09 +00:00
 tags:

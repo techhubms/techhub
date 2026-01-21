@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/august-2025-fabric-feature-summary/
 title: 'August 2025 Microsoft Fabric Feature Summary: Data Engineering, ML, and Platform Enhancements'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-08-27 09:14:00 +00:00
 tags:

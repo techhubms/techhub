@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/11/18/agents-built-into-your-workflow-get-security-copilot-with-microsoft-365-e5/
 title: 'AI-Driven Security Agents Now in Microsoft 365 E5: Security Copilot Integration and Expansion'
 author: Dorothy Li
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-11-18 16:00:00 +00:00
 tags:

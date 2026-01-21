@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-arc-gateway-for-azure/ba-p/4456256
 title: Announcing the General Availability of Arc Gateway for Azure Local
 author: Cristian Edwards Sabathe
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-25 13:15:23 +00:00
 tags:

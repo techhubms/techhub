@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-04-the-dashboard-feed-page-gets-a-refreshed-faster-experience
 title: GitHub Dashboard Feed Page Updated for Better Performance and Consistency
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-04 21:07:51 +00:00
 tags:

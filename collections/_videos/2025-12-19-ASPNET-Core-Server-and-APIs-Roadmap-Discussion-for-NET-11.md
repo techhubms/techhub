@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=C-Rn-8MbXtA
 title: ASP.NET Core Server & APIs Roadmap Discussion for .NET 11
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-12-19 17:34:57 +00:00
 tags:

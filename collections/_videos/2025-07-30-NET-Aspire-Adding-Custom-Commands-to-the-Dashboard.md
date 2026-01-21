@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=idXn50wKqhY
 title: .NET Aspire – Adding Custom Commands to the Dashboard
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-07-30 17:19:49 +00:00
 tags:

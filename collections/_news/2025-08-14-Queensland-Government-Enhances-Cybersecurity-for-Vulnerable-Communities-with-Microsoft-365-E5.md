@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/asia/2025/08/14/championing-safety-how-one-queensland-government-department-is-transforming-cybersecurity-to-better-support-vulnerable-communities/
 title: Queensland Government Enhances Cybersecurity for Vulnerable Communities with Microsoft 365 E5
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-14 14:15:40 +00:00
 tags:

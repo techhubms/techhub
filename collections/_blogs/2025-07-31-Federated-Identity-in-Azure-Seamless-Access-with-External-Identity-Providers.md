@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/federated-identity-in-azure-seamless-access-with-external-identity-providers/
 title: 'Federated Identity in Azure: Seamless Access with External Identity Providers'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-07-31 08:28:57 +00:00
 tags:

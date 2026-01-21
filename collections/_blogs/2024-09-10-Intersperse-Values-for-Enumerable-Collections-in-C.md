@@ -2,7 +2,6 @@
 external_url: https://khalidabuhakmeh.com/intersperse-values-for-enumerable-collections
 title: Intersperse Values for Enumerable Collections in C#
 author: Khalid Abuhakmeh
-viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
 date: 2024-09-10 00:00:00 +00:00
 tags:

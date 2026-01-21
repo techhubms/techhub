@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/unlock-savings-with-copilot-credit-pre-purchase-plan/ba-p/4464517
 title: Cost Optimization with Copilot Credit Pre-Purchase Plan for Microsoft Copilot Studio
 author: kyleikeda
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-27 15:29:27 +00:00
 tags:

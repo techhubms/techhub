@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-28-upcoming-deprecation-of-codeql-action-v3
 title: Upcoming Deprecation of CodeQL Action v3
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-28 18:05:01 +00:00
 tags:

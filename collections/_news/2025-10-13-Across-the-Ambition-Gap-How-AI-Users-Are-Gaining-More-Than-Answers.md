@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.windows.com/windowsexperience/2025/10/13/across-the-ambition-gap-how-ai-users-are-gaining-more-than-answers/
 title: 'Across the Ambition Gap: How AI Users Are Gaining More Than Answers'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-13 15:45:17 +00:00
 tags:

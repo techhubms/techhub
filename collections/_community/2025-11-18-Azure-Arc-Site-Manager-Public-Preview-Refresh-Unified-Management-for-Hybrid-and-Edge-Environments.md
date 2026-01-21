@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-refresh-announcement-site-manager/ba-p/4468929
 title: 'Azure Arc Site Manager Public Preview Refresh: Unified Management for Hybrid and Edge Environments'
 author: supriyobanerjee
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:00:00 +00:00
 tags:

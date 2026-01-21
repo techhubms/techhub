@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=K-ntHsFriuI
 title: Enhancing Existing .NET REST APIs with Model Creation Protocol (MCP) and AI
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 19:21:26 +00:00
 tags:

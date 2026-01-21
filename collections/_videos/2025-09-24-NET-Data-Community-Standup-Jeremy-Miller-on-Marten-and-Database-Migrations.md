@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=_ICoF0utyt4
 title: '.NET Data Community Standup: Jeremy Miller on Marten and Database Migrations'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-09-24 23:13:32 +00:00
 tags:

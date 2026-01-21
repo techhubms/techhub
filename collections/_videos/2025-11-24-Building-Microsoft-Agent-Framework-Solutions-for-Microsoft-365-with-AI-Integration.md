@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=gdi95CKeQL4
 title: Building Microsoft Agent Framework Solutions for Microsoft 365 with AI Integration
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 06:30:30 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/blogs/2025/04/07/agentMode
 title: Agent Mode Now Available to All VS Code Users with MCP Support
 author: Isidor Nikolic
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-04-07 00:00:00 +00:00
 tags:

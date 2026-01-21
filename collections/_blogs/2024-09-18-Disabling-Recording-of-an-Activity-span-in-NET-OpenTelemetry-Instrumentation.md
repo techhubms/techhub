@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.stevejgordon.co.uk/disabling-recording-of-an-activity-span-in-dotnet-opentelemetry-instrumentation
 title: Disabling Recording of an Activity (span) in .NET OpenTelemetry Instrumentation
 author: Steve Gordon
-viewing_mode: external
 feed_name: Steve Gordon's Blog
 date: 2024-09-18 11:30:07 +00:00
 tags:

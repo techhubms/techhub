@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=q7PdMVpW-04
 title: Modernizing ERP with RISE with SAP on Microsoft Azure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 15:48:41 +00:00
 tags:

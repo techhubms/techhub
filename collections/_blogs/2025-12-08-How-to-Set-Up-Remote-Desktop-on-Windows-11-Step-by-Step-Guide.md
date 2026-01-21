@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-to-set-up-remote-desktop-on-windows-11-a-beginners-guide/
 title: 'How to Set Up Remote Desktop on Windows 11: Step-by-Step Guide'
 author: John Edward
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-12-08 12:11:18 +00:00
 tags:

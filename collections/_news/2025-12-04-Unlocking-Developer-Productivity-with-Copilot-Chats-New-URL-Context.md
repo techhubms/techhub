@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/unlocking-the-power-of-web-with-copilot-chats-new-url-context/
 title: Unlocking Developer Productivity with Copilot Chat’s New URL Context
 author: Jessie Houghton
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-12-04 13:00:24 +00:00
 tags:

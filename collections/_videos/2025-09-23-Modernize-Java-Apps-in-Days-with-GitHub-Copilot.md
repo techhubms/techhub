@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/D-fES6lwrks
 title: Modernize Java Apps in Days with GitHub Copilot
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-23 15:28:19 +00:00
 tags:

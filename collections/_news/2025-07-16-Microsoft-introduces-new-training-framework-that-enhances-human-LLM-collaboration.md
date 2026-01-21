@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/research/blog/collabllm-teaching-llms-to-collaborate-with-users/
 title: Microsoft introduces new training framework that enhances human-LLM collaboration
 author: stclarke
 feed_name: Microsoft News
 date: 2025-07-16 17:35:05 +00:00
-viewing_mode: external
 tags:
 - AI Enhancement
 - AI Research

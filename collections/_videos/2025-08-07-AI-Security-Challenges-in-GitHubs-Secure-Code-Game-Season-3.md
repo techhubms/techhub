@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/MNrqRV3N2bY
 title: AI Security Challenges in GitHub's Secure Code Game Season 3
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-07 16:24:36 +00:00
 tags:

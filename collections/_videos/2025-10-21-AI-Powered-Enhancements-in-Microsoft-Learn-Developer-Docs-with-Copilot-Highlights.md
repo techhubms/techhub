@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=4fYXcmyZH3U
 title: AI-Powered Enhancements in Microsoft Learn Developer Docs with Copilot Highlights
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-21 15:41:25 +00:00
 tags:

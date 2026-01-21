@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=v3i5v9deZvI
 title: 'Defending Cloud Platforms: Unified Security with Microsoft Defender'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 14:36:50 +00:00
 tags:

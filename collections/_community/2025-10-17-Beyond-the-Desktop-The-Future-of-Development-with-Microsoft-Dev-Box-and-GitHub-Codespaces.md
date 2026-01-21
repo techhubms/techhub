@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/beyond-the-desktop-the-future-of-development-with-microsoft-dev/ba-p/4459483
 title: 'Beyond the Desktop: The Future of Development with Microsoft Dev Box and GitHub Codespaces'
 author: owaino
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-17 17:58:05 +00:00
 tags:

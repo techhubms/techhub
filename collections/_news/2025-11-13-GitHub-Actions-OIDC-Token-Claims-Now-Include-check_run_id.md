@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-13-github-actions-oidc-token-claims-now-include-check_run_id
 title: GitHub Actions OIDC Token Claims Now Include check_run_id
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-13 15:16:52 +00:00
 tags:

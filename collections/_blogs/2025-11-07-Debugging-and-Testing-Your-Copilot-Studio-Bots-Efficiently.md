@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/debugging-and-testing-your-copilot-studio-bots-efficiently/
 title: Debugging and Testing Your Copilot Studio Bots Efficiently
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-07 09:52:36 +00:00
 tags:

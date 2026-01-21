@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=nSwj2Ma0pnk
 title: 'GitHub Universe 2025 Day 1 Recap: Announcements and New Features'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-29 05:47:21 +00:00
 tags:

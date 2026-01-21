@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-for-python-on-app-service-for-linux-pyproject-toml-uv/ba-p/4468903
 title: 'What’s New for Python on Azure App Service for Linux: pyproject.toml, uv, and Modern Deployments'
 author: TulikaC
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-12 15:16:13 +00:00
 tags:

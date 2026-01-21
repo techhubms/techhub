@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-named-a-leader-in-the-forrester-wave-data-fabric-platforms-q4-2025/
 title: 'Microsoft Recognized as a Leader in Forrester Wave™: Data Fabric Platforms, Q4 2025'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-03 08:00:00 +00:00
 tags:

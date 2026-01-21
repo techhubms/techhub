@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/news-insights/product-news/your-stack-your-rules-introducing-custom-agents-in-github-copilot-for-observability-iac-and-security/
 title: Introducing Custom Agents in GitHub Copilot for Developer Workflows
 author: Griffin Ashe
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-03 17:00:45 +00:00
 tags:

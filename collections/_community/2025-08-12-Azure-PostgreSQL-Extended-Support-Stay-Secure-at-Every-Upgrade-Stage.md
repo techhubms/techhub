@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-database-for-postgresql/azure-postgresql-extended-support-stay-secure-at-every-stage-of/ba-p/4442283
 title: 'Azure PostgreSQL Extended Support: Stay Secure at Every Upgrade Stage'
 author: andreatapia
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-12 16:17:14 +00:00
 tags:

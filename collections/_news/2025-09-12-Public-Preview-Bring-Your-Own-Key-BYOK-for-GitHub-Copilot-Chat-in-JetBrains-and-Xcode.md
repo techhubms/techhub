@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-11-bring-your-own-key-byok-support-for-jetbrains-ides-and-xcode-in-public-preview
 title: 'Public Preview: Bring Your Own Key (BYOK) for GitHub Copilot Chat in JetBrains and Xcode'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-12 00:20:55 +00:00
 tags:

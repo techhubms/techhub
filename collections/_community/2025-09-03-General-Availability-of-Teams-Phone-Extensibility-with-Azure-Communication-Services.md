@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-communication-services/general-availability-of-teams-phone-extensibility/ba-p/4446092
 title: General Availability of Teams Phone Extensibility with Azure Communication Services
 author: AnkurAgarwal
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-03 15:22:37 +00:00
 tags:

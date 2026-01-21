@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-06-improved-onboarding-flow-for-github-projects
 title: Improved Onboarding Flow for GitHub Projects
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-06 17:50:59 +00:00
 tags:

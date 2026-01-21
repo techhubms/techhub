@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure/kickstart-conditional-access-in-microsoft-entra-free-starter/m-p/4447413#M22136
 title: 'Kickstart Conditional Access in Microsoft Entra: Free Starter Pack with Policies & Automation'
 author: SoaebRathod
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-23 14:13:11 +00:00
 tags:

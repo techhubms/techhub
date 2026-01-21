@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=rE6svXzyhg0
 title: Creating a Custom Chat Mode in VS Code for Smarter AI Assistance
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-08-02 06:32:44 +00:00
 tags:

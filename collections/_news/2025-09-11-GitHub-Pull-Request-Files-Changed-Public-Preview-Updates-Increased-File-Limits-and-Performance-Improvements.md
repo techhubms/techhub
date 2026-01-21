@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-11-pull-request-files-changed-public-preview-experience-september-11-updates
 title: GitHub Pull Request ‘Files Changed’ Public Preview Updates – Increased File Limits and Performance Improvements
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-11 22:53:29 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/survey-surfaces-multiple-devops-platform-migration-challenges/
 title: Survey Reveals Challenges in DevOps Platform Migrations and AI Tool Integration
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-11-13 02:44:52 +00:00
 tags:

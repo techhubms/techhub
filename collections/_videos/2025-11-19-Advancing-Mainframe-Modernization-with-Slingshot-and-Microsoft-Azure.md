@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=8An3LobkPxI
 title: Advancing Mainframe Modernization with Slingshot and Microsoft Azure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 13:17:27 +00:00
 tags:

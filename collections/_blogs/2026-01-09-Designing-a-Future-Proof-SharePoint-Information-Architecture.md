@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-to-design-a-future-proof-sharepoint-information-architecture/
 title: Designing a Future-Proof SharePoint Information Architecture
 author: John Edward
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2026-01-09 09:19:21 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-at-kubecon-india-2025-hyderabad-india-6-7-august-2025/ba-p/4440439
 title: Azure Innovations and AKS Advancements Showcased at KubeCon India 2025
 author: coryskimming
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-06 02:30:00 +00:00
 tags:

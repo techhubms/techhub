@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=hjtQp9kEMH8
 title: '.NET MAUI on Linux with Avalonia: Community Standup Recap'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2026-01-07 16:38:08 +00:00
 tags:

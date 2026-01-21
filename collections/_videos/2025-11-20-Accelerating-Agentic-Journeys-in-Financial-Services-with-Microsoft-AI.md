@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=9AQu3a7Y8so
 title: Accelerating Agentic Journeys in Financial Services with Microsoft AI
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 11:23:30 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/announcing-foundry-mcp-server-preview-speeding-up-ai-dev-with-microsoft-foundry/
 title: 'Accelerating AI Agent Development: Foundry MCP Server Preview Announced'
 author: SeokJin Han
-viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
 date: 2025-12-03 19:15:11 +00:00
 tags:

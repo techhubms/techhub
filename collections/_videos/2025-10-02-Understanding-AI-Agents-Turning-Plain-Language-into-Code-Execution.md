@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=xG3py56UBUo
 title: 'Understanding AI Agents: Turning Plain Language into Code Execution'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-02 17:36:29 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/turbocharge-your-coding-top-github-copilot-shortcuts-and-productivity-tips-for-vs-code/
 title: Top GitHub Copilot Shortcuts and Productivity Tips for VS Code
 author: John Edward
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-21 15:39:36 +00:00
 tags:

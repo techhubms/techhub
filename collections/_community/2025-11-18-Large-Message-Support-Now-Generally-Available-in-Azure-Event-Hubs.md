@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/general-availability-large-message-support-in-azure-event-hubs/ba-p/4471094
 title: Large Message Support Now Generally Available in Azure Event Hubs
 author: Sannidhya_Glodha
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 19:05:31 +00:00
 tags:

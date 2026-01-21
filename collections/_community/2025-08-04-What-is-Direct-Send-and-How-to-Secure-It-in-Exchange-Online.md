@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/exchange-team-blog/what-is-direct-send-and-how-to-secure-it/ba-p/4439865
 title: What is Direct Send and How to Secure It in Exchange Online
 author: The_Exchange_Team
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-04 16:06:17 +00:00
 tags:

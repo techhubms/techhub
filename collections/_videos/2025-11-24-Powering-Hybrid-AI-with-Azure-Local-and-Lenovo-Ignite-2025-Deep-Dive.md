@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=BbOsfkQRrik
 title: 'Powering Hybrid AI with Azure Local and Lenovo: Ignite 2025 Deep Dive'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 10:34:29 +00:00
 tags:

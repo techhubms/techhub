@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-29-copilots-next-edit-suggestion-nes-in-public-preview-in-jetbrains
 title: 'Next Edit Suggestions (NES) with GitHub Copilot for JetBrains IDEs: Public Preview'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-29 17:32:16 +00:00
 tags:

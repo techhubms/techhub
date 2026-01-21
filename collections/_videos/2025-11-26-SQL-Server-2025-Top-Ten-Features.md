@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=45I_m50kInE
 title: SQL Server 2025 Top Ten Features
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-11-26 16:52:12 +00:00
 tags:

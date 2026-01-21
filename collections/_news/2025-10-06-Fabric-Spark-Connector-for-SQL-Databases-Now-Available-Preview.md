@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/spark-connector-for-sql-databases-preview/
 title: Fabric Spark Connector for SQL Databases Now Available (Preview)
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-10-06 10:12:54 +00:00
 tags:

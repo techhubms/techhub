@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-mcp-demos/ba-p/4452175
 title: 'Building MCP Servers with Azure Logic Apps: Demo Collection'
 author: KentWeareMSFT
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-08 20:32:48 +00:00
 tags:

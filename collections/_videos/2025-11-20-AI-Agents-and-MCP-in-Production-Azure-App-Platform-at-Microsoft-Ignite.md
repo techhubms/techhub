@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=vnJP6xWHhO0
 title: 'AI Agents and MCP in Production: Azure App Platform at Microsoft Ignite'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 16:16:49 +00:00
 tags:

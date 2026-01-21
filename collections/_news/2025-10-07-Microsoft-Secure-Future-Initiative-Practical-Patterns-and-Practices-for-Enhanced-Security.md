@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/07/new-microsoft-secure-future-initiative-sfi-patterns-and-practices-practical-guides-to-strengthen-security/
 title: 'Microsoft Secure Future Initiative: Practical Patterns and Practices for Enhanced Security'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-07 16:56:53 +00:00
 tags:

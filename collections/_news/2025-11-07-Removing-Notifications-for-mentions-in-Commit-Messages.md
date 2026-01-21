@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-07-removing-notifications-for-mentions-in-commit-messages
 title: Removing Notifications for @mentions in Commit Messages
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-07 16:22:05 +00:00
 tags:

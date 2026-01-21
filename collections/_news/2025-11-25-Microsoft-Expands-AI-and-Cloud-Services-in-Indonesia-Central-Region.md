@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/asia/2025/11/25/microsoft-expands-ai-infrastructure-and-cloud-services-in-indonesia-empowering-more-organizations-to-innovate-locally/
 title: Microsoft Expands AI and Cloud Services in Indonesia Central Region
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-25 16:03:02 +00:00
 tags:

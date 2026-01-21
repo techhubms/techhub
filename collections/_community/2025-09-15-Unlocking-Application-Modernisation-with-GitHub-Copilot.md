@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unlocking-application-modernisation-with-github-copilot/ba-p/4454121
 title: Unlocking Application Modernisation with GitHub Copilot
 author: Richard_Healy
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-15 13:37:12 +00:00
 tags:

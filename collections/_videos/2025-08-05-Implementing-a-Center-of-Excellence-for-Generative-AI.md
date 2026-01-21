@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=SwNcZbc2UAM
 title: Implementing a Center of Excellence for Generative AI
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-05 07:00:27 +00:00
 tags:

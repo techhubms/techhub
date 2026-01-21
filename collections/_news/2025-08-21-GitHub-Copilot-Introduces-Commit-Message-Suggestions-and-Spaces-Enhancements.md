@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-21-copilot-generated-commit-messages-on-github-com-is-in-public-preview
 title: GitHub Copilot Introduces Commit Message Suggestions and Spaces Enhancements
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-21 15:10:53 +00:00
 tags:

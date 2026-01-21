@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m1xrde/how_to_autoresolve_100_merge_conflicts_by/
 title: How to Auto-Resolve 100+ Merge Conflicts by Accepting Incoming Version for All Files?
 author: Dazzling_Touch_9699
-viewing_mode: external
 feed_name: Reddit Azure DevOps
 date: 2025-07-17 04:05:05 +00:00
 tags:

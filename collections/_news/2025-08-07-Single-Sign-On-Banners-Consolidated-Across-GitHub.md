@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-07-single-sign-on-banners-consolidated-across-github
 title: Single Sign-On Banners Consolidated Across GitHub
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-07 19:08:07 +00:00
 tags:

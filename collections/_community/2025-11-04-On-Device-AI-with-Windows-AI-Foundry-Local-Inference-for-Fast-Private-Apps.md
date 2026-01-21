@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/on-device-ai-with-windows-ai-foundry/ba-p/4466236
 title: 'On-Device AI with Windows AI Foundry: Local Inference for Fast, Private Apps'
 author: Nandhini_Elango
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-04 08:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/MachineLearning/comments/1mj3n3v/d_do_you_think_llm_memory_will_ever_be_solved/
 title: Will Large Language Model Memory Ever Be Solved Without Fine-Tuning?
 author: shbong
-viewing_mode: external
 feed_name: Reddit Machine Learning
 date: 2025-08-06 12:43:19 +00:00
 tags:

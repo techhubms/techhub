@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/python-ia-resumen-y-recursos/ba-p/4465152
 title: 'Recapitulación de la Serie Python + IA: Técnicas, Modelos y Recursos'
 author: gwyneth-penas
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-03 14:44:57 +00:00
 tags:

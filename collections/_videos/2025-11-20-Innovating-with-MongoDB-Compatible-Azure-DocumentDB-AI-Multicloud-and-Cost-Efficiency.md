@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=W2qusd0gtTE
 title: 'Innovating with MongoDB-Compatible Azure DocumentDB: AI, Multicloud, and Cost Efficiency'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 17:12:14 +00:00
 tags:

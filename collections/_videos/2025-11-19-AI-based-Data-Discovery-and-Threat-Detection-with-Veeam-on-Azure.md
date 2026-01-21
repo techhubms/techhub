@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=L8a_bbrVnqQ
 title: AI-based Data Discovery and Threat Detection with Veeam on Azure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 12:44:52 +00:00
 tags:

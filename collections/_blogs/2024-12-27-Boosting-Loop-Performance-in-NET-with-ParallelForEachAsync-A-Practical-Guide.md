@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://weblog.west-wind.com/posts/2024/Dec/27/Back-to-Basics-Using-the-Parallel-Library-to-Massively-Boost-Loop-Performance
 title: 'Boosting Loop Performance in .NET with Parallel.ForEachAsync: A Practical Guide'
 author: Rick Strahl
-viewing_mode: external
 feed_name: Rick Strahl's Blog
 date: 2024-12-27 23:37:19 +00:00
 tags:

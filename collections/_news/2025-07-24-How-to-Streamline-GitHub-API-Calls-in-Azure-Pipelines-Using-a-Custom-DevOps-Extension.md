@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/enterprise-software/ci-cd/how-to-streamline-github-api-calls-in-azure-pipelines/
 title: How to Streamline GitHub API Calls in Azure Pipelines Using a Custom DevOps Extension
 author: Tiago Pascoal
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-24 16:00:00 +00:00
 tags:

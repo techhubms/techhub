@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure/weird-problem-when-comparing-the-answers-from-chat-playground/m-p/4486090#M22407
 title: Discrepancies Between Azure AI Foundry Playground and API Responses for GPT-4o-mini
 author: Rakanid
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-15 20:34:31 +00:00
 tags:

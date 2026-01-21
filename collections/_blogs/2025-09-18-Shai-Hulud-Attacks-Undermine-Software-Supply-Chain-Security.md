@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/shai-hulud-attacks-shake-software-supply-chain-security-confidence/
 title: Shai-Hulud Attacks Undermine Software Supply Chain Security
 author: Alan Shimel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-18 16:41:29 +00:00
 tags:

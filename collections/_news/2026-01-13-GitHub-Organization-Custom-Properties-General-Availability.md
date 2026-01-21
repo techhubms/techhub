@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2026-01-13-organization-custom-properties-now-generally-available
 title: 'GitHub Organization Custom Properties: General Availability'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2026-01-13 20:48:28 +00:00
 tags:

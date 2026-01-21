@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2025/12/09/the-era-of-agentic-business-applications-arrives-at-convergence-2025/
 title: Agentic Business Applications and AI Autonomy at Convergence 2025
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-09 17:51:59 +00:00
 tags:

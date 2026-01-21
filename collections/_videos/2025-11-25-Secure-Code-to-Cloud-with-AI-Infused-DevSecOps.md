@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=AiFB7jlmZ3E
 title: Secure Code to Cloud with AI-Infused DevSecOps
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 15:36:04 +00:00
 tags:

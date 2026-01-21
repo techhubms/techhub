@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Ptach9Ouzj8
 title: Scaling Code Quality in the Age of AI
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-19 15:00:51 +00:00
 tags:

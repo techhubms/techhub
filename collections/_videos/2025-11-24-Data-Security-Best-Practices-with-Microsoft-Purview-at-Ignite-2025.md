@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=jcyVxYES_mE
 title: Data Security Best Practices with Microsoft Purview at Ignite 2025
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 13:45:39 +00:00
 tags:

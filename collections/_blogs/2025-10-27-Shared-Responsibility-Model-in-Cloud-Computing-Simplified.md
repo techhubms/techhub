@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/shared-responsibility-model-in-cloud-computing-simplified/
 title: Shared Responsibility Model in Cloud Computing Simplified
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-27 06:41:21 +00:00
 tags:

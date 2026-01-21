@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/microsoft-databases-and-microsoft-fabric-your-unified-and-ai-powered-data-estate/
 title: 'Announcing Next-Gen Microsoft Databases and Fabric: Unified, AI-Ready Data Estate'
 author: Arun Ulagaratchagan
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-11-18 16:00:00 +00:00
 tags:

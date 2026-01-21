@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-catalog-govern-for-fabric-admins/
 title: Govern in OneLake Catalog for Fabric Admins (Preview)
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-21 09:30:00 +00:00
 tags:

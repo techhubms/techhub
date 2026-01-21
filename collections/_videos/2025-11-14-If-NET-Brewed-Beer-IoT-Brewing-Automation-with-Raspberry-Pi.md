@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Yi6Uf5DojaU
 title: 'If .NET Brewed Beer: IoT Brewing Automation with Raspberry Pi'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 02:30:06 +00:00
 tags:

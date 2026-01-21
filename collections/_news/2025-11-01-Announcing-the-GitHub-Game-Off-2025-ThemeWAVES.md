@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/company/github-game-off-2025-theme-announcement/
 title: 'Announcing the GitHub Game Off 2025: Theme—WAVES'
 author: Lee Reilly
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-01 20:37:00 +00:00
 tags:

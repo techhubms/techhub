@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/sora-in-video-playground/
 title: "Go from Prompt to Playback: Sora Video Generation in Azure AI Foundry's Video Playground"
 author: Thasmika Gokal
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-05-29 20:38:42 +00:00
 tags:

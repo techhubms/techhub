@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ih-2UjQGwZw
 title: 'Safer, Smarter Cities: Real-Time Geospatial Analytics with Microsoft Vision AI'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-26 20:17:43 +00:00
 tags:

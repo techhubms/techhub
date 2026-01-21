@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://r-vm.com/improved-git-workflow-custom-prompt-upcoming-vscode-change-warning.html
 title: Enhanced Git Workflow Prompt and Upcoming VS Code Terminal Auto-Approval Changes
 author: Reinier van Maanen
-viewing_mode: external
 feed_name: Reinier van Maanen's blog
 date: 2025-07-25 00:00:00 +00:00
 tags:

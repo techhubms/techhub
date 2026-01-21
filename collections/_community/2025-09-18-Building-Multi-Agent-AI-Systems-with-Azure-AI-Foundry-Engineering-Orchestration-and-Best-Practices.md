@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/build-multi-agent-ai-systems-with-microsoft/ba-p/4454510
 title: 'Building Multi-Agent AI Systems with Azure AI Foundry: Engineering, Orchestration, and Best Practices'
 author: Lee_Stott
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-18 07:00:00 +00:00
 tags:

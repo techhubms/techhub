@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-26-releases-now-support-immutability-in-public-preview
 title: GitHub Releases Introduce Immutability for Enhanced Supply Chain Security
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-26 20:33:53 +00:00
 tags:

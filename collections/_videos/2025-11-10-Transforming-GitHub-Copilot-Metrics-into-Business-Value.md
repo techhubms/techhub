@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=FWsAQpP6_kw
 title: Transforming GitHub Copilot Metrics into Business Value
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-10 15:00:34 +00:00
 tags:

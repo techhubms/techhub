@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/microsoft365dev/copilot-powered-github-app-for-teams-preview/
 title: AI-Powered GitHub App for Teams Now in Public Preview
 author: sbaynes
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-09-19 21:45:38 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=lHuxDMMkGJ8
 title: 'MCP Dev Days: Day 2 - Builders'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-07-30 20:16:44 +00:00
 tags:

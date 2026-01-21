@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=GeRsZAc0lNA
 title: "ASP.NET Community Standup: What's Next for Orleans?"
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2026-01-09 18:04:43 +00:00
 tags:

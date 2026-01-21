@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/streamlining-your-git-workflow-with-visual-studio-2026/
 title: Streamlining Your Git Workflow with Visual Studio 2026
 author: Mads Kristensen
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-12-10 15:00:47 +00:00
 tags:

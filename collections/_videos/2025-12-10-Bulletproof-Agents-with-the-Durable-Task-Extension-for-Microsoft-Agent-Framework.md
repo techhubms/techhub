@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=_UhRNW6HL6Y
 title: Bulletproof Agents with the Durable Task Extension for Microsoft Agent Framework
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-12-10 00:00:52 +00:00
 tags:

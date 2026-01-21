@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-18-upcoming-deprecations-and-changes-to-copilot-code-review
 title: Upcoming deprecations and changes to Copilot code review
 author: Allison
 feed_name: The GitHub Blog
 date: 2025-07-18 19:28:33 +00:00
-viewing_mode: external
 tags:
 - Code Review
 - Coding Guidelines

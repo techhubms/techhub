@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-06-enterprise-access-restrictions-now-supports-multiple-enterprises
 title: GitHub Enterprise Cloud Access Restrictions Now Support Multiple Enterprises
 author: Usha Narayanabhatta
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-06 23:52:41 +00:00
 tags:

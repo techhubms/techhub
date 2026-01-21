@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/announcing-dotnet-security-group/
 title: Announcing the .NET Security Group
 author: Jamshed Damkewala
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-10-14 17:05:00 +00:00
 tags:

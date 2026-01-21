@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/research/blog/using-ai-to-assist-in-rare-disease-diagnosis/
 title: 'Using AI to Assist in Rare Disease Diagnosis: Insights from Microsoft Research'
 author: sbaynes
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-09-22 17:38:17 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.arresteddevops.com/ai-sdlc/
 title: 'How AI Is Changing the SDLC: Trust, Ownership, and Community in Modern Software Development'
 author: Arrested DevOps
-viewing_mode: external
 feed_name: Arrested DevOps
 date: 2025-10-01 13:36:13 +00:00
 tags:

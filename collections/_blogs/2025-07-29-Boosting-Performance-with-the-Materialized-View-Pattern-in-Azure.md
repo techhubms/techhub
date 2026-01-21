@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/boosting-performance-with-the-materialized-view-pattern-in-azure/
 title: Boosting Performance with the Materialized View Pattern in Azure
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-07-29 11:50:50 +00:00
 tags:

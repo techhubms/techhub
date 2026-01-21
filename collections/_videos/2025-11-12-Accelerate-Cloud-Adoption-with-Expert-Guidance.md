@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=OZYgy2XTuR4
 title: Accelerate Cloud Adoption with Expert Guidance
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-12 08:00:36 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/engineering-a-local-first-agentic-podcast-studio-a-deep-dive/ba-p/4482839
 title: Engineering a Local-First Agentic Podcast Studio with Microsoft Agent Framework
 author: kinfey
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-05 13:53:38 +00:00
 tags:

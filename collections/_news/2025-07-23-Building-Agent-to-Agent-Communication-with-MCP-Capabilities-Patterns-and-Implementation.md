@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/can-you-build-agent2agent-communication-on-mcp-yes
 title: 'Building Agent-to-Agent Communication with MCP: Capabilities, Patterns, and Implementation'
 author: Victor Dibia, Mike Kistler, Maria Naggaga
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-07-23 17:00:19 +00:00
 tags:

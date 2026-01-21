@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/stack-overflow-survey-shows-ai-adoption-for-devs/?utm_source=rss&utm_medium=rss&utm_campaign=stack-overflow-survey-shows-ai-adoption-for-devs
 title: Stack Overflow Survey Reveals Developer Attitudes Toward AI Tools in 2025
 author: Alan Shimel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-12 09:37:44 +00:00
 tags:

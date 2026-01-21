@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=XhyTEgA_kBk
 title: Scaling Generative AI with GPU-Powered Containers on Azure
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-05 01:00:52 +00:00
 tags:

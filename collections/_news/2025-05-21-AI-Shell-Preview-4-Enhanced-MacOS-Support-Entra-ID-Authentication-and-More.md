@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/powershell/preview-4-ai-shell/
 title: 'AI Shell Preview 4: Enhanced MacOS Support, Entra ID Authentication, and More'
 author: Steven Bucher
-viewing_mode: external
 feed_name: Microsoft PowerShell Blog
 date: 2025-05-21 15:16:13 +00:00
 tags:

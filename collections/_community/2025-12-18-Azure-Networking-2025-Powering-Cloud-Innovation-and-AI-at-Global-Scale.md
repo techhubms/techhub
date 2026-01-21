@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-networking-2025-powering-cloud-innovation-and-ai-at-global/ba-p/4479390
 title: 'Azure Networking 2025: Powering Cloud Innovation and AI at Global Scale'
 author: Sudha_Mahajan
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-18 23:20:29 +00:00
 tags:

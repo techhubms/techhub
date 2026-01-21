@@ -251,7 +251,7 @@ public class SidebarTagCloudTests : TestContext
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<CancellationToken>()))
-            .Returns(tcs.Task);
+            .Returns(tcs.Task!);
 
         // Act
         var cut = RenderComponent<SidebarTagCloud>(parameters => parameters
@@ -280,7 +280,7 @@ public class SidebarTagCloudTests : TestContext
                 It.IsAny<int?>(),
                 It.IsAny<int?>(),
                 It.IsAny<CancellationToken>()))
-            .Returns(Task.FromException<IReadOnlyList<TagCloudItem>>(
+            .Returns(Task.FromException<IReadOnlyList<TagCloudItem>?>(
                 new HttpRequestException("API error")));
 
         // Act

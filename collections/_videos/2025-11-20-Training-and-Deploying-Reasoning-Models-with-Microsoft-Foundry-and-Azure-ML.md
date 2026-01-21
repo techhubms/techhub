@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=9TmsRYmb9NE
 title: Training and Deploying Reasoning Models with Microsoft Foundry and Azure ML
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 10:21:15 +00:00
 tags:

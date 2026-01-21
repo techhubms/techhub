@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/claude-3-7-now-available-in-github-copilot-for-visual-studio/
 title: Claude 3.7 Now Integrated in GitHub Copilot for Visual Studio 2022
 author: Rhea Patel
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-02-25 01:45:58 +00:00
 tags:

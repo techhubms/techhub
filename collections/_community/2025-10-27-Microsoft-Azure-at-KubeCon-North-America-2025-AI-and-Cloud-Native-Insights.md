@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-azure-at-kubecon-north-america-2025-atlanta-ga-nov-10/ba-p/4464324
 title: 'Microsoft Azure at KubeCon North America 2025: AI and Cloud Native Insights'
 author: coryskimming
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-27 18:00:00 +00:00
 tags:

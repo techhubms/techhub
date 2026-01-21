@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/introducing-cross-resource-metrics-and-alerts-support-for-azure/ba-p/4459193
 title: Introducing Cross Resource Metrics and Alerts Support for Azure Storage
 author: dafalkne
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-06 12:38:16 +00:00
 tags:

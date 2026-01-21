@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-09-repository-custom-properties-graphql-api-and-url-type
 title: 'GitHub Custom Repository Properties: GraphQL API and URL Type Enhancements'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-10 05:27:55 +00:00
 tags:

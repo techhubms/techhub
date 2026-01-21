@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=1KrqMZNTvpY
 title: Sending Email Correctly in .NET
 author: Nick Chapsas
-viewing_mode: internal
 feed_name: Nick Chapsas YouTube
 date: 2025-08-20 11:00:02 +00:00
 tags:

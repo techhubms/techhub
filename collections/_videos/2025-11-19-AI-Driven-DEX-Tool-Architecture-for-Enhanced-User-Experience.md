@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=sjowc3bdWdA
 title: AI-Driven DEX Tool Architecture for Enhanced User Experience
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 15:22:41 +00:00
 tags:

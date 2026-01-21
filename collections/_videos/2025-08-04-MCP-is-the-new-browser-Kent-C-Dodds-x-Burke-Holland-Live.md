@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=zAM18jguoWM
 title: '"MCP is the new browser?" — Kent C. Dodds x Burke Holland, Live'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-08-04 23:12:20 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/maximize-your-roi-for-azure-openai/
 title: 'Maximize Your ROI for Azure OpenAI: Pricing, Deployment, and Cost Optimization Strategies'
 author: Steve Sweetman
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-06-18 15:00:00 +00:00
 tags:

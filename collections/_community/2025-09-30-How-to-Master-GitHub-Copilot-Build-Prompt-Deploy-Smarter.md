@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-master-github-copilot-build-prompt-deploy-smarter/ba-p/4456660
 title: 'How to Master GitHub Copilot: Build, Prompt, Deploy Smarter'
 author: AprilYoho
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-30 05:00:00 +00:00
 tags:

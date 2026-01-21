@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=S022Q6oAftE
 title: 'Building Confident Application Systems with .NET Aspire: From Dev to Deployment'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-08-14 14:24:36 +00:00
 tags:

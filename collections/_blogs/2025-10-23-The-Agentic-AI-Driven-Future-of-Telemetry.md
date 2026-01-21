@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/the-agentic-ai-driven-future-of-telemetry/
 title: The Agentic AI-Driven Future of Telemetry
 author: Perry Correll
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-23 08:11:28 +00:00
 tags:

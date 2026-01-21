@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/multimodal-vision-intelligence-with-dotnet-maui/
 title: Multimodal Vision Intelligence with .NET MAUI
 author: David Ortinau
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-06-17 19:30:00 +00:00
 tags:

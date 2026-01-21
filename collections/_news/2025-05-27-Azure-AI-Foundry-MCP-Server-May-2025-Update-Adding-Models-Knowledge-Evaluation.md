@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/azure-ai-foundry-mcp-server-may-2025/
 title: Azure AI Foundry MCP Server May 2025 Update - Adding Models, Knowledge & Evaluation
 author: Farzad Sunavala, SeokJin Han, Saumil
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-05-27 23:00:00 +00:00
 tags:

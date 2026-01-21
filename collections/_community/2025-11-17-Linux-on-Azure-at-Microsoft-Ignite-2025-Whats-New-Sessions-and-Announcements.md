@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/linux-on-azure-at-microsoft-ignite-2025-what-s-new-what-to/ba-p/4470685
 title: "Linux on Azure at Microsoft Ignite 2025: What's New, Sessions, and Announcements"
 author: shreyabaheti
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-17 18:55:08 +00:00
 tags:

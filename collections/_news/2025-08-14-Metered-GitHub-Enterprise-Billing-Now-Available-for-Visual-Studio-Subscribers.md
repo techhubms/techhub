@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-14-introducing-metered-github-enterprise-billing-for-visual-studio-subscriptions-with-github-enterprise
 title: Metered GitHub Enterprise Billing Now Available for Visual Studio Subscribers
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-14 16:54:53 +00:00
 tags:

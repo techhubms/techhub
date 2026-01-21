@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://khalidabuhakmeh.com/confirmation-dialogs-with-htmx-and-sweetalert
 title: Enhancing Htmx Confirmation Dialogs with SweetAlert for Better UX
 author: Khalid Abuhakmeh
-viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
 date: 2024-08-20 00:00:00 +00:00
 tags:

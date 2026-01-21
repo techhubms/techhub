@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-cloud-native-development-with-ai-powered-azure/ba-p/4464852
 title: Accelerating Cloud-Native Development with AI-Powered Azure NetApp Files VS Code Extension
 author: GeertVanTeylingen
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-28 20:54:43 +00:00
 tags:

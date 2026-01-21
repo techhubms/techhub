@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure/applying-devops-principles-on-lean-infrastructure-lessons-from/m-p/4476015#M22362
 title: 'Applying DevOps Principles on Lean Infrastructure: Lessons from Scaling to 102,000 Users and Planning Azure Migration'
 author: onoja5
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-08 11:27:19 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=THF85BT8J7c
 title: 'Accessibility in Visual Studio Code: Insights from Megan Rogge'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-11-17 08:00:38 +00:00
 tags:

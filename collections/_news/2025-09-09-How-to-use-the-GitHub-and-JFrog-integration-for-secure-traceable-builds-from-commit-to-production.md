@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/enterprise-software/devsecops/how-to-use-the-github-and-jfrog-integration-for-secure-traceable-builds-from-commit-to-production/
 title: How to use the GitHub and JFrog integration for secure, traceable builds from commit to production
 author: April Yoho
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-09 22:00:00 +00:00
 tags:

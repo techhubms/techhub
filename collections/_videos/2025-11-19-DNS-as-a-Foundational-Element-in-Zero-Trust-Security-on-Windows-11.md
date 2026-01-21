@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=o847EwaNhgQ
 title: DNS as a Foundational Element in Zero Trust Security on Windows 11
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 17:05:24 +00:00
 tags:

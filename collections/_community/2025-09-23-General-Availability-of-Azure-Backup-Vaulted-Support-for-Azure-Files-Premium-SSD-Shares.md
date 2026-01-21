@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/general-availability-of-azure-backup-vaulted-support-for-azure/ba-p/4455307
 title: General Availability of Azure Backup Vaulted Support for Azure Files Premium (SSD) Shares
 author: Subhash_athreya
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-23 06:42:32 +00:00
 tags:

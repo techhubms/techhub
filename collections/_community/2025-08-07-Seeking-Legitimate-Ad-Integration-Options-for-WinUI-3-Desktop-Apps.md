@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mk7bhs/how_do_i_integrate_ads_in_a_winui_3_desktop_app/
 title: Seeking Legitimate Ad Integration Options for WinUI 3 Desktop Apps
 author: lordaimer
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-07 18:04:40 +00:00
 tags:

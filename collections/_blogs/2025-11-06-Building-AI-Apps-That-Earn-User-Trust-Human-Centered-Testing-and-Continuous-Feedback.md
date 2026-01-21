@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/from-code-to-confidence-building-ai-apps-that-earn-user-trust/
 title: 'Building AI Apps That Earn User Trust: Human-Centered Testing and Continuous Feedback'
 author: Chris Sheehan
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-11-06 08:19:39 +00:00
 tags:

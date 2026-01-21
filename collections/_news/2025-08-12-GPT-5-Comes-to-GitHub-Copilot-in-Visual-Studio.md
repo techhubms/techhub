@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/gpt-5-now-available-in-visual-studio/
 title: GPT-5 Comes to GitHub Copilot in Visual Studio
 author: Rhea Patel
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-08-12 17:10:52 +00:00
 tags:

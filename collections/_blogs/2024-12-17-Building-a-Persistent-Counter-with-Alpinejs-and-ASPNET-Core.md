@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://khalidabuhakmeh.com/building-a-persistent-counter-with-alpinejs
 title: Building a Persistent Counter with Alpine.js and ASP.NET Core
 author: Khalid Abuhakmeh
-viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
 date: 2024-12-17 00:00:00 +00:00
 tags:

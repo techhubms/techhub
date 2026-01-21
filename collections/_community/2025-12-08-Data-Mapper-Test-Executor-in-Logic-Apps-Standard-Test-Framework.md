@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/data-mapper-test-executor-a-new-addition-to-logic-apps-standard/ba-p/4472440
 title: Data Mapper Test Executor in Logic Apps Standard Test Framework
 author: WSilveira
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-08 16:00:00 +00:00
 tags:

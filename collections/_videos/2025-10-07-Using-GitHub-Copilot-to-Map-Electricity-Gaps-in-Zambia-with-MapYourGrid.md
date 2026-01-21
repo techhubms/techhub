@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/AWvpFKOdGMg
 title: Using GitHub Copilot to Map Electricity Gaps in Zambia with MapYourGrid
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-07 14:00:15 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-26-improved-repository-creation-generally-available-plus-ruleset-insights-improvements
 title: Improved GitHub Repository Creation, Ruleset, and Insights Features Released
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-26 20:02:38 +00:00
 tags:

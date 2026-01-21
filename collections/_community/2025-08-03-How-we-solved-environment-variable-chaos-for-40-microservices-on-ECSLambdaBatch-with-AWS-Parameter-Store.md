@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/devops/comments/1mgl9tl/how_we_solved_environment_variable_chaos_for_40/
 title: How we solved environment variable chaos for 40+ microservices on ECS/Lambda/Batch with AWS Parameter Store
 author: compacompila
-viewing_mode: external
 feed_name: Reddit DevOps
 date: 2025-08-03 14:54:50 +00:00
 tags:

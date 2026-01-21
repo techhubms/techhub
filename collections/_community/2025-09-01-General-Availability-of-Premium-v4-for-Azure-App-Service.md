@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-premium-v4-for-azure-app/ba-p/4446204
 title: General Availability of Premium v4 for Azure App Service
 author: Stefan_Schackow
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-01 15:44:34 +00:00
 tags:

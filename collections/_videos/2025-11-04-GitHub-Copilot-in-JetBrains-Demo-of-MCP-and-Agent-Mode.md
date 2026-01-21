@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=2GMKFbldb9c
 title: 'GitHub Copilot in JetBrains: Demo of MCP and Agent Mode'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-04 22:41:29 +00:00
 tags:

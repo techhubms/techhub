@@ -1,7 +1,6 @@
-﻿---
+---
 title: 'Ignite 2025: Updates in Agentic AI, Cloud, Developer Tools, and Security'
 author: Tech Hub Team
-viewing_mode: internal
 date: 2025-12-01 09:00:00 +00:00
 tags:
 - Agentic AI

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/jKViNM42u9M
 title: Building AI Agents with Semantic Kernel, MCP Servers, and Python
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-15 16:15:45 +00:00
 tags:

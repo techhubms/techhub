@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://jessehouwing.net/repost-protect-the-repository-hosting-your-github-action/
 title: 'Repost: Protect the Repository Hosting Your GitHub Action'
 author: Jesse Houwing
-viewing_mode: external
 feed_name: Jesse Houwing's Blog
 date: 2025-03-25 18:17:02 +00:00
 tags:

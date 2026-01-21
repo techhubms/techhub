@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=V5ATFFuxYUo
 title: 'Agentic DevOps: Enhancing .NET Web Apps with Azure MCP'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-12-10 00:00:33 +00:00
 tags:

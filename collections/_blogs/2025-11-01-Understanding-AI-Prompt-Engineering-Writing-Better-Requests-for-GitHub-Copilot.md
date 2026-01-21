@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/understanding-ai-prompts-writing-better-requests-for-copilot/
 title: 'Understanding AI Prompt Engineering: Writing Better Requests for GitHub Copilot'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-01 08:08:59 +00:00
 tags:

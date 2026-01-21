@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/azure-sdk/spring-cloud-azure-updates-and-troubleshooting-tips-for-java-on-aks/
 title: 'Spring Cloud Azure: Latest Updates and Troubleshooting Tips for Java on AKS'
 author: Moary Chen
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-02-17 17:05:08 +00:00
 tags:

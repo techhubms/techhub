@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/devgovops-a-new-play-in-devops-or-is-it/?utm_source=rss&utm_medium=rss&utm_campaign=devgovops-a-new-play-in-devops-or-is-it
 title: 'DevGovOps: Embedding Governance into DevOps for the Age of AI'
 author: Alan Shimel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-10 06:23:12 +00:00
 tags:

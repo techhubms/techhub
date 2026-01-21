@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2015-retirement-support-reminder-for-older-versions-of-visual-studio/
 title: 'Visual Studio 2015 Retirement: Support Deadlines and Upgrade Recommendations'
 author: Paul Chapman
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-08-05 16:16:53 +00:00
 tags:

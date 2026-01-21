@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/gpt-5-freeform-tool-calling-in-typescript-on-azure-ai-foundry/ba-p/4469682
 title: Implementing GPT-5 FreeForm Tool Calling with Azure AI Foundry
 author: Julia_Muiruri
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-19 18:29:45 +00:00
 tags:

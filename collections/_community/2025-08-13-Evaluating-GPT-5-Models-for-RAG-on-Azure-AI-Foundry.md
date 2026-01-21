@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/gpt-5-will-it-rag/ba-p/4442676
 title: Evaluating GPT-5 Models for RAG on Azure AI Foundry
 author: Pamela_Fox
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-13 07:54:51 +00:00
 tags:

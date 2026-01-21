@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/developer-skills/career-growth/why-developer-expertise-matters-more-than-ever-in-the-age-of-ai/
 title: Why developer expertise matters more than ever in the age of AI
 author: Laura Lindeman
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-06-24 17:04:47 +00:00
 tags:

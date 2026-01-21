@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/lakehouse-schemas-generally-available/
 title: Lakehouse Schemas Now Generally Available in Microsoft Fabric
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-12-10 09:00:00 +00:00
 tags:

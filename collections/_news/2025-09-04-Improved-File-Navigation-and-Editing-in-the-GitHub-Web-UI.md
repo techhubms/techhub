@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-04-improved-file-navigation-and-editing-in-the-web-ui
 title: Improved File Navigation and Editing in the GitHub Web UI
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-04 18:41:12 +00:00
 tags:

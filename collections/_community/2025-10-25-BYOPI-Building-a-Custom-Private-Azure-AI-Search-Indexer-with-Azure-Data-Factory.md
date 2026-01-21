@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure/byopi-design-your-own-custom-private-ai-search-indexer-with-no/m-p/4464205#M22283
 title: 'BYOPI: Building a Custom Private Azure AI Search Indexer with Azure Data Factory'
 author: ani_ms_emea
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-25 15:57:45 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-17-fine-grain-permissions-for-copilot-usage-metrics-now-available
 title: Fine-Grain Permissions for GitHub Copilot Usage Metrics Released
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-17 16:57:55 +00:00
 tags:

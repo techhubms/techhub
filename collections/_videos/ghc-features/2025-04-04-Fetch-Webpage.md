@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/UuIrbI-qX-0
 title: Fetch Webpage
 author: Fokko Veegens
 date: 2025-04-04 11:28:40 +00:00
-viewing_mode: internal
 ghes_support: true
 plans:
 - Free

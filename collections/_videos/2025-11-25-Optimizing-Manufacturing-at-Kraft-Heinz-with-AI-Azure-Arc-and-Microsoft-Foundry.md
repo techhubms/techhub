@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=S_GhJn8O-4E
 title: Optimizing Manufacturing at Kraft Heinz with AI, Azure Arc, and Microsoft Foundry
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 12:16:40 +00:00
 tags:

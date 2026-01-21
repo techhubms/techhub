@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devclass.com/2025/11/25/microsoft-visual-studio-shifts-to-annual-releases-raising-cost-concerns/
 title: 'Microsoft Visual Studio Update Cycle: Annual Releases and Developer Reactions'
 author: Tim Anderson
-viewing_mode: external
 feed_name: DevClass
 date: 2025-11-25 17:35:38 +00:00
 tags:

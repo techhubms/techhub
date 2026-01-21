@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/developer-skills/github/completing-urgent-fixes-anywhere-with-github-copilot-coding-agent-and-mobile/
 title: Completing Urgent Fixes Remotely Using GitHub Copilot Coding Agent and Mobile
 author: Scott Lusk
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-08 16:00:00 +00:00
 tags:

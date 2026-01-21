@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mf49un/unpopular_opinion_github_copilot_is_actually/
 title: Unpopular opinion == GitHub Copilot is actually amazing vibe coding tool
 author: EasyProtectedHelp
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-01 18:28:38 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=kNPTDlxEA-Y
 title: Modernizing a 17th Century Italian-English Dictionary with .NET and ML.NET
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 05:30:06 +00:00
 tags:

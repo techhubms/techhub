@@ -288,7 +288,6 @@ function Convert-RssToMarkdown {
                 title         = $response.title
                 author        = $item.Author
                 external_url  = $item.Link
-                viewing_mode  = if ($collection_value -eq "videos") { "internal" } else { "external" }
                 feed_name     = $item.FeedName
                 date          = $dateFormatted
                 tags          = @($tags)

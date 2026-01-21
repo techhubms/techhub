@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=EXEtRc8oQ7E
 title: 'Secure Code Game: Empowering Safer LLM-Based Applications'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-28 17:57:02 +00:00
 tags:

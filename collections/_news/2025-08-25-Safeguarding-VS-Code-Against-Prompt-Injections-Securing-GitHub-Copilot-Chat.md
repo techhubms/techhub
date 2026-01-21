@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/security/vulnerability-research/safeguarding-vs-code-against-prompt-injections/
 title: 'Safeguarding VS Code Against Prompt Injections: Securing GitHub Copilot Chat'
 author: Michael Stepankin
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-25 16:01:12 +00:00
 tags:

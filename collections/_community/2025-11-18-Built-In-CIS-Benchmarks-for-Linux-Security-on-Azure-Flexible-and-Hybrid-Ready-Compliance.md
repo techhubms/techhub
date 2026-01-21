@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/from-policy-to-practice-built-in-cis-benchmarks-on-azure/ba-p/4467884
 title: 'Built-In CIS Benchmarks for Linux Security on Azure: Flexible and Hybrid-Ready Compliance'
 author: pallakatos
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 08:00:00 +00:00
 tags:

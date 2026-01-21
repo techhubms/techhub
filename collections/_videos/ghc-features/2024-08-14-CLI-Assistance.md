@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/Yhu2xzId2U0
 title: CLI Assistance
 author: Rob Bos
 date: 2024-08-14 19:53:21 +00:00
-viewing_mode: internal
 ghes_support: true
 plans:
 - Pro

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-07-secret-protection-expands-default-pattern-support-september-2025
 title: GitHub Secret Protection Expands Default Pattern Support – September 2025
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-07 16:13:11 +00:00
 tags:

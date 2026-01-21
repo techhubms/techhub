@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=-69mrx_ugJA
 title: 'Maximize Azure ROI: Real-world strategies with confirmed reservations'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 14:58:50 +00:00
 tags:

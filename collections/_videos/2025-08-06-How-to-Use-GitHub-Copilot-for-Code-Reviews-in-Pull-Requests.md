@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/jYW9MorrE_w
 title: How to Use GitHub Copilot for Code Reviews in Pull Requests
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-06 14:01:17 +00:00
 tags:

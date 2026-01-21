@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/11/20/from-legacy-to-frontier-how-100-year-brands-are-leading-ai-innovation/
 title: How Centennial Brands Accelerate AI Innovation with Microsoft
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-20 16:56:02 +00:00
 tags:

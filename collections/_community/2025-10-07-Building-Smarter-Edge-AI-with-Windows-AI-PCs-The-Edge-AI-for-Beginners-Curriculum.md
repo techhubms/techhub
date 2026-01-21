@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-cloud-to-chip-building-smarter-ai-at-the-edge-with-windows/ba-p/4459582
 title: 'Building Smarter Edge AI with Windows AI PCs: The Edge AI for Beginners Curriculum'
 author: Lee_Stott
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-07 07:13:47 +00:00
 tags:

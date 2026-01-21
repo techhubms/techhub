@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-04-codeql-2-23-6-adds-swift-6-2-1-and-new-c-security-queries
 title: 'CodeQL 2.23.6 Update: New C# Security Queries and Language Enhancements'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-04 16:42:39 +00:00
 tags:

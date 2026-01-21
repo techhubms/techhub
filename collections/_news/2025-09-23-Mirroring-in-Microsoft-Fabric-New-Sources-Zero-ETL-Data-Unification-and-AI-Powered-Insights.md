@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-to-mirroring-new-sources-and-capabilities-for-all-your-zero-etl-needs/
 title: 'Mirroring in Microsoft Fabric: New Sources, Zero-ETL Data Unification, and AI-Powered Insights'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-09-23 10:00:00 +00:00
 tags:

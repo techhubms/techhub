@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-04-manage-copilot-and-users-via-enterprise-teams-in-public-preview
 title: Managing GitHub Copilot Business Licenses with Enterprise Teams (Public Preview)
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-04 16:59:13 +00:00
 tags:

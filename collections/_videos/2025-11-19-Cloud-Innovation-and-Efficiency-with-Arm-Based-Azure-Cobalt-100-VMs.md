@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=tyavPF0DUrE
 title: Cloud Innovation and Efficiency with Arm-Based Azure Cobalt 100 VMs
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 15:00:33 +00:00
 tags:

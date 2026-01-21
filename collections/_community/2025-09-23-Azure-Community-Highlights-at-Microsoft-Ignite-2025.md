@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-events/your-guide-to-azure-community-activations-at-microsoft-ignite/ba-p/4455501
 title: Azure Community Highlights at Microsoft Ignite 2025
 author: GalimahB
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-23 19:59:06 +00:00
 tags:

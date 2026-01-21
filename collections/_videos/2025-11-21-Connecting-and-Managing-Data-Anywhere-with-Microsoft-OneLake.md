@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=HjCaHgXezys
 title: Connecting and Managing Data Anywhere with Microsoft OneLake
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 08:30:17 +00:00
 tags:

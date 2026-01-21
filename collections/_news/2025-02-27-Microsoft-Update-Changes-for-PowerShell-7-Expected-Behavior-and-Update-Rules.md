@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/powershell/microsoft-update-changes-for-powershell-7/
 title: 'Microsoft Update Changes for PowerShell 7: Expected Behavior and Update Rules'
 author: Steven Bucher
-viewing_mode: external
 feed_name: Microsoft PowerShell Blog
 date: 2025-02-27 22:28:17 +00:00
 tags:

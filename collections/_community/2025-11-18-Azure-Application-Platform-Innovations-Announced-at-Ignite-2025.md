@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-platform-at-ignite-2025-new-innovations-for-all-your/ba-p/4470759
 title: Azure Application Platform Innovations Announced at Ignite 2025
 author: NagaSurendran
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:13:48 +00:00
 tags:

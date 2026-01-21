@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/power-stabilization-for-ai-training-datacenters/ba-p/4460937
 title: Power Stabilization Strategies for AI Training Datacenters
 author: BrijeshW
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-13 13:47:18 +00:00
 tags:

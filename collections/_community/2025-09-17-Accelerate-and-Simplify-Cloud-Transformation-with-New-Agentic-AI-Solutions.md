@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-and-simplify-cloud-transformation-with-new-agentic-ai/ba-p/4454873
 title: Accelerate and Simplify Cloud Transformation with New Agentic AI Solutions
 author: PatWidjaja
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-17 21:32:31 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/graph-in-microsoft-fabric/
 title: Introducing Graph Data Management and Analytics in Microsoft Fabric
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-10-09 08:00:00 +00:00
 tags:

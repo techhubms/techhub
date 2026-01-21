@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=JlzteydCK_Q
 title: Deep Dive into Microsoft Agent Framework for AutoGen Users
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-30 16:00:39 +00:00
 tags:

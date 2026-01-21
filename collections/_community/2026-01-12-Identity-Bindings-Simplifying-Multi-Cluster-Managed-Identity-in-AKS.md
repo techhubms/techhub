@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/identity-bindings-a-cleaner-model-for-multi-cluster-identity-in/ba-p/4478282
 title: 'Identity Bindings: Simplifying Multi-Cluster Managed Identity in AKS'
 author: samcogan
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-12 10:42:40 +00:00
 tags:

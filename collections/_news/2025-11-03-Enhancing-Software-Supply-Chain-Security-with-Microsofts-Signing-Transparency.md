@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/enhancing-software-supply-chain-security-with-microsofts-signing-transparency/
 title: Enhancing Software Supply Chain Security with Microsoft’s Signing Transparency
 author: Mark Russinovich
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-11-03 17:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure/understanding-storage-account-replication-downtime/m-p/4479787#M22386
 title: Minimizing Downtime When Migrating Azure Storage Account Replication
 author: LouisT
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-20 13:03:51 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=DNvM7tyifwk
 title: Azure AI Infrastructure Advances for Frontier and Enterprise AI Workloads
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 17:20:56 +00:00
 tags:

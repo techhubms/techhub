@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/developer-tier-apim-self-hosted-gateway/ba-p/4457556
 title: Exploring Developer Tier APIM with Self-hosted Gateway for Greater Flexibility
 author: reve
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-27 16:45:43 +00:00
 tags:

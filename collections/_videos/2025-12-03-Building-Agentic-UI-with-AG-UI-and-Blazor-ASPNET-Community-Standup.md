@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=4CrxcdNbRFY
 title: 'Building Agentic UI with AG-UI and Blazor: ASP.NET Community Standup'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-12-03 00:54:20 +00:00
 tags:

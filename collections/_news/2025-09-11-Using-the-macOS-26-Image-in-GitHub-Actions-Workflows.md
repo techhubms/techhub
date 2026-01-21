@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-11-actions-macos-26-image-now-in-public-preview
 title: Using the macOS 26 Image in GitHub Actions Workflows
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-11 20:10:13 +00:00
 tags:

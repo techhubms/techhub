@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/prompt-engineering-for-developers-getting-the-best-out-of-copilot/
 title: Prompt Engineering Techniques for Developers Using GitHub Copilot
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-14 08:50:07 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/spend-less-time-upgrading-more-time-coding-in-visual-studio-2026/
 title: Effortless Upgrades and Coding Productivity in Visual Studio 2026
 author: Jason Chlus
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-11-18 17:00:27 +00:00
 tags:

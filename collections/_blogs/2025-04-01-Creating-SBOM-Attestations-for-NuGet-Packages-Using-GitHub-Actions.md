@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/creating-sbom-attestations-in-github-actions/
 title: Creating SBOM Attestations for NuGet Packages Using GitHub Actions
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2025-04-01 09:00:00 +00:00
 tags:

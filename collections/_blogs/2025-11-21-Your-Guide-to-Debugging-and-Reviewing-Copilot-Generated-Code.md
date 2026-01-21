@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/your-guide-to-debugging-and-reviewing-copilot-generated-code/
 title: Your Guide to Debugging and Reviewing Copilot-Generated Code
 author: John Edward
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-21 16:03:25 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mhbukq/c_14_extension_members_also_known_as_extension/
 title: 'C# 14 Extension Members: Also Known as Extension Everything - NDepend Blog'
 author: PatrickSmacchia
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-04 12:18:27 +00:00
 tags:

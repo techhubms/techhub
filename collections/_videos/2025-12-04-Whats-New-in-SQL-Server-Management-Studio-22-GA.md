@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=MCKjBrvX68M
 title: What's New in SQL Server Management Studio 22 GA
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-04 21:00:34 +00:00
 tags:

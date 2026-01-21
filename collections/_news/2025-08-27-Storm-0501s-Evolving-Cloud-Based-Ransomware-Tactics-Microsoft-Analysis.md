@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/08/27/storm-0501s-evolving-techniques-lead-to-cloud-based-ransomware/
 title: 'Storm-0501’s Evolving Cloud-Based Ransomware Tactics: Microsoft Analysis'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-27 17:43:23 +00:00
 tags:

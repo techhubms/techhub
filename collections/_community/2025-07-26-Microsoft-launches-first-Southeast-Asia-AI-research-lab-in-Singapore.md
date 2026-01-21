@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/microsoft/comments/1m9q6o4/microsoft_launches_first_southeast_asia_ai/
 title: Microsoft launches first Southeast Asia AI research lab in Singapore
 author: 108CA
-viewing_mode: external
 feed_name: Reddit Microsoft
 date: 2025-07-26 10:39:54 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ubuntu-powered-runtimes-on-azure-app-service-for-linux-leaner/ba-p/4465414
 title: Ubuntu-Based Runtimes Coming to Azure App Service for Linux
 author: TulikaC
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-30 04:00:28 +00:00
 tags:

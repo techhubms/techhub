@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://roadtoalm.com/2025/06/11/is-sre-just-devops-in-new-packaging/
 title: Is SRE Just DevOps in New Packaging?
 author: Rene van Osnabrugge
-viewing_mode: external
 feed_name: René van Osnabrugge's Blog
 date: 2025-06-11 08:33:40 +00:00
 tags:

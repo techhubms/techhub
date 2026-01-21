@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=LwqUp4Dc1mQ
 title: 'Extending AI Agents: Live Demo of GitHub MCP Server Integration'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-30 15:00:40 +00:00
 tags:

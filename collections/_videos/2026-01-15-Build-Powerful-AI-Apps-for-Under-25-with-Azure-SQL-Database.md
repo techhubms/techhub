@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=NY_ESU6GKM0
 title: Build Powerful AI Apps for Under $25 with Azure SQL Database
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2026-01-15 20:00:20 +00:00
 tags:

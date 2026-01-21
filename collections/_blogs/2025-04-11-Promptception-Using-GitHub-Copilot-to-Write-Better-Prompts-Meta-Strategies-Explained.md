@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://cooknwithcopilot.com/blog/promptception-improve-prompts-with-copilot.html
 title: 'Promptception: Using GitHub Copilot to Write Better Prompts (Meta Strategies Explained)'
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-04-11 00:00:00 +00:00
 tags:

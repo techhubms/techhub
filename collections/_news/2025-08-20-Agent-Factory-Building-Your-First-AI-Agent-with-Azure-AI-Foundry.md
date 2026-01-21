@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/agent-factory-building-your-first-ai-agent-with-the-tools-to-deliver-real-world-outcomes/
 title: 'Agent Factory: Building Your First AI Agent with Azure AI Foundry'
 author: Yina Arenas
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-08-20 15:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=JDXRDgnQ8Ko
 title: Introducing Microsoft Foundry Tools for Agentic AI Apps | BRK192
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 17:17:10 +00:00
 tags:

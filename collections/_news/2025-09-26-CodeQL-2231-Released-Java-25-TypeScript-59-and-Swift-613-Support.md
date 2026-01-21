@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-26-codeql-2-23-1-adds-support-for-java-25-typescript-5-9-and-swift-6-1-3
 title: 'CodeQL 2.23.1 Released: Java 25, TypeScript 5.9, and Swift 6.1.3 Support'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-26 19:28:56 +00:00
 tags:

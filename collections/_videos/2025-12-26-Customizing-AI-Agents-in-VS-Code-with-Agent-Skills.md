@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Ey1-FuAUgkI
 title: Customizing AI Agents in VS Code with Agent Skills
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-12-26 11:00:26 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=1l6bTK5iyoE
 title: On .NET Live | Supercharge your SQL Development with Modern .NET
 author: dotnet
-viewing_mode: internal
 feed_name: Dotnet's Youtube channel
 date: 2025-07-29 16:35:03 +00:00
 tags:

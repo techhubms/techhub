@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-05-copilot-coding-agent-supports-organization-custom-instructions
 title: Copilot Coding Agent Adds Organization-Wide Custom Instructions
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-05 18:19:03 +00:00
 tags:

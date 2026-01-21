@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/DYSBNLmtIfc
 title: Building Omnichannel Voice AI Agents with Azure
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-19 23:25:02 +00:00
 tags:

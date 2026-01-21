@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/powering-modern-cloud-workloads-with-azure-boost-ignite-2025/ba-p/4470793
 title: 'Powering Modern Cloud Workloads with Azure Boost: Ignite 2025'
 author: Max_Uritsky
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:00:00 +00:00
 tags:

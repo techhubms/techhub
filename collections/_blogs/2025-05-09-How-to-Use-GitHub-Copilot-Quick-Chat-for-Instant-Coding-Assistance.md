@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/quick-chat-is-your-instant-ai-sidekick.html
 title: How to Use GitHub Copilot Quick Chat for Instant Coding Assistance
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-05-09 00:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-23-incremental-security-analysis-with-codeql-is-now-available-for-all-languages
 title: Incremental Security Analysis with CodeQL Now Available Across All Languages
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-23 15:21:27 +00:00
 tags:

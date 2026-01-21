@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=rjBdWnz0Kdg
 title: Build Secure Agentic AI Apps with SQL Server 2025
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 14:27:24 +00:00
 tags:

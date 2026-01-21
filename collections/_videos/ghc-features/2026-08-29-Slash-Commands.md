@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: ''
 title: Slash Commands
 author: TBD
 date: 2026-08-29 09:39:31 +00:00
-viewing_mode: internal
 ghes_support: true
 plans:
 - Free

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-the-microsoft-agent-framework/ba-p/4458377
 title: 'Introducing the Microsoft Agent Framework: Unified SDK for AI Agents and Workflows'
 author: Lee_Stott
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-01 14:14:57 +00:00
 tags:

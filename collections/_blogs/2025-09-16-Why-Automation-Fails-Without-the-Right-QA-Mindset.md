@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/why-automation-fails-without-the-right-qa-mindset/
 title: Why Automation Fails Without the Right QA Mindset
 author: Imtiaz Shaik
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-16 13:47:10 +00:00
 tags:

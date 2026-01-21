@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=_4DACLSHtFg
 title: Partners Accelerate Media Innovation with AI Agents and Microsoft Cloud
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 13:29:35 +00:00
 tags:

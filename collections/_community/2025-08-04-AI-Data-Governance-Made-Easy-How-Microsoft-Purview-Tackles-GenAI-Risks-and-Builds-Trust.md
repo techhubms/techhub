@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/marketplace-blog/ai-data-governance-made-easy-how-microsoft-purview-tackles-genai/ba-p/4435237
 title: 'AI Data Governance Made Easy: How Microsoft Purview Tackles GenAI Risks and Builds Trust'
 author: vicperdana
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-04 21:26:39 +00:00
 tags:

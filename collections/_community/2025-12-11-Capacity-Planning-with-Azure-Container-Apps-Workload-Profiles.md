@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/capacity-planning-with-azure-container-apps-workload-profiles/ba-p/4477085
 title: Capacity Planning with Azure Container Apps Workload Profiles
 author: nesubram
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-11 05:23:42 +00:00
 tags:

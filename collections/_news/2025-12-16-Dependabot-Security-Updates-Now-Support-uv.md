@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-16-dependabot-security-updates-now-support-uv
 title: Dependabot Security Updates Now Support uv
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-16 16:42:46 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/appsignal-adds-opentelemetry-support-to-monitoring-platform/?utm_source=rss&utm_medium=rss&utm_campaign=appsignal-adds-opentelemetry-support-to-monitoring-platform
 title: AppSignal Adds Native OpenTelemetry Support for Enhanced Application Monitoring
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-15 15:57:54 +00:00
 tags:

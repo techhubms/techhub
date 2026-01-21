@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=QwG-PbVlIvM
 title: Should I add a chatbot to my app?
 author: Dotnet's Youtube channel
 feed_name: dotnet
 date: 2025-07-23 15:35:24 +00:00
-viewing_mode: internal
 page: videos
 tags:
 - AI Learning Hub

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=a1BR6K3E4zs
 title: When to Use GitHub Copilot Coding Agent Versus Agent Mode
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-07-29 14:00:00 +00:00
 tags:

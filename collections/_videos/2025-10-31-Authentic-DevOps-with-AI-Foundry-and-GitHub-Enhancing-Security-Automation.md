@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=rWkLRkN3yvI
 title: 'Authentic DevOps with AI Foundry and GitHub: Enhancing Security Automation'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-31 16:12:32 +00:00
 tags:

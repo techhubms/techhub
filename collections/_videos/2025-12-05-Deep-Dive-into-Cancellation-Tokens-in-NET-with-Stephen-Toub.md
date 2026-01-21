@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=h1GvSPaRQ-U
 title: Deep Dive into Cancellation Tokens in .NET with Stephen Toub
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-12-05 00:20:57 +00:00
 tags:

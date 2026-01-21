@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://khalidabuhakmeh.com/aspnet-core-and-chunking-http-cookies
 title: Handling Large Cookies in ASP.NET Core with ChunkingCookieManager
 author: Khalid Abuhakmeh
-viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
 date: 2025-02-11 00:00:00 +00:00
 tags:

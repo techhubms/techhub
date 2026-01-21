@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/announcing-azure-language-in-foundry-tools-for-deterministic-privacy-first-agents/
 title: Announcing Azure Language in Foundry Tools for Deterministic, Privacy-First Agents
 author: Xiaoying
-viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
 date: 2025-11-20 16:00:12 +00:00
 tags:

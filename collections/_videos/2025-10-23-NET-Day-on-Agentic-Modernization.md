@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=JLCl5lh-tw8
 title: .NET Day on Agentic Modernization
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-10-23 03:55:17 +00:00
 tags:

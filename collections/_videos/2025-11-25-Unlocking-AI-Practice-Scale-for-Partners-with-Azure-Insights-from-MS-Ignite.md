@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=RQAUF-cLEBI
 title: 'Unlocking AI Practice Scale for Partners with Azure: Insights from MS Ignite'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 16:00:20 +00:00
 tags:

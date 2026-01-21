@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/devops/azure-devops-oauth-client-secrets-now-shown-only-once/
 title: 'Azure DevOps Improves OAuth Client Secret Security: Secrets Now Shown Only Once'
 author: Angel Wong
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-08-13 15:31:56 +00:00
 tags:

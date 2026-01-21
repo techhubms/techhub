@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/a-first-look-at-the-all%e2%80%91new-ux-in-visual-studio-2026/
 title: A First Look at the Refreshed UX in Visual Studio 2026
 author: Ruben Rios
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-11-13 15:00:29 +00:00
 tags:

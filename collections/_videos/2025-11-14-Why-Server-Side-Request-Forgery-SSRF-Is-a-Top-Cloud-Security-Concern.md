@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=7nAp63gv2jE
 title: Why Server-Side Request Forgery (SSRF) Is a Top Cloud Security Concern
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-14 16:35:46 +00:00
 tags:

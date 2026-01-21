@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure/the-november-innovation-challenge-winning-teams/m-p/4475579#M22360
 title: 'Innovation Challenge: Winning Azure AI Projects from November 2025 Hackathon'
 author: macalde
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-05 17:34:53 +00:00
 tags:

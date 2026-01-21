@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://harrybin.de/posts/joinmeatittagefrankfurt2024/
 title: 'Unleashing the Power of VS Code: IT-Tage Frankfurt 2024 Talk Announcement'
 author: Harald Binkle
-viewing_mode: external
 feed_name: Harald Binkle's blog
 date: 2024-11-15 10:00:00 +00:00
 tags:

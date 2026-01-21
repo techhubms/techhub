@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/
 title: The Next Chapter of the Microsoft–OpenAI Partnership
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-28 15:12:03 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=k3HASRvfpnE
 title: Power Next-Generation AI Workloads with NVIDIA Blackwell on Azure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 12:46:29 +00:00
 tags:

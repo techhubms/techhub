@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=U20tVialbao
 title: AI-Powered Automation and Multi-Agent Orchestration in Microsoft Foundry
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 15:47:30 +00:00
 tags:

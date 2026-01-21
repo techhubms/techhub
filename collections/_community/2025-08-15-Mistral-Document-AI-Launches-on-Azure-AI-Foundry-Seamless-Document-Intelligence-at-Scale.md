@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/deepening-our-partnership-with-mistral-ai-on-azure-ai-foundry/ba-p/4434656
 title: 'Mistral Document AI Launches on Azure AI Foundry: Seamless Document Intelligence at Scale'
 author: Naomi Moneypenny
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-15 18:03:37 +00:00
 tags:

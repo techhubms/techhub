@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=3UoDsdemIdA
 title: 'GenAI for Java Developers 2: Core Techniques Explained'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-29 00:00:14 +00:00
 tags:

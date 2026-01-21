@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=lQrr1M7AeiY
 title: Manage All GitHub Copilot Agents with Mission Control
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-12-16 20:49:53 +00:00
 tags:

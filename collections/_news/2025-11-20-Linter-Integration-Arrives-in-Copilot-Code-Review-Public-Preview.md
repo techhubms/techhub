@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-20-linter-integration-with-copilot-code-review-now-in-public-preview
 title: Linter Integration Arrives in Copilot Code Review Public Preview
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-20 19:29:29 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-transcription-text-analytics-for-health/ba-p/4486080
 title: Modernizing Healthcare Transcription and Analytics with Azure AI
 author: hannahabbott
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-15 19:13:54 +00:00
 tags:

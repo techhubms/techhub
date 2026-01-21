@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=3EV4rUHScZI
 title: 'Azure Keynote: Cloud Innovation with .NET'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-13 17:40:46 +00:00
 tags:

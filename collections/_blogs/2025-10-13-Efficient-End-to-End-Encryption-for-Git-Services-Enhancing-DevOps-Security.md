@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/git-services-need-better-security-heres-how-end-to-end-encryption-could-help/
 title: 'Efficient End-to-End Encryption for Git Services: Enhancing DevOps Security'
 author: Tom Smith
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-13 06:00:49 +00:00
 tags:

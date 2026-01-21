@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-events/build-your-microsoft-ignite-schedule-top-sessions-for-solution/ba-p/4468770
 title: 'Build Your Microsoft Ignite Schedule: Top Sessions for Solution Architects'
 author: GalimahB
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-11 00:19:08 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=vuqgC2AiZgY
 title: 'Data Protection in the Age of the Adversary: Accelerating Microsoft Purview Adoption'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 10:38:55 +00:00
 tags:

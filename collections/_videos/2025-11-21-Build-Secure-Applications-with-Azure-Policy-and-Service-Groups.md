@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=hLBiJZT194A
 title: Build Secure Applications with Azure Policy and Service Groups
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 10:19:24 +00:00
 tags:

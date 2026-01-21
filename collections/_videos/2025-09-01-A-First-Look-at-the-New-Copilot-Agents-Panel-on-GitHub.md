@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/oBW4Xt6c_Uo
 title: A First Look at the New Copilot Agents Panel on GitHub
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-09-01 14:01:20 +00:00
 tags:

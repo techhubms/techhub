@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=fYs8Nh8KpeM
 title: Azure Files Performance Upgrade
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-06-30 12:49:42 +00:00
 tags:

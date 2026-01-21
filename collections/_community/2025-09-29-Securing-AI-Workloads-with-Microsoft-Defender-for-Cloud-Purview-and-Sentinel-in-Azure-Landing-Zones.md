@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/securing-ai-workloads-with-microsoft-defender-for-cloud-purview/ba-p/4457345
 title: Securing AI Workloads with Microsoft Defender for Cloud, Purview, and Sentinel in Azure Landing Zones
 author: Rohon_Mohapatra
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-29 22:14:43 +00:00
 tags:

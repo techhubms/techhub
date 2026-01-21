@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/implementing-zero-trust-architecture-in-an-azure-environment/
 title: Implementing Zero Trust Architecture in an Azure Environment
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-10-07 08:16:33 +00:00
 tags:

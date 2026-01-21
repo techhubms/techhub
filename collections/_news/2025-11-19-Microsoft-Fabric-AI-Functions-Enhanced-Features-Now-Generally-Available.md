@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/29826/
 title: 'Microsoft Fabric AI Functions: Enhanced Features Now Generally Available'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-19 01:30:00 +00:00
 tags:

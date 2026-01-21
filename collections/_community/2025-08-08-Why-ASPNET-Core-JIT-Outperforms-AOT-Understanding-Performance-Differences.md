@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mku4p2/unexpected_performance_differences_of_jitaot/
 title: 'Why ASP.NET Core JIT Outperforms AOT: Understanding Performance Differences'
 author: Vectorial1024
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-08 12:41:21 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/announcing-public-preview-phishing-triage-agent-in-microsoft-defender/4438301
 title: Announcing Public Preview of the Phishing Triage Agent in Microsoft Defender
 author: Cristina Da Gama Henriquez
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-08-07 16:00:00 +00:00
 tags:

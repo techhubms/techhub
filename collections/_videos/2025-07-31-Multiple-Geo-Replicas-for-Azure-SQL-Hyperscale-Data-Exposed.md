@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=nOy8pN3UwmQ
 title: Multiple geo-replicas for Azure SQL Hyperscale | Data Exposed
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-07-31 16:01:20 +00:00
 tags:

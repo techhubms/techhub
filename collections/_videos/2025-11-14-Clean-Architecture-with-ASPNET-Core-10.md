@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=rjefnUC9Z90
 title: Clean Architecture with ASP.NET Core 10
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 19:21:17 +00:00
 tags:

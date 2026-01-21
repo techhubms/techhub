@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mkse98/how_is_gpt5_experience_for_everyone/
 title: Community Experiences with GPT-5 in GitHub Copilot and Coding Workflows
 author: gullu_7278
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-08 11:14:40 +00:00
 tags:

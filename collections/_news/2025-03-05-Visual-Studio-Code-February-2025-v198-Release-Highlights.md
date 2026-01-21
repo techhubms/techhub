@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/updates/v1_98
 title: Visual Studio Code February 2025 (v1.98) Release Highlights
 author: Visual Studio Code Team
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-03-05 17:00:00 +00:00
 tags:

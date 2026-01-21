@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-environment-library-management-performance-improvement/
 title: Fabric Environment Library Management Performance Improvements for Developers
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-12-15 10:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/write-cleaner-code-comments-with-github-copilot.html
 title: Write Cleaner Code Comments with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-08-01 00:00:00 +00:00
 tags:

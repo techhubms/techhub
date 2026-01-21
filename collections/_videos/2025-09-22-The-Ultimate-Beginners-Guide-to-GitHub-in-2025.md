@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=NUELGzIHT-I
 title: The Ultimate Beginner's Guide to GitHub in 2025
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-09-22 17:00:35 +00:00
 tags:

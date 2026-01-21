@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=O4grrA_xqhc
 title: AI-Driven Insights and Analytics with Microsoft Fabric and Power BI
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-26 00:48:16 +00:00
 tags:

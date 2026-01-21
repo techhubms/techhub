@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/low-code-vs-pro-code-how-copilot-studio-bridges-the-gap/
 title: 'Low-Code vs Pro-Code: How Copilot Studio Bridges the Gap'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-10 08:06:11 +00:00
 tags:

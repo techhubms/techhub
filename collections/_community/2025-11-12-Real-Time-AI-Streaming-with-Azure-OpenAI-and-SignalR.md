@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/real-time-ai-streaming-with-azure-openai-and-signalr/ba-p/4468833
 title: Real-Time AI Streaming with Azure OpenAI and SignalR
 author: pranav_pratik
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-12 09:38:46 +00:00
 tags:

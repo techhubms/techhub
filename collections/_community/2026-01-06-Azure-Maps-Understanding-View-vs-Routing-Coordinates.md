@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-maps-blog/azure-maps-understanding-view-vs-routing-coordinates/ba-p/4483532
 title: 'Azure Maps: Understanding View vs. Routing Coordinates'
 author: IoTGirl
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-06 20:27:42 +00:00
 tags:

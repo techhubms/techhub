@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=d-oD3pApHAg
 title: Agent-to-Agent Collaboration in Copilot Studio
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-03 07:00:38 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/typescript/progress-on-typescript-7-december-2025/
 title: 'Progress on TypeScript 7: Native Compiler and Language Service Updates'
 author: Daniel Rosenwasser
-viewing_mode: external
 feed_name: Microsoft TypeScript Blog
 date: 2025-12-02 17:31:32 +00:00
 tags:

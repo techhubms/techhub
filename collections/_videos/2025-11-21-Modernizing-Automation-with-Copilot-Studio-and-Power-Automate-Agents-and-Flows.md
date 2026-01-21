@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=aMPfb6TVfA4
 title: 'Modernizing Automation with Copilot Studio and Power Automate: Agents and Flows'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 15:03:04 +00:00
 tags:

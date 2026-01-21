@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=opq5Y3QyXmY
 title: Inside Microsoft's AI Transformation Across the Software Lifecycle
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 15:37:51 +00:00
 tags:

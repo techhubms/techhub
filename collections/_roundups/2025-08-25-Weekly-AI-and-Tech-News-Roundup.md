@@ -1,7 +1,6 @@
-﻿---
+---
 title: Updated AI DevOps, Copilot Personalization, and Secure Cloud Developments
 author: Tech Hub Team
-viewing_mode: internal
 date: 2025-08-25 09:00:00 +00:00
 tags:
 - .NET Modernization

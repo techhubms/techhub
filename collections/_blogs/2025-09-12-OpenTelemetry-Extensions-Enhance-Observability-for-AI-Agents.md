@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/opentelemetry-extensions-to-enable-observability-of-ai-agents/?utm_source=rss&utm_medium=rss&utm_campaign=opentelemetry-extensions-to-enable-observability-of-ai-agents
 title: OpenTelemetry Extensions Enhance Observability for AI Agents
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-12 12:30:57 +00:00
 tags:

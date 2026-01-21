@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/wrap-up-your-backlog-with-github-copilot-coding-agent/
 title: Maximize Your Backlog Productivity with the WRAP Method and GitHub Copilot Coding Agent
 author: Brittany Ellich
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-26 17:56:38 +00:00
 tags:

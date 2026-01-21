@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/agent-mode-is-now-generally-available-with-mcp-support/
 title: Agent Mode Now Generally Available in Visual Studio with MCP Support
 author: Rhea Patel, Filisha Shah, Allie Barry
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-06-17 18:24:08 +00:00
 tags:

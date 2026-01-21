@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=KqLYINP9UpQ
 title: 'Anatomy of an Outage: Evolving Transparency in Microsoft Engineering Teams'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 16:43:19 +00:00
 tags:

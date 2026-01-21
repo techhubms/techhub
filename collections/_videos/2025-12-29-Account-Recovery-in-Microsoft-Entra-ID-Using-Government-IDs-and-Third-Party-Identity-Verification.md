@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=WYji1oV7GQI
 title: Account Recovery in Microsoft Entra ID Using Government IDs and Third-Party Identity Verification
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-12-29 16:09:09 +00:00
 tags:

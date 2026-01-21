@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/context-engineering-is-the-key-to-unlocking-ai-agents-in-devops/?utm_source=rss&utm_medium=rss&utm_campaign=context-engineering-is-the-key-to-unlocking-ai-agents-in-devops
 title: Unlocking DevOps-Ready AI Agents Through Context Engineering
 author: Harshil Shah
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-19 10:38:57 +00:00
 tags:

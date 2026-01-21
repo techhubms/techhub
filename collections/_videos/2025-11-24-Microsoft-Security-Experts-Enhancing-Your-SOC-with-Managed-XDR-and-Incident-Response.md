@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=IB9U8dfyF1w
 title: 'Microsoft Security Experts: Enhancing Your SOC with Managed XDR and Incident Response'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 05:12:55 +00:00
 tags:

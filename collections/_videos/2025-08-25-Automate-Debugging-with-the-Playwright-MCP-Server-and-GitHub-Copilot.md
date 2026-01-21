@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Sh9D3lQs3A8
 title: Automate Debugging with the Playwright MCP Server and GitHub Copilot
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-25 18:37:00 +00:00
 tags:

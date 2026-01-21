@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/introducing-knowledge-agent-in-sharepoint-public-preview/
 title: Introducing Knowledge Agent in SharePoint (Public Preview)
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-28 12:33:12 +00:00
 tags:

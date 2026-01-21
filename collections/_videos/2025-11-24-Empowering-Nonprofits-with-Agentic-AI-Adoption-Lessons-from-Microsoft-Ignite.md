@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=aosIvPgLug4
 title: 'Empowering Nonprofits with Agentic AI: Adoption Lessons from Microsoft Ignite'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 12:10:10 +00:00
 tags:

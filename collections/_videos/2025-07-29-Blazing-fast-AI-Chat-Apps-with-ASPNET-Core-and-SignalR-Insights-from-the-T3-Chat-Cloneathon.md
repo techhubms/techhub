@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=RaZc-2tfh9k
 title: 'Blazing-fast AI Chat Apps with ASP.NET Core & SignalR: Insights from the T3 Chat Cloneathon'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-07-29 18:12:29 +00:00
 tags:

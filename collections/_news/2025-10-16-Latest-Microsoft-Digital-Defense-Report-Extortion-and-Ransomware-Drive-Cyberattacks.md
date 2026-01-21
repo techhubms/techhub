@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/10/16/mddr-2025/
 title: 'Latest Microsoft Digital Defense Report: Extortion and Ransomware Drive Cyberattacks'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-16 15:48:34 +00:00
 tags:

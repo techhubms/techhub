@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-events/live-ama-demystifying-azure-pricing-am-session/ec-p/4483196#M665
 title: 'Live AMA: Demystifying Azure Pricing (AM Session)'
 author: Aaron_Bode
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-05 21:17:45 +00:00
 tags:

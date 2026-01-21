@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-13-configure-copilot-coding-agent-as-a-bypass-actor-for-rulesets
 title: How to Configure Copilot Coding Agent as a Bypass Actor for GitHub Rulesets
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-13 22:30:49 +00:00
 tags:

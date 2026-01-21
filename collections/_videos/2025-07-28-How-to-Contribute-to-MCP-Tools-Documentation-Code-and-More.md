@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=v1pvCYAWpRE
 title: 'How to Contribute to MCP: Tools, Documentation, Code & More'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Build 2025 YouTube
 date: 2025-07-28 16:01:33 +00:00
 tags:

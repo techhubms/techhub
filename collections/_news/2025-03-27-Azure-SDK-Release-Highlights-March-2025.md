@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-march-2025/
 title: Azure SDK Release Highlights – March 2025
 author: Hector Norzagaray
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-03-27 17:00:03 +00:00
 tags:

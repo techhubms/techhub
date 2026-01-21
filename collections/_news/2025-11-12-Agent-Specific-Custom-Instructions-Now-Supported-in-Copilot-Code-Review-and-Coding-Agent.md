@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-12-copilot-code-review-and-coding-agent-now-support-agent-specific-instructions
 title: Agent-Specific Custom Instructions Now Supported in Copilot Code Review and Coding Agent
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-12 21:27:42 +00:00
 tags:

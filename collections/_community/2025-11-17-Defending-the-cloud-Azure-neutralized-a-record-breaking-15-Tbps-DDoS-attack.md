@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/defending-the-cloud-azure-neutralized-a-record-breaking-15-tbps/ba-p/4470422
 title: 'Defending the cloud: Azure neutralized a record-breaking 15 Tbps DDoS attack'
 author: Sean_Whalen
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-17 16:00:00 +00:00
 tags:

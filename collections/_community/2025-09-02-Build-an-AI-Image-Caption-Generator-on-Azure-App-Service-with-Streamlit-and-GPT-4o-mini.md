@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-an-ai-image-caption-generator-on-azure-app-service-with/ba-p/4450313
 title: Build an AI Image-Caption Generator on Azure App Service with Streamlit and GPT-4o-mini
 author: TulikaC
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-02 10:08:03 +00:00
 tags:

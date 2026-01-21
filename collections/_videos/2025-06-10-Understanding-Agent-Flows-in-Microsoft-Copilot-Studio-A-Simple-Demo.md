@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Az4GawqnXHA
 title: 'Understanding Agent Flows in Microsoft Copilot Studio: A Simple Demo'
 author: Learn Microsoft AI
-viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
 date: 2025-06-10 06:11:02 +00:00
 tags:

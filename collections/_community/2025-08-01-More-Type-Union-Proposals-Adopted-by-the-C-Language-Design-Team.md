@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mf2ylu/more_type_union_proposals_adopted_by_the_c/
 title: More Type Union Proposals Adopted by the C# Language Design Team
 author: DayYam
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-01 17:39:07 +00:00
 tags:

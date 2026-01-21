@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/combining-generative-ai-and-business-logic-with-copilot-studio/
 title: Combining Generative AI and Business Logic with Copilot Studio
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-02 07:40:09 +00:00
 tags:

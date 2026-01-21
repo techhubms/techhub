@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mh7x1b/facet_v2_a_source_generator_for_projections_and/
 title: 'Facet v2: C# Source Generator for Lightweight Projections and Mappings'
 author: Voiden0
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-04 08:30:19 +00:00
 tags:

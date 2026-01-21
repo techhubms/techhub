@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-13-add-repositories-to-spaces
 title: Copilot Spaces Now Support Adding Entire Repositories
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-13 17:26:04 +00:00
 tags:

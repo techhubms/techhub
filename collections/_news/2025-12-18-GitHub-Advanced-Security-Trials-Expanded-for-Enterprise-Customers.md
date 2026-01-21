@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-18-github-advanced-security-trials-now-available-for-more-github-enterprise-customers
 title: GitHub Advanced Security Trials Expanded for Enterprise Customers
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-18 17:36:42 +00:00
 tags:

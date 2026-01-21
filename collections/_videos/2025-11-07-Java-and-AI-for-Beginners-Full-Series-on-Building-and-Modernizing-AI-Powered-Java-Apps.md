@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=yPlJf5DA5So
 title: 'Java and AI for Beginners: Full Series on Building and Modernizing AI-Powered Java Apps'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-07 05:01:19 +00:00
 tags:

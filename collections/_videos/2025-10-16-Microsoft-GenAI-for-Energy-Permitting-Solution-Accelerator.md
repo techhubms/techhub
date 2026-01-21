@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=wCI6Oqiv4KQ
 title: Microsoft GenAI for Energy Permitting Solution Accelerator
 author: Microsoft Cloud
-viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
 date: 2025-10-16 14:01:36 +00:00
 tags:

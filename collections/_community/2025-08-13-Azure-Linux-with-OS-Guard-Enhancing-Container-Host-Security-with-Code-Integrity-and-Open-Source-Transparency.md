@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-with-os-guard-immutable-container-host-with-code/ba-p/4437473
 title: 'Azure Linux with OS Guard: Enhancing Container Host Security with Code Integrity and Open Source Transparency'
 author: Sudhanva
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-13 16:01:17 +00:00
 tags:

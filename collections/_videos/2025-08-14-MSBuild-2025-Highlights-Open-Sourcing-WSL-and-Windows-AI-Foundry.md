@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=PUHypVSs1JE
 title: 'MSBuild 2025 Highlights: Open Sourcing WSL and Windows AI Foundry'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-08-14 19:05:59 +00:00
 tags:

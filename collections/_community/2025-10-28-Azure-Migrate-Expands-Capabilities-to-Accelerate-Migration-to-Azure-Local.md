@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-migrate-expands-capabilities-to-accelerate-migration-to/ba-p/4464789
 title: Azure Migrate Expands Capabilities to Accelerate Migration to Azure Local
 author: trumanbrown
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-28 20:23:03 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/0vjkCXWebe4
 title: The Role of Storytelling in Security Modeling
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-12 18:38:32 +00:00
 tags:

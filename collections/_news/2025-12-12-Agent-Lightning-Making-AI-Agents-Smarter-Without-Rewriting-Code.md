@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/research/blog/agent-lightning-adding-reinforcement-learning-to-ai-agents-without-code-rewrites/
 title: 'Agent Lightning: Making AI Agents Smarter Without Rewriting Code'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-12 17:20:21 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=D01Rxi_twCg
 title: 'Automation in Copilot Studio: Agent Flows and Computer Use'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 12:09:28 +00:00
 tags:

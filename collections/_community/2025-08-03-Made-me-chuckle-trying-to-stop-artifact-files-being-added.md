@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mgipey/made_me_chuckle_trying_to_stop_artifact_files/
 title: Made me chuckle - trying to stop artifact files being added
 author: okiokio
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-03 13:02:28 +00:00
 tags:

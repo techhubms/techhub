@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-agentic-workflows-with-n8n-and-azure-container-apps/ba-p/4452362
 title: Building Agentic Workflows with n8n and Azure Container Apps
 author: simonjj
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-09 05:55:41 +00:00
 tags:

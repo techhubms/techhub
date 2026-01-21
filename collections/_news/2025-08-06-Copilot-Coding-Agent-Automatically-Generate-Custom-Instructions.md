@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-06-copilot-coding-agent-automatically-generate-custom-instructions
 title: 'Copilot Coding Agent: Automatically Generate Custom Instructions'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-06 17:23:25 +00:00
 tags:

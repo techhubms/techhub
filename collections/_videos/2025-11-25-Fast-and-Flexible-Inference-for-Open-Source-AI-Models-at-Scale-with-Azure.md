@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=mFG2hiMsR34
 title: Fast and Flexible Inference for Open-Source AI Models at Scale with Azure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-25 15:55:32 +00:00
 tags:

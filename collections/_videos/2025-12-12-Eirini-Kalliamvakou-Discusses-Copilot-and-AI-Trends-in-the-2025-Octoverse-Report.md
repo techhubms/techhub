@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=riTyEDJdpEw
 title: Eirini Kalliamvakou Discusses Copilot and AI Trends in the 2025 Octoverse Report
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-12-12 15:01:50 +00:00
 tags:

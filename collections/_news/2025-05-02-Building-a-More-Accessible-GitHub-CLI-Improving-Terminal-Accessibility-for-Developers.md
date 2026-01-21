@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/engineering/user-experience/building-a-more-accessible-github-cli/
 title: 'Building a More Accessible GitHub CLI: Improving Terminal Accessibility for Developers'
 author: Ryan Hecht
-viewing_mode: external
 feed_name: GitHub Engineering Blog
 date: 2025-05-02 14:30:00 +00:00
 tags:

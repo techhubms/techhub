@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=b1F3lyWgbNk
 title: 'Building Production-Ready AI Agents with Microsoft Foundry: Ignite 2025 Session BRK113'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 16:20:43 +00:00
 tags:

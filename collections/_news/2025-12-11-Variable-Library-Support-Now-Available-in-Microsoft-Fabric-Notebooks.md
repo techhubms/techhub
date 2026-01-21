@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/variable-library-support-in-notebook-now-generally-available/
 title: Variable Library Support Now Available in Microsoft Fabric Notebooks
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-12-11 10:00:00 +00:00
 tags:

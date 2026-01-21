@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/empromptu-unveils-vibecoding-platform-for-building-enterprise-class-apps/?utm_source=rss&utm_medium=rss&utm_campaign=empromptu-unveils-vibecoding-platform-for-building-enterprise-class-apps
 title: Empromptu Launches Vibecoding AI Coding Platform for Enterprise Apps
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-09 13:00:11 +00:00
 tags:

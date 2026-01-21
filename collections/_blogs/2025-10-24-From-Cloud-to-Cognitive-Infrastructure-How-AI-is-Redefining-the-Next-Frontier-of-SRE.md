@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/from-cloud-to-cognitive-infrastructure-how-ai-is-redefining-the-next-frontier-of-sre/
 title: 'From Cloud to Cognitive Infrastructure: How AI is Redefining the Next Frontier of SRE'
 author: Akash Thakur
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-24 11:07:09 +00:00
 tags:

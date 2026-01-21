@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=0ccUfvqzalA
 title: 'Store Operations That Scale: Turn Signals into Decisions'
 author: Microsoft Cloud
-viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
 date: 2026-01-07 14:00:03 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=fvx4QtDMlGo
 title: Building for General Purpose AI Agents | Sip and Sync with Azure
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-16 14:16:02 +00:00
 tags:

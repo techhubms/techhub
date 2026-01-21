@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=plDH468Keeg
 title: 'Azure Migrate: AI Insights for Strategic Cloud Transformations'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 10:57:03 +00:00
 tags:

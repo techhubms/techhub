@@ -1,107 +1,49 @@
 @using TechHub.Core.DTOs
 
-@{
-    // External links: ViewingMode is "external" (default) - opens external source in new tab
-    // Internal links: ViewingMode is "internal" - navigates to our content detail page
-    var isExternal = string.IsNullOrWhiteSpace(Item.ViewingMode) || Item.ViewingMode == "external";
-    var targetUrl = isExternal
-    ? Item.ExternalUrl ?? "" // External content uses canonical source URL
-    : Item.Url; // Internal content uses our detail page
-}
-
-@if (isExternal)
-{
-    <a href="@targetUrl" class="content-item-card" target="_blank" rel="noopener noreferrer"
-        aria-label="@Item.Title - opens in new tab">
-        <div class="card-content">
-            <div class="content-header">
-                <h3 class="content-title">@Item.Title</h3>
-                <div class="content-meta">
-                    <time datetime="@Item.DateIso">@FormatDate(Item.DateEpoch)</time>
-                    @if (!string.IsNullOrWhiteSpace(Item.Author))
-                    {
-                        <span class="content-author">by @Item.Author</span>
-                    }
-                </div>
+<a href="@Item.GetHref()"
+   class="content-item-card"
+   target="@Item.GetTarget()"
+   rel="@Item.GetRel()"
+   data-enhance-nav="@Item.GetDataEnhanceNav()"
+   aria-label="@Item.GetAriaLabel()">
+    <div class="card-content">
+        <div class="content-header">
+            <h3 class="content-title">@Item.Title</h3>
+            <div class="content-meta">
+                <time datetime="@Item.DateIso">@FormatDate(Item.DateEpoch)</time>
+                @if (!string.IsNullOrWhiteSpace(Item.Author))
+                {
+                    <span class="content-author">by @Item.Author</span>
+                }
             </div>
-
-            @if (!string.IsNullOrWhiteSpace(Item.Excerpt))
-            {
-                <div class="content-excerpt">
-                    @((MarkupString)Item.Excerpt)
-                </div>
-            }
-            else if (!string.IsNullOrWhiteSpace(Item.Description))
-            {
-                <p class="content-description">@Item.Description</p>
-            }
-
-            @if (Item.Tags.Any() || (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName)))
-            {
-                <div class="content-tags" @onclick:preventDefault @onclick:stopPropagation>
-                    @foreach (var tag in Item.Tags.Take(5))
-                    {
-                        <span class="content-item-card-tag">@tag</span>
-                    }
-                    @if (Item.Tags.Count > 5)
-                    {
-                        <span class="content-item-card-tag-more">+@(Item.Tags.Count - 5) more</span>
-                    }
-                    @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName))
-                    {
-                        <span class="collection-badge-white">@CapitalizeCollection(Item.CollectionName)</span>
-                    }
-                </div>
-            }
         </div>
-    </a>
-}
-else
-{
-    <a href="@targetUrl" class="content-item-card" data-enhance-nav="true" aria-label="@Item.Title">
-        <div class="card-content">
-            <div class="content-header">
-                <h3 class="content-title">@Item.Title</h3>
-                <div class="content-meta">
-                    <time datetime="@Item.DateIso">@FormatDate(Item.DateEpoch)</time>
-                    @if (!string.IsNullOrWhiteSpace(Item.Author))
-                    {
-                        <span class="content-author">by @Item.Author</span>
-                    }
-                </div>
+
+        @if (!string.IsNullOrWhiteSpace(Item.Excerpt))
+        {
+            <div class="content-excerpt">
+                @((MarkupString)Item.Excerpt)
             </div>
+        }
 
-            @if (!string.IsNullOrWhiteSpace(Item.Excerpt))
-            {
-                <div class="content-excerpt">
-                    @((MarkupString)Item.Excerpt)
-                </div>
-            }
-            else if (!string.IsNullOrWhiteSpace(Item.Description))
-            {
-                <p class="content-description">@Item.Description</p>
-            }
-
-            @if (Item.Tags.Any() || (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName)))
-            {
-                <div class="content-tags" @onclick:preventDefault @onclick:stopPropagation>
-                    @foreach (var tag in Item.Tags.Take(5))
-                    {
-                        <span class="content-item-card-tag">@tag</span>
-                    }
-                    @if (Item.Tags.Count > 5)
-                    {
-                        <span class="content-item-card-tag-more">+@(Item.Tags.Count - 5) more</span>
-                    }
-                    @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName))
-                    {
-                        <span class="collection-badge-white">@CapitalizeCollection(Item.CollectionName)</span>
-                    }
-                </div>
-            }
-        </div>
-    </a>
-}
+        @if (Item.Tags.Any() || (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName)))
+        {
+            <div class="content-tags" @onclick:preventDefault @onclick:stopPropagation>
+                @foreach (var tag in Item.Tags.Take(5))
+                {
+                    <span class="content-item-card-tag">@tag</span>
+                }
+                @if (Item.Tags.Count > 5)
+                {
+                    <span class="content-item-card-tag-more">+@(Item.Tags.Count - 5) more</span>
+                }
+                @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName))
+                {
+                    <span class="collection-badge-white">@CapitalizeCollection(Item.CollectionName)</span>
+                }
+            </div>
+        }
+    </div>
+</a>
 
 @code {
     [Parameter, EditorRequired]

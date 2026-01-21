@@ -276,7 +276,6 @@ The database must support all content filtering and search scenarios with effici
 **Simplified Data Model Notes**:
 
 - **No `description` field** - We use `excerpt` exclusively for summaries
-- **No `viewingMode` field** - Frontend determines internal/external based on collection
 - **Single date field** - `dateEpoch` (Unix timestamp); ISO format derived at query time
 - **ContentHash** - SHA256 of file content for incremental sync detection
 - **`external_url`** - Points to original source content; only NULL for roundups (we generate those)
@@ -284,7 +283,7 @@ The database must support all content filtering and search scenarios with effici
 
 **Navigation Logic** (handled by frontend):
 
-- `collection_name` in `["videos", "roundups"]` → Internal URL: `/{section}/{collection}/{slug}`
+- `collection_name` in `["videos", "roundups"]` → Internal URL: `/{sectionName}/{collectionName}/{slug}`
 - All other collections → External URL: `external_url` with `target="_blank"`
 
 **Database Tables**:

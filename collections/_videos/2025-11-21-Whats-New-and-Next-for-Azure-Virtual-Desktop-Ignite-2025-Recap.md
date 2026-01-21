@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=qhEj-1ZolLs
 title: 'What’s New and Next for Azure Virtual Desktop: Ignite 2025 Recap'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 14:29:12 +00:00
 tags:

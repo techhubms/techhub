@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/07/20/eudigitalunlock/
 title: Microsoft supports making Europe’s languages and cultures more accessible in the digital realm
 author: stclarke
 feed_name: Microsoft News
 date: 2025-07-21 16:42:58 +00:00
-viewing_mode: external
 tags:
 - Company News
 - Cultural Diversity

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-data-warehouse-migration-assistant-better-faster-more-reliable/
 title: 'Fabric Data Warehouse Migration Assistant: Better, Faster, More Reliable'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-07-22 11:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/rxIjBKM-XvU
 title: 'Introducing Plan Mode: Build Better Plans with GitHub Copilot'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-29 18:40:44 +00:00
 tags:

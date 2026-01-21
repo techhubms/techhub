@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=GMWJceUTxuk
 title: 'Anders Hejlsberg on Octoverse 2025: TypeScript Evolution, Go, and AI in Development'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-06 14:48:36 +00:00
 tags:

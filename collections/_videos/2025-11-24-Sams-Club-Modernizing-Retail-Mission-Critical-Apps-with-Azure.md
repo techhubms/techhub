@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=NDdYyolB-PA
 title: 'Sam’s Club: Modernizing Retail Mission-Critical Apps with Azure'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 12:15:09 +00:00
 tags:

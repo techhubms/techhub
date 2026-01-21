@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/blog/2025/10/28/becoming-frontier-how-human-ambition-and-ai-first-differentiation-are-helping-microsoft-customers-go-further-with-ai/
 title: 'Becoming Frontier: How Microsoft Empowers Organizations with AI-First Transformation'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-28 16:05:50 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=EmbrmSr40CA
 title: 'Resilience by Design: Secure, Scalable, AI-Ready Cloud with Azure'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 08:20:54 +00:00
 tags:

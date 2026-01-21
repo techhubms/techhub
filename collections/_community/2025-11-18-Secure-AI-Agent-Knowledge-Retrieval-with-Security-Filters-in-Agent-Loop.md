@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/secure-ai-agent-knowledge-retrieval-introducing-security-filters/ba-p/4467561
 title: Secure AI Agent Knowledge Retrieval with Security Filters in Agent Loop
 author: harimehta
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 17:25:53 +00:00
 tags:

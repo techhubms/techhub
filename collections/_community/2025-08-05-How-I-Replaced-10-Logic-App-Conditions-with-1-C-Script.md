@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mi33ug/how_i_replaced_10_logic_app_conditions_with_1_c/
 title: How I Replaced 10 Logic App Conditions with 1 C# Script
 author: maverick-1009
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-08-05 07:56:10 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-announcing-the-call-for-content/
 title: '.NET Conf 2025 Call for Content: Share Your .NET 10 Expertise'
 author: Jeffrey T. Fritz
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-08-05 16:00:00 +00:00
 tags:

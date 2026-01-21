@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/21/the-new-microsoft-security-store-unites-partners-and-innovation/
 title: 'The New Microsoft Security Store: Unifying Partners and Innovation for Stronger Security'
 author: Dorothy Li
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-10-21 16:00:00 +00:00
 tags:

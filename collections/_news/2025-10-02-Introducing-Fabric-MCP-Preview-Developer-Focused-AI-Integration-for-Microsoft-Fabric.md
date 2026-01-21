@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-fabric-mcp-public-preview/
 title: 'Introducing Fabric MCP (Preview): Developer-Focused AI Integration for Microsoft Fabric'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-10-02 15:00:00 +00:00
 tags:

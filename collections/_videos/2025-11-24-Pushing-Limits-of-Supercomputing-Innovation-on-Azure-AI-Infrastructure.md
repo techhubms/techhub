@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=_NRldsqv__w
 title: Pushing Limits of Supercomputing Innovation on Azure AI Infrastructure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 06:42:11 +00:00
 tags:

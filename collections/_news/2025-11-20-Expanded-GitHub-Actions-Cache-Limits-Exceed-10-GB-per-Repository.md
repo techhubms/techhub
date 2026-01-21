@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-20-github-actions-cache-size-can-now-exceed-10-gb-per-repository
 title: Expanded GitHub Actions Cache Limits Exceed 10 GB per Repository
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-20 21:01:36 +00:00
 tags:

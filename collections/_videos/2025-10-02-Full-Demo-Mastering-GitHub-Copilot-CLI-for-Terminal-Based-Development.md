@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=VkOibxsQ1oU
 title: 'Full Demo: Mastering GitHub Copilot CLI for Terminal-Based Development'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-02 14:01:01 +00:00
 tags:

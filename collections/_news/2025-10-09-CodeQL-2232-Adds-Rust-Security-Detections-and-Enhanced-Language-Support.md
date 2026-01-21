@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-09-codeql-2-23-2-adds-additional-detections-for-rust-and-improves-accuracy-across-languages
 title: CodeQL 2.23.2 Adds Rust Security Detections and Enhanced Language Support
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-09 22:05:23 +00:00
 tags:

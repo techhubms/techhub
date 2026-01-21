@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=u5SeZ0xmJpU
 title: 'Microsoft 365 Agents SDK: Building Multichannel and AI-Integrated Agents'
 author: Learn Microsoft AI
-viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
 date: 2025-03-10 08:00:43 +00:00
 tags:

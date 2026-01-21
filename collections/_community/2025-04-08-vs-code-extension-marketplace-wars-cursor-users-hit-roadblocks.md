@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devclass.com/2025/04/08/vs-code-extension-marketplace-wars-cursor-users-hit-roadblocks/
 title: 'VS Code extension marketplace wars: Cursor users hit roadblocks'
 author: Tim Anderson
-viewing_mode: external
 date: 2025-04-08 00:00:00 +00:00
 tags:
 - C/C++

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/anthropic-joins-the-multi-model-lineup-in-microsoft-copilot-studio/
 title: Anthropic Models Integrated with OpenAI in Microsoft Copilot Studio
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-09-24 16:48:15 +00:00
 tags:

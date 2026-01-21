@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://zure.com/blog/microsoft-ignite-2024-key-updates-for-fabric/
 title: 'Microsoft Ignite 2024: Key Updates and Insights from the Microsoft Fabric Perspective'
 author: Samu Niemelä
-viewing_mode: external
 feed_name: Zure Data & AI Blog
 date: 2024-11-20 06:19:29 +00:00
 tags:

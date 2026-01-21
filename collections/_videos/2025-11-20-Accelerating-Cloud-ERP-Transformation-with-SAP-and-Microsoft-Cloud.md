@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=kNKmYwlN9rQ
 title: Accelerating Cloud-ERP Transformation with SAP and Microsoft Cloud
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 11:04:20 +00:00
 tags:

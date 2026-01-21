@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/VFv4YFCC1-4
 title: Finish your work without touching any code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-07-18 20:19:41 +00:00
 tags:

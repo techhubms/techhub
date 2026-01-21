@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/engineering/infrastructure/when-protections-outlive-their-purpose-a-lesson-on-managing-defense-systems-at-scale/
 title: 'When Protections Outlive Their Purpose: Managing Defense Systems at Scale on GitHub'
 author: Thomas Kjær Aabo
-viewing_mode: external
 feed_name: GitHub Engineering Blog
 date: 2026-01-15 20:54:32 +00:00
 tags:

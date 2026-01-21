@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=VHKivXdqfeQ
 title: Unleash the Future of AI and Agent Development on Secure Windows Platforms
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 11:17:21 +00:00
 tags:

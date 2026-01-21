@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/news-insights/company-news/your-guide-to-github-universe-2025-the-schedule-just-launched/
 title: 'Your Guide to GitHub Universe 2025: Event Schedule, Learning, and Certifications Announced'
 author: GitHub Staff
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-10 20:52:28 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/semantic-kernel/encoding-changes-for-template-arguments-in-semantic-kernel/
 title: Stricter Encoding Rules for Template Arguments in Semantic Kernel
 author: Dmytro Struk
-viewing_mode: external
 feed_name: Microsoft Semantic Kernel Blog
 date: 2025-08-27 05:17:18 +00:00
 tags:

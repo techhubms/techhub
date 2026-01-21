@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: https://youtu.be/43yFNFT8-R4
 title: Usage Metrics
 author: Rob Bos
 date: 2025-01-02 11:20:07 +00:00
-viewing_mode: internal
 ghes_support: false
 plans:
 - Pro

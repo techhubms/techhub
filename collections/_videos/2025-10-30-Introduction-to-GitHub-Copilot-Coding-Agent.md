@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Wex4ONr1P2I
 title: Introduction to GitHub Copilot Coding Agent
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-30 18:08:01 +00:00
 tags:

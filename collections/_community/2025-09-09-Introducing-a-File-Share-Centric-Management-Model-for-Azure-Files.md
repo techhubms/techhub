@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/simplifying-file-share-management-and-control-for-azure-files/ba-p/4452634
 title: Introducing a File Share-Centric Management Model for Azure Files
 author: wmgries
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-09 19:03:03 +00:00
 tags:

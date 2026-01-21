@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=NcrMVachthU
 title: Drive Growth, Profitability and Resilience with Agentic Supply Chains
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 07:14:51 +00:00
 tags:

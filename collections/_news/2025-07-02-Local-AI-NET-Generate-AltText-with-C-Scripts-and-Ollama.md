@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/alttext-generator-csharp-local-models/
 title: 'Local AI + .NET: Generate AltText with C# Scripts and Ollama'
 author: Bruno Capuano
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-07-02 20:00:00 +00:00
 tags:

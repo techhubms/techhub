@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/ai-do-or-dont-believe-the-hype/?utm_source=rss&utm_medium=rss&utm_campaign=ai-do-or-dont-believe-the-hype
 title: 'AI: Do or Don’t Believe the Hype – A Balanced Look at AI in DevOps'
 author: Alan Shimel
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-08 19:43:40 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/generative-ai/want-better-ai-outputs-try-context-engineering/
 title: Want Better AI Outputs? Try Context Engineering with GitHub Copilot
 author: Christina Warren
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2026-01-12 17:00:00 +00:00
 tags:

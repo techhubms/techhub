@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=xRTgusuYm8k
 title: 'Blazor Internship Demo Fest: New Components and Enhanced Navigation'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-09-04 18:35:48 +00:00
 tags:

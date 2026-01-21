@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-12-github-copilot-in-vs-code-august-release-v1-104
 title: 'GitHub Copilot in Visual Studio Code August 2025 Update (v1.104): New Features and Security Enhancements'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-12 19:01:40 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/23/harden-your-identity-defense-with-improved-protection-deeper-correlation-and-richer-context/
 title: 'Harden Your Identity Defense with Microsoft Defender and Entra: Enhanced ITDR and Unified Insights'
 author: Sharon Ben Yosef
-viewing_mode: external
 feed_name: Microsoft Security Blog
 date: 2025-10-23 16:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=82jciNezDMY
 title: Power Agentic Workflows in Your Terminal with GitHub Copilot CLI
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-02 14:00:11 +00:00
 tags:

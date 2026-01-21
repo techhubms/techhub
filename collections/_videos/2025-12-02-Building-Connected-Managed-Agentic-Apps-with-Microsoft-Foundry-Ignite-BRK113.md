@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ThGXQlnS8Lo
 title: Building Connected Managed Agentic Apps with Microsoft Foundry (Ignite BRK113)
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-12-02 20:30:27 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/simplify-application-monitoring-for-aks-with-azure-monitor/ba-p/4470136
 title: Simplify Application Monitoring for AKS with Azure Monitor (Public Preview)
 author: austonli
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 16:15:50 +00:00
 tags:

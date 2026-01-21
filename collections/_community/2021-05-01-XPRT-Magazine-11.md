@@ -1,8 +1,7 @@
-﻿---
+---
 title: XPRT Magazine 11
 date: 2021-05-01 00:00:00 +00:00
 author: Xebia
-viewing_mode: external
 tags:
 - Automation
 - Cloud Native

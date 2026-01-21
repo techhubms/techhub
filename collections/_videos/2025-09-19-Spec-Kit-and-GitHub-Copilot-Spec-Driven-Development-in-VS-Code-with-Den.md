@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=qzTqjJECIRk
 title: 'Spec Kit and GitHub Copilot: Spec-Driven Development in VS Code with Den'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-09-19 14:37:29 +00:00
 tags:

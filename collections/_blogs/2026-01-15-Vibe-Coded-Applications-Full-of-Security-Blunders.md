@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devclass.com/2026/01/15/vibe-coded-applications-full-of-security-blunders/
 title: Vibe Coded Applications Full of Security Blunders
 author: Tim Anderson
-viewing_mode: external
 feed_name: DevClass
 date: 2026-01-15 17:14:53 +00:00
 tags:

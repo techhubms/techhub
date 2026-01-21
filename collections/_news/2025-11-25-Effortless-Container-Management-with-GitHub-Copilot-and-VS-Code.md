@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/manage-containers-the-easy-way-copilot-vs-code
 title: Effortless Container Management with GitHub Copilot and VS Code
 author: Matt Hernandez
-viewing_mode: external
 feed_name: Microsoft Blog
 date: 2025-11-25 22:51:14 +00:00
 tags:

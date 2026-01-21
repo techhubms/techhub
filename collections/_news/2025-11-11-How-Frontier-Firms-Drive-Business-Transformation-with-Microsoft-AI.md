@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/blog/2025/11/11/bridging-the-ai-divide-how-frontier-firms-are-transforming-business/
 title: How Frontier Firms Drive Business Transformation with Microsoft AI
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-11 15:22:57 +00:00
 tags:

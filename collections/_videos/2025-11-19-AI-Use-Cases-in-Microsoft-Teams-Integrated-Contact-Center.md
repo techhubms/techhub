@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=IggA_sx3LzI
 title: AI Use Cases in Microsoft Teams Integrated Contact Center
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 13:33:03 +00:00
 tags:

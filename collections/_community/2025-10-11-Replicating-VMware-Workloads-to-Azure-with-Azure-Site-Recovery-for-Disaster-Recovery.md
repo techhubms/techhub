@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure/replicate-workload-from-vmware-to-azure-using-azure-site/m-p/4460851#M22268
 title: Replicating VMware Workloads to Azure with Azure Site Recovery for Disaster Recovery
 author: ADEDAYO1880
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-11 18:46:30 +00:00
 tags:

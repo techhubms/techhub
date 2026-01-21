@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development
 title: 'From Vibe Coding to Spec-Driven Development: Why AI-Generated Code Needs Structure'
 author: Hidde de Smet
-viewing_mode: external
 feed_name: Hidde de Smet's Blog
 date: 2026-01-05 00:00:00 +00:00
 tags:

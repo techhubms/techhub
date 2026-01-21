@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.bing.com/webmaster/November-2025/How-AI-Search-Is-Changing%E2%80%AFthe%E2%80%AFWay%E2%80%AFConversions%E2%80%AFare-Measured
 title: How AI Search is Transforming Conversion Measurement
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-20 18:05:30 +00:00
 tags:

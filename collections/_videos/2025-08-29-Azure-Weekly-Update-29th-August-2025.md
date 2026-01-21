@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=iXTnCccJEHU
 title: Azure Weekly Update – 29th August 2025
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-08-29 14:45:05 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/exchange-team-blog/released-august-2025-exchange-server-security-updates/ba-p/4441596
 title: August 2025 Exchange Server Security Updates Released
 author: The_Exchange_Team
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-12 17:48:04 +00:00
 tags:

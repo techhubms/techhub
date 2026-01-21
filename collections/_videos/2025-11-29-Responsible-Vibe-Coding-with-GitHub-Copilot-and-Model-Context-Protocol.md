@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=PvdptUZ3XeU
 title: Responsible Vibe Coding with GitHub Copilot and Model Context Protocol
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-11-29 15:00:51 +00:00
 tags:

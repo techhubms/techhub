@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-native-pure-storage-cloud-brings-the-best-of-pure-and/ba-p/4456246
 title: 'Azure Native Pure Storage Cloud: Integrating Enterprise Block Storage with Azure'
 author: karautenMSFT
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-25 16:00:00 +00:00
 tags:

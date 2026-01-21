@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure/azure-functions-vs-logic-apps-vs-power-automate-when-to-use-what/m-p/4438720#M22035
 title: 'Azure Functions vs Logic Apps vs Power Automate: When to Use What?'
 author: JohnNaguib
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-07-31 15:48:17 +00:00
 tags:

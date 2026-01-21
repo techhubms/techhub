@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/bxV3Fw8nh5M
 title: Using GitHub Copilot to Advance Sustainable City Design with Open Source
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-06 18:15:16 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=CSD1qQN2R2k
 title: 'App Gateway for Containers: Web Application Firewall (WAF) Overview'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-08-06 13:27:43 +00:00
 tags:

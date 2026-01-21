@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/key-considerations-for-modernizing-and-migrating-custom/ba-p/4476580
 title: Key Considerations for Modernizing and Migrating Custom Applications to Azure
 author: srhulsus
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-12 18:04:26 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/2025/11/17/levi-strauss-co-partners-with-microsoft-to-develop-next-gen-superagent/
 title: Levi Strauss & Co. Partners with Microsoft to Develop Next-Gen Superagent
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-17 14:01:36 +00:00
 tags:

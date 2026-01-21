@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/ai-builder-in-action-automating-tedious-business-tasks/
 title: AI Builder in Action Automating Tedious Business Tasks
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-24 09:13:30 +00:00
 tags:

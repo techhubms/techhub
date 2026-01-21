@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/open-source/from-karaoke-terminals-to-ai-resumes-the-winners-of-githubs-for-the-love-of-code-challenge/
 title: 'For the Love of Code: GitHub Hackathon Winners Showcase Creative Projects with Copilot'
 author: Lee Reilly
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-22 20:30:35 +00:00
 tags:

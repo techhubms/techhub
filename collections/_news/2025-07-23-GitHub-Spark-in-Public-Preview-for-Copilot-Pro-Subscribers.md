@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-23-github-spark-in-public-preview-for-copilot-pro-subscribers
 title: GitHub Spark in Public Preview for Copilot Pro+ Subscribers
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-23 16:00:49 +00:00
 tags:

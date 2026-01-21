@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=fHha3U_EDkM
 title: 'Migrating VMware Workloads to Azure: Tools, Best Practices, and Cloud Management'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 10:58:45 +00:00
 tags:

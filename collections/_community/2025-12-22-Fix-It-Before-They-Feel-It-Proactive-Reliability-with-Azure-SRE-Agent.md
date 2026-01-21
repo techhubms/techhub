@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/fix-it-before-they-feel-it-higher-reliability-with-proactive/ba-p/4480444
 title: 'Fix It Before They Feel It: Proactive Reliability with Azure SRE Agent'
 author: saziz_msft
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-22 23:54:37 +00:00
 tags:

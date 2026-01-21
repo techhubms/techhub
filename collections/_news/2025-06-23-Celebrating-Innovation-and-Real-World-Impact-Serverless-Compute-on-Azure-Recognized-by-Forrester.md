@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/celebrating-innovation-scale-and-real-world-impact-with-serverless-compute-on-azure/
 title: 'Celebrating Innovation and Real-World Impact: Serverless Compute on Azure Recognized by Forrester'
 author: Scott Hunter
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-06-23 15:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=8tP0NX9nXpw
 title: Solving Real MSP Challenges with Agentic AI at Microsoft Ignite 2025
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 11:14:23 +00:00
 tags:

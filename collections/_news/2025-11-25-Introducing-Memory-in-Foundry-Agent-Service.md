@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/introducing-memory-in-foundry-agent-service/
 title: Introducing Memory in Foundry Agent Service
 author: Lewis Liu, Paul Hsu, Takuto Higuchi
-viewing_mode: external
 feed_name: Microsoft AI Foundry Blog
 date: 2025-11-25 16:00:48 +00:00
 tags:

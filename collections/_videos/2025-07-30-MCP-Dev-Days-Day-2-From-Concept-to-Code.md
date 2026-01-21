@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=CRjRI0zHz54
 title: 'MCP Dev Days Day 2: From Concept to Code'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-07-30 22:20:09 +00:00
 tags:

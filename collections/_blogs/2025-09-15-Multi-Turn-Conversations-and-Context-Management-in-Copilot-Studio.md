@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/multi-turn-conversations-and-context-management-in-copilot-studio/
 title: Multi-Turn Conversations and Context Management in Copilot Studio
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-15 07:34:16 +00:00
 tags:

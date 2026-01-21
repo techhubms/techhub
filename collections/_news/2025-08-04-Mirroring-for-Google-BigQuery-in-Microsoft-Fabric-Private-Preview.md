@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-private-preview-mirroring-for-google-bigquery-in-microsoft-fabric/
 title: Mirroring for Google BigQuery in Microsoft Fabric (Private Preview)
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-08-04 10:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=zbH-cIihBh4
 title: 'DataMountain: .NET Data Warehousing That Beats C++ Performance'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-14 19:21:35 +00:00
 tags:

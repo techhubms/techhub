@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=OU3yAhrB0To
 title: AI Playbook for ROI with Microsoft Foundry at Ignite 2025
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 17:03:57 +00:00
 tags:

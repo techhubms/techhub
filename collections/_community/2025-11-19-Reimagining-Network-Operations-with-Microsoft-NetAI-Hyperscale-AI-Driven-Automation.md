@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/reimagining-network-operations-how-microsoft-netai-tackles/ba-p/4470572
 title: 'Reimagining Network Operations with Microsoft NetAI: Hyperscale AI-Driven Automation'
 author: rickliev
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-19 01:45:22 +00:00
 tags:

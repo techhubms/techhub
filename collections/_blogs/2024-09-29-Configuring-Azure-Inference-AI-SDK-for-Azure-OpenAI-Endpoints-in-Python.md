@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devopsjournal.io/blog/2024/09/29/GitHub-Models-API
 title: Configuring Azure Inference AI SDK for Azure OpenAI Endpoints in Python
 author: Rob Bos
-viewing_mode: external
 feed_name: Rob Bos' Blog
 date: 2024-09-29 00:00:00 +00:00
 tags:

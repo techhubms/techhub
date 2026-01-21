@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=REGwDgyLfNA
 title: 'Blazor Community Standup: Validation Improvements in Blazor'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-08-08 23:02:43 +00:00
 tags:

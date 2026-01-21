@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2026-is-here-faster-smarter-and-a-hit-with-early-adopters/
 title: 'Visual Studio 2026: Faster Performance and AI-Driven Developer Tools Now Available'
 author: Mads Kristensen
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-11-11 16:08:47 +00:00
 tags:

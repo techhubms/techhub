@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/microsoft-defender-advanced-protection-tips-for-windows-11/
 title: Microsoft Defender Advanced Protection Tips for Windows 11
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-23 07:39:27 +00:00
 tags:

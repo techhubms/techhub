@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/introducing-fsharp-10/
 title: 'Introducing F# 10: Language Features, Performance, and Tooling in .NET 10'
 author: Adam Boniecki
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-11-17 18:05:00 +00:00
 tags:

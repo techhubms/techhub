@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure/azure-entra-security-copilot-how-it-s-changing-identity/m-p/4447388#M22132
 title: Enhancing Identity Protection with Azure Entra Security Copilot
 author: SoaebRathod
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-23 11:28:05 +00:00
 tags:

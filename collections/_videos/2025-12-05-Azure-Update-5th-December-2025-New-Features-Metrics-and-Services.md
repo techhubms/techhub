@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Fe0M4Xxi1O8
 title: 'Azure Update - 5th December 2025: New Features, Metrics, and Services'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-12-05 16:03:01 +00:00
 tags:

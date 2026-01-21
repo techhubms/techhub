@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/observability-is-the-next-frontier-of-devops-and-cloud-security/
 title: 'Observability and Security: Evolving DevOps Across Cloud-Native Environments'
 author: Joe Selvam
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-11-18 10:56:12 +00:00
 tags:

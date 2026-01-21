@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mjszox/need_help_automating_windows_forms_inside_remote/
 title: 'Automating Legacy WinForms Apps in RDP: UI Automation vs. Computer Vision (C# Solutions)'
 author: Grifone87
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-07 06:50:03 +00:00
 tags:

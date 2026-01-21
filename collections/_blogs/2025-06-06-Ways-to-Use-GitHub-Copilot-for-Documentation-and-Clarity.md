@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.cooknwithcopilot.com/blog/ways-to-use-github-copilot-for-documentation-clarity.html
 title: Ways to Use GitHub Copilot for Documentation & Clarity
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-06-06 00:00:00 +00:00
 tags:

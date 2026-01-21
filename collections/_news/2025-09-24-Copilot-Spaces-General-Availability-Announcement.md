@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-24-copilot-spaces-is-now-generally-available
 title: 'Copilot Spaces: General Availability Announcement'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-24 17:49:12 +00:00
 tags:

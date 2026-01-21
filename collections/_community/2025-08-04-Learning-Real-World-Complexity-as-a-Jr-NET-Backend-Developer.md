@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mh84i5/i_thought_i_am_ready_to_apply_for_a_jr_backend/
 title: Learning Real-World Complexity as a Jr. .NET Backend Developer
 author: Adjer_Nimossia
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-04 08:44:34 +00:00
 tags:

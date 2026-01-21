@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/all-things-azure/automating-secure-and-scalable-ai-deployments-on-azure-with-hashicorp/
 title: Automating Secure and Scalable AI Deployments on Azure with HashiCorp
 author: cindywang, davidwright
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-07-03 23:03:35 +00:00
 tags:

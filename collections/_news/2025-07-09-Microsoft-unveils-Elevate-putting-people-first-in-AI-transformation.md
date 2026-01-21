@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/07/09/elevate/
 title: Microsoft unveils Elevate, putting people first in AI transformation
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-07-09 16:46:18 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/using-github-copilot-to-teach-programming-a-new-approach-for-educators/
 title: 'Using GitHub Copilot to Teach Programming: A New Approach for Educators'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-26 15:10:17 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-september-update/
 title: 'Visual Studio September 2025 Update: Profiler Agent, App Modernization, GitHub Copilot Enhancements'
 author: Simona Liao
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-09-30 13:30:50 +00:00
 tags:

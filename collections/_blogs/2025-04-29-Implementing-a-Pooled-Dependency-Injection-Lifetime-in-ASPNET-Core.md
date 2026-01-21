@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://andrewlock.net/creating-a-pooled-dependency-injection-lifetime/
 title: Implementing a Pooled Dependency Injection Lifetime in ASP.NET Core
 author: Andrew Lock
-viewing_mode: external
 feed_name: Andrew Lock's Blog
 date: 2025-04-29 09:00:00 +00:00
 tags:

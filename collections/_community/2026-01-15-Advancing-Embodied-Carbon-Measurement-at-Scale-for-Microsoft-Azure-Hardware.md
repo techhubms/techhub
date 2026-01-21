@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/advancing-embodied-carbon-measurement-at-scale-for-microsoft/ba-p/4485784
 title: Advancing Embodied Carbon Measurement at Scale for Microsoft Azure Hardware
 author: Leoaspauza
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-15 22:08:50 +00:00
 tags:

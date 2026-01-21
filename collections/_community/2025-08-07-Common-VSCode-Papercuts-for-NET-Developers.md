@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1mk1592/vscode_paper_cuts_for_net_dev/
 title: Common VSCode Papercuts for .NET Developers
 author: Sure-Natural-9086
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-07 14:11:04 +00:00
 tags:

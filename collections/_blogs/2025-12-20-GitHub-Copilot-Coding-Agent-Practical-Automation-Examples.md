@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devopsjournal.io/blog/2025/12/20/Copilot-Agent-example
 title: 'GitHub Copilot Coding Agent: Practical Automation Examples'
 author: Rob Bos
-viewing_mode: external
 feed_name: Rob Bos' Blog
 date: 2025-12-20 00:00:00 +00:00
 tags:

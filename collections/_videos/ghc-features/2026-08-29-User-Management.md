@@ -1,9 +1,8 @@
-﻿---
+---
 external_url: ''
 title: User Management
 author: TBD
 date: 2026-08-29 09:39:32 +00:00
-viewing_mode: internal
 ghes_support: false
 plans:
 - Pro

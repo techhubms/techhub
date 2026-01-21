@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/10/30/microsoft-techspark-partners-with-titletowntech-and-the-new-jersey-ai-hub-to-accelerate-scientific-discovery/
 title: Microsoft Unveils Partnership with TitletownTech and NJ AI Hub to Advance Scientific Discovery via AI
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-30 16:45:37 +00:00
 tags:

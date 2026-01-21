@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-07-github-copilot-in-vs-code-july-release-v1-103
 title: GitHub Copilot in VS Code July 2025 Release (v1.103)
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-07 23:01:07 +00:00
 tags:

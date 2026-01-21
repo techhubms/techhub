@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-do-i-catch-bad-data-before-it-derails-my-agent/ba-p/4440397
 title: How to Quickly Catch and Clean Bad Data for AI Agents with VS Code Data Wrangler
 author: AngelosPetropoulos
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-07 04:15:00 +00:00
 tags:

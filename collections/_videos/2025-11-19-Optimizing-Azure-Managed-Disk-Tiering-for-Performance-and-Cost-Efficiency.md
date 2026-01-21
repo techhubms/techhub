@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=0PVcB1u_ZV4
 title: Optimizing Azure Managed Disk Tiering for Performance and Cost Efficiency
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 11:47:25 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure/announcing-the-november-2025-innovation-challenge-hackathon/m-p/4464518#M22287
 title: Announcing the November 2025 Innovation Challenge Hackathon
 author: macalde
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-27 15:22:36 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/dotnet/comments/1meuo7l/how_to_integrate_aspnet_core_identity_in_clean/
 title: How to integrate ASP.NET Core Identity in Clean Architecture (DDD) without breaking domain independence?
 author: Successful_Cycle_465
-viewing_mode: external
 feed_name: Reddit DotNet
 date: 2025-08-01 12:05:09 +00:00
 tags:

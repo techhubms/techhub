@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/devsecops-in-practice-closing-the-gap-between-development-speed-and-security-assurance/
 title: 'DevSecOps in Practice: Closing the Gap Between Development Speed and Security Assurance'
 author: Usman Peter
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-11-07 10:22:30 +00:00
 tags:

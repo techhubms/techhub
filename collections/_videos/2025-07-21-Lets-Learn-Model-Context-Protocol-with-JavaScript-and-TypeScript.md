@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=AKjW94vQZkc
 title: Let's Learn Model Context Protocol with JavaScript and TypeScript
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-07-21 19:11:17 +00:00
 tags:

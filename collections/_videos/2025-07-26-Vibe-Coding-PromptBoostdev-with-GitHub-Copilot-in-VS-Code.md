@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=NrIc3ytJQU4
 title: Vibe Coding PromptBoost.dev with GitHub Copilot in VS Code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-07-26 04:19:42 +00:00
 tags:

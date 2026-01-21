@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-09-delegate-tasks-to-copilot-coding-agent-from-the-github-mcp-server
 title: Delegate tasks to Copilot coding agent from the GitHub MCP server
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-09 19:58:14 +00:00
 tags:

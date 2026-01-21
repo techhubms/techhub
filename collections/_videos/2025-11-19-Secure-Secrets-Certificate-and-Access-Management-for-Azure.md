@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ItS-sOm57qg
 title: Secure Secrets, Certificate, and Access Management for Azure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 11:24:57 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/news-insights/company-news/github-availability-report-june-2025/
 title: 'GitHub Availability Report: June 2025'
 author: Jakub Oleksy
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-07-16 21:06:17 +00:00
 tags:

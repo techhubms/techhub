@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-hl7-connector-for-azure-logic-apps-standard-and/ba-p/4470690
 title: 'Announcing Public Preview: HL7 Connector for Azure Logic Apps (Standard & Hybrid)'
 author: hcamposu
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-24 12:13:17 +00:00
 tags:

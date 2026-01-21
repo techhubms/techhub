@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-1
 title: Encrypting Properties with System.Text.Json and a TypeInfoResolver Modifier (Part 1)
 author: Steve Gordon
-viewing_mode: external
 feed_name: Steve Gordon's Blog
 date: 2026-01-14 15:09:54 +00:00
 tags:

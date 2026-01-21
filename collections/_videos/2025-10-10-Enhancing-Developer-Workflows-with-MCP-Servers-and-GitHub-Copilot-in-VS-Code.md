@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=T58uRBMc9M8
 title: Enhancing Developer Workflows with MCP Servers and GitHub Copilot in VS Code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-10-10 21:30:06 +00:00
 tags:

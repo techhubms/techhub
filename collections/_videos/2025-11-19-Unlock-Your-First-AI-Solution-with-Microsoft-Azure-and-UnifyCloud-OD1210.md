@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Kd3KgJx0U1M
 title: Unlock Your First AI Solution with Microsoft Azure and UnifyCloud | OD1210
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 05:30:51 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://khalidabuhakmeh.com/server-sent-events-in-aspnet-core-and-dotnet-10
 title: Server-Sent Events in ASP.NET Core Minimal APIs with .NET 10
 author: Khalid Abuhakmeh
-viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
 date: 2025-04-22 00:00:00 +00:00
 tags:

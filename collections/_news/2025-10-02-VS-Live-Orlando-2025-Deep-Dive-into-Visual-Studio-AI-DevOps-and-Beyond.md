@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-live-orlando-2025/
 title: 'VS Live! Orlando 2025: Deep Dive into Visual Studio, AI, DevOps, and Beyond'
 author: Jim Harrer
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-10-02 16:00:38 +00:00
 tags:

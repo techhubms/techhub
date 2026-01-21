@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mhinyf/beastmode_is_not_that_beasty_rather_lazy_and/
 title: 'Beastmode 3.1 vs. Sonnet 4 in GitHub Copilot: A User’s Experience with Tool-Calling Limitations'
 author: pws7438
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-04 16:46:19 +00:00
 tags:

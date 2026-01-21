@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mhv5fq/github_enterprise_copilot/
 title: GitHub Enterprise + Copilot
 author: SalishSeaview
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-05 00:50:53 +00:00
 tags:

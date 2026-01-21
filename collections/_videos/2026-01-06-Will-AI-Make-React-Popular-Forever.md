@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/m24psZGp_bA
 title: Will AI Make React Popular Forever?
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2026-01-06 17:01:29 +00:00
 tags:

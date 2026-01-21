@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/white-paper-the-future-of-devsecops-in-a-fully-autonomous-ci-cd-pipeline/?utm_source=rss&utm_medium=rss&utm_campaign=white-paper-the-future-of-devsecops-in-a-fully-autonomous-ci-cd-pipeline
 title: The Future of DevSecOps in Fully Autonomous CI/CD Pipelines
 author: Ravi Shanker Sharma
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-21 17:12:05 +00:00
 tags:

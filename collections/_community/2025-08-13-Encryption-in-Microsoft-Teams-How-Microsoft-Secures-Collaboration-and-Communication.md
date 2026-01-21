@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-teams-blog/encryption-in-microsoft-teams-june-2025/ba-p/4442913
 title: 'Encryption in Microsoft Teams: How Microsoft Secures Collaboration and Communication'
 author: WillDixon
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-13 15:00:00 +00:00
 tags:

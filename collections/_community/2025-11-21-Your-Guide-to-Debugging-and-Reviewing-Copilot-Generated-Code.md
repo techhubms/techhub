@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/tools/your-guide-to-debugging-and-reviewing-copilot-generated-code/m-p/4472116#M182
 title: Your Guide to Debugging and Reviewing Copilot-Generated Code
 author: JohnNaguib
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-21 16:19:58 +00:00
 tags:

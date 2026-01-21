@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-onelake-and-the-fabric-platform-more-sources-security-and-capacity-tooling/
 title: 'What’s New in OneLake and the Fabric Platform: Expanded Sources, Security, and Capacity Management'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-18 08:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/survey-sees-ai-coding-creating-need-for-more-software-engineers/
 title: How AI Coding Is Shaping Software Engineering and DevOps Roles
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-11-14 12:33:41 +00:00
 tags:

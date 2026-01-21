@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-dev-test-benefit-explained/
 title: Understanding the Azure Dev/Test Benefit for Visual Studio Subscribers
 author: Jim Harrer
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-10-06 15:52:00 +00:00
 tags:

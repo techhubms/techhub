@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-15-enterprise-access-restrictions-with-corporate-proxies-is-now-generally-available
 title: Enterprise Access Restrictions with Corporate Proxies for GitHub Enterprise Cloud Now Available
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-15 20:49:25 +00:00
 tags:

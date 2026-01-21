@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://zure.com/blog/integrating-copilot-agents-and-security-copilot-into-enterprise-grade-ai-security-architecture
 title: Integrating Copilot Agents and Security Copilot into Enterprise-Grade AI Security Architecture
 author: petrus.vasenius@zure.com (Petrus Vasenius)
-viewing_mode: external
 feed_name: Zure Data & AI Blog
 date: 2025-06-24 09:27:30 +00:00
 tags:

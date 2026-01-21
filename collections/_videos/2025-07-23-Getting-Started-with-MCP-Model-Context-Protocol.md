@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=DpyjAKmNwpI
 title: Getting Started with MCP (Model Context Protocol)
 author: Nick Chapsas
-viewing_mode: internal
 feed_name: Nick Chapsas YouTube
 date: 2025-07-23 12:30:14 +00:00
 tags:

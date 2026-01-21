@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=n5ie6XBdlL8
 title: Distributed Applications with Microsoft Orleans and Event Sourcing Using Sekiban
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-08-04 23:30:19 +00:00
 tags:

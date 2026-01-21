@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/spec-driven-development-spec-kit
 title: 'Spec-Driven Development with GitHub Spec Kit: Streamlining AI-Assisted Coding Workflows'
 author: Den Delimarsky
-viewing_mode: external
 feed_name: Microsoft Blog
 date: 2025-09-15 21:19:55 +00:00
 tags:

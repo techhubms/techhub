@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-05-copilot-coding-agent-now-supports-pull-request-templates
 title: Copilot Coding Agent Now Supports Pull Request Templates
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-05 18:18:54 +00:00
 tags:

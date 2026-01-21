@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/MPA-dZBUTUQ
 title: How to Test Nonexistent Code with GitHub Copilot
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-21 17:00:25 +00:00
 tags:

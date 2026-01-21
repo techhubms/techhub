@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devopsjournal.io/blog/2023/05/23/GitHub-Advanced-Security-Azure-DevOps
 title: GitHub Advanced Security for Azure DevOps
 author: Rob Bos
-viewing_mode: external
 feed_name: Rob Bos' Blog
 date: 2023-05-23 00:00:00 +00:00
 tags:

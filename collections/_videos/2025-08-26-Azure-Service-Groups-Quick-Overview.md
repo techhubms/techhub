@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/E_-t-YjR2fk
 title: Azure Service Groups Quick Overview
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-08-26 18:55:48 +00:00
 tags:

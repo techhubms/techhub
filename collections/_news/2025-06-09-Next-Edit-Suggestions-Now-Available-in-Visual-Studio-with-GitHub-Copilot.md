@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/next-edit-suggestions-available-in-visual-studio-github-copilot/
 title: Next Edit Suggestions Now Available in Visual Studio with GitHub Copilot
 author: Simona Liao
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-06-09 15:00:39 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-sre-agent/welcome-to-azure-sre-agent-community-hub/m-p/4481822#M1
 title: Welcome to the Azure SRE Agent Community Hub
 author: Mayunk_Jain
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-29 21:05:14 +00:00
 tags:

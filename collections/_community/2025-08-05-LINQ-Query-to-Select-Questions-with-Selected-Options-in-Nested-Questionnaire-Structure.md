@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mikvpz/im_sure_there_is_a_linq_query_for_this_but_i_just/
 title: LINQ Query to Select Questions with Selected Options in Nested Questionnaire Structure
 author: GreatlyUnknown
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-05 20:46:37 +00:00
 tags:

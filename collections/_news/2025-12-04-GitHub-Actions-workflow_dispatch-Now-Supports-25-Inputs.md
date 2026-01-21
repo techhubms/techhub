@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-04-actions-workflow-dispatch-workflows-now-support-25-inputs
 title: GitHub Actions workflow_dispatch Now Supports 25 Inputs
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-04 19:58:47 +00:00
 tags:

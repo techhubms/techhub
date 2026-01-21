@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/03/azure-essentials-overview-video/
 title: 'Azure Essentials Overview Video: Navigating Cloud & AI Transformation'
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-03-24 14:47:03 +00:00
 tags:

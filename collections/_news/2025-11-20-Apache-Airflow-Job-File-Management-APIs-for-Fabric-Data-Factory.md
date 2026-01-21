@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-apache-airflow-job-file-management-apis/
 title: Apache Airflow Job File Management APIs for Fabric Data Factory
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-20 09:30:00 +00:00
 tags:

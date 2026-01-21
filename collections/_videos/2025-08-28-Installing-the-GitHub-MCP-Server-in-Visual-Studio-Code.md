@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/_NnAGjBc64Y
 title: Installing the GitHub MCP Server in Visual Studio Code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-08-28 00:00:43 +00:00
 tags:

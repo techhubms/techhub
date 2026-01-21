@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-17-copilot-code-review-now-available-for-organization-members-without-a-license
 title: Copilot Code Review Now Available for Organization Members Without a License
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-17 15:30:47 +00:00
 tags:

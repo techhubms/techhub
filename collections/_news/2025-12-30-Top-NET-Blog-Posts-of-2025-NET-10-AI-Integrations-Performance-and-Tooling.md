@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/top-dotnet-blogs-posts-of-2025/
 title: 'Top .NET Blog Posts of 2025: .NET 10, AI Integrations, Performance, and Tooling'
 author: Jon Galloway
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-12-30 18:05:00 +00:00
 tags:

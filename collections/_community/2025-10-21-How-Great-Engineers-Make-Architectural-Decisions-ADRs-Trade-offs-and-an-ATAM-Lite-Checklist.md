@@ -2,7 +2,6 @@
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-great-engineers-make-architectural-decisions-adrs-trade-offs/ba-p/4463013
 title: How Great Engineers Make Architectural Decisions — ADRs, Trade-offs, and an ATAM-Lite Checklist
 author: Antony_nganga
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-21 11:26:40 +00:00
 tags:

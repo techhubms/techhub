@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=XDab1_fVntU
 title: 'Powering Financial Workflows with AI: Microsoft and LSEG Partnership at Ignite'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 12:40:28 +00:00
 tags:

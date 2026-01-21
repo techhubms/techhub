@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=LJzNNR8nFlI
 title: Performing CI/CD for SQL Databases in Fabric Using Azure DevOps
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-15 17:00:39 +00:00
 tags:

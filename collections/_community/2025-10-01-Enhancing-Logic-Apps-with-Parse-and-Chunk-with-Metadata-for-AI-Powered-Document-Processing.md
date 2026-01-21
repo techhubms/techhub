@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-parse-chunk-with-metadata-in-logic-apps-build-context/ba-p/4458438
 title: Enhancing Logic Apps with Parse & Chunk with Metadata for AI-Powered Document Processing
 author: shahparth
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-01 23:25:57 +00:00
 tags:

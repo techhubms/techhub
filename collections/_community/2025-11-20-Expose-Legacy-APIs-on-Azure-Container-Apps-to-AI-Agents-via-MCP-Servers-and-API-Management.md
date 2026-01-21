@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/exposing-legacy-apis-hosted-on-azure-container-apps-to-ai-agents/ba-p/4470476
 title: Expose Legacy APIs on Azure Container Apps to AI Agents via MCP Servers and API Management
 author: DeepGanguly
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-20 09:37:41 +00:00
 tags:

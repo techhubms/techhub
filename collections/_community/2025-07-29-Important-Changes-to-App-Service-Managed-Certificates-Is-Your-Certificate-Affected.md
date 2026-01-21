@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mccg6l/important_changes_to_app_service_managed/
 title: 'Important Changes to App Service Managed Certificates: Is Your Certificate Affected?'
 author: azredditj
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-07-29 14:09:36 +00:00
 tags:

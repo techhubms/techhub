@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=COPXh-unV8I
 title: Getting Started with Generative AI for Java Developers Using GitHub Codespaces
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-28 16:00:23 +00:00
 tags:

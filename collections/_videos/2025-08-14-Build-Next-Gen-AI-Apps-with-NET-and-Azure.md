@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=WdJd9fnFlGU
 title: Build Next-Gen AI Apps with .NET and Azure
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-08-14 14:18:49 +00:00
 tags:

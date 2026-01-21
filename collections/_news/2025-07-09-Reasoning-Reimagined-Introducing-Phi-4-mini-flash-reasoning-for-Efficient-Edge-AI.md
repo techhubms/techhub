@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://azure.microsoft.com/en-us/blog/reasoning-reimagined-introducing-phi-4-mini-flash-reasoning/
 title: 'Reasoning Reimagined: Introducing Phi-4-mini-flash-reasoning for Efficient Edge AI'
 author: Weizhu Chen, Jianfeng Gao and Liliang Ren
-viewing_mode: external
 feed_name: The Azure Blog
 date: 2025-07-09 16:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/windows-10-extended-security-updates-for-azure-virtual-desktop/ba-p/4459715
 title: Windows 10 Extended Security Updates for Azure Virtual Desktop
 author: ivaylo_ivanov
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-14 22:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/research/blog/self-adaptive-reasoning-for-science/
 title: 'Introducing CLIO: Microsoft’s Self-Adaptive AI Reasoning System for Science'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-07 18:08:54 +00:00
 tags:

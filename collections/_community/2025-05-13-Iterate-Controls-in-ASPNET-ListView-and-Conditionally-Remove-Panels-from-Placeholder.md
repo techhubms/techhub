@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/web-development/aspnet-c-iterate-control-in-listview-and-remove-a-panel-from/m-p/4413198#M658
 title: Iterate Controls in ASP.NET ListView and Conditionally Remove Panels from Placeholder
 author: canalso
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-05-13 03:59:20 +00:00
 tags:

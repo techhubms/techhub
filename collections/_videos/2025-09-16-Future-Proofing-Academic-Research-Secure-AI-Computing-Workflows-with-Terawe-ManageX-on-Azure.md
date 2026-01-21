@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=vdZeka_5-Ss
 title: 'Future-Proofing Academic Research: Secure AI Computing Workflows with Terawe ManageX on Azure'
 author: Microsoft Cloud
-viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
 date: 2025-09-16 00:28:01 +00:00
 tags:

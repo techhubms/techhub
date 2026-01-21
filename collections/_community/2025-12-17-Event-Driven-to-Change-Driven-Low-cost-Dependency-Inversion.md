@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/event-driven-to-change-driven-low-cost-dependency-inversion/ba-p/4478948
 title: 'Event-Driven to Change-Driven: Low-cost Dependency Inversion'
 author: CollinBrian
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-17 22:22:37 +00:00
 tags:

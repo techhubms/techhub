@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-16-agent-mode-for-jetbrains-eclipse-and-xcode-is-now-generally-available
 title: Agent mode for JetBrains, Eclipse, and Xcode is now generally available
 author: Allison
 feed_name: The GitHub Blog
 date: 2025-07-17 02:06:36 +00:00
-viewing_mode: external
 tags:
 - Agent Mode
 - Autonomous Coding

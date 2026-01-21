@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Jejnhz9ZwD8
 title: Modernizing Kubernetes Monitoring with Drasi, Inspektor Gadget, and Headlamp on Azure
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-26 00:47:08 +00:00
 tags:

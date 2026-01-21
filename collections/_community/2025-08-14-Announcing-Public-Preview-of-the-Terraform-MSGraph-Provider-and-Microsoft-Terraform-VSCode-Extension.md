@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/announcing-msgraph-provider-public-preview-and-the-microsoft/ba-p/4443614
 title: Announcing Public Preview of the Terraform MSGraph Provider and Microsoft Terraform VSCode Extension
 author: stevenjma
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-14 17:56:30 +00:00
 tags:

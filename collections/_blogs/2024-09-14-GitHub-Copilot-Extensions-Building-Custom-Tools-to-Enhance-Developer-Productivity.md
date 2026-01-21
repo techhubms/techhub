@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devopsjournal.io/blog/2024/09/14/GitHub-Copilot-Extensions
 title: 'GitHub Copilot Extensions: Building Custom Tools to Enhance Developer Productivity'
 author: Rob Bos
-viewing_mode: external
 feed_name: Rob Bos' Blog
 date: 2024-09-14 00:00:00 +00:00
 tags:

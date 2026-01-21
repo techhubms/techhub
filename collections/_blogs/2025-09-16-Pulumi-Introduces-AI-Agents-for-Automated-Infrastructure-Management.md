@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/pulumi-previews-ai-agents-trained-to-automate-infrastructure-management/?utm_source=rss&utm_medium=rss&utm_campaign=pulumi-previews-ai-agents-trained-to-automate-infrastructure-management
 title: Pulumi Introduces AI Agents for Automated Infrastructure Management
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-16 13:00:31 +00:00
 tags:

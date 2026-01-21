@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/choosing-the-right-azure-containerisation-strategy-aks-app/ba-p/4456645
 title: 'Choosing the Right Azure Containerisation Strategy: AKS, App Service, or Container Apps?'
 author: zaracheema
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-03 14:06:10 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/08/implementing-a-center-of-excellence-for-generative-ai/
 title: Implementing a Center of Excellence for Generative AI
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-08-12 17:03:42 +00:00
 tags:

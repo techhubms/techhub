@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=T8D1hDaCrKc
 title: Rubber Duck Thursdays - Building a Turn-Based Game MCP Server
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-08-06 09:04:39 +00:00
 tags:

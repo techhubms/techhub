@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=mwwAz0F4r1E
 title: Building Agentic AI Systems in .NET with Local SLMs
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-10-22 23:08:25 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=tdF-_Qy7XDQ
 title: Driving Business Value with Agentic AI in Microsoft Environments
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 14:29:29 +00:00
 tags:

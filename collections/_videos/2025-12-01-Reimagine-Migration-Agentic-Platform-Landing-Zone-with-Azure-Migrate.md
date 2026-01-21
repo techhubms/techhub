@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=aor0BCCEkks
 title: 'Reimagine Migration: Agentic Platform Landing Zone with Azure Migrate'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-12-01 08:00:07 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-to-migrate-legacy-applications-using-github-copilot/
 title: How to Migrate Legacy Applications Using GitHub Copilot
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-02 09:26:06 +00:00
 tags:

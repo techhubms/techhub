@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/software-architecture-frameworks-and-artificial-intelligence-building-smarter-systems/
 title: 'Software Architecture Frameworks and Artificial Intelligence: Building Smarter Systems'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-26 16:33:15 +00:00
 tags:

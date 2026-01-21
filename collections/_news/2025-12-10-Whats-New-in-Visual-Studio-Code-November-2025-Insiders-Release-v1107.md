@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/updates/v1_107
 title: What's New in Visual Studio Code November 2025 Insiders Release (v1.107)
 author: Visual Studio Code Team
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-12-10 17:00:00 +00:00
 tags:

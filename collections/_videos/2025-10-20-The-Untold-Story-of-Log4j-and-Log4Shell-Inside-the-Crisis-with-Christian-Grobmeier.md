@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=t74ClffSUW0
 title: 'The Untold Story of Log4j and Log4Shell: Inside the Crisis with Christian Grobmeier'
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-10-20 15:45:07 +00:00
 tags:

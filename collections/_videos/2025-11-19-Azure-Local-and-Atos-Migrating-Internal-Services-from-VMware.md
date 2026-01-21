@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=HcuOtjT6NCc
 title: 'Azure Local and Atos: Migrating Internal Services from VMware'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 13:18:43 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/open-ai-s-gpt-oss-models-on-azure-container-apps-serverless-gpus/ba-p/4440836
 title: Deploying OpenAI's gpt-oss Models to Azure Container Apps Serverless GPUs with Ollama
 author: Cary_Chai
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-07 20:23:51 +00:00
 tags:

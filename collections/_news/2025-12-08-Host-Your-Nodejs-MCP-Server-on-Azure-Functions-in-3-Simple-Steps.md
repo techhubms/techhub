@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/host-your-node-js-mcp-server-on-azure-functions-in-3-simple-steps
 title: Host Your Node.js MCP Server on Azure Functions in 3 Simple Steps
 author: Yohan Lasorsa
-viewing_mode: external
 feed_name: Microsoft Blog
 date: 2025-12-08 18:00:54 +00:00
 tags:

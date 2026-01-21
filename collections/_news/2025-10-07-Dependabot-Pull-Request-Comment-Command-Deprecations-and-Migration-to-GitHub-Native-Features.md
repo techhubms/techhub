@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-10-06-upcoming-changes-to-github-dependabot-pull-request-comment-commands
 title: Dependabot Pull Request Comment Command Deprecations and Migration to GitHub Native Features
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-10-07 13:14:05 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/10/new-video-azure-local-overview/
 title: 'Azure Local Overview: Hybrid Cloud, Edge, and Sovereign Scenarios'
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-10-28 13:57:29 +00:00
 tags:

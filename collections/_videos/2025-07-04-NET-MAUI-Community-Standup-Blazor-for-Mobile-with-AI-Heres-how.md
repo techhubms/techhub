@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=31zDPcvZLRI
 title: .NET MAUI Community Standup - Blazor for Mobile with AI? Here's how.
 author: Dotnet's Youtube channel
 feed_name: dotnet
 date: 2025-07-04 06:10:58 +00:00
-viewing_mode: internal
 tags:
 - .NET
 - App Enhancement

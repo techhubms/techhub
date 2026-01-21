@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=-yciYjpcG10
 title: Azure Update - 9th January 2026
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2026-01-09 15:57:42 +00:00
 tags:

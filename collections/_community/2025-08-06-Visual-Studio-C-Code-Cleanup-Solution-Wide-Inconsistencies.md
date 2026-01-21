@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/VisualStudio/comments/1mjk2n7/analyze_code_cleanup_broken_cc/
 title: 'Visual Studio C++ Code Cleanup: Solution-Wide Inconsistencies'
 author: kohuept
-viewing_mode: external
 feed_name: Reddit Visual Studio
 date: 2025-08-06 23:21:36 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mheqeu/is_it_fraud_i_wish_it_is_not/
 title: Is it fraud! I wish it is not
 author: m7mdshms
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-08-04 14:19:05 +00:00
 tags:

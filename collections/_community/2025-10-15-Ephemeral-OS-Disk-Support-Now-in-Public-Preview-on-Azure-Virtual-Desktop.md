@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/now-in-public-preview-ephemeral-os-disk-support-on-azure-virtual/ba-p/4460172
 title: Ephemeral OS Disk Support Now in Public Preview on Azure Virtual Desktop
 author: Ron_Coleman
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-15 19:00:00 +00:00
 tags:

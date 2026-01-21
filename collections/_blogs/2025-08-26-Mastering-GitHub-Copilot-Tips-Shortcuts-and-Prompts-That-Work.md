@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/mastering-github-copilot-tips-shortcuts-and-prompts-that-work/
 title: 'Mastering GitHub Copilot: Tips, Shortcuts, and Prompts That Work'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-26 14:32:26 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure/azure-storage/m-p/4447460#M22137
 title: 'Azure Storage: Fundamentals, Services, and Community Best Practices'
 author: frankfalvey
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-23 18:37:03 +00:00
 tags:

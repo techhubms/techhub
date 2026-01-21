@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/research/blog/applicability-vs-job-displacement-further-notes-on-our-recent-research-on-ai-and-occupations/
 title: 'AI and Jobs Research: Addressing Misconceptions'
 author: sbaynes
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-21 22:06:16 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://khalidabuhakmeh.com/initialize-aspnet-core-taghelpers-with-shared-data
 title: Initialize ASP.NET Core TagHelpers with Shared Data
 author: Khalid Abuhakmeh
-viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
 date: 2025-01-14 00:00:00 +00:00
 tags:

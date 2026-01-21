@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=dlgYCpQI_lU
 title: How to Improve Code Health with GitHub Code Quality
 author: GitHub
-viewing_mode: internal
 feed_name: GitHub YouTube
 date: 2025-12-04 15:01:18 +00:00
 tags:

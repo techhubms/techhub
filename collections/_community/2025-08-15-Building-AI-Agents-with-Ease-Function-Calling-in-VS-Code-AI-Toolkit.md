@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/building-ai-agents-with-ease-function-calling-in-vs-code-ai/ba-p/4442637
 title: 'Building AI Agents with Ease: Function Calling in VS Code AI Toolkit'
 author: shreyanfern
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-15 17:00:24 +00:00
 tags:

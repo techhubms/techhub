@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://medium.com/@davidfowl/making-software-like-lego-how-aspire-brings-the-pieces-together-d6a99c2c4cde?source=rss-8163234c98f0------2
 title: 'Making Software Like LEGO: How Aspire Brings the Pieces Together'
 author: David Fowler
-viewing_mode: external
 feed_name: David Fowler's Blog
 date: 2025-03-30 18:44:09 +00:00
 tags:

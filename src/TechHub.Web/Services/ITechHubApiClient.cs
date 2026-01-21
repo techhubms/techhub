@@ -15,7 +15,7 @@ public interface ITechHubApiClient
         TagCloudScope scope,
         string? sectionName = null,
         string? collectionName = null,
-        string? contentItemId = null,
+        string? slug = null,
         int? maxTags = null,
         int? minUses = null,
         int? lastDays = null,

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/how-retail-businesses-are-automating-customer-service-with-copilot-studio/
 title: Automating Retail Customer Service with Copilot Studio
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-03 07:44:29 +00:00
 tags:

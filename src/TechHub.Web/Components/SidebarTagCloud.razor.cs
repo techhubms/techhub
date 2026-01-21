@@ -63,16 +63,16 @@ public partial class SidebarTagCloud : ComponentBase
     public string? CollectionName { get; set; }
 
     /// <summary>
-    /// Content item ID (required for Content scope)
+    /// Content item slug (required for Content scope)
     /// </summary>
     [Parameter]
-    public string? ContentItemId { get; set; }
+    public string? Slug { get; set; }
 
     /// <summary>
     /// Pre-selected tags (e.g., from URL parameters)
     /// </summary>
     [Parameter]
-    public List<string>? SelectedTags { get; set; }
+    public List<string>? SelectedTags { get; init; }
 
     /// <summary>
     /// Event callback fired when tag selection changes (for Filter mode)
@@ -172,14 +172,14 @@ public partial class SidebarTagCloud : ComponentBase
             isLoading = true;
             hasError = false;
 
-            Logger.LogInformation("Loading tag cloud for scope: {Scope}, section: {Section}, collection: {Collection}",
+            Logger.LogInformation("Loading tag cloud for scope: {Scope}, section: {SectionName}, collection: {CollectionName}",
                 Scope, SectionName ?? "(none)", CollectionName ?? "(none)");
 
             tags = await ApiClient.GetTagCloudAsync(
                 Scope,
                 SectionName,
                 CollectionName,
-                ContentItemId,
+                Slug,
                 MaxTags,
                 MinUses,
                 LastDays);
@@ -240,7 +240,7 @@ public partial class SidebarTagCloud : ComponentBase
         UpdateUrlWithTags();
 
         // Raise event with current selection
-        await OnSelectionChanged.InvokeAsync(selectedTagsInternal.ToList());
+        await OnSelectionChanged.InvokeAsync([.. selectedTagsInternal]);
     }
 
     private void UpdateUrlWithTags()

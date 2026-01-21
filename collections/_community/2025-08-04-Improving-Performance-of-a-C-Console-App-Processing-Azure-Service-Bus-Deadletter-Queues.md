@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/csharp/comments/1mhb7xl/how_can_i_make_this_method_more_performant/
 title: Improving Performance of a C# Console App Processing Azure Service Bus Deadletter Queues
 author: TTwelveUnits
-viewing_mode: external
 feed_name: Reddit CSharp
 date: 2025-08-04 11:47:42 +00:00
 tags:

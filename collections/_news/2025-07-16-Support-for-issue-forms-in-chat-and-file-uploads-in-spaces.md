@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-07-16-support-for-issue-forms-in-chat-and-file-uploads-in-spaces
 title: Support for issue forms in chat and file uploads in spaces
 author: Allison
 feed_name: The GitHub Blog
 date: 2025-07-16 16:04:14 +00:00
-viewing_mode: external
 tags:
 - AI Assistance
 - Automation

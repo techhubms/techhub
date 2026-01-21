@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/all-things-azure/ai-coding-agents-domain-specific-languages/
 title: 'AI Coding Agents and Domain-Specific Languages: Challenges and Practical Mitigation Strategies'
 author: Chris Romp
-viewing_mode: external
 feed_name: Microsoft All Things Azure Blog
 date: 2025-12-18 18:36:17 +00:00
 tags:

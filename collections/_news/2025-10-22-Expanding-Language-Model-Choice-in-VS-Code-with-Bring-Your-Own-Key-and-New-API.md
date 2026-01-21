@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://code.visualstudio.com/blogs/2025/10/22/bring-your-own-key
 title: Expanding Language Model Choice in VS Code with Bring Your Own Key and New API
 author: Olivia Guzzardo McVicker, Pierce Boggan
-viewing_mode: external
 feed_name: Visual Studio Code Releases
 date: 2025-10-22 00:00:00 +00:00
 tags:

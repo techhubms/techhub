@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/security/vulnerability-research/bugs-that-survive-the-heat-of-continuous-fuzzing/
 title: 'Why Bugs Survive Continuous Fuzzing: Lessons from OSS-Fuzz Research'
 author: Antonio Morales
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-29 22:01:14 +00:00
 tags:

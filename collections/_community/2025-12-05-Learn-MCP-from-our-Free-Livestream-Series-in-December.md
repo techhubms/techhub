@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-mcp-from-our-free-livestream-series-in-december/ba-p/4474729
 title: Learn MCP from our Free Livestream Series in December
 author: Pamela_Fox
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-05 08:00:00 +00:00
 tags:

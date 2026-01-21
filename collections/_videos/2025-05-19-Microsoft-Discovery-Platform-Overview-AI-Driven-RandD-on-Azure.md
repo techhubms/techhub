@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=R8d5JsJ9R64
 title: 'Microsoft Discovery Platform Overview: AI-Driven R&D on Azure'
 author: Microsoft Cloud
-viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
 date: 2025-05-19 15:45:07 +00:00
 tags:

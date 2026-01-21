@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/operational-excellence-in-ai-infrastructure-fleets-standardized/ba-p/4460754
 title: 'Operational Excellence in AI Infrastructure: Standardized Node Lifecycle Management'
 author: Rama_Bhimanadhuni
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-14 00:03:37 +00:00
 tags:

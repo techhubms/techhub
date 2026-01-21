@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-we-accelerated-secret-protection-engineering-with-copilot/
 title: How GitHub Copilot Accelerated Secret Protection Engineering
 author: Parth Sehgal
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-28 17:08:51 +00:00
 tags:

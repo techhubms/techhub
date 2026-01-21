@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-learn/microsoft-learning-rooms-weekly-round-up-8-7/m-p/4441646#M17145
 title: Weekly Microsoft Learning Rooms Community Roundup (8/7)
 author: JulieSirrine
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-08 18:40:34 +00:00
 tags:

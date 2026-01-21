@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=xXFTlPZJJoo
 title: 'Enhancements to BYOK in Visual Studio Code: Model Provider Integration'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-10-03 19:55:25 +00:00
 tags:

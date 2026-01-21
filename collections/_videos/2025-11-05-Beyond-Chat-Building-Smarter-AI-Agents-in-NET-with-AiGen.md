@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=nKN4QxPcFlA
 title: 'Beyond Chat: Building Smarter AI Agents in .NET with AiGen'
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-05 20:28:35 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blogs.microsoft.com/blog/2025/11/05/beware-of-double-agents-how-ai-can-fortify-or-fracture-your-cybersecurity/
 title: 'Beware of Double Agents: AI’s Role in Fortifying and Fracturing Cybersecurity'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-11-05 14:08:19 +00:00
 tags:

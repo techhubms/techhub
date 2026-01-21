@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-03-claude-opus-4-5-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
 title: Claude Opus 4.5 Preview Available in GitHub Copilot Chat and IDEs
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-03 19:38:19 +00:00
 tags:

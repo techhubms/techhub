@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=dxUsmfYqBAI
 title: 'Secure by Design: Upcoming CMK and Auditing Features in Fabric SQL Database'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-05 17:01:13 +00:00
 tags:

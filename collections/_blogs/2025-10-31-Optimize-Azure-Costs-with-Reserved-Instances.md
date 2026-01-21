@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.thomasmaurer.ch/2025/10/optimize-azure-costs-with-reserved-instances/
 title: Optimize Azure Costs with Reserved Instances
 author: Thomas Maurer
-viewing_mode: external
 feed_name: Thomas Maurer's Blog
 date: 2025-10-31 12:57:06 +00:00
 tags:

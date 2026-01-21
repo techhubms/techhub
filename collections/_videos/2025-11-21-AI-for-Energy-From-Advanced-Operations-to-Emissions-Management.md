@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=_oqaVtuzy9E
 title: 'AI for Energy: From Advanced Operations to Emissions Management'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 17:18:13 +00:00
 tags:

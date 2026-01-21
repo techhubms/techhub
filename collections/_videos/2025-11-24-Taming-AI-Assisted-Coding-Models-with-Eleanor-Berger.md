@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=0x1Y9e6Vh7I
 title: Taming AI Assisted Coding Models with Eleanor Berger
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-11-24 08:00:01 +00:00
 tags:

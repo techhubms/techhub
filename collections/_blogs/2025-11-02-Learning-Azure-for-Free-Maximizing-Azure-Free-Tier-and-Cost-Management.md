@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/azure-free-tier-cost-management-learn-azure-without-spending-a-dime/
 title: 'Learning Azure for Free: Maximizing Azure Free Tier and Cost Management'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-02 09:06:01 +00:00
 tags:

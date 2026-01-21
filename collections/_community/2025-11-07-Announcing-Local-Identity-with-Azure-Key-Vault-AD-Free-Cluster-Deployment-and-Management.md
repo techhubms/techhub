@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/introducing-local-identity-with-azure-key-vault-in-build-2510/ba-p/4467939
 title: 'Announcing Local Identity with Azure Key Vault: AD-Free Cluster Deployment and Management'
 author: ShireenIsab
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-07 23:55:58 +00:00
 tags:

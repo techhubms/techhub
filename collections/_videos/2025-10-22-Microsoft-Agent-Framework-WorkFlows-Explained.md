@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/QCHxTtHmtkU
 title: Microsoft Agent Framework WorkFlows Explained
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-10-22 22:55:56 +00:00
 tags:

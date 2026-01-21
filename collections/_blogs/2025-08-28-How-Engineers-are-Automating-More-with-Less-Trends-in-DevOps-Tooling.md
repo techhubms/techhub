@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/how-engineers-are-automating-more-with-less-trends-in-devops-tooling/?utm_source=rss&utm_medium=rss&utm_campaign=how-engineers-are-automating-more-with-less-trends-in-devops-tooling
 title: 'How Engineers are Automating More with Less: Trends in DevOps Tooling'
 author: Durojaye Olusegun
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-28 05:45:55 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=bjMdBPLl4Kc
 title: 'Unlocking MCP Server: AI Integration for Dataverse & Dynamics 365'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-17 07:00:41 +00:00
 tags:

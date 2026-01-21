@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-maps-blog/guest-blog-modernizing-your-wpf-app-maps-functionality-with/ba-p/4468755
 title: 'Modernizing WPF Map Functionality with Azure Maps: A Practical Migration Path'
 author: IoTGirl
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-10 22:33:04 +00:00
 tags:

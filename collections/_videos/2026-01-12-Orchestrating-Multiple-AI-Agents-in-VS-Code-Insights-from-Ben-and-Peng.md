@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=AtaehXB4hPQ
 title: 'Orchestrating Multiple AI Agents in VS Code: Insights from Ben & Peng'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2026-01-12 08:00:18 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=STigfiK_n1Q
 title: GitHub MCP Registry Integration with Playwright in VS Code Insiders
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-09-23 17:15:04 +00:00
 tags:

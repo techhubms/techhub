@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-security-community/from-traditional-security-to-ai-driven-cyber-resilience/ba-p/4442652
 title: 'From Traditional Security to AI-Driven Cyber Resilience: Microsoft’s Approach to Securing AI'
 author: LouAdesida
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-13 16:54:16 +00:00
 tags:

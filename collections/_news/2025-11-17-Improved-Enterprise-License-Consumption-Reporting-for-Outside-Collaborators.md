@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-17-improved-enterprise-license-consumption-reporting-for-outside-collaborators-now-generally-available
 title: Improved Enterprise License Consumption Reporting for Outside Collaborators
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-17 18:47:08 +00:00
 tags:

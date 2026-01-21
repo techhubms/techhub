@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=w1N_XEtpu4E
 title: Practical Introduction to Building Remote MCP Servers
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-07-30 22:27:34 +00:00
 tags:

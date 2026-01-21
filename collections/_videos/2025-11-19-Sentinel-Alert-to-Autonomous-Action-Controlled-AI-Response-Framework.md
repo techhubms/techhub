@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=9VT9X9qy7BY
 title: 'Sentinel Alert to Autonomous Action: Controlled AI Response Framework'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 15:09:40 +00:00
 tags:

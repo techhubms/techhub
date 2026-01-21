@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/reimagining-telco-with-microsoft-ai-tm-forum-oda-and-developer/ba-p/4451724
 title: 'Reimagining Telco with Microsoft: AI, TM Forum ODA, and Developer Innovation'
 author: rickliev
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-09 16:54:57 +00:00
 tags:

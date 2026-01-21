@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/AZURE/comments/1mc7ir4/is_azure_vision_studio_dead/
 title: Is Azure Vision Studio Dead?
 author: damianvandoom
-viewing_mode: external
 feed_name: Reddit Azure
 date: 2025-07-29 10:09:33 +00:00
 tags:

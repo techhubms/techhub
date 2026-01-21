@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/host-remote-mcp-servers-on-azure-functions/ba-p/4471047
 title: 'How to Host Remote MCP Servers on Azure Functions: Extension and SDK Approaches'
 author: lily-ma
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 18:15:00 +00:00
 tags:

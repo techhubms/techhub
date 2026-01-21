@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/optimizing-costs-in-azure-practical-tips-for-beginners/
 title: Practical Cost Optimization Strategies for Microsoft Azure Beginners
 author: John Edward
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-19 10:04:11 +00:00
 tags:

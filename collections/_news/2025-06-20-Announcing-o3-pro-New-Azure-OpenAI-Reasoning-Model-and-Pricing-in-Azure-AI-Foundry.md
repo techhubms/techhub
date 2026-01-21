@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/foundry/azure-openai-o3-pro-ai-foundry/
 title: 'Announcing o3-pro: New Azure OpenAI Reasoning Model and Pricing in Azure AI Foundry'
 author: Sanjeev Jagtap, Anthony Mocny
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-06-20 16:06:00 +00:00
 tags:

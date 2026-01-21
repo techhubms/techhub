@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=4Jfy0L82DZo
 title: 'Azure Weekly Update: October 17, 2025'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-10-17 10:51:56 +00:00
 tags:

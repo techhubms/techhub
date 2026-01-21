@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/mcp-bootcamp-apac-latam-and-brazil/ba-p/4435966
 title: 'MCP Bootcamp: APAC, LATAM, and Brazil – Learn Model Context Protocol Integration, LLMs, Azure, and Copilot'
 author: cynthiazanoni
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-07-30 19:00:00 +00:00
 tags:

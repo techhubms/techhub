@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Zy_kxJSeYGo
 title: Envision Next Generation DLP with Microsoft Purview and Copilot
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 10:47:15 +00:00
 tags:

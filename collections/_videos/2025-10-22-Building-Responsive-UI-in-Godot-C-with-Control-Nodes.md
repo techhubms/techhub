@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Vav3Ml4z6-8
 title: Building Responsive UI in Godot C# with Control Nodes
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-10-22 16:30:14 +00:00
 tags:

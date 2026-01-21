@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=MB0I5Hy6Wc8
 title: Building Mobile and Desktop Apps with Visual Studio and .NET MAUI
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-08-14 14:22:56 +00:00
 tags:

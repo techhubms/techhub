@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-communication-services/how-ai-communication-apis-are-transforming-work-across/ba-p/4454224
 title: How AI and Communication APIs Are Transforming Industry Workflows
 author: seankeegan
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-09-15 17:29:56 +00:00
 tags:

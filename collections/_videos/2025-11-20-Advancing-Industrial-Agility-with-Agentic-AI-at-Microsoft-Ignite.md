@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=eOKhk7Le9n8
 title: Advancing Industrial Agility with Agentic AI at Microsoft Ignite
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 14:53:41 +00:00
 tags:

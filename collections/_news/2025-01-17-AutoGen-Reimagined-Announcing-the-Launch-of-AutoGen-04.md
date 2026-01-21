@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/autogen/autogen-reimagined-launching-autogen-0-4/
 title: 'AutoGen Reimagined: Announcing the Launch of AutoGen 0.4'
 author: Friederike Niedtner
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-01-17 23:39:51 +00:00
 tags:

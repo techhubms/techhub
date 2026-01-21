@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-06-new-releases-for-github-actions-november-2025
 title: 'GitHub Actions November 2025 Releases: Increased Limits, M2 Runners, and Copilot Agent Update'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-06 19:02:42 +00:00
 tags:

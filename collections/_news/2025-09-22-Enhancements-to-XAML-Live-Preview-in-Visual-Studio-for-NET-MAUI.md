@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/enhancements-to-xaml-live-preview-in-visual-studio-for-net-maui/
 title: Enhancements to XAML Live Preview in Visual Studio for .NET MAUI
 author: Rachel Kang (SHE/HER)
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-09-22 17:26:51 +00:00
 tags:

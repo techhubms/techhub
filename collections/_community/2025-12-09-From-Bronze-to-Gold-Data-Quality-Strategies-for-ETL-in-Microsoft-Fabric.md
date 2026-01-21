@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/from-bronze-to-gold-data-quality-strategies-for-etl-in-microsoft/ba-p/4476303
 title: 'From Bronze to Gold: Data Quality Strategies for ETL in Microsoft Fabric'
 author: Sally_Dabbah
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-09 08:12:15 +00:00
 tags:

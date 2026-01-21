@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-25-product-specific-billing-apis-are-closing-down
 title: Product-specific Billing APIs for GitHub Actions and Packages Are Closing Down
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-26 12:10:33 +00:00
 tags:

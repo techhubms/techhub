@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-11-13-manage-copilot-coding-agent-tasks-in-visual-studio-code
 title: Manage Copilot Coding Agent Tasks in Visual Studio Code
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-11-13 13:46:13 +00:00
 tags:

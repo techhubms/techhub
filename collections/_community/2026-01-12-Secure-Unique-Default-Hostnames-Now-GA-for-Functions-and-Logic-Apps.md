@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/secure-unique-default-hostnames-now-ga-for-functions-and-logic/ba-p/4484237
 title: Secure Unique Default Hostnames Now GA for Functions and Logic Apps
 author: YutangLin
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2026-01-12 15:00:00 +00:00
 tags:

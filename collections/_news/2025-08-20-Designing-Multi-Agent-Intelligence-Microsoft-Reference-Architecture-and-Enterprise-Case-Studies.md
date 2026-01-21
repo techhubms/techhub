@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/blog/designing-multi-agent-intelligence
 title: 'Designing Multi-Agent Intelligence: Microsoft Reference Architecture and Enterprise Case Studies'
 author: Vinicius Souza, Maggie Liu, Thiago Rotta
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-08-20 19:00:13 +00:00
 tags:

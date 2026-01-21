@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/web-development/connect-net-4-6-2-to-dataverse-using-the-dataverse-plugin/m-p/4476310#M682
 title: How to Connect .NET Applications to Dataverse Using Microsoft.PowerPlatform.Dataverse.Client
 author: AjayM
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-12-09 07:18:58 +00:00
 tags:

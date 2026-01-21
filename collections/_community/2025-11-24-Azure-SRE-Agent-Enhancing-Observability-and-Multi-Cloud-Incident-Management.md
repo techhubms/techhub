@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-expanding-observability-and-multi-cloud/ba-p/4472719
 title: 'Azure SRE Agent: Enhancing Observability and Multi-Cloud Incident Management'
 author: dbandaru
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-24 23:34:13 +00:00
 tags:

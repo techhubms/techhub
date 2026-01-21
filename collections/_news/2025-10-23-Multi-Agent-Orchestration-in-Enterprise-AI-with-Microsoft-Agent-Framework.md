@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/semantic-kernel/unlocking-enterprise-ai-complexity-multi-agent-orchestration-with-the-microsoft-agent-framework/
 title: Multi-Agent Orchestration in Enterprise AI with Microsoft Agent Framework
 author: Kinfey Lo
-viewing_mode: external
 feed_name: Microsoft Semantic Kernel Blog
 date: 2025-10-23 08:09:07 +00:00
 tags:

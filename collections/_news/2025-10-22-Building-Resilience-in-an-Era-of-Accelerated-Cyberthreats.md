@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/22/the-ciso-imperative-building-resilience-in-an-era-of-accelerated-cyberthreats/
 title: Building Resilience in an Era of Accelerated Cyberthreats
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-10-22 17:56:46 +00:00
 tags:

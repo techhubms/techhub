@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=ovB8FZ7LAAk
 title: 'Agents Talking to Agents: Harnessing MCP for Seamless Inter-Agent Collaboration'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-07-30 22:33:04 +00:00
 tags:

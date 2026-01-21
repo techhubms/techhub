@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/secure-delta-sharing-between-databricks-workspaces-using-ncc-and/ba-p/4462428
 title: Secure Delta Sharing Between Databricks Workspaces Using NCC and Private Endpoints
 author: Rafia_Aqil
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-18 00:44:26 +00:00
 tags:

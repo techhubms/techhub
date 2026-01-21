@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=jBpxG2Fk2jA
 title: Understanding Azure Availability Zone Mappings for Subscriptions
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-10-22 16:32:44 +00:00
 tags:

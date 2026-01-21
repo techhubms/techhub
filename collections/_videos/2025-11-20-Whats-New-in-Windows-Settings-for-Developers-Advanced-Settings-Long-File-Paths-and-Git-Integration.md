@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/shorts/QRY2ydmHBYE
 title: "What's New in Windows Settings for Developers: Advanced Settings, Long File Paths, and Git Integration"
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-20 22:37:53 +00:00
 tags:

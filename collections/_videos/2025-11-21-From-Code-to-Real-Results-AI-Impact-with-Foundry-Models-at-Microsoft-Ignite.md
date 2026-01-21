@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=3h20ZV5Ey7w
 title: 'From Code to Real Results: AI Impact with Foundry Models at Microsoft Ignite'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 16:31:17 +00:00
 tags:

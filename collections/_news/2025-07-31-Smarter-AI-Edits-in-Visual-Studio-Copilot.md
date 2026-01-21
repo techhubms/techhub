@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/smarter-ai-edits-in-visual-studio-copilot/
 title: Smarter AI Edits in Visual Studio Copilot
 author: Jessie Houghton, Oscar Obeso, Rhea Patel
-viewing_mode: external
 feed_name: Microsoft VisualStudio Blog
 date: 2025-07-31 12:00:42 +00:00
 tags:

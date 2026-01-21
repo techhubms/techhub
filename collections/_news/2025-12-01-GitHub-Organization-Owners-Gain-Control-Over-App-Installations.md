@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-12-01-block-repository-admins-from-installing-github-apps-now-generally-available
 title: GitHub Organization Owners Gain Control Over App Installations
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-12-01 20:45:29 +00:00
 tags:

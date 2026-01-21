@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=WgBC8M3ixt8
 title: Real Stories of AI Transformation in Local Government
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 08:27:45 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=hJsR0DOOVnE
 title: 'Azure Weekly Update: November 7, 2025'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-11-07 15:51:24 +00:00
 tags:

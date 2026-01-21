@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/hounddog-ai-code-scanner-shifts-data-privacy-responsibility-left/?utm_source=rss&utm_medium=rss&utm_campaign=hounddog-ai-code-scanner-shifts-data-privacy-responsibility-left
 title: HoundDog.ai Code Scanner Shifts Data Privacy Responsibility Left
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-08-21 14:00:40 +00:00
 tags:

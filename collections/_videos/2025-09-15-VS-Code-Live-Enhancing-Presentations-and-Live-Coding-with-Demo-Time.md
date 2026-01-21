@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=6_shqDBaOE0
 title: 'VS Code Live: Enhancing Presentations and Live Coding with Demo Time'
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-09-15 22:30:14 +00:00
 tags:

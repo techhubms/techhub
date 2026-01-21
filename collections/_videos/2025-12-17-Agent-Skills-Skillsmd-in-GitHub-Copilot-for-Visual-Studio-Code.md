@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=rIrxkB-02P0
 title: Agent Skills (Skills.md) in GitHub Copilot for Visual Studio Code
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-12-17 20:14:12 +00:00
 tags:

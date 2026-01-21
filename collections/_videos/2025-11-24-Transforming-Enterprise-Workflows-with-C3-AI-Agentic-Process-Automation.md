@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=6kr3LIlocsI
 title: Transforming Enterprise Workflows with C3 AI Agentic Process Automation
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 11:51:07 +00:00
 tags:

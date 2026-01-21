@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-service-ai-scenarios-complete-sample-with-ai-foundry/ba-p/4473142
 title: 'Azure App Service AI Scenarios: Complete Sample with AI Foundry Integration'
 author: Nitesh_Jain
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-28 10:42:08 +00:00
 tags:

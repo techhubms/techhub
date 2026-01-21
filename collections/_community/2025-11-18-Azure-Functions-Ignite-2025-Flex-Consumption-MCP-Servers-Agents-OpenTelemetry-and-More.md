@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-ignite-2025-update/ba-p/4469815
 title: 'Azure Functions Ignite 2025: Flex Consumption, MCP Servers, Agents, OpenTelemetry, and More'
 author: paulyuk
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-11-18 17:01:52 +00:00
 tags:

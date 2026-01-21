@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=Yujyvez1fVA
 title: Integrating Copilot Studio and Azure AI Foundry for Accelerated AI Development
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 15:12:00 +00:00
 tags:

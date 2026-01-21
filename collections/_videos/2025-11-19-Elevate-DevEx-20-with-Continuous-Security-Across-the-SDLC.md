@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=3L3ve-vuyes
 title: Elevate DevEx 2.0 with Continuous Security Across the SDLC
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-19 12:22:05 +00:00
 tags:

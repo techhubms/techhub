@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-09-01-graphql-api-resource-limits
 title: GitHub GraphQL API Resource Limits Introduced
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-09-01 16:00:30 +00:00
 tags:

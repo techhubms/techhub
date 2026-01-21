@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=-YKguff5GY8
 title: Modernize .NET Apps in Days with GitHub Copilot
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-09-23 15:00:00 +00:00
 tags:

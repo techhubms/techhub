@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/from-redmond-to-san-diego-vs-live-highlights-session-examples-and-whats-next/
 title: 'VS Live! Recap: Visual Studio, GitHub Copilot, and Azure AI Session Highlights'
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-14 17:05:34 +00:00
 tags:

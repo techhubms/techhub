@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/what-to-do-when-sharepoint-search-doesnt-return-the-right-results/
 title: Troubleshooting SharePoint Search Result Issues
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-09-04 13:48:28 +00:00
 tags:

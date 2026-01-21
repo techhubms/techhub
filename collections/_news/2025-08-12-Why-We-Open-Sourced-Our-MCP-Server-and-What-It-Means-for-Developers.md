@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/open-source/maintainers/why-we-open-sourced-our-mcp-server-and-what-it-means-for-you/
 title: Why We Open Sourced Our MCP Server and What It Means for Developers
 author: Kedasha Kerr
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-12 13:52:49 +00:00
 tags:

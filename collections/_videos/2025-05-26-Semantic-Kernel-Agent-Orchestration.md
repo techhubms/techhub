@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=3ZEjxKwaKjQ
 title: Semantic Kernel Agent Orchestration
 author: Learn Microsoft AI
-viewing_mode: internal
 feed_name: Learn Microsoft AI Youtube
 date: 2025-05-26 10:48:05 +00:00
 tags:

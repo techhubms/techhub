@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/azure-security-basics-network-security-groups-firewalls-and-defender-for-cloud/
 title: 'Azure Security Basics: Network Security Groups, Firewalls, and Defender for Cloud'
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-11-05 09:26:10 +00:00
 tags:

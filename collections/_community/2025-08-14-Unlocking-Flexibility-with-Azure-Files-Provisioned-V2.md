@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/itops-talk-blog/unlocking-flexibility-with-azure-files-provisioned-v2/ba-p/4443628
 title: Unlocking Flexibility with Azure Files Provisioned V2
 author: Pierre_Roman
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-08-14 18:47:38 +00:00
 tags:

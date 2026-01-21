@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=vsfbYJF2las
 title: 'From Building to Fine-Tuning: Coding Agents that Optimize AI Workflows'
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-11-04 18:19:47 +00:00
 tags:

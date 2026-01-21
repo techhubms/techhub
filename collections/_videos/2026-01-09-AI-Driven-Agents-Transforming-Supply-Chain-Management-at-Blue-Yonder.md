@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=RZ9DvZC9g6E
 title: AI-Driven Agents Transforming Supply Chain Management at Blue Yonder
 author: Microsoft Cloud
-viewing_mode: internal
 feed_name: Microsoft Cloud YouTube
 date: 2026-01-09 17:00:46 +00:00
 tags:

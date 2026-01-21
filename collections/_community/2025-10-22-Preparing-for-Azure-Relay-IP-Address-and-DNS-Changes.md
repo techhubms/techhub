@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/upcoming-changes-to-azure-relay-ip-addresses-and-dns-support/ba-p/4463597
 title: Preparing for Azure Relay IP Address and DNS Changes
 author: ashish-chhabria
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-22 20:06:09 +00:00
 tags:

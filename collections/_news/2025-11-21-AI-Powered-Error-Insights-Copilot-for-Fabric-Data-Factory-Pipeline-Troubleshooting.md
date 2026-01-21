@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/ai-powered-troubleshooting-for-fabric-data-pipeline-error-messages/
 title: AI-Powered Error Insights Copilot for Fabric Data Factory Pipeline Troubleshooting
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-11-21 11:00:00 +00:00
 tags:

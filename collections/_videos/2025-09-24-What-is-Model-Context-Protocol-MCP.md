@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=yVPmHIvJLYg
 title: What is Model Context Protocol (MCP)?
 author: Microsoft Developer
-viewing_mode: internal
 feed_name: Microsoft Developer YouTube
 date: 2025-09-24 15:59:03 +00:00
 tags:

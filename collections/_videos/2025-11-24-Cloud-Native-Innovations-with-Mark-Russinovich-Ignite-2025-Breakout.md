@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=-xcNd5ZU0Z8
 title: 'Cloud Native Innovations with Mark Russinovich: Ignite 2025 Breakout'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 12:45:11 +00:00
 tags:

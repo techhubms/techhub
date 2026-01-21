@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=1vQ0JxoYYQw
 title: 'Silo Busting for Nonprofits: Unifying People, Processes, and Technology with AI'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 11:21:09 +00:00
 tags:

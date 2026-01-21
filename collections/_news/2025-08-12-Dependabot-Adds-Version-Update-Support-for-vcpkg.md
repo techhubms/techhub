@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-12-dependabot-version-updates-now-support-vcpkg
 title: Dependabot Adds Version Update Support for vcpkg
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-12 16:22:46 +00:00
 tags:

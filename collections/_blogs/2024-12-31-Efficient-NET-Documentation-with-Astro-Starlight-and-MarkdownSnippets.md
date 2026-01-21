@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://khalidabuhakmeh.com/great-dotnet-documentation-with-astro-starlight-and-markdownsnippets
 title: Efficient .NET Documentation with Astro, Starlight, and MarkdownSnippets
 author: Khalid Abuhakmeh
-viewing_mode: external
 feed_name: Khalid Abuhakmeh's Blog
 date: 2024-12-31 00:00:00 +00:00
 tags:

@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html
 title: 'Copilot vs. Chat: Sidekick Showdown – When to Use Each Coding Sidekick'
 author: randy.pagels@xebia.com (Randy Pagels)
-viewing_mode: external
 feed_name: Randy Pagels's Blog
 date: 2025-07-11 00:00:00 +00:00
 tags:

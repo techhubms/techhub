@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://news.microsoft.com/source/latam/features/ai/data-driven-farming-chile/?lang=en
 title: Data-driven Farming and AI Transforming Water Management in Chile
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-12-09 14:10:47 +00:00
 tags:

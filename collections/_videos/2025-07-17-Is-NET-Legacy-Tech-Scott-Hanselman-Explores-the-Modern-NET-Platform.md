@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=CIuLieYAGcA
 title: Is .NET Legacy Tech? Scott Hanselman Explores the Modern .NET Platform
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-07-17 15:53:10 +00:00
 tags:

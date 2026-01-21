@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=i4hvn_Ns9kU
 title: Modernize on-premises VMware environments with Azure VMware Solution
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 08:22:23 +00:00
 tags:

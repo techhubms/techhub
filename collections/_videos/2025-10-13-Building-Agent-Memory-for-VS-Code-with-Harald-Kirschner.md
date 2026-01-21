@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=vFFXY6YRkNs
 title: Building Agent Memory for VS Code with Harald Kirschner
 author: Visual Studio Code
-viewing_mode: internal
 feed_name: Visual Studio Code YouTube
 date: 2025-10-13 07:00:57 +00:00
 tags:

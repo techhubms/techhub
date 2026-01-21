@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/dotnet/introducing-csharp-14/
 title: 'Introducing C# 14: New Language Features and .NET 10 Integration'
 author: Bill Wagner
-viewing_mode: external
 feed_name: Microsoft .NET Blog
 date: 2025-11-17 18:05:00 +00:00
 tags:

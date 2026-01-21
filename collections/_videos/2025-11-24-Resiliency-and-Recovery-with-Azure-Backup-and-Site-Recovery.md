@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=IJDL7c2dHXc
 title: Resiliency and Recovery with Azure Backup and Site Recovery
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-24 06:32:15 +00:00
 tags:

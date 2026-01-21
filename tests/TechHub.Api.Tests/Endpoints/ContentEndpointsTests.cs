@@ -278,7 +278,6 @@ public class ContentEndpointsTests : IClassFixture<TechHubApiFactory>
         var item = items![0];
         item.Slug.Should().NotBeNullOrEmpty();
         item.Title.Should().NotBeNullOrEmpty();
-        item.Description.Should().NotBeNullOrEmpty();
         item.Author.Should().NotBeNullOrEmpty();
         item.DateEpoch.Should().BeGreaterThan(0);
         item.DateIso.Should().NotBeNullOrEmpty();

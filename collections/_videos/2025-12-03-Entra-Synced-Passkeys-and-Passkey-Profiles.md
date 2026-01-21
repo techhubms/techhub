@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=e0FPn-gJeO4
 title: Entra Synced Passkeys and Passkey Profiles
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-12-03 13:07:04 +00:00
 tags:

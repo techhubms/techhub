@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=QoZRWC8irLs
 title: 'Innovation Session: Build and Manage AI Apps with Foundry Agent Factory – Microsoft Ignite 2025'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-21 12:56:13 +00:00
 tags:

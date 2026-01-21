@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/cisco-to-add-ai-agents-to-splunk-observability-platforms/?utm_source=rss&utm_medium=rss&utm_campaign=cisco-to-add-ai-agents-to-splunk-observability-platforms
 title: Cisco Integrates AI Agents and Data Fabric into Splunk Observability Platform
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-09-09 18:32:20 +00:00
 tags:

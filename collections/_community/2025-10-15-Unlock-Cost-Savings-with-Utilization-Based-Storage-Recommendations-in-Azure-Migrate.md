@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/unlock-cost-savings-with-utilization-based-storage/ba-p/4461634
 title: Unlock Cost Savings with Utilization-Based Storage Recommendations in Azure Migrate
 author: ankitsurkar
-viewing_mode: external
 feed_name: Microsoft Tech Community
 date: 2025-10-15 06:01:24 +00:00
 tags:

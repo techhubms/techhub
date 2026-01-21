@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-9-rc/
 title: "Announcing the Release Candidate of TypeScript 5.9: What's New and Improved"
 author: Daniel Rosenwasser
-viewing_mode: external
 feed_name: Microsoft TypeScript Blog
 date: 2025-07-25 16:53:10 +00:00
 tags:

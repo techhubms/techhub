@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devblogs.microsoft.com/visualstudio/catch-issues-before-you-commit-to-git/
 title: Catch Issues Early with GitHub Copilot's Local Code Review in Visual Studio
 author: Jessie Houghton
-viewing_mode: external
 feed_name: Microsoft DevBlog
 date: 2025-02-27 17:06:24 +00:00
 tags:

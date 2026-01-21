@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=y7Ks_bwSHUg
 title: Rx.NET Status and Roadmap Overview
 author: dotnet
-viewing_mode: internal
 feed_name: DotNet YouTube
 date: 2025-11-13 10:00:06 +00:00
 tags:

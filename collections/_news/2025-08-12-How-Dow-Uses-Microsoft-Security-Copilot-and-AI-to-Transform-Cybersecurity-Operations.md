@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/08/12/dows-125-year-legacy-innovating-with-ai-to-secure-a-long-future/
 title: How Dow Uses Microsoft Security Copilot and AI to Transform Cybersecurity Operations
 author: stclarke
-viewing_mode: external
 feed_name: Microsoft News
 date: 2025-08-12 16:31:43 +00:00
 tags:

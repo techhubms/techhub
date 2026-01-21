@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/new-dataflow-gen2-data-destinations-and-experience-improvements/
 title: 'Enhancements to Dataflow Gen2 in Microsoft Fabric: Expanded Destinations and Schema Support'
 author: Microsoft Fabric Blog
-viewing_mode: external
 feed_name: Microsoft Fabric Blog
 date: 2025-09-30 11:00:00 +00:00
 tags:

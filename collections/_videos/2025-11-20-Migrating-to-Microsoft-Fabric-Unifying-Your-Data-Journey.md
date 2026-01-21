@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=FwMIgQ2e17A
 title: 'Migrating to Microsoft Fabric: Unifying Your Data Journey'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 10:28:39 +00:00
 tags:

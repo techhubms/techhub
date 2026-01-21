@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/ai-and-ml/github-copilot/under-the-hood-exploring-the-ai-models-powering-github-copilot/
 title: 'Inside GitHub Copilot: The AI Models Behind Your Coding Assistant'
 author: Alexandra Lietzke
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-29 16:14:42 +00:00
 tags:

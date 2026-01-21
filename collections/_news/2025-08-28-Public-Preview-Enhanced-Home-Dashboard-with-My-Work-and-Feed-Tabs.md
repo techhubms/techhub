@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://github.blog/changelog/2025-08-28-improvements-to-the-home-dashboard-available-in-public-preview
 title: 'Public Preview: Enhanced Home Dashboard with My Work and Feed Tabs'
 author: Allison
-viewing_mode: external
 feed_name: The GitHub Blog
 date: 2025-08-28 17:50:18 +00:00
 tags:

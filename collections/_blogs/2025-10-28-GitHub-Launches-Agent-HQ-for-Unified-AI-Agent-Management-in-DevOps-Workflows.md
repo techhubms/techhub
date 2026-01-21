@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://devops.com/github-adds-platform-for-managing-ai-agents-embedded-in-devops-workflows/
 title: GitHub Launches Agent HQ for Unified AI Agent Management in DevOps Workflows
 author: Mike Vizard
-viewing_mode: external
 feed_name: DevOps Blog
 date: 2025-10-28 18:56:21 +00:00
 tags:

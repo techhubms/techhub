@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mbfeiw/gemini_pro_fails_more_often_than_not/
 title: Gemini Pro Fails More Often Than Not
 author: ChomsGP
-viewing_mode: external
 feed_name: Reddit Github Copilot
 date: 2025-07-28 12:55:30 +00:00
 tags:

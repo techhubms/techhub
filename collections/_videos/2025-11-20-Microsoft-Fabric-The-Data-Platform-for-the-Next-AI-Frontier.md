@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=YC33gA2TzxE
 title: 'Microsoft Fabric: The Data Platform for the Next AI Frontier'
 author: Microsoft Events
-viewing_mode: internal
 feed_name: Microsoft Events YouTube
 date: 2025-11-20 14:39:30 +00:00
 tags:

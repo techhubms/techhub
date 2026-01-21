@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://www.youtube.com/watch?v=b65KgVInTNo
 title: 'Azure Update – 18th July 2025: New Services, Features & Retirements'
 author: John Savill's Technical Training
-viewing_mode: internal
 feed_name: John Savill's Technical Training
 date: 2025-07-18 14:55:42 +00:00
 tags:

@@ -1,10 +1,9 @@
-﻿---
+---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1k70gul/ama_on_github_copilot_tomorrow_april_25/
 title: AMA on GitHub Copilot tomorrow (April 25)
 author: github
 feed_name: Reddit Github Copilot
 date: 2025-04-24 19:04:44 +00:00
-viewing_mode: external
 tags:
 - Agent Mode
 - AI Agents

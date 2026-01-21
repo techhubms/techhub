@@ -1,8 +1,7 @@
-﻿---
+---
 external_url: https://dellenny.com/unlocking-the-power-of-ai-with-azure-cognitive-services/
 title: Unlocking the Power of AI with Azure Cognitive Services
 author: Dellenny
-viewing_mode: external
 feed_name: Dellenny's Blog
 date: 2025-08-16 18:18:45 +00:00
 tags:
