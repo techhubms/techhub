@@ -23836,5 +23836,11 @@
     "reason": "Succesfully added: The content is a deep technical dive into RAIDDR, a Microsoft-developed error correction architecture being integrated into Azure's silicon stack. It discusses Azure-specific hardware deployments and cloud platform architecture but does not provide detailed discussion of coding, DevOps, Security, AI, or ML aspects. Therefore, only the 'Azure' category is assigned (Azure rule 1 and 4). The content is technical, not a sales pitch or biographical, meeting all quality standards. Tags include Microsoft hardware, memory reliability, ECC, and relevant technologies mentioned.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/raiddr-redefining-memory-reliability/ba-p/4487951"
+  },
+  {
+    "timestamp": "2026-01-21 04:20:27 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-tools-blog/release-of-bicep-azure-verified-modules-for-platform-landing/ba-p/4487932",
+    "collection": "community",
+    "reason": "Succesfully added: Assigned Azure because the entire content is about deploying and managing Azure environments using Bicep and Azure Verified Modules (Azure rule 1 and 4). Assigned DevOps since the post focuses on automating infrastructure deployment, lifecycle management, and integration with CI/CD tools such as Azure Pipelines and GitHub Actions (DevOps rules 1, 5, 6). Assigned Coding due to the technical depth on Bicep syntax, parameter files, module customization, and YAML configurations (Coding rules 2, 4, 5). Assigned Security because the architecture covers secure deployments, management group hierarchies for governance, security modules, and policy integration with governance best practices (Security rules 1, 2, 3, and 9). No ML or AI categories apply as there is no data science or AI/ML engineering content present, and the focus is entirely on infrastructure, DevOps, and governance."
   }
 ]
