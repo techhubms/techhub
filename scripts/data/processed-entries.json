@@ -23926,5 +23926,11 @@
     "collection": "news",
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content is specifically about the GitHub Copilot CLI, which is a developer-focused AI assistant tool (see AI inclusion rule 2 and GitHub Copilot inclusion rule 1). The integration described is intended for developers using the GitHub CLI and directly relates to AI-powered developer workflows. No Coding, DevOps, Azure, ML, or Security categories apply, as the focus is on tool integration rather than application development, DevOps pipelines, or security features.",
     "canonical_url": "https://github.blog/changelog/2026-01-21-install-and-use-github-copilot-cli-directly-from-the-github-cli"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=dGzIEn4MFMQ",
+    "timestamp": "2026-01-21 22:05:14 +00:00",
+    "reason": "Succesfully added: Included 'GitHub Copilot' and 'AI' categories because the content centers around live usage of GitHub Copilot CLI, as described in the title ('Let's build with GitHub Copilot CLI') and the description ('build with agents from the command line and integrate them into workflows'). Per AI Inclusion Rules (AI rule 2) and GitHub Copilot Inclusion Rules, any GitHub Copilot (developer tool) content receives both 'AI' and 'GitHub Copilot'. No other categories qualify, as the focus is not on general coding or DevOps, but specifically on Copilot CLI as an AI-powered coding assistant from GitHub. No generic exclusion rules apply (there is no biographical, sales, business, or negative content, and the language is English).",
+    "collection": "videos"
   }
 ]
