@@ -23830,5 +23830,11 @@
     "collection": "news",
     "timestamp": "2026-01-20 23:03:43 +00:00",
     "canonical_url": "https://github.blog/changelog/2026-01-20-codeql-2-23-9-has-been-released"
+  },
+  {
+    "timestamp": "2026-01-21 00:06:32 +00:00",
+    "reason": "Succesfully added: The content is a deep technical dive into RAIDDR, a Microsoft-developed error correction architecture being integrated into Azure's silicon stack. It discusses Azure-specific hardware deployments and cloud platform architecture but does not provide detailed discussion of coding, DevOps, Security, AI, or ML aspects. Therefore, only the 'Azure' category is assigned (Azure rule 1 and 4). The content is technical, not a sales pitch or biographical, meeting all quality standards. Tags include Microsoft hardware, memory reliability, ECC, and relevant technologies mentioned.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/raiddr-redefining-memory-reliability/ba-p/4487951"
   }
 ]
