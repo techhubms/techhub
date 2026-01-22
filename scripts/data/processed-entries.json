@@ -23980,5 +23980,17 @@
     "reason": "Succesfully added: Assigned the 'Azure' category because the solution centrally relies on Microsoft Fabric, Delta Lake, and Azure Event Hubs as core components (Azure inclusion rule 1, 2, 4, 5, 6, 7). Assigned the 'ML' category because the content focuses on data engineering, partitioning, pipeline automation, and scalable ingestion architecture—key elements of analytics engineering in Microsoft environments (ML inclusion rule 2, 3, 5, 7). Did not assign 'AI' because there's no focus on AI or pre-built AI services, only data engineering and analytics patterns. Did not assign 'Coding' as the content focuses on system configuration and architecture, not code or software development. 'DevOps' was not added because the focus is more on data architecture and operational patterns for data, not general CI/CD, deployment, or infrastructure as code. Security is not a major focus of this piece. All categories tied directly to technical implementation details per rules.",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/a-technical-implementation-guide-for-multi-store-retail/ba-p/4488418"
+  },
+  {
+    "timestamp": "2026-01-22 15:08:37 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_we-are-thrilled-to-announce-a-new-multi-year-activity-7420104610763317248-XAmj",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned Azure category as the post centers on leveraging Microsoft's cloud and analytics (Azure rules 1, 4, 5), and AI category due to references to AI, real-time intelligence, and analytical capabilities (AI rule 5). No exclusion rules triggered, as the focus is technical (real-time data, cloud, analytics) and not business/productivity. There were no substantial details to qualify for ML (not a tutorial/architecture on ML pipelines), and no direct evidence for Security, DevOps, or Coding based on the input content."
+  },
+  {
+    "timestamp": "2026-01-22 15:09:02 +00:00",
+    "canonical_url": "https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the AI category because the content is focused on leveraging AI-powered agentic workflows via the Copilot SDK (AI inclusion rule 1, 2, 4). The GitHub Copilot category is assigned because the SDK and CLI are direct extensions of GitHub Copilot functionality (GitHub Copilot rules 1–4), and per rules, 'AI' must always be assigned alongside 'GitHub Copilot.' The Coding category is included because this SDK allows embedding Copilot and its features into custom code (Coding rules 1, 4, 5), providing developers programmatic access via their preferred programming languages. Azure, DevOps, ML, and Security are not assigned as the content is not specifically about Azure platform, DevOps principles, ML/data science, or security tooling and practices."
   }
 ]
