@@ -24010,5 +24010,17 @@
     "canonical_url": "https://devclass.com/2026/01/22/vs-code-tasks-config-file-abused-to-run-malicious-code/",
     "reason": "Succesfully added: Assigned Security category because the article centers on security risks tied to malicious code in VS Code configuration files (Security rule 2: Application Security in Microsoft Ecosystem, and rule 3: Identity and Access Management via trust settings). Assigned DevOps because managing, configuring, and securing developer workflows in VS Code/GitHub is a core DevOps practice (DevOps rules 3, 9, 11 for collaboration, workflow, and version control). Assigned Coding as it addresses developer practices, project configurations, and the implications for those writing or reviewing code (Coding rule 4: Coding practices with Microsoft technologies, and rule 5: Microsoft development tools - VS Code). The content does not qualify for AI, GitHub Copilot, Azure, or ML since none of those topics are featured. No generic exclusion rules apply, and Microsoft technologies (VS Code, GitHub) are central to the narrative.",
     "collection": "blogs"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/32624/",
+    "reason": "Succesfully added: Assigned Azure category because the content highlights Azure SQL, one of Microsoft's core cloud data services, as a focus of both sessions and roadmap announcements (Azure rule 1, 4, 5). Assigned ML category because Microsoft Fabric and Power BI sessions and workshops emphasize data engineering, analytics, and AI-powered experiences, with workshops focused on practical data solutions and analytics workloads (ML rule 1, 4, 5). Assigned AI category since there are sessions on AI-powered experiences, Copilot integrations, and leveraging AI in data platforms (AI rules 1, 4, 5). Did not assign Coding because although developer roles are referenced, there is no specific focus on code, programming languages, or software engineering practices per se. Did not assign DevOps or Security, as the content does not feature CI/CD, DevOps workflows, or focused security implementation details. No generic exclusion rules applied; all category assignments align with the described technical content.",
+    "collection": "news",
+    "timestamp": "2026-01-22 17:08:37 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=hLzIAWIezBg",
+    "reason": "Succesfully added: Assigned 'AI' because the content centers on integrating AI agents into applications via the GitHub Copilot SDK (AI rule 1 and 2). Assigned 'GitHub Copilot' because it specifically covers the GitHub Copilot SDK—a developer tool to enable AI in development workflows (GitHub Copilot inclusion rules 1, 2, and 3). Did not assign Coding category as there is no evidence of hands-on coding examples or tutorials in the provided content. Exclusion rules do not apply—the content is technical, development-focused, and not about business productivity.",
+    "collection": "videos",
+    "timestamp": "2026-01-22 17:09:16 +00:00"
   }
 ]
