@@ -11505,5 +11505,11 @@
     "reason": "Insufficient content length",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/blank-screen-in-quot-new-quot-ai-foundry-and-unable-to-go-back/m-p/4487888#M22413"
+  },
+  {
+    "timestamp": "2026-01-22 18:05:31 +00:00",
+    "canonical_url": "https://www.youtube.com/shorts/sC8lFHqEp94",
+    "collection": "videos",
+    "reason": "No categories found: All categories are excluded according to generic exclusion rules. The content is purely promotional, inviting viewers to attend Microsoft events without providing any substantive technical details, implementation steps, or developer-focused topics. No technical information is present about Microsoft technologies, tools, or practices, and thus the content falls under the 'Sales Pitches' and 'Promotional Content without Educational Value' exclusion."
   }
 ]

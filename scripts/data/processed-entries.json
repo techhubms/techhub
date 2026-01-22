@@ -24022,5 +24022,17 @@
     "reason": "Succesfully added: Assigned 'AI' because the content centers on integrating AI agents into applications via the GitHub Copilot SDK (AI rule 1 and 2). Assigned 'GitHub Copilot' because it specifically covers the GitHub Copilot SDK—a developer tool to enable AI in development workflows (GitHub Copilot inclusion rules 1, 2, and 3). Did not assign Coding category as there is no evidence of hands-on coding examples or tutorials in the provided content. Exclusion rules do not apply—the content is technical, development-focused, and not about business productivity.",
     "collection": "videos",
     "timestamp": "2026-01-22 17:09:16 +00:00"
+  },
+  {
+    "timestamp": "2026-01-22 18:04:39 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/22/microsoft-security-success-stories-why-integrated-security-is-the-foundation-of-ai-transformation/",
+    "collection": "news",
+    "reason": "Succesfully added: Categories assigned as follows: 'Security' because the content focuses on Microsoft Security products (Defender, Sentinel, Purview, Entra), Zero Trust implementation, and defense strategies (Security inclusion rules 1–5, 7, 9). 'AI' included due to discussion of AI-powered automation, Security Copilot, and integrating AI into security platforms (AI inclusion rules 1, 4, 5, 6). 'Azure' included as Microsoft Defender for Cloud, Azure OpenAI, and Azure-centric security scenarios are central (Azure inclusion rules 1, 3, 4). 'DevOps', 'ML', 'Coding', and 'GitHub Copilot' were not included, as there is no in-depth coverage of those areas in the content. Exclusion rules do not apply—content is technical, not business-executive oriented and is primarily in English."
+  },
+  {
+    "timestamp": "2026-01-22 18:04:59 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-01-22-1-vcpu-linux-runner-now-generally-available-in-github-actions",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned DevOps category because the content is about GitHub Actions runner infrastructure, which is directly related to DevOps automation and workflow optimization (DevOps rules 2, 5, 6). No Coding category since there's no programming or code example focus; no AI, ML, Security, Azure, or GitHub Copilot relevance. All content is technical, focused on GitHub Actions configuration and optimization, and fits within the DevOps inclusion rules."
   }
 ]
