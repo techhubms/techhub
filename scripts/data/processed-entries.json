@@ -23992,5 +23992,23 @@
     "canonical_url": "https://github.blog/news-insights/company-news/build-an-agent-into-any-app-with-the-github-copilot-sdk/",
     "collection": "news",
     "reason": "Succesfully added: Assigned the AI category because the content is focused on leveraging AI-powered agentic workflows via the Copilot SDK (AI inclusion rule 1, 2, 4). The GitHub Copilot category is assigned because the SDK and CLI are direct extensions of GitHub Copilot functionality (GitHub Copilot rules 1–4), and per rules, 'AI' must always be assigned alongside 'GitHub Copilot.' The Coding category is included because this SDK allows embedding Copilot and its features into custom code (Coding rules 1, 4, 5), providing developers programmatic access via their preferred programming languages. Azure, DevOps, ML, and Security are not assigned as the content is not specifically about Azure platform, DevOps principles, ML/data science, or security tooling and practices."
+  },
+  {
+    "timestamp": "2026-01-22 16:06:19 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/granular-apis-for-onelake-security-preview/",
+    "reason": "Succesfully added: Assigned Azure category because Microsoft Fabric is a cloud platform service within the Azure ecosystem (Azure rule 1), and the article discusses REST APIs for OneLake, a core Fabric component. Assigned Security category because the content centers on managing security roles, permissions, and access control (Security rules 1, 2, 3, 4). Assigned DevOps because the APIs enable CI/CD integration and automation-friendly workflows, aligning with DevOps and governance practices (DevOps rules 5, 6). Did not assign ML, AI, Coding, or GitHub Copilot because there is no substantial ML/data analytics, AI service usage, traditional coding, or GitHub Copilot content.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-01-22 16:06:39 +00:00",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_build-an-agent-into-any-app-with-the-github-activity-7420126187286568961-TdW7",
+    "reason": "Succesfully added: Assigned the 'AI' category because the content is about agentic execution loops, orchestration, and multi-model AI-powered workflows (AI rules 1 and 4). Assigned 'GitHub Copilot' because the focus is specifically on the GitHub Copilot SDK, its runtime, and integration features (GitHub Copilot rule 1). As per critical requirements, whenever 'GitHub Copilot' is assigned, 'AI' is also included. Did not assign 'Coding', 'DevOps', 'Azure', 'ML', or 'Security' since the primary focus is on orchestration, SDK potential, and developer workflow transformation, not code-level, DevOps, or platform-specific implementation.",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-01-22 16:07:11 +00:00",
+    "canonical_url": "https://devclass.com/2026/01/22/vs-code-tasks-config-file-abused-to-run-malicious-code/",
+    "reason": "Succesfully added: Assigned Security category because the article centers on security risks tied to malicious code in VS Code configuration files (Security rule 2: Application Security in Microsoft Ecosystem, and rule 3: Identity and Access Management via trust settings). Assigned DevOps because managing, configuring, and securing developer workflows in VS Code/GitHub is a core DevOps practice (DevOps rules 3, 9, 11 for collaboration, workflow, and version control). Assigned Coding as it addresses developer practices, project configurations, and the implications for those writing or reviewing code (Coding rule 4: Coding practices with Microsoft technologies, and rule 5: Microsoft development tools - VS Code). The content does not qualify for AI, GitHub Copilot, Azure, or ML since none of those topics are featured. No generic exclusion rules apply, and Microsoft technologies (VS Code, GitHub) are central to the narrative.",
+    "collection": "blogs"
   }
 ]
