@@ -24034,5 +24034,17 @@
     "canonical_url": "https://github.blog/changelog/2026-01-22-1-vcpu-linux-runner-now-generally-available-in-github-actions",
     "collection": "news",
     "reason": "Succesfully added: Assigned DevOps category because the content is about GitHub Actions runner infrastructure, which is directly related to DevOps automation and workflow optimization (DevOps rules 2, 5, 6). No Coding category since there's no programming or code example focus; no AI, ML, Security, Azure, or GitHub Copilot relevance. All content is technical, focused on GitHub Actions configuration and optimization, and fits within the DevOps inclusion rules."
+  },
+  {
+    "timestamp": "2026-01-22 19:07:50 +00:00",
+    "reason": "Succesfully added: Included the AI category because the article deeply addresses AI agents running automated workflows, describes computer-using agents (CUAs), and agentic interfaces (AI rule 1, 4, 5). Assigned Azure because Windows 365 Cloud PCs are fundamentally Azure-hosted VMs, and the article discusses Azure integration and management (Azure rule 1, 2). Assigned Security because of extensive focus on enterprise security, identity controls (Microsoft Entra ID), management via Intune, and compliance for both human and agent workloads (Security rules 1, 3, 4). Did not assign Coding, DevOps, or ML: there's no focus on code, software development, CI/CD, or ML/data science implementation. Exclusion rules do not apply—this is deeply technical, entirely in English, and not biographical, job-related, or business strategy-focused.",
+    "canonical_url": "https://blogs.windows.com/windowsexperience/2026/01/22/windows-365-for-agents-the-cloud-pcs-next-chapter/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-01-22 19:08:29 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the session centers on the GitHub Copilot SDK and its application in .NET, meeting AI rule 2 and 4. Assigned 'GitHub Copilot' per rule 2 for any GitHub Copilot-specific content, which always also brings 'AI'. Assigned 'Coding' due to the focus on leveraging software development tools (GitHub Copilot SDK) within .NET development, as outlined in Coding rules 1 and 5. The source and tags confirm a developer/professional focus with no sales pitch, biographical, or exclusion triggers.",
+    "canonical_url": "https://www.youtube.com/watch?v=aKUZCxTdDDg",
+    "collection": "videos"
   }
 ]
