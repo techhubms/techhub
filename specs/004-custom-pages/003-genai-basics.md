@@ -3,12 +3,12 @@
 **Page**: GenAI Basics  
 **URL**: `/ai/genai-basics`  
 **Priority**: P2  
-**Status**: Razor ✅ | JSON ❌ (Incomplete) | E2E Tests ❌  
-**Estimated Effort**: 12-16 hours
+**Status**: Razor ❌ (Needs Update) | JSON ✅ | E2E Tests ❌  
+**Estimated Effort**: 8-10 hours (remaining)
 
 ## Overview
 
-GenAI Basics is the **first page needing full JSON update** with significant missing content. This spec covers JSON verification, content updates, and E2E test implementation.
+GenAI Basics JSON data is complete with all mermaid diagrams, FAQ blocks, and resource links converted to simplified JSON structure with ID-based placeholders. Razor component needs update to use IMarkdownService for rendering.
 
 **Live Site Reference**: <https://tech.hub.ms/ai/genai-basics>
 
@@ -16,16 +16,26 @@ GenAI Basics is the **first page needing full JSON update** with significant mis
 
 ✅ **Complete**:
 
-- Razor component exists: `src/TechHub.Web/Components/Pages/GenAIBasics.razor`
+- **JSON structure**: `collections/_custom/genai-basics.json` - **COMPLETE**
+  - 13 sections (TOC excluded - generated dynamically)
+  - 11 mermaid diagrams with ID-based placeholders (`{{mermaid:semantic-id}}`)
+  - 2 FAQ blocks (8 Q&A pairs total) - markdown format
+  - 10 More Info sections with resource links
+  - All HTML converted to markdown
+  - No `id` fields (generated dynamically from titles)
+  - Document title extracted from frontmatter
 - SidebarToc component integrated
-- Basic JSON structure: `collections/_custom/genai-basics.json`
+- Conversion script: `.tmp/convert-genai-final.ps1` (parameterized, reusable)
 
-❌ **Critical Missing Content** (from comparison report):
+❌ **Needs Implementation**:
 
-- **10 mermaid diagrams** across multiple sections
-- **7 FAQ questions** with detailed answers
-- **~30 "More information" resource links**
-- Potentially missing subsections and detailed content
+- **Razor component update**: `src/TechHub.Web/Components/Pages/GenAIBasics.razor`
+  - Inject IMarkdownService
+  - Load JSON from genai-basics.json
+  - Replace `{{mermaid:id}}` placeholders with actual diagrams
+  - Render markdown to HTML using MarkdownService.RenderToHtml()
+  - Generate TOC dynamically from section titles
+  - Generate section IDs from titles
 
 ❌ **Missing Tests**:
 
@@ -33,50 +43,53 @@ GenAI Basics is the **first page needing full JSON update** with significant mis
 
 ## Acceptance Criteria
 
-### JSON Content Completeness
+### JSON Content Completeness ✅ COMPLETE
 
 **Source**: `https://raw.githubusercontent.com/techhubms/techhub/main/sections/ai/genai-basics.md`
 
-1. **All 13 TOC sections** must be present in JSON with complete content:
-   - History
-   - ML vs AI vs GenAI
-   - About Generative AI
-   - Vendors
-   - Models
-   - Providers
-   - Prompts & messages
-   - Tokens & Tokenization
-   - Next-token prediction: How LLMs generate text
-   - Costs
-   - Problems with models
-   - When not to use AI
-   - Societal impacts and risks
+**Implementation Details**:
 
-2. **Mermaid Diagrams** (10 total):
-   - History section: 3 diagrams (Foundations, Deep Learning, GenAI Revolution timelines)
-   - ML vs AI vs GenAI: 1 diagram (nested relationship)
-   - Vendors: 1 diagram (vendor-to-model-to-user flow)
-   - Providers: 1 diagram (request flow architecture)
-   - Tokens & Tokenization: 1 diagram (tokenization visualization)
-   - Next-token prediction: 2 diagrams (probability distribution, sequence generation)
-   - Costs: 1 diagram (cost components)
-   - Problems with models: 1 diagram (problems → solutions)
+- **JSON Structure**: Simplified approach with single `content` field containing raw markdown + structured data
+- **Mermaid Diagrams**: Stored as array with `{id, title, diagram}` objects, referenced via ID-based placeholders
+- **Placeholder Pattern**: `{{mermaid:semantic-id}}` (e.g., `{{mermaid:foundations-1950s-1990s}}`)
+- **FAQ Format**: Markdown-only (no HTML) - converted from HTML using `ConvertTo-Markdown` function
+- **More Info Links**: Extracted as separate array with `{text, url}` objects
+- **HTML Removal**: All HTML removed from content (only remains in mermaid syntax where appropriate)
+- **ID Generation**: Semantic IDs from titles (lowercase, special chars removed, spaces to hyphens)
 
-3. **FAQ Blocks** (7 questions minimum):
-   - Models section: 3 questions (What is GPT, multimodal meaning, why not train monthly)
-   - Providers section: 4 questions (data usage, storage location, opt-out, Azure OpenAI vs OpenAI)
+✅ **All 13 sections present** (TOC excluded - generated dynamically):
 
-4. **"More information" Resource Links** (~30 total):
-   - History: 1 link
-   - Vendors: 3 links
-   - Models: 3 links
-   - Providers: 3 links
-   - Prompts & messages: 4 links
-   - Tokens & Tokenization: 3 links
-   - Costs: 3 links
-   - Problems with models: 3 links
-   - When not to use AI: 2 links
-   - Societal impacts: 3 links
+- History ✅
+- ML vs AI vs GenAI ✅
+- About Generative AI ✅
+- Vendors ✅
+- Models ✅
+- Providers ✅
+- Prompts & messages ✅
+- Tokens & Tokenization ✅
+- Next-token prediction: How LLMs generate text ✅
+- Costs ✅
+- Problems with models ✅
+- When not to use AI ✅
+- Societal impacts and risks ✅
+
+✅ **11 Mermaid Diagrams** (validated):
+
+- History section: 3 diagrams ✅
+- ML vs AI vs GenAI: 1 diagram ✅
+- Vendors: 1 diagram ✅
+- Providers: 1 diagram ✅
+- Tokens & Tokenization: 1 diagram ✅
+- Next-token prediction: 2 diagrams ✅
+- Costs: 1 diagram ✅
+- Problems with models: 1 diagram ✅
+
+✅ **2 FAQ Blocks** (8 Q&A pairs total):
+
+- Models section: 3 questions ✅
+- Providers section: 5 questions ✅
+
+✅ **10 More Info sections** with resource links (validated)
 
 ### E2E Test Coverage
 

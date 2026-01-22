@@ -3,6 +3,7 @@ namespace TechHub.Core.DTOs;
 /// <summary>
 /// Specific data structure for the Developer Experience Space page
 /// </summary>
+[System.Diagnostics.CodeAnalysis.SuppressMessage("Naming", "CA1711:Identifiers should not have incorrect suffix", Justification = "DevEx is the standard abbreviation for Developer Experience")]
 public record DXSpacePageData
 {
     public required string Title { get; init; }

@@ -1,6 +1,6 @@
 ---
 name: cleanup
-description: Comprehensive code cleanup and quality assurance for .NET solutions. Compiles, formats, lints, removes dead code, and synchronizes documentation with code.
+description: Comprehensive code cleanup and quality assurance for .NET solutions. Compiles, formats, lints, removes dead code, and synchronizes documentation with code. Use this skill whenever you are asked to cleanup the solution, repository, branch, project, etc.
 ---
 
 # Code Cleanup Skill

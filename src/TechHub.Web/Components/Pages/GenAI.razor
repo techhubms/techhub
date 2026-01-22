@@ -1,0 +1,180 @@
+@page "/ai/genai-basics"
+@page "/ai/genai-applied"
+@page "/ai/genai-advanced"
+@using TechHub.Core.DTOs
+@using TechHub.Web.Services
+
+@inject TechHubApiClient ApiClient
+@inject NavigationManager Navigation
+@inject ErrorService ErrorService
+@inject ILogger<GenAI> Logger
+
+<PageTitle>@(pageData?.Title ?? PageType) - Tech Hub</PageTitle>
+
+@if (sectionData != null && pageData != null)
+{
+    <HeadContent>
+        <link rel="canonical" href="@GetCanonicalUrl()" />
+    </HeadContent>
+
+    <header class="site-header">
+        <NavHeader />
+        <SectionBanner Section="@sectionData" />
+        <SubNav Section="@sectionData" />
+    </header>
+
+    <main class="page-with-sidebar">
+        <aside class="sidebar">
+            <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
+        </aside>
+
+        <article class="article-body">
+            <div class="content-detail-header">
+                <h1 class="page-h1" tabindex="-1">@pageData.Title</h1>
+                @if (!string.IsNullOrWhiteSpace(pageData.Description))
+                {
+                    <p class="page-description">@pageData.Description</p>
+                }
+            </div>
+
+            <div class="genai-container">
+                @foreach (var genAISection in pageData.Sections)
+                {
+                    <section class="genai-section">
+                        <h2 id="@GenerateSectionId(genAISection.Title)">@genAISection.Title</h2>
+
+                        @* Content is already rendered HTML from API *@
+                        <div class="genai-content">
+                            @((MarkupString)genAISection.Content)
+                        </div>
+
+                        @* FAQ blocks *@
+                        @if (genAISection.Faq != null && genAISection.Faq.Any())
+                        {
+                            <div class="genai-faq">
+                                @foreach (var faq in genAISection.Faq)
+                                {
+                                    <details class="genai-faq-item">
+                                        <summary>@faq.Question</summary>
+                                        <div class="genai-faq-answer">
+                                            <p>@faq.Answer</p>
+                                        </div>
+                                    </details>
+                                }
+                            </div>
+                        }
+
+                        @* More information links *@
+                        @if (genAISection.MoreInfo != null && genAISection.MoreInfo.Any())
+                        {
+                            <div class="genai-more-info">
+                                <h3>More Information</h3>
+                                <ul>
+                                    @foreach (var link in genAISection.MoreInfo)
+                                    {
+                                        <li><a href="@link.Url" target="_blank" rel="noopener">@link.Text</a></li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+                    </section>
+                }
+            </div>
+        </article>
+    </main>
+}
+
+<ConditionalScripts LoadSyntaxHighlighting="true" LoadMermaid="true" LoadTocScrollSpy="true" />
+
+@code {
+    private SectionDto? sectionData;
+    private GenAIPageData? pageData;
+    private string PageType => DeterminePageType();
+
+    /// <summary>
+    /// Determine which page type based on current route
+    /// </summary>
+    private string DeterminePageType()
+    {
+        var uri = new Uri(Navigation.Uri);
+        var path = uri.AbsolutePath.ToLowerInvariant();
+
+        if (path.Contains("genai-basics")) return "basics";
+        if (path.Contains("genai-applied")) return "applied";
+        if (path.Contains("genai-advanced")) return "advanced";
+
+        return "basics"; // fallback
+    }
+
+    /// <summary>
+    /// Get canonical URL based on page type
+    /// </summary>
+    private string GetCanonicalUrl()
+    {
+        return PageType switch
+        {
+            "basics" => "https://tech.hub.ms/ai/genai-basics",
+            "applied" => "https://tech.hub.ms/ai/genai-applied",
+            "advanced" => "https://tech.hub.ms/ai/genai-advanced",
+            _ => "https://tech.hub.ms/ai/genai-basics"
+        };
+    }
+
+    /// <summary>
+    /// Generate section ID from title (lowercase, special chars removed, spaces to hyphens)
+    /// </summary>
+    private static string GenerateSectionId(string title)
+    {
+        return title
+        .ToLowerInvariant()
+        .Replace(" ", "-", StringComparison.Ordinal)
+        .Replace(":", "", StringComparison.Ordinal)
+        .Replace("&", "and", StringComparison.Ordinal)
+        .Replace("(", "", StringComparison.Ordinal)
+        .Replace(")", "", StringComparison.Ordinal)
+        .Trim();
+    }
+
+    /// <summary>
+    /// Generate HTML content for TOC extraction.
+    /// SidebarToc will extract headings from this HTML automatically.
+    /// </summary>
+    private string GetRenderedContent()
+    {
+        if (pageData == null)
+            return string.Empty;
+
+        var sb = new System.Text.StringBuilder();
+        foreach (var genAISection in pageData.Sections)
+        {
+            sb.Append($"<h2 id=\"{GenerateSectionId(genAISection.Title)}\">{genAISection.Title}</h2>");
+        }
+        return sb.ToString();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            sectionData = await ApiClient.GetSectionAsync("ai");
+
+            // Load appropriate page data based on route
+            pageData = PageType switch
+            {
+                "basics" => await ApiClient.GetGenAIBasicsDataAsync(),
+                "applied" => await ApiClient.GetGenAIAppliedDataAsync(),
+                "advanced" => await ApiClient.GetGenAIAdvancedDataAsync(),
+                _ => await ApiClient.GetGenAIBasicsDataAsync()
+            };
+
+            if (sectionData == null || pageData == null)
+            {
+                Navigation.NavigateTo("/not-found");
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorService.HandleError(ex, Navigation, Logger);
+        }
+    }
+}

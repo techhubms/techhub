@@ -63,49 +63,72 @@
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" defer></script>
 
     <script>
-        // Initialize Mermaid for diagrams with dark theme matching production
-        document.addEventListener('DOMContentLoaded', function () {
-            if (typeof mermaid !== 'undefined') {
-                mermaid.initialize({
-                    startOnLoad: true,
-                    theme: 'dark',
-                    themeVariables: {
-                        primaryColor: '#2d2d4a',
-                        primaryTextColor: '#e0e0e0',
-                        primaryBorderColor: '#64b5f6',
-                        lineColor: '#64b5f6',
-                        secondaryColor: '#1a1a2e',
-                        tertiaryColor: '#16162a',
-                        background: '#1a1a2e',
-                        mainBkg: '#2d2d4a',
-                        secondBkg: '#1a1a2e',
-                        labelBackground: '#2d2d4a',
-                        labelColor: '#e0e0e0',
-                        nodeTextColor: '#e0e0e0',
-                        textColor: '#e0e0e0',
-                        titleColor: '#e0e0e0',
-                        edgeLabelBackground: '#2d2d4a',
-                        clusterBkg: '#16162a',
-                        clusterBorder: '#64b5f6',
-                        defaultLinkColor: '#64b5f6',
-                        activationBorderColor: '#64b5f6',
-                        activationBkgColor: '#2d2d4a',
-                        sequenceNumberColor: '#1a1a2e'
-                    },
-                    flowchart: {
-                        curve: 'basis',
-                        padding: 15
-                    }
-                });
+        // Mermaid configuration with dark theme matching production
+        const mermaidConfig = {
+            startOnLoad: false, // Manual control for better reliability after navigation
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#2d2d4a',
+                primaryTextColor: '#e0e0e0',
+                primaryBorderColor: '#64b5f6',
+                lineColor: '#64b5f6',
+                secondaryColor: '#1a1a2e',
+                tertiaryColor: '#16162a',
+                background: '#1a1a2e',
+                mainBkg: '#2d2d4a',
+                secondBkg: '#1a1a2e',
+                labelBackground: '#2d2d4a',
+                labelColor: '#e0e0e0',
+                nodeTextColor: '#e0e0e0',
+                textColor: '#e0e0e0',
+                titleColor: '#e0e0e0',
+                edgeLabelBackground: '#2d2d4a',
+                clusterBkg: '#16162a',
+                clusterBorder: '#64b5f6',
+                defaultLinkColor: '#64b5f6',
+                activationBorderColor: '#64b5f6',
+                activationBkgColor: '#2d2d4a',
+                sequenceNumberColor: '#1a1a2e'
+            },
+            flowchart: {
+                curve: 'basis',
+                padding: 15
             }
+        };
+
+        // Initialize and render Mermaid diagrams
+        async function initMermaid() {
+            if (typeof mermaid === 'undefined') return;
+
+            // Initialize Mermaid with config (only needed once)
+            mermaid.initialize(mermaidConfig);
+
+            // Find all unprocessed mermaid elements
+            const mermaidElements = document.querySelectorAll('.mermaid:not([data-processed="true"])');
+
+            if (mermaidElements.length === 0) return;
+
+            try {
+                // Use mermaid.run() (modern v10+ API) to render diagrams
+                await mermaid.run({
+                    nodes: mermaidElements,
+                });
+            } catch (error) {
+                console.error('Mermaid rendering failed:', error);
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            initMermaid();
         });
 
-        // Re-render Mermaid diagrams after Blazor navigation
+        // Re-render Mermaid diagrams after Blazor enhanced navigation
         if (typeof Blazor !== 'undefined') {
-            Blazor.addEventListener('enhancedload', function () {
-                if (typeof mermaid !== 'undefined') {
-                    mermaid.init(undefined, '.mermaid');
-                }
+            Blazor.addEventListener('enhancedload', async function () {
+                // Small delay to ensure DOM is fully updated after navigation
+                await new Promise(resolve => setTimeout(resolve, 100));
+                await initMermaid();
             });
         }
     </script>

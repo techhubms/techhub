@@ -7,7 +7,7 @@ namespace TechHub.Web.Components;
 /// <summary>
 /// Defines how the tag cloud handles tag clicks
 /// </summary>
-internal enum TagCloudNavigationMode
+public enum TagCloudNavigationMode
 {
     /// <summary>
     /// Update URL query params in-place (stays on current page)
@@ -27,7 +27,7 @@ internal enum TagCloudNavigationMode
 /// Displays tags with usage counts and size categories
 /// Supports multiple tag selection with OR logic
 /// </summary>
-internal partial class SidebarTagCloud : ComponentBase
+public partial class SidebarTagCloud : ComponentBase
 {
     [Inject]
     private ITechHubApiClient ApiClient { get; set; } = default!;
@@ -186,12 +186,16 @@ internal partial class SidebarTagCloud : ComponentBase
 
             Logger.LogInformation("Successfully loaded {Count} tags", tags?.Count ?? 0);
         }
+        // Suppress CA1031: Catching all exceptions is appropriate for component error handling
+        // We log the error and set hasError flag to show error UI to user
+#pragma warning disable CA1031
         catch (Exception ex)
         {
             Logger.LogError(ex, "Failed to load tag cloud for scope {Scope}", Scope);
             hasError = true;
             tags = null;
         }
+#pragma warning restore CA1031
         finally
         {
             isLoading = false;

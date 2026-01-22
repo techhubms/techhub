@@ -3,12 +3,12 @@
 **Page**: GenAI Applied  
 **URL**: `/ai/genai-applied`  
 **Priority**: P2  
-**Status**: Razor ✅ | JSON ❌ (Incomplete) | E2E Tests ❌  
-**Estimated Effort**: 8-10 hours
+**Status**: Razor ❌ (Needs Update) | JSON ✅ | E2E Tests ❌  
+**Estimated Effort**: 6-8 hours (remaining)
 
 ## Overview
 
-GenAI Applied builds on GenAI Basics with practical applications and real-world use cases. The JSON file is missing several mermaid diagrams, FAQ blocks, and resource links.
+GenAI Applied JSON data is complete with all mermaid diagrams, FAQ blocks, and resource links converted to simplified JSON structure with ID-based placeholders. Razor component needs update to use IMarkdownService for rendering.
 
 **Live Site Reference**: <https://tech.hub.ms/ai/genai-applied>
 
@@ -16,16 +16,26 @@ GenAI Applied builds on GenAI Basics with practical applications and real-world 
 
 ✅ **Complete**:
 
-- Razor component exists: `src/TechHub.Web/Components/Pages/GenAIApplied.razor`
+- **JSON structure**: `collections/_custom/genai-applied.json` - **COMPLETE**
+  - 6 sections (TOC excluded - generated dynamically)
+  - 1 mermaid diagram with ID-based placeholder
+  - 1 FAQ block (2 Q&A pairs) - markdown format
+  - 5 More Info sections with resource links
+  - All HTML converted to markdown
+  - No `id` fields (generated dynamically from titles)
+  - Document title extracted from frontmatter
 - SidebarToc component integrated
-- Basic JSON structure: `collections/_custom/genai-applied.json`
+- Conversion script: `.tmp/convert-genai-final.ps1` (same as genai-basics)
 
-❌ **Critical Missing Content** (from comparison report):
+❌ **Needs Implementation**:
 
-- **3+ mermaid diagrams**
-- **2+ FAQ blocks** with multiple questions
-- **~20 "More information" resource links**
-- Potentially missing subsections
+- **Razor component update**: `src/TechHub.Web/Components/Pages/GenAIApplied.razor`
+  - Inject IMarkdownService
+  - Load JSON from genai-applied.json
+  - Replace `{{mermaid:id}}` placeholders with actual diagrams
+  - Render markdown to HTML using MarkdownService.RenderToHtml()
+  - Generate TOC dynamically from section titles
+  - Generate section IDs from titles
 
 ❌ **Missing Tests**:
 
@@ -33,34 +43,44 @@ GenAI Applied builds on GenAI Basics with practical applications and real-world 
 
 ## Acceptance Criteria
 
-### JSON Content Completeness
+### JSON Content Completeness ✅ COMPLETE
 
 **Source**: `https://raw.githubusercontent.com/techhubms/techhub/main/sections/ai/genai-applied.md`
 
-1. **All 6 TOC sections** must be present in JSON with complete content:
-   - What You Can Build Today
-   - Integrating AI into Your Applications
-   - Building Multi-Agent Systems
-   - Monitoring and Evaluating AI Applications
-   - The AI-Native Web
-   - Learning Resources
+**Implementation Details**: Same simplified structure as genai-basics with ID-based mermaid placeholders and markdown-only content.
 
-2. **Mermaid Diagrams** (3+ total):
-   - Integrating AI section: 1 diagram (3-layer architecture: Experience/Orchestration/Data)
-   - Building Multi-Agent Systems: 1 diagram (orchestrator routing pattern)
-   - Monitoring: 1 diagram (3-stage evaluation flowchart)
+✅ **All 6 sections present** (TOC excluded - generated dynamically):
 
-3. **FAQ Blocks** (2+ blocks):
+- What You Can Build Today ✅
+- Integrating AI into Your Applications ✅
+- Building Multi-Agent Systems ✅
+- Monitoring and Evaluating AI Applications ✅
+- The AI-native web: NLWeb, llms.txt, and semantic search ✅
+- Learning Resources ✅
+
+✅ **1 Mermaid Diagram** (validated):
+
+- Building Multi-Agent Systems: 1 diagram ✅
+
+✅ **1 FAQ Block** (2 Q&A pairs - markdown format):
+
+- Integrating AI section: 2 questions ✅
+
+✅ **5 More Info sections** with resource links (validated)
+
+- Monitoring: 1 diagram (3-stage evaluation flowchart)
+
+1. **FAQ Blocks** (2+ blocks):
    - GitHub Copilot section: 1 FAQ block (when to refactor IDE vs Copilot, which mode for features)
    - .NET AI section: 1 FAQ block (Semantic Kernel vs Agent Framework, Azure OpenAI vs OpenAI)
 
-4. **"More information" Resource Links** (~20 total):
+2. **"More information" Resource Links** (~20 total):
    - GitHub Copilot section: ~7 links
    - Azure AI Services section: ~6 links
    - Building Multi-Agent Systems: ~8 links
    - Monitoring: ~4 links
 
-5. **Tables**:
+3. **Tables**:
    - Orchestration patterns table (Pattern | Use when)
    - Evaluator types table (Category | What it measures)
 

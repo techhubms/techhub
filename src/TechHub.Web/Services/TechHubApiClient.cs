@@ -523,7 +523,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// <summary>
     /// Get GenAI Basics page data
     /// </summary>
-    public virtual async Task<GenAIBasicsPageData?> GetGenAIBasicsDataAsync(CancellationToken cancellationToken = default)
+    public virtual async Task<GenAIPageData?> GetGenAIBasicsDataAsync(CancellationToken cancellationToken = default)
     {
         try
         {
@@ -537,7 +537,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
             }
 
             response.EnsureSuccessStatusCode();
-            var data = await response.Content.ReadFromJsonAsync<GenAIBasicsPageData>(cancellationToken: cancellationToken);
+            var data = await response.Content.ReadFromJsonAsync<GenAIPageData>(cancellationToken: cancellationToken);
             return data;
         }
         catch (HttpRequestException ex)
@@ -550,7 +550,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// <summary>
     /// Get GenAI Advanced page data
     /// </summary>
-    public virtual async Task<GenAIAdvancedPageData?> GetGenAIAdvancedDataAsync(CancellationToken cancellationToken = default)
+    public virtual async Task<GenAIPageData?> GetGenAIAdvancedDataAsync(CancellationToken cancellationToken = default)
     {
         try
         {
@@ -564,7 +564,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
             }
 
             response.EnsureSuccessStatusCode();
-            var data = await response.Content.ReadFromJsonAsync<GenAIAdvancedPageData>(cancellationToken: cancellationToken);
+            var data = await response.Content.ReadFromJsonAsync<GenAIPageData>(cancellationToken: cancellationToken);
             return data;
         }
         catch (HttpRequestException ex)
@@ -577,7 +577,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// <summary>
     /// Get GenAI Applied page data
     /// </summary>
-    public virtual async Task<GenAIAppliedPageData?> GetGenAIAppliedDataAsync(CancellationToken cancellationToken = default)
+    public virtual async Task<GenAIPageData?> GetGenAIAppliedDataAsync(CancellationToken cancellationToken = default)
     {
         try
         {
@@ -591,7 +591,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
             }
 
             response.EnsureSuccessStatusCode();
-            var data = await response.Content.ReadFromJsonAsync<GenAIAppliedPageData>(cancellationToken: cancellationToken);
+            var data = await response.Content.ReadFromJsonAsync<GenAIPageData>(cancellationToken: cancellationToken);
             return data;
         }
         catch (HttpRequestException ex)
@@ -639,6 +639,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// <param name="minUses">Minimum usage count for tag inclusion (default: 1)</param>
     /// <param name="lastDays">Only include tags from content published within this many days (default: 90)</param>
     /// <param name="cancellationToken">Cancellation token</param>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support")]
     public virtual async Task<IReadOnlyList<TagCloudItem>?> GetTagCloudAsync(
         TagCloudScope scope,
         string? sectionName = null,

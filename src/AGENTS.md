@@ -55,7 +55,6 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 ```powershell
 Run                     # Build + all tests + servers (default development workflow)
 Run -WithoutTests       # Build + servers (skip tests for quick start/debugging)
-Run -TestRerun          # Fast iteration: only rebuild tests and rerun (servers must be running)
 Run -TestProject Web.Tests    # Run only Web tests, keep servers running
 Run -TestName SectionCard     # Run tests matching 'SectionCard', keep servers running
 Run -Clean              # Clean build + all tests + servers (when dependencies change)

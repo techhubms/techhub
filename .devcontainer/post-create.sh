@@ -177,7 +177,6 @@ Write-Host "  -Help          Show this help message" -ForegroundColor Gray
 Write-Host "  -Clean         Clean build artifacts before building (use when dependencies change)" -ForegroundColor Gray
 Write-Host "  -WithoutTests  Skip all tests, start servers directly (for debugging)" -ForegroundColor Gray
 Write-Host "  -StopServers   Stop servers after tests complete (for CI/CD pipelines)" -ForegroundColor Gray
-Write-Host "  -TestRerun     Fast test iteration: Only rebuild and run test projects (assumes servers running)" -ForegroundColor Gray
 Write-Host "  -Rebuild       Clean rebuild only, then exit" -ForegroundColor Gray
 Write-Host "  -TestProject   Scope tests to specific project (e.g., TechHub.Web.Tests, E2E.Tests, powershell)" -ForegroundColor Gray
 Write-Host "  -TestName      Scope tests by name pattern (e.g., SectionCard)" -ForegroundColor Gray

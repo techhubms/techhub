@@ -1,8 +1,10 @@
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.DTOs;
+using TechHub.Core.Interfaces;
 
 namespace TechHub.Api.Endpoints;
 
@@ -104,7 +106,7 @@ internal static class CustomPagesEndpoints
             .WithName("GetGenAIBasicsData")
             .WithSummary("Get GenAI Basics page data")
             .WithDescription("Returns structured data for the GenAI Basics custom page")
-            .Produces<GenAIBasicsPageData>(StatusCodes.Status200OK)
+            .Produces<GenAIPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
         // Get GenAI Advanced page data
@@ -112,7 +114,7 @@ internal static class CustomPagesEndpoints
             .WithName("GetGenAIAdvancedData")
             .WithSummary("Get GenAI Advanced page data")
             .WithDescription("Returns structured data for the GenAI Advanced custom page")
-            .Produces<GenAIAdvancedPageData>(StatusCodes.Status200OK)
+            .Produces<GenAIPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
         // Get GenAI Applied page data
@@ -120,7 +122,7 @@ internal static class CustomPagesEndpoints
             .WithName("GetGenAIAppliedData")
             .WithSummary("Get GenAI Applied page data")
             .WithDescription("Returns structured data for the GenAI Applied custom page")
-            .Produces<GenAIAppliedPageData>(StatusCodes.Status200OK)
+            .Produces<GenAIPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
         // Get SDLC page data
@@ -162,6 +164,70 @@ internal static class CustomPagesEndpoints
         return TypedResults.Ok(data);
     }
 
+    /// <summary>
+    /// Special handler for GenAI pages that process markdown content.
+    /// Replaces {{mermaid:id}} placeholders with actual diagram code and renders markdown to HTML.
+    /// </summary>
+    private static async Task<Results<Ok<T>, NotFound>> GetGenAIPageData<T>(
+        string jsonFileName,
+        IWebHostEnvironment env,
+        IOptions<AppSettings> settings,
+        IMarkdownService markdownService,
+        CancellationToken cancellationToken) where T : GenAIPageData
+    {
+        var collectionsPath = ResolveCollectionsPath(settings.Value.Content.CollectionsPath, env.ContentRootPath);
+        var jsonPath = Path.Combine(collectionsPath, "_custom", jsonFileName);
+
+        if (!File.Exists(jsonPath))
+        {
+            return TypedResults.NotFound();
+        }
+
+        var jsonContent = await File.ReadAllTextAsync(jsonPath, cancellationToken);
+        var data = JsonSerializer.Deserialize<T>(jsonContent, _jsonOptions);
+
+        if (data == null)
+        {
+            return TypedResults.NotFound();
+        }
+
+        // Process each section: replace mermaid placeholders and render markdown
+        var processedSections = data.Sections.Select(section =>
+        {
+            var content = section.Content;
+
+            // Replace {{mermaid:id}} placeholders with actual diagram code wrapped in mermaid blocks
+            if (section.Mermaid != null)
+            {
+                foreach (var diagram in section.Mermaid)
+                {
+                    var placeholder = $"{{{{mermaid:{diagram.Id}}}}}";
+                    var mermaidBlock = $"```mermaid\n{diagram.Diagram}\n```";
+                    content = content.Replace(placeholder, mermaidBlock, StringComparison.Ordinal);
+                }
+            }
+
+            // Render markdown to HTML
+            var htmlContent = markdownService.RenderToHtml(content);
+
+            return section with { Content = htmlContent };
+        }).ToList();
+
+        // Serialize and deserialize to create a new instance with updated sections
+        // This approach works because T is a record type implementing IGenAIPageData
+        var json = JsonSerializer.Serialize(new
+        {
+            data.Title,
+            data.Description,
+            Sections = processedSections
+        }, _jsonOptions);
+
+        var processedData = JsonSerializer.Deserialize<T>(json, _jsonOptions)
+            ?? throw new InvalidOperationException($"Failed to deserialize processed data for type {typeof(T).Name}");
+
+        return TypedResults.Ok(processedData);
+    }
+
     private static Task<Results<Ok<DXSpacePageData>, NotFound>> GetDXSpaceData(
         IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
         => GetPageData<DXSpacePageData>("dx-space.json", env, settings, cancellationToken);
@@ -182,17 +248,26 @@ internal static class CustomPagesEndpoints
         IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
         => GetPageData<FeaturesPageData>("features.json", env, settings, cancellationToken);
 
-    private static Task<Results<Ok<GenAIBasicsPageData>, NotFound>> GetGenAIBasicsData(
-        IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
-        => GetPageData<GenAIBasicsPageData>("genai-basics.json", env, settings, cancellationToken);
+    private static Task<Results<Ok<GenAIPageData>, NotFound>> GetGenAIBasicsData(
+        IWebHostEnvironment env,
+        IOptions<AppSettings> settings,
+        IMarkdownService markdownService,
+        CancellationToken cancellationToken)
+        => GetGenAIPageData<GenAIPageData>("genai-basics.json", env, settings, markdownService, cancellationToken);
 
-    private static Task<Results<Ok<GenAIAdvancedPageData>, NotFound>> GetGenAIAdvancedData(
-        IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
-        => GetPageData<GenAIAdvancedPageData>("genai-advanced.json", env, settings, cancellationToken);
+    private static Task<Results<Ok<GenAIPageData>, NotFound>> GetGenAIAdvancedData(
+        IWebHostEnvironment env,
+        IOptions<AppSettings> settings,
+        IMarkdownService markdownService,
+        CancellationToken cancellationToken)
+        => GetGenAIPageData<GenAIPageData>("genai-advanced.json", env, settings, markdownService, cancellationToken);
 
-    private static Task<Results<Ok<GenAIAppliedPageData>, NotFound>> GetGenAIAppliedData(
-        IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
-        => GetPageData<GenAIAppliedPageData>("genai-applied.json", env, settings, cancellationToken);
+    private static Task<Results<Ok<GenAIPageData>, NotFound>> GetGenAIAppliedData(
+        IWebHostEnvironment env,
+        IOptions<AppSettings> settings,
+        IMarkdownService markdownService,
+        CancellationToken cancellationToken)
+        => GetGenAIPageData<GenAIPageData>("genai-applied.json", env, settings, markdownService, cancellationToken);
 
     private static Task<Results<Ok<SDLCPageData>, NotFound>> GetSDLCData(
         IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)

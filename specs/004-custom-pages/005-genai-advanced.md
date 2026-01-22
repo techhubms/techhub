@@ -3,12 +3,12 @@
 **Page**: GenAI Advanced  
 **URL**: `/ai/genai-advanced`  
 **Priority**: P2  
-**Status**: Razor ✅ | JSON ❌ (Incomplete) | E2E Tests ❌  
-**Estimated Effort**: 10-12 hours
+**Status**: Razor ❌ (Needs Update) | JSON ✅ | E2E Tests ❌  
+**Estimated Effort**: 8-10 hours (remaining)
 
 ## Overview
 
-GenAI Advanced covers sophisticated AI concepts including embeddings, RAG, function calling, MCP, and multi-agent systems. This is the most technically complex GenAI page with the highest number of resource links.
+GenAI Advanced JSON data is complete with all mermaid diagrams and resource links converted to simplified JSON structure with ID-based placeholders. This page has the most mermaid diagrams (6) and extensive resource links. Razor component needs update to use IMarkdownService for rendering.
 
 **Live Site Reference**: <https://tech.hub.ms/ai/genai-advanced>
 
@@ -16,15 +16,26 @@ GenAI Advanced covers sophisticated AI concepts including embeddings, RAG, funct
 
 ✅ **Complete**:
 
-- Razor component exists: `src/TechHub.Web/Components/Pages/GenAIAdvanced.razor`
+- **JSON structure**: `collections/_custom/genai-advanced.json` - **COMPLETE**
+  - 13 sections (TOC excluded - generated dynamically)
+  - 6 mermaid diagrams with ID-based placeholders
+  - No FAQ blocks (none in source)
+  - 8 More Info sections with resource links
+  - All HTML converted to markdown
+  - No `id` fields (generated dynamically from titles)
+  - Document title extracted from frontmatter
 - SidebarToc component integrated
-- Basic JSON structure: `collections/_custom/genai-advanced.json`
+- Conversion script: `.tmp/convert-genai-final.ps1` (same as genai-basics)
 
-❌ **Critical Missing Content** (from comparison report):
+❌ **Needs Implementation**:
 
-- **8+ mermaid diagrams** (highest count of all pages)
-- **~35 "More information" resource links** (most extensive)
-- Potentially missing subsections and detailed content
+- **Razor component update**: `src/TechHub.Web/Components/Pages/GenAIAdvanced.razor`
+  - Inject IMarkdownService
+  - Load JSON from genai-advanced.json
+  - Replace `{{mermaid:id}}` placeholders with actual diagrams
+  - Render markdown to HTML using MarkdownService.RenderToHtml()
+  - Generate TOC dynamically from section titles
+  - Generate section IDs from titles
 
 ❌ **Missing Tests**:
 
@@ -32,26 +43,40 @@ GenAI Advanced covers sophisticated AI concepts including embeddings, RAG, funct
 
 ## Acceptance Criteria
 
-### JSON Content Completeness
+### JSON Content Completeness ✅ COMPLETE
 
 **Source**: `https://raw.githubusercontent.com/techhubms/techhub/main/sections/ai/genai-advanced.md`
 
-1. **All 13 TOC sections** must be present in JSON with complete content:
-   - Vectors and embeddings: How AI understands meaning
-   - From embeddings to responses: The inference process
-   - Neural networks and transformers
-   - Attention mechanism
-   - Context windows and model parameters
-   - Fine-tuning a model
-   - Function calling
-   - Model Context Protocol (MCP)
-   - Retrieval Augmented Generation (RAG)
-   - Agents and agentic AI
-   - Multi-agent solutions
-   - Observability: Monitoring and evaluating AI applications
-   - Scaling AI implementations
+**Implementation Details**: Same simplified structure as genai-basics with ID-based mermaid placeholders and markdown-only content.
 
-2. **Mermaid Diagrams** (8+ total):
+✅ **All 13 sections present** (TOC excluded - generated dynamically):
+
+- Vectors and embeddings: How AI understands meaning ✅
+- From embeddings to responses: The inference process ✅
+- Neural networks and transformers ✅
+- Attention mechanism ✅
+- Context windows and model parameters ✅
+- Fine-tuning a model ✅
+- Function calling ✅
+- Model Context Protocol (MCP) ✅
+- Retrieval Augmented Generation (RAG) ✅
+- Agents and agentic AI ✅
+- Multi-agent solutions ✅
+- Observability: Monitoring and evaluating AI applications ✅
+- Scaling AI implementations ✅
+
+✅ **6 Mermaid Diagrams** (validated):
+
+- All diagrams present with ID-based placeholders ✅
+
+✅ **No FAQ Blocks** (none in source) ✅
+
+✅ **8 More Info sections** with resource links (validated)
+
+- Observability: Monitoring and evaluating AI applications
+- Scaling AI implementations
+
+1. **Mermaid Diagrams** (8+ total):
    - Vectors and embeddings: 1 diagram (word-to-vector-to-space mapping)
    - Function calling: 1 diagram (sequence diagram for API calls)
    - MCP: 1 diagram (MCP architecture: Host/Client/Server)
@@ -60,7 +85,7 @@ GenAI Advanced covers sophisticated AI concepts including embeddings, RAG, funct
    - Observability: 1 diagram (3-stage evaluation flowchart)
    - Additional technical diagrams in various sections
 
-3. **"More information" Resource Links** (~35 total):
+2. **"More information" Resource Links** (~35 total):
    - Context windows: ~4 links
    - Fine-tuning: ~3 links
    - Function calling: ~6 links
@@ -70,7 +95,7 @@ GenAI Advanced covers sophisticated AI concepts including embeddings, RAG, funct
    - Multi-agent solutions: ~8 links
    - Observability: ~4 links
 
-4. **Tables**:
+3. **Tables**:
    - Orchestration patterns table (5 patterns: Concurrent, Sequential, Group Chat, Handoff, Magentic)
    - Evaluator types table
 

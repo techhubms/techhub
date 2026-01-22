@@ -12,6 +12,13 @@
     <AnalysisMode>All</AnalysisMode>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     
+    <!-- Globally suppress i18n/localization warnings as this is not a localized application -->
+    <NoWarn>$(NoWarn);CA1303</NoWarn>
+    <!-- Suppress CA1515 - Web application classes don't need to be internal just because they're not referenced externally -->
+    <NoWarn>$(NoWarn);CA1515</NoWarn>
+    <!-- Suppress CA1056 and CA2234 - Using strings for URLs is consistent with our HttpClient usage patterns -->
+    <NoWarn>$(NoWarn);CA1056;CA2234</NoWarn>
+    
     <!-- Generate XML documentation files for IntelliSense and enable IDE0005 (unused usings) during build -->
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     

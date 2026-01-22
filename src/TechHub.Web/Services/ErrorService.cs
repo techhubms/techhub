@@ -6,7 +6,7 @@ namespace TechHub.Web.Services;
 /// Service for handling errors and exceptions in the application.
 /// Provides methods to navigate to error pages with exception details.
 /// </summary>
-internal class ErrorService
+public class ErrorService
 {
     private Exception? _lastException;
 
@@ -37,6 +37,7 @@ internal class ErrorService
     /// This is used by the Error page to display exception details.
     /// </summary>
     /// <returns>The last exception, or null if no exception was stored</returns>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1024:Use properties where appropriate", Justification = "Method has side effects (clears exception state) so property would be inappropriate")]
     public Exception? GetLastException()
     {
         var exception = _lastException;

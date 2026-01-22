@@ -613,13 +613,13 @@ run_in_terminal(
 # Then monitor: get_terminal_output(id: "<terminal-id>")
 # After tests pass, servers stay running for development
 
-# ✅ CORRECT - Fast test iteration (assumes servers already running)
+# ✅ CORRECT - Scoped testing (servers stay running)
 run_in_terminal(
-  command: "Run -TestRerun -TestProject E2E.Tests",
-  isBackground: true  # CRITICAL: Quick rebuild and test
+  command: "Run -TestProject E2E.Tests",
+  isBackground: true  # CRITICAL: Only runs E2E tests
 )
-# Servers must already be running from previous Run command
-# Only rebuilds E2E test project and runs those tests
+# Automatically detects if rebuild needed
+# Keeps servers running after tests complete
 
 # ✅ CORRECT - Start servers for debugging (no tests)
 run_in_terminal(
@@ -676,20 +676,13 @@ pwsh -Command 'Run'
 
 - Use when: Running tests for validation or development
 - What it does: Build, runs ALL tests (PowerShell, unit, integration, component, E2E), then KEEPS servers running
-- When: Default workflow - verifies tests pass, servers stay ready for `-TestRerun`
+- When: Default workflow - auto-detects changes and intelligently restarts servers only when needed
 
 **Run -StopServers (CI/CD) - 🤖 CI/CD ONLY**:
 
 - Use when: Continuous integration pipelines where servers should exit after tests
 - What it does: Build, runs ALL tests, then STOPS servers and exits
 - When: CI/CD pipelines, automated test runs, NOT for local development
-
-**Run -TestRerun (fast test iteration) - ⚡ FASTEST**:
-
-- Use when: Fixing test failures, rapid test iteration
-- What it does: Only rebuilds test projects and runs tests (assumes servers already running from `Run` or `Run -WithoutTests`)
-- When: Servers already running, you just fixed a test and want to rerun quickly
-- Speed: ~5 seconds vs ~60 seconds for full rebuild
 
 **Run (development mode)**:
 
@@ -753,12 +746,12 @@ All `Run` commands execute these test types (unless `-WithoutTests` is specified
 - `Run -TestProject E2E -TestName Navigation` - Run E2E navigation tests
 - `Run -TestProject powershell -TestName FrontMatter` - Run PowerShell tests matching 'FrontMatter'
 
-**Fast test iteration after fixing failures?** → Use `-TestRerun`:
+**Fast test iteration after fixing failures?** → `Run` auto-detects:
 
-- `Run -TestRerun` - Rebuild all test projects, run all tests (servers must be running)
-- `Run -TestRerun -TestProject E2E.Tests` - Only rebuild E2E tests, run them (~5 sec)
-- `Run -TestRerun -TestProject powershell` - Only rebuild PowerShell tests (~2 sec)
-- `Run -TestRerun -TestName SectionCard` - Rebuild all tests, run only matching tests
+- `Run` - Intelligently rebuilds only changed projects, restarts servers only if needed
+- `Run -TestProject E2E.Tests` - Only runs E2E tests, smart restart detection
+- `Run -TestProject powershell` - Only runs PowerShell tests (fast - no .NET build)
+- `Run -TestName SectionCard` - Runs tests matching 'SectionCard', smart restart detection
 
 #### Testing Best Practices
 

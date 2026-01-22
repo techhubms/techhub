@@ -34,18 +34,12 @@ function Run {
         Stop servers after all tests complete. Use this for CI/CD pipelines where servers
         should exit after test validation. For development, omit this to keep servers running.
 
-    .PARAMETER TestRerun
-        Fast test iteration mode: Skip clean and src build, only build and run test projects.
-        Assumes servers are already running (started with 'Run -WithoutTests' or 'Run').
-        Combine with -TestProject for maximum speed (only rebuilds that specific test project).
-
     .PARAMETER Rebuild
         Do a clean rebuild only, then exit (don't run tests or start servers).
 
     .PARAMETER TestProject
         Scope tests to a specific project (e.g., "TechHub.Web.Tests", "TechHub.Api.Tests", "E2E.Tests", "powershell").
         Can be combined with -TestName to further filter tests.
-        With -TestRerun, only rebuilds this test project for maximum speed.
 
     .PARAMETER TestName
         Scope tests by name pattern (e.g., "SectionCard", "Repository").
@@ -63,10 +57,6 @@ function Run {
     .EXAMPLE
         Run -WithoutTests
         Build and start servers without running tests (for debugging or quick start).
-
-    .EXAMPLE
-        Run -TestRerun -TestProject E2E.Tests
-        Fast test iteration: Only rebuild E2E tests and run them (assumes servers already running).
 
     .EXAMPLE
         Run -Rebuild
@@ -101,9 +91,6 @@ function Run {
     
         [Parameter(Mandatory = $false)]
         [switch]$Rebuild,
-    
-        [Parameter(Mandatory = $false)]
-        [switch]$TestRerun,
 
         [Parameter(Mandatory = $false)]
         [string]$TestProject,
@@ -129,7 +116,6 @@ function Run {
         Write-Host "  -Clean         Clean build artifacts before building (use when dependencies change)" -ForegroundColor White
         Write-Host "  -WithoutTests  Skip all tests, start servers directly (for debugging)" -ForegroundColor White
         Write-Host "  -StopServers   Stop servers after tests complete (for CI/CD pipelines)" -ForegroundColor White
-        Write-Host "  -TestRerun     Fast test iteration: Only rebuild and run test projects (assumes servers running)" -ForegroundColor White
         Write-Host "  -Rebuild       Clean rebuild only, then exit" -ForegroundColor White
         Write-Host "  -TestProject   Scope tests to specific project (e.g., TechHub.Web.Tests, E2E.Tests, powershell)" -ForegroundColor White
         Write-Host "  -TestName      Scope tests by name pattern (e.g., SectionCard)`n" -ForegroundColor White
@@ -139,7 +125,6 @@ function Run {
         Write-Host "  Run -Clean                           Clean build + all tests + servers" -ForegroundColor Gray
         Write-Host "  Run -StopServers                     Build + all tests, stop servers (CI/CD)" -ForegroundColor Gray
         Write-Host "  Run -WithoutTests                    Build + servers (no tests, for debugging)" -ForegroundColor Gray
-        Write-Host "  Run -TestRerun -TestProject E2E.Tests    Fast: Only rebuild E2E tests and run (~5 sec)" -ForegroundColor Gray
         Write-Host "  Run -Rebuild                         Clean rebuild only" -ForegroundColor Gray
         Write-Host "  Run -TestProject powershell          Run only PowerShell tests, keep servers running" -ForegroundColor Gray
         Write-Host "  Run -TestProject Web.Tests           Run only Web tests, keep servers running" -ForegroundColor Gray
@@ -148,7 +133,7 @@ function Run {
         
         Write-Host "COMMON WORKFLOWS:" -ForegroundColor Yellow
         Write-Host "  CI/CD (test + stop):       Run -StopServers" -ForegroundColor Gray
-        Write-Host "  TDD (test-driven dev):     Run, then Run -TestRerun when fixing tests" -ForegroundColor Gray
+        Write-Host "  TDD (test-driven dev):     Run (auto-detects changes)" -ForegroundColor Gray
         Write-Host "  Development mode:          Run" -ForegroundColor Gray
         Write-Host "  Debug/explore:             Run -WithoutTests" -ForegroundColor Gray
         Write-Host "  Fix dependencies:          Run -Clean`n" -ForegroundColor Gray
@@ -279,10 +264,24 @@ function Run {
     }
 
     # Build solution
+    # Returns: @{ Success = $true/$false; SrcRebuilt = $true/$false }
     function Invoke-Build {
         Write-Step "Building solution ($configuration)"
         
-        $success = Invoke-ExternalCommand "dotnet" @("build", $solutionPath, "--configuration", $configuration, "--verbosity", $verbosityLevel)
+        # Capture DLL timestamps BEFORE build to detect actual recompilation
+        $srcProjects = @('Api', 'Web', 'Core', 'Infrastructure', 'ServiceDefaults')
+        $timestampsBefore = @{}
+        foreach ($project in $srcProjects) {
+            $dllPath = Join-Path $workspaceRoot "src/TechHub.$project/bin/$configuration/net10.0/TechHub.$project.dll"
+            if (Test-Path $dllPath) {
+                $timestampsBefore[$project] = (Get-Item $dllPath).LastWriteTime
+            }
+        }
+        
+        # Run build and stream output in real-time (no Out-String buffering)
+        $buildOutput = @()
+        dotnet build $solutionPath --configuration $configuration --verbosity $verbosityLevel 2>&1 | Tee-Object -Variable buildOutput | Write-Host
+        $success = $LASTEXITCODE -eq 0
         
         if (-not $success) {
             Write-Host ""
@@ -294,11 +293,31 @@ function Run {
             Write-Host ""
             Write-Host "  Build failed - fix the compilation errors above" -ForegroundColor Yellow
             Write-Host ""
-            return $false
+            Write-Info "  Cleaning up processes in case files are locked..."
+            Stop-Servers -Silent
+            return @{ Success = $false; SrcRebuilt = $false }
         }
         
+        # Check which src projects were ACTUALLY rebuilt by comparing DLL timestamps
+        $rebuiltProjects = @()
+        foreach ($project in $srcProjects) {
+            $dllPath = Join-Path $workspaceRoot "src/TechHub.$project/bin/$configuration/net10.0/TechHub.$project.dll"
+            if (Test-Path $dllPath) {
+                $timestampAfter = (Get-Item $dllPath).LastWriteTime
+                $timestampBefore = $timestampsBefore[$project]
+                
+                # DLL timestamp changed = actual recompilation occurred
+                if (-not $timestampBefore -or $timestampAfter -gt $timestampBefore) {
+                    $rebuiltProjects += $project
+                }
+            }
+        }
+        
+        # Determine if src projects were rebuilt (for restart logic)
+        $srcRebuilt = $rebuiltProjects.Count -gt 0
+        
         Write-Success "Build completed"
-        return $true
+        return @{ Success = $true; SrcRebuilt = $srcRebuilt }
     }
 
     # Run PowerShell/Pester tests
@@ -424,13 +443,8 @@ function Run {
         return $true
     }
     
-    # Start Aspire AppHost (orchestrates API + Web servers)
-    function Start-AppHost {
-        param(
-            [string]$Environment = "Development"
-        )
-        
-        # Check if servers are already running
+    # Test if servers are healthy
+    function Test-ServersHealthy {
         $apiHealthy = $false
         $webHealthy = $false
         
@@ -444,9 +458,24 @@ function Run {
             $webHealthy = $true
         }
         
-        if ($apiHealthy -and $webHealthy) {
+        return ($apiHealthy -and $webHealthy)
+    }
+
+    # Start Aspire AppHost (orchestrates API + Web servers)
+    function Start-AppHost {
+        param(
+            [string]$Environment = "Development"
+        )
+        
+        # Check if servers are already running and healthy
+        if (Test-ServersHealthy) {
             Write-Success "Servers already running and healthy"
             return $true
+        }
+        else {
+            # Servers exist but unhealthy, or processes blocking ports - clean up before restarting
+            Write-Info "  Servers unhealthy or ports in use - cleaning up before restart..."
+            Stop-Servers -Silent
         }
         
         Write-Step "Starting Aspire AppHost"
@@ -481,24 +510,15 @@ function Run {
         Write-Info "Waiting for services to start (Aspire orchestration can take 30-60 seconds)..."
         $maxAttempts = 60
         $attempt = 0
-        $apiReady = $false
-        $webReady = $false
-        $lastApiError = ""
-        $lastWebError = ""
+        $serversReady = $false
         
-        while ($attempt -lt $maxAttempts -and (-not $apiReady -or -not $webReady)) {
+        while ($attempt -lt $maxAttempts -and -not $serversReady) {
             Start-Sleep -Seconds 1
             $attempt++
                 
-            # Show progress every 10 seconds with diagnostic info
+            # Show progress every 10 seconds
             if ($attempt % 10 -eq 0) {
                 Write-Info "  Still waiting... ($attempt seconds elapsed)"
-                if (-not $apiReady -and $lastApiError) {
-                    Write-Info "    API: $lastApiError"
-                }
-                if (-not $webReady -and $lastWebError) {
-                    Write-Info "    Web: $lastWebError"
-                }
             }
                 
             # Check if AppHost is still alive
@@ -521,46 +541,16 @@ function Run {
                 return $false
             }
                 
-            if (-not $apiReady) {
-                # Use HTTPS endpoint (Aspire configures HTTPS by default)
-                # -k ignores self-signed certificate validation for local dev
-                $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:5001/health" 2>&1
-                $exitCode = $LASTEXITCODE
-                    
-                if ($exitCode -eq 0 -and $curlOutput -match "200$") {
-                    $apiReady = $true
-                    Write-Info "  API ready ✓"
-                }
-                elseif ($exitCode -ne 0) {
-                    $lastApiError = "Connection failed (exit code: $exitCode)"
-                }
-                else {
-                    $httpCode = ($curlOutput -split "`n")[-1]
-                    $lastApiError = "HTTP $httpCode"
-                }
-            }
-                
-            if (-not $webReady) {
-                # Use HTTPS endpoint (Aspire configures HTTPS by default)
-                # -k ignores self-signed certificate validation for local dev
-                $curlOutput = curl -s -k -m 2 -w "\n%{http_code}" "https://localhost:5003/health" 2>&1
-                $exitCode = $LASTEXITCODE
-                    
-                if ($exitCode -eq 0 -and $curlOutput -match "200$") {
-                    $webReady = $true
-                    Write-Info "  Web ready ✓"
-                }
-                elseif ($exitCode -ne 0) {
-                    $lastWebError = "Connection failed (exit code: $exitCode)"
-                }
-                else {
-                    $httpCode = ($curlOutput -split "`n")[-1]
-                    $lastWebError = "HTTP $httpCode"
-                }
+            # Check if both servers are healthy
+            $serversReady = Test-ServersHealthy
+            
+            if ($serversReady) {
+                Write-Info "  API ready ✓"
+                Write-Info "  Web ready ✓"
             }
         }
             
-        if (-not $apiReady -or -not $webReady) {
+        if (-not $serversReady) {
             Write-Host ""
             Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
             Write-Host "║                                                              ║" -ForegroundColor Red
@@ -569,14 +559,9 @@ function Run {
             Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
             Write-Host ""
             Write-Host "  Services failed to start within $maxAttempts seconds" -ForegroundColor Yellow
-            if (-not $apiReady) {
-                Write-Host "  API health check failed: $lastApiError" -ForegroundColor Yellow
-                Write-Host "    Expected: https://localhost:5001/health" -ForegroundColor Gray
-            }
-            if (-not $webReady) {
-                Write-Host "  Web health check failed: $lastWebError" -ForegroundColor Yellow
-                Write-Host "    Expected: https://localhost:5003/health" -ForegroundColor Gray
-            }
+            Write-Host "  Health check failed for one or both services" -ForegroundColor Yellow
+            Write-Host "    Expected: https://localhost:5001/health" -ForegroundColor Gray
+            Write-Host "    Expected: https://localhost:5003/health" -ForegroundColor Gray
             Write-Host ""
             Write-Host "  Troubleshooting:" -ForegroundColor Cyan
             Write-Host "    1. Check Aspire Dashboard logs (URL shown during startup)" -ForegroundColor Gray
@@ -648,75 +633,66 @@ function Run {
         return $true
     }
 
-    # Kill existing processes on ports
-    function Stop-AppHost {
+    # Stop all servers and clean up ports
+    function Stop-Servers {
         <#
         .SYNOPSIS
-            Gracefully stops the AppHost process and disposes resources.
+            Stops the Aspire AppHost process and cleans up all port usage.
         
         .DESCRIPTION
-            Sends SIGTERM for graceful shutdown, waits up to 5 seconds,
-            then forcefully kills if still running. Always disposes the process object.
+            Unified server shutdown function that:
+            1. Stops AppHost process (SIGTERM, then SIGKILL if needed)
+            2. Cleans up any processes still using ports 5001, 5003
+            
+            Always safe to call - handles null checks and already-stopped processes gracefully.
         #>
         param(
             [switch]$Silent
         )
         
-        if ($null -eq $script:appHostProcess) {
-            return
-        }
-        
-        if ($script:appHostProcess.HasExited) {
+        # PART 1: Stop AppHost process
+        if ($null -ne $script:appHostProcess) {
+            if (-not $script:appHostProcess.HasExited) {
+                try {
+                    if (-not $Silent) {
+                        Write-Info "  Sending graceful shutdown signal to AppHost..."
+                    }
+                    
+                    # Send SIGTERM for graceful shutdown
+                    kill -TERM $script:appHostProcess.Id 2>$null
+                    
+                    # Wait up to 5 seconds for graceful shutdown
+                    $waited = 0
+                    while (-not $script:appHostProcess.HasExited -and $waited -lt 5000) {
+                        Start-Sleep -Milliseconds 100
+                        $waited += 100
+                    }
+                    
+                    # If still running, force kill
+                    if (-not $script:appHostProcess.HasExited) {
+                        if (-not $Silent) {
+                            Write-Info "  AppHost didn't stop gracefully, forcing termination..."
+                        }
+                        $script:appHostProcess.Kill($true)
+                    }
+                    elseif (-not $Silent) {
+                        Write-Info "  AppHost stopped gracefully"
+                    }
+                }
+                catch {
+                    # Process might have already exited - that's OK
+                    if (-not $Silent) {
+                        Write-Info "  AppHost process already exited"
+                    }
+                }
+            }
+            
+            # Always dispose and clear reference
             $script:appHostProcess.Dispose()
             $script:appHostProcess = $null
-            return
         }
         
-        try {
-            if (-not $Silent) {
-                Write-Info "  Sending graceful shutdown signal to AppHost..."
-            }
-            
-            # Send SIGTERM for graceful shutdown
-            kill -TERM $script:appHostProcess.Id 2>$null
-            
-            # Wait up to 5 seconds for graceful shutdown
-            $waited = 0
-            while (-not $script:appHostProcess.HasExited -and $waited -lt 5000) {
-                Start-Sleep -Milliseconds 100
-                $waited += 100
-            }
-            
-            # If still running, force kill
-            if (-not $script:appHostProcess.HasExited) {
-                if (-not $Silent) {
-                    Write-Info "  AppHost didn't stop gracefully, forcing termination..."
-                }
-                $script:appHostProcess.Kill($true)
-            }
-            elseif (-not $Silent) {
-                Write-Info "  AppHost stopped gracefully"
-            }
-        }
-        catch {
-            # Process might have already exited - that's OK
-            if (-not $Silent) {
-                Write-Info "  AppHost process already exited"
-            }
-        }
-        finally {
-            if ($null -ne $script:appHostProcess) {
-                $script:appHostProcess.Dispose()
-                $script:appHostProcess = $null
-            }
-        }
-    }
-
-    function Stop-ExistingProcesses {
-        param(
-            [switch]$Silent
-        )
-        
+        # PART 2: Clean up any processes still using ports
         $ports = @(5001, 5003)
         $stoppedAny = $false
         $failedKills = @()
@@ -727,7 +703,7 @@ function Run {
                 $processIds = lsof -ti $portArg 2>$null
                 if ($processIds) {
                     if (-not $stoppedAny -and -not $Silent) {
-                        Write-Info "Cleaning up processes on ports..."
+                        Write-Info "  Cleaning up processes on ports..."
                         $stoppedAny = $true
                     }
                     
@@ -738,18 +714,18 @@ function Run {
                             $processInfo = Get-Process -Id $processId -ErrorAction SilentlyContinue
                             if ($processInfo) {
                                 if (-not $Silent) {
-                                    Write-Info ("  Port {0} - Killing PID {1}: {2} (Path: {3})" -f $port, $processId, $processInfo.ProcessName, $processInfo.Path)
+                                    Write-Info ("    Port {0} - Killing PID {1}: {2} (Path: {3})" -f $port, $processId, $processInfo.ProcessName, $processInfo.Path)
                                 }
                             }
                             else {
                                 if (-not $Silent) {
-                                    Write-Info ("  Port {0} - PID {1}: (process already exited)" -f $port, $processId)
+                                    Write-Info ("    Port {0} - PID {1}: (process already exited)" -f $port, $processId)
                                 }
                             }
                         }
                         catch {
                             if (-not $Silent) {
-                                Write-Info ("  Port {0} - PID {1}: (unable to get process details)" -f $port, $processId)
+                                Write-Info ("    Port {0} - PID {1}: (unable to get process details)" -f $port, $processId)
                             }
                         }
                         
@@ -931,89 +907,9 @@ function Run {
             return
         }
         
-        # For TestRerun, skip cleanup (servers should be running)
-        if (-not $TestRerun) {
-            # ALWAYS clean up orphaned processes at start (ports + browsers + test runners)
-            Invoke-FullCleanup
-        }
-        
-        # Handle TestRerun fast-path: Skip clean and main build, only build/run tests
-        if ($TestRerun) {
-            Write-Step "Fast test rerun mode - skipping clean and src build"
-            
-            # Determine which tests to run
-            $runPowerShell = $false
-            $runUnitIntegration = $false
-            $runE2E = $false
-            
-            if (-not $TestProject) {
-                # No TestProject specified - rebuild and run ALL tests
-                Write-Info "  Rebuilding all test projects..."
-                $runPowerShell = $true
-                $runUnitIntegration = $true
-                $runE2E = $true
-            }
-            elseif ($TestProject -match "^(powershell|pester|scripts)$") {
-                Write-Info "  Rebuilding PowerShell tests..."
-                $runPowerShell = $true
-            }
-            elseif ($TestProject -match "E2E") {
-                Write-Info "  Rebuilding E2E test project..."
-                # Build only E2E test project
-                $e2eTestProject = Join-Path $workspaceRoot "tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj"
-                $buildResult = Invoke-ExternalCommand -Command "dotnet" -Arguments @("build", $e2eTestProject, "--verbosity", $verbosityLevel)
-                if ($buildResult -ne $true) {
-                    return
-                }
-                $runE2E = $true
-            }
-            else {
-                Write-Info "  Rebuilding test project: $TestProject..."
-                # Build specific test project
-                $testProjectPath = Join-Path $workspaceRoot "tests/$TestProject/$TestProject.csproj"
-                if (-not (Test-Path $testProjectPath)) {
-                    Write-Error "Test project not found: $testProjectPath"
-                    return
-                }
-                $buildResult = Invoke-ExternalCommand -Command "dotnet" -Arguments @("build", $testProjectPath, "--verbosity", $verbosityLevel)
-                if ($buildResult -ne $true) {
-                    return
-                }
-                $runUnitIntegration = $true
-            }
-            
-            Write-Host ""
-            
-            # Run tests (assume servers already running for E2E)
-            if ($runPowerShell) {
-                $pwshSuccess = Invoke-PowerShellTests -TestName $TestName
-                if ($pwshSuccess -ne $true) {
-                    return
-                }
-                Write-Host ""
-            }
-            
-            if ($runUnitIntegration) {
-                $unitSuccess = Invoke-UnitAndIntegrationTests -TestProject $TestProject -TestName $TestName
-                if ($unitSuccess -ne $true) {
-                    return
-                }
-            }
-            
-            if ($runE2E) {
-                Write-Info "Assuming servers are already running..."
-                $e2eSuccess = Invoke-E2ETests -TestName $TestName
-                if ($e2eSuccess -ne $true) {
-                    Write-Error "E2E tests failed. Servers are still running."
-                    return
-                }
-            }
-            
-            Write-Host ""
-            Write-Success "Tests completed! Servers are still running."
-            Write-Info "To stop servers, press Ctrl+C in the terminal running 'Run -WithoutTests'"
-            return
-        }
+        # ALWAYS clean up orphaned processes at start (browsers + test runners)
+        # But delay server/port cleanup until after build (see below)
+        Invoke-FullCleanup
         
         # Clean build artifacts only if -Clean is specified
         if ($Clean) {
@@ -1023,10 +919,21 @@ function Run {
             }
         }
         
-        # Always build
-        $buildSucceeded = Invoke-Build
-        if ($buildSucceeded -eq $false) {
+        # Always build (fast if nothing changed)
+        $buildResult = Invoke-Build
+        if ($buildResult.Success -eq $false) {
             return
+        }
+        
+        # Check if we need to restart servers:
+        # 1. Source projects were rebuilt (binaries changed)
+        # 2. Servers are unhealthy (not responding to health checks)
+        $serversHealthy = Test-ServersHealthy
+        $needsRestart = $buildResult.SrcRebuilt -or (-not $serversHealthy)
+        
+        if ($needsRestart) {
+            # Stop existing servers and clean up ports
+            Stop-Servers
         }
         
         # Rebuild mode: Clean rebuild only, then EXIT
@@ -1083,8 +990,7 @@ function Run {
                 $serversStarted = Start-AppHost
                 if ($serversStarted -ne $true) {
                     # Server startup failed - ALWAYS clean up (can't leave non-running servers)
-                    Stop-AppHost
-                    Stop-ExistingProcesses
+                    Stop-Servers
                     return
                 }
             }
@@ -1098,8 +1004,7 @@ function Run {
             if ($StopServers -and $runE2E) {
                 Write-Host ""
                 Write-Info "Stopping servers..."
-                Stop-AppHost
-                Stop-ExistingProcesses
+                Stop-Servers
                 Write-Success "Servers stopped"
             }
             
@@ -1127,8 +1032,7 @@ function Run {
             $serversStarted = Start-AppHost
             if ($serversStarted -ne $true) {
                 # Server startup failed - ALWAYS clean up (can't leave non-running servers)
-                Stop-AppHost
-                Stop-ExistingProcesses
+                Stop-Servers
                 return
             }
         }
@@ -1163,8 +1067,8 @@ function Run {
         throw
     }
     finally {
-        # Gracefully stop AppHost process if still running
-        Stop-AppHost -Silent
+        # Gracefully stop AppHost process and clean up ports
+        Stop-Servers -Silent
         
         # ALWAYS clean up at the end (ports, browsers, test runners)
         Invoke-FullCleanup -Silent

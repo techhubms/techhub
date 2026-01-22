@@ -6,7 +6,7 @@ namespace TechHub.Web.Services;
 /// In-memory cache of sections loaded at application startup.
 /// Provides synchronous access to section data for immediate rendering without flicker.
 /// </summary>
-internal class SectionCache
+public class SectionCache
 {
     private Dictionary<string, SectionDto> _sectionsByName = [];
 
