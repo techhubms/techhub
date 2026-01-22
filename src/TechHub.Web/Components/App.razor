@@ -37,6 +37,154 @@
 
     <!-- Navigation Helpers - Back to Top and Back to Previous -->
     <script src="js/nav-helpers.js" defer></script>
+
+    <!-- Dynamic Script Loading - Load libraries only when needed -->
+    <script type="module">
+        // Track what's already been loaded to avoid duplicates
+        const loaded = {
+            highlightJs: false,
+            mermaid: false,
+            customPages: false
+        };
+
+        async function loadScriptsForPage() {
+            // 1. Syntax Highlighting (Highlight.js)
+            if (!loaded.highlightJs && document.querySelector('pre code')) {
+                loaded.highlightJs = true;
+
+                // Inject CSS
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css';
+                link.integrity = 'sha512-rO+olRTkcf304DQBxSWxln8JXCzTHlKnIdnMUwYvQa9/Jd4cQaNkItIUj6Z4nvW1dqK0SKXLbn9h4KwZTNtAyw==';
+                link.crossOrigin = 'anonymous';
+                link.referrerPolicy = 'no-referrer';
+                document.head.appendChild(link);
+
+                // Load main library
+                await loadScript('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js',
+                    'sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==');
+
+                // Load language files
+                await Promise.all([
+                    loadScript('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/csharp.min.js'),
+                    loadScript('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js'),
+                    loadScript('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/typescript.min.js'),
+                    loadScript('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js'),
+                    loadScript('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js'),
+                    loadScript('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/yaml.min.js'),
+                    loadScript('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js'),
+                    loadScript('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/sql.min.js'),
+                    loadScript('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/powershell.min.js')
+                ]);
+
+                // Initialize
+                if (typeof hljs !== 'undefined') {
+                    hljs.highlightAll();
+                }
+            } else if (loaded.highlightJs && document.querySelector('pre code')) {
+                // Already loaded, just re-highlight
+                if (typeof hljs !== 'undefined') {
+                    hljs.highlightAll();
+                }
+            }
+
+            // 2. Mermaid Diagrams
+            if (!loaded.mermaid && document.querySelector('.mermaid')) {
+                loaded.mermaid = true;
+
+                await loadScript('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js');
+
+                // Initialize Mermaid
+                if (typeof mermaid !== 'undefined') {
+                    mermaid.initialize({
+                        startOnLoad: false,
+                        theme: 'dark',
+                        themeVariables: {
+                            primaryColor: '#2d2d4a',
+                            primaryTextColor: '#e0e0e0',
+                            primaryBorderColor: '#64b5f6',
+                            lineColor: '#64b5f6',
+                            secondaryColor: '#1a1a2e',
+                            tertiaryColor: '#16162a',
+                            background: '#1a1a2e',
+                            mainBkg: '#2d2d4a',
+                            secondBkg: '#1a1a2e',
+                            labelBackground: '#2d2d4a',
+                            labelColor: '#e0e0e0',
+                            nodeTextColor: '#e0e0e0',
+                            textColor: '#e0e0e0',
+                            titleColor: '#e0e0e0',
+                            edgeLabelBackground: '#2d2d4a',
+                            clusterBkg: '#16162a',
+                            clusterBorder: '#64b5f6',
+                            defaultLinkColor: '#64b5f6',
+                            activationBorderColor: '#64b5f6',
+                            activationBkgColor: '#2d2d4a',
+                            sequenceNumberColor: '#1a1a2e'
+                        },
+                        flowchart: { curve: 'basis', padding: 15 }
+                    });
+                }
+            }
+
+            // Render Mermaid diagrams if present
+            if (loaded.mermaid && document.querySelector('.mermaid')) {
+                await renderMermaid();
+            }
+
+            // 3. TOC Scroll Spy
+            if (document.querySelector('[data-toc-scroll-spy]')) {
+                const module = await import('./js/toc-scroll-spy.js');
+                module.initTocScrollSpy();
+            }
+
+            // 4. Custom Pages Interactivity (collapsible sections)
+            if (!loaded.customPages && document.querySelector('[data-collapsible]')) {
+                loaded.customPages = true;
+                await loadScript('/js/custom-pages.js');
+            }
+        }
+
+        // Helper: Load external script
+        function loadScript(src, integrity = null) {
+            return new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = src;
+                script.defer = true;
+                script.crossOrigin = 'anonymous';
+                script.referrerPolicy = 'no-referrer';
+                if (integrity) {
+                    script.integrity = integrity;
+                }
+                script.onload = resolve;
+                script.onerror = reject;
+                document.body.appendChild(script);
+            });
+        }
+
+        // Helper: Render Mermaid diagrams
+        async function renderMermaid() {
+            if (typeof mermaid === 'undefined') return;
+
+            const mermaidElements = document.querySelectorAll('.mermaid:not([data-processed="true"])');
+            if (mermaidElements.length === 0) return;
+
+            try {
+                await mermaid.run({ nodes: mermaidElements });
+            } catch (error) {
+                console.error('Mermaid rendering failed:', error);
+            }
+        }
+
+        // Initial load (DOMContentLoaded)
+        document.addEventListener('DOMContentLoaded', loadScriptsForPage);
+
+        // After Blazor enhanced navigation
+        if (typeof Blazor !== 'undefined') {
+            Blazor.addEventListener('enhancedload', loadScriptsForPage);
+        }
+    </script>
 </body>
 
 </html>

@@ -230,4 +230,38 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         // News collection should be active
         await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News");
     }
+
+    [Fact]
+    public async Task TOC_HighlightingWorksAfterNavigation_FromHomepageToHandbook()
+    {
+        // Arrange - Start on homepage (which doesn't have TOC)
+        await Page.GotoRelativeAsync("/");
+
+        // Act - Navigate to handbook page (which has TOC)
+        var handbookLink = Page.Locator("a[href*='/github-copilot/handbook']").First;
+        await handbookLink.ClickBlazorElementAsync();
+
+        // Wait for navigation to complete
+        await Page.WaitForBlazorUrlContainsAsync("/github-copilot/handbook");
+
+        // Wait for TOC to be visible
+        var tocElement = Page.Locator("[data-toc-scroll-spy]");
+        await tocElement.WaitForAsync(new() { State = WaitForSelectorState.Visible, Timeout = 5000 });
+
+        // Assert - TOC should be initialized and have links
+        var tocLinks = tocElement.Locator("a[href*='#']");
+        var tocLinkCount = await tocLinks.CountAsync();
+        tocLinkCount.Should().BeGreaterThan(0, "TOC should have links after navigation");
+
+        // Click on a TOC link (e.g., "About the Book")
+        var aboutBookLink = tocLinks.Filter(new() { HasText = "About the Book" }).First;
+        await aboutBookLink.ClickAsync();
+
+        // Wait a moment for scroll to complete
+        await Task.Delay(500);
+
+        // Assert - The clicked TOC link should become active (highlighted)
+        var activeClass = await aboutBookLink.GetAttributeAsync("class");
+        activeClass.Should().Contain("active", "TOC link should be highlighted after clicking");
+    }
 }

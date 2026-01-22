@@ -480,5 +480,39 @@ Test content body.
         result.Should().BeEmpty();
     }
 
+    [Fact]
+    public async Task GetTagCloud_AllSectionWithSpecificCollection_ReturnsTagsFromAllSections()
+    {
+        // Arrange - The "all" section is virtual and should show content from all sections
+        // When accessing /all/blogs, we want tags from blog posts across ALL sections (ai, github-copilot, etc.)
+        var request = new TagCloudRequest
+        {
+            Scope = TagCloudScope.Collection,
+            SectionName = "all", // Virtual "all" section
+            CollectionName = "blogs", // Specific collection
+            MaxTags = 20,
+            MinUses = 1,
+            LastDays = 90
+        };
+
+        // Act
+        var result = await _service.GetTagCloudAsync(request, CancellationToken.None);
+
+        // Assert
+        // Should return tags from blogs across all sections (not filtered by section)
+        result.Should().NotBeEmpty("Tags from blogs across all sections should be included");
+
+        // Verify we get tags from blog posts in different sections
+        var tags = result.Select(t => t.Tag.ToLowerInvariant()).ToList();
+
+        // item1 and item2 are blogs from "ai" section with tags: ai, machine-learning, copilot
+        // item4 is blog from "github-copilot" section with tags: copilot, productivity
+        // Expected tags: ai, machine-learning, copilot, productivity
+        tags.Should().Contain("ai", "because item1 and item2 are blogs with 'ai' tag");
+        tags.Should().Contain("machine-learning", "because item1 and item2 are blogs with 'machine-learning' tag");
+        tags.Should().Contain("copilot", "because items 1, 2, and 4 are blogs with 'copilot' tag");
+        tags.Should().Contain("productivity", "because item4 is a blog with 'productivity' tag");
+    }
+
     #endregion
 }

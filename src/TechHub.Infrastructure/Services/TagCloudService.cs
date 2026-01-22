@@ -169,12 +169,14 @@ public class TagCloudService(
         string collectionName,
         CancellationToken cancellationToken)
     {
-        // Handle "all" virtual collection - returns all content for the section across all collections
-        if (collectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        // Handle "all" section - returns all content from the collection across all sections
+        // The "all" section is virtual and aggregates content from all real sections
+        if (sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
-            return await _contentRepository.GetBySectionAsync(sectionName, cancellationToken);
+            return await _contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
         }
 
+        // Handle regular sections - filter collection items by section
         var allCollectionItems = await _contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
 
         return [.. allCollectionItems.Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))];

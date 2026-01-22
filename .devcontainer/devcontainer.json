@@ -21,8 +21,6 @@
         // .NET Development
         "ms-dotnettools.csharp",
         "ms-dotnettools.csdevkit",
-        "ms-dotnettools.vscode-dotnet-runtime",
-        "ms-dotnettools.dotnet-interactive-vscode",
         // Azure & Infrastructure
         "ms-azuretools.vscode-bicep",
         "ms-azuretools.vscode-azurecontainerapps",
@@ -31,7 +29,6 @@
         "github.copilot",
         "github.copilot-chat",
         "github.vscode-github-actions",
-        "github.vscode-pull-request-github",
         // Testing & Quality
         "ms-playwright.playwright",
         "DavidAnson.vscode-markdownlint",

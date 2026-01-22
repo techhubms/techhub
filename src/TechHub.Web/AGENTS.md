@@ -1486,11 +1486,9 @@ src/TechHub.Web/
     - `SidebarTagCloud.razor` - Interactive tag cloud for filtering
     - `SidebarToc.razor` - Table of contents with scroll-spy
     - `SidebarPageInfo.razor` - Custom page metadata display
-  - **Utility Components**:
-    - `ConditionalScripts.razor` - Conditionally loads JavaScript libraries (syntax highlighting, Mermaid diagrams, TOC scroll-spy) based on page needs
 - **Framework Components** (must stay in root):
   - `Routes.razor` - Blazor router (framework requirement)
-  - `App.razor` - Application entry point (framework requirement)
+  - `App.razor` - Application entry point with global script loading (framework requirement)
 
 **Why This Structure?**
 
@@ -1498,6 +1496,7 @@ This follows **Microsoft's official Blazor conventions** per ASP.NET Core docume
 
 1. **Components/** (root) - Shared components used across the application
    - Per Microsoft: "Shared components are often placed at the root of the Components folder"
+
    - Navigation, content display, sidebar, and utility components all live here
    - No functional difference from Components/Shared/ - both are valid per Microsoft docs
 
@@ -1700,96 +1699,79 @@ window.setupInfiniteScroll = (elementId, dotNetRef) => {
 
 **Problem**: Loading Highlight.js (~68KB + 8 language files), Mermaid diagrams, TOC scroll-spy, and custom page interactivity on every page significantly slows down initial page load for simple list/section pages that don't use them.
 
-**Solution**: `ConditionalScripts.razor` component provides selective script loading based on page requirements.
+**Solution**: Global script loader in `App.razor` with element detection - loads libraries dynamically only when their target elements exist on the page.
 
-#### ConditionalScripts Component
+#### Dynamic Script Loading
 
-**Location**: [Components/Shared/ConditionalScripts.razor](Components/Shared/ConditionalScripts.razor)
+**Location**: [Components/App.razor](Components/App.razor)
 
-**Purpose**: Conditionally loads JavaScript and CSS only when needed by the current page.
+**How It Works**:
 
-**Parameters**:
+1. **Element Detection**: On every page load and `enhancedload` event, checks for specific elements:
+   - `pre code` → Load Highlight.js (syntax highlighting)
+   - `.mermaid` → Load Mermaid (diagrams)
+   - `[data-toc-scroll-spy]` → Initialize TOC scroll spy
+   - `[data-collapsible]` → Load custom pages interactivity
 
-- `LoadSyntaxHighlighting` - Highlight.js for code blocks
-- `LoadMermaid` - Mermaid for diagrams
-- `LoadTocScrollSpy` - TOC active state tracking
-- `LoadCustomPagesInteractivity` - Collapsible sections (AISDLC, DXSpace)
+2. **Dynamic Loading**: When elements are found, dynamically injects:
+   - CSS `<link>` tags (for Highlight.js theme)
+   - External `<script>` tags (for libraries)
+   - ES6 module imports (for local scripts)
 
-**Usage Pattern**:
+3. **One-Time Loading**: Tracks what's already loaded to avoid duplicate script injection
 
-```razor
-@* ContentItem.razor - Loads syntax highlighting, Mermaid, and TOC scroll-spy *@
-<ConditionalScripts LoadSyntaxHighlighting="true" 
-                    LoadMermaid="true" 
-                    LoadTocScrollSpy="true" />
+**Performance Benefits**:
 
-@* AISDLC.razor - Loads custom page interactivity for collapsible sections *@
-<ConditionalScripts LoadCustomPagesInteractivity="true" />
+- **Simple Pages** (Home, Section, Collection): ~0 extra JS (just element checks, <1ms)
+- **Content Pages** (Handbook, Features, ContentItem): Libraries load only when needed
+- **No Manual Parameters**: Pages don't need to declare what they use - automatic detection
 
-@* Home.razor, Section.razor - NO ConditionalScripts component = no extra JS loaded *@
-```
+**Example Flow**:
 
-**Pages Using ConditionalScripts**:
-
-- **Content Pages**: `ContentItem.razor` - All three content-related scripts (syntax, Mermaid, TOC)
-- **GenAI Courses**: `GenAIBasics.razor`, `GenAIApplied.razor`, `GenAIAdvanced.razor` - All three
-- **GitHub Copilot**: `GitHubCopilotHandbook.razor`, `GitHubCopilotFeatures.razor`, `GitHubCopilotLevels.razor`, `GitHubCopilotVSCodeUpdates.razor` - All three
-- **Custom Pages with Interactivity**: `AISDLC.razor` - LoadCustomPagesInteractivity only
-- **DXSpace**: `DXSpace.razor` - All three (has code examples and diagrams)
-
-**Pages WITHOUT ConditionalScripts** (fast load):
-
-- `Home.razor` - No code/diagrams
-- `Section.razor` - Just content list
-- `SectionCollection.razor` - Just content list
-- `About.razor` - Static content
-
-**Performance Impact**:
-
-- **Before**: ~200KB+ JavaScript loaded on every page (Highlight.js core + 8 languages + Mermaid + TOC + custom-pages)
-- **After**: ~30KB on list/section pages (just Blazor framework + nav-helpers), additional scripts only on content pages
-- **Result**: 85% reduction in JavaScript for simple navigation pages
-
-**Implementation Details**:
-
-```razor
-@* ConditionalScripts.razor structure *@
-
-@if (LoadSyntaxHighlighting)
-{
-    <HeadContent>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
-    </HeadContent>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer></script>
-    @* Language-specific scripts... *@
+```javascript
+// In App.razor - runs on every page load/navigation
+async function loadScriptsForPage() {
+    // 1. Check for code blocks
+    if (document.querySelector('pre code')) {
+        // Inject Highlight.js CSS + JS (only once)
+        // Then call hljs.highlightAll()
+    }
+    
+    // 2. Check for Mermaid diagrams
+    if (document.querySelector('.mermaid')) {
+        // Load Mermaid library (only once)
+        // Then call mermaid.run()
+    }
+    
+    // 3. Check for TOC
+    if (document.querySelector('[data-toc-scroll-spy]')) {
+        // Import toc-scroll-spy.js module
+        // Then call initTocScrollSpy()
+    }
+    
+    // 4. Check for collapsible sections
+    if (document.querySelector('[data-collapsible]')) {
+        // Load custom-pages.js (only once)
+    }
 }
 
-@if (LoadMermaid)
-{
-    <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
         mermaid.initialize({ startOnLoad: true, theme: 'dark' });
     </script>
 }
 
 @if (LoadTocScrollSpy)
 {
-    <script src="/js/toc-scroll-spy.js" defer></script>
-}
-
-@if (LoadCustomPagesInteractivity)
-{
-    <script src="/js/custom-pages.js" defer></script>
 }
 ```
 
 **Key Benefits**:
 
-- ✅ **Faster initial page load** - Simple pages load 85% less JavaScript
-- ✅ **Better performance** - Only pay for what you use
-- ✅ **Maintainable** - Single component manages all conditional scripts
-- ✅ **Type-safe** - Boolean parameters prevent configuration errors
-- ✅ **Progressive enhancement** - Scripts load with `defer` attribute for non-blocking parsing
+- ✅ **Automatic Detection** - No manual parameters needed on pages
+- ✅ **Faster Initial Load** - Simple pages load zero extra JavaScript
+- ✅ **Smart Loading** - Only loads libraries when elements exist
+- ✅ **One-Time Injection** - Tracks loaded state to avoid duplicates
+- ✅ **Clean Page Code** - Pages don't need script declarations
+- ✅ **Progressive Enhancement** - Works on initial load and after navigation
 
 ### JavaScript Utilities
 
