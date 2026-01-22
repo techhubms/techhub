@@ -23938,5 +23938,11 @@
     "timestamp": "2026-01-21 23:05:14 +00:00",
     "reason": "Succesfully added: Categories assigned: 'AI' because the content is about GitHub Copilot CLI, an AI-powered coding assistant (AI rule 2, Microsoft AI products and developer tools). 'GitHub Copilot' assigned, as the focus is on GitHub Copilot CLI, including its features, usage, and developer workflow impact (GitHub Copilot rules 1-4). Did not assign 'Coding' because the content focuses on new CLI and AI-driven workflow features, not direct code creation, code patterns, or language-specific tutorials. Not 'DevOps', since workflow/process automations are within the Copilot CLI and not about CI/CD, infra, or team methodology. Not 'Azure', 'ML', or 'Security', as these topics are not substantively addressed in the update.",
     "canonical_url": "https://github.blog/changelog/2026-01-21-github-copilot-cli-plan-before-you-build-steer-as-you-go"
+  },
+  {
+    "timestamp": "2026-01-22 00:06:34 +00:00",
+    "reason": "Succesfully added: Assigned the Coding category because the content centers on practical web development using .NET, Razor Pages, and HTMX, all of which are core Microsoft technologies and frameworks (Coding rules 1, 2, and 4). Although the primary focus is educational, the video provides technical implementation details relevant for developers. AI, DevOps, Azure, ML, GitHub Copilot, and Security categories do not apply, as the content does not discuss those areas.",
+    "canonical_url": "https://www.youtube.com/watch?v=OEfsOWjlPF0",
+    "collection": "videos"
   }
 ]
