@@ -23956,5 +23956,11 @@
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/simplifying-image-signing-with-notary-project-and-artifact/ba-p/4487942",
     "timestamp": "2026-01-22 01:32:37 +00:00"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/21/multistage-aitm-phishing-bec-campaign-abusing-sharepoint/",
+    "timestamp": "2026-01-22 07:07:31 +00:00",
+    "reason": "Succesfully added: Assigned 'Security' because the content focuses on Microsoft Defender XDR, Entra ID, inbox rule manipulation, BEC, AiTM techniques, identity compromise, and a broad range of defense strategies for phishing threats (Security rules 1, 3, 4, 5, 7, 9). Assigned 'Azure' because Microsoft Entra ID (Azure AD) and Azure Defender/Conditional Access features are discussed as core to the technical mitigation (Azure rule 1). ML, AI, DevOps, Coding, and GitHub Copilot are not relevant as the content centers on security incident detection and mitigation without code, ML, or DevOps process focus. The content is entirely technical, English, detailed, and meets all inclusion thresholds.",
+    "collection": "news"
   }
 ]
