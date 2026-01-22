@@ -24046,5 +24046,17 @@
     "reason": "Succesfully added: Assigned 'AI' because the session centers on the GitHub Copilot SDK and its application in .NET, meeting AI rule 2 and 4. Assigned 'GitHub Copilot' per rule 2 for any GitHub Copilot-specific content, which always also brings 'AI'. Assigned 'Coding' due to the focus on leveraging software development tools (GitHub Copilot SDK) within .NET development, as outlined in Coding rules 1 and 5. The source and tags confirm a developer/professional focus with no sales pitch, biographical, or exclusion triggers.",
     "canonical_url": "https://www.youtube.com/watch?v=aKUZCxTdDDg",
     "collection": "videos"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=6yzGew8wA4A",
+    "collection": "videos",
+    "timestamp": "2026-01-22 20:04:10 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content is an introduction to the GitHub Copilot SDK—a developer tool that extends Copilot's AI capabilities (per AI inclusion rule 2 and GitHub Copilot rule 1). The description makes clear this is about a technical SDK for developers, meeting the threshold for both categories. No evidence for Coding, DevOps, or Azure categories since there is no content about specific programming languages, DevOps processes, or Azure cloud services."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=4pv21r9AeU4",
+    "collection": "videos",
+    "timestamp": "2026-01-22 20:04:32 +00:00",
+    "reason": "Succesfully added: Assigned Azure category as the video is centered on Microsoft Fabric (a core Azure analytics service) and uses Azure capabilities (private link, endpoints, etc.), satisfying Azure inclusion rule 1. Assigned ML category because the content focuses on Spark data engineering workloads and analytics, utilizing tools like Spark and the Native Execution Engine for data engineering in a cloud analytics context, matching ML rules 1, 2, 3, and 4. Assigned Security because secure connectivity, network restrictions, and the use of Managed Private Endpoints for protecting data access are a central theme, matching Security rules 1 and 4. Did not assign AI or Coding, because the focus is on data engineering pipelines and infrastructure, not on AI/ML model development or code-level programming. Did not assign DevOps as there is no mention of CI/CD, pipelines, or infrastructure automation aspects. All category inclusions and exclusions follow the defined processing rules."
   }
 ]
