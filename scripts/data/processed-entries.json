@@ -23944,5 +23944,17 @@
     "reason": "Succesfully added: Assigned the Coding category because the content centers on practical web development using .NET, Razor Pages, and HTMX, all of which are core Microsoft technologies and frameworks (Coding rules 1, 2, and 4). Although the primary focus is educational, the video provides technical implementation details relevant for developers. AI, DevOps, Azure, ML, GitHub Copilot, and Security categories do not apply, as the content does not discuss those areas.",
     "canonical_url": "https://www.youtube.com/watch?v=OEfsOWjlPF0",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' because the content focuses on GitHub Copilot CLI, an AI-driven developer tool (AI inclusion rule 2 and 4). Assigned 'GitHub Copilot' because it specifically demonstrates GitHub Copilot CLI features (GitHub Copilot inclusion rules 1, 2, and 3). Did NOT assign DevOps, Coding, or other categories as the video centers on Copilot CLI command execution, not general coding or DevOps process. No generic exclusion rules apply.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=UMz8aQ4lOtE",
+    "timestamp": "2026-01-22 01:32:12 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned Security category as the content is centered on securing container images and artifact trust using Microsoft's Artifact Signing and Notary Project tooling (Security rule 1, 2, 4, 5). Azure category assigned because the managed signing service and procedures are implemented with Azure services and documentation (Azure rules 1, 4). DevOps is included since the features and tutorials focus on enforcement in CI/CD pipelines and workflows (DevOps rules 1, 5, 6). Coding, AI, ML, and GitHub Copilot categories are not applicable as there is no focus on programming techniques, AI services, ML/data science, or Copilot tools.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/simplifying-image-signing-with-notary-project-and-artifact/ba-p/4487942",
+    "timestamp": "2026-01-22 01:32:37 +00:00"
   }
 ]

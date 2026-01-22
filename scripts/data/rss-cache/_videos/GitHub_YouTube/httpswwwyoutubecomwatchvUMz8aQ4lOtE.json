@@ -1,0 +1,18 @@
+{
+  "Description": "Tired of approving every single command? @shanselman demonstrates the --yolo command in GitHub Copilot CLI, which allows you to bypass manual approvals for tool calls and path access. Learn how this mode lets the agent run autonomously and why you might want to use it in a containerized environment.\n\n#GitHubCopilot #CopilotCLI #Yolo\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "ProcessedDate": "2026-01-22 01:30:58",
+  "Title": "Demo: Using GitHub Copilot CLI and yolo mode",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=UMz8aQ4lOtE",
+  "Tags": [
+    "CopilotCLI",
+    "GitHubCopilot",
+    "Yolo"
+  ],
+  "Author": "GitHub",
+  "PubDate": "2026-01-22T00:00:59+00:00",
+  "FeedLevelAuthor": "GitHub",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "FeedName": "GitHub YouTube",
+  "EnhancedContent": null
+}
