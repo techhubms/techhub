@@ -24058,5 +24058,17 @@
     "collection": "videos",
     "timestamp": "2026-01-22 20:04:32 +00:00",
     "reason": "Succesfully added: Assigned Azure category as the video is centered on Microsoft Fabric (a core Azure analytics service) and uses Azure capabilities (private link, endpoints, etc.), satisfying Azure inclusion rule 1. Assigned ML category because the content focuses on Spark data engineering workloads and analytics, utilizing tools like Spark and the Native Execution Engine for data engineering in a cloud analytics context, matching ML rules 1, 2, 3, and 4. Assigned Security because secure connectivity, network restrictions, and the use of Managed Private Endpoints for protecting data access are a central theme, matching Security rules 1 and 4. Did not assign AI or Coding, because the focus is on data engineering pipelines and infrastructure, not on AI/ML model development or code-level programming. Did not assign DevOps as there is no mention of CI/CD, pipelines, or infrastructure automation aspects. All category inclusions and exclusions follow the defined processing rules."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-01-22-faster-loading-for-github-issues",
+    "collection": "news",
+    "timestamp": "2026-01-22 22:03:18 +00:00",
+    "reason": "Succesfully added: The content is a news update about GitHub Issues’ performance improvement. Assigned the 'DevOps' category because GitHub Issues is a core tool for project/issue tracking and team collaboration (DevOps rules 3 and 11). No other category fits, as there is no focus on AI, GitHub Copilot, coding, Azure, ML, or Security. No generic exclusion rules applied."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/G6Ywhqv_7WQ",
+    "collection": "videos",
+    "timestamp": "2026-01-22 22:03:56 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' because the video is about using GitHub Copilot, which is classified under Microsoft AI tools (AI rules 1 and 2). 'GitHub Copilot' is included as content explicitly demonstrates its SDK and integration (GitHub Copilot rule 1). 'Coding' is included due to the demonstrated practical development and Python scripting aspects (Coding rule 4, 5). No Azure, DevOps, ML, or Security topics identified from the available details."
   }
 ]
