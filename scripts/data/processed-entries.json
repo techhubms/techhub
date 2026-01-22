@@ -23962,5 +23962,23 @@
     "timestamp": "2026-01-22 07:07:31 +00:00",
     "reason": "Succesfully added: Assigned 'Security' because the content focuses on Microsoft Defender XDR, Entra ID, inbox rule manipulation, BEC, AiTM techniques, identity compromise, and a broad range of defense strategies for phishing threats (Security rules 1, 3, 4, 5, 7, 9). Assigned 'Azure' because Microsoft Entra ID (Azure AD) and Azure Defender/Conditional Access features are discussed as core to the technical mitigation (Azure rule 1). ML, AI, DevOps, Coding, and GitHub Copilot are not relevant as the content centers on security incident detection and mitigation without code, ML, or DevOps process focus. The content is entirely technical, English, detailed, and meets all inclusion thresholds.",
     "collection": "news"
+  },
+  {
+    "timestamp": "2026-01-22 09:09:01 +00:00",
+    "reason": "Succesfully added: Included the 'AI' category because the partnership emphasizes enterprise AI technologies (direct references to Azure AI, AI-powered sensors, and intelligent analytics as per AI rule 1). 'Azure' is included due to the central role Microsoft Azure—especially AKS and cloud computing—plays in data processing, simulation, and scaling (Azure rule 1 and 2). 'DevOps' is included because the content details widespread adoption of GitHub for development workflow automation, collaboration, and engineering modernization (DevOps rules 2, 3, 9). 'Coding' is included due to the discussion of software development, simulation, and integration pipelines using GitHub (Coding rule 2 and 5). All assigned categories are based on the technologies specifically mentioned (Azure, AI, GitHub, development tools) and the focus on technical implementation, while the exclusion of Security or ML categories is due to their absence or lack of substantial coverage. No generic exclusion rules apply, as the piece is technically focused and actionable rather than promotional or biographical.",
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/source/2026/01/22/microsoft-and-mercedes-amg-petronas-f1-team-unite-to-drive-innovation-from-factory-to-circuit/"
+  },
+  {
+    "timestamp": "2026-01-22 09:09:44 +00:00",
+    "reason": "Succesfully added: Assigned 'Security' because the content centers on securing and governing organizational data using Microsoft Purview (Security rules 1, 2, 4, 7, 9). Assigned 'Azure' as Microsoft Purview is a core Azure service and the episode is part of Azure Essentials (Azure rule 1). No other categories apply because the focus is not on AI, ML, Coding, DevOps, or GitHub Copilot. All content is technical, implementation-focused, and fits the inclusion rules with no generic exclusions triggered.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=U5nAmJv_Cn4"
+  },
+  {
+    "timestamp": "2026-01-22 09:10:11 +00:00",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the solution centrally relies on Microsoft Fabric, Delta Lake, and Azure Event Hubs as core components (Azure inclusion rule 1, 2, 4, 5, 6, 7). Assigned the 'ML' category because the content focuses on data engineering, partitioning, pipeline automation, and scalable ingestion architecture—key elements of analytics engineering in Microsoft environments (ML inclusion rule 2, 3, 5, 7). Did not assign 'AI' because there's no focus on AI or pre-built AI services, only data engineering and analytics patterns. Did not assign 'Coding' as the content focuses on system configuration and architecture, not code or software development. 'DevOps' was not added because the focus is more on data architecture and operational patterns for data, not general CI/CD, deployment, or infrastructure as code. Security is not a major focus of this piece. All categories tied directly to technical implementation details per rules.",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/a-technical-implementation-guide-for-multi-store-retail/ba-p/4488418"
   }
 ]
