@@ -24136,5 +24136,11 @@
     "timestamp": "2026-01-23 21:04:19 +00:00",
     "reason": "Succesfully added: Assigned Azure category because the guide is focused on configuring Azure services, including the SRE Agent and MCP integration (Azure rule 1 and 4). Assigned AI category because Azure MCP (Model Context Protocol) is designed to extend AI agent capabilities for resource management in Azure (AI rule 4 and 5). Assigned Security due to the detailed discussion of managed identity, RBAC, access control, and security best practices (Security rules 1, 3, 4, and 7). Assigned DevOps because the content involves agent tool integration and automation within Azure (DevOps rules 1, 4, and 6). No Coding or ML category applied as there is no code or custom development, and the main focus is infrastructure configuration, automation, and security.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-connect-azure-sre-agent-to-azure-mcp/ba-p/4488905"
+  },
+  {
+    "reason": "Succesfully added: Included the 'AI' category because the article is fundamentally about securing AI agents, specifically those developed with Microsoft Copilot Studio, and references AI-specific orchestration and threats (AI rule 1; developer/maker tool Copilot Studio is always included). Included the 'Security' category because the focus is on mitigating runtime risks, securing agent operations, and detailing Microsoft Defender integration for runtime protection (Security rule 1—Microsoft Security services—and Security rule 6—DevSecOps practices). Did NOT assign 'Azure', 'ML', 'Coding', or 'DevOps' because the article does not describe coding, DevOps, data modeling, or ML development, nor does it discuss Azure products directly. Also, Copilot Studio is not a business productivity Copilot but a developer/maker tool per critical Copilot distinction.",
+    "timestamp": "2026-01-23 22:03:58 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/23/runtime-risk-realtime-defense-securing-ai-agents/",
+    "collection": "news"
   }
 ]
