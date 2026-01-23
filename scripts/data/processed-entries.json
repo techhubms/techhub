@@ -24082,5 +24082,17 @@
     "timestamp": "2026-01-23 14:06:18 +00:00",
     "reason": "Succesfully added: Assigned the 'DevOps' category because the content is deeply focused on code review workflows, collaboration, and tools (DevOps inclusion rules 2, 3, 9, and 11). The post details enhancements to pull request review on GitHub, a central feature in modern DevOps pipelines. There is no substantive focus on Microsoft-specific coding, Azure, AI, ML, Security, or GitHub Copilot, so those categories were not added.",
     "canonical_url": "https://github.blog/changelog/2026-01-22-improved-pull-request-files-changed-page-on-by-default"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the content centers on the GitHub Copilot SDK, Copilot CLI, and deeper AI agent integration (see AI rule 2 and GitHub Copilot category rules). Assigned 'Coding' because the Copilot SDK and CLI are developer tools designed to enhance developer workflows within coding environments such as VS Code (Coding rules 2, 5). Did not assign 'DevOps' since workflow automation or deployment pipelines are not central. Excluded 'Azure', 'ML', and 'Security' since the focus is not on Azure services, data science/ML development, or security practices, but rather on developer experience and productivity enhancements through Copilot and contextual AI. Verified no generic exclusion rule applies, as the content is technical, non-promotional, in English, and relevant to developer tools.",
+    "collection": "news",
+    "canonical_url": "https://devblogs.microsoft.com/blog/bringing-work-context-to-your-code-in-github-copilot",
+    "timestamp": "2026-01-23 15:06:31 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Assigned the 'Coding' category because the content is about Visual Studio Code, a Microsoft code editor, and focuses on developer workflow and productive use of developer tools. Although this is not about writing code directly, submitting feature requests for an open-source platform used by developers fits Coding rule 5 (Microsoft Development Tools) and rule 4 (Coding practices with Microsoft technologies). AI, Azure, ML, DevOps, and Security categories do not apply as there is no substantial content in those domains.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=0Nq_ZzSU7lA",
+    "timestamp": "2026-01-23 15:07:22 +00:00"
   }
 ]
