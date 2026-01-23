@@ -24070,5 +24070,11 @@
     "collection": "videos",
     "timestamp": "2026-01-22 22:03:56 +00:00",
     "reason": "Succesfully added: Assigned 'AI' because the video is about using GitHub Copilot, which is classified under Microsoft AI tools (AI rules 1 and 2). 'GitHub Copilot' is included as content explicitly demonstrates its SDK and integration (GitHub Copilot rule 1). 'Coding' is included due to the demonstrated practical development and Python scripting aspects (Coding rule 4, 5). No Azure, DevOps, ML, or Security topics identified from the available details."
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: Assigned the 'Azure' category because the content focuses on Azure Container Apps, VNet integration, and UDR configuration (Azure inclusion rule 1 and 2). Added 'Security' because it centers on advanced firewall deployment, traffic filtering, and compliance (Security rules 1 and 4). Did not include other categories as there is no code, DevOps, AI, GitHub Copilot, or ML focus. The content is technical, practical, and meets community length/quality requirements.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/advanced-container-apps-networking-vnet-integration-and/m-p/4488713#M22417",
+    "timestamp": "2026-01-23 08:04:18 +00:00"
   }
 ]
