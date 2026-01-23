@@ -24094,5 +24094,23 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=0Nq_ZzSU7lA",
     "timestamp": "2026-01-23 15:07:22 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because the content discusses AI-powered workflows, agent reasoning, and organizational knowledge integration into developer tools, matching AI inclusion rules 1, 4, and 5. 'GitHub Copilot' is assigned because the entire announcement and examples are about using Copilot CLI, aligning with GitHub Copilot rule 1. 'Coding' is also appropriate since the focus is on developer workflow within the CLI and how code is compared to specs (Coding rule 4). No Azure, DevOps, ML, or Security categories were assigned because the content, while related to Microsoft, is not focused on Azure infrastructure, ML development, security features, or explicit DevOps practices. The primary focus remains on AI/agent-driven coding enhancement through context integration.",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_so-much-of-dev-work-happens-in-the-context-activity-7420485585376620544-vudJ",
+    "timestamp": "2026-01-23 17:10:57 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'Azure' because the update covers multiple Azure services and features (Azure rule 1). 'DevOps' included due to AKS deployment, Load Testing, and App/DevOps master class links (DevOps rules 1 and 6). 'AI' and 'GitHub Copilot' categories are included because the GitHub Copilot SDK is featured (AI rule 2, GitHub Copilot rule 1). Did not assign 'Coding' or 'ML' as direct code or ML engineering was not the main focus.",
+    "canonical_url": "https://www.youtube.com/watch?v=FfYk17LiOmM",
+    "timestamp": "2026-01-23 17:11:38 +00:00"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the video focuses on a new GitHub Copilot capability (AI rule 2, GitHub Copilot inclusion rules). Although Microsoft 365 is mentioned, the content remains centered on development enhancements through GitHub Copilot, not business productivity (Copilot product distinction). Excluded other categories as there is no explicit discussion of coding, DevOps, Azure, ML, or security implementation. Description and tags are based on available metadata and summary.",
+    "canonical_url": "https://www.youtube.com/watch?v=ASvjwef7K04",
+    "timestamp": "2026-01-23 17:11:56 +00:00"
   }
 ]
