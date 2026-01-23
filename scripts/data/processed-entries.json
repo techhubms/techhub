@@ -24124,5 +24124,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/scaling-dns-on-aks-with-cilium-nodelocal-dnscache-lrp-and-fqdn/ba-p/4486323",
     "collection": "community",
     "timestamp": "2026-01-23 18:04:29 +00:00"
+  },
+  {
+    "timestamp": "2026-01-23 19:07:38 +00:00",
+    "reason": "Succesfully added: Assigned AI and GitHub Copilot categories as the episode covers significant updates and features for GitHub Copilot, SDK, and CLI (AI rules 2 and 5, GitHub Copilot rules 1-4). 'Coding' assigned due to content about programming tools (Coding rules 4 and 5). 'DevOps' included as Copilot CLI updates, SDK introductions, and OpenCode support impact developer workflows and toolchains (DevOps rules 2, 9, and 11). Did not assign Azure, ML, or Security because these topics are not substantively discussed. All exclusion rules evaluated: content is technically focused, not biographical, negative, sales, or business oriented.",
+    "canonical_url": "https://www.youtube.com/watch?v=lU9sVU6Arbs",
+    "collection": "videos"
   }
 ]
