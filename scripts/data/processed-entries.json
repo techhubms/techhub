@@ -24076,5 +24076,11 @@
     "reason": "Succesfully added: Assigned the 'Azure' category because the content focuses on Azure Container Apps, VNet integration, and UDR configuration (Azure inclusion rule 1 and 2). Added 'Security' because it centers on advanced firewall deployment, traffic filtering, and compliance (Security rules 1 and 4). Did not include other categories as there is no code, DevOps, AI, GitHub Copilot, or ML focus. The content is technical, practical, and meets community length/quality requirements.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure/advanced-container-apps-networking-vnet-integration-and/m-p/4488713#M22417",
     "timestamp": "2026-01-23 08:04:18 +00:00"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-01-23 14:06:18 +00:00",
+    "reason": "Succesfully added: Assigned the 'DevOps' category because the content is deeply focused on code review workflows, collaboration, and tools (DevOps inclusion rules 2, 3, 9, and 11). The post details enhancements to pull request review on GitHub, a central feature in modern DevOps pipelines. There is no substantive focus on Microsoft-specific coding, Azure, AI, ML, Security, or GitHub Copilot, so those categories were not added.",
+    "canonical_url": "https://github.blog/changelog/2026-01-22-improved-pull-request-files-changed-page-on-by-default"
   }
 ]
