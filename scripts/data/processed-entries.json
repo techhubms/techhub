@@ -24130,5 +24130,11 @@
     "reason": "Succesfully added: Assigned AI and GitHub Copilot categories as the episode covers significant updates and features for GitHub Copilot, SDK, and CLI (AI rules 2 and 5, GitHub Copilot rules 1-4). 'Coding' assigned due to content about programming tools (Coding rules 4 and 5). 'DevOps' included as Copilot CLI updates, SDK introductions, and OpenCode support impact developer workflows and toolchains (DevOps rules 2, 9, and 11). Did not assign Azure, ML, or Security because these topics are not substantively discussed. All exclusion rules evaluated: content is technically focused, not biographical, negative, sales, or business oriented.",
     "canonical_url": "https://www.youtube.com/watch?v=lU9sVU6Arbs",
     "collection": "videos"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-01-23 21:04:19 +00:00",
+    "reason": "Succesfully added: Assigned Azure category because the guide is focused on configuring Azure services, including the SRE Agent and MCP integration (Azure rule 1 and 4). Assigned AI category because Azure MCP (Model Context Protocol) is designed to extend AI agent capabilities for resource management in Azure (AI rule 4 and 5). Assigned Security due to the detailed discussion of managed identity, RBAC, access control, and security best practices (Security rules 1, 3, 4, and 7). Assigned DevOps because the content involves agent tool integration and automation within Azure (DevOps rules 1, 4, and 6). No Coding or ML category applied as there is no code or custom development, and the main focus is infrastructure configuration, automation, and security.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-connect-azure-sre-agent-to-azure-mcp/ba-p/4488905"
   }
 ]
