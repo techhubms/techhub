@@ -24112,5 +24112,17 @@
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' categories because the video focuses on a new GitHub Copilot capability (AI rule 2, GitHub Copilot inclusion rules). Although Microsoft 365 is mentioned, the content remains centered on development enhancements through GitHub Copilot, not business productivity (Copilot product distinction). Excluded other categories as there is no explicit discussion of coding, DevOps, Azure, ML, or security implementation. Description and tags are based on available metadata and summary.",
     "canonical_url": "https://www.youtube.com/watch?v=ASvjwef7K04",
     "timestamp": "2026-01-23 17:11:56 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Included the AI category because the course focuses on developing AI Agents with Microsoft Agent Framework and Foundry (AI inclusion rule 1 and 4). Included the Azure category because production deployment and Microsoft cloud services are central to the workflow (Azure inclusion rules 1 and 4). Did not include ML, DevOps, or Coding categories as the primary focus is on agent design/production, not detailed coding, machine learning model development, or DevOps pipelines. Tags emphasize the technologies and methodologies shown in the course.",
+    "canonical_url": "https://www.youtube.com/watch?v=VdzgZiOq3Uc",
+    "collection": "videos",
+    "timestamp": "2026-01-23 18:03:58 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Applied the Azure category per Azure rule 1: the content concerns Azure Kubernetes Service (AKS), a core Azure offering, and presents detailed Azure-specific implementation procedures, satisfying the requirement that Microsoft content be central to the solution. Did not assign 'AI', 'DevOps', 'ML', 'Coding', 'Security', or 'GitHub Copilot' because the primary focus is advanced Kubernetes network/DNS engineering and not application code, CI/CD, ML/AI, or code security. The article contains real-world cloud ops instructions (infra setup and traffic control), but not methodology, coding, security, or AI services as their central focus. All analysis and examples are technical, operational, and directly actionable within the Azure context.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/scaling-dns-on-aks-with-cilium-nodelocal-dnscache-lrp-and-fqdn/ba-p/4486323",
+    "collection": "community",
+    "timestamp": "2026-01-23 18:04:29 +00:00"
   }
 ]
