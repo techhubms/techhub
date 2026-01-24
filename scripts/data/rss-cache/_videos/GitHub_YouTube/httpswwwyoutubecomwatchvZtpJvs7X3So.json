@@ -1,0 +1,14 @@
+{
+  "Description": "Abby sits down with Angie Jones, VP of Engineering at Block, live at GitHub Universe to talk about Goose, Block’s open source AI agent and reference implementation of the Model Context Protocol (MCP). Angie shares how Goose went from an internal tool to an open source project that lets the community drive features like multimodel support, and how Block’s 12,000 employees across 15+ job functions (not just engineers) now use agents every day. They dig into practical, non-hype uses of AI agents: detecting when students are struggling, triaging open source issues, segmenting 80k+ sales leads, and even letting a salesperson “vibe code” a feature on the train. Angie also talks about trust and control when giving AI access to codebases, why developers are tired of flashy demos, and how her new AI Builder Fellowship is designed to support the next generation of native AI builders.\n\nLinks mentioned in the episode:\n\nhttps://angiejones.tech https://github.com/block/goose https://github.com/block https://github.com/modelcontextprotocol https://github.com/features/copilot https://testautomationu.applitools.com https://www.selenium.dev https://playwright.dev https://www.cypress.io https://code.visualstudio.com https://www.salesforce.com https://github.com/martinwoodward/pyfluff\n\nThe GitHub Podcast is hosted by Abigail Cabunoc Mayes, Kedasha Kerr and Cassidy Williams. The show is edited, mixed and produced by Victoria Marin. Thank you to our production partner, editaudio.\n\n— CHAPTERS — 00:00 - Live from GitHub Universe 01:34 - What is Goose? 03:20 - The MCP reference implementation 05:11 - How non-engineers use agents at Block 06:01 - Use case: detecting student stress 10:59 - Trusting AI with your codebase 12:59 - Why devs are tired of flashy demos 17:24 - Vibe coding on the train 19:40 - The AI builder fellowship 21:59 - Open source picks: Selenium & PyFluff\n\nStay up-to-date on all things GitHub by subscribing and following us at: YouTube: http://bit.ly/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github Facebook: https://www.facebook.com/GitHub/\n\nAbout GitHub: It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Author": "GitHub",
+  "FeedLevelAuthor": "GitHub",
+  "Title": "Angie Jones on Goose, MCP, and the future of AI agents | Episode 9 | The GitHub Podcast",
+  "Tags": [],
+  "PubDate": "2026-01-24T15:01:06+00:00",
+  "FeedName": "GitHub YouTube",
+  "ProcessedDate": "2026-01-24 16:02:27",
+  "Link": "https://www.youtube.com/watch?v=ZtpJvs7X3So",
+  "OutputDir": "_videos"
+}
