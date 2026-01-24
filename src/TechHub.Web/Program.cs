@@ -1,7 +1,9 @@
-using TechHub.Core.Configuration;
+using Microsoft.AspNetCore.StaticFiles;
 using TechHub.Core.Logging;
 using TechHub.ServiceDefaults;
 using TechHub.Web.Components;
+using TechHub.Web.Configuration;
+using TechHub.Web.Middleware;
 using TechHub.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,31 +11,24 @@ var builder = WebApplication.CreateBuilder(args);
 // Add Aspire service defaults (OpenTelemetry, service discovery, resilience, health checks)
 builder.AddServiceDefaults();
 
-// Configure file logging for Development and Test environments
+// Log environment during startup for verification
+using (var loggerFactory = LoggerFactory.Create(b => b.AddConsole()))
+{
+    var logger = loggerFactory.CreateLogger("Startup");
+    logger.LogInformation("🚀 TechHub.Web starting in {Environment} environment", builder.Environment.EnvironmentName);
+}
+
+// Configure file logging when path is configured in appsettings
 // Skip during integration tests (AppSettings:SkipFileLogging = true)
 var skipFileLogging = builder.Configuration.GetValue<bool>("AppSettings:SkipFileLogging");
-if (!skipFileLogging && (builder.Environment.IsDevelopment() || builder.Environment.IsEnvironment("Test")))
+var logPath = builder.Configuration["Logging:File:Path"];
+if (!skipFileLogging && !string.IsNullOrEmpty(logPath))
 {
-    var logPath = builder.Configuration["Logging:File:Path"];
-    if (!string.IsNullOrEmpty(logPath))
-    {
-        // FileLoggerProvider is registered with DI and disposed by framework
+    // FileLoggerProvider is registered with DI and disposed by framework
 #pragma warning disable CA2000
-        builder.Logging.AddProvider(new FileLoggerProvider(logPath));
+    builder.Logging.AddProvider(new FileLoggerProvider(logPath));
 #pragma warning restore CA2000
-    }
 }
-
-// Enable static web assets for non-Development environments (e.g., Test)
-// Required for E2E tests which run in Test environment
-if (!builder.Environment.IsDevelopment())
-{
-    builder.WebHost.UseStaticWebAssets();
-}
-
-// Configure application settings
-builder.Services.Configure<WebAppSettings>(
-    builder.Configuration.GetSection("AppSettings"));
 
 // Configure routing to be case-insensitive for better UX
 builder.Services.Configure<RouteOptions>(options =>
@@ -47,25 +42,20 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 // Configure CSS bundling and minification for production only
-if (!builder.Environment.IsDevelopment() && !builder.Environment.IsEnvironment("Test"))
+if (!builder.Environment.IsDevelopment())
 {
     builder.Services.AddWebOptimizer(pipeline =>
     {
         // Bundle all CSS files into a single minified bundle for production
-        pipeline.AddCssBundle("/css/bundle.css",
-            "css/design-tokens.css",
-            "css/base.css",
-            "css/article.css",
-            "css/sidebar.css",
-            "css/page-container.css",
-            "css/loading.css",
-            "css/nav-helpers.css"
-        );
+        pipeline.AddCssBundle("/css/bundle.css", CssFiles.All);
     });
 }
 
 // Section cache for immediate (flicker-free) navigation rendering
 builder.Services.AddSingleton<SectionCache>();
+
+// Favicon service for base64-encoded favicon (eliminates HTTP requests)
+builder.Services.AddSingleton<FaviconService>();
 
 // Error handling service for centralized exception management
 builder.Services.AddScoped<ErrorService>();
@@ -120,56 +110,27 @@ app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages:
 app.UseHttpsRedirection();
 
 // Enable WebOptimizer middleware for CSS bundling/minification in production
-if (!app.Environment.IsDevelopment() && !app.Environment.IsEnvironment("Test"))
+// Note: MapStaticAssets() handles compression/fingerprinting, WebOptimizer provides bundling
+if (!app.Environment.IsDevelopment())
 {
     app.UseWebOptimizer();
 }
 
-// Configure static files with environment-appropriate caching
-app.UseStaticFiles(new StaticFileOptions
-{
-    OnPrepareResponse = ctx =>
-    {
-        var path = ctx.File.PhysicalPath ?? ctx.Context.Request.Path.Value ?? string.Empty;
-        var isDevelopment = app.Environment.IsDevelopment();
-
-        // Images, fonts, and other media
-        if (path.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) ||
-            path.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase) ||
-            path.EndsWith(".png", StringComparison.OrdinalIgnoreCase) ||
-            path.EndsWith(".gif", StringComparison.OrdinalIgnoreCase) ||
-            path.EndsWith(".webp", StringComparison.OrdinalIgnoreCase) ||
-            path.EndsWith(".svg", StringComparison.OrdinalIgnoreCase) ||
-            path.EndsWith(".ico", StringComparison.OrdinalIgnoreCase) ||
-            path.EndsWith(".woff", StringComparison.OrdinalIgnoreCase) ||
-            path.EndsWith(".woff2", StringComparison.OrdinalIgnoreCase) ||
-            path.EndsWith(".ttf", StringComparison.OrdinalIgnoreCase) ||
-            path.EndsWith(".eot", StringComparison.OrdinalIgnoreCase))
-        {
-            // Cache images and fonts aggressively (1 year) in both dev and production
-            // Images don't change frequently and should be cached to avoid unnecessary network requests
-            ctx.Context.Response.Headers.CacheControl = "public,max-age=31536000,immutable";
-        }
-        // CSS and JS files
-        else if (path.EndsWith(".css", StringComparison.OrdinalIgnoreCase) ||
-                 path.EndsWith(".js", StringComparison.OrdinalIgnoreCase))
-        {
-            // Development: no-cache (always validate), Production: 1 year with versioning
-            ctx.Context.Response.Headers.CacheControl = isDevelopment
-                ? "no-cache"
-                : "public,max-age=31536000,immutable";
-        }
-        else
-        {
-            // Default: 1 hour
-            ctx.Context.Response.Headers.CacheControl = "public,max-age=3600";
-        }
-    }
-});
-
 app.UseAntiforgery();
 
+// Static file caching: Our middleware sets proper cache headers for all static files
+// Place BEFORE MapStaticAssets so our OnStarting callback runs AFTER theirs (LIFO order)
+app.UseStaticFilesCaching();
+
+// UseStaticFiles for custom content types (e.g., .jxl)
+// MapStaticAssets handles the serving with fingerprinting, compression, ETags
+var contentTypeProvider = new FileExtensionContentTypeProvider();
+contentTypeProvider.Mappings[".jxl"] = "image/jxl";
+app.UseStaticFiles(new StaticFileOptions { ContentTypeProvider = contentTypeProvider });
+
+// MapStaticAssets for optimized static assets (fingerprinting, compression, ETags)
 app.MapStaticAssets();
+
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 

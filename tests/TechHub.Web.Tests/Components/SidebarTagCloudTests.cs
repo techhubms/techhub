@@ -19,7 +19,7 @@ namespace TechHub.Web.Tests.Components;
 /// - Test tag click updates URL parameters
 /// - Test URL parameters restore tag selection
 /// </summary>
-public class SidebarTagCloudTests : TestContext
+public class SidebarTagCloudTests : BunitContext
 {
     private readonly Mock<ITechHubApiClient> _mockApiClient;
 
@@ -46,7 +46,7 @@ public class SidebarTagCloudTests : TestContext
             .ReturnsAsync(tags);
 
         // Act
-        var cut = RenderComponent<SidebarTagCloud>(parameters => parameters
+        var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.Scope, TagCloudScope.Homepage)
             .Add(p => p.SectionName, null)
             .Add(p => p.CollectionName, null));
@@ -82,7 +82,7 @@ public class SidebarTagCloudTests : TestContext
             .ReturnsAsync(tags);
 
         // Act
-        var cut = RenderComponent<SidebarTagCloud>(parameters => parameters
+        var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.Scope, TagCloudScope.Homepage));
 
         // Assert
@@ -111,7 +111,7 @@ public class SidebarTagCloudTests : TestContext
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(tags);
 
-        var cut = RenderComponent<SidebarTagCloud>(parameters => parameters
+        var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.Scope, TagCloudScope.Homepage));
 
         cut.WaitForAssertion(() => cut.FindAll(".tag-cloud-item").Should().HaveCount(5));
@@ -147,7 +147,7 @@ public class SidebarTagCloudTests : TestContext
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(tags);
 
-        var cut = RenderComponent<SidebarTagCloud>(parameters => parameters
+        var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.Scope, TagCloudScope.Homepage));
 
         cut.WaitForAssertion(() => cut.FindAll(".tag-cloud-item").Should().HaveCount(5));
@@ -189,7 +189,7 @@ public class SidebarTagCloudTests : TestContext
             .ReturnsAsync(tags);
 
         List<string>? raisedTags = null;
-        var cut = RenderComponent<SidebarTagCloud>(parameters => parameters
+        var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.Scope, TagCloudScope.Homepage)
             .Add(p => p.OnSelectionChanged, EventCallback.Factory.Create<List<string>>(
                 this, selectedTags => raisedTags = selectedTags)));
@@ -225,7 +225,7 @@ public class SidebarTagCloudTests : TestContext
         var preSelectedTags = new List<string> { "AI", "Azure" };
 
         // Act
-        var cut = RenderComponent<SidebarTagCloud>(parameters => parameters
+        var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.Scope, TagCloudScope.Homepage)
             .Add(p => p.SelectedTags, preSelectedTags));
 
@@ -254,7 +254,7 @@ public class SidebarTagCloudTests : TestContext
             .Returns(tcs.Task!);
 
         // Act
-        var cut = RenderComponent<SidebarTagCloud>(parameters => parameters
+        var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.Scope, TagCloudScope.Homepage));
 
         // Assert - Should show loading state
@@ -284,7 +284,7 @@ public class SidebarTagCloudTests : TestContext
                 new HttpRequestException("API error")));
 
         // Act
-        var cut = RenderComponent<SidebarTagCloud>(parameters => parameters
+        var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.Scope, TagCloudScope.Homepage));
 
         // Assert
@@ -309,7 +309,7 @@ public class SidebarTagCloudTests : TestContext
             .ReturnsAsync(tags);
 
         // Act
-        var cut = RenderComponent<SidebarTagCloud>(parameters => parameters
+        var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.Scope, TagCloudScope.Section)
             .Add(p => p.SectionName, "ai"));
 
@@ -344,7 +344,7 @@ public class SidebarTagCloudTests : TestContext
             .ReturnsAsync(tags);
 
         // Act
-        var cut = RenderComponent<SidebarTagCloud>(parameters => parameters
+        var cut = Render<SidebarTagCloud>(parameters => parameters
             .Add(p => p.Scope, TagCloudScope.Collection)
             .Add(p => p.SectionName, "ai")
             .Add(p => p.CollectionName, "news"));

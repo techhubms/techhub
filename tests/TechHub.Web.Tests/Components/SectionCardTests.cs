@@ -8,7 +8,7 @@ namespace TechHub.Web.Tests.Components;
 /// <summary>
 /// Tests for SectionCard.razor component
 /// </summary>
-public class SectionCardTests : TestContext
+public class SectionCardTests : BunitContext
 {
     [Fact]
     public void SectionCard_RendersTitle_Correctly()
@@ -17,7 +17,7 @@ public class SectionCardTests : TestContext
         var section = CreateTestSection("AI", "Artificial Intelligence", "AI description");
 
         // Act
-        var cut = RenderComponent<SectionCard>(parameters => parameters
+        var cut = Render<SectionCard>(parameters => parameters
             .Add(p => p.Section, section));
 
         // Assert
@@ -32,7 +32,7 @@ public class SectionCardTests : TestContext
         var section = CreateTestSection("ai", "AI", "Your gateway to the AI revolution");
 
         // Act
-        var cut = RenderComponent<SectionCard>(parameters => parameters
+        var cut = Render<SectionCard>(parameters => parameters
             .Add(p => p.Section, section));
 
         // Assert
@@ -47,7 +47,7 @@ public class SectionCardTests : TestContext
         var section = CreateTestSection("github-copilot", "GitHub Copilot", "Master GitHub Copilot");
 
         // Act
-        var cut = RenderComponent<SectionCard>(parameters => parameters
+        var cut = Render<SectionCard>(parameters => parameters
             .Add(p => p.Section, section));
 
         // Assert
@@ -62,13 +62,13 @@ public class SectionCardTests : TestContext
         var section = CreateTestSection("ai", "AI", "AI description");
 
         // Act
-        var cut = RenderComponent<SectionCard>(parameters => parameters
+        var cut = Render<SectionCard>(parameters => parameters
             .Add(p => p.Section, section));
 
-        // Assert
+        // Assert - Check for CSS background class (component uses CSS backgrounds, not picture elements)
         var header = cut.Find(".section-card-header");
-        var style = header.GetAttribute("style");
-        style.Should().Contain("background-image: url('/images/section-backgrounds/ai.jpg')");
+        header.Should().NotBeNull("section card should have a header element");
+        header.ClassList.Should().Contain("section-bg-ai", "header should have background class for AI section");
     }
 
     [Fact]
@@ -102,12 +102,11 @@ public class SectionCardTests : TestContext
             Title = "AI",
             Description = "AI description",
             Url = "/ai",
-            BackgroundImage = "/images/section-backgrounds/ai.jpg",
             Collections = collections
         };
 
         // Act
-        var cut = RenderComponent<SectionCard>(parameters => parameters
+        var cut = Render<SectionCard>(parameters => parameters
             .Add(p => p.Section, section));
 
         // Assert
@@ -136,12 +135,11 @@ public class SectionCardTests : TestContext
             Title = "GitHub Copilot",
             Description = "Description",
             Url = "/github-copilot",
-            BackgroundImage = "/images/section-backgrounds/github-copilot.jpg",
             Collections = collections
         };
 
         // Act
-        var cut = RenderComponent<SectionCard>(parameters => parameters
+        var cut = Render<SectionCard>(parameters => parameters
             .Add(p => p.Section, section));
 
         // Assert
@@ -149,7 +147,9 @@ public class SectionCardTests : TestContext
         badges.Should().HaveCount(4, "should only show first 4 collections");
 
         var moreIndicator = cut.Find(".collection-badge-more");
-        moreIndicator.TextContent.Should().Be("+2 more");
+        // Normalize whitespace (component HTML has newlines for readability)
+        var normalizedText = System.Text.RegularExpressions.Regex.Replace(moreIndicator.TextContent.Trim(), @"\s+", " ");
+        normalizedText.Should().Be("+2 more");
     }
 
     [Fact]
@@ -183,12 +183,11 @@ public class SectionCardTests : TestContext
             Title = "GitHub Copilot",
             Description = "Description",
             Url = "/github-copilot",
-            BackgroundImage = "/images/section-backgrounds/github-copilot.jpg",
             Collections = collections
         };
 
         // Act
-        var cut = RenderComponent<SectionCard>(parameters => parameters
+        var cut = Render<SectionCard>(parameters => parameters
             .Add(p => p.Section, section));
 
         // Assert
@@ -207,7 +206,7 @@ public class SectionCardTests : TestContext
         var section = CreateTestSection("ai", "AI", "AI description");
 
         // Act
-        var cut = RenderComponent<SectionCard>(parameters => parameters
+        var cut = Render<SectionCard>(parameters => parameters
             .Add(p => p.Section, section));
 
         // Assert
@@ -240,12 +239,11 @@ public class SectionCardTests : TestContext
             Title = "AI",
             Description = "AI description",
             Url = "/ai",
-            BackgroundImage = "/images/section-backgrounds/ai.jpg",
             Collections = collections
         };
 
         // Act
-        var cut = RenderComponent<SectionCard>(parameters => parameters
+        var cut = Render<SectionCard>(parameters => parameters
             .Add(p => p.Section, section));
 
         // Assert
@@ -263,7 +261,7 @@ public class SectionCardTests : TestContext
         var section = CreateTestSection("security", "Security", "Security content");
 
         // Act
-        var cut = RenderComponent<SectionCard>(parameters => parameters
+        var cut = Render<SectionCard>(parameters => parameters
             .Add(p => p.Section, section));
 
         // Assert
@@ -279,7 +277,6 @@ public class SectionCardTests : TestContext
             Title = title,
             Description = description,
             Url = $"/{name}",
-            BackgroundImage = $"/images/section-backgrounds/{name}.jpg",
             Collections = []
         };
     }

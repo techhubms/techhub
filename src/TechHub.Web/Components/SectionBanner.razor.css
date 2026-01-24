@@ -6,10 +6,6 @@
 /* Universal Section Banner - Same height on all pages */
 .section-banner {
     height: 220px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: var(--color-purple-muted);
     position: relative;
     display: flex;
     align-items: center;
@@ -18,6 +14,68 @@
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
     transition: height 0.3s ease;
+    overflow: hidden;
+    /* Background images are set via CSS classes (e.g., .section-banner-bg-ai) */
+    /* Full-size images used for banners for quality */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Section background image classes for banners (using full-size images) */
+/* Using image-set for progressive enhancement - JXL → WebP → JPG fallback */
+.section-banner-bg-ai {
+    background-image: image-set(url('/images/section-backgrounds/ai.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/ai.webp') type('image/webp'),
+            url('/images/section-backgrounds/ai.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-github-copilot {
+    background-image: image-set(url('/images/section-backgrounds/github-copilot.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/github-copilot.webp') type('image/webp'),
+            url('/images/section-backgrounds/github-copilot.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-azure {
+    background-image: image-set(url('/images/section-backgrounds/azure.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/azure.webp') type('image/webp'),
+            url('/images/section-backgrounds/azure.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-ml {
+    background-image: image-set(url('/images/section-backgrounds/ml.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/ml.webp') type('image/webp'),
+            url('/images/section-backgrounds/ml.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-devops {
+    background-image: image-set(url('/images/section-backgrounds/devops.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/devops.webp') type('image/webp'),
+            url('/images/section-backgrounds/devops.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-coding {
+    background-image: image-set(url('/images/section-backgrounds/coding.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/coding.webp') type('image/webp'),
+            url('/images/section-backgrounds/coding.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-security {
+    background-image: image-set(url('/images/section-backgrounds/security.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/security.webp') type('image/webp'),
+            url('/images/section-backgrounds/security.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-all {
+    background-image: image-set(url('/images/section-backgrounds/all.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/all.webp') type('image/webp'),
+            url('/images/section-backgrounds/all.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-none {
+    background-image: image-set(url('/images/section-backgrounds/none.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/none.webp') type('image/webp'),
+            url('/images/section-backgrounds/none.jpg') type('image/jpeg'));
 }
 
 /* Collapsed state when scrolled */
@@ -47,9 +105,10 @@
     pointer-events: none;
 }
 
-/* Homepage banner with default background */
+/* Homepage banner - background image set via .section-banner-bg-* classes */
+/* Overlay gradient applied via .section-banner::before pseudo-element */
 .home-banner {
-    background: linear-gradient(135deg, #6b4fb8 0%, #1a1a2e 100%);
+    /* No additional background needed - uses section background classes */
 }
 
 .section-banner-content {

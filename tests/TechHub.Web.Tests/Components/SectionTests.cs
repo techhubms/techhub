@@ -12,7 +12,7 @@ namespace TechHub.Web.Tests.Components;
 /// <summary>
 /// Tests for Section.razor component with skeleton layout architecture
 /// </summary>
-public class SectionTests : TestContext
+public class SectionTests : BunitContext
 {
     [Fact]
     public void Section_RendersWithPageStructure()
@@ -33,7 +33,6 @@ public class SectionTests : TestContext
                 Title = "Artificial Intelligence",
                 Description = "AI and machine learning content",
                 Url = "/ai",
-                BackgroundImage = "/images/ai-bg.jpg",
                 Collections =
                 [
                     new CollectionReferenceDto
@@ -72,7 +71,7 @@ public class SectionTests : TestContext
         Services.AddSingleton(sectionCache);
 
         // Act - Render Section component
-        var cut = RenderComponent<Section>(parameters => parameters
+        var cut = Render<Section>(parameters => parameters
             .Add(p => p.SectionName, "ai"));
 
         // Assert - Use WaitForAssertion to wait for async rendering
@@ -114,7 +113,6 @@ public class SectionTests : TestContext
                 Title = "Artificial Intelligence",
                 Description = "AI and machine learning content",
                 Url = "/ai",
-                BackgroundImage = "/images/ai-bg.jpg",
                 Collections =
                 [
                     new CollectionReferenceDto
@@ -153,7 +151,7 @@ public class SectionTests : TestContext
         Services.AddSingleton(sectionCache);
 
         // Act
-        var cut = RenderComponent<Section>(parameters => parameters
+        var cut = Render<Section>(parameters => parameters
             .Add(p => p.SectionName, "ai"));
 
         // Assert - Use WaitForAssertion to wait for async rendering

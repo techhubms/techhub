@@ -28,7 +28,6 @@
     background: var(--color-purple-dark);
     border-color: var(--color-purple-bright);
     color: var(--color-text-on-emphasis);
-    transform: translateY(-2px);
 }
 
 /* Content Navigation Buttons */
@@ -63,7 +62,6 @@
 .nav-button.primary:hover {
     background: var(--color-purple-vibrant);
     border-color: var(--color-purple-vibrant);
-    transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
 
@@ -107,7 +105,6 @@
 
 .error button:hover {
     background: var(--color-purple-bright);
-    transform: translateY(-2px);
 }
 
 /* Responsive Design */

@@ -203,7 +203,7 @@ public class TechHubApiFactory : WebApplicationFactory<Program>
             // Same for ISectionRepository, IRssService, etc.
         });
         
-        builder.UseEnvironment("Test");
+        builder.UseEnvironment("Development");
     }
 }
 ```

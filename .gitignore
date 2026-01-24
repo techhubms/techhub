@@ -8,6 +8,7 @@ scripts/content-processing/execute-with-token.ps1
 **/.logs/
 trivy-test.sarif
 coverage.xml
+.tmp
 
 # .NET Build outputs
 bin/
@@ -124,3 +125,5 @@ $RECYCLE.BIN/
 
 # Mono
 mono_crash.*
+
+.vscode/mcp.json

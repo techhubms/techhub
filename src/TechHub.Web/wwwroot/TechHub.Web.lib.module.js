@@ -8,8 +8,8 @@
  * This is a Blazor requirement - the framework auto-discovers and executes this file.
  * @see https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/startup
  * 
- * Other JavaScript files (filtering.js, etc.) are in wwwroot/js/
- * because they are NOT Blazor initializers - they're loaded separately.
+ * Other JavaScript files are in wwwroot/js/ and documented in Configuration/JsFiles.cs.
+ * Those files are NOT Blazor initializers - they're loaded separately via App.razor.
  * 
  * This module exposes lifecycle callbacks used by:
  * - E2E tests (via BlazorHelpers.WaitForBlazorReadyAsync) to wait for interactivity

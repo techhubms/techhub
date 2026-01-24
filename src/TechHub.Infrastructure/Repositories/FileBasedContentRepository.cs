@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
@@ -12,15 +13,17 @@ namespace TechHub.Infrastructure.Repositories;
 /// <summary>
 /// Repository for loading content from markdown files in collections directories
 /// Reads from: collections/_news/, collections/_videos/, collections/_blogs/, etc.
+/// Uses IMemoryCache for caching loaded content.
 /// </summary>
-public sealed class FileBasedContentRepository : IContentRepository, IDisposable
+public class FileBasedContentRepository : IContentRepository
 {
     private readonly string _basePath;
     private readonly FrontMatterParser _frontMatterParser;
     private readonly IMarkdownService _markdownService;
     private readonly ITagMatchingService _tagMatchingService;
-    private IReadOnlyList<ContentItem>? _cachedAllItems;
-    private readonly SemaphoreSlim _loadLock = new(1, 1);
+    private readonly IMemoryCache _cache;
+
+    private const string CacheKey = "ContentRepository:AllItems";
 
     private static readonly string[] _validCollections =
     [
@@ -35,12 +38,14 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         IOptions<AppSettings> settings,
         IMarkdownService markdownService,
         ITagMatchingService tagMatchingService,
-        IHostEnvironment environment)
+        IHostEnvironment environment,
+        IMemoryCache cache)
     {
         ArgumentNullException.ThrowIfNull(settings);
         ArgumentNullException.ThrowIfNull(markdownService);
         ArgumentNullException.ThrowIfNull(tagMatchingService);
         ArgumentNullException.ThrowIfNull(environment);
+        ArgumentNullException.ThrowIfNull(cache);
 
         var configuredPath = settings.Value.Content.CollectionsPath;
 
@@ -70,6 +75,7 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
         _frontMatterParser = new FrontMatterParser();
         _markdownService = markdownService;
         _tagMatchingService = tagMatchingService;
+        _cache = cache;
     }
 
     /// <summary>
@@ -105,29 +111,15 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 
     /// <summary>
     /// Get all content items across all collections.
-    /// Loads from disk once at startup and caches in memory.
+    /// Uses IMemoryCache to cache loaded data. Cache never expires (content is static).
     /// Returns items sorted by date (DateEpoch) in descending order (newest first).
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> GetAllAsync(CancellationToken cancellationToken = default)
     {
-        // Return cached data if already loaded
-        if (_cachedAllItems != null)
+        return await _cache.GetOrCreateAsync(CacheKey, async entry =>
         {
-            return _cachedAllItems;
-        }
-
-        // Thread-safe lazy loading
-        await _loadLock.WaitAsync(cancellationToken);
-        try
-        {
-            // Double-check after acquiring lock (required for thread-safety)
-            // CA1508 false positive: another thread may have populated the cache while we waited for the lock
-#pragma warning disable CA1508 // Avoid dead conditional code - this is a valid double-check pattern
-            if (_cachedAllItems != null)
-            {
-                return _cachedAllItems;
-            }
-#pragma warning restore CA1508
+            // Cache never expires - content is loaded once and never changes without restart
+            entry.SetPriority(Microsoft.Extensions.Caching.Memory.CacheItemPriority.NeverRemove);
 
             // Load all collections in parallel for faster startup
             var collectionTasks = _validCollections
@@ -139,16 +131,13 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 
             // Filter out future-dated content (DateEpoch > current time)
             var currentEpoch = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-            _cachedAllItems = [.. allItems
+            var cachedItems = allItems
                 .Where(x => x.DateEpoch <= currentEpoch)
-                .OrderByDescending(x => x.DateEpoch)];
+                .OrderByDescending(x => x.DateEpoch)
+                .ToList();
 
-            return _cachedAllItems;
-        }
-        finally
-        {
-            _loadLock.Release();
-        }
+            return (IReadOnlyList<ContentItem>)cachedItems;
+        }) ?? [];
     }
 
     /// <summary>
@@ -488,14 +477,5 @@ public sealed class FileBasedContentRepository : IContentRepository, IDisposable
 
         // File is in root of collection directory
         return null;
-    }
-
-    /// <summary>
-    /// Dispose of resources
-    /// </summary>
-    public void Dispose()
-    {
-        _loadLock.Dispose();
-        GC.SuppressFinalize(this);
     }
 }

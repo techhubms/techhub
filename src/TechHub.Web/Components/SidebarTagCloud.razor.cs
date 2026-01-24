@@ -115,9 +115,18 @@ public partial class SidebarTagCloud : ComponentBase
     private HashSet<string> selectedTagsInternal = [];
     private bool isLoading = true;
     private bool hasError;
+    private bool hasInitialized; // Track if we've loaded tags to prevent double-load flicker
 
     protected override async Task OnInitializedAsync()
     {
+        // Prevent double initialization when transitioning from SSR to interactive mode
+        if (hasInitialized)
+        {
+            return;
+        }
+
+        hasInitialized = true;
+
         // Initialize selected tags from parameter (deduplicate and normalize)
         if (SelectedTags != null)
         {

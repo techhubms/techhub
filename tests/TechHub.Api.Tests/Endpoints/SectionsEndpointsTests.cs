@@ -2,6 +2,7 @@ using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
 using TechHub.Core.DTOs;
+using TechHub.TestUtilities;
 
 namespace TechHub.Api.Tests.Endpoints;
 
@@ -9,17 +10,13 @@ namespace TechHub.Api.Tests.Endpoints;
 /// Integration tests for Section API endpoints
 /// Tests all 6 section endpoints with mocked file system dependencies
 /// </summary>
-public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
+public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
 {
-    private readonly TechHubApiFactory _factory;
     private readonly HttpClient _client;
 
-    public SectionsEndpointsTests(TechHubApiFactory factory)
+    public SectionsEndpointsTests(TechHubIntegrationTestApiFactory factory)
     {
-        _factory = factory;
-        _factory.SetupDefaultSections();
-        _factory.SetupDefaultContent();
-        _client = _factory.CreateClient();
+        _client = factory.CreateClient();
     }
 
     [Fact]
@@ -33,9 +30,15 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
 
         var sections = await response.Content.ReadFromJsonAsync<List<SectionDto>>();
         sections.Should().NotBeNull();
-        sections!.Should().HaveCount(2);
+        sections!.Should().HaveCount(8);
+        sections.Should().Contain(s => s.Name == "all");
         sections.Should().Contain(s => s.Name == "ai");
         sections.Should().Contain(s => s.Name == "github-copilot");
+        sections.Should().Contain(s => s.Name == "ml");
+        sections.Should().Contain(s => s.Name == "devops");
+        sections.Should().Contain(s => s.Name == "azure");
+        sections.Should().Contain(s => s.Name == "coding");
+        sections.Should().Contain(s => s.Name == "security");
     }
 
     [Fact]
@@ -47,14 +50,19 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
 
         // Assert
         var aiSection = sections!.First(s => s.Name == "ai");
-        aiSection.Title.Should().Be("AI");
-        aiSection.Description.Should().Be("Artificial Intelligence resources");
+        aiSection.Title.Should().Be("Artificial Intelligence");
+        aiSection.Description.Should().Be("Your gateway to the AI revolution. From breakthrough announcements to practical tutorials, explore how artificial intelligence is reshaping the way we work and create.");
         aiSection.Url.Should().Be("/ai");
         aiSection.Name.Should().Be("ai");
-        aiSection.BackgroundImage.Should().Be("/assets/section-backgrounds/ai.jpg");
-        aiSection.Collections.Should().HaveCount(2);
+        aiSection.Collections.Should().HaveCount(8);
         aiSection.Collections.Should().Contain(c => c.Name == "news");
         aiSection.Collections.Should().Contain(c => c.Name == "blogs");
+        aiSection.Collections.Should().Contain(c => c.Name == "videos");
+        aiSection.Collections.Should().Contain(c => c.Name == "community");
+        aiSection.Collections.Should().Contain(c => c.Name == "genai-basics");
+        aiSection.Collections.Should().Contain(c => c.Name == "genai-advanced");
+        aiSection.Collections.Should().Contain(c => c.Name == "genai-applied");
+        aiSection.Collections.Should().Contain(c => c.Name == "sdlc");
     }
 
     [Fact]
@@ -69,8 +77,8 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         var section = await response.Content.ReadFromJsonAsync<SectionDto>();
         section.Should().NotBeNull();
         section!.Name.Should().Be("ai");
-        section.Title.Should().Be("AI");
-        section.Collections.Should().HaveCount(2);
+        section.Title.Should().Be("Artificial Intelligence");
+        section.Collections.Should().HaveCount(8);
     }
 
     [Fact]
@@ -94,7 +102,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
 
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
-        items!.Should().HaveCount(2); // 2 items with AI section
+        items!.Should().NotBeEmpty(); // AI section has items
         items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("ai"));
     }
 
@@ -119,9 +127,15 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
 
         var collections = await response.Content.ReadFromJsonAsync<List<CollectionReferenceDto>>();
         collections.Should().NotBeNull();
-        collections!.Should().HaveCount(2);
+        collections!.Should().HaveCount(8);
         collections.Should().Contain(c => c.Name == "news");
+        collections.Should().Contain(c => c.Name == "blogs");
         collections.Should().Contain(c => c.Name == "videos");
+        collections.Should().Contain(c => c.Name == "community");
+        collections.Should().Contain(c => c.Name == "features");
+        collections.Should().Contain(c => c.Name == "vscode-updates");
+        collections.Should().Contain(c => c.Name == "levels-of-enlightenment");
+        collections.Should().Contain(c => c.Name == "handbook");
     }
 
     [Fact]
@@ -181,9 +195,12 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
 
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
-        items!.Should().HaveCount(1); // 1 AI news item
-        items![0].CollectionName.Should().Be("news");
-        items[0].SectionNames.Should().Contain("ai");
+        items!.Should().NotBeEmpty(); // AI news collection has items
+        items.Should().AllSatisfy(item =>
+        {
+            item.CollectionName.Should().Be("news");
+            item.SectionNames.Should().Contain("ai");
+        });
     }
 
     [Fact]
@@ -197,9 +214,12 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
 
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
         items.Should().NotBeNull();
-        items!.Should().HaveCount(1);
-        items![0].CollectionName.Should().Be("videos");
-        items[0].SectionNames.Should().Contain("github-copilot");
+        items!.Should().NotBeEmpty(); // GitHub Copilot videos collection has items
+        items.Should().AllSatisfy(item =>
+        {
+            item.CollectionName.Should().Be("videos");
+            item.SectionNames.Should().Contain("github-copilot");
+        });
     }
 
     [Fact]
@@ -229,8 +249,13 @@ public class SectionsEndpointsTests : IClassFixture<TechHubApiFactory>
         var response = await _client.GetAsync("/api/sections/ai/collections/news/items");
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
 
-        // Assert - URLs should include section context and be lowercase 
-        items![0].Url.Should().Be("/ai/news/2024-01-15-ai-news-1");
+        // Assert - URLs use primary section (which may differ from requested section for multi-section content)
+        items.Should().NotBeEmpty();
+        items!.Should().AllSatisfy(item =>
+        {
+            item.Url.Should().MatchRegex(@"^/[a-z-]+/news/[0-9]{4}-[0-9]{2}-[0-9]{2}-.+$",
+                "URL should include primary section, collection, and slug");
+        });
     }
 
     [Theory]

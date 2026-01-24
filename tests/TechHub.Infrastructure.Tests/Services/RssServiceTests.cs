@@ -17,7 +17,6 @@ public class RssServiceTests
         Title = "AI",
         Description = "Artificial Intelligence resources",
         Url = "/ai",
-        BackgroundImage = "/images/ai.jpg",
         Collections =
         [
             new() { Name = "news", Title = "News", Url = "/ai/news", Description = "Latest AI news", IsCustom = false }

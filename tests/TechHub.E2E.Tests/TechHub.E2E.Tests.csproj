@@ -24,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\TechHub.Api\TechHub.Api.csproj" />
     <ProjectReference Include="..\..\src\TechHub.Infrastructure\TechHub.Infrastructure.csproj" />
+    <ProjectReference Include="..\TechHub.TestUtilities\TechHub.TestUtilities.csproj" />
   </ItemGroup>
 
   <ItemGroup>

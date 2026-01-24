@@ -300,20 +300,18 @@ Components/
 
 #### CSS Bundle Configuration
 
-**App.razor** - Conditional loading based on environment:
+CSS files are defined once in `TechHub.Web.Configuration.CssFiles.All` and referenced by both App.razor and Program.cs.
+
+**App.razor** - Uses CssFiles array in Development, bundle in Production:
 
 ```html
-@if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development" || 
-     Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Test")
+@if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
 {
     <!-- Development: Individual files for debugging -->
-    <link rel="stylesheet" href="css/design-tokens.css" />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/article.css" />
-    <link rel="stylesheet" href="css/sidebar.css" />
-    <link rel="stylesheet" href="css/page-container.css" />
-    <link rel="stylesheet" href="css/loading.css" />
-    <link rel="stylesheet" href="css/nav-helpers.css" />
+    @foreach (var cssFile in TechHub.Web.Configuration.CssFiles.All)
+    {
+        <link rel="stylesheet" href="@cssFile" />
+    }
 }
 else
 {
@@ -324,18 +322,28 @@ else
 <link rel="stylesheet" href="@Assets["TechHub.Web.styles.css"]" />
 ```
 
-**Program.cs** - WebOptimizer bundle configuration:
+**Program.cs** - WebOptimizer bundle uses same CssFiles array:
+
+```csharp
+if (!builder.Environment.IsDevelopment())
+{
+    builder.Services.AddWebOptimizer(pipeline =>
+    {
+        pipeline.AddCssBundle("/css/bundle.css", CssFiles.All);
+    });
+}
+```
 
 **CSS Bundling Pattern**:
 
-- Use `AddWebOptimizer()` in Program.cs
-- Call `AddCssBundle("/css/bundle.css", ...files)` with all global CSS
-- List files in dependency order (tokens first, base second, components last)
+- CSS files defined ONCE in `Configuration/CssFiles.cs`
+- `AddWebOptimizer()` in Program.cs references `CssFiles.All`
+- App.razor loops through `CssFiles.All` in Development
 - Bundle path MUST match App.razor `<link>` reference
 
-**See**: [Program.cs](Program.cs) lines 20-30 for complete bundle configuration
+**See**: [Configuration/CssFiles.cs](Configuration/CssFiles.cs) for the single source of truth
 
-**CRITICAL**: App.razor and Program.cs MUST reference the exact same CSS files in the same order.
+**CRITICAL**: Add new CSS files to `CssFiles.All` array - App.razor and Program.cs automatically stay in sync.
 
 #### When to Use Global vs Component-Scoped CSS
 
@@ -413,6 +421,327 @@ Is this style specific to ONE component/page?
 - **Performance** - Bundling in production reduces HTTP requests
 - **Developer experience** - Individual files in dev mode for easy debugging
 - **Automatic optimization** - Blazor handles component CSS bundling and scoping
+
+### Styling Rules & Best Practices
+
+#### Hover Effects - NO Position/Size Changes
+
+**🚨 CRITICAL**: Hover effects MUST NOT change element size or position. This prevents layout shifts and maintains a stable, professional user experience.
+
+**✅ ALLOWED in hover effects**:
+
+- `color` / `background-color` / `border-color` changes
+- `opacity` changes
+- `box-shadow` changes
+- `filter` effects (brightness, blur, etc.)
+- `rotate()` transforms (e.g., dropdown arrows)
+
+**🚫 FORBIDDEN in hover effects**:
+
+- `translateY()` / `translateX()` - Moves elements
+- `scale()` - Changes element size
+- ANY transform that changes visual position or size
+
+**✅ ALLOWED transforms (non-hover)**:
+
+- Animation transforms (modals enter/exit, mobile nav slide-in)
+- Centering transforms (e.g., `translate(-50%, -50%)` for absolute positioning)
+- Active/press states IF not combined with size/position changes
+
+**Examples**:
+
+```css
+/* ✅ CORRECT - Color and shadow changes only */
+.card:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-purple-medium);
+}
+
+.button:hover {
+    background: var(--color-purple-vibrant);
+    color: var(--color-text-on-emphasis);
+}
+
+/* ✅ CORRECT - Rotate is allowed (doesn't move element) */
+.dropdown-arrow {
+    transition: transform 0.2s ease;
+}
+.dropdown-arrow.open {
+    transform: rotate(180deg);
+}
+
+/* ✅ CORRECT - Animation transform for modal entrance */
+.modal-content {
+    transform: translateY(30px) scale(0.95);
+    transition: transform 0.3s ease;
+}
+.modal-content.visible {
+    transform: translateY(0) scale(1);
+}
+
+/* 🚫 WRONG - translateY moves the element on hover */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* 🚫 WRONG - scale changes element size on hover */
+.button:hover {
+    transform: scale(1.1);
+}
+```
+
+**Why This Rule Exists**:
+
+- **Accessibility** - Size/position changes on hover are disorienting
+- **Touch devices** - No hover state, so layout should be stable
+- **Performance** - Color/opacity changes are GPU-accelerated, position changes trigger reflow
+- **Professional UX** - Subtle color/shadow changes feel polished, bouncing elements feel amateurish
+
+#### Image Handling by Convention
+
+**🚨 CRITICAL**: Images are resolved by naming convention, NOT stored in API models or configuration.
+
+**Section Background Images**:
+
+Section background images use a two-tier system:
+
+1. **Thumbnails** (400x140px) for SectionCards - Fast page loads
+2. **Full-size** images for SectionBanner - High quality hero images
+
+**File Structure**:
+
+```text
+wwwroot/images/
+├── section-backgrounds/         # Full-size images for banners (all formats)
+│   ├── ai.jxl                  # JPEG XL (best compression, modern browsers)
+│   ├── ai.webp                 # WebP (good compression, wide support)
+│   ├── ai.jpg                  # JPEG (fallback, universal support)
+│   ├── github-copilot.jxl
+│   ├── github-copilot.webp
+│   ├── github-copilot.jpg
+│   └── ... (all sections in all three formats)
+└── section-thumbnails/          # Thumbnails for cards (all formats)
+    ├── ai.jxl                  # 400x140 (optimized)
+    ├── ai.webp
+    ├── ai.jpg
+    └── ... (all sections in all three formats)
+```
+
+**CSS Classes**:
+
+Images are applied via CSS background-image properties in component-scoped stylesheets. The CSS references WebP format, but browsers automatically select the best format when using the `<picture>` element with multiple sources.
+
+**Note**: For CSS backgrounds, we use single format (WebP with JPG fallback in CSS). For `<img>` tags requiring multi-format support, use the ResponsiveImage component.
+
+**SectionCard.razor.css** (thumbnails):
+
+```css
+.section-bg-ai { background-image: url('/images/section-thumbnails/ai.webp'); }
+.section-bg-github-copilot { background-image: url('/images/section-thumbnails/github-copilot.webp'); }
+.section-bg-azure { background-image: url('/images/section-thumbnails/azure.webp'); }
+/* ... etc */
+```
+
+**SectionBanner.razor.css** (full-size):
+
+```css
+.section-banner-bg-ai { background-image: url('/images/section-backgrounds/ai.webp'); }
+.section-banner-bg-github-copilot { background-image: url('/images/section-backgrounds/github-copilot.webp'); }
+.section-banner-bg-azure { background-image: url('/images/section-backgrounds/azure.webp'); }
+/* ... etc */
+```
+
+**ResponsiveImage Component** (for `<img>` tags with format fallbacks):
+
+For inline images that need JPEG XL/WebP/JPG format fallbacks, use the ResponsiveImage component:
+
+```razor
+<!-- Standard image with format fallbacks -->
+<ResponsiveImage ImagePath="/images/about/author.webp" 
+                 Alt="Author photo" 
+                 Loading="lazy" />
+
+<!-- Above-the-fold image (eager loading) -->
+<ResponsiveImage ImagePath="/images/hero.webp" 
+                 Alt="Hero image" 
+                 Loading="eager" />
+```
+
+The component automatically generates `<picture>` elements with JPEG XL, WebP, and JPEG sources for optimal format selection.
+
+**Component Usage**:
+
+```html
+<!-- SectionCard.razor -->
+<div class="section-card-header section-bg-@Section.Name">
+  <!-- Content -->
+</div>
+
+<!-- SectionBanner.razor -->
+<div class="section-banner section-banner-bg-@Section.Name">
+  <!-- Content -->
+</div>
+```
+
+**Adding a New Section**:
+
+1. Create images: `{section-name}.webp` in both directories
+2. Add CSS classes to both `.razor.css` files
+3. ✅ NO API changes needed
+4. ✅ NO configuration changes needed
+
+**Benefits**:
+
+- **Performance** - Thumbnails for cards, full-size for banners
+- **Simplicity** - Images resolved purely by naming convention
+- **Maintainability** - Add section = add images + CSS classes
+- **No API dependency** - Frontend fully controls image presentation
+
+**🚫 NEVER**:
+
+- Store image paths in API models or DTOs
+- Store image paths in appsettings.json
+- Use inline `style="background-image: url(...)"`
+- Mix thumbnail and full-size images (cards MUST use thumbnails)
+
+#### CSS Organization Best Practices
+
+**Component-Scoped vs Global Decision**:
+
+✅ **Component-scoped** (`.razor.css`):
+
+- Styles used ONLY by that component
+- Layout specific to that page
+- Component-specific hover states
+- Even if only ONE component uses it currently
+
+✅ **Global** (`wwwroot/css/`):
+
+- Styles used by 2+ components
+- Shared layout classes (`.page-with-sidebar`)
+- Design system tokens (colors, spacing, typography)
+- Reusable patterns (buttons, cards, tags)
+
+**Class Naming Patterns**:
+
+```css
+/* Component-specific prefixes for clarity */
+.section-card-container       /* SectionCard component */
+.sidebar-tag-button           /* SidebarTagCloud component */
+.nav-helper-btn               /* Navigation helpers */
+
+/* Background image classes follow naming convention */
+.section-bg-{name}            /* Card backgrounds (thumbnails) */
+.section-banner-bg-{name}     /* Banner backgrounds (full-size) */
+```
+
+**File Organization**:
+
+- Group related styles together (e.g., all sidebar components in one file)
+- Use comments to mark sections clearly
+- Keep files focused and cohesive
+- Split when a file exceeds ~500 lines
+
+**🚫 NEVER**:
+
+- Put layout classes in component-scoped CSS
+- Duplicate styles across files
+- Use generic class names without component prefix
+- Mix component logic with global patterns
+
+### JavaScript Architecture
+
+**CRITICAL PRINCIPLE**: Blazor handles most interactivity server-side. JavaScript is ONLY for:
+
+1. **Browser-native features** Blazor can't access (scroll position, IntersectionObserver, history API)
+2. **Enhanced navigation hooks** (Blazor `enhancedload` event for SPA-style page transitions)
+3. **Third-party libraries** (Highlight.js, Mermaid) that require JavaScript execution
+
+**JavaScript File Configuration**: See [Configuration/JsFiles.cs](Configuration/JsFiles.cs)
+
+#### JavaScript Loading Strategies
+
+| Loading Type          | Use When                | Example                                  | How                                      |
+| --------------------- | ----------------------- | ---------------------------------------- | ---------------------------------------- |
+| **Static**            | Every page needs it     | `nav-helpers.js`                         | `<script src="@Assets[...]" defer>`      |
+| **Dynamic ES Module** | Only some pages need it | `toc-scroll-spy.js`, `custom-pages.js`   | `import('./js/file.js')` via ImportMap   |
+| **External CDN**      | Third-party library     | Highlight.js, Mermaid                    | Dynamic `loadScript()` with SRI          |
+
+#### Fingerprinting (Cache Busting)
+
+**CRITICAL**: ALL local JavaScript files MUST use fingerprinted URLs for proper cache invalidation.
+
+**Static scripts** - Use `@Assets["js/file.js"]`:
+
+```html
+<!-- ✅ CORRECT - Fingerprinted URL (cache busting works) -->
+<script src="@Assets["js/nav-helpers.js"]" defer></script>
+
+<!-- ❌ WRONG - Raw path (will NOT cache bust on updates) -->
+<script src="js/nav-helpers.js" defer></script>
+```
+
+**Dynamic imports** - Use `import()` with ImportMap component:
+
+```javascript
+// ✅ CORRECT - ImportMap rewrites to fingerprinted path
+await import('./js/toc-scroll-spy.js');
+
+// ❌ WRONG - Bypasses fingerprinting
+await loadScript('/js/file.js');
+```
+
+**How ImportMap Works**:
+
+1. `<ImportMap />` in App.razor generates a `<script type="importmap">` block
+2. Maps module specifiers to fingerprinted URLs (e.g., `./js/toc-scroll-spy.js` → `./js/toc-scroll-spy.abc123.js`)
+3. Browser's `import()` uses the map to resolve fingerprinted paths
+4. Result: Dynamic imports get proper cache busting
+
+#### JavaScript Files Reference
+
+**Files in `wwwroot/js/`**:
+
+| File                 | Purpose                                     | Loading                                   | Format    |
+| -------------------- | ------------------------------------------- | ----------------------------------------- | --------- |
+| `nav-helpers.js`     | Back to top, back to previous buttons       | Static (every page)                       | IIFE      |
+| `toc-scroll-spy.js`  | TOC scroll highlighting, history management | Dynamic (pages with TOC)                  | ES Module |
+| `custom-pages.js`    | Collapsible sections for SDLC/DX pages      | Dynamic (pages with `[data-collapsible]`) | ES Module |
+
+**Special file in `wwwroot/`**:
+
+| File                            | Purpose                      | Loading                    |
+| ------------------------------- | ---------------------------- | -------------------------- |
+| `TechHub.Web.lib.module.js`     | Blazor lifecycle callbacks   | Auto-discovered by Blazor  |
+
+**NEVER create**: Client-side filtering JavaScript. Tag filtering is 100% Blazor server-side (see `SidebarTagCloud.razor`).
+
+#### External CDN Libraries
+
+External libraries (Highlight.js, Mermaid) are loaded from CDNs for performance.
+**All versions and SRI hashes are centralized** in [Configuration/CdnLibraries.cs](Configuration/CdnLibraries.cs).
+
+**To update a CDN library version**:
+
+1. Update the version in `CdnLibraries.cs` (e.g., `HighlightJs.Version`)
+2. Generate new SRI hash from <https://www.srihash.org/>
+3. Update the integrity hash in `CdnLibraries.cs`
+4. Test locally to verify the library loads correctly
+
+**Current libraries**:
+
+- **Highlight.js**: Syntax highlighting for code blocks
+- **Mermaid**: Diagram rendering (flowcharts, sequence diagrams, etc.)
+
+#### Adding New JavaScript Files
+
+1. **Add file** to `wwwroot/js/`
+2. **Update** `Configuration/JsFiles.cs` for documentation
+3. **Load correctly**:
+   - Static (every page): Add `<script src="@Assets[\"js/file.js\"]" defer>` to App.razor
+   - Dynamic (conditional): Add `await import('./js/file.js')` in the module script block
+4. **Document** purpose in this file under "JavaScript Files Reference"
 
 ### Page Structure and Semantic HTML
 
@@ -1147,7 +1476,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     [Parameter]
     public SectionDto? Section { get; set; }
     
-    // For static pages - provide Title, Description, BackgroundImage
+    // For static pages - provide Title, Description, BackgroundCssClass
     [Parameter]
     public string? Title { get; set; }
     
@@ -1155,14 +1484,14 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     public string? Description { get; set; }
     
     [Parameter]
-    public string? BackgroundImage { get; set; }
+    public string? BackgroundCssClass { get; set; }
     
     // Computed properties - prefer Section data if available
     private string DisplayTitle => Section?.Title ?? Title ?? string.Empty;
     private string? DisplayDescription => Section?.Description ?? Description;
-    private string? DisplayBackgroundImage => Section?.BackgroundImage ?? BackgroundImage;
-    
-    private string StyleAttribute => $"background-image: url('{DisplayBackgroundImage ?? "/images/section-backgrounds/home.jpg"}'); background-size: cover; background-position: center center; background-repeat: no-repeat;";
+    private string BackgroundClass => Section != null
+        ? $"section-banner-bg-{Section.Name}"
+        : BackgroundCssClass ?? "section-banner-bg-none";
 }
 ```
 
@@ -1176,7 +1505,7 @@ font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
 
 **Component Parameters**:
 
-- **PageHeader**: `Section` (SectionDto) for section pages, or `Title`/`Description`/`BackgroundImage` for static pages
+- **PageHeader**: `Section` (SectionDto) for section pages, or `Title`/`Description`/`BackgroundCssClass` for static pages
 - **CollectionNav**: `SectionName` (string), `SelectedCollection` (string), `OnCollectionChange` (EventCallback)
 - **CollectionContent**: `SectionName` (string), `CollectionName` (string)
 
@@ -1392,16 +1721,17 @@ else
 
 ### Component with Background Image
 
-**Pattern**: Use inline styles for dynamic background images with fallback color
+**Pattern**: Use CSS classes for background images (defined in CSS with responsive image formats)
 
 ```razor
-<div class="section-card"
-     style="background-image: url('@Section.BackgroundImage'); background-color: var(--dark-navy);">
+<div class="section-card section-bg-@Section.Name">
     <div class="section-card-overlay">
         <h2>@Section.Title</h2>
     </div>
 </div>
 ```
+
+**Why CSS Classes**: Background images use CSS classes (e.g., `section-bg-ai`, `section-banner-bg-ai`) which reference responsive image formats (WebP, JPEG XL) with proper fallbacks. This approach enables better performance through modern image formats while maintaining browser compatibility.
 
 **CSS**:
 
@@ -1522,33 +1852,50 @@ Source: [ASP.NET Core Blazor project structure](https://github.com/dotnet/aspnet
 
 **Path Convention**: Use `/images/` prefix (NOT `/assets/`)
 
-**Section Backgrounds**: `/images/section-backgrounds/{section-name}.jpg`
+**Multi-Format Support**: All images provided in three formats for optimal performance:
+
+- **JPEG XL (`.jxl`)**: Best compression, modern browsers (Chrome 109+, Edge 109+)
+- **WebP (`.webp`)**: Good compression, wide browser support
+- **JPEG (`.jpg`)**: Universal fallback, all browsers
+
+**Section Backgrounds**: `/images/section-backgrounds/{section-name}.{format}`
 
 **Examples**:
 
-- `/images/section-backgrounds/ai.jpg`
-- `/images/section-backgrounds/github-copilot.jpg`
-- `/images/section-backgrounds/azure.jpg`
+- `/images/section-backgrounds/ai.jxl` (best)
+- `/images/section-backgrounds/ai.webp` (fallback)
+- `/images/section-backgrounds/ai.jpg` (universal)
 
-**Image Sizes**: 743KB - 967KB per section background (optimized JPG)
+**Format Selection**:
+
+- CSS backgrounds: Reference `.webp` (browsers use native format if supported)
+- `<img>` tags: Use ResponsiveImage component for automatic `<picture>` generation with all formats
+
+**Image Optimization**: Modern formats (JPEG XL, WebP) provide 30-50% better compression than JPEG while maintaining quality.
 
 ## Static Files & Browser Caching
 
-**Configuration**: `Program.cs` configures aggressive browser caching for static assets
+**Implementation**: `StaticFilesCacheMiddleware` provides centralized cache control for all static files
+
+**Middleware Architecture**:
+
+- Placed **FIRST** in pipeline (before MapStaticAssets) to override built-in headers
+- Uses `OnStarting` callback to set cache headers after response is prepared
+- Detects fingerprinted files (e.g., `styles.abc123.css`) for immutable caching
 
 **Cache Strategy**:
 
-- **Images** (jpg, png, webp, svg, ico): 1 year cache (`max-age=31536000,immutable`)
-- **Fonts** (woff, woff2, ttf, eot): 1 year cache (`max-age=31536000,immutable`)
-- **CSS/JS** (via MapStaticAssets): 1 year cache with fingerprinting for cache busting
-- **Other files**: 1 hour cache (`max-age=3600`)
+- **Fingerprinted assets**: Forever cache (`max-age=31536000,immutable`) - content change = new URL
+- **Images/Fonts** (jpg, png, webp, jxl, svg, ico, woff, woff2, ttf, eot): 1 year cache (`max-age=31536000,immutable`)
+- **CSS/JS** (non-fingerprinted): Short cache with revalidation (`max-age=3600,must-revalidate`)
+- **Other files**: No cache headers set (browser defaults)
 
 **Why This Works**:
 
 - **`immutable`**: Tells browser the file will NEVER change at this URL
 - **1 year cache**: Banner images, fonts, and other assets cached locally for maximum performance
 - **No revalidation**: Browser uses cached version without asking server "has it changed?"
-- **Cache busting**: CSS/JS files get version fingerprint in filename (e.g., `styles.abc123.css`)
+- **Fingerprinting detection**: Automatically recognizes versioned files for aggressive caching
 
 **Benefits**:
 
@@ -1556,8 +1903,9 @@ Source: [ASP.NET Core Blazor project structure](https://github.com/dotnet/aspnet
 - ✅ Zero HTTP requests for cached assets = faster page loads
 - ✅ Reduces server bandwidth
 - ✅ Better user experience on slow connections
+- ✅ Automatic cache busting for fingerprinted assets
 
-**Source**: See `UseStaticFiles` configuration in [Program.cs](Program.cs)
+**Source**: See [StaticFilesCacheMiddleware.cs](Middleware/StaticFilesCacheMiddleware.cs) and configuration in [Program.cs](Program.cs)
 
 ## Testing Components
 
@@ -1774,6 +2122,8 @@ async function loadScriptsForPage() {
 - ✅ **Progressive Enhancement** - Works on initial load and after navigation
 
 ### JavaScript Utilities
+
+**See also**: [JavaScript Architecture](#javascript-architecture) for loading strategies, fingerprinting rules, and adding new files.
 
 **Navigation Helpers** (wwwroot/js/nav-helpers.js):
 

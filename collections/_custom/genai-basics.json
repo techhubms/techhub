@@ -5,17 +5,17 @@
       "mermaid": [
         {
           "id": "foundations-1950s-1990s",
-          "diagram": "graph LR\n    A[\"1956<br/>AI term coined<br/>Dartmouth Conference\"] --> B[\"1966<br/>ELIZA chatbot<br/>MIT\"] --> C[\"1997<br/>Deep Blue beats<br/>Kasparov\"]\n    \n    style A fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style B fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style C fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6",
+          "diagram": "graph LR\n    A[\"1956<br/>AI term coined<br/>Dartmouth Conference\"] --> B[\"1966<br/>ELIZA chatbot<br/>MIT\"] --> C[\"1997<br/>Deep Blue beats<br/>Kasparov\"]",
           "title": "Foundations (1950s-1990s)"
         },
         {
           "id": "deep-learning-era-2010s",
-          "diagram": "graph LR\n    A[\"2011<br/>IBM Watson<br/>wins Jeopardy!\"] --> B[\"2012<br/>AlexNet<br/>ImageNet breakthrough\"] --> C[\"2014<br/>First GAN<br/>introduced\"] --> D[\"2018<br/>GPT-1<br/>117M parameters\"]\n    \n    style A fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style B fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style C fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style D fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6",
+          "diagram": "graph LR\n    A[\"2011<br/>IBM Watson<br/>wins Jeopardy!\"] --> B[\"2012<br/>AlexNet<br/>ImageNet breakthrough\"] --> C[\"2014<br/>First GAN<br/>introduced\"] --> D[\"2018<br/>GPT-1<br/>117M parameters\"]",
           "title": "Deep Learning Era (2010s)"
         },
         {
           "id": "genai-revolution-2020s",
-          "diagram": "graph LR\n    A[\"2020<br/>GPT-3<br/>175B parameters\"] --> B[\"2023<br/>GPT-4 & Claude<br/>major quality leaps\"] --> C[\"2024<br/>Multimodal LLMs<br/>text, images, audio\"] --> D[\"2025<br/>Agentic AI<br/>GPT-5 released\"]\n    \n    style A fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style B fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style C fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style D fill:#4caf50,color:#1a1a2e,stroke:#4caf50",
+          "diagram": "graph LR\n    A[\"2020<br/>GPT-3<br/>175B parameters\"] --> B[\"2023<br/>GPT-4 & Claude<br/>major quality leaps\"] --> C[\"2024<br/>Multimodal LLMs<br/>text, images, audio\"] --> D[\"2025<br/>Agentic AI<br/>GPT-5 released\"]\n    \n    style D fill:#4caf50,color:#1a1a2e,stroke:#4caf50",
           "title": "GenAI Revolution (2020s)"
         }
       ],
@@ -32,8 +32,8 @@
       "mermaid": [
         {
           "id": "diagram-0",
-          "diagram": "graph TB\n    subgraph AI[\"Artificial Intelligence\"]\n        subgraph ML[\"Machine Learning\"]\n            subgraph DL[\"Deep Learning\"]\n                GenAI[\"Generative AI\"]\n            end\n        end\n    end\n    \n    style AI fill:#1976d2,color:#fff,stroke:#1976d2\n    style ML fill:#2196f3,color:#fff,stroke:#2196f3\n    style DL fill:#64b5f6,color:#1a1a2e,stroke:#64b5f6\n    style GenAI fill:#f9a825,color:#1a1a2e,stroke:#f9a825",
-          "title": null
+          "diagram": "graph TB\n    subgraph AI[\"Artificial Intelligence\"]\n        subgraph ML[\"Machine Learning\"]\n            subgraph DL[\"Deep Learning\"]\n                GenAI[\"Generative AI\"]\n            end\n        end\n    end\n    \n    style AI fill:#0d47a1,color:#fff,stroke:#0d47a1\n    style ML fill:#1565c0,color:#fff,stroke:#1565c0\n    style DL fill:#1976d2,color:#fff,stroke:#1976d2\n    style GenAI fill:#e67e22,color:#fff,stroke:#e67e22",
+          "title": "The Nested Relationship of AI Concepts"
         }
       ],
       "title": "ML vs AI vs GenAI"
@@ -47,8 +47,8 @@
       "mermaid": [
         {
           "id": "diagram-0",
-          "diagram": "graph LR\n    subgraph Vendors[\"AI Vendors\"]\n        OpenAI[\"OpenAI\"]\n        Google[\"Google\"]\n        Anthropic[\"Anthropic\"]\n        Microsoft[\"Microsoft\"]\n        HF[\"Hugging Face\"]\n    end\n    \n    subgraph Models[\"Models\"]\n        LLMs[\"Language Models\"]\n        Vision[\"Vision Models\"]\n        Audio[\"Audio Models\"]\n    end\n    \n    subgraph Users[\"End Users\"]\n        Dev[\"Developers\"]\n        Biz[\"Businesses\"]\n        Consumer[\"Consumers\"]\n    end\n    \n    OpenAI --> LLMs\n    OpenAI --> Vision\n    Google --> LLMs\n    Google --> Vision\n    Anthropic --> LLMs\n    Microsoft --> LLMs\n    HF --> LLMs\n    HF --> Vision\n    HF --> Audio\n    \n    LLMs --> Dev\n    Vision --> Dev\n    Audio --> Dev\n    Dev --> Biz\n    Dev --> Consumer\n    \n    style OpenAI fill:#10a37f,color:#fff,stroke:#10a37f\n    style Google fill:#4285f4,color:#fff,stroke:#4285f4\n    style Anthropic fill:#d4a574,color:#1a1a2e,stroke:#d4a574\n    style Microsoft fill:#00bcf2,color:#fff,stroke:#00bcf2\n    style HF fill:#ff9d00,color:#1a1a2e,stroke:#ff9d00\n    style LLMs fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Vision fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Audio fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Dev fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Biz fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Consumer fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6",
-          "title": null
+          "diagram": "graph LR\n    subgraph Vendors[\"AI Vendors\"]\n        OpenAI[\"OpenAI\"]\n        Google[\"Google\"]\n        Anthropic[\"Anthropic\"]\n        Microsoft[\"Microsoft\"]\n        HF[\"Hugging Face\"]\n    end\n    \n    subgraph Models[\"Models\"]\n        LLMs[\"Language Models\"]\n        Vision[\"Vision Models\"]\n        Audio[\"Audio Models\"]\n    end\n    \n    subgraph Users[\"End Users\"]\n        Dev[\"Developers\"]\n        Biz[\"Businesses\"]\n        Consumer[\"Consumers\"]\n    end\n    \n    OpenAI --> LLMs\n    OpenAI --> Vision\n    Google --> LLMs\n    Google --> Vision\n    Anthropic --> LLMs\n    Microsoft --> LLMs\n    HF --> LLMs\n    HF --> Vision\n    HF --> Audio\n    \n    LLMs --> Dev\n    Vision --> Dev\n    Audio --> Dev\n    Dev --> Biz\n    Dev --> Consumer\n    \n    style OpenAI fill:#10a37f,color:#fff,stroke:#10a37f\n    style Google fill:#4285f4,color:#fff,stroke:#4285f4\n    style Anthropic fill:#d4a574,color:#1a1a2e,stroke:#d4a574\n    style Microsoft fill:#00bcf2,color:#fff,stroke:#00bcf2\n    style HF fill:#ff9d00,color:#1a1a2e,stroke:#ff9d00",
+          "title": "AI Vendors, Models, and End Users"
         }
       ],
       "moreInfo": [
@@ -118,8 +118,8 @@
       "mermaid": [
         {
           "id": "diagram-0",
-          "diagram": "graph LR\n    App[\"Your App\"] --> Auth[\"Auth\"] --> Proxy[\"Proxy\"] --> LB[\"Load Balancer\"] --> Filter[\"Content Filter\"] --> Rate[\"Rate Limiter\"] --> Models[\"AI Models\"]\n    \n    style App fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Auth fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Proxy fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style LB fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Filter fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Rate fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Models fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6",
-          "title": null
+          "diagram": "graph LR\n    App[\"Your App\"] --> Auth[\"Auth\"] --> Proxy[\"Proxy\"] --> LB[\"Load Balancer\"] --> Filter[\"Content Filter\"] --> Rate[\"Rate Limiter\"] --> Models[\"AI Models\"]",
+          "title": "AI Provider Infrastructure Components"
         }
       ],
       "faq": [
@@ -173,8 +173,8 @@
       "mermaid": [
         {
           "id": "diagram-0",
-          "diagram": "graph LR\n    Text[\"The unbelievable AI!\"] --> Split[\"Tokenizer\"]\n    Split --> T1[\"The\"]\n    Split --> T2[\"un\"]\n    Split --> T3[\"believ\"]\n    Split --> T4[\"able\"]\n    Split --> T5[\"AI\"]\n    Split --> T6[\"!\"]\n    \n    T1 --> ID1[\"791\"]\n    T2 --> ID2[\"359\"]\n    T3 --> ID3[\"25089\"]\n    T4 --> ID4[\"481\"]\n    T5 --> ID5[\"9552\"]\n    T6 --> ID6[\"0\"]\n    \n    style Text fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Split fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style T1 fill:#4caf50,color:#fff,stroke:#4caf50\n    style T2 fill:#64b5f6,color:#1a1a2e,stroke:#64b5f6\n    style T3 fill:#64b5f6,color:#1a1a2e,stroke:#64b5f6\n    style T4 fill:#64b5f6,color:#1a1a2e,stroke:#64b5f6\n    style T5 fill:#9c27b0,color:#fff,stroke:#9c27b0\n    style T6 fill:#ff9800,color:#1a1a2e,stroke:#ff9800\n    style ID1 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style ID2 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style ID3 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style ID4 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style ID5 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style ID6 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6",
-          "title": null
+          "diagram": "graph LR\n    Text[\"The unbelievable AI!\"] --> Split[\"Tokenizer\"]\n    Split --> T1[\"The\"]\n    Split --> T2[\"un\"]\n    Split --> T3[\"believ\"]\n    Split --> T4[\"able\"]\n    Split --> T5[\"AI\"]\n    Split --> T6[\"!\"]\n    \n    T1 --> ID1[\"791\"]\n    T2 --> ID2[\"359\"]\n    T3 --> ID3[\"25089\"]\n    T4 --> ID4[\"481\"]\n    T5 --> ID5[\"9552\"]\n    T6 --> ID6[\"0\"]\n    \n    style T1 fill:#4caf50,color:#fff,stroke:#4caf50\n    style T5 fill:#9c27b0,color:#fff,stroke:#9c27b0\n    style T6 fill:#ff9800,color:#1a1a2e,stroke:#ff9800",
+          "title": "Tokenization Example"
         }
       ],
       "moreInfo": [
@@ -198,13 +198,13 @@
       "mermaid": [
         {
           "id": "diagram-0",
-          "diagram": "graph LR\n    Input[\"The dog ...\"] --> LLM[\"Language Model\"]\n    LLM --> O1[\"barks 32%\"]\n    LLM --> O2[\"runs 18%\"]\n    LLM --> O3[\"sleeps 12%\"]\n    LLM --> O4[\"jumped 8%\"]\n    LLM --> O5[\"other ...\"]\n    \n    style Input fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style LLM fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style O1 fill:#4caf50,color:#fff,stroke:#4caf50\n    style O2 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style O3 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style O4 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style O5 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6",
-          "title": null
+          "diagram": "graph LR\n    Input[\"The dog ...\"] --> LLM[\"Language Model\"]\n    LLM --> O1[\"barks 32%\"]\n    LLM --> O2[\"runs 18%\"]\n    LLM --> O3[\"sleeps 12%\"]\n    LLM --> O4[\"jumped 8%\"]\n    LLM --> O5[\"other ...\"]\n    \n    style O1 fill:#4caf50,color:#fff,stroke:#4caf50",
+          "title": "Next-Token Probability Distribution"
         },
         {
           "id": "diagram-1",
           "diagram": "sequenceDiagram\n    User->>LLM: \"The dog\"\n    LLM->>LLM: predict → \"barks\"\n    LLM->>LLM: predict → \"loudly\"\n    LLM->>LLM: predict → \"at\"...\n    LLM->>User: \"The dog barks loudly at the mailman.\"",
-          "title": null
+          "title": "Autoregressive Text Generation"
         }
       ],
       "title": "Next-token prediction: How LLMs generate text"
@@ -214,8 +214,8 @@
       "mermaid": [
         {
           "id": "diagram-0",
-          "diagram": "graph TB\n    Prompt[\"Your Prompt\"] --> Input[\"Input Tokens\"]\n    System[\"System Prompt\"] --> Input\n    History[\"Chat History\"] --> Input\n    Context[\"RAG Context\"] --> Input\n    \n    Input --> Cost[\"Total Cost\"]\n    Output[\"Output Tokens\"] --> Cost\n    \n    style Prompt fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style System fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style History fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Context fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Input fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Output fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Cost fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6",
-          "title": null
+          "diagram": "graph TB\n    Prompt[\"Your Prompt\"] --> Input[\"Input Tokens\"]\n    System[\"System Prompt\"] --> Input\n    History[\"Chat History\"] --> Input\n    Context[\"RAG Context\"] --> Input\n    \n    Input --> Cost[\"Total Cost\"]\n    Output[\"Output Tokens\"] --> Cost",
+          "title": "AI Cost Factors"
         }
       ],
       "moreInfo": [
@@ -240,7 +240,7 @@
         {
           "id": "diagram-0",
           "diagram": "graph LR\n    subgraph Problems[\"Problems\"]\n        H[\"Hallucinations\"]\n        IP[\"Input Poisoning\"]\n        J[\"Jailbreaking\"]\n        M[\"Math Errors\"]\n    end\n    \n    subgraph Solutions[\"Solutions\"]\n        Verify[\"Verify facts\"]\n        Filter[\"Input filtering\"]\n        Guard[\"Guardrails\"]\n        Tools[\"Use tools\"]\n        HITL[\"Human review\"]\n    end\n    \n    H --> Verify\n    H --> HITL\n    IP --> Filter\n    J --> Guard\n    M --> Tools\n    \n    style H fill:#ef5350,color:#fff,stroke:#ef5350\n    style IP fill:#ef5350,color:#fff,stroke:#ef5350\n    style J fill:#ef5350,color:#fff,stroke:#ef5350\n    style M fill:#ef5350,color:#fff,stroke:#ef5350\n    style Verify fill:#4caf50,color:#fff,stroke:#4caf50\n    style Filter fill:#4caf50,color:#fff,stroke:#4caf50\n    style Guard fill:#4caf50,color:#fff,stroke:#4caf50\n    style Tools fill:#4caf50,color:#fff,stroke:#4caf50\n    style HITL fill:#4caf50,color:#fff,stroke:#4caf50",
-          "title": null
+          "title": "AI Limitations and Mitigations"
         }
       ],
       "moreInfo": [

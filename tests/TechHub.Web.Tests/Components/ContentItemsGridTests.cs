@@ -2,9 +2,7 @@ using Bunit;
 using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Moq;
-using TechHub.Core.Configuration;
 using TechHub.Core.DTOs;
 using TechHub.Web.Components;
 using TechHub.Web.Services;
@@ -14,7 +12,7 @@ namespace TechHub.Web.Tests.Components;
 /// <summary>
 /// Tests for ContentItemsGrid.razor component page titles
 /// </summary>
-public class ContentItemsGridTests : TestContext
+public class ContentItemsGridTests : BunitContext
 {
     private readonly Mock<TechHubApiClient> _mockApiClient;
     private readonly SectionCache _sectionCache;
@@ -32,17 +30,6 @@ public class ContentItemsGridTests : TestContext
             .Setup(x => x.GetContentAsync(It.IsAny<string>(), It.IsAny<string>()))
             .ReturnsAsync([]);
 
-        // Configure WebAppSettings
-        var appSettings = new WebAppSettings
-        {
-            Seo = new SeoSettings
-            {
-                BaseUrl = "https://tech.hub.ms",
-                SiteTitle = "Microsoft Tech Hub",
-                SiteDescription = "Test description"
-            }
-        };
-
         // Initialize SectionCache with test data
         _sectionCache = new SectionCache();
         _sectionCache.Initialize(
@@ -53,7 +40,6 @@ public class ContentItemsGridTests : TestContext
                 Title = "GitHub Copilot",
                 Description = "GitHub Copilot content",
                 Url = "/github-copilot",
-                BackgroundImage = "/images/github-copilot-bg.jpg",
                 Collections =
                 [
                     new CollectionReferenceDto { Name = "news", Title = "News", Url = "/github-copilot/news", Description = "News", DisplayName = "News" },
@@ -67,7 +53,6 @@ public class ContentItemsGridTests : TestContext
                 Title = "All",
                 Description = "All content",
                 Url = "/all",
-                BackgroundImage = "/images/all-bg.jpg",
                 Collections =
                 [
                     new CollectionReferenceDto { Name = "news", Title = "News", Url = "/all/news", Description = "All news", DisplayName = "News" }
@@ -75,7 +60,6 @@ public class ContentItemsGridTests : TestContext
             }
         ]);
 
-        Services.AddSingleton(Options.Create(appSettings));
         Services.AddSingleton(_mockApiClient.Object);
         Services.AddSingleton(_sectionCache);
     }
@@ -84,7 +68,7 @@ public class ContentItemsGridTests : TestContext
     public void ContentItemsGrid_GitHubCopilot_AllCollection_DisplaysCorrectTitle()
     {
         // Arrange & Act
-        var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
+        var cut = Render<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
             .Add(p => p.CollectionName, "all"));
 
@@ -100,7 +84,7 @@ public class ContentItemsGridTests : TestContext
     public void ContentItemsGrid_GitHubCopilot_NewsCollection_DisplaysCorrectTitle()
     {
         // Arrange & Act
-        var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
+        var cut = Render<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
             .Add(p => p.CollectionName, "news"));
 
@@ -116,7 +100,7 @@ public class ContentItemsGridTests : TestContext
     public void ContentItemsGrid_GitHubCopilot_CommunityCollection_DisplaysCorrectTitle()
     {
         // Arrange & Act
-        var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
+        var cut = Render<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
             .Add(p => p.CollectionName, "community"));
 
@@ -132,7 +116,7 @@ public class ContentItemsGridTests : TestContext
     public void ContentItemsGrid_GitHubCopilot_VideosCollection_DisplaysCorrectTitle()
     {
         // Arrange & Act
-        var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
+        var cut = Render<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "github-copilot")
             .Add(p => p.CollectionName, "videos"));
 
@@ -148,7 +132,7 @@ public class ContentItemsGridTests : TestContext
     public void ContentItemsGrid_AllSection_AllCollection_DisplaysCorrectTitle()
     {
         // Arrange & Act
-        var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
+        var cut = Render<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "all"));
 
@@ -164,7 +148,7 @@ public class ContentItemsGridTests : TestContext
     public void ContentItemsGrid_AllSection_NewsCollection_DisplaysCorrectTitle()
     {
         // Arrange & Act
-        var cut = RenderComponent<ContentItemsGrid>(parameters => parameters
+        var cut = Render<ContentItemsGrid>(parameters => parameters
             .Add(p => p.SectionName, "all")
             .Add(p => p.CollectionName, "news"));
 

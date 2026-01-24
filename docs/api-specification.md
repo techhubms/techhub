@@ -33,7 +33,6 @@ Represents a thematic grouping of content (e.g., AI, GitHub Copilot, Azure).
   "title": "AI",
   "description": "Your gateway to the AI revolution...",
   "url": "/ai",
-  "backgroundImage": "/assets/section-backgrounds/ai.jpg",
   "collections": [
     {
       "title": "News",
@@ -109,7 +108,6 @@ Get all sections.
     "title": "AI",
     "description": "...",
     "url": "/ai",
-    "backgroundImage": "/assets/section-backgrounds/ai.jpg",
     "collections": [...]
   }
 ]

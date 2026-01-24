@@ -1,11 +1,9 @@
 @using TechHub.Core.DTOs
 @using TechHub.Core.Configuration
 @using TechHub.Web.Services
-@using Microsoft.Extensions.Options
 @inject TechHubApiClient ApiClient
 @inject SectionCache SectionCache
 @inject ILogger<ContentItemsGrid> Logger
-@inject IOptions<WebAppSettings> AppSettings
 @attribute [StreamRendering]
 
 <section class="collection-content @(isLoading ? "loading" : "")" aria-label="@GetCollectionDisplayName() content">

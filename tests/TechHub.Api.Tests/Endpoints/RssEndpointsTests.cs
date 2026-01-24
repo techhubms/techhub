@@ -1,13 +1,14 @@
 using System.Net;
 using System.Xml.Linq;
 using FluentAssertions;
+using TechHub.TestUtilities;
 
 namespace TechHub.Api.Tests.Endpoints;
 
 /// <summary>
 /// Integration tests for RSS feed endpoints (uses real data, no mocks)
 /// </summary>
-public class RssEndpointsTests(TechHubApiFactory factory) : IClassFixture<TechHubApiFactory>
+public class RssEndpointsTests(TechHubIntegrationTestApiFactory factory) : IClassFixture<TechHubIntegrationTestApiFactory>
 {
     private readonly HttpClient _client = factory.CreateClient();
 

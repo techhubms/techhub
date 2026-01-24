@@ -84,6 +84,24 @@ These apply to ALL tests across all layers:
 - Never ignore flaky tests (fix or remove)
 - Never remove tests without removing unused production code
 
+## Test Doubles Terminology
+
+**Test Double** is the generic term for any pretend object used in place of a real object for testing purposes (like a stunt double in movies). There are several types:
+
+**Stub** provides canned answers to calls made during tests. Stubs use **state verification** - you check the final state after the test runs. Example: `StubContentRepository` returns predefined test data and you assert on the results.
+
+**Mock** is pre-programmed with expectations about which calls it should receive. Mocks use **behavior verification** - you verify that specific methods were called with expected parameters. Example: Using Moq to verify a method was called exactly once.
+
+**Fake** has a working implementation but takes shortcuts unsuitable for production (e.g., in-memory database instead of real database).
+
+**Spy** is a stub that also records information about how it was called (a hybrid approach).
+
+**Dummy** is passed around but never actually used (just fills parameter lists).
+
+**Key Difference**: **Stubs return data** (state verification), **Mocks verify behavior** (behavior verification). We prefer stubs for simple data provision and mocks for verifying interactions.
+
+**Learn More**: [Mocks Aren't Stubs](https://martinfowler.com/articles/mocksArentStubs.html) by Martin Fowler
+
 ## Unit Testing Patterns
 
 ### AAA Pattern (Arrange-Act-Assert)
@@ -264,7 +282,6 @@ tests/TechHub.Api.Tests/
       "Title": "AI",
       "Description": "Test section for AI content",
       "Url": "ai",
-      "BackgroundImage": "/images/ai.jpg",
       "Collections": ["news", "blogs", "videos"]
     }
   ]
@@ -331,13 +348,190 @@ tests/
 
 ### Test Layer Mapping
 
-| Layer           | Framework                     | Projects             | Purpose                                              | Dependencies |
-|-----------------|-------------------------------|----------------------|------------------------------------------------------|--------------|
-| **Unit**        | xUnit + Moq                   | Core, Infrastructure | Domain logic, services                               | Mocked       |
-| **Integration** | xUnit + WebApplicationFactory | Api                  | API endpoints with mocked repositories/services      | Mocked       |
-| **Component**   | bUnit                         | Web                  | Blazor component rendering & logic                   | Mocked       |
-| **E2E**         | Playwright .NET + HttpClient  | E2E                  | Full user workflows, API tests with real dependencies| Real         |
-| **PowerShell**  | Pester                        | powershell/          | Automation scripts                                   | Mocked       |
+| Layer           | Framework                     | Projects             | Purpose                                              | External Dependencies | Local Dependencies (Filesystem) |
+|-----------------|-------------------------------|----------------------|------------------------------------------------------|----------------------|---------------------------------|
+| **Unit**        | xUnit + Stubs                 | Core, Infrastructure | Domain logic, services                               | ❌ NEVER             | ❌ NEVER                        |
+| **Integration** | xUnit + WebApplicationFactory | Api                  | API endpoints with real internal services            | ❌ Stub/Mock         | ✅ Real (we control it)         |
+| **Component**   | bUnit                         | Web                  | Blazor component rendering & logic                   | ❌ Stub/Mock         | ❌ Stub/Mock                    |
+| **E2E**         | Playwright .NET + HttpClient  | E2E                  | Full user workflows, complete system                 | ✅ Real              | ✅ Real                         |
+| **PowerShell**  | Pester                        | powershell/          | Automation scripts                                   | ❌ Mock              | ✅ Real (test files)            |
+
+## Understanding Test Layers - Detailed Definitions
+
+### E2E Tests (End-to-End)
+
+**Goal**: Test the complete system **as real as possible** to verify full user workflows.
+
+**What's Real**:
+
+- ✅ Real API server running
+- ✅ Real Web server running
+- ✅ Real filesystem (actual markdown files)
+- ✅ Real dependencies (all services, repositories)
+- ✅ Real browser interactions (Playwright)
+
+**What to Test**:
+
+- Complete user journeys (navigation, filtering, search)
+- Browser interactions (clicks, forms, navigation)
+- API endpoints with full dependency chain
+- Visual rendering and responsiveness
+
+**Example**: `NavigationTests.cs` - User navigates from homepage → AI section → filters by tags → views content
+
+**Location**: [tests/TechHub.E2E.Tests/](TechHub.E2E.Tests/)
+
+---
+
+### Integration Tests
+
+**Goal**: Test **as real as possible**, but isolate from **external dependencies** (cloud services, third-party APIs).
+
+**✅ What's Real** (we control these):
+
+- ✅ **Filesystem** - We control markdown files, test data
+- ✅ **Internal services** - Real MarkdownService, real TagMatchingService
+- ✅ **Real API pipeline** - Controllers, middleware, routing
+- ✅ **Real data access** - FileBasedContentRepository loading actual files
+
+**❌ What's Stubbed/Mocked** (external to our control):
+
+- ❌ **Cloud services** - Azure Storage, databases (would use stubs)
+- ❌ **Third-party APIs** - External HTTP calls (would use mocks)
+- ❌ **Email services** - SMTP, SendGrid (would use mocks)
+
+**Key Principle**: "External" means cloud or other systems outside our control. Filesystem is **NOT external** - we control it in tests.
+
+**What to Test**:
+
+- API endpoint contracts and responses
+- HTTP pipeline (CORS, caching, security headers)
+- Request validation and error handling
+- Content loading from real markdown files
+
+**Example**: `SectionsEndpointTests.cs` - API endpoint loads real markdown files, returns sections
+
+**Location**: [tests/TechHub.Api.Tests/](TechHub.Api.Tests/)
+
+---
+
+### Unit Tests
+
+**Goal**: Test with **real implementations** - only stub/mock when code touches filesystem or external systems.
+
+**Core Philosophy**: **Minimize mocking**. Use real classes and real implementations. Only stub/mock the boundaries where code interacts with systems we don't control in tests.
+
+**🎯 When to Use REAL Implementations**:
+
+- ✅ **Simple classes without dependencies** - Any class that's just logic (e.g., `MarkdownService`, `TagMatchingService`)
+- ✅ **Pure functions** - Methods with no side effects
+- ✅ **Stateless services** - Services with no mutable state
+- ✅ **Domain models** - Entities, value objects, DTOs
+- ✅ **In-memory collections** - Lists, dictionaries, etc.
+
+**❌ When to Stub/Mock (ONLY These Cases)**:
+
+**Local Dependencies** (filesystem):
+
+- ❌ **File system access** - Classes that read/write files → Stub the repository/service that does I/O
+- ❌ **Directory operations** - Classes that create/delete directories → Stub the abstraction
+
+**External Dependencies** (systems outside our control):
+
+- ❌ **HTTP calls** - HttpClient requests to external APIs → Mock HttpClient or use stub responses
+- ❌ **Database access** - SQL queries, Entity Framework → Stub the repository
+- ❌ **Cloud services** - Azure Storage, AWS S3 → Mock the SDK or use stub
+- ❌ **Email services** - SMTP, SendGrid → Mock the email service
+- ❌ **Third-party APIs** - Any external service → Mock or stub
+
+**❌ NEVER Allowed in Unit Tests**:
+
+- ❌ **Actual filesystem I/O** - NO `File.ReadAllText()`, `Directory.CreateDirectory()`
+- ❌ **Actual HTTP requests** - NO real network calls
+- ❌ **Actual database queries** - NO real SQL execution
+- ❌ **Process spawning** - NO `Process.Start()`
+
+**Key Principle**: **Test real code with real implementations**. Only create test doubles (stubs/mocks) at the **boundary** where your code would touch filesystem or external systems.
+
+**Correct Example**: `TagCloudServiceTests.cs` tests `TagCloudService`:
+
+```csharp
+// ✅ CORRECT: Real service being tested
+var service = new TagCloudService(repository, options);
+
+// ✅ CORRECT: StubContentRepository provides canned data (filesystem boundary)
+var repository = new StubContentRepository(
+    markdownService,      // ✅ CORRECT: Real simple service
+    tagMatchingService,   // ✅ CORRECT: Real simple service  
+    environment,          // ✅ CORRECT: Real environment (or mock if needed)
+    cache                 // ✅ CORRECT: Real MemoryCache
+);
+```
+
+**Why**: We stub `IContentRepository` because the real `FileBasedContentRepository` reads from filesystem. We use real `MarkdownService` and `TagMatchingService` because they're just simple classes with no filesystem/external access.
+
+**Wrong Example** - Over-mocking:
+
+```csharp
+// ❌ WRONG: Mocking simple services unnecessarily
+var mockMarkdownService = new Mock<IMarkdownService>();
+var mockTagMatchingService = new Mock<ITagMatchingService>();
+
+// ❌ WRONG: This makes tests fragile and tests nothing useful
+mockMarkdownService.Setup(m => m.RenderToHtml(It.IsAny<string>()))
+    .Returns("<p>Test</p>");
+```
+
+**Why Wrong**: `MarkdownService` is a simple class with no dependencies - just use the real one! Mocking it means you're not testing the actual Markdown rendering logic.
+
+**Decision Tree - Should I Mock This?**:
+
+```text
+Does this class touch filesystem or external systems?
+│
+├─ YES → Stub it (e.g., IContentRepository → StubContentRepository)
+│
+└─ NO → Use real implementation (e.g., MarkdownService)
+    │
+    ├─ Is it complex with many dependencies?
+    │   └─ Still use real if dependencies are also simple
+    │
+    └─ Is it a simple class/function?
+        └─ ALWAYS use real implementation
+```
+
+**Location**: [tests/TechHub.Core.Tests/](TechHub.Core.Tests/), [tests/TechHub.Infrastructure.Tests/](TechHub.Infrastructure.Tests/)
+
+---
+
+### Component Tests (Blazor)
+
+**Goal**: Test Blazor component rendering and logic in isolation.
+
+**What's Stubbed**: All services and repositories (use bUnit's dependency injection to provide stubs)
+
+**What to Test**:
+
+- Component markup rendering
+- Parameter binding and cascading values
+- Event handlers and callbacks
+- Conditional rendering
+
+**Example**: `SectionCardTests.cs` - Verifies section card renders with correct title, description, link
+
+**Location**: [tests/TechHub.Web.Tests/](TechHub.Web.Tests/)
+
+---
+
+### PowerShell Tests
+
+**Goal**: Test PowerShell scripts with mocked external commands.
+
+**What's Real**: Test files on filesystem for validation
+
+**What's Mocked**: External commands (git, dotnet, etc.)
+
+**Location**: [tests/powershell/](powershell/)
 
 ## Test Project Navigation
 

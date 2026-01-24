@@ -11,8 +11,8 @@
 </Header>
 
 <main class="page-without-sidebar">
-    <section >
-        @if (IsDevelopmentOrTest)
+    <section>
+        @if (IsDevelopment)
         {
             @* Development/Test Mode: Show detailed exception information *@
             @if (LastException != null)
@@ -100,7 +100,7 @@
     private string? RequestId { get; set; }
     private bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     private Exception? LastException { get; set; }
-    private bool IsDevelopmentOrTest => Environment.IsDevelopment() || Environment.IsEnvironment("Test");
+    private bool IsDevelopment => Environment.IsDevelopment();
 
     protected override void OnInitialized()
     {

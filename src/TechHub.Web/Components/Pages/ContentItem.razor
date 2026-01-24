@@ -31,12 +31,10 @@
     </aside>
 
     @* Main content area *@
-    <article>
-        @if (item != null)
-        {
-            <ContentItemDetail Item="@item" />
-        }
-    </article>
+    @if (item != null)
+    {
+        <ContentItemDetail Item="@item" />
+    }
 </main>
 
 @code {

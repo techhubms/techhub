@@ -48,16 +48,16 @@
             }
         </aside>
 
-        <article class="article-body">
-            @if (selectedVideoDetail != null)
-            {
-                <ContentItemDetail Item="@selectedVideoDetail" />
-            }
-            else
-            {
+        @if (selectedVideoDetail != null)
+        {
+            <ContentItemDetail Item="@selectedVideoDetail" />
+        }
+        else
+        {
+            <article class="article-body">
                 <p class="no-content-message">No updates available yet.</p>
-            }
-        </article>
+            </article>
+        }
     </main>
 }
 

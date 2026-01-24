@@ -694,6 +694,64 @@ A video about "Suricata Network Security" deployed through GitHub workflows:
 
 **CRITICAL**: Return ONLY the raw JSON object. Do NOT wrap your response in markdown code blocks or any other formatting. Your entire response should be a valid JSON object that can be parsed directly.
 
+### Markdown Formatting Requirements
+
+When generating the `content` field, follow these critical markdown formatting rules to ensure quality and consistency:
+
+**MD003 - Heading Style (ATX Preferred)**
+
+- ✅ Use ATX-style headings: `## Heading Text`
+- ❌ Avoid Setext-style headings: `Heading Text` with `===` or `---` underlines
+- Be consistent throughout the entire content
+
+**MD005 - List Indentation**
+
+- Use consistent indentation for nested list items
+- ✅ Indent nested items by 2 or 4 spaces consistently
+- ❌ Don't mix different indentation levels randomly
+
+**MD028 - Blank Lines in Blockquotes**
+
+- ❌ Never include blank lines inside blockquotes
+- If you need multiple paragraphs in a quote, use `>` on blank lines too:
+
+```markdown
+> First paragraph
+>
+> Second paragraph
+```
+
+**MD042 - No Empty Links**
+
+- ✅ All links must have valid URLs: `[Link Text](https://example.com)`
+- ❌ Never use empty links: `[Link Text](#)` or `[Link Text]()`
+- If URL is unknown, omit the link entirely and use plain text
+
+**MD045 - Images Must Have Alt Text**
+
+- ✅ All images must include descriptive alt text: `![Screenshot of Azure portal](image.png)`
+- ❌ Never use empty alt text: `![](image.png)`
+- Alt text should describe the image content for accessibility
+
+**MD046 - Code Block Style Consistency**
+
+- ✅ Use fenced code blocks with triple backticks and language specification:
+
+````markdown
+```csharp
+public class Example { }
+```
+````
+
+- ❌ Don't use indented code blocks (4 spaces)
+- ❌ Don't use fenced blocks without language tags
+
+**MD051 - Link Fragments Must Be Valid**
+
+- ✅ Internal anchor links must reference actual headings: `[See details](#actual-heading-in-document)`
+- ❌ Don't create links to non-existent anchors: `[See details](#missing-section)`
+- Verify heading IDs match the actual heading text (lowercase, hyphens for spaces)
+
 ### Option A: Content Qualifies (Has Categories)
 
 Return a JSON object with these 6 fields:

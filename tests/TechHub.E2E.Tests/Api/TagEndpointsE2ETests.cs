@@ -2,13 +2,14 @@ using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
 using TechHub.Core.DTOs;
+using TechHub.TestUtilities;
 
 namespace TechHub.E2E.Tests.Api;
 
 /// <summary>
 /// End-to-end tests for Tag endpoints
 /// </summary>
-public class TagEndpointsE2ETests(ApiTestFactory factory) : IClassFixture<ApiTestFactory>
+public class TagEndpointsE2ETests(TechHubE2ETestApiFactory factory) : IClassFixture<TechHubE2ETestApiFactory>
 {
     private readonly HttpClient _client = factory.CreateClient();
 

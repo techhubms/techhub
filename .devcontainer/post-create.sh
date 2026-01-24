@@ -3,41 +3,30 @@ set -e
 
 echo "Setting up Tech Hub .NET development environment..."
 
+# Remove Yarn repository (not used in this project, has expired GPG key)
+echo "Cleaning up unused package repositories..."
+sudo rm -f /etc/apt/sources.list.d/yarn.list
+
+# Install NSS tools for certificate management, ImageMagick for image processing, and libjxl for JPEG XL encoding
+# Also install exiftool (libimage-exiftool-perl), webp tools, and file utility for Normalize-Images.ps1 script
+echo "Installing system dependencies..."
+sudo apt-get update
+sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool-perl webp file
+
 # ==================== .NET Dev Certificates ====================
 sudo dotnet workload update
 
-echo "Setting up development certificates..."
-if ! dotnet dev-certs https --check; then
-    dotnet dev-certs https
-fi
-
-# Export and trust the development certificate for Chrome/Chromium (used by Playwright)
-echo "Trusting development certificates for Playwright/Chrome..."
-
-# Install NSS tools for certificate management
-sudo apt-get update > /dev/null 2>&1
-sudo apt-get install -y libnss3-tools > /dev/null 2>&1
-
-CERT_PATH="$HOME/.aspnet/https/aspnetapp.pfx"
-CERT_PEM="$HOME/.aspnet/https/aspnetapp.pem"
-mkdir -p "$HOME/.aspnet/https"
-
-# Export the dev cert to a file (without --trust as it doesn't work in Linux containers)
-dotnet dev-certs https -ep "$CERT_PATH" -p "password"
-
-# Convert PFX to PEM format for Chrome's certificate store
-openssl pkcs12 -in "$CERT_PATH" -out "$CERT_PEM" -nodes -password pass:password
-
-# Initialize NSS database if it doesn't exist
-mkdir -p "$HOME/.pki/nssdb"
-if [ ! -f "$HOME/.pki/nssdb/cert9.db" ]; then
-    certutil -d sql:"$HOME/.pki/nssdb" -N --empty-password
-fi
-
-# Add certificate to NSS database (used by Chrome/Chromium)
-certutil -d sql:"$HOME/.pki/nssdb" -A -t "C,," -n "ASP.NET Core HTTPS Dev Cert" -i "$CERT_PEM" || true
-
-echo "✓ Development certificates configured"
+echo "🔐 Setting up .NET HTTPS development certificate..."
+# Clean old certificates (ignore errors if none exist)
+sudo -E dotnet dev-certs https --clean > /dev/null 2>&1 || true
+dotnet dev-certs https --clean > /dev/null 2>&1 || true
+# Generate new certificate
+dotnet dev-certs https
+# Trust it on Linux by installing to system certificates
+sudo mkdir -p /usr/local/share/ca-certificates/aspnet
+sudo -E dotnet dev-certs https -ep /usr/local/share/ca-certificates/aspnet/https.crt --format PEM
+sudo update-ca-certificates
+echo "✅ HTTPS certificate generated and trusted"
 
 # ==================== .NET Global Tools ====================
 echo "Installing .NET global tools..."

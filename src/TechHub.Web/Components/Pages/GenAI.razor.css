@@ -1,0 +1,96 @@
+/* =================================================================
+   GenAI Page - FAQ and More Information Blocks
+   ================================================================= */
+
+/* FAQ Block Styling */
+.genai-faq {
+    background: rgba(249, 168, 212, 0.1);
+    border: 1px solid rgba(249, 168, 212, 0.3);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-3);
+    margin: var(--spacing-4) 0;
+}
+
+.genai-faq-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    margin-bottom: var(--spacing-3);
+    font-weight: 600;
+    font-size: var(--font-size-lg);
+    color: var(--color-text-emphasis);
+}
+
+.genai-faq-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.genai-faq-item {
+    margin-bottom: var(--spacing-3);
+}
+
+.genai-faq-item:last-child {
+    margin-bottom: 0;
+}
+
+.genai-faq-question {
+    font-weight: 600;
+    color: var(--color-text-emphasis);
+    margin-bottom: var(--spacing-1);
+}
+
+.genai-faq-answer {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+}
+
+/* More Information Block Styling */
+.genai-more-info {
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-3);
+    margin: var(--spacing-4) 0;
+}
+
+.genai-more-info-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    margin-bottom: var(--spacing-2);
+    font-weight: 600;
+    font-size: var(--font-size-lg);
+    color: var(--color-text-emphasis);
+}
+
+.genai-more-info-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.genai-more-info ul {
+    margin: 0;
+    padding-left: var(--spacing-4);
+    list-style: disc;
+}
+
+.genai-more-info li {
+    margin-bottom: var(--spacing-1);
+    color: var(--color-text-primary);
+}
+
+.genai-more-info li:last-child {
+    margin-bottom: 0;
+}
+
+.genai-more-info a {
+    color: var(--color-text-link);
+    text-decoration: none;
+}
+
+.genai-more-info a:hover {
+    color: var(--color-text-link-hover);
+    text-decoration: underline;
+}

@@ -16,7 +16,6 @@
 }
 
 .section-card-container:hover {
-  transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
   border-color: var(--color-purple-medium);
 }
@@ -31,12 +30,71 @@
 
 .section-card-header {
   height: 140px;
-  background-size: cover;
-  background-position: center center;
-  background-color: var(--color-purple-muted);
   position: relative;
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
+  /* Background images are set via CSS classes (e.g., .section-bg-ai) */
+  /* Thumbnails used for cards (400x140px) for performance */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Section background image classes for cards (using thumbnails) */
+/* Using image-set for progressive enhancement - JXL → WebP → JPG fallback */
+.section-bg-ai {
+  background-image: image-set(url('/images/section-thumbnails/ai.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/ai.webp') type('image/webp'),
+      url('/images/section-thumbnails/ai.jpg') type('image/jpeg'));
+}
+
+.section-bg-github-copilot {
+  background-image: image-set(url('/images/section-thumbnails/github-copilot.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/github-copilot.webp') type('image/webp'),
+      url('/images/section-thumbnails/github-copilot.jpg') type('image/jpeg'));
+}
+
+.section-bg-azure {
+  background-image: image-set(url('/images/section-thumbnails/azure.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/azure.webp') type('image/webp'),
+      url('/images/section-thumbnails/azure.jpg') type('image/jpeg'));
+}
+
+.section-bg-ml {
+  background-image: image-set(url('/images/section-thumbnails/ml.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/ml.webp') type('image/webp'),
+      url('/images/section-thumbnails/ml.jpg') type('image/jpeg'));
+}
+
+.section-bg-devops {
+  background-image: image-set(url('/images/section-thumbnails/devops.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/devops.webp') type('image/webp'),
+      url('/images/section-thumbnails/devops.jpg') type('image/jpeg'));
+}
+
+.section-bg-coding {
+  background-image: image-set(url('/images/section-thumbnails/coding.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/coding.webp') type('image/webp'),
+      url('/images/section-thumbnails/coding.jpg') type('image/jpeg'));
+}
+
+.section-bg-security {
+  background-image: image-set(url('/images/section-thumbnails/security.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/security.webp') type('image/webp'),
+      url('/images/section-thumbnails/security.jpg') type('image/jpeg'));
+}
+
+.section-bg-all {
+  background-image: image-set(url('/images/section-thumbnails/all.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/all.webp') type('image/webp'),
+      url('/images/section-thumbnails/all.jpg') type('image/jpeg'));
+}
+
+.section-bg-none {
+  background-image: image-set(url('/images/section-thumbnails/none.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/none.webp') type('image/webp'),
+      url('/images/section-thumbnails/none.jpg') type('image/jpeg'));
 }
 
 .section-overlay {
@@ -45,6 +103,8 @@
   padding: var(--spacing-3);
   display: flex;
   align-items: flex-end;
+  position: relative;
+  z-index: 1;
 }
 
 .section-card h2 {
@@ -102,7 +162,6 @@
   background: rgba(139, 92, 246, 0.5);
   border-color: var(--color-purple-medium);
   text-decoration: none;
-  transform: translateY(-1px);
 }
 
 /* Custom page badge styling - distinct from regular collection badges */

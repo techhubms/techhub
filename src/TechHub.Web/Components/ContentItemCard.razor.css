@@ -24,7 +24,6 @@
 .content-item-card:hover {
   box-shadow: var(--shadow-lg);
   border-color: var(--color-purple-medium);
-  transform: translateY(-2px);
   text-decoration: none;
 }
 
@@ -107,9 +106,12 @@
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
   border: 1px solid var(--color-border-default);
-  cursor: default; /* Prevent pointer cursor */
-  user-select: none; /* Prevent text selection */
-  pointer-events: none; /* Prevent all mouse events */
+  cursor: default;
+  /* Prevent pointer cursor */
+  user-select: none;
+  /* Prevent text selection */
+  pointer-events: none;
+  /* Prevent all mouse events */
 }
 
 .content-footer {

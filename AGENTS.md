@@ -112,8 +112,7 @@ For .NET development patterns, component architecture, API design, and all code 
 
 **Configuration & Documentation**:
 
-- `_data/sections.json` - Single source of truth for content structure
-- `appsettings.json` - Application configuration (sections, collections)
+- `appsettings.json` - Application configuration (sections, collections, service settings)
 - `docs/` - Functional documentation (API spec, filtering, content management)
 - `scripts/` - Automation and utility scripts (PowerShell)
 - `infra/` - Azure infrastructure (Bicep templates)
@@ -436,7 +435,7 @@ See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-
 - **ALWAYS clean up after changes** - Remove outdated files, code, and dependencies
 - **No backwards compatibility unless requested** - Don't keep old implementations "just in case"
 - **Remove unused files immediately** - Don't leave lingering code that's no longer referenced
-- **Check documentation before removing critical files** - Update all references (e.g., when removing `sections.json`, update all docs mentioning it)
+- **Check documentation before removing critical files** - Update all references in documentation when removing files
 - **Delete deprecated code** - Remove all code that is no longer used!
 - **Clean up test code** - Remove obsolete test helpers, fixtures, or data files
 - **Update configuration** - Remove unused settings, dependencies, and build artifacts
@@ -587,7 +586,7 @@ See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-
 
 ✅ **ALWAYS use `isBackground=true` for Run commands** - Servers never exit on their own  
 ✅ **ALWAYS use `get_terminal_output` to monitor progress** - Never wait or interact with terminal
-✅ **ALWAYS open NEW terminals for other commands** - Never reuse the Run terminal  
+✅ **ALWAYS open NEW terminals for other commands in VSCode** - Never reuse the Run terminal  
 
 🚫 **NEVER use `isBackground=false` for any `Run` commands** - They block forever  
 🚫 **NEVER type commands in Run terminal** - ANY input kills the servers  
@@ -595,7 +594,7 @@ See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-
 
 **Why isBackground=true Matters**:
 
-Run commands start servers that **block the terminal indefinitely**. ANY input to that terminal (typing commands, pressing Enter, Ctrl+C) **IMMEDIATELY SHUTS DOWN** the servers. Use `isBackground=true` + `get_terminal_output` to monitor progress, and open NEW terminals for any other commands.
+Run commands start servers that **block the terminal indefinitely**. ANY input to that terminal (typing commands, pressing Enter, Ctrl+C) **IMMEDIATELY SHUTS DOWN** the servers. Use `isBackground=true` + `get_terminal_output` to monitor progress, and open NEW terminals in VSCode for any other commands.
 
 **⚠️ CRITICAL E2E TEST WARNING**:
 
@@ -1151,10 +1150,10 @@ For ALL .NET code patterns, examples, and best practices, see **[src/AGENTS.md](
 
 **Configuration-Driven Design**:
 
-- All sections and collections defined in `_data/sections.json`
-- Content structure managed through data files, not code
-- New sections added by updating configuration
-- Single source of truth ensures consistency
+- All sections and collections defined in `appsettings.json`
+- Content structure managed through configuration, not code
+- New sections added by updating configuration per environment
+- Single source of truth ensures consistency across environments
 
 **Performance & User Experience**:
 

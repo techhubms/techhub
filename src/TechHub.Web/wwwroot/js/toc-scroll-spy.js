@@ -11,12 +11,9 @@
  * @see {@link /workspaces/techhub/src/TechHub.Web/AGENTS.md} for integration patterns
  */
 
-// Configuration: Detection line position as percentage of content viewport (0.0 to 1.0)
-// Lower values = headings activate higher on screen (e.g., 0.30 = 30% from top of content area)
-const DETECTION_LINE_PERCENT = 0.30;
-
-// Sticky header offset in pixels (main nav + subnav)
-const STICKY_HEADER_OFFSET = 106;
+// Hardcoded constants - must match CSS scroll-margin-top value
+const STICKY_HEADER_OFFSET = 106; // px - height of sticky header
+const DETECTION_LINE_PERCENT = 0.30; // 30% from top of content area
 
 export class TocScrollSpy {
     constructor(tocElement, contentElement) {
@@ -24,18 +21,19 @@ export class TocScrollSpy {
         this.contentElement = contentElement;
         this.headings = [];
         this.tocLinks = new Map(); // headingId -> tocLink element
+        this.headingElements = new Map(); // headingId -> heading element (cached)
+        this.h2Items = null; // Cached TOC h2 items (.toc-depth-0)
         this.currentActiveId = null;
         this.currentActiveH2Id = null; // Track active h2 for collapse/expand
-        this.isProgrammaticScroll = false; // Flag to prevent scroll spy during navigation
-        this.lastUserScrollTime = 0; // Track when user last scrolled manually
-        this.currentScrollEndHandler = null; // Track current scrollend handler to cancel it
-        this.currentScrollTimeout = null; // Track current timeout to cancel it
         this.boundHandleScroll = this.handleScroll.bind(this);
-        this.boundHandleWheel = this.handleWheel.bind(this);
-        this.boundHandleTouch = this.handleTouch.bind(this);
+        this.boundHandleResize = this.handleResize.bind(this);
         this.ticking = false; // RAF throttle flag
         this.debugOverlay = null; // Visual debug line
         this.debugEnabled = false;
+        this.cachedDetectionLine = 0; // Cache detection line position
+        this.initialScrollEndHandler = null; // One-time scrollend handler
+        this.initialScrollTimeout = null; // Fallback timeout for browsers without scrollend
+        this.initialized = false; // Track initialization state to prevent duplicate listeners
 
         // Expose toggle function globally for console access
         window.toggleTocDebug = this.toggleDebug.bind(this);
@@ -63,7 +61,7 @@ export class TocScrollSpy {
                 document.body.appendChild(this.debugOverlay);
             }
             this.debugOverlay.style.display = 'block';
-            console.log('TOC Debug Mode: ENABLED - Red line shows detection position (30% from top of content area)');
+            console.log('TOC Debug Mode: ENABLED - Red line shows detection position (matches CSS --scroll-margin-top)');
             console.log('Call toggleTocDebug() again to disable');
             // Update position immediately
             this.updateActiveHeading();
@@ -79,183 +77,74 @@ export class TocScrollSpy {
      * Initialize the scroll spy
      */
     init() {
-        // Find all headings in content with IDs
+        // Guard against duplicate initialization
+        if (this.initialized) {
+            console.warn('TocScrollSpy already initialized. Call destroy() first if re-initialization is needed.');
+            return;
+        }
+
+        // Find all H2 and H3 headings in content with IDs
+        // H2 and H3 are always in the TOC, H4+ are not tracked
         this.headings = Array.from(
-            this.contentElement.querySelectorAll('h2[id], h3[id], h4[id], h5[id], h6[id]')
+            this.contentElement.querySelectorAll('h2[id], h3[id]')
         );
 
         if (this.headings.length === 0) {
             return;
         }
 
-        // Build map of heading IDs to TOC links
+        // Build map of heading IDs to TOC links and cache heading elements
         // Support both hash-only links (#id) and full URLs (http://...#id)
         this.headings.forEach(heading => {
             const id = heading.getAttribute('id');
             const tocLink = this.tocElement.querySelector(`a[href="#${id}"], a[href$="#${id}"]`);
             if (tocLink) {
                 this.tocLinks.set(id, tocLink);
+                this.headingElements.set(id, heading); // Cache heading element
             }
         });
 
-        // Listen to scroll event with RAF throttling for real-time updates
-        window.addEventListener('scroll', this.boundHandleScroll, { passive: true });
+        // Cache h2 TOC items to avoid repeated querySelectorAll
+        this.h2Items = Array.from(this.tocElement.querySelectorAll('.toc-depth-0'));
 
-        // Listen for user-initiated scroll events (wheel, touch, keyboard)
-        window.addEventListener('wheel', this.boundHandleWheel, { passive: true });
-        window.addEventListener('touchstart', this.boundHandleTouch, { passive: true });
-        window.addEventListener('keydown', this.boundHandleWheel, { passive: true }); // Arrow keys, Page Up/Down, etc.
+        // Calculate and cache detection line position
+        this.updateDetectionLine();
 
-        // Override ALL anchor links (in sidebar AND in main content) to use custom scroll behavior
-        // This ensures clicking links in the main content TOC also scrolls to the detection line
-        document.addEventListener('click', (e) => {
-            const link = e.target.closest('a[href*="#"]');
-            if (!link) return;
+        // Detect if browser is ACTUALLY scrolling (not just if there's a hash)
+        const initialScrollY = window.scrollY;
 
-            // Extract the hash from the link
-            const href = link.getAttribute('href');
-            const hashMatch = href.match(/#(.+)$/);
-            if (!hashMatch) return;
+        this.updateActiveHeading();
+        this.attachEventListeners();
 
-            const headingId = hashMatch[1];
-            const heading = document.getElementById(headingId);
-
-            // Only handle if this is one of our tracked headings
-            if (!heading || !this.headings.includes(heading)) return;
-
-            e.preventDefault();
-            this.scrollToHeading(headingId);
-        });
-
-        // Handle initial page load with hash
-        const initialHash = window.location.hash.slice(1); // Remove # from hash
-        if (initialHash && this.tocLinks.has(initialHash)) {
-            const heading = document.getElementById(initialHash);
-            if (heading) {
-                // Immediately activate the linked heading and expand its section
-                this.setActive(initialHash);
-
-                // Wait for page to fully render, then scroll
-                setTimeout(() => {
-                    this.scrollToHeading(initialHash, false); // Don't use smooth scroll on initial load
-                }, 100);
-            }
+        // Handle case where browser is already scrolling when we initialize
+        // Set up one-time handler that auto-cancels when regular scroll/resize handlers trigger
+        if ('onscrollend' in window) {
+            this.initialScrollEndHandler = () => {
+                this.updateActiveHeading();
+                this.cleanupInitialScrollHandlers();
+            };
+            window.addEventListener('scrollend', this.initialScrollEndHandler, { once: true });
         } else {
-            // No hash, detect current position immediately on page load and expand
-            this.updateActiveHeading();
+            // Fallback for browsers without scrollend support
+            this.initialScrollTimeout = setTimeout(() => {
+                this.updateActiveHeading();
+                this.cleanupInitialScrollHandlers();
+            }, 200);
         }
+
+        this.initialized = true;
     }
 
     /**
-     * Scroll to a heading using the detection line position
-     * @param {string} headingId - The ID of the heading to scroll to
-     * @param {boolean} smooth - Whether to use smooth scrolling (default: true)
+     * Attach event listeners for scroll tracking
+     * Called AFTER initial heading update to avoid race conditions
      */
-    scrollToHeading(headingId, smooth = true) {
-        const heading = document.getElementById(headingId);
-        if (!heading) return;
+    attachEventListeners() {
+        // Listen to scroll event with RAF throttling for real-time updates
+        window.addEventListener('scroll', this.boundHandleScroll, { passive: true });
 
-        // Expand the target section first if it's in a different h2
-        const headingLevel = parseInt(heading.tagName.substring(1));
-        let targetH2Id = headingId;
-
-        if (headingLevel > 2) {
-            // Find parent h2 for this heading
-            const headingIndex = this.headings.indexOf(heading);
-            for (let i = headingIndex - 1; i >= 0; i--) {
-                const h = this.headings[i];
-                const level = parseInt(h.tagName.substring(1));
-                if (level === 2) {
-                    targetH2Id = h.getAttribute('id');
-                    break;
-                }
-            }
-        }
-
-        // Cancel any previous scroll handlers (in case of rapid clicking)
-        if (this.currentScrollEndHandler) {
-            window.removeEventListener('scrollend', this.currentScrollEndHandler);
-            this.currentScrollEndHandler = null;
-        }
-        if (this.currentScrollTimeout) {
-            clearTimeout(this.currentScrollTimeout);
-            this.currentScrollTimeout = null;
-        }
-
-        // Disable scroll spy during navigation
-        this.isProgrammaticScroll = true;
-        const scrollStartTime = Date.now();
-
-        // Collapse/expand sections immediately before scrolling
-        if (targetH2Id !== this.currentActiveH2Id) {
-            this.currentActiveH2Id = targetH2Id;
-            const h2Items = this.tocElement.querySelectorAll('.toc-depth-0');
-            h2Items.forEach(item => {
-                item.classList.remove('expanded');
-            });
-            const targetTocLink = this.tocLinks.get(targetH2Id);
-            if (targetTocLink) {
-                const targetItem = targetTocLink.closest('.toc-depth-0');
-                if (targetItem) {
-                    targetItem.classList.add('expanded');
-                }
-            }
-        }
-
-        // Set the target as active immediately
-        this.setActive(headingId, true);
-
-        // Calculate detection line position
-        const contentViewportHeight = window.innerHeight - STICKY_HEADER_OFFSET;
-        const detectionLineFromTop = STICKY_HEADER_OFFSET + (contentViewportHeight * DETECTION_LINE_PERCENT);
-        const headingTop = heading.getBoundingClientRect().top + window.scrollY;
-        const targetScroll = headingTop - detectionLineFromTop;
-
-        window.scrollTo({
-            top: targetScroll,
-            behavior: smooth ? 'smooth' : 'auto'
-        });
-
-        // Re-enable scroll spy when scrolling actually stops
-        const onScrollEnd = () => {
-            // Only re-enable if enough time has passed (minimum 300ms)
-            const elapsed = Date.now() - scrollStartTime;
-            if (elapsed >= 300) {
-                this.isProgrammaticScroll = false;
-                this.currentScrollEndHandler = null;
-            } else {
-                // Not enough time - wait for next scrollend or timeout
-                this.currentScrollTimeout = setTimeout(() => {
-                    this.isProgrammaticScroll = false;
-                    this.currentScrollEndHandler = null;
-                    this.currentScrollTimeout = null;
-                }, 300 - elapsed);
-            }
-        };
-
-        // Store reference to handler so we can cancel it if user clicks again quickly
-        this.currentScrollEndHandler = onScrollEnd;
-
-        // Use scrollend event (modern browsers)
-        window.addEventListener('scrollend', onScrollEnd, { once: true });
-
-        // Fallback: also set a maximum timeout in case scrollend doesn't fire
-        this.currentScrollTimeout = setTimeout(() => {
-            if (this.isProgrammaticScroll) {
-                this.isProgrammaticScroll = false;
-                if (this.currentScrollEndHandler) {
-                    window.removeEventListener('scrollend', this.currentScrollEndHandler);
-                    this.currentScrollEndHandler = null;
-                }
-                this.currentScrollTimeout = null;
-            }
-        }, 2000);
-
-        // Update URL hash without triggering scroll or creating history entry
-        // CRITICAL: Use replaceState (not pushState) to avoid polluting browser history
-        // with every scroll position. Only actual TOC link clicks should create history.
-        const newUrl = window.location.pathname + window.location.search + `#${headingId}`;
-        history.replaceState(null, '', newUrl);
+        // Recalculate detection line on window resize
+        window.addEventListener('resize', this.boundHandleResize, { passive: true });
     }
 
     /**
@@ -263,17 +152,7 @@ export class TocScrollSpy {
      * This ensures updates happen at most once per frame (~60fps)
      */
     handleScroll() {
-        // If user scrolled manually recently (within 100ms), cancel programmatic scroll flag
-        const timeSinceUserScroll = Date.now() - this.lastUserScrollTime;
-        if (timeSinceUserScroll < 100 && this.isProgrammaticScroll) {
-            this.isProgrammaticScroll = false;
-        }
-
-        // Skip updates during programmatic scrolling (clicking links)
-        if (this.isProgrammaticScroll) {
-            return;
-        }
-
+        this.cleanupInitialScrollHandlers(); // Cancel initial scroll handlers
         if (!this.ticking) {
             window.requestAnimationFrame(() => {
                 this.updateActiveHeading();
@@ -284,42 +163,41 @@ export class TocScrollSpy {
     }
 
     /**
-     * Handle user-initiated scroll events (wheel, touch, keyboard)
+     * Handle window resize - recalculate detection line position
      */
-    handleWheel() {
-        this.lastUserScrollTime = Date.now();
+    handleResize() {
+        this.cleanupInitialScrollHandlers(); // Cancel initial scroll handlers
+        this.updateDetectionLine();
+        if (this.debugOverlay) {
+            this.debugOverlay.style.top = `${this.cachedDetectionLine}px`;
+        }
     }
 
     /**
-     * Handle touch events (mobile scrolling)
+     * Calculate and cache detection line position
+     * Uses hardcoded constants that MUST match CSS scroll-margin-top value
      */
-    handleTouch() {
-        this.lastUserScrollTime = Date.now();
+    updateDetectionLine() {
+        const contentViewportHeight = window.innerHeight - STICKY_HEADER_OFFSET;
+        this.cachedDetectionLine = STICKY_HEADER_OFFSET + (contentViewportHeight * DETECTION_LINE_PERCENT);
     }
 
     /**
      * Update which heading should be active based on scroll position
      */
     updateActiveHeading() {
-        // Calculate detection line position using constants
-        const contentViewportHeight = window.innerHeight - STICKY_HEADER_OFFSET;
-        const detectionLineFromTop = STICKY_HEADER_OFFSET + (contentViewportHeight * DETECTION_LINE_PERCENT);
-
-        // Update debug overlay if enabled
-        if (this.debugOverlay) {
-            this.debugOverlay.style.top = `${detectionLineFromTop}px`;
-        }
+        // Use cached detection line position
+        const detectionLineFromTop = this.cachedDetectionLine;
+        const tolerance = 5; // Allow 5px tolerance
 
         // Find the heading CLOSEST to our detection line (30% from top of content area)
         // Pick the heading that's above the line and closest to it
         let targetId = null;
         let closestDistance = Infinity;
-        const tolerance = 5; // Allow 5px tolerance
 
-        // CRITICAL: Check ALL headings, don't break early
-        // Headings might not be evenly distributed (e.g., h2s with large gaps between them)
-        for (let i = 0; i < this.headings.length; i++) {
-            const heading = this.headings[i];
+        // CRITICAL: Only check headings that are actually in the TOC (have a link in tocLinks)
+        // This prevents H5/H6 or other unlisted headings from triggering highlights
+        for (const [headingId, heading] of this.headingElements) {
             const rect = heading.getBoundingClientRect();
             const headingTopFromViewport = rect.top;
 
@@ -330,17 +208,15 @@ export class TocScrollSpy {
                 // Pick the heading closest to the detection line (smallest distance)
                 if (distance < closestDistance) {
                     closestDistance = distance;
-                    targetId = heading.getAttribute('id');
+                    targetId = headingId;
                 }
             }
-            // Don't break - continue checking all headings even if some are below the line
-            // This handles cases where headings have large gaps between them
         }
 
         // Fallback: If no heading is above the detection line (e.g., page just loaded),
-        // activate the first heading to provide visual feedback
-        if (!targetId && this.headings.length > 0) {
-            targetId = this.headings[0].getAttribute('id');
+        // activate the first heading in the TOC to provide visual feedback
+        if (!targetId && this.tocLinks.size > 0) {
+            targetId = this.tocLinks.keys().next().value;
         }
 
         if (targetId) {
@@ -357,9 +233,9 @@ export class TocScrollSpy {
             return;
         }
 
-        // Defensive check: ensure the heading exists and is in our content
-        const newHeading = document.getElementById(headingId);
-        if (!newHeading || !this.contentElement.contains(newHeading)) {
+        // Use cached heading element
+        const newHeading = this.headingElements.get(headingId);
+        if (!newHeading) {
             return;
         }
 
@@ -370,8 +246,8 @@ export class TocScrollSpy {
                 currentLink.classList.remove('active');
             }
 
-            // Remove active class from previous heading
-            const currentHeading = document.getElementById(this.currentActiveId);
+            // Remove active class from previous heading (use cached element)
+            const currentHeading = this.headingElements.get(this.currentActiveId);
             if (currentHeading) {
                 currentHeading.classList.remove('toc-active-heading');
             }
@@ -397,20 +273,17 @@ export class TocScrollSpy {
      * Update which h2 section is expanded based on active heading
      */
     updateCollapseState(activeHeadingId) {
-        // Find which h2 section this heading belongs to
-        const activeHeading = document.getElementById(activeHeadingId);
+        // Use cached heading element
+        const activeHeading = this.headingElements.get(activeHeadingId);
         if (!activeHeading) return;
 
-        // Defensive check: ensure this heading is actually in our content element
-        if (!this.contentElement.contains(activeHeading)) return;
-
         // Get the heading level
-        const headingLevel = parseInt(activeHeading.tagName.substring(1)); // h2 -> 2, h3 -> 3, etc.
+        const headingLevel = parseInt(activeHeading.tagName.substring(1)); // h2 -> 2, h3 -> 3
 
         let targetH2Id = activeHeadingId;
 
-        // If this is not an h2, find the parent h2
-        if (headingLevel > 2) {
+        // If this is an h3, find the parent h2
+        if (headingLevel === 3) {
             // Walk backwards through headings to find the parent h2
             const activeIndex = this.headings.indexOf(activeHeading);
             if (activeIndex === -1) return; // Heading not in our list, abort
@@ -425,19 +298,19 @@ export class TocScrollSpy {
             }
         }
 
+        // Verify the target H2 has a TOC link before proceeding
+        // If not, we can't expand any section, so just return early
+        const activeTocLink = this.tocLinks.get(targetH2Id);
+        if (!activeTocLink) return;
+
         // Only update if we've changed h2 sections
         if (this.currentActiveH2Id === targetH2Id) {
             return;
         }
         this.currentActiveH2Id = targetH2Id;
 
-        // Verify the target TOC link exists before updating
-        const activeTocLink = this.tocLinks.get(targetH2Id);
-        if (!activeTocLink) return;
-
-        // Collapse all h2 sections (just remove expanded class, CSS default is collapsed)
-        const h2Items = this.tocElement.querySelectorAll('.toc-depth-0');
-        h2Items.forEach(item => {
+        // Use cached h2Items instead of querySelectorAll
+        this.h2Items.forEach(item => {
             item.classList.remove('expanded');
         });
 
@@ -449,13 +322,29 @@ export class TocScrollSpy {
     }
 
     /**
+     * Clean up initial scroll handlers
+     * Called automatically when regular scroll/resize handlers trigger
+     */
+    cleanupInitialScrollHandlers() {
+        if (this.initialScrollEndHandler) {
+            window.removeEventListener('scrollend', this.initialScrollEndHandler);
+            this.initialScrollEndHandler = null;
+        }
+        if (this.initialScrollTimeout) {
+            clearTimeout(this.initialScrollTimeout);
+            this.initialScrollTimeout = null;
+        }
+    }
+
+    /**
      * Clean up event listeners
      */
     destroy() {
+        this.cleanupInitialScrollHandlers();
         window.removeEventListener('scroll', this.boundHandleScroll);
-        window.removeEventListener('wheel', this.boundHandleWheel);
-        window.removeEventListener('touchstart', this.boundHandleTouch);
-        window.removeEventListener('keydown', this.boundHandleWheel);
+        window.removeEventListener('resize', this.boundHandleResize);
+
+        this.initialized = false;
 
         // Clean up debug overlay
         if (this.debugOverlay && this.debugOverlay.parentNode) {

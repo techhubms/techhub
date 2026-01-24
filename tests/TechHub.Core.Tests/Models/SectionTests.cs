@@ -16,7 +16,6 @@ public class SectionTests
             Title = "AI",
             Description = "Artificial Intelligence resources",
             Url = "/ai",
-            BackgroundImage = "/assets/section-backgrounds/ai.jpg",
             Collections =
             [
                 new CollectionReference
@@ -62,7 +61,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "/test",
-            BackgroundImage = "/test.jpg",
             Collections =
             [
                 new CollectionReference
@@ -99,7 +97,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "/test",
-            BackgroundImage = "/test.jpg",
             Collections =
             [
                 new CollectionReference
@@ -140,7 +137,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "/test",
-            BackgroundImage = "/test.jpg",
             Collections =
             [
                 new CollectionReference
@@ -181,7 +177,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "/test",
-            BackgroundImage = "/test.jpg",
             Collections =
             [
                 new CollectionReference
@@ -216,7 +211,6 @@ public class SectionTests
             Title = "",
             Description = "Test description",
             Url = "/test",
-            BackgroundImage = "/test.jpg",
             Collections =
             [
                 new CollectionReference
@@ -253,7 +247,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "",
-            BackgroundImage = "/test.jpg",
             Collections =
             [
                 new CollectionReference
@@ -293,7 +286,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = invalidUrl,
-            BackgroundImage = "/test.jpg",
             Collections =
             [
                 new CollectionReference
@@ -333,7 +325,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = validUrl,
-            BackgroundImage = "/test.jpg",
             Collections =
             [
                 new CollectionReference
@@ -368,7 +359,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "/test",
-            BackgroundImage = "/test.jpg",
             Collections = []
         };
 
@@ -395,7 +385,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "/test",
-            BackgroundImage = "/test.jpg",
             Collections =
             [
                 new CollectionReference
@@ -446,7 +435,6 @@ public class SectionTests
             Title = "Test Title",
             Description = "Test Description",
             Url = "/test",
-            BackgroundImage = "/test-bg.jpg",
             Collections = []
         };
 
@@ -471,7 +459,6 @@ public class SectionTests
             Title = "Test",
             Description = "Test description",
             Url = "/test",
-            BackgroundImage = "/test.jpg",
             Collections = []
         };
 

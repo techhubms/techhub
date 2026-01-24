@@ -7,7 +7,13 @@
 
     @if (isLoading)
     {
-        <p class="sidebar-text">Loading tags...</p>
+        @* Skeleton loader - subtle placeholder during initial load *@
+        <div class="tag-cloud" aria-label="Loading tags">
+            @for (int i = 0; i < 20; i++)
+            {
+                <span class="tag-cloud-skeleton"></span>
+            }
+        </div>
     }
     else if (hasError)
     {

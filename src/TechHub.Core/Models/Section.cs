@@ -30,11 +30,6 @@ public class Section
     public required string Url { get; init; }
 
     /// <summary>
-    /// Path to section header background image
-    /// </summary>
-    public required string BackgroundImage { get; init; }
-
-    /// <summary>
     /// Collections associated with this section
     /// </summary>
     public required IReadOnlyList<CollectionReference> Collections { get; init; }

@@ -46,6 +46,17 @@ function Run {
         Uses dotnet test --filter with FullyQualifiedName~pattern.
         Can be combined with -TestProject to scope to specific project.
 
+    .PARAMETER Environment
+        The ASP.NET Core environment to use (Development, Production, Staging).
+        Defaults to Development.
+        
+        Production/Staging mode:
+        - Runs 'dotnet publish' to create optimized deployment artifacts
+        - Executes from published DLLs (same as real production deployment)
+        - Tests bundled/minified CSS, optimized assemblies, trimmed code
+        - Published output stored in .tmp/publish/ (excluded from git)
+        - Mimics actual Azure Container Apps deployment
+
     .EXAMPLE
         Run
         Default: Build (no clean), run all tests, then start servers for development.
@@ -73,6 +84,10 @@ function Run {
     .EXAMPLE
         Run -TestProject TechHub.E2E.Tests -TestName Navigation
         Build, run E2E tests matching "Navigation" pattern, then keep servers running.
+
+    .EXAMPLE
+        Run -Environment Production -WithoutTests
+        Publish and run in Production mode (tests real deployment artifacts).
     #>
     
     [CmdletBinding()]
@@ -96,7 +111,11 @@ function Run {
         [string]$TestProject,
 
         [Parameter(Mandatory = $false)]
-        [string]$TestName
+        [string]$TestName,
+
+        [Parameter(Mandatory = $false)]
+        [ValidateSet("Development", "Production", "Staging")]
+        [string]$Environment = "Development"
     )
 
     # Disable progress bars for performance (prevents slowdown from file operations)
@@ -157,6 +176,7 @@ function Run {
 
     # Script-level variables for process management
     $script:appHostProcess = $null
+    $script:apiProcess = $null
 
     # Determine workspace root - navigate up from scripts directory
     $workspaceRoot = Split-Path $PSScriptRoot -Parent
@@ -170,8 +190,13 @@ function Run {
     # Test project path for E2E (only needed separately)
     $e2eTestProjectPath = Join-Path $workspaceRoot "tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj"
 
-    # Build configuration (always Debug for development)
-    $configuration = "Debug"
+    # Publish directories for Production mode
+    $publishBaseDir = Join-Path $workspaceRoot ".tmp/publish"
+    $publishApiDir = Join-Path $publishBaseDir "api"
+    $publishWebDir = Join-Path $publishBaseDir "web"
+
+    # Build configuration - Release for Production, Debug otherwise
+    $configuration = if ($Environment -eq "Production") { "Release" } else { "Debug" }
 
     # Verbosity level - "minimal" for clean output
     $verbosityLevel = "minimal"
@@ -320,6 +345,55 @@ function Run {
         return @{ Success = $true; SrcRebuilt = $srcRebuilt }
     }
 
+    # Publish solution for Production deployment
+    function Invoke-Publish {
+        Write-Step "Publishing solution for Production deployment"
+        
+        # Clean publish directory
+        if (Test-Path $publishBaseDir) {
+            Remove-Item -Path $publishBaseDir -Recurse -Force
+        }
+        New-Item -Path $publishBaseDir -ItemType Directory -Force | Out-Null
+        
+        # Publish API
+        Write-Info "Publishing API..."
+        $apiProjectPath = Join-Path $workspaceRoot "src/TechHub.Api/TechHub.Api.csproj"
+        $publishApiArgs = @(
+            "publish",
+            $apiProjectPath,
+            "--configuration", "Release",
+            "--output", $publishApiDir,
+            "--verbosity", $verbosityLevel
+        )
+        
+        $apiSuccess = Invoke-ExternalCommand "dotnet" $publishApiArgs
+        if (-not $apiSuccess) {
+            Write-Error "API publish failed"
+            return $false
+        }
+        
+        # Publish Web
+        Write-Info "Publishing Web..."
+        $webProjectPath = Join-Path $workspaceRoot "src/TechHub.Web/TechHub.Web.csproj"
+        $publishWebArgs = @(
+            "publish",
+            $webProjectPath,
+            "--configuration", "Release",
+            "--output", $publishWebDir,
+            "--verbosity", $verbosityLevel
+        )
+        
+        $webSuccess = Invoke-ExternalCommand "dotnet" $publishWebArgs
+        if (-not $webSuccess) {
+            Write-Error "Web publish failed"
+            return $false
+        }
+        
+        Write-Success "Publish completed"
+        Write-Info "Published to: $publishBaseDir"
+        return $true
+    }
+
     # Run PowerShell/Pester tests
     function Invoke-PowerShellTests {
         param(
@@ -464,7 +538,7 @@ function Run {
     # Start Aspire AppHost (orchestrates API + Web servers)
     function Start-AppHost {
         param(
-            [string]$Environment = "Development"
+            [string]$Environment
         )
         
         # Check if servers are already running and healthy
@@ -478,33 +552,107 @@ function Run {
             Stop-Servers -Silent
         }
         
-        Write-Step "Starting Aspire AppHost"
+        Write-Step "Starting services ($Environment mode)"
+        
+        # Log environment configuration for debugging
+        Write-Info "  Configuring environment: $Environment"
         
         # Start AppHost in background
         $script:appHostProcess = $null
         
-        $appHostStartInfo = New-Object System.Diagnostics.ProcessStartInfo
-        $appHostStartInfo.FileName = "dotnet"
-        $appHostStartInfo.Arguments = "watch --project `"$appHostProjectPath`" --no-build --configuration $configuration"
-        $appHostStartInfo.WorkingDirectory = Split-Path $appHostProjectPath -Parent
-        $appHostStartInfo.UseShellExecute = $false
-        $appHostStartInfo.RedirectStandardOutput = $false
-        $appHostStartInfo.RedirectStandardError = $false
-        $appHostStartInfo.CreateNoWindow = $false
-        # Use specified environment (defaults to Development for both E2E tests and normal dev)
-        $appHostStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = $Environment
-        # Keep Aspire orchestration logs (useful for debugging startup issues)
-        # but suppress noisy Microsoft.AspNetCore.* framework logs
-        $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft"] = "Warning"
-        $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft.AspNetCore"] = "Warning"
-        # Disable Aspire dashboard authentication for local development (no login token required)
-        $appHostStartInfo.EnvironmentVariables["DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS"] = "true"
-        # Disable automatic browser launch in DevContainer (prevents DBus errors)
-        $appHostStartInfo.EnvironmentVariables["DOTNET_DASHBOARD_OPEN_BROWSER"] = "false"
-        
-        $script:appHostProcess = [System.Diagnostics.Process]::Start($appHostStartInfo)
-        
-        Write-Info "  AppHost started (PID: $($script:appHostProcess.Id))"
+        # Production/Staging mode: Run from published DLLs (real deployment simulation)
+        if ($Environment -eq "Production" -or $Environment -eq "Staging") {
+            # Verify publish artifacts exist
+            $apiDll = Join-Path $publishApiDir "TechHub.Api.dll"
+            $webDll = Join-Path $publishWebDir "TechHub.Web.dll"
+            
+            if (-not (Test-Path $apiDll) -or -not (Test-Path $webDll)) {
+                Write-Error "Published artifacts not found. This should not happen - publish step should have run."
+                return $false
+            }
+            
+            Write-Info "  Running from published artifacts (simulating production deployment)"
+            Write-Info "    API: $publishApiDir"
+            Write-Info "    Web: $publishWebDir"
+            
+            # Start API directly from published DLL
+            $apiStartInfo = New-Object System.Diagnostics.ProcessStartInfo
+            $apiStartInfo.FileName = "dotnet"
+            $apiStartInfo.Arguments = "exec `"$apiDll`""
+            $apiStartInfo.WorkingDirectory = $publishApiDir
+            $apiStartInfo.UseShellExecute = $false
+            $apiStartInfo.RedirectStandardOutput = $false
+            $apiStartInfo.RedirectStandardError = $false
+            $apiStartInfo.CreateNoWindow = $false
+            $apiStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = $Environment
+            $apiStartInfo.EnvironmentVariables["ASPNETCORE_URLS"] = "https://localhost:5001"
+            $apiStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft"] = "Warning"
+            $apiStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft.AspNetCore"] = "Warning"
+            
+            # File logging configuration for Production mode
+            $apiLogPath = Join-Path $workspaceRoot ".tmp/logs/api-prod.log"
+            $apiLogDir = Split-Path $apiLogPath -Parent
+            if (-not (Test-Path $apiLogDir)) {
+                New-Item -Path $apiLogDir -ItemType Directory -Force | Out-Null
+            }
+            $apiStartInfo.EnvironmentVariables["Logging__File__Path"] = $apiLogPath
+            
+            $apiProcess = [System.Diagnostics.Process]::Start($apiStartInfo)
+            Write-Info "  API started from published DLL (PID: $($apiProcess.Id))"
+            
+            # Start Web directly from published DLL
+            $webStartInfo = New-Object System.Diagnostics.ProcessStartInfo
+            $webStartInfo.FileName = "dotnet"
+            $webStartInfo.Arguments = "exec `"$webDll`""
+            $webStartInfo.WorkingDirectory = $publishWebDir
+            $webStartInfo.UseShellExecute = $false
+            $webStartInfo.RedirectStandardOutput = $false
+            $webStartInfo.RedirectStandardError = $false
+            $webStartInfo.CreateNoWindow = $false
+            $webStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = $Environment
+            $webStartInfo.EnvironmentVariables["ASPNETCORE_URLS"] = "https://localhost:5003"
+            $webStartInfo.EnvironmentVariables["ApiBaseUrl"] = "https://localhost:5001"
+            $webStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft"] = "Warning"
+            $webStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft.AspNetCore"] = "Warning"
+            
+            # File logging configuration for Production mode
+            $webLogPath = Join-Path $workspaceRoot ".tmp/logs/web-prod.log"
+            $webStartInfo.EnvironmentVariables["Logging__File__Path"] = $webLogPath
+            
+            $webProcess = [System.Diagnostics.Process]::Start($webStartInfo)
+            Write-Info "  Web started from published DLL (PID: $($webProcess.Id))"
+            
+            # Store both processes for cleanup (use Web process as primary reference)
+            $script:appHostProcess = $webProcess
+            $script:apiProcess = $apiProcess
+        }
+        else {
+            # Development/Staging: Use Aspire AppHost orchestration
+            $appHostStartInfo = New-Object System.Diagnostics.ProcessStartInfo
+            $appHostStartInfo.FileName = "dotnet"
+            
+            # Use 'run' for Staging (stable, no hot reload needed)
+            # Use 'watch' for Development (enables hot reload for faster development)
+            if ($Environment -eq "Staging") {
+                $appHostStartInfo.Arguments = "run --project `"$appHostProjectPath`" --no-build --launch-profile $Environment --configuration $configuration"
+            }
+            else {
+                $appHostStartInfo.Arguments = "watch --project `"$appHostProjectPath`" --no-build --launch-profile $Environment --configuration $configuration"
+            }
+            
+            $appHostStartInfo.WorkingDirectory = Split-Path $appHostProjectPath -Parent
+            $appHostStartInfo.UseShellExecute = $false
+            $appHostStartInfo.RedirectStandardOutput = $false
+            $appHostStartInfo.RedirectStandardError = $false
+            $appHostStartInfo.CreateNoWindow = $false
+            # Suppress noisy Microsoft.AspNetCore.* framework logs
+            $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft"] = "Warning"
+            $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft.AspNetCore"] = "Warning"
+            
+            $script:appHostProcess = [System.Diagnostics.Process]::Start($appHostStartInfo)
+            
+            Write-Info "  AppHost started (PID: $($script:appHostProcess.Id))"
+        }
         
         # Wait for services to be ready (Aspire orchestration can take 30-60 seconds)
         Write-Info "Waiting for services to start (Aspire orchestration can take 30-60 seconds)..."
@@ -650,12 +798,48 @@ function Run {
             [switch]$Silent
         )
         
-        # PART 1: Stop AppHost process
+        # PART 1: Stop AppHost/API processes
+        # In Production mode, we have separate API and Web processes
+        if ($null -ne $script:apiProcess) {
+            if (-not $script:apiProcess.HasExited) {
+                try {
+                    if (-not $Silent) {
+                        Write-Info "  Stopping API process..."
+                    }
+                    
+                    # Send SIGTERM for graceful shutdown
+                    kill -TERM $script:apiProcess.Id 2>$null
+                    
+                    # Wait up to 5 seconds for graceful shutdown
+                    $waited = 0
+                    while (-not $script:apiProcess.HasExited -and $waited -lt 5000) {
+                        Start-Sleep -Milliseconds 100
+                        $waited += 100
+                    }
+                    
+                    # If still running, force kill
+                    if (-not $script:apiProcess.HasExited) {
+                        if (-not $Silent) {
+                            Write-Info "  API didn't stop gracefully, forcing termination..."
+                        }
+                        $script:apiProcess.Kill($true)
+                    }
+                }
+                catch {
+                    # Process might have already exited - that's OK
+                }
+            }
+            
+            # Always dispose and clear reference
+            $script:apiProcess.Dispose()
+            $script:apiProcess = $null
+        }
+        
         if ($null -ne $script:appHostProcess) {
             if (-not $script:appHostProcess.HasExited) {
                 try {
                     if (-not $Silent) {
-                        Write-Info "  Sending graceful shutdown signal to AppHost..."
+                        Write-Info "  Sending graceful shutdown signal to services..."
                     }
                     
                     # Send SIGTERM for graceful shutdown
@@ -671,18 +855,18 @@ function Run {
                     # If still running, force kill
                     if (-not $script:appHostProcess.HasExited) {
                         if (-not $Silent) {
-                            Write-Info "  AppHost didn't stop gracefully, forcing termination..."
+                            Write-Info "  Services didn't stop gracefully, forcing termination..."
                         }
                         $script:appHostProcess.Kill($true)
                     }
                     elseif (-not $Silent) {
-                        Write-Info "  AppHost stopped gracefully"
+                        Write-Info "  Services stopped gracefully"
                     }
                 }
                 catch {
                     # Process might have already exited - that's OK
                     if (-not $Silent) {
-                        Write-Info "  AppHost process already exited"
+                        Write-Info "  Services process already exited"
                     }
                 }
             }
@@ -919,10 +1103,22 @@ function Run {
             }
         }
         
-        # Always build (fast if nothing changed)
-        $buildResult = Invoke-Build
-        if ($buildResult.Success -eq $false) {
-            return
+        # Build OR Publish depending on environment
+        if ($Environment -eq "Production" -or $Environment -eq "Staging") {
+            # Production/Staging: Publish (which builds implicitly)
+            $publishSucceeded = Invoke-Publish
+            if ($publishSucceeded -eq $false) {
+                return
+            }
+            # Set buildResult for restart logic (publish always rebuilds)
+            $buildResult = @{ Success = $true; SrcRebuilt = $true }
+        }
+        else {
+            # Development: Build only
+            $buildResult = Invoke-Build
+            if ($buildResult.Success -eq $false) {
+                return
+            }
         }
         
         # Check if we need to restart servers:
@@ -987,7 +1183,7 @@ function Run {
             
             # PHASE 3: Start servers if needed for E2E tests
             if ($runE2E) {
-                $serversStarted = Start-AppHost
+                $serversStarted = Start-AppHost -Environment $Environment
                 if ($serversStarted -ne $true) {
                     # Server startup failed - ALWAYS clean up (can't leave non-running servers)
                     Stop-Servers
@@ -1029,7 +1225,7 @@ function Run {
         }
         else {
             # -WithoutTests: Start servers directly
-            $serversStarted = Start-AppHost
+            $serversStarted = Start-AppHost -Environment $Environment
             if ($serversStarted -ne $true) {
                 # Server startup failed - ALWAYS clean up (can't leave non-running servers)
                 Stop-Servers

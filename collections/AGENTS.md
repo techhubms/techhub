@@ -28,7 +28,7 @@
 - **Never exceed 200 words in excerpt** - Keep intros concise
 - **Never forget `<!--excerpt_end-->` marker** - Required to separate excerpt from main content
 - **Never omit author from excerpt** - Must mention who wrote/presented
-- **Never hardcode collection names** - Configuration-driven via `_data/sections.json`
+- **Never hardcode collection names** - Configuration-driven via `appsettings.json`
 - **Never skip frontmatter** - All markdown needs YAML front matter
 - **Never mismatch filename and frontmatter dates** - Must be identical for posts
 - **Never place files in wrong collection** - Use correct directory for content type

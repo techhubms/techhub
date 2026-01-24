@@ -5,8 +5,8 @@
       "mermaid": [
         {
           "id": "diagram-0",
-          "diagram": "graph LR\n    Word1[\"Word: 'dog'\"]\n    Word2[\"Word: 'puppy'\"]\n    Word3[\"Word: 'car'\"]\n    Vec1[\"Vector: [0.2, 0.8, 0.3, ...]\"]\n    Vec2[\"Vector: [0.19, 0.82, 0.28, ...]\"]\n    Vec3[\"Vector: [0.7, 0.1, 0.9, ...]\"]\n    Space[\"Multi-dimensional space where semantic relationships are captured by proximity\"]\n    \n    Word1 --> Vec1\n    Word2 --> Vec2\n    Word3 --> Vec3\n    Vec1 --> Space\n    Vec2 --> Space\n    Vec3 --> Space\n    \n    style Word1 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Word2 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Word3 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Vec1 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Vec2 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Vec3 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Space fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6",
-          "title": null
+          "diagram": "graph LR\n    Word1[\"Word: 'dog'\"]\n    Word2[\"Word: 'puppy'\"]\n    Word3[\"Word: 'car'\"]\n    Vec1[\"Vector: [0.2, 0.8, 0.3, ...]\"]\n    Vec2[\"Vector: [0.19, 0.82, 0.28, ...]\"]\n    Vec3[\"Vector: [0.7, 0.1, 0.9, ...]\"]\n    Space[\"Multi-dimensional space where semantic relationships are captured by proximity\"]\n    \n    Word1 --> Vec1\n    Word2 --> Vec2\n    Word3 --> Vec3\n    Vec1 --> Space\n    Vec2 --> Space\n    Vec3 --> Space",
+          "title": "From Words to Vectors: Semantic Embeddings"
         }
       ],
       "title": "Vectors and embeddings: How AI understands meaning"
@@ -65,7 +65,7 @@
         {
           "id": "diagram-0",
           "diagram": "sequenceDiagram\n    participant User\n    participant AI as AI Model\n    participant Function\n    \n    User->>AI: How long does it take to fly from New York to Los Angeles?\n    AI->>AI: Analyzes prompt\n    AI->>Function: get_flight_duration(JFK, LAX, true)\n    Function->>AI: 6 hours 30 minutes including one layover\n    AI->>User: The flight from New York to Los Angeles takes about 6 hours and 30 minutes, including one layover.",
-          "title": null
+          "title": "Function Calling Flow"
         }
       ],
       "moreInfo": [
@@ -101,8 +101,8 @@
       "mermaid": [
         {
           "id": "diagram-0",
-          "diagram": "graph TB\n    Host[\"Host Application<br/>(VS Code, Claude Desktop,<br/>Custom App)\"]\n    Client[\"MCP Client<br/>(Protocol Handler)\"]\n    \n    Server1[\"MCP Server:<br/>Database Access\"]\n    Server2[\"MCP Server:<br/>File System\"]\n    Server3[\"MCP Server:<br/>External APIs\"]\n    \n    DB[(\"Database\")]\n    FS[(\"Files\")]\n    API[(\"APIs\")]\n    \n    Host --> Client\n    Client --> Server1\n    Client --> Server2\n    Client --> Server3\n    Server1 --> DB\n    Server2 --> FS\n    Server3 --> API\n    \n    style Host fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Client fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Server1 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Server2 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Server3 fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style DB fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style FS fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style API fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6",
-          "title": null
+          "diagram": "graph TB\n    Host[\"Host Application<br/>(VS Code, Claude Desktop,<br/>Custom App)\"]\n    Client[\"MCP Client<br/>(Protocol Handler)\"]\n    \n    Server1[\"MCP Server:<br/>Database Access\"]\n    Server2[\"MCP Server:<br/>File System\"]\n    Server3[\"MCP Server:<br/>External APIs\"]\n    \n    DB[(\"Database\")]\n    FS[(\"Files\")]\n    API[(\"APIs\")]\n    \n    Host --> Client\n    Client --> Server1\n    Client --> Server2\n    Client --> Server3\n    Server1 --> DB\n    Server2 --> FS\n    Server3 --> API",
+          "title": "Model Context Protocol Architecture"
         }
       ],
       "moreInfo": [
@@ -138,8 +138,8 @@
       "mermaid": [
         {
           "id": "diagram-0",
-          "diagram": "graph TB\n    User[\"User Query:<br/>'What is our refund policy?'\"]\n    Embed[\"Convert to<br/>Vector Embedding\"]\n    Search[\"Vector Search<br/>in Knowledge Base\"]\n    KB[(\"Knowledge Base<br/>Docs, Policies,<br/>FAQs\")]\n    Results[\"Retrieve Relevant<br/>Documents\"]\n    Combine[\"Combine Query +<br/>Retrieved Context\"]\n    LLM[\"LLM Generates<br/>Response\"]\n    Response[\"'Our refund policy allows...<br/>Source: Policy Doc v2.3'\"]\n    \n    User --> Embed\n    Embed --> Search\n    Search --> KB\n    KB --> Results\n    Results --> Combine\n    User --> Combine\n    Combine --> LLM\n    LLM --> Response\n    \n    style User fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Embed fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Search fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style KB fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Results fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Combine fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style LLM fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Response fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6",
-          "title": null
+          "diagram": "graph LR\n    User[\"User Query:<br/>'What is our refund policy?'\"]\n    Embed[\"Convert to<br/>Vector Embedding\"]\n    Search[\"Vector Search<br/>in Knowledge Base\"]\n    KB[(\"Knowledge Base<br/>Docs, Policies,<br/>FAQs\")]\n    Results[\"Retrieve Relevant<br/>Documents\"]\n    Combine[\"Combine Query +<br/>Retrieved Context\"]\n    LLM[\"LLM Generates<br/>Response\"]\n    Response[\"'Our refund policy allows...<br/>Source: Policy Doc v2.3'\"]\n    \n    User --> Embed --> Search --> KB --> Results --> Combine\n    User -.-> Combine\n    Combine --> LLM --> Response",
+          "title": "RAG (Retrieval Augmented Generation) Process"
         }
       ],
       "moreInfo": [
@@ -189,8 +189,8 @@
       "mermaid": [
         {
           "id": "diagram-0",
-          "diagram": "graph TB\n    User[\"User Request:<br/>'Build a feature with tests'\"]\n    Orch[\"Orchestrator<br/>(Routes tasks to agents)\"]\n    \n    Plan[\"Planning Agent<br/>(Breaks down task)\"]\n    Code[\"Coding Agent<br/>(Implements solution)\"]\n    Review[\"Review Agent<br/>(Checks quality)\"]\n    Test[\"Testing Agent<br/>(Writes tests)\"]\n    \n    Result[\"Complete Solution<br/>with Tests\"]\n    \n    User --> Orch\n    Orch --> Plan\n    Plan --> Orch\n    Orch --> Code\n    Code --> Orch\n    Orch --> Test\n    Test --> Orch\n    Orch --> Review\n    Review --> Orch\n    Orch --> Result\n    \n    style User fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Orch fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Plan fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Code fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Review fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Test fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Result fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6",
-          "title": null
+          "diagram": "graph TB\n    User[\"User Request:<br/>'Build a feature with tests'\"]\n    Orch[\"Orchestrator<br/>(Routes tasks to agents)\"]\n    \n    Plan[\"Planning Agent<br/>(Breaks down task)\"]\n    Code[\"Coding Agent<br/>(Implements solution)\"]\n    Review[\"Review Agent<br/>(Checks quality)\"]\n    Test[\"Testing Agent<br/>(Writes tests)\"]\n    \n    Result[\"Complete Solution<br/>with Tests\"]\n    \n    User --> Orch\n    Orch --> Plan\n    Plan --> Orch\n    Orch --> Code\n    Code --> Orch\n    Orch --> Test\n    Test --> Orch\n    Orch --> Review\n    Review --> Orch\n    Orch --> Result",
+          "title": "Multi-Agent Orchestration"
         }
       ],
       "moreInfo": [
@@ -234,8 +234,8 @@
       "mermaid": [
         {
           "id": "diagram-0",
-          "diagram": "flowchart LR\n    subgraph Stage1[\"1. Model Selection\"]\n        Compare[\"Compare models\\non benchmarks\"]\n        Quality[\"Quality, safety,\\ntask performance\"]\n    end\n    \n    subgraph Stage2[\"2. Preproduction\"]\n        Test[\"Test with\\nevaluation datasets\"]\n        Edge[\"Identify edge cases\\nand measure metrics\"]\n    end\n    \n    subgraph Stage3[\"3. Production\"]\n        Monitor[\"Continuous\\nmonitoring\"]\n        Alert[\"Alerts and\\nscheduled evaluation\"]\n    end\n    \n    Stage1 --> Stage2 --> Stage3\n    \n    style Compare fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Quality fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Test fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Edge fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Monitor fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6\n    style Alert fill:#2d2d4a,color:#e0e0e0,stroke:#64b5f6",
-          "title": null
+          "diagram": "flowchart LR\n    subgraph Stage1[\"1. Model Selection\"]\n        Compare[\"Compare models\\non benchmarks\"]\n        Quality[\"Quality, safety,\\ntask performance\"]\n    end\n    \n    subgraph Stage2[\"2. Preproduction\"]\n        Test[\"Test with\\nevaluation datasets\"]\n        Edge[\"Identify edge cases\\nand measure metrics\"]\n    end\n    \n    subgraph Stage3[\"3. Production\"]\n        Monitor[\"Continuous\\nmonitoring\"]\n        Alert[\"Alerts and\\nscheduled evaluation\"]\n    end\n    \n    Stage1 --> Stage2 --> Stage3",
+          "title": "GenAIOps Evaluation Stages"
         }
       ],
       "moreInfo": [

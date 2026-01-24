@@ -60,8 +60,7 @@ internal static class RssEndpoints
             Title = "Everything",
             Url = "/",
             Description = "All content from Tech Hub",
-            Collections = [],
-            BackgroundImage = "/assets/images/everything-header.jpg"
+            Collections = []
         };
 
         var channel = await rssService.GenerateSectionFeedAsync(everythingSection, allItems);

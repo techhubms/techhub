@@ -43,7 +43,7 @@
   <!-- Global package references -->
   <ItemGroup>
     <!-- Roslynator analyzers - comprehensive C# code analysis -->
-    <PackageReference Include="Roslynator.Analyzers" Version="4.12.11">
+    <PackageReference Include="Roslynator.Analyzers" Version="4.15.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

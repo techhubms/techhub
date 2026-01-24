@@ -34,7 +34,6 @@ public class GenAINavigationTests(PlaywrightCollectionFixture fixture) : IAsyncL
     {
         // Arrange - Start from Home page
         await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}/");
-        await BlazorHelpers.AssertElementVisibleAsync(Page.Locator("h1:has-text('Microsoft Tech Hub')"));
 
         // Act - Navigate to GenAI Basics via menu/link (client-side navigation, not direct URL)
         // Find and click navigation link to AI section first

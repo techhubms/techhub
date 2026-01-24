@@ -87,7 +87,6 @@ internal static class SectionsEndpoints
             Title = s.Title,
             Description = s.Description,
             Url = s.Url,
-            BackgroundImage = s.BackgroundImage,
             Collections = [.. s.Collections.Select(c => MapCollectionToDto(c, displayNames))]
         });
 
@@ -117,7 +116,6 @@ internal static class SectionsEndpoints
             Title = section.Title,
             Description = section.Description,
             Url = section.Url,
-            BackgroundImage = section.BackgroundImage,
             Collections = [.. section.Collections.Select(c => MapCollectionToDto(c, displayNames))]
         };
 

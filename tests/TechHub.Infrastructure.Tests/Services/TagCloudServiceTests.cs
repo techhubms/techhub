@@ -1,63 +1,29 @@
 using FluentAssertions;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Moq;
 using TechHub.Core.Configuration;
 using TechHub.Core.DTOs;
 using TechHub.Core.Interfaces;
-using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
+using TechHub.TestUtilities;
 
 namespace TechHub.Infrastructure.Tests.Services;
 
 /// <summary>
-/// Integration tests for TagCloudService
+/// Unit tests for TagCloudService
 /// Tests tag cloud generation, quantile sizing, and scoping logic
+/// Uses StubContentRepository for lightweight test data
 /// </summary>
-public class TagCloudServiceTests : IDisposable
+public class TagCloudServiceTests
 {
-    private readonly string _tempDirectory;
     private readonly IContentRepository _repository;
     private readonly TagCloudService _service;
     private readonly FilteringOptions _filteringOptions;
 
     public TagCloudServiceTests()
     {
-        // Setup: Create temporary test directory
-        _tempDirectory = Path.Combine(Path.GetTempPath(), $"techhub-test-{Guid.NewGuid()}");
-        Directory.CreateDirectory(_tempDirectory);
-
-        // Setup: Create test content structure
-        Directory.CreateDirectory(Path.Combine(_tempDirectory, "collections", "_blogs"));
-        Directory.CreateDirectory(Path.Combine(_tempDirectory, "collections", "_news"));
-
-        // Setup: Create test content files with various tag distributions
-        CreateTestContent("item1", "AI Section", ["ai", "machine-learning", "copilot"], "ai", "_blogs", DateTimeOffset.UtcNow.AddDays(-10));
-        CreateTestContent("item2", "AI Content 2", ["ai", "copilot"], "ai", "_blogs", DateTimeOffset.UtcNow.AddDays(-5));
-        CreateTestContent("item3", "AI Content 3", ["ai", "machine-learning"], "ai", "_news", DateTimeOffset.UtcNow.AddDays(-3));
-        CreateTestContent("item4", "Copilot Content", ["copilot", "productivity"], "github-copilot", "_blogs", DateTimeOffset.UtcNow.AddDays(-2));
-        CreateTestContent("item5", "ML Content", ["machine-learning", "azure"], "ml", "_news", DateTimeOffset.UtcNow.AddDays(-50)); // Old content
-        CreateTestContent("item6", "Rare Tag", ["rare-tag"], "ai", "_blogs", DateTimeOffset.UtcNow.AddHours(-12)); // Half day ago
-
-        // Setup: Create AppSettings
-        var settings = new AppSettings
-        {
-            Content = new ContentSettings
-            {
-                CollectionsPath = Path.Combine(_tempDirectory, "collections"),
-                Sections = [],
-                Timezone = "Europe/Brussels"
-            },
-            Seo = new SeoSettings
-            {
-                BaseUrl = "https://test.example.com",
-                SiteTitle = "Test Site",
-                SiteDescription = "Test Description"
-            },
-            Performance = new PerformanceSettings(),
-            Caching = new CachingSettings()
-        };
-
         // Setup: Create filtering options
         _filteringOptions = new FilteringOptions
         {
@@ -76,54 +42,23 @@ public class TagCloudServiceTests : IDisposable
 
         // Setup: Create mock IHostEnvironment
         var mockEnvironment = new Mock<IHostEnvironment>();
-        mockEnvironment.Setup(e => e.ContentRootPath).Returns(_tempDirectory);
+        mockEnvironment.Setup(e => e.ContentRootPath).Returns("/tmp");
 
-        // Setup: Create mock ITagMatchingService
-        var mockTagMatchingService = new Mock<ITagMatchingService>();
-        mockTagMatchingService.Setup(s => s.Normalize(It.IsAny<string>()))
-            .Returns((string tag) => tag.ToLowerInvariant());
+        // Setup: Create MemoryCache
+        var cache = new MemoryCache(new MemoryCacheOptions());
 
-        // Setup: Create dependencies
+        // Setup: Create real dependencies - no mocks for services
         var markdownService = new MarkdownService();
-        _repository = new FileBasedContentRepository(
-            Options.Create(settings),
+        var tagMatchingService = new TagMatchingService();
+        
+        _repository = new StubContentRepository(
             markdownService,
-            mockTagMatchingService.Object,
-            mockEnvironment.Object
+            tagMatchingService,
+            mockEnvironment.Object,
+            cache
         );
 
         _service = new TagCloudService(_repository, Options.Create(_filteringOptions));
-    }
-
-    private void CreateTestContent(string slug, string title, string[] tags, string sectionName, string collectionName, DateTimeOffset date)
-    {
-        var content = $@"---
-title: {title}
-slug: {slug}
-description: Test content
-section_names:
-  - {sectionName}
-tags:
-{string.Join("\n", tags.Select(t => $"  - {t}"))}
-date: {date:yyyy-MM-dd}
----
-
-Test content body.
-";
-
-        var collectionPath = Path.Combine(_tempDirectory, "collections", collectionName);
-        File.WriteAllText(Path.Combine(collectionPath, $"{date:yyyy-MM-dd}-{slug}.md"), content);
-    }
-
-    public void Dispose()
-    {
-        // Cleanup: Delete temporary test directory
-        if (Directory.Exists(_tempDirectory))
-        {
-            Directory.Delete(_tempDirectory, recursive: true);
-        }
-
-        GC.SuppressFinalize(this);
     }
 
     #region Homepage Scope Tests
@@ -145,9 +80,9 @@ Test content body.
 
         // Assert
         result.Should().NotBeEmpty();
-        result.Should().Contain(t => t.Tag == "ai");
-        result.Should().Contain(t => t.Tag == "copilot");
-        result.Should().Contain(t => t.Tag == "machine-learning");
+        result.Should().Contain(t => t.Tag == "Code Review");
+        result.Should().Contain(t => t.Tag == "Developer Tools");
+        result.Should().Contain(t => t.Tag == "Collaboration");
         result.Should().BeInDescendingOrder(t => t.Count);
     }
 
@@ -230,9 +165,9 @@ Test content body.
         var result = await _service.GetTagCloudAsync(request, CancellationToken.None);
 
         // Assert
-        result.Should().Contain(t => t.Tag == "ai");
-        result.Should().Contain(t => t.Tag == "machine-learning");
-        result.Should().NotContain(t => t.Tag == "productivity", "productivity is only in github-copilot section");
+        result.Should().Contain(t => t.Tag == "Copilot");
+        result.Should().Contain(t => t.Tag == "Developer Tools");
+        result.Should().NotContain(t => t.Tag == "Uncategorized", "Uncategorized tag doesn't exist in ai section");
     }
 
     [Fact]
@@ -255,10 +190,10 @@ Test content body.
 
         // Assert - Should return tags from ALL sections (ai, github-copilot, ml, etc.)
         result.Should().NotBeEmpty("'all' section should return tags from all sections");
-        result.Should().Contain(t => t.Tag == "ai");
-        result.Should().Contain(t => t.Tag == "copilot");
-        result.Should().Contain(t => t.Tag == "machine-learning");
-        result.Should().Contain(t => t.Tag == "productivity"); // From github-copilot section
+        result.Should().Contain(t => t.Tag == "Code Review");
+        result.Should().Contain(t => t.Tag == "Developer Tools");
+        result.Should().Contain(t => t.Tag == "Collaboration");
+        result.Should().Contain(t => t.Tag == ".NET"); // From multiple sections
     }
 
     #endregion
@@ -283,8 +218,8 @@ Test content body.
         var result = await _service.GetTagCloudAsync(request, CancellationToken.None);
 
         // Assert
-        result.Should().Contain(t => t.Tag == "ai");
-        result.Should().Contain(t => t.Tag == "copilot");
+        result.Should().Contain(t => t.Tag == "Code Review");
+        result.Should().Contain(t => t.Tag == "Collaboration");
         // item3 is in _news, not _blogs, so its unique tags shouldn't appear
     }
 
@@ -309,8 +244,8 @@ Test content body.
 
         // Assert - Should return tags from all collections in the section (both _blogs and _news)
         result.Should().NotBeEmpty("'all' collection should return tags from all collections in the section");
-        result.Should().Contain(t => t.Tag == "ai");
-        result.Should().Contain(t => t.Tag == "machine-learning"); // From both _blogs and _news
+        result.Should().Contain(t => t.Tag == "Copilot");
+        result.Should().Contain(t => t.Tag == "Developer Tools"); // From multiple collections
     }
 
     #endregion
@@ -405,8 +340,8 @@ Test content body.
         // Assert
         result.Should().NotBeNull();
         result.Tags.Should().NotBeEmpty();
-        result.Tags.Should().Contain(t => t.Tag == "ai");
-        result.Tags.Should().Contain(t => t.Tag == "copilot");
+        result.Tags.Should().Contain(t => t.Tag == "Code Review");
+        result.Tags.Should().Contain(t => t.Tag == "Developer Tools");
         result.Tags.All(t => t.Count > 0).Should().BeTrue();
         result.Tags.Should().BeInDescendingOrder(t => t.Count);
     }
@@ -419,8 +354,8 @@ Test content body.
 
         // Assert
         result.Should().NotBeNull();
-        result.Tags.Should().Contain(t => t.Tag == "ai");
-        result.Tags.Should().NotContain(t => t.Tag == "productivity", "productivity is only in github-copilot");
+        result.Tags.Should().Contain(t => t.Tag == "Copilot");
+        result.Tags.Should().NotContain(t => t.Tag == "Uncategorized", "Uncategorized tag doesn't exist in ai section");
     }
 
     [Fact]
@@ -431,7 +366,7 @@ Test content body.
 
         // Assert
         result.Should().NotBeNull();
-        result.Tags.Should().Contain(t => t.Tag == "ai");
+        result.Tags.Should().Contain(t => t.Tag == "Code Review");
         // Verify tags are from _blogs only
     }
 
@@ -502,16 +437,14 @@ Test content body.
         // Should return tags from blogs across all sections (not filtered by section)
         result.Should().NotBeEmpty("Tags from blogs across all sections should be included");
 
-        // Verify we get tags from blog posts in different sections
-        var tags = result.Select(t => t.Tag.ToLowerInvariant()).ToList();
+        // Verify we get tags from blog posts
+        var tags = result.Select(t => t.Tag).ToList();
 
-        // item1 and item2 are blogs from "ai" section with tags: ai, machine-learning, copilot
-        // item4 is blog from "github-copilot" section with tags: copilot, productivity
-        // Expected tags: ai, machine-learning, copilot, productivity
-        tags.Should().Contain("ai", "because item1 and item2 are blogs with 'ai' tag");
-        tags.Should().Contain("machine-learning", "because item1 and item2 are blogs with 'machine-learning' tag");
-        tags.Should().Contain("copilot", "because items 1, 2, and 4 are blogs with 'copilot' tag");
-        tags.Should().Contain("productivity", "because item4 is a blog with 'productivity' tag");
+        // We have 2 blog posts in test data:
+        // 1. "From Tool to Teammate" (ai, github-copilot sections)
+        // 2. "Azure Cost Estimation" (azure section)
+        // With section="all", we should see tags from blogs in all sections
+        tags.Should().Contain("Azure Pricing", "Azure Cost blog should be included");
     }
 
     #endregion

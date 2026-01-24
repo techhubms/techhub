@@ -34,7 +34,6 @@
     background: var(--color-purple-dark);
     border-color: var(--color-purple-bright);
     color: var(--color-text-on-emphasis);
-    transform: translateY(-1px);
 }
 
 .tag-cloud-item:focus-visible {
@@ -42,9 +41,7 @@
     outline-offset: 2px;
 }
 
-.tag-cloud-item:active {
-    transform: translateY(0);
-}
+.tag-cloud-item:active {}
 
 /* Selected state - tag is currently active filter */
 .tag-cloud-item.selected {
@@ -150,4 +147,44 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-1);
+}
+
+/* Skeleton loader for tag cloud - subtle loading state */
+.tag-cloud-skeleton {
+    display: inline-block;
+    height: 1.75rem;
+    width: 6rem;
+    background: linear-gradient(90deg,
+            var(--color-card-bg) 0%,
+            var(--color-border-default) 50%,
+            var(--color-card-bg) 100%);
+    background-size: 200% 100%;
+    border-radius: var(--radius-sm);
+    animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+.tag-cloud-skeleton:nth-child(2n) {
+    width: 8rem;
+}
+
+.tag-cloud-skeleton:nth-child(3n) {
+    width: 10rem;
+}
+
+.tag-cloud-skeleton:nth-child(4n) {
+    width: 5rem;
+}
+
+.tag-cloud-skeleton:nth-child(5n) {
+    width: 7rem;
+}
+
+@keyframes skeleton-pulse {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }

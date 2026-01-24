@@ -3,7 +3,8 @@
 
 <div class="section-card-container">
     <a href="@Section.Url" class="section-card" aria-label="View @Section.Title section">
-        <div class="section-card-header" style="background-image: url('@Section.BackgroundImage')" role="img" aria-label="@Section.Title section background">
+        <div class="section-card-header section-bg-@Section.Name" role="img"
+            aria-label="@Section.Title section background">
             <div class="section-overlay">
                 <h2>@Section.Title</h2>
             </div>
@@ -21,7 +22,8 @@
                 @if (collection.IsCustom)
                 {
                     @* Custom pages *@
-                    <a href="@collection.Url" class="collection-badge custom-page-badge" aria-label="View @collection.Title custom page">
+                    <a href="@collection.Url" class="collection-badge custom-page-badge"
+                        aria-label="View @collection.Title custom page">
                         @collection.Title
                     </a>
                 }
@@ -35,7 +37,9 @@
             }
             @if (Section.Collections.Count > 4)
             {
-                <span class="collection-badge-more" aria-label="@(Section.Collections.Count - 4) more collections available">+@(Section.Collections.Count - 4) more</span>
+                <span class="collection-badge-more"
+                    aria-label="@(Section.Collections.Count - 4) more collections available">+@(Section.Collections.Count - 4)
+                    more</span>
             }
         </nav>
     }
@@ -45,4 +49,3 @@
     [Parameter, EditorRequired]
     public SectionDto Section { get; set; } = null!;
 }
-

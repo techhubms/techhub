@@ -1,5 +1,4 @@
 using System.Text.Json;
-using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
@@ -196,19 +195,34 @@ internal static class CustomPagesEndpoints
         {
             var content = section.Content;
 
-            // Replace {{mermaid:id}} placeholders with actual diagram code wrapped in mermaid blocks
+            // Replace {{mermaid:id}} placeholders with diagram code + unique caption marker
             if (section.Mermaid != null)
             {
                 foreach (var diagram in section.Mermaid)
                 {
                     var placeholder = $"{{{{mermaid:{diagram.Id}}}}}";
-                    var mermaidBlock = $"```mermaid\n{diagram.Diagram}\n```";
+                    var captionMarker = $"{{{{CAPTION:{diagram.Id}}}}}";
+                    var mermaidBlock = $"```mermaid\n{diagram.Diagram}\n```\n\n{captionMarker}";
                     content = content.Replace(placeholder, mermaidBlock, StringComparison.Ordinal);
                 }
             }
 
             // Render markdown to HTML
             var htmlContent = markdownService.RenderToHtml(content);
+
+            // Replace caption markers with actual caption paragraphs (only if title exists)
+            if (section.Mermaid != null)
+            {
+                foreach (var diagram in section.Mermaid)
+                {
+                    var captionMarker = $"<p>{{{{CAPTION:{diagram.Id}}}}}</p>";
+                    // Only add caption if title is provided
+                    var caption = !string.IsNullOrWhiteSpace(diagram.Title)
+                        ? $"<p class=\"mermaid-caption\">{System.Net.WebUtility.HtmlEncode(diagram.Title)}</p>"
+                        : string.Empty;
+                    htmlContent = htmlContent.Replace(captionMarker, caption, StringComparison.Ordinal);
+                }
+            }
 
             return section with { Content = htmlContent };
         }).ToList();

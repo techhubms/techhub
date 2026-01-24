@@ -61,38 +61,35 @@ h2 {
   font-size: var(--font-size-h2);
   margin-top: var(--spacing-4);
   margin-bottom: var(--spacing-3);
-  scroll-margin-top: 40vh;
-  /* Optimal reading position at 40% from top of viewport */
+  scroll-margin-top: var(--scroll-margin-top);
 }
 
 h3 {
   font-size: var(--font-size-h3);
   margin-top: var(--spacing-4);
   margin-bottom: var(--spacing-3);
-  scroll-margin-top: 40vh;
-  /* Optimal reading position at 40% from top of viewport */
+  scroll-margin-top: var(--scroll-margin-top);
 }
 
 h4 {
   font-size: var(--font-size-h4);
   margin-top: var(--spacing-4);
   margin-bottom: var(--spacing-2);
-  scroll-margin-top: 40vh;
-  /* Optimal reading position at 40% from top of viewport */
+  scroll-margin-top: var(--scroll-margin-top);
 }
 
 h5 {
   font-size: var(--font-size-h5);
-  scroll-margin-top: 40vh;
-  /* Optimal reading position at 40% from top of viewport */
   margin-top: var(--spacing-3);
   margin-bottom: var(--spacing-2);
+  scroll-margin-top: var(--scroll-margin-top);
 }
 
 h6 {
   font-size: var(--font-size-h6);
   margin-top: var(--spacing-3);
   margin-bottom: var(--spacing-2);
+  scroll-margin-top: var(--scroll-margin-top);
 }
 
 p {

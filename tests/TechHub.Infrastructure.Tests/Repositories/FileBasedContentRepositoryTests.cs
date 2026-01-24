@@ -1,4 +1,5 @@
 using FluentAssertions;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Moq;
@@ -33,17 +34,8 @@ public class FileBasedContentRepositoryTests : IDisposable
             Content = new ContentSettings
             {
                 CollectionsPath = _collectionsPath,
-                Sections = [], // Empty for content tests
-                Timezone = "Europe/Brussels"
-            },
-            Caching = new CachingSettings(),
-            Seo = new SeoSettings
-            {
-                BaseUrl = "https://test.local",
-                SiteTitle = "Test Site",
-                SiteDescription = "Test Description"
-            },
-            Performance = new PerformanceSettings()
+                Sections = [] // Empty for content tests
+            }
         };
 
         // Setup: Create mock IHostEnvironment
@@ -53,13 +45,17 @@ public class FileBasedContentRepositoryTests : IDisposable
         // Setup: Create real TagMatchingService for accurate tag filtering in tests
         var tagMatchingService = new TagMatchingService();
 
+        // Setup: Create MemoryCache for caching
+        var cache = new MemoryCache(new MemoryCacheOptions());
+
         // Setup: Create dependencies
         _markdownService = new MarkdownService();
         _repository = new FileBasedContentRepository(
             Options.Create(_settings),
             _markdownService,
             tagMatchingService,
-            mockEnvironment.Object
+            mockEnvironment.Object,
+            cache
         );
     }
 

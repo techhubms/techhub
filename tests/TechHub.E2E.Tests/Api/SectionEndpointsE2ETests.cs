@@ -2,6 +2,7 @@ using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
 using TechHub.Core.DTOs;
+using TechHub.TestUtilities;
 
 namespace TechHub.E2E.Tests.Api;
 
@@ -9,7 +10,7 @@ namespace TechHub.E2E.Tests.Api;
 /// End-to-end tests for Section API endpoints
 /// Tests: GET /api/sections, GET /api/sections/{name}
 /// </summary>
-public class SectionEndpointsE2ETests(ApiTestFactory factory) : IClassFixture<ApiTestFactory>
+public class SectionEndpointsE2ETests(TechHubE2ETestApiFactory factory) : IClassFixture<TechHubE2ETestApiFactory>
 {
     private readonly HttpClient _client = factory.CreateClient();
 

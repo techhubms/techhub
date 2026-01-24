@@ -8,7 +8,7 @@ namespace TechHub.Web.Tests.Components;
 /// <summary>
 /// Tests for ContentItemCard.razor component
 /// </summary>
-public class ContentItemCardTests : TestContext
+public class ContentItemCardTests : BunitContext
 {
     [Fact]
     public void ContentItemCard_RendersTitle_Correctly()
@@ -17,7 +17,7 @@ public class ContentItemCardTests : TestContext
         var item = CreateTestContentItem("Example Post", "2024-01-15");
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item));
 
         // Assert
@@ -46,7 +46,7 @@ public class ContentItemCardTests : TestContext
         };
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item));
 
         // Assert
@@ -76,7 +76,7 @@ public class ContentItemCardTests : TestContext
         };
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item));
 
         // Assert
@@ -91,7 +91,7 @@ public class ContentItemCardTests : TestContext
         var item = CreateTestContentItem("Example Post", "2024-01-15");
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item));
 
         // Assert
@@ -121,7 +121,7 @@ public class ContentItemCardTests : TestContext
         };
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item));
 
         // Assert
@@ -153,7 +153,7 @@ public class ContentItemCardTests : TestContext
         };
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item));
 
         // Assert
@@ -186,7 +186,7 @@ public class ContentItemCardTests : TestContext
         };
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item)
             .Add(p => p.ShowCollectionBadge, true));
 
@@ -217,7 +217,7 @@ public class ContentItemCardTests : TestContext
         };
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item)
             .Add(p => p.ShowCollectionBadge, false));
 
@@ -248,7 +248,7 @@ public class ContentItemCardTests : TestContext
         };
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item));
 
         // Assert
@@ -280,7 +280,7 @@ public class ContentItemCardTests : TestContext
         };
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item));
 
         // Assert
@@ -312,7 +312,7 @@ public class ContentItemCardTests : TestContext
         };
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item));
 
         // Assert
@@ -343,7 +343,7 @@ public class ContentItemCardTests : TestContext
         };
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item));
 
         // Assert
@@ -373,7 +373,7 @@ public class ContentItemCardTests : TestContext
         };
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item)
             .Add(p => p.ShowCollectionBadge, true));
 
@@ -389,7 +389,7 @@ public class ContentItemCardTests : TestContext
         var item = CreateTestContentItem("Example Post", "2024-01-15");
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item));
 
         // Assert
@@ -419,7 +419,7 @@ public class ContentItemCardTests : TestContext
         };
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item));
 
         // Assert
@@ -449,7 +449,7 @@ public class ContentItemCardTests : TestContext
         };
 
         // Act
-        var cut = RenderComponent<ContentItemCard>(parameters => parameters
+        var cut = Render<ContentItemCard>(parameters => parameters
             .Add(p => p.Item, item));
 
         // Assert

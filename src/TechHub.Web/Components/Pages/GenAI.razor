@@ -17,11 +17,7 @@
         <link rel="canonical" href="@GetCanonicalUrl()" />
     </HeadContent>
 
-    <header class="site-header">
-        <NavHeader />
-        <SectionBanner Section="@sectionData" />
-        <SubNav Section="@sectionData" />
-    </header>
+    <Header SectionName="ai" />
 
     <main class="page-with-sidebar">
         <aside class="sidebar">
@@ -52,14 +48,16 @@
                         @if (genAISection.Faq != null && genAISection.Faq.Any())
                         {
                             <div class="genai-faq">
+                                <div class="genai-faq-header">
+                                    <span class="genai-faq-icon" aria-hidden="true">❓</span>
+                                    <span class="genai-faq-title">@genAISection.Title FAQ</span>
+                                </div>
                                 @foreach (var faq in genAISection.Faq)
                                 {
-                                    <details class="genai-faq-item">
-                                        <summary>@faq.Question</summary>
-                                        <div class="genai-faq-answer">
-                                            <p>@faq.Answer</p>
-                                        </div>
-                                    </details>
+                                    <div class="genai-faq-item">
+                                        <div class="genai-faq-question">@faq.Question</div>
+                                        <div class="genai-faq-answer">@faq.Answer</div>
+                                    </div>
                                 }
                             </div>
                         }
@@ -68,7 +66,10 @@
                         @if (genAISection.MoreInfo != null && genAISection.MoreInfo.Any())
                         {
                             <div class="genai-more-info">
-                                <h3>More Information</h3>
+                                <div class="genai-more-info-header">
+                                    <span class="genai-more-info-icon" aria-hidden="true">📚</span>
+                                    <span class="genai-more-info-title">More information</span>
+                                </div>
                                 <ul>
                                     @foreach (var link in genAISection.MoreInfo)
                                     {
@@ -136,6 +137,7 @@
     /// <summary>
     /// Generate HTML content for TOC extraction.
     /// SidebarToc will extract headings from this HTML automatically.
+    /// Includes both H2 section titles AND all nested headings from content.
     /// </summary>
     private string GetRenderedContent()
     {
@@ -145,7 +147,11 @@
         var sb = new System.Text.StringBuilder();
         foreach (var genAISection in pageData.Sections)
         {
+            // Add H2 section title
             sb.Append($"<h2 id=\"{GenerateSectionId(genAISection.Title)}\">{genAISection.Title}</h2>");
+
+            // Add all content HTML which includes nested headings (h3, h4, etc.)
+            sb.Append(genAISection.Content);
         }
         return sb.ToString();
     }

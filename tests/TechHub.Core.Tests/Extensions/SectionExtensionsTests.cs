@@ -26,7 +26,6 @@ public class SectionExtensionsTests
             Title = "AI",
             Description = "Artificial Intelligence resources",
             Url = "/ai",
-            BackgroundImage = "/assets/section-backgrounds/ai.jpg",
             Collections =
             [
                 new CollectionReference
@@ -63,9 +62,7 @@ public class SectionExtensionsTests
         dto.Title.Should().Be("AI");
         dto.Description.Should().Be("Artificial Intelligence resources");
         dto.Url.Should().Be("/ai");
-        dto.Name.Should().Be("ai");
-        dto.BackgroundImage.Should().Be("/assets/section-backgrounds/ai.jpg");
-        dto.Collections.Should().HaveCount(2);
+        dto.Name.Should().Be("ai");        dto.Collections.Should().HaveCount(2);
     }
 
     [Fact]
@@ -216,7 +213,6 @@ public class SectionExtensionsTests
                 Title = "GitHub Copilot",
                 Description = "GitHub Copilot resources",
                 Url = "/github-copilot",
-                BackgroundImage = "/assets/section-backgrounds/github-copilot.jpg",
                 Collections =
                 [
                     new CollectionReference
@@ -266,7 +262,6 @@ public class SectionExtensionsTests
             Title = "AI",
             Description = "Artificial Intelligence resources",
             Url = "/ai",
-            BackgroundImage = "/assets/section-backgrounds/ai.jpg",
             Collections = []
         };
 

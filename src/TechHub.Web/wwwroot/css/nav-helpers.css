@@ -43,12 +43,11 @@
 
 .nav-helper-btn:hover {
     background: var(--color-purple-medium);
-    transform: scale(1.1);
     box-shadow: var(--shadow-xl);
 }
 
 .nav-helper-btn:active {
-    transform: scale(0.95);
+    background: var(--color-purple-medium);
 }
 
 .nav-helper-btn svg {

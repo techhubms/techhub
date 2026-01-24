@@ -196,10 +196,10 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         var firstCard = Page.Locator(".section-card").First;
         var headerElement = firstCard.Locator(".section-card-header");
 
-        // Assert - Should have background-image style
-        var style = await headerElement.GetAttributeAsync("style", new() { Timeout = BlazorHelpers.DefaultElementTimeout });
-        style.Should().NotBeNull();
-        style.Should().Contain("background-image");
+        // Assert - Should have background image via CSS class (no inline style)
+        var classAttr = await headerElement.GetAttributeAsync("class");
+        classAttr.Should().NotBeNull();
+        classAttr.Should().MatchRegex("section-bg-(ai|github-copilot|azure|ml|devops|coding|security|all)");
 
         // Check that there's no grey bar (overlay should cover full height)
         var overlay = headerElement.Locator(".section-overlay");

@@ -79,7 +79,6 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
             Title = config.Title,
             Description = config.Description,
             Url = config.Url,
-            BackgroundImage = config.Image,
             Collections = collections
         };
     }

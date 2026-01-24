@@ -13,6 +13,7 @@
     <Project Path="tests/TechHub.Core.Tests/TechHub.Core.Tests.csproj" />
     <Project Path="tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj" />
     <Project Path="tests/TechHub.Infrastructure.Tests/TechHub.Infrastructure.Tests.csproj" />
+    <Project Path="tests/TechHub.TestUtilities/TechHub.TestUtilities.csproj" />
     <Project Path="tests/TechHub.Web.Tests/TechHub.Web.Tests.csproj" />
   </Folder>
 </Solution>

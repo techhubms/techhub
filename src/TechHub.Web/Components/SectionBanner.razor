@@ -5,10 +5,10 @@
     
     Usage:
     <SectionBanner Section="@sectionData" />
-    <SectionBanner Title="Page Title" Description="Description" BackgroundImage="/images/bg.jpg" />
+    <SectionBanner Title="Page Title" Description="Description" BackgroundImage="/images/bg.webp" />
 *@
 
-<div class="section-banner @CssClass" style="@StyleAttribute">
+<div class="section-banner @CssClass @BackgroundClass">
     <div class="section-banner-content header-text-overlay">
         <div class="banner-title">@DisplayTitle</div>
         @if (!string.IsNullOrEmpty(DisplayDescription))
@@ -19,26 +19,26 @@
 </div>
 
 @code {
-    // For static pages - provide Title, Description, BackgroundImage
+    // For static pages - provide Title, Description, BackgroundCssClass
     [Parameter]
     public string? Title { get; set; }
-    
+
     [Parameter]
     public string? Description { get; set; }
-    
+
     [Parameter]
-    public string? BackgroundImage { get; set; }
-    
+    public string? BackgroundCssClass { get; set; }
+
     // For section pages - provide Section
     [Parameter]
     public SectionDto? Section { get; set; }
-    
+
     // Computed properties - prefer Section data if available
     private string DisplayTitle => Section?.Title ?? Title ?? string.Empty;
     private string? DisplayDescription => Section?.Description ?? Description;
-    private string? DisplayBackgroundImage => Section?.BackgroundImage ?? BackgroundImage;
-    
-    private string CssClass => string.IsNullOrEmpty(DisplayBackgroundImage) ? "home-banner" : "";
-    
-    private string StyleAttribute => $"background-image: url('{DisplayBackgroundImage ?? "/images/section-backgrounds/home.jpg"}'); background-size: cover; background-position: center; background-repeat: no-repeat;";
+    private string BackgroundClass => Section != null
+    ? $"section-banner-bg-{Section.Name}"
+    : BackgroundCssClass ?? "section-banner-bg-none";
+
+    private string CssClass => Section == null && string.IsNullOrEmpty(BackgroundCssClass) ? "home-banner" : "";
 }

@@ -13,19 +13,23 @@ var builder = WebApplication.CreateBuilder(args);
 // Add Aspire service defaults (OpenTelemetry, service discovery, resilience, health checks)
 builder.AddServiceDefaults();
 
-// Configure file logging for Development and Test environments
+// Log environment during startup for verification
+using (var loggerFactory = LoggerFactory.Create(b => b.AddConsole()))
+{
+    var logger = loggerFactory.CreateLogger("Startup");
+    logger.LogInformation("🚀 TechHub.Api starting in {Environment} environment", builder.Environment.EnvironmentName);
+}
+
+// Configure file logging when path is configured in appsettings
 // Skip during integration tests (AppSettings:SkipFileLogging = true)
 var skipFileLogging = builder.Configuration.GetValue<bool>("AppSettings:SkipFileLogging");
-if (!skipFileLogging && (builder.Environment.IsDevelopment() || builder.Environment.IsEnvironment("Test")))
+var logPath = builder.Configuration["Logging:File:Path"];
+if (!skipFileLogging && !string.IsNullOrEmpty(logPath))
 {
-    var logPath = builder.Configuration["Logging:File:Path"];
-    if (!string.IsNullOrEmpty(logPath))
-    {
-        // FileLoggerProvider is registered with DI and disposed by framework
+    // FileLoggerProvider is registered with DI and disposed by framework
 #pragma warning disable CA2000
-        builder.Logging.AddProvider(new FileLoggerProvider(logPath));
+    builder.Logging.AddProvider(new FileLoggerProvider(logPath));
 #pragma warning restore CA2000
-    }
 }
 
 // Add services to the container
@@ -45,6 +49,9 @@ builder.Services.AddSwaggerGen(options =>
 
 // Note: OpenTelemetry is configured by AddServiceDefaults()
 
+// Add memory caching
+builder.Services.AddMemoryCache();
+
 // Configure AppSettings from appsettings.json
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
@@ -54,7 +61,7 @@ builder.Services.Configure<FilteringOptions>(builder.Configuration.GetSection("A
 // Register repositories and services
 builder.Services.AddSingleton<IMarkdownService, MarkdownService>();
 builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>();
-builder.Services.AddSingleton<IContentRepository, FileBasedContentRepository>();
+builder.Services.AddTransient<IContentRepository, FileBasedContentRepository>();
 builder.Services.AddSingleton<IRssService, RssService>();
 builder.Services.AddSingleton<ISectionMappingService, SectionMappingService>();
 
@@ -82,8 +89,8 @@ var app = builder.Build();
 // Global exception handler (must be first)
 app.UseMiddleware<ExceptionHandlerMiddleware>();
 
-// Enable Swagger in Development and Test environments
-if (app.Environment.IsDevelopment() || app.Environment.IsEnvironment("Test"))
+// Enable Swagger in Development environment
+if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
     app.UseSwagger();
