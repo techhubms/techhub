@@ -62,7 +62,8 @@ public class SectionExtensionsTests
         dto.Title.Should().Be("AI");
         dto.Description.Should().Be("Artificial Intelligence resources");
         dto.Url.Should().Be("/ai");
-        dto.Name.Should().Be("ai");        dto.Collections.Should().HaveCount(2);
+        dto.Name.Should().Be("ai");
+        dto.Collections.Should().HaveCount(2);
     }
 
     [Fact]

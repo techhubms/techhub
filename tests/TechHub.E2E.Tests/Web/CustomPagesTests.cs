@@ -149,12 +149,16 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
 
         // Act
         await Page.GotoRelativeAsync(url);
-        await Page.WaitForTimeoutAsync(1000); // Wait for JS to execute
+        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle); // Wait for resources to load
 
         // Assert
-        // Filter out SRI integrity errors for highlight.js (CDN resources that work despite errors)
+        // Filter out expected/benign errors:
+        // - SRI integrity errors for highlight.js (CDN resources that work despite errors)
+        // - Ad-blocker related errors (ERR_CONNECTION_REFUSED, ERR_ADDRESS_INVALID - blocked by DNS-level ad blockers)
         var significantErrors = consoleErrors
             .Where(e => !e.Contains("integrity") || !e.Contains("highlight.js"))
+            .Where(e => !e.Contains("ERR_CONNECTION_REFUSED"))
+            .Where(e => !e.Contains("ERR_ADDRESS_INVALID"))
             .ToList();
         significantErrors.Should().BeEmpty($"Expected no console errors on {url}, but found: {string.Join(", ", significantErrors)}");
     }

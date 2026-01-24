@@ -70,10 +70,7 @@ public class VSCodeUpdatesTests(PlaywrightCollectionFixture fixture) : IAsyncLif
         // Act - Click second TOC link
         var secondLink = tocLinks.Nth(1);
         var linkText = await secondLink.TextContentAsync();
-        await secondLink.ClickAsync();
-
-        // Wait for scroll to complete
-        await Page.WaitForTimeoutAsync(500);
+        await secondLink.ClickAndWaitForScrollAsync();
 
         // Assert - URL should have hash
         var url = Page.Url;

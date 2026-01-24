@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using FluentAssertions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
@@ -257,8 +258,8 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         var aboutBookLink = tocLinks.Filter(new() { HasText = "About the Book" }).First;
         await aboutBookLink.ClickAsync();
 
-        // Wait a moment for scroll to complete
-        await Task.Delay(500);
+        // Wait for the clicked link to become active using Playwright's expect with retry
+        await Assertions.Expect(aboutBookLink).ToHaveClassAsync(new Regex("active"), new() { Timeout = 2000 });
 
         // Assert - The clicked TOC link should become active (highlighted)
         var activeClass = await aboutBookLink.GetAttributeAsync("class");

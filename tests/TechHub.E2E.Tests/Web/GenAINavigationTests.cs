@@ -25,8 +25,15 @@ public class GenAINavigationTests(PlaywrightCollectionFixture fixture) : IAsyncL
 
     public async Task DisposeAsync()
     {
-        if (_page != null) await _page.CloseAsync();
-        if (_context != null) await _context.CloseAsync();
+        if (_page != null)
+        {
+            await _page.CloseAsync();
+        }
+
+        if (_context != null)
+        {
+            await _context.CloseAsync();
+        }
     }
 
     [Fact]
@@ -74,11 +81,12 @@ public class GenAINavigationTests(PlaywrightCollectionFixture fixture) : IAsyncL
             await Page.WaitForURLAsync("**/ai/genai-basics", new() { WaitUntil = WaitUntilState.NetworkIdle });
         }
 
-        // Wait for Blazor to settle and Mermaid to initialize
-        await Task.Delay(2000); // Give Mermaid time to process diagrams after navigation
+        // Wait for Mermaid diagrams to render (use proper selector wait instead of arbitrary delay)
+        var mermaidDiagrams = Page.Locator(".mermaid svg");
+        await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync(new() { Timeout = 5000 });
 
         // Assert - Verify Mermaid diagrams rendered as SVG elements
-        var diagramCount = await Page.Locator(".mermaid svg").CountAsync();
+        var diagramCount = await mermaidDiagrams.CountAsync();
         diagramCount.Should().BeGreaterThan(0, "Expected mermaid diagrams to be rendered as SVG elements after navigation");
     }
 
@@ -102,8 +110,8 @@ public class GenAINavigationTests(PlaywrightCollectionFixture fixture) : IAsyncL
         {
             await Page.GotoAsync($"{BaseUrl}/ai/genai-basics");
         }
+
         await Page.WaitForURLAsync("**/ai/genai-basics", new() { WaitUntil = WaitUntilState.NetworkIdle });
-        await Task.Delay(1000); // Allow TOC scroll spy to initialize
 
         // Assert - Verify TOC exists and has active state
         var toc = Page.Locator(".sidebar-toc");
@@ -113,8 +121,12 @@ public class GenAINavigationTests(PlaywrightCollectionFixture fixture) : IAsyncL
         var linkCount = await tocLinks.CountAsync();
         linkCount.Should().BeGreaterThan(0, "TOC should have navigation links");
 
-        // Verify at least one TOC link has active class (overview section should be active)
+        // Wait for TOC scroll spy to initialize and activate at least one link
+        // Use Playwright's Expect to wait with retry logic
         var activeTocLinks = Page.Locator(".sidebar-toc a.active");
+        await Assertions.Expect(activeTocLinks.First).ToBeVisibleAsync(new() { Timeout = 5000 });
+
+        // Verify at least one TOC link has active class (overview section should be active)
         var activeCount = await activeTocLinks.CountAsync();
         activeCount.Should().BeGreaterThan(0, "At least one TOC link should be active after navigation");
     }
@@ -132,9 +144,12 @@ public class GenAINavigationTests(PlaywrightCollectionFixture fixture) : IAsyncL
         await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
         await Page.GotoAsync($"{BaseUrl}/ai/genai-basics");
         await Page.WaitForURLAsync("**/ai/genai-basics", new() { WaitUntil = WaitUntilState.NetworkIdle });
-        await Task.Delay(2000);
 
-        var firstLoadDiagrams = await Page.Locator(".mermaid svg").CountAsync();
+        // Wait for Mermaid diagrams to be visible
+        var mermaidDiagrams = Page.Locator(".mermaid svg");
+        await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync(new() { Timeout = 5000 });
+
+        var firstLoadDiagrams = await mermaidDiagrams.CountAsync();
 
         // Navigate away to another page
         await Page.GotoAsync($"{BaseUrl}/");
@@ -143,9 +158,11 @@ public class GenAINavigationTests(PlaywrightCollectionFixture fixture) : IAsyncL
         // Navigate back to GenAI Basics
         await Page.GotoAsync($"{BaseUrl}/ai/genai-basics");
         await Page.WaitForURLAsync("**/ai/genai-basics", new() { WaitUntil = WaitUntilState.NetworkIdle });
-        await Task.Delay(2000);
 
-        var secondLoadDiagrams = await Page.Locator(".mermaid svg").CountAsync();
+        // Wait for Mermaid diagrams to be visible again
+        await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync(new() { Timeout = 5000 });
+
+        var secondLoadDiagrams = await mermaidDiagrams.CountAsync();
 
         // Assert - Diagrams should render both times
         firstLoadDiagrams.Should().BeGreaterThan(0, "Mermaid diagrams should render on first navigation");
@@ -160,20 +177,24 @@ public class GenAINavigationTests(PlaywrightCollectionFixture fixture) : IAsyncL
 
         // Scenario 1: Direct URL load (refresh/bookmark behavior)
         await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}/ai/genai-basics");
-        await Task.Delay(2000);
 
-        var directLoadDiagrams = await Page.Locator(".mermaid svg").CountAsync();
+        // Wait for Mermaid diagrams to be visible
+        var mermaidDiagrams = Page.Locator(".mermaid svg");
+        await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync(new() { Timeout = 5000 });
+
+        var directLoadDiagrams = await mermaidDiagrams.CountAsync();
         var directLoadTocLinks = await Page.Locator(".sidebar-toc a").CountAsync();
-        var directLoadActiveToc = await Page.Locator(".sidebar-toc a.active").CountAsync();
 
         // Scenario 2: Client-side navigation
         await Page.GotoAsync($"{BaseUrl}/");
         await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
         await Page.GotoAsync($"{BaseUrl}/ai/genai-basics");
         await Page.WaitForURLAsync("**/ai/genai-basics", new() { WaitUntil = WaitUntilState.NetworkIdle });
-        await Task.Delay(2000);
 
-        var navigationLoadDiagrams = await Page.Locator(".mermaid svg").CountAsync();
+        // Wait for Mermaid diagrams to be visible again
+        await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync(new() { Timeout = 5000 });
+
+        var navigationLoadDiagrams = await mermaidDiagrams.CountAsync();
         var navigationLoadTocLinks = await Page.Locator(".sidebar-toc a").CountAsync();
         var navigationLoadActiveToc = await Page.Locator(".sidebar-toc a.active").CountAsync();
 

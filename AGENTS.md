@@ -586,15 +586,29 @@ See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-
 
 ✅ **ALWAYS use `isBackground=true` for Run commands** - Servers never exit on their own  
 ✅ **ALWAYS use `get_terminal_output` to monitor progress** - Never wait or interact with terminal
-✅ **ALWAYS open NEW terminals for other commands in VSCode** - Never reuse the Run terminal  
+✅ **ALWAYS open NEW terminals for other commands in VSCode** - Unless you see "This terminal is now free"
 
 🚫 **NEVER use `isBackground=false` for any `Run` commands** - They block forever  
-🚫 **NEVER type commands in Run terminal** - ANY input kills the servers  
-🚫 **NEVER use `Start-Sleep`, `curl`, or other commands in Run terminal** - Shuts down servers
+🚫 **NEVER type commands in Run terminal** - Check the CRITICAL message first!
+🚫 **NEVER use `Start-Sleep`, `curl`, or other commands in Run terminal** - Unless you see "This terminal is now free"
 
 **Why isBackground=true Matters**:
 
-Run commands start servers that **block the terminal indefinitely**. ANY input to that terminal (typing commands, pressing Enter, Ctrl+C) **IMMEDIATELY SHUTS DOWN** the servers. Use `isBackground=true` + `get_terminal_output` to monitor progress, and open NEW terminals in VSCode for any other commands.
+Run commands start servers that **block the terminal indefinitely**. Use `isBackground=true` + `get_terminal_output` to monitor progress, and open NEW terminals in VSCode for any other commands.
+
+**Terminal Reuse Rules**:
+
+After `Run` completes, check the final CRITICAL message:
+
+- ✅ **"CRITICAL: This terminal is now free to execute new commands in"** (Green) → Terminal CAN be reused safely
+  - Servers are running in another terminal
+  - This terminal just ran tests and exited cleanly
+  - Safe to run any commands here
+  
+- 🚫 **"CRITICAL: Do not execute new commands in this terminal"** (Yellow) → Terminal should NOT be reused
+  - This terminal owns and manages the running servers
+  - ANY input (typing commands, pressing Enter) acts as Ctrl+C and STOPS the servers
+  - Open a NEW terminal for additional commands
 
 **⚠️ CRITICAL E2E TEST WARNING**:
 

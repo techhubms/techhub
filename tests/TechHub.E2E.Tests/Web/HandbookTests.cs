@@ -94,10 +94,7 @@ public class HandbookTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 
         // Act - Click first TOC link
         var firstLink = tocLinks.First;
-        await firstLink.ClickAsync();
-
-        // Wait for scroll to complete
-        await Page.WaitForTimeoutAsync(500);
+        await firstLink.ClickAndWaitForScrollAsync();
 
         // Assert - URL should have hash
         var url = Page.Url;
@@ -122,8 +119,7 @@ public class HandbookTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
         var activatedHeadings = new List<string>();
 
         // Start at the top
-        await Page.EvaluateAsync("window.scrollTo(0, 0)");
-        await Page.WaitForTimeoutAsync(500);
+        await Page.EvaluateAndWaitForScrollAsync("window.scrollTo(0, 0)");
 
         // Get page dimensions
         var pageHeight = await Page.EvaluateAsync<int>("document.documentElement.scrollHeight");
@@ -133,8 +129,7 @@ public class HandbookTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
         // Act - Scroll down gradually and track which headings activate
         for (var scrollPosition = 0; scrollPosition < pageHeight - viewportHeight; scrollPosition += scrollIncrement)
         {
-            await Page.EvaluateAsync($"window.scrollTo(0, {scrollPosition})");
-            await Page.WaitForTimeoutAsync(300); // Wait for scroll spy to detect changes
+            await Page.EvaluateAndWaitForScrollAsync($"window.scrollTo(0, {scrollPosition})");
 
             // Check if any TOC link is active
             var activeLinks = Page.Locator(".sidebar-toc a.active");
@@ -203,7 +198,7 @@ public class HandbookTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
         // Act - Press Enter on the focused TOC link
         var urlBefore = Page.Url;
         await Page.Keyboard.PressAsync("Enter");
-        await Page.WaitForTimeoutAsync(500);
+        await Page.WaitForScrollEndAsync(300);
 
         // Assert - URL should have changed (anchor added)
         var urlAfter = Page.Url;

@@ -72,10 +72,7 @@ public class LevelsOfEnlightenmentTests(PlaywrightCollectionFixture fixture) : I
         // Act - Click first TOC link (should be "Overview" or first level)
         var firstLink = tocLinks.First;
         var linkText = await firstLink.TextContentAsync();
-        await firstLink.ClickAsync();
-
-        // Wait for scroll to complete
-        await Page.WaitForTimeoutAsync(500);
+        await firstLink.ClickAndWaitForScrollAsync();
 
         // Assert - URL should have hash
         var url = Page.Url;
@@ -102,17 +99,15 @@ public class LevelsOfEnlightenmentTests(PlaywrightCollectionFixture fixture) : I
         }
 
         var lastHeading = headings.Last;
+        var lastHeadingId = await lastHeading.GetAttributeAsync("id");
 
         // Act - Scroll to last heading
-        await lastHeading.ScrollIntoViewIfNeededAsync();
-        await Page.WaitForTimeoutAsync(500);
+        await Page.EvaluateAndWaitForScrollAsync($"document.getElementById('{lastHeadingId}').scrollIntoView()");
 
         // Scroll down more to trigger detection (50vh spacer should allow this)
-        await Page.EvaluateAsync("window.scrollBy(0, 500)");
-        await Page.WaitForTimeoutAsync(300);
+        await Page.EvaluateAndWaitForScrollAsync("window.scrollBy(0, 500)");
 
         // Assert - Last heading's TOC link should be active
-        var lastHeadingId = await lastHeading.GetAttributeAsync("id");
         var expectedActiveLink = Page.Locator($".sidebar-toc a[href$='#{lastHeadingId}']");
 
         var hasActiveClass = await expectedActiveLink.EvaluateAsync<bool>("el => el.classList.contains('active')");
@@ -138,10 +133,7 @@ public class LevelsOfEnlightenmentTests(PlaywrightCollectionFixture fixture) : I
         // Act - Click second TOC link
         var secondLink = tocLinks.Nth(1);
         var linkText = await secondLink.TextContentAsync();
-        await secondLink.ClickAsync();
-
-        // Wait for scroll to complete
-        await Page.WaitForTimeoutAsync(500);
+        await secondLink.ClickAndWaitForScrollAsync();
 
         // Assert - URL should have hash
         var url = Page.Url;
@@ -258,9 +250,7 @@ public class LevelsOfEnlightenmentTests(PlaywrightCollectionFixture fixture) : I
         // Act - Focus on first TOC link and press Enter
         await firstTocLink.FocusAsync();
         await Page.Keyboard.PressAsync("Enter");
-
-        // Wait for scroll
-        await Page.WaitForTimeoutAsync(500);
+        await Page.WaitForScrollEndAsync(300);
 
         // Assert - URL should have hash (navigation worked)
         var url = Page.Url;

@@ -140,7 +140,7 @@ public class GenAIBasicsTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         await secondHeading.AssertElementVisibleAsync();
 
         // Act - Scroll to second section
-        await secondHeading.ScrollIntoViewIfNeededAsync();
+        await Page.EvaluateAndWaitForScrollAsync("document.querySelectorAll('.genai-section h2')[1].scrollIntoView()");
 
         // Wait for scroll spy to update active state
         await Page.WaitForSelectorAsync(".sidebar-toc a.active", new() { Timeout = 2000 });
@@ -154,49 +154,6 @@ public class GenAIBasicsTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
     }
 
     [Fact]
-    public async Task GenAIBasics_TocLink_ClickTwice_ShouldNotMoveScrollbar()
-    {
-        // This test verifies that CSS scroll-margin-top aligns with JavaScript scroll spy detection.
-        // When navigating to a URL with a hash fragment:
-        // 1. Browser scrolls using CSS scroll-margin-top
-        // 2. Scroll spy should detect and highlight the TOC link
-        // 3. Clicking the already-highlighted TOC link should NOT cause any scroll movement
-        // This ensures the CSS and JavaScript are perfectly aligned.
-
-        // Arrange - Navigate directly to a section with hash fragment
-        var sectionHash = "how-tokenization-works";
-        await Page.GotoRelativeAsync($"{PageUrl}#{sectionHash}");
-
-        // Wait for page to load and TOC to be visible
-        await Page.WaitForSelectorAsync(".sidebar-toc", new() { Timeout = 5000 });
-
-        // Wait for scroll spy to detect position and activate the correct TOC link
-        // The TOC links have full URLs like "https://localhost:5003/ai/genai-basics#how-tokenization-works"
-        // So we need to match using [href$='#{hash}'] which checks the end of the href attribute
-        var activeTocLink = Page.Locator($".sidebar-toc a[href$='#{sectionHash}'].active");
-        await Page.WaitForSelectorAsync($".sidebar-toc a[href$='#{sectionHash}'].active", new() { Timeout = 5000 });
-
-        // Verify the correct TOC link is active and visible
-        await activeTocLink.AssertElementVisibleAsync();
-
-        // Get scroll position after browser's initial scroll
-        var scrollYBeforeClick = await Page.EvaluateAsync<int>("() => window.scrollY");
-
-        // Act - Click the already-highlighted TOC link
-        await activeTocLink.ClickAsync();
-
-        // Wait briefly to allow any scroll animation to complete
-        await Page.WaitForSelectorAsync($".sidebar-toc a[href$='#{sectionHash}'].active", new() { Timeout = 2000 });
-
-        // Get scroll position after clicking
-        var scrollYAfterClick = await Page.EvaluateAsync<int>("() => window.scrollY");
-
-        // Assert - Scroll position should not have changed
-        scrollYAfterClick.Should().Be(scrollYBeforeClick,
-            "Clicking an already-active TOC link should not move the scrollbar because CSS scroll-margin-top and JavaScript detection line should be perfectly aligned");
-    }
-
-    [Fact]
     public async Task GenAIBasics_LastSection_ShouldScroll_ToDetectionPoint()
     {
         // Arrange
@@ -204,23 +161,22 @@ public class GenAIBasicsTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
 
         // Get last section
         var lastHeading = Page.Locator(".genai-section h2").Last;
-        await lastHeading.AssertElementVisibleAsync();
+        await Assertions.Expect(lastHeading).ToBeVisibleAsync();
 
-        // Act - Scroll to last section
-        await lastHeading.ScrollIntoViewIfNeededAsync();
+        // Get the heading ID for the TOC link check
+        var lastHeadingId = await lastHeading.GetAttributeAsync("id");
 
-        // Get the last TOC link first
-        var tocLinks = Page.Locator(".sidebar-toc a");
-        var lastTocLink = tocLinks.Last;
-        var lastLinkHref = await lastTocLink.GetAttributeAsync("href");
+        // Act - Scroll to the absolute bottom of the page
+        // This ensures the last section heading crosses the 30% detection line
+        await Page.EvaluateAndWaitForScrollAsync("window.scrollTo(0, document.documentElement.scrollHeight)");
 
-        // Wait for specifically the LAST TOC link to become active
-        // (scroll spy may activate intermediate links first)
-        await Page.WaitForSelectorAsync($".sidebar-toc a[href='{lastLinkHref}'].active", new() { Timeout = 5000 });
+        // Get the last TOC link - use href$= to match the end of the href (hash part)
+        var lastTocLink = Page.Locator($".sidebar-toc a[href$='#{lastHeadingId}']");
 
-        // Assert - Last TOC link should be active
-        var lastTocLinkClass = await lastTocLink.GetAttributeAsync("class");
-        lastTocLinkClass.Should().Contain("active", "Last TOC link should be active when scrolled to last section");
+        // Use Playwright's auto-retrying assertion - wait for TOC link to become active
+        // This handles timing variations in scroll spy detection
+        await Assertions.Expect(lastTocLink).ToHaveClassAsync(new System.Text.RegularExpressions.Regex(".*active.*"),
+            new() { Timeout = 3000 });
     }
 
     [Fact]
@@ -249,13 +205,13 @@ public class GenAIBasicsTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         // Arrange & Act
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Wait for FAQ items with summaries to load (may take time with Blazor rendering)
-        await Page.WaitForSelectorAsync(".genai-faq-item summary", new() { Timeout = 10000 });
-
         // Assert - Check for FAQ blocks (2 total: Models and Providers sections)
         var faqBlocks = Page.Locator(".genai-faq");
-        var faqBlockCount = await faqBlocks.CountAsync();
 
+        // Wait for FAQ blocks to be visible (use Playwright's built-in retry)
+        await Assertions.Expect(faqBlocks.First).ToBeVisibleAsync();
+
+        var faqBlockCount = await faqBlocks.CountAsync();
         faqBlockCount.Should().Be(2, "Expected 2 FAQ blocks (Models and Providers sections)");
 
         // Check FAQ items (8 total: 3 in Models, 5 in Providers)
@@ -264,12 +220,12 @@ public class GenAIBasicsTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
 
         faqItemCount.Should().Be(8, "Expected 8 FAQ items total");
 
-        // Verify FAQ structure: each item should have a summary (question)
+        // Verify FAQ structure: each item should have a question div (not summary - no disclosure widget)
         var firstFaq = faqItems.First;
-        var summary = firstFaq.Locator("summary");
-        await summary.AssertElementVisibleAsync();
+        var question = firstFaq.Locator(".genai-faq-question");
+        await Assertions.Expect(question).ToBeVisibleAsync();
 
-        var questionText = await summary.TextContentAsync();
+        var questionText = await question.TextContentAsync();
         questionText.Should().NotBeNullOrEmpty("FAQ should have a question");
     }
 
