@@ -24148,5 +24148,11 @@
     "collection": "news",
     "canonical_url": "https://azure.microsoft.com/en-us/blog/beyond-boundaries-the-future-of-azure-storage-in-2026/",
     "reason": "Succesfully added: Assigned the 'AI' category because the article is heavily focused on how Azure Storage powers AI workloads, supports model training, inference, and integration with AI frameworks (AI Inclusion Rule 1, 4, 5). 'Azure' is included due to the core focus on Azure Storage services, features, and partner integrations at scale (Azure Inclusion Rule 1, 4, 5, 6). 'ML' is included because of the detailed content on LLM model training, agentic application patterns, storage for inference, and large-scale data engineering for AI/ML scenarios (ML Inclusion Rules 1, 2, 6, 9). Coding, DevOps, Security, and GitHub Copilot categories do not apply as there is no in-depth coverage of application code, pipelines, developer tools, or security topics beyond standard Azure storage security. No generic exclusion rules apply—the content is in English, technical, and focused on Microsoft/Azure technologies."
+  },
+  {
+    "reason": "Succesfully added: Assigned the Coding category because the content provides a deep technical guide for optimizing SharePoint environments, including actionable best practices for information architecture, list/library structure, custom code (SPFx customizations), performance diagnostics, and advanced configuration. Although the primary topics are SharePoint and Microsoft 365, generic exclusion rules bar the Microsoft 365 or Office 365 categories unless development is the focus; in this case, the strategies target site developers and advanced administrators tasked with site structure, performance tuning, and SPFx solutions. No Azure, AI, DevOps, ML, or Security categories apply, as the content centers on SharePoint technical configuration and development practices instead of broader cloud, security, or machine learning aspects.",
+    "canonical_url": "https://dellenny.com/performance-optimization-tips-for-large-sharepoint-sites/",
+    "collection": "blogs",
+    "timestamp": "2026-01-24 12:03:32 +00:00"
   }
 ]
