@@ -162,6 +162,13 @@ function Run {
         Write-Host "  Web:       https://localhost:5003" -ForegroundColor Gray
         Write-Host "  Dashboard: https://localhost:18888 (Aspire Dashboard)`n" -ForegroundColor Gray
         
+        Write-Host "LOG FILES:" -ForegroundColor Yellow
+        Write-Host "  Console:      .tmp/logs/console.txt (Development - combined Aspire output)" -ForegroundColor Gray
+        Write-Host "  API console:  .tmp/logs/api-console.txt (Production/Staging mode)" -ForegroundColor Gray
+        Write-Host "  Web console:  .tmp/logs/web-console.txt (Production/Staging mode)" -ForegroundColor Gray
+        Write-Host "  API logs:     .tmp/logs/api-dev.log / api-prod.log (FileLoggerProvider)" -ForegroundColor Gray
+        Write-Host "  Web logs:     .tmp/logs/web-dev.log / web-prod.log (FileLoggerProvider)`n" -ForegroundColor Gray
+        
         Write-Host "For detailed help: " -NoNewline -ForegroundColor White
         Write-Host "Get-Help Run -Full`n" -ForegroundColor Cyan
         
@@ -173,10 +180,6 @@ function Run {
     # which kills the terminal with exit code -1
     $ErrorActionPreference = "Continue"
     Set-StrictMode -Version Latest
-
-    # Script-level variables for process management
-    $script:appHostProcess = $null
-    $script:apiProcess = $null
 
     # Determine workspace root - navigate up from scripts directory
     $workspaceRoot = Split-Path $PSScriptRoot -Parent
@@ -194,6 +197,10 @@ function Run {
     $publishBaseDir = Join-Path $workspaceRoot ".tmp/publish"
     $publishApiDir = Join-Path $publishBaseDir "api"
     $publishWebDir = Join-Path $publishBaseDir "web"
+
+    # Log directories and files
+    $logDir = Join-Path $workspaceRoot ".tmp/logs"
+    $consoleLogPath = Join-Path $logDir "console.txt"
 
     # Build configuration - Release for Production, Debug otherwise
     $configuration = if ($Environment -eq "Production") { "Release" } else { "Debug" }
@@ -536,31 +543,36 @@ function Run {
     }
 
     # Start Aspire AppHost (orchestrates API + Web servers)
+    # Servers run in background with output redirected to .tmp/logs/
     function Start-AppHost {
         param(
             [string]$Environment
         )
         
-        # Check if servers are already running and healthy
+        # Check if servers are already running and healthy - just reuse them
         if (Test-ServersHealthy) {
-            # Adopt existing processes so we can manage them (e.g., stop on Ctrl+C)
-            Adopt-OrphanedServerProcesses
-            Write-Success "Servers already running and healthy"
             return $true
         }
         
         # Servers not healthy - clean up and restart
         # This handles crashed servers, unhealthy servers, or blocked ports
-        Write-Info "  Servers not healthy - restarting..."
+        Write-Info "Servers not healthy - restarting..."
         Stop-Servers -Silent
         
-        Write-Step "Starting services ($Environment mode)"
+        Write-Step "Starting services in background ($Environment mode)"
+        
+        # Clear ALL previous log files before starting new servers
+        if (Test-Path $logDir) {
+            Remove-Item "$logDir/*" -Force -Recurse -ErrorAction SilentlyContinue
+        }
+        
+        # Ensure log directory exists
+        if (-not (Test-Path $logDir)) {
+            New-Item -Path $logDir -ItemType Directory -Force | Out-Null
+        }
         
         # Log environment configuration for debugging
-        Write-Info "  Configuring environment: $Environment"
-        
-        # Start AppHost in background
-        $script:appHostProcess = $null
+        Write-Info "Configuring environment: $Environment"
         
         # Production/Staging mode: Run from published DLLs (real deployment simulation)
         if ($Environment -eq "Production" -or $Environment -eq "Staging") {
@@ -573,87 +585,46 @@ function Run {
                 return $false
             }
             
-            Write-Info "  Running from published artifacts (simulating production deployment)"
-            Write-Info "    API: $publishApiDir"
-            Write-Info "    Web: $publishWebDir"
+            Write-Info "Running from published artifacts (simulating production deployment)"
+            Write-Info "  API: $publishApiDir"
+            Write-Info "  Web: $publishWebDir"
             
-            # Start API directly from published DLL
-            $apiStartInfo = New-Object System.Diagnostics.ProcessStartInfo
-            $apiStartInfo.FileName = "dotnet"
-            $apiStartInfo.Arguments = "exec `"$apiDll`""
-            $apiStartInfo.WorkingDirectory = $publishApiDir
-            $apiStartInfo.UseShellExecute = $false
-            $apiStartInfo.RedirectStandardOutput = $false
-            $apiStartInfo.RedirectStandardError = $false
-            $apiStartInfo.CreateNoWindow = $false
-            $apiStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = $Environment
-            $apiStartInfo.EnvironmentVariables["ASPNETCORE_URLS"] = "https://localhost:5001"
-            $apiStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft"] = "Warning"
-            $apiStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft.AspNetCore"] = "Warning"
+            # Console output files for Production mode (separate from FileLoggerProvider logs)
+            $apiConsolePath = Join-Path $logDir "api-console.txt"
+            $webConsolePath = Join-Path $logDir "web-console.txt"
             
-            # File logging configuration for Production mode
-            $apiLogPath = Join-Path $workspaceRoot ".tmp/logs/api-prod.log"
-            $apiLogDir = Split-Path $apiLogPath -Parent
-            if (-not (Test-Path $apiLogDir)) {
-                New-Item -Path $apiLogDir -ItemType Directory -Force | Out-Null
-            }
-            $apiStartInfo.EnvironmentVariables["Logging__File__Path"] = $apiLogPath
+            # Start API in background using PowerShell job
+            Start-Job -ScriptBlock {
+                param($dir, $dll, $env, $logPath)
+                Set-Location $dir
+                $env:ASPNETCORE_ENVIRONMENT = $env
+                $env:ASPNETCORE_URLS = "https://localhost:5001"
+                & dotnet exec $dll *> $logPath
+            } -ArgumentList $publishApiDir, (Join-Path $publishApiDir "TechHub.Api.dll"), $Environment, $apiConsolePath | Out-Null
+            Write-Info "API starting in background..."
             
-            $apiProcess = [System.Diagnostics.Process]::Start($apiStartInfo)
-            Write-Info "  API started from published DLL (PID: $($apiProcess.Id))"
-            
-            # Start Web directly from published DLL
-            $webStartInfo = New-Object System.Diagnostics.ProcessStartInfo
-            $webStartInfo.FileName = "dotnet"
-            $webStartInfo.Arguments = "exec `"$webDll`""
-            $webStartInfo.WorkingDirectory = $publishWebDir
-            $webStartInfo.UseShellExecute = $false
-            $webStartInfo.RedirectStandardOutput = $false
-            $webStartInfo.RedirectStandardError = $false
-            $webStartInfo.CreateNoWindow = $false
-            $webStartInfo.EnvironmentVariables["ASPNETCORE_ENVIRONMENT"] = $Environment
-            $webStartInfo.EnvironmentVariables["ASPNETCORE_URLS"] = "https://localhost:5003"
-            $webStartInfo.EnvironmentVariables["ApiBaseUrl"] = "https://localhost:5001"
-            $webStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft"] = "Warning"
-            $webStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft.AspNetCore"] = "Warning"
-            
-            # File logging configuration for Production mode
-            $webLogPath = Join-Path $workspaceRoot ".tmp/logs/web-prod.log"
-            $webStartInfo.EnvironmentVariables["Logging__File__Path"] = $webLogPath
-            
-            $webProcess = [System.Diagnostics.Process]::Start($webStartInfo)
-            Write-Info "  Web started from published DLL (PID: $($webProcess.Id))"
-            
-            # Store both processes for cleanup (use Web process as primary reference)
-            $script:appHostProcess = $webProcess
-            $script:apiProcess = $apiProcess
+            # Start Web in background using PowerShell job
+            Start-Job -ScriptBlock {
+                param($dir, $dll, $env, $logPath)
+                Set-Location $dir
+                $env:ASPNETCORE_ENVIRONMENT = $env
+                $env:ASPNETCORE_URLS = "https://localhost:5003"
+                $env:ApiBaseUrl = "https://localhost:5001"
+                & dotnet exec $dll *> $logPath
+            } -ArgumentList $publishWebDir, (Join-Path $publishWebDir "TechHub.Web.dll"), $Environment, $webConsolePath | Out-Null
+            Write-Info "Web starting in background..."
         }
         else {
-            # Development/Staging: Use Aspire AppHost orchestration
-            $appHostStartInfo = New-Object System.Diagnostics.ProcessStartInfo
-            $appHostStartInfo.FileName = "dotnet"
+            # Development: Use Aspire AppHost orchestration in background
+            $appHostDir = Split-Path $appHostProjectPath -Parent
             
-            # Use 'run' for Staging (stable, no hot reload needed)
-            # Use 'watch' for Development (enables hot reload for faster development)
-            if ($Environment -eq "Staging") {
-                $appHostStartInfo.Arguments = "run --project `"$appHostProjectPath`" --no-build --launch-profile $Environment --configuration $configuration"
-            }
-            else {
-                $appHostStartInfo.Arguments = "watch --project `"$appHostProjectPath`" --no-build --launch-profile $Environment --configuration $configuration"
-            }
-            
-            $appHostStartInfo.WorkingDirectory = Split-Path $appHostProjectPath -Parent
-            $appHostStartInfo.UseShellExecute = $false
-            $appHostStartInfo.RedirectStandardOutput = $false
-            $appHostStartInfo.RedirectStandardError = $false
-            $appHostStartInfo.CreateNoWindow = $false
-            # Suppress noisy Microsoft.AspNetCore.* framework logs
-            $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft"] = "Warning"
-            $appHostStartInfo.EnvironmentVariables["Logging__Console__LogLevel__Microsoft.AspNetCore"] = "Warning"
-            
-            $script:appHostProcess = [System.Diagnostics.Process]::Start($appHostStartInfo)
-            
-            Write-Info "  AppHost started (PID: $($script:appHostProcess.Id))"
+            # Start dotnet watch in background using PowerShell job
+            Start-Job -ScriptBlock {
+                param($dir, $project, $profile, $config, $logPath)
+                Set-Location $dir
+                & dotnet watch --project $project --no-build --launch-profile $profile --configuration $config *> $logPath
+            } -ArgumentList $appHostDir, $appHostProjectPath, $Environment, $configuration, $consoleLogPath | Out-Null
+            Write-Info "AppHost starting in background..."
         }
         
         # Wait for services to be ready (Aspire orchestration can take 30-60 seconds)
@@ -668,35 +639,15 @@ function Run {
                 
             # Show progress every 10 seconds
             if ($attempt % 10 -eq 0) {
-                Write-Info "  Still waiting... ($attempt seconds elapsed)"
-            }
-                
-            # Check if AppHost is still alive
-            if ($script:appHostProcess.HasExited) {
-                Write-Host ""
-                Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
-                Write-Host "║                                                              ║" -ForegroundColor Red
-                Write-Host "║  ✗ APPHOST CRASHED DURING STARTUP - Cannot continue          ║" -ForegroundColor Red
-                Write-Host "║                                                              ║" -ForegroundColor Red
-                Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
-                Write-Host ""
-                Write-Host "  AppHost process exited unexpectedly" -ForegroundColor Yellow
-                Write-Host "  Exit code: $($script:appHostProcess.ExitCode)" -ForegroundColor Yellow
-                Write-Host ""
-                Write-Host "  This usually means:" -ForegroundColor Cyan
-                Write-Host "    1. A configuration error in appsettings" -ForegroundColor Gray
-                Write-Host "    2. Missing dependencies or packages" -ForegroundColor Gray
-                Write-Host "    3. Port conflicts (check ports 5001, 5003)" -ForegroundColor Gray
-                Write-Host ""
-                return $false
+                Write-Info "Still waiting... ($attempt seconds elapsed)"
             }
                 
             # Check if both servers are healthy
             $serversReady = Test-ServersHealthy
             
             if ($serversReady) {
-                Write-Info "  API ready ✓"
-                Write-Info "  Web ready ✓"
+                Write-Info "API ready ✓"
+                Write-Info "Web ready ✓"
             }
         }
             
@@ -714,14 +665,14 @@ function Run {
             Write-Host "    Expected: https://localhost:5003/health" -ForegroundColor Gray
             Write-Host ""
             Write-Host "  Troubleshooting:" -ForegroundColor Cyan
-            Write-Host "    1. Check Aspire Dashboard logs (URL shown during startup)" -ForegroundColor Gray
+            Write-Host "    1. Check logs: .tmp/logs/ (console.txt or api/web-console.txt)" -ForegroundColor Gray
             Write-Host "    2. Try manually: curl -k https://localhost:5001/health" -ForegroundColor Gray
             Write-Host "    3. Check if ports are already in use" -ForegroundColor Gray
             Write-Host ""
             return $false
         }
             
-        Write-Success "Services ready"
+        Write-Success "Services ready (running in background)"
             
         return $true
     }
@@ -787,186 +738,40 @@ function Run {
     function Stop-Servers {
         <#
         .SYNOPSIS
-            Stops the Aspire AppHost process and cleans up all port usage.
+            Stops all processes using the server ports (5001, 5003).
         
         .DESCRIPTION
-            Unified server shutdown function that:
-            1. Stops AppHost process (SIGTERM, then SIGKILL if needed)
-            2. Cleans up any processes still using ports 5001, 5003
-            
-            Always safe to call - handles null checks and already-stopped processes gracefully.
-            
-            When -CleanupOnly is specified, only disposes process references without killing
-            the servers themselves. Use this when adopting orphaned servers that should keep running.
+            Port-based cleanup function that kills any process using our ports.
+            No process tracking needed - just kills whatever is on the ports.
+            Always safe to call.
         #>
         param(
-            [switch]$Silent,
-            [switch]$CleanupOnly
+            [switch]$Silent
         )
         
-        # PART 1: Stop AppHost/API processes
-        # In Production mode, we have separate API and Web processes
-        if ($null -ne $script:apiProcess) {
-            if (-not $script:apiProcess.HasExited) {
-                if ($CleanupOnly) {
-                    # Just cleaning up references - don't actually kill the server
-                    if (-not $Silent) {
-                        Write-Info "  Releasing API process reference (PID: $($script:apiProcess.Id)) - server remains running"
-                    }
-                }
-                else {
-                    # Actually stopping the server
-                    try {
-                        if (-not $Silent) {
-                            Write-Info "  Stopping API process..."
-                        }
-                        
-                        # Send SIGTERM for graceful shutdown
-                        kill -TERM $script:apiProcess.Id 2>$null
-                        
-                        # Wait up to 5 seconds for graceful shutdown
-                        $waited = 0
-                        while (-not $script:apiProcess.HasExited -and $waited -lt 5000) {
-                            Start-Sleep -Milliseconds 100
-                            $waited += 100
-                        }
-                        
-                        # If still running, force kill
-                        if (-not $script:apiProcess.HasExited) {
-                            if (-not $Silent) {
-                                Write-Info "  API didn't stop gracefully, forcing termination..."
-                            }
-                            $script:apiProcess.Kill($true)
-                        }
-                    }
-                    catch {
-                        # Process might have already exited - that's OK
-                    }
-                }
-            }
-            
-            # Always dispose and clear reference
-            $script:apiProcess.Dispose()
-            $script:apiProcess = $null
-        }
-        
-        if ($null -ne $script:appHostProcess) {
-            if (-not $script:appHostProcess.HasExited) {
-                if ($CleanupOnly) {
-                    # Just cleaning up references - don't actually kill the servers
-                    if (-not $Silent) {
-                        Write-Info "  Releasing AppHost process reference (PID: $($script:appHostProcess.Id)) - servers remain running"
-                    }
-                }
-                else {
-                    # Actually stopping the servers
-                    try {
-                        if (-not $Silent) {
-                            Write-Info "  Sending graceful shutdown signal to Aspire AppHost (API + Web)..."
-                        }
-                        
-                        # Send SIGTERM for graceful shutdown
-                        kill -TERM $script:appHostProcess.Id 2>$null
-                        
-                        # Wait up to 5 seconds for graceful shutdown
-                        $waited = 0
-                        while (-not $script:appHostProcess.HasExited -and $waited -lt 5000) {
-                            Start-Sleep -Milliseconds 100
-                            $waited += 100
-                        }
-                        
-                        # If still running, force kill
-                        if (-not $script:appHostProcess.HasExited) {
-                            if (-not $Silent) {
-                                Write-Info "  AppHost didn't stop gracefully, forcing termination..."
-                            }
-                            $script:appHostProcess.Kill($true)
-                        }
-                        elseif (-not $Silent) {
-                            Write-Info "  Aspire AppHost (API + Web) stopped gracefully"
-                        }
-                    }
-                    catch {
-                        # Process might have already exited - that's OK
-                        if (-not $Silent) {
-                            Write-Info "  AppHost process already exited"
-                        }
-                    }
-                }
-            }
-            
-            # Always dispose and clear reference
-            $script:appHostProcess.Dispose()
-            $script:appHostProcess = $null
-        }
-        
-        # PART 2: Clean up any processes still using ports
-        # Skip this in CleanupOnly mode - servers are still running so ports are still in use
-        if ($CleanupOnly) {
-            return
-        }
-        
+        # Kill any processes on our ports
         $ports = @(5001, 5003)
         $stoppedAny = $false
-        $failedKills = @()
         
         foreach ($port in $ports) {
-            try {
-                $portArg = ":" + $port
-                $processIds = lsof -ti $portArg 2>$null
-                if ($processIds) {
-                    if (-not $stoppedAny -and -not $Silent) {
-                        Write-Info "  Cleaning up processes on ports..."
-                        $stoppedAny = $true
+            $processIds = lsof -ti ":$port" 2>$null
+            if ($processIds) {
+                $stoppedAny = $true
+                foreach ($pid in $processIds) {
+                    if (-not $Silent) {
+                        Write-Info "  Killing process on port $port (PID: $pid)"
                     }
-                    
-                    # Get detailed process information for each PID
-                    $processIds | ForEach-Object {
-                        $processId = $_
-                        try {
-                            $processInfo = Get-Process -Id $processId -ErrorAction SilentlyContinue
-                            if ($processInfo) {
-                                if (-not $Silent) {
-                                    Write-Info ("    Port {0} - Killing PID {1}: {2} (Path: {3})" -f $port, $processId, $processInfo.ProcessName, $processInfo.Path)
-                                }
-                            }
-                            else {
-                                if (-not $Silent) {
-                                    Write-Info ("    Port {0} - PID {1}: (process already exited)" -f $port, $processId)
-                                }
-                            }
-                        }
-                        catch {
-                            if (-not $Silent) {
-                                Write-Info ("    Port {0} - PID {1}: (unable to get process details)" -f $port, $processId)
-                            }
-                        }
-                        
-                        # Use SIGKILL for immediate termination
-                        kill -9 $processId 2>$null
-                        if ($LASTEXITCODE -ne 0) {
-                            $failedKills += "PID $processId on port $port"
-                        }
-                    }
-                    
-                    # Brief wait to ensure ports are released
-                    Start-Sleep -Milliseconds 200
-                }
-            }
-            catch {
-                if (-not $Silent) {
-                    Write-Warning "Failed to clean up port ${port}: $($_.Exception.Message)"
+                    kill -9 $pid 2>$null
                 }
             }
         }
         
-        if ($failedKills.Count -gt 0 -and -not $Silent) {
-            Write-Warning "Failed to kill some processes: $($failedKills -join ', ')"
-            Write-Warning "You may need to manually kill these processes or restart your environment"
-        }
-        
-        if ($stoppedAny -and -not $Silent) {
-            Write-Success "Port cleanup completed"
+        if ($stoppedAny) {
+            # Brief wait to ensure ports are released
+            Start-Sleep -Milliseconds 300
+            if (-not $Silent) {
+                Write-Success "Port cleanup completed"
+            }
         }
     }
 
@@ -1043,140 +848,6 @@ function Run {
         
         return $cleanedAny
     }
-
-    # Clean up ALL other pwsh terminals (not just competing Run instances)
-    # Goal: Ensure ONLY ONE active terminal (current) + PowerShell Extension
-    # Uses bottom-up approach: Kill dotnet children first, then pwsh parent
-    # Preserves: current terminal, PowerShell Extension, VS Code processes
-    function Stop-AllOtherPwshTerminals {
-        param(
-            [switch]$Silent
-        )
-        
-        if (-not $Silent) {
-            Write-Step "Ensuring single active terminal (cleaning up all others)"
-        }
-        
-        $currentPid = $PID
-        $pwshProcesses = Get-Process -Name pwsh -ErrorAction SilentlyContinue
-        $killedAny = $false
-        
-        # First, check if servers are healthy and find which pwsh owns them
-        $serversHealthy = Test-ServersHealthy
-        $pwshWithServers = $null
-        
-        if ($serversHealthy) {
-            # Find which pwsh terminal owns the healthy servers
-            # Look for the AppHost dotnet watch process (not port 5001, as that's served by orphaned dcp)
-            $appHostLine = ps aux 2>$null | grep -E 'dotnet.*watch.*AppHost' | grep -v grep | head -1
-            if ($appHostLine) {
-                $appHostPidString = ($appHostLine -split '\s+')[1]
-                if ($appHostPidString) {
-                    $currentPid_check = [int]$appHostPidString
-                    $depth = 0
-                    while ($depth -lt 10) {
-                        $parentPidString = ps -o ppid= -p $currentPid_check 2>$null | ForEach-Object { $_.Trim() }
-                        if (-not $parentPidString -or $parentPidString -eq "0" -or $parentPidString -eq "1") { 
-                            break  # Reached init/systemd or no parent
-                        }
-                        
-                        $parentPid = [int]$parentPidString
-                        $parent = Get-Process -Id $parentPid -ErrorAction SilentlyContinue
-                        if ($parent -and $parent.ProcessName -eq "pwsh") {
-                            $pwshWithServers = $parentPid
-                            break
-                        }
-                        
-                        $currentPid_check = $parentPid
-                        $depth++
-                    }
-                }
-            }
-        }
-        
-        foreach ($pwsh in $pwshProcesses) {
-            # Skip current terminal
-            if ($pwsh.Id -eq $currentPid) {
-                continue
-            }
-            
-            # Skip PowerShell Extension (has -EncodedCommand)
-            $cmdLine = cat "/proc/$($pwsh.Id)/cmdline" 2>$null | tr '\0' ' '
-            if ($cmdLine -match "EncodedCommand" -or $cmdLine -match "PowerShellEditorServices") {
-                if (-not $Silent) {
-                    Write-Info "  KEEP PID $($pwsh.Id): PowerShell Extension"
-                }
-                continue
-            }
-            
-            # Skip the pwsh that owns healthy servers
-            if ($pwshWithServers -and $pwsh.Id -eq $pwshWithServers) {
-                if (-not $Silent) {
-                    $tty = ps -p $pwsh.Id -o tty= 2>$null | ForEach-Object { $_.Trim() }
-                    Write-Info "  KEEP PID $($pwsh.Id) (TTY: $tty): Owns healthy servers"
-                }
-                continue
-            }
-            
-            # Kill all other pwsh terminals
-            $tty = ps -p $pwsh.Id -o tty= 2>$null | ForEach-Object { $_.Trim() }
-            
-            # Check if it has dotnet children
-            $dotnetChildren = ps --ppid $pwsh.Id --no-headers -o pid, comm 2>$null | Select-String "dotnet"
-            
-            if ($dotnetChildren) {
-                if (-not $Silent) {
-                    Write-Info "  Killing terminal PID $($pwsh.Id) (TTY: $tty) with dotnet children"
-                }
-                
-                # Kill dotnet children first (bottom-up)
-                $childPids = ps --ppid $pwsh.Id --no-headers -o pid 2>$null
-                foreach ($childPid in $childPids) {
-                    try {
-                        $child = Get-Process -Id $childPid -ErrorAction SilentlyContinue
-                        if ($child -and $child.ProcessName -eq "dotnet") {
-                            kill -TERM $childPid 2>$null
-                            Start-Sleep -Milliseconds 100
-                            $stillRunning = Get-Process -Id $childPid -ErrorAction SilentlyContinue
-                            if ($stillRunning -and -not $stillRunning.HasExited) {
-                                kill -9 $childPid 2>$null
-                            }
-                        }
-                    }
-                    catch { }
-                }
-            }
-            else {
-                if (-not $Silent) {
-                    Write-Info "  Killing idle terminal PID $($pwsh.Id) (TTY: $tty)"
-                }
-            }
-            
-            # Kill the pwsh terminal
-            kill -9 $pwsh.Id 2>$null
-            $killedAny = $true
-        }
-        
-        if ($killedAny) {
-            # Wait for processes to fully terminate
-            Start-Sleep -Milliseconds 500
-            if (-not $Silent) {
-                if ($null -ne $pwshWithServers) {
-                    Write-Success "Unused terminals cleaned up - servers remain running in terminal PID $pwshWithServers"
-                }
-                else {
-                    Write-Success "Unused terminals cleaned up"
-                }
-            }
-        }
-        else {
-            if (-not $Silent) {
-                Write-Info "  No other terminals found - this is already the only active terminal"
-            }
-        }
-        
-        return $killedAny
-    }
     
     # Stop orphaned test processes (browsers, testhost, vstest)
     # Call at start to clean up from previous runs, and in finally block for cleanup
@@ -1192,14 +863,8 @@ function Run {
         
         $cleanedAny = $false
         
-        # Clean up log files
-        $logPath = Join-Path $workspaceRoot ".tmp/logs/*.log"
-        if (Test-Path $logPath) {
-            Remove-Item $logPath -Force -ErrorAction SilentlyContinue
-            if (-not $Silent) {
-                Write-Info "  Removed old log files"
-            }
-        }
+        # Note: Log files are NOT cleaned up here
+        # They are only removed when servers are actually (re)started in Start-AppHost
         
         # Kill orphaned processes by name/command (browsers, test runners)
         # DO NOT kill server processes - smart restart logic handles that
@@ -1217,199 +882,13 @@ function Run {
                 Write-Success "Cleanup completed"
             }
             else {
-                Write-Info "  No orphaned processes found"
+                Write-Info "No orphaned processes found"
             }
-        }
-    }
-
-    # Adopt orphaned SERVERS (Aspire AppHost process) after killing competing Run instances
-    # SERVERS = Aspire AppHost + its child processes (API, Web)
-    # This allows the new Run instance to properly manage and cleanup servers on Ctrl+C
-    function Adopt-OrphanedServerProcesses {
-        Write-Step "Adopting existing Aspire AppHost process"
-        
-        # Strategy: Find AppHost dotnet watch process by pattern
-        # Note: Cannot use port 5001 because that's served by orphaned dcp (parent = PID 1)
-        try {
-            # Find the AppHost dotnet watch process
-            $appHostLine = ps aux 2>$null | grep -E 'dotnet.*watch.*AppHost' | grep -v grep | head -1
-            
-            if ($appHostLine) {
-                $appHostPidString = ($appHostLine -split '\s+')[1]
-                if ($appHostPidString) {
-                    $appHostPid = [int]$appHostPidString
-                    $appHostProcess = Get-Process -Id $appHostPid -ErrorAction SilentlyContinue
-                    
-                    if ($appHostProcess) {
-                        # Adopt this process
-                        $script:appHostProcess = $appHostProcess
-                        Write-Info "  Adopted Aspire AppHost (PID: $appHostPid)"
-                        Write-Info "    └─ dotnet watch running AppHost orchestration"
-                        Write-Success "Aspire AppHost adopted - will be managed by this instance"
-                        return $true
-                    }
-                }
-            }
-        }
-        catch {
-            Write-Warning "Failed to adopt AppHost: $($_.Exception.Message)"
-        }
-        
-        Write-Info "  Could not find Aspire AppHost to adopt"
-        Write-Info "  Servers will be restarted"
-        return $false
-    }
-
-    # Stop competing Run function instances in other terminals
-    # This prevents multiple Run instances from interfering with each other
-    # If servers are healthy, kills pwsh without triggering cleanup (servers keep running)
-    # If servers are unhealthy, triggers cleanup (servers will be restarted)
-    function Stop-CompetingRunInstances {
-        Write-Step "Checking for competing Run instances"
-        
-        $currentPid = $PID
-        $killedAny = $false
-        
-        # Check if servers are healthy FIRST (determines cleanup strategy)
-        $serversHealthy = Test-ServersHealthy
-        
-        # Find dotnet processes on our ports (5001, 5003)
-        $ports = @(5001, 5003)
-        $competingPwshPids = @()
-        
-        foreach ($port in $ports) {
-            try {
-                $portArg = ":" + $port
-                $dotnetPids = lsof -ti $portArg 2>$null
-                
-                if ($dotnetPids) {
-                    foreach ($dotnetPid in $dotnetPids) {
-                        # Get the parent process of this dotnet process
-                        $parentPid = ps -o ppid= -p $dotnetPid 2>$null
-                        if ($parentPid) {
-                            $parentPid = $parentPid.Trim()
-                            
-                            # Check if parent is a pwsh process (and not us)
-                            if ($parentPid -ne $currentPid) {
-                                $parentProcess = Get-Process -Id $parentPid -ErrorAction SilentlyContinue
-                                if ($parentProcess -and $parentProcess.ProcessName -eq 'pwsh') {
-                                    # This is a competing pwsh instance running dotnet on our ports
-                                    if ($competingPwshPids -notcontains $parentPid) {
-                                        $competingPwshPids += $parentPid
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            catch {
-                # Ignore errors - port might not be in use
-            }
-        }
-        
-        # Kill competing pwsh instances
-        if ($competingPwshPids.Count -gt 0) {
-            if ($serversHealthy) {
-                Write-Info "  Found $($competingPwshPids.Count) competing Run instance(s) with healthy servers"
-                Write-Info "  Detaching competing instances (servers will keep running)..."
-            }
-            else {
-                Write-Info "  Found $($competingPwshPids.Count) competing Run instance(s) with unhealthy servers"
-                Write-Info "  Stopping competing instances (servers will be cleaned up)..."
-            }
-            
-            foreach ($pwshPid in $competingPwshPids) {
-                try {
-                    $pwshProcess = Get-Process -Id $pwshPid -ErrorAction SilentlyContinue
-                    if ($pwshProcess) {
-                        if ($serversHealthy) {
-                            # Servers are healthy - we want to reuse them
-                            # Strategy: Clean up our references, kill competing pwsh, then adopt the servers
-                            Write-Info "    Detaching instance (PID: $pwshPid) - servers will be adopted"
-                            
-                            # Clean up our process references without killing servers
-                            Stop-Servers -Silent -CleanupOnly
-                            
-                            # SIGKILL the competing pwsh (prevents its finally block from stopping servers)
-                            # Note: Terminal will stay open in VS Code but process is terminated (exit code 137)
-                            kill -9 $pwshPid 2>$null
-                        }
-                        else {
-                            # Servers are unhealthy - need to stop them cleanly and restart
-                            Write-Info "    Stopping instance (PID: $pwshPid) and its servers"
-                            
-                            # SIGTERM first to allow graceful cleanup
-                            kill -TERM $pwshPid 2>$null
-                            
-                            # Wait up to 3 seconds for graceful shutdown
-                            $waited = 0
-                            while (-not $pwshProcess.HasExited -and $waited -lt 3000) {
-                                Start-Sleep -Milliseconds 100
-                                $waited += 100
-                            }
-                            
-                            # If still running after SIGTERM, manually stop servers before SIGKILL
-                            # This prevents orphaning the AppHost process
-                            if (-not $pwshProcess.HasExited) {
-                                Write-Info "    Instance didn't exit gracefully, stopping servers manually..."
-                                # Adopt the AppHost so we can stop it
-                                if (Adopt-OrphanedServerProcesses) {
-                                    # Successfully adopted - now stop the servers
-                                    Stop-Servers -Silent
-                                }
-                                else {
-                                    # Couldn't adopt - kill by ports as last resort
-                                    Write-Info "    Couldn't adopt servers, cleaning up by port..."
-                                    $ports = @(5001, 5003)
-                                    foreach ($port in $ports) {
-                                        $portPids = lsof -ti ":$port" 2>$null
-                                        if ($portPids) {
-                                            $portPids | ForEach-Object { kill -9 $_ 2>$null }
-                                        }
-                                    }
-                                }
-                                # Now safe to force kill the pwsh instance
-                                kill -9 $pwshPid 2>$null
-                            }
-                        }
-                        
-                        $killedAny = $true
-                    }
-                }
-                catch {
-                    # Process might have already exited - that's OK
-                }
-            }
-            
-            # Give cleanup time to complete if servers were unhealthy
-            if ($killedAny -and -not $serversHealthy) {
-                Write-Info "  Waiting for cleanup to complete..."
-                Start-Sleep -Seconds 2
-            }
-        }
-        
-        if ($killedAny) {
-            if ($serversHealthy) {
-                Write-Success "Competing instances detached - reusing healthy servers"
-                # Adopt the orphaned server processes so we can manage them
-                Adopt-OrphanedServerProcesses
-            }
-            else {
-                Write-Success "Competing instances stopped - servers will be restarted"
-            }
-        }
-        else {
-            Write-Info "  No competing instances found"
         }
     }
 
     # Main execution
     try {
-        # Initialize script-level variable to track server ownership
-        # CRITICAL: Must be set before any early returns to prevent errors in finally block
-        $script:weOwnTheServers = $false
-        
         # Ensure we're in the workspace root
         Set-Location $workspaceRoot
         
@@ -1423,22 +902,9 @@ function Run {
             return
         }
         
-        # COMPREHENSIVE CLEANUP: Ensure ONLY ONE active terminal (this one)
-        # Strategy: Kill ALL other pwsh terminals using bottom-up approach
-        #   1. Kill dotnet children first (servers, build workers), then pwsh parent
-        #   2. This prevents orphaning processes when killing pwsh terminals
-        # Preserves: current terminal, PowerShell Extension, VS Code processes
-        $null = Stop-AllOtherPwshTerminals
-        
         # Clean up any remaining orphaned test/build processes
         # This catches orphaned browsers, test runners, MSBuild workers that survived
         $null = Stop-OrphanedTestProcesses
-        
-        # Try to adopt any surviving server processes (if servers are healthy)
-        # This allows reusing existing healthy servers without restart
-        # If adoption succeeds, $script:appHostProcess will be set
-        # If adoption fails, servers will be restarted later by smart restart logic
-        $null = Adopt-OrphanedServerProcesses
         
         # Clean build artifacts only if -Clean is specified
         if ($Clean) {
@@ -1472,19 +938,15 @@ function Run {
         $serversHealthy = Test-ServersHealthy
         $needsRestart = $buildResult.SrcRebuilt -or (-not $serversHealthy)
         
-        # Track ownership: if we restart/start servers, we own them
-        # If we reuse healthy servers, another terminal owns them
-        $script:weOwnTheServers = $needsRestart
-        
         if ($needsRestart) {
             Write-Step "Restart decision"
             if ($buildResult.SrcRebuilt) {
-                Write-Info "  Source changes detected - binaries were rebuilt"
-                Write-Info "  Restarting servers to load new code..."
+                Write-Info "Source changes detected - binaries were rebuilt"
+                Write-Info "Restarting servers to load new code..."
             }
             elseif (-not $serversHealthy) {
-                Write-Info "  Servers are unhealthy or not running"
-                Write-Info "  Restarting servers..."
+                Write-Info "Servers are unhealthy or not running"
+                Write-Info "Restarting servers..."
             }
             
             # Stop existing servers and clean up ports
@@ -1492,8 +954,8 @@ function Run {
         }
         else {
             Write-Step "Restart decision"
-            Write-Info "  No source changes detected - binaries unchanged"
-            Write-Info "  Servers are healthy - no restart needed"
+            Write-Info "No source changes detected - binaries unchanged"
+            Write-Info "Servers are healthy - no restart needed"
             Write-Success "Reusing existing servers"
         }
         
@@ -1569,15 +1031,14 @@ function Run {
                 Write-Success "Servers stopped"
             }
             
-            # Show appropriate success message and exit if servers not running
+            # Show appropriate success message - servers run in background now
             if ($runE2E -and -not $StopServers) {
                 Write-Host ""
                 if ($e2eSuccess) {
-                    Write-Success "All tests passed! Servers are running and ready for development."
+                    Write-Success "All tests passed! Servers are running in background."
                 }
                 else {
                     Write-Error "E2E tests failed. Servers are still running for debugging."
-                    Write-Info "To stop servers, press Ctrl+C"
                 }
                 Write-Host ""
             }
@@ -1598,38 +1059,20 @@ function Run {
             }
         }
     
-        # Servers are running - show info and handle based on ownership
+        # Servers are running in background - show info
         # (Either started with -WithoutTests, or E2E tests ran without -StopServers)
         if ($WithoutTests -or ($runE2E -and -not $StopServers)) {
+            Write-Step "Services (running in background)"
+            Write-Info "API: https://localhost:5001 (Swagger: https://localhost:5001/swagger)"
+            Write-Info "Web: https://localhost:5003"
+            Write-Info "Dashboard: https://localhost:18888 (Aspire Dashboard)"
+            Write-Step "Log files"
+            Write-Host "  Console:      .tmp/logs/console.txt (Development - combined Aspire output)" -ForegroundColor Gray
+            Write-Host "  API console:  .tmp/logs/api-console.txt (Production/Staging mode)" -ForegroundColor Gray
+            Write-Host "  Web console:  .tmp/logs/web-console.txt (Production/Staging mode)" -ForegroundColor Gray
+            Write-Host "  API logs:     .tmp/logs/api-dev.log / api-prod.log (FileLoggerProvider)" -ForegroundColor Gray
+            Write-Host "  Web logs:     .tmp/logs/web-dev.log / web-prod.log (FileLoggerProvider)" -ForegroundColor Gray
             Write-Host ""
-            Write-Info "Services:"
-            Write-Info "  API: https://localhost:5001 (Swagger: https://localhost:5001/swagger)"
-            Write-Info "  Web: https://localhost:5003"
-            Write-Info "  Dashboard: https://localhost:18888 (Aspire Dashboard)"
-            Write-Host ""
-            
-            # Check if we own the servers or they're running in another terminal
-            if ($script:weOwnTheServers) {
-                # We started the servers - this terminal manages them
-                Write-Info "Press Ctrl+C to stop servers"
-                Write-Host ""
-                Write-Host "CRITICAL: Do not execute new commands in this terminal as this will also act as Ctrl-C and stop the servers" -ForegroundColor Yellow
-            
-                # Wait for user interrupt (Ctrl+C)
-                # Cleanup happens in main finally block
-                if ($null -ne $script:appHostProcess -and -not $script:appHostProcess.HasExited) {
-                    $script:appHostProcess.WaitForExit()
-                }
-            }
-            else {
-                # Servers are running in another terminal - we're just a visitor
-                Write-Success "Servers already running in another terminal"
-                Write-Info "This terminal exiting - servers remain running"
-                Write-Host ""
-                Write-Host "CRITICAL: This terminal is now free to execute new commands in" -ForegroundColor Green
-                # Don't wait, just exit cleanly (no cleanup in finally block)
-                return
-            }
         }
     }
     catch {
@@ -1643,18 +1086,6 @@ function Run {
         throw
     }
     finally {
-        # Only cleanup if we own the servers
-        # If we're reusing servers from another terminal, don't touch them!
-        # Check variable exists first (handles early returns before variable is set)
-        if ((Get-Variable -Name 'weOwnTheServers' -Scope Script -ErrorAction SilentlyContinue) -and $script:weOwnTheServers) {
-            # Gracefully stop AppHost process and clean up ports
-            Stop-Servers -Silent
-            
-            # Clean up orphaned test processes (browsers, testhost, vstest)
-            # This runs on Ctrl+C, errors, or normal exit
-            Stop-OrphanedTestProcesses -Silent
-        }
-        
         # Always return to workspace root
         Set-Location $workspaceRoot
     }

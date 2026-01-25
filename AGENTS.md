@@ -2,8 +2,6 @@
 
 🚨 **ABSOLUTELY CRITICAL: FOLLOW THE PROCESS**: This file defines a **required 10-step process** for all development tasks in [AI Assistant Workflow](#ai-assistant-workflow). Always follow these steps in order for every request.
 
-🚫 **ABSOLUTELY CRITICAL: NEVER EXECUTE COMMANDS in the terminal executing the `Run` command**: The `Run` command used for starting the website and running tests and anything else in that terminal will terminate the earlier executed `Run` command and whatever you are trying to do will FAIL. If you want to check if the servers are running or if tests succeeded, **ALWAYS** use the `get_terminal_output` tool. Keep checking by calling `get_terminal_output` and **NEVER** wait by doing a `Start-Sleep` or other wait commands.
-
 ## What is AGENTS.md?
 
 **This file is specifically for YOU - an AI coding agent.** AGENTS.md files provide the context, instructions, and conventions you need to work effectively on this project. Think of it as a README for agents.
@@ -576,41 +574,15 @@ See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-
 
 ## Starting, Stopping and Testing the Website
 
-**🚨 CRITICAL FOR AI AGENTS**: This section defines how to properly start, interact with, and stop the running website without breaking it.
+This section defines how to start, test, and interact with the running website.
 
 ### Starting the Website
 
 **ALWAYS use the Run function directly** (automatically loaded in PowerShell):
 
-**🚨 CRITICAL isBackground RULE**:
+The `Run` function builds, tests, and starts servers **in background**. After `Run` completes, the terminal is immediately free to use for other commands. Servers continue running in background with output redirected to `.tmp/logs/`.
 
-✅ **ALWAYS use `isBackground=true` for Run commands** - Servers never exit on their own  
-✅ **ALWAYS use `get_terminal_output` to monitor progress** - Never wait or interact with terminal
-✅ **ALWAYS open NEW terminals for other commands in VSCode** - Unless you see "This terminal is now free"
-
-🚫 **NEVER use `isBackground=false` for any `Run` commands** - They block forever  
-🚫 **NEVER type commands in Run terminal** - Check the CRITICAL message first!
-🚫 **NEVER use `Start-Sleep`, `curl`, or other commands in Run terminal** - Unless you see "This terminal is now free"
-
-**Why isBackground=true Matters**:
-
-Run commands start servers that **block the terminal indefinitely**. Use `isBackground=true` + `get_terminal_output` to monitor progress, and open NEW terminals in VSCode for any other commands.
-
-**Terminal Reuse Rules**:
-
-After `Run` completes, check the final CRITICAL message:
-
-- ✅ **"CRITICAL: This terminal is now free to execute new commands in"** (Green) → Terminal CAN be reused safely
-  - Servers are running in another terminal
-  - This terminal just ran tests and exited cleanly
-  - Safe to run any commands here
-  
-- 🚫 **"CRITICAL: Do not execute new commands in this terminal"** (Yellow) → Terminal should NOT be reused
-  - This terminal owns and manages the running servers
-  - ANY input (typing commands, pressing Enter) acts as Ctrl+C and STOPS the servers
-  - Open a NEW terminal for additional commands
-
-**⚠️ CRITICAL E2E TEST WARNING**:
+**⚠️ E2E TEST NOTE**:
 
 ✅ **ALWAYS** use `Run` (default) or `Run -TestProject E2E.Tests` for E2E tests.  
 🚫 **NEVER** run `dotnet test tests/TechHub.E2E.Tests` directly - it **WILL FAIL** without servers running!
@@ -618,39 +590,24 @@ After `Run` completes, check the final CRITICAL message:
 **Standard Run Commands**:
 
 ```powershell
-# ✅ CORRECT - Default development workflow
-run_in_terminal(
-  command: "Run",
-  isBackground: true  # CRITICAL: Servers keep running after tests
-)
-# Then monitor: get_terminal_output(id: "<terminal-id>")
-# After tests pass, servers stay running for development
+# Default development workflow - build, test, start servers in background
+Run
 
-# ✅ CORRECT - Scoped testing (servers stay running)
-run_in_terminal(
-  command: "Run -TestProject E2E.Tests",
-  isBackground: true  # CRITICAL: Only runs E2E tests
-)
-# Automatically detects if rebuild needed
-# Keeps servers running after tests complete
+# Scoped testing - only runs E2E tests
+Run -TestProject E2E.Tests
 
-# ✅ CORRECT - Start servers for debugging (no tests)
-run_in_terminal(
-  command: "Run -WithoutTests",
-  isBackground: true  # CRITICAL: Servers keep running
-)
-# Then monitor: get_terminal_output(id: "<terminal-id>")
+# Start servers for debugging (no tests)
+Run -WithoutTests
 
-# 🚫 WRONG - Don't use isBackground=false (blocks forever!)
-run_in_terminal(
-  command: "Run",
-  isBackground: false  # BLOCKS FOREVER - Run never exits!
-)
-
-# 🚫 WRONG - Don't try to execute as a file
-pwsh -File scripts/TechHubRunner.psm1 -Command 'Run'
-pwsh -Command 'Run'
+# Run tests and stop servers after (CI/CD mode)
+Run -StopServers
 ```
+
+**Log Files**:
+
+- **Console output**: `.tmp/logs/console.txt` (Development) or `api-console.txt`/`web-console.txt` (Production)
+- **API logs**: `.tmp/logs/api-dev.log` (-prod for Production mode)
+- **Web logs**: `.tmp/logs/web-dev.log` (-prod for Production mode)
 
 ### Testing Workflows and Strategies
 
@@ -817,34 +774,30 @@ mcp_playwright_browser_type(element: "input field", text: "test query")
 **ONLY if Playwright MCP cannot accomplish the task**, and you MUST use curl/wget/other CLI tools:
 
 ```powershell
-# Open a NEW terminal (NEVER use the website terminal)
-# Then run your command
+# Run curl or other CLI tools directly - the terminal is always free
 curl -k https://localhost:5001/api/sections
 ```
-
-**Terminal Safety Checklist**:
-
-- [ ] Website is running in Terminal 1 (DO NOT TOUCH)
-- [ ] Opened NEW Terminal 2 for commands
-- [ ] Verified I'm typing in Terminal 2, NOT Terminal 1
-- [ ] Command does not interact with Terminal 1 in any way
 
 ### Stopping the Website
 
 **Only stop when task is complete or restart is needed**:
 
-1. Switch to the terminal running `Run`
-2. Press `Ctrl+C` to gracefully stop both API and Web servers
-3. Wait for "Cleanup complete" message
-4. Terminal is now safe to use for other commands
+Servers run in background. To stop them:
+
+```powershell
+# Option 1: Run with -StopServers flag (stops after tests)
+Run -StopServers
+
+# Option 2: Kill dotnet processes manually
+Get-Process dotnet | Stop-Process -Force
+```
 
 **The Run function handles**:
 
-- Aspire AppHost orchestration (starts both API and Web)
+- Aspire AppHost orchestration (starts both API and Web in background)
 - Health checks before declaring ready (up to 60 seconds for Aspire startup)
-- Graceful shutdown of all processes
-- Port cleanup on exit
-- Clean console output (warnings/errors only, info logs suppressed)
+- Output redirection to `.tmp/logs/` (console.txt for Development, api-console.txt/web-console.txt for Production)
+- Port cleanup when explicitly stopped
 
 ### Using the Run Function
 
@@ -853,12 +806,11 @@ The `Run` function is your **primary tool** for building, testing, and running t
 **Common Workflows**:
 
 ```powershell
-# Default: Build + test + run servers
-Run                     # Clean build, all tests, then keep servers running
-Run -WithoutClean       # Skip clean, all tests, then keep servers running
+# Default: Build + test + run servers in background
+Run                     # Build, all tests, then servers in background
 
 # Interactive debugging (no tests)
-Run -WithoutTests       # Clean build, skip all tests, start servers only
+Run -WithoutTests       # Build, skip all tests, start servers in background
 
 # Only rebuild (no tests, no servers)
 Run -Rebuild            # Clean rebuild only, then exit
@@ -867,7 +819,7 @@ Run -Rebuild            # Clean rebuild only, then exit
 **Testing Workflows**:
 
 ```powershell
-# Test specific projects (run tests, keep servers running)
+# Test specific projects (run tests, servers stay in background)
 Run -TestProject powershell     # PowerShell/Pester tests only (fast - no .NET build)
 Run -TestProject Web.Tests      # Web component tests only
 Run -TestProject E2E.Tests      # E2E tests only (requires servers)
@@ -883,10 +835,11 @@ Run -TestProject powershell -TestName FrontMatter  # PowerShell FrontMatter test
 
 **Key Features**:
 
+- **Background servers**: Servers run in background, terminal is immediately free
 - **Automatic hot reload**: Changes recompile automatically via `dotnet watch`
 - **Integrated testing**: Runs PowerShell, unit, integration, component, and E2E tests
 - **Server orchestration**: Uses Aspire AppHost to manage API + Web together
-- **Clean shutdown**: Press `Ctrl+C` for graceful cleanup
+- **Log files**: Output in `.tmp/logs/` (console.txt for Development, api-console.txt/web-console.txt for Production)
 
 **When to use advanced dotnet commands**: See [Advanced Development Scenarios](#advanced-development-scenarios) below for Entity Framework migrations, test diagnostics, and specialized operations.
 

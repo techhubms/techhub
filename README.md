@@ -20,14 +20,14 @@ This directory contains the .NET/Blazor implementation of Tech Hub.
 **Alternative - PowerShell Function**:
 
 ```powershell
-# Build and run both API and Web
+# Build, test, and run servers in background
 Run
 
-# Run all tests, then start servers
-Run -Test
+# Build and start servers (no tests)
+Run -WithoutTests
 ```
 
-**Stop the Application**: Press `Ctrl+C` in the terminal where the function is running.
+**Stop the Application**: Servers run in background. Use `Run -StopServers` to stop after tests, or `Get-Process dotnet | Stop-Process -Force` to stop manually. Server logs are in `.tmp/logs/` (console.txt for Development, api-console.txt/web-console.txt for Production).
 
 ## .NET Aspire
 

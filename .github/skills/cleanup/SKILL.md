@@ -24,7 +24,7 @@ Execute in order. Don't skip or proceed if a step fails.
 
 ### Step 1: Build & Test
 
-**Run**: `Run -Clean -StopServers` (use `isBackground=true`, monitor with `get_terminal_output`)
+**Run**: `Run -Clean -StopServers`
 
 **Requirements**: 0 errors, all tests pass.
 

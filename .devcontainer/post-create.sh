@@ -160,15 +160,21 @@ Write-Host "Tech Hub .NET Development Environment" -ForegroundColor Cyan
 Write-Host "✅ PowerShell profile loaded" -ForegroundColor Green
 Write-Host ""
 Write-Host "Quick start: Type 'Run' to build, test, and start servers" -ForegroundColor Yellow
+Write-Host "Servers run in background - terminal is always free to use" -ForegroundColor Yellow
 Write-Host ""
 Write-Host "OPTIONS:" -ForegroundColor Yellow
-Write-Host "  -Help          Show this help message" -ForegroundColor Gray
-Write-Host "  -Clean         Clean build artifacts before building (use when dependencies change)" -ForegroundColor Gray
-Write-Host "  -WithoutTests  Skip all tests, start servers directly (for debugging)" -ForegroundColor Gray
-Write-Host "  -StopServers   Stop servers after tests complete (for CI/CD pipelines)" -ForegroundColor Gray
+Write-Host "  -Help          Show detailed help" -ForegroundColor Gray
+Write-Host "  -Clean         Clean build artifacts before building" -ForegroundColor Gray
+Write-Host "  -WithoutTests  Skip all tests, start servers directly" -ForegroundColor Gray
+Write-Host "  -StopServers   Stop servers after tests complete" -ForegroundColor Gray
 Write-Host "  -Rebuild       Clean rebuild only, then exit" -ForegroundColor Gray
-Write-Host "  -TestProject   Scope tests to specific project (e.g., TechHub.Web.Tests, E2E.Tests, powershell)" -ForegroundColor Gray
-Write-Host "  -TestName      Scope tests by name pattern (e.g., SectionCard)" -ForegroundColor Gray
+Write-Host "  -TestProject   Scope tests to specific project" -ForegroundColor Gray
+Write-Host "  -TestName      Scope tests by name pattern" -ForegroundColor Gray
+Write-Host ""
+Write-Host "LOG FILES:" -ForegroundColor Yellow
+Write-Host "  Console:   .tmp/logs/console.txt (Development) or api/web-console.txt (Production)" -ForegroundColor Gray
+Write-Host "  API logs:  .tmp/logs/api-dev.log (-prod for Production mode)" -ForegroundColor Gray
+Write-Host "  Web logs:  .tmp/logs/web-dev.log (-prod for Production mode)" -ForegroundColor Gray
 Write-Host ""
 EOF
 

@@ -24,9 +24,20 @@ var skipFileLogging = builder.Configuration.GetValue<bool>("AppSettings:SkipFile
 var logPath = builder.Configuration["Logging:File:Path"];
 if (!skipFileLogging && !string.IsNullOrEmpty(logPath))
 {
+    // Parse log levels from configuration
+    var logLevels = new Dictionary<string, LogLevel>();
+    var logLevelSection = builder.Configuration.GetSection("Logging:File:LogLevel");
+    foreach (var child in logLevelSection.GetChildren())
+    {
+        if (Enum.TryParse<LogLevel>(child.Value, ignoreCase: true, out var level))
+        {
+            logLevels[child.Key] = level;
+        }
+    }
+
     // FileLoggerProvider is registered with DI and disposed by framework
 #pragma warning disable CA2000
-    builder.Logging.AddProvider(new FileLoggerProvider(logPath));
+    builder.Logging.AddProvider(new FileLoggerProvider(logPath, logLevels));
 #pragma warning restore CA2000
 }
 
