@@ -897,11 +897,14 @@ public static class BlazorHelpers
                     }};
                     
                     const onScrollEnd = () => {{
-                        // Wait one animation frame for TOC scroll-spy to update active class
-                        // (TOC scroll-spy uses RAF in its handleScroll method)
+                        // Wait TWO animation frames for TOC scroll-spy to update active class:
+                        // 1st RAF: scrollend fires
+                        // 2nd RAF: TOC scroll-spy's handleScroll() RAF callback executes updateActiveHeading()
                         requestAnimationFrame(() => {{
-                            cleanup();
-                            resolve();
+                            requestAnimationFrame(() => {{
+                                cleanup();
+                                resolve();
+                            }});
                         }});
                     }};
                     
@@ -983,11 +986,14 @@ public static class BlazorHelpers
                     }};
                     
                     const onScrollEnd = () => {{
-                        // Wait one animation frame for TOC scroll-spy to update active class
-                        // (TOC scroll-spy uses RAF in its handleScroll method)
+                        // Wait TWO animation frames for TOC scroll-spy to update active class:
+                        // 1st RAF: scrollend fires
+                        // 2nd RAF: TOC scroll-spy's handleScroll() RAF callback executes updateActiveHeading()
                         requestAnimationFrame(() => {{
-                            cleanup();
-                            resolve();
+                            requestAnimationFrame(() => {{
+                                cleanup();
+                                resolve();
+                            }});
                         }});
                     }};
                     

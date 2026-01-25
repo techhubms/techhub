@@ -115,18 +115,15 @@ public class GenAIBasicsTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         // Act - Click first TOC link
         var firstLink = tocLinks.First;
         var linkText = await firstLink.TextContentAsync();
-        await firstLink.ClickAsync();
-
-        // Wait for scroll to complete and active state to update
-        await Page.WaitForSelectorAsync(".sidebar-toc a.active", new() { Timeout = 2000 });
+        await firstLink.ClickAndWaitForScrollAsync();
 
         // Assert - URL should have hash
         var url = Page.Url;
         url.Should().Contain("#", $"Expected URL to contain anchor after clicking TOC link '{linkText}'");
 
-        // Assert - Clicked link should have active class
-        var activeLinks = await Page.Locator(".sidebar-toc a.active").CountAsync();
-        activeLinks.Should().BeGreaterThan(0, "Expected at least one TOC link to be active");
+        // Assert - At least one TOC link should have active class
+        // Use Playwright's auto-waiting expect assertion
+        await Assertions.Expect(Page.Locator(".sidebar-toc a.active").First).ToBeVisibleAsync();
     }
 
     [Fact]
@@ -141,9 +138,6 @@ public class GenAIBasicsTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
 
         // Act - Scroll to second section
         await Page.EvaluateAndWaitForScrollAsync("document.querySelectorAll('.genai-section h2')[1].scrollIntoView()");
-
-        // Wait for scroll spy to update active state
-        await Page.WaitForSelectorAsync(".sidebar-toc a.active", new() { Timeout = 2000 });
 
         // Assert - Active TOC link should update
         var activeTocLink = Page.Locator(".sidebar-toc a.active").First;
@@ -185,8 +179,8 @@ public class GenAIBasicsTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         // Arrange & Act
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Wait for mermaid diagrams to render (wait for first SVG to appear)
-        await Page.WaitForSelectorAsync("svg[id^='mermaid-']", new() { Timeout = 5000 });
+        // Wait for mermaid diagrams to render
+        await Page.WaitForMermaidDiagramsAsync();
 
         // Assert - Check for mermaid diagrams (rendered as SVG by mermaid.js)
         var mermaidDiagrams = Page.Locator("svg[id^='mermaid-']");
@@ -267,7 +261,7 @@ public class GenAIBasicsTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         await Page.GotoRelativeAsync(PageUrl);
 
         // Wait for page to fully load and mermaid to render
-        await Page.WaitForSelectorAsync("svg[id^='mermaid-']", new() { Timeout = 5000 });
+        await Page.WaitForMermaidDiagramsAsync();
 
         // Assert - No console errors
         var errors = consoleMessages.Where(m => m.Type == "error").ToList();

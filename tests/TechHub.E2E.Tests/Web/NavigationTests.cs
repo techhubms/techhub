@@ -245,9 +245,9 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         // Wait for navigation to complete
         await Page.WaitForBlazorUrlContainsAsync("/github-copilot/handbook");
 
-        // Wait for TOC to be visible
+        // Wait for TOC to be visible (use Expect for auto-retry)
         var tocElement = Page.Locator("[data-toc-scroll-spy]");
-        await tocElement.WaitForAsync(new() { State = WaitForSelectorState.Visible, Timeout = 5000 });
+        await Assertions.Expect(tocElement).ToBeVisibleAsync();
 
         // Assert - TOC should be initialized and have links
         var tocLinks = tocElement.Locator("a[href*='#']");

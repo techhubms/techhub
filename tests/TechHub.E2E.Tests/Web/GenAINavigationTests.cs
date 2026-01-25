@@ -46,7 +46,7 @@ public class GenAINavigationTests(PlaywrightCollectionFixture fixture) : IAsyncL
         // Find and click navigation link to AI section first
         var aiLink = Page.Locator("nav a[href='/ai']");
         await aiLink.ClickAsync();
-        await Page.WaitForURLAsync("**/ai", new() { WaitUntil = WaitUntilState.NetworkIdle });
+        await Page.WaitForURLAsync("**/ai");
 
         // Then navigate to GenAI Basics
         // Look for a link to genai-basics - this might be in content cards or navigation
@@ -78,7 +78,7 @@ public class GenAINavigationTests(PlaywrightCollectionFixture fixture) : IAsyncL
         else
         {
             await genaiLink.ClickAsync();
-            await Page.WaitForURLAsync("**/ai/genai-basics", new() { WaitUntil = WaitUntilState.NetworkIdle });
+            await Page.WaitForURLAsync("**/ai/genai-basics");
         }
 
         // Wait for Mermaid diagrams to render (use proper selector wait instead of arbitrary delay)
@@ -97,8 +97,7 @@ public class GenAINavigationTests(PlaywrightCollectionFixture fixture) : IAsyncL
         await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}/");
 
         // Act - Navigate to GenAI Basics via client-side routing
-        await Page.GotoAsync($"{BaseUrl}/ai");
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}/ai");
 
         // Navigate to GenAI Basics (try to find link, fallback to direct navigation)
         var genaiLink = Page.Locator("a[href='/ai/genai-basics']").First;
@@ -111,7 +110,7 @@ public class GenAINavigationTests(PlaywrightCollectionFixture fixture) : IAsyncL
             await Page.GotoAsync($"{BaseUrl}/ai/genai-basics");
         }
 
-        await Page.WaitForURLAsync("**/ai/genai-basics", new() { WaitUntil = WaitUntilState.NetworkIdle });
+        await Page.WaitForURLAsync("**/ai/genai-basics");
 
         // Assert - Verify TOC exists and has active state
         var toc = Page.Locator(".sidebar-toc");
@@ -140,10 +139,8 @@ public class GenAINavigationTests(PlaywrightCollectionFixture fixture) : IAsyncL
         await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}/");
 
         // Navigate: Home → AI Section → GenAI Basics
-        await Page.GotoAsync($"{BaseUrl}/ai");
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
-        await Page.GotoAsync($"{BaseUrl}/ai/genai-basics");
-        await Page.WaitForURLAsync("**/ai/genai-basics", new() { WaitUntil = WaitUntilState.NetworkIdle });
+        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}/ai");
+        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}/ai/genai-basics");
 
         // Wait for Mermaid diagrams to be visible
         var mermaidDiagrams = Page.Locator(".mermaid svg");
@@ -152,12 +149,10 @@ public class GenAINavigationTests(PlaywrightCollectionFixture fixture) : IAsyncL
         var firstLoadDiagrams = await mermaidDiagrams.CountAsync();
 
         // Navigate away to another page
-        await Page.GotoAsync($"{BaseUrl}/");
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}/");
 
         // Navigate back to GenAI Basics
-        await Page.GotoAsync($"{BaseUrl}/ai/genai-basics");
-        await Page.WaitForURLAsync("**/ai/genai-basics", new() { WaitUntil = WaitUntilState.NetworkIdle });
+        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}/ai/genai-basics");
 
         // Wait for Mermaid diagrams to be visible again
         await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync(new() { Timeout = 5000 });
@@ -185,11 +180,9 @@ public class GenAINavigationTests(PlaywrightCollectionFixture fixture) : IAsyncL
         var directLoadDiagrams = await mermaidDiagrams.CountAsync();
         var directLoadTocLinks = await Page.Locator(".sidebar-toc a").CountAsync();
 
-        // Scenario 2: Client-side navigation
-        await Page.GotoAsync($"{BaseUrl}/");
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
-        await Page.GotoAsync($"{BaseUrl}/ai/genai-basics");
-        await Page.WaitForURLAsync("**/ai/genai-basics", new() { WaitUntil = WaitUntilState.NetworkIdle });
+        // Scenario 2: Client-side navigation (using GotoAndWaitForBlazorAsync for consistency)
+        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}/");
+        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}/ai/genai-basics");
 
         // Wait for Mermaid diagrams to be visible again
         await Assertions.Expect(mermaidDiagrams.First).ToBeVisibleAsync(new() { Timeout = 5000 });

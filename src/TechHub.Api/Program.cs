@@ -114,4 +114,10 @@ app.MapTagEndpoints();
 // Map Aspire default health check endpoints (/health and /alive)
 app.MapDefaultEndpoints();
 
-app.Run();
+// Preload all content into cache BEFORE starting server
+// This blocks server startup until cache is warm, ensuring blazingly fast first request
+var contentRepository = app.Services.GetRequiredService<IContentRepository>();
+var loadedItems = await contentRepository.InitializeAsync();
+app.Logger.LogInformation("✅ Preloaded {Count} content items into memory cache", loadedItems.Count);
+
+await app.RunAsync();

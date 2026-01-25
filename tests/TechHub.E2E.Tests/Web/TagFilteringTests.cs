@@ -56,7 +56,6 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
             new() { Timeout = 10000 });
 
         // Assert - URL should contain the tag parameter
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
         var currentUrl = Page.Url;
         currentUrl.Should().Contain("tags=", $"Expected URL to contain tags parameter after clicking tag '{tagText}'");
 
@@ -163,9 +162,6 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
         // The component should internally deduplicate and only show unique selected tags
         await Page.GotoRelativeAsync("/github-copilot?tags=vs%20code,developer%20tools,vs%20code,productivity,developer%20tools");
         await WaitForTagCloudReadyAsync();
-
-        // Wait for page to load and process tags
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
         // Assert - Only unique tags should be visually selected (internal deduplication)
         // Note: The URL itself may not be cleaned up, but the UI should only show each tag once
@@ -276,7 +272,6 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
         var firstTagButton = Page.Locator(".tag-cloud-item").First;
         var firstTagText = (await firstTagButton.TextContentAsync())?.Trim().ToLowerInvariant() ?? "";
         await firstTagButton.ClickBlazorElementAsync();
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
         var itemsAfterFirstTag = await Page.Locator(".content-item-card").CountAsync();
         itemsAfterFirstTag.Should().BeLessThanOrEqualTo(allItems, "Filtering by one tag should reduce or maintain item count");
@@ -293,7 +288,6 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
         if (secondTagText != firstTagText)
         {
             await secondTagButton.ClickBlazorElementAsync();
-            await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
             var itemsAfterSecondTag = await Page.Locator(".content-item-card").CountAsync();
 
@@ -324,7 +318,6 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
         // Arrange - Navigate to GitHub Copilot section with a tag
         await Page.GotoRelativeAsync("/github-copilot?tags=vs%20code");
         await WaitForTagCloudReadyAsync();
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
         // Act - Get all visible content items
         var visibleItems = await Page.Locator(".content-item-card").CountAsync();

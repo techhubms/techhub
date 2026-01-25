@@ -9,9 +9,10 @@ namespace TechHub.E2E.Tests.Api;
 /// <summary>
 /// End-to-end tests for Tag endpoints
 /// </summary>
-public class TagEndpointsE2ETests(TechHubE2ETestApiFactory factory) : IClassFixture<TechHubE2ETestApiFactory>
+[Collection("API E2E Tests")]
+public class TagEndpointsE2ETests(ApiCollectionFixture fixture)
 {
-    private readonly HttpClient _client = factory.CreateClient();
+    private readonly HttpClient _client = fixture.Factory.CreateClient();
 
     #region GET /api/tags/all
 

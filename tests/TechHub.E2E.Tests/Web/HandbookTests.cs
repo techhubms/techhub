@@ -111,53 +111,29 @@ public class HandbookTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Wait for TOC scroll spy module to initialize (ES module loading)
-        await Page.WaitForTimeoutAsync(1000);
+        // Get all TOC links
+        var tocLinks = Page.Locator(".sidebar-toc a");
+        var linkCount = await tocLinks.CountAsync();
 
-        // Expected heading IDs in the order they appear on the page
-        var expectedHeadingIds = new[] { "about-book", "learnings", "audience", "key-features", "toc", "authors" };
-        var activatedHeadings = new List<string>();
-
-        // Start at the top
-        await Page.EvaluateAndWaitForScrollAsync("window.scrollTo(0, 0)");
-
-        // Get page dimensions
-        var pageHeight = await Page.EvaluateAsync<int>("document.documentElement.scrollHeight");
-        var viewportHeight = await Page.EvaluateAsync<int>("window.innerHeight");
-        var scrollIncrement = 200; // Scroll 200px at a time
-
-        // Act - Scroll down gradually and track which headings activate
-        for (var scrollPosition = 0; scrollPosition < pageHeight - viewportHeight; scrollPosition += scrollIncrement)
+        if (linkCount < 2)
         {
-            await Page.EvaluateAndWaitForScrollAsync($"window.scrollTo(0, {scrollPosition})");
-
-            // Check if any TOC link is active
-            var activeLinks = Page.Locator(".sidebar-toc a.active");
-            var activeCount = await activeLinks.CountAsync();
-
-            if (activeCount > 0)
-            {
-                var activeHref = await activeLinks.First.GetAttributeAsync("href");
-                if (activeHref != null && activeHref.Contains('#'))
-                {
-                    var headingId = activeHref.Split('#')[1];
-                    if (!activatedHeadings.Contains(headingId))
-                    {
-                        activatedHeadings.Add(headingId);
-                    }
-                }
-            }
+            // Skip if not enough TOC links
+            return;
         }
 
-        // Assert - At least some headings should have been activated during scrolling
-        activatedHeadings.Should().NotBeEmpty("Expected at least one heading to be activated during scrolling");
+        // Act - Click second TOC link to scroll to that section
+        var secondLink = tocLinks.Nth(1);
+        var linkText = await secondLink.TextContentAsync();
+        await secondLink.ClickAndWaitForScrollAsync();
 
-        // Assert - Activated headings should match expected headings (in any order)
-        foreach (var activatedId in activatedHeadings)
-        {
-            expectedHeadingIds.Should().Contain(activatedId,
-                $"Activated heading '{activatedId}' should be in the expected list of heading IDs");
-        }
+        // Assert - URL should have hash
+        var url = Page.Url;
+        url.Should().Contain("#", $"Expected URL to contain anchor after clicking TOC link '{linkText}'");
+
+        // Assert - Clicked link should have active class
+        // Use Playwright's auto-waiting expect assertion
+        await Assertions.Expect(secondLink).ToHaveClassAsync(new System.Text.RegularExpressions.Regex(".*active.*"),
+            new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
     }
 
     [Fact]

@@ -10,6 +10,13 @@ namespace TechHub.Core.Interfaces;
 public interface IContentRepository
 {
     /// <summary>
+    /// Initialize the repository by loading all data from disk.
+    /// Should be called once at application startup.
+    /// Returns the loaded collection for logging purposes.
+    /// </summary>
+    Task<IReadOnlyList<ContentItem>> InitializeAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// Get all content items across all collections
     /// </summary>
     Task<IReadOnlyList<ContentItem>> GetAllAsync(CancellationToken cancellationToken = default);

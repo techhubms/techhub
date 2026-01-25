@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using FluentAssertions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
@@ -110,8 +111,9 @@ public class LevelsOfEnlightenmentTests(PlaywrightCollectionFixture fixture) : I
         // Assert - Last heading's TOC link should be active
         var expectedActiveLink = Page.Locator($".sidebar-toc a[href$='#{lastHeadingId}']");
 
-        var hasActiveClass = await expectedActiveLink.EvaluateAsync<bool>("el => el.classList.contains('active')");
-        hasActiveClass.Should().BeTrue($"Expected TOC link for #{lastHeadingId} to be active when scrolled to bottom");
+        // Use Playwright's auto-waiting expect assertion
+        await Assertions.Expect(expectedActiveLink).ToHaveClassAsync(new System.Text.RegularExpressions.Regex(".*active.*"),
+            new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
     }
 
     [Fact]
@@ -140,8 +142,9 @@ public class LevelsOfEnlightenmentTests(PlaywrightCollectionFixture fixture) : I
         url.Should().Contain("#", $"Expected URL to contain anchor after clicking TOC link '{linkText}'");
 
         // Assert - Clicked link should have active class
-        var hasActiveClass = await secondLink.EvaluateAsync<bool>("el => el.classList.contains('active')");
-        hasActiveClass.Should().BeTrue($"Expected clicked TOC link '{linkText}' to have active class");
+        // Use Playwright's auto-waiting expect assertion
+        await Assertions.Expect(secondLink).ToHaveClassAsync(new System.Text.RegularExpressions.Regex(".*active.*"),
+            new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
     }
 
     [Fact]
@@ -149,9 +152,6 @@ public class LevelsOfEnlightenmentTests(PlaywrightCollectionFixture fixture) : I
     {
         // Arrange & Act
         await Page.GotoRelativeAsync(PageUrl);
-
-        // Wait for page to load
-        await Page.WaitForTimeoutAsync(1000);
 
         // Assert - At least one TOC link should exist
         var tocLinks = await Page.Locator(".sidebar-toc a").CountAsync();

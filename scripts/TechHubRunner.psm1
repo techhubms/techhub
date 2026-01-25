@@ -1406,6 +1406,10 @@ function Run {
 
     # Main execution
     try {
+        # Initialize script-level variable to track server ownership
+        # CRITICAL: Must be set before any early returns to prevent errors in finally block
+        $script:weOwnTheServers = $false
+        
         # Ensure we're in the workspace root
         Set-Location $workspaceRoot
         
@@ -1641,7 +1645,8 @@ function Run {
     finally {
         # Only cleanup if we own the servers
         # If we're reusing servers from another terminal, don't touch them!
-        if ($script:weOwnTheServers) {
+        # Check variable exists first (handles early returns before variable is set)
+        if ((Get-Variable -Name 'weOwnTheServers' -Scope Script -ErrorAction SilentlyContinue) -and $script:weOwnTheServers) {
             # Gracefully stop AppHost process and clean up ports
             Stop-Servers -Silent
             

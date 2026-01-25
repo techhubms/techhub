@@ -107,7 +107,6 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
             await itemLinks.First.ClickBlazorElementAsync();
 
             // Assert - Should navigate to content detail page
-            await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
             await Assertions.Expect(Page).Not.ToHaveURLAsync(new Regex("^" + Regex.Escape(BaseUrl) + "/?$"));
         }
     }
@@ -128,7 +127,6 @@ public class HomePageSidebarTests(PlaywrightCollectionFixture fixture) : IAsyncL
             await tagLinks.First.ClickBlazorElementAsync();
 
             // Assert - Should navigate to filtered view or section with tag parameter
-            await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
             var currentUrl = Page.Url;
             (currentUrl.Contains("tag=", StringComparison.OrdinalIgnoreCase) ||
                 currentUrl.Contains("tags=", StringComparison.OrdinalIgnoreCase) ||

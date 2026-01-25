@@ -149,7 +149,8 @@ public class CustomPagesTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
 
         // Act
         await Page.GotoRelativeAsync(url);
-        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle); // Wait for resources to load
+        // Wait briefly for any console errors to be logged
+        await Page.WaitForTimeoutAsync(100);
 
         // Assert
         // Filter out expected/benign errors:
