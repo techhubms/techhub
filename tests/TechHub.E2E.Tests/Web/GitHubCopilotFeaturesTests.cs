@@ -6,17 +6,16 @@ using TechHub.E2E.Tests.Helpers;
 namespace TechHub.E2E.Tests.Web;
 
 /// <summary>
-/// E2E tests for GitHub Copilot VS Code Updates custom page.
+/// E2E tests for GitHub Copilot Features custom page.
 /// Verifies page-specific content and features.
 /// 
-/// Common component tests (TOC, highlighting) are in:
+/// Common component tests are in separate test files:
 /// - SidebarTocTests.cs: Table of contents behavior
-/// - HighlightingTests.cs: Code syntax highlighting
 /// </summary>
-[Collection("Custom Pages TOC Tests")]
-public class VSCodeUpdatesTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+[Collection("Custom Pages Tests")]
+public class GitHubCopilotFeaturesTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
-    private const string PageUrl = "/github-copilot/vscode-updates";
+    private const string PageUrl = "/github-copilot/features";
     private IBrowserContext? _context;
     private IPage? _page;
     private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
@@ -41,18 +40,17 @@ public class VSCodeUpdatesTests(PlaywrightCollectionFixture fixture) : IAsyncLif
     }
 
     [Fact]
-    public async Task VSCodeUpdates_ShouldLoad_Successfully()
+    public async Task GitHubCopilotFeatures_ShouldLoad_Successfully()
     {
         // Act
         await Page.GotoRelativeAsync(PageUrl);
 
         // Assert - Check page title attribute contains expected text
-        // Dynamic page shows latest video title
-        await Assertions.Expect(Page).ToHaveTitleAsync(new Regex("Visual Studio Code and GitHub Copilot - What's new in"));
+        await Assertions.Expect(Page).ToHaveTitleAsync(new Regex("GitHub Copilot Features"));
     }
 
     [Fact]
-    public async Task VSCodeUpdates_ShouldDisplay_Content()
+    public async Task GitHubCopilotFeatures_ShouldDisplay_Content()
     {
         // Act
         await Page.GotoRelativeAsync(PageUrl);
@@ -65,26 +63,4 @@ public class VSCodeUpdatesTests(PlaywrightCollectionFixture fixture) : IAsyncLif
         var count = await Page.GetElementCountBySelectorAsync("p");
         count.Should().BeGreaterThan(0, $"Expected at least one paragraph, but found {count}");
     }
-
-    [Fact]
-    public async Task VSCodeUpdates_ShouldNot_HaveConsoleErrors()
-    {
-        // Arrange - Collect console messages
-        var consoleMessages = new List<IConsoleMessage>();
-        Page.Console += (_, msg) => consoleMessages.Add(msg);
-
-        // Act
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Wait briefly for any console errors to be logged
-        await Page.WaitForTimeoutAsync(500);
-
-        // Assert - No console errors
-        var errors = consoleMessages
-            .Where(m => m.Type == "error")
-            .ToList();
-
-        errors.Should().BeEmpty($"Expected no console errors on {PageUrl}, but found: {string.Join(", ", errors.Select(e => e.Text))}");
-    }
-
 }

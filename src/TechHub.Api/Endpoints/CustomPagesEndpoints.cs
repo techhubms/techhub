@@ -127,8 +127,8 @@ internal static class CustomPagesEndpoints
         // Get SDLC page data
         group.MapGet("/sdlc", GetSDLCData)
             .WithName("GetSDLCData")
-            .WithSummary("Get AI in the SDLC page data")
-            .WithDescription("Returns structured data for the AI in the SDLC custom page")
+            .WithSummary("Get AI SDLC page data")
+            .WithDescription("Returns structured data for the AI SDLC custom page")
             .Produces<SDLCPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 

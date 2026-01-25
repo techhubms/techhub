@@ -7,7 +7,7 @@
 
 /* Section Card Container - Allows collections to be outside the clickable card */
 .section-card-container {
-  background: var(--color-card-bg);
+  background: var(--color-bg-default);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border-default);
   transition: all var(--duration-normal) var(--easing-ease-out);
@@ -166,7 +166,7 @@
 
 /* Custom page badge styling - distinct from regular collection badges */
 .custom-page-badge {
-  background: var(--color-purple-light);
+  background: var(--color-purple-bright);
   border-color: var(--color-purple-medium);
   font-style: italic;
 }

@@ -95,13 +95,8 @@ public class AboutPageCollection : ICollectionFixture<PlaywrightCollectionFixtur
 {
 }
 
-[CollectionDefinition("Home Page Roundups Tests")]
-public class HomePageRoundupsCollection : ICollectionFixture<PlaywrightCollectionFixture>
-{
-}
-
-[CollectionDefinition("Home Page Sidebar Tests")]
-public class HomePageSidebarCollection : ICollectionFixture<PlaywrightCollectionFixture>
+[CollectionDefinition("Home Page Tests")]
+public class HomePageCollection : ICollectionFixture<PlaywrightCollectionFixture>
 {
 }
 
@@ -127,5 +122,30 @@ public class TagFilteringCollection : ICollectionFixture<PlaywrightCollectionFix
 
 [CollectionDefinition("Custom Pages TOC Tests")]
 public class CustomPagesTocCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}
+
+[CollectionDefinition("Sidebar TOC Tests")]
+public class SidebarTocCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}
+
+[CollectionDefinition("Mermaid Tests")]
+public class MermaidCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}
+
+[CollectionDefinition("Highlighting Tests")]
+public class HighlightingCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}
+
+[CollectionDefinition("Tab Highlighting Tests")]
+public class TabHighlightingCollection : ICollectionFixture<PlaywrightCollectionFixture>
+{
+}
+
+[CollectionDefinition("Tab Ordering Tests")]
+public class TabOrderingCollection : ICollectionFixture<PlaywrightCollectionFixture>
 {
 }

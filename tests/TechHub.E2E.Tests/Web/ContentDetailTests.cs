@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using FluentAssertions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
@@ -109,6 +110,26 @@ public class ContentDetailTests(PlaywrightCollectionFixture fixture) : IAsyncLif
         // Assert - Tags heading visible in sidebar (use auto-retrying Expect)
         await Assertions.Expect(Page.Locator(".sidebar h2:has-text('Tags')"))
             .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
+    }
+
+    [Fact]
+    public async Task RoundupLinks_ShouldNavigate_ToRoundupDetailPage()
+    {
+        // Arrange - Start from homepage where latest roundup is featured
+        await Page.GotoRelativeAsync("/");
+
+        // Act - Click roundup link (finds links with date format like "Dec 29, 2025")
+        var roundupLinks = Page.Locator("a").Filter(new() { HasTextRegex = new Regex(@"[A-Z][a-z]{2}\s+\d{1,2},\s+\d{4}", RegexOptions.None) });
+        var count = await roundupLinks.CountAsync();
+
+        if (count > 0)
+        {
+            await roundupLinks.First.ClickBlazorElementAsync();
+
+            // Assert - Should navigate to roundup detail page
+            await Page.WaitForBlazorUrlContainsAsync("/roundups/");
+            Page.Url.Should().Contain("/roundups/", "clicking roundup link should navigate to roundup detail page");
+        }
     }
 }
 

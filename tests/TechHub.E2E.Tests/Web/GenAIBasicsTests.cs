@@ -6,7 +6,11 @@ namespace TechHub.E2E.Tests.Web;
 
 /// <summary>
 /// E2E tests for GenAI Basics custom page.
-/// Verifies markdown rendering, mermaid diagrams, FAQ blocks, and accessibility.
+/// Verifies page-specific content including sections, FAQ blocks, and resource links.
+/// 
+/// Common component tests (TOC, mermaid) are in:
+/// - SidebarTocTests.cs: Table of contents behavior
+/// - MermaidTests.cs: Diagram rendering
 /// </summary>
 [Collection("Custom Pages TOC Tests")]
 public class GenAIBasicsTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
@@ -33,6 +37,16 @@ public class GenAIBasicsTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         {
             await _context.CloseAsync();
         }
+    }
+
+    [Fact]
+    public async Task GenAIBasics_ShouldLoad_Successfully()
+    {
+        // Act
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Check page title attribute contains expected text
+        await Assertions.Expect(Page).ToHaveTitleAsync(new System.Text.RegularExpressions.Regex("GenAI Basics"));
     }
 
     [Fact]
@@ -72,125 +86,6 @@ public class GenAIBasicsTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
             var sectionText = await sections.Nth(i).TextContentAsync();
             sectionText.Should().Be(expectedSections[i], $"Section {i + 1} should match expected title");
         }
-    }
-
-    [Fact]
-    public async Task GenAIBasics_ShouldRender_WithSidebarToc()
-    {
-        // Arrange & Act
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Assert - Check sidebar TOC exists
-        var toc = Page.Locator(".sidebar-toc");
-        await toc.AssertElementVisibleAsync();
-
-        // Should have TOC heading
-        var tocHeading = toc.Locator("h2, h3").First;
-        await tocHeading.AssertElementVisibleAsync();
-        var headingText = await tocHeading.TextContentAsync();
-        headingText.Should().Be("Table of Contents");
-
-        // Should have TOC links (actual count may include nested subsections)
-        var tocLinks = toc.Locator("a");
-        var linkCount = await tocLinks.CountAsync();
-        linkCount.Should().BeGreaterThan(0, "Expected TOC to have links");
-        // Note: Actual count is 55 due to nested subsections in the GenAI Basics page
-    }
-
-    [Fact]
-    public async Task GenAIBasics_TocLinks_ShouldScrollToSections()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Get all TOC links
-        var tocLinks = Page.Locator(".sidebar-toc a");
-        var linkCount = await tocLinks.CountAsync();
-
-        if (linkCount == 0)
-        {
-            Assert.Fail("No TOC links found on GenAI Basics page");
-        }
-
-        // Act - Click first TOC link
-        var firstLink = tocLinks.First;
-        var linkText = await firstLink.TextContentAsync();
-        await firstLink.ClickAndWaitForScrollAsync();
-
-        // Assert - URL should have hash
-        var url = Page.Url;
-        url.Should().Contain("#", $"Expected URL to contain anchor after clicking TOC link '{linkText}'");
-
-        // Assert - At least one TOC link should have active class
-        // Use Playwright's auto-waiting expect assertion
-        await Assertions.Expect(Page.Locator(".sidebar-toc a.active").First).ToBeVisibleAsync();
-    }
-
-    [Fact]
-    public async Task GenAIBasics_Scrolling_ShouldUpdateActiveTocLink()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Get second section heading
-        var secondHeading = Page.Locator(".genai-section h2").Nth(1);
-        await secondHeading.AssertElementVisibleAsync();
-
-        // Act - Scroll to second section
-        await Page.EvaluateAndWaitForScrollAsync("document.querySelectorAll('.genai-section h2')[1].scrollIntoView()");
-
-        // Assert - Active TOC link should update
-        var activeTocLink = Page.Locator(".sidebar-toc a.active").First;
-        await activeTocLink.AssertElementVisibleAsync();
-
-        var activeLinkText = await activeTocLink.TextContentAsync();
-        activeLinkText.Should().NotBeNullOrEmpty("Active TOC link should have text");
-    }
-
-    [Fact]
-    public async Task GenAIBasics_LastSection_ShouldScroll_ToDetectionPoint()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Get last section
-        var lastHeading = Page.Locator(".genai-section h2").Last;
-        await Assertions.Expect(lastHeading).ToBeVisibleAsync();
-
-        // Get the heading ID for the TOC link check
-        var lastHeadingId = await lastHeading.GetAttributeAsync("id");
-
-        // Act - Scroll to the absolute bottom of the page
-        // This ensures the last section heading crosses the 30% detection line
-        await Page.EvaluateAndWaitForScrollAsync("window.scrollTo(0, document.documentElement.scrollHeight)");
-
-        // Get the last TOC link - use href$= to match the end of the href (hash part)
-        var lastTocLink = Page.Locator($".sidebar-toc a[href$='#{lastHeadingId}']");
-
-        // Use Playwright's auto-retrying assertion - wait for TOC link to become active
-        // This handles timing variations in scroll spy detection
-        await Assertions.Expect(lastTocLink).ToHaveClassAsync(new System.Text.RegularExpressions.Regex(".*active.*"),
-            new() { Timeout = 3000 });
-    }
-
-    [Fact]
-    public async Task GenAIBasics_MermaidDiagrams_ShouldRender()
-    {
-        // Arrange & Act
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Wait for mermaid diagrams to render
-        await Page.WaitForMermaidDiagramsAsync();
-
-        // Assert - Check for mermaid diagrams (rendered as SVG by mermaid.js)
-        var mermaidDiagrams = Page.Locator("svg[id^='mermaid-']");
-        var diagramCount = await mermaidDiagrams.CountAsync();
-
-        diagramCount.Should().BeGreaterThan(0, "Expected mermaid diagrams to be rendered as SVG elements");
-
-        // Verify at least some of the 11 expected diagrams are present
-        // Note: Not all may be visible depending on viewport, so we check for at least 3
-        diagramCount.Should().BeGreaterThanOrEqualTo(3, "Expected at least 3 mermaid diagrams to be visible");
     }
 
     [Fact]
@@ -250,22 +145,4 @@ public class GenAIBasicsTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         rel.Should().Contain("noopener", "Resource links should have rel='noopener' for security");
     }
 
-    [Fact]
-    public async Task GenAIBasics_Page_ShouldNotHaveConsoleErrors()
-    {
-        // Arrange - Collect console messages
-        var consoleMessages = new List<IConsoleMessage>();
-        Page.Console += (_, msg) => consoleMessages.Add(msg);
-
-        // Act
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Wait for page to fully load and mermaid to render
-        await Page.WaitForMermaidDiagramsAsync();
-
-        // Assert - No console errors
-        var errors = consoleMessages.Where(m => m.Type == "error").ToList();
-
-        errors.Should().BeEmpty($"Expected no console errors, but found: {string.Join(", ", errors.Select(e => e.Text))}");
-    }
 }

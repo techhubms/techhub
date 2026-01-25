@@ -7,13 +7,15 @@
 @inject ErrorService ErrorService
 @inject ILogger<AISDLC> Logger
 
-<PageTitle>@(pageData?.Title ?? "AI in the SDLC") - Tech Hub</PageTitle>
+<PageTitle>@(pageData?.Title ?? "AI SDLC") - Tech Hub</PageTitle>
 
 @if (sectionData != null && pageData != null)
 {
     <HeadContent>
         <link rel="canonical" href="https://tech.hub.ms/ai/sdlc" />
     </HeadContent>
+
+    <SkipLink />
 
     <Header SectionName="ai" />
 
@@ -22,9 +24,9 @@
             <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
         </aside>
 
-        <article class="article-body">
+        <article id="skiptohere" tabindex="-1" class="article-body">
             <div class="content-detail-header">
-                <h1 class="page-h1" tabindex="-1">@pageData.Title</h1>
+                <h1 class="page-h1">@pageData.Title</h1>
                 @if (!string.IsNullOrWhiteSpace(pageData.Description))
                 {
                     <p class="page-description">@pageData.Description</p>

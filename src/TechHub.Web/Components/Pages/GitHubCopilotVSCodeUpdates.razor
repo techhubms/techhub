@@ -16,6 +16,8 @@
         <link rel="canonical" href="https://tech.hub.ms/github-copilot/vscode-updates" />
     </HeadContent>
 
+    <SkipLink />
+
     <Header SectionName="github-copilot" />
 
     <main class="page-with-sidebar">
@@ -50,11 +52,11 @@
 
         @if (selectedVideoDetail != null)
         {
-            <ContentItemDetail Item="@selectedVideoDetail" />
+            <ContentItemDetail Item="@selectedVideoDetail" Id="skiptohere" />
         }
         else
         {
-            <article class="article-body">
+            <article id="skiptohere" tabindex="-1" class="article-body">
                 <p class="no-content-message">No updates available yet.</p>
             </article>
         }

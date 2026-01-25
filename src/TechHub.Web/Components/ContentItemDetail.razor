@@ -2,7 +2,7 @@
 
 @if (!string.IsNullOrWhiteSpace(Item.RenderedHtml))
 {
-    <article class="article-body">
+    <article id="@Id" class="article-body" tabindex="@(string.IsNullOrWhiteSpace(Id) ? null : "-1")">
         <div class="content-detail-header">
             <h1 class="page-h1" tabindex="-1">@Item.Title</h1>
 
@@ -22,6 +22,9 @@
 @code {
     [Parameter, EditorRequired]
     public ContentItemDetailDto Item { get; set; } = null!;
+
+    [Parameter]
+    public string? Id { get; set; }
 
     private string FormatDate(long epochSeconds)
     {

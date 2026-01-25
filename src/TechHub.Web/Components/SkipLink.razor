@@ -1,0 +1,82 @@
+@* 
+   Skip to Main Content Link
+   
+   Accessibility component that provides a bypass mechanism for keyboard users
+   to skip repetitive navigation and jump directly to main content.
+   
+   WCAG 2.1 Level A Requirement (2.4.1 Bypass Blocks)
+   
+   Behavior:
+   - First focusable element on every page
+   - Visually hidden until focused (keyboard-only visibility)
+   - Links to #skiptohere (the id attribute of the primary content element)
+   - JavaScript ensures focus moves to primary content, bypassing sidebar
+   
+   Usage:
+     Place BEFORE <Header> component on all pages:
+     
+     <SkipLink />
+     <Header SectionName="..." />
+     <main>
+       <aside>...</aside>
+       <section id="skiptohere" tabindex="-1">...</section>
+     </main>
+*@
+
+<a href="#skiptohere" class="skip-link" id="skip-link">Skip to main content</a>
+
+<script>
+    // Handle skip link activation to ensure focus moves to primary content
+    (function () {
+        const skipLink = document.getElementById('skip-link');
+        if (skipLink) {
+            skipLink.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default hash navigation
+
+                const targetElement = document.getElementById('skiptohere');
+                if (targetElement) {
+                    // Temporarily add tabindex=-1 ONLY to receive focus programmatically
+                    // This allows focus() to work, but doesn't break tab order
+                    const hadTabIndex = targetElement.hasAttribute('tabindex');
+                    const originalTabIndex = targetElement.getAttribute('tabindex');
+                    
+                    targetElement.setAttribute('tabindex', '-1');
+                    
+                    // Move focus to primary content element
+                    targetElement.focus();
+
+                    // Scroll to element (in case it's off-screen)
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    
+                    // Remove tabindex after a brief delay so next Tab goes to natural next element
+                    setTimeout(() => {
+                        if (!hadTabIndex) {
+                            targetElement.removeAttribute('tabindex');
+                        } else if (originalTabIndex !== null) {
+                            targetElement.setAttribute('tabindex', originalTabIndex);
+                        }
+                    }, 100);
+                }
+            });
+        }
+
+        // Reset focus after Blazor enhanced navigation to ensure tab order restarts at top
+        // This is critical for accessibility - SPA navigation shouldn't break keyboard navigation
+        function registerEnhancedLoadHandler() {
+            if (typeof Blazor !== 'undefined' && Blazor.addEventListener) {
+                Blazor.addEventListener('enhancedload', function () {
+                    // Blur any currently focused element to reset focus to document root
+                    if (document.activeElement && document.activeElement !== document.body) {
+                        document.activeElement.blur();
+                    }
+                });
+            } else {
+                // Blazor not ready yet, try again after a short delay
+                setTimeout(registerEnhancedLoadHandler, 100);
+            }
+        }
+        
+        // Start trying to register the handler
+        registerEnhancedLoadHandler();
+    })();
+</script>

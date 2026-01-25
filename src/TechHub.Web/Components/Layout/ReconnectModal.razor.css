@@ -21,22 +21,22 @@
 
 
 #components-reconnect-modal {
-    background-color: white;
+    background-color: var(--color-bg-default);
+    color: var(--color-text-primary);
     width: 20rem;
     margin: 20vh auto;
     padding: 2rem;
-    border: 2px solid #8b5cf6;
+    border: 2px solid var(--color-purple-dark);
     border-radius: 0.5rem;
     box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.3);
     opacity: 0;
     transition: display 0.5s allow-discrete, overlay 0.5s allow-discrete;
     animation: components-reconnect-modal-fadeOutOpacity 0.5s both;
-    &[open]
 
-{
-    animation: components-reconnect-modal-slideUp 1.5s cubic-bezier(.05, .89, .25, 1.02) 0.3s, components-reconnect-modal-fadeInOpacity 0.5s ease-in-out 0.3s;
-    animation-fill-mode: both;
-}
+    &[open] {
+        animation: components-reconnect-modal-slideUp 1.5s cubic-bezier(.05, .89, .25, 1.02) 0.3s, components-reconnect-modal-fadeInOpacity 0.5s ease-in-out 0.3s;
+        animation-fill-mode: both;
+    }
 
 }
 
@@ -86,25 +86,26 @@
 #components-reconnect-modal p {
     margin: 0;
     text-align: center;
+    color: var(--color-text-primary);
 }
 
 #components-reconnect-modal button {
     border: 0;
-    background-color: #8b5cf6;
-    color: white;
+    background-color: var(--color-purple-bright);
+    color: var(--color-bg-default);
     padding: 4px 24px;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
 
-    #components-reconnect-modal button:hover {
-        background-color: #7c3aed;
-    }
+#components-reconnect-modal button:hover {
+    background-color: var(--color-purple-medium);
+}
 
-    #components-reconnect-modal button:active {
-        background-color: #6d28d9;
-    }
+#components-reconnect-modal button:active {
+    background-color: var(--color-purple-dark);
+}
 
 .components-rejoining-animation {
     position: relative;
@@ -112,17 +113,17 @@
     height: 80px;
 }
 
-    .components-rejoining-animation div {
-        position: absolute;
-        border: 3px solid #8b5cf6;
-        opacity: 1;
-        border-radius: 50%;
-        animation: components-rejoining-animation 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-    }
+.components-rejoining-animation div {
+    position: absolute;
+    border: 3px solid var(--color-purple-dark);
+    opacity: 1;
+    border-radius: 50%;
+    animation: components-rejoining-animation 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
 
-        .components-rejoining-animation div:nth-child(2) {
-            animation-delay: -0.5s;
-        }
+.components-rejoining-animation div:nth-child(2) {
+    animation-delay: -0.5s;
+}
 
 @keyframes components-rejoining-animation {
     0% {

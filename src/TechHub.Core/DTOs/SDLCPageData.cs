@@ -1,7 +1,7 @@
 namespace TechHub.Core.DTOs;
 
 /// <summary>
-/// Data structure for the AI in the SDLC page
+/// Data structure for the AI SDLC page
 /// </summary>
 public record SDLCPageData
 {

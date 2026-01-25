@@ -4,6 +4,41 @@ End-to-end tests using Playwright to verify complete user workflows and function
 
 **Implementation being tested**: See [src/TechHub.Web/AGENTS.md](../../src/TechHub.Web/AGENTS.md) for Blazor component patterns and [src/TechHub.Api/AGENTS.md](../../src/TechHub.Api/AGENTS.md) for API endpoint patterns.
 
+## Critical Rules
+
+🚫 **NEVER use `Task.Delay()` or `Thread.Sleep()` in E2E tests**
+
+These are anti-patterns that cause flaky tests and slow execution:
+
+```csharp
+// ❌ NEVER DO THIS
+await Task.Delay(300); // Arbitrary wait - flaky and slow
+await Task.Delay(100); // "Small delay" - still wrong!
+
+// ✅ USE PLAYWRIGHT POLLING INSTEAD
+// Wait for specific condition with WaitForFunctionAsync
+await Page.WaitForFunctionAsync(
+    "() => document.activeElement?.classList.contains('skip-link')",
+    new() { Timeout = 2000, PollingInterval = 50 });
+
+// Wait for element state with Expect assertions (auto-retry)
+await Assertions.Expect(element).ToBeVisibleAsync();
+await Assertions.Expect(element).ToHaveClassAsync(new Regex("active"));
+
+// Wait for DOM condition
+await Page.WaitForFunctionAsync(
+    "() => document.querySelectorAll('.content-item-card').length > 0",
+    new() { Timeout = 5000, PollingInterval = 100 });
+```
+
+**Why `Task.Delay` is harmful**:
+
+- **Flaky**: Fixed delays may be too short on slow machines, causing intermittent failures
+- **Slow**: Fixed delays are always too long when tests pass quickly
+- **Unreadable**: Doesn't express what condition you're waiting for
+
+**Use instead**: `WaitForFunctionAsync()`, `Expect().ToBeVisibleAsync()`, `Expect().ToHaveClassAsync()`, `WaitForSelectorAsync()`
+
 ## Running Tests
 
 ### Recommended Approach
@@ -50,19 +85,34 @@ Run -WithoutTests
 ### Structure
 
 ```text
-```text
 tests/TechHub.E2E.Tests/
 ├── Web/                                 ← Playwright-based E2E tests
-│   ├── UrlRoutingTests.cs              ← URL routing, collections, buttons (18 tests)
-│   ├── NavigationTests.cs              ← Section navigation, styling (8 tests)
-│   ├── RssTests.cs                     ← RSS feeds (9 tests)
-│   ├── ContentDetailTests.cs           ← Content pages (8 tests)
-│   ├── AboutPageTests.cs               ← About page (5 tests)
-│   ├── HomePageRoundupsTests.cs        ← Homepage roundups (3 tests)
-│   ├── HomePageSidebarTests.cs         ← Homepage sidebar (3 tests)
-│   ├── CustomPagesTests.cs             ← Custom pages (10 tests)
-│   ├── SectionCardLayoutTests.cs       ← Section cards (3 tests)
-│   └── SectionPageKeyboardNavigationTests.cs ← Keyboard nav (5 tests)
+│   ├── Common Component Tests          ← Test shared components once
+│   │   ├── SidebarTocTests.cs          ← TOC behavior (rendering, navigation, scroll spy, keyboard)
+│   │   ├── MermaidTests.cs             ← Diagram rendering (tested on genai-basics)
+│   │   ├── HighlightingTests.cs        ← Code syntax highlighting (tested on genai-advanced)
+│   │   ├── TabHighlightingTests.cs     ← Focus visibility (WCAG AA accessibility)
+│   │   └── TabOrderingTests.cs         ← Tab order verification (WCAG A accessibility)
+│   ├── Page-Specific Tests             ← Test unique page features
+│   │   ├── HandbookTests.cs            ← Handbook-specific (book info, hero, CTA)
+│   │   ├── LevelsOfEnlightenmentTests.cs ← Levels-specific (9 levels, videos, playlist)
+│   │   ├── VSCodeUpdatesTests.cs       ← VS Code updates page
+│   │   ├── GenAIBasicsTests.cs         ← GenAI Basics (13 sections, FAQ blocks, resources)
+│   │   ├── GenAIAdvancedTests.cs       ← GenAI Advanced page
+│   │   ├── GenAIAppliedTests.cs        ← GenAI Applied page
+│   │   ├── GitHubCopilotFeaturesTests.cs ← GitHub Copilot Features page
+│   │   ├── DXSpaceTests.cs             ← Developer Experience Space page
+│   │   ├── AISDLCTests.cs              ← AI SDLC page (no TOC test case)
+│   │   ├── AboutPageTests.cs           ← About page (5 tests)
+│   │   ├── HomePageTests.cs            ← Homepage (10 tests: 3 roundups + 7 sidebar)
+│   │   └── ContentDetailTests.cs       ← Content detail page (6 tests: layout, nav, tags)
+│   ├── Feature Tests                   ← Test specific features
+│   │   ├── UrlRoutingTests.cs          ← URL routing, collections, buttons (18 tests)
+│   │   ├── NavigationTests.cs          ← Section navigation, styling (8 tests)
+│   │   ├── RssTests.cs                 ← RSS feeds (9 tests)
+│   │   ├── SectionCardLayoutTests.cs   ← Section cards (3 tests)
+│   │   ├── SectionPageKeyboardNavigationTests.cs ← Keyboard nav (5 tests)
+│   │   └── TagFilteringTests.cs        ← Tag filtering
 ├── Api/                                 ← Direct API testing (no Playwright)
 │   ├── ApiTestFactory.cs               ← Shared WebApplicationFactory for API tests
 │   ├── SectionEndpointsE2ETests.cs     ← Section endpoints (4 tests)
@@ -76,7 +126,84 @@ tests/TechHub.E2E.Tests/
 └── xunit.runner.json                   ← Parallel execution settings
 ```
 
-**Total**: 115 E2E tests (72 Web + 43 API)
+### Test Organization Strategy
+
+**Common Components vs Page-Specific Features**:
+
+To avoid test duplication and improve maintainability, tests are organized by scope:
+
+**Common Component Tests** (test once on representative pages):
+
+- **SidebarTocTests.cs**: Tests table of contents behavior on `/github-copilot/vscode-updates` and `/ai/genai-basics`
+  - TOC rendering and visibility
+  - Link navigation and scrolling
+  - Active link updates on scroll
+  - Last section detection (scroll spy edge case)
+  - Keyboard accessibility
+  - Anchor navigation (direct URL with hash)
+  - Client-side navigation (TOC scroll-spy works after navigation)
+  - Console error checks
+- **MermaidTests.cs**: Tests diagram rendering on `/ai/genai-basics` (has 11+ diagrams)
+  - SVG rendering verification
+  - Multiple diagrams on same page
+  - Client-side navigation scenarios (diagrams render after navigation)
+  - Multiple navigation scenarios (diagrams persist)
+  - Direct load vs navigation comparison
+  - Console error checks
+- **HighlightingTests.cs**: Tests code syntax highlighting on `/ai/genai-advanced`
+  - highlight.js initialization
+  - CSS class application
+  - Console error checks
+- **TabHighlightingTests.cs**: Tests keyboard focus visibility on `/ai/genai-basics`
+  - Links show visible focus outline (WCAG 2.1 Level AA)
+  - Buttons show visible focus outline
+  - Tag buttons show visible focus outline
+  - Skip link shows visible focus outline
+- **TabOrderingTests.cs**: Tests logical tab ordering on `/ai/genai-basics`
+  - Tab order starts with skip link (WCAG 2.1 Level A)
+  - Navigation elements are in logical order
+  - Main content is reachable via keyboard
+  - Sidebar elements are reachable via keyboard
+  - Overall tab order is predictable
+
+**Why these test pages?**
+
+- `/ai/genai-basics`: Has complex nested TOC (55 links), 11+ mermaid diagrams, AND code blocks with syntax highlighting
+- Testing on 1 page provides sufficient coverage without duplication
+
+**Page-Specific Tests** (test unique features only):
+
+Each custom page has its own test file with tests for:
+
+- **Page loading**: Title verification, successful HTTP response
+- **Content display**: Main heading, paragraphs, page-specific elements
+- **Unique features**: Page-specific components and functionality
+
+**Test Files**:
+
+- **HandbookTests.cs**: `/github-copilot/handbook` - Book-specific features (book cover, authors, Amazon link, hero section, CTA button)
+- **LevelsOfEnlightenmentTests.cs**: `/github-copilot/levels-of-enlightenment` - Levels-specific features (9 levels, video embeds, overview image, playlist link)
+- **VSCodeUpdatesTests.cs**: `/github-copilot/vscode-updates` - VS Code updates page (dynamic title, content display)
+- **GenAIBasicsTests.cs**: `/ai/genai-basics` - GenAI-specific features (13 sections, FAQ blocks, resource links)
+- **GenAIAdvancedTests.cs**: `/ai/genai-advanced` - GenAI Advanced page (page load, heading, console errors)
+- **GenAIAppliedTests.cs**: `/ai/genai-applied` - GenAI Applied page (content sections, paragraphs)
+- **GitHubCopilotFeaturesTests.cs**: `/github-copilot/features` - GitHub Copilot Features page
+- **DXSpaceTests.cs**: `/devops/dx-space` - Developer Experience Space page (framework sections: DORA, SPACE, DevEx)
+- **AISDLCTests.cs**: `/ai/sdlc` - AI SDLC page (test case for pages without TOC)
+- **AboutPageTests.cs**: `/about` - About page (team members, photos, social links, navigation)
+- **HomePageTests.cs**: `/` (homepage) - Latest roundup section (3 tests), sidebar sections (7 tests: display, latest items, tags, navigation)
+- **ContentDetailTests.cs**: Content detail pages - Roundup detail page structure, layout, sub-nav, sidebar, tags, navigation from homepage
+
+**Benefits**:
+
+- **No duplication**: Common components tested once, not on every page
+- **Faster test runs**: Fewer redundant tests
+- **Easier maintenance**: Common component changes only require updating one test file
+- **Clear separation**: Easy to find tests for specific features
+
+**Keyboard Navigation Note**:
+
+The `/github-copilot/vscode-updates` page has highlight.js which makes code blocks focusable (tabindex), changing tab order. This is expected behavior and doesn't affect keyboard accessibility of interactive elements. Keyboard navigation tests run on `/ai/genai-basics` instead.
 
 ### API Test Organization
 
@@ -101,7 +228,14 @@ API E2E tests are organized by endpoint group for maintainability:
 
 **See**: [Api/TagEndpointsE2ETests.cs](Api/TagEndpointsE2ETests.cs), [Api/ContentEndpointsE2ETests.cs](Api/ContentEndpointsE2ETests.cs), [Api/SectionEndpointsE2ETests.cs](Api/SectionEndpointsE2ETests.cs) for complete examples
 
-**Total**: 72 E2E test cases across all Web test files
+**Total**: 83 E2E test cases across all Web test files:
+
+- Common Component Tests: 16 tests (2 Mermaid + 2 console + 3 navigation + 7 TOC + 2 TOC console)
+- Page-Specific Tests: 48 tests
+- Feature Tests: 45+ tests
+- Accessibility Tests: 9 tests (4 tab highlighting + 5 tab ordering)
+
+Note: Updated after test reorganization (merged homepage tests, added navigation tests to Mermaid/TOC, added GenAIAdvancedTests, added accessibility tests)
 
 ### Shared Page Pattern
 

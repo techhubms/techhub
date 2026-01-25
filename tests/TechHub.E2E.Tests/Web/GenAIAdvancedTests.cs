@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 using FluentAssertions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
@@ -6,17 +5,18 @@ using TechHub.E2E.Tests.Helpers;
 namespace TechHub.E2E.Tests.Web;
 
 /// <summary>
-/// E2E tests for GitHub Copilot VS Code Updates custom page.
-/// Verifies page-specific content and features.
+/// E2E tests for GenAI Advanced custom page.
+/// Verifies page-specific content and functionality.
 /// 
-/// Common component tests (TOC, highlighting) are in:
+/// Common component tests (TOC, mermaid, highlighting) are in their respective files:
 /// - SidebarTocTests.cs: Table of contents behavior
+/// - MermaidTests.cs: Diagram rendering
 /// - HighlightingTests.cs: Code syntax highlighting
 /// </summary>
 [Collection("Custom Pages TOC Tests")]
-public class VSCodeUpdatesTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
+public class GenAIAdvancedTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
-    private const string PageUrl = "/github-copilot/vscode-updates";
+    private const string PageUrl = "/ai/genai-advanced";
     private IBrowserContext? _context;
     private IPage? _page;
     private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
@@ -41,33 +41,27 @@ public class VSCodeUpdatesTests(PlaywrightCollectionFixture fixture) : IAsyncLif
     }
 
     [Fact]
-    public async Task VSCodeUpdates_ShouldLoad_Successfully()
+    public async Task GenAIAdvanced_ShouldLoad_Successfully()
     {
         // Act
         await Page.GotoRelativeAsync(PageUrl);
 
         // Assert - Check page title attribute contains expected text
-        // Dynamic page shows latest video title
-        await Assertions.Expect(Page).ToHaveTitleAsync(new Regex("Visual Studio Code and GitHub Copilot - What's new in"));
+        await Assertions.Expect(Page).ToHaveTitleAsync(new System.Text.RegularExpressions.Regex("GenAI Advanced"));
     }
 
     [Fact]
-    public async Task VSCodeUpdates_ShouldDisplay_Content()
+    public async Task GenAIAdvanced_ShouldDisplay_MainHeading()
     {
-        // Act
+        // Arrange & Act
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Assert - Page should have main content heading (excluding banner heading)
-        var mainHeading = Page.Locator(".page-h1");
-        await mainHeading.AssertElementVisibleAsync();
-
-        // Should have some content (paragraphs, lists, etc.)
-        var count = await Page.GetElementCountBySelectorAsync("p");
-        count.Should().BeGreaterThan(0, $"Expected at least one paragraph, but found {count}");
+        // Assert - Page title
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "GenAI Advanced", level: 1);
     }
 
     [Fact]
-    public async Task VSCodeUpdates_ShouldNot_HaveConsoleErrors()
+    public async Task GenAIAdvanced_ShouldNot_HaveConsoleErrors()
     {
         // Arrange - Collect console messages
         var consoleMessages = new List<IConsoleMessage>();
@@ -76,15 +70,14 @@ public class VSCodeUpdatesTests(PlaywrightCollectionFixture fixture) : IAsyncLif
         // Act
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Wait briefly for any console errors to be logged
-        await Page.WaitForTimeoutAsync(500);
+        // Wait for page to fully load
+        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
         // Assert - No console errors
         var errors = consoleMessages
             .Where(m => m.Type == "error")
             .ToList();
 
-        errors.Should().BeEmpty($"Expected no console errors on {PageUrl}, but found: {string.Join(", ", errors.Select(e => e.Text))}");
+        errors.Should().BeEmpty($"Expected no console errors, but found: {string.Join(", ", errors.Select(e => e.Text))}");
     }
-
 }

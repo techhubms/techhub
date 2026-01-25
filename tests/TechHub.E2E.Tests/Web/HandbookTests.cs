@@ -6,7 +6,10 @@ namespace TechHub.E2E.Tests.Web;
 
 /// <summary>
 /// E2E tests for GitHub Copilot Handbook custom page.
-/// Verifies book information display, table of contents, and accessibility.
+/// Verifies book information display and page-specific features.
+/// 
+/// Common component tests (TOC, keyboard nav) are in:
+/// - SidebarTocTests.cs: Table of contents behavior
 /// </summary>
 [Collection("Custom Pages TOC Tests")]
 public class HandbookTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
@@ -36,23 +39,13 @@ public class HandbookTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
     }
 
     [Fact]
-    public async Task Handbook_ShouldRender_WithSidebarToc()
+    public async Task Handbook_ShouldLoad_Successfully()
     {
-        // Arrange
+        // Act
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Assert - Check sidebar TOC exists
-        var toc = Page.Locator(".sidebar-toc");
-        await toc.AssertElementVisibleAsync();
-
-        // Should have TOC heading
-        var tocHeading = toc.Locator("h2, h3").First;
-        await tocHeading.AssertElementVisibleAsync();
-
-        // Should have TOC links
-        var tocLinks = toc.Locator("a");
-        var linkCount = await tocLinks.CountAsync();
-        linkCount.Should().BeGreaterThan(0, "Expected TOC to have navigation links");
+        // Assert - Check page title attribute contains expected text
+        await Assertions.Expect(Page).ToHaveTitleAsync(new System.Text.RegularExpressions.Regex("GitHub Copilot Handbook"));
     }
 
     [Fact]
@@ -78,106 +71,43 @@ public class HandbookTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
     }
 
     [Fact]
-    public async Task Handbook_TocLinks_ShouldScrollToSections()
+    public async Task Handbook_ShouldDisplay_BookInformation()
     {
-        // Arrange
+        // Act
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Get all TOC links
-        var tocLinks = Page.Locator(".sidebar-toc a");
-        var linkCount = await tocLinks.CountAsync();
+        // Assert - Check for book title heading
+        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "The GitHub Copilot Handbook", level: 1);
 
-        if (linkCount == 0)
-        {
-            Assert.Fail("No TOC links found on handbook page");
-        }
+        // Check for author names in text (they appear in bold within paragraphs, not as headings)
+        var pageContent = await Page.ContentAsync();
+        pageContent.Should().Contain("Rob Bos");
+        pageContent.Should().Contain("Randy Pagels");
 
-        // Act - Click first TOC link
-        var firstLink = tocLinks.First;
-        await firstLink.ClickAndWaitForScrollAsync();
-
-        // Assert - URL should have hash
-        var url = Page.Url;
-        url.Should().Contain("#", "Expected URL to contain anchor after clicking TOC link");
-
-        // Assert - Clicked link should have active class
-        var activeLinks = await Page.Locator(".sidebar-toc a.active").CountAsync();
-        activeLinks.Should().BeGreaterThan(0, "Expected at least one TOC link to be active");
+        // Check for Amazon link (may be in a sentence, use text contains)
+        var amazonLinkExists = await Page.GetByRole(AriaRole.Link).Filter(new() { HasText = "Amazon" }).CountAsync() > 0;
+        amazonLinkExists.Should().BeTrue("Expected to find a link containing 'Amazon' text");
     }
 
     [Fact]
-    public async Task Handbook_Scrolling_ShouldUpdateActiveTocLink()
+    public async Task Handbook_ShouldNot_HaveConsoleErrors()
     {
-        // Arrange
+        // Arrange - Collect console messages
+        var consoleMessages = new List<IConsoleMessage>();
+        Page.Console += (_, msg) => consoleMessages.Add(msg);
+
+        // Act
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Get all TOC links
-        var tocLinks = Page.Locator(".sidebar-toc a");
-        var linkCount = await tocLinks.CountAsync();
+        // Wait briefly for any console errors to be logged
+        await Page.WaitForTimeoutAsync(500);
 
-        if (linkCount < 2)
-        {
-            // Skip if not enough TOC links
-            return;
-        }
+        // Assert - No console errors
+        var errors = consoleMessages
+            .Where(m => m.Type == "error")
+            .ToList();
 
-        // Act - Click second TOC link to scroll to that section
-        var secondLink = tocLinks.Nth(1);
-        var linkText = await secondLink.TextContentAsync();
-        await secondLink.ClickAndWaitForScrollAsync();
-
-        // Assert - URL should have hash
-        var url = Page.Url;
-        url.Should().Contain("#", $"Expected URL to contain anchor after clicking TOC link '{linkText}'");
-
-        // Assert - Clicked link should have active class
-        // Use Playwright's auto-waiting expect assertion
-        await Assertions.Expect(secondLink).ToHaveClassAsync(new System.Text.RegularExpressions.Regex(".*active.*"),
-            new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
+        errors.Should().BeEmpty($"Expected no console errors on {PageUrl}, but found: {string.Join(", ", errors.Select(e => e.Text))}");
     }
 
-    [Fact]
-    public async Task Handbook_ShouldBe_KeyboardAccessible()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Act - Tab to first TOC link
-        await Page.Keyboard.PressAsync("Tab");
-
-        // Keep tabbing until we reach a TOC link (max 30 tabs to account for page complexity)
-        var foundTocLink = false;
-        for (var i = 0; i < 30; i++)
-        {
-            // Check if current element or its parent is within sidebar-toc
-            var isInToc = await Page.EvaluateAsync<bool>(@"
-                (function() {
-                    const elem = document.activeElement;
-                    if (!elem) return false;
-                    // Check if element itself or any parent has sidebar-toc class
-                    return elem.closest('.sidebar-toc') !== null;
-                })()
-            ");
-
-            if (isInToc)
-            {
-                foundTocLink = true;
-                break;
-            }
-
-            await Page.Keyboard.PressAsync("Tab");
-        }
-
-        // Assert
-        foundTocLink.Should().BeTrue("Should be able to reach TOC links via keyboard navigation");
-
-        // Act - Press Enter on the focused TOC link
-        var urlBefore = Page.Url;
-        await Page.Keyboard.PressAsync("Enter");
-        await Page.WaitForScrollEndAsync(300);
-
-        // Assert - URL should have changed (anchor added)
-        var urlAfter = Page.Url;
-        urlAfter.Should().NotBe(urlBefore, "Expected URL to change after pressing Enter on TOC link");
-    }
 }

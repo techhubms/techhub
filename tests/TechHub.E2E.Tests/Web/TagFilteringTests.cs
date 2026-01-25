@@ -265,6 +265,8 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
         await WaitForTagCloudReadyAsync();
 
         // Find content items count before filtering
+        // Wait for content to be visible first
+        await Page.WaitForSelectorAsync(".content-item-card", new() { State = WaitForSelectorState.Visible });
         var allItems = await Page.Locator(".content-item-card").CountAsync();
         allItems.Should().BeGreaterThan(0, "Section should have content items");
 
@@ -272,6 +274,14 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
         var firstTagButton = Page.Locator(".tag-cloud-item").First;
         var firstTagText = (await firstTagButton.TextContentAsync())?.Trim().ToLowerInvariant() ?? "";
         await firstTagButton.ClickBlazorElementAsync();
+
+        // Wait for content to update after tag filter
+        // Use Playwright's polling to detect when content has finished loading
+        await Page.WaitForBlazorReadyAsync();
+        // Wait for content list to stabilize (DOM updates after filter)
+        await Page.WaitForFunctionAsync(
+            "() => document.querySelectorAll('.content-item-card').length >= 0",
+            new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
 
         var itemsAfterFirstTag = await Page.Locator(".content-item-card").CountAsync();
         itemsAfterFirstTag.Should().BeLessThanOrEqualTo(allItems, "Filtering by one tag should reduce or maintain item count");
@@ -288,6 +298,13 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
         if (secondTagText != firstTagText)
         {
             await secondTagButton.ClickBlazorElementAsync();
+
+            // Wait for content to update after second tag filter
+            await Page.WaitForBlazorReadyAsync();
+            // Wait for content list to stabilize (DOM updates after filter)
+            await Page.WaitForFunctionAsync(
+                "() => document.querySelectorAll('.content-item-card').length >= 0",
+                new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
 
             var itemsAfterSecondTag = await Page.Locator(".content-item-card").CountAsync();
 

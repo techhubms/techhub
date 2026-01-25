@@ -59,7 +59,6 @@
 
 .article-body h1 {
     font-size: var(--font-size-3xl);
-    border-bottom: 1px solid var(--color-border-muted);
     padding-bottom: var(--spacing-2);
 }
 
@@ -139,14 +138,14 @@
 .article-body code {
     font-family: var(--font-family-mono);
     font-size: 0.875em;
-    background: rgba(189, 147, 249, 0.1);
-    border: 1px solid rgba(189, 147, 249, 0.2);
+    background: var(--color-purple-bg-subtle);
+    border: 1px solid var(--color-purple-border-subtle);
     border-radius: var(--radius-sm);
     padding: 0.125rem 0.375rem;
 }
 
 .article-body pre {
-    background: #0d1117;
+    background: var(--color-bg-default);
     border: 1px solid var(--color-border-default);
     border-radius: var(--radius-md);
     padding: var(--spacing-3);
@@ -160,7 +159,7 @@
     border: none;
     padding: 0;
     font-size: 0.875rem;
-    color: #c9d1d9;
+    color: var(--color-text-primary);
 }
 
 /* Syntax highlighting adjustments */
@@ -177,7 +176,7 @@
 .article-body blockquote {
     margin: var(--spacing-3) 0;
     padding: 0 var(--spacing-2);
-    border-left: 4px solid var(--color-primary);
+    border-left: 4px solid var(--color-purple-bright);
     color: var(--color-text-muted);
     font-style: italic;
 }
@@ -243,8 +242,11 @@
 }
 
 .article-body thead {
-    background: var(--color-bg-emphasis);
     border-bottom: 2px solid var(--color-border-emphasis);
+}
+
+.article-body thead tr {
+    background: var(--color-bg-emphasis);
 }
 
 .article-body th,
@@ -260,15 +262,15 @@
 }
 
 .article-body tbody tr:nth-child(odd) {
-    background: var(--color-bg-subtle);
-}
-
-.article-body tbody tr:nth-child(even) {
     background: var(--color-bg-default);
 }
 
+.article-body tbody tr:nth-child(even) {
+    background: var(--color-bg-emphasis);
+}
+
 .article-body tr:hover {
-    background: rgba(189, 147, 249, 0.05);
+    background: var(--color-purple-bg-subtle) !important;
 }
 
 /* =================================================================
@@ -314,32 +316,32 @@
     margin: var(--spacing-3) 0;
     border-left: 4px solid;
     border-radius: var(--radius-md);
-    background: var(--color-bg-subtle);
+    background: var(--color-bg-emphasis);
 }
 
 .article-body .alert-note {
-    border-color: #0969da;
-    background: rgba(9, 105, 218, 0.1);
+    border-color: var(--color-blue-light);
+    background: var(--color-blue-light-bg);
 }
 
 .article-body .alert-tip {
-    border-color: #1a7f37;
-    background: rgba(26, 127, 55, 0.1);
+    border-color: var(--color-green-dark);
+    background: var(--color-green-dark-bg);
 }
 
 .article-body .alert-important {
-    border-color: #8250df;
-    background: rgba(130, 80, 223, 0.1);
+    border-color: var(--color-purple-dark);
+    background: var(--color-purple-bg-subtle);
 }
 
 .article-body .alert-warning {
-    border-color: #9a6700;
-    background: rgba(154, 103, 0, 0.1);
+    border-color: var(--color-ochre);
+    background: var(--color-ochre-bg);
 }
 
 .article-body .alert-caution {
-    border-color: #cf222e;
-    background: rgba(207, 34, 46, 0.1);
+    border-color: var(--color-red);
+    background: var(--color-red-bg);
 }
 
 /* =================================================================
@@ -390,7 +392,7 @@
     position: relative;
     margin: var(--spacing-3) 0 0 0;
     text-align: center;
-    background: var(--color-bg-subtle);
+    background: var(--color-bg-emphasis);
     padding: var(--spacing-3);
     border-radius: var(--radius-md);
     overflow-x: auto;
@@ -418,7 +420,7 @@
     top: 0.5rem;
     right: 0.5rem;
     background: rgba(45, 45, 74, 0.9);
-    border: 1px solid var(--color-border-primary);
+    border: 1px solid var(--color-purple-dark);
     border-radius: 6px;
     padding: 0.5rem 0.75rem;
     cursor: pointer;
@@ -493,7 +495,7 @@
     z-index: 10001;
     /* Same styling as expand button */
     background: rgba(26, 26, 46, 0.9);
-    border: 2px solid var(--color-border-primary);
+    border: 2px solid var(--color-purple-dark);
     border-radius: 6px;
     padding: 0.5rem 0.75rem;
     cursor: pointer;
@@ -591,7 +593,7 @@
     aspect-ratio: 16 / 9;
     margin: var(--spacing-6) 0;
     border-radius: var(--radius-lg);
-    background: var(--color-card-bg);
+    background: var(--color-bg-default);
     overflow: hidden;
 }
 
@@ -612,16 +614,16 @@
 @media print {
 
     .article-body {
-        color: #000;
+        color: var(--color-print-text);
     }
 
     .article-body a {
-        color: #000;
+        color: var(--color-print-text);
         text-decoration: underline;
     }
 
     .article-body pre {
-        border: 1px solid #000;
+        border: 1px solid var(--color-print-border);
         page-break-inside: avoid;
     }
 }

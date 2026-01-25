@@ -24,10 +24,10 @@
 
 .skeleton {
   background: linear-gradient(90deg,
-      var(--color-bg-subtle) 0%,
+      var(--color-bg-default) 0%,
       var(--color-bg-emphasis) 20%,
-      var(--color-bg-subtle) 40%,
-      var(--color-bg-subtle) 100%);
+      var(--color-bg-default) 40%,
+      var(--color-bg-default) 100%);
   background-size: 1000px 100%;
   animation: shimmer 2s linear infinite;
   border-radius: var(--radius-md);
@@ -78,11 +78,11 @@
 
 /* Error States */
 .error {
-  color: var(--color-accent-danger);
+  color: var(--color-red);
 }
 
 .error h2 {
-  color: var(--color-accent-danger);
+  color: var(--color-red);
   margin-bottom: var(--spacing-2);
 }
 

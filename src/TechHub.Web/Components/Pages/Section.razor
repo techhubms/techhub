@@ -13,6 +13,8 @@
         href="@($"/{SectionName}/feed.xml")" />
 </HeadContent>
 
+<SkipLink />
+
 <Header SectionName="@SectionName" />
 
 <main class="page-with-sidebar">
@@ -23,7 +25,7 @@
         <SidebarRssLinks Links="@(new[] { new SidebarRssLinks.RssLink("RSS Feed", $"/{SectionName}/feed.xml") })" />
     </aside>
 
-    <section >
+    <section id="skiptohere" tabindex="-1">
         <ContentItemsGrid SectionName="@SectionName" CollectionName="all" FilterTags="@selectedTags" />
     </section>
 </main>

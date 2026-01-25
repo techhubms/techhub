@@ -3,179 +3,227 @@
    
    ALL design tokens (colors, typography, spacing) in ONE place.
    This is the single source of truth for design system values.
+   
+   🚨 CRITICAL: ALL colors MUST be defined here. Never use hardcoded hex values
+   in other CSS files. If you need a new color, add it here first.
    ============================================================================ */
 
 :root {
-   /* Scroll spy detection line: 30% from top of content area (below 106px sticky header) */
-   --scroll-margin-top: calc(106px + (100vh - 106px) * 0.30);
+  --scroll-margin-top: calc(106px + (100vh - 106px) * 0.30); /* Scroll spy: 30% from top of content area */
 
-   /* -----------------------------------------------------------------------
-     Color Palette - GitHub Brand Colors (Dark Theme)
+  /* -----------------------------------------------------------------------
+     Color Palette - Tech Hub Brand (Dark Theme)
      All combinations meet WCAG 2.1 AA contrast ratios
+     
+     PRIMARY ACCENT: Purple (not blue!) - this is the Tech Hub brand color
      ----------------------------------------------------------------------- */
 
-   /* Background Colors */
-   --color-bg-default: #0d1117;
-   --color-bg-subtle: #161b22;
-   --color-bg-emphasis: #21262d;
-   --color-bg-canvas: #0d1117;
-   --color-bg-overlay: rgba(13, 17, 23, 0.8);
+  /* =======================================================================
+      BACKGROUND COLORS
+      ======================================================================= */
 
-   /* Text Colors */
-   --color-text-primary: #c9d1d9;
-   /* 4.5:1 on bg-default */
-   --color-text-secondary: #8b949e;
-   /* 3.5:1 on bg-default */
-   --color-text-tertiary: #6e7681;
-   /* 3:1 on bg-default - large text only */
-   --color-text-emphasis: #f0f6fc;
-   /* Maximum contrast for headings/emphasis */
-   --color-text-link: #58a6ff;
-   --color-text-link-hover: #79c0ff;
-   --color-text-on-emphasis: #ffffff;
+  --color-bg-default: #161b22;   /* Standard component background - cards, sidebars, containers */
+  --color-bg-emphasis: #21262d; /* Highlighted areas, code blocks */
 
-   /* Border Colors */
-   --color-border-default: #30363d;
-   --color-border-emphasis: #6e7681;
-   --color-border-muted: #21262d;
+  /* Body gradient */
+  --color-bg-gradient-start: #1a1a2e;
+  --color-bg-gradient-mid: #16213e;
+  --color-bg-gradient-end: #0f0f23;
 
-   /* Accent Colors */
-   --color-accent-primary: #58a6ff;
-   --color-accent-primary-hover: #79c0ff;
-   --color-accent-primary-emphasis: #1f6feb;
-   --color-accent-success: #3fb950;
-   --color-accent-warning: #d29922;
-   --color-accent-danger: #f85149;
+  --color-purple-bg-medium: rgba(45, 45, 74, 0.5); /* Buttons, interactive elements */
 
-   /* Purple Accents (Tech Hub Brand) */
-   --color-purple-bright: #bd93f9;
-   --color-purple-medium: #9d72d9;
-   --color-purple-dark: #7f56d9;
-   --color-purple-muted: #6b4fb8;
+  /* =======================================================================
+      TEXT COLORS
+      ======================================================================= */
 
-   /* Semantic Color Mappings */
-   --color-button-primary-bg: var(--color-accent-primary);
-   --color-button-primary-text: var(--color-text-on-emphasis);
-   --color-button-primary-hover: var(--color-accent-primary-emphasis);
+  --color-text-primary: #c9d1d9;      /* Main body text - 4.5:1 on bg-default */
+  --color-text-secondary: #8b949e;    /* Secondary text - 3.5:1 on bg-default */
+  --color-text-tertiary: #6e7681;     /* Tertiary text - 3:1 (large text only) */
+  --color-text-muted: #b8b8b8;        /* Muted/subtle text */
+  --color-text-emphasis: #f0f6fc;     /* Maximum contrast for headings */
+  --color-text-on-emphasis: #ffffff;  /* Text on colored backgrounds */
 
-   --color-tag-bg: var(--color-bg-emphasis);
-   --color-tag-text: var(--color-text-secondary);
-   --color-tag-border: var(--color-border-default);
+  /* =======================================================================
+      BORDER COLORS
+      ======================================================================= */
 
-   --color-card-bg: var(--color-bg-subtle);
-   --color-card-border: var(--color-border-default);
-   --color-card-hover-border: var(--color-accent-primary);
+  --color-border-default: #30363d;              /* Default borders */
+  --color-border-emphasis: #6e7681;             /* Emphasized borders */
 
-   /* -----------------------------------------------------------------------
+  /* =======================================================================
+      PURPLE ACCENTS - Tech Hub Brand Color (PRIMARY)
+      ======================================================================= */
+
+  --color-purple-bright: #bd93f9; /* Bright purple - focus states, highlights */
+  --color-purple-medium: #9d72d9; /* Medium purple - links, icons */
+  --color-purple-dark: #7f56d9;   /* Dark purple - borders, accents */
+
+  /* Purple backgrounds (with transparency) */
+  --color-purple-bg-subtle: rgba(189, 147, 249, 0.1);  /* Subtle purple tint, hover states */
+  --color-purple-border-subtle: rgba(189, 147, 249, 0.2); /* Subtle purple border */
+
+  /* =======================================================================
+      ACCENT COLORS - Reusable color palette for cards, badges, borders
+      Each color has a solid variant and a subtle background variant
+      Organized alphabetically by color name
+      ======================================================================= */
+
+  /* Amber (callouts, insights) */
+  --color-amber: #fbbf24;
+  --color-amber-bg: rgba(253, 186, 116, 0.15);
+  --color-amber-border: rgba(253, 186, 116, 0.4);
+
+  /* Blue (standard) */
+  --color-blue: #1976d2;
+  --color-blue-bg: rgba(25, 118, 210, 0.1);
+
+  /* Blue Light (alerts, info) */
+  --color-blue-light: #0969da;
+  --color-blue-light-bg: rgba(9, 105, 218, 0.1);
+
+  /* Green (standard) */
+  --color-green: #388e3c;
+  --color-green-bg: rgba(56, 142, 60, 0.1);
+
+  /* Green Dark (success indicators) */
+  --color-green-dark: #1a7f37;
+  --color-green-dark-bg: rgba(26, 127, 55, 0.1);
+
+  /* Green Light (DO practices, benefit highlights) */
+  --color-green-light: #4ade80;
+  --color-green-light-bg: rgba(74, 222, 128, 0.15);
+  --color-green-light-border: rgba(74, 222, 128, 0.4);
+
+  /* Magenta */
+  --color-magenta: #7b1fa2;
+  --color-magenta-bg: rgba(123, 31, 162, 0.1);
+
+  /* Ochre (warning indicators) */
+  --color-ochre: #9a6700;
+  --color-ochre-bg: rgba(154, 103, 0, 0.1);
+
+  /* Orange */
+  --color-orange: #f57c00;
+  --color-orange-bg: rgba(245, 124, 0, 0.1);
+
+  /* Pink */
+  --color-pink: #c2185b;
+  --color-pink-bg: rgba(194, 24, 91, 0.1);
+
+  /* Red (danger indicators) */
+  --color-red: #cf222e;
+  --color-red-bg: rgba(207, 34, 46, 0.1);
+
+  /* Red Light (DON'T practices) */
+  --color-red-light-bg: rgba(248, 81, 73, 0.15);
+  --color-red-light-border: rgba(248, 81, 73, 0.4);
+
+  /* Teal */
+  --color-teal: #00796b;
+  --color-teal-bg: rgba(0, 121, 107, 0.1);
+
+  /* Yellow */
+  --color-yellow: #f9a825;
+  --color-yellow-bg: rgba(249, 168, 37, 0.1);
+
+  /* =======================================================================
+      PRINT COLORS
+      ======================================================================= */
+
+  --color-print-text: #000000;
+  --color-print-border: #000000;
+
+  /* -----------------------------------------------------------------------
      Typography
      ----------------------------------------------------------------------- */
 
-   /* Font Families */
-   --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-   --font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  /* Font Families */
+  --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
-   /* Font Sizes (rem-based for accessibility) */
-   --font-size-xs: 0.75rem;
-   /* 12px */
-   --font-size-sm: 0.875rem;
-   /* 14px */
-   --font-size-base: 1rem;
-   /* 16px */
-   --font-size-lg: 1.125rem;
-   /* 18px */
-   --font-size-xl: 1.25rem;
-   /* 20px */
-   --font-size-2xl: 1.5rem;
-   /* 24px */
-   --font-size-3xl: 2rem;
-   /* 32px */
-   --font-size-4xl: 2.5rem;
-   /* 40px */
+  /* Font Sizes (rem-based for accessibility) */
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-base: 1rem;    /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+  --font-size-3xl: 2rem;     /* 32px */
+  --font-size-4xl: 2.5rem;   /* 40px */
 
-   /* Semantic Font Sizes */
-   --font-size-h1: var(--font-size-4xl);
-   --font-size-h2: var(--font-size-3xl);
-   --font-size-h3: var(--font-size-2xl);
-   --font-size-h4: var(--font-size-xl);
-   --font-size-h5: var(--font-size-lg);
-   --font-size-h6: var(--font-size-base);
+  /* Semantic Font Sizes */
+  --font-size-h1: var(--font-size-4xl);
+  --font-size-h2: var(--font-size-3xl);
+  --font-size-h3: var(--font-size-2xl);
+  --font-size-h4: var(--font-size-xl);
+  --font-size-h5: var(--font-size-lg);
+  --font-size-h6: var(--font-size-base);
 
-   /* Font Weights */
-   --font-weight-normal: 400;
-   --font-weight-medium: 500;
-   --font-weight-semibold: 600;
-   --font-weight-bold: 700;
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
-   /* Line Heights */
-   --line-height-tight: 1.25;
-   --line-height-normal: 1.5;
-   --line-height-relaxed: 1.75;
-   --line-height-heading: var(--line-height-tight);
-   --line-height-body: var(--line-height-normal);
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-heading: var(--line-height-tight);
+  --line-height-body: var(--line-height-normal);
 
-   /* -----------------------------------------------------------------------
+  /* -----------------------------------------------------------------------
      Spacing (8px Grid System)
      ----------------------------------------------------------------------- */
 
-   --spacing-0: 0;
-   --spacing-1: 0.5rem;
-   /* 8px */
-   --spacing-2: 1rem;
-   /* 16px */
-   --spacing-3: 1.5rem;
-   /* 24px */
-   --spacing-4: 2rem;
-   /* 32px */
-   --spacing-5: 2.5rem;
-   /* 40px */
-   --spacing-6: 3rem;
-   /* 48px */
-   --spacing-8: 4rem;
-   /* 64px */
-   --spacing-10: 5rem;
-   /* 80px */
-   --spacing-12: 6rem;
-   /* 96px */
+  --spacing-0: 0;
+  --spacing-1: 0.5rem;   /* 8px */
+  --spacing-2: 1rem;     /* 16px */
+  --spacing-3: 1.5rem;   /* 24px */
+  --spacing-4: 2rem;     /* 32px */
+  --spacing-5: 2.5rem;   /* 40px */
+  --spacing-6: 3rem;     /* 48px */
+  --spacing-8: 4rem;     /* 64px */
+  --spacing-10: 5rem;    /* 80px */
+  --spacing-12: 6rem;    /* 96px */
 
-   /* -----------------------------------------------------------------------
+  /* -----------------------------------------------------------------------
      Responsive Breakpoints
      ----------------------------------------------------------------------- */
 
-   --breakpoint-mobile: 768px;
-   --breakpoint-tablet: 1024px;
-   --breakpoint-desktop: 1280px;
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1024px;
+  --breakpoint-desktop: 1280px;
 
-   /* -----------------------------------------------------------------------
+  /* -----------------------------------------------------------------------
      Interactive States
      ----------------------------------------------------------------------- */
 
-   /* Focus Indicators (WCAG 2.1 AA) */
-   --focus-outline-color: var(--color-accent-primary);
-   --focus-outline-width: 2px;
-   --focus-outline-offset: 2px;
+  /* Focus Indicators (WCAG 2.1 AA) */
+  --focus-outline-width: 2px;
+  --focus-outline-offset: 2px;
 
-   /* Touch Targets */
-   --touch-target-min-size: 44px;
+  --touch-target-min-size: 44px; /* Minimum touch target size */
 
-   /* Shadows */
-   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-   --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.4);
-   --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.5);
-   --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.6);
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.6);
 
-   /* Transitions */
-   --duration-fast: 150ms;
-   --duration-normal: 300ms;
-   --duration-slow: 500ms;
-   --easing-ease: ease;
-   --easing-ease-in: ease-in;
-   --easing-ease-out: ease-out;
-   --easing-ease-in-out: ease-in-out;
+  /* Transitions */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --easing-ease: ease;
+  --easing-ease-in: ease-in;
+  --easing-ease-out: ease-out;
+  --easing-ease-in-out: ease-in-out;
 
-   /* Border Radius */
-   --radius-sm: 4px;
-   --radius-md: 8px;
-   --radius-lg: 12px;
-   --radius-xl: 16px;
-   --radius-full: 9999px;
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
 }

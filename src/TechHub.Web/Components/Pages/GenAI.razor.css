@@ -86,11 +86,11 @@
 }
 
 .genai-more-info a {
-    color: var(--color-text-link);
+    color: var(--color-purple-medium);
     text-decoration: none;
 }
 
 .genai-more-info a:hover {
-    color: var(--color-text-link-hover);
+    color: var(--color-purple-bright);
     text-decoration: underline;
 }

@@ -15,7 +15,7 @@
 .sidebar-section.article-tags .sidebar-tag {
     display: inline-block;
     padding: var(--spacing-1) var(--spacing-2);
-    background: var(--color-card-bg);
+    background: var(--color-bg-default);
     border: 1px solid var(--color-border-default);
     border-radius: var(--radius-sm);
     font-size: var(--font-size-xs);
@@ -60,8 +60,8 @@
 }
 
 .nav-button.primary:hover {
-    background: var(--color-purple-vibrant);
-    border-color: var(--color-purple-vibrant);
+    background: var(--color-purple-bright);
+    border-color: var(--color-purple-bright);
     box-shadow: var(--shadow-md);
 }
 
@@ -72,7 +72,7 @@
 }
 
 .nav-button.secondary:hover {
-    background: var(--color-bg-subtle);
+    background: var(--color-bg-default);
     border-color: var(--color-purple-bright);
     color: var(--color-purple-bright);
 }
@@ -85,8 +85,8 @@
 }
 
 .error {
-    background: var(--color-bg-error);
-    border: 1px solid var(--color-border-error);
+    background: var(--color-red-bg);
+    border: 1px solid var(--color-red);
     border-radius: var(--radius-md);
     margin: var(--spacing-4);
 }
@@ -94,7 +94,7 @@
 .error button {
     margin-top: var(--spacing-3);
     padding: var(--spacing-2) var(--spacing-4);
-    background: var(--color-accent-primary);
+    background: var(--color-purple-dark);
     color: var(--color-text-on-emphasis);
     border: none;
     border-radius: var(--radius-md);

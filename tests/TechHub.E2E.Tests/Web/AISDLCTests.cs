@@ -11,7 +11,7 @@ namespace TechHub.E2E.Tests.Web;
 [Collection("Custom Pages TOC Tests")]
 public class AISDLCTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
 {
-    private const string PageUrl = "/ai-powered-sdlc";
+    private const string PageUrl = "/ai/sdlc";
     private IBrowserContext? _context;
     private IPage? _page;
     private IPage Page => _page ?? throw new InvalidOperationException("Page not initialized");
@@ -36,18 +36,28 @@ public class AISDLCTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
     }
 
     [Fact]
-    public async Task AISDLC_ShouldRender_WithoutToc_WhenNoHeadings()
+    public async Task AISDLC_ShouldLoad_Successfully()
+    {
+        // Act
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Check page title attribute contains expected text
+        await Assertions.Expect(Page).ToHaveTitleAsync(new System.Text.RegularExpressions.Regex("AI SDLC"));
+    }
+
+    [Fact]
+    public async Task AISDLC_ShouldRender_WithToc_ForPhaseSections()
     {
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Assert - No sidebar TOC should exist for pages without headings
+        // Assert - Sidebar TOC should exist for this page with headings
         var toc = Page.Locator(".sidebar-toc");
         var tocExists = await toc.CountAsync();
-        tocExists.Should().Be(0, "Expected no TOC for custom page without headings");
+        tocExists.Should().BeGreaterThan(0, "Expected TOC for page with SDLC phase headings");
 
-        // Content should still render
-        var contentArea = Page.Locator(".custom-page-content, .page-content, main");
-        await contentArea.AssertElementVisibleAsync();
+        // Content should render - use main element specifically to avoid strict mode violation
+        var mainContent = Page.Locator("main");
+        await Assertions.Expect(mainContent).ToBeVisibleAsync(new() { Timeout = 5000 });
     }
 }

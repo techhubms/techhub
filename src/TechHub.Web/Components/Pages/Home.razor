@@ -10,6 +10,8 @@
     <link rel="alternate" type="application/rss+xml" title="Tech Hub - All Content - RSS Feed" href="/all/feed.xml" />
 </HeadContent>
 
+<SkipLink />
+
 <Header>
     <SectionBanner Title="Tech Hub"
         Description="Your source for Microsoft technology news, tutorials, and community content" />
@@ -66,7 +68,7 @@
             NavigationMode="TagCloudNavigationMode.Navigate" NavigationBaseUrl="/all" />
     </aside>
 
-    <section class="home-main-content">
+    <section id="skiptohere" tabindex="-1" class="home-main-content">
         @if (sections != null && sections.Any())
         {
             <SectionCardsGrid Sections="@sections" />

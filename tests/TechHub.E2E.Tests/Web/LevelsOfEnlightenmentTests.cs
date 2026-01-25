@@ -7,7 +7,10 @@ namespace TechHub.E2E.Tests.Web;
 
 /// <summary>
 /// E2E tests for GitHub Copilot Levels of Enlightenment custom page.
-/// Verifies level progression display, table of contents, and accessibility.
+/// Verifies level progression display and page-specific features.
+/// 
+/// Common component tests (TOC, keyboard nav) are in:
+/// - SidebarTocTests.cs: Table of contents behavior
 /// </summary>
 [Collection("Custom Pages TOC Tests")]
 public class LevelsOfEnlightenmentTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
@@ -37,125 +40,13 @@ public class LevelsOfEnlightenmentTests(PlaywrightCollectionFixture fixture) : I
     }
 
     [Fact]
-    public async Task LevelsOfEnlightenment_ShouldRender_WithSidebarToc()
+    public async Task LevelsOfEnlightenment_ShouldLoad_Successfully()
     {
-        // Arrange
+        // Act
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Assert - Check page title (includes "GitHub Copilot:" prefix)
-        await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "GitHub Copilot: Levels of Enlightenment", level: 1);
-
-        // Check sidebar TOC exists
-        var toc = Page.Locator(".sidebar-toc");
-        await toc.AssertElementVisibleAsync();
-
-        // Should have TOC links
-        var tocLinks = toc.Locator("a");
-        var linkCount = await tocLinks.CountAsync();
-        linkCount.Should().BeGreaterThan(0, "Expected TOC to have navigation links");
-    }
-
-    [Fact]
-    public async Task LevelsOfEnlightenment_TocLinks_ShouldScrollToLevels()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Get all TOC links
-        var tocLinks = Page.Locator(".sidebar-toc a");
-        var linkCount = await tocLinks.CountAsync();
-
-        if (linkCount == 0)
-        {
-            Assert.Fail("No TOC links found on levels page");
-        }
-
-        // Act - Click first TOC link (should be "Overview" or first level)
-        var firstLink = tocLinks.First;
-        var linkText = await firstLink.TextContentAsync();
-        await firstLink.ClickAndWaitForScrollAsync();
-
-        // Assert - URL should have hash
-        var url = Page.Url;
-        url.Should().Contain("#", $"Expected URL to contain anchor after clicking TOC link '{linkText}'");
-
-        // Assert - Clicked link should have active class
-        var activeLinks = await Page.Locator(".sidebar-toc a.active").CountAsync();
-        activeLinks.Should().BeGreaterThan(0, "Expected at least one TOC link to be active");
-    }
-
-    [Fact]
-    public async Task LevelsOfEnlightenment_LastSection_ShouldScroll_ToDetectionPoint()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Get last heading with ID
-        var headings = Page.Locator("h2[id], h3[id]");
-        var headingCount = await headings.CountAsync();
-
-        if (headingCount == 0)
-        {
-            Assert.Fail("No headings with IDs found on page");
-        }
-
-        var lastHeading = headings.Last;
-        var lastHeadingId = await lastHeading.GetAttributeAsync("id");
-
-        // Act - Scroll to last heading
-        await Page.EvaluateAndWaitForScrollAsync($"document.getElementById('{lastHeadingId}').scrollIntoView()");
-
-        // Scroll down more to trigger detection (50vh spacer should allow this)
-        await Page.EvaluateAndWaitForScrollAsync("window.scrollBy(0, 500)");
-
-        // Assert - Last heading's TOC link should be active
-        var expectedActiveLink = Page.Locator($".sidebar-toc a[href$='#{lastHeadingId}']");
-
-        // Use Playwright's auto-waiting expect assertion
-        await Assertions.Expect(expectedActiveLink).ToHaveClassAsync(new System.Text.RegularExpressions.Regex(".*active.*"),
-            new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
-    }
-
-    [Fact]
-    public async Task LevelsOfEnlightenment_Scrolling_ShouldUpdateActiveTocLink()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Get all TOC links
-        var tocLinks = Page.Locator(".sidebar-toc a");
-        var linkCount = await tocLinks.CountAsync();
-
-        if (linkCount < 2)
-        {
-            // Skip if not enough TOC links
-            return;
-        }
-
-        // Act - Click second TOC link
-        var secondLink = tocLinks.Nth(1);
-        var linkText = await secondLink.TextContentAsync();
-        await secondLink.ClickAndWaitForScrollAsync();
-
-        // Assert - URL should have hash
-        var url = Page.Url;
-        url.Should().Contain("#", $"Expected URL to contain anchor after clicking TOC link '{linkText}'");
-
-        // Assert - Clicked link should have active class
-        // Use Playwright's auto-waiting expect assertion
-        await Assertions.Expect(secondLink).ToHaveClassAsync(new System.Text.RegularExpressions.Regex(".*active.*"),
-            new() { Timeout = BlazorHelpers.DefaultAssertionTimeout });
-    }
-
-    [Fact]
-    public async Task LevelsOfEnlightenment_Overview_ShouldBe_Highlighted()
-    {
-        // Arrange & Act
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Assert - At least one TOC link should exist
-        var tocLinks = await Page.Locator(".sidebar-toc a").CountAsync();
-        tocLinks.Should().BeGreaterThan(0, "Expected TOC to have navigation links");
+        // Assert - Check page title attribute contains expected text
+        await Assertions.Expect(Page).ToHaveTitleAsync(new Regex("Levels of Enlightenment"));
     }
 
     [Fact]
@@ -195,7 +86,7 @@ public class LevelsOfEnlightenmentTests(PlaywrightCollectionFixture fixture) : I
         // Verify first video iframe has YouTube source
         var firstVideo = videoIframes.First;
         var src = await firstVideo.GetAttributeAsync("src");
-        src.Should().Contain("youtube.com/embed", "Expected video iframe to have YouTube embed URL");
+        src.Should().Match(s => s.Contains("youtube.com/embed") || s.Contains("youtube-nocookie.com/embed"), "Expected video iframe to have YouTube embed URL (standard or privacy-enhanced)");
     }
 
     [Fact]
@@ -238,22 +129,4 @@ public class LevelsOfEnlightenmentTests(PlaywrightCollectionFixture fixture) : I
         target.Should().Be("_blank", "Expected playlist link to open in new tab");
     }
 
-    [Fact]
-    public async Task LevelsOfEnlightenment_KeyboardNavigation_ShouldWork()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Get first TOC link
-        var firstTocLink = Page.Locator(".sidebar-toc a").First;
-
-        // Act - Focus on first TOC link and press Enter
-        await firstTocLink.FocusAsync();
-        await Page.Keyboard.PressAsync("Enter");
-        await Page.WaitForScrollEndAsync(300);
-
-        // Assert - URL should have hash (navigation worked)
-        var url = Page.Url;
-        url.Should().Contain("#", "Expected URL to contain anchor after pressing Enter on TOC link");
-    }
 }

@@ -7,7 +7,7 @@
 /* Site Footer - pushed to bottom when content is short */
 .site-footer {
   margin-top: auto;
-  background: var(--color-bg-subtle);
+  background: var(--color-bg-default);
   border-top: 1px solid var(--color-border-default);
   margin-top: var(--spacing-8);
   color: var(--color-text-secondary);
