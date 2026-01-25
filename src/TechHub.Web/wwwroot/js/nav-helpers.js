@@ -64,12 +64,25 @@
         return container;
     }
 
-    // Scroll to top smoothly
+    // Scroll to top smoothly and reset focus
     function scrollToTop() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
+
+        // Reset focus to body after scroll completes
+        // This ensures the next Tab press will naturally focus the skip-link
+        // with proper :focus-visible styling (programmatic focus doesn't trigger focus-visible)
+        setTimeout(() => {
+            document.body.focus();
+            // If body isn't focusable, make it temporarily focusable
+            if (document.activeElement !== document.body) {
+                document.body.setAttribute('tabindex', '-1');
+                document.body.focus();
+                document.body.removeAttribute('tabindex');
+            }
+        }, 500); // Wait for smooth scroll to complete
     }
 
     /**

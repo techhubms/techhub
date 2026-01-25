@@ -22,10 +22,14 @@
 .toc-list {
     list-style: none;
     padding: var(--spacing-3);
+    /* Extra padding on right to prevent focus outline clipping */
+    padding-right: calc(var(--spacing-3) + 4px);
     margin: 0;
     background: var(--color-bg-default);
     border: 1px solid var(--color-border-default);
     border-radius: var(--radius-md);
+    /* Ensure focus outlines aren't clipped */
+    overflow: visible;
 }
 
 /* All elements below are created via RenderTreeBuilder - use ::deep */
@@ -34,20 +38,24 @@
     padding: 0;
     margin: 0;
     margin-left: var(--spacing-3);
-    overflow: hidden;
+    /* Use clip-path instead of overflow:hidden to hide collapsed content
+       while allowing focus outlines to be visible when expanded */
     /* No transition - instant collapse/expand */
-    /* Default collapsed state */
+    /* Default collapsed state - visibility:hidden removes from tab order */
     max-height: 0;
+    visibility: hidden;
 }
 
 /* If there's only one h2 heading, auto-expand it by default */
 .toc-list:has(.toc-depth-0:only-child) ::deep .toc-depth-0 > .toc-sublist {
     max-height: 2000px;
+    visibility: visible;
 }
 
 /* Expanded state only when explicitly set by JavaScript */
 ::deep .toc-item.expanded > .toc-sublist {
     max-height: 2000px;
+    visibility: visible;
 }
 
 ::deep .toc-item {

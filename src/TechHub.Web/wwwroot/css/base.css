@@ -108,28 +108,44 @@ a:hover {
 }
 
 /* Focus States (WCAG 2.1 AA) - Accessibility Requirement */
+/* Ensure focused elements scroll above sticky headers */
+/* This applies to all focusable elements (links, buttons, inputs, etc.) */
+a, button, input, select, textarea, [tabindex]:not([tabindex="-1"]) {
+  scroll-margin-top: var(--sticky-header-height);
+}
+
 /* Remove outline for mouse users, keep for keyboard users */
 :focus:not(:focus-visible) {
-  outline: none;
+  outline: none !important;
 }
 
 /* Visible focus indicator for keyboard navigation */
+/* Using !important to ensure these critical accessibility styles override
+   component-scoped CSS which may have higher specificity */
+/* Note: We explicitly set transition: none to prevent outline "grow" effect */
 :focus-visible {
-  outline: 3px solid var(--color-purple-bright);
-  outline-offset: 2px;
+  outline: 3px solid var(--color-purple-bright) !important;
+  outline-offset: 2px !important;
+  transition: none !important;
+  /* Ensure focus outline is always rounded */
+  border-radius: var(--radius-sm);
 }
 
 /* Links use visible purple focus */
 a:focus-visible {
-  outline: 3px solid var(--color-purple-bright);
-  outline-offset: 2px;
+  outline: 3px solid var(--color-purple-bright) !important;
+  outline-offset: 2px !important;
+  transition: none !important;
+  border-radius: var(--radius-sm);
 }
 
 /* Buttons use visible purple focus with offset */
 button:focus-visible,
 .button:focus-visible {
-  outline: 3px solid var(--color-purple-bright);
-  outline-offset: 2px;
+  outline: 3px solid var(--color-purple-bright) !important;
+  outline-offset: 2px !important;
+  transition: none !important;
+  border-radius: var(--radius-md);
 }
 
 /* Skip to Main Content Link */

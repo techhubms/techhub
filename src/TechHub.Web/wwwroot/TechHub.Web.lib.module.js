@@ -26,6 +26,45 @@ export function afterWebStarted(blazor) {
     // Mark that Blazor Web is ready (initial SSR rendering complete)
     window.__blazorWebReady = true;
     console.debug('[TechHub] Blazor Web started');
+
+    // Set up focus scroll compensation for sticky headers
+    // When a focusable element receives focus and is behind a sticky header,
+    // scroll it into view with proper offset
+    setupFocusScrollCompensation();
+
+    // Set up focus management for enhanced navigation (accessibility)
+    // When Blazor navigates via enhanced navigation (SPA-style), focus needs to reset
+    // to the top of the page so keyboard users can navigate from the beginning.
+    // This is a WCAG 2.1 requirement for consistent keyboard navigation after page changes.
+    blazor.addEventListener('enhancedload', () => {
+        // Reset focus to top of page for keyboard navigation
+        // Use requestAnimationFrame to ensure DOM is fully updated
+        requestAnimationFrame(() => {
+            // Scroll to top of page
+            window.scrollTo(0, 0);
+
+            // To reset tab order, we need to move browser's internal focus tracking
+            // to the top of the page. We do this by:
+            // 1. Creating a temporary focusable element at the very top
+            // 2. Focusing it (which resets browser's tab position)
+            // 3. Removing focus and the element
+            // This ensures next Tab press focuses the first element (skip-link)
+
+            const tempFocus = document.createElement('span');
+            tempFocus.setAttribute('tabindex', '-1');
+            tempFocus.style.cssText = 'position:absolute;left:-9999px;top:0;';
+            document.body.insertBefore(tempFocus, document.body.firstChild);
+
+            // Focus without triggering scroll
+            tempFocus.focus({ preventScroll: true });
+
+            // Remove the element after a frame (focus position is now reset)
+            requestAnimationFrame(() => {
+                tempFocus.remove();
+                console.debug('[TechHub] Focus reset after enhanced navigation');
+            });
+        });
+    });
 }
 
 /**
@@ -63,3 +102,39 @@ export function afterWebAssemblyStarted(blazor) {
 window.__isBlazorInteractiveReady = function () {
     return window.__blazorServerReady === true || window.__blazorWasmReady === true;
 };
+
+/**
+ * Sets up focus scroll compensation for sticky headers.
+ * When tabbing backwards (Shift+Tab) and an element receives focus behind
+ * a sticky header, this scrolls the element into view.
+ * 
+ * CSS scroll-margin-top handles most cases, but this provides a JavaScript
+ * backup for edge cases and older browsers.
+ */
+function setupFocusScrollCompensation() {
+    // Combined height of sticky elements (main-nav + sub-nav + padding)
+    // This should match --sticky-header-height in design-tokens.css
+    const STICKY_HEADER_HEIGHT = 146; // 76px + 54px + 16px padding
+
+    document.addEventListener('focusin', (event) => {
+        const element = event.target;
+        if (!element) return;
+
+        // Get the element's position relative to the viewport
+        const rect = element.getBoundingClientRect();
+
+        // Check if the element is behind the sticky header
+        if (rect.top < STICKY_HEADER_HEIGHT) {
+            // Calculate how much we need to scroll up
+            const scrollOffset = STICKY_HEADER_HEIGHT - rect.top + 16; // Extra 16px padding
+
+            // Scroll the window up smoothly
+            window.scrollBy({
+                top: -scrollOffset,
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    console.debug('[TechHub] Focus scroll compensation enabled');
+}

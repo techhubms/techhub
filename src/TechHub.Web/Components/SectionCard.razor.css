@@ -12,7 +12,7 @@
   border: 1px solid var(--color-border-default);
   transition: all var(--duration-normal) var(--easing-ease-out);
   box-shadow: var(--shadow-md);
-  overflow: hidden;
+  /* Note: No overflow:hidden - allows focus outlines to be visible */
 }
 
 .section-card-container:hover {
@@ -34,6 +34,8 @@
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  /* Rounded top corners to match container */
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   /* Background images are set via CSS classes (e.g., .section-bg-ai) */
   /* Thumbnails used for cards (400x140px) for performance */
   background-size: cover;
@@ -165,15 +167,18 @@
 }
 
 /* Custom page badge styling - distinct from regular collection badges */
+/* Darker background with visible purple border to differentiate from auto-generated collections */
 .custom-page-badge {
-  background: var(--color-purple-bright);
-  border-color: var(--color-purple-medium);
+  background: rgba(127, 86, 217, 0.08); /* Very dark purple, barely visible background */
+  border-color: var(--color-purple-dark);
+  color: var(--color-text-on-emphasis);
   font-style: italic;
 }
 
 .custom-page-badge:hover {
-  background: var(--color-purple-medium);
-  border-color: var(--color-purple-bright);
+  background: rgba(127, 86, 217, 0.2);
+  border-color: var(--color-purple-medium);
+  color: var(--color-text-on-emphasis);
 }
 
 /* Grey badge for +X more indicator on section cards */

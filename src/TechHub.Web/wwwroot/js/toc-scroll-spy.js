@@ -27,6 +27,7 @@ export class TocScrollSpy {
         this.currentActiveH2Id = null; // Track active h2 for collapse/expand
         this.boundHandleScroll = this.handleScroll.bind(this);
         this.boundHandleResize = this.handleResize.bind(this);
+        this.boundHandleTocFocus = this.handleTocFocus.bind(this);
         this.ticking = false; // RAF throttle flag
         this.debugOverlay = null; // Visual debug line
         this.debugEnabled = false;
@@ -48,13 +49,14 @@ export class TocScrollSpy {
         if (this.debugEnabled) {
             if (!this.debugOverlay) {
                 this.debugOverlay = document.createElement('div');
+                // Use maximum 32-bit signed integer for z-index to ensure overlay is always on top
                 this.debugOverlay.style.cssText = `
                     position: fixed;
                     left: 0;
                     right: 0;
                     height: 3px;
                     background: rgba(255, 0, 0, 0.8);
-                    z-index: 99999;
+                    z-index: 2147483647;
                     pointer-events: none;
                     box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
                 `;
@@ -145,6 +147,9 @@ export class TocScrollSpy {
 
         // Recalculate detection line on window resize
         window.addEventListener('resize', this.boundHandleResize, { passive: true });
+
+        // Listen for focus on TOC links to expand sections during keyboard navigation
+        this.tocElement.addEventListener('focusin', this.boundHandleTocFocus);
     }
 
     /**
@@ -171,6 +176,28 @@ export class TocScrollSpy {
         if (this.debugOverlay) {
             this.debugOverlay.style.top = `${this.cachedDetectionLine}px`;
         }
+    }
+
+    /**
+     * Handle focus events on TOC links
+     * Expands the appropriate H2 section when a TOC link receives focus (keyboard navigation)
+     */
+    handleTocFocus(event) {
+        const link = event.target.closest('.toc-link');
+        if (!link) return;
+
+        // Get the heading ID from the link's href
+        const href = link.getAttribute('href');
+        if (!href) return;
+
+        const headingId = href.split('#').pop();
+        if (!headingId) return;
+
+        // Check if this heading is in our tracked headings
+        if (!this.tocLinks.has(headingId)) return;
+
+        // Update collapse state to expand the section containing this link
+        this.updateCollapseState(headingId);
     }
 
     /**
@@ -343,6 +370,7 @@ export class TocScrollSpy {
         this.cleanupInitialScrollHandlers();
         window.removeEventListener('scroll', this.boundHandleScroll);
         window.removeEventListener('resize', this.boundHandleResize);
+        this.tocElement.removeEventListener('focusin', this.boundHandleTocFocus);
 
         this.initialized = false;
 

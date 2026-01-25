@@ -63,7 +63,8 @@
   text-decoration: none;
   position: relative;
   border-bottom: 3px solid transparent;
-  border-radius: 0;
+  /* Rounded corners for focus outline */
+  border-radius: var(--radius-md);
 }
 
 .nav-link:hover {
@@ -77,7 +78,6 @@
   border-bottom-color: var(--color-purple-bright);
   color: var(--color-purple-bright);
   background: transparent;
-  border-radius: 0;
 }
 
 .about-link {

@@ -50,57 +50,65 @@ public class TabHighlightingTests(PlaywrightCollectionFixture fixture) : IAsyncL
         // Arrange
         await Page.GotoRelativeAsync("/ai/genai-basics");
 
-        // Act - Use keyboard navigation to focus a link in main content
-        // Tab through: skip-link -> header links -> until we get to main content link
-        // Use direct keyboard navigation to trigger :focus-visible
-        var mainLink = Page.Locator("main a").First;
-        await mainLink.ScrollIntoViewIfNeededAsync();
+        // Act - Use pure keyboard navigation to trigger :focus-visible
+        // Tab through the page until we find a link in main content
+        ILocator? focusedElement = null;
+        var maxTabs = 50; // Safety limit
 
-        // Click near the element first to move focus into the page, then tab to it
-        // This simulates real keyboard navigation which triggers :focus-visible
-        await Page.Keyboard.PressAsync("Tab"); // Focus skip-link
+        for (int i = 0; i < maxTabs; i++)
+        {
+            await Page.Keyboard.PressAsync("Tab");
 
-        // Navigate until we hit a link in main - use direct focus with keyboard simulation
-        await mainLink.EvaluateAsync("el => el.focus()");
-        await Page.Keyboard.PressAsync("Tab");
-        await Page.Keyboard.PressAsync("Shift+Tab"); // This triggers :focus-visible
+            var focused = Page.Locator(":focus");
+            var tagName = await focused.EvaluateAsync<string>("el => el.tagName");
+            var isInMain = await focused.EvaluateAsync<bool>("el => el.closest('main') !== null");
 
-        var focusedElement = Page.Locator(":focus");
+            if (tagName == "A" && isInMain)
+            {
+                focusedElement = focused;
+                break;
+            }
+        }
 
-        // Assert - Link should have visible outline (when accessed via keyboard)
-        var outlineStyle = await focusedElement.EvaluateAsync<string>("el => window.getComputedStyle(el).outline");
-        outlineStyle.Should().NotBeNullOrEmpty("focused link should have outline style");
+        focusedElement.Should().NotBeNull("should find a link in main content via keyboard navigation");
 
-        // Check outline width is at least 2px
-        var outlineWidth = await focusedElement.EvaluateAsync<string>("el => window.getComputedStyle(el).outlineWidth");
+        // Assert - Link should have visible outline
+        var outlineWidth = await focusedElement!.EvaluateAsync<string>("el => window.getComputedStyle(el).outlineWidth");
         outlineWidth.Should().NotBe("0px", "focused link should have visible outline width when accessed via keyboard");
     }
 
     [Fact]
     public async Task FocusedButtons_ShouldShow_VisibleOutline()
     {
-        // Arrange
-        await Page.GotoRelativeAsync("/ai/genai-basics");
+        // Arrange - Use section index page which has tag cloud buttons in sidebar
+        await Page.GotoRelativeAsync("/ai");
 
-        // Wait for Blazor interactivity
+        // Wait for Blazor interactivity (tag cloud buttons are interactive)
         await Page.WaitForBlazorReadyAsync();
 
-        // Act - Use keyboard navigation to focus a button
-        // Tab+Shift pattern triggers :focus-visible in browsers
-        var firstButton = Page.Locator("button").First;
-        await firstButton.ScrollIntoViewIfNeededAsync();
-        await firstButton.EvaluateAsync("el => el.focus()");
-        await Page.Keyboard.PressAsync("Tab");
-        await Page.Keyboard.PressAsync("Shift+Tab"); // This triggers :focus-visible
+        // Act - Use pure keyboard navigation to trigger :focus-visible
+        // Tab through the page until we find a button
+        ILocator? focusedElement = null;
+        var maxTabs = 100; // Need more tabs to reach sidebar buttons
 
-        var focusedElement = Page.Locator(":focus");
+        for (int i = 0; i < maxTabs; i++)
+        {
+            await Page.Keyboard.PressAsync("Tab");
 
-        // Assert - Button should have visible outline (when accessed via keyboard)
-        var outlineStyle = await focusedElement.EvaluateAsync<string>("el => window.getComputedStyle(el).outline");
-        outlineStyle.Should().NotBeNullOrEmpty("focused button should have outline style");
+            var focused = Page.Locator(":focus");
+            var tagName = await focused.EvaluateAsync<string>("el => el.tagName");
 
-        // Check outline width is at least 2px
-        var outlineWidth = await focusedElement.EvaluateAsync<string>("el => window.getComputedStyle(el).outlineWidth");
+            if (tagName == "BUTTON")
+            {
+                focusedElement = focused;
+                break;
+            }
+        }
+
+        focusedElement.Should().NotBeNull("should find a button via keyboard navigation");
+
+        // Assert - Button should have visible outline
+        var outlineWidth = await focusedElement!.EvaluateAsync<string>("el => window.getComputedStyle(el).outlineWidth");
         outlineWidth.Should().NotBe("0px", "focused button should have visible outline width when accessed via keyboard");
     }
 
@@ -115,21 +123,29 @@ public class TabHighlightingTests(PlaywrightCollectionFixture fixture) : IAsyncL
         var tagButton = Page.Locator(".tag-cloud-item").First;
         await Assertions.Expect(tagButton).ToBeVisibleAsync(new() { Timeout = 5000 });
 
-        // Act - Use keyboard navigation to focus the tag button
-        // Tab+Shift pattern triggers :focus-visible in browsers
-        await tagButton.ScrollIntoViewIfNeededAsync();
-        await tagButton.EvaluateAsync("el => el.focus()");
-        await Page.Keyboard.PressAsync("Tab");
-        await Page.Keyboard.PressAsync("Shift+Tab"); // This triggers :focus-visible
+        // Act - Use pure keyboard navigation to trigger :focus-visible
+        // Tab through the page until we find a tag cloud item
+        ILocator? focusedElement = null;
+        var maxTabs = 100; // Safety limit - tag buttons are further down
 
-        var focusedElement = Page.Locator(":focus");
+        for (int i = 0; i < maxTabs; i++)
+        {
+            await Page.Keyboard.PressAsync("Tab");
 
-        // Assert - Tag button should have visible outline (when accessed via keyboard)
-        var outlineStyle = await focusedElement.EvaluateAsync<string>("el => window.getComputedStyle(el).outline");
-        outlineStyle.Should().NotBeNullOrEmpty("focused tag button should have outline style");
+            var focused = Page.Locator(":focus");
+            var hasClass = await focused.EvaluateAsync<bool>("el => el.classList.contains('tag-cloud-item')");
 
-        // Check outline width is at least 2px
-        var outlineWidth = await focusedElement.EvaluateAsync<string>("el => window.getComputedStyle(el).outlineWidth");
+            if (hasClass)
+            {
+                focusedElement = focused;
+                break;
+            }
+        }
+
+        focusedElement.Should().NotBeNull("should find a tag-cloud-item via keyboard navigation");
+
+        // Assert - Tag button should have visible outline
+        var outlineWidth = await focusedElement!.EvaluateAsync<string>("el => window.getComputedStyle(el).outlineWidth");
         outlineWidth.Should().NotBe("0px", "focused tag button should have visible outline width when accessed via keyboard");
     }
 
