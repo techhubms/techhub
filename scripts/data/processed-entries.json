@@ -24172,5 +24172,11 @@
     "timestamp": "2026-01-25 16:03:41 +00:00",
     "reason": "Succesfully added: The categories assigned are 'GitHub Copilot', 'AI', and 'DevOps'. 'GitHub Copilot' is included because the content is centered around the Copilot CLI, which is a developer tool (GitHub Copilot rule 1). 'AI' is also required whenever 'GitHub Copilot' is assigned (GitHub Copilot rule 2). 'DevOps' is included due to automation of workflows, use of CLI tools, running tests, creating pull requests, and cloud agent operations (DevOps rules 2, 5, and 6). There is no generic exclusion triggered, as the content is technical, in English, and developer-focused.",
     "canonical_url": "https://www.youtube.com/watch?v=P2qK2BCdi-w"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'GitHub Copilot' because the entire video is about how to use Copilot with OpenCode, including support for multiple Copilot tiers (GitHub Copilot category rule 1). Assigned 'AI' because GitHub Copilot is discussed as an AI-powered development tool (AI rule 2). No other categories qualify, as the content does not cover coding, DevOps, Azure, ML, or Security topics.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/ljNeme8s86s",
+    "timestamp": "2026-01-25 17:03:53 +00:00"
   }
 ]
