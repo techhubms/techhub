@@ -11511,5 +11511,11 @@
     "canonical_url": "https://www.youtube.com/shorts/sC8lFHqEp94",
     "collection": "videos",
     "reason": "No categories found: All categories are excluded according to generic exclusion rules. The content is purely promotional, inviting viewers to attend Microsoft events without providing any substantive technical details, implementation steps, or developer-focused topics. No technical information is present about Microsoft technologies, tools, or practices, and thus the content falls under the 'Sales Pitches' and 'Promotional Content without Educational Value' exclusion."
+  },
+  {
+    "timestamp": "2026-01-24 18:04:22 +00:00",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/km3OuwyTz3c",
+    "reason": "No categories found: Excluded all categories because, while this content discusses an AI agent called Goose and its use in detecting student frustration, there is no substantial focus on Microsoft technologies as required by the inclusion rules. The project highlighted is not described as being built with Microsoft AI services, Azure, .NET, or any other Microsoft platform—the mention of AI is generic and not specifically tied to Microsoft's stack. The video's source is GitHub, but it does not detail GitHub Copilot or any other Microsoft-integrated developer tool. As per the multi-platform content threshold and the AI category rules, only AI content with a specific Microsoft focus qualifies. Therefore, no categories are assigned."
   }
 ]

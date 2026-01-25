@@ -24166,5 +24166,11 @@
     "reason": "Succesfully added: Included the 'AI' category because the episode discusses AI agent technology, practical AI use cases, and the open source Goose project (AI rule 1, 3, 4). 'Coding' is included because the episode addresses development, codebase trust, and developer tooling (Coding rule 4, 5). 'DevOps' is included because the conversation covers issue triage, automation, and team collaboration using AI agents, all of which are part of modern DevOps (DevOps rule 3, 6). The majority of the discussion centers on AI/automation technologies used by developers and technical practitioners and does not fall under any generic exclusion rule.",
     "timestamp": "2026-01-24 16:03:55 +00:00",
     "collection": "videos"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-01-25 16:03:41 +00:00",
+    "reason": "Succesfully added: The categories assigned are 'GitHub Copilot', 'AI', and 'DevOps'. 'GitHub Copilot' is included because the content is centered around the Copilot CLI, which is a developer tool (GitHub Copilot rule 1). 'AI' is also required whenever 'GitHub Copilot' is assigned (GitHub Copilot rule 2). 'DevOps' is included due to automation of workflows, use of CLI tools, running tests, creating pull requests, and cloud agent operations (DevOps rules 2, 5, and 6). There is no generic exclusion triggered, as the content is technical, in English, and developer-focused.",
+    "canonical_url": "https://www.youtube.com/watch?v=P2qK2BCdi-w"
   }
 ]
