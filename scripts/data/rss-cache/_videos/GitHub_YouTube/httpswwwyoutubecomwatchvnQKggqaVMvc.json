@@ -1,0 +1,14 @@
+{
+  "FeedName": "GitHub YouTube",
+  "Link": "https://www.youtube.com/watch?v=nQKggqaVMvc",
+  "Title": "GitHub Code & Community Live Stream: Arm Cloud Migration Agent",
+  "ProcessedDate": "2026-01-25 21:02:21",
+  "FeedLevelAuthor": "GitHub",
+  "EnhancedContent": null,
+  "OutputDir": "_videos",
+  "Tags": [],
+  "Description": "Arm built a custom agent for GitHub Copilot that helps you migrate workloads to Arm-based cloud infrastructure. In this stream, we dig into how it actually works.\n\nEric Sondhi (PM, Arm) and Alexis Abril (Sr. Partner Engineer, GitHub) join Andrea Griffiths to break down the new Cloud Migration Assistant Custom Agent and the Arm MCP Server that powers it. We'll cover what happens when you point this agent at a real codebase, how it identifies architecture-specific issues, and how to get your containers running on both x86 and Arm.",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Author": "GitHub",
+  "PubDate": "2026-01-25T20:21:35+00:00"
+}
