@@ -1,0 +1,181 @@
+/* ============================================================================
+   Global Button Styles
+   
+   Unified button system used across all pages and components.
+   Replaces component-specific button styles for consistency.
+   
+   Button variants:
+   - .btn - Primary button (purple background)
+   - .btn-secondary - Secondary button (default background with border)
+   - .btn-link - Link-styled button (minimal styling)
+   
+   All buttons follow design tokens and accessibility standards.
+   ============================================================================ */
+
+/* Base Button - Looks like active subnav button (purple background) */
+.btn,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: calc(var(--spacing-1) + var(--spacing-1) / 2) var(--spacing-3);
+  background: var(--color-purple-dark);
+  color: var(--color-text-on-emphasis) !important;
+  text-decoration: none !important;
+  border: 1px solid var(--color-purple-bright);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-tight);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-ease);
+  min-height: var(--touch-target-min-size);
+  text-align: center;
+}
+
+.btn:hover,
+.button:hover {
+  background: var(--color-purple-medium);
+  border-color: var(--color-purple-bright);
+  color: var(--color-text-on-emphasis) !important;
+  text-decoration: none !important;
+}
+
+.btn:active,
+.button:active {
+  background: var(--color-purple-dark);
+  border-color: var(--color-purple-bright);
+  color: var(--color-text-on-emphasis) !important;
+  text-decoration: none !important;
+}
+
+.btn:focus-visible,
+.button:focus-visible {
+  outline: 3px solid var(--color-purple-bright) !important;
+  outline-offset: 2px !important;
+  transition: none !important;
+  border-radius: var(--radius-md);
+  text-decoration: none !important;
+}
+
+/* Sub-navigation Button - Subtle minimal style for navigation */
+.btn-subnav {
+  display: inline-flex;
+  align-items: center;
+  padding: calc(var(--spacing-1) + var(--spacing-1) / 2) var(--spacing-3);
+  background: transparent;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-ease);
+}
+
+.btn-subnav:hover {
+  background: var(--color-bg-hover-subtle);
+  box-shadow: 0 0 0 1px var(--color-purple-bright) inset;
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.btn-subnav.active {
+  color: var(--color-text-on-emphasis);
+  background: var(--color-purple-dark);
+  border-color: var(--color-purple-bright);
+  text-decoration: none;
+}
+
+.btn-subnav.active:hover {
+  background: var(--color-purple-medium);
+  color: var(--color-text-on-emphasis);
+  text-decoration: none;
+}
+
+.btn-subnav:focus-visible {
+  outline: 3px solid var(--color-purple-bright) !important;
+  outline-offset: 2px !important;
+  transition: none !important;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+}
+
+/* Secondary Button - Default background with border */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--color-bg-default);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-tight);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-ease);
+  min-height: var(--touch-target-min-size);
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background: var(--color-bg-emphasis);
+  border-color: var(--color-purple-medium);
+}
+
+.btn-secondary:active {
+  background: var(--color-bg-elevated);
+  border-color: var(--color-purple-bright);
+}
+
+.btn-secondary:focus-visible {
+  outline: 3px solid var(--color-purple-bright) !important;
+  outline-offset: 2px !important;
+  transition: none !important;
+  border-radius: var(--radius-md);
+}
+
+/* Link Button - Minimal styling for link-like buttons */
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-1) var(--spacing-2);
+  background: transparent;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-ease);
+}
+
+.btn-link:hover {
+  color: var(--color-purple-bright);
+  background: var(--color-bg-emphasis);
+}
+
+.btn-link:focus-visible {
+  outline: 3px solid var(--color-purple-bright) !important;
+  outline-offset: 2px !important;
+  transition: none !important;
+  border-radius: var(--radius-sm);
+}
+
+/* Icons within buttons */
+.btn svg,
+.button svg,
+.btn-secondary svg,
+.btn-link svg {
+  flex-shrink: 0;
+}

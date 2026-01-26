@@ -1,21 +1,24 @@
 ---
 external_url: ''
-title: Explain Failed Action Jobs
+title: Data Excluded From Training by Default
 author: TBD
-date: 2026-08-29 09:39:31 +00:00
+date: 2026-01-01 00:00:00 +00:00
 ghes_support: false
+draft: true
+ghc_feature: true
 plans:
-- Free
+- Pro
+- Business
 tags: []
 section_names:
 - ai
 - github-copilot
 ---
-This content demonstrates GitHub Copilot's Explain Failed Action Jobs feature. Get help understanding and fixing failed GitHub Actions<!--excerpt_end-->
+This content demonstrates GitHub Copilot's Data Excluded From Training by Default feature. Your code stays private and won't train AI models<!--excerpt_end-->
 
 ## Overview
 
-Get help understanding and fixing failed GitHub Actions
+Your code stays private and won't train AI models
 
 ## Key Features
 

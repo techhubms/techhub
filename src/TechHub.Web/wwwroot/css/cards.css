@@ -1,0 +1,297 @@
+/* ============================================================================
+   Card Components - Reusable Card Styles
+   
+   Global styles for card-based layouts used across multiple pages:
+   - Base card styling (background, borders, shadows, hover states)
+   - Card grids and layouts
+   - Card content structure (header, title, meta, description, footer)
+   - Badge and tag styles
+   
+   Used by: Home page (SectionCard), Collection pages (ContentItemCard), 
+            Features page, About page
+   ============================================================================ */
+
+/* =======================================================================
+   BASE CARD STYLES - Foundation for all card types
+   ======================================================================= */
+
+/* Standard card container - clickable link wrapper */
+.card {
+  background: var(--color-bg-default);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-3);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--duration-normal) var(--easing-ease-out),
+              border-color var(--duration-normal) var(--easing-ease-out);
+  border: 1px solid var(--color-border-default);
+  height: 100%;
+  min-height: 265px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-purple-medium);
+  text-decoration: none;
+}
+
+.card:focus,
+.card:active,
+.card:visited {
+  text-decoration: none;
+}
+
+/* Card without link (static display) */
+.card-static {
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-3);
+  transition: box-shadow var(--duration-normal) var(--easing-ease-out),
+              border-color var(--duration-normal) var(--easing-ease-out);
+  box-shadow: var(--shadow-md);
+  height: 100%;
+  min-height: 265px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-static:hover {
+  border-color: var(--color-purple-medium);
+  box-shadow: var(--shadow-lg);
+}
+
+/* =======================================================================
+   CARD GRIDS - Responsive grid layouts for cards
+   ======================================================================= */
+
+/* Standard card grid - auto-fill with minimum 300px cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-3);
+}
+
+/* Compact card grid - smaller cards for dense layouts */
+.cards-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-3);
+}
+
+/* =======================================================================
+   CARD STRUCTURE - Header, Body, Footer sections
+   ======================================================================= */
+
+/* Card header section (typically contains title) */
+.card-header {
+  margin-bottom: var(--spacing-1);
+}
+
+/* Card title/heading */
+.card-title {
+  margin: 0 0 var(--spacing-1) 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+/* Light up title when hovering anywhere on card */
+.card:hover .card-title,
+.card-static:hover .card-title {
+  color: var(--color-purple-bright);
+}
+
+/* Card metadata (dates, authors, source, etc.) */
+.card-meta {
+  display: flex;
+  gap: var(--spacing-3);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  flex-wrap: wrap;
+}
+
+/* Card description/excerpt text */
+.card-description {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-2);
+  flex: 1;
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+/* Light up description when hovering anywhere on card */
+.card:hover .card-description,
+.card-static:hover .card-description {
+  color: var(--color-text-primary);
+}
+
+/* Card footer section */
+.card-footer {
+  display: flex;
+  gap: var(--spacing-2);
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  margin-top: var(--spacing-2);
+}
+
+/* =======================================================================
+   CARD BADGES & TAGS - Status indicators, collections, tags
+   ======================================================================= */
+
+/* Badge/tag container - for both tags and status badges */
+.card-badges,
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+  margin-top: auto;
+  padding-top: var(--spacing-2);
+}
+
+/* Purple badge (collections, primary tags) - clickable */
+.badge-purple {
+  background: var(--color-purple-bg-badge);
+  color: var(--color-text-on-emphasis);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid transparent;
+  display: inline-block;
+  text-decoration: none;
+  transition: all var(--duration-fast) var(--easing-ease);
+  cursor: pointer;
+}
+
+.badge-purple:hover {
+  background: var(--color-purple-bg-badge-hover);
+  border-color: var(--color-purple-medium);
+  text-decoration: none;
+}
+
+/* Purple badge - non-clickable variant (decorative tags on cards) */
+.badge-purple-static {
+  background: var(--color-purple-bg-badge);
+  color: var(--color-text-on-emphasis);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Grey badge (overflow indicators, collection names on cards) */
+.badge-grey {
+  background: var(--color-bg-emphasis);
+  color: var(--color-text-tertiary);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--color-border-default);
+  cursor: default;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Custom page badge - darker with purple border */
+.badge-custom {
+  background: var(--color-purple-bg-dark);
+  border-color: var(--color-purple-dark);
+  color: var(--color-text-on-emphasis);
+  font-style: italic;
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid transparent;
+  display: inline-block;
+  text-decoration: none;
+  transition: all var(--duration-fast) var(--easing-ease);
+  cursor: pointer;
+}
+
+.badge-custom:hover {
+  background: var(--color-purple-bg-dark-hover);
+  border-color: var(--color-purple-medium);
+}
+
+/* Status badges for feature flags, warnings, etc. */
+.badge-success {
+  background: var(--color-green-light);
+  color: var(--color-bg-default);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-warning {
+  background: var(--color-amber);
+  color: var(--color-bg-default);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-info {
+  background: var(--color-purple-medium);
+  color: var(--color-text-on-emphasis);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* =======================================================================
+   RESPONSIVE BEHAVIOR
+   ======================================================================= */
+
+@media (max-width: 768px) {
+  .cards-grid,
+  .cards-grid-compact {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =======================================================================
+   PRINT STYLES
+   ======================================================================= */
+
+@media print {
+  .card,
+  .card-static {
+    border-color: var(--color-print-border);
+    page-break-inside: avoid;
+  }
+}
+
+.badge-muted {
+  background: var(--color-bg-emphasis);
+  color: var(--color-text-tertiary);
+  border: 1px solid var(--color-border-default);
+}
+
+/* =======================================================================
+   RESPONSIVE BEHAVIOR
+   ======================================================================= */
+
+@media (max-width: 768px) {
+  .cards-grid,
+  .cards-grid-compact {
+    grid-template-columns: 1fr;
+  }
+}

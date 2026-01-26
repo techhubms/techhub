@@ -22,7 +22,7 @@
                 @if (collection.IsCustom)
                 {
                     @* Custom pages *@
-                    <a href="@collection.Url" class="collection-badge custom-page-badge"
+                    <a href="@collection.Url" class="badge-custom"
                         aria-label="View @collection.Title custom page">
                         @collection.Title
                     </a>
@@ -30,14 +30,14 @@
                 else
                 {
                     @* Regular collections *@
-                    <a href="@collection.Url" class="collection-badge" aria-label="View @collection.Title collection">
+                    <a href="@collection.Url" class="badge-purple" aria-label="View @collection.Title collection">
                         @collection.Title
                     </a>
                 }
             }
             @if (Section.Collections.Count > 4)
             {
-                <span class="collection-badge-more"
+                <span class="badge-grey"
                     aria-label="@(Section.Collections.Count - 4) more collections available">+@(Section.Collections.Count - 4)
                     more</span>
             }

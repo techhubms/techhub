@@ -1,15 +1,14 @@
 @using TechHub.Core.DTOs
 
 <a href="@Item.GetHref()"
-   class="content-item-card"
+   class="card"
    target="@Item.GetTarget()"
    rel="@Item.GetRel()"
    data-enhance-nav="@Item.GetDataEnhanceNav()"
    aria-label="@Item.GetAriaLabel()">
-    <div class="card-content">
-        <div class="content-header">
-            <h3 class="content-title">@Item.Title</h3>
-            <div class="content-meta">
+        <div class="card-header">
+            <h3 class="card-title">@Item.Title</h3>
+            <div class="card-meta">
                 <time datetime="@Item.DateIso">@FormatDate(Item.DateEpoch)</time>
                 @if (!string.IsNullOrWhiteSpace(Item.Author))
                 {
@@ -20,29 +19,28 @@
 
         @if (!string.IsNullOrWhiteSpace(Item.Excerpt))
         {
-            <div class="content-excerpt">
+            <div class="card-description">
                 @((MarkupString)Item.Excerpt)
             </div>
         }
 
         @if (Item.Tags.Any() || (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName)))
         {
-            <div class="content-tags" @onclick:preventDefault @onclick:stopPropagation>
+            <div class="card-tags" @onclick:preventDefault @onclick:stopPropagation>
                 @foreach (var tag in Item.Tags.Take(5))
                 {
-                    <span class="content-item-card-tag">@tag</span>
+                    <span class="badge-purple-static">@tag</span>
                 }
                 @if (Item.Tags.Count > 5)
                 {
-                    <span class="content-item-card-tag-more">+@(Item.Tags.Count - 5) more</span>
+                    <span class="badge-grey">+@(Item.Tags.Count - 5) more</span>
                 }
                 @if (ShowCollectionBadge && !string.IsNullOrWhiteSpace(Item.CollectionName))
                 {
-                    <span class="collection-badge-white">@CapitalizeCollection(Item.CollectionName)</span>
+                    <span class="badge-grey">@CapitalizeCollection(Item.CollectionName)</span>
                 }
             </div>
         }
-    </div>
 </a>
 
 @code {

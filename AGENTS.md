@@ -791,15 +791,17 @@ curl -k https://localhost:5001/api/sections
 
 ### Stopping the Website
 
-**Only stop when task is complete or restart is needed**:
+**Stopping servers should never be needed**:
 
-Servers run in background. To stop them:
+Servers run in background and keep running. When using a subsequent `Run` command the script automatically detects if binaries changed and if servers need to be restarted because of that. To automatically stop them at the end the `Run` command use `-StopServers`:
 
 ```powershell
-# Option 1: Run with -StopServers flag (stops after tests)
 Run -StopServers
+```
 
-# Option 2: Kill dotnet processes manually
+If you for any reason need to kill the dotnet processes, you can do so like this:
+
+```powershell
 Get-Process dotnet | Stop-Process -Force
 ```
 

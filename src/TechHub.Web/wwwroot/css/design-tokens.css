@@ -43,9 +43,9 @@
   --color-black-backdrop-strong: rgba(0, 0, 0, 0.9); /* Strong modal backdrop */
 
   /* Body gradient */
-  --color-bg-gradient-start: #1a1a2e;
-  --color-bg-gradient-mid: #16213e;
-  --color-bg-gradient-end: #0f0f23;
+  --color-bg-gradient-start: #151524;
+  --color-bg-gradient-mid: #10182C;
+  --color-bg-gradient-end: #0A0A19;
 
   /* =======================================================================
       TEXT COLORS

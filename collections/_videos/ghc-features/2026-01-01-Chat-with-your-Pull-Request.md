@@ -1,9 +1,11 @@
 ---
 external_url: ''
-title: Copilot Extensions Marketplace
+title: Chat with your Pull Request
 author: TBD
-date: 2026-08-29 09:39:32 +00:00
+date: 2026-01-01 00:00:00 +00:00
 ghes_support: false
+draft: true
+ghc_feature: true
 plans:
 - Free
 tags: []
@@ -11,11 +13,11 @@ section_names:
 - ai
 - github-copilot
 ---
-This content demonstrates GitHub Copilot's Copilot Extensions Marketplace feature. Install third-party extensions that extend Copilot's capabilities<!--excerpt_end-->
+This content demonstrates GitHub Copilot's Chat with your Pull Request feature. Get AI insights and improvements on your pull requests<!--excerpt_end-->
 
 ## Overview
 
-Install third-party extensions that extend Copilot's capabilities
+Get AI insights and improvements on your pull requests
 
 ## Key Features
 

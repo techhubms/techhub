@@ -33,6 +33,18 @@ public record ContentItemDto
     public bool GhesSupport { get; init; }
 
     /// <summary>
+    /// Indicates whether this content is a draft (not yet released)
+    /// Draft content shows as "Coming Soon" on the Features page
+    /// </summary>
+    public bool Draft { get; init; }
+
+    /// <summary>
+    /// Indicates whether this is a GitHub Copilot feature (from ghc-features subcollection)
+    /// Used to identify content that should appear on the GitHub Copilot Features page
+    /// </summary>
+    public bool GhcFeature { get; init; }
+
+    /// <summary>
     /// Determines if this item links to an external source (vs linking internally to our site).
     /// News, blogs, and community items redirect to the original source.
     /// Videos and roundups (and custom pages) link internally since we can present them on our site.

@@ -1,21 +1,24 @@
 ---
 external_url: ''
-title: Organization-wide Custom Instructions
+title: GitHub Spark
 author: TBD
-date: 2026-08-29 09:39:32 +00:00
+date: 2026-01-01 00:00:00 +00:00
 ghes_support: false
+draft: true
+ghc_feature: true
 plans:
+- Pro+
 - Enterprise
 tags: []
 section_names:
 - ai
 - github-copilot
 ---
-This content demonstrates GitHub Copilot's Organization-wide Custom Instructions feature. Set coding standards and guidelines applied across entire organization<!--excerpt_end-->
+This content demonstrates GitHub Copilot's GitHub Spark feature. Create micro web apps using natural language - no coding required<!--excerpt_end-->
 
 ## Overview
 
-Set coding standards and guidelines applied across entire organization
+Create micro web apps using natural language - no coding required
 
 ## Key Features
 

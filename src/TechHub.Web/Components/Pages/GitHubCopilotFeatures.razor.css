@@ -1,339 +1,231 @@
-/* GitHub Copilot Features Page Styles */
-
-/* Custom page container */
-::deep .custom-page-container {
-    max-width: 100%;
-}
+/* ============================================================================
+   GitHub Copilot Features Page Styles
+   
+   Page-specific layout only - cards inherit from global cards.css
+   ============================================================================ */
 
 /* Intro Section */
-::deep .custom-page-intro {
-    margin-bottom: 2.5rem;
-    font-size: 1.05rem;
-    line-height: 1.7;
+.custom-page-container {
+  max-width: 100%;
 }
 
-::deep .custom-page-intro p {
-    margin-bottom: 1rem;
-    color: var(--color-text-primary);
+.custom-page-intro {
+  margin-bottom: var(--spacing-5);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
 }
 
-::deep .custom-page-note {
-    background: var(--color-amber-bg);
-    border-left: 4px solid var(--color-amber);
-    padding: 1rem 1.25rem;
-    margin: 1.5rem 0;
-    border-radius: 4px;
+.custom-page-intro p {
+  margin-bottom: var(--spacing-2);
+  color: var(--color-text-primary);
 }
 
-::deep .custom-page-note strong {
-    color: var(--color-amber);
-    font-weight: 700;
+.custom-page-note {
+  background: var(--color-amber-bg);
+  border-left: 4px solid var(--color-amber);
+  padding: var(--spacing-2) var(--spacing-3);
+  margin: var(--spacing-3) 0;
+  border-radius: var(--radius-sm);
 }
 
-::deep .custom-page-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
+.custom-page-note strong {
+  color: var(--color-amber);
+  font-weight: var(--font-weight-bold);
 }
 
-::deep .custom-page-links a {
-    display: inline-block;
-    padding: 0.625rem 1.25rem;
-    background: var(--color-purple-medium);
-    color: var(--color-text-on-emphasis);
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+.custom-page-links {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-3);
+  flex-wrap: wrap;
 }
 
-::deep .custom-page-links a:hover {
-    background: var(--color-purple-bright);
-    transform: translateY(-1px);
+/* Subscription Tiers */
+.features-tiers {
+  margin-bottom: var(--spacing-6);
 }
 
-::deep .custom-page-links a:focus {
-    outline: 2px solid var(--color-purple-bright);
-    outline-offset: 2px;
+.features-tiers h2 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-3);
+  color: var(--color-text-emphasis);
 }
 
-/* Subscription Tiers Section */
-::deep .features-tiers {
-    margin-bottom: 3rem;
+.features-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
 }
 
-::deep .features-tiers h2 {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-    color: var(--color-text-emphasis);
+.features-tier-card {
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-3);
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--duration-normal) var(--easing-ease-out), 
+              box-shadow var(--duration-normal) var(--easing-ease-out);
 }
 
-::deep .features-tiers-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.25rem;
-    margin-bottom: 2rem;
+.features-tier-card:hover {
+  border-color: var(--color-purple-medium);
+  box-shadow: var(--shadow-md);
 }
 
-/* Individual Tier Cards */
-::deep .features-tier-card {
-    background: var(--color-bg-default);
-    border: 1px solid var(--color-border-default);
-    border-radius: 8px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+.features-tier-card h3 {
+  font-size: var(--font-size-2xl);
+  margin: 0 0 var(--spacing-1) 0;
+  color: var(--color-purple-bright);
 }
 
-::deep .features-tier-card:hover {
-    border-color: var(--color-purple-medium);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+.features-tier-tagline {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-3);
+  line-height: var(--line-height-normal);
 }
 
-::deep .features-tier-card h3 {
-    font-size: 1.5rem;
-    margin: 0 0 0.5rem 0;
-    color: var(--color-purple-bright);
+.features-tier-price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: var(--spacing-3);
+  padding-bottom: var(--spacing-3);
+  border-bottom: 1px solid var(--color-border-default);
 }
 
-::deep .features-tier-tagline {
-    font-size: 0.95rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 1.25rem;
-    line-height: 1.5;
+.price-amount {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-purple-bright);
 }
 
-/* Pricing Display */
-::deep .features-tier-price {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    margin-bottom: 1.25rem;
-    padding-bottom: 1.25rem;
-    border-bottom: 1px solid var(--color-border-default);
+.price-period {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
 }
 
-::deep .price-amount {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--color-purple-bright);
+.price-yearly {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
 }
 
-::deep .price-period {
-    font-size: 0.875rem;
-    color: var(--color-text-secondary);
+.features-tier-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
 }
 
-::deep .price-yearly {
-    font-size: 0.875rem;
-    color: var(--color-text-tertiary);
+.features-tier-features li {
+  padding: var(--spacing-1) 0;
+  padding-left: 1.75rem;
+  position: relative;
+  color: var(--color-text-primary);
+  line-height: var(--line-height-normal);
 }
 
-/* Features List */
-::deep .features-tier-features {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex: 1;
+.features-tier-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-green-light);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
 }
 
-::deep .features-tier-features li {
-    padding: 0.5rem 0;
-    padding-left: 1.75rem;
-    position: relative;
-    color: var(--color-text-primary);
-    line-height: 1.5;
+/* Feature Sections */
+.features-video-section {
+  margin-bottom: var(--spacing-6);
 }
 
-::deep .features-tier-features li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--color-green-light);
-    font-weight: 700;
-    font-size: 1.1rem;
+.features-video-section h2 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-2);
+  color: var(--color-text-emphasis);
 }
 
-/* Feature Sections (with video cards) */
-::deep .features-video-section {
-    margin-bottom: 3rem;
-}
-
-::deep .features-video-section h2 {
-    font-size: 1.75rem;
-    margin-bottom: 0.75rem;
-    color: var(--color-text-emphasis);
-}
-
-::deep .features-section-plans {
-    font-size: 0.95rem;
-    color: var(--color-text-secondary);
-    font-style: italic;
-    margin-bottom: 1.5rem;
-}
-
-/* Features Grid (individual feature cards) */
-::deep .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.25rem;
-    margin-top: 1.5rem;
-}
-
-::deep .feature-card {
-    background: var(--color-bg-default);
-    border: 1px solid var(--color-border-default);
-    border-radius: 8px;
-    padding: 1.25rem;
-    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-::deep .feature-card-clickable {
-    cursor: pointer;
-}
-
-::deep .feature-card-clickable:hover {
-    border-color: var(--color-purple-medium);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
-
-::deep .feature-card-disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-::deep .feature-card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-::deep .feature-card-content {
-    display: block;
-}
-
-::deep .feature-card h3 {
-    font-size: 1.25rem;
-    margin: 0 0 0.75rem 0;
-    color: var(--color-text-emphasis);
-}
-
-::deep .feature-card p {
-    font-size: 0.95rem;
-    color: var(--color-text-secondary);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-::deep .feature-badges {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-::deep .feature-badges span {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.625rem;
-    border-radius: 4px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-::deep .badge-ghes {
-    background: var(--color-green-light);
-    color: var(--color-bg-default);
-}
-
-::deep .badge-video {
-    background: var(--color-purple-medium);
-    color: var(--color-text-on-emphasis);
-}
-
-::deep .badge-coming-soon {
-    background: var(--color-amber);
-    color: var(--color-bg-default);
+.features-section-plans {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-bottom: var(--spacing-3);
 }
 
 /* Sidebar Filters */
-::deep .sidebar-section {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--color-border-default);
+.sidebar-section {
+  margin-top: var(--spacing-4);
+  padding-top: var(--spacing-4);
+  border-top: 1px solid var(--color-border-default);
 }
 
-::deep .sidebar-heading {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--color-text-emphasis);
-    margin: 0 0 1rem 0;
+.sidebar-heading {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-emphasis);
+  margin: 0 0 var(--spacing-2) 0;
 }
 
-::deep .filter-controls {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+.filter-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
 }
 
-::deep .filter-toggle {
-    display: flex;
-    align-items: center;
-    gap: 0.625rem;
-    font-size: 0.9rem;
-    color: var(--color-text-primary);
-    cursor: pointer;
-    user-select: none;
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  user-select: none;
 }
 
-::deep .filter-toggle input[type="checkbox"] {
-    width: 1.125rem;
-    height: 1.125rem;
-    cursor: pointer;
-    accent-color: var(--color-purple-medium);
+.filter-toggle input[type="checkbox"] {
+  width: 1.125rem;
+  height: 1.125rem;
+  cursor: pointer;
+  accent-color: var(--color-purple-medium);
 }
 
-::deep .filter-toggle:hover {
-    color: var(--color-text-emphasis);
+.filter-toggle:hover {
+  color: var(--color-text-emphasis);
 }
 
-::deep .filter-toggle input[type="checkbox"]:focus {
-    outline: 2px solid var(--color-purple-bright);
-    outline-offset: 2px;
+.filter-toggle input[type="checkbox"]:focus {
+  outline: var(--focus-outline-width) solid var(--color-purple-bright);
+  outline-offset: var(--focus-outline-offset);
 }
 
-/* Responsive Adjustments */
+/* Responsive */
 @media (max-width: 768px) {
-    ::deep .features-tiers-grid {
-        grid-template-columns: 1fr;
-    }
+  .features-tiers-grid {
+    grid-template-columns: 1fr;
+  }
 
-    ::deep .features-grid {
-        grid-template-columns: 1fr;
-    }
+  .custom-page-links {
+    flex-direction: column;
+  }
 
-    ::deep .custom-page-links {
-        flex-direction: column;
-    }
-
-    ::deep .custom-page-links a {
-        text-align: center;
-    }
+  .custom-page-links a {
+    text-align: center;
+  }
 }
 
-/* Print Styles */
+/* Print */
 @media print {
-    ::deep .features-tier-card {
-        border-color: var(--color-print-border);
-        page-break-inside: avoid;
-    }
+  .features-tier-card {
+    border-color: var(--color-print-border);
+    page-break-inside: avoid;
+  }
 
-    ::deep .custom-page-links a {
-        background: transparent;
-        color: var(--color-print-text);
-        border: 1px solid var(--color-print-border);
-    }
+  .custom-page-links a {
+    background: transparent;
+    color: var(--color-print-text);
+    border: 1px solid var(--color-print-border);
+  }
 }
+

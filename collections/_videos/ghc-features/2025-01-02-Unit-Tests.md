@@ -3,6 +3,7 @@ external_url: https://youtu.be/RDpAJAjXkqo
 title: Unit Tests
 author: Randy Pagels
 date: 2025-01-02 11:05:46 +00:00
+ghc_feature: true
 ghes_support: true
 plans:
 - Free

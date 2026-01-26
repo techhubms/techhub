@@ -1,21 +1,23 @@
 ---
 external_url: ''
-title: Code Scanning AI Autofix
+title: Security Advisory Summaries
 author: TBD
-date: 2026-08-29 09:39:32 +00:00
+date: 2026-01-01 00:00:00 +00:00
 ghes_support: false
+draft: true
+ghc_feature: true
 plans:
-- Enterprise
+- Business
 tags: []
 section_names:
 - ai
 - github-copilot
 ---
-This content demonstrates GitHub Copilot's Code Scanning AI Autofix feature. Automatically generate fixes for security vulnerabilities<!--excerpt_end-->
+This content demonstrates GitHub Copilot's Security Advisory Summaries feature. AI-generated summaries of Dependabot security alerts<!--excerpt_end-->
 
 ## Overview
 
-Automatically generate fixes for security vulnerabilities
+AI-generated summaries of Dependabot security alerts
 
 ## Key Features
 

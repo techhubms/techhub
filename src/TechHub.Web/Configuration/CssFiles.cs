@@ -14,6 +14,8 @@ public static class CssFiles
     [
         "css/design-tokens.css",
         "css/base.css",
+        "css/buttons.css",
+        "css/cards.css",
         "css/article.css",
         "css/sidebar.css",
         "css/page-container.css",

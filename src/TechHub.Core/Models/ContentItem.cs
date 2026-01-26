@@ -70,6 +70,18 @@ public class ContentItem
     public bool GhesSupport { get; init; }
 
     /// <summary>
+    /// Indicates whether this content is a draft (not yet released)
+    /// Draft content shows as "Coming Soon" on the Features page
+    /// </summary>
+    public bool Draft { get; init; }
+
+    /// <summary>
+    /// Indicates whether this is a GitHub Copilot feature (from ghc-features subcollection)
+    /// Used to identify content that should appear on the GitHub Copilot Features page
+    /// </summary>
+    public bool GhcFeature { get; init; }
+
+    /// <summary>
     /// Full markdown content rendered to HTML
     /// </summary>
     public required string RenderedHtml { get; init; }

@@ -98,39 +98,6 @@
     color: var(--color-text-primary);
 }
 
-/* CTA Button */
-.handbook-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-2);
-    align-self: flex-start;
-    padding: var(--spacing-2) var(--spacing-4);
-    background: var(--color-purple-dark);
-    color: var(--color-text-on-emphasis);
-    text-decoration: none;
-    border: 1px solid var(--color-purple-dark);
-    border-radius: var(--radius-md);
-    font-weight: var(--font-weight-semibold);
-    font-size: var(--font-size-base);
-    margin-top: var(--spacing-2);
-}
-
-.handbook-cta:hover {
-    background: var(--color-purple-medium);
-    border-color: var(--color-purple-bright);
-    text-decoration: none;
-}
-
-.handbook-cta:focus,
-.handbook-cta:active {
-    text-decoration: none;
-}
-
-.handbook-cta-icon {
-    width: 18px;
-    height: 18px;
-}
-
 /* Introduction text */
 .handbook-intro-text {
     margin-bottom: var(--spacing-6);
@@ -168,10 +135,5 @@
     .handbook-meta {
         grid-template-columns: 1fr 1fr;
         text-align: left;
-    }
-
-    .handbook-cta {
-        width: 100%;
-        justify-content: center;
     }
 }

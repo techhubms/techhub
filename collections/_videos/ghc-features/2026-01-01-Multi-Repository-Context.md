@@ -1,22 +1,23 @@
 ---
 external_url: ''
-title: Fine Tuned Models
+title: Multi-Repository Context
 author: TBD
-date: 2026-08-29 09:39:32 +00:00
+date: 2026-01-01 00:00:00 +00:00
 ghes_support: false
+draft: true
+ghc_feature: true
 plans:
-- Pro+
 - Enterprise
 tags: []
 section_names:
 - ai
 - github-copilot
 ---
-This content demonstrates GitHub Copilot's Fine Tuned Models feature. AI models customized specifically for your organization<!--excerpt_end-->
+This content demonstrates GitHub Copilot's Multi-Repository Context feature. Access context from multiple repositories in Enterprise environments<!--excerpt_end-->
 
 ## Overview
 
-AI models customized specifically for your organization
+Access context from multiple repositories in Enterprise environments
 
 ## Key Features
 

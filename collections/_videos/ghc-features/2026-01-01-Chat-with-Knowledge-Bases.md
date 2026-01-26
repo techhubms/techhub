@@ -2,8 +2,10 @@
 external_url: ''
 title: Chat with Knowledge Bases
 author: TBD
-date: 2026-08-29 09:39:32 +00:00
+date: 2026-01-01 00:00:00 +00:00
 ghes_support: false
+draft: true
+ghc_feature: true
 plans:
 - Pro+
 - Enterprise

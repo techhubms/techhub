@@ -1,22 +1,23 @@
 ---
 external_url: ''
-title: Path-specific Custom Instructions
+title: Code Debugging
 author: TBD
-date: 2026-08-29 09:39:32 +00:00
+date: 2026-08-29 09:39:31 +00:00
 ghes_support: true
+draft: true
+ghc_feature: true
 plans:
-- Pro
-- Business
+- Free
 tags: []
 section_names:
 - ai
 - github-copilot
 ---
-This content demonstrates GitHub Copilot's Path-specific Custom Instructions feature. Define custom instructions for specific file paths or directories<!--excerpt_end-->
+This content demonstrates GitHub Copilot's Code Debugging feature. Debug with AI using call stack and variable insights<!--excerpt_end-->
 
 ## Overview
 
-Define custom instructions for specific file paths or directories
+Debug with AI using call stack and variable insights
 
 ## Key Features
 

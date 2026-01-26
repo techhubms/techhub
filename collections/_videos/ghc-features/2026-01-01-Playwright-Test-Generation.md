@@ -1,9 +1,11 @@
 ---
 external_url: ''
-title: Web Search with Bing
+title: Playwright Test Generation
 author: TBD
 date: 2026-08-29 09:39:31 +00:00
 ghes_support: true
+draft: true
+ghc_feature: true
 plans:
 - Free
 tags: []
@@ -11,11 +13,11 @@ section_names:
 - ai
 - github-copilot
 ---
-This content demonstrates GitHub Copilot's Web Search with Bing feature. Search the web directly from your coding environment<!--excerpt_end-->
+This content demonstrates GitHub Copilot's Playwright Test Generation feature. Generate UI tests with Playwright from existing code<!--excerpt_end-->
 
 ## Overview
 
-Search the web directly from your coding environment
+Generate UI tests with Playwright from existing code
 
 ## Key Features
 

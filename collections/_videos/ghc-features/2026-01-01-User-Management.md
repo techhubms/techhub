@@ -1,21 +1,24 @@
 ---
 external_url: ''
-title: Copilot Coding Agent in Pull Requests
+title: User Management
 author: TBD
-date: 2026-08-29 09:39:32 +00:00
+date: 2026-01-01 00:00:00 +00:00
 ghes_support: false
+draft: true
+ghc_feature: true
 plans:
+- Pro
 - Business
 tags: []
 section_names:
 - ai
 - github-copilot
 ---
-This content demonstrates GitHub Copilot's Copilot Coding Agent in Pull Requests feature. Autonomous agent that can implement entire issues by creating PRs<!--excerpt_end-->
+This content demonstrates GitHub Copilot's User Management feature. Assign licenses per user, team, or organization<!--excerpt_end-->
 
 ## Overview
 
-Autonomous agent that can implement entire issues by creating PRs
+Assign licenses per user, team, or organization
 
 ## Key Features
 

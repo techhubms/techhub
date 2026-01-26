@@ -1,9 +1,11 @@
 ---
 external_url: ''
-title: Playwright Test Generation
+title: Smart Actions
 author: TBD
-date: 2026-08-29 09:39:31 +00:00
-ghes_support: true
+date: 2026-01-01 00:00:00 +00:00
+ghes_support: false
+draft: true
+ghc_feature: true
 plans:
 - Free
 tags: []
@@ -11,11 +13,11 @@ section_names:
 - ai
 - github-copilot
 ---
-This content demonstrates GitHub Copilot's Playwright Test Generation feature. Generate UI tests with Playwright from existing code<!--excerpt_end-->
+This content demonstrates GitHub Copilot's Smart Actions feature. AI-suggested workflow improvements and automation ideas<!--excerpt_end-->
 
 ## Overview
 
-Generate UI tests with Playwright from existing code
+AI-suggested workflow improvements and automation ideas
 
 ## Key Features
 

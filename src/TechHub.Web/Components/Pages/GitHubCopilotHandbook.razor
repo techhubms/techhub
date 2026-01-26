@@ -67,12 +67,8 @@
 
                         @if (pageData.PurchaseLink != null)
                         {
-                            <a href="@pageData.PurchaseLink.Url" class="handbook-cta" target="_blank" rel="noopener">
-                                <span class="handbook-cta-text">@pageData.PurchaseLink.Text</span>
-                                <svg class="handbook-cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M5 12h14M12 5l7 7-7 7" />
-                                </svg>
+                            <a href="@pageData.PurchaseLink.Url" class="btn" target="_blank" rel="noopener">
+                                @pageData.PurchaseLink.Text
                             </a>
                         }
                     </div>

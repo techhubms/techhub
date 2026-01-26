@@ -15,21 +15,21 @@
 {
     <nav class="sub-nav" aria-label="@Section.Title navigation">
         <div class="sub-nav-wrapper">
-            <a href="/@Section.Name/all" class="sub-nav-item @(IsActive($"/{Section.Name}/all") ? "active" : "")">
+            <a href="/@Section.Name/all" class="btn-subnav @(IsActive($"/{Section.Name}/all") ? "active" : "")">
                 All
             </a>
 
             @foreach (var collection in RegularCollections)
             {
                 var url = $"/{Section.Name}/{collection.Name}";
-                <a href="@url" class="sub-nav-item @(IsActive(url) ? "active" : "")">
+                <a href="@url" class="btn-subnav @(IsActive(url) ? "active" : "")">
                     @collection.Title
                 </a>
             }
 
             @foreach (var customPage in CustomPages)
             {
-                <a href="@customPage.Url" class="sub-nav-item @(IsActive(customPage.Url) ? "active" : "")">
+                <a href="@customPage.Url" class="btn-subnav @(IsActive(customPage.Url) ? "active" : "")">
                     @customPage.Title
                 </a>
             }

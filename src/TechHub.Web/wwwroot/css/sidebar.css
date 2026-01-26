@@ -250,8 +250,7 @@
   color: var(--color-text-tertiary);
 }
 
-/* Highlight Button - Featured/highlighted content with accent */
-.sidebar-highlight-button,
+/* Featured Link - Featured/highlighted content with accent */
 .sidebar-featured-link {
   display: flex;
   flex-direction: column;
@@ -265,13 +264,11 @@
   transition: all var(--duration-fast) var(--easing-ease);
 }
 
-.sidebar-highlight-button:hover,
 .sidebar-featured-link:hover {
   background: var(--color-bg-emphasis);
   border-color: var(--color-purple-medium);
 }
 
-.sidebar-highlight-button-title,
 .sidebar-featured-title {
   font-weight: var(--font-weight-semibold);
   font-size: var(--font-size-base);
@@ -279,8 +276,6 @@
   line-height: var(--line-height-snug);
 }
 
-.sidebar-highlight-button-date,
-.sidebar-highlight-button-meta,
 .sidebar-featured-date {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);

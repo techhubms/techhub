@@ -1,9 +1,11 @@
 ---
 external_url: ''
-title: Code Referencing
+title: Copilot Extensions Marketplace
 author: TBD
-date: 2026-08-29 09:39:31 +00:00
+date: 2026-01-01 00:00:00 +00:00
 ghes_support: false
+draft: true
+ghc_feature: true
 plans:
 - Free
 tags: []
@@ -11,11 +13,11 @@ section_names:
 - ai
 - github-copilot
 ---
-This content demonstrates GitHub Copilot's Code Referencing feature. See reference info when code matches public repositories<!--excerpt_end-->
+This content demonstrates GitHub Copilot's Copilot Extensions Marketplace feature. Install third-party extensions that extend Copilot's capabilities<!--excerpt_end-->
 
 ## Overview
 
-See reference info when code matches public repositories
+Install third-party extensions that extend Copilot's capabilities
 
 ## Key Features
 

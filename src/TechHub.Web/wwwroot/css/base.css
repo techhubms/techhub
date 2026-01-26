@@ -28,7 +28,7 @@ body {
   font-size: var(--font-size-base);
   line-height: var(--line-height-body);
   color: var(--color-text-primary);
-  background: linear-gradient(135deg, var(--color-bg-gradient-start) 0%, var(--color-bg-gradient-mid) 50%, var(--color-bg-gradient-end) 100%);
+  background: linear-gradient(135deg, var(--color-bg-gradient-start) 0%, var(--color-bg-gradient-mid) 35%, var(--color-bg-gradient-end) 100%);
   background-attachment: fixed;
   min-height: 100vh;
   width: 100%;
@@ -137,15 +137,6 @@ a:focus-visible {
   outline-offset: 2px !important;
   transition: none !important;
   border-radius: var(--radius-sm);
-}
-
-/* Buttons use visible purple focus with offset */
-button:focus-visible,
-.button:focus-visible {
-  outline: 3px solid var(--color-purple-bright) !important;
-  outline-offset: 2px !important;
-  transition: none !important;
-  border-radius: var(--radius-md);
 }
 
 /* Skip to Main Content Link */

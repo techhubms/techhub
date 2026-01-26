@@ -222,6 +222,31 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     }
 
     /// <summary>
+    /// Get GitHub Copilot feature videos (ghc_feature=true), including drafts.
+    /// This is the ONLY endpoint that returns draft content.
+    /// </summary>
+    public virtual async Task<IEnumerable<ContentItemDto>?> GetGhcFeaturesAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Fetching GitHub Copilot features (including drafts)");
+
+            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItemDto>>(
+                "/api/content?ghcFeature=true&collectionName=videos",
+                cancellationToken);
+
+            _logger.LogInformation("Successfully fetched {Count} GitHub Copilot features", items?.Count() ?? 0);
+            return items;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch GitHub Copilot features");
+            throw;
+        }
+    }
+
+    /// <summary>
     /// Get detailed content item by sectionName, collectionName, and slug
     /// </summary>
     public virtual async Task<ContentItemDetailDto?> GetContentDetailAsync(

@@ -3,6 +3,7 @@ external_url: https://youtu.be/OZKC2c9wD1Q
 title: Next Edit Suggestions
 author: Fokko Veegens
 date: 2025-04-09 09:37:02 +00:00
+ghc_feature: true
 ghes_support: true
 plans:
 - Free

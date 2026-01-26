@@ -53,8 +53,8 @@
                     <p>@pageData.Intro</p>
                     <p class="custom-page-note"><strong>Note:</strong> @pageData.Note</p>
                     <div class="custom-page-links">
-                        <a href="@pageData.Links.Pricing" target="_blank" rel="noopener">View Pricing</a>
-                        <a href="@pageData.Links.PlanDetails" target="_blank" rel="noopener">Plan Details</a>
+                        <a href="@pageData.Links.Pricing" class="btn" target="_blank" rel="noopener">View Pricing</a>
+                        <a href="@pageData.Links.PlanDetails" class="btn" target="_blank" rel="noopener">Plan Details</a>
                     </div>
                 </div>
 
@@ -107,44 +107,45 @@
                         <p class="features-section-plans">Available in: @string.Join(", ", featureSection.Plans)</p>
                         @if (sectionVideos.Any())
                         {
-                            <div class="features-grid">
+                            <div class="cards-grid">
                                 @foreach (var feature in sectionVideos)
                                 {
-                                    var hasVideo = feature.DateEpoch <= DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-                                    var featureUrl = hasVideo ? $"/github-copilot/videos/{feature.Slug}" : "#";
-                                    var cardClass = hasVideo ? "feature-card feature-card-clickable" : "feature-card feature-card-disabled";
+                                    var isAvailable = !feature.Draft;
+                                    var featureUrl = $"/github-copilot/videos/{feature.Slug}";
                                     var featureId = $"feature-{feature.Slug}";
 
-                                    <div class="@cardClass">
-                                        @if (hasVideo)
-                                        {
-                                            <a href="@featureUrl" class="feature-card-link">
-                                                <h3 id="@featureId">@feature.Title</h3>
-                                                <p>@feature.Excerpt</p>
-                                                <div class="feature-badges">
-                                                    @if (feature.GhesSupport)
-                                                    {
-                                                        <span class="badge-ghes">✓ GHES Support</span>
-                                                    }
-                                                    <span class="badge-video">View Demo Video</span>
-                                                </div>
-                                            </a>
-                                        }
-                                        else
-                                        {
-                                            <div class="feature-card-content">
-                                                <h3 id="@featureId">@feature.Title</h3>
-                                                <p>@feature.Excerpt</p>
-                                                <div class="feature-badges">
-                                                    @if (feature.GhesSupport)
-                                                    {
-                                                        <span class="badge-ghes">✓ GHES Support</span>
-                                                    }
-                                                    <span class="badge-coming-soon">Coming Soon</span>
-                                                </div>
+                                    @if (isAvailable)
+                                    {
+                                        <a href="@featureUrl" class="card">
+                                            <div class="card-header">
+                                                <h3 id="@featureId" class="card-title">@feature.Title</h3>
                                             </div>
-                                        }
-                                    </div>
+                                            <p class="card-description">@feature.Excerpt</p>
+                                            <div class="card-badges">
+                                                @if (feature.GhesSupport)
+                                                {
+                                                    <span class="badge-success">✓ GHES Support</span>
+                                                }
+                                                <span class="badge-info">View Demo Video</span>
+                                            </div>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <div class="card-static">
+                                            <div class="card-header">
+                                                <h3 id="@featureId" class="card-title">@feature.Title</h3>
+                                            </div>
+                                            <p class="card-description">@feature.Excerpt</p>
+                                            <div class="card-badges">
+                                                @if (feature.GhesSupport)
+                                                {
+                                                    <span class="badge-success">✓ GHES Support</span>
+                                                }
+                                                <span class="badge-warning">Coming Soon</span>
+                                            </div>
+                                        </div>
+                                    }
                                 }
                             </div>
                         }
@@ -178,8 +179,8 @@
 
         if (showVideosOnly)
         {
-            var now = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-            filteredVideoItems = filteredVideoItems.Where(v => v.DateEpoch <= now).ToList();
+            // Show only non-draft features (available now)
+            filteredVideoItems = filteredVideoItems.Where(v => !v.Draft).ToList();
         }
 
         // Note: StateHasChanged() not needed because @bind:after triggers re-render automatically
@@ -237,8 +238,8 @@
 
             if (!string.IsNullOrEmpty(pageData.VideoCollection))
             {
-                // Query ghc-features collection from API
-                var allVideos = await ApiClient.GetContentAsync(null, pageData.VideoCollection);
+                // Query videos collection from API with ghc_feature=true to get GitHub Copilot features (including drafts)
+                var allVideos = await ApiClient.GetGhcFeaturesAsync();
                 videoItems = (allVideos ?? Enumerable.Empty<ContentItemDto>())
                     .OrderByDescending(v => v.DateEpoch)
                     .ToList();

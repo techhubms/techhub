@@ -27,7 +27,7 @@ Run
 Run -WithoutTests
 ```
 
-**Stop the Application**: Servers run in background. Use `Run -StopServers` to stop after tests, or `Get-Process dotnet | Stop-Process -Force` to stop manually. Server logs are in `.tmp/logs/` (console.txt for Development, api-console.txt/web-console.txt for Production).
+Servers run in background and keep running. When using a subsequent `Run` command the script automatically detects if binaries changed and if servers need to be restarted because of that. Server logs are in `.tmp/logs/`.
 
 ## .NET Aspire
 

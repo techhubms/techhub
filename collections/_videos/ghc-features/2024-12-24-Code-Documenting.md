@@ -3,6 +3,7 @@ external_url: https://youtu.be/66epMMY-YUc
 title: Code Docs
 author: Fokko Veegens
 date: 2024-12-24 07:37:44 +00:00
+ghc_feature: true
 ghes_support: true
 plans:
 - Free

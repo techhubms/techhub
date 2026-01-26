@@ -1,9 +1,11 @@
 ---
 external_url: ''
-title: Multi-Repository Context
+title: Copilot Spaces
 author: TBD
-date: 2026-08-29 09:39:32 +00:00
+date: 2026-01-01 00:00:00 +00:00
 ghes_support: false
+draft: true
+ghc_feature: true
 plans:
 - Enterprise
 tags: []
@@ -11,11 +13,11 @@ section_names:
 - ai
 - github-copilot
 ---
-This content demonstrates GitHub Copilot's Multi-Repository Context feature. Access context from multiple repositories in Enterprise environments<!--excerpt_end-->
+This content demonstrates GitHub Copilot's Copilot Spaces feature. Create custom AI agents with organizational context and knowledge<!--excerpt_end-->
 
 ## Overview
 
-Access context from multiple repositories in Enterprise environments
+Create custom AI agents with organizational context and knowledge
 
 ## Key Features
 

@@ -3,6 +3,7 @@ external_url: https://youtu.be/TorMsn9bjLY
 title: Chat in IDE
 author: Liuba Gonta
 date: 2025-01-02 11:19:40 +00:00
+ghc_feature: true
 ghes_support: true
 plans:
 - Free

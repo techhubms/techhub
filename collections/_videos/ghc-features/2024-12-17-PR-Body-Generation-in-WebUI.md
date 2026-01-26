@@ -3,6 +3,7 @@ external_url: https://youtu.be/chD-UE4DmJk
 title: PR Body Generation in WebUI
 author: Randy Pagels
 date: 2024-12-17 23:00:34 +00:00
+ghc_feature: true
 ghes_support: false
 plans:
 - Free
