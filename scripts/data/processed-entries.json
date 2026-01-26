@@ -24196,5 +24196,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/engineering-a-local-first-agentic-podcast-studio-a-deep-dive/ba-p/4488947",
     "timestamp": "2026-01-26 07:08:45 +00:00",
     "collection": "community"
+  },
+  {
+    "timestamp": "2026-01-26 08:04:33 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-agents-with-github-copilot-sdk-a-practical-guide-to/ba-p/4488948",
+    "collection": "community",
+    "reason": "Succesfully added: AI category was assigned because the core focus is building and integrating AI agents using GitHub Copilot SDK and CLI, with explicit AI orchestration, agentic workflows, and best practices (AI inclusion rules 1, 2, 4, 5). 'GitHub Copilot' was assigned since the article is about the GitHub Copilot SDK and CLI (GitHub Copilot rules 1, 2, 3, and critical Copilot distinction). DevOps is included due to direct discussion of continuous integration and deployment with GitHub Actions and distinct CI/CD automation pipelines (DevOps rules 2, 5, 6, 9). Coding is included because the article features code examples, programming patterns, SDK usage in TypeScript and Python, and custom agent development (Coding rules 1, 2, 4, 5). Azure and ML were not included; while the Microsoft Agent Framework is a tracked project, the automation, orchestration, and blog content focus do not involve Azure services, ML/data science workflows, nor do they discuss Microsoft cloud infrastructure directly."
   }
 ]
