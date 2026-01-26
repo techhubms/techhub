@@ -1,0 +1,16 @@
+{
+  "Author": "stclarke",
+  "OutputDir": "_news",
+  "Description": "The post [Introducing Maia 200: The AI accelerator built for inference](https://news.microsoft.com/january-2026-news) appeared first on [Source](https://news.microsoft.com/source).",
+  "Tags": [
+    "AI"
+  ],
+  "FeedName": "Microsoft News",
+  "ProcessedDate": "2026-01-26 17:08:02",
+  "EnhancedContent": "## More resources\n\n- - [Deep dive into the Maia 200 architecture](http://aka.ms/Maia200arch)\n- [AI chips are getting hotter. A microfluidics breakthrough goes straight to the silicon to cool up to three times better.](https://news.microsoft.com/source/features/innovation/microfluidics-liquid-cooling-ai-chips/)\n- [Announcing Cobalt 200: Azure’s next cloud-native CPU](https://techcommunity.microsoft.com/blog/azureinfrastructureblog/announcing-cobalt-200-azure-next-cloud-native-cpu/4469807)\n- [Azure Maia for the era of AI: From silicon to software to systems](https://azure.microsoft.com/en-us/blog/azure-maia-for-the-era-of-ai-from-silicon-to-software-to-systems/)\n- [With a systems approach to chips, Microsoft aims to tailor everything ‘from silicon to service’ to meet AI demand](https://news.microsoft.com/source/features/ai/in-house-chips-silicon-to-service-to-meet-ai-demand/)",
+  "Link": "https://news.microsoft.com/january-2026-news",
+  "FeedLevelAuthor": "Source",
+  "FeedUrl": "https://news.microsoft.com/source/feed/",
+  "PubDate": "2026-01-26T16:01:26+00:00",
+  "Title": "Introducing Maia 200: The AI accelerator built for inference"
+}

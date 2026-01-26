@@ -24226,5 +24226,41 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deep-dive-into-the-maia-200-architecture/ba-p/4489312",
     "timestamp": "2026-01-26 16:06:44 +00:00",
     "collection": "community"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://news.microsoft.com/january-2026-news",
+    "timestamp": "2026-01-26 17:09:48 +00:00",
+    "reason": "Succesfully added: Assigned 'AI' category because the content centers around the Maia 200, an AI accelerator (AI rule 1: Microsoft AI hardware and solutions). 'Azure' assigned since Maia 200 and Cobalt 200 are designed specifically for Azure cloud workloads (Azure rule 1: any Azure technology/service). Did not assign other categories because there is no information about development, coding, or security topics—only hardware, infrastructure, and AI workloads. Tags focus on AI accelerators, cloud infrastructure, custom silicon, and related system architecture."
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_our-newest-ai-accelerator-maia-200-is-now-activity-7421583368754110465-tXQM",
+    "timestamp": "2026-01-26 17:10:06 +00:00",
+    "reason": "Succesfully added: Assigned AI category because the core announcement centers on a Microsoft-designed AI accelerator (Maia 200) for large-scale AI workloads in Azure (AI category rule 1). Assigned Azure category because Maia 200 is explicitly part of Azure’s cloud portfolio (Azure category rule 1). Not assigned Coding, ML, DevOps, Security, or GitHub Copilot because the content is focused on infrastructure, not on coding practices, developer tooling, machine learning engineering, security, or workflow automation. No generic exclusion rules apply as this is an official technical announcement relevant to practitioners and the Microsoft technology ecosystem."
+  },
+  {
+    "collection": "blogs",
+    "canonical_url": "https://devclass.com/2026/01/26/microsoft-previews-command-line-tool-created-because-calling-modern-windows-apis-is-too-difficult/",
+    "timestamp": "2026-01-26 17:10:39 +00:00",
+    "reason": "Succesfully added: The content focuses on a new Microsoft developer tool (winapp CLI) for simplifying access to modern Windows APIs, with technical details about SDKs, app packaging, and developer workflow. This falls under the 'Coding' category according to the inclusion rule for Microsoft development frameworks and tooling. No Azure, AI, DevOps, ML, or Security category applies as there are no substantial elements related to those. Category inclusion draws directly from discussion of developer tools, APIs, and coding practices on Microsoft platforms."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/shorts/g5TzQPTyabU",
+    "timestamp": "2026-01-26 17:11:07 +00:00",
+    "reason": "Succesfully added: Content qualifies for 'AI' because it centers on GitHub Copilot CLI and SDK features, which are Microsoft AI developer tools (AI rule 2). 'GitHub Copilot' is assigned as it is the main subject (GitHub Copilot rules 1-4). 'Coding' is included since content discusses developer CLI tools and SDK usage relevant to programming and workflow automation (Coding rule 5). All content is technical, with no business productivity focus, and none of the generic exclusion rules apply."
+  },
+  {
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=usvlTo0TDoA",
+    "timestamp": "2026-01-26 17:11:28 +00:00",
+    "reason": "Succesfully added: Assigned the Azure category because the video is entirely focused on learning and using Microsoft Azure, as supported by the title, description, content outline, and links (Azure inclusion rule 1 and 4). There are mentions of Copilot Chat and AI help, but these references are limited to general AI support functionality, not to developing or building with AI on Azure and do not meet inclusion requirements for the 'AI' category—no AI integration or development is discussed (AI rule 4 and 5). The content does not provide programming guidance, code, or frameworks, so the Coding, DevOps, ML, Security, and GitHub Copilot categories do not apply. The video is clearly educational, technical, and free of any generic exclusion rules."
+  },
+  {
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-a-totp-authenticator-app-on-azure-functions-and-azure/ba-p/4489332",
+    "timestamp": "2026-01-26 17:12:02 +00:00",
+    "reason": "Succesfully added: Included the Coding category because the content provides detailed code examples in JavaScript/Node.js, as well as guidance on API development and React frontend coding (Coding rules 1, 2, and 5). Included Azure because it relies heavily on Azure Functions and Azure Key Vault for deployment, security, and all architectural elements (Azure rules 1, 2, 4, 5). Included Security because TOTP authenticator development, secure secret management, two-factor authentication, and use of Key Vault for protecting secrets are central, with best practices and implementation details (Security rules 1, 2, 3, 7, and 9). Did not include ML, AI, DevOps, or GitHub Copilot categories as the content does not discuss AI/ML, DevOps pipelines, or related tooling."
   }
 ]
