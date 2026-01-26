@@ -22,18 +22,27 @@ public interface IContentRepository
     Task<IReadOnlyList<ContentItem>> GetAllAsync(CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Get content items filtered by collection name
+    /// Get content items filtered by collection name.
+    /// Special case: collectionName="all" returns all content across all collections.
     /// </summary>
+    /// <param name="collectionName">Collection name to filter by</param>
+    /// <param name="includeDraft">If true, include draft items in results. Default is false.</param>
+    /// <param name="cancellationToken">Cancellation token</param>
     Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
         string collectionName,
+        bool includeDraft = false,
         CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Get content items filtered by section name.
     /// Matches against the Sections property which contains section names like "AI", "GitHub Copilot".
     /// </summary>
+    /// <param name="sectionName">Section name to filter by</param>
+    /// <param name="includeDraft">If true, include draft items in results. Default is false.</param>
+    /// <param name="cancellationToken">Cancellationtoken</param>
     Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
         string sectionName,
+        bool includeDraft = false,
         CancellationToken cancellationToken = default);
 
     /// <summary>

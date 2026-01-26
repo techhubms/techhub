@@ -50,32 +50,61 @@ internal static class ContentEndpoints
     private static async Task<Ok<IEnumerable<ContentItemDto>>> GetContent(
         [FromQuery] string? sectionName,
         [FromQuery] string? collectionName,
+        [FromQuery] bool? ghcFeature,
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
+        // Special case: When requesting GitHub Copilot features, include drafts
+        // This allows the features page to show "Coming Soon" items
+        var includeDraft = ghcFeature == true;
+
         // Use targeted repository methods for better database performance
         IReadOnlyList<Core.Models.ContentItem> content;
 
         if (!string.IsNullOrWhiteSpace(sectionName) && !string.IsNullOrWhiteSpace(collectionName))
         {
             // Both filters: get by section and filter by collection
-            var sectionContent = await contentRepository.GetBySectionAsync(sectionName, cancellationToken);
+            var sectionContent = await contentRepository.GetBySectionAsync(sectionName, includeDraft, cancellationToken);
             content = [.. sectionContent.Where(c => c.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase))];
+            
+            // Filter by ghc_feature if specified
+            if (ghcFeature.HasValue)
+            {
+                content = [.. content.Where(c => c.GhcFeature == ghcFeature.Value)];
+            }
         }
         else if (!string.IsNullOrWhiteSpace(sectionName))
         {
             // Section filter only
-            content = await contentRepository.GetBySectionAsync(sectionName, cancellationToken);
+            content = await contentRepository.GetBySectionAsync(sectionName, includeDraft, cancellationToken);
+            
+            // Filter by ghc_feature if specified
+            if (ghcFeature.HasValue)
+            {
+                content = [.. content.Where(c => c.GhcFeature == ghcFeature.Value)];
+            }
         }
         else if (!string.IsNullOrWhiteSpace(collectionName))
         {
-            // Collection only
-            content = await contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
+            // Collection only - include drafts if requesting ghc features
+            content = await contentRepository.GetByCollectionAsync(collectionName, includeDraft, cancellationToken);
+            
+            // Filter by ghc_feature if specified
+            if (ghcFeature.HasValue)
+            {
+                content = [.. content.Where(c => c.GhcFeature == ghcFeature.Value)];
+            }
         }
         else
         {
             // No filters: get all content
             content = await contentRepository.GetAllAsync(cancellationToken);
+            
+            // Filter by ghc_feature if specified
+            if (ghcFeature.HasValue)
+            {
+                content = [.. content.Where(c => c.GhcFeature == ghcFeature.Value)];
+            }
         }
 
         var contentDtos = content.Select(MapToDto);
@@ -225,6 +254,8 @@ internal static class ContentEndpoints
             Tags = item.Tags,
             Plans = item.Plans,
             GhesSupport = item.GhesSupport,
+            Draft = item.Draft,
+            GhcFeature = item.GhcFeature,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
             Url = $"/{primarySectionUrl.ToLowerInvariant()}/{item.CollectionName.ToLowerInvariant()}/{item.Slug.ToLowerInvariant()}"

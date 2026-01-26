@@ -85,7 +85,8 @@ internal static class RssEndpoints
         }
 
         // Get content for this section using the section name (lowercase identifier)
-        var items = await contentRepository.GetBySectionAsync(section.Name);
+        // RSS feeds should exclude draft content
+        var items = await contentRepository.GetBySectionAsync(section.Name, includeDraft: false);
         var channel = await rssService.GenerateSectionFeedAsync(section, items);
         var xml = rssService.SerializeToXml(channel);
 
@@ -112,7 +113,7 @@ internal static class RssEndpoints
             return Results.NotFound();
         }
 
-        var items = await contentRepository.GetByCollectionAsync(collectionName);
+        var items = await contentRepository.GetByCollectionAsync(collectionName, includeDraft: false);
         var channel = await rssService.GenerateCollectionFeedAsync(collectionName, items);
         var xml = rssService.SerializeToXml(channel);
 

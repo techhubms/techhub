@@ -139,7 +139,8 @@ internal static class SectionsEndpoints
         }
 
         // Get all content for this section (filter by section.Name which matches ContentItem.SectionNames)
-        var content = await contentRepository.GetBySectionAsync(section.Name, cancellationToken);
+        // Exclude drafts from section content listings
+        var content = await contentRepository.GetBySectionAsync(section.Name, includeDraft: false, cancellationToken);
         var contentDtos = content.Select(MapContentToDto);
 
         return TypedResults.Ok(contentDtos);
@@ -224,8 +225,8 @@ internal static class SectionsEndpoints
             return TypedResults.NotFound();
         }
 
-        // Get content filtered by both section and collection
-        var allContent = await contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
+        // Get content filtered by both section and collection (exclude drafts)
+        var allContent = await contentRepository.GetByCollectionAsync(collectionName, includeDraft: false, cancellationToken);
         var sectionContent = allContent
             .Where(c => c.SectionNames.Contains(section.Name, StringComparer.OrdinalIgnoreCase))
             .Select(MapContentToDto);

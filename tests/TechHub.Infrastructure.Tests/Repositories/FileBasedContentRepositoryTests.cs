@@ -202,6 +202,247 @@ public class FileBasedContentRepositoryTests : IDisposable
     }
 
     /// <summary>
+    /// Test: GetByCollectionAsync excludes draft items by default
+    /// Why: Draft videos in ghc-features and other collections should NOT appear by default
+    ///      Draft items should only be visible when explicitly requested with includeDraft=true
+    /// </summary>
+    [Fact]
+    public async Task GetByCollectionAsync_ExcludesDraftItemsByDefault()
+    {
+        // Arrange: Create videos in root and ghc-features subdirectory
+        var videosDir = Path.Combine(_collectionsPath, "_videos");
+        var ghcFeaturesDir = Path.Combine(videosDir, "ghc-features");
+        Directory.CreateDirectory(videosDir);
+        Directory.CreateDirectory(ghcFeaturesDir);
+
+        // Root video (published, should appear)
+        await File.WriteAllTextAsync(Path.Combine(videosDir, "2025-01-15-published-video.md"), """
+            ---
+            title: Published Video
+            date: 2025-01-15
+            section_names: [github-copilot]
+            tags: [Video]
+            draft: false
+            ---
+            This is a published video in the root videos collection.
+            """);
+
+        // ghc-features video (draft, should NOT appear without includeDraft=true)
+        await File.WriteAllTextAsync(Path.Combine(ghcFeaturesDir, "2026-08-29-draft-feature.md"), """
+            ---
+            title: Draft Feature Video
+            date: 2026-08-29
+            section_names: [github-copilot]
+            tags: [Video]
+            draft: true
+            ---
+            This is a draft video in ghc-features subcollection.
+            """);
+
+        // ghc-features video (published, SHOULD appear - subcollections are included)
+        await File.WriteAllTextAsync(Path.Combine(ghcFeaturesDir, "2025-01-10-published-feature.md"), """
+            ---
+            title: Published Feature Video
+            date: 2025-01-10
+            section_names: [github-copilot]
+            tags: [Video]
+            draft: false
+            ---
+            This is a published video in ghc-features subcollection.
+            """);
+
+        // Act: Get videos collection (should exclude drafts but include subcollections)
+        var videosContent = await _repository.GetByCollectionAsync("videos", includeDraft: false);
+
+        // Assert: Published items from root AND subcollections returned, but NOT drafts
+        videosContent.Should().HaveCount(2);
+        videosContent.Should().Contain(v => v.Title == "Published Video");
+        videosContent.Should().Contain(v => v.Title == "Published Feature Video");
+        videosContent.Should().NotContain(v => v.Title == "Draft Feature Video");
+        videosContent.Should().AllSatisfy(v => v.Draft.Should().BeFalse());
+    }
+
+    /// <summary>
+    /// Test: GetByCollectionAsync includes draft items when includeDraft=true
+    /// Why: When explicitly requesting drafts, they should be included (e.g., for features showcase)
+    /// </summary>
+    [Fact]
+    public async Task GetByCollectionAsync_IncludesDraftItemsWhenRequested()
+    {
+        // Arrange: Create videos with draft flag
+        var videosDir = Path.Combine(_collectionsPath, "_videos");
+        var ghcFeaturesDir = Path.Combine(videosDir, "ghc-features");
+        Directory.CreateDirectory(videosDir);
+        Directory.CreateDirectory(ghcFeaturesDir);
+
+        // Published video
+        await File.WriteAllTextAsync(Path.Combine(videosDir, "2025-01-15-published.md"), """
+            ---
+            title: Published Video
+            date: 2025-01-15
+            section_names: [github-copilot]
+            tags: [Video]
+            draft: false
+            ---
+            Published content
+            """);
+
+        // Draft video in ghc-features
+        await File.WriteAllTextAsync(Path.Combine(ghcFeaturesDir, "2026-08-29-draft.md"), """
+            ---
+            title: Draft Video
+            date: 2026-08-29
+            section_names: [github-copilot]
+            tags: [Video]
+            draft: true
+            ---
+            Draft content
+            """);
+
+        // Act: Get videos collection WITH drafts
+        var videosContent = await _repository.GetByCollectionAsync("videos", includeDraft: true);
+
+        // Assert: Both published AND draft items returned
+        videosContent.Should().HaveCount(2);
+        videosContent.Should().Contain(v => v.Title == "Published Video" && !v.Draft);
+        videosContent.Should().Contain(v => v.Title == "Draft Video" && v.Draft);
+    }
+
+    /// <summary>
+    /// Test: GetBySectionAsync excludes draft items by default
+    /// Why: When viewing a section (e.g., /ai/videos), draft items should NOT appear
+    ///      Draft items are only shown when explicitly requested (e.g., ghcFeature=true)
+    /// </summary>
+    [Fact]
+    public async Task GetBySectionAsync_ExcludesDraftItemsByDefault()
+    {
+        // Arrange: Create published and draft items in same section
+        var videosDir = Path.Combine(_collectionsPath, "_videos");
+        Directory.CreateDirectory(videosDir);
+
+        // Published video
+        await File.WriteAllTextAsync(Path.Combine(videosDir, "2025-01-01-published-video.md"), """
+            ---
+            title: Published Video
+            date: 2025-01-01
+            section_names: [ai]
+            tags: [AI, Video]
+            draft: false
+            ---
+            Published content
+            """);
+
+        // Draft video (future date + draft: true)
+        await File.WriteAllTextAsync(Path.Combine(videosDir, "2026-08-29-draft-video.md"), """
+            ---
+            title: Draft Video
+            date: 2026-08-29
+            section_names: [ai]
+            tags: [AI, Video]
+            draft: true
+            ---
+            Draft content
+            """);
+
+        // Act: Get AI section WITHOUT drafts (default)
+        var aiContent = await _repository.GetBySectionAsync("ai", includeDraft: false);
+
+        // Assert: Only published items returned
+        aiContent.Should().ContainSingle();
+        aiContent[0].Title.Should().Be("Published Video");
+        aiContent[0].Draft.Should().BeFalse();
+    }
+
+    /// <summary>
+    /// Test: GetBySectionAsync includes draft items when includeDraft=true
+    /// Why: When explicitly requesting drafts (e.g., ghcFeature=true), both published AND draft items returned
+    /// </summary>
+    [Fact]
+    public async Task GetBySectionAsync_IncludesDraftItemsWhenRequested()
+    {
+        // Arrange: Create published and draft items in same section
+        var videosDir = Path.Combine(_collectionsPath, "_videos");
+        Directory.CreateDirectory(videosDir);
+
+        // Published video
+        await File.WriteAllTextAsync(Path.Combine(videosDir, "2025-01-01-published-video.md"), """
+            ---
+            title: Published Video
+            date: 2025-01-01
+            section_names: [ai]
+            tags: [AI, Video]
+            draft: false
+            ---
+            Published content
+            """);
+
+        // Draft video
+        await File.WriteAllTextAsync(Path.Combine(videosDir, "2026-08-29-draft-video.md"), """
+            ---
+            title: Draft Video
+            date: 2026-08-29
+            section_names: [ai]
+            tags: [AI, Video]
+            draft: true
+            ---
+            Draft content
+            """);
+
+        // Act: Get AI section WITH drafts
+        var aiContent = await _repository.GetBySectionAsync("ai", includeDraft: true);
+
+        // Assert: Both published AND draft items returned
+        aiContent.Should().HaveCount(2);
+        aiContent.Should().Contain(v => v.Title == "Published Video" && !v.Draft);
+        aiContent.Should().Contain(v => v.Title == "Draft Video" && v.Draft);
+    }
+
+    /// <summary>
+    /// Test: GetByCollectionAsync includes subcollection items
+    /// Why: When querying "videos", should include both root videos and ghc-features videos
+    ///      Subcollections are part of the collection hierarchy
+    /// </summary>
+    [Fact]
+    public async Task GetByCollectionAsync_IncludesSubcollectionItems()
+    {
+        // Arrange: Create videos in root and subdirectory
+        var videosDir = Path.Combine(_collectionsPath, "_videos");
+        var ghcFeaturesDir = Path.Combine(videosDir, "ghc-features");
+        Directory.CreateDirectory(videosDir);
+        Directory.CreateDirectory(ghcFeaturesDir);
+
+        // Root video
+        await File.WriteAllTextAsync(Path.Combine(videosDir, "2025-01-15-root-video.md"), """
+            ---
+            title: Root Video
+            date: 2025-01-15
+            section_names: [github-copilot]
+            tags: [Video]
+            ---
+            Root collection video
+            """);
+
+        // Subcollection video
+        await File.WriteAllTextAsync(Path.Combine(ghcFeaturesDir, "2025-01-10-feature-video.md"), """
+            ---
+            title: Feature Video
+            date: 2025-01-10
+            section_names: [github-copilot]
+            tags: [Video]
+            ---
+            Subcollection video
+            """);
+
+        // Act: Get videos collection
+        var videosContent = await _repository.GetByCollectionAsync("videos");
+
+        // Assert: Both root and subcollection items returned
+        videosContent.Should().HaveCount(2);
+        videosContent.Should().Contain(v => v.Title == "Root Video" && v.SubcollectionName == null);
+        videosContent.Should().Contain(v => v.Title == "Feature Video" && v.SubcollectionName == "ghc-features");
+    }
+
+    /// <summary>
     /// Test: GetBySectionAsync filters content by section name
     /// Why: Sections display content filtered by section name (ai, github-copilot, etc.)
     /// </summary>

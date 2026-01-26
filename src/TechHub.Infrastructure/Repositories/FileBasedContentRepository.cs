@@ -129,10 +129,11 @@ public class FileBasedContentRepository : IContentRepository
             var collectionResults = await Task.WhenAll(collectionTasks);
             var allItems = collectionResults.SelectMany(items => items).ToList();
 
-            // Filter out future-dated content (DateEpoch > current time)
+            // Filter out future-dated content UNLESS it's marked as draft
+            // Draft items are included regardless of date (for "Coming Soon" features)
             var currentEpoch = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
             var cachedItems = allItems
-                .Where(x => x.DateEpoch <= currentEpoch)
+                .Where(x => x.DateEpoch <= currentEpoch || x.Draft)
                 .OrderByDescending(x => x.DateEpoch)
                 .ToList();
 
@@ -145,9 +146,15 @@ public class FileBasedContentRepository : IContentRepository
     /// Filters from cached in-memory data.
     /// Returns items sorted by date (DateEpoch) in descending order (newest first).
     /// Special case: collectionName="all" returns all content across all collections.
+    /// Includes both root collection items and subcollection items (e.g., videos + ghc-features).
+    /// Draft items are excluded by default unless includeDraft=true.
     /// </summary>
+    /// <param name="collectionName">Collection name to filter by</param>
+    /// <param name="includeDraft">If true, include draft items in results. Default is false.</param>
+    /// <param name="cancellationToken">Cancellation token</param>
     public async Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
         string collectionName,
+        bool includeDraft = false,
         CancellationToken cancellationToken = default)
     {
         ArgumentNullException.ThrowIfNull(collectionName);
@@ -158,16 +165,24 @@ public class FileBasedContentRepository : IContentRepository
         // Handle virtual "all" collection - return all content
         if (collectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
-            return [.. allItems.OrderByDescending(x => x.DateEpoch)];
+            var filtered = includeDraft ? allItems : allItems.Where(item => !item.Draft);
+            return [.. filtered.OrderByDescending(x => x.DateEpoch)];
         }
 
         // Normalize collection name (add _ prefix if missing)
         var normalizedCollection = collectionName.StartsWith('_') ? collectionName : $"_{collectionName}";
 
-        // Filter by collection
-        return [.. allItems
-            .Where(item => item.CollectionName.Equals(normalizedCollection.TrimStart('_'), StringComparison.OrdinalIgnoreCase))
-            .OrderByDescending(x => x.DateEpoch)];
+        // Filter by collection (includes both root and subcollections)
+        // Draft items excluded unless includeDraft=true
+        var collectionItems = allItems
+            .Where(item => item.CollectionName.Equals(normalizedCollection.TrimStart('_'), StringComparison.OrdinalIgnoreCase));
+        
+        if (!includeDraft)
+        {
+            collectionItems = collectionItems.Where(item => !item.Draft);
+        }
+
+        return [.. collectionItems.OrderByDescending(x => x.DateEpoch)];
     }
 
     /// <summary>
@@ -178,24 +193,29 @@ public class FileBasedContentRepository : IContentRepository
     /// Special case: sectionName="all" returns all content across all sections.
     /// </summary>
     /// <param name="sectionName">Section name (lowercase, e.g., "ai", "github-copilot") or "all" for all sections</param>
+    /// <param name="includeDraft">Include draft items (default: false)</param>
     /// <param name="cancellationToken">Cancellation token</param>
     public async Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
         string sectionName,
+        bool includeDraft = false,
         CancellationToken cancellationToken = default)
     {
         ArgumentNullException.ThrowIfNull(sectionName);
 
         var allItems = await GetAllAsync(cancellationToken);
 
-        // Handle virtual "all" section - return all content
-        if (sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        // Filter by section
+        var sectionItems = sectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
+            ? allItems
+            : allItems.Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase));
+
+        // Filter drafts if needed
+        if (!includeDraft)
         {
-            return [.. allItems.OrderByDescending(x => x.DateEpoch)];
+            sectionItems = sectionItems.Where(item => !item.Draft);
         }
 
-        return [.. allItems
-            .Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
-            .OrderByDescending(x => x.DateEpoch)];
+        return [.. sectionItems.OrderByDescending(x => x.DateEpoch)];
     }
 
     /// <summary>
@@ -208,7 +228,7 @@ public class FileBasedContentRepository : IContentRepository
         string slug,
         CancellationToken cancellationToken = default)
     {
-        var items = await GetByCollectionAsync(collectionName, cancellationToken);
+        var items = await GetByCollectionAsync(collectionName, includeDraft: false, cancellationToken);
         return items.FirstOrDefault(item => item.Slug.Equals(slug, StringComparison.OrdinalIgnoreCase));
     }
 
@@ -327,6 +347,8 @@ public class FileBasedContentRepository : IContentRepository
         // Parse GitHub Copilot features-specific fields
         var plans = _frontMatterParser.GetListValue(frontMatter, "plans");
         var ghesSupport = _frontMatterParser.GetValue<bool>(frontMatter, "ghes_support", false);
+        var draft = _frontMatterParser.GetValue<bool>(frontMatter, "draft", false);
+        var ghcFeature = _frontMatterParser.GetValue<bool>(frontMatter, "ghc_feature", false);
 
         // Derive subcollection from file path:
         // - collections/_videos/file.md → subcollection: null
@@ -389,6 +411,8 @@ public class FileBasedContentRepository : IContentRepository
             Tags = tags,
             Plans = plans,
             GhesSupport = ghesSupport,
+            Draft = draft,
+            GhcFeature = ghcFeature,
             RenderedHtml = renderedHtml,
             Excerpt = excerpt,
             ExternalUrl = externalUrl,
@@ -412,19 +436,19 @@ public class FileBasedContentRepository : IContentRepository
 
         if (!string.IsNullOrWhiteSpace(request.CollectionName) && !string.IsNullOrWhiteSpace(request.SectionName))
         {
-            // Collection scope: filter by collection AND section
-            var collectionItems = await GetByCollectionAsync(request.CollectionName, cancellationToken);
+            // Collection scope: filter by collection AND section (exclude drafts)
+            var collectionItems = await GetByCollectionAsync(request.CollectionName, includeDraft: false, cancellationToken);
             items = [.. collectionItems.Where(item => item.SectionNames.Contains(request.SectionName, StringComparer.OrdinalIgnoreCase))];
         }
         else if (!string.IsNullOrWhiteSpace(request.SectionName))
         {
-            // Section scope
-            items = await GetBySectionAsync(request.SectionName, cancellationToken);
+            // Section scope (exclude drafts)
+            items = await GetBySectionAsync(request.SectionName, includeDraft: false, cancellationToken);
         }
         else if (!string.IsNullOrWhiteSpace(request.CollectionName))
         {
-            // Collection scope only
-            items = await GetByCollectionAsync(request.CollectionName, cancellationToken);
+            // Collection scope only (exclude drafts)
+            items = await GetByCollectionAsync(request.CollectionName, includeDraft: false, cancellationToken);
         }
         else
         {

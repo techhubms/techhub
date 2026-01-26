@@ -82,14 +82,14 @@ public class TagCloudService(
 
         if (!string.IsNullOrWhiteSpace(collectionName) && !string.IsNullOrWhiteSpace(sectionName))
         {
-            // Collection scope: filter by collection AND section
-            var allCollectionItems = await _contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
+            // Collection scope: filter by collection AND section (exclude drafts)
+            var allCollectionItems = await _contentRepository.GetByCollectionAsync(collectionName, includeDraft: false, cancellationToken);
             items = [.. allCollectionItems.Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))];
         }
         else if (!string.IsNullOrWhiteSpace(sectionName))
         {
-            // Section scope
-            items = await _contentRepository.GetBySectionAsync(sectionName, cancellationToken);
+            // Section scope (exclude drafts)
+            items = await _contentRepository.GetBySectionAsync(sectionName, includeDraft: false, cancellationToken);
         }
         else
         {
@@ -154,7 +154,7 @@ public class TagCloudService(
             TagCloudScope.Homepage => await _contentRepository.GetAllAsync(cancellationToken),
 
             TagCloudScope.Section when !string.IsNullOrWhiteSpace(request.SectionName) =>
-                await _contentRepository.GetBySectionAsync(request.SectionName, cancellationToken),
+                await _contentRepository.GetBySectionAsync(request.SectionName, includeDraft: false, cancellationToken),
 
             TagCloudScope.Collection when !string.IsNullOrWhiteSpace(request.CollectionName) &&
                                          !string.IsNullOrWhiteSpace(request.SectionName) =>
@@ -173,11 +173,11 @@ public class TagCloudService(
         // The "all" section is virtual and aggregates content from all real sections
         if (sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
-            return await _contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
+            return await _contentRepository.GetByCollectionAsync(collectionName, includeDraft: false, cancellationToken);
         }
 
-        // Handle regular sections - filter collection items by section
-        var allCollectionItems = await _contentRepository.GetByCollectionAsync(collectionName, cancellationToken);
+        // Handle regular sections - filter collection items by section (exclude drafts)
+        var allCollectionItems = await _contentRepository.GetByCollectionAsync(collectionName, includeDraft: false, cancellationToken);
 
         return [.. allCollectionItems.Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))];
     }
