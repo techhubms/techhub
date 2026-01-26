@@ -324,6 +324,10 @@ public class FileBasedContentRepository : IContentRepository
         var externalUrl = _frontMatterParser.GetValue<string>(frontMatter, "external_url", string.Empty);
         var feedName = _frontMatterParser.GetValue<string>(frontMatter, "feed_name", string.Empty);
 
+        // Parse GitHub Copilot features-specific fields
+        var plans = _frontMatterParser.GetListValue(frontMatter, "plans");
+        var ghesSupport = _frontMatterParser.GetValue<bool>(frontMatter, "ghes_support", false);
+
         // Derive subcollection from file path:
         // - collections/_videos/file.md → subcollection: null
         // - collections/_videos/vscode-updates/file.md → subcollection: "vscode-updates"
@@ -383,6 +387,8 @@ public class FileBasedContentRepository : IContentRepository
             FeedName = feedName,
             SectionNames = sectionNames,
             Tags = tags,
+            Plans = plans,
+            GhesSupport = ghesSupport,
             RenderedHtml = renderedHtml,
             Excerpt = excerpt,
             ExternalUrl = externalUrl,

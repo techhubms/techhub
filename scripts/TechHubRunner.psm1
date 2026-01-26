@@ -311,8 +311,7 @@ function Run {
         }
         
         # Run build and stream output in real-time (no Out-String buffering)
-        $buildOutput = @()
-        dotnet build $solutionPath --configuration $configuration --verbosity $verbosityLevel 2>&1 | Tee-Object -Variable buildOutput | Write-Host
+        dotnet build $solutionPath --configuration $configuration --verbosity $verbosityLevel 2>&1 | Out-Host
         $success = $LASTEXITCODE -eq 0
         
         if (-not $success) {
@@ -426,6 +425,24 @@ function Run {
             Write-Host "  Failed to import Pester module: $($_.Exception.Message)" -ForegroundColor Red
             return $false
         }
+        
+        # Pre-load PowerShell functions BEFORE Pester runs (avoids Discovery phase overhead)
+        $functionsPath = Join-Path $testDirectory "../../scripts/content-processing/functions"
+        if (Test-Path $functionsPath) {
+            . (Join-Path $functionsPath "Write-ErrorDetails.ps1")
+            Get-ChildItem -Path $functionsPath -Filter "*.ps1" | 
+            Where-Object { $_.Name -ne "Write-ErrorDetails.ps1" } |
+            ForEach-Object { . $_.FullName }
+        }
+        
+        # Set up global temp directory for tests
+        $tempBase = if ($env:TEMP) { $env:TEMP } elseif ($env:TMP) { $env:TMP } elseif ($env:TMPDIR) { $env:TMPDIR } else { "/tmp" }
+        $tempPath = Join-Path $tempBase "pwshtests"
+        if (Test-Path $tempPath) {
+            Remove-Item $tempPath -Recurse -Force
+        }
+        New-Item -ItemType Directory -Path $tempPath -Force | Out-Null
+        $global:TempPath = $tempPath
         
         # Build Pester configuration
         $pesterConfig = [PesterConfiguration]::Default
@@ -620,9 +637,9 @@ function Run {
             
             # Start dotnet watch in background using PowerShell job
             Start-Job -ScriptBlock {
-                param($dir, $project, $profile, $config, $logPath)
+                param($dir, $project, $launchProfile, $config, $logPath)
                 Set-Location $dir
-                & dotnet watch --project $project --no-build --launch-profile $profile --configuration $config *> $logPath
+                & dotnet watch --project $project --no-build --launch-profile $launchProfile --configuration $config *> $logPath
             } -ArgumentList $appHostDir, $appHostProjectPath, $Environment, $configuration, $consoleLogPath | Out-Null
             Write-Info "AppHost starting in background..."
         }
@@ -757,11 +774,11 @@ function Run {
             $processIds = lsof -ti ":$port" 2>$null
             if ($processIds) {
                 $stoppedAny = $true
-                foreach ($pid in $processIds) {
+                foreach ($pidToKill in $processIds) {
                     if (-not $Silent) {
-                        Write-Info "  Killing process on port $port (PID: $pid)"
+                        Write-Info "  Killing process on port $port (PID: $pidToKill)"
                     }
-                    kill -9 $pid 2>$null
+                    kill -9 $pidToKill 2>$null
                 }
             }
         }
@@ -896,6 +913,22 @@ function Run {
         Write-Host "║      Tech Hub Development Runner       ║" -ForegroundColor Cyan
         Write-Host "╚════════════════════════════════════════╝`n" -ForegroundColor Cyan
         
+        # Check if this is PowerShell-only test run (no .NET build/tests needed)
+        $powerShellOnly = $TestProject -match "^(powershell|pester|scripts)$"
+        
+        if ($powerShellOnly) {
+            # PowerShell-only mode: Skip all .NET build/test/server operations
+            Write-Step "Running PowerShell/Pester tests"
+            $pwshSuccess = Invoke-PowerShellTests -TestName $TestName
+            if ($pwshSuccess -ne $true) {
+                return
+            }
+            Write-Host ""
+            return
+        }
+        
+        # Regular mode: .NET build/test/server workflow
+        
         # Validate prerequisites
         $prereqsSucceeded = Test-Prerequisites
         if ($prereqsSucceeded -eq $false) {
@@ -973,14 +1006,10 @@ function Run {
             $runE2E = $false
             
             if (-not $TestProject) {
-                # No TestProject specified - run ALL tests
+                # No TestProject specified - run ALL tests (PowerShell first, then .NET)
                 $runPowerShell = $true
                 $runUnitIntegration = $true
                 $runE2E = $true
-            }
-            elseif ($TestProject -match "^(powershell|pester|scripts)$") {
-                # PowerShell tests only
-                $runPowerShell = $true
             }
             elseif ($TestProject -match "E2E") {
                 # E2E tests only
@@ -991,7 +1020,8 @@ function Run {
                 $runUnitIntegration = $true
             }
             
-            # PHASE 1: PowerShell tests (fast, independent)
+            # PHASE 1: PowerShell tests (fast, independent, no build needed)
+            # Run first because they're fast and don't require servers
             if ($runPowerShell) {
                 $pwshSuccess = Invoke-PowerShellTests -TestName $TestName
                 if ($pwshSuccess -ne $true) {
@@ -1088,6 +1118,7 @@ function Run {
     finally {
         # Always return to workspace root
         Set-Location $workspaceRoot
+        Write-Host "Back at workspace root: $workspaceRoot`nThis terminal is now free to use"
     }
 }
 

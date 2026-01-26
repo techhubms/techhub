@@ -253,6 +253,8 @@ internal static class SectionsEndpoints
             SectionNames = item.SectionNames,
             PrimarySectionName = Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName),
             Tags = item.Tags,
+            Plans = item.Plans,
+            GhesSupport = item.GhesSupport,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
             Url = $"/{primarySectionUrl.ToLowerInvariant()}/{item.CollectionName.ToLowerInvariant()}/{item.Slug.ToLowerInvariant()}"

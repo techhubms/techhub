@@ -1,6 +1,5 @@
 Describe "Invoke-AiApiCall" {
     BeforeAll {
-        . "$PSScriptRoot/Initialize-BeforeAll.ps1"
         
         # Test constants
         $script:TestToken = "test-token-12345"

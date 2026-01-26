@@ -3,9 +3,7 @@
 
 Describe "Test-RateLimitInEffect" {
     BeforeAll {
-        . "$PSScriptRoot/Initialize-BeforeAll.ps1"
-        
-        $script:TestScriptsPath = Join-Path $script:TempPath "scripts"
+        $script:TestScriptsPath = Join-Path $global:TempPath "scripts"
     }
     
     BeforeEach {
@@ -14,7 +12,7 @@ Describe "Test-RateLimitInEffect" {
         # Recreate test directories after cleanup
         New-Item -Path $script:TestScriptsPath -ItemType Directory -Force | Out-Null
 
-        Mock Get-SourceRoot { return $script:TempPath } 
+        Mock Get-SourceRoot { return $global:TempPath } 
     }
     
     Context "No Rate Limit File" {

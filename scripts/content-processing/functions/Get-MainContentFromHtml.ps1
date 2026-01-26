@@ -29,8 +29,7 @@ function Get-MainContentFromHtml {
         [string]$SourceUrl
     )
 
-    # Load the balanced HTML content extraction function
-    . (Join-Path $PSScriptRoot "Get-BalancedHtmlContent.ps1")
+    # Get-BalancedHtmlContent is already preloaded by TechHubRunner.psm1
 
     # Parse the source URL
     $sourceUri = [Uri]$SourceUrl

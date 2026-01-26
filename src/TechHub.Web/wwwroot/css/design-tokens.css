@@ -29,13 +29,23 @@
 
   --color-bg-default: #161b22;   /* Standard component background - cards, sidebars, containers */
   --color-bg-emphasis: #21262d; /* Highlighted areas, code blocks */
+  --color-bg-elevated: #252538; /* Elevated sections, phase blocks */
+  --color-bg-section: #2a2a40; /* Section headers, interactive areas */
+  --color-bg-hover-subtle: rgba(255, 255, 255, 0.08); /* Subtle hover background for navigation */
+  
+  /* Overlay backgrounds (for special effects) */
+  --color-overlay-banner: rgba(0, 0, 0, 0.2); /* Light darkening overlay for banners */
+  --color-overlay-banner-edge: rgba(0, 0, 0, 0.3); /* Banner bottom edge gradient */
+  --color-overlay-strong: rgba(45, 45, 74, 0.95); /* Strong overlay for buttons */
+  
+  /* Modal/backdrop colors */
+  --color-black-backdrop: rgba(0, 0, 0, 0.4); /* Semi-transparent modal backdrop */
+  --color-black-backdrop-strong: rgba(0, 0, 0, 0.9); /* Strong modal backdrop */
 
   /* Body gradient */
   --color-bg-gradient-start: #1a1a2e;
   --color-bg-gradient-mid: #16213e;
   --color-bg-gradient-end: #0f0f23;
-
-  --color-purple-bg-medium: rgba(45, 45, 74, 0.5); /* Buttons, interactive elements */
 
   /* =======================================================================
       TEXT COLORS
@@ -66,6 +76,12 @@
   /* Purple backgrounds (with transparency) */
   --color-purple-bg-subtle: rgba(189, 147, 249, 0.1);  /* Subtle purple tint, hover states */
   --color-purple-border-subtle: rgba(189, 147, 249, 0.2); /* Subtle purple border */
+  --color-purple-border-very-subtle: rgba(189, 147, 249, 0.12); /* Very subtle purple border */
+  --color-purple-bg-badge: rgba(139, 92, 246, 0.3); /* Purple badge background */
+  --color-purple-bg-badge-hover: rgba(139, 92, 246, 0.5); /* Purple badge hover */
+  --color-purple-bg-dark: rgba(127, 86, 217, 0.08); /* Very subtle dark purple */
+  --color-purple-bg-dark-hover: rgba(127, 86, 217, 0.2); /* Dark purple hover */
+  --color-purple-border: rgba(139, 92, 246, 0.3); /* Purple border */
 
   /* =======================================================================
       ACCENT COLORS - Reusable color palette for cards, badges, borders
@@ -89,6 +105,7 @@
   /* Green (standard) */
   --color-green: #388e3c;
   --color-green-bg: rgba(56, 142, 60, 0.1);
+  --color-green-border: rgba(56, 142, 60, 0.3);
 
   /* Green Dark (success indicators) */
   --color-green-dark: #1a7f37;
@@ -114,6 +131,10 @@
   /* Pink */
   --color-pink: #c2185b;
   --color-pink-bg: rgba(194, 24, 91, 0.1);
+  
+  /* Pink Light (callouts, highlights) */
+  --color-pink-light-bg: rgba(249, 168, 212, 0.1);
+  --color-pink-light-border: rgba(249, 168, 212, 0.3);
 
   /* Red (danger indicators) */
   --color-red: #cf222e;
@@ -222,6 +243,16 @@
   --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.5);
   --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-2xl: 0 8px 32px rgba(0, 0, 0, 0.4); /* Extra large shadow for dramatic effect */
+  
+  /* Text Shadows */
+  --text-shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+  --text-shadow-md: 0 2px 4px rgba(0, 0, 0, 0.6); /* Medium text shadow */
+  --text-shadow-lg: 0 2px 8px rgba(0, 0, 0, 0.3); /* Large text shadow */
+  
+  /* Gradient overlays */
+  --gradient-overlay-dark: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)); /* Dark gradient overlay */
+  --border-glow-white: 0 0 0 1px rgba(255, 255, 255, 0.1); /* Subtle white border glow */
 
   /* Transitions */
   --duration-fast: 150ms;

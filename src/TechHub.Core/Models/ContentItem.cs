@@ -58,6 +58,18 @@ public class ContentItem
     public required IReadOnlyList<string> Tags { get; init; }
 
     /// <summary>
+    /// GitHub Copilot subscription plans this feature is available in (e.g., "Free", "Pro", "Business", "Pro+", "Enterprise")
+    /// Used for filtering features by plan tier on the Features page
+    /// </summary>
+    public IReadOnlyList<string> Plans { get; init; } = Array.Empty<string>();
+
+    /// <summary>
+    /// Indicates whether this feature is available in GitHub Enterprise Server (GHES)
+    /// Used for filtering features with GHES support
+    /// </summary>
+    public bool GhesSupport { get; init; }
+
+    /// <summary>
     /// Full markdown content rendered to HTML
     /// </summary>
     public required string RenderedHtml { get; init; }

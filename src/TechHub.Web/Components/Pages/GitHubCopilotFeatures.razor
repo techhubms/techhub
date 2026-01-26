@@ -1,4 +1,5 @@
 @page "/github-copilot/features"
+@rendermode InteractiveServer
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
 
@@ -22,6 +23,20 @@
     <main class="page-with-sidebar">
         <aside class="sidebar">
             <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-heading">Filters</h3>
+                <div class="filter-controls">
+                    <label class="filter-toggle">
+                        <input type="checkbox" @bind="showGhesOnly" @bind:after="ApplyFilters" />
+                        <span>Show GHES Support Only</span>
+                    </label>
+                    <label class="filter-toggle">
+                        <input type="checkbox" @bind="showVideosOnly" @bind:after="ApplyFilters" />
+                        <span>Show Features with Videos Only</span>
+                    </label>
+                </div>
+            </div>
         </aside>
 
         <article id="skiptohere" tabindex="-1" class="article-body">
@@ -82,18 +97,54 @@
 
                 @foreach (var featureSection in pageData.FeatureSections)
                 {
-                    var sectionVideos = videoItems.Where(v =>
-                    featureSection.Plans.Any(p => v.Tags?.Contains(p, StringComparer.OrdinalIgnoreCase) == true)).ToList();
+                    // Filter videos that belong to this tier's plans (e.g., Free videos have "Free" in Plans array)
+                    var sectionVideos = filteredVideoItems.Where(v =>
+                        featureSection.Plans.Any(p => v.Plans.Contains(p, StringComparer.OrdinalIgnoreCase)))
+                        .ToList();
 
                     <div class="features-video-section">
                         <h2 id="@featureSection.Id">@featureSection.Title</h2>
                         <p class="features-section-plans">Available in: @string.Join(", ", featureSection.Plans)</p>
                         @if (sectionVideos.Any())
                         {
-                            <div class="content-list">
-                                @foreach (var video in sectionVideos)
+                            <div class="features-grid">
+                                @foreach (var feature in sectionVideos)
                                 {
-                                    <ContentItemCard Item="@video" ShowSectionName="false" />
+                                    var hasVideo = feature.DateEpoch <= DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+                                    var featureUrl = hasVideo ? $"/github-copilot/videos/{feature.Slug}" : "#";
+                                    var cardClass = hasVideo ? "feature-card feature-card-clickable" : "feature-card feature-card-disabled";
+                                    var featureId = $"feature-{feature.Slug}";
+
+                                    <div class="@cardClass">
+                                        @if (hasVideo)
+                                        {
+                                            <a href="@featureUrl" class="feature-card-link">
+                                                <h3 id="@featureId">@feature.Title</h3>
+                                                <p>@feature.Excerpt</p>
+                                                <div class="feature-badges">
+                                                    @if (feature.GhesSupport)
+                                                    {
+                                                        <span class="badge-ghes">✓ GHES Support</span>
+                                                    }
+                                                    <span class="badge-video">View Demo Video</span>
+                                                </div>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <div class="feature-card-content">
+                                                <h3 id="@featureId">@feature.Title</h3>
+                                                <p>@feature.Excerpt</p>
+                                                <div class="feature-badges">
+                                                    @if (feature.GhesSupport)
+                                                    {
+                                                        <span class="badge-ghes">✓ GHES Support</span>
+                                                    }
+                                                    <span class="badge-coming-soon">Coming Soon</span>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
                                 }
                             </div>
                         }
@@ -107,6 +158,32 @@
 @code {
     private FeaturesPageData? pageData;
     private List<ContentItemDto> videoItems = new();
+    private List<ContentItemDto> filteredVideoItems = new();
+
+    // Filter state
+    private bool showGhesOnly = false;
+    private bool showVideosOnly = false;
+
+    /// <summary>
+    /// Apply client-side filters to video items based on toggle states
+    /// </summary>
+    private void ApplyFilters()
+    {
+        filteredVideoItems = videoItems;
+
+        if (showGhesOnly)
+        {
+            filteredVideoItems = filteredVideoItems.Where(v => v.GhesSupport).ToList();
+        }
+
+        if (showVideosOnly)
+        {
+            var now = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+            filteredVideoItems = filteredVideoItems.Where(v => v.DateEpoch <= now).ToList();
+        }
+
+        // Note: StateHasChanged() not needed because @bind:after triggers re-render automatically
+    }
 
     /// <summary>
     /// Generate HTML content for TOC extraction.
@@ -125,10 +202,22 @@
             sb.Append($"<h2 id=\"tier-{tier.Id}\">{tier.Name}</h2>");
         }
 
-        // Feature sections
+        // Feature sections with individual feature titles
         foreach (var featureSection in pageData.FeatureSections)
         {
             sb.Append($"<h2 id=\"{featureSection.Id}\">{featureSection.Title}</h2>");
+
+            // Add h3 for each feature in this section (use videoItems, not filteredVideoItems, so TOC shows all features)
+            var sectionVideos = videoItems.Where(v =>
+                featureSection.Plans.Any(p => v.Plans.Contains(p, StringComparer.OrdinalIgnoreCase)))
+                .ToList();
+
+            foreach (var feature in sectionVideos)
+            {
+                // Slugify the title for the ID (same as feature card h3)
+                var featureId = $"feature-{feature.Slug}";
+                sb.Append($"<h3 id=\"{featureId}\">{feature.Title}</h3>");
+            }
         }
 
         return sb.ToString();
@@ -148,11 +237,14 @@
 
             if (!string.IsNullOrEmpty(pageData.VideoCollection))
             {
-                var allVideos = await ApiClient.GetContentAsync(null, "videos");
+                // Query ghc-features collection from API
+                var allVideos = await ApiClient.GetContentAsync(null, pageData.VideoCollection);
                 videoItems = (allVideos ?? Enumerable.Empty<ContentItemDto>())
-                .Where(v => v.CollectionName == pageData.VideoCollection)
-                .OrderByDescending(v => v.DateEpoch)
-                .ToList();
+                    .OrderByDescending(v => v.DateEpoch)
+                    .ToList();
+
+                // Initialize filtered list with all items
+                filteredVideoItems = videoItems;
             }
         }
         catch (Exception ex)

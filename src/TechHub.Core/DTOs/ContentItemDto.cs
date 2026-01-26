@@ -21,6 +21,18 @@ public record ContentItemDto
     public required string Url { get; init; }
 
     /// <summary>
+    /// GitHub Copilot subscription plans this feature is available in (e.g., "Free", "Pro", "Business", "Pro+", "Enterprise")
+    /// Used for filtering features by plan tier on the Features page
+    /// </summary>
+    public IReadOnlyList<string> Plans { get; init; } = Array.Empty<string>();
+
+    /// <summary>
+    /// Indicates whether this feature is available in GitHub Enterprise Server (GHES)
+    /// Used for filtering features with GHES support
+    /// </summary>
+    public bool GhesSupport { get; init; }
+
+    /// <summary>
     /// Determines if this item links to an external source (vs linking internally to our site).
     /// News, blogs, and community items redirect to the original source.
     /// Videos and roundups (and custom pages) link internally since we can present them on our site.

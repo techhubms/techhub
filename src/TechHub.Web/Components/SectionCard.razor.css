@@ -100,7 +100,7 @@
 }
 
 .section-overlay {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  background: var(--gradient-overlay-dark);
   width: 100%;
   padding: var(--spacing-3);
   display: flex;
@@ -113,7 +113,7 @@
   color: var(--color-text-on-emphasis);
   margin: 0;
   font-size: var(--font-size-2xl);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: var(--text-shadow-md);
   font-weight: var(--font-weight-semibold);
   transition: color var(--duration-fast) var(--easing-ease);
 }
@@ -147,7 +147,7 @@
 
 /* Collection badges - Now proper links instead of buttons */
 .collection-badge {
-  background: rgba(139, 92, 246, 0.3);
+  background: var(--color-purple-bg-badge);
   color: var(--color-text-on-emphasis);
   padding: 0.25rem var(--spacing-2);
   border-radius: var(--radius-full);
@@ -161,7 +161,7 @@
 }
 
 .collection-badge:hover {
-  background: rgba(139, 92, 246, 0.5);
+  background: var(--color-purple-bg-badge-hover);
   border-color: var(--color-purple-medium);
   text-decoration: none;
 }
@@ -169,14 +169,14 @@
 /* Custom page badge styling - distinct from regular collection badges */
 /* Darker background with visible purple border to differentiate from auto-generated collections */
 .custom-page-badge {
-  background: rgba(127, 86, 217, 0.08); /* Very dark purple, barely visible background */
+  background: var(--color-purple-bg-dark); /* Very subtle dark purple */
   border-color: var(--color-purple-dark);
   color: var(--color-text-on-emphasis);
   font-style: italic;
 }
 
 .custom-page-badge:hover {
-  background: rgba(127, 86, 217, 0.2);
+  background: var(--color-purple-bg-dark-hover);
   border-color: var(--color-purple-medium);
   color: var(--color-text-on-emphasis);
 }

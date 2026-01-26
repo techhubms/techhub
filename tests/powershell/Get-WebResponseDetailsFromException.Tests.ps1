@@ -1,6 +1,5 @@
 Describe "Get-WebResponseDetailsFromException" {
     BeforeAll {
-        . "$PSScriptRoot/Initialize-BeforeAll.ps1"
     }
 
     BeforeEach {

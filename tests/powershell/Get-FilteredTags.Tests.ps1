@@ -6,7 +6,6 @@
 
 Describe "Get-FilteredTags" {
     BeforeAll {
-        . "$PSScriptRoot/Initialize-BeforeAll.ps1"
     }
 
     BeforeEach {

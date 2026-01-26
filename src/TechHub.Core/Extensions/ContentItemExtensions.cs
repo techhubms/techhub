@@ -32,6 +32,8 @@ public static class ContentItemExtensions
             SectionNames = item.SectionNames,
             PrimarySectionName = primarySectionName,
             Tags = item.Tags,
+            Plans = item.Plans,
+            GhesSupport = item.GhesSupport,
             Excerpt = item.Excerpt,
             ExternalUrl = item.ExternalUrl,
             Url = item.GetUrlInSection(sectionUrl)

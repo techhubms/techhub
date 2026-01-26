@@ -60,4 +60,142 @@ public class AISDLCTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
         var mainContent = Page.Locator("main");
         await Assertions.Expect(mainContent).ToBeVisibleAsync(new() { Timeout = 5000 });
     }
+
+    [Fact]
+    public async Task AISDLC_ShouldDisplay_SDLCPhases()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Should have SDLC phases section
+        var phasesSection = Page.Locator(".sdlc-phases");
+        await phasesSection.AssertElementVisibleAsync();
+
+        // Should have multiple phase cards
+        var phaseCards = Page.Locator(".sdlc-phase-card");
+        var phaseCount = await phaseCards.CountAsync();
+        phaseCount.Should().BeGreaterThanOrEqualTo(5, "Expected at least 5 SDLC phases (Ideation, Planning, Design, Implementation, Testing, Deployment, Maintenance)");
+    }
+
+    [Fact]
+    public async Task AISDLC_PhaseCards_ShouldHave_ColoredBorders()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Phase cards should have colored left borders
+        var phaseCard = Page.Locator(".sdlc-phase-card").First;
+        await phaseCard.AssertElementVisibleAsync();
+
+        // Check that border-left-color is set (should not be default)
+        var borderColor = await phaseCard.GetAttributeAsync("style");
+        borderColor.Should().Contain("border-left-color", "Phase cards should have colored left borders from phase.Color");
+    }
+
+    [Fact]
+    public async Task AISDLC_PhaseCards_ShouldBe_Collapsible()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Get first phase header and content
+        var phaseHeader = Page.Locator(".sdlc-phase-header").First;
+        var phaseContent = Page.Locator(".sdlc-phase-content").First;
+
+        // Assert - Content should be hidden initially (no expanded class)
+        var contentClasses = await phaseContent.GetAttributeAsync("class");
+        contentClasses.Should().NotContain("expanded", "Phase content should be collapsed by default");
+
+        // Act - Click to expand
+        await phaseHeader.ClickAsync();
+        await Page.WaitForTimeoutAsync(1000); // Wait for animation
+
+        // Assert - Content should be visible after click
+        var expandedClasses = await phaseContent.GetAttributeAsync("class");
+        expandedClasses.Should().Contain("expanded", "Phase content should expand when header is clicked");
+    }
+
+    [Fact]
+    public async Task AISDLC_PhaseCards_ShouldDisplay_IconsAndNames()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Each phase should have an icon and name
+        var firstPhaseHeader = Page.Locator(".sdlc-phase-header").First;
+        await firstPhaseHeader.AssertElementVisibleAsync();
+
+        // Should have phase icon (emoji)
+        var phaseIcon = firstPhaseHeader.Locator(".sdlc-phase-icon");
+        await phaseIcon.AssertElementVisibleAsync();
+        var iconText = await phaseIcon.TextContentAsync();
+        iconText.Should().NotBeNullOrWhiteSpace("Phase should have an icon (emoji)");
+
+        // Should have phase name heading
+        await Assertions.Expect(firstPhaseHeader.Locator("h3")).ToBeVisibleAsync();
+    }
+
+    [Fact]
+    public async Task AISDLC_PhaseContent_ShouldDisplay_AIEnhancements()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Expand first phase
+        var firstPhaseHeader = Page.Locator(".sdlc-phase-header").First;
+        await firstPhaseHeader.ClickAsync();
+        await Page.WaitForTimeoutAsync(1000); // Wait for expansion
+
+        // Assert - Expanded phase should show AI enhancements
+        var firstPhaseContent = Page.Locator(".sdlc-phase-content").First;
+        var aiSection = firstPhaseContent.Locator(".sdlc-phase-ai");
+        await aiSection.AssertElementVisibleAsync();
+
+        // Should have AI enhancement heading
+        var aiHeading = aiSection.Locator("h4");
+        await aiHeading.AssertElementVisibleAsync();
+        var headingText = await aiHeading.TextContentAsync();
+        headingText.Should().Contain("AI", "Should have AI enhancements section heading");
+    }
+
+    [Fact]
+    public async Task AISDLC_Intro_ShouldDisplay()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Should have intro section
+        var intro = Page.Locator(".custom-page-intro");
+        await intro.AssertElementVisibleAsync();
+
+        // Should have descriptive text about SDLC
+        var introText = await intro.TextContentAsync();
+        introText.Should().Contain("Software Development", "Intro should describe SDLC");
+    }
+
+    [Fact]
+    public async Task AISDLC_ShouldHave_NoConsoleErrors()
+    {
+        // Arrange
+        var consoleErrors = new List<string>();
+        Page.Console += (_, msg) =>
+        {
+            if (msg.Type == "error")
+            {
+                consoleErrors.Add(msg.Text);
+            }
+        };
+
+        // Act
+        await Page.GotoRelativeAsync(PageUrl);
+        await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
+
+        // Assert - Should have no console errors (filter WebSocket connection errors from Blazor)
+        var significantErrors = consoleErrors
+            .Where(e => !e.Contains("WebSocket"))
+            .Where(e => !e.Contains("ERR_CONNECTION_REFUSED"))
+            .ToList();
+
+        significantErrors.Should().BeEmpty("Page should load without JavaScript errors");
+    }
 }

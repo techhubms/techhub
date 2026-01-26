@@ -4,20 +4,29 @@
 
 Describe "Convert-RssToMarkdown" {
     BeforeAll {
-        . "$PSScriptRoot/Initialize-BeforeAll.ps1"
+        # Mock Start-Sleep to speed up tests (prevent 15-second delays in Invoke-AiApiCall)
+        Mock Start-Sleep { }
 
-        $script:TestScriptsPath = Join-Path $script:TempPath "scripts"
+        # Mock npx to skip markdownlint calls (saves ~1.5-2s per call, 14 calls = ~21-28s saved)
+        function global:npx {
+            param([string[]]$Arguments)
+            # Do nothing - just return success
+            $global:LASTEXITCODE = 0
+            return ""
+        }
+
+        $script:TestScriptsPath = Join-Path $global:TempPath "scripts"
         $script:TestContentProcessingPath = Join-Path $script:TestScriptsPath "content-processing"
         $script:TestDataPath = Join-Path $script:TestScriptsPath "data"
-        $script:TestOutputDir = Join-Path $script:TempPath "_blogs"
-        $script:TestCommunityOutputDir = Join-Path $script:TempPath "_community"
+        $script:TestOutputDir = Join-Path $global:TempPath "_blogs"
+        $script:TestCommunityOutputDir = Join-Path $global:TempPath "_community"
         $script:TestAiResultsDir = Join-Path $script:TestScriptsPath "ai-results"
         $script:TestTemplatesPath = Join-Path $script:TestContentProcessingPath "templates"
         $script:TestSkippedEntriesPath = Join-Path $script:TestDataPath "skipped-entries.json"
         $script:TestProcessedEntriesPath = Join-Path $script:TestDataPath "processed-entries.json"
         
         # Create source location for template files that BeforeEach can copy from
-        $script:TemplateSourcePath = Join-Path $script:TempPath "templates-source"
+        $script:TemplateSourcePath = Join-Path $global:TempPath "templates-source"
        
         # Create test items array directly (no Feed object needed)
         $script:TestItems = @(
@@ -74,7 +83,7 @@ Describe "Convert-RssToMarkdown" {
                 Description     = "This is a YouTube video description. " + ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. " * 10)
                 Author          = "YouTube Creator"
                 Tags            = @("Video", "YouTube")
-                OutputDir       = Join-Path $script:TempPath "_videos"
+                OutputDir       = Join-Path $global:TempPath "_videos"
                 FeedName        = "Test Feed"
                 FeedUrl         = "https://example.com/feed"
                 EnhancedContent = "Test enhanced content for processing"
@@ -89,7 +98,7 @@ Describe "Convert-RssToMarkdown" {
                 Description     = "This is a Reddit discussion. " + ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. " * 10)
                 Author          = "Reddit User"
                 Tags            = @("Community", "Reddit")
-                OutputDir       = Join-Path $script:TempPath "_community"
+                OutputDir       = Join-Path $global:TempPath "_community"
                 FeedName        = "Test Feed"
                 FeedUrl         = "https://example.com/feed"
                 EnhancedContent = "Test enhanced content for processing"
@@ -119,7 +128,7 @@ Describe "Convert-RssToMarkdown" {
                 Description     = "This is a community article. " + ("Lorem ipsum dolor sit amet, consectetur adipiscing elit. " * 10)
                 Author          = "Community Author"
                 Tags            = @("Community", "Testing")
-                OutputDir       = Join-Path $script:TempPath "_community"
+                OutputDir       = Join-Path $global:TempPath "_community"
                 FeedName        = "Test Feed"
                 FeedUrl         = "https://example.com/feed"
                 EnhancedContent = "This is a comprehensive community article that provides substantial value to readers interested in technology and software development. The article discusses various aspects of community-driven development, including collaboration strategies, best practices for open source contributions, and effective communication techniques in distributed teams. It covers practical applications of community management principles and provides detailed examples of successful community initiatives. The content explores methodologies for building engaged developer communities, common challenges in community building, and recommendations for fostering inclusive and productive environments. Additionally, it discusses the importance of documentation, mentorship programs, and knowledge sharing platforms in creating thriving technical communities. The article also covers governance models, conflict resolution strategies, and sustainability considerations for long-term community success."
@@ -169,7 +178,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{EXTER
         Set-Content -Path (Join-Path $script:TemplateSourcePath "template-videos.md") -Value $videoTemplate
 
         # Recreate directory structure (Initialize-BeforeEach.ps1 removes TestSourceRoot)
-        New-Item -Path $script:TempPath -ItemType Directory -Force | Out-Null
+        New-Item -Path $global:TempPath -ItemType Directory -Force | Out-Null
         New-Item -Path $script:TestScriptsPath -ItemType Directory -Force | Out-Null
         New-Item -Path $script:TestContentProcessingPath -ItemType Directory -Force | Out-Null
         New-Item -Path $script:TestDataPath -ItemType Directory -Force | Out-Null
@@ -187,7 +196,7 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{EXTER
         # Create collection directories and clear any existing files
         $collectionDirs = @("_blogs", "_community", "_news", "_videos", "_events", "_roundups")
         foreach ($dir in $collectionDirs) {
-            $fullPath = Join-Path $script:TempPath $dir
+            $fullPath = Join-Path $global:TempPath $dir
             New-Item -Path $fullPath -ItemType Directory -Force | Out-Null
             Get-ChildItem -Path $fullPath -Filter "*.md" -ErrorAction SilentlyContinue | Remove-Item -Force
         }
@@ -208,13 +217,13 @@ This post appeared first on {{FEEDNAME}}. [Read the entire article here]({{EXTER
             }
         )
 
-        Mock Get-SourceRoot { return $script:TempPath }
+        Mock Get-SourceRoot { return $global:TempPath }
     }
     
     AfterAll {
         # Clean up test files
-        if (Test-Path $script:TempPath) {
-            Remove-Item -Path $script:TempPath -Recurse -Force
+        if (Test-Path $global:TempPath) {
+            Remove-Item -Path $global:TempPath -Recurse -Force
         }
     }
     
@@ -1159,7 +1168,7 @@ Content
                     Description     = "This is a short description." # Only 30 chars - but should work fine
                     Author          = "Test Author"
                     Tags            = @("AI", "Testing")
-                    OutputDir       = Join-Path $script:TempPath "_blogs"
+                    OutputDir       = Join-Path $global:TempPath "_blogs"
                     FeedName        = "Test Feed"
                     FeedUrl         = "https://example.com/feed.xml"
                     EnhancedContent = "Test enhanced content for processing"
@@ -1204,7 +1213,7 @@ Content
                     Description     = "Short video description." # Short but should not trigger fetch for YouTube
                     Author          = "Video Author"
                     Tags            = @("AI", "Video")
-                    OutputDir       = Join-Path $script:TempPath "_videos"
+                    OutputDir       = Join-Path $global:TempPath "_videos"
                     FeedName        = "YouTube Test Feed"
                     FeedUrl         = "https://www.youtube.com/feeds/videos.xml?channel_id=UCtest"
                     EnhancedContent = "Test enhanced content for processing"
@@ -1248,7 +1257,7 @@ Content
                     Description     = "Reddit discussion about AI tools and techniques."
                     Author          = "Reddit User"
                     Tags            = @("AI", "Community")
-                    OutputDir       = Join-Path $script:TempPath "_community"
+                    OutputDir       = Join-Path $global:TempPath "_community"
                     FeedName        = "Test Feed"
                     FeedUrl         = "https://example.com/feed.xml"
                     EnhancedContent = "This is a comprehensive Reddit discussion about AI tools and techniques that provides substantial value to readers. The post discusses various aspects of artificial intelligence, including natural language processing, computer vision, and deep learning algorithms. It covers practical applications in enterprise environments and provides detailed examples of implementation strategies. The content explores best practices for AI development, common pitfalls to avoid, and recommendations for getting started with AI projects. Additionally, it discusses the importance of data quality, model training techniques, and deployment considerations for production AI systems. The post also covers ethical considerations in AI development and the importance of responsible AI practices in modern software development. This content is long enough to meet the minimum character requirements for community content processing and provides meaningful insights to the developer community. Furthermore, it includes detailed discussions about emerging AI trends, best practices for machine learning model evaluation, and comprehensive strategies for implementing AI solutions in real-world scenarios with proper testing and validation methodologies."
@@ -1296,7 +1305,7 @@ Content
                     Description     = "This is an article that will cause AI processing to fail."
                     Author          = "Test Author"
                     Tags            = @("AI", "Testing")
-                    OutputDir       = Join-Path $script:TempPath "_blogs"
+                    OutputDir       = Join-Path $global:TempPath "_blogs"
                     FeedName        = "Test Feed"
                     FeedUrl         = "https://example.com/feed.xml"
                     EnhancedContent = "Test enhanced content for error processing"

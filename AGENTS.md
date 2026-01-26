@@ -582,6 +582,17 @@ This section defines how to start, test, and interact with the running website.
 
 The `Run` function builds, tests, and starts servers **in background**. After `Run` completes, the terminal is immediately free to use for other commands. Servers continue running in background with output redirected to `.tmp/logs/`.
 
+**🚨 CRITICAL: Proper Run Function Execution**:
+
+When executing the `Run` function, you **MUST** follow this exact sequence:
+
+1. **Execute the Run command**: Call `Run` (or `Run -WithoutTests`, etc.) using `run_in_terminal` tool
+2. **Wait patiently**: Use **ONLY** `get_terminal_output` tool repeatedly until you see the text `"This terminal is now free to use"`
+3. **Do NOT interrupt**: Do NOT use `Start-Sleep`, execute other commands, or use other tools during the wait
+4. **Be patient**: This process can take up to 5 minutes - keep polling with `get_terminal_output` until completion
+
+**⚠️ Failure to follow this sequence will interrupt the build/test/startup process and require starting over.**
+
 **⚠️ E2E TEST NOTE**:
 
 ✅ **ALWAYS** use `Run` (default) or `Run -TestProject E2E.Tests` for E2E tests.  
@@ -802,6 +813,8 @@ Get-Process dotnet | Stop-Process -Force
 ### Using the Run Function
 
 The `Run` function is your **primary tool** for building, testing, and running the Tech Hub website. It handles all standard development workflows automatically.
+
+**🚨 IMPORTANT**: See [Starting the Website](#starting-the-website) section above for **CRITICAL execution instructions** - you MUST follow the exact sequence (execute command, wait with `get_terminal_output` only) to avoid interrupting the build/test/startup process.
 
 **Common Workflows**:
 

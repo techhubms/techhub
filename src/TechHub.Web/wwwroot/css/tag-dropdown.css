@@ -21,7 +21,7 @@
 }
 
 .tag-dropdown__button:hover {
-    background-color: var(--color-purple-bg-medium);
+    background-color: var(--color-bg-elevated);
     border-color: var(--color-purple-bright);
 }
 
@@ -53,7 +53,7 @@
     background-color: var(--color-bg-default);
     border: 1px solid var(--color-border-default);
     border-radius: 0.375rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-md);
     z-index: 1000;
     max-height: 400px;
     display: flex;

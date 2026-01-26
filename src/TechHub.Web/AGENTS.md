@@ -18,8 +18,7 @@ This project implements the Blazor frontend with server-side rendering (SSR) and
 
 ### ✅ Always Do
 
-- **Use Tech Hub design system** - Colors, typography, and spacing defined in `wwwroot/css/site.css`
-- **Use Tech Hub color palette** - #1f6feb (primary blue), #bd93f9 (bright purple), #1a1a2e (dark navy), #28a745 (secondary green)
+- **Use design tokens exclusively** - ALL colors, spacing, typography from `wwwroot/css/design-tokens.css` (see [Design Tokens section](#design-tokens---single-source-of-truth))
 - **Server-side render initial content** - Use SSR for SEO and performance
 - **Progressive enhancement** - Core functionality works without JavaScript
 - **Use TechHubApiClient for all API calls** - Typed HTTP client in `Services/TechHubApiClient.cs`
@@ -37,7 +36,9 @@ This project implements the Blazor frontend with server-side rendering (SSR) and
 
 ### 🚫 Never Do
 
-- **Never hardcode colors** - Always use CSS variables from Tech Hub design system
+- **Never hardcode colors, spacing, or typography** - Always use design tokens from `wwwroot/css/design-tokens.css`
+- **Never use inline styles with hardcoded values** - Use CSS classes with design token references
+- **Never use hex codes or rgba() directly in CSS** - Define new tokens in design-tokens.css first
 - **Never duplicate component logic** - Extract to shared components
 - **Never skip error handling** - Use try-catch and display user-friendly messages
 - **Never create content without server-side rendering** - Initial load must show complete content
@@ -423,6 +424,115 @@ Is this style specific to ONE component/page?
 - **Automatic optimization** - Blazor handles component CSS bundling and scoping
 
 ### Styling Rules & Best Practices
+
+#### Design Tokens - Single Source of Truth
+
+**🚨 CRITICAL**: ALL colors, spacing, typography, and other design values MUST be defined in `wwwroot/css/design-tokens.css`. This is the single source of truth for the design system.
+
+**File Location**: [wwwroot/css/design-tokens.css](wwwroot/css/design-tokens.css)
+
+**Core Principle**: Never hardcode design values. Always use CSS custom properties (design tokens).
+
+**✅ DO - Use design tokens**:
+
+```css
+/* ✅ CORRECT - Use design tokens */
+.card {
+    background: var(--color-bg-default);
+    border: 1px solid var(--color-purple-border-subtle);
+    padding: var(--spacing-3);
+    border-radius: var(--radius-md);
+    color: var(--color-text-primary);
+}
+
+.button:hover {
+    background: var(--color-purple-medium);
+    box-shadow: var(--shadow-md);
+}
+```
+
+**🚫 DON'T - Hardcode values**:
+
+```css
+/* ❌ WRONG - Hardcoded hex colors */
+.card {
+    background: #161b22;
+    border: 1px solid rgba(189, 147, 249, 0.2);
+    padding: 24px;
+    border-radius: 8px;
+    color: #c9d1d9;
+}
+
+/* ❌ WRONG - Hardcoded rgba colors */
+.button:hover {
+    background: rgba(157, 114, 217, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+```
+
+**Adding New Design Tokens**:
+
+If you need a new color, spacing, or other design value:
+
+1. **Add to design-tokens.css** - Define the token in the appropriate section
+2. **Use semantic naming** - Name describes purpose, not value (e.g., `--color-bg-elevated`, not `--color-gray-800`)
+3. **Document usage** - Add comment explaining when to use it
+4. **Check for duplicates** - Verify similar tokens don't already exist
+
+**Example - Adding a new color**:
+
+```css
+/* In design-tokens.css */
+
+/* Border Colors */
+--color-border-default: #30363d;              /* Default borders */
+--color-border-emphasis: #6e7681;             /* Emphasized borders */
+--color-border-interactive: var(--color-purple-medium); /* NEW - Interactive element borders */
+```
+
+**Design Token Categories**:
+
+- **Colors** - Backgrounds, text, borders, overlays, accents
+- **Typography** - Font families, sizes, weights, line heights
+- **Spacing** - Padding, margins, gaps (8px grid system: 0.5rem, 1rem, 1.5rem, 2rem, etc.)
+- **Layout** - Breakpoints, container widths, z-index scale
+- **Effects** - Shadows, transitions, border radius
+- **Interactive** - Focus indicators, touch targets
+
+**Why This Rule Exists**:
+
+- **Consistency** - Ensures design system is applied uniformly
+- **Maintainability** - Change once, updates everywhere
+- **Theming** - Easy to create dark/light themes or rebrand
+- **Performance** - CSS custom properties are optimized by browsers
+- **Collaboration** - Designers and developers speak same language
+- **Accessibility** - Centralized contrast ratios and spacing ensure WCAG compliance
+
+**Common Violations to Avoid**:
+
+```css
+/* ❌ WRONG - Inline rgba/hex in hover states */
+.element:hover {
+    background: rgba(0, 0, 0, 0.3);  /* Define as --color-overlay-hover instead */
+}
+
+/* ❌ WRONG - Magic numbers for spacing */
+.container {
+    padding: 23px;  /* Use --spacing-3 (24px / 1.5rem) instead */
+    margin-bottom: 17px;  /* Use --spacing-2 (16px / 1rem) instead */
+}
+
+/* ❌ WRONG - Random shadow values */
+.card {
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.35);  /* Use --shadow-md instead */
+}
+```
+
+**Enforcement**:
+
+- Use `get_errors` tool after editing CSS files to check for hardcoded values
+- Code review should flag any hex codes or rgba() not in design-tokens.css
+- Linting rules should catch hardcoded values (if configured)
 
 #### Hover Effects - NO Position/Size Changes
 

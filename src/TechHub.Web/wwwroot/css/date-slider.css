@@ -44,7 +44,7 @@
 }
 
 .date-slider__preset-btn:hover {
-    background-color: var(--color-purple-bg-medium);
+    background-color: var(--color-bg-elevated);
     border-color: var(--color-purple-bright);
 }
 
@@ -98,7 +98,7 @@
 
 .date-slider__handle:hover {
     transform: translate(-50%, -50%);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-md);
 }
 
 .date-slider__handle:active {

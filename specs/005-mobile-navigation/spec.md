@@ -226,7 +226,7 @@ Desktop users see the traditional horizontal navigation menu without any hamburg
 **Overlay Fade**:
 
 - Closed: `display: none`
-- Open: `display: block`, `background: rgba(0, 0, 0, 0.5)`
+- Open: `display: block`, `background: var(--color-black-backdrop)`
 - Fade in/out with opacity transition
 
 ### Body Scroll Lock

@@ -52,30 +52,31 @@
 
 .nav-link {
   padding: var(--spacing-1) var(--spacing-2);
-  padding-bottom: 6px;
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-sm);
   transition: all var(--duration-fast) var(--easing-ease);
   min-height: var(--touch-target-min-size);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   color: var(--color-text-primary);
   text-decoration: none;
   position: relative;
-  border-bottom: 3px solid transparent;
+  border: 3px solid transparent;
   /* Rounded corners for focus outline */
   border-radius: var(--radius-md);
+  line-height: 1;
 }
 
 .nav-link:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--color-bg-hover-subtle);
   border-radius: var(--radius-md);
   text-decoration: none;
 }
 
 .nav-link.active {
   font-weight: var(--font-weight-medium);
-  border-bottom-color: var(--color-purple-bright);
+  border-color: var(--color-purple-bright);
   color: var(--color-purple-bright);
   background: transparent;
 }

@@ -1,6 +1,7 @@
 @page "/devops/dx-space"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
+@rendermode InteractiveServer
 
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
@@ -51,14 +52,14 @@
                     </button>
                     <div class="dx-card-content @(IsExpanded(0) ? "expanded" : "")">
                         <div class="dx-section-intro">
-                            <h3>@pageData.Dora.IntroHeading</h3>
+                            <h3 id="dora-intro">@pageData.Dora.IntroHeading</h3>
                             @foreach (var paragraph in pageData.Dora.IntroContent)
                             {
                                 <p>@paragraph</p>
                             }
                         </div>
 
-                        <h3>@pageData.Dora.MetricsHeading</h3>
+                        <h3 id="dora-metrics">@pageData.Dora.MetricsHeading</h3>
                         <div class="dx-metrics-grid">
                             @foreach (var metric in pageData.Dora.Metrics)
                             {
@@ -100,14 +101,14 @@
                     </button>
                     <div class="dx-card-content @(IsExpanded(1) ? "expanded" : "")">
                         <div class="dx-section-intro">
-                            <h3>@pageData.Space.IntroHeading</h3>
+                            <h3 id="space-intro">@pageData.Space.IntroHeading</h3>
                             @foreach (var paragraph in pageData.Space.IntroContent)
                             {
                                 <p>@paragraph</p>
                             }
                         </div>
 
-                        <h3>@pageData.Space.DimensionsHeading</h3>
+                        <h3 id="space-dimensions">@pageData.Space.DimensionsHeading</h3>
                         <div class="dx-space-grid">
                             @foreach (var dimension in pageData.Space.Dimensions)
                             {
@@ -149,7 +150,7 @@
                     </button>
                     <div class="dx-card-content @(IsExpanded(2) ? "expanded" : "")">
                         <div class="dx-section-intro">
-                            <h3>@pageData.DevEx.IntroHeading</h3>
+                            <h3 id="devex-intro">@pageData.DevEx.IntroHeading</h3>
                             @foreach (var paragraph in pageData.DevEx.IntroContent)
                             {
                                 <p>@paragraph</p>
@@ -166,7 +167,7 @@
                             }
                         </div>
 
-                        <h3>@pageData.DevEx.DimensionsHeading</h3>
+                        <h3 id="devex-dimensions">@pageData.DevEx.DimensionsHeading</h3>
                         <div class="dx-devex-grid">
                             @foreach (var dimension in pageData.DevEx.Dimensions)
                             {
@@ -209,7 +210,7 @@
                     </button>
                     <div class="dx-card-content @(IsExpanded(3) ? "expanded" : "")">
                         <div class="dx-section-intro">
-                            <h3>@pageData.Relationships.IntroHeading</h3>
+                            <h3 id="relationships-intro">@pageData.Relationships.IntroHeading</h3>
                             <p>@pageData.Relationships.IntroContent</p>
                         </div>
 
@@ -233,7 +234,7 @@
                             }
                         </div>
 
-                        <h3>@pageData.Relationships.ChoiceHeading</h3>
+                        <h3 id="relationships-choice">@pageData.Relationships.ChoiceHeading</h3>
                         <div class="dx-choice-grid">
                             @foreach (var choice in pageData.Relationships.Choices)
                             {
@@ -264,11 +265,11 @@
                     </button>
                     <div class="dx-card-content @(IsExpanded(4) ? "expanded" : "")">
                         <div class="dx-section-intro">
-                            <h3>@pageData.GettingStarted.IntroHeading</h3>
+                            <h3 id="getting-started-intro">@pageData.GettingStarted.IntroHeading</h3>
                             <p>@pageData.GettingStarted.IntroContent</p>
                         </div>
 
-                        <h3>@pageData.GettingStarted.StepsHeading</h3>
+                        <h3 id="getting-started-steps">@pageData.GettingStarted.StepsHeading</h3>
                         <div class="dx-steps-list">
                             @foreach (var step in pageData.GettingStarted.Steps)
                             {
@@ -301,11 +302,11 @@
                     </button>
                     <div class="dx-card-content @(IsExpanded(5) ? "expanded" : "")">
                         <div class="dx-section-intro">
-                            <h3>@pageData.Tools.IntroHeading</h3>
+                            <h3 id="tools-intro">@pageData.Tools.IntroHeading</h3>
                             <p>@pageData.Tools.IntroContent</p>
                         </div>
 
-                        <h3>@pageData.Tools.ToolsHeading</h3>
+                        <h3 id="tools-tools">@pageData.Tools.ToolsHeading</h3>
                         <div class="dx-tools-grid">
                             @foreach (var tool in pageData.Tools.Tools)
                             {
@@ -317,7 +318,7 @@
                             }
                         </div>
 
-                        <h3>@pageData.Tools.ResourcesHeading</h3>
+                        <h3 id="tools-resources">@pageData.Tools.ResourcesHeading</h3>
                         <div class="dx-resources-list">
                             @foreach (var resource in pageData.Tools.Resources)
                             {
@@ -338,7 +339,7 @@
                     </button>
                     <div class="dx-card-content @(IsExpanded(6) ? "expanded" : "")">
                         <div class="dx-section-intro">
-                            <h3>@pageData.BestPractices.IntroHeading</h3>
+                            <h3 id="best-practices-intro">@pageData.BestPractices.IntroHeading</h3>
                             <p>@pageData.BestPractices.IntroContent</p>
                         </div>
 
@@ -385,13 +386,42 @@
             return string.Empty;
 
         var sb = new System.Text.StringBuilder();
+
+        // DORA Metrics
         sb.Append($"<h2 id=\"dx-card-dora\">{pageData.Dora.Title}</h2>");
+        sb.Append($"<h3 id=\"dora-intro\">{pageData.Dora.IntroHeading}</h3>");
+        sb.Append($"<h3 id=\"dora-metrics\">{pageData.Dora.MetricsHeading}</h3>");
+
+        // SPACE Framework
         sb.Append($"<h2 id=\"dx-card-space\">{pageData.Space.Title}</h2>");
+        sb.Append($"<h3 id=\"space-intro\">{pageData.Space.IntroHeading}</h3>");
+        sb.Append($"<h3 id=\"space-dimensions\">{pageData.Space.DimensionsHeading}</h3>");
+
+        // DevEx Framework
         sb.Append($"<h2 id=\"dx-card-devex\">{pageData.DevEx.Title}</h2>");
+        sb.Append($"<h3 id=\"devex-intro\">{pageData.DevEx.IntroHeading}</h3>");
+        sb.Append($"<h3 id=\"devex-dimensions\">{pageData.DevEx.DimensionsHeading}</h3>");
+
+        // Relationships
         sb.Append($"<h2 id=\"dx-card-relationships\">{pageData.Relationships.Title}</h2>");
+        sb.Append($"<h3 id=\"relationships-intro\">{pageData.Relationships.IntroHeading}</h3>");
+        sb.Append($"<h3 id=\"relationships-choice\">{pageData.Relationships.ChoiceHeading}</h3>");
+
+        // Getting Started
         sb.Append($"<h2 id=\"dx-card-getting-started\">{pageData.GettingStarted.Title}</h2>");
+        sb.Append($"<h3 id=\"getting-started-intro\">{pageData.GettingStarted.IntroHeading}</h3>");
+        sb.Append($"<h3 id=\"getting-started-steps\">{pageData.GettingStarted.StepsHeading}</h3>");
+
+        // Tools
         sb.Append($"<h2 id=\"dx-card-tools\">{pageData.Tools.Title}</h2>");
+        sb.Append($"<h3 id=\"tools-intro\">{pageData.Tools.IntroHeading}</h3>");
+        sb.Append($"<h3 id=\"tools-tools\">{pageData.Tools.ToolsHeading}</h3>");
+        sb.Append($"<h3 id=\"tools-resources\">{pageData.Tools.ResourcesHeading}</h3>");
+
+        // Best Practices
         sb.Append($"<h2 id=\"dx-card-best-practices\">{pageData.BestPractices.Title}</h2>");
+        sb.Append($"<h3 id=\"best-practices-intro\">{pageData.BestPractices.IntroHeading}</h3>");
+
         return sb.ToString();
     }
 

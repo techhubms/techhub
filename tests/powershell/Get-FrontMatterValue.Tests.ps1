@@ -3,7 +3,6 @@
 
 Describe "Get-FrontMatterValue" {
     BeforeAll {
-        . "$PSScriptRoot/Initialize-BeforeAll.ps1"
     }
 
     BeforeEach {

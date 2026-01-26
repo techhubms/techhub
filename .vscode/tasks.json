@@ -1,0 +1,148 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    // ========== SOLUTION-LEVEL TASKS ==========
+    {
+      "label": "build",
+      "detail": "Build entire solution (all projects)",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/TechHub.slnx",
+        "/property:GenerateFullPaths=true",
+        "/consoleloggerparameters:NoSummary;ForceNoAlign"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "clean",
+      "detail": "Clean entire solution",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "clean",
+        "${workspaceFolder}/TechHub.slnx"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": "build"
+    },
+    {
+      "label": "restore",
+      "detail": "Restore NuGet packages for entire solution",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "restore",
+        "${workspaceFolder}/TechHub.slnx"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": "build"
+    },
+    // ========== TEST TASKS ==========
+    {
+      "label": "test",
+      "detail": "Run all tests in the solution",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "test",
+        "${workspaceFolder}/TechHub.slnx",
+        "--no-build",
+        "--verbosity",
+        "normal"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "dependsOn": [
+        "build"
+      ]
+    },
+    {
+      "label": "test-unit",
+      "detail": "Run unit tests only (excludes E2E)",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "test",
+        "${workspaceFolder}/TechHub.slnx",
+        "--no-build",
+        "--verbosity",
+        "normal",
+        "--filter",
+        "FullyQualifiedName!~E2E"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": "test",
+      "dependsOn": [
+        "build"
+      ]
+    },
+    {
+      "label": "test-e2e",
+      "detail": "Run E2E tests only (requires servers running)",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "test",
+        "${workspaceFolder}/tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj",
+        "--no-build",
+        "--verbosity",
+        "normal"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": "test",
+      "dependsOn": [
+        "build"
+      ]
+    },
+    // ========== ASPIRE APPHOST TASKS ==========
+    {
+      "label": "run-apphost",
+      "detail": "Run via Aspire (Development) - starts API + Web with Dashboard",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "watch",
+        "run",
+        "--project",
+        "${workspaceFolder}/src/TechHub.AppHost/TechHub.AppHost.csproj",
+        "--launch-profile",
+        "Development"
+      ],
+      "problemMatcher": "$msCompile",
+      "isBackground": true,
+      "dependsOn": [
+        "build"
+      ]
+    },
+    {
+      "label": "run-apphost-production",
+      "detail": "Run via Aspire (Production) - starts API + Web in Production mode",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "watch",
+        "run",
+        "--project",
+        "${workspaceFolder}/src/TechHub.AppHost/TechHub.AppHost.csproj",
+        "--launch-profile",
+        "Production",
+        "--configuration",
+        "Release"
+      ],
+      "problemMatcher": "$msCompile",
+      "isBackground": true,
+      "dependsOn": [
+        "build"
+      ]
+    }
+  ]
+}

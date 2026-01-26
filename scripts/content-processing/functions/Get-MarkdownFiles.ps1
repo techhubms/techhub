@@ -117,15 +117,17 @@ function Get-MarkdownFiles {
         })
     }
     
-    # Log directory breakdown after filtering
-    Write-Host "📊 Directory breakdown of $($filteredFiles.Count) total markdown files:"
-    $directoryGroups = $filteredFiles | Group-Object { $_.Directory.Name } | Sort-Object Count -Descending
-    foreach ($group in $directoryGroups) {
-        $samplePath = ($group.Group | Select-Object -First 1).FullName
-        Write-Host "  📁 '$($group.Name)': $($group.Count) files (e.g., $samplePath)"
+    # Build and log summary once (minimized verbose output for performance)
+    if ($PSBoundParameters.ContainsKey('Verbose') -and $PSBoundParameters['Verbose']) {
+        Write-Host "📊 Directory breakdown of $($filteredFiles.Count) total markdown files:"
+        $directoryGroups = $filteredFiles | Group-Object { $_.Directory.Name } | Sort-Object Count -Descending
+        foreach ($group in $directoryGroups) {
+            $samplePath = ($group.Group | Select-Object -First 1).FullName
+            Write-Host "  📁 '$($group.Name)': $($group.Count) files (e.g., $samplePath)"
+        }
     }
     
-    # Build status message
+    # Build concise status message
     $statusParts = @()
     if ($IncludeDirectoryPatterns.Count -gt 0) {
         $statusParts += "including directories matching: $($IncludeDirectoryPatterns -join ', ')"
@@ -133,10 +135,7 @@ function Get-MarkdownFiles {
     if ($defaultExclusions.Count -gt 0) {
         $statusParts += "using $($defaultExclusions.Count) patterns from .gitignore"
     }
-    if ($ExcludeDirectoryPatterns.Count -gt 0) {
-        $statusParts += "plus $($ExcludeDirectoryPatterns.Count) additional exclusion patterns"
-    }
-    if ($ExcludeFilePatterns.Count -gt 0) {
+    if ($ExcludeDirectoryPatterns.Count -gt 0 -or $ExcludeFilePatterns.Count -gt 0) {
         $statusParts += "excluding files matching: $($ExcludeFilePatterns -join ', ')"
     }
     

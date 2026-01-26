@@ -3,7 +3,6 @@
 
 Describe "JSON Escape Sequence Issue Reproduction" {
     BeforeAll {
-        . "$PSScriptRoot/Initialize-BeforeAll.ps1"
     }
 
     BeforeEach {

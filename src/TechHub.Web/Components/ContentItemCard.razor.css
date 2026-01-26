@@ -78,7 +78,7 @@
 
 /* Content Item Card Tag - decorative, non-clickable tags inside content cards */
 .content-item-card-tag {
-  background: rgba(139, 92, 246, 0.3);
+  background: var(--color-purple-bg-badge);
   color: var(--color-text-on-emphasis);
   padding: 0.25rem var(--spacing-2);
   border-radius: var(--radius-full);

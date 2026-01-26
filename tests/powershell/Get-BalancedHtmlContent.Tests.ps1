@@ -1,6 +1,5 @@
 Describe "Get-BalancedHtmlContent" {
     BeforeAll {
-        . "$PSScriptRoot/Initialize-BeforeAll.ps1"
     }
 
     BeforeEach {

@@ -1,6 +1,7 @@
 @page "/ai/sdlc"
 @using TechHub.Core.DTOs
 @using TechHub.Web.Services
+@rendermode InteractiveServer
 
 @inject TechHubApiClient ApiClient
 @inject NavigationManager Navigation
@@ -41,16 +42,19 @@
                 @* SDLC Phases *@
                 <section class="sdlc-phases">
                     <h2>SDLC Phases</h2>
-                    @foreach (var phase in pageData.Phases)
-                    {
-                        <div class="sdlc-phase-card" style="border-left-color: @phase.Color;">
-                            <button class="sdlc-phase-header" type="button" aria-expanded="false">
-                                <span class="sdlc-phase-icon">@phase.Icon</span>
-                                <h3 id="phase-@phase.Id">@phase.Name</h3>
-                                <span class="sdlc-phase-toggle">▼</span>
-                            </button>
+                    @{
+                        int phaseIndex = 0;
+                        foreach (var phase in pageData.Phases)
+                        {
+                            var currentIndex = phaseIndex;
+                            <div class="sdlc-phase-card sdlc-phase-@phase.Color" style="border-left-color: @GetPhaseColor(phase.Color);">
+                                <button class="sdlc-phase-header" type="button" aria-expanded="@IsPhaseExpanded(currentIndex)" @onclick="() => TogglePhase(currentIndex)">
+                                    <span class="sdlc-phase-icon">@phase.Icon</span>
+                                    <h3 id="phase-@phase.Id">@phase.Name</h3>
+                                    <span class="sdlc-phase-toggle @(IsPhaseExpanded(currentIndex) ? "expanded" : "")">▼</span>
+                                </button>
 
-                            <div class="sdlc-phase-content">
+                                <div class="sdlc-phase-content @(IsPhaseExpanded(currentIndex) ? "expanded" : "")">
                                 <div class="sdlc-phase-what">
                                     <h4>What</h4>
                                     <p>@phase.What</p>
@@ -116,6 +120,8 @@
                                 </div>
                             </div>
                         </div>
+                        phaseIndex++;
+                    }
                     }
                 </section>
 
@@ -128,7 +134,7 @@
                             <div id="precondition-@precondition.Id" class="sdlc-precondition-card">
                                 <div class="sdlc-precondition-header">
                                     <span class="sdlc-precondition-icon">@precondition.Icon</span>
-                                    <h3>@precondition.Title</h3>
+                                    <h3 id="precondition-@(precondition.Title.ToLowerInvariant().Replace(" ", "-"))">@precondition.Title</h3>
                                 </div>
                                 <p>@precondition.Description</p>
                                 <div class="sdlc-precondition-actions">
@@ -167,7 +173,7 @@
                         {
                             <div class="sdlc-benefit-card">
                                 <span class="sdlc-benefit-icon">@benefit.Icon</span>
-                                <h3>@benefit.Title</h3>
+                                <h3 id="benefit-@(benefit.Title.ToLowerInvariant().Replace(" ", "-"))">@benefit.Title</h3>
                                 <p>@benefit.Description</p>
                             </div>
                         }
@@ -183,7 +189,7 @@
                         {
                             <div class="sdlc-framework-card">
                                 <span class="sdlc-framework-icon">@framework.Icon</span>
-                                <h3>@framework.Name</h3>
+                                <h3 id="metric-@(framework.Name.ToLowerInvariant().Replace(" ", "-"))">@framework.Name</h3>
                                 <p>@framework.Description</p>
                             </div>
                         }
@@ -201,7 +207,7 @@
                         @foreach (var challenge in pageData.AdditionalInfo.Challenges)
                         {
                             <div class="sdlc-challenge-card">
-                                <h3>@challenge.Title</h3>
+                                <h3 id="challenge-@(challenge.Title.ToLowerInvariant().Replace(" ", "-"))">@challenge.Title</h3>
                                 <p>@challenge.Description</p>
                             </div>
                         }
@@ -215,7 +221,7 @@
                         @foreach (var methodology in pageData.AdditionalInfo.Methodologies)
                         {
                             <div class="sdlc-methodology-card">
-                                <h3>@methodology.Name</h3>
+                                <h3 id="methodology-@(methodology.Name.ToLowerInvariant().Replace(" ", "-"))">@methodology.Name</h3>
                                 <span class="sdlc-methodology-type">@methodology.Type</span>
                                 <p>@methodology.Description</p>
                                 <div class="sdlc-methodology-details">
@@ -235,6 +241,8 @@
 @code {
     private SectionDto? sectionData;
     private SDLCPageData? pageData;
+    private HashSet<int> expandedPhases = new(); // No phases expanded by default
+
     private string GetRenderedContent()
     {
         if (pageData == null)
@@ -242,21 +250,51 @@
 
         var sb = new System.Text.StringBuilder();
 
-        // SDLC Phases
+        // SDLC Phases (h2 for phase names, already rendered as h3 in actual HTML)
         foreach (var phase in pageData.Phases)
         {
             sb.Append($"<h2 id=\"phase-{phase.Id}\">{phase.Name}</h2>");
         }
 
-        // Additional sections
+        // Additional sections with their h3 subsections
         sb.Append("<h2 id=\"preconditions\">Preconditions</h2>");
+        foreach (var precondition in pageData.Preconditions)
+        {
+            var preconditionId = $"precondition-{precondition.Title.ToLowerInvariant().Replace(" ", "-")}";
+            sb.Append($"<h3 id=\"{preconditionId}\">{precondition.Title}</h3>");
+        }
+
         sb.Append("<h2 id=\"benefits\">Benefits</h2>");
+        foreach (var benefit in pageData.AdditionalInfo.Benefits)
+        {
+            var benefitId = $"benefit-{benefit.Title.ToLowerInvariant().Replace(" ", "-")}";
+            sb.Append($"<h3 id=\"{benefitId}\">{benefit.Title}</h3>");
+        }
+
         sb.Append("<h2 id=\"metrics\">Metrics</h2>");
+        foreach (var framework in pageData.AdditionalInfo.Metrics.Frameworks)
+        {
+            var metricId = $"metric-{framework.Name.ToLowerInvariant().Replace(" ", "-")}";
+            sb.Append($"<h3 id=\"{metricId}\">{framework.Name}</h3>");
+        }
+
         sb.Append("<h2 id=\"challenges\">Challenges</h2>");
+        foreach (var challenge in pageData.AdditionalInfo.Challenges)
+        {
+            var challengeId = $"challenge-{challenge.Title.ToLowerInvariant().Replace(" ", "-")}";
+            sb.Append($"<h3 id=\"{challengeId}\">{challenge.Title}</h3>");
+        }
+
         sb.Append("<h2 id=\"methodologies\">Methodologies</h2>");
+        foreach (var methodology in pageData.AdditionalInfo.Methodologies)
+        {
+            var methodologyId = $"methodology-{methodology.Name.ToLowerInvariant().Replace(" ", "-")}";
+            sb.Append($"<h3 id=\"{methodologyId}\">{methodology.Name}</h3>");
+        }
 
         return sb.ToString();
     }
+
     protected override async Task OnInitializedAsync()
     {
         try
@@ -273,5 +311,35 @@
         {
             ErrorService.HandleError(ex, Navigation, Logger);
         }
+    }
+
+    private void TogglePhase(int index)
+    {
+        if (expandedPhases.Contains(index))
+        {
+            expandedPhases.Remove(index);
+        }
+        else
+        {
+            expandedPhases.Add(index);
+        }
+    }
+
+    private bool IsPhaseExpanded(int index) => expandedPhases.Contains(index);
+
+    private string GetPhaseColor(string colorName)
+    {
+        // Map color names to CSS custom properties
+        return colorName.ToLowerInvariant() switch
+        {
+            "ideation" => "var(--color-yellow)",
+            "planning" => "var(--color-blue)",
+            "design" => "var(--color-magenta)",
+            "implementation" => "var(--color-green)",
+            "testing" => "var(--color-orange)",
+            "deployment" => "var(--color-pink)",
+            "maintenance" => "var(--color-teal)",
+            _ => "var(--color-purple-medium)"
+        };
     }
 }

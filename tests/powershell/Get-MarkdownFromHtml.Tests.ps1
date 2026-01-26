@@ -1,6 +1,5 @@
 Describe "Get-MarkdownFromHtml" {
     BeforeAll {
-        . "$PSScriptRoot/Initialize-BeforeAll.ps1"
 
         # Sample HTML content from Khalid Abuhakmeh's Blog
         $script:TestHtmlContent = @"

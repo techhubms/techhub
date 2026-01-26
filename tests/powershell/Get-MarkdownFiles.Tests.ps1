@@ -3,14 +3,13 @@
 
 Describe "Get-MarkdownFiles" {
     BeforeAll {
-        . "$PSScriptRoot/Initialize-BeforeAll.ps1"
     }
 
     BeforeEach {
         . "$PSScriptRoot/Initialize-BeforeEach.ps1"
         
         # Create a test directory structure with markdown files (after cleanup in Initialize-BeforeEach)
-        $script:testRoot = Join-Path $script:TempPath "markdown-test"
+        $script:testRoot = Join-Path $global:TempPath "markdown-test"
         New-Item -ItemType Directory -Path $script:testRoot -Force | Out-Null
         
         # Create .gitignore to enable default exclusion patterns
@@ -82,7 +81,7 @@ _site/
         }
         
         It "Should return empty array when no markdown files exist" {
-            $emptyDir = Join-Path $script:TempPath "empty-test"
+            $emptyDir = Join-Path $global:TempPath "empty-test"
             New-Item -ItemType Directory -Path $emptyDir -Force | Out-Null
             
             $result = Get-MarkdownFiles -Root $emptyDir
