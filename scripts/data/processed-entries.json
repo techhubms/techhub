@@ -24304,5 +24304,11 @@
     "collection": "videos",
     "reason": "Succesfully added: Assigned AI category as the content discusses integrating AI features and capabilities within SQL Server 2025 (AI rule 1 and 4). Assigned Azure category because SQL Server—especially Azure SQL—is a central topic, and the show targets Azure data professionals (Azure rule 1). Assigned ML category because the episode covers vector data and machine learning scenarios in SQL Server (ML rules 1 and 2). Assigned Coding category because the discussion involves REST APIs and developer-oriented features for integrating with SQL Server (Coding rule 2 and 4). Did not assign DevOps or Security as these topics are not substantively covered based on the available description. No generic exclusion rules apply, and the content is technical and developer-focused.",
     "timestamp": "2026-01-26 21:05:04 +00:00"
+  },
+  {
+    "reason": "Succesfully added: AI and GitHub Copilot categories are assigned because the content is about a specialized skill extending Copilot's AI-powered abilities (AI rule 1 & 2, GitHub Copilot rule 1-4). Azure is included since the tool's main focus is deploying to Azure Static Web Apps (Azure rule 1 & 4). DevOps is assigned as the skill streamlines deployment processes, CLI automation, workflow orchestration, and even sets up CI/CD with GitHub Actions (DevOps rules 1, 5, 6, 11). Coding applies as detailed configuration, CLI usage, and framework-specific setup for modern web dev (Vite, React, Next.js) are central (Coding rule 1, 4, 5). No ML or Security categories apply—there is no ML/data science or app security focus. None of the generic exclusion rules apply; this is clear, hands-on technical content focused on developer workflows for Microsoft platforms.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-the-azure-static-web-apps-skill-for-github-copilot/ba-p/4487920",
+    "collection": "community",
+    "timestamp": "2026-01-26 22:05:48 +00:00"
   }
 ]
