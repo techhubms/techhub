@@ -24262,5 +24262,41 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-a-totp-authenticator-app-on-azure-functions-and-azure/ba-p/4489332",
     "timestamp": "2026-01-26 17:12:02 +00:00",
     "reason": "Succesfully added: Included the Coding category because the content provides detailed code examples in JavaScript/Node.js, as well as guidance on API development and React frontend coding (Coding rules 1, 2, and 5). Included Azure because it relies heavily on Azure Functions and Azure Key Vault for deployment, security, and all architectural elements (Azure rules 1, 2, 4, 5). Included Security because TOTP authenticator development, secure secret management, two-factor authentication, and use of Key Vault for protecting secrets are central, with best practices and implementation details (Security rules 1, 2, 3, 7, and 9). Did not include ML, AI, DevOps, or GitHub Copilot categories as the content does not discuss AI/ML, DevOps pipelines, or related tooling."
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Content is an official Microsoft-focused technical event announcement (NDC London 2026) targeting .NET, AI, Azure, and development best practices. Assigned 'AI' (sessions and demos on AI-powered development, GitHub Copilot, and agentic AI—AI rules 1, 2), 'GitHub Copilot' (explicit mention as a topic and tool covered—GitHub Copilot rules 1, 2), 'Coding' (focus on .NET, C#, ASP.NET Core technical development—Coding rules 1, 2, 4), and 'Azure' (cloud-native development, Azure SRE Agent, Managed Instance, and app modernization—Azure rules 1, 4, 5). Did not assign DevOps, ML, or Security since those areas, while related, were not the explicit focus of the sessions or event content in this announcement.",
+    "timestamp": "2026-01-26 19:09:00 +00:00",
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/join-us-at-ndc-london-2026/"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the 'Security' category because the article is centered on cyber defense strategies, proactive threat mitigation, compliance, and best practices for government data security with extensive reference to Microsoft security leadership, the Secure Future Initiative, and organizational security models. The content is technical and implementation-focused rather than general business or executive strategy, matches Security inclusion rules (sections on threat defense, secure development, and security governance), and there is no application for AI, Coding, Azure, DevOps, ML, or GitHub Copilot categories. All exclusion rules were reviewed and do not apply.",
+    "timestamp": "2026-01-26 19:09:31 +00:00",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/26/security-strategies-for-safeguarding-governmental-data/"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' category because the primary focus is on GitHub Copilot CLI as an AI-powered assistant embedded in developer workflows (AI category rule 2 and 5). Assigned 'GitHub Copilot' because the content revolves around the GitHub Copilot ecosystem, specifically the CLI (GitHub Copilot rules 1 and 2). Assigned 'Coding' because numerous examples involve repository setup, bug fixing, and process automation, all of which are coding-adjacent tasks performed in a development context (Coding rules 2 and 4). Did not assign DevOps, Azure, ML, or Security since the CLI usage is generalized for developer productivity and not focused on deployment pipelines, Microsoft cloud services, ML engineering, or specific security practices.",
+    "timestamp": "2026-01-26 19:09:57 +00:00",
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/power-agentic-workflows-in-your-terminal-with-github-copilot-cli/"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Categories 'AI' and 'GitHub Copilot' were assigned because the content focuses on a new AI model (GPT-5.2-Codex) as utilized by GitHub Copilot (AI Rule 1, GitHub Copilot Rule 1). The post is about developer tools (not business productivity) and details technical availability, versioning, admin enablement, and IDE integration. Exclusion rules do not apply since this is a technical release relevant to practitioners.",
+    "timestamp": "2026-01-26 19:10:14 +00:00",
+    "canonical_url": "https://github.blog/changelog/2026-01-26-gpt-5-2-codex-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'AI' because the article describes advances in AI coding agents and MCP, as well as their integration and interaction capabilities within VS Code (AI rules 1, 4, and 5). Assigned 'Coding' because the focus is on development workflows, code-related tools, VS Code usage, and integration of interactive agent UIs in development settings (Coding rules 2, 4, 5). Did not assign Azure, DevOps, ML, GitHub Copilot, or Security because the content does not substantively discuss cloud deployment, data science/ML workflows, DevOps pipelines, GitHub Copilot features, or security configuration. Content is technical and meets quality requirements.",
+    "timestamp": "2026-01-26 19:10:36 +00:00",
+    "canonical_url": "https://code.visualstudio.com/blogs/2026/01/26/mcp-apps-support"
+  },
+  {
+    "collection": "videos",
+    "reason": "Succesfully added: Included Coding category because the content is focused on technical details and demonstrations for developers about integrating and using MCP (Model Context Protocol) Apps in Visual Studio Code. The session targets software developers and covers API integration, UI development, and extension building (Coding rules 1, 2, 4, and 5). Not categorized under DevOps, Azure, or AI because there's no substantive mention of those areas in the available description, tags, or title.",
+    "timestamp": "2026-01-26 19:11:15 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=HWmC3T5Wwqw"
   }
 ]
