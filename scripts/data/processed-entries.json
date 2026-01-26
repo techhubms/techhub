@@ -24310,5 +24310,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-the-azure-static-web-apps-skill-for-github-copilot/ba-p/4487920",
     "collection": "community",
     "timestamp": "2026-01-26 22:05:48 +00:00"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-01-26 23:03:45 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=VOELhSvlCaI",
+    "reason": "Succesfully added: Assigned AI category because the session focuses on AI experiences and Azure AI Assistants (AI rules 1 and 4). Assigned Azure category due to explicit mention of using Azure AI services (Azure rule 1). Assigned Coding category because content centers on .NET development and practical architecture (Coding rules 1 and 4). No generic exclusion rules apply; the content is technical in scope, presented in English, with a clear developer focus."
   }
 ]

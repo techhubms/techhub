@@ -1,0 +1,26 @@
+{
+  "Description": "AI integration has moved far beyond simple prompt-and-response patterns. In this session, we’ll explore how to design stateful AI experiences in .NET using Azure AI Assistants. You’ll learn how to move past stateless API calls to build intelligent systems that remember context, adapt to users, and feel truly conversational. Through real-world .NET examples, we’ll uncover the architecture, challenges, and best practices for bringing production-ready AI assistants to life.\n\nFeaturing: Saeed Esmaeelinejad, Katie Savage, Maira Wenzel, Scott Addie\n\n#dotnet #AI",
+  "FeedLevelAuthor": "dotnet",
+  "Author": "dotnet",
+  "Link": "https://www.youtube.com/watch?v=VOELhSvlCaI",
+  "OutputDir": "_videos",
+  "PubDate": "2026-01-26T21:54:24+00:00",
+  "Title": "Beyond the Prompt: Designing Stateful AI Experiences in .NET",
+  "Tags": [
+    "AI",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnet10",
+    "dotnetdeveloper",
+    "dotnetten",
+    "microsoft",
+    "softwaredeveloper"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "EnhancedContent": null,
+  "FeedName": "DotNet YouTube",
+  "ProcessedDate": "2026-01-26 23:02:42"
+}
