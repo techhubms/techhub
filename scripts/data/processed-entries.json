@@ -24190,5 +24190,11 @@
     "timestamp": "2026-01-25 21:03:49 +00:00",
     "collection": "videos",
     "reason": "Succesfully added: Assigned 'GitHub Copilot' and 'AI' categories because the content centers on a custom agent built for and powered by GitHub Copilot, fitting GitHub Copilot inclusion rules 1 and 2 and AI inclusion rule 2. Added 'DevOps' because the focus is on automating migration and container deployment processes—central DevOps themes (DevOps rules 3, 5, and 6). No Coding category because there is no deep dive into programming language syntax or frameworks; rather, it centers on migration workflows and automation. No Azure, ML, or Security categories apply per inclusion rules."
+  },
+  {
+    "reason": "Succesfully added: Categories were assigned as follows:\n- AI: Central to the article, which focuses on agentic orchestration, local LLMs, and reasoning modes (AI inclusion rules 1, 3, 4, 5).\n- Azure: Microsoft Agent Framework is featured throughout, and VibeVoice is a Microsoft Research technology, meeting Azure inclusion criteria (Azure rules 1, 4, 6).\n- ML: The use of local LLMs, SLMs, model management (Ollama), and custom pipeline architectures for reasoning and tool-calling are all ML/data science engineering activities (ML rules 1, 2, 5, 10).\n- Coding: Detailed code samples show setup, agent definitions, and pipeline construction (Coding rules 1, 2, 4, 5).\nNo DevOps or Security assigned because the focus is on agent design, orchestration, and ML/AI pipeline—not primarily on CI/CD, deployment, or security architectures. All generic exclusion rules were checked and none applied, and the content is technical, in-depth, and meets all inclusion thresholds.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/engineering-a-local-first-agentic-podcast-studio-a-deep-dive/ba-p/4488947",
+    "timestamp": "2026-01-26 07:08:45 +00:00",
+    "collection": "community"
   }
 ]
