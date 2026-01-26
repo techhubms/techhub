@@ -24298,5 +24298,11 @@
     "reason": "Succesfully added: Included Coding category because the content is focused on technical details and demonstrations for developers about integrating and using MCP (Model Context Protocol) Apps in Visual Studio Code. The session targets software developers and covers API integration, UI development, and extension building (Coding rules 1, 2, 4, and 5). Not categorized under DevOps, Azure, or AI because there's no substantive mention of those areas in the available description, tags, or title.",
     "timestamp": "2026-01-26 19:11:15 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=HWmC3T5Wwqw"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=QziYJ6Vz1xI",
+    "collection": "videos",
+    "reason": "Succesfully added: Assigned AI category as the content discusses integrating AI features and capabilities within SQL Server 2025 (AI rule 1 and 4). Assigned Azure category because SQL Server—especially Azure SQL—is a central topic, and the show targets Azure data professionals (Azure rule 1). Assigned ML category because the episode covers vector data and machine learning scenarios in SQL Server (ML rules 1 and 2). Assigned Coding category because the discussion involves REST APIs and developer-oriented features for integrating with SQL Server (Coding rule 2 and 4). Did not assign DevOps or Security as these topics are not substantively covered based on the available description. No generic exclusion rules apply, and the content is technical and developer-focused.",
+    "timestamp": "2026-01-26 21:05:04 +00:00"
   }
 ]
