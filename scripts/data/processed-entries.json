@@ -24214,5 +24214,17 @@
     "reason": "Succesfully added: Assigned Coding category because the content is a technical video featuring 100 tips and tricks for writing better C# and .NET code (Coding rule 1 and 4). No other categories apply since the content does not mention Azure, AI, ML, DevOps, Security, or GitHub Copilot. The focus is entirely on software development and programming practices in the Microsoft ecosystem.",
     "canonical_url": "https://www.youtube.com/watch?v=V2uRyxffnHA",
     "collection": "videos"
+  },
+  {
+    "reason": "Succesfully added: Assigned the ML category because Microsoft Fabric is a data platform primarily used for analytics, data engineering, and data science workloads (ML rule 1). The content focuses on administrative controls for compute resource management within Fabric, directly impacting advanced data workloads and organizational analytics. Azure, AI, and DevOps were not assigned as the update does not directly relate to Azure services, AI/ML model development, or software/code practices, but rather focuses on platform resource management for data and analytics. No generic or business exclusions apply; content is technical, in English, non-promotional, and focused on platform administration.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/surge-protection-gets-smarter-introducing-workspace-level-controls-preview/",
+    "timestamp": "2026-01-26 16:05:48 +00:00",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: Included the AI category because the content is about Maia 200, a Microsoft-developed platform purpose-built for large-scale AI inference, and details AI hardware, developer SDKs, and model deployment (AI rules 1 and 4). Included Azure because Maia 200 is fully integrated and managed as an Azure service with explicit references to Azure-native lifecycle, management, and orchestration (Azure rules 1 and 4). ML and Coding categories were not added—the content focuses on AI hardware platforms and developer toolchains/integration, not on machine learning engineering or code-level software building. Security and GitHub Copilot categories do not apply.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deep-dive-into-the-maia-200-architecture/ba-p/4489312",
+    "timestamp": "2026-01-26 16:06:44 +00:00",
+    "collection": "community"
   }
 ]
