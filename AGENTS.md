@@ -14,6 +14,8 @@
 | **[README.md](README.md)** | General info - project overview, tech stack, terminology, running/testing |
 | **Domain AGENTS.md files** | Technical details - code patterns, framework guidance (e.g., [src/AGENTS.md](src/AGENTS.md)) |
 | **[docs/](docs/)** | Functional docs - WHAT the system does (API specs, features) |
+| **[docs/AGENTS.md](docs/AGENTS.md)** | Documentation strategies - rules for writing and maintaining documentation |
+| **[tests/AGENTS.md](tests/AGENTS.md)** | Testing strategies - testing pyramid, patterns, and requirements |
 
 **How to use**: Follow the 10 steps below. Each step has a checklist - complete or explicitly skip each item.
 
@@ -79,7 +81,12 @@
 1. Read relevant documentation:
    - [ ] This file for workflow
    - [ ] [README.md](README.md) for project overview, terminology, running
-   - [ ] Domain AGENTS.md for the area you're working in
+   - [ ] Domain AGENTS.md for the area you're working in:
+     - [src/AGENTS.md](src/AGENTS.md) - .NET patterns and conventions
+     - [src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md) - API patterns
+     - [src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md) - Blazor patterns
+     - [collections/AGENTS.md](collections/AGENTS.md) - Content management
+     - [scripts/AGENTS.md](scripts/AGENTS.md) - PowerShell scripts
 
 2. Scan the code:
    - [ ] Use `read_file` to examine relevant files
@@ -184,6 +191,8 @@
 
 **CRITICAL**: Write tests BEFORE implementing changes.
 
+📖 **MUST READ**: [tests/AGENTS.md](tests/AGENTS.md) for testing strategies, patterns, and requirements.
+
 **Actions**:
 
 1. Start with clean slate:
@@ -220,6 +229,8 @@
 ### Step 7: Implement Changes
 
 **NOW implement** to make tests pass.
+
+📖 **MUST READ**: [src/AGENTS.md](src/AGENTS.md) for .NET patterns, plus the domain-specific AGENTS.md for the area you're modifying.
 
 **Actions**:
 
@@ -279,11 +290,13 @@ See [README.md - Starting, Stopping and Testing](README.md#starting-stopping-and
 
 **🚨 MANDATORY**: Update docs when code behavior changes.
 
+📖 **MUST READ**: [docs/AGENTS.md](docs/AGENTS.md) for documentation strategies and rules.
+
 **What to Update**:
 
 - [ ] Domain AGENTS.md if behavior changed
 - [ ] [docs/](docs/) if features changed
-- [ ] [README.md](README.md) if user-facing changes
+- [ ] [README.md](README.md) if developer-facing changes
 - [ ] Code comments for complex logic
 
 **How to Find Docs**:
@@ -354,10 +367,11 @@ Run -StopServers            # CI/CD mode
 | Need | Read |
 |------|------|
 | Project overview, terminology | [README.md](README.md) |
+| **Documentation strategies** | [docs/AGENTS.md](docs/AGENTS.md) |
+| **Testing strategies** | [tests/AGENTS.md](tests/AGENTS.md) |
 | .NET patterns | [src/AGENTS.md](src/AGENTS.md) |
 | API patterns | [src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md) |
 | Blazor patterns | [src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md) |
-| Testing strategies | [tests/AGENTS.md](tests/AGENTS.md) |
 | E2E test patterns | [tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md) |
 | PowerShell scripts | [scripts/AGENTS.md](scripts/AGENTS.md) |
 | Content management | [collections/AGENTS.md](collections/AGENTS.md) |
