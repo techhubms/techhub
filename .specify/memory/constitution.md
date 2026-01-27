@@ -61,7 +61,7 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 - **Clean slate principle**: Fix ALL broken tests before starting new work
 - **No exceptions**: Documentation-only changes are the ONLY case where tests can be skipped
 
-**Reference**: See [Root AGENTS.md - Step 6: Write Tests First](../../AGENTS.md#6-write-tests-first-tdd) for complete TDD workflow.  
+**Reference**: See [Root AGENTS.md - Step 6: Write Tests First](../../AGENTS.md#step-6-write-tests-first-tdd) for complete TDD workflow.  
 **Implementation**: See [tests/AGENTS.md](../../tests/AGENTS.md) for testing strategies across all layers.
 
 ### 2. 10-Step Development Workflow
@@ -95,7 +95,7 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 - [src/TechHub.Api/AGENTS.md](../../src/TechHub.Api/AGENTS.md) - API endpoint patterns
 - [collections/AGENTS.md](../../collections/AGENTS.md) - Content creation and markdown guidelines
 
-**Reference**: See [Root AGENTS.md - Documentation Architecture](../../AGENTS.md#documentation-architecture) for complete documentation map.
+**Reference**: See [README.md - Documentation Architecture](../../README.md#documentation-architecture) for complete documentation map.
 
 ### 4. Configuration-Driven Development
 
@@ -106,7 +106,7 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 - **Code stays synchronized**: All components derive structure from configuration automatically
 - **Never hardcode values**: Section names, collection types, paths, etc. must come from config
 
-**Reference**: See [Root AGENTS.md - Configuration-Driven Development](../../AGENTS.md#configuration-driven-development) for principles.
+**Reference**: See [README.md - Configuration-Driven Design](../../README.md#configuration-driven-design) for principles.
 
 ### 5. Server-Side Rendering First
 
@@ -117,7 +117,7 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 - **Progressive enhancement**: JavaScript ONLY enhances server-rendered content, never creates it
 - **The ONLY exception**: `assets/js/sections.js` may modify collection state on page load based on URL parameters
 
-**Reference**: See [Root AGENTS.md - Performance Architecture](../../AGENTS.md#performance-architecture) for complete performance principles.
+**Reference**: See [README.md - Core Development Principles](../../README.md#core-development-principles) for complete performance principles.
 
 ### 6. Accessibility Standards (WCAG 2.1 AA)
 
@@ -129,7 +129,7 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 - **Focus indicators**: Visible focus states on all interactive elements
 - **Never rely on color alone**: Provide text alternatives
 
-**Reference**: See [Root AGENTS.md - Accessibility Standards](../../AGENTS.md#accessibility-standards) for complete accessibility requirements.
+**Reference**: See [README.md - Accessibility Standards](../../README.md#accessibility-standards) for complete accessibility requirements.
 
 ### 7. Documentation Updates
 
@@ -167,7 +167,7 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 - **.NET Aspire**: Orchestration, service discovery, OpenTelemetry
 - **Repository Pattern**: File-based initially, database-ready architecture
 
-**Reference**: See [Root AGENTS.md - Tech Stack](../../AGENTS.md#tech-stack) for complete technology details.  
+**Reference**: See [README.md - Tech Stack](../../README.md#tech-stack) for complete technology details.  
 **Implementation**: See [src/AGENTS.md](../../src/AGENTS.md) for .NET development patterns.
 
 ### Quality & Testing
@@ -188,7 +188,7 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 - **Mobile-first responsive design**: Proper rendering regardless of device and screen size
 - **No horizontal scrollbars**: EVER
 
-**Reference**: See [Root AGENTS.md - Performance Architecture](../../AGENTS.md#performance-architecture) for complete performance principles.
+**Reference**: See [README.md - Core Development Principles](../../README.md#core-development-principles) for complete performance principles.
 
 ## Pending Features (Not Yet Implemented)
 

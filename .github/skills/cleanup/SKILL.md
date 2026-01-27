@@ -28,7 +28,7 @@ Execute in order. Don't skip or proceed if a step fails.
 
 **Requirements**: 0 errors, all tests pass.
 
-**If tests fail**: Read [Starting, Stopping and Testing the Website](/workspaces/techhub/AGENTS.md#starting-stopping-and-testing-the-website) in root AGENTS.md to understand proper test execution, debugging workflows, and using `Run` parameters. Fix all issues and retry before Step 2.
+**If tests fail**: Read [Starting, Stopping and Testing the Website](/workspaces/techhub/README.md#starting-stopping-and-testing-the-website) in README.md to understand proper test execution, debugging workflows, and using `Run` parameters. Fix all issues and retry before Step 2.
 
 ---
 

@@ -1,7 +1,7 @@
 # Blazor Component Tests - Tech Hub
 
 > **AI CONTEXT**: This is a **LEAF** context file for Blazor component tests in the `tests/TechHub.Web.Tests/` directory. It complements the [tests/AGENTS.md](../AGENTS.md) testing strategy.
-> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+> **RULE**: Follow the 10-step workflow in Root [AGENTS.md](../../AGENTS.md). Project principles are in [README.md](../../README.md). Follow **BOTH**.
 
 ## Overview
 
@@ -74,7 +74,7 @@ See actual tests in `Components/` and bUnit documentation for examples.
 
 ## Running Tests
 
-**Use the Run function for all test execution** (see [Root AGENTS.md - Using the Run Function](../../AGENTS.md#using-the-run-function)):
+**Use the Run function for all test execution** (see [README.md - Starting, Stopping and Testing](../../README.md#starting-stopping-and-testing-the-website)):
 
 ```powershell
 # Run all tests (recommended)
@@ -109,5 +109,5 @@ Run -TestName SectionCard
 
 - [tests/AGENTS.md](../AGENTS.md) - Complete testing strategy
 - [src/TechHub.Web/AGENTS.md](../../src/TechHub.Web/AGENTS.md) - Blazor component patterns
-- [Root AGENTS.md](../../AGENTS.md#6-write-tests-first-tdd) - When to write tests
+- [Root AGENTS.md](../../AGENTS.md#step-6-write-tests-first-tdd) - When to write tests
 - [bUnit Documentation](https://bunit.dev/) - Official bUnit docs

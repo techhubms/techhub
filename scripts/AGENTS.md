@@ -1,7 +1,7 @@
 # PowerShell Development Agent
 
 > **AI CONTEXT**: This is a **LEAF** context file for the `scripts/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
-> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+> **RULE**: Follow the 10-step workflow in Root [AGENTS.md](../AGENTS.md). Project principles are in [README.md](../README.md). Follow **BOTH**.
 
 ## Critical PowerShell Rules
 
@@ -278,7 +278,7 @@ tests/powershell/
 
 ### Running Pester Tests
 
-**Recommended** (via Run function - see [Root AGENTS.md - Using the Run Function](../AGENTS.md#using-the-run-function)):
+**Recommended** (via Run function - see [README.md - Starting, Stopping and Testing](../README.md#starting-stopping-and-testing-the-website)):
 
 ```powershell
 # All PowerShell tests only (fast - no .NET build)

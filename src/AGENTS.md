@@ -1,7 +1,7 @@
 # Source Code Development Guide
 
 > **AI CONTEXT**: This is a **LEAF** context file for the `src/` directory. It complements the [Root AGENTS.md](/AGENTS.md).
-> **RULE**: Global rules (Timezone, Performance, AI Assistant Workflow) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+> **RULE**: Follow the 10-step workflow in Root [AGENTS.md](../AGENTS.md). Project principles (Timezone, Performance) are in [README.md](../README.md). Follow **BOTH**.
 
 ## Overview
 
@@ -41,7 +41,7 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 
 ### Starting, Running, and Testing
 
-**ALWAYS refer to [Root AGENTS.md - Starting, Stopping and Testing the Website](../AGENTS.md#starting-stopping-and-testing-the-website)** for complete instructions on:
+**ALWAYS refer to [README.md - Starting, Stopping and Testing the Website](../README.md#starting-stopping-and-testing-the-website)** for complete instructions on:
 
 - Starting the website with the `Run` function
 - Running all tests with `Run`

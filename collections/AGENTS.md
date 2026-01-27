@@ -1,7 +1,7 @@
 # Collections Management Guide
 
 > **AI CONTEXT**: This is a **LEAF** context file for the `collections/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
-> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+> **RULE**: Follow the 10-step workflow in Root [AGENTS.md](../AGENTS.md). Project principles are in [README.md](../README.md). Follow **BOTH**.
 
 ## Critical Content Rules
 
@@ -243,7 +243,7 @@ These fields are no longer supported and should **not** be included:
 
 **Purpose**: Serves as a logical introduction to the main content and provides users with a quick overview of what to expect.
 
-> **See also**: [Root AGENTS.md - Site Terminology](../AGENTS.md#site-terminology) for complete content organization concepts and structure definitions.
+> **See also**: [README.md - Site Terminology](../README.md#site-terminology) for complete content organization concepts and structure definitions.
 
 **Requirements**:
 

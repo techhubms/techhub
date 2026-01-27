@@ -1,7 +1,7 @@
 # PowerShell Test Suite
 
 > **AI CONTEXT**: This is a **LEAF** context file for PowerShell tests in the `tests/powershell/` directory. It complements the [scripts/AGENTS.md](../../scripts/AGENTS.md) where the implementation lives.
-> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+> **RULE**: Follow the 10-step workflow in Root [AGENTS.md](../../AGENTS.md). Project principles are in [README.md](../../README.md). Follow **BOTH**.
 
 ## Overview
 
@@ -52,7 +52,7 @@ For complete implementation details, patterns, and best practices, see [scripts/
 
 **🚨 ALWAYS prefer the Run function over direct script execution.**
 
-See [Root AGENTS.md - Using the Run Function](../../AGENTS.md#using-the-run-function) for complete documentation.
+See [README.md - Starting, Stopping and Testing](../../README.md#starting-stopping-and-testing-the-website) for complete documentation.
 
 ### Using Run Function (Recommended)
 

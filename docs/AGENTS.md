@@ -1,7 +1,20 @@
 # Documentation Management Guide
 
 > **AI CONTEXT**: This is a **LEAF** context file for the `docs/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
-> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+> **RULE**: Global rules in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+
+## Documentation Hierarchy
+
+The Tech Hub uses a **4-tier documentation hierarchy** with clear purposes:
+
+| File | Purpose | Contains |
+|------|---------|----------|
+| **[AGENTS.md](../AGENTS.md)** | AI workflow | 10-step development process with checklists |
+| **[README.md](../README.md)** | General info | Project overview, tech stack, terminology, running/testing |
+| **Domain AGENTS.md files** | Technical details | Code patterns, framework guidance, domain-specific rules |
+| **[docs/](.)** (this directory) | Functional docs | WHAT the system does - API specs, features, behavior |
+
+**Precedence**: Domain AGENTS.md (deepest) → Root AGENTS.md → README.md (shallowest)
 
 ## Critical Documentation Rules
 
@@ -53,62 +66,66 @@
 - **Never use vague language** ("might", "probably", "should")
 - **Never skip documentation updates** when code behavior changes
 
-## Tech Hub Documentation Structure (3-Level Hierarchy)
+## Tech Hub Documentation Structure (4-Tier Hierarchy)
 
-The Tech Hub uses a **3-level documentation hierarchy** with clear precedence:
+The Tech Hub uses a **4-tier documentation hierarchy** with clear purposes:
 
 **Precedence Order**: Domain AGENTS.md (deepest) → Root AGENTS.md → README.md (shallowest)
 
-### Level 1: Domain-Specific AGENTS.md (Highest Precedence)
+### Tier 1: Root [AGENTS.md](../AGENTS.md) - AI Workflow
+
+The required development process for AI coding agents.
+
+**Contains**:
+
+- 10-step AI Assistant Workflow (REQUIRED process)
+- Core rules and boundaries (Always/Ask/Never)
+- Step-by-step checklists for each development phase
+
+**Purpose**: Process and methodology for ALL development tasks.
+
+### Tier 2: [README.md](../README.md) - General Project Info
+
+Project overview, tech stack, and getting started.
+
+**Contains**:
+
+- Quick start instructions
+- Tech stack and architecture
+- Site terminology and concepts
+- Running and testing workflows
+- Documentation navigation
+
+**Purpose**: Understanding the project and getting started.
+
+### Tier 3: Domain-Specific AGENTS.md - Technical Details
 
 Development patterns for specific code domains. **Read FIRST** when working in a domain.
 
 **Examples**:
 
+- [src/AGENTS.md](../src/AGENTS.md) - .NET development patterns
 - [src/TechHub.Api/AGENTS.md](../src/TechHub.Api/AGENTS.md) - API development patterns
 - [src/TechHub.Web/AGENTS.md](../src/TechHub.Web/AGENTS.md) - Blazor component patterns
 - [tests/AGENTS.md](../tests/AGENTS.md) - Testing strategies
 - [scripts/AGENTS.md](../scripts/AGENTS.md) - PowerShell automation
 
-**Purpose**: Domain-specific rules, patterns, and code examples. These override root AGENTS.md for domain-specific concerns.
+**Purpose**: Domain-specific rules, patterns, and code examples. These provide implementation details for specific areas.
 
-### Level 2: Root [AGENTS.md](../AGENTS.md) (Medium Precedence)
+### Tier 4: Functional Documentation (docs/) - System Behavior
 
-Repository-wide principles, architecture, and standards. **Read SECOND** after domain files.
+**This directory**. Framework-agnostic descriptions of WHAT the system does.
 
-**Contains**:
-
-- 10-step AI Assistant Workflow (REQUIRED process)
-- Core rules and boundaries
-- .NET tech stack, commands, and patterns
-- Architecture principles
-- Site terminology
-
-**Purpose**: Standards that apply across ALL domains. Domain AGENTS.md files can override these for specific needs.
-
-### Level 3: [README.md](../README.md) (Lowest Precedence)
-
-Minimal getting started guide. **Read LAST** for general orientation.
-
-**Contains**:
-
-- Quick start instructions
-- High-level project overview
-- Links to detailed documentation
-
-**Purpose**: Entry point for new contributors. Not for development details.
-
-### Supporting Documentation (Not in Precedence Chain)
-
-**Functional Documentation** (in `docs/` - this directory):
+**Files**:
 
 - [content-management.md](content-management.md) - Content workflows and RSS processing
 - [api-specification.md](api-specification.md) - REST API contracts
 - [rss-feeds.md](rss-feeds.md) - RSS feed system and available feeds
 - [toc-component.md](toc-component.md) - Table of contents component architecture
-- `filtering-system.md` - **TO BE CREATED** - Tag and date filtering logic (see specs/001-filtering-system)
 
-**Content Guidelines** (in `collections/`):
+**Purpose**: Describes system behavior, not implementation details.
+
+### Supporting: Content Guidelines (collections/)
 
 - [AGENTS.md](../collections/AGENTS.md#frontmatter-schema) - Content management with frontmatter schema
 - [writing-style-guidelines.md](../collections/writing-style-guidelines.md) - Writing standards
@@ -123,18 +140,19 @@ Minimal getting started guide. **Read LAST** for general orientation.
 
 1. **[`content-management.md`](content-management.md)** - Content workflows and RSS processing
 2. **[`api-specification.md`](api-specification.md)** - REST API contracts and endpoints
-3. **`filtering-system.md`** - **TO BE CREATED** (see specs/001-filtering-system for requirements)
+3. **[`rss-feeds.md`](rss-feeds.md)** - RSS feed system
+4. **[`toc-component.md`](toc-component.md)** - Table of contents architecture
 
 These files are framework-agnostic and describe system behavior, not implementation details.
 
 **All other content is located elsewhere**:
 
+- AI development workflow → Root [AGENTS.md](../AGENTS.md)
+- Project overview, tech stack, terminology → [README.md](../README.md)
 - Development patterns → Domain-specific AGENTS.md files
-- Repository-wide standards → Root AGENTS.md
 - Writing/quality standards → `collections/writing-style-guidelines.md`
-- Terminology/architecture → Root `AGENTS.md` (Site Terminology and Repository Organization sections)
 
-**Rationale**: Only files that explain system functionality (not development, not writing, not architecture) remain in docs/.
+**Rationale**: Only files that explain system functionality (not development workflow, not project overview, not implementation) remain in docs/.
 
 ## Documentation Files (Current State)
 
@@ -144,13 +162,22 @@ These files are framework-agnostic and describe system behavior, not implementat
 
 - **[`content-management.md`](content-management.md)** - Content workflows and RSS processing
 - **[`api-specification.md`](api-specification.md)** - REST API contracts and endpoints
-- **`filtering-system.md`** - **TO BE CREATED** - Tag and date filtering logic and behavior (see specs/001-filtering-system)
+- **[`rss-feeds.md`](rss-feeds.md)** - RSS feed system
+- **[`toc-component.md`](toc-component.md)** - Table of contents architecture
 
 ### Related Documentation (Other Locations)
 
-**Development Guidance** (in AGENTS.md files):
+**AI Workflow** (in root AGENTS.md):
 
-- **[Root `AGENTS.md`](../AGENTS.md)** - Generic principles, .NET Tech Stack, Commands, Patterns & Examples, architecture, terminology, performance, timezone handling
+- **[Root `AGENTS.md`](../AGENTS.md)** - 10-step AI development workflow with checklists
+
+**General Project Info** (in README.md):
+
+- **[`README.md`](../README.md)** - Project overview, tech stack, terminology, running/testing
+
+**Development Guidance** (in domain AGENTS.md files):
+
+- **[`src/AGENTS.md`](../src/AGENTS.md)** - .NET development patterns
 - **Domain-specific AGENTS.md** - See root `AGENTS.md` for complete list
 
 **Content Writing** (in `collections/`):
@@ -164,19 +191,27 @@ When adding documentation, place it in the most specific appropriate location:
 
 ### 1. Root AGENTS.md
 
-- High-level project overview and navigation
-- Generic, framework-agnostic development principles
-- .NET Tech Stack, Development Commands, Patterns & Examples
-- Repository structure and organization
-- **Not for**: Domain-specific implementation details
+- AI development workflow (10 steps)
+- Core rules and boundaries (Always/Ask/Never)
+- Process guidance for all tasks
+- **Not for**: Project overview, tech stack, implementation patterns
 
-### 2. Domain-Specific AGENTS.md Files
+### 2. README.md
+
+- Project overview and quick start
+- Tech stack and architecture
+- Site terminology and concepts
+- Running and testing workflows
+- Documentation navigation
+- **Not for**: AI workflow, implementation patterns
+
+### 3. Domain-Specific AGENTS.md Files
 
 - **Development patterns for specific code domains** (API, Web, Core, Infrastructure, scripts, tests)
 - Examples: API endpoint patterns, Blazor component patterns, PowerShell script patterns
 - See root `AGENTS.md` for complete list and when to read them
 
-### 3. Functional Documentation (`docs/`)
+### 4. Functional Documentation (`docs/`)
 
 **CRITICAL**: Keep MINIMAL - only files that describe system behavior, not implementation.
 
@@ -184,17 +219,15 @@ When adding documentation, place it in the most specific appropriate location:
 
 - **`content-management.md`** - How content is managed (workflows, RSS processing)
 - **`api-specification.md`** - REST API contracts and endpoint specifications
-- **`filtering-system.md`** - **TO BE CREATED** - How filtering works (logic, behavior, rules)
+- **`rss-feeds.md`** - RSS feed system and available feeds
+- **`toc-component.md`** - Table of contents architecture
 
 **Everything else goes elsewhere**:
 
-- Terminology/concepts → Root `AGENTS.md` (Site Terminology section)
-- Architecture/overview → Root `AGENTS.md` or `docs/AGENTS.md`
-- .NET/Blazor patterns → Root `AGENTS.md` (.NET Tech Stack, Commands, Patterns sections)
-- Domain patterns → Domain-specific AGENTS.md files (src/, tests/, scripts/)
-- Development guidance → Domain-specific AGENTS.md files
+- AI workflow → Root `AGENTS.md`
+- Project overview, terminology → `README.md`
+- .NET/Blazor patterns → Domain-specific AGENTS.md files (src/, tests/, scripts/)
 - Writing standards → `collections/AGENTS.md`
-- Quality standards → `docs/AGENTS.md` (this file)
 
 ## Content Placement Strategy
 
@@ -211,22 +244,27 @@ When adding documentation, place it in the most specific appropriate location:
 
 **Functional Documentation (docs/)**:
 
-- **How tag filtering works** → `docs/filtering-system.md` (**TO BE CREATED** - see specs/001-filtering-system)
-- **How date filtering works** → `docs/filtering-system.md` (**TO BE CREATED** - see specs/001-filtering-system)
 - **Content workflow process** → `docs/content-management.md` (system functionality)
 - **RSS feed processing** → `docs/content-management.md` (system functionality)
 - **API endpoint contracts** → `docs/api-specification.md` (API specification)
 - **REST API behavior** → `docs/api-specification.md` (API specification)
 
-**Development Guidance (AGENTS.md files)**:
+**General Info (README.md)**:
 
-- **Site terminology** → Root `AGENTS.md` (already has Site Terminology section)
-- **Architecture overview** → Root `AGENTS.md` (Repository Structure section)
-- **Generic performance principles** → Root `AGENTS.md` (Performance Architecture section)
-- **Timezone handling rules** → Root `AGENTS.md` (Timezone & Date Handling section)
-- **.NET Tech Stack** → Root `AGENTS.md` (.NET Runtime & Framework, Frontend, Backend, Infrastructure)
-- **.NET Development Commands** → Root `AGENTS.md` (Build, Test, Watch, EF, Global Tools)
-- **.NET Patterns & Examples** → Root `AGENTS.md` (Minimal APIs, Blazor, Repositories, DI, Records)
+- **Site terminology** → `README.md` (Site Terminology section)
+- **Tech stack overview** → `README.md` (Tech Stack section)
+- **Architecture overview** → `README.md` (Repository Organization section)
+- **Running/testing workflows** → `README.md` (Starting, Stopping and Testing section)
+- **Project quick start** → `README.md` (Quick Start section)
+
+**AI Workflow (Root AGENTS.md)**:
+
+- **10-step development process** → Root `AGENTS.md`
+- **Core rules (Always/Ask/Never)** → Root `AGENTS.md`
+- **Step checklists** → Root `AGENTS.md`
+
+**Development Guidance (Domain AGENTS.md files)**:
+
 - **Blazor component patterns** → `src/TechHub.Web/AGENTS.md` (domain-specific)
 - **API endpoint patterns** → `src/TechHub.Api/AGENTS.md` (domain-specific)
 - **PowerShell script patterns** → `scripts/AGENTS.md` (domain-specific)
@@ -235,37 +273,45 @@ When adding documentation, place it in the most specific appropriate location:
 
 #### ❌ **Incorrect Placements**
 
-- **Terminology/concepts** → `docs/` (belongs in root `AGENTS.md`)
-- **Architecture overview** → `docs/` (belongs in root `AGENTS.md`)
-- **.NET-specific patterns** → `docs/` (belongs in root `AGENTS.md` .NET sections)
+- **Terminology/concepts** → `docs/` (belongs in `README.md`)
+- **Architecture overview** → `docs/` (belongs in `README.md`)
+- **Tech stack details** → `docs/` (belongs in `README.md`)
+- **AI workflow steps** → `docs/` or `README.md` (belongs in root `AGENTS.md`)
 - **Writing standards** → `docs/` (belongs in `collections/writing-style-guidelines.md`)
-- **Code examples** → `docs/` (belongs in AGENTS.md files)
-- **Development how-tos** → `docs/` (belongs in AGENTS.md files)
+- **Code examples** → `docs/` (belongs in domain AGENTS.md files)
+- **Development how-tos** → `docs/` (belongs in domain AGENTS.md files)
 - **API implementation code** → `docs/` (belongs in `src/TechHub.Api/AGENTS.md`)
 - **Domain-specific patterns** → Root AGENTS.md (belongs in domain AGENTS.md files)
-- **Content formatting** → `docs/` (use `npx markdownlint-cli2 --fix` for automated fixes)
 
 ## When to Update Documentation Types
+
+**Update Root AGENTS.md** when:
+
+- AI workflow process changes
+- Core rules (Always/Ask/Never) change
+- New development steps needed
+
+**Update README.md** when:
+
+- Project overview changes
+- Tech stack changes
+- Site terminology changes
+- Running/testing workflows change
+- Documentation hierarchy changes
 
 **Update Documentation** (`docs/*.md`) when:
 
 - Feature specifications change
 - System architecture evolves
 - New functional components added
-- Conceptual explanations needed
+- API contracts change
 
-**Update AGENTS.md files** when:
+**Update Domain AGENTS.md files** when:
 
 - Development patterns change
 - Critical rules added for a domain
 - Common errors identified
 - Domain-specific guidance needed
-
-**Update Framework Agents** (`.github/agents/`) when:
-
-- Framework-specific commands change
-- Tech stack best practices evolve
-- Framework versions update
 
 ## Documentation Maintenance
 

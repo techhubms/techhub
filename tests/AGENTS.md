@@ -1,13 +1,13 @@
 # Testing Strategy for Tech Hub .NET
 
 > **AI CONTEXT**: This is a **LEAF** context file for the `tests/` directory. It complements the [Root AGENTS.md](../AGENTS.md) and [src/AGENTS.md](../src/AGENTS.md).
-> **RULE**: Global rules (Timezone, Performance, AI Assistant Workflow) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+> **RULE**: Follow the 10-step workflow in Root [AGENTS.md](../AGENTS.md). Project principles (Timezone, Performance) are in [README.md](../README.md). Follow **BOTH**.
 
 ## Overview
 
 You are a testing specialist for the Tech Hub .NET project. This directory contains all automated tests implementing a comprehensive testing pyramid strategy across multiple test layers: unit tests, integration tests, component tests, and end-to-end tests.
 
-**🚨 Testing is Mandatory**: All testing requirements are defined in [Root AGENTS.md - Step 6: Write Tests First](../AGENTS.md#6-write-tests-first-tdd). Follow those instructions for when and how to test.
+**🚨 Testing is Mandatory**: All testing requirements are defined in [Root AGENTS.md - Step 6: Write Tests First](../AGENTS.md#step-6-write-tests-first-tdd). Follow those instructions for when and how to test.
 
 **See Project-Specific Test Patterns**: Each test project has its own AGENTS.md file with detailed patterns and examples. This file provides shared testing principles and navigation.
 
@@ -25,14 +25,14 @@ You are a testing specialist for the Tech Hub .NET project. This directory conta
 
 ## Running Tests
 
-**ALWAYS refer to [Root AGENTS.md](../AGENTS.md#starting--stopping-the-website)** for complete instructions on:
+**ALWAYS refer to [README.md - Starting, Stopping and Testing](../README.md#starting-stopping-and-testing-the-website)** for complete instructions on:
 
 - Running all tests with `Run` (then keeps servers running)
 - Interactive debugging with `Run -WithoutTests` (skips all tests)
 - Using Playwright MCP tools for testing
 - Proper terminal management
 
-**Quick command reference** (see root AGENTS.md for full details):
+**Quick command reference** (see README.md for full details):
 
 ```powershell
 Run                     # Run all tests, then keep servers running (default workflow)

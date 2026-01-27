@@ -1,1350 +1,371 @@
-# Tech Hub Development Guide
+# AI Assistant Workflow
 
-🚨 **ABSOLUTELY CRITICAL: FOLLOW THE PROCESS**: This file defines a **required 10-step process** for all development tasks in [AI Assistant Workflow](#ai-assistant-workflow). Always follow these steps in order for every request.
+🚨 **CRITICAL**: This file defines the **required 10-step development process** for AI coding agents. Follow these steps in order for every task.
 
-## What is AGENTS.md?
+## What is This File?
 
-**This file is specifically for YOU - an AI coding agent.** AGENTS.md files provide the context, instructions, and conventions you need to work effectively on this project. Think of it as a README for agents.
+**This file is specifically for YOU - an AI coding agent.** It defines the mandatory workflow you must follow for all development tasks.
 
-**Why separate from README.md?**
+**Documentation Hierarchy**:
 
-- **README.md** is for humans: quick starts, project descriptions, contribution guidelines
-- **AGENTS.md** is for AI agents: detailed build steps, testing workflows, coding conventions, and precise instructions that might clutter a README
+| File | Purpose |
+|------|---------|
+| **This file (AGENTS.md)** | AI workflow - the 10-step process with checklists |
+| **[README.md](README.md)** | General info - project overview, tech stack, terminology, running/testing |
+| **Domain AGENTS.md files** | Technical details - code patterns, framework guidance (e.g., [src/AGENTS.md](src/AGENTS.md)) |
+| **[docs/](docs/)** | Functional docs - WHAT the system does (API specs, features) |
 
-**How to use this file**:
-
-- This is your **primary source of truth** for how to work on Tech Hub
-- Follow the [10-step AI Assistant Workflow](#ai-assistant-workflow) for every task
-- When working in a specific domain (e.g., `src/`, `tests/`, `tests/TechHub.Web`, `src/TechHub.Api`, etc), **ALSO** read the domain-specific `AGENTS.md` in that directory
-- Nested AGENTS.md files provide specialized instructions for their domain
-- Human developers can read this too, but it's optimized for your consumption
-
-**Learn more about AGENTS.md**: <https://agents.md/>
+**How to use**: Follow the 10 steps below. Each step has a checklist - complete or explicitly skip each item.
 
 ---
 
-## Index
+## The 10-Step Workflow
 
-- [Project Overview](#project-overview)
-  - [Repository Organization](#repository-organization)
-- [AI Assistant Workflow](#ai-assistant-workflow)
-  - [1. Core Rules & Boundaries](#1-core-rules--boundaries)
-  - [2. Gather Context](#2-gather-context)
-  - [3. Create a Plan](#3-create-a-plan)
-  - [4. Research & Validate](#4-research--validate)
-  - [5. Verify Current Behavior (Optional)](#5-verify-current-behavior-optional)
-  - [6. Write Tests First (TDD)](#6-write-tests-first-tdd)
-  - [7. Implement Changes](#7-implement-changes)
-  - [8. Validate & Fix](#8-validate--fix)
-  - [9. Update Documentation](#9-update-documentation)
-  - [10. Report Completion](#10-report-completion)
-- [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-the-website)
-  - [Starting the Website](#starting-the-website)
-  - [Testing Workflows and Strategies](#testing-workflows-and-strategies)
-  - [Stopping the Website](#stopping-the-website)
-  - [Using the Run Function](#using-the-run-function)
-  - [Advanced Development Scenarios](#advanced-development-scenarios)
-- [Documentation Architecture](#documentation-architecture)
-  - [Documentation Hierarchy](#documentation-hierarchy)
-  - [Documentation Placement Strategy](#documentation-placement-strategy)
-  - [Complete Documentation Map](#complete-documentation-map)
-  - [Quick Reference Guide](#quick-reference-guide)
-- [Core Development Principles](#core-development-principles)
-  - [Tech Stack](#tech-stack)
-  - [Architectural Principles](#architectural-principles)
-  - [Performance Architecture](#performance-architecture)
-  - [Accessibility Standards](#accessibility-standards)
-  - [Configuration-Driven Development](#configuration-driven-development)
-  - [Timezone & Date Handling](#timezone--date-handling)
-- [Site Terminology](#site-terminology)
-  - [Core Concepts](#core-concepts)
-  - [Content Organization](#content-organization)
-  - [Filtering Systems](#filtering-systems)
-  - [Content Structure](#content-structure)
-  - [RSS Feeds](#rss-feeds)
+### Step 1: Core Rules & Boundaries
 
-## Project Overview
-
-The Tech Hub is a **modern .NET web application** built with Blazor that serves as a technical content hub. We're creating a fast, responsive, accessible platform for showcasing Microsoft technical content across AI, Azure, GitHub Copilot, .NET, DevOps, and Security topics.
-
-**What We're Building**:
-
-A production-quality web application featuring:
-
-- **Modern responsive design** - Mobile-first, accessible UI with Tech Hub visual identity
-- **Server-side rendering** - Blazor SSR for optimal SEO and performance
-- **Progressive enhancement** - WebAssembly for rich client-side interactions
-- **RESTful architecture** - Decoupled API backend and Blazor frontend
-- **Configuration-driven** - Content structure defined in data files, not code
-- **Resilient by design** - Built-in retry policies, error handling, graceful degradation
-
-**Implementation Details**:
-
-For .NET development patterns, component architecture, API design, and all code examples, see **[src/AGENTS.md](src/AGENTS.md)**.
-
-### Repository Organization
-
-**Source Code** (`src/`):
-
-- `TechHub.Api/` - REST API backend (Minimal API, OpenAPI/Swagger)
-- `TechHub.Web/` - Blazor frontend (SSR + WebAssembly)
-- `TechHub.Core/` - Domain models, DTOs, interfaces
-- `TechHub.Infrastructure/` - Repository implementations, services
-- `TechHub.AppHost/` - .NET Aspire orchestration
-
-**Content** (`collections/`):
-
-- `_news/` - Official announcements and product updates
-- `_videos/` - Video content and tutorials
-- `_community/` - Microsoft Tech Community posts
-- `_blogs/` - Technical articles and blogs
-- `_roundups/` - Curated weekly summaries
-
-**Tests** (`tests/`):
-
-- `TechHub.Core.Tests/` - Unit tests for domain logic
-- `TechHub.Api.Tests/` - Integration tests for API endpoints
-- `TechHub.Web.Tests/` - bUnit component tests
-- `TechHub.E2E.Tests/` - Playwright end-to-end tests
-- `powershell/` - PowerShell script tests
-
-**Configuration & Documentation**:
-
-- `appsettings.json` - Application configuration (sections, collections, service settings)
-- `docs/` - Functional documentation (API spec, filtering, content management)
-- `scripts/` - Automation and utility scripts (PowerShell)
-- `infra/` - Azure infrastructure (Bicep templates)
-- `specs/` - Feature specifications (planning docs, may be outdated)
-
-**Navigation**:
-
-- See [Documentation Architecture](#documentation-architecture) for complete documentation map
-- See [README.md](README.md) for quick start guide
-
-## AI Assistant Workflow
-
-### 1. Core Rules & Boundaries
-
-**CRITICAL**: These are the **non-negotiable rules** that apply to ALL development tasks. **ALWAYS** follow these rules without exception and not only the always do rules but also the ask first and never do rules.
+**CRITICAL**: These rules apply to ALL tasks. Review before starting any work.
 
 #### ✅ Always Do
 
-- **Always follow the 10-step workflow**: Complete all steps in order for every request
-- **Always write tests BEFORE implementation**: Test-Driven Development (TDD) is mandatory
-- **Always prefer higher-level tools**: ALWAYS use MCP tools > Built-in tools > CLI commands
-  - **MCP tools** (highest priority): Playwright MCP (web testing), GitHub MCP (GitHub operations), context7 MCP (documentation)
-  - **Built-in tools**: `replace_string_in_file` (with 5-10 lines context), `read_file`, `grep_search`, `file_search`
-  - **CLI** (lowest priority): Only for complex multi-step operations not supported by tools
-- **Always check for errors after editing files**: Use `get_errors` tool on modified files to check VS Code diagnostics (markdown linting, ESLint, RuboCop, etc.) and fix all issues
-- **Always run tests after modifying code**: CRITICAL - After ANY code changes (C#, JavaScript, PowerShell, templates), run appropriate test suites. Documentation-only changes do not require testing
-- **Always fix linter issues**: Always resolve all linting errors and warnings, EXCEPT intentional bad examples in documentation. Do NOT do this for temporary markdown files in `.tmp/` unless you intend to keep them later.
-- **Always read domain-specific AGENTS.md files**: Before editing any code in that domain
-- **Always store temp files in `.tmp/`**: ALL temporary/one-off scripts in `.tmp/` (e.g., quick tests, debugging scripts), permanent/reusable automation goes in `scripts/`
-- **Always use PowerShell for scripts**: If script is required, it MUST be `.ps1` file in `.tmp/` directory, then execute it
-- **Always follow timezone standards**: `Europe/Brussels` for all date operations
-- **Always use configuration-driven design**: Update configuration in `appsettings.json`, not hardcoded values
-- **Always server-side render all content**: Initial page load must show complete content
-- **Always add tests for new functionality**: According to domain-specific AGENTS.md files
-- **Always follow writing style guidelines**: See [collections/writing-style-guidelines.md](collections/writing-style-guidelines.md) for content writing standards
-- **Always be direct and concise**: Avoid exaggerated language
-- **Always maintain professional yet approachable tone**: Clear and authoritative without being overly formal
-- **Always avoid filler phrases**: Don't use "Sure!" or "You're right!"
-- **Always install dependencies in and via the DevContainer configuration or installation scripts**: This means `.devcontainer/post-create.sh` script or `.devcontainer/devcontainer.json` file. NEVER install dependencies in PowerShell or other scripts
-- **Always install Playwright via devcontainer**: Playwright browsers are installed in `.devcontainer/post-create.sh`, NOT via terminal commands during development
+- [ ] Follow the 10-step workflow in order
+- [ ] Write tests BEFORE implementation (TDD)
+- [ ] Prefer tools in this order: MCP tools → Built-in tools → CLI
+- [ ] Check for errors after editing files (`get_errors` tool)
+- [ ] Run tests after code changes
+- [ ] Fix all linter issues
+- [ ] Read domain-specific AGENTS.md before editing code in that domain
+- [ ] Store temp files in `.tmp/`
+- [ ] Use PowerShell for scripts (save as `.ps1`, then execute)
+- [ ] Follow timezone standard: `Europe/Brussels`
+- [ ] Server-side render all content
+- [ ] Follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
+- [ ] Be direct and concise - no filler phrases
 
 #### ⚠️ Ask First
 
-- **Ask first before making configuration changes**: Consult domain agents before modifying build system or configuration (e.g., `package.json`, `TechHub.slnx`, `.csproj` files)
-- **Ask first before making breaking changes to public APIs**: Changes that affect existing functionality (e.g., modifying endpoint signatures, changing data structures)
-- **Ask first before making adding new dependencies**: To dependency management files or any config (e.g., new NuGet packages, npm packages, PowerShell modules)
-- **Ask first before making cross-domain changes**: Modifications affecting multiple areas (e.g., API + Blazor + Infrastructure, or content structure + build system)
-- **Ask first before making a significant refactoring**: That touches many files or core architecture (e.g., modifying section configuration in `appsettings.json`, changing domain models)
+- [ ] Configuration changes (package.json, .csproj, appsettings.json)
+- [ ] Breaking changes to public APIs
+- [ ] Adding new dependencies
+- [ ] Cross-domain changes (API + Web + Infrastructure)
+- [ ] Significant refactoring
 
 #### 🚫 Never Do
 
-- **Never skip the 10-step workflow**: All steps are required for quality work
-- **Never write implementation before tests**: TDD is mandatory for code changes
-- **Never skip E2E tests for UI changes**: E2E tests are MANDATORY for frontend, not optional
-- **Never use lower-level tools unnecessarily**: Don't use CLI when MCP or built-in tools are available
-- **Never use `| head` or `| tail` or `Select-Object -Last` or similar in CLI commands to limit the amount of lines**: They block critical output and often require the user to press control-c before you can continue!
-- **Never filter test output with Select-String, Select-Object, grep, or similar pattern filtering**: In addition to the previous rule, this blocks critical output of test results, failures, errors, and context
-- **Never paste scripts into terminal**: Always save as `.ps1` file in `.tmp/` and execute
-- **Never use `cat` and/or `EOF` constructions to create scripts**: Always save script to file and execute it
-- **Never use `pwsh -Command` with `EOF` or other large text demarcations**: Always save script to file and execute it
-- **Never use backslashes for escaping in PowerShell**: Always use backticks (`)
-- **Never work around missing tools**: Tell user if needed tools are unavailable instead of using alternatives
-- **Never commit secrets or API keys**: Check all files before committing
-- **Never modify generated directories**: Build outputs (e.g., `bin/`, `obj/`, `node_modules/`, `.tmp/`)
-- **Never create content without frontmatter**: All markdown must have proper YAML front matter
-- **Never hardcode section/collection data**: Always use configuration in `appsettings.json`
-- **Never let JavaScript create initial content**: Server-side render everything, JS only enhances
-- **Never add wrapper methods just for tests**: Test real implementation
-- **Never make code backwards compatible unless requested**: Prefer clean, modern code
-- **Never add comments describing what changed**: Code should be self-documenting
-- **Never start responses with "Sure!" or "You're right!"**: Be direct and professional
-- **Never use emojis unless explicitly requested**: Keep communication professional
-- **Never leave files incomplete or broken**: Ensure all changes are complete
-- **Never assume UTC**: Always use configured timezone (`Europe/Brussels`)
-- **Never include Windows support**: This project is Linux-only (DevContainer environment)
-- **Never suppress errors for resiliency**: Prevent errors by checking conditions first, don't hide failures with error suppression (e.g., `2>$null`)
-- **Never swallow exceptions without logging**: ALWAYS log exceptions in catch blocks with full context (exception details, relevant parameters, file paths). Silent failures make debugging impossible. Use `_logger.LogError(ex, "Context message", parameters)` for all caught exceptions.
-- **Never rename identifiers without checking ALL occurrences**: When renaming parameters, variables, properties, methods, or classes, use `grep_search` to find and update ALL occurrences in code, documentation, tests, and specifications
+- [ ] Skip the 10-step workflow
+- [ ] Write implementation before tests
+- [ ] Skip E2E tests for UI changes
+- [ ] Use `| head`, `| tail`, `Select-Object -Last` (blocks output)
+- [ ] Paste scripts into terminal (save as file first)
+- [ ] Commit secrets or API keys
+- [ ] Hardcode section/collection data
+- [ ] Assume UTC (use Europe/Brussels)
+- [ ] Swallow exceptions without logging
+- [ ] Rename identifiers without checking ALL occurrences
 
-#### 🚨 Naming Consistency Rule
+**Step 1 Checklist**:
 
-When renaming ANY identifier, you **MUST** verify and update ALL occurrences across:
+- [ ] Reviewed Always/Ask/Never rules
+- [ ] Understand which rules apply to this task
+- [ ] Ready to proceed
 
-1. **Implementation code**: Source files, interfaces, classes
-2. **Documentation**: Comments, markdown files, specifications
-3. **Tests**: Test files, test method names, assertions
-4. **Configuration**: JSON files, YAML files, environment variables
-5. **API contracts**: Endpoint routes, DTOs, OpenAPI docs
+---
 
-**Process**: Before renaming, run `grep_search` with the old name to find all occurrences, then systematically update each location. This prevents inconsistencies that break builds, confuse developers, and create maintenance issues.
+### Step 2: Gather Context
 
-### 2. Gather Context
+**Before touching any code**, understand what you're working with.
 
-**Before touching any code**, understand what you're working on:
+**Actions**:
 
-**Read Documentation First**:
+1. Read relevant documentation:
+   - [ ] This file for workflow
+   - [ ] [README.md](README.md) for project overview, terminology, running
+   - [ ] Domain AGENTS.md for the area you're working in
 
-- Start with this file (Root AGENTS.md) for architecture and principles
-- See [Complete Documentation Map](#complete-documentation-map) for navigation guide to all documentation files
-- See [Quick Reference Guide](#quick-reference-guide) for quick navigation by task type
-
-**Scan the Code**:
-
-- Use `read_file` to examine relevant files
-- Use `grep_search` or `semantic_search` to find related code patterns
-- Use `list_dir` to understand directory structure
-- Check existing tests in `tests/` to understand expected behavior
+2. Scan the code:
+   - [ ] Use `read_file` to examine relevant files
+   - [ ] Use `grep_search` or `semantic_search` to find related patterns
+   - [ ] Check existing tests to understand expected behavior
 
 **Key Rules**:
 
 - Never assume - always read before modifying
-- Understand the existing architecture before proposing changes
-- Follow existing code patterns and conventions when proposing changes
-- Use the latest version of code and libraries when proposing changes
-- Always use the context7 MCP tool to fetch latest documentation when proposing changes or if you don't understand something
-- Read documentation, code, and content files to understand implementation
+- Use context7 MCP tool for framework documentation
+- Follow existing code patterns
 
-### 3. Create a Plan
+**Step 2 Checklist**:
 
-**Always create a step-by-step plan** before making any changes:
+- [ ] Read relevant documentation
+- [ ] Examined related code files
+- [ ] Checked existing tests
+- [ ] Understand the current architecture
 
-**Planning Requirements**:
+---
 
-- Break down the task into logical, actionable steps
-- Identify all files that need modification
-- Determine if tests need to be added or updated
-- Identify documentation that will need updates
-- Consider edge cases and potential issues
+### Step 3: Create a Plan
 
-**Communicate the Plan**:
+**Always plan before making changes**.
 
-- Explain your plan to the user clearly
-- Wait for confirmation if changes are significant or complex
-- Use `manage_todo_list` tool for complex multi-step work
-- For simple single-step operations, skip formal task tracking
+**Actions**:
 
-**Key Rules**:
+1. Break down the task:
+   - [ ] Identify logical steps
+   - [ ] List files that need modification
+   - [ ] Determine tests needed
+   - [ ] Identify documentation updates
 
-- Never start coding without a plan
-- Break complex tasks into smaller, manageable steps
-- Always explain what you're about to do before doing it
-- Wait for confirmation if changes are significant or complex
+2. Communicate:
+   - [ ] Explain plan to user
+   - [ ] Wait for confirmation if changes are significant
+   - [ ] Use `manage_todo_list` for complex multi-step work
 
-### 4. Research & Validate
+**Step 3 Checklist**:
 
-**Find additional information** to ensure correct implementation:
+- [ ] Task broken into logical steps
+- [ ] Files to modify identified
+- [ ] Tests to add/update identified
+- [ ] Documentation updates identified
+- [ ] Plan communicated (if significant)
 
-**Use Online Resources**:
+---
 
-- **context7 MCP tool**: Get up-to-date documentation for any framework/library (.NET, Blazor, JavaScript libraries, etc.)
-- **Web searches**: Research best practices, patterns, or solutions
-- **Follow referenced links**: Check official documentation and guides
-- **Verify information**: Cross-reference multiple sources when uncertain
+### Step 4: Research & Validate
+
+**Find additional information** for correct implementation.
+
+**Actions**:
+
+- [ ] Use **context7 MCP tool** for framework/library documentation
+- [ ] Research best practices if needed
+- [ ] Verify information from official sources
 
 **When to Research**:
 
-- Working with external frameworks or libraries
-- Implementing new features or patterns
-- Encountering errors or unexpected behavior
-- Need to verify best practices or modern approaches
+- Working with external frameworks
+- Implementing new patterns
+- Encountering errors
+- Unsure about best practices
 
-**Key Rules**:
+**Step 4 Checklist**:
 
-- Always use context7 for framework-specific questions
-- Never fabricate or invent information
-- Prefer official documentation over Stack Overflow
+- [ ] Researched framework docs (if applicable)
+- [ ] Verified best practices (if applicable)
+- [ ] Have enough information to proceed
+- [ ] OR: No research needed for this task
 
-### 5. Verify Current Behavior (Optional)
+---
 
-**If needed**, understand current behavior BEFORE writing tests or making changes:
+### Step 5: Verify Current Behavior (Optional)
 
-**How to Run and Test**:
-
-See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-the-website) for complete instructions on:
-
-- How to start the website with `Run -WithoutTests` for interactive debugging
-- Using Playwright MCP tools for testing (CRITICAL: works directly in GitHub Copilot Chat)
-- How to safely interact with the running website without breaking it
-- When to run tests vs when to skip them for exploration
+**If needed**, understand current behavior before changes.
 
 **When to Verify**:
 
-- Reproducing user-reported bugs
-- Understanding complex UI interactions
+- Reproducing bugs
+- Understanding complex interactions
 - Investigating unexpected behavior
-- Documenting current state before modifications
 
-**Key Rules**:
+**How to Verify**:
 
-- Use Playwright MCP for browser testing and validation
-- Test local site (<https://localhost:5003>) for development
-- Test live site (<https://tech.hub.ms>) when appropriate
-- Document unexpected behaviors you discover
-- Report any discrepancies between observed behavior and documentation
+- [ ] Start website: `Run -WithoutTests` (runs as background process)
+- [ ] Use `get_terminal_output` repeatedly until you see "This terminal is now free to use". Do NOT execute any other commands in the terminal until that moment.
+- [ ] Use Playwright MCP tools for browser testing
+- [ ] Document current behavior
 
-### 6. Write Tests First (TDD)
+**See [README.md - Starting, Stopping and Testing](README.md#starting-stopping-and-testing-the-website)** for complete instructions.
 
-**CRITICAL**: Write tests BEFORE implementing changes to ensure proper validation:
+**Step 5 Checklist**:
 
-**ALWAYS Start with Clean Slate**:
+- [ ] Current behavior verified
+- [ ] OR: Verification not needed for this task
 
-- **BEFORE any new feature, change, or bugfix**: Run ALL tests first
-- **Fix ALL broken tests**: Ensure 100% pass rate before starting new work
-- **Clean slate principle**: Never build on top of failing tests
-- **Prevents cascading failures**: Broken tests mask new issues
+---
 
-**Test-First Development**:
+### Step 6: Write Tests First (TDD)
 
-- **For bug fixes**: Write a failing test that reproduces the bug FIRST
-- **For new features**: Write tests that define expected behavior BEFORE implementation
-- **For refactoring**: Ensure existing tests pass, add tests for edge cases if missing
-- **Run tests**: Verify tests fail for the right reasons (proving they test the right thing)
+**CRITICAL**: Write tests BEFORE implementing changes.
 
-**Test Coverage Requirements**:
+**Actions**:
 
-- **Unit tests**: Test individual components in isolation (Core, Infrastructure layers)
-- **Integration tests**: Test API endpoints and data access (API, Repository layers)
-- **Component tests**: Test Blazor components with bUnit (Web layer)
-- **E2E tests**: Test complete user workflows with Playwright - **MANDATORY for ALL UI changes**
-- See [tests/AGENTS.md](tests/AGENTS.md) for comprehensive testing strategies
+1. Start with clean slate:
+   - [ ] Run ALL tests first: `Run`
+   - [ ] Fix any broken tests before proceeding
 
-**🚨 CRITICAL E2E RULE**: NEVER skip E2E tests for UI/frontend changes:
+2. Write failing tests:
+   - [ ] For bugs: Write test that reproduces the bug
+   - [ ] For features: Write tests defining expected behavior
+   - [ ] Run tests - verify they fail for the right reason
 
-- ALL URL routing changes → E2E tests REQUIRED
-- ALL Blazor component changes → E2E tests REQUIRED
-- ALL button/interaction changes → E2E tests REQUIRED
-- ALL navigation changes → E2E tests REQUIRED
-- See [tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md) for patterns
+**Test Types Required**:
 
-**When to Write Tests**:
+| Change Type | Required Tests |
+|-------------|----------------|
+| Bug fix | Failing test reproducing bug |
+| New feature | Unit + Integration + E2E |
+| API changes | Integration tests |
+| UI/frontend changes | Component + E2E (**MANDATORY**) |
+| Backend-only | Unit + Integration |
+| Documentation-only | None |
 
-- **ALWAYS** for bug fixes - reproduce the bug first (all layers including E2E)
-- **ALWAYS** for new features - define expected behavior first (all layers including E2E)
-- **ALWAYS** for API changes - test contracts and responses (integration + E2E)
-- **ALWAYS** for UI/frontend changes - E2E tests are MANDATORY, not optional
-- **ALWAYS** for URL routing changes - E2E tests verify navigation flows
-- **ALWAYS** for component interactivity - E2E tests verify button clicks, forms, etc.
-- **SKIP** for documentation-only changes (no code impact)
-- **SKIP** for backend-only changes that don't affect user workflows (but keep integration tests)
+**🚨 E2E tests are MANDATORY for ALL UI changes** - see [tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md)
 
-**Key Benefits of Test-First**:
+**Step 6 Checklist**:
 
-- Forces clear thinking about requirements and edge cases
-- Prevents writing tests that just validate what you coded (confirmation bias)
-- Ensures tests actually catch bugs (proven by initial failure)
-- Makes refactoring safer with confidence
-- Documents intended behavior clearly
+- [ ] Ran existing tests first (clean slate)
+- [ ] Wrote failing tests for new behavior
+- [ ] Verified tests fail for the right reason
+- [ ] OR: Documentation-only change (no tests needed)
 
-**Example Workflow**:
+---
 
-1. **Understand the requirement**: Read specs, understand expected behavior
-2. **Write failing test**: Test should fail because feature doesn't exist yet
-3. **Run test**: Verify it fails for the right reason (not syntax errors)
-4. **Implement**: Write minimal code to make test pass
-5. **Run tests**: Verify test now passes
-6. **Refactor**: Improve code quality while keeping tests green
-7. **Repeat**: For next scenario/edge case
+### Step 7: Implement Changes
 
-**Test Organization**:
+**NOW implement** to make tests pass.
 
-- Place tests in corresponding test projects (TechHub.Core.Tests, TechHub.Api.Tests, etc.)
-- Use descriptive test names: `MethodName_Scenario_ExpectedResult`
-- Group related tests in same test class
-- Use `[Theory]` for testing multiple similar scenarios
-- See domain-specific AGENTS.md for test patterns
+**Actions**:
 
-### 7. Implement Changes
+1. Write minimal code:
+   - [ ] Write ONLY enough code to make tests pass
+   - [ ] Follow existing patterns and conventions
+   - [ ] Use `replace_string_in_file` for edits
 
-**NOW implement** to make your tests pass:
+2. Check quality:
+   - [ ] Run `get_errors` after each file edit
+   - [ ] Fix all linting/compilation errors
+   - [ ] Run tests frequently
 
-**Implementation Guidelines**:
+**Running the Website**:
 
-- **Write MINIMAL code** to make tests pass - avoid over-engineering
-- Follow tool calling strategy: MCP → Built-in → CLI
-- Use `replace_string_in_file` or `multi_replace_string_in_file` for code edits
-- Use `get_errors` on modified files to check for VS Code diagnostics
-- Fix all linting and compilation errors immediately
-- Follow existing patterns and conventions in each language
-- Use meaningful variable names and proper error handling
-- Prefer clarity over cleverness
-- Make parameters required unless they can be null
-- Follow existing code patterns and conventions
-- Use the latest version of code and libraries
-- Always use the context7 MCP tool to fetch latest documentation when modifying code
-- **Run tests frequently** during implementation to catch issues early
+See [README.md - Starting, Stopping and Testing](README.md#starting-stopping-and-testing-the-website) for:
 
-**Running and Testing**:
+- `Run` - Build, test, start servers
+- `Run -WithoutTests` - Start servers without tests
+- Playwright MCP tools for interactive testing
 
-- See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-the-website) for complete instructions on:
-  - How to start the website with the `Run` function
-  - Using Playwright MCP tools for testing (CRITICAL: works directly in GitHub Copilot Chat)
-  - When to use `-WithoutTests` vs other parameters
-  - How to safely interact with the running website
-- Quick reference: Use `Run` for default workflow, `Run -WithoutTests` for interactive debugging
+**Step 7 Checklist**:
 
-**Critical Requirements**:
+- [ ] Implemented minimal code to pass tests
+- [ ] Checked for errors after edits
+- [ ] Fixed all linting issues
+- [ ] Tests pass
 
-- **Ask for clarification** on ANYTHING unclear - NEVER assume
-- **For bigger changes**: ALWAYS ask before proceeding
-- **Check for errors** after every file modification
-- **Run tests** after each logical change to verify progress
-- **Fix all issues** before moving to next step
-- **DevContainer Dependencies**: Always install in `/workspaces/techhub/.devcontainer/post-create.sh`, never in PowerShell or other scripts
+---
 
-**Implementation Strategy**:
+### Step 8: Validate & Fix
 
-1. **Red**: Tests fail (Step 5 verified this)
-2. **Green**: Write minimal code to make tests pass
-3. **Refactor**: Improve code quality while keeping tests green
-4. **Repeat**: For each test case / scenario
+**Ensure all tests pass and code quality is high**.
 
-**Files to Update**:
+**Actions**:
 
-- Code files (C#, JavaScript, PowerShell, Razor, etc.)
-- Configuration files if needed
-- Any related includes, layouts, or components
+1. Run full test suite:
+   - [ ] `Run` to run all tests
+   - [ ] Or `Run -TestProject <name>` for scoped testing
+   - [ ] ALL tests must pass
 
-**Cleanup and Removal**:
+2. Check quality:
+   - [ ] Use `get_errors` for linting/compilation
+   - [ ] Verify code follows conventions
+   - [ ] Check error handling and logging
 
-- **ALWAYS clean up after changes** - Remove outdated files, code, and dependencies
-- **No backwards compatibility unless requested** - Don't keep old implementations "just in case"
-- **Remove unused files immediately** - Don't leave lingering code that's no longer referenced
-- **Check documentation before removing critical files** - Update all references in documentation when removing files
-- **Delete deprecated code** - Remove all code that is no longer used!
-- **Clean up test code** - Remove obsolete test helpers, fixtures, or data files
-- **Update configuration** - Remove unused settings, dependencies, and build artifacts
+**Step 8 Checklist**:
 
-**Key Rules**:
+- [ ] All tests pass
+- [ ] No linting/compilation errors
+- [ ] Code follows project conventions
+- [ ] No regressions introduced
 
-- Write production code ONLY to make tests pass
-- Don't add features not covered by tests
-- Follow existing patterns and conventions
-- Clean up outdated code and files immediately
-- See [Core Rules & Boundaries](#1-core-rules--boundaries) for complete rule list
+---
 
-### 8. Validate & Fix
+### Step 9: Update Documentation
 
-**Ensure all tests pass and code quality is high**:
-
-**Run Full Test Suite**:
-
-- **Primary workflow**: Use `Run` to run all tests and keep servers running for development
-- **Scoped testing**: Use `Run -TestProject <name>` to run specific test projects
-- Run ALL affected tests (unit, integration, component, E2E as appropriate)
-- **E2E tests are MANDATORY** for any UI/frontend changes - NO EXCEPTIONS
-- Tests should NOW PASS (they failed in step 5, you fixed in step 6)
-- Use test scripts appropriate for the domain you're working in
-- See [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-the-website) for complete testing workflows
-- See [tests/AGENTS.md](tests/AGENTS.md) for comprehensive testing strategy
-
-**Check for Regressions**:
-
-- Run full test suite to ensure no existing functionality broke
-- Pay special attention to integration tests
-- Verify E2E tests pass for critical user workflows
-- All tests MUST pass before proceeding
-
-**Code Quality Checks**:
-
-- Use `get_errors` to check for linting/compilation errors
-- Fix all warnings and errors
-- Verify code follows project conventions
-- Check for proper error handling
-- Ensure logging is appropriate
-
-**Performance Validation** (if applicable):
-
-- Check that changes don't introduce performance regressions
-- Verify caching still works correctly
-- Test with realistic data volumes
-
-**Key Rules**:
-
-- ALL tests must pass before moving forward
-- Zero tolerance for failing tests
-- Fix issues immediately, don't postpone
-- If tests fail, return to step 6 and fix implementation
-- Never commit code with failing tests
-
-### 9. Update Documentation
-
-**🚨 MANDATORY**: Documentation MUST be updated whenever code behavior changes (Constitution Rule #7).
-
-**Keep documentation in sync with code changes**:
+**🚨 MANDATORY**: Update docs when code behavior changes.
 
 **What to Update**:
 
-- Domain-specific AGENTS.md files if behavior changed
-- Functional documentation in `docs/` if features changed
-- Code comments if complex logic was added
-- README.md if user-facing changes occurred
+- [ ] Domain AGENTS.md if behavior changed
+- [ ] [docs/](docs/) if features changed
+- [ ] [README.md](README.md) if user-facing changes
+- [ ] Code comments for complex logic
 
-**How to Find Documentation**:
+**How to Find Docs**:
 
-- Use `grep_search` to find relevant docs mentioning modified features
-- Check domain-specific AGENTS.md in directories you modified
-- Review functional docs if feature behavior changed
-- Update this file if architectural changes were made
+- Use `grep_search` to find docs mentioning modified features
+- Check domain AGENTS.md in directories you modified
 
-**Documentation Placement Strategy**:
+**Documentation Placement**:
 
-**🚨 CRITICAL**: See [docs/AGENTS.md](docs/AGENTS.md) for complete instructions on:
+| Content Type | Location |
+|--------------|----------|
+| AI workflow | This file (AGENTS.md) |
+| Project overview, tech stack, terminology | [README.md](README.md) |
+| Code patterns, framework guidance | Domain AGENTS.md files |
+| System behavior, API specs | [docs/](docs/) |
+| Content writing standards | [collections/](collections/) |
 
-- **Where to place functional documentation** (docs/ directory)
-- **Where to place technical documentation** (AGENTS.md files)
-- **Where to place content guidelines** (collections/ directory)
-- **What belongs in each file type**
-- **How to avoid duplication**
-- **Complete documentation placement examples**
+**Step 9 Checklist**:
 
-**Quick Reference**:
+- [ ] Updated relevant documentation
+- [ ] Fixed markdown linting: `npx markdownlint-cli2 --fix <file>`
+- [ ] OR: No documentation updates needed
 
-- ✅ **Functional documentation** (WHAT the system does) → `docs/` directory
-- ✅ **Technical documentation** (HOW to implement) → Domain-specific AGENTS.md files
-- ✅ **Content guidelines** (writing standards) → `collections/` directory
-- 🚫 **Never skip documentation** when behavior changes
-- 🚫 **Never duplicate content** - link to existing docs instead
-- 🚫 **Never mix functional and technical** - keep them separate
+---
 
-**Documentation Rules**:
+### Step 10: Report Completion
 
-- **ALWAYS update documentation** when code behavior changes (NOT optional)
-- Search for existing docs before assuming none exist
-- Keep docs accurate and up-to-date
-- Follow markdown formatting guidelines (wrap symbol names in backticks, use KaTeX for equations)
-- Follow [`collections/writing-style-guidelines.md`](collections/writing-style-guidelines.md) for writing standards
-- See [Documentation Architecture](#documentation-architecture) for complete doc map
-
-**Key Rules**:
-
-- This is NOT optional - always update docs
-- Check for linting errors in markdown files with `get_errors` tool
-- Fix markdown issues by running: `npx markdownlint-cli2 --fix <file-path>`
-- Documentation is part of "task complete"
-- Work is NOT done until documentation is updated
-
-### 10. Report Completion
-
-**Tell the user you're done** with a clear summary:
+**Tell the user you're done** with a clear summary.
 
 **What to Report**:
 
-- Concise summary of what was changed
-- Links to modified files (use proper markdown link format below)
-- Any important notes or caveats
-- Confirmation that tests pass (if applicable)
-- Confirmation that documentation is updated
+- [ ] Concise summary of changes
+- [ ] Links to modified files
+- [ ] Confirmation that tests pass
+- [ ] Any important notes or caveats
 
-**File Link Formatting Rules**:
+**File Link Format**: Use `[path/file.ts](path/file.ts)` - NO backticks around file names.
 
-- **NO BACKTICKS**: Never wrap file names, paths, or links in backticks
-- **Required Formats**: File references: `[path/file.ts](path/file.ts)`, line references: `[file.ts:10](file.ts#L10)`, range references: `[file.ts:10-12](file.ts#L10-L12)`
-- **Path Rules**: Use `/` only, encode spaces in target (`My%20File.md`), no `file://` or `vscode://` schemes
-- **Forbidden**: Inline code (`file.ts`), plain text file names, bare line citations ("Line 86")
+**Step 10 Checklist**:
 
-**Key Rules**:
+- [ ] Summary provided
+- [ ] All files linked
+- [ ] Tests confirmed passing
+- [ ] Task 100% complete
 
-- Only report completion when task is 100% done
-- Never stop working until task is complete
-- Include all relevant details in completion report
+---
 
-## Starting, Stopping and Testing the Website
+## Quick Reference
 
-This section defines how to start, test, and interact with the running website.
+### Running the Website
 
-### Starting the Website
+See [README.md - Starting, Stopping and Testing](README.md#starting-stopping-and-testing-the-website) for complete details.
 
-**ALWAYS use the Run function directly** (automatically loaded in PowerShell):
-
-The `Run` function builds, tests, and starts servers **in background**. After `Run` completes, the terminal is immediately free to use for other commands. Servers continue running in background with output redirected to `.tmp/logs/`.
-
-**🚨 CRITICAL: Proper Run Function Execution**:
-
-When executing the `Run` function, you **MUST** follow this exact sequence:
-
-1. **Execute the Run command**: Call `Run` (or `Run -WithoutTests`, etc.) using `run_in_terminal` tool
-2. **Wait patiently**: Use **ONLY** `get_terminal_output` tool repeatedly until you see the text `"This terminal is now free to use"`
-3. **Do NOT interrupt**: Do NOT use `Start-Sleep`, execute other commands, or use other tools during the wait
-4. **Be patient**: This process can take up to 5 minutes - keep polling with `get_terminal_output` until completion
-
-**⚠️ Failure to follow this sequence will interrupt the build/test/startup process and require starting over.**
-
-**⚠️ E2E TEST NOTE**:
-
-✅ **ALWAYS** use `Run` (default) or `Run -TestProject E2E.Tests` for E2E tests.  
-🚫 **NEVER** run `dotnet test tests/TechHub.E2E.Tests` directly - it **WILL FAIL** without servers running!
-
-**Standard Run Commands**:
+**Common Commands**:
 
 ```powershell
-# Default development workflow - build, test, start servers in background
-Run
-
-# Scoped testing - only runs E2E tests
-Run -TestProject E2E.Tests
-
-# Start servers for debugging (no tests)
-Run -WithoutTests
-
-# Run tests and stop servers after (CI/CD mode)
-Run -StopServers
+Run                         # Build + all tests + servers
+Run -WithoutTests           # Build + servers (no tests)
+Run -TestProject Web.Tests  # Run specific test project
+Run -TestProject E2E.Tests  # Run E2E tests
+Run -StopServers            # CI/CD mode
 ```
 
-**Log Files**:
-
-- **Console output**: `.tmp/logs/console.txt` (Development) or `api-console.txt`/`web-console.txt` (Production)
-- **API logs**: `.tmp/logs/api-dev.log` (-prod for Production mode)
-- **Web logs**: `.tmp/logs/web-dev.log` (-prod for Production mode)
-
-### Testing Workflows and Strategies
-
-#### When to Run Tests - Decision Tree
-
-**Simple decision tree for running tests**:
-
-```text
-┌─────────────────────────────────────────────────────┐
-│ What are you doing?                                 │
-└─────────────────────────────────────────────────────┘
-                        │
-        ┌───────────────┼───────────────┐
-        ▼               ▼               ▼
-  
-  📝 Changed        🐛 Fixing         🔍 Exploring/
-  any code?         a bug?            Debugging?
-        │               │                   │
-        ▼               ▼                   ▼
-  Run               Run -WithoutTests  Run -WithoutTests
-  (verify all       (debug first,      (explore with
-   tests pass)       write test,        Playwright MCP
-                     then fix)          interactively)
-
-  📜 Changed PowerShell scripts only?
-        │
-        ▼
-  Run -TestProject powershell
-  (fast - only PowerShell/Pester tests,
-   no .NET build or E2E tests)
-```
-
-#### Quick Reference
-
-**Run (test-driven development) - ✅ PRIMARY**:
-
-- Use when: Running tests for validation or development
-- What it does: Build, runs ALL tests (PowerShell, unit, integration, component, E2E), then KEEPS servers running
-- When: Default workflow - auto-detects changes and intelligently restarts servers only when needed
-
-**Run -StopServers (CI/CD) - 🤖 CI/CD ONLY**:
-
-- Use when: Continuous integration pipelines where servers should exit after tests
-- What it does: Build, runs ALL tests, then STOPS servers and exits
-- When: CI/CD pipelines, automated test runs, NOT for local development
-
-**Run (development mode)**:
-
-- Use when: Development workflow - want tests to run AND servers to stay running
-- What it does: Build, runs ALL tests, then KEEPS servers running for development
-- When: Working on features, want to test code AND interact with running site
-
-**Run -WithoutTests**:
-
-- Use when: Debugging, exploring behavior, using Playwright MCP interactively
-- What it does: Build, starts servers, skips all tests
-- When: Investigating bugs, manual testing, interactive exploration
-
-**Run -Clean**:
-
-- Use when: Dependencies changed (NuGet packages, npm packages), build is broken
-- What it does: Clean bin/obj directories, then build, test, and start servers
-- When: Full clean rebuild needed (not needed for normal development)
-
-#### What Tests Get Run?
-
-All `Run` commands execute these test types (unless `-WithoutTests` is specified):
-
-1. **PowerShell Tests** - Script validation (Pester) - **RUN FIRST**
-   - Location: `tests/powershell`
-   - Tests content processing scripts
-   - Independent of .NET build/tests
-
-2. **Unit Tests** - Fast, isolated tests of individual classes/methods
-   - Location: `tests/TechHub.Core.Tests`, `tests/TechHub.Infrastructure.Tests`
-
-3. **Integration Tests** - API endpoints, data access
-   - Location: `tests/TechHub.Api.Tests`
-
-4. **Component Tests** - Blazor components (bUnit)
-   - Location: `tests/TechHub.Web.Tests`
-
-5. **E2E Tests** - Full user workflows (Playwright)
-   - Location: `tests/TechHub.E2E.Tests`
-   - 🚨 **MANDATORY** for ALL UI/frontend changes
-
-#### When to Run Specific Test Types
-
-**Changed C# backend code?** → `Run`
-
-**Changed Blazor components?** → `Run` (E2E tests **MANDATORY**)
-
-**Changed PowerShell scripts?** → `Run -TestProject powershell` (fast - only PowerShell tests, no .NET build)
-
-**Changed markdown/content?** → No tests needed
-
-**Not sure what you changed?** → `Run`
-
-**CI/CD pipeline?** → `Run -StopServers`
-
-**Testing specific area?** → Use `-TestProject` and/or `-TestName`:
-
-- `Run -TestProject powershell` - Run only PowerShell/Pester tests (fast - no .NET build)
-- `Run -TestProject Web.Tests` - Run only Web component tests
-- `Run -TestName SectionCard` - Run tests matching 'SectionCard'
-- `Run -TestProject E2E -TestName Navigation` - Run E2E navigation tests
-- `Run -TestProject powershell -TestName FrontMatter` - Run PowerShell tests matching 'FrontMatter'
-
-**Fast test iteration after fixing failures?** → `Run` auto-detects:
-
-- `Run` - Intelligently rebuilds only changed projects, restarts servers only if needed
-- `Run -TestProject E2E.Tests` - Only runs E2E tests, smart restart detection
-- `Run -TestProject powershell` - Only runs PowerShell tests (fast - no .NET build)
-- `Run -TestName SectionCard` - Runs tests matching 'SectionCard', smart restart detection
-
-#### Testing Best Practices
-
-✅ **Always run tests BEFORE committing**
-✅ **Write tests FIRST, then implement** (Test-Driven Development)
-✅ **Fix ALL broken tests before starting new work**
-✅ **Run full suite after refactoring**
-
-🚫 **Never commit failing tests**
-🚫 **Never skip E2E tests for UI changes**
-🚫 **Never run E2E tests manually without servers** (use `Run` instead)
-
-**For detailed testing patterns**, see [tests/AGENTS.md](tests/AGENTS.md) and domain-specific test AGENTS.md files.
-
-#### Interactive Testing with Playwright MCP
-
-**ALWAYS use Playwright MCP tools directly in GitHub Copilot Chat** - NO terminal commands needed:
-
-```plaintext
-# Navigate to page
-mcp_playwright_browser_navigate(url: "https://localhost:5003")
-
-# Take snapshots to see page structure
-mcp_playwright_browser_snapshot()
-
-# Take screenshots for visual verification
-mcp_playwright_browser_take_screenshot()
-
-# Interact with elements
-mcp_playwright_browser_click(element: "button description")
-mcp_playwright_browser_type(element: "input field", text: "test query")
-
-# Verify behavior
-# - Reproduce bugs
-# - Verify expected behavior  
-# - Understand features
-# - Debug issues
-```
-
-**Benefits of Playwright MCP**:
-
-- Works directly from GitHub Copilot Chat - no terminal needed
-- Never risks shutting down the website
-- Provides rich snapshots and screenshots
-- Allows complex interactions (click, type, navigate)
-- Can verify page state and behavior
-
-#### If CLI Tools Are Absolutely Required
-
-**ONLY if Playwright MCP cannot accomplish the task**, and you MUST use curl/wget/other CLI tools:
-
-```powershell
-# Run curl or other CLI tools directly - the terminal is always free
-curl -k https://localhost:5001/api/sections
-```
-
-### Stopping the Website
-
-**Stopping servers should never be needed**:
-
-Servers run in background and keep running. When using a subsequent `Run` command the script automatically detects if binaries changed and if servers need to be restarted because of that. To automatically stop them at the end the `Run` command use `-StopServers`:
-
-```powershell
-Run -StopServers
-```
-
-If you for any reason need to kill the dotnet processes, you can do so like this:
-
-```powershell
-Get-Process dotnet | Stop-Process -Force
-```
-
-**The Run function handles**:
-
-- Aspire AppHost orchestration (starts both API and Web in background)
-- Health checks before declaring ready (up to 60 seconds for Aspire startup)
-- Output redirection to `.tmp/logs/` (console.txt for Development, api-console.txt/web-console.txt for Production)
-- Port cleanup when explicitly stopped
-
-### Using the Run Function
-
-The `Run` function is your **primary tool** for building, testing, and running the Tech Hub website. It handles all standard development workflows automatically.
-
-**🚨 IMPORTANT**: See [Starting the Website](#starting-the-website) section above for **CRITICAL execution instructions** - you MUST follow the exact sequence (execute command, wait with `get_terminal_output` only) to avoid interrupting the build/test/startup process.
-
-**Common Workflows**:
-
-```powershell
-# Default: Build + test + run servers in background
-Run                     # Build, all tests, then servers in background
-
-# Interactive debugging (no tests)
-Run -WithoutTests       # Build, skip all tests, start servers in background
-
-# Only rebuild (no tests, no servers)
-Run -Rebuild            # Clean rebuild only, then exit
-```
-
-**Testing Workflows**:
-
-```powershell
-# Test specific projects (run tests, servers stay in background)
-Run -TestProject powershell     # PowerShell/Pester tests only (fast - no .NET build)
-Run -TestProject Web.Tests      # Web component tests only
-Run -TestProject E2E.Tests      # E2E tests only (requires servers)
-
-# Test by name pattern (substring match)
-Run -TestName SectionCard       # All tests with "SectionCard" in name
-Run -TestName Navigation        # All tests with "Navigation" in name
-
-# Combine project + name filters
-Run -TestProject E2E.Tests -TestName Navigation  # E2E navigation tests only
-Run -TestProject powershell -TestName FrontMatter  # PowerShell FrontMatter tests
-```
-
-**Key Features**:
-
-- **Background servers**: Servers run in background, terminal is immediately free
-- **Automatic hot reload**: Changes recompile automatically via `dotnet watch`
-- **Integrated testing**: Runs PowerShell, unit, integration, component, and E2E tests
-- **Server orchestration**: Uses Aspire AppHost to manage API + Web together
-- **Log files**: Output in `.tmp/logs/` (console.txt for Development, api-console.txt/web-console.txt for Production)
-
-**When to use advanced dotnet commands**: See [Advanced Development Scenarios](#advanced-development-scenarios) below for Entity Framework migrations, test diagnostics, and specialized operations.
-
-## Advanced Development Scenarios
-
-**🚨 IMPORTANT**: The `Run` function handles all standard development workflows (build, test, run). The commands below are for **advanced scenarios only** that `Run` doesn't support.
-**⚠️ WARNING**: Direct `dotnet test` commands will **FAIL for E2E tests** because servers aren't running. Always use `Run` for normal testing workflows.
-
-## Documentation Architecture
-
-The Tech Hub uses a **multi-tier documentation system** organized by scope and domain. Since we're committed to .NET as our permanent tech stack, documentation is separated by **scope** (repository-wide vs domain-specific), not by framework.
-
-### Documentation Hierarchy
-
-**1. Root AGENTS.md** (this file):
-
-- Repository-wide development principles and standards
-- AI Assistant Workflow (10-step process for all development)
-- Core rules and boundaries
-- .NET tech stack, development commands, and common patterns
-- Performance architecture, accessibility standards, timezone handling
-- Configuration-driven development principles
-- Repository structure and site terminology
-- **Scope**: Applies to ALL work across the entire repository
-
-**2. Domain-Specific AGENTS.md Files**:
-
-- Development patterns for specific code domains (src/, scripts/, tests/, collections/, etc.)
-- Located in each major directory
-- Domain-specific rules, patterns, and examples
-- **Scope**: Applies only when working in that specific domain
-
-**3. Functional Documentation** (`docs/`):
-
-- WHAT the system does (behavior, contracts, rules)
-- Minimal set: filtering, content management, API specification
-- Describes features and capabilities, not implementation
-- **Scope**: Understanding system behavior and architecture
-
-**4. Content Guidelines** (`collections/`):
-
-- Writing standards and markdown formatting rules
-- Content creation and management workflows
-- **Scope**: Creating and maintaining content
-
-### Documentation Placement Strategy
-
-**🎯 Core Documentation Philosophy**:
-
-**Describe WHAT and WHY, not HOW**:
-
-- ✅ **WHAT**: Patterns, decisions, key concepts, important behaviors
-- ✅ **WHY**: Architecture rationale, tradeoffs, design principles
-- 🚫 **HOW**: Full implementations, complete class definitions, line-by-line code
-
-**Key Principle**: Documentation guides understanding, not replaces source code. Show structure and patterns, reference actual files for complete implementations.
-
-**Where to Place Information**:
-
-**Root AGENTS.md** (this file):
-
-- Development workflow and process (10 steps, TDD, etc.)
-- Core rules and boundaries (always/ask/never rules)
-- .NET tech stack overview (what we use: .NET 10, Blazor, etc.)
-- Run function usage (build, test, run workflows)
-- Repository-wide principles (performance, accessibility, timezone, configuration-driven design)
-- Site terminology and concepts
-
-**src/AGENTS.md** (ALL .NET implementation patterns):
-
-- Minimal API endpoint patterns (structure, not full implementations)
-- Blazor component patterns (code-behind approach, key decisions)
-- Repository pattern implementation (critical rules, caching strategy)
-- Dependency injection patterns and service lifetimes
-- Domain models and DTOs (design principles, not complete classes)
-- Markdown frontmatter mapping
-- HttpClient configuration
-- ALL other .NET code patterns
-
-**Important**: Show patterns and structure, not full class implementations. Reference actual source files for complete code.
-
-**tests/AGENTS.md** (Testing strategies):
-
-- Testing strategies across all frameworks (unit, integration, component, E2E)
-- When to write tests and what to test
-- Test organization and naming
-- References src/AGENTS.md for implementation patterns when writing test code
-
-**Domain-specific AGENTS.md** (src/TechHub.Web/, src/TechHub.Api/, etc.):
-
-- Patterns specific to that project/domain (describe approach, not full code)
-- Project-specific configuration
-- Specialized tooling for that domain
-- Critical implementation decisions (algorithm choice, performance tradeoffs)
-
-**Functional Docs** (docs/):
-
-- Feature descriptions (WHAT the system does)
-- API contracts and endpoint specifications
-- Business rules and behavior
-- System architecture diagrams
-- **Never include**: Full implementations, development HOW-TOs, coding instructions
-
-**Content Guidelines** (collections/):
-
-- Markdown formatting standards
-- Writing style and tone
-- Content workflow and RSS processing
-
-**Key Principles**:
-
-1. **Place information at the highest applicable level**:
-   - If it's a .NET pattern used across projects → src/AGENTS.md
-   - If it's specific to one project → Domain AGENTS.md (e.g., src/TechHub.Web/AGENTS.md)
-   - If it's repository-wide workflow/rules → Root AGENTS.md
-   - If it describes behavior → Functional docs
-   - If it's about content → Content guidelines
-
-2. **Describe patterns, not implementations**:
-   - Show structure and key decisions
-   - Explain WHY choices were made
-   - Reference source files for complete code
-   - Never copy full class/method implementations
-
-### Complete Documentation Map
-
-**Project Overview**:
-
-- **[README.md](README.md)** - Project overview, quick start guide, architecture summary, current implementation status, and navigation to all other documentation
-
-**Domain-Specific AGENTS.md Files**:
-
-- **[src/AGENTS.md](src/AGENTS.md)** - .NET development patterns across all projects
-- **[src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md)** - API development patterns (Minimal APIs, endpoints)
-- **[src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md)** - Blazor component patterns (SSR, interactivity)
-- **[src/TechHub.Core/AGENTS.md](src/TechHub.Core/AGENTS.md)** - Domain model design (records, DTOs)
-- **[src/TechHub.Infrastructure/AGENTS.md](src/TechHub.Infrastructure/AGENTS.md)** - Data access patterns (repositories, caching)
-- **[scripts/AGENTS.md](scripts/AGENTS.md)** - PowerShell automation scripts
-- **[docs/AGENTS.md](docs/AGENTS.md)** - Documentation maintenance guidelines
-- **[collections/AGENTS.md](collections/AGENTS.md)** - Content creation and management
-- **[tests/AGENTS.md](tests/AGENTS.md)** - Testing strategies across all frameworks
-- **[tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md)** - E2E test architecture and performance optimizations
-
-**Functional Documentation** (in `docs/`):
-
-- **[content-management.md](docs/content-management.md)** - Content workflows and RSS processing
-- **[api-specification.md](docs/api-specification.md)** - REST API contracts and endpoints
-- **[rss-feeds.md](docs/rss-feeds.md)** - RSS feed system and available feeds
-- **[toc-component.md](docs/toc-component.md)** - Table of contents component architecture
-
-**Content Guidelines** (in `collections/`):
-
-- **[AGENTS.md](collections/AGENTS.md)** - Content management guide with frontmatter schema
-- **[writing-style-guidelines.md](collections/writing-style-guidelines.md)** - Writing tone and style
-
-### Quick Reference Guide
-
-**New to the project?**
-
-1. Start with [README.md](README.md) for overview and quick start
-2. Read this file (AGENTS.md) for development workflow
-3. Review domain-specific AGENTS.md before coding
-
-**Working on .NET/Blazor?**
-
-1. Review .NET sections in this file (Tech Stack, Commands, Patterns)
-2. Read [src/AGENTS.md](src/AGENTS.md) for general .NET patterns
-3. Read specific domain AGENTS.md (API, Web, Core, Infrastructure)
-
-**Working on PowerShell scripts?**
-
-1. Read [scripts/AGENTS.md](scripts/AGENTS.md)
-2. Review [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-the-website) for build/test commands
-
-**Working on content?**
-
-1. Read [collections/AGENTS.md](collections/AGENTS.md)
-2. Follow [writing-style-guidelines.md](collections/writing-style-guidelines.md)
-3. Use `npx markdownlint-cli2 --fix <file-path>` to fix formatting
-
-**Working on tests?**
-
-1. Read [tests/AGENTS.md](tests/AGENTS.md) for testing strategies
-2. Read specific test domain AGENTS.md:
-   - [tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md) - E2E test patterns
-   - [tests/TechHub.Api.Tests/AGENTS.md](tests/TechHub.Api.Tests/AGENTS.md) - API integration test patterns
-   - [tests/TechHub.Web.Tests/AGENTS.md](tests/TechHub.Web.Tests/AGENTS.md) - Blazor component test patterns
-   - [tests/TechHub.Core.Tests/AGENTS.md](tests/TechHub.Core.Tests/AGENTS.md) - Unit test patterns
-   - [tests/TechHub.Infrastructure.Tests/AGENTS.md](tests/TechHub.Infrastructure.Tests/AGENTS.md) - Infrastructure test patterns
-   - [tests/powershell/AGENTS.md](tests/powershell/AGENTS.md) - PowerShell test patterns
-3. Review [Starting, Stopping and Testing the Website](#starting-stopping-and-testing-the-website) for build/test commands
-
-**Understanding system behavior?**
-
-1. Read [docs/content-management.md](docs/content-management.md) for content workflows and RSS processing
-2. Read [docs/api-specification.md](docs/api-specification.md) for API contracts
-3. Read [docs/rss-feeds.md](docs/rss-feeds.md) for RSS feed system
-4. Read [docs/toc-component.md](docs/toc-component.md) for TOC component architecture
-
-## Core Development Principles
-
-### Tech Stack
-
-**Runtime & Core Frameworks**:
-
-- .NET 10 (latest LTS - November 2025)
-- C# 13 with nullable reference types
-- ASP.NET Core Minimal API (backend)
-- Blazor SSR + WebAssembly (frontend)
-- .NET Aspire (orchestration, observability, service discovery)
-
-**Frontend Technologies**:
-
-- HTML5 semantic markup
-- CSS3 with modern features (Grid, Flexbox, Custom Properties)
-- Vanilla JavaScript (ES2024+) for progressive enhancement
-- No JavaScript frameworks - pure web standards
-
-**Testing & Quality**:
-
-- xUnit (unit and integration tests)
-- bUnit (Blazor component tests)
-- Moq (mocking framework)
-- Playwright (E2E tests)
-- PowerShell Pester (script tests)
-
-**Infrastructure & Deployment**:
-
-- Azure Container Apps
-- Bicep Infrastructure as Code
-- OpenTelemetry + Application Insights
-- GitHub Actions (CI/CD)
-
-**Development Tools**:
-
-- PowerShell 7+ (automation scripts)
-- Git (version control)
-- VS Code DevContainers (consistent development environment)
-- Markdown (documentation)
-
-**.NET Aspire**:
-
-Tech Hub uses Aspire for orchestration and observability:
-
-- **AppHost** (`src/TechHub.AppHost/`) - Orchestrates API + Web services
-- **ServiceDefaults** (`src/TechHub.ServiceDefaults/`) - Shared configuration for OpenTelemetry, health checks, resilience
-- **Service Discovery** - Web finds API via `https+http://api` URL scheme
-- **Aspire Dashboard** - Real-time traces, metrics, and logs visualization
-
-**Running with Aspire**:
-
-```powershell
-# Default - uses Aspire AppHost with built-in dashboard
-Run
-
-# Dashboard URL: https://localhost:18888 (URL with token shown in startup output)
-```
-
-**Implementation Guidance**:
-
-For ALL .NET code patterns, examples, and best practices, see **[src/AGENTS.md](src/AGENTS.md)**:
-
-- Minimal API endpoint patterns
-- Blazor component patterns (code-behind, SSR)
-- Repository pattern implementation
-- Dependency injection and service lifetimes
-- Domain models and DTOs
-- HttpClient configuration and resilience
-- Documentation resources (context7 MCP queries)
-- All other .NET development patterns
-
-**When writing .NET code** (including tests), ALWAYS read [src/AGENTS.md](src/AGENTS.md) for implementation patterns.
-
-### Architectural Principles
-
-**Configuration-Driven Design**:
-
-- All sections and collections defined in `appsettings.json`
-- Content structure managed through configuration, not code
-- New sections added by updating configuration per environment
-- Single source of truth ensures consistency across environments
-
-**Performance & User Experience**:
-
-- Server-side rendering for fast initial page loads
-- Client-side enhancement for responsive interactions
-- Pre-computation during build for optimal runtime performance
-- Resilience policies (retry, circuit breaker, timeout)
-
-**Quality & Maintainability**:
-
-- Test-driven development at all layers
-- Comprehensive test coverage (unit, integration, component, E2E)
-- Clean architecture with separation of concerns
-- Zero-warning policy for code quality
-
-### Performance Architecture
-
-**Server-Side First, Client-Side Performance**:
-
-- **Server-side rendering is preferred** - Pre-compute and render all content during build time
-- **Client-side performance is critical** - After initial load, all interactions must be responsive
-- **Pre-load during application start** - Calculate once at build time for optimal server AND client performance
-- **Never sacrifice functionality for performance** - Use intelligent caching and pre-computation instead
-- **JavaScript enhances, never creates** - Initial content must never depend on JavaScript execution
-
-**Core Performance Principles**:
-
-1. **Server-side first** - All content must be rendered server-side for initial page load
-2. **Client-side performance is paramount** - After initial render, all interactions must be responsive
-3. **Never sacrifice functionality** - Don't reduce content amount or visual elements for performance
-4. **Server-side can be slower** - Build-time processing can take longer if it benefits the client
-5. **JavaScript enhances, never creates** - Initial content must never depend on JavaScript
-
-**The Server-Side First Rule**:
-
-All visible content must be fully rendered server-side by the build system. Users must see complete, functional content immediately upon page load. This ensures optimal SEO, performance, and accessibility.
-
-**The ONLY exception**: `assets/js/sections.js` is allowed to modify section collections state on page load based on URL parameters. All other JavaScript must wait for user interaction.
-
-**Progressive Enhancement**:
-
-- JavaScript enhances server-rendered content rather than creating it
-- Core functionality works without JavaScript
-- Load core functionality first, then enhance progressively
-- Monitor memory usage for leaks in long-running sessions
-
-**Image and Asset Performance**:
-
-- Use lazy loading for large images to improve initial page performance
-- Implement responsive images with proper sizing attributes
-- Use modern image formats when supported
-- Optimize asset bundling to reduce HTTP requests
-
-**Mobile and Cross-Browser Performance**:
-
-- Test loading speeds on mobile networks and various connection speeds
-- Ensure touch interactions are responsive
-- Test across different browsers and versions
-- Use profiling tools to identify and fix bottlenecks
-- Verify performance standards are met across all target devices
-
-### Accessibility Standards
-
-**Critical Accessibility Requirements**:
-
-All user interface components and interactions must be accessible to users with disabilities following WCAG 2.1 Level AA standards.
-
-**Keyboard Navigation**:
-
-- All interactive elements must be keyboard accessible
-- Implement proper focus states with visible indicators
-- Support standard keyboard shortcuts and navigation patterns
-- Ensure logical tab order through interactive content
-
-**Visual Accessibility**:
-
-- Maintain color contrast ratios of at least 4.5:1 for normal text (WCAG AA)
-- Maintain color contrast ratios of at least 3:1 for large text and UI components
-- Never rely solely on color to convey information
-- Provide text alternatives for images and non-text content
-
-**Screen Reader Support**:
-
-- Use semantic HTML elements appropriately
-- Provide descriptive ARIA labels where needed
-- Ensure all interactive controls have accessible names
-- Test with screen readers to verify accessibility
-
-**Testing Requirements**:
-
-- Test with keyboard-only navigation
-- Verify screen reader compatibility
-- Check color contrast with automated tools
-- Ensure responsive design works with text scaling and zoom
-
-### Configuration-Driven Development
-
-**Never Hardcode Values**:
-
-- Always derive sections, collections from configuration files
-- Single source of truth for all structural data
-- New features should work by updating configuration, not code
-- All components must stay synchronized automatically through configuration
-
-**Benefits**: Changes to site structure require only configuration updates, no code modifications needed.
-
-### Timezone & Date Handling
-
-**Consistent Timezone**:
-
-- **Define once**: `Europe/Brussels` timezone for all date operations
-- **Apply everywhere**: Build process, templates, client code must all use same timezone
-- **Store universally**: Use Unix epoch timestamps as primary storage format
-- **Display locally**: Convert to timezone only when rendering for users
-
-**Date Format Standards**:
-
-- **Input**: `YYYY-MM-DD` (ISO 8601) or `YYYY-MM-DD HH:MM:SS +ZONE`
-- **Storage**: Unix epoch timestamps (integers, timezone-agnostic)
-- **Display**: Generated dynamically at runtime from epoch
-- **URL Parameters**: ISO date format for consistency
-
-**Critical Rules**:
-
-- All date calculations must respect the configured timezone
-- Normalize dates to midnight in configured timezone for comparisons
-- Server-side and client-side date handling must be synchronized
-- Never assume UTC - always use configured timezone
-
-**Implementation Details**:
-
-- Server-side: See [Tech Stack](#tech-stack) section for patterns reference
-- Client-side: See domain-specific AGENTS.md files for client-side patterns
-
-**Benefits**: Prevents date/time bugs, ensures consistent behavior across all systems, simplifies date comparisons.
-
-## Site Terminology
-
-### Core Concepts
-
-**Sections**: Top-level organizational units that group related content by topic or domain.
-
-- **Purpose**: Provide thematic organization (e.g., AI, GitHub Copilot, Azure)
-- **Configuration**: Defined in `appsettings.json` as single source of truth
-- **Properties**: Each section includes display title, description, URL path, background image, and collections
-- **Key Features**: Dynamic and configuration-driven - new sections added without code changes, each has own index page and navigation
-
-**Collections**: Content types that represent different formats within sections.
-
-- **Purpose**: Organize content by format and purpose (news, videos, community, blogs, roundups)
-- **Configuration**: Defined in `appsettings.json`, associated with sections via section configuration
-- **Technical**: Each collection has its own directory, can be marked as custom (manually created) or auto-generated
-- **Properties**: Collections generate individual pages for each item via Blazor routing
-
-**Items**: Individual pieces of content within collections. Also referred to as content or content items.
-
-- **Definition**: Actual content users consume (articles, videos, announcements, blogs)
-- **Terminology Note**: "Item" is the preferred term, but "Article" and "Post" are also used in code/documentation to refer to content (note: "Post" in variables does NOT specifically mean blogs from `_blogs/`)
-- **Structure**: Markdown files with YAML front matter containing metadata (title, date, author, sections, tags) and content body
-- **Section Names Frontmatter Field**: The `section_names` field in frontmatter contains section names (e.g., "ai", "gitHub_copilot") that determine which sections this content appears in.
-- **Processing**: Items are processed by the build system and can be listed on collection pages, filtered by date/tags/sections, displayed on section index pages, and included in RSS feeds
-
-### Content Organization
-
-**Relationship Between Concepts**:
-
-1. **Sections** contain multiple **Collections**
-2. **Collections** contain multiple **Items** (also called content or content items)
-3. **Items** have metadata (dates, tags) used by filtering systems
-4. Build-time processing prepares all data for client-side consumption
-5. Client-side filtering provides interactive content discovery
-
-**Collections**:
-
-- **News**: Official product updates and announcements
-- **Videos**: Educational and informational video content (may include special subfolders with `alt-collection` frontmatter)
-- **Community**: Community-sourced content and discussions
-- **Blogs**: Blogs
-- **Roundups**: Curated weekly content summaries
-
-**Alt-Collection**: Optional frontmatter field for content organized in subfolders (e.g., `_videos/ghc-features/`, `_videos/vscode-updates/`) that need special categorization beyond their parent collection.
-
-**Linking Strategy**: Collections have different link behaviors based on their content type:
-
-- **External Linking** (news, blogs, community): Always redirect users to the original source URL when clicked. These collections represent content that should be consumed at the original publisher's site.
-- **Internal Linking** (videos, roundups, custom): Link to pages within the Tech Hub site. These collections represent content that can be fully presented on our site, such as embedded videos or curated summaries.
-
-### Filtering Systems
-
-**Date Filters**: Client-side filtering by publication date ranges (e.g., "Last 30 days").
-
-**Tag Filters**: Client-side filtering by normalized tags for content discovery.
-
-**Text Search**: Real-time search across titles, descriptions, and tags with debounced input.
-
-### Content Structure
-
-**Excerpt**: Introduction that summarizes main points (max 200 words, followed by `<!--excerpt_end-->`).
-
-**Content**: Main detailed markdown content following the excerpt.
-
-### RSS Feeds
-
-The site provides RSS feeds for all sections and collections.
-
-**For complete RSS feed documentation**, see [docs/rss-feeds.md](docs/rss-feeds.md).
-
-**Quick Reference**:
-
-- **Everything**: `/api/rss/all` - All content across all sections
-- **Section Feeds**: `/api/rss/{sectionName}` - Content for a specific section
-- **Collection Feeds**: `/api/rss/collection/{collectionName}` - Content for a specific collection type
+**🚨 E2E Tests**: NEVER run `dotnet test` directly for E2E - use `Run` instead.
+
+### Documentation Map
+
+| Need | Read |
+|------|------|
+| Project overview, terminology | [README.md](README.md) |
+| .NET patterns | [src/AGENTS.md](src/AGENTS.md) |
+| API patterns | [src/TechHub.Api/AGENTS.md](src/TechHub.Api/AGENTS.md) |
+| Blazor patterns | [src/TechHub.Web/AGENTS.md](src/TechHub.Web/AGENTS.md) |
+| Testing strategies | [tests/AGENTS.md](tests/AGENTS.md) |
+| E2E test patterns | [tests/TechHub.E2E.Tests/AGENTS.md](tests/TechHub.E2E.Tests/AGENTS.md) |
+| PowerShell scripts | [scripts/AGENTS.md](scripts/AGENTS.md) |
+| Content management | [collections/AGENTS.md](collections/AGENTS.md) |
+| API specification | [docs/api-specification.md](docs/api-specification.md) |
+| Content workflows | [docs/content-management.md](docs/content-management.md) |
+
+### Tool Priority
+
+1. **MCP tools** (highest): Playwright MCP, context7 MCP
+2. **Built-in tools**: `replace_string_in_file`, `read_file`, `grep_search`
+3. **CLI** (lowest): GitHub CLI (`gh`), other commands when tools don't support the operation
