@@ -49,7 +49,7 @@ internal static class SectionHelper
     /// <summary>
     /// Gets the display name for a collection.
     /// </summary>
-    public static string GetCollectionDisplayName(string collectionName)
+    public static string GetCollectionTitle(string collectionName)
     {
         if (string.IsNullOrWhiteSpace(collectionName))
         {

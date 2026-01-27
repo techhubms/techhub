@@ -6,7 +6,7 @@
 @inject ILogger<ContentItemsGrid> Logger
 @attribute [StreamRendering]
 
-<section class="collection-content @(isLoading ? "loading" : "")" aria-label="@GetCollectionDisplayName() content">
+<section class="collection-content @(isLoading ? "loading" : "")" aria-label="@GetCollectionTitle() content">
     <h1 id="main-content" class="page-h1" tabindex="-1">@GetPageTitle()</h1>
 
     @if (isLoading && !contentItems.Any())
@@ -212,7 +212,7 @@
         }
     }
 
-    private string GetCollectionDisplayName()
+    private string GetCollectionTitle()
     {
         if (CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
@@ -228,12 +228,12 @@
         }
 
         // Fallback to SectionHelper
-        return SectionHelper.GetCollectionDisplayName(CollectionName);
+        return SectionHelper.GetCollectionTitle(CollectionName);
     }
 
     private string GetPageTitle()
     {
-        var collectionDisplay = GetCollectionDisplayName();
+        var collectionDisplay = GetCollectionTitle();
         var isAllSection = SectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
         var isAllCollection = CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
 

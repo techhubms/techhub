@@ -249,12 +249,12 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         var response = await _client.GetAsync("/api/sections/ai/collections/news/items");
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
 
-        // Assert - URLs use primary section (which may differ from requested section for multi-section content)
+        // Assert - URLs use primary section and slug WITHOUT date prefix
         items.Should().NotBeEmpty();
         items!.Should().AllSatisfy(item =>
         {
-            item.Url.Should().MatchRegex(@"^/[a-z-]+/news/[0-9]{4}-[0-9]{2}-[0-9]{2}-.+$",
-                "URL should include primary section, collection, and slug");
+            item.Url.Should().MatchRegex(@"^/[a-z-]+/news/[a-z0-9-]+$",
+                "URL should include primary section, collection, and slug without date prefix");
         });
     }
 
@@ -269,6 +269,38 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
 
         // Assert
         section!.Name.Should().Be(expectedSection);
+    }
+
+    [Fact]
+    public async Task GetSectionItems_ShouldNotIncludeDraftItems()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/sections/ai/items");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        items.Should().NotBeNull();
+        
+        // Should not include draft items
+        items!.Should().NotContain(item => item.Draft, "section items endpoint should filter out drafts");
+    }
+
+    [Fact]
+    public async Task GetSectionCollectionItems_ShouldNotIncludeDraftItems()
+    {
+        // Act - News collection in AI section (our draft is ai + news)
+        var response = await _client.GetAsync("/api/sections/ai/collections/news/items");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        items.Should().NotBeNull();
+        
+        // Should not include draft news items
+        items!.Should().NotContain(item => item.Draft, "section collection items endpoint should filter out drafts");
     }
 
     /// <summary>

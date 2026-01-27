@@ -18,7 +18,6 @@ public record SDLCPhase
     public required string Id { get; init; }
     public required string Name { get; init; }
     public required string Icon { get; init; }
-    public required string Color { get; init; }
     public required string What { get; init; }
     public string? How { get; init; }
     public required List<SDLCTool> Tools { get; init; }

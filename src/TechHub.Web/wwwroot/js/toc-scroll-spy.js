@@ -27,7 +27,6 @@ export class TocScrollSpy {
         this.currentActiveH2Id = null; // Track active h2 for collapse/expand
         this.boundHandleScroll = this.handleScroll.bind(this);
         this.boundHandleResize = this.handleResize.bind(this);
-        this.boundHandleTocFocus = this.handleTocFocus.bind(this);
         this.ticking = false; // RAF throttle flag
         this.debugOverlay = null; // Visual debug line
         this.debugEnabled = false;
@@ -148,8 +147,8 @@ export class TocScrollSpy {
         // Recalculate detection line on window resize
         window.addEventListener('resize', this.boundHandleResize, { passive: true });
 
-        // Listen for focus on TOC links to expand sections during keyboard navigation
-        this.tocElement.addEventListener('focusin', this.boundHandleTocFocus);
+        // Note: No focusin handler - scroll event handles all collapse/expand updates
+        // This prevents DOM manipulation from interfering with browser navigation
     }
 
     /**
@@ -176,28 +175,6 @@ export class TocScrollSpy {
         if (this.debugOverlay) {
             this.debugOverlay.style.top = `${this.cachedDetectionLine}px`;
         }
-    }
-
-    /**
-     * Handle focus events on TOC links
-     * Expands the appropriate H2 section when a TOC link receives focus (keyboard navigation)
-     */
-    handleTocFocus(event) {
-        const link = event.target.closest('.toc-link');
-        if (!link) return;
-
-        // Get the heading ID from the link's href
-        const href = link.getAttribute('href');
-        if (!href) return;
-
-        const headingId = href.split('#').pop();
-        if (!headingId) return;
-
-        // Check if this heading is in our tracked headings
-        if (!this.tocLinks.has(headingId)) return;
-
-        // Update collapse state to expand the section containing this link
-        this.updateCollapseState(headingId);
     }
 
     /**
@@ -334,18 +311,23 @@ export class TocScrollSpy {
         if (this.currentActiveH2Id === targetH2Id) {
             return;
         }
-        this.currentActiveH2Id = targetH2Id;
 
-        // Use cached h2Items instead of querySelectorAll
-        this.h2Items.forEach(item => {
-            item.classList.remove('expanded');
-        });
-
-        // Expand the active h2 section
+        // Find the new item to expand
         const activeItem = activeTocLink.closest('.toc-depth-0');
+
+        // FIRST: Expand the new section
         if (activeItem) {
             activeItem.classList.add('expanded');
         }
+
+        // SECOND: Collapse all OTHER sections (exclude the newly expanded one)
+        this.h2Items.forEach(item => {
+            if (item !== activeItem) {
+                item.classList.remove('expanded');
+            }
+        });
+
+        this.currentActiveH2Id = targetH2Id;
     }
 
     /**
@@ -370,7 +352,6 @@ export class TocScrollSpy {
         this.cleanupInitialScrollHandlers();
         window.removeEventListener('scroll', this.boundHandleScroll);
         window.removeEventListener('resize', this.boundHandleResize);
-        this.tocElement.removeEventListener('focusin', this.boundHandleTocFocus);
 
         this.initialized = false;
 

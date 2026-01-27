@@ -56,7 +56,7 @@ public class SectionMappingService : ISectionMappingService
             : sectionName.ToLowerInvariant().Replace(" ", "-", StringComparison.Ordinal);
     }
 
-    public string GetCollectionDisplayName(string collectionName)
+    public string GetCollectionTitle(string collectionName)
     {
         if (string.IsNullOrWhiteSpace(collectionName))
         {

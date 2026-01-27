@@ -48,7 +48,7 @@ public class StubContentRepository : FileBasedContentRepository
             // AI News
             new ContentItem
             {
-                Slug = "2024-01-15-ai-news-1",
+                Slug = "ai-news-1",
                 Title = "AI News Article 1",
                 Excerpt = "Latest updates in AI technology",
                 RenderedHtml = "<p>Full content of AI news article 1</p>",
@@ -65,7 +65,7 @@ public class StubContentRepository : FileBasedContentRepository
             // GitHub Copilot Video
             new ContentItem
             {
-                Slug = "2024-01-20-copilot-video-1",
+                Slug = "copilot-video-1",
                 Title = "GitHub Copilot Tutorial",
                 Excerpt = "Learn GitHub Copilot basics",
                 RenderedHtml = "<p>Full content of Copilot tutorial</p>",
@@ -82,7 +82,7 @@ public class StubContentRepository : FileBasedContentRepository
             // Multi-section content (AI + GitHub Copilot)
             new ContentItem
             {
-                Slug = "2024-01-18-ai-copilot-blog",
+                Slug = "ai-copilot-blog",
                 Title = "AI-Powered Development",
                 Excerpt = "How AI enhances development with Copilot",
                 RenderedHtml = "<p>Full content about AI and Copilot</p>",
@@ -99,7 +99,7 @@ public class StubContentRepository : FileBasedContentRepository
             // Community content
             new ContentItem
             {
-                Slug = "2024-01-25-community-post",
+                Slug = "community-post",
                 Title = "Community Insights",
                 Excerpt = "Community perspectives on AI",
                 RenderedHtml = "<p>Full community post content</p>",
@@ -116,7 +116,7 @@ public class StubContentRepository : FileBasedContentRepository
             // Roundup
             new ContentItem
             {
-                Slug = "2024-01-22-weekly-roundup",
+                Slug = "weekly-roundup",
                 Title = "Weekly Tech Roundup",
                 Excerpt = "This week's top tech stories",
                 RenderedHtml = "<p>Full roundup content</p>",

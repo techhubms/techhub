@@ -21,7 +21,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.Item, item));
 
         // Assert
-        var title = cut.Find(".content-title");
+        var title = cut.Find(".card-title");
         title.TextContent.Should().Be("Example Post");
     }
 
@@ -50,7 +50,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.Item, item));
 
         // Assert
-        var excerpt = cut.Find(".content-excerpt");
+        var excerpt = cut.Find(".card-description");
         excerpt.InnerHtml.Should().Contain("This is the excerpt of the post.");
     }
 
@@ -125,7 +125,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.Item, item));
 
         // Assert
-        var tags = cut.FindAll(".content-item-card-tag");
+        var tags = cut.FindAll(".badge-purple-static");
         tags.Should().HaveCount(4);
         tags[0].TextContent.Should().Be("ai");
         tags[1].TextContent.Should().Be("copilot");
@@ -157,10 +157,10 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.Item, item));
 
         // Assert
-        var tags = cut.FindAll(".content-item-card-tag");
+        var tags = cut.FindAll(".badge-purple-static");
         tags.Should().HaveCount(5, "should only show first 5 tags");
 
-        var moreIndicator = cut.Find(".content-item-card-tag-more");
+        var moreIndicator = cut.Find(".badge-grey");
         moreIndicator.TextContent.Should().Be("+2 more");
     }
 
@@ -191,7 +191,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.ShowCollectionBadge, true));
 
         // Assert
-        var badge = cut.Find(".collection-badge-white");
+        var badge = cut.Find(".badge-grey");
         badge.TextContent.Should().Be("News");
     }
 
@@ -222,7 +222,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.ShowCollectionBadge, false));
 
         // Assert
-        var badges = cut.FindAll(".collection-badge-white");
+        var badges = cut.FindAll(".badge-grey");
         badges.Should().BeEmpty();
     }
 
@@ -252,7 +252,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.Item, item));
 
         // Assert
-        var link = cut.Find(".content-item-card");
+        var link = cut.Find(".card");
         link.GetAttribute("href").Should().Be("https://techcommunity.microsoft.com/example");
         link.GetAttribute("target").Should().Be("_blank");
         link.GetAttribute("rel").Should().Be("noopener noreferrer");
@@ -284,7 +284,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.Item, item));
 
         // Assert
-        var link = cut.Find(".content-item-card");
+        var link = cut.Find(".card");
         link.GetAttribute("href").Should().Be("/ai/videos/example-post");
         link.HasAttribute("target").Should().BeFalse("internal links should not have target attribute");
     }
@@ -378,7 +378,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.ShowCollectionBadge, true));
 
         // Assert
-        var badge = cut.Find(".collection-badge-white");
+        var badge = cut.Find(".badge-grey");
         badge.TextContent.Should().Be("Community");
     }
 
@@ -423,7 +423,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.Item, item));
 
         // Assert
-        var link = cut.Find(".content-item-card");
+        var link = cut.Find(".card");
         link.GetAttribute("aria-label").Should().Be("Example Post - opens in new tab");
     }
 
@@ -453,7 +453,7 @@ public class ContentItemCardTests : BunitContext
             .Add(p => p.Item, item));
 
         // Assert
-        var link = cut.Find(".content-item-card");
+        var link = cut.Find(".card");
         link.GetAttribute("aria-label").Should().Be("Example Post");
     }
 

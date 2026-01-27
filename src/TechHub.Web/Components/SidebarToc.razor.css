@@ -38,24 +38,18 @@
     padding: 0;
     margin: 0;
     margin-left: var(--spacing-3);
-    /* Use clip-path instead of overflow:hidden to hide collapsed content
-       while allowing focus outlines to be visible when expanded */
-    /* No transition - instant collapse/expand */
-    /* Default collapsed state - visibility:hidden removes from tab order */
-    max-height: 0;
-    visibility: hidden;
+    /* Use display:none for instant collapse with no layout shift */
+    display: none;
 }
 
 /* If there's only one h2 heading, auto-expand it by default */
 .toc-list:has(.toc-depth-0:only-child) ::deep .toc-depth-0 > .toc-sublist {
-    max-height: 2000px;
-    visibility: visible;
+    display: block;
 }
 
 /* Expanded state only when explicitly set by JavaScript */
 ::deep .toc-item.expanded > .toc-sublist {
-    max-height: 2000px;
-    visibility: visible;
+    display: block;
 }
 
 ::deep .toc-item {

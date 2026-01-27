@@ -266,8 +266,8 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
 
         // Find content items count before filtering
         // Wait for content to be visible first
-        await Page.WaitForSelectorAsync(".content-item-card", new() { State = WaitForSelectorState.Visible });
-        var allItems = await Page.Locator(".content-item-card").CountAsync();
+        await Page.WaitForSelectorAsync(".card", new() { State = WaitForSelectorState.Visible });
+        var allItems = await Page.Locator(".card").CountAsync();
         allItems.Should().BeGreaterThan(0, "Section should have content items");
 
         // Act 1 - Select first tag
@@ -283,7 +283,7 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
             "() => document.querySelectorAll('.content-item-card').length >= 0",
             new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
 
-        var itemsAfterFirstTag = await Page.Locator(".content-item-card").CountAsync();
+        var itemsAfterFirstTag = await Page.Locator(".card").CountAsync();
         itemsAfterFirstTag.Should().BeLessThanOrEqualTo(allItems, "Filtering by one tag should reduce or maintain item count");
 
         // Act 2 - Select second tag (if available and different from first)
@@ -303,10 +303,10 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
             await Page.WaitForBlazorReadyAsync();
             // Wait for content list to stabilize (DOM updates after filter)
             await Page.WaitForFunctionAsync(
-                "() => document.querySelectorAll('.content-item-card').length >= 0",
+                "() => document.querySelectorAll('.card').length >= 0",
                 new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
 
-            var itemsAfterSecondTag = await Page.Locator(".content-item-card").CountAsync();
+            var itemsAfterSecondTag = await Page.Locator(".card").CountAsync();
 
             // Assert - AND logic means adding more tags should reduce or maintain count, never increase
             itemsAfterSecondTag.Should().BeLessThanOrEqualTo(itemsAfterFirstTag,
@@ -337,7 +337,7 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
         await WaitForTagCloudReadyAsync();
 
         // Act - Get all visible content items
-        var visibleItems = await Page.Locator(".content-item-card").CountAsync();
+        var visibleItems = await Page.Locator(".card").CountAsync();
 
         // Assert - Verify we have results
         visibleItems.Should().BeGreaterThan(0,

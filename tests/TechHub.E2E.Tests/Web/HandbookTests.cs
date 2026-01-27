@@ -66,7 +66,7 @@ public class HandbookTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
         await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "The GitHub Copilot Handbook", level: 1);
 
         // Check CTA button
-        var ctaButton = hero.Locator("a.handbook-cta");
+        var ctaButton = hero.Locator("a.btn");
         await ctaButton.AssertElementVisibleAsync();
     }
 

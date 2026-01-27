@@ -97,8 +97,8 @@ internal static class ContentEndpoints
         }
         else
         {
-            // No filters: get all content
-            content = await contentRepository.GetAllAsync(cancellationToken);
+            // No filters: get all content (exclude drafts unless ghcFeature=true)
+            content = await contentRepository.GetAllAsync(includeDraft, cancellationToken);
             
             // Filter by ghc_feature if specified
             if (ghcFeature.HasValue)
@@ -131,7 +131,8 @@ internal static class ContentEndpoints
         }
 
         // Get the specific content item by collection and slug (database-friendly approach)
-        var item = await contentRepository.GetBySlugAsync(collectionName, slug, cancellationToken);
+        // Exclude drafts unless this is a preview/admin request
+        var item = await contentRepository.GetBySlugAsync(collectionName, slug, includeDraft: false, cancellationToken);
 
         if (item == null)
         {
@@ -191,8 +192,8 @@ internal static class ContentEndpoints
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
-        // Start with all content (acceptable for file-based implementation with caching)
-        var content = await contentRepository.GetAllAsync(cancellationToken);
+        // Start with all content (exclude drafts, acceptable for file-based implementation with caching)
+        var content = await contentRepository.GetAllAsync(includeDraft: false, cancellationToken);
         var results = content.AsEnumerable();
 
         // Filter by sections (section names are already lowercase identifiers in SectionNames)

@@ -25,5 +25,5 @@ public interface ISectionMappingService
     /// </summary>
     /// <param name="collectionName">Collection name (e.g., "news", "videos")</param>
     /// <returns>Display name (e.g., "News", "Videos")</returns>
-    string GetCollectionDisplayName(string collectionName);
+    string GetCollectionTitle(string collectionName);
 }

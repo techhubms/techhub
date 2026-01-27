@@ -19,7 +19,11 @@ public interface IContentRepository
     /// <summary>
     /// Get all content items across all collections
     /// </summary>
-    Task<IReadOnlyList<ContentItem>> GetAllAsync(CancellationToken cancellationToken = default);
+    /// <param name="includeDraft">If true, include draft items in results. Default is false.</param>
+    /// <param name="cancellationToken">Cancellation token</param>
+    Task<IReadOnlyList<ContentItem>> GetAllAsync(
+        bool includeDraft = false,
+        CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Get content items filtered by collection name.
@@ -48,22 +52,35 @@ public interface IContentRepository
     /// <summary>
     /// Get a single content item by slug within a collection
     /// </summary>
+    /// <param name="collectionName">Collection name to search within</param>
+    /// <param name="slug">Content slug (filename without extension)</param>
+    /// <param name="includeDraft">If true, include draft items in results. Default is false.</param>
+    /// <param name="cancellationToken">Cancellation token</param>
     Task<ContentItem?> GetBySlugAsync(
         string collectionName,
         string slug,
+        bool includeDraft = false,
         CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Search content items by text query (title, excerpt, tags)
     /// </summary>
+    /// <param name="query">Search query text</param>
+    /// <param name="includeDraft">If true, include draft items in results. Default is false.</param>
+    /// <param name="cancellationToken">Cancellation token</param>
     Task<IReadOnlyList<ContentItem>> SearchAsync(
         string query,
+        bool includeDraft = false,
         CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Get all unique tags across all content
     /// </summary>
-    Task<IReadOnlyList<string>> GetAllTagsAsync(CancellationToken cancellationToken = default);
+    /// <param name="includeDraft">If true, include tags from draft items. Default is false.</param>
+    /// <param name="cancellationToken">Cancellation token</param>
+    Task<IReadOnlyList<string>> GetAllTagsAsync(
+        bool includeDraft = false,
+        CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Filter content items by tags and/or date range with optional section/collection scoping

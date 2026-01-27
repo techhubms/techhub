@@ -526,6 +526,69 @@ public class FileBasedContentRepositoryTests : IDisposable
     }
 
     /// <summary>
+    /// Test: GetBySlugAsync retrieves content by slug WITHOUT date prefix
+    /// Why: URLs should not include date prefix (e.g., /ai/videos/what-quantum-safe-is, not /ai/videos/2026-01-12-what-quantum-safe-is)
+    /// </summary>
+    [Fact]
+    public async Task GetBySlugAsync_FileWithDatePrefix_SlugStripsDatePrefix()
+    {
+        // Arrange: Create video item with date prefix in filename
+        var videosDir = Path.Combine(_collectionsPath, "_videos");
+        Directory.CreateDirectory(videosDir);
+
+        await File.WriteAllTextAsync(Path.Combine(videosDir, "2026-01-12-what-quantum-safe-is-and-why-we-need-it.md"), """
+            ---
+            title: What Quantum-Safe Is And Why We Need It
+            date: 2026-01-12
+            section_names: [AI]
+            tags: [Security, Quantum]
+            ---
+            
+            Quantum computing security details.
+            """);
+
+        // Act: Get item by slug WITHOUT date prefix
+        var item = await _repository.GetBySlugAsync("videos", "what-quantum-safe-is-and-why-we-need-it");
+
+        // Assert: Item found and slug does NOT contain date prefix
+        item.Should().NotBeNull();
+        item!.Title.Should().Be("What Quantum-Safe Is And Why We Need It");
+        item!.Slug.Should().Be("what-quantum-safe-is-and-why-we-need-it");
+        item!.Slug.Should().NotStartWith("2026-");
+        item!.CollectionName.Should().Be("videos");
+        item!.RenderedHtml.Should().Contain("Quantum computing security");
+    }
+
+    /// <summary>
+    /// Test: GetBySlugAsync with old date-prefixed slug returns null
+    /// Why: Old URLs with date prefix should no longer work after slug format change
+    /// </summary>
+    [Fact]
+    public async Task GetBySlugAsync_OldDatePrefixedSlug_ReturnsNull()
+    {
+        // Arrange: Create video item with date prefix in filename
+        var videosDir = Path.Combine(_collectionsPath, "_videos");
+        Directory.CreateDirectory(videosDir);
+
+        await File.WriteAllTextAsync(Path.Combine(videosDir, "2026-01-12-what-quantum-safe-is.md"), """
+            ---
+            title: What Quantum-Safe Is
+            date: 2026-01-12
+            section_names: [AI]
+            tags: [Security]
+            ---
+            
+            Content here.
+            """);
+
+        // Act: Try to get item with OLD date-prefixed slug (should not work anymore)
+        var item = await _repository.GetBySlugAsync("videos", "2026-01-12-what-quantum-safe-is");
+
+        // Assert: Old URL format should not work
+        item.Should().BeNull();
+    }
+
+    /// <summary>
     /// Test: GetBySlugAsync retrieves single content item by ID
     /// Why: Display individual content detail pages by URL slug
     /// </summary>
@@ -548,12 +611,12 @@ public class FileBasedContentRepositoryTests : IDisposable
             """);
 
         // Act: Get item by ID (filename without extension)
-        var item = await _repository.GetBySlugAsync("news", "2025-01-15-product-launch");
+        var item = await _repository.GetBySlugAsync("news", "product-launch");
 
         // Assert: Correct item returned with all properties
         item.Should().NotBeNull();
         item!.Title.Should().Be("Product Launch");
-        item!.Slug.Should().Be("2025-01-15-product-launch");
+        item!.Slug.Should().Be("product-launch");
         item!.CollectionName.Should().Be("news");
         item!.RenderedHtml.Should().Contain("Full product launch details");
     }

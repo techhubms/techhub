@@ -13,7 +13,7 @@ public class ContentItemExtensionsTests
     {
         return new ContentItem
         {
-            Slug = "2024-01-15-test-article",
+            Slug = "test-article",
             Title = "Test Article",
             Author = "Test Author",
             DateEpoch = 1705305600, // 2024-01-15 00:00:00 UTC
@@ -37,7 +37,7 @@ public class ContentItemExtensionsTests
         var dto = item.ToDto(sectionUrl);
 
         // Assert
-        dto.Slug.Should().Be("2024-01-15-test-article");
+        dto.Slug.Should().Be("test-article");
         dto.Title.Should().Be("Test Article");
         dto.Author.Should().Be("Test Author");
         dto.DateEpoch.Should().Be(1705305600);
@@ -77,7 +77,7 @@ public class ContentItemExtensionsTests
         var dto = item.ToDetailDto(sectionUrl);
 
         // Assert
-        dto.Slug.Should().Be("2024-01-15-test-article");
+        dto.Slug.Should().Be("test-article");
         dto.Title.Should().Be("Test Article");
         dto.Author.Should().Be("Test Author");
         dto.DateEpoch.Should().Be(1705305600);
@@ -89,7 +89,7 @@ public class ContentItemExtensionsTests
         dto.RenderedHtml.Should().Be("<p>Test content</p>");
         dto.Excerpt.Should().Be("Test excerpt");
         dto.ExternalUrl.Should().Be("https://example.com");
-        dto.Url.Should().Be("/ai/news/2024-01-15-test-article");
+        dto.Url.Should().Be("/ai/news/test-article");
     }
 
     [Fact]
@@ -115,7 +115,7 @@ public class ContentItemExtensionsTests
             CreateTestContentItem(),
             new ContentItem
             {
-                Slug = "2024-01-16-test-article-2",
+                Slug = "test-article-2",
                 Title = "Test Article 2",
                 Author = "Test Author",
                 DateEpoch = 1705305600,
@@ -133,10 +133,10 @@ public class ContentItemExtensionsTests
 
         // Assert
         dtos.Should().HaveCount(2);
-        dtos[0].Slug.Should().Be("2024-01-15-test-article");
+        dtos[0].Slug.Should().Be("test-article");
         dtos[0].Title.Should().Be("Test Article");
         dtos[0].PrimarySectionName.Should().Be("ai");
-        dtos[1].Slug.Should().Be("2024-01-16-test-article-2");
+        dtos[1].Slug.Should().Be("test-article-2");
         dtos[1].Title.Should().Be("Test Article 2");
         dtos[1].PrimarySectionName.Should().Be("ai");
     }
@@ -156,9 +156,9 @@ public class ContentItemExtensionsTests
     }
 
     [Theory]
-    [InlineData("/ai", "/ai/news/2024-01-15-test-article")]
-    [InlineData("/github-copilot", "/github-copilot/news/2024-01-15-test-article")]
-    [InlineData("/azure", "/azure/news/2024-01-15-test-article")]
+    [InlineData("/ai", "/ai/news/test-article")]
+    [InlineData("/github-copilot", "/github-copilot/news/test-article")]
+    [InlineData("/azure", "/azure/news/test-article")]
     public void ToDto_GeneratesCorrectUrl_ForDifferentSections(string sectionUrl, string expectedUrl)
     {
         // Arrange

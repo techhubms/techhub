@@ -50,8 +50,8 @@ internal static class RssEndpoints
         IContentRepository contentRepository,
         IRssService rssService)
     {
-        // Get all content items
-        var allItems = await contentRepository.GetAllAsync();
+        // Get all content items (exclude drafts from RSS feeds)
+        var allItems = await contentRepository.GetAllAsync(includeDraft: false);
 
         // Create a virtual "Everything" section for the feed
         var everythingSection = new Core.Models.Section

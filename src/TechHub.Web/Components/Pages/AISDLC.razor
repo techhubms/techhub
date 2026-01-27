@@ -47,7 +47,7 @@
                         foreach (var phase in pageData.Phases)
                         {
                             var currentIndex = phaseIndex;
-                            <div class="sdlc-phase-card sdlc-phase-@phase.Color" style="border-left-color: @GetPhaseColor(phase.Color);">
+                            <div class="sdlc-phase-card sdlc-phase-@phase.Id">
                                 <button class="sdlc-phase-header" type="button" aria-expanded="@IsPhaseExpanded(currentIndex)" @onclick="() => TogglePhase(currentIndex)">
                                     <span class="sdlc-phase-icon">@phase.Icon</span>
                                     <h3 id="phase-@phase.Id">@phase.Name</h3>
@@ -326,20 +326,4 @@
     }
 
     private bool IsPhaseExpanded(int index) => expandedPhases.Contains(index);
-
-    private string GetPhaseColor(string colorName)
-    {
-        // Map color names to CSS custom properties
-        return colorName.ToLowerInvariant() switch
-        {
-            "ideation" => "var(--color-yellow)",
-            "planning" => "var(--color-blue)",
-            "design" => "var(--color-magenta)",
-            "implementation" => "var(--color-green)",
-            "testing" => "var(--color-orange)",
-            "deployment" => "var(--color-pink)",
-            "maintenance" => "var(--color-teal)",
-            _ => "var(--color-purple-medium)"
-        };
-    }
 }

@@ -84,14 +84,6 @@ internal static class CustomPagesEndpoints
             .Produces<LevelsPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
-        // Get VS Code Updates page data
-        group.MapGet("/vscode-updates", GetVSCodeUpdatesData)
-            .WithName("GetVSCodeUpdatesData")
-            .WithSummary("Get VS Code Updates page data")
-            .WithDescription("Returns structured data for the VS Code Updates custom page")
-            .Produces<VSCodeUpdatesPageData>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status404NotFound);
-
         // Get Features page data
         group.MapGet("/features", GetFeaturesData)
             .WithName("GetFeaturesData")
@@ -253,10 +245,6 @@ internal static class CustomPagesEndpoints
     private static Task<Results<Ok<LevelsPageData>, NotFound>> GetLevelsData(
         IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
         => GetPageData<LevelsPageData>("levels.json", env, settings, cancellationToken);
-
-    private static Task<Results<Ok<VSCodeUpdatesPageData>, NotFound>> GetVSCodeUpdatesData(
-        IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
-        => GetPageData<VSCodeUpdatesPageData>("vscode-updates.json", env, settings, cancellationToken);
 
     private static Task<Results<Ok<FeaturesPageData>, NotFound>> GetFeaturesData(
         IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)

@@ -83,13 +83,14 @@ public class AISDLCTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Assert - Phase cards should have colored left borders
-        var phaseCard = Page.Locator(".sdlc-phase-card").First;
-        await phaseCard.AssertElementVisibleAsync();
+        // Assert - Phase cards should have phase-specific CSS classes for colored left borders
+        var ideationCard = Page.Locator(".sdlc-phase-ideation").First;
+        await ideationCard.AssertElementVisibleAsync();
 
-        // Check that border-left-color is set (should not be default)
-        var borderColor = await phaseCard.GetAttributeAsync("style");
-        borderColor.Should().Contain("border-left-color", "Phase cards should have colored left borders from phase.Color");
+        // Verify that the CSS class is applied (border colors are defined in CSS)
+        var className = await ideationCard.GetAttributeAsync("class");
+        className.Should().Contain("sdlc-phase-", "Phase cards should have phase-specific CSS classes for styling");
+        className.Should().Contain("sdlc-phase-ideation", "First phase should be ideation");
     }
 
     [Fact]

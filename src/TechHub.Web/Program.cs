@@ -117,6 +117,10 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+// Reject old date-prefixed URLs (YYYY-MM-DD-slug) before routing
+app.UseRejectDatePrefixedSlugs();
+
+// Status code pages middleware: converts 404 status codes to /not-found page
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 app.UseHttpsRedirection();
 

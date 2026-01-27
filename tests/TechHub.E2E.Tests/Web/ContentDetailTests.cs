@@ -51,8 +51,8 @@ public class ContentDetailTests(PlaywrightCollectionFixture fixture) : IAsyncLif
         await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}{TestRoundupUrl}");
 
         // Wait for cards to load and get href
-        await Page.Locator(".content-item-card").First.AssertElementVisibleAsync();
-        var firstCardHref = await Page.Locator(".content-item-card").First.GetHrefAsync();
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
+        var firstCardHref = await Page.Locator(".card").First.GetHrefAsync();
         firstCardHref.Should().NotBeNullOrEmpty("first roundup card should have href");
 
         // Navigate directly to the detail page (more reliable than clicking)
@@ -130,6 +130,55 @@ public class ContentDetailTests(PlaywrightCollectionFixture fixture) : IAsyncLif
             await Page.WaitForBlazorUrlContainsAsync("/roundups/");
             Page.Url.Should().Contain("/roundups/", "clicking roundup link should navigate to roundup detail page");
         }
+    }
+
+    [Fact]
+    public async Task VideoDetailPage_URL_DoesNotIncludeDatePrefix()
+    {
+        // Arrange - Navigate to videos collection
+        await Page.GotoRelativeAsync("/ai/videos");
+
+        // Get first video card href
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
+        var firstCardHref = await Page.Locator(".card").First.GetHrefAsync();
+        firstCardHref.Should().NotBeNullOrEmpty("first video card should have href");
+
+        // Act - Navigate to video detail page
+        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}{firstCardHref}");
+
+        // Assert - URL should NOT contain date prefix pattern (YYYY-MM-DD-)
+        Page.Url.Should().Contain("/videos/", "URL should include collection name");
+        
+        // Extract slug from URL (everything after /videos/)
+        var urlPattern = new Regex(@"/videos/([^/?#]+)");
+        var match = urlPattern.Match(Page.Url);
+        match.Success.Should().BeTrue("URL should match /videos/{slug} pattern");
+        
+        var slug = match.Groups[1].Value;
+        slug.Should().NotMatchRegex(@"^\d{4}-\d{2}-\d{2}-", 
+            "video URL slug should NOT start with date prefix (YYYY-MM-DD-)");
+    }
+
+    [Fact]
+    public async Task ContentDetailPage_OldDatePrefixedURL_Returns404()
+    {
+        // Arrange - Try to access a URL with old date prefix format
+        // This URL pattern should no longer work: /ai/videos/2026-01-12-slug
+        var oldFormatUrl = "/ai/videos/2026-01-12-what-quantum-safe-is-and-why-we-need-it";
+
+        // Act & Assert - Should get 404 or redirect behavior
+        var response = await Page.GotoAsync($"{BaseUrl}{oldFormatUrl}");
+        
+        // Either 404 status code or redirected away from the old URL pattern
+        if (response != null)
+        {
+            // If we get a response, it should be 404
+            response.Status.Should().Be(404, "old date-prefixed URLs should return 404");
+        }
+        
+        // Or we should be redirected to a different page (not the old format)
+        Page.Url.Should().NotContain("/2026-01-12-", 
+            "should not remain on old date-prefixed URL");
     }
 }
 

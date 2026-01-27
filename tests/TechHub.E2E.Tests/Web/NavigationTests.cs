@@ -139,10 +139,11 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         await Page.GotoRelativeAsync("/all");
 
         // Get first content card
-        var firstCard = Page.Locator(".content-item-card").First;
+        var firstCard = Page.Locator(".card").First;
 
         // Assert - Collection badge should exist and be before tags
-        var collectionBadge = firstCard.Locator(".collection-badge-white").First;
+        // Collection badge is the last .badge-grey in .card-tags
+        var collectionBadge = firstCard.Locator(".card-tags .badge-grey").Last;
         await collectionBadge.AssertElementVisibleAsync();
 
         // Collection badge should have proper capitalization (e.g., "News" not "news")
@@ -223,7 +224,7 @@ public class NavigationTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
 
         // Assert
         await Page.WaitForSelectorWithTimeoutAsync(".sub-nav");
-        await Page.WaitForSelectorWithTimeoutAsync(".content-item-card");
+        await Page.WaitForSelectorWithTimeoutAsync(".card");
 
         // Should show AI section and News collection
         await Page.AssertElementContainsTextBySelectorAsync("h1.page-h1", "Browse Artificial Intelligence News");

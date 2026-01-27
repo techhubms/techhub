@@ -105,8 +105,8 @@ public class FileBasedContentRepository : IContentRepository
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> InitializeAsync(CancellationToken cancellationToken = default)
     {
-        // Load all data into cache
-        return await GetAllAsync(cancellationToken);
+        // Load all data into cache (include drafts for initialization)
+        return await GetAllAsync(includeDraft: true, cancellationToken);
     }
 
     /// <summary>
@@ -114,9 +114,11 @@ public class FileBasedContentRepository : IContentRepository
     /// Uses IMemoryCache to cache loaded data. Cache never expires (content is static).
     /// Returns items sorted by date (DateEpoch) in descending order (newest first).
     /// </summary>
-    public async Task<IReadOnlyList<ContentItem>> GetAllAsync(CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyList<ContentItem>> GetAllAsync(
+        bool includeDraft = false,
+        CancellationToken cancellationToken = default)
     {
-        return await _cache.GetOrCreateAsync(CacheKey, async entry =>
+        var allItems = await _cache.GetOrCreateAsync(CacheKey, async entry =>
         {
             // Cache never expires - content is loaded once and never changes without restart
             entry.SetPriority(Microsoft.Extensions.Caching.Memory.CacheItemPriority.NeverRemove);
@@ -139,6 +141,14 @@ public class FileBasedContentRepository : IContentRepository
 
             return (IReadOnlyList<ContentItem>)cachedItems;
         }) ?? [];
+
+        // Filter drafts if needed (after getting from cache)
+        if (!includeDraft)
+        {
+            allItems = [.. allItems.Where(item => !item.Draft)];
+        }
+
+        return allItems;
     }
 
     /// <summary>
@@ -159,28 +169,23 @@ public class FileBasedContentRepository : IContentRepository
     {
         ArgumentNullException.ThrowIfNull(collectionName);
 
-        // Load all items (from cache if available)
-        var allItems = await GetAllAsync(cancellationToken);
+        // Load all items (from cache if available) - already filtered by includeDraft
+        var allItems = await GetAllAsync(includeDraft, cancellationToken);
 
         // Handle virtual "all" collection - return all content
         if (collectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
-            var filtered = includeDraft ? allItems : allItems.Where(item => !item.Draft);
-            return [.. filtered.OrderByDescending(x => x.DateEpoch)];
+            // Already filtered by includeDraft parameter in GetAllAsync
+            return [.. allItems.OrderByDescending(x => x.DateEpoch)];
         }
 
         // Normalize collection name (add _ prefix if missing)
         var normalizedCollection = collectionName.StartsWith('_') ? collectionName : $"_{collectionName}";
 
         // Filter by collection (includes both root and subcollections)
-        // Draft items excluded unless includeDraft=true
+        // Already filtered by includeDraft parameter in GetAllAsync
         var collectionItems = allItems
             .Where(item => item.CollectionName.Equals(normalizedCollection.TrimStart('_'), StringComparison.OrdinalIgnoreCase));
-        
-        if (!includeDraft)
-        {
-            collectionItems = collectionItems.Where(item => !item.Draft);
-        }
 
         return [.. collectionItems.OrderByDescending(x => x.DateEpoch)];
     }
@@ -202,19 +207,14 @@ public class FileBasedContentRepository : IContentRepository
     {
         ArgumentNullException.ThrowIfNull(sectionName);
 
-        var allItems = await GetAllAsync(cancellationToken);
+        var allItems = await GetAllAsync(includeDraft, cancellationToken);
 
         // Filter by section
         var sectionItems = sectionName.Equals("all", StringComparison.OrdinalIgnoreCase)
             ? allItems
             : allItems.Where(item => item.SectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase));
 
-        // Filter drafts if needed
-        if (!includeDraft)
-        {
-            sectionItems = sectionItems.Where(item => !item.Draft);
-        }
-
+        // Already filtered by includeDraft parameter in GetAllAsync
         return [.. sectionItems.OrderByDescending(x => x.DateEpoch)];
     }
 
@@ -226,9 +226,10 @@ public class FileBasedContentRepository : IContentRepository
     public async Task<ContentItem?> GetBySlugAsync(
         string collectionName,
         string slug,
+        bool includeDraft = false,
         CancellationToken cancellationToken = default)
     {
-        var items = await GetByCollectionAsync(collectionName, includeDraft: false, cancellationToken);
+        var items = await GetByCollectionAsync(collectionName, includeDraft, cancellationToken);
         return items.FirstOrDefault(item => item.Slug.Equals(slug, StringComparison.OrdinalIgnoreCase));
     }
 
@@ -240,6 +241,7 @@ public class FileBasedContentRepository : IContentRepository
     /// </summary>
     public async Task<IReadOnlyList<ContentItem>> SearchAsync(
         string query,
+        bool includeDraft = false,
         CancellationToken cancellationToken = default)
     {
         if (string.IsNullOrWhiteSpace(query))
@@ -247,7 +249,7 @@ public class FileBasedContentRepository : IContentRepository
             return [];
         }
 
-        var allItems = await GetAllAsync(cancellationToken);
+        var allItems = await GetAllAsync(includeDraft, cancellationToken);
         var lowerQuery = query.ToLowerInvariant();
 
         return [.. allItems
@@ -263,9 +265,11 @@ public class FileBasedContentRepository : IContentRepository
     /// Computes from cached in-memory data.
     /// Returns normalized (lowercase) unique tags sorted alphabetically.
     /// </summary>
-    public async Task<IReadOnlyList<string>> GetAllTagsAsync(CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyList<string>> GetAllTagsAsync(
+        bool includeDraft = false,
+        CancellationToken cancellationToken = default)
     {
-        var allItems = await GetAllAsync(cancellationToken);
+        var allItems = await GetAllAsync(includeDraft, cancellationToken);
 
         return [.. allItems
             .SelectMany(item => item.Tags)
@@ -366,8 +370,9 @@ public class FileBasedContentRepository : IContentRepository
             sidebarInfo = JsonSerializer.Deserialize<JsonElement>(json);
         }
 
-        // Generate ID from filename (without extension)
+        // Generate slug from filename (without extension and without date prefix)
         var fileName = Path.GetFileNameWithoutExtension(filePath);
+        var slug = StripDatePrefix(fileName);
 
         // Generate excerpt if not provided in frontmatter
         if (string.IsNullOrWhiteSpace(excerpt))
@@ -381,7 +386,7 @@ public class FileBasedContentRepository : IContentRepository
         // Calculate URL directly without creating temporary object (performance optimization for 4000+ items)
         var primarySectionUrl = Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(sectionNames, derivedCollection);
         var pathSegment = subcollectionName ?? derivedCollection;
-        var currentPagePath = $"/{primarySectionUrl}/{pathSegment}/{fileName}";
+        var currentPagePath = $"/{primarySectionUrl}/{pathSegment}/{slug}";
 
         string renderedHtml;
         try
@@ -394,13 +399,13 @@ public class FileBasedContentRepository : IContentRepository
         {
             throw new InvalidOperationException(
                 $"Failed to render markdown for file: {filePath}. " +
-                $"Slug: '{fileName}', Collection: '{collectionName}', Sections: [{string.Join(", ", sectionNames)}]",
+                $"Slug: '{slug}', Collection: '{collectionName}', Sections: [{string.Join(", ", sectionNames)}]",
                 ex);
         }
 
         var item = new ContentItem
         {
-            Slug = fileName,
+            Slug = slug,
             Title = title,
             Author = author,
             DateEpoch = date.ToUnixTimeSeconds(),
@@ -420,6 +425,22 @@ public class FileBasedContentRepository : IContentRepository
         };
 
         return item;
+    }
+
+    /// <summary>
+    /// Strips YYYY-MM-DD- date prefix from slug if present.
+    /// Example: "2026-01-12-what-quantum-safe-is" → "what-quantum-safe-is"
+    /// </summary>
+    /// <param name="slug">Original slug from filename</param>
+    /// <returns>Slug with date prefix removed if it was present</returns>
+    private static string StripDatePrefix(string slug)
+    {
+        // Pattern matches YYYY-MM-DD- at the start of the string
+        // Example: 2026-01-12-slug-name → slug-name
+        return System.Text.RegularExpressions.Regex.Replace(
+            slug,
+            @"^\d{4}-\d{2}-\d{2}-",
+            string.Empty);
     }
 
     /// <summary>
@@ -452,8 +473,8 @@ public class FileBasedContentRepository : IContentRepository
         }
         else
         {
-            // No scope - all items
-            items = await GetAllAsync(cancellationToken);
+            // No scope - all items (exclude drafts)
+            items = await GetAllAsync(includeDraft: false, cancellationToken);
         }
 
         // Apply tag filter if tags are specified

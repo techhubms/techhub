@@ -12,7 +12,7 @@ public class ContentItemTests
     {
         return new ContentItem
         {
-            Slug = "2024-01-15-test-article",
+            Slug = "test-article",
             Title = "Test Article",
             Author = "Test Author",
             DateEpoch = 1705305600, // 2024-01-15 00:00:00 UTC

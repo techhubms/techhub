@@ -23,11 +23,17 @@
         @* Latest Roundup *@
         @if (roundups != null && roundups.Any())
         {
+            var latestRoundup = roundups.First();
             <div class="sidebar-section latest-roundup">
                 <h2 class="sidebar-h2">Latest Roundup</h2>
-                <a href="/all/roundups/@(roundups.First().Slug.ToLowerInvariant())" class="sidebar-featured-link">
-                    <span class="sidebar-featured-title">@roundups.First().Title</span>
-                    <span class="sidebar-featured-date">@DateTime.Parse(roundups.First().DateIso).ToString("MMM dd, yyyy")</span>
+                <a href="@latestRoundup.GetHref()"
+                   class="sidebar-featured-link"
+                   target="@latestRoundup.GetTarget()"
+                   rel="@latestRoundup.GetRel()"
+                   data-enhance-nav="@latestRoundup.GetDataEnhanceNav()"
+                   aria-label="@latestRoundup.GetAriaLabel()">
+                    <span class="sidebar-featured-title">@latestRoundup.Title</span>
+                    <span class="sidebar-featured-date">@DateTime.Parse(latestRoundup.DateIso).ToString("MMM dd, yyyy")</span>
                 </a>
             </div>
         }
@@ -40,16 +46,19 @@
                 <ul class="sidebar-list">
                     @foreach (var item in latestItems.Take(5))
                     {
-                        var sectionUrl = GetSectionUrl(item.PrimarySectionName);
                         <li>
-                            <a href="/@(sectionUrl)/@(item.CollectionName.ToLowerInvariant())/@(item.Slug.ToLowerInvariant())"
-                                class="sidebar-content-button">
+                            <a href="@item.GetHref()"
+                                class="sidebar-content-button"
+                                target="@item.GetTarget()"
+                                rel="@item.GetRel()"
+                                data-enhance-nav="@item.GetDataEnhanceNav()"
+                                aria-label="@item.GetAriaLabel()">
                                 <span class="sidebar-content-button-title">@item.Title</span>
                                 <span class="sidebar-content-button-meta">
-                                    <span class="sidebar-item-section">@item.PrimarySectionName</span>
+                                    <span class="sidebar-item-section">@GetSectionDisplayName(item.PrimarySectionName)</span>
                                     <span class="sidebar-content-button-meta-separator">•</span>
                                     <span
-                                        class="sidebar-item-collection">@(GetCollectionDisplayName(item.CollectionName))</span>
+                                        class="sidebar-item-collection">@(GetCollectionTitle(item.CollectionName))</span>
                                     <span class="sidebar-content-button-meta-separator">•</span>
                                     <span class="sidebar-item-date">@DateTime.Parse(item.DateIso).ToString("MMM dd, yyyy")</span>
                                 </span>

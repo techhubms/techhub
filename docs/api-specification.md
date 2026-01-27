@@ -604,16 +604,6 @@ Get Levels of Enlightenment page data.
 
 ---
 
-#### GET /api/custom-pages/vscode-updates
-
-Get VS Code Updates page data.
-
-**Response**: `200 OK` or `404 Not Found`
-
-**Response Body**: `VSCodeUpdatesPageData` with page content and related items
-
----
-
 #### GET /api/custom-pages/features
 
 Get GitHub Copilot Features page data.

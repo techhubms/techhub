@@ -10,64 +10,62 @@
 
 <PageTitle>@GetPageTitle() - Tech Hub</PageTitle>
 
-@if (pageData != null)
-{
-    <HeadContent>
-        <link rel="canonical" href="https://tech.hub.ms/github-copilot/vscode-updates" />
-    </HeadContent>
+<HeadContent>
+    <link rel="canonical" href="https://tech.hub.ms/github-copilot/vscode-updates" />
+</HeadContent>
 
-    <SkipLink />
+<SkipLink />
 
-    <Header SectionName="github-copilot" />
+<Header SectionName="github-copilot" />
 
-    <main class="page-with-sidebar">
-        <aside class="sidebar">
-            @if (videoItems.Any())
-            {
-                <div class="sidebar-section">
-                    <h2 class="sidebar-h2">All Updates</h2>
-                    <ul class="sidebar-list">
-                        @foreach (var video in videoItems)
-                        {
-                            var isActive = video.Slug == selectedVideoSlug;
-                            <li>
-                                <a href="/github-copilot/vscode-updates/@video.Slug"
-                                    class="sidebar-content-button @(isActive ? "active" : "")">
-                                    <span class="sidebar-content-button-title">@video.Title</span>
-                                    <span class="sidebar-content-button-meta">
-                                        <time datetime="@video.DateIso">@FormatDate(video.DateEpoch)</time>
-                                    </span>
-                                </a>
-                            </li>
-                        }
-                    </ul>
-                </div>
-            }
-
-            @if (selectedVideoDetail != null && !string.IsNullOrWhiteSpace(selectedVideoDetail.RenderedHtml))
-            {
-                <SidebarToc HtmlContent="@selectedVideoDetail.RenderedHtml" Title="Table of Contents" />
-            }
-        </aside>
-
-        @if (selectedVideoDetail != null)
+<main class="page-with-sidebar">
+    <aside class="sidebar">
+        @if (videoItems.Any())
         {
-            <ContentItemDetail Item="@selectedVideoDetail" Id="skiptohere" />
+            <div class="sidebar-section">
+                <h2 class="sidebar-h2">All Updates</h2>
+                <ul class="sidebar-list">
+                    @foreach (var video in videoItems)
+                    {
+                        var isActive = video.Slug == selectedVideoSlug;
+                        <li>
+                            <a href="/github-copilot/vscode-updates/@video.Slug"
+                                class="sidebar-content-button @(isActive ? "active" : "")">
+                                <span class="sidebar-content-button-title">@video.Title</span>
+                                <span class="sidebar-content-button-meta">
+                                    <time datetime="@video.DateIso">@FormatDate(video.DateEpoch)</time>
+                                </span>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
         }
-        else
+
+        @if (selectedVideoDetail != null && !string.IsNullOrWhiteSpace(selectedVideoDetail.RenderedHtml))
         {
-            <article id="skiptohere" tabindex="-1" class="article-body">
-                <p class="no-content-message">No updates available yet.</p>
-            </article>
+            <SidebarToc HtmlContent="@selectedVideoDetail.RenderedHtml" Title="Table of Contents" />
         }
-    </main>
-}
+    </aside>
+
+    @if (selectedVideoDetail != null)
+    {
+        <ContentItemDetail Item="@selectedVideoDetail" Id="skiptohere" />
+    }
+    else
+    {
+        <article id="skiptohere" tabindex="-1" class="article-body">
+            <p class="no-content-message">No updates available yet.</p>
+        </article>
+    }
+</main>
 
 @code {
+    private const string VideoCollectionName = "vscode-updates";
+
     [Parameter]
     public string? VideoSlug { get; set; }
 
-    private VSCodeUpdatesPageData? pageData;
     private List<ContentItemDto> videoItems = new();
     private ContentItemDetailDto? selectedVideoDetail;
     private string selectedVideoSlug = "";
@@ -90,24 +88,13 @@
     {
         try
         {
-            pageData = await ApiClient.GetVSCodeUpdatesDataAsync();
-
-            if (pageData == null)
-            {
-                Navigation.NavigateTo("/not-found");
-                return;
-            }
-
-            if (!string.IsNullOrEmpty(pageData.VideoCollection))
-            {
-                var allVideos = await ApiClient.GetContentAsync(null, "videos");
-                videoItems = (allVideos ?? Enumerable.Empty<ContentItemDto>())
-                .Where(v => v.SubcollectionName == pageData.VideoCollection)
+            var allVideos = await ApiClient.GetContentAsync(null, "videos");
+            videoItems = (allVideos ?? Enumerable.Empty<ContentItemDto>())
+                .Where(v => v.SubcollectionName == VideoCollectionName)
                 .OrderByDescending(v => v.DateEpoch)
                 .ToList();
 
-                await LoadSelectedVideo();
-            }
+            await LoadSelectedVideo();
         }
         catch (Exception ex)
         {
@@ -151,7 +138,7 @@
             return selectedVideoDetail.Title;
         }
 
-        // Otherwise use the page data title
-        return pageData?.Title ?? "Visual Studio Code Updates";
+        // Otherwise use the page title
+        return "Visual Studio Code Updates";
     }
 }

@@ -94,7 +94,7 @@ public class TagCloudService(
         else
         {
             // Global scope
-            items = await _contentRepository.GetAllAsync(cancellationToken);
+            items = await _contentRepository.GetAllAsync(includeDraft: false, cancellationToken);
         }
 
         // Count tags
@@ -128,7 +128,7 @@ public class TagCloudService(
             return [];
         }
 
-        var item = await _contentRepository.GetBySlugAsync(collectionName, slug, cancellationToken);
+        var item = await _contentRepository.GetBySlugAsync(collectionName, slug, includeDraft: false, cancellationToken);
 
         if (item == null)
         {
@@ -151,7 +151,7 @@ public class TagCloudService(
     {
         return request.Scope switch
         {
-            TagCloudScope.Homepage => await _contentRepository.GetAllAsync(cancellationToken),
+            TagCloudScope.Homepage => await _contentRepository.GetAllAsync(includeDraft: false, cancellationToken),
 
             TagCloudScope.Section when !string.IsNullOrWhiteSpace(request.SectionName) =>
                 await _contentRepository.GetBySectionAsync(request.SectionName, includeDraft: false, cancellationToken),

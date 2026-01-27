@@ -492,33 +492,6 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     }
 
     /// <summary>
-    /// Get VS Code Updates page data
-    /// </summary>
-    public virtual async Task<VSCodeUpdatesPageData?> GetVSCodeUpdatesDataAsync(CancellationToken cancellationToken = default)
-    {
-        try
-        {
-            _logger.LogInformation("Fetching VS Code Updates page data");
-            var response = await _httpClient.GetAsync("/api/custom-pages/vscode-updates", cancellationToken);
-
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-            {
-                _logger.LogWarning("VS Code Updates data not found");
-                return null;
-            }
-
-            response.EnsureSuccessStatusCode();
-            var data = await response.Content.ReadFromJsonAsync<VSCodeUpdatesPageData>(cancellationToken: cancellationToken);
-            return data;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch VS Code Updates data");
-            throw;
-        }
-    }
-
-    /// <summary>
     /// Get Features page data
     /// </summary>
     public virtual async Task<FeaturesPageData?> GetFeaturesDataAsync(CancellationToken cancellationToken = default)

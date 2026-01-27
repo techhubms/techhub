@@ -7,7 +7,6 @@
             "id": "ideation",
             "name": "Ideation",
             "icon": "💡",
-            "color": "ideation",
             "what": "Explore possibilities, generate ideas, and validate concepts before committing resources. This exploratory phase is about understanding what's possible and what resonates with users.",
             "how": "Run brainstorming workshops, create quick throwaway prototypes, conduct user interviews and surveys, sketch wireframes, build proof-of-concepts, and test assumptions with minimal investment. Fail fast and iterate quickly.",
             "tools": [
@@ -44,7 +43,6 @@
             "id": "planning",
             "name": "Planning",
             "icon": "📋",
-            "color": "planning",
             "what": "Gather and analyze requirements from stakeholders, define project scope, establish timelines, and create a comprehensive roadmap. This phase determines the project's technical, operational, and economic feasibility.",
             "how": "Conduct stakeholder interviews, gather functional and non-functional requirements, perform feasibility analysis, define acceptance criteria, and create user stories with clear definitions of done.",
             "tools": [
@@ -93,7 +91,6 @@
             "id": "design",
             "name": "Design",
             "icon": "🎨",
-            "color": "design",
             "what": "Create system architecture, define data models, design user interfaces, and establish technical specifications that translate requirements into a detailed blueprint for development.",
             "how": "Develop high-level and detailed architecture diagrams, create wireframes and interactive prototypes, define API contracts, establish coding standards, and conduct design reviews with stakeholders.",
             "tools": [
@@ -134,7 +131,6 @@
             "id": "implementation",
             "name": "Implementation",
             "icon": "⚙️",
-            "color": "implementation",
             "what": "Write, review, and integrate code to build the software according to design specifications. This phase transforms the blueprint into a functional product.",
             "how": "Develop in iterative sprints, use feature branches and pull requests, conduct code reviews, maintain continuous integration pipelines, and follow coding standards.",
             "tools": [
@@ -183,7 +179,6 @@
             "id": "testing",
             "name": "Testing",
             "icon": "🧪",
-            "color": "testing",
             "what": "Verify functionality, identify defects, validate security, and ensure the software meets quality standards and user requirements before release.",
             "testingTypes": [
                 {
@@ -265,7 +260,6 @@
             "id": "deployment",
             "name": "Deployment",
             "icon": "🚀",
-            "color": "deployment",
             "what": "Release the software to production environments, configure infrastructure, and make the application available to end users with minimal disruption.",
             "how": "Use automated CI/CD pipelines, implement blue-green or canary deployment strategies, maintain rollback procedures, and monitor deployment health in real-time.",
             "tools": [
@@ -310,7 +304,6 @@
             "id": "maintenance",
             "name": "Maintenance",
             "icon": "🔧",
-            "color": "maintenance",
             "what": "Monitor system health, fix bugs, apply security patches, optimize performance, and gather user feedback to drive continuous improvement and future iterations.",
             "how": "Implement proactive monitoring and alerting, establish incident response procedures, analyze user feedback systematically, and maintain documentation for operational knowledge.",
             "tools": [

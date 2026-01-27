@@ -110,7 +110,7 @@ public class SectionCardTests : BunitContext
             .Add(p => p.Section, section));
 
         // Assert
-        var badges = cut.FindAll(".collection-badge");
+        var badges = cut.FindAll(".badge-purple");
         badges.Should().HaveCount(2);
         badges[0].TextContent.Should().Be("News");
         badges[1].TextContent.Should().Be("Blogs");
@@ -143,10 +143,10 @@ public class SectionCardTests : BunitContext
             .Add(p => p.Section, section));
 
         // Assert
-        var badges = cut.FindAll(".collection-badge, .custom-page-badge");
+        var badges = cut.FindAll(".badge-purple, .badge-custom");
         badges.Should().HaveCount(4, "should only show first 4 collections");
 
-        var moreIndicator = cut.Find(".collection-badge-more");
+        var moreIndicator = cut.Find(".badge-grey");
         // Normalize whitespace (component HTML has newlines for readability)
         var normalizedText = System.Text.RegularExpressions.Regex.Replace(moreIndicator.TextContent.Trim(), @"\s+", " ");
         normalizedText.Should().Be("+2 more");
@@ -191,8 +191,8 @@ public class SectionCardTests : BunitContext
             .Add(p => p.Section, section));
 
         // Assert
-        var allBadges = cut.FindAll(".collection-badge");
-        var customBadges = cut.FindAll(".custom-page-badge");
+        var allBadges = cut.FindAll(".badge-purple, .badge-custom");
+        var customBadges = cut.FindAll(".badge-custom");
 
         allBadges.Should().HaveCount(2, "there are 2 total collections (1 regular + 1 custom)");
         customBadges.Should().HaveCount(1, "there is 1 custom page");
@@ -250,7 +250,7 @@ public class SectionCardTests : BunitContext
         var collectionNav = cut.Find(".section-collections");
         collectionNav.GetAttribute("aria-label").Should().Be("AI collections");
 
-        var badge = cut.Find(".collection-badge");
+        var badge = cut.Find(".badge-purple");
         badge.GetAttribute("aria-label").Should().Be("View News collection");
     }
 

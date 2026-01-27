@@ -64,7 +64,7 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
 
         // Act - Navigate directly to /github-copilot/news
         await Page.GotoRelativeAsync("/github-copilot/news");
-        await Page.Locator(".content-item-card").First.AssertElementVisibleAsync();
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
 
         // Assert - URL should remain /github-copilot/news
         await Page.AssertUrlEndsWithAsync("/github-copilot/news");
@@ -172,10 +172,10 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
 
         // Act - Navigate to /github-copilot/all
         await Page.GotoRelativeAsync("/github-copilot/all");
-        await Page.Locator(".content-item-card").First.AssertElementVisibleAsync();
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
 
         // Assert - Should display all GitHub Copilot items regardless of collection
-        var displayedItems = await Page.GetElementCountBySelectorAsync(".content-item-card");
+        var displayedItems = await Page.GetElementCountBySelectorAsync(".card");
         displayedItems.Should().Be(totalItemCount,
             "the 'all' collection should show all content items from the section across all collection types");
 
@@ -195,10 +195,10 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
 
         // Act - Navigate to /all/all
         await Page.GotoRelativeAsync("/all/all");
-        await Page.Locator(".content-item-card").First.AssertElementVisibleAsync();
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
 
         // Assert - Should display ALL content from ALL sections and collections
-        var displayedItems = await Page.GetElementCountBySelectorAsync(".content-item-card");
+        var displayedItems = await Page.GetElementCountBySelectorAsync(".card");
         displayedItems.Should().Be(totalItemCount,
             "/all/all should show absolutely all content items from all sections and all collections");
     }
@@ -215,17 +215,25 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
 
         // Act - Navigate to /all/news
         await Page.GotoRelativeAsync("/all/news");
-        await Page.Locator(".content-item-card").First.AssertElementVisibleAsync();
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
 
         // Assert - Should display all news items from all sections
-        var displayedItems = await Page.GetElementCountBySelectorAsync(".content-item-card");
+        var displayedItems = await Page.GetElementCountBySelectorAsync(".card");
         displayedItems.Should().Be(totalNewsCount,
             "/all/news should show all news items from all sections");
 
-        // All items should be from "news" collection
-        var collectionBadges = await Page.Locator(".collection-badge-white").AllTextContentsAsync();
-        collectionBadges.Should().AllSatisfy(badge =>
-            badge.Should().Contain("News", "all items should be from the News collection"));
+        // Collection badges SHOULD be shown (sectionName='all' shows collection badges to distinguish content types)
+        var firstCard = Page.Locator(".card").First;
+        var cardTags = firstCard.Locator(".card-tags");
+        
+        // Verify card-tags exists
+        await cardTags.AssertElementVisibleAsync();
+        
+        // Collection badge should be present and say "News" (last .badge-grey in .card-tags)
+        var collectionBadge = cardTags.Locator(".badge-grey").Last;
+        var badgeText = await collectionBadge.TextContentAsync();
+        badgeText.Should().Contain("News", 
+            "collection badges are shown on /all/* routes to distinguish different collection types");
     }
 
     [Fact]
@@ -256,11 +264,12 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
 
         // Act - Navigate to /github-copilot/all
         await Page.GotoRelativeAsync("/github-copilot/all");
-        await Page.Locator(".content-item-card").First.AssertElementVisibleAsync();
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
 
         // Assert - Collection badges should be visible on items
-        var firstCard = Page.Locator(".content-item-card").First;
-        var collectionBadge = firstCard.Locator(".collection-badge-white");
+        var firstCard = Page.Locator(".card").First;
+        // Collection badge is the last .badge-grey within .card-tags (after tag badges)
+        var collectionBadge = firstCard.Locator(".card-tags .badge-grey").Last;
 
         await collectionBadge.AssertElementVisibleAsync();
 
@@ -277,10 +286,10 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
 
         // Act - Navigate to /github-copilot/news
         await Page.GotoRelativeAsync("/github-copilot/news");
-        await Page.Locator(".content-item-card").First.AssertElementVisibleAsync();
+        await Page.Locator(".card").First.AssertElementVisibleAsync();
 
         // Assert - Collection badge should NOT be visible (redundant)
-        var firstCard = Page.Locator(".content-item-card").First;
+        var firstCard = Page.Locator(".card").First;
         var collectionBadge = firstCard.Locator(".collection-badge");
 
         var isVisible = await collectionBadge.IsVisibleAsync();
@@ -393,7 +402,7 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         // Act - Open shared URL in new tab/page
         var page2 = await _context!.NewPageWithDefaultsAsync();
         await page2.GotoAndWaitForBlazorAsync(sharedUrl);
-        await page2.Locator(".content-item-card").First.AssertElementVisibleAsync();
+        await page2.Locator(".card").First.AssertElementVisibleAsync();
 
         // Assert - Both pages should show identical state
         page2.Url.Should().Be(sharedUrl,

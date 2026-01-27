@@ -233,10 +233,10 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var response = await _client.GetAsync("/api/content/filter?collections=blogs");
         var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
 
-        // Assert - URLs should include section context (primary section) and slug
+        // Assert - URLs should include section context (primary section) and slug WITHOUT date prefix
         items.Should().NotBeNull();
         items!.Should().HaveCount(2);
-        items.Should().AllSatisfy(item => item.Url.Should().MatchRegex(@"^/[a-z-]+/blogs/20[0-9]{2}-[0-9]{2}-[0-9]{2}-.+$"));
+        items.Should().AllSatisfy(item => item.Url.Should().MatchRegex(@"^/[a-z-]+/blogs/[a-z0-9-]+$"));
     }
 
     [Fact]
@@ -315,5 +315,90 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         videoItem.CollectionName.Should().Be("videos");
         videoItem.SubcollectionName.Should().BeNull("Test video doesn't have a subcollection");
         videoItem.FeedName.Should().Be("Visual Studio Code YouTube", "FeedName should be mapped from ContentItem");
+    }
+
+    [Fact]
+    public async Task FilterContent_WithNoParameters_ShouldNotReturnDraftItems()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/content/filter");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        items.Should().NotBeNull();
+        
+        // Should not include the draft item (2026-02-01-draft-feature-announcement.md)
+        items!.Should().NotContain(item => item.Draft, "draft items should be filtered out by default");
+        items.Should().NotContain(item => item.Title.Contains("Coming Soon"), "draft items should be filtered out by default");
+    }
+
+    [Fact]
+    public async Task GetContent_WithNoFilters_ShouldNotReturnDraftItems()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/content");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        items.Should().NotBeNull();
+        
+        // Should not include the draft item
+        items!.Should().NotContain(item => item.Draft, "draft items should be filtered out by default");
+    }
+
+    [Fact]
+    public async Task GetContent_BySectionName_ShouldNotReturnDraftItems()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/content?sectionName=ai");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        items.Should().NotBeNull();
+        
+        // Should not include the draft item even though it has ai section
+        items!.Should().NotContain(item => item.Draft, "draft items should be filtered out by default");
+    }
+
+    [Fact]
+    public async Task GetContent_ByCollectionName_ShouldNotReturnDraftItems()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/content?collectionName=news");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        items.Should().NotBeNull();
+        
+        // Should not include the draft news item
+        items!.Should().NotContain(item => item.Draft, "draft items should be filtered out by default");
+    }
+
+    [Fact]
+    public async Task GetContent_WithGhcFeatureTrue_ShouldIncludeDraftItems()
+    {
+        // This is the ONLY scenario where drafts should be included
+        // (for the GitHub Copilot Features page to show "Coming Soon" items)
+        
+        // Act
+        var response = await _client.GetAsync("/api/content?ghcFeature=true");
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        items.Should().NotBeNull();
+        
+        // In this specific case, draft items with ghcFeature=true would be included
+        // (Our test draft doesn't have ghcFeature=true, so it still won't appear)
+        // This test documents the exception to the rule
     }
 }

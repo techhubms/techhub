@@ -27,7 +27,7 @@ public class RssServiceTests
     [
         new ContentItem
         {
-            Slug = "2024-01-15-test-article-1",
+            Slug = "test-article-1",
             Title = "Test Article 1",
             Author = "John Doe",
             DateEpoch = 1705305600, // 2024-01-15
@@ -40,7 +40,7 @@ public class RssServiceTests
             },
         new ContentItem
         {
-            Slug = "2024-01-10-test-article-2",
+            Slug = "test-article-2",
             Title = "Test Article 2",
             Author = "Jane Smith",
             DateEpoch = 1704844800, // 2024-01-10
@@ -94,7 +94,7 @@ public class RssServiceTests
         var items = Enumerable.Range(1, 100)
             .Select(i => new ContentItem
             {
-                Slug = $"2024-01-{i:D2}-article-{i}",
+                Slug = $"article-{i}",
                 Title = $"Article {i}",
                 Author = "Test Author",
                 DateEpoch = 1705305600 + (i * 86400), // Increment by 1 day
