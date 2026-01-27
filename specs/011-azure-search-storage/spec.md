@@ -12,7 +12,7 @@ This specification defines the architectural foundation for migrating Tech Hub f
 1. **Blazing-fast faceted navigation** with accurate, real-time counts via SQL aggregations
 2. **Full-text search** with PostgreSQL's built-in `tsvector` capabilities
 3. **Tag subset matching** ("AI" matches "Azure AI", "Generative AI") via word tokenization
-4. **Scalable storage** ready for 10,000+ articles
+4. **Scalable storage** ready for 10,000+ content items
 5. **Cost-effective hosting** (~$15/month on Azure PostgreSQL Basic vs $75-250/month for Azure AI Search)
 6. **Easy local development** with SQLite or Docker PostgreSQL
 
@@ -32,7 +32,7 @@ This specification defines the architectural foundation for migrating Tech Hub f
 | Tag subset matching | Junction table with tokenized tags, word-boundary matching |
 | Multiple tag AND logic | SQL `INTERSECT` or `HAVING COUNT(DISTINCT tag) = N` |
 | Full-text search | Built-in `tsvector` with ranking and highlighting |
-| .NET/C# support | First-class `Npgsql` and EF Core support |
+| .NET/C# support | First-class `Npgsql` and Dapper support |
 | Local development | SQLite (fallback) or Docker PostgreSQL |
 | Cost | ~$15/month Azure PostgreSQL Basic vs $75-250/month AI Search |
 
@@ -136,14 +136,14 @@ Users can filter content by clicking tags and immediately see updated counts for
 
 **Why this priority**: Core feature for content discovery. Current filesystem-based filtering cannot provide real-time counts efficiently at scale.
 
-**Independent Test**: Select "AI" tag, verify remaining tag counts update within 200ms, showing how many articles match if user clicks additional tags.
+**Independent Test**: Select "AI" tag, verify remaining tag counts update within 200ms, showing how many content items match if user clicks additional tags.
 
 **Acceptance Scenarios**:
 
-1. **Given** I'm on a section page with 1000+ articles, **When** I click the "AI" tag, **Then** the content filters within 200ms AND all remaining tag counts update to show intersection counts
-2. **Given** I have "AI" tag selected, **When** I view other tags like "Azure", **Then** I see the count showing how many articles have BOTH "AI" AND "Azure" tags
-3. **Given** I select multiple tags (AI + Azure + Videos), **When** filters apply, **Then** only articles matching ALL selected tags appear (AND logic)
-4. **Given** I'm filtering by tags, **When** a tag would result in zero articles if clicked, **Then** that tag shows count "0" and is visually de-emphasized
+1. **Given** I'm on a section page with 1000+ content items, **When** I click the "AI" tag, **Then** the content filters within 200ms AND all remaining tag counts update to show intersection counts
+2. **Given** I have "AI" tag selected, **When** I view other tags like "Azure", **Then** I see the count showing how many content items have BOTH "AI" AND "Azure" tags
+3. **Given** I select multiple tags (AI + Azure + Videos), **When** filters apply, **Then** only content items matching ALL selected tags appear (AND logic)
+4. **Given** I'm filtering by tags, **When** a tag would result in zero content items if clicked, **Then** that tag shows count "0" and is visually de-emphasized
 5. **Given** I clear all tag filters, **When** the page reloads, **Then** all tag counts return to their full scope values
 
 ### User Story 2 - Tag Subset Matching (Priority: P0)
@@ -156,14 +156,14 @@ Users selecting "AI" see all content tagged with "AI" or tags containing "AI" as
 
 **Acceptance Scenarios**:
 
-1. **Given** I select "AI" tag, **When** results display, **Then** I see articles with tags: "AI", "Azure AI", "Generative AI", "AI Agents", "AI Engineering"
-2. **Given** I select "Visual Studio" tag, **When** results display, **Then** I see articles with "Visual Studio", "Visual Studio Code", "Visual Studio 2022"
+1. **Given** I select "AI" tag, **When** results display, **Then** I see content items with tags: "AI", "Azure AI", "Generative AI", "AI Agents", "AI Engineering"
+2. **Given** I select "Visual Studio" tag, **When** results display, **Then** I see content items with "Visual Studio", "Visual Studio Code", "Visual Studio 2022"
 3. **Given** tag subset matching is active, **When** matching "AI", **Then** it uses word boundaries (does NOT match "AIR", "FAIR", "DAIRY")
 4. **Given** I search for "Azure", **When** facet counts update, **Then** counts include both exact "Azure" matches and "Azure AI", "Azure DevOps", etc.
 
 ### User Story 3 - Full-Text Search with Highlighting (Priority: P1)
 
-Users can search article content, titles, and descriptions with highlighted results and relevance ranking.
+Users can search content item titles, content, and descriptions with highlighted results and relevance ranking.
 
 **Why this priority**: Essential search capability that enables content discovery beyond tag-based navigation.
 
@@ -171,8 +171,8 @@ Users can search article content, titles, and descriptions with highlighted resu
 
 **Acceptance Scenarios**:
 
-1. **Given** I enter "agent framework" in search, **When** results appear, **Then** articles mentioning "agent framework" in title/content rank highest
-2. **Given** search results display, **When** I view article excerpts, **Then** matching terms are highlighted for easy scanning
+1. **Given** I enter "agent framework" in search, **When** results appear, **Then** content items mentioning "agent framework" in title/content rank highest
+2. **Given** search results display, **When** I view content item excerpts, **Then** matching terms are highlighted for easy scanning
 3. **Given** I search "getting started Azure AI", **When** results appear, **Then** results include partial matches ranked by relevance
 4. **Given** I combine search query with tag filters, **When** results update, **Then** AND logic applies (matches search AND has selected tags)
 5. **Given** I search with typo "agnet framwork", **When** results display, **Then** fuzzy matching returns relevant "agent framework" results
@@ -207,10 +207,10 @@ Users can filter by date ranges with the date slider, with faceted counts updati
 
 **Acceptance Scenarios**:
 
-1. **Given** I select "Last 30 days", **When** tag counts update, **Then** they reflect only articles published in the last 30 days
+1. **Given** I select "Last 30 days", **When** tag counts update, **Then** they reflect only content items published in the last 30 days
 2. **Given** I have date range + tag filters active, **When** I view results, **Then** AND logic applies (date range AND tags)
 3. **Given** I use custom date slider, **When** I drag to a specific range, **Then** facet counts update in real-time (debounced)
-4. **Given** a tag has zero articles in selected date range, **When** viewing tag cloud, **Then** tag shows count "0" and is de-emphasized
+4. **Given** a tag has zero content items in selected date range, **When** viewing tag cloud, **Then** tag shows count "0" and is de-emphasized
 
 ### User Story 6 - Related Articles Discovery (Priority: P2 - Phase 2)
 
@@ -225,16 +225,16 @@ Users viewing an article see a "Related Articles" section showing similar conten
 
 **Acceptance Scenarios**:
 
-1. **Given** I'm viewing an article about "GitHub Copilot tips", **When** I scroll to related articles, **Then** I see other GitHub Copilot content ranked by tag overlap (Phase 1) or semantic similarity (Phase 2)
-2. **Given** an article has specific tags, **When** viewing related content, **Then** articles sharing tags appear, weighted by tag overlap count
-3. **Given** I click a related article, **When** navigating, **Then** URL preserves any active filters as context
-4. **Given** an article is the only one on a niche topic, **When** viewing related content, **Then** broader related articles appear (same section/collection)
+1. **Given** I'm viewing a content item about "GitHub Copilot tips", **When** I scroll to related content items, **Then** I see other GitHub Copilot content ranked by tag overlap (Phase 1) or semantic similarity (Phase 2)
+2. **Given** a content item has specific tags, **When** viewing related content, **Then** content items sharing tags appear, weighted by tag overlap count
+3. **Given** I click a related content item, **When** navigating, **Then** URL preserves any active filters as context
+4. **Given** a content item is the only one on a niche topic, **When** viewing related content, **Then** broader related content items appear (same section/collection)
 
 **Related Articles Query Pattern (Phase 1 - Tag Overlap)**:
 
 ```sql
--- Find articles related to a given article by tag overlap
--- Returns articles ranked by number of shared tags
+-- Find content items related to a given content item by tag overlap
+-- Returns content items ranked by number of shared tags
 WITH source_tags AS (
     SELECT tag_normalized FROM content_tags WHERE content_id = @article_id
 ),
@@ -279,14 +279,7 @@ External AI agents can query Tech Hub content via Model Context Protocol (MCP) f
 
 **Phase 1 Alternative**: REST API endpoints can serve basic structured queries to agents.
 
-**Independent Test**: MCP client queries "find Azure DevOps security best practices", receives structured response with relevant articles.
-
-**Acceptance Scenarios** (Phase 2):
-
-1. **Given** an MCP client connects to Tech Hub, **When** it queries content, **Then** structured search results are returned with metadata
-2. **Given** agent queries "top 5 videos about AI agents", **When** processing, **Then** results include title, URL, author, date, and relevance score
-3. **Given** agent uses MCP with context window, **When** querying, **Then** responses fit within token limits with summarized excerpts
-4. **Given** MCP server is running, **When** external agents connect, **Then** authentication and rate limiting apply
+**Note**: Detailed acceptance scenarios and implementation specifications will be defined in Phase 2 planning when Azure AI Search integration is designed.
 
 ### User Story 8 - Local Development Without Azure (Priority: P0)
 
@@ -1016,7 +1009,7 @@ public string GetLinkTarget(SearchResultItem item)
 
 ## Success Criteria
 
-1. **Tag filtering with counts completes in under 200ms** for 4000+ articles
+1. **Tag filtering with counts completes in under 200ms** for 4000+ content items
 2. **Facet counts are 100% accurate** using PostgreSQL GROUP BY aggregations
 3. **Tag subset matching works correctly** with word-boundary rules via expanded tags table
 4. **Full-text search returns relevant results** with highlighted excerpts using tsvector
@@ -1125,14 +1118,14 @@ public string GetLinkTarget(SearchResultItem item)
 | SQLite limitations for local dev | Low | Docker PostgreSQL available, feature flags for advanced queries |
 | Hash collision in change detection | Very Low | Use SHA256 (collision practically impossible) |
 | Breaking changes to existing filtering | High | Parallel implementation, feature flags |
-| Database migration complexity | Medium | EF Core migrations, versioned schema |
+| Database migration complexity | Medium | SQL migration scripts, versioned schema |
 
 ## Implementation Phases
 
 ### Phase 1: PostgreSQL Foundation (This Spec)
 
 - PostgreSQL database schema design
-- EF Core / Dapper repository implementations
+- Dapper repository implementations
 - Incremental content sync service with hash-based change detection
 - Skip sync option via appsettings
 - SQLite fallback for local development
