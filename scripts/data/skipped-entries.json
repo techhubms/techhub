@@ -11529,5 +11529,11 @@
     "collection": "news",
     "canonical_url": "https://github.blog/news-insights/policy-news-and-insights/help-shape-the-future-of-open-source-in-europe/",
     "reason": "No categories found: No categories assigned. The content centers on open-source policy advocacy relating to the European Union's open digital ecosystem initiative, focusing on funding, strategy, and industry support for open source. There is no coverage of technical implementation or development with Microsoft technologies, nor any substantive information about GitHub's DevOps tools, Copilot, or integration with Microsoft products. The article discusses policy, industry trends, and community participation without addressing coding, Azure, DevOps, AI, ML, or security from a technical or developer perspective, which is required by category inclusion rules. This fits the 'Business Strategy and Executive Content' exclusion in Generic Exclusion Rules."
+  },
+  {
+    "reason": "No categories found: All categories are excluded based on the Generic Exclusion Rules. The provided description shows that the content is primarily an interview focused on Anders Hejlsberg's personal career history, language design philosophy, and biographical content (e.g., 'he discusses his 40-year career,' 'early days of open source at Microsoft,' 'advice for new language designers'). While C#, TypeScript, and Microsoft come up, the video is not a technical tutorial, how-to guide, or architectural deep-dive into Microsoft technologies. There is no substantive focus on technical implementation, coding practices, or developer guidance per the Coding, AI, DevOps, Azure, ML, or Security rules. This matches the 'Biographical Focus' exclusion rule in Chapter 3: the primary focus is on a single individual's journey rather than technical content.",
+    "collection": "videos",
+    "canonical_url": "https://www.youtube.com/watch?v=uMqx8NNT4xY",
+    "timestamp": "2026-01-27 18:06:34 +00:00"
   }
 ]

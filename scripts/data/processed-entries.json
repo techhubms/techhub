@@ -24382,5 +24382,11 @@
     "collection": "community",
     "reason": "Succesfully added: The content qualifies for the 'AI' category because it focuses on Microsoft’s infrastructure for AI workloads (AI Inclusion Rule 1: Microsoft AI Products/Services and 4: AI development with Microsoft technologies). It also qualifies for the 'Azure' category because Cobalt 200 and Maia platforms are deployed as part of Azure’s infrastructure and are fundamental to delivering Microsoft’s cloud services (Azure Inclusion Rule 1, 4, 5). No 'Coding', 'DevOps', 'ML', or 'Security' categories are assigned since the article does not discuss application development, DevOps practices, ML implementations, or specific security controls. The content is not excluded by any generic rule, as it is technical in nature, sufficiently detailed, and not business/productivity or biographical content.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/silicon-to-systems-how-microsoft-engineers-ai-infrastructure/ba-p/4489525"
+  },
+  {
+    "reason": "Succesfully added: Assigned 'Coding' category because the content focuses heavily on lessons relevant to programming language design, development tooling, and real-world software engineering in the Microsoft ecosystem (C#, TypeScript) as per Coding rules 1 and 4. Although there are sections discussing AI’s role in tooling, these do not center on specific Microsoft AI or ML products or explicit AI development, so AI/ML categories were not assigned. Azure, Security, and DevOps categories do not directly apply as there is no substantive discussion on those Microsoft technologies or practices. No generic exclusion rules triggered: the article is not biographical in focus (despite some personal history, the core is technical reflection and advice), it is in English, substantive, and technical, and does not target business/productivity/non-development products.",
+    "collection": "news",
+    "canonical_url": "https://github.blog/developer-skills/programming-languages-and-frameworks/7-learnings-from-anders-hejlsberg-the-architect-behind-c-and-typescript/",
+    "timestamp": "2026-01-27 18:06:02 +00:00"
   }
 ]
