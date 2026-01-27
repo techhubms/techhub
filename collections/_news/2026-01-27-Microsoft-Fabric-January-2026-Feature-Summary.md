@@ -1,0 +1,77 @@
+---
+layout: "post"
+title: "Microsoft Fabric January 2026 Feature Summary"
+description: "This detailed summary covers new features and enhancements in Microsoft Fabric as of January 2026, including updates in AI, machine learning, data engineering, security, DevOps, and integration tools. Topics highlight advancements in the Fabric platform, OneLake, Data Warehouse, Real-Time Intelligence, and Data Factory, serving architects and engineers working with Microsoft’s data ecosystem."
+author: "Microsoft Fabric Blog"
+excerpt_separator: <!--excerpt_end-->
+canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-january-2026-feature-summary/"
+viewing_mode: "external"
+feed_name: "Microsoft Fabric Blog"
+feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+date: 2026-01-27 09:00:00 +00:00
+permalink: "/2026-01-27-Microsoft-Fabric-January-2026-Feature-Summary.html"
+categories: ["AI", "Azure", "DevOps", "ML", "Security"]
+tags: ["AI", "AI Auto Summary", "Azure", "Copilot", "Copy Job", "Data Access Control", "Data Engineering", "Data Factory", "Data Warehouse", "DevOps", "Eventstream", "GitHub Integration", "Incremental Copy", "KQL", "Lakehouse", "Materialized Lake View", "MERGE T SQL", "Microsoft Fabric", "ML", "MQTT", "News", "Notebooks", "OneLake", "Python SDK", "Real Time Intelligence", "Security", "Semantic Models", "SQL Analytics", "Statistics Refresh", "Streaming Data", "VS Code"]
+tags_normalized: ["ai", "ai auto summary", "azure", "copilot", "copy job", "data access control", "data engineering", "data factory", "data warehouse", "devops", "eventstream", "github integration", "incremental copy", "kql", "lakehouse", "materialized lake view", "merge t sql", "microsoft fabric", "ml", "mqtt", "news", "notebooks", "onelake", "python sdk", "real time intelligence", "security", "semantic models", "sql analytics", "statistics refresh", "streaming data", "vs code"]
+---
+
+Microsoft Fabric Blog presents a comprehensive overview of the January 2026 feature update, detailing enhancements in AI support, developer tooling, security, data engineering, and integration within the Microsoft Fabric platform.<!--excerpt_end-->
+
+# Microsoft Fabric January 2026 Feature Summary
+
+## Events & Announcements
+
+- **Skill & Certification Upgrades:** Live training sessions available, including exam voucher opportunities for Fabric Analytics Engineer (DP-600) and Data Engineer (DP-700).
+- **FabCon Atlanta:** Major event co-located with SQLCon, offering sessions on Fabric, SQL Server 2025, Power BI, Real-Time Intelligence, and AI solutions.
+
+## General Update
+
+- **Acquisition of Osmos:** Microsoft acquires Osmos to enhance Fabric with agentic AI-driven data engineering, aiming to streamline data workflows and automate pipelines within OneLake.
+
+## Fabric Platform
+
+- **AI Auto-Summary for Semantic Models:** Preview feature leveraging AI to generate summaries of semantic models, aiding faster understanding and navigation in OneLake Catalog.
+- **Parent-Child Hierarchy in OneLake Catalog:** Improved data organization for better traceability and management.
+- **Item Reference Variable Type (Preview):** New structured variable type improves security, maintainability, and CI/CD readiness across Fabric items, ensuring reliable configuration referencing.
+- **Enhanced GitHub Integration:** Native support for GitHub Enterprise Cloud with data residency and standalone branch commits, facilitating CI/CD and development workflows.
+- **Python SDK for Fabric REST API:** Preview release empowers automation, resource management, and integration with Fabric through Python, supporting credential management and workspace operations.
+
+## OneLake
+
+- **Granular Security Role APIs (Preview):** Fine-grained REST APIs for managing OneLake roles, supporting programmatic security governance and automation in CI/CD pipelines.
+- **Mirrored Item Security:** Apply granular security controls (table, row, column-level) on mirrored data, ensuring compliance and secure data sharing.
+- **Immutable Diagnostic Logs:** Enforce immutability of diagnostic logs for compliance and auditing.
+
+## Data Engineering
+
+- **High Concurrency for Lakehouse:** Optimized Spark session sharing enables faster concurrent operations for Lakehouse workloads, enhancing cost and performance.
+- **Notebook Enhancements:** Create and manage Fabric connections within Notebooks, use secured connections to cloud sources, generate code snippets, and leverage built-in authentication flows.
+- **VS Code Integration:** Open and edit Fabric notebooks directly in VS Code, synchronize changes with remote workspaces, and manage multiple notebooks/workspaces in one view.
+- **Materialized Lake View Enhancements:** Support for 'create or replace' semantics and improved lineage tracking to streamline iteration and troubleshooting.
+
+## Data Warehouse
+
+- **Proactive and Incremental Statistics Refresh:** Automated and faster management of column statistics, reducing query planning times and manual intervention.
+- **Result Set Caching:** Now generally available, accelerates repeated queries.
+- **MERGE (Transact-SQL):** Integrated single statement for INSERT, UPDATE, DELETE operations.
+
+## Real-Time Intelligence
+
+- **Private Network Streaming Sources:** Eventstream now supports streaming data from virtual networks/on-premises with secure Azure managed VNet bridging.
+- **MQTT v3 Support:** Extended protocol support for IoT integration.
+- **Weather Data Connector:** New, production-ready connector for real-time weather ingest and analytics.
+- **Eventhouse Shortcuts:** Improvements including datetime-based acceleration, freshness control, and simplified KQL syntax.
+- **Copilot Integration:** Copilot now assists in querying Eventhouse shortcuts with autogenerated KQL.
+
+## Data Factory
+
+- **Broadened Incremental Copy Support:** New connectors added for Copy Job, improving multi-cloud and on-premises integration workflows.
+
+## Security Highlights
+
+- **Fine-Grained Access Control:** Expanded API control over OneLake roles, mirrored item security, and immutable logs enhance governance.
+- **Secure Connections:** New variable types and authentication mechanisms safeguard configuration across Data Engineering and Notebooks.
+
+For detailed documentation and getting started guides, see links throughout each feature section. Latest updates reflect Microsoft's focus on unified developer experience, automation, and governance within Fabric and OneLake environments.
+
+This post appeared first on "Microsoft Fabric Blog". [Read the entire article here](https://blog.fabric.microsoft.com/en-US/blog/fabric-january-2026-feature-summary/)

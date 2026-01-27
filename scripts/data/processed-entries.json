@@ -24418,5 +24418,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=o5o_pmMXJUs",
     "timestamp": "2026-01-27 20:05:42 +00:00"
+  },
+  {
+    "collection": "news",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-january-2026-feature-summary/",
+    "reason": "Succesfully added: Assigned Azure category due to comprehensive feature coverage across Microsoft Fabric and Azure-integrated services. Assigned AI category as multiple features involve AI (AI Auto-Summary, Osmos acquisition for agentic data engineering). ML category added based on substantial updates centered on data engineering, Lakehouse, and analytics (including real-time and batch processing, materialized views, and automation). Security category assigned due to granular role management APIs, mirrored item security, and immutable logs. DevOps included because of Git integration enhancements, CI/CD support, and automation features. Coding is not assigned independently, as the summary focuses on platform features and developer tooling rather than hands-on code samples or language/framework-specific guidance. Content qualifies for multiple categories by rule hierarchy, with Microsoft technologies central throughout.",
+    "timestamp": "2026-01-27 21:04:12 +00:00"
   }
 ]
