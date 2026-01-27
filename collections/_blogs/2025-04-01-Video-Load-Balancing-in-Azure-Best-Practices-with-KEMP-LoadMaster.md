@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/04/video-load-balancing-in-azure/
 title: 'Video: Load Balancing in Azure – Best Practices with KEMP LoadMaster'
 author: Thomas Maurer
@@ -20,6 +20,7 @@ tags:
 - Progress
 section_names:
 - azure
+primary_section: azure
 ---
 In this post, Thomas Maurer speaks with Kurt Jung from Progress about load balancing strategies in Azure using KEMP LoadMaster. Their conversation provides practical guidance for cloud, hybrid, and on-premises network architectures.<!--excerpt_end-->
 

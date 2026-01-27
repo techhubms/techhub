@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/ai-do-or-dont-believe-the-hype/?utm_source=rss&utm_medium=rss&utm_campaign=ai-do-or-dont-believe-the-hype
 title: 'AI: Do or Don’t Believe the Hype – A Balanced Look at AI in DevOps'
 author: Alan Shimel
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Alan Shimel examines the current state of AI in the DevOps world, analyzing business hype, empirical studies, and ground-level developer experiences.<!--excerpt_end-->
 

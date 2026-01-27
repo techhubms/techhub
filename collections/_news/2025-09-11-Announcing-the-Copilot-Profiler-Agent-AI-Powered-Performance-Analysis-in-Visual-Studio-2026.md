@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/copilot-profiler-agent-visual-studio/
 title: 'Announcing the Copilot Profiler Agent: AI-Powered Performance Analysis in Visual Studio 2026'
 author: Harshada Hole
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Harshada Hole explores the capabilities of the Copilot Profiler Agent, showcasing how this AI-powered assistant in Visual Studio 2026 helps developers analyze, optimize, and validate performance improvements directly within their workflow.<!--excerpt_end-->
 

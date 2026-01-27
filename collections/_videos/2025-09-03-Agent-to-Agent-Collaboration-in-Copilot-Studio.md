@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=d-oD3pApHAg
 title: Agent-to-Agent Collaboration in Copilot Studio
 author: Microsoft Developer
@@ -27,6 +27,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Elaiza Benitez and Sudeep Ghatak discuss how Microsoft Copilot Studio enables intelligent AI agent-to-agent collaboration to automate employee onboarding tasks in this episode for developers and enterprise teams.<!--excerpt_end-->
 

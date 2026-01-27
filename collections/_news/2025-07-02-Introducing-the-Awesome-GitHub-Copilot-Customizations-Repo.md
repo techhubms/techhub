@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/introducing-awesome-github-copilot-customizations-repo
 title: Introducing the Awesome GitHub Copilot Customizations Repo
 author: Matt Soucoup, Aaron Powell
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Matt Soucoup and Aaron Powell present the Awesome GitHub Copilot Customizations repo, empowering developers to extend Copilot through reusable prompts, custom instructions, and chat modes for personalized AI-powered coding workflows.<!--excerpt_end-->
 

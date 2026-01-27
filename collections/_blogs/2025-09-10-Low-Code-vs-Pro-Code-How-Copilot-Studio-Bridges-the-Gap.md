@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/low-code-vs-pro-code-how-copilot-studio-bridges-the-gap/
 title: 'Low-Code vs Pro-Code: How Copilot Studio Bridges the Gap'
 author: Dellenny
@@ -20,6 +20,7 @@ tags:
 - Software Engineering
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny reviews how Copilot Studio helps bridge the gap between low-code and pro-code development, empowering users of varying skill levels through AI-driven features.<!--excerpt_end-->
 

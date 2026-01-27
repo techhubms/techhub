@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-18-isolated-subagents-for-jetbrains-eclipse-and-xcode-now-in-public-preview
 title: GitHub Copilot Isolated Subagents Now in Public Preview for JetBrains, Eclipse, and Xcode
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the public preview release of isolated subagents in GitHub Copilot for JetBrains IDEs, Eclipse, and Xcode, showcasing how developers can harness autonomous agents for focused research, code review, and task automation.<!--excerpt_end-->
 

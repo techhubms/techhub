@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-04-remote-github-mcp-server-is-now-generally-available
 title: Remote GitHub MCP Server Now Generally Available
 author: Allison
@@ -30,6 +30,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Allison details the general availability of the remote GitHub MCP Server, highlighting powerful integrations with Copilot, AI-driven automation, advanced authentication, and enhanced security features for developers and teams.<!--excerpt_end-->
 

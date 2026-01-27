@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-mission-critical-blog/a-deep-dive-into-spark-ui-for-job-optimization/ba-p/4442229
 title: A Deep Dive into Spark UI for Job Optimization
 author: anishekkamal
@@ -22,6 +22,7 @@ tags:
 - SQL Optimization
 section_names:
 - ml
+primary_section: ml
 ---
 anishekkamal provides an actionable deep dive into troubleshooting and optimizing Spark jobs using the Spark UI. Discover techniques to analyze key metrics, pinpoint job bottlenecks, and apply proven fixes for more efficient big data processing.<!--excerpt_end-->
 

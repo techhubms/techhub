@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/generative-ai/measuring-what-matters-how-offline-evaluation-of-github-mcp-server-works/
 title: 'Measuring What Matters: Offline Evaluation of GitHub MCP Server'
 author: Ksenia Bobrova
@@ -25,6 +25,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Ksenia Bobrova explains how the GitHub MCP Server team employs rigorous offline evaluation methods to improve GitHub Copilot's integration with AI models, ensuring high-quality, accurate developer workflows.<!--excerpt_end-->
 

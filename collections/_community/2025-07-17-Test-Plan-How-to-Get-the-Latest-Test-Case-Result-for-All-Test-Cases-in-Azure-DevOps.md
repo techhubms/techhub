@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m26lp7/test_plan_or_test_suite_how_to_get_the_last_test/
 title: "Test Plan: How to Get the Latest 'Test Case Result' for All Test Cases in Azure DevOps"
 author: penelope77
@@ -18,6 +18,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Author penelope77 describes a challenge in Azure DevOps: extracting all test cases with their latest results from a master test plan, highlighting current limitations.<!--excerpt_end-->
 

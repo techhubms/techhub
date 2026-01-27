@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=_kYXkZxSTHc
 title: Scaling Innovation in Smart Eyewear and Connected Retail with Azure and AI
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents how John Luna and Alfredo Patron showcase the impact of AI and Azure in scaling smart eyewear and connected retail. Learn about secure, real-time device management and technology partnership strategies.<!--excerpt_end-->
 

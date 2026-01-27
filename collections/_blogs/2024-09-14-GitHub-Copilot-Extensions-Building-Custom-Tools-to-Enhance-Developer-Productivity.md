@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devopsjournal.io/blog/2024/09/14/GitHub-Copilot-Extensions
 title: 'GitHub Copilot Extensions: Building Custom Tools to Enhance Developer Productivity'
 author: Rob Bos
@@ -21,6 +21,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this detailed article, Rob Bos explores how developers can create custom GitHub Copilot Extensions. He describes extension types, provides a development walkthrough, and offers practical tips for integrating APIs and managing user interactions within Copilot Chat.<!--excerpt_end-->
 

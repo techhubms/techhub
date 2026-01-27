@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/cloud-native-identity-with-azure-files-entra-only-secure-access/ba-p/4469778
 title: 'Cloud Native Identity with Azure Files: Entra-only Secure Access for the Modern Enterprise'
 author: Priyanka-Gangal
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Priyanka-Gangal introduces the public preview of Entra-only identities for Azure Files, highlighting how cloud-native authentication streamlines secure access, reduces complexity, and modernizes enterprise storage infrastructure.<!--excerpt_end-->
 

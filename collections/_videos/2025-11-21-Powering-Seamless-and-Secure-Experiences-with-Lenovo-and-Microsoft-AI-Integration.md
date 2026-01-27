@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=WJdoMr0juZ8
 title: Powering Seamless and Secure Experiences with Lenovo and Microsoft AI Integration
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a session featuring Dave Mooney at Microsoft Ignite 2025, discussing the strategic partnership between Microsoft and Lenovo, with emphasis on AI integration and seamless device experiences.<!--excerpt_end-->
 

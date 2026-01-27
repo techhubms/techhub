@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dUSaFR-fL-c
 title: Driving Agentic Innovation with Model Context Protocol (MCP) for Tool-Aware AI
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events features Maria Naggaga and Don Scott in this Ignite session, unveiling how Model Context Protocol (MCP) is transforming agent-based AI systems and tooling in the Microsoft ecosystem.<!--excerpt_end-->
 

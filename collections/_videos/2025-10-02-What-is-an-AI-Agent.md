@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/5ms4A7NELtw
 title: What is an AI Agent?
 author: Microsoft Developer
@@ -18,6 +18,7 @@ tags:
 - Software Automation
 section_names:
 - ai
+primary_section: ai
 ---
 In this video, Seth Juarez explains what an AI agent is, detailing how it translates plain language into executable code—a valuable insight for developers interested in AI integration.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dxa_juNDoS4
 title: 'Scale Smarter: Azure Infrastructure for the Agentic Era'
 author: Microsoft Events
@@ -28,6 +28,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 Microsoft Events hosts an Ignite session led by Jeremy Winter, Nidhi Chappell, and Annie Pearl, revealing major Azure innovations—AI-driven cloud infrastructure, agentic operations, resiliency tools, and automation for enterprise reliability and security.<!--excerpt_end-->
 

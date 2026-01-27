@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-10-github-copilot-cli-faster-more-concise-and-prettier
 title: 'GitHub Copilot CLI: Faster, More Concise, Streamlined Developer Experience'
 author: Allison
@@ -30,6 +30,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison discusses the latest updates to GitHub Copilot CLI, emphasizing enhanced speed, improved terminal usability, and expanded Windows support for developers leveraging AI-powered coding assistance.<!--excerpt_end-->
 

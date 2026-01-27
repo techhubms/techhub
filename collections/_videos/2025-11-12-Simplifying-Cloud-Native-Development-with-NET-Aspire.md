@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=aXouOsBh4ro
 title: Simplifying Cloud-Native Development with .NET Aspire
 author: dotnet
@@ -26,6 +26,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 dotnet presents an overview of .NET Aspire, highlighting how it simplifies the development and monitoring of cloud-native distributed applications for modern .NET developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/python-ia-resumen-y-recursos/ba-p/4465152
 title: 'Recapitulación de la Serie Python + IA: Técnicas, Modelos y Recursos'
 author: gwyneth-penas
@@ -31,6 +31,7 @@ section_names:
 - github-copilot
 - ml
 - security
+primary_section: github-copilot
 ---
 gwyneth-penas resume una serie completa sobre Python e inteligencia artificial, abordando desde LLMs hasta seguridad y agentes de IA, con ejemplos prácticos y recursos multimedia para aprender y enseñar el uso moderno de estos modelos.<!--excerpt_end-->
 

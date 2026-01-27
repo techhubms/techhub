@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=REGwDgyLfNA
 title: 'Blazor Community Standup: Validation Improvements in Blazor'
 author: dotnet
@@ -24,6 +24,7 @@ tags:
 - Validation
 section_names:
 - coding
+primary_section: coding
 ---
 In this video, the .NET team, including Jon Galloway and others, present the latest validation improvements for Blazor in .NET 10, highlighting support for complex types and how developers can leverage these features.<!--excerpt_end-->
 

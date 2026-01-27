@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/mpi-stage-high-performance-file-distribution-for-hpc-clusters/ba-p/4484366
 title: 'mpi-stage: High-Performance File Distribution for HPC Clusters'
 author: pauledwards
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 pauledwards demonstrates how mpi-stage leverages MPI broadcasts to efficiently distribute large files, such as container images, across Azure-based HPC clusters—improving startup times and minimizing shared file system bottlenecks.<!--excerpt_end-->
 

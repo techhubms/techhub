@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=2A7gO9Tf-Vg
 title: 'Agents for Developers: Latest Advancements in Developer Productivity'
 author: Microsoft Developer
@@ -17,6 +17,7 @@ tags:
 - Task Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Govind Kamtamneni, from Microsoft Developer, explores the next generation of agents for developers—highlighting task automation, issue resolution, and the growing open source extension ecosystem.<!--excerpt_end-->
 

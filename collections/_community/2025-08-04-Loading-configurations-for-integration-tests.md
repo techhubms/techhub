@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mhmsj5/loading_configurations_for_integration_tests/
 title: Loading configurations for integration tests
 author: LazyChief_117
@@ -18,6 +18,7 @@ tags:
 - Web API
 section_names:
 - coding
+primary_section: coding
 ---
 Authored by LazyChief_117, this post highlights an integration testing issue in .NET 8 Web APIs, where configuration files intermittently fail to load after certain server updates.<!--excerpt_end-->
 

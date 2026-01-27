@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=q7PdMVpW-04
 title: Modernizing ERP with RISE with SAP on Microsoft Azure
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 In this Microsoft Ignite session, Wael Elkabbany and Hiren Shah demonstrate how organizations can modernize their ERP through RISE with SAP on Microsoft Azure, highlighting infrastructure, AI-driven monitoring, security, and workflow integrations.<!--excerpt_end-->
 

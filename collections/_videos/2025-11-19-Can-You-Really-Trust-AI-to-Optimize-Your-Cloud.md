@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=XY4na9h5dEY
 title: Can You Really Trust AI to Optimize Your Cloud?
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 - Suresh Mathew
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents CEO Suresh Mathew discussing the benefits and risks of leveraging AI to automate enterprise cloud operations at Microsoft Ignite 2025.<!--excerpt_end-->
 

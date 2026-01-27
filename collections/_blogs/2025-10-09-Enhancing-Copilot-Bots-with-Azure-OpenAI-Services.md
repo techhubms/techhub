@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/enhancing-copilot-bots-with-azure-openai-services/
 title: Enhancing Copilot Bots with Azure OpenAI Services
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Dellenny explains how to enhance Copilot bots with Azure OpenAI Services, covering integration techniques, grounded AI, deployment best practices, and key implementation challenges for enterprise bots.<!--excerpt_end-->
 

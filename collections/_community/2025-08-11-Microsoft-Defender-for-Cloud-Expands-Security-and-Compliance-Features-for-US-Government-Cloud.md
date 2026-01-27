@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-cloud-expands-u-s-gov-cloud-support-for/ba-p/4441118
 title: Microsoft Defender for Cloud Expands Security and Compliance Features for U.S. Government Cloud
 author: lgoduti
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 L. Goduti outlines Microsoft's new security and compliance advancements in Defender for Cloud, bringing CSPM and Defender for Servers Plan 2 to U.S. Government Clouds to support agencies facing strict regulatory obligations.<!--excerpt_end-->
 

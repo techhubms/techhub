@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-auto-agent-upgrade-for-azure-arc-enabled-servers/ba-p/4442556
 title: 'Public Preview: Auto Agent Upgrade for Azure Arc-Enabled Servers'
 author: Aurnov_Chattopadhyay
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Aurnov Chattopadhyay introduces the Auto Agent Upgrade feature for Azure Arc-enabled servers, designed to automate and simplify agent updates across hybrid environments.<!--excerpt_end-->
 

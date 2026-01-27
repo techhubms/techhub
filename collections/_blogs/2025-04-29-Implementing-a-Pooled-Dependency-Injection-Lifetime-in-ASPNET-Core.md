@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/creating-a-pooled-dependency-injection-lifetime/
 title: Implementing a Pooled Dependency Injection Lifetime in ASP.NET Core
 author: Andrew Lock
@@ -17,6 +17,7 @@ tags:
 - Singleton Services
 section_names:
 - coding
+primary_section: coding
 ---
 In this in-depth post, Andrew Lock explores how to create a pooled dependency injection lifetime in ASP.NET Core, discussing design choices, implementation details, and broader implications.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-or-modernize-your-applications-using-azure-migrate/ba-p/4468587
 title: 'Migrate or Modernize Applications Using Azure Migrate: New Features and Application-Aware Approaches'
 author: Shikher
@@ -32,6 +32,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Shikher provides a comprehensive overview of Azure Migrate's new application-focused features, showing how architects and developers can leverage code insight tools like GitHub Copilot to drive secure, efficient modernization and migration projects to Azure.<!--excerpt_end-->
 

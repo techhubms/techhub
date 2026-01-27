@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/generational-performance-leap-for-azure-confidential-computing/ba-p/4468989
 title: Generational Performance Leap for Azure Confidential Computing VMs
 author: Rakeshginjupalli
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Rakeshginjupalli summarizes independent findings showing Azure confidential VMs with 4th Gen AMD EPYC processors deliver major performance boosts and strong security with minimal performance overhead, crucial for sensitive workloads.<!--excerpt_end-->
 

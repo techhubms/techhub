@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=4ljqB21s5L8
 title: Infrastructure as Code with Pulumi Using .NET Languages
 author: dotnet
@@ -25,6 +25,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Co-host Cam Soper demonstrates Pulumi on On .NET Live, showing developers how to use C# and F# for cloud infrastructure as code, leveraging familiar .NET tools and workflows.<!--excerpt_end-->
 

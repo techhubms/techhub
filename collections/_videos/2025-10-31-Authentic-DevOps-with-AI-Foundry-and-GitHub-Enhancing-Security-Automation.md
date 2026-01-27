@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=rWkLRkN3yvI
 title: 'Authentic DevOps with AI Foundry and GitHub: Enhancing Security Automation'
 author: Microsoft Developer
@@ -35,6 +35,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 In this episode, Microsoft Developer's Krystal Folkes and Katie Novotny demonstrate building AI-powered security agents using Azure AI Foundry, GitHub, and GitHub Copilot to automate and secure DevOps workflows.<!--excerpt_end-->
 

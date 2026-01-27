@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-july-2025/
 title: 'What’s New in Fabric Warehouse – July 2025: AI, Performance, and Modern Data Engineering'
 author: Microsoft Fabric Blog
@@ -28,6 +28,7 @@ section_names:
 - ml
 - devops
 - security
+primary_section: ai
 ---
 This comprehensive recap from the Microsoft Fabric Blog details July 2025’s new features and enhancements for Fabric Warehouse, including AI integration, security, performance improvements, and developer tools, making it relevant for data engineers and architects.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-28-improvements-to-the-home-dashboard-available-in-public-preview
 title: 'Public Preview: Enhanced Home Dashboard with My Work and Feed Tabs'
 author: Allison
@@ -18,6 +18,7 @@ tags:
 - Workflow
 section_names:
 - devops
+primary_section: devops
 ---
 Allison reports on UI improvements to the GitHub home dashboard now available in public preview, highlighting new features that streamline how developers track and access their pull requests and issues.<!--excerpt_end-->
 

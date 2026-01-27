@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-runtime-2-0-experimental-public-preview/
 title: 'Fabric Runtime 2.0 Experimental Preview: Scalable Data Engineering with Spark'
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog presents an overview of Fabric Runtime 2.0 Experimental Public Preview, showcasing new features for data engineering and science with upgraded Spark and Delta Lake support.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=JxoC8siCf8Y
 title: 'Ship Faster with Azure and GitHub Copilot: End-to-End DevOps with AI Agents'
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - azure
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Events presents an in-depth session revealing how Nir Mashkowski and Mandy Whaley use GitHub Copilot and AI agents to automate Azure app development, DevOps, and operations.<!--excerpt_end-->
 

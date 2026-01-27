@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-events/join-the-microsoft-ignite-2025-nyc-community-summit-in-times/ec-p/4459801#M661
 title: Join the Microsoft Ignite 2025 NYC Community Summit in Times Square
 author: MariselaC
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 MariselaC announces the Microsoft Ignite 2025 NYC Community Summit, outlining key sessions and topics in AI, Azure, and development. The event brings together local tech leaders, MVPs, and enthusiasts.<!--excerpt_end-->
 

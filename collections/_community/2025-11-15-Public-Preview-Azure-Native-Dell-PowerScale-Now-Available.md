@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/public-preview-of-azure-native-dell-powerscale/ba-p/4470120
 title: 'Public Preview: Azure Native Dell PowerScale Now Available'
 author: Aung_Oo
@@ -29,6 +29,7 @@ tags:
 - Unstructured Data
 section_names:
 - azure
+primary_section: azure
 ---
 Aung_Oo provides an in-depth overview of the newly launched, fully managed Dell PowerScale for Microsoft Azure, highlighting its features, deployment models, and integration with Azure's ecosystem.<!--excerpt_end-->
 

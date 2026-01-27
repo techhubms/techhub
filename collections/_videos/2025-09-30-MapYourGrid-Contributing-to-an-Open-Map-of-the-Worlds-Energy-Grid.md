@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/QHQ0GCyyAjo
 title: "MapYourGrid: Contributing to an Open Map of the World's Energy Grid"
 author: GitHub
@@ -25,6 +25,7 @@ tags:
 - Version Control
 section_names:
 - devops
+primary_section: devops
 ---
 GitHub presents MapYourGrid, an open source project enabling developers worldwide to contribute to mapping the global energy grid. The video guides viewers on collaborating through GitHub, as shared by the GitHub team.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/qScA4ypf-HM
 title: MCP Support Now Generally Available in Visual Studio Code
 author: Visual Studio Code
@@ -17,6 +17,7 @@ tags:
 - VS Code Extensions
 section_names:
 - ai
+primary_section: ai
 ---
 Visual Studio Code announces the general availability of MCP support. This update, shared by the Visual Studio Code team, brings full spec compatibility and agent mode extensibility to the popular editor.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=f0971pImtlw
 title: "What's New in Windows Forms: Modern Enhancements and AI Integration"
 author: dotnet
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 dotnet presents an in-depth look into Windows Forms modernization in .NET 10, with live demos featuring the new WinForms Expert Agent for GitHub Copilot and insights on leveraging AI and modern APIs in desktop development.<!--excerpt_end-->
 

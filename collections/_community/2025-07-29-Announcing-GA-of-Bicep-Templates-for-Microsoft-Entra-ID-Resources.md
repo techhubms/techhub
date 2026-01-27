@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-ga-of-bicep-templates-support-for-microsoft-entra-id/ba-p/4437163
 title: Announcing GA of Bicep Templates for Microsoft Entra ID Resources
 author: Dan_Kershaw
@@ -21,6 +21,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 Dan_Kershaw introduces the general availability of Bicep templates for Microsoft Entra ID, highlighting improved IaC workflows and new deployment integrations.<!--excerpt_end-->
 

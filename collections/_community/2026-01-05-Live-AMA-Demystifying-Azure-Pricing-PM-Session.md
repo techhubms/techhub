@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-events/live-ama-demystifying-azure-pricing-pm-session/ec-p/4483198#M666
 title: 'Live AMA: Demystifying Azure Pricing (PM Session)'
 author: Aaron_Bode
@@ -18,6 +18,7 @@ tags:
 - Workload Optimization
 section_names:
 - azure
+primary_section: azure
 ---
 Aaron_Bode hosts a live AMA to help users understand Azure pricing, covering tools, cost-saving options, and best practices for managing and reducing cloud expenses.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=3TlDUaM1L1Q
 title: 'Introduction to Model Context Protocol (MCP) Servers: Building AI Integrations'
 author: Microsoft Developer
@@ -25,6 +25,7 @@ tags:
 - VS
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Developer introduces MCP (Model Context Protocol) servers, showing developers how to build integrations that allow AI assistants to interact with APIs, databases, and more.<!--excerpt_end-->
 

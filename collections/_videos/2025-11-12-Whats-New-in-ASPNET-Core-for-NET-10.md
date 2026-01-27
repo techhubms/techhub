@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=LgUZB_rhyX4
 title: What's New in ASP.NET Core for .NET 10
 author: dotnet
@@ -21,6 +21,7 @@ tags:
 - Web Application Development
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet presents an overview of the latest ASP.NET Core features in .NET 10, showcasing improvements in performance, OpenAPI support, authentication, and modern web development for developers.<!--excerpt_end-->
 

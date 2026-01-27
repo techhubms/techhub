@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=MmuiwY_tiEo
 title: Installing Godot with .NET and Setting Up VS Code for C# Game Development
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 - VS Code Extensions
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet takes you through setting up Godot Engine with .NET and Visual Studio Code for C# game development, covering both the tooling installation and project setup steps vital for new developers.<!--excerpt_end-->
 

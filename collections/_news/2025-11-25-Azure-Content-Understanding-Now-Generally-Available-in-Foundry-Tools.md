@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/azure-content-understanding-is-now-generally-available/
 title: Azure Content Understanding Now Generally Available in Foundry Tools
 author: Joe Filcik
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Joe Filcik announces the general availability of Azure Content Understanding in Microsoft Foundry Tools, detailing enhancements in model deployment, document analysis, generative AI integration, and practical customer applications across industries.<!--excerpt_end-->
 

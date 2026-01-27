@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/introducing-the-microsoft-agent-framework/ba-p/4458377
 title: 'Introducing the Microsoft Agent Framework: Unified SDK for AI Agents and Workflows'
 author: Lee_Stott
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Lee Stott presents the Microsoft Agent Framework, guiding developers through its unified, open-source SDK for agentic AI apps with .NET and Python support, multi-agent orchestration, and advanced workflow capabilities.<!--excerpt_end-->
 

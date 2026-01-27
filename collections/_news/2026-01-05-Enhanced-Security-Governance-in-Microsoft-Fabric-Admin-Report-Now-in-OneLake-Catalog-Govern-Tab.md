@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/explore-your-fabric-security-insights-in-the-onelake-catalog-govern-tab/
 title: 'Enhanced Security Governance in Microsoft Fabric: Admin Report Now in OneLake Catalog Govern Tab'
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 The Microsoft Fabric Blog explains how Fabric admins can now access enhanced security and compliance insights directly in the OneLake Catalog’s Govern tab. This update, authored by the Microsoft Fabric Blog team, guides users through unified governance and actionable protection measures.<!--excerpt_end-->
 

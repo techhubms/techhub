@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-18-actions-yaml-anchors-and-non-public-workflow-templates
 title: GitHub Actions Adds YAML Anchors and Workflow Templates from Non-Public Repositories
 author: Allison
@@ -21,6 +21,7 @@ tags:
 - YAML Anchors
 section_names:
 - devops
+primary_section: devops
 ---
 Allison details new updates to GitHub Actions, including YAML anchor support, workflow templates from non-public repositories, and a new job check run ID feature for streamlined DevOps automation.<!--excerpt_end-->
 

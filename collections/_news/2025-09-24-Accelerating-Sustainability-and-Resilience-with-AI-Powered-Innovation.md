@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/09/23/accelerating-sustainability-and-resilience-with-ai-powered-innovation/
 title: Accelerating Sustainability and Resilience with AI-Powered Innovation
 author: stclarke
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke explores how Microsoft and its partners are using AI and Azure technologies to accelerate sustainability and resilience, featuring innovations in cloud infrastructure, climate action, supply chain, and scientific discovery.<!--excerpt_end-->
 

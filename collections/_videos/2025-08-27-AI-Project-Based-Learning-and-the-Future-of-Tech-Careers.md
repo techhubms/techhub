@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/7_MaC7CabkM
 title: AI, Project-Based Learning, and the Future of Tech Careers
 author: GitHub
@@ -16,6 +16,7 @@ tags:
 - Technology Careers
 section_names:
 - ai
+primary_section: ai
 ---
 GitHub’s video, featuring insights from their team, discusses the growing importance of project-based learning and how mastery of AI is critical for developers. The author explains how AI lowers entry barriers, reshaping how tech professionals approach their careers.<!--excerpt_end-->
 

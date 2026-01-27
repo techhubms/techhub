@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/devops/comments/1mktxxc/semantic_clinic_a_reproducible_map_of_ai_failures/
 title: 'Semantic Clinic: A Math-First, Model-Agnostic Map for Diagnosing AI Failures'
 author: wfgy_engine
@@ -30,6 +30,7 @@ section_names:
 - ai
 - ml
 - devops
+primary_section: ai
 ---
 wfgy_engine presents the Semantic Clinic, an MIT-licensed, math-first guide for diagnosing and repairing AI system failures, with reproducible methods and model-agnostic applicability.<!--excerpt_end-->
 

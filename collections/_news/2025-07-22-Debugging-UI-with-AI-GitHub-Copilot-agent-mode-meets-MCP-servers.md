@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/debugging-ui-with-ai-github-copilot-agent-mode-meets-mcp-servers/
 title: 'Debugging UI with AI: GitHub Copilot Agent Mode Meets MCP Servers'
 author: Chris Reddington
@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, Chris Reddington details his experience using GitHub Copilot agent mode alongside the Playwright MCP server for efficient UI debugging in a Next.js application, and shares practical tips for leveraging agentic tools with clear requirements.<!--excerpt_end-->
 

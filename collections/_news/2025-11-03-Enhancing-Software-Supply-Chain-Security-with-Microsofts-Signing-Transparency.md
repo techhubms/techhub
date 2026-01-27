@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/enhancing-software-supply-chain-security-with-microsofts-signing-transparency/
 title: Enhancing Software Supply Chain Security with Microsoft’s Signing Transparency
 author: Mark Russinovich
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Mark Russinovich presents Microsoft’s preview of Signing Transparency, a new Azure-based transparency log service designed to strengthen software supply chain security through immutable signature records and confidential computing.<!--excerpt_end-->
 

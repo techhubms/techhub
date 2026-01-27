@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/securely-turbo%e2%80%91charge-your-software-delivery-with-the-codex-coding-agent-on-azure-openai/
 title: Securely Turbo‑Charge Software Delivery with Codex Coding Agent on Azure OpenAI
 author: Govind Kamtamneni
@@ -30,6 +30,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 In this detailed guide, Govind Kamtamneni explains how to run the Codex Coding Agent securely on Azure OpenAI. He covers setup, enterprise security benefits, automation via GitHub Actions, and troubleshooting tips.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/mcp-is-now-generally-available-in-visual-studio/
 title: Model Context Protocol (MCP) Is Now Generally Available in Visual Studio
 author: Allie Barry
@@ -31,6 +31,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Allie Barry introduces the general availability of Model Context Protocol (MCP) in Visual Studio, highlighting how developers can integrate AI agents, like Copilot, for richer automation and secure connections to tools and services.<!--excerpt_end-->
 

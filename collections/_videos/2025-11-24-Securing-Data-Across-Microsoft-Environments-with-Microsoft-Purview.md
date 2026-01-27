@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=QhnYj80YdrE
 title: Securing Data Across Microsoft Environments with Microsoft Purview
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Events presents an advanced session on Microsoft Purview, featuring Nathalia Borges, Maithili Dandige, Aashish Ramdas, and Sushma Rao. They detail securing data and enforcing protection policies across Microsoft’s cloud and data platforms.<!--excerpt_end-->
 

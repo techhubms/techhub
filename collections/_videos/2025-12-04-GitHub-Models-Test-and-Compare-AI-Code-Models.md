@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/u7sEMJTIQCw
 title: 'GitHub Models: Test and Compare AI Code Models'
 author: Microsoft Developer
@@ -23,6 +23,7 @@ tags:
 - Software Development
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Developer’s Damian Brady presents GitHub Models, showing developers how to systematically test and compare 40+ AI models for code generation and developer productivity.<!--excerpt_end-->
 

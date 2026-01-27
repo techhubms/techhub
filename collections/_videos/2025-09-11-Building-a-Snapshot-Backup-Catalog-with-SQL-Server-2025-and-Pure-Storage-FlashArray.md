@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=gFOduTsR3kE
 title: Building a Snapshot Backup Catalog with SQL Server 2025 and Pure Storage FlashArray
 author: Microsoft Developer
@@ -27,6 +27,7 @@ tags:
 - Technology
 section_names:
 - azure
+primary_section: azure
 ---
 Microsoft Developer presents how SQL Server 2025 integrates with Pure Storage FlashArray to create a self-documenting, metadata-rich backup snapshot catalog, covering automation and metadata embedding directly from T-SQL.<!--excerpt_end-->
 

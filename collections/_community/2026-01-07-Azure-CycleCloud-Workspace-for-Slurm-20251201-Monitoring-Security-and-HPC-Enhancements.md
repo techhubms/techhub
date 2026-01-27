@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/announcing-azure-cyclecloud-workspace-for-slurm-version-2025-12/ba-p/4481953
 title: 'Azure CycleCloud Workspace for Slurm 2025.12.01: Monitoring, Security, and HPC Enhancements'
 author: xpillons
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 xpillons introduces key improvements in the Azure CycleCloud Workspace for Slurm 2025.12.01 release, highlighting new monitoring capabilities, security enhancements via Entra ID SSO, and expanded platform support for HPC deployments.<!--excerpt_end-->
 

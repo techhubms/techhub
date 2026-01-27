@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/validating-scalable-eda-storage-performance-azure-netapp-files/ba-p/4459517
 title: 'Validating Scalable EDA Storage Performance: Azure NetApp Files and SPECstorage Solution 2020'
 author: GeertVanTeylingen
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 GeertVanTeylingen presents a thorough analysis of how Azure NetApp Files powers electronic design automation (EDA) with scalable, high-performance, and globally distributed cloud storage, validated via SPECstorage Solution 2020 benchmarks.<!--excerpt_end-->
 

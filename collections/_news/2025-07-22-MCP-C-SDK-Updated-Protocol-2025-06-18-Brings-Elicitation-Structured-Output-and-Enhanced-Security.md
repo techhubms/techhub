@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/mcp-csharp-sdk-2025-06-18-update/
 title: 'MCP C# SDK Updated: Protocol 2025-06-18 Brings Elicitation, Structured Output, and Enhanced Security'
 author: Mike Kistler
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - security
+primary_section: ai
 ---
 In this post, Mike Kistler presents the major update for the MCP C# SDK, introducing support for protocol version 2025-06-18. The release offers .NET developers new features such as elicitation, structured tool output, enhanced authentication, resource links, and schema improvements for AI application development.<!--excerpt_end-->
 

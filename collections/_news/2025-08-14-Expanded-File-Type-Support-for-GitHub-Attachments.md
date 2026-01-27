@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-13-expanded-file-type-support-for-attachments-across-issues-pull-requests-and-discussions
 title: Expanded File Type Support for GitHub Attachments
 author: Allison
@@ -18,6 +18,7 @@ tags:
 - Workflow
 section_names:
 - devops
+primary_section: devops
 ---
 Allison explains recent improvements to GitHub that enable uploading a broader range of file types as attachments in issues, pull requests, and discussions, enhancing collaboration for developers.<!--excerpt_end-->
 

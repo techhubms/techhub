@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-the-azure-arc-gateway-for/ba-p/4456356
 title: General Availability of Azure Arc Gateway for Arc-Enabled Servers
 author: jalenmcg
@@ -24,6 +24,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 jalenmcg introduces the general availability of Azure Arc Gateway, outlining its benefits for Arc-enabled server onboarding, enterprise networking, and security teams.<!--excerpt_end-->
 

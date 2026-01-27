@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=jcDhtVZONb4
 title: Build a Pizza Ordering Agent with Microsoft Foundry and MCP
 author: Microsoft Developer
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer leads a practical session on building an intelligent pizza ordering agent using Microsoft Foundry Agent Service and MCP integration, featuring custom tools and external data.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/ZW-cO0Tj7LE
 title: Why Did the Cost of My AI Agent Exceed the Set Budget?
 author: Microsoft Developer
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer discusses why Azure AI Agent costs can exceed budgets, sharing tips from the Azure AI Foundry community on monitoring and optimizing spending.<!--excerpt_end-->
 

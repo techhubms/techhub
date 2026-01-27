@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=o4uqehEAu3M
 title: Scenes and Nodes - The Core Building Blocks in Godot with C# (Part 4 of 9)
 author: dotnet
@@ -23,6 +23,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet guides you through building foundational systems in Godot using C#, including scenes, nodes, collision, and third-person camera setups in this practical game development tutorial.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/performance-and-scalability-of-azure-hbv5-series-virtual/ba-p/4467230
 title: Performance and Scalability of Azure HBv5-series Virtual Machines
 author: jvenkatesh
@@ -28,6 +28,7 @@ tags:
 - WRF
 section_names:
 - azure
+primary_section: azure
 ---
 jvenkatesh and colleagues present an in-depth technical overview and benchmarks of Azure HBv5-series Virtual Machines, highlighting improvements for HPC workloads and practical guidance for Azure users.<!--excerpt_end-->
 

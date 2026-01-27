@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=u4ksAXEx0R4
 title: 'Creating Multi-Agent Workflows in Microsoft Foundry: Adding Agents with Tools'
 author: Microsoft Developer
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 April from Microsoft Developer presents a hands-on guide to creating agents with file search tools in Microsoft Foundry, expanding on sequential workflow development.<!--excerpt_end-->
 

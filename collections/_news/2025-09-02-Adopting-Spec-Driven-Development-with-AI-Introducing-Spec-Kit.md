@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/
 title: 'Adopting Spec-Driven Development with AI: Introducing Spec Kit'
 author: Den Delimarsky
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Den Delimarsky presents Spec Kit, an open source toolkit for spec-driven development with AI-powered coding agents like GitHub Copilot, offering a clear, structured process for more reliable software projects.<!--excerpt_end-->
 

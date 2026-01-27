@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 NaufalPrawironegoro provides enterprises with a step-by-step summary for implementing Azure Arc with SQL Server, focusing on hybrid and multicloud infrastructure management, compliance, and security.<!--excerpt_end-->
 

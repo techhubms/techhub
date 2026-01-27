@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/getting-started-with-the-aspire-cli/
 title: Getting Started with the Aspire CLI
 author: Jeffrey Fritz
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Jeffrey Fritz presents an in-depth walkthrough of the Aspire CLI, illustrating its use for .NET application development—from installation to running, integrating Azure services, and publishing distributed systems.<!--excerpt_end-->
 

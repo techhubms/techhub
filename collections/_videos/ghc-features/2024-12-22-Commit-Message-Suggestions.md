@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/fO31a_OS2EA
 title: Commit Message Suggestions
 author: Rob Bos
@@ -14,6 +14,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This video demonstrates GitHub Copilot's Commit Message Suggestions feature. Copilot proposes commit messages based on the code changes in the current changeset.<!--excerpt_end-->
 

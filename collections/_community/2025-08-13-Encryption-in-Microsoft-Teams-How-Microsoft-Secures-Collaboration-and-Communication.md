@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-teams-blog/encryption-in-microsoft-teams-june-2025/ba-p/4442913
 title: 'Encryption in Microsoft Teams: How Microsoft Secures Collaboration and Communication'
 author: WillDixon
@@ -26,6 +26,7 @@ tags:
 - Zero Trust
 section_names:
 - security
+primary_section: security
 ---
 WillDixon presents an in-depth guide on how Microsoft Teams uses encryption—including standard and end-to-end options—to secure sensitive data and support compliance for business communication.<!--excerpt_end-->
 

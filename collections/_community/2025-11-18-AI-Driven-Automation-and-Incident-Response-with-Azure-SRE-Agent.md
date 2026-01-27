@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/reimagining-ai-ops-with-azure-sre-agent-new-automation/ba-p/4462613
 title: AI-Driven Automation and Incident Response with Azure SRE Agent
 author: vyomnagrani
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 vyomnagrani introduces the upgraded Azure SRE Agent, detailing new AI-powered automation features for incident response, DevOps, and operational management across Azure and hybrid environments.<!--excerpt_end-->
 

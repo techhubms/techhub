@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-12-internal-mcp-registry-and-allowlist-controls-for-vs-code-insiders
 title: Configuring Internal MCP Registries and Allowlists for Copilot in VS Code Insiders
 author: Allison
@@ -26,6 +26,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison explains how to set up and test MCP registries and allowlist enforcement for GitHub Copilot in VS Code Insiders, outlining enterprise governance features, setup steps, and rollout plans.<!--excerpt_end-->
 

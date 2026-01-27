@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-11-deprecated-microsoft-models-in-github-models
 title: Microsoft Phi-3 Model Deprecation and Transition in GitHub Models
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - Retired
 section_names:
 - ai
+primary_section: ai
 ---
 Allison details the deprecation of Microsoft Phi-3 and Phi-3.5 models within GitHub Models and provides recommendations for transitioning to upgraded Phi-4 models.<!--excerpt_end-->
 

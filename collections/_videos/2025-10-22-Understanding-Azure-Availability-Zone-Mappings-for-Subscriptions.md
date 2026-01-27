@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=jBpxG2Fk2jA
 title: Understanding Azure Availability Zone Mappings for Subscriptions
 author: John Savill's Technical Training
@@ -26,6 +26,7 @@ tags:
 - Subscriptions
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill's Technical Training explains how Azure subscription availability zones map to physical datacenters and align across different subscriptions, featuring a PowerShell script walkthrough.<!--excerpt_end-->
 

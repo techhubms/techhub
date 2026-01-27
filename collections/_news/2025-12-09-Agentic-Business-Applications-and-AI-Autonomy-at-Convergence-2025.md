@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/dynamics-365/blog/business-leader/2025/12/09/the-era-of-agentic-business-applications-arrives-at-convergence-2025/
 title: Agentic Business Applications and AI Autonomy at Convergence 2025
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 - Partner Agents
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke showcases how Convergence 2025 is driving the evolution of agentic, AI-powered business solutions with Dynamics 365, Copilot Studio, Microsoft Fabric, and autonomous agents.<!--excerpt_end-->
 

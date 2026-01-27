@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fnTRaNHfFek
 title: "AI-Enhanced Knowledge Platforms: Stack Overflow's Evolution at Microsoft Ignite"
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Trusted Solutions
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents an Ignite 2025 session led by Peter O'Connor, exploring Stack Overflow Internal’s transformation as an AI-enhanced enterprise knowledge platform using Microsoft Cloud technologies.<!--excerpt_end-->
 

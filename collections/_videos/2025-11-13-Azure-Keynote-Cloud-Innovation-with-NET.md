@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=3EV4rUHScZI
 title: 'Azure Keynote: Cloud Innovation with .NET'
 author: dotnet
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 In this keynote, dotnet (Scott Hunter and Paul Yuknewicz) showcase how Azure empowers .NET developers to build, deploy, and scale intelligent cloud-native applications, highlighting the latest innovations in platform services and development tools.<!--excerpt_end-->
 

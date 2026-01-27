@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/how-to-eliminate-devops-toil-using-automation-scripts/
 title: How to Eliminate DevOps Toil Using Automation Scripts
 author: Durojaye Olusegun
@@ -49,6 +49,7 @@ tags:
 - Testing And Validation
 section_names:
 - devops
+primary_section: devops
 ---
 Durojaye Olusegun shares a robust method for engineering teams to reduce DevOps toil with practical script automation, using the 15-minute rule and proven patterns that enhance productivity and reduce maintenance overhead.<!--excerpt_end-->
 

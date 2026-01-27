@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://ukstories.microsoft.com/features/how-lg-is-reinventing-customer-care-with-ai/
 title: L&G Reinvents Customer Care with AI-Powered Microsoft Platform
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke explains how Legal & General is transforming customer care by integrating Microsoft AI, Azure, and Dynamics 365 Contact Centre, delivering smarter and unified experiences for millions.<!--excerpt_end-->
 

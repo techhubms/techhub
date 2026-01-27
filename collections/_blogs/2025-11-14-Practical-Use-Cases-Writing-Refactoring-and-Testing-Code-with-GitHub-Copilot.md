@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/practical-use-cases-writing-refactoring-and-testing-code-with-github-copilot/
 title: 'Practical Use Cases: Writing, Refactoring, and Testing Code with GitHub Copilot'
 author: Dellenny
@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny shares actionable insights on how developers can use GitHub Copilot for writing, refactoring, and testing code, highlighting its impact on coding workflows and productivity.<!--excerpt_end-->
 

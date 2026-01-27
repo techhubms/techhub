@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/azure-devops-mcp-server-public-preview/
 title: 'Azure DevOps MCP Server Now in Public Preview: Integrating GitHub Copilot with DevOps Context'
 author: Dan Hellem
@@ -26,6 +26,7 @@ section_names:
 - azure
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Dan Hellem introduces the public preview of the Azure DevOps MCP Server. This new local service lets GitHub Copilot interact with Azure DevOps, providing AI-driven support tailored to your projects while keeping your data secure within your environment.<!--excerpt_end-->
 

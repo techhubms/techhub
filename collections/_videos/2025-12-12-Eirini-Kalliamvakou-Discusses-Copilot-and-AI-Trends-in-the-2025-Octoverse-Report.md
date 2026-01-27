@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=riTyEDJdpEw
 title: Eirini Kalliamvakou Discusses Copilot and AI Trends in the 2025 Octoverse Report
 author: GitHub
@@ -19,6 +19,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub's Eirini Kalliamvakou shares valuable insights from the 2025 Octoverse report, focusing on GitHub Copilot's role in pull requests, developer onboarding, and team dynamics.<!--excerpt_end-->
 

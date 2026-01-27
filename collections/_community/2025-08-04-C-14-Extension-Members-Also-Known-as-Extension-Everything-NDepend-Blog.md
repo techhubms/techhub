@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mhbukq/c_14_extension_members_also_known_as_extension/
 title: 'C# 14 Extension Members: Also Known as Extension Everything - NDepend Blog'
 author: PatrickSmacchia
@@ -17,6 +17,7 @@ tags:
 - Properties
 section_names:
 - coding
+primary_section: coding
 ---
 PatrickSmacchia delves into the upcoming C# 14 feature of Extension Members, offering insights on how it expands the language's extensibility.<!--excerpt_end-->
 

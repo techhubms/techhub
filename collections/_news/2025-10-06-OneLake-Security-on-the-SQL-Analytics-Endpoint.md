@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-security-on-the-sql-analytics-endpoint/
 title: OneLake Security on the SQL Analytics Endpoint
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog outlines how OneLake Security centralizes granular data access policies for Fabric via the SQL Analytics Endpoint, including RLS, CLS, and access mode configuration for secure enterprise analytics.<!--excerpt_end-->
 

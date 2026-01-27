@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/azure-support-plans-compared-choosing-the-right-one-for-your-organization/
 title: 'Azure Support Plans Compared: Choosing the Right One for Your Organization'
 author: John Edward
@@ -24,6 +24,7 @@ tags:
 - Technical Guidance
 section_names:
 - azure
+primary_section: azure
 ---
 John Edward delivers a practical overview of Azure’s support plans, comparing features and suitability to help organizations select the right level of Microsoft’s cloud support.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/catch-issues-before-you-commit-to-git/
 title: Catch Issues Early with GitHub Copilot's Local Code Review in Visual Studio
 author: Jessie Houghton
@@ -21,6 +21,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Jessie Houghton presents a Visual Studio update that leverages GitHub Copilot's AI for local code review, helping developers catch issues before committing to Git.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=82jciNezDMY
 title: Power Agentic Workflows in Your Terminal with GitHub Copilot CLI
 author: GitHub
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub's Ryan Hecht explores how AI-driven development comes to the terminal with GitHub Copilot CLI. This session reveals how terminal workflows benefit from agentic coding, automation, and natural language interactions—all powered by GitHub Copilot.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/from-files-to-delta-tables-parquet-json-data-ingestion-simplified-with-shortcut-transformations/
 title: Simplifying Parquet & JSON Data Ingestion with Microsoft Fabric Shortcut Transformations
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces Shortcut Transformations, making Parquet and JSON data ingestion into Delta tables seamless and code-free. This article, authored by Microsoft Fabric Blog, details the technical features, workflow, and real-world business impact.<!--excerpt_end-->
 

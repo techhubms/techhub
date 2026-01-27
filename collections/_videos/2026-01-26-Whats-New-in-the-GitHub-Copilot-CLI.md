@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub shares the latest features in GitHub Copilot CLI, including new custom agent capabilities and the Copilot SDK preview, showing developers how to enhance and automate their workflows.<!--excerpt_end-->
 

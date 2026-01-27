@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-18-auto-model-selection-for-copilot-in-jetbrains-ides-xcode-and-eclipse-in-public-preview
 title: Auto Model Selection for GitHub Copilot in JetBrains, Xcode, and Eclipse
 author: Allison
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces the Auto model selection feature in GitHub Copilot for JetBrains IDEs, Xcode, and Eclipse, offering automatic AI model selection for code suggestions and optimized usage based on subscription and availability.<!--excerpt_end-->
 

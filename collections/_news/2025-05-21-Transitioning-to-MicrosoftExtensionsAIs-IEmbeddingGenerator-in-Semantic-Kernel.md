@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/semantic-kernel/transitioning-to-new-iembeddinggenerator-interface/
 title: Transitioning to Microsoft.Extensions.AI’s IEmbeddingGenerator in Semantic Kernel
 author: Roger Barreto
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Roger Barreto examines the transition of Semantic Kernel to the Microsoft.Extensions.AI IEmbeddingGenerator interface, highlighting migration steps, key benefits, and standardized AI service integration in the .NET ecosystem.<!--excerpt_end-->
 

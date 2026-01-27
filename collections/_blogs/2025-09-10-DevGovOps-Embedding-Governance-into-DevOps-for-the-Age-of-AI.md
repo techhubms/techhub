@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/devgovops-a-new-play-in-devops-or-is-it/?utm_source=rss&utm_medium=rss&utm_campaign=devgovops-a-new-play-in-devops-or-is-it
 title: 'DevGovOps: Embedding Governance into DevOps for the Age of AI'
 author: Alan Shimel
@@ -37,6 +37,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Alan Shimel examines the rise of DevGovOps, arguing that integrating governance into DevOps is vital for responsible and secure AI adoption in enterprises.<!--excerpt_end-->
 

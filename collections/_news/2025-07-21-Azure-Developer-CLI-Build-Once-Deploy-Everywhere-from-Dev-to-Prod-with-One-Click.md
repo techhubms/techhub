@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/azure-developer-cli-from-dev-to-prod-with-one-click/
 title: 'Azure Developer CLI: Build Once, Deploy Everywhere from Dev to Prod with One Click'
 author: PuiChee (PC) Chan, Kristen Womack
@@ -22,6 +22,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Authored by PuiChee (PC) Chan and Kristen Womack, this post guides readers through implementing a 'build once, deploy everywhere' CI/CD pipeline using Azure Developer CLI, conditional Bicep templates, and GitHub Actions for efficient dev-to-prod promotions.<!--excerpt_end-->
 

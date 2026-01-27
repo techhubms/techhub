@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=I8acOcHuE_I
 title: Open Source and AI Special with @francescociulla
 author: GitHub
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 In this video session, GitHub features Francesco Ciulla as he demonstrates practical AI approaches for developers, pinpointing actionable strategies with open source and GitHub tools.<!--excerpt_end-->
 

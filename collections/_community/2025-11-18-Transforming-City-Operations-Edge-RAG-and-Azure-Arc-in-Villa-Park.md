@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/transforming-city-operations-how-villa-park-and-dataon-deliver/ba-p/4470360
 title: 'Transforming City Operations: Edge RAG and Azure Arc in Villa Park'
 author: moran_assaf
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Moran Assaf offers insights into Villa Park's smart city transformation with Edge RAG on Azure Arc, highlighting advanced AI deployment, resilient edge computing, security integration, and practical adoption strategies in partnership with DataON.<!--excerpt_end-->
 

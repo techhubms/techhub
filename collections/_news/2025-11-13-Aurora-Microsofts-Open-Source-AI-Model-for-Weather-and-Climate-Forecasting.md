@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/11/13/the-next-phase-of-aurora-open-and-collaborative-ai-for-weather-and-climate-forecasting/
 title: 'Aurora: Microsoft’s Open-Source AI Model for Weather and Climate Forecasting'
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 - Weather Forecasting
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke highlights Microsoft’s Aurora project, an open-source AI model for weather and climate forecasting, emphasizing its collaborative development and potential impact on global science and community resilience.<!--excerpt_end-->
 

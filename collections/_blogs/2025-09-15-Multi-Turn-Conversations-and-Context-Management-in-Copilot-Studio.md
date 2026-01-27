@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/multi-turn-conversations-and-context-management-in-copilot-studio/
 title: Multi-Turn Conversations and Context Management in Copilot Studio
 author: Dellenny
@@ -25,6 +25,7 @@ tags:
 - Variables
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny explains how Copilot Studio handles multi-turn conversations and context management, outlining techniques for building more natural, efficient AI-powered agents.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://zure.com/blog/integrating-copilot-agents-and-security-copilot-into-enterprise-grade-ai-security-architecture
 title: Integrating Copilot Agents and Security Copilot into Enterprise-Grade AI Security Architecture
 author: petrus.vasenius@zure.com (Petrus Vasenius)
@@ -30,6 +30,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Petrus Vasenius explores integrating Microsoft Copilot Agents and Security Copilot into robust AI security architectures. He details agent identity with Entra, runtime guardrails, Foundry-Defender integration, and compliance strategies for enterprise Microsoft AI deployments.<!--excerpt_end-->
 

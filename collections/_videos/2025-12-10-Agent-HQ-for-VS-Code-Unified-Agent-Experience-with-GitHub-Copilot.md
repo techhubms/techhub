@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=PAgLzv1Lp1o
 title: 'Agent HQ for VS Code: Unified Agent Experience with GitHub Copilot'
 author: Visual Studio Code
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code presents an overview of Agent HQ's upgrade, offering developers a unified agent management and improved coding experience with GitHub Copilot integration.<!--excerpt_end-->
 

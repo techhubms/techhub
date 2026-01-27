@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub, with Patrick Nikoletich, presents an overview of the Copilot SDK, focusing on how developers can embed AI-powered experiences through open-source tools and contribute to its evolution.<!--excerpt_end-->
 

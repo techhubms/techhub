@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-28-enterprise-ai-controls-the-agent-control-plane-are-in-public-preview
 title: Enterprise AI Controls and Agent Control Plane Public Preview for GitHub Copilot
 author: Allison
@@ -25,6 +25,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the public preview of enterprise AI controls and an agent control plane for GitHub Copilot, empowering administrators with governance, auditability, and organizational configuration tools tailored for enterprises.<!--excerpt_end-->
 

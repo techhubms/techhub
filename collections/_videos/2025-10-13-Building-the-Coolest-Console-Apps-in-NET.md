@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=1C1gTRm7BB4
 title: Building the Coolest Console Apps in .NET
 author: Nick Chapsas
@@ -17,6 +17,7 @@ tags:
 - RazorConsole
 section_names:
 - coding
+primary_section: coding
 ---
 In this video, Nick Chapsas explores building visually dynamic console applications in .NET using the RazorConsole library, demonstrating how developers can leverage Razor Pages in C# for console app development.<!--excerpt_end-->
 

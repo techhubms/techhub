@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mk7bhs/how_do_i_integrate_ads_in_a_winui_3_desktop_app/
 title: Seeking Legitimate Ad Integration Options for WinUI 3 Desktop Apps
 author: lordaimer
@@ -23,6 +23,7 @@ tags:
 - WinUI 3
 section_names:
 - coding
+primary_section: coding
 ---
 lordaimer raises a detailed technical question about integrating advertisements into a native WinUI 3 desktop app using C#, highlighting the lack of ad network support beyond UWP and seeking compliant solutions from the community.<!--excerpt_end-->
 

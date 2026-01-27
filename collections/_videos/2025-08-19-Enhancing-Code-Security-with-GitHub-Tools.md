@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=pZ2Nu8LqJvE
 title: Enhancing Code Security with GitHub Tools
 author: GitHub
@@ -22,6 +22,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 GitHub presents an overview of developer-first code security tools, including CodeQL, Copilot Autofix, security campaigns, and dependency review, to help developers identify and manage vulnerabilities. Authored by the GitHub team.<!--excerpt_end-->
 

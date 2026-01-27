@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/new-debugging-and-profiling-features-in-visual-studio-v17-13/
 title: 'New Debugging and Profiling Features in Visual Studio (v17.13): AI-Driven and Copilot-Assisted Enhancements'
 author: Harshada Hole
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Harshada Hole presents the latest Visual Studio v17.13 update, detailing AI-powered debugging, GitHub Copilot integration, and extensive improvements to profiling tools for developers.<!--excerpt_end-->
 

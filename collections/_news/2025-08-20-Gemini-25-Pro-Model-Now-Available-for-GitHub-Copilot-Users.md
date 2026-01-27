@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-19-gemini-2-5-pro-is-generally-available-in-copilot
 title: Gemini 2.5 Pro Model Now Available for GitHub Copilot Users
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison reports that Google's Gemini 2.5 Pro AI model is now available for GitHub Copilot customers, with access details for Pro, Business, and Enterprise users, plus related documentation and feedback channels.<!--excerpt_end-->
 

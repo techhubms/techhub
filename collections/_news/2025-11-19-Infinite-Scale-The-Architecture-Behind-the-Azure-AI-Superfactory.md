@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/blog/2025/11/12/infinite-scale-the-architecture-behind-the-azure-ai-superfactory/
 title: 'Infinite Scale: The Architecture Behind the Azure AI Superfactory'
 author: Vanessa Ho
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Vanessa Ho introduces Microsoft's Fairwater AI datacenter in Atlanta, diving into its revolutionary architecture and the broader Azure AI superfactory powering next-generation artificial intelligence solutions.<!--excerpt_end-->
 

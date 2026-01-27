@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/add-sidecars-to-azure-app-service-for-linux-via-github-actions/ba-p/4465419
 title: Add Sidecars to Azure App Service for Linux—via GitHub Actions or Azure Pipelines
 author: TulikaC
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 TulikaC explains how to use GitHub Actions and Azure Pipelines templates to deploy helper sidecars with Azure App Service for Linux, making CI/CD setup seamless for various runtime and container scenarios.<!--excerpt_end-->
 

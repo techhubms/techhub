@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/open-source/maintainers/why-we-open-sourced-our-mcp-server-and-what-it-means-for-you/
 title: Why We Open Sourced Our MCP Server and What It Means for Developers
 author: Kedasha Kerr
@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Kedasha Kerr explains how GitHub’s newly open-sourced MCP server bridges AI tools and GitHub, enabling rich, automated workflows and natural-language interactions for developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://zure.com/blog/what-are-you-doing-how-i-tried-to-explain-coding-to-normal-people
 title: 'Explaining Coding to Non-Developers: A Developer’s WFH Reflections'
 author: Wouter.Vercruysse@zure.com (Wouter Vercruysse)
@@ -23,6 +23,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 In this insightful post, Wouter Vercruysse offers an honest look at how developers explain their day-to-day coding and DevOps tasks to non-technical audiences, with stories from real work-from-home experiences.<!--excerpt_end-->
 

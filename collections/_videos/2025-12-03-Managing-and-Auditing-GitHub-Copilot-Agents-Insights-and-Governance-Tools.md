@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=boviC841YWs
 title: 'Managing and Auditing GitHub Copilot Agents: Insights and Governance Tools'
 author: GitHub
@@ -20,6 +20,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 GitHub shares an overview of new administrative tools for managing and auditing Copilot agents. The video, presented by the GitHub team, explains enhanced dashboards, access controls, and audit options for better governance and security.<!--excerpt_end-->
 

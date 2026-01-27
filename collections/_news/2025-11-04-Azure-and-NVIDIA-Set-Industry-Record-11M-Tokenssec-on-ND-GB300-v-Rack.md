@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_breaking-the-million-token-barrier-activity-7391283043765952512-guP3
 title: 'Azure and NVIDIA Set Industry Record: 1.1M Tokens/sec on ND GB300 v Rack'
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Satya Nadella, Microsoft CEO, announces an industry milestone with Azure and NVIDIA achieving 1.1 million tokens/sec on a single rack—setting a new benchmark for AI infrastructure and cloud performance.<!--excerpt_end-->
 

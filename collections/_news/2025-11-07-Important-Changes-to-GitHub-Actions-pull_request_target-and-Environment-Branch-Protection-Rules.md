@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-07-actions-pull_request_target-and-environment-branch-protections-changes
 title: 'Important Changes to GitHub Actions: pull_request_target and Environment Branch Protection Rules'
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison explains upcoming security-focused changes to how GitHub Actions handles pull_request_target events and environment branch protection rules, impacting workflow behavior for all developers and DevOps engineers.<!--excerpt_end-->
 

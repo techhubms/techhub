@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=HLNYCwgk5fU
 title: .NET Diagnostic Tooling with AI
 author: dotnet
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 In this session, Jonathan Peppers demonstrates how AI innovations are transforming .NET diagnostic tooling, offering developers smarter performance analysis, automated debugging, and productivity enhancements.<!--excerpt_end-->
 

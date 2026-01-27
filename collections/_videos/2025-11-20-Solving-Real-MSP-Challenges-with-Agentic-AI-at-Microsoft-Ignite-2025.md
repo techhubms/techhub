@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=8tP0NX9nXpw
 title: Solving Real MSP Challenges with Agentic AI at Microsoft Ignite 2025
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 - TD SYNNEX
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents speakers Brianna Berry and Jan Jofra in a Microsoft Ignite 2025 session on deploying real agentic AI to solve MSP challenges, covering monetization and use cases across various industries.<!--excerpt_end-->
 

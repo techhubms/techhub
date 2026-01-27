@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/open-source/maintainers/building-personal-apps-with-open-source-and-ai/
 title: Building Personal Apps with Open Source and AI
 author: Kedasha Kerr
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Kedasha Kerr, from the GitHub Developer Advocacy team, explores how open source and AI tools like GitHub Copilot help developers create impactful personal apps and streamline workflows.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=0x1Y9e6Vh7I
 title: Taming AI Assisted Coding Models with Eleanor Berger
 author: Visual Studio Code
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code hosts Pamela and Eleanor Berger as they discuss advanced tactics for AI-assisted coding with Copilot, agentic workflows, and open-source tools, providing practical advice for developers.<!--excerpt_end-->
 

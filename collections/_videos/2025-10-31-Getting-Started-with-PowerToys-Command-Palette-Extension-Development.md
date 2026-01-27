@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=s5GLjE13cUI
 title: Getting Started with PowerToys Command Palette Extension Development
 author: Microsoft Developer
@@ -17,6 +17,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 Microsoft Developer, with Kayla Cinnamon, demonstrates easy steps for building, coding, and publishing new extensions for the PowerToys Command Palette using Visual Studio.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlock-structured-ocr-in-typescript-with-mistral-document-ai-on/ba-p/4466039
 title: Unlock Structured OCR in TypeScript with Mistral Document AI on AI Foundry
 author: Julia_Muiruri
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Julia Muiruri explores how to leverage Mistral Document AI on Azure AI Foundry to perform advanced OCR and convert scanned documents into structured data, with code samples and Azure-focused best practices.<!--excerpt_end-->
 

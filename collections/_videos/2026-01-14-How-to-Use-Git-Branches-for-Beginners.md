@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/3Fh1A3KGk-I
 title: How to Use Git Branches for Beginners
 author: GitHub
@@ -18,6 +18,7 @@ tags:
 - Version Control
 section_names:
 - devops
+primary_section: devops
 ---
 GitHub offers a helpful guide by GitHub on creating and working with git branches, aimed at beginners who want to safely experiment and manage their code.<!--excerpt_end-->
 

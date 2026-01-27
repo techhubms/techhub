@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/building-the-frontier-firm-with-microsoft-azure-the-business-case-for-cloud-and-ai-modernization/
 title: 'Building the Frontier Firm with Microsoft Azure: The Business Case for Cloud and AI Modernization'
 author: Mike Hulme
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Mike Hulme discusses how Frontier Firms are driving large-scale AI transformation using Microsoft Azure. He highlights leadership strategies, actionable modernization steps, and the quantifiable benefits of cloud and AI adoption.<!--excerpt_end-->
 

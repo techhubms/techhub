@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/august-2025-fabric-feature-summary/
 title: 'August 2025 Microsoft Fabric Feature Summary: Data Engineering, ML, and Platform Enhancements'
 author: Microsoft Fabric Blog
@@ -33,6 +33,7 @@ section_names:
 - coding
 - devops
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog highlights the August 2025 Fabric Feature Summary, revealing core updates for developers and engineers, including new deployment pipeline features, Spark improvements, machine learning endpoints, Python Notebook integrations, and streamlined data engineering led by Microsoft.<!--excerpt_end-->
 

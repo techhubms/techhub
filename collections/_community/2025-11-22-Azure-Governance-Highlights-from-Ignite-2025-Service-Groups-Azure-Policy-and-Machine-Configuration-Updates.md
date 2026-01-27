@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-governance-ignite-2025/ba-p/4471112
 title: 'Azure Governance Highlights from Ignite 2025: Service Groups, Azure Policy, and Machine Configuration Updates'
 author: jodiboone
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 jodiboone reviews the key Azure governance updates from Ignite 2025, covering new features in Service Groups, Azure Policy enhancements, and machine configuration baselines.<!--excerpt_end-->
 

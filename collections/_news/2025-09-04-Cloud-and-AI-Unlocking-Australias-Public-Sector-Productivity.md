@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/features/unlocking-the-productivity-dividend-of-digital-government/
 title: "Cloud and AI: Unlocking Australia's Public Sector Productivity"
 author: stclarke
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 stclarke examines Mandala's report on how cloud and AI can transform Australia's government sector, highlighting big savings, improved cybersecurity, and modernization opportunities.<!--excerpt_end-->
 

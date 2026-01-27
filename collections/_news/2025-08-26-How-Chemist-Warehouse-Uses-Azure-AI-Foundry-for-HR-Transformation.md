@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/features/a-digital-colleague-how-chemist-warehouse-and-insurgence-ai-are-rewriting-the-hr-playbook/
 title: How Chemist Warehouse Uses Azure AI Foundry for HR Transformation
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke reports on how Chemist Warehouse transformed its HR operations by deploying AIHRA, an AI-powered solution leveraging Microsoft Azure AI Foundry, delivering significant efficiency and engagement gains.<!--excerpt_end-->
 

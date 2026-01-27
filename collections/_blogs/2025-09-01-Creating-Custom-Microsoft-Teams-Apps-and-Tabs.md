@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/creating-custom-microsoft-teams-apps-and-tabs/
 title: Creating Custom Microsoft Teams Apps and Tabs
 author: Dellenny
@@ -25,6 +25,7 @@ tags:
 - Web Development
 section_names:
 - coding
+primary_section: coding
 ---
 Dellenny details how developers can build custom Microsoft Teams apps and tabs, covering low-code options and full-stack development using Teams Toolkit and Azure AD authentication.<!--excerpt_end-->
 

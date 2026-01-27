@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/azure-monitor-to-fabric-eventhouse-preview/
 title: Integrating Azure Monitor Virtual Machine Telemetry with Fabric Eventhouse (Preview)
 author: Microsoft Fabric Blog
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog explains how to combine VM telemetry from Azure Monitor with Fabric Eventhouse for integrated operational analytics and business insight.<!--excerpt_end-->
 

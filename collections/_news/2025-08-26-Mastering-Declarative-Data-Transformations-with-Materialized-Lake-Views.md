@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/mastering-declarative-data-transformations-with-materialized-lake-views/
 title: Mastering Declarative Data Transformations with Materialized Lake Views
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog explains how organizations can use materialized lake views in Fabric's Lakehouse architecture to automate, monitor, and scale data transformation from Azure SQL Databases. The article covers step-by-step methods for improved analytics and governance.<!--excerpt_end-->
 

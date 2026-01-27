@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mfpq2m/how_do_i_show_a_spinner_btn_on_form_submit/
 title: How to Show a Spinner on Form Submit Without Disrupting MVC Behavior
 author: Fragrant_Ride_29
@@ -18,6 +18,7 @@ tags:
 - UX
 section_names:
 - coding
+primary_section: coding
 ---
 Fragrant_Ride_29 discusses the challenges of displaying a spinner inside a submit button in ASP.NET MVC forms without causing double server requests or breaking the framework's default submission behavior.<!--excerpt_end-->
 

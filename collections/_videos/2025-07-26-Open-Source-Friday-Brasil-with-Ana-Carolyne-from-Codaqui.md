@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=wy7khJTIv3w
 title: Open Source Friday Brasil with Ana Carolyne from Codaqui
 author: GitHub
@@ -16,6 +16,7 @@ tags:
 - Software Development
 section_names:
 - devops
+primary_section: devops
 ---
 In this GitHub-hosted video, Ana Carolyne from Codaqui joins Open Source Friday Brasil to discuss open source contributions and fostering community engagement.<!--excerpt_end-->
 

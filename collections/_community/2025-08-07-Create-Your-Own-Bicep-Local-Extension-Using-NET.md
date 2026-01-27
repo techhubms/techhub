@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/create-your-own-bicep-local-extension-using-net/ba-p/4439967
 title: Create Your Own Bicep Local Extension Using .NET
 author: Sydney Smith
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Sydney Smith provides a comprehensive walkthrough for creating Bicep Local Extensions with .NET, enabling local infrastructure as code workflows without Azure connectivity.<!--excerpt_end-->
 

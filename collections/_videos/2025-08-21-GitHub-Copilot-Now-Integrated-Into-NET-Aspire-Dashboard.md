@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FseIFFXGbvw
 title: GitHub Copilot Now Integrated Into .NET Aspire Dashboard
 author: Microsoft Developer
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this Microsoft Developer video, Maddy Montaquila demonstrates how GitHub Copilot is now built into the .NET Aspire dashboard, enabling developers to troubleshoot and analyze applications more efficiently.<!--excerpt_end-->
 

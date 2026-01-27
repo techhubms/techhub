@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-13-spark-resilience-improvements
 title: Spark Resilience Improvements Enhance Reliability and Iteration Experience
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Allison shares news about recent resilience improvements to Spark on GitHub, highlighting changes that enhance reliability and simplify the iterative development process for application builders.<!--excerpt_end-->
 

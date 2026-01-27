@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=mJQxAKYkCBk
 title: 'Windows 11 Developer Productivity Tools: WSL, Terminal, PowerToys & Enterprise Security'
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 Microsoft Events brings together new and updated developer and IT productivity tools for Windows 11, focusing on WSL, Windows Terminal, PowerToys, security, and enterprise management features.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=5FvIbLwRqzg
 title: AI-Powered Endpoint Security Updates in Microsoft Defender
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events present insights into AI-powered endpoint security with Defender, featuring Dana Bargury Shina and Kim Kischel at Ignite 2025. This session highlights new AI capabilities in security and threat protection.<!--excerpt_end-->
 

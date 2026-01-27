@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/no-code-ai-how-non-developers-can-build-smart-chatbots-with-copilot-studio/
 title: 'No-Code AI: Building Chatbots with Copilot Studio for Non-Developers'
 author: Dellenny
@@ -21,6 +21,7 @@ tags:
 - Visual Flow Design
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny explains how Copilot Studio empowers non-developers to build AI-powered chatbots using a no-code interface, making advanced bot development accessible without programming expertise.<!--excerpt_end-->
 

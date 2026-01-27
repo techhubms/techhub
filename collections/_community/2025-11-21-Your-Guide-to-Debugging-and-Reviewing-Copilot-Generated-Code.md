@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/tools/your-guide-to-debugging-and-reviewing-copilot-generated-code/m-p/4472116#M182
 title: Your Guide to Debugging and Reviewing Copilot-Generated Code
 author: JohnNaguib
@@ -19,6 +19,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 JohnNaguib shares essential strategies for developers to effectively debug and review code produced by GitHub Copilot, emphasizing the developer's ongoing responsibility for code quality and security.<!--excerpt_end-->
 

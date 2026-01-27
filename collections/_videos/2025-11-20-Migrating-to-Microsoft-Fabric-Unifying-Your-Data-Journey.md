@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FwMIgQ2e17A
 title: 'Migrating to Microsoft Fabric: Unifying Your Data Journey'
 author: Microsoft Events
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Presented by Jenny Jiang, Mark Kromer, Priyanka Langade, and Pushpendra Nagtode, this Ignite 2025 session details the migration process to Microsoft Fabric and how it unifies complex data operations for enterprises.<!--excerpt_end-->
 

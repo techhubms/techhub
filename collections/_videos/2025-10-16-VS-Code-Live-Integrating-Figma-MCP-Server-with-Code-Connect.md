@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=1DwXS__CVzg
 title: 'VS Code Live: Integrating Figma MCP Server with Code Connect'
 author: Visual Studio Code
@@ -25,6 +25,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 Visual Studio Code presents a session featuring Reynald Adolphe and Akbar Mirza on how to connect Figma MCP Server and Code Connect in VS Code to streamline design-to-code workflows.<!--excerpt_end-->
 

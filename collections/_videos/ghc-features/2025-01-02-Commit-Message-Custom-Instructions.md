@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/eAh9qLmBgKg
 title: Commit Message Custom Instructions
 author: Randy Pagels
@@ -13,6 +13,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This video demonstrates GitHub Copilot's Commit Message Custom Instructions feature. Customize commit messages with tailored instructions for more descriptive and meaningful comments.<!--excerpt_end-->
 

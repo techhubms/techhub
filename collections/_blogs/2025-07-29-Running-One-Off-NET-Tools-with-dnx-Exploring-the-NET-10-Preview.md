@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-5-running-one-off-dotnet-tools-with-dnx/
 title: 'Running One-Off .NET Tools with dnx: Exploring the .NET 10 Preview'
 author: Andrew Lock
@@ -18,6 +18,7 @@ tags:
 - Tool Execution
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, Andrew Lock explores the new 'dnx' command in .NET 10, demonstrating how developers can run .NET tools without installing them. He provides both practical usage examples and an under-the-hood look at the SDK implementation.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/openais-gpt-5-codex-a-smarter-approach-to-enterprise-development/?utm_source=rss&utm_medium=rss&utm_campaign=openais-gpt-5-codex-a-smarter-approach-to-enterprise-development
 title: 'OpenAI’s GPT-5-Codex: AI for Enterprise-Grade Development and Code Review'
 author: Tom Smith
@@ -33,6 +33,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Tom Smith reviews OpenAI’s GPT-5-Codex, an enterprise AI solution for development teams. The article explains its capabilities in code review, complex debugging, secure integrations, and how it streamlines DevOps workflows.<!--excerpt_end-->
 

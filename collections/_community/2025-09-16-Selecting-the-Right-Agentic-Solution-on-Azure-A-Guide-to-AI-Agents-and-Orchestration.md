@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/selecting-the-right-agentic-solution-on-azure/ba-p/4453955
 title: 'Selecting the Right Agentic Solution on Azure: A Guide to AI Agents and Orchestration'
 author: pranabpaul
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 pranabpaul explores Azure-focused approaches for building, deploying, and orchestrating AI agentic solutions, comparing Azure AI Agent Service, Logic Apps, and developer-oriented agent orchestration frameworks.<!--excerpt_end-->
 

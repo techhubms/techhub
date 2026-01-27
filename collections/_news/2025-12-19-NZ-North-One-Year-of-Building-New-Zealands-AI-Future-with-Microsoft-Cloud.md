@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/2025/12/19/nz-north-one-year-on-building-the-foundations-of-new-zealands-ai-future/
 title: "NZ North: One Year of Building New Zealand's AI Future with Microsoft Cloud"
 author: stclarke
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke reviews the first year of Microsoft's Azure cloud region in New Zealand, exploring how it has accelerated AI adoption, driven innovation, and supported digital skills growth for organizations across multiple sectors.<!--excerpt_end-->
 

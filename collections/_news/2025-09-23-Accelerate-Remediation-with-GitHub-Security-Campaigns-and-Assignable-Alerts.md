@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-23-accelerate-remediation-with-security-campaigns-and-assignable-alerts-for-code-scanning-and-secret-scanning
 title: Accelerate Remediation with GitHub Security Campaigns and Assignable Alerts
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison introduces key updates for GitHub security: security campaigns for secret scanning alerts and assignable alerts for both code and secret scanning, aimed at helping developers and security teams remediate vulnerabilities more effectively.<!--excerpt_end-->
 

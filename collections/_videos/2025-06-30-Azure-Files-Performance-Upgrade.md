@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fYs8Nh8KpeM
 title: Azure Files Performance Upgrade
 author: John Savill's Technical Training
@@ -28,6 +28,7 @@ tags:
 - Workload Interaction
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill presents an in-depth walkthrough of recent Azure Files performance upgrades, covering workload interaction, metadata caching, directory leasing, Linux SMB multi-channel, and future roadmap details.<!--excerpt_end-->
 

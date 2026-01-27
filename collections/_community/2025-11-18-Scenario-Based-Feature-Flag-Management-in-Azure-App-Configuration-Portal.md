@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/new-portal-experience-for-feature-management/ba-p/4467748
 title: Scenario-Based Feature Flag Management in Azure App Configuration Portal
 author: nuzhat-minhaz
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 nuzhat-minhaz presents a practical guide on the new scenario-based feature flag experience in Azure App Configuration, simplifying complex deployments for AI and cloud applications.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/github-ceo-to-step-down-as-company-is-more-tightly-embraced-by-microsofts-coreai-team/?utm_source=rss&utm_medium=rss&utm_campaign=github-ceo-to-step-down-as-company-is-more-tightly-embraced-by-microsofts-coreai-team
 title: GitHub CEO Steps Down as Microsoft Integrates GitHub with CoreAI Team
 author: Jon Swartz
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Jon Swartz discusses Thomas Dohmke’s decision to step down as GitHub CEO, emphasizing how GitHub will operate more closely with Microsoft’s CoreAI team and what this means for AI-driven developer tooling.<!--excerpt_end-->
 

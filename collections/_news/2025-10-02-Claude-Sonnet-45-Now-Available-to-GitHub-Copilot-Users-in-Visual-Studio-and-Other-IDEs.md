@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-02-claude-sonnet-4-5-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse
 title: Claude Sonnet 4.5 Now Available to GitHub Copilot Users in Visual Studio and Other IDEs
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison shares that Claude Sonnet 4.5 is now in public preview for GitHub Copilot Pro, Business, and Enterprise plans, expanding AI model options within Visual Studio and other major IDEs.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code-maze.com/efcore-testing-database-connectivity/
 title: Testing Database Connectivity with EF Core
 author: Georgi Georgiev
@@ -21,6 +21,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 In this article, Georgi Georgiev explores essential techniques for validating database connectivity with EF Core, covering both application and infrastructure-level health checks for resilient .NET services.<!--excerpt_end-->
 

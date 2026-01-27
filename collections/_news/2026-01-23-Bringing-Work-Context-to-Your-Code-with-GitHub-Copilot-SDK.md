@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Kayla Cinnamon discusses how the new GitHub Copilot SDK allows developers to embed Copilot agent logic into applications, unlocking productivity through deeper work context integration with tools like VS Code and Microsoft 365 Work IQ MCP.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=BpOAxKzvrPA
 title: 'Exploring the New Microsoft Foundry Portal: A Guided Tour'
 author: Microsoft Developer
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 April from Microsoft Developer showcases the new Microsoft Foundry portal, guiding viewers through project creation and key features for AI agent building in Azure.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/09/30/empowering-defenders-in-the-era-of-agentic-ai-with-microsoft-sentinel/
 title: Empowering Defenders in the Era of Agentic AI with Microsoft Sentinel
 author: stclarke
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 stclarke explores Microsoft's latest security innovation, showcasing how Microsoft Sentinel uses agentic AI and Security Copilot to empower defenders and streamline threat detection, investigation, and response.<!--excerpt_end-->
 

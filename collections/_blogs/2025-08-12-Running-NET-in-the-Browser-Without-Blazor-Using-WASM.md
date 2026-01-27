@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/running-dotnet-in-the-browser-without-blazor/
 title: Running .NET in the Browser Without Blazor Using WASM
 author: Andrew Lock
@@ -26,6 +26,7 @@ tags:
 - WebAssembly
 section_names:
 - coding
+primary_section: coding
 ---
 Andrew Lock explains how to run .NET code in the browser without using Blazor, focusing on browser-side WebAssembly and JavaScript interop techniques, with details relevant to .NET 9 and .NET 10.<!--excerpt_end-->
 

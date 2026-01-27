@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/securing-the-ai-era-how-development-security-and-compliance-must-evolve/
 title: 'Securing the AI Era: How Development, Security, and Compliance Must Evolve'
 author: Sumeet Singh
@@ -33,6 +33,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Sumeet Singh explores how AI is reshaping software development, security, and compliance, detailing new models for continuous risk management and automation in the SDLC.<!--excerpt_end-->
 

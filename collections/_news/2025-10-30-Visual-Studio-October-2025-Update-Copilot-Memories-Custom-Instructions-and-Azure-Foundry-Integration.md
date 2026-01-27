@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-october-update/
 title: 'Visual Studio October 2025 Update: Copilot Memories, Custom Instructions, and Azure Foundry Integration'
 author: Jessie Houghton
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Jessie Houghton details the new features in Visual Studio 2022's October 2025 update, focusing on expanded Copilot capabilities, model choices, planning, and Azure Foundry integration for developers.<!--excerpt_end-->
 

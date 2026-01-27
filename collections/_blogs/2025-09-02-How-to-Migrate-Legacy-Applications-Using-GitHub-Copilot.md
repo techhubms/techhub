@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-to-migrate-legacy-applications-using-github-copilot/
 title: How to Migrate Legacy Applications Using GitHub Copilot
 author: Dellenny
@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny presents a practical guide to using GitHub Copilot as an AI-powered assistant for migrating legacy software, focusing on efficient code refactoring and modernization workflows.<!--excerpt_end-->
 

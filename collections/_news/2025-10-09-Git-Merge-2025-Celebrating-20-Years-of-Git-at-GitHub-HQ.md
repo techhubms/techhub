@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/open-source/git/20-years-of-git-2-days-at-github-hq-git-merge-2025-highlights-%f0%9f%8e%89/
 title: 'Git Merge 2025: Celebrating 20 Years of Git at GitHub HQ'
 author: Lee Reilly
@@ -22,6 +22,7 @@ tags:
 - Workflow
 section_names:
 - devops
+primary_section: devops
 ---
 Lee Reilly reports on Git Merge 2025, a milestone gathering at GitHub HQ celebrating 20 years of Git with global talks, live demos, and vibrant community collaboration.<!--excerpt_end-->
 

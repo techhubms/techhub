@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mfja7z/want_to_save_on_your_premium_request_well/
 title: Save on GitHub Copilot Premium Requests with Extensive Mode Inspired by Beast Mode
 author: cyb3rofficial
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 cyb3rofficial shares their creation, 'Extensive Mode', a robust prompt mode for GitHub Copilot. Drawing inspiration from Beast Mode, it introduces advanced features to support developers in a wide range of coding scenarios.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/sourcing-schema-driven-events-from-eventhub-into-fabric-eventstreams-preview/
 title: Sourcing Schema-Driven Events from EventHub into Fabric Eventstreams (Preview)
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog demonstrates how schema-driven pipelines, using Azure EventHub's integration with Schema Registry, boost event data reliability and analytics quality. Learn from practical examples and guidance provided by the Fabric platform team.<!--excerpt_end-->
 

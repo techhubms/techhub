@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot
 title: Claude Sonnet 4.5 Now Available in GitHub Copilot
 author: Allison
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison covers the general availability of Anthropic’s Claude Sonnet 4.5 in GitHub Copilot, highlighting expanded model access for Copilot users and setup instructions for various IDEs.<!--excerpt_end-->
 

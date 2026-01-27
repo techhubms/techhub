@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=QwG-PbVlIvM
 title: Should I add a chatbot to my app?
 author: Dotnet's Youtube channel
@@ -17,6 +17,7 @@ tags:
 - Steve Sanderson
 section_names:
 - ai
+primary_section: ai
 ---
 In this article, author dotnet highlights Steve Sanderson's nuanced view on the use of chatbots in app development. Sanderson contends that while chatbot integration is popular, beginning with AI-powered automation of business processes is often a more effective approach. The article points readers to additional learning resources from Microsoft’s AI Learning Hub.<!--excerpt_end-->
 

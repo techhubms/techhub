@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=M5BOO35688A
 title: What's New in C# 14 and .NET 10
 author: Nick Chapsas
@@ -18,6 +18,7 @@ tags:
 - Release Highlights
 section_names:
 - coding
+primary_section: coding
 ---
 Nick Chapsas presents a video overview of C# 14 and .NET 10, breaking down notable updates and improvements for .NET and C# developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/streamline-azure-netapp-files-management-right-from-your-ide/ba-p/4478122
 title: Streamline Azure NetApp Files Management Directly from VS Code
 author: GeertVanTeylingen
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 GeertVanTeylingen outlines how the Azure NetApp Files VS Code Extension empowers Azure developers with AI-assisted storage management, enabling rapid provisioning, validation, and optimization processes within their IDE.<!--excerpt_end-->
 

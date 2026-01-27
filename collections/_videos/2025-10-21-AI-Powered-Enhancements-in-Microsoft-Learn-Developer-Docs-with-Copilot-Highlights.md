@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=4fYXcmyZH3U
 title: AI-Powered Enhancements in Microsoft Learn Developer Docs with Copilot Highlights
 author: Microsoft Developer
@@ -33,6 +33,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this Microsoft Developer video, Megha Anand and John Maeda discuss how AI and GitHub Copilot are transforming developer documentation on Microsoft Learn. Megha shares practical insights, real-world examples, and AI tips for both writers and developers.<!--excerpt_end-->
 

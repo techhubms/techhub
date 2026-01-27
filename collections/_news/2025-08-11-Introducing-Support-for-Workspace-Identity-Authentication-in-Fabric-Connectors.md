@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-support-for-workspace-identity-authentication-in-new-fabric-connectors-and-for-dataflow-gen2/
 title: Introducing Support for Workspace Identity Authentication in Fabric Connectors
 author: Microsoft Fabric Blog
@@ -28,6 +28,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 The Microsoft Fabric Blog team, including co-author Meenal Srivastva, announces expanded workspace identity authentication support in Microsoft Fabric connectors, detailing security improvements and implementation steps.<!--excerpt_end-->
 

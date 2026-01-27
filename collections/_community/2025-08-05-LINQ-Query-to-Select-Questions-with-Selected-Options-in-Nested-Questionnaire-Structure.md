@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mikvpz/im_sure_there_is_a_linq_query_for_this_but_i_just/
 title: LINQ Query to Select Questions with Selected Options in Nested Questionnaire Structure
 author: GreatlyUnknown
@@ -18,6 +18,7 @@ tags:
 - SelectMany
 section_names:
 - coding
+primary_section: coding
 ---
 GreatlyUnknown seeks advice on writing a LINQ query to retrieve questions with selected options from a nested questionnaire structure, sparking a discussion about effective usage of SelectMany in C#.<!--excerpt_end-->
 

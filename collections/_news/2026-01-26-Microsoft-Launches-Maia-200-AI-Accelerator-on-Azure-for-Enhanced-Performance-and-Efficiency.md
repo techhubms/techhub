@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Satya Nadella announces the Azure launch of Maia 200, Microsoft’s newest custom AI accelerator, offering improved performance and efficiency for large-scale AI workloads.<!--excerpt_end-->
 

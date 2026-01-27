@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=GWV7VXjYeFM
 title: Building Secure AI Agents with Microsoft’s Security Stack
 author: Microsoft Events
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events hosts an Ignite session featuring Neta Haiby, Harmony Mabrey, and Alyssa Ofstein, focused on building secure AI agents using Microsoft’s security tools and principles.<!--excerpt_end-->
 

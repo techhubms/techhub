@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison reports on the release of GPT-5.2-Codex for Copilot users, explaining its availability in a range of development environments and providing essential details for both users and administrators.<!--excerpt_end-->
 

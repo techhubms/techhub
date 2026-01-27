@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-21-pull-request-files-changed-public-preview-experience-august-21-updates
 title: "GitHub Pull Request 'Files Changed' Public Preview: August 21 Updates"
 author: Allison
@@ -20,6 +20,7 @@ tags:
 - Workflow
 section_names:
 - devops
+primary_section: devops
 ---
 Allison outlines the new features and improvements available in the GitHub pull request 'Files changed' public preview, such as better review panels, submodule support, and several usability fixes, helping developers streamline code review processes.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/announcing-dotnet-10/
 title: 'Announcing .NET 10: A Major Release for Modern, Productive, and AI-Powered Development'
 author: .NET Team
@@ -39,6 +39,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 .NET Team announces .NET 10, highlighting key advancements in AI, coding, and development tooling. This release provides developers with improved performance, enhanced language features, and new AI integration options across the Microsoft stack.<!--excerpt_end-->
 

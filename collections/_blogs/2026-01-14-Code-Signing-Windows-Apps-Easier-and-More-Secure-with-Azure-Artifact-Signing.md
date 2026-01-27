@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devclass.com/2026/01/14/code-signing-windows-apps-may-be-easier-and-more-secure-with-new-azure-artifact-service/
 title: Code Signing Windows Apps Easier and More Secure with Azure Artifact Signing
 author: Tim Anderson
@@ -22,6 +22,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Tim Anderson delivers a detailed analysis of Azure Artifact Signing, Microsoft's new service to streamline and secure code signing for Windows applications, addressing modern security requirements and developer workflows.<!--excerpt_end-->
 

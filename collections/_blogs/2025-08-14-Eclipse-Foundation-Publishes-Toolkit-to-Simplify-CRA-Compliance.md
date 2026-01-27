@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/eclipse-foundation-publishes-toolkit-to-simplify-cra-compliance/?utm_source=rss&utm_medium=rss&utm_campaign=eclipse-foundation-publishes-toolkit-to-simplify-cra-compliance
 title: Eclipse Foundation Publishes Toolkit to Simplify CRA Compliance
 author: Mike Vizard
@@ -34,6 +34,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Mike Vizard examines how the Eclipse Foundation's OCCTET project enables organizations to address EU Cyber Resilience Act compliance, highlighting input from Microsoft and GitHub.<!--excerpt_end-->
 

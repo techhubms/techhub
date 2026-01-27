@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/powershell/enhanced-authoring-with-dsc-v3/
 title: Authoring Enhancements in Microsoft Desired State Configuration v3.0.0
 author: Jason Helmick
@@ -21,6 +21,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Authored by Jason Helmick, this post introduces key authoring enhancements in Microsoft Desired State Configuration v3.0.0, designed to streamline the configuration and deployment processes for PowerShell and Azure environments.<!--excerpt_end-->
 

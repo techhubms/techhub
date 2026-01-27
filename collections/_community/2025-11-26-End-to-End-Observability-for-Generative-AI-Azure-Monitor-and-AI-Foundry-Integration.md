@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/observability-for-the-age-of-generative-ai/ba-p/4473307
 title: 'End-to-End Observability for Generative AI: Azure Monitor and AI Foundry Integration'
 author: Hong Gao
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Hong Gao introduces new Azure Monitor and AI Foundry integration, providing enterprise-grade observability for generative AI systems. The post highlights unified dashboards, AI telemetry, and OpenTelemetry-powered insights.<!--excerpt_end-->
 

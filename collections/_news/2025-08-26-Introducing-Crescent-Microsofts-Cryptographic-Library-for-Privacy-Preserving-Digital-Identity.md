@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/research/blog/crescent-library-brings-privacy-to-digital-identity-systems/
 title: "Introducing Crescent: Microsoft's Cryptographic Library for Privacy-Preserving Digital Identity"
 author: stclarke
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 stclarke explains how Crescent, a cryptographic library from Microsoft Research, provides privacy-preserving features for digital identity systems, preventing tracking and protecting user data with advanced cryptography.<!--excerpt_end-->
 

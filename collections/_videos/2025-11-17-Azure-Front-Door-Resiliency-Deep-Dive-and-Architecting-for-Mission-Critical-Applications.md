@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ufxFlmjS9dU
 title: Azure Front Door Resiliency Deep Dive and Architecting for Mission Critical Applications
 author: John Savill's Technical Training
@@ -26,6 +26,7 @@ tags:
 - Traffic Shield
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill provides a comprehensive deep dive into Azure Front Door resiliency, architecture options for mission-critical cloud applications, and practical strategies for ensuring high availability on Microsoft Azure.<!--excerpt_end-->
 

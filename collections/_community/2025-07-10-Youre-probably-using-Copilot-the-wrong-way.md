@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1lwg11b/youre_probably_using_copilot_the_wrong_way/
 title: You're probably using Copilot the wrong way
 author: Thershort
@@ -20,6 +20,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, Thershort draws on years of coding experience to offer actionable insights into operating efficiently with AI coding tools, like GitHub Copilot and Sonnet 4. Emphasizing the irreplaceable value of human oversight, Thershort provides a personal workflow for integrating AI into the development process, offering tips, tools, and warnings for developers eager to leverage AI without losing control over code quality or project direction.<!--excerpt_end-->
 

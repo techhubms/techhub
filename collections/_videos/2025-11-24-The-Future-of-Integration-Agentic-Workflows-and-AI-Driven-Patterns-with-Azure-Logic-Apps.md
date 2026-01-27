@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=JAHevcsT7pQ
 title: 'The Future of Integration: Agentic Workflows and AI-Driven Patterns with Azure Logic Apps'
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Presented by Pratik Shinde, Eric Summers, Divya Swarnkar, and Kent Weare at Microsoft Ignite, this session shows how agentic workflows and AI-driven integration patterns are reshaping enterprise integration using Azure Logic Apps.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-18-github-copilot-coding-agent-for-eclipse-now-in-public-preview
 title: GitHub Copilot Coding Agent for Eclipse Now in Public Preview
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the public preview of GitHub Copilot's coding agent for Eclipse, enabling developers to delegate coding tasks, track job status, and manage pull requests directly within the Eclipse IDE using Copilot's AI capabilities.<!--excerpt_end-->
 

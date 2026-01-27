@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/enhancements-to-xaml-live-preview-in-visual-studio-for-net-maui/
 title: Enhancements to XAML Live Preview in Visual Studio for .NET MAUI
 author: Rachel Kang (SHE/HER)
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Rachel Kang details enhancements to Visual Studio’s XAML Live Preview feature for .NET MAUI, including design-time support, GitHub Copilot integration, and real-time UI prototyping tools.<!--excerpt_end-->
 

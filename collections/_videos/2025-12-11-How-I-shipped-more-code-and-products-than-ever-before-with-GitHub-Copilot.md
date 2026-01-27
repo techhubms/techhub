@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=g658oC4nuMQ
 title: How I shipped more code and products than ever before with GitHub Copilot
 author: Microsoft Developer
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer shares their experience using GitHub Copilot to accelerate code and product delivery, highlighting key lessons and workflow enhancements enabled by AI tools.<!--excerpt_end-->
 

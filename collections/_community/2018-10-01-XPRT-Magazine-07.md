@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 07
 date: 2018-10-01 00:00:00 +00:00
 author: Xebia
@@ -21,6 +21,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 XPRT Magazine 07 explores value stream management, Kubernetes metrics, AI in pop culture, property-based testing, Azure security as code, bots, containers, and more. This issue provides practical strategies and technical insights for building secure, scalable, and innovative solutions.
 <!--excerpt_end-->

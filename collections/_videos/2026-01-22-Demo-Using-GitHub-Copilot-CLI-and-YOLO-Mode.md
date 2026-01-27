@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a demonstration by @shanselman on leveraging the --yolo mode of GitHub Copilot CLI, which enables autonomous command execution—ideal for containerized or automated developer workflows.<!--excerpt_end-->
 

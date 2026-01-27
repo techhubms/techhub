@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=EGZKvuB5jWw
 title: The Latest AI Features in Visual Studio Code
 author: Visual Studio Code
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code presents the latest release packed with AI-driven features. Hosted by the team, this update highlights improvements to code editing, conflict resolution, and introduces the GitHub Copilot Coding Agent.<!--excerpt_end-->
 

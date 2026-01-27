@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=AtaehXB4hPQ
 title: 'Orchestrating Multiple AI Agents in VS Code: Insights from Ben & Peng'
 author: Visual Studio Code
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this episode, James interviews Ben and Peng from the VS Code team to discuss orchestrating multiple AI agents within Visual Studio Code. The conversation provides actionable advice for integrating Copilot agents into daily development workflows.<!--excerpt_end-->
 

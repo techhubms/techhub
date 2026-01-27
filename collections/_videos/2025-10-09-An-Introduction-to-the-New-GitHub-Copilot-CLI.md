@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/rx_e9RDL1c8
 title: An Introduction to the New GitHub Copilot CLI
 author: GitHub
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents the new Copilot CLI, offering developers an AI-powered coding assistant for the command line. Authored by GitHub, this introduction covers platform compatibility and extensibility features.<!--excerpt_end-->
 

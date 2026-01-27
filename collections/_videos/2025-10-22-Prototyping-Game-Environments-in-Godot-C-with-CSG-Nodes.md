@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=53B49XIcZk4
 title: Prototyping Game Environments in Godot C# with CSG Nodes
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet presents a hands-on guide to prototyping 3D game environments with CSG nodes in Godot using C#. Learn about collision, snapping tools, and best practices for quickly iterating environment layouts.<!--excerpt_end-->
 

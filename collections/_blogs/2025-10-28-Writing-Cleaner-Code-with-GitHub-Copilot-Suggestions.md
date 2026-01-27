@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/writing-cleaner-code-with-github-copilot-suggestions/
 title: Writing Cleaner Code with GitHub Copilot Suggestions
 author: Dellenny
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny shares actionable strategies for using GitHub Copilot to write cleaner, more maintainable code, highlighting best practices, pitfalls, and how AI-powered suggestions can enhance your software development workflow.<!--excerpt_end-->
 

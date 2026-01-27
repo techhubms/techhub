@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-audit-and-enable-windows-recovery-environment/ba-p/4462939
 title: Audit and Enable Windows Recovery Environment (WinRE) via Azure Arc Policies
 author: Aurnov_Chattopadhyay
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Aurnov_Chattopadhyay details how Azure Arc's new Public Preview policies enable IT admins to audit and configure Windows Recovery Environment (WinRE) settings across Arc-enabled Windows Servers, providing resilient configuration management for hybrid environments.<!--excerpt_end-->
 

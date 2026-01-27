@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/microsofts-open-source-journey-from-20000-lines-of-linux-code-to-ai-at-global-scale/
 title: 'Microsoft’s Open Source Journey: From Linux Contributions to AI at Scale'
 author: Ryan Waite
@@ -34,6 +34,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Ryan Waite presents a detailed history of Microsoft’s evolution in the open source landscape, emphasizing its role in AI, cloud, and developer tooling–from Linux kernel contributions to the launch of VS Code, GitHub, and global-scale AI platforms.<!--excerpt_end-->
 

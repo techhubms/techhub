@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/creator-improvements-in-the-data-agent/
 title: Enhancements for Data Agent Creators in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 The Microsoft Fabric Blog introduces powerful improvements for Data Agent creators, helping developers refine, debug, and structure their agents more efficiently using enhanced SDK tools and markdown-based configuration.<!--excerpt_end-->
 

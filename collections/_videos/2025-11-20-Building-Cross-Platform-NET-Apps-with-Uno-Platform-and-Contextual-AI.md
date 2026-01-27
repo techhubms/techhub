@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=R7p_lGtNvMw
 title: Building Cross-Platform .NET Apps with Uno Platform and Contextual AI
 author: dotnet
@@ -31,6 +31,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 dotnet presents a community standup featuring Bruno Capuano, Sam Basu, and Jérôme Laban, demonstrating how Uno Platform and contextual AI can streamline cross-platform .NET app development.<!--excerpt_end-->
 

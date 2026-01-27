@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/easily-connect-ai-workloads-to-azure-blob-storage-with-adlfs/
 title: Easily Connect AI Workloads to Azure Blob Storage with adlfs
 author: Vishnu Charan TJ
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Vishnu Charan TJ explains the latest enhancements in adlfs, empowering data professionals to efficiently connect Python-based AI and ML workloads to Azure Blob and Data Lake Storage, with real-world framework integrations and best practices.<!--excerpt_end-->
 

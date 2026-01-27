@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/azure-openai-gpt4o-audio-models-developer-guide/
 title: 'Introducing GPT-4o Audio Models in Microsoft Foundry: A Practical Guide for Developers'
 author: Allan Carranza
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Allan Carranza presents a step-by-step developer guide to using the latest GPT-4o audio models on Azure OpenAI via Microsoft Foundry, with practical examples for speech-to-text and TTS integration.<!--excerpt_end-->
 

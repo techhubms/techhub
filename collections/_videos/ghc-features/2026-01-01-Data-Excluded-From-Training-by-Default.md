@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Data Excluded From Training by Default
 author: TBD
@@ -13,6 +13,7 @@ tags: []
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This content demonstrates GitHub Copilot's Data Excluded From Training by Default feature. Your code stays private and won't train AI models<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/translation-customization-a-developers-guide-to-adaptive-custom-translation/
 title: 'Translation Customization: A Developer’s Guide to Adaptive Custom Translation with Microsoft Foundry'
 author: Mohamed Elghazali
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Mohamed Elghazali presents an in-depth developer guide to Adaptive Custom Translation (AdaptCT) in Microsoft Foundry Tools, highlighting streamlined translation customization with Azure-based AI, hand-on API usage, and practical workflow tips.<!--excerpt_end-->
 

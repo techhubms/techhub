@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ZpRsjGkwWbA
 title: Best Practices for Modernizing Apps and Databases at Scale with Azure
 author: Microsoft Events
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a session at Ignite 2025 detailing how organizations modernize apps and databases at scale using Azure, with expert insights from Marc Gunter, Mike Hulme, Amit Shah, and John Yokim.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/66epMMY-YUc
 title: Code Docs
 author: Fokko Veegens
@@ -13,6 +13,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This video demonstrates GitHub Copilot's Code Documenting feature. Generate comprehensive documentation for your codebase with Copilot.<!--excerpt_end-->
 

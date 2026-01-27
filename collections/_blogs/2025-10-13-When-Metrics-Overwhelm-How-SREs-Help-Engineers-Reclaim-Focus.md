@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/when-metrics-overwhelm-how-sres-help-engineers-reclaim-focus/
 title: 'When Metrics Overwhelm: How SREs Help Engineers Reclaim Focus'
 author: Neel Shah
@@ -35,6 +35,7 @@ tags:
 - War Room Culture
 section_names:
 - devops
+primary_section: devops
 ---
 Neel Shah analyzes the challenges of observability overload in modern development teams, showing how SREs adopt smarter tooling and practices to reduce alert fatigue, enhance root cause analysis, and refocus developer efforts on engineering value.<!--excerpt_end-->
 

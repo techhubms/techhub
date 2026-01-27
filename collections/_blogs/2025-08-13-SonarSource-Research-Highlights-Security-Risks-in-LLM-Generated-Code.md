@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/sonar-surfaces-multiple-caveats-when-relying-on-llms-to-write-code/?utm_source=rss&utm_medium=rss&utm_campaign=sonar-surfaces-multiple-caveats-when-relying-on-llms-to-write-code
 title: SonarSource Research Highlights Security Risks in LLM-Generated Code
 author: Mike Vizard
@@ -34,6 +34,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 Mike Vizard summarizes SonarSource’s research into AI-generated code, highlighting both the strengths and serious security pitfalls of relying on LLMs such as GPT-4o, Claude Sonnet 4, and others.<!--excerpt_end-->
 

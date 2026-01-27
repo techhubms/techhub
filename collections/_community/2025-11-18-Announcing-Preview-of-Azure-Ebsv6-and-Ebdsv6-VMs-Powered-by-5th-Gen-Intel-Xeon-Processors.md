@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-the-preview-of-the-new-azure-ebsv6-vms-based-on-the/ba-p/4470139
 title: Announcing Preview of Azure Ebsv6 and Ebdsv6 VMs Powered by 5th Gen Intel Xeon Processors
 author: misha-bansal
@@ -25,6 +25,7 @@ tags:
 - Virtualization
 section_names:
 - azure
+primary_section: azure
 ---
 Misha Bansal introduces Azure Ebsv6 and Ebdsv6 VMs, now in public preview, highlighting their enhanced storage, processing, and security features for intensive enterprise workloads.<!--excerpt_end-->
 

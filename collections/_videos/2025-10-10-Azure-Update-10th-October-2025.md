@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=IfnVlYkC-c4
 title: Azure Update - 10th October 2025
 author: John Savill's Technical Training
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 John Savill’s Technical Training presents the 10th October 2025 Azure Update, spotlighting recent retirements, feature changes, cloud AI, and DevOps advances for Microsoft Azure engineers and developers.<!--excerpt_end-->
 

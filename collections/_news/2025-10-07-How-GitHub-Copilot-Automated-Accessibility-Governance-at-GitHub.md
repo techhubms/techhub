@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-we-automated-accessibility-compliance-in-five-hours-with-github-copilot/
 title: How GitHub Copilot Automated Accessibility Governance at GitHub
 author: Janice Rimmer
@@ -25,6 +25,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Janice Rimmer explains how GitHub Copilot enabled rapid automation of accessibility governance workflows at GitHub, highlighting the impact on program management and cross-functional accountability.<!--excerpt_end-->
 

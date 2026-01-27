@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=JDXRDgnQ8Ko
 title: Introducing Microsoft Foundry Tools for Agentic AI Apps | BRK192
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents an Ignite 2025 session by Xiaoying Guo, Vinod Kurpad, and Zhuoqun Li on Microsoft Foundry Tools—a new suite for agentic AI applications, featuring demos, data integration techniques, and privacy solutions.<!--excerpt_end-->
 

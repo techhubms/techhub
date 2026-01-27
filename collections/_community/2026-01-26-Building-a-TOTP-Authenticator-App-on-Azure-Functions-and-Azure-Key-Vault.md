@@ -28,6 +28,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: coding
 ---
 StephenMS shows how to build a secure TOTP authenticator app using Azure Functions and Azure Key Vault, covering secure secret storage, API endpoints, and cloud-native best practices in authentication.<!--excerpt_end-->
 

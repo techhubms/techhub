@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=OgFacJ6lIBc
 title: 'Rubber Duck Thursdays: Using GitHub Copilot Custom Agents to Address Tech Debt'
 author: GitHub
@@ -20,6 +20,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub hosts Rubber Duck Thursdays, where developers live code with GitHub Copilot custom agents to tackle tech debt. See practical AI-driven solutions in action.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ix0kJMVI0tk
 title: Chatting with Microsoft Foundry AI Models Using Python in VS Code
 author: Microsoft Developer
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Developer walks through the process of using Python in Visual Studio Code to chat with Microsoft Foundry models, showing setup, deployment, and code integration in this practical video guide.<!--excerpt_end-->
 

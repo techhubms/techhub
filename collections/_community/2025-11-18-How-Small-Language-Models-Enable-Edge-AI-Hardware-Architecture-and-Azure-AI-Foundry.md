@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-small-language-modes/ba-p/4466170
 title: 'How Small Language Models Enable Edge AI: Hardware, Architecture, and Azure AI Foundry'
 author: Sherrylist
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Sherrylist explores the technical principles behind Small Language Models (SLMs) for edge AI, highlighting hardware acceleration, model architecture, and how Azure AI Foundry supports on-device intelligence.<!--excerpt_end-->
 

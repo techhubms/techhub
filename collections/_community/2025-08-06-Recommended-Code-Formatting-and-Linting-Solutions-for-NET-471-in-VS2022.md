@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mj3tz1/best_formattinglinting_solution_something_like/
 title: Recommended Code Formatting and Linting Solutions for .NET 4.7.1 in VS2022
 author: Efficient_Edge5500
@@ -23,6 +23,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Efficient_Edge5500 and other Reddit users exchange candid advice about achieving reliable and enforceable formatting/linting for .NET 4.7.1 projects in Visual Studio 2022, sharing practical tool recommendations and configuration insights.<!--excerpt_end-->
 

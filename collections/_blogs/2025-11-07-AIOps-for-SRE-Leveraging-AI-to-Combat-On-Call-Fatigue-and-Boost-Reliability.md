@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/aiops-for-sre-using-ai-to-reduce-on-call-fatigue-and-improve-reliability/
 title: 'AIOps for SRE: Leveraging AI to Combat On-Call Fatigue and Boost Reliability'
 author: Ankur Mahida
@@ -35,6 +35,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Ankur Mahida details how AI-powered operations—AIOps—can help SRE teams reduce on-call exhaustion, mitigate alert fatigue, and foster higher reliability through intelligent automation, with real-world examples and actionable practices.<!--excerpt_end-->
 

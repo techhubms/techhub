@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-august-2025/
 title: 'What’s New in Fabric Warehouse: August 2025 Recap'
 author: Microsoft Fabric Blog
@@ -29,6 +29,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 This recap by the Microsoft Fabric Blog team highlights August 2025 updates in Fabric Warehouse, including enhanced data ingestion, automation, security, and AI-driven workflows for developers and data engineers.<!--excerpt_end-->
 

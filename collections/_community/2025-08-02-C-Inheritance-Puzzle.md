@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mfzryw/c_inheritance_puzzle/
 title: C# Inheritance Puzzle
 author: calorap99
@@ -17,6 +17,7 @@ tags:
 - Virtual Methods
 section_names:
 - coding
+primary_section: coding
 ---
 calorap99 shares a challenging C# inheritance puzzle, inviting readers to predict the console output of a code snippet involving constructors and method overriding.<!--excerpt_end-->
 

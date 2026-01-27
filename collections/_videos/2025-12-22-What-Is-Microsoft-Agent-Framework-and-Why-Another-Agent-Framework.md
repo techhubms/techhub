@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=RM5LjmqKryA
 title: What Is Microsoft Agent Framework & Why Another Agent Framework?
 author: Learn Microsoft AI
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Learn Microsoft AI explains the Microsoft Agent Framework, highlighting its evolution from Semantic Kernel and AutoGen, and its advantages for building robust AI agent systems with .NET and Python.<!--excerpt_end-->
 

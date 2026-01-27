@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/11/05/announcing-the-2026-microsoft-techspark-fellows/
 title: Microsoft Announces 2026 TechSpark Fellows to Drive Community AI Skilling
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 - Workforce Development
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke outlines how the 2026 Microsoft TechSpark Fellows program is advancing AI and digital skills in communities nationwide through grants, training, and partnerships that address the digital divide.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/what-is-the-github-copilot-certification-and-why-it-matters-for-developers/
 title: What Is the GitHub Copilot Certification and Why It Matters for Developers
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny explains the GitHub Copilot Certification, detailing its importance for developers, the skills it covers, and steps for effective exam preparation.<!--excerpt_end-->
 

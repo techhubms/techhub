@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=zQNk1BjhwQI
 title: 'Application Gateway Network Isolation: New Architecture Deep Dive'
 author: John Savill's Technical Training
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 In this detailed session, John Savill guides viewers through the architecture and deployment of network-isolated Azure Application Gateways, emphasizing practical security considerations and new features.<!--excerpt_end-->
 

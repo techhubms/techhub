@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/whats-new-in-copilot-studio-september-2025/
 title: 'September 2025 Updates: New Features and Enhancements in Microsoft Copilot Studio'
 author: stclarke
@@ -25,6 +25,7 @@ tags:
 - Windows 365
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke presents the September 2025 roundup of Microsoft Copilot Studio, highlighting enhanced agent automation, SDKs for app integration, analytics features, prompt testing tools, and new learning resources for developers and makers.<!--excerpt_end-->
 

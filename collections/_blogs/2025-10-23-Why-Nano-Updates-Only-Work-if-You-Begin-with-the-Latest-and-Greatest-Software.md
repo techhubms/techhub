@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/why-nano-updates-only-work-if-you-begin-with-the-latest-and-greatest-software/
 title: Why Nano Updates Only Work if You Begin with the Latest and Greatest Software
 author: Dustin Kirkland
@@ -36,6 +36,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Dustin Kirkland examines why nano updates are most effective when organizations start with the latest software versions, highlighting best practices for minimizing technical debt and bridging security with engineering through continuous, incremental updates.<!--excerpt_end-->
 

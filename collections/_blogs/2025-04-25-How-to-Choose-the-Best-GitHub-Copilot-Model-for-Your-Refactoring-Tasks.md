@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://jessehouwing.net/github-copilot-picking-the-right-model/
 title: How to Choose the Best GitHub Copilot Model for Your Refactoring Tasks
 author: Jesse Houwing
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this post, Jesse Houwing shares advice on choosing the most suitable GitHub Copilot model for large scale code refactoring, comparing GPT-4.5 and GPT-4o with practical recommendations.<!--excerpt_end-->
 

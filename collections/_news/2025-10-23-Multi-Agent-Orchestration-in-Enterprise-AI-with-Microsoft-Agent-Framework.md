@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/semantic-kernel/unlocking-enterprise-ai-complexity-multi-agent-orchestration-with-the-microsoft-agent-framework/
 title: Multi-Agent Orchestration in Enterprise AI with Microsoft Agent Framework
 author: Kinfey Lo
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Kinfey Lo introduces developers and architects to orchestrating enterprise AI solutions using the Microsoft Agent Framework, emphasizing multi-agent coordination, workflow design patterns, and practical observability for advanced, production-grade systems.<!--excerpt_end-->
 

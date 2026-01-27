@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-global-industrial-iot-platforms/
 title: Microsoft Recognized as Leader in 2025 Gartner Magic Quadrant for Global Industrial IoT Platforms
 author: Michael MacKenzie
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Michael MacKenzie shares how Microsoft has been named a Leader in the 2025 Gartner Magic Quadrant for Global Industrial IoT Platforms, spotlighting Azure IoT, Microsoft Fabric, and integrated AI and security solutions.<!--excerpt_end-->
 

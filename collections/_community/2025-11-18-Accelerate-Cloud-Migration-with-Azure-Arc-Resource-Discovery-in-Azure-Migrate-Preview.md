@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/accelerate-your-cloud-migration-journey-with-azure-arc-resource/ba-p/4469975
 title: Accelerate Cloud Migration with Azure Arc Resource Discovery in Azure Migrate (Preview)
 author: snehith
@@ -22,6 +22,7 @@ tags:
 - Sustainability Impact
 section_names:
 - azure
+primary_section: azure
 ---
 Snehith from Microsoft introduces the new Arc-based discovery capability in Azure Migrate, enabling streamlined cloud migration readiness and savings analysis for your hybrid resources.<!--excerpt_end-->
 

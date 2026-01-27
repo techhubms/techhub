@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Mayunk_Jain discusses how the Azure Performance Diagnostics Tool for Java, using Azure SRE Agent, streamlines troubleshooting Java apps on Kubernetes to improve reliability and developer productivity.<!--excerpt_end-->
 

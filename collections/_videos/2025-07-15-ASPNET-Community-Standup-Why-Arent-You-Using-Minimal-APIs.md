@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=lXvHXA_vuro
 title: ASP.NET Community Standup - Why Aren't You Using Minimal APIs?
 author: dotnet
@@ -20,6 +20,7 @@ tags:
 - Web Development
 section_names:
 - coding
+primary_section: coding
 ---
 Hosted by Daniel Roth, Mike Kistler, and Safia Abdalla, this ASP.NET Community Standup delves into the benefits of Minimal APIs and discusses reasons developers may prefer controller-based applications.<!--excerpt_end-->
 

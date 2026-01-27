@@ -1,4 +1,4 @@
-@using TechHub.Core.DTOs
+@using TechHub.Core.Models
 
 <a href="@Item.GetHref()"
    class="card"
@@ -45,7 +45,7 @@
 
 @code {
     [Parameter, EditorRequired]
-    public ContentItemDto Item { get; set; } = null!;
+    public ContentItem Item { get; set; } = null!;
 
     [Parameter]
     public bool ShowCollectionBadge { get; set; } = true;

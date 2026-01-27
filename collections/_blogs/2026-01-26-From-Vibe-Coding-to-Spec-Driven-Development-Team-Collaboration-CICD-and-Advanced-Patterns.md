@@ -35,6 +35,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Hidde de Smet explains how teams can move from individual AI-powered workflows to collaborative, spec-driven development. Explore practical team setups, CI/CD integrations, and advanced architecture strategies to grow your next Microsoft-focused project.<!--excerpt_end-->
 

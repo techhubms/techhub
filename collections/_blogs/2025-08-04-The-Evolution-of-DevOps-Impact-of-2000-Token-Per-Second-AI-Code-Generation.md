@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/the-evolution-of-devops-continues-how-2000-token-per-second-ai-code-generation-changes-everything/?utm_source=rss&utm_medium=rss&utm_campaign=the-evolution-of-devops-continues-how-2000-token-per-second-ai-code-generation-changes-everything
 title: 'The Evolution of DevOps: Impact of 2,000 Token-Per-Second AI Code Generation'
 author: Tom Smith
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 In this article, Tom Smith analyzes the transformational impact of rapid AI code generation in the DevOps domain, highlighting new hardware, open-source model advancements, and the resulting effects on workflow efficiency.<!--excerpt_end-->
 

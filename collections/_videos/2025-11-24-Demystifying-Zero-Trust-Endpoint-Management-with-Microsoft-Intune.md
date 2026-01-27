@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=UsATAOnBmmY
 title: Demystifying Zero Trust Endpoint Management with Microsoft Intune
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Zero Trust
 section_names:
 - security
+primary_section: security
 ---
 Presented by Lior Bela and Sangeetha Visweswaran at Microsoft Ignite 2025, this session guides IT professionals through implementing Zero Trust endpoint management using Microsoft Intune, with strategies for secure, cloud-connected, and AI-ready workplaces.<!--excerpt_end-->
 

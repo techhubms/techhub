@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-september-2025/
 title: 'What’s New in Azure AI Foundry: September 2025 Feature Roundup'
 author: Nick Brady
@@ -46,6 +46,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 Nick Brady summarizes the latest Azure AI Foundry updates for September 2025, highlighting sweeping improvements in models, agents, security, search, developer tools, and SDKs.<!--excerpt_end-->
 

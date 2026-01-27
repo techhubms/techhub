@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=C-Rn-8MbXtA
 title: ASP.NET Core Server & APIs Roadmap Discussion for .NET 11
 author: dotnet
@@ -28,6 +28,7 @@ tags:
 - Software Developer
 section_names:
 - coding
+primary_section: coding
 ---
 In this community standup, Daniel Roth, Mike Kistler, and Jose Perez Rodriguez discuss the direction of ASP.NET Core server and APIs for .NET 11, inviting developer feedback and sharing planned improvements.<!--excerpt_end-->
 

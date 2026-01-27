@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mc0vkl/inherited_a_large_azure_environment/
 title: 'Inherited a Large Azure Environment: Seeking Guidance as a New Cloud Architect'
 author: Cybertron2600
@@ -17,6 +17,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Cybertron2600 discusses inheriting a sprawling Azure environment as a cloud architect and asks for advice on managing and understanding it.<!--excerpt_end-->
 

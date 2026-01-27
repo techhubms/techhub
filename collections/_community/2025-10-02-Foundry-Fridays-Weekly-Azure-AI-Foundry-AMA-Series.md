@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/foundry-fridays-your-front-row-seat-to-azure-ai-innovation/ba-p/4456956
 title: 'Foundry Fridays: Weekly Azure AI Foundry AMA Series'
 author: Lee_Stott
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Lee_Stott invites the community to Foundry Fridays—a weekly live AMA event on Discord where developers and AI enthusiasts connect directly with Microsoft’s Azure AI Foundry team to explore the latest in Azure AI technologies.<!--excerpt_end-->
 

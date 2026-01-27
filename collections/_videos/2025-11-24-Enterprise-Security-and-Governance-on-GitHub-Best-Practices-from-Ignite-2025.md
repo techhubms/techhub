@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=eXwqw2RSen8
 title: 'Enterprise Security and Governance on GitHub: Best Practices from Ignite 2025'
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Microsoft Events presents a session led by Collin McNeese and April Yoho at Ignite 2025, detailing how platform teams use GitHub governance and security practices to accelerate onboarding and enforce policies at scale.<!--excerpt_end-->
 

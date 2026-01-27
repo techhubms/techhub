@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=LafpndhNC_E
 title: Tackling Your Tech Debt with Copilot Coding Agent
 author: GitHub
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a session led by Brittany Ellich, examining how developers can utilize Copilot coding agent and AI workflows to tackle technical debt and keep codebases modern.<!--excerpt_end-->
 

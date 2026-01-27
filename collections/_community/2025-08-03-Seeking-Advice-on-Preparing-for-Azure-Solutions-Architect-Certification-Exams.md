@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mgufjv/azure_solutions_architect/
 title: Seeking Advice on Preparing for Azure Solutions Architect Certification Exams
 author: Satoshiman256
@@ -17,6 +17,7 @@ tags:
 - Learning Resources
 section_names:
 - azure
+primary_section: azure
 ---
 Satoshiman256 shares their intent to prepare for Azure Solutions Architect certification exams and seeks resource suggestions from the community.<!--excerpt_end-->
 

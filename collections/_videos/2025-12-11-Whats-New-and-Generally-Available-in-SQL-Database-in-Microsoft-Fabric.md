@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Lt63g-NeqBM
 title: What's New and Generally Available in SQL Database in Microsoft Fabric
 author: Microsoft Developer
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Developer showcases the new features and use cases of SQL database in Microsoft Fabric, including a live code demo and architecture walkthrough to illustrate integration with Azure and Foundry.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=6Dvfn2lfTnU
 title: 'Creating an Agent with AI Toolkit and GitHub Copilot: Pet Planner Workshop Part 3'
 author: Microsoft Developer
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer, joined by April, demonstrates how to create an agent using the AI Toolkit’s Agent Builder and GitHub Copilot in this Pet Planner workshop video, including integrating a custom local MCP server.<!--excerpt_end-->
 

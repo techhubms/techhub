@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/11/driving-impact-in-the-era-of-ai-sovereign-cloud-adaptive-cloud-at-microsoft-ignite-2025/
 title: 'Sovereign and Adaptive Cloud: Microsoft Ignite 2025 Highlights'
 author: Thomas Maurer
@@ -32,6 +32,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Thomas Maurer provides a strategic summary of Sovereign Cloud and Adaptive Cloud themes at Microsoft Ignite 2025, with actionable insights for architects and decision-makers concerned with compliance, flexibility, and cloud innovation.<!--excerpt_end-->
 

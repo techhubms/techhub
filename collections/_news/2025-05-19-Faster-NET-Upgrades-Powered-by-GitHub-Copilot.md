@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/faster-net-upgrades-powered-by-github-copilot/
 title: Faster .NET Upgrades Powered by GitHub Copilot
 author: McKenna Barlow
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, McKenna Barlow introduces the public preview of GitHub Copilot app modernization – Upgrade for .NET, detailing how developers can upgrade applications with AI-assisted tools in Visual Studio.<!--excerpt_end-->
 

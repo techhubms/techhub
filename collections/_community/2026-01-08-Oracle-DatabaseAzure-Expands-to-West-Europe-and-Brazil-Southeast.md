@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/global-expansion-now-available-in-west-europe-netherlands/ba-p/4479671
 title: Oracle Database@Azure Expands to West Europe and Brazil Southeast
 author: SparshAgrawat
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 SparshAgrawat announces the expansion of Oracle Database@Azure into the West Europe (Netherlands) and Brazil Southeast Azure regions, detailing new opportunities for AI-driven workloads, migration, compliance, and technical integration between Oracle and Microsoft platforms.<!--excerpt_end-->
 

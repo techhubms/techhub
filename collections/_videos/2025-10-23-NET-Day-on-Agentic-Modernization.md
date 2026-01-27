@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=JLCl5lh-tw8
 title: .NET Day on Agentic Modernization
 author: dotnet
@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 dotnet presents .NET Day on Agentic Modernization, focusing on accelerating modernization, enabling agentic experiences, and automating Azure development with tools like GitHub Copilot and Microsoft Agent Framework.<!--excerpt_end-->
 

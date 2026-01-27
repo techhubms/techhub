@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 This news post from the Microsoft Fabric Blog explains how organizations can use the new Cribl source integration (Preview) to easily collect and analyze real-time data in Microsoft Fabric Real-Time Intelligence.<!--excerpt_end-->
 

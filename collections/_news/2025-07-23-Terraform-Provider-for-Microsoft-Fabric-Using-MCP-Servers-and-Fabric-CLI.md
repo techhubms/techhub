@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/terraform-provider-for-microsoft-fabric-2-using-the-terraform-mcp-server-and-fabric-cli-to-help-define-your-fabric-resources/
 title: 'Terraform Provider for Microsoft Fabric: Using MCP Servers and Fabric CLI'
 author: Microsoft Fabric Blog
@@ -18,6 +18,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Authored by the Microsoft Fabric Blog, this article presents practical advice for leveraging the Terraform Provider and Fabric CLI for automating Microsoft Fabric resource administration.<!--excerpt_end-->
 

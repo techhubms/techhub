@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mkqa37/stop_allocating_strings_i_built_a_spanpowered/
 title: 'ZaString: A Zero-Allocation Span-Based String Builder for .NET'
 author: typicalyume
@@ -26,6 +26,7 @@ tags:
 - ZString
 section_names:
 - coding
+primary_section: coding
 ---
 typicalyume presents ZaString, a Span-powered zero-allocation string helper for .NET, and invites detailed feedback from the developer community on its API, safety, and performance.<!--excerpt_end-->
 

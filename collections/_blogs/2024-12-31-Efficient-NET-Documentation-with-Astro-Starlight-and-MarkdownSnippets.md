@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/great-dotnet-documentation-with-astro-starlight-and-markdownsnippets
 title: Efficient .NET Documentation with Astro, Starlight, and MarkdownSnippets
 author: Khalid Abuhakmeh
@@ -18,6 +18,7 @@ tags:
 - Tooling
 section_names:
 - coding
+primary_section: coding
 ---
 Khalid Abuhakmeh explains how developers can use Astro's Starlight in combination with the MarkdownSnippets tool to maintain accurate and up-to-date .NET documentation with live code samples.<!--excerpt_end-->
 

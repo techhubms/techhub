@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=GkqKMwhadB0
 title: 'Secure Foundations for Smarter Work: Lenovo and Microsoft Security Strategies'
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events, joined by Lenovo’s experts, discuss secure cloud and AI operations at Ignite 2025, emphasizing integration of Defender, Sentinel, and Security Copilot for enterprise resiliency.<!--excerpt_end-->
 

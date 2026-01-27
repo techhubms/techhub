@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=XhyTEgA_kBk
 title: Scaling Generative AI with GPU-Powered Containers on Azure
 author: Microsoft Developer
@@ -40,6 +40,7 @@ section_names:
 - coding
 - github-copilot
 - ml
+primary_section: github-copilot
 ---
 In this episode, Brian Benz—joined by Ayan Gupta—shows developers how to build a generative AI image solution using GPU containers in Azure. The session highlights code integration with GitHub Copilot and practical scaling techniques.<!--excerpt_end-->
 

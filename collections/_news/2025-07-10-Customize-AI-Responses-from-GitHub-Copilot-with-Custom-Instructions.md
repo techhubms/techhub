@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/customize-ai-responses-from-github-copilot/
 title: Customize AI Responses from GitHub Copilot with Custom Instructions
 author: Matt Soucoup
@@ -20,6 +20,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Matt Soucoup explains how custom instructions in GitHub Copilot help developers generate AI-powered code that aligns with their team’s coding standards and preferences.<!--excerpt_end-->
 

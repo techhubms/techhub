@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 GitHub hosts Angie Jones, VP of Engineering at Block, who shares insights on Goose, their open source AI agent, the MCP standard, and supporting the next generation of AI builders.<!--excerpt_end-->
 

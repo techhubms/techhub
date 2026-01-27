@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=_UhRNW6HL6Y
 title: Bulletproof Agents with the Durable Task Extension for Microsoft Agent Framework
 author: dotnet
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 dotnet presents an in-depth session on building resilient and scalable AI agents using the Durable Task Extension for Microsoft Agent Framework, focusing on durability, distributed operation, determinism, and observability.<!--excerpt_end-->
 

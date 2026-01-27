@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=UXeU4PKrQUw
 title: Design AI Workloads with the Azure Well-Architected Framework
 author: Microsoft Developer
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this video, Microsoft Developer's Thomas Maurer and Clayton Siemens discuss designing AI workloads using the Azure Well-Architected Framework, highlighting key principles and actionable guidance.<!--excerpt_end-->
 

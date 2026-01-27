@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/03/recover-your-azure-cloud-environment-with-cloud-rewind/
 title: Recover Your Azure Cloud Environment with Commvault Cloud Rewind
 author: Thomas Maurer
@@ -18,6 +18,7 @@ tags:
 - Microsoft Azure
 section_names:
 - azure
+primary_section: azure
 ---
 In this detailed post, Thomas Maurer interviews Thomas Bryant from Commvault to explore the recovery and resilience of Azure cloud environments using Commvault Cloud Rewind. This discussion provides crucial insights for IT professionals managing Microsoft Azure infrastructure.<!--excerpt_end-->
 

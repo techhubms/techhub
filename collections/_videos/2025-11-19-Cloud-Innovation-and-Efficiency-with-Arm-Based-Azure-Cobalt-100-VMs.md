@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=tyavPF0DUrE
 title: Cloud Innovation and Efficiency with Arm-Based Azure Cobalt 100 VMs
 author: Microsoft Events
@@ -32,6 +32,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Events presents insights on how businesses benefit from Arm-based Azure Cobalt 100 VMs, featuring customer stories and technical highlights for developers and IT pros.<!--excerpt_end-->
 

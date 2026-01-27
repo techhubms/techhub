@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Wex4ONr1P2I
 title: Introduction to GitHub Copilot Coding Agent
 author: Microsoft Developer
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer and Damian Brady introduce the GitHub Copilot Coding Agent, highlighting its advanced capabilities for automating issue resolution and transforming developer workflows.<!--excerpt_end-->
 

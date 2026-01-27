@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fXDaDGKoGg0
 title: A Unified Agent Experience in Visual Studio Code
 author: Visual Studio Code
@@ -19,6 +19,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 In this video, Visual Studio Code experts Josh and Osvaldo explore how developers can leverage new capabilities for managing local, cloud, and background agents through a unified interface.<!--excerpt_end-->
 

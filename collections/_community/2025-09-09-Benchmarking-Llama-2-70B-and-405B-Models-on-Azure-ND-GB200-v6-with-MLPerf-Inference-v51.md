@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/a-quick-guide-to-benchmarking-ai-models-on-azure-llama-405b-and/ba-p/4452192
 title: Benchmarking Llama 2 70B and 405B Models on Azure ND GB200 v6 with MLPerf Inference v5.1
 author: Mark_Gitau
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Mark Gitau explains how to benchmark Llama 2 70B and 405B models using MLPerf Inference v5.1 on Azure ND GB200 v6 VMs, detailing setup, performance highlights, and step-by-step replication guidance.<!--excerpt_end-->
 

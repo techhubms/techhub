@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=eHqBZOrx6ZI
 title: 'Decision Records: Understanding Why Those Decisions Were Made in .NET'
 author: dotnet
@@ -23,6 +23,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 This presentation by dotnet introduces the concept of Decision Records in .NET, showing developers how tracking architectural decisions enhances code understanding and maintainability.<!--excerpt_end-->
 

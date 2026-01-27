@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mhdqbc/split_commandquery_classes_vs_monolithic/
 title: Split Command/Query Classes vs Monolithic Repository in C# Projects
 author: Square_Potato6312
@@ -17,6 +17,7 @@ tags:
 - Software Practices
 section_names:
 - coding
+primary_section: coding
 ---
 In this community post, Square_Potato6312 discusses their recent experiences with CQRS and monolithic repository patterns in C# backend development, exploring team perspectives and best practices.<!--excerpt_end-->
 

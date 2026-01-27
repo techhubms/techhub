@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/how-engineers-are-automating-more-with-less-trends-in-devops-tooling/?utm_source=rss&utm_medium=rss&utm_campaign=how-engineers-are-automating-more-with-less-trends-in-devops-tooling
 title: 'How Engineers are Automating More with Less: Trends in DevOps Tooling'
 author: Durojaye Olusegun
@@ -45,6 +45,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Durojaye Olusegun explores how engineering teams are transforming DevOps automation by embracing modular workflows and AI-powered tools like GitHub Copilot, resulting in smarter, more cost-effective pipelines.<!--excerpt_end-->
 

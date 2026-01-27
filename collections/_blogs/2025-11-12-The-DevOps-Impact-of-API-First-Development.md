@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/the-devops-impact-of-api-first-development/
 title: The DevOps Impact of API-First Development
 author: Alan Shimel
@@ -24,6 +24,7 @@ tags:
 - Video Interviews
 section_names:
 - devops
+primary_section: devops
 ---
 Alan Shimel interviews Balaji Raghavan to discuss the State of the API Report, emphasizing the impact of API-first development on DevOps, software delivery, and team collaboration.<!--excerpt_end-->
 

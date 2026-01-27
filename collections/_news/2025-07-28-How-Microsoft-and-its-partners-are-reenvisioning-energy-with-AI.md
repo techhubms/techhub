@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/industry/blog/energy-and-resources/2025/07/28/driving-the-grid-of-the-future-how-microsoft-and-our-partners-are-reenvisioning-energy-with-ai/
 title: How Microsoft and its partners are reenvisioning energy with AI
 author: stclarke
@@ -16,6 +16,7 @@ tags:
 - Technology Transformation
 section_names:
 - ai
+primary_section: ai
 ---
 Written by stclarke, this article examines Microsoft's partnership-driven efforts to revolutionize the energy industry using AI-powered solutions.<!--excerpt_end-->
 

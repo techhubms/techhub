@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=yVPmHIvJLYg
 title: What is Model Context Protocol (MCP)?
 author: Microsoft Developer
@@ -16,6 +16,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this video, Microsoft Developer and Damian Brady discuss the Model Context Protocol (MCP), showing how it enables GitHub Copilot to perform powerful actions. Key concepts are presented for developers.<!--excerpt_end-->
 

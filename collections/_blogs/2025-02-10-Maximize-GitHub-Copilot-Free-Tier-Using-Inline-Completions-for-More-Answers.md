@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://jessehouwing.net/github-copilot-free-use-inline-completions-for-more-answers/
 title: 'Maximize GitHub Copilot Free Tier: Using Inline Completions for More Answers'
 author: Jesse Houwing
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Jesse Houwing presents practical techniques for maximizing the GitHub Copilot free tier by leveraging inline completions, especially for users facing chat message limits or working in editors without chat integration.<!--excerpt_end-->
 

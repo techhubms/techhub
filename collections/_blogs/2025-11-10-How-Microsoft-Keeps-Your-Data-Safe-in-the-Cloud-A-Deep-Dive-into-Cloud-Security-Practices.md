@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-microsoft-keeps-your-data-safe-in-the-cloud-a-deep-dive-into-cloud-security-practices/
 title: How Microsoft Keeps Your Data Safe in the Cloud – A Deep Dive into Cloud Security Practices
 author: Dellenny
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Dellenny offers an in-depth look at Microsoft’s cloud security architecture, covering topics like encryption, identity, compliance, and customer responsibilities to help secure data in the cloud.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=tCjQvi6qkHA
 title: Deliver Smart Secure and Scalable Agents with MongoDB on Azure
 author: Microsoft Events
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events features an advanced developer session highlighting integration of MongoDB Atlas with Azure, AI Foundry, and Microsoft Sentinel for secure, scalable AI application development.<!--excerpt_end-->
 

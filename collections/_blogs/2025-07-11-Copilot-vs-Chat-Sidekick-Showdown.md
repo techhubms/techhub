@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html
 title: 'Copilot vs. Chat: Sidekick Showdown'
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels compares GitHub Copilot's inline code completions with conversational AI chatbots, outlining when and how developers can leverage both to accelerate coding and solve complex problems.<!--excerpt_end-->
 

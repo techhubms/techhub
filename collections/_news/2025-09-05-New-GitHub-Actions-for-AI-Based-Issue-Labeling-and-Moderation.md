@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-05-github-actions-ai-labeler-and-moderator-with-the-github-models-inference-api
 title: New GitHub Actions for AI-Based Issue Labeling and Moderation
 author: Allison
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Allison highlights two new GitHub Actions for open source maintainers: an AI assessment comment labeler and an AI moderator, both using the GitHub Models inference API to automate triage and moderation.<!--excerpt_end-->
 

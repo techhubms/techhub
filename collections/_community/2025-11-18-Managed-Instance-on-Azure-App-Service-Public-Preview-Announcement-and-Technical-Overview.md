@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-public-preview-of-managed-instance-on-azure-app/ba-p/4469930
 title: 'Managed Instance on Azure App Service: Public Preview Announcement and Technical Overview'
 author: apwestgarth
@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 Written by apwestgarth, this announcement details the new Managed Instance on Azure App Service, describing technical features designed to help developers migrate and modernize legacy .NET applications for the cloud with reduced code changes and strong security.<!--excerpt_end-->
 

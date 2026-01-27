@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-14-start-and-track-github-copilot-coding-agent-sessions-from-visual-studio-code
 title: Start and track GitHub Copilot coding agent sessions from Visual Studio Code
 author: Allison
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, Allison introduces the GitHub Copilot coding agent, a feature that enables developers to delegate coding tasks to Copilot. This allows Copilot to handle work in the background, enhancing productivity by letting developers focus on other aspects of their projects.<!--excerpt_end-->
 

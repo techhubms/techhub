@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=LZIRB-gu-gE
 title: Blueprint for Building the SOC of the Future
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events hosts a session outlining how to architect the SOC of the future, leveraging Microsoft Sentinel, Defender, and advanced AI-powered security operations.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/12/17/access-fabric-a-modern-approach-to-identity-and-network-access/
 title: 'Access Fabric: Modernizing Identity and Network Access Security with Microsoft Entra'
 author: Igor Sakhnov
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Igor Sakhnov details how Access Fabric, built on Microsoft Entra, unifies identity and network access security. The article explains adaptive, real-time protection for organizations facing AI-empowered threats.<!--excerpt_end-->
 

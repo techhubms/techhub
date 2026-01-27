@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-more-file-formats-with-enhancements/
 title: 'Simplifying Data Ingestion with Copy Job: Enhanced File Format Support in Microsoft Fabric Data Factory'
 author: Microsoft Fabric Blog
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 The Microsoft Fabric Blog team explains new enhancements to Copy job in Microsoft Fabric Data Factory, including expanded support for file formats and improved CSV handling options, enabling more flexible and robust data ingestion.<!--excerpt_end-->
 

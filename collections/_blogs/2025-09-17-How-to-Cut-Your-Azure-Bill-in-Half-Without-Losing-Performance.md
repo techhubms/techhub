@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-to-cut-your-azure-bill-in-half-without-losing-performance/
 title: How to Cut Your Azure Bill in Half Without Losing Performance
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 - Virtual Machines
 section_names:
 - azure
+primary_section: azure
 ---
 Dellenny offers a detailed, step-by-step breakdown of proven techniques for cutting Azure cloud bills by up to 50%—without sacrificing workload performance—using in-built Azure tools and hands-on cost management best practices.<!--excerpt_end-->
 

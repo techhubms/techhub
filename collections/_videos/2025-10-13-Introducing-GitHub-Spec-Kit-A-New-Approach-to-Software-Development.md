@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/AQwwrxyQfA0
 title: 'Introducing GitHub Spec Kit: A New Approach to Software Development'
 author: GitHub
@@ -24,6 +24,7 @@ tags:
 - SpecKit
 section_names:
 - devops
+primary_section: devops
 ---
 GitHub presents Spec Kit, an innovative toolkit that shifts development focus from code-first to spec-first workflows. GitHub demonstrates how executable specifications and AI-powered commands can streamline project planning and implementation.<!--excerpt_end-->
 

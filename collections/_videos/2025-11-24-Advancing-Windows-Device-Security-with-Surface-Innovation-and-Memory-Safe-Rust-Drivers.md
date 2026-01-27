@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=U43XsJhKMhQ
 title: Advancing Windows Device Security with Surface Innovation and Memory-Safe Rust Drivers
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 Microsoft Events presents an in-depth Ignite session featuring David Abzarian and Karan Dhillon, highlighting Surface innovation in Windows device security through memory-safe Rust firmware, open source drivers, and collaborative technology initiatives.<!--excerpt_end-->
 

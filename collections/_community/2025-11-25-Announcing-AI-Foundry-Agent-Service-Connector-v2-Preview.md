@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-ai-foundry-agent-service-connector-v2-preview/ba-p/4471082
 title: Announcing AI Foundry Agent Service Connector v2 (Preview)
 author: KentWeareMSFT
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 KentWeareMSFT introduces the AI Foundry Agent Service Connector v2 for Azure Logic Apps, detailing new operations, low-code AI integration, and practical scenarios for orchestrating AI agents within enterprise workflows.<!--excerpt_end-->
 

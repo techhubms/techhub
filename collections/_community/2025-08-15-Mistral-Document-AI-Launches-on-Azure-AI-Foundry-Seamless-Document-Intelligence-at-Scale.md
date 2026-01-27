@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/deepening-our-partnership-with-mistral-ai-on-azure-ai-foundry/ba-p/4434656
 title: 'Mistral Document AI Launches on Azure AI Foundry: Seamless Document Intelligence at Scale'
 author: Naomi Moneypenny
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Naomi Moneypenny presents the launch of Mistral Document AI on Azure AI Foundry, enabling organizations to deploy advanced document intelligence models serverlessly, with strong security, structured outputs, and deep Azure integration for enterprise automation.<!--excerpt_end-->
 

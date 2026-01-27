@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-environment-library-management-performance-improvement/
 title: Fabric Environment Library Management Performance Improvements for Developers
 author: Microsoft Fabric Blog
@@ -19,6 +19,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 The Microsoft Fabric Blog reveals substantial library management speedups, benefiting developers with faster publishing and Spark session startups, curated by the Fabric team.<!--excerpt_end-->
 

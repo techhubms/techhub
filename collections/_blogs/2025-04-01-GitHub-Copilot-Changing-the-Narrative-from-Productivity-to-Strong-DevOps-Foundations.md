@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devopsjournal.io/blog/2025/04/01/GitHub-Copilot-Change-the-Narrative
 title: 'GitHub Copilot: Changing the Narrative from Productivity to Strong DevOps Foundations'
 author: Rob Bos
@@ -21,6 +21,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this post, Rob Bos challenges the current narrative around GitHub Copilot, advocating for a DevOps-focused approach rather than just productivity. He offers practical advice on integrating Copilot to strengthen engineering foundations and team processes.<!--excerpt_end-->
 

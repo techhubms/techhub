@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/azure-pricing-models-explained-pay-as-you-go-reserved-and-spot-instances/
 title: 'Azure Pricing Models Explained: Pay-As-You-Go, Reserved, and Spot Instances'
 author: Dellenny
@@ -21,6 +21,7 @@ tags:
 - Workload Planning
 section_names:
 - azure
+primary_section: azure
 ---
 Dellenny explains the differences between Pay-As-You-Go, Reserved, and Spot Instances on Azure, empowering readers to optimize cloud costs based on workload demands.<!--excerpt_end-->
 

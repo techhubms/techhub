@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/writing-a-string-numeric-comparer-with-dotnet-9
 title: 'Writing a String Numeric Comparer in .NET: Handling Numeric Sorting with Spans'
 author: Khalid Abuhakmeh
@@ -17,6 +17,7 @@ tags:
 - String Manipulation
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, Khalid Abuhakmeh explores building a numeric string comparer in .NET using modern C# features like Span APIs. He shares practical code, discusses challenges, and offers guidance for developers handling complex sorting scenarios.<!--excerpt_end-->
 

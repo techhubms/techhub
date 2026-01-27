@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2025/11/03/unified-agent-experience
 title: A Unified Experience for All Coding Agents in VS Code
 author: Burke Holland
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Burke Holland discusses the 2025 surge in coding agents within VS Code, including unified orchestration for GitHub Copilot, OpenAI Codex, and custom agents, offering developers more flexibility and control.<!--excerpt_end-->
 

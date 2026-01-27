@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/azure-devops-and-github-repositories-next-steps-in-the-path-to-agentic-ai/
 title: 'Azure DevOps and GitHub Repositories: Unlocking Agentic AI for Developer Teams'
 author: Rajesh Ramamurthy
@@ -28,6 +28,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Rajesh Ramamurthy details how GitHub Copilot's agentic AI, integrated with Azure DevOps and enhanced governance, can transform developer workflows, migration strategies, and productivity.<!--excerpt_end-->
 

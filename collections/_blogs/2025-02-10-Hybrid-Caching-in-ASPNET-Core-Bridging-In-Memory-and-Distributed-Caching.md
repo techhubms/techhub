@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code-maze.com/dotnet-hybrid-caching/
 title: 'Hybrid Caching in ASP.NET Core: Bridging In-Memory and Distributed Caching'
 author: Bozo Spoljaric
@@ -20,6 +20,7 @@ tags:
 - Web Application Performance
 section_names:
 - coding
+primary_section: coding
 ---
 Bozo Spoljaric explains hybrid caching in ASP.NET Core, presenting its implementation, configuration, and practical examples. The article targets developers optimizing data access and scalability in .NET applications by combining local and distributed cache strategies.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-the-public-preview-of-azure-container-apps-azure/ba-p/4450958
 title: Announcing Azure Container Apps Azure Monitor Dashboards with Grafana (Public Preview)
 author: carolinauribe
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 carolinauribe details the new public preview of Azure Container Apps Azure Monitor Dashboards with Grafana, explaining how teams can now easily monitor and analyze app performance using built-in, customizable dashboards in the Azure portal.<!--excerpt_end-->
 

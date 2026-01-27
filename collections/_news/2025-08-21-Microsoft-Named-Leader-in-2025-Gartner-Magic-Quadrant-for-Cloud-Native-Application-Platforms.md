@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/microsoft-is-a-leader-in-the-2025-gartner-magic-quadrant-for-cloud-native-application-platforms/
 title: Microsoft Named Leader in 2025 Gartner Magic Quadrant for Cloud-Native Application Platforms
 author: Scott Hunter
@@ -35,6 +35,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Scott Hunter shares Microsoft’s leadership position in the 2025 Gartner Magic Quadrant for Cloud-Native Application Platforms, highlighting advances in Azure’s cloud-native, AI, and developer tools.<!--excerpt_end-->
 

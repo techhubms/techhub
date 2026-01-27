@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=YXE880TLsfk
 title: End-to-End Migration of Applications to Azure IaaS and PaaS with AI Agents
 author: Microsoft Events
@@ -30,6 +30,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a hands-on session showing how Azure’s AI-powered migration agents support seamless migration of applications and workloads to Azure IaaS and PaaS. The talk by Ashish Babbar features practical demos, modernization guidance, and step-by-step strategies.<!--excerpt_end-->
 

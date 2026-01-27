@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-september-2025/
 title: Azure SDK Release Highlights – September 2025
 author: Ronnie Geraghty
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 Ronnie Geraghty provides an overview of the September 2025 Azure SDK releases, highlighting key updates, new libraries, and where to find detailed release notes for developers across multiple languages.<!--excerpt_end-->
 

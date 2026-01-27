@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 09
 date: 2019-10-01 00:00:00 +00:00
 author: Xebia
@@ -22,6 +22,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 XPRT Magazine 09 explores open source and the .NET Foundation, Azure API management, disaster recovery, machine learning, DevOps, observability, event storming, healthcare APIs, inclusive programming education, and more. This issue provides practical strategies and technical insights for building modern, resilient, and inclusive solutions.
 <!--excerpt_end-->

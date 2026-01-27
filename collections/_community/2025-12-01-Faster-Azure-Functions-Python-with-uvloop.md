@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faster-azure-functions-python-with-uvloop/ba-p/4455323
 title: Faster Azure Functions Python with uvloop
 author: eroman
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 eroman outlines how switching to uvloop boosts the performance of Azure Functions with Python 3.13+. Serverless apps now run asynchronous workloads faster and scale more efficiently – no code changes needed.<!--excerpt_end-->
 

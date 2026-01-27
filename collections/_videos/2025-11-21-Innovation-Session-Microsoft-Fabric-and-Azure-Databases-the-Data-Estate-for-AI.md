@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=wXeHChqpxDo
 title: 'Innovation Session: Microsoft Fabric and Azure Databases - the Data Estate for AI'
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events presents an in-depth session from Ignite 2025 featuring Arun Ulag and Michel Porter on how Microsoft Fabric, Power BI, Azure SQL, and Azure PostgreSQL empower unified, AI-ready data platforms.<!--excerpt_end-->
 

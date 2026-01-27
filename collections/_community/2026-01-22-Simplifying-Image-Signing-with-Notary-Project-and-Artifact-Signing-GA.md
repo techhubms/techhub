@@ -27,6 +27,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 YiZha shares how integrating the Notary Project with Azure Artifact Signing (GA) improves the image signing process in cloud-native applications, simplifying secure deployment workflows for teams.<!--excerpt_end-->
 

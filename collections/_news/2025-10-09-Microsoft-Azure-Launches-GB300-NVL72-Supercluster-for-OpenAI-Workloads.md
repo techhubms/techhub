@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/microsoft-azure-delivers-the-first-large-scale-cluster-with-nvidia-gb300-nvl72-for-openai-workloads/
 title: Microsoft Azure Launches GB300 NVL72 Supercluster for OpenAI Workloads
 author: Rani Borkar and Nidhi Chappell
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Rani Borkar and Nidhi Chappell introduce the Azure GB300 NVL72 cluster, detailing how a partnership with NVIDIA delivers a supercomputing platform that sets new standards for large-scale AI workloads and model training.<!--excerpt_end-->
 

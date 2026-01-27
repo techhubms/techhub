@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=VKaribNs6MA
 title: 'Hybrid Cloud Networking: Connecting Azure, AWS, GCP, and More'
 author: John Savill's Technical Training
@@ -28,6 +28,7 @@ tags:
 - VNet
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill's Technical Training provides a detailed walkthrough of connecting Azure with AWS, GCP, and Oracle, outlining key strategies for establishing robust hybrid cloud networking architectures.<!--excerpt_end-->
 

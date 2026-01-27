@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-virtual-network-manager-azure-virtual-wan/ba-p/4469991
 title: Unlocking Direct Spoke Communication with Azure Virtual Network Manager and Virtual WAN
 author: SimonaTarantola
@@ -22,6 +22,7 @@ tags:
 - Vwan
 section_names:
 - azure
+primary_section: azure
 ---
 SimonaTarantola analyzes the combined use of Azure Virtual Network Manager and Azure Virtual WAN, showing how architects can enable direct, resilient spoke-to-spoke communication and achieve simpler, high-performance network designs.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=bjMdBPLl4Kc
 title: 'Unlocking MCP Server: AI Integration for Dataverse & Dynamics 365'
 author: Microsoft Developer
@@ -28,6 +28,7 @@ tags:
 - Technology
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Developer presents Elaiza Benitez and Nathan Rose discussing how to leverage MCP Server for low-code AI integration in Dataverse, Dynamics 365, and Copilot Studio, with practical demos and expert insights.<!--excerpt_end-->
 

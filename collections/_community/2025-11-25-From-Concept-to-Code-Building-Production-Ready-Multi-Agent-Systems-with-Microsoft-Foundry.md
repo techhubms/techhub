@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-concept-to-code-building-production-ready-multi-agent/ba-p/4472752
 title: 'From Concept to Code: Building Production-Ready Multi-Agent Systems with Microsoft Foundry'
 author: kinfey
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 kinfey explains how to leverage Microsoft Foundry, Agent Framework, and VSCode for building powerful multi-agent AI solutions, detailing each step from visual design to code deployment.<!--excerpt_end-->
 

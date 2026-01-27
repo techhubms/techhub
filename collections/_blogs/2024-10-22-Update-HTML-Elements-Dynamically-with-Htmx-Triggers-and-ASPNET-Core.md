@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/update-html-elements-with-htmx-triggers-and-aspnet-core
 title: Update HTML Elements Dynamically with Htmx Triggers and ASP.NET Core
 author: Khalid Abuhakmeh
@@ -19,6 +19,7 @@ tags:
 - Web Development
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, Khalid Abuhakmeh walks through using Htmx's HX-Trigger headers with ASP.NET Core Razor Pages to seamlessly update UI elements like avatars upon profile changes, backed by practical code examples and integration tips.<!--excerpt_end-->
 

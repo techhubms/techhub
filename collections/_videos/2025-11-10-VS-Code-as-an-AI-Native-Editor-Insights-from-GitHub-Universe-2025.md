@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=TaTPDLl0I-Q
 title: 'VS Code as an AI-Native Editor: Insights from GitHub Universe 2025'
 author: Visual Studio Code
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code’s team, led by Pierce, explores how VS Code is evolving into an AI-native editor—highlighting new Copilot upgrades, agent APIs, and behind-the-scenes developments at GitHub Universe 2025.<!--excerpt_end-->
 

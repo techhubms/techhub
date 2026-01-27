@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-12-secret-scanning-adds-12-validators-including-cockroach-labs-polar-and-yandex
 title: 'Secret Scanning Expands Support: 12 New Token Validators Added to GitHub'
 author: Allison
@@ -28,6 +28,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison reports on GitHub’s secret scanning improvements, highlighting expanded support for 12 new token types and enhanced credential validity checks to bolster repository security.<!--excerpt_end-->
 

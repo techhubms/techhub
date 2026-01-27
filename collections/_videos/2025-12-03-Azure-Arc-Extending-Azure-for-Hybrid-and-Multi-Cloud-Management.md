@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=rQBFAKJ-Ea8
 title: 'Azure Arc: Extending Azure for Hybrid and Multi-Cloud Management'
 author: Microsoft Events
@@ -33,6 +33,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Microsoft Events presents a session by Brendan Burns and Steven Bucher on Azure Arc, highlighting how Azure's management extends to hybrid and multi-cloud environments, with security and operational strategies for system administrators.<!--excerpt_end-->
 

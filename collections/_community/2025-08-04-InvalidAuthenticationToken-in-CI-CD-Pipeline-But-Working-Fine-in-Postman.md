@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mhac2s/invalidauthenticationtoken_in_cicd_pipeline_but/
 title: InvalidAuthenticationToken in CI-CD Pipeline But Working Fine in Postman
 author: sayytoabhishekkumar
@@ -18,6 +18,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Authored by sayytoabhishekkumar, this post explores an 'InvalidAuthenticationToken' issue encountered during Azure REST API calls from a CI-CD pipeline—even though the equivalent request functions as expected in Postman.<!--excerpt_end-->
 

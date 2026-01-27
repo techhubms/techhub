@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-premium-v4-for-azure-app/ba-p/4446204
 title: General Availability of Premium v4 for Azure App Service
 author: Stefan_Schackow
@@ -21,6 +21,7 @@ tags:
 - Windows
 section_names:
 - azure
+primary_section: azure
 ---
 Stefan Schackow shares an overview of Azure App Service Premium v4 GA, outlining its improved performance, lower costs, hardware enhancements, and updated service tiers for both Windows and Linux users.<!--excerpt_end-->
 

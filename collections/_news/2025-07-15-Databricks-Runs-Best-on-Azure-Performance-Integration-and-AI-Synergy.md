@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/databricks-runs-best-on-azure/
 title: 'Databricks Runs Best on Azure: Performance, Integration, and AI Synergy'
 author: Jason Pereira and Anavi Nahar
@@ -31,6 +31,7 @@ section_names:
 - ml
 - devops
 - security
+primary_section: ai
 ---
 In this post, Jason Pereira and Anavi Nahar outline how Azure Databricks delivers a streamlined, high-performance environment for analytics and AI, leveraging tight integration with the Microsoft ecosystem.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/announcing-dotnet-aspire-95/
 title: Announcing Aspire 9.5
 author: Jeffrey Fritz
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Jeffrey Fritz announces Aspire 9.5, highlighting rich new features for .NET distributed application developers, including enhanced AI integrations, streamlined DevOps workflows, and powerful CLI and dashboard improvements.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mi1ffw/hybrid_users_entra_joined_laptops_force_password/
 title: Managing First Login Password Change for Hybrid Users on Entra Joined Laptops
 author: simdre79
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Author simdre79 explores the difficulties of enforcing password changes at first login for hybrid users on Entra joined laptops, especially after transitioning from hybrid to Entra join. This article offers insights and practical issues encountered during device enrollment and user onboarding.<!--excerpt_end-->
 

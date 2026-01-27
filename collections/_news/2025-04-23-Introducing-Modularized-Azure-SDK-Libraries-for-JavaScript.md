@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-modularized-libraries-for-javascript/
 title: Introducing Modularized Azure SDK Libraries for JavaScript
 author: Qiaoqiao Zhang
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 Qiaoqiao Zhang introduces the new modularized Azure SDK libraries for JavaScript, focusing on bundle size optimization, usability improvements, and architectural enhancements that benefit developers building Azure-integrated applications.<!--excerpt_end-->
 

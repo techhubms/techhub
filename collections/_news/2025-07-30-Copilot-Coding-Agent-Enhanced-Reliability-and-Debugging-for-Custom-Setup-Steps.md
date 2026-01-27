@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-30-copilot-coding-agent-custom-setup-steps-are-more-reliable-and-easier-to-debug
 title: 'Copilot Coding Agent: Enhanced Reliability and Debugging for Custom Setup Steps'
 author: Allison
@@ -18,6 +18,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces recent improvements to the GitHub Copilot coding agent, detailing enhanced reliability and easier debugging for custom workflow setup steps. These changes streamline automation for developers using Copilot Pro, Business, or Enterprise.<!--excerpt_end-->
 

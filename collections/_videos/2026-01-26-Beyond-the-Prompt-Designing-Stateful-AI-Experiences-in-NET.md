@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 dotnet presents a technical session featuring Saeed Esmaeelinejad, Katie Savage, Maira Wenzel, and Scott Addie, exploring how to design stateful AI experiences in .NET with Azure AI Assistants.<!--excerpt_end-->
 

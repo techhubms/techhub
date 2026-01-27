@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog announces Microsoft Fabric Data Warehouse’s designation as a leader and outperformer in the 2025 GigaOm Radar, highlighting technical architecture and future roadmap.<!--excerpt_end-->
 

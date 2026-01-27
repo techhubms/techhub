@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_ai-generated-population-scale-is-changing-activity-7404189540757831680-VtoO
 title: AI-Powered Spatial Proteomics Platform GigaTIME Accelerates Cancer Discovery
 author: stclarke
@@ -22,6 +22,7 @@ tags:
 - Tumor Microenvironment
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke summarizes how Satya Nadella and team introduced GigaTIME, an AI-driven tool developed by Microsoft, Providence, and the University of Washington, that enables population-scale spatial proteomics from routine pathology slides, significantly advancing cancer research.<!--excerpt_end-->
 

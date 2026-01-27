@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mehnkp/free_post_fridays_is_now_live_please_follow_these/
 title: Free Post Fridays is now live, please follow these rules!
 author: AutoModerator
@@ -17,6 +17,7 @@ tags:
 - Workplace Safety
 section_names:
 - azure
+primary_section: azure
 ---
 Authored by AutoModerator, this post announces the launch of Free Post Fridays and provides clear rules for community participation, emphasizing Azure relevance.<!--excerpt_end-->
 

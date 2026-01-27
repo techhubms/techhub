@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ubuntu-powered-runtimes-on-azure-app-service-for-linux-leaner/ba-p/4465414
 title: Ubuntu-Based Runtimes Coming to Azure App Service for Linux
 author: TulikaC
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 TulikaC explains how Azure App Service for Linux is transitioning its new application runtimes to Ubuntu LTS, outlining the changes for developers and the operational benefits of this update.<!--excerpt_end-->
 

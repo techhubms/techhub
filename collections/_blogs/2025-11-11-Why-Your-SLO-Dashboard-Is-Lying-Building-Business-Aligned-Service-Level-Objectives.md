@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/why-your-slo-dashboard-is-lying-moving-beyond-vanity-metrics-in-production/
 title: 'Why Your SLO Dashboard Is Lying: Building Business-Aligned Service Level Objectives'
 author: Muhammad Yawar Malik
@@ -46,6 +46,7 @@ tags:
 - Weighted Error Budgets
 section_names:
 - devops
+primary_section: devops
 ---
 Muhammad Yawar Malik explores the pitfalls of traditional SLO dashboards and presents a hands-on framework for building service level objectives that reflect true business impact, transforming how DevOps teams prioritize reliability.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/what-is-microsoft-azure-a-beginners-guide-to-the-azure-ecosystem/
 title: What Is Microsoft Azure? A Beginner’s Guide to the Azure Ecosystem
 author: Dellenny
@@ -31,6 +31,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 Dellenny presents a comprehensive beginner’s overview of Microsoft Azure, covering its main services, advantages, and essential tools for IT professionals and developers entering the Azure ecosystem.<!--excerpt_end-->
 

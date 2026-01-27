@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.stevejgordon.co.uk/a-brief-introduction-to-the-dotnet-muxer
 title: A Brief Introduction to the .NET Muxer (aka dotnet.exe)
 author: Steve Gordon
@@ -23,6 +23,7 @@ tags:
 - Tracing
 section_names:
 - coding
+primary_section: coding
 ---
 In this introduction by Steve Gordon, readers gain foundational knowledge of the .NET muxer (dotnet.exe), an essential component of the .NET ecosystem. Gordon's thorough exploration unveils the inner workings and key mechanisms underpinning the .NET command-line interface.<!--excerpt_end-->
 

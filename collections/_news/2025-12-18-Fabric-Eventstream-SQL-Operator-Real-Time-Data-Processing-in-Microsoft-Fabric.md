@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-eventstream-sql-operator-your-tool-kit-to-real-time-data-processing-in-fabric-real-time-intelligence/
 title: 'Fabric Eventstream SQL Operator: Real-Time Data Processing in Microsoft Fabric'
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 The Microsoft Fabric Blog details how the new SQL operator in Fabric Eventstream empowers data engineers and analysts to build powerful real-time data processing and anomaly detection solutions using familiar SQL syntax within the Fabric Real-Time Intelligence suite.<!--excerpt_end-->
 

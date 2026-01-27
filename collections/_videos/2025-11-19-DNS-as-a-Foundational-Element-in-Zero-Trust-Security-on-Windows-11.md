@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=o847EwaNhgQ
 title: DNS as a Foundational Element in Zero Trust Security on Windows 11
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 - ZT DNS
 section_names:
 - security
+primary_section: security
 ---
 Microsoft Events reveals how DNS enforcement strengthens Zero Trust security on Windows 11, offering technical insight into threat containment, granular access controls, and real-world implementation within Microsoft environments.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/emea/features/the-benefits-of-ai-in-healthcare-extend-far-beyond-improved-patient-care/
 title: 'How AI Is Transforming Healthcare in Kenya: Beyond Patient Care'
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 - Workforce Development
 section_names:
 - ai
+primary_section: ai
 ---
 Authored by Phyllis Migwi and presented by stclarke, this article examines the role of AI in transforming healthcare in Kenya, focusing on infrastructure, workforce development, and equity.<!--excerpt_end-->
 

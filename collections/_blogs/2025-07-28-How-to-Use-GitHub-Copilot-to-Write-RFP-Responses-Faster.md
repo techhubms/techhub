@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/win-more-bids-how-to-use-github-copilot-to-write-winning-rfp-responses-faster/
 title: How to Use GitHub Copilot to Write RFP Responses Faster
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny explains how GitHub Copilot can streamline and supercharge the process of responding to RFPs, offering practical steps and Copilot prompt strategies for technical teams and developers.<!--excerpt_end-->
 

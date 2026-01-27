@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=XHcb_XNq9vw
 title: Transforming Public Sector Services with Microsoft Cloud and AI
 author: Microsoft Events
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents an Ignite session detailing how cloud and AI technology drive innovation and operational efficiency for government agencies, including real-world case studies and solution frameworks.<!--excerpt_end-->
 

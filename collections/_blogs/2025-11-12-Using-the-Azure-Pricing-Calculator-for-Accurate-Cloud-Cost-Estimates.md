@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-to-use-the-azure-pricing-calculator-effectively-a-step-by%e2%80%90step-guide/
 title: Using the Azure Pricing Calculator for Accurate Cloud Cost Estimates
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 - Virtual Machines
 section_names:
 - azure
+primary_section: azure
 ---
 Dellenny provides a clear guide on effectively using the Azure Pricing Calculator, helping developers, IT managers, and finance professionals estimate and plan cloud costs with confidence.<!--excerpt_end-->
 

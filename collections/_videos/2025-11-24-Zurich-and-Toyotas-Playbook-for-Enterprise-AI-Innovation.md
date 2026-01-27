@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=iRQcoiEJyKE
 title: Zurich and Toyota’s Playbook for Enterprise AI Innovation
 author: Microsoft Events
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events hosts Zurich and Toyota tech leaders as they share practical strategies and lessons learned in enterprise AI deployment, focusing on overcoming real technical and business challenges.<!--excerpt_end-->
 

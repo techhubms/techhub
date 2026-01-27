@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mf10vc/templates_for_mvc_razor_pages_with_a_modern/
 title: Templates for MVC / Razor Pages with a Modern Frontend Build System
 author: baunegaard
@@ -17,6 +17,7 @@ tags:
 - Webpack
 section_names:
 - coding
+primary_section: coding
 ---
 In this article, baunegaard introduces a minimal template repository for ASP.NET MVC and Razor Pages, featuring a modern Webpack-driven frontend approach.<!--excerpt_end-->
 

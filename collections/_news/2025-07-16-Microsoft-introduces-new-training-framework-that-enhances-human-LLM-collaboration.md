@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/research/blog/collabllm-teaching-llms-to-collaborate-with-users/
 title: Microsoft introduces new training framework that enhances human-LLM collaboration
 author: stclarke
@@ -18,6 +18,7 @@ tags:
 - Training Framework
 section_names:
 - ai
+primary_section: ai
 ---
 In this article, stclarke highlights Microsoft's introduction of a novel training framework designed to facilitate more effective collaboration between humans and large language models (LLMs). The article explores how the framework aims to optimize interactions and practical results when using AI systems, marking a step forward in Microsoft's AI innovation and usability.<!--excerpt_end-->
 

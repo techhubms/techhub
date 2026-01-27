@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-11-repository-dashboard-find-search-and-save-queries-in-preview
 title: 'Repository Dashboard Preview: Centralized Search, Filtering, and Saved Queries on GitHub'
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - Workflow Management
 section_names:
 - devops
+primary_section: devops
 ---
 Allison explains the GitHub repository dashboard preview, showcasing how developers can efficiently find, filter, and save repository views to manage their workflows.<!--excerpt_end-->
 

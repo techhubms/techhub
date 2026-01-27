@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=4KcpgQlFa58
 title: Setting Up AI Toolkit and GitHub Copilot for Microsoft Foundry Projects
 author: Microsoft Developer
@@ -26,6 +26,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 April from Microsoft Developer guides viewers through setting up the AI Toolkit and GitHub Copilot within Visual Studio Code, focusing on environment preparation for developing agents using Microsoft Foundry models.<!--excerpt_end-->
 

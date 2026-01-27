@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/introducing-azure-local-training-empowering-you-to-succeed/ba-p/4447957
 title: 'Azure Local Training Program: Self-Paced Cloud Management Skills'
 author: ShireenIsab
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 ShireenIsab announces the Azure Local Training Program, providing a free, self-paced education platform designed to help users master Azure Local environment management.<!--excerpt_end-->
 

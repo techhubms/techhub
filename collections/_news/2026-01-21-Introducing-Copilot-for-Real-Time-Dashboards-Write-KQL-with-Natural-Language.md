@@ -17,6 +17,7 @@ tags:
 - Real Time Dashboards
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Fabric Blog announces the integration of Copilot into Real-Time Dashboard tile editing, empowering users to generate KQL queries from natural language questions using AI.<!--excerpt_end-->
 

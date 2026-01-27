@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=eOKhk7Le9n8
 title: Advancing Industrial Agility with Agentic AI at Microsoft Ignite
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a breakout session at Ignite 2025 featuring industry leaders reflecting on agentic AI applications and automation in sectors including energy and manufacturing.<!--excerpt_end-->
 

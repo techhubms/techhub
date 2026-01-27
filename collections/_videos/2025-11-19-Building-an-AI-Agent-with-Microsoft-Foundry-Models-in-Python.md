@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fUuTvoDPyzo
 title: Building an AI Agent with Microsoft Foundry Models in Python
 author: Microsoft Developer
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Developer explains how to build an AI agent using Microsoft Foundry models and Python in Visual Studio Code, including deployment, environment setup, and agent tracing.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-22-github-copilot-app-modernization-is-now-generally-available-for-java-and-net
 title: GitHub Copilot App Modernization Now Available for Java and .NET Projects
 author: Allison
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces the general availability of GitHub Copilot's app modernization features for Java and .NET projects, enabling developers to automate upgrades, code transformations, and deployment tasks.<!--excerpt_end-->
 

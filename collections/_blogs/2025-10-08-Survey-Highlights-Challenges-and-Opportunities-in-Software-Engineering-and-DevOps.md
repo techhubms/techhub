@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/survey-surfaces-lots-of-room-for-software-engineering-improvement/
 title: Survey Highlights Challenges and Opportunities in Software Engineering and DevOps
 author: Mike Vizard
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 In this article, Mike Vizard analyzes a recent Chainguard survey uncovering persistent challenges in software engineering and DevOps, especially around workflow fragmentation, tool integration, and the realistic impact of AI on developer productivity.<!--excerpt_end-->
 

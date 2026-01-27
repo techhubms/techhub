@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mhgbww/apimanagement_create_mcp_server_from_api_error/
 title: "ApiManagement MCP Server Creation Error: 'Error converting value mcp'"
 author: Competitive-Ad-5081
@@ -17,6 +17,7 @@ tags:
 - REST API
 section_names:
 - azure
+primary_section: azure
 ---
 Authored by Competitive-Ad-5081, this post details a technical issue faced when exposing an API as an MCP server via Azure API Management and seeks advice from the community.<!--excerpt_end-->
 

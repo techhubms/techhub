@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=looF4pizVps
 title: 'Blueprint for AI Transformation: Roadmaps and Process Design'
 author: Microsoft Events
@@ -21,6 +21,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Microsoft Events presents a session at Microsoft Ignite 2025, led by Bear Shelton, demonstrating how to build actionable AI transformation blueprints using Microsoft ecosystem tools.<!--excerpt_end-->
 

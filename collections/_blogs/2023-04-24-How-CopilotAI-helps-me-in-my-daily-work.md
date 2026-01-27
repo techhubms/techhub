@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devopsjournal.io/blog/2023/04/24/how-Copilot-helps-me-in-my-daily-work
 title: How Copilot/AI helps me in my daily work
 author: Rob Bos
@@ -17,6 +17,7 @@ section_names:
 - azure
 - github-copilot
 - coding
+primary_section: github-copilot
 ---
 In this article, Rob Bos shares insights into leveraging AI tools, especially GitHub Copilot, to accelerate application and code generation workflows, focusing on GitHub Actions deployment protection and app setup. <!--excerpt_end-->
 

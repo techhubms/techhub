@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ayWSbRDQ1ds
 title: Azure Update - Ignite Special Coverage (21st November 2025)
 author: John Savill's Technical Training
@@ -35,6 +35,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 John Savill's Technical Training presents an in-depth Ignite 2025 Azure update, highlighting major releases, improvements, security upgrades, AI and ML advancements, and DevOps innovations across the Microsoft cloud ecosystem.<!--excerpt_end-->
 

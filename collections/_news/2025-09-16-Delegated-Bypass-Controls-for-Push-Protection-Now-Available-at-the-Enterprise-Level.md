@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-16-delegated-bypass-controls-for-push-protection-now-available-at-the-enterprise-level
 title: Delegated Bypass Controls for Push Protection Now Available at the Enterprise Level
 author: Allison
@@ -22,6 +22,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison announces new enterprise-level delegated bypass controls for push protection in GitHub secret scanning, highlighting features for managing approvers and reviewer workflows.<!--excerpt_end-->
 

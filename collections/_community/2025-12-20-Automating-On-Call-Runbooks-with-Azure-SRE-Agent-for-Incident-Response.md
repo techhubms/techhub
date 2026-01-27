@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/stop-running-runbooks-at-3-am-let-azure-sre-agent-do-your-on/ba-p/4479811
 title: Automating On-Call Runbooks with Azure SRE Agent for Incident Response
 author: dchelupati
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 In this post, dchelupati details how Azure SRE Agent can automate the tedious on-call runbook execution process for DevOps and SRE teams, enabling faster, more reliable incident diagnostics.<!--excerpt_end-->
 

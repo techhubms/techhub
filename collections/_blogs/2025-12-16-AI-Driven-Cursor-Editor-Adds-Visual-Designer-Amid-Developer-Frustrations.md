@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devclass.com/2025/12/16/cursor-ai-editor-gets-visual-designer-but-bugs-and-ever-changing-ui-irk-developers/
 title: AI-Driven Cursor Editor Adds Visual Designer Amid Developer Frustrations
 author: Tim Anderson
@@ -31,6 +31,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Tim Anderson examines the new visual web designer in Cursor, an AI-powered editor based on VS Code, exploring its technical features and developer reactions to bugs and UI changes.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enabling-private-connectivity-for-microsoft-fabric-a-practical/ba-p/4471190
 title: Architecting Private-Only Microsoft Fabric in Zero-Trust Azure Environments
 author: mohit-kanojia
@@ -29,6 +29,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Mohit Kanojia shares his field-tested approach for deploying Microsoft Fabric as a private-only SaaS platform within highly regulated Azure enterprise networks, tackling analytics, governance, and security integration.<!--excerpt_end-->
 

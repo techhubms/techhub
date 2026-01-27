@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-03-github-copilot-cli-enhanced-model-selection-image-support-and-streamlined-ui
 title: 'GitHub Copilot CLI: Enhanced Model Selection, Image Recognition, and Streamlined UI Improvements'
 author: Dylan Birtolo
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Dylan Birtolo announces significant updates to GitHub Copilot CLI, including model selection improvements, image support, and enhanced UI for developers.<!--excerpt_end-->
 

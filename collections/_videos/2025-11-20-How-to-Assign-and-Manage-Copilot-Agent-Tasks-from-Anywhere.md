@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=__RLpdxThEE
 title: How to Assign and Manage Copilot Agent Tasks from Anywhere
 author: GitHub
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a guide on assigning and managing Copilot agent tasks from anywhere, with insights from the GitHub team on local autonomous agents, custom agent creation, and multi-platform integration.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/visual-studio-copilot-gets-planning-mode-for-complex-tasks/
 title: Visual Studio Copilot Gets Planning Mode for Complex Tasks
 author: Tom Smith
@@ -45,6 +45,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Tom Smith introduces Microsoft’s new Planning feature for Visual Studio Copilot, highlighting how it improves AI-powered development workflows for complex, multistep tasks.<!--excerpt_end-->
 

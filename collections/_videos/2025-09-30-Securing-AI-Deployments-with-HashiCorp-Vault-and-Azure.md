@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=l7q6w6eICgw
 title: Securing AI Deployments with HashiCorp Vault & Azure
 author: Microsoft Developer
@@ -31,6 +31,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 In this Sip and Sync episode, Microsoft Developer hosts David Wright from HashiCorp to explore securing enterprise AI deployments using Vault, Terraform, and Azure. The session showcases practical solutions for credential management and secure, scalable AI production.<!--excerpt_end-->
 

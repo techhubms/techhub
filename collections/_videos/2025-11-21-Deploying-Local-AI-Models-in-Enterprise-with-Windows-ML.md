@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FxwkjmKJdC0
 title: Deploying Local AI Models in Enterprise with Windows ML
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Microsoft Events present a technical deep-dive into deploying local AI models using Windows ML, led by Andrew Leader and Anastasiya Tarnouskaya. Discover best practices and engineering details for high-performance, on-device inferencing.<!--excerpt_end-->
 

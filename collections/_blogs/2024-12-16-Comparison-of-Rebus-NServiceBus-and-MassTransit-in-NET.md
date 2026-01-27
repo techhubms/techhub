@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code-maze.com/aspnetcore-comparison-of-rebus-nservicebus-and-masstransit/
 title: Comparison of Rebus, NServiceBus, and MassTransit in .NET
 author: Michal Kaminski
@@ -26,6 +26,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 Authored by Michal Kaminski, this comprehensive comparison explores Rebus, NServiceBus, and MassTransit, guiding .NET developers through their features, implementation, and use cases.<!--excerpt_end-->
 

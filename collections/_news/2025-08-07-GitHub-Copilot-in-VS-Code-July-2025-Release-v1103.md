@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-07-github-copilot-in-vs-code-july-release-v1-103
 title: GitHub Copilot in VS Code July 2025 Release (v1.103)
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison highlights the major improvements and experimental features introduced in the July 2025 GitHub Copilot for VS Code (v1.103) update, focusing on enhanced chat, agent workflows, and developer productivity tools.<!--excerpt_end-->
 

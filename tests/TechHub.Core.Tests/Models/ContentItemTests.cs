@@ -16,12 +16,15 @@ public class ContentItemTests
             Title = "Test Article",
             Author = "Test Author",
             DateEpoch = 1705305600, // 2024-01-15 00:00:00 UTC
+            DateIso = "2024-01-15",
             CollectionName = "news",
             SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = ["AI", "News", "Machine Learning"],
             RenderedHtml = "<p>Test content</p>",
             Excerpt = "Test excerpt",
-            ExternalUrl = null
+            ExternalUrl = null,
+            Url = "/ai/news/test-article"
         };
     }
 
@@ -53,11 +56,14 @@ public class ContentItemTests
             Slug = "test-slug",
             Title = "Test Title",
             DateEpoch = 1704844800,
+            DateIso = "2024-01-10",
             CollectionName = "news",
             SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
-            Excerpt = "Test excerpt"
+            Excerpt = "Test excerpt",
+            Url = "/ai/news/test-slug"
         };
 
         // Act
@@ -81,11 +87,14 @@ public class ContentItemTests
             Title = "Test Title",
             Author = "Test Author",
             DateEpoch = 1705305600,
+            DateIso = "2024-01-15",
             CollectionName = "news",
             SectionNames = ["ai"],
+            PrimarySectionName = "ai",
             Tags = ["test"],
             RenderedHtml = "<p>Test</p>",
-            Excerpt = "Test excerpt"
+            Excerpt = "Test excerpt",
+            Url = "/ai/news/test-slug"
         };
 
         // Assert

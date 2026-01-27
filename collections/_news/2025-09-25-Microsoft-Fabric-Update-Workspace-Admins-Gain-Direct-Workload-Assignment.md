@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/new-in-microsoft-fabric-empowering-workspace-admins-with-direct-workload-assignment/
 title: 'Microsoft Fabric Update: Workspace Admins Gain Direct Workload Assignment'
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog announces a major update empowering workspace admins to directly assign additional workloads like Osmos and Profisee, improving agility and governance in data and analytics operations.<!--excerpt_end-->
 

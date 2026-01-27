@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/study-buddy-learning-data-science-and-machine-learning-with-an/ba-p/4460144
 title: 'Study Buddy: Learning Data Science and Machine Learning with an AI Sidekick'
 author: bethanyjep
@@ -22,6 +22,7 @@ section_names:
 - ai
 - github-copilot
 - ml
+primary_section: github-copilot
 ---
 Bethanyjep presents the Study Buddy Agent, an AI-powered companion for the Data Science For Beginners curriculum. Utilizing GitHub Copilot’s chatmode, the assistant helps learners navigate data science and machine learning concepts interactively and intuitively.<!--excerpt_end-->
 

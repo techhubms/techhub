@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=IJ8s5OvbFdg
 title: Modern Windows Development with .NET
 author: dotnet
@@ -26,6 +26,7 @@ tags:
 - WinUI 3
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet presents a session on using .NET 10, WinUI 3, and the Windows App SDK to modernize Windows desktop application development and leverage the full power of the Windows platform with the latest toolset.<!--excerpt_end-->
 

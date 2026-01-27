@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-ignite-2025-update/ba-p/4469815
 title: 'Azure Functions Ignite 2025: Flex Consumption, MCP Servers, Agents, OpenTelemetry, and More'
 author: paulyuk
@@ -35,6 +35,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 paulyuk presents a rich technical overview of Azure Functions advancements for 2025, focusing on scalable serverless architecture, AI agent enablement, and deep integration of security, monitoring, and developer experience.<!--excerpt_end-->
 

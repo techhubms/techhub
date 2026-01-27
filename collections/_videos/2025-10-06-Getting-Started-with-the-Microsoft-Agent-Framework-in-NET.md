@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=KDxi3NG3nfU
 title: Getting Started with the Microsoft Agent Framework in .NET
 author: dotnet
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Join Bruno Capuano and Zack Way as they guide you through the essentials of the Microsoft Agent Framework with .NET, providing hands-on demos and foundational knowledge for building AI-powered agents.<!--excerpt_end-->
 

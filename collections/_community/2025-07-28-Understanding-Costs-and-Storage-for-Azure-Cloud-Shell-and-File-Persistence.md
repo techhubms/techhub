@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mbuxp4/what_is_cost_and_how_do_have_cloud_space_for/
 title: Understanding Costs and Storage for Azure Cloud Shell and File Persistence
 author: smydsmith
@@ -17,6 +17,7 @@ tags:
 - Storage Accounts
 section_names:
 - azure
+primary_section: azure
 ---
 Authored by smydsmith, this article discusses the costs and details of using Azure Cloud Shell's file storage, specifically addressing questions about licensing, pricing, and storage persistence within Azure environments.<!--excerpt_end-->
 

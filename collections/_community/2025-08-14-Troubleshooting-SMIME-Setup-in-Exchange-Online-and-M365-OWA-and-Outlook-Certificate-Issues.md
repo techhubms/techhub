@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/exchange/smime-not-working-in-owa/m-p/4443230#M16650
 title: 'Troubleshooting S/MIME Setup in Exchange Online and M365: OWA and Outlook Certificate Issues'
 author: JChristiansen
@@ -25,6 +25,7 @@ tags:
 - Windows
 section_names:
 - security
+primary_section: security
 ---
 JChristiansen provides a hands-on report documenting their S/MIME deployment experience with Exchange Online, Intune, and mixed Windows/macOS endpoints, focusing on certificate publishing and troubleshooting Outlook/OWA trust issues.<!--excerpt_end-->
 

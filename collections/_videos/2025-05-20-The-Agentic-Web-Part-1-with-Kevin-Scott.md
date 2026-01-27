@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=gnLLC4mQl4s
 title: The Agentic Web [Part 1] with Kevin Scott
 author: Microsoft Events
@@ -18,6 +18,7 @@ tags:
 - Technology Trends
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents Kevin Scott sharing perspectives on the current AI landscape and the rise of agentic systems, setting the stage for deeper exploration in this two-part pre-Build conversation.<!--excerpt_end-->
 

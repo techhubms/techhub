@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devclass.com/2025/07/02/microsoft-sql-server-mcp-tool-leap-in-data-interaction-or-limited-and-frustrating/
 title: 'Microsoft Previews MCP Tool for SQL Server: Enhancing AI-Driven Database Interaction'
 author: Tim Anderson
@@ -32,6 +32,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Tim Anderson analyzes Microsoft's MCP tool for SQL Server, highlighting its AI-powered capabilities, practical frustrations, and integration with Node.js, .NET, and Azure SQL for developers.<!--excerpt_end-->
 

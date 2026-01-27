@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-6-passkey-support-for-aspnetcore-identity/
 title: Exploring Passkey Support in ASP.NET Core Identity with .NET 10 Preview 6
 author: Andrew Lock
@@ -21,6 +21,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 In this comprehensive post, Andrew Lock examines the new passkey support introduced in ASP.NET Core Identity and the Blazor Web App template as part of .NET 10 preview 6, explaining both user and implementation perspectives.<!--excerpt_end-->
 

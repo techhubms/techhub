@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Dan Hellem outlines the latest updates and upcoming features in Azure Repos, offering practical guidance on streamlined repository management for developers and DevOps professionals.<!--excerpt_end-->
 

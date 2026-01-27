@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=8hyvYP5PCks
 title: Accelerating Pull Request Reviews with GitHub Copilot Code Review
 author: GitHub
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub's Elle Shwer introduces Copilot code review, demonstrating how the AI assistant helps developers close pull requests faster while maintaining code quality.<!--excerpt_end-->
 

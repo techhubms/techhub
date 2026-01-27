@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/orchestrating-multi-agent-intelligence-mcp-driven-patterns-in/ba-p/4462150
 title: Orchestrating Multi-Agent Intelligence with Microsoft Agent Framework and MCP
 author: heenaugale
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 heenaugale explores how the Microsoft Agent Framework and Model Context Protocol enable modular AI orchestration, showcasing practical multi-agent collaboration patterns built on Azure technology.<!--excerpt_end-->
 

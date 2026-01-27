@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code-maze.com/csharp-chain-of-responsibility-design-pattern/
 title: Chain of Responsibility Design Pattern in C#
 author: Ahsan Ullah
@@ -18,6 +18,7 @@ tags:
 - Software Architecture
 section_names:
 - coding
+primary_section: coding
 ---
 Ahsan Ullah explores the Chain of Responsibility design pattern in this in-depth article, demonstrating how to implement and leverage it for flexible, maintainable C# applications.<!--excerpt_end-->
 

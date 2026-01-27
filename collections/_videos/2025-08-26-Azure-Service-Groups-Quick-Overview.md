@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/E_-t-YjR2fk
 title: Azure Service Groups Quick Overview
 author: John Savill's Technical Training
@@ -18,6 +18,7 @@ tags:
 - Technical Training
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill's Technical Training presents a concise video outlining the fundamentals of Azure Service Groups for better cloud resource management on Microsoft Azure.<!--excerpt_end-->
 

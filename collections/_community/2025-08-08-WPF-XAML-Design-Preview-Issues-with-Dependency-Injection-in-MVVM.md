@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mkicbg/wpf_help_needed_ui_xaml_does_not_show_design/
 title: WPF XAML Design Preview Issues with Dependency Injection in MVVM
 author: nile-code
@@ -23,6 +23,7 @@ tags:
 - XAML
 section_names:
 - coding
+primary_section: coding
 ---
 nile-code raises a practical WPF/MVVM issue: design previews break when injecting the DataContext from code-behind due to dependency-injected ViewModel constructors. Community members discuss solutions and reference Microsoft documentation and StackOverflow answers.<!--excerpt_end-->
 

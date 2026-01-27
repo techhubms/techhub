@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-september/
 title: 'Roadmap for AI and GitHub Copilot in Visual Studio: September Update'
 author: Rhea Patel
@@ -30,6 +30,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Rhea Patel presents the September roadmap for integrating AI, agentic tools, and GitHub Copilot within Visual Studio, outlining major enhancements for developers, including new agents, customizable modes, and improved DevOps integrations.<!--excerpt_end-->
 

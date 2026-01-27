@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/unlock-savings-with-copilot-credit-pre-purchase-plan/ba-p/4464517
 title: Cost Optimization with Copilot Credit Pre-Purchase Plan for Microsoft Copilot Studio
 author: kyleikeda
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 kyleikeda explores how organizations can optimize their AI project budgets using the Copilot Credit Pre-Purchase Plan, designed for Microsoft Copilot Studio. This guide covers implementation, cost savings, and best practices.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mezre9/github_copilot_changelog_thread/
 title: GitHub Copilot Changelog Thread
 author: AutoModerator
@@ -14,6 +14,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Authored by AutoModerator, this thread is dedicated to posting and tracking GitHub Copilot changelogs. It acts as a resource for developers keen on staying updated with Copilot enhancements.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/supercharge-your-tm-forum-open-api-development-with-github/ba-p/4451366
 title: Supercharge TM Forum Open API Development with GitHub Copilot
 author: 6192751
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 6192751 explains how telecom developers can use GitHub Copilot to quickly create TM Forum Open API-compliant applications, from setup to real-world workflow and testing guidance.<!--excerpt_end-->
 

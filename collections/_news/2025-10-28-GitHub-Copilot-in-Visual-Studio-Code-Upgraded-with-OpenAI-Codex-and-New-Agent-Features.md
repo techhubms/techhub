@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded
 title: GitHub Copilot in Visual Studio Code Upgraded with OpenAI Codex and New Agent Features
 author: Dylan Birtolo
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Dylan Birtolo outlines notable upgrades to GitHub Copilot in Visual Studio Code Insiders, including OpenAI Codex integration, new agent management features, and Plan Mode for improved coding workflows.<!--excerpt_end-->
 

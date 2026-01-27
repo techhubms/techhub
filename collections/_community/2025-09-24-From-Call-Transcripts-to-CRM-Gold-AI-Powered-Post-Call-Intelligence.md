@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-communication-services/from-call-transcripts-to-crm-gold-ai-powered-post-call/ba-p/4456337
 title: 'From Call Transcripts to CRM Gold: AI-Powered Post-Call Intelligence'
 author: seankeegan
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 seankeegan explains how to automate post-call intelligence by extracting business insights from call transcripts with Azure OpenAI and Azure Communication Services, combining AI analysis with human oversight for reliable CRM integration.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/manage-azure-firewall-rules-nsg-rules-using-terraform-resource/ba-p/4467764
 title: Efficient Azure Firewall and NSG Rule Management with Terraform and CSV
 author: AbhishekShaw
@@ -24,6 +24,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 AbhishekShaw provides a practical tutorial on streamlining the management of Azure Firewall and NSG rules using Terraform resource blocks and CSV files, empowering Azure engineers to handle complex rule sets more efficiently.<!--excerpt_end-->
 

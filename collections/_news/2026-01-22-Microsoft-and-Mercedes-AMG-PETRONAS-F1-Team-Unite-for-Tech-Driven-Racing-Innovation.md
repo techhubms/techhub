@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 stclarke reports on the partnership between Microsoft and Mercedes-AMG PETRONAS F1 Team, highlighting the integration of Azure, AI, and GitHub for next-generation data-driven engineering and racing innovation.<!--excerpt_end-->
 

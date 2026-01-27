@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/microsoft-azure-introduces-azure-integrated-hsm-a-key-cache-for/ba-p/4456283
 title: 'Microsoft Azure Introduces Azure Integrated HSM: Secure Hardware-Backed Cryptography for Virtual Machines'
 author: simranparkhe
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 simranparkhe introduces the public preview of Azure Integrated HSM for AMD v7 Trusted Launch Virtual Machines, providing secure hardware-based cryptography directly within supported Azure VMs.<!--excerpt_end-->
 

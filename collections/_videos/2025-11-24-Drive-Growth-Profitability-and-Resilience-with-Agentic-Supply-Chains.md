@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=NcrMVachthU
 title: Drive Growth, Profitability and Resilience with Agentic Supply Chains
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Presented by Chris Burchett, Armando Duran, and Yury Gomez at Microsoft Ignite 2025, this session demonstrates how AI-driven agents, Microsoft Fabric, and unified data strategies are reshaping supply chain management for businesses.<!--excerpt_end-->
 

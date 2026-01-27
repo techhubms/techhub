@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=MWid8VX6PZ4
 title: Azure AI Infrastructure Updates for High-Performance Workloads
 author: Microsoft Events
@@ -33,6 +33,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a breakdown of Azure's latest AI infrastructure at Ignite 2025, detailing performance improvements and new hardware platforms for high-scale workloads.<!--excerpt_end-->
 

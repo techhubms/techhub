@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/10/16/mddr-2025/
 title: 'Latest Microsoft Digital Defense Report: Extortion and Ransomware Drive Cyberattacks'
 author: stclarke
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 stclarke summarizes findings from the latest Microsoft Digital Defense Report, spotlighting how extortion, ransomware, and AI advancements are shaping today’s security landscape and driving the need for new defensive strategies.<!--excerpt_end-->
 

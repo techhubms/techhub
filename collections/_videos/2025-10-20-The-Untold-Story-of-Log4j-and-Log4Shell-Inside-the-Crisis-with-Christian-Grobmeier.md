@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=t74ClffSUW0
 title: 'The Untold Story of Log4j and Log4Shell: Inside the Crisis with Christian Grobmeier'
 author: GitHub
@@ -23,6 +23,7 @@ tags:
 - Vulnerability Response
 section_names:
 - security
+primary_section: security
 ---
 GitHub presents a behind-the-scenes look into the Log4Shell incident, with Christian Grobmeier sharing insights on the technical and human challenges faced by the Log4j maintainer team. The video highlights valuable lessons for developers and the open source community.<!--excerpt_end-->
 

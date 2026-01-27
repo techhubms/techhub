@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute/frequent-platform-initiated-vm-redeployments-v6-in-north-europe/m-p/4484455#M837
 title: Frequent Platform-Initiated Azure VM Redeployments (v6 Series) in North Europe
 author: Cans
@@ -19,6 +19,7 @@ tags:
 - Virtual Machines
 section_names:
 - azure
+primary_section: azure
 ---
 Cans describes recurring issues with Azure v6 series virtual machines in North Europe, noting frequent platform-initiated redeployments due to host OS and firmware problems, and invites community feedback.<!--excerpt_end-->
 

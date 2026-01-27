@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/copilot-coding-agent-dotnet/
 title: Automating .NET Development with GitHub Copilot Coding Agent
 author: Bruno Capuano
@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Bruno Capuano showcases how the GitHub Copilot Coding Agent automates unit tests and feature implementation in .NET projects, demonstrating AI-powered development enhancements for practitioners.<!--excerpt_end-->
 

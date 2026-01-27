@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/2025/07/08/aft-to-launch-national-academy-for-ai-instruction-with-microsoft-openai-anthropic-and-united-federation-of-teachers/
 title: AFT to launch National Academy for AI Instruction with Microsoft, OpenAI, Anthropic and United Federation of Teachers
 author: stclarke
@@ -17,6 +17,7 @@ tags:
 - United Federation Of Teachers
 section_names:
 - ai
+primary_section: ai
 ---
 In a recent announcement, stclarke covers the launch of the National Academy for AI Instruction spearheaded by the American Federation of Teachers (AFT) in collaboration with Microsoft, OpenAI, Anthropic, and the United Federation of Teachers. <!--excerpt_end--> This new initiative aims to equip educators with the skills and knowledge necessary to effectively incorporate artificial intelligence (AI) into their classrooms. Partnering with major technology leaders, the academy represents a significant step toward integrating AI education into mainstream teaching practices.
 

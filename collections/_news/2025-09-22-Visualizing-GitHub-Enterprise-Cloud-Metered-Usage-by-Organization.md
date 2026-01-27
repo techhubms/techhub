@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-22-visualize-metered-usage-by-organization-in-github-enterprise-cloud
 title: Visualizing GitHub Enterprise Cloud Metered Usage by Organization
 author: Allison
@@ -21,6 +21,7 @@ tags:
 - Usage Visualization
 section_names:
 - devops
+primary_section: devops
 ---
 Allison reports on GitHub Enterprise Cloud updates enabling billing managers and enterprise owners to visualize metered license usage by organization, providing more accurate reporting and cost attribution.<!--excerpt_end-->
 

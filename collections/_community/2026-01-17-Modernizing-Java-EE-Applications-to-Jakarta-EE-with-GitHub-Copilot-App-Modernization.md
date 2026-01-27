@@ -27,6 +27,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 ayangupta outlines how GitHub Copilot app modernization streamlines the migration of Java EE applications to Jakarta EE, providing automated analysis, code transformations, and workflow guidance for developers.<!--excerpt_end-->
 

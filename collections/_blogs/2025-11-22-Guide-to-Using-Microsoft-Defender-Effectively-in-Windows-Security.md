@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/unleash-the-power-of-windows-security-a-simple-guide-to-using-defender-effectively/
 title: Guide to Using Microsoft Defender Effectively in Windows Security
 author: John Edward
@@ -22,6 +22,7 @@ tags:
 - Windows Updates
 section_names:
 - security
+primary_section: security
 ---
 John Edward provides a user-friendly guide detailing how to leverage Windows Security and Microsoft Defender Antivirus to keep your PC safe from malware and ransomware.<!--excerpt_end-->
 

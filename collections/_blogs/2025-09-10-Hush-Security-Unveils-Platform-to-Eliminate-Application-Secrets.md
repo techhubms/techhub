@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/hush-security-emerges-to-eliminate-need-for-application-secrets/?utm_source=rss&utm_medium=rss&utm_campaign=hush-security-emerges-to-eliminate-need-for-application-secrets
 title: Hush Security Unveils Platform to Eliminate Application Secrets
 author: Mike Vizard
@@ -38,6 +38,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Mike Vizard discusses how Hush Security's new platform addresses application secrets management using runtime identity controls and SPIFFE integration, offering DevSecOps teams a modern way to reduce risks from secret sprawl.<!--excerpt_end-->
 

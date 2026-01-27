@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=NrWUl8EYWmw
 title: Drive Cost Efficiency and Elevate Azure ROI with Strategic Architecture | BRK216
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents an advanced session at Ignite 2025 where Rob Kuehfus and Mrunal Patwa demonstrate strategies for maximizing Azure ROI, including architecture best practices and Copilot-powered cost savings.<!--excerpt_end-->
 

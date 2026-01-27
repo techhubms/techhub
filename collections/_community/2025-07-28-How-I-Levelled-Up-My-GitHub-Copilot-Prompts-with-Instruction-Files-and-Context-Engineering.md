@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mbebfh/how_i_levelled_up_my_github_copilot_prompts_with/
 title: How I Levelled Up My GitHub Copilot Prompts with Instruction Files and Context Engineering
 author: Neat-Huckleberry-407
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, Neat-Huckleberry-407 explains how they improved their GitHub Copilot prompt effectiveness using instruction files and context engineering.<!--excerpt_end-->
 

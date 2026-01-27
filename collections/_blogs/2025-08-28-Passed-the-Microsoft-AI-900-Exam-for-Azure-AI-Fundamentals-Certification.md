@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/08/passed-the-microsoft-ai-900-exam-for-microsoft-certified-azure-ai-fundamentals-%f0%9f%8e%89/
 title: Passed the Microsoft AI-900 Exam for Azure AI Fundamentals Certification
 author: Thomas Maurer
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Thomas Maurer discusses his achievement in earning the Microsoft Certified: Azure AI Fundamentals (AI-900) certification, summarizing the exam focus areas and Azure's AI services.<!--excerpt_end-->
 

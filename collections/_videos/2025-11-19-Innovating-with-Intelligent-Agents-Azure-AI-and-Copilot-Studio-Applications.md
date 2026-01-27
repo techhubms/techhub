@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=MV8nhQ3pAqo
 title: 'Innovating with Intelligent Agents: Azure AI and Copilot Studio Applications'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents an Ignite 2025 session led by Renu Nair and Bhargav Parnandi on designing intelligent applications using Azure AI and Copilot Studio.<!--excerpt_end-->
 

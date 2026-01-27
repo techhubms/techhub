@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/microsoft-biztalk-server-product-lifecycle-update/ba-p/4478559
 title: 'Microsoft BizTalk Server Product Lifecycle Update: Modernization and Migration Guidance'
 author: hcamposu
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 hcamposu presents an update on the BizTalk Server product lifecycle, providing guidance on long-term support, migration to Azure Logic Apps, and roadmap considerations for enterprises managing mission-critical integration workloads.<!--excerpt_end-->
 

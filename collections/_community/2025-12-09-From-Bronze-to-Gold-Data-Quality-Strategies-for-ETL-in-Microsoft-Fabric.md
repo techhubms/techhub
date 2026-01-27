@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/from-bronze-to-gold-data-quality-strategies-for-etl-in-microsoft/ba-p/4476303
 title: 'From Bronze to Gold: Data Quality Strategies for ETL in Microsoft Fabric'
 author: Sally_Dabbah
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Sally Dabbah provides a technical walkthrough on implementing enterprise-grade data quality checks in Microsoft Fabric ETL pipelines, showcasing Great Expectations integration at every architecture layer.<!--excerpt_end-->
 

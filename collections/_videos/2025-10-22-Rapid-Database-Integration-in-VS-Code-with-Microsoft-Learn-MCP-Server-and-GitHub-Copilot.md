@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=s2DGC7NMKxo
 title: Rapid Database Integration in VS Code with Microsoft Learn MCP Server and GitHub Copilot
 author: Visual Studio Code
@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code showcases how Chris Noring leverages the Microsoft Learn MCP server and GitHub Copilot to add a database to an app swiftly, reducing context switching and enhancing developer efficiency.<!--excerpt_end-->
 

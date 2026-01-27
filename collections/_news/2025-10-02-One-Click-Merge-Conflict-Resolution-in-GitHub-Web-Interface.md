@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-02-one-click-merge-conflict-resolution-now-in-the-web-interface
 title: One-Click Merge Conflict Resolution in GitHub Web Interface
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - Workflow Automation
 section_names:
 - devops
+primary_section: devops
 ---
 Allison presents the new GitHub feature that enables developers to resolve merge conflicts with a single click in the web interface, mirroring the experience of desktop code editors.<!--excerpt_end-->
 

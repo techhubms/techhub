@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/strongly-typed-markdown-for-aspnet-core-content-apps
 title: Strongly-Typed Markdown for ASP.NET Core Content Apps
 author: Khalid Abuhakmeh
@@ -18,6 +18,7 @@ tags:
 - YamlDotNet
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, Khalid Abuhakmeh guides developers through building strongly-typed content management solutions by parsing Markdown with YAML frontmatter into C# objects for ASP.NET Core apps.<!--excerpt_end-->
 

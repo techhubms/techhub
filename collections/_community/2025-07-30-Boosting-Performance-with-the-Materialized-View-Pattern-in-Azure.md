@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture/boosting-performance-with-the-materialized-view-pattern-in-azure/m-p/4438105#M776
 title: Boosting Performance with the Materialized View Pattern in Azure
 author: JohnNaguib
@@ -17,6 +17,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Authored by JohnNaguib, this article delves into the Materialized View pattern and its application in Microsoft Azure for optimizing data system performance.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/agentic-applications-on-azure-container-apps-with-microsoft/ba-p/4467601
 title: Deploying Agentic Applications on Azure Container Apps with Microsoft Foundry
 author: Cary_Chai
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Cary_Chai details how to deploy and observe agentic applications on Azure Container Apps by integrating the Microsoft Agent Framework and Microsoft Foundry, with full telemetry and monitoring support.<!--excerpt_end-->
 

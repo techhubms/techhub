@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mhajoh/asp_nightmare_2025/
 title: Challenges and Frustrations with Modern ASP.NET for Web Development
 author: Kingside2
@@ -21,6 +21,7 @@ tags:
 - Webforms
 section_names:
 - coding
+primary_section: coding
 ---
 Kingside2 critically examines the current state of ASP.NET and related technologies, highlighting pain points with Webforms, Razor, Blazor, and developer tooling.<!--excerpt_end-->
 

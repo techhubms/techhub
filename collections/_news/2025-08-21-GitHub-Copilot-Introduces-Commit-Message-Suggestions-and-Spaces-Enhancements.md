@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-21-copilot-generated-commit-messages-on-github-com-is-in-public-preview
 title: GitHub Copilot Introduces Commit Message Suggestions and Spaces Enhancements
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison details GitHub Copilot's new contextual commit message suggestions for file changes on github.com and enhanced Copilot Spaces functionality, improving developer workflows and documentation.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-onelake-and-the-fabric-platform-more-sources-security-and-capacity-tooling/
 title: 'What’s New in OneLake and the Fabric Platform: Expanded Sources, Security, and Capacity Management'
 author: Microsoft Fabric Blog
@@ -29,6 +29,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 Microsoft Fabric Blog introduces a major update to OneLake and the Fabric platform, revealing new mirroring sources, security controls, and AI-ready data governance features for organizations seeking unified, intelligent data estates.<!--excerpt_end-->
 

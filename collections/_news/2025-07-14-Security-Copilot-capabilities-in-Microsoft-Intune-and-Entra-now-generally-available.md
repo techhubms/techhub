@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/07/14/improving-it-efficiency-with-microsoft-security-copilot-in-microsoft-intune-and-microsoft-entra/
 title: Security Copilot capabilities in Microsoft Intune and Entra now generally available
 author: stclarke
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 In this article, author stclarke discusses the general availability of Security Copilot capabilities within Microsoft Intune and Microsoft Entra. The announcement highlights how these integrations bring enhanced AI-driven security automation, streamlined threat management, and compliance capabilities directly into Microsoft's security and management platforms.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/accelerating-data-movement-by-using-fast-copy-to-unlock-performance-and-efficiency-during-data-ingestion-from-sql-database-in-fabric/
 title: Accelerating Data Ingestion from SQL to Fabric with Fast Copy in Dataflow
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog outlines practical steps to use Fast Copy in Dataflow for faster data ingestion from SQL databases. The guide, authored by the Microsoft Fabric Blog team, covers feature activation, configuration, and performance checks, empowering organizations to streamline data integration workflows.<!--excerpt_end-->
 

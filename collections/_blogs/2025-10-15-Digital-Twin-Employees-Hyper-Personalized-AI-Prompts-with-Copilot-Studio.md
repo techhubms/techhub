@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/the-digital-twin-employee-creating-hyper-personalized-copilot-prompts-with-copilot-studio/
 title: 'Digital Twin Employees: Hyper-Personalized AI Prompts with Copilot Studio'
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny presents a practical guide to building digital twin employees using Copilot Studio, focusing on hyper-personalized AI prompt engineering and integration with enterprise systems.<!--excerpt_end-->
 

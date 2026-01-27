@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/vibe-coding-can-create-unseen-vulnerabilities/
 title: Vibe Coding Can Create Unseen Vulnerabilities
 author: Jeff Kuo
@@ -49,6 +49,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 Jeff Kuo explores how AI-powered vibe coding speeds up software creation, but warns that developer supervision is required to avoid security and quality issues in the final product.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/integrating-copilot-studio-with-power-automate-for-end-to-end-workflows/
 title: Integrating Copilot Studio with Power Automate for End-to-End Workflows
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 - Workflow Testing
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny explains how to integrate Microsoft Copilot Studio with Power Automate for seamless end-to-end AI-powered workflow automation, outlining configuration steps, data mapping, and real-world use cases.<!--excerpt_end-->
 

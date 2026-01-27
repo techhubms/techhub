@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/engineering/user-experience/building-a-more-accessible-github-cli/
 title: 'Building a More Accessible GitHub CLI: Improving Terminal Accessibility for Developers'
 author: Ryan Hecht
@@ -19,6 +19,7 @@ tags:
 - User Experience
 section_names:
 - devops
+primary_section: devops
 ---
 In this insightful article, Ryan Hecht shares GitHub’s journey to improve the accessibility of its CLI. The post explores the challenges and solutions in making terminal-based tools more inclusive for all developers.<!--excerpt_end-->
 

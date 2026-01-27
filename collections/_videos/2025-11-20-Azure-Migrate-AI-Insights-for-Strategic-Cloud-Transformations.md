@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=plDH468Keeg
 title: 'Azure Migrate: AI Insights for Strategic Cloud Transformations'
 author: Microsoft Events
@@ -30,6 +30,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a detailed walkthrough on using Azure Migrate’s AI-powered features for cloud migrations and modernizations, guided by Shashank Bansal, Vishal Jain, and Anant Raigaga.<!--excerpt_end-->
 

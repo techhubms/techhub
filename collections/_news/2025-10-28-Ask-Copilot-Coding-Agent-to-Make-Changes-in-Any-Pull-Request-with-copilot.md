@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-28-ask-copilot-coding-agent-to-make-changes-in-any-pull-request-with-copilot
 title: Ask Copilot Coding Agent to Make Changes in Any Pull Request with @copilot
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison shares the latest GitHub Copilot feature, allowing users to delegate changes to existing pull requests by simply mentioning @copilot, making code collaboration more efficient.<!--excerpt_end-->
 

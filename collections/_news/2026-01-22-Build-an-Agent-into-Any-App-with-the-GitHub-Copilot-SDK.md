@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Mario Rodriguez announces the technical preview of the GitHub Copilot SDK, highlighting how developers can now integrate Copilot's agentic execution loop and AI-powered features into any application environment.<!--excerpt_end-->
 

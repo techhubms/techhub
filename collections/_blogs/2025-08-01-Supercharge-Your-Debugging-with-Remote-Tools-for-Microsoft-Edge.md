@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/supercharge-your-debugging-with-remote-tools-for-microsoft-edge/
 title: Supercharge Your Debugging with Remote Tools for Microsoft Edge
 author: Dellenny
@@ -25,6 +25,7 @@ tags:
 - Xbox Development
 section_names:
 - coding
+primary_section: coding
 ---
 Dellenny introduces Remote Tools for Microsoft Edge, showing developers how to set up and use remote debugging across devices like IoT, Xbox, and virtual machines.<!--excerpt_end-->
 

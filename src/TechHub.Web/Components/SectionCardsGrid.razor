@@ -1,4 +1,4 @@
-@using TechHub.Core.DTOs
+@using TechHub.Core.Models
 
 @* Grid of Section Cards *@
 <section class="sections-grid" aria-label="Browse sections">
@@ -13,5 +13,5 @@
 
 @code {
     [Parameter, EditorRequired]
-    public IEnumerable<SectionDto> Sections { get; set; } = null!;
+    public IEnumerable<Section> Sections { get; set; } = null!;
 }

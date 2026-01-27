@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/2025/07/01/deped-and-microsoft-expand-ai-powered-literacy-initiatives-across-the-philippines/
 title: DepEd and Microsoft expand AI-powered literacy initiatives across the Philippines
 author: stclarke
@@ -14,6 +14,7 @@ tags:
 - Philippines
 section_names:
 - ai
+primary_section: ai
 ---
 In this article, author stclarke reports on the partnership between the Department of Education (DepEd) in the Philippines and Microsoft to expand AI-powered literacy initiatives throughout the country. <!--excerpt_end--> The collaboration focuses on utilizing Microsoft’s advanced artificial intelligence technologies to boost reading and digital literacy among Filipino students. With the new phase of this initiative, more schools and learners will benefit from AI-driven tools designed to personalize learning experiences, track student progress, and provide teachers with better resources to address individual needs.
 

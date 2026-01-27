@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=vrxn-y0tFTI
 title: Modernizing .NET Applications for the Cloud
 author: dotnet
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 dotnet presents a practical roadmap for modernizing legacy .NET applications with cloud-native techniques, Azure services, and the latest .NET technologies.<!--excerpt_end-->
 

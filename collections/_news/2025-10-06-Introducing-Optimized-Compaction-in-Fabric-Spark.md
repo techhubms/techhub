@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-optimized-compaction-in-fabric-spark/
 title: Introducing Optimized Compaction in Fabric Spark
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog explores advanced compaction strategies for Delta tables in Fabric Spark, helping data engineers reduce manual maintenance, control costs, and keep Lakehouse performance consistent.<!--excerpt_end-->
 

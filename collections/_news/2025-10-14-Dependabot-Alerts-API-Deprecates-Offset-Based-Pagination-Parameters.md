@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-14-dependabot-alerts-api-pagination-parameters-deprecated
 title: Dependabot Alerts API Deprecates Offset-Based Pagination Parameters
 author: Allison
@@ -19,6 +19,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison explains GitHub's transition to cursor-based pagination for Dependabot alerts REST API endpoints, highlighting changes and implications for developers working with supply chain security.<!--excerpt_end-->
 

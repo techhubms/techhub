@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/find-and-fix-typos-faster-with-github-copilot.html
 title: Find and Fix Typos Faster with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels demonstrates how GitHub Copilot can accelerate typo detection and correction in code, offering practical guidance on proofing, editing, and standardizing naming before you commit.<!--excerpt_end-->
 

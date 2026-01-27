@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=tOF4_bqLCiQ
 title: Securing the AI Agents with Zenity and Microsoft
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events presents a session on security and governance for AI agents built on Microsoft Copilot platforms, featuring Shaun Van Staden and practical strategies using Zenity’s platform.<!--excerpt_end-->
 

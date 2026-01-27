@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-setup-cd-in-azure-logic-apps-standard-with-deployment/ba-p/4449013
 title: Automating Azure Logic Apps Deployments with Deployment Center and VS Code
 author: WSilveira
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 WSilveira explains how the Deployment Center in Azure Logic Apps Standard streamlines code deployments from VS Code and source control, integrating easily with DevOps workflows.<!--excerpt_end-->
 

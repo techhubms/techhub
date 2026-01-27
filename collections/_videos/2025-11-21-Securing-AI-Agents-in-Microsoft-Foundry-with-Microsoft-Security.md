@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Zaew1UDiOPs
 title: Securing AI Agents in Microsoft Foundry with Microsoft Security
 author: Microsoft Events
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events presents an advanced Microsoft Ignite session led by Neta Haiby, Shravana Mukherjee, and Peter Simones, focusing on securing AI agents in Microsoft Foundry using Microsoft Security tools and governance techniques.<!--excerpt_end-->
 

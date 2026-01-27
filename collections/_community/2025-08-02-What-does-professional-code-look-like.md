@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mfsv2g/what_does_professional_code_look_like/
 title: What does professional code look like?
 author: RipeTide18
@@ -17,6 +17,7 @@ tags:
 - Software Methodology
 section_names:
 - coding
+primary_section: coding
 ---
 RipeTide18 discusses challenges faced in backend development and asks how to write professional code, referencing dependency injection and industry methodologies.<!--excerpt_end-->
 

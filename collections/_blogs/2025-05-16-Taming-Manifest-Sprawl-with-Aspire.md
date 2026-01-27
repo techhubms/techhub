@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://medium.com/@davidfowl/taming-manifest-sprawl-with-aspire-1ad938379433?source=rss-8163234c98f0------2
 title: Taming Manifest Sprawl with Aspire
 author: David Fowler
@@ -21,6 +21,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 David Fowler explores how Aspire addresses 'manifest sprawl' by unifying application configuration and deployment manifests into a single, C#-coded model, streamlining workflows for developers.<!--excerpt_end-->
 

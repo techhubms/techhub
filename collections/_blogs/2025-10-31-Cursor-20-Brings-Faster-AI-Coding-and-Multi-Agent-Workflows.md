@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/cursor-2-0-brings-faster-ai-coding-and-multi-agent-workflows/
 title: Cursor 2.0 Brings Faster AI Coding and Multi-Agent Workflows
 author: Tom Smith
@@ -36,6 +36,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Tom Smith presents an in-depth look at Cursor 2.0, focusing on its Composer AI model and parallel agent workflows, highlighting how these features accelerate coding and enhance developer experiences in DevOps settings.<!--excerpt_end-->
 

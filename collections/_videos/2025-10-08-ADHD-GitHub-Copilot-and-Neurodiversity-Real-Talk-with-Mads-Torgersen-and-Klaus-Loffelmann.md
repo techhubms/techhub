@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=eeTOToKnpCg
 title: 'ADHD, GitHub Copilot, and Neurodiversity: Real Talk with Mads Torgersen and Klaus Loffelmann'
 author: Microsoft Developer
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer hosts Mads Torgersen and Klaus Loffelmann explore how ADHD and AI tools like GitHub Copilot are reshaping the developer experience, highlighting practical strategies and authentic stories from the neurodiverse community.<!--excerpt_end-->
 

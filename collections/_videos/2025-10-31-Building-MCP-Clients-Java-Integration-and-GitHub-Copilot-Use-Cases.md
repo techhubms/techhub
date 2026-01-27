@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=HQQavvdrAA0
 title: 'Building MCP Clients: Java Integration and GitHub Copilot Use Cases'
 author: Microsoft Developer
@@ -30,6 +30,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer presents a hands-on walkthrough featuring Ayan Gupta, Bruno Borges, and Sandra Ahlgrimm on building MCP clients, integrating GitHub Copilot, and developing Java chat applications with AI.<!--excerpt_end-->
 

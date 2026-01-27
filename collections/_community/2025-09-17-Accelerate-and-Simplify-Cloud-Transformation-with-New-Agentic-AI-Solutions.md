@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-and-simplify-cloud-transformation-with-new-agentic-ai/ba-p/4454873
 title: Accelerate and Simplify Cloud Transformation with New Agentic AI Solutions
 author: PatWidjaja
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 PatWidjaja invites readers to the Migrate and Modernize Summit, outlining new Azure and AI capabilities, expert-led sessions, and skilling opportunities designed to accelerate enterprise cloud transformation.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=KNA-o3oSxnA
 title: 'Agents at Work: Windows, Copilot Studio, and AI-Powered Cloud Innovation'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 - Windows 365
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents an advanced Microsoft Ignite session on the evolution of Windows, spotlighting Copilot Studio, Copilot Plus PCs, and cloud-powered AI solutions for enterprises.<!--excerpt_end-->
 

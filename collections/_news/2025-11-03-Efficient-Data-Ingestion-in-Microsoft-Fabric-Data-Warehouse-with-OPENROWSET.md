@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/ingest-files-into-your-fabric-data-warehouse-using-the-openrowset-function/
 title: Efficient Data Ingestion in Microsoft Fabric Data Warehouse with OPENROWSET
 author: Microsoft Fabric Blog
@@ -29,6 +29,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog explains the use of OPENROWSET in Microsoft Fabric Data Warehouse for ingesting files with schema inference and transformation, offering guidance on building efficient ETL workflows.<!--excerpt_end-->
 

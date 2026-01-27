@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fAYMJpB8GYQ
 title: 'VS Code Live: Telerik & KendoUI AI Coding Assistants and Contextual AI Integration'
 author: Visual Studio Code
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this VS Code Live video, Reynald Adolphe, Sam Basu, and Kristian Mariyanov discuss how Telerik and KendoUI AI Coding Assistants—integrated with GitHub Copilot—empower developers with contextual AI in Visual Studio Code.<!--excerpt_end-->
 

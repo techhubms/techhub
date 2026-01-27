@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/a-developers-guide-to-writing-debugging-reviewing-and-shipping-code-faster-with-github-copilot/
 title: 'GitHub Copilot: Modern AI Coding Workflows, Mission Control, and Best Practices'
 author: Aaron Winston
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Aaron Winston details how developers can use GitHub Copilot’s latest features—including mission control, agent mode, CLI, and automated reviews—to streamline every phase of the software workflow.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-25-copilot-agent-sessions-from-external-apps-are-now-available-on-github-mobile-for-android
 title: Copilot Agent Sessions from External Apps Now Available on GitHub Mobile for Android
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces a new workflow in GitHub Mobile for Android, allowing users to initiate Copilot agent sessions by sharing text from external apps, thus improving project planning and development efficiency.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=e-DX_w9Kdps
 title: Azure Networking Innovations for Scalable and Secure Cloud Transformations
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Events presents a session led by Narayan Annamalai and Deepak Bansal, covering Azure Networking's latest innovations to enable secure, scalable, and resilient cloud infrastructures for organizations worldwide.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/top-10-copilot-tips.html
 title: Top 10 Copilot Tips
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels shares practical and insightful tips on harnessing the full potential of GitHub Copilot, enabling developers to write better code, streamline reviews, and integrate Copilot into everyday workflows.<!--excerpt_end-->
 

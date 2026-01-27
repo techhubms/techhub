@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/1gyzoHTfxgQ
 title: Code Explanation
 author: Rob Bos
@@ -13,6 +13,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This video demonstrates GitHub Copilot's Code Explanation feature. Get detailed explanations for complex code snippets with Copilot.<!--excerpt_end-->
 

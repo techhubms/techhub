@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/staying-on-top-of-shadow-ai/?utm_source=rss&utm_medium=rss&utm_campaign=staying-on-top-of-shadow-ai
 title: Staying on Top of Shadow AI
 author: Alexander Williams
@@ -39,6 +39,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Alexander Williams examines the increasingly common issue of shadow AI, offering DevOps and security professionals actionable strategies for managing unsanctioned AI use in organizations.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/multi-file-edits-made-simple.html
 title: Multi-File Edits Made Simple
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels explains how to use GitHub Copilot’s multi-file edits feature to refactor, update, and modernize your codebase efficiently—all while retaining developer control.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-do-i-choose-the-right-model-for-my-agent/ba-p/4445267
 title: 'How to Choose the Right Model for Your AI Agent: A Developer’s Guide'
 author: April_Gittens
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 April_Gittens explains how developers can choose the right AI model for their agents, considering factors like input types, cost, licensing, and deployment, with actionable guidance using the Azure AI Foundry Model Catalog.<!--excerpt_end-->
 

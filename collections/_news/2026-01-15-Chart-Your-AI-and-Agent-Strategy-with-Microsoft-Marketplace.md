@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/design-your-ai-and-agent-strategy-with-microsoft-marketplace/
 title: Chart Your AI and Agent Strategy with Microsoft Marketplace
 author: Cyril Belikoff
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Cyril Belikoff outlines strategies for navigating AI and agent development with Microsoft Marketplace, detailing options for custom builds, ready-made solutions, and blended approaches to accelerate transformation with Microsoft Azure and AI technologies.<!--excerpt_end-->
 

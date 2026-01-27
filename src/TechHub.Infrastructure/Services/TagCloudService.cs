@@ -1,5 +1,4 @@
 using Microsoft.Extensions.Options;
-using TechHub.Core.DTOs;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 

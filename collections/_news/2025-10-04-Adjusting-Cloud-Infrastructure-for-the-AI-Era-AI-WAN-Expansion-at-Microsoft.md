@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_fridayevening-reflectionadjusting-my-cloud-activity-7380046678944522240-d6O4
 title: 'Adjusting Cloud Infrastructure for the AI Era: AI WAN Expansion at Microsoft'
 author: stclarke
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Satya Nadella’s reflection, summarized by stclarke, explores how Microsoft is scaling its cloud infrastructure in the AI era—expanding optical fiber and deploying AI WAN to accelerate network capacity gains.<!--excerpt_end-->
 

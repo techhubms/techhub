@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/05/video-build-a-well-architected-saas-solution-on-microsoft-azure/
 title: 'Video: Build a Well-Architected SaaS Solution on Microsoft Azure'
 author: Thomas Maurer
@@ -21,6 +21,7 @@ tags:
 - Well Architected Framework
 section_names:
 - azure
+primary_section: azure
 ---
 In this blog post, Thomas Maurer, together with Sergio Navar and John Downs, explores how to architect SaaS solutions on Azure using the Microsoft Well-Architected Framework. Key pillars such as security, cost optimization, and reliability are discussed in detail.<!--excerpt_end-->
 

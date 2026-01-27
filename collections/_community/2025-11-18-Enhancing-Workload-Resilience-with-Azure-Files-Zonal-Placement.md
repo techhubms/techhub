@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/reduce-latency-and-enhance-resilience-with-azure-files-zonal/ba-p/4470811
 title: Enhancing Workload Resilience with Azure Files Zonal Placement
 author: hanagpal
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 hanagpal explains the benefits of using zonal placement for Azure Files Premium LRS, highlighting how it improves latency and resilience for diverse Azure workloads.<!--excerpt_end-->
 

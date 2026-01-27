@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/integrating-azure-devops-with-jira-service-management-real-world/m-p/4471605#M22340
 title: 'Integrating Azure DevOps with Jira Service Management: Practical Approaches and Real-World Scenarios'
 author: tejabhutada
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 tejabhutada explains how development and support teams can automate ticket flow and data sync between Azure DevOps and JSM, discussing use cases, technical features, and integration approaches.<!--excerpt_end-->
 

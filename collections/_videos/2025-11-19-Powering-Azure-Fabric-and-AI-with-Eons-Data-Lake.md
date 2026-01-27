@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=7KXUlnq1tQg
 title: Powering Azure Fabric and AI with Eon’s Data Lake
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events presents an in-depth session on leveraging Eon’s Data Lake within Azure, detailing integration with Microsoft Fabric engines and AI workflows, with practical demos and architecture insights.<!--excerpt_end-->
 

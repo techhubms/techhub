@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/codex-mini-fast-scalable-code-generation-for-the-cli-era/
 title: 'codex-mini: Fast, Scalable Code Generation for the CLI Era'
 author: Ananya Bishnoi, Anthony Mocny, Govind Kamtamneni
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Written by Ananya Bishnoi, Anthony Mocny, and Govind Kamtamneni, this post introduces codex-mini—a new, fast, and scalable Azure OpenAI model for code generation in CLI environments.<!--excerpt_end-->
 

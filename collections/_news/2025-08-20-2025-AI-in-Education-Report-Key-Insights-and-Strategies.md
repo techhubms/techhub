@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/education/blog/2025/08/ai-in-education-report-insights-to-support-teaching-and-learning/
 title: '2025 AI in Education Report: Key Insights and Strategies'
 author: sbaynes
@@ -25,6 +25,7 @@ tags:
 - Workforce Readiness
 section_names:
 - ai
+primary_section: ai
 ---
 sbaynes reviews the 2025 AI in Education Report from Microsoft, outlining major findings on AI’s impact on teaching, learning, and workforce skills, along with actionable strategies for educators and institutions.<!--excerpt_end-->
 

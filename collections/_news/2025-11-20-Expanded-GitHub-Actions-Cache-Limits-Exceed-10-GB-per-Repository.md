@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-20-github-actions-cache-size-can-now-exceed-10-gb-per-repository
 title: Expanded GitHub Actions Cache Limits Exceed 10 GB per Repository
 author: Allison
@@ -25,6 +25,7 @@ tags:
 - Workflow Optimization
 section_names:
 - devops
+primary_section: devops
 ---
 Allison details the update allowing GitHub Actions cache size to exceed 10 GB per repository, introducing new policy controls and pay-as-you-go storage options for administrators.<!--excerpt_end-->
 

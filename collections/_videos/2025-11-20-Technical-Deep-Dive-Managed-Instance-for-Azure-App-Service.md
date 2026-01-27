@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=biO3I2mFvV4
 title: 'Technical Deep Dive: Managed Instance for Azure App Service'
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Events hosts a technical deep dive into Azure App Service Managed Instance, featuring Scott Hunter, Gaurav Seth, and Andrew Westgarth, with proven strategies for legacy app migration and integration with AI and developer tools.<!--excerpt_end-->
 

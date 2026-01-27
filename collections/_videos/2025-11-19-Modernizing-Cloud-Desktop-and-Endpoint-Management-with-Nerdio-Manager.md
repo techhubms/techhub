@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=J8esrUr6iDQ
 title: Modernizing Cloud Desktop and Endpoint Management with Nerdio Manager
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events showcases how Ashley Battle demonstrates Nerdio Manager's features for enterprise cloud desktop and endpoint management during a Microsoft Ignite 2025 session.<!--excerpt_end-->
 

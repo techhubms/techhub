@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://msrc.microsoft.com/blog/2025/08/microsoft-bounty-program-year-in-review-17-million-in-rewards/
 title: 'Microsoft Bounty Program Year in Review: $17 Million Awarded to Security Researchers'
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 stclarke presents a comprehensive year-in-review of the Microsoft Bounty Program, showcasing $17 million in rewards, the impact of security research collaborations, and updates to Microsoft's vulnerability reward initiatives.<!--excerpt_end-->
 

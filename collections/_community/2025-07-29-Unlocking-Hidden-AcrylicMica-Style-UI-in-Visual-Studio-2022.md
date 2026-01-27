@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/VisualStudio/comments/1mbzcis/visual_studio_2022_has_hidden_acrylicmica_style_ui/
 title: Unlocking Hidden Acrylic/Mica Style UI in Visual Studio 2022
 author: YouKnowWhyNo
@@ -17,6 +17,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 YouKnowWhyNo guides readers through enabling a hidden Acrylic/Mica UI style in Visual Studio 2022, offering clear steps for customization.<!--excerpt_end-->
 

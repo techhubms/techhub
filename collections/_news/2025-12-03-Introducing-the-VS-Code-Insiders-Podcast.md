@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2025/12/03/introducing-vs-code-insiders-podcast
 title: Introducing the VS Code Insiders Podcast
 author: James Montemagno
@@ -22,6 +22,7 @@ tags:
 - VS Code Insiders
 section_names:
 - coding
+primary_section: coding
 ---
 James Montemagno introduces the official VS Code Insiders Podcast, featuring in-depth episodes with the developers and community building Visual Studio Code, and covering topics like AI features, accessibility, and open source development.<!--excerpt_end-->
 

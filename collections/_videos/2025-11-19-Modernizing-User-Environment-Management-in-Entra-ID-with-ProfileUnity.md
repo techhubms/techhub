@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=p-0ikIK3-l8
 title: Modernizing User Environment Management in Entra ID with ProfileUnity
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Events presents a detailed session by Jason Smith at MS Ignite 2025, diving into modern user environment management for Entra ID–joined organizations, focusing on ProfileUnity and policy-driven cloud workspace solutions.<!--excerpt_end-->
 

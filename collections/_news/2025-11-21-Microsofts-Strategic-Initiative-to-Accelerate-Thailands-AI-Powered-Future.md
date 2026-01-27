@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/2025/11/18/microsoft-announces-landmark-strategic-commitment-to-accelerate-thailands-ai-powered-growth-and-inclusive-innovation/
 title: Microsoft's Strategic Initiative to Accelerate Thailand’s AI-Powered Future
 author: stclarke
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke reports on Microsoft's major new initiative to accelerate Thailand's AI-powered growth, focusing on infrastructure, national innovation, and AI upskilling across sectors.<!--excerpt_end-->
 

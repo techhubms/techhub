@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/introducing-microsoft-agent-framework-preview/
 title: 'Introducing Microsoft Agent Framework: Simplifying AI Agent Development for .NET Developers'
 author: Luis Quintanilla
@@ -30,6 +30,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Luis Quintanilla introduces the Microsoft Agent Framework, guiding .NET developers in building, orchestrating, and deploying AI agents using familiar tools and robust abstractions.<!--excerpt_end-->
 

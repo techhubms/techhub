@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/ga-enhanced-audit-in-azure-security-baseline-for-linux/ba-p/4446170
 title: 'GA: Enhanced Audit in Azure Security Baseline for Linux'
 author: AmirB
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 AmirB details the GA release of Enhanced Azure Security Baseline for Linux, highlighting audit-focused capabilities that help enterprises monitor Linux security compliance at scale.<!--excerpt_end-->
 

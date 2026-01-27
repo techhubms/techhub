@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/november-patches-for-azure-devops-server-2/
 title: November Security Patches Released for Azure DevOps Server
 author: Gloridel Morales
@@ -24,6 +24,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Gloridel Morales announces critical November patches for Azure DevOps Server, highlighting security and performance fixes, and provides guidance for patch installation and verification.<!--excerpt_end-->
 

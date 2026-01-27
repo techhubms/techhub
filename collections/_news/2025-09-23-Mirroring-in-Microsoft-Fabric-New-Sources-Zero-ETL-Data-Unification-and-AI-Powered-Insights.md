@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-to-mirroring-new-sources-and-capabilities-for-all-your-zero-etl-needs/
 title: 'Mirroring in Microsoft Fabric: New Sources, Zero-ETL Data Unification, and AI-Powered Insights'
 author: Microsoft Fabric Blog
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog discusses major updates to Mirroring, enabling seamless zero-ETL data unification for analytics and AI. This update, authored by the Microsoft Fabric Blog team, highlights new source support, secure connectivity, and chat-driven analytics with mirrored data.<!--excerpt_end-->
 

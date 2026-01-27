@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-25-enhanced-model-selection-experience-in-copilot-chat-on-github-mobile
 title: Enhanced Model Selection in Copilot Chat on GitHub Mobile
 author: Allison
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Authored by Allison, this update details improvements to model selection in Copilot Chat on GitHub Mobile, presenting models grouped by strengths for a more intuitive experience.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=JlzteydCK_Q
 title: Deep Dive into Microsoft Agent Framework for AutoGen Users
 author: Microsoft Developer
@@ -33,6 +33,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Eric Zhu from Microsoft Developer presents a thorough guide for AutoGen users transitioning to the Microsoft Agent Framework, exploring migration strategies and new multi-agent architecture capabilities.<!--excerpt_end-->
 

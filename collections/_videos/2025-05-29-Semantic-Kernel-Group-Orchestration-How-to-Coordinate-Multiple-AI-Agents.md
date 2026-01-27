@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=JLGj9CMXDsk
 title: 'Semantic Kernel Group Orchestration: How to Coordinate Multiple AI Agents'
 author: Learn Microsoft AI
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Learn Microsoft AI demonstrates group orchestration in Semantic Kernel, revealing how to coordinate multiple AI agents for complex problem-solving using Visual Studio and real-world examples.<!--excerpt_end-->
 

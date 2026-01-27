@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-jdbc-driver-for-microsoft-fabric-data-engineering-preview/
 title: Enterprise-Grade JDBC Driver for Microsoft Fabric Data Engineering Preview
 author: Microsoft Fabric Blog
@@ -29,6 +29,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details the new JDBC Driver for Fabric Data Engineering, empowering developers and data engineers with secure, high-performance Spark SQL connectivity.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Fine Tuned Models
 author: TBD
@@ -13,6 +13,7 @@ tags: []
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This content demonstrates GitHub Copilot's Fine Tuned Models feature. AI models customized specifically for your organization<!--excerpt_end-->
 

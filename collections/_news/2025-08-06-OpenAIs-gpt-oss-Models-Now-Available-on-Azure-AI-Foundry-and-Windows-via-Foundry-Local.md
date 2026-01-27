@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_openais-opensource-model-gptoss-on-azure-activity-7358643157602852867-kYFD
 title: OpenAI’s gpt-oss Models Now Available on Azure AI Foundry and Windows via Foundry Local
 author: stclarke
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this announcement, Satya Nadella shares Microsoft’s move to bring OpenAI’s gpt-oss models to Azure AI Foundry and to Windows via Foundry Local, highlighting hybrid AI capabilities and community engagement.<!--excerpt_end-->
 

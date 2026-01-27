@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/engineering-at-microsoft/ai-in-action-how-to-build-scalable-rag-enabled-ai-apps/
 title: 'How Microsoft Engineers Build AI: Insights into Scalable RAG-Enabled Applications'
 author: Krezzia Noelle Basilio, Samit Jhaveri
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Written by Krezzia Noelle Basilio and Samit Jhaveri, this post explores the Microsoft Engineering Series on scalable Retrieval-Augmented Generation (RAG) AI apps, practical best practices, and challenges in building intelligent Microsoft solutions.<!--excerpt_end-->
 

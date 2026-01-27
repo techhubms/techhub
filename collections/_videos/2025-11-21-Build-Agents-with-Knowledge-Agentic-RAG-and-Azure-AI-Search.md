@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=lW47o2ss3Yg
 title: Build Agents with Knowledge, Agentic RAG, and Azure AI Search
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents an expert session led by Pamela Fox and Matthew Gotteiner, offering step-by-step demos and guidance for building advanced retrieval agents using Azure AI Search and integrating diverse knowledge sources.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m4jkch/should_i_build_for_ado/
 title: Should I Build for Azure DevOps? Exploring Market Potential for Outlook Add-ins
 author: Floating-pointer
@@ -18,6 +18,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Floating-pointer shares their experience building Outlook add-ins integrated with Azure DevOps (ADO) and TFS. The post discusses transitioning legacy COM-based tools to modern platforms and seeks advice regarding market potential and advertising approaches.<!--excerpt_end-->
 

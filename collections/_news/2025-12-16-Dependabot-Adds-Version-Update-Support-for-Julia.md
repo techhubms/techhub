@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-julia
 title: Dependabot Adds Version Update Support for Julia
 author: Allison
@@ -18,6 +18,7 @@ tags:
 - Version Updates
 section_names:
 - devops
+primary_section: devops
 ---
 Allison announces that Dependabot now supports version updates for Julia dependencies, enabling developers to keep their Julia projects up to date automatically.<!--excerpt_end-->
 

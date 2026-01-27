@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mfu87w/agent_cant_memorize_the_full_session/
 title: Agent Can't Memorize the Full Session?
 author: Own-Dark14
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Own-Dark14 highlights a limitation in GitHub Copilot's session memory, where the agent fails to retain context consistently during code execution.<!--excerpt_end-->
 

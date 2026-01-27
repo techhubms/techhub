@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_jobs-security-skills-how-indias-giant-activity-7404408432293969921-BJHX
 title: Microsoft and India’s Ministry of Labour Harness AI for Social Impact at Scale
 author: stclarke
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke curates a discussion of Microsoft’s collaboration with the Indian Ministry of Labour, spotlighting Satya Nadella’s perspective and community reactions on AI’s role in empowering millions of workers at scale.<!--excerpt_end-->
 

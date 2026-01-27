@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-30-auto-model-selection-is-now-in-vs-code-for-copilot-business-and-enterprise
 title: Auto Model Selection Now Available in VS Code for GitHub Copilot Business and Enterprise
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces the new auto model selection feature in Visual Studio Code for GitHub Copilot Business and Enterprise, explaining how it improves model selection transparency and policy management for developers and administrators.<!--excerpt_end-->
 

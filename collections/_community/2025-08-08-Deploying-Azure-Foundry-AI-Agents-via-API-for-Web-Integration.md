@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mkscyx/can_i_deploy_an_agent_made_in_azure_foundry_ai/
 title: Deploying Azure Foundry AI Agents via API for Web Integration
 author: Luisio93
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Luisio93's community post explores practical steps to deploy Azure Foundry AI Agents and connect them to a Laravel front end, highlighting requirements for API integration and sharing deployment insights.<!--excerpt_end-->
 

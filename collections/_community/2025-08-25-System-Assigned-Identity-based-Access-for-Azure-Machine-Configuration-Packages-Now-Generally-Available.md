@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/system-assigned-identity-based-access-for-machine-configuration/ba-p/4446603
 title: System-Assigned Identity-based Access for Azure Machine Configuration Packages Now Generally Available
 author: mutemwamasheke
@@ -24,6 +24,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 mutemwamasheke details the new support for System Assigned Identities to enable secure, private access to configuration packages in Azure Machine Configuration, making it easier to manage and secure VMs and Arc-enabled servers.<!--excerpt_end-->
 

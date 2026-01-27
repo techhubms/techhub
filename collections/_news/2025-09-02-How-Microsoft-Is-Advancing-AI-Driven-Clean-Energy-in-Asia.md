@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/2025/09/02/powering-progress-in-asia-ai-and-energy/
 title: How Microsoft Is Advancing AI-Driven Clean Energy in Asia
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke reports on how Microsoft is leveraging AI and cloud infrastructure in Asia to promote clean energy adoption and sustainability, with initiatives spanning from carbon-free electricity procurement to water conservation and datacenter circularity.<!--excerpt_end-->
 

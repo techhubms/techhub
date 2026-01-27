@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=5eCkVjQM9XA
 title: Evaluating AI Models for Coding with GitHub Models
 author: Microsoft Developer
@@ -19,6 +19,7 @@ tags:
 - Prompt Engineering
 section_names:
 - ai
+primary_section: ai
 ---
 Damian Brady from Microsoft Developer demonstrates how developers can leverage GitHub Models to compare more than 40 AI coding models. This video helps developers select the best AI solution for their workflow.<!--excerpt_end-->
 

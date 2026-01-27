@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xSioblHhYL8
 title: 'First Look at Visual Studio 2026: Fast, Modern, and AI-Powered'
 author: Microsoft Events
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Events presents an in-depth overview of Visual Studio 2026, detailing AI-powered innovations including GitHub Copilot and Profiler Agent integration, and developer-centric features for high-impact coding.<!--excerpt_end-->
 

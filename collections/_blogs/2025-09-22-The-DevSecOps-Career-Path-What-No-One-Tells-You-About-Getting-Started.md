@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/the-devsecops-career-path-what-no-one-tells-you-about-getting-started/
 title: 'The DevSecOps Career Path: What No One Tells You About Getting Started'
 author: Philip Piletic
@@ -40,6 +40,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Philip Piletic guides DevOps professionals through the complex journey into DevSecOps, outlining the technical, soft skills, and mindset shifts critical to integrating security seamlessly into modern software delivery.<!--excerpt_end-->
 

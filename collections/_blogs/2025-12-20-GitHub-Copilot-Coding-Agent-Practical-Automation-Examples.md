@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devopsjournal.io/blog/2025/12/20/Copilot-Agent-example
 title: 'GitHub Copilot Coding Agent: Practical Automation Examples'
 author: Rob Bos
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Rob Bos demonstrates hands-on techniques for using the GitHub Copilot Coding Agent to automate real development tasks, highlighting workflow automation, practical prompts, and DevOps best practices.<!--excerpt_end-->
 

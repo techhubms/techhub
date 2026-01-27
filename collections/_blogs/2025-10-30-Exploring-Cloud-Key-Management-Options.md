@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/exploring-cloud-key-management-options/
 title: Exploring Cloud Key Management Options
 author: Alexander Williams
@@ -44,6 +44,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Alexander Williams breaks down the core options for cloud key management—including Azure Key Vault—highlighting how different models impact security, compliance, and operational complexity for DevOps and security teams.<!--excerpt_end-->
 

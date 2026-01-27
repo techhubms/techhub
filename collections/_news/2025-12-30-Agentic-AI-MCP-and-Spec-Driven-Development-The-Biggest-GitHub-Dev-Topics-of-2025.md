@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/developer-skills/agentic-ai-mcp-and-spec-driven-development-top-blog-posts-of-2025/
 title: 'Agentic AI, MCP, and Spec-Driven Development: The Biggest GitHub Dev Topics of 2025'
 author: Natalie Guevara
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Natalie Guevara spotlights the most significant GitHub Blog posts of 2025, covering agentic AI, GitHub Copilot enhancements, the Model Context Protocol, and spec-driven development for software engineers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=RaZc-2tfh9k
 title: 'Blazing-fast AI Chat Apps with ASP.NET Core & SignalR: Insights from the T3 Chat Cloneathon'
 author: dotnet
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Presented by dotnet and featuring Shaltiel Shmidman, this session explores the development of high-performance, real-time AI chat applications using C#, ASP.NET Core, and SignalR, with demonstrations and expert guidance.<!--excerpt_end-->
 

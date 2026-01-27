@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/azure-devops-local-mcp-server-generally-available/
 title: Azure DevOps Local MCP Server Now Generally Available
 author: Dan Hellem
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Dan Hellem introduces the general availability of the Azure DevOps local MCP Server, highlighting its features, local privacy benefits, and integration steps for developers.<!--excerpt_end-->
 

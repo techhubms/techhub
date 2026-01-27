@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-11-actions-macos-26-image-now-in-public-preview
 title: Using the macOS 26 Image in GitHub Actions Workflows
 author: Allison
@@ -18,6 +18,7 @@ tags:
 - Xcode
 section_names:
 - devops
+primary_section: devops
 ---
 Allison discusses the public preview release of the macOS 26 image for GitHub Actions, detailing how developers can use the latest Xcode and workflow labels for iOS CI/CD tasks.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=GlEiDHHYCao
 title: 'Modernize Java Apps with AI: Deploy Your Applications to Azure'
 author: Microsoft Developer
@@ -32,6 +32,7 @@ section_names:
 - azure
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this session, Microsoft Developer's Ayan Gupta guides you through the AI-powered deployment of a Java application to Azure using the GitHub Copilot App Modernization tool, showcasing how automated processes streamline cloud migration.<!--excerpt_end-->
 

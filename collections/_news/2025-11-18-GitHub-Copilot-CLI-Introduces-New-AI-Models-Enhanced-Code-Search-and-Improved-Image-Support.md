@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-18-github-copilot-cli-new-models-enhanced-code-search-and-better-image-support
 title: GitHub Copilot CLI Introduces New AI Models, Enhanced Code Search, and Improved Image Support
 author: Allison
@@ -30,6 +30,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Allison from GitHub presents a comprehensive update on GitHub Copilot CLI, describing key feature enhancements, expanded AI model support, code search improvements, and upgrades to image handling and automation for developers.<!--excerpt_end-->
 

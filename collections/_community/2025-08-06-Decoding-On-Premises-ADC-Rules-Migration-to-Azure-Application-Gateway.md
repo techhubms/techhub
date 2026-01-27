@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/decoding-on-premises-adc-rules-migration-to-azure-application/ba-p/4439156
 title: 'Decoding On-Premises ADC Rules: Migration to Azure Application Gateway'
 author: vnamani
@@ -27,6 +27,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 vnamani delivers a comprehensive walkthrough on migrating on-premises ADC rules to Azure Application Gateway, breaking down feature mapping, Azure-native alternatives, and how to leverage infrastructure-as-code and cloud security best practices.<!--excerpt_end-->
 

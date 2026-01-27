@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-21-github-copilot-app-modernization-for-net-enters-public-preview
 title: GitHub Copilot app modernization for .NET enters public preview
 author: Allison
@@ -17,6 +17,7 @@ section_names:
 - ai
 - azure
 - github-copilot
+primary_section: github-copilot
 ---
 Authored by Allison, this article explores how GitHub Copilot app modernization for .NET assists enterprises in migrating their applications to Azure. It discusses features such as assessment, code remediation, and validation, all leveraging AI-powered intelligence, and highlights benefits for organizations aiming for efficient and confident migration.<!--excerpt_end-->
 

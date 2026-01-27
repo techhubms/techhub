@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/red-teaming-a-rag-app-with-the-azure-ai-evaluation-sdk/ba-p/4442682
 title: Red-teaming a RAG Application with Azure AI Evaluation SDK
 author: Pamela_Fox
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Pamela Fox investigates how the Azure AI Evaluation SDK enables automated red-teaming for LLM-powered RAG apps, examining real attack scenarios and showing practical ways to evaluate and strengthen AI security.<!--excerpt_end-->
 

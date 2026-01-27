@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-07-graphql-explorer-removal-from-api-documentation-on-november-7-2025
 title: GitHub Retires GraphQL Explorer from API Documentation
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - Tool Retirement
 section_names:
 - devops
+primary_section: devops
 ---
 Allison announces GitHub’s retirement of the GraphQL Explorer, advising developers to use local GraphQL tools and providing guidance for transitioning.<!--excerpt_end-->
 

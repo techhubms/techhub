@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=NrIc3ytJQU4
 title: Vibe Coding PromptBoost.dev with GitHub Copilot in VS Code
 author: Visual Studio Code
@@ -20,6 +20,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code hosts Oren for a collaborative coding session using GitHub Copilot to work on promptboost.dev, showcasing how AI can enhance coding productivity.<!--excerpt_end-->
 

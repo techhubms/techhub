@@ -25,6 +25,7 @@ tags:
 - SoC
 section_names:
 - azure
+primary_section: azure
 ---
 TerryGrunzke introduces RAIDDR, Microsoft's new open-licensed error correction architecture for memory reliability in hyperscale datacenters, with a deep dive into Azure integration and technical advantages.<!--excerpt_end-->
 

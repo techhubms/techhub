@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=UfOY9RXHFiw
 title: What is GitHub Secret Protection?
 author: GitHub
@@ -24,6 +24,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 In this GitHub video, developers will learn from the GitHub team about secret protection features, including real-time scanning on every push and Copilot-assisted non-standard password detection.<!--excerpt_end-->
 

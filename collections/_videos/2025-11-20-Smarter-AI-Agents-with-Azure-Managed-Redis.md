@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=9RwCgcYL-PQ
 title: Smarter AI Agents with Azure Managed Redis
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Presented by Simon Brown, Shruti Pathak, Georgios Theologou, and Mark Weitzel at Microsoft Ignite, this session demonstrates how Azure Managed Redis and supporting frameworks enable smarter, collaborative AI agents.<!--excerpt_end-->
 

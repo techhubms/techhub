@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://zure.com/blog/translytical-fabric-ie-power-bi-write-back/
 title: 'Translytical Fabric: Power BI Write-Back Capabilities and the Future of Analytics'
 author: Antti Suanto
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 In this post, Antti Suanto discusses the major announcement of 'Translytical' features in Power BI at Ignite 2024, shedding light on how write-back functionality could transform business analytics applications.<!--excerpt_end-->
 

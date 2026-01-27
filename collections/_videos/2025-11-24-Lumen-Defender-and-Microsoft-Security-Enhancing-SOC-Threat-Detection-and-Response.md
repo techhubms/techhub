@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Hk1o8zMqPA8
 title: 'Lumen Defender and Microsoft Security: Enhancing SOC Threat Detection and Response'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Threat Intelligence
 section_names:
 - security
+primary_section: security
 ---
 Presented by Microsoft Events, this Ignite 2025 session features Ankur Arora, Craig D’Abreo, and Susmita Nayak discussing how Lumen Defender augments Microsoft Security solutions and empowers SOC teams with advanced threat intelligence.<!--excerpt_end-->
 

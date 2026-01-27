@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=TG4ZULpS81w
 title: 'Govern AI Agents with Azure API Management: Secure, Monitor, and Scale AI Workloads'
 author: Microsoft Events
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events hosts a session featuring Mike Budzynski and Anish Tallapureddy, focusing on how Azure API Management and AI Gateway helps IT leaders govern and secure multi-model AI workloads at scale.<!--excerpt_end-->
 

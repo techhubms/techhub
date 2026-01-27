@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=UtSAXb0M4Ek
 title: Turn Copilot into a subject matter expert with GitHub Copilot Spaces
 author: GitHub
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this video, GitHub explains how organizations can use Copilot Spaces to tailor GitHub Copilot for specialized contexts, enhancing expertise and compliance checking capabilities.<!--excerpt_end-->
 

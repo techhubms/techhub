@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/qovery-adds-multiple-ai-agents-to-devops-automation-platform/
 title: Qovery Introduces AI Agents to Enhance DevOps Automation
 author: Mike Vizard
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard details how Qovery's new AI agents, including the DevOps Copilot suite, help automate and optimize DevOps workflows, aiming to minimize manual effort for teams.<!--excerpt_end-->
 

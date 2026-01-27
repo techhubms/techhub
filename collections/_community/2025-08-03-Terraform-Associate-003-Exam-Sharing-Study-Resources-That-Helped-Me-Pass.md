@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/devops/comments/1mgm77r/terraform_associate_003_exam_sharing_study/
 title: Terraform Associate (003) Exam – Sharing Study Resources That Helped Me Pass
 author: AndroCentauri
@@ -20,6 +20,7 @@ tags:
 - Udemy
 section_names:
 - devops
+primary_section: devops
 ---
 In this community post, AndroCentauri shares essential study tips and resources for passing the Terraform Associate (003) certification exam, offering guidance to those pursuing DevOps certifications.<!--excerpt_end-->
 

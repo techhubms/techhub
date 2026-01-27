@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/external-data-materialization-in-fabric-data-warehouse/
 title: External Data Materialization Strategies in Fabric Data Warehouse
 author: Microsoft Fabric Blog
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details strategies for accessing and managing external data in Fabric Data Warehouse, guiding data engineers and analysts through virtualization versus materialization with practical examples and trade-off analysis.<!--excerpt_end-->
 

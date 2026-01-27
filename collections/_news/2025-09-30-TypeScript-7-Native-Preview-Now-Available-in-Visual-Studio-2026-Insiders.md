@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/typescript-7-native-preview-in-visual-studio-2026
 title: TypeScript 7 Native Preview Now Available in Visual Studio 2026 Insiders
 author: Sayed Ibrahim Hashimi
@@ -19,6 +19,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 Sayed Ibrahim Hashimi introduces developers to the TypeScript 7 native preview in Visual Studio 2026 Insiders, outlining the setup process, performance benchmarks, known limitations, and feedback channels.<!--excerpt_end-->
 

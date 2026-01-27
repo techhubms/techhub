@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-code-to-cloud-python-driven-microsoft-fabric-deployments/ba-p/4470447
 title: Automating Microsoft Fabric Deployments with Azure DevOps and Python
 author: Paulams732
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - ml
+primary_section: ml
 ---
 Paulams732 outlines a production-ready solution for Microsoft Fabric artifact deployment with Azure DevOps and Python, covering architecture, automation, and troubleshooting.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/ignite-2025-preview-intelligent-real-time-video-insights-and/ba-p/4470704
 title: 'Intelligent Real-Time Video Insights and Agents with Azure AI Video Indexer: Public Preview'
 author: MaayanYedidia
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 MaayanYedidia details the Azure AI Video Indexer public preview, offering real-time video analysis and AI-powered agents via Azure Arc for privacy-first, scalable operational intelligence.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/custom-script-extensions-and-session-host-configuration/m-p/4476435#M13956
 title: Challenges with Custom Script Extensions Authentication in Azure Session Host Configuration
 author: kristokruuser
@@ -19,6 +19,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Kristo Kruuser raises concerns about securely authenticating Custom Script Extensions in Azure Session Host Configuration, discussing the drawbacks of current approaches and exploring potential solutions.<!--excerpt_end-->
 

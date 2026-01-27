@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Xam_QQnb5wQ
 title: Translating Conversations with Azure AI Foundry Translator API
 author: Microsoft Developer
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer demonstrates how to use the Azure AI Foundry Translator API to translate multilingual conversations with advanced features like tone and gender accommodation.<!--excerpt_end-->
 

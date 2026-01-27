@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/from-cloud-to-cognitive-infrastructure-how-ai-is-redefining-the-next-frontier-of-sre/
 title: 'From Cloud to Cognitive Infrastructure: How AI is Redefining the Next Frontier of SRE'
 author: Akash Thakur
@@ -35,6 +35,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Akash Thakur examines the impact of artificial intelligence on site reliability engineering, highlighting how SREs must now manage complex AI infrastructure alongside traditional cloud operations.<!--excerpt_end-->
 

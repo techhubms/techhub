@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/your-guide-to-debugging-and-reviewing-copilot-generated-code/
 title: Your Guide to Debugging and Reviewing Copilot-Generated Code
 author: John Edward
@@ -26,6 +26,7 @@ section_names:
 - coding
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 John Edward offers an in-depth guide to debugging and reviewing code produced by GitHub Copilot, providing practical strategies for ensuring code quality and security in AI-augmented development.<!--excerpt_end-->
 

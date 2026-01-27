@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=mwwAz0F4r1E
 title: Building Agentic AI Systems in .NET with Local SLMs
 author: dotnet
@@ -36,6 +36,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 In this .NET Live session, Daniel Costea, Cam Soper, Frank Boucher, and Maria Wenzel guide developers through building agentic AI systems with local SLMs, enhanced by Semantic Kernel, in the Microsoft ecosystem.<!--excerpt_end-->
 

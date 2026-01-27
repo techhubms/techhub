@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=jcyVxYES_mE
 title: Data Security Best Practices with Microsoft Purview at Ignite 2025
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events provides actionable strategies for partners to drive data security using Microsoft Purview, with insights from Jim Banach and Laura Brick at Ignite 2025.<!--excerpt_end-->
 

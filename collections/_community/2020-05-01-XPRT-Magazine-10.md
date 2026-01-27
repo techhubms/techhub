@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 10
 date: 2020-05-01 00:00:00 +00:00
 author: Xebia
@@ -30,6 +30,7 @@ section_names:
 - coding
 - devops
 - ml
+primary_section: ai
 ---
 This tenth edition of XPRT Magazine delivers a blend of technical depth and practical experience, covering cloud migration, microservices, DevOps, digital transformation, and data modeling. The issue features real-world stories, hands-on guides, and strategies for thriving in rapidly changing environments, with a focus on the Microsoft ecosystem and modern software practices.
 <!--excerpt_end-->

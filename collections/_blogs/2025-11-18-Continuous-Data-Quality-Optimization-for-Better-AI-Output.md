@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/continuous-data-quality-optimization-for-ai-the-essential-guide/
 title: Continuous Data Quality Optimization for Better AI Output
 author: John Edward
@@ -21,6 +21,7 @@ tags:
 - Machine Learning
 section_names:
 - ai
+primary_section: ai
 ---
 John Edward details why continuous data quality optimization is the backbone of effective AI. Learn how organizations can empower their AI models by refining data pipelines and building strong data quality culture.<!--excerpt_end-->
 

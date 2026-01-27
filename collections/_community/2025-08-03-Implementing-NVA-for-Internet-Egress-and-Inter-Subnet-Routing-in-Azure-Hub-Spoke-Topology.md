@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mgm8gy/nva_and_vnet_routing/
 title: Implementing NVA for Internet Egress and Inter-Subnet Routing in Azure Hub-Spoke Topology
 author: HDClown
@@ -20,6 +20,7 @@ tags:
 - VPN Gateway
 section_names:
 - azure
+primary_section: azure
 ---
 HDClown discusses the integration of a Network Virtual Appliance into an Azure hub-spoke architecture and seeks advice on achieving internet egress and inter-subnet routing through the NVA.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-azure-at-kubecon-north-america-2025-atlanta-ga-nov-10/ba-p/4464324
 title: 'Microsoft Azure at KubeCon North America 2025: AI and Cloud Native Insights'
 author: coryskimming
@@ -26,6 +26,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Cory Skimming previews Microsoft's participation at KubeCon North America 2025, spotlighting AI-powered Kubernetes innovation, multicluster strategies, security advancements, and a comprehensive agenda for Azure cloud-native developers and operators.<!--excerpt_end-->
 

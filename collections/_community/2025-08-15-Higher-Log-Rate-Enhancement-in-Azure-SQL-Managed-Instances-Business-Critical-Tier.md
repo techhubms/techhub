@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-sql-blog/higher-log-rate-for-business-critical-service-tier-in-azure-sql/ba-p/4444127
 title: Higher Log Rate Enhancement in Azure SQL Managed Instance's Business Critical Tier
 author: UrosMilanovic
@@ -22,6 +22,7 @@ tags:
 - Vcore Scaling
 section_names:
 - azure
+primary_section: azure
 ---
 UrosMilanovic provides an in-depth overview of a significant enhancement to Azure SQL Managed Instance: the Business Critical service tier on premium series hardware now features a higher transaction log rate, enabling improved performance for demanding workloads.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/opsera-adds-ai-agent-capable-of-analyzing-quality-of-code-generated-by-ai-tools/
 title: Opsera Introduces AI Agent for Analyzing Code Quality from AI Coding Tools
 author: Mike Vizard
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard reports on Opsera's launch of an AI-powered reasoning agent for assessing the quality of code produced by AI tools, with integration into DevOps workflows and GitHub MCP.<!--excerpt_end-->
 

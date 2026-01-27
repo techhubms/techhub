@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/container-networking-with-azure-application-gateway-for/ba-p/4449941
 title: 'Container Networking with Azure Application Gateway for Containers (AGC): Overlay vs. Flat AKS'
 author: lakshaymalik
@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 lakshaymalik delivers a comprehensive look at deploying Azure Application Gateway for Containers (AGC) with AKS, comparing overlay and flat network models, security policies, and step-by-step Gateway API setup.<!--excerpt_end-->
 

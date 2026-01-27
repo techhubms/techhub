@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/product-news/agents-panel-launch-copilot-coding-agent-tasks-anywhere-on-github/
 title: 'Agents Panel: Delegate Copilot Coding Agent Tasks Anywhere on GitHub'
 author: Tim Rogers
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Tim Rogers explains how the new Agents panel lets developers assign and track Copilot coding agent tasks from anywhere on GitHub, making code automation and review more seamless.<!--excerpt_end-->
 

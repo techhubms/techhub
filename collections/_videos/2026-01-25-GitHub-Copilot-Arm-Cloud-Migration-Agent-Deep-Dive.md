@@ -22,6 +22,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this live stream, Eric Sondhi (Arm) and Alexis Abril (GitHub) join Andrea Griffiths to discuss the GitHub Copilot-powered Arm Cloud Migration Agent. The session breaks down how it helps analyze codebases and migrate containers to Arm-based infrastructure.<!--excerpt_end-->
 

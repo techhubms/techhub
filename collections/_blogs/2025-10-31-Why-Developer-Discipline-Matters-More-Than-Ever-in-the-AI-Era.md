@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/why-developer-discipline-matters-more-than-ever-in-the-ai-era/
 title: Why Developer Discipline Matters More Than Ever in the AI Era
 author: Mike Vizard
@@ -24,6 +24,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Mike Vizard reports on Snyk CTO Danny Allan's warning regarding software security challenges posed by AI-powered coding, explaining why developer discipline and security integration are critical.<!--excerpt_end-->
 

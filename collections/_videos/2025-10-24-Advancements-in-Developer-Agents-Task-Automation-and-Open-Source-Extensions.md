@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/F8CFwNnr10s
 title: 'Advancements in Developer Agents: Task Automation and Open Source Extensions'
 author: Microsoft Developer
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Microsoft Developer’s Govind Kamtamneni explains how the new generation of developer agents helps automate tasks, fix issues, and extend capabilities through open source, with a focus on the SRE Agent.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/startups/blog/catalyst-basecamp-research-leverages-microsoft-and-nvidia-ai-to-unlock-secrets-of-biodiversity/
 title: How Microsoft and Nvidia are working together to unlock the secrets of biodiversity
 author: stclarke
@@ -19,6 +19,7 @@ tags:
 - Technology
 section_names:
 - ai
+primary_section: ai
 ---
 In this article, stclarke explores how Microsoft and Nvidia are joining forces to advance biodiversity research. By combining their technological expertise, the two companies aim to develop sophisticated solutions for unlocking deeper insights into global biodiversity challenges.<!--excerpt_end-->
 

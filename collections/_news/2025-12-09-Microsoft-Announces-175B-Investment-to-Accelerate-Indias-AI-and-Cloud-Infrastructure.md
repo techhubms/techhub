@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/2025/12/09/microsoft-invests-us17-5-billion-in-india-to-drive-ai-diffusion-at-population-scale/
 title: Microsoft Announces $17.5B Investment to Accelerate India's AI and Cloud Infrastructure
 author: stclarke
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke covers Microsoft’s landmark $17.5B investment plan for India, highlighting new AI infrastructure, sovereign cloud solutions, and workforce skilling programs targeted to reach millions.<!--excerpt_end-->
 

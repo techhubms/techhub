@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/elevating-microsoft-fabric-with-new-isv-solutions/
 title: Partner Integrations Boost Microsoft Fabric for AI and Analytics
 author: Microsoft Fabric Blog
@@ -37,6 +37,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog shares insights on new ISV integrations for Microsoft Fabric and OneLake, led by author Microsoft Fabric Blog. Learn how partners are driving AI, analytics, and unified data management.<!--excerpt_end-->
 

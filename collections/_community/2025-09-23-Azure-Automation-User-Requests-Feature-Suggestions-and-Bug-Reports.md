@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/azure-automation-feature-improvements-and-bugs/m-p/4456195#M22242
 title: 'Azure Automation: User Requests, Feature Suggestions, and Bug Reports'
 author: mynster
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 In this comprehensive community post, mynster outlines several bugs and feature suggestions for Azure Automation Accounts, aiming to improve reliability, developer experience, and usability for automation engineers.<!--excerpt_end-->
 

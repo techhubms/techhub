@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=0UDFJvMg5Wc
 title: '.NET Data Community Standup: Couchbase EF Core Provider Discussion'
 author: dotnet
@@ -21,6 +21,7 @@ tags:
 section_names:
 - coding
 - ml
+primary_section: ml
 ---
 Hosted by dotnet, this video standup brings together Jiri Cincura and Jeff Morris to discuss the new Couchbase provider for EF Core, highlighting developer challenges and innovations in .NET data access.<!--excerpt_end-->
 

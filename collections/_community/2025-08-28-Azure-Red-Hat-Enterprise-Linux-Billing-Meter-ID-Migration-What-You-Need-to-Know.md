@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/red-hat-enterprise-linux-billing-meter-id-updates-on-azure/ba-p/4449348
 title: 'Azure Red Hat Enterprise Linux Billing Meter ID Migration: What You Need to Know'
 author: abbottkarl
@@ -21,6 +21,7 @@ tags:
 - Virtual Machines
 section_names:
 - azure
+primary_section: azure
 ---
 abbottkarl explains changes coming to Azure billing for Red Hat Enterprise Linux, describing the shift to new meter IDs, how it affects customers, and the steps required to update your reports and tools.<!--excerpt_end-->
 

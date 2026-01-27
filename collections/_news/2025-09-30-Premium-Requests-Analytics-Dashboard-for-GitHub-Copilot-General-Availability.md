@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-30-premium-requests-analytics-page-is-now-generally-available
 title: 'Premium Requests Analytics Dashboard for GitHub Copilot: General Availability'
 author: Allison
@@ -21,6 +21,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison details the release of GitHub's premium requests analytics dashboard, helping Copilot users, organizations, and enterprises gain actionable insights into usage and spending.<!--excerpt_end-->
 

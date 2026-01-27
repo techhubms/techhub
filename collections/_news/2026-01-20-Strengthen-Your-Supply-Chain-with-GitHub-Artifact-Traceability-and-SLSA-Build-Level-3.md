@@ -26,6 +26,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison details new ways developers can use GitHub’s artifact metadata APIs to link and analyze build artifacts, improving supply chain security and enabling production-aware alerting—with built-in integrations for Microsoft Defender for Cloud.<!--excerpt_end-->
 

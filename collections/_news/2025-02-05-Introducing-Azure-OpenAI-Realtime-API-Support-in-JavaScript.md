@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/introducing-azure-openai-realtime-api-support-in-javascript/
 title: Introducing Azure OpenAI Realtime API Support in JavaScript
 author: Deyaaeldeen Almahallawi
@@ -22,6 +22,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Deyaaeldeen Almahallawi explains how developers can leverage the new Realtime API in the Azure OpenAI JavaScript library for fast, interactive applications.<!--excerpt_end-->
 

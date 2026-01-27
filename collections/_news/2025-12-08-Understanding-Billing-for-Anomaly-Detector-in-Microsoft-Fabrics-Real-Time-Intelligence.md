@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/billing-for-anomaly-detector-in-real-time-intelligence/
 title: Understanding Billing for Anomaly Detector in Microsoft Fabric’s Real-Time Intelligence
 author: Microsoft Fabric Blog
@@ -18,6 +18,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog outlines key billing changes for customers using the Anomaly Detector in Real-Time Intelligence, explaining what users like you need to know about capacity-based billing, query execution charges, and resource usage reporting.<!--excerpt_end-->
 

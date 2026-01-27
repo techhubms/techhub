@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=aor0BCCEkks
 title: 'Reimagine Migration: Agentic Platform Landing Zone with Azure Migrate'
 author: Microsoft Developer
@@ -23,6 +23,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 In this Azure Essentials Show episode, Thomas Maurer and Shiva Shastri explain how Azure Migrate automates secure, compliant deployment of Azure Landing Zones, reducing manual errors and supporting confident cloud migration.<!--excerpt_end-->
 

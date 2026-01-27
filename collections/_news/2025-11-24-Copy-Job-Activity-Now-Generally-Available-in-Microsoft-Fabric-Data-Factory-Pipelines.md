@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-copy-job-activity-now-general-available-in-data-factory-pipeline/
 title: Copy Job Activity Now Generally Available in Microsoft Fabric Data Factory Pipelines
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog announces the general availability of Copy Job Activity in Data Factory pipelines, highlighting new capabilities for automating and orchestrating data movement workflows.<!--excerpt_end-->
 

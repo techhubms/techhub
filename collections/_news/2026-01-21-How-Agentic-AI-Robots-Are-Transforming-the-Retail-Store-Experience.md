@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke explores how Microsoft and partners like Richtech Robotics are leveraging agentic AI, powered by Azure, to enhance customer service and operational efficiency in the retail sector.<!--excerpt_end-->
 

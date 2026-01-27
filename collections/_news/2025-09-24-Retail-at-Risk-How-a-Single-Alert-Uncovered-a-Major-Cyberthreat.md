@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/09/24/retail-at-risk-how-one-alert-uncovered-a-persistent-cyberthreat/
 title: 'Retail at Risk: How a Single Alert Uncovered a Major Cyberthreat'
 author: Microsoft Incident Response
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Incident Response’s expert team details how a single alert in a retail environment led to the discovery of a persistent threat. This report highlights actionable forensic insights and security guidance for practitioners.<!--excerpt_end-->
 

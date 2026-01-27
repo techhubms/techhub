@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=2EJR1xhTtBs
 title: 'Developing Social Media Commander: Real-World .NET App with GitHub Copilot and Agent Instructions'
 author: Microsoft Developer
@@ -35,6 +35,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer and MVP Jeremy Sinclair, joined by Justin Garrett, reveal how they built the Social Media Commander app using GitHub Copilot and latest AI features, demonstrating real-world coding, agent instructions, and CI/CD automation.<!--excerpt_end-->
 

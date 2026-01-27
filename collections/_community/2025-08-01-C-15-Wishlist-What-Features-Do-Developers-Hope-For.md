@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1meqqrk/c_15_wishlist/
 title: 'C# 15 Wishlist: What Features Do Developers Hope For?'
 author: OnionDeluxe
@@ -17,6 +17,7 @@ tags:
 - Wishlist
 section_names:
 - coding
+primary_section: coding
 ---
 OnionDeluxe encourages C# enthusiasts to share their most-wanted features for C# 15, following the recent arrival of extension properties.<!--excerpt_end-->
 

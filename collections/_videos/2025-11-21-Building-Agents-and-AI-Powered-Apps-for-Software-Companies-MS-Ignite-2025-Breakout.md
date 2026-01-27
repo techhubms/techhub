@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=DBrfh0vOBxY
 title: Building Agents and AI-Powered Apps for Software Companies (MS Ignite 2025 Breakout)
 author: Microsoft Events
@@ -30,6 +30,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Microsoft Events brings together experts Cyril Belikoff, Rob Ferguson, and Jonathan Sobel to discuss how software companies can leverage Microsoft’s AI and developer ecosystem for accelerated growth.<!--excerpt_end-->
 

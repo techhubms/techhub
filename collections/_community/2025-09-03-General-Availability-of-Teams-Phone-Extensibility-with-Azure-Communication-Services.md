@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-communication-services/general-availability-of-teams-phone-extensibility/ba-p/4446092
 title: General Availability of Teams Phone Extensibility with Azure Communication Services
 author: AnkurAgarwal
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Ankur Agarwal introduces the general availability of Teams Phone extensibility, showing how Azure Communication Services empowers CCaaS vendors and developers to deliver AI-powered, compliant, and integrated telephony solutions inside Microsoft Teams.<!--excerpt_end-->
 

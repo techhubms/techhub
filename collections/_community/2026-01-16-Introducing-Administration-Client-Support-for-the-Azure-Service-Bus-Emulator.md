@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 Sannidhya_Glodha details how the Azure Service Bus emulator now supports the Administration Client, enabling developers to create, update, and delete entities locally—making local testing workflows and management much more dynamic.<!--excerpt_end-->
 

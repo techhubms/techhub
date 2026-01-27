@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_96
 title: Visual Studio Code November 2024 (v1.96) Release Notes
 author: Visual Studio Code Team
@@ -29,6 +29,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 The Visual Studio Code Team details the November 2024 (v1.96) release, highlighting a new free GitHub Copilot plan, AI-powered coding enhancements, debugging improvements, and productivity features for developers.<!--excerpt_end-->
 

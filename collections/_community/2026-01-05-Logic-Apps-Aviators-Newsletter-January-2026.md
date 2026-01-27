@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-january-2026/ba-p/4482877
 title: Logic Apps Aviators Newsletter - January 2026
 author: WSilveira
@@ -29,6 +29,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 WSilveira curates the January 2026 Logic Apps Aviators Newsletter, covering Azure Logic Apps news, migration guidance, new AI capabilities, and real-world automation tips from product teams and community experts.<!--excerpt_end-->
 

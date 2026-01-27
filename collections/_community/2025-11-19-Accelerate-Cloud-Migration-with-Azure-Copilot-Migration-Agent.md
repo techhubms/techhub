@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/azure-copilot-migration-agent-bringing-agentic-migration-and/ba-p/4471329
 title: Accelerate Cloud Migration with Azure Copilot Migration Agent
 author: shashban
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 shashban explores the capabilities of the Azure Copilot Migration Agent, detailing its AI-powered approach to streamlining migration and modernization for enterprises.<!--excerpt_end-->
 

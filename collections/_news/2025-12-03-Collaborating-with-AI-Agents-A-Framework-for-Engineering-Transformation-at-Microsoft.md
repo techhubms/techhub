@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/engineering-at-microsoft/the-interaction-changes-everything-treating-ai-agents-as-collaborators-not-automation/
 title: 'Collaborating with AI Agents: A Framework for Engineering Transformation at Microsoft'
 author: Jenny Ferries
@@ -23,6 +23,7 @@ tags:
 - Security Boundaries
 section_names:
 - ai
+primary_section: ai
 ---
 Jenny Ferries shares insights from Microsoft's journey towards treating AI agents as collaborators, outlining a practical framework for boosting engineering outcomes through human-AI partnership in complex projects.<!--excerpt_end-->
 

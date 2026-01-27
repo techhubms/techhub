@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=_NRldsqv__w
 title: Pushing Limits of Supercomputing Innovation on Azure AI Infrastructure
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events engineers present an in-depth overview of Azure’s supercomputing infrastructure, offering practical strategies and bottleneck detection for large-scale AI model training.<!--excerpt_end-->
 

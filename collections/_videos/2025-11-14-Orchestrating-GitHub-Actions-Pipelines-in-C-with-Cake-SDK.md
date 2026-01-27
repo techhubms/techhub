@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=e7hkKyQEcN8
 title: Orchestrating GitHub Actions Pipelines in C# with Cake SDK
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 dotnet presents a .NET Conf 2025 session on using C# and Cake SDK to orchestrate GitHub Actions DevOps pipelines, focusing on code-driven workflows, local testing, and leveraging developer skills.<!--excerpt_end-->
 

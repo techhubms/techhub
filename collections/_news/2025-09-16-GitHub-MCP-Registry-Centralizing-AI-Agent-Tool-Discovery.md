@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-16-github-mcp-registry-the-fastest-way-to-discover-ai-tools
 title: 'GitHub MCP Registry: Centralizing AI Agent Tool Discovery'
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the launch of the GitHub MCP Registry, making it easier for developers to discover, explore, and use MCP servers for AI agents and tools—including GitHub Copilot—within a centralized, open ecosystem.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/jfrog-adds-ability-to-track-usage-of-ai-coding-tools/
 title: JFrog Adds AI-Generated Code Detection to Secure Software Supply Chains
 author: Mike Vizard
@@ -44,6 +44,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Mike Vizard examines how JFrog's new AI code detection and governance features empower DevSecOps teams to enhance software supply chain security and manage risks from AI-generated code.<!--excerpt_end-->
 

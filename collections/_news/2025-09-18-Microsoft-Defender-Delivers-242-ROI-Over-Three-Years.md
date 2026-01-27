@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/09/18/microsoft-defender-delivered-242-return-on-investment-over-three-years/
 title: Microsoft Defender Delivers 242% ROI Over Three Years
 author: Scott Woodgate
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Scott Woodgate reviews Forrester’s TEI study, highlighting how Microsoft Defender provides 242% ROI through AI-powered automation, rapid threat response, tool consolidation, and integration with Microsoft Sentinel, benefitting SecOps teams and security leaders.<!--excerpt_end-->
 

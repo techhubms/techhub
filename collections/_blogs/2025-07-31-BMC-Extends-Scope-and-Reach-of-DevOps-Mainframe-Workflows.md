@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/bmc-extends-scope-and-reach-of-devops-mainframe-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=bmc-extends-scope-and-reach-of-devops-mainframe-workflows
 title: BMC Extends Scope and Reach of DevOps Mainframe Workflows
 author: Mike Vizard
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard explores BMC's latest advancements in DevOps analytics for mainframe environments, highlighting new AI capabilities, improved security, and enhanced cloud data management.<!--excerpt_end-->
 

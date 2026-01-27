@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/agent-loop-ignite-update-new-set-of-ai-features-arrive-in-public/ba-p/4470764
 title: 'Agent Loop: New AI Features in Logic Apps Standard and Public Preview Announced at Ignite'
 author: DivSwa
@@ -27,6 +27,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 DivSwa announces the release of Agent Loop General Availability in Logic Apps Standard, alongside a suite of new AI capabilities in public preview, offering developers advanced options for secure, scalable agent-based workflows.<!--excerpt_end-->
 

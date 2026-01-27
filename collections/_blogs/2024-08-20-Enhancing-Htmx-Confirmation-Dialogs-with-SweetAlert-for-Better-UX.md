@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/confirmation-dialogs-with-htmx-and-sweetalert
 title: Enhancing Htmx Confirmation Dialogs with SweetAlert for Better UX
 author: Khalid Abuhakmeh
@@ -17,6 +17,7 @@ tags:
 - Web UX
 section_names:
 - coding
+primary_section: coding
 ---
 Khalid Abuhakmeh explains how to enhance destructive operation confirmations in web apps by intercepting Htmx events and displaying user-friendly SweetAlert dialogs instead of native browser confirms.<!--excerpt_end-->
 

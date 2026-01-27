@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://hiddedesmet.com/bicep-vs-terraform-the-iac-showdown
 title: 'Bicep vs Terraform vs OpenTofu: Your Infrastructure as Code Options in 2025'
 author: Hidde de Smet
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Hidde de Smet offers an expert comparison of Azure Bicep, Terraform, and OpenTofu for Infrastructure as Code. This comprehensive post supports infrastructure and DevOps professionals in selecting tools for Azure, multi-cloud, and open-source strategies.<!--excerpt_end-->
 

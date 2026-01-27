@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=DNvM7tyifwk
 title: Azure AI Infrastructure Advances for Frontier and Enterprise AI Workloads
 author: Microsoft Events
@@ -30,6 +30,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents an in-depth look at Azure's latest AI infrastructure from Microsoft Ignite 2025, led by Param Shah and Matt Vegas, highlighting innovations for powering both frontier and enterprise AI workloads.<!--excerpt_end-->
 

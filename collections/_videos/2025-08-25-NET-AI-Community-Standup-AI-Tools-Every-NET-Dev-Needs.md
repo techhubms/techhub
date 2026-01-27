@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dASHCBVyrnQ
 title: '.NET AI Community Standup: AI Tools Every .NET Dev Needs'
 author: dotnet
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 dotnet presents a community standup that covers practical use of AI tools like GitHub Copilot and MCP in the .NET ecosystem, offering real-world examples and tips for developers.<!--excerpt_end-->
 

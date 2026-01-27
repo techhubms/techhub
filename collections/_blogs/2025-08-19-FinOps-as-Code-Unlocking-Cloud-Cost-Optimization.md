@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/finops-as-code-unlocking-cloud-cost-optimization/?utm_source=rss&utm_medium=rss&utm_campaign=finops-as-code-unlocking-cloud-cost-optimization
 title: FinOps as Code – Unlocking Cloud Cost Optimization
 author: Joydip Kanjilal
@@ -37,6 +37,7 @@ tags:
 - Social X
 section_names:
 - devops
+primary_section: devops
 ---
 Joydip Kanjilal discusses the application of FinOps and FinOps as Code for organizations seeking to automate and optimize cloud spending, offering actionable strategies for technical and DevOps teams.<!--excerpt_end-->
 

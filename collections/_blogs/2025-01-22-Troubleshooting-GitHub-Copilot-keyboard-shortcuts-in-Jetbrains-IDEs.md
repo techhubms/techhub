@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://jessehouwing.net/troubleshooting-github-copilot-keyboard-shortcuts-in-jetbrains-ides/
 title: Troubleshooting GitHub Copilot Keyboard Shortcuts in JetBrains IDEs
 author: Jesse Houwing
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Jesse Houwing provides a practical guide to resolving keyboard shortcut and code completion conflicts when using GitHub Copilot in JetBrains IDEs. This article outlines the main issues developers face and step-by-step solutions based on Houwing's workshop experiences.<!--excerpt_end-->
 

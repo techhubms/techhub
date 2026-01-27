@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer discusses how the integration of Work IQ MCP server with GitHub Copilot enables access to Microsoft 365 work context, enhancing developers’ coding workflow.<!--excerpt_end-->
 

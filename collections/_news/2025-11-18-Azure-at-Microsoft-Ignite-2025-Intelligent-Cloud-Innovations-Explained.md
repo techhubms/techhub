@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/azure-at-microsoft-ignite-2025-all-the-intelligent-cloud-news-explained/
 title: 'Azure at Microsoft Ignite 2025: Intelligent Cloud Innovations Explained'
 author: Jessica Hawk
@@ -37,6 +37,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 Jessica Hawk delivers a complete breakdown of all Azure announcements from Microsoft Ignite 2025, covering AI, data, security, and infrastructure advances set to redefine the intelligent cloud landscape.<!--excerpt_end-->
 

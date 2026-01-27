@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/11/07/whisper-leak-a-novel-side-channel-cyberattack-on-remote-language-models/
 title: 'Whisper Leak: Novel Side-Channel Attack on Remote Language Models Uncovered by Microsoft'
 author: Microsoft Defender Security Research Team, Jonathan Bar Or and Geoff McDonald
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Defender Security Research Team, with Jonathan Bar Or and Geoff McDonald, unveils Whisper Leak: a side-channel attack that reveals AI language model conversation topics by analyzing encrypted traffic, and covers new mitigation measures in response.<!--excerpt_end-->
 

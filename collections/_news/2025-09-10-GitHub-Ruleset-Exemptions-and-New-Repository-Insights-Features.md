@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-10-github-ruleset-exemptions-and-repository-insights-updates
 title: GitHub Ruleset Exemptions and New Repository Insights Features
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - Traffic Insights
 section_names:
 - devops
+primary_section: devops
 ---
 Allison details new features in GitHub repository ruleset management, introducing the exempt bypass type for trusted actors and improved accessibility in repository insights.<!--excerpt_end-->
 

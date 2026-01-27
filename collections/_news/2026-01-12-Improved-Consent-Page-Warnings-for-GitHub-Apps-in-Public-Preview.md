@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2026-01-12-selectively-showing-act-on-your-behalf-warning-for-github-apps-is-in-public-preview
 title: Improved Consent Page Warnings for GitHub Apps in Public Preview
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - User Profile
 section_names:
 - devops
+primary_section: devops
 ---
 Allison details an update to the GitHub Apps consent page, clarifying when the 'Act on your behalf' warning is shown for app authorizations, improving both user experience and developer support.<!--excerpt_end-->
 

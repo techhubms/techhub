@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-iii-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469589
 title: 'OTEL Sidecar Extension Cheat-Sheet on Azure App Service for Linux: PHP, Python, Node.js, .NET'
 author: TulikaC
@@ -31,6 +31,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 TulikaC shares a practical cheat-sheet for adding OpenTelemetry sidecar extensions to PHP, Python, Node.js, and .NET apps running on Azure App Service for Linux, including setup steps, default settings, debugging tips, and sample repos.<!--excerpt_end-->
 

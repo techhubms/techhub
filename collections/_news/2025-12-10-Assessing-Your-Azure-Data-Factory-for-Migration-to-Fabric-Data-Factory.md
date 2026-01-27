@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/assessing-your-azure-data-factory-for-migration-to-fabric-data-factory/
 title: Assessing Your Azure Data Factory for Migration to Fabric Data Factory
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog explains how to assess and prepare your Azure Data Factory pipelines for migration to Fabric Data Factory, highlighting built-in assessment tools and best migration practices.<!--excerpt_end-->
 

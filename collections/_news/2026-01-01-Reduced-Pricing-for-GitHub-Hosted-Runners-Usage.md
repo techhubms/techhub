@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2026-01-01-reduced-pricing-for-github-hosted-runners-usage
 title: Reduced Pricing for GitHub-Hosted Runners Usage
 author: Allison
@@ -21,6 +21,7 @@ tags:
 - Workflow
 section_names:
 - devops
+primary_section: devops
 ---
 Allison outlines the new reduced pricing structure for GitHub-hosted runners, including up to 39% cost savings, and shares resources for understanding the impact on GitHub Actions users.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-16-grok-code-fast-1-is-now-generally-available-in-github-copilot
 title: Grok Code Fast 1 Now Available in GitHub Copilot
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison shares the news that Grok Code Fast 1 is now generally available for GitHub Copilot users at all subscription levels, detailing activation steps and supported IDE integrations.<!--excerpt_end-->
 

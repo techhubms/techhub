@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/introducing-azure-accelerate-fueling-transformation-with-experts-and-investments-across-your-cloud-and-ai-journey/
 title: 'Introducing Azure Accelerate: Expert Support and Investments for Your Cloud and AI Transformation'
 author: Cyril Belikoff
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Authored by Cyril Belikoff, this detailed post explains how Azure Accelerate brings together expert support, funding, and a unified set of tools to help organizations manage cloud and AI transformation efforts successfully.<!--excerpt_end-->
 

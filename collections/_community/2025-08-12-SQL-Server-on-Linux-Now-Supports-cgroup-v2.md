@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/sql-server-blog/sql-server-on-linux-now-supports-cgroup-v2/ba-p/4433523
 title: SQL Server on Linux Now Supports cgroup v2
 author: Attinder_Pal_Singh
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Attinder Pal Singh gives a practical look at cgroup v2 support in SQL Server 2025 preview and SQL Server 2022 CU 20 on Linux, helping DBAs and engineers adopt better resource controls and avoid OOM errors on Kubernetes and other container platforms.<!--excerpt_end-->
 

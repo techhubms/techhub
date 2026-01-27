@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=A_Uf_4jO43k
 title: Quickly Modernize and Deploy Java Apps with AI and GitHub Copilot in VS Code
 author: Visual Studio Code
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code, featuring Reynald Adolphe and Ayan Gupta, showcases how developers can use the GitHub Copilot App Modernization Tool and AI to upgrade, migrate, and deploy Java applications right from VS Code.<!--excerpt_end-->
 

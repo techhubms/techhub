@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/
 title: The Next Chapter of the Microsoft–OpenAI Partnership
 author: stclarke
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke shares official details of the new Microsoft–OpenAI partnership agreement, focusing on revised intellectual property, Azure API exclusivity, and steps for advancing responsible AI innovation.<!--excerpt_end-->
 

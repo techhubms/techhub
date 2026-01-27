@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mc7ir4/is_azure_vision_studio_dead/
 title: Is Azure Vision Studio Dead?
 author: damianvandoom
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Author damianvandoom outlines difficulties encountered when using Azure Vision Studio for object detection, particularly in training custom datasets and facing deprecated APIs.<!--excerpt_end-->
 

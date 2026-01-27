@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-02-secret-scanning-updates-november-2025
 title: GitHub Secret Scanning Updates and New Patterns — November 2025
 author: Allison
@@ -27,6 +27,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Allison reports on the November 2025 improvements to GitHub secret scanning, including new Azure and Microsoft secret patterns, enhanced private key detection, and upgraded validity checks for security-critical credentials.<!--excerpt_end-->
 

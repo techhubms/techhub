@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=tyV3Yn5hsKw
 title: AI-Driven Product Change Management with Copilot Studio for Manufacturing
 author: Microsoft Cloud
@@ -19,6 +19,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Cloud presents an overview of the Product Change Management agent template, built with Copilot Studio, demonstrating how AI can automate and enhance change management processes in manufacturing.<!--excerpt_end-->
 

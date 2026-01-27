@@ -197,6 +197,7 @@
 
 1. Start with clean slate:
    - [ ] Run ALL tests first: `Run`
+   - [ ] Use `get_terminal_output` repeatedly until you see "This terminal is now free to use". Do NOT execute any other commands in the terminal until that moment.
    - [ ] Fix any broken tests before proceeding
 
 2. Write failing tests:

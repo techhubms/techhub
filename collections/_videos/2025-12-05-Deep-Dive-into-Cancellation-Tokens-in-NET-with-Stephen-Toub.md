@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=h1GvSPaRQ-U
 title: Deep Dive into Cancellation Tokens in .NET with Stephen Toub
 author: dotnet
@@ -31,6 +31,7 @@ tags:
 - Volatile
 section_names:
 - coding
+primary_section: coding
 ---
 Scott Hanselman and Stephen Toub offer a practical breakdown of cancellation tokens in .NET, explaining their evolution and usage for robust async code.<!--excerpt_end-->
 

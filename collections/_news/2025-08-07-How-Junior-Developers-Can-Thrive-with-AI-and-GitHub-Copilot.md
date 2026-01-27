@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/generative-ai/junior-developers-arent-obsolete-heres-how-to-thrive-in-the-age-of-ai/
 title: How Junior Developers Can Thrive with AI and GitHub Copilot
 author: Gwen Davis
@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Gwen Davis outlines practical strategies for junior developers to succeed in the age of AI, focusing on leveraging GitHub Copilot, developing core coding skills, and thriving within open-source and DevOps workflows.<!--excerpt_end-->
 

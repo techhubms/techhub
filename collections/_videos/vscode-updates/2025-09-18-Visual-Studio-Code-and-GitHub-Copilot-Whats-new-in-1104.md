@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fwPFPJlw3w4
 title: Visual Studio Code and GitHub Copilot - What's new in 1.104
 author: Fokko Veegens
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Fokko Veegens demonstrates VS Code 1.104 features including auto model selection, AGENTS.md support, prompt file suggestions, and improved chat sessions management.<!--excerpt_end-->
 

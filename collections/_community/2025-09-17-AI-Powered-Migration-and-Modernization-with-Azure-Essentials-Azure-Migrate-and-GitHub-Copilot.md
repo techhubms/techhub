@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/ai-powered-migration-modernization-secure-resilient-and-ready/ba-p/4454849
 title: AI-Powered Migration and Modernization with Azure Essentials, Azure Migrate, and GitHub Copilot
 author: GabiPacheco
@@ -30,6 +30,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 GabiPacheco details how businesses can leverage Azure Essentials, Azure Migrate, and GitHub Copilot to securely and resiliently modernize their IT infrastructure, providing actionable strategies for migration and AI integration.<!--excerpt_end-->
 

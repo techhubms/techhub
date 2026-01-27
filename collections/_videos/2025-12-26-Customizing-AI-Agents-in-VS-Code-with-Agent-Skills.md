@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Ey1-FuAUgkI
 title: Customizing AI Agents in VS Code with Agent Skills
 author: Visual Studio Code
@@ -17,6 +17,7 @@ tags:
 - VS Code Extensions
 section_names:
 - ai
+primary_section: ai
 ---
 Visual Studio Code's Harald Kirschner explains how to customize AI agents using Agent Skills, detailing their structure, implementation, and benefits for developers.<!--excerpt_end-->
 

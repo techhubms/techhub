@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ALNbqZzuBHg
 title: Maintain Regulatory Compliance with the Microsoft Sovereign Cloud
 author: Microsoft Events
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents an in-depth look at how Microsoft Sovereign Cloud empowers organizations to maintain regulatory compliance and digital sovereignty, featuring insights from Harald Solstad Fianbakken and Ella Hassan.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.arresteddevops.com/digging-into-security/
 title: Digging Into Security With Kat Cosgrove
 author: Arrested DevOps
@@ -18,6 +18,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Arrested DevOps hosts Kat Cosgrove and Matt Stratton examine the persistent challenges of security in DevOps, blending candid advice and humor on topics from container vulnerabilities to effective patching.<!--excerpt_end-->
 

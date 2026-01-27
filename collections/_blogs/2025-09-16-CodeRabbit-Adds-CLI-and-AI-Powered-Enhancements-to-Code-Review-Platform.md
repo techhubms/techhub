@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/coderabbit-adds-cli-support-to-code-review-platform-based-on-ai/
 title: CodeRabbit Adds CLI and AI-Powered Enhancements to Code Review Platform
 author: Mike Vizard
@@ -35,6 +35,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Mike Vizard reports on CodeRabbit's expansion of its AI-powered code review platform, highlighting new CLI support, unit test generation, pre-merge checks, and MCP client integration to help developers efficiently manage code quality and security at scale.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=W4Zik7qcnz0
 title: Rubber Duck Thursday - Building an App with GitHub Copilot Agent Mode for the Competition
 author: GitHub
@@ -18,6 +18,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub demonstrates how to build an application using Copilot Agent Mode for the 'For the Love of Code' competition. Join this session to learn from GitHub's practical workflow and Copilot integration.<!--excerpt_end-->
 

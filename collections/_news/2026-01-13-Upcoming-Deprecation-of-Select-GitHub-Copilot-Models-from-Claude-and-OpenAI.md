@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2026-01-13-upcoming-deprecation-of-select-github-copilot-models-from-claude-and-openai
 title: Upcoming Deprecation of Select GitHub Copilot Models from Claude and OpenAI
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison shares a news update about the upcoming deprecation of several GitHub Copilot models from Claude and OpenAI, outlining important dates and recommended alternatives for developers and administrators.<!--excerpt_end-->
 

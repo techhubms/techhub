@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://hiddedesmet.com/ai-project-validation-framework-part2
 title: 'Is AI the Right Solution? Part 2: Applying the Framework and Navigating Ethical Risks'
 author: Hidde de Smet
@@ -23,6 +23,7 @@ tags:
 - Series
 section_names:
 - ai
+primary_section: ai
 ---
 Hidde de Smet presents Part 2 of his series on validating AI projects. This installment demonstrates practical uses of an AI decision framework and examines essential ethical considerations—such as bias, transparency, and workforce impact—when evaluating AI initiatives.<!--excerpt_end-->
 

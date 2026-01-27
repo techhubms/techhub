@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mcaooo/azure_network_gateway_issue_recreating/
 title: Issues Recreating Azure Network Gateway for Upgrading Public IPs
 author: Dave_PW
@@ -17,6 +17,7 @@ tags:
 - Virtual Network
 section_names:
 - azure
+primary_section: azure
 ---
 Authored by Dave_PW, this post discusses the challenges with recreating an Azure network gateway for a public IP upgrade, analyzing connectivity and maintenance implications.<!--excerpt_end-->
 

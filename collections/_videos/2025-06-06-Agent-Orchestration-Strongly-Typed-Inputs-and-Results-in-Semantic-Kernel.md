@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=-TsOdhaO7m4
 title: 'Agent Orchestration: Strongly-Typed Inputs and Results in Semantic Kernel'
 author: Learn Microsoft AI
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Learn Microsoft AI presents a guide on leveraging strongly-typed input and output models within Semantic Kernel agent workflows, demonstrating techniques for building scalable, robust AI applications.<!--excerpt_end-->
 

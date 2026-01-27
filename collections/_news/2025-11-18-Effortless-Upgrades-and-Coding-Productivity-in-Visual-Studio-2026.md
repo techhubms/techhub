@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/spend-less-time-upgrading-more-time-coding-in-visual-studio-2026/
 title: Effortless Upgrades and Coding Productivity in Visual Studio 2026
 author: Jason Chlus
@@ -35,6 +35,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Jason Chlus explains how Visual Studio 2026 streamlines upgrades, project modernization, and dependency management. Learn how integrated Copilot modernization and Azure migration help developers stay productive.<!--excerpt_end-->
 

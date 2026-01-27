@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FsD1p_LPZWE
 title: 'Power Agentic Access: Governing Non-Human Identities with Oasis | Microsoft Ignite 2025'
 author: Microsoft Events
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents a session led by Yonit Glozshtein on the Oasis platform for discovering and governing AI agents' non-human identities across Microsoft cloud services, emphasizing secure automation and lifecycle controls.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-08-enterprise-teams-product-limits-increased-by-over-10x
 title: Enterprise Teams Product Limits Increased by Over 10x
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - User Governance
 section_names:
 - devops
+primary_section: devops
 ---
 Allison reports on GitHub's update that increases enterprise teams product limits by over 10x, enabling greater scalability and streamlined access management for organizations.<!--excerpt_end-->
 

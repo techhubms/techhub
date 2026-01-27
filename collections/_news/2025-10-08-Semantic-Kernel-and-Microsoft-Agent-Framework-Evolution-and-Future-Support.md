@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-and-microsoft-agent-framework/
 title: 'Semantic Kernel and Microsoft Agent Framework: Evolution and Future Support'
 author: Shawn Henry
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Shawn Henry outlines the launch of Microsoft Agent Framework as the new foundation for building AI agents, describes its relationship to Semantic Kernel, and provides support and migration guidance for developers.<!--excerpt_end-->
 

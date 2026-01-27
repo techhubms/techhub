@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1mfmw05/how_to_structure_cicd_pipelines_across_two_repos/
 title: Structuring CI/CD Pipelines Across Code and Helm Chart Repositories in Azure DevOps
 author: machosalade
@@ -23,6 +23,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 machosalade and others discuss best practices for wiring up CI/CD pipelines using Azure DevOps, ACR, AKS, and Helm, including sample pipeline YAML and repo structure recommendations.<!--excerpt_end-->
 

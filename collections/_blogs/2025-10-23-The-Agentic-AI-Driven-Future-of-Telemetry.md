@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/the-agentic-ai-driven-future-of-telemetry/
 title: The Agentic AI-Driven Future of Telemetry
 author: Perry Correll
@@ -39,6 +39,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Perry Correll examines the shift to agentic AI-driven telemetry, explaining how combining machine and human context enables intelligent observability and self-healing IT systems.<!--excerpt_end-->
 

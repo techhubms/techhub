@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/26307/
 title: Preview of Item History Page in Microsoft Fabric Capacity Metrics App
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog announces a new Item History page in the Fabric Capacity Metrics App, offering detailed 30-day compute usage analytics for capacity management and optimization.<!--excerpt_end-->
 

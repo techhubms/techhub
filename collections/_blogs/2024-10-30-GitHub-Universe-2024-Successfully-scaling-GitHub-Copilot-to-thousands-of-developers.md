@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devopsjournal.io/blog/2024/10/30/GitHub-Universe-slides
 title: 'GitHub Universe 2024: Successfully Scaling GitHub Copilot to Thousands of Developers'
 author: Rob Bos
@@ -17,6 +17,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this session recap, Rob Bos discusses strategies for scaling GitHub Copilot to thousands of developers, as presented at GitHub Universe 2024. The post includes a recorded session and slides.<!--excerpt_end-->
 

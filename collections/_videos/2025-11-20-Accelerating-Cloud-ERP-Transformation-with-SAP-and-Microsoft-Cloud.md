@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=kNKmYwlN9rQ
 title: Accelerating Cloud-ERP Transformation with SAP and Microsoft Cloud
 author: Microsoft Events
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events speakers Anirban Majumdar and Sivakumar N showcase at Ignite how SAP and Microsoft Cloud collectively enable secure, AI-enhanced Cloud-ERP transformation for enterprises, with demos and real use cases.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-16-anthropic-claude-opus-4-1-is-now-available-in-public-preview-in-visual-studio-jetbrains-xcode-and-eclipse
 title: Claude Opus 4.1 Rolls Out for GitHub Copilot Users in Popular IDEs
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison shares details about the public preview of Claude Opus 4.1 in GitHub Copilot, highlighting availability for users across multiple IDEs and instructions for enabling access.<!--excerpt_end-->
 

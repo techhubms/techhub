@@ -1,4 +1,4 @@
----
+﻿---
 title: Agentic AI, Context Engineering, and Secure Automation Power Tech Progress
 author: Tech Hub Team
 date: 2026-01-05 09:00:00 +00:00
@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: all
 ---
 This week’s roundup covers new developments in agentic AI, streamlined team automation, and improved security. GitHub Copilot continues to evolve with context-sensitive agents and simplified integration through Model Context Protocol, while Azure delivers more automation for disaster recovery, AI-supported testing, and practical reliability resources. Updates for .NET 10 and emerging AI frameworks enhance workflow and testing, while recent security changes include identity recovery improvements and new fuzzing guidelines for open source code. These trends point towards more automated, interconnected, and secure development environments.<!--excerpt_end-->
 

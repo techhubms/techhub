@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=0PVcB1u_ZV4
 title: Optimizing Azure Managed Disk Tiering for Performance and Cost Efficiency
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 - Storage Optimization
 section_names:
 - azure
+primary_section: azure
 ---
 Microsoft Events presents a session featuring Vatsal Rastogi, focusing on how to optimize Azure Managed Disk tiering to enhance app performance and maximize ROI. The talk covers challenges, introduces Lucidity’s advanced storage management solution, and shares practical results.<!--excerpt_end-->
 

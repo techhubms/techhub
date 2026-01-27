@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-were-making-github-copilot-smarter-with-fewer-tools/
 title: How GitHub Copilot Uses Embedding-Guided Tool Routing in VS Code
 author: Anisha Agarwal
@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Anisha Agarwal delves into engineering advances in GitHub Copilot Chat for VS Code, showing how embedding-guided tool routing and adaptive clustering improve tool selection and efficiency for developers.<!--excerpt_end-->
 

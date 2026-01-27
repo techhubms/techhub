@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/blog/2025/10/28/becoming-frontier-how-human-ambition-and-ai-first-differentiation-are-helping-microsoft-customers-go-further-with-ai/
 title: 'Becoming Frontier: How Microsoft Empowers Organizations with AI-First Transformation'
 author: stclarke
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke presents a comprehensive roundup of enterprise AI transformation success stories, detailing how diverse organizations are accelerating innovation by adopting Azure and Microsoft AI solutions for a range of operational and societal challenges.<!--excerpt_end-->
 

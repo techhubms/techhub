@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=kpY9N1bWI-M
 title: 'How AI Transforms Network Operations: Real-Time Insights at Microsoft Ignite'
 author: Microsoft Events
@@ -31,6 +31,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 Phillip Gervasi presents at Microsoft Ignite 2025 on how AI innovations, including ML, NLP, and LLMs, are transforming network operations through intelligent, data-driven workflows on Azure.<!--excerpt_end-->
 

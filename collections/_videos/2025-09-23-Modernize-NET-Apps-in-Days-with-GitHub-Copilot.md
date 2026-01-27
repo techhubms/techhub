@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=-YKguff5GY8
 title: Modernize .NET Apps in Days with GitHub Copilot
 author: dotnet
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 dotnet presents a detailed walkthrough of modernizing legacy .NET applications using GitHub Copilot, including automation of upgrades and seamless Azure deployment.<!--excerpt_end-->
 

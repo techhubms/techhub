@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-ncv6-public-preview-the-new-unified-platform-for-converged/ba-p/4472704
 title: 'Azure NCv6 Public Preview: Unified Platform for Converged AI & Visual Computing'
 author: rishabv90
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 rishabv90 explains how Azure's new NCv6 virtual machines offer a unified platform for converged AI and visual computing, leveraging NVIDIA RTX PRO 6000 GPUs for research, simulation, and enterprise-grade AI deployment.<!--excerpt_end-->
 

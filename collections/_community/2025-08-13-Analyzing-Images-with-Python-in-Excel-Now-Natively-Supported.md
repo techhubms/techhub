@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-365-insider-blog/analyze-images-with-python-in-excel/ba-p/4440388
 title: 'Analyzing Images with Python in Excel: Now Natively Supported'
 author: ndeyanta
@@ -22,6 +22,7 @@ tags:
 - Xl() Function
 section_names:
 - coding
+primary_section: coding
 ---
 Ndeyanta Jallow introduces a powerful new feature in Microsoft Excel allowing users to analyze images programmatically using Python, demonstrating how developers can leverage common libraries for image analysis workflows.<!--excerpt_end-->
 

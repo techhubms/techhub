@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Govind Kamtamneni explains how agent skills for Microsoft Foundry and Azure enable modular, context-driven agent development in enterprise environments, providing practical steps and technical insights.<!--excerpt_end-->
 

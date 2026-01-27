@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-events/chart-your-ai-app-and-agent-strategy-with-microsoft-marketplace/ec-p/4473304#M662
 title: Chart your AI App and Agent Strategy with Microsoft Marketplace
 author: j_weller_nv
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 j_weller_nv invites the community to a session on making strategic decisions for AI app and agent adoption, highlighting how Microsoft Marketplace can accelerate deployment and maintain governance for organizations embracing AI.<!--excerpt_end-->
 

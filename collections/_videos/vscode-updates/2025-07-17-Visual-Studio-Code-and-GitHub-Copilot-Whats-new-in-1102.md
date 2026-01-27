@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=bLjFNi9_RUk
 title: Visual Studio Code and GitHub Copilot - What's new in 1.102
 author: Fokko Veegens
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Fokko Veegens covers VS Code 1.102 features including the open-sourcing of GitHub Copilot Chat extension, custom chat modes, custom instruction generation, and terminal auto approval.<!--excerpt_end-->
 

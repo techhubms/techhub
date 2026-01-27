@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=d6IzQ2y3nuQ
 title: Visual Studio Code and GitHub Copilot - What's new in 1.108
 author: Fokko Veegens
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 VS Code 1.108 introduces agent skills support in the GitHub folder, enhanced agent sessions view with grouping and archiving, improved chat picker integration, and expanded terminal auto-approval capabilities. Fokko Veegens demonstrates these features with practical examples showing how skills can automate controller creation and how the new terminal command parsing prevents hidden operations.<!--excerpt_end-->
 

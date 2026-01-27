@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/finops-blog/streamline-analytics-spend-on-microsoft-fabric-with-azure/ba-p/4472670
 title: Optimizing Data Analytics Costs with Azure Reservations for Microsoft Fabric
 author: kyleikeda
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Kyle Ikeda provides practical guidance for optimizing analytics spend with Azure reservations for Microsoft Fabric, walking through capacity management and savings strategies.<!--excerpt_end-->
 

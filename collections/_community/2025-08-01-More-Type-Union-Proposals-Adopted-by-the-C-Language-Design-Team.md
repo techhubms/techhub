@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mf2ylu/more_type_union_proposals_adopted_by_the_c/
 title: More Type Union Proposals Adopted by the C# Language Design Team
 author: DayYam
@@ -16,6 +16,7 @@ tags:
 - Type Unions
 section_names:
 - coding
+primary_section: coding
 ---
 DayYam reports on new type union proposals being adopted by the C# language design team, highlighting upcoming changes for C# developers.<!--excerpt_end-->
 

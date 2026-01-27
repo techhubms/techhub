@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/company-news/github-availability-report-july-2025/
 title: 'GitHub Enterprise Importer Incident and IP Range Update: July 2025 Availability Report'
 author: Jakub Oleksy
@@ -28,6 +28,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Jakub Oleksy reports on the July 2025 service disruption affecting GitHub Enterprise Importer, focusing on incident details, infrastructure changes, updated IP allow list requirements for Azure and other cloud migrations, and security considerations.<!--excerpt_end-->
 

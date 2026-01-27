@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/D-fES6lwrks
 title: Modernize Java Apps in Days with GitHub Copilot
 author: Microsoft Developer
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer highlights the benefits of using GitHub Copilot to modernize Java applications, showing how it can streamline upgrades and help ensure secure, fast, and compliant code.<!--excerpt_end-->
 

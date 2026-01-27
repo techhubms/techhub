@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/issuing-custom-claims-using-directory-extension-attributes-in/ba-p/4441980
 title: Issuing Custom Claims Using Directory Extension Attributes in Microsoft Entra ID
 author: Farooque
@@ -22,6 +22,7 @@ tags:
 - User Attributes
 section_names:
 - security
+primary_section: security
 ---
 Farooque shares a practical walkthrough on issuing custom SSO claims in Microsoft Entra ID by leveraging directory extension attributes and group-based conditions. The article covers attribute registration, claim configuration, and troubleshooting.<!--excerpt_end-->
 

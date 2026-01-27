@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mflnuk/net_aspire_start_resource_on_servicebus_message/
 title: .NET Aspire – Start Resource on Service Bus Message
 author: LeonardSpencer
@@ -18,6 +18,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 LeonardSpencer discusses how to trigger a resource in a .NET Aspire setup upon receiving messages from Azure Service Bus, providing insights for developers building event-driven applications.<!--excerpt_end-->
 

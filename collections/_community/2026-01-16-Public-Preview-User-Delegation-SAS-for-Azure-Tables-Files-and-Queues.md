@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 ellievail announces the public preview of user delegation SAS for Azure Tables, Files, and Queues, highlighting new security features for delegated access via Entra ID and Azure RBAC.<!--excerpt_end-->
 

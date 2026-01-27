@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=vpJKxsolaGc
 title: Building Multi-Agent Systems with MCP and Copilot Studio
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 - Multi Agent Systems
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents an Ignite 2025 session on evolving multi-agent features in Copilot Studio, led by Matthew Bolanos, Zankar Desai, Kendra Springer, and Ziv Ventura. The talk addresses implementing scalable, enterprise-ready multi-agent systems using Microsoft's MCP platform.<!--excerpt_end-->
 

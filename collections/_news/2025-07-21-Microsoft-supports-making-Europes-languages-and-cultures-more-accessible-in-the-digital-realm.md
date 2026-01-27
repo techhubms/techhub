@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/07/20/eudigitalunlock/
 title: Microsoft supports making Europe’s languages and cultures more accessible in the digital realm
 author: stclarke
@@ -19,6 +19,7 @@ tags:
 - Technology
 section_names:
 - ai
+primary_section: ai
 ---
 Written by stclarke, this article highlights Microsoft's commitment to fostering digital accessibility for Europe's many languages and cultures. The focus is on making technology more inclusive, promoting innovation, and ensuring that digital transformation benefits a linguistically and culturally diverse continent.<!--excerpt_end-->
 

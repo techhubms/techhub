@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/how-github-plans-to-secure-npm-after-recent-supply-chain-attacks/
 title: How GitHub Plans to Secure npm After Recent Supply Chain Attacks
 author: Tom Smith
@@ -37,6 +37,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Tom Smith discusses how GitHub is overhauling npm security after the Shai-Hulud worm attack, describing new authentication requirements and trusted publishing to defend the software supply chain.<!--excerpt_end-->
 

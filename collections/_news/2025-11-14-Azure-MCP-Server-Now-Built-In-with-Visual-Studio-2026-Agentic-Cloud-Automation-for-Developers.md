@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/azure-mcp-server-now-built-in-with-visual-studio-2026-a-new-era-for-agentic-workflows/
 title: 'Azure MCP Server Now Built-In with Visual Studio 2026: Agentic Cloud Automation for Developers'
 author: Yun Jung Choi
@@ -33,6 +33,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Yun Jung Choi introduces the built-in Azure MCP Server integration with Visual Studio 2026, enabling developers to automate Azure resource management and CI/CD workflows via AI-native tools, secure practices, and natural language in their IDE.<!--excerpt_end-->
 

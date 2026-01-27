@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/capacity-planning-with-azure-container-apps-workload-profiles/ba-p/4477085
 title: Capacity Planning with Azure Container Apps Workload Profiles
 author: nesubram
@@ -20,6 +20,7 @@ tags:
 - Workload Profiles
 section_names:
 - azure
+primary_section: azure
 ---
 nesubram guides you through best practices for capacity planning in Azure Container Apps, clarifying key concepts like node resources, replica scheduling, and practical autoscaling strategies.<!--excerpt_end-->
 

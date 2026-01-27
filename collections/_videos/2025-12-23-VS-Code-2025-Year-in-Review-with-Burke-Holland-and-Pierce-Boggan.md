@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=JilqJR1aZLs
 title: 'VS Code 2025: Year in Review with Burke Holland & Pierce Boggan'
 author: Visual Studio Code
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code’s own Burke Holland and Pierce Boggan recap 2025’s advancements including Copilot Universe, Agent Modes, extensibility models, and AI-powered workflows for developers.<!--excerpt_end-->
 

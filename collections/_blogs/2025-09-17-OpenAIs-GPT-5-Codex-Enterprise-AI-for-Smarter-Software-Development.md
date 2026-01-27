@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/openais-gpt-5-codex-a-smarter-approach-to-enterprise-development/
 title: 'OpenAI’s GPT-5-Codex: Enterprise AI for Smarter Software Development'
 author: Tom Smith
@@ -33,6 +33,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Tom Smith examines how OpenAI’s GPT-5-Codex transforms enterprise software engineering by tackling long-running tasks, advancing code review processes, and integrating seamlessly into developer tools, all while maintaining robust security.<!--excerpt_end-->
 

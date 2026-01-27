@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=DKEo7LqpVAM
 title: From Zero to Kubernetes with AKS Automatic
 author: Microsoft Events
@@ -28,6 +28,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Microsoft Events, featuring Amanda Wang and Paul Yu, present an Ignite 2025 session on AKS Automatic—a new Azure Kubernetes solution that streamlines deployment and management by automating operations and embedding security, scalability, and observability best practices.<!--excerpt_end-->
 

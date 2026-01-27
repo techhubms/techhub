@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/creating-a-software-bill-of-materials-sbom-for-an-open-source-nuget-package/
 title: Creating a Software Bill of Materials (SBOM) for an Open-Source NuGet Package
 author: Andrew Lock
@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 In this comprehensive guide, Andrew Lock demonstrates how to generate SBOMs for .NET NuGet packages using tools like GitHub's SBOM export, Microsoft's sbom-tool, anchore/sbom-action, and CycloneDX, highlighting practical considerations for developers and operators.<!--excerpt_end-->
 

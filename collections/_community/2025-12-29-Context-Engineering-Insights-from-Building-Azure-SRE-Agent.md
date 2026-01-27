@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-sre-agent/yearinreview-insights-from-the-last-few-months-building-azure/m-p/4481823#M2
 title: Context Engineering Insights from Building Azure SRE Agent
 author: Mayunk_Jain
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Mayunk_Jain highlights practical lessons from building the Azure SRE Agent, with a focus on context engineering for reliable AI agents in production environments.<!--excerpt_end-->
 

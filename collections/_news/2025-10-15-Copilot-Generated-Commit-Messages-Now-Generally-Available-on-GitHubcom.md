@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-15-copilot-generated-commit-messages-on-github-com-are-generally-available
 title: Copilot-Generated Commit Messages Now Generally Available on GitHub.com
 author: Allison
@@ -19,6 +19,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces that GitHub Copilot’s contextual commit message suggestions are now generally available on github.com, offering developers automated, concise commit documentation powered by AI.<!--excerpt_end-->
 

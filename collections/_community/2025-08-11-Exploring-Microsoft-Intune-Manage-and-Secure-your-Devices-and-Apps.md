@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/events/exploring-microsoft-intune-manage-and-secure-your-devices-and/ec-p/4441982#M9
 title: 'Exploring Microsoft Intune: Manage and Secure your Devices and Apps'
 author: Pouya
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Pouya shares practical insights on using Microsoft Intune to manage and secure devices and applications for hybrid and remote work, emphasizing best practices and integration with Azure and Microsoft security services.<!--excerpt_end-->
 

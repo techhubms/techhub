@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/uOx286VTAwM
 title: GitHub Copilot Surpasses ChatGPT as Top Developer AI Tool
 author: GitHub
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub shares The Pragmatic Engineer's survey results showing GitHub Copilot overtaking ChatGPT as the leading AI tool for developers, cementing its role in modern software development.<!--excerpt_end-->
 

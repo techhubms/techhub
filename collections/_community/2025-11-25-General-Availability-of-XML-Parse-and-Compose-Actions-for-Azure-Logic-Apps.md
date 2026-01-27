@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-of-the-xml-parse-and-compose/ba-p/4470825
 title: General Availability of XML Parse and Compose Actions for Azure Logic Apps
 author: hcamposu
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 hcamposu announces the general availability of XML Parse and Compose actions in Azure Logic Apps, offering enhanced XML workflow capabilities for cloud developers.<!--excerpt_end-->
 

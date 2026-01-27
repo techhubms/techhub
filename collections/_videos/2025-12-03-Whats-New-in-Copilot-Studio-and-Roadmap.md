@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=6sI5jrNVz70
 title: What’s New in Copilot Studio and Roadmap
 author: Microsoft Events
@@ -31,6 +31,7 @@ tags:
 - What’s New in Copilot Studio And Roadmap | BRK313
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents an in-depth Microsoft Ignite session covering the roadmap for Copilot Studio, with speakers Omar Aftab, Erez Altus, and Zac Cadi highlighting agent building, feature enhancements, and governance for AI-powered automation.<!--excerpt_end-->
 

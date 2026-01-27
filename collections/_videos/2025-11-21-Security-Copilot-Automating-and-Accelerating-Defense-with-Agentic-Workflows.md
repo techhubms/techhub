@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ZUoQE5UJNyk
 title: 'Security Copilot: Automating and Accelerating Defense with Agentic Workflows'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events brings an advanced Ignite 2025 session featuring speakers Lizzie Heinze and Sarat Subramaniam. They demonstrate how Security Copilot agents can automate security tasks, strengthen defenses, and enable rapid response across multiple security domains.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/how-to-integrate-quantum-safe-security-into-your-devops-workflow/
 title: How to Integrate Quantum-Safe Security into Your DevOps Workflow
 author: Carl Torrence
@@ -41,6 +41,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Carl Torrence offers a practical guide for DevOps professionals to integrate quantum-safe security into their workflows, outlining key steps to assess vulnerabilities, update encryption protocols, and automate secure practices in the face of quantum computing risks.<!--excerpt_end-->
 

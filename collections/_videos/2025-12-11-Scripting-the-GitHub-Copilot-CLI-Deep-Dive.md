@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Ed3uQYdr3Wc
 title: Scripting the GitHub Copilot CLI - Deep Dive
 author: Microsoft Developer
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this video, Microsoft Developer's John explores advanced scripting and automation strategies using the GitHub Copilot CLI, providing practical guidance for developers seeking to enhance their workflow.<!--excerpt_end-->
 

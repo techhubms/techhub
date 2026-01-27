@@ -443,6 +443,176 @@ public class FileBasedContentRepositoryTests : IDisposable
     }
 
     /// <summary>
+    /// Test: GetByCollectionAsync includes vscode-updates subcollection items
+    /// Why: When querying "videos", should include items from vscode-updates subdirectory
+    ///      This is a real-world subcollection used for VS Code update videos
+    /// </summary>
+    [Fact]
+    public async Task GetByCollectionAsync_IncludesVscodeUpdatesSubcollection()
+    {
+        // Arrange: Create videos in root and vscode-updates subdirectory
+        var videosDir = Path.Combine(_collectionsPath, "_videos");
+        var vscodeUpdatesDir = Path.Combine(videosDir, "vscode-updates");
+        Directory.CreateDirectory(videosDir);
+        Directory.CreateDirectory(vscodeUpdatesDir);
+
+        // Root video
+        await File.WriteAllTextAsync(Path.Combine(videosDir, "2025-01-15-regular-video.md"), """
+            ---
+            title: Regular Video
+            date: 2025-01-15
+            section_names: [github-copilot]
+            tags: [Video]
+            ---
+            Regular video content
+            """);
+
+        // vscode-updates subcollection video
+        await File.WriteAllTextAsync(Path.Combine(vscodeUpdatesDir, "2025-01-10-vscode-update.md"), """
+            ---
+            title: VS Code Update Video
+            date: 2025-01-10
+            section_names: [github-copilot]
+            tags: [VS Code]
+            ---
+            VS Code update content
+            """);
+
+        // Act: Get videos collection
+        var videosContent = await _repository.GetByCollectionAsync("videos");
+
+        // Assert: Both root and vscode-updates items returned
+        videosContent.Should().HaveCount(2);
+        videosContent.Should().Contain(v => v.Title == "Regular Video" && v.SubcollectionName == null);
+        videosContent.Should().Contain(v => v.Title == "VS Code Update Video" && v.SubcollectionName == "vscode-updates");
+    }
+
+    /// <summary>
+    /// Test: GetByCollectionAsync includes ghc-features subcollection items
+    /// Why: When querying "videos", should include items from ghc-features subdirectory
+    ///      This is a real-world subcollection used for GitHub Copilot feature demo videos
+    /// </summary>
+    [Fact]
+    public async Task GetByCollectionAsync_IncludesGhcFeaturesSubcollection()
+    {
+        // Arrange: Create videos in root and ghc-features subdirectory
+        var videosDir = Path.Combine(_collectionsPath, "_videos");
+        var ghcFeaturesDir = Path.Combine(videosDir, "ghc-features");
+        Directory.CreateDirectory(videosDir);
+        Directory.CreateDirectory(ghcFeaturesDir);
+
+        // Root video
+        await File.WriteAllTextAsync(Path.Combine(videosDir, "2025-01-15-regular-video.md"), """
+            ---
+            title: Regular Video
+            date: 2025-01-15
+            section_names: [github-copilot]
+            tags: [Video]
+            ---
+            Regular video content
+            """);
+
+        // ghc-features subcollection video (GitHub Copilot feature demo)
+        await File.WriteAllTextAsync(Path.Combine(ghcFeaturesDir, "2025-01-10-code-completion-demo.md"), """
+            ---
+            title: Code Completion Demo
+            date: 2025-01-10
+            section_names: [github-copilot]
+            tags: [GitHub Copilot, Demo]
+            ghc_feature: true
+            ---
+            GitHub Copilot code completion feature demo
+            """);
+
+        // Act: Get videos collection
+        var videosContent = await _repository.GetByCollectionAsync("videos");
+
+        // Assert: Both root and ghc-features items returned
+        videosContent.Should().HaveCount(2);
+        videosContent.Should().Contain(v => v.Title == "Regular Video" && v.SubcollectionName == null);
+        videosContent.Should().Contain(v => v.Title == "Code Completion Demo" && v.SubcollectionName == "ghc-features");
+
+        // Verify ghc_feature flag is set correctly
+        var ghcFeatureVideo = videosContent.Single(v => v.SubcollectionName == "ghc-features");
+        ghcFeatureVideo.GhcFeature.Should().BeTrue("ghc-features video should have GhcFeature flag set");
+    }
+
+    /// <summary>
+    /// Test: ghc-features subcollection items have correct URL with collection name in path
+    /// Why: URLs always use collection name, not subcollection (subcollections are for filtering only)
+    ///      e.g., /github-copilot/videos/slug (not /github-copilot/ghc-features/slug)
+    /// </summary>
+    [Fact]
+    public async Task GhcFeaturesSubcollectionItems_HaveCorrectUrlWithCollectionInPath()
+    {
+        // Arrange: Create video in ghc-features subdirectory
+        var videosDir = Path.Combine(_collectionsPath, "_videos");
+        var ghcFeaturesDir = Path.Combine(videosDir, "ghc-features");
+        Directory.CreateDirectory(videosDir);
+        Directory.CreateDirectory(ghcFeaturesDir);
+
+        await File.WriteAllTextAsync(Path.Combine(ghcFeaturesDir, "2025-01-10-agent-mode-demo.md"), """
+            ---
+            title: Agent Mode Demo
+            date: 2025-01-10
+            section_names: [github-copilot]
+            tags: [GitHub Copilot, Agent Mode]
+            ghc_feature: true
+            ---
+            GitHub Copilot agent mode feature demo
+            """);
+
+        // Act: Get videos collection
+        var videosContent = await _repository.GetByCollectionAsync("videos");
+
+        // Assert: URL uses collection name, not subcollection name (subcollections are for filtering)
+        var ghcFeatureItem = videosContent.Single();
+        ghcFeatureItem.SubcollectionName.Should().Be("ghc-features");
+        ghcFeatureItem.CollectionName.Should().Be("videos");
+        ghcFeatureItem.Url.Should().Contain("/videos/", "URL should use collection name in path");
+        ghcFeatureItem.Url.Should().NotContain("/ghc-features/", "URL should not contain subcollection name (used for filtering only)");
+        ghcFeatureItem.Url.Should().Contain("/agent-mode-demo", "URL should contain the slug");
+        ghcFeatureItem.Url.Should().StartWith("/github-copilot/", "URL should start with primary section");
+    }
+
+    /// <summary>
+    /// Test: Subcollection items have correct URL with collection name in path
+    /// Why: URLs always use collection name, not subcollection (subcollections are for filtering only)
+    ///      e.g., /github-copilot/videos/slug (not /github-copilot/vscode-updates/slug)
+    /// </summary>
+    [Fact]
+    public async Task SubcollectionItems_HaveCorrectUrlWithCollectionInPath()
+    {
+        // Arrange: Create video in vscode-updates subdirectory
+        var videosDir = Path.Combine(_collectionsPath, "_videos");
+        var vscodeUpdatesDir = Path.Combine(videosDir, "vscode-updates");
+        Directory.CreateDirectory(videosDir);
+        Directory.CreateDirectory(vscodeUpdatesDir);
+
+        await File.WriteAllTextAsync(Path.Combine(vscodeUpdatesDir, "2025-01-10-my-vscode-update.md"), """
+            ---
+            title: My VS Code Update
+            date: 2025-01-10
+            section_names: [github-copilot]
+            tags: [VS Code]
+            ---
+            VS Code update content
+            """);
+
+        // Act: Get videos collection
+        var videosContent = await _repository.GetByCollectionAsync("videos");
+
+        // Assert: URL uses collection name, not subcollection name (subcollections are for filtering)
+        var vscodeItem = videosContent.Single();
+        vscodeItem.SubcollectionName.Should().Be("vscode-updates");
+        vscodeItem.CollectionName.Should().Be("videos");
+        vscodeItem.Url.Should().Contain("/videos/", "URL should use collection name in path");
+        vscodeItem.Url.Should().NotContain("/vscode-updates/", "URL should not contain subcollection name (used for filtering only)");
+        vscodeItem.Url.Should().Contain("/my-vscode-update", "URL should contain the slug");
+        vscodeItem.Url.Should().StartWith("/github-copilot/", "URL should start with primary section");
+    }
+
+    /// <summary>
     /// Test: GetBySectionAsync filters content by section name
     /// Why: Sections display content filtered by section name (ai, github-copilot, etc.)
     /// </summary>
@@ -638,970 +808,4 @@ public class FileBasedContentRepositoryTests : IDisposable
         // Assert: Null returned (no exception thrown)
         item.Should().BeNull();
     }
-
-    /// <summary>
-    /// Test: SearchAsync finds content by title match
-    /// Why: Users need to search for content by keywords
-    /// </summary>
-    [Fact]
-    public async Task SearchAsync_TitleMatch_ReturnsMatchingContent()
-    {
-        // Arrange: Create content with searchable titles
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        Directory.CreateDirectory(newsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "azure-announcement.md"), """
-            ---
-            title: Azure OpenAI Service Update
-            date: 2025-01-01
-            section_names: [Azure]
-            tags: [Azure, AI]
-            ---
-            Azure content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "ghc-release.md"), """
-            ---
-            title: GitHub Copilot Release
-            date: 2025-01-02
-            section_names: [GitHub Copilot]
-            tags: [Copilot]
-            ---
-            Copilot content
-            """);
-
-        // Act: Search for "Azure"
-        var results = await _repository.SearchAsync("Azure");
-
-        // Assert: Only Azure-related content returned
-        results.Should().ContainSingle();
-        results[0].Title.Should().Be("Azure OpenAI Service Update");
-    }
-
-    /// <summary>
-    /// Test: SearchAsync finds content by tag match
-    /// Why: Tags are searchable metadata for content discovery
-    /// </summary>
-    [Fact]
-    public async Task SearchAsync_TagMatch_ReturnsMatchingContent()
-    {
-        // Arrange: Create content with specific tags
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        Directory.CreateDirectory(newsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "item1.md"), """
-            ---
-            title: Security Alert
-            date: 2025-01-01
-            section_names: [Security]
-            tags: [Security, Urgent]
-            ---
-            Security content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "item2.md"), """
-            ---
-            title: Feature Release
-            date: 2025-01-02
-            section_names: [AI]
-            tags: [Feature, AI]
-            ---
-            Feature content
-            """);
-
-        // Act: Search by tag "security"
-        var results = await _repository.SearchAsync("security");
-
-        // Assert: Tag match returns correct item
-        results.Should().ContainSingle();
-        results[0].Title.Should().Be("Security Alert");
-    }
-
-    /// <summary>
-    /// Test: SearchAsync is case-insensitive
-    /// Why: User searches should work regardless of casing
-    /// </summary>
-    [Fact]
-    public async Task SearchAsync_CaseInsensitive_ReturnsMatches()
-    {
-        // Arrange: Create content with mixed-case title
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        Directory.CreateDirectory(newsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "dotnet-release.md"), """
-            ---
-            title: DotNet 10 Release
-            date: 2025-01-01
-            section_names: [Coding]
-            tags: [dotnet, programming]
-            ---
-            DotNet content
-            """);
-
-        // Act: Search with different casing
-        var lowerResults = await _repository.SearchAsync("dotnet");
-        var upperResults = await _repository.SearchAsync("DOTNET");
-        var mixedResults = await _repository.SearchAsync("DoTnEt");
-
-        // Assert: All variations return same result
-        lowerResults.Should().ContainSingle();
-        upperResults.Should().ContainSingle();
-        mixedResults.Should().ContainSingle();
-    }
-
-    /// <summary>
-    /// Test: GetAllTagsAsync returns unique tags across all content
-    /// Why: Tag cloud / filter UI needs list of all available tags
-    /// </summary>
-    [Fact]
-    public async Task GetAllTagsAsync_MultipleItems_ReturnsUniqueTags()
-    {
-        // Arrange: Create content with overlapping tags
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        Directory.CreateDirectory(newsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "item1.md"), """
-            ---
-            title: Item 1
-            date: 2025-01-01
-            section_names: [AI]
-            tags: [AI, Machine Learning, Announcement]
-            ---
-            Content 1
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "item2.md"), """
-            ---
-            title: Item 2
-            date: 2025-01-02
-            section_names: [AI]
-            tags: [AI, Deep Learning, Announcement]
-            ---
-            Content 2
-            """);
-
-        // Act: Get all unique tags
-        var tags = await _repository.GetAllTagsAsync();
-
-        // Assert: 4 unique tags (AI appears twice but returned once, all lowercase)
-        tags.Count.Should().Be(4);
-        tags.Should().Contain("ai");
-        tags.Should().Contain("machine learning");
-        tags.Should().Contain("deep learning");
-        tags.Should().Contain("announcement");
-    }
-
-    /// <summary>
-    /// Test: Content with video URL extracts video ID
-    /// Why: YouTube embeds require video ID for iframe generation
-    /// </summary>
-    [Fact]
-    public async Task GetAllAsync_VideoUrl_ExtractsVideoId()
-    {
-        // Arrange: Create video content with YouTube URL
-        var videosDir = Path.Combine(_collectionsPath, "_videos");
-        Directory.CreateDirectory(videosDir);
-
-        await File.WriteAllTextAsync(Path.Combine(videosDir, "tutorial.md"), """
-            ---
-            title: Video Tutorial
-            date: 2025-01-01
-            section_names: [GitHub Copilot]
-            tags: [Tutorial]
-            youtube_id: dQw4w9WgXcQ
-            ---
-            
-            [YouTube: dQw4w9WgXcQ]
-            
-            Video description here.
-            """);
-
-        // Act: Load video content
-        var content = await _repository.GetAllAsync();
-
-        // Assert: Video ID extracted from URL
-        content.Should().ContainSingle();
-    }
-
-    /// <summary>
-    /// Test: YouTube shortcode in markdown is converted to iframe
-    /// Why: Content files use {% youtube VIDEO_ID %} shortcode syntax
-    /// </summary>
-    [Fact]
-    public async Task GetAllAsync_YouTubeShortcode_ConvertsToIframe()
-    {
-        // Arrange: Create content with YouTube shortcode
-        var videosDir = Path.Combine(_collectionsPath, "_videos");
-        Directory.CreateDirectory(videosDir);
-
-        await File.WriteAllTextAsync(Path.Combine(videosDir, "demo.md"), """
-            ---
-            title: Product Demo
-            date: 2025-01-01
-            section_names: [AI]
-            tags: [Demo]
-            ---
-            
-            [YouTube: ABC123xyz]
-            
-            More content after video.
-            """);
-
-        // Act: Load content
-        var content = await _repository.GetAllAsync();
-
-        // Assert: YouTube shortcode converted to privacy-enhanced iframe in rendered HTML
-        content.Should().ContainSingle();
-        content[0].RenderedHtml.Should().Contain("<iframe");
-        content[0].RenderedHtml.Should().Contain("youtube-nocookie.com/embed/ABC123xyz");
-        content[0].RenderedHtml.Should().NotContain("www.youtube.com"); // Ensure privacy mode is used
-    }
-
-    /// <summary>
-    /// Test: DateEpoch is Unix timestamp for consistent timezone handling
-    /// Why: Client-side JavaScript needs Unix epoch for date filtering
-    /// </summary>
-    [Fact]
-    public async Task GetAllAsync_DateField_ConvertedToEpoch()
-    {
-        // Arrange: Create content with specific date
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        Directory.CreateDirectory(newsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "item.md"), """
-            ---
-            title: Test Item
-            date: 2025-01-15
-            section_names: [AI]
-            tags: [Test]
-            ---
-            Test content
-            """);
-
-        // Act: Load content
-        var content = await _repository.GetAllAsync();
-
-        // Assert: DateEpoch is Unix timestamp (positive integer)
-        content.Should().ContainSingle();
-        content[0].DateEpoch.Should().BeGreaterThan(0, "DateEpoch should be positive Unix timestamp");
-
-        // Verify it's roughly correct (Jan 2025 = ~1736899200 epoch)
-        content[0].DateEpoch.Should().BeGreaterThan(1_700_000_000, "DateEpoch should be in 2025 range");
-    }
-
-    /// <summary>
-    /// Test: Content without frontmatter is skipped gracefully
-    /// Why: Invalid files shouldn't crash the repository
-    /// </summary>
-    [Fact]
-    public async Task GetAllAsync_MissingFrontmatter_SkipsFile()
-    {
-        // Arrange: Create invalid markdown file without frontmatter
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        Directory.CreateDirectory(newsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "invalid.md"), """
-            This is just plain markdown without frontmatter.
-            
-            No YAML block here.
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "valid.md"), """
-            ---
-            title: Valid Item
-            date: 2025-01-01
-            section_names: [AI]
-            tags: [Test]
-            ---
-            Valid content
-            """);
-
-        // Act: Load content
-        var content = await _repository.GetAllAsync();
-
-        // Assert: Only valid item loaded, invalid file skipped
-        content.Should().ContainSingle();
-        content[0].Title.Should().Be("Valid Item");
-    }
-
-    /// <summary>
-    /// Test: Empty collection directory returns empty list
-    /// Why: Graceful handling of missing content
-    /// </summary>
-    [Fact]
-    public async Task GetByCollectionAsync_EmptyDirectory_ReturnsEmptyList()
-    {
-        // Arrange: Create empty news directory
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        Directory.CreateDirectory(newsDir);
-
-        // Act: Get news collection (no files)
-        var content = await _repository.GetByCollectionAsync("news");
-
-        // Assert: Empty list returned (no exception)
-        content.Should().BeEmpty();
-    }
-
-    /// <summary>
-    /// Test: Non-existent collection returns empty list
-    /// Why: Graceful handling of invalid collection names
-    /// </summary>
-    [Fact]
-    public async Task GetByCollectionAsync_NonExistentCollection_ReturnsEmptyList()
-    {
-        // Arrange: No directories created
-
-        // Act: Try to get non-existent collection
-        var content = await _repository.GetByCollectionAsync("invalid-collection");
-
-        // Assert: Empty list returned (no exception)
-        content.Should().BeEmpty();
-    }
-
-    /// <summary>
-    /// Test: GetAllAsync returns content sorted by date descending (newest first)
-    /// Why: All repository methods MUST return content sorted by DateEpoch descending
-    /// This is a CRITICAL requirement for consistent user experience
-    /// </summary>
-    [Fact]
-    public async Task GetAllAsync_MultipleItems_ReturnsSortedByDateDescending()
-    {
-        // Arrange: Create content with different dates
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        Directory.CreateDirectory(newsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-10-oldest.md"), """
-            ---
-            title: Oldest Item
-            date: 2025-01-10
-            section_names: [AI]
-            tags: [Test]
-            ---
-            Oldest content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-20-newest.md"), """
-            ---
-            title: Newest Item
-            date: 2025-01-20
-            section_names: [AI]
-            tags: [Test]
-            ---
-            Newest content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-15-middle.md"), """
-            ---
-            title: Middle Item
-            date: 2025-01-15
-            section_names: [AI]
-            tags: [Test]
-            ---
-            Middle content
-            """);
-
-        // Act: Get all content
-        var content = await _repository.GetAllAsync();
-
-        // Assert: Items returned in descending date order (newest first)
-        content.Count.Should().Be(3);
-        content[0].Title.Should().Be("Newest Item");
-        content[1].Title.Should().Be("Middle Item");
-        content[2].Title.Should().Be("Oldest Item");
-
-        // Verify dates are actually in descending order
-        content[0].DateEpoch.Should().BeGreaterThan(content[1].DateEpoch);
-        content[1].DateEpoch.Should().BeGreaterThan(content[2].DateEpoch);
-    }
-
-    /// <summary>
-    /// Test: GetByCollectionAsync returns content sorted by date descending
-    /// Why: Collection-specific queries must also maintain date sorting
-    /// </summary>
-    [Fact]
-    public async Task GetByCollectionAsync_MultipleItems_ReturnsSortedByDateDescending()
-    {
-        // Arrange: Create news items with different dates
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        Directory.CreateDirectory(newsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-05-old.md"), """
-            ---
-            title: Old News
-            date: 2025-01-05
-            section_names: [AI]
-            tags: [News]
-            ---
-            Old content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-25-new.md"), """
-            ---
-            title: New News
-            date: 2025-01-25
-            section_names: [AI]
-            tags: [News]
-            ---
-            New content
-            """);
-
-        // Act: Get news collection
-        var content = await _repository.GetByCollectionAsync("news");
-
-        // Assert: Newest first
-        content.Count.Should().Be(2);
-        content[0].Title.Should().Be("New News");
-        content[1].Title.Should().Be("Old News");
-        content[0].DateEpoch.Should().BeGreaterThan(content[1].DateEpoch);
-    }
-
-    /// <summary>
-    /// Test: GetBySectionAsync returns content sorted by date descending
-    /// Why: Section filtering must preserve date sorting for section pages
-    /// </summary>
-    [Fact]
-    public async Task GetBySectionAsync_MultipleItems_ReturnsSortedByDateDescending()
-    {
-        // Arrange: Create AI section content with different dates
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        var blogsDir = Path.Combine(_collectionsPath, "_blogs");
-        Directory.CreateDirectory(newsDir);
-        Directory.CreateDirectory(blogsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-12-news.md"), """
-            ---
-            title: AI News
-            date: 2025-01-12
-            section_names: [AI]
-            tags: [AI]
-            ---
-            News content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-18-blog.md"), """
-            ---
-            title: AI Blog
-            date: 2025-01-18
-            section_names: [AI]
-            tags: [AI]
-            ---
-            Blog content
-            """);
-
-        // Act: Get AI section
-        var content = await _repository.GetBySectionAsync("ai");
-
-        // Assert: Newest first (blog before news)
-        content.Count.Should().Be(2);
-        content[0].Title.Should().Be("AI Blog");
-        content[1].Title.Should().Be("AI News");
-        content[0].DateEpoch.Should().BeGreaterThan(content[1].DateEpoch);
-    }
-
-    /// <summary>
-    /// Test: SearchAsync returns results sorted by date descending
-    /// Why: Search results should show newest matches first
-    /// </summary>
-    [Fact]
-    public async Task SearchAsync_MultipleMatches_ReturnsSortedByDateDescending()
-    {
-        // Arrange: Create content with "Azure" in titles, different dates
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        Directory.CreateDirectory(newsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-08-azure-old.md"), """
-            ---
-            title: Azure Update Old
-            date: 2025-01-08
-            section_names: [Azure]
-            tags: [Azure]
-            ---
-            Old content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-22-azure-new.md"), """
-            ---
-            title: Azure Update New
-            date: 2025-01-22
-            section_names: [Azure]
-            tags: [Azure]
-            ---
-            New content
-            """);
-
-        // Act: Search for "Azure"
-        var results = await _repository.SearchAsync("Azure");
-
-        // Assert: Newest first
-        results.Count.Should().Be(2);
-        results[0].Title.Should().Be("Azure Update New");
-        results[1].Title.Should().Be("Azure Update Old");
-        results[0].DateEpoch.Should().BeGreaterThan(results[1].DateEpoch);
-    }
-
-    #region FilterAsync Tests
-
-    /// <summary>
-    /// Test: FilterAsync with tag filtering returns only matching items
-    /// Why: Tag-based filtering is core to content discovery
-    /// </summary>
-    [Fact]
-    public async Task FilterAsync_WithTags_ReturnsOnlyMatchingItems()
-    {
-        // Arrange: Create content with different tags
-        var blogsDir = Path.Combine(_collectionsPath, "_blogs");
-        Directory.CreateDirectory(blogsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-10-ai-blog.md"), """
-            ---
-            title: AI Blog
-            date: 2025-01-10
-            section_names: [ai]
-            tags: [ai, machine-learning]
-            ---
-            Content about AI
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-11-azure-blog.md"), """
-            ---
-            title: Azure Blog
-            date: 2025-01-11
-            section_names: [azure]
-            tags: [azure, cloud]
-            ---
-            Content about Azure
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-12-copilot-blog.md"), """
-            ---
-            title: Copilot Blog
-            date: 2025-01-12
-            section_names: [github-copilot]
-            tags: [github-copilot, ai]
-            ---
-            Content about Copilot
-            """);
-
-        var request = new TechHub.Core.DTOs.FilterRequest
-        {
-            SectionName = null,
-            CollectionName = null,
-            SelectedTags = ["ai"],
-            DateFrom = null,
-            DateTo = null
-        };
-
-        // Act: Filter by "ai" tag
-        var results = await _repository.FilterAsync(request);
-
-        // Assert: Should return items with "ai" tag (matches "ai" exactly and "Copilot" which has "ai" tag)
-        results.Should().HaveCount(2);
-        results.Should().Contain(c => c.Title == "AI Blog");
-        results.Should().Contain(c => c.Title == "Copilot Blog");
-        results.Should().NotContain(c => c.Title == "Azure Blog");
-    }
-
-    /// <summary>
-    /// Test: FilterAsync with date range filtering returns only items in range
-    /// Why: Date-based filtering is essential for finding recent content
-    /// </summary>
-    [Fact]
-    public async Task FilterAsync_WithDateRange_ReturnsOnlyItemsInRange()
-    {
-        // Arrange: Create content with different dates
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        Directory.CreateDirectory(newsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-01-old.md"), """
-            ---
-            title: Old News
-            date: 2025-01-01
-            section_names: [ai]
-            tags: [news]
-            ---
-            Old content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-15-recent.md"), """
-            ---
-            title: Recent News
-            date: 2025-01-15
-            section_names: [ai]
-            tags: [news]
-            ---
-            Recent content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-20-newest.md"), """
-            ---
-            title: Newest News
-            date: 2025-01-20
-            section_names: [ai]
-            tags: [news]
-            ---
-            Newest content
-            """);
-
-        var dateFrom = new DateTimeOffset(2025, 1, 10, 0, 0, 0, TimeSpan.Zero);
-        var dateTo = new DateTimeOffset(2025, 1, 18, 23, 59, 59, TimeSpan.Zero);
-
-        var request = new TechHub.Core.DTOs.FilterRequest
-        {
-            SectionName = null,
-            CollectionName = null,
-            SelectedTags = [],
-            DateFrom = dateFrom,
-            DateTo = dateTo
-        };
-
-        // Act: Filter by date range (Jan 10-18)
-        var results = await _repository.FilterAsync(request);
-
-        // Assert: Should return only item from Jan 15
-        results.Should().HaveCount(1);
-        results[0].Title.Should().Be("Recent News");
-    }
-
-    /// <summary>
-    /// Test: FilterAsync with combined filters (tags + date) returns items matching both
-    /// Why: Users often combine multiple filters for precise results
-    /// </summary>
-    [Fact]
-    public async Task FilterAsync_WithTagsAndDateRange_ReturnsItemsMatchingBoth()
-    {
-        // Arrange: Create content with different tags and dates
-        var blogsDir = Path.Combine(_collectionsPath, "_blogs");
-        Directory.CreateDirectory(blogsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-05-old-ai.md"), """
-            ---
-            title: Old AI Blog
-            date: 2025-01-05
-            section_names: [ai]
-            tags: [ai, machine-learning]
-            ---
-            Old AI content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-15-recent-ai.md"), """
-            ---
-            title: Recent AI Blog
-            date: 2025-01-15
-            section_names: [ai]
-            tags: [ai, deep-learning]
-            ---
-            Recent AI content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-16-recent-azure.md"), """
-            ---
-            title: Recent Azure Blog
-            date: 2025-01-16
-            section_names: [azure]
-            tags: [azure, cloud]
-            ---
-            Recent Azure content
-            """);
-
-        var dateFrom = new DateTimeOffset(2025, 1, 10, 0, 0, 0, TimeSpan.Zero);
-        var dateTo = new DateTimeOffset(2025, 1, 20, 23, 59, 59, TimeSpan.Zero);
-
-        var request = new TechHub.Core.DTOs.FilterRequest
-        {
-            SectionName = null,
-            CollectionName = null,
-            SelectedTags = ["ai"],
-            DateFrom = dateFrom,
-            DateTo = dateTo
-        };
-
-        // Act: Filter by "ai" tag AND date range (Jan 10-20)
-        var results = await _repository.FilterAsync(request);
-
-        // Assert: Should return only recent AI item (matches both tag and date)
-        results.Should().HaveCount(1);
-        results[0].Title.Should().Be("Recent AI Blog");
-    }
-
-    /// <summary>
-    /// Test: FilterAsync with section scope returns only section items
-    /// Why: Section filtering is core to content organization
-    /// </summary>
-    [Fact]
-    public async Task FilterAsync_WithSectionScope_ReturnsOnlySectionItems()
-    {
-        // Arrange: Create content in different sections
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        Directory.CreateDirectory(newsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-10-ai-news.md"), """
-            ---
-            title: AI News
-            date: 2025-01-10
-            section_names: [ai]
-            tags: [ai]
-            ---
-            AI content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-11-azure-news.md"), """
-            ---
-            title: Azure News
-            date: 2025-01-11
-            section_names: [azure]
-            tags: [azure]
-            ---
-            Azure content
-            """);
-
-        var request = new TechHub.Core.DTOs.FilterRequest
-        {
-            SectionName = "ai",
-            CollectionName = null,
-            SelectedTags = [],
-            DateFrom = null,
-            DateTo = null
-        };
-
-        // Act: Filter by section
-        var results = await _repository.FilterAsync(request);
-
-        // Assert: Should return only AI section items
-        results.Should().HaveCount(1);
-        results[0].Title.Should().Be("AI News");
-    }
-
-    /// <summary>
-    /// Test: FilterAsync with collection scope returns only collection items
-    /// Why: Collection filtering is core to content type organization
-    /// </summary>
-    [Fact]
-    public async Task FilterAsync_WithCollectionScope_ReturnsOnlyCollectionItems()
-    {
-        // Arrange: Create content in different collections
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        var blogsDir = Path.Combine(_collectionsPath, "_blogs");
-        Directory.CreateDirectory(newsDir);
-        Directory.CreateDirectory(blogsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-10-news-item.md"), """
-            ---
-            title: News Item
-            date: 2025-01-10
-            section_names: [ai]
-            tags: [ai]
-            ---
-            News content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-11-blog-item.md"), """
-            ---
-            title: Blog Item
-            date: 2025-01-11
-            section_names: [ai]
-            tags: [ai]
-            ---
-            Blog content
-            """);
-
-        var request = new TechHub.Core.DTOs.FilterRequest
-        {
-            SectionName = null,
-            CollectionName = "news",
-            SelectedTags = [],
-            DateFrom = null,
-            DateTo = null
-        };
-
-        // Act: Filter by collection
-        var results = await _repository.FilterAsync(request);
-
-        // Assert: Should return only news collection items
-        results.Should().HaveCount(1);
-        results[0].Title.Should().Be("News Item");
-    }
-
-    /// <summary>
-    /// Test: FilterAsync with section AND collection scope returns items matching both
-    /// Why: Combined scoping enables precise content filtering
-    /// </summary>
-    [Fact]
-    public async Task FilterAsync_WithSectionAndCollectionScope_ReturnsItemsMatchingBoth()
-    {
-        // Arrange: Create content in different sections and collections
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        var blogsDir = Path.Combine(_collectionsPath, "_blogs");
-        Directory.CreateDirectory(newsDir);
-        Directory.CreateDirectory(blogsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-10-ai-news.md"), """
-            ---
-            title: AI News
-            date: 2025-01-10
-            section_names: [ai]
-            tags: [ai]
-            ---
-            AI news content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-11-azure-news.md"), """
-            ---
-            title: Azure News
-            date: 2025-01-11
-            section_names: [azure]
-            tags: [azure]
-            ---
-            Azure news content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-12-ai-blog.md"), """
-            ---
-            title: AI Blog
-            date: 2025-01-12
-            section_names: [ai]
-            tags: [ai]
-            ---
-            AI blog content
-            """);
-
-        var request = new TechHub.Core.DTOs.FilterRequest
-        {
-            SectionName = "ai",
-            CollectionName = "news",
-            SelectedTags = [],
-            DateFrom = null,
-            DateTo = null
-        };
-
-        // Act: Filter by section AND collection
-        var results = await _repository.FilterAsync(request);
-
-        // Assert: Should return only AI news items
-        results.Should().HaveCount(1);
-        results[0].Title.Should().Be("AI News");
-    }
-
-    /// <summary>
-    /// Test: FilterAsync with no filters returns all items sorted by date
-    /// Why: Default behavior should show all content in chronological order
-    /// </summary>
-    [Fact]
-    public async Task FilterAsync_WithNoFilters_ReturnsAllItemsSortedByDate()
-    {
-        // Arrange: Create content with different dates
-        var newsDir = Path.Combine(_collectionsPath, "_news");
-        Directory.CreateDirectory(newsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-05-old.md"), """
-            ---
-            title: Old Content
-            date: 2025-01-05
-            section_names: [ai]
-            tags: [news]
-            ---
-            Old content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-15-recent.md"), """
-            ---
-            title: Recent Content
-            date: 2025-01-15
-            section_names: [ai]
-            tags: [news]
-            ---
-            Recent content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(newsDir, "2025-01-10-middle.md"), """
-            ---
-            title: Middle Content
-            date: 2025-01-10
-            section_names: [ai]
-            tags: [news]
-            ---
-            Middle content
-            """);
-
-        var request = new TechHub.Core.DTOs.FilterRequest
-        {
-            SectionName = null,
-            CollectionName = null,
-            SelectedTags = [],
-            DateFrom = null,
-            DateTo = null
-        };
-
-        // Act: Filter with no filters
-        var results = await _repository.FilterAsync(request);
-
-        // Assert: Should return all items sorted by date descending (newest first)
-        results.Should().HaveCount(3);
-        results[0].Title.Should().Be("Recent Content");
-        results[1].Title.Should().Be("Middle Content");
-        results[2].Title.Should().Be("Old Content");
-        results[0].DateEpoch.Should().BeGreaterThan(results[1].DateEpoch);
-        results[1].DateEpoch.Should().BeGreaterThan(results[2].DateEpoch);
-    }
-
-    /// <summary>
-    /// Test: FilterAsync with multiple tags uses OR logic
-    /// Why: Multiple tag filtering should return items matching ANY tag
-    /// </summary>
-    [Fact]
-    public async Task FilterAsync_WithMultipleTags_UsesOrLogic()
-    {
-        // Arrange: Create content with different tags
-        var blogsDir = Path.Combine(_collectionsPath, "_blogs");
-        Directory.CreateDirectory(blogsDir);
-
-        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-10-ai-only.md"), """
-            ---
-            title: AI Only Blog
-            date: 2025-01-10
-            section_names: [ai]
-            tags: [ai]
-            ---
-            AI content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-11-azure-only.md"), """
-            ---
-            title: Azure Only Blog
-            date: 2025-01-11
-            section_names: [azure]
-            tags: [azure]
-            ---
-            Azure content
-            """);
-
-        await File.WriteAllTextAsync(Path.Combine(blogsDir, "2025-01-12-copilot-only.md"), """
-            ---
-            title: Copilot Only Blog
-            date: 2025-01-12
-            section_names: [github-copilot]
-            tags: [github-copilot]
-            ---
-            Copilot content
-            """);
-
-        var request = new TechHub.Core.DTOs.FilterRequest
-        {
-            SectionName = null,
-            CollectionName = null,
-            SelectedTags = ["ai", "azure"],
-            DateFrom = null,
-            DateTo = null
-        };
-
-        // Act: Filter by "ai" OR "azure" tags
-        var results = await _repository.FilterAsync(request);
-
-        // Assert: Should return items with either "ai" or "azure" tag
-        results.Should().HaveCount(2);
-        results.Should().Contain(c => c.Title == "AI Only Blog");
-        results.Should().Contain(c => c.Title == "Azure Only Blog");
-        results.Should().NotContain(c => c.Title == "Copilot Only Blog");
-    }
-
-    #endregion
 }

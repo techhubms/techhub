@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=tw8bnpQs0lY
 title: GPT-5 for Developers
 author: Microsoft Developer
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Presented by Microsoft Developer, this session features Pamela Fox, Burke Holland, Bruno Capuano, and Jon Galloway as they demonstrate practical GPT-5 integrations in Microsoft developer tools.<!--excerpt_end-->
 

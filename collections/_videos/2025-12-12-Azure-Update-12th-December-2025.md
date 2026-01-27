@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=tYKS34Wgf1w
 title: Azure Update - 12th December 2025
 author: John Savill's Technical Training
@@ -26,6 +26,7 @@ tags:
 - Technical Training
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill's Technical Training delivers the Azure Update for December 12, 2025, highlighting recent news, service changes, and new technical developments within Microsoft Azure.<!--excerpt_end-->
 

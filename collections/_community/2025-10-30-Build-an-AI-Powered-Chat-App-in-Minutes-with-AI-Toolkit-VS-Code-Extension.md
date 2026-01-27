@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-an-ai-powered-chat-app-in-minutes-with-ai-toolkit/ba-p/4464967
 title: Build an AI-Powered Chat App in Minutes with AI Toolkit VS Code Extension
 author: kevinguo
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 kevinguo explains how developers can use the AI Toolkit VS Code extension to scaffold and deploy real-time AI chat apps, leveraging GitHub models and Azure Web PubSub for scalable, production-ready solutions.<!--excerpt_end-->
 

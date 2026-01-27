@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ppaf8CZjRkI
 title: '.NET Data Community Standup: Practical Dapper vs Entity Framework Core Comparison'
 author: dotnet
@@ -27,6 +27,7 @@ tags:
 - Trade Offs
 section_names:
 - coding
+primary_section: coding
 ---
 In this .NET Data Community Standup, hosts Nick Cosentino, Jiri Cincura, and Shay Rojansky offer developers practical insights on using Dapper and Entity Framework Core, sharing their lessons and perspective.<!--excerpt_end-->
 

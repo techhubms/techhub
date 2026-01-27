@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-driving-security-in-the-era-of-ai-innovation/ba-p/4471034
 title: 'Azure Linux: Security-Focused Cloud Innovation at Ignite 2025'
 author: Sudhanva
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Sudhanva details Azure Linux security innovations introduced at Ignite 2025, including OS Guard and pod sandboxing in AKS, offering cloud practitioners stronger workload isolation and compliance capabilities.<!--excerpt_end-->
 

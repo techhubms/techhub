@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-the-job-level-bursting-switch-in-microsoft-fabric/
 title: Introducing the Job-Level Bursting Switch in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 The Microsoft Fabric Blog team announces a new Job-Level Bursting Switch for Spark compute in Fabric, granting administrators enhanced control over burst capacity and concurrency optimization.<!--excerpt_end-->
 

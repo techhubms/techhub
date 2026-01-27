@@ -1,7 +1,7 @@
 using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
-using TechHub.Core.DTOs;
+using TechHub.Core.Models;
 using TechHub.TestUtilities;
 
 namespace TechHub.Api.Tests.Endpoints;
@@ -28,7 +28,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var sections = await response.Content.ReadFromJsonAsync<List<SectionDto>>();
+        var sections = await response.Content.ReadFromJsonAsync<List<Section>>();
         sections.Should().NotBeNull();
         sections!.Should().HaveCount(8);
         sections.Should().Contain(s => s.Name == "all");
@@ -46,7 +46,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
     {
         // Act
         var response = await _client.GetAsync("/api/sections");
-        var sections = await response.Content.ReadFromJsonAsync<List<SectionDto>>();
+        var sections = await response.Content.ReadFromJsonAsync<List<Section>>();
 
         // Assert
         var aiSection = sections!.First(s => s.Name == "ai");
@@ -74,7 +74,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var section = await response.Content.ReadFromJsonAsync<SectionDto>();
+        var section = await response.Content.ReadFromJsonAsync<Section>();
         section.Should().NotBeNull();
         section!.Name.Should().Be("ai");
         section.Title.Should().Be("Artificial Intelligence");
@@ -100,7 +100,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty(); // AI section has items
         items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("ai"));
@@ -125,7 +125,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var collections = await response.Content.ReadFromJsonAsync<List<CollectionReferenceDto>>();
+        var collections = await response.Content.ReadFromJsonAsync<List<Collection>>();
         collections.Should().NotBeNull();
         collections!.Should().HaveCount(8);
         collections.Should().Contain(c => c.Name == "news");
@@ -157,7 +157,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var collection = await response.Content.ReadFromJsonAsync<CollectionReferenceDto>();
+        var collection = await response.Content.ReadFromJsonAsync<Collection>();
         collection.Should().NotBeNull();
         collection!.Name.Should().Be("news");
         collection.Title.Should().Be("News");
@@ -193,7 +193,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty(); // AI news collection has items
         items.Should().AllSatisfy(item =>
@@ -212,7 +212,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty(); // GitHub Copilot videos collection has items
         items.Should().AllSatisfy(item =>
@@ -247,9 +247,10 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
     {
         // Act
         var response = await _client.GetAsync("/api/sections/ai/collections/news/items");
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
 
         // Assert - URLs use primary section and slug WITHOUT date prefix
+        // All URL components are lowercase
         items.Should().NotBeEmpty();
         items!.Should().AllSatisfy(item =>
         {
@@ -265,7 +266,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
     {
         // Act
         var response = await _client.GetAsync($"/api/sections/{sectionName}");
-        var section = await response.Content.ReadFromJsonAsync<SectionDto>();
+        var section = await response.Content.ReadFromJsonAsync<Section>();
 
         // Assert
         section!.Name.Should().Be(expectedSection);
@@ -280,7 +281,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         
         // Should not include draft items
@@ -296,7 +297,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         
         // Should not include draft news items
@@ -327,7 +328,7 @@ public class SectionsEndpointsTests : IClassFixture<TechHubIntegrationTestApiFac
         var jsonString = await response.Content.ReadAsStringAsync();
         jsonString.Should().NotBeEmpty();
 
-        var sections = await response.Content.ReadFromJsonAsync<List<SectionDto>>();
+        var sections = await response.Content.ReadFromJsonAsync<List<Section>>();
         sections.Should().NotBeNull();
         sections.Should().NotBeEmpty();
 

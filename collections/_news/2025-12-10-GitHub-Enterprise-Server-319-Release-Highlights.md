@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-10-github-enterprise-server-3-19-is-now-generally-available
 title: GitHub Enterprise Server 3.19 Release Highlights
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison presents a summary of GitHub Enterprise Server 3.19's new features, covering updates to repository creation, security, policy management, and administrative roles for enterprise developers and administrators.<!--excerpt_end-->
 

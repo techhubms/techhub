@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/expose-avd-registration-status-on-azure-vm-objects/idi-p/4439107
 title: Expose AVD Registration Status on Azure VM Objects for Simplified Monitoring
 author: Vu_Hoang
@@ -18,6 +18,7 @@ tags:
 - REST API
 section_names:
 - azure
+primary_section: azure
 ---
 Vu_Hoang suggests exposing Azure Virtual Desktop registration status directly on Azure VM objects to streamline monitoring and automation in enterprise deployments.<!--excerpt_end-->
 

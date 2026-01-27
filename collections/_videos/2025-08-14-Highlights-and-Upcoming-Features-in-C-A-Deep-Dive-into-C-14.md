@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=jRJa83DeOd8
 title: 'Highlights and Upcoming Features in C#: A Deep Dive into C# 14'
 author: dotnet
@@ -20,6 +20,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 Mads presents an in-depth tour of new and forthcoming features in C#, spotlighting what developers can expect in C# 14. The session emphasizes practical improvements in code safety, performance, and expressiveness.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=kleJ6i8k_9M
 title: VS Code Live - Exploring v1.102 Release Features—AI Chat, MCP, Coding Agent & More
 author: Visual Studio Code
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 In this live session, the Visual Studio Code team—including Olivia McVicker, Isidor Nikolic, and more—uncover the headline features from VS Code v1.102. Discover enhancements like AI chat, MCP updates, and coding agent integration.<!--excerpt_end-->
 

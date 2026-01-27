@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/nlp-tools-for-intelligent-documentation-and-developer-enablement/
 title: NLP Tools for Intelligent Documentation and Developer Enablement
 author: Anil Kumar Devarapalem
@@ -33,6 +33,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Anil Kumar Devarapalem investigates how NLP tools are transforming documentation workflows and developer productivity, highlighting integration patterns, optimization strategies, and ethical considerations.<!--excerpt_end-->
 

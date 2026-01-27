@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/optimize-azure-local-using-insights-from-a-well-architected/ba-p/4458433
 title: Optimize Azure Local Deployments with the Well-Architected Review Assessment
 author: Neil_Bird
@@ -23,6 +23,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Neil_Bird explains how to use the Azure Local Well-Architected Review Assessment to evaluate and strengthen the architecture of hybrid Azure deployments, ensuring high standards for reliability, security, and operational excellence.<!--excerpt_end-->
 

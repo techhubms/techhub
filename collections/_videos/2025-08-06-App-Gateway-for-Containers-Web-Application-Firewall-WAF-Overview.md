@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=CSD1qQN2R2k
 title: 'App Gateway for Containers: Web Application Firewall (WAF) Overview'
 author: John Savill's Technical Training
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 John Savill's Technical Training explains the new Web Application Firewall (WAF) capability for Azure App Gateway for Containers, guiding viewers through configuration, policy application, and key limitations.<!--excerpt_end-->
 

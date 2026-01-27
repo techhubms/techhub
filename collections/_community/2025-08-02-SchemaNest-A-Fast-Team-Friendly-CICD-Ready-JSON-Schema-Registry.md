@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/devops/comments/1mg1fl8/schemanest_where_schemas_grow_thrive_and_scale/
 title: 'SchemaNest: A Fast, Team-Friendly CI/CD-Ready JSON Schema Registry'
 author: R3ym4nn
@@ -19,6 +19,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Authored by R3ym4nn, this article introduces SchemaNest—a fast, DevOps-ready registry for managing JSON Schemas, highlighting its features, team focus, and open-source availability.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=v6j0lJYdPU4
 title: Azure Container Storage v2 Overview
 author: John Savill's Technical Training
@@ -26,6 +26,7 @@ tags:
 - VM SKUs
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill's Technical Training presents an in-depth look at Azure Container Storage v2, highlighting new features and best practices for AKS and Kubernetes environments.<!--excerpt_end-->
 

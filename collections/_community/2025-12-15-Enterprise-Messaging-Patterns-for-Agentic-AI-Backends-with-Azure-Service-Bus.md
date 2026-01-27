@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/message-brokers-as-the-cornerstone-of-the-next-generation-of/ba-p/4478088
 title: Enterprise Messaging Patterns for Agentic AI Backends with Azure Service Bus
 author: EldertGrootenboer
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Eldert Grootenboer explores why agentic AI systems require advanced messaging capabilities. He outlines how Azure Service Bus helps orchestrate distributed workloads, manage unpredictability, and reduce operational waste at scale.<!--excerpt_end-->
 

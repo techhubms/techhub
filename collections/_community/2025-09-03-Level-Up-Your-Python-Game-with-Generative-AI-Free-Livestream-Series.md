@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/level-up-your-python-game-with-generative-ai-free-livestream/ba-p/4450646
 title: 'Level Up Your Python Game with Generative AI: Free Livestream Series'
 author: Lee_Stott
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Lee_Stott announces a free October livestream series hosted by Pamela Fox and Gwyneth Peña-Siguenza, designed to help developers advance their Python and generative AI skills through interactive sessions.<!--excerpt_end-->
 

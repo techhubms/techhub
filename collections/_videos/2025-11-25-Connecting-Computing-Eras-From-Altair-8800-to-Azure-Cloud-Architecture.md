@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=8ye90oY60Fg
 title: 'Connecting Computing Eras: From Altair 8800 to Azure Cloud Architecture'
 author: Microsoft Events
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Presented by Mark Russinovich and Scott Hanselman, this Ignite 2025 breakout session connects decades of computing innovation, illustrating how architectural patterns from early PCs shape today's Azure-based app development and cloud scaling.<!--excerpt_end-->
 

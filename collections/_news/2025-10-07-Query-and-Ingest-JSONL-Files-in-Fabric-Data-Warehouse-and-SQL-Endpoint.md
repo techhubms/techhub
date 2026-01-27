@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/query-and-ingest-jsonl-files-in-data-warehouse-and-sql-endpoint-for-lakehouse-general-availability/
 title: Query and Ingest JSONL Files in Fabric Data Warehouse and SQL Endpoint
 author: Microsoft Fabric Blog
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details how OPENROWSET in Fabric Data Warehouse and SQL Endpoint allows querying and ingesting JSONL files, streamlining data analysis and loading workflows.<!--excerpt_end-->
 

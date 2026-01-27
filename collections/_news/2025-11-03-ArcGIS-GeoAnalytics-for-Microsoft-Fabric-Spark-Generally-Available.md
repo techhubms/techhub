@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/arcgis-geoanalytics-for-microsoft-fabric-spark-generally-available/
 title: ArcGIS GeoAnalytics for Microsoft Fabric Spark (Generally Available)
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 The Microsoft Fabric Blog team announces the general availability of ArcGIS GeoAnalytics integration for Fabric Spark, enabling developers and data scientists to leverage Esri's advanced geospatial analytics natively in Fabric environments.<!--excerpt_end-->
 

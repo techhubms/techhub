@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/beyond-the-platform-how-enterprises-can-unify-their-devops-toolchains-for-better-governance-and-ai-readiness/
 title: 'Beyond the Platform: How Enterprises Can Unify Their DevOps Toolchains for Better Governance and AI Readiness'
 author: Shawn Ahmed
@@ -30,6 +30,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Shawn Ahmed addresses enterprise DevOps toolchain sprawl and highlights how CloudBees Unify enables centralized governance, built-in security, and prepares organizations for AI-driven automation.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=i_-dZEifOQQ
 title: 'Exploring the .NET Community Toolkits: MAUI, Windows, and More'
 author: dotnet
@@ -24,6 +24,7 @@ tags:
 - Windows Community Toolkit
 section_names:
 - coding
+primary_section: coding
 ---
 The .NET team hosts a discussion on Community Toolkits, with insights from maintainers and tips for contributing. Presented by dotnet.<!--excerpt_end-->
 

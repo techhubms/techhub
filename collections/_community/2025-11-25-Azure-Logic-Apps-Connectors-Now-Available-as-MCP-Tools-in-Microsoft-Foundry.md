@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/%EF%B8%8Fpublic-preview-azure-logic-apps-connectors-as-mcp-tools-in/ba-p/4473062
 title: Azure Logic Apps Connectors Now Available as MCP Tools in Microsoft Foundry
 author: DivSwa
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 DivSwa introduces the new capability to use Azure Logic Apps connectors as MCP tools within Microsoft Foundry, providing developers with secure, code-free ways to integrate enterprise systems in agentic apps.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/how-devops-is-evolving-for-the-age-of-intelligent-automation/
 title: How DevOps Is Evolving for the Age of Intelligent Automation
 author: Alan Shimel
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Alan Shimel interviews Vishal Raina and Shibashis Mishra about the evolution of DevOps in the age of intelligent automation, emphasizing responsible AI, governance, and sustainable software delivery.<!--excerpt_end-->
 

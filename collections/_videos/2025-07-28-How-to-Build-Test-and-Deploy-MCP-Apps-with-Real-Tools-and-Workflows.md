@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=vCN9-mKBDfQ
 title: How to Build, Test & Deploy MCP Apps with Real Tools and Workflows
 author: Microsoft Developer
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 In this video, Microsoft Developer demonstrates how to build, test, and deploy Model Context Protocol (MCP) applications using real tools. The session details official SDKs, live debugging, Azure Functions, and securing APIs with Microsoft cloud services.<!--excerpt_end-->
 

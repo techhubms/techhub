@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/azure-skilling-at-microsoft-ignite-2025/ba-p/4472678
 title: 'Azure Skilling at Microsoft Ignite 2025: Elevate Your Cloud and AI Expertise'
 author: AaronStark
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 AaronStark delves into the diverse Azure skilling experiences available at Microsoft Ignite 2025, emphasizing the career benefits of hands-on labs, certification pathways, and the integration of AI, Azure, and developer platforms.<!--excerpt_end-->
 

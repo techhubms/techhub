@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=IfhxdKKd4GU
 title: What's New in Containers for .NET 10
 author: dotnet
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 dotnet presents a deep dive into .NET 10's new container features, sharing key improvements for developers building, deploying, and managing containerized applications across cloud and on-premises platforms.<!--excerpt_end-->
 

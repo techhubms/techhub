@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/breaking-free-from-rising-observability-costs-with-open-cost-efficient-architectures/
 title: 'Open Cost-Efficient Architectures for Observability: Escaping Vendor Lock-In and Ballooning Costs'
 author: Mike Shi
@@ -33,6 +33,7 @@ tags:
 - Vendor Lock in
 section_names:
 - devops
+primary_section: devops
 ---
 Mike Shi delves into the rising costs of observability, advocating for open, cost-efficient architectures powered by technologies like OpenTelemetry and columnar databases. This article guides DevOps practitioners in reducing vendor lock-in and building scalable, unified observability platforms.<!--excerpt_end-->
 

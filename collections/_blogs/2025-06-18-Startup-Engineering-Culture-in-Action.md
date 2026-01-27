@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://roadtoalm.com/2025/06/18/startup-engineering-culture-in-action/
 title: Startup Engineering Culture in Action
 author: Rene van Osnabrugge
@@ -20,6 +20,7 @@ tags:
 - Trust
 section_names:
 - devops
+primary_section: devops
 ---
 In this blog post, Rene van Osnabrugge distills lessons on startup engineering culture from the LEAD podcast, with a focus on lean processes, trust, and DevOps principles.<!--excerpt_end-->
 

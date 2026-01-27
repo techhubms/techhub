@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Cszz3XsAMAg
 title: 'AI + Creativity: The New Media Blueprint | BRK378'
 author: Microsoft Events
@@ -27,6 +27,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Presented by Silvia Candiani, Simon Crownshaw, and Chris Petranto at Microsoft Ignite 2025, this session investigates how agentic AI empowers media organizations and creators by automating workflows and tackling industry challenges.<!--excerpt_end-->
 

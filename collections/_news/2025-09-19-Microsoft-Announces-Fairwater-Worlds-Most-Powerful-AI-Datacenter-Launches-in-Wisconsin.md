@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_if-intelligence-is-the-log-of-compute-it-activity-7374444167059468288-wxxV
 title: "Microsoft Announces Fairwater: World's Most Powerful AI Datacenter Launches in Wisconsin"
 author: stclarke
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft, led by Satya Nadella, introduces Fairwater: a groundbreaking AI datacenter in Wisconsin engineered for exponential AI workloads with unmatched sustainability and compute capacity.<!--excerpt_end-->
 

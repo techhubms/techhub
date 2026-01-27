@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_sap-and-openai-partner-to-launch-sovereign-activity-7376627188332335104-2h6b
 title: Microsoft, SAP, and OpenAI Partner to Bring AI Innovation to Germany's Public Sector
 author: stclarke
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 stclarke summarizes Microsoft's partnership with SAP and OpenAI aimed at delivering responsible and secure AI solutions for the German public sector using Microsoft Azure.<!--excerpt_end-->
 

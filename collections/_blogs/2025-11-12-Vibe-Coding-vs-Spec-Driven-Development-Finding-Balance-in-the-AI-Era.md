@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/vibe-coding-vs-spec-driven-development-finding-balance-in-the-ai-era/
 title: 'Vibe Coding vs. Spec-Driven Development: Finding Balance in the AI Era'
 author: Alan Shimel
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Alan Shimel presents an overview of David Yanacek’s perspective on vibe coding versus spec-driven development, examining how generative AI, DevOps automation, and structured engineering can be balanced in modern software projects.<!--excerpt_end-->
 

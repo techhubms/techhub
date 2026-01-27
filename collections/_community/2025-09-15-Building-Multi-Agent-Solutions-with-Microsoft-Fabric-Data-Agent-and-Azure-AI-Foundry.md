@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/explore-microsoft-fabric-data-agent-azure-ai-foundry-for-agentic/ba-p/4453709
 title: Building Multi-Agent Solutions with Microsoft Fabric Data Agent and Azure AI Foundry
 author: GISV-PSA-MSFT
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 GISV-PSA-MSFT, with contributors Jeet J and Ritaja S, presents a step-by-step guide to implementing agentic AI applications, combining Microsoft Fabric Data Agent, Azure AI Foundry, and Copilot Studio to solve real-world industry problems such as insurance analytics.<!--excerpt_end-->
 

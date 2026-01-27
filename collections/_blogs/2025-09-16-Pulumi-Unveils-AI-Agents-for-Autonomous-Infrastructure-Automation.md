@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/pulumi-previews-ai-agents-trained-to-automate-infrastructure-management/
 title: Pulumi Unveils AI Agents for Autonomous Infrastructure Automation
 author: Mike Vizard
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard introduces Pulumi Neo, highlighting how these AI agents can autonomously manage and optimize IT infrastructure on the Pulumi IaC platform, boosting DevOps efficiency and compliance.<!--excerpt_end-->
 

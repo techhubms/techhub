@@ -1,4 +1,4 @@
-using TechHub.Core.DTOs;
+using TechHub.Core.Models;
 
 namespace TechHub.Web.Services;
 
@@ -8,11 +8,11 @@ namespace TechHub.Web.Services;
 /// </summary>
 public class SectionCache
 {
-    private Dictionary<string, SectionDto> _sectionsByName = [];
+    private Dictionary<string, Section> _sectionsByName = [];
 
-    public IReadOnlyList<SectionDto> Sections { get; private set; } = [];
+    public IReadOnlyList<Section> Sections { get; private set; } = [];
 
-    public void Initialize(IReadOnlyList<SectionDto> sections)
+    public void Initialize(IReadOnlyList<Section> sections)
     {
         Sections = sections;
         _sectionsByName = sections.ToDictionary(s => s.Name, StringComparer.OrdinalIgnoreCase);
@@ -23,7 +23,7 @@ public class SectionCache
     /// </summary>
     /// <param name="sectionName">The section name to look up</param>
     /// <returns>The section DTO if found, otherwise null</returns>
-    public SectionDto? GetSectionByName(string sectionName)
+    public Section? GetSectionByName(string sectionName)
     {
         _sectionsByName.TryGetValue(sectionName, out var section);
         return section;

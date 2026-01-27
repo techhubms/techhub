@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=4ynkbF7oImM
 title: Top 3 AI Use Cases Shaping Customer Experience
 author: Microsoft Events
@@ -22,6 +22,7 @@ tags:
 - Resolution Engine
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events and Jake Showalter present actionable insights from Microsoft Ignite 2025, revealing how AI transforms customer support by automating resolutions and driving business outcomes.<!--excerpt_end-->
 

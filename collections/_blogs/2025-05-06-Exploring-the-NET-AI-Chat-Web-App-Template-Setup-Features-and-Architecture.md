@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/exploring-the-new-ai-chat-template/
 title: 'Exploring the .NET AI Chat Web App Template: Setup, Features, and Architecture'
 author: Andrew Lock
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 In this blog post, Andrew Lock introduces the new .NET AI Chat Web App template, discussing its setup, integration with GitHub Models and Azure OpenAI, and the technical components that enable document-powered chat applications.<!--excerpt_end-->
 

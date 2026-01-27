@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mjtvuv/rxnet_packaging_plan_2025/
 title: 'Rx.NET Packaging Plan 2025: Progress, Testing, and Community Feedback'
 author: hm_vr
@@ -21,6 +21,7 @@ tags:
 - Unit Testing
 section_names:
 - coding
+primary_section: coding
 ---
 hm_vr and other community members discuss Ian Griffiths' update on Rx.NET's packaging improvements, automated testing, and future plans for v7, including the challenges of BCL integration.<!--excerpt_end-->
 

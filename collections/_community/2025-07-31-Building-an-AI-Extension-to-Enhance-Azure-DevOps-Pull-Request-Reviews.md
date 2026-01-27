@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1mdoa94/built_an_ai_extension_that_actually_makes_azure/
 title: Building an AI Extension to Enhance Azure DevOps Pull Request Reviews
 author: TechieRedditer
@@ -30,6 +30,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 TechieRedditer introduces a home-built AI assistant for Azure DevOps, offering automated PR reviews, instant work item queries, and honest insights into its capabilities and limitations.<!--excerpt_end-->
 

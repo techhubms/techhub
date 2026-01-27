@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Ptach9Ouzj8
 title: Scaling Code Quality in the Age of AI
 author: GitHub
@@ -26,6 +26,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 In this GitHub Universe session, Caro Galvin and Marcelo Oliveira demonstrate how GitHub Copilot and Advanced Security features are redefining code quality and security, offering developers AI-driven ways to enhance their workflow.<!--excerpt_end-->
 

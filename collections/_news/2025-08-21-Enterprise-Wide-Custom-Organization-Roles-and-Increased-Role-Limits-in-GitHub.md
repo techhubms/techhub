@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-21-enterprises-can-create-organization-roles-for-use-across-their-enterprise-and-custom-role-limits-have-been-increased
 title: Enterprise-Wide Custom Organization Roles and Increased Role Limits in GitHub
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - Role Management
 section_names:
 - devops
+primary_section: devops
 ---
 Allison details GitHub's introduction of enterprise-wide custom organization roles, standardized management, and higher limits, streamlining role-based access for enterprise users.<!--excerpt_end-->
 

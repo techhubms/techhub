@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-18-enhanced-mcp-oauth-support-for-github-copilot-in-jetbrains-eclipse-and-xcode
 title: Enhanced MCP OAuth Support for GitHub Copilot Plugins in JetBrains, Eclipse, and Xcode
 author: Allison
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison explains the new enhanced authentication options in GitHub Copilot plugins for JetBrains, Eclipse, and Xcode, helping developers adopt secure OAuth provider integration in their preferred IDEs.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-11-multiple-assignees-for-issues-and-pull-requests-now-available-in-all-repositories
 title: Multiple Assignees for Issues and Pull Requests Now Available in All GitHub Repositories
 author: Allison
@@ -20,6 +20,7 @@ tags:
 - Team Workflow
 section_names:
 - devops
+primary_section: devops
 ---
 Allison highlights GitHub's new feature allowing up to 10 users to be assigned to issues and pull requests, improving collaboration and project visibility for all repository types.<!--excerpt_end-->
 

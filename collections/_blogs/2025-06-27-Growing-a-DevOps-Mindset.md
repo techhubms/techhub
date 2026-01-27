@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://roadtoalm.com/2025/06/27/growing-a-devops-mindset/
 title: Growing a DevOps Mindset
 author: Rene van Osnabrugge
@@ -23,6 +23,7 @@ tags:
 - Uncategorized
 section_names:
 - devops
+primary_section: devops
 ---
 In this post, Rene van Osnabrugge draws on LEAD podcast insights to examine the cultural and psychological shifts necessary for nurturing a true DevOps mindset in engineering organizations.<!--excerpt_end-->
 

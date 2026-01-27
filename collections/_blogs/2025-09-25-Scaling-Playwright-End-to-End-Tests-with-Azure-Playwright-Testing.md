@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/end-to-end-confidence-in-the-cloud-a-walkthrough-of-azure-playwright-testing-preview/
 title: Scaling Playwright End-to-End Tests with Azure Playwright Testing
 author: Dellenny
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Dellenny guides readers through running Playwright end-to-end tests at scale with Azure Playwright Testing, covering setup, configuration, artifact storage, CI/CD pipeline integration, and cloud-scale debugging.<!--excerpt_end-->
 

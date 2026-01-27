@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/latam/features/ai/galicia-naranja-x-github-copilot/?lang=en
 title: Software Developers in Argentina’s Financial Sector Boost Innovation with GitHub Copilot and AI
 author: sbaynes
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 sbaynes examines how developers at Galicia and other banks in Argentina are using GitHub Copilot and AI tools to speed up development, improve productivity, and innovate in a rapidly changing financial sector.<!--excerpt_end-->
 

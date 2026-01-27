@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/locking-and-ddl-blocking-behavior-in-microsoft-fabric-data-warehouse-what-you-need-to-know/
 title: Understanding Locking and DDL Blocking in Microsoft Fabric Data Warehouse
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog discusses locking behavior and DDL blocking in Microsoft Fabric Data Warehouse, offering practical advice for managing concurrency and minimizing blocking issues. Essential reading for data platform professionals.<!--excerpt_end-->
 

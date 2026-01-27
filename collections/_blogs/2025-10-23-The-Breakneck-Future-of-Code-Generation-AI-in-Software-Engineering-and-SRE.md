@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/the-breakneck-future-of-codegen-why-ai-swe-must-be-matched-with-ai-sre/
 title: 'The Breakneck Future of Code Generation: AI in Software Engineering and SRE'
 author: Anish Agarwal
@@ -41,6 +41,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Anish Agarwal examines how AI code generation tools, including GitHub Copilot, are accelerating software creation and increasing system complexity. The article discusses the vital role of AI-driven SRE to sustain reliability at scale.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=mVZqmcmB6FU
 title: 'Active Directory Disaster Recovery: Modern Approaches for Secure Forest Restoration'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Events host Craig Birch explores Active Directory disaster recovery at Microsoft Ignite, detailing the shift from legacy backup methods to instant, secure forest restoration involving Azure and advanced security features.<!--excerpt_end-->
 

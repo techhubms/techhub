@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://hiddedesmet.com/creating-ccoe-for-ai
 title: 'Building a Center of Excellence for AI: A Strategic Roadmap for Enterprise Adoption'
 author: Hidde de Smet
@@ -24,6 +24,7 @@ tags:
 - Organizational Change
 section_names:
 - ai
+primary_section: ai
 ---
 Authored by Hidde de Smet, this guide provides a deep dive into the creation and operation of an AI Center of Excellence (CCoE), offering practical frameworks and strategies for coordinated, effective enterprise-wide artificial intelligence adoption.<!--excerpt_end-->
 

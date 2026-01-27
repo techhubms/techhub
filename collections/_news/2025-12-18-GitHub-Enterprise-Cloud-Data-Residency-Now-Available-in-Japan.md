@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-18-github-enterprise-cloud-data-residency-in-japan-is-generally-available
 title: GitHub Enterprise Cloud Data Residency Now Available in Japan
 author: Allison
@@ -21,6 +21,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Allison announces the general availability of GitHub Enterprise Cloud data residency in Japan, enabling organizations to store code within Japanese data centers on Microsoft Azure, supporting compliance and regional requirements.<!--excerpt_end-->
 

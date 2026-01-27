@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/ai-azure-ai-services/doc-intelligence-custom-extraction-model-confidence-score/m-p/4435860#M1270
 title: Confidence Score Decline in Document Intelligence Custom Extraction Models with New Layouts
 author: aristotelisc
@@ -22,6 +22,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 aristotelisc describes an experiment using Azure Document Intelligence to train custom extraction models, highlighting how introducing new document layouts led to persistent confidence score drops. The author seeks community insights on this behavior.<!--excerpt_end-->
 

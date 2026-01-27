@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devclass.com/2026/01/15/vibe-coded-applications-full-of-security-blunders/
 title: Vibe Coded Applications Full of Security Blunders
 author: Tim Anderson
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Tim Anderson reports on Tenzai's research led by Ori David, highlighting how applications built with 'vibe coding' using AI agents like Claude and Codex tend to be insecure due to common flaws and overlooked best practices.<!--excerpt_end-->
 

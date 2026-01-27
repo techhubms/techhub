@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/unlocking-advanced-data-analytics-ai-with-azure-netapp-files/ba-p/4486098
 title: Unlocking Advanced Data Analytics & AI with Azure NetApp Files Object REST API
 author: GeertVanTeylingen
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 GeertVanTeylingen presents a comprehensive exploration of the Azure NetApp Files object REST API, demonstrating how it empowers direct analytics and AI access to enterprise file data via S3-compatible object interfaces.<!--excerpt_end-->
 

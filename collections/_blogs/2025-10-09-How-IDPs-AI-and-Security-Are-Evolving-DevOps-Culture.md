@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/whose-ops-is-it-anyway-how-idps-ai-and-security-are-evolving-developer-culture/
 title: How IDPs, AI, and Security Are Evolving DevOps Culture
 author: Olivier de Turckheim
@@ -47,6 +47,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 Olivier de Turckheim explores how internal developer platforms, AI, and security are transforming both culture and practical workflows in DevOps, covering the emergence of AIOps, DevSecOps, and the integration of machine learning and automation in deployment pipelines.<!--excerpt_end-->
 

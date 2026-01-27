@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/revolutionizing-reliability-introducing-the-azure-failure/ba-p/4464883
 title: 'Azure Failure Prediction & Detection (AFPD): Preventing Downtime with Proactive Reliability'
 author: andrewb710
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Andrew Boyd and collaborators shed light on Azure’s Failure Prediction & Detection (AFPD) system, detailing proactive strategies for maintaining cloud reliability, minimizing downtime, and making the most of Azure's notification and fleet health tools.<!--excerpt_end-->
 

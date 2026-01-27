@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=GcEHiY6Vp-8
 title: 'Smatterings of F#: Integrating F# in a C#-Focused World'
 author: dotnet
@@ -17,6 +17,7 @@ tags:
 - Software Development
 section_names:
 - coding
+primary_section: coding
 ---
 Matthew Watt presents ways C# developers can leverage F# in their .NET projects, from building components to contributing to open source, showcasing inclusive strategies for using F# effectively.<!--excerpt_end-->
 

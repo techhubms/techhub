@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-22-control-who-can-request-apps-for-your-organization
 title: Granular Controls for GitHub App Requests Now in Public Preview
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison details new organizational controls for GitHub and OAuth app requests, giving admins more flexibility and security through graduated policy options for managing third-party app access.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/combining-generative-ai-and-business-logic-with-copilot-studio/
 title: Combining Generative AI and Business Logic with Copilot Studio
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny outlines how Copilot Studio enables enterprises to unite generative AI and business logic, empowering the design of intelligent, compliant copilots for real-world workflows.<!--excerpt_end-->
 

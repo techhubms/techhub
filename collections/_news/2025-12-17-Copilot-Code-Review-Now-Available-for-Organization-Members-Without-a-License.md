@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-17-copilot-code-review-now-available-for-organization-members-without-a-license
 title: Copilot Code Review Now Available for Organization Members Without a License
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison details how Copilot code review can now be applied to pull requests from organization members without a Copilot license, streamlining AI-powered reviews and billing for enterprises.<!--excerpt_end-->
 

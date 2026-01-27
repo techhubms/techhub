@@ -28,6 +28,7 @@ tags:
 - SharePoint Online
 section_names:
 - security
+primary_section: security
 ---
 John Edward presents a clear and practical walkthrough for IT administrators and technical leads on managing external sharing in Microsoft 365, with a strong emphasis on balancing collaboration and security.<!--excerpt_end-->
 

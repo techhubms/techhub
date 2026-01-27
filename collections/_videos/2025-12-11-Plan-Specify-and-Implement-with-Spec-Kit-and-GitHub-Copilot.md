@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=VfBLlAN5zdQ
 title: Plan, Specify, and Implement with Spec Kit and GitHub Copilot
 author: Microsoft Developer
@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer demonstrates how Spec Kit enables spec-driven development, showcasing its features and integration with GitHub Copilot to streamline software creation.<!--excerpt_end-->
 

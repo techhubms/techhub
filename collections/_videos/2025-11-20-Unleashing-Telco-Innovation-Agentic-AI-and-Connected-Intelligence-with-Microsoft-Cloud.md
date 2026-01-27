@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=mTfjrZbUkts
 title: 'Unleashing Telco Innovation: Agentic AI & Connected Intelligence with Microsoft Cloud'
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 In this Microsoft Ignite session, Rick Lievano, Gustavo do Couto Duarte, and Mathew George showcase how telecoms deploy Microsoft AI and Azure solutions for network automation and secure autonomous operations.<!--excerpt_end-->
 

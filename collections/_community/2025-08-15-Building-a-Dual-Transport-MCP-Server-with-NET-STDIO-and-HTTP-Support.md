@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/one-mcp-server-two-transports-stdio-and-http/ba-p/4443915
 title: 'Building a Dual-Transport MCP Server with .NET: STDIO and HTTP Support'
 author: justinyoo
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 justinyoo explains how to implement a .NET MCP server with runtime-selectable STDIO and HTTP transports, reducing management overhead and supporting integration with Copilot Studio and other platforms.<!--excerpt_end-->
 

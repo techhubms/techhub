@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/the-future-of-ai-an-intern-s-adventure-improving-usability-with/ba-p/4440857
 title: "An Intern's Perspective: Improving Model Management with Azure AI Foundry Agents"
 author: Harry-Cheng
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Harry-Cheng shares insights from his internship on the Azure AI Foundry team, presenting a hands-on look at building the 'model operation agent.' This post highlights how conversational AI is used to tackle enterprise model management challenges.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-enterprise-ai-seamless-integration-of-onelake-files-in-microsoft-foundry-knowledge/
 title: 'Unlocking Enterprise AI: Seamless Integration of OneLake Files in Microsoft Foundry Knowledge'
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog examines how native integration between OneLake and Azure AI Foundry Knowledge empowers teams to use all enterprise data in AI solutions, combining governance, security, and ease of access.<!--excerpt_end-->
 

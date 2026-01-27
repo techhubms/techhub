@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1malfn3/best_practice_for_yaml_pipelines/
 title: Migrating Classic Azure DevOps Pipelines to YAML for Multi-Repo Apps
 author: DrippinInSuccess
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 DrippinInSuccess discusses with the community about migrating classic Azure DevOps build and release pipelines to YAML pipelines for an Angular and .NET 8 application. Multiple approaches, tips, and strategies are shared by experienced engineers.<!--excerpt_end-->
 

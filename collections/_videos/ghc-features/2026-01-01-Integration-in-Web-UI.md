@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Integration in Web UI
 author: TBD
@@ -12,6 +12,7 @@ tags: []
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This content demonstrates GitHub Copilot's Integration in Web UI feature. Seamlessly use Copilot in your web browser<!--excerpt_end-->
 

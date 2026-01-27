@@ -1,5 +1,5 @@
 @page "/"
-@using TechHub.Core.DTOs
+@using TechHub.Core.Models
 @using TechHub.Web.Services
 
 @using static TechHub.Web.Services.SectionHelper
@@ -103,9 +103,9 @@ new("RSS Feed - Roundups", "/all/roundups/feed.xml"),
 new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon())
     ];
 
-    private IEnumerable<SectionDto>? sections;
-    private IEnumerable<ContentItemDto>? roundups;
-    private IEnumerable<ContentItemDto>? latestItems;
+    private IEnumerable<TechHub.Core.Models.Section>? sections;
+    private IEnumerable<TechHub.Core.Models.ContentItem>? roundups;
+    private IEnumerable<TechHub.Core.Models.ContentItem>? latestItems;
 
     private static RenderFragment GetNewsletterIcon() => @<svg width="16" height="16" viewBox="0 0 24 24"
             fill="currentColor" aria-hidden="true">

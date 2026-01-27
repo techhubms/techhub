@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2024/Dec/27/Back-to-Basics-Using-the-Parallel-Library-to-Massively-Boost-Loop-Performance
 title: 'Boosting Loop Performance in .NET with Parallel.ForEachAsync: A Practical Guide'
 author: Rick Strahl
@@ -19,6 +19,7 @@ tags:
 - WPF
 section_names:
 - coding
+primary_section: coding
 ---
 Rick Strahl explores using Parallel.ForEachAsync in .NET to significantly improve the performance of link validation in Markdown Monster by parallelizing HTTP operations. This article walks through before-and-after implementations, practical code, performance data, and key caveats.<!--excerpt_end-->
 

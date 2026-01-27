@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=AKjW94vQZkc
 title: Let's Learn Model Context Protocol with JavaScript and TypeScript
 author: Visual Studio Code
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Visual Studio Code hosts Debbie O'Brien and Chris Noring in a hands-on session exploring the Model Context Protocol (MCP), featuring demos and practical guidance for developers new to MCP.<!--excerpt_end-->
 

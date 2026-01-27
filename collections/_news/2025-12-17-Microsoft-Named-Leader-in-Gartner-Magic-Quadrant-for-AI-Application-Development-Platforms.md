@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-gartner-magic-quadrant-for-ai-application-development-platforms/
 title: Microsoft Named Leader in Gartner Magic Quadrant for AI Application Development Platforms
 author: Don Scott
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Don Scott shares Microsoft's recognition as a Leader in the Gartner Magic Quadrant for AI Application Development Platforms, spotlighting technical innovation in agent frameworks and the Microsoft Foundry platform.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=zsCBEVCQ98I
 title: Visual Studio Code and GitHub Copilot - What's new in 1.105
 author: Fokko Veegens
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Fokko Veegens provides a comprehensive walkthrough of Visual Studio Code 1.105, released in October 2025, highlighting significant enhancements to GitHub Copilot integration and developer productivity tools. The release introduces AI-powered assistance for complex workflows, improved terminal integration, and enhanced code testing capabilities.<!--excerpt_end-->
 

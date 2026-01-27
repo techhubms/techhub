@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://hiddedesmet.com/ai-project-validation-framework-part3
 title: 'Is AI the right solution? Part 3: Metrics, piloting, and key takeaways'
 author: Hidde de Smet
@@ -19,6 +19,7 @@ tags:
 - Success Metrics
 section_names:
 - ai
+primary_section: ai
 ---
 In this concluding article, Hidde de Smet guides readers through defining success metrics, piloting, and essential learnings for effective and responsible AI project implementation.<!--excerpt_end-->
 

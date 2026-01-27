@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=jq7Ls6T0LYM
 title: 'From Issue to PR: Asynchronously Develop with GitHub Copilot Coding Agent'
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer presents a video where Luke Hoban demonstrates how GitHub Copilot has evolved into an autonomous coding agent, with examples of task automation, backlog management, and integration with tools like MCP, improving both individual and team development workflows.<!--excerpt_end-->
 

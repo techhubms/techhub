@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/25332/
 title: Decoupling Semantic Models from Mirrored Artifacts in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -18,6 +18,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 This news update from the Microsoft Fabric Blog details a significant shift in how semantic models interact with Mirrored artifacts. The author explains the advantages and phased implementation of decoupling, providing improved flexibility and control for customers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/mastering-github-copilot-tips-shortcuts-and-prompts-that-work/
 title: 'Mastering GitHub Copilot: Tips, Shortcuts, and Prompts That Work'
 author: Dellenny
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny shares hands-on advice for mastering GitHub Copilot, focusing on effective prompts, IDE shortcuts, and workflow integration to help developers maximize productivity while maintaining code quality.<!--excerpt_end-->
 

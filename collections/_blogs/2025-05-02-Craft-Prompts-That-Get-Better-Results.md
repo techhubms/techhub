@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/craft-prompts-that-get-better-results.html
 title: Craft Prompts That Get Better Results
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels offers actionable advice for developers on how to write effective prompts that significantly improve GitHub Copilot’s coding suggestions, emphasizing clarity and structure.<!--excerpt_end-->
 

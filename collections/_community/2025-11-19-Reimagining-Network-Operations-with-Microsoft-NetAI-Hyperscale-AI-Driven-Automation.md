@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/reimagining-network-operations-how-microsoft-netai-tackles/ba-p/4470572
 title: 'Reimagining Network Operations with Microsoft NetAI: Hyperscale AI-Driven Automation'
 author: rickliev
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Rickliev explains how Microsoft NetAI brings autonomous, AI-driven operations to the Azure Networking team—yielding measurable gains in incident management, reliability, and operational efficiency across hyperscale cloud infrastructure.<!--excerpt_end-->
 

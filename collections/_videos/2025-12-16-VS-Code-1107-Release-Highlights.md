@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=a7jj0PvvGMk
 title: VS Code 1.107 Release Highlights
 author: Visual Studio Code
@@ -23,6 +23,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 Reynald Adolphe showcases the key highlights from the Visual Studio Code 1.107 release, including editor improvements and new features for developers.<!--excerpt_end-->
 

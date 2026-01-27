@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=eJfToDv8KH4
 title: AI Foundry for .NET Developers
 author: dotnet
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 dotnet delivers an insightful overview of leveraging Azure AI Foundry in .NET development, highlighting tools and best practices for building, evaluating, and deploying production-ready AI applications.<!--excerpt_end-->
 

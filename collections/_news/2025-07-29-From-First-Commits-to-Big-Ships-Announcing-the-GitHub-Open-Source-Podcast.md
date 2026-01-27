@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/open-source/maintainers/from-first-commits-to-big-ships-tune-into-our-new-open-source-podcast/
 title: 'From First Commits to Big Ships: Announcing the GitHub Open Source Podcast'
 author: Abigail Cabunoc Mayes
@@ -26,6 +26,7 @@ tags:
 - Podcast
 section_names:
 - devops
+primary_section: devops
 ---
 In this introduction by Abigail Cabunoc Mayes, discover the GitHub Podcast, a new series focusing on open source community stories, insights from maintainers, and discussions on trends such as AI and open standards.<!--excerpt_end-->
 

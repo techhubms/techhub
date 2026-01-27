@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=UDrjP8sBI94
 title: Azure Top 3 Reliability Actions
 author: John Savill's Technical Training
@@ -22,6 +22,7 @@ tags:
 - Resilience
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill presents the top three reliability actions for Azure, providing architects and cloud practitioners with actionable strategies and links to key Microsoft documentation.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/modernizing-visual-studio-extension-compatibility-effortless-migration-for-extension-developers-and-users/
 title: 'Effortless Extension Migration in Visual Studio 2026: Modern Compatibility Model for Developers'
 author: Tina Schrepfer (LI)
@@ -24,6 +24,7 @@ tags:
 - Vsixmanifest
 section_names:
 - coding
+primary_section: coding
 ---
 Tina Schrepfer presents an overview of the new extension compatibility model in Visual Studio 2026, easing migration for extension developers and users.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code-maze.com/dotnet-imeterfactory-application-performance/
 title: Measure Application Performance in .NET Using IMeterFactory
 author: Muhammed Saleem
@@ -21,6 +21,7 @@ tags:
 - Web API
 section_names:
 - coding
+primary_section: coding
 ---
 Authored by Muhammed Saleem, this article explores practical techniques for integrating and utilizing IMeterFactory to measure and optimize application performance in .NET, focusing on metrics collection and monitoring within ASP.NET Core applications.<!--excerpt_end-->
 

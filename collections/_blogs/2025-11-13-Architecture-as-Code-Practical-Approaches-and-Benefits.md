@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/architecture-as-code-what-it-means-and-how-to-apply-it/
 title: 'Architecture as Code: Practical Approaches and Benefits'
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Dellenny explains the benefits and practical steps for implementing Architecture as Code, showing developers and DevOps engineers how to keep system architecture aligned and versioned.<!--excerpt_end-->
 

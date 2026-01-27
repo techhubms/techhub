@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-24-claude-opus-4-5-is-in-public-preview-for-github-copilot
 title: Claude Opus 4.5 Public Preview Launches for GitHub Copilot
 author: Allison
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison reports on the rollout of Claude Opus 4.5 in GitHub Copilot, explaining its enhanced coding performance and how users can enable it based on their plan.<!--excerpt_end-->
 

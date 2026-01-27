@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=EmbrmSr40CA
 title: 'Resilience by Design: Secure, Scalable, AI-Ready Cloud with Azure'
 author: Microsoft Events
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents an Ignite session led by Gargi Banerjee and Molina Sharma, focusing on designing resilient, secure, and AI-ready cloud solutions with Azure through practical strategies and live demos.<!--excerpt_end-->
 

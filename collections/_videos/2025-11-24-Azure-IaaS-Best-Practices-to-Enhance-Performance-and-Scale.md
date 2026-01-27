@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=KXhW1gq7xNw
 title: Azure IaaS Best Practices to Enhance Performance and Scale
 author: Microsoft Events
@@ -28,6 +28,7 @@ tags:
 - Virtual Machines
 section_names:
 - azure
+primary_section: azure
 ---
 Presented by Yi Chai, Varun Shandilya, and Amit Srivastava at Microsoft Ignite 2025, this session explores Azure IaaS optimization for high performance and global scalability.<!--excerpt_end-->
 

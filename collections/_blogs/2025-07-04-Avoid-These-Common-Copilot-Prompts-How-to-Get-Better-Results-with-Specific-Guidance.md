@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://cooknwithcopilot.com/blog/avoid-these-common-prompts.html
 title: 'Avoid These Common Copilot Prompts: How to Get Better Results with Specific Guidance'
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -18,6 +18,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels discusses why vague prompts like 'write a function' often produce suboptimal results in GitHub Copilot, and shares specific strategies and examples for crafting effective, context-rich prompts.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-mcp-works-in-microsofts-ai-ecosystem/
 title: How MCP Works in Microsoft’s AI Ecosystem
 author: Dellenny
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Dellenny dives deep into Microsoft’s use of the Model Context Protocol (MCP), showing how this open standard powers AI agent integration in Copilot Studio, Azure AI Foundry, Dynamics 365, and beyond.<!--excerpt_end-->
 

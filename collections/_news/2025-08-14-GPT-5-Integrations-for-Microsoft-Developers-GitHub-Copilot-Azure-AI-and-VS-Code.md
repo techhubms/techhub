@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/gpt-5-for-microsoft-developers
 title: 'GPT-5 Integrations for Microsoft Developers: GitHub Copilot, Azure AI, and VS Code'
 author: Jon Galloway, Pamela Fox, Dan Wahlin
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Jon Galloway, Pamela Fox, and Dan Wahlin deliver a deep dive into the integration of GPT-5 across GitHub Copilot, Azure AI, and core Microsoft developer tools, offering practical code samples and guidance for immediate adoption.<!--excerpt_end-->
 

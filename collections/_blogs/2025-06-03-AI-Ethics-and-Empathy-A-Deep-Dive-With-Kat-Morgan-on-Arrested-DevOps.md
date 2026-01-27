@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.arresteddevops.com/using-ai/
 title: 'AI, Ethics, and Empathy: A Deep Dive With Kat Morgan on Arrested DevOps'
 author: Arrested DevOps
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 In this Arrested DevOps episode, Matty Stratton and guest Kat Morgan examine AI's multifaceted role in development, delving into ethical, practical, and human-centered concerns. The discussion reflects on teamwork with AI, good practice, and building more humane, responsible technology.<!--excerpt_end-->
 

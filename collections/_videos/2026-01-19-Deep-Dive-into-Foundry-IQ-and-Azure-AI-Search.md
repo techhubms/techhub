@@ -31,6 +31,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 John Savill's Technical Training presents an in-depth exploration of Microsoft Foundry IQ, detailing its AI-driven knowledge retrieval, reasoning processes, and integration with Azure AI Search for technical audiences.<!--excerpt_end-->
 

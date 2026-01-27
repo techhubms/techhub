@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dxDqelvVc2U
 title: 'Hands-On Lab: The Power of GitHub Copilot in Visual Studio Code'
 author: Visual Studio Code
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code presents a hands-on lab exploring advanced GitHub Copilot features, including agent mode and cloud-based AI agents, to enhance developer productivity and workflow customization.<!--excerpt_end-->
 

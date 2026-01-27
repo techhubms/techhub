@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=AAm9mhhrNec
 title: 'Unlocking Real-Time Intelligence with Microsoft Fabric and Advanced AI: Insights from Ignite 2025'
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Presented by Microsoft Events, this Ignite 2025 breakout covers advanced real-time intelligence, featuring Microsoft Fabric, Copilot AI tools, Sentinel integration, and real-world industry analytics use cases.<!--excerpt_end-->
 

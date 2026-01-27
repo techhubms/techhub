@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/never-explain-context-twice-introducing-azure-sre-agent-memory/ba-p/4473059
 title: 'Never Explain Context Twice: Introducing Azure SRE Agent Memory'
 author: Dalibor_Kovacevic
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Dalibor Kovacevic details how Azure SRE Agent’s memory feature transforms AI-driven operations by capturing institutional knowledge, improving troubleshooting, and sharing insights across teams.<!--excerpt_end-->
 

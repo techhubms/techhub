@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-03-assign-issues-to-copilot-using-the-api
 title: Assign Issues to GitHub Copilot Using the API
 author: Allison
@@ -26,6 +26,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison reports that developers can now assign issues to GitHub Copilot via both GraphQL and REST APIs, providing flexible automation options through clear API documentation.<!--excerpt_end-->
 

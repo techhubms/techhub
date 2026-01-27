@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/concurrency-control-and-conflict-resolution-in-microsoft-fabric-data-warehouse/
 title: Resolving Write Conflicts in Microsoft Fabric Data Warehouse
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog addresses how write-write conflicts occur in Fabric Data Warehouse and shares best practices and new system features to help data professionals manage concurrency and improve workflow reliability.<!--excerpt_end-->
 

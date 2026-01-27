@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=pG6d6Wwl9gU
 title: Integrating Azure AI Foundry Models with GitHub Copilot Using the AI Toolkit
 author: Microsoft Developer
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer's April shows how to deploy Azure AI Foundry models and integrate them with GitHub Copilot using the AI Toolkit, providing a step-by-step video for developers.<!--excerpt_end-->
 

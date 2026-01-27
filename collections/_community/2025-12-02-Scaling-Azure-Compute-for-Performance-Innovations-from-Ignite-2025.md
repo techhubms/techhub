@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/scaling-azure-compute-for-performance/ba-p/4474662
 title: 'Scaling Azure Compute for Performance: Innovations from Ignite 2025'
 author: DanaCozmei
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 DanaCozmei summarizes Ignite 2025’s key Azure Compute breakthroughs, focusing on practical infrastructure features for scaling AI, analytics, and distributed workloads with resiliency, automation, and performance.<!--excerpt_end-->
 

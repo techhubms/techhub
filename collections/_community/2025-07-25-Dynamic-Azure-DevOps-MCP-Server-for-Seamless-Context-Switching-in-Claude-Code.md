@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m91urt/i_built_a_dynamic_azure_devops_mcp_server_for/
 title: Dynamic Azure DevOps MCP Server for Seamless Context Switching in Claude Code
 author: OkAdministration2514
@@ -30,6 +30,7 @@ section_names:
 - devops
 - coding
 - security
+primary_section: coding
 ---
 OkAdministration2514 details how they built a dynamic MCP server that empowers Claude Code users to seamlessly switch Azure DevOps contexts by project directory, offering robust DevOps automation for multi-client work.<!--excerpt_end-->
 

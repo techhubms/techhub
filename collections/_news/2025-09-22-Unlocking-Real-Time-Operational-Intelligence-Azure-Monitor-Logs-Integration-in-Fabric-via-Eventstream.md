@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-real-time-operational-intelligence-azure-monitor-logs-integration-in-fabric-via-eventstream/
 title: 'Unlocking Real-Time Operational Intelligence: Azure Monitor Logs Integration in Fabric via Eventstream'
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details how the new Azure Monitor Logs to Fabric Eventstream integration helps organizations unify operational intelligence by enabling real-time, code-free data ingestion and analytics.<!--excerpt_end-->
 

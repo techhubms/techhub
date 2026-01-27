@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Y17b0rJ_psk
 title: 'Innovation in Microsoft Databases: AI-Ready Data and Modern Apps'
 author: Microsoft Events
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events hosts Shireesh Thota with other experts to reveal innovations in Microsoft databases, highlighting AI-powered features, open-source efforts, and demos that empower developers and data engineers.<!--excerpt_end-->
 

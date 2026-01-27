@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-09-openai-gpt-5-and-gpt-5-mini-are-now-generally-available-in-github-copilot
 title: GitHub Copilot Adds Support for OpenAI GPT-5 and GPT-5 Mini Models
 author: Allison
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison reports on the launch of OpenAI GPT-5 and GPT-5 mini models in GitHub Copilot, outlining how developers and organizations can enable, access, and use these models across supported IDEs.<!--excerpt_end-->
 

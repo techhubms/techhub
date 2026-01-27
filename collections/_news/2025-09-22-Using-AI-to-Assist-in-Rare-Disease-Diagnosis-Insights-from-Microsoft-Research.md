@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/research/blog/using-ai-to-assist-in-rare-disease-diagnosis/
 title: 'Using AI to Assist in Rare Disease Diagnosis: Insights from Microsoft Research'
 author: sbaynes
@@ -23,6 +23,7 @@ tags:
 - Whole Genome Sequencing
 section_names:
 - ai
+primary_section: ai
 ---
 sbaynes presents research from Microsoft, Drexel, and the Broad Institute on leveraging generative AI—such as Azure AI Foundry—to support genetic professionals in diagnosing rare diseases and addressing challenges in whole genome sequencing analysis.<!--excerpt_end-->
 

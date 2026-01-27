@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Izrmr4VM4a8
 title: 'Context Window: 3 Azure AI Foundry Community Questions Answered'
 author: Microsoft Developer
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer hosts Context Window to answer top Azure AI Foundry Community questions, providing insights and tips for upleveling AI agents with Azure technologies.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=I39PSkDmfHQ
 title: Understanding Azure Monitor Health Models
 author: Microsoft Developer
@@ -18,6 +18,7 @@ tags:
 - System Health
 section_names:
 - azure
+primary_section: azure
 ---
 Martin Simecek from Microsoft Developer explains Azure Monitor Health Models—a new approach to unify noisy logs and alerts into clear, actionable health signals for Azure environments.<!--excerpt_end-->
 

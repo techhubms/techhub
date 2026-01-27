@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/how-we-use-ai-agents-for-cobol-migration-and-mainframe-modernization/
 title: How We Use AI Agents for COBOL Migration and Mainframe Modernization
 author: jkordick, gkaleta
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this comprehensive post, authors jkordick and gkaleta delve into how Microsoft’s AI agentic technologies, notably Semantic Kernel, support migrating legacy COBOL mainframe applications to modern cloud architectures. The article features technical deep dives and insights from real-world modernization projects.<!--excerpt_end-->
 

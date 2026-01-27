@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=f-4NNlIQzQw
 title: Generate a Test Suite with GitHub Copilot and Prompt-Driven Development
 author: Visual Studio Code
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this video, Liam Hampton demonstrates how developers can use GitHub Copilot with Prompt-driven Development workflows in Visual Studio Code to write and run automated test suites, including end-to-end, unit, and integration tests.<!--excerpt_end-->
 

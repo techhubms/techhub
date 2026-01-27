@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/enhancing-conversational-agents-with-azure-ai-language-conversational-language-understanding-and-custom-question-answering/
 title: 'Enhancing Conversational Agents with Azure AI Language: CLU and Custom Question Answering'
 author: peytonfraser
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Authored by peytonfraser, this article provides a comprehensive overview of the latest advancements in Azure AI Foundry’s conversational agent capabilities. It highlights new customization features in CLU and CQA and provides practical guidance for leveraging these tools in enterprise AI solutions.<!--excerpt_end-->
 

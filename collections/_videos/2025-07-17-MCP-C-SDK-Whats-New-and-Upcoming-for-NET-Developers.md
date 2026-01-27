@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=DoezQYWzRBw
 title: 'MCP C# SDK: What’s New and Upcoming for .NET Developers'
 author: dotnet
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 In this expert-led developer session, featuring Bruno Capuano, Mike Kistler, and Stephen Halter, you'll discover the newest additions to the C# MCP SDK, insights into leveraging AI with .NET, and practical guidance for modern Microsoft-centric app development.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/assess-security-risks-with-insights-in-azure-migrate/ba-p/4470866
 title: Assess Security Risks with Insights in Azure Migrate
 author: Nikita_Bajaj
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Nikita_Bajaj explains how Azure Migrate's Insights feature empowers organizations to identify and manage security risks as part of cloud migration, highlighting practical steps for a secure transition.<!--excerpt_end-->
 

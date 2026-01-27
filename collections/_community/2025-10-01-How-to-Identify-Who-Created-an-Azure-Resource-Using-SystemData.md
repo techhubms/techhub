@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/who-created-this-azure-resource-here-s-how-to-find-out/ba-p/4458470
 title: How to Identify Who Created an Azure Resource Using SystemData
 author: Bruno Borges
@@ -24,6 +24,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Bruno Borges walks Azure administrators through finding out who created a resource by using the systemData metadata, helping improve governance, compliance, and troubleshooting.<!--excerpt_end-->
 

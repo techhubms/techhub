@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=VcLOXhpd_-A
 title: Building the Most Intelligent Agents with the Latest Knowledge Sources
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 - Visualization
 section_names:
 - ai
+primary_section: ai
 ---
 In this Microsoft Ignite 2025 session, Microsoft Events and guest speakers discuss leveraging Copilot Studio for building intelligent AI agents, with practical demonstrations and architecture insights. Speakers include Anjli Chaudhry, Eli Coon, Hardik Modi, and Nick Taylor.<!--excerpt_end-->
 

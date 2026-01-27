@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-github-copilot-helps-with-test-driven-development-tdd/
 title: How GitHub Copilot Helps with Test-Driven Development (TDD)
 author: Dellenny
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny discusses how GitHub Copilot supports Test-Driven Development (TDD) by helping developers write tests efficiently, generate edge cases, and stay productive throughout the coding cycle.<!--excerpt_end-->
 

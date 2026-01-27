@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mc7qn1/are_snapshots_suitable_for_a_one_time_backup/
 title: Are Snapshots Suitable for One-Time Backup in Azure?
 author: Izual_Rebirth
@@ -16,6 +16,7 @@ tags:
 - VM Backup
 section_names:
 - azure
+primary_section: azure
 ---
 Izual_Rebirth explores whether Azure snapshots are a practical solution for a one-off backup of an inactive, archival VM, drawing comparisons to on-premises environments.<!--excerpt_end-->
 

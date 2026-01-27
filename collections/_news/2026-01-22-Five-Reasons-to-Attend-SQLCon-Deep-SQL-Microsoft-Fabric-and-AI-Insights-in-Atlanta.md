@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog invites practitioners to SQLCon in Atlanta, showcasing deep dives into SQL Server, Azure SQL, Fabric, Power BI, data engineering, and AI. Attendees can engage with the community, learn from product teams, and access hands-on workshops.<!--excerpt_end-->
 

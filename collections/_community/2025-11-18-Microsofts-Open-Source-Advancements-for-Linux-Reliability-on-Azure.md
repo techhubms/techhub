@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/innovations-and-strengthening-platforms-reliability-through-open/ba-p/4468172
 title: Microsoft’s Open-Source Advancements for Linux Reliability on Azure
 author: KashanK
@@ -29,6 +29,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 KashanK explains Microsoft’s latest open-source work to enhance Linux reliability and security on Azure. These efforts support developers and cloud engineers using Linux platforms at scale.<!--excerpt_end-->
 

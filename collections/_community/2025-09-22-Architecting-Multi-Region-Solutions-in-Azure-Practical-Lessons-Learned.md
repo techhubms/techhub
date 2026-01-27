@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/architecting-multi-region-solution-in-azure-lessons-learned/ba-p/4415554
 title: 'Architecting Multi-Region Solutions in Azure: Practical Lessons Learned'
 author: prjelesi-msft
@@ -28,6 +28,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 prjelesi-msft shares in-depth guidance and field experience on building multi-region solutions in Azure, highlighting key strategies for architects and engineers to enable scalable, resilient, and compliant cloud applications.<!--excerpt_end-->
 

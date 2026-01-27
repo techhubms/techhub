@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/VisualStudio/comments/1mk0wi2/as_a_hs_computer_science_teacher/
 title: Managing AI Features in Visual Studio for High School Computer Science Education
 author: misterebs
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 misterebs and fellow educators discuss best practices for managing AI-enabled features like GitHub Copilot in Visual Studio while teaching foundational programming skills to students, offering strategies, alternative tools, and reflections on teaching philosophies.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/devops-meets-microsoft-ai-accelerating-innovation-in-the-cloud-era/
 title: 'DevOps Meets Microsoft AI: Accelerating Innovation in the Cloud Era'
 author: Dellenny
@@ -30,6 +30,7 @@ section_names:
 - devops
 - github-copilot
 - ml
+primary_section: github-copilot
 ---
 Written by Dellenny, this comprehensive overview shows how Microsoft AI—including GitHub Copilot—integrates with DevOps tools to enhance productivity, automation, and secure software delivery.<!--excerpt_end-->
 

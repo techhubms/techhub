@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dxUsmfYqBAI
 title: 'Secure by Design: Upcoming CMK and Auditing Features in Fabric SQL Database'
 author: Microsoft Developer
@@ -30,6 +30,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Developer introduces upcoming security features for Fabric SQL Database, focusing on Customer-Managed Keys and auditing to empower organizations with encryption control and robust operational visibility.<!--excerpt_end-->
 

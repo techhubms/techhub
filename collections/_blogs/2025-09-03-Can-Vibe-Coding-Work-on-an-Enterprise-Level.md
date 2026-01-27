@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/can-vibe-codingwork-on-an-enterprise-level/?utm_source=rss&utm_medium=rss&utm_campaign=can-vibe-codingwork-on-an-enterprise-level
 title: Can Vibe Coding Work on an Enterprise Level?
 author: Armelle Dawson
@@ -32,6 +32,7 @@ tags:
 - Vibe Coding Security
 section_names:
 - ai
+primary_section: ai
 ---
 Armelle Dawson investigates the promise and challenges of vibe coding for enterprises, detailing productivity potential, risks including slopsquatting, and the governance needs for responsible AI-driven development.<!--excerpt_end-->
 

@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Dylan Birtolo demonstrates how the GitHub Copilot CLI empowers developers to interact with Copilot directly from the terminal, streamlining tasks like setup, troubleshooting, and automation through an agentic AI approach.<!--excerpt_end-->
 

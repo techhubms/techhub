@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/whitecobra-targets-developers-with-dozens-of-malicious-extensions/?utm_source=rss&utm_medium=rss&utm_campaign=whitecobra-targets-developers-with-dozens-of-malicious-extensions
 title: WhiteCobra Targets Developers with Malicious VSCode Marketplace Extensions
 author: Jeff Burt
@@ -32,6 +32,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Jeff Burt’s article exposes how the WhiteCobra group exploits VSCode marketplace trust, detailing malware delivery tactics targeting developer environments. Essential background for development teams on supply chain security.<!--excerpt_end-->
 

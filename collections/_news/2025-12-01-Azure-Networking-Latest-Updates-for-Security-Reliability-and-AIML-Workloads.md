@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/azure-networking-updates-on-security-reliability-and-high-availability/
 title: 'Azure Networking: Latest Updates for Security, Reliability, and AI/ML Workloads'
 author: Narayan Annamalai
@@ -32,6 +32,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Narayan Annamalai shares the latest Azure networking updates, covering new security, reliability, and scalability features designed for demanding AI and cloud-native workloads, with insights on practical implementation.<!--excerpt_end-->
 

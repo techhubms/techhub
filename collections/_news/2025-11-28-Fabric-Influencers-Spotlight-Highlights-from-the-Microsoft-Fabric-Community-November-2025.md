@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-november-2025/
 title: 'Fabric Influencers Spotlight: Highlights from the Microsoft Fabric Community, November 2025'
 author: Microsoft Fabric Blog
@@ -28,6 +28,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ml
 ---
 The Microsoft Fabric Blog presents a November roundup spotlighting MVPs and Super Users' technical resources, from Power BI Calendar tips by Wyn Hopkins to guides on advanced data engineering by Aleksi Partanen and Sahir Maharaj.<!--excerpt_end-->
 

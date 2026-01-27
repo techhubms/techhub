@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=UAIic-vzcac
 title: Enhanced Performance Dashboard for SQL Databases in Microsoft Fabric
 author: Microsoft Developer
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Developer presents a walkthrough of the enhanced performance dashboard for SQL databases in Microsoft Fabric, highlighting memory monitoring and workload optimization techniques.<!--excerpt_end-->
 

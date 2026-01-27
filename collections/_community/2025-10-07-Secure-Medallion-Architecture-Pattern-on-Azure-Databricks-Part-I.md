@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/secure-medallion-architecture-pattern-on-azure-databricks-part-i/ba-p/4459268
 title: Secure Medallion Architecture Pattern on Azure Databricks (Part I)
 author: mscagliola
@@ -24,6 +24,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 mscagliola presents a practical guide for deploying a secure Medallion Architecture on Azure Databricks, detailing how to implement least-privilege access, strong data governance, and robust pipeline isolation using Microsoft technologies.<!--excerpt_end-->
 

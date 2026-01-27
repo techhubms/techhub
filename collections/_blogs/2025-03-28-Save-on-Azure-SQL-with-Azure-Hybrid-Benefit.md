@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/03/save-on-azure-sql-with-azure-hybrid-benefit/
 title: Save on Azure SQL with Azure Hybrid Benefit
 author: Thomas Maurer
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 In this article, Thomas Maurer examines how Azure Hybrid Benefit can help organizations save on Azure SQL costs, focusing on migration strategies and database modernization in the cloud.<!--excerpt_end-->
 

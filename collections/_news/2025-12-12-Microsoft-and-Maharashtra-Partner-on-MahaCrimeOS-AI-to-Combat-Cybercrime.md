@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_a-race-against-time-maharashtra-police-get-activity-7405143430328258560-Bzph
 title: Microsoft and Maharashtra Partner on MahaCrimeOS AI to Combat Cybercrime
 author: stclarke
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 stclarke covers how Satya Nadella and Devendra Fadnavis are using Microsoft Azure and OpenAI in the MahaCrimeOS AI platform to aid Maharashtra Police in fighting cybercrime and financial fraud.<!--excerpt_end-->
 

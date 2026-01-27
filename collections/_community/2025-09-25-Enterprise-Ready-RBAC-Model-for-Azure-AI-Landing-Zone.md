@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/access-governance-blueprint-for-ai-landing-zone/ba-p/4455910
 title: Enterprise-Ready RBAC Model for Azure AI Landing Zone
 author: Madhur_Shukla
@@ -41,6 +41,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 Madhur_Shukla presents a comprehensive, technical RBAC governance framework for Azure AI Landing Zones, covering access models, personas, automation, and key security guardrails for enterprise ML/AI workloads.<!--excerpt_end-->
 

@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a guide to connecting GitHub Copilot with OpenCode, showing developers how to bring their Pro, Business, or Enterprise Copilot plans to this open-source agent.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/public-preview-json-lines-support-in-openrowset-for-fabric-data-warehouse-and-lakehouse-sql-endpoints/
 title: JSON Lines Support in OPENROWSET for Fabric Data Warehouse and Lakehouse SQL Endpoints (Preview)
 author: Microsoft Fabric Blog
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces preview support for JSON Lines (JSONL) in OPENROWSET for Data Warehouse and Lakehouse SQL endpoints, simplifying access to semi-structured data.<!--excerpt_end-->
 

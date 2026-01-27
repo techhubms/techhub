@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=9HEwtaepw1E
 title: Building a 2D Platformer with Spec Kit, VS Code, and GitHub Copilot
 author: Visual Studio Code
@@ -31,6 +31,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code presents a session where Den Delimarsky and James Montemagno build a 2D platformer in VS Code using Spec Kit and GitHub Copilot, demonstrating AI-assisted game development.<!--excerpt_end-->
 

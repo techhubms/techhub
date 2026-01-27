@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/addressing-air-gap-requirements-through-secure-azure-arc/ba-p/4458748
 title: Architectural Patterns and Secure Onboarding for Azure Arc in Air-Gapped Environments
 author: AkashKumarSingh
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 AkashKumarSingh outlines best practices and architecture patterns for secure Azure Arc deployment in air-gapped and highly regulated environments, focusing on security, governance, and operational effectiveness.<!--excerpt_end-->
 

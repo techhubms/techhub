@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-05-track-copilot-code-generation-metrics-in-a-dashboard
 title: Track Copilot Code Generation Metrics in GitHub Insights Dashboard
 author: Allison
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces an update for GitHub Copilot enterprise users: the ability to track lines of code metrics from Copilot directly in the code generation insights dashboard using detailed AI controls.<!--excerpt_end-->
 

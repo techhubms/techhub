@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 ayangupta explains how GitHub Copilot app modernization automates Java JDK and framework upgrades, helping developers update dependencies and migrate build systems with minimal manual effort.<!--excerpt_end-->
 

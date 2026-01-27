@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/from-queries-to-conversations-unlock-insights-about-your-data-using-azure-storage-discovery-now-generally-available/
 title: Unlock Insights with Azure Storage Discovery and Copilot Integration
 author: Maneesh Sah
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Maneesh Sah introduces Azure Storage Discovery's general availability, focusing on its advanced integration with Copilot for intuitive data estate analysis, operational insight, and storage management in the Azure platform.<!--excerpt_end-->
 

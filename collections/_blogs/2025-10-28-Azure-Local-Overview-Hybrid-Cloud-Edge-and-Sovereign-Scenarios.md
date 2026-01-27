@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/10/new-video-azure-local-overview/
 title: 'Azure Local Overview: Hybrid Cloud, Edge, and Sovereign Scenarios'
 author: Thomas Maurer
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Thomas Maurer provides a practical, architect-focused walkthrough of Azure Local, covering hybrid cloud architecture, edge scenarios, digital sovereignty, security features, and workload management, with actionable demos and management techniques.<!--excerpt_end-->
 

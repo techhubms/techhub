@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mhdius/lowest_costing_for_a_container_instance/
 title: Strategies for Minimizing Costs of Azure Container Instances with Event-Driven Usage
 author: smallstar3377
@@ -17,6 +17,7 @@ tags:
 - Spring Boot
 section_names:
 - azure
+primary_section: azure
 ---
 Authored by smallstar3377, this post explores approaches for minimizing Azure costs when deploying a rarely used Spring Boot app. It discusses potential solutions and requests guidance on best practices.<!--excerpt_end-->
 

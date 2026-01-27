@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-secure-azure-bot-service-endpoints-with-teams-channel/ba-p/4440495
 title: Securing Azure Bot Service Endpoints for Teams Channel Integration
 author: daisami
@@ -28,6 +28,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: coding
 ---
 daisami guides developers through securing Azure Bot Service endpoints for Microsoft Teams, focusing on application-level protections, token validation, and tenant restrictions to safeguard accessible endpoints in ASP.NET Core bots.<!--excerpt_end-->
 

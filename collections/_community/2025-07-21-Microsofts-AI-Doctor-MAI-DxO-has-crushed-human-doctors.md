@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/ArtificialInteligence/comments/1m5ig5j/microsofts_ai_doctor_maidxo_has_crushed_human/
 title: Microsoft's AI Doctor MAI-DxO has crushed human doctors
 author: deen1802
@@ -18,6 +18,7 @@ tags:
 - Microsoft AI Diagnostics Orchestrator
 section_names:
 - ai
+primary_section: ai
 ---
 Authored by deen1802, this article discusses Microsoft's recent breakthrough in AI healthcare technology with the Microsoft AI Diagnostics Orchestrator (Mai Dxo). The AI demonstrated significantly higher accuracy than human doctors in a controlled test, indicating a major leap forward in medical diagnostics.<!--excerpt_end-->
 

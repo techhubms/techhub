@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/static-egress-gateway-in-aks-the-native-way-to-control-multiple/ba-p/4484179
 title: 'Static Egress Gateway in AKS: The Native Way to Control Multiple Outbound IPs'
 author: pjlewis
@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 pjlewis demonstrates how to manage multiple outbound egress IPs natively in Azure Kubernetes Service using the Static Egress Gateway feature, providing clear, actionable implementation steps and security-focused considerations.<!--excerpt_end-->
 

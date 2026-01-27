@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/real-time-ai-streaming-with-azure-openai-and-signalr/ba-p/4468833
 title: Real-Time AI Streaming with Azure OpenAI and SignalR
 author: pranav_pratik
@@ -26,6 +26,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 pranav_pratik demonstrates how to deliver a ChatGPT-style streaming AI experience in your own apps by integrating Azure OpenAI Service with real-time SignalR communication and Angular frontend, covering the end-to-end architecture and best practices.<!--excerpt_end-->
 

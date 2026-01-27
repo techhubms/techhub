@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/research/blog/mindjourney-enables-ai-to-explore-simulated-3d-worlds-to-improve-spatial-interpretation/
 title: 'MindJourney: AI Agents Navigate and Reason in Simulated 3D Worlds'
 author: sbaynes
@@ -21,6 +21,7 @@ tags:
 - World Models
 section_names:
 - ai
+primary_section: ai
 ---
 Authored by sbaynes, this news feature explains how MindJourney—a research framework from Microsoft—enables AI agents to navigate simulated 3D worlds and enhances their ability to answer spatial questions.<!--excerpt_end-->
 

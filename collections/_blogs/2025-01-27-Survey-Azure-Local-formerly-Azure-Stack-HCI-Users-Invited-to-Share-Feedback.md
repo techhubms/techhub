@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/01/survey-azure-local-formerly-azure-stack-hci-users/
 title: Survey - Azure Local (formerly Azure Stack HCI) Users Invited to Share Feedback
 author: Thomas Maurer
@@ -18,6 +18,7 @@ tags:
 - Virtualization
 section_names:
 - azure
+primary_section: azure
 ---
 Thomas Maurer invites Azure Local users to take a brief survey about using AKS Arc on the platform, regardless of prior Kubernetes experience.<!--excerpt_end-->
 

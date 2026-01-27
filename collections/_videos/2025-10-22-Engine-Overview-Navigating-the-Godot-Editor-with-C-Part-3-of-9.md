@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=RdciTS7sRhw
 title: 'Engine Overview: Navigating the Godot Editor with C# (Part 3 of 9)'
 author: dotnet
@@ -21,6 +21,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet presents a practical walkthrough of the Godot game engine editor, focusing on project setup and editor navigation for C# game developers.<!--excerpt_end-->
 

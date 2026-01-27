@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-november-2025-servicing-updates/
 title: .NET and .NET Framework November 2025 Servicing Releases Updates
 author: Tara Overfield, Victor Israel-Bolarinwa
@@ -21,6 +21,7 @@ tags:
 - Servicing Release
 section_names:
 - coding
+primary_section: coding
 ---
 Tara Overfield and Victor Israel-Bolarinwa recap the November 2025 servicing updates for .NET and .NET Framework, highlighting new release notes, downloads, and maintenance changes for .NET 8.0 and 9.0.<!--excerpt_end-->
 

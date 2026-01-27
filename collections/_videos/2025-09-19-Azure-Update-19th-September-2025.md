@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Umvbk3sBXn8
 title: Azure Update - 19th September 2025
 author: John Savill's Technical Training
@@ -37,6 +37,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 John Savill's Technical Training brings an in-depth September 2025 Azure Update, summarizing recent changes and new features for developers and administrators working within Microsoft's cloud ecosystem.<!--excerpt_end-->
 

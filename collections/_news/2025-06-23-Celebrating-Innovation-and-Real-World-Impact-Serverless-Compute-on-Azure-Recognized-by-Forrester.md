@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/celebrating-innovation-scale-and-real-world-impact-with-serverless-compute-on-azure/
 title: 'Celebrating Innovation and Real-World Impact: Serverless Compute on Azure Recognized by Forrester'
 author: Scott Hunter
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Scott Hunter highlights Microsoft’s recognition as a leader in serverless compute by Forrester. The article explores Azure’s serverless innovations, AI-driven solutions, customer use cases, and Microsoft’s approach to empowering developers at scale.<!--excerpt_end-->
 

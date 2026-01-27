@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/education/blog/2025/07/discover-the-potential-of-agentic-ai-in-higher-education/
 title: Discover the Potential of Agentic AI in Higher Education
 author: stclarke
@@ -19,6 +19,7 @@ tags:
 - Personalized Learning
 section_names:
 - ai
+primary_section: ai
 ---
 Written by stclarke, this article investigates Microsoft's approach to agentic AI in higher education, assessing its impact and the advancements it could bring to academic environments.<!--excerpt_end-->
 

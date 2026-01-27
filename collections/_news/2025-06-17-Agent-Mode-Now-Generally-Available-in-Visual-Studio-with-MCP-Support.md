@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/agent-mode-is-now-generally-available-with-mcp-support/
 title: Agent Mode Now Generally Available in Visual Studio with MCP Support
 author: Rhea Patel, Filisha Shah, Allie Barry
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Authored by Rhea Patel, Filisha Shah, and Allie Barry, this piece covers the Visual Studio June update featuring general availability of Copilot agent mode with MCP integration, enabling sophisticated autonomous AI development support in Visual Studio.<!--excerpt_end-->
 

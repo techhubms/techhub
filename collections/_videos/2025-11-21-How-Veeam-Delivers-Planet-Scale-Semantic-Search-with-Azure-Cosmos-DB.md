@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=s3TTzeQI94A
 title: How Veeam Delivers Planet-Scale Semantic Search with Azure Cosmos DB
 author: Microsoft Events
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events shares insights from the Azure Cosmos DB engineering team and Veeam on using Cosmos DB for large-scale semantic search, detailing architecture, demos, and optimization strategies.<!--excerpt_end-->
 

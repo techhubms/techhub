@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/llms/why-ai-is-pushing-developers-toward-typed-languages/
 title: Why AI Is Pushing Developers Toward Typed Languages
 author: Cassidy Williams
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Cassidy Williams analyzes why typed programming languages are surging in popularity, emphasizing how AI-generated code and tools like Copilot are redefining developer safety nets and code reliability.<!--excerpt_end-->
 

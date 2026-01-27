@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=QLAIww-Vhqo
 title: Debugging a Full-Stack Chat App with GitHub Copilot Chat in VS Code
 author: Visual Studio Code
@@ -29,6 +29,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this video, Visual Studio Code (with Pamela Fox) shows how to debug and improve a full-stack chat app using GitHub Copilot Chat, exploring advanced chat modes, agentic development, and AI-driven web app troubleshooting.<!--excerpt_end-->
 

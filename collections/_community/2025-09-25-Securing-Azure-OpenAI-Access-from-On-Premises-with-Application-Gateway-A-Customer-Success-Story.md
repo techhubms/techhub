@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/using-application-gateway-to-secure-access-to-the-azure-openai/ba-p/4456696
 title: 'Securing Azure OpenAI Access from On-Premises with Application Gateway: A Customer Success Story'
 author: vnamani
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 vnamani shares a detailed case study on securing Azure OpenAI Service for an on-premises application using Application Gateway, focusing on network security and governance.<!--excerpt_end-->
 

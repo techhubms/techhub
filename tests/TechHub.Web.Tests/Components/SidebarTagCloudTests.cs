@@ -3,7 +3,7 @@ using FluentAssertions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
-using TechHub.Core.DTOs;
+using TechHub.Core.Models;
 using TechHub.Web.Components;
 using TechHub.Web.Services;
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/devops/comments/1mfy3o0/deployment_versioning_problems/
 title: Deployment versioning challenges across customers and components
 author: wesleyada
@@ -17,6 +17,7 @@ tags:
 - Visualization
 section_names:
 - devops
+primary_section: devops
 ---
 Wesleyada highlights the common struggle of managing disparate component versions during deployments and seeks advice on tracking solutions for complex release schedules.<!--excerpt_end-->
 

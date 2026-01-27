@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=DBaFFYyUSl8
 title: 'Model Context Protocol: From Concept to Linux Foundation Agentic AI'
 author: GitHub
@@ -20,6 +20,7 @@ tags:
 - OpenSource
 section_names:
 - ai
+primary_section: ai
 ---
 GitHub presents a video featuring engineers from Anthropic, GitHub, Microsoft, and OpenAI as they discuss MCP’s evolution to a critical open standard in AI. The author shares insights into MCP's move to the Linux Foundation and its significance for developers.<!--excerpt_end-->
 

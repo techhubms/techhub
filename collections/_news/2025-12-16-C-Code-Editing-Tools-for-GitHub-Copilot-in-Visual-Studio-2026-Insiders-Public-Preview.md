@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-16-c-code-editing-tools-for-github-copilot-in-public-preview
 title: C++ Code Editing Tools for GitHub Copilot in Visual Studio 2026 Insiders Public Preview
 author: Allison
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Allison details new C++ code editing tools for GitHub Copilot in Visual Studio 2026 Insiders, enabling deep code analysis and multi-file editing to improve developer workflows.<!--excerpt_end-->
 

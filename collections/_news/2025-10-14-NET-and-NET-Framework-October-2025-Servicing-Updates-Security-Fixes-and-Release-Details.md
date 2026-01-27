@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-october-2025-servicing-updates/
 title: '.NET and .NET Framework October 2025 Servicing Updates: Security Fixes and Release Details'
 author: Tara Overfield, Victor Israel-Bolarinwa
@@ -25,6 +25,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 Tara Overfield and Victor Israel-Bolarinwa provide a thorough overview of the October 2025 .NET and .NET Framework servicing updates, highlighting key security patches and release details.<!--excerpt_end-->
 

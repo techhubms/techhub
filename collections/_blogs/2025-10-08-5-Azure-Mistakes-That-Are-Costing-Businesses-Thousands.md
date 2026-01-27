@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/5-azure-mistakes-that-are-costing-businesses-thousands/
 title: 5 Azure Mistakes That Are Costing Businesses Thousands
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Dellenny provides actionable guidance on avoiding common Microsoft Azure cost pitfalls, detailing fixes for each and empowering technical teams to optimize their cloud spending.<!--excerpt_end-->
 

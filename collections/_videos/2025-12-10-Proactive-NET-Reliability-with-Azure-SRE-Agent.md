@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Kx_6SB-mhgg
 title: Proactive .NET Reliability with Azure SRE Agent
 author: dotnet
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 dotnet demonstrates how developers can leverage the Azure SRE Agent for proactive reliability in .NET apps, covering instrumentation, real-time detection, and automated incident management.<!--excerpt_end-->
 

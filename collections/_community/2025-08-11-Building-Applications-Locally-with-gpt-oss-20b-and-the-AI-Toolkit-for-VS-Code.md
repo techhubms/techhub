@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/building-application-with-gpt-oss-20b-with-ai-toolkit/ba-p/4441486
 title: Building Applications Locally with gpt-oss-20b and the AI Toolkit for VS Code
 author: kinfey
@@ -27,6 +27,7 @@ tags:
 - VS Code Extension
 section_names:
 - ai
+primary_section: ai
 ---
 kinfey provides a hands-on guide to deploying OpenAI’s gpt-oss-20b and building intelligent agent applications locally using the AI Toolkit for Visual Studio Code, highlighting practical integration strategies for developers.<!--excerpt_end-->
 

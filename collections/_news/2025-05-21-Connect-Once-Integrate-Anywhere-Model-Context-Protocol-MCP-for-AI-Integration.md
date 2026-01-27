@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/connect-once-integrate-anywhere-with-mcps
 title: 'Connect Once, Integrate Anywhere: Model Context Protocol (MCP) for AI Integration'
 author: Maria Naggaga
@@ -23,6 +23,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 In this article, Maria Naggaga details the Model Context Protocol (MCP), outlining its impact on AI integration and developer productivity, with insights on leveraging GitHub Copilot, Visual Studio, Azure API Management, and robust security practices.<!--excerpt_end-->
 

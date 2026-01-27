@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2026-01-14-copilot-sdk-in-technical-preview
 title: 'Copilot SDK Technical Preview: Multi-Language Access to GitHub Copilot CLI'
 author: Allison
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the technical preview of the Copilot SDK, providing developers with multi-language SDKs to integrate and extend GitHub Copilot CLI in Node.js, Python, Go, and .NET environments.<!--excerpt_end-->
 

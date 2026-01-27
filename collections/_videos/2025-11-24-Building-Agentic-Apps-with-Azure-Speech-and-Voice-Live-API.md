@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=mQHsytPpHmU
 title: Building Agentic Apps with Azure Speech and Voice Live API
 author: Microsoft Events
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events showcases Azure Speech innovations, featuring speakers Jacky Kang, James McMahon, Heiko Rahmel, and Sidd Shah, who detail how developers can create agentic AI apps and voice-enabled agents using the latest Azure Speech APIs.<!--excerpt_end-->
 

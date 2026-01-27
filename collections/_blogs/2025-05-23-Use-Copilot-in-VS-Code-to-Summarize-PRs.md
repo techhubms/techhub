@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/use-copilot-in-vs-code-to-summarize-prs.html
 title: Use Copilot in VS Code to Summarize PRs
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -20,6 +20,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels offers a clear, step-by-step tutorial on using GitHub Copilot Chat in VS Code to generate summaries for pull requests, helping developers speed up code reviews and improve the clarity of PR documentation.<!--excerpt_end-->
 

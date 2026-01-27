@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=7FpeYx0f1ck
 title: Comprehensive Data Security and Governance in AI Workloads with Microsoft Purview
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 In this Microsoft Ignite 2025 session, Microsoft Events presenters demonstrate how Microsoft Purview secures and governs data across AI-powered workloads, including integrations with Azure AI Foundry and Fabric.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-automation-general-availability-of-powershell-7-4-python-3/ba-p/4437732
 title: Azure Automation Introduces PowerShell 7.4, Python 3.10, and New Runtime Environment
 author: Nikita_Bajaj
@@ -21,6 +21,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: coding
 ---
 Nikita_Bajaj announces major enhancements to Azure Automation, including support for PowerShell 7.4, Python 3.10, and a new Runtime Environment. The update boosts security, script modernization, control, and operational flexibility for enterprise automation.<!--excerpt_end-->
 

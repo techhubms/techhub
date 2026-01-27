@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/spring-cloud-azure-updates-and-troubleshooting-tips-for-java-on-aks/
 title: 'Spring Cloud Azure: Latest Updates and Troubleshooting Tips for Java on AKS'
 author: Moary Chen
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Moary Chen explores the latest advancements in Spring Cloud Azure with a special focus on Java applications deployed in Azure Kubernetes Service (AKS), offering comprehensive updates and troubleshooting tips.<!--excerpt_end-->
 

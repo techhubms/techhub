@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/survey-attributes-massive-economic-gains-to-rise-of-ai-in-software-development/?utm_source=rss&utm_medium=rss&utm_campaign=survey-attributes-massive-economic-gains-to-rise-of-ai-in-software-development
 title: Survey Shows AI Drives Massive Economic Gains in Software Development
 author: Mike Vizard
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Written by Mike Vizard, this article explores a Harris Poll survey revealing how AI adoption is transforming software development, boosting productivity, creating economic value, and presenting new challenges for organizations.<!--excerpt_end-->
 

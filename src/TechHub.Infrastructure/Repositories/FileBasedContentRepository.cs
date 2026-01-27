@@ -3,7 +3,6 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
-using TechHub.Core.DTOs;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 using TechHub.Infrastructure.Services;
@@ -361,6 +360,14 @@ public class FileBasedContentRepository : IContentRepository
         var subcollectionName = DeriveSubcollectionFromPath(filePath);
         var derivedCollection = collectionName.TrimStart('_');
 
+        // Read primary_section from frontmatter (computed by ContentFixer using priority order)
+        var primarySectionName = _frontMatterParser.GetValue<string>(frontMatter, "primary_section");
+        if (string.IsNullOrEmpty(primarySectionName))
+        {
+            // Fallback: compute at runtime if not in frontmatter (for backward compatibility)
+            primarySectionName = Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(sectionNames, derivedCollection);
+        }
+
         // Parse sidebar-info if present (dynamic JSON data for custom sidebars)
         JsonElement? sidebarInfo = null;
         if (frontMatter.TryGetValue("sidebar-info", out var sidebarData))
@@ -383,10 +390,10 @@ public class FileBasedContentRepository : IContentRepository
         // Process YouTube embeds and render markdown to HTML
         var processedMarkdown = _markdownService.ProcessYouTubeEmbeds(content);
 
-        // Calculate URL directly without creating temporary object (performance optimization for 4000+ items)
-        var primarySectionUrl = Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(sectionNames, derivedCollection);
-        var pathSegment = subcollectionName ?? derivedCollection;
-        var currentPagePath = $"/{primarySectionUrl}/{pathSegment}/{slug}";
+        // Calculate URL using primary_section (read from frontmatter or computed above)
+        // URLs always use collection name, not subcollection (subcollections are for filtering only)
+        // e.g., /github-copilot/videos/slug (not /github-copilot/ghc-features/slug)
+        var currentPagePath = $"/{primarySectionName}/{derivedCollection}/{slug}".ToLowerInvariant();
 
         string renderedHtml;
         try
@@ -409,10 +416,12 @@ public class FileBasedContentRepository : IContentRepository
             Title = title,
             Author = author,
             DateEpoch = date.ToUnixTimeSeconds(),
+            DateIso = date.ToString("yyyy-MM-dd"),
             CollectionName = derivedCollection,
             SubcollectionName = subcollectionName,
             FeedName = feedName,
             SectionNames = sectionNames,
+            PrimarySectionName = primarySectionName,
             Tags = tags,
             Plans = plans,
             GhesSupport = ghesSupport,
@@ -421,6 +430,7 @@ public class FileBasedContentRepository : IContentRepository
             RenderedHtml = renderedHtml,
             Excerpt = excerpt,
             ExternalUrl = externalUrl,
+            Url = currentPagePath,
             SidebarInfo = sidebarInfo
         };
 
@@ -528,5 +538,42 @@ public class FileBasedContentRepository : IContentRepository
 
         // File is in root of collection directory
         return null;
+    }
+
+    // ==================== Search Methods (Stub implementations) ====================
+    // These will be properly implemented when migrating to SQLite/PostgreSQL
+
+    /// <inheritdoc />
+    public Task<SearchResults<ContentItem>> SearchAsync(
+        SearchRequest request,
+        CancellationToken ct = default)
+    {
+        // Stub implementation - not supported for file-based repository
+        throw new NotSupportedException(
+            "SearchAsync is not supported by FileBasedContentRepository. " +
+            "Use SqliteContentRepository or PostgresContentRepository for search functionality.");
+    }
+
+    /// <inheritdoc />
+    public Task<FacetResults> GetFacetsAsync(
+        FacetRequest request,
+        CancellationToken ct = default)
+    {
+        // Stub implementation - not supported for file-based repository
+        throw new NotSupportedException(
+            "GetFacetsAsync is not supported by FileBasedContentRepository. " +
+            "Use SqliteContentRepository or PostgresContentRepository for facet functionality.");
+    }
+
+    /// <inheritdoc />
+    public Task<IReadOnlyList<ContentItem>> GetRelatedAsync(
+        string articleId,
+        int count = 5,
+        CancellationToken ct = default)
+    {
+        // Stub implementation - not supported for file-based repository
+        throw new NotSupportedException(
+            "GetRelatedAsync is not supported by FileBasedContentRepository. " +
+            "Use SqliteContentRepository or PostgresContentRepository for related articles functionality.");
     }
 }

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/gain-even-more-trust-and-compliance-with-onelake-diagnostics-immutability-generally-available/
 title: Gain Even More Trust and Compliance with OneLake Diagnostics Immutability
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Fabric Blog highlights new immutable diagnostic logs for OneLake diagnostics, enabling organizations to achieve stronger compliance and security. Authored by the Microsoft Fabric team, this post outlines technical implementation and key best practices.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/machine-learning-in-azure-a-beginners-guide-to-building-intelligent-solutions/
 title: 'Machine Learning in Azure: A Beginner’s Guide to Building Intelligent Solutions'
 author: Dellenny
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Dellenny presents a step-by-step beginner's guide to building intelligent solutions with machine learning in Azure, offering a practical introduction to ML tools and workflows for aspiring professionals.<!--excerpt_end-->
 

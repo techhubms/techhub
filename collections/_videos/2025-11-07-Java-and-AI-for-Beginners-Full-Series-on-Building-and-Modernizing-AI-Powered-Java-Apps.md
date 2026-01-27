@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=yPlJf5DA5So
 title: 'Java and AI for Beginners: Full Series on Building and Modernizing AI-Powered Java Apps'
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Developer presents a thorough video guide for developers on integrating AI and Microsoft cloud platform features into Java applications, covering modernization, deployment, and responsible AI practices.<!--excerpt_end-->
 

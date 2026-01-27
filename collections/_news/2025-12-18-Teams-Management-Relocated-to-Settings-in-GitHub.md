@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-18-teams-management-now-moved-to-settings
 title: Teams Management Relocated to Settings in GitHub
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - User Interface
 section_names:
 - devops
+primary_section: devops
 ---
 Allison explains the latest GitHub update moving Teams management to the Settings page, detailing the interface changes and how users can provide feedback.<!--excerpt_end-->
 

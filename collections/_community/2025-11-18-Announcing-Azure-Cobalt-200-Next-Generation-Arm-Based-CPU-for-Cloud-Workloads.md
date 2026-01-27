@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-cobalt-200-azure-s-next-cloud-native-cpu/ba-p/4469807
 title: 'Announcing Azure Cobalt 200: Next-Generation Arm-Based CPU for Cloud Workloads'
 author: sebilgin
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Selim Bilgin and Pat Stemen present the technical foundations and innovations behind Azure Cobalt 200, detailing its cloud-native capabilities, hardware acceleration, security features, and impact on Microsoft’s cloud infrastructure.<!--excerpt_end-->
 

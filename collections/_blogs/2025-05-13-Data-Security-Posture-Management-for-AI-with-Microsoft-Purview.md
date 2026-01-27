@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://zure.com/blog/data-security-posture-management-for-ai
 title: Data Security Posture Management for AI with Microsoft Purview
 author: petrus.vasenius@zure.com (Petrus Vasenius)
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Petrus Vasenius introduces Microsoft Purview's Data Security Posture Management for AI, offering technical details on managing, monitoring, and securing organizational AI usage with dashboards, recommendations, policies, and risk assessment tools.<!--excerpt_end-->
 

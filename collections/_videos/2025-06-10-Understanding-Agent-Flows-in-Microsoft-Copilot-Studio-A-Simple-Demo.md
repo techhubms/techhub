@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Az4GawqnXHA
 title: 'Understanding Agent Flows in Microsoft Copilot Studio: A Simple Demo'
 author: Learn Microsoft AI
@@ -22,6 +22,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Learn Microsoft AI presents an introduction to Agent Flows in Microsoft Copilot Studio, demonstrating how to automate tasks and integrate applications using Power Platform tools.<!--excerpt_end-->
 

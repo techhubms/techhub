@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devopsjournal.io/blog/2024/09/29/GitHub-Models-API
 title: Configuring Azure Inference AI SDK for Azure OpenAI Endpoints in Python
 author: Rob Bos
@@ -20,6 +20,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Rob Bos provides a helpful guide on using the Azure Inference AI SDK in Python to connect to Azure OpenAI endpoints, including code examples for credential configuration.<!--excerpt_end-->
 

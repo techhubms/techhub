@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/open-source/social-impact/from-private-to-public-how-a-united-nations-organization-open-sourced-its-tech-in-four-steps/
 title: 'How the International Telecommunication Union Open Sourced Its Tech: A Four-Step Guide'
 author: Joshua Ku
@@ -20,6 +20,7 @@ tags:
 - UN ITU
 section_names:
 - devops
+primary_section: devops
 ---
 Joshua Ku shares actionable insights on how the International Telecommunication Union transitioned its closed technology stack to open source, offering a structured, four-step process for organizations considering a similar move.<!--excerpt_end-->
 

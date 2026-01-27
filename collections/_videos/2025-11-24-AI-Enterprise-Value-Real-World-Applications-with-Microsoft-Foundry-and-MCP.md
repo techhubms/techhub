@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=E7JJ8JLqlf8
 title: 'AI Enterprise Value: Real-World Applications with Microsoft Foundry and MCP'
 author: Microsoft Events
@@ -22,6 +22,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents this Ignite 2025 session featuring Mikhail Chernomordikov, Apoorv Iyer, Diana Kattan, and Tao Zhang, exploring enterprise AI deployments using Microsoft Foundry and Model Context Protocol (MCP) on Windows.<!--excerpt_end-->
 

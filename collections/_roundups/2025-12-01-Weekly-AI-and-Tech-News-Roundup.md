@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Ignite 2025: Updates in Agentic AI, Cloud, Developer Tools, and Security'
 author: Tech Hub Team
 date: 2025-12-01 09:00:00 +00:00
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: all
 ---
 Welcome to this week’s roundup, highlighting the latest technology shifts introduced at Ignite 2025. This collection covers updates transforming how organizations and developers approach automation, infrastructure, and secure integration of AI agents in daily operations. The themes this week are practical automation, built-in security, and the smooth alignment of AI with operational platforms. Key subjects include no-code Copilot workflows, large-scale Azure supercomputing, reliable DevOps automation, confidential computing, and Zero Trust solutions.
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/introducing-microsoft-s-network-operations-agent-a-telco/ba-p/4471185
 title: 'Introducing Microsoft’s Network Operations Agent: A Telco Framework for Autonomous Networks'
 author: bryangrimm
@@ -30,6 +30,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 Bryan Grimm explains how Microsoft’s Network Operations Agent (NOA) empowers telecoms with AI-driven, secure, and extensible network automation, combining Azure, Fabric, and agent orchestration to optimize network reliability while keeping operators in control.<!--excerpt_end-->
 

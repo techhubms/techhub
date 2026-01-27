@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=wm1yjcTk50w
 title: A Deep Dive into the GitHub MCP Registry for AI Agents
 author: GitHub
@@ -19,6 +19,7 @@ tags:
 - Registry Tutorial
 section_names:
 - ai
+primary_section: ai
 ---
 GitHub presents a practical walkthrough of the new MCP Registry, guiding viewers through discovering and using MCP servers to empower AI agents and tools in an open, community-driven environment.<!--excerpt_end-->
 

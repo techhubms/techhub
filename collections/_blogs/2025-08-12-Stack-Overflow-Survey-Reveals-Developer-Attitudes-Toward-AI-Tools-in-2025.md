@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/stack-overflow-survey-shows-ai-adoption-for-devs/?utm_source=rss&utm_medium=rss&utm_campaign=stack-overflow-survey-shows-ai-adoption-for-devs
 title: Stack Overflow Survey Reveals Developer Attitudes Toward AI Tools in 2025
 author: Alan Shimel
@@ -30,6 +30,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Alan Shimel presents insights from the 2025 Stack Overflow Developer Survey, highlighting how developers like those using GitHub Copilot are widely adopting generative AI tools but remain cautious about deeper AI automation.<!--excerpt_end-->
 

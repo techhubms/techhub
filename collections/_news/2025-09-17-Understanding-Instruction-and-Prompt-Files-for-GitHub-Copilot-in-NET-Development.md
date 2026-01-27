@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/prompt-files-and-instructions-files-explained/
 title: Understanding Instruction and Prompt Files for GitHub Copilot in .NET Development
 author: Wendy Breiding (SHE/HER)
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Wendy Breiding details how .NET developers can use instruction and prompt files with GitHub Copilot to automate coding standards, refine code generation, and foster effective team collaboration across Visual Studio, VS Code, and GitHub.com.<!--excerpt_end-->
 

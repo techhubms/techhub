@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-communication-services/azure-communication-services-is-now-generally-available-in-azure/ba-p/4448034
 title: Azure Communication Services Now Generally Available in Azure Government
 author: hrazi
@@ -17,6 +17,7 @@ tags:
 - Video Communications
 section_names:
 - azure
+primary_section: azure
 ---
 hrazi announces that Azure Communication Services is now generally available in Azure Government, enabling agencies to embed secure video and chat capabilities in their applications with compliance and scalability.<!--excerpt_end-->
 

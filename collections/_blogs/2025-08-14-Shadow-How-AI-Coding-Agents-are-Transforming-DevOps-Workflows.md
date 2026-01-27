@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/shadow-how-ai-coding-agents-are-transforming-devops-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=shadow-how-ai-coding-agents-are-transforming-devops-workflows
 title: 'Shadow: How AI Coding Agents are Transforming DevOps Workflows'
 author: Tom Smith
@@ -34,6 +34,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Tom Smith delves into Shadow, an open-source AI coding agent that streamlines and transforms DevOps workflows by automating code management, analysis, and repository tasks for development teams.<!--excerpt_end-->
 

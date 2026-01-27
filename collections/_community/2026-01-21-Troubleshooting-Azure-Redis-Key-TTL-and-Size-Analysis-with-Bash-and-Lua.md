@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 LuisFilipe shares practical Bash and Lua scripts for collecting TTL and key size statistics in Azure Cache for Redis, detailing how to optimize memory, performance, and cache longevity.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/the-developers-guide-to-agentic-ai-the-five-stages-of-agent-lifecycle-management/
 title: 'The Developer’s Guide to Agentic AI: The Five Stages of Agent Lifecycle Management'
 author: Dan Fernandez
@@ -41,6 +41,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Dan Fernandez explores the five stages of Agentic AI Lifecycle Management, showing how enterprises can manage and evolve adaptive AI agents for greater agility and innovation.<!--excerpt_end-->
 

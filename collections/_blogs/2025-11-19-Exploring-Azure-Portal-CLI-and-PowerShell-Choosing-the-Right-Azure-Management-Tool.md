@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/exploring-azure-portal-cli-and-powershell-which-one-should-you-use/
 title: 'Exploring Azure Portal, CLI, and PowerShell: Choosing the Right Azure Management Tool'
 author: John Edward
@@ -23,6 +23,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 John Edward presents a comparative analysis of Azure Portal, Azure CLI, and Azure PowerShell, empowering practitioners to choose optimal tools for efficient cloud resource management and automation.<!--excerpt_end-->
 

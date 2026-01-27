@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-september-2025/
 title: September 2025 Microsoft Fabric Influencers Spotlight
 author: Microsoft Fabric Blog
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 The Microsoft Fabric Blog compiles expert community contributions for September 2025, with MVPs and Super Users sharing practical solutions in Power BI, scalable data engineering, model evaluation, and Fabric platform governance.<!--excerpt_end-->
 

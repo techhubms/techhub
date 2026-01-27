@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/29826/
 title: 'Microsoft Fabric AI Functions: Enhanced Features Now Generally Available'
 author: Microsoft Fabric Blog
@@ -31,6 +31,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog details the latest generally available enhancements to Fabric AI functions, including deeper configurability and new features for developers, data scientists, and analysts.<!--excerpt_end-->
 

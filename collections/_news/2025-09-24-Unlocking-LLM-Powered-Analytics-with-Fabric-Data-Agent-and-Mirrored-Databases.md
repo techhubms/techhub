@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-llm-powered-through-data-agent-from-your-mirrored-databases-in-microsoft-fabric/
 title: Unlocking LLM-Powered Analytics with Fabric Data Agent and Mirrored Databases
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog showcases how the new Data Agent feature supports mirrored databases, allowing LLM-powered analytics and instant natural language insights across various operational data sources.<!--excerpt_end-->
 

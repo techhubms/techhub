@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mhq5bl/how_to_make_sure_cleanup_code_gets_run/
 title: How to Ensure Cleanup Code Runs with IAsyncDisposable in C#
 author: detroitmatt
@@ -17,6 +17,7 @@ tags:
 - Using Statement
 section_names:
 - coding
+primary_section: coding
 ---
 In this community post, detroitmatt explores how to make cleanup code reliably run in C# with IAsyncDisposable, highlighting pitfalls with disposable patterns.<!--excerpt_end-->
 

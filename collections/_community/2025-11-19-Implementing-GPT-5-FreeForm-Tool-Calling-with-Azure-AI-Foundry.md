@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/gpt-5-freeform-tool-calling-in-typescript-on-azure-ai-foundry/ba-p/4469682
 title: Implementing GPT-5 FreeForm Tool Calling with Azure AI Foundry
 author: Julia_Muiruri
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 In this tutorial, Julia Muiruri illustrates how developers can leverage GPT-5’s FreeForm tool calling within Azure AI Foundry to execute SQL and JavaScript workflows for advanced analytic tasks, highlighting agentic automation and custom tool design.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/workspace-outbound-access-protection-for-spark-is-now-generally-available/
 title: Outbound Access Protection for Spark Now Generally Available in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -21,6 +21,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog announces the general availability of Outbound Access Protection (OAP) for Spark workloads, providing workspace-level controls to restrict outbound connectivity and strengthen security.<!--excerpt_end-->
 

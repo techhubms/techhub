@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AI_Agents/comments/1m5ucwp/my_free_ai_course_on_github_is_now_in_video_format/
 title: My free AI Course on GitHub is now in Video Format
 author: Tailor-Equivalent
@@ -18,6 +18,7 @@ tags:
 - Training
 section_names:
 - ai
+primary_section: ai
 ---
 Tailor-Equivalent, a Solution Architect at Microsoft, announces the release of a free and comprehensive Generative AI course on GitHub. Drawing from extensive experience in building production-grade AI applications, the author aims to share valuable insights and knowledge with the community. Feedback from users and peers is encouraged to continually improve the course, which has already received positive responses.<!--excerpt_end-->
 

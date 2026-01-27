@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-17-block-repository-administrators-from-installing-github-apps-on-their-own-now-in-public-preview
 title: Controlling GitHub App Installations by Organization Owners
 author: Allison
@@ -22,6 +22,7 @@ tags:
 - Settings
 section_names:
 - devops
+primary_section: devops
 ---
 Allison reports on a new GitHub setting that lets organization owners restrict who can install GitHub Apps, offering improved governance and compliance for repository management.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: Updated AI Tools, Open-Source Security, and Azure Integration
 author: Tech Hub Team
 date: 2025-10-20 09:00:00 +00:00
@@ -19,6 +19,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: all
 ---
 Welcome to this week’s technology roundup. In this edition, we highlight the recent developments in developer-focused AI, new advancements in open-source and cloud security, improved efficiency for data and machine learning pipelines, and an increased interest in automation within hybrid and agent-based workflows.
 

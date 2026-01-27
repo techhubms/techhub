@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/join-microsoft-sc25-experience-hpc-and-ai-innovation/ba-p/4467935
 title: 'Join Microsoft at SC25: HPC and AI Innovations in St. Louis'
 author: Fernando_Aznar
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Fernando Aznar shares an in-depth preview of Microsoft’s schedule and technical programming for SC25, highlighting Azure HPC & AI innovations, interactive demos, and expert-led sessions.<!--excerpt_end-->
 

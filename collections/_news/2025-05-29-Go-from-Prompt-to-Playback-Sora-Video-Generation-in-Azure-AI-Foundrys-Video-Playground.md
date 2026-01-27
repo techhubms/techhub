@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/sora-in-video-playground/
 title: "Go from Prompt to Playback: Sora Video Generation in Azure AI Foundry's Video Playground"
 author: Thasmika Gokal
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Authored by Thasmika Gokal, this article explores the video playground within Azure AI Foundry and its integration with the Sora video generation model, providing insights and guidance for developers looking to experiment and deploy AI-generated video workflows.<!--excerpt_end-->
 

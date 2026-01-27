@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/disabling-localized-satellite-assemblies-during-dotnet-publish/
 title: Disabling Localized Satellite Assemblies During .NET Publish
 author: Andrew Lock
@@ -18,6 +18,7 @@ tags:
 - System.CommandLine
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, Andrew Lock explores how .NET developers can prevent unnecessary localization satellite assemblies from being included in publish outputs to reduce app size.<!--excerpt_end-->
 

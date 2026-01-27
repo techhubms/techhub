@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/mnzErLB8KeE
 title: Adding a Database to Your App with GitHub Copilot and Microsoft Docs MCP Server
 author: Visual Studio Code
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code introduces a walkthrough of adding a database to your app using GitHub Copilot and Microsoft Learn MCP server, featuring insights from Chris Noring.<!--excerpt_end-->
 

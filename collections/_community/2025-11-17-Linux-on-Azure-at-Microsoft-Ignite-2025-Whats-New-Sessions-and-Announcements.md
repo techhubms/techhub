@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/linux-on-azure-at-microsoft-ignite-2025-what-s-new-what-to/ba-p/4470685
 title: "Linux on Azure at Microsoft Ignite 2025: What's New, Sessions, and Announcements"
 author: shreyabaheti
@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Shreyabaheti outlines the core Linux-on-Azure innovations and technical sessions at Microsoft Ignite 2025, showcasing Azure Linux security, AKS modernization, and hands-on migration labs for practitioners and developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/disciplined-guardrail-development-in-enterprise-application-with/ba-p/4455321
 title: Disciplined Guardrail Development in Enterprise Applications with GitHub Copilot
 author: daisami
@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 daisami explains disciplined guardrail-based development with GitHub Copilot, showing how structured rules, configuration, and documentation practices lead to higher quality and maintainable enterprise software projects.<!--excerpt_end-->
 

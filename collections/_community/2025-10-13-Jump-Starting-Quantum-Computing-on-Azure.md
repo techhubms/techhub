@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/jump-starting-quantum-computing-on-azure/ba-p/4459053
 title: Jump Starting Quantum Computing on Azure
 author: notanaha
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 notanaha explains quantum computing fundamentals and demonstrates, step by step, how to run the quantum teleportation protocol with real code on Azure Quantum using Python and Qiskit.<!--excerpt_end-->
 

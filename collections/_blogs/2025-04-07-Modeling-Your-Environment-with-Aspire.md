@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://medium.com/@davidfowl/modeling-your-environment-with-aspire-24e986752485?source=rss-8163234c98f0------2
 title: Modeling Your Environment with Aspire
 author: David Fowler
@@ -24,6 +24,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 David Fowler discusses how Aspire transforms application modeling by making environment configuration and dependencies programmable, enabling automation and improved DevOps practices.<!--excerpt_end-->
 

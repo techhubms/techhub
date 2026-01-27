@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/finops-blog/unlock-savings-with-copilot-credit-pre-purchase-plan/ba-p/4464511
 title: Streamline Copilot Studio Costs with the Pre-Purchase (P3) Plan
 author: kyleikeda
@@ -21,6 +21,7 @@ tags:
 - Usage Monitoring
 section_names:
 - ai
+primary_section: ai
 ---
 kyleikeda presents a detailed overview of the Copilot Credit Pre-Purchase Plan, showing how teams can leverage upfront payments to achieve predictable costs and savings when using Microsoft Copilot Studio and Dynamics 365 custom AI agents.<!--excerpt_end-->
 

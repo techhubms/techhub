@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=A3twnNTBXvk
 title: 'Advancements in Power Platform: AI, Automation, and Secure Integrations'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Server Side Logic
 section_names:
 - ai
+primary_section: ai
 ---
 Presented by Marc Schweigert and Tiffany Treacy at Microsoft Ignite 2025, this session reviews new AI-powered features and automation enhancements in Power Platform apps to enable more intelligent and secure enterprise solutions.<!--excerpt_end-->
 

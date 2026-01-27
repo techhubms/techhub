@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/creating-your-first-sample-game-with-monogame/
 title: Creating your first sample game with MonoGame
 author: Andrew Lock
@@ -27,6 +27,7 @@ tags:
 - XNA 4.0 API
 section_names:
 - coding
+primary_section: coding
 ---
 Andrew Lock offers a step-by-step introduction to MonoGame, explaining its XNA roots, .NET-based setup, essential tools, and sample project structure for modern cross-platform game development.<!--excerpt_end-->
 

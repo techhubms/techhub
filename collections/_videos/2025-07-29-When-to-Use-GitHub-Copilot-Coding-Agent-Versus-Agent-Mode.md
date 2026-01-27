@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=a1BR6K3E4zs
 title: When to Use GitHub Copilot Coding Agent Versus Agent Mode
 author: GitHub
@@ -20,6 +20,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this video, GitHub demonstrates the practical differences between Copilot coding agent and agent mode. Presented by GitHub, it guides viewers on choosing the right Copilot feature for automating tasks or enhancing interactive software development.<!--excerpt_end-->
 

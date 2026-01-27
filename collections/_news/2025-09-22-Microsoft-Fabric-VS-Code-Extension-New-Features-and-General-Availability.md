@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-microsoft-fabric-extension-for-vs-code/
 title: 'Microsoft Fabric VS Code Extension: New Features and General Availability'
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ section_names:
 - coding
 - devops
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces general availability of the Fabric VS Code Extension, highlighting new automation, workspace, and DevOps features for developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://harrybin.de/posts/give-it-a-face-to-talk-to/
 title: Building a React-Based Speaking AI Avatar with Azure OpenAI and Microsoft Cognitive Services
 author: Harald Binkle
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 In this detailed guide, Harald Binkle demonstrates how to build a React-based AI avatar UI. The tutorial covers integrating Azure OpenAI, Microsoft Cognitive Services, and implementing avatar lip-syncing for truly interactive AI conversations.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=c5RGwxxUYGE
 title: Modernizing and Upgrading Your .NET Apps with Visual Studio and Copilot-Powered AI Tools
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 This video by dotnet explores how developers can utilize Visual Studio and Copilot-powered AI tools to efficiently modernize and upgrade .NET apps, featuring automated migrations and AI-supported code fixes.<!--excerpt_end-->
 

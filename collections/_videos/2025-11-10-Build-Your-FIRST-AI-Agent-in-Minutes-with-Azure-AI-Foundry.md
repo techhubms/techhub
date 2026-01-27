@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=WFgGGl5C4PI
 title: Build Your FIRST AI Agent in Minutes with Azure AI Foundry
 author: Alireza Chegini | AI Skills for Your Career
@@ -33,6 +33,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Alireza Chegini guides viewers through building and customizing an AI agent on Azure AI Foundry, covering setup, RAG chatbot features, and resource management essentials.<!--excerpt_end-->
 

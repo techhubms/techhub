@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=jIpJplSaFQM
 title: Azure Managed Redis Deep Dive
 author: John Savill's Technical Training
@@ -25,6 +25,7 @@ tags:
 - Sharding
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill delivers a comprehensive deep dive into Redis and Azure Managed Redis, covering core Redis concepts, architectural patterns, deployment modes, and advanced Azure integration strategies.<!--excerpt_end-->
 

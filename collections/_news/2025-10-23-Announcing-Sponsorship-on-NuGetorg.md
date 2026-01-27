@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/announcing-sponsorship-on-nugetdotorg-for-maintainer-appreciation/
 title: Announcing Sponsorship on NuGet.org
 author: Sean
@@ -22,6 +22,7 @@ tags:
 - Tidelift
 section_names:
 - coding
+primary_section: coding
 ---
 Sean explains how NuGet.org's new Sponsorship feature allows .NET package maintainers to add sponsorship links, making it easier for users to support the open source packages they rely on.<!--excerpt_end-->
 

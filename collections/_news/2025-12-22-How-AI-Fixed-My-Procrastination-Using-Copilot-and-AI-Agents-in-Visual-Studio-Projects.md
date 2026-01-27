@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/how-ai-fixed-my-procrastination/
 title: 'How AI Fixed My Procrastination: Using Copilot and AI Agents in Visual Studio Projects'
 author: Mads Kristensen
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Mads Kristensen shares how using Copilot and AI agents in Visual Studio accelerated his web development, created a new programming language extension, and enabled efficient color theme creation—all while overcoming procrastination.<!--excerpt_end-->
 

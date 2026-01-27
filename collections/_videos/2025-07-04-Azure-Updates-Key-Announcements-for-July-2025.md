@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=VmPz_PIeAuc
 title: 'Azure Updates: Key Announcements for July 2025'
 author: John Savill's Technical Training
@@ -41,6 +41,7 @@ section_names:
 - ml
 - devops
 - security
+primary_section: ml
 ---
 John Savill’s Technical Training summarizes Microsoft Azure updates and technical enhancements released in July 2025, offering a helpful digest for cloud professionals.<!--excerpt_end-->
 

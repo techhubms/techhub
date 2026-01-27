@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-local-22h2-clusters-end-of-service-and-feature-degradation/ba-p/4470129
 title: 'Azure Local 22H2 Clusters: End of Service and Required Upgrade Actions'
 author: Arpita Duppala
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Arpita Duppala explains the end of service for Azure Local 22H2 clusters, highlighting critical security and compliance risks and outlining the steps administrators must take to upgrade and avoid disruption.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/copilot-studio-vs-power-virtual-agents-whats-changed/
 title: 'Copilot Studio vs. Power Virtual Agents: What’s Changed?'
 author: Dellenny
@@ -27,6 +27,7 @@ tags:
 - Power Virtual Agents
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny explains the transition from Power Virtual Agents to Copilot Studio, highlighting expanded AI features, deployment options, and automation capabilities that benefit both existing and new users.<!--excerpt_end-->
 

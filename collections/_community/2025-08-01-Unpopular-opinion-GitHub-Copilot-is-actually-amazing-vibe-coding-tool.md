@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mf49un/unpopular_opinion_github_copilot_is_actually/
 title: Unpopular opinion == GitHub Copilot is actually amazing vibe coding tool
 author: EasyProtectedHelp
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 EasyProtectedHelp explores a range of AI code generation tools, focusing on why GitHub Copilot excels in their developer workflow. The article outlines practical, step-by-step experiences with Copilot, Claude, and GPT-4.1 for planning, coding, and deploying real-world applications.<!--excerpt_end-->
 

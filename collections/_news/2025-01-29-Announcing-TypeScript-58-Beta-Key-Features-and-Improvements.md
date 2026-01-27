@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-beta/
 title: 'Announcing TypeScript 5.8 Beta: Key Features and Improvements'
 author: Daniel Rosenwasser
@@ -23,6 +23,7 @@ tags:
 - TypeScript 5.8
 section_names:
 - coding
+primary_section: coding
 ---
 Daniel Rosenwasser and the TypeScript Team unveil TypeScript 5.8 Beta, outlining key new features for developers, including advanced typing improvements and module interoperability.<!--excerpt_end-->
 

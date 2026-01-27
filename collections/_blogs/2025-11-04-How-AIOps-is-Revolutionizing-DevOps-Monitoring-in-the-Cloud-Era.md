@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/how-aiops-is-revolutionizing-devops-monitoring-in-the-cloud-era/
 title: How AIOps is Revolutionizing DevOps Monitoring in the Cloud Era
 author: Joydip Kanjilal
@@ -35,6 +35,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Joydip Kanjilal examines the impact of AIOps on DevOps monitoring, highlighting how AI, automation, and predictive analytics enable proactive and efficient management of modern cloud environments.<!--excerpt_end-->
 

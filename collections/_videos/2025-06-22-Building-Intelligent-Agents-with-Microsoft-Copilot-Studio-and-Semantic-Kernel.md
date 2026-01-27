@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=qXIVJ_ZLiIY
 title: Building Intelligent Agents with Microsoft Copilot Studio and Semantic Kernel
 author: Learn Microsoft AI
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Learn Microsoft AI demonstrates how to build and connect intelligent agents using Microsoft Copilot Studio and Semantic Kernel, offering practical demos and hands-on strategies.<!--excerpt_end-->
 

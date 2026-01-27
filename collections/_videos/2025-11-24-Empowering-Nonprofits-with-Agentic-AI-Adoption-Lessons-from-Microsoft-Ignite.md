@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=aosIvPgLug4
 title: 'Empowering Nonprofits with Agentic AI: Adoption Lessons from Microsoft Ignite'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Unifyyourdataplatform
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents insights from early nonprofit adopters of agentic AI at Ignite, featuring Morteza Ghazai. The session covers practical strategies and real-world challenges in AI-driven operations.<!--excerpt_end-->
 

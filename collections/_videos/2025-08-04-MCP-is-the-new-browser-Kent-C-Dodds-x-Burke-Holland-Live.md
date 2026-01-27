@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=zAM18jguoWM
 title: '"MCP is the new browser?" — Kent C. Dodds x Burke Holland, Live'
 author: Visual Studio Code
@@ -24,6 +24,7 @@ tags:
 - Web Browser Analogy
 section_names:
 - ai
+primary_section: ai
 ---
 Visual Studio Code's channel hosts Kent C. Dodds and Burke Holland for a candid conversation about the Model Context Protocol (MCP) and its potential to redefine how developers interact with AI tools.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-powered-performance-testing/ba-p/4471029
 title: AI-Powered Innovations in Azure Load Testing
 author: Nikita_Nallamothu
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Nikita_Nallamothu details how Azure Load Testing now uses AI to automate load test scripting and provide actionable analysis, changing how engineers approach performance testing.<!--excerpt_end-->
 

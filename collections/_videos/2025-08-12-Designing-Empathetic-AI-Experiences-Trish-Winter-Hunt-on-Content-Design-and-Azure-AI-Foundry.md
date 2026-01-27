@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=NnltG78qREE
 title: 'Designing Empathetic AI Experiences: Trish Winter-Hunt on Content Design and Azure AI Foundry'
 author: Microsoft Developer
@@ -32,6 +32,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Trish Winter-Hunt, Product Design Manager at Microsoft, joins John Maeda's Cozy AI Kitchen to share her expertise on empathetic content design and grounding AI agents using Azure AI Foundry.<!--excerpt_end-->
 

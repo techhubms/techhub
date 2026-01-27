@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/microsoft-databases-and-microsoft-fabric-your-unified-and-ai-powered-data-estate/
 title: 'Announcing Next-Gen Microsoft Databases and Fabric: Unified, AI-Ready Data Estate'
 author: Arun Ulagaratchagan
@@ -34,6 +34,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 Arun Ulagaratchagan introduces Microsoft’s unified, AI-powered data estate: SQL Server 2025, Azure DocumentDB, Azure HorizonDB, and Fabric Databases. This comprehensive update enables developers to build, secure, and modernize data-driven applications at scale using Microsoft Fabric.<!--excerpt_end-->
 

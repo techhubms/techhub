@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/streamlining-your-git-workflow-with-visual-studio-2026/
 title: Streamlining Your Git Workflow with Visual Studio 2026
 author: Mads Kristensen
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Mads Kristensen walks .NET developers through a productive morning with Visual Studio 2026, showcasing streamlined Git workflows and AI-powered reviews for improved code quality.<!--excerpt_end-->
 

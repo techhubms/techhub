@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=LD0Emp7Gr40
 title: Blueprint for Intelligent AI Agents with PostgreSQL and Azure Integration
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - azure
 - github-copilot
 - ml
+primary_section: github-copilot
 ---
 In this Ignite 2025 session, Microsoft Events presents insights on building AI agents powered by PostgreSQL on Azure. Speakers Sharon Chen, Maxim Lukiyanov, and Abe Omorogbe demonstrate advanced AI integrations, knowledge graphs, and live GitHub Copilot database performance fixes.<!--excerpt_end-->
 

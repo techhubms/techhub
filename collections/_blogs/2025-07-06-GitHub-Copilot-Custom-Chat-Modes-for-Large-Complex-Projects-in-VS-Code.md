@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://harrybin.de/posts/github-copilot-custom-chat-modes/
 title: GitHub Copilot Custom Chat Modes for Large, Complex Projects in VS Code
 author: Harald Binkle
@@ -21,6 +21,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, Harald Binkle details how custom chat modes for GitHub Copilot in VS Code can improve productivity and collaboration in large projects by tailoring AI behavior and tools to specific workflows.<!--excerpt_end-->
 

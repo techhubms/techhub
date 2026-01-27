@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/reinventing-legacy-app-modernization-crowdbotics-ai-native-platform-on-azure/
 title: Reinventing Legacy App Modernization with Crowdbotics’ AI-Native Platform on Azure
 author: Govind Kamtamneni
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this article, Charath Ranganathan, CTO of Crowdbotics, presents an AI-native approach to legacy application modernization built on Microsoft Azure, illustrating how AI-driven analysis and automation can transform enterprise modernization projects.<!--excerpt_end-->
 

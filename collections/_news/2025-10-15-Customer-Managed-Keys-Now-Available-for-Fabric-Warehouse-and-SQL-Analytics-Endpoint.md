@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/bringing-customer-managed-keys-to-fabric-warehouse-and-sql-analytics-endpoint/
 title: Customer-Managed Keys Now Available for Fabric Warehouse and SQL Analytics Endpoint
 author: Microsoft Fabric Blog
@@ -19,6 +19,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Fabric Blog details the introduction of Customer-Managed Keys for Fabric Warehouse and SQL Analytics Endpoint, empowering organizations to enhance security and compliance through Azure Key Vault integration.<!--excerpt_end-->
 

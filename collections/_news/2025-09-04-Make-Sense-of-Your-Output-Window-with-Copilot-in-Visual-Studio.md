@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/make-sense-of-your-output-window-with-copilot/
 title: Make Sense of Your Output Window with Copilot in Visual Studio
 author: Jessie Houghton
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Jessie Houghton showcases how GitHub Copilot's new Output Window context in Visual Studio allows developers to interact with build and debug logs, improving troubleshooting and workflow efficiency.<!--excerpt_end-->
 

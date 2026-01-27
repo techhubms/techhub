@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 grace_kim details new Azure File Sync capabilities, focusing on Azure Arc integration, regional expansion, and secure onboarding with managed identities—key for IT and DevOps teams modernizing enterprise file services.<!--excerpt_end-->
 

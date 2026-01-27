@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-to-level-up-your-code-reviews-and-pull-requests/
 title: How to Use GitHub Copilot to Level Up Your Code Reviews and Pull Requests
 author: Melissa Pastore
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Melissa Pastore walks through hands-on methods for using GitHub Copilot to streamline code reviews and pull requests, offering actionable workflow tips and Copilot prompt examples based on her engineering experience at GitHub.<!--excerpt_end-->
 

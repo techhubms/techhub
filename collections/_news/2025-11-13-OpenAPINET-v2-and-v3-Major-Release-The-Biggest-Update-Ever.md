@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/openapi/openapi-net-release-announcements/
 title: 'OpenAPI.NET v2 & v3 Major Release: The Biggest Update Ever'
 author: Darrel Miller, Rachit Kumar Malik
@@ -23,6 +23,7 @@ tags:
 - System.Text.Json
 section_names:
 - coding
+primary_section: coding
 ---
 Darrel Miller and Rachit Kumar Malik announce the largest update ever to OpenAPI.NET, bringing major performance, compatibility, and feature enhancements to help .NET developers keep pace with modern API standards.<!--excerpt_end-->
 

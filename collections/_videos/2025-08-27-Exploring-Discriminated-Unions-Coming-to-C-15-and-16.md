@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=tD46WVJ2h9I
 title: Exploring Discriminated Unions Coming to C# 15 and 16
 author: Nick Chapsas
@@ -19,6 +19,7 @@ tags:
 - Union Types
 section_names:
 - coding
+primary_section: coding
 ---
 Nick Chapsas introduces Discriminated Unions in C# 15 and 16, explaining what these new features mean for .NET developers and how they promise to expand the language.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-forum-2026-updates/ba-p/4476227
 title: 'Azure Arc Server Forum: 2026 Schedule and Participation Updates'
 author: Aurnov_Chattopadhyay
@@ -20,6 +20,7 @@ tags:
 - Windows Server
 section_names:
 - azure
+primary_section: azure
 ---
 Aurnov_Chattopadhyay announces the 2026 updates for the Azure Arc Server Forum, detailing the event schedule, topics covered, and ways for practitioners to engage with the Azure Arc community.<!--excerpt_end-->
 

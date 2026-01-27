@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-14-auto-model-selection-for-copilot-in-vs-code-in-public-preview
 title: Auto Model Selection for GitHub Copilot in VS Code Public Preview
 author: Allison
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison outlines the new Auto model selection capability in GitHub Copilot for Visual Studio Code, detailing how it streamlines model choice, offers premium request discounts to Pro users, and gives developers more flexibility and control.<!--excerpt_end-->
 

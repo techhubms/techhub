@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Rcjcf6HkrD8
 title: Adding Tracing to an Agent with AI Toolkit and GitHub Copilot
 author: Microsoft Developer
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer, with April as presenter, walks through adding tracing to an agent using AI Toolkit and GitHub Copilot, making agent processing steps visible for developers.<!--excerpt_end-->
 

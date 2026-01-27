@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/2025/11/25/microsoft-expands-ai-infrastructure-and-cloud-services-in-indonesia-empowering-more-organizations-to-innovate-locally/
 title: Microsoft Expands AI and Cloud Services in Indonesia Central Region
 author: stclarke
@@ -31,6 +31,7 @@ section_names:
 - azure
 - github-copilot
 - ml
+primary_section: github-copilot
 ---
 stclarke reports on Microsoft’s latest AI and cloud expansion in Indonesia, detailing new Azure-powered services, customer success stories, and ongoing developer skilling with GitHub Copilot and Fabric.<!--excerpt_end-->
 

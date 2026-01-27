@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mfyig0/spotifylikebutton/
 title: 'SpotifyLikeButton: Global Hotkey Utility to Like/Unlike Songs on Spotify'
 author: BuildBazaar
@@ -17,6 +17,7 @@ tags:
 - Windows
 section_names:
 - coding
+primary_section: coding
 ---
 BuildBazaar introduces SpotifyLikeButton, a C# tool that lets users like or unlike Spotify songs with global hotkeys. Explore how it works, its technical details, and alternative Linux scripts.<!--excerpt_end-->
 

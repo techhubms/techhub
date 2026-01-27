@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/architecture-decision-records-adrs-a-lightweight-governance-model-for-software-architecture/
 title: 'Architecture Decision Records (ADRs): A Lightweight Governance Model for Modern Teams'
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 - Version Control
 section_names:
 - devops
+primary_section: devops
 ---
 Dellenny presents a practical overview of Architectural Decision Records (ADRs) as a lightweight governance model, guiding modern software teams in documenting architectural choices without sacrificing agility.<!--excerpt_end-->
 

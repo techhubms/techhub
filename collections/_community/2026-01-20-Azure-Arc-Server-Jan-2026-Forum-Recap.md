@@ -21,6 +21,7 @@ tags:
 - Windows Server Hot Patch
 section_names:
 - azure
+primary_section: azure
 ---
 Aurnov_Chattopadhyay presents a summary of the January 2026 Azure Arc Server Forum, highlighting key Azure Arc product updates, community resources, and the latest announcements for server and hybrid infrastructures.<!--excerpt_end-->
 

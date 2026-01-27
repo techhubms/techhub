@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_strengthening-nucleic-acid-biosecurity-screening-activity-7379576230414753792-zB85
 title: Microsoft-Led Study Unveils AI Protein Design Biosecurity Research in Science Magazine
 author: stclarke
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 stclarke summarizes a major Science Magazine publication led by Microsoft scientists, exploring how AI-driven protein design can be misused and proposing new security mitigations for safeguarding biosecurity.<!--excerpt_end-->
 

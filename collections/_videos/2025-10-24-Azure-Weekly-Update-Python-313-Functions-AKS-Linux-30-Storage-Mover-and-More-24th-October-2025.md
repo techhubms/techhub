@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=I2wFjDrZAPo
 title: 'Azure Weekly Update: Python 3.13 Functions, AKS Linux 3.0, Storage Mover, and More (24th October 2025)'
 author: John Savill's Technical Training
@@ -28,6 +28,7 @@ tags:
 - VM Vcore
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill's Technical Training shares the latest Azure announcements and updates for October 2025, highlighting new features and enhancements across Azure Functions, AKS, Storage, and data services.<!--excerpt_end-->
 

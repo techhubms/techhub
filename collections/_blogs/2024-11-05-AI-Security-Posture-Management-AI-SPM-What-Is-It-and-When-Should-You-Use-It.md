@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://zure.com/blog/ai-security-posture-management-what-it-is/
 title: 'AI Security Posture Management (AI-SPM): What Is It and When Should You Use It?'
 author: Kim Grönberg
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 In this post, Kim Grönberg discusses the fundamentals of AI Security Posture Management (AI-SPM), how it compares with traditional CSPM solutions, its use cases, and why organizations should consider adopting it, especially as Microsoft prepares to release AI-SPM features.<!--excerpt_end-->
 

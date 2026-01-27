@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=y43sgs-Y8-U
 title: Freeform Tool Calling with GPT-5 in Azure AI Foundry
 author: Microsoft Developer
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 April from Microsoft Developer demonstrates how to use freeform tool calling with GPT-5 in Azure AI Foundry, showing a seamless workflow from natural language to code, data artifacts, and visualization.<!--excerpt_end-->
 

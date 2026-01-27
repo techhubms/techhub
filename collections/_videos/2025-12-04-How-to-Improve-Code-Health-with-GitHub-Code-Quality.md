@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dlgYCpQI_lU
 title: How to Improve Code Health with GitHub Code Quality
 author: GitHub
@@ -19,6 +19,7 @@ tags:
 - Technical Debt
 section_names:
 - devops
+primary_section: devops
 ---
 GitHub presents an overview of the Code Quality feature, highlighting how developers can utilize actionable insights and automation to maintain and improve their repository health.<!--excerpt_end-->
 

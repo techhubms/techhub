@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-test-with-mtp/
 title: Enhance your CLI testing workflow with the new dotnet test
 author: Mariam Abdullah
@@ -26,6 +26,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Mariam Abdullah introduces the new features of dotnet test in .NET 10, highlighting Microsoft.Testing.Platform (MTP) integration for faster performance and improved CLI diagnostics.<!--excerpt_end-->
 

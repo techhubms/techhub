@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ek-xc4PyCxo
 title: 'AI Security Innovations in Edge for Business: Microsoft Ignite BRK336 Recap'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events features Lindsay Kubasik and Sean Lyndersay as they discuss Edge for Business, focusing on AI-powered productivity and enterprise-grade security innovations from Ignite 2025.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=HhtEAfo3cb4
 title: Accelerate Data and AI Transformation with Azure Databricks
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events feature William Hendry, Miranda Luna, and Anavi Nahar presenting Azure Databricks as the backbone for unified data and AI analytics, with deep integration into the Microsoft ecosystem.<!--excerpt_end-->
 

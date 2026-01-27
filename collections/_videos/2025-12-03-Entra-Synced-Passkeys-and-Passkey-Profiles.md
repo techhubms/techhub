@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=e0FPn-gJeO4
 title: Entra Synced Passkeys and Passkey Profiles
 author: John Savill's Technical Training
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 John Savill's Technical Training presents a practical guide to managing synced passkeys and passkey profiles in Microsoft Entra ID, focusing on identity protection and Azure integration.<!--excerpt_end-->
 

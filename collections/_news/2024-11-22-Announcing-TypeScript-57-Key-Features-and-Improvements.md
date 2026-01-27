@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7/
 title: 'Announcing TypeScript 5.7: Key Features and Improvements'
 author: Daniel Rosenwasser
@@ -24,6 +24,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 Daniel Rosenwasser announces the release of TypeScript 5.7, detailing key upgrades for developers. This update offers improved checks, modern JavaScript support, and faster editor experiences.<!--excerpt_end-->
 

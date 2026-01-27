@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ZtHjLHwgy68
 title: No-code Modernization for ASP.NET with Managed Instance on Azure App Service
 author: dotnet
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 Presented by dotnet, this session explores how to modernize ASP.NET applications with Managed Instance on Azure App Service, highlighting best practices for seamless migration and integration.<!--excerpt_end-->
 

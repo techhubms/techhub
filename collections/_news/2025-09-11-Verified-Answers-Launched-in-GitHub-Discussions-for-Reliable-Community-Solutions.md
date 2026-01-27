@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-11-verified-answers-generally-available-in-github-discussions
 title: Verified Answers Launched in GitHub Discussions for Reliable Community Solutions
 author: Allison
@@ -20,6 +20,7 @@ tags:
 - Verified Answers
 section_names:
 - devops
+primary_section: devops
 ---
 Allison explores the new 'Verified Answers' feature in GitHub Discussions, showing how repository administrators can highlight accurate, high-value solutions for their communities.<!--excerpt_end-->
 

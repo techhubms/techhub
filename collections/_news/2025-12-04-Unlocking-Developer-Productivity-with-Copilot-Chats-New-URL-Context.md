@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/unlocking-the-power-of-web-with-copilot-chats-new-url-context/
 title: Unlocking Developer Productivity with Copilot Chat’s New URL Context
 author: Jessie Houghton
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Jessie Houghton explores the new URL context feature in GitHub Copilot Chat, showing how Visual Studio developers can leverage real-time web information for better coding support.<!--excerpt_end-->
 

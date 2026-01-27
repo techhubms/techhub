@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/comparing-copilot-studio-with-dialogflow-and-ibm-watson-assistant-which-conversational-ai-platform-is-best-in-2025/
 title: 'Comparing Copilot Studio, Dialogflow, and IBM Watson Assistant: 2025 Conversational AI Platforms'
 author: John Edward
@@ -27,6 +27,7 @@ tags:
 - Virtual Agents
 section_names:
 - ai
+primary_section: ai
 ---
 John Edward offers a thorough, unbiased comparison of Copilot Studio, Dialogflow, and IBM Watson Assistant, explaining which conversational AI platform may be best suited to your organization's needs in 2025.<!--excerpt_end-->
 

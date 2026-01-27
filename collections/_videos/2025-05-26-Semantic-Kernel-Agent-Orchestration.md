@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=3ZEjxKwaKjQ
 title: Semantic Kernel Agent Orchestration
 author: Learn Microsoft AI
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Learn Microsoft AI presents a video on building multi-agent systems through Semantic Kernel, demonstrating how agent orchestration leads to smarter, more adaptive AI solutions.<!--excerpt_end-->
 

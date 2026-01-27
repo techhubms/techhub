@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=pZenafOYtfI
 title: 'VS Code Live at GitHub Universe: Live Coding with Copilot'
 author: Visual Studio Code
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code presents a live session from GitHub Universe featuring live coding demonstrations alongside GitHub Copilot, highlighting contributions from both the VS Code and GitHub teams.<!--excerpt_end-->
 

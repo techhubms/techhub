@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using TechHub.Core.DTOs;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Models;
 
 namespace TechHub.Api.Endpoints;
 
@@ -24,14 +24,14 @@ internal static class ContentEndpoints
             .WithName("GetContent")
             .WithSummary("Get content by section and collection")
             .WithDescription("Get all content items for a specific section and collection. Example: /api/content?sectionName=AI&collectionName=news")
-            .Produces<IEnumerable<ContentItemDto>>(StatusCodes.Status200OK);
+            .Produces<IEnumerable<ContentItem>>(StatusCodes.Status200OK);
 
         // Get individual content detail
         group.MapGet("/{sectionName}/{collectionName}/{slug}", GetContentDetail)
             .WithName("GetContentDetail")
             .WithSummary("Get content detail")
             .WithDescription("Get detailed content item by section name, collection name, and content slug")
-            .Produces<ContentItemDetailDto>(StatusCodes.Status200OK)
+            .Produces<ContentItem>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
         // Advanced filtering endpoint
@@ -39,7 +39,7 @@ internal static class ContentEndpoints
             .WithName("FilterContent")
             .WithSummary("Advanced content filtering")
             .WithDescription("Filter content by multiple criteria: sections, collections, tags, search query. Example: /api/content/filter?sections=ai,ml&collections=news,blogs&tags=copilot,azure")
-            .Produces<IEnumerable<ContentItemDto>>(StatusCodes.Status200OK);
+            .Produces<IEnumerable<ContentItem>>(StatusCodes.Status200OK);
 
         return endpoints;
     }
@@ -47,7 +47,7 @@ internal static class ContentEndpoints
     /// <summary>
     /// GET /api/content?sectionName={sectionName}&amp;collectionName={collectionName} - Get content by section and collection
     /// </summary>
-    private static async Task<Ok<IEnumerable<ContentItemDto>>> GetContent(
+    private static async Task<Ok<IEnumerable<ContentItem>>> GetContent(
         [FromQuery] string? sectionName,
         [FromQuery] string? collectionName,
         [FromQuery] bool? ghcFeature,
@@ -66,7 +66,7 @@ internal static class ContentEndpoints
             // Both filters: get by section and filter by collection
             var sectionContent = await contentRepository.GetBySectionAsync(sectionName, includeDraft, cancellationToken);
             content = [.. sectionContent.Where(c => c.CollectionName.Equals(collectionName, StringComparison.OrdinalIgnoreCase))];
-            
+
             // Filter by ghc_feature if specified
             if (ghcFeature.HasValue)
             {
@@ -77,7 +77,7 @@ internal static class ContentEndpoints
         {
             // Section filter only
             content = await contentRepository.GetBySectionAsync(sectionName, includeDraft, cancellationToken);
-            
+
             // Filter by ghc_feature if specified
             if (ghcFeature.HasValue)
             {
@@ -88,7 +88,7 @@ internal static class ContentEndpoints
         {
             // Collection only - include drafts if requesting ghc features
             content = await contentRepository.GetByCollectionAsync(collectionName, includeDraft, cancellationToken);
-            
+
             // Filter by ghc_feature if specified
             if (ghcFeature.HasValue)
             {
@@ -99,7 +99,7 @@ internal static class ContentEndpoints
         {
             // No filters: get all content (exclude drafts unless ghcFeature=true)
             content = await contentRepository.GetAllAsync(includeDraft, cancellationToken);
-            
+
             // Filter by ghc_feature if specified
             if (ghcFeature.HasValue)
             {
@@ -107,20 +107,18 @@ internal static class ContentEndpoints
             }
         }
 
-        var contentDtos = content.Select(MapToDto);
-        return TypedResults.Ok(contentDtos);
+        return TypedResults.Ok(content.AsEnumerable());
     }
 
     /// <summary>
     /// GET /api/content/{sectionName}/{collectionName}/{slug} - Get individual content detail
     /// </summary>
-    private static async Task<Results<Ok<ContentItemDetailDto>, NotFound>> GetContentDetail(
+    private static async Task<Results<Ok<ContentItem>, NotFound>> GetContentDetail(
         string sectionName,
         string collectionName,
         string slug,
         ISectionRepository sectionRepository,
         IContentRepository contentRepository,
-        IMarkdownService markdownService,
         CancellationToken cancellationToken)
     {
         // Get the section data
@@ -150,25 +148,8 @@ internal static class ContentEndpoints
             return TypedResults.NotFound();
         }
 
-        // Convert to detail DTO with full content HTML
-        var detailDto = new ContentItemDetailDto
-        {
-            Slug = item.Slug,
-            Title = item.Title,
-            Author = item.Author,
-            DateEpoch = item.DateEpoch,
-            DateIso = item.DateIso,
-            CollectionName = item.CollectionName,
-            SectionNames = item.SectionNames,
-            PrimarySectionName = Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName),
-            Tags = item.Tags,
-            Excerpt = item.Excerpt,
-            RenderedHtml = item.RenderedHtml,
-            ExternalUrl = item.ExternalUrl,
-            Url = $"/{sectionName}/{collectionName}/{slug}"
-        };
-
-        return TypedResults.Ok(detailDto);
+        // Return the content item directly - repository already populates all fields including Url
+        return TypedResults.Ok(item);
     }
 
     /// <summary>
@@ -184,7 +165,7 @@ internal static class ContentEndpoints
     /// 2. Using a search index (e.g., Azure Cognitive Search, Elasticsearch) for text search
     /// 3. Implementing pagination for large result sets
     /// </remarks>
-    private static async Task<Ok<IEnumerable<ContentItemDto>>> FilterContent(
+    private static async Task<Ok<IEnumerable<ContentItem>>> FilterContent(
         [FromQuery] string? sections,
         [FromQuery] string? collections,
         [FromQuery] string? tags,
@@ -229,37 +210,6 @@ internal static class ContentEndpoints
                 c.Tags.Any(tag => tag.Contains(query, StringComparison.OrdinalIgnoreCase)));
         }
 
-        var contentDtos = results.Select(MapToDto);
-        return TypedResults.Ok(contentDtos);
-    }
-
-    /// <summary>
-    /// Map ContentItem entity to ContentItemDto
-    /// </summary>
-    private static ContentItemDto MapToDto(Core.Models.ContentItem item)
-    {
-        var primarySectionUrl = Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.SectionNames, item.CollectionName);
-
-        return new ContentItemDto
-        {
-            Slug = item.Slug,
-            Title = item.Title,
-            Author = item.Author,
-            DateEpoch = item.DateEpoch,
-            DateIso = item.DateIso,
-            CollectionName = item.CollectionName,
-            SubcollectionName = item.SubcollectionName,
-            FeedName = item.FeedName,
-            SectionNames = item.SectionNames,
-            PrimarySectionName = Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName),
-            Tags = item.Tags,
-            Plans = item.Plans,
-            GhesSupport = item.GhesSupport,
-            Draft = item.Draft,
-            GhcFeature = item.GhcFeature,
-            Excerpt = item.Excerpt,
-            ExternalUrl = item.ExternalUrl,
-            Url = $"/{primarySectionUrl.ToLowerInvariant()}/{item.CollectionName.ToLowerInvariant()}/{item.Slug.ToLowerInvariant()}"
-        };
+        return TypedResults.Ok(results);
     }
 }

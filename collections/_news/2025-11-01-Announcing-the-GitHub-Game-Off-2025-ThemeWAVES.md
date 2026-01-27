@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/company/github-game-off-2025-theme-announcement/
 title: 'Announcing the GitHub Game Off 2025: Theme—WAVES'
 author: Lee Reilly
@@ -27,6 +27,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Lee Reilly announces the theme WAVES for the GitHub Game Off 2025, outlining how developers can join, create games, and celebrate creativity with the global GitHub community.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FKanhfIwK-0
 title: You open sourced WSL. What does that mean?
 author: Microsoft Developer
@@ -17,6 +17,7 @@ tags:
 - WSL
 section_names:
 - coding
+primary_section: coding
 ---
 Presented by Craig Loewen from Microsoft Developer, this video discusses the open sourcing of WSL and what developers can explore and build with the newly available code.<!--excerpt_end-->
 

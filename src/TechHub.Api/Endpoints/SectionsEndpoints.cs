@@ -1,7 +1,4 @@
 using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.Extensions.Options;
-using TechHub.Core.Configuration;
-using TechHub.Core.DTOs;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 
@@ -26,13 +23,13 @@ internal static class SectionsEndpoints
             .WithName("GetAllSections")
             .WithSummary("Get all sections")
             .WithDescription("Returns all sections with their collections and metadata")
-            .Produces<IEnumerable<SectionDto>>(StatusCodes.Status200OK);
+            .Produces<IEnumerable<Section>>(StatusCodes.Status200OK);
 
         group.MapGet("/{sectionName}", GetSectionByName)
             .WithName("GetSectionByName")
             .WithSummary("Get section by name")
             .WithDescription("Returns a single section with its collections and metadata")
-            .Produces<SectionDto>(StatusCodes.Status200OK)
+            .Produces<Section>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
         // Nested: items in a section
@@ -40,7 +37,7 @@ internal static class SectionsEndpoints
             .WithName("GetSectionItems")
             .WithSummary("Get all items in a section")
             .WithDescription("Returns all content items from all collections in this section")
-            .Produces<IEnumerable<ContentItemDto>>(StatusCodes.Status200OK)
+            .Produces<IEnumerable<ContentItem>>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
         // Nested: collections in a section
@@ -48,7 +45,7 @@ internal static class SectionsEndpoints
             .WithName("GetSectionCollections")
             .WithSummary("Get all collections in a section")
             .WithDescription("Returns all collection references for this section")
-            .Produces<IEnumerable<CollectionReferenceDto>>(StatusCodes.Status200OK)
+            .Produces<IEnumerable<Collection>>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
         // Nested: specific collection in a section
@@ -56,7 +53,7 @@ internal static class SectionsEndpoints
             .WithName("GetSectionCollection")
             .WithSummary("Get collection details")
             .WithDescription("Returns details of a specific collection within this section")
-            .Produces<CollectionReferenceDto>(StatusCodes.Status200OK)
+            .Produces<Collection>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
         // Nested: items in a specific collection within a section
@@ -64,7 +61,7 @@ internal static class SectionsEndpoints
             .WithName("GetSectionCollectionItems")
             .WithSummary("Get items in a collection within a section")
             .WithDescription("Returns all content items from a specific collection in this section")
-            .Produces<IEnumerable<ContentItemDto>>(StatusCodes.Status200OK)
+            .Produces<IEnumerable<ContentItem>>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
         return endpoints;
@@ -73,33 +70,20 @@ internal static class SectionsEndpoints
     /// <summary>
     /// GET /api/sections - Get all sections
     /// </summary>
-    private static async Task<Ok<IEnumerable<SectionDto>>> GetAllSections(
+    private static async Task<Ok<IEnumerable<Section>>> GetAllSections(
         ISectionRepository sectionRepository,
-        IOptions<AppSettings> appSettings,
         CancellationToken cancellationToken)
     {
         var sections = await sectionRepository.GetAllAsync(cancellationToken);
-        var displayNames = appSettings.Value.Content.CollectionDisplayNames;
-
-        var sectionDtos = sections.Select(s => new SectionDto
-        {
-            Name = s.Name,
-            Title = s.Title,
-            Description = s.Description,
-            Url = s.Url,
-            Collections = [.. s.Collections.Select(c => MapCollectionToDto(c, displayNames))]
-        });
-
-        return TypedResults.Ok(sectionDtos);
+        return TypedResults.Ok(sections.AsEnumerable());
     }
 
     /// <summary>
     /// GET /api/sections/{sectionName} - Get section by name
     /// </summary>
-    private static async Task<Results<Ok<SectionDto>, NotFound>> GetSectionByName(
+    private static async Task<Results<Ok<Section>, NotFound>> GetSectionByName(
         string sectionName,
         ISectionRepository sectionRepository,
-        IOptions<AppSettings> appSettings,
         CancellationToken cancellationToken)
     {
         var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
@@ -109,23 +93,13 @@ internal static class SectionsEndpoints
             return TypedResults.NotFound();
         }
 
-        var displayNames = appSettings.Value.Content.CollectionDisplayNames;
-        var sectionDto = new SectionDto
-        {
-            Name = section.Name,
-            Title = section.Title,
-            Description = section.Description,
-            Url = section.Url,
-            Collections = [.. section.Collections.Select(c => MapCollectionToDto(c, displayNames))]
-        };
-
-        return TypedResults.Ok(sectionDto);
+        return TypedResults.Ok(section);
     }
 
     /// <summary>
     /// GET /api/sections/{sectionName}/items - Get all items in a section
     /// </summary>
-    private static async Task<Results<Ok<IEnumerable<ContentItemDto>>, NotFound>> GetSectionItems(
+    private static async Task<Results<Ok<IEnumerable<ContentItem>>, NotFound>> GetSectionItems(
         string sectionName,
         ISectionRepository sectionRepository,
         IContentRepository contentRepository,
@@ -141,18 +115,16 @@ internal static class SectionsEndpoints
         // Get all content for this section (filter by section.Name which matches ContentItem.SectionNames)
         // Exclude drafts from section content listings
         var content = await contentRepository.GetBySectionAsync(section.Name, includeDraft: false, cancellationToken);
-        var contentDtos = content.Select(MapContentToDto);
 
-        return TypedResults.Ok(contentDtos);
+        return TypedResults.Ok(content.AsEnumerable());
     }
 
     /// <summary>
     /// GET /api/sections/{sectionName}/collections - Get all collections in a section
     /// </summary>
-    private static async Task<Results<Ok<IEnumerable<CollectionReferenceDto>>, NotFound>> GetSectionCollections(
+    private static async Task<Results<Ok<IEnumerable<Collection>>, NotFound>> GetSectionCollections(
         string sectionName,
         ISectionRepository sectionRepository,
-        IOptions<AppSettings> appSettings,
         CancellationToken cancellationToken)
     {
         var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
@@ -162,20 +134,16 @@ internal static class SectionsEndpoints
             return TypedResults.NotFound();
         }
 
-        var displayNames = appSettings.Value.Content.CollectionDisplayNames;
-        var collectionDtos = section.Collections.Select(c => MapCollectionToDto(c, displayNames));
-
-        return TypedResults.Ok(collectionDtos);
+        return TypedResults.Ok(section.Collections.AsEnumerable());
     }
 
     /// <summary>
     /// GET /api/sections/{sectionName}/collections/{collectionName} - Get collection details
     /// </summary>
-    private static async Task<Results<Ok<CollectionReferenceDto>, NotFound>> GetSectionCollection(
+    private static async Task<Results<Ok<Collection>, NotFound>> GetSectionCollection(
         string sectionName,
         string collectionName,
         ISectionRepository sectionRepository,
-        IOptions<AppSettings> appSettings,
         CancellationToken cancellationToken)
     {
         var section = await sectionRepository.GetByNameAsync(sectionName, cancellationToken);
@@ -193,16 +161,13 @@ internal static class SectionsEndpoints
             return TypedResults.NotFound();
         }
 
-        var displayNames = appSettings.Value.Content.CollectionDisplayNames;
-        var collectionDto = MapCollectionToDto(collection, displayNames);
-
-        return TypedResults.Ok(collectionDto);
+        return TypedResults.Ok(collection);
     }
 
     /// <summary>
     /// GET /api/sections/{sectionName}/collections/{collectionName}/items - Get items in a collection within a section
     /// </summary>
-    private static async Task<Results<Ok<IEnumerable<ContentItemDto>>, NotFound>> GetSectionCollectionItems(
+    private static async Task<Results<Ok<IEnumerable<ContentItem>>, NotFound>> GetSectionCollectionItems(
         string sectionName,
         string collectionName,
         ISectionRepository sectionRepository,
@@ -228,58 +193,8 @@ internal static class SectionsEndpoints
         // Get content filtered by both section and collection (exclude drafts)
         var allContent = await contentRepository.GetByCollectionAsync(collectionName, includeDraft: false, cancellationToken);
         var sectionContent = allContent
-            .Where(c => c.SectionNames.Contains(section.Name, StringComparer.OrdinalIgnoreCase))
-            .Select(MapContentToDto);
+            .Where(c => c.SectionNames.Contains(section.Name, StringComparer.OrdinalIgnoreCase));
 
         return TypedResults.Ok(sectionContent);
-    }
-
-    /// <summary>
-    /// Map ContentItem entity to ContentItemDto
-    /// </summary>
-    private static ContentItemDto MapContentToDto(Core.Models.ContentItem item)
-    {
-        var primarySectionUrl = Core.Helpers.SectionPriorityHelper.GetPrimarySectionUrl(item.SectionNames, item.CollectionName);
-
-        return new ContentItemDto
-        {
-            Slug = item.Slug,
-            Title = item.Title,
-            Author = item.Author,
-            DateEpoch = item.DateEpoch,
-            DateIso = item.DateIso,
-            CollectionName = item.CollectionName,
-            SubcollectionName = item.SubcollectionName,
-            FeedName = item.FeedName,
-            SectionNames = item.SectionNames,
-            PrimarySectionName = Core.Helpers.SectionPriorityHelper.GetPrimarySectionName(item.SectionNames, item.CollectionName),
-            Tags = item.Tags,
-            Plans = item.Plans,
-            GhesSupport = item.GhesSupport,
-            Excerpt = item.Excerpt,
-            ExternalUrl = item.ExternalUrl,
-            Url = $"/{primarySectionUrl.ToLowerInvariant()}/{item.CollectionName.ToLowerInvariant()}/{item.Slug.ToLowerInvariant()}"
-        };
-    }
-
-    /// <summary>
-    /// Helper method to map CollectionReference to DTO with display name from configuration
-    /// </summary>
-    private static CollectionReferenceDto MapCollectionToDto(CollectionReference collection, Dictionary<string, string> displayNames)
-    {
-        // Look up display name from configuration, fallback to Title if not found
-        var displayName = displayNames.TryGetValue(collection.Name.ToLowerInvariant(), out var name)
-            ? name
-            : collection.Title;
-
-        return new CollectionReferenceDto
-        {
-            Name = collection.Name,
-            Title = collection.Title,
-            Url = collection.Url,
-            Description = collection.Description,
-            DisplayName = displayName,
-            IsCustom = collection.IsCustom
-        };
     }
 }

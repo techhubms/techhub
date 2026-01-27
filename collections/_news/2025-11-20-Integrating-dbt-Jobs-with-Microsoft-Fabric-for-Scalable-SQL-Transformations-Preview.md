@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/dbt-job-in-microsoft-fabric-ship-trustworthy-sql-models-faster-preview/
 title: Integrating dbt Jobs with Microsoft Fabric for Scalable SQL Transformations (Preview)
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces the preview of dbt Job integration, enabling data engineers to create, orchestrate, and secure SQL-based transformations directly within Fabric's Data Factory.<!--excerpt_end-->
 

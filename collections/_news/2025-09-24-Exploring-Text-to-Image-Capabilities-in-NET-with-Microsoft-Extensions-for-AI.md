@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/explore-text-to-image-dotnet/
 title: Exploring Text-to-Image Capabilities in .NET with Microsoft Extensions for AI
 author: Jeremy Likness
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Jeremy Likness introduces developers to text-to-image features in .NET using Microsoft's AI abstractions, covering practical usage examples and best practices for leveraging MEAI's consistent API approach.<!--excerpt_end-->
 

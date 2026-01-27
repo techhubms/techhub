@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-copilot-helps-build-the-github-platform/
 title: How Copilot Helps Build the GitHub Platform
 author: Matt Nigh
@@ -28,6 +28,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Matt Nigh explores how GitHub Copilot is transforming the GitHub engineering workflow, automating routine coding tasks and supporting developers in delivering robust, secure, and scalable software.<!--excerpt_end-->
 

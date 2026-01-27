@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ol_un2Nam2E
 title: GitHub Copilot Helps One Acre Fund Scale Farming Impact
 author: GitHub
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this video, GitHub shares how One Acre Fund utilizes GitHub Copilot and open source to empower its developers, enhance productivity, and scale its mission to support millions of farmers.<!--excerpt_end-->
 

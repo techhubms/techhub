@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=CdrXTcpTAhI
 title: 'Context Window: Answering 3 Developer Questions to Save on AI Costs'
 author: Microsoft Developer
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer hosts "Context Window," addressing developer questions from the Azure AI Foundry Community about saving costs with Azure AI services.<!--excerpt_end-->
 

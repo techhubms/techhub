@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/mirroring-for-oracle-in-microsoft-fabric-preview/
 title: 'Mirroring Oracle Data into Microsoft Fabric: Real-Time Integration without ETL'
 author: Microsoft Fabric Blog
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog outlines how Mirroring for Oracle empowers enterprises to replicate and integrate Oracle data directly into OneLake for immediate analytics, reporting, and machine learning. This article by the Microsoft Fabric Blog emphasizes configuration details, supported scenarios, and business benefits.<!--excerpt_end-->
 

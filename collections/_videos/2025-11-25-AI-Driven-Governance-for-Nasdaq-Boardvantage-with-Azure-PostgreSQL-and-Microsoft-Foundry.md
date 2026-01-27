@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=23KQPPkRruc
 title: AI-Driven Governance for Nasdaq Boardvantage with Azure PostgreSQL and Microsoft Foundry
 author: Microsoft Events
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 Microsoft Events' presentation at Ignite explores Nasdaq Boardvantage's secure, AI-driven board operations using Azure PostgreSQL, Microsoft Foundry, and modern cloud architecture.<!--excerpt_end-->
 

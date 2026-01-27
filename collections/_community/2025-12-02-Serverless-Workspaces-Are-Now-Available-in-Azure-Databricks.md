@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/serverless-workspaces-are-live-in-azure-databricks/ba-p/4474712
 title: Serverless Workspaces Are Now Available in Azure Databricks
 author: AnaviNahar
@@ -26,6 +26,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 AnaviNahar announces the public preview of Serverless workspaces in Azure Databricks, describing how this feature streamlines setup for analytics and AI projects by automating infrastructure management and governance.<!--excerpt_end-->
 

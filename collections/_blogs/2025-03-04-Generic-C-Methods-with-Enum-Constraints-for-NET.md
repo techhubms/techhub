@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/generic-csharp-methods-with-enum-constraints-for-dotnet
 title: Generic C# Methods with Enum Constraints for .NET
 author: Khalid Abuhakmeh
@@ -17,6 +17,7 @@ tags:
 - Web Applications
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, Khalid Abuhakmeh illustrates how to leverage modern C# features to create type-safe, generic helper methods for extracting enum metadata, offering practical insight for .NET developers.<!--excerpt_end-->
 

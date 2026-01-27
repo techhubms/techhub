@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-staging-for-mirroring-for-google-bigquery-in-microsoft-fabricmirroring-for-gbq-staging-blog/
 title: Announcing Staging for Mirroring for Google BigQuery (Preview)
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces staging support for Mirroring Google BigQuery, explaining how this enhancement boosts replication speed and reliability for data engineers and analytics teams.<!--excerpt_end-->
 

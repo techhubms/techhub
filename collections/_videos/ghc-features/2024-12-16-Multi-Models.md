@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/EzEH3wg6GaI
 title: Multi-Models
 author: Randy Pagels
@@ -13,6 +13,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This video demonstrates GitHub Copilot's Multi-Models feature. Access multiple AI models through Copilot for different tasks.<!--excerpt_end-->
 

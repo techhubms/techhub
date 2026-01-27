@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/transforming-scientific-discovery-with-microsoft-azure-and-nvidia/
 title: Transforming Scientific Discovery with Microsoft Azure and NVIDIA
 author: Omar Khan
@@ -33,6 +33,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Omar Khan details how leading innovators leverage Microsoft Azure and NVIDIA GPU technologies to advance scientific research, healthcare, and digital twin solutions, showing real-world benefits of scalable AI and ML infrastructure.<!--excerpt_end-->
 

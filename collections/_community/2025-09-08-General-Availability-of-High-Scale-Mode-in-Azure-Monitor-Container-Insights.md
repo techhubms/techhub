@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/generally-available-high-scale-mode-in-azure-monitor-container/ba-p/4452199
 title: General Availability of High Scale Mode in Azure Monitor Container Insights
 author: DalanMendonca
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Dalan Mendonca explains the general availability of High Scale mode in Azure Monitor Container Insights, offering new capabilities for AKS cluster log collection at scale.<!--excerpt_end-->
 

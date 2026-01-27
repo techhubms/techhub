@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/exploring-the-future-of-ai-agents-with-microsoft-foundry/ba-p/4476107
 title: Exploring the Future of AI Agents with Microsoft Foundry
 author: Lee_Stott
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Lee_Stott presents a comprehensive overview of agentic AI and how Microsoft Foundry empowers developers to create advanced autonomous agents, including platform features, real-world applications, and step-by-step getting started advice.<!--excerpt_end-->
 

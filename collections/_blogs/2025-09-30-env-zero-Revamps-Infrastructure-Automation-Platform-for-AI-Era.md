@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/env-zero-revamps-infrastructure-automation-platform-for-ai-era/
 title: env zero Revamps Infrastructure Automation Platform for AI Era
 author: Mike Vizard
@@ -30,6 +30,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard examines how env zero has reimagined its Cloud Governance Platform by introducing AI-powered capabilities that enhance automation, compliance, and security for DevOps teams managing infrastructure as code.<!--excerpt_end-->
 

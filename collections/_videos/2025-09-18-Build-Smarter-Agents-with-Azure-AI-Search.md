@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=uU0Fyde1yFo
 title: Build Smarter Agents with Azure AI Search
 author: Microsoft Developer
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this episode, Microsoft Developer's Aaron Stark, with Farzad Sunavala and Lana Teh, discusses the technical fundamentals and business value of Azure AI Search, focusing on Retrieval Augmented Generation and real-world AI app development.<!--excerpt_end-->
 

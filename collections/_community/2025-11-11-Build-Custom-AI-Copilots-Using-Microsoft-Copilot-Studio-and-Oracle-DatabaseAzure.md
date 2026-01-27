@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/build-your-own-custom-copilots-with-microsoft-copilot-studio-and/ba-p/4468211
 title: Build Custom AI Copilots Using Microsoft Copilot Studio and Oracle Database@Azure
 author: RajyaLaxmiYellajosyula
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 RajyaLaxmiYellajosyula guides enterprises through building secure AI copilots with Microsoft Copilot Studio and Oracle Database@Azure, outlining integration steps, governance, and the transformation of enterprise data workflows.<!--excerpt_end-->
 

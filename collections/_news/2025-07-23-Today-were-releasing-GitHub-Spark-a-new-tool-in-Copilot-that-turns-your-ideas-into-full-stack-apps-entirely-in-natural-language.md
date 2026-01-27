@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_today-were-releasing-github-spark-a-new-activity-7353868825320214529-o3C5
 title: Today we're releasing GitHub Spark — a new tool in Copilot that turns your ideas into full-stack apps, entirely in natural language
 author: stclarke
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Authored by stclarke, this article announces the release of GitHub Spark, an innovative addition to Copilot designed to help users build full-stack applications using only natural language. The author reflects on their own experience with the tool and expresses excitement about witnessing the creative projects that users have started building with it.<!--excerpt_end-->
 

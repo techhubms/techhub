@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xWA0xYttWMo
 title: 'Modernizing Legacy: COBOL to Cloud with GitHub Copilot'
 author: GitHub
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Authored by GitHub, this article previews a live demo with Julia Kordick of Microsoft on modernizing legacy COBOL systems using GitHub Copilot and AI-driven tools.<!--excerpt_end-->
 

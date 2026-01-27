@@ -22,6 +22,7 @@ tags:
 - Threat Intelligence
 section_names:
 - security
+primary_section: security
 ---
 Tim Langan, Deputy CISO for Government and Trust at Microsoft, explores strategies for government cyber defense, emphasizing proactive measures, cross-team collaboration, and secure development practices.<!--excerpt_end-->
 

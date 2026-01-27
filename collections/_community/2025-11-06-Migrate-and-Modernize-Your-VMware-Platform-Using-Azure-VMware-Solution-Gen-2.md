@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-modernize-your-vmware-platform-using-azure-vmware/ba-p/4467872
 title: Migrate & Modernize Your VMware Platform Using Azure VMware Solution Gen 2
 author: tredavis
@@ -17,6 +17,7 @@ tags:
 - Workload Migration
 section_names:
 - azure
+primary_section: azure
 ---
 Trevor Davis and Carlos Villuendas present a video series helping users migrate and modernize on-premises VMware workloads using Azure VMware Solution Gen 2, providing practical deployment and integration guidance.<!--excerpt_end-->
 

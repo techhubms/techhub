@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-september-25/ba-p/4450195
 title: Logic Apps Aviators Newsletter – September 25, 2025
 author: WSilveira
@@ -28,6 +28,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 WSilveira’s comprehensive Logic Apps Aviators Newsletter for September 2025 highlights technical advances, product updates, and practical community insights on Azure Logic Apps, AI-driven integration, DevOps, and secure automation.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2025/02/12/next-edit-suggestions
 title: Previewing Copilot Next Edit Suggestions and Agent Mode in VS Code
 author: Brigit Murtaugh, Burke Holland
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Brigit Murtaugh and Burke Holland introduce developers to the latest AI-driven enhancements in GitHub Copilot for Visual Studio Code, including Next Edit Suggestions, Agent Mode, and Vision capabilities.<!--excerpt_end-->
 

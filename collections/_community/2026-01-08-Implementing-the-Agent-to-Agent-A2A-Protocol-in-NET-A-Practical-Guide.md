@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/implementing-a2a-protocol-in-net-a-practical-guide/ba-p/4480232
 title: 'Implementing the Agent-to-Agent (A2A) Protocol in .NET: A Practical Guide'
 author: MariyamAshai
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 MariyamAshai lays out a step-by-step guide for building and integrating Agent-to-Agent protocol-compliant AI agents in .NET, covering setup, practical implementation, and industry-standard best practices.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/exposing-lakehouse-materialized-views-to-applications-in-minutes-with-graphql-apis-in-microsoft-fabric/
 title: Exposing Lakehouse Materialized Views via GraphQL APIs in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog presents a step-by-step tutorial on how to expose Lakehouse Materialized Views to applications in minutes using GraphQL APIs, combining performance and developer flexibility.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=WBPFjYLIhsA
 title: Implementing Vector Search in Your Application with SQL Server 2025
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Developer presents an MVP Edition episode featuring Joseph D'Antoni, demonstrating how to implement vector search using SQL Server 2025 and Azure SQL for AI-powered applications.<!--excerpt_end-->
 

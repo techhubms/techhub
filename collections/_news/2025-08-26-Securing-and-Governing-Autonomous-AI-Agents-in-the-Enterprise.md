@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/08/26/securing-and-governing-the-rise-of-autonomous-agents/
 title: Securing and Governing Autonomous AI Agents in the Enterprise
 author: Igor Sakhnov
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Igor Sakhnov, Corporate Vice President and Deputy CISO for Identity at Microsoft, shares practical advice on securing and governing autonomous AI agents, highlighting new risks and governance strategies in large-scale enterprise deployments.<!--excerpt_end-->
 

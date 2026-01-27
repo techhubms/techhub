@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2026/01/15/docfind
 title: 'Building docfind: Fast Client-Side Search for VS Code Docs with Rust, WASM, and Copilot'
 author: João Moreno
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 João Moreno from the VS Code team recounts building docfind—a Rust and WebAssembly-based client-side search engine—detailing the engineering journey, technical challenges, and the critical role GitHub Copilot played in delivering a blazing fast, serverless search experience.<!--excerpt_end-->
 

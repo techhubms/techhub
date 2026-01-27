@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mh1hmv/is_async_file_io_on_linux_a_lie/
 title: Is async file I/O on Linux a lie?
 author: FergoTheGreat
@@ -19,6 +19,7 @@ tags:
 - Useasync
 section_names:
 - coding
+primary_section: coding
 ---
 In this Reddit post, FergoTheGreat examines the behavior of asynchronous file I/O in .NET on Linux, noting possible discrepancies between .NET's async indicators and actual Linux kernel flags.<!--excerpt_end-->
 

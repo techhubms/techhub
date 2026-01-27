@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-workspace-level-private-link-preview/
 title: Microsoft Fabric Introduces Workspace-Level Private Link (Preview)
 author: Microsoft Fabric Blog
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Fabric Blog announces the preview of workspace-level Private Link, a new security feature enabling more granular private network access to individual Fabric workspaces. This post by the Microsoft Fabric Blog team guides IT professionals through setup and highlights key security benefits.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/emea/features/connecting-africa-to-opportunities-by-closing-the-digital-divide/
 title: 'Democratizing AI in Africa: Fastagger and Microsoft Enable On-Device AI for SMBs'
 author: stclarke
@@ -31,6 +31,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke reviews how Fastagger, in partnership with Microsoft’s Africa Transformation Office, brings AI directly to African small businesses—enabling affordable, edge-based solutions with Azure AI and GitHub support.<!--excerpt_end-->
 

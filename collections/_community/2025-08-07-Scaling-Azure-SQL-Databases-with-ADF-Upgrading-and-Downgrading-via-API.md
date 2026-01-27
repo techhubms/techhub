@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mjtpn1/adf_scale_up_and_scale_down_azure_sql_database/
 title: 'Scaling Azure SQL Databases with ADF: Upgrading and Downgrading via API'
 author: Relative_Wear2650
@@ -19,6 +19,7 @@ tags:
 - Transparent Data Encryption
 section_names:
 - azure
+primary_section: azure
 ---
 Relative_Wear2650 and the community discuss how to use Azure Data Factory to programmatically scale Azure SQL Databases by changing their service tier via API, including API selection and automation best practices.<!--excerpt_end-->
 

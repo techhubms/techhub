@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/event-driven-to-change-driven-low-cost-dependency-inversion/ba-p/4478948
 title: 'Event-Driven to Change-Driven: Low-cost Dependency Inversion'
 author: CollinBrian
@@ -22,6 +22,7 @@ tags:
 - Real Time Data
 section_names:
 - azure
+primary_section: azure
 ---
 Daniel Gerlag offers insights into architecting reactive systems by contrasting event-driven patterns with Drasi's change-driven approach, highlighting how continuous queries deliver efficient dependency inversion and real-time updates, with a focus on Azure and Cosmos DB integration.<!--excerpt_end-->
 

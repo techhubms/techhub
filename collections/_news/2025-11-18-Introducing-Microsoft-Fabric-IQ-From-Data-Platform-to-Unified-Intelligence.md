@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/from-data-platform-to-intelligence-platform-introducing-microsoft-fabric-iq/
 title: 'Introducing Microsoft Fabric IQ: From Data Platform to Unified Intelligence'
 author: Microsoft Fabric Blog
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog announces the release of Fabric IQ at Ignite 2025, an advanced intelligence platform unifying data, semantic modeling, and agentic AI to power real-time decisions and business optimization.<!--excerpt_end-->
 

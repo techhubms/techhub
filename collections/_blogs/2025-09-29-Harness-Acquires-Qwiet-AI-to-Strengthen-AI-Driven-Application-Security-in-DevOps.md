@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/harness-acquires-qwiet-ai-to-gain-code-testing-tool/
 title: Harness Acquires Qwiet AI to Strengthen AI-Driven Application Security in DevOps
 author: Mike Vizard
@@ -27,6 +27,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Mike Vizard details how Harness’s acquisition of Qwiet AI brings AI-powered code testing and native security automation to the DevOps platform, enhancing application security for development teams.<!--excerpt_end-->
 

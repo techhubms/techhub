@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/agent-factory-connecting-agents-apps-and-data-with-new-open-standards-like-mcp-and-a2a/
 title: 'Agent Factory: Connecting Agents, Apps, and Data with Open Standards (MCP, A2A)'
 author: Yina Arenas
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Yina Arenas shares how Microsoft’s Agent Factory and Azure AI Foundry use open standards like MCP and A2A to connect agents, enterprise data, and applications for powerful, interoperable AI ecosystems.<!--excerpt_end-->
 

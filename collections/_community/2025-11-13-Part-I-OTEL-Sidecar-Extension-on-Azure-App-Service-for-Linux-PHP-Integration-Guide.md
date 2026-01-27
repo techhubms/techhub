@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-i-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469514
 title: 'Part I: OTEL Sidecar Extension on Azure App Service for Linux – PHP Integration Guide'
 author: TulikaC
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 TulikaC explains how developers can add observability to PHP Linux web apps using Azure App Service sidecar extensions and OpenTelemetry – Azure Monitor. This detailed guide covers setup, deployment, and verification in Application Insights.<!--excerpt_end-->
 

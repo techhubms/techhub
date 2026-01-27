@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=6nwhHh19_L0
 title: 'Secure-by-Design Transformation: PwC and Microsoft Purview Enhancing Data Security'
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 - Security Gaps
 section_names:
 - security
+primary_section: security
 ---
 Microsoft Events hosts this Ignite 2025 discussion with PwC and guest Scott Sikorski, exploring how Microsoft Purview and intelligent agents strengthen data security and governance in enterprise environments.<!--excerpt_end-->
 

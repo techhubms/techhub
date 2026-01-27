@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=SXLc-pCUpzg
 title: 'Latest Advancements in Azure IaaS: Compute, Storage, Networking, and AI Integration'
 author: Microsoft Events
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents an overview of the newest Azure IaaS capabilities, with Igal Figlin, Narayan Annamalai, and Aung Oo highlighting innovations in compute, storage, networking, and AI-powered cloud operations.<!--excerpt_end-->
 

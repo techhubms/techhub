@@ -21,6 +21,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: all
 ---
 Welcome to this week’s technology summary, where updates in AI and cloud platforms are in focus. GitHub Copilot introduces improved automation that adapts to context alongside better integration for business users. Microsoft Azure has new releases that range from vector database search to secure hybrid storage and advanced networking features. In DevOps and security, you’ll find articles covering efforts to disrupt cloud-based cybercrime, new agentic tooling for workflows, and stronger security automation for open source projects and CI/CD. Read below to find out what these releases mean for developer productivity, cloud security, and modernization of data handling throughout the technology stack.<!--excerpt_end-->
 
@@ -131,7 +132,7 @@ Developers are advised on when to assign repetitive work to Copilot and when to 
 - [Want Better AI Outputs? Try Context Engineering with GitHub Copilot](https://github.blog/ai-and-ml/generative-ai/want-better-ai-outputs-try-context-engineering/)
 - [From Vibe Coding to Spec-Driven Development: Practical Spec-Kit Workflow](https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development-part2)
 - [When to Lead, When to Delegate to GitHub Copilot](https://www.cooknwithcopilot.com/blog/when-to-lead-when-to-delegate-to-github-copilot.html)
-- [Orchestrating Multiple AI Agents in VS Code: Insights from Ben & Peng](/2026-01-12-Orchestrating-Multiple-AI-Agents-in-VS-Code-Insights-from-Ben-and-Peng.html)
+- [Orchestrating Multiple AI Agents in VS Code: Insights from Ben & Peng](/github-copilot/videos/Orchestrating-Multiple-AI-Agents-in-VS-Code-Insights-from-Ben-and-Peng)
 
 ### Real-World Impact and Developer-Centric Analysis
 
@@ -139,7 +140,7 @@ Adding to last week’s coverage of open source and feedback, the latest analysi
 
 Octoverse 2025 includes topics like language popularity, agent-driven workflows (“vibe coding”), default security strategies, open source adoption, and renewal of legacy expertise (for instance, COBOL).
 
-- [Inside Octoverse 2025: Vibe Coding, Agentic AI, and Shifting Developer Trends](/2026-01-17-Inside-Octoverse-2025-Vibe-Coding-Agentic-AI-and-Shifting-Developer-Trends.html)
+- [Inside Octoverse 2025: Vibe Coding, Agentic AI, and Shifting Developer Trends](/github-copilot/videos/Inside-Octoverse-2025-Vibe-Coding-Agentic-AI-and-Shifting-Developer-Trends)
 - [What AI coding tools are actually good for, according to developers](https://github.blog/ai-and-ml/generative-ai/what-ai-is-actually-good-for-according-to-developers/)
 
 ### Other GitHub Copilot News
@@ -168,8 +169,8 @@ For teams working on tight budgets, ‘Budget Bytes’ videos explain how to cre
 
 These topics build on earlier work around privacy in AI, giving developers ready-to-use options for work that’s both effective and cost-conscious.
 
-- [Protect Sensitive Data with Azure AI Language PII Redaction](/2026-01-13-Protect-Sensitive-Data-with-Azure-AI-Language-PII-Redaction.html)
-- [Build Powerful AI Apps for Under $25 with Azure SQL Database](/2026-01-15-Build-Powerful-AI-Apps-for-Under-25-with-Azure-SQL-Database.html)
+- [Protect Sensitive Data with Azure AI Language PII Redaction](/ai/videos/Protect-Sensitive-Data-with-Azure-AI-Language-PII-Redaction)
+- [Build Powerful AI Apps for Under $25 with Azure SQL Database](/ai/videos/Build-Powerful-AI-Apps-for-Under-25-with-Azure-SQL-Database)
 
 ### Azure AI Model Integration: Troubleshooting, Prompt Fidelity, and Custom Workflows
 
@@ -198,7 +199,7 @@ Building on recent themes of local embeddings and agent-based architectures, Pam
 .NET developers can join the AI Community Standup, which now features hands-on sessions using Semantic Kernel, AI Extensions, and orchestration tools—helping the .NET community move beyond chatbot projects to deeper AI integration.
 
 - [Python + Agents: Livestream Series on Building AI Agents with Microsoft Agent Framework](https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-our-free-livestream-series-on-building-agents-in-python/ba-p/4485731)
-- [.NET AI Community Standup: Building AI Apps with the New .NET AI Stack](/2026-01-12-NET-AI-Community-Standup-Building-AI-Apps-with-the-New-NET-AI-Stack.html)
+- [.NET AI Community Standup: Building AI Apps with the New .NET AI Stack](/ai/videos/NET-AI-Community-Standup-Building-AI-Apps-with-the-New-NET-AI-Stack)
 
 ### Industrial ML and Scientific Workflows Powered by Azure HPC and Microsoft Discovery
 
@@ -213,7 +214,7 @@ In drug discovery, Insilico Medicine’s Nach01 model deployed via Microsoft Dis
 
 DiskANN now enables large-scale, fast vector search directly inside Azure SQL and Fabric SQL, building on last week’s announcement of local-embedding in the Fabric Eventhouse. This lets teams implement semantic search, classification, and content analysis at the database level for less latency and stronger privacy, without relying on outside APIs.
 
-- [DiskANN: Vector Indexing in Azure SQL and Fabric SQL Explained](/2026-01-15-DiskANN-Vector-Indexing-in-Azure-SQL-and-Fabric-SQL-Explained.html)
+- [DiskANN: Vector Indexing in Azure SQL and Fabric SQL Explained](/ai/videos/DiskANN-Vector-Indexing-in-Azure-SQL-and-Fabric-SQL-Explained)
 
 ## Azure
 
@@ -279,7 +280,7 @@ AKS now supports Ubuntu 24.02 nodes, Cosmos DB can now mirror with Fabric and su
 
 The new Cloud Hardware Emissions Methodology tracks Azure hardware through its lifecycle, supporting teams working on cloud sustainability and reporting.
 
-- [Azure Update - 16th January 2026](/2026-01-16-Azure-Update-16th-January-2026.html)
+- [Azure Update - 16th January 2026](/azure/videos/Azure-Update-16th-January-2026)
 - [Azure Virtual Desktop Regional Host Pools Public Preview](https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/now-in-public-preview-azure-virtual-desktop-regional-host-pools/ba-p/4474598)
 - [Azure Arc Portal Update: Streamlined Onboarding and Management at Scale](https://techcommunity.microsoft.com/t5/azure-migration-and/azure-arc-portal-update-simplifying-onboarding-and-management-at/ba-p/4477355)
 - [Advancing Embodied Carbon Measurement at Scale for Microsoft Azure Hardware](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/advancing-embodied-carbon-measurement-at-scale-for-microsoft/ba-p/4485784)
@@ -353,8 +354,8 @@ December’s GitHub Availability Report details pipeline and infrastructure even
 
 - [GitHub Availability Report: December 2025](https://github.blog/news-insights/company-news/github-availability-report-december-2025/)
 
-- [Running AI Coding Agents with Dev Containers and GitHub Codespaces](/2026-01-14-Running-AI-Coding-Agents-with-Dev-Containers-and-GitHub-Codespaces.html)
-- [How to Use Git Branches for Beginners](/2026-01-14-How-to-Use-Git-Branches-for-Beginners.html)
+- [Running AI Coding Agents with Dev Containers and GitHub Codespaces](/ai/videos/Running-AI-Coding-Agents-with-Dev-Containers-and-GitHub-Codespaces)
+- [How to Use Git Branches for Beginners](/devops/videos/How-to-Use-Git-Branches-for-Beginners)
 
 ## Security
 
@@ -438,4 +439,4 @@ A session on quantum cryptography covers the risks posed by quantum computing fo
 
 This connects to earlier topics covering encryption and the shift toward future-ready standards.
 
-- [What Quantum Safe Is and Why We Need It to Stay Secure](/2026-01-12-What-Quantum-Safe-Is-and-Why-We-Need-It-to-Stay-Secure.html)
+- [What Quantum Safe Is and Why We Need It to Stay Secure](/ai/videos/What-Quantum-Safe-Is-and-Why-We-Need-It-to-Stay-Secure)

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fine-grained-readwrite-access-to-lakehouse-data-with-onelake-security/
 title: Fine-grained ReadWrite Access to Data with OneLake Security (Preview)
 author: Microsoft Fabric Blog
@@ -26,6 +26,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog details the new preview feature that brings fine-grained ReadWrite access to data in OneLake lakehouses. This lets data owners grant targeted write permissions, improving security and collaboration for technical teams.<!--excerpt_end-->
 

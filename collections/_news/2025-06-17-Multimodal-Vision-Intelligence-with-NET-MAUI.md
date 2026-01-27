@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/multimodal-vision-intelligence-with-dotnet-maui/
 title: Multimodal Vision Intelligence with .NET MAUI
 author: David Ortinau
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 In this article, David Ortinau details the process of building multimodal, AI-powered image analysis into .NET MAUI apps, leveraging .NET tooling and Microsoft.Extensions.AI.<!--excerpt_end-->
 

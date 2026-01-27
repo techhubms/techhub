@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=JepVi1tBNEE
 title: Introducing Agent Skills in VS Code
 author: Visual Studio Code
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 In this video, Visual Studio Code and James Montemagno showcase how developers can leverage Agent Skills in VS Code to customize their workflow and create new coding capabilities quickly.<!--excerpt_end-->
 

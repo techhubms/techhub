@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-enterprise-ready-sql-database-in-microsoft-fabric-auditing-backup-copilot-more/
 title: 'Unlocking Enterprise-Ready SQL Database Features in Microsoft Fabric: ALM, Backups, and Copilot Enhancements'
 author: Microsoft Fabric Blog
@@ -27,6 +27,7 @@ section_names:
 - coding
 - ml
 - security
+primary_section: ai
 ---
 The Microsoft Fabric Blog, with Joanne Wong as coauthor, details critical updates to SQL Database in Microsoft Fabric, highlighting Copilot features, ALM APIs, advanced security options, VS Code integrations, and new enterprise capabilities for developers.<!--excerpt_end-->
 

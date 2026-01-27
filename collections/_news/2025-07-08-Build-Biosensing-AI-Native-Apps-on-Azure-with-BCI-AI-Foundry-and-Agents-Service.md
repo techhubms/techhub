@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/build-biosensing-ai-native-apps-on-azure-with-bci-ai-foundry-and-agents/
 title: Build Biosensing AI-Native Apps on Azure with BCI, AI Foundry, and Agents Service
 author: Govind Kamtamneni
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Written by Govind Kamtamneni with JD Chibuk, this post guides readers through building cognitive biosensing AI apps on Azure using BCI, AI Foundry, and Agent Services. It showcases real-world scenarios, advanced architecture, and opportunities for developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/sre-ai-looks-to-unify-devops-workflows-across-multiple-saas-applications/?utm_source=rss&utm_medium=rss&utm_campaign=sre-ai-looks-to-unify-devops-workflows-across-multiple-saas-applications
 title: SRE.ai Aims to Streamline DevOps for SaaS with AI Automation
 author: Mike Vizard
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard examines how SRE.ai is building a unified, AI-driven DevOps platform for managing and automating the deployment of custom software across multiple SaaS ecosystems.<!--excerpt_end-->
 

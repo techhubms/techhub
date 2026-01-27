@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/establishing-visibility-and-governance-for-your-software-supply-chain/
 title: Establishing Visibility and Governance for Your Software Supply Chain
 author: Parth Patel
@@ -42,6 +42,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Parth Patel explores modern strategies to secure software supply chains through asset visibility, governance practices, and automation, highlighting best practices such as using SBOMs, enforcing policies, and leveraging runtime analysis.<!--excerpt_end-->
 

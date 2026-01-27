@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=6ZfVssHBvUw
 title: 'Azure Update: Announcements and Service Changes (12 September 2025)'
 author: John Savill's Technical Training
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 John Savill's Technical Training delivers the Azure Update for 12th September 2025, highlighting the latest service expansions, feature enhancements, and product retirements within the Microsoft Azure ecosystem.<!--excerpt_end-->
 

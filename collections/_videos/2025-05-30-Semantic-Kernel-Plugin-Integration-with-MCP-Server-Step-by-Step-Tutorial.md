@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=r2Wg6xIwIvo
 title: 'Semantic Kernel Plugin Integration with MCP Server: Step-by-Step Tutorial'
 author: Learn Microsoft AI
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Learn Microsoft AI presents a thorough step-by-step guide on integrating Semantic Kernel plugins with MCP Server, empowering developers to build smart AI-driven applications using Microsoft technologies.<!--excerpt_end-->
 

@@ -1,6 +1,6 @@
 using Bunit;
 using FluentAssertions;
-using TechHub.Core.DTOs;
+using TechHub.Core.Models;
 using TechHub.Web.Components;
 
 namespace TechHub.Web.Tests.Components;
@@ -29,7 +29,7 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_RendersExcerpt_WhenProvided()
     {
         // Arrange
-        var item = new ContentItemDto
+        var item = new ContentItem
         {
             Slug = "example-post",
             Title = "Example Post",
@@ -58,7 +58,7 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_ShowsAuthor_WhenProvided()
     {
         // Arrange
-        var item = new ContentItemDto
+        var item = new ContentItem
         {
             Slug = "example-post",
             Title = "Example Post",
@@ -103,7 +103,7 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_DisplaysTags_UpToMaximum5()
     {
         // Arrange
-        var item = new ContentItemDto
+        var item = new ContentItem
         {
             Slug = "example-post",
             Title = "Example Post",
@@ -135,7 +135,7 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_ShowsMoreIndicator_WhenMoreThan5Tags()
     {
         // Arrange
-        var item = new ContentItemDto
+        var item = new ContentItem
         {
             Slug = "example-post",
             Title = "Example Post",
@@ -168,7 +168,7 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_ShowsCollectionBadge_WhenShowCollectionBadgeIsTrue()
     {
         // Arrange
-        var item = new ContentItemDto
+        var item = new ContentItem
         {
             Slug = "example-post",
             Title = "Example Post",
@@ -199,7 +199,7 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_HidesCollectionBadge_WhenShowCollectionBadgeIsFalse()
     {
         // Arrange
-        var item = new ContentItemDto
+        var item = new ContentItem
         {
             Slug = "example-post",
             Title = "Example Post",
@@ -230,7 +230,7 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_ExternalLink_OpensInNewTab()
     {
         // Arrange
-        var item = new ContentItemDto
+        var item = new ContentItem
         {
             Slug = "example-post",
             Title = "Example Post",
@@ -262,7 +262,7 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_InternalLink_UsesInternalUrl()
     {
         // Arrange
-        var item = new ContentItemDto
+        var item = new ContentItem
         {
             Slug = "example-post",
             Title = "Example Post",
@@ -294,7 +294,7 @@ public class ContentItemCardTests : BunitContext
     {
         // Arrange
         var twoDaysAgo = DateTimeOffset.UtcNow.AddDays(-2).ToUnixTimeSeconds();
-        var item = new ContentItemDto
+        var item = new ContentItem
         {
             Slug = "example-post",
             Title = "Example Post",
@@ -325,7 +325,7 @@ public class ContentItemCardTests : BunitContext
     {
         // Arrange
         var today = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-        var item = new ContentItemDto
+        var item = new ContentItem
         {
             Slug = "example-post",
             Title = "Example Post",
@@ -355,7 +355,7 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_CapitalizesCollectionName_Correctly()
     {
         // Arrange
-        var item = new ContentItemDto
+        var item = new ContentItem
         {
             Slug = "example-post",
             Title = "Example Post",
@@ -401,7 +401,7 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_HasAccessibleAriaLabel_ForExternalLink()
     {
         // Arrange
-        var item = new ContentItemDto
+        var item = new ContentItem
         {
             Slug = "example-post",
             Title = "Example Post",
@@ -431,7 +431,7 @@ public class ContentItemCardTests : BunitContext
     public void ContentItemCard_HasAccessibleAriaLabel_ForInternalLink()
     {
         // Arrange
-        var item = new ContentItemDto
+        var item = new ContentItem
         {
             Slug = "example-post",
             Title = "Example Post",
@@ -457,9 +457,9 @@ public class ContentItemCardTests : BunitContext
         link.GetAttribute("aria-label").Should().Be("Example Post");
     }
 
-    private static ContentItemDto CreateTestContentItem(string title, string dateIso)
+    private static ContentItem CreateTestContentItem(string title, string dateIso)
     {
-        return new ContentItemDto
+        return new ContentItem
         {
             Slug = title.ToLowerInvariant().Replace(" ", "-"),
             Title = title,

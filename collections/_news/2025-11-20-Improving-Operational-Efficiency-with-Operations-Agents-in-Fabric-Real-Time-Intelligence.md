@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/improving-operational-efficiency-with-operations-agents-in-real-time-intelligence/
 title: Improving Operational Efficiency with Operations Agents in Fabric Real-Time Intelligence
 author: Microsoft Fabric Blog
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog explains how operations agents in Real-Time Intelligence use AI and ML to automate business monitoring, inference, and action, enabling teams to enhance operational efficiency.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=A3YdGa95rrQ
 title: 'Compound Software Development with Async SWE Agents: Orchestrating AI for Engineering Productivity'
 author: Microsoft Developer
@@ -35,6 +35,7 @@ section_names:
 - azure
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this Sip and Sync with Azure episode, Priyanka Vergadia and Govind Kamtamneni demonstrate how engineers can use Microsoft’s Azure AI, GitHub Copilot, and automated agent orchestration to multiply coding productivity, shifting focus from manual coding to context engineering and software verification.<!--excerpt_end-->
 

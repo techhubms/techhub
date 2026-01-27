@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/onboarding-your-ai-peer-programmer-setting-up-github-copilot-coding-agent-for-success/
 title: 'Onboarding Your AI Peer Programmer: Success with GitHub Copilot Coding Agent'
 author: Christopher Harrison
@@ -23,6 +23,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Christopher Harrison guides readers through best practices for configuring and onboarding GitHub Copilot coding agent as an AI peer programmer. Discover strategies for environment setup, project optimization, custom instructions, and extending Copilot with MCP servers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=V_sIYwc9Tvs
 title: Understanding Agentic Development for .NET Developers
 author: dotnet
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 dotnet presents the future of AI for .NET developers, focusing on agentic AI: systems that reason, plan, and act to accomplish complex tasks through advanced frameworks and design patterns.<!--excerpt_end-->
 

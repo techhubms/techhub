@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/vss-pluralsight-2025-2/
 title: New Pluralsight Learning Paths for Visual Studio Subscribers
 author: Jim Harrer
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Jim Harrer introduces new Pluralsight learning paths for Visual Studio subscribers, spotlighting expert-led courses on GitHub Copilot, Azure Functions, AI prompt engineering, Microsoft Fabric, and more advanced Microsoft development topics.<!--excerpt_end-->
 

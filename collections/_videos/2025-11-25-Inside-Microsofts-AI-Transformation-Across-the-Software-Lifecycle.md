@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=opq5Y3QyXmY
 title: Inside Microsoft's AI Transformation Across the Software Lifecycle
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - azure
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Events presents a deep dive into how Amanda Silver, Jenny Ferries, and Karl Piteira lead Microsoft’s transformation of the software lifecycle using AI, DevOps automation, and cloud engineering standards.<!--excerpt_end-->
 

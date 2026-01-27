@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=D01Rxi_twCg
 title: 'Automation in Copilot Studio: Agent Flows and Computer Use'
 author: Microsoft Events
@@ -35,6 +35,7 @@ tags:
 - Windows 365
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events hosts a session on using Copilot Studio for automation, featuring agent flows, computer use agents, security, and real-world enterprise demos. Delivered by Jose Luis Fernandez and Heather Orta-Olmo.<!--excerpt_end-->
 

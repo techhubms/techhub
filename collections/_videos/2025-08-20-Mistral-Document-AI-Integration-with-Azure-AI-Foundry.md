@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=MUu9o8tDwi0
 title: Mistral Document AI Integration with Azure AI Foundry
 author: Microsoft Developer
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Hosted by Microsoft Developer, this episode features April demonstrating how to use Mistral Document AI in Azure AI Foundry for parsing and structuring complex document data.<!--excerpt_end-->
 

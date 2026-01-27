@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/microsoft/comments/1mjyjre/passwordless_signons_mfa_app_hybrid_mode/
 title: Passwordless Sign-On and MFA in Microsoft Hybrid Environments
 author: SmoothRunnings
@@ -20,6 +20,7 @@ tags:
 - Passwordless Authentication
 section_names:
 - security
+primary_section: security
 ---
 SmoothRunnings discusses Microsoft's move toward passwordless sign-on and the potential changes for MFA in hybrid scenarios, featuring community input on Cloud Kerberos Trust and the continuity of the Authenticator app.<!--excerpt_end-->
 

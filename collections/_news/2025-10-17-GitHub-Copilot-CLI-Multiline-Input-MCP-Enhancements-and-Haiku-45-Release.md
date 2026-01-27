@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-17-copilot-cli-multiline-input-new-mcp-enhancements-and-haiku-4-5
 title: 'GitHub Copilot CLI: Multiline Input, MCP Enhancements, and Haiku 4.5 Release'
 author: Allison
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Allison reports on GitHub Copilot CLI's latest weekly updates, highlighting multiline input, server setup improvements, enhanced noninteractive workflows, and support for Anthropic Claude Haiku 4.5.<!--excerpt_end-->
 

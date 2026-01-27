@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-azure-functions-durable-task-scheduler-dedicated-sku/ba-p/4465328
 title: Azure Functions Durable Task Scheduler Dedicated SKU Now GA, Consumption SKU in Public Preview
 author: greenie-msft
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Authored by greenie-msft, this post introduces the general availability of Azure Functions Durable Task Scheduler Dedicated SKU and the public preview of the Consumption SKU, offering advanced orchestration for scalable, resilient workloads on Azure.<!--excerpt_end-->
 

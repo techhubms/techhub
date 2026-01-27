@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/azure-workbook-for-acr-tokens-and-their-expiration-dates/ba-p/4438249
 title: Azure Workbook for Monitoring ACR Token Expiration Dates
 author: Jamesdld23
@@ -20,6 +20,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Jamesdld23 explains how to monitor Azure Container Registry token expiration dates through Azure REST API, Azure Workbooks, and automation techniques.<!--excerpt_end-->
 

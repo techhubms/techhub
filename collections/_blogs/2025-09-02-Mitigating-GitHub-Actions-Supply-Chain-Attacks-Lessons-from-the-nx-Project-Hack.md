@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://jessehouwing.net/github-actions-learnings-from-the-recent-nx-hack/
 title: 'Mitigating GitHub Actions Supply Chain Attacks: Lessons from the nx Project Hack'
 author: Jesse Houwing
@@ -24,6 +24,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Jesse Houwing examines the nx supply chain attack in detail, explaining how GitHub Actions misconfigurations led to leaked secrets and how to secure CI/CD workflows with actionable security best practices.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1me1ts0/devops_backlog_questions/
 title: 'Questions About Azure DevOps Backlogs: Closed Work Items & Iteration Filtering'
 author: Ozzy_Lemmy_is_god
@@ -19,6 +19,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Ozzy_Lemmy_is_god raises two detailed questions around Azure DevOps backlog functionality and iteration filtering, delving into changes in closed work item visibility and team-based backlog configuration.<!--excerpt_end-->
 

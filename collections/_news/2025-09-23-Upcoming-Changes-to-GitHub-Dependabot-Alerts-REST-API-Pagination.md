@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-23-upcoming-changes-to-github-dependabot-alerts-rest-api-offset-based-pagination-parameters-page-first-and-last
 title: Upcoming Changes to GitHub Dependabot Alerts REST API Pagination
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison announces the upcoming removal of offset-based pagination from GitHub Dependabot alerts REST API, guiding developers on migrating to cursor-based pagination methods for enhanced performance and consistency.<!--excerpt_end-->
 

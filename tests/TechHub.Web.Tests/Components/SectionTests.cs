@@ -3,9 +3,10 @@ using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
-using TechHub.Core.DTOs;
 using TechHub.Web.Components.Pages;
 using TechHub.Web.Services;
+using CollectionModel = TechHub.Core.Models.Collection;
+using TagCloudScope = TechHub.Core.Models.TagCloudScope;
 
 namespace TechHub.Web.Tests.Components;
 
@@ -27,7 +28,7 @@ public class SectionTests : BunitContext
         var sectionCache = new SectionCache();
         sectionCache.Initialize(
         [
-            new SectionDto
+            new TechHub.Core.Models.Section
             {
                 Name = "ai",
                 Title = "Artificial Intelligence",
@@ -35,7 +36,7 @@ public class SectionTests : BunitContext
                 Url = "/ai",
                 Collections =
                 [
-                    new CollectionReferenceDto
+                    new CollectionModel
                     {
                         Title = "News",
                         Name = "news",
@@ -107,7 +108,7 @@ public class SectionTests : BunitContext
         var sectionCache = new SectionCache();
         sectionCache.Initialize(
         [
-            new SectionDto
+            new TechHub.Core.Models.Section
             {
                 Name = "ai",
                 Title = "Artificial Intelligence",
@@ -115,7 +116,7 @@ public class SectionTests : BunitContext
                 Url = "/ai",
                 Collections =
                 [
-                    new CollectionReferenceDto
+                    new CollectionModel
                     {
                         Title = "News",
                         Name = "news",

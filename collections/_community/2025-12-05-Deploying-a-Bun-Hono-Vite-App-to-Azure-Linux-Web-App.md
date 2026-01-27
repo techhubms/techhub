@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploying-a-bun-hono-vite-app-to-azure-app-service/ba-p/4475356
 title: Deploying a Bun + Hono + Vite App to Azure Linux Web App
 author: theringe
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 theringe guides readers through deploying a Bun, Hono, and Vite application to Azure Linux Web App, outlining local development, Azure configuration, and deployment strategies.<!--excerpt_end-->
 

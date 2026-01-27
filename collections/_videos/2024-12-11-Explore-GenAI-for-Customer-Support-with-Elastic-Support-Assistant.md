@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=5Y0ohd4gKxA
 title: Explore GenAI for Customer Support with Elastic Support Assistant
 author: Microsoft Events
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Presented by Chris Blaisure at Microsoft Ignite 2024, this session explores how Elastic developed the Support Assistant using generative AI and Microsoft Azure OpenAI to enhance customer support.<!--excerpt_end-->
 

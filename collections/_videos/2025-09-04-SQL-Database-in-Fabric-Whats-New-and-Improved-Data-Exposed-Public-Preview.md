@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=MLpGP_L7ZRU
 title: "SQL Database in Fabric: What's New and Improved (Data Exposed Public Preview)"
 author: Microsoft Developer
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Developer presents a deep dive into new and improved SQL database features in Microsoft Fabric, hosted by Anna Hoffman. This episode covers live demos, SQL auditing, customer-managed keys, and the upcoming roadmap.<!--excerpt_end-->
 

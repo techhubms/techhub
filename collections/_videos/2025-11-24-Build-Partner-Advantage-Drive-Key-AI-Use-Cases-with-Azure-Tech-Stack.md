@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=4Hfx6QLyIag
 title: 'Build Partner Advantage: Drive Key AI Use-Cases with Azure Tech Stack'
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this session presented by Ashley Asdourian, Tim Denley, and Don Scott at Microsoft Ignite 2025, partners learn to drive key AI use-cases using the full Azure tech stack and supporting resources.<!--excerpt_end-->
 

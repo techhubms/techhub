@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=OU3yAhrB0To
 title: AI Playbook for ROI with Microsoft Foundry at Ignite 2025
 author: Microsoft Events
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events hosts this Ignite 2025 breakout, led by Marco Casalaina and other Azure AI experts, detailing strategies and technical features to maximize ROI with Microsoft Foundry for scalable, compliant AI solutions.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AI_Agents/comments/1mjwc82/the_ultimate_ai_agent_directory_100_tools_beyond/
 title: 'The Ultimate AI Agent Directory: 100+ Tools Beyond ChatGPT Agent'
 author: NickNaskida
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 NickNaskida presents a curated directory of over 100 AI agent tools, including Microsoft Copilot Studio, Semantic Kernel, GitHub Copilot, and more, helping professionals discover the latest options for automation and intelligent development.<!--excerpt_end-->
 

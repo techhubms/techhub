@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=RsCz57M2SMc
 title: Explore Microsoft Agent 365 Security and Governance Capabilities
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events presents an Ignite session led by Kim Kischel, Joanne Marone, Irina Nechaeva, and Shilpa Ranganathan, spotlighting security and governance strategies for AI agents with Microsoft Agent 365.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/mssql-extension-for-vs-code-fabric-integration-public-preview/
 title: MSSQL Extension for VS Code Adds Fabric Integration and Database Provisioning
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 Microsoft Fabric Blog showcases new features by introducing Fabric Connectivity and SQL Database provisioning within the MSSQL extension for VS Code, empowering developers with seamless integration and modern SQL development tools.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/0qdRS3xYwIY
 title: 'Understanding .gitignore: Keeping Your Git Repository Clean'
 author: GitHub
@@ -20,6 +20,7 @@ tags:
 - Workflow Tips
 section_names:
 - devops
+primary_section: devops
 ---
 GitHub presents a developer-focused overview of .gitignore files, featuring best practices for maintaining clean repositories and automating template creation.<!--excerpt_end-->
 

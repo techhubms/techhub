@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/autogen/autogen-reimagined-launching-autogen-0-4/
 title: 'AutoGen Reimagined: Announcing the Launch of AutoGen 0.4'
 author: Friederike Niedtner
@@ -20,6 +20,7 @@ tags:
 - Python
 section_names:
 - ai
+primary_section: ai
 ---
 Friederike Niedtner presents the release of AutoGen v0.4, a major update focusing on robust, scalable agentic AI workflows with improved architecture, developer tools, and cross-language support. Learn about its new features, migration guidance, and roadmap.<!--excerpt_end-->
 

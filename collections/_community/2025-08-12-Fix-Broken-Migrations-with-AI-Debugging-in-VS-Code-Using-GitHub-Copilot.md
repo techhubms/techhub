@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/fix-broken-migrations-with-ai-powered-debugging-in-vs-code-using/ba-p/4439418
 title: Fix Broken Migrations with AI Debugging in VS Code Using GitHub Copilot
 author: MuhammadSamiullah
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 MuhammadSamiullah shows how to resolve broken database migrations using GitHub Copilot and GibsonAI CLI in Visual Studio Code. Learn how AI-powered suggestions speed up debugging and deployment.<!--excerpt_end-->
 

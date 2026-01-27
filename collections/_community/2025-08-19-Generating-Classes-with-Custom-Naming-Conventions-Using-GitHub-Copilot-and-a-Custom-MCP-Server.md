@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/generating-classes-with-custom-naming-conventions-using-github/ba-p/4444837
 title: Generating Classes with Custom Naming Conventions Using GitHub Copilot and a Custom MCP Server
 author: daisami
@@ -29,6 +29,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 daisami explains how to set up a custom MCP server with ASP.NET Core and integrate it with GitHub Copilot Agent, enabling developers to automate naming conventions and customize agent behavior for enterprise .NET projects.<!--excerpt_end-->
 

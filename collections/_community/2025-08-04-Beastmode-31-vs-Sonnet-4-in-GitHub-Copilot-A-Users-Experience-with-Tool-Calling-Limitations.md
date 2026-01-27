@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mhinyf/beastmode_is_not_that_beasty_rather_lazy_and/
 title: 'Beastmode 3.1 vs. Sonnet 4 in GitHub Copilot: A User’s Experience with Tool-Calling Limitations'
 author: pws7438
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, pws7438 discusses personal experiences comparing GitHub Copilot’s Beastmode-3.1 and Sonnet 4 models in VS Code, focusing on tool-calling and code commit reliability.<!--excerpt_end-->
 

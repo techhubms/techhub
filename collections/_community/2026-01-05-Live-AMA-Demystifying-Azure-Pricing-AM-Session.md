@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-events/live-ama-demystifying-azure-pricing-am-session/ec-p/4483196#M665
 title: 'Live AMA: Demystifying Azure Pricing (AM Session)'
 author: Aaron_Bode
@@ -18,6 +18,7 @@ tags:
 - Savings Plans
 section_names:
 - azure
+primary_section: azure
 ---
 Aaron_Bode hosts a live AMA to clarify Azure pricing. The session equips attendees with practical strategies and tools for forecasting, managing, and reducing Azure costs while maintaining performance.<!--excerpt_end-->
 

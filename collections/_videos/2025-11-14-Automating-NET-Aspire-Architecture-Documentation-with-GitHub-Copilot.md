@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=8NoetLolw-0
 title: Automating .NET Aspire Architecture Documentation with GitHub Copilot
 author: dotnet
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 dotnet presents an in-depth session on using GitHub Copilot and Copilot Coding Agent to automate and maintain .NET Aspire app architecture documentation through code and DevOps workflows.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/implementing-zero-trust-network-security-for-azure-web-apps/m-p/4451649#M22190
 title: Implementing Zero-Trust Network Security for Azure Web Apps Using Private Endpoints
 author: SaiMinThu
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Sai Min Thu presents a walkthrough on enforcing zero-trust network security for Azure Web Apps by isolating them from the public internet and leveraging Private Endpoints within a private virtual network.<!--excerpt_end-->
 

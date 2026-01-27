@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://zure.com/blog/fabric-iq-the-new-semantic-layer-for-your-organizational-data
 title: 'Understanding Fabric IQ: The Semantic Layer in Microsoft Fabric'
 author: lauri.lehman@zure.com (Lauri Lehman)
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Lauri Lehman introduces Fabric IQ, Microsoft's new semantic layer for organizational data, assisting developers and data professionals in building advanced AI agents and ensuring data quality.<!--excerpt_end-->
 

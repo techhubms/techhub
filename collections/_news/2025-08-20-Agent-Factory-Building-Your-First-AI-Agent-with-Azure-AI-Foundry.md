@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/agent-factory-building-your-first-ai-agent-with-the-tools-to-deliver-real-world-outcomes/
 title: 'Agent Factory: Building Your First AI Agent with Azure AI Foundry'
 author: Yina Arenas
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Yina Arenas details how to build and securely manage agentic AI solutions in Azure AI Foundry, offering practical patterns, protocols, and governance strategies for enterprise adoption.<!--excerpt_end-->
 

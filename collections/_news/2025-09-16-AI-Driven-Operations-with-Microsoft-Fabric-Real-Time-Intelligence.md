@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/the-foundation-for-powering-ai-driven-operations-fabric-real-time-intelligence/
 title: AI-Driven Operations with Microsoft Fabric Real-Time Intelligence
 author: Microsoft Fabric Blog
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 The Microsoft Fabric Blog team details how AI-powered Real-Time Intelligence in Microsoft Fabric enables organizations to move from reactive to proactive operations, highlighting foundational features, new innovations, and real-world industry examples.<!--excerpt_end-->
 

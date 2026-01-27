@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=gjKq4KMEYkI
 title: Exploring AI Models and GitHub Copilot's Raptor Mini in VS Code
 author: Visual Studio Code
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code hosts Julia Kasper for a rich discussion on AI models inside VS Code, revealing how tools like GitHub Copilot's Raptor Mini are shaping developer workflows and coding best practices.<!--excerpt_end-->
 

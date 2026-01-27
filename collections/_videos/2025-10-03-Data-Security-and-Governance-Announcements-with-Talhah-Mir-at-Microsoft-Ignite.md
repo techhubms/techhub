@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=MGQegwNKRS4
 title: Data Security and Governance Announcements with Talhah Mir at Microsoft Ignite
 author: Microsoft Events
@@ -20,6 +20,7 @@ tags:
 - Talhah Mir
 section_names:
 - security
+primary_section: security
 ---
 Microsoft Events spotlights Talhah Mir and the Microsoft Purview team at Ignite as they unveil new data security and governance capabilities, essential for responsible AI adoption.<!--excerpt_end-->
 

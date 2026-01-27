@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/windows-10-extended-security-updates-for-azure-virtual-desktop/ba-p/4459715
 title: Windows 10 Extended Security Updates for Azure Virtual Desktop
 author: ivaylo_ivanov
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 ivaylo_ivanov explains how Azure Virtual Desktop customers can handle Windows 10's end of support and leverage Extended Security Updates (ESU) for ongoing security and compliance in session host environments.<!--excerpt_end-->
 

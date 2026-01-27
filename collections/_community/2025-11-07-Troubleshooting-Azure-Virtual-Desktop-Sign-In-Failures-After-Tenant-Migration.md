@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/troubleshooting-azure-virtual-desktop-sign-in-failures-after/ba-p/4467953
 title: Troubleshooting Azure Virtual Desktop Sign-In Failures After Tenant Migration
 author: psundars
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 psundars explores troubleshooting steps for Azure Virtual Desktop sign-in failures after tenant migration, focusing on token issues with Microsoft Entra ID and providing actionable remediation and best practices.<!--excerpt_end-->
 

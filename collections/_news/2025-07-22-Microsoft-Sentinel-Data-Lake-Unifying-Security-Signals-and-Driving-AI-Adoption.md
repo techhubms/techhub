@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/07/22/microsoft-sentinel-data-lake-unify-signals-cut-costs-and-power-agentic-ai/
 title: 'Microsoft Sentinel Data Lake: Unifying Security Signals and Driving AI Adoption'
 author: Scott Woodgate and Krishna Kumar Parthasarathy
@@ -19,6 +19,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Scott Woodgate and Krishna Kumar Parthasarathy introduce a new data lake for Microsoft Sentinel, enhancing unified security data management, AI-driven insights, and affordability for security teams.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=2QXzxOLtCHM
 title: 'Building Three AI-Powered Applications: MCP, Browser LLMs, and Foundry Local'
 author: Microsoft Developer
@@ -33,6 +33,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 In this episode, Ayan Gupta and Rory demonstrate hands-on development of three different AI-powered apps, showcasing MCP, browser-based LLMs, and Microsoft's Foundry Local. Their step-by-step approach enables Java developers to learn practical AI integration.<!--excerpt_end-->
 

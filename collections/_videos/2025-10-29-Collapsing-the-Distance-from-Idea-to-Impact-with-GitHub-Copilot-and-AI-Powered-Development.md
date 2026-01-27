@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=q1IxyisKcZI
 title: Collapsing the Distance from Idea to Impact with GitHub Copilot and AI-Powered Development
 author: GitHub
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a compelling look at how AI and GitHub Copilot are closing the gap from ideas to impactful software, featuring insights and demos from leaders and innovators across the development community.<!--excerpt_end-->
 

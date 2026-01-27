@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Z6e5ZP9y3_8
 title: 'Building Modern CLI Apps in .NET: Libraries, Patterns, and Packaging'
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 This session by the dotnet team discusses why command-line interfaces remain crucial and how .NET's latest features enable developers to build modern, cross-platform CLI apps using smart libraries and robust design patterns.<!--excerpt_end-->
 

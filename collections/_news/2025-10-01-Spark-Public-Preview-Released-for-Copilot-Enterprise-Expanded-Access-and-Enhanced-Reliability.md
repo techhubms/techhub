@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-01-spark-%f0%9f%9a%80-expanded-access-enhanced-reliability-and-faster-iteration-history
 title: 'Spark Public Preview Released for Copilot Enterprise: Expanded Access and Enhanced Reliability'
 author: Allison
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the public preview of Spark for Copilot Enterprise customers, outlining improved access, reliability, and app iteration features designed for enterprise development teams.<!--excerpt_end-->
 

@@ -19,6 +19,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison reports on the release of CodeQL 2.23.9, highlighting essential information for GitHub code scanning users, including a deprecation notice for certain Kotlin versions.<!--excerpt_end-->
 

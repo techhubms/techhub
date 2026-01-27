@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dJdXdRiIfDw
 title: 'Aspire Unplugged: David Fowler Discusses .NET Aspire’s Vision and Future'
 author: dotnet
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 In this session, David Fowler and Maddy present a deep dive into .NET Aspire. The discussion provides technical and architectural insights, giving developers practical understanding and advice directly from Aspire’s creator.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/managing-multiple-deployment-stacks-in-azure-bicep-patterns-and/ba-p/4471392
 title: 'Managing Multiple Deployment Stacks in Azure Bicep: Patterns and Best Practices'
 author: Roslin_Nivetha
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Roslin_Nivetha explores best practices for managing multiple Azure deployment stacks with Bicep, highlighting strategies for modular architecture, lifecycle control, and strong governance.<!--excerpt_end-->
 

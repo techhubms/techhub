@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=yDy6Y4h-RxI
 title: "AI Agent's Toolbox: Building Intelligent Agents with Semantic Kernel, MCP Servers, and Python"
 author: Microsoft Developer
@@ -33,6 +33,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Developer presents a hands-on episode with Evan Mattson, exploring how to build intelligent AI agents using Semantic Kernel, MCP Servers, Python, and Azure AI Foundry, offering practical demos for developers.<!--excerpt_end-->
 

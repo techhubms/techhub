@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/powering-distributed-aiml-at-scale-with-azure-and-anyscale/
 title: Powering Distributed AI and ML Workloads at Scale with Azure and Anyscale
 author: Brendan Burns
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Brendan Burns explains how Microsoft and Anyscale are collaborating to bring managed Ray to Azure, empowering developers to scale distributed AI and ML workloads seamlessly with Python and Kubernetes.<!--excerpt_end-->
 

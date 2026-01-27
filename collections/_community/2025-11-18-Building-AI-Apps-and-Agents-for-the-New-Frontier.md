@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-ai-apps-and-agents-for-the-new-frontier/ba-p/4470165
 title: Building AI Apps and Agents for the New Frontier
 author: Mike_Hulme
@@ -32,6 +32,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Mike Hulme discusses the impact of Microsoft’s agentic AI and developer tools, including GitHub Copilot, Foundry, and Azure services, on building and managing next-generation applications securely and efficiently.<!--excerpt_end-->
 

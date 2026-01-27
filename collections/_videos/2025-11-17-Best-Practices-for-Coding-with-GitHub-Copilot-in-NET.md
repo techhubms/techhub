@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=umRy69br51E
 title: Best Practices for Coding with GitHub Copilot in .NET
 author: dotnet
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 dotnet presents a video session from Simona Liao and Sharda Kaur at .NET Conf Student Zone 2025, offering actionable best practices for coding with GitHub Copilot in .NET projects.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/enhanced-monitoring-for-spark-high-concurrency-workloads-in-microsoft-fabric/
 title: Enhanced Monitoring for Spark High Concurrency Workloads in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog announces enhanced monitoring for Spark workloads running in high concurrency mode. Discover new features for job insights, notebook-aware logging, and hierarchical views to boost developer productivity.<!--excerpt_end-->
 

@@ -1,6 +1,6 @@
 using Bunit;
 using FluentAssertions;
-using TechHub.Core.DTOs;
+using TechHub.Core.Models;
 using TechHub.Web.Components;
 
 namespace TechHub.Web.Tests.Components;
@@ -75,9 +75,9 @@ public class SectionCardTests : BunitContext
     public void SectionCard_DisplaysCollectionBadges_WhenCollectionsExist()
     {
         // Arrange
-        var collections = new List<CollectionReferenceDto>
+        var collections = new List<Collection>
         {
-            new CollectionReferenceDto
+            new Collection
             {
                 Name = "news",
                 Title = "News",
@@ -86,7 +86,7 @@ public class SectionCardTests : BunitContext
                 IsCustom = false,
                 DisplayName = "News"
             },
-            new CollectionReferenceDto
+            new Collection
             {
                 Name = "blogs",
                 Title = "Blogs",
@@ -96,7 +96,7 @@ public class SectionCardTests : BunitContext
                 DisplayName = "Blogs"
             }
         };
-        var section = new SectionDto
+        var section = new Section
         {
             Name = "ai",
             Title = "AI",
@@ -120,16 +120,16 @@ public class SectionCardTests : BunitContext
     public void SectionCard_DisplaysFirst4Collections_WhenMoreThan4Exist()
     {
         // Arrange
-        var collections = new List<CollectionReferenceDto>
+        var collections = new List<Collection>
         {
-            new CollectionReferenceDto { Name = "news", Title = "News", Url = "/github-copilot/news", Description = "News", IsCustom = false, DisplayName = "News" },
-            new CollectionReferenceDto { Name = "blogs", Title = "Blogs", Url = "/github-copilot/blogs", Description = "Blogs", IsCustom = false, DisplayName = "Blogs" },
-            new CollectionReferenceDto { Name = "videos", Title = "Videos", Url = "/github-copilot/videos", Description = "Videos", IsCustom = false, DisplayName = "Videos" },
-            new CollectionReferenceDto { Name = "community", Title = "Community", Url = "/github-copilot/community", Description = "Community", IsCustom = false, DisplayName = "Community Posts" },
-            new CollectionReferenceDto { Name = "features", Title = "Features", Url = "/github-copilot/features", Description = "Features", IsCustom = true, DisplayName = "Features" },
-            new CollectionReferenceDto { Name = "handbook", Title = "Handbook", Url = "/github-copilot/handbook", Description = "Handbook", IsCustom = true, DisplayName = "Handbook" }
+            new Collection { Name = "news", Title = "News", Url = "/github-copilot/news", Description = "News", IsCustom = false, DisplayName = "News" },
+            new Collection { Name = "blogs", Title = "Blogs", Url = "/github-copilot/blogs", Description = "Blogs", IsCustom = false, DisplayName = "Blogs" },
+            new Collection { Name = "videos", Title = "Videos", Url = "/github-copilot/videos", Description = "Videos", IsCustom = false, DisplayName = "Videos" },
+            new Collection { Name = "community", Title = "Community", Url = "/github-copilot/community", Description = "Community", IsCustom = false, DisplayName = "Community Posts" },
+            new Collection { Name = "features", Title = "Features", Url = "/github-copilot/features", Description = "Features", IsCustom = true, DisplayName = "Features" },
+            new Collection { Name = "handbook", Title = "Handbook", Url = "/github-copilot/handbook", Description = "Handbook", IsCustom = true, DisplayName = "Handbook" }
         };
-        var section = new SectionDto
+        var section = new Section
         {
             Name = "github-copilot",
             Title = "GitHub Copilot",
@@ -156,9 +156,9 @@ public class SectionCardTests : BunitContext
     public void SectionCard_DistinguishesCustomPages_WithSpecialBadge()
     {
         // Arrange
-        var collections = new List<CollectionReferenceDto>
+        var collections = new List<Collection>
         {
-            new CollectionReferenceDto
+            new Collection
             {
                 Name = "news",
                 Title = "News",
@@ -167,7 +167,7 @@ public class SectionCardTests : BunitContext
                 IsCustom = false,
                 DisplayName = "News"
             },
-            new CollectionReferenceDto
+            new Collection
             {
                 Name = "features",
                 Title = "Features",
@@ -177,7 +177,7 @@ public class SectionCardTests : BunitContext
                 DisplayName = "Features"
             }
         };
-        var section = new SectionDto
+        var section = new Section
         {
             Name = "github-copilot",
             Title = "GitHub Copilot",
@@ -221,9 +221,9 @@ public class SectionCardTests : BunitContext
     public void SectionCard_CollectionBadges_HaveAccessibleLabels()
     {
         // Arrange
-        var collections = new List<CollectionReferenceDto>
+        var collections = new List<Collection>
         {
-            new CollectionReferenceDto
+            new Collection
             {
                 Name = "news",
                 Title = "News",
@@ -233,7 +233,7 @@ public class SectionCardTests : BunitContext
                 DisplayName = "News"
             }
         };
-        var section = new SectionDto
+        var section = new Section
         {
             Name = "ai",
             Title = "AI",
@@ -269,9 +269,9 @@ public class SectionCardTests : BunitContext
         collectionNav.Should().BeEmpty();
     }
 
-    private static SectionDto CreateTestSection(string name, string title, string description)
+    private static Section CreateTestSection(string name, string title, string description)
     {
-        return new SectionDto
+        return new Section
         {
             Name = name,
             Title = title,

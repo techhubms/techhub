@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=UP2kzp14WA0
 title: Beginners Guide to Entra ID
 author: John Savill's Technical Training
@@ -24,6 +24,7 @@ tags:
 - User Management
 section_names:
 - security
+primary_section: security
 ---
 John Savill's Technical Training provides a clear beginner's overview of Entra ID (formerly Azure AD), discussing its main features, integration points, and key security concepts in cloud identity management.<!--excerpt_end-->
 

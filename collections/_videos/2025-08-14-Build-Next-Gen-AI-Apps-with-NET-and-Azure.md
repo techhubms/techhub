@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=WdJd9fnFlGU
 title: Build Next-Gen AI Apps with .NET and Azure
 author: dotnet
@@ -21,6 +21,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 In this video session, dotnet demonstrates how to build next-generation AI applications with .NET and Azure, offering practical development guidance and showcasing the latest tools in the Microsoft ecosystem.<!--excerpt_end-->
 

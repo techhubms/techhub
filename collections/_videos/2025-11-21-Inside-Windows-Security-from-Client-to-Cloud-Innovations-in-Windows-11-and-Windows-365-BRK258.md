@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=TY0uDOnFzPY
 title: 'Inside Windows Security from Client to Cloud: Innovations in Windows 11 and Windows 365 | BRK258'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Windows Hello
 section_names:
 - security
+primary_section: security
 ---
 This session, presented by Katherine Anderson, Katharine Holdsworth, and Pratik Shah at Microsoft Ignite, guides viewers through the latest Windows 11 and Windows 365 security features designed to improve endpoint protection.<!--excerpt_end-->
 

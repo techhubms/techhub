@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-open-source-release-of-microsoft-fabric-extension-for-vs-code/
 title: Announcing the Open-Source Release of Microsoft Fabric Extension for Visual Studio Code
 author: Microsoft Fabric Blog
@@ -20,6 +20,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Microsoft Fabric Blog presents the open-sourcing of the Fabric Core Visual Studio Code extension, enabling developers to better manage and customize Fabric resources while encouraging community contributions.<!--excerpt_end-->
 

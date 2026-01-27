@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/azure-developer-cli-from-dev-to-prod-with-azure-devops-pipelines/
 title: 'Azure Developer CLI: Dev to Production with Azure DevOps Pipelines'
 author: PuiChee (PC) Chan, Kristen Womack
@@ -31,6 +31,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 PuiChee (PC) Chan and Kristen Womack deliver an in-depth walkthrough of using Azure Developer CLI and Azure DevOps Pipelines for reliable, automated CI/CD—from development to production—while exploring how GitHub Copilot for Azure can streamline pipeline improvements.<!--excerpt_end-->
 

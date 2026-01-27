@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-testing-playwright-workspaces-for-local-to-cloud-test/ba-p/4442711
 title: 'End-to-End Azure App Testing with Playwright Workspaces: Local and Cloud Workflows'
 author: varghesejoji
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 varghesejoji demonstrates how to use Azure App Testing and Playwright Workspaces for browser-based functional and performance testing, guiding users from local development to cloud-scale parallel test execution with shared reporting.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-general-availability-of-ai-rag-connectors-in-logic/ba-p/4474337
 title: General Availability of AI and RAG Connectors in Azure Logic Apps Standard
 author: shahparth
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 shahparth announces the general availability of integrated AI and RAG connectors in Azure Logic Apps Standard, enabling native support for advanced document processing and semantic search within enterprise automation workflows.<!--excerpt_end-->
 

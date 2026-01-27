@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/controlmonkey-adds-ai-agents-to-infrastructure-automation-platform/
 title: ControlMonkey Introduces AI Agents for Infrastructure Automation
 author: Mike Vizard
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard examines ControlMonkey’s integration of AI agents with its infrastructure automation platform, showing how KoMo AI helps developers securely provision and manage infrastructure as code while raising code quality and taming misconfiguration risk.<!--excerpt_end-->
 

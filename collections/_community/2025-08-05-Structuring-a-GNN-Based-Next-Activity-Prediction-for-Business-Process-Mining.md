@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/MachineLearning/comments/1miev16/p_from_business_processes_to_gnn_for_next/
 title: Structuring a GNN-Based Next Activity Prediction for Business Process Mining
 author: Street_Car_1297
@@ -22,6 +22,7 @@ tags:
 - Python
 section_names:
 - ml
+primary_section: ml
 ---
 Street_Car_1297 seeks community input on designing a GNN solution for next activity prediction in business process mining, sharing project structure, dataset specifics, and open modeling questions.<!--excerpt_end-->
 

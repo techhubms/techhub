@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-13-gpt-5-mini-now-available-in-github-copilot-in-public-preview
 title: GPT-5 Mini Launches in Public Preview for GitHub Copilot Users
 author: Allison
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison highlights the public preview of GPT-5 mini in GitHub Copilot, explaining its key benefits—faster, more cost-effective coding support and broad integration across IDEs for all Copilot users.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-onelake-as-a-source-for-copy-into-and-openrowset/
 title: OneLake Integration with COPY INTO and OPENROWSET Now in Microsoft Fabric Preview
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ tags:
 - Workspace Permissions
 section_names:
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog presents an overview of the new preview capability where OneLake can be used directly as a source for COPY INTO and OPENROWSET, written by the Microsoft Fabric team.<!--excerpt_end-->
 

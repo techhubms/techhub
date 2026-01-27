@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/graph-in-microsoft-fabric/
 title: Introducing Graph Data Management and Analytics in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog announces a new native graph data management and analytics service in Microsoft Fabric. This service empowers enterprises to harness relationship-rich insights, with features for business users, analysts, data engineers, and developers.<!--excerpt_end-->
 

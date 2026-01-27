@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-early-preview-byo-remote-mcp-server-on-azure/ba-p/4445317
 title: 'Early Preview: Host Your Own Remote MCP Server on Azure Functions'
 author: lily-ma
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 lily-ma presents the early preview of hosting bring-your-own Remote MCP servers on Azure Functions, making it easier for developers to deploy existing MCP SDK-based servers to a highly scalable serverless environment.<!--excerpt_end-->
 

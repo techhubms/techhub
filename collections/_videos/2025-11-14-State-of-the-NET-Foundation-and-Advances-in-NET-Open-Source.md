@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=sgm3jb8yCbc
 title: State of the .NET Foundation and Advances in .NET Open Source
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 - Web Development
 section_names:
 - coding
+primary_section: coding
 ---
 In this video, dotnet discusses the current and future plans of the .NET Foundation, focusing on new open-source projects and how developers can get involved.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/intersperse-values-for-enumerable-collections
 title: Intersperse Values for Enumerable Collections in C#
 author: Khalid Abuhakmeh
@@ -17,6 +17,7 @@ tags:
 - Yield
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, Khalid Abuhakmeh explores how to create an 'intersperse' extension method for IEnumerable in C#, inspired by a JavaScript utility. The article includes code samples, expected outputs, and a detailed explanation of the implementation.<!--excerpt_end-->
 

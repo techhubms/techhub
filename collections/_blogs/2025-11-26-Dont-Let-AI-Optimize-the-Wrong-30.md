@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://roadtoalm.com/2025/11/26/dont-let-ai-optimize-the-wrong-30/
 title: Don’t Let AI Optimize the Wrong 30%
 author: Rene van Osnabrugge
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Rene van Osnabrugge discusses how AI is often misapplied to speed up coding, which is only a minor part of development. He suggests AI's real power lies in reducing bottlenecks in the broader DevOps workflow.<!--excerpt_end-->
 

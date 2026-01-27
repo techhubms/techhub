@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Code Debugging
 author: TBD
@@ -12,6 +12,7 @@ tags: []
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This content demonstrates GitHub Copilot's Code Debugging feature. Debug with AI using call stack and variable insights<!--excerpt_end-->
 

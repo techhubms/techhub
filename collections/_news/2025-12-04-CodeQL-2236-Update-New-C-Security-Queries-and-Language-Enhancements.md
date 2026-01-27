@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-04-codeql-2-23-6-adds-swift-6-2-1-and-new-c-security-queries
 title: 'CodeQL 2.23.6 Update: New C# Security Queries and Language Enhancements'
 author: Allison
@@ -30,6 +30,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 Allison outlines CodeQL 2.23.6's key improvements, including new C# security queries and expanded language support, enhancing GitHub code scanning's effectiveness.<!--excerpt_end-->
 

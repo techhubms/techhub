@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/tools/tool-or-approach-to-identify-and-replace-obsolete-net-framework/m-p/4446845#M161
 title: Tools and Approaches for Migrating Obsolete .NET Framework APIs to .NET 8
 author: GopalKrishnan
@@ -17,6 +17,7 @@ tags:
 - Upgrade Assistant
 section_names:
 - coding
+primary_section: coding
 ---
 GopalKrishnan shares challenges and seeks advice on migrating a multi-project solution from .NET Framework 4.8 to .NET 8, focusing on identifying and updating obsolete APIs for successful modernization.<!--excerpt_end-->
 

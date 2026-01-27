@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/private-preview-azure-managed-prometheus-on-vm-vmss/ba-p/4473472
 title: 'Private Preview: Azure Managed Prometheus for VM & VMSS Monitoring'
 author: Daramfon
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Daramfon presents an introduction to Azure Managed Prometheus support for VMs and VMSS, now in private preview, highlighting unified monitoring, integration with Azure Monitor, and specific benefits for HPC and AI workloads.<!--excerpt_end-->
 

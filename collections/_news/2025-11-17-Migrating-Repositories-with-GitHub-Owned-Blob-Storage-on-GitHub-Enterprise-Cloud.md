@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-17-migrating-repositories-with-github-owned-blob-storage-is-now-generally-available
 title: Migrating Repositories with GitHub-Owned Blob Storage on GitHub Enterprise Cloud
 author: Allison
@@ -24,6 +24,7 @@ tags:
 - Repository Migration
 section_names:
 - devops
+primary_section: devops
 ---
 Allison announces that GitHub-owned blob storage is now generally available for repository migrations to GitHub Enterprise Cloud, streamlining the process for enterprise administrators and DevOps engineers.<!--excerpt_end-->
 

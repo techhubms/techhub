@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/13/building-a-lasting-security-culture-at-microsoft/
 title: 'Building a Security-First Culture at Microsoft: Strategies and Best Practices'
 author: stclarke
@@ -27,6 +27,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 stclarke reports on how Microsoft embeds security at every organizational level, detailing practices from training and engineering to leadership accountability under the Secure Future Initiative. Key learning resources and actionable strategies are shared.<!--excerpt_end-->
 

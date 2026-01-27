@@ -1,7 +1,7 @@
 using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
-using TechHub.Core.DTOs;
+using TechHub.Core.Models;
 using TechHub.TestUtilities;
 
 namespace TechHub.Api.Tests.Endpoints;
@@ -35,7 +35,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(8); // All 8 test items from TestCollections
     }
@@ -49,7 +49,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(5); // 5 items with 'ai' section
         items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("ai"));
@@ -64,7 +64,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(5); // Items with either 'ai' OR 'github-copilot' (same items, overlap)
     }
@@ -78,7 +78,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(3); // 3 news items
         items.Should().AllSatisfy(item => item.CollectionName.Should().Be("news"));
@@ -93,7 +93,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(5); // 3 news + 2 blogs
         items.Should().AllSatisfy(item =>
@@ -109,7 +109,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(1); // Only 1 news item with 'ai' section (Agentic Memory)
         items![0].CollectionName.Should().Be("news");
@@ -125,7 +125,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(1); // Only 1 item with exact 'Copilot' tag
         items.Should().AllSatisfy(item => item.Tags.Should().Contain("Copilot"));
@@ -140,7 +140,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(2); // 2 items have both tags (Agentic Memory + From Tool to Teammate)
         items.Should().AllSatisfy(item => 
@@ -159,7 +159,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(1); // Agentic Memory for GitHub Copilot
         items![0].CollectionName.Should().Be("news");
@@ -176,7 +176,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(1); // AI Toolkit article
         items![0].Title.Should().Contain("Toolkit");
@@ -191,7 +191,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(1); // AI Toolkit article
         items![0].SectionNames.Should().Contain("ai");
@@ -207,7 +207,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(1); // Agentic Memory (case-insensitive)
     }
@@ -221,7 +221,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().BeEmpty();
     }
@@ -231,9 +231,10 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     {
         // Act
         var response = await _client.GetAsync("/api/content/filter?collections=blogs");
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
 
         // Assert - URLs should include section context (primary section) and slug WITHOUT date prefix
+        // All URL components are lowercase
         items.Should().NotBeNull();
         items!.Should().HaveCount(2);
         items.Should().AllSatisfy(item => item.Url.Should().MatchRegex(@"^/[a-z-]+/blogs/[a-z0-9-]+$"));
@@ -269,7 +270,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     {
         // Act
         var response = await _client.GetAsync($"/api/content/filter{queryString}");
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
 
         // Assert
         items.Should().HaveCount(expectedCount);
@@ -280,7 +281,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     {
         // Act
         var response = await _client.GetAsync("/api/content/filter?collections=videos");
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
 
         // Assert
         var item = items![0];
@@ -307,7 +308,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().HaveCount(1); // Only 1 video in test data
 
@@ -326,7 +327,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         
         // Should not include the draft item (2026-02-01-draft-feature-announcement.md)
@@ -343,7 +344,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         
         // Should not include the draft item
@@ -359,7 +360,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         
         // Should not include the draft item even though it has ai section
@@ -375,7 +376,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         
         // Should not include the draft news item
@@ -394,7 +395,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         
         // In this specific case, draft items with ghcFeature=true would be included

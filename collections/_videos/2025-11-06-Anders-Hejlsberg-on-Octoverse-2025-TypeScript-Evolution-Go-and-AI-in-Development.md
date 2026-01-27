@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=GMWJceUTxuk
 title: 'Anders Hejlsberg on Octoverse 2025: TypeScript Evolution, Go, and AI in Development'
 author: GitHub
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 In this session, Anders Hejlsberg (TypeScript creator and Microsoft Technical Fellow) reacts to the Octoverse 2025 GitHub report. He discusses TypeScript's future, the significance of Go, AI's emerging role in programming, and the evolution of developer workflows, providing actionable insights for software professionals.<!--excerpt_end-->
 

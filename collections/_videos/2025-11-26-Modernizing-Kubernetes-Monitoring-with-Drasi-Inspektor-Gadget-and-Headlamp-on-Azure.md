@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Jejnhz9ZwD8
 title: Modernizing Kubernetes Monitoring with Drasi, Inspektor Gadget, and Headlamp on Azure
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Microsoft Events delivers an Ignite session featuring advanced Kubernetes monitoring and management strategies using Drasi, Inspektor Gadget, and Headlamp on Azure Kubernetes Service (AKS).<!--excerpt_end-->
 

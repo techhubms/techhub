@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/teaching-the-llm-good-habits-how-azure-mcp-uses-best-practice-tools/
 title: 'Teaching the LLM Good Habits: How Azure MCP Uses Best-Practice Tools'
 author: Chris Harris
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Chris Harris discusses how Azure MCP integrates best-practice guidance for application and infrastructure code, showing how Azure MCP uses system prompt instructions to keep LLMs like GitHub Copilot in VS Code aligned with secure, production-ready Azure solutions.<!--excerpt_end-->
 

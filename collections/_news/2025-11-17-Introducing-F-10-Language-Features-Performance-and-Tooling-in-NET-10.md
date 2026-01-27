@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/introducing-fsharp-10/
 title: 'Introducing F# 10: Language Features, Performance, and Tooling in .NET 10'
 author: Adam Boniecki
@@ -23,6 +23,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 Adam Boniecki reviews what's new in F# 10, including significant language improvements, performance upgrades, and tooling innovations released alongside .NET 10 and Visual Studio 2026.<!--excerpt_end-->
 

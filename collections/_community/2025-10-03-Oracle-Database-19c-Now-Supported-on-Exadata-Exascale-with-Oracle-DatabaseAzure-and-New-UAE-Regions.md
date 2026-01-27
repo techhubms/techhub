@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-now-supports-oracle-database-19c-on/ba-p/4458643
 title: Oracle Database 19c Now Supported on Exadata Exascale with Oracle Database@Azure and New UAE Regions
 author: SparshAgrawat
@@ -23,6 +23,7 @@ tags:
 - UAE North
 section_names:
 - azure
+primary_section: azure
 ---
 SparshAgrawat announces Oracle Database@Azure support for Oracle Database 19c on Exadata Exascale Infrastructure, alongside expanded UAE regional availability. The content describes technical migration benefits and options for organizations modernizing Oracle workloads with Azure services.<!--excerpt_end-->
 

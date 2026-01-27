@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-october/
 title: 'Visual Studio AI-Powered Roadmap: October Updates with GitHub Copilot'
 author: Rhea Patel
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Rhea Patel presents the official Visual Studio roadmap for October, highlighting new AI integrations such as GitHub Copilot agents, improvements to Agent Mode and Chat, and enhanced developer governance.<!--excerpt_end-->
 

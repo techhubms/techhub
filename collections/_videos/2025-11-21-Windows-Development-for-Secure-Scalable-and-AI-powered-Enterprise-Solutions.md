@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=zOy-tA1Zb0g
 title: Windows Development for Secure, Scalable, & AI-powered Enterprise Solutions
 author: Microsoft Events
@@ -29,6 +29,7 @@ section_names:
 - ai
 - coding
 - security
+primary_section: ai
 ---
 Microsoft Events delivers an Ignite session on building secure, scalable, and AI-ready solutions on the Windows developer platform, emphasizing agentic workflows, privacy, and practical Windows API integration.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/enterprise-software/ci-cd/how-to-streamline-github-api-calls-in-azure-pipelines/
 title: How to Streamline GitHub API Calls in Azure Pipelines Using a Custom DevOps Extension
 author: Tiago Pascoal
@@ -24,6 +24,7 @@ section_names:
 - devops
 - azure
 - security
+primary_section: azure
 ---
 Written by Tiago Pascoal, this post details how to build a custom Azure DevOps extension for secure, efficient, and centralized authentication with GitHub APIs from Azure Pipelines, streamlining automation and improving security controls.<!--excerpt_end-->
 

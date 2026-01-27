@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devclass.com/2025/04/08/vs-code-extension-marketplace-wars-cursor-users-hit-roadblocks/
 title: 'VS Code extension marketplace wars: Cursor users hit roadblocks'
 author: Tim Anderson
@@ -15,6 +15,7 @@ tags:
 - VS Code
 section_names:
 - devops
+primary_section: devops
 ---
 Microsoft's stricter enforcement of its Visual Studio Code extension marketplace terms has left users of Cursor, an AI-powered coding editor, facing new roadblocks—especially with popular Microsoft extensions like C/C++. <!--excerpt_end-->
 

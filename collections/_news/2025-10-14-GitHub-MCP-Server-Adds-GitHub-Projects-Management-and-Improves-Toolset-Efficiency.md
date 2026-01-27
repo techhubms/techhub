@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-14-github-mcp-server-now-supports-github-projects-and-more
 title: GitHub MCP Server Adds GitHub Projects Management and Improves Toolset Efficiency
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - Workflow Automation
 section_names:
 - devops
+primary_section: devops
 ---
 Allison introduces enhancements to the GitHub MCP Server, including support for GitHub Projects management and a simplified, multifunctional toolset, making DevOps workflows more manageable for development teams.<!--excerpt_end-->
 

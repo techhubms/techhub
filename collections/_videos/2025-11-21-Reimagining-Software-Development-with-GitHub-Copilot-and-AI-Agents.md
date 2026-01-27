@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=5Kfb2Zicn0A
 title: Reimagining Software Development with GitHub Copilot and AI Agents
 author: Microsoft Events
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Presented by Mario Rodriguez and Luke Hoban, this session from Microsoft Ignite shows how GitHub Copilot and AI agents can transform software development practices for DevOps teams with automation and integrated cloud tooling.<!--excerpt_end-->
 

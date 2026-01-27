@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=DUydgD7SkEo
 title: 'AB-900 Study Cram: Microsoft 365 Copilot & Agent Administration Fundamentals'
 author: John Savill's Technical Training
@@ -33,6 +33,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 John Savill's Technical Training delivers an in-depth AB-900 study cram, outlining Microsoft 365 Copilot, agent administration, Entra ID, Defender XDR, Purview, and responsible AI fundamentals for certification and technical mastery.<!--excerpt_end-->
 

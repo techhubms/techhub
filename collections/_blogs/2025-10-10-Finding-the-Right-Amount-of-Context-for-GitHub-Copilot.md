@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/how-much-context-should-you-give.html
 title: Finding the Right Amount of Context for GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels explains how to provide optimal code context to GitHub Copilot for effective assistance, offering practical tips for each Copilot feature.<!--excerpt_end-->
 

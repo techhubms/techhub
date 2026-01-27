@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=7faSLQS501E
 title: AI Builder’s Guide to Agent Development with Foundry Agent Service
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Events presents a deep-dive guide for developers on building AI agents with Foundry Agent Service, featuring speakers Salman Quazi, Dan Taylor, and Travis Wilson.<!--excerpt_end-->
 

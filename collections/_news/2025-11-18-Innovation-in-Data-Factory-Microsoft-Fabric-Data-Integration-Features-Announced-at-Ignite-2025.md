@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/advancing-data-integration-innovations-in-data-factory-in-ms-fabric-at-ignite-2025/
 title: 'Innovation in Data Factory: Microsoft Fabric Data Integration Features Announced at Ignite 2025'
 author: Microsoft Fabric Blog
@@ -31,6 +31,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog details the latest Data Factory innovations unveiled at Ignite 2025, including AI-powered data integration, SAP mirroring, and deep developer tooling improvements—with insights from the Microsoft team.<!--excerpt_end-->
 

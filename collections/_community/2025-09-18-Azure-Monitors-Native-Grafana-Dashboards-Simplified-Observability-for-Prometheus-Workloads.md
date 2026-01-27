@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-monitor-managed-service-for-prometheus-now-includes-native/ba-p/4454254
 title: 'Azure Monitor’s Native Grafana Dashboards: Simplified Observability for Prometheus Workloads'
 author: sunayanasingh
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 sunayanasingh introduces the native integration of Grafana dashboards within Azure Monitor managed Prometheus services, now directly accessible via the Azure portal. Learn about streamlined observability and easy onboarding for Azure workloads.<!--excerpt_end-->
 

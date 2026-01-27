@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/MPA-dZBUTUQ
 title: How to Test Nonexistent Code with GitHub Copilot
 author: GitHub
@@ -18,6 +18,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a demonstration on using GitHub Copilot AI to generate and test code, showing developers how to leverage Copilot for creating validation functions.<!--excerpt_end-->
 

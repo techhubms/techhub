@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/explore-hpc-ai-innovation-microsoft-amd-at-hpc-roundtable-2025/ba-p/4457974
 title: Exploring HPC and AI Innovation with Microsoft and AMD at the HPC Roundtable 2025
 author: Fernando_Aznar
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Fernando_Aznar offers an overview of Microsoft and AMD at the HPC Roundtable 2025 in Turin, highlighting advanced Azure HPC infrastructure for engineering, simulation, and AI innovation.<!--excerpt_end-->
 

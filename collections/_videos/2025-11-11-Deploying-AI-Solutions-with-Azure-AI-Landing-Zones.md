@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=8FWdFG55nXw
 title: Deploying AI Solutions with Azure AI Landing Zones
 author: Microsoft Developer
@@ -24,6 +24,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Thomas Maurer, joined by Bilal Amjad and Mike Swantek, explains Azure AI Landing Zones, illustrating their role in enabling secure, scalable, and governed AI deployments in Azure.<!--excerpt_end-->
 

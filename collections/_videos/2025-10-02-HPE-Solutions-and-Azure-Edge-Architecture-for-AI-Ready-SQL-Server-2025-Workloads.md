@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=QCF0C7NpBcE
 title: HPE Solutions and Azure Edge Architecture for AI-Ready SQL Server 2025 Workloads
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Developer presents how SQL Server 2025 and HPE's hybrid cloud infrastructure enable enterprise-grade analytics and AI solutions on Azure and edge, with integrated AI, RAG capabilities, and robust storage.<!--excerpt_end-->
 

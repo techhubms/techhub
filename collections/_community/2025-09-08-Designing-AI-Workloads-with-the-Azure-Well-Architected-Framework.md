@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/designing-ai-workloads-with-the-azure-well-architected-framework/ba-p/4452252
 title: Designing AI Workloads with the Azure Well-Architected Framework
 author: brauerblogs
@@ -27,6 +27,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 brauerblogs explains how to design and operate AI workloads using the Azure Well-Architected Framework, offering practical strategies for reliability, security, cost, and AI lifecycle management.<!--excerpt_end-->
 

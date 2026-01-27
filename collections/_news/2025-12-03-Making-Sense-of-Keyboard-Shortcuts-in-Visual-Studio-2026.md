@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/why-changing-keyboard-shortcuts-in-visual-studio-isnt-as-simple-as-it-seems/
 title: Making Sense of Keyboard Shortcuts in Visual Studio 2026
 author: Mads Kristensen
@@ -22,6 +22,7 @@ tags:
 - Workflow Management
 section_names:
 - coding
+primary_section: coding
 ---
 Mads Kristensen takes an honest look at why changing keyboard shortcuts in Visual Studio 2026 is complicated, detailing the history, profiles, schemes, and technical trade-offs for developers.<!--excerpt_end-->
 

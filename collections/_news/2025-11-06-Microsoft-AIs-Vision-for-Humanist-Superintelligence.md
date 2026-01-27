@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://microsoft.ai/news/towards-humanist-superintelligence/
 title: Microsoft AI’s Vision for Humanist Superintelligence
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 - Superintelligence
 section_names:
 - ai
+primary_section: ai
 ---
 Mustafa Suleyman, leading Microsoft AI’s Superintelligence Team, discusses the concept of Humanist Superintelligence and Microsoft's commitment to building advanced AI that aligns with human values and global challenges.<!--excerpt_end-->
 

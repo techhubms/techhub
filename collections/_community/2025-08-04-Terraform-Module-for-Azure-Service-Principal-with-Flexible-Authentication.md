@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mhsqun/service_principal/
 title: Terraform Module for Azure Service Principal with Flexible Authentication
 author: Unlikely-Ad4624
@@ -20,6 +20,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 In this community post, Unlikely-Ad4624 shares a Terraform module for provisioning Azure service principals with versatile authentication options and secure secret storage.<!--excerpt_end-->
 

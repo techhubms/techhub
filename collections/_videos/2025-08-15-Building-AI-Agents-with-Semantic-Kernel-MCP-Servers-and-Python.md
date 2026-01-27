@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/jKViNM42u9M
 title: Building AI Agents with Semantic Kernel, MCP Servers, and Python
 author: Microsoft Developer
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Developer presents an in-depth look at building AI agents using Semantic Kernel, MCP Servers, and Python, with demonstrations led by Evan Mattson and resources for hands-on experimentation.<!--excerpt_end-->
 

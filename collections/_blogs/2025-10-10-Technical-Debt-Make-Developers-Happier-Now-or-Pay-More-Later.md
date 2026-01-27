@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/technical-debt-make-developers-happier-now-or-pay-more-later/
 title: 'Technical Debt: Make Developers Happier Now or Pay More Later'
 author: Ernesto Tagwerker
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Ernesto Tagwerker examines how organizations manage technical debt, highlighting the influence of developer experience and the role of AI and DevOps practices in keeping teams productive and innovative.<!--excerpt_end-->
 

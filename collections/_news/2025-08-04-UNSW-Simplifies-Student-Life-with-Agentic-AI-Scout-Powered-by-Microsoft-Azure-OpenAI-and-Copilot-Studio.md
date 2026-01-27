@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/2025/08/04/unsws-scout-simplifying-student-life-with-agentic-ai-technology/
 title: 'UNSW Simplifies Student Life with Agentic AI: Scout Powered by Microsoft Azure OpenAI and Copilot Studio'
 author: stclarke
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Authored by stclarke, this article explores UNSW Sydney's integration of Scout, an AI agent developed with Microsoft Azure OpenAI and Copilot Studio, to transform student support and administrative efficiency.<!--excerpt_end-->
 

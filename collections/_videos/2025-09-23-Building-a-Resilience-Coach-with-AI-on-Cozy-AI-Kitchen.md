@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Rvp_oQXia_8
 title: Building a Resilience Coach with AI on Cozy AI Kitchen
 author: Microsoft Developer
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 In this episode, John Maeda from Microsoft Developer demonstrates how to design and deploy an AI-powered resilience coach using practical psychology and coding techniques on Cozy AI Kitchen.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/07/16/microsoft-is-named-a-leader-in-the-2025-gartner-magic-quadrant-for-endpoint-protection-platforms/
 title: Microsoft Named a Leader in Gartner's 2025 Magic Quadrant for Endpoint Protection
 author: Rob Lefferts
@@ -23,6 +23,7 @@ tags:
 - Threat Intelligence
 section_names:
 - security
+primary_section: security
 ---
 Rob Lefferts shares Microsoft's achievement as a Leader in the 2025 Gartner Magic Quadrant for Endpoint Protection Platforms, recognizing Defender for Endpoint's effectiveness against advanced cyberthreats.<!--excerpt_end-->
 

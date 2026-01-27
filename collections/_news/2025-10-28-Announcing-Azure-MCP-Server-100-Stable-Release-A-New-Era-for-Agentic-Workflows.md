@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/announcing-azure-mcp-server-stable-release/
 title: Announcing Azure MCP Server 1.0.0 Stable Release – A New Era for Agentic Workflows
 author: Sandeep Sen
@@ -34,6 +34,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Sandeep Sen announces Azure MCP Server 1.0, a stable and open-source release empowering developers to connect AI agents with Azure services through the Model Context Protocol. The update offers extensive integration, agentic workflow support, and robust DevOps compatibility.<!--excerpt_end-->
 

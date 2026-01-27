@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=l2_Dnh1a2IY
 title: Empowering Partners to Navigate the New Security Landscape
 author: Microsoft Events
@@ -35,6 +35,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events brings together security and AI partners at Ignite 2025 to explore Microsoft’s comprehensive security solutions, practical sales strategies, and collaboration for navigating evolving enterprise threats.<!--excerpt_end-->
 

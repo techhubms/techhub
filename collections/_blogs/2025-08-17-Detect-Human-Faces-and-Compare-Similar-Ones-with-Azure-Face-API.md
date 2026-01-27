@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/detect-human-faces-and-compare-similar-ones-with-face-api-in-azure/
 title: Detect Human Faces and Compare Similar Ones with Azure Face API
 author: Dellenny
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Dellenny demonstrates how to use the Azure Face API for facial recognition—showing developers step-by-step how to detect, analyze, and compare faces using Python and cloud-hosted AI services.<!--excerpt_end-->
 

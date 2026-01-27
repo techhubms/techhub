@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/real-time-security-with-continuous-access-evaluation-cae-comes-to-azure-devops/
 title: Continuous Access Evaluation (CAE) Brings Real-Time Security to Azure DevOps
 author: Angel Wong
@@ -23,6 +23,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 Angel Wong introduces support for Continuous Access Evaluation (CAE) on Azure DevOps, discussing its impact on real-time security and the implications for developers using Microsoft Entra ID.<!--excerpt_end-->
 

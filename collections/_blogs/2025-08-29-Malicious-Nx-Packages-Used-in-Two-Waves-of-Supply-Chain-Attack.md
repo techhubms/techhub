@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/malicious-nx-packages-used-in-two-waves-of-supply-chain-attack/?utm_source=rss&utm_medium=rss&utm_campaign=malicious-nx-packages-used-in-two-waves-of-supply-chain-attack
 title: Malicious Nx Packages Used in Two Waves of Supply Chain Attack
 author: Jeff Burt
@@ -32,6 +32,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Jeff Burt reports on a major supply chain attack against the Nx build system, highlighting credential theft, GitHub workflow abuse, and innovative use of AI CLI tools in a rapidly evolving DevOps security landscape.<!--excerpt_end-->
 

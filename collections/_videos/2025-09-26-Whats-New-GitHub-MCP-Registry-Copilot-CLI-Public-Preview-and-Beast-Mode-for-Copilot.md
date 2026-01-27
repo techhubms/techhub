@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=MB5uMCCGpMY
 title: "What's New: GitHub MCP Registry, Copilot CLI Public Preview, and Beast Mode for Copilot"
 author: GitHub
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Hosted by GitHub, this episode spotlights the rollout of new Copilot features, including advanced AI models, Copilot CLI public preview, and the GitHub MCP Registry, offering cutting-edge tools for AI-powered development.<!--excerpt_end-->
 

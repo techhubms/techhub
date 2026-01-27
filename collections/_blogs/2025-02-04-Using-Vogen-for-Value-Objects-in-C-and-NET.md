@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/vogen-and-value-objects-with-csharp-and-dotnet
 title: Using Vogen for Value Objects in C# and .NET
 author: Khalid Abuhakmeh
@@ -17,6 +17,7 @@ tags:
 - Vogen
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, Khalid Abuhakmeh demonstrates how value objects and the Vogen library can enhance code correctness and readability in C# and .NET. The article is packed with practical code examples and advice for applying value object patterns.<!--excerpt_end-->
 

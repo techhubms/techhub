@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=XDab1_fVntU
 title: 'Powering Financial Workflows with AI: Microsoft and LSEG Partnership at Ignite'
 author: Microsoft Events
@@ -28,6 +28,7 @@ tags:
 - Workspace
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents an Ignite session where speakers Matthew Kerner, Nej D'Jelal, and Max Grigoryev showcase how AI and Copilot Studio enable custom financial workflow agents built on LSEG data.<!--excerpt_end-->
 

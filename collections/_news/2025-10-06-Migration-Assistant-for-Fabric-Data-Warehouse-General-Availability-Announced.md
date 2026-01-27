@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-general-availability-of-migration-assistant-for-fabric-data-warehouse/
 title: 'Migration Assistant for Fabric Data Warehouse: General Availability Announced'
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces the Migration Assistant for Fabric Data Warehouse, detailing features that ease transition from T-SQL analytics databases like Azure Synapse, authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 

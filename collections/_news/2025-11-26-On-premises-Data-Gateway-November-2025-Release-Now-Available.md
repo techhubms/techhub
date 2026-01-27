@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-november-2025-release/
 title: On-premises Data Gateway November 2025 Release Now Available
 author: Microsoft Fabric Blog
@@ -21,6 +21,7 @@ tags:
 - Report Publishing
 section_names:
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog announces the November 2025 release of the on-premises data gateway. This update, version 3000.294, aligns with the latest Power BI Desktop and enhances data refresh consistency for business intelligence tasks.<!--excerpt_end-->
 

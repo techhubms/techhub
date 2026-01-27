@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=1JxLIxbEzxQ
 title: 'The Download: Highlights from GitHub Universe 2025, Octoverse, and Game Off'
 author: GitHub
@@ -23,6 +23,7 @@ tags:
 - Uv
 section_names:
 - devops
+primary_section: devops
 ---
 Christina Warren hosts this video episode covering GitHub Universe 2025 highlights, the latest Octoverse developer trends, new open source tool uv, and the GitHub Game Off launch.<!--excerpt_end-->
 

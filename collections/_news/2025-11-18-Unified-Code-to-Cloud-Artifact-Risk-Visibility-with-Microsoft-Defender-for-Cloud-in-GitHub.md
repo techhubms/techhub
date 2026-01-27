@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-18-unified-code-to-cloud-artifact-risk-visibility-with-microsoft-defender-for-cloud-now-in-public-preview
 title: Unified Code-to-Cloud Artifact Risk Visibility with Microsoft Defender for Cloud in GitHub
 author: Allison
@@ -24,6 +24,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Allison shares how new GitHub features, integrated with Microsoft Defender for Cloud, deliver end-to-end artifact provenance, runtime risk awareness, and targeted security remediation for code-to-cloud workflows.<!--excerpt_end-->
 

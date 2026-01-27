@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/ways-to-use-github-copilot-for-documentation-clarity.html
 title: Ways to Use GitHub Copilot for Documentation & Clarity
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels shares actionable ways developers can use GitHub Copilot to automate and improve documentation, clarifying code and enhancing team productivity.<!--excerpt_end-->
 

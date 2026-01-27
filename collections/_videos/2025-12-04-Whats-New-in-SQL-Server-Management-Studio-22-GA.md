@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=MCKjBrvX68M
 title: What's New in SQL Server Management Studio 22 GA
 author: Microsoft Developer
@@ -29,6 +29,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 Presented by Microsoft Developer, this episode covers what's new in SQL Server Management Studio 22 GA, focusing on new features, installation tips, and practical use for SQL Server and Azure SQL professionals.<!--excerpt_end-->
 

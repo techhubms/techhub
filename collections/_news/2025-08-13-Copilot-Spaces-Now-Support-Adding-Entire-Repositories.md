@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-13-add-repositories-to-spaces
 title: Copilot Spaces Now Support Adding Entire Repositories
 author: Allison
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces a powerful update to GitHub Copilot Spaces, allowing developers to add entire repositories for enhanced exploration and context management within their AI-powered workspace.<!--excerpt_end-->
 

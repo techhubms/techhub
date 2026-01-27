@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=eQzfXKf1YfY
 title: Debugging Godot C# Games with Visual Studio Code (Godot Series, Part 6)
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 - Watch Expressions
 section_names:
 - coding
+primary_section: coding
 ---
 In this episode, dotnet demonstrates essential debugging techniques for C# game development in Godot, using both Godot and Visual Studio Code tools to help developers confidently troubleshoot common game issues.<!--excerpt_end-->
 

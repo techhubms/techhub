@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/company-news/github-availability-report-october-2025/
 title: 'GitHub Availability Report: October 2025 – Analysis of Service Incidents'
 author: Jakub Oleksy
@@ -26,6 +26,7 @@ tags:
 - Third Party Dependencies
 section_names:
 - devops
+primary_section: devops
 ---
 Jakub Oleksy presents a clear analysis of four major GitHub service incidents in October 2025, detailing their technical root causes and GitHub's ongoing efforts toward greater reliability.<!--excerpt_end-->
 

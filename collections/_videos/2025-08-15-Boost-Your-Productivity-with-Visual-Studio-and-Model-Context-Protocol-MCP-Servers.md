@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Mz5iSGA6L4g
 title: Boost Your Productivity with Visual Studio & Model Context Protocol (MCP) Servers
 author: Microsoft Developer
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Developer presents a session on integrating Model Context Protocol (MCP) servers with Visual Studio and VS Code, demonstrating new AI-driven development tools for enhanced productivity.<!--excerpt_end-->
 

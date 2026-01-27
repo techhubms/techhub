@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/complete-beginners-guide-to-vibe-coding-an-app-in-5-minutes
 title: Vibe Coding a Podcast Analytics Dashboard with GitHub Copilot and AI
 author: James Montemagno
@@ -29,6 +29,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 James Montemagno shares his experience creating a podcast analytics dashboard in just minutes with GitHub Copilot and Claude Sonnet 4.5, highlighting how AI handled both architecture and implementation.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=eCFb_VyNMWU
 title: Upgrade MSVC with GitHub Copilot App Modernization for C++
 author: Microsoft Developer
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer showcases how GitHub Copilot app modernization for C++ streamlines migration to the latest MSVC Build Tools, guiding developers through code adjustments and modernization.<!--excerpt_end-->
 

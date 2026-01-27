@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/product-news/copilot-new-embedding-model-vs-code/
 title: GitHub Copilot’s New Embedding Model Improves Code Search in VS Code
 author: Shengyu Fu
@@ -29,6 +29,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Shengyu Fu details how the new GitHub Copilot embedding model enhances code search in VS Code by boosting retrieval quality, improving efficiency, and leveraging advanced AI training techniques.<!--excerpt_end-->
 

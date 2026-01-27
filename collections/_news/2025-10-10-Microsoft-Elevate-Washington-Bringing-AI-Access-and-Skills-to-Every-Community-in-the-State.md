@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/10/09/microsoft-elevate-washington/
 title: 'Microsoft Elevate Washington: Bringing AI Access and Skills to Every Community in the State'
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 - Washington State
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke reports on Microsoft's Elevate Washington initiative, offering free AI tools and training to schools and colleges across the state. The program supports students, educators, and community organizations in building digital literacy and readiness for an AI-driven future.<!--excerpt_end-->
 

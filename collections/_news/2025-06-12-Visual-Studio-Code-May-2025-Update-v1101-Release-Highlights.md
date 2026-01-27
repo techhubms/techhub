@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_101
 title: 'Visual Studio Code May 2025 Update: v1.101 Release Highlights'
 author: Visual Studio Code Team
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 The Visual Studio Code Team shares the May 2025 v1.101 release, introducing MCP advances, agent coding flow upgrades, enhanced GitHub Copilot Coding Agent integration, new Python developer tools, and more impactful improvements.<!--excerpt_end-->
 

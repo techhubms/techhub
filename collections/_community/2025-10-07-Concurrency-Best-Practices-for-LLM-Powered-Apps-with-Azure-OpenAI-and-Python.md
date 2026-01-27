@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/why-your-llm-powered-app-needs-concurrency/ba-p/4459584
 title: Concurrency Best Practices for LLM-Powered Apps with Azure OpenAI and Python
 author: Pamela_Fox
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Pamela Fox shares actionable best practices for building LLM-powered apps on Azure, emphasizing asynchronous Python frameworks to ensure speed and reliability when integrating Azure OpenAI Service and Azure AI Search.<!--excerpt_end-->
 

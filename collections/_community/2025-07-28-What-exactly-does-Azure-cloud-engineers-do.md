@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mbp183/what_exactly_does_azure_cloud_engineers_do/
 title: What exactly does Azure cloud engineers do?
 author: curious_monk77
@@ -18,6 +18,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Author curious_monk77, a C# .NET developer exploring Azure, asks for advice on transitioning to a cloud engineer role and seeks insights into daily activities and skills relevant for Azure platform specialists.<!--excerpt_end-->
 

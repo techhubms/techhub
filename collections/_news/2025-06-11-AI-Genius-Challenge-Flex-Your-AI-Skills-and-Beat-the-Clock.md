@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/ai-genius-challenge-flex-your-ai-skills-and-beat-the-clock/
 title: 'AI Genius Challenge: Flex Your AI Skills and Beat the Clock'
 author: Priyanka Vergadia
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Authored by Priyanka Vergadia, this post highlights the upcoming AI Genius Challenge—a fast-paced hackathon for developers to test their Azure AI skills and compete in real-time under simulated crisis conditions.<!--excerpt_end-->
 

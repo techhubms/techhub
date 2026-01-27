@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/preview-govern-secure-and-observe-a2a-apis-with-azure-api/ba-p/4469800
 title: 'Preview: Govern, Secure, and Observe A2A APIs with Azure API Management'
 author: budzynski
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 budzynski announces the preview of A2A API support in Azure API Management, giving organizations new ways to govern, secure, and monitor agent and AI APIs within a unified management plane.<!--excerpt_end-->
 

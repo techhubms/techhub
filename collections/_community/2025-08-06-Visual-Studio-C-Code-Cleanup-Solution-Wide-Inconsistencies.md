@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/VisualStudio/comments/1mjk2n7/analyze_code_cleanup_broken_cc/
 title: 'Visual Studio C++ Code Cleanup: Solution-Wide Inconsistencies'
 author: kohuept
@@ -19,6 +19,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 kohuept describes persistent problems with running Code Cleanup for C++ solutions in Visual Studio, questioning the inconsistent behavior and Microsoft's support response.<!--excerpt_end-->
 

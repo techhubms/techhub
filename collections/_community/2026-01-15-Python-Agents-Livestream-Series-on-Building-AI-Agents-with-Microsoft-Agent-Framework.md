@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-our-free-livestream-series-on-building-agents-in-python/ba-p/4485731
 title: 'Python + Agents: Livestream Series on Building AI Agents with Microsoft Agent Framework'
 author: Pamela_Fox
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Pamela Fox invites you to a free, six-part livestream series on building advanced AI agents in Python using the Microsoft Agent Framework. The series covers agent fundamentals, memory, RAG, workflow orchestration, monitoring, and HITL workflows with live demos and practical examples.<!--excerpt_end-->
 

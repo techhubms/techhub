@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=utOalOGsRXc
 title: 'Godot for C# Developers: Leveraging AI and GitHub Copilot for Prototyping'
 author: dotnet
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this video, dotnet walks C# developers through building playable prototypes in Godot, emphasizing how AI and GitHub Copilot make learning and development faster and smoother.<!--excerpt_end-->
 

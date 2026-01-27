@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/devops/comments/1mjuehw/the_jira_use_or_misuse/
 title: Engineers' Perspectives on Jira Usage and Implementation Challenges
 author: jmch16
@@ -25,6 +25,7 @@ tags:
 - Workflow Design
 section_names:
 - devops
+primary_section: devops
 ---
 jmch16 and contributors discuss Jira's pros, cons, and cultural impact in software development teams. The conversation explores daily frustrations, implementation woes, and opportunities for improved workflow governance.<!--excerpt_end-->
 

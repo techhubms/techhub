@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://jessehouwing.net/authenticate-connect-mggraph-using-oidc-in-github-actions/
 title: How to Authenticate Connect-MgGraph Using OIDC in GitHub Actions
 author: Jesse Houwing
@@ -17,6 +17,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Jesse Houwing walks through authenticating maintenance PowerShell scripts to Microsoft Graph in GitHub Actions, using OpenID Connect and Azure CLI, for improved security and automation.<!--excerpt_end-->
 

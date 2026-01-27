@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/09/unlock-cloud-savings-for-linux-vms-with-the-azure-hybrid-benefit/
 title: Unlock Cloud Savings for Linux VMs with the Azure Hybrid Benefit
 author: Thomas Maurer
@@ -26,6 +26,7 @@ tags:
 - Video
 section_names:
 - azure
+primary_section: azure
 ---
 Thomas Maurer provides clear guidance on using Azure Hybrid Benefit for Linux VMs, helping IT professionals modernize infrastructure and save costs in the cloud.<!--excerpt_end-->
 

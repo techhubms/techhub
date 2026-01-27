@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_i-love-how-easy-its-becoming-to-learn-on-activity-7389085159972593664-d87n
 title: 'GitHub Octoverse 2025: AI, Copilot, and the Rise of TypeScript in Software Development'
 author: stclarke
@@ -29,6 +29,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 stclarke summarizes the 2025 GitHub Octoverse report, highlighting how AI and Copilot are changing software development, the rise of TypeScript, and major shifts in the global developer landscape.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=S_GhJn8O-4E
 title: Optimizing Manufacturing at Kraft Heinz with AI, Azure Arc, and Microsoft Foundry
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events delivers actionable insights on Kraft Heinz’s manufacturing optimization, showcasing how Oliver Genscher, Alkesh Ladva, and Patrick Nestor harness AI and Azure technologies for scalable, autonomous digital transformation.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=uutyZeRddiQ
 title: 'Partner: Benefits for Accelerating Software Company Success | PBRK418'
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events shares an Ignite session on accelerating software company growth through the Microsoft AI Cloud Partner Program, highlighting AI investments, Azure sponsorships, and technical resources for developers.<!--excerpt_end-->
 

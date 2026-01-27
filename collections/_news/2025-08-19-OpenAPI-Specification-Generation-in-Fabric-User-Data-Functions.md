@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/openapi-specification-code-generation-now-available-in-fabric-user-data-functions/
 title: OpenAPI Specification Generation in Fabric User Data Functions
 author: Microsoft Fabric Blog
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog details how developers can use the Functions portal to automatically generate OpenAPI specifications for User Data Functions, supporting API integrations, client code generation, and AI agent capabilities.<!--excerpt_end-->
 

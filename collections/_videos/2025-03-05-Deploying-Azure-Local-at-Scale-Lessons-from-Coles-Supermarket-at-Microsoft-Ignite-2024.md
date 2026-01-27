@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=nPe4_ef8zFg
 title: 'Deploying Azure Local at Scale: Lessons from Coles Supermarket at Microsoft Ignite 2024'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this Microsoft Ignite 2024 interview, Rick Claus sits down with Jason Tayler of Coles Supermarket to discuss their extensive Azure Local deployment. Jason shares practical lessons, challenges, and recommendations for organizations adopting Azure Local at scale.<!--excerpt_end-->
 

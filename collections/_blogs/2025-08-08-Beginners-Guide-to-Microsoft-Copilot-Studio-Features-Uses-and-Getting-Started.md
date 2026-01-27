@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/what-is-microsoft-copilot-studio-a-beginners-guide/
 title: 'Beginner’s Guide to Microsoft Copilot Studio: Features, Uses, and Getting Started'
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 - SharePoint
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny introduces Microsoft Copilot Studio, providing a clear overview of this low-code AI development tool for beginners looking to create and deploy intelligent copilots and chatbots without deep coding expertise.<!--excerpt_end-->
 

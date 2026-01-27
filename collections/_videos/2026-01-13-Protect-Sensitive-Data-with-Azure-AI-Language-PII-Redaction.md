@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ZDaog_MJGS8
 title: Protect Sensitive Data with Azure AI Language PII Redaction
 author: Microsoft Developer
@@ -32,6 +32,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Developer explains how Azure AI Language PII Redaction helps protect sensitive data by detecting and redacting personally identifiable information in text, documents, and transcripts.<!--excerpt_end-->
 

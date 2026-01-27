@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-2025-holiday-recap-unified-data-an-ai-innovation/
 title: 'Microsoft Fabric 2025 Recap: Unified Data and AI Innovations'
 author: Microsoft Fabric Blog
@@ -34,6 +34,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 Microsoft Fabric Blog summarizes the platform's achievements in 2025, focusing on unified data and AI innovation, security upgrades, modernization, developer tooling, expanded Copilot access, and community involvement.<!--excerpt_end-->
 

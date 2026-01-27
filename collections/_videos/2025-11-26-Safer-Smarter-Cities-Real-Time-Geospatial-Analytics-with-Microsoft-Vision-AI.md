@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ih-2UjQGwZw
 title: 'Safer, Smarter Cities: Real-Time Geospatial Analytics with Microsoft Vision AI'
 author: Microsoft Events
@@ -32,6 +32,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Presented by Andrew Hester from the City of Raleigh at Microsoft Ignite 2025, this session illustrates how Microsoft Vision AI and Azure enable smarter city safety through real-time geospatial analytics and simulation technologies.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/agentic-integration-with-sap-servicenow-and-salesforce/ba-p/4466049
 title: 'Agentic Integration Patterns: Microsoft Copilot Studio with SAP, ServiceNow, and Salesforce'
 author: pranabpaul
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 pranabpaul explains how to design agentic integrations between Microsoft Copilot Studio, Azure Logic Apps, and major platforms—SAP, ServiceNow, and Salesforce—focusing on best practices for automation and interoperability.<!--excerpt_end-->
 

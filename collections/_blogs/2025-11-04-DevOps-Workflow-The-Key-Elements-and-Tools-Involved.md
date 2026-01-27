@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/devops-workflow-the-key-elements-and-tools-involved/
 title: 'DevOps Workflow: The Key Elements and Tools Involved'
 author: Peter Baker
@@ -41,6 +41,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Peter Baker explores the key elements and practices of modern DevOps workflows, focusing on automation, collaboration, CI/CD, IaC, security integration, and tool selection for continuous software delivery.<!--excerpt_end-->
 

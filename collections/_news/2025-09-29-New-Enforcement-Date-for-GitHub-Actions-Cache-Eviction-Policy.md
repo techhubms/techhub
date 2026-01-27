@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-29-new-date-for-enforcement-of-cache-eviction-policy
 title: New Enforcement Date for GitHub Actions Cache Eviction Policy
 author: Allison
@@ -18,6 +18,7 @@ tags:
 - Workflow Optimization
 section_names:
 - devops
+primary_section: devops
 ---
 Allison reports on the postponement of GitHub Actions' new cache eviction policy, providing guidance for developers and organizations to review workflows before enforcement begins.<!--excerpt_end-->
 

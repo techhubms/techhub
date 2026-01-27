@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=V0Af7y7aMBE
 title: Build Better Web Apps with Blazor in .NET 10
 author: dotnet
@@ -26,6 +26,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 dotnet explores the future of Blazor in .NET 10, highlighting security enhancements, diagnostics, and productivity features for modern, efficient web application development.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-august-2025/
 title: 'What’s New in Azure AI Foundry: August 2025 Release Highlights'
 author: Nick Brady
@@ -39,6 +39,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Nick Brady summarizes the August 2025 updates to Azure AI Foundry, highlighting the launch of the GPT-5 family, new agent tools like Browser Automation, updated AI/ML models, and significant enhancements to APIs, SDKs, and documentation for Microsoft-centric developers.<!--excerpt_end-->
 

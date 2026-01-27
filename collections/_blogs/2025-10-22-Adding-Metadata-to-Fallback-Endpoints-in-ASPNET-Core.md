@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/adding-metadata-to-fallback-endpoints-in-aspnetcore/
 title: Adding Metadata to Fallback Endpoints in ASP.NET Core
 author: Andrew Lock
@@ -23,6 +23,7 @@ tags:
 - Routing
 section_names:
 - coding
+primary_section: coding
 ---
 Andrew Lock delves into the quirks of applying metadata to fallback endpoints in ASP.NET Core, providing guidance on best practices for minimal APIs, MVC, and Razor Pages.<!--excerpt_end-->
 

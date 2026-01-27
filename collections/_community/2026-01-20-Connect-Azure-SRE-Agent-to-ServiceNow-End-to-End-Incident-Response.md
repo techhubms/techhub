@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 dbandaru demonstrates how to connect Azure SRE Agent to ServiceNow, automating incident detection and resolution through AI-driven workflows and seamless integration, with instructions for configuration and hands-on testing.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2026/01/13/how-microsoft-builds-privacy-and-security-to-work-hand-in-hand/
 title: How Microsoft Unifies Privacy and Security to Build Trust
 author: Terrell Cox
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Terrell Cox, Vice President for Microsoft Security and Deputy CISO for Privacy and Policy, details Microsoft’s integrated strategy for privacy and security, offering insights into global regulatory compliance and technical safeguards.<!--excerpt_end-->
 

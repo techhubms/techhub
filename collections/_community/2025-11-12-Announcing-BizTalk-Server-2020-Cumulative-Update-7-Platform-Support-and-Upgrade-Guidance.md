@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-biztalk-server-2020-cumulative-update-7/ba-p/4469100
 title: 'Announcing BizTalk Server 2020 Cumulative Update 7: Platform Support and Upgrade Guidance'
 author: hcamposu
@@ -23,6 +23,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 hcamposu announces the release of BizTalk Server 2020 CU7, focusing on new platform compatibility, upgrade advice, and migration paths to Azure Logic Apps for integration workloads.<!--excerpt_end-->
 

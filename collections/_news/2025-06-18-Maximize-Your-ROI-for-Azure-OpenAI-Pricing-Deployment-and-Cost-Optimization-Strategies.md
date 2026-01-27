@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/maximize-your-roi-for-azure-openai/
 title: 'Maximize Your ROI for Azure OpenAI: Pricing, Deployment, and Cost Optimization Strategies'
 author: Steve Sweetman
@@ -30,6 +30,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 In this article, Steve Sweetman explores maximizing returns with Azure OpenAI by reviewing flexible pricing, deployment types, cost-saving features, and integration across the Azure AI ecosystem.<!--excerpt_end-->
 

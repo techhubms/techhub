@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=38ZPYhN5N8E
 title: 'Agentic AI for Creatives: Microsoft Foundry and Data Solutions at Ignite'
 author: Microsoft Events
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents an Ignite session featuring Marco Casalaina and other speakers on agentic AI for creative industries. The session covers integration of AI with Azure services, practical demos, and case studies with Pantone, TomTom, and Kantar.<!--excerpt_end-->
 

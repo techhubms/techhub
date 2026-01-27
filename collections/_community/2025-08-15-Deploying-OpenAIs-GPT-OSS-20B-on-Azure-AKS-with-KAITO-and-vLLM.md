@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/deploying-openai-s-first-open-source-model-on-azure-aks-with/ba-p/4444234
 title: Deploying OpenAI’s GPT-OSS-20B on Azure AKS with KAITO and vLLM
 author: maljazaery
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 maljazaery presents a practical step-by-step tutorial on deploying OpenAI’s GPT-OSS-20B model on Azure’s AKS using KAITO and vLLM. The guide covers the full technical workflow, including cluster creation, GPU setup, inference optimization, public exposure, endpoint testing, and load benchmarking.<!--excerpt_end-->
 

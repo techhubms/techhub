@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/data-integration-with-microsoft-fabric-unifying-your-data-universe/
 title: 'Data Integration with Microsoft Fabric: Unifying Your Data Universe'
 author: Dellenny
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Dellenny discusses how Microsoft Fabric streamlines data integration across cloud and on-premises systems, detailing features like Dataflows Gen2, integrated Azure Data Factory, and real-time event processing within a unified analytics platform.<!--excerpt_end-->
 

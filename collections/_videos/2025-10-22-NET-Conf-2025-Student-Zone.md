@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=-c8r2fMi9cg
 title: .NET Conf 2025 - Student Zone
 author: dotnet
@@ -21,6 +21,7 @@ tags:
 - Virtual Event
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet presents the .NET Conf 2025 Student Zone—a three-day virtual event featuring live sessions, community speakers, and opportunities for developers to improve their .NET skills.<!--excerpt_end-->
 

@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 dbandaru introduces the Azure Static Web Apps skill for GitHub Copilot, showcasing how developers can deploy web apps to Azure using streamlined, guided workflows powered by AI and agent skills.<!--excerpt_end-->
 

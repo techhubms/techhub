@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-logic-apps-mcp-servers-public-preview/ba-p/4450419
 title: Build Modular Agents with Logic Apps MCP Servers (Public Preview)
 author: KentWeareMSFT
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 KentWeareMSFT announces the public preview of MCP server support in Azure Logic Apps, describing new ways for developers to build and manage modular agents with improved integration and governance.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/github-copilot-coding-agent-101-getting-started-with-agentic-workflows-on-github/
 title: Getting Started with GitHub Copilot Coding Agent and Agentic Workflows
 author: Alexandra Lietzke
@@ -23,6 +23,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Alexandra Lietzke explains how to use the GitHub Copilot coding agent to delegate and automate software development tasks, from issue assignment to pull request review, enhancing productivity and security for developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/top-10-things-you-can-do-with-github-copilot-as-a-new-developer-2/
 title: Top 10 Things You Can Do with GitHub Copilot as a New Developer
 author: Dellenny
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny presents a list of the top ten ways new developers can use GitHub Copilot to boost productivity and accelerate the learning curve, sharing practical tips and insights.<!--excerpt_end-->
 

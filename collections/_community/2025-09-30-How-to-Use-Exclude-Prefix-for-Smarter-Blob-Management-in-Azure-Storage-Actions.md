@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/exclude-prefix-in-azure-storage-action-smarter-blob-management/ba-p/4440075
 title: How to Use Exclude Prefix for Smarter Blob Management in Azure Storage Actions
 author: ManjunathS
@@ -21,6 +21,7 @@ tags:
 - Workflow Automation
 section_names:
 - azure
+primary_section: azure
 ---
 ManjunathS details the use of the Exclude Prefix feature in Azure Storage Actions, highlighting how Azure users can automate blob management tasks while protecting critical data through exclusion rules.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=EXxIeOfJsqA
 title: 'MCP Gets OAuth: Understanding the New Authorization Specification'
 author: Microsoft Developer
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 In this session, Microsoft Developer examines MCP’s transition to OAuth 2.1, highlighting improved authorization and integration for AI agents.<!--excerpt_end-->
 

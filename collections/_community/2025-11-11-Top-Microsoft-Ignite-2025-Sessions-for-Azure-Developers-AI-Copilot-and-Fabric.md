@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-events/build-your-ignite-schedule-top-sessions-for-developers/ba-p/4469064
 title: 'Top Microsoft Ignite 2025 Sessions for Azure Developers: AI, Copilot, and Fabric'
 author: GalimahB
@@ -24,6 +24,7 @@ section_names:
 - devops
 - github-copilot
 - ml
+primary_section: github-copilot
 ---
 GalimahB shares a curated guide to the best Microsoft Ignite 2025 sessions for Azure-focused developers, highlighting AI, GitHub Copilot, Fabric, and CI/CD innovations.<!--excerpt_end-->
 

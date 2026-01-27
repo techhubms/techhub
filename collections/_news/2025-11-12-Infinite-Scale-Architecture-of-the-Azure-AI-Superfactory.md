@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://aka.ms/AAyjgcy
 title: 'Infinite Scale: Architecture of the Azure AI Superfactory'
 author: Scott Guthrie
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Scott Guthrie details the architectural innovations powering Microsoft's Azure AI superfactory, focusing on hyperscale AI datacenters, advanced cooling, and networking systems, offering organizations unmatched scale and flexibility for AI development workloads.<!--excerpt_end-->
 

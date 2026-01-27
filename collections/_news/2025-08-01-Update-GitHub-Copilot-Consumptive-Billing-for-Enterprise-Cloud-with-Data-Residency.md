@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-01-update-on-github-copilot-consumptive-billing-for-github-enterprise-cloud-with-data-residency
 title: 'Update: GitHub Copilot Consumptive Billing for Enterprise Cloud with Data Residency'
 author: Allison
@@ -19,6 +19,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Authored by Allison, this update details new GitHub Copilot consumptive billing practices for Enterprise Cloud customers with data residency, outlining monthly premium request allowances and overage charges.<!--excerpt_end-->
 

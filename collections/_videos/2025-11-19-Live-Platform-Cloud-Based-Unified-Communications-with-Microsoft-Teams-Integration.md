@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=P1BLUYik7SM
 title: 'Live Platform: Cloud-Based Unified Communications with Microsoft Teams Integration'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a foundational overview of AudioCodes Live Platform, highlighting its Microsoft Teams integration, AI-enhanced voice capabilities, and centralized management for unified communications.<!--excerpt_end-->
 

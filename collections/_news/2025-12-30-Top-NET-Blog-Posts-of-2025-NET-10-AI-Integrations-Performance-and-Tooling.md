@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/top-dotnet-blogs-posts-of-2025/
 title: 'Top .NET Blog Posts of 2025: .NET 10, AI Integrations, Performance, and Tooling'
 author: Jon Galloway
@@ -31,6 +31,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Jon Galloway highlights the defining .NET blog posts from 2025, including .NET 10's release, practical AI and Copilot integrations, performance gains, developer tooling updates, and community events relevant to modern .NET developers.<!--excerpt_end-->
 

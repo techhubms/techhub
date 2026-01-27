@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=hLBiJZT194A
 title: Build Secure Applications with Azure Policy and Service Groups
 author: Microsoft Events
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents an Ignite 2025 session featuring Jodi Boone and Kemley Nieva, exploring how Azure Policy and Service Groups can automate security governance and compliance across cloud applications.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/understanding-azure-ad-tenants-users-groups-and-roles-a-practical-guide/
 title: 'Understanding Azure AD Tenants, Users, Groups, and Roles: A Practical Guide'
 author: John Edward
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 John Edward presents a practical guide to Azure AD and Microsoft Entra ID, explaining tenants, user management, groups, and roles for identity and security in the cloud.<!--excerpt_end-->
 

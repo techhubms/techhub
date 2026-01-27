@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=0r-ZypiCtFk
 title: Integrating Local AI in Enterprise Apps with Windows AI APIs and Microsoft Foundry
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Microsoft Events presents an in-depth session on building and customizing local AI within enterprise apps using Windows AI APIs and Foundry, featuring speakers Connor Al-Joundi and Ivan Razumenic.<!--excerpt_end-->
 

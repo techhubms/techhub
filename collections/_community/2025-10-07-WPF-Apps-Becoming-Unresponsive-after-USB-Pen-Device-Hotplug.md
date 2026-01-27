@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/app-development/wpf-application-becomes-unresponsive-after-plugging-unplugging/m-p/4459751#M1274
 title: WPF Apps Becoming Unresponsive after USB Pen Device Hotplug
 author: shepburn
@@ -23,6 +23,7 @@ tags:
 - WPF Performance
 section_names:
 - coding
+primary_section: coding
 ---
 shepburn explores a recurring problem where WPF applications freeze or become unresponsive when plugging or unplugging USB devices that provide touch or stylus functionality, sharing observations, a workaround, and its limitations.<!--excerpt_end-->
 

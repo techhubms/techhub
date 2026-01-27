@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=twQTixBZen8
 title: GitHub Copilot Build Performance Analysis in Visual Studio 2026
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer examines how GitHub Copilot utilizes MSVC trace capture in Visual Studio 2026, offering actionable build optimization insights for Windows C++ developers.<!--excerpt_end-->
 

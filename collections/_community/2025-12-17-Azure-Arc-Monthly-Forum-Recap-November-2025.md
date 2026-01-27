@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-monthly-forum-recap-november-2025/ba-p/4478127
 title: Azure Arc Monthly Forum Recap – November 2025
 author: yunishussein
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 yunishussein summarizes the key discussions from the November 2025 Azure Arc Monthly Forum, with highlights on Auto Agent Upgrade, Essential Machine Management, CIS Baseline Compliance, and answers to common Azure management and security questions.<!--excerpt_end-->
 

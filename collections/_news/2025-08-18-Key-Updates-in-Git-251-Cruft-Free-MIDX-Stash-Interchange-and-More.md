@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/open-source/git/highlights-from-git-2-51/
 title: 'Key Updates in Git 2.51: Cruft-Free MIDX, Stash Interchange, and More'
 author: Taylor Blau
@@ -27,6 +27,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 In this technical write-up, Taylor Blau guides readers through the most significant improvements and new features in Git 2.51, highlighting technical details and practical implications for developers and DevOps practitioners.<!--excerpt_end-->
 

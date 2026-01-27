@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/open-source/git/highlights-from-git-2-52/
 title: "What's New in Git 2.52: Features and Performance Enhancements"
 author: Taylor Blau
@@ -25,6 +25,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Taylor Blau explores the technical highlights of the Git 2.52 release, discussing new commands, repository maintenance strategies, performance optimizations, and upcoming changes for developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-sts-releases-supported-for-24-months/
 title: .NET Standard Term Support (STS) Releases Will Be Supported for 24 Months Starting with .NET 9
 author: Jamshed Damkewala
@@ -25,6 +25,7 @@ tags:
 - Upgrade Strategy
 section_names:
 - coding
+primary_section: coding
 ---
 Jamshed Damkewala outlines Microsoft's decision to extend support for .NET STS releases to 24 months, starting with .NET 9, and explains how this impacts lifecycle policy and developers' upgrade cycles.<!--excerpt_end-->
 

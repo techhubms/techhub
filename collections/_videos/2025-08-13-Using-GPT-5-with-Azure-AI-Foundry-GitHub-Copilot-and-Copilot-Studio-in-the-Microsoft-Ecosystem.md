@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=360I_jTLI_I
 title: Using GPT-5 with Azure AI Foundry, GitHub Copilot, and Copilot Studio in the Microsoft Ecosystem
 author: John Savill's Technical Training
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - github-copilot
+primary_section: github-copilot
 ---
 John Savill's Technical Training explores how developers and makers can use GPT-5 on Microsoft platforms, focusing on Azure AI Foundry, GitHub Copilot, and Copilot Studio for AI-powered solutions.<!--excerpt_end-->
 

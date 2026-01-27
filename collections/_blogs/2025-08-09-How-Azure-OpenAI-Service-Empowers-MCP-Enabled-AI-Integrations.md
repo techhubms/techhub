@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/mcp-ai-unlocking-agentic-intelligence-with-a-usb-c-connector-for-ai/
 title: How Azure OpenAI Service Empowers MCP-Enabled AI Integrations
 author: Dellenny
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Dellenny explores how the Model Context Protocol (MCP) revolutionizes AI integrations and demonstrates Microsoft Azure’s leading role in secure, scalable MCP adoption for enterprise AI workflows.<!--excerpt_end-->
 

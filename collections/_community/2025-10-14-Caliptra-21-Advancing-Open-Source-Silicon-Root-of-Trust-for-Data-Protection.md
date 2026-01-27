@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/caliptra-2-1-an-open-source-silicon-root-of-trust-with-enhanced/ba-p/4460758
 title: 'Caliptra 2.1: Advancing Open-Source Silicon Root of Trust for Data Protection'
 author: Bryankel
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Bryankel presents Caliptra 2.1, Microsoft’s open-source silicon Root of Trust subsystem, detailing its quantum-resilient cryptography and integration with Azure’s security architecture, aiming to advance industry-wide device security.<!--excerpt_end-->
 

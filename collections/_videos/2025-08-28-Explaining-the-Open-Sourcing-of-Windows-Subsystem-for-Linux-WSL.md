@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/oL9wOFW4p9o
 title: Explaining the Open Sourcing of Windows Subsystem for Linux (WSL)
 author: Microsoft Developer
@@ -21,6 +21,7 @@ tags:
 - WSL
 section_names:
 - coding
+primary_section: coding
 ---
 Microsoft Developer, in this brief video, explains the technical implications of open sourcing WSL, highlighting new opportunities for the community to inspect and contribute to the codebase.<!--excerpt_end-->
 

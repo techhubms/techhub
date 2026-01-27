@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners
 title: Deprecation of Node 20 on GitHub Actions Runners
 author: Allison
@@ -22,6 +22,7 @@ tags:
 - Workflow
 section_names:
 - devops
+primary_section: devops
 ---
 Allison summarizes the end-of-life timeline for Node20 on GitHub Actions runners and outlines migration steps for maintainers and users as Node24 becomes the new default.<!--excerpt_end-->
 

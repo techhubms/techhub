@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/data-mapper-test-executor-a-new-addition-to-logic-apps-standard/ba-p/4472440
 title: Data Mapper Test Executor in Logic Apps Standard Test Framework
 author: WSilveira
@@ -23,6 +23,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 WSilveira details how developers can leverage the Data Mapper Test Executor for Logic Apps Standard, offering native capabilities to test data transformations efficiently within automated workflows.<!--excerpt_end-->
 

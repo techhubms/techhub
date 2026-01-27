@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=x0dfj95Cj0U
 title: 'Introducing TickerQ: A Modern .NET Scheduling Library for C# Developers'
 author: Nick Chapsas
@@ -17,6 +17,7 @@ tags:
 - TickerQ
 section_names:
 - coding
+primary_section: coding
 ---
 Nick Chapsas introduces TickerQ, a new and improved scheduling library tailored for .NET and C# developers, highlighting its advantages over Quartz and Hangfire.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-19-github-actions-macos-13-runner-image-is-closing-down
 title: Retirement of GitHub Actions macOS 13 Runner Image Announced
 author: Larissa Fortuna
@@ -20,6 +20,7 @@ tags:
 - X86 64
 section_names:
 - devops
+primary_section: devops
 ---
 Larissa Fortuna outlines the deprecation timeline for the GitHub Actions macOS 13 runner image, including migration steps and upcoming support changes for Intel and Apple Silicon architectures.<!--excerpt_end-->
 

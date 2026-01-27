@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/tutorial-videos-setting-up-github-copilot-for-your-company/
 title: 'Tutorial Videos: Setting up GitHub Copilot for Your Company'
 author: Eldrick Wega
@@ -31,6 +31,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Eldrick Wega shares a succinct video series on configuring GitHub and GitHub Copilot for enterprises, highlighting licensing, SSO, Azure connectivity, and agentic platform setup.<!--excerpt_end-->
 

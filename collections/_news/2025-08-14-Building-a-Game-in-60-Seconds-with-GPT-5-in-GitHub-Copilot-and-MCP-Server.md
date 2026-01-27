@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/generative-ai/gpt-5-in-github-copilot-how-i-built-a-game-in-60-seconds/
 title: Building a Game in 60 Seconds with GPT-5 in GitHub Copilot and MCP Server
 author: Kedasha Kerr
@@ -30,6 +30,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Kedasha Kerr demonstrates how developers can rapidly build applications using GPT-5 in GitHub Copilot and automate GitHub workflows via the new MCP server, revolutionizing AI-powered coding and DevOps.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/virtual-network-data-gateway-support-for-fabric-pipeline-dataflow-gen2-fast-copy-and-copy-job-is-now-generally-available/
 title: Virtual Network Data Gateway Now Generally Available for Fabric Pipeline, Dataflow Gen2, and Copy Job
 author: Microsoft Fabric Blog
@@ -21,6 +21,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog announces the general availability of Virtual Network Data Gateway for Fabric Pipeline, Dataflow Gen2 Fast Copy, and Copy Job, detailing secure, high-performance data integration capabilities crucial for data-driven enterprises.<!--excerpt_end-->
 

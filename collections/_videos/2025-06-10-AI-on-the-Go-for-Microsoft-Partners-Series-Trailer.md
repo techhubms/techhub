@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=cWIHcbOihY4
 title: 'AI on the Go for Microsoft Partners: Series Trailer'
 author: Microsoft Cloud
@@ -19,6 +19,7 @@ tags:
 - Partner Opportunities
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Cloud previews its 'AI on the Go for Microsoft Partners' video series, offering partners bite-sized updates on Microsoft AI trends, upcoming opportunities, and leadership insights.<!--excerpt_end-->
 

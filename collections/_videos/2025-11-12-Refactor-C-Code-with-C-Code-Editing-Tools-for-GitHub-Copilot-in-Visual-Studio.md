@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=PWmLjg0HFT4
 title: Refactor C++ Code with C++ Code Editing Tools for GitHub Copilot in Visual Studio
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer demonstrates new C++ code editing tools for GitHub Copilot in Visual Studio, showcasing enhanced refactoring support through deeper code analysis and context-aware suggestions.<!--excerpt_end-->
 

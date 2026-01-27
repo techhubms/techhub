@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ptdNWGj8CN8
 title: '.NET AI Community Standup: High-Performance AI Inference on a Budget'
 author: dotnet
@@ -30,6 +30,7 @@ section_names:
 - ai
 - coding
 - ml
+primary_section: ai
 ---
 Hosted by the dotnet team, this session features Bruno Capuano and Tal Wald as they demonstrate strategies for achieving fast, cost-effective AI inference using .NET, ONNX Runtime, and modern APIs.<!--excerpt_end-->
 

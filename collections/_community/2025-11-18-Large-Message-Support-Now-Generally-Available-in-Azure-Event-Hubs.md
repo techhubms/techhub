@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/general-availability-large-message-support-in-azure-event-hubs/ba-p/4471094
 title: Large Message Support Now Generally Available in Azure Event Hubs
 author: Sannidhya_Glodha
@@ -22,6 +22,7 @@ tags:
 - Streaming
 section_names:
 - azure
+primary_section: azure
 ---
 Sannidhya_Glodha announces the general availability of Large Message Support in Azure Event Hubs, enabling streaming messages up to 20 MB in scalable dedicated clusters for reliable data processing.<!--excerpt_end-->
 

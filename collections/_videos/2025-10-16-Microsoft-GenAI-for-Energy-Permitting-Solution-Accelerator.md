@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=wCI6Oqiv4KQ
 title: Microsoft GenAI for Energy Permitting Solution Accelerator
 author: Microsoft Cloud
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Cloud presents a solution accelerator using generative AI on Azure to streamline energy permitting, automating document creation and compliance for faster regulatory approvals.<!--excerpt_end-->
 

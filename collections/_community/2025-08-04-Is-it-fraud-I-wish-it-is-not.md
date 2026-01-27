@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mheqeu/is_it_fraud_i_wish_it_is_not/
 title: Is it fraud! I wish it is not
 author: m7mdshms
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this short Reddit community post, m7mdshms voices concerns about GitHub Copilot's chat credit consumption, questioning differences in usage rates.<!--excerpt_end-->
 

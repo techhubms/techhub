@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/copilot-faster-smarter-and-built-for-how-you-work-now/
 title: 'GitHub Copilot: From Autocomplete to Multi-Model AI Coding Assistant'
 author: Ashley Willis
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Ashley Willis details the transformation of GitHub Copilot into an advanced multi-model AI coding assistant, emphasizing its collaborative features, security, and seamless developer workflows.<!--excerpt_end-->
 

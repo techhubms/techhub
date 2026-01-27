@@ -21,6 +21,7 @@ tags:
 - Sensing Modalities
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke highlights Microsoft's announcement of the Rho-alpha robotics model, which advances physical AI by enabling robots to interpret natural language and perform complex manipulations with precision.<!--excerpt_end-->
 

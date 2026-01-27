@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/powershell/ai-shell-preview-2/
 title: 'Announcing AI Shell Preview 2: Enhanced Azure PowerShell Integration and More'
 author: Steven Bucher
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 In this update, Steven Bucher and the AI Shell Team share details on AI Shell Preview 2, including enhanced Azure PowerShell support, improved third-party AI model integrations, deployment tools, and native error handling.<!--excerpt_end-->
 

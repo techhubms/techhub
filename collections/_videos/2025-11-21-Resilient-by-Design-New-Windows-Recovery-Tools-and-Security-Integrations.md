@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=U0P_Js91VjQ
 title: 'Resilient by Design: New Windows Recovery Tools and Security Integrations'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - WinRE
 section_names:
 - security
+primary_section: security
 ---
 Microsoft Events hosts an Ignite 2025 breakout session featuring Kristian Andaker, Tom Bouathong, and Aaron Farmer to discuss the evolution of Windows resilience, new security partnerships, and the latest Windows recovery tools.<!--excerpt_end-->
 

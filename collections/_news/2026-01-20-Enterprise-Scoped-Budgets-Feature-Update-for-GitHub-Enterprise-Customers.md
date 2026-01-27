@@ -21,6 +21,7 @@ tags:
 - Spending Limits
 section_names:
 - devops
+primary_section: devops
 ---
 Allison shares news about a GitHub Enterprise feature: administrators can now configure enterprise-scoped budgets that exclude cost center usage, simplifying enterprise spending control and budgeting.<!--excerpt_end-->
 

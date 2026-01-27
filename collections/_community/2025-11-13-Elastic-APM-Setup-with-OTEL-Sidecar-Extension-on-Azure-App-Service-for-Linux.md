@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-ii-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469576
 title: Elastic APM Setup with OTEL Sidecar Extension on Azure App Service for Linux
 author: TulikaC
@@ -28,6 +28,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 TulikaC explains how to connect Azure App Service for Linux to Elastic APM using an OpenTelemetry sidecar extension—covering setup steps, app settings, and validation in Kibana.<!--excerpt_end-->
 

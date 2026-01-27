@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/from-idea-to-pr-a-guide-to-github-copilots-agentic-workflows/
 title: From idea to PR - A guide to GitHub Copilot’s agentic workflows
 author: Chris Reddington
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, Chris Reddington explores how developers can leverage GitHub Copilot’s agentic coding agent, its chat modes, and the remote MCP server to efficiently transform issues into thoroughly tested pull requests. <!--excerpt_end--> The guide avoids unnecessary hype and instead presents clear, actionable steps for maximizing Copilot’s features in real-world scenarios.
 

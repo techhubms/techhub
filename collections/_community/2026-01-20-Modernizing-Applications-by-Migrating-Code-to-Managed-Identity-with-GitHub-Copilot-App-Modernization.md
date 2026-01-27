@@ -26,6 +26,7 @@ section_names:
 - coding
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Authored by ayangupta, this guide demonstrates how GitHub Copilot App Modernization assists developers in migrating applications to use Azure Managed Identity, automating code and configuration changes while improving security and operational practices.<!--excerpt_end-->
 

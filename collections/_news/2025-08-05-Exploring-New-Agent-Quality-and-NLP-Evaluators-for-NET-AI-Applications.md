@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/exploring-agent-quality-and-nlp-evaluators/
 title: Exploring New Agent Quality and NLP Evaluators for .NET AI Applications
 author: Shyam Namboodiripad
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 In this post, Shyam Namboodiripad details the latest agent quality and NLP evaluators in the Microsoft.Extensions.AI.Evaluation libraries, offering a comprehensive toolkit for .NET AI application assessment.<!--excerpt_end-->
 

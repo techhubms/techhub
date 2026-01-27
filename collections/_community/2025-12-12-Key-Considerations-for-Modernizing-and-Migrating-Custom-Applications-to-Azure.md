@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/key-considerations-for-modernizing-and-migrating-custom/ba-p/4476580
 title: Key Considerations for Modernizing and Migrating Custom Applications to Azure
 author: srhulsus
@@ -41,6 +41,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 srhulsus presents a thorough guide to modernizing and migrating custom applications to Azure, detailing best practices for migration, modernization, security, DevOps, AI adoption, and ongoing operations.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/developer-skills/programming-languages-and-frameworks/typescripts-rise-in-the-ai-era-insights-from-lead-architect-anders-hejlsberg/
 title: 'TypeScript’s Dominance in the AI Era: Insights from Lead Architect Anders Hejlsberg'
 author: Aaron Winston
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Aaron Winston interviews Anders Hejlsberg, creator of TypeScript, revealing how the language grew to become GitHub's most-used language in 2025. The article details TypeScript’s evolution, its impact on AI workflows, and what this means for developers today.<!--excerpt_end-->
 

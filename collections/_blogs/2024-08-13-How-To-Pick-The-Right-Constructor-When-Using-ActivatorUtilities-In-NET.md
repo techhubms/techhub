@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/how-to-pick-the-right-constructor-when-using-activatorutilities-in-dotnet
 title: How To Pick The Right Constructor When Using ActivatorUtilities In .NET
 author: Khalid Abuhakmeh
@@ -17,6 +17,7 @@ tags:
 - ServiceCollection
 section_names:
 - coding
+primary_section: coding
 ---
 In this detailed guide, Khalid Abuhakmeh demonstrates how to select the appropriate constructor when using ActivatorUtilities for dependency injection in .NET. The author shares practical code examples and explains the impact of using attributes for constructor selection.<!--excerpt_end-->
 

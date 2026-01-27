@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/level-up-your-python-gen-ai-skills-from-our-free-nine-part/ba-p/4459464
 title: 'Level Up Your Python Gen AI Skills: Nine-Part YouTube Stream Series'
 author: Pamela_Fox
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Pamela Fox presents a comprehensive nine-part YouTube series teaching developers how to harness generative AI in Python, including Azure AI services, LLMs, vision AI, RAG, safety, agents, and real-world coding techniques.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/top-dotnet-videos-live-streams-of-2025/
 title: 'Top .NET Videos and Live Streams of 2025: A Year in Review'
 author: Jon Galloway
@@ -30,6 +30,7 @@ tags:
 - Wrapped
 section_names:
 - coding
+primary_section: coding
 ---
 Jon Galloway provides a detailed look at the top .NET videos and live streams of 2025, spotlighting technical tutorials, community sessions, and cutting-edge developments in the .NET landscape.<!--excerpt_end-->
 

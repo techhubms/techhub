@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/on-device-ai-with-windows-ai-foundry/ba-p/4466236
 title: 'On-Device AI with Windows AI Foundry: Local Inference for Fast, Private Apps'
 author: Nandhini_Elango
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Nandhini_Elango explains how Windows AI Foundry enables developers to run AI models locally on Windows devices, enhancing privacy, speed, and offline capabilities. The article covers hybrid design patterns, integration guidance, and code approaches for practical implementation.<!--excerpt_end-->
 

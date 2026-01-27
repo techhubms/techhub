@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-march-2025/
 title: Azure SDK Release Highlights – March 2025
 author: Hector Norzagaray
@@ -29,6 +29,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 Authored by Hector Norzagaray, this March 2025 Azure SDK release post highlights a major beta launch for Rust developers, updates across numerous programming languages, guidance regarding Node.js 18, and more.<!--excerpt_end-->
 

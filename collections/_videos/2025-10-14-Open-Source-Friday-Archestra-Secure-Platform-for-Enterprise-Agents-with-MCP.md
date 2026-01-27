@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=SkmluS-xzmM
 title: 'Open Source Friday: Archestra – Secure Platform for Enterprise Agents with MCP'
 author: GitHub
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 GitHub presents a session on Archestra, guiding viewers through securely deploying and orchestrating enterprise AI agents with MCP. The video demonstrates security strategies and collaborative development using open-source tools.<!--excerpt_end-->
 

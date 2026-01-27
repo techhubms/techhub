@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/white-paper-the-future-of-devsecops-in-a-fully-autonomous-ci-cd-pipeline/?utm_source=rss&utm_medium=rss&utm_campaign=white-paper-the-future-of-devsecops-in-a-fully-autonomous-ci-cd-pipeline
 title: The Future of DevSecOps in Fully Autonomous CI/CD Pipelines
 author: Ravi Shanker Sharma
@@ -25,6 +25,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Ravi Shanker Sharma’s white paper examines how AI and ML are transforming DevSecOps, enabling fully autonomous CI/CD pipelines with real-time, continuous security automation.<!--excerpt_end-->
 

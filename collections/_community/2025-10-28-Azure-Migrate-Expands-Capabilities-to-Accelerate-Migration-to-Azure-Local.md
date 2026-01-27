@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-migrate-expands-capabilities-to-accelerate-migration-to/ba-p/4464789
 title: Azure Migrate Expands Capabilities to Accelerate Migration to Azure Local
 author: trumanbrown
@@ -24,6 +24,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 trumanbrown explains the new General Availability of Azure Migrate support for VMware VM migrations to Azure Local, highlighting modernization paths, unified management, and advanced migration features for secure hybrid cloud environments.<!--excerpt_end-->
 

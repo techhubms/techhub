@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/KPa9PE27ESU
 title: 'Understanding Azure AI Foundry Local: On-Premises AI for Privacy and Security'
 author: Microsoft Developer
@@ -16,6 +16,7 @@ tags:
 - Privacy
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Developer's Dona Sarkar offers insights into Azure AI Foundry Local, emphasizing privacy, security, and offline benefits for organizations running AI models outside the cloud.<!--excerpt_end-->
 

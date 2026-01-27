@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-customer-managed-keys-in-fabric-sql-database/
 title: Using Customer-Managed Keys with Microsoft Fabric SQL Database
 author: Microsoft Fabric Blog
@@ -29,6 +29,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 The Microsoft Fabric Blog highlights how customer-managed keys in Fabric SQL Database empower organizations to enhance data security and compliance, with insights from Data and AI Practice Leads.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://medium.com/@davidfowl/aspire-a-platform-for-reusable-infrastructure-3a15582f8a5a?source=rss-8163234c98f0------2
 title: 'Aspire: Bringing Reusable, Strongly-Typed Infrastructure Modeling to Application Lifecycles'
 author: David Fowler
@@ -23,6 +23,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 In this insightful post, David Fowler shares how Aspire brings the discipline and reusability of software engineering to infrastructure, enabling scalable and composable deployment with strongly-typed resources and hosting integrations.<!--excerpt_end-->
 

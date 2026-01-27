@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-platform-support-for-transport-layer-security-tls-1-1-and-earlier-versions-ending-soon/
 title: Fabric Platform Ends Support for TLS 1.1 and Earlier
 author: Microsoft Fabric Blog
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog announces the end of support for TLS 1.1 and earlier on the Fabric platform. Authors provide key migration steps and security implications for organizations relying on Fabric integrations.<!--excerpt_end-->
 

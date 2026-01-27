@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2025/Apr/28/WPF-Image-Control-Local-File-Locking
 title: Avoiding WPF Image Control Local File Locking
 author: Rick Strahl
@@ -19,6 +19,7 @@ tags:
 - XAML
 section_names:
 - coding
+primary_section: coding
 ---
 In this technical post, Rick Strahl discusses how WPF’s Image control locks local image files, the issues it causes, and presents XAML and custom binding converter strategies—including image caching—to solve the problem efficiently for .NET Windows applications.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=IJDL7c2dHXc
 title: Resiliency and Recovery with Azure Backup and Site Recovery
 author: Microsoft Events
@@ -30,6 +30,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 In this Microsoft Ignite session, speakers Rochak Mittal and Rohan Sahini provide a comprehensive overview of Azure Backup and Site Recovery, focusing on data resiliency, cyber recovery, and secure workload protection.<!--excerpt_end-->
 

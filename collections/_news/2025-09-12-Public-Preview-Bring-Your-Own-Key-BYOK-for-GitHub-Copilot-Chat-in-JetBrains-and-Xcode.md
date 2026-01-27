@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-11-bring-your-own-key-byok-support-for-jetbrains-ides-and-xcode-in-public-preview
 title: 'Public Preview: Bring Your Own Key (BYOK) for GitHub Copilot Chat in JetBrains and Xcode'
 author: Allison
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison discusses the new BYOK feature for GitHub Copilot Chat in JetBrains IDEs and Xcode, explaining how developers can connect their own API keys from various providers for increased model flexibility.<!--excerpt_end-->
 

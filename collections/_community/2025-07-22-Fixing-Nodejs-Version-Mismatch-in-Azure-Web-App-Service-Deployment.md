@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m6btbu/web_app_service_wrong_version/
 title: Fixing Node.js Version Mismatch in Azure Web App Service Deployment
 author: Logical-Try6336
@@ -18,6 +18,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Logical-Try6336 shares troubleshooting steps for fixing a Node.js version issue during Azure Web App Service deployment with Azure DevOps.<!--excerpt_end-->
 

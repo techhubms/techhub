@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1lvx08d/search_any_github_repo_from_agent/
 title: Search any GitHub repo from agent
 author: digitarald
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, digitarald highlights a powerful yet often overlooked feature of the VS Code agent: searching within GitHub repositories using embeddings for efficient code and prompt discovery. The author demonstrates this capability using the 'awesome-copilot' repository and shares an additional tip for enhancing copilot-instructions.md files to improve reference searching. The article provides insights that can streamline your development workflow and make Copilot even more effective.<!--excerpt_end-->
 

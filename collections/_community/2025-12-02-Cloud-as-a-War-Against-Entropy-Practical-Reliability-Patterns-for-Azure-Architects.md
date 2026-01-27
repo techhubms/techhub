@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/cloud-as-a-war-against-entropy/ba-p/4474111
 title: 'Cloud as a War Against Entropy: Practical Reliability Patterns for Azure Architects'
 author: lavann320
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Lavan Nallainathan shares actionable strategies for architects to build reliable Azure cloud-native systems, focusing on entropy management, chaos theory, SLA mathematics, and practical operational patterns to reduce downtime and strengthen resilience.<!--excerpt_end-->
 

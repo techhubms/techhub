@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/announcing-model-context-protocol-support-preview-in-azure-ai-foundry-agent-service/
 title: Announcing Model Context Protocol Support in Azure AI Foundry Agent Service (Preview)
 author: Linda Li
@@ -21,6 +21,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 In this announcement, Linda Li details the preview of Model Context Protocol (MCP) support in Azure AI Foundry Agent Service, highlighting easier AI agent integration, open standards, and practical steps for developers.<!--excerpt_end-->
 

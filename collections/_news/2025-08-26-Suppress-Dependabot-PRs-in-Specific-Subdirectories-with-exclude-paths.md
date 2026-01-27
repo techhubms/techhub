@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-26-dependabot-can-now-exclude-automatic-pull-requests-for-manifests-in-selected-subdirectories
 title: Suppress Dependabot PRs in Specific Subdirectories with `exclude-paths`
 author: Allison
@@ -21,6 +21,7 @@ tags:
 - Subdirectory
 section_names:
 - devops
+primary_section: devops
 ---
 Allison explains how GitHub's Dependabot now supports excluding dependency manifests in chosen subdirectories, making it easier for teams to control update noise in monorepos and refine DevOps automation.<!--excerpt_end-->
 

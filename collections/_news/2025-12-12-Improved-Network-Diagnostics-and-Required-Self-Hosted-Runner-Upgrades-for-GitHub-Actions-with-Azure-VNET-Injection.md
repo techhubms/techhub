@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-12-better-diagnostics-for-vnet-injected-runners-and-required-self-hosted-runner-upgrades
 title: Improved Network Diagnostics and Required Self-Hosted Runner Upgrades for GitHub Actions with Azure VNET Injection
 author: Allison
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Allison informs readers about the latest improvements in diagnosing network issues for GitHub-hosted runners with Azure VNET injection, and outlines required upgrades for self-hosted runners to ensure compatibility and security.<!--excerpt_end-->
 

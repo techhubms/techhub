@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=sCv_noSKIBw
 title: 'Supercharge Your Apps with OpenAI: Secure Authentication, Azure Integration, and MCP Agents'
 author: Microsoft Developer
@@ -33,6 +33,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: ai
 ---
 Microsoft Developer guides you through integrating AI into your applications using OpenAI libraries and Azure services, focusing on secure authentication with Microsoft Entra ID and leveraging MCP for agentic apps.<!--excerpt_end-->
 

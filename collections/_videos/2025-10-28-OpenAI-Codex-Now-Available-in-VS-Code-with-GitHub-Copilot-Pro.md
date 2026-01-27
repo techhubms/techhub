@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=I51wun3OnmQ
 title: OpenAI Codex Now Available in VS Code with GitHub Copilot Pro+
 author: Visual Studio Code
@@ -18,6 +18,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code highlights OpenAI Codex integration with GitHub Copilot Pro+ in this video, showcasing advanced AI coding capabilities for developers.<!--excerpt_end-->
 

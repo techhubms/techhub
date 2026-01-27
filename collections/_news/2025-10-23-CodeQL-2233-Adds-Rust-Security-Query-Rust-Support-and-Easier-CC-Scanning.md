@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-23-codeql-2-23-3-adds-a-new-rust-query-rust-support-and-easier-c-c-scanning
 title: CodeQL 2.23.3 Adds Rust Security Query, Rust Support, and Easier C/C++ Scanning
 author: Allison
@@ -24,6 +24,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison announces the release of CodeQL 2.23.3, highlighting advancements in language support, security query coverage, and ease of scanning for multiple languages in GitHub code scanning workflows.<!--excerpt_end-->
 

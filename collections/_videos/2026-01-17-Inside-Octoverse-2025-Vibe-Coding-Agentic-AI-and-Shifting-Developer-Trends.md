@@ -29,6 +29,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 GitHub hosts Andrea and Kedasha chat with Jeff Luszcz in this insightful episode, unraveling the core findings from the Octoverse 2025 report. Learn how AI, Copilot, and new coding trends are impacting developers worldwide.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/red-hat-enterprise-linux-software-reservations-now-available/ba-p/4463214
 title: Red Hat Enterprise Linux Software Reservations Now Available on Azure
 author: abbottkarl
@@ -20,6 +20,7 @@ tags:
 - Workload Optimization
 section_names:
 - azure
+primary_section: azure
 ---
 abbottkarl announces the general availability of Red Hat Enterprise Linux software reservations on Azure, detailing new cost-saving options, updated billing, and how customers can better manage RHEL workloads in the cloud.<!--excerpt_end-->
 

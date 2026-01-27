@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/mit-researchers-propose-a-new-way-to-build-software-that-actually-makes-sense/
 title: MIT Researchers Propose a New Software Architecture with Concepts and Synchronizations
 author: Tom Smith
@@ -33,6 +33,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Tom Smith explores an MIT research framework that organizes code into 'concepts' and 'synchronizations,' discussing its potential impact on AI coding tools, software visibility, and DevOps practices.<!--excerpt_end-->
 

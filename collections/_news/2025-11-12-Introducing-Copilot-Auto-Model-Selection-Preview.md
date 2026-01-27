@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/introducing-copilot-auto-model-selection-preview/
 title: Introducing Copilot Auto Model Selection (Preview)
 author: Rhea Patel, Nhu Do
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Rhea Patel and Nhu Do showcase GitHub Copilot's new auto model selection feature, detailing how it improves Copilot Chat performance and flexibility for developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=87AlzE53bxA
 title: 'Orleans Deep Dive: Routing, Placement & Balancing'
 author: dotnet
@@ -18,6 +18,7 @@ tags:
 - Scalability
 section_names:
 - coding
+primary_section: coding
 ---
 The dotnet team, joined by Reuben Bond, Ledjon Behluli, David Pine, and Frank Boucher, delivers a technical deep dive into routing, placement, and load balancing in Orleans for .NET developers.<!--excerpt_end-->
 

@@ -31,6 +31,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Chris Reddington guides readers through his journey of building a celebratory countdown app with GitHub Copilot. The piece highlights context window management, leveraging the Plan agent, and practicing TDD, offering actionable advice for developer workflows.<!--excerpt_end-->
 

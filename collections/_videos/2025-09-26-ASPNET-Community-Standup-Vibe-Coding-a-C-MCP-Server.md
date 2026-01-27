@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dje8EMF3Shc
 title: ASP.NET Community Standup - Vibe Coding a C# MCP Server
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 - Vibecoding
 section_names:
 - coding
+primary_section: coding
 ---
 Mike Kistler, Leslie Richardson, and Mackinnon Buck join the ASP.NET Community Standup to demonstrate hands-on coding of a C# MCP server, providing insights on ASP.NET Core development for the Microsoft developer community.<!--excerpt_end-->
 

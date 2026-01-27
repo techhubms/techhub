@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fyqDLhCnYio
 title: Choosing and Deploying Advanced AI Models Using Microsoft Foundry
 author: Microsoft Events
@@ -30,6 +30,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents expert guidance on using Microsoft Foundry to evaluate and deploy advanced AI models from providers like OpenAI, Anthropic, and Cohere, featuring speakers William Flannery, Keiji Kanazawa, Naomi Moneypenny, Steve Sweetman, and Tao Zhang.<!--excerpt_end-->
 

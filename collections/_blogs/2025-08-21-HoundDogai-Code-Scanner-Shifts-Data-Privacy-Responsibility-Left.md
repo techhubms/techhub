@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/hounddog-ai-code-scanner-shifts-data-privacy-responsibility-left/?utm_source=rss&utm_medium=rss&utm_campaign=hounddog-ai-code-scanner-shifts-data-privacy-responsibility-left
 title: HoundDog.ai Code Scanner Shifts Data Privacy Responsibility Left
 author: Mike Vizard
@@ -33,6 +33,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Mike Vizard covers the general availability of HoundDog.ai, a static code scanner built to help DevSecOps and privacy teams manage sensitive data within AI development workflows.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/web-development/implementation-smtp-using-mailkit-in-asp-net-core-mvc/m-p/4408125#M657
 title: Implementation SMTP using MailKit in ASP .NET Core MVC
 author: soumyadipmajumder03
@@ -17,6 +17,7 @@ tags:
 - Web Development
 section_names:
 - coding
+primary_section: coding
 ---
 soumyadipmajumder03 inquires about implementing automated email triggers using MailKit in an ASP.NET Core MVC application. The main focus is integrating the email-sending feature upon form submission.<!--excerpt_end-->
 

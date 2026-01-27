@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=QWi_bvQc4fc
 title: New dotnet test Experience with Microsoft.Testing.Platform
 author: dotnet
@@ -25,6 +25,7 @@ tags:
 - xUnit
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet presents a walkthrough of the new Microsoft.Testing.Platform for .NET, highlighting its advantages over VSTest and demonstrating integration with popular testing frameworks.<!--excerpt_end-->
 

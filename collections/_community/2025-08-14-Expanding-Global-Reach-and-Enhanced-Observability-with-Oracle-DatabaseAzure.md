@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/expanding-global-reach-and-enhancing-observability-with-oracle/ba-p/4443650
 title: Expanding Global Reach and Enhanced Observability with Oracle Database@Azure
 author: bhbandam
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 bhbandam, co-authoring with Jeni Mattson, outlines new global regions and advanced monitoring capabilities for Oracle Database@Azure, showcasing how Azure Monitor and Microsoft Sentinel enhance operational visibility and security for enterprise deployments.<!--excerpt_end-->
 

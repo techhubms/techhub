@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=te_om7KPb8k
 title: 'Armchair Architects: Governance Strategies for AI Agents'
 author: Microsoft Developer
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Uli Homann, Eric Charran, and David Blank-Edelman discuss the unique governance and security challenges of deploying AI agents at scale, emphasizing observability, evaluation, and novel monitoring strategies.<!--excerpt_end-->
 

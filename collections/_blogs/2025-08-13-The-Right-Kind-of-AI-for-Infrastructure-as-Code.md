@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/the-right-kind-of-ai-for-infrastructure-as-code/?utm_source=rss&utm_medium=rss&utm_campaign=the-right-kind-of-ai-for-infrastructure-as-code
 title: The Right Kind of AI for Infrastructure as Code
 author: Ian Amit
@@ -29,6 +29,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Ian Amit explores how AI can be effectively applied to Infrastructure as Code, highlighting crucial gaps in current cloud security tools and explaining what attributes make AI truly valuable for DevOps and security teams.<!--excerpt_end-->
 

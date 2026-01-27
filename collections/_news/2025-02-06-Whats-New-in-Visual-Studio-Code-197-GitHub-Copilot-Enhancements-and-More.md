@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_97
 title: "What's New in Visual Studio Code 1.97: GitHub Copilot Enhancements and More"
 author: Visual Studio Code Team
@@ -35,6 +35,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 The Visual Studio Code Team covers the 1.97 January 2025 release, with in-depth updates on GitHub Copilot features, editing improvements, DevOps tooling, and developer experience enhancements.<!--excerpt_end-->
 

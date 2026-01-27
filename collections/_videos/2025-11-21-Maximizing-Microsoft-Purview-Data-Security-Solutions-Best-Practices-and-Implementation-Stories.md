@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=6Gp21z39nQU
 title: 'Maximizing Microsoft Purview Data Security Solutions: Best Practices and Implementation Stories'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 - User Training
 section_names:
 - security
+primary_section: security
 ---
 Microsoft Events brings together multiple experts to share best practices and real-world experiences with Microsoft Purview data security, including practical strategies for classification, labeling, DLP, and organizational change.<!--excerpt_end-->
 

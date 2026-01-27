@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/developer-skills/career-growth/how-engineers-can-use-one-on-ones-with-their-manager-to-accelerate-career-growth/
 title: How Engineers Can Use One-on-Ones with Their Manager to Accelerate Career Growth
 author: Dalia Abuadas
@@ -22,6 +22,7 @@ tags:
 - Workplace Communication
 section_names:
 - devops
+primary_section: devops
 ---
 In this article, Dalia Abuadas discusses how engineers can use one-on-ones with their managers for meaningful career growth, moving beyond status updates to strategic alignment and problem-solving.<!--excerpt_end-->
 

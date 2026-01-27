@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://medium.com/@davidfowl/making-software-like-lego-how-aspire-brings-the-pieces-together-d6a99c2c4cde?source=rss-8163234c98f0------2
 title: 'Making Software Like LEGO: How Aspire Brings the Pieces Together'
 author: David Fowler
@@ -25,6 +25,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 In this post by David Fowler, the author discusses how Aspire transforms software development by making systems composable and robust, shifting focus from raw code to orchestration, resources, and extensible platform models for both developers and AI.<!--excerpt_end-->
 

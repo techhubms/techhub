@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-azure-d192-sizes-in-the-azure/ba-p/4451427
 title: Azure D192 Sizes Now Available in Dsv6 and Ddsv6-Series VMs
 author: sarah-zhou
@@ -26,6 +26,7 @@ tags:
 - Virtualization
 section_names:
 - azure
+primary_section: azure
 ---
 Sarah Zhou introduces the availability of Azure D192 VM sizes in the Dsv6 and Ddsv6-series, outlining their technical specs, performance capabilities, and applicability for enterprise workloads.<!--excerpt_end-->
 

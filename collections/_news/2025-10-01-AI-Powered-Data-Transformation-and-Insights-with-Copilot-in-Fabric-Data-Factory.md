@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/ai-powered-development-with-fabric-data-factory-ingest-transform-and-understand-your-data-with-copilot/
 title: AI-Powered Data Transformation and Insights with Copilot in Fabric Data Factory
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Fabric Blog presents an in-depth look at new Copilot-powered features in Fabric Data Factory, showing how AI enhances data ingestion, transformation, and understanding. Authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 

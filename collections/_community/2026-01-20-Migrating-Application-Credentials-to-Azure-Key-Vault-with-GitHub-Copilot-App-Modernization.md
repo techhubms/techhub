@@ -25,6 +25,7 @@ section_names:
 - coding
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 ayangupta presents a comprehensive walkthrough on using GitHub Copilot app modernization to migrate application secrets and credentials to Azure Key Vault, automating secure code changes and improving cloud security.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/research/blog/breaking-the-networking-wall-in-ai-infrastructure/
 title: 'MOSAIC: A Wide-and-Slow MicroLED Network Architecture for Next-Gen AI Infrastructure'
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke describes how Microsoft’s MOSAIC project uses microLED arrays in a wide-and-slow optical interconnect to dramatically improve AI infrastructure scalability, power efficiency, and reliability.<!--excerpt_end-->
 

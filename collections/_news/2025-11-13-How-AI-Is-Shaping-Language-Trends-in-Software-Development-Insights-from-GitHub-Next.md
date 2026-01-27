@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/octoverse/typescript-python-and-the-ai-feedback-loop-changing-software-development/
 title: 'How AI Is Shaping Language Trends in Software Development: Insights from GitHub Next'
 author: Alexandra Lietzke
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Alexandra Lietzke shares insights from Idan Gazit of GitHub Next on how AI is transforming programming language trends, developer workflows, and the future of software development.<!--excerpt_end-->
 

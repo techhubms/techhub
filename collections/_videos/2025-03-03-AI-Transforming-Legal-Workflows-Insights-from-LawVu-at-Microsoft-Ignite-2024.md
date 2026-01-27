@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=zqllWICJ35s
 title: 'AI Transforming Legal Workflows: Insights from LawVu at Microsoft Ignite 2024'
 author: Microsoft Events
@@ -22,6 +22,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Sarah Webb of LawVu joins Microsoft Ignite 2024 to share how her team is implementing AI in legal SaaS platforms, offering examples and real-world guidance on streamlining legal processes with contextual AI solutions.<!--excerpt_end-->
 

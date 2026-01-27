@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fHha3U_EDkM
 title: 'Migrating VMware Workloads to Azure: Tools, Best Practices, and Cloud Management'
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Microsoft Events and speakers Vikram Bansal and Jeff Woolsey provide VMware administrators with expert guidance on migrating, securing, and managing VMware workloads in Azure, focusing on operational best practices.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/2025/08/14/championing-safety-how-one-queensland-government-department-is-transforming-cybersecurity-to-better-support-vulnerable-communities/
 title: Queensland Government Enhances Cybersecurity for Vulnerable Communities with Microsoft 365 E5
 author: stclarke
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 stclarke outlines the Queensland Government's journey in transforming its cybersecurity posture by consolidating tools under Microsoft 365 E5, deploying Defender and Sentinel, and aligning with modern security practices for greater data protection.<!--excerpt_end-->
 

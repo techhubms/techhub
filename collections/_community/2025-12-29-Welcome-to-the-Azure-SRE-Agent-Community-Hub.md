@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-sre-agent/welcome-to-azure-sre-agent-community-hub/m-p/4481822#M1
 title: Welcome to the Azure SRE Agent Community Hub
 author: Mayunk_Jain
@@ -17,6 +17,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Mayunk_Jain announces the launch of the Azure SRE Agent Community Hub—a space where engineers and developers can collaborate, discuss, and learn about Azure SRE Agent.<!--excerpt_end-->
 

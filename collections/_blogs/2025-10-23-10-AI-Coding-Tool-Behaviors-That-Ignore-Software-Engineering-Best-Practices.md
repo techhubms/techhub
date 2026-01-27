@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/analysis-identifies-10-ai-coding-tool-behaviors-that-ignore-best-software-engineering-practices/
 title: 10 AI Coding Tool Behaviors That Ignore Software Engineering Best Practices
 author: Mike Vizard
@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 Mike Vizard examines a report by Ox Security highlighting ten problematic behaviors exhibited by AI coding tools, focusing on their impact on software quality and DevOps security workflows.<!--excerpt_end-->
 

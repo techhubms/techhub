@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Pz3A3CCgEac
 title: Build Smarter Agents with Redis, .NET Aspire, and Microsoft Agent Framework
 author: dotnet
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 dotnet shares practical insights on boosting Agentic .NET apps in Azure with Redis for semantic caching, vector search, chat storage, and session management using the latest Microsoft agent technologies.<!--excerpt_end-->
 

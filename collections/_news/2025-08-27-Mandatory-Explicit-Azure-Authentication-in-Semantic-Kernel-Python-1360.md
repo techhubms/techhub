@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/semantic-kernel/azure-authentication-changes-in-semantic-kernel-python/
 title: Mandatory Explicit Azure Authentication in Semantic Kernel Python 1.36.0
 author: Dmytro Struk
@@ -22,6 +22,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Dmytro Struk explains how Semantic Kernel Python 1.36.0 now requires explicit Azure authentication, replacing the former DefaultAzureCredential fallback. Learn the impact of this change and how to update your code.<!--excerpt_end-->
 

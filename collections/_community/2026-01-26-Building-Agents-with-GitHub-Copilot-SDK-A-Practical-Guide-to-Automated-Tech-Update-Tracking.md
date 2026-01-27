@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 kinfey demonstrates building automated technical update tracking agents using the GitHub Copilot SDK and CLI, sharing a real-world case study on powering daily blog post generation for Microsoft's Agent Framework. The guide includes architecture, code samples, and best practices.<!--excerpt_end-->
 

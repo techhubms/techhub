@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mkse98/how_is_gpt5_experience_for_everyone/
 title: Community Experiences with GPT-5 in GitHub Copilot and Coding Workflows
 author: gullu_7278
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 gullu_7278 starts a community conversation sharing personal results and frustrations with GPT-5 inside GitHub Copilot and VS Code, inviting others to reflect on speed, cost, and code quality in practical developer settings.<!--excerpt_end-->
 

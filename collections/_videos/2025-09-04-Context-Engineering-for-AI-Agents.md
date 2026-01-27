@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=F5zqRV7gEag
 title: Context Engineering for AI Agents
 author: Microsoft Developer
@@ -22,6 +22,7 @@ tags:
 - Technology
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Developer introduces context engineering for AI agents, showing how to equip agents with the right context and tools. The lesson covers core principles, best practices, code examples, and practical approaches.<!--excerpt_end-->
 

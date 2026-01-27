@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-security-experts-blog/how-microsoft-defender-experts-uses-ai-to-cut-through-the-noise/ba-p/4443601
 title: How Microsoft Defender Experts Uses AI to Cut Through the Noise
 author: ShailyGoel
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 ShailyGoel explains how Microsoft Defender Experts integrates AI to filter security noise and focus incident response, using expert-trained classification models within Microsoft’s managed XDR services.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=9TH1EX_6FMk
 title: 'Major Innovations in Microsoft Fabric Data Warehousing: 2025 Overview'
 author: Microsoft Developer
@@ -31,6 +31,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Developer presents an in-depth 2025 roundup on Microsoft Fabric Data Warehousing innovations. Discover insights on clustering, security, migration, and administration enhancements from leading experts.<!--excerpt_end-->
 

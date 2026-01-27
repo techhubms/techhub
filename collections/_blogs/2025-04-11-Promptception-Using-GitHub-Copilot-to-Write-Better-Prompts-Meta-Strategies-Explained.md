@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://cooknwithcopilot.com/blog/promptception-improve-prompts-with-copilot.html
 title: 'Promptception: Using GitHub Copilot to Write Better Prompts (Meta Strategies Explained)'
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this post, Randy Pagels introduces 'Promptception'—the process of leveraging GitHub Copilot to craft better prompts for Copilot itself. Learn strategies to enhance prompt effectiveness using Chat, Edit, and Agent Modes.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=9VT9X9qy7BY
 title: 'Sentinel Alert to Autonomous Action: Controlled AI Response Framework'
 author: Microsoft Events
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents a practical guide to AI-driven, controlled responses in Microsoft Sentinel, featuring Blink micro agents and workflow automation tools for security teams.<!--excerpt_end-->
 

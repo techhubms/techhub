@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/the-curious-case-of-dotnet-concurrentdictionary-and-closures
 title: 'Avoiding Closures in .NET ConcurrentDictionary: The Efficient GetOrAdd Overload'
 author: Khalid Abuhakmeh
@@ -17,6 +17,7 @@ tags:
 - Performance
 section_names:
 - coding
+primary_section: coding
 ---
 In this article, Khalid Abuhakmeh delves into the nuances of closures in C#, focusing specifically on their impact in ConcurrentDictionary. He demonstrates code refactoring to avoid closures and highlights the advantages of using the more efficient overload of GetOrAdd.<!--excerpt_end-->
 

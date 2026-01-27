@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m6d7gm/implementing_dependson_chain_inside_looped/
 title: Implementing dependsOn Chain Inside Looped Resources in ARM Templates for Azure Backup
 author: AdPsychological9128
@@ -19,6 +19,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 AdPsychological9128 discusses their struggle with enforcing a dependsOn chain within a loop of ARM template resources for Azure file share backup, and seeks community solutions.<!--excerpt_end-->
 

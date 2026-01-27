@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/introducing-image-customizer-for-azure-linux/ba-p/4454859
 title: Introducing Image Customizer for Azure Linux
 author: Kavya_Nagalakunta
@@ -29,6 +29,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Kavya_Nagalakunta presents Image Customizer—a new open-source tool from the Azure Linux team—enabling fast, reliable, and secure customization of Azure Linux images and seamless CI/CD integration.<!--excerpt_end-->
 

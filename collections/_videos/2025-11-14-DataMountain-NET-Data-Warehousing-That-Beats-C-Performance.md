@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=zbH-cIihBh4
 title: 'DataMountain: .NET Data Warehousing That Beats C++ Performance'
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 section_names:
 - coding
 - ml
+primary_section: ml
 ---
 dotnet showcases DataMountain, a .NET-based data warehouse that achieves exceptional performance, highlighting how recent .NET features enable results comparable to systems languages like C++.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/speed-up-api-integration.html
 title: Speed Up API Integration with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -18,6 +18,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels demonstrates how GitHub Copilot helps developers speed up API integration, offering practical tips for combining AI code suggestions with their API knowledge.<!--excerpt_end-->
 

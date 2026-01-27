@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mhv5fq/github_enterprise_copilot/
 title: GitHub Enterprise + Copilot
 author: SalishSeaview
@@ -18,6 +18,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this post, SalishSeaview outlines their experience setting up GitHub Enterprise with Copilot for a consulting firm, touching on pricing, Codespaces, and CI/CD pipelines.<!--excerpt_end-->
 

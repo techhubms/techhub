@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-19-copilot-memory-early-access-for-pro-and-pro
 title: 'Early Access Release: Copilot Memory for GitHub Copilot Pro and Pro+'
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the availability of Copilot Memory in early access for GitHub Copilot Pro and Pro+ users, describing its repository-aware features and setup process.<!--excerpt_end-->
 

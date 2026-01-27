@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/practical-ways-to-use-ai-in-your-data-science-and-ml-journey/ba-p/4454764
 title: Practical Ways to Use AI in Your Data Science and ML Journey
 author: bethanyjep
@@ -22,6 +22,7 @@ section_names:
 - ai
 - github-copilot
 - ml
+primary_section: github-copilot
 ---
 Bethanyjep introduces a community event series focused on applying AI in practical ways to data science and machine learning learning paths, featuring GitHub Copilot demos and Microsoft-led curriculums.<!--excerpt_end-->
 

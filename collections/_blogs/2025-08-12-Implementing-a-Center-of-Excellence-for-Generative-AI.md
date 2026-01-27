@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/08/implementing-a-center-of-excellence-for-generative-ai/
 title: Implementing a Center of Excellence for Generative AI
 author: Thomas Maurer
@@ -30,6 +30,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Thomas Maurer explores with Ben Brauer the strategies for implementing a Generative AI Center of Excellence, focusing on Azure frameworks and best practices for enterprise AI, in this valuable Azure Essentials Show episode.<!--excerpt_end-->
 

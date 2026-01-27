@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/azure-kubernetes-service-automatic-fast-and-frictionless-kubernetes-for-all/
 title: Announcing the General Availability of Azure Kubernetes Service (AKS) Automatic
 author: sbaynes
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 sbaynes announces the general availability of Azure Kubernetes Service (AKS) Automatic, detailing how this managed offering simplifies Kubernetes for developers and enterprises.<!--excerpt_end-->
 

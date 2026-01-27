@@ -25,6 +25,7 @@ tags:
 - RBAC
 section_names:
 - azure
+primary_section: azure
 ---
 Simone Rodigari provides a comprehensive guide for deploying NodeLocal DNSCache on AKS clusters using Cilium, highlighting how to optimize DNS resolution, avoid CoreDNS bottlenecks, and implement reliable FQDN-aware network policies.<!--excerpt_end-->
 

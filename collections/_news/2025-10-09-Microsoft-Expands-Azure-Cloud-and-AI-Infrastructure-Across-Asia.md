@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/microsofts-commitment-to-supporting-cloud-infrastructure-demand-in-asia/
 title: Microsoft Expands Azure Cloud and AI Infrastructure Across Asia
 author: Omar Khan
@@ -32,6 +32,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Omar Khan reports on Microsoft's significant investments in cloud and AI-ready infrastructure across Asia, highlighting new Azure datacenter regions and enterprise strategies for digital transformation.<!--excerpt_end-->
 

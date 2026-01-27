@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/the-mlsecops-era-why-devops-teams-must-care-about-prompt-security/
 title: 'MLSecOps and Prompt Security: DevOps Strategies for AI Pipeline Protection'
 author: Alex Vakulov
@@ -45,6 +45,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Alex Vakulov provides an in-depth look at the challenges and solutions for prompt security within AI-enabled DevOps workflows, highlighting the emergence of PromptOps and MLSecOps practices.<!--excerpt_end-->
 

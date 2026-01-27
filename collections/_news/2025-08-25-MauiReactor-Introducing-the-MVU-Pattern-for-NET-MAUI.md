@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/mauireactor-mvu-for-dotnet-maui/
 title: 'MauiReactor: Introducing the MVU Pattern for .NET MAUI'
 author: David Ortinau
@@ -24,6 +24,7 @@ tags:
 - XAML
 section_names:
 - coding
+primary_section: coding
 ---
 David Ortinau features guest author Adolfo Marinucci, who explores MauiReactor—a library that makes the MVU architectural pattern accessible for .NET MAUI developers, offering insights on productivity, technical implementation, and practical usage.<!--excerpt_end-->
 

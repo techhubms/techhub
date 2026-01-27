@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/4L0V_TYs7So
 title: The Real Reason AI Models Hallucinate
 author: GitHub
@@ -18,6 +18,7 @@ tags:
 - OpenAI
 section_names:
 - ai
+primary_section: ai
 ---
 GitHub presents an overview of why AI models hallucinate, summarizing OpenAI's research on the issue and highlighting potential strategies to mitigate confidently wrong responses.<!--excerpt_end-->
 

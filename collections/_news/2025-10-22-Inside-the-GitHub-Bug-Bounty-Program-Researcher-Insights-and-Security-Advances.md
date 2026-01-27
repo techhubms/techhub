@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/security/top-security-researcher-shares-their-bug-bounty-process/
 title: 'Inside the GitHub Bug Bounty Program: Researcher Insights and Security Advances'
 author: Shilpa Kumari
@@ -26,6 +26,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Shilpa Kumari highlights @dev-bio, a top researcher in GitHub’s Bug Bounty Program, exploring their process for vulnerability discovery, the importance of security research, and the evolving landscape with AI-powered tools like GitHub Copilot.<!--excerpt_end-->
 

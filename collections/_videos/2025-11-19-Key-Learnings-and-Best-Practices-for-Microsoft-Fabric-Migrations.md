@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=UZsjChTrC3c
 title: Key Learnings and Best Practices for Microsoft Fabric Migrations
 author: Microsoft Events
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events presents insights from Ignite 2025 on Microsoft Fabric migrations, sharing best practices, generative AI strategies, and lessons from real-world data platform modernization.<!--excerpt_end-->
 

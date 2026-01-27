@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-customer-innovation-blog/staying-in-the-flow-sleekflow-and-azure-turn-customer/ba-p/4467945
 title: How SleekFlow Uses Azure and AI to Orchestrate Enterprise Customer Conversations
 author: mtoiba
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Leo Choi, Director of Engineering at SleekFlow, explains how their AgentFlow platform leverages Microsoft Azure AI technologies and modern cloud architecture to enable responsive, scalable, and secure enterprise customer conversations.<!--excerpt_end-->
 

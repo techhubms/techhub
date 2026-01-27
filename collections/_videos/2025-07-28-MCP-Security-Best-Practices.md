@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=88No8pw706o
 title: MCP Security Best Practices
 author: Microsoft Developer
@@ -17,6 +17,7 @@ tags:
 - Tool Poisoning
 section_names:
 - ai
+primary_section: ai
 ---
 Authored by Microsoft Developer, this video details security best practices and mitigation strategies for Microsoft’s MCP platform in enterprise AI applications.<!--excerpt_end-->
 

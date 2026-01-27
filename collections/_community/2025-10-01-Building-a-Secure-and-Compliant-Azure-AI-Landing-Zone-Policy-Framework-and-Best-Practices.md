@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-a-secure-and-compliant-azure-ai-landing-zone-policy/ba-p/4457165
 title: 'Building a Secure and Compliant Azure AI Landing Zone: Policy Framework & Best Practices'
 author: Madhur_Shukla
@@ -30,6 +30,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Madhur_Shukla presents an in-depth walkthrough on designing and implementing a policy-driven, secure, and compliant Azure AI Landing Zone, using EPAC and Azure native governance tools. Learn to operationalize responsible AI at scale.<!--excerpt_end-->
 

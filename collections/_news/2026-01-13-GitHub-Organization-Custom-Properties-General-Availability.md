@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2026-01-13-organization-custom-properties-now-generally-available
 title: 'GitHub Organization Custom Properties: General Availability'
 author: Allison
@@ -20,6 +20,7 @@ tags:
 - Rulesets
 section_names:
 - devops
+primary_section: devops
 ---
 Allison introduces the general availability of organization custom properties for GitHub Enterprise Cloud, helping administrators manage enterprise governance and policy automation more efficiently.<!--excerpt_end-->
 

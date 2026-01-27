@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://roadtoalm.com/2025/05/28/is-devops-dead-or-just-evolving/
 title: Is DevOps Dead? Or Just Evolving?
 author: Rene van Osnabrugge
@@ -17,6 +17,7 @@ tags:
 - Team Ownership
 section_names:
 - devops
+primary_section: devops
 ---
 In this article, Rene van Osnabrugge shares insights from his LEAD podcast and discusses whether DevOps is truly dead or simply evolving, highlighting the impact of platform engineering on modern engineering culture.<!--excerpt_end-->
 

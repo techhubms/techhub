@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/mirroring-for-sql-server-in-microsoft-fabric-generally-available/
 title: Mirroring for SQL Server in Microsoft Fabric (Generally Available)
 author: Microsoft Fabric Blog
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog provides a technical overview of Mirroring for SQL Server in Microsoft Fabric, describing how near real-time data ingestion enables seamless analytics and business intelligence for enterprise workloads.<!--excerpt_end-->
 

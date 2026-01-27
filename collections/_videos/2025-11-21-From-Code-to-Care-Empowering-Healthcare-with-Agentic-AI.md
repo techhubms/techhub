@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=cFJH00a12lo
 title: 'From Code to Care: Empowering Healthcare with Agentic AI'
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this Microsoft Ignite 2025 session, Andrew Soltan and Naveen Valluri showcase how Azure-powered agentic AI transforms healthcare processes. The session highlights real-world projects, system integrations, and future AI opportunities in medicine.<!--excerpt_end-->
 

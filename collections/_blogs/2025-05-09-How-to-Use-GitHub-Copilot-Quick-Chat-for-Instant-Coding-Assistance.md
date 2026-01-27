@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/quick-chat-is-your-instant-ai-sidekick.html
 title: How to Use GitHub Copilot Quick Chat for Instant Coding Assistance
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -19,6 +19,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels provides a quick guide on using GitHub Copilot Quick Chat, showing developers how to get fast, inline AI assistance—like code explanations and optimizations—without interrupting their coding flow.<!--excerpt_end-->
 

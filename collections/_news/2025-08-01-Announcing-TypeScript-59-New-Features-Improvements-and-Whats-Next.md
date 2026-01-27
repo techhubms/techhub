@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-9/
 title: 'Announcing TypeScript 5.9: New Features, Improvements, and What’s Next'
 author: Daniel Rosenwasser
@@ -19,6 +19,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 Daniel Rosenwasser details the release of TypeScript 5.9, covering its new features, performance enhancements, and key behavior changes—essential reading for TypeScript developers.<!--excerpt_end-->
 

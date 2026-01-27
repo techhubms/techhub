@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mbrt66/azure_tag_best_practice/
 title: 'Azure Tag Best Practice: Staging Tags Before Server Onboarding'
 author: jyoungii
@@ -17,6 +17,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Author jyoungii asks the community about best practices for staging and managing Azure tags for patching and onboarding servers, specifically in the context of Azure Arc.<!--excerpt_end-->
 

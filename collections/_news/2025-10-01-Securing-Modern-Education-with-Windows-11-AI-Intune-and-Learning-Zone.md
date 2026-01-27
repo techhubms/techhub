@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/education/blog/2025/10/build-secure-future-ready-learning-experiences-with-windows-11/
 title: 'Securing Modern Education with Windows 11: AI, Intune, and Learning Zone'
 author: stclarke
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 stclarke outlines how Windows 11 Education empowers schools with secure, AI-enhanced learning, centralized management through Intune, and specialized apps like Learning Zone, with detailed upgrade strategies for institutions.<!--excerpt_end-->
 

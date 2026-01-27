@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/product-news/lets-talk-about-github-actions/
 title: 'How GitHub Actions Evolved: Architecture, Key Upgrades & What’s Next'
 author: Ben De St Paer-Gotch
@@ -26,6 +26,7 @@ tags:
 - YAML Anchors
 section_names:
 - devops
+primary_section: devops
 ---
 Ben De St Paer-Gotch details how GitHub Actions was re-engineered to boost reliability and scalability, introduces several highly requested upgrades, and previews features planned for 2026—inviting community feedback throughout.<!--excerpt_end-->
 

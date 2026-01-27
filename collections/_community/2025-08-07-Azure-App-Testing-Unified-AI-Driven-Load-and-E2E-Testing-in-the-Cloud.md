@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-azure-app-testing-scalable-end-to-end-app-validation/ba-p/4440496
 title: 'Azure App Testing: Unified AI-Driven Load and E2E Testing in the Cloud'
 author: John_Stallo
@@ -31,6 +31,7 @@ section_names:
 - azure
 - devops
 - coding
+primary_section: github-copilot
 ---
 John_Stallo details Azure App Testing, a unified Azure Portal service enabling AI-powered load and end-to-end test automation. Learn how developers can use Playwright, JMeter, Locust, GitHub Copilot, and Azure-native scaling for application quality and performance.<!--excerpt_end-->
 

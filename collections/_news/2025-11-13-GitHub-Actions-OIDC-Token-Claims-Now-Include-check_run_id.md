@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-13-github-actions-oidc-token-claims-now-include-check_run_id
 title: GitHub Actions OIDC Token Claims Now Include check_run_id
 author: Allison
@@ -21,6 +21,7 @@ tags:
 - Workflow Security
 section_names:
 - devops
+primary_section: devops
 ---
 Allison highlights how GitHub Actions now includes the check_run_id in OIDC token claims, improving traceability and access control for secure workflow automation.<!--excerpt_end-->
 

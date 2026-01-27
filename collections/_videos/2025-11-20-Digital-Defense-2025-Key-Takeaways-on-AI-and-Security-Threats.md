@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=4G2pOwGusGs
 title: 'Digital Defense 2025: Key Takeaways on AI and Security Threats'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events shares actionable insights from the 2025 Digital Defense Report, exploring the evolving role of AI in cyber threats and defenses. Speakers include Sherrod DeGrippo, Crane Hassold, and Chloé Messdaghi.<!--excerpt_end-->
 

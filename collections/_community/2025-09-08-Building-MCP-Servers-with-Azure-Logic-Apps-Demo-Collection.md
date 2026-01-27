@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-mcp-demos/ba-p/4452175
 title: 'Building MCP Servers with Azure Logic Apps: Demo Collection'
 author: KentWeareMSFT
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 KentWeareMSFT presents an overview and demonstrations of using Azure Logic Apps and API Center to create MCP servers, showcasing integrations with Salesforce and ServiceNow for practical automation.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/net-runtime/do-i-need-to-upgrade-microsoft-aspnetcore-nuget-packages-after/m-p/4431436#M752
 title: 'Upgrading NuGet Packages vs. .NET Runtime: Addressing SCA Vulnerabilities in Microsoft.AspNetCore.*'
 author: MahaauD
@@ -21,6 +21,7 @@ tags:
 - Vulnerability Management
 section_names:
 - coding
+primary_section: coding
 ---
 MahaauD asks whether upgrading the .NET Runtime alone resolves SCA-detected vulnerabilities for Microsoft.AspNetCore.* NuGet packages, or if manual package updates are also necessary.<!--excerpt_end-->
 

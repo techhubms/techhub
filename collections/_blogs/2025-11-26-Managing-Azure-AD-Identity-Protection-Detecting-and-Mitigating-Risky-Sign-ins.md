@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/managing-azure-ad-identity-protection-detecting-and-mitigating-risky-sign-ins/
 title: 'Managing Azure AD Identity Protection: Detecting and Mitigating Risky Sign-ins'
 author: John Edward
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 John Edward explains how Azure AD Identity Protection helps organizations detect and remediate risky sign-ins, focusing on security strategies and actionable workflows.<!--excerpt_end-->
 

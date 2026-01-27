@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/08/04/microsoft-entra-suite-delivers-131-roi-by-unifying-identity-and-network-access/
 title: Microsoft Entra Suite Delivers 131% ROI Through Unified Identity and Network Access
 author: Irina Nechaeva
@@ -19,6 +19,7 @@ tags:
 - Zero Trust
 section_names:
 - security
+primary_section: security
 ---
 Irina Nechaeva reports on a Forrester study showing that organizations using Microsoft Entra Suite achieved a 131% ROI by improving identity and network access security.<!--excerpt_end-->
 

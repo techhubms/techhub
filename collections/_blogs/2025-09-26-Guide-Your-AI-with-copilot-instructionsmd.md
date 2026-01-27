@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/guide-your-ai-with-copilot-instructions-md.html
 title: Guide Your AI with copilot-instructions.md
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels explains how to use the copilot-instructions.md file to set project-wide rules for GitHub Copilot, helping teams achieve consistency and safer code generation.<!--excerpt_end-->
 

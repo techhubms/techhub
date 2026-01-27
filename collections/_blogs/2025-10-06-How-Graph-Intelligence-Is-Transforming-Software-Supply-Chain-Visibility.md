@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/how-graph-intelligence-is-transforming-software-supply-chain-visibility/
 title: How Graph Intelligence Is Transforming Software Supply Chain Visibility
 author: Alan Shimel
@@ -26,6 +26,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Alan Shimel interviews Stephen Chin on how graph intelligence is reshaping visibility and security within software supply chains, highlighting DevOps and AI advances discussed at swampUP 2025.<!--excerpt_end-->
 

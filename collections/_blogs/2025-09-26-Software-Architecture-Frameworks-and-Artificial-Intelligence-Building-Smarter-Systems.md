@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/software-architecture-frameworks-and-artificial-intelligence-building-smarter-systems/
 title: 'Software Architecture Frameworks and Artificial Intelligence: Building Smarter Systems'
 author: Dellenny
@@ -25,6 +25,7 @@ tags:
 - Zachman Framework
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny investigates how the emergence of AI is driving new software architecture frameworks and transforming conventional system design, offering practical insights for technical teams and architects.<!--excerpt_end-->
 

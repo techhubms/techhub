@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-in-azure-container-apps-at-ignite-25/ba-p/4470391
 title: "What's New in Azure Container Apps: Ignite 2025 Feature Updates"
 author: vyomnagrani
@@ -42,6 +42,7 @@ section_names:
 - github-copilot
 - ml
 - security
+primary_section: github-copilot
 ---
 vyomnagrani details major Azure Container Apps updates from Ignite 2025, outlining new features for AI hosting, agent frameworks, security, DevOps, and workflow modernization in Microsoft's cloud-native ecosystem.<!--excerpt_end-->
 

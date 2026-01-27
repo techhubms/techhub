@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/microsofts-strategic-ai-datacenter-planning-enables-seamless-large-scale-nvidia-rubin-deployments/
 title: How Azure Datacenter Strategy Powers NVIDIA Rubin Platform Deployments
 author: Rani Borkar
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Rani Borkar presents an in-depth look at how Microsoft Azure's long-term datacenter engineering and collaboration with NVIDIA empower fast, large-scale deployment of NVIDIA Rubin AI platforms.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mhgwae/github_copilot_is_great_but_do_you_ever_wish_it/
 title: GitHub Copilot is great, but do you ever wish it actually coded like you?
 author: Comfortable-Fish690
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Written by Comfortable-Fish690, this article explores the shortcomings of GitHub Copilot regarding personalized coding styles and introduces the concept of an AI agent tailored to individual habits.<!--excerpt_end-->
 

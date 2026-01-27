@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/faster-python-on-azure-functions-with-uvloop/ba-p/4455323
 title: Boosting Python Performance on Azure Functions with uvloop
 author: eroman
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 eroman details how switching to uvloop as the default event loop in Azure Functions for Python 3.13+ delivers faster async performance with no code changes needed, supported by benchmark data and practical integration notes.<!--excerpt_end-->
 

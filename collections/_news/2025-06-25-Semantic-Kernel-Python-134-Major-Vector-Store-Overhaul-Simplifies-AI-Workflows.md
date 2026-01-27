@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-python-gets-a-major-vector-store-upgrade/
 title: 'Semantic Kernel Python 1.34: Major Vector Store Overhaul Simplifies AI Workflows'
 author: Eduard van Valkenburg
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Authored by Eduard van Valkenburg, this detailed news highlights the major enhancements in Semantic Kernel Python’s vector store with version 1.34, focusing on improved developer experience, unified APIs, and streamlined vector data workflows for AI projects.<!--excerpt_end-->
 

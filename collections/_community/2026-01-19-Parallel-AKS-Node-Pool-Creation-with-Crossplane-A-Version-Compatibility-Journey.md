@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 sbalaji recounts a hands-on troubleshooting story addressing performance bottlenecks in AKS node pool creation with Crossplane, leading to a tested solution with newer provider versions for true parallel infrastructure provisioning.<!--excerpt_end-->
 

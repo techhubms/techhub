@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=45I_m50kInE
 title: SQL Server 2025 Top Ten Features
 author: John Savill's Technical Training
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 John Savill presents a breakdown of the top ten new features in SQL Server 2025, including vector and AI integration, change streaming, and new data type support.<!--excerpt_end-->
 

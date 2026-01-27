@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=cr8I4Z2RsS0
 title: Relativity's AI and Azure-Powered Unstructured Data Processing in Legal Tech
 author: Microsoft Events
@@ -22,6 +22,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 In this Microsoft Ignite video, Microsoft Events hosts Rick Claus and guest Keith Carlson from Relativity to discuss how AI and Azure are transforming unstructured data analysis in the legal sector.<!--excerpt_end-->
 

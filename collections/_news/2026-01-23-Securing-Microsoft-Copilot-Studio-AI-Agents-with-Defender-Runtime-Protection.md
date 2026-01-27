@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 The Microsoft Defender Security Research Team shares in-depth guidance on securing Microsoft Copilot Studio AI agents at runtime, demonstrating how Defender’s real-time protection thwarts malicious prompt injections and data exfiltration attempts.<!--excerpt_end-->
 

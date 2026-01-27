@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/aks-automatic-with-azure-linux/ba-p/4454284
 title: 'AKS Automatic with Azure Linux: Streamlining Kubernetes Operations'
 author: FloraTaagen
@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 FloraTaagen highlights the GA release of AKS Automatic for Azure Kubernetes Service, showcasing how Azure Linux integration enhances cluster security, performance, and operational simplicity.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=QLeFHFGLwa8
 title: '.NET AI Community Standup: Ignite AI Highlights and Custom Avatar Architecture Deep Dive'
 author: dotnet
@@ -31,6 +31,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Featuring insights from Bruno Capuano and Pablo Piovano, this session explores the technical implementation of Microsoft's AI Custom Avatar demo using Azure AI Foundry and .NET technologies.<!--excerpt_end-->
 

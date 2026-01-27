@@ -1,5 +1,5 @@
 
-using TechHub.Core.DTOs;
+using TechHub.Core.Models;
 
 namespace TechHub.Core.Tests.DTOs;
 
@@ -167,13 +167,13 @@ public class ContentItemDtoTests
         Assert.Null(result);
     }
 
-    private static ContentItemDto CreateTestDto(
+    private static ContentItem CreateTestDto(
         string collectionName,
         string? externalUrl = "https://example.com",
         string? url = "/test/url",
         string? title = "Test Title")
     {
-        return new ContentItemDto
+        return new ContentItem
         {
             Slug = "test-slug",
             Title = title ?? "Test Title",

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?reload=9&v=kCc8FmEb1nY
 title: Let's build GPT from scratch, in code, spelled out.
 author: Andrej Karpathy
@@ -9,6 +9,7 @@ tags:
 - PyTorch
 section_names:
 - ml
+primary_section: ml
 ---
 We build a Generatively Pretrained Transformer (GPT), following the paper "Attention is All You Need" and OpenAI's GPT-2 / GPT-3.<!--excerpt_end-->
 

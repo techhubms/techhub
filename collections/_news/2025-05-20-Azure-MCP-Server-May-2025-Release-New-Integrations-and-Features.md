@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-mcp-server-may-2025-release/
 title: 'Azure MCP Server – May 2025 Release: New Integrations and Features'
 author: Rohit Ganguly
@@ -32,6 +32,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Rohit Ganguly presents the May 2025 release of Azure MCP Server, focusing on new service integrations, improved documentation, and tools for developers, including collaboration with GitHub Copilot for Azure.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=vuqgC2AiZgY
 title: 'Data Protection in the Age of the Adversary: Accelerating Microsoft Purview Adoption'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events brings Quentin Rhoads-Herrera and Caleb McDowell together at Ignite 2025 to discuss AI-driven threats and a practical roadmap for adopting Microsoft Purview to safeguard sensitive data.<!--excerpt_end-->
 

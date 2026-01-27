@@ -225,14 +225,14 @@ public class UrlRoutingTests(PlaywrightCollectionFixture fixture) : IAsyncLifeti
         // Collection badges SHOULD be shown (sectionName='all' shows collection badges to distinguish content types)
         var firstCard = Page.Locator(".card").First;
         var cardTags = firstCard.Locator(".card-tags");
-        
+
         // Verify card-tags exists
         await cardTags.AssertElementVisibleAsync();
-        
+
         // Collection badge should be present and say "News" (last .badge-grey in .card-tags)
         var collectionBadge = cardTags.Locator(".badge-grey").Last;
         var badgeText = await collectionBadge.TextContentAsync();
-        badgeText.Should().Contain("News", 
+        badgeText.Should().Contain("News",
             "collection badges are shown on /all/* routes to distinguish different collection types");
     }
 

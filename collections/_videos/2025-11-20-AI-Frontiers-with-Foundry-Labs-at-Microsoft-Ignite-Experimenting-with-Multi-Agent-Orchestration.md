@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=kyb-ZISRa48
 title: 'AI Frontiers with Foundry Labs at Microsoft Ignite: Experimenting with Multi-Agent Orchestration'
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents an advanced session at Ignite 2025 focusing on AI experimentation in Foundry Labs. The talk features Ashley Llorens, Marco Casalaina, and Shannon Monroe, and dives into agent orchestration, open-source frameworks, and Microsoft’s research innovations.<!--excerpt_end-->
 

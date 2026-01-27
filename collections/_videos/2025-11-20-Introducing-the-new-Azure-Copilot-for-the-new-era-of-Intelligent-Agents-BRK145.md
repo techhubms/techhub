@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=WgFGGS_yKmE
 title: Introducing the new Azure Copilot for the new era of Intelligent Agents | BRK145
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 In this session from Microsoft Ignite 2025, Microsoft Events—featuring speakers Annie Pearl, Demi Ajayi, and Ruhiyyih Mahalati—explore how Azure Copilot and agentic AI are elevating IT, DevOps, and security management in Azure cloud environments.<!--excerpt_end-->
 

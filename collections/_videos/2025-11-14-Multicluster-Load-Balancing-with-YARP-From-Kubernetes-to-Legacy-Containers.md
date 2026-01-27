@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=VIroNVbY0qI
 title: 'Multicluster Load Balancing with YARP: From Kubernetes to Legacy Containers'
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 In this session, dotnet demonstrates how to architect a load balancer using YARP to streamline traffic management across multiple Kubernetes clusters and VM-hosted Windows Containers, offering practical insights on scaling, routing, and integrating legacy systems.<!--excerpt_end-->
 

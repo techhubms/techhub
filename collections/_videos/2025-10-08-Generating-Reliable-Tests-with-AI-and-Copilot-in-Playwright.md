@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=2p9kRRcrv80
 title: Generating Reliable Tests with AI and Copilot in Playwright
 author: Microsoft Developer
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this video, Microsoft Developer and Debbie O’Brien show how to leverage GitHub Copilot and MCP to generate Playwright tests, making automated testing more accessible to developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/why-apis-alone-wont-cut-it-in-the-ai-era/?utm_source=rss&utm_medium=rss&utm_campaign=why-apis-alone-wont-cut-it-in-the-ai-era
 title: Why APIs Alone Won’t Cut It in the AI Era
 author: Alan Shimel
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Alan Shimel explores, through an interview with Kumar Chivukula, why traditional APIs fall short for AI-era needs and how the Model Context Protocol may redefine enterprise API strategies.<!--excerpt_end-->
 

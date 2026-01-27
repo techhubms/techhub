@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=zC9pEiIf46k
 title: Azure Update - 14th November 2025
 author: John Savill's Technical Training
@@ -35,6 +35,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 John Savill's Technical Training provides a comprehensive roundup of Azure updates for 14th November 2025, covering AKS, firewall, security, data platform advancements, AI news, and new technical resources for Azure professionals.<!--excerpt_end-->
 

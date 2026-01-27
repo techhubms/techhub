@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/integrating-azure-application-gateway-v2-with-azure-api/ba-p/4470804
 title: Integrating Azure Application Gateway v2 with Azure API Management for Secure and Scalable API Delivery
 author: ranjsharma
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 ranjsharma presents a step-by-step guide to integrating Azure Application Gateway v2 and Azure API Management for secure, scalable API solutions, including automation with Terraform and Azure DevOps.<!--excerpt_end-->
 

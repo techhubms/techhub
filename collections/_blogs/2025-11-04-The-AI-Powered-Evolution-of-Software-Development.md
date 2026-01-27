@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/the-ai-powered-evolution-of-software-development/
 title: The AI-Powered Evolution of Software Development
 author: Vishwanath Krishnamurthy
@@ -38,6 +38,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Vishwanath Krishnamurthy examines how artificial intelligence, tools like GitHub Copilot, and agentic AI are transforming software development and DevOps, enhancing developer productivity and software quality.<!--excerpt_end-->
 

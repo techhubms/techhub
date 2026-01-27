@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=kdk0Ye47tfE
 title: Azure Update - 31st October 2025
 author: John Savill's Technical Training
@@ -28,6 +28,7 @@ section_names:
 - azure
 - devops
 - ml
+primary_section: ml
 ---
 John Savill's Technical Training delivers a concise Azure update for October 31st, 2025, summarizing recent news on Azure Functions, Azure Front Door outages, storage migrations, PostgreSQL, and Azure ML. Key highlights and resource links are provided.<!--excerpt_end-->
 

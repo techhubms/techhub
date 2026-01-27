@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-25-custom-labels-configuration-option-for-dependabot-self-hosted-and-larger-github-hosted-actions-runners-now-generally-available-at-the-organization-level
 title: Custom Labels Configuration for Dependabot Jobs with GitHub Actions Runners
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison outlines the new ability for Dependabot jobs to use custom labels on self-hosted and larger GitHub-hosted Actions runners, enabling granular workload management for organizations and improved supply chain security.<!--excerpt_end-->
 

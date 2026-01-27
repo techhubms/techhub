@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/survey-surfaces-downstream-devops-challenges-created-by-ai-code/
 title: Survey Reveals DevOps Bottlenecks Created by AI-Generated Code
 author: Mike Vizard
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard presents findings from a survey showing that AI code generation is speeding up development but also introducing new DevOps challenges, from downstream incidents to security concerns.<!--excerpt_end-->
 

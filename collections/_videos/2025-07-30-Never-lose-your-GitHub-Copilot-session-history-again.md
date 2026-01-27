@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/hzjkGgkI9H8
 title: Never lose your GitHub Copilot session history again
 author: GitHub
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Authored by GitHub, this guide introduces a prompt-driven solution for keeping an ongoing changelog.md with GitHub Copilot—capturing work before committing and preserving session history for developers.<!--excerpt_end-->
 

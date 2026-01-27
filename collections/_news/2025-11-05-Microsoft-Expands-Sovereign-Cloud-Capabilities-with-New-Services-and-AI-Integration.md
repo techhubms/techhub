@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/microsoft-strengthens-sovereign-cloud-capabilities-with-new-services/
 title: Microsoft Expands Sovereign Cloud Capabilities with New Services and AI Integration
 author: Douglas Phillips
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Douglas Phillips announces major updates to Microsoft's Sovereign Cloud platform, emphasizing enhanced AI capabilities, regional compliance, and new services to bolster cloud security and scalability for regulated industries.<!--excerpt_end-->
 

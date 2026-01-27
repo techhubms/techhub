@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/running-a-load-test-within-a-chaos-experiment/ba-p/4463344
 title: Running Load Tests as Part of Azure Chaos Studio Experiments
 author: Nikita_Nallamothu
@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Nikita Nallamothu demonstrates how to combine Azure Chaos Studio and Azure Load Testing to uncover resilience blind spots by orchestrating load tests with fault injections, providing actionable strategies for cloud reliability engineering.<!--excerpt_end-->
 

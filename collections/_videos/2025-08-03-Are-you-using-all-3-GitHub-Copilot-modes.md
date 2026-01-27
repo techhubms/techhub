@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/oZR41osK57w
 title: Are You Using All 3 GitHub Copilot Modes?
 author: GitHub
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this teaser by GitHub, viewers get an introduction to the three GitHub Copilot modes—Agent, Edit, and Ask. The author, GitHub, invites users to explore the full deep dive for an in-depth look at these AI-powered productivity features.<!--excerpt_end-->
 

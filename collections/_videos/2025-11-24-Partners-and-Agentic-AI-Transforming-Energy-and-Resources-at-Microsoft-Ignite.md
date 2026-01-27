@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=GFZtSDvOS-w
 title: 'Partners and Agentic AI: Transforming Energy and Resources at Microsoft Ignite'
 author: Microsoft Events
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents a session on shaping the future of energy and resources with AI-driven solutions, featuring Stephanie Comardelle, Mike Rossi, and Rob Schapiro. The talk covers trends, governance, and Agent 365 innovations.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-20-sunset-notice-copilot-knowledge-bases
 title: 'GitHub Copilot Knowledge Bases Retiring: Transition to Copilot Spaces'
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the retirement of GitHub Copilot knowledge bases, urging users to transition to Copilot Spaces, which offers enhanced context sharing and management for development teams.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-cli-open-source-ai-ready-and-more-powerful/
 title: Fabric CLI Goes Open Source with AI-Ready Features in v1.1.0
 author: Microsoft Fabric Blog
@@ -26,6 +26,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Microsoft Fabric Blog introduces the open-sourcing of the Fabric CLI, with author insights on new AI-ready features, developer empowerment, and community-driven roadmap. Discover how v1.1.0 enhances workflows and encourages collaborative innovation.<!--excerpt_end-->
 

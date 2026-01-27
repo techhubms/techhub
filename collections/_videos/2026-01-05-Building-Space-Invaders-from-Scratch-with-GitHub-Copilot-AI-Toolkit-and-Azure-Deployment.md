@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=_0SQuGw9JgE
 title: Building Space Invaders from Scratch with GitHub Copilot, AI Toolkit, and Azure Deployment
 author: Visual Studio Code
@@ -23,6 +23,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code hosts David Roussett and Reynald Adolphe as they demonstrate building a Space Invaders game from scratch with GitHub Copilot, integrating AI and deploying to Azure.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=EeaDXQEhy_o
 title: 'Modernizing DNS/DHCP: Micetro for Hybrid and Cloud Environments'
 author: Microsoft Events
@@ -22,6 +22,7 @@ tags:
 - ServiceNow Integration
 section_names:
 - azure
+primary_section: azure
 ---
 Microsoft Events and Scott Penney explain how Micetro and integrated observability tools help modernize DNS/DHCP operations across hybrid and cloud environments, highlighting root-cause detection, centralized management, and cloud integrations.<!--excerpt_end-->
 

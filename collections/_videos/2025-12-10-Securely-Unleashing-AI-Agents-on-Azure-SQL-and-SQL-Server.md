@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=t3Y3Kg4BU3w
 title: Securely Unleashing AI Agents on Azure SQL and SQL Server
 author: dotnet
@@ -25,6 +25,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 dotnet presents a practical session focused on securely enabling AI agents to access Azure SQL Database and SQL Server. The talk covers risk management, least-privilege access, and strategies to reduce query mistakes.<!--excerpt_end-->
 

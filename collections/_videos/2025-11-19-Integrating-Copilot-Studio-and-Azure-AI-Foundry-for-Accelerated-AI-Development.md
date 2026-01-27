@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Yujyvez1fVA
 title: Integrating Copilot Studio and Azure AI Foundry for Accelerated AI Development
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Presented by Matt DiLiberto, this Microsoft Ignite session explores integrating Copilot Studio and Azure AI Foundry to empower teams in building smarter, scalable AI solutions.<!--excerpt_end-->
 

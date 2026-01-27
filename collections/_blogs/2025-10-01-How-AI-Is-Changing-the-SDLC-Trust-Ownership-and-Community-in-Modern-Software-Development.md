@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.arresteddevops.com/ai-sdlc/
 title: 'How AI Is Changing the SDLC: Trust, Ownership, and Community in Modern Software Development'
 author: Arrested DevOps
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Matty Stratton hosts a discussion with Hannah Foxwell and Robert Werner on how AI is reshaping the software development lifecycle. They examine trust, code ownership, and the importance of community and best practices in adopting AI for DevOps.<!--excerpt_end-->
 

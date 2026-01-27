@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/introducing-cross-resource-metrics-and-alerts-support-for-azure/ba-p/4459193
 title: Introducing Cross Resource Metrics and Alerts Support for Azure Storage
 author: dafalkne
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 dafalkne announces a new Azure Storage feature: Cross Resource Metrics and Alerts. This post guides users through aggregating metrics and configuring alerts across multiple storage accounts for more effective monitoring and fleet management.<!--excerpt_end-->
 

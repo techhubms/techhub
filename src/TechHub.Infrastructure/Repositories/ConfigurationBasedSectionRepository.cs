@@ -17,6 +17,9 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
     {
         ArgumentNullException.ThrowIfNull(settings);
 
+        // Get collection display names mapping
+        var collectionDisplayNames = settings.Value.Content.CollectionDisplayNames;
+
         // Define section display order (matches live site - starts with "all")
         var sectionOrder = new[]
         {
@@ -25,7 +28,7 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
 
         // Convert configuration to Section models and apply ordering
         var sectionsDict = settings.Value.Content.Sections
-            .Select(kvp => ConvertToSection(kvp.Key, kvp.Value))
+            .Select(kvp => ConvertToSection(kvp.Key, kvp.Value, collectionDisplayNames))
             .ToDictionary(s => s.Name);
 
         // Order sections according to defined order, then any remaining alphabetically
@@ -58,18 +61,22 @@ public sealed class ConfigurationBasedSectionRepository : ISectionRepository
     /// <summary>
     /// Convert SectionConfig from appsettings.json to Section model
     /// </summary>
-    private static Section ConvertToSection(string sectionName, SectionConfig config)
+    private static Section ConvertToSection(string sectionName, SectionConfig config, Dictionary<string, string> collectionDisplayNames)
     {
-        // Map collection configurations to CollectionReference models
+        // Map collection configurations to Collection models
         // The key in the Collections dictionary is the collection name
         var collections = config.Collections
-            .Select(kvp => new CollectionReference
+            .Select(kvp => new Collection
             {
                 Title = kvp.Value.Title,
                 Name = kvp.Key, // Use the dictionary key as the collection name
                 Url = kvp.Value.Url,
                 Description = kvp.Value.Description,
-                IsCustom = kvp.Value.Custom
+                IsCustom = kvp.Value.Custom,
+                // Look up display name from global config, fallback to collection title
+                DisplayName = collectionDisplayNames.TryGetValue(kvp.Key.ToLowerInvariant(), out var displayName)
+                    ? displayName
+                    : kvp.Value.Title
             })
             .ToList();
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=iXTnCccJEHU
 title: Azure Weekly Update – 29th August 2025
 author: John Savill's Technical Training
@@ -49,6 +49,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 John Savill presents a detailed weekly Azure update, highlighting new infrastructure, security, and AI features, and enhancements for developers and administrators across Microsoft's cloud platform.<!--excerpt_end-->
 

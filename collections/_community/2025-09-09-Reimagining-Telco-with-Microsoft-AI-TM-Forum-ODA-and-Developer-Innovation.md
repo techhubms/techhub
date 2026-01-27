@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/reimagining-telco-with-microsoft-ai-tm-forum-oda-and-developer/ba-p/4451724
 title: 'Reimagining Telco with Microsoft: AI, TM Forum ODA, and Developer Innovation'
 author: rickliev
@@ -29,6 +29,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 rickliev shares how Microsoft leverages AI, Azure, and developer-focused tools like GitHub Copilot at TM Forum Innovate Americas 2025 to drive telco innovation, modernize IT architectures, and accelerate open API development.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/making-windows-terminal-awesome-with-github-copilot-cli
 title: Making Windows Terminal Awesome with GitHub Copilot CLI
 author: Kayla Cinnamon
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Kayla Cinnamon guides developers on making Windows Terminal highly personalized for coding, highlighting GitHub Copilot CLI setup, custom profiles, and integrating useful prompt features.<!--excerpt_end-->
 

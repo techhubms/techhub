@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-18-assigning-github-copilot-to-an-issue-now-adds-you-as-an-assignee
 title: Assigning GitHub Copilot to an Issue Now Also Assigns You
 author: Allison
@@ -23,6 +23,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces an improvement to GitHub Copilot: assigning an issue to Copilot now also assigns you automatically, enhancing issue tracking and visibility in collaborative development projects.<!--excerpt_end-->
 

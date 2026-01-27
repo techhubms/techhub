@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/quantum%e2%80%91ready-cloud-devops-getting-ready-for-quantum-computing-integration/
 title: 'Quantum-Ready Cloud DevOps: Preparing for Quantum Computing Integration'
 author: Joydip Kanjilal
@@ -42,6 +42,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Joydip Kanjilal discusses how DevOps teams can future-proof their cloud development pipelines by preparing for quantum computing. The article addresses quantum-ready DevOps strategy, Azure Quantum, post-quantum security, and essential steps for teams adapting to this evolving landscape.<!--excerpt_end-->
 

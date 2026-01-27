@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/claude-introduces-agent-skills-for-custom-ai-workflows/
 title: Claude Introduces Agent Skills for Custom AI Workflows
 author: Tom Smith
@@ -43,6 +43,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Tom Smith reviews Anthropic's Agent Skills for Claude, a new system enabling DevOps and engineering teams to package, share, and automate reusable components for complex AI-driven workflows.<!--excerpt_end-->
 

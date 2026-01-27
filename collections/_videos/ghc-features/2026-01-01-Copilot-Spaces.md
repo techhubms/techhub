@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Copilot Spaces
 author: TBD
@@ -12,6 +12,7 @@ tags: []
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This content demonstrates GitHub Copilot's Copilot Spaces feature. Create custom AI agents with organizational context and knowledge<!--excerpt_end-->
 

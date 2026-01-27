@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/join-us-for-mcp-dev-days-july-29-30
 title: 'Join Us for MCP Dev Days – July 29-30: Deep Dive into the Model Context Protocol'
 author: Katie Savage, Marc Baiza
@@ -25,6 +25,7 @@ section_names:
 - devops
 - azure
 - security
+primary_section: github-copilot
 ---
 Authored by Katie Savage and Marc Baiza, this post introduces MCP Dev Days, a Microsoft event dedicated to the Model Context Protocol (MCP), offering deep technical content, hands-on sessions, and real-world demos across major development tools.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/EZBU4zCCaoM
 title: A New Kind of Developer is Emerging on GitHub
 author: GitHub
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this video from GitHub, Eirini Kalliamvakou explains how new developers are increasingly adopting GitHub Copilot, highlighting the growing need for AI fluency and keen judgment when working with AI-powered coding tools.<!--excerpt_end-->
 

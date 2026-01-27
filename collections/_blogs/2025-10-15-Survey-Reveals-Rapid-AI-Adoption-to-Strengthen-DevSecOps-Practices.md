@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/survey-surfaces-widespread-adoption-of-ai-to-improve-devsecops/
 title: Survey Reveals Rapid AI Adoption to Strengthen DevSecOps Practices
 author: Mike Vizard
@@ -27,6 +27,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Mike Vizard summarizes a Fastly survey showing rapid AI adoption for DevSecOps, detailing the integration level, trust factors, and challenges as organizations automate application security.<!--excerpt_end-->
 

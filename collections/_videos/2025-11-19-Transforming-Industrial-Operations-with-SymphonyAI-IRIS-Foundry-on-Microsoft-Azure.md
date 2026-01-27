@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=t37ZpdNQmAM
 title: Transforming Industrial Operations with SymphonyAI IRIS Foundry on Microsoft Azure
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents an expert session on SymphonyAI IRIS Foundry and Microsoft Azure, exploring AI, DataOps, and Unified Namespace solutions for modern industrial operations.<!--excerpt_end-->
 

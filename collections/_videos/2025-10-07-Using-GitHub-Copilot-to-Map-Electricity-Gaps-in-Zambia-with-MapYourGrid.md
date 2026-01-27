@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/AWvpFKOdGMg
 title: Using GitHub Copilot to Map Electricity Gaps in Zambia with MapYourGrid
 author: GitHub
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub showcases how a developer in Zambia uses MapYourGrid's open data and GitHub Copilot to map local electricity gaps, illustrating how AI and open source tools can drive sustainable development.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-maps-blog/azure-maps-understanding-view-vs-routing-coordinates/ba-p/4483532
 title: 'Azure Maps: Understanding View vs. Routing Coordinates'
 author: IoTGirl
@@ -17,6 +17,7 @@ tags:
 - Spatial Data
 section_names:
 - azure
+primary_section: azure
 ---
 IoTGirl from Microsoft breaks down how Azure Maps provides both view and routing coordinates, detailing why each matters for developers and the pitfalls of misusing them in applications.<!--excerpt_end-->
 

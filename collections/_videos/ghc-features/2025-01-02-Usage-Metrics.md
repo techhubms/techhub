@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/43yFNFT8-R4
 title: Usage Metrics
 author: Rob Bos
@@ -14,6 +14,7 @@ section_names:
 - ai
 - github-copilot
 - coding
+primary_section: github-copilot
 ---
 This video demonstrates GitHub Copilot's Usage Metrics feature. Track and analyze Copilot usage across your team.<!--excerpt_end-->
 

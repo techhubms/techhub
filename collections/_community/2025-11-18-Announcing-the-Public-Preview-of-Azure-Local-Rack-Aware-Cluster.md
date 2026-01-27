@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-preview-of-azure-local-rack-aware-cluster/ba-p/4469435
 title: Announcing the Public Preview of Azure Local Rack Aware Cluster
 author: mindydiep
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 mindydiep introduces the public preview of Azure Local rack aware cluster, highlighting its architecture and integration for fault-tolerant and scalable hybrid cloud deployments.<!--excerpt_end-->
 

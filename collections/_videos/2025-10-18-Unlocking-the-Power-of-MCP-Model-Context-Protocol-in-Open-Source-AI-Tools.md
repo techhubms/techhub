@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=TjnFXtUDKNg
 title: 'Unlocking the Power of MCP: Model Context Protocol in Open Source AI Tools'
 author: GitHub
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 In this podcast episode, Cassidy, Abby, and Kedasha from GitHub discuss how the Model Context Protocol (MCP) boosts productivity and transparency in open source AI tools, highlighting key collaborations and projects.<!--excerpt_end-->
 

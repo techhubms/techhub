@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/signal/articles/4-ways-ai-is-reshaping-discovery-health-work-and-responsibility/
 title: 4 Ways AI is Reshaping Discovery, Health, Work, and Responsibility
 author: stclarke
@@ -21,6 +21,7 @@ tags:
 - Scientific Discovery
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke reports on how Microsoft researchers and experts describe AI’s impact in medicine, responsible systems design, science, and workplace transformation, offering valuable perspectives on real-world applications and challenges.<!--excerpt_end-->
 

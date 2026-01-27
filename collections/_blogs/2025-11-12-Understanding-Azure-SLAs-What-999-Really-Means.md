@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/understanding-azure-slas-what-99-9-really-means/
 title: 'Understanding Azure SLAs: What 99.9% Really Means'
 author: Dellenny
@@ -21,6 +21,7 @@ tags:
 - SLA
 section_names:
 - azure
+primary_section: azure
 ---
 Dellenny explores the reality behind Azure’s SLA numbers, helping developers and businesses interpret uptime percentages and plan more reliable cloud architectures.<!--excerpt_end-->
 

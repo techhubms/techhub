@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=kiGG4fUe4RI
 title: 'Enhancing .NET Code: Using Facet Instead of Traditional Mapping'
 author: Nick Chapsas
@@ -18,6 +18,7 @@ tags:
 - Typed Projections
 section_names:
 - coding
+primary_section: coding
 ---
 In this video, Nick Chapsas explains how the Facet library provides an alternative to traditional mapping in .NET development, leveraging strongly-typed LINQ projections to improve performance and developer experience.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=oG2oJP0fpg0
 title: Accelerating Agentic Solutions for Financial Services with Copilot Studio
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Sub Agents
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents a session on agentic journeys in financial services, focusing on building AI-powered solutions using Copilot Studio and practical techniques for real-world deployment.<!--excerpt_end-->
 

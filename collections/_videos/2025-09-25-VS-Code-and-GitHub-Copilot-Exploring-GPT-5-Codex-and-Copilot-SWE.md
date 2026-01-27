@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Rz3ucRzuUHc
 title: 'VS Code and GitHub Copilot: Exploring GPT-5-Codex and Copilot-SWE'
 author: Visual Studio Code
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code's team, led by James Montemagno and Pierce Boggan, dives into the latest developments in AI-powered coding with GPT-5-Codex and Copilot-SWE. They showcase what's new for developers in VS Code.<!--excerpt_end-->
 

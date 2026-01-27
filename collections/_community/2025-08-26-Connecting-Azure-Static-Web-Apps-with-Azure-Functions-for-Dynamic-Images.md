@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure/what-s-the-secret-sauce-for-getting-functions-api-to-work-with/m-p/4448430#M1359
 title: Connecting Azure Static Web Apps with Azure Functions for Dynamic Images
 author: fcc_archivist
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 fcc_archivist describes the challenge of connecting an Azure Static Web App with an Azure Functions API that generates images dynamically in C#. The guide covers typical pitfalls and configuration requirements.<!--excerpt_end-->
 

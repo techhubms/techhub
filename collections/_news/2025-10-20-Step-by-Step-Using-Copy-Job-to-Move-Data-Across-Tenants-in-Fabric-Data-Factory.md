@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-copy-data-across-tenants-using-copy-job-in-fabric-data-factory/
 title: 'Step-by-Step: Using Copy Job to Move Data Across Tenants in Fabric Data Factory'
 author: Microsoft Fabric Blog
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog presents a practical tutorial for moving data across Azure tenants using Copy job in Fabric Data Factory. Authored by the Microsoft Fabric Blog team, this walkthrough emphasizes secure authentication, configuration, and transfer into a Fabric Data Warehouse.<!--excerpt_end-->
 

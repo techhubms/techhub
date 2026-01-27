@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/companies-using-dotnet-need-to-suck-it-up-and-pay-for-support/
 title: 'Managing .NET Support Lifecycles: Why Paying for Post-EOL Support Is Practical'
 author: Andrew Lock
@@ -32,6 +32,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 Andrew Lock reviews the .NET support lifecycle and demonstrates how organizations can avoid risks from unsupported versions by leveraging HeroDevs' Never Ending Support for .NET 6.<!--excerpt_end-->
 

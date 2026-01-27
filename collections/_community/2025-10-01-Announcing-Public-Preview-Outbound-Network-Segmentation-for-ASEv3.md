@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-public-preview-asev3-outbound-network-segmentation/ba-p/4458398
 title: 'Announcing Public Preview: Outbound Network Segmentation for ASEv3'
 author: jordanselig
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 jordanselig explains how Outbound Network Segmentation for App Service Environment v3 (ASEv3) enables Azure app developers and admins to manage outbound traffic routing, providing improved security and compliance controls.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/10/13/fyai-why-developers-will-lead-ai-transformation-across-the-enterprise/
 title: How Developers Are Leading AI Transformation Across the Enterprise
 author: Toby Bowers
@@ -26,6 +26,7 @@ section_names:
 - azure
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Toby Bowers highlights how developers are leveraging AI agents and copilots, such as GitHub Copilot and Azure AI Foundry, to accelerate enterprise transformation and streamline software delivery in modern organizations.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-to-modernise-a-microsoft-access-database-forms-vba-to-node/ba-p/4473504
 title: 'Modernizing Microsoft Access: Migrating to Node.js, OpenAPI, SQL Server, and MongoDB with GitHub Copilot'
 author: anthkernan
@@ -31,6 +31,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 anthkernan presents a detailed guide on modernizing a Microsoft Access solution using Node.js, OpenAPI, SQL Server, and GitHub Copilot, with a focus on code migration, automation, and architectural best practices.<!--excerpt_end-->
 

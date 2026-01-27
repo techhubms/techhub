@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-multi-agent-ai-systems-on-azure-app-service/ba-p/4451373
 title: Build Multi-Agent AI Systems on Azure App Service
 author: jordanselig
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 jordanselig illustrates how to build sophisticated multi-agent AI applications on Azure App Service, combining Azure AI Foundry, .NET Aspire, and MCP tooling for a cloud-native, scalable, and observable solution.<!--excerpt_end-->
 

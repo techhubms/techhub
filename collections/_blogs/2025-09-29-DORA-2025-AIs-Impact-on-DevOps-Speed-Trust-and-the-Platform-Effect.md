@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/dora-2025-faster-but-are-we-any-better/
 title: 'DORA 2025: AI’s Impact on DevOps — Speed, Trust, and the Platform Effect'
 author: Alan Shimel
@@ -36,6 +36,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Alan Shimel analyzes the 2025 DORA Report, focusing on how widespread AI adoption is transforming DevOps teams’ speed, stability, and performance. He discusses productivity, trust, and the pivotal role of platforms and value stream management.<!--excerpt_end-->
 

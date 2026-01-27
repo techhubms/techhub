@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=OLKCfSNivXc
 title: 'Unified Digital Resilience: Integrating Cisco and Microsoft Security on Azure'
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents a Microsoft Ignite session with speakers Richard Diver and Anthony Pierce, highlighting how Cisco and Microsoft integrate security, automation, and AI-driven insights on Azure for unified digital resilience.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/generative-ai/how-to-build-secure-and-scalable-remote-mcp-servers/
 title: How to Build Secure and Scalable Remote MCP Servers
 author: Den Delimarsky
@@ -24,6 +24,7 @@ section_names:
 - ai
 - security
 - azure
+primary_section: ai
 ---
 Authored by Den Delimarsky, this article offers a thorough walkthrough for developers on building secure, scalable MCP servers. It focuses on robust security, authorization, secrets management, and architectural practices needed to safely enable AI agent connectivity and operations.<!--excerpt_end-->
 

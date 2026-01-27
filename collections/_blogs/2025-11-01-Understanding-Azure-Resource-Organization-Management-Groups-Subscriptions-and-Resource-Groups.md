@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-azure-organizes-resources-subscriptions-resource-groups-and-management-groups-explained/
 title: 'Understanding Azure Resource Organization: Management Groups, Subscriptions, and Resource Groups'
 author: Dellenny
@@ -18,6 +18,7 @@ tags:
 - Tagging
 section_names:
 - azure
+primary_section: azure
 ---
 Dellenny offers a practical breakdown of Azure’s resource organization, including Management Groups, Subscriptions, and Resource Groups, guiding readers on cloud governance, access management, and effective Azure administration.<!--excerpt_end-->
 

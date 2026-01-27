@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=B7TUkcCDTOg
 title: Optimize Savings with Microsoft Fabric Reservations
 author: Microsoft Developer
@@ -19,6 +19,7 @@ tags:
 - Workload Management
 section_names:
 - azure
+primary_section: azure
 ---
 In this Azure Essentials Show episode, Microsoft Developer’s Thomas Maurer and Priyanshi Mittal explain how to reduce costs and simplify cloud resource management using Microsoft Fabric reservations and purchasing strategies.<!--excerpt_end-->
 

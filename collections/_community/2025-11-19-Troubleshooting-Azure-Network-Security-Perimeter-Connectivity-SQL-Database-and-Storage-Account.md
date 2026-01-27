@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking/what-would-be-the-expected-behavior-for-an-nsp/m-p/4471260#M748
 title: 'Troubleshooting Azure Network Security Perimeter Connectivity: SQL Database and Storage Account'
 author: Antonio Buonaiuto
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Antonio Buonaiuto describes a networking issue in Azure where an SQL Database can't access a Storage Account within the same Network Security Perimeter, detailing his troubleshooting steps and raising questions about expected Azure NSP behavior.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=R8d5JsJ9R64
 title: 'Microsoft Discovery Platform Overview: AI-Driven R&D on Azure'
 author: Microsoft Cloud
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Cloud presents an overview of their Discovery platform, detailing how Azure-powered AI agents can transform research and development for scientists and engineers.<!--excerpt_end-->
 

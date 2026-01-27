@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/04/speaking-at-the-windows-server-summit-2025/
 title: 'Speaking at the Windows Server Summit 2025: Modernizing Server Management with Azure Arc'
 author: Thomas Maurer
@@ -24,6 +24,7 @@ tags:
 - Windows Server Summit
 section_names:
 - azure
+primary_section: azure
 ---
 Thomas Maurer shares his involvement as a featured speaker at the Windows Server Summit 2025, where he will discuss modern server management using Azure Arc and hybrid cloud strategies.<!--excerpt_end-->
 

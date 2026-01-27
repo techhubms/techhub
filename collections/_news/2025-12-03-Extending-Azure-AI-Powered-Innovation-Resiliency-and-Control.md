@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/new-options-for-ai-powered-innovation-resiliency-and-control-with-microsoft-azure/
 title: 'Extending Azure: AI-Powered Innovation, Resiliency, and Control'
 author: Douglas Phillips
@@ -32,6 +32,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 Douglas Phillips presents Microsoft's latest Azure innovations, focusing on AI, operational resiliency, and control for enterprises facing complex data and sovereignty needs.<!--excerpt_end-->
 

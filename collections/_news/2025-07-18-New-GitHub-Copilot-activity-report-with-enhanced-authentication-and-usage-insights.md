@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-18-new-github-copilot-activity-report-with-enhanced-authentication-and-usage-insights
 title: New GitHub Copilot activity report with enhanced authentication and usage insights
 author: Allison
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces a new feature for enterprise and organization administrators: an improved GitHub Copilot activity report. This update provides enhanced insight into user authentication and feature adoption, surpassing the capabilities of legacy usage reports. The article explores the benefits of the new report in monitoring and managing Copilot deployment across organizations.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2025/Aug/20/Using-the-new-WebView2-AllowHostInputProcessing-Keyboard-Mapping-Feature
 title: Handling Keyboard Mapping in WebView2 with AllowHostInputProcessing
 author: Rick Strahl
@@ -22,6 +22,7 @@ tags:
 - WPF
 section_names:
 - coding
+primary_section: coding
 ---
 Rick Strahl examines the implementation of keyboard mapping and menu accelerator key support in Microsoft WebView2 for .NET and WPF applications, using practical examples from Markdown Monster.<!--excerpt_end-->
 

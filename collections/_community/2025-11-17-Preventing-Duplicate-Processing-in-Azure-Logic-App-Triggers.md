@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/duplicate-detection-in-logic-app-trigger/ba-p/4470365
 title: Preventing Duplicate Processing in Azure Logic App Triggers
 author: Mohammed_Barqawi
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Mohammed_Barqawi presents a solution for detecting and handling duplicate trigger executions in Azure Logic Apps by leveraging the Logic Apps REST API and a unique clientTrackingId.<!--excerpt_end-->
 

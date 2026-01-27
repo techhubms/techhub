@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/announcing-the-browser-automation-tool-preview-in-azure-ai-foundry-agent-service/
 title: Announcing the Browser Automation Tool (Preview) in Azure AI Foundry Agent Service
 author: Linda Li
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Linda Li introduces the new Browser Automation Tool (Preview) in Azure AI Foundry Agent Service, enabling developers to automate browser tasks via natural language using Playwright Workspaces in Azure.<!--excerpt_end-->
 

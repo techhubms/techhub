@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/12/11/imposter-for-hire-how-fake-people-can-gain-very-real-access/
 title: 'Imposter for Hire: How Fake Employees Breach Security'
 author: Microsoft Incident Response
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Incident Response outlines how fake employees gained access to corporate resources and the security measures the team used to detect and neutralize the threat. The analysis provides practical guidance for organizations facing similar cyber risks.<!--excerpt_end-->
 

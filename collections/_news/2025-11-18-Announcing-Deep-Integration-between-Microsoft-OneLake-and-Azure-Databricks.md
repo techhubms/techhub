@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-and-databricks-advancing-openness-and-interoperability-with-onelake/
 title: Announcing Deep Integration between Microsoft OneLake and Azure Databricks
 author: Microsoft Fabric Blog
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog announces deeper Azure Databricks and OneLake integration, detailed by Adam Conway and Arun Ulag, empowering organizations with open lakehouse architecture, integrated analytics, and AI.<!--excerpt_end-->
 

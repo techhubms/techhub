@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/advancing-embodied-carbon-measurement-at-scale-for-microsoft/ba-p/4485784
 title: Advancing Embodied Carbon Measurement at Scale for Microsoft Azure Hardware
 author: Leoaspauza
@@ -22,6 +22,7 @@ tags:
 - Sustainability
 section_names:
 - azure
+primary_section: azure
 ---
 Leoaspauza explains how Microsoft uses the Cloud Hardware Emissions Methodology (CHEM) to measure and manage the embodied carbon of Azure datacenter hardware, providing technical insights for sustainability-minded engineers and architects.<!--excerpt_end-->
 

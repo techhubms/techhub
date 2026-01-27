@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-and-snowflake-simplified-interoperability-with-no-data-movement/
 title: 'Microsoft and Snowflake: Simplified Interoperability with No Data Movement'
 author: Microsoft Fabric Blog
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog announces major enhancements in Microsoft and Snowflake interoperability, authored by Microsoft Fabric Blog, with a focus on seamless data analytics, AI, and unified data management.<!--excerpt_end-->
 

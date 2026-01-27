@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1lwecec/a_followup_to_goodbye_copilot/
 title: A follow-up to 'Goodbye Copilot!'...
 author: UsualResult
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this follow-up article, author UsualResult revisits their decision to stop using GitHub Copilot, sharing candid feedback after several weeks of using Cursor as an alternative. The author compares both tools in terms of usability, stability, cost, and the overall developer experience, providing insights into their reasons for switching and ongoing impressions. Their experience offers a useful perspective for developers considering alternatives to popular AI code assistants.<!--excerpt_end-->
 

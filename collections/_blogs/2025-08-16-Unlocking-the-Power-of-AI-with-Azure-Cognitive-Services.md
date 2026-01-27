@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/unlocking-the-power-of-ai-with-azure-cognitive-services/
 title: Unlocking the Power of AI with Azure Cognitive Services
 author: Dellenny
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Dellenny explains how Microsoft Azure Cognitive Services empower developers and organizations to add AI features—like vision, speech, and language understanding—to their apps, all without deep machine learning expertise.<!--excerpt_end-->
 

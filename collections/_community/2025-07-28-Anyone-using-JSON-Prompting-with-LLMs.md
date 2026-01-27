@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mb7lpn/anyone_using_json_prompting_with_llms/
 title: Anyone using JSON Prompting with LLMs?
 author: Abhishekmiz
@@ -18,6 +18,7 @@ section_names:
 - ai
 - github-copilot
 - coding
+primary_section: github-copilot
 ---
 In this community article, Abhishekmiz shares their experience using JSON prompting with LLMs like GitHub Copilot, focusing on structured instructions for code generation.<!--excerpt_end-->
 

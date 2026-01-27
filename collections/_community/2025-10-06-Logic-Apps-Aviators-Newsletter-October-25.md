@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-october-25/ba-p/4458456
 title: Logic Apps Aviators Newsletter - October 25
 author: WSilveira
@@ -30,6 +30,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 WSilveira curates the October 25 Logic Apps Aviators Newsletter, featuring in-depth product updates, AI-driven workflow advances, migration tips, and expert insights from the Azure integration ecosystem.<!--excerpt_end-->
 

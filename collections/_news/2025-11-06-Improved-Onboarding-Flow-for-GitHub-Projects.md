@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-06-improved-onboarding-flow-for-github-projects
 title: Improved Onboarding Flow for GitHub Projects
 author: Allison
@@ -20,6 +20,7 @@ tags:
 - Workflow Automation
 section_names:
 - devops
+primary_section: devops
 ---
 Allison reports on recent upgrades to the GitHub Projects onboarding experience, detailing new automation workflows, repository integration features, and key API improvements for developers and project managers.<!--excerpt_end-->
 

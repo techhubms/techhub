@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=iYHh5n-6ez4
 title: Connecting to a Local MCP Server Using Microsoft.Extensions.AI
 author: Learn Microsoft AI
@@ -16,6 +16,7 @@ tags:
 - Semantic Kernel
 section_names:
 - ai
+primary_section: ai
 ---
 Learn Microsoft AI walks through the process of connecting to a local Model Context Protocol (MCP) Server using Microsoft.Extensions.AI, covering setup and real-time model context integration.<!--excerpt_end-->
 

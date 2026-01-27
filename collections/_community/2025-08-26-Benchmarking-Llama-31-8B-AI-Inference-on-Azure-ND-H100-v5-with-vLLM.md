@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/performance-of-llama-3-1-8b-ai-inference-using-vllm-on-nd-h100/ba-p/4448355
 title: Benchmarking Llama 3.1 8B AI Inference on Azure ND-H100-v5 with vLLM
 author: CormacGarvey
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Cormac Garvey offers an in-depth benchmarking study of Llama 3.1 8B model inference using vLLM on Azure ND-H100-v5 GPUs. The article explains AI inference stages, optimization techniques, and reports on throughput, latency, and deployment tips for enterprise AI practitioners.<!--excerpt_end-->
 

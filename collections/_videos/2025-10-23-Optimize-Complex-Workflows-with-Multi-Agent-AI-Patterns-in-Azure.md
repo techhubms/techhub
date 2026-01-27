@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=eobRfdy8tu4
 title: Optimize Complex Workflows with Multi-Agent AI Patterns in Azure
 author: Microsoft Developer
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this Azure Essentials Show episode, Thomas Maurer and Clayton Siemens from Microsoft break down practical multi-agent AI orchestration patterns for enterprise workflow optimization.<!--excerpt_end-->
 

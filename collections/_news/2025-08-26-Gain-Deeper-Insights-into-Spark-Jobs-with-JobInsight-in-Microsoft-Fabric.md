@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/gain-deeper-insights-into-spark-jobs-with-jobinsight-in-microsoft-fabric/
 title: Gain Deeper Insights into Spark Jobs with JobInsight in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog showcases how JobInsight empowers developers and data engineers to analyze Spark applications in Microsoft Fabric, offering metrics extraction, log diagnostics, and advanced troubleshooting directly within Fabric Notebooks.<!--excerpt_end-->
 

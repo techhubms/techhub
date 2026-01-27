@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/boost-performance-with-fast-copy-in-dataflows-gen2-for-snowflake/
 title: Boost Performance with Fast Copy in Dataflows Gen2 for Snowflake
 author: Microsoft Fabric Blog
@@ -21,6 +21,7 @@ tags:
 - Snowflake
 section_names:
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog demonstrates how Fast Copy in Dataflows Gen2 dramatically improves Snowflake-to-Lakehouse loading performance, with insights and benchmarks for data engineers.<!--excerpt_end-->
 

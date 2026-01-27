@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=NUELGzIHT-I
 title: The Ultimate Beginner's Guide to GitHub in 2025
 author: GitHub
@@ -22,6 +22,7 @@ tags:
 - Version Control
 section_names:
 - devops
+primary_section: devops
 ---
 GitHub presents a beginner-friendly guide to using Git and GitHub, with practical tips and demonstrations. Curated by the GitHub team, this video is ideal for those new to version control and collaborative coding.<!--excerpt_end-->
 

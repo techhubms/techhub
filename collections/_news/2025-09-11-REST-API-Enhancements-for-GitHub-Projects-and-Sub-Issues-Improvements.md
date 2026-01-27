@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-11-a-rest-api-for-github-projects-sub-issues-improvements-and-more
 title: REST API Enhancements for GitHub Projects and Sub-Issues Improvements
 author: Allison
@@ -23,6 +23,7 @@ tags:
 - Sub Issues
 section_names:
 - devops
+primary_section: devops
 ---
 Allison details GitHub's latest updates, including a REST API for Projects, improved sub-issue handling, and the renaming of the GitHub for Microsoft Teams app to GitHub Notifications.<!--excerpt_end-->
 

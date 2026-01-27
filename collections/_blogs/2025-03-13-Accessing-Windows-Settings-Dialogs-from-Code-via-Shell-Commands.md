@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2025/Mar/13/Accessing-Windows-Settings-Dialogs-from-Code-via-Shell-Commands
 title: Accessing Windows Settings Dialogs from Code via Shell Commands
 author: Rick Strahl
@@ -18,6 +18,7 @@ tags:
 - Windows
 section_names:
 - coding
+primary_section: coding
 ---
 Rick Strahl discusses how developers can open Windows Settings dialogs directly from code or shell commands using the `ms-settings:` protocol handler. The article provides practical usage examples for applications built with .NET and Windows technologies.<!--excerpt_end-->
 

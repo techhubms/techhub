@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/12/18/new-microsoft-e-book-3-reasons-point-solutions-are-holding-you-back/
 title: Why Unified, AI-Ready Security Platforms Outperform Patchwork Solutions
 author: Scott Woodgate
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Scott Woodgate shares how a unified, AI-powered security platform from Microsoft—combining Defender, Sentinel, and Security Copilot—transforms organizational defense and boosts efficiency, as detailed in their new e-book.<!--excerpt_end-->
 

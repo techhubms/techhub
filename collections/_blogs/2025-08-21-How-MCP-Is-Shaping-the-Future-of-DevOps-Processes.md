@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/mcp-emerges-as-a-catalyst-for-modern-devops-processes/?utm_source=rss&utm_medium=rss&utm_campaign=mcp-emerges-as-a-catalyst-for-modern-devops-processes
 title: How MCP Is Shaping the Future of DevOps Processes
 author: Mike Vizard
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard interviews Loreli Cadapan to unpack how MCP, an AI-powered protocol, is redefining DevOps by integrating large language models into CI/CD and software delivery workflows.<!--excerpt_end-->
 

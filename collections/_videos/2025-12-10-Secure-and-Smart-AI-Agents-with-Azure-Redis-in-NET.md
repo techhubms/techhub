@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=SpEHo-Wwzyg
 title: Secure and Smart AI Agents with Azure Redis in .NET
 author: dotnet
@@ -22,6 +22,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: ai
 ---
 Presented by dotnet, this session details how developers can build secure and intelligent AI agentic applications on Azure using Redis, with focus on security improvements and integration techniques.<!--excerpt_end-->
 

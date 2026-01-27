@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/identity-columns-in-fabric-data-warehouse-preview/
 title: IDENTITY Columns in Fabric Data Warehouse (Preview)
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog explains the technical implementation and benefits of IDENTITY columns in Fabric Data Warehouse, focusing on automatic surrogate key generation, scalability, and distributed data integrity for analytics workloads.<!--excerpt_end-->
 

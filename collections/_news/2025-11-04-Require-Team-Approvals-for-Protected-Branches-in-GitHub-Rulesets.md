@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-03-required-review-by-specific-teams-now-available-in-rulesets
 title: Require Team Approvals for Protected Branches in GitHub Rulesets
 author: Allison
@@ -22,6 +22,7 @@ tags:
 - Workflow Automation
 section_names:
 - devops
+primary_section: devops
 ---
 Allison details GitHub's new ruleset feature requiring team approvals for protected branches, providing organizations with more control over code review and release workflows.<!--excerpt_end-->
 

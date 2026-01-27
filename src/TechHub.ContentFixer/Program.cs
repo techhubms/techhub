@@ -79,6 +79,22 @@ internal sealed class Program
         ["events"] = ["Events"]
     };
 
+    /// <summary>
+    /// Section priority order (matches the menubar order).
+    /// These are lowercase section NAMES matching Section.Name and ContentItem.SectionNames.
+    /// Used to determine which section is "primary" when an item belongs to multiple sections.
+    /// </summary>
+    private static readonly string[] _sectionPriorityOrder =
+    [
+        "github-copilot",
+        "ai",
+        "ml",
+        "coding",
+        "azure",
+        "devops",
+        "security"
+    ];
+
     private static async Task<int> Main(string[] args)
     {
         var dryRun = args.Contains("--dry-run");
@@ -233,6 +249,37 @@ internal sealed class Program
         else
         {
             throw new InvalidOperationException("No categories or section_names found in frontmatter");
+        }
+
+        // 1b. Compute and add primary_section based on section priority order
+        {
+            var sectionNames = GetListValue(frontMatter, "section_names");
+            var primarySection = GetPrimarySectionName(sectionNames, collection);
+
+            // Check if already set and matches
+            var existingPrimarySection = frontMatter.TryGetValue("primary_section", out var existing) ? existing?.ToString() : null;
+            if (existingPrimarySection != primarySection)
+            {
+                frontMatter["primary_section"] = primarySection;
+                if (existingPrimarySection != null)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"  ✓ Updated primary_section: {existingPrimarySection} → {primarySection}");
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"  ✓ Added primary_section: {primarySection}");
+                }
+                Console.ResetColor();
+                changed = true;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Console.WriteLine($"  ℹ primary_section already correct: {primarySection}");
+                Console.ResetColor();
+            }
         }
 
         // 2. Remove tags_normalized
@@ -558,21 +605,18 @@ internal sealed class Program
                 var slugMatch = Regex.Match(filename, @"^\d{4}-\d{2}-\d{2}-(.+)$");
                 var slug = slugMatch.Success ? slugMatch.Groups[1].Value : filename;
 
-                // Get primary section (first in section_names)
+                // Get section names
                 var sectionNames = GetListValue(frontMatter, "section_names");
                 if (sectionNames.Count == 0)
                 {
                     sectionNames = [.. GetListValue(frontMatter, "categories").Select(NormalizeSectionName)];
                 }
 
-                var primarySection = sectionNames.FirstOrDefault();
-                if (string.IsNullOrEmpty(primarySection))
-                {
-                    throw new InvalidOperationException($"File '{file}' has no section_names or categories in frontmatter");
-                }
-
                 // Get collection from file path
                 var collection = ExtractCollectionFromPath(file);
+
+                // Determine primary section using priority order
+                var primarySection = GetPrimarySectionName(sectionNames, collection);
 
                 map[slug] = new ArticleInfo(primarySection, collection);
             }
@@ -636,4 +680,38 @@ internal sealed class Program
     }
 
     private sealed record ArticleInfo(string PrimarySectionName, string CollectionName);
+
+    /// <summary>
+    /// Determines the primary section name for a content item based on its section names and collection.
+    /// Uses the section priority order (matching the menubar order) to pick the highest-priority section.
+    /// Special case: Roundups always belong to "all" section.
+    /// </summary>
+    /// <param name="sectionNames">List of lowercase section names (e.g., "ai", "github-copilot")</param>
+    /// <param name="collectionName">Optional collection name (e.g., "roundups")</param>
+    /// <returns>The lowercase name of the primary section (e.g., "github-copilot", "ai"), or "all" if no match</returns>
+    private static string GetPrimarySectionName(IReadOnlyList<string> sectionNames, string? collectionName = null)
+    {
+        // Special case: Roundups always belong to "all" section
+        if (collectionName?.Equals("roundups", StringComparison.OrdinalIgnoreCase) == true)
+        {
+            return "all";
+        }
+
+        if (sectionNames.Count == 0)
+        {
+            return "all";
+        }
+
+        // Find the first section that matches in priority order
+        foreach (var sectionName in _sectionPriorityOrder)
+        {
+            if (sectionNames.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
+            {
+                return sectionName; // Return lowercase name
+            }
+        }
+
+        // No match found, default to "all"
+        return "all";
+    }
 }

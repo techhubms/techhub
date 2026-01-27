@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories/
 title: 'How to Write a Great agents.md: Lessons from 2,500 GitHub Repositories'
 author: Matt Nigh
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Matt Nigh analyzes over 2,500 repositories to share practical strategies for writing effective agents.md files for GitHub Copilot, guiding developers on agent persona design, clear instructions, and reproducible DevOps workflows.<!--excerpt_end-->
 

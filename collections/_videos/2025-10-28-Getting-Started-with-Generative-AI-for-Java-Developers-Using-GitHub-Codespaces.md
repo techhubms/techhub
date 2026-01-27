@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=COPXh-unV8I
 title: Getting Started with Generative AI for Java Developers Using GitHub Codespaces
 author: Microsoft Developer
@@ -32,6 +32,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Microsoft Developer's tutorial with Ayan Gupta and Rory walks Java developers through the essentials of starting with generative AI using GitHub Codespaces and GitHub Models, providing practical steps guided by expert instructors.<!--excerpt_end-->
 

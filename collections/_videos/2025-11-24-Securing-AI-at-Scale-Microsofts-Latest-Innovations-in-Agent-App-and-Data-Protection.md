@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=0k8OfUxmK4A
 title: 'Securing AI at Scale: Microsoft’s Latest Innovations in Agent, App, and Data Protection'
 author: Microsoft Events
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events presents a deep dive into advances for securing AI at scale, focusing on new controls for agents, applications, and data, as well as the introduction of the Security Dashboard for AI.<!--excerpt_end-->
 

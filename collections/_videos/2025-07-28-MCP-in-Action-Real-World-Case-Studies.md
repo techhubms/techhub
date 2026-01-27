@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=IxshWb2Az5w
 title: 'MCP in Action: Real-World Case Studies'
 author: Microsoft Developer
@@ -17,6 +17,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Authored by Microsoft Developer, this article showcases how the Model Context Protocol (MCP) is applied in real-world settings across Azure, GitHub, and VS Code, highlighting its integration with key AI tools and services.<!--excerpt_end-->
 

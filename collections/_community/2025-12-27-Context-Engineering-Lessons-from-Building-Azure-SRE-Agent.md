@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/context-engineering-lessons-from-building-azure-sre-agent/ba-p/4481200
 title: Context Engineering Lessons from Building Azure SRE Agent
 author: sanchitmehta
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Sanchit Mehta, with co-author Vis Agarwal, walks through building the Azure SRE Agent. They discuss the real-world lessons, technical insights, and evolving architecture of an autonomous, AI-powered Site Reliability Engineering agent in Azure.<!--excerpt_end-->
 

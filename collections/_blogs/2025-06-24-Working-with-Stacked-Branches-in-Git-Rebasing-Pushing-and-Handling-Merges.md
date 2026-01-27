@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/working-with-stacked-branches-in-git-part-2/
 title: 'Working with Stacked Branches in Git: Rebasing, Pushing, and Handling Merges'
 author: Andrew Lock
@@ -18,6 +18,7 @@ tags:
 - Update Refs
 section_names:
 - devops
+primary_section: devops
 ---
 In this detailed post, Andrew Lock discusses workflows for managing stacked branches in Git. He provides advanced advice on rebasing, merging, and pushing branch stacks to streamline feature development and improve code review processes.<!--excerpt_end-->
 

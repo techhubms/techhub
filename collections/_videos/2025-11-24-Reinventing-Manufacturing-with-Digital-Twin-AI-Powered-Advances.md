@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=krjZfLqP4ZI
 title: 'Reinventing Manufacturing with Digital Twin: AI-Powered Advances'
 author: Microsoft Events
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events hosts a panel examining the role of AI and digital twin technology in transforming manufacturing, highlighting insights from industry experts at Ignite 2025.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/appomni-open-sources-heisenberg-tool-to-scan-pull-requests-for-dependencies/
 title: AppOmni Open Sources Heisenberg Tool for Dependency Scanning in PRs
 author: Mike Vizard
@@ -28,6 +28,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Mike Vizard discusses AppOmni's Heisenberg, an open source tool that automatically scans pull requests for risky dependencies and generates real-time SBOMs, supporting better security practices for developers and DevSecOps teams.<!--excerpt_end-->
 

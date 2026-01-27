@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/modernizing-authentication-for-legacy-visual-studio-clients/
 title: Modernizing Authentication for Legacy Visual Studio Clients
 author: Angel Wong
@@ -22,6 +22,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Angel Wong outlines key security improvements and modernization efforts for legacy Visual Studio client authentication, urging developers to upgrade to supported tools to ensure continued secure access.<!--excerpt_end-->
 

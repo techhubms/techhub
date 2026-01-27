@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/blog/2025/09/18/inside-the-worlds-most-powerful-ai-datacenter/
 title: 'Inside the World’s Most Powerful AI Datacenter: Microsoft’s Fairwater Facility'
 author: Scott Guthrie
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Scott Guthrie introduces Microsoft’s new Fairwater AI datacenter, highlighting the scale, engineering innovation, and cloud infrastructure powering next-generation AI workloads across Azure’s global network.<!--excerpt_end-->
 

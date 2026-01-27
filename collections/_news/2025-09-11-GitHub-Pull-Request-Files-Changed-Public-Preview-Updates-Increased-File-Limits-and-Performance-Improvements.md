@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-11-pull-request-files-changed-public-preview-experience-september-11-updates
 title: GitHub Pull Request ‘Files Changed’ Public Preview Updates – Increased File Limits and Performance Improvements
 author: Allison
@@ -21,6 +21,7 @@ tags:
 - UI Update
 section_names:
 - devops
+primary_section: devops
 ---
 Allison shares insights on the latest GitHub pull request experience update, which brings improved performance and supports larger pull requests with a new single file view and higher file limits.<!--excerpt_end-->
 

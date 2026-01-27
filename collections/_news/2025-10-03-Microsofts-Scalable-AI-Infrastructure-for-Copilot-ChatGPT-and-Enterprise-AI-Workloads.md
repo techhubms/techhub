@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_our-approach-to-ai-infra-is-simple-build-activity-7379681735934083073-Scma
 title: Microsoft's Scalable AI Infrastructure for Copilot, ChatGPT, and Enterprise AI Workloads
 author: stclarke
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Satya Nadella and Scott Guthrie discuss with Alex Kantrowitz how Microsoft’s adaptable AI infrastructure meets the real-world demands of large workloads like Copilot and ChatGPT, providing valuable insights for technical leaders and developers.<!--excerpt_end-->
 

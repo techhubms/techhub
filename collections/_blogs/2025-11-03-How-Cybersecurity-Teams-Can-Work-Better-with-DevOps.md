@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/how-cybersecurity-teams-can-work-better-with-devops/
 title: How Cybersecurity Teams Can Work Better with DevOps
 author: Samuel Ogbonna
@@ -28,6 +28,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Samuel Ogbonna details how cybersecurity and DevOps teams can enhance collaboration by embedding security throughout the DevOps pipeline, sharing actionable best practices and communication strategies.<!--excerpt_end-->
 

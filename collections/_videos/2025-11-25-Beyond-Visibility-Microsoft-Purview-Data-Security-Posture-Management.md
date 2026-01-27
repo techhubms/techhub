@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=MqNgGkXJ5bc
 title: 'Beyond Visibility: Microsoft Purview Data Security Posture Management'
 author: Microsoft Events
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Presented by Rudra Mitra, Nathalia Borges, Yaki Faitelson, and Talhah Mir at Microsoft Ignite, this session dives into Microsoft Purview Data Security Posture Management (DSPM) and its AI-enhanced features for robust enterprise data security.<!--excerpt_end-->
 

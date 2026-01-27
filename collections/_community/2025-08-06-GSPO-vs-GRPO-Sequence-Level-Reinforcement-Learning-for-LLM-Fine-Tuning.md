@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/MachineLearning/comments/1mj3t3r/d_gspo_qwen3s_sequencelevel_rlhf_method_vs_grpo/
 title: 'GSPO vs. GRPO: Sequence-Level Reinforcement Learning for LLM Fine-Tuning'
 author: MarketingNetMind
@@ -30,6 +30,7 @@ tags:
 section_names:
 - ai
 - ml
+primary_section: ai
 ---
 MarketingNetMind compares GSPO and GRPO, two reinforcement learning approaches for LLM fine-tuning, examining their variance, scalability, and real-world results in Mixture-of-Experts models.<!--excerpt_end-->
 

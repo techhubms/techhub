@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/VisualStudio/comments/1md4xq8/how_to_get_unit_test_code_coverage_using_vs_2022/
 title: Unit Test Code Coverage Options in VS 2022 Pro for C Projects
 author: jamawg
@@ -23,6 +23,7 @@ tags:
 - VS
 section_names:
 - devops
+primary_section: devops
 ---
 jamawg shares practical strategies for obtaining unit test code coverage in Visual Studio 2022 Professional when working with C code, focusing on viable DevOps approaches.<!--excerpt_end-->
 

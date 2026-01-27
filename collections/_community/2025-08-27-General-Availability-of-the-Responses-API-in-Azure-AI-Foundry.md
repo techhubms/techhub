@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/ai-azure-ai-services-blog/the-responses-api-in-azure-ai-foundry-is-now-generally-available/ba-p/4446567
 title: General Availability of the Responses API in Azure AI Foundry
 author: BalaPV
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 BalaPV announces the general availability of the Responses API in Azure AI Foundry, empowering developers to easily build intelligent, multi-turn agents with built-in tool support and robust integration features.<!--excerpt_end-->
 

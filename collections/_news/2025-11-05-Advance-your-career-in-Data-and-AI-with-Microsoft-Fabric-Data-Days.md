@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/advance-your-career-in-data-ai-with-microsoft-fabric-data-days/
 title: Advance your career in Data & AI with Microsoft Fabric Data Days
 author: Microsoft Fabric Blog
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 The Microsoft Fabric Blog highlights Fabric Data Days, where data professionals and students can learn about Microsoft Fabric, Data Science, and AI through interactive sessions, expert speakers, and certification opportunities.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=4EXGyCgVNp4
 title: .NET MAUI Community Standup - Live in Prague with the .NET MAUI Team
 author: dotnet
@@ -23,6 +23,7 @@ tags:
 - UI
 section_names:
 - coding
+primary_section: coding
 ---
 Hosted by the .NET team, this Prague community standup covers live demos, interactive Q&A, and current practices in .NET MAUI. Session highlights feature David Ortinau, Gerald Versluis, and others.<!--excerpt_end-->
 

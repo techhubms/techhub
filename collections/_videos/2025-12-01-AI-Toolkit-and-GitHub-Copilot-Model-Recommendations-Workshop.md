@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=hVDGQG1mw88
 title: 'AI Toolkit and GitHub Copilot: Model Recommendations Workshop'
 author: Microsoft Developer
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - github-copilot
+primary_section: github-copilot
 ---
 April from Microsoft Developer walks through using Copilot and the AI Toolkit for model recommendations, deployments, and testing within the Microsoft Foundry platform in this practical workshop.<!--excerpt_end-->
 

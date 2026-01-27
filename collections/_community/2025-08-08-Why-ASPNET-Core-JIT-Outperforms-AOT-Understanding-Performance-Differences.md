@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mku4p2/unexpected_performance_differences_of_jitaot/
 title: 'Why ASP.NET Core JIT Outperforms AOT: Understanding Performance Differences'
 author: Vectorial1024
@@ -21,6 +21,7 @@ tags:
 - Web Application Performance
 section_names:
 - coding
+primary_section: coding
 ---
 Vectorial1024 provides a well-rounded technical discussion on the performance differences between JIT and AOT compilation for ASP.NET Core, supported by benchmark data and insights into .NET's compilation strategies.<!--excerpt_end-->
 

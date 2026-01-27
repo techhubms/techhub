@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/use-github-copilot-chat-to-plan-before-you-code.html
 title: Use GitHub Copilot Chat to Plan Before You Code
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels demonstrates how GitHub Copilot Chat can act as a planning companion for developers, helping clarify structure and logic before starting code.<!--excerpt_end-->
 

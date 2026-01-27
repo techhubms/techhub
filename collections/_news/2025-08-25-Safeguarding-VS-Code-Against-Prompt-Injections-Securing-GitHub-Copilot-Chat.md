@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/security/vulnerability-research/safeguarding-vs-code-against-prompt-injections/
 title: 'Safeguarding VS Code Against Prompt Injections: Securing GitHub Copilot Chat'
 author: Michael Stepankin
@@ -34,6 +34,7 @@ section_names:
 - coding
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Michael Stepankin details prompt injection vulnerabilities in the VS Code Copilot Chat extension, examining how attackers target agent tools and how the GitHub and VS Code teams have responded. The article is vital reading for developers using AI-powered assistants.<!--excerpt_end-->
 

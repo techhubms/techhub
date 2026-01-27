@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=cR1AjFH2yLE
 title: Azure Update - 30th May 2025
 author: John Savill's Technical Training
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 In this weekly Azure update, John Savill's Technical Training shares a comprehensive roundup of recent Azure service enhancements, ranging from App Service and Azure Firewall to Cosmos DB and API Management improvements. The episode highlights new Azure AI Foundry features, discusses logging, authentication, and integration upgrades, and provides viewers with guidance on accessing learning resources. John also explains how viewers can find content on specific topics and provides suggestions for community support.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_94
 title: What's New in Visual Studio Code September 2024 (v1.94)
 author: Visual Studio Code Team
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 The Visual Studio Code Team presents the September 2024 release (v1.94), packed with significant updates for developers including new features and improvements in GitHub Copilot, coding assistance, DevOps tools, and more. Authored by the Visual Studio Code Team.<!--excerpt_end-->
 

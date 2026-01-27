@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-02-copilot-code-review-better-handling-of-large-pull-requests
 title: Copilot code review - Better handling of large pull requests
 author: Allison
@@ -13,6 +13,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, Allison outlines significant enhancements to Copilot code review, emphasizing improvements in managing and reviewing large pull requests—particularly those involving over 20 files. <!--excerpt_end--> This update addresses a pain point experienced by many developers: the challenge of efficiently reviewing large-scale changes. Approximately 30% of all GitHub pull requests affect more than 20 files, making comprehensive and timely code review difficult with traditional methods.
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=QF3AmEpEabc
 title: Secure the Modern Enterprise with Varonis and Microsoft Integration
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events, featuring Brian Vecci, delivers a practical demo at Microsoft Ignite showing how Varonis and Microsoft collaborate to secure enterprise data, manage risk, and support AI-powered solutions.<!--excerpt_end-->
 

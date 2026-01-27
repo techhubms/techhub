@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/llms/solving-the-inference-problem-for-open-source-ai-projects-with-github-models/
 title: Solving the Inference Problem for Open Source AI Projects with GitHub Models
 author: Sean Goedecke
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Sean Goedecke explains how GitHub Models, a free inference API, simplifies adding AI features to open source software. The article provides practical advice for integration and scaling, aiming to lower barriers for users and contributors.<!--excerpt_end-->
 

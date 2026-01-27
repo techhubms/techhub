@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Zi9oTBjqU70
 title: 'Cloud without Compromise: Redefining Private and Hybrid Cloud with Dell and Microsoft'
 author: Microsoft Events
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Events hosts this Microsoft Ignite 2025 session featuring Matt McSpirit and Rohit Tatachar, where they explore Dell and Microsoft’s partnership to deliver secure and scalable hybrid and private cloud solutions with Azure integration.<!--excerpt_end-->
 

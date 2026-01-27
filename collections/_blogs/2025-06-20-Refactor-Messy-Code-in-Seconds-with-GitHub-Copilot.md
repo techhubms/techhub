@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/refactor-messy-code-in-seconds-with-github-copilot.html
 title: Refactor Messy Code in Seconds with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels shows how to quickly refactor messy code with GitHub Copilot by leveraging comments and Copilot Chat, making code cleaner and more efficient.<!--excerpt_end-->
 

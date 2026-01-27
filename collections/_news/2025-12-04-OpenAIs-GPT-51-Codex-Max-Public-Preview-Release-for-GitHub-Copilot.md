@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-04-openais-gpt-5-1-codex-max-is-now-in-public-preview-for-github-copilot
 title: OpenAI’s GPT-5.1-Codex-Max Public Preview Release for GitHub Copilot
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison reports on the rollout of OpenAI’s GPT-5.1-Codex-Max model in GitHub Copilot, providing information on availability, activation steps, and supported developer tools.<!--excerpt_end-->
 

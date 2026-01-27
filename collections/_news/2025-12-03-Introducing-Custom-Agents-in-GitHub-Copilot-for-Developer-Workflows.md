@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/product-news/your-stack-your-rules-introducing-custom-agents-in-github-copilot-for-observability-iac-and-security/
 title: Introducing Custom Agents in GitHub Copilot for Developer Workflows
 author: Griffin Ashe
@@ -30,6 +30,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Griffin Ashe introduces GitHub Copilot’s partner-built and custom agents, describing how these AI-powered tools help developers automate, secure, and optimize workflows across observability, infrastructure, and security domains.<!--excerpt_end-->
 

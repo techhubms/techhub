@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=gv5fRtBk8IM
 title: 'Exploring GraphRAG: AI-Powered Graph Search for Security Data Analysis'
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Developer features Anisha Latchman demonstrating how GraphRAG leverages Azure OpenAI and advanced graph embeddings to transform security data search and analysis in this practical and insightful video.<!--excerpt_end-->
 

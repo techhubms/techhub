@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=jj9O5FR7v3A
 title: Enhancing SQL Development in VS Code with GitHub Copilot and Microsoft Fabric
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer presents a Data Exposed episode featuring Anna Hoffman and Carlos Robles, highlighting the new GitHub Copilot integration in the MSSQL extension for VS Code and showcasing how AI, containers, and Microsoft Fabric modernize SQL development.<!--excerpt_end-->
 

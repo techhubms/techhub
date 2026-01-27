@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_105
 title: 'Visual Studio Code September 2025 Release (v1.105): AI, MCP, and Developer Enhancements'
 author: Visual Studio Code Team
@@ -29,6 +29,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code Team presents the September 2025 release (v1.105), introducing advanced AI integration, GitHub Copilot updates, agent tool improvements, and a new MCP marketplace to boost developer productivity and collaboration.<!--excerpt_end-->
 

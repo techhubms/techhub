@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=lfEjSOsWvoY
 title: 'Demo: ice Contact Center Integrating Chatbots and Live Agents at Microsoft Ignite'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Voice Channel
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents a session featuring Mike Kraybill, showcasing how ice Contact Center uses AI-powered chatbots and live agents to deliver efficient customer support and analytics.<!--excerpt_end-->
 

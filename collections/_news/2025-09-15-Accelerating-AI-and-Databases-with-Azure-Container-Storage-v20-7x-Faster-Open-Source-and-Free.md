@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/accelerating-ai-and-databases-with-azure-container-storage-now-7-times-faster-and-open-source/
 title: 'Accelerating AI and Databases with Azure Container Storage v2.0: 7x Faster, Open Source, and Free'
 author: Aung Oo
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Aung Oo shares significant updates to Azure Container Storage, detailing version 2.0's 7x IOPS gains, open-source release, and enhanced AI and database workload support for developers on Azure.<!--excerpt_end-->
 

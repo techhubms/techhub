@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/bringing-order-to-chaotic-software-engineering-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=bringing-order-to-chaotic-software-engineering-workflows
 title: Bringing Order to Chaotic Software Engineering Workflows
 author: Mike Vizard
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard shares Shannon Mason's perspective on addressing chaos in software engineering workflows, detailing the nuanced impact of AI, the growth of low-code development, and actionable strategies for developers and teams.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/the-road-to-better-completions-building-a-faster-smarter-github-copilot-with-a-new-custom-model/
 title: Building a Faster, Smarter GitHub Copilot with Custom Models
 author: Shengyu Fu
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Shengyu Fu shares an in-depth perspective on the engineering journey behind GitHub Copilot’s enhanced completions, revealing technical model training strategies and real-world impact for developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/blog/2025/11/18/from-idea-to-deployment-the-complete-lifecycle-of-ai-on-display-at-ignite-2025/
 title: 'AI Agent Lifecycle, Security, and Observability: Highlights from Microsoft Ignite 2025'
 author: ryon
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 ryon outlines the major AI advancements announced at Microsoft Ignite 2025, emphasizing agent lifecycle management, security, and integration across Microsoft’s enterprise platforms.<!--excerpt_end-->
 

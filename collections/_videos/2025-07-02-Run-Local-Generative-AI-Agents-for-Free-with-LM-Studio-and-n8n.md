@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=hsPMSAzxdtU
 title: Run Local Generative AI Agents for Free with LM Studio and n8n
 author: Alireza Chegini | AI Skills for Your Career
@@ -37,6 +37,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Alireza Chegini presents a comprehensive tutorial for developers on how to set up and run generative AI agents locally with LM Studio and n8n, highlighting installation, workflow creation, and free experimentation.<!--excerpt_end-->
 

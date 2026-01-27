@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_today-we-announced-our-new-fairwater-datacenter-activity-7394420047294648321-RQ77
 title: 'Microsoft Announces Fairwater Datacenter: Building an AI Superfactory with Azure'
 author: stclarke
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Satya Nadella shares news of the Fairwater datacenter launch, illustrating Microsoft's next phase in scalable, efficient AI infrastructure within Azure. The post explores architectural choices aimed at supporting developers and the future of global AI workloads.<!--excerpt_end-->
 

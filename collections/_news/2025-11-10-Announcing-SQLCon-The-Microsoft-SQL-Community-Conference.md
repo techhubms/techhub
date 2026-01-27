@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/its-time-announcing-the-microsoft-sql-community-conference/
 title: 'Announcing SQLCon: The Microsoft SQL Community Conference'
 author: Microsoft Fabric Blog
@@ -32,6 +32,7 @@ section_names:
 - coding
 - ml
 - security
+primary_section: ai
 ---
 Microsoft Fabric Blog announces SQLCon, a new conference for database professionals, with a focus on the latest advancements in SQL Server, Azure SQL, Fabric, AI, and security.<!--excerpt_end-->
 

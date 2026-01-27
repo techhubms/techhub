@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/overload-to-optimal-tuning-microsoft-fabric-capacity/ba-p/4464639
 title: 'Overload to Optimal: Tuning Microsoft Fabric Capacity'
 author: Rafia_Aqil
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Rafia Aqil, with Daya Ram, offers a thorough walkthrough on optimizing Microsoft Fabric capacity and Spark analytics, outlining practical steps for diagnostics, cluster and data best practices, and cost management.<!--excerpt_end-->
 

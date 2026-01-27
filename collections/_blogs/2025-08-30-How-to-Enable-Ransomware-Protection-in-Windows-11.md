@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-to-enable-ransomware-protection-in-windows-11/
 title: How to Enable Ransomware Protection in Windows 11
 author: Dellenny
@@ -17,6 +17,7 @@ tags:
 - Windows Security
 section_names:
 - security
+primary_section: security
 ---
 Dellenny provides a practical guide on enabling ransomware protection in Windows 11 using Microsoft Defender Antivirus, helping users secure their data from cyber threats.<!--excerpt_end-->
 

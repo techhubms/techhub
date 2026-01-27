@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/empower-smarter-ai-agent-investments/ba-p/4466010
 title: 'Maximize the Cost Efficiency of AI Agents on Azure: Comprehensive Learning Path'
 author: Fernando_Vasconcellos
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Fernando Vasconcellos introduces a comprehensive Microsoft learning path for building, deploying, and managing cost-efficient AI agents on Azure, offering practical strategies for both technical and business leaders.<!--excerpt_end-->
 

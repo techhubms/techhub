@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot
 title: OpenAI’s GPT-5.1 Family Now Available for GitHub Copilot Users
 author: Allison
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the public preview of OpenAI’s GPT-5.1 series models for GitHub Copilot, outlining model availability across IDEs, how to enable them, and where to learn more.<!--excerpt_end-->
 

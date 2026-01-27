@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/marketplace-blog/new-in-azure-marketplace-july-23-31-2025/ba-p/4431277
 title: 'New Offerings in Azure Marketplace: July 23-31, 2025'
 author: Luxmi_Nagaraj
@@ -29,6 +29,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 Luxmi_Nagaraj summarizes 201 new solutions now available in Azure Marketplace, with highlights spanning AI, analytics, security, backup, and cloud operations for Microsoft Azure practitioners.<!--excerpt_end-->
 

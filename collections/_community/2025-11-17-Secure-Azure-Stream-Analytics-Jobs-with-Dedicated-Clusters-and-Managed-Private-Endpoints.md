@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/secure-azure-stream-analytics-jobs-in-dedicated-clusters-using/ba-p/4470385
 title: Secure Azure Stream Analytics Jobs with Dedicated Clusters and Managed Private Endpoints
 author: PratibhaShenoy
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 PratibhaShenoy provides practical guidance for securely configuring Azure Stream Analytics jobs in dedicated clusters using managed identities and private endpoints, emphasizing zero-trust, compliance, and automation.<!--excerpt_end-->
 

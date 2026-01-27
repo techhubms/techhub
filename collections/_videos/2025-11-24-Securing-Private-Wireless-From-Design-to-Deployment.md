@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=SI6P5ljakrw
 title: 'Securing Private Wireless: From Design to Deployment'
 author: Microsoft Events
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents a Microsoft Ignite session where Krishnan Jagannathan and Rick Lievano share insights on securing private wireless networks using Azure-based AI security platforms, highlighting operational strategies and real-world results.<!--excerpt_end-->
 

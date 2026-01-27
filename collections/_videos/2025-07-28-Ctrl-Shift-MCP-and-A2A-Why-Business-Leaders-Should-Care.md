@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=s8xJTAu5icM
 title: 'Ctrl Shift - MCP & A2A: Why Business Leaders Should Care'
 author: John Savill's Technical Training
@@ -19,6 +19,7 @@ tags:
 - Tech Trends
 section_names:
 - ai
+primary_section: ai
 ---
 John Savill's Technical Training discusses the role of Model Context Protocol (MCP) and Agent to Agent (A2A) technologies, highlighting their significance for business leaders and their influence on AI-driven business strategies.<!--excerpt_end-->
 

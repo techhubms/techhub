@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/work-smarter-across-multiple-files.html
 title: Work Smarter Across Multiple Files with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels explains how to leverage GitHub Copilot’s multi-file context abilities to connect logic, refactor code, and reason across entire projects for smarter development.<!--excerpt_end-->
 

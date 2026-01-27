@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=hBpbKMEOVEw
 title: Accelerating AI Agent Development with Microsoft Foundry at Ignite 2025
 author: Microsoft Events
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events hosts an advanced session on building and scaling AI agents with Microsoft Foundry, featuring insights on security, integration, and agentic workflows from Ignite 2025.<!--excerpt_end-->
 

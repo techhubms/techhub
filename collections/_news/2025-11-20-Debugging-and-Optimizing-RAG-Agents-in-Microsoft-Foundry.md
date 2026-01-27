@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/how-to-debug-and-optimize-rag-agents-in-azure-ai-foundry/
 title: Debugging and Optimizing RAG Agents in Microsoft Foundry
 author: Chang Liu
@@ -31,6 +31,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 Chang Liu details how to debug and optimize Retrieval-Augmented Generation (RAG) agents within Microsoft Foundry, sharing code samples, metrics, and evaluation strategies tailored for developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1lwk6ba/vs_code_june_2025_version_1102/
 title: VS Code June 2025 (version 1.102)
 author: isidor_n
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, isidor_n discusses the latest updates to the GitHub Copilot Chat extension for Visual Studio Code. Readers will learn about new open-source contributions, support for custom project instructions, custom chat modes for specific tasks, and the general availability of MCP support. The article also highlights improved editor experiences for developers and invites questions about these enhancements.<!--excerpt_end-->
 

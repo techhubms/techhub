@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/open-source/maintainers/5-podcast-episodes-to-help-you-build-with-confidence-in-2026/
 title: 5 Podcast Episodes to Help You Build with Confidence in 2026
 author: Cassidy Williams
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Cassidy Williams curates five essential GitHub Podcast episodes for 2026, guiding listeners through AI tooling, open source sustainability, DIY development, and privacy-first automation to help developers and maintainers build confidently.<!--excerpt_end-->
 

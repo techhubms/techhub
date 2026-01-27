@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=onVn-lnHZ9s
 title: 'End-to-End Agentic Development with GitHub Copilot: A Developer Workflow Demo'
 author: GitHub
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a demo highlighting Copilot's AI-powered agentic features for developers. See how Copilot acts as a coding peer, handling issue triage, code generation, test fixing, and more while keeping developers focused and productive.<!--excerpt_end-->
 

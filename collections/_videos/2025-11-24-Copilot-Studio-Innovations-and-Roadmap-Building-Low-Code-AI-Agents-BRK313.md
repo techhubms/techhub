@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=KbsotdOgr5c
 title: 'Copilot Studio Innovations and Roadmap: Building Low-Code AI Agents (BRK313)'
 author: Microsoft Events
@@ -30,6 +30,7 @@ tags:
 - Zac Cadi
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents a hands-on session about the latest innovations in Copilot Studio—led by Omar Aftab, Erez Altus, and Zac Cadi—exploring building robust AI agents and platform enhancements.<!--excerpt_end-->
 

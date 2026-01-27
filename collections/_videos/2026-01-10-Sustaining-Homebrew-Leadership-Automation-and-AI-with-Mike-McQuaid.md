@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=mdxYnfPQrzU
 title: 'Sustaining Homebrew: Leadership, Automation, and AI with Mike McQuaid'
 author: GitHub
@@ -29,6 +29,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this GitHub Podcast episode, GitHub hosts speak with Mike McQuaid, the lead maintainer of Homebrew, exploring leadership, automation, and the integration of GitHub Copilot and AI for open source maintenance and community management.<!--excerpt_end-->
 

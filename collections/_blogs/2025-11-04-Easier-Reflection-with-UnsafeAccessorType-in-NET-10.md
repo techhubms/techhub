@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-9-easier-reflection-with-unsafeaccessortype/
 title: Easier Reflection with [UnsafeAccessorType] in .NET 10
 author: Andrew Lock
@@ -23,6 +23,7 @@ tags:
 - UnsafeAccessorType
 section_names:
 - coding
+primary_section: coding
 ---
 Andrew Lock demonstrates improvements to the [UnsafeAccessor] mechanism in .NET 10, focusing on how [UnsafeAccessorType] enables accessing private fields and methods for types without direct references.<!--excerpt_end-->
 

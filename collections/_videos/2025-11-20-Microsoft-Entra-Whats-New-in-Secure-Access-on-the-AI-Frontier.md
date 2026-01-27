@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=lYMuKxR5JLY
 title: "Microsoft Entra: What's New in Secure Access on the AI Frontier"
 author: Microsoft Events
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Presented by Microsoft Events, this session details advancements in Microsoft Entra for securing AI-powered identities and networks, featuring agent governance, prompt injection risk protection, and modern approaches to Zero Trust.<!--excerpt_end-->
 

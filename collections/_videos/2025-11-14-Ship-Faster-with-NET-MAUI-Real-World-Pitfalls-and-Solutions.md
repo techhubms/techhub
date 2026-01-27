@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=iaU3lsvB_Ig
 title: 'Ship Faster with .NET MAUI: Real-World Pitfalls and Solutions'
 author: dotnet
@@ -28,6 +28,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet presents a no-nonsense guide for .NET MAUI developers, sharing lessons learned and robust fixes for common real-world app challenges in mobile development.<!--excerpt_end-->
 

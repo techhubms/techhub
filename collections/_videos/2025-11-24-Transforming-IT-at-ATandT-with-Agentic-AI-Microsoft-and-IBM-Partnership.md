@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ejAZOppy2os
 title: 'Transforming IT at AT&T with Agentic AI: Microsoft & IBM Partnership'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events hosts a session with AT&T and IBM, highlighting agentic AI strategies and collaborations to revolutionize IT systems and drive significant productivity for global enterprises.<!--excerpt_end-->
 

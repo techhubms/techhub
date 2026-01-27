@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/introducing-customizable-security-baselines-in-azure-policy-and/ba-p/4469678
 title: Customizable Security Baselines Now in Preview for Azure Policy and Machine Configuration
 author: mutemwamasheke
@@ -24,6 +24,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 mutemwamasheke presents an overview of customizable security baselines within Azure Policy and Machine Configuration, offering practical guidance for compliance automation and integration with DevOps workflows.<!--excerpt_end-->
 

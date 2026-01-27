@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/no-code-ai-how-non-developers-can-build-smart-chatbots-with-copilot-studio-2/
 title: 'No-Code AI: How Non-Developers Can Build Smart Chatbots with Copilot Studio'
 author: John Edward
@@ -23,6 +23,7 @@ tags:
 - Visual Flow Builder
 section_names:
 - ai
+primary_section: ai
 ---
 John Edward offers a practical, non-technical guide on building intelligent chatbots with Microsoft Copilot Studio, empowering non-developers to leverage no-code AI and create business-ready copilots.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/private-pod-subnets-in-aks-without-overlay-networking/ba-p/4442510
 title: Private Pod Subnets in AKS Without Overlay Networking
 author: samcogan
@@ -28,6 +28,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 In this community article, samcogan breaks down how to manage private pod subnets in Azure Kubernetes Service (AKS) without overlay networking, addressing NAT challenges and actionable deployment steps.<!--excerpt_end-->
 

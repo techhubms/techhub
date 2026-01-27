@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/announcing-the-new-azure-devops-server-rc-release/
 title: 'Azure DevOps Server RC Release: New Features, Lifecycle Policy, and Branding Updates'
 author: Gloridel Morales
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Gloridel Morales shares an overview of the Azure DevOps Server RC release, detailing new features, lifecycle policy changes, and the shift to continuous updates under Microsoft's branding strategy.<!--excerpt_end-->
 

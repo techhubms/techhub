@@ -1,4 +1,3 @@
-using TechHub.Core.DTOs;
 using TechHub.Core.Models;
 
 namespace TechHub.Core.Interfaces;
@@ -11,7 +10,7 @@ public interface IRssService
     /// <summary>
     /// Generate RSS feed for a specific section
     /// </summary>
-    Task<RssChannelDto> GenerateSectionFeedAsync(
+    Task<RssChannel> GenerateSectionFeedAsync(
         Section section,
         IReadOnlyList<ContentItem> items,
         CancellationToken cancellationToken = default);
@@ -19,13 +18,14 @@ public interface IRssService
     /// <summary>
     /// Generate RSS feed for a specific collection
     /// </summary>
-    Task<RssChannelDto> GenerateCollectionFeedAsync(
+    Task<RssChannel> GenerateCollectionFeedAsync(
         string collectionName,
         IReadOnlyList<ContentItem> items,
         CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Convert RSS channel DTO to XML string
+    /// Convert RSS channel to XML string
     /// </summary>
-    string SerializeToXml(RssChannelDto channel);
+    string SerializeToXml(RssChannel channel);
 }
+

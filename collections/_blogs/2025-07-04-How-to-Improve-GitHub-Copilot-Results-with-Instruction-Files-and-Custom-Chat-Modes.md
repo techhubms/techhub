@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://harrybin.de/posts/improve-github-copilot-results/
 title: How to Improve GitHub Copilot Results with Instruction Files and Custom Chat Modes
 author: Harald Binkle
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this post, Harald Binkle explores practical methods for improving GitHub Copilot results in your projects, focusing on instruction files and advanced custom chat modes.<!--excerpt_end-->
 

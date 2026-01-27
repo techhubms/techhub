@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-12-dependabot-version-updates-now-support-vcpkg
 title: Dependabot Adds Version Update Support for vcpkg
 author: Allison
@@ -19,6 +19,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Allison details the new Dependabot support for automatic version updates in vcpkg, enabling C/C++ projects to maintain secure and current dependencies within GitHub workflows.<!--excerpt_end-->
 

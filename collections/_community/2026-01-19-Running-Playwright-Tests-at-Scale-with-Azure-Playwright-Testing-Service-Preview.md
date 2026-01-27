@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Adyshasnotes walks you through leveraging Azure Playwright Testing Service (Preview) to execute Playwright tests on cloud-hosted browsers using TypeScript, with step-by-step setup focused on Visual Studio/VS Code for modern DevOps workflows.<!--excerpt_end-->
 

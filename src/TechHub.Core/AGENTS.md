@@ -15,20 +15,36 @@ This project contains domain models, DTOs, and interfaces with **zero external d
 
 ```text
 TechHub.Core/
-├── Models/                       # Domain entities
-│   ├── Section.cs               # Section aggregate
-│   ├── ContentItem.cs           # Content item entity
-│   ├── Collection.cs            # Collection reference
-│   └── FrontMatter.cs           # Markdown frontmatter
-├── DTOs/                         # Data transfer objects
-│   ├── SectionDto.cs            # Section DTO
-│   ├── ContentItemDto.cs        # Content item DTO
-│   └── CollectionDto.cs         # Collection DTO
+├── Models/                       # Domain models (unified layer - no separate DTOs)
+│   ├── Section.cs               # Section model
+│   ├── ContentItem.cs           # Content item (list + detail views)
+│   ├── CustomPage.cs            # Custom page (list + detail views)
+│   ├── CollectionReference.cs   # Collection reference
+│   ├── FilterRequest.cs         # Filter request parameters
+│   ├── FilterResponse.cs        # Filter response with items
+│   ├── FilterSummary.cs         # Filter summary metadata
+│   ├── RssChannel.cs            # RSS channel (feed metadata)
+│   ├── RssItem.cs               # RSS item (feed entry)
+│   ├── SearchRequest.cs         # Search request parameters
+│   ├── SearchResults.cs         # Search response with pagination
+│   ├── FacetRequest.cs          # Facet aggregation request
+│   ├── FacetResults.cs          # Facet aggregation response
+│   ├── FacetValue.cs            # Single facet value with count
+│   ├── PaginationCursor.cs      # Keyset pagination cursor
+│   ├── SyncResult.cs            # Content sync operation result
+│   ├── TagCloudItem.cs          # Tag cloud item
+│   ├── TagCloudRequest.cs       # Tag cloud request
+│   ├── TagWithCount.cs          # Tag with count
+│   └── [Page-specific models]   # DXSpacePageData, FeaturesPageData, etc.
+├── Helpers/                      # Helper utilities
+│   ├── SectionPriorityHelper.cs # Primary section determination (to be migrated - see MIGRATION.md)
+│   └── MIGRATION.md             # SectionPriorityHelper migration plan
 ├── Interfaces/                   # Repository contracts
 │   ├── ISectionRepository.cs    # Section data access
 │   ├── IContentRepository.cs    # Content data access
 │   ├── IMarkdownService.cs      # Markdown processing
-│   └── IRssService.cs           # RSS feed generation
+│   ├── IRssService.cs           # RSS feed generation
+│   └── IContentSyncService.cs   # Content sync operations
 └── TechHub.Core.csproj          # Project file (no dependencies!)
 ```
 
@@ -69,7 +85,7 @@ TechHub.Core/
 
 **Use classes for entities with identity** (can be mutated over lifetime).
 
-**Example**: `Section`, `ContentItem`
+**Example**: `Section`
 
 **Key Properties**:
 
@@ -82,21 +98,56 @@ TechHub.Core/
 
 **Use records for value objects** (identity defined by values, not reference).
 
-**Example**: `Collection`, `TagCloudItem`
+**Example**: `CollectionReference`, `TagCloudItem`, `ContentItem`, `CustomPage`
 
 **Benefits**: Value equality, immutability, concise syntax, built-in methods.
 
+### Unified Model Pattern (No Separate DTOs)
+
+**Pattern**: Single model serves both list and detail views.
+
+**ContentItem** ([Models/ContentItem.cs](Models/ContentItem.cs)):
+
+- Used for both list views (summary) and detail views (full HTML)
+- List views: `RenderedHtml` is null, `SidebarInfo` is null
+- Detail views: `RenderedHtml` getter throws if accessed when null (fail-fast)
+- **Why**: Eliminates duplication, simpler serialization, type-safe
+
+**CustomPage** ([Models/CustomPage.cs](Models/CustomPage.cs)):
+
+- Same pattern: nullable `RenderedHtml` with throwing getter
+- List views skip HTML rendering for performance
+- Detail views populate full HTML content
+
+**Benefits**:
+
+- No property duplication between summary/detail models
+- Single source of truth for model structure
+- Simpler serialization (same type, different data)
+- Clear intent via property access (throws if misused)
+
 ### Content Item Model
 
-**Complex domain entity** with many properties representing content from markdown files.
+**ContentItem** ([Models/ContentItem.cs](Models/ContentItem.cs)) represents content in both list and detail views:
 
-**Critical Properties**:
+**List View Properties** (always populated):
 
-- `Slug`: URL-friendly identifier
-- `DateEpoch`: Unix timestamp for dates
-- `SectionNames`: Lowercase section identifiers (mapped from frontmatter `categories`)
-- `Tags`: Normalized lowercase tags
-- `ViewingMode`: "internal" or "external"
+- Metadata: `Slug`, `Title`, `Author`, `DateEpoch`, `DateIso`
+- Categorization: `SectionNames`, `PrimarySectionName`, `CollectionName`, `Tags`
+- Display: `Excerpt`, `Url`, `ExternalUrl`
+- Feature flags: `Plans`, `GhesSupport`, `Draft`, `GhcFeature`
+
+**Detail View Properties** (only for full content):
+
+- `RenderedHtml` - Full HTML content (throws if accessed in list view)
+- `SidebarInfo` - JSON metadata (nullable)
+
+**Methods**:
+
+- Navigation: `LinksExternally()`, `GetHref()`, `GetTarget()`, `GetRel()`, `GetAriaLabel()`, `GetDataEnhanceNav()`
+- URL generation: `GetUrlInSection()`, `GetPrimarySectionUrl()`
+- Validation: `Validate()` - Business rule checks
+- Computed: `DateUtc` - Convert epoch to DateTime
 
 See [Markdown Frontmatter Mapping](#markdown-frontmatter-mapping) for complete field mappings.
 
@@ -145,28 +196,29 @@ The rest of the markdown content...
 
 **See [src/TechHub.Infrastructure/AGENTS.md](../TechHub.Infrastructure/AGENTS.md)** for implementation details of frontmatter parsing.
 
-## DTO Patterns
+## Model Patterns
 
-**Use DTOs for API responses and client communication**:
+**Use records for all models** (entities and DTOs merged into unified model layer).
 
-**DTO Structure**:
+**Model Structure**:
 
 - Use `record` types for value equality and immutability
 - Mark mandatory fields with `required`
 - Use `init` accessors
 - Add XML documentation comments
+- Use inheritance for detail/summary relationships
 
-**Key DTOs**:
+**Key Models**:
 
-- `SectionDto` - Section data with collections ([DTOs/SectionDto.cs](DTOs/SectionDto.cs))
-- `ContentItemDto` - Content item with metadata ([DTOs/ContentItemDto.cs](DTOs/ContentItemDto.cs))
-- `CollectionDto` - Collection reference ([DTOs/CollectionDto.cs](DTOs/CollectionDto.cs))
-
-**DTO vs Domain Model**:
-
-- **Domain Model**: Rich behavior, validation, business rules
-- **DTO**: Data transfer only, no behavior, optimized for serialization
-- **Mapping**: Use extension methods or mapping libraries (AutoMapper, Mapster)
+- `Section` - Section data with collections ([Models/Section.cs](Models/Section.cs))
+- `ContentItem` - Content item (list + detail) ([Models/ContentItem.cs](Models/ContentItem.cs))
+- `CustomPage` - Custom page (list + detail) ([Models/CustomPage.cs](Models/CustomPage.cs))
+- `CollectionReference` - Collection reference ([Models/CollectionReference.cs](Models/CollectionReference.cs))
+- `RssChannel` - RSS feed metadata ([Models/RssChannel.cs](Models/RssChannel.cs))
+- `RssItem` - RSS feed entry ([Models/RssItem.cs](Models/RssItem.cs))
+- `SearchRequest` - Search parameters ([Models/SearchRequest.cs](Models/SearchRequest.cs))
+- `SearchResults<T>` - Search response ([Models/SearchResults.cs](Models/SearchResults.cs))
+- `FacetResults` - Facet aggregations ([Models/FacetResults.cs](Models/FacetResults.cs))
 
 ## Repository Interfaces
 
@@ -178,6 +230,7 @@ The rest of the markdown content...
 - `IContentRepository` - Content item data access ([Interfaces/IContentRepository.cs](Interfaces/IContentRepository.cs))
 - `IMarkdownService` - Markdown processing ([Interfaces/IMarkdownService.cs](Interfaces/IMarkdownService.cs))
 - `IRssService` - RSS feed generation ([Interfaces/IRssService.cs](Interfaces/IRssService.cs))
+- `IContentSyncService` - Content sync operations ([Interfaces/IContentSyncService.cs](Interfaces/IContentSyncService.cs))
 
 **Repository Method Patterns**:
 
@@ -189,6 +242,7 @@ The rest of the markdown content...
 **CRITICAL Repository Contract**:
 
 - All `IContentRepository` methods **MUST** return content sorted by `DateEpoch` descending (newest first)
+- Methods return `ContentItem` - caller determines if detail view is needed by checking `RenderedHtml != null`
 - This sorting happens at repository layer, before caching
 - Clients should never need to sort content themselves
 
@@ -232,24 +286,13 @@ public required long DateEpoch { get; init; }  // Seconds since Unix epoch
 - Compact representation (single long value)
 - Standard format across all platforms
 
-## DTO Conversion Extensions
+## Model Conversion Extensions
 
-**Pattern**: Use extension methods for converting domain models to DTOs
+**Legacy Note**: Previously had `ContentItemExtensions` and `SectionExtensions` for DTO conversion.
 
-**Extension Method Structure**:
+**Current State**: Extensions removed since models are now unified (no separate DTOs).
 
-- `ToDto(this ContentItem)` - Convert single item
-- `ToDtos(this IEnumerable<ContentItem>)` - Convert collection
-- Map all properties from domain model to DTO
-- Handle nullable properties appropriately
-
-**Usage Examples**:
-
-- **In repositories**: `return item?.ToDto();`
-- **In API endpoints**: `Results.Ok(item.ToDto())`
-- **For collections**: `items.ToDtos()`
-
-**See**: [Extensions/ContentItemExtensions.cs](Extensions/ContentItemExtensions.cs) for implementation
+**Migration**: If you need to convert between different representations, create specific extension methods for those use cases.
 
 ## Validation Patterns
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-14-github-enterprise-server-3-18-is-now-generally-available
 title: GitHub Enterprise Server 3.18 Release Overview
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison reviews the key updates in GitHub Enterprise Server 3.18, highlighting new tools for deployment, monitoring, security, and project management for enterprise teams.<!--excerpt_end-->
 

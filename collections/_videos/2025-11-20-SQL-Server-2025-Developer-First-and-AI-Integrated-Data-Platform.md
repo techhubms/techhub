@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=HelG1r0GneA
 title: 'SQL Server 2025: Developer-First and AI-Integrated Data Platform'
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 Presented by Microsoft Events, this session showcases how SQL Server 2025 empowers developers and data professionals to build modern, AI-powered applications with innovative features and robust integration options.<!--excerpt_end-->
 

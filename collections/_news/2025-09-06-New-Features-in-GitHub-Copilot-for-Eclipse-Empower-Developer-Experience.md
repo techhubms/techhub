@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-05-new-features-in-github-copilot-in-eclipse
 title: New Features in GitHub Copilot for Eclipse Empower Developer Experience
 author: Allison
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Allison highlights the latest GitHub Copilot improvements for Eclipse, detailing features like custom instructions, image-based chat context, richer workflow integration, and a new plugin API to help developers code smarter.<!--excerpt_end-->
 

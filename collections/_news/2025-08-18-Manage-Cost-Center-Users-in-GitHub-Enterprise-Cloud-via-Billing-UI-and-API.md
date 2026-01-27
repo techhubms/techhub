@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-18-customers-can-now-add-users-to-a-cost-center-from-both-the-ui-and-api-2
 title: Manage Cost Center Users in GitHub Enterprise Cloud via Billing UI and API
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - User Management
 section_names:
 - devops
+primary_section: devops
 ---
 Allison details how GitHub Enterprise Cloud now allows enterprise admins and billing managers to manage cost center memberships directly from the billing UI, simplifying user management tasks.<!--excerpt_end-->
 

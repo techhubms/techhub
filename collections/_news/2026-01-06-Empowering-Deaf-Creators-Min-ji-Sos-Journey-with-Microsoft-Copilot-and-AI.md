@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/features/a-deaf-writers-journey-with-ai-discovering-new-creative-paths/?lang=ko
 title: "Empowering Deaf Creators: Min-ji So's Journey with Microsoft Copilot and AI"
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 - Webtoon Creation
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke recounts how Min-ji So, a Deaf webtoon creator, used Microsoft Copilot and the AI for Impact program to break down language obstacles and empower herself—and others—to tell richer, more independent stories.<!--excerpt_end-->
 

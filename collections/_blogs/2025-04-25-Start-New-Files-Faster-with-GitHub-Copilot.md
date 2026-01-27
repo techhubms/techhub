@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/start-new-files-faster-with-github-copilot.html
 title: Start New Files Faster with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels (@xebia.com) shares practical tips for using GitHub Copilot to instantly generate file templates, helping developers kickstart new projects and files with ease.<!--excerpt_end-->
 

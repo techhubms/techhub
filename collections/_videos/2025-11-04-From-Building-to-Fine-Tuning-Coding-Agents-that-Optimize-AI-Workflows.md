@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=vsfbYJF2las
 title: 'From Building to Fine-Tuning: Coding Agents that Optimize AI Workflows'
 author: Microsoft Developer
@@ -34,6 +34,7 @@ section_names:
 - coding
 - devops
 - ml
+primary_section: ai
 ---
 Microsoft Developer's Cozy Kitchen episode features Chef Govind Kamtamneni explaining how to build, customize, and fine-tune AI-driven software engineering agents using Azure AI Foundry, SpecKit, and practical math-first principles.<!--excerpt_end-->
 

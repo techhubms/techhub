@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-14-codeql-scanning-rust-and-c-c-without-builds-is-now-generally-available
 title: CodeQL Adds Rust and Build-Free C/C++ Scanning in General Availability
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison details GitHub's release of CodeQL support for Rust and build-free C/C++ scanning, enabling faster, more accessible security analysis for developers.<!--excerpt_end-->
 

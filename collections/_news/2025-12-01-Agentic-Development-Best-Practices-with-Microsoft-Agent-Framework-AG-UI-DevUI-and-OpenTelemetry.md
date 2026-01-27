@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/semantic-kernel/the-golden-triangle-of-agentic-development-with-microsoft-agent-framework-ag-ui-devui-opentelemetry-deep-dive/
 title: 'Agentic Development Best Practices with Microsoft Agent Framework: AG-UI, DevUI & OpenTelemetry'
 author: Kinfey Lo
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Kinfey Lo presents a comprehensive overview of agentic development with Microsoft Agent Framework, detailing how DevUI, AG-UI, and OpenTelemetry accelerate building, debugging, and deploying advanced AI agents in Python and .NET.<!--excerpt_end-->
 

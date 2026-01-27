@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/powershell/get-started-with-dsc-v3/
 title: Get Started with Microsoft Desired State Configuration v3.0.0
 author: Jason Helmick
@@ -25,6 +25,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Jason Helmick walks through the installation and basics of Microsoft Desired State Configuration v3.0.0, helping IT professionals and developers automate infrastructure management using PowerShell.<!--excerpt_end-->
 

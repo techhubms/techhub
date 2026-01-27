@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=HDEGFNAUkX8
 title: How to Automate Code Reviews and Testing with GitHub Copilot
 author: GitHub
@@ -20,6 +20,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents an overview of using GitHub Copilot for automated code reviews and testing, showing how developers can leverage AI features like Autofix and security scanning within their development process.<!--excerpt_end-->
 

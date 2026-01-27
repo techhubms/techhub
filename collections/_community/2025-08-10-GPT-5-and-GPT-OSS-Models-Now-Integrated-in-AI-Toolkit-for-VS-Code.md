@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/gpt-5-family-of-models-gpt-oss-are-now-available-in-ai-toolkit/ba-p/4441394
 title: GPT-5 and GPT OSS Models Now Integrated in AI Toolkit for VS Code
 author: junjieli
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 junjieli explains how the AI Toolkit v0.18.3 for VS Code brings full support for GPT-5 and GPT OSS models, providing developers with powerful AI integration and deployment features across Azure and local environments.<!--excerpt_end-->
 

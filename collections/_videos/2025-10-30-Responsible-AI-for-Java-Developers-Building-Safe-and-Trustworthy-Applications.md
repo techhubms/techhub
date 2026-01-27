@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=qXx1Ukw3MGs
 title: 'Responsible AI for Java Developers: Building Safe and Trustworthy Applications'
 author: Microsoft Developer
@@ -36,6 +36,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Developer's Ayan Gupta and Rory guide Java developers through the critical topic of responsible AI, demonstrating how to use Azure AI and GitHub Models to ensure content safety and ethical usage.<!--excerpt_end-->
 

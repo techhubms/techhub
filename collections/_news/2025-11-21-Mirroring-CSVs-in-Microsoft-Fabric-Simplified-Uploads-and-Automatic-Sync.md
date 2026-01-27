@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/mirroring-uploading-your-csvs-is-now-simpler-than-ever-before/
 title: 'Mirroring CSVs in Microsoft Fabric: Simplified Uploads and Automatic Sync'
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 The Microsoft Fabric Blog shares improvements to open mirroring, allowing CSV and parquet files to be uploaded without primary keys. This update streamlines data integration and empowers advanced analytics. Authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 

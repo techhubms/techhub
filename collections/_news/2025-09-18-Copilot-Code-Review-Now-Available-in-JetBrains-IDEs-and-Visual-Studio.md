@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-18-copilot-code-review-now-in-jetbrains-ides-and-visual-studio
 title: Copilot Code Review Now Available in JetBrains IDEs and Visual Studio
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces the expansion of GitHub Copilot code review to JetBrains IDEs and Visual Studio, allowing developers to access AI-powered review feedback within their preferred editors.<!--excerpt_end-->
 

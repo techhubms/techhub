@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://r-vm.com/new-website-tech-hub-ms.html
 title: 'Announcing tech.hub.ms: Curated Microsoft Tech Content Platform'
 author: Reinier van Maanen
@@ -27,6 +27,7 @@ section_names:
 - azure
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Reinier van Maanen shares the launch of tech.hub.ms, a Microsoft tech news aggregator with AI-driven categorization, built in collaboration with Rob Bos and Xebia colleagues.<!--excerpt_end-->
 

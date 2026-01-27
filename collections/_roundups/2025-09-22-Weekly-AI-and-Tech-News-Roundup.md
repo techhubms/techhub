@@ -1,4 +1,4 @@
----
+﻿---
 title: AI Agent Workflows, Security Improvements, and Advances in Cloud Technology
 author: Tech Hub Team
 date: 2025-09-22 09:00:00 +00:00
@@ -21,6 +21,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: all
 ---
 Welcome to this week’s news overview on technology, featuring developments in AI, secure cloud infrastructure, and productivity for developers. Organizations are now using AI agents in tools like GitHub Copilot, Azure AI Foundry, and OpenAI’s GPT-5-Codex to automate more processes and enable real-time workflow improvements. From conversational code reviews to practical LLM integration guides, this update highlights progress in model management, toolchain coordination, and agent-based delivery across business sectors.
 

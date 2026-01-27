@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/10/how-microsoft-is-addressing-digital-sovereignty-in-switzerland/
 title: How Microsoft is Addressing Digital Sovereignty in Switzerland
 author: Thomas Maurer
@@ -36,6 +36,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Thomas Maurer details how Microsoft is helping Swiss organizations achieve digital sovereignty, highlighting cloud region options, compliance features, and secure multi-cloud management for technical stakeholders.<!--excerpt_end-->
 

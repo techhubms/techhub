@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/post-quantum-cryptography-in-dotnet/
 title: 'Post-Quantum Cryptography in .NET: New Algorithms and Design Principles'
 author: Jeremy Barton
@@ -32,6 +32,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 Jeremy Barton walks through the integration of post-quantum cryptography (PQC) algorithms in .NET 10, explaining new classes, technical challenges, and practical usage for developers.<!--excerpt_end-->
 

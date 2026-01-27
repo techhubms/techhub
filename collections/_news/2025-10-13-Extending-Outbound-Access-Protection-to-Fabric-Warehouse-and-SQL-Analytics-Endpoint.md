@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/extending-outbound-access-protection-to-fabric-warehouse-and-sql-analytics-endpoint/
 title: Extending Outbound Access Protection to Fabric Warehouse and SQL Analytics Endpoint
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog explains how Outbound Access Protection is now available for Fabric Warehouse and SQL Analytics Endpoint, enabling organizations to secure analytics workloads by restricting outbound connections to only trusted destinations.<!--excerpt_end-->
 

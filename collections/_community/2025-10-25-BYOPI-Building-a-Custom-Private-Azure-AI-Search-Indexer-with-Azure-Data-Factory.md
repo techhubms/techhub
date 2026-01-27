@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/byopi-design-your-own-custom-private-ai-search-indexer-with-no/m-p/4464205#M22283
 title: 'BYOPI: Building a Custom Private Azure AI Search Indexer with Azure Data Factory'
 author: ani_ms_emea
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 ani_ms_emea explains how to implement a secure, end-to-end private indexing solution for Azure AI Search using Azure Data Factory and SQL Server on a private VM, highlighting both practical steps and architectural challenges.<!--excerpt_end-->
 

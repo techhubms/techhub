@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-seamless-data-integration-with-the-latest-fabric-data-factory-connector-innovations/
 title: Enhancements in Microsoft Fabric Data Factory Connectors for Enterprise-Scale Data Integration
 author: Microsoft Fabric Blog
@@ -26,6 +26,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog presents an in-depth overview of the latest Fabric Data Factory connector updates, highlighting advancements in data integration, performance, governance, and security for enterprise analytics teams.<!--excerpt_end-->
 

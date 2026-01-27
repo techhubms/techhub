@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/layer-7-network-policies-for-aks-now-generally-available-for/ba-p/4467598
 title: 'Layer 7 Network Policies for AKS: General Availability for Enterprise-Grade Security'
 author: KhushbuP
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 KhushbuP presents a detailed overview of the general availability of Layer 7 Network Policies for Azure Kubernetes Service (AKS), explaining how these new capabilities enhance security and observability for containerized workloads.<!--excerpt_end-->
 

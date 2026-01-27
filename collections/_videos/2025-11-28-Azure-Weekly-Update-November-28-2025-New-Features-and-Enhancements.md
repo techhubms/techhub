@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=HxO4aWyHmdE
 title: 'Azure Weekly Update: November 28, 2025 - New Features and Enhancements'
 author: John Savill's Technical Training
@@ -39,6 +39,7 @@ section_names:
 - coding
 - devops
 - ml
+primary_section: ml
 ---
 John Savill delivers the Azure Weekly Update for November 28, 2025, sharing technical enhancements and new features across Azure services for cloud developers and administrators.<!--excerpt_end-->
 

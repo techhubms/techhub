@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Set Coding Guidelines for Code Review
 author: TBD
@@ -13,6 +13,7 @@ tags: []
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This content demonstrates GitHub Copilot's Set Coding Guidelines for Code Review feature. Define custom coding standards for AI code reviews<!--excerpt_end-->
 

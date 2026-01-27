@@ -1,6 +1,6 @@
 @page "/github-copilot/vscode-updates"
 @page "/github-copilot/vscode-updates/{VideoSlug}"
-@using TechHub.Core.DTOs
+@using TechHub.Core.Models
 @using TechHub.Web.Services
 
 @inject TechHubApiClient ApiClient
@@ -66,8 +66,8 @@
     [Parameter]
     public string? VideoSlug { get; set; }
 
-    private List<ContentItemDto> videoItems = new();
-    private ContentItemDetailDto? selectedVideoDetail;
+    private List<TechHub.Core.Models.ContentItem> videoItems = new();
+    private TechHub.Core.Models.ContentItem? selectedVideoDetail;
     private string selectedVideoSlug = "";
 
     protected override async Task OnInitializedAsync()
@@ -89,7 +89,7 @@
         try
         {
             var allVideos = await ApiClient.GetContentAsync(null, "videos");
-            videoItems = (allVideos ?? Enumerable.Empty<ContentItemDto>())
+            videoItems = (allVideos ?? Enumerable.Empty<TechHub.Core.Models.ContentItem>())
                 .Where(v => v.SubcollectionName == VideoCollectionName)
                 .OrderByDescending(v => v.DateEpoch)
                 .ToList();

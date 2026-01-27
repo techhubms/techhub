@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/copilot-and-query-editor-in-sql-database-in-fabric-ga-update/
 title: Copilot and Query Editor Now Generally Available in SQL Database on Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -31,6 +31,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog details the GA release of SQL Database in Fabric and highlights how Copilot and enhanced Query Editor tools empower developers and data professionals through AI-powered SQL workflows and enterprise integration.<!--excerpt_end-->
 

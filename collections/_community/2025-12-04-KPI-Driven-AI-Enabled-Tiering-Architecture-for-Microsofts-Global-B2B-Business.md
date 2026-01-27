@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/architecting-the-next-generation-customer-tiering-system/ba-p/4475326
 title: KPI-Driven, AI-Enabled Tiering Architecture for Microsoft’s Global B2B Business
 author: BonnieAo
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Bonnie Ao and the UCLA Anderson MSBA team present a Microsoft-sponsored capstone on designing an AI-driven, KPI-optimized customer tiering framework, covering Azure-based analytics, ML, and operational constraints.<!--excerpt_end-->
 

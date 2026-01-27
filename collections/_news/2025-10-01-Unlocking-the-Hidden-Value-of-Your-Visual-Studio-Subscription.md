@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/unlock-vss-benefits-myvisualstudio/
 title: Unlocking the Hidden Value of Your Visual Studio Subscription
 author: Jim Harrer
@@ -26,6 +26,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Jim Harrer uncovers how Visual Studio subscribers can unlock significant value through included benefits, such as Azure credits, Dev/Test software, and learning resources—all accessed via my.visualstudio.com.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=jV570EFcC9o
 title: 'The Human Side of Octoverse 2025: Insights on Open Source, AI, and Collaboration'
 author: GitHub
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 GitHub's Abigail Cabunoc Mayes discusses the Octoverse 2025 report, highlighting developer growth, AI’s evolving role in open source, and advice for first-time contributors, offering insights into the human and technological factors shaping the community.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/gpt-5-in-azure-ai-foundry-the-future-of-ai-apps-and-agents-starts-here/
 title: 'GPT-5 Launches in Azure AI Foundry: New Era for AI Apps, Agents, and Developers'
 author: Steve Sweetman
@@ -33,6 +33,7 @@ section_names:
 - coding
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Steve Sweetman announces the general availability of GPT-5 in Azure AI Foundry, detailing its rollout to developers via GitHub Copilot and VS Code, enhanced reasoning, orchestration features, and robust security and governance layers for enterprise AI adoption.<!--excerpt_end-->
 

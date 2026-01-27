@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=W56H9W7x-ao
 title: MCP Development Best Practices
 author: Microsoft Developer
@@ -16,6 +16,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Developer shares actionable best practices for developing robust Model Context Protocol (MCP) servers. Explore structural, design, and security considerations.<!--excerpt_end-->
 

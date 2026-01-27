@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/microsoft-morphs-fusion-developers-to-full-stack-builders/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-morphs-fusion-developers-to-full-stack-builders
 title: Microsoft Morphs Fusion Developers To Full Stack Builders
 author: Adrian Bridgwater
@@ -37,6 +37,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Adrian Bridgwater examines Microsoft's push to turn fusion developers and business experts into full stack builders, highlighting Power Platform and AI's pivotal roles in driving next-gen software collaboration.<!--excerpt_end-->
 

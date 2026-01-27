@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/prompt-engineering-for-developers-getting-the-best-out-of-copilot/
 title: Prompt Engineering Techniques for Developers Using GitHub Copilot
 author: Dellenny
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny explains how developers can use prompt engineering to get the most from GitHub Copilot. This article shares practical strategies and examples for crafting better prompts and improving code generation results.<!--excerpt_end-->
 

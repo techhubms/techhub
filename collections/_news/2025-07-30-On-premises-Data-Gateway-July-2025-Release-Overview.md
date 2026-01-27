@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-july-2025-release/
 title: On-premises Data Gateway July 2025 Release Overview
 author: Microsoft Fabric Blog
@@ -21,6 +21,7 @@ tags:
 - Version 3000.278
 section_names:
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details the July 2025 release of the on-premises data gateway, authored by Microsoft, highlighting new bug fixes and Power BI Desktop compatibility.<!--excerpt_end-->
 

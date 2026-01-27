@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/08/12/dows-125-year-legacy-innovating-with-ai-to-secure-a-long-future/
 title: How Dow Uses Microsoft Security Copilot and AI to Transform Cybersecurity Operations
 author: stclarke
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 stclarke explores how Mario Ferket and Dow have integrated Microsoft Security Copilot and AI into their cybersecurity operations, improving automation, threat detection, and analyst mentorship.<!--excerpt_end-->
 

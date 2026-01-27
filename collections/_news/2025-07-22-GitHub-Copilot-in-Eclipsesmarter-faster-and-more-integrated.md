@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-22-github-copilot-in-eclipse-smarter-faster-and-more-integrated
 title: GitHub Copilot in Eclipse—smarter, faster, and more integrated
 author: Allison
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, Allison introduces recent updates to GitHub Copilot for Eclipse. The enhancements cover improved compatibility with newer Eclipse versions, more intelligent commit message generation, and better context awareness. The piece provides insights into how these changes help streamline the developer workflow.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Fe0M4Xxi1O8
 title: 'Azure Update - 5th December 2025: New Features, Metrics, and Services'
 author: John Savill's Technical Training
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 John Savill's Technical Training provides a concise breakdown of the latest Microsoft Azure updates, including Databricks, PostgreSQL enhancements, ML and AI service news, and key feature retirements.<!--excerpt_end-->
 

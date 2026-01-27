@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/5-copilot-chat-prompts-dotnet-devs-should-steal-today/
 title: 5 Copilot Chat Prompts .NET Developers Should Use Now
 author: Wendy Breiding (SHE/HER)
@@ -26,6 +26,7 @@ section_names:
 - github-copilot
 - coding
 - security
+primary_section: github-copilot
 ---
 In this blog, Wendy Breiding presents five practical GitHub Copilot Chat prompts specifically designed to help .NET developers boost productivity, code quality, and security when working on Microsoft technologies.<!--excerpt_end-->
 

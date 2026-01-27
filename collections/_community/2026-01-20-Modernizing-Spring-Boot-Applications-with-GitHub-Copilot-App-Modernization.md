@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 ayangupta details how GitHub Copilot app modernization automates upgrading Spring Boot 2.x applications to 3.x, providing a guided path for code migration, dependency updates, and Java platform compatibility.<!--excerpt_end-->
 

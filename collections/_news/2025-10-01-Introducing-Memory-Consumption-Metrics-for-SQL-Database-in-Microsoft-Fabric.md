@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/memory-consumption-metrics-now-available-for-fabric-sql-database/
 title: Introducing Memory Consumption Metrics for SQL Database in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces real-time memory consumption metrics for SQL Database in Fabric, helping administrators monitor, analyze, and optimize query resource usage more effectively.<!--excerpt_end-->
 

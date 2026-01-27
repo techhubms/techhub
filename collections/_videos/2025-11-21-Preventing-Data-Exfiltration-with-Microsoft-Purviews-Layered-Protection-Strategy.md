@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=9_ELo9f9hXk
 title: Preventing Data Exfiltration with Microsoft Purview's Layered Protection Strategy
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events presents an Ignite 2025 session led by Vivian Ma, Shekhar Palta, and Roberto Yglesias, revealing how a layered protection approach with Microsoft Purview helps prevent exfiltration of sensitive data across modern environments.<!--excerpt_end-->
 

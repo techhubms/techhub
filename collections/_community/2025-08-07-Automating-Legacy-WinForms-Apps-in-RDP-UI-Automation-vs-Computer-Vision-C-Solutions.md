@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mjszox/need_help_automating_windows_forms_inside_remote/
 title: 'Automating Legacy WinForms Apps in RDP: UI Automation vs. Computer Vision (C# Solutions)'
 author: Grifone87
@@ -33,6 +33,7 @@ tags:
 - YOLO
 section_names:
 - coding
+primary_section: coding
 ---
 Grifone87 and the r/csharp community discuss complexities of automating a WinForms insurance system inside an RDP session with C#, weighing UI automation versus computer vision approaches with useful insights and reverse engineering tips.<!--excerpt_end-->
 

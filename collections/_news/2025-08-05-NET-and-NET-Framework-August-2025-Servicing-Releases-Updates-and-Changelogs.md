@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-august-2025-servicing-updates/
 title: '.NET and .NET Framework August 2025 Servicing Releases: Updates and Changelogs'
 author: Tara Overfield, Victor Israel-Bolarinwa
@@ -18,6 +18,7 @@ tags:
 - Servicing Updates
 section_names:
 - coding
+primary_section: coding
 ---
 Tara Overfield and Victor Israel-Bolarinwa provide a detailed recap of the August 2025 servicing updates for .NET 8.0, .NET 9.0, and the .NET Framework, focusing on new non-security fixes and resources.<!--excerpt_end-->
 

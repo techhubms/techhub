@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=0Z1plDp_rvI
 title: 'Building Rock-Solid Avalonia Apps: A Guide to Headless Testing with AI Assistance'
 author: dotnet
@@ -21,6 +21,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 dotnet presents a session on implementing headless UI testing for Avalonia apps, demonstrating how to accelerate development with GitHub Copilot as an AI pair programmer.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mipwjd/differentiating_between_physical_and_logical/
 title: Detecting Physical vs Logical Processors in Cross-Platform .NET Applications
 author: Eisenmonoxid1
@@ -22,6 +22,7 @@ tags:
 - WMI
 section_names:
 - coding
+primary_section: coding
 ---
 Eisenmonoxid1 opens a discussion on how to programmatically distinguish between physical and logical processor cores in cross-platform .NET apps, sharing technical constraints and potential approaches.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=VLRg4TKtLBc
 title: Building Durable Multi-Agent AI Workflows with Dapr Agents
 author: Microsoft Developer
@@ -33,6 +33,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Microsoft Developer showcases how the Dapr Durable AI Agent Workflow Framework lets you create scalable, resilient, multi-agent AI systems with Dapr. Learn practical agent orchestration and production techniques.<!--excerpt_end-->
 

@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Jacklyn Carroll offers a detailed walkthrough for developers on using slash commands in GitHub Copilot CLI, highlighting time-saving tips, enhanced workflow control, and secure team collaboration.<!--excerpt_end-->
 

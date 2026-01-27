@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/introducing-microsoft-agent-framework/
 title: 'Introducing Microsoft Agent Framework: Streamlining Multi-Agent AI Systems with Azure AI Foundry'
 author: stclarke
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 stclarke introduces Microsoft Agent Framework and Azure AI Foundry enhancements, offering developers unified tools to build, orchestrate, and govern enterprise-grade multi-agent AI systems with integrated observability and responsible AI features.<!--excerpt_end-->
 

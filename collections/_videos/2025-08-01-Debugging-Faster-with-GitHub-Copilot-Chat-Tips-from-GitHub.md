@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/grqNb30yuHw
 title: 'Debugging Faster with GitHub Copilot Chat: Tips from GitHub'
 author: GitHub
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this GitHub video, the team shares practical debugging workflows using GitHub Copilot chat. The author, GitHub, presents ways developers can leverage Copilot to resolve code issues more quickly and efficiently.<!--excerpt_end-->
 

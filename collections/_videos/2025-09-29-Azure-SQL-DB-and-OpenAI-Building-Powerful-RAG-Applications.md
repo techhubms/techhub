@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=JXH_i5Eo_CA
 title: 'Azure SQL DB & OpenAI: Building Powerful RAG Applications'
 author: Microsoft Developer
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Developer presents a session led by Indira Bandari exploring how to build Retrieval Augmented Generation (RAG) apps by integrating OpenAI’s GPT models with Azure SQL Database.<!--excerpt_end-->
 

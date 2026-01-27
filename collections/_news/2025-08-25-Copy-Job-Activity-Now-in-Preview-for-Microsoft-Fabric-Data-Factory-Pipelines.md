@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-public-preview-copy-job-activity-in-pipelines/
 title: Copy Job Activity Now in Preview for Microsoft Fabric Data Factory Pipelines
 author: Microsoft Fabric Blog
@@ -19,6 +19,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog announces the Preview release of Copy job Activity, a new orchestration feature in Data Factory pipelines, enabling streamlined data movement and workflow automation for engineers working on Microsoft Fabric.<!--excerpt_end-->
 

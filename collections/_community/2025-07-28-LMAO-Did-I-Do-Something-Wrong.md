@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mbdd6h/lmao_did_i_do_something_wrong/
 title: LMAO Did I Do Something Wrong?
 author: Yourmelbguy
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Yourmelbguy humorously shares an image depicting a seemingly annoyed response from GitHub Copilot, prompting discussion about AI behavior.<!--excerpt_end-->
 

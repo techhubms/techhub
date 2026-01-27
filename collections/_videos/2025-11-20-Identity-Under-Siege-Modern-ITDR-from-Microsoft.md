@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=J_PKZb6D_VE
 title: 'Identity Under Siege: Modern ITDR from Microsoft'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Events brings together security leaders Eric Sachs and Raviv Tamir to discuss advanced identity protection using Microsoft Entra and Defender. The session emphasizes proactive security operations and modern ITDR strategies.<!--excerpt_end-->
 

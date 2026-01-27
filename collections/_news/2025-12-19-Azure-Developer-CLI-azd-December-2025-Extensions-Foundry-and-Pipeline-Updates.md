@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-december-2025/
 title: 'Azure Developer CLI (azd) December 2025: Extensions, Foundry, and Pipeline Updates'
 author: Kristen Womack
@@ -36,6 +36,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Kristen Womack details the December 2025 Azure Developer CLI (azd) release, featuring extension enhancements, Foundry rebranding, Azure Pipeline improvements, bug fixes, and community highlights for developers.<!--excerpt_end-->
 

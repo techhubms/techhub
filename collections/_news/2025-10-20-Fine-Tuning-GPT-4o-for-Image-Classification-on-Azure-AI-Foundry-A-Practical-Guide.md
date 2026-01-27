@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/a-developers-guide-to-fine-tuning-gpt-4o-for-image-classification-on-azure-ai-foundry/
 title: 'Fine-Tuning GPT-4o for Image Classification on Azure AI Foundry: A Practical Guide'
 author: Alexandre Levret
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Alexandre Levret demonstrates how developers can fine-tune GPT-4o using Azure AI Foundry to enhance image classification accuracy, providing a hands-on comparison against conventional CNNs and exploring practical trade-offs in performance, cost, and development workflow.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-data-clustering-in-fabric-data-warehouse-preview/
 title: Announcing Data Clustering in Microsoft Fabric Data Warehouse
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 - SQL
 section_names:
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog explains the newly released Data Clustering feature for Fabric Data Warehouse, offering dramatic improvements in query speed and efficiency for analytics workloads.<!--excerpt_end-->
 

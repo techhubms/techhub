@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/teamcenter-simulation-process-data-management-architecture-on/ba-p/4449316
 title: Implementing Siemens Teamcenter Simulation Process Data Management on Azure CycleCloud with Slurm
 author: Sunita_AZ0708
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Sunita_AZ0708 explains how to implement Siemens Teamcenter SPDM on Azure CycleCloud with Slurm, covering secure multi-tier PLM architecture, simulation job workflow, and dynamic HPC resource management.<!--excerpt_end-->
 

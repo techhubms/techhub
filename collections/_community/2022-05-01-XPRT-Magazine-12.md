@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 12
 date: 2022-05-01 00:00:00 +00:00
 author: Xebia
@@ -30,6 +30,7 @@ section_names:
 - devops
 - security
 - github-copilot
+primary_section: github-copilot
 ---
 This edition of XPRT Magazine explores cloud-native microservices, IoT, engineering culture, and developer productivity. Discover hands-on guides, real-world case studies, and stories of innovation, resilience, and knowledge sharing in the Microsoft ecosystem.
 <!--excerpt_end-->

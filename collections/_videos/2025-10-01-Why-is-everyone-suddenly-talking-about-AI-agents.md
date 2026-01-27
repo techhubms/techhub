@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=vewSU9egocs
 title: Why is everyone suddenly talking about AI agents?
 author: Microsoft Developer
@@ -16,6 +16,7 @@ tags:
 - Tech Shifts
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Developer presents John Maeda's insights into the transition from AI models to AI agents, emphasizing the impact of lowered model costs and Microsoft's Azure AI Foundry.<!--excerpt_end-->
 

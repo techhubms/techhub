@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/free-official-learning-resources-for-the-github-copilot-certification-exam/
 title: Free & Official Learning Resources for the GitHub Copilot Certification Exam
 author: Dellenny
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny outlines free, official study materials for the GitHub Copilot Certification Exam, guiding developers through Microsoft Learn modules, documentation, and community tips for mastering responsible AI and AI-assisted coding.<!--excerpt_end-->
 

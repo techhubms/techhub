@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=daDtYv94bN8
 title: Exploring AI Features in Azure Managed PostgreSQL
 author: John Savill's Technical Training
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 John Savill presents a comprehensive overview of AI features available within Azure Managed PostgreSQL, outlining integration methods, developer tooling, and practical scenarios for leveraging AI and vector search in the Microsoft cloud.<!--excerpt_end-->
 

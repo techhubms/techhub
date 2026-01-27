@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ruxjC9rDYqI
 title: "Upgrading to GitHub's Remote MCP Server: From Docker Setup to OAuth Simplicity"
 author: GitHub
@@ -16,6 +16,7 @@ tags:
 - Server Upgrade
 section_names:
 - devops
+primary_section: devops
 ---
 In this GitHub-hosted video, the team explains the major upgrade from the local to remote MCP server, examining features, setup, security, and future plans.<!--excerpt_end-->
 

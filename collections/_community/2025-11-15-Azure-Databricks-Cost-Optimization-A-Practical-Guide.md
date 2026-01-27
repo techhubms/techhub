@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-cost-optimization-a-practical-guide/ba-p/4470235
 title: 'Azure Databricks Cost Optimization: A Practical Guide'
 author: Rafia_Aqil
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - ml
+primary_section: ml
 ---
 Rafia_Aqil and Sanjeev Nair provide a detailed, technical roadmap for optimizing Azure Databricks costs, covering discovery, configuration, data engineering, code improvements, and actionable team strategies.<!--excerpt_end-->
 

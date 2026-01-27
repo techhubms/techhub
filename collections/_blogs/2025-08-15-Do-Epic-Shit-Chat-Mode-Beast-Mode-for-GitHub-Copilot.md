@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://harrybin.de/posts/do-epic-shit-chat-mode/
 title: 'Do Epic Shit Chat Mode: Beast Mode for GitHub Copilot'
 author: Harald Binkle
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Harald Binkle introduces the 'Do Epic Shit' chat mode for GitHub Copilot, outlining its strict autonomy and research loops to maximize developer productivity in VS Code.<!--excerpt_end-->
 

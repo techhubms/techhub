@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/garage/wall-of-fame/generative-ai-for-permitting/
 title: 'Generative AI for Permitting: Accelerating Clean Energy with Microsoft'
 author: stclarke
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke explores how Microsoft's Generative AI for Permitting project uses Azure OpenAI and advanced AI tooling to revolutionize permitting for clean energy, delivering real-world results in the nuclear and renewable sectors.<!--excerpt_end-->
 

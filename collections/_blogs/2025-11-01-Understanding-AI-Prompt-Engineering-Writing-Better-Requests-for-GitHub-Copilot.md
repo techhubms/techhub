@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/understanding-ai-prompts-writing-better-requests-for-copilot/
 title: 'Understanding AI Prompt Engineering: Writing Better Requests for GitHub Copilot'
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny shares practical insights on improving results with GitHub Copilot by mastering prompt writing. This guide covers strategies, advanced techniques, and common pitfalls for developers seeking to get more accurate and useful code suggestions.<!--excerpt_end-->
 

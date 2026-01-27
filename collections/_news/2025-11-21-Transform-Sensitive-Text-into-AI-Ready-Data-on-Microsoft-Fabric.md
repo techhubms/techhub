@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/transform-sensitive-text-into-ai-ready-data-on-microsoft-fabric/
 title: Transform Sensitive Text into AI-Ready Data on Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog explains how to leverage Tonic Textual for secure AI/ML development by automatically preparing sensitive unstructured text within Fabric, maintaining privacy and compliance throughout the workflow.<!--excerpt_end-->
 

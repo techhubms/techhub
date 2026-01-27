@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-visibility-flexibility-and-cost-efficiency-with/ba-p/4456707
 title: 'Enhanced Logging for Azure Application Gateway: Resource-Specific Tables, DCR, and Cost Optimization'
 author: vnamani
@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 vnamani details key enhancements in Azure Application Gateway logging, including resource-specific tables, DCR transformations, and the basic log plan, helping teams optimize observability, efficiency, and compliance.<!--excerpt_end-->
 

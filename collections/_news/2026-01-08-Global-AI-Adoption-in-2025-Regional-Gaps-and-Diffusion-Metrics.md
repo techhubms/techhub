@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/on-the-issues/2026/01/08/global-ai-adoption-in-2025/
 title: 'Global AI Adoption in 2025: Regional Gaps and Diffusion Metrics'
 author: stclarke
@@ -27,6 +27,7 @@ tags:
 - Telemetry
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke examines worldwide generative AI adoption trends in 2025, highlighting data-driven insights into the digital divide, country rankings, and the influence of open-source AI models like DeepSeek.<!--excerpt_end-->
 

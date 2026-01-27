@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/terraform-provider-for-microsoft-fabric-4-deploying-a-fabric-config-with-terraform-in-github-actions/
 title: 'Terraform Provider for Microsoft Fabric: Deploying Fabric Configs with GitHub Actions'
 author: Microsoft Fabric Blog
@@ -30,6 +30,7 @@ section_names:
 - coding
 - ml
 - devops
+primary_section: ml
 ---
 Microsoft Fabric Blog guides readers through deploying Microsoft Fabric configurations with Terraform in GitHub Actions, emphasizing secure automation with managed identities and OpenID Connect for robust Azure-based CI/CD workflows.<!--excerpt_end-->
 

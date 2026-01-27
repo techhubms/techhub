@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=IMcDEvXRBkY
 title: Choosing Between MCP and A2A for AI Applications
 author: John Savill's Technical Training
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 John Savill examines the trade-offs between Microsoft Cloud Platform (MCP) and the Agent-to-Agent (A2A) protocol in the context of AI applications, offering developers practical insights for decision-making.<!--excerpt_end-->
 

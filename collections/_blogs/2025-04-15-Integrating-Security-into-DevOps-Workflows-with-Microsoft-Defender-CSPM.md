@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://zure.com/blog/integrating-security-into-devops-workflows-with-microsoft-defender-cspm
 title: Integrating Security into DevOps Workflows with Microsoft Defender CSPM
 author: petrus.vasenius@zure.com (Petrus Vasenius)
@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Petrus Vasenius explains how Microsoft Defender CSPM strengthens DevOps workflows by embedding security checks and automated remediation into CI/CD pipelines, ensuring cloud applications remain secure and compliant throughout development and deployment.<!--excerpt_end-->
 

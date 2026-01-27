@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/07/17/transparency-on-microsoft-defender-for-office-365-email-security-effectiveness/
 title: 'Microsoft Defender for Office 365: Transparent Benchmarks on Email Security Effectiveness'
 author: Ramya Chitrakar and Scott Woodgate
@@ -22,6 +22,7 @@ tags:
 - Transparency
 section_names:
 - security
+primary_section: security
 ---
 Ramya Chitrakar and Scott Woodgate present Microsoft's latest efforts to make email security performance more transparent, including dashboards and benchmarking reports for Defender for Office 365 and comparisons with other security vendors.<!--excerpt_end-->
 

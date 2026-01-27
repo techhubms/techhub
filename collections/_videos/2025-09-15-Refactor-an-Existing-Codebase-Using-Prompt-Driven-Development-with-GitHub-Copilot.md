@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=1EBXoFZO6Kk
 title: Refactor an Existing Codebase Using Prompt-Driven Development with GitHub Copilot
 author: Visual Studio Code
@@ -29,6 +29,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code, featuring Gwyneth Peña-Siguenza, guides developers through prompt-driven development and AI-powered codebase refactoring using GitHub Copilot with a FastAPI + Cosmos DB project.<!--excerpt_end-->
 

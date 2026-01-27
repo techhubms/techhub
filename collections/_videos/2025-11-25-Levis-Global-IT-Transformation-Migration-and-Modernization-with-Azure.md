@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=UNJm-ipuQE8
 title: 'Levi’s Global IT Transformation: Migration and Modernization with Azure'
 author: Microsoft Events
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Microsoft Events presents Levi’s IT transformation journey at Ignite 2025, featuring speakers Maria Bledsoe, Shawn Harris, and Michael Womack’s insights on migrating and modernizing Levi’s global estate with Azure.<!--excerpt_end-->
 

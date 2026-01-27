@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/boost-your-copilot-collaboration-with-reusable-prompt-files/
 title: Boost Your Copilot Collaboration with Reusable Prompt Files
 author: Jessie Houghton
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Jessie Houghton explains how to use reusable prompt files with GitHub Copilot in Visual Studio to save time, foster collaboration, and accelerate AI-assisted development workflows.<!--excerpt_end-->
 

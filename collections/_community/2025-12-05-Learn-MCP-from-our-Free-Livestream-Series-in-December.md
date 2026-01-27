@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-mcp-from-our-free-livestream-series-in-december/ba-p/4474729
 title: Learn MCP from our Free Livestream Series in December
 author: Pamela_Fox
@@ -24,6 +24,7 @@ section_names:
 - azure
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Pamela Fox presents a free December livestream series exploring MCP (Model Context Protocol) with a focus on Python, FastMCP SDK, GitHub Copilot, and cloud deployments using Azure, including secure authentication with Microsoft Entra.<!--excerpt_end-->
 

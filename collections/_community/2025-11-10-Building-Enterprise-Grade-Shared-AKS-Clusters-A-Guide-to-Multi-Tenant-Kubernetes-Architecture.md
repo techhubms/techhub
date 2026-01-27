@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-enterprise-grade-shared-aks-clusters-a-guide-to-multi/ba-p/4468563
 title: 'Building Enterprise-Grade Shared AKS Clusters: A Guide to Multi-Tenant Kubernetes Architecture'
 author: dhaneshuk
@@ -40,6 +40,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 dhaneshuk presents a thorough walkthrough for building and operating enterprise-grade, multi-tenant AKS clusters, highlighting security, DevOps, cost optimization, and operational know-how for Microsoft consultants and developers.<!--excerpt_end-->
 

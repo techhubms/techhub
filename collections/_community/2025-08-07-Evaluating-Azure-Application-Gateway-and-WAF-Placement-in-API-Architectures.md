@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mjvyr1/application_gateway_thoughts/
 title: Evaluating Azure Application Gateway and WAF Placement in API Architectures
 author: TheCitrixGuy
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 TheCitrixGuy and members of the Azure community explore the architectural and cost considerations of using Azure Application Gateway with WAF in front of APIM. They share alternative solutions including Azure Front Door and Cloudflare, offering deployment insights and practical recommendations.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/microsoft-cost-management-updates-july-august-2025/
 title: 'Microsoft Cost Management Updates: July & August 2025'
 author: Britt Henderson
@@ -23,6 +23,7 @@ tags:
 - Service Principal
 section_names:
 - azure
+primary_section: azure
 ---
 Britt Henderson presents the July & August 2025 updates for Microsoft Cost Management, covering new features, automation improvements, and partner-focused enhancements to help Azure users monitor, control, and optimize their cloud expenditures.<!--excerpt_end-->
 

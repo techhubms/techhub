@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-preview-of-async-scaling-for-app-service-plans/ba-p/4469680
 title: Introducing Preview of Async Scaling for Azure App Service Plans
 author: apwestgarth
@@ -21,6 +21,7 @@ tags:
 - Windows
 section_names:
 - azure
+primary_section: azure
 ---
 apwestgarth presents a preview of async scaling for Azure App Service Plans, describing how this update streamlines scaling out large numbers of instances and guides users in using the new feature with detailed CLI commands.<!--excerpt_end-->
 

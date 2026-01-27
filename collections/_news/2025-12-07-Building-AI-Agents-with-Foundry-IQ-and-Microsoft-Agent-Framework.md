@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/foundry-iq-agent-framework-integration/
 title: Building AI Agents with Foundry IQ and Microsoft Agent Framework
 author: Farzad Sunavala, Eduard van Valkenburg
@@ -32,6 +32,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Farzad Sunavala and Eduard van Valkenburg detail how the Azure AI Search Context Provider and Foundry IQ enable developers to build intelligent, context-aware AI agents using minimal Python code in the Microsoft Agent Framework.<!--excerpt_end-->
 

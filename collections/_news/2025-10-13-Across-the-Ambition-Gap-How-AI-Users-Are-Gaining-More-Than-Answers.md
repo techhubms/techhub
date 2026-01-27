@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.windows.com/windowsexperience/2025/10/13/across-the-ambition-gap-how-ai-users-are-gaining-more-than-answers/
 title: 'Across the Ambition Gap: How AI Users Are Gaining More Than Answers'
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 - Transparency
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke shares results from Microsoft-funded research, highlighting how 'AI Enthusiasts' are leveraging consumer AI tools for greater personal growth and confidence, and explaining the widening gap in ambition among AI users and non-users.<!--excerpt_end-->
 

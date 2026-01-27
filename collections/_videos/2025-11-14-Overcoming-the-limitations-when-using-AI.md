@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=QZsxrDC8hr0
 title: Overcoming the limitations when using AI
 author: dotnet
@@ -18,6 +18,7 @@ tags:
 - 'Session Speaker: Michael Washington'
 section_names:
 - ai
+primary_section: ai
 ---
 In this .NET Conf 2025 session, Michael Washington explores practical methods for overcoming the limitations of artificial intelligence in real-world implementations, using examples from open-source projects.<!--excerpt_end-->
 

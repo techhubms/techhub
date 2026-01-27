@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2026-01-14-github-copilot-cli-enhanced-agents-context-management-and-new-ways-to-install
 title: 'GitHub Copilot CLI: Enhanced Agents, Context Management, and Installation Methods'
 author: Allison
@@ -30,6 +30,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces significant improvements to GitHub Copilot CLI, including advanced agents, enhanced context features, improved installation workflows, and better scripting options for developers.<!--excerpt_end-->
 

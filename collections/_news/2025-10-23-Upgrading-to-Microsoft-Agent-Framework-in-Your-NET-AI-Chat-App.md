@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/upgrading-to-microsoft-agent-framework-in-your-dotnet-ai-chat-app/
 title: Upgrading to Microsoft Agent Framework in Your .NET AI Chat App
 author: Bruno Capuano
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Bruno Capuano shows developers how to upgrade a .NET AI chat app to the Microsoft Agent Framework, achieving better architecture, agent orchestration, and deeper Azure OpenAI integration.<!--excerpt_end-->
 

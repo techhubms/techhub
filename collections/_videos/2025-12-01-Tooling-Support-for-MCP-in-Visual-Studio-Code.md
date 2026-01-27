@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/TGICP4NS5tc
 title: Tooling Support for MCP in Visual Studio Code
 author: Visual Studio Code
@@ -17,6 +17,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 Visual Studio Code presents practical ways for developers to work effectively with MCP, as explained in this video by Visual Studio Code.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=w3kI6XlZXZQ
 title: Running AI Coding Agents with Dev Containers and GitHub Codespaces
 author: Visual Studio Code
@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 James Montemagno from Visual Studio Code demonstrates how to set up Dev Containers and run AI coding agents within them, utilizing GitHub Codespaces for portable development. This guide is perfect for developers seeking efficiency and portability using Microsoft technologies.<!--excerpt_end-->
 

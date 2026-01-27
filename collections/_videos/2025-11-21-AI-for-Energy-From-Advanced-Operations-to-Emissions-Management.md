@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=_oqaVtuzy9E
 title: 'AI for Energy: From Advanced Operations to Emissions Management'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 - Utility Industry
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents a session at Ignite 2025 led by Todd Inlander and Hany Soliman, showcasing how Microsoft’s AI tools, including agentic AI and Copilot, are driving innovation and sustainability in the energy sector.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/accelerate-data-transformation-with-ai-functions-in-data-wrangler/
 title: Accelerate Data Transformation with AI in Data Wrangler
 author: Microsoft Fabric Blog
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog demonstrates how AI functions in Data Wrangler allow single-click data transformation tasks, including summarization and classification, empowering users with interactive previews and natural language code generation.<!--excerpt_end-->
 

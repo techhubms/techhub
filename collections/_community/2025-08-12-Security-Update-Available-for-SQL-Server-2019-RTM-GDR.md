@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/sql-server-blog/security-update-for-sql-server-2019-rtm-gdr/ba-p/4441689
 title: Security Update Available for SQL Server 2019 RTM GDR
 author: HarveyMoraSQL
@@ -19,6 +19,7 @@ tags:
 - Vulnerability
 section_names:
 - security
+primary_section: security
 ---
 HarveyMoraSQL announces the release of a security update for SQL Server 2019 RTM GDR, detailing the vulnerabilities addressed and providing links to official guidance and downloads.<!--excerpt_end-->
 

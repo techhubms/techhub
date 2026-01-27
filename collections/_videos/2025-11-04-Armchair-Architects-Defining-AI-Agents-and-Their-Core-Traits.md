@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=S6zKiJSwgjE
 title: 'Armchair Architects: Defining AI Agents and Their Core Traits'
 author: Microsoft Developer
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer presents a roundtable with David Blank-Edelman, Uli Homann, and Eric Charran, defining the core traits of AI agents and their architectural importance for cloud solution architects.<!--excerpt_end-->
 

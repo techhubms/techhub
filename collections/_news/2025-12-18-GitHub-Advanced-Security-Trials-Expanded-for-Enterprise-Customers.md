@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-18-github-advanced-security-trials-now-available-for-more-github-enterprise-customers
 title: GitHub Advanced Security Trials Expanded for Enterprise Customers
 author: Allison
@@ -18,6 +18,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison reports on the broader availability of GitHub Advanced Security self-serve trials for Enterprise customers, highlighting new eligibility rules and features for code and secret protection.<!--excerpt_end-->
 

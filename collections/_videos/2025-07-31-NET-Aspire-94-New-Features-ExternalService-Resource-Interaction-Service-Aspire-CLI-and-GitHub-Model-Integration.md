@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=9ODsNkpyVDM
 title: '.NET Aspire 9.4 New Features: ExternalService Resource, Interaction Service, Aspire CLI, and GitHub Model Integration'
 author: dotnet
@@ -19,6 +19,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 In this video, Fritz from the .NET team discusses the new features in .NET Aspire 9.4, providing demos of the ExternalService Resource, Interaction Service, Aspire CLI, and GitHub Model integration.<!--excerpt_end-->
 

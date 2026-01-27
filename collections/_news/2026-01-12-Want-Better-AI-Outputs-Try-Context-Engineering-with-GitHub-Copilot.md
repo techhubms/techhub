@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/generative-ai/want-better-ai-outputs-try-context-engineering/
 title: Want Better AI Outputs? Try Context Engineering with GitHub Copilot
 author: Christina Warren
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Christina Warren shows how developers can enhance GitHub Copilot's accuracy and consistency by leveraging context engineering techniques, such as custom instructions, reusable prompts, and specialized AI agents.<!--excerpt_end-->
 

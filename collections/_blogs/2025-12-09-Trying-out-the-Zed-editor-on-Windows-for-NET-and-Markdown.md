@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/trying-out-the-zed-editor-on-windows-for-dotnet-and-markdown/
 title: Trying out the Zed editor on Windows for .NET and Markdown
 author: Andrew Lock
@@ -22,6 +22,7 @@ tags:
 - Zed Editor
 section_names:
 - coding
+primary_section: coding
 ---
 Andrew Lock explores whether the Zed editor on Windows can replace VS Code for .NET and Markdown editing, sharing his installation experience, setup tips, feature comparisons, and impressions.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/oETSqqi4CqU
 title: How GitHub Copilot Hacked a Furby
 author: GitHub
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub's VP of Developer Relations, Martin, demonstrates how he repurposed a Furby toy using GitHub Copilot, showing creative AI-assisted coding. This video blends fun hardware hacking with software integration.<!--excerpt_end-->
 

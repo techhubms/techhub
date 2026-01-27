@@ -1,4 +1,4 @@
-@using TechHub.Core.DTOs
+@using TechHub.Core.Models
 @inject NavigationManager Navigation
 
 <div class="section-card-container">
@@ -47,5 +47,5 @@
 
 @code {
     [Parameter, EditorRequired]
-    public SectionDto Section { get; set; } = null!;
+    public Section Section { get; set; } = null!;
 }

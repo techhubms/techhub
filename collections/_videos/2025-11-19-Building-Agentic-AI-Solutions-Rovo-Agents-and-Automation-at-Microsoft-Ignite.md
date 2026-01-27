@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FUJ8xSNvK1Q
 title: 'Building Agentic AI Solutions: Rovo Agents and Automation at Microsoft Ignite'
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 - Workflow Design
 section_names:
 - ai
+primary_section: ai
 ---
 Karen Sartor hosts a Microsoft Ignite session on building Rovo agents with strategies for agentic automation and collaborative workflows, demonstrating no-code team solutions.<!--excerpt_end-->
 

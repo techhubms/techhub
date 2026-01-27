@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=8R7f78cG-Gc
 title: 'The New Industrial Frontier: AI Collaboration and Copilot Agents in Manufacturing (BRK377)'
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Presented by Microsoft Events, this Ignite 2025 breakout session highlights how leaders blend AI capabilities, Azure IoT, and Copilot agents to enhance productivity and adaptability in manufacturing and industrial sectors.<!--excerpt_end-->
 

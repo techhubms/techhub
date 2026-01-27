@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/web-development/connect-net-4-6-2-to-dataverse-using-the-dataverse-plugin/m-p/4476310#M682
 title: How to Connect .NET Applications to Dataverse Using Microsoft.PowerPlatform.Dataverse.Client
 author: AjayM
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 AjayM asks how to connect a .NET application to Microsoft Dataverse using Microsoft.PowerPlatform.Dataverse.Client, focusing on App Registration, credentials, and necessary configuration in Entra ID and Power Platform.<!--excerpt_end-->
 

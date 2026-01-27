@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/protecting-azure-infrastructure-from-silicon-to-systems/
 title: 'Protecting Azure Infrastructure: Defense-in-Depth from Silicon to Systems'
 author: Mark Russinovich, Omar Khan and Bryan Kelly
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Authored by Mark Russinovich, Omar Khan, and Bryan Kelly, this article examines Microsoft’s holistic approach to securing Azure, covering innovations like Azure Boost, confidential computing, and root-of-trust hardware for end-to-end infrastructure protection.<!--excerpt_end-->
 

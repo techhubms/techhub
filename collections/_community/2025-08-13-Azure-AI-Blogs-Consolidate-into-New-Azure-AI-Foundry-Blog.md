@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/exciting-news-azure-ai-blogs-have-come-together-in-the-new-azure/ba-p/4443002
 title: Azure AI Blogs Consolidate into New Azure AI Foundry Blog
 author: GalimahB
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 GalimahB shares important news for the Azure AI community: multiple technical blogs have merged to form the Azure AI Foundry Blog, streamlining access to Azure AI news and resources.<!--excerpt_end-->
 

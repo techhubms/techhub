@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/capacity-usage-enabled-date-for-test-capability-in-user-data-functions/
 title: Capacity Usage Now Enabled for Test Capability in Fabric User Data Functions
 author: Microsoft Fabric Blog
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog announces that, effective October 27th, testing User Data Functions in Develop mode will count towards Fabric capacity. The post by the Microsoft Fabric Blog team covers session mechanics, usage metrics, and general availability changes.<!--excerpt_end-->
 

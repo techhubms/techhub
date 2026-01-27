@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-events/build-your-microsoft-ignite-schedule-top-sessions-for-solution/ba-p/4468770
 title: 'Build Your Microsoft Ignite Schedule: Top Sessions for Solution Architects'
 author: GalimahB
@@ -24,6 +24,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 GalimahB provides a session-planning guide for solution architects attending Microsoft Ignite 2025, featuring Azure, AI, security, and data-driven topics to maximize your learning and networking.<!--excerpt_end-->
 

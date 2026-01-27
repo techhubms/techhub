@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-lightweight-ai-apps-on-azure-app-service-with-gpt-oss-20b/ba-p/4442885
 title: Deploying Lightweight AI Apps on Azure App Service Using GPT-OSS-20B and Flask
 author: TulikaC
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 TulikaC outlines how to combine GPT-OSS-20B and a Flask web app as containers within Azure App Service, giving developers a robust pattern for running open-weight language models with cloud scalability and minimal infrastructure overhead.<!--excerpt_end-->
 

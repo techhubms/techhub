@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devopsjournal.io/blog/2023/05/23/GitHub-Advanced-Security-Azure-DevOps
 title: GitHub Advanced Security for Azure DevOps
 author: Rob Bos
@@ -19,6 +19,7 @@ section_names:
 - devops
 - security
 - azure
+primary_section: azure
 ---
 In this article, Rob Bos explores the public preview of GitHub Advanced Security (GHAS) features recently introduced to Azure DevOps, as announced at Microsoft Build 2023, and shares firsthand experiences and key distinctions compared to GitHub's native implementation.
 <!--excerpt_end-->

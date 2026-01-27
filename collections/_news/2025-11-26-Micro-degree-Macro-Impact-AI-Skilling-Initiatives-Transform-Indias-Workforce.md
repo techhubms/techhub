@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/features/micro-degree-macro-impact-how-ai-is-transforming-skilling-in-india/
 title: 'Micro-degree, Macro Impact: AI Skilling Initiatives Transform India’s Workforce'
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 - Work Trend Index
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke presents a thorough look at India’s transformation through Microsoft-led AI skilling. The report follows young entrepreneurs, trainers, and students leveraging AI micro-degrees, workforce initiatives, and real-world Microsoft collaborations.<!--excerpt_end-->
 

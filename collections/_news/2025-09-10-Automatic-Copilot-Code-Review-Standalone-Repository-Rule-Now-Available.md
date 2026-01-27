@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-10-copilot-code-review-independent-repository-rule-for-automatic-reviews
 title: 'Automatic Copilot Code Review: Standalone Repository Rule Now Available'
 author: Allison
@@ -20,6 +20,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison reports on GitHub Copilot's new standalone repository rule for automatic code reviews, providing teams with granular control over review triggers and workflow integration.<!--excerpt_end-->
 

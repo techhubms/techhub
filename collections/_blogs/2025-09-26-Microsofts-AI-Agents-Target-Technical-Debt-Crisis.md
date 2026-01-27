@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/microsofts-ai-agents-target-technical-debt-crisis/
 title: Microsoft’s AI Agents Target Technical Debt Crisis
 author: Tom Smith
@@ -35,6 +35,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Tom Smith analyzes Microsoft's strategy for tackling technical debt using GitHub Copilot AI agents, Azure Migrate, and Azure Accelerate, offering practical insights for enterprise development teams.<!--excerpt_end-->
 

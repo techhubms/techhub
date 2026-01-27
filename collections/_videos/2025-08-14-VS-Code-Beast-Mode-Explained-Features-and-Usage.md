@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=0Muxg3xhRLo
 title: 'VS Code Beast Mode Explained: Features and Usage'
 author: Visual Studio Code
@@ -25,6 +25,7 @@ tags:
 - VS Code Features
 section_names:
 - coding
+primary_section: coding
 ---
 Burke Holland and James Montemagno walk through the new Beast mode in Visual Studio Code, offering practical insights for developers seeking enhanced workflows.<!--excerpt_end-->
 

@@ -3,7 +3,7 @@ using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
-using TechHub.Core.DTOs;
+using TechHub.Core.Models;
 using TechHub.Web.Components;
 using TechHub.Web.Services;
 
@@ -34,7 +34,7 @@ public class ContentItemsGridTests : BunitContext
         _sectionCache = new SectionCache();
         _sectionCache.Initialize(
         [
-            new SectionDto
+            new Section
             {
                 Name = "github-copilot",
                 Title = "GitHub Copilot",
@@ -42,12 +42,12 @@ public class ContentItemsGridTests : BunitContext
                 Url = "/github-copilot",
                 Collections =
                 [
-                    new CollectionReferenceDto { Name = "news", Title = "News", Url = "/github-copilot/news", Description = "News", DisplayName = "News" },
-                    new CollectionReferenceDto { Name = "community", Title = "Community", Url = "/github-copilot/community", Description = "Community", DisplayName = "Community Posts" },
-                    new CollectionReferenceDto { Name = "videos", Title = "Videos", Url = "/github-copilot/videos", Description = "Videos", DisplayName = "Videos" }
+                    new Collection { Name = "news", Title = "News", Url = "/github-copilot/news", Description = "News", DisplayName = "News" },
+                    new Collection { Name = "community", Title = "Community", Url = "/github-copilot/community", Description = "Community", DisplayName = "Community Posts" },
+                    new Collection { Name = "videos", Title = "Videos", Url = "/github-copilot/videos", Description = "Videos", DisplayName = "Videos" }
                 ]
             },
-            new SectionDto
+            new Section
             {
                 Name = "all",
                 Title = "All",
@@ -55,7 +55,7 @@ public class ContentItemsGridTests : BunitContext
                 Url = "/all",
                 Collections =
                 [
-                    new CollectionReferenceDto { Name = "news", Title = "News", Url = "/all/news", Description = "All news", DisplayName = "News" }
+                    new Collection { Name = "news", Title = "News", Url = "/all/news", Description = "All news", DisplayName = "News" }
                 ]
             }
         ]);

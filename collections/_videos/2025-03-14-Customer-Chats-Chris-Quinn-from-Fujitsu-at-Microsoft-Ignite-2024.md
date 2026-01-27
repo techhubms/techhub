@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=sCg7oSTiW1M
 title: 'Customer Chats: Chris Quinn from Fujitsu at Microsoft Ignite 2024'
 author: Microsoft Events
@@ -23,6 +23,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Pierre Roman interviews Chris Quinn from Fujitsu at Microsoft Ignite 2024. The conversation highlights AI advancements, Linux on Azure, cloud migration, security, automation, and DevOps. Chris shares actionable advice for technology leaders and insights from Fujitsu's Azure-centric cloud journey.<!--excerpt_end-->
 

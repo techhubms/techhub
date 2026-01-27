@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/github-copilot-testing-for-dotnet/
 title: Supercharge Your Test Coverage with GitHub Copilot Testing for .NET
 author: McKenna Barlow
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 McKenna Barlow explains how GitHub Copilot testing for .NET streamlines test creation, automating unit test generation in Visual Studio with AI to boost code reliability and developer productivity.<!--excerpt_end-->
 

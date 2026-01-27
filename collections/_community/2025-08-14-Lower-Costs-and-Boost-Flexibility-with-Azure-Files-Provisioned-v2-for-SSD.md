@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/lower-costs-and-boost-flexibility-with-azure-files-provisioned/ba-p/4443621
 title: Lower Costs and Boost Flexibility with Azure Files Provisioned v2 for SSD
 author: wmgries
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 wmgries details how Azure Files provisioned v2 for SSD enables IT professionals and developers to optimize storage performance and cost, with practical examples and actionable guidance.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/secret-store-pattern-in-azure-using-secure-vaults-for-credentials-and-secrets/
 title: Secret Store Pattern in Azure Using Secure Vaults for Credentials and Secrets
 author: Dellenny
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: coding
 ---
 Dellenny details how to implement the Secret Store Pattern in Azure, guiding developers to use Azure Key Vault for managing credentials and secrets securely in cloud-native applications.<!--excerpt_end-->
 

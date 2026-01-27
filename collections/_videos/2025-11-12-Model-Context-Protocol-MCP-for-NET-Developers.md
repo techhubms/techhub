@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=3swFQjBZDUA
 title: Model Context Protocol (MCP) for .NET Developers
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 In this session, dotnet introduces the emerging Model Context Protocol (MCP) standard to .NET developers, demonstrating how to integrate MCP into your applications for enhanced AI-driven experiences.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-26-product-specific-billing-apis-are-closing-down
 title: GitHub Retires Product-Specific Billing APIs for Actions, Packages, and Storage
 author: Allison
@@ -20,6 +20,7 @@ tags:
 - Workflow Automation
 section_names:
 - devops
+primary_section: devops
 ---
 Allison announces the shutdown of GitHub's product-specific billing APIs affecting Actions, Packages, and shared storage, and introduces a consolidated usage endpoint for all users.<!--excerpt_end-->
 

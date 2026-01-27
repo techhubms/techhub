@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m42lmi/vs_code_extension_preview_mermaid_diagrams_in/
 title: 'VS Code Extension: Preview Mermaid Diagrams in Markdown for Azure DevOps'
 author: mavsankar
@@ -20,6 +20,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 mavsankar presents a new VS Code extension to preview Mermaid diagrams in Markdown files for Azure DevOps documentation. Discover how this tool streamlines documentation and diagram workflows.<!--excerpt_end-->
 

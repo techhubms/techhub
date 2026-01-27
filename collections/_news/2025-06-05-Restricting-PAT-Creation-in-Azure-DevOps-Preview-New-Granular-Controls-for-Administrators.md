@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/restricting-pat-creation-in-azure-devops-is-now-in-preview/
 title: 'Restricting PAT Creation in Azure DevOps Preview: New Granular Controls for Administrators'
 author: Angel Wong
@@ -21,6 +21,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Written by Angel Wong, this article explores the new preview policy in Azure DevOps to restrict personal access token creation. It details how organizations can reduce PAT usage and strengthen their security measures.<!--excerpt_end-->
 

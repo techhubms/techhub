@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/join-us-for-a-technical-deep-dive-and-q-a-on-foundry-local-llms/ba-p/4455060
 title: 'Technical AMA: Foundry Local and On-Device LLMs with Azure AI Foundry'
 author: Lee_Stott
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Lee_Stott invites the community and AI developers to a hands-on AMA about Foundry Local—Microsoft’s edge AI toolkit for running and customizing LLMs on local hardware, with seamless integration to Azure AI Foundry.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/manage-containers-the-easy-way-copilot-vs-code
 title: Effortless Container Management with GitHub Copilot and VS Code
 author: Matt Hernandez
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Matt Hernandez details how integrating GitHub Copilot into the VS Code Container Tools extension enables developers to manage containers easily with conversational commands, keeping focus on coding.<!--excerpt_end-->
 

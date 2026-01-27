@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/company-news/github-availability-report-november-2025/
 title: 'GitHub Availability Report: November 2025'
 author: Jakub Oleksy
@@ -23,6 +23,7 @@ tags:
 - TLS Certificate
 section_names:
 - devops
+primary_section: devops
 ---
 Jakub Oleksy summarizes November 2025's incidents affecting GitHub's key services, detailing the root causes, mitigations, and ongoing reliability improvements crucial for developers and DevOps professionals.<!--excerpt_end-->
 

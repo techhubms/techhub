@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/openapi/kiota-dart-support/
 title: Announcing Public Preview of Kiota Dart Support
 author: Maisa Rissi
@@ -21,6 +21,7 @@ tags:
 - VS Code Extension
 section_names:
 - coding
+primary_section: coding
 ---
 Maisa Rissi introduces the public preview of Dart support in Kiota, detailing how developers can generate Dart API clients from OpenAPI specs and highlighting community-driven development.<!--excerpt_end-->
 

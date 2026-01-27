@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/top-10-things-you-can-do-with-github-copilot-as-a-new-developer/
 title: Top 10 Ways New Developers Can Benefit from GitHub Copilot
 author: Dellenny
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny shares a practical top-10 guide for new developers, outlining how GitHub Copilot can accelerate coding, improve learning, and boost confidence through AI-powered assistance.<!--excerpt_end-->
 

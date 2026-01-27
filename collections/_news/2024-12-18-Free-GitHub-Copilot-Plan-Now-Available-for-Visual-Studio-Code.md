@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2024/12/18/free-github-copilot
 title: Free GitHub Copilot Plan Now Available for Visual Studio Code
 author: Burke Holland
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Burke Holland shares the launch of a free GitHub Copilot plan for VS Code users, unlocking AI-powered code completions, chat, and more to help developers enhance their productivity and coding experience.<!--excerpt_end-->
 

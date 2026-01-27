@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/two-years-on-how-fabric-redefines-the-modernization-path-for-synapse-users/
 title: 'Modernizing Azure Synapse Analytics with Microsoft Fabric: Migration and Integration Pathways'
 author: Microsoft Fabric Blog
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog explains how Synapse users can seamlessly migrate to Microsoft Fabric, highlighting real-world examples and detailing the AI-powered features and cost savings enabled by Fabric’s unified analytics architecture.<!--excerpt_end-->
 

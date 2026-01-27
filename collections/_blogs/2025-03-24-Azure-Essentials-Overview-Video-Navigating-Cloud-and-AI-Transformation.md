@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/03/azure-essentials-overview-video/
 title: 'Azure Essentials Overview Video: Navigating Cloud & AI Transformation'
 author: Thomas Maurer
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this Azure Essentials Show episode, Thomas Maurer interviews Kailyn and Ben from Azure Marketing about Azure Essentials, Microsoft's solution to streamline cloud and AI journeys. Explore organizational strategies, challenges in AI projects, and how Azure Essentials supports real-world transformation.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=bhN_v449nVM
 title: Migration Lessons from Microsoft Federal's RISE with SAP Deployment
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Presented by Barbara McElnea, Veronika Reger, and Greg Simons, this Microsoft Ignite session details how Microsoft Federal modernized SAP ERP with RISE on Azure, focusing on robust infrastructure, AI-driven monitoring, and enhanced security and compliance in regulated government settings.<!--excerpt_end-->
 

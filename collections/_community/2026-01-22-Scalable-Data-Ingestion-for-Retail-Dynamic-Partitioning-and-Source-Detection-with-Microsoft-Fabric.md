@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 NaufalPrawironegoro demonstrates an advanced architecture for multi-store retail data ingestion using Microsoft Fabric, Delta Lake, and Azure Event Hubs. The guide explains operational workflows, automation patterns, and best practices for seamless store onboarding.<!--excerpt_end-->
 

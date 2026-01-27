@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/how-to-build-ios-widgets-with-dotnet-maui/
 title: 'Building iOS Widgets with .NET MAUI: From Setup to Interactive Features'
 author: Toine de Boer
@@ -32,6 +32,7 @@ tags:
 - XReleases
 section_names:
 - coding
+primary_section: coding
 ---
 Toine de Boer’s detailed post guides developers through the process of creating iOS widgets with .NET MAUI, from project setup to adding interactive features, focusing on core technical steps for seamless integration.<!--excerpt_end-->
 

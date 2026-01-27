@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=KqLYINP9UpQ
 title: 'Anatomy of an Outage: Evolving Transparency in Microsoft Engineering Teams'
 author: Microsoft Events
@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Microsoft Events presents an Ignite 2025 session—led by Tajinder pal singh Ahluwalia and Rick Claus—on evolving incident communication for outages, emphasizing open engineering, transparency, and actionable learning for teams.<!--excerpt_end-->
 

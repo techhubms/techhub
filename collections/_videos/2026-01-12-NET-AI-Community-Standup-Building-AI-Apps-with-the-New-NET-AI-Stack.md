@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=MH-_J8gLZn4
 title: '.NET AI Community Standup: Building AI Apps with the New .NET AI Stack'
 author: dotnet
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Bruno Capuano and Jeremy Likness host an unscripted .NET AI Community Standup, offering real-world advice and discussion on building AI applications using the new .NET AI stack.<!--excerpt_end-->
 

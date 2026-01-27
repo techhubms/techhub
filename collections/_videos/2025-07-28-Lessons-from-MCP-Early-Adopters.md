@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=jds7dSmNptE
 title: Lessons from MCP Early Adopters
 author: Microsoft Developer
@@ -20,6 +20,7 @@ tags:
 - Python
 section_names:
 - ai
+primary_section: ai
 ---
 Presented by Microsoft Developer, this episode examines lessons from early MCP adopters, offering practical case studies and hands-on projects highlighting how the Model Context Protocol is being implemented across multiple industries.<!--excerpt_end-->
 

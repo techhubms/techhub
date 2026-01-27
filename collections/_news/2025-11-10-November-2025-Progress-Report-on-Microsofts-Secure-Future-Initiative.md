@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/11/10/securing-our-future-november-2025-progress-report-on-microsofts-secure-future-initiative/
 title: November 2025 Progress Report on Microsoft’s Secure Future Initiative
 author: stclarke
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 stclarke shares Microsoft’s November 2025 Secure Future Initiative progress report, focusing on advancements in platform security, AI-driven threat detection, global policy efforts, and practical security guidance for organizations.<!--excerpt_end-->
 

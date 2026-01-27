@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/unlocking-the-power-of-sharepoint-embedded-a-modern-approach-to-content-management/
 title: 'Unlocking the Power of SharePoint Embedded: A Developer-Focused Approach to Content Management'
 author: Dellenny
@@ -20,6 +20,7 @@ tags:
 - SharePoint Online
 section_names:
 - coding
+primary_section: coding
 ---
 Dellenny explains SharePoint Embedded, focusing on its API-first architecture that enables developers to integrate enterprise-grade content management into custom apps with secure, compliant storage and flexible billing, using Microsoft 365 and Azure.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-24-copilot-spaces-is-now-generally-available
 title: 'Copilot Spaces: General Availability Announcement'
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison covers the launch of Copilot Spaces, enabling teams to make GitHub Copilot a project expert by providing deep contextual knowledge, fostering collaboration, and improving developer onboarding.<!--excerpt_end-->
 

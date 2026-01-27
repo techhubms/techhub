@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/dalec-declarative-package-and-container-builds/ba-p/4465290
 title: 'Dalec: Declarative Linux Package and Container Builds with Azure Linux and Docker BuildKit'
 author: SertacOzercan
@@ -23,6 +23,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 SertacOzercan presents Dalec, a declarative BuildKit frontend for building system packages and containers across distributions like Azure Linux. The guide highlights key benefits for developers, operators, and security-conscious teams.<!--excerpt_end-->
 

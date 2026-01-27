@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke highlights Microsoft's introduction of the Maia 200 AI accelerator, designed for advanced inference workloads in Azure and supported by related resources on hardware innovation and system architecture.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk8f03/gpt5_only_matches_opus_41/
 title: Comparing GPT-5 and Opus 4.1 Model Capabilities and Economics in GitHub Copilot
 author: fishchar
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 fishchar explores how GPT-5 fares against Opus 4.1 and Sonnet 4 in GitHub Copilot, analyzing technical evaluation details, token economics, and the significance of future Copilot model changes.<!--excerpt_end-->
 

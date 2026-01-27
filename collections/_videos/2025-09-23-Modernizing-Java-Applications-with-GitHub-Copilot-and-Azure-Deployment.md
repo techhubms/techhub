@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=r3iTEqujO1s
 title: Modernizing Java Applications with GitHub Copilot and Azure Deployment
 author: Microsoft Developer
@@ -31,6 +31,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer guides viewers through using GitHub Copilot to streamline Java app modernization, including code upgrades, database migration to Azure, and automated deployment—all with enterprise security and compliance in mind.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-23-incremental-security-analysis-with-codeql-is-now-available-for-all-languages
 title: Incremental Security Analysis with CodeQL Now Available Across All Languages
 author: Allison
@@ -22,6 +22,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 Allison explains GitHub's new incremental analysis for CodeQL, enabling faster and more efficient security scans across all supported languages, including C#, in pull requests.<!--excerpt_end-->
 

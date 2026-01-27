@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/azure-intel-tdx-confidential-vms-momentum/ba-p/4470736
 title: Momentum for Azure Confidential VMs with Intel® TDX
 author: simranparkhe
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Simran Parkhe shares insights on Azure's next-gen Confidential VMs with Intel® TDX, detailing technical advancements, security boundaries, performance updates, and customer adoption stories.<!--excerpt_end-->
 

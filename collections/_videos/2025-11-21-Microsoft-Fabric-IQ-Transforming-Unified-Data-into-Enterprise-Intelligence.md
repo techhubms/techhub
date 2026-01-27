@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=yy7M_O_z_wQ
 title: 'Microsoft Fabric IQ: Transforming Unified Data into Enterprise Intelligence'
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events presents an in-depth session on Fabric IQ at Ignite 2025, detailing how Fabric IQ integrates unified data, ontology, and AI for intelligent enterprise operations.<!--excerpt_end-->
 

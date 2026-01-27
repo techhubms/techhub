@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=a9glyQs6cbE
 title: 'AI & GitHub Copilot: Modernizing Legacy Apps for the Cloud'
 author: GitHub
@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Ayan Gupta from GitHub leads a practical session on leveraging GitHub Copilot and AI-powered agents to modernize and migrate legacy applications, targeting .NET and Java deployments on Azure.<!--excerpt_end-->
 

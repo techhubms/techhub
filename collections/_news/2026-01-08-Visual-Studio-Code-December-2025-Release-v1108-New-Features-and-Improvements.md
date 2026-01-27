@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_108
 title: 'Visual Studio Code December 2025 Release (v1.108): New Features and Improvements'
 author: Visual Studio Code Team
@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 The Visual Studio Code Team presents the December 2025 (v1.108) update, detailing new agent skill features, Copilot advancements, improved chat and terminal tools, and updates for developers and extension authors.<!--excerpt_end-->
 

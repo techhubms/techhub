@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/devops-platforms-show-cracks-github-incidents-surge-58-azure-gitlab-and-jira-also-under-pressure/?utm_source=rss&utm_medium=rss&utm_campaign=devops-platforms-show-cracks-github-incidents-surge-58-azure-gitlab-and-jira-also-under-pressure
 title: 'Surge in DevOps Platform Incidents: 2025 Mid-Year Analysis of GitHub, Azure DevOps, and Jira Disruptions'
 author: Alan Shimel
@@ -40,6 +40,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Alan Shimel analyzes the 2025 surge in disruptions and security incidents across DevOps platforms such as GitHub and Azure DevOps, summarizing impacts on resilience, uptime, and developer productivity.<!--excerpt_end-->
 

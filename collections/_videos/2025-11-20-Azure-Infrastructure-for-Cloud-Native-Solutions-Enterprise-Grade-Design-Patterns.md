@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=kCYxdboNZbA
 title: 'Azure Infrastructure for Cloud Native Solutions: Enterprise-Grade Design Patterns'
 author: Microsoft Events
@@ -29,6 +29,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 Microsoft Events hosts a deep-dive Ignite breakout, featuring Aaron Davidson, Mario Espinoza, and Igal Figlin. Learn advanced Azure infrastructure patterns for cloud-native architectures, including scaling, security, networking, and Kubernetes deployments.<!--excerpt_end-->
 

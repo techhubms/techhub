@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-eventhouse-endpoint-for-fabric-data-warehouse-real-time-analytics-unified-architecture/
 title: Eventhouse Endpoint Arrives for Microsoft Fabric Data Warehouse
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 - Unified Architecture
 section_names:
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog announces the new Eventhouse Endpoint for Fabric Data Warehouse, allowing real-time analytics and unified querying over diverse data types with robust performance.<!--excerpt_end-->
 

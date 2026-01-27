@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-dev-days-2025-your-gateway-to-the-future-of-ai-development/ba-p/4476113
 title: 'AI Dev Days 2025: Your Gateway to the Future of AI Development'
 author: Lee_Stott
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Lee_Stott introduces AI Dev Days 2025, a major virtual event for AI and Microsoft platform developers, featuring sessions on Azure, GitHub Copilot, DevOps, and hands-on labs.<!--excerpt_end-->
 

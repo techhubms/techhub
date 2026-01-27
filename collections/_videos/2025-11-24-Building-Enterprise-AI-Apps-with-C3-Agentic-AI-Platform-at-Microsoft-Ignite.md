@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=WbFivYJ7_Fo
 title: Building Enterprise AI Apps with C3 Agentic AI Platform at Microsoft Ignite
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events hosts Nikhil Krishnan and Joel Morgenstern for an Ignite session, showcasing the C3 AI Studio platform for rapid enterprise AI app development and deployment.<!--excerpt_end-->
 

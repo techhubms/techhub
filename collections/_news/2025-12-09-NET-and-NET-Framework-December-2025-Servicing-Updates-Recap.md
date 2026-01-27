@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-december-2025-servicing-updates/
 title: .NET and .NET Framework December 2025 Servicing Updates Recap
 author: .NET Team, Tara Overfield
@@ -24,6 +24,7 @@ tags:
 - WinForms
 section_names:
 - coding
+primary_section: coding
 ---
 The .NET Team and Tara Overfield present an overview of the December 2025 .NET and .NET Framework servicing releases, emphasizing non-security fixes for .NET 10.0 and resource links for developers.<!--excerpt_end-->
 

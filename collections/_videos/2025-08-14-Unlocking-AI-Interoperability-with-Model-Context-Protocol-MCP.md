@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xqsaRaMOpXI
 title: Unlocking AI Interoperability with Model Context Protocol (MCP)
 author: Microsoft Developer
@@ -24,6 +24,7 @@ tags:
 - VS
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Developer delivers an in-depth session on Model Context Protocol (MCP), demonstrating how this open standard enables seamless interoperability between AI models and external systems, with guidance on security, server development, and real-world MCP adoption.<!--excerpt_end-->
 

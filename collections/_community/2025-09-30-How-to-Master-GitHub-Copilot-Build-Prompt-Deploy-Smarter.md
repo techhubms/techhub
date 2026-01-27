@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-master-github-copilot-build-prompt-deploy-smarter/ba-p/4456660
 title: 'How to Master GitHub Copilot: Build, Prompt, Deploy Smarter'
 author: AprilYoho
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 AprilYoho presents a hands-on workshop and guide to mastering GitHub Copilot, highlighting effective techniques for prompting, language integration, real-world development, and deploying applications (including Azure) with AI-powered assistance.<!--excerpt_end-->
 

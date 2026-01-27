@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=HjCaHgXezys
 title: Connecting and Managing Data Anywhere with Microsoft OneLake
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Events presents a deep dive into Microsoft OneLake at Ignite 2025, featuring speakers Dipti Borkar, Joshua Caplan, Paul Purvis, Adi Regev, and Clay Yeaman as they explore secure, unified data management and sharing across Microsoft Fabric and other platforms.<!--excerpt_end-->
 

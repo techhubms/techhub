@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-private-preview-mirroring-for-google-bigquery-in-microsoft-fabric/
 title: Mirroring for Google BigQuery in Microsoft Fabric (Private Preview)
 author: Microsoft Fabric Blog
@@ -21,6 +21,7 @@ tags:
 - Zero ETL
 section_names:
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details the Private Preview launch of Mirroring for Google BigQuery, highlighting near real-time, zero-ETL data replication and unified analytics solutions.<!--excerpt_end-->
 

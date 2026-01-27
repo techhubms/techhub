@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/events/data-intelligence-at-your-fingertips-fabric-s-ai-functions-data/ec-p/4443431#M10
 title: 'Data Intelligence at Your Fingertips: Fabric’s AI Functions & Data Agents'
 author: Pouya
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - ml
+primary_section: ai
 ---
 Pouya highlights Ronak Vachhani’s session on leveraging Microsoft Fabric’s AI Functions and Data Agents for no-code analytics, showing how powerful AI-driven insights can enhance decision-making for users of any skill level.<!--excerpt_end-->
 

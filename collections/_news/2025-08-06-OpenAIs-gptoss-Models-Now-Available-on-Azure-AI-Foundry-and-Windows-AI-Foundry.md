@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/openais-open%E2%80%91source-model-gpt%E2%80%91oss-on-azure-ai-foundry-and-windows-ai-foundry/
 title: OpenAI’s gpt‑oss Models Now Available on Azure AI Foundry and Windows AI Foundry
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this in-depth news post, author stclarke explores how Microsoft brings OpenAI's open-weight gpt‑oss models to Azure AI Foundry and Windows AI Foundry, vastly expanding possibilities for developers and enterprises.<!--excerpt_end-->
 

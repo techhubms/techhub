@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=yKhaYLYK4Sg
 title: 'Designing Seamless AI Agents with C#: One Question, One Answer Approach'
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Mark Miller delivers practical insights on building effective AI agents with C#, showing developers how a single-question, single-answer model can improve user experience and productivity.<!--excerpt_end-->
 

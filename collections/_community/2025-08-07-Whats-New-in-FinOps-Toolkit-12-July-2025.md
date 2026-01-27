@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/finops-blog/what-s-new-in-finops-toolkit-12-july-2025/ba-p/4438562
 title: What’s New in FinOps Toolkit 12 – July 2025
 author: Michael_Flanakin
@@ -30,6 +30,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Michael Flanakin explores the major updates in FinOps Toolkit 12 for Azure, focusing on cost management, new data schemas, Power BI reporting, network and security improvements, and automation tools to streamline financial operations in the cloud.<!--excerpt_end-->
 

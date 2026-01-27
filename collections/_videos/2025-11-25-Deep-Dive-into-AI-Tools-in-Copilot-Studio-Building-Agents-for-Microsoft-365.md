@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=BLQ8XZ5PXF4
 title: 'Deep Dive into AI Tools in Copilot Studio: Building Agents for Microsoft 365'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 In this Microsoft Ignite 2025 session, Derah Onuorah and Wassim Wehbi share practical insights on building advanced AI agents using Copilot Studio. The video guides intermediate users through agent types, integration with Model Context Protocol, and demos of human-in-the-loop workflows.<!--excerpt_end-->
 

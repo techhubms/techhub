@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/creating-a-dotnet-profiler-using-csharp-with-silhouette/
 title: Creating a .NET CLR profiler with C# NativeAOT and Silhouette
 author: Andrew Lock
@@ -33,6 +33,7 @@ tags:
 - Win32Exception
 section_names:
 - coding
+primary_section: coding
 ---
 Andrew Lock demonstrates how to create a simple .NET CLR profiler using C# and NativeAOT with the Silhouette library, showing how to hook into assembly load events for custom profiling.<!--excerpt_end-->
 

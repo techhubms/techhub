@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=5-HRDXO3iC0
 title: Mastering Chat Modes in VS Code with Burke Holland
 author: Visual Studio Code
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code hosts Burke Holland to explore chat agent modes and Copilot customization in VS Code, highlighting the development of 'Beast Mode' for GPT-4.1 and advanced agent-based workflows for coders.<!--excerpt_end-->
 

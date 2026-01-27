@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/rewriting-the-rules-of-software-quality-why-agentic-qa-is-the-future-cios-must-champion/
 title: 'Rewriting the Rules of Software Quality: Why Agentic QA is the Future CIOs Must Champion'
 author: Chirag Gandhi
@@ -42,6 +42,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Chirag Gandhi discusses how agentic, AI-powered QA systems are transforming enterprise software quality assurance by embedding intelligent agents throughout the development lifecycle to deliver more adaptive and resilient testing.<!--excerpt_end-->
 

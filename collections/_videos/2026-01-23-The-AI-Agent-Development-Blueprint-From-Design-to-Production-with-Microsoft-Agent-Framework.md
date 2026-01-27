@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this video course, Microsoft Developer breaks down the end-to-end process of building, evaluating, and deploying AI Agents using the Microsoft Agent Framework and Foundry.<!--excerpt_end-->
 

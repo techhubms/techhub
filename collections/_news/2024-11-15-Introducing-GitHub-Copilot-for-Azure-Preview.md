@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2024/11/15/introducing-github-copilot-for-azure
 title: Introducing GitHub Copilot for Azure (Preview)
 author: Chris Harris
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Chris Harris presents the preview of GitHub Copilot for Azure, guiding developers on integrating Azure resource management and troubleshooting into their workflow using GitHub Copilot Chat in VS Code.<!--excerpt_end-->
 

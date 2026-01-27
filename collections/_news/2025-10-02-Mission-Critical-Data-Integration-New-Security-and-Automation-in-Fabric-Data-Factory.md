@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/mission-critical-data-integration-whats-new-in-fabric-data-factory/
 title: 'Mission-Critical Data Integration: New Security and Automation in Fabric Data Factory'
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog outlines recent mission-critical enhancements to Fabric Data Factory, focusing on security, compliance, and automation for enterprise data integration, with details curated by the Microsoft Fabric Blog team.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/verifiying-tricky-git-rebases-with-range-diffs/
 title: Verifying Tricky Git Rebases with git range-diff
 author: Andrew Lock
@@ -18,6 +18,7 @@ tags:
 section_names:
 - devops
 - coding
+primary_section: coding
 ---
 In this thorough post, Andrew Lock introduces the git range-diff feature for verifying and understanding tricky git rebases. He uses a practical .NET minimal API example to walk readers through the tool’s capabilities, output, and its potential challenges.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/follow-up-to-important-changes-to-app-service-managed/ba-p/4466120
 title: 'October 2025 Update: App Service Managed Certificates Support for Non-Publicly Accessible Sites'
 author: YutangLin
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 YutangLin summarizes the latest Azure App Service Managed Certificates (ASMC) changes as of October 2025, emphasizing new support for non-publicly accessible sites and key requirements for successful certificate issuance.<!--excerpt_end-->
 

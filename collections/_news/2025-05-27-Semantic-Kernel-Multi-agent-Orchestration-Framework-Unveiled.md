@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-multi-agent-orchestration/
 title: 'Semantic Kernel: Multi-agent Orchestration Framework Unveiled'
 author: Tao Chen, Chris Rickman
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 In this post, authors Tao Chen and Chris Rickman introduce and explain the new multi-agent orchestration framework for Semantic Kernel, highlighting orchestration patterns, developer experience, and practical use cases.<!--excerpt_end-->
 

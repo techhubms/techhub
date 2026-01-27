@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=e8mQhReST3s
 title: 'What’s New in Azure Local: Portfolio Enhancements & Edge AI Innovations'
 author: Microsoft Events
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents an in-depth session on Azure Local's newest features, with Meena Gowdar, Mohamed Khalid, and Dean Paron discussing portfolio enhancements, compliance for regulated industries, and edge AI acceleration.<!--excerpt_end-->
 

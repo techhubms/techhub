@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=0dcenkOeKi4
 title: "AI-Powered Industry Solutions at Microsoft Ignite 2025: Capgemini's Multi-Channel Knowledge Innovations"
 author: Microsoft Events
@@ -32,6 +32,7 @@ section_names:
 - ai
 - azure
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Events presents a session from Ignite 2025, featuring Capgemini’s use of Microsoft AI platforms to drive industry knowledge creation and operational efficiency through multi-channel integration and GitHub platform enhancements.<!--excerpt_end-->
 

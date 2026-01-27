@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/from-redmond-to-san-diego-vs-live-highlights-session-examples-and-whats-next/
 title: 'VS Live! Recap: Visual Studio, GitHub Copilot, and Azure AI Session Highlights'
 author: stclarke
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 stclarke reports on the highlights from VS Live! at Microsoft HQ, emphasizing sessions on Visual Studio, Azure, and GitHub Copilot, and providing on-demand resources for developers interested in AI-assisted productivity and .NET development.<!--excerpt_end-->
 

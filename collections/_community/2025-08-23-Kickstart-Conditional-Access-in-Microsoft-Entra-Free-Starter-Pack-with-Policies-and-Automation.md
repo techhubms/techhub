@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/kickstart-conditional-access-in-microsoft-entra-free-starter/m-p/4447413#M22136
 title: 'Kickstart Conditional Access in Microsoft Entra: Free Starter Pack with Policies & Automation'
 author: SoaebRathod
@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 SoaebRathod shares a practical starter pack for implementing Conditional Access in Microsoft Entra ID, complete with policy templates, PowerShell deployment scripts, and a GitHub Actions workflow for secure, automated rollout.<!--excerpt_end-->
 

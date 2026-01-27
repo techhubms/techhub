@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/survey-surfaces-raft-of-ai-coding-issues-involving-embedded-systems/?utm_source=rss&utm_medium=rss&utm_campaign=survey-surfaces-raft-of-ai-coding-issues-involving-embedded-systems
 title: AI Coding Assistants Bring Security and Licensing Challenges to Embedded Systems
 author: Mike Vizard
@@ -42,6 +42,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 Mike Vizard examines the results of a Black Duck Software survey revealing the rapid integration of AI coding tools into embedded systems development. He discusses the resulting security, license compliance, and governance challenges now facing organizations.<!--excerpt_end-->
 

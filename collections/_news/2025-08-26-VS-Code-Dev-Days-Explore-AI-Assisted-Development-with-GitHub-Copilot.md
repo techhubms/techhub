@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2025/08/27/vscode-dev-days
 title: 'VS Code Dev Days: Explore AI-Assisted Development with GitHub Copilot'
 author: Katie Savage, Cynthia Zanoni
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Katie Savage and Cynthia Zanoni highlight the upcoming VS Code Dev Days, where developers can learn about AI-assisted coding, GitHub Copilot integration, and the newest productivity features in Visual Studio Code through hands-on sessions and community events.<!--excerpt_end-->
 

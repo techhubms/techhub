@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/the-developers-guide-to-smarter-fine-tuning/
 title: The Developer’s Guide to Smarter Fine-tuning with Azure AI Foundry
 author: Malena Lopez-Sotelo, Jacques Guibert de Bruet
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Malena Lopez-Sotelo and Jacques Guibert de Bruet provide developers with a practical guide to fine-tuning large language models in Azure AI Foundry, sharing proven strategies, platform updates, and code samples for launch-ready, business-focused AI.<!--excerpt_end-->
 

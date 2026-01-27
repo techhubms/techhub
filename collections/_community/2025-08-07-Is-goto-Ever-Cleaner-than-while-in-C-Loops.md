@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mkbkrw/can_goto_be_cleaner_than_while/
 title: Is `goto` Ever Cleaner than `while` in C# Loops?
 author: Foreign-Radish1641
@@ -21,6 +21,7 @@ tags:
 - While Loop
 section_names:
 - coding
+primary_section: coding
 ---
 Foreign-Radish1641 and other community members analyze whether using `goto` in loops can be clearer than traditional `while` constructs in C#, sharing practical scenarios, examples, and advice.<!--excerpt_end-->
 

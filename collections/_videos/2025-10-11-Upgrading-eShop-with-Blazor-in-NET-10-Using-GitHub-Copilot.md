@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=VEuoNhFvegQ
 title: Upgrading eShop with Blazor in .NET 10 Using GitHub Copilot
 author: dotnet
@@ -20,6 +20,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this session featuring Daniel Roth and Javier Calvarro Nelson, dotnet demonstrates how GitHub Copilot helps upgrade the .NET eShop app with new Blazor features, emphasizing AI-assisted .NET 10 development.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mhnybo/file_share_that_the_system_user_can_access/
 title: File Share Access for SYSTEM User with PowerShell Across Multiple Devices
 author: LordLoss01
@@ -17,6 +17,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 LordLoss01 seeks advice on creating a file share that allows Windows SYSTEM user access for PowerShell-automated data transfer across thousands of devices.<!--excerpt_end-->
 

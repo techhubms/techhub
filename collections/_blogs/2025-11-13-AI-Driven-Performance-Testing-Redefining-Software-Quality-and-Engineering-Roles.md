@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/ai-driven-performance-testing-a-new-era-for-software-quality/
 title: 'AI-Driven Performance Testing: Redefining Software Quality and Engineering Roles'
 author: Akash Thakur
@@ -49,6 +49,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Akash Thakur presents an insightful look at how AI and LLMs are reshaping performance testing, moving away from traditional methods and empowering DevOps teams through predictive analytics, automation, and new engineering responsibilities.<!--excerpt_end-->
 

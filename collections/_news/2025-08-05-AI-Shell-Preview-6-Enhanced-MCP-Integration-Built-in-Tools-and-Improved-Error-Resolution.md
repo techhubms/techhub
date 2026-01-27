@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/powershell/preview-6-ai-shell/
 title: 'AI Shell Preview 6: Enhanced MCP Integration, Built-in Tools & Improved Error Resolution'
 author: Steven Bucher
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Author Steven Bucher shares the latest on AI Shell Preview 6, highlighting richer MCP integration, built-in tools for PowerShell, and improved error resolution features. Learn how these updates foster a more productive, AI-enhanced shell environment.<!--excerpt_end-->
 

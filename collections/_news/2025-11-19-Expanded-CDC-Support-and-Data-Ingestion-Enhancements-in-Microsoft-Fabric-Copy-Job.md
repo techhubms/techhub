@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-expanded-cdc-support-for-more-sources-destinations/
 title: Expanded CDC Support and Data Ingestion Enhancements in Microsoft Fabric Copy Job
 author: Microsoft Fabric Blog
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces enhancements to Data Factory's Copy job—now supporting more CDC sources including SAP, Snowflake, and BigQuery—with improved monitoring, expanded destinations like Fabric Lakehouse, and detailed job analytics for data engineers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=lHuxDMMkGJ8
 title: 'MCP Dev Days: Day 2 - Builders'
 author: Microsoft Developer
@@ -21,6 +21,7 @@ section_names:
 - azure
 - security
 - coding
+primary_section: ai
 ---
 In this video, Microsoft Developer presents Day 2 of MCP Dev Days, delving into the practical implementation of the Model Context Protocol for developers and AI product strategists.<!--excerpt_end-->
 

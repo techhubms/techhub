@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/building-secure-scalable-ai-in-the-cloud-with-microsoft-azure/
 title: Building Secure, Scalable Generative AI in the Cloud with Microsoft Azure
 author: Maria Bledsoe
@@ -30,6 +30,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 Maria Bledsoe discusses Forrester Research findings on how Microsoft Azure enables enterprises to securely and efficiently scale generative AI, highlighting the platform’s security, compliance, and data management capabilities.<!--excerpt_end-->
 

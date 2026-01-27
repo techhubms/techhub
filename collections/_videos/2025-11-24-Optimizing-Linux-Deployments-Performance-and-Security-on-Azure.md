@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=scrkmm03K88
 title: 'Optimizing Linux Deployments: Performance and Security on Azure'
 author: Microsoft Events
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Microsoft Events' Ignite session with Karl Abbott and Lachlan Evenson explores deploying, securing, and optimizing Linux workloads on Azure using native tools and partner integrations.<!--excerpt_end-->
 

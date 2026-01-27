@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/chainguard-adds-curated-repository-to-secure-javascript-libraries/
 title: Chainguard Launches Curated JavaScript Libraries to Enhance Software Supply Chain Security
 author: Mike Vizard
@@ -34,6 +34,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Mike Vizard examines how Chainguard's new curated JavaScript libraries leverage the SLSA framework to help DevSecOps teams secure software supply chains against threats like NPM malware.<!--excerpt_end-->
 

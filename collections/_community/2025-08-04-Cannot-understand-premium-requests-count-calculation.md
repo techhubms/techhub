@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mha6xk/cannot_understand_premium_requests_count/
 title: Cannot understand premium requests count calculation
 author: FeelingResolution806
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 FeelingResolution806 raises concerns about how premium requests in the GitHub Copilot subscription are counted and exhausted rapidly, questioning the underlying calculation and value.<!--excerpt_end-->
 

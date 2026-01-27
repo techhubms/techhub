@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-deployment-capabilities-preview-in-azure-copilot/ba-p/4471169
 title: 'Azure Copilot Deployment Agent Preview: Smarter Infrastructure Planning'
 author: Marvin_Morales
@@ -28,6 +28,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Marvin_Morales announces Azure Copilot's Deployment Agent preview, detailing how it accelerates infrastructure planning, AI workload deployment, and code generation using modular templates and collaborative workflows.<!--excerpt_end-->
 

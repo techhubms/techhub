@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mkk5rp/best_resources_to_learn_azure_application/
 title: Best Practices and Resources for Azure Application Insights Logging with .NET
 author: BiteDowntown3294
@@ -23,6 +23,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 BiteDowntown3294 shares actionable tips for effective Azure Application Insights logging in .NET, discussing practical configurations, resource links, and the benefits of OpenTelemetry and data sampling.<!--excerpt_end-->
 

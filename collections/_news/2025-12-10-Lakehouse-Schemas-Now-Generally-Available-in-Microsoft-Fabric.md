@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/lakehouse-schemas-generally-available/
 title: Lakehouse Schemas Now Generally Available in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog explains the launch of schema-enabled lakehouses, outlining new organizational options, Spark compatibility, security features, and ongoing plans for improvements.<!--excerpt_end-->
 

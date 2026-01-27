@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://zure.com/blog/how-reusing-wcf-sql-xml-simplified-our-biztalk-to-azure-migration
 title: How Reusing WCF-SQL XML Simplified Our BizTalk to Azure Migration
 author: tim.dhaeyer@zure.com (Tim D'haeyer)
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Tim D'haeyer shares his experience migrating BizTalk flows to Azure by reusing WCF-SQL XML, enabling a more streamlined integration with SAP and SQL Server. His approach, detailed in this article, helped accelerate migration while preserving reliability.<!--excerpt_end-->
 

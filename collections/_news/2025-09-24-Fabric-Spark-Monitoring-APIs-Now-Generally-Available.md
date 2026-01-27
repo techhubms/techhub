@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/general-availability-announcement-fabric-spark-monitoring-apis/
 title: Fabric Spark Monitoring APIs Now Generally Available
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces the Generally Available Fabric Spark Monitoring APIs, enabling granular insight, resource optimization, and advanced observability for Spark workloads on Microsoft Fabric.<!--excerpt_end-->
 

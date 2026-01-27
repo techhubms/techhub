@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/what-s-new-with-azure-netapp-files-vs-code-extension/ba-p/4485989
 title: What's New with Azure NetApp Files VS Code Extension
 author: GeertVanTeylingen
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 GeertVanTeylingen explores the new capabilities in the Azure NetApp Files VS Code Extension, focusing on AI-driven productivity boosts, multi-tenant Azure management, and streamlined storage workflows for developers.<!--excerpt_end-->
 

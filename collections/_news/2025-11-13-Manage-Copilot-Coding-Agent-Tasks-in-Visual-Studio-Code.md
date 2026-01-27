@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-13-manage-copilot-coding-agent-tasks-in-visual-studio-code
 title: Manage Copilot Coding Agent Tasks in Visual Studio Code
 author: Allison
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces new capabilities for managing GitHub Copilot coding agent tasks directly within Visual Studio Code, detailing how developers can centralize their coding workflows and seamlessly interact with Copilot's mission control features.<!--excerpt_end-->
 

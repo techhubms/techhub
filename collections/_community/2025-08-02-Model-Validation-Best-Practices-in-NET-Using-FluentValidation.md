@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mg49nf/model_validation_best_practices/
 title: Model Validation Best Practices in .NET Using FluentValidation
 author: ErfanBaghdadi
@@ -18,6 +18,7 @@ tags:
 - Validation Best Practices
 section_names:
 - coding
+primary_section: coding
 ---
 In this community post, ErfanBaghdadi seeks advice on best practices for implementing model validation in .NET with FluentValidation, focusing on maintainability and clean code.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/devops/comments/1mh3s57/our_infra_was_fine_the_ai_pipeline_wasnt_3_silent/
 title: Our Infra Was Fine. The AI Pipeline Wasn’t — 3 Silent Crashes We Kept Missing
 author: wfgy_engine
@@ -20,6 +20,7 @@ section_names:
 - devops
 - ai
 - security
+primary_section: ai
 ---
 wfgy_engine highlights persistent DevOps challenges in AI pipelines, describing how classic infrastructure issues led to subtle, production-breaking failures and how their team created a problem map and lightweight controls to address them.<!--excerpt_end-->
 

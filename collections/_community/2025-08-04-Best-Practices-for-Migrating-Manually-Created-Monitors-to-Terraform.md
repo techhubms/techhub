@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/devops/comments/1mhho6n/best_practices_for_migrating_manually_created/
 title: Best Practices for Migrating Manually Created Monitors to Terraform
 author: JayDee2306
@@ -17,6 +17,7 @@ tags:
 - Version Control
 section_names:
 - devops
+primary_section: devops
 ---
 Authored by JayDee2306, this article explores community-driven strategies for migrating Datadog monitors into Terraform, highlighting best practices and lessons learned.<!--excerpt_end-->
 

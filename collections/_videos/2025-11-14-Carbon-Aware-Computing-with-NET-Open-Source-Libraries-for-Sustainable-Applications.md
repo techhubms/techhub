@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=IqSzmerSXuk
 title: Carbon Aware Computing with .NET Open Source Libraries for Sustainable Applications
 author: dotnet
@@ -26,6 +26,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 dotnet delivers an in-depth talk on implementing carbon aware computing using .NET open source libraries, showcasing sustainable development patterns for Azure, on-premises, and Kubernetes environments.<!--excerpt_end-->
 

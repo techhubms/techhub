@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=asqAei6gw1s
 title: Building Agent-Ready Tools with API Center and API Management
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Microsoft Developer offers insight into building agent-ready tools using Azure API Center, API Management, and MCP, providing strategies for API governance and integrating with Azure AI Foundry.<!--excerpt_end-->
 

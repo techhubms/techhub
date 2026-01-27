@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/identity-bindings-a-cleaner-model-for-multi-cluster-identity-in/ba-p/4478282
 title: 'Identity Bindings: Simplifying Multi-Cluster Managed Identity in AKS'
 author: samcogan
@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 samcogan explains the new Identity Bindings feature in AKS, showing how it resolves the scaling and automation issues found in older Managed Identity models by using RBAC-driven authorization within Kubernetes clusters.<!--excerpt_end-->
 

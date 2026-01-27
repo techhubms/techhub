@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=4CrxcdNbRFY
 title: 'Building Agentic UI with AG-UI and Blazor: ASP.NET Community Standup'
 author: dotnet
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Daniel Roth, Javier Calvarro Nelson, and guest Tyler Slaton lead a session on building agentic UIs with AG-UI and Blazor, offering developers practical guidance on modern web application design.<!--excerpt_end-->
 

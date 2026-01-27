@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=q4NhguFDP5s
 title: 'Rolling Your Own SSO: Centralized Authentication with OpenIddict'
 author: dotnet
@@ -23,6 +23,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 This practical guide by Dustin Kingen demonstrates how to implement centralized SSO using OpenIddict for multiple .NET applications, presenting design strategies and integration tips for improved authentication.<!--excerpt_end-->
 

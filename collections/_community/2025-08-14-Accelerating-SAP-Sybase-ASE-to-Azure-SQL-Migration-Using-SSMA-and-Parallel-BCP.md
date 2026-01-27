@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/modernization-best-practices-and/sap-sybase-ase-to-azure-sql-migration-using-ssma-and-bcp/ba-p/4436624
 title: Accelerating SAP Sybase ASE to Azure SQL Migration Using SSMA and Parallel BCP
 author: Manish_Kumar_Pandey
@@ -25,6 +25,7 @@ tags:
 - Sybase ASE
 section_names:
 - azure
+primary_section: azure
 ---
 Manish_Kumar_Pandey presents a practical approach to migrating from SAP ASE (Sybase ASE) to Azure SQL Database, featuring a parallel BCP script that streamlines large-scale data transfers and optimizes performance.<!--excerpt_end-->
 

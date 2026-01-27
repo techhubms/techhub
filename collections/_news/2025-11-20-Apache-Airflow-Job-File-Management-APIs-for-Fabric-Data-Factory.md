@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-apache-airflow-job-file-management-apis/
 title: Apache Airflow Job File Management APIs for Fabric Data Factory
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog announces new File Management APIs for Apache Airflow Jobs, enabling developers to programmatically manage DAG files and automate data workflows within the Fabric Data Factory platform.<!--excerpt_end-->
 

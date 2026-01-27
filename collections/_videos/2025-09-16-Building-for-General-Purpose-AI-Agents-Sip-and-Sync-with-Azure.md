@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fvx4QtDMlGo
 title: Building for General Purpose AI Agents | Sip and Sync with Azure
 author: Microsoft Developer
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer, hosted by Priyanka Vergadia, sits down with Marco Casalaina to explore the transformative potential of general purpose AI agents in Azure and beyond. Key insights include practical demos and future trends.<!--excerpt_end-->
 

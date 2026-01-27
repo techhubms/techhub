@@ -1,7 +1,7 @@
 @page "/ai/genai-basics"
 @page "/ai/genai-applied"
 @page "/ai/genai-advanced"
-@using TechHub.Core.DTOs
+@using TechHub.Core.Models
 @using TechHub.Web.Services
 
 @inject TechHubApiClient ApiClient
@@ -88,7 +88,7 @@
 }
 
 @code {
-    private SectionDto? sectionData;
+    private TechHub.Core.Models.Section? sectionData;
     private GenAIPageData? pageData;
     private string PageType => DeterminePageType();
 

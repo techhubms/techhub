@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/how-to-update-the-proxyaddresses-of-a-cloud-only-entra-id-user/m-p/4454763#M22217
 title: How to Update proxyAddresses for a Cloud-Only Entra ID User
 author: JMSHW0420
@@ -19,6 +19,7 @@ tags:
 - User Management
 section_names:
 - security
+primary_section: security
 ---
 JMSHW0420 shares challenges with updating proxyAddresses for a cloud-only Entra ID user using Microsoft Graph Explorer, exploring alternatives to Exchange Online PowerShell.<!--excerpt_end-->
 

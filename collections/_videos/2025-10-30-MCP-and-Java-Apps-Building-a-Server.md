@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=DGNAvVn6WwY
 title: 'MCP and Java Apps: Building a Server'
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer, joined by Bruno Borges and Sandra Ahlgrimm, demonstrates how to build an MCP server using Quarkus and GitHub Copilot, streamlining the process of creating intelligent, AI-integrated API servers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/research/articles/a-ladder-of-reasoning-testing-the-power-of-imagination-in-llms/
 title: How Microsoft Research is enhancing the ability of LLMs to handle more complex reasoning tasks
 author: stclarke
@@ -18,6 +18,7 @@ tags:
 - Problem Solving
 section_names:
 - ai
+primary_section: ai
 ---
 Authored by stclarke, this article delves into how Microsoft Research is pushing the boundaries of large language models to tackle more intricate reasoning challenges.<!--excerpt_end-->
 

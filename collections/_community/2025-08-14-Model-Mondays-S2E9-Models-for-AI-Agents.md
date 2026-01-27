@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/model-mondays-s2e9-models-for-ai-agents/ba-p/4443162
 title: 'Model Mondays S2E9: Models for AI Agents'
 author: Sharda_Kaur
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Sharda_Kaur presents a detailed recap of Model Mondays S2E9, highlighting the rollout of GPT-5 and GPT-OSS in Azure AI Foundry, agent workflow features in Azure AI Agent Service, and a customer case study on agentic AI in practice.<!--excerpt_end-->
 

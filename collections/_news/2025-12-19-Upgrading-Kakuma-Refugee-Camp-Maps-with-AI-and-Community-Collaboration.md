@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://unlocked.microsoft.com/kakuma/
 title: Upgrading Kakuma Refugee Camp Maps with AI and Community Collaboration
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke details how residents of the Kakuma refugee camp worked with Microsoft AI for Good Lab and partners to overhaul their map system using AI, satellite imagery, and hands-on community data collection.<!--excerpt_end-->
 

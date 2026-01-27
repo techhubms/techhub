@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/ai-driven-software-development-fast-context-rich-mcp-servers/?utm_source=rss&utm_medium=rss&utm_campaign=ai-driven-software-development-fast-context-rich-mcp-servers
 title: 'AI-Driven Observability: Fast, Context-Rich MCP Servers'
 author: Alan Shimel
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Authored by Alan Shimel, this article features insights from Honeycomb CEO Christine Yen on how Model Context Protocol (MCP) servers enhance AI-driven observability and the evolving landscape for DevOps teams.<!--excerpt_end-->
 

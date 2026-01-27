@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/improve-your-resiliency-posture-with-new-capabilities-and/ba-p/4469771
 title: Enhance Your Azure Resiliency with Intelligent Agent and Copilot Innovations
 author: rochakm
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 rochakm presents a technical overview of the latest Azure resiliency and recovery capabilities, including the Azure Copilot agent and integrated security features, designed for architects and engineers at Ignite 2025.<!--excerpt_end-->
 

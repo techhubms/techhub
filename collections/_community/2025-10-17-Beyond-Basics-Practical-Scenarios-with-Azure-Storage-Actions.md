@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/beyond-basics-practical-scenarios-with-azure-storage-actions/ba-p/4447151
 title: 'Beyond Basics: Practical Scenarios with Azure Storage Actions'
 author: ShashankKumarShankar
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 ShashankKumarShankar walks through three practical scenarios using Azure Storage Actions—content lifecycle automation, audit-proof ML dataset immutability, and AI embedding management—highlighting automation strategies to optimize data governance in Azure.<!--excerpt_end-->
 

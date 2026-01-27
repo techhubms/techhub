@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison details new features in GitHub Copilot CLI, including plan mode, advanced reasoning controls, and terminal workflow improvements, giving developers more power and flexibility in their coding environment.<!--excerpt_end-->
 

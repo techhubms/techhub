@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-november-2025/
 title: 'Azure Developer CLI (azd) November 2025 Release: Container Apps GA, Layered Provisioning, Extension Framework, and Aspire 13'
 author: PuiChee (PC) Chan
@@ -35,6 +35,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 PuiChee (PC) Chan shares insights into the latest Azure Developer CLI (azd) release, covering new features like container apps GA, layered provisioning beta, extension enhancements, template updates, and tighter integration with AI and DevOps workflows.<!--excerpt_end-->
 

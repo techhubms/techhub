@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=BJxrSKAvCis
 title: 'Azure HorizonDB: Deep Dive into a New Enterprise-Scale PostgreSQL'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events hosts a technical session on Azure HorizonDB, offering a deep dive into its cloud-native PostgreSQL architecture, performance optimizations, high-availability features, and built-in AI innovations.<!--excerpt_end-->
 

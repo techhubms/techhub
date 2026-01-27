@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2025/May/06/WebView2-Waiting-for-Document-Loaded
 title: 'WebView2: Simplifying Document Load Handling and Async Workflows in .NET Applications'
 author: Rick Strahl
@@ -23,6 +23,7 @@ tags:
 - WPF
 section_names:
 - coding
+primary_section: coding
 ---
 In this detailed post, Rick Strahl discusses common challenges and streamlined solutions for handling document load events in WebView2 controls within .NET and WPF applications. He introduces the Westwind.WebView library, focusing on its WaitForDocumentLoaded() helper for more linear, maintainable workflows.<!--excerpt_end-->
 

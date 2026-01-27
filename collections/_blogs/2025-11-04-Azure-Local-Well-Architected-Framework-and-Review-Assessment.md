@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/11/azure-local-well-architected-framework-and-review-assessment/
 title: Azure Local Well-Architected Framework and Review Assessment
 author: Thomas Maurer
@@ -29,6 +29,7 @@ tags:
 - Well Architected Framework
 section_names:
 - azure
+primary_section: azure
 ---
 Thomas Maurer explains the Azure Local Well-Architected Review Assessment, offering practical advice for organizations to optimize Azure Local deployments through Microsoft's structured architectural framework.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-may-2025/
 title: 'Azure Developer CLI (azd) May 2025 Release: New Features, Templates, and Docs'
 author: Kristen Womack
@@ -34,6 +34,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 In this post, Kristen Womack presents the May 2025 release of Azure Developer CLI (azd), covering new features, updated templates, and improved documentation for enhanced Azure application development.<!--excerpt_end-->
 

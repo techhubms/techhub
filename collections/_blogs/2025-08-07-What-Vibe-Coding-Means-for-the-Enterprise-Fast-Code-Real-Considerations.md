@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/what-vibe-coding-means-for-the-enterprise-fast-code-real-considerations/?utm_source=rss&utm_medium=rss&utm_campaign=what-vibe-coding-means-for-the-enterprise-fast-code-real-considerations
 title: 'What Vibe Coding Means for the Enterprise: Fast Code, Real Considerations'
 author: Tom Howlett
@@ -36,6 +36,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 Tom Howlett examines the enterprise-level implications of vibe coding and AI-assisted development, highlighting both the acceleration of innovation and the real risks in security and code maintainability.<!--excerpt_end-->
 

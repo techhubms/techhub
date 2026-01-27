@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=08Guz739IZI
 title: 'Building Tools and the Future of DIY Development: GitHub Podcast Episode 3'
 author: GitHub
@@ -18,6 +18,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Hosts Cassidy Williams and Kedasha Kerr join the GitHub Podcast to discuss DIY software tools, creative coding in the open source world, and how AI is enabling new ways for developers to build and share their projects.<!--excerpt_end-->
 

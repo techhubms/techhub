@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=PWELkVJbb7Y
 title: Unlock agentic workflows for your apps using MCP on Windows
 author: Microsoft Developer
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer presents a deep dive into enabling agentic workflows with MCP on Windows, guiding viewers through MCP server development, registry integration, and secure AI automation for enterprise apps.<!--excerpt_end-->
 

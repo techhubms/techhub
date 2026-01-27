@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/azure-for-beginners-how-to-launch-your-first-cloud-project-in-30-minutes/
 title: 'Azure for Beginners: How to Launch Your First Cloud Project in 30 Minutes'
 author: Dellenny
@@ -21,6 +21,7 @@ tags:
 - Windows VM
 section_names:
 - azure
+primary_section: azure
 ---
 Dellenny provides a clear, practical introduction to Microsoft Azure, guiding beginners through every step to launch their first cloud-based virtual machine project.<!--excerpt_end-->
 

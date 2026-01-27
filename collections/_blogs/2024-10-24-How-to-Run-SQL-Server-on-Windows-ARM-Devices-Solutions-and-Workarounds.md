@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2024/Oct/24/Using-Sql-Server-on-Windows-ARM
 title: 'How to Run SQL Server on Windows ARM Devices: Solutions and Workarounds'
 author: Rick Strahl
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 In this post, Rick Strahl shares his journey and solutions for running SQL Server on a Windows ARM device, providing practical techniques, troubleshooting steps, and community-sourced insight relevant for .NET and SQL Server developers.<!--excerpt_end-->
 

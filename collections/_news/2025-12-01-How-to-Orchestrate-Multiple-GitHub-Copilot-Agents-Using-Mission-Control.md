@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-to-orchestrate-agents-using-mission-control/
 title: How to Orchestrate Multiple GitHub Copilot Agents Using Mission Control
 author: Matt Nigh
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Matt Nigh guides developers through orchestrating multiple GitHub Copilot coding agents using mission control, teaching prompt strategies, drift detection, and efficient code review.<!--excerpt_end-->
 

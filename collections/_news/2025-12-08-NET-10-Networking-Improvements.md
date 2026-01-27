@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-10-networking-improvements/
 title: .NET 10 Networking Improvements
 author: Máňa
@@ -29,6 +29,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 Máňa outlines the significant networking improvements in .NET 10, including HTTP, WebSocket API upgrades, and security features relevant to developer scenarios.<!--excerpt_end-->
 

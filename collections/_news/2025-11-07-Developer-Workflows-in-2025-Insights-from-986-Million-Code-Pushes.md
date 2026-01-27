@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/octoverse/what-986-million-code-pushes-say-about-the-developer-workflow-in-2025/
 title: 'Developer Workflows in 2025: Insights from 986 Million Code Pushes'
 author: Cassidy Williams
@@ -24,6 +24,7 @@ tags:
 - Testing
 section_names:
 - devops
+primary_section: devops
 ---
 Cassidy Williams reviews the 2025 Octoverse data, revealing how nearly a billion code pushes reflect a new era of developer workflows with faster iteration, automated pipelines, and improved team processes.<!--excerpt_end-->
 

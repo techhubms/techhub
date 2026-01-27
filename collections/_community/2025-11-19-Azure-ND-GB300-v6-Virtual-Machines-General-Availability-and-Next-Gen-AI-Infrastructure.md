@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-nd-gb300-v6-now-generally-available-hyper-optimized-for/ba-p/4469475
 title: 'Azure ND GB300 v6 Virtual Machines: General Availability and Next-Gen AI Infrastructure'
 author: Nitin_Nagarkatte
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Nitin_Nagarkatte announces the general availability of Azure ND GB300 v6 virtual machines, highlighting their next-generation AI infrastructure powered by NVIDIA GPUs for advanced model training and large-scale inference.<!--excerpt_end-->
 

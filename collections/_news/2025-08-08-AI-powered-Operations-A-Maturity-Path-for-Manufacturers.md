@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/industry/blog/manufacturing-and-mobility/manufacturing/2025/08/07/embracing-ai-powered-operations-a-maturity-path-for-manufacturers/
 title: 'AI-powered Operations: A Maturity Path for Manufacturers'
 author: stclarke
@@ -18,6 +18,7 @@ tags:
 - Smart Manufacturing
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke summarizes Microsoft's perspective on the path toward AI-driven operational excellence in manufacturing, spotlighting advancements in grid energy and strategic partnerships.<!--excerpt_end-->
 

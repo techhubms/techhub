@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/clickops-iac-and-the-excluded-avocado-middle/
 title: Bridging the Gap Between ClickOps and Infrastructure-as-Code in DevOps
 author: Marcin Wyszynski
@@ -31,6 +31,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Marcin Wyszynski discusses the gap between ClickOps and Infrastructure-as-Code, highlighting how intent-driven, AI-powered approaches can balance developer speed with operational safety in modern DevOps practices.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=eLCQ9qlOzWo
 title: Building and Deploying Responsible Agentic AI with Microsoft Copilot
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Responsible AI
 section_names:
 - ai
+primary_section: ai
 ---
 Presented by Manpreet Singh and Reed Wiedower at Microsoft Ignite 2025, this session explores strategies for building and deploying responsible agentic AI with Microsoft Copilot, emphasizing governance and best practices.<!--excerpt_end-->
 

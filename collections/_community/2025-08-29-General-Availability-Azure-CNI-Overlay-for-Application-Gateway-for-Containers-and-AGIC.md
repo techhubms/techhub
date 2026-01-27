@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-cni-overlay-for-application-gateway-for-containers-and/ba-p/4449350
 title: 'General Availability: Azure CNI Overlay for Application Gateway for Containers and AGIC'
 author: jonw
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 jonw announces the general availability of Azure CNI Overlay support for Application Gateway for Containers and AGIC, explaining how this benefits AKS users through enhanced IP scalability and high-performance ingress.<!--excerpt_end-->
 

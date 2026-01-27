@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/guide-for-architecting-azure-databricks-design-to-deployment/ba-p/4473095
 title: 'Architecting and Deploying Secure Azure Databricks Workspaces: Design, Network, and Access Best Practices'
 author: Rafia_Aqil
@@ -29,6 +29,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Rafia Aqil and a team of Microsoft experts deliver a comprehensive technical guide to designing, securing, and deploying Azure Databricks environments, spotlighting best practices for robust architecture and effective governance.<!--excerpt_end-->
 

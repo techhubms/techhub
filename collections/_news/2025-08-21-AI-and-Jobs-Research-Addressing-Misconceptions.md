@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/research/blog/applicability-vs-job-displacement-further-notes-on-our-recent-research-on-ai-and-occupations/
 title: 'AI and Jobs Research: Addressing Misconceptions'
 author: sbaynes
@@ -22,6 +22,7 @@ tags:
 - Work Trend Index
 section_names:
 - ai
+primary_section: ai
 ---
 sbaynes provides a detailed clarification of Microsoft's recent research on generative AI's role in workplaces, focusing on how AI tools like Bing Copilot support knowledge work and addressing public misconceptions.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-08-upcoming-changes-to-github-events-api-payloads
 title: Upcoming changes to GitHub Events API payloads
 author: Allison
@@ -22,6 +22,7 @@ tags:
 - Webhooks
 section_names:
 - devops
+primary_section: devops
 ---
 Allison provides an overview of upcoming changes to the GitHub Events API, detailing improvements in performance and recommendations for developers who rely on this API.<!--excerpt_end-->
 

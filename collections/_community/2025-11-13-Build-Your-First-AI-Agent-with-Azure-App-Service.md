@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-your-first-ai-agent-with-azure-app-service/ba-p/4468725
 title: Build Your First AI Agent with Azure App Service
 author: jordanselig
@@ -31,6 +31,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 jordanselig walks through modern approaches for building AI agents and agentic web apps on Azure App Service, highlighting integration strategies, frameworks, and practical developer resources.<!--excerpt_end-->
 

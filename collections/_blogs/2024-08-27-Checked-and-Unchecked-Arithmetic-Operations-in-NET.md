@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/checked-and-unchecked-arithmetic-operations-in-dotnet
 title: Checked and Unchecked Arithmetic Operations in .NET
 author: Khalid Abuhakmeh
@@ -20,6 +20,7 @@ tags:
 - Unchecked Keyword
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, Khalid Abuhakmeh demonstrates how easily integer overflow can occur in .NET when generating the Fibonacci sequence, and provides practical strategies to avoid overflow errors in critical .NET applications.<!--excerpt_end-->
 

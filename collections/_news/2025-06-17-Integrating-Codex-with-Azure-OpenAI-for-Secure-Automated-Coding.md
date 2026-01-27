@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/codex-azure-openai-integration-fast-secure-code-development/
 title: Integrating Codex with Azure OpenAI for Secure Automated Coding
 author: Govind Kamtamneni
@@ -31,6 +31,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Govind Kamtamneni details how to run OpenAI’s Codex securely on Azure infrastructure, showing developers how to set up Codex CLI with Azure OpenAI, configure advanced agent instructions, and automate coding workflows within enterprise boundaries.<!--excerpt_end-->
 

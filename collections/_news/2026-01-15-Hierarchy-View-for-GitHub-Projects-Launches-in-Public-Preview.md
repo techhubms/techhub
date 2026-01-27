@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2026-01-15-hierarchy-view-now-available-in-github-projects
 title: Hierarchy View for GitHub Projects Launches in Public Preview
 author: Allison
@@ -21,6 +21,7 @@ tags:
 - Workflow Improvement
 section_names:
 - devops
+primary_section: devops
 ---
 Allison announces the public preview of hierarchy view for GitHub Projects, allowing users to visualize and manage nested sub-issues directly within project tables.<!--excerpt_end-->
 

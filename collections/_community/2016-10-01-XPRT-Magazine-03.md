@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 03
 date: 2016-10-01 00:00:00 +00:00
 author: Xebia
@@ -21,6 +21,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 XPRT Magazine 03 explores Azure Machine Learning, the Microsoft Bot Framework, containers on Microsoft platforms, DevOps, mobile innovation, testing, infrastructure as code, and more. This issue provides practical guidance and real-world examples for building intelligent, scalable, and modern solutions.
 <!--excerpt_end-->

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/company-news/github-availability-report-june-2025/
 title: 'GitHub Availability Report: June 2025'
 author: Jakub Oleksy
@@ -25,6 +25,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Jakub Oleksy reviews service incidents that impacted GitHub, including Copilot and Actions, in the June 2025 Availability Report.<!--excerpt_end-->
 

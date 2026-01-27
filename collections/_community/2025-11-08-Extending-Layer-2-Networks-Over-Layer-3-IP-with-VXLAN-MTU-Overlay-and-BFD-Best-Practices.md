@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/extending-layer-2-vxlan-networks-over-layer-3-ip-network/ba-p/4466406
 title: 'Extending Layer-2 Networks Over Layer-3 IP with VXLAN: MTU, Overlay, and BFD Best Practices'
 author: SaravSubramanian
@@ -24,6 +24,7 @@ tags:
 - WAN
 section_names:
 - azure
+primary_section: azure
 ---
 SaravSubramanian presents a vendor-neutral, in-depth exploration of how VXLAN enables scalable Layer-2 overlays on Layer-3 IP networks, focusing on key aspects like MTU sizing, VLAN preservation, and BFD for resilience. This guide provides actionable insights for enterprise and Azure network designs.<!--excerpt_end-->
 

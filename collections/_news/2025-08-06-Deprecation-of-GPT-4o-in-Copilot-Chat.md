@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-06-deprecation-of-gpt-4o-in-copilot-chat
 title: Deprecation of GPT-4o in Copilot Chat
 author: Allison
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the deprecation of the GPT-4o model in Copilot Chat, outlining the move to GPT-4.1 as the new standard and explaining the impacts for developers using Copilot.<!--excerpt_end-->
 

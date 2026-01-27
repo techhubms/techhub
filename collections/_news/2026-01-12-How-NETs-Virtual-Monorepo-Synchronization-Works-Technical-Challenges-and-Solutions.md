@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/how-we-synchronize-dotnets-virtual-monorepo/
 title: 'How .NET’s Virtual Monorepo Synchronization Works: Technical Challenges and Solutions'
 author: Přemek Vysoký
@@ -25,6 +25,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Přemek Vysoký details the deep technical efforts behind synchronizing .NET’s many repositories in their Virtual Monolithic Repository, highlighting custom solutions, lessons learned, and ongoing DevOps challenges.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/09/protecting-identity-in-active-directory-microsoft-entra/
 title: Protecting Identity in Active Directory & Microsoft Entra
 author: Thomas Maurer
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Thomas Maurer, joined by Thomas Bryant, unpacks identity protection and recovery for Active Directory and Microsoft Entra. The episode delivers practical security strategies for practitioners safeguarding Microsoft identity platforms.<!--excerpt_end-->
 

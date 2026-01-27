@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mjgiuq/tunit_test_orchestration/
 title: 'TUnit Test Orchestration: Advanced Setup and Parallel Dependency Injection'
 author: thomhurst
@@ -25,6 +25,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 thomhurst presents a major enhancement to the TUnit testing framework, enabling .NET developers to orchestrate complex integrations—like Docker-based SQL Server, Redis, and RabbitMQ—using powerful nested property injection and parallel initialisation.<!--excerpt_end-->
 

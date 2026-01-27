@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/securing-azure-databricks-serverless-practical-guide-to-private/ba-p/4457083
 title: Securing Azure Databricks Serverless with Private Link and Azure Firewall
 author: alescardoso
@@ -30,6 +30,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 alescardoso offers a hands-on walkthrough for securing Azure Databricks Serverless by integrating Private Link and Azure Firewall, enabling a compliant and tightly controlled analytics environment.<!--excerpt_end-->
 

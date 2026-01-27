@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=_fZZz_gIE8A
 title: Scaling Context-Aware Workflows with GitHub Copilot in VS Code
 author: Visual Studio Code
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code demonstrates how to transform GitHub Copilot into a deeply context-aware AI pair programmer, with techniques for integrating your project’s architecture and team workflows.<!--excerpt_end-->
 

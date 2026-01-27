@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/debugging-in-production-leveraging-logs-metrics-and-traces/?utm_source=rss&utm_medium=rss&utm_campaign=debugging-in-production-leveraging-logs-metrics-and-traces
 title: 'Debugging in Production: Leveraging Logs, Metrics and Traces'
 author: Neel Shah
@@ -34,6 +34,7 @@ tags:
 - Zipkin
 section_names:
 - devops
+primary_section: devops
 ---
 Neel Shah examines the challenges of debugging in production and explains how DevOps teams can use logs, metrics, and traces—plus the right observability tools—to achieve rapid and reliable issue diagnosis.<!--excerpt_end-->
 

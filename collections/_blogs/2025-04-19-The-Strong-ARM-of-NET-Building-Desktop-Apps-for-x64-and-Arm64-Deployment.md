@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2025/Apr/18/The-Strong-ARM-of-NET-Wrestling-with-x64-and-Arm64-Desktop-App-Deployment
 title: 'The Strong ARM of .NET: Building Desktop Apps for x64 and Arm64 Deployment'
 author: Rick Strahl
@@ -21,6 +21,7 @@ tags:
 - X64
 section_names:
 - coding
+primary_section: coding
 ---
 In this detailed post, Rick Strahl outlines the key challenges and solutions for deploying .NET Windows Desktop apps that run natively on both x64 and Arm64 platforms, with specific insights from developments on Markdown Monster.<!--excerpt_end-->
 

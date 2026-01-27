@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/powershell/announcing-dsc-v3/
 title: Announcing Microsoft Desired State Configuration v3.0.0
 author: Jason Helmick
@@ -22,6 +22,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 In this detailed announcement, Jason Helmick introduces Microsoft Desired State Configuration v3.0.0, highlighting its cross-platform capabilities, integration improvements, and significant differences from classic PowerShell DSC.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://zure.com/blog/ignite-2025-how-fabric-iq-transforms-data-into-real-understanding
 title: 'Ignite 2025: How Fabric IQ Transforms Data Into Real Understanding'
 author: henri.vuorenpaa@zure.com (Henri Vuorenpää)
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - ml
+primary_section: ai
 ---
 Henri Vuorenpää explores Microsoft Ignite 2025's unveiling of Fabric IQ and Agent 365, describing how these innovations help organizations gain true operational understanding and actionable insights from data.<!--excerpt_end-->
 

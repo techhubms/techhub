@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=EYMiry0gYQA
 title: 'VS Code Live: Highlights from the v1.103 Release'
 author: Visual Studio Code
@@ -25,6 +25,7 @@ tags:
 - Vscoderelease
 section_names:
 - coding
+primary_section: coding
 ---
 Join Olivia McVicker and the Visual Studio Code team for a live walkthrough of new features in the July v1.103 release, including demos and Q&A for developers.<!--excerpt_end-->
 

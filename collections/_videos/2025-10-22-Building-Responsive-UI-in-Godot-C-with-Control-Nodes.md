@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Vav3Ml4z6-8
 title: Building Responsive UI in Godot C# with Control Nodes
 author: dotnet
@@ -24,6 +24,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet demonstrates how to create responsive user interfaces in Godot with C#, showcasing practical techniques to integrate dynamic UI elements directly with gameplay.<!--excerpt_end-->
 

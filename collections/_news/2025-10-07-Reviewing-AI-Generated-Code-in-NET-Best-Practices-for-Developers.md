@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/developer-and-ai-code-reviewer-reviewing-ai-generated-code-in-dotnet/
 title: 'Reviewing AI-Generated Code in .NET: Best Practices for Developers'
 author: Wendy Breiding (SHE/HER)
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Wendy Breiding offers a practical guide to reviewing AI-generated .NET code, discussing how developers can maintain quality and enforce standards in projects that leverage GitHub Copilot and AI code assistants.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/building-your-first-mcp-server-how-to-extend-ai-tools-with-custom-capabilities/
 title: 'Building Your First MCP Server: Extending GitHub Copilot with Custom Tools'
 author: Chris Reddington
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Chris Reddington demonstrates how to extend GitHub Copilot with custom tools using the Model Context Protocol (MCP), sharing lessons learned by building a turn-based game MCP server in TypeScript.<!--excerpt_end-->
 

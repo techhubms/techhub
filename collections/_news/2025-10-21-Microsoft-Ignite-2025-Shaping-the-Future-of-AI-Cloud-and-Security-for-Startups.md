@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/startups/blog/why-startups-shouldnt-miss-microsoft-ignite-2025-a-front-row-seat-to-the-future-of-ai-innovation/
 title: 'Microsoft Ignite 2025: Shaping the Future of AI, Cloud, and Security for Startups'
 author: stclarke
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 stclarke introduces Microsoft Ignite 2025, a major conference in San Francisco and online focused on AI, cloud, and security. Discover how startups and tech professionals can leverage Microsoft’s latest advancements, engage with enterprise customers, and tap into powerful distribution opportunities.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/security/supply-chain-security/strengthening-supply-chain-security-preparing-for-the-next-malware-campaign/
 title: Strengthening Supply Chain Security for Developers and Maintainers
 author: Madison Oliver
@@ -25,6 +25,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Madison Oliver shares practical security strategies for developers and maintainers to defend against supply chain attacks, with a focus on securing GitHub and npm workflows.<!--excerpt_end-->
 

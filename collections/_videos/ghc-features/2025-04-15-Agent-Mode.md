@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/JtJ3_ATBsTY
 title: Agent Mode
 author: Fokko Veegens
@@ -12,6 +12,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This video demonstrates GitHub Copilot's Agent Mode feature. How Agent Mode helps you by iterating over your prompt by itself.<!--excerpt_end-->
 

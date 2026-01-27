@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/ai-powered-troubleshooting-for-fabric-data-pipeline-error-messages/
 title: AI-Powered Error Insights Copilot for Fabric Data Factory Pipeline Troubleshooting
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog reveals how Error Insights Copilot leverages AI to streamline troubleshooting in Data Factory pipeline runs, offering developers detailed analysis and rapid resolution suggestions.<!--excerpt_end-->
 

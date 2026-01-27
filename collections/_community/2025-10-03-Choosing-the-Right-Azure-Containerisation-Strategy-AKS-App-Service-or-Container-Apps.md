@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/choosing-the-right-azure-containerisation-strategy-aks-app/ba-p/4456645
 title: 'Choosing the Right Azure Containerisation Strategy: AKS, App Service, or Container Apps?'
 author: zaracheema
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 zaracheema compares Azure Kubernetes Service (AKS), Azure App Service, and Azure Container Apps to help you choose the right Azure containerisation approach for different application scenarios.<!--excerpt_end-->
 

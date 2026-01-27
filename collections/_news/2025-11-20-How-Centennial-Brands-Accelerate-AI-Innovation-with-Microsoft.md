@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/11/20/from-legacy-to-frontier-how-100-year-brands-are-leading-ai-innovation/
 title: How Centennial Brands Accelerate AI Innovation with Microsoft
 author: stclarke
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 stclarke presents an in-depth look at how 100-year-old brands leverage Microsoft AI and Azure to transform business processes, showcasing cases from Kraft Heinz, Levi Strauss & Co., Wells Fargo, and Land O’Lakes.<!--excerpt_end-->
 

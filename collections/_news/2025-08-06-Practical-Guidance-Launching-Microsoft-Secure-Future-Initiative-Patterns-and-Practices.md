@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/08/06/sharing-practical-guidance-launching-microsoft-secure-future-initiative-sfi-patterns-and-practices/
 title: 'Practical Guidance: Launching Microsoft Secure Future Initiative Patterns and Practices'
 author: stclarke
@@ -22,6 +22,7 @@ tags:
 - Zero Trust
 section_names:
 - security
+primary_section: security
 ---
 In this post, stclarke introduces the Microsoft Secure Future Initiative (SFI) patterns and practices—a library of practical security solutions aimed at helping organizations enhance security at scale, informed by Microsoft’s operational experiences.<!--excerpt_end-->
 

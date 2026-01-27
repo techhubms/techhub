@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-fabric-notebook-udf-integration-with-native-support-for-pandas-dataframes-and-series-via-apache-arrow/
 title: 'Enhancing Fabric Notebooks: Native Pandas DataFrame Support in User Data Functions'
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces a major update by enabling native Pandas DataFrame and Series support in User Data Functions within Fabric Notebooks. This enhancement, powered by Apache Arrow, streamlines large-scale data analysis and enables high-efficiency workflows for data engineers and scientists.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/attach-images-in-github-copilot-chat/
 title: Leverage Image Attachments in GitHub Copilot Chat for Visual Studio Preview
 author: Jessie Houghton
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Jessie Houghton discusses a new Visual Studio preview feature: attaching images in GitHub Copilot Chat. This enhancement allows developers to visually illustrate designs or issues, enabling Copilot to provide more precise and useful responses and code suggestions.<!--excerpt_end-->
 

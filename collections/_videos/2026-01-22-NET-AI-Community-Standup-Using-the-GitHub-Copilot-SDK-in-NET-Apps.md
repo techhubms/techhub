@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 dotnet presents a community standup with Steve Sanderson and Jon Galloway, delving into the GitHub Copilot SDK and how it enhances .NET development with AI-powered capabilities.<!--excerpt_end-->
 

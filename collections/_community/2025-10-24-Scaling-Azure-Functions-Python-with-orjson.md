@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/scaling-azure-functions-python-with-orjson/ba-p/4445780
 title: Scaling Azure Functions Python with orjson
 author: eroman
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 eroman examines how Azure Functions for Python apps benefit from native orjson support, showing measurable performance improvements in latency and throughput for serverless solutions.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/debug-faster-with-github-copilot.html
 title: Debug Faster with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels shows how developers can use GitHub Copilot to diagnose errors, find bugs, and generate tests, transforming how debugging is done.<!--excerpt_end-->
 

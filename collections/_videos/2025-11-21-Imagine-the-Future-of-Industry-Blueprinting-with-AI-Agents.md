@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=mFgM0CtOtdw
 title: Imagine the Future of Industry Blueprinting with AI Agents
 author: Microsoft Events
@@ -18,6 +18,7 @@ tags:
 - Operational Efficiency
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents an intermediate-level session from Microsoft Ignite 2025, spotlighting how AI agentification is shaping the future of industry blueprinting and operational efficiency.<!--excerpt_end-->
 

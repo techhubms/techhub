@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk66by/openai_gpt5_is_now_in_public_preview_for_github/
 title: OpenAI GPT-5 Public Preview Announcement for GitHub Copilot
 author: fishchar
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Reddit user fishchar shares the news of OpenAI GPT-5 being in public preview for GitHub Copilot. The post gathers developer reactions on access, pricing, and their initial experiences.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=2srbflqimJQ
 title: 'Leading with Trust: Building & Deploying Agents in a Regulated World'
 author: Microsoft Events
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events presents compliance experts Sourabh Pandey, Manny Sahota, and Tony Thampan discussing how tools like Purview and Defender for Cloud support regulatory resilience and secure AI agent development.<!--excerpt_end-->
 

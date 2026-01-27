@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=N1paWARiUcI
 title: What is Azure AI Foundry Local?
 author: Microsoft Developer
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer’s Dona Sarkar introduces Azure AI Foundry Local, highlighting its benefits for privacy, security, and offline AI scenarios by allowing local execution of advanced AI models.<!--excerpt_end-->
 

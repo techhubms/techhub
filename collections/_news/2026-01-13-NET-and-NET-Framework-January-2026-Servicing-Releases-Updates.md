@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-january-2026-servicing-updates/
 title: .NET and .NET Framework January 2026 Servicing Releases Updates
 author: Rahul Bhandari (MSFT), Tara Overfield
@@ -24,6 +24,7 @@ tags:
 - WPF
 section_names:
 - coding
+primary_section: coding
 ---
 Rahul Bhandari (MSFT) and Tara Overfield review the .NET and .NET Framework January 2026 servicing updates, summarizing new fixes, changelogs, and download resources for all supported versions.<!--excerpt_end-->
 

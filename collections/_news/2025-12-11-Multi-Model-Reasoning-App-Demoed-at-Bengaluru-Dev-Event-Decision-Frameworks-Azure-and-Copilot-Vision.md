@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_was-fun-to-be-at-a-dev-event-in-bengaluru-activity-7404820776195043329-A5vB
 title: 'Multi-Model Reasoning App Demoed at Bengaluru Dev Event: Decision Frameworks, Azure, and Copilot Vision'
 author: stclarke
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Satya Nadella demonstrates a custom app for deep research and model orchestration, built and deployed using Azure, GitHub Codespaces, and Windows 365—exploring decision frameworks and future Copilot integration.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/VisualStudio/comments/1m1l1lc/visual_studio_has_most_git_features_i_need_except/
 title: Visual Studio Has Most Git Features I Need—Except Worktree, So I Built an Extension for It
 author: Creative-Paper1007
@@ -18,6 +18,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Creative-Paper1007 discusses building a Visual Studio extension to add native-like git worktree support, making it easier for developers to manage multiple branches without leaving their IDE.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-01-copilot-spaces-public-spaces-and-code-view-support
 title: 'Major Updates to Copilot Spaces: Public Spaces and Code View Integration'
 author: Allison
@@ -19,6 +19,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison summarizes three new enhancements to Copilot Spaces, focusing on public accessibility, granular file sharing, and seamless integration with the GitHub code viewer for improved developer workflows.<!--excerpt_end-->
 

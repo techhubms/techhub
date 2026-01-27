@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=nKN4QxPcFlA
 title: 'Beyond Chat: Building Smarter AI Agents in .NET with AiGen'
 author: dotnet
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 dotnet hosts Mark Miller, Frank Boucher, and David Pine as they explore the development of AiGen, an AI-driven coding assistant for Visual Studio, and the key insights for .NET developers.<!--excerpt_end-->
 

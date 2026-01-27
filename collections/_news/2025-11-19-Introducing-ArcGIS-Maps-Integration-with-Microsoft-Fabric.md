@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-geospatial-intelligence-in-microsoft-fabric-with-esris-arcgis-maps-workload-preview/
 title: Introducing ArcGIS Maps Integration with Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog introduces ArcGIS Maps for Microsoft Fabric, an integration that brings Esri’s geospatial analytics and AI-assisted mapping to Fabric, empowering data professionals with advanced visualization and analysis tools.<!--excerpt_end-->
 

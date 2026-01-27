@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=aAZZD_sXNg8
 title: 'Blazor Community Standup: Planning the Future of Blazor in .NET 11'
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 - Web Development
 section_names:
 - coding
+primary_section: coding
 ---
 Hosted by Daniel Roth, Javier Calvarro Nelson, and Larry Ewing, this standup explores upcoming themes and ideas shaping Blazor’s future in .NET 11, fostering community participation.<!--excerpt_end-->
 

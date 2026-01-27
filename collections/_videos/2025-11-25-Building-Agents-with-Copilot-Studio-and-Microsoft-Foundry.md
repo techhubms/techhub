@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=tGbcQZ4WeZ0
 title: Building Agents with Copilot Studio and Microsoft Foundry
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 - Unified Tracing
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents a session featuring Matthew Barbour, Matthew Bolanos, and Seth Juarez, demonstrating how enterprises can use Copilot Studio, Microsoft Foundry, and the Microsoft Agent Framework to build robust AI-powered agents.<!--excerpt_end-->
 

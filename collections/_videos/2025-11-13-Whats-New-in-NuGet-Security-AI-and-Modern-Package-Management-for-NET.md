@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=blGOP6adqa4
 title: "What's New in NuGet: Security, AI, and Modern Package Management for .NET"
 author: dotnet
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - security
+primary_section: ai
 ---
 dotnet presents the latest innovations in NuGet, focusing on AI-driven workflows, improved security features, and enhanced package management for .NET developers.<!--excerpt_end-->
 

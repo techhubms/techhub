@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/engineering/platform-security/post-quantum-security-for-ssh-access-on-github/
 title: Post-Quantum Secure SSH Access on GitHub
 author: brian m. carlson
@@ -23,6 +23,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 brian m. carlson details GitHub's implementation of post-quantum secure SSH key exchange, highlighting the updates, impact, and steps for developers to prepare.<!--excerpt_end-->
 

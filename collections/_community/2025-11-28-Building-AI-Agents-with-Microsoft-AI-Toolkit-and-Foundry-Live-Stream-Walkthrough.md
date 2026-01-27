@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/upcoming-live-stream-building-ai-agents-with-the-ai-toolkit/ba-p/4473350
 title: 'Building AI Agents with Microsoft AI Toolkit & Foundry: Live Stream Walkthrough'
 author: April_Gittens
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 April Gittens leads a hands-on live stream guiding developers through building sophisticated AI agents with Microsoft Foundry and the AI Toolkit, focusing on multimodal input, system prompts, and iterative workflows.<!--excerpt_end-->
 

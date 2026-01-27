@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://r-vm.com/automating-my-git-workflow-vscode-copilot-chat-terminal-auto-approval.html
 title: Automating My Git Workflow in VS Code with Copilot Chat, Custom Prompts, and Terminal Auto-Approval
 author: Reinier van Maanen
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this detailed post, Reinier van Maanen demonstrates how to automate Git workflows in Visual Studio Code using GitHub Copilot Chat, custom prompts, and the experimental terminal auto-approval feature, providing practical configuration steps and benefits.<!--excerpt_end-->
 

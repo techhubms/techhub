@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mkt2tk/azure_vpn_p2s_and_expressroute_coexistence/
 title: Architecting Azure VPN P2S and ExpressRoute Coexistence in a Hub & Spoke Topology
 author: tampasmix
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 tampasmix explores approaches for connecting Azure VPN P2S remote users to on-premises networks via ExpressRoute in a hub-and-spoke architecture, discussing routing, gateway setup, and practical options for solving connectivity challenges.<!--excerpt_end-->
 

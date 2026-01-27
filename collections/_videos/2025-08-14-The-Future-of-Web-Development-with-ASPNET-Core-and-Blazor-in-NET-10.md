@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xZ26KwGHWE0
 title: The Future of Web Development with ASP.NET Core & Blazor in .NET 10
 author: dotnet
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - security
+primary_section: ai
 ---
 In this video, the .NET team showcases new features coming to ASP.NET Core and Blazor in .NET 10. Learn from dotnet about building secure, AI-powered web applications and advancing your web development skills.<!--excerpt_end-->
 

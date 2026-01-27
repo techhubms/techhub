@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m32qpm/teams_vs_areas/
 title: Challenges Migrating Teams and Areas Structure from TFS to Azure DevOps
 author: theguru1974
@@ -18,6 +18,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Author theguru1974 shares their experiences and concerns when migrating from TFS to Azure DevOps, particularly around how Teams and Areas are handled within the work tracking system.<!--excerpt_end-->
 

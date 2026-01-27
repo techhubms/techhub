@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/08/20/quantum-safe-security-progress-towards-next-generation-cryptography/
 title: "Quantum-safe Security: Microsoft's Progress Toward Next-generation Cryptography"
 author: Mark Russinovich and Michal Braverman-Blumenstyk
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Mark Russinovich and Michal Braverman-Blumenstyk present an authoritative overview of Microsoft's quantum-safe security strategy, covering cryptography advances, standards collaboration, and practical steps for resilience against quantum-era threats.<!--excerpt_end-->
 

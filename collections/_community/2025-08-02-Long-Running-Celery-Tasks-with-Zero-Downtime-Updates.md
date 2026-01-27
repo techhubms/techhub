@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/devops/comments/1mfq8ri/long_running_celery_tasks_with_zero_downtime/
 title: Long Running Celery Tasks with Zero Downtime Updates
 author: Lazy_Economy_6851
@@ -17,6 +17,7 @@ tags:
 - Zero Downtime
 section_names:
 - devops
+primary_section: devops
 ---
 Lazy_Economy_6851 discusses challenges in redeploying an app with Celery-backed long-running jobs, aiming for zero downtime. The post explores risks to running tasks and seeks peer advice on deployment strategies.<!--excerpt_end-->
 

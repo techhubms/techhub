@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-05-anthropic-claude-opus-4-1-is-now-in-public-preview-in-github-copilot
 title: Anthropic Claude Opus 4.1 Now Publicly Previewed in GitHub Copilot
 author: Allison
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Authored by Allison, this post details the public preview of Anthropic’s Claude Opus 4.1 in GitHub Copilot, offering improved AI capabilities for Copilot Enterprise and Pro+ users.<!--excerpt_end-->
 

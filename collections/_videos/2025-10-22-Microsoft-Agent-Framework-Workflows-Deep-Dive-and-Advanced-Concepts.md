@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=KQ09sMHeFQY
 title: 'Microsoft Agent Framework Workflows: Deep Dive and Advanced Concepts'
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Developer leads a comprehensive walkthrough of Microsoft Agent Framework Workflows, featuring insights from Evan Mattson and Victor Dibia on workflow orchestration, advanced features, and feedback from the developer community.<!--excerpt_end-->
 

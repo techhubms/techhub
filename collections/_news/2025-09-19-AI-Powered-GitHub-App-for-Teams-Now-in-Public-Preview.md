@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/microsoft365dev/copilot-powered-github-app-for-teams-preview/
 title: AI-Powered GitHub App for Teams Now in Public Preview
 author: sbaynes
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 sbaynes introduces the new GitHub app for Teams, integrating GitHub Copilot for automated coding and DevOps tasks within Microsoft Teams. Learn how this AI-powered tool streamlines collaborative development in your workspace.<!--excerpt_end-->
 

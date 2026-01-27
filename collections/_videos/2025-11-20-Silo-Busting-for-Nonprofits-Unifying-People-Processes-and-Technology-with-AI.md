@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=1vQ0JxoYYQw
 title: 'Silo Busting for Nonprofits: Unifying People, Processes, and Technology with AI'
 author: Microsoft Events
@@ -19,6 +19,7 @@ tags:
 - Skilling
 section_names:
 - ai
+primary_section: ai
 ---
 Presented by Bob Benoit and Colin Corbin at Microsoft Ignite, this session explores how nonprofits are accelerating AI transformation through unified data strategies and targeted skilling, illustrating success with solutions like Microsoft Copilot.<!--excerpt_end-->
 

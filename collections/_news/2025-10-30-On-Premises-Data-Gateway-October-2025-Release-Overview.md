@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-october-2025-release/
 title: On-Premises Data Gateway October 2025 Release Overview
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog shares technical updates and bug fixes for the October 2025 release of the on-premises data gateway, detailing new compatibility and data integration features.<!--excerpt_end-->
 

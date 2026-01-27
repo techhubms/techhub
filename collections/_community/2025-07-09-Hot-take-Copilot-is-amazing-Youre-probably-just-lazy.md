@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1lvt549/hot_take_copilot_is_amazing_youre_probably_just/
 title: Hot take - Copilot is amazing! You're probably just lazy.
 author: shifty303
@@ -20,6 +20,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, shifty303, an experienced enterprise developer, discusses their hands-on use of GitHub Copilot and Claude 4, highlighting how expertise and thoughtful planning are essential when leveraging AI tools for software development. The author offers practical advice on prompt crafting, solution architecture, and avoiding common pitfalls encountered by less experienced developers.<!--excerpt_end-->
 

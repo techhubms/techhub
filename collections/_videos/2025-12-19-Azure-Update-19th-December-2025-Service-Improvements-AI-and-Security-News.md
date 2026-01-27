@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=mk6vwol-Za0
 title: 'Azure Update - 19th December 2025: Service Improvements, AI, and Security News'
 author: John Savill's Technical Training
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 John Savill presents the Azure Update for December 19th, 2025, covering recent Azure features, security enhancements, and new AI developments. This video, infused with holiday spirit, guides you through key improvements and what's new in the Azure ecosystem.<!--excerpt_end-->
 

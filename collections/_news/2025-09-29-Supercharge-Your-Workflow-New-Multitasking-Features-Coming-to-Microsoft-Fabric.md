@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/supercharge-your-workflow-new-multitasking-features-coming-to-fabric/
 title: 'Supercharge Your Workflow: New Multitasking Features Coming to Microsoft Fabric'
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 - Workflow Optimization
 section_names:
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog highlights new developer-focused multitasking features and UI improvements to the Fabric experience. The post discusses workflow optimizations designed for technical users managing analytics and data engineering projects.<!--excerpt_end-->
 

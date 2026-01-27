@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-06-spark-improvements-enhanced-reliability-seed-data-and-performance-updates
 title: 'Spark Updates: Enhanced Reliability, Seed Data, and Improved Performance'
 author: Allison
@@ -18,6 +18,7 @@ tags:
 - Workflow Reliability
 section_names:
 - devops
+primary_section: devops
 ---
 Allison discusses recent Spark updates delivered by GitHub, focusing on reliability, seed data prepopulation, performance enhancements, and user experience improvements for app developers.<!--excerpt_end-->
 

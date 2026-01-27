@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-add-an-mcp-tool-to-your-azure-foundry-agent-using-dynamic/ba-p/4468844
 title: How to Integrate MCP Tools with Azure AI Foundry Agents Using Dynamic Sessions on Azure Container Apps
 author: jeffmartinez
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 jeffmartinez explains step-by-step how to leverage Azure Container Apps dynamic sessions with MCP capabilities, integrating them as remote tools in Azure AI Foundry agents for secure, interactive shell command execution.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/optimizing-large-scale-ai-performance-with-pretraining/ba-p/4445273
 title: Optimizing Large-Scale AI Performance with Pretraining Validation on a Single Azure ND GB200 v6
 author: HugoAffaticati
@@ -35,6 +35,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Authored by Mishty Dhekial and Hugo Affaticati, this analysis explores single-VM benchmarking of the Llama3 8B model on Azure ND GB200 v6 using NVIDIA NeMo framework, offering concrete techniques and recommendations for optimizing large-scale AI training.<!--excerpt_end-->
 

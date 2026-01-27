@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/write-better-commit-messages-with-github-copilot.html
 title: Write Better Commit Messages with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -19,6 +19,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels outlines practical strategies for using GitHub Copilot to write effective commit messages, focusing on tips developers can immediately apply to improve code documentation and collaboration.<!--excerpt_end-->
 

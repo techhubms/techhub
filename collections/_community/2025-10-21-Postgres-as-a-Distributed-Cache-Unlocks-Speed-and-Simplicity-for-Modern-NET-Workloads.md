@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/postgres-as-a-distributed-cache-unlocks-speed-and-simplicity-for/ba-p/4462139
 title: Postgres as a Distributed Cache Unlocks Speed and Simplicity for Modern .NET Workloads
 author: JaredMeade
@@ -22,6 +22,7 @@ tags:
 - Write Ahead Logging
 section_names:
 - coding
+primary_section: coding
 ---
 JaredMeade demonstrates how .NET developers can use Microsoft.Extensions.Caching.Postgres to implement distributed caching with Postgres, highlighting performance, configuration flexibility, and seamless integration.<!--excerpt_end-->
 

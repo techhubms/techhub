@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-23-organization-custom-properties-are-now-available-in-public-preview
 title: Streamlining Enterprise Governance with GitHub Organization Custom Properties
 author: Allison
@@ -23,6 +23,7 @@ tags:
 - Targeting
 section_names:
 - devops
+primary_section: devops
 ---
 Allison shares news about GitHub's new organization custom properties, helping enterprise administrators manage organizational metadata for better policy targeting and compliance automation.<!--excerpt_end-->
 

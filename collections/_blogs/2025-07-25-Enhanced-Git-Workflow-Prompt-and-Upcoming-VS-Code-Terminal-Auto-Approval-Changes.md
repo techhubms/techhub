@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://r-vm.com/improved-git-workflow-custom-prompt-upcoming-vscode-change-warning.html
 title: Enhanced Git Workflow Prompt and Upcoming VS Code Terminal Auto-Approval Changes
 author: Reinier van Maanen
@@ -32,6 +32,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this post, Reinier van Maanen details his improved Git workflow prompt, VS Code and GitHub Copilot Chat integration, and provides a warning about breaking changes to the terminal auto-approval configuration coming to VS Code.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-23-agents-page-set-the-base-branch-for-github-copilot-coding-agent-tasks
 title: 'Agents Page Update: Choose Base Branch for GitHub Copilot Coding Agent Tasks'
 author: Allison
@@ -18,6 +18,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison outlines the latest GitHub Copilot coding agent update, letting users designate a base branch for delegated tasks—supporting advanced branching workflows directly from the Agents page.<!--excerpt_end-->
 

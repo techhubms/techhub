@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=pMFnaPg3TTQ
 title: Powering Modern Cloud Workloads with Azure Compute
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents a deep dive into Azure Compute innovations at Ignite 2025, featuring Stefanie Lemon and Max Uritsky, highlighting VM advancements and secure, AI-optimized cloud workloads.<!--excerpt_end-->
 

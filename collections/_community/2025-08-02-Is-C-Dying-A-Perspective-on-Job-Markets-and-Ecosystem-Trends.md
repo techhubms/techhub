@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mfm25a/is_c_dying/
 title: Is C# Dying? A Perspective on Job Markets and Ecosystem Trends
 author: OnionDeluxe
@@ -23,6 +23,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 OnionDeluxe shares insights on the perceived decline of C#’s relevance in today’s job market, exploring the shift in language and tool preferences in engineering roles.<!--excerpt_end-->
 

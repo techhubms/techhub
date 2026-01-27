@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=AAgdMhftj8w
 title: 'Agent Framework: Building Blocks for the Next Generation of AI Agents'
 author: Microsoft Developer
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Microsoft Developer presents Agent Framework, a new open source SDK for building and orchestrating multi-agent AI systems. The session, featuring Jorge Arteiro, Evan Mattson, Elijah Straight, Eric Zhu, and Victor Dibia, covers core features, migration from Semantic Kernel and AutoGen, and ways to contribute.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-copilot-observability-agent-intelligent-investigations/ba-p/4469719
 title: Intelligent Troubleshooting with Azure Copilot Observability Agent
 author: EfratNauerman
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 EfratNauerman shares an overview of the Azure Copilot observability agent, explaining its AI-powered approach to diagnostic investigations and how it enhances troubleshooting, visibility, and recovery across the Azure stack.<!--excerpt_end-->
 

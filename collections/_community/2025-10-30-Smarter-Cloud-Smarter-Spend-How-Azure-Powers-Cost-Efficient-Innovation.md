@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/finops-blog/smarter-cloud-smarter-spend-how-azure-powers-cost-efficient/ba-p/4465687
 title: 'Smarter Cloud, Smarter Spend: How Azure Powers Cost-Efficient Innovation'
 author: kyleikeda
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 kyleikeda breaks down insights from a Forrester TEI study, showing how organizations can leverage Azure’s native tools and AI solutions to optimize cloud costs and drive innovation.<!--excerpt_end-->
 

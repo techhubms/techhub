@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 14
 date: 2023-05-01 00:00:00 +00:00
 author: Xebia
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 XPRT Magazine 14 explores digital transformation, the rise of AI and ChatGPT, cloud security, Blazor migrations, CI/CD workflows, load testing, identity management, and more. This issue provides practical strategies and technical insights for navigating modern software engineering and security challenges.
 <!--excerpt_end-->

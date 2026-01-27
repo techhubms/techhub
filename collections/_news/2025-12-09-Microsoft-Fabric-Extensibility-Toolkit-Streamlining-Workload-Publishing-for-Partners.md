@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-toolkit-publishing-workloads-announcements/
 title: 'Microsoft Fabric Extensibility Toolkit: Streamlining Workload Publishing for Partners'
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog shares new features in the Fabric Extensibility Toolkit, guiding partners through the publishing and validation of workloads for the Fabric platform.<!--excerpt_end-->
 

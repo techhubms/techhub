@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/bridging-the-gap-automate-warehouse-sql-endpoint-deployment-in-microsoft-fabric/
 title: Automating Warehouse and SQL Endpoint Deployment in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ section_names:
 - azure
 - devops
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details automation strategies by the Microsoft Fabric team for deploying complex data warehouse and SQL analytics endpoint architectures, focusing on dependency handling, limitations, and bridge solutions currently available.<!--excerpt_end-->
 

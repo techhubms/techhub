@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=O4grrA_xqhc
 title: AI-Driven Insights and Analytics with Microsoft Fabric and Power BI
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - ml
+primary_section: ai
 ---
 Microsoft Events showcases how Lada Hill, Amir Jafari, and Maya Shenhav explain leveraging Microsoft Fabric and Power BI to deliver AI-driven analytics and empower business teams with connected, trusted insights.<!--excerpt_end-->
 

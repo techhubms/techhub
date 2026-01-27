@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/introducing-deep-research-in-azure-ai-foundry-agent-service/
 title: Introducing Deep Research in Azure AI Foundry Agent Service
 author: Yina Arenas
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Authored by Yina Arenas, this article introduces Deep Research in Azure AI Foundry Agent Service, detailing its features and benefits for enterprise AI-driven research automation using API and SDK integrations.<!--excerpt_end-->
 

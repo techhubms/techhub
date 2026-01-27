@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/zero-trust-kubernetes-enforcing-security-multi-tenancy-with/ba-p/4466646
 title: Zero-Trust Enforcement and Multi-Tenancy Security in Kubernetes with Custom Admission Webhooks on AKS
 author: divyaan
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 divyaan demonstrates practical approaches to enforcing Zero Trust and multi-tenancy in Kubernetes using custom admission webhooks on AKS, with code examples, Azure integrations, and actionable security policies.<!--excerpt_end-->
 

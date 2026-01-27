@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=2p1D29zJdBI
 title: Five Techniques to Automate Workflows Using GitHub Actions
 author: GitHub
@@ -22,6 +22,7 @@ tags:
 - Workflow Automation
 section_names:
 - devops
+primary_section: devops
 ---
 April Yoho from GitHub demonstrates five effective methods to automate development workflows with GitHub Actions, delivering actionable insights for developers and teams.<!--excerpt_end-->
 

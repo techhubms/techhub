@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xRApEkWYsq4
 title: Build Enterprise Apps with C3 Agentic AI Platform and Microsoft Azure
 author: Microsoft Events
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Events presents Adrian Rami’s demo at Ignite, showcasing how to build enterprise AI applications on the C3 Agentic AI Platform with Microsoft Azure and Fabric, using both low-code and full-code workflows.<!--excerpt_end-->
 

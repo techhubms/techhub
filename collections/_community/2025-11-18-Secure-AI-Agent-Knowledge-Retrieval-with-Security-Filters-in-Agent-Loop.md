@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/secure-ai-agent-knowledge-retrieval-introducing-security-filters/ba-p/4467561
 title: Secure AI Agent Knowledge Retrieval with Security Filters in Agent Loop
 author: harimehta
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 harimehta explains how to create secure, permission-aware AI agents within Azure Logic Apps by leveraging Agent Loop and Azure AI Search to enforce document-level access controls for Retrieval-Augmented Generation workflows.<!--excerpt_end-->
 

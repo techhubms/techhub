@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/exploring-the-dotnet-boot-process-via-host-tracing/
 title: Exploring the .NET Boot Process via Host Tracing
 author: Andrew Lock
@@ -28,6 +28,7 @@ tags:
 - Trusted Platform Assemblies
 section_names:
 - coding
+primary_section: coding
 ---
 Andrew Lock provides a technical walkthrough exploring .NET's boot process using host tracing, offering developers step-by-step insights into muxer, hostfxr, and hostpolicy.dll components.<!--excerpt_end-->
 

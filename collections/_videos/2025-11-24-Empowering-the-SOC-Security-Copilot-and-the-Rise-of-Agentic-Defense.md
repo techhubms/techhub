@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=SiF5YDHaw6Y
 title: 'Empowering the SOC: Security Copilot and the Rise of Agentic Defense'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 This Microsoft Ignite session, featuring Cristina Da Gama and Corina Feuerstein, highlights how Security Copilot and agentic AI are transforming the Security Operations Center, offering concrete demos and platform updates for security professionals.<!--excerpt_end-->
 

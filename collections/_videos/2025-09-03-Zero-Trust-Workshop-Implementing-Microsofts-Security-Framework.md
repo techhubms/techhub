@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xVWr1ml47_g
 title: "Zero Trust Workshop: Implementing Microsoft's Security Framework"
 author: John Savill's Technical Training
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 John Savill presents a comprehensive Zero Trust workshop, offering actionable steps and tools for implementing Microsoft's security model. The session covers core principles, NIST mappings, and integration with Entra, Intune, and Sentinel.<!--excerpt_end-->
 

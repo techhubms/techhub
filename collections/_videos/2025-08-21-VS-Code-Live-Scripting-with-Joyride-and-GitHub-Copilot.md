@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Nt1p6yreAUU
 title: 'VS Code Live: Scripting with Joyride and GitHub Copilot'
 author: Visual Studio Code
@@ -19,6 +19,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code presents a live session with Liam Hampton and Peter Strömberg, focusing on using Joyride and GitHub Copilot to script and automate VS Code directly as you work.<!--excerpt_end-->
 

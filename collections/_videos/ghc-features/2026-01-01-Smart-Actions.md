@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Smart Actions
 author: TBD
@@ -12,6 +12,7 @@ tags: []
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This content demonstrates GitHub Copilot's Smart Actions feature. AI-suggested workflow improvements and automation ideas<!--excerpt_end-->
 

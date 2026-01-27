@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-to-build-reliable-ai-workflows-with-agentic-primitives-and-context-engineering/
 title: How to Build Reliable AI Workflows with Agentic Primitives and Context Engineering
 author: Daniel Meppiel
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Daniel Meppiel presents an in-depth framework for building reliable, repeatable AI workflows using agentic primitives, context engineering, and structured prompt techniques, highlighting integration with GitHub Copilot and modern developer tools.<!--excerpt_end-->
 

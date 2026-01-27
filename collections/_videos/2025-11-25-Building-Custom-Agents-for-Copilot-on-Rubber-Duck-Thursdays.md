@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=-eRjenGV2OM
 title: Building Custom Agents for Copilot on Rubber Duck Thursdays
 author: GitHub
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub hosts a live episode of Rubber Duck Thursdays, where viewers join to learn about building custom agents and leveraging GitHub Copilot for tailored developer workflows, presented by the GitHub team.<!--excerpt_end-->
 

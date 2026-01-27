@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/introducing-azure-storage-discovery-transform-data-management-with-storage-insights/
 title: 'Introducing Azure Storage Discovery: Enterprise-Wide Insights for Azure Blob Storage'
 author: Aung Oo
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Authored by Aung Oo, this blog post announces Azure Storage Discovery, a new Azure service for managing and analyzing enterprise Blob Storage. Learn about its features, Copilot integration, and user experiences.<!--excerpt_end-->
 

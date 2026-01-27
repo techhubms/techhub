@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/understanding-storage-account-replication-downtime/m-p/4479787#M22386
 title: Minimizing Downtime When Migrating Azure Storage Account Replication
 author: LouisT
@@ -24,6 +24,7 @@ tags:
 - UK West
 section_names:
 - azure
+primary_section: azure
 ---
 LouisT engages the community on how to migrate an Azure Storage Account from LRS to GZRS while minimizing downtime and ensuring seamless failover, raising important questions on migration impact and infrastructure options.<!--excerpt_end-->
 

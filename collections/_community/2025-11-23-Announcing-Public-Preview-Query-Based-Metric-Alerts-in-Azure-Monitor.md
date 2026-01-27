@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-public-preview-of-query-based-metric-alerts-in-azure/ba-p/4469723
 title: 'Announcing Public Preview: Query-Based Metric Alerts in Azure Monitor'
 author: yairgil
@@ -22,6 +22,7 @@ tags:
 - Resource Management
 section_names:
 - azure
+primary_section: azure
 ---
 yairgil introduces the new public preview feature of query-based metric alerts in Azure Monitor, showcasing advanced monitoring and alerting options for Azure users and developers.<!--excerpt_end-->
 

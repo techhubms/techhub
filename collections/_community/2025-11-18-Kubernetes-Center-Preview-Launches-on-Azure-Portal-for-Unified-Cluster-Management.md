@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-kubernetes-center-preview-on-azure-portal/ba-p/4471110
 title: Kubernetes Center (Preview) Launches on Azure Portal for Unified Cluster Management
 author: Harsha_Nair
@@ -23,6 +23,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Harsha_Nair introduces Kubernetes Center on Azure Portal, outlining how it unifies management, security, and monitoring for Kubernetes clusters, bringing actionable insights and streamlined workflows to Azure users.<!--excerpt_end-->
 

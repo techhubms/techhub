@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xRTgusuYm8k
 title: 'Blazor Internship Demo Fest: New Components and Enhanced Navigation'
 author: dotnet
@@ -20,6 +20,7 @@ tags:
 - State Persistence
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet hosts a Blazor community standup, featuring Roland Vizner's internship demos of new Blazor features and enhancements, with insights from Daniel Roth and Javier Calvarro Nelson.<!--excerpt_end-->
 

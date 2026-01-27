@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/host-chatgpt-apps-on-azure-functions/ba-p/4480696
 title: 'How to Host ChatGPT Apps on Azure Functions: Developer Guide'
 author: lily-ma
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Lily Ma presents a comprehensive developer guide for building and hosting ChatGPT apps on Azure Functions, covering architecture, integration, and deployment tips.<!--excerpt_end-->
 

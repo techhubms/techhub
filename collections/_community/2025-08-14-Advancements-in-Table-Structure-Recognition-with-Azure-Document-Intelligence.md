@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-ai-foundry-blog/unveiling-the-next-generation-of-table-structure-recognition/ba-p/4443684
 title: Advancements in Table Structure Recognition with Azure Document Intelligence
 author: jppark
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 jppark explores the latest technical advancements in Azure Document Intelligence for precise and fast table structure recognition, examining new model architectures, GPU acceleration, and synthetic data training.<!--excerpt_end-->
 

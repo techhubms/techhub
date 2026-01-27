@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_no-question-that-nurses-are-the-heartbeat-activity-7384590573808234496-aaYh
 title: Microsoft Introduces Dragon Copilot Ambient AI Experience for Nursing Workflows
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke shares news of Microsoft’s launch of Dragon Copilot, an AI-powered ambient experience designed to streamline nursing workflows and reduce administrative tasks so nurses can focus more on patient care.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=WgBC8M3ixt8
 title: Real Stories of AI Transformation in Local Government
 author: Microsoft Events
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events brings together government and city leaders to share real-life experiences of digital transformation, focusing on AI, data, and citizen services. Speakers include Brett Howard, Michael Makstman, and Angel Smith.<!--excerpt_end-->
 

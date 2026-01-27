@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mhd7tp/i_want_to_test_my_program_but_couldnt_figure_out/
 title: 'Seeking Advice: Testing Individual C# Classes Without Running the Entire Program'
 author: RutabagaJumpy3956
@@ -17,6 +17,7 @@ tags:
 - Project Structure
 section_names:
 - coding
+primary_section: coding
 ---
 RutabagaJumpy3956 shares their challenges with testing C# code segments without executing the entire program and seeks advice from the community about better approaches.<!--excerpt_end-->
 

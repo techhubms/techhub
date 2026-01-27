@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/decoupling-default-semantic-models-for-existing-in-microsoft-fabric/
 title: Decoupling Default Semantic Models for Existing Items in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 - Workspace Management
 section_names:
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog explains the migration of default semantic models to standalone items, with guidance on using the Fabric API to manage and remove unused models. Learn how these changes empower users with finer control over data modeling. Authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 

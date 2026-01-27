@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/your-next-secrets-leak-is-hiding-in-ai-coding-tools/
 title: Your Next Secrets Leak is Hiding in AI Coding Tools
 author: Asaolu Elijah
@@ -39,6 +39,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Asaolu Elijah examines the surge in secrets leakage fueled by AI coding tools within DevOps workflows, outlining the primary vulnerabilities and offering actionable guidance for platform and security teams.<!--excerpt_end-->
 

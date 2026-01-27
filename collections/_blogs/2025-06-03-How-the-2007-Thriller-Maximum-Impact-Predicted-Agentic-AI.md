@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://roadtoalm.com/2025/06/03/how-a-2007-thriller-maximum-impact-predicted-agentic-ai-without-knowing-it/
 title: How the 2007 Thriller Maximum Impact Predicted Agentic AI
 author: Rene van Osnabrugge
@@ -22,6 +22,7 @@ tags:
 - Uncategorized
 section_names:
 - ai
+primary_section: ai
 ---
 Rene van Osnabrugge reflects on how Jack Henderson’s 2007 thriller Maximum Impact foreshadowed the arrival of agentic AI, discussing how real-world advances such as ChatGPT, GitHub Spark, and Microsoft Copilot Studio now fulfill that vision.<!--excerpt_end-->
 

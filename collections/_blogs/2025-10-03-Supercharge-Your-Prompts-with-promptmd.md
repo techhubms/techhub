@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/supercharge-your-prompts-with-prompt-md.html
 title: Supercharge Your Prompts with .prompt.md
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels shows how to supercharge developer workflows by using .prompt.md files with GitHub Copilot, making prompts reusable and coding more efficient.<!--excerpt_end-->
 

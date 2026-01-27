@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/key-trends-driving-software-engineering-in-2025/
 title: Key Trends Driving Software Engineering in 2025
 author: Dellenny
@@ -32,6 +32,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 Dellenny outlines core trends for software engineers in 2025—from AI-powered development and DevSecOps to ethical and sustainable engineering—providing practitioners with the strategies and skills they should prioritize.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-cloud-to-chip-building-smarter-ai-at-the-edge-with-windows/ba-p/4459582
 title: 'Building Smarter Edge AI with Windows AI PCs: The Edge AI for Beginners Curriculum'
 author: Lee_Stott
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Lee_Stott presents a comprehensive hands-on introduction to Edge AI for Beginners, detailing how developers can deploy, optimize, and scale AI models on Windows AI PCs and devices using Microsoft’s ecosystem of tools.<!--excerpt_end-->
 

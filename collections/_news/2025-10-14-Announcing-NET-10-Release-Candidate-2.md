@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-10-rc-2/
 title: Announcing .NET 10 Release Candidate 2
 author: .NET Team
@@ -31,6 +31,7 @@ tags:
 - Xcode 26
 section_names:
 - coding
+primary_section: coding
 ---
 The .NET Team introduces .NET 10 Release Candidate 2, emphasizing final quality and stabilization improvements for developers across platforms and frameworks.<!--excerpt_end-->
 

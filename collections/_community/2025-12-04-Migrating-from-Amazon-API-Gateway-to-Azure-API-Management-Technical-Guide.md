@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/migrate-from-amazon-api-gateway-to-azure-api-management/ba-p/4471524
 title: 'Migrating from Amazon API Gateway to Azure API Management: Technical Guide'
 author: dan_lepow
@@ -27,6 +27,7 @@ tags:
 - WAF Integration
 section_names:
 - azure
+primary_section: azure
 ---
 Dan Lepow provides a detailed migration guide for teams moving from Amazon API Gateway to Azure API Management, offering technical mapping and step-by-step planning for architects and engineers.<!--excerpt_end-->
 

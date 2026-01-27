@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/ai-dev-days-december-2025/
 title: 'AI Dev Days: Virtual Event for Developers on Azure, GitHub, and AI with Microsoft Reactor'
 author: Jenn Cockrell
@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Jenn Cockrell introduces AI Dev Days, a virtual event from Microsoft Reactor and Foundry for developers to skill up with the latest in Azure, AI, GitHub Copilot, and agent-based workflows.<!--excerpt_end-->
 

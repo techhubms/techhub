@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dMPMqFmnJ4A
 title: 'Azure Update - 26th September 2025: Service Retirements, New Features, and GitHub Copilot Highlights'
 author: John Savill's Technical Training
@@ -33,6 +33,7 @@ section_names:
 - azure
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 John Savill's Technical Training brings an in-depth Azure update for September 26th, 2025, highlighting vital service retirements, new Azure capabilities, GitHub Copilot usage, and actionable news for cloud practitioners.<!--excerpt_end-->
 

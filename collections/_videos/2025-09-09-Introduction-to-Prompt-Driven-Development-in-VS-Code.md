@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fzYN_kgl-OM
 title: Introduction to Prompt-Driven Development in VS Code
 author: Visual Studio Code
@@ -30,6 +30,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this video, Visual Studio Code (featuring Reynald Adolphe) showcases step-by-step techniques for prompt-driven development, highlighting how AI and GitHub Copilot features empower software developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/latest-dora-report-from-google-surfaces-significant-ai-adoption/
 title: Latest DORA Report from Google Surfaces Significant AI Adoption
 author: Mike Vizard
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard summarizes Google's 2025 DORA survey, examining strong AI adoption in IT, correlations with engineering practices, and key takeaways for DevOps teams and leaders.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/treat-your-ai-prompts-like-code.html
 title: Treat Your AI Prompts Like Code
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -22,6 +22,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels explains why developers should manage AI prompts like code—using Git, code reviews, and clear documentation for continuous improvement.<!--excerpt_end-->
 

@@ -23,6 +23,7 @@ tags:
 - Sustainable Growth
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke covers Microsoft's collaboration with ESCAP, CCDKM, STOU, and depa to develop AI skills among civil society leaders in Thailand, focusing on responsible AI usage and digital empowerment.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=lQrr1M7AeiY
 title: Manage All GitHub Copilot Agents with Mission Control
 author: GitHub
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this GitHub Checkout episode, Andrea Griffiths interviews Ellie Bennett on the new GitHub Copilot Mission Control feature, highlighting centralized management and real-time steering of coding agents.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-to-use-hyper-v-with-bitlocker-without-constant-recovery-prompts/
 title: How to Use Hyper-V with BitLocker Without Constant Recovery Prompts
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 - WSL2
 section_names:
 - security
+primary_section: security
 ---
 Dellenny provides a practical guide on resolving repeated BitLocker recovery prompts when using Hyper-V on Windows, detailing secure setup and TPM configuration strategies.<!--excerpt_end-->
 

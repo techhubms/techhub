@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-02-agents-page-for-copilot-coding-agent-in-public-preview
 title: Agents page for GitHub Copilot coding agent
 author: Allison
@@ -13,6 +13,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, Allison explores how the GitHub Copilot coding agent, recently unveiled in public preview, revolutionizes developer workflows. <!--excerpt_end--> Developers can now leverage this AI-powered agent to address a variety of challenges. By delegating repetitive or time-consuming tasks such as tackling technical debt, fixing bugs, and implementing new features, teams can increase efficiency and focus on higher-level problem solving.
 

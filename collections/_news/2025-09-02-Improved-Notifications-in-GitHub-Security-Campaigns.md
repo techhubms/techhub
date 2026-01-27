@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-01-improved-notifications-in-security-campaigns
 title: Improved Notifications in GitHub Security Campaigns
 author: Allison
@@ -19,6 +19,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Allison provides an update on GitHub's security campaigns, introducing enhanced notifications for developers and highlighting integration with GitHub Copilot Autofix as part of the platform's security and collaboration improvements.<!--excerpt_end-->
 

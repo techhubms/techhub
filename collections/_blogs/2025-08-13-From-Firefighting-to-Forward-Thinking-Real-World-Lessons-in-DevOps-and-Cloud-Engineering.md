@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/from-firefighting-to-forward-thinking-my-real-world-lessons-in-devops-and-cloud-engineering/?utm_source=rss&utm_medium=rss&utm_campaign=from-firefighting-to-forward-thinking-my-real-world-lessons-in-devops-and-cloud-engineering
 title: 'From Firefighting to Forward-Thinking: Real-World Lessons in DevOps and Cloud Engineering'
 author: Bhanuteja Somarouthu
@@ -37,6 +37,7 @@ tags:
 - Terraform
 section_names:
 - devops
+primary_section: devops
 ---
 Bhanuteja Somarouthu reflects on a decade of DevOps and cloud engineering, distilling practical lessons on CI/CD, infrastructure as code, observability, and resilient system design for technical practitioners.<!--excerpt_end-->
 

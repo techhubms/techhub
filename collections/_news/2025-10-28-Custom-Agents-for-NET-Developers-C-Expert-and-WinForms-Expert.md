@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/introducing-custom-agents-for-dotnet-developers-csharp-expert-winforms-expert/
 title: 'Custom Agents for .NET Developers: C# Expert and WinForms Expert'
 author: Wendy Breiding (SHE/HER)
@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Wendy Breiding presents experimental custom GitHub Copilot agents for .NET developers—C# Expert and WinForms Expert—designed to enhance code quality, architecture, and workflow in C# and WinForms projects.<!--excerpt_end-->
 

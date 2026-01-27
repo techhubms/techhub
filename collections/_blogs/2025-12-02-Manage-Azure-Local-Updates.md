@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/12/manage-azure-local-updates/
 title: Manage Azure Local Updates
 author: Thomas Maurer
@@ -24,6 +24,7 @@ tags:
 - Virtualization
 section_names:
 - azure
+primary_section: azure
 ---
 Thomas Maurer shares practical steps for managing and updating Azure Local instances via the Azure Portal, focusing on workflows, monitoring, and hybrid cloud best practices.<!--excerpt_end-->
 

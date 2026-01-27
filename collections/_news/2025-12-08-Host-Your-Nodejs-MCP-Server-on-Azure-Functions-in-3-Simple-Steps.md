@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/host-your-node-js-mcp-server-on-azure-functions-in-3-simple-steps
 title: Host Your Node.js MCP Server on Azure Functions in 3 Simple Steps
 author: Yohan Lasorsa
@@ -21,6 +21,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Yohan Lasorsa explains how to deploy a Node.js MCP server to Azure Functions using the official Anthropic MCP SDK, including practical advice for automation, infrastructure setup, and cost management.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ThGXQlnS8Lo
 title: Building Connected Managed Agentic Apps with Microsoft Foundry (Ignite BRK113)
 author: Microsoft Events
@@ -32,6 +32,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Presented by Microsoft Events, this Ignite session, featuring Robert Finlayson, Shawn Henry, Mike Hulme, and Balan Subramanian, demonstrates how Microsoft Foundry empowers developers to build, integrate, and govern scalable agentic AI applications.<!--excerpt_end-->
 

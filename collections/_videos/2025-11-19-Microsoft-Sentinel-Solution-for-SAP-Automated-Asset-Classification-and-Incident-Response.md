@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ySUeiUmv-ak
 title: 'Microsoft Sentinel Solution for SAP: Automated Asset Classification and Incident Response'
 author: Microsoft Events
@@ -32,6 +32,7 @@ tags:
 - Technical
 section_names:
 - security
+primary_section: security
 ---
 Microsoft Events presents a session detailing updates for the Microsoft Sentinel Solution for SAP, key protected asset categories, automated classification rules, and insights from a CISO roundtable on crisis management.<!--excerpt_end-->
 

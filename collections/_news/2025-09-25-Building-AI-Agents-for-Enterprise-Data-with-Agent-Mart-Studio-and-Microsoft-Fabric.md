@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/27082/
 title: Building AI Agents for Enterprise Data with Agent Mart Studio and Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Authored by the Microsoft Fabric Blog team, this guide explains how Venu Amancha and Roy Hasson demonstrate using Agent Mart Studio on Microsoft Fabric to enable business users to create and deploy AI agents directly on enterprise data stored in OneLake.<!--excerpt_end-->
 

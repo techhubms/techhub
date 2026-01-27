@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=LnzvpisAkcs
 title: 'Ignite BRK1706: Build and Manage AI Apps with Microsoft Foundry'
 author: Microsoft Developer
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Presented by Microsoft Developer, this Ignite session delves into building and managing modular AI apps with Microsoft Foundry, focusing on unified agent workflows and enterprise-level capabilities.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=b88tJ0hdTSQ
 title: Building and Shipping Edge AI Apps with Microsoft Foundry
 author: Microsoft Events
@@ -30,6 +30,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events delivers an advanced overview of Edge AI development with Microsoft Foundry at Ignite 2025, guiding developers on building and deploying on-device and edge AI apps.<!--excerpt_end-->
 

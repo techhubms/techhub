@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/ff80HElVHAI
 title: Getting Started with Azure AI Foundry
 author: Microsoft Developer
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer, with Seth Juarez, provides insights for developers on getting started with Azure AI Foundry, including model selection and building interactive agents.<!--excerpt_end-->
 

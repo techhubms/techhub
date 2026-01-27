@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=_4DACLSHtFg
 title: Partners Accelerate Media Innovation with AI Agents and Microsoft Cloud
 author: Microsoft Events
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events brings top media partners to Ignite 2025, showcasing real-world applications of Azure, Fabric, and generative AI in media innovation, featuring speakers Alessandra Antonelli, Tanya Khaiyanun, and Erik Ramberg.<!--excerpt_end-->
 

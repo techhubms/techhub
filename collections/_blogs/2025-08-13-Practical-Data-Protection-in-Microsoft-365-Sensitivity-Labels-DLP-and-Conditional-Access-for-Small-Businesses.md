@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/protecting-your-business-data-sensitivity-labels-dlp-and-conditional-access-explained-simply/
 title: 'Practical Data Protection in Microsoft 365: Sensitivity Labels, DLP, and Conditional Access for Small Businesses'
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 - Small Business IT
 section_names:
 - security
+primary_section: security
 ---
 Dellenny breaks down how small businesses can protect data in Microsoft 365 using sensitivity labels, DLP, and conditional access, providing clear steps and real-life analogies.<!--excerpt_end-->
 

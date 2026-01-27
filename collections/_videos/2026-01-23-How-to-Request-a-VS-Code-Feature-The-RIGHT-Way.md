@@ -21,6 +21,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 In this video, Reynald Adolphe demonstrates how to effectively request new features for Visual Studio Code directly from the editor, helping developers interact productively with the VS Code team.<!--excerpt_end-->
 

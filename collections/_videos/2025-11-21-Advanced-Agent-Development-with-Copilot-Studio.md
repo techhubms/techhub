@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FQfjBTR7nsQ
 title: Advanced Agent Development with Copilot Studio
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 - UI Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Scott Durow, at Microsoft Ignite 2025, presents a session for makers and developers on advanced agent development with Copilot Studio, focusing on orchestrating intelligent agents and automating real business processes.<!--excerpt_end-->
 

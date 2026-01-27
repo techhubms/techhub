@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/moving-the-logic-apps-designer-forward/ba-p/4469835
 title: 'Azure Logic Apps Designer Major Redesign: Phase I Public Preview'
 author: travisvu
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 travisvu details the Phase I public preview of the new Azure Logic Apps designer, covering key improvements such as draft mode, unified tool views, and developer-focused workflow enhancements.<!--excerpt_end-->
 

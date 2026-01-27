@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/itops-talk-blog/unlocking-flexibility-with-azure-files-provisioned-v2/ba-p/4443628
 title: Unlocking Flexibility with Azure Files Provisioned V2
 author: Pierre_Roman
@@ -22,6 +22,7 @@ tags:
 - Throughput
 section_names:
 - azure
+primary_section: azure
 ---
 Pierre Roman hosts an in-depth conversation with Will Gries about Azure Files Provisioned V2, detailing how this new billing model transforms cloud storage flexibility, performance, and cost predictability for Azure customers.<!--excerpt_end-->
 

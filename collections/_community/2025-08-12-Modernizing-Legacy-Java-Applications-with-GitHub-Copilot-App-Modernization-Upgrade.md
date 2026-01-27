@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/modernizing-legacy-java-project-using-github-copilot-app/ba-p/4440777
 title: Modernizing Legacy Java Applications with GitHub Copilot App Modernization Upgrade
 author: jorgebalderas
@@ -30,6 +30,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Jorge Balderas presents a practical guide to upgrading legacy Java applications using the GitHub Copilot App Modernization – Upgrade for Java extension, highlighting AI-driven automation and hands-on steps for developers.<!--excerpt_end-->
 

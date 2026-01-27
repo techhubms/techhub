@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/the-future-of-ai-developing-lacuna-an-agent-for-revealing-quiet/ba-p/4434633
 title: 'The Future of AI: Developing Lacuna – An Agent for Revealing Quiet Assumptions in Product Design'
 author: skeske
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 skeske shares insights into creating Lacuna—an agent built with Copilot Studio and Azure AI Foundry—designed to surface hidden assumptions in product decisions and foster reflection within engineering teams.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/project-pavilion-presence-at-kubecon-na-2025/ba-p/4472904
 title: "Microsoft's Project Pavilion Presence at KubeCon NA 2025: Supporting Open Source in Cloud Native Ecosystems"
 author: lexinadolski
@@ -30,6 +30,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 Lexi Nadolski reviews Microsoft's technical engagements at KubeCon NA 2025, featuring major open source collaborations and direct support for cloud-native development and Azure customers.<!--excerpt_end-->
 

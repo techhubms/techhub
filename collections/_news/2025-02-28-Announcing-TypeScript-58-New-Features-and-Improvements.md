@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8/
 title: 'Announcing TypeScript 5.8: New Features and Improvements'
 author: Daniel Rosenwasser
@@ -17,6 +17,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 Daniel Rosenwasser announces TypeScript 5.8, detailing new type system features, improved Node.js module interop, and important optimizations. This post guides TypeScript users through the latest enhancements and key behavioral updates.<!--excerpt_end-->
 

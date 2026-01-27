@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-may-2025/
 title: Azure SDK Release Highlights and Notes for May 2025
 author: Ronnie Geraghty
@@ -26,6 +26,7 @@ section_names:
 - coding
 - ai
 - security
+primary_section: ai
 ---
 Written by Ronnie Geraghty, this overview summarizes the Azure SDK May 2025 release, detailing new features, stable and beta libraries for multiple programming languages, and links to comprehensive release notes.<!--excerpt_end-->
 

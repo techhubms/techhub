@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/experience-the-new-visual-sql-audit-logs-configuration-in-fabric-warehouse/
 title: Experience the New Visual SQL Audit Logs Configuration in Fabric Warehouse
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces a new visual experience for configuring SQL Audit Logs in Fabric Data Warehouse, detailing improved audit management and compliance flexibility for data professionals.<!--excerpt_end-->
 

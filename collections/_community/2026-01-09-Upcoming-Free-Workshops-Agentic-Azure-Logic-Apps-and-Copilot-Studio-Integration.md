@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/upcoming-agentic-azure-logic-apps-workshops/ba-p/4484526
 title: 'Upcoming Free Workshops: Agentic Azure Logic Apps & Copilot Studio Integration'
 author: KentWeareMSFT
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 KentWeareMSFT invites users to join two free workshops dedicated to Azure Logic Apps and Copilot Studio integrations, focusing on agentic business process automation and enterprise connectivity.<!--excerpt_end-->
 

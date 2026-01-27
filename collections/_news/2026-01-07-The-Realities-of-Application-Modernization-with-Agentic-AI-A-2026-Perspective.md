@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/the-realities-of-application-modernization-with-agentic-ai-early-2026/
 title: 'The Realities of Application Modernization with Agentic AI: A 2026 Perspective'
 author: jkordick
@@ -26,6 +26,7 @@ tags:
 - Thought Leadership
 section_names:
 - ai
+primary_section: ai
 ---
 jkordick reflects on hands-on experiences with application modernization, highlighting the realistic challenges, the transformative role of agentic AI, and the necessity of human judgment for making deliberate modernization decisions.<!--excerpt_end-->
 

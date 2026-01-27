@@ -20,6 +20,7 @@ tags:
 - UI Improvements
 section_names:
 - devops
+primary_section: devops
 ---
 Allison introduces the updated GitHub pull request “Files Changed” experience, covering major improvements for code review, accessibility, and performance.<!--excerpt_end-->
 

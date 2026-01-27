@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fBjk4CQG6Hw
 title: Multi-Cloud Storage Migration with Azure Storage Mover
 author: John Savill's Technical Training
@@ -28,6 +28,7 @@ tags:
 - Storage
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill's Technical Training demonstrates how to migrate storage from AWS S3 to Azure using Azure Storage Mover, offering guidance on setup, required solutions, and monitoring migration jobs.<!--excerpt_end-->
 

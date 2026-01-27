@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/optimizing-costs-in-azure-practical-tips-for-beginners/
 title: Practical Cost Optimization Strategies for Microsoft Azure Beginners
 author: John Edward
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 John Edward offers actionable, beginner-focused strategies for optimizing cost control in Microsoft Azure, guiding readers through crucial tools and practices to avoid cloud billing surprises.<!--excerpt_end-->
 

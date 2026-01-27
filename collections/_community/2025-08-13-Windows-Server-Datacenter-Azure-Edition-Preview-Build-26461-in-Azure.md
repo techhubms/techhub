@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/windows-server-insiders/windows-server-datacenter-azure-edition-preview-build-26461-now/m-p/4442961#M4197
 title: 'Windows Server Datacenter: Azure Edition Preview Build 26461 in Azure'
 author: StaceyCL_RM
@@ -20,6 +20,7 @@ tags:
 - Windows Server Vnext
 section_names:
 - azure
+primary_section: azure
 ---
 StaceyCL_RM presents an overview of Windows Server vNext Datacenter: Azure Edition preview build 26461, now available for deployment and testing in Microsoft Azure, offering both Desktop and Core experiences.<!--excerpt_end-->
 

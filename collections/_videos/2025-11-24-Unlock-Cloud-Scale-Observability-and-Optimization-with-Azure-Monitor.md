@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=-IZ-PLSvDgU
 title: Unlock Cloud-Scale Observability and Optimization with Azure Monitor
 author: Microsoft Events
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Microsoft Events presenters Rahul Bagaria, Ritesh Kini, and Farzana Rahman deliver an advanced Ignite 2025 session on using Azure Monitor for AI-driven observability, cost optimization, and streamlined operations across cloud and hybrid environments.<!--excerpt_end-->
 

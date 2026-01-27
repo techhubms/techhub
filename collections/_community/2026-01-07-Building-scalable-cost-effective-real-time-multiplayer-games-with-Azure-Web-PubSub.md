@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-scalable-cost-effective-real-time-multiplayer-games/ba-p/4483584
 title: Building scalable, cost-effective real-time multiplayer games with Azure Web PubSub
 author: kevinguo
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 kevinguo shares how a game studio leveraged Azure Web PubSub to reimagine real-time multiplayer architectures, focusing on scalability, reliability, and cost-effective delivery at global scale.<!--excerpt_end-->
 

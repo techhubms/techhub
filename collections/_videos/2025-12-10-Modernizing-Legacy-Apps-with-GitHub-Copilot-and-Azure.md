@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=SXo5EaXNJl0
 title: Modernizing Legacy Apps with GitHub Copilot and Azure
 author: dotnet
@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 dotnet presents a fast-paced demonstration of GitHub Copilot’s modernization tools in Visual Studio, showing how developers can upgrade legacy code and migrate applications confidently to Azure.<!--excerpt_end-->
 

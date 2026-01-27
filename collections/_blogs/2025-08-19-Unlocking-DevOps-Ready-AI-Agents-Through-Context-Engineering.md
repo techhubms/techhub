@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/context-engineering-is-the-key-to-unlocking-ai-agents-in-devops/?utm_source=rss&utm_medium=rss&utm_campaign=context-engineering-is-the-key-to-unlocking-ai-agents-in-devops
 title: Unlocking DevOps-Ready AI Agents Through Context Engineering
 author: Harshil Shah
@@ -44,6 +44,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Harshil Shah discusses how context engineering empowers developers and AI agents to work together within DevOps. The article emphasizes strategies including context provisioning and real-time integration to boost automation and autonomy across the SDLC.<!--excerpt_end-->
 

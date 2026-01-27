@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=hCb1NY2c05k
 title: Vibe Code Your First MCP Server with GitHub Copilot
 author: Microsoft Developer
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer demonstrates how to use GitHub Copilot and MCP to build your first MCP server, explaining key concepts and showing hands-on coding in Visual Studio Code.<!--excerpt_end-->
 

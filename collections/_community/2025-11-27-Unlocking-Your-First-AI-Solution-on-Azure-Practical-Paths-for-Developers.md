@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/unlocking-your-first-ai-solution-on-azure-practical-paths-for/ba-p/4472327
 title: 'Unlocking Your First AI Solution on Azure: Practical Paths for Developers'
 author: JoshuaHuang
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Joshua Huang recaps the Microsoft Ignite 2025 SMB session, offering developers clear paths to launching their first AI solution on Azure—either by building with Foundry templates or buying a ready-made solution from the Marketplace.<!--excerpt_end-->
 

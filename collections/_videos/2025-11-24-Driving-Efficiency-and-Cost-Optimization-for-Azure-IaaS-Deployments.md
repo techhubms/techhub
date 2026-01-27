@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FJIWbOczakQ
 title: Driving Efficiency and Cost Optimization for Azure IaaS Deployments
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 - TCO Reduction
 section_names:
 - azure
+primary_section: azure
 ---
 Presented by Yuemin Lu, Rajeesh Ramachandran, and Sam Shteingart at Microsoft Ignite, this session details how organizations can leverage Azure IaaS to optimize infrastructure costs and drive efficiency, using new platform features and real-world examples.<!--excerpt_end-->
 

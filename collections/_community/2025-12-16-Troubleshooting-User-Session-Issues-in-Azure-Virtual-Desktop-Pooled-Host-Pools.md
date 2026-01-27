@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-virtual-desktop-pooled-sessions-ending-unexpectedly-and/m-p/4478548#M13967
 title: Troubleshooting User Session Issues in Azure Virtual Desktop (Pooled Host Pools)
 author: StormShadow007
@@ -22,6 +22,7 @@ tags:
 - Windows 11 Enterprise Multi Session
 section_names:
 - azure
+primary_section: azure
 ---
 StormShadow007 describes challenges with user session disconnects in Azure Virtual Desktop pooled environments, seeking advice on session tracking and cleanup—especially with FSLogix-enabled hosts.<!--excerpt_end-->
 

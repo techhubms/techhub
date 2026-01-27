@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dXUy9evg1yo
 title: 'AI Fine-Tuning in Microsoft Foundry: Building Production-Ready Agents'
 author: Microsoft Events
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events presents an advanced demo-driven session featuring Alicia Frame, Ramachandra Kota, and Omkar More. They explore fine-tuning in Microsoft Foundry for Azure OpenAI and open-source models, highlighting synthetic data strategies and AI-powered agent development.<!--excerpt_end-->
 

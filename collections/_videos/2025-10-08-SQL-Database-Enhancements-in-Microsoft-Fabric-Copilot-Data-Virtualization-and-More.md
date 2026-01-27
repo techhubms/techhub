@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=h7DhCqFArtc
 title: 'SQL Database Enhancements in Microsoft Fabric: Copilot, Data Virtualization, and More'
 author: Microsoft Developer
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 In this Data Exposed episode, Microsoft Developer explores new SQL database features in Microsoft Fabric, including Copilot, data virtualization, notebook integration, and backup/restore, as presented by Anna Hoffman.<!--excerpt_end-->
 

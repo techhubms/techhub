@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=1k2jyvmx3i0
 title: Building Real-World AI Agents with Agent Framework on .NET Live
 author: dotnet
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 In this .NET Live session, Vic Perdana, Katie Savage, and Maira Wenzel reveal how to use Agent Framework and Azure AI Foundry to create practical, interoperable AI agents. The demo highlights SemantiClip—an open-source project that automatically turns video content into blogs.<!--excerpt_end-->
 

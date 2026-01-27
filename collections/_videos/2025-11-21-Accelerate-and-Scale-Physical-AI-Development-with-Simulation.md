@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=RbVZNijijpo
 title: Accelerate and Scale Physical AI Development with Simulation
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Presented by Microsoft Events, this Ignite 2025 session examines how Microsoft Azure and NVIDIA accelerate physical AI and robotics development using simulation, digital twins, and advanced AI infrastructure.<!--excerpt_end-->
 

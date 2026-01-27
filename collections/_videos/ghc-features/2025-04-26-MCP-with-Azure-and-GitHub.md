@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/m6XBVRXfFN8
 title: MCP with Azure and GitHub
 author: Rob Bos
@@ -15,6 +15,7 @@ section_names:
 - ai
 - azure
 - github-copilot
+primary_section: github-copilot
 ---
 This video demonstrates GitHub Copilot's MCP with Azure and GitHub feature. Empower Agent Mode with extra context and capabilities by supercharging it with MCP servers. See how you can bring in extra information from Azure resources to add extra information to creating GitHub issues.<!--excerpt_end-->
 

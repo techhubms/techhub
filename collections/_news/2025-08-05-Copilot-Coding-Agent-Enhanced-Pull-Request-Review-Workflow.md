@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-05-copilot-coding-agent-improved-pull-request-review-experience
 title: 'Copilot Coding Agent: Enhanced Pull Request Review Workflow'
 author: Allison
@@ -17,6 +17,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Authored by Allison, this news discusses updates to the GitHub Copilot coding agent, focusing on improved pull request review experiences and explicit interaction controls for repository collaborators.<!--excerpt_end-->
 

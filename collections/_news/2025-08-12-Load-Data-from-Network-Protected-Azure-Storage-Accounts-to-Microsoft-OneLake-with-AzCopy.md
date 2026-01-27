@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/load-data-from-network-protected-azure-storage-accounts-to-microsoft-onelake-with-azcopy/
 title: Load Data from Network-Protected Azure Storage Accounts to Microsoft OneLake with AzCopy
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 - Trusted Workspace Access
 section_names:
 - azure
+primary_section: azure
 ---
 Microsoft Fabric Blog explains how to use AzCopy for transferring data from firewall-enabled Azure Storage accounts to Microsoft OneLake, highlighting secure access setup and performance best practices.<!--excerpt_end-->
 

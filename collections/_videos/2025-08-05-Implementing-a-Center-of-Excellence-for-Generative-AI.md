@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=SwNcZbc2UAM
 title: Implementing a Center of Excellence for Generative AI
 author: Microsoft Developer
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this Azure Essentials video, Microsoft Developer's Thomas Maurer and Ben Brauer guide viewers through establishing an AI Center of Excellence, covering best practices for governance, strategy, and scalable, responsible AI adoption.<!--excerpt_end-->
 

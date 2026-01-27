@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mkujgo/starting_to_understand_the_differences_of_dotnet/
 title: Reflections on .NET Project Structure and Complexity for Beginners
 author: jeddthedoge
@@ -22,6 +22,7 @@ tags:
 - Validation
 section_names:
 - coding
+primary_section: coding
 ---
 jeddthedoge initiates a thoughtful discussion on the complexities of starting a .NET project, with community members providing nuanced perspectives on why .NET emphasizes structure through DTOs, layers, and frameworks like Entity Framework.<!--excerpt_end-->
 

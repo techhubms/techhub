@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/armorcode-extends-ai-tool-to-generate-code-fixes-for-specific-runtime-environments/?utm_source=rss&utm_medium=rss&utm_campaign=armorcode-extends-ai-tool-to-generate-code-fixes-for-specific-runtime-environments
 title: ArmorCode Expands Anya AI to Deliver Custom Code Fixes for Runtime Environments
 author: Mike Vizard
@@ -36,6 +36,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Mike Vizard examines how ArmorCode’s Anya AI now generates automated, environment-specific code fixes and brings software supply chain insight to application security, as announced at Black Hat USA 2025.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=LP9Z8iF6TYs
 title: AI-Powered Hybrid DevOps with GitHub Copilot and Azure DevOps
 author: Microsoft Events
@@ -30,6 +30,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Events presents an advanced Ignite 2025 breakout on AI-powered DevOps, featuring Dave Burnison and Dan Hellem, with demos of GitHub Copilot, Azure Boards, and Pipelines.<!--excerpt_end-->
 

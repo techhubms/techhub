@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Bg-OfUzwVdo
 title: Building Sustainable Software with Agentic DevOps and GitHub Copilot
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Events, featuring Martin Woodward, explores the intersection of Agentic DevOps, GitHub Copilot, and sustainable software development with actionable strategies for environmentally conscious coding.<!--excerpt_end-->
 

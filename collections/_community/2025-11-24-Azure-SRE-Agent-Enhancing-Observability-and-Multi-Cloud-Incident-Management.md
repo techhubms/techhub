@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-expanding-observability-and-multi-cloud/ba-p/4472719
 title: 'Azure SRE Agent: Enhancing Observability and Multi-Cloud Incident Management'
 author: dbandaru
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 dbandaru presents an in-depth look at Azure SRE Agent, detailing its integrations with Datadog, New Relic, Dynatrace, and plans for multi-agent collaboration to strengthen observability and incident management across hybrid and multi-cloud environments.<!--excerpt_end-->
 

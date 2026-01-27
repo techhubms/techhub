@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/mlops-architectures-building-scalable-ai-systems/
 title: 'MLOps Architectures: Building Scalable AI Systems'
 author: Dellenny
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - ml
+primary_section: ai
 ---
 Dellenny provides an in-depth overview of MLOps architectures, outlining how organizations can establish scalable and reliable AI systems—moving beyond experiments to robust, production-ready deployments.<!--excerpt_end-->
 

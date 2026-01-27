@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://medium.com/@davidfowl/bridging-the-gap-the-future-of-aspire-6eb421a92ab8?source=rss-8163234c98f0------2
 title: 'Bridging the Gap: The Future of Aspire'
 author: David Fowler
@@ -20,6 +20,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Written by David Fowler, this post discusses the future direction of Aspire, focusing on how it bridges the gap between application development and cloud infrastructure for both developers and platform engineers.<!--excerpt_end-->
 

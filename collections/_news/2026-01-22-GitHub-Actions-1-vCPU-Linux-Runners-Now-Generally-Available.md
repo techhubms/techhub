@@ -23,6 +23,7 @@ tags:
 - Workflow Automation
 section_names:
 - devops
+primary_section: devops
 ---
 Allison announces the general availability of 1 vCPU Linux runners in GitHub Actions, detailing their functionality, use cases for automation, and integration steps for DevOps workflows.<!--excerpt_end-->
 

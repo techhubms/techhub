@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=3L3ve-vuyes
 title: Elevate DevEx 2.0 with Continuous Security Across the SDLC
 author: Microsoft Events
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Presented by Microsoft Events at Microsoft Ignite 2025, this session led by Colin Bell demonstrates embedding continuous security into DevOps workflows and leveraging AI for actionable security fixes in code.<!--excerpt_end-->
 

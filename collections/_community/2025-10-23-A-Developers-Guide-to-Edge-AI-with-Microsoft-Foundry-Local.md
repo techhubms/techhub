@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/transform-your-ai-applications-with-local-llm-deployment/ba-p/4462829
 title: A Developer’s Guide to Edge AI with Microsoft Foundry Local
 author: Lee_Stott
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Lee_Stott delivers an in-depth guide for developers and AI engineers on deploying LLMs locally with Microsoft's Foundry Local, highlighting solutions for privacy, cost, and performance.<!--excerpt_end-->
 

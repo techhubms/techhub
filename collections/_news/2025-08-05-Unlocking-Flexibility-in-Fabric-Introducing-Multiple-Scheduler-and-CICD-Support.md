@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-flexibility-in-fabric-introducing-multiple-scheduler-and-ci-cd-support/
 title: 'Unlocking Flexibility in Fabric: Introducing Multiple Scheduler and CI/CD Support'
 author: Microsoft Fabric Blog
@@ -21,6 +21,7 @@ section_names:
 - azure
 - ml
 - devops
+primary_section: ml
 ---
 This article by the Microsoft Fabric Blog details the new Multiple Scheduler and CI/CD support in Fabric, highlighting key enhancements for scheduling and deployment workflows.<!--excerpt_end-->
 

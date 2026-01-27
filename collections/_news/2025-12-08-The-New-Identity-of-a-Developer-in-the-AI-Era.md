@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/octoverse/the-new-identity-of-a-developer-what-changes-and-what-doesnt-in-the-ai-era/
 title: The New Identity of a Developer in the AI Era
 author: Eirini Kalliamvakou
@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Eirini Kalliamvakou investigates how the rise of AI, especially GitHub Copilot, is shifting developers' roles from code producers to creative directors, emphasizing strategic delegation and verification.<!--excerpt_end-->
 

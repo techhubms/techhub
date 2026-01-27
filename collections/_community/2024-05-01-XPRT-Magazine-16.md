@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 16
 date: 2024-05-01 00:00:00 +00:00
 author: Xebia
@@ -25,6 +25,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Xpirit Magazine 16 explores the rapid evolution of AI, security, and cloud innovation. This issue features practical guides on prompt engineering, Blazor, OAuth PKCE, sustainable software, DDoS protection, Copilot adoption, and more—offering actionable insights for developers and technology leaders.
 <!--excerpt_end-->

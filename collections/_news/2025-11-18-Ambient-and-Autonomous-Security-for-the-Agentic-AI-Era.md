@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/11/18/ambient-and-autonomous-security-for-the-agentic-era/
 title: Ambient and Autonomous Security for the Agentic AI Era
 author: Vasu Jakkal
@@ -30,6 +30,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Vasu Jakkal explains Microsoft's approach to securing AI and cloud platforms in the agentic era, unveiling integrated security features across Defender, Entra, Purview, Intune, and Sentinel. This news post is essential reading for security and IT professionals navigating rapid advances in AI.<!--excerpt_end-->
 

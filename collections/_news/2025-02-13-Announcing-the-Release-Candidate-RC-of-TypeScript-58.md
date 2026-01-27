@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8-rc/
 title: Announcing the Release Candidate (RC) of TypeScript 5.8
 author: Daniel Rosenwasser
@@ -21,6 +21,7 @@ tags:
 - TypeScript
 section_names:
 - coding
+primary_section: coding
 ---
 In this article, Daniel Rosenwasser details the new features and changes in the Release Candidate of TypeScript 5.8, aimed at improving type checking, module interoperability, build performance, and compatibility with modern JavaScript.<!--excerpt_end-->
 

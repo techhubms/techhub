@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-07-secret-protection-expands-default-pattern-support-september-2025
 title: GitHub Secret Protection Expands Default Pattern Support – September 2025
 author: Allison
@@ -26,6 +26,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Allison outlines recent updates to GitHub's secret scanning, highlighting enhanced pattern support and improved secret detection, with a special focus on Azure-related tokens and application security.<!--excerpt_end-->
 

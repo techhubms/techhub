@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/07/disrupting-threats-targeting-microsoft-teams/
 title: 'Mitigating Threats Targeting Microsoft Teams: Attack Chain and Defense Strategies'
 author: Microsoft Threat Intelligence
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Threat Intelligence offers a comprehensive examination of threats targeting Microsoft Teams, outlining the strategies attackers use and providing practical mitigation steps to improve organizational security.<!--excerpt_end-->
 

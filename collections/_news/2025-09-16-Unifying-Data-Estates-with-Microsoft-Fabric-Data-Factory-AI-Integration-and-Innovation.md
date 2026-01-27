@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/unify-your-data-estate-for-the-era-of-ai-with-fabric-data-factory/
 title: 'Unifying Data Estates with Microsoft Fabric Data Factory: AI, Integration, and Innovation'
 author: Microsoft Fabric Blog
@@ -32,6 +32,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 The Microsoft Fabric Blog team highlights recent innovations in Fabric Data Factory, focusing on enterprise-scale data integration, AI-driven features, and new performance updates to empower data engineers and analysts.<!--excerpt_end-->
 

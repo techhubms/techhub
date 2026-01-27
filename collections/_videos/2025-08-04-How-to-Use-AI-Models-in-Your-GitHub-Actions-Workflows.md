@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=m293_EsOs7I
 title: How to Use AI Models in Your GitHub Actions Workflows
 author: GitHub
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 GitHub presents a practical guide to integrating AI models within GitHub Actions workflows. In this video, GitHub shows how AI can automate changelogs, documentation, and bug reproduction, helping engineering teams run more efficiently.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/dont-reinvent-the-wheel-a-developers-guide-to-ai-reusability/
 title: 'Don’t Reinvent the Wheel: A Developer’s Guide to AI Reusability'
 author: Daniel Helfand
@@ -34,6 +34,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Daniel Helfand explains how applying reusability principles to AI workflows in DevOps can help developers and teams avoid inefficiency. The article presents strategies to standardize, version, and catalog AI assets for greater organizational value.<!--excerpt_end-->
 

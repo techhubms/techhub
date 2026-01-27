@@ -76,7 +76,6 @@ src/
 │   │   │   └── 002_fts_indexes.sql
 │   │   ├── PostgresContentRepository.cs  # NEW: Dapper implementation for production
 │   │   ├── SqliteContentRepository.cs    # NEW: Dapper implementation for local dev
-│   │   └── InMemoryContentRepository.cs  # NEW: Test implementation
 │   ├── Services/
 │   │   └── ContentSyncService.cs    # NEW: Hash-based incremental sync
 │   └── FileBasedContentRepository.cs  # TO BE REMOVED after migration

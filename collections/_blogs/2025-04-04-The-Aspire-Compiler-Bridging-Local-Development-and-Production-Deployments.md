@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://medium.com/@davidfowl/the-aspire-compiler-f8ccdf4bca0c?source=rss-8163234c98f0------2
 title: 'The Aspire Compiler: Bridging Local Development and Production Deployments'
 author: David Fowler
@@ -22,6 +22,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 In this article, David Fowler introduces Aspire's compiler-inspired approach to application topology, highlighting how it bridges the gap between development and deployment using a resource model and extensible publishing pipeline.<!--excerpt_end-->
 

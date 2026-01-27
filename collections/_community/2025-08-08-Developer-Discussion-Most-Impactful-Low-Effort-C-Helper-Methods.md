@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mkrlcc/what_is_the_lowest_effort_highest_impact_helper/
 title: 'Developer Discussion: Most Impactful Low-Effort C# Helper Methods'
 author: zigs
@@ -23,6 +23,7 @@ tags:
 - Utilities
 section_names:
 - coding
+primary_section: coding
 ---
 zigs leads a community discussion exploring the most effective helper methods and C# extension patterns, sharing useful code snippets that simplify .NET development workflows.<!--excerpt_end-->
 

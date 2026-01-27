@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/unlocking-gpt-5s-freeform-tool-calling-a-new-era-of-seamless-integration/
 title: Unlocking GPT-5’s Freeform Tool Calling in Azure AI Foundry
 author: Ananya Bishnoi
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Ananya Bishnoi demonstrates how GPT-5’s freeform tool calling in Azure AI Foundry enables developers to chain Python and SQL tools for seamless automation and dynamic workflows.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mbfeiw/gemini_pro_fails_more_often_than_not/
 title: Gemini Pro Fails More Often Than Not
 author: ChomsGP
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 ChomsGP describes recurrent problems with the Gemini Pro model in GitHub Copilot, contrasting it with more stable alternatives, and raises concerns about its reliability and value.<!--excerpt_end-->
 

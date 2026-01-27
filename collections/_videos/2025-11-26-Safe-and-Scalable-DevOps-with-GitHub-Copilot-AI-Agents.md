@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=16_x7e0d_SY
 title: Safe and Scalable DevOps with GitHub Copilot AI Agents
 author: Microsoft Events
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Events presents a Microsoft Ignite session featuring Luke Hoban and Chris Patterson on deploying GitHub Copilot AI agents safely and at scale. Explore demos and governance strategies for DevOps teams.<!--excerpt_end-->
 

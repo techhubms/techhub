@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xy-HzFp0pbA
 title: What's New in C# 14
 author: dotnet
@@ -23,6 +23,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet showcases the newest features of C# 14, detailing language improvements, productivity enhancements, and design insights directly from the core C# team.<!--excerpt_end-->
 

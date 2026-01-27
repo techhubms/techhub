@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=QHBc5hh4gKk
 title: "Voices You Can't Trust: Stopping AI-Powered Impersonation Attacks with Microsoft Verified ID"
 author: Microsoft Events
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Jeremy Nelson from Microsoft presents at Ignite, detailing how AI-driven deepfake fraud is happening today and how Microsoft's Verified ID can help organizations strengthen their defenses against impersonation attacks.<!--excerpt_end-->
 

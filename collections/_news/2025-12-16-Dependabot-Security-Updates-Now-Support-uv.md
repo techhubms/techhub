@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-16-dependabot-security-updates-now-support-uv
 title: Dependabot Security Updates Now Support uv
 author: Allison
@@ -18,6 +18,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison reports that Dependabot now provides automated security alerting and update support for uv dependencies, streamlining vulnerability management for developers on GitHub.<!--excerpt_end-->
 

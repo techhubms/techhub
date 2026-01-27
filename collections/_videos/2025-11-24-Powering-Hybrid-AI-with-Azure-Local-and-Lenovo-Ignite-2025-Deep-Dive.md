@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=BbOsfkQRrik
 title: 'Powering Hybrid AI with Azure Local and Lenovo: Ignite 2025 Deep Dive'
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a Microsoft Ignite 2025 breakout discussing how Azure Local, powered by Lenovo hardware, is reshaping hybrid cloud with advanced AI applications, including a customer migration case study.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_super-excited-about-gpt-52-from-our-partners-activity-7404949433819463680-VyMD
 title: 'GPT-5.2 Integration Across Microsoft Tools: AI Model Choice and Developer Impact'
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Curated by stclarke, this update examines the integration of GPT-5.2 into Microsoft tools such as GitHub Copilot and Copilot Studio, outlining new capabilities for developers, automation, and workflow reasoning. Includes commentary from Satya Nadella and active practitioner debate.<!--excerpt_end-->
 

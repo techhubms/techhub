@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=8lFm4wI1bPo
 title: 'A Year in .NET Security: Lessons from MSRC Cases (2024–2025)'
 author: dotnet
@@ -26,6 +26,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 dotnet presents a behind-the-scenes review of recent .NET security investigations by MSRC, highlighting coding pitfalls, design oversights, and practical strategies for secure .NET development.<!--excerpt_end-->
 

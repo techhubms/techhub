@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mfzmdu/looking_for_feedback_i_made_this_statemachine_lib/
 title: '[Looking for Feedback]: I Made this StateMachine Lib!'
 author: UnityDever
@@ -16,6 +16,7 @@ tags:
 - State Machine
 section_names:
 - coding
+primary_section: coding
 ---
 UnityDever shares a custom state machine library for C#, seeking feedback on its architecture and design. The article welcomes constructive suggestions from the development community.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/agent-factory-from-prototype-to-production-developer-tools-and-rapid-agent-development/
 title: 'Agent Factory: From Prototype to Production—Developer Tools and Rapid Agent Development'
 author: Yina Arenas
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Yina Arenas explains how Azure AI Foundry empowers developers to build, test, and deploy AI agents, detailing tools, frameworks, and open standards for moving from prototype to production.<!--excerpt_end-->
 

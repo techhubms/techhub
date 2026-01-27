@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/on-the-issues/2026/01/14/microsoft-disrupts-cybercrime/
 title: Microsoft Disrupts Global RedVDS Cybercrime-as-a-Service Platform Enabling Massive Fraud
 author: stclarke
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 stclarke’s article covers Microsoft’s disruption of RedVDS, a cybercrime subscription service fueling large-scale fraud with disposable virtual machines and AI tools. It discusses technical methods, real-world impact, and efforts by Microsoft and international authorities to combat cyber-enabled crime.<!--excerpt_end-->
 

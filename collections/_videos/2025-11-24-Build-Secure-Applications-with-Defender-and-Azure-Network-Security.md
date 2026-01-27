@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fjXZx1HrH2g
 title: Build Secure Applications with Defender and Azure Network Security
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Presented by Microsoft Events with speakers Gopal Shankar and Anupam Vij, this session demonstrates how to use Azure Network Security and Microsoft Defender for Cloud to build secure applications and defend against advanced cyber threats.<!--excerpt_end-->
 

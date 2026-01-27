@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devopsjournal.io/blog/2024/11/07/DevCon-Romania-2024-Protect-yourself-against-supply-chain-attacks
 title: 'DevCon Romania 2024: Protecting Against Supply Chain Attacks in DevOps Pipelines'
 author: Rob Bos
@@ -19,6 +19,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Rob Bos, presenting at DevCon Romania 2024, offers a comprehensive overview on protecting software supply chains from attacks, focusing on best practices in DevOps and pipeline security.<!--excerpt_end-->
 

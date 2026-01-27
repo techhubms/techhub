@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mjgvq3/want_to_make_it_easier_to_get_startedstay_up_to/
 title: 'Discussion: New CLI Tool for .NET SDK Management and Updates'
 author: chusk3
@@ -25,6 +25,7 @@ tags:
 - Winget
 section_names:
 - coding
+primary_section: coding
 ---
 chusk3 shares an invitation from the .NET SDK team, led by PM Chet, for developers to discuss a new CLI tool proposal aimed at streamlining .NET SDK and Runtime installations and updates.<!--excerpt_end-->
 

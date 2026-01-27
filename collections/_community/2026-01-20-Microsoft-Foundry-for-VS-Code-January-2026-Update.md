@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 leoyao introduces significant updates to the Microsoft Foundry extension for VS Code, focusing on new features for managing AI workflows and multi-agent systems using Azure AI Foundry.<!--excerpt_end-->
 

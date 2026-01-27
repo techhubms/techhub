@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/cyclecloud-hammerspace/ba-p/4457043
 title: Simplifying HPC Deployments with Azure CycleCloud and Hammerspace
 author: anhoward
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 anhoward demonstrates how to simplify high performance computing on Azure by integrating CycleCloud, SLURM, and Hammerspace. The post guides through cluster setup, data management, and automated cleanup for practitioners seeking operational efficiency.<!--excerpt_end-->
 

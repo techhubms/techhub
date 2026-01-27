@@ -16,6 +16,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents an overview of the new GitHub Copilot SDK, showing developers how to leverage AI-powered code completion and integrate Copilot’s capabilities into custom workflows.<!--excerpt_end-->
 

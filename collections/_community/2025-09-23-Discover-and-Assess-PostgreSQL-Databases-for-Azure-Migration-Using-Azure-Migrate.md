@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/discover-and-assess-postgresql-databases-for-migration-to-azure/ba-p/4456108
 title: Discover and Assess PostgreSQL Databases for Azure Migration Using Azure Migrate
 author: ShradhaKalra
@@ -22,6 +22,7 @@ tags:
 - VMware
 section_names:
 - azure
+primary_section: azure
 ---
 ShradhaKalra provides a practical overview of Azure Migrate’s new capabilities to discover and assess PostgreSQL databases for migration and modernization to Azure, highlighting agentless assessment, dependency mapping, and migration planning features.<!--excerpt_end-->
 

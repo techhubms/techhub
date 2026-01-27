@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/john-willis-the-true-north-of-devops-and-devsecops/?utm_source=rss&utm_medium=rss&utm_campaign=john-willis-the-true-north-of-devops-and-devsecops
 title: 'John Willis: The True North of DevOps and DevSecOps'
 author: Alan Shimel
@@ -24,6 +24,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Alan Shimel highlights the impact of John Willis on the DevOps and DevSecOps communities, focusing on foundational frameworks and the cultural shift required for security and collaboration.<!--excerpt_end-->
 

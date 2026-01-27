@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/app-development/how-to-decouple-views-from-view-models-using-communitytoolkit/m-p/4432591#M1261
 title: Decoupling Views and ViewModels in CommunityToolkit.Mvvm
 author: CSharpDev
@@ -21,6 +21,7 @@ tags:
 - XAML Binding
 section_names:
 - coding
+primary_section: coding
 ---
 CSharpDev delves into practical approaches for decoupling WPF views from view models using CommunityToolkit.Mvvm, weighing classic ViewModelLocator and modern DI solutions.<!--excerpt_end-->
 

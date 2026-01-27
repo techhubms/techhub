@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/host-remote-mcp-servers-on-azure-functions/ba-p/4471047
 title: 'How to Host Remote MCP Servers on Azure Functions: Extension and SDK Approaches'
 author: lily-ma
@@ -38,6 +38,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: ai
 ---
 lily-ma presents a comprehensive overview of hosting remote Model Context Protocol (MCP) servers on Azure Functions, helping developers deploy secure, scalable agent tools using extension or SDK hosting options.<!--excerpt_end-->
 

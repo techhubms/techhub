@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/oBW4Xt6c_Uo
 title: A First Look at the New Copilot Agents Panel on GitHub
 author: GitHub
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 The GitHub team introduces the Copilot agents panel, now integrated directly into github.com, allowing developers to use Copilot’s AI-powered features with full repository context. This video highlights how the new panel streamlines the development workflow online.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=E9WACDWjWzI
 title: 'Interactions in Godot C#: Handling Player Input with Signals and Collision Detection'
 author: dotnet
@@ -23,6 +23,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet presents practical guidance on using Godot C# to handle player interactions, focusing on signals, collision detection, and inter-system communication for dynamic gameplay.<!--excerpt_end-->
 

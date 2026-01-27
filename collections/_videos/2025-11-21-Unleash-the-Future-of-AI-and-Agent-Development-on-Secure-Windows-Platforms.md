@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=VHKivXdqfeQ
 title: Unleash the Future of AI and Agent Development on Secure Windows Platforms
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - security
+primary_section: ai
 ---
 Microsoft Events delivers an in-depth exploration of how Windows is enabling large-scale development of secure AI agents, highlighting MCP, agent connectors, and platform-level security upgrades.<!--excerpt_end-->
 

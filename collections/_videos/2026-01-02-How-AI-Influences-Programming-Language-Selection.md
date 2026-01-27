@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/pzF4D7juXbM
 title: How AI Influences Programming Language Selection
 author: GitHub
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 GitHub's Idan Gazit explains how artificial intelligence is affecting programming language popularity, particularly highlighting TypeScript and the importance of static typing in AI-supported coding.<!--excerpt_end-->
 

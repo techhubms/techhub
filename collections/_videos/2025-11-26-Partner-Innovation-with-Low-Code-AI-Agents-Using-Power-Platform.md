@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=a5zof3lPOBE
 title: Partner Innovation with Low-Code AI Agents Using Power Platform
 author: Microsoft Events
@@ -32,6 +32,7 @@ tags:
 - Scale
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents a session on how partners can use Power Platform and AI to drive innovation and business growth, covering low-code app development, automation, and AI agents, featuring speakers Courtney Lanza, Paula Nobre Santos, and Saurabh Swarup.<!--excerpt_end-->
 

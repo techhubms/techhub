@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-maps-blog/transforming-dynamics-365-customer-data-with-azure-maps-inogic/ba-p/4441187
 title: Transforming Dynamics 365 Customer Data with Azure Maps Integration
 author: IoTGirl
@@ -27,6 +27,7 @@ tags:
 - Spatial Analytics
 section_names:
 - azure
+primary_section: azure
 ---
 IoTGirl demonstrates the power of Azure Maps integration with Microsoft Dynamics 365, illustrating how spatial intelligence transforms CRM data for enhanced sales, field service, and marketing operations.<!--excerpt_end-->
 

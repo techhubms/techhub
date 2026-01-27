@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-03-github-copilot-in-visual-studio-november-update
 title: 'GitHub Copilot and Visual Studio 2026: November Update Highlights'
 author: Allison
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Allison covers the November 2025 updates for GitHub Copilot in Visual Studio 2026, highlighting new Copilot actions, cloud agent previews, and smarter search features for developers.<!--excerpt_end-->
 

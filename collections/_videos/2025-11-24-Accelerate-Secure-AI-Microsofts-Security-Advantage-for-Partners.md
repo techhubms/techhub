@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Ph-zrJNhl_M
 title: 'Accelerate Secure AI: Microsoft’s Security Advantage for Partners'
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events presents this foundational Ignite session featuring speakers Steve Dispensa and Ann Choi, delving into Microsoft’s security and AI portfolio for partners.<!--excerpt_end-->
 

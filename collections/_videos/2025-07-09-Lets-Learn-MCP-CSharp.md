@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=4zkIBMFdL2w
 title: "Let's Learn MCP: C#"
 author: Dotnet's Youtube channel
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 In this comprehensive workshop, Katie Savage and James Montemagno from the dotnet team introduce developers to the Model Context Protocol (MCP), a cutting-edge framework designed to standardize interactions between AI models and client applications. This beginner-friendly session guides participants through creating their first MCP server using C#, providing practical insights into this emerging technology that's shaping the future of AI development. <!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/09/24/ai-vs-ai-detecting-an-ai-obfuscated-phishing-campaign/
 title: AI-Obfuscated Phishing Campaign Detection by Microsoft Threat Intelligence
 author: Microsoft Threat Intelligence
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Threat Intelligence, led by the original post's authors, reveals how AI-generated code was utilized in a credential phishing campaign and explains detection and defense approaches to combat these advanced threats.<!--excerpt_end-->
 

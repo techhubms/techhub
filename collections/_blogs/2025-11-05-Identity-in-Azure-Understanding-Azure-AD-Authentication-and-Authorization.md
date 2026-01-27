@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/identity-in-azure-understanding-azure-ad-authentication-and-authorization/
 title: 'Identity in Azure: Understanding Azure AD, Authentication, and Authorization'
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Dellenny offers IT professionals an in-depth look at managing digital identities and access in Azure, emphasizing concepts like authentication, authorization, and practical use of Azure Active Directory for secure application access.<!--excerpt_end-->
 

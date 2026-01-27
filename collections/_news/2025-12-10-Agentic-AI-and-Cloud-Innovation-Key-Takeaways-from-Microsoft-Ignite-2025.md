@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/actioning-agentic-ai-5-ways-to-build-with-news-from-microsoft-ignite-2025/
 title: 'Agentic AI and Cloud Innovation: Key Takeaways from Microsoft Ignite 2025'
 author: Natalie Wossene
@@ -35,6 +35,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 Natalie Wossene delivers an in-depth overview of the top technical advances from Microsoft Ignite 2025, including Azure and AI innovations, semantic intelligence platforms, new database tools, Azure Copilot, and next-generation cloud hardware for security and performance.<!--excerpt_end-->
 

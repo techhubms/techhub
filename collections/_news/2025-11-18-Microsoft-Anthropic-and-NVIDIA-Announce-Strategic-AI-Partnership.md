@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_10-print-anthropic-microsoft-nvidia-activity-7396565254328995840-i9JX
 title: Microsoft, Anthropic, and NVIDIA Announce Strategic AI Partnership
 author: stclarke
@@ -32,6 +32,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke summarizes how Microsoft, Anthropic, and NVIDIA have joined forces to accelerate enterprise-ready AI: integrating Anthropic models into Azure and Copilot, deepening infrastructure co-design, and expanding hyperscale compute partnerships.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_102
 title: "What's New in Visual Studio Code June 2025 (v1.102): Copilot Chat, MCP, and More"
 author: Visual Studio Code Team
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code Team highlights the key features of the June 2025 (v1.102) release, including the open sourced GitHub Copilot Chat extension, integrated MCP server management, and advanced AI and coding workflows.<!--excerpt_end-->
 

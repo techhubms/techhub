@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xek__V_Dt84
 title: "Let's Learn MCP: Java"
 author: Visual Studio Code
@@ -16,6 +16,7 @@ tags:
 - Workshop
 section_names:
 - ai
+primary_section: ai
 ---
 Visual Studio Code presents an introductory workshop on MCP for Java, featuring Bruno Borges and Sandra Ahlgrimm, guiding viewers through MCP fundamentals and a live server demo.<!--excerpt_end-->
 

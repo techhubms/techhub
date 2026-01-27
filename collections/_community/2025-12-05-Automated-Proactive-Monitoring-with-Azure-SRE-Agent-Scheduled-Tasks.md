@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/proactive-monitoring-made-simple-with-azure-sre-agent/ba-p/4471205
 title: Automated Proactive Monitoring with Azure SRE Agent Scheduled Tasks
 author: dchelupati
@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 dchelupati details how Azure SRE Agent's scheduled tasks enable SRE teams to automate proactive monitoring, incident response, and compliance checks using natural language prompts and Azure's automation ecosystem.<!--excerpt_end-->
 

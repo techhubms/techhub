@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=liYDDda6bac
 title: Practical AI Applications for Improved User Experience with .NET
 author: dotnet
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 In this session, the .NET team presents practical approaches for leveraging AI and Multi-modal Language Models to deliver a better user experience, highlighting the latest in .NET and developer tooling.<!--excerpt_end-->
 

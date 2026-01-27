@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/data-security-azure-key-vault-in-data-bricks/ba-p/4479785
 title: Securely Managing Database Connection Strings in Azure Databricks with Key Vault
 author: bhramesh
@@ -23,6 +23,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 bhramesh demonstrates how to use Azure Key Vault to securely retrieve database connection strings in Databricks notebooks, focusing on reducing vulnerabilities and improving workflow security.<!--excerpt_end-->
 

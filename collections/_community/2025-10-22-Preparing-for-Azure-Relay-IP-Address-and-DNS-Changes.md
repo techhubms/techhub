@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/upcoming-changes-to-azure-relay-ip-addresses-and-dns-support/ba-p/4463597
 title: Preparing for Azure Relay IP Address and DNS Changes
 author: ashish-chhabria
@@ -20,6 +20,7 @@ tags:
 - WCF Relay
 section_names:
 - azure
+primary_section: azure
 ---
 ashish-chhabria provides a practical overview of essential updates to Azure Relay's IP addressing and DNS naming. The post walks through required user actions—including updating allow lists and leveraging a provided PowerShell script—to ensure continued connectivity and security.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/hierarchical-view-integration-supported-in-pipelines/
 title: Hierarchical View Integration Supported in Fabric Pipelines
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog explains how Hierarchical View in Monitoring Hub empowers users to monitor and troubleshoot complex pipeline workflows by visualizing upstream and downstream job dependencies.<!--excerpt_end-->
 

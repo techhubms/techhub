@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=2a94mcuzGQE
 title: Building Secure Applications with Azure SDK for Rust
 author: Microsoft Developer
@@ -22,6 +22,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: coding
 ---
 Heath Stewart of Microsoft Developer presents a session on how to leverage the Azure SDK for Rust to build secure and high-performance cloud applications with robust secrets management and memory safety.<!--excerpt_end-->
 

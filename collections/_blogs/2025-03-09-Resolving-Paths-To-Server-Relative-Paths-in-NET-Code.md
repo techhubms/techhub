@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2025/Mar/08/Resolving-Paths-To-Server-Relative-Paths-in-NET-Code
 title: Resolving Paths to Server-Relative Paths in .NET Code
 author: Rick Strahl
@@ -21,6 +21,7 @@ tags:
 - Web Development
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, Rick Strahl describes strategies and provides helper methods for resolving URLs to server-relative paths in .NET code, extending beyond default ASP.NET Core mechanisms.<!--excerpt_end-->
 

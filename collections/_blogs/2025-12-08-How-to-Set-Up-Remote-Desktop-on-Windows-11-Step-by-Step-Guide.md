@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-to-set-up-remote-desktop-on-windows-11-a-beginners-guide/
 title: 'How to Set Up Remote Desktop on Windows 11: Step-by-Step Guide'
 author: John Edward
@@ -22,6 +22,7 @@ tags:
 - Windows 11
 section_names:
 - security
+primary_section: security
 ---
 John Edward outlines a practical guide to setting up and securing Remote Desktop on Windows 11, showing users how to enable connections, troubleshoot issues, add users, and protect access.<!--excerpt_end-->
 

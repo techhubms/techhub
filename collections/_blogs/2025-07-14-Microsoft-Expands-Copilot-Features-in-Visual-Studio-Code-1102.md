@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devclass.com/2025/07/14/microsoft-shovels-extra-copilot-features-into-vs-code-amid-dev-complaints-of-more-ai-bloat/
 title: Microsoft Expands Copilot Features in Visual Studio Code 1.102
 author: Tim Anderson
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Tim Anderson reports on Microsoft's latest update to Visual Studio Code, focusing on new Copilot and AI-related features, developer reactions, and potential impacts on coding workflows.<!--excerpt_end-->
 

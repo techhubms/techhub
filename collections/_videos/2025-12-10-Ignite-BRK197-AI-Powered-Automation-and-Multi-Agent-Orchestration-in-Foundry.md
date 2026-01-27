@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=v1Q7rEE3StM
 title: 'Ignite BRK197: AI Powered Automation & Multi-Agent Orchestration in Foundry'
 author: Microsoft Developer
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer presents an in-depth exploration of building and orchestrating AI-powered multi-agent systems with Microsoft Foundry, highlighting advanced frameworks and deployment practices for scalable solutions.<!--excerpt_end-->
 

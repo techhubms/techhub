@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=8HTsYLNX7Sk
 title: 'From DEV to PROD: Building Agentic Memory with Azure Cosmos DB'
 author: Microsoft Events
@@ -28,6 +28,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 In this Microsoft Ignite 2025 session, Microsoft Events speakers explain how to architect agentic memory in generative AI apps with Azure Cosmos DB, highlighting security, governance, and advanced AI retrieval techniques.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ai-native-drug-discovery-using-insilico-medicine-s-nach01-model/ba-p/4484497
 title: AI-Native Drug Discovery using Insilico Medicine’s Nach01 Model and Microsoft Discovery
 author: JohnGruszczyk
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 JohnGruszczyk discusses how Insilico Medicine’s Nach01 model integrates with Microsoft Discovery on Azure, enabling AI-driven, reproducible, and scalable drug discovery workflows for researchers.<!--excerpt_end-->
 

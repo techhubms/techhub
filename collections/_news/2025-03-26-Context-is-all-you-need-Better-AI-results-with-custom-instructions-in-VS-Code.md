@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2025/03/26/custom-instructions
 title: 'Context is all you need: Better AI results with custom instructions in VS Code'
 author: Rob Conery, Harald Kirschner
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Rob Conery and Harald Kirschner explain how developers can leverage custom instructions in VS Code to fine-tune GitHub Copilot, offering practical examples and strategies for enhancing AI-driven development workflows.<!--excerpt_end-->
 

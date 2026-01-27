@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://cooknwithcopilot.com/blog/top-10-copilot-tips.html
 title: Top 10 GitHub Copilot Tips for Maximizing Productivity
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this guide, Randy Pagels shares his top tips for getting the most out of GitHub Copilot, focusing on practical application, code quality, and time-saving techniques.<!--excerpt_end-->
 

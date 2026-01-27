@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/shared-responsibility-model-in-cloud-computing-simplified/
 title: Shared Responsibility Model in Cloud Computing Simplified
 author: Dellenny
@@ -29,6 +29,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Dellenny offers a straightforward breakdown of the Shared Responsibility Model in Microsoft Azure, clarifying which security tasks belong to Microsoft and which to cloud customers.<!--excerpt_end-->
 

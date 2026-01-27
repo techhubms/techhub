@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/empower-your-migration-decisions-with-negotiated-agreements-ea/ba-p/4459425
 title: Azure Migrate Adds Support for Microsoft Customer Agreement Pricing
 author: ankitsurkar
@@ -17,6 +17,7 @@ tags:
 - Workload Assessment
 section_names:
 - azure
+primary_section: azure
 ---
 ankitsurkar details how Azure Migrate now supports Microsoft Customer Agreement (MCA) pricing, enabling users to create more accurate cost assessments and streamline cloud migration decisions.<!--excerpt_end-->
 

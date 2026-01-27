@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dTRL3tlaj5g
 title: How to Modernize Oracle Workloads on Azure | BRK162
 author: Microsoft Events
@@ -25,6 +25,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 Presented by Kalyan Kaki and Tushar Pandit at Microsoft Ignite 2025, this session explores how to migrate and modernize Oracle workloads using Azure, with deep dives into security, data integration, and AI-powered modernization.<!--excerpt_end-->
 

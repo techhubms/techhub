@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-october-2025feature-summary/
 title: 'Microsoft Fabric October 2025 Feature Summary: Security, Data Engineering, Integration Enhancements'
 author: Microsoft Fabric Blog
@@ -29,6 +29,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog provides a detailed summary of October 2025 platform updates, focusing on enhanced security, smarter data engineering, new integrations, and workflow improvements for data professionals.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=MB0I5Hy6Wc8
 title: Building Mobile and Desktop Apps with Visual Studio and .NET MAUI
 author: dotnet
@@ -24,6 +24,7 @@ tags:
 - XAML
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet discusses how to efficiently build mobile and desktop applications using Visual Studio and .NET MAUI, focusing on solution structure, live UI tools, and upcoming framework updates.<!--excerpt_end-->
 

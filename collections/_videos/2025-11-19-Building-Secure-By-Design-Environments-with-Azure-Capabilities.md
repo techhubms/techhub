@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dQz01rHnLW0
 title: Building Secure-By-Design Environments with Azure Capabilities
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Events presents a comprehensive session on harnessing Azure native security features to create secure-by-design cloud environments, including policy management and cross-cloud security standards.<!--excerpt_end-->
 

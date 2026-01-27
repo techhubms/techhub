@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=DjUkc7jWsQ0
 title: Amplifying SecOps Practices with Microsoft Sentinel and Unified Platform
 author: Microsoft Events
@@ -33,6 +33,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Presented by Max McWilliams, Anne Stobaugh, and Scott Woodgate at Microsoft Ignite 2025, this session guides partners on strengthening SecOps using the new Microsoft Sentinel features and unified security platforms.<!--excerpt_end-->
 

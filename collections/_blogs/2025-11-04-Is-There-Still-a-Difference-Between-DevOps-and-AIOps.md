@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/is-there-still-a-difference-between-devops-and-aiops/
 title: Is There Still a Difference Between DevOps and AIOps?
 author: Alexander Williams
@@ -30,6 +30,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Alexander Williams examines whether DevOps and AIOps are distinct disciplines or part of a unified IT evolution. This article discusses the integration of AI capabilities into DevOps, highlighting the shift toward intelligent, adaptive automation.<!--excerpt_end-->
 

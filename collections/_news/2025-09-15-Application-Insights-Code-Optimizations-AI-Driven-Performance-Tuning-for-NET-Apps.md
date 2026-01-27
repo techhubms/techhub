@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/application-insights-code-optimizations/
 title: 'Application Insights Code Optimizations: AI-Driven Performance Tuning for .NET Apps'
 author: Chuck Weininger
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Chuck Weininger introduces Application Insights Code Optimizations, showing .NET developers how to leverage AI-powered performance recommendations with GitHub Copilot and Azure Monitor for more efficient application tuning.<!--excerpt_end-->
 

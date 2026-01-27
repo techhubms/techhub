@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-16-agent-mode-for-jetbrains-eclipse-and-xcode-is-now-generally-available
 title: Agent mode for JetBrains, Eclipse, and Xcode is now generally available
 author: Allison
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this brief update, Allison announces the general availability of GitHub Copilot's agent mode for popular IDEs including JetBrains, Eclipse, and Xcode. Developers can now enable GitHub Copilot using any GitHub account for an autonomous coding experience, expanding the tool's accessibility and utility.<!--excerpt_end-->
 

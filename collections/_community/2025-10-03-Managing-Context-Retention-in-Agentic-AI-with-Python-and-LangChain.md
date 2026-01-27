@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/managing-context-retention-in-agentic-ai/ba-p/4458586
 title: Managing Context Retention in Agentic AI with Python and LangChain
 author: RavinderGupta
@@ -21,6 +21,7 @@ tags:
 - State Persistence
 section_names:
 - ai
+primary_section: ai
 ---
 RavinderGupta presents a technical walkthrough on managing context retention in agentic AI using Python, featuring practical code examples, LangChain memory components, and best practices for multi-agent systems.<!--excerpt_end-->
 

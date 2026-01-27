@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=roRh0p1HsYg
 title: 'From Prompt to Production: Scaling Agentic AI with NVIDIA and Azure'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a session on scaling agentic AI in enterprises, featuring Matheen Raza. Attendees will learn how NVIDIA’s AI tools on Azure empower organizations to automate workflows and deploy advanced AI agents.<!--excerpt_end-->
 

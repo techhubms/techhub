@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/automating-hpc-workflows-with-copilot-agents/ba-p/4472610
 title: Automating HPC Workflows with Copilot Agents
 author: xpillons
@@ -23,6 +23,7 @@ tags:
 - Validation
 section_names:
 - ai
+primary_section: ai
 ---
 xpillons discusses how Copilot Agents employ artificial intelligence to automate HPC job scripts for scientific computing, detailing iterative workflow enhancements and error reduction strategies.<!--excerpt_end-->
 

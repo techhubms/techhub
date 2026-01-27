@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/blog/studentdeveloperblog/sprint-to-imagine-cup-igniting-innovation-on-campus/4463230
 title: 'Sprint to Imagine Cup: Igniting Innovation on Campus'
 author: stclarke
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 stclarke reports on Sprint to Imagine Cup, where students learn to leverage Microsoft AI technologies and GitHub Copilot through global, expert-led events, building technical and coding skills for meaningful impact.<!--excerpt_end-->
 

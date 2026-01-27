@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=IjDRYqtRkWA
 title: Real-World .NET Profiling with Visual Studio
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 section_names:
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Nik from the dotnet team shares practical .NET performance profiling strategies in Visual Studio, including benchmarking and using GitHub Copilot, aimed at developers seeking to optimize and improve application performance.<!--excerpt_end-->
 

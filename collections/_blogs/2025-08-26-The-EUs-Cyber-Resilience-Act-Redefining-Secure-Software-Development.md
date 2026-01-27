@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/the-eus-cyber-resilience-act-redefining-secure-software-development/?utm_source=rss&utm_medium=rss&utm_campaign=the-eus-cyber-resilience-act-redefining-secure-software-development
 title: 'The EU’s Cyber Resilience Act: Redefining Secure Software Development'
 author: Thabang Mashologu
@@ -29,6 +29,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Thabang Mashologu discusses the transformative impact of the EU’s Cyber Resilience Act on software development practices, outlining core security and compliance requirements for DevOps and security teams.<!--excerpt_end-->
 

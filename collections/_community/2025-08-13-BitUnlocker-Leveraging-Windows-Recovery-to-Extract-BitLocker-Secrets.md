@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-security-community/bitunlocker-leveraging-windows-recovery-to-extract-bitlocker/ba-p/4442806
 title: 'BitUnlocker: Leveraging Windows Recovery to Extract BitLocker Secrets'
 author: alon-leviev
@@ -28,6 +28,7 @@ tags:
 - WinRE
 section_names:
 - security
+primary_section: security
 ---
 Alon Leviev, along with Netanel Ben Simon from Microsoft's STORM research team, details their investigation into newly discovered attack surfaces in Windows Recovery Environment impacting BitLocker. The post guides readers through research findings, exploitation techniques, and recommended mitigations.<!--excerpt_end-->
 

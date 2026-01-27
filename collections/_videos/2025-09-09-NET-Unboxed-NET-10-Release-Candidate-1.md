@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=YuuWHkQAsFY
 title: .NET Unboxed - .NET 10 Release Candidate 1
 author: dotnet
@@ -19,6 +19,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 The .NET team, led by dotnet, showcases their top features in .NET 10 Release Candidate 1, providing insights into the latest improvements for developers.<!--excerpt_end-->
 

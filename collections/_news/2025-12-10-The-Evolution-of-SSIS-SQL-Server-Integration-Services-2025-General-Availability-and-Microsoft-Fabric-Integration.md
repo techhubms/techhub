@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/the-evolution-of-sql-server-integration-services-ssis-ssis-2025-generally-available/
 title: 'The Evolution of SSIS: SQL Server Integration Services 2025 General Availability and Microsoft Fabric Integration'
 author: Microsoft Fabric Blog
@@ -27,6 +27,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog details the major advancements and integration features of SSIS 2025 as it becomes generally available, authored by the official product team. The article covers data security, connections to Microsoft Fabric, and technical migration strategies for enterprise users.<!--excerpt_end-->
 

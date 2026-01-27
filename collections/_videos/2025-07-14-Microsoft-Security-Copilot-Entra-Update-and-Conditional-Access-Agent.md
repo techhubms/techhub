@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=MaOGP2JNs2E
 title: Microsoft Security Copilot Entra Update and Conditional Access Agent
 author: John Savill's Technical Training
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 John Savill's Technical Training delivers a deep dive into the latest updates for Microsoft Security Copilot and Entra, including a thorough look at conditional access agent capabilities for security teams.<!--excerpt_end-->
 

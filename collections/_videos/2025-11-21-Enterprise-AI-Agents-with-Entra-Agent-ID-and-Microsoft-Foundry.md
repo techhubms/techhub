@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=YE9KxGPV0ic
 title: Enterprise AI Agents with Entra Agent ID and Microsoft Foundry
 author: Microsoft Events
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents a deep dive into how Commerzbank and other enterprises leverage Entra Agent ID and Microsoft Foundry to deploy secure, scalable AI agents. Speakers cover key topics like agent identity, networking, and lifecycle management.<!--excerpt_end-->
 

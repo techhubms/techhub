@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FBQRc-M18ws
 title: Browser Automation With Azure AI Foundry's Automation Tool and Playwright Workspaces
 author: Microsoft Developer
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 April from Microsoft Developer demonstrates how to use the Browser Automation Tool in Azure AI Foundry, showing step-by-step browser task automation with AI and Playwright Workspaces.<!--excerpt_end-->
 

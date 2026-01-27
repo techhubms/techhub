@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html
 title: Draft Smarter Regex Without the Headaches
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels explains how GitHub Copilot helps developers quickly draft, explain, and test regex patterns, making regular expression work less frustrating and more productive.<!--excerpt_end-->
 

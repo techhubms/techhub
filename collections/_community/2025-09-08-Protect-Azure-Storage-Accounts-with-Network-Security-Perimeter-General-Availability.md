@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/protect-your-storage-accounts-using-network-security-perimeter/ba-p/4449046
 title: 'Protect Azure Storage Accounts with Network Security Perimeter: General Availability'
 author: Vishnu Charan TJ
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Vishnu Charan TJ details the general availability of network security perimeters for Azure Storage, showing how centralized network controls can secure PaaS resources and prevent data exfiltration.<!--excerpt_end-->
 

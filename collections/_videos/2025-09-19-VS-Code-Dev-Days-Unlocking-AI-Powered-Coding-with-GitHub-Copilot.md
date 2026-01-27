@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ujSgVqC94TQ
 title: 'VS Code Dev Days: Unlocking AI-Powered Coding with GitHub Copilot'
 author: Visual Studio Code
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code presents a hands-on livestream where developers learn from the team how to use GitHub Copilot and VS Code together, with AI-assisted workflows to boost productivity.<!--excerpt_end-->
 

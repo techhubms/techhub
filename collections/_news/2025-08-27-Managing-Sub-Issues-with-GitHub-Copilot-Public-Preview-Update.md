@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-27-create-sub-issues-with-copilot-in-public-preview
 title: 'Managing Sub-Issues with GitHub Copilot: Public Preview Update'
 author: Allison
@@ -18,6 +18,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces an update to GitHub Copilot in public preview, enabling developers to create and manage sub-issues by chatting directly on github.com/copilot, streamlining project and issue organization.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=_rCws3fowj8
 title: Best Practices for Always-On AI Agents Using Copilot Studio and Power Platform
 author: Microsoft Events
@@ -28,6 +28,7 @@ tags:
 - SSDR
 section_names:
 - ai
+primary_section: ai
 ---
 Presented by Shivani Pradhan at Microsoft Ignite 2025, this session delivers practical insights on architecting always-on AI agents with Copilot Studio and Power Platform to ensure business continuity and scalability for critical workloads.<!--excerpt_end-->
 

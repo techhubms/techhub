@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/the-cloud-reset-devops-brings-workloads-back-to-private-clouds/
 title: 'The Cloud Reset: Why DevOps Teams Are Returning Workloads to Private Clouds'
 author: Janakiram MSV
@@ -32,6 +32,7 @@ tags:
 - Workload Placement
 section_names:
 - devops
+primary_section: devops
 ---
 Janakiram MSV examines why DevOps teams are shifting workloads from public to private clouds. The article explores control, security, and cost factors that drive this strategic change.<!--excerpt_end-->
 

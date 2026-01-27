@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/end-to-end-observability-for-azure-databricks-from/ba-p/4475692
 title: 'End-to-End Observability for Azure Databricks: Infrastructure and Application Logging Strategies'
 author: Rafia_Aqil
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - ml
+primary_section: ml
 ---
 Rafia Aqil, along with co-authors Amudha Palani and Peter Lo, provides a deep dive into end-to-end observability practices for Azure Databricks. This guide covers best practices for infrastructure and application logging across cloud-scale analytics workloads.<!--excerpt_end-->
 

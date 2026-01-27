@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-mirroring-for-azure-sql-managed-instance-in-microsoft-fabric/
 title: Fabric Mirroring for Azure SQL Managed Instance Now Generally Available
 author: Microsoft Fabric Blog
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 The Microsoft Fabric Blog team discusses the general availability of Fabric Mirroring for Azure SQL Managed Instance, guiding readers through setup, real-time analytics integration, and cost considerations.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-15-configure-internet-access-for-copilot-coding-agent
 title: Configure internet access for Copilot coding agent
 author: Allison
@@ -17,6 +17,7 @@ section_names:
 - ai
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 In this article, Allison discusses new updates to GitHub Copilot, specifically focusing on changes to its internet access during the public preview phase. The updates aim to better protect user data and address potential security concerns, offering developers a safer and more secure experience while using Copilot.<!--excerpt_end-->
 

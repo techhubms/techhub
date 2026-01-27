@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/azure-support-plans-compared-choosing-the-right-one-for-your/m-p/4471451#M22338
 title: 'Comparing Microsoft Azure Support Plans: Choosing the Best Fit for Your Organization'
 author: JohnNaguib
@@ -17,6 +17,7 @@ tags:
 - Technical Support
 section_names:
 - azure
+primary_section: azure
 ---
 JohnNaguib reviews and compares Microsoft Azure Support Plans, helping teams evaluate technical guidance, service levels, and pricing to make informed support choices.<!--excerpt_end-->
 

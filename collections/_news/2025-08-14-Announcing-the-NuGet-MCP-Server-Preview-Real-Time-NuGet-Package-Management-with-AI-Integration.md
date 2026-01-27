@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/nuget-mcp-server-preview/
 title: 'Announcing the NuGet MCP Server Preview: Real-Time NuGet Package Management with AI Integration'
 author: Jeff Kluge
@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Jeff Kluge announces the preview of the NuGet MCP Server, highlighting its integration into AI-powered development workflows, advanced package management features, and support for Visual Studio, VS Code, and GitHub Copilot.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-03-copilot-code-review-path-scoped-custom-instruction-file-support
 title: Path-Scoped Custom Instructions for Copilot Code Review
 author: Allison
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces new path-scoped custom instruction file support in Copilot code review, enhancing developers’ ability to provide focused feedback within specific parts of their repositories.<!--excerpt_end-->
 

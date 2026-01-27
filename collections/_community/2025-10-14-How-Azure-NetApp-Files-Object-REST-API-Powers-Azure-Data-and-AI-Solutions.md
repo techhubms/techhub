@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-azure-netapp-files-object-rest-api-powers-azure-and-isv-data/ba-p/4459545
 title: How Azure NetApp Files Object REST API Powers Azure Data and AI Solutions
 author: GeertVanTeylingen
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 GeertVanTeylingen, along with co-authors Sean Luce, Asutosh Panda, and Thomas Willingham, introduces the Azure NetApp Files Object REST API—a robust way to unlock direct data access for advanced analytics, AI, and machine learning in Azure environments.<!--excerpt_end-->
 

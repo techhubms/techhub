@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/garage/wall-of-fame/cx-observe-product-feedback/
 title: 'CX Observe Product Feedback Copilot: AI-Powered Insights for Azure Product Leaders'
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke introduces CX Observe Product Feedback Copilot, an AI-powered tool transforming raw customer feedback into actionable insights for Azure product teams. Discover how this innovation streamlines product strategy and drives value for Microsoft’s cloud customers.<!--excerpt_end-->
 

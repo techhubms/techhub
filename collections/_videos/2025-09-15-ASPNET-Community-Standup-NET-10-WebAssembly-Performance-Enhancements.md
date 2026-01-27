@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=km1bLnw_zm4
 title: 'ASP.NET Community Standup: .NET 10 WebAssembly Performance Enhancements'
 author: dotnet
@@ -26,6 +26,7 @@ tags:
 - WebAssembly Performance
 section_names:
 - coding
+primary_section: coding
 ---
 Daniel Roth and Larry Ewing, in this ASP.NET Community Standup, discuss the impactful performance upgrades introduced in .NET 10 for Blazor WebAssembly, offering developers insightful guidance on creating faster web applications.<!--excerpt_end-->
 

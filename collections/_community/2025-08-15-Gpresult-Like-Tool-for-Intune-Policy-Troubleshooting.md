@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/gpresult-like-tool-for-intune/ba-p/4437008
 title: Gpresult-Like Tool for Intune Policy Troubleshooting
 author: jonasoh
@@ -28,6 +28,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: coding
 ---
 Jonas Ohmsen presents a PowerShell module called IntuneDebug aimed at simplifying Microsoft Intune policy troubleshooting for Windows devices, with step-by-step usage details and reporting techniques.<!--excerpt_end-->
 

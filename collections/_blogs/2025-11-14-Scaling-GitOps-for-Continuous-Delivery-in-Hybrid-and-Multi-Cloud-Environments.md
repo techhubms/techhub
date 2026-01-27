@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/gitops-in-the-wild-scaling-continuous-delivery-in-hybrid-cloud-environments/
 title: Scaling GitOps for Continuous Delivery in Hybrid and Multi-Cloud Environments
 author: Ankur Mahida
@@ -53,6 +53,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Ankur Mahida delivers an in-depth analysis of GitOps adoption in hybrid cloud environments, highlighting architectural, governance, and security strategies for scaling continuous delivery with Azure, Kubernetes, and modern DevOps tooling.<!--excerpt_end-->
 

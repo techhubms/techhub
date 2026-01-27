@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/can-you-build-agent2agent-communication-on-mcp-yes
 title: 'Building Agent-to-Agent Communication with MCP: Capabilities, Patterns, and Implementation'
 author: Victor Dibia, Mike Kistler, Maria Naggaga
@@ -17,6 +17,7 @@ tags:
 - Session Resumption
 section_names:
 - ai
+primary_section: ai
 ---
 Authored by Victor Dibia, Mike Kistler, and Maria Naggaga, this article explores advanced features in Microsoft's Model Context Protocol (MCP), focusing on building robust agent-to-agent communication systems and showcasing practical implementation strategies.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/announcing-general-availability-of-github-copilot-for-azure-now-with-agent-mode/
 title: Announcing General Availability of GitHub Copilot for Azure—Now with Agent Mode
 author: Yun Jung Choi
@@ -28,6 +28,7 @@ section_names:
 - devops
 - coding
 - security
+primary_section: github-copilot
 ---
 Yun Jung Choi introduces the general availability of GitHub Copilot for Azure, highlighting its new Agent Mode that transforms DevOps workflows with integrated AI, enhanced security, and rich Azure support.<!--excerpt_end-->
 

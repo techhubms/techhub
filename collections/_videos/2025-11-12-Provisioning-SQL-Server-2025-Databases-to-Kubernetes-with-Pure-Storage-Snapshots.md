@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FkPyaJo5X08
 title: Provisioning SQL Server 2025 Databases to Kubernetes with Pure Storage Snapshots
 author: Microsoft Developer
@@ -26,6 +26,7 @@ tags:
 - Technology
 section_names:
 - azure
+primary_section: azure
 ---
 In this Data Exposed episode, Microsoft Developer presents how Pure Storage snapshot technology enables rapid cloning of SQL Server 2025 databases into Kubernetes environments for streamlined development and testing.<!--excerpt_end-->
 

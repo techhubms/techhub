@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=eKVJ-Rw8R0I
 title: NIST Zero Trust with Forescout and Microsoft
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 - Zero Trust
 section_names:
 - security
+primary_section: security
 ---
 Presented by Bryan Davis at Microsoft Ignite, this session outlines achieving Zero Trust security in line with NIST 1800-35 using Forescout and Microsoft technologies such as Defender and Intune.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/research/blog/tell-me-when-building-agents-that-can-wait-monitor-and-act/
 title: Building Persistent Monitoring Agents with SentinelStep in Magentic-UI
 author: stclarke
@@ -22,6 +22,7 @@ tags:
 - SentinelStep
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke discusses SentinelStep in Magentic-UI, a Microsoft research effort to create AI agents capable of persistent, efficient monitoring tasks, with real-world evaluation and open-source availability.<!--excerpt_end-->
 

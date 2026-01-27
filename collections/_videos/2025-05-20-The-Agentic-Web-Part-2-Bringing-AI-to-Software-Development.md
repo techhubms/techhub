@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=EWs507ckJl4
 title: 'The Agentic Web [Part 2]: Bringing AI to Software Development'
 author: Microsoft Events
@@ -22,6 +22,7 @@ tags:
 - Software Development Lifecycle
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents Jay Parikh and Frank Shaw exploring how AI can be woven into every stage of the modern software development lifecycle and outlining approaches for building scalable AI platforms.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xoUCZj4ZMRs
 title: 'Azure File Sync Managed Identity: Enhanced Security and Simplified Operations'
 author: John Savill's Technical Training
@@ -30,6 +30,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 John Savill's Technical Training demonstrates how managed identities can improve security and simplify operations for Azure File Sync, covering deployment, migration, and permission management.<!--excerpt_end-->
 

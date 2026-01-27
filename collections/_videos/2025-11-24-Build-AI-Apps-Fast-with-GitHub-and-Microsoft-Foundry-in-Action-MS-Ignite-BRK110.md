@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ofWdnCHY_LY
 title: Build AI Apps Fast with GitHub and Microsoft Foundry in Action (MS Ignite BRK110)
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Presented by Kate Catlin and Facundo Santiago at Microsoft Ignite, this session explores how IT professionals can build, customize, and deploy AI-driven apps quickly using GitHub and Microsoft Foundry. The talk highlights agentic architectures, multi-agent workflows, security, and demo-driven insights.<!--excerpt_end-->
 

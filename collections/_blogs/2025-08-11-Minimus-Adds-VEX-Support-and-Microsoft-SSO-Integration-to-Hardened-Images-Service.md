@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/minimus-adds-vex-support-to-managed-hardened-images-service/?utm_source=rss&utm_medium=rss&utm_campaign=minimus-adds-vex-support-to-managed-hardened-images-service
 title: Minimus Adds VEX Support and Microsoft SSO Integration to Hardened Images Service
 author: Mike Vizard
@@ -28,6 +28,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Mike Vizard explains how Minimus’ updated service now helps DevSecOps teams with VEX support, secure Helm charts for Kubernetes, compliance dashboards, and Microsoft SSO integration, enhancing application security workflows.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mib177/trail_bike_my_new_maui_app/
 title: 'Trail Bike: A New Cycling App Prototype Using .NET MAUI'
 author: Rywent
@@ -17,6 +17,7 @@ tags:
 - UI Design
 section_names:
 - coding
+primary_section: coding
 ---
 Rywent introduces a prototype cycling app built with C# and MAUI, inviting feedback from the development community as he explores MAUI for cross-platform application design.<!--excerpt_end-->
 

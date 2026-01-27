@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mgbojy/build_smarter_llms_with_local_mcp_servers_in_net/
 title: Build Smarter LLMs with Local MCP Servers in .NET
 author: HassanRezkHabib
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 In this community tutorial, HassanRezkHabib explains how to build a local MCP server in .NET to connect with local LLMs. The video provides practical guidance for developers aiming for more deterministic and offline LLM workflows.<!--excerpt_end-->
 

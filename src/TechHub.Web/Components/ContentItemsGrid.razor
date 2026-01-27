@@ -1,4 +1,4 @@
-@using TechHub.Core.DTOs
+@using TechHub.Core.Models
 @using TechHub.Core.Configuration
 @using TechHub.Web.Services
 @inject TechHubApiClient ApiClient
@@ -75,7 +75,7 @@
     [Parameter]
     public List<string>? FilterTags { get; set; }
 
-    private List<ContentItemDto> contentItems = new();
+    private List<ContentItem> contentItems = new();
     private bool isLoading = true;
     private string? errorMessage;
     private string previousCollectionName = string.Empty;
@@ -89,7 +89,7 @@
     /// Returns content items filtered by selected tags (if any)
     /// Uses AND logic - content must have ALL selected tags
     /// </summary>
-    private IEnumerable<ContentItemDto> FilteredContentItems
+    private IEnumerable<ContentItem> FilteredContentItems
     {
         get
         {
@@ -160,7 +160,7 @@
 
         try
         {
-            IEnumerable<ContentItemDto>? items = null;
+            IEnumerable<ContentItem>? items = null;
 
             // Handle "all" collection - get all content for this section across all collections
             if (CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
@@ -195,7 +195,7 @@
                 items = await ApiClient.GetContentAsync(SectionName, CollectionName);
             }
 
-            contentItems = items?.ToList() ?? new List<ContentItemDto>();
+            contentItems = items?.ToList() ?? new List<ContentItem>();
             Logger.LogDebug("LoadContent COMPLETE: Loaded {Count} items, isLoading will be set to false", contentItems.Count);
         }
         catch (Exception ex)

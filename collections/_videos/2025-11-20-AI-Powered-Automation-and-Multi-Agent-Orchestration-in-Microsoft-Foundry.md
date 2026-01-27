@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=U20tVialbao
 title: AI-Powered Automation and Multi-Agent Orchestration in Microsoft Foundry
 author: Microsoft Events
@@ -33,6 +33,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 Microsoft Events presents a deep dive session on multi-agent orchestration and automation in Microsoft Foundry, featuring Christof Gebhart, Shawn Henry, Tina Manghnani, and Mark Wallace. Learn about scaling from single agent prototypes to secure, governed, and observable fleets, leveraging Semantic Kernel, AutoGen, and Azure AI.<!--excerpt_end-->
 

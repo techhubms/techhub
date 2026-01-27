@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 In this practical guide, dchelupati demonstrates how SRE Agent can automate incident diagnosis and ticket creation by connecting Azure Managed Grafana and Jira—even without native integrations—using MCP and Azure Container Apps.<!--excerpt_end-->
 

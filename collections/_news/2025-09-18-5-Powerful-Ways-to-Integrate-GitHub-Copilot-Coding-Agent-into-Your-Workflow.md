@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/5-ways-to-integrate-github-copilot-coding-agent-into-your-workflow/
 title: 5 Powerful Ways to Integrate GitHub Copilot Coding Agent into Your Workflow
 author: Andrea Griffiths
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Andrea Griffiths shares five in-depth methods for boosting your development workflow with GitHub Copilot coding agent, focusing on automation, UI testing, branching, and ecosystem extensibility.<!--excerpt_end-->
 

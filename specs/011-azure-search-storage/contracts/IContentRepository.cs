@@ -1,4 +1,4 @@
-using TechHub.Core.DTOs;
+using TechHub.Core.Models;
 using TechHub.Core.Models;
 
 namespace TechHub.Core.Interfaces;
@@ -67,7 +67,7 @@ public interface IContentRepository
     /// - Keyset pagination (cursor-based for infinite scroll)
     /// - Facet counts for dynamic filtering
     /// </summary>
-    Task<SearchResults<ContentItemDto>> SearchAsync(
+    Task<SearchResults<ContentItem>> SearchAsync(
         SearchRequest request,
         CancellationToken ct = default);
     
@@ -84,7 +84,7 @@ public interface IContentRepository
     /// Get related articles based on tag overlap (Phase 1) or semantic similarity (Phase 2).
     /// Returns articles ranked by shared tags in Phase 1.
     /// </summary>
-    Task<IReadOnlyList<ContentItemDto>> GetRelatedAsync(
+    Task<IReadOnlyList<ContentItem>> GetRelatedAsync(
         string articleId,
         int count = 5,
         CancellationToken ct = default);

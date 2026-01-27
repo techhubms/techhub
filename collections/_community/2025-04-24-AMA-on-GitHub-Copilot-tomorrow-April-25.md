@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1k70gul/ama_on_github_copilot_tomorrow_april_25/
 title: AMA on GitHub Copilot tomorrow (April 25)
 author: github
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 The GitHub team, including CPO Mario Rodriguez, VP of DevRel Martin Woodward, and Pierce Boggan from VS Code, hosted their first official Reddit AMA focused on GitHub Copilot. The session invited users to ask questions about Copilot’s AI agents, agent mode integration in VS Code, AI model developments, GitHub’s company vision, and future plans. This interactive event provided insights straight from the GitHub leaders to the developer community.<!--excerpt_end-->
 

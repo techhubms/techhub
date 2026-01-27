@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2026-debugging-with-copilot/
 title: 'Debugging, but Without the Drama: Visual Studio 2026’s Copilot-Powered Experience'
 author: Harshada Hole
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Harshada Hole showcases how Visual Studio 2026 integrates GitHub Copilot for a more intuitive and effective debugging experience, highlighting real-world scenarios where AI-driven features add value.<!--excerpt_end-->
 

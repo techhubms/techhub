@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-data-agent-now-supports-ci-cd-alm-flow-and-git-integration/
 title: 'Fabric Data Agent: CI/CD, ALM Flow, and Git Integration Enhancements'
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ section_names:
 - azure
 - devops
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces major updates for Fabric data agents, with CI/CD, ALM flow, and Git integration. Authored by Microsoft Fabric Blog, the article explains how these features enhance development, collaboration, and data management across environments.<!--excerpt_end-->
 

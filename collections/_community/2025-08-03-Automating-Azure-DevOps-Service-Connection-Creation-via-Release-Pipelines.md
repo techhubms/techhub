@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1mgg9wy/release_pipeline_for_creating_serviceconnections/
 title: Automating Azure DevOps Service Connection Creation via Release Pipelines
 author: Odd-Good-6514
@@ -19,6 +19,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Odd-Good-6514 and several contributors examine approaches for automating Azure DevOps service connection setup across environments, detailing authentication considerations and alternatives to manual setup.<!--excerpt_end-->
 

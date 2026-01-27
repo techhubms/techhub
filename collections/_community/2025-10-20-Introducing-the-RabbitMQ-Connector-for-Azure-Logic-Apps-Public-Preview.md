@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-the-rabbitmq-connector-public-preview/ba-p/4462627
 title: Introducing the RabbitMQ Connector for Azure Logic Apps (Public Preview)
 author: hcamposu
@@ -22,6 +22,7 @@ tags:
 - Triggers
 section_names:
 - azure
+primary_section: azure
 ---
 hcamposu announces the RabbitMQ Connector in Azure Logic Apps, detailing how developers can set up messaging workflows by sending and receiving messages with RabbitMQ in both standard and hybrid scenarios.<!--excerpt_end-->
 

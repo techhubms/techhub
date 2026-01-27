@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Benn2rBdZwA
 title: Scaling AI Innovation with KPMG Workbench and Microsoft Foundry
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 - Tax Advisory
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents an overview of the KPMG Workbench platform, discussing how Tim Denley and others leverage Microsoft Foundry to scale AI innovation and automation across enterprise services.<!--excerpt_end-->
 

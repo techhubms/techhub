@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-17-dynamic-copilot-prompts-on-github-docs
 title: Dynamic Copilot Prompts Now Available on GitHub Docs
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison shares news about dynamic GitHub Copilot prompts on GitHub Docs, highlighting new workflow integrations that let developers launch prefilled Copilot prompts directly from documentation pages.<!--excerpt_end-->
 

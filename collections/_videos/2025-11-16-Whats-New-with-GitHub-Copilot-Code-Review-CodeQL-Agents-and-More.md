@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ikIosF_iiz4
 title: "What's New with GitHub Copilot Code Review: CodeQL, Agents & More"
 author: GitHub
@@ -26,6 +26,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents an overview of advanced Copilot code review features, focusing on the synergy between AI agents, CodeQL analysis, session views, and automation workflows for repository management.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/amba-alz-pattern-learn-about-the-latest-and-greatest/ba-p/4458320
 title: 'AMBA-ALZ Pattern: Recent Enhancements to Built-in Policies and Role-Based Access in Azure'
 author: BrunoGabrielli
@@ -26,6 +26,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 BrunoGabrielli introduces key security and governance improvements to the AMBA-ALZ pattern for Azure, detailing the new Service Health built-in policy and the Monitoring Policy Contributor role.<!--excerpt_end-->
 

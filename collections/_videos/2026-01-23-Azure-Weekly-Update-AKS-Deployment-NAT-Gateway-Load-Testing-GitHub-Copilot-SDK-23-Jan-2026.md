@@ -26,6 +26,7 @@ section_names:
 - azure
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 John Savill delivers this week's Azure update, highlighting key announcements in AKS, NAT Gateway, cloud security, Azure Load Testing, and the new GitHub Copilot SDK for developers.<!--excerpt_end-->
 

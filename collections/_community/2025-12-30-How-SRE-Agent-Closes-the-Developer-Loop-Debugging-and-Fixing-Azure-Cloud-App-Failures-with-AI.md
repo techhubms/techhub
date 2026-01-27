@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-vibe-coding-to-working-app-how-sre-agent-completes-the/ba-p/4482000
 title: 'How SRE Agent Closes the Developer Loop: Debugging and Fixing Azure Cloud App Failures with AI'
 author: dchelupati
@@ -31,6 +31,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 dchelupati demonstrates how Azure SRE Agent, in combination with Copilot and GitHub Coding Agent, enables developers to debug, document, and automatically fix complex infrastructure bugs in Azure app deployments using AI-driven workflows.<!--excerpt_end-->
 

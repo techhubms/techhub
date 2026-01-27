@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Jt39GzYCRgo
 title: '.NET Aspire: Centralizing Project Names and Constants'
 author: dotnet
@@ -17,6 +17,7 @@ tags:
 - Shared Libraries
 section_names:
 - coding
+primary_section: coding
 ---
 In this instructional video by dotnet, learn how to centralize and manage project and service names in .NET Aspire by using constants instead of magic strings—improving maintainability across your system.<!--excerpt_end-->
 

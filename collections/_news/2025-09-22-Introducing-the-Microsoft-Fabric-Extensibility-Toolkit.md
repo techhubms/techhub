@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-the-microsoft-fabric-extensibility-toolkit/
 title: Introducing the Microsoft Fabric Extensibility Toolkit
 author: Microsoft Fabric Blog
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog introduces the Fabric Extensibility Toolkit, showcasing how developers can build, integrate, and publish custom data applications directly within Microsoft Fabric, using streamlined APIs and Copilot-powered starter kits.<!--excerpt_end-->
 

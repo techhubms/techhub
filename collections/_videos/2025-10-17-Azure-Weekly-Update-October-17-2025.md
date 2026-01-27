@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=4Jfy0L82DZo
 title: 'Azure Weekly Update: October 17, 2025'
 author: John Savill's Technical Training
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 John Savill shares the latest Azure updates for October 17, 2025, including Azure Functions enhancements, firewall changes, AKS news, storage developments, Databricks integration, and AI features, providing cloud professionals with current and actionable insights.<!--excerpt_end-->
 

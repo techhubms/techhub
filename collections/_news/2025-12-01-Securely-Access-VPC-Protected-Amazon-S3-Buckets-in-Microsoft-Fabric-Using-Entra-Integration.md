@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/securely-access-vpc-protected-amazon-s3-buckets-in-microsoft-fabric-with-entra-integration-preview/
 title: Securely Access VPC-Protected Amazon S3 Buckets in Microsoft Fabric Using Entra Integration
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog describes how organizations can connect VPC-protected Amazon S3 buckets to Microsoft Fabric securely via Entra ID integration, using OIDC and an on-premises data gateway.<!--excerpt_end-->
 

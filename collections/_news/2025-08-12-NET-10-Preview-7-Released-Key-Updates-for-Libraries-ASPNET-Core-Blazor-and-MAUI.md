@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-10-preview-7/
 title: '.NET 10 Preview 7 Released: Key Updates for Libraries, ASP.NET Core, Blazor, and MAUI'
 author: .NET Team
@@ -30,6 +30,7 @@ tags:
 - WPF
 section_names:
 - coding
+primary_section: coding
 ---
 .NET Team presents a summary of features and improvements in .NET 10 Preview 7, highlighting updates across the ecosystem and providing links to detailed resources. Authors from the .NET Team offer guidance on how developers can get started with this release.<!--excerpt_end-->
 

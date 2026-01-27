@@ -1,4 +1,4 @@
----
+﻿---
 external_url: http://spindev.net/post/be-careful-with-repo-scope/
 title: Be Careful When Using GitHub PAT with Repo Scope
 author: Home on
@@ -21,6 +21,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Home on explores the hidden dangers of GitHub PATs with the `repo` scope, revealing how these tokens may inadvertently grant organization-level permissions and highlighting best practices for secure usage.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/troubleshoot-with-otlp-signals-in-azure-monitor-limited-public/ba-p/4469668
 title: Troubleshoot with OTLP Signals in Azure Monitor (Limited Public Preview)
 author: SoubhagyaDash
@@ -28,6 +28,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 SoubhagyaDash discusses Azure Monitor's new support for OpenTelemetry standards and OTLP signal ingestion, guiding developers and operations teams on unified observability and troubleshooting techniques.<!--excerpt_end-->
 

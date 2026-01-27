@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=C7Iu2lcoAQ4
 title: Artificial Intelligence (AI) and Machine Learning (ML) for Everyone!
 author: John Savill's Technical Training
@@ -25,6 +25,7 @@ tags:
 - Unsupervised Learning
 section_names:
 - ai
+primary_section: ai
 ---
 John Savill's Technical Training presents an introductory video on AI and ML concepts, guiding beginners through key terms and technologies in artificial intelligence and machine learning.<!--excerpt_end-->
 

@@ -3,9 +3,8 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Moq;
-using TechHub.Core.Configuration;
-using TechHub.Core.DTOs;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Models;
 using TechHub.Infrastructure.Services;
 using TechHub.TestUtilities;
 
@@ -50,7 +49,7 @@ public class TagCloudServiceTests
         // Setup: Create real dependencies - no mocks for services
         var markdownService = new MarkdownService();
         var tagMatchingService = new TagMatchingService();
-        
+
         _repository = new StubContentRepository(
             markdownService,
             tagMatchingService,

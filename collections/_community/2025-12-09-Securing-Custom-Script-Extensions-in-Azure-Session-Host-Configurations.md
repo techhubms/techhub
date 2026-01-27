@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/more-security-around-using-custom-script-extensions-and-session/idi-p/4476426
 title: Securing Custom Script Extensions in Azure Session Host Configurations
 author: kristokruuser
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 kristokruuser details practical security challenges in managing authentication for Custom Script Extensions via Azure Session Host Configuration, raising concerns over anonymous blob access and plain-text tokens, and explores secure alternatives.<!--excerpt_end-->
 

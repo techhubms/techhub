@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-25-pull-request-files-changed-public-preview-now-supports-commenting-on-unchanged-lines
 title: 'Enhanced GitHub Pull Request Files Changed Page: Comment Anywhere in Changed Files'
 author: Allison
@@ -24,6 +24,7 @@ tags:
 - UI Enhancement
 section_names:
 - devops
+primary_section: devops
 ---
 Allison discusses new GitHub features for pull request reviews, enabling comments on any line of changed files and improved single file navigation, benefiting developers and reviewers.<!--excerpt_end-->
 

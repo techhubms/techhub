@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-22-improved-performance-for-github-actions-workflows-page
 title: Improved Performance for GitHub Actions Workflows Page
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - Workflow Optimization
 section_names:
 - devops
+primary_section: devops
 ---
 Allison outlines significant improvements to the GitHub Actions workflow pages, enabling support for large workflows and introducing job status filtering to help teams manage complex automation more effectively.<!--excerpt_end-->
 

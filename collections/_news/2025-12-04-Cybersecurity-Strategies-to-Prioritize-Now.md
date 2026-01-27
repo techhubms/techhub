@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/12/04/cybersecurity-strategies-to-prioritize-now/
 title: Cybersecurity Strategies to Prioritize Now
 author: stclarke
@@ -30,6 +30,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Damon Becknel from Microsoft shares practical cybersecurity strategies, emphasizing essential defenses, identity management, modern protocols, and collaboration for stronger organizational security.<!--excerpt_end-->
 

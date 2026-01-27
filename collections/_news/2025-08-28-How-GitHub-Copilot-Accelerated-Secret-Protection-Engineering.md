@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-we-accelerated-secret-protection-engineering-with-copilot/
 title: How GitHub Copilot Accelerated Secret Protection Engineering
 author: Parth Sehgal
@@ -26,6 +26,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Parth Sehgal shares how the GitHub engineering team used GitHub Copilot coding agents to automate and scale secret protection, offering practical lessons for engineering teams.<!--excerpt_end-->
 

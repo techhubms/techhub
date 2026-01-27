@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=AoB4xR0Is9Y
 title: Building Scalable AI Apps with Azure SQL Database Hyperscale
 author: Microsoft Events
@@ -31,6 +31,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events hosts an expert-led Ignite session featuring speakers like Aditya Badramraju and Anna Hoffman, guiding attendees on best practices for scalable, secure AI app development using Azure SQL Database Hyperscale.<!--excerpt_end-->
 

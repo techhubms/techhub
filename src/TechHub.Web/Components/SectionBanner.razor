@@ -1,4 +1,4 @@
-@using TechHub.Core.DTOs
+@using TechHub.Core.Models
 
 @* 
     SectionBanner - Decorative banner/hero for section pages
@@ -31,7 +31,7 @@
 
     // For section pages - provide Section
     [Parameter]
-    public SectionDto? Section { get; set; }
+    public Section? Section { get; set; }
 
     // Computed properties - prefer Section data if available
     private string DisplayTitle => Section?.Title ?? Title ?? string.Empty;

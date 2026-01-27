@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/preparing-for-dotnet-10-gc/
 title: 'Preparing for the .NET 10 GC: Understanding and Tuning DATAS'
 author: maoni
@@ -27,6 +27,7 @@ tags:
 - Tuning
 section_names:
 - coding
+primary_section: coding
 ---
 Maoni presents a comprehensive guide for developers preparing for the .NET 10 release, focusing on how the new DATAS feature in Garbage Collection changes memory and performance profiles, with actionable advice for evaluating, tuning, or disabling this functionality.<!--excerpt_end-->
 

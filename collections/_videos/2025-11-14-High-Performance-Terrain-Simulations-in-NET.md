@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=M98JKrUfyI4
 title: High-Performance Terrain Simulations in .NET
 author: dotnet
@@ -19,6 +19,7 @@ tags:
 - Terrain Simulation
 section_names:
 - coding
+primary_section: coding
 ---
 Presented by dotnet, this session explores the architectural decisions and programming techniques that enable Gaea’s terrain engine to push .NET beyond typical workloads for massive, high-performance simulations.<!--excerpt_end-->
 

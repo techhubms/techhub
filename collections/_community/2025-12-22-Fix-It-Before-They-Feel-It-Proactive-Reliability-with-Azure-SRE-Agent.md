@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/fix-it-before-they-feel-it-higher-reliability-with-proactive/ba-p/4480444
 title: 'Fix It Before They Feel It: Proactive Reliability with Azure SRE Agent'
 author: saziz_msft
@@ -28,6 +28,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 saziz_msft introduces a hands-on guide to building self-healing production infrastructure with Azure SRE Agent, focusing on autonomous detection, remediation, and reporting of performance issues.<!--excerpt_end-->
 

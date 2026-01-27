@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/how-to-build-android-widgets-with-dotnet-maui/
 title: How to Build Android Widgets with .NET MAUI
 author: Toine de Boer
@@ -25,6 +25,7 @@ tags:
 - Widgets
 section_names:
 - coding
+primary_section: coding
 ---
 Toine de Boer explains how to create interactive Android widgets using .NET MAUI, sharing detailed techniques and code examples for building, configuring, and communicating with widgets from your app.<!--excerpt_end-->
 

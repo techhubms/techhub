@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ycq7r-ngOBI
 title: SQL Database in Microsoft Fabric
 author: John Savill's Technical Training
@@ -29,6 +29,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 In this video, John Savill explores the SQL database features of Microsoft Fabric, demonstrating setup, usage, and integration points with analytics services and providing guidance on selecting the right SQL database for various scenarios.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=STigfiK_n1Q
 title: GitHub MCP Registry Integration with Playwright in VS Code Insiders
 author: Visual Studio Code
@@ -29,6 +29,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code presents a demonstration by Liam Hampton on boosting developer productivity by integrating the GitHub MCP Registry and Playwright MCP extension within VS Code Insiders.<!--excerpt_end-->
 

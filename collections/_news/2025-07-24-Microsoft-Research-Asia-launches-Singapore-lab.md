@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/2025/07/24/microsoft-research-asia-launches-singapore-lab-to-drive-ai-innovation-industrial-transformation-and-talent-development/
 title: Microsoft Research Asia launches Singapore lab
 author: stclarke
@@ -19,6 +19,7 @@ tags:
 - Technology Research
 section_names:
 - ai
+primary_section: ai
 ---
 In this update, stclarke reports on the launch of Microsoft Research Asia's new Singapore lab, aimed at strengthening AI innovation and talent development in the Asia-Pacific region.<!--excerpt_end-->
 

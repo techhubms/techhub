@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/inference-performance-of-llama-3-1-8b-using-vllm-across-various/ba-p/4448420
 title: Benchmarking Llama 3.1 8B Inference with vLLM on Azure GPU and CPU VMs
 author: CormacGarvey
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Cormac Garvey evaluates the inference performance and cost-efficiency of Llama 3.1 8B using vLLM across Azure GPU and CPU virtual machines, offering actionable benchmarks and deployment strategies for enterprise AI workloads.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/engineering-at-microsoft/dev-box-ready-to-code-dev-box-images-template/
 title: 'Dev Box Ready-To-Code: Microsoft’s 1ES Image Templates Streamline Team Development Environments'
 author: Dmitry Goncharenko
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 In this comprehensive post, Dmitry Goncharenko from Microsoft's 1ES team shares how Ready-To-Code Dev Box image templates are used to standardize and automate development environments, demonstrating practical benefits and sharing sample resources.<!--excerpt_end-->
 

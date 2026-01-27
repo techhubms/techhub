@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-on-azure-container-apps-the-unified-platform-for/ba-p/4470814
 title: 'Azure Functions on Azure Container Apps: Unified Platform for Event-Driven and Finite Workloads'
 author: DeepGanguly
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - ml
+primary_section: ml
 ---
 DeepGanguly explores the integration of Azure Functions with Azure Container Apps, showing how developers can deploy event-driven workloads, batch processing, ML inference, and advanced microservices patterns using modern Azure tooling.<!--excerpt_end-->
 

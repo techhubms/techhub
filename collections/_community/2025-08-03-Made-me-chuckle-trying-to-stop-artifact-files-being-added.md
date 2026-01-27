@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mgipey/made_me_chuckle_trying_to_stop_artifact_files/
 title: Made me chuckle - trying to stop artifact files being added
 author: okiokio
@@ -16,6 +16,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 okiokio shares a lighthearted community post highlighting the struggle of keeping artifact files out of repositories when using GitHub Copilot.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/latam/features/ai/data-driven-farming-chile/?lang=en
 title: Data-driven Farming and AI Transforming Water Management in Chile
 author: stclarke
@@ -16,6 +16,7 @@ tags:
 - Water Management
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke covers how Juan Montes reports on the impact of AI and data-driven techniques in improving water management across Chile’s farms, focusing on technological innovations enabling smarter agriculture.<!--excerpt_end-->
 

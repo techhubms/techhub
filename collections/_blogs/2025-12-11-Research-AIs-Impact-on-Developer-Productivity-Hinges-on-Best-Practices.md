@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devclass.com/2025/12/11/research-ai-can-help-or-hinder-software-development-and-old-style-best-practices-make-the-difference/
 title: "Research: AI's Impact on Developer Productivity Hinges on Best Practices"
 author: Tim Anderson
@@ -24,6 +24,7 @@ tags:
 - Team Dynamics
 section_names:
 - ai
+primary_section: ai
 ---
 Tim Anderson reviews research on how generative AI affects software development, revealing that longstanding best practices play a bigger role in success than the specific AI tools themselves.<!--excerpt_end-->
 

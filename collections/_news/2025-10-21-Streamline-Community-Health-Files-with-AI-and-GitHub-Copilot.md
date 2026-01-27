@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-to-update-community-health-files-with-ai/
 title: Streamline Community Health Files with AI and GitHub Copilot
 author: Alexandra Lietzke
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Alexandra Lietzke guides maintainers and developers through using GitHub Copilot and AI to automate and optimize community health files, with practical tutorials, checklists, and prompt engineering tips.<!--excerpt_end-->
 

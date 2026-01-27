@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=kNPTDlxEA-Y
 title: Modernizing a 17th Century Italian-English Dictionary with .NET and ML.NET
 author: dotnet
@@ -22,6 +22,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ml
 ---
 dotnet demonstrates how to modernize a 17th century Italian-English dictionary using .NET, ML.NET for custom embeddings, CosmosDb for storage, and Aspire as the orchestration layer.<!--excerpt_end-->
 

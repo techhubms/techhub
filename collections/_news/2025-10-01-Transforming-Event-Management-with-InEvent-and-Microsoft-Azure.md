@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/startups/blog/building-effortless-events-how-inevent-and-microsoft-for-startups-are-transforming-event-management/
 title: Transforming Event Management with InEvent and Microsoft Azure
 author: stclarke
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 stclarke examines how InEvent leverages Microsoft Azure services—such as Azure Kubernetes Service, Azure Active Directory, Dynamics 365, and Azure OpenAI Service—to deliver scalable, secure, and AI-driven event management solutions.<!--excerpt_end-->
 

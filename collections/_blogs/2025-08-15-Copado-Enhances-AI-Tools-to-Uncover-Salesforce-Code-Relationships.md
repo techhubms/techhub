@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/copado-extends-ai-reach-to-surface-relationships-between-salesforce-code/?utm_source=rss&utm_medium=rss&utm_campaign=copado-extends-ai-reach-to-surface-relationships-between-salesforce-code
 title: Copado Enhances AI Tools to Uncover Salesforce Code Relationships
 author: Mike Vizard
@@ -32,6 +32,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard explains how Copado’s new Org Intelligence module brings AI-powered relationship mapping to Salesforce code, improving object reuse, impact analysis, and DevOps practices for developers.<!--excerpt_end-->
 

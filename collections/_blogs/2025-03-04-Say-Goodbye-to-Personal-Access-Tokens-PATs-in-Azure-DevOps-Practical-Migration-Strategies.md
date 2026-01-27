@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://jessehouwing.net/azure-devops-say-goodbye-to-personal-access-tokens-pats/
 title: 'Say Goodbye to Personal Access Tokens (PATs) in Azure DevOps: Practical Migration Strategies'
 author: Michael Thomsen
@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 In this post, Michael Thomsen discusses how his team eliminated all Azure DevOps Personal Access Tokens (PATs). He details practical migration steps, leveraging service principals and workload identity federation, making it a must-read for DevOps professionals focused on secure automation.<!--excerpt_end-->
 

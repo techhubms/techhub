@@ -711,7 +711,6 @@ public interface IContentRepository
 // Implementations (using Dapper):
 // - PostgresContentRepository (production, CI/CD, E2E tests)
 // - SqliteContentRepository (local dev, integration tests)
-// - InMemoryContentRepository (unit tests - mock data)
 ```
 
 **HTML Rendering Strategy**:

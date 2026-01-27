@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=pq2drN2Qw5w
 title: 'Boost Your SQL Development in VS Code: GitHub Copilot, Containers, and More'
 author: Visual Studio Code
@@ -33,6 +33,7 @@ section_names:
 - github-copilot
 - coding
 - azure
+primary_section: github-copilot
 ---
 Visual Studio Code authors Olivia McVicker and Carlos Robles present a hands-on guide to leveraging the newest MSSQL extension features—including GitHub Copilot Ask, Agent Mode, and containerized SQL Server—for enhanced SQL development.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unlocking-application-modernisation-with-github-copilot/ba-p/4454121
 title: Unlocking Application Modernisation with GitHub Copilot
 author: Richard_Healy
@@ -29,6 +29,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Richard_Healy shares an in-depth look at how GitHub Copilot, agentic AI, and Azure are revolutionizing application modernisation, empowering teams to refactor legacy systems, accelerate cloud adoption, and boost developer productivity.<!--excerpt_end-->
 

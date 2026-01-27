@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2026-01-15-secret-scanning-extended-metadata-to-be-automatically-enabled-for-certain-repositories
 title: 'GitHub Secret Scanning: Automatic Extended Metadata Checks for Security'
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison reports on GitHub's upcoming automatic enablement of extended metadata checks in secret scanning, bringing improved context to security alerts for more effective remediation.<!--excerpt_end-->
 

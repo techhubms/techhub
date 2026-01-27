@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=oCNqsEXKnoA
 title: 'Running GenAI in Containers: Dynamic Sessions with Azure Container Apps and LangChain4j'
 author: Microsoft Developer
@@ -34,6 +34,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Developer, joined by Brian Benz, guides Java developers through using Azure Container Apps Dynamic Sessions and LangChain4j to create persistent, interactive AI code execution environments powered by OpenAI.<!--excerpt_end-->
 

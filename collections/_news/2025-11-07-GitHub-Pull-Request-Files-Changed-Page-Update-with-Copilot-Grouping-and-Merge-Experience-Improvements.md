@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-06-pull-request-files-changed-public-preview-and-merge-experience-november-6-updates
 title: GitHub Pull Request Files Changed Page Update with Copilot Grouping and Merge Experience Improvements
 author: Allison
@@ -26,6 +26,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison summarizes fresh updates to the GitHub pull request workflow, with batch changes, Copilot-powered grouping, collapsible annotations, and improved merge queue experience for developers.<!--excerpt_end-->
 

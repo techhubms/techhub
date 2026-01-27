@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/survey-traces-large-amount-of-breaches-back-to-vulnerable-code/?utm_source=rss&utm_medium=rss&utm_campaign=survey-traces-large-amount-of-breaches-back-to-vulnerable-code
 title: Most Organizations Face Breaches Caused by Vulnerable Code, Survey Finds
 author: Mike Vizard
@@ -30,6 +30,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Mike Vizard analyzes survey findings about the widespread impact of vulnerable code on organizational security, including the challenge of AI-generated code, adoption of security tools, and the ongoing evolution of DevSecOps practices.<!--excerpt_end-->
 

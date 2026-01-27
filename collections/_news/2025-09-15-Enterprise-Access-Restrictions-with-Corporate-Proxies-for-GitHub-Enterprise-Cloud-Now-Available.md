@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-15-enterprise-access-restrictions-with-corporate-proxies-is-now-generally-available
 title: Enterprise Access Restrictions with Corporate Proxies for GitHub Enterprise Cloud Now Available
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison details how GitHub Enterprise Cloud accounts with Enterprise Managed Users can now restrict access to github.com traffic via corporate proxy configuration, strengthening compliance and security for organizational workflows.<!--excerpt_end-->
 

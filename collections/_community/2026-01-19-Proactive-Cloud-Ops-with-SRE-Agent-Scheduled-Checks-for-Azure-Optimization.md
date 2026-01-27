@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 dchelupati walks through setting up the Azure SRE Agent for proactive cloud operations, demonstrating how to automate cloud optimization across cost, security, and performance using continuous checks and integrations with GitHub and Teams.<!--excerpt_end-->
 

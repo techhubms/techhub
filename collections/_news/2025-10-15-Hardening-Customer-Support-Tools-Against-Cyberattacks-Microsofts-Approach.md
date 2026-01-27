@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/15/the-importance-of-hardening-customer-support-tools-against-attack/
 title: 'Hardening Customer Support Tools Against Cyberattacks: Microsoft’s Approach'
 author: Raji Dani
@@ -21,6 +21,7 @@ tags:
 - Zero Trust
 section_names:
 - security
+primary_section: security
 ---
 Raji Dani, Microsoft’s Deputy CISO, shares actionable insights on securing customer support systems, focusing on identity management, least-privilege principles, and proactive monitoring, with adaptable guidance suitable for any organization's security posture.<!--excerpt_end-->
 

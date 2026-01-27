@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/getting-started-with-copilot-studio-build-your-first-ai-powered-bot/
 title: 'Getting Started with Copilot Studio: Build Your First AI-Powered Bot'
 author: Dellenny
@@ -21,6 +21,7 @@ tags:
 - Power Virtual Agents
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny demonstrates how to build, test, and deploy your first bot using Microsoft Copilot Studio’s low-code environment, providing practical steps for anyone interested in conversational AI solutions.<!--excerpt_end-->
 

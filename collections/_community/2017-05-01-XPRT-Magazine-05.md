@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 05
 date: 2017-05-01 00:00:00 +00:00
 author: Xebia
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 XPRT Magazine 05 explores Azure Event Grid, best practices for ARM templates, cloud transition strategies, containerized testing, deployment pipelines, and scaling Scrum. This issue provides actionable insights for building resilient, scalable, and modern cloud solutions.
 <!--excerpt_end-->

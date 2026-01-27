@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=slDdNIQCJBQ
 title: 'Foundry IQ: The Future of Retrieval-Augmented Generation with Azure AI Search and Knowledge Retrieval'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events present an in-depth session on Foundry IQ and the evolving landscape of retrieval-augmented generation (RAG), focusing on integrating enterprise data for AI agents using Azure AI Search.<!--excerpt_end-->
 

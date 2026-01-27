@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Developer presents an overview of how Microsoft Purview provides unified data security and governance, highlighting practical features and best practices to secure and manage organizational data.<!--excerpt_end-->
 

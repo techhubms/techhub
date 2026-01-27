@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/11/05/microsoft-elevate-uae-building-a-future-ready-workforce/
 title: 'Microsoft Elevate UAE: Training Over 100,000 Students and Educators in AI Skills'
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 - UAE
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke breaks down Microsoft's efforts to accelerate AI upskilling in the UAE, highlighting initiatives that train educators, students, and government workers for an AI-driven future.<!--excerpt_end-->
 

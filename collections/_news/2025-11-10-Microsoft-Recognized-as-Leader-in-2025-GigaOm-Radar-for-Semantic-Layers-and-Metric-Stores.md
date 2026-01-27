@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-named-leader-and-outperformer-in-the-2025-gigaom-radar-for-semantic-layers-metric-stores/
 title: Microsoft Recognized as Leader in 2025 GigaOm Radar for Semantic Layers and Metric Stores
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - ml
+primary_section: ai
 ---
 The Microsoft Fabric Blog highlights Microsoft's recognition as a Leader and Outperformer in the 2025 GigaOm Radar for Semantic Layers & Metric Stores, discussing the pivotal role of semantic models in analytics and AI.<!--excerpt_end-->
 

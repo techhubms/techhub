@@ -21,6 +21,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Microsoft Fabric Blog introduces granular REST APIs for OneLake security role management, empowering developers and platform teams with precise, automation-friendly controls for security and governance.<!--excerpt_end-->
 

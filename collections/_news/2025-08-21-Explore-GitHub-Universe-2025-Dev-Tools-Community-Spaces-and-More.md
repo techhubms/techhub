@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/company-news/explore-the-best-of-github-universe-9-spaces-built-to-spark-creativity-connection-and-joy/
 title: 'Explore GitHub Universe 2025: Dev Tools, Community Spaces, and More'
 author: Jeimy Ruiz
@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Jeimy Ruiz reports on GitHub Universe 2025, an in-person developer event offering attendees the chance to discover new GitHub tools, get expert advice, join creative coding activities, and learn more about GitHub Copilot and other innovations.<!--excerpt_end-->
 

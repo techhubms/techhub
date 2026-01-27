@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/agentic-ai-the-next-evolution-beyond-generative-ai-for-solution-architects/
 title: 'Agentic AI: The Next Evolution Beyond Generative AI for Solution Architects'
 author: Dellenny
@@ -26,6 +26,7 @@ tags:
 - Solution Architecture
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny explores the paradigm shift from generative AI to Agentic AI, describing how autonomous AI agents empower solution architects to build adaptive and intelligent enterprise systems.<!--excerpt_end-->
 

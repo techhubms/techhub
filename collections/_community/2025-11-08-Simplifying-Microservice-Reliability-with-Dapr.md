@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/simplifying-microservice-reliability-with-dapr/ba-p/4468296
 title: Simplifying Microservice Reliability with Dapr
 author: riturajjana
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 riturajjana presents a detailed guide on using Dapr to build reliable microservices with Azure Container Apps and .NET, providing actionable examples and portal-based setup walkthroughs.<!--excerpt_end-->
 

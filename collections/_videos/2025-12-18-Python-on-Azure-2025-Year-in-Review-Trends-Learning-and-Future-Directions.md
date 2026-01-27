@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FiAH8Lh1pxM
 title: 'Python on Azure: 2025 Year in Review – Trends, Learning, and Future Directions'
 author: Microsoft Developer
@@ -31,6 +31,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 In this year-in-review video, Gwen and Marlene from Microsoft's Python advocacy team discuss 2025's top Python trends, learning resources, and what's ahead, joined by the full team. Hosted by Microsoft Developer.<!--excerpt_end-->
 

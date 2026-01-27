@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/warp-embeds-ai-agents-into-a-cli-to-provide-better-feedback-loop/?utm_source=rss&utm_medium=rss&utm_campaign=warp-embeds-ai-agents-into-a-cli-to-provide-better-feedback-loop
 title: Warp Integrates AI Coding Agents into CLI for Enhanced Developer Feedback
 author: Mike Vizard
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Mike Vizard details how Warp embeds artificial intelligence agents directly into the CLI, offering developers and DevOps engineers expanded control and a tighter feedback loop for AI-powered code generation.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=0Ly34nFESQk
 title: Choosing Your First AI Application
 author: John Savill's Technical Training
@@ -25,6 +25,7 @@ tags:
 - Technical Feasibility
 section_names:
 - ai
+primary_section: ai
 ---
 John Savill's Technical Training discusses how organizations can select their first AI application, covering business value, technical requirements, feasibility, and best practices for minimizing risk.<!--excerpt_end-->
 

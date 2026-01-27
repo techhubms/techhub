@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/take-data-management-to-the-next-level-with-silk-software/ba-p/4464760
 title: Enhancing Azure Data Management with Silk Software-Defined Storage and Silk Echo for AI
 author: dukicn
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 dukicn explores how Silk’s software-defined storage platform and Silk Echo for AI, in partnership with Microsoft Azure, deliver high-performance, resilient, and cost-effective data management solutions for AI, database migration, and enterprise cloud workloads.<!--excerpt_end-->
 

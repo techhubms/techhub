@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/build-the-future-of-ai-driven-apps-with-sharepoint-embedded/ba-p/4442595
 title: Build the Future of AI-Driven Apps with SharePoint Embedded
 author: wbaer
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 wbaer demonstrates how developers can leverage SharePoint Embedded to build AI-powered, document-centric applications using Microsoft’s headless content platform. This resource guides practitioners through upcoming events, live demos, and real-world implementation insights.<!--excerpt_end-->
 

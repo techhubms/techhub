@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AI_Agents/comments/1m7ldl2/agent_feedback_is_the_new_user_feedback/
 title: Agent feedback is the new User feedback
 author: lchoquel
@@ -21,6 +21,7 @@ tags:
 - User Feedback
 section_names:
 - ai
+primary_section: ai
 ---
 In this article, lchoquel examines the crucial differences between agent (LLM) and human user feedback in software development. The author argues that agent feedback, being brutally honest and unemotional, offers a unique perspective that can rapidly identify weaknesses in products and documentation. By integrating agent-driven testing and co-design early in the development cycle, developers can iterate faster and address fundamental issues before engaging with human users. The piece introduces the concept of the Minimum Agent Prototype (MAP), which allows for cheap, rapid prototyping with agents, ultimately aligning products more closely with user needs.<!--excerpt_end-->
 

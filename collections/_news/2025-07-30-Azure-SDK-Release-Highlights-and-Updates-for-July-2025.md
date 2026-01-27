@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-july-2025/
 title: Azure SDK Release Highlights and Updates for July 2025
 author: Ronnie Geraghty
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: ai
 ---
 Ronnie Geraghty summarizes the key updates in the July 2025 Azure SDK release, detailing new features, bug fixes, stable and beta releases for languages like Python, .NET, and more.<!--excerpt_end-->
 

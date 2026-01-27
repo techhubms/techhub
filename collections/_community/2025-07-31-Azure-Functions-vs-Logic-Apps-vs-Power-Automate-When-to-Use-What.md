@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/azure-functions-vs-logic-apps-vs-power-automate-when-to-use-what/m-p/4438720#M22035
 title: 'Azure Functions vs Logic Apps vs Power Automate: When to Use What?'
 author: JohnNaguib
@@ -17,6 +17,7 @@ tags:
 - Workflow Automation
 section_names:
 - azure
+primary_section: azure
 ---
 Authored by JohnNaguib, this article provides a practical comparison between Azure Functions, Logic Apps, and Power Automate, guiding architects and consultants on when to use each Microsoft automation platform.<!--excerpt_end-->
 

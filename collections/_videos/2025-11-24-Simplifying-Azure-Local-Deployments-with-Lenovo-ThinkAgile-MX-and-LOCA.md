@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fMP9WV6_YLs
 title: Simplifying Azure Local Deployments with Lenovo ThinkAgile MX and LOCA
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Subscription Management
 section_names:
 - azure
+primary_section: azure
 ---
 Presented by Microsoft Events at Ignite 2025, this session showcases Adam Mandelbloom walking through Lenovo ThinkAgile MX and LOCA to greatly simplify Azure Local deployments at the edge.<!--excerpt_end-->
 

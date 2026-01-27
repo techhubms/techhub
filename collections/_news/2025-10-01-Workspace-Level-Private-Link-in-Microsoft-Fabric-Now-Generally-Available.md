@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-general-availability-of-workspace-level-private-link-in-microsoft-fabric/
 title: Workspace-Level Private Link in Microsoft Fabric Now Generally Available
 author: Microsoft Fabric Blog
@@ -20,6 +20,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 The Microsoft Fabric Blog details the general availability of workspace-level Private Link, highlighting how users can manage secure, private connectivity for Fabric workspaces—authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 

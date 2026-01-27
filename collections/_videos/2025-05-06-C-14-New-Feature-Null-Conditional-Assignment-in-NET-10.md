@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=q0xyeA1xPng
 title: 'C# 14 New Feature: Null-Conditional Assignment in .NET 10'
 author: Learn Microsoft AI
@@ -23,6 +23,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 Learn Microsoft AI demonstrates the new null-conditional assignment feature in C# 14 and .NET 10, showing how these updates can help you write safer, cleaner C# code.<!--excerpt_end-->
 

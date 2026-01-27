@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-entra-blog/new-governance-tools-for-hybrid-access-and-identity-verification/ba-p/4422534
 title: New Tools for Hybrid Access and Identity Verification in Microsoft Entra ID Governance
 author: Joseph Dadzie
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 In this article, Joseph Dadzie introduces new Microsoft Entra ID governance tools for hybrid environments, detailing features like Group SOA conversion and Face Check for secure, auditable access management.<!--excerpt_end-->
 

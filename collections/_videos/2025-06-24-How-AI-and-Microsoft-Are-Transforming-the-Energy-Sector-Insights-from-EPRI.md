@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=janSWREvB3U
 title: 'How AI and Microsoft Are Transforming the Energy Sector: Insights from EPRI'
 author: Microsoft Cloud
@@ -21,6 +21,7 @@ tags:
 - Utilities
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Cloud’s Darryl hosts EPRI’s Arshad Mansoor in a discussion about AI’s transformative role in the energy industry, sharing insights into collaborative innovation and sustainability.<!--excerpt_end-->
 

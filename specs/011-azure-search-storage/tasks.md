@@ -45,7 +45,7 @@
 
 - [ ] T011 Update IContentRepository interface in src/TechHub.Core/Interfaces/IContentRepository.cs per contracts/IContentRepository.cs
 - [ ] T012 Create ContentRepositoryBase abstract class in src/TechHub.Infrastructure/Data/ContentRepositoryBase.cs with shared Dapper logic
-- [ ] T013 Create InMemoryContentRepository for tests in tests/TechHub.TestUtilities/InMemoryContentRepository.cs
+- [ ] T013 Create InMemoryContentRepository for tests in tests/TechHub.TestUtilities/InMemoryContentRepository.cs <<< Do NOT do this! We have a repository for testing in our testutilities. if needed update that one
 
 ### Sync Infrastructure
 

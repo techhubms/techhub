@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-agentic-ai-works-and-how-to-build-it-in-azure/
 title: How Agentic AI Works and How to Build It in Azure
 author: Dellenny
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Dellenny explains the core concepts of agentic AI and provides Azure-centric guidance for building autonomous, adaptive agents using Microsoft's AI ecosystem.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/secure-seamless-access-using-managed-identities-with-azure-files/ba-p/4477565
 title: Secure Access with Managed Identities for Azure Files SMB
 author: Priyanka-Gangal
@@ -26,6 +26,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Priyanka-Gangal explains how Managed Identities empower secure, credential-free access to Azure Files SMB for applications and DevOps scenarios, detailing benefits and practical implementation advice.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk5xc3/gpt5_is_here_ama_on_thursday_august_13th/
 title: 'AMA: GPT-5 Launch and GitHub Copilot – Community Questions Answered'
 author: hollandburke
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Burke Holland and a team of Microsoft engineers host an AMA to discuss the release of GPT-5 in GitHub Copilot, its implication for coding agents and VS Code users, and answer a wide range of technical questions from the developer community.<!--excerpt_end-->
 

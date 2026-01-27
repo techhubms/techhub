@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/azure-container-options-matching-services-to-operational-responsibility/
 title: 'Azure Container Options: Operational Responsibility and Choosing the Right Service'
 author: Shree Chinnasamy, Priyanka Vergadia
@@ -31,6 +31,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Written by Shree Chinnasamy and Priyanka Vergadia, this article helps Azure customers navigate the process of choosing the best Azure container service by examining operational responsibility, use cases, and the shared responsibility model. It offers clear distinctions between ACI, ACA, and AKS, with practical guidance.<!--excerpt_end-->
 

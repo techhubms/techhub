@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/retirement-of-global-personal-access-tokens-in-azure-devops/
 title: 'Azure DevOps Retires Global Personal Access Tokens: Key Dates and Security Impact'
 author: Angel Wong
@@ -22,6 +22,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Angel Wong details Microsoft's retirement plan for Global Personal Access Tokens in Azure DevOps, outlining key security implications and migration steps for practitioners.<!--excerpt_end-->
 

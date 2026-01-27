@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-security-community/announcing-a-new-microsoft-security-virtual-training-day/ba-p/4440347
 title: 'Announcing Microsoft Defender for Cloud: Virtual Training Day on Cloud Security'
 author: ShirleyseHaley
@@ -24,6 +24,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 ShirleyseHaley announces a new Microsoft Security Virtual Training Day designed to help professionals build expertise in cloud security using Microsoft Defender for Cloud, with practical sessions on DevOps integration and workload protection.<!--excerpt_end-->
 

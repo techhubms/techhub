@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-hpc-and-eda-with-powerful-azure-netapp-files/ba-p/4469739
 title: Accelerating HPC and EDA Innovation with Azure NetApp Files Enhancements
 author: GeertVanTeylingen
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 GeertVanTeylingen and co-authors present a detailed overview of new Azure NetApp Files features for HPC and EDA, highlighting advancements in storage performance, hybrid mobility, security, and AI readiness that support demanding engineering workloads.<!--excerpt_end-->
 

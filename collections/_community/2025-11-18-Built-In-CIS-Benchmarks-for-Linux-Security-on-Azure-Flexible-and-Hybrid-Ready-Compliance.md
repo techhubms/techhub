@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/from-policy-to-practice-built-in-cis-benchmarks-on-azure/ba-p/4467884
 title: 'Built-In CIS Benchmarks for Linux Security on Azure: Flexible and Hybrid-Ready Compliance'
 author: pallakatos
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 pallakatos showcases the launch of built-in CIS Benchmarks for Linux workloads on Azure, detailing secure configuration, hybrid cloud support, and Azure Arc integration for scalable compliance and security management.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-05-new-spark-sharing-option-and-improved-local-dev-experience
 title: New Organization Sharing and Local Development Improvements in GitHub Spark
 author: Allison
@@ -22,6 +22,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Allison details recent updates to GitHub Spark that enhance organizational sharing, local development, and workflow visibility, delivering a more seamless developer experience.<!--excerpt_end-->
 

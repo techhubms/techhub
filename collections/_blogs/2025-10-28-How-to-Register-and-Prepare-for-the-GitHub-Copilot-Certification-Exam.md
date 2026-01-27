@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-to-register-and-prepare-for-the-github-copilot-exam-step-by-step-guide/
 title: How to Register and Prepare for the GitHub Copilot Certification Exam
 author: Dellenny
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny provides an in-depth step-by-step guide to registering, preparing for, and succeeding in the GitHub Copilot Certification Exam, ideal for developers seeking to validate their AI-powered coding expertise.<!--excerpt_end-->
 

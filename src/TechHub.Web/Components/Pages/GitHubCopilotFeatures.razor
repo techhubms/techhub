@@ -1,6 +1,6 @@
 @page "/github-copilot/features"
 @rendermode InteractiveServer
-@using TechHub.Core.DTOs
+@using TechHub.Core.Models
 @using TechHub.Web.Services
 
 @inject TechHubApiClient ApiClient
@@ -111,12 +111,11 @@
                                 @foreach (var feature in sectionVideos)
                                 {
                                     var isAvailable = !feature.Draft;
-                                    var featureUrl = $"/github-copilot/videos/{feature.Slug}";
                                     var featureId = $"feature-{feature.Slug}";
 
                                     @if (isAvailable)
                                     {
-                                        <a href="@featureUrl" class="card">
+                                        <a href="@feature.Url" class="card">
                                             <div class="card-header">
                                                 <h3 id="@featureId" class="card-title">@feature.Title</h3>
                                             </div>
@@ -126,7 +125,7 @@
                                                 {
                                                     <span class="badge-success">✓ GHES Support</span>
                                                 }
-                                                <span class="badge-info">View Demo Video</span>
+                                                <span class="badge-info">View Video</span>
                                             </div>
                                         </a>
                                     }
@@ -142,7 +141,6 @@
                                                 {
                                                     <span class="badge-success">✓ GHES Support</span>
                                                 }
-                                                <span class="badge-warning">Coming Soon</span>
                                             </div>
                                         </div>
                                     }
@@ -158,8 +156,8 @@
 
 @code {
     private FeaturesPageData? pageData;
-    private List<ContentItemDto> videoItems = new();
-    private List<ContentItemDto> filteredVideoItems = new();
+    private List<TechHub.Core.Models.ContentItem> videoItems = new();
+    private List<TechHub.Core.Models.ContentItem> filteredVideoItems = new();
 
     // Filter state
     private bool showGhesOnly = false;
@@ -240,7 +238,7 @@
             {
                 // Query videos collection from API with ghc_feature=true to get GitHub Copilot features (including drafts)
                 var allVideos = await ApiClient.GetGhcFeaturesAsync();
-                videoItems = (allVideos ?? Enumerable.Empty<ContentItemDto>())
+                videoItems = (allVideos ?? Enumerable.Empty<TechHub.Core.Models.ContentItem>())
                     .OrderByDescending(v => v.DateEpoch)
                     .ToList();
 

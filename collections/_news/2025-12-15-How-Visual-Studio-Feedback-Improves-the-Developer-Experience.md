@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/behind-the-scenes-of-the-visual-studio-feedback-system/
 title: How Visual Studio Feedback Improves the Developer Experience
 author: Mads Kristensen
@@ -22,6 +22,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Mads Kristensen explains how the Visual Studio team turns user feedback into actionable improvements, detailing the internal workflow and tips for developers to enhance their bug reports.<!--excerpt_end-->
 

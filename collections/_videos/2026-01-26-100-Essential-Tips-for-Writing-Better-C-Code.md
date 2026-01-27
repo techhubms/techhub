@@ -19,6 +19,7 @@ tags:
 - Software Engineering
 section_names:
 - coding
+primary_section: coding
 ---
 Nick Chapsas shares 100 top tips to help developers write better C# and .NET code, focusing on practical advice for improving code quality and efficiency.<!--excerpt_end-->
 

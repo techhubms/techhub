@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/engineering/architecture-optimization/introducing-sub-issues-enhancing-issue-management-on-github/
 title: 'Introducing Sub-Issues: Enhancing Issue Management on GitHub'
 author: Shaun Wong
@@ -25,6 +25,7 @@ tags:
 - Workflow Optimization
 section_names:
 - devops
+primary_section: devops
 ---
 Written by Shaun Wong, this post details the development of GitHub's sub-issues feature, from technical implementation to organizational benefits, offering insight into enhanced project and issue management practices.<!--excerpt_end-->
 

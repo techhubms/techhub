@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/expanding-azure-arc-for-hybrid-and-multicloud-management/ba-p/4470656
 title: Expanding Azure Arc for Hybrid and Multicloud Management
 author: SatyaVel
@@ -30,6 +30,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 SatyaVel showcases Ignite 2025’s Azure Arc enhancements, covering new multicloud management, hybrid VDI, compliance, and security features, offering practical insights for professionals managing diverse IT estates.<!--excerpt_end-->
 

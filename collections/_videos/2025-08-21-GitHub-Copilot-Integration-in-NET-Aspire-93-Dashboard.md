@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/oLF1Z8DcqaA
 title: GitHub Copilot Integration in .NET Aspire 9.3 Dashboard
 author: Microsoft Developer
@@ -19,6 +19,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Maddy Montaquila from Microsoft Developer introduces the new GitHub Copilot integration in .NET Aspire 9.3, enabling developers to interact with Copilot directly within the dashboard.<!--excerpt_end-->
 

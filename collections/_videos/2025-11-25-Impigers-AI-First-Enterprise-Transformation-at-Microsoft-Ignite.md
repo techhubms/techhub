@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=o63_MuktA78
 title: Impiger’s AI-First Enterprise Transformation at Microsoft Ignite
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Zero Trust
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents an in-depth look at Impiger’s AI-first transformation, featuring leadership insights into architecture, platform design, and ethical governance in enterprise AI deployment.<!--excerpt_end-->
 

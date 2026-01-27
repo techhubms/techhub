@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=QfQWsFaY8G8
 title: Drive Faster Insights with Microsoft and SAP AI and Data Innovations
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents how SAP and Microsoft jointly leverage AI, cloud, and data innovation to power analytics and automation, featuring Robert Hernandez and Nathan Weaver at Ignite 2025.<!--excerpt_end-->
 

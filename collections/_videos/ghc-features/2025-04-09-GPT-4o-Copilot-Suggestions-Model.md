@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/zZI34xmoWbw
 title: GPT-4o Copilot Suggestions Model
 author: Fokko Veegens
@@ -14,6 +14,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This video demonstrates GitHub Copilot's GPT-4o Copilot Suggestions Model feature. GPT-4o Copilot replaces the previously used GPT 3.5 TURBO model for suggestions.<!--excerpt_end-->
 

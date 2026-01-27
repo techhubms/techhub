@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/enterprise-ready-and-extensible-update-on-the-azure-sre-agent/ba-p/4444299
 title: 'Enterprise-Ready and Extensible: Update on the Azure SRE Agent Preview'
 author: Mayunk_Jain
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Mayunk Jain introduces updates to the Azure SRE Agent, an enterprise-grade AI assistant for automated incident response on Azure, highlighting new integrations and enhanced operational features.<!--excerpt_end-->
 

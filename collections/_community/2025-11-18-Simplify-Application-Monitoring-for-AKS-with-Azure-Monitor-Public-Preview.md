@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/simplify-application-monitoring-for-aks-with-azure-monitor/ba-p/4470136
 title: Simplify Application Monitoring for AKS with Azure Monitor (Public Preview)
 author: austonli
@@ -28,6 +28,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 austonli details Azure Monitor's new public preview features for unified application monitoring on AKS, empowering developers with seamless onboarding and advanced observability.<!--excerpt_end-->
 

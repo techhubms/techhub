@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=mQ9iaTar9ew
 title: Turning AI Vision into Impact in UK Financial Services
 author: Microsoft Cloud
@@ -25,6 +25,7 @@ tags:
 - UK Market
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Cloud brings together Bill Borden, Lyndon Subroyen, and Theo Michalopoulos to explore how generative AI is driving innovation and change in the UK’s financial services sector.<!--excerpt_end-->
 

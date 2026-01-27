@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/accelerating-infrastructure-as-code-introducing-game-changing/ba-p/4457341
 title: 'Accelerating Infrastructure as Code: New Terraform Enhancements for Azure'
 author: stevenjma
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 stevenjma from the Terraform on Azure Product Group explains new features for Terraform users on Azure, including AI-powered code generation, streamlined VS Code tooling, and expanded support for Microsoft services.<!--excerpt_end-->
 

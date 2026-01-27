@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Grv7AmwTR10
 title: Azure Update - 27th June 2025
 author: John Savill's Technical Training
@@ -35,6 +35,7 @@ section_names:
 - ml
 - devops
 - security
+primary_section: ml
 ---
 John Savill's Technical Training provides a concise Azure update covering new features such as VM right-sizing, enhanced security integrations like WAF security copilot, data services improvements including vector support for Azure SQL DB, and DevOps-related updates for Azure professionals.<!--excerpt_end-->
 

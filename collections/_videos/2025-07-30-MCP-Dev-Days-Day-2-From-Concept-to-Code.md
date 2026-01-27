@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=CRjRI0zHz54
 title: 'MCP Dev Days Day 2: From Concept to Code'
 author: Microsoft Developer
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: ai
 ---
 In this session, Microsoft Developer details the journey from MCP proof-of-concept to production, covering essential Azure services, real-world architectures, and secure deployment strategies for scalable AI solutions.<!--excerpt_end-->
 

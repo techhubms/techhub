@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/building-ai-agents-workflow-first-vs-code-first-vs-hybrid/ba-p/4466788
 title: 'Workflow-First, Code-First, and Hybrid AI Agent Design: Approaches for Enterprise Automation'
 author: PradyH
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 PradyH discusses the pros and cons of workflow-first, code-first, and hybrid approaches to building AI Agents for enterprise automation, drawing on practical experiences with Microsoft and open-source tools.<!--excerpt_end-->
 

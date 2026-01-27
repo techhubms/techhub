@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/bindplane-adds-ability-to-automate-deployment-of-opentelemetry-collectors/
 title: Bindplane Adds Ability to Automate Deployment of OpenTelemetry Collectors
 author: Mike Vizard
@@ -34,6 +34,7 @@ tags:
 - Telemetry Orchestration
 section_names:
 - devops
+primary_section: devops
 ---
 Mike Vizard explains how Bindplane's new Blueprints and Fleets features enable DevOps teams to streamline large-scale OpenTelemetry collector deployments, improving telemetry pipeline management and observability.<!--excerpt_end-->
 

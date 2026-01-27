@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/workload-identity-support-for-azure-arc-enabled-kubernetes/ba-p/4467851
 title: 'Azure Arc Workload Identity Federation: Secure Kubernetes App Authentication Now GA'
 author: Poornima99
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Poornima99 announces that Workload Identity support for Azure Arc-enabled Kubernetes clusters is now generally available, providing organizations with secure, secretless authentication to Azure resources.<!--excerpt_end-->
 

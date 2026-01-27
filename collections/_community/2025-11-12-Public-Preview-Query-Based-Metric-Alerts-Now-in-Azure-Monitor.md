@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-public-preview-of-query-based-metric-alerts-in-azure/ba-p/4469290
 title: 'Public Preview: Query-Based Metric Alerts Now in Azure Monitor'
 author: yairgil
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Yair Gil introduces new query-based metric alerts in Azure Monitor, enabling advanced, PromQL-driven monitoring and alerting across all Azure metrics for scalable cloud environments.<!--excerpt_end-->
 

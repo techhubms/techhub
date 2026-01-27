@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/build-long-running-ai-agents-on-azure-app-service-with-microsoft/ba-p/4463159
 title: Build Long-Running AI Agents on Azure App Service with Microsoft Agent Framework
 author: jordanselig
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 jordanselig delivers a comprehensive guide on developing robust, intelligent AI agents using Microsoft Agent Framework and Azure App Service, addressing long-running workflow scenarios with modern async architectures.<!--excerpt_end-->
 

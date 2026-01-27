@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/ai-gateway-in-azure-api-management-is-now-available-in-microsoft/ba-p/4470676
 title: AI Gateway in Azure API Management Now Integrated with Microsoft Foundry
 author: vladvino
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 vladvino details the integration of AI Gateway into Microsoft Foundry, highlighting new unified governance and security features for enterprise-scale AI workloads with Azure API Management.<!--excerpt_end-->
 

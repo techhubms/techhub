@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-hl7-connector-for-azure-logic-apps-standard-and/ba-p/4470690
 title: 'Announcing Public Preview: HL7 Connector for Azure Logic Apps (Standard & Hybrid)'
 author: hcamposu
@@ -21,6 +21,7 @@ tags:
 - Standard Workflow
 section_names:
 - azure
+primary_section: azure
 ---
 hcamposu announces the public preview of the HL7 connector for Azure Logic Apps, highlighting seamless clinical application integration and robust data exchange capabilities for healthcare organizations.<!--excerpt_end-->
 

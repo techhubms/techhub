@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2025/06/12/full-mcp-spec-support
 title: 'The Complete MCP Experience: Full Specification Support in VS Code'
 author: Harald Kirschner
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Harald Kirschner and collaborators present the complete integration of the Model Context Protocol specification in VS Code, detailing new authorization, prompts, and resource management features that empower AI agent workflows for developers.<!--excerpt_end-->
 

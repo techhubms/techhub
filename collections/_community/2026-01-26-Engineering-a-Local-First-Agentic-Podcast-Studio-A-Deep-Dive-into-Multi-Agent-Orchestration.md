@@ -33,6 +33,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 kinfey presents a comprehensive exploration of building an agentic podcast studio using the Microsoft Agent Framework, local SLMs, and VibeVoice. This guide reveals how edge-first AI orchestration empowers privacy, speed, and scalable creative automation.<!--excerpt_end-->
 

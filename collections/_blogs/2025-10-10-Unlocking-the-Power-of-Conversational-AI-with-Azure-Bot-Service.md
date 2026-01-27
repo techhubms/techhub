@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/unlocking-the-power-of-conversational-ai-with-azure-bot-service/
 title: Unlocking the Power of Conversational AI with Azure Bot Service
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Dellenny presents a practical guide to building conversational AI solutions with Azure Bot Service, detailing architecture, AI integrations, security, and industry use cases.<!--excerpt_end-->
 

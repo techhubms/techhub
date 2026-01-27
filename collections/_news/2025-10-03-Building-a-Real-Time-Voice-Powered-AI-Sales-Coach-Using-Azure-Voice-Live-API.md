@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/from-lab-to-live-a-blueprint-for-a-voice-powered-ai-sales-coach/
 title: Building a Real-Time Voice-Powered AI Sales Coach Using Azure Voice Live API
 author: Aymen Furter
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Aymen Furter introduces a robust blueprint for a voice-powered AI Sales Coach using Azure's new Voice Live API, explaining the technical architecture and how developers can implement a real-time, avatar-driven training solution.<!--excerpt_end-->
 

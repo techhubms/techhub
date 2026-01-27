@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=N3gg-6NYhIs
 title: Reimagine Finance with AI and Agents
 author: Microsoft Events
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a session on reimagining finance with AI and agents, featuring Sigita Cepaitiene, Matt Jutila, and April Olson, showing how Azure AI Foundry and Copilot Studio empower finance teams.<!--excerpt_end-->
 

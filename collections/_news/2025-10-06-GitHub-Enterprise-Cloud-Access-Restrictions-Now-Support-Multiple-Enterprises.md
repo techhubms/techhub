@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-06-enterprise-access-restrictions-now-supports-multiple-enterprises
 title: GitHub Enterprise Cloud Access Restrictions Now Support Multiple Enterprises
 author: Usha Narayanabhatta
@@ -21,6 +21,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Usha Narayanabhatta highlights the latest update to GitHub Enterprise Cloud: organizations with multiple EMU accounts can now use a single proxy header for unified access restriction and improved network security.<!--excerpt_end-->
 

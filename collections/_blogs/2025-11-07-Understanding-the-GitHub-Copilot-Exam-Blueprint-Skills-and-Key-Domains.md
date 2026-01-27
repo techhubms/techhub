@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/understanding-the-github-copilot-exam-blueprint-skills-measured-topics-covered/
 title: 'Understanding the GitHub Copilot Exam: Blueprint, Skills, and Key Domains'
 author: Dellenny
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny offers a detailed overview of the GitHub Copilot certification exam, exploring its blueprint, measured skill domains, and practical study strategies for developers aiming to master AI-powered coding and ethical best practices.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/30/the-5-generative-ai-security-threats-you-need-to-know-about-detailed-in-new-e-book/
 title: '5 Critical Generative AI Security Threats: Insights from Microsoft'
 author: Microsoft Security Team
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Security Team provides an in-depth analysis of the top five generative AI security threats, practical mitigation strategies, and how integrated tools like Defender for Cloud can help protect organizations from emerging AI-powered cyberattacks.<!--excerpt_end-->
 

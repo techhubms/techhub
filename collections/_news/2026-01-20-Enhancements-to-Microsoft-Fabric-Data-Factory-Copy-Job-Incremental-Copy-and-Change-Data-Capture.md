@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 The Microsoft Fabric Blog team announces enhancements to Copy job in Microsoft Fabric Data Factory, adding multi-cloud incremental copy, CDC support, and advanced column mapping for streamlined data movement.<!--excerpt_end-->
 

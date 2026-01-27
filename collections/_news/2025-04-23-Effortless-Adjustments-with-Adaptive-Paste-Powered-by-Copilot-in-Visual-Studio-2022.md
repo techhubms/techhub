@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/effortless-adjustments-with-an-adaptive-paste/
 title: Effortless Adjustments with Adaptive Paste Powered by Copilot in Visual Studio 2022
 author: Leah Tran
@@ -20,6 +20,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Leah Tran details how Visual Studio 2022’s new Copilot-powered 'adaptive paste' feature reduces manual code adjustments, helping developers integrate and modify pasted code more efficiently.<!--excerpt_end-->
 

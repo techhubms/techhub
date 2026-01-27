@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke shares compelling success stories highlighting how startups and enterprises, aided by Microsoft for Startups and Azure AI, are collaborating to deliver impactful AI solutions in healthcare and life sciences.<!--excerpt_end-->
 

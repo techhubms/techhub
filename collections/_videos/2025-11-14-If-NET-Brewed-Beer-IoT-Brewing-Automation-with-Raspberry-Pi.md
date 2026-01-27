@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Yi6Uf5DojaU
 title: 'If .NET Brewed Beer: IoT Brewing Automation with Raspberry Pi'
 author: dotnet
@@ -19,6 +19,7 @@ tags:
 - Tech Conference
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet presents a hands-on journey into automating beer brewing using .NET on Raspberry Pi and Meadow boards, providing guidance for developers interested in IoT device automation.<!--excerpt_end-->
 

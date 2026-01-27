@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=c0WqMuVYfmk
 title: Scaling Kubernetes Securely and Reliably with AKS
 author: Microsoft Events
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents practical lessons on operating large Kubernetes clusters with AKS, featuring security, scaling, and cluster management tips from Microsoft Ignite 2025 speakers Brendan Burns, Jorge Palma, and Durga Rachapudi.<!--excerpt_end-->
 

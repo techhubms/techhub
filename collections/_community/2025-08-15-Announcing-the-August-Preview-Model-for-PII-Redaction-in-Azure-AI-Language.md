@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-ai-foundry-blog/announcing-the-text-pii-august-preview-model-release-in-azure-ai/ba-p/4441705
 title: Announcing the August Preview Model for PII Redaction in Azure AI Language
 author: renaliu
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 renaliu introduces the August preview of the Azure AI Language PII Redaction service, highlighting expanded multilingual and entity coverage, plus improved AI detection for regulatory scenarios.<!--excerpt_end-->
 

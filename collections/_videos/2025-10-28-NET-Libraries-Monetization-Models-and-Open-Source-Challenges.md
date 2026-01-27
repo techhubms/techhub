@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=5K1NiGtUrhw
 title: '.NET Libraries: Monetization Models and Open Source Challenges'
 author: Nick Chapsas
@@ -19,6 +19,7 @@ tags:
 - Sustainability
 section_names:
 - coding
+primary_section: coding
 ---
 Nick Chapsas examines the complexities facing .NET open-source libraries, addressing monetization, project sustainability, and whether forking can genuinely 'save' abandoned projects.<!--excerpt_end-->
 

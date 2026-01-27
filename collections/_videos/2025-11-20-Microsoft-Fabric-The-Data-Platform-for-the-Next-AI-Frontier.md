@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=YC33gA2TzxE
 title: 'Microsoft Fabric: The Data Platform for the Next AI Frontier'
 author: Microsoft Events
@@ -31,6 +31,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 Amir Netz presents key updates for Microsoft Fabric at Ignite 2025. The session showcases new enterprise data platform features for AI, analytics, security, and operational management.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/microsoft/comments/1m9q6o4/microsoft_launches_first_southeast_asia_ai/
 title: Microsoft launches first Southeast Asia AI research lab in Singapore
 author: 108CA
@@ -17,6 +17,7 @@ tags:
 - Technology
 section_names:
 - ai
+primary_section: ai
 ---
 Author 108CA reports on Microsoft's opening of its inaugural Southeast Asia AI research lab in Singapore, signaling an investment in regional AI advancement.<!--excerpt_end-->
 

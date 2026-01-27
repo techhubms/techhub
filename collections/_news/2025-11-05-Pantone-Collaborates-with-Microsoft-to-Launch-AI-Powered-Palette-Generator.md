@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/2025/11/05/pantone-and-microsoft-unite-to-enhance-creative-exploration-through-ai/
 title: Pantone Collaborates with Microsoft to Launch AI-Powered Palette Generator
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke reports on the alliance between Pantone and Microsoft that brings Azure OpenAI technology into Pantone Connect, delivering AI-assisted color palette generation and trend data for designers.<!--excerpt_end-->
 

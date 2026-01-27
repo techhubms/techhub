@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/finops-blog/provider-managed-azure-subscriptions-cost-control-and-commitment/ba-p/4448688
 title: 'Provider-Managed Azure Subscriptions: Cost Control and Commitment Clarity'
 author: Dirk_Brinkmann
@@ -22,6 +22,7 @@ tags:
 - Subscription Ownership
 section_names:
 - azure
+primary_section: azure
 ---
 Dirk_Brinkmann analyzes how enterprise customers can maintain cost control and commitment clarity in Azure by allowing service providers to manage subscriptions, detailing billing and governance implications.<!--excerpt_end-->
 

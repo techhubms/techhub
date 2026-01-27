@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-assisted-load-test-authoring-in-azure-app-testing/ba-p/4480652
 title: Streamline Load Testing with AI-Assisted Authoring in Azure App Testing
 author: Nikita_Nallamothu
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Nikita_Nallamothu showcases how Azure App Testing leverages AI to simplify load test authoring, transforming browser recordings into robust JMeter scripts and streamlining large-scale performance validation.<!--excerpt_end-->
 

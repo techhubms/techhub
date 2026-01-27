@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=7nQCRRYp44k
 title: Aspire for AI Applications
 author: Microsoft Developer
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer, featuring David and Damian, explores how Aspire empowers developers to build and manage AI applications on Azure, highlighting its orchestration capabilities and the latest features for streamlined development.<!--excerpt_end-->
 

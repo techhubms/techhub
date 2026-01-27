@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/unleash-your-creativity-at-scale-azure-ai-foundrys-multimodal-revolution/
 title: Azure AI Foundry Launches Multimodal AI Models for Developers
 author: stclarke
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke presents a major Azure AI Foundry update, unveiling new multimodal OpenAI models and advanced tooling for developers to build text, image, audio, and upcoming video solutions with improved safety and scalability.<!--excerpt_end-->
 

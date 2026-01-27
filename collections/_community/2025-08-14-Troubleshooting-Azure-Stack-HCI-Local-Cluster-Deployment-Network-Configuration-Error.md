@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-stack/error-no-file/m-p/4443115#M277
 title: 'Troubleshooting Azure Stack HCI Local Cluster Deployment: Network Configuration Error'
 author: JensI
@@ -17,6 +17,7 @@ tags:
 - SCPSModule
 section_names:
 - azure
+primary_section: azure
 ---
 JensI shares a problem encountered while deploying an Azure Stack HCI local cluster, highlighting a vague network configuration error and seeking troubleshooting steps.<!--excerpt_end-->
 

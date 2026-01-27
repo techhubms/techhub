@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devopsjournal.io/blog/2025/03/16/Really-keepingyour-GitHub-Actions-usage-secure
 title: Really Keeping Your GitHub Actions Usage Secure
 author: Rob Bos
@@ -19,6 +19,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 In this post, Rob Bos details a recent security incident involving a compromised GitHub Action and offers guidance on securing your CI/CD pipelines with robust processes and tooling.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/sonar-previews-service-to-improve-quality-of-ai-generated-code/
 title: 'SonarSweep: Improving AI-Generated Code Quality and Security'
 author: Mike Vizard
@@ -28,6 +28,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Mike Vizard discusses how Sonar’s SonarSweep service helps AI development teams reduce bugs and vulnerabilities in AI-generated code, offering actionable insights for DevOps and security professionals.<!--excerpt_end-->
 

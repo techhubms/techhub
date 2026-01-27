@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot-cli-101-how-to-use-github-copilot-from-the-command-line/
 title: 'GitHub Copilot CLI 101: How to use GitHub Copilot from the command line'
 author: Alexandra Lietzke
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Alexandra Lietzke provides an in-depth walkthrough of GitHub Copilot CLI, detailing how developers can leverage AI assistance directly in the terminal for common coding tasks, with practical installation steps and usage scenarios.<!--excerpt_end-->
 

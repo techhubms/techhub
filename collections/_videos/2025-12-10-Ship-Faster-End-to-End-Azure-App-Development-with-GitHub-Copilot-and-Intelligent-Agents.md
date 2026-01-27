@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fPSHFYyN-Do
 title: 'Ship Faster: End-to-End Azure App Development with GitHub Copilot and Intelligent Agents'
 author: Microsoft Developer
@@ -30,6 +30,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer presents a session on leveraging GitHub Copilot and intelligent agents to streamline Azure application development and operations. The talk demonstrates practical integration of AI-powered assistants across the DevOps lifecycle.<!--excerpt_end-->
 

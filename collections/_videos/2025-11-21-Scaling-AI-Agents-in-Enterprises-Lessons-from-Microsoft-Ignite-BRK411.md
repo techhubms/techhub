@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Ly-QiRuq7cg
 title: 'Scaling AI Agents in Enterprises: Lessons from Microsoft Ignite BRK411'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this Microsoft Ignite breakout, speakers Nick Baguley, Tom Davis, Zion Zatlavi, and Sharon Zhang share hands-on advice for scaling AI agentic systems in large enterprises, focusing on Azure AI Foundry and Copilot readiness.<!--excerpt_end-->
 

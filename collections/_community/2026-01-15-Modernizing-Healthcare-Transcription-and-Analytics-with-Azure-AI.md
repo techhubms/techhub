@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-transcription-text-analytics-for-health/ba-p/4486080
 title: Modernizing Healthcare Transcription and Analytics with Azure AI
 author: hannahabbott
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Hannah Abbott details a demo application for healthcare organizations demonstrating how Azure AI powers real-time, secure transcription and clinical text analytics. Developed alongside Samuel Tauil, this solution helps teams streamline data workflows and analytics using Microsoft cloud technology.<!--excerpt_end-->
 

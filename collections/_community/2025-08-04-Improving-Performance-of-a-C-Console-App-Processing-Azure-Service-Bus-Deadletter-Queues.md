@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mhb7xl/how_can_i_make_this_method_more_performant/
 title: Improving Performance of a C# Console App Processing Azure Service Bus Deadletter Queues
 author: TTwelveUnits
@@ -19,6 +19,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 TTwelveUnits asks for guidance on making a C# console app method more performant for processing Azure Service Bus deadletter messages, especially for large queues, as part of a nightly Azure DevOps pipeline.<!--excerpt_end-->
 

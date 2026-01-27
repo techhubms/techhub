@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/fully-managed-cloud-to-cloud-transfers-with-azure-storage-mover/
 title: Fully Managed Cloud-to-Cloud Transfers with Azure Storage Mover
 author: Aung Oo
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Aung Oo outlines the newly available cloud-to-cloud migration support in Azure Storage Mover, enabling effortless transfers from AWS S3 to Azure Blob Storage and unlocking Azure’s analytics and AI features.<!--excerpt_end-->
 

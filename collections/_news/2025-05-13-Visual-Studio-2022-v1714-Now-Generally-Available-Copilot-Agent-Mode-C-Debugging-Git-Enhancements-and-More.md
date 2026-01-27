@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2022-v17-14-is-now-generally-available/
 title: 'Visual Studio 2022 v17.14 Now Generally Available: Copilot Agent Mode, C++ Debugging, Git Enhancements & More'
 author: Mads Kristensen
@@ -32,6 +32,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Mads Kristensen introduces the general availability of Visual Studio 2022 v17.14, highlighting GitHub Copilot Agent Mode, C++ enhancements, advanced debugging, and Git improvements for developers.<!--excerpt_end-->
 

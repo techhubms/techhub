@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/avoid-these-common-prompts.html
 title: Avoid These Common Prompts
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels shares actionable advice on how developers can improve their results with GitHub Copilot by avoiding vague prompts and leveraging precise language and clear context.<!--excerpt_end-->
 

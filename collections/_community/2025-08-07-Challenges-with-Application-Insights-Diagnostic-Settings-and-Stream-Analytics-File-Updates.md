@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mjx1ga/application_insights_diagnostic_setting_to/
 title: Challenges with Application Insights Diagnostic Settings and Stream Analytics File Updates
 author: GarseBo
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 GarseBo describes challenges with Azure Application Insights diagnostic settings writing logs to a single file per hour, causing Stream Analytics to process incomplete data. The post focuses on possible workarounds and improvements.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=nV0UF_wyJN8
 title: Accelerating Migration and Modernization in Financial Services with Microsoft Cloud Accelerate Factory
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents an intermediate-level Microsoft Ignite 2025 session detailing how financial services organizations accelerate cloud transformation and modernization through the Cloud Accelerate Factory, led by Pradeep Raman and Jesse Sheldon.<!--excerpt_end-->
 

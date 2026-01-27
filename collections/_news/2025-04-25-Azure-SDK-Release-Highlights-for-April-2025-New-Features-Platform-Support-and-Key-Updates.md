@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-april-2025/
 title: 'Azure SDK Release Highlights for April 2025: New Features, Platform Support, and Key Updates'
 author: Hector Norzagaray
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 Hector Norzagaray presents the April 2025 Azure SDK release update, highlighting new stable and beta libraries, essential platform advisories, and resources for further reading.<!--excerpt_end-->
 

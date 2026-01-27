@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-26-template-urls-for-fine-grained-pats-and-updated-permissions-ui
 title: Template URLs for Fine-Grained PATs and Updated Permissions UI
 author: Allison
@@ -18,6 +18,7 @@ tags:
 - UI/UX Design
 section_names:
 - devops
+primary_section: devops
 ---
 Allison summarizes improvements to GitHub's fine-grained PAT creation, including a revamped permissions picker UI and shareable template URLs to streamline token generation for developers.<!--excerpt_end-->
 

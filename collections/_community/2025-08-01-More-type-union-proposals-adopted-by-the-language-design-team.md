@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mf2xll/more_type_union_proposals_adopted_by_the_language/
 title: More type union proposals adopted by the language design team!
 author: DayYam
@@ -17,6 +17,7 @@ tags:
 - Type Unions
 section_names:
 - coding
+primary_section: coding
 ---
 DayYam reports on recent developments in the C# language as the design team adopts more proposals for type unions. The article includes links to official meeting notes and community discussions.<!--excerpt_end-->
 

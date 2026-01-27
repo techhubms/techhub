@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/mastering-event-sourcing-in-azure-storing-system-state-as-a-sequence-of-events/
 title: 'Mastering Event Sourcing in Azure: Storing System State as a Sequence of Events'
 author: Dellenny
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 Dellenny explores the Event Sourcing architectural pattern on Microsoft Azure, offering developers guidance on storing system state as events and utilizing Azure’s cloud services for scalable, maintainable solutions.<!--excerpt_end-->
 

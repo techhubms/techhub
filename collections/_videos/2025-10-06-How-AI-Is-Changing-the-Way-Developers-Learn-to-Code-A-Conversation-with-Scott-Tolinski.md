@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=q7YLP6e0kXA
 title: 'How AI Is Changing the Way Developers Learn to Code: A Conversation with Scott Tolinski'
 author: Visual Studio Code
@@ -19,6 +19,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code's podcast features Scott Tolinski discussing with James how artificial intelligence and tools like GitHub Copilot are transforming how developers learn coding and approach problem solving.<!--excerpt_end-->
 

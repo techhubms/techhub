@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=OE8waNlgeAk
 title: Building AI Agents with VS Code, GitHub Copilot, and Azure
 author: Microsoft Developer
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer demonstrates how to use VS Code, GitHub Copilot, and the AI Toolkit to build, trace, and deploy AI agents to Azure with a workflow suitable for developers.<!--excerpt_end-->
 

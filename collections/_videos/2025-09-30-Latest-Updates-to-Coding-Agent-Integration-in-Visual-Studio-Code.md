@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=PWCWCQg_EUo
 title: Latest Updates to Coding Agent Integration in Visual Studio Code
 author: Visual Studio Code
@@ -16,6 +16,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 Visual Studio Code’s engineering team, including Alex and Osvaldo, present the latest updates to coding agent integration in VS Code, giving developers actionable insights into new features.<!--excerpt_end-->
 

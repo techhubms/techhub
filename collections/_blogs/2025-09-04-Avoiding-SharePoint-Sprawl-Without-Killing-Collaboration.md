@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/avoiding-sharepoint-sprawl-without-killing-collaboration/
 title: Avoiding SharePoint Sprawl Without Killing Collaboration
 author: Dellenny
@@ -18,6 +18,7 @@ tags:
 - Site Templates
 section_names:
 - coding
+primary_section: coding
 ---
 Dellenny provides actionable strategies to prevent SharePoint sprawl, balancing collaboration and governance for organizations using Microsoft 365.<!--excerpt_end-->
 

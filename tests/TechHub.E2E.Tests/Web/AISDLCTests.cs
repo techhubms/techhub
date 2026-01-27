@@ -48,11 +48,14 @@ public class AISDLCTests(PlaywrightCollectionFixture fixture) : IAsyncLifetime
     [Fact]
     public async Task AISDLC_ShouldRender_WithToc_ForPhaseSections()
     {
-        // Arrange
+        // Arrange - Navigate and wait for page to fully render
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Assert - Sidebar TOC should exist for this page with headings
+        // Wait for the TOC to render (it requires page data to load first)
         var toc = Page.Locator(".sidebar-toc");
+        await Assertions.Expect(toc).ToBeVisibleAsync(new() { Timeout = 10000 });
+
+        // Assert - Sidebar TOC should exist for this page with headings
         var tocExists = await toc.CountAsync();
         tocExists.Should().BeGreaterThan(0, "Expected TOC for page with SDLC phase headings");
 

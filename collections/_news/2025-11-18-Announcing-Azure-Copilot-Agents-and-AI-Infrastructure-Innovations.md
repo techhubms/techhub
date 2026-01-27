@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/announcing-azure-copilot-agents-and-ai-infrastructure-innovations/
 title: Announcing Azure Copilot Agents and AI Infrastructure Innovations
 author: Jeremy Winter
@@ -33,6 +33,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Jeremy Winter introduces the latest Azure Copilot agents and groundbreaking AI infrastructure at Microsoft Ignite 2025, focusing on modernization, resilience, security, and streamlined operations across cloud environments.<!--excerpt_end-->
 

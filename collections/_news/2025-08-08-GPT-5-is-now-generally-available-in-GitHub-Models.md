@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-07-gpt-5-is-now-generally-available-in-github-models
 title: GPT-5 is now generally available in GitHub Models
 author: Allison
@@ -23,6 +23,7 @@ tags:
 - Software Development
 section_names:
 - ai
+primary_section: ai
 ---
 Allison summarizes the launch of OpenAI's GPT-5 models on GitHub Models, highlighting new features, model variants, and pathways for developers to leverage advanced AI in coding workflows.<!--excerpt_end-->
 

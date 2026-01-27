@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=_ICoF0utyt4
 title: '.NET Data Community Standup: Jeremy Miller on Marten and Database Migrations'
 author: dotnet
@@ -18,6 +18,7 @@ tags:
 - ORM
 section_names:
 - coding
+primary_section: coding
 ---
 Jeremy Miller joins the .NET Data Community Standup to discuss his perspectives on database migrations and the Marten library, in a session with Jiri Cincura and Shay Rojansky.<!--excerpt_end-->
 

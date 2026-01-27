@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=LdCExagKS4Y
 title: 'AI-assisted Migration: Enhancing Performance on Azure Database for PostgreSQL'
 author: Microsoft Events
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events presents a deep dive on AI-assisted migration to Azure Database for PostgreSQL, featuring live demos and expert insights from Guy Bowerman, Jonathon Frost, Luigi Nardi, and Ashokkan Somuveerappan.<!--excerpt_end-->
 

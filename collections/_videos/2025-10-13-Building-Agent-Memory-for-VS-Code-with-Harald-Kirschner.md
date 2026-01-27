@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=vFFXY6YRkNs
 title: Building Agent Memory for VS Code with Harald Kirschner
 author: Visual Studio Code
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this podcast episode, Harald Kirschner joins James to discuss customizing chat and agent behavior in VS Code—including GitHub Copilot—highlighting practical tips and his implementation of agent memory as an extension.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/introducing-claude-opus-4-5-in-microsoft-foundry/
 title: Introducing Anthropic’s Claude Opus 4.5 in Microsoft Foundry for Enterprise AI Development
 author: stclarke
@@ -31,6 +31,7 @@ section_names:
 - coding
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Authored by stclarke, this announcement details the rollout of Anthropic’s Claude Opus 4.5 on Microsoft Foundry, with full support for developers, enhanced coding benchmarks, security, and integration with GitHub Copilot paid plans.<!--excerpt_end-->
 

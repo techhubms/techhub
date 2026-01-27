@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/write-cleaner-code-comments-with-github-copilot.html
 title: Write Cleaner Code Comments with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels outlines effective ways for developers to use GitHub Copilot to generate clearer code comments, making code more maintainable and accessible for teams.<!--excerpt_end-->
 

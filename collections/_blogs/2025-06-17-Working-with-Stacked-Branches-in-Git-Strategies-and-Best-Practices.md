@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/working-with-stacked-branches-in-git-part-1/
 title: 'Working with Stacked Branches in Git: Strategies and Best Practices'
 author: Andrew Lock
@@ -19,6 +19,7 @@ tags:
 - Workflow
 section_names:
 - devops
+primary_section: devops
 ---
 In this post, Andrew Lock delves into the use of stacked branches and PRs in Git, outlining practical workflows and tools for managing complex feature development efficiently.<!--excerpt_end-->
 

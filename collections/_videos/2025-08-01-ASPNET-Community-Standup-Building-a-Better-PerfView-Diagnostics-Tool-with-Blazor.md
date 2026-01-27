@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=H_gOSliozjM
 title: 'ASP.NET Community Standup: Building a Better PerfView Diagnostics Tool with Blazor'
 author: dotnet
@@ -24,6 +24,7 @@ tags:
 - Thread Pool
 section_names:
 - coding
+primary_section: coding
 ---
 Presented by dotnet, this session features Grégoire Verdier and Noah Falk demonstrating the .NET Events Viewer, a Blazor-based diagnostics tool. They share insights on solving thread pool issues, building community tools, and fostering open-source contributions in the .NET ecosystem.<!--excerpt_end-->
 

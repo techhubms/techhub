@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=zjfWn4_xSV4
 title: 'Azure Arc: Unified Hybrid and Multi-Cloud Management from Microsoft Ignite 2025'
 author: Microsoft Events
@@ -31,6 +31,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Microsoft Events hosts Brendan Burns and Steven Bucher in an advanced Ignite 2025 session on Azure Arc, demonstrating hybrid/multi-cloud management, security, and application operations for modern IT environments.<!--excerpt_end-->
 

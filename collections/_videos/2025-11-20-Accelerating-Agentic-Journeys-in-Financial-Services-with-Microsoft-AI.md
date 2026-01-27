@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=9AQu3a7Y8so
 title: Accelerating Agentic Journeys in Financial Services with Microsoft AI
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents how top financial services partners accelerate agentic journeys using Microsoft AI technologies, with a focus on Copilot Studio and real-world case studies like Morningstar.<!--excerpt_end-->
 

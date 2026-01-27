@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/open-source/git/how-the-github-cli-can-now-enable-triangular-workflows/
 title: How the GitHub CLI Enables Triangular Workflows for Advanced Git Collaboration
 author: Tyler McGoffin
@@ -21,6 +21,7 @@ tags:
 - Workflow Automation
 section_names:
 - devops
+primary_section: devops
 ---
 Tyler McGoffin discusses the GitHub CLI's new support for triangular workflows, providing advanced collaboration capabilities for developers. Explore Git fundamentals, workflow configuration, and how the updated CLI simplifies pull request and branch management.<!--excerpt_end-->
 

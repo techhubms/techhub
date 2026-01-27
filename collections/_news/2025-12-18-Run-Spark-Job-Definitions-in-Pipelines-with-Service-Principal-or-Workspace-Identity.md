@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/run-spark-job-definitions-in-pipelines-with-service-principal-or-workspace-identity/
 title: Run Spark Job Definitions in Pipelines with Service Principal or Workspace Identity
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog details how to securely orchestrate Spark job definitions in Data Factory pipelines using Service Principal or Workspace Identity authentication, providing developers with best practices for automation and enterprise security.<!--excerpt_end-->
 

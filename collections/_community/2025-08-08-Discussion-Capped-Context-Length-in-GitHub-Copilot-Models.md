@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/github/comments/1mkne30/capped_context_length_issues_in_copilot_anyone/
 title: 'Discussion: Capped Context Length in GitHub Copilot Models'
 author: EfficientApartment52
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 EfficientApartment52 shares their experience and concerns about GitHub Copilot models being limited to 128k context length, inviting other users and the Copilot team to discuss the impact and potential solutions.<!--excerpt_end-->
 

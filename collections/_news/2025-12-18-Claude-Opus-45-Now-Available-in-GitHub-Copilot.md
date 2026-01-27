@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-18-claude-opus-4-5-is-now-generally-available-in-github-copilot
 title: Claude Opus 4.5 Now Available in GitHub Copilot
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the general availability of Claude Opus 4.5 in GitHub Copilot, explaining how organizations and individuals can enable and access the model across multiple IDEs.<!--excerpt_end-->
 

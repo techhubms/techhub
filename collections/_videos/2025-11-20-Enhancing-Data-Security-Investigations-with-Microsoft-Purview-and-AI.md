@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=SKQyfHBfvpY
 title: Enhancing Data Security Investigations with Microsoft Purview and AI
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events present an advanced session on using AI-powered Microsoft Purview Data Security Investigations, featuring insights from Katerina Athanasiou, Christophe Fiessinger, Daniel Gawarecki, and Caroline Lee.<!--excerpt_end-->
 

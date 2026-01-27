@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/general-availability-granular-rbac-in-azure-monitor-logs/ba-p/4471299
 title: Granular RBAC Now Generally Available in Azure Monitor Logs
 author: Ron Frenkel
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Ron Frenkel introduces the general availability of Granular RBAC in Azure Monitor Logs, describing fine-grained access controls and enhanced security options for centralized log management.<!--excerpt_end-->
 

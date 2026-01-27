@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/oracle-databaseazure-offers-new-features-regions-and-programs-to-unlock-data-and-ai-innovation/
 title: 'New Features and Global Expansion for Oracle Database@Azure: Unlocking Hybrid Data and AI Innovation'
 author: Brett Tanzer
@@ -34,6 +34,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 Brett Tanzer explores the latest Oracle Database@Azure updates, featuring global region expansion, advanced AI-ready and security features, deep Microsoft integrations, and new migration resources for enterprise innovation.<!--excerpt_end-->
 

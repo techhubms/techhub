@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/find-the-alerts-you-didn-t-know-you-were-missing-with-azure-sre/ba-p/4483494
 title: Identifying Missed Alerts in Azure Kubernetes Deployments with SRE Agent
 author: dchelupati
@@ -28,6 +28,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 dchelupati describes how gaps in Azure Monitor alert coverage became apparent during a Redis credential rotation in an AKS application, and how Azure SRE Agent and GitHub MCP integration accelerated incident diagnosis and alert remediation.<!--excerpt_end-->
 

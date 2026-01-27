@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-how-to-build-mcp-servers-with-python-and-azure/ba-p/4479402
 title: Building and Deploying MCP Servers with Python and Azure
 author: Pamela_Fox
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: ai
 ---
 Pamela Fox presents a detailed series on building, deploying, and securing MCP servers with Python and Azure, covering FastMCP, cloud deployment, and authentication using Microsoft Entra.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/add-a-property-to-the-top-level-statements-program-class
 title: Add a Property to the Top-level Statements Program Class
 author: Khalid Abuhakmeh
@@ -17,6 +17,7 @@ tags:
 - Top Level Statements
 section_names:
 - coding
+primary_section: coding
 ---
 Khalid Abuhakmeh explains how to add static properties to a top-level statements Program class in C# using partial classes. This post guides readers on creating more readable console applications and delves into the compiler-generated code structure.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/recent-updates-to-netescapaades-enumgenerators/
 title: 'Recent updates to NetEscapades.EnumGenerators: [EnumMember] support, analyzers, and bug fixes'
 author: Andrew Lock
@@ -24,6 +24,7 @@ tags:
 - Source Generators
 section_names:
 - coding
+primary_section: coding
 ---
 Andrew Lock explains the recent improvements to NetEscapades.EnumGenerators, a .NET source generator package, including support for [EnumMember], additional analyzers, and bug fixes. Developers gain new metadata options and guidance on edge cases.<!--excerpt_end-->
 

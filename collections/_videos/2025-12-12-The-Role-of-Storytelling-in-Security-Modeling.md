@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/0vjkCXWebe4
 title: The Role of Storytelling in Security Modeling
 author: Microsoft Developer
@@ -17,6 +17,7 @@ tags:
 - Threat Modeling
 section_names:
 - security
+primary_section: security
 ---
 Michael Howard from Microsoft shares why storytelling is vital in security modeling, arguing that real-world incident narratives help teams grasp risks more effectively than theory alone.<!--excerpt_end-->
 

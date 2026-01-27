@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=1f7LZzGt79Q
 title: Use AI Agents to Scale Privacy Programs with Microsoft Sentinel
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events presents an advanced session with Kevin Jones and Ojas Rege, showcasing OneTrust's AI-driven approach to privacy risk assessment in partnership with Microsoft, focusing on scalable privacy solutions and data security.<!--excerpt_end-->
 

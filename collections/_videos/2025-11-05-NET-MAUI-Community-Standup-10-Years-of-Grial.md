@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=bIl83DdhWoo
 title: '.NET MAUI Community Standup: 10 Years of Grial'
 author: dotnet
@@ -27,6 +27,7 @@ tags:
 - Xamarin
 section_names:
 - coding
+primary_section: coding
 ---
 David Ortinau and the UX Divers team reflect on Grial’s decade-long impact in the .NET ecosystem, explore its features for .NET MAUI and Xamarin, and unveil what's new for developers in .NET 10.<!--excerpt_end-->
 

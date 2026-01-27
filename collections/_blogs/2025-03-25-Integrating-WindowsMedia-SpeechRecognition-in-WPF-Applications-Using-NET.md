@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2025/Mar/24/Using-WindowsMedia-SpeechRecognition-in-WPF
 title: Integrating Windows.Media SpeechRecognition in WPF Applications Using .NET
 author: Rick Strahl
@@ -22,6 +22,7 @@ tags:
 - WPF
 section_names:
 - coding
+primary_section: coding
 ---
 Rick Strahl discusses the practical integration of Windows.Media SpeechRecognition within WPF applications using .NET. The post highlights code samples, SDK dependencies, workarounds for WinRT/.NET issues, and language management.<!--excerpt_end-->
 

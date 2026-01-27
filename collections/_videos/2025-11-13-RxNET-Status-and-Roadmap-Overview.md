@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=y7Ks_bwSHUg
 title: Rx.NET Status and Roadmap Overview
 author: dotnet
@@ -20,6 +20,7 @@ tags:
 - Software Roadmap
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet shares the latest work and future plans for Rx.NET, outlining updates, development priorities, and roadmap insights relevant to .NET developers.<!--excerpt_end-->
 

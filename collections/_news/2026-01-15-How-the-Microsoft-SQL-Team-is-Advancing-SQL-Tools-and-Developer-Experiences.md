@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/how-the-microsoft-sql-team-is-investing-in-sql-tools-and-experiences/
 title: How the Microsoft SQL Team is Advancing SQL Tools and Developer Experiences
 author: Microsoft Fabric Blog
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Fabric Blog discusses the latest investments in SQL tooling, including integration with GitHub Copilot, DevOps features, and AI-assisted development to enhance productivity for database professionals and developers.<!--excerpt_end-->
 

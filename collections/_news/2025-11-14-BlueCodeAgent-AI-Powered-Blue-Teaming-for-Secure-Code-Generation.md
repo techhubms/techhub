@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/research/blog/bluecodeagent-a-blue-teaming-agent-enabled-by-automated-red-teaming-for-codegen-ai/
 title: 'BlueCodeAgent: AI-Powered Blue Teaming for Secure Code Generation'
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 stclarke explores the design and effectiveness of BlueCodeAgent, an AI defender that applies automated red teaming, actionable constitutions, and dynamic testing to secure code generation by large language models.<!--excerpt_end-->
 

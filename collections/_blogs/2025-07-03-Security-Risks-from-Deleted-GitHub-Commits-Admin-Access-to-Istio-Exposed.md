@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devclass.com/2025/07/03/security-researcher-exploits-github-gotcha-gets-admin-access-to-all-istio-repositories-and-more/
 title: 'Security Risks from Deleted GitHub Commits: Admin Access to Istio Exposed'
 author: Tim Anderson
@@ -25,6 +25,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Tim Anderson's article explores how lingering commit history on GitHub enabled a researcher to find secrets—including admin tokens for Istio—highlighting security risks and mitigation strategies for developers.<!--excerpt_end-->
 

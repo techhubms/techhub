@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=OqzC9b3ueX0
 title: Unlocking the Power of VS Code's Simple Browser Feature
 author: Visual Studio Code
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Visual Studio Code’s Justin Chen introduces the Simple Browser feature, detailing its uses for web development, AI workflows, and error analysis, helping developers enhance productivity.<!--excerpt_end-->
 

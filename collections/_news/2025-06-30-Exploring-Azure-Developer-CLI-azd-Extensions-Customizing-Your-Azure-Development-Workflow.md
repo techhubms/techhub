@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azd-extension-framework/
 title: 'Exploring Azure Developer CLI (azd) Extensions: Customizing Your Azure Development Workflow'
 author: Kristen Womack
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Kristen Womack delves into Azure Developer CLI (azd) extensions, outlining their features, use cases, installation process, and ways developers can build and contribute extensions to optimize Azure workflow customization.<!--excerpt_end-->
 

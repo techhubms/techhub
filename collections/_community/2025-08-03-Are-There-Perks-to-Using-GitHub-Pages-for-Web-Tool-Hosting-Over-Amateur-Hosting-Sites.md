@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/github/comments/1mgjz65/are_there_perks_to_using_github_pages_for_web/
 title: Are There Perks to Using GitHub Pages for Web Tool Hosting Over Amateur Hosting Sites?
 author: Qwert-4
@@ -18,6 +18,7 @@ tags:
 - Web Hosting
 section_names:
 - devops
+primary_section: devops
 ---
 Qwert-4 asks about the advantages of using GitHub Pages versus other amateur hosting options for hosting simple web-based utilities, inviting a discussion on deployment choices.<!--excerpt_end-->
 

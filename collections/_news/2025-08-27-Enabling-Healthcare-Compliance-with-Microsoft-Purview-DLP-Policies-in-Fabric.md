@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/meet-your-healthcare-regulation-and-compliance-requirements-with-purview-data-loss-prevention-dlp-policies/
 title: Enabling Healthcare Compliance with Microsoft Purview DLP Policies in Fabric
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Fabric Blog presents a thorough overview of using Purview DLP policies to safeguard healthcare data, outlining compliance strategies and actionable steps for security administrators.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-user-data-functions-ignite-2025-edition/
 title: 'What’s New in Fabric User Data Functions: Ignite 2025 Edition'
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog discusses the newest features and integrations available in Fabric User Data Functions, empowering developers to streamline data architectures and enhance business logic within Fabric using Python.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-databricks-fabric-disaster-recovery-the-better-together/ba-p/4481323
 title: Disaster Recovery Strategies for Azure Databricks and Microsoft Fabric
 author: Rafia_Aqil
@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - ml
+primary_section: ml
 ---
 Rafia Aqil and co-authors present a comprehensive technical guide to disaster recovery for Azure Databricks and Microsoft Fabric, focusing on automation, cloud resiliency, and best practices for DR in analytics platforms.<!--excerpt_end-->
 

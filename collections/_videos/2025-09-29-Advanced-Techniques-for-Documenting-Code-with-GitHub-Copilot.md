@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=zRZLBiO4DYA
 title: Advanced Techniques for Documenting Code with GitHub Copilot
 author: Visual Studio Code
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code's team, led by Maxim Salnikov, showcases how to leverage GitHub Copilot for advanced code documentation, including README and API docs generation, prompt engineering techniques, and custom AI model integration.<!--excerpt_end-->
 

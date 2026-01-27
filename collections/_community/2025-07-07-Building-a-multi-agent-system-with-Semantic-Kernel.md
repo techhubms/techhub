@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1ltr8tf/building_a_multiagent_system_with_semantic_kernel/
 title: Building a multi-agent system with Semantic Kernel
 author: Geekodon
@@ -18,6 +18,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, Geekodon presents a practical demo of an agentic AI system built using Semantic Kernel, highlighting key components and workflow strategies. <!--excerpt_end--> The demo showcases an architecture where three main agents—Planner, Reviewer, and Executor—work collaboratively to process and execute user requests.
 

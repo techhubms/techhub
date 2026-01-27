@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-11-review-commit-by-commit-improved-filtering-and-more-in-the-pull-request-files-changed-public-preview
 title: Commit-by-Commit Review and Enhanced Filtering in GitHub Pull Request Files Changed Experience
 author: Allison
@@ -21,6 +21,7 @@ tags:
 - Workflow
 section_names:
 - devops
+primary_section: devops
 ---
 Allison reports on GitHub's improved pull request 'Files changed' view, delivering commit-by-commit review, advanced filtering, and productivity enhancements for developers.<!--excerpt_end-->
 

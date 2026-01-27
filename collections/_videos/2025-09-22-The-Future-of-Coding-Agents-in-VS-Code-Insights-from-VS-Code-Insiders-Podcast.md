@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=hPKDV5N99GU
 title: 'The Future of Coding Agents in VS Code: Insights from VS Code Insiders Podcast'
 author: Visual Studio Code
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Brigit and Josh from the VS Code team discuss the future of coding agents in Visual Studio Code, sharing insights and updates for developers in this VS Code Insiders Podcast episode.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=HcuOtjT6NCc
 title: 'Azure Local and Atos: Migrating Internal Services from VMware'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 - VMware Migration
 section_names:
 - azure
+primary_section: azure
 ---
 Microsoft Events presents a session led by Adam Dolman, describing Atos’s migration from expiring VMware clusters to Azure Local. The talk covers technical choices and operational benefits for internal IT services.<!--excerpt_end-->
 

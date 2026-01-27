@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=HUZqoVeJ0uA
 title: How to Chat with Your Repo & Create PRs with Copilot on GitHub
 author: GitHub
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Andrea Griffiths and Daniel Adams from GitHub demonstrate how to harness GitHub Copilot directly on the GitHub website, revealing advanced AI-driven features and workflows for developers.<!--excerpt_end-->
 

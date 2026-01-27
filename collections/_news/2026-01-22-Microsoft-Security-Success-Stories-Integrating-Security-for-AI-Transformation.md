@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Steve Dispensa shares how Ford, Icertis, and TriNet transformed their security operations using Microsoft Security's integrated platform, combining Zero Trust, automation, and AI for resilience and innovation.<!--excerpt_end-->
 

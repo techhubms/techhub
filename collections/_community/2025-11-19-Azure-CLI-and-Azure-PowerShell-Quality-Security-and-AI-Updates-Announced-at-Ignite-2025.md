@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-and-azure-powershell-ignite-2025-announcement/ba-p/4471182
 title: 'Azure CLI and Azure PowerShell: Quality, Security, and AI Updates Announced at Ignite 2025'
 author: Alex-wdy
@@ -31,6 +31,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 Alex-wdy shares comprehensive updates from Microsoft Ignite 2025, focusing on Azure CLI, Azure PowerShell, and new AI-driven features, including security and quality improvements.<!--excerpt_end-->
 

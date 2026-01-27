@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/supercharge-your-it-certification-prep-how-github-copilot-can-be-your-study-buddy/
 title: How GitHub Copilot Can Boost Your Microsoft Certification Prep
 author: Dellenny
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny demonstrates how IT professionals can use GitHub Copilot as an AI-powered study partner to prepare more effectively for Microsoft certifications.<!--excerpt_end-->
 

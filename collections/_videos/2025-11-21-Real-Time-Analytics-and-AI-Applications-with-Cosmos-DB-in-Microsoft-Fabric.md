@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=UKJE1eJYtkA
 title: Real-Time Analytics and AI Applications with Cosmos DB in Microsoft Fabric
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events hosts an advanced Ignite session featuring Mark Brown and Jai Maldonado, demonstrating how to use Cosmos DB within Microsoft Fabric to build AI-enabled, real-time applications at scale.<!--excerpt_end-->
 

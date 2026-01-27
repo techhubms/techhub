@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=GCLYC5d7kpI
 title: 'AI Dev Days: Using AI to Enhance Developer Productivity'
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer presents key techniques for enhancing coding productivity with AI, Azure, and GitHub Copilot, featuring highlights from Ignite and GitHub Universe.<!--excerpt_end-->
 

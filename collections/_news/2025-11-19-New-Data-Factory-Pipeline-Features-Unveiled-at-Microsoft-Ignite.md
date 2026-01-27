@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/igniting-your-pipelines-new-data-factory-features-announced-at-ignite/
 title: New Data Factory Pipeline Features Unveiled at Microsoft Ignite
 author: Microsoft Fabric Blog
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog introduces new Data Factory pipeline features launched at Microsoft Ignite, covering code-free orchestration, Airflow DAGs, Copilot-powered expression builder, and advanced scheduling and lakehouse maintenance tools.<!--excerpt_end-->
 

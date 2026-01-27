@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/announcing-azure-devops-server-general-availability/
 title: Azure DevOps Server Now Generally Available for Self-Hosted Enterprises
 author: Gloridel Morales
@@ -18,6 +18,7 @@ tags:
 - TFS Upgrade
 section_names:
 - devops
+primary_section: devops
 ---
 Gloridel Morales announces the general availability of Azure DevOps Server, detailing its upgrade paths, key features, and essential resources for enterprise DevOps practitioners.<!--excerpt_end-->
 

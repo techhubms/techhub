@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/the-evolving-blueprint-whats-next-for-the-software-architect-role/
 title: 'The Evolving Blueprint: What’s Next for the Software Architect Role?'
 author: John Edward
@@ -24,6 +24,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 John Edward examines how the software architect role is evolving, focusing on technical leadership, cloud-native patterns, AI integration, DevOps, and security-driven design.<!--excerpt_end-->
 

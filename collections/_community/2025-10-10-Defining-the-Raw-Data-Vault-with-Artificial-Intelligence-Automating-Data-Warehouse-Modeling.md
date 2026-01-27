@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/defining-the-raw-data-vault-with-artificial-intelligence/ba-p/4453557
 title: 'Defining the Raw Data Vault with Artificial Intelligence: Automating Data Warehouse Modeling'
 author: Naveed-Hussain
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Naveed Hussain and Ian Clarke provide a technical review of Michael Olschimke's in-depth exploration of AI-driven Raw Data Vault automation, focusing on efficiency gains, Microsoft platform integrations, and advanced data modeling practices.<!--excerpt_end-->
 

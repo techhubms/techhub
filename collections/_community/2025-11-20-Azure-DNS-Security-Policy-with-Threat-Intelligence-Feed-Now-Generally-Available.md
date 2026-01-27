@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/announcing-azure-dns-security-policy-with-threat-intelligence/ba-p/4470183
 title: Azure DNS Security Policy with Threat Intelligence Feed Now Generally Available
 author: Sergio Figueiredo
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Sergio Figueiredo announces the general availability of Azure DNS security policy with Threat Intelligence feed, highlighting its impact on DNS threat mitigation, logging, and integration for Azure environments.<!--excerpt_end-->
 

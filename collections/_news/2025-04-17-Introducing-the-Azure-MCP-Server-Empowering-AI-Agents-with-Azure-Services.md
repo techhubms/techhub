@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/introducing-the-azure-mcp-server/
 title: 'Introducing the Azure MCP Server: Empowering AI Agents with Azure Services'
 author: Rohit Ganguly
@@ -26,6 +26,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Rohit Ganguly introduces the Azure MCP Server, an open-source platform in public preview that connects AI agents like GitHub Copilot Agent Mode to Azure services. This post details supported capabilities, practical integrations, and what developers can expect next.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/issue-with-gmsa-when-installing-cloud-sync/m-p/4482486#M22398
 title: Troubleshooting gMSA Configuration Errors During Microsoft Cloud Sync Installation
 author: CheesePizza
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 CheesePizza details repeated gMSA-related errors hindering Cloud Sync setup for group writeback, sharing extensive troubleshooting and seeking advice for resolving Active Directory permission issues.<!--excerpt_end-->
 

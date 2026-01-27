@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/how-hyperconnected-ai-development-creates-a-multi-system-secret-sprawl/
 title: How Hyperconnected AI Development Creates a Multi-System Secret Sprawl
 author: Guillaume Valadon
@@ -47,6 +47,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Guillaume Valadon examines how hyperconnected AI development workflows lead to an explosion in secret sprawl, leaking real credentials into public code repositories. The article diagnoses the causes and provides actionable security strategies for developers.<!--excerpt_end-->
 

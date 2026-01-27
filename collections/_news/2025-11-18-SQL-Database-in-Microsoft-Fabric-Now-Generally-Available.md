@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-sql-database-in-fabric-is-now-generally-available-ga/
 title: SQL Database in Microsoft Fabric Now Generally Available
 author: Microsoft Fabric Blog
@@ -41,6 +41,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 Microsoft Fabric Blog, co-authored by Idris Motiwala, announces the general availability of SQL Database in Fabric. The article outlines key technical features and integration points for developers, data engineers, and security professionals.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-the-public-preview-of-the-new-app-service-quota-self/ba-p/4450415
 title: 'Public Preview: Self-Service Quota Management for Azure App Service'
 author: jordanselig
@@ -21,6 +21,7 @@ tags:
 - VM SKUs
 section_names:
 - azure
+primary_section: azure
 ---
 jordanselig details the new self-service quota management experience for Azure App Service, helping developers and IT admins proactively manage resource limits via an updated portal interface.<!--excerpt_end-->
 

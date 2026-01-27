@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/documenting-architecture-using-ai-from-painful-chore-to-strategic-advantage/
 title: 'Documenting Architecture Using AI: From Painful Chore to Strategic Advantage'
 author: Dellenny
@@ -21,6 +21,7 @@ tags:
 - System Diagrams
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny explains how AI tools—including those integrated with Microsoft platforms—can automate and improve software architecture documentation, making it more accurate, useful, and strategic for engineering teams.<!--excerpt_end-->
 

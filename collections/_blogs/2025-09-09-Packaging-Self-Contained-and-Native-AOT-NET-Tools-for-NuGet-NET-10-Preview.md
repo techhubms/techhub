@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-7-packaging-self-contained-and-native-aot-dotnet-tools-for-nuget/
 title: 'Packaging Self-Contained and Native AOT .NET Tools for NuGet: .NET 10 Preview'
 author: Andrew Lock
@@ -23,6 +23,7 @@ tags:
 - Spectre.Console
 section_names:
 - coding
+primary_section: coding
 ---
 Andrew Lock details how .NET 10 preview improves .NET tool packaging for NuGet with new self-contained and native AOT deployment options, uncovering benefits, limitations, and practical tips for developers.<!--excerpt_end-->
 

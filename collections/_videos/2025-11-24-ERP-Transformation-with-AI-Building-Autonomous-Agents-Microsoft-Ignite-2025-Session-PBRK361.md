@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=MUC0nVbeLKM
 title: 'ERP Transformation with AI: Building Autonomous Agents (Microsoft Ignite 2025 Session PBRK361)'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 - Unstructured Data
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents a session led by Jim Bretschneider, Jared Hall, Niels Jensen, Sameer Verma, and Ben Vollmer, highlighting ERP transformation through AI-driven autonomous agents and Microsoft's agentic ERP innovations.<!--excerpt_end-->
 

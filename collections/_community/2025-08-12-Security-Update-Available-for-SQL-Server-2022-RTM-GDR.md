@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/sql-server-blog/security-update-for-sql-server-2022-rtm-gdr/ba-p/4441687
 title: Security Update Available for SQL Server 2022 RTM GDR
 author: HarveyMoraSQL
@@ -21,6 +21,7 @@ tags:
 - Vulnerability Management
 section_names:
 - security
+primary_section: security
 ---
 HarveyMoraSQL announces the release of a security update for SQL Server 2022 RTM GDR, providing download links, vulnerability details, and essential update guidance for database administrators and security professionals.<!--excerpt_end-->
 

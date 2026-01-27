@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/unlocking-innovation-with-azure-ai-foundry-agent-service/m-p/4438322#M22030
 title: Unlocking Innovation with Azure AI Foundry Agent Service
 author: JohnNaguib
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 JohnNaguib explores the Azure AI Foundry Agent Service, detailing how Microsoft's latest Azure AI Studio feature streamlines building and managing multi-agent AI systems.<!--excerpt_end-->
 

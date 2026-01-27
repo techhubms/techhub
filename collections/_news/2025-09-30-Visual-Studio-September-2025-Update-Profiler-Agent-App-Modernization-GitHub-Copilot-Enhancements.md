@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-september-update/
 title: 'Visual Studio September 2025 Update: Profiler Agent, App Modernization, GitHub Copilot Enhancements'
 author: Simona Liao
@@ -33,6 +33,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Simona Liao details the major features in the September 2025 Visual Studio update, including AI-powered Profiler Agent, app modernization via Copilot, smarter code reviews, and new developer workflows.<!--excerpt_end-->
 

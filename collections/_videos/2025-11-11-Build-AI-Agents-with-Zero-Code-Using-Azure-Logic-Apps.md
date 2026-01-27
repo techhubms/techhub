@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=6YFN25o9jn4
 title: Build AI Agents with Zero Code Using Azure Logic Apps
 author: Microsoft Developer
@@ -31,6 +31,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer’s Priyanka Vergadia talks with Rohitha Hewawasam about building AI agents on Azure Logic Apps without code, highlighting integration, connectors, and practical use cases.<!--excerpt_end-->
 

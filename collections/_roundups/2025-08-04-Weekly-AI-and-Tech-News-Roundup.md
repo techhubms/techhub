@@ -1,4 +1,4 @@
----
+﻿---
 title: Agentic AI and Developer Workflows Leap Forward
 author: Tech Hub Team
 date: 2025-08-04 09:00:00 +00:00
@@ -23,6 +23,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: all
 ---
 Welcome to this week’s tech roundup, where AI-driven developer tools and cloud innovation take center stage. GitHub Copilot has not only solidified its role as the premier AI companion for developers but has overtaken ChatGPT as the most relied-upon assistant in modern coding workflows. With new persistent memory features, expanded in-chat capabilities, and deep community engagement, Copilot is rapidly accelerating productivity, code quality, and automation for individuals and teams alike. Real-world stories—from social impact nonprofits to enterprise billing rollouts—highlight just how transformative these advancements are becoming.
 

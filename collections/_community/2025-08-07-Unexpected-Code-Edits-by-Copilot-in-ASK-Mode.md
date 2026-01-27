@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk7764/copilot_making_edits_when_in_ask_mode_not_in/
 title: Unexpected Code Edits by Copilot in ASK Mode
 author: Nomadic_Dev
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Nomadic_Dev shares findings on GitHub Copilot's ASK mode unexpectedly making direct edits to a production codebase, prompting discussion about Copilot's expected behavior and reliability.<!--excerpt_end-->
 

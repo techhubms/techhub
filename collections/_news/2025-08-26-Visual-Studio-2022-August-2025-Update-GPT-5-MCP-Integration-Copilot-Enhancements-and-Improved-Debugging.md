@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/the-visual-studio-august-update-is-here-smarter-ai-better-debugging-and-more-control/
 title: 'Visual Studio 2022 August 2025 Update: GPT-5, MCP Integration, Copilot Enhancements, and Improved Debugging'
 author: Mads Kristensen
@@ -31,6 +31,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Mads Kristensen shares the highlights of the August 2025 Visual Studio 2022 update, including GPT-5 support, smarter and more flexible Copilot features, MCP tool integration, and debugging enhancements for C++ and Unreal Engine.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/from-manual-testing-to-ai-generated-automation-our-azure-devops-mcp-playwright-success-story/
 title: 'From Manual Testing to AI-Generated Automation: Azure DevOps MCP & Playwright with GitHub Copilot'
 author: Igor Najdenovski
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Igor Najdenovski shares insights on transforming manual test suites into automated, AI-generated scripts using Azure DevOps MCP server, GitHub Copilot, and Playwright. This post covers practical steps, challenges, and recommendations based on real team experience.<!--excerpt_end-->
 

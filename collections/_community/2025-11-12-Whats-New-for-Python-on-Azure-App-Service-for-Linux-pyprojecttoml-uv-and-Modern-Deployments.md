@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-for-python-on-app-service-for-linux-pyproject-toml-uv/ba-p/4468903
 title: 'What’s New for Python on Azure App Service for Linux: pyproject.toml, uv, and Modern Deployments'
 author: TulikaC
@@ -26,6 +26,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 TulikaC explains recent upgrades for building and deploying Python apps on Azure App Service for Linux, covering modern tools like pyproject.toml, uv, Poetry, and offering improved DevOps workflows.<!--excerpt_end-->
 

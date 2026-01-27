@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-07-removing-notifications-for-mentions-in-commit-messages
 title: Removing Notifications for @mentions in Commit Messages
 author: Allison
@@ -18,6 +18,7 @@ tags:
 - Team Collaboration
 section_names:
 - devops
+primary_section: devops
 ---
 Allison details GitHub's removal of notifications triggered by mentions in commit messages, explaining how this change aims to reduce spam and streamline developer workflow.<!--excerpt_end-->
 

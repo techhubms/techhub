@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/langchain-v1-is-now-generally-available/ba-p/4462159
 title: LangChain v1 Launches with Azure AI Foundry Support and Streamlined Agent APIs
 author: mmhangami
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Community author mmhangami explores the new features of LangChain v1, focusing on Azure AI Foundry support, streamlined agent APIs, and key developer updates relevant to integrating Microsoft cloud AI services.<!--excerpt_end-->
 

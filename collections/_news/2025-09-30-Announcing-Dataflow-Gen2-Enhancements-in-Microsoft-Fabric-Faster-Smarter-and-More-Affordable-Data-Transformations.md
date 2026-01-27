@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-the-next-generation-of-data-transformations-with-dataflow-gen2-fabcon-europe-2025-announcements/
 title: 'Announcing Dataflow Gen2 Enhancements in Microsoft Fabric: Faster, Smarter, and More Affordable Data Transformations'
 author: Microsoft Fabric Blog
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog details the latest Dataflow Gen2 enhancements for Microsoft Fabric, offering faster runtimes, better pricing, AI-driven transformations, and expanded integration options for enterprise data engineers and architects.<!--excerpt_end-->
 

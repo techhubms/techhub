@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=lGtTnFlI6yA
 title: 'AI Challenger | Loft Orbital: Building Smarter Satellites with AI'
 author: Microsoft Cloud
@@ -22,6 +22,7 @@ tags:
 - Space Technology
 section_names:
 - ai
+primary_section: ai
 ---
 In this video, Lucas Brémond from Loft Orbital shares how Microsoft AI solutions are leveraged to optimize satellite operations, driving growth and innovation. Presented by Microsoft Cloud.<!--excerpt_end-->
 

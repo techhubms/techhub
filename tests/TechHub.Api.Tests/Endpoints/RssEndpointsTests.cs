@@ -235,7 +235,7 @@ public class RssEndpointsTests(TechHubIntegrationTestApiFactory factory) : IClas
             var title = item.Element("title");
             return title != null && title.Value.Contains("Coming Soon", StringComparison.OrdinalIgnoreCase);
         }).ToList();
-        
+
         draftItems.Should().BeEmpty("RSS feeds should never include draft items");
     }
 
@@ -256,7 +256,7 @@ public class RssEndpointsTests(TechHubIntegrationTestApiFactory factory) : IClas
             var title = item.Element("title");
             return title != null && title.Value.Contains("Coming Soon", StringComparison.OrdinalIgnoreCase);
         }).ToList();
-        
+
         draftItems.Should().BeEmpty("RSS feeds should never include draft items");
     }
 
@@ -277,7 +277,7 @@ public class RssEndpointsTests(TechHubIntegrationTestApiFactory factory) : IClas
             var title = item.Element("title");
             return title != null && title.Value.Contains("Coming Soon", StringComparison.OrdinalIgnoreCase);
         }).ToList();
-        
+
         draftItems.Should().BeEmpty("RSS feeds should never include draft items");
     }
 }

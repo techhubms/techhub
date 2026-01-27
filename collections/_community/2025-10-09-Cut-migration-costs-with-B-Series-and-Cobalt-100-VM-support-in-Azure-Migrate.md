@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/cut-migration-costs-with-b-series-and-cobalt-100-vm-support-in/ba-p/4460285
 title: Cut migration costs with B-Series and Cobalt 100 VM support in Azure Migrate
 author: ankitsurkar
@@ -20,6 +20,7 @@ tags:
 - Workload Assessment
 section_names:
 - azure
+primary_section: azure
 ---
 ankitsurkar explains how Azure Migrate’s new support for B-Series and Cobalt 100 VMs enables smarter, more cost-effective cloud migrations by allowing better alignment of workloads with infrastructure options.<!--excerpt_end-->
 

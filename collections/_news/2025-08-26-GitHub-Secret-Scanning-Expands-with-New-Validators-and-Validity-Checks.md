@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-26-secret-scanning-adds-10-new-validators-including-square-wakatime-and-yandex
 title: GitHub Secret Scanning Expands with New Validators and Validity Checks
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison outlines GitHub's addition of over 10 new validators for secret scanning, including providers like Square and Yandex, to improve credential security for developers.<!--excerpt_end-->
 

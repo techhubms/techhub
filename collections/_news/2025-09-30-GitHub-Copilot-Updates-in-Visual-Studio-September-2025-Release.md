@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-30-github-copilot-in-visual-studio-september-update
 title: GitHub Copilot Updates in Visual Studio September 2025 Release
 author: Allison
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Allison summarizes the September 2025 Visual Studio update, showcasing new GitHub Copilot features such as Profiler and .NET Modernization agents, improved MCP prompts, and advanced code review tools.<!--excerpt_end-->
 

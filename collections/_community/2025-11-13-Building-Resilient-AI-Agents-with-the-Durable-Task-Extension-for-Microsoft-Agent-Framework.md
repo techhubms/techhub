@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bulletproof-agents-with-the-durable-task-extension-for-microsoft/ba-p/4467122
 title: Building Resilient AI Agents with the Durable Task Extension for Microsoft Agent Framework
 author: greenie-msft
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 greenie-msft explains how the durable task extension for the Microsoft Agent Framework simplifies building highly resilient and scalable AI agents on Azure, with practical code samples and best practices for serverless durability.<!--excerpt_end-->
 

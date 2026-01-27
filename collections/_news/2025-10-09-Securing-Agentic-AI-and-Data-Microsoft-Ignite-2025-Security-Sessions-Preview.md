@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/09/securing-agentic-ai-your-guide-to-the-microsoft-ignite-sessions-catalog/
 title: 'Securing Agentic AI and Data: Microsoft Ignite 2025 Security Sessions Preview'
 author: Microsoft Security Team
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 The Microsoft Security Team presents a comprehensive guide to the security sessions at Microsoft Ignite 2025, covering AI-augmented security platforms, hands-on experiences, and the latest advancements in protecting data, cloud infrastructure, and agentic AI.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=K-ntHsFriuI
 title: Enhancing Existing .NET REST APIs with Model Creation Protocol (MCP) and AI
 author: dotnet
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 dotnet presents a session on how to integrate Model Creation Protocol (MCP) into existing ASP.NET Core REST APIs, empowering them with AI and making them LLM-friendly.<!--excerpt_end-->
 

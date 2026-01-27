@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2026-01-12-controlling-who-can-request-apps-for-your-organization-is-now-generally-available
 title: Granular Controls for App Access Requests in GitHub Organizations Now Available
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison explains new options for controlling who can request apps in GitHub organizations, enhancing security and governance for administrators managing enterprise workflows.<!--excerpt_end-->
 

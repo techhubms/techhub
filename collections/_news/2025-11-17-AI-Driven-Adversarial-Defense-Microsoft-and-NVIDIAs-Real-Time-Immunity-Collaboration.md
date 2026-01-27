@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/blog/microsoft-security-blog/collaborative-research-by-microsoft-and-nvidia-on-real-time-immunity/4470164
 title: "AI-Driven Adversarial Defense: Microsoft and NVIDIA's Real-Time Immunity Collaboration"
 author: Tina Romeo
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Tina Romeo shares insights on how Microsoft and NVIDIA are collaborating to advance adversarial learning and real-time immunity for AI-powered cybersecurity, emphasizing innovations in model optimization and GPU inferencing.<!--excerpt_end-->
 

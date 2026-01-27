@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-to-set-up-basic-security-policies-in-a-microsoft-365-trial-tenant/
 title: Setting Up Security Policies in Microsoft 365 Trial Tenants
 author: Dellenny
@@ -29,6 +29,7 @@ tags:
 - Trial Tenant
 section_names:
 - security
+primary_section: security
 ---
 Dellenny guides readers through setting up baseline security protections for Microsoft 365 trial tenants, highlighting practical steps to reduce vulnerabilities and secure cloud services.<!--excerpt_end-->
 

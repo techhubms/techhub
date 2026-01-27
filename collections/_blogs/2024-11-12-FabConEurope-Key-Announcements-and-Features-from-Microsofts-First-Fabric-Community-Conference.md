@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://zure.com/blog/fabconeurope-onsite-reporting-from-microsoft-fabrics-first-community-conference/
 title: "#FabConEurope: Key Announcements and Features from Microsoft's First Fabric Community Conference"
 author: Samu Niemelä
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Authored by Samu Niemelä, this overview details the major innovations and updates unveiled at the first Microsoft Fabric Community Conference in Europe, focusing on improvements in data, analytics, and Azure-integrated capabilities.<!--excerpt_end-->
 

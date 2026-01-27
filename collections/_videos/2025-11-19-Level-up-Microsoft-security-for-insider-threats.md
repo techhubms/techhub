@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=OhXZa5NzJ5Y
 title: Level up Microsoft security for insider threats
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 - Threat Detection
 section_names:
 - security
+primary_section: security
 ---
 Microsoft Events presents a session on enhancing insider threat protection by integrating Microsoft Defender and Entra ID with OpenText Core Threat Detection, featuring insights from Joe Leung.<!--excerpt_end-->
 

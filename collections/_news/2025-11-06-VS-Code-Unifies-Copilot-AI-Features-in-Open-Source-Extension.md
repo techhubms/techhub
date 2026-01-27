@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2025/11/04/openSourceAIEditorSecondMilestone
 title: VS Code Unifies Copilot AI Features in Open Source Extension
 author: The VS Code team
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 The VS Code Team shares how the GitHub Copilot Chat extension now unifies all Copilot AI code suggestions in a single open source extension, with technical details and contribution opportunities.<!--excerpt_end-->
 

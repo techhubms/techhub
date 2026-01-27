@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mkxmt5/asyncawait_beyond_the_basics/
 title: Async/Await - Beyond the Basics in .NET
 author: Delicious_Jaguar_341
@@ -23,6 +23,7 @@ tags:
 - ThreadPool
 section_names:
 - coding
+primary_section: coding
 ---
 Delicious_Jaguar_341 shares a thoughtful discussion about advanced async/await usage in .NET, examining performance problems caused by the sync-over-async pattern and providing actionable tips for developers.<!--excerpt_end-->
 

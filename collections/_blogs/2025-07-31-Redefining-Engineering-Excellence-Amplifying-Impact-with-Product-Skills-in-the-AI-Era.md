@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/redefining-engineering-excellence-how-product-skills-amplify-your-impact-in-the-era-of-ai/?utm_source=rss&utm_medium=rss&utm_campaign=redefining-engineering-excellence-how-product-skills-amplify-your-impact-in-the-era-of-ai
 title: 'Redefining Engineering Excellence: Amplifying Impact with Product Skills in the AI Era'
 author: Maryna Rybalko
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 In this article, Maryna Rybalko discusses how AI is redefining the software engineering landscape. She highlights the importance of product thinking and outlines key skills engineers should develop to thrive and lead in the era of AI-powered DevOps.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/github/comments/1mblpfk/bug_commit_changes_button_remains_active_during/
 title: '[Bug] “Commit changes” button remains active during GitHub file upload — causes incomplete commits'
 author: Abey_lawda_ka_reddit
@@ -17,6 +17,7 @@ tags:
 - Workflow
 section_names:
 - devops
+primary_section: devops
 ---
 Abey_lawda_ka_reddit outlines a GitHub UX bug where the “Commit changes” button is prematurely enabled during file uploads. The post calls for feedback and discusses the potential impact of this issue.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mft8nb/what_wpf_ui_library_can_i_use/
 title: Seeking Recommendations for WPF UI Libraries for a Windows Game Launcher
 author: kkassius_
@@ -19,6 +19,7 @@ tags:
 - XAML
 section_names:
 - coding
+primary_section: coding
 ---
 Author kkassius_ seeks community advice on selecting a WPF UI library to use in their Windows game launcher project, sharing initial goals, challenges, and future customization plans.<!--excerpt_end-->
 

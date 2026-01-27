@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code-maze.com/csharp-snapshot-testing-with-verify/
 title: How to Perform Snapshot Testing With Verify in C#
 author: Januarius Njoku
@@ -20,6 +20,7 @@ tags:
 - xUnit
 section_names:
 - coding
+primary_section: coding
 ---
 In this guide, Januarius Njoku demonstrates how to leverage the Verify library for snapshot testing in C#. The article offers practical steps for setup and execution, providing sample code and clear explanations for developers looking to ensure robust object state validation.<!--excerpt_end-->
 

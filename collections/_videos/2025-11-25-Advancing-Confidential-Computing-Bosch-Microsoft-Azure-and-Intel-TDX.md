@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=z0R6JFHbyPc
 title: 'Advancing Confidential Computing: Bosch, Microsoft Azure, & Intel TDX'
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events hosts a detailed exploration of Intel TDX and confidential computing on Azure, featuring Bosch, Intel, and demonstrations on secure AI and trusted collaboration.<!--excerpt_end-->
 

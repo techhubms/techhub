@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://microsoft.ai/news/introducing-mai-image-1-debuting-in-the-top-10-on-lmarena/
 title: 'Introducing MAI-Image-1: Microsoft’s In-House Image Generation Model in Bing Image Creator and Copilot Audio Expressions'
 author: stclarke
@@ -21,6 +21,7 @@ tags:
 - Text To Image
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke introduces MAI-Image-1, a Microsoft-developed AI model for image generation, now available in Bing Image Creator and Copilot Audio Expressions, and discusses its capabilities and integration into Microsoft products.<!--excerpt_end-->
 

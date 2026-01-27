@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/07/21/ai-for-business-impact-starts-here-proven-ai-use-cases-by-industry/
 title: AI for business impact starts here - Proven AI use cases by industry
 author: stclarke
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Written by stclarke, this article explores how organizations across industries are utilizing Microsoft AI technologies for tangible business outcomes, offering proven use cases and best practices.<!--excerpt_end-->
 

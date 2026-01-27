@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/bring-your-own-model-visual-studio-chat/
 title: Bring Your Own Language Model to Visual Studio Chat
 author: Rhea Patel, Samruddhi Khandale
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Rhea Patel and Samruddhi Khandale introduce a new Visual Studio Chat feature allowing developers to bring their own language models from providers like OpenAI, Anthropic, and Google, enabling customization, flexibility, and direct API integration.<!--excerpt_end-->
 

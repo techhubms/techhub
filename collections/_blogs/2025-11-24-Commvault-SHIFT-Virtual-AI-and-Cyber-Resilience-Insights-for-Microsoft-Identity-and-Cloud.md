@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/11/commvault-shift-virtual-a-new-era-of-ai-driven-cyber-resilience-on-demand/
 title: 'Commvault SHIFT Virtual: AI and Cyber Resilience Insights for Microsoft Identity and Cloud'
 author: Thomas Maurer
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Thomas Maurer explores best practices and platform updates from Commvault SHIFT 2025, emphasizing AI-powered resilience and security for Microsoft identity systems like AD and Entra ID.<!--excerpt_end-->
 

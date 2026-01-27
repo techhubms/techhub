@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/json-structure-a-json-schema-language-you-ll-love/ba-p/4476852
 title: 'JSON Structure: A Next-Gen Schema Language for Messaging on Azure'
 author: clemensv
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 clemensv presents JSON Structure, a modern schema language designed for robust data definitions in distributed messaging systems on Azure. This article reviews its features, type system, and integrations, spotlighting practical advantages for developers.<!--excerpt_end-->
 

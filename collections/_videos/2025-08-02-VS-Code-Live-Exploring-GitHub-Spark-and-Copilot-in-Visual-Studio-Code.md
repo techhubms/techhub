@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Irw1wnWgX2M
 title: VS Code Live – Exploring GitHub Spark and Copilot in Visual Studio Code
 author: Visual Studio Code
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code’s team—James Montemagno, Burke Holland, and Pierce Boggan—explore and demo the latest AI development features including GitHub Copilot and the new GitHub Spark for developers.<!--excerpt_end-->
 

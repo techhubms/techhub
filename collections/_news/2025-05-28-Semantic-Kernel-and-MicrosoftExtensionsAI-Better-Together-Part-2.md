@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-and-microsoft-extensions-ai-better-together-part-2/
 title: 'Semantic Kernel and Microsoft.Extensions.AI: Better Together, Part 2'
 author: Roger Barreto
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Authored by Roger Barreto, this article explores practical non-agent integration patterns for Microsoft.Extensions.AI and Semantic Kernel within the .NET AI ecosystem. It guides developers through real code samples for chat completion, embeddings, function calls, dependency injection, and service selection.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ovB8FZ7LAAk
 title: 'Agents Talking to Agents: Harnessing MCP for Seamless Inter-Agent Collaboration'
 author: Microsoft Developer
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer presents a lightning session on how agents can coordinate using the Model Context Protocol (MCP), highlighting practical integration and resource links for hands-on exploration.<!--excerpt_end-->
 

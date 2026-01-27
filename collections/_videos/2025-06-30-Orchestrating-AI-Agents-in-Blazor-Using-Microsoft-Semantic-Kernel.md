@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Cf-bZUnlBHc
 title: Orchestrating AI Agents in Blazor Using Microsoft Semantic Kernel
 author: Learn Microsoft AI
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Learn Microsoft AI guides you through orchestrating multiple AI agents in a Blazor app using the Semantic Kernel framework, sharing code examples and orchestration strategies tailored for .NET developers.<!--excerpt_end-->
 

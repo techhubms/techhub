@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=8d2v6OMhkmQ
 title: Unlocking Your Agents' Potential with Model Context Protocol in Azure AI Foundry
 author: Microsoft Developer
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer walks through the process of creating an Azure AI Foundry Agent using the Model Context Protocol (MCP), highlighting practical integration tips and resources.<!--excerpt_end-->
 

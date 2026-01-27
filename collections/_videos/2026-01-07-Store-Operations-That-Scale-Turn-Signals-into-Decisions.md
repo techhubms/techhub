@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=0ccUfvqzalA
 title: 'Store Operations That Scale: Turn Signals into Decisions'
 author: Microsoft Cloud
@@ -22,6 +22,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Cloud presents a video showcasing how store operations teams use Copilot Studio and agentic AI to make faster, better-informed decisions and streamline the entire store workflow.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2026/01/14/microsoft-named-a-leader-in-idc-marketscape-for-unified-ai-governance-platforms/
 title: Microsoft Named a Leader in IDC MarketScape for Unified AI Governance Platforms
 author: Herain Oberoi and Don Scott
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Herain Oberoi and Don Scott share Microsoft's recognition as a Leader in the IDC MarketScape for Unified AI Governance Platforms, highlighting practical governance, security, and responsible AI strategies for enterprises.<!--excerpt_end-->
 

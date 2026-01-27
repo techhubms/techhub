@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=hjtQp9kEMH8
 title: '.NET MAUI on Linux with Avalonia: Community Standup Recap'
 author: dotnet
@@ -24,6 +24,7 @@ tags:
 - UI Frameworks
 section_names:
 - coding
+primary_section: coding
 ---
 Hosted by David Ortinau and the .NET community team, this video explores how Avalonia enables .NET MAUI apps to run on Linux, offering new options for cross-platform development.<!--excerpt_end-->
 

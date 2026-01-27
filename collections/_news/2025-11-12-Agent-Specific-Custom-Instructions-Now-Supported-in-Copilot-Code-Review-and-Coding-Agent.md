@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-12-copilot-code-review-and-coding-agent-now-support-agent-specific-instructions
 title: Agent-Specific Custom Instructions Now Supported in Copilot Code Review and Coding Agent
 author: Allison
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison describes new features for GitHub Copilot, focusing on agent-specific instructions via the excludeAgent property, which enhances control over code review and coding agent behavior for developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/unlocking-smarter-search-how-to-use-azure-ai-search-azure-openai-service-together/
 title: 'Unlocking Smarter Search: Integrating Azure AI Search and Azure OpenAI Service'
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Dellenny presents a hands-on walkthrough of how to combine Azure AI Search and Azure OpenAI Service, showing developers and architects how to build smarter, context-aware search applications using Microsoft’s AI ecosystem.<!--excerpt_end-->
 

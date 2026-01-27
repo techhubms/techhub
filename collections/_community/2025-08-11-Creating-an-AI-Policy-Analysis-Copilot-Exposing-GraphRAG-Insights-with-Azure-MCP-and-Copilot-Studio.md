@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/public-sector-blog/creating-an-ai-policy-analysis-copilot/ba-p/4438393
 title: 'Creating an AI Policy Analysis Copilot: Exposing GraphRAG Insights with Azure, MCP, and Copilot Studio'
 author: TimMeyers
@@ -29,6 +29,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Tim Meyers, with contributions from Todd Uhl, demonstrates how to expose actionable policy insights derived from 10,000+ public comments using a standards-based MCP server, Azure cloud services, and integration into Microsoft Copilot and Teams.<!--excerpt_end-->
 

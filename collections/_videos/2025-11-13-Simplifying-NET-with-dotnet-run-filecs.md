@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=KjqePh3naKQ
 title: Simplifying .NET with 'dotnet run file.cs'
 author: dotnet
@@ -23,6 +23,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet introduces developers to the powerful 'dotnet run file.cs' command, which streamlines C# scripting and direct code execution, focusing on practical use cases for rapid prototyping and automation.<!--excerpt_end-->
 

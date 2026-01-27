@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/your-6-step-guide-to-deploying-a-website-with-github-codespaces-and-copilot-agent-mode/
 title: Your 6-Step Guide to Deploying a Website with GitHub Codespaces and Copilot Agent Mode
 author: Shree Chinnasamy, Priyanka Vergadia
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Shree Chinnasamy and Priyanka Vergadia provide a practical walkthrough for developers to build and deploy a personal website with GitHub Pages, Codespaces, and Copilot agent mode, making streamlined web publishing accessible and efficient.<!--excerpt_end-->
 

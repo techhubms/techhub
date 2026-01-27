@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/-LJYU75wwrw
 title: The Future of Web Development with AI Integration
 author: GitHub
@@ -17,6 +17,7 @@ tags:
 - WebDevelopment
 section_names:
 - ai
+primary_section: ai
 ---
 GitHub's Jason Lengstorf explores how AI is set to transform web development, predicting a new wave of innovation and integrated user experiences beyond traditional chatbots.<!--excerpt_end-->
 

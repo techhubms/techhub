@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=1LgV-kfnUAA
 title: Your Guide to Saving with Azure Hybrid Benefit
 author: Microsoft Developer
@@ -21,6 +21,7 @@ tags:
 - Workload Migration
 section_names:
 - azure
+primary_section: azure
 ---
 In this Azure Essentials Show episode, Microsoft Developer hosts Aaron Stark and Maria Jose Fernandez break down how organizations can use Azure Hybrid Benefit to maximize savings and simplify migration to Azure.<!--excerpt_end-->
 

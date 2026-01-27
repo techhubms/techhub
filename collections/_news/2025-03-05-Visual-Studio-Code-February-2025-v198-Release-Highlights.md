@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_98
 title: Visual Studio Code February 2025 (v1.98) Release Highlights
 author: Visual Studio Code Team
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 The Visual Studio Code Team delivers the February 2025 (v1.98) release with major updates by introducing advanced GitHub Copilot features, new AI-driven workflows, and core improvements, enhancing developer productivity and coding experience.<!--excerpt_end-->
 

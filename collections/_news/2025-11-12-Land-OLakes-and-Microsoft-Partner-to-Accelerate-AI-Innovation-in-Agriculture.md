@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/2025/11/12/land-olakes-and-microsoft-partner-to-accelerate-ai-innovation-in-agriculture/
 title: Land O’Lakes and Microsoft Partner to Accelerate AI Innovation in Agriculture
 author: stclarke
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke reports on Land O’Lakes and Microsoft forming a strategic partnership to co-develop AI-powered agricultural tools, including the Oz digital assistant, and drive industry transformation through Azure and custom Copilot solutions.<!--excerpt_end-->
 

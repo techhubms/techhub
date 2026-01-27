@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mfw2yf/complete_functional_mvp_using_copilot/
 title: Complete functional MVP using Copilot.
 author: EasyProtectedHelp
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 EasyProtectedHelp describes leveraging GitHub Copilot Pro to create and update a free scientific articles website, sharing insights on its impact.<!--excerpt_end-->
 

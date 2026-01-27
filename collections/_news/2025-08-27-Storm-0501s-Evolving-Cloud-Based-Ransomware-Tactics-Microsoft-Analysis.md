@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/08/27/storm-0501s-evolving-techniques-lead-to-cloud-based-ransomware/
 title: 'Storm-0501’s Evolving Cloud-Based Ransomware Tactics: Microsoft Analysis'
 author: stclarke
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 stclarke provides an in-depth analysis of recent Storm-0501 attacks leveraging cloud-based ransomware techniques to compromise hybrid Microsoft environments, with actionable recommendations for security professionals.<!--excerpt_end-->
 

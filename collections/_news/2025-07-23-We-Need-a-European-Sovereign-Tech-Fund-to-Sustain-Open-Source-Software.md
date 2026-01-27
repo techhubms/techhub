@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/open-source/maintainers/we-need-a-european-sovereign-tech-fund/
 title: We Need a European Sovereign Tech Fund to Sustain Open Source Software
 author: Felix Reda
@@ -25,6 +25,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Authored by Felix Reda, this article calls for greater public investment in open source software through a proposed European Sovereign Tech Fund, highlighting GitHub's policy efforts and recommendations to address the critical funding challenges facing OSS maintainers.<!--excerpt_end-->
 

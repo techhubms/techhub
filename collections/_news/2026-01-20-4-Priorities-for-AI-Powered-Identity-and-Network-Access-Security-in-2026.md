@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 stclarke highlights the 2026 priorities for security teams, sharing actionable guidance on AI-powered identity protection, agent management, and unified access strategies using Microsoft Entra and Defender.<!--excerpt_end-->
 

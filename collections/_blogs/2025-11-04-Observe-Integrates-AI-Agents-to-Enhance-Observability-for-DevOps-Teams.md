@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/observe-adds-two-ai-agents-to-improve-observability/
 title: Observe Integrates AI Agents to Enhance Observability for DevOps Teams
 author: Mike Vizard
@@ -34,6 +34,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard details how Observe Inc. equips its observability platform with two new AI agents, empowering DevOps and SRE teams to automate root cause analysis, streamline code instrumentation, and use natural language tools for advanced debugging.<!--excerpt_end-->
 

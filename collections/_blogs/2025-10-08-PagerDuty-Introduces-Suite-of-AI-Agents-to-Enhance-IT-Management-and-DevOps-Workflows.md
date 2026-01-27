@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/pagerduty-adds-suite-of-ai-agents-to-it-management-platform/
 title: PagerDuty Introduces Suite of AI Agents to Enhance IT Management and DevOps Workflows
 author: Mike Vizard
@@ -37,6 +37,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard details PagerDuty’s Fall '25 platform update, highlighted by the introduction of multiple AI agents designed to transform DevOps workflows and IT operations through automation and analysis.<!--excerpt_end-->
 

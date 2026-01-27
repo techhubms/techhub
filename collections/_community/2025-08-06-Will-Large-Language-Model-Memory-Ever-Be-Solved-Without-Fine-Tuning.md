@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/MachineLearning/comments/1mj3n3v/d_do_you_think_llm_memory_will_ever_be_solved/
 title: Will Large Language Model Memory Ever Be Solved Without Fine-Tuning?
 author: shbong
@@ -26,6 +26,7 @@ tags:
 - Transformer Models
 section_names:
 - ai
+primary_section: ai
 ---
 shbong leads a thought-provoking community conversation about whether effective, persistent memory for LLMs can be achieved without relying on fine-tuning or prompt engineering, examining practical limitations and innovative future research directions.<!--excerpt_end-->
 

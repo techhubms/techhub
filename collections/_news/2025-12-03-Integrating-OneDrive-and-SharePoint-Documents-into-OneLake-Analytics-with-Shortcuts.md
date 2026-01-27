@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/turning-everyday-documents-from-sharepoint-and-onedrive-into-analytics-ready-data-with-onelake-shortcuts/
 title: Integrating OneDrive and SharePoint Documents into OneLake Analytics with Shortcuts
 author: Microsoft Fabric Blog
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details how organizations can use OneDrive and SharePoint shortcuts in OneLake to integrate everyday files into analytics workflows, with AI-powered transforms and unified governance.<!--excerpt_end-->
 

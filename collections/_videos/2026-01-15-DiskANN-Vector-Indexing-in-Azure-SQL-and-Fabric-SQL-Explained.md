@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=NOPTkQcEew4
 title: 'DiskANN: Vector Indexing in Azure SQL and Fabric SQL Explained'
 author: Microsoft Developer
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Developer presents an overview of vector indexing in Azure SQL and Fabric SQL with DiskANN, demonstrating how AI and machine learning are integrated for powerful data solutions.<!--excerpt_end-->
 

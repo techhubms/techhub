@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_107
 title: What's New in Visual Studio Code November 2025 Insiders Release (v1.107)
 author: Visual Studio Code Team
@@ -23,6 +23,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code Team delivers extensive release notes for the November 2025 Insiders build (v1.107), showcasing new Copilot CLI agent sessions, authentication and chat improvements, and a variety of developer experience upgrades.<!--excerpt_end-->
 

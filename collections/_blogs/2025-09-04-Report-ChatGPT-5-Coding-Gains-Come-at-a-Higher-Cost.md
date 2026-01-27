@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/report-chatgpt-5-coding-gains-come-at-a-higher-cost/?utm_source=rss&utm_medium=rss&utm_campaign=report-chatgpt-5-coding-gains-come-at-a-higher-cost
 title: 'Report: ChatGPT-5 Coding Gains Come at a Higher Cost'
 author: Mike Vizard
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Mike Vizard explores Sonar's findings on ChatGPT-5, describing how improvements in AI-powered code generation affect cost, vulnerability profiles, and developer maintenance in modern software teams.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-23-openai-gpt-5-codex-is-rolling-out-in-public-preview-for-github-copilot
 title: OpenAI GPT-5-Codex Now Available in GitHub Copilot Public Preview
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison summarizes the public preview rollout of OpenAI’s GPT-5-Codex model for GitHub Copilot, explaining new features and providing steps for activation in different Copilot plans.<!--excerpt_end-->
 

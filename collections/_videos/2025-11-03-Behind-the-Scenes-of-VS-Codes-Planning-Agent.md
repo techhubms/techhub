@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=S9GZWSNOPK8
 title: Behind the Scenes of VS Code’s Planning Agent
 author: Visual Studio Code
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Bhavya, a software engineer on the VS Code team, discusses the new planning agent in Visual Studio Code and explains its advantages for developers.<!--excerpt_end-->
 

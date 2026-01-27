@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/opentelemetry-extensions-to-enable-observability-of-ai-agents/?utm_source=rss&utm_medium=rss&utm_campaign=opentelemetry-extensions-to-enable-observability-of-ai-agents
 title: OpenTelemetry Extensions Enhance Observability for AI Agents
 author: Mike Vizard
@@ -32,6 +32,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard details how OpenTelemetry is expanding to support observability and automation for AI agents, showing how Cisco and Splunk are integrating these capabilities to streamline IT operations.<!--excerpt_end-->
 

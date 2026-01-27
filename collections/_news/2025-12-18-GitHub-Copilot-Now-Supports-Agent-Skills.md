@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-18-github-copilot-now-supports-agent-skills
 title: GitHub Copilot Now Supports Agent Skills
 author: Allison
@@ -20,6 +20,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces the Agent Skills feature in GitHub Copilot, which empowers developers to automate specialized coding tasks by leveraging reusable, shareable instruction sets.<!--excerpt_end-->
 

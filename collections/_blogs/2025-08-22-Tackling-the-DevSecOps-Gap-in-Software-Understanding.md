@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/tackling-the-devsecops-gap-in-software-understanding/?utm_source=rss&utm_medium=rss&utm_campaign=tackling-the-devsecops-gap-in-software-understanding
 title: Tackling the DevSecOps Gap in Software Understanding
 author: Alan Shimel
@@ -27,6 +27,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Alan Shimel analyzes the importance of closing the software visibility gap for DevSecOps, exploring issues like SBOMs, traceability, and collaboration among security teams to strengthen both software and supply chain security.<!--excerpt_end-->
 

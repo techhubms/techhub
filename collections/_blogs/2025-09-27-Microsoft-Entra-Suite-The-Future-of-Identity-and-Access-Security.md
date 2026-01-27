@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/microsoft-entra-suite-the-future-of-identity-and-access-security/
 title: 'Microsoft Entra Suite: The Future of Identity and Access Security'
 author: Dellenny
@@ -24,6 +24,7 @@ tags:
 - Zero Trust
 section_names:
 - security
+primary_section: security
 ---
 Dellenny provides an in-depth look at Microsoft Entra Suite, outlining its role in unifying identity and access security for enterprises navigating cloud-first and hybrid IT environments.<!--excerpt_end-->
 

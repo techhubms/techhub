@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=3K9kKLMU9rs
 title: Visual Studio Code Deployment and AI Governance for IT Pros
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Microsoft Events presents a session for IT pros focused on deploying and governing VS Code in enterprise environments, improving AI adoption—including Copilot—while maintaining compliance and developer productivity.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2024/Sep/03/Getting-the-ASPNET-Core-Server-Hosting-Urls-at-Startup-and-in-Requests
 title: Getting the ASP.NET Core Server Hosting URLs at Startup and in Requests
 author: Rick Strahl
@@ -19,6 +19,7 @@ tags:
 - Urls
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, Rick Strahl explores different techniques to retrieve ASP.NET Core application hosting URLs at startup and during requests, providing code samples and practical advice.<!--excerpt_end-->
 

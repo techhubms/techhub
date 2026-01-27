@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mh84i5/i_thought_i_am_ready_to_apply_for_a_jr_backend/
 title: Learning Real-World Complexity as a Jr. .NET Backend Developer
 author: Adjer_Nimossia
@@ -19,6 +19,7 @@ tags:
 section_names:
 - coding
 - ml
+primary_section: ml
 ---
 Author Adjer_Nimossia recounts the sobering realization that comes with tackling complex backend endpoints in .NET. They seek advice from the community on navigating the leap from basic CRUD to more advanced architectural challenges.<!--excerpt_end-->
 

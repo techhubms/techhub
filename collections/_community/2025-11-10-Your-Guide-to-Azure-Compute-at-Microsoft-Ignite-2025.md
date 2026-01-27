@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/your-guide-to-azure-compute-at-microsoft-ignite-2025/ba-p/4468633
 title: Your Guide to Azure Compute at Microsoft Ignite 2025
 author: melissahollingshed
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 melissahollingshed presents an in-depth guide to Azure Compute at Microsoft Ignite 2025, covering must-see technical sessions, hands-on labs, and innovations in cloud infrastructure, security, and resiliency.<!--excerpt_end-->
 

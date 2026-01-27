@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/VisualStudio/comments/1mkw756/copilot_does_not_remove_old_code/
 title: Understanding GitHub Copilot's Code Modification Behavior in Visual Studio
 author: BusyCode
@@ -20,6 +20,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 BusyCode shares insights into using GitHub Copilot in Visual Studio, noting its challenges with modifying code and offering strategies for better results with AI code assistance.<!--excerpt_end-->
 

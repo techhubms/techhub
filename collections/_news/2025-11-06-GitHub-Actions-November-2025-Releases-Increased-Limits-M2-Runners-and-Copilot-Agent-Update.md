@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-06-new-releases-for-github-actions-november-2025
 title: 'GitHub Actions November 2025 Releases: Increased Limits, M2 Runners, and Copilot Agent Update'
 author: Allison
@@ -23,6 +23,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison summarizes the November 2025 GitHub Actions updates, including expanded reusable workflow limits, new M2 macOS runner support, and improved integration for the GitHub Copilot coding agent.<!--excerpt_end-->
 

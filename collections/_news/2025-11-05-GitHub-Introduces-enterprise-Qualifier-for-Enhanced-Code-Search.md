@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-05-enterprise-qualifier-is-now-generally-available-in-github-code-search
 title: GitHub Introduces 'enterprise:' Qualifier for Enhanced Code Search
 author: Allison
@@ -18,6 +18,7 @@ tags:
 - Search Syntax
 section_names:
 - devops
+primary_section: devops
 ---
 Allison details the rollout of the 'enterprise:' qualifier in GitHub code search, a new feature making it easier for GitHub Enterprise Cloud customers to search codes across multiple organizations within their enterprise.<!--excerpt_end-->
 

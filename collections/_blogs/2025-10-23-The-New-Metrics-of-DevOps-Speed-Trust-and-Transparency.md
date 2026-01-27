@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/the-new-metrics-of-devops-speed-trust-and-transparency/
 title: 'The New Metrics of DevOps: Speed, Trust and Transparency'
 author: Alan Shimel
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Alan Shimel discusses with Aman Sardana and Vijay Kumar Soni the evolving role of AI in DevOps at swampUP 2025, focusing on how metrics like speed, trust, and transparency are reshaping modern software delivery pipelines.<!--excerpt_end-->
 

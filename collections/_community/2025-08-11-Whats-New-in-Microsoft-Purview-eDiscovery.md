@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-security-community/what-s-new-in-microsoft-purview-ediscovery/ba-p/4441676
 title: What’s New in Microsoft Purview eDiscovery
 author: Aaron_Thorp
@@ -24,6 +24,7 @@ tags:
 - Search Duplication
 section_names:
 - security
+primary_section: security
 ---
 Aaron_Thorp introduces the newest features and workflow enhancements in Microsoft Purview eDiscovery, aimed at streamlining case management and strengthening compliance and security for organizations.<!--excerpt_end-->
 

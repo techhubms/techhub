@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/10/optimize-azure-costs-with-reserved-instances/
 title: Optimize Azure Costs with Reserved Instances
 author: Thomas Maurer
@@ -22,6 +22,7 @@ tags:
 - Virtual Machines
 section_names:
 - azure
+primary_section: azure
 ---
 Thomas Maurer shares practical advice on optimizing Azure expenses using Reserved Instances. In partnership with Microsoft Azure’s Priyanshi, this episode highlights essential cost-saving strategies for cloud workloads.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deploying-dev-box-catalogs-and-synchronizing-with-github-using/ba-p/4467739
 title: Deploying and Syncing Microsoft Dev Box Catalogs with GitHub using Terraform
 author: singhshub
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 singhshub outlines how to automate the deployment of Microsoft Dev Box Catalogs with Terraform and keep them synchronized with GitHub, providing a repeatable, secure, and version-controlled cloud development environment for teams.<!--excerpt_end-->
 

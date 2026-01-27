@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/ENFNweRg8SU
 title: "GitHub's Remote MCP Update: General Availability and Key Integrations"
 author: GitHub
@@ -22,6 +22,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 GitHub presents a concise update, narrated by the GitHub team, on the general availability of the remote MCP server and its integrations with Copilot, security features, and AI-powered development tools.<!--excerpt_end-->
 

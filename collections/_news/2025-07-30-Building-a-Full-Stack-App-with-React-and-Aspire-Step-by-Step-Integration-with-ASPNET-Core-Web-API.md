@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/new-aspire-app-with-react/
 title: 'Building a Full-Stack App with React and Aspire: Step-by-Step Integration with ASP.NET Core Web API'
 author: Sayed Ibrahim Hashimi
@@ -21,6 +21,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 In this guide, Sayed Ibrahim Hashimi demonstrates how to construct a full-stack TODO application using React and Aspire, coupling a modern front-end with an ASP.NET Core Web API and persistent SQLite storage.<!--excerpt_end-->
 

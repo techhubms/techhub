@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=EXEtRc8oQ7E
 title: 'Secure Code Game: Empowering Safer LLM-Based Applications'
 author: GitHub
@@ -19,6 +19,7 @@ section_names:
 - ai
 - coding
 - security
+primary_section: ai
 ---
 GitHub hosts Bartosz Gałek and jkcso discussing Secure Code Game Season 3, focusing on helping developers build safer LLM-based applications and sharing open source engineering insights.<!--excerpt_end-->
 

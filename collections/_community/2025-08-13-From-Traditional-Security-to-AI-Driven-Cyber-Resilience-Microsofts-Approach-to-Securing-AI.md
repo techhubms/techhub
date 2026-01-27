@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-security-community/from-traditional-security-to-ai-driven-cyber-resilience/ba-p/4442652
 title: 'From Traditional Security to AI-Driven Cyber Resilience: Microsoft’s Approach to Securing AI'
 author: LouAdesida
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 LouAdesida reviews Microsoft’s expanded security approach for AI, explaining how tools like Defender, Entra, and Purview are used to protect AI systems, data, and identities across modern organizations.<!--excerpt_end-->
 

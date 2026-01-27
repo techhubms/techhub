@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/08/21/think-before-you-clickfix-analyzing-the-clickfix-social-engineering-technique/
 title: Analyzing the ClickFix Social Engineering Technique and Defenses with Microsoft Security
 author: Microsoft Threat Intelligence and Microsoft Defender Experts
@@ -30,6 +30,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Threat Intelligence and Defender Experts offer a comprehensive analysis of the evolving ClickFix social engineering campaigns targeting enterprise users, with detailed recommendations for detecting, responding, and mitigating these attacks using Microsoft security solutions.<!--excerpt_end-->
 

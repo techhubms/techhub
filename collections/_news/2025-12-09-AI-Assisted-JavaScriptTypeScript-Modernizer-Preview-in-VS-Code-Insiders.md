@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/jsts-modernizer-preview
 title: AI-Assisted JavaScript/TypeScript Modernizer Preview in VS Code Insiders
 author: Sayed Ibrahim Hashimi
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Sayed Ibrahim Hashimi presents a preview of the JavaScript/TypeScript Modernizer for VS Code Insiders, demonstrating how developers can leverage GitHub Copilot to automate dependency upgrades and code modernization tasks.<!--excerpt_end-->
 

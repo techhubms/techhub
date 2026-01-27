@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2025/Feb/26/Inline-Confirmations-in-JavaScript-UI
 title: Implementing Inline Confirmation UI in JavaScript and ASP.NET Apps
 author: Rick Strahl
@@ -22,6 +22,7 @@ tags:
 - Web Development
 section_names:
 - coding
+primary_section: coding
 ---
 Rick Strahl shares a simple and effective technique for handling confirmation prompts inline in JavaScript and ASP.NET web applications, providing code examples and UI best practices.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/agent-factory-top-5-agent-observability-best-practices-for-reliable-ai/
 title: 'Agent Factory: Top 5 Agent Observability Best Practices for Reliable AI'
 author: Yina Arenas
@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Yina Arenas shares best practices for implementing observability in AI agents, covering lifecycle evaluation, monitoring, security, and governance with Azure AI Foundry Observability.<!--excerpt_end-->
 

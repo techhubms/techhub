@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=bJ7Hsg8hxwM
 title: Drive Innovation with AI, Hybrid Cloud, and Azure Storage Solutions
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents innovation in hybrid cloud and AI, featuring Dell Technologies integration with Azure services, migration strategies, and enterprise-grade solutions for IT professionals.<!--excerpt_end-->
 

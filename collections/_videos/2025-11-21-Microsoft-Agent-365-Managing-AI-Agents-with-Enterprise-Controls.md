@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=-LSrJtikrh8
 title: 'Microsoft Agent 365: Managing AI Agents with Enterprise Controls'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events presents an innovation session exploring how Agent 365 serves as a control plane for AI-powered agents, focusing on secure management, integration, and enterprise oversight.<!--excerpt_end-->
 

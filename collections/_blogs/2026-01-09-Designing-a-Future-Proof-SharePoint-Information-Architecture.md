@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-to-design-a-future-proof-sharepoint-information-architecture/
 title: Designing a Future-Proof SharePoint Information Architecture
 author: John Edward
@@ -21,6 +21,7 @@ tags:
 - Solution Architecture
 section_names:
 - coding
+primary_section: coding
 ---
 In this in-depth article, John Edward outlines the process and principles for designing a scalable, future-ready SharePoint Information Architecture, providing actionable steps and best practices for developers and architects.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/09/23/microsoft-purview-delivered-30-reduction-in-data-breach-likelihood/
 title: Microsoft Purview Achieves 30% Reduction in Data Breach Likelihood, According to Forrester Study
 author: Herain Oberoi
@@ -21,6 +21,7 @@ tags:
 - Unified Security Platform
 section_names:
 - security
+primary_section: security
 ---
 Herain Oberoi presents findings from a Forrester Consulting study on Microsoft Purview, showing how unified data security and governance can reduce breach likelihood and automate compliance processes.<!--excerpt_end-->
 

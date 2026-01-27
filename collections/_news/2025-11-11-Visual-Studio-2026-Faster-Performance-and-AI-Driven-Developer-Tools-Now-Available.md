@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2026-is-here-faster-smarter-and-a-hit-with-early-adopters/
 title: 'Visual Studio 2026: Faster Performance and AI-Driven Developer Tools Now Available'
 author: Mads Kristensen
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Mads Kristensen introduces Visual Studio 2026, highlighting a leap in performance, a fresh UI, and the integration of powerful AI features—like native GitHub Copilot support—for developers.<!--excerpt_end-->
 

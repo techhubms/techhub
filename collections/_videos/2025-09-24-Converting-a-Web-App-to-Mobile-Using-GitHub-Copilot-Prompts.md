@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=sKW4LUVlOSo
 title: Converting a Web App to Mobile Using GitHub Copilot Prompts
 author: Visual Studio Code
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code’s Reynald Adolphe demonstrates how developers can use GitHub Copilot and prompt engineering to transform a web app into a mobile app with minimal coding effort.<!--excerpt_end-->
 

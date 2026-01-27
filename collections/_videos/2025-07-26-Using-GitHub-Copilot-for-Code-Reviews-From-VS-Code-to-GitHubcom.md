@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xf65vxjNWdk
 title: Using GitHub Copilot for Code Reviews - From VS Code to GitHub.com
 author: GitHub
@@ -20,6 +20,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this video, GitHub demonstrates how GitHub Copilot streamlines code reviews using AI in both VS Code and GitHub.com, offering automated feedback and improved workflow efficiency.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/now-in-preview-onelake-table-apis/
 title: Previewing OneLake Table APIs for Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces the OneLake Table APIs preview, allowing developers and data engineers to programmatically manage and integrate tables in Microsoft OneLake using open standards like Apache Iceberg.<!--excerpt_end-->
 

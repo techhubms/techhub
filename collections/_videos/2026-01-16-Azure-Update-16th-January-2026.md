@@ -22,6 +22,7 @@ tags:
 - Ubuntu 24.02
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill delivers the January 16th, 2026 Azure Update, featuring news on AKS Ubuntu 24.02, Cosmos DB Fabric mirroring, and more. He shares helpful links for Azure and DevOps learning and certification resources.<!--excerpt_end-->
 

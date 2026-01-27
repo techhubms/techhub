@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=nQLdmy50cb0
 title: 'VS Code Private Marketplace: Enterprise Control Meets Developer Speed'
 author: Visual Studio Code
@@ -22,6 +22,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 Visual Studio Code’s team introduces Private Marketplace general availability, showing developers and IT how to deploy, secure, and govern VS Code extensions in enterprise environments.<!--excerpt_end-->
 

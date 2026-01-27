@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-june-2025/
 title: Azure SDK Release Highlights for June 2025
 author: Ronnie Geraghty
@@ -32,6 +32,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 In this comprehensive roundup, Ronnie Geraghty reviews the Azure SDK releases for June 2025, spotlighting advancements in AI, identity, Cosmos DB, and resource management libraries, with details for .NET, Python, Java, JavaScript, and Go developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=3h20ZV5Ey7w
 title: 'From Code to Real Results: AI Impact with Foundry Models at Microsoft Ignite'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events brings together pioneers from industry leaders like Adobe and eClinicalWorks to demonstrate how Microsoft Foundry models enable breakthrough AI solutions on Azure, emphasizing technical implementation and organizational impact.<!--excerpt_end-->
 

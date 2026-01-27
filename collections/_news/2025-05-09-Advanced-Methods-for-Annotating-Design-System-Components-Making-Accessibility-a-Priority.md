@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/engineering/user-experience/design-system-annotations-part-2-advanced-methods-of-annotating-components/
 title: 'Advanced Methods for Annotating Design System Components: Making Accessibility a Priority'
 author: Jan Maarten
@@ -25,6 +25,7 @@ tags:
 - Visual Regression Testing
 section_names:
 - devops
+primary_section: devops
 ---
 Jan Maarten discusses advanced methods for annotating design system components, offering insights from GitHub's experience with Primer, custom annotation strategies, and using Figma’s Code Connect to strengthen accessibility before development.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/context-engineering-recipes-the-refusal-breaker-pattern.html
 title: 'Context Engineering Recipes: The Refusal Breaker Pattern for GitHub Copilot'
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -16,6 +16,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels explains the Refusal Breaker Pattern, showing how developers can reframe prompts for GitHub Copilot when it declines requests, ensuring helpful and compliant AI assistance.<!--excerpt_end-->
 

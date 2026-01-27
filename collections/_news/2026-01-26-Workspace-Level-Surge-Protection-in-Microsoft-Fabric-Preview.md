@@ -19,6 +19,7 @@ tags:
 - Workspace Management
 section_names:
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details new workspace-level surge protection controls, enabling administrators to set compute thresholds, enforce blocking, and prioritize mission-critical workspaces for improved resource management.<!--excerpt_end-->
 

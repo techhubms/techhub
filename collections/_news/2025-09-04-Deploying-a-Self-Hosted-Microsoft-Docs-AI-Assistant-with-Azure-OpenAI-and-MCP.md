@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/build-your-own-microsoft-docs-ai-assistant-with-azure-container-apps-and-azure-openai/
 title: Deploying a Self-Hosted Microsoft Docs AI Assistant with Azure OpenAI and MCP
 author: Ricardo Macedo Martins
@@ -31,6 +31,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Ricardo Macedo Martins walks developers through deploying a custom AI assistant using Azure OpenAI, Model Context Protocol, and Azure Container Apps, leveraging Microsoft Learn content in a secure, production-ready stack.<!--excerpt_end-->
 

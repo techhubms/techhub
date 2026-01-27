@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=R3zFGy8hluE
 title: End-to-End Security for AI Platforms, Apps, and Agents
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Presented by Lou Adesida, Neta Haiby, and Herain Oberoi at Microsoft Ignite 2025, this breakout session explores holistic security and compliance for AI ecosystems using Microsoft's tools and platforms.<!--excerpt_end-->
 

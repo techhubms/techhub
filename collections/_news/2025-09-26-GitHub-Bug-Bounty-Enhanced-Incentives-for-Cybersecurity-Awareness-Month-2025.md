@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/security/vulnerability-research/kicking-off-cybersecurity-awareness-month-2025-researcher-spotlights-and-enhanced-incentives/
 title: 'GitHub Bug Bounty: Enhanced Incentives for Cybersecurity Awareness Month 2025'
 author: Shilpa Kumari
@@ -27,6 +27,7 @@ tags:
 section_names:
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Shilpa Kumari showcases GitHub’s expanded Bug Bounty incentives for Cybersecurity Awareness Month 2025, including bonuses for Copilot-related features and recognition of top security researchers.<!--excerpt_end-->
 

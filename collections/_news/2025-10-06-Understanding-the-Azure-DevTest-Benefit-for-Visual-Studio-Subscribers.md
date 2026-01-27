@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-dev-test-benefit-explained/
 title: Understanding the Azure Dev/Test Benefit for Visual Studio Subscribers
 author: Jim Harrer
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Jim Harrer outlines how Visual Studio subscribers can use the Azure Dev/Test benefit to reduce costs and accelerate cloud development, sharing practical guidance and key advantages.<!--excerpt_end-->
 

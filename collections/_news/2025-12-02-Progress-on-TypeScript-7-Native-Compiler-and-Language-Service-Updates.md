@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/typescript/progress-on-typescript-7-december-2025/
 title: 'Progress on TypeScript 7: Native Compiler and Language Service Updates'
 author: Daniel Rosenwasser
@@ -22,6 +22,7 @@ tags:
 - VS Code Extension
 section_names:
 - coding
+primary_section: coding
 ---
 Daniel Rosenwasser presents major progress on TypeScript 7, focusing on the transition to a native compiler and language service. The article explores new features, editor support, and guidance for developers migrating to or evaluating TypeScript 7.<!--excerpt_end-->
 

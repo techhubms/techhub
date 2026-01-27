@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mgm401/introducing_net_aspire_event_hub_live_explorer/
 title: Introducing .NET Aspire Event Hub Live Explorer
 author: LupusOnFire
@@ -20,6 +20,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Authored by LupusOnFire, this article introduces the .NET Aspire Event Hub Live Explorer—an open-source Blazor tool for local development with Azure Event Hubs.<!--excerpt_end-->
 

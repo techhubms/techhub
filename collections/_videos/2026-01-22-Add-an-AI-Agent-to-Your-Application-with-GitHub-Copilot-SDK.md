@@ -30,6 +30,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub introduces the Copilot SDK in technical preview, making it easier for developers to add powerful AI agents to applications. Learn from GitHub how the SDK simplifies integration with minimal code.<!--excerpt_end-->
 

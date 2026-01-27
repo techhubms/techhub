@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/python-3-14-is-now-available-on-azure-app-service-for-linux/ba-p/4465404
 title: Python 3.14 Now Available on Azure App Service for Linux
 author: TulikaC
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 TulikaC introduces support for Python 3.14 on Azure App Service for Linux, explaining performance improvements and offering migration steps for developers to upgrade and test their web applications.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/open-source/for-the-love-of-code-2025/
 title: For the Love of Code - A Summer Hackathon for Joyful and Creative Projects
 author: Lee Reilly
@@ -16,6 +16,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Lee Reilly introduces 'For the Love of Code,' a summer hackathon inspiring coders to turn imaginative or long-shelved ideas into reality. Discover more about this creative coding event below.<!--excerpt_end-->
 

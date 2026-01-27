@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/empromptu-unveils-vibecoding-platform-for-building-enterprise-class-apps/?utm_source=rss&utm_medium=rss&utm_campaign=empromptu-unveils-vibecoding-platform-for-building-enterprise-class-apps
 title: Empromptu Launches Vibecoding AI Coding Platform for Enterprise Apps
 author: Mike Vizard
@@ -37,6 +37,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard introduces Empromptu's vibecoding platform, designed to streamline enterprise-class AI application development with RAG, LLMOps, explainable AI, and robust DevOps support.<!--excerpt_end-->
 

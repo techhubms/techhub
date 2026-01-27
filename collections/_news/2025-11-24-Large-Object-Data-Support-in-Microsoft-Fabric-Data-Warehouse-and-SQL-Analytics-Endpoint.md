@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/large-string-and-binary-values-in-fabric-data-warehouse-and-sql-analytics-endpoint-for-mirrored-items-general-availability/
 title: Large Object Data Support in Microsoft Fabric Data Warehouse and SQL Analytics Endpoint
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details how new support for VARCHAR(MAX) and VARBINARY(MAX) in Fabric Data Warehouse and SQL analytics endpoints enables developers and data teams to handle large text and binary data efficiently.<!--excerpt_end-->
 

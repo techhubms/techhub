@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/securing-cloud-shell-access-to-aks/ba-p/4450299
 title: Securing Cloud Shell Access to Azure Kubernetes Service (AKS)
 author: samcogan
@@ -23,6 +23,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Sam Cogan presents a comprehensive review of secure methods for accessing AKS from Azure Cloud Shell, highlighting configuration scripts, networking solutions, and practical security tips for Azure administrators.<!--excerpt_end-->
 

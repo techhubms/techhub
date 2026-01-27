@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-07-default-tab-size-changed-from-eight-to-four
 title: GitHub Changes Default Tab Size from Eight to Four Spaces
 author: Allison
@@ -17,6 +17,7 @@ tags:
 - User Settings
 section_names:
 - devops
+primary_section: devops
 ---
 Allison explains GitHub’s change to make four spaces the default tab size for code and code snippets, aiming for a more consistent and developer-friendly viewing experience.<!--excerpt_end-->
 

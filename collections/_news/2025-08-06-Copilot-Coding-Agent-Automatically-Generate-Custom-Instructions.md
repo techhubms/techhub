@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-06-copilot-coding-agent-automatically-generate-custom-instructions
 title: 'Copilot Coding Agent: Automatically Generate Custom Instructions'
 author: Allison
@@ -21,6 +21,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison details how GitHub Copilot Coding Agent can automatically generate custom instructions for your repositories, allowing developers to delegate tasks and improve pull request quality using Copilot.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mfyx6o/netloom_my_new_wpf_c_project/
 title: NetLoom - my new WPF C# network analyzer project
 author: Rywent
@@ -16,6 +16,7 @@ tags:
 - WPF
 section_names:
 - coding
+primary_section: coding
 ---
 Rywent presents NetLoom, a new WPF C# project focused on network monitoring and analysis, sharing its initial goals and features.<!--excerpt_end-->
 

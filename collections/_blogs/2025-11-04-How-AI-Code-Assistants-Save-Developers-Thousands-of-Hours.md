@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/how-ai-code-assistants-can-save-1000-years-of-developer-time/
 title: How AI Code Assistants Save Developers Thousands of Hours
 author: Dr. Michael Kwok
@@ -39,6 +39,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Dr. Michael Kwok analyzes how AI code assistants like GitHub Copilot are revolutionizing the developer workflow, automating routine tasks, and saving thousands of hours, supported by case studies and industry surveys.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=IB9U8dfyF1w
 title: 'Microsoft Security Experts: Enhancing Your SOC with Managed XDR and Incident Response'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Threat Intelligence
 section_names:
 - security
+primary_section: security
 ---
 Hosted by Microsoft Events, this Ignite 2025 session features Brian Hooper and Andrew Rapp discussing how Microsoft Security Experts support SOCs with managed XDR, real-world threat intelligence, and incident response strategies.<!--excerpt_end-->
 

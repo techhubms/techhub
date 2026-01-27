@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mfx9wm/winui_oss_update_phased_rollout_toward_open/
 title: 'WinUI OSS Update: Phased Rollout Toward Open Collaboration'
 author: nguyenkien
@@ -16,6 +16,7 @@ tags:
 - WinUI
 section_names:
 - coding
+primary_section: coding
 ---
 Nguyenkien shares news about the WinUI project's phased transition toward open source collaboration, outlining Microsoft’s efforts to involve the community.<!--excerpt_end-->
 

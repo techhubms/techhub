@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2025/Jun/09/Adding-Runtime-NuGet-Package-Loading-to-an-Application
 title: Adding Runtime NuGet Package Loading to an Application
 author: Rick Strahl
@@ -18,6 +18,7 @@ tags:
 - Runtime Extensibility
 section_names:
 - coding
+primary_section: coding
 ---
 In this article, Rick Strahl discusses how to enable runtime extensibility in .NET apps using NuGet package loading and dynamic assembly integration, with practical code samples and insights from his work on LiveReloadServer.<!--excerpt_end-->
 

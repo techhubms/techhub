@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/building-smarter-interactions-with-mcp-elicitation-from-clunky-tool-calls-to-seamless-user-experiences/
 title: Building Smarter AI Tool Interactions with MCP Elicitation
 author: Chris Reddington
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Chris Reddington details how to build smarter AI tool interactions using elicitation in MCP servers, focusing on GitHub Copilot and developer experience improvements.<!--excerpt_end-->
 

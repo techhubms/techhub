@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview
 title: GitHub Copilot CLI Now Available in Public Preview
 author: Allison
@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the public preview of GitHub Copilot CLI, a command line tool that delivers AI-powered coding assistance, GitHub repository integration, and extensibility for developers working directly in their terminal.<!--excerpt_end-->
 

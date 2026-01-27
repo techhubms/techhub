@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-27-copilot-code-completion-now-uses-the-gpt-4-1-copilot-model
 title: GitHub Copilot Code Completion Now Powered by GPT-4.1 Model
 author: Allison
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces the latest update to GitHub Copilot, which now leverages the GPT-4.1 model for code completion, bringing enhanced AI-powered suggestions to all users.<!--excerpt_end-->
 

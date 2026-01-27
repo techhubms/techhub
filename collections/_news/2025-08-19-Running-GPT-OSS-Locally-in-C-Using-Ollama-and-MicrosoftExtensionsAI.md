@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/gpt-oss-csharp-ollama/
 title: Running GPT-OSS Locally in C# Using Ollama and Microsoft.Extensions.AI
 author: Bruno Capuano
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Bruno Capuano demonstrates how developers can run GPT-OSS locally using C#, Ollama, and Microsoft.Extensions.AI libraries to create fast, private, offline-capable AI features.<!--excerpt_end-->
 

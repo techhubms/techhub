@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Qfnod4Sw0gY
 title: Agent HQ Integration in Visual Studio Code
 author: Visual Studio Code
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Olivia Guzzardo McVicker demonstrates how Agent HQ integrates with Visual Studio Code, enabling developers to manage and customize agent sessions for enhanced workflow efficiency.<!--excerpt_end-->
 

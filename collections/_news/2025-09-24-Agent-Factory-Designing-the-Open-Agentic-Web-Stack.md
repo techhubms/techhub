@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/agent-factory-designing-the-open-agentic-web-stack/
 title: 'Agent Factory: Designing the Open Agentic Web Stack'
 author: Yina Arenas and Ulrich Homann
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Yina Arenas and Ulrich Homann conclude their Agent Factory series with a deep dive into the open agentic web stack, describing how Azure AI Foundry and open standards enable secure, scalable, and interoperable AI agent ecosystems for the enterprise.<!--excerpt_end-->
 

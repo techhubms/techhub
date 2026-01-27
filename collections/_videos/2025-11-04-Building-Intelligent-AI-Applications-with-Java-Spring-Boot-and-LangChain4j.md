@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=_cqJzFxLorE
 title: Building Intelligent AI Applications with Java, Spring Boot, and LangChain4j
 author: Microsoft Developer
@@ -35,6 +35,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this video, Microsoft Developer's Ayan Gupta and Julien Dubois guide Java developers through building intelligent AI-powered applications using LangChain4j, Spring Boot, GitHub Copilot, and Azure AI Foundry.<!--excerpt_end-->
 

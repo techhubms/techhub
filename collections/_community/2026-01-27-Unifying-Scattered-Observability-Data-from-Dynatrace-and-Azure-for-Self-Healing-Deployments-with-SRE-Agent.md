@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Vineela-Suri shows how to build a self-healing deployment pipeline on Azure by integrating Dynatrace observability with Azure SRE Agent. The walkthrough demonstrates step-by-step configuration of connectors, subagents, and scheduled tasks for automatic log analysis and rollout/rollback in live cloud environments.<!--excerpt_end-->
 

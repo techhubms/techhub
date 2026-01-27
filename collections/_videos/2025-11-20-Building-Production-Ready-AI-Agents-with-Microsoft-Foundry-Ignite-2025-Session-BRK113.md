@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=b1F3lyWgbNk
 title: 'Building Production-Ready AI Agents with Microsoft Foundry: Ignite 2025 Session BRK113'
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Events presents an Ignite 2025 session on building, deploying, and scaling AI agents with Microsoft Foundry, featuring technical demonstrations and implementation insights from KPMG.<!--excerpt_end-->
 

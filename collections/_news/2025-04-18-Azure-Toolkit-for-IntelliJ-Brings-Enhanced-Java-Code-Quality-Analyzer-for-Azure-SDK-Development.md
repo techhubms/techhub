@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-toolkit-for-intellij-introducing-the-enhanced-java-code-quality-analyzer/
 title: Azure Toolkit for IntelliJ Brings Enhanced Java Code Quality Analyzer for Azure SDK Development
 author: Sameeksha Vaity
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: coding
 ---
 Sameeksha Vaity details the latest enhancements to the Azure Toolkit for IntelliJ, highlighting a powerful Java Code Quality Analyzer aimed at improving code quality, security, and performance for developers working with the Azure SDK.<!--excerpt_end-->
 

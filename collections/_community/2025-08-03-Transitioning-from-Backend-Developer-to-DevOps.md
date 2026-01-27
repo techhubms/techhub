@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/devops/comments/1mgx0a4/transitioning_from_backend_developer_to_devops/
 title: Transitioning from Backend Developer to DevOps
 author: DemiladeDee
@@ -16,6 +16,7 @@ tags:
 - Software Engineering
 section_names:
 - devops
+primary_section: devops
 ---
 DemiladeDee shares insights into moving from backend development to a DevOps role, outlining necessary skills and possible challenges.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-26-releases-now-support-immutability-in-public-preview
 title: GitHub Releases Introduce Immutability for Enhanced Supply Chain Security
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison reports on GitHub's rollout of immutable releases in public preview, highlighting new supply chain security measures, tag and asset protection, and cryptographic attestations for artifact verification.<!--excerpt_end-->
 

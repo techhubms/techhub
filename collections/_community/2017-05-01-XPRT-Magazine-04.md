@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 04
 date: 2017-05-01 00:00:00 +00:00
 author: Xebia
@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 XPRT Magazine 04 explores serverless computing, Azure Functions, modern IT containerization, cloud-native Xamarin apps, Auth0 authentication, backup and restore in Azure Service Fabric, and more. This issue provides practical guidance for building scalable, resilient, and modern cloud solutions.
 <!--excerpt_end-->

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=VpRDtulXcUw
 title: Entra Group Source of Authority Conversion and Security Copilot Update
 author: John Savill's Technical Training
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 John Savill's Technical Training presents an in-depth look at group source of authority conversions between Active Directory and Microsoft Entra ID, alongside updates to Microsoft Security Copilot.<!--excerpt_end-->
 

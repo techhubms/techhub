@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-to-use-sensitivity-labels-in-microsoft-teams-step-by-step-guide/
 title: How To Use Sensitivity Labels in Microsoft Teams (Step-by-Step Guide)
 author: John Edward
@@ -21,6 +21,7 @@ tags:
 - SharePoint
 section_names:
 - security
+primary_section: security
 ---
 John Edward offers a straightforward walkthrough of using Sensitivity Labels in Microsoft Teams to secure conversations and files, detailing practical steps for administrators and team owners.<!--excerpt_end-->
 

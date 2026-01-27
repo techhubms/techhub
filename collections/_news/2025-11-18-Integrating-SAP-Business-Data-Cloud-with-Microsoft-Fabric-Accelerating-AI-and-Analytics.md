@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/29410/
 title: 'Integrating SAP Business Data Cloud with Microsoft Fabric: Accelerating AI and Analytics'
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog details the integration of SAP Business Data Cloud Connect with Microsoft Fabric, highlighting new opportunities for enterprise AI and analytics using secure, scalable solutions.<!--excerpt_end-->
 

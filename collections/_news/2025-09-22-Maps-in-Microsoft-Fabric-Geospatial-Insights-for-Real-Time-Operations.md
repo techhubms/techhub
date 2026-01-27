@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-maps-in-fabric-geospatial-insights-for-everyone/
 title: Maps in Microsoft Fabric – Geospatial Insights for Real-Time Operations
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog showcases how the new Maps feature brings geospatial analytics to Real-Time Intelligence workloads, allowing organizations to visualize, monitor, and share spatial data seamlessly.<!--excerpt_end-->
 

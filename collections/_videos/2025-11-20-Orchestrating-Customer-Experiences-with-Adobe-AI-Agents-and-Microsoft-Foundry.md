@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=bKnGc6g2NTA
 title: Orchestrating Customer Experiences with Adobe AI Agents and Microsoft Foundry
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Presented by Anoop Sahgal and Siddhartha Srivastava at Microsoft Ignite 2025, this session details how Adobe and Microsoft empower marketing teams with interoperable AI tools and Microsoft Foundry.<!--excerpt_end-->
 

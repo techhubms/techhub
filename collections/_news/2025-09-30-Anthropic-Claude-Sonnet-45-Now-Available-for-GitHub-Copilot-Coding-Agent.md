@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-30-anthropic-claude-sonnet-4-5-is-in-public-preview-for-copilot-coding-agent
 title: Anthropic Claude Sonnet 4.5 Now Available for GitHub Copilot Coding Agent
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison details the integration of Anthropic Claude Sonnet 4.5 with GitHub Copilot coding agent and how users can access the new model, providing administrators with steps to enable it.<!--excerpt_end-->
 

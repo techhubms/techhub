@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/beyond-the-chat-window-how-change-driven-architecture-enables/ba-p/4475026
 title: 'Beyond the Chat Window: How Change-Driven Architecture Enables Ambient AI Agents'
 author: CollinBrian
@@ -22,6 +22,7 @@ tags:
 - Real Time Monitoring
 section_names:
 - ai
+primary_section: ai
 ---
 CollinBrian explores how ambient AI agents—powered by change-driven architecture and tools like Drasi—can move beyond traditional chat interfaces to deliver real-time, reactive intelligence directly into workflows.<!--excerpt_end-->
 

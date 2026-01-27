@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/power-platform/blog/power-apps/introducing-the-new-power-apps-generative-power-meets-enterprise-grade-trust/
 title: Introducing the new Power Apps - Generative power meets enterprise-grade trust
 author: stclarke
@@ -17,6 +17,7 @@ tags:
 - Power Platform
 section_names:
 - ai
+primary_section: ai
 ---
 In this article, stclarke introduces the new Microsoft Power Apps, which bring together cutting-edge generative AI capabilities and high standards of enterprise trust. The article explores how these innovations support secure, intelligent business applications.<!--excerpt_end-->
 

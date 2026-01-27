@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/initialize-aspnet-core-taghelpers-with-shared-data
 title: Initialize ASP.NET Core TagHelpers with Shared Data
 author: Khalid Abuhakmeh
@@ -18,6 +18,7 @@ tags:
 - Web Development
 section_names:
 - coding
+primary_section: coding
 ---
 In this blog post, Khalid Abuhakmeh explores how to leverage the ITagHelperInitializer interface in ASP.NET Core to provide shared data to TagHelpers, offering practical tips for efficient and maintainable Razor development.<!--excerpt_end-->
 

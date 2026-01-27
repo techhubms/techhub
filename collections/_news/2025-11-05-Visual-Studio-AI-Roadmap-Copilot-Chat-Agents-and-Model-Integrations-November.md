@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-november/
 title: 'Visual Studio AI Roadmap: Copilot Chat, Agents, and Model Integrations (November)'
 author: Rhea Patel
@@ -29,6 +29,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Rhea Patel details the November roadmap for integrating advanced AI and GitHub Copilot capabilities in Visual Studio, including new agents, Copilot Chat enhancements, and updates to the Model Context Protocol.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/microsoft-and-langchain-leading-the-way-in-ai-security-for-open-source-on-azure
 title: 'Microsoft and LangChain: Advancing AI Security for Open Source on Azure'
 author: Marlene Mhangami
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Authored by Marlene Mhangami, this article examines Microsoft's partnership with LangChain to bolster AI security for open-source developers on Azure. The collaboration addresses integration risks while ensuring enterprises can safely accelerate innovation in the AI landscape.<!--excerpt_end-->
 

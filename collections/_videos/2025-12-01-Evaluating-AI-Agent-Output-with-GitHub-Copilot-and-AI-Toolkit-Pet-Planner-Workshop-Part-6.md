@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=i_245SwkBAI
 title: Evaluating AI Agent Output with GitHub Copilot and AI Toolkit (Pet Planner Workshop, Part 6)
 author: Microsoft Developer
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 April from Microsoft Developer presents practical techniques for evaluating AI agent output using GitHub Copilot and AI Toolkit, offering step-by-step insights for developers in this Pet Planner workshop segment.<!--excerpt_end-->
 

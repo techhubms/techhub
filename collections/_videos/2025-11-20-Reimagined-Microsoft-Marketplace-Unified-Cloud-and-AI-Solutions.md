@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=v6GKH_JoGDw
 title: 'Reimagined Microsoft Marketplace: Unified Cloud and AI Solutions'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents an Ignite 2025 session covering the evolution of Microsoft Marketplace, now a unified destination for discovering, purchasing, and deploying cloud and AI solutions.<!--excerpt_end-->
 

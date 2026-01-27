@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-26-grok-code-fast-1-is-rolling-out-in-public-preview-for-github-copilot
 title: 'Public Preview: Grok Code Fast 1 Model Now Available in GitHub Copilot'
 author: Allison
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the gradual rollout of Grok Code Fast 1 in public preview for GitHub Copilot, explaining enablement steps for different plans and the BYOK option for xAI models.<!--excerpt_end-->
 

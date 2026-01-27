@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-11-post-as-admin-now-available-in-github-discussions
 title: Post as Admin Feature in GitHub Discussions
 author: Allison
@@ -17,6 +17,7 @@ tags:
 - Repository Administration
 section_names:
 - devops
+primary_section: devops
 ---
 Allison explains how GitHub now allows repository administrators to post in Discussions with an 'Admin' badge, helping clarify official guidance for the community.<!--excerpt_end-->
 

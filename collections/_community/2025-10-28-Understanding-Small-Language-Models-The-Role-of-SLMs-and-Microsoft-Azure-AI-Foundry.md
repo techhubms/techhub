@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/understanding-small-language-modes/ba-p/4462827
 title: 'Understanding Small Language Models: The Role of SLMs and Microsoft Azure AI Foundry'
 author: Sherrylist
@@ -22,6 +22,7 @@ tags:
 - Tokenization
 section_names:
 - ai
+primary_section: ai
 ---
 Sherrylist explains the fundamentals and significance of Small Language Models (SLMs), comparing them to LLMs, and covers real-world use cases, including Microsoft Azure AI Foundry, to help developers understand and work with edge AI solutions.<!--excerpt_end-->
 

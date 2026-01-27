@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=G29pCOwteb4
 title: Transform Manufacturing with Digital Twins and Real-Time Simulation | Microsoft Ignite 2025
 author: Microsoft Events
@@ -34,6 +34,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents an in-depth session on transforming manufacturing with digital twins and real-time simulation, featuring industry leaders like Donald Ferguson and Ganesh Sivaraman.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=BkOcPQntsk4
 title: 'Nasdaq Boardvantage: AI-Driven Governance Architecture with Azure PostgreSQL and Microsoft Foundry'
 author: Microsoft Events
@@ -38,6 +38,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 Microsoft Events presents an advanced session with Charles Feddersen and Mohsin Shafqat, exploring how Nasdaq Boardvantage utilizes Azure open-source databases and Microsoft Foundry to achieve secure, AI-powered board governance.<!--excerpt_end-->
 

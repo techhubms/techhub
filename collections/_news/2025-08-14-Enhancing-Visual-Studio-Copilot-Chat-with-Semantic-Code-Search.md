@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/improving-codebase-awareness-in-visual-studio-chat/
 title: Enhancing Visual Studio Copilot Chat with Semantic Code Search
 author: Pablo Gonzalez
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Pablo Gonzalez details how Visual Studio Copilot Chat now leverages semantic AI search, improving codebase comprehension and search relevance for developers through advanced contextual understanding.<!--excerpt_end-->
 

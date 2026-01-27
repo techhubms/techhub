@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-enterprise-ai-adoption-with-azure-ai-landing-zone/ba-p/4460199
 title: Accelerating Enterprise AI Adoption with Azure AI Landing Zone
 author: VimalVerma
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 VimalVerma details how enterprises can adopt AI at scale with Azure AI Landing Zone by leveraging proven Microsoft frameworks and Azure AI Foundry. The post covers architectural choices, governance, and practical steps for secure and reliable AI environments.<!--excerpt_end-->
 

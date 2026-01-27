@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/whats-new-in-copilot-studio-july-2025/
 title: 'What’s New in Copilot Studio: July 2025 Feature Roundup'
 author: stclarke
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 In this comprehensive roundup, stclarke highlights major new capabilities added to Microsoft Copilot Studio in July 2025, focusing on AI-powered agent creation, secure data integration, and robust analytics and admin improvements for enterprise users.<!--excerpt_end-->
 

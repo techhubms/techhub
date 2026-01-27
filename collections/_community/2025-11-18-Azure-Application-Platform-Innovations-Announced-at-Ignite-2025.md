@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-platform-at-ignite-2025-new-innovations-for-all-your/ba-p/4470759
 title: Azure Application Platform Innovations Announced at Ignite 2025
 author: NagaSurendran
@@ -28,6 +28,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 NagaSurendran introduces the latest Azure app platform features announced at Microsoft Ignite 2025, showcasing how organizations can leverage unified AI and app modernization capabilities to accelerate innovation while ensuring security and scalability.<!--excerpt_end-->
 

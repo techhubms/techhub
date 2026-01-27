@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/developer-skills/application-development/github-issues-search-now-supports-nested-queries-and-boolean-operators-heres-how-we-rebuilt-it/
 title: How GitHub Issues Search Now Supports Nested Queries and Boolean Operators
 author: Deborah Digges
@@ -26,6 +26,7 @@ tags:
 - User Experience
 section_names:
 - devops
+primary_section: devops
 ---
 In this article, Deborah Digges explains the major overhaul to GitHub Issues search, introducing nested queries and boolean logic. The post details architectural changes, implementation steps, and risk mitigation for this widely used developer feature.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-connected-cache-for/mcc-phantom-install/m-p/4444201#M108
 title: Troubleshooting MCC Phantom Install Issues on Windows Server 2022 with WSL
 author: jjmehren
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 jjmehren shares a step-by-step installation log and troubleshooting notes for deploying Microsoft Connected Cache on Windows Server 2022 using WSL and Ubuntu, highlighting success indicators and points of confusion.<!--excerpt_end-->
 

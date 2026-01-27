@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/the-silent-technical-debt-why-manual-remediation-is-costing-you-more-than-you-think/
 title: 'The Silent Technical Debt: Why Manual Remediation Is Costing You More Than You Think'
 author: Bob Shaker
@@ -35,6 +35,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Bob Shaker analyzes how manual remediation of software vulnerabilities creates substantial technical debt, drains developer time, and increases organizational risk. The article proposes intelligent remediation as a solution to these DevSecOps challenges.<!--excerpt_end-->
 

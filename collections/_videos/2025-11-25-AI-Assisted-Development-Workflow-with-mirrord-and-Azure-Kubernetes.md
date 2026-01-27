@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=p43HWjZFycs
 title: AI-Assisted Development Workflow with mirrord and Azure Kubernetes
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Microsoft Developer presents a walkthrough of integrating mirrord for local AI-assisted coding and realistic Kubernetes testing with Azure, featuring insights from Jorge Arteiro and Arsh Sharma.<!--excerpt_end-->
 

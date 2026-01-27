@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devclass.com/2025/07/08/things-go-better-with-telemetry-microsoft-adds-phone-home-to-its-go-build/
 title: Microsoft Adds Telemetry Collection to Its FIPS-Compliant Go Compiler Build
 author: Tim Anderson
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Tim Anderson explores Microsoft's addition of telemetry to its Go compiler build for FIPS compliance, discussing its impact on Azure Linux, cryptographic strategy, and developer workflows.<!--excerpt_end-->
 

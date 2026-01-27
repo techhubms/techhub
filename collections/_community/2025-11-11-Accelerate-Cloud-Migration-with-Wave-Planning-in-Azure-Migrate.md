@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-cloud-migration-with-wave-planning-in-azure-migrate/ba-p/4467959
 title: Accelerate Cloud Migration with Wave Planning in Azure Migrate
 author: ShubhamJain92
@@ -22,6 +22,7 @@ tags:
 - Wave Planning
 section_names:
 - azure
+primary_section: azure
 ---
 ShubhamJain92 walks through the new wave planning capability in Azure Migrate, highlighting how this feature organizes and accelerates enterprise cloud migrations for improved predictability and reduced risk.<!--excerpt_end-->
 

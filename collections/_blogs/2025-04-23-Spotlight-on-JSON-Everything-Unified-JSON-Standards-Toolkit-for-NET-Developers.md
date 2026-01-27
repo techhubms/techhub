@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dotnetfoundation.org/news-events/detail/spotlight-on-json-everything-a-unified-toolkit-for-json-standards-in-.net
 title: 'Spotlight on JSON Everything: Unified JSON Standards Toolkit for .NET Developers'
 author: .NET Foundation News and Blog
@@ -21,6 +21,7 @@ tags:
 - Web API
 section_names:
 - coding
+primary_section: coding
 ---
 This post, authored by .NET Foundation News and Blog, introduces JSON Everything—a modular, standards-compliant .NET library that unifies various JSON technologies for modern application development.<!--excerpt_end-->
 

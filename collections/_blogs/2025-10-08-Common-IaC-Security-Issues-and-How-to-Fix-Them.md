@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/common-iac-security-issues-and-how-to-fix-them/
 title: Common IaC Security Issues and How to Fix Them
 author: Durojaye Olusegun
@@ -44,6 +44,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Durojaye Olusegun explains the five most critical security risks in Infrastructure as Code (IaC), demonstrating practical fixes and preventative best practices to enhance DevOps security and compliance.<!--excerpt_end-->
 

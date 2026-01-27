@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=cZoOmcbsX-4
 title: 'Azure Update - August 8, 2025: Major AKS, AI, Storage, and Security Announcements'
 author: John Savill's Technical Training
@@ -37,6 +37,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 John Savill presents the August 8, 2025 Azure Update, sharing key advancements in cloud infrastructure, security, AI, and data solutions for Microsoft Azure professionals.<!--excerpt_end-->
 

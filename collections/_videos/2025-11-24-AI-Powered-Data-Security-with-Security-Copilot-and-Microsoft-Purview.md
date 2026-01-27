@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=2H8cvsjJ8ao
 title: AI-Powered Data Security with Security Copilot and Microsoft Purview
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 In this Microsoft Ignite 2025 session, Microsoft Events presenters demonstrate how Security Copilot and Microsoft Purview use AI to automate and accelerate data security operations, featuring demos and practical scenarios.<!--excerpt_end-->
 

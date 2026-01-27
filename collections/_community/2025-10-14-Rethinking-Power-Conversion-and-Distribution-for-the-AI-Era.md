@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/rethinking-power-conversion-and-distribution-for-the-ai-era/ba-p/4460759
 title: Rethinking Power Conversion and Distribution for the AI Era
 author: EhsanNasr
@@ -23,6 +23,7 @@ tags:
 - SST
 section_names:
 - azure
+primary_section: azure
 ---
 Ehsan Nasr of Microsoft explores how data centers must rethink power systems for the AI era, focusing on the adoption of solid-state transformers, centralized high-voltage DC delivery, and innovative architectures to enable high-density, AI-ready infrastructure.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/VisualStudio/comments/1m5pxx2/possible_new_web_browserconsole_extension/
 title: Developing a Web Browser and Console Log Extension for Visual Studio
 author: ggobrien
@@ -18,6 +18,7 @@ tags:
 - WebView2
 section_names:
 - coding
+primary_section: coding
 ---
 ggobrien explores the idea of creating a Visual Studio extension that embeds a web browser and separate console log panel, enhancing the workflow for web developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-july-2025/
 title: 'What’s New in Azure AI Foundry: July 2025 Releases and Updates'
 author: Nick Brady
@@ -34,6 +34,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: ai
 ---
 Authored by Nick Brady, this post highlights the July 2025 updates to Azure AI Foundry, including Deep Research Agent, GPT-image-1 model improvements, agent tools, and platform and security features for advanced AI development.<!--excerpt_end-->
 

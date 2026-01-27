@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/understanding-operations-agent-capacity-consumption-usage-reporting-and-billing/
 title: Understanding Operations Agent Capacity Usage and Billing in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog explains how operations agents leverage Copilot and autonomous AI reasoning to monitor and act on data, with guidance on usage metering, billing, and technical metrics for architects, engineers, and admins.<!--excerpt_end-->
 

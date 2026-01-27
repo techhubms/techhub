@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ni4CZDbe15U
 title: 'SQL Database in Microsoft Fabric: Unified Platform for AI Apps and Analytics'
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Learn from Microsoft Events speakers Anna Hoffman, Idris Motiwala, and Jeff Shood as they present how SQL in Microsoft Fabric enables unified transactional and analytical workloads for AI applications and analytics, including hands-on demos and architecture insights.<!--excerpt_end-->
 

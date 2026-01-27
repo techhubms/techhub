@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xR3fuKtWGN0
 title: Using the Plan Agent in VS Code for Step-by-Step Task Planning
 author: Visual Studio Code
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 James Montemagno demonstrates the Plan agent in Visual Studio Code, showing developers how to break down complex tasks and refine requirements with AI assistance in this instructive video.<!--excerpt_end-->
 

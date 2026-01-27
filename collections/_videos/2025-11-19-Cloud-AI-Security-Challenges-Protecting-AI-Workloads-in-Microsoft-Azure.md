@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=P2XxiXNwXF8
 title: 'Cloud AI Security Challenges: Protecting AI Workloads in Microsoft Azure'
 author: Microsoft Events
@@ -31,6 +31,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents a session on cloud AI security from Ignite 2025, with Jonathan Kaye Solomon highlighting challenges and solutions for protecting AI workloads in Microsoft Azure using Check Point CloudGuard.<!--excerpt_end-->
 

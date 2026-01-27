@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/bxV3Fw8nh5M
 title: Using GitHub Copilot to Advance Sustainable City Design with Open Source
 author: GitHub
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this video, GitHub demonstrates how the City Energy Analyst project is using GitHub Copilot to accelerate open source solutions for sustainable urban development. Presented by the GitHub team.<!--excerpt_end-->
 

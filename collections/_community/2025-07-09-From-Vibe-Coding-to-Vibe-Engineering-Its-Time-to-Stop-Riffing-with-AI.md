@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://thenewstack.io/from-vibe-coding-to-vibe-engineering-its-time-to-stop-riffing-with-ai/
 title: "From Vibe Coding to Vibe Engineering: It's Time to Stop Riffing with AI"
 author: Tammuz Dubnov
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Tammuz Dubnov, Founder and CTO of AutonomyAI, explores the evolution from unstructured "vibe coding" with AI to systematic "vibe engineering" practices that embed AI within proper constraints and architectural standards. <!--excerpt_end-->
 

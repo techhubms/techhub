@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/engineering-a-local-first-agentic-podcast-studio-a-deep-dive/ba-p/4482839
 title: Engineering a Local-First Agentic Podcast Studio with Microsoft Agent Framework
 author: kinfey
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 kinfey presents an in-depth guide on building a local-first, multi-agent podcast studio using Microsoft's Agent Framework, complete with orchestration techniques, local LLM deployment, and advanced audio synthesis methods.<!--excerpt_end-->
 

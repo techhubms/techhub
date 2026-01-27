@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/date_bucket-function-in-fabric-data-warehouse/
 title: Flexible Time-Based Reporting with DATE_BUCKET() in Microsoft Fabric Data Warehouse
 author: Microsoft Fabric Blog
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog explains how the new DATE_BUCKET() function in Fabric Data Warehouse empowers data professionals to efficiently group and report on date-based data using custom intervals.<!--excerpt_end-->
 

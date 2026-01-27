@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/accelerate-migration-and-modernization-with-agentic-ai/
 title: Accelerating Application Migration and Modernization with Agentic AI Tools in Azure
 author: Amanda Silver and Ashish Babbar
@@ -34,6 +34,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Amanda Silver and Ashish Babbar introduce groundbreaking agentic AI tools, such as GitHub Copilot modernization agents and Azure Migrate AI features, to empower developers and IT teams in rapidly modernizing and migrating applications and databases with Microsoft Azure.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=PRGo-RH-sL4
 title: Optimize Azure Costs with Reserved VM Instances
 author: Microsoft Developer
@@ -23,6 +23,7 @@ tags:
 - VM Reservations
 section_names:
 - azure
+primary_section: azure
 ---
 In this Azure Essentials Show episode, Thomas Maurer and Priyanshi Mittal discuss optimizing Azure cloud costs using Reserved Virtual Machine Instances, sharing strategies and best practices.<!--excerpt_end-->
 

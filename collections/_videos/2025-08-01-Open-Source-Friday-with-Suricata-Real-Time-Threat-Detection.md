@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=zTlJqnAns3E
 title: Open Source Friday with Suricata - Real-Time Threat Detection
 author: GitHub
@@ -24,6 +24,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 GitHub hosts a live stream detailing Suricata’s features for real-time threat detection, offering practical demos on configuration, rule management, and integration with ELK - ideal for both novice and advanced security practitioners.<!--excerpt_end-->
 

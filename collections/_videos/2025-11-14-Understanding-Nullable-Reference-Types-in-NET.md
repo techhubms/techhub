@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=7Sz4heIk_lM
 title: Understanding Nullable Reference Types in .NET
 author: dotnet
@@ -19,6 +19,7 @@ tags:
 - Type System
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet presents a session on the practical reasons for using Nullable Reference Types in .NET, showing how this feature enhances code safety and readability.<!--excerpt_end-->
 

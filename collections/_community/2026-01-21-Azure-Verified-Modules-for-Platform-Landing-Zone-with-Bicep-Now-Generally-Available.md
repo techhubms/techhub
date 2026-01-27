@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 ztrocinski announces the general availability of Azure Verified Modules for Platform Landing Zone with Bicep, detailing its architecture, developer experience improvements, and migration plans for classic ALZ-Bicep users.<!--excerpt_end-->
 

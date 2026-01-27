@@ -1,4 +1,4 @@
----
+﻿---
 title: GitHub Copilot Agent Preview, Azure AI Foundry GA, and Smarter .NET Workflows
 author: Tech Hub Team
 date: 2025-07-07 09:00:00 +00:00
@@ -29,6 +29,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: all
 ---
 This week, GitHub advances developer automation with the Copilot agent’s public preview, introducing actionable workflows and dashboard-driven task management that change how teams approach code generation and review at scale. Microsoft’s Azure AI Foundry simultaneously reaches general availability, bringing new tools for secure model and agent deployments—while also aligning with the expanding Model Context Protocol for multi-agent and cross-platform support. Alongside, .NET 10 lowers barriers to fast scripting and cross-device app-building, streamlining developer productivity. These moves reflect the industry’s pivot toward scalable, standardized AI, more robust cloud services, and tools that fit the realities of cross-platform, hybrid workflows. <!--excerpt_end-->
 

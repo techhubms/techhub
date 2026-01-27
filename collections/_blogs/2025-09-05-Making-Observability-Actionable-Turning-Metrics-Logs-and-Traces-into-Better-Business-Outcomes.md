@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/making-observability-actionable-turning-metrics-logs-and-traces-into-better-business-outcomes/?utm_source=rss&utm_medium=rss&utm_campaign=making-observability-actionable-turning-metrics-logs-and-traces-into-better-business-outcomes
 title: 'Making Observability Actionable: Turning Metrics, Logs, and Traces into Better Business Outcomes'
 author: Neel Shah
@@ -43,6 +43,7 @@ tags:
 - Traces
 section_names:
 - devops
+primary_section: devops
 ---
 Neel Shah explores how actionable observability moves beyond basic monitoring, connecting technical data to business objectives for measurable improvements in reliability and growth.<!--excerpt_end-->
 

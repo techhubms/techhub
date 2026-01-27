@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=OXao8OrGXb4
 title: Accelerate Enterprise Passkey Deployment with HID and Microsoft Entra ID
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Events presents a session that explores at-scale passkey deployment using HID and Microsoft Entra ID, led by speaker Eric Williams. The session highlights enterprise authentication trends and practical deployment insights.<!--excerpt_end-->
 

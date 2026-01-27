@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=DPYO8hxqCcs
 title: Azure Update - October 2025 Announcements and Retirements
 author: John Savill's Technical Training
@@ -37,6 +37,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 John Savill's Technical Training delivers a concise Azure Update for October 2025, summarizing cloud platform changes, major service retirements, security features, and notable developments in Azure AI and ML.<!--excerpt_end-->
 

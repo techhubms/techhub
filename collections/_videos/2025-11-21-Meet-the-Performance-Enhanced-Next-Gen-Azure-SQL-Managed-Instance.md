@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=AAkFNigV7OM
 title: Meet the Performance-Enhanced Next Gen Azure SQL Managed Instance
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events hosts a deep dive into the next-gen Azure SQL Managed Instance, exploring performance improvements, AI-powered migration, and real-world modernization with speakers Anitha Adusumilli, Aditya Badramraju, Troy Brovold, and Craig Henninger.<!--excerpt_end-->
 

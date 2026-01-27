@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-02-codeql-2-22-4-adds-support-for-go-1-25-and-accuracy-improvements
 title: CodeQL 2.22.4 Adds Go 1.25 Support and Security Enhancements
 author: Allison
@@ -22,6 +22,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison introduces CodeQL 2.22.4, describing new language support, advanced security queries, and accuracy improvements for developers leveraging GitHub code scanning.<!--excerpt_end-->
 

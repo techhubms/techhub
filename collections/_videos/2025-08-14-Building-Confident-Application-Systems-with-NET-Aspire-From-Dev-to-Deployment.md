@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=S022Q6oAftE
 title: 'Building Confident Application Systems with .NET Aspire: From Dev to Deployment'
 author: dotnet
@@ -23,6 +23,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 In this session by the dotnet team, you'll discover practical techniques for architecting, deploying, and monitoring distributed .NET Aspire applications, from development through to deployment and observability.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=mY2qaeYN_CQ
 title: Building Intelligent Agents with Copilot Studio and Advanced Knowledge Sources
 author: Microsoft Events
@@ -33,6 +33,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events hosts an in-depth Ignite 2025 session showcasing how Copilot Studio enables the creation of intelligent agents by integrating powerful Microsoft knowledge sources and workflow automation. Speakers include Anjli Chaudhry, Eli Coon, Hardik Modi, and Nick Taylor.<!--excerpt_end-->
 

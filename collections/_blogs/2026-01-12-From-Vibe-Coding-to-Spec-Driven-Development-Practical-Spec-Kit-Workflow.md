@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development-part2
 title: 'From Vibe Coding to Spec-Driven Development: Practical Spec-Kit Workflow'
 author: Hidde de Smet
@@ -38,6 +38,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Hidde de Smet continues his AI-assisted development series by demonstrating the full Spec-Kit workflow—detailing how to move from requirements to production-ready code using .NET 9, Blazor, and GitHub Copilot. A must-read for software engineers adopting modern, spec-driven workflows.<!--excerpt_end-->
 

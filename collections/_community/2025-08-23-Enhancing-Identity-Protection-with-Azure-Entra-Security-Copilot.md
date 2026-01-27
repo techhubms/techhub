@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/azure-entra-security-copilot-how-it-s-changing-identity/m-p/4447388#M22132
 title: Enhancing Identity Protection with Azure Entra Security Copilot
 author: SoaebRathod
@@ -22,6 +22,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 SoaebRathod highlights the real-world impact of Azure Entra Security Copilot, showing how AI-driven tools can elevate identity protection across Azure environments. Insights cover breach detection, policy recommendations, and incident response.<!--excerpt_end-->
 

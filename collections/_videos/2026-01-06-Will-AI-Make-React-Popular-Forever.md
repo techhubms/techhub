@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/m24psZGp_bA
 title: Will AI Make React Popular Forever?
 author: GitHub
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this video, Idan Gazit analyzes the impact of AI and GitHub Copilot on the growth and popularity of frameworks like React, and how these tools reshape the programming landscape. Presented by GitHub.<!--excerpt_end-->
 

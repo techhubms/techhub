@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/windows-server-2019-retirement-on-aks-enabled-by-azure-arc/ba-p/4470184
 title: 'Windows Server 2019 Retirement on AKS enabled by Azure Arc: Migration Guidance'
 author: ssarwa
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 ssarwa highlights the required migration from Windows Server 2019 to Windows Server 2022 for AKS enabled by Azure Arc, outlining timelines, migration steps, and operational impacts of the upcoming retirement.<!--excerpt_end-->
 

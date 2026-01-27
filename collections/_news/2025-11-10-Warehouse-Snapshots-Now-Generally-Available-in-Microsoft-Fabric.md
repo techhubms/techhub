@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/warehouse-snapshots-in-microsoft-fabric-freeze-data-unlock-reliable-reporting/
 title: Warehouse Snapshots Now Generally Available in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog explains the new Warehouse Snapshots functionality, emphasizing how this generally available feature improves data consistency for analytics, auditing, and machine learning workflows.<!--excerpt_end-->
 

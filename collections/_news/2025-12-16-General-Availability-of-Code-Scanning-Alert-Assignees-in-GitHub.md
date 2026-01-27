@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-16-code-scanning-alert-assignees-are-now-generally-available
 title: General Availability of Code Scanning Alert Assignees in GitHub
 author: Allison
@@ -25,6 +25,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Allison introduces the general availability of code scanning alert assignee features in GitHub, including assignment to Copilot, automated notifications, and REST API integration for enhanced security vulnerability management.<!--excerpt_end-->
 

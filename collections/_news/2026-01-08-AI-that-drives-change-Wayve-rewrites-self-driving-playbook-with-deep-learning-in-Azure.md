@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/emea/features/ai-that-drives-change-wayve-rewrites-self-driving-playbook-with-deep-learning-in-azure/
 title: 'AI that drives change: Wayve rewrites self-driving playbook with deep learning in Azure'
 author: stclarke
@@ -16,6 +16,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Chris Welsch explores how Wayve is advancing self-driving technology by harnessing deep learning and Microsoft Azure, offering insights into the technical collaborations driving AI innovation.<!--excerpt_end-->
 

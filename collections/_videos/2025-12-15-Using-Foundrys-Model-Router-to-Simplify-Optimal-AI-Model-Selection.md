@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xQRjb7V8OCg
 title: Using Foundry's Model Router to Simplify Optimal AI Model Selection
 author: John Savill's Technical Training
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 John Savill's Technical Training demonstrates practical usage of Microsoft Azure Foundry's Model Router, guiding developers on choosing and deploying optimal AI models for their applications.<!--excerpt_end-->
 

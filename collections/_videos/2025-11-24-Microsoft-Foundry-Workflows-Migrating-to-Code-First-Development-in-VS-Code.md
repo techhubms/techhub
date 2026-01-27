@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=aR7hAbrIlps
 title: 'Microsoft Foundry Workflows: Migrating to Code-First Development in VS Code'
 author: Microsoft Developer
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer and April provide a step-by-step tutorial for migrating Microsoft Foundry workflows to a local code-first experience in VS Code, utilizing GitHub Copilot Agent Mode for code modification.<!--excerpt_end-->
 

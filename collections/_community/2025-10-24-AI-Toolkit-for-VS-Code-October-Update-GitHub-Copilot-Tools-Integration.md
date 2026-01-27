@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-for-vs-code-october-update/ba-p/4463365
 title: 'AI Toolkit for VS Code October Update: GitHub Copilot Tools Integration'
 author: junjieli
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 junjieli introduces the October update for the AI Toolkit in Visual Studio Code, focusing on GitHub Copilot Tools integration and enhanced workflows for building and evaluating AI agents.<!--excerpt_end-->
 

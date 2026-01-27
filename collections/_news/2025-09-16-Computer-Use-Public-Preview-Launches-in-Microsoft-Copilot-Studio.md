@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/computer-use-is-now-in-public-preview-in-microsoft-copilot-studio/
 title: Computer Use Public Preview Launches in Microsoft Copilot Studio
 author: sbaynes
@@ -24,6 +24,7 @@ tags:
 - Windows 365
 section_names:
 - ai
+primary_section: ai
 ---
 sbaynes introduces the public preview of computer use in Microsoft Copilot Studio, highlighting new automation capabilities for agents to work directly with applications and websites.<!--excerpt_end-->
 

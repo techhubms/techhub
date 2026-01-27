@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/powershell/powershell-openssh-and-dsc-team-investments-for-2025/
 title: 'PowerShell, OpenSSH, and DSC Team Investments for 2025: Security, Integrations, and Community Priorities'
 author: Steve Lee
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 Steve Lee shares an in-depth look at the planned investments for PowerShell, OpenSSH, and Desired State Configuration (DSC) in 2025, emphasizing security, community input, and modernization across Microsoft's open tooling ecosystem.<!--excerpt_end-->
 

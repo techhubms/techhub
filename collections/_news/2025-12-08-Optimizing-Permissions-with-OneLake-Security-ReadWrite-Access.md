@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/31267/
 title: Optimizing Permissions with OneLake Security ReadWrite Access
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Fabric Blog outlines how role-based ReadWrite permissions in OneLake enable secure, collaborative data governance for organizations with varied access needs.<!--excerpt_end-->
 

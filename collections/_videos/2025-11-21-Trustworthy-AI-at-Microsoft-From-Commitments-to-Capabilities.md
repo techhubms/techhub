@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=QQCQyq48USM
 title: 'Trustworthy AI at Microsoft: From Commitments to Capabilities'
 author: Microsoft Events
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents an Ignite 2025 session featuring Sarah Bird, Natasha Crampton, Florent Ricci, and others, focusing on how Microsoft's Trustworthy AI principles drive real-world capabilities and secure AI deployments.<!--excerpt_end-->
 

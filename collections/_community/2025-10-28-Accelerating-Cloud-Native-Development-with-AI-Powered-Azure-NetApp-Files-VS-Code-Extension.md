@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/accelerating-cloud-native-development-with-ai-powered-azure/ba-p/4464852
 title: Accelerating Cloud-Native Development with AI-Powered Azure NetApp Files VS Code Extension
 author: GeertVanTeylingen
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 GeertVanTeylingen examines how the Azure NetApp Files VS Code Extension—integrated with AI features and GitHub Copilot—simplifies enterprise storage management and automates provisioning for developers working with Azure.<!--excerpt_end-->
 

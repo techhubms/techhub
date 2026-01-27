@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/data-center-quantized-congestion-notification-scaling-congestion/ba-p/4468417
 title: Scaling DCQCN-Based Congestion Control for RDMA in Azure Storage Networks
 author: VamsiVadlamuri
@@ -23,6 +23,7 @@ tags:
 - Throughput
 section_names:
 - azure
+primary_section: azure
 ---
 VamsiVadlamuri analyzes how Azure employs DCQCN for congestion control in large-scale RDMA networking, addressing hardware interoperability, protocol tuning, and resulting performance advantages.<!--excerpt_end-->
 

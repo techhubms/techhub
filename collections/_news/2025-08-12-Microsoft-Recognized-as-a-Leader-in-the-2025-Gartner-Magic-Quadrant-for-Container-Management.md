@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/microsoft-is-a-leader-in-the-2025-gartner-magic-quadrant-for-container-management/
 title: Microsoft Recognized as a Leader in the 2025 Gartner Magic Quadrant for Container Management
 author: Sean McKenna
@@ -33,6 +33,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 Sean McKenna reports on Microsoft’s continued leadership in the 2025 Gartner Magic Quadrant for Container Management. The post highlights innovations in Azure’s container portfolio, developer and operational tooling, AI workloads, and security practices.<!--excerpt_end-->
 

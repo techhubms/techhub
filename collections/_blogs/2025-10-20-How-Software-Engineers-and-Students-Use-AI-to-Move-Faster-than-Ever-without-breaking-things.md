@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/how-software-engineers-and-students-use-ai-to-move-faster-than-ever-without-breaking-things/
 title: How Software Engineers and Students Use AI to Move Faster than Ever (without breaking things)
 author: Vivek Vaidya
@@ -51,6 +51,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Vivek Vaidya examines how engineers and students use AI tools, such as GitHub Copilot, to accelerate software development and learning. The article details the impact of agentic AI and the need for both technical and adaptive skills in the evolving landscape.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/black-duck-software-extends-ai-reach-to-ide-to-better-secure-code/?utm_source=rss&utm_medium=rss&utm_campaign=black-duck-software-extends-ai-reach-to-ide-to-better-secure-code
 title: Black Duck Software Brings AI-Powered Security to IDEs
 author: Mike Vizard
@@ -35,6 +35,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 Mike Vizard reports on Black Duck Software's new integration of their AI security assistant into IDE plugins, enabling real-time vulnerability detection and support for natural language security queries as developers write code.<!--excerpt_end-->
 

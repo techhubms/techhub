@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/introducing-knowledge-agent-in-sharepoint-public-preview/
 title: Introducing Knowledge Agent in SharePoint (Public Preview)
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 - Site Governance
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny introduces Microsoft's Knowledge Agent for SharePoint, detailing its AI content organization features, setup steps, and strategies for maximizing the intelligent capabilities within modern SharePoint environments.<!--excerpt_end-->
 

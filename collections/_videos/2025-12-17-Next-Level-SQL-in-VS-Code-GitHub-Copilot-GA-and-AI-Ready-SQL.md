@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Sd-3KpSNJzo
 title: 'Next-Level SQL in VS Code: GitHub Copilot GA and AI-Ready SQL'
 author: Microsoft Developer
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Presented by Microsoft Developer, this Data Exposed episode explores advancing SQL development in VS Code using the updated MSSQL extension, GitHub Copilot (at GA), Python, and vector data types to accelerate building AI-powered applications.<!--excerpt_end-->
 

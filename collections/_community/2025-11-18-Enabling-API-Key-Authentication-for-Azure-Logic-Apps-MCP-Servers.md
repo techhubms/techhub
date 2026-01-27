@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/enabling-api-key-authentication-for-logic-apps-mcp-servers/ba-p/4470560
 title: Enabling API Key Authentication for Azure Logic Apps MCP Servers
 author: KentWeareMSFT
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 KentWeareMSFT shares a detailed tutorial on configuring and managing API Key authentication for Azure Logic Apps MCP Servers, including setup, key management, and agent usage.<!--excerpt_end-->
 

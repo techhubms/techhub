@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/app-service-easy-mcp-add-ai-agent-capabilities-to-your-existing/ba-p/4484513
 title: 'Easy MCP: Exposing REST APIs to AI Agents with Azure App Service'
 author: jordanselig
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 jordanselig describes how Easy MCP enables seamless integration of existing REST APIs with AI agents like GitHub Copilot on Azure App Service—with zero code changes required.<!--excerpt_end-->
 

@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Components;
-using TechHub.Core.DTOs;
+using TechHub.Core.Models;
 using TechHub.Web.Services;
 
 namespace TechHub.Web.Components;

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mh9139/navigation_property_best_practice/
 title: Navigation Property Best Practices in C#
 author: drld21
@@ -18,6 +18,7 @@ tags:
 section_names:
 - coding
 - ml
+primary_section: ml
 ---
 In this community post, drld21 seeks input on best practices for navigation properties in C#. The article invites a discussion on the effective use of navigation properties in .NET applications, with a focus on real-world examples.<!--excerpt_end-->
 

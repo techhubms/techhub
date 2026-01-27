@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=X1bYxfpaP9w
 title: 'Microsoft Defender: Building the Agentic SOC with Allie Mellen'
 author: Microsoft Events
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events, joined by Allie Mellen, presents a deep dive into how Microsoft Defender is leveraging AI and agentic automation to transform security operations and enhance SOC effectiveness.<!--excerpt_end-->
 

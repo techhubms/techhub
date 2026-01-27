@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/microsoft-learn-mcp-server-elevates-development/
 title: 'Microsoft Learn MCP Server: Next-Level Copilot Integration for Developers'
 author: Wendy Breiding (SHE/HER), Eric Imasogie
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Wendy Breiding and Eric Imasogie explain how the Microsoft Learn MCP server upgrades the GitHub Copilot experience for developers, with step-by-step integration guides across key Microsoft development tools.<!--excerpt_end-->
 

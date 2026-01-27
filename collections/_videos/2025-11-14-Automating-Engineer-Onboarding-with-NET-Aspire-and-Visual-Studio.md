@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=etF5w3Aogh0
 title: Automating Engineer Onboarding with .NET Aspire and Visual Studio
 author: dotnet
@@ -23,6 +23,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 dotnet details how automating onboarding with .NET Aspire, Visual Studio settings, and Winget can dramatically speed up the new engineer setup process and streamline developer workflows.<!--excerpt_end-->
 

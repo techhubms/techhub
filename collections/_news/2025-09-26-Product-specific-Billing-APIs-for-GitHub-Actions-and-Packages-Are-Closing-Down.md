@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-25-product-specific-billing-apis-are-closing-down
 title: Product-specific Billing APIs for GitHub Actions and Packages Are Closing Down
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - Usage Reporting
 section_names:
 - devops
+primary_section: devops
 ---
 Allison summarizes the closure of GitHub’s product-specific billing APIs for Actions, Packages, and shared storage, guiding users to the new consolidated usage endpoint.<!--excerpt_end-->
 

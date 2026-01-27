@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://jessehouwing.net/github-actions-improved-dependency-submission/
 title: Improved Dependency Submission for GitHub Actions
 author: Jesse Houwing
@@ -23,6 +23,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Jesse Houwing addresses a visibility gap in GitHub Actions security when actions are pinned by SHA. The post details a workflow extension ensuring vulnerabilities are properly surfaced in the Dependency Graph and by Dependabot.<!--excerpt_end-->
 

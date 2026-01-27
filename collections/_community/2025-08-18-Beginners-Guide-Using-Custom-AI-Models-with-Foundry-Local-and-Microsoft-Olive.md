@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/how-to-use-custom-models-with-foundry-local-a-beginner-s-guide/ba-p/4428857
 title: 'Beginner’s Guide: Using Custom AI Models with Foundry Local and Microsoft Olive'
 author: kinfey
@@ -28,6 +28,7 @@ tags:
 - Windows
 section_names:
 - ai
+primary_section: ai
 ---
 kinfey explains how to set up and run your own AI language models locally using Foundry Local and Microsoft Olive, covering installation, model format conversion, file organization, and troubleshooting for beginners.<!--excerpt_end-->
 

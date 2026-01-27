@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-maps-blog/guest-blog-modernizing-your-wpf-app-maps-functionality-with/ba-p/4468755
 title: 'Modernizing WPF Map Functionality with Azure Maps: A Practical Migration Path'
 author: IoTGirl
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 IoTGirl showcases how organizations can migrate WPF applications from Bing Maps to Azure Maps using the OnTerra Systems WPF Map Control, offering a smooth transition for developers without major code refactoring.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/converting-an-xunit-project-to-tunit/
 title: 'Migrating an xUnit Test Project to TUnit: Experience, Issues, and Practical Steps'
 author: Andrew Lock
@@ -28,6 +28,7 @@ tags:
 - xUnit
 section_names:
 - coding
+primary_section: coding
 ---
 Andrew Lock shares his experience porting a .NET library to TUnit, a next-gen C# testing framework, explaining benefits versus xUnit, migration steps, and practical challenges faced.<!--excerpt_end-->
 

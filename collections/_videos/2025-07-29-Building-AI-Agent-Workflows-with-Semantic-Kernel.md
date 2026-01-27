@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=3JFKwerYj04
 title: Building AI Agent Workflows with Semantic Kernel
 author: Microsoft Developer
@@ -19,6 +19,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Authored by Microsoft Developer, this video covers building practical AI agents and workflows with Semantic Kernel and Azure AI Foundry, including a demo of SemantiClip.<!--excerpt_end-->
 

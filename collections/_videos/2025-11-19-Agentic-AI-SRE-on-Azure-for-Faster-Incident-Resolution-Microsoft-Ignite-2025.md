@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=-YopB25sPec
 title: Agentic AI SRE on Azure for Faster Incident Resolution (Microsoft Ignite 2025)
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Microsoft Events showcases NeuBird’s Hawkeye, an Agentic AI SRE tool for Azure environments, enabling autonomous incident response, rapid RCA, and improved MTTR outcomes.<!--excerpt_end-->
 

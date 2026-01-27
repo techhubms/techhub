@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/09/16/microsoft-seizes-338-websites-to-disrupt-rapidly-growing-raccoono365-phishing-service/
 title: 'Microsoft DCU Disrupts RaccoonO365 Phishing Tool: 338 Malicious Sites Seized'
 author: sbaynes
@@ -26,6 +26,7 @@ tags:
 - Threat Intelligence
 section_names:
 - security
+primary_section: security
 ---
 sbaynes details how Microsoft’s Digital Crimes Unit dismantled RaccoonO365, a subscription-based phishing service exploiting Microsoft 365 users, by seizing 338 associated websites through court action and cross-industry collaboration.<!--excerpt_end-->
 

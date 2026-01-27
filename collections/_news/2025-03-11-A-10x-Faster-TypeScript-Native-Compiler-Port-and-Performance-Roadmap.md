@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/typescript/typescript-native-port/
 title: 'A 10x Faster TypeScript: Native Compiler Port and Performance Roadmap'
 author: Anders Hejlsberg
@@ -21,6 +21,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 Anders Hejlsberg unveils major plans for TypeScript: a native compiler port offering significant speed and memory gains. This announcement details the benchmarks, roadmap, and expected impact on the developer workflow.<!--excerpt_end-->
 

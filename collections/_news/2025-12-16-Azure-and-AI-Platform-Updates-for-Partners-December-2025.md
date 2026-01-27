@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://partner.microsoft.com/en-us/blog/article/azure-updates-december-2025
 title: 'Azure and AI Platform Updates for Partners: December 2025'
 author: Cyril Belikoff
@@ -31,6 +31,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 Cyril Belikoff shares the December 2025 Azure and AI platform updates for partners, covering Ignite announcements such as Azure Copilot, Foundry services, Fabric IQ, HorizonDB, and new tools for AI-driven modernization and governance.<!--excerpt_end-->
 

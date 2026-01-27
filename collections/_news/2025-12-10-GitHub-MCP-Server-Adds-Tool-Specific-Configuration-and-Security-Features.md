@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-10-the-github-mcp-server-adds-support-for-tool-specific-configuration-and-more
 title: GitHub MCP Server Adds Tool-Specific Configuration and Security Features
 author: Allison
@@ -25,6 +25,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Allison introduces new features in the GitHub MCP Server, including tool-specific configuration, improved context reduction, enhanced security via Lockdown mode, and migration to the official Go SDK for the Model Context Protocol.<!--excerpt_end-->
 

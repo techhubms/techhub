@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=UUcdEfk2G7o
 title: "How GitHub Copilot and Azure AI Apps Fueled a Real-World Project: The 'No Bark' Solution"
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - azure
 - github-copilot
 - ml
+primary_section: github-copilot
 ---
 In this episode, Microsoft’s Damian Hasak shares with host Govind Kamtamneni how GitHub Copilot and Azure AI Apps enabled a creative, real-world AI solution for reducing dog barking during meetings.<!--excerpt_end-->
 

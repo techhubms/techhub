@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=6afeRSFQiw0
 title: 'Visual Studio Debugger: Advanced Techniques'
 author: dotnet
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 dotnet presents advanced techniques and AI-powered insights for debugging with Visual Studio, revealing tools and methods that help developers troubleshoot and resolve even the toughest coding issues efficiently.<!--excerpt_end-->
 

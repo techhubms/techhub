@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=GjgmoN_m3T4
 title: 'CTERA in Action: Building Data Fabric for Enterprises at Microsoft Ignite'
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Kyle Edsall, former CTERA customer and Technical Product Marketing Manager, shares insights into building an enterprise data fabric at Microsoft Ignite, focusing on eliminating silos and enabling AI-driven collaboration.<!--excerpt_end-->
 

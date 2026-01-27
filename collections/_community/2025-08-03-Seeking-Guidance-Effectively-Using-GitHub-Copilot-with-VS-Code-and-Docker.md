@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mg6uu8/am_i_using_it_wrong/
 title: 'Seeking Guidance: Effectively Using GitHub Copilot with VS Code and Docker'
 author: MaxellVideocassette
@@ -20,6 +20,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 MaxellVideocassette, new to GitHub Copilot and development practices, seeks advice on workflows with VS Code, Docker, and source control.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-25-secrets-in-unlisted-github-gists-are-now-reported-to-secret-scanning-partners
 title: GitHub Now Reports Leaked Secrets in Unlisted Gists to Scanning Partners
 author: Allison
@@ -24,6 +24,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison explains GitHub’s update to its secret scanning process, highlighting how secrets leaked in any gist, including unlisted ones, are now reported to scanning partners to help prevent exposure.<!--excerpt_end-->
 

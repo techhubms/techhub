@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/token-based-authentication-in-azure-using-jwt-for-stateless-security/
 title: Token-Based Authentication in Azure Using JWT for Stateless Security
 author: Dellenny
@@ -29,6 +29,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: coding
 ---
 Dellenny presents a comprehensive technical walkthrough on implementing stateless, token-based authentication in Azure using JWT, with practical scenarios for developers and architects.<!--excerpt_end-->
 

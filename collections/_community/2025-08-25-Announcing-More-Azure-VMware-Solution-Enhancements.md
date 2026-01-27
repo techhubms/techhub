@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/announcing-more-azure-vmware-solution-enhancements/ba-p/4447103
 title: Announcing More Azure VMware Solution Enhancements
 author: christopheherrbach
@@ -22,6 +22,7 @@ tags:
 - VMware Cloud Foundation
 section_names:
 - azure
+primary_section: azure
 ---
 Christophe Herrbach introduces new enhancements for Azure VMware Solution, highlighting expanded regional availability, technical upgrades, and resources for Azure migration at VMware Explore.<!--excerpt_end-->
 

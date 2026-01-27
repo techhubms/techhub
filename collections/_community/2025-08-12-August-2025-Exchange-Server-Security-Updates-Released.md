@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/exchange-team-blog/released-august-2025-exchange-server-security-updates/ba-p/4441596
 title: August 2025 Exchange Server Security Updates Released
 author: The_Exchange_Team
@@ -21,6 +21,7 @@ tags:
 - Vulnerability
 section_names:
 - security
+primary_section: security
 ---
 The_Exchange_Team explains the August 2025 Security Updates for Exchange Server, offering guidance on installation, new AMSI features, update paths, and security best practices for on-premises and hybrid Exchange environments.<!--excerpt_end-->
 

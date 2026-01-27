@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=sDLrub3WyG4
 title: Understanding Threat Modeling for Application Security
 author: Microsoft Developer
@@ -18,6 +18,7 @@ tags:
 - Threat Modeling
 section_names:
 - security
+primary_section: security
 ---
 Michael Howard introduces threat modeling as a foundational security practice, highlighting its role in assessing authentication, data protection, and privilege concerns before shipping an app.<!--excerpt_end-->
 

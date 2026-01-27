@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=rIrxkB-02P0
 title: Agent Skills (Skills.md) in GitHub Copilot for Visual Studio Code
 author: Visual Studio Code
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code hosts James Montemagno, Harald Kirschner, and Tim Rogers to discuss Agent Skills (Skills.md) in GitHub Copilot. The video explores how developers can expand Copilot’s functionality in VS Code through custom agent skills.<!--excerpt_end-->
 

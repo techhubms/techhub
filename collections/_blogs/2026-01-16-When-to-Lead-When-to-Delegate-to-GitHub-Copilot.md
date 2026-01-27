@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels discusses effective strategies for balancing human judgment and automation through GitHub Copilot, highlighting when to take the lead and when to delegate to maximize development workflow efficiency.<!--excerpt_end-->
 

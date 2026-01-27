@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-for-sharing-capacity-reservation-groups-now/ba-p/4461834
 title: 'Public Preview: Sharing Capacity Reservation Groups Across Azure Subscriptions'
 author: Tarannum91
@@ -20,6 +20,7 @@ tags:
 - Virtual Machine Scale Sets
 section_names:
 - azure
+primary_section: azure
 ---
 Tarannum91 details the new public preview for sharing Azure Capacity Reservation Groups (CRGs) between subscriptions. This feature enables resource reuse, simplified management, and more efficient scaling for Azure Virtual Machines.<!--excerpt_end-->
 

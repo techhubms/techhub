@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/ai-builder-in-action-automating-tedious-business-tasks/
 title: AI Builder in Action Automating Tedious Business Tasks
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny demonstrates how Microsoft AI Builder simplifies business process automation for non-technical users, detailing real-world use cases such as invoice processing, email categorization, prediction models, and image-based insights.<!--excerpt_end-->
 

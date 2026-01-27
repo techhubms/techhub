@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=YggS0Ha-0rU
 title: Azure Update - 11th July 2025
 author: John Savill's Technical Training
@@ -32,6 +32,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 John Savill's Technical Training provides a weekly Azure Update covering new platform features such as trusted launch enhancements for VMSS, Azure Firewall changes, and recent Azure Automation and AI model updates.<!--excerpt_end-->
 

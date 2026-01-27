@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/understanding-windows-11-security-features-a-shield-for-your-digital-life/
 title: 'Windows 11 Security Features: Protecting Your PC and Data'
 author: John Edward
@@ -28,6 +28,7 @@ tags:
 - Windows Hello
 section_names:
 - security
+primary_section: security
 ---
 John Edward investigates Windows 11’s robust security features, highlighting hardware requirements, identity protection, and real-time defense tools for safeguarding users’ PCs and personal data.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=jkOS0hlWIcw
 title: 'Partners: Choosing the Best Azure Database for Customer Scenarios'
 author: Microsoft Events
@@ -33,6 +33,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events offers an Ignite 2025 session led by Shireesh Thota, Jesse Sullivan, and Mike Thomsen, guiding partners on Azure database selection for client scenarios, including AI and analytics workloads.<!--excerpt_end-->
 

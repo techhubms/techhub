@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/using-and-authoring-dotnet-tools/
 title: 'Using and Authoring .NET Tools: Multi-Targeting, CI, and Best Practices'
 author: Andrew Lock
@@ -25,6 +25,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Andrew Lock explores the complexities of authoring and managing .NET tools, offering practical advice on runtime targeting, manifest management, and CI testing for developers.<!--excerpt_end-->
 

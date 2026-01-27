@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/introducing-gpt-5-2-in-microsoft-foundry-the-new-standard-for-enterprise-ai/
 title: 'Introducing GPT-5.2 in Microsoft Foundry: The New Standard for Enterprise AI'
 author: Naomi Moneypenny
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Naomi Moneypenny introduces GPT-5.2 in Microsoft Foundry, outlining new capabilities in reasoning, agentic execution, and compliance for enterprise AI development on Azure. This piece details features important to developers and technical leaders.<!--excerpt_end-->
 

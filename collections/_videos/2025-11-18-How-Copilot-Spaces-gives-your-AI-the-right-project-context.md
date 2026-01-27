@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=noVdaj7sEWA
 title: How Copilot Spaces gives your AI the right project context
 author: GitHub
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a deep dive featuring Vanessa Kalu, illustrating how GitHub Copilot Spaces empowers developers by giving Copilot the right context for more accurate code assistance.<!--excerpt_end-->
 

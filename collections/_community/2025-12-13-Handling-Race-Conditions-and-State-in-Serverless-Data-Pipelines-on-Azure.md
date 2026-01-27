@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture/design-pattern-handling-race-conditions-and-state-in-serverless/m-p/4477664#M820
 title: Handling Race Conditions and State in Serverless Data Pipelines on Azure
 author: Chameseddine
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ml
 ---
 Chameseddine discusses hands-on solutions for managing state and avoiding race conditions in Azure serverless data pipelines, sharing lessons learned and design patterns from a real-world ETL challenge.<!--excerpt_end-->
 

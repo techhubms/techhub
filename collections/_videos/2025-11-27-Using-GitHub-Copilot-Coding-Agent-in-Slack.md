@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=l37u8FrdhY0
 title: Using GitHub Copilot Coding Agent in Slack
 author: GitHub
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a new way to use Copilot inside Slack. The video, by GitHub, demonstrates how developers can leverage the Copilot coding agent to turn Slack conversations into code and pull requests, streamlining collaboration and workflow.<!--excerpt_end-->
 

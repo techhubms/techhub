@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/riding-in-tandem-unlocking-the-sidecar-pattern-in-azure-microservices/
 title: 'Riding in Tandem: Unlocking the Sidecar Pattern in Azure Microservices'
 author: Dellenny
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Dellenny explores how Azure services help developers implement the sidecar pattern in microservices architectures, emphasizing techniques that enhance logging, monitoring, and manage cross-cutting concerns.<!--excerpt_end-->
 

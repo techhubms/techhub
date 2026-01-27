@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/announcing-msgraph-provider-public-preview-and-the-microsoft/ba-p/4443614
 title: Announcing Public Preview of the Terraform MSGraph Provider and Microsoft Terraform VSCode Extension
 author: stevenjma
@@ -32,6 +32,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 stevenjma introduces the public preview of the Terraform MSGraph provider and the official Microsoft Terraform VSCode extension, empowering practitioners to automate Microsoft cloud resource management and streamline Infrastructure-as-Code workflows.<!--excerpt_end-->
 

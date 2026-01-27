@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=kTOXXvgyeUE
 title: MCP C# SDK Deep Dive
 author: Microsoft Developer
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - azure
+primary_section: ai
 ---
 Microsoft Developer presents a deep dive into the MCP C# SDK, demonstrating new features from the 2025-06-18 spec and showing developers how to integrate MCP tools with custom agents and AI solutions.<!--excerpt_end-->
 

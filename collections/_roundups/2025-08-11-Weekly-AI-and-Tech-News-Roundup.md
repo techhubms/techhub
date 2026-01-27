@@ -1,4 +1,4 @@
----
+﻿---
 title: AI Agents and Automation Redefine Developer Workflows, Security, and Cloud Operations
 author: Tech Hub Team
 date: 2025-08-11 09:00:00 +00:00
@@ -22,6 +22,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: all
 ---
 Welcome to this week’s tech roundup, where the pace of innovation accelerates across AI, cloud, security, and DevOps domains. GitHub Copilot takes a commanding lead as it integrates next-gen models like OpenAI GPT-5 and Anthropic Claude Opus 4.1, enhancing context-aware code assistance and giving developers unprecedented control, transparency, and workflow-native automation. The arrival of hybrid, open-weight models such as gpt-oss, plus agentic frameworks in Azure and VS Code, signals a decisive move toward flexible, governable AI at every level of the software stack.
 

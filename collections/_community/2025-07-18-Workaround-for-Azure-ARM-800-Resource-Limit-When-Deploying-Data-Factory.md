@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m30btw/workaround_for_azure_arm_800_resource_limit_while/
 title: Workaround for Azure ARM 800 Resource Limit When Deploying Data Factory
 author: jessred99
@@ -19,6 +19,7 @@ section_names:
 - azure
 - devops
 - ml
+primary_section: ml
 ---
 jessred99 raises a challenge in deploying Azure Data Factory via Azure DevOps CI/CD pipelines, encountering the ARM 800 resource limit.<!--excerpt_end-->
 

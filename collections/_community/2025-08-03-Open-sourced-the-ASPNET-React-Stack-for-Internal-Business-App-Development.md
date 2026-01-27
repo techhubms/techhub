@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mgk8cw/opensourced_the_aspnet_react_stack_we_use_to/
 title: Open-sourced the ASP.NET + React Stack for Internal Business App Development
 author: blabmight
@@ -18,6 +18,7 @@ tags:
 - Xams
 section_names:
 - coding
+primary_section: coding
 ---
 blabmight shares the release of Xams, an open-source ASP.NET Core and React framework designed for streamlined business app development.<!--excerpt_end-->
 

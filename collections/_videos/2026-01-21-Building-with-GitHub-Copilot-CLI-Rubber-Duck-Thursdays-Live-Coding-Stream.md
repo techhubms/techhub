@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub hosts a live coding stream exploring GitHub Copilot CLI, showcasing how to build and experiment with command-line agents in developer workflows.<!--excerpt_end-->
 

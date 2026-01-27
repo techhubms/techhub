@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-foundry-agent-extension/
 title: How to Use Azure Developer CLI AI Agent Extension with Microsoft Foundry
 author: Kristen Womack, Jeff Omhover
@@ -36,6 +36,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Kristen Womack and Jeff Omhover guide you through using the new Azure Developer CLI AI agent extension for rapid development, provisioning, and deployment of Microsoft Foundry agents with secure, automated workflows.<!--excerpt_end-->
 

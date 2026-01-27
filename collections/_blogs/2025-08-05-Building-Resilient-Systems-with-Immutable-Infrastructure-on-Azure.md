@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/building-resilient-systems-with-immutable-infrastructure-on-azure/
 title: Building Resilient Systems with Immutable Infrastructure on Azure
 author: Dellenny
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Dellenny presents a practical guide to adopting immutable infrastructure on Azure, detailing the steps, best practices, and tooling for reliable cloud deployments with DevOps workflows.<!--excerpt_end-->
 

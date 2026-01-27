@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mf1szg/termix_v090_add_rename_delete_write_file_ops/
 title: Termix v0.9.0 – Add Rename, Delete, Write File Ops & Fuzzy Search (Preview)
 author: amrohann
@@ -19,6 +19,7 @@ tags:
 - User Experience
 section_names:
 - coding
+primary_section: coding
 ---
 amrohann shares the release of Termix v0.9.0, highlighting new file operation features, fuzzy search, and improvements in this .NET-based terminal file navigator.<!--excerpt_end-->
 

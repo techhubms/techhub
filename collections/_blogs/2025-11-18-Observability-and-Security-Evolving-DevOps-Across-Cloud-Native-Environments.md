@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/observability-is-the-next-frontier-of-devops-and-cloud-security/
 title: 'Observability and Security: Evolving DevOps Across Cloud-Native Environments'
 author: Joe Selvam
@@ -35,6 +35,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Joe Selvam demonstrates how unified observability and cloud security practices can drive resilience and trust for DevOps teams operating in multi-cloud environments.<!--excerpt_end-->
 

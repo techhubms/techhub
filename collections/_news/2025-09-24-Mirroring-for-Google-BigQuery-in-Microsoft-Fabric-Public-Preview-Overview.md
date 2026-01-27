@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-mirroring-for-google-bigquery-in-microsoft-fabric/
 title: 'Mirroring for Google BigQuery in Microsoft Fabric: Public Preview Overview'
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog explains their new Mirroring for Google BigQuery feature, enabling near real-time, secure data replication into OneLake for direct analytics, governance, and integration—key value for cross-cloud environments.<!--excerpt_end-->
 

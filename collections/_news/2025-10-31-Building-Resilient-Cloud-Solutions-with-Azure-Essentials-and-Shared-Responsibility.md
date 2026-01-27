@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/resiliency-in-the-cloud-empowered-by-shared-responsibility-and-azure-essentials/
 title: Building Resilient Cloud Solutions with Azure Essentials and Shared Responsibility
 author: Cyril Belikoff
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Cyril Belikoff examines how organizations can leverage Azure Essentials and a shared responsibility model to architect resilient and always-on cloud solutions, highlighting Microsoft's tools, frameworks, and real-world examples.<!--excerpt_end-->
 

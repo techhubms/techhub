@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=v3i5v9deZvI
 title: 'Defending Cloud Platforms: Unified Security with Microsoft Defender'
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents a session on securing cloud platforms using Microsoft Defender for Cloud, focusing on proactive security strategies for AI-driven threats and cloud workloads.<!--excerpt_end-->
 

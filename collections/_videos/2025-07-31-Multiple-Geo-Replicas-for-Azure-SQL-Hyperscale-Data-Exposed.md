@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=nOy8pN3UwmQ
 title: Multiple geo-replicas for Azure SQL Hyperscale | Data Exposed
 author: Microsoft Developer
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Developer presents an in-depth overview of the upcoming enhancement to Azure SQL Hyperscale, where Anna Hoffman discusses increasing geo-replicas from one to four and demonstrates how to leverage this new feature.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-agents-on-azure-container-apps-with-goose-ai-agent/ba-p/4460215
 title: Building Agents on Azure Container Apps with Goose AI Agent, Ollama, and gpt-oss
 author: simonjj
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 simonjj explores how developers can deploy and manage AI agents like Goose on Azure Container Apps, taking advantage of serverless GPU resources and secure, scalable infrastructure for rapid innovation.<!--excerpt_end-->
 

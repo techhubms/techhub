@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-19-you-can-now-require-reviews-before-closing-dependabot-alerts-with-delegated-alert-dismissal
 title: Require Reviews for Dependabot Alert Dismissal with Delegated Alert Dismissal in GitHub
 author: Allison
@@ -24,6 +24,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison outlines the new delegated alert dismissal feature for Dependabot in GitHub, enabling required reviews before dismissing alerts to improve security governance and compliance.<!--excerpt_end-->
 

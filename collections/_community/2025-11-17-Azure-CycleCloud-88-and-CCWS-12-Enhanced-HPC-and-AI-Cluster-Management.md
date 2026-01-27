@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-cyclecloud-8-8-and-ccws-1-2-at-sc25-and-ignite/ba-p/4468201
 title: 'Azure CycleCloud 8.8 and CCWS 1.2: Enhanced HPC and AI Cluster Management'
 author: anhoward
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 anhoward details the latest features in Azure CycleCloud 8.8 and CycleCloud Workspace for Slurm 1.2, focusing on improved HPC and AI workload orchestration, cluster health monitoring, and deployment flexibility in the Microsoft Azure ecosystem.<!--excerpt_end-->
 

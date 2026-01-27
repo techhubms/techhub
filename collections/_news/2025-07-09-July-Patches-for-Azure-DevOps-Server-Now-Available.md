@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/july-patches-for-azure-devops-server-2/
 title: July Patches for Azure DevOps Server Now Available
 author: Gloridel Morales
@@ -19,6 +19,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Authored by Gloridel Morales, this post announces July patches for Azure DevOps Server, highlighting key fixes and steps for users to ensure secure and updated deployments.<!--excerpt_end-->
 

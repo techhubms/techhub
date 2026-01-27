@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2025/10/22/bring-your-own-key
 title: Expanding Language Model Choice in VS Code with Bring Your Own Key and New API
 author: Olivia Guzzardo McVicker, Pierce Boggan
@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Olivia Guzzardo McVicker and Pierce Boggan outline how new APIs and BYOK in Visual Studio Code allow developers to integrate and manage a broader range of AI models—including custom and third-party LLMs—enriching code chat and generation tools.<!--excerpt_end-->
 

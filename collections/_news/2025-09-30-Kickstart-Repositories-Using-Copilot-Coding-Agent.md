@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-30-start-your-new-repository-with-copilot-coding-agent
 title: Kickstart Repositories Using Copilot Coding Agent
 author: Allison
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces the Copilot coding agent for GitHub repositories, empowering developers to start projects faster by generating code and creating draft pull requests using AI-powered prompts.<!--excerpt_end-->
 

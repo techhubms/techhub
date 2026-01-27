@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=UB6QNYKStVI
 title: 'Upcoming Features and Terminal Improvements in Visual Studio Code: August Iteration'
 author: Visual Studio Code
@@ -23,6 +23,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Visual Studio Code's team, joined by engineer Daniel Imms, discusses the August iteration plan and in-depth upgrades to VS Code's terminal, aiming to enhance developer productivity.<!--excerpt_end-->
 

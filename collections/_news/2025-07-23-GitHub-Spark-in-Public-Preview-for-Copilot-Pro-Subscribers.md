@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-23-github-spark-in-public-preview-for-copilot-pro-subscribers
 title: GitHub Spark in Public Preview for Copilot Pro+ Subscribers
 author: Allison
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces GitHub Spark, now in public preview for Copilot Pro+ subscribers, highlighting how it accelerates development from idea to deployed app by harnessing automation and AI capabilities.<!--excerpt_end-->
 

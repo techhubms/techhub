@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode
 title: Introducing GitHub Copilot Agent Mode (Preview) for VS Code
 author: Isidor Nikolic
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Isidor Nikolic introduces GitHub Copilot agent mode for VS Code, an autonomous AI-powered peer programmer that assists with multi-step coding tasks, context analysis, and development productivity.<!--excerpt_end-->
 

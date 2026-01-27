@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2025/05/27/ai-and-remote
 title: Enhancing Productivity with AI and Remote Development in VS Code
 author: Brigit Murtaugh, Christof Marti, Josh Spicer, Olivia Guzzardo McVicker
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Brigit Murtaugh, Christof Marti, Josh Spicer, and Olivia Guzzardo McVicker detail how AI—highlighting GitHub Copilot—supercharges remote development in VS Code, including tips for setup, custom instructions, and leveraging agent mode.<!--excerpt_end-->
 

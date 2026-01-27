@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=z6gIaCYmvos
 title: Building Agents for Microsoft 365 Copilot with the Agents Toolkit – Ignite BRK319
 author: Microsoft Events
@@ -30,6 +30,7 @@ tags:
 - SharePoint Data
 section_names:
 - ai
+primary_section: ai
 ---
 Presented by Robert Howard, Matthew Barbour, and Sébastien Levert at Microsoft Ignite 2025, this session details agent development for Microsoft 365 Copilot using the Agents Toolkit and SDK.<!--excerpt_end-->
 

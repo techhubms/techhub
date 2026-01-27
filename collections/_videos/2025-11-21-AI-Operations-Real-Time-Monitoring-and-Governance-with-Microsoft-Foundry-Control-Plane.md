@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=oOO6OG4biEY
 title: 'AI Operations: Real-Time Monitoring and Governance with Microsoft Foundry Control Plane'
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presenters Ken Archer, Sarah Bird, and Florent Ricci deliver insights on monitoring, optimizing, and securing enterprise-scale AI agents using the Microsoft Foundry Control Plane at Ignite 2025.<!--excerpt_end-->
 

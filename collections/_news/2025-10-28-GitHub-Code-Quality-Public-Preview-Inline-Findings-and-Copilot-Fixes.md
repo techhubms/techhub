@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-28-github-code-quality-in-public-preview
 title: 'GitHub Code Quality Public Preview: Inline Findings and Copilot Fixes'
 author: Allison
@@ -31,6 +31,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Allison shares the public preview of GitHub Code Quality, offering developers inline code review findings, Copilot-powered fixes, and repository health scores directly in pull requests.<!--excerpt_end-->
 

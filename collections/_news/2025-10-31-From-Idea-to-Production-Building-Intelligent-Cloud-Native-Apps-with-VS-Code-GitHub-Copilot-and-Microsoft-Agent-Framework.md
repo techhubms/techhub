@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/behind-the-universe-demo-with-vs-code-copilot-and-agent-framework
 title: 'From Idea to Production: Building Intelligent Cloud-Native Apps with VS Code, GitHub Copilot, and Microsoft Agent Framework'
 author: Amanda Silver, Rong Lu, Shayne Boyer
@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Amanda Silver, Rong Lu, and Shayne Boyer showcase how to rapidly build and operate cloud-native, AI-powered applications using Visual Studio Code, GitHub Copilot, Microsoft Agent Framework, and Azure tools, highlighting a new era of developer productivity.<!--excerpt_end-->
 

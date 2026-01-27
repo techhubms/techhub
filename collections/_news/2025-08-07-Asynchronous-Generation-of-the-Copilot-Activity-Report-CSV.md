@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-07-asynchronous-generation-of-the-copilot-activity-report-csv
 title: Asynchronous Generation of the Copilot Activity Report CSV
 author: Allison
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison explains how the process for downloading Copilot activity reports has been upgraded to asynchronous generation, offering improved performance and user experience for admins.<!--excerpt_end-->
 

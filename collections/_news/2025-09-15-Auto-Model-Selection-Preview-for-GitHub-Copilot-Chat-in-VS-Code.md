@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2025/09/15/autoModelSelection
 title: Auto Model Selection Preview for GitHub Copilot Chat in VS Code
 author: Isidor Nikolic
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Isidor Nikolic details the auto model selection feature preview for GitHub Copilot in VS Code, explaining how it optimizes model choices for better performance and savings for developers.<!--excerpt_end-->
 

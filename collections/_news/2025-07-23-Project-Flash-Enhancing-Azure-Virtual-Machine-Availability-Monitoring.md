@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/project-flash-update-advancing-azure-virtual-machine-availability-monitoring-2/
 title: 'Project Flash: Enhancing Azure Virtual Machine Availability Monitoring'
 author: Mark Russinovich
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Written by Mark Russinovich, this blog offers an in-depth look at Project Flash—a cross-division Azure initiative—outlining its latest advancements in virtual machine availability monitoring, new integrations, and real-world benefits for teams managing Azure infrastructure.<!--excerpt_end-->
 

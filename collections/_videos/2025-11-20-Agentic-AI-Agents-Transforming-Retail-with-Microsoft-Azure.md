@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=08SaJOoqEho
 title: 'Agentic AI Agents: Transforming Retail with Microsoft Azure'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Hosted by Microsoft Events, this Ignite session introduces agentic AI applications in retail, showcasing practical deployment and integration strategies guided by experts Rasmus Hyltegard, Pepijn Richter, and Amit Trivedi.<!--excerpt_end-->
 

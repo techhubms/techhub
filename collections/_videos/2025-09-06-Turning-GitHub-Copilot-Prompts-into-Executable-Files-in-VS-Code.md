@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/bz-e_c21Eek
 title: Turning GitHub Copilot Prompts into Executable Files in VS Code
 author: GitHub
@@ -18,6 +18,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub demonstrates how developers can leverage prompt files to turn complex GitHub Copilot instructions into executable files in VS Code. This feature streamlines context engineering and boosts developer productivity.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=GfVnJO8fwwk
 title: 'VS Code Copilot Extension Goes Open Source: Deep Dive with Burke Holland'
 author: Microsoft Developer
@@ -31,6 +31,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer presents an in-depth episode featuring Burke Holland discussing the open-sourced VS Code Copilot Extension. Explore advanced Copilot customization, new features, and community contribution pathways.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/startups/blog/contraforce-democratizing-cybersecurity-for-the-frontline/
 title: 'ContraForce and Microsoft: Enabling Autonomous Cybersecurity for Startups and MSPs'
 author: stclarke
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 stclarke provides a deep dive into ContraForce’s journey as a Microsoft startup, highlighting their use of AI-driven automation and Microsoft security integrations to empower managed service providers to combat cybercrime more effectively.<!--excerpt_end-->
 

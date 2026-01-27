@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=V-sdNfETPYQ
 title: 'Exploring Continuous AI with GitHub Next: Agentic Workflows for Developers'
 author: GitHub
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 GitHub's research team, featuring Eddie Aftandilian, Idan Gazit, Russell Horton, and Terkel Gjervig, present their experimental work on Continuous AI and agentic workflows for software teams.<!--excerpt_end-->
 

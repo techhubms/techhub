@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=N7MZdRjDD4c
 title: ASP.NET Core Planning Kickoff for .NET 11
 author: dotnet
@@ -28,6 +28,7 @@ tags:
 - Softaredeveloper
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet hosts a community standup featuring Daniel Roth, Mike Kistler, Jose Perez Rodriguez, and Larry Ewing, discussing ASP.NET Core planning for .NET 11 and inviting developer participation.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/from-large-semi-structured-docs-to-actionable-data-in-depth/ba-p/4474060
 title: Evaluation Frameworks for Document Pipelines Using Azure AI & Search
 author: anishganguli
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 anishganguli shares a comprehensive technical guide to evaluating document processing pipelines using Microsoft AI services, covering everything from ground truth setup and OCR validation to precision-driven continuous improvement.<!--excerpt_end-->
 

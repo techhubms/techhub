@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 The Microsoft Defender Security Research Team examines security challenges arising from autonomous AI agents and demonstrates how Microsoft Defender helps secure these systems. Key strategies and posture management capabilities for multi-cloud environments are highlighted.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=1KrqMZNTvpY
 title: Sending Email Correctly in .NET
 author: Nick Chapsas
@@ -18,6 +18,7 @@ tags:
 - Software Engineering
 section_names:
 - coding
+primary_section: coding
 ---
 Nick Chapsas, with guest Dylan Beattie, presents a developer-focused walkthrough on properly sending emails in .NET. This guide is crucial for those looking to implement reliable email features.<!--excerpt_end-->
 

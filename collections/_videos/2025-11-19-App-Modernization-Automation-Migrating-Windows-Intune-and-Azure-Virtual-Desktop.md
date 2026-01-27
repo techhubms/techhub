@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=8Z0dCQWApg8
 title: 'App Modernization Automation: Migrating Windows, Intune, and Azure Virtual Desktop'
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Presented by James Graham and Samit Halvadia at Microsoft Ignite, this video demonstrates how Rimo3 automation helps IT teams quickly migrate and test applications across Windows 11, Intune, and Azure Virtual Desktop.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/microsoft-ignite-2025-the-dawn-of-the-ai-agent-era/
 title: 'Microsoft Ignite 2025: The Dawn of the AI-Agent Era'
 author: John Edward
@@ -29,6 +29,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 John Edward summarizes the technical innovations unveiled at Microsoft Ignite 2025, highlighting AI agents, enterprise governance, and robust security features that are redefining the Microsoft ecosystem.<!--excerpt_end-->
 

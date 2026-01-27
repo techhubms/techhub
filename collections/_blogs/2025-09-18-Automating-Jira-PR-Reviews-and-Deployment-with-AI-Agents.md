@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/supercharging-your-workflow-using-an-ai-agent-to-automate-jira-updates-pr-reviews-and-code-deployment/
 title: Automating Jira, PR Reviews, and Deployment with AI Agents
 author: Dellenny
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Dellenny explains how teams can use AI agents to automate Jira updates, pull request reviews, and code deployments, offering step-by-step examples for integrating modern tools into the development workflow.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-recap/
 title: ".NET Conf 2025 Recap: What's New in .NET 10, Visual Studio 2026, AI, and App Modernization"
 author: .NET Team
@@ -40,6 +40,7 @@ section_names:
 - github-copilot
 - ml
 - security
+primary_section: github-copilot
 ---
 .NET Team recaps .NET Conf 2025, detailing .NET 10, Visual Studio 2026, AI innovation, GitHub Copilot-powered modernization, security, and major ecosystem updates for developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/service-discovery-in-azure-dynamically-finding-service-instances/
 title: 'Service Discovery in Azure: Dynamically Finding Service Instances'
 author: Dellenny
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 Dellenny provides a detailed guide to service discovery patterns in Microsoft Azure, helping developers and architects ensure reliable microservice communication in cloud-native applications.<!--excerpt_end-->
 

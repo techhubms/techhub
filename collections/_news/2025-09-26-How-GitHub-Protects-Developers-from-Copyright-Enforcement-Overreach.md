@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/policy-news-and-insights/how-github-protects-developers-from-copyright-enforcement-overreach/
 title: How GitHub Protects Developers from Copyright Enforcement Overreach
 author: Margaret Tucker
@@ -25,6 +25,7 @@ tags:
 - U.S. Supreme Court
 section_names:
 - devops
+primary_section: devops
 ---
 Margaret Tucker explains how GitHub's copyright, policy, and transparency practices aim to protect developers from overreach, impacts of DMCA takedowns, and evolving legal requirements.<!--excerpt_end-->
 

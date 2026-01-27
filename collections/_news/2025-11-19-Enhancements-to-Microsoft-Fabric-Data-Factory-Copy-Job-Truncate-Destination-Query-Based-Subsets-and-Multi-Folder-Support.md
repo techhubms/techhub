@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-truncate-destination-queries-and-multiple-folders/
 title: 'Enhancements to Microsoft Fabric Data Factory Copy Job: Truncate Destination, Query-Based Subsets, and Multi-Folder Support'
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details new Copy job capabilities in Fabric Data Factory, with features for truncating destinations, query-based data selection, and copying multiple folders in one operation.<!--excerpt_end-->
 

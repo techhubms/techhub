@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/build-secure-launch-your-private-mcp-registry-with-azure-api/ba-p/4438016
 title: Build. Secure. Launch Your Private MCP Registry with Azure API Center.
 author: JuliaKa
@@ -21,6 +21,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 In this article, JuliaKa explores how organizations can harness Azure API Center to build secure and governed private MCP registries, supporting enterprise AI development.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/29208/
 title: 'Fabric Influencers Spotlight October 2025: Microsoft Fabric Community Highlights'
 author: Microsoft Fabric Blog
@@ -33,6 +33,7 @@ section_names:
 - coding
 - devops
 - ml
+primary_section: ml
 ---
 The Microsoft Fabric Blog team showcases top technical achievements from MVPs and Super Users in October 2025. This edition features in-depth tutorials and strategies—spanning Power BI, data science, security in semantic models, DevOps workflows, and real-time analytics—by leading community members.<!--excerpt_end-->
 

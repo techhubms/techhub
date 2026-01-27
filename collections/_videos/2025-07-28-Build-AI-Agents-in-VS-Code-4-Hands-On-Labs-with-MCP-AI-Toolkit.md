@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=r34Csn3rkeQ
 title: 'Build AI Agents in VS Code: 4 Hands-On Labs with MCP + AI Toolkit'
 author: Microsoft Developer
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Microsoft Developer presents a practical video guide on building AI agents in Visual Studio Code using the AI Toolkit and Model Context Protocol. Discover how to extend your development workflow through four hands-on labs.<!--excerpt_end-->
 

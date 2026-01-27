@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/announcing-the-public-preview-of-standardv2-nat-gateway-and/ba-p/4458292
 title: Announcing the Public Preview of Azure StandardV2 NAT Gateway and Public IPs
 author: aimeelittleton
@@ -23,6 +23,7 @@ tags:
 - Zone Redundancy
 section_names:
 - azure
+primary_section: azure
 ---
 Aimee Littleton introduces the public preview of Azure StandardV2 NAT Gateway and StandardV2 public IPs, detailing new features like zone redundancy, enhanced throughput, and flow logs for increased resiliency and visibility.<!--excerpt_end-->
 

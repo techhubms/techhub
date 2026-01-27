@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking/spoke-hub-hub-traffic-with-vpn-gateway-bgp-and-firewall-issue/m-p/4471878#M750
 title: Troubleshooting Azure Firewall and VPN Gateway Routing in Hub-Spoke Topology
 author: CUrti300
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 CUrti300 shares real-world troubleshooting experience with Azure VPN Gateway, BGP, and Firewall in a hub-spoke environment, highlighting obstacles with custom routing and inspection.<!--excerpt_end-->
 

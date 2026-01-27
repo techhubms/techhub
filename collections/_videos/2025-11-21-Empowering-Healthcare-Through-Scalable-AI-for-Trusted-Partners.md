@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=F4Alob9iYnQ
 title: Empowering Healthcare Through Scalable AI for Trusted Partners
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents an Ignite 2025 session where Cornelis Hertogh and Feliz Fuentes Montpellier discuss how technology partners can drive healthcare innovation through Microsoft's scalable AI and platform initiatives.<!--excerpt_end-->
 

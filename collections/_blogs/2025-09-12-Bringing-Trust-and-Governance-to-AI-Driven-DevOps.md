@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/bringing-trust-and-governance-to-ai-driven-devops/?utm_source=rss&utm_medium=rss&utm_campaign=bringing-trust-and-governance-to-ai-driven-devops
 title: Bringing Trust and Governance to AI-Driven DevOps
 author: Alan Shimel
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Alan Shimel shares perspectives from industry leaders on how organizations are building trust and governance into AI-driven DevOps transformations, with a focus on productivity, security, and strategic alignment.<!--excerpt_end-->
 

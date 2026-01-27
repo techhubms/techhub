@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-recognized-as-a-leader-in-the-2025-gartner-magic-quadrant-for-data-integration-tools-2/
 title: Microsoft Named a Leader in 2025 Gartner Magic Quadrant for Data Integration Tools
 author: Microsoft Fabric Blog
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 The Microsoft Fabric Blog, authored by Microsoft, shares that Microsoft has been named a Leader in the 2025 Gartner Magic Quadrant for Data Integration Tools and explores the unified and AI-powered data capabilities of Microsoft Fabric.<!--excerpt_end-->
 

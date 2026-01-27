@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Ea1Sxfz20d0
 title: Accelerating Secure Cloud and AI Migrations with Microsoft Defender for Cloud
 author: Microsoft Events
@@ -31,6 +31,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events delivers an intermediate-level Ignite session led by Gabriela Perez Arredondo and Jonathan Stock that demonstrates secure migration strategies and AI innovation for partners using Microsoft Defender for Cloud.<!--excerpt_end-->
 

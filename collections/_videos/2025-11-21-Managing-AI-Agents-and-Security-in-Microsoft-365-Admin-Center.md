@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=S6JHew4W3Ik
 title: Managing AI Agents and Security in Microsoft 365 Admin Center
 author: Microsoft Events
@@ -30,6 +30,7 @@ tags:
 - STUDIO37 V1
 section_names:
 - security
+primary_section: security
 ---
 Microsoft Events presents an in-depth session on managing AI agents and their security within the Microsoft 365 Admin Center, highlighting IT integration and risk monitoring.<!--excerpt_end-->
 

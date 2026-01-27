@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/supercharge-data-intelligence-build-teams-app-with-azure/ba-p/4442653
 title: Building a Teams App with Azure Databricks Genie and Azure AI Agent Service
 author: GISV-PSA-MSFT
@@ -31,6 +31,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 GISV-PSA-MSFT walks through integrating Azure Databricks Genie APIs with Azure AI Foundry to build a secure Teams app in Python, offering actionable examples for developers and data engineers.<!--excerpt_end-->
 

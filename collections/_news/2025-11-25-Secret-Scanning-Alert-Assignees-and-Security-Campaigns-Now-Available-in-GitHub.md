@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-25-secret-scanning-alert-assignees-security-campaigns-are-generally-available
 title: Secret Scanning Alert Assignees and Security Campaigns Now Available in GitHub
 author: Allison
@@ -22,6 +22,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison reports on GitHub's latest features for secret scanning alert assignees and security campaigns, highlighting improvements in alert notifications, remediation workflows, and security automation for development teams.<!--excerpt_end-->
 

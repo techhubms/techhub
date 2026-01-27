@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=6CjwS4V2AkU
 title: 'Hello GPT-5 & GPT-5 mini: New AI Features in VS Code Agent Mode'
 author: Visual Studio Code
@@ -20,6 +20,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code introduces the new GPT-5 and GPT-5 mini models within agent mode. In this podcast, the VS Code team explains these AI features and their impact for developers.<!--excerpt_end-->
 

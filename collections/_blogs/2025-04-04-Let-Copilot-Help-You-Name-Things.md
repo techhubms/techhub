@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/let-copilot-help-you-name-things.html
 title: Let Copilot Help You Name Things
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels demonstrates how GitHub Copilot can help developers generate more effective names for code elements, making software easier to maintain and understand.<!--excerpt_end-->
 

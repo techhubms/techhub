@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-16-more-accurate-copilot-autofix-usage-metrics-on-security-overview
 title: Enhanced Copilot Autofix Metrics for CodeQL Security Overview on GitHub
 author: Allison
@@ -21,6 +21,7 @@ section_names:
 - ai
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Allison shares an update about enhanced Copilot Autofix usage metrics on the GitHub security overview dashboard, improving clarity for developers and security teams.<!--excerpt_end-->
 

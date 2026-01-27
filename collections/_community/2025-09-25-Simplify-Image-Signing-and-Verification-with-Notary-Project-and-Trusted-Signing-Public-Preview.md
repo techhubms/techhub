@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/simplify-image-signing-and-verification-with-notary-project-and/ba-p/4455292
 title: Simplify Image Signing and Verification with Notary Project and Trusted Signing (Public Preview)
 author: YiZha
@@ -26,6 +26,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 YiZha details how to strengthen your supply chain security using Notary Project and Azure Trusted Signing. This walkthrough explores standard-based image signing and verification, and shows how developers can streamline certificate management for artifacts in Azure-focused pipelines.<!--excerpt_end-->
 

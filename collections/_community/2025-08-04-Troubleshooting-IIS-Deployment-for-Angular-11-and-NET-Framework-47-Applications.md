@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mhjloq/deployment_to_iis/
 title: Troubleshooting IIS Deployment for Angular 11 and .NET Framework 4.7 Applications
 author: Defiant_Priority_801
@@ -19,6 +19,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Defiant_Priority_801 outlines challenges encountered while deploying an Angular 11 and .NET Framework 4.7 application stack to IIS, particularly struggling with 404 errors after following standard deployment procedures.<!--excerpt_end-->
 

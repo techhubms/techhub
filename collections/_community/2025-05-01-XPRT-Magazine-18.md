@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 18
 date: 2025-05-01 00:00:00 +00:00
 author: Xebia
@@ -24,6 +24,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 XPRT Magazine 18 marks a decade of knowledge sharing at Xebia. This special edition features articles on AI agents, prompt engineering, accessibility, generative art, cloud-native development, security, and more. The magazine brings together insights from experts across the company, reflecting on innovation, practical solutions, and the evolution of technology in the Microsoft ecosystem.
 <!--excerpt_end-->

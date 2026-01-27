@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/how-to-connect-microsoft-fabric-to-azure-devops-using-service-principal/
 title: How to Connect Microsoft Fabric to Azure DevOps Using Service Principal
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ section_names:
 - azure
 - devops
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog presents a detailed guide on connecting Fabric workspaces to Azure DevOps using service principals, covering authentication methods, integration workflow, and practical steps for setting up automated CI/CD pipelines.<!--excerpt_end-->
 

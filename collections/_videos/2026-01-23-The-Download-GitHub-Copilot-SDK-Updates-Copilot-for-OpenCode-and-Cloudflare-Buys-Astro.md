@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Christina Warren from GitHub hosts this episode of The Download, spotlighting new GitHub Copilot developer tools, Cloudflare’s acquisition of Astro Technology, Game Off 2025 winners, and more for the developer community.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ItS-sOm57qg
 title: Secure Secrets, Certificate, and Access Management for Azure
 author: Microsoft Events
@@ -23,6 +23,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 In this Microsoft Ignite 2025 session, Arsh Ballagan demonstrates practical techniques for managing secrets, certificates, and privileged access across Azure infrastructure, emphasizing secure authentication and DevOps integrations.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mhiqip/github_copilot_and_working_with_legacy_code/
 title: GitHub Copilot and Handling Context Limitations in Large Legacy Codebases
 author: LifeguardFar6851
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 LifeguardFar6851 highlights practical concerns with using GitHub Copilot in a large legacy project, focusing on Copilot’s context limitations.<!--excerpt_end-->
 

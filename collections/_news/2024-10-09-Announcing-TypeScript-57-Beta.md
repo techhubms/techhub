@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7-beta/
 title: Announcing TypeScript 5.7 Beta
 author: Daniel Rosenwasser
@@ -17,6 +17,7 @@ tags:
 - TypeScript 5.7
 section_names:
 - coding
+primary_section: coding
 ---
 Daniel Rosenwasser announces the release of TypeScript 5.7 Beta, offering insights into new language features and improvements.<!--excerpt_end-->
 

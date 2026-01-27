@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-networking-portfolio-consolidation/ba-p/4454248
 title: 'Azure Networking Portfolio Consolidation: Simplifying Service Discovery and Management'
 author: Sudha_Mahajan
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Sudha_Mahajan breaks down the Azure Networking portfolio consolidation, highlighting how the new scenario-based organization makes Microsoft cloud network tools easier to navigate and more efficient for technical users.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=W2qusd0gtTE
 title: 'Innovating with MongoDB-Compatible Azure DocumentDB: AI, Multicloud, and Cost Efficiency'
 author: Microsoft Events
@@ -31,6 +31,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events presents an advanced Ignite breakout session featuring Patty Chow, Khelan Modi, and Gurvinder Singh. The talk explores Azure DocumentDB's new open-source direction, AI-powered query optimization, and cutting-edge multicloud capabilities for technical audiences.<!--excerpt_end-->
 

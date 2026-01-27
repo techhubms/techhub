@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mkftq0/gpt5_already_in_vsc_copilot/
 title: First Impressions of GPT-5 Integration in Visual Studio Code Copilot
 author: Jazzlike_Course_9895
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Jazzlike_Course_9895 shares initial experiences using GPT-5 in Visual Studio Code Copilot, highlighting differences from previous AI models and discussing how GPT-5’s analytic code feedback compares to alternatives like Claude 4 and GPT-4.1.<!--excerpt_end-->
 

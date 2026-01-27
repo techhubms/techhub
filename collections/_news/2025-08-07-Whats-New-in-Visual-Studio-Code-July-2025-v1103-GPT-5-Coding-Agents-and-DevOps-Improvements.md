@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_103
 title: "What's New in Visual Studio Code July 2025 (v1.103): GPT-5, Coding Agents, and DevOps Improvements"
 author: Visual Studio Code Team
@@ -30,6 +30,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 The Visual Studio Code Team presents the July 2025 (v1.103) update, packed with new features like GPT-5 for Copilot, coding agent improvements, Azure DevOps repo indexing, and numerous productivity enhancements.<!--excerpt_end-->
 

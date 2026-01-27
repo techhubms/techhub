@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/context-engineering-recipes-the-reflection-pattern.html
 title: 'Context Engineering Recipes: The Reflection Pattern for GitHub Copilot'
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -18,6 +18,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels shares practical advice on the Reflection Pattern, guiding developers on how to prompt GitHub Copilot to explain its code suggestions and logic before accepting or revising them.<!--excerpt_end-->
 

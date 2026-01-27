@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-20-enterprise-bring-your-own-key-byok-for-github-copilot-is-now-in-public-preview
 title: Enterprise BYOK for GitHub Copilot Now in Public Preview
 author: Allison
@@ -25,6 +25,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison presents a release announcement detailing the public preview of Bring Your Own Key (BYOK) support for GitHub Copilot, empowering enterprises to use their own LLM provider keys and centrally manage model access within organizations.<!--excerpt_end-->
 

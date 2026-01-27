@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/comprehensive-vm-monitoring-with-opentelemetry-performance/ba-p/4470122
 title: Comprehensive VM Monitoring with OpenTelemetry in Azure Monitor
 author: viviandiec
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 viviandiec details how Azure Monitor integrates OpenTelemetry for VM and Arc server monitoring. The post covers onboarding, advanced metrics, enhanced dashboards, and new alerting capabilities.<!--excerpt_end-->
 

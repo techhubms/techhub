@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/spec-driven-development-spec-kit
 title: 'Spec-Driven Development with GitHub Spec Kit: Streamlining AI-Assisted Coding Workflows'
 author: Den Delimarsky
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Den Delimarsky delves into how developers can use GitHub Spec Kit and Spec-Driven Development (SDD) practices to enhance AI-assisted software projects. The article explores practical workflows, specification management, and integration with GitHub Copilot to streamline development.<!--excerpt_end-->
 

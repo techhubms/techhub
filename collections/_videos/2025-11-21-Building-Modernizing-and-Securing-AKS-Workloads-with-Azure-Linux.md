@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=YZJCVtt0bwQ
 title: Building, Modernizing, and Securing AKS Workloads with Azure Linux
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Presented by Sudhanva Huruli and Dongha Paek at Microsoft Ignite, this session guides enterprises on modernizing and securing AKS container workloads using Azure Linux, with hands-on deep-dives into new performance and security features.<!--excerpt_end-->
 

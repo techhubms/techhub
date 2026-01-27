@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Code Scanning AI Autofix
 author: TBD
@@ -12,6 +12,7 @@ tags: []
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This content demonstrates GitHub Copilot's Code Scanning AI Autofix feature. Automatically generate fixes for security vulnerabilities<!--excerpt_end-->
 

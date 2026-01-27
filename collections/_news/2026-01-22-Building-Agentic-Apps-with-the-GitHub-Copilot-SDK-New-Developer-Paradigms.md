@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 stclarke explores the transformative potential of the GitHub Copilot SDK, focusing on embedding agentic execution loops and autonomous workflows into applications—enabling a new class of developer experiences.<!--excerpt_end-->
 

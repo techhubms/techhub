@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mk1z6x/studying_net_coming_from_net_framework/
 title: 'Transitioning from .NET Framework 4.8 to Modern .NET (Core/9): Advice & Resources'
 author: RemoveFun747
@@ -28,6 +28,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 RemoveFun747 shares insights and community-driven advice for developers transitioning from legacy .NET Framework 4.8 to modern .NET 9, including learning resources and practical architectural considerations.<!--excerpt_end-->
 

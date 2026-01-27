@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/07/design-ai-workloads-with-the-azure-well-architected-framework/
 title: Design AI Workloads with the Azure Well-Architected Framework
 author: Thomas Maurer
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this post, Thomas Maurer discusses a recent Azure Essentials Show episode featuring Clayton Siemens, focusing on best practices for designing AI workloads on Azure using the Well-Architected Framework.<!--excerpt_end-->
 

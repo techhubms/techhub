@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/security-where-it-matters-runtime-context-and-ai-fixes-now/ba-p/4470794
 title: 'Runtime Security and AI Fixes: Integrating GitHub Advanced Security with Defender for Cloud'
 author: AndrewMFlick
@@ -31,6 +31,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 AndrewMFlick introduces Microsoft’s integration of GitHub Advanced Security with Defender for Cloud, helping DevSecOps teams accelerate vulnerability remediation using runtime context, AI-suggested fixes, and code-to-cloud security integration.<!--excerpt_end-->
 

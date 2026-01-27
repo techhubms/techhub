@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/schema-registry-creating-type-safe-pipelines-using-schemas-and-eventstreams-preview/
 title: Introducing Schema Registry for Type-Safe Pipelines in Microsoft Fabric Eventstreams
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces the Schema Registry for Real-Time Intelligence, providing a robust foundation for type-safe, reliable pipelines in streaming data applications.<!--excerpt_end-->
 

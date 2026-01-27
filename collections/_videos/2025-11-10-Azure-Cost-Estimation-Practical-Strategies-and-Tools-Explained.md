@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=36bbMNatZHI
 title: 'Azure Cost Estimation: Practical Strategies and Tools Explained'
 author: Microsoft Developer
@@ -20,6 +20,7 @@ tags:
 - Resource Configuration
 section_names:
 - azure
+primary_section: azure
 ---
 In this Azure Essentials Show episode, Thomas and Britt from Microsoft Azure provide practical guidance for estimating and managing Azure cloud costs, focusing on essential Microsoft tools and strategies.<!--excerpt_end-->
 

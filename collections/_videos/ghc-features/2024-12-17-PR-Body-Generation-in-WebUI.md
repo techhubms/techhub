@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/chD-UE4DmJk
 title: PR Body Generation in WebUI
 author: Randy Pagels
@@ -13,6 +13,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This video demonstrates GitHub Copilot's PR Body Generation in WebUI feature. Automatically generate detailed pull request bodies with Copilot in the webUI.<!--excerpt_end-->
 

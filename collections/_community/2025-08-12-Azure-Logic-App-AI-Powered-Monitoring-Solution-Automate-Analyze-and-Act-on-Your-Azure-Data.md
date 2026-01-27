@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/healthcare-and-life-sciences/azure-logic-app-ai-powered-monitoring-solution-automate-analyze/ba-p/4442665
 title: 'Azure Logic App AI-Powered Monitoring Solution: Automate, Analyze, and Act on Your Azure Data'
 author: VinodSoni
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 VinodSoni presents an AI-powered Azure monitoring solution that uses Logic Apps and the OpenAI GPT-4o model to automate log analysis, secure workflow orchestration, and generate daily actionable reports.<!--excerpt_end-->
 

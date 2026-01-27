@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/12/reimagine-migration-agentic-platform-landing-zone-with-azure-migrate/
 title: 'Reimagine Migration: Agentic Platform Landing Zone with Azure Migrate'
 author: Thomas Maurer
@@ -31,6 +31,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Thomas Maurer breaks down the agentic approach to cloud migration using Azure Migrate and platform landing zones, providing practical insights for secure, consistent, and scalable Azure deployments.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/openapi/welcome-post/
 title: 'Welcome to the OpenAPI Blog: Microsoft’s Hub for API Development, Tools, and Best Practices'
 author: Darrel Miller
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Darrel Miller launches the Microsoft OpenAPI Blog, detailing what developers can expect on topics including API design, OpenAPI tools, Azure integrations, AI plugins, Copilot agents, and more.<!--excerpt_end-->
 

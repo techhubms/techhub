@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2026-01-13-new-fine-grained-permission-for-artifact-metadata-is-now-generally-available
 title: GitHub Introduces Fine-Grained artifact_metadata Permission for Enhanced API Access Control
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison presents GitHub’s new artifact_metadata permission, which enhances security and refines API access control for artifact metadata. Developers and DevOps teams must transition workflows by February 2026.<!--excerpt_end-->
 

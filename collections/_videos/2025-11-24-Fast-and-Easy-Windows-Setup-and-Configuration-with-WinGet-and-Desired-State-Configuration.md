@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=KnH7FHyEsbE
 title: Fast and Easy Windows Setup & Configuration with WinGet and Desired State Configuration
 author: Microsoft Events
@@ -27,6 +27,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Presented by Demitrius Nelon at Microsoft Ignite 2025, this session dives into WinGet's new capabilities for fast Windows setup and configuration using Desired State Configuration, with code-centric demos for IT professionals and developers.<!--excerpt_end-->
 

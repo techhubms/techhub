@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/get-started-with-vs-code-for-the-web/
 title: Accelerate Development with VS Code for the Web – Azure Integration
 author: Meera Haridasa
@@ -30,6 +30,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Meera Haridasa introduces VS Code for the Web – Azure and highlights how developers can build, edit, and deploy cloud applications rapidly with pre-integrated runtimes, AI-assisted tools, and direct GitHub and Azure connections.<!--excerpt_end-->
 

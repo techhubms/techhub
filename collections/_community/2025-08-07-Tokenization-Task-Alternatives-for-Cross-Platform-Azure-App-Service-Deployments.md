@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1mk7u14/better_solidify_tokenization_task/
 title: Tokenization Task Alternatives for Cross-Platform Azure App Service Deployments
 author: YaMoef
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 YaMoef opens a discussion about the limitations of the Solidify tokenization task in Azure DevOps, focusing on multi-platform support and secure handling of secrets. Community responses offer practical deployment strategies.<!--excerpt_end-->
 

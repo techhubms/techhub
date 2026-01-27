@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mk81h8/orphaned_azure_subscription_no_owner_access/
 title: Resolving Orphaned Azure Subscription Access When No Owner Is Reachable
 author: GelatinousCubeZantar
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 GelatinousCubeZantar details the process and obstacles in recovering access to an orphaned Azure subscription, including real-world escalation attempts and technical suggestions based on Microsoft's documentation.<!--excerpt_end-->
 

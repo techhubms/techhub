@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html
 title: Boost Code Quality Fast with GitHub Copilot Edit Mode
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels demonstrates how developers can streamline code improvements using GitHub Copilot Edit Mode and Agent Mode for quick enhancements and consistent coding practices.<!--excerpt_end-->
 

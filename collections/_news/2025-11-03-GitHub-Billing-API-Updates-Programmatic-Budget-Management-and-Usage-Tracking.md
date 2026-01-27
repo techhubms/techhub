@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-03-manage-budgets-and-track-usage-with-new-billing-api-updates
 title: 'GitHub Billing API Updates: Programmatic Budget Management and Usage Tracking'
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - Usage Tracking
 section_names:
 - devops
+primary_section: devops
 ---
 Allison covers GitHub’s latest billing API enhancements, showing how programmatic budget management and usage tracking open new possibilities for enterprise, team, and personal plan users.<!--excerpt_end-->
 

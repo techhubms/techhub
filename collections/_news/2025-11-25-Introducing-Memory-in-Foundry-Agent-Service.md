@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/introducing-memory-in-foundry-agent-service/
 title: Introducing Memory in Foundry Agent Service
 author: Lewis Liu, Paul Hsu, Takuto Higuchi
@@ -32,6 +32,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Lewis Liu, Paul Hsu, and Takuto Higuchi explain how Microsoft Foundry Agent Service’s new Memory feature helps developers build context-aware, personalized AI agents using long-term memory—all with easy integration and enterprise scalability.<!--excerpt_end-->
 

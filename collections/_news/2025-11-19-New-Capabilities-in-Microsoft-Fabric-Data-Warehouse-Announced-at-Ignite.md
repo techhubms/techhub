@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-data-warehouse-goes-all-in-on-enterprises-at-ignite/
 title: New Capabilities in Microsoft Fabric Data Warehouse Announced at Ignite
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Authored by Microsoft Fabric Blog, with contributions from Peri Rocha, Ancy Philip, Jovan Popovic, and Twinkle Cyril, this article unveils the latest enhancements to Fabric Data Warehouse supporting advanced analytics and modern data warehousing.<!--excerpt_end-->
 

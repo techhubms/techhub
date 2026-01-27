@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-3-csharp-14-extensions-members/
 title: 'C# 14 Extension Members in .NET 10 Preview: How to Use Extension Everything'
 author: Andrew Lock
@@ -19,6 +19,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, Andrew Lock provides a detailed walkthrough of C# 14’s new extension members feature in .NET 10, including how to convert existing extension methods, the new syntax, and updates to his NetEscapades.EnumGenerators package.<!--excerpt_end-->
 

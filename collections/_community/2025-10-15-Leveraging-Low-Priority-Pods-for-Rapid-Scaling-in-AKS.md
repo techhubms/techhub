@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/leveraging-low-priority-pods-for-rapid-scaling-in-aks/ba-p/4461670
 title: Leveraging Low Priority Pods for Rapid Scaling in AKS
 author: samcogan
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 samcogan shares an in-depth strategy for managing Kubernetes cluster scaling in Azure by using low priority pods as preemptible buffers, enabling faster workload response and minimizing downtime during traffic spikes.<!--excerpt_end-->
 

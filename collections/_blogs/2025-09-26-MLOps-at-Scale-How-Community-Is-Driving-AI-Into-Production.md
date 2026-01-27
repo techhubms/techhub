@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/mlops-at-scale-how-community-is-driving-ai-into-production/
 title: 'MLOps at Scale: How Community Is Driving AI Into Production'
 author: Alan Shimel
@@ -24,6 +24,7 @@ section_names:
 - ai
 - devops
 - ml
+primary_section: ai
 ---
 Alan Shimel interviews Demetrios Brinkmann, founder of the MLOps Community, about the challenges and solutions for bringing AI from research into production, focusing on community-driven best practices and the operational complexities of modern AI systems.<!--excerpt_end-->
 

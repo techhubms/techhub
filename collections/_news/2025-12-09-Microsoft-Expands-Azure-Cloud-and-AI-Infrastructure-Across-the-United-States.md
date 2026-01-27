@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/microsofts-commitment-to-supporting-cloud-infrastructure-demand-in-the-united-states/
 title: Microsoft Expands Azure Cloud and AI Infrastructure Across the United States
 author: Omar Khan
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Omar Khan discusses Microsoft's ongoing investments in expanding Azure cloud and AI infrastructure in the US, highlighting new data centers, added resiliency, sustainability, and use cases across education and government.<!--excerpt_end-->
 

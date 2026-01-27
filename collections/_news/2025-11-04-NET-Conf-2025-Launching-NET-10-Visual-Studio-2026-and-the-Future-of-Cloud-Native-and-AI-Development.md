@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/get-ready-for-dotnet-conf-2025/
 title: '.NET Conf 2025: Launching .NET 10, Visual Studio 2026, and the Future of Cloud-Native and AI Development'
 author: Jon Galloway
@@ -40,6 +40,7 @@ section_names:
 - github-copilot
 - ml
 - security
+primary_section: github-copilot
 ---
 Jon Galloway previews .NET Conf 2025, spotlighting the release of .NET 10, Visual Studio 2026, cloud-native and AI advancements, plus deep technical and community-driven learning opportunities for developers.<!--excerpt_end-->
 

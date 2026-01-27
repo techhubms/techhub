@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/opentelemetry-and-ai-are-unlocking-logs-as-the-essential-signal-for-why/
 title: OpenTelemetry and AI are Unlocking Logs as the Essential Signal for 'Why'
 author: Bahubali Shetti
@@ -44,6 +44,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Bahubali Shetti examines how OpenTelemetry and AI technologies are transforming log data from raw text into actionable insights for modern observability, helping SREs and DevOps teams identify the 'why' behind system issues.<!--excerpt_end-->
 

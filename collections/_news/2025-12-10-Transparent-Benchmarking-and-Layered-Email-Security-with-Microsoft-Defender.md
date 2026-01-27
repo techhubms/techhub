@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/12/10/clarity-in-complexity-new-insights-for-transparent-email-security/
 title: Transparent Benchmarking and Layered Email Security with Microsoft Defender
 author: Scott Woodgate and Ramya Chitrakar
@@ -22,6 +22,7 @@ tags:
 - Zero Hour Auto Purge
 section_names:
 - security
+primary_section: security
 ---
 Scott Woodgate and Ramya Chitrakar present real-world benchmarking results on layered email security using Microsoft Defender for Office 365 and ICES/SEG vendors, empowering security leaders with transparent data-driven insights.<!--excerpt_end-->
 

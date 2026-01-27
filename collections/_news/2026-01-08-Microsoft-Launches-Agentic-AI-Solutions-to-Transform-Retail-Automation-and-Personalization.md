@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/2026/01/08/microsoft-propels-retail-forward-with-agentic-ai-capabilities-that-power-intelligent-automation-for-every-retail-function/
 title: Microsoft Launches Agentic AI Solutions to Transform Retail Automation and Personalization
 author: stclarke
@@ -22,6 +22,7 @@ tags:
 - Store Operations
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke presents Microsoft's announcement of new agentic AI solutions for retail, featuring automation tools like Copilot Checkout and Copilot Studio templates to enhance shopping experiences and streamline retail operations.<!--excerpt_end-->
 

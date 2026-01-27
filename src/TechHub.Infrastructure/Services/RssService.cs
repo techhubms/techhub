@@ -1,6 +1,5 @@
 using System.Text;
 using System.Xml;
-using TechHub.Core.DTOs;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 
@@ -17,7 +16,7 @@ public class RssService : IRssService
     private const int MaxItemsInFeed = 50;
 
     /// <inheritdoc/>
-    public Task<RssChannelDto> GenerateSectionFeedAsync(
+    public Task<RssChannel> GenerateSectionFeedAsync(
         Section section,
         IReadOnlyList<ContentItem> items,
         CancellationToken cancellationToken = default)
@@ -32,7 +31,7 @@ public class RssService : IRssService
 
         var rssItems = sortedItems.Select(CreateRssItem).ToList();
 
-        var channel = new RssChannelDto
+        var channel = new RssChannel
         {
             Title = $"{SiteTitle} - {section.Title}",
             Description = section.Description,
@@ -48,7 +47,7 @@ public class RssService : IRssService
     }
 
     /// <inheritdoc/>
-    public Task<RssChannelDto> GenerateCollectionFeedAsync(
+    public Task<RssChannel> GenerateCollectionFeedAsync(
         string collectionName,
         IReadOnlyList<ContentItem> items,
         CancellationToken cancellationToken = default)
@@ -63,7 +62,7 @@ public class RssService : IRssService
 
         var rssItems = sortedItems.Select(CreateRssItem).ToList();
 
-        var channel = new RssChannelDto
+        var channel = new RssChannel
         {
             Title = $"{SiteTitle} - {FormatCollectionTitle(collectionName)}",
             Description = $"Latest {collectionName} from {SiteTitle}",
@@ -79,7 +78,7 @@ public class RssService : IRssService
     }
 
     /// <inheritdoc/>
-    public string SerializeToXml(RssChannelDto channel)
+    public string SerializeToXml(RssChannel channel)
     {
         ArgumentNullException.ThrowIfNull(channel);
 
@@ -149,7 +148,7 @@ public class RssService : IRssService
         return stringWriter.ToString();
     }
 
-    private static RssItemDto CreateRssItem(ContentItem item)
+    private static RssItem CreateRssItem(ContentItem item)
     {
         // External collections (news, blogs, community) link to original source
         // Internal collections (videos, roundups, custom) link to our site
@@ -158,7 +157,7 @@ public class RssService : IRssService
             ? item.ExternalUrl
             : $"{SiteUrl}/{item.CollectionName}/{item.Slug}";
 
-        return new RssItemDto
+        return new RssItem
         {
             Title = item.Title,
             Description = item.Excerpt,

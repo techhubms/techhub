@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=VZiUn_Nwd5Q
 title: Securing Email and Collaboration with Microsoft Defender for Office 365 and Agentic AI
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events presents an advanced session on leveraging Defender for Office 365 and agentic AI to enhance organizational security for email and collaboration, focusing on automation and real-world defense techniques.<!--excerpt_end-->
 

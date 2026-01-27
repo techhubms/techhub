@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=EjdRRROAiUI
 title: Practical PostgreSQL and LLM Observability on Azure
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Microsoft Events presents a practical guide to monitoring PostgresSQL and LLM workloads on Azure, featuring Datadog’s tooling and real-world troubleshooting tips for GenAI applications, led by Ryan MacLean.<!--excerpt_end-->
 

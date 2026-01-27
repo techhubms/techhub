@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/02/microsoft-named-a-leader-in-the-idc-marketscape-for-xdr/
 title: Microsoft Recognized as a Leader in IDC MarketScape for XDR
 author: Rob Lefferts
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Rob Lefferts covers Microsoft's designation as a Leader in the IDC MarketScape for XDR, highlighting Defender XDR's AI-driven automation, unified security operations, and deep integration across Microsoft security tools.<!--excerpt_end-->
 

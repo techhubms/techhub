@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=enDEOSAr9YA
 title: .NET 10 Preview 6 Unboxed - Blazor State Persistence, Passkey, & What is DNX?
 author: dotnet
@@ -21,6 +21,7 @@ tags:
 - WebAuthN
 section_names:
 - coding
+primary_section: coding
 ---
 In this video, the .NET team, including John Galloway, Daniel Roth, Chet Husk, and Joel Verhagen, present the latest enhancements in .NET 10 Preview 6.<!--excerpt_end-->
 

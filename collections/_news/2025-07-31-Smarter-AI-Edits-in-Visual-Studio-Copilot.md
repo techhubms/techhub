@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/smarter-ai-edits-in-visual-studio-copilot/
 title: Smarter AI Edits in Visual Studio Copilot
 author: Jessie Houghton, Oscar Obeso, Rhea Patel
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Jessie Houghton, Oscar Obeso, and Rhea Patel detail how smarter AI edits were achieved in Visual Studio Copilot, discussing the move from heuristic-based to model-based approaches, speculative decoding, and improved code integration.<!--excerpt_end-->
 

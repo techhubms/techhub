@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/announcing-new-hybrid-deployment-options-for-azure-virtual/ba-p/4468781
 title: Announcing Hybrid Deployment Options for Azure Virtual Desktop
 author: SteveDMSFT
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 SteveDMSFT announces the limited preview of Azure Virtual Desktop for hybrid environments, explaining how organizations can leverage unified cloud and on-premises desktop virtualization through Azure Arc and partner tools.<!--excerpt_end-->
 

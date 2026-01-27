@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/security/vulnerability-research/how-to-catch-github-actions-workflow-injections-before-attackers-do/
 title: How to Catch GitHub Actions Workflow Injections Before Attackers Do
 author: Dylan Birtolo
@@ -17,6 +17,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 In this article, Dylan Birtolo addresses strategies for detecting and mitigating GitHub Actions workflow injections, offering practical guidance on boosting repository security.<!--excerpt_end-->
 

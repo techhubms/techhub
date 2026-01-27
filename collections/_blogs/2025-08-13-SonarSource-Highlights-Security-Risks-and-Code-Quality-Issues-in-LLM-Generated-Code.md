@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/sonarsource-surfaces-multiple-caveats-when-relying-on-llms-to-write-code/?utm_source=rss&utm_medium=rss&utm_campaign=sonarsource-surfaces-multiple-caveats-when-relying-on-llms-to-write-code
 title: SonarSource Highlights Security Risks and Code Quality Issues in LLM-Generated Code
 author: Mike Vizard
@@ -31,6 +31,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Mike Vizard summarizes SonarSource's analysis of LLM-generated code, revealing frequent security vulnerabilities and long-term code quality issues. The article urges DevOps teams to be vigilant when leveraging AI coding tools.<!--excerpt_end-->
 

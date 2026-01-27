@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=XjVj_qRwzVg
 title: 'Foundry Control Plane: Managing AI Agents at Scale'
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events present an advanced Ignite session featuring Mehrnoosh Sameki, Peter Simones, and Jaspreet Singh on managing AI agents at scale using Foundry Control Plane and Azure AI, with a focus on safety, compliance, and operational governance.<!--excerpt_end-->
 

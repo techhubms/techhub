@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/N64ozm3x88k
 title: Preview for Copilot Workspace
 author: Rob Bos
@@ -15,6 +15,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This video demonstrates GitHub Copilot's Preview for Copilot Workspace feature. Get a preview of the Copilot Workspace environment for better collaboration.<!--excerpt_end-->
 

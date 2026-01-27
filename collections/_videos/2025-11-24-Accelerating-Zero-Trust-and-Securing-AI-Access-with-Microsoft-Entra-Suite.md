@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Ze0v1HkIk-o
 title: Accelerating Zero Trust and Securing AI Access with Microsoft Entra Suite
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events presents an in-depth look at how Entra Suite empowers Zero Trust adoption and secures AI access for organizations, emphasizing identity-driven controls and adaptive security policies.<!--excerpt_end-->
 

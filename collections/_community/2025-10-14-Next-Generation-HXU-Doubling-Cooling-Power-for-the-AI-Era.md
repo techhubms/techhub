@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/next-generation-hxu-doubling-cooling-power-for-the-ai-era/ba-p/4460953
 title: 'Next Generation HXU: Doubling Cooling Power for the AI Era'
 author: andy_reg
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 andy_reg introduces Microsoft's next-generation HXU, a heat exchanger unit that doubles cooling capacity for AI-ready datacenters, with features ensuring reliability, scalability, and cyber resilience.<!--excerpt_end-->
 

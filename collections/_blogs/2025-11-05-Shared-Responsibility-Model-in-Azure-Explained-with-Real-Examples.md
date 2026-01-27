@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/shared-responsibility-model-in-azure-explained-with-real-examples/
 title: Shared Responsibility Model in Azure Explained with Real Examples
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Dellenny discusses the Shared Responsibility Model in Azure, illustrating how security roles are divided between Microsoft and the customer, with practical real-world examples and clear advice.<!--excerpt_end-->
 

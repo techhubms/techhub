@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/ask-mode-vs-agent-mode/
 title: 'Ask Mode vs Agent Mode: Choosing the Right GitHub Copilot Experience for .NET Developers'
 author: Wendy Breiding (SHE/HER)
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this guide, Wendy Breiding delves into GitHub Copilot Chat's Ask Mode and Agent Mode, outlining when .NET developers should use each for optimal productivity and efficiency in Visual Studio environments.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=YlbeQkTRbAY
 title: Building Multi-Agent AI Systems with LangChain4j and Java
 author: Microsoft Developer
@@ -30,6 +30,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Developer’s session with Ayan Gupta and Julien Dubois explores building advanced multi-agent AI systems in Java using LangChain4j, with hands-on agent orchestration, GPT-4o Mini, and speech synthesis. Learn how these technologies work together to automate creative and practical AI workflows.<!--excerpt_end-->
 

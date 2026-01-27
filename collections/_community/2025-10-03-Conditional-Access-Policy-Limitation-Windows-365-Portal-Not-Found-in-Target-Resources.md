@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/ca-policy-application-not-found-in-target-resources/m-p/4458834#M13916
 title: 'Conditional Access Policy Limitation: Windows 365 Portal Not Found in Target Resources'
 author: WF-PHG
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 WF-PHG highlights a Conditional Access policy issue in Microsoft Entra ID: the inability to configure access exceptions for the 'Windows 365 Portal' when only Azure Virtual Desktop and Security Info should be accessible for external users.<!--excerpt_end-->
 

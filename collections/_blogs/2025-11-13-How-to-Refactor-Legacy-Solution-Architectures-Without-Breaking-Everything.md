@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-to-refactor-legacy-solution-architectures-without-breaking-everything/
 title: How to Refactor Legacy Solution Architectures Without Breaking Everything
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Dellenny shares actionable advice on refactoring legacy solution architectures without causing system failures. The article offers developers practical steps to modernize, test, and evolve existing codebases with minimal disruption.<!--excerpt_end-->
 

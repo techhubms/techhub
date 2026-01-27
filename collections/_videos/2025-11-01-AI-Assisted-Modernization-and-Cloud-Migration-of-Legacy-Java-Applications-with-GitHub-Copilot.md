@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=9gmp_ADmRuE
 title: AI-Assisted Modernization and Cloud Migration of Legacy Java Applications with GitHub Copilot
 author: Microsoft Developer
@@ -35,6 +35,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this episode, Microsoft Developer Ayan Gupta shows how GitHub Copilot and AI transform legacy Java app modernization, focusing on upgrading and migrating enterprise workloads to Azure.<!--excerpt_end-->
 

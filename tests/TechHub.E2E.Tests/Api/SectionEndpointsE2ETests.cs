@@ -1,8 +1,7 @@
 using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
-using TechHub.Core.DTOs;
-using TechHub.TestUtilities;
+using TechHub.Core.Models;
 
 namespace TechHub.E2E.Tests.Api;
 
@@ -24,7 +23,7 @@ public class SectionEndpointsE2ETests(ApiCollectionFixture fixture)
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var sections = await response.Content.ReadFromJsonAsync<List<SectionDto>>();
+        var sections = await response.Content.ReadFromJsonAsync<List<Section>>();
         sections.Should().NotBeNull();
         sections!.Should().NotBeEmpty();
 
@@ -50,7 +49,7 @@ public class SectionEndpointsE2ETests(ApiCollectionFixture fixture)
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var section = await response.Content.ReadFromJsonAsync<SectionDto>();
+        var section = await response.Content.ReadFromJsonAsync<Section>();
         section.Should().NotBeNull();
         section!.Name.Should().Be("ai");
         section.Title.Should().Be("Artificial Intelligence");

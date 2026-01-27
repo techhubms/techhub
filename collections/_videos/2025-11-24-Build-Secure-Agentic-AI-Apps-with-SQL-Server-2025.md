@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=rjBdWnz0Kdg
 title: Build Secure Agentic AI Apps with SQL Server 2025
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Microsoft Events presents a session featuring Anna Hoffman and Sirjad Parakkat on how Ivanti utilizes SQL Server 2025’s agentic AI features to enhance service management and simplify IT operations.<!--excerpt_end-->
 

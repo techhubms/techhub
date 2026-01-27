@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xXFTlPZJJoo
 title: 'Enhancements to BYOK in Visual Studio Code: Model Provider Integration'
 author: Visual Studio Code
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Pierce Boggan, in this Visual Studio Code livestream, explains recent improvements to the BYOK (Bring Your Own Key) feature and how developers can now leverage the Language Model Chat Provider API for integrating language models via extensions.<!--excerpt_end-->
 

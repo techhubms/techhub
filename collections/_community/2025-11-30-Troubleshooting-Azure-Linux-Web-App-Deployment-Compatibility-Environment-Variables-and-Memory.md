@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/common-misconceptions-when-running-locally-vs-deploying-to-azure/ba-p/4473938
 title: 'Troubleshooting Azure Linux Web App Deployment: Compatibility, Environment Variables, and Memory'
 author: theringe
@@ -33,6 +33,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 theringe provides a practical troubleshooting guide for deploying Python web apps with AI-related packages on Azure Linux Web Apps, focusing on compatibility, environment variables, and memory challenges.<!--excerpt_end-->
 

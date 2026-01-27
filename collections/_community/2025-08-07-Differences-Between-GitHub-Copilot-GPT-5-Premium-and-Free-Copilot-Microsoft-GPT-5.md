@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mkdvmj/gpt5_github_premium_requests_vs_free_gpt5_at/
 title: Differences Between GitHub Copilot GPT-5 Premium and Free Copilot Microsoft GPT-5
 author: Worth_Word_1314
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Worth_Word_1314 and fellow community members discuss why GitHub Copilot GPT-5 charges for premium requests, while GPT-5 at copilot.microsoft.com is free, examining feature differences, product strategy, and user experience.<!--excerpt_end-->
 

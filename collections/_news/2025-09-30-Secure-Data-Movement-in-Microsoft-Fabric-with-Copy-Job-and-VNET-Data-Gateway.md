@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/secure-your-data-movement-with-copy-job-and-virtual-network-data-gateway/
 title: Secure Data Movement in Microsoft Fabric with Copy Job and VNET Data Gateway
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces the integration of Copy Job with the Virtual Network Data Gateway, enabling secure, high-performance, and private data movement for enterprises handling sensitive workloads.<!--excerpt_end-->
 

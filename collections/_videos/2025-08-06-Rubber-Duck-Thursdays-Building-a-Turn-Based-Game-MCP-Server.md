@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=T8D1hDaCrKc
 title: Rubber Duck Thursdays - Building a Turn-Based Game MCP Server
 author: GitHub
@@ -19,6 +19,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub hosts a relaxed coding livestream where the team continues work on a turn-based-game MCP server, demonstrating collaborative coding practices and GitHub Copilot integration.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/finops-blog/introducing-non-breaking-breaking-changes-in-finops-hubs-12/ba-p/4438554
 title: 'FinOps hubs 12: Non-Breaking Schema Versioning and FOCUS 1.2 Alignment'
 author: Michael_Flanakin
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Michael Flanakin shares a deep dive into FinOps hubs 12, highlighting new approaches to schema versioning and alignment with FOCUS 1.2 for seamless Azure cost management and reporting.<!--excerpt_end-->
 

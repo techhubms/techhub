@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FWsAQpP6_kw
 title: Transforming GitHub Copilot Metrics into Business Value
 author: GitHub
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a session with Sharanya Doddapaneni and Shruti Corbett at GitHub Universe 2025, demonstrating how leaders can leverage GitHub Copilot Metrics to drive adoption, measure impact, and demonstrate AI’s business value.<!--excerpt_end-->
 

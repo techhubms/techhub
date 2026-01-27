@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dotnetfoundation.org/news-events/detail/project-spotlight-steeltoe
 title: 'Project Spotlight: Steeltoe – Building Cloud-Native .NET Applications'
 author: .NET Foundation News and Blog
@@ -19,6 +19,7 @@ tags:
 - Web Applications
 section_names:
 - coding
+primary_section: coding
 ---
 .NET Foundation News and Blog introduces Steeltoe, a robust toolkit for .NET developers focused on building secure, scalable, cloud-native applications and microservices.<!--excerpt_end-->
 

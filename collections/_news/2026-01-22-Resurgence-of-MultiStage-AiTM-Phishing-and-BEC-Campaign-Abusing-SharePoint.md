@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Defender Security Research Team investigates a sophisticated AiTM phishing and BEC attack campaign leveraging SharePoint, providing in-depth insights, detection analytics, and actionable defense strategies for security practitioners.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1memjhl/come_discuss_your_side_projects_august_2025/
 title: 'August 2025 Community Project Showcase: C# Side Projects'
 author: AutoModerator
@@ -22,6 +22,7 @@ tags:
 - WinForms
 section_names:
 - coding
+primary_section: coding
 ---
 AutoModerator presents this month's r/csharp side project discussion thread, spotlighting innovative member creations—from ASP.NET Core Kanban solutions to open source productivity and utility apps.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=5NxGqnTazR8
 title: Building Finance Apps in VS Code with Agent Mode, Copilot Vision, and MCP
 author: Visual Studio Code
@@ -31,6 +31,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code's Reynald Adolphe explores building a budgeting app using Agent Mode, Copilot Vision, custom agents, and MCP server integration, showcasing VS Code's AI-enhanced developer features.<!--excerpt_end-->
 

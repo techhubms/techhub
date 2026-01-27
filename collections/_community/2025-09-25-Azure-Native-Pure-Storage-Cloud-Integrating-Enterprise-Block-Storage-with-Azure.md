@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-native-pure-storage-cloud-brings-the-best-of-pure-and/ba-p/4456246
 title: 'Azure Native Pure Storage Cloud: Integrating Enterprise Block Storage with Azure'
 author: karautenMSFT
@@ -21,6 +21,7 @@ tags:
 - VNet Peering
 section_names:
 - azure
+primary_section: azure
 ---
 karautenMSFT presents an in-depth overview of the Azure Native Pure Storage Cloud, describing how Azure and Pure Storage engineering teams collaborated to provide an enterprise-grade, high-performance external storage solution natively integrated with Azure services.<!--excerpt_end-->
 

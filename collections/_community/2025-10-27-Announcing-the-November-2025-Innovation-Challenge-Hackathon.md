@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/announcing-the-november-2025-innovation-challenge-hackathon/m-p/4464518#M22287
 title: Announcing the November 2025 Innovation Challenge Hackathon
 author: macalde
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 macalde announces the November 2025 Innovation Challenge Hackathon, an event for developers from diverse backgrounds to solve real-world AI challenges using Azure, with guidance and support from Microsoft.<!--excerpt_end-->
 

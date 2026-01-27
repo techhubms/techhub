@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-15-github-enterprise-license-history-tracking-now-available-in-public-preview
 title: GitHub Enterprise License History Tracking Public Preview
 author: Allison
@@ -18,6 +18,7 @@ tags:
 - Usage Tracking
 section_names:
 - devops
+primary_section: devops
 ---
 Allison summarizes a new GitHub Enterprise feature that offers admins a daily view of license additions and removals, giving crucial insights for billing and management.<!--excerpt_end-->
 

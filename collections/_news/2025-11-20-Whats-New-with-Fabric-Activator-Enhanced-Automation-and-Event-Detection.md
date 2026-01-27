@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-with-fabric-activator/
 title: 'What’s New with Fabric Activator: Enhanced Automation and Event Detection'
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog outlines recent enhancements in Fabric Activator, demonstrating how users can automate data-driven business processes, trigger advanced workflows, and integrate actions using no-code solutions within Microsoft Fabric.<!--excerpt_end-->
 

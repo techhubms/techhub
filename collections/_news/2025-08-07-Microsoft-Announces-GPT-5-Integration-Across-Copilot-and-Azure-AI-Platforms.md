@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_microsoft-incorporates-openais-gpt-5-into-activity-7359268389866913793-jI2m
 title: Microsoft Announces GPT-5 Integration Across Copilot and Azure AI Platforms
 author: stclarke
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - github-copilot
+primary_section: github-copilot
 ---
 Satya Nadella, Chairman and CEO at Microsoft, announces the rollout of GPT-5 across Microsoft 365 Copilot, GitHub Copilot, Azure AI Foundry, and more, bringing advanced AI capabilities to millions of developers and enterprises.<!--excerpt_end-->
 

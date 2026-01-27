@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=jVbBXjOsKzw
 title: Build a Responsive UI through Prompt Driven Development with GitHub Copilot
 author: Visual Studio Code
@@ -19,6 +19,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code’s team, featuring Cynthia Zanoni, showcases how developers can use GitHub Copilot and prompt-driven workflows to improve UI responsiveness, implement real-time search, and generate project documentation.<!--excerpt_end-->
 

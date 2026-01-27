@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2025/07/17/copilot-coding-agent
 title: Command GitHub's Coding Agent from VS Code
 author: Burke Holland
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Burke Holland explains how the GitHub Copilot Coding Agent is now integrated in VS Code, letting developers assign issues, review PRs, and automate code tasks directly from the editor.<!--excerpt_end-->
 

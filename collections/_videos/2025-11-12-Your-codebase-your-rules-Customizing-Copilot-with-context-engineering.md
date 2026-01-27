@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=0jEzUhU8bLc
 title: 'Your codebase, your rules: Customizing Copilot with context engineering'
 author: GitHub
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Harald Kirschner from Microsoft demonstrates advanced context engineering techniques in VS Code, showing developers how to unlock the full capabilities of GitHub Copilot for deeply context-aware AI code generation.<!--excerpt_end-->
 

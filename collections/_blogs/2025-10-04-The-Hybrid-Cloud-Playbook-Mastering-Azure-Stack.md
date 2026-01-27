@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/the-hybrid-cloud-playbook-mastering-azure-stack/
 title: 'The Hybrid Cloud Playbook: Mastering Azure Stack'
 author: Dellenny
@@ -31,6 +31,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 Dellenny shares actionable strategies and best practices for mastering hybrid cloud environments with Azure Stack, highlighting governance, DevOps, security, and workload management.<!--excerpt_end-->
 

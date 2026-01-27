@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/using-copilot-studio-with-dataverse-a-developers-guide/
 title: 'Using Copilot Studio with Dataverse: A Developer’s Guide'
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 - Power Platform
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny presents a practical developer guide on integrating Copilot Studio with Dataverse, outlining setup, design principles, best practices, and advanced features for building AI-driven agents on enterprise data.<!--excerpt_end-->
 

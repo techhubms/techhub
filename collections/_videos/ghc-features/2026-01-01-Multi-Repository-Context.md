@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Multi-Repository Context
 author: TBD
@@ -12,6 +12,7 @@ tags: []
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This content demonstrates GitHub Copilot's Multi-Repository Context feature. Access context from multiple repositories in Enterprise environments<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://hiddedesmet.com/iasa-ai-course
 title: A Practical Guide to Machine Learning for Image Classification
 author: Hidde de Smet
@@ -21,6 +21,7 @@ tags:
 - Transfer Learning
 section_names:
 - ai
+primary_section: ai
 ---
 Written by Hidde de Smet, this detailed guide walks readers through each stage of building and deploying an image classification solution using machine learning, covering both conceptual and practical considerations.<!--excerpt_end-->
 

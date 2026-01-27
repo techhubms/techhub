@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-06-copilot-code-review-copilot-instruction-md-support-is-now-generally-available
 title: 'Copilot code review: copilot-instruction.md support is now generally available'
 author: Allison
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces that copilot-instructions.md support in GitHub Copilot code review is now generally available, empowering developers to customize Copilot's review workflow directly within repositories.<!--excerpt_end-->
 

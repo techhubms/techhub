@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/broadcom-vmware-licensing-changes-what-azure-vmware-solution/ba-p/4448784
 title: Broadcom VMware Licensing Changes Impacting Azure VMware Solution Customers
 author: christopheherrbach
@@ -21,6 +21,7 @@ tags:
 - VMware Cloud Foundation
 section_names:
 - azure
+primary_section: azure
 ---
 Christophe Herrbach explains the upcoming changes to Broadcom's VMware licensing and how Azure VMware Solution customers can adapt to the new bring-your-own license model.<!--excerpt_end-->
 

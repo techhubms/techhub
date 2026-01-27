@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/from-signals-to-insights-building-a-real-time-streaming-data-platform-with-fabric-eventstream/
 title: 'From Signals to Insights: Building a Real-Time Streaming Data Platform with Fabric Eventstream'
 author: Microsoft Fabric Blog
@@ -19,6 +19,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Authored by Alicia Li and Arindam Chatterjee, this Microsoft Fabric Blog post explores how Contoso leverages MQTT sensors and Microsoft Fabric’s Real-Time Intelligence to monitor smart buildings through a streaming data platform.<!--excerpt_end-->
 

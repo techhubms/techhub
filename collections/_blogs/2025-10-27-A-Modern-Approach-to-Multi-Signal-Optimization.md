@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/a-modern-approach-to-multi-signal-optimization/
 title: A Modern Approach to Multi-Signal Optimization
 author: Nikhil Kurup
@@ -45,6 +45,7 @@ tags:
 - Telemetry Correlation
 section_names:
 - devops
+primary_section: devops
 ---
 Nikhil Kurup examines how multi-signal optimization and metric classification can transform observability in cloud-native DevOps environments, outlining practical steps and real-world impacts for engineering teams.<!--excerpt_end-->
 

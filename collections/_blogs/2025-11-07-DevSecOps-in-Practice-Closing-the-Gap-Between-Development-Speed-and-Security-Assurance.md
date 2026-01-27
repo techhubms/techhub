@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/devsecops-in-practice-closing-the-gap-between-development-speed-and-security-assurance/
 title: 'DevSecOps in Practice: Closing the Gap Between Development Speed and Security Assurance'
 author: Usman Peter
@@ -40,6 +40,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Usman Peter explores practical DevSecOps strategies for integrating security and speed in modern software teams. Learn how to foster a security-focused culture, use automation, and balance risk management with rapid delivery.<!--excerpt_end-->
 

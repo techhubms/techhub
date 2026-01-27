@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html
 title: Use Edit Mode for Quick, Targeted Improvements
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels explains how developers can leverage GitHub Copilot's Edit Mode for fast, targeted improvements to code bases, demonstrating features such as simplifying logic, matching styles, and automating error handling using AI-driven prompts.<!--excerpt_end-->
 

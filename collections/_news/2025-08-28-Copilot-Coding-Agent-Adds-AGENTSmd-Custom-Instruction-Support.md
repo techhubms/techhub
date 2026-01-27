@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-28-copilot-coding-agent-now-supports-agents-md-custom-instructions
 title: Copilot Coding Agent Adds AGENTS.md Custom Instruction Support
 author: Allison
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces that GitHub Copilot coding agent now supports AGENTS.md custom instructions, making it easier for developers to control automated workflows and agent behavior.<!--excerpt_end-->
 

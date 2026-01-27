@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/powershell/announcing-platyps-100/
 title: 'Announcing Microsoft.PowerShell.PlatyPS 1.0.0: PowerShell Help Authoring Simplified'
 author: Jason Helmick, Sean Wheeler
@@ -20,6 +20,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 Authored by Jason Helmick and Sean Wheeler, this post introduces Microsoft.PowerShell.PlatyPS 1.0.0, detailing the new capabilities and improvements for PowerShell help file authoring.<!--excerpt_end-->
 

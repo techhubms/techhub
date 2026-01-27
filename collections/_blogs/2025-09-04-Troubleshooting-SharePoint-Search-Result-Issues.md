@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/what-to-do-when-sharepoint-search-doesnt-return-the-right-results/
 title: Troubleshooting SharePoint Search Result Issues
 author: Dellenny
@@ -21,6 +21,7 @@ tags:
 - User Training
 section_names:
 - coding
+primary_section: coding
 ---
 Dellenny provides a practical guide on how to diagnose and resolve issues with SharePoint search, offering actionable steps and highlighting key features for administrators and power users.<!--excerpt_end-->
 

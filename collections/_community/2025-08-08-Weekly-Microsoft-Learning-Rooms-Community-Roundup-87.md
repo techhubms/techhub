@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-learn/microsoft-learning-rooms-weekly-round-up-8-7/m-p/4441646#M17145
 title: Weekly Microsoft Learning Rooms Community Roundup (8/7)
 author: JulieSirrine
@@ -27,6 +27,7 @@ section_names:
 - coding
 - ml
 - security
+primary_section: ai
 ---
 JulieSirrine shares a curated summary of activities from Microsoft Learning Rooms, spotlighting hands-on community events and technical discussions covering Azure, AI, Fabric, Power BI, cloud security, and coding topics for Microsoft professionals.<!--excerpt_end-->
 

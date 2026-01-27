@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/survey-surfaces-software-engineering-challenges-following-adoption-of-ai/?utm_source=rss&utm_medium=rss&utm_campaign=survey-surfaces-software-engineering-challenges-following-adoption-of-ai
 title: Survey Reveals Software Engineering Hurdles After AI Adoption
 author: Mike Vizard
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard explores survey results from engineering leaders on AI adoption impacts, highlighting the ongoing DevOps and software engineering challenges organizations face.<!--excerpt_end-->
 

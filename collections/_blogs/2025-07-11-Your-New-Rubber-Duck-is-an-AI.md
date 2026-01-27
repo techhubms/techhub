@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://roadtoalm.com/2025/07/11/your-new-rubber-duck-is-an-ai/
 title: Your New Rubber Duck is an AI
 author: Rene van Osnabrugge
@@ -24,6 +24,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Rene van Osnabrugge, co-creator of the LEAD podcast, discusses the evolution of developer roles in the age of AI, sharing insights from conversations about GitHub Copilot and engineering culture.<!--excerpt_end-->
 

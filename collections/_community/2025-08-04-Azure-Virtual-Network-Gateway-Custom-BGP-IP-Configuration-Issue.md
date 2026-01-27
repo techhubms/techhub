@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mh967w/azure_virtual_network_gateway_with_custom_bgp/
 title: 'Azure Virtual Network Gateway: Custom BGP IP Configuration Issue'
 author: FewActivity9721
@@ -17,6 +17,7 @@ tags:
 - Troubleshooting
 section_names:
 - azure
+primary_section: azure
 ---
 Author FewActivity9721 describes a problem configuring custom BGP IP addresses on an Azure Virtual Network Gateway, impacting IPSEC tunnel setup.<!--excerpt_end-->
 

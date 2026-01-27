@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-09-npm-classic-tokens-revoked-session-based-auth-and-cli-token-management-now-available
 title: 'npm Classic Tokens Revoked: Session-Based Authentication and CLI Token Management Now Available'
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison announces the permanent revocation of npm classic tokens, the shift to session-based authentication, and new CLI tools for granular token management, emphasizing heightened security in development and deployment workflows.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2026/01/07/explore-the-latest-microsoft-incident-response-proactive-services-for-enhanced-resilience/
 title: Introducing New Proactive Services from Microsoft Incident Response to Boost Cyber Resilience
 author: Andrew Rapp
@@ -26,6 +26,7 @@ tags:
 - Threat Hunting
 section_names:
 - security
+primary_section: security
 ---
 Andrew Rapp explores how Microsoft's new proactive Incident Response services help organizations strengthen their cyber defenses, prevent threats, and increase resilience before incidents occur.<!--excerpt_end-->
 

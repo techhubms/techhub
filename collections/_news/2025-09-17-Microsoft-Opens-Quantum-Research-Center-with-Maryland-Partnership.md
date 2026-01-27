@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/09/17/our-new-collaboration-with-maryland-will-accelerate-scalable-quantum-computing/
 title: Microsoft Opens Quantum Research Center with Maryland Partnership
 author: sbaynes
@@ -24,6 +24,7 @@ tags:
 - University Of Maryland
 section_names:
 - ai
+primary_section: ai
 ---
 sbaynes reports on Microsoft's collaboration with Maryland, launching a new quantum research center focused on scalable quantum computing research, quantum error correction, and technological innovation with partners across government and academia.<!--excerpt_end-->
 

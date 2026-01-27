@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=i4hvn_Ns9kU
 title: Modernize on-premises VMware environments with Azure VMware Solution
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events showcase how AVS enables seamless migration and modernization of VMware environments to Azure, featuring practical demos and deep integration with Azure's cloud and AI services.<!--excerpt_end-->
 

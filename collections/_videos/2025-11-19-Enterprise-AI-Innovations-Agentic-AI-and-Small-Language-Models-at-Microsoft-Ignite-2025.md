@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=K9lFKmpeitI
 title: 'Enterprise AI Innovations: Agentic AI and Small Language Models at Microsoft Ignite 2025'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 - Small Language Models
 section_names:
 - ai
+primary_section: ai
 ---
 Presented by Microsoft Events, Infosys EVP Balakrishna D.R. and Ray Wang examine Agentic AI and Small Language Models at Ignite 2025, focusing on enterprise transformation and ethical AI governance.<!--excerpt_end-->
 

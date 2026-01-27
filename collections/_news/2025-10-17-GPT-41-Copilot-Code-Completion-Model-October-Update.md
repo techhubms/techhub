@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-17-gpt-4-1-copilot-code-completion-model-october-update
 title: GPT-4.1 Copilot Code Completion Model – October Update
 author: Allison
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison reports on the October update to the GitHub Copilot GPT-4.1 code completion model, highlighting improvements to intent inference and code suggestion accuracy.<!--excerpt_end-->
 

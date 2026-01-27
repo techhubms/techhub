@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://jessehouwing.net/repost-protect-the-repository-hosting-your-github-action/
 title: 'Repost: Protect the Repository Hosting Your GitHub Action'
 author: Jesse Houwing
@@ -18,6 +18,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Authored by Jesse Houwing, this detailed post focuses on safeguarding GitHub Action repositories, outlining practical recommendations to counteract risks like those recently exposed in the changed-files hack.<!--excerpt_end-->
 

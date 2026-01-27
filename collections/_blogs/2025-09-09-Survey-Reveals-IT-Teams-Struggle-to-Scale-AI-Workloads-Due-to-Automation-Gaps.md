@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/survey-most-it-teams-not-prepared-to-manage-ai-workloads/?utm_source=rss&utm_medium=rss&utm_campaign=survey-most-it-teams-not-prepared-to-manage-ai-workloads
 title: Survey Reveals IT Teams Struggle to Scale AI Workloads Due to Automation Gaps
 author: Mike Vizard
@@ -36,6 +36,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard shares insights from a ControlMonkey survey, highlighting the preparedness gaps IT teams face in scaling and managing AI workloads, and the importance of automation and infrastructure as code.<!--excerpt_end-->
 

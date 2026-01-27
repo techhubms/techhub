@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/a-comprehensive-guide-to-getting-started-with-github-copilot-for-end-users/
 title: A Comprehensive Guide to Getting Started with GitHub Copilot
 author: Dellenny
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny offers a detailed yet accessible walkthrough on getting started with GitHub Copilot, guiding users from installation to practical usage and best practices.<!--excerpt_end-->
 

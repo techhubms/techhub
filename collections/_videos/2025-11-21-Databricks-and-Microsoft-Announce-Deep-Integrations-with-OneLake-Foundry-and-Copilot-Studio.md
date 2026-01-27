@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=5URsKnZOFuM
 title: Databricks and Microsoft Announce Deep Integrations with OneLake, Foundry, and Copilot Studio
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events presents a conversation between Ali Ghodsi and Scott Guthrie at Ignite 2025, showcasing how Azure Databricks, OneLake, Foundry, and Copilot Studio integrations drive unified data, AI innovation, and enterprise-ready security.<!--excerpt_end-->
 

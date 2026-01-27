@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=X2QmaEkiyZA
 title: 'The Download: GitHub Copilot Overtakes ChatGPT as Top Developer AI Tool'
 author: GitHub
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub's The Download, featuring news from author GitHub, highlights GitHub Copilot's rise as the top AI tool for developers, along with developer-focused announcements and AI innovations.<!--excerpt_end-->
 

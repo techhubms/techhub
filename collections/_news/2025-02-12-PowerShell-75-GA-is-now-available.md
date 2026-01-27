@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/powershell/announcing-powershell-7-5-ga/
 title: PowerShell 7.5 GA is now available
 author: Jason Helmick
@@ -16,6 +16,7 @@ tags:
 - Scripting
 section_names:
 - coding
+primary_section: coding
 ---
 Jason Helmick announces the general availability of PowerShell 7.5, highlighting new features, improvements, and community contributions.<!--excerpt_end-->
 

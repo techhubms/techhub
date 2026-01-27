@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-09-new-copilot-chat-features-now-generally-available-on-github
 title: New Copilot Chat features now generally available on GitHub
 author: Allison
@@ -15,6 +15,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, Allison discusses the latest development regarding Copilot Chat features on GitHub. <!--excerpt_end--> The announcement reveals that all features of Copilot Chat, previously available only in public preview, are now generally available to every user on github.com. Among the improvements are instant previews, which let developers quickly see the results of suggested code changes; flexible editing options for modifying suggestions; and streamlined management of issues directly from the chat interface.
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m1xrde/how_to_autoresolve_100_merge_conflicts_by/
 title: How to Auto-Resolve 100+ Merge Conflicts by Accepting Incoming Version for All Files?
 author: Dazzling_Touch_9699
@@ -17,6 +17,7 @@ tags:
 - VS
 section_names:
 - devops
+primary_section: devops
 ---
 Dazzling_Touch_9699 seeks advice on efficiently resolving over 100 merge conflicts by keeping incoming branch changes using Visual Studio.<!--excerpt_end-->
 

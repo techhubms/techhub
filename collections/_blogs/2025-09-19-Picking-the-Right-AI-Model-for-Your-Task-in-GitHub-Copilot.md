@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://cooknwithcopilot.com/blog/picking-the-right-ai-model-for-your-task.html
 title: Picking the Right AI Model for Your Task in GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels outlines how developers using GitHub Copilot can select the right AI model for their coding tasks, sharing practical tips on matching model strength to workload and maximizing developer productivity.<!--excerpt_end-->
 

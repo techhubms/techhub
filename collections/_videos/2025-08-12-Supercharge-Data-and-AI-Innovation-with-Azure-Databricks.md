@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=wktreLtv_5w
 title: Supercharge Data and AI Innovation with Azure Databricks
 author: Microsoft Developer
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Developer presents an episode of the Azure Essentials Show highlighting how Azure Databricks streamlines analytics and AI innovation, with guidance on pipelines, data preparation, and upskilling opportunities.<!--excerpt_end-->
 

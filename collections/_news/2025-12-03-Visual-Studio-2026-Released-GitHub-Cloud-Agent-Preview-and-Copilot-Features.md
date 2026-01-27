@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-november-update-visual-studio-2026-cloud-agent-preview-and-more/
 title: 'Visual Studio 2026 Released: GitHub Cloud Agent Preview and Copilot Features'
 author: Simona Liao
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Simona Liao details the latest Visual Studio 2026 release, highlighting new GitHub Cloud Agent Preview and Copilot features to enhance developer workflows with cutting-edge AI capabilities.<!--excerpt_end-->
 

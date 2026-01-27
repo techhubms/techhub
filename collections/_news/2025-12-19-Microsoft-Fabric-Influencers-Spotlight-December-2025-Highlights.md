@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-december-2025/
 title: 'Microsoft Fabric Influencers Spotlight: December 2025 Highlights'
 author: Microsoft Fabric Blog
@@ -32,6 +32,7 @@ section_names:
 - coding
 - devops
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog curates this comprehensive December 2025 edition, highlighting technical insight and walkthroughs by MVPs and Super Users covering advanced development, deployment, and analytics in Microsoft Fabric.<!--excerpt_end-->
 

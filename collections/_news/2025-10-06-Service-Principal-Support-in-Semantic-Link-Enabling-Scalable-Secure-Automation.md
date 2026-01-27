@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/service-principal-support-in-semantic-link-enabling-scalable-secure-automation/
 title: 'Service Principal Support in Semantic Link: Enabling Scalable, Secure Automation'
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 The Microsoft Fabric Blog team outlines how the introduction of Service Principal support in Semantic Link empowers data professionals to build secure, scalable automation for notebooks and pipelines—without relying on user credentials.<!--excerpt_end-->
 

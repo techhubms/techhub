@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/jfrog-continues-leaping-at-swampup/?utm_source=rss&utm_medium=rss&utm_campaign=jfrog-continues-leaping-at-swampup
 title: 'JFrog SwampUP 2025 Highlights: AI-Driven DevOps, Governance, and Secure Software Supply Chains'
 author: Alan Shimel
@@ -28,6 +28,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Alan Shimel explores major developments from JFrog’s SwampUP 2025, examining how AI, DevOps automation, and enterprise governance are converging to transform software supply chains.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=e86IqIkxVhU
 title: CSX's Digital Transformation with Azure, AI, and Microsoft Fabric
 author: Microsoft Events
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 In this Microsoft Ignite 2024 session, Dave Rich from CSX joins Microsoft Events to discuss CSX’s digital transformation powered by Azure, AI, and data analytics, revealing practical insights for tech-driven modernization.<!--excerpt_end-->
 

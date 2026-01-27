@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-august-2025/
 title: 'Fabric Influencers Spotlight: August 2025 Edition'
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ tags:
 - Translytical Task Flows
 section_names:
 - ml
+primary_section: ml
 ---
 The Microsoft Fabric Blog team highlights technical contributions from MVPs and Super Users across key areas of Fabric, featuring data science tutorials, engineering tips, certification guidance, and governance best practices.<!--excerpt_end-->
 

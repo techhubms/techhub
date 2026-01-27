@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-15-deprecating-copilot-text-completion-for-pull-request-descriptions
 title: GitHub Copilot Text Completion for Pull Request Descriptions to Be Deprecated
 author: Allison
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces that Copilot text completion for pull request descriptions will be deprecated on September 12, 2025, as GitHub shifts focus toward improved pull request summary features.<!--excerpt_end-->
 

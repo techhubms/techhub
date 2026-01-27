@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-ai-is-transforming-devops-smarter-faster-and-more-reliable-software-delivery/
 title: 'How AI is Transforming DevOps: Smarter, Faster, and More Reliable Software Delivery'
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Dellenny outlines how AI is revolutionizing DevOps by enabling smarter automation, from predictive monitoring to automated testing and resource optimization, creating a more reliable and efficient software delivery process.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/company-news/your-guide-to-github-universe-2025-the-schedule-just-launched/
 title: 'Your Guide to GitHub Universe 2025: Event Schedule, Learning, and Certifications Announced'
 author: GitHub Staff
@@ -24,6 +24,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 GitHub Staff presents highlights of GitHub Universe 2025, where attendees will explore AI-powered development, Copilot, automation, and security with sessions, certifications, and mentoring opportunities.<!--excerpt_end-->
 

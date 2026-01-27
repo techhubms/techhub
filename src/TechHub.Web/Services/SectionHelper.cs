@@ -8,7 +8,7 @@ internal static class SectionHelper
 {
     /// <summary>
     /// Gets the display title for a section URL.
-    /// Prefer using section.Title from SectionDto when available.
+    /// Prefer using section.Title from Section when available.
     /// This is only a fallback for when section data isn't loaded yet.
     /// </summary>
     public static string GetSectionDisplayName(string sectionUrl)

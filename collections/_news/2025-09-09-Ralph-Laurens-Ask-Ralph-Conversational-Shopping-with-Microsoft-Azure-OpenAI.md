@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/industry/blog/retail/2025/09/09/ask-ralph-where-style-meets-ai-a-new-era-of-conversational-commerce/
 title: "Ralph Lauren's Ask Ralph: Conversational Shopping with Microsoft Azure OpenAI"
 author: stclarke
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke reports on Ralph Lauren's launch of Ask Ralph, an AI-driven shopping assistant powered by Microsoft Azure OpenAI, aimed at revolutionizing digital retail engagement.<!--excerpt_end-->
 

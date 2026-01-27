@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://hiddedesmet.com/model-context-protocol-mcp
 title: Understanding the Model Context Protocol (MCP)
 author: Hidde de Smet
@@ -16,6 +16,7 @@ tags:
 - Scalability
 section_names:
 - ai
+primary_section: ai
 ---
 Written by Hidde de Smet, this article delves into the Model Context Protocol (MCP), highlighting its design, features, and transformative impact on AI integration for organizations such as Microsoft.<!--excerpt_end-->
 

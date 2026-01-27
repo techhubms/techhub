@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/building-environmental-aware-api-platforms-with-azure-api/ba-p/4458308
 title: 'Environmental Sustainability Features in Azure API Management: Minimizing API Infrastructure Carbon Impact'
 author: tomkerkhovemicrosoft
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Tom Kerkhove introduces public preview features in Azure API Management aimed at reducing the carbon footprint of API and AI workloads. The article guides readers through configuring carbon-aware traffic shifting, building sustainability-aligned policies, and leveraging new tools for compliance and sustainable cloud practices.<!--excerpt_end-->
 

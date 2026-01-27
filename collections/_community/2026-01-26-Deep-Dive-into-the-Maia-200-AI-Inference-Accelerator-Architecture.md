@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Saurabh Dighe presents a deep technical examination of Microsoft’s Maia 200 silicon, revealing its purpose-built innovations for AI inference at Azure scale and how its hardware and SDK empower developers and cloud AI workloads.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ob-TOPfQmbk
 title: Building Scalable AI Apps and Agents with VS Code, GitHub Copilot, and Agent Framework
 author: GitHub
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a demo-driven walkthrough from Amanda Silver, Rong Lu, and Shayne Boyer, exploring how developers can build scalable intelligent apps and multi-agent workflows using VS Code, GitHub Copilot, Agent Framework, and Azure AI Foundry.<!--excerpt_end-->
 

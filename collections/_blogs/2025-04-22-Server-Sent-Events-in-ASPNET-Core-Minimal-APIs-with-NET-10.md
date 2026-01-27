@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/server-sent-events-in-aspnet-core-and-dotnet-10
 title: Server-Sent Events in ASP.NET Core Minimal APIs with .NET 10
 author: Khalid Abuhakmeh
@@ -23,6 +23,7 @@ tags:
 - WebSockets
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, Khalid Abuhakmeh showcases how to implement Server-Sent Events with ASP.NET Core Minimal APIs in .NET 10, highlighting practical differences with SignalR and providing sample C# and JavaScript code for real-time feeds.<!--excerpt_end-->
 

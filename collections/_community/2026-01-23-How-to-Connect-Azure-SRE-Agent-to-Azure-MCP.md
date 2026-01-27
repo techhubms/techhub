@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 dbandaru presents a practical guide on connecting the Azure SRE Agent to Azure MCP, with step-by-step instructions for secure configuration, managed identity, and automation best practices.<!--excerpt_end-->
 

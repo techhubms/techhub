@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke reports on the transformative impact of AI—specifically Microsoft Azure-based solutions—on India’s law firms and justice system, including the experiences of SCC Online and Trilegal.<!--excerpt_end-->
 

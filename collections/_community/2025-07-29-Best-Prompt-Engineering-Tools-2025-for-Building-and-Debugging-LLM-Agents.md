@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AI_Agents/comments/1mc4q9i/best_prompt_engineering_tools_2025_for_building/
 title: Best Prompt Engineering Tools (2025) for Building and Debugging LLM Agents
 author: Educational-Bison786
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Educational-Bison786 shares an updated roundup of prompt engineering tools invaluable for those building and refining LLM agent systems, with insights into each tool's strengths and recommendations for serious agent developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=4SA8Iu5su6c
 title: From Legacy to Modern .NET on Azure with Visual Studio 2026, Azure App Service, and GitHub Copilot
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Presented by Jon Galloway and Gaurav Seth, this Microsoft Ignite 2025 session demonstrates how to upgrade legacy .NET apps using Visual Studio 2026, GitHub Copilot, and Azure App Service, offering developers practical paths to scalable, secure, AI-ready cloud solutions.<!--excerpt_end-->
 

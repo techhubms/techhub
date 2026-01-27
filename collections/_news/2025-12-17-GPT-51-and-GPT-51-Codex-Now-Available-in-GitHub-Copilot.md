@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot
 title: GPT-5.1 and GPT-5.1-Codex Now Available in GitHub Copilot
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the general availability of GPT-5.1 and GPT-5.1-Codex for GitHub Copilot users, with expanded access and integration instructions for both organizations and individuals.<!--excerpt_end-->
 

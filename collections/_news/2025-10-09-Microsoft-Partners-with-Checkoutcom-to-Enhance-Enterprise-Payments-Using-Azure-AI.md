@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://ukstories.microsoft.com/features/microsoft-and-checkout-com-unite-to-elevate-enterprise-payments-performance/
 title: Microsoft Partners with Checkout.com to Enhance Enterprise Payments Using Azure AI
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke reports on the new partnership between Microsoft and Checkout.com, where Azure’s AI and cloud capabilities will power faster and more secure digital payments for global enterprises.<!--excerpt_end-->
 

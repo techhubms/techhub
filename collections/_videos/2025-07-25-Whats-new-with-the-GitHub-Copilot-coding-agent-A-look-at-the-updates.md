@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=vgPl6sK6rQo
 title: "What's new with the GitHub Copilot coding agent: A look at the updates"
 author: GitHub
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents an overview of recent upgrades to the GitHub Copilot coding agent. This roundup covers enhanced features, extended user access, and productivity-boosting tools for developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1mbguxq/how_to_only_allow_prs_if_pipelines_x_y_both_run/
 title: Enforcing PR Branch Policies with Multiple Required Pipelines in Azure DevOps
 author: panzerbjrn
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Panzerbjrn and other community members discuss how to enforce that PRs in Azure DevOps are only merged if specific pipelines (X & Y) both succeed. The thread includes setup guidance and clarifies differences between classic and YAML pipelines.<!--excerpt_end-->
 

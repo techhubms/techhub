@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/public-preview-announcement-fabric-spark-applications-comparison/
 title: Microsoft Fabric Spark Applications Comparison Feature (Preview)
 author: Microsoft Fabric Blog
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces the Spark Applications Comparison feature, allowing developers and data engineers to analyze, debug, and optimize Spark application runs by comparing key performance metrics side by side.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-communication-services/building-an-ai-receptionist-a-hands-on-demo-with-azure/ba-p/4442959
 title: 'Building an AI Receptionist: Hands-On Demo with Azure Communication Services and OpenAI'
 author: seankeegan
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 In this post, seankeegan demonstrates how to build an AI-driven SMS receptionist with Azure Communication Services and Azure OpenAI, sharing step-by-step guidance for developers seeking to automate scheduling via conversational text.<!--excerpt_end-->
 

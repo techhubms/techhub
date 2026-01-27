@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=gAmgPEj7JoU
 title: How AI Voice Agents Transform Medical Documentation in Real Time
 author: Microsoft Developer
@@ -24,6 +24,7 @@ tags:
 - Workflow Optimization
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Developer presents an overview of using AI-powered Medical Voice Agents to automate clinical documentation and workflow, highlighting Copilot-driven summarization and real-time integration with Microsoft solutions.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://roadtoalm.com/2025/06/05/developer-experience-more-than-a-buzzword/
 title: 'Developer Experience: More Than a Buzzword'
 author: Rene van Osnabrugge
@@ -21,6 +21,7 @@ tags:
 - Uncategorized
 section_names:
 - devops
+primary_section: devops
 ---
 In this post, Rene van Osnabrugge shares stories and lessons from the LEAD podcast, delving into the realities and evolving practices of developer experience and engineering culture.<!--excerpt_end-->
 

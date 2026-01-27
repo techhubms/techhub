@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/introducing-data-ingestion-building-blocks-preview/
 title: Introducing Data Ingestion Building Blocks in .NET for AI Applications
 author: Luis Quintanilla, Adam Sitnik
@@ -32,6 +32,7 @@ section_names:
 - ai
 - coding
 - ml
+primary_section: ai
 ---
 Luis Quintanilla and Adam Sitnik announce a preview of modular .NET building blocks for data ingestion, detailing how developers can build scalable, flexible AI pipelines for intelligent applications.<!--excerpt_end-->
 

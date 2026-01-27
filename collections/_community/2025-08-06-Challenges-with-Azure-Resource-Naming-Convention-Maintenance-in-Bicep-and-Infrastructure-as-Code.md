@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mjcixd/azure_resource_naming_conventions_not_maintained/
 title: Challenges with Azure Resource Naming Convention Maintenance in Bicep and Infrastructure as Code
 author: d2peak
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 d2peak and the community discuss the challenges of maintaining Azure resource naming conventions in Bicep and azd workflows, weighing Microsoft's outdated tools against custom solutions and automation.<!--excerpt_end-->
 

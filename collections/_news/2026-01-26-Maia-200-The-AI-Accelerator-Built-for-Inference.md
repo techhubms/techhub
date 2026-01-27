@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Scott Guthrie introduces Maia 200, Microsoft's new AI inference accelerator, highlighting its architecture, datacenter deployment, Azure integration, and developer SDK for building the next generation of cloud-scale AI solutions.<!--excerpt_end-->
 

@@ -18,13 +18,14 @@ public class SectionTests
             Url = "/ai",
             Collections =
             [
-                new CollectionReference
+                new Collection
                 {
                     Name = "news",
                     Title = "News",
                     Url = "/ai/news",
                     Description = "Latest AI news",
-                    IsCustom = false
+                    IsCustom = false,
+                    DisplayName = ""
                 }
             ]
         };
@@ -63,13 +64,14 @@ public class SectionTests
             Url = "/test",
             Collections =
             [
-                new CollectionReference
+                new Collection
                 {
                     Name = "news",
                     Title = "News",
                     Url = "/test/news",
                     Description = "Test",
-                    IsCustom = false
+                    IsCustom = false,
+                    DisplayName = ""
                 }
             ]
         };
@@ -99,13 +101,14 @@ public class SectionTests
             Url = "/test",
             Collections =
             [
-                new CollectionReference
+                new Collection
                 {
                     Name = "news",
                     Title = "News",
                     Url = "/test/news",
                     Description = "Test",
-                    IsCustom = false
+                    IsCustom = false,
+                    DisplayName = ""
                 }
             ]
         };
@@ -139,13 +142,14 @@ public class SectionTests
             Url = "/test",
             Collections =
             [
-                new CollectionReference
+                new Collection
                 {
                     Name = "news",
                     Title = "News",
                     Url = "/test/news",
                     Description = "Test",
-                    IsCustom = false
+                    IsCustom = false,
+                    DisplayName = ""
                 }
             ]
         };
@@ -179,13 +183,14 @@ public class SectionTests
             Url = "/test",
             Collections =
             [
-                new CollectionReference
+                new Collection
                 {
                     Name = "news",
                     Title = "News",
                     Url = "/test/news",
                     Description = "Test",
-                    IsCustom = false
+                    IsCustom = false,
+                    DisplayName = ""
                 }
             ]
         };
@@ -213,13 +218,14 @@ public class SectionTests
             Url = "/test",
             Collections =
             [
-                new CollectionReference
+                new Collection
                 {
                     Name = "news",
                     Title = "News",
                     Url = "/test/news",
                     Description = "Test",
-                    IsCustom = false
+                    IsCustom = false,
+                    DisplayName = ""
                 }
             ]
         };
@@ -249,13 +255,14 @@ public class SectionTests
             Url = "",
             Collections =
             [
-                new CollectionReference
+                new Collection
                 {
                     Name = "news",
                     Title = "News",
                     Url = "/test/news",
                     Description = "Test",
-                    IsCustom = false
+                    IsCustom = false,
+                    DisplayName = ""
                 }
             ]
         };
@@ -288,13 +295,14 @@ public class SectionTests
             Url = invalidUrl,
             Collections =
             [
-                new CollectionReference
+                new Collection
                 {
                     Name = "news",
                     Title = "News",
                     Url = "/test/news",
                     Description = "Test",
-                    IsCustom = false
+                    IsCustom = false,
+                    DisplayName = ""
                 }
             ]
         };
@@ -327,13 +335,14 @@ public class SectionTests
             Url = validUrl,
             Collections =
             [
-                new CollectionReference
+                new Collection
                 {
                     Name = "news",
                     Title = "News",
                     Url = "/test/news",
                     Description = "Test",
-                    IsCustom = false
+                    IsCustom = false,
+                    DisplayName = ""
                 }
             ]
         };
@@ -387,29 +396,32 @@ public class SectionTests
             Url = "/test",
             Collections =
             [
-                new CollectionReference
+                new Collection
                 {
                     Name = "news",
                     Title = "News",
                     Url = "/ai/news",
                     Description = "Latest AI news",
-                    IsCustom = false
+                    IsCustom = false,
+                    DisplayName = ""
                 },
-                new CollectionReference
+                new Collection
                 {
                     Name = "blogs",
                     Title = "Blogs",
                     Url = "/ai/blogs",
                     Description = "AI blog posts",
-                    IsCustom = false
+                    IsCustom = false,
+                    DisplayName = ""
                 },
-                new CollectionReference
+                new Collection
                 {
                     Name = "videos",
                     Title = "Videos",
                     Url = "/ai/videos",
                     Description = "AI video content",
-                    IsCustom = false
+                    IsCustom = false,
+                    DisplayName = ""
                 }
             ]
         };

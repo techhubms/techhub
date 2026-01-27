@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-05-copilot-coding-agent-now-supports-pull-request-templates
 title: Copilot Coding Agent Now Supports Pull Request Templates
 author: Allison
@@ -19,6 +19,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison shares news on the Copilot coding agent's new ability to follow repository pull request templates, streamlining automated code contributions on GitHub.<!--excerpt_end-->
 

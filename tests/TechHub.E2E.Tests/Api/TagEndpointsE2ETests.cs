@@ -1,8 +1,7 @@
 using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
-using TechHub.Core.DTOs;
-using TechHub.TestUtilities;
+using TechHub.Core.Models;
 
 namespace TechHub.E2E.Tests.Api;
 

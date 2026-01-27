@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/building-a-persistent-counter-with-alpinejs
 title: Building a Persistent Counter with Alpine.js and ASP.NET Core
 author: Khalid Abuhakmeh
@@ -22,6 +22,7 @@ tags:
 - Web Development
 section_names:
 - coding
+primary_section: coding
 ---
 Khalid Abuhakmeh explains how to build a persistent counter with Alpine.js, demonstrating concepts similar to Blazor's counter sample and showcasing ASP.NET Core integration.<!--excerpt_end-->
 

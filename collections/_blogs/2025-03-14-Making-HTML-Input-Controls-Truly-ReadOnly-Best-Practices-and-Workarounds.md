@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2025/Mar/14/Making-Html-Input-Controls-Truly-ReadOnly
 title: 'Making HTML Input Controls Truly ReadOnly: Best Practices and Workarounds'
 author: Rick Strahl
@@ -22,6 +22,7 @@ tags:
 - Web Development
 section_names:
 - coding
+primary_section: coding
 ---
 Rick Strahl offers practical solutions for improving HTML readonly input controls, providing tips on CSS, tabindex, and UI design trade-offs for web developers.<!--excerpt_end-->
 

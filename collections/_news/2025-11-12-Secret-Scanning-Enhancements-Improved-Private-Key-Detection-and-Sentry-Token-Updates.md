@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-12-secret-scanning-improves-private-key-detection
 title: 'Secret Scanning Enhancements: Improved Private Key Detection and Sentry Token Updates'
 author: Allison
@@ -22,6 +22,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison explains the latest advancements in GitHub's secret scanning, including improved private key detection capabilities and updated Sentry token patterns, aimed at strengthening security for developers and organizations.<!--excerpt_end-->
 

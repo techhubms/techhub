@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_another-first-for-our-ai-fleet-a-supercomputing-activity-7382086397152858113-BlSd
 title: Microsoft Unveils Supercomputing Cluster with 4600+ NVIDIA GB300 GPUs for Next-Gen AI Workloads
 author: stclarke
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Satya Nadella shares details on Microsoft's latest supercomputing milestone, featuring a massive AI-focused cluster with over 4600 NVIDIA GB300 GPUs. This investment in AI infrastructure paves the way for scaling next-generation workloads. Authored by Satya Nadella.<!--excerpt_end-->
 

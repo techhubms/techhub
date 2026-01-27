@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2025/
 title: 'Azure Developer CLI (azd) October 2025: Layered Provisioning, Service Dependencies, and More'
 author: PuiChee (PC) Chan
@@ -36,6 +36,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 PuiChee (PC) Chan details the October 2025 Azure Developer CLI (azd) releases, introducing layered provisioning, service dependencies, the new azd publish command, and significant improvements to extension management and development features.<!--excerpt_end-->
 

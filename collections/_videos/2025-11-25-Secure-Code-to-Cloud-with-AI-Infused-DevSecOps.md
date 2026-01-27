@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=AiFB7jlmZ3E
 title: Secure Code to Cloud with AI-Infused DevSecOps
 author: Microsoft Events
@@ -24,6 +24,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Microsoft Events presents a session featuring Oz Wilder, Charlie Doubek, Marcelo Oliveira, and Manuel Sanchez Rodriguez on streamlining DevSecOps with GitHub Advanced Security, Microsoft Defender for Cloud, and AI-driven agentic workflows.<!--excerpt_end-->
 

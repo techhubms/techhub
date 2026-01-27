@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/12/09/shai-hulud-2-0-guidance-for-detecting-investigating-and-defending-against-the-supply-chain-attack/
 title: 'Shai-Hulud 2.0: Guidance for Detecting, Investigating, and Defending Against the Supply Chain Attack'
 author: Microsoft Defender Security Research Team
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Microsoft Defender Security Research Team presents an in-depth analysis of the Shai-Hulud 2.0 attack, offering actionable detection, investigation, and defense guidance for developers and security professionals in cloud-native environments.<!--excerpt_end-->
 

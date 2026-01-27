@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://developer.microsoft.com/blog/join-us-for-ai-devdays
 title: What to Expect at AI Dev Days Virtual Event Dec. 10-11
 author: stclarke
@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 stclarke introduces the agenda and session highlights of AI Dev Days, Microsoft's flagship AI developer event streaming Dec. 10-11, 2025. Dive into sessions on GitHub Copilot, Microsoft Foundry, and the latest AI tools for developers.<!--excerpt_end-->
 

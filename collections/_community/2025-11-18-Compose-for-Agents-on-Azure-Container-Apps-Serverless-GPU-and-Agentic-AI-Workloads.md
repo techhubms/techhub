@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/compose-for-agents-on-azure-container-apps-and-serverless-gpu/ba-p/4471061
 title: 'Compose for Agents on Azure Container Apps: Serverless GPU and Agentic AI Workloads'
 author: simonjj
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Simonjj explores the public preview of Compose for Agents on Azure Container Apps, showing how developers can leverage serverless GPUs, Docker Compose, and a wide selection of AI frameworks to build and scale agentic applications on Azure.<!--excerpt_end-->
 

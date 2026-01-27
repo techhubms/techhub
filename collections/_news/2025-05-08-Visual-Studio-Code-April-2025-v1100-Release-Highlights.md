@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_100
 title: Visual Studio Code April 2025 (v1.100) Release Highlights
 author: Visual Studio Code Team
@@ -32,6 +32,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Visual Studio Code Team delivers an in-depth summary of the April 2025 (v1.100) release, focusing on new AI chat workflows, Copilot-powered code editing, agent mode, developer security, and ecosystem improvements.<!--excerpt_end-->
 

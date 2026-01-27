@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=CV1SP3VN_dA
 title: From VMs and Containers to AI Apps with Azure Red Hat OpenShift
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Presented by Microsoft Events, this session shows how organizations use Azure Red Hat OpenShift to simplify operations and drive AI innovation at scale, featuring lessons and real-world examples from Banco Bradesco.<!--excerpt_end-->
 

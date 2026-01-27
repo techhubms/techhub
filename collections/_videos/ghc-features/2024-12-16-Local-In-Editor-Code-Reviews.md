@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/t74rlukNevM
 title: Local In-Editor Code Reviews
 author: Randy Pagels
@@ -16,6 +16,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This video demonstrates GitHub Copilot's Local In-Editor Code Reviews feature. Highlight and review suggested code changes directly from within the Visual Studio editor.<!--excerpt_end-->
 

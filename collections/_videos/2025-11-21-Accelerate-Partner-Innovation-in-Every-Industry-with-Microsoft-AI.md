@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=qeRDuU1XnwE
 title: Accelerate Partner Innovation in Every Industry with Microsoft AI
 author: Microsoft Events
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events hosts an insightful Ignite session where speakers like Kathleen Mitford and partners share how Microsoft and its partner ecosystem accelerate industry impact with AI, offering practical examples of co-innovation and AI agent integration.<!--excerpt_end-->
 

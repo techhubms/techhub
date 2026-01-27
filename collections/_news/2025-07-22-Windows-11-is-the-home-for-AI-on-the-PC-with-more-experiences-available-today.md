@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.windows.com/windowsexperience/2025/07/22/windows-11-is-the-home-for-ai-on-the-pc-with-even-more-experiences-available-today/
 title: Windows 11 is the home for AI on the PC, with more experiences available today
 author: stclarke
@@ -16,6 +16,7 @@ tags:
 - Windows 11
 section_names:
 - ai
+primary_section: ai
 ---
 In an article by stclarke, the growing role of Windows 11 as the primary platform for AI-powered experiences on the PC is explored. The piece highlights recent advancements and features that leverage artificial intelligence within Microsoft's latest operating system, underscoring Windows 11's commitment to enhancing everyday computing through AI innovations.<!--excerpt_end-->
 

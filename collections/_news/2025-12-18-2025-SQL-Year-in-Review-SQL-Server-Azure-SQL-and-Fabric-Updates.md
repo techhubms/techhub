@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/2025-year-in-review-whats-new-across-sql-server-azure-sql-and-sql-database-in-fabric/
 title: '2025 SQL Year in Review: SQL Server, Azure SQL, and Fabric Updates'
 author: Microsoft Fabric Blog
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog authors Anna and Marisa look back at a transformative year for SQL technologies, summarizing advancements across SQL Server, Azure SQL, Fabric SQL database, and related tooling, including Copilot and AI integration.<!--excerpt_end-->
 

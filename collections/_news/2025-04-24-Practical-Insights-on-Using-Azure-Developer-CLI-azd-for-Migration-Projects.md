@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-in-a-real-life-scenario/
 title: Practical Insights on Using Azure Developer CLI (azd) for Migration Projects
 author: Frank Boucher
@@ -16,6 +16,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 In this post, Frank Boucher details firsthand lessons from migrating AzUrlShortener to Azure using the Azure Developer CLI (azd). Gain insights into automating IaC with Bicep, managing deployment pipelines, and overcoming real-life migration challenges.<!--excerpt_end-->
 

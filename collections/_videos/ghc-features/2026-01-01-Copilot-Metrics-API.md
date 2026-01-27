@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Copilot Metrics API
 author: TBD
@@ -12,6 +12,7 @@ tags: []
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This content demonstrates GitHub Copilot's Copilot Metrics API feature. Programmatic access to Copilot usage metrics and analytics<!--excerpt_end-->
 

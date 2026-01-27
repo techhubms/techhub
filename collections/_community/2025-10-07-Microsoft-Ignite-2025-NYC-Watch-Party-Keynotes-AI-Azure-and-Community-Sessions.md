@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-events/ignite-nyc-join-the-microsoft-ignite-2026-watch-party-in-times/ec-p/4459801#M661
 title: 'Microsoft Ignite 2025 NYC Watch Party: Keynotes, AI, Azure, and Community Sessions'
 author: MariselaC
@@ -22,6 +22,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Organized by MariselaC, the Microsoft Ignite 2025 NYC Watch Party brings the tech community together for keynotes, AI/ML sessions, .NET, Azure, Power Platform, and networking opportunities in Times Square.<!--excerpt_end-->
 

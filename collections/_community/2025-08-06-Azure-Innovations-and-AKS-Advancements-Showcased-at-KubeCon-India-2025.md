@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-at-kubecon-india-2025-hyderabad-india-6-7-august-2025/ba-p/4440439
 title: Azure Innovations and AKS Advancements Showcased at KubeCon India 2025
 author: coryskimming
@@ -28,6 +28,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Coryskimming delivers an in-depth look at Microsoft’s announcements from KubeCon India 2025, highlighting significant AKS improvements, AI integration, security advancements, and operational best practices for the Azure Kubernetes Service community.<!--excerpt_end-->
 

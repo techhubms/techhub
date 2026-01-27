@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Def3zt5RFpA
 title: 'AspiriFridays: Exploring Azure Data API Builder with Tommaso Stocchi and Jerry Nixon'
 author: dotnet
@@ -16,6 +16,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 In this AspiriFridays episode, hosts Maddy and Damian are joined by Tommaso Stocchi and Jerry Nixon to dive into Azure Data API Builder. Learn about its features and best practices straight from Microsoft experts.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/01/cybersecurity-awareness-month-security-starts-with-you/
 title: 'Cybersecurity Awareness Month: Elevating Security Culture with Microsoft Resources'
 author: Vasu Jakkal
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Vasu Jakkal discusses ways organizations can foster a security-first culture during Cybersecurity Awareness Month. This article covers Microsoft's Secure Future Initiative, security education tools, and the growing importance of security in the era of AI.<!--excerpt_end-->
 

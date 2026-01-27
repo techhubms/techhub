@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=kV3yjDYC8Hg
 title: 'Building Trustworthy and Auditable AI Systems: Practical Strategies from Microsoft Ignite 2025'
 author: Microsoft Events
@@ -32,6 +32,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events delivers insights at Microsoft Ignite 2025 on building AI systems that are trustworthy and auditable, sharing strategies to ensure that enterprise solutions are both understandable and accountable.<!--excerpt_end-->
 

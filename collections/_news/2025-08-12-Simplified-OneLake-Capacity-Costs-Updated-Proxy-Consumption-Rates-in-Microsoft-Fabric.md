@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-costs-simplified-lowering-capacity-utilization-when-accessing-onelake/
 title: 'Simplified OneLake Capacity Costs: Updated Proxy Consumption Rates in Microsoft Fabric'
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details a new update that simplifies OneLake capacity utilization costs, authored by the Microsoft Fabric team. The change aligns proxy and redirect transaction rates, improving cost management and billing predictability for organizations using OneLake.<!--excerpt_end-->
 

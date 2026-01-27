@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-12-github-copilot-in-vs-code-august-release-v1-104
 title: 'GitHub Copilot in Visual Studio Code August 2025 Update (v1.104): New Features and Security Enhancements'
 author: Allison
@@ -26,6 +26,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Allison details the August 2025 release of GitHub Copilot in Visual Studio Code, outlining major enhancements to workflow flexibility, security, and AI-powered development, with features like auto model selection and improved file confirmation processes.<!--excerpt_end-->
 

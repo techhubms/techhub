@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 11
 date: 2021-05-01 00:00:00 +00:00
 author: Xebia
@@ -28,6 +28,7 @@ section_names:
 - devops
 - security
 - github-copilot
+primary_section: github-copilot
 ---
 This edition of XPRT Magazine delivers hands-on guidance for secure DevOps, cloud-native transformation, and developer productivity. Explore real-world stories on security, compliance, automation, and innovation, with practical advice for building resilient, modern software in the Microsoft ecosystem.
 <!--excerpt_end-->

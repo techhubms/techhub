@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/expanding-the-public-preview-of-the-azure-sre-agent/ba-p/4458514
 title: 'Azure SRE Agent Public Preview Expands: New Features for DevOps and Automation'
 author: Mayunk_Jain
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Mayunk_Jain introduces the expanded public preview for Azure SRE Agent, focusing on automation, governance, diagnostics, and incident management for DevOps and SRE teams operating in Azure.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-23-upcoming-deprecation-of-select-copilot-models-from-claude-openai-and-gemini
 title: Upcoming Deprecation of Select Copilot Models from Claude, OpenAI, and Gemini
 author: Kate Catlin
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Kate Catlin outlines the upcoming retirement of several AI models in GitHub Copilot, guiding administrators and developers on how to transition to new supported models.<!--excerpt_end-->
 

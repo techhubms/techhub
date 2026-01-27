@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/copilot-assisted-real-time-data-exploration-preview/
 title: Copilot-Assisted Real-Time Data Exploration in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog details how Copilot now enables interactive and intuitive real-time data exploration using natural language queries, helping users uncover insights visually and effortlessly.<!--excerpt_end-->
 

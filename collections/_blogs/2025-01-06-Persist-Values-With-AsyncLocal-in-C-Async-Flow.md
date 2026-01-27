@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code-maze.com/csharp-persist-values-with-asynclocal-in-async-flow/
 title: Persist Values With AsyncLocal in C# Async Flow
 author: Bozo Spoljaric
@@ -18,6 +18,7 @@ tags:
 - Thread Context
 section_names:
 - coding
+primary_section: coding
 ---
 Bozo Spoljaric introduces the AsyncLocal class, revealing how it enables value persistence throughout asynchronous flows in C#. The article offers step-by-step examples and guidance on when and how to effectively use AsyncLocal for more maintainable .NET code.<!--excerpt_end-->
 

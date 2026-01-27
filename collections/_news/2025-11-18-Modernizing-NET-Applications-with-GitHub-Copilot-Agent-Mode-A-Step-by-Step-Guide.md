@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/modernizing-dotnet-with-github-copilot-agent-mode/
 title: 'Modernizing .NET Applications with GitHub Copilot Agent Mode: A Step-by-Step Guide'
 author: Mika Dumont
@@ -28,6 +28,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Mika Dumont presents a practical guide for developers to modernize legacy .NET applications using GitHub Copilot agent mode in Visual Studio. The article covers automated upgrades, cloud migration to Azure, and integration of security and DevOps practices.<!--excerpt_end-->
 

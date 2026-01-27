@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/Investor/earnings/FY-2025-Q4/press-release-webcast
 title: Microsoft Cloud and AI Strength Fuels Q4 2025 Financial Results
 author: stclarke
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Authored by stclarke, this summary reviews Microsoft's Q4 2025 financial results, highlighting major gains in cloud and AI segments and outlining revenues, growth drivers, and business outlook.<!--excerpt_end-->
 

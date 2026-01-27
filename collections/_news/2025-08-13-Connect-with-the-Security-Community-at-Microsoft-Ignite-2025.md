@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/08/13/connect-with-the-security-community-at-microsoft-ignite-2025/
 title: Connect with the Security Community at Microsoft Ignite 2025
 author: stclarke
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 stclarke highlights Microsoft Ignite 2025, an event tailored for security professionals and leaders to explore AI-powered security innovations, network with peers, and participate in hands-on labs and certification opportunities.<!--excerpt_end-->
 

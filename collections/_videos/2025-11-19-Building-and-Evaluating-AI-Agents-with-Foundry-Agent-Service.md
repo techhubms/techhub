@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=oF5ib8AIVCE
 title: Building and Evaluating AI Agents with Foundry Agent Service
 author: Microsoft Events
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Presented by Microsoft Events and Katherin Madche at Ignite 2025, this session demonstrates how to build and evaluate robust AI agents using Foundry Agent Service, Azure Functions, and W&B Weave.<!--excerpt_end-->
 

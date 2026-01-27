@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=VfZlglOWWZw
 title: 'Full Course: MCP for Beginners (Lessons 1-11) by Microsoft Developer'
 author: Microsoft Developer
@@ -18,6 +18,7 @@ section_names:
 - ai
 - coding
 - security
+primary_section: ai
 ---
 Microsoft Developer presents an in-depth MCP for Beginners course led by April Gittens, covering everything from MCP fundamentals to building and deploying AI agents in Visual Studio Code.<!--excerpt_end-->
 

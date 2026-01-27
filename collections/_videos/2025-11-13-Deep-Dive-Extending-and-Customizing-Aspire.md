@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=UQiL3nbQbtM
 title: 'Deep Dive: Extending and Customizing Aspire'
 author: dotnet
@@ -31,6 +31,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 dotnet presents an in-depth session on extending and customizing .NET Aspire for cloud-native development, highlighting practical ways developers can adapt Aspire to their specific infrastructure and integration needs.<!--excerpt_end-->
 

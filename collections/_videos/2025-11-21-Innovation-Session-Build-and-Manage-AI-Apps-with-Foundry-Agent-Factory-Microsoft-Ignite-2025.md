@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=QoZRWC8irLs
 title: 'Innovation Session: Build and Manage AI Apps with Foundry Agent Factory – Microsoft Ignite 2025'
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - azure
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Events presents a session featuring Yina Arenas, Sarah Bird, Amanda Silver, and Marco Casalaina on building modular AI agent solutions with Microsoft Foundry, showcasing secure orchestration, scaling, GitHub Copilot integration, and best practices for developers.<!--excerpt_end-->
 

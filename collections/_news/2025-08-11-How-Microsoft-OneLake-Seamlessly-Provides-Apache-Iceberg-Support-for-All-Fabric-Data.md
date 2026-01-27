@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/how-to-access-your-microsoft-fabric-tables-in-apache-iceberg-format/
 title: How Microsoft OneLake Seamlessly Provides Apache Iceberg Support for All Fabric Data
 author: Microsoft Fabric Blog
@@ -28,6 +28,7 @@ tags:
 - Virtualization
 section_names:
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog, with Kevin Liu, presents how Microsoft OneLake now seamlessly virtualizes Delta Lake tables as Apache Iceberg tables, enabling true multi-engine analytics without data duplication.<!--excerpt_end-->
 

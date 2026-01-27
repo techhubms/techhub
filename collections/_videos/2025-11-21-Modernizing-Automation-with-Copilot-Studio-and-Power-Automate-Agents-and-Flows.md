@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=aMPfb6TVfA4
 title: 'Modernizing Automation with Copilot Studio and Power Automate: Agents and Flows'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - RPA
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents a session on combining Copilot Studio and Power Automate to build modern automation using agents and RPA, with demos and integration strategies.<!--excerpt_end-->
 

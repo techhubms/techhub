@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/powershell/microsoft-update-changes-for-powershell-7/
 title: 'Microsoft Update Changes for PowerShell 7: Expected Behavior and Update Rules'
 author: Steven Bucher
@@ -20,6 +20,7 @@ tags:
 - WSUS
 section_names:
 - coding
+primary_section: coding
 ---
 In this blog post, Steven Bucher from the PowerShell Team explains important changes to how Microsoft Update handles PowerShell 7 updates, including expected behaviors for LTS, stable, and preview versions.<!--excerpt_end-->
 

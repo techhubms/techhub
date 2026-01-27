@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2026-01-15-agentic-memory-for-github-copilot-is-in-public-preview
 title: Agentic Memory Now in Public Preview for GitHub Copilot
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces Copilot memory, now available as a public preview for paid GitHub Copilot plans, highlighting how repository-aware agentic memory enables smarter, context-sensitive suggestions.<!--excerpt_end-->
 

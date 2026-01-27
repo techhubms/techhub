@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-public-preview-of-vm-customization-in-azure-disable/ba-p/4462417
 title: 'Public Preview: VM Customization in Azure Enables Disabling Multithreading and Constrained Cores'
 author: eehindero
@@ -22,6 +22,7 @@ tags:
 - VM Customization
 section_names:
 - azure
+primary_section: azure
 ---
 eehindero announces the public preview of Azure VM Customization, highlighting new support for disabling SMT/hyperthreading and setting constrained core counts, which empowers users to optimize performance and licensing costs.<!--excerpt_end-->
 

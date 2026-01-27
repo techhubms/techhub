@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 The .NET Team invites developers to NDC London 2026 to explore the latest in .NET 10, Azure, AI-powered development, and GitHub Copilot, with technical sessions and 1:1 meetups.<!--excerpt_end-->
 

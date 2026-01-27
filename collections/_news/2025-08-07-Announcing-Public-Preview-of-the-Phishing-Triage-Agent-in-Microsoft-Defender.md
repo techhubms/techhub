@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/announcing-public-preview-phishing-triage-agent-in-microsoft-defender/4438301
 title: Announcing Public Preview of the Phishing Triage Agent in Microsoft Defender
 author: Cristina Da Gama Henriquez
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Cristina Da Gama Henriquez announces the public preview of the Phishing Triage Agent in Microsoft Defender, highlighting its AI-powered, autonomous phishing detection capabilities for SOC teams.<!--excerpt_end-->
 

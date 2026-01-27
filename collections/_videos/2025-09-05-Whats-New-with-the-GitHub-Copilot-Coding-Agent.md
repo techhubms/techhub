@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=t4ERV6aHCPM
 title: What's New with the GitHub Copilot Coding Agent
 author: GitHub
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a showcase with Tim and Andrea Griffiths introducing the Copilot Coding Agent, highlighting new features like mobile tasking, in-browser validation, and screenshot integration for streamlined developer workflows.<!--excerpt_end-->
 

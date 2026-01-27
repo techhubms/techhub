@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-16-enterprise-governance-and-policy-improvements-for-secret-scanning-now-generally-available
 title: Enterprise Governance and Policy Improvements for GitHub Secret Scanning
 author: Allison
@@ -22,6 +22,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison summarizes significant improvements to GitHub's secret scanning for enterprises, including expanded alert permissions and more flexible policy management across teams and roles.<!--excerpt_end-->
 

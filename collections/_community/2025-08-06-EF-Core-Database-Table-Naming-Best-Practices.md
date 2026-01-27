@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mje247/ef_core_table_naming/
 title: EF Core Database Table Naming Best Practices
 author: jemofcourse
@@ -20,6 +20,7 @@ tags:
 - Table Naming
 section_names:
 - coding
+primary_section: coding
 ---
 jemofcourse shares community insights and best practices on naming tables with Entity Framework Core, exploring default behaviors, Fluent API, and naming conventions for database clarity.<!--excerpt_end-->
 

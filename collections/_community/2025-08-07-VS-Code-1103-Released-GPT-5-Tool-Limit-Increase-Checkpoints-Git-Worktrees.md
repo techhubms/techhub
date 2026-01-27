@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk7d03/vs_code_1103_released_with_gpt5_tool_limit/
 title: 'VS Code 1.103 Released: GPT-5, Tool Limit Increase, Checkpoints, Git Worktrees'
 author: connor4312
@@ -22,6 +22,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 connor4312 hosts a discussion about the new features in VS Code 1.103, including GPT-5, increased tool limits, and the Copilot rollout, with input from the developer community.<!--excerpt_end-->
 

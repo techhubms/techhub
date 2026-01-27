@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-28-copilot-coding-agent-now-supports-self-hosted-runners
 title: Copilot Coding Agent Now Supports Self-Hosted Runners Using ARC
 author: Allison
@@ -26,6 +26,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison details the new capability for GitHub Copilot coding agents to leverage self-hosted runners via Actions Runner Controller, enabling more customizable and secure development environments for automated coding workflows.<!--excerpt_end-->
 

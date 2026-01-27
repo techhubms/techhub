@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2026/01/06/introducing-the-microsoft-defender-experts-suite-elevate-your-security-with-expert-led-services/
 title: 'Introducing the Microsoft Defender Experts Suite: Expert-Led Integrated Security Services'
 author: Aarti Borkar and Andrew Conway
@@ -23,6 +23,7 @@ tags:
 - Threat Hunting
 section_names:
 - security
+primary_section: security
 ---
 Aarti Borkar and Andrew Conway present the Microsoft Defender Experts Suite, detailing how these expert-led services empower security teams to defend against sophisticated cyberthreats and enhance operational resilience.<!--excerpt_end-->
 

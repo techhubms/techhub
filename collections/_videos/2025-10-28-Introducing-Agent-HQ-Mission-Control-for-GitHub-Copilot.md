@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=KniyIrpTDE8
 title: Introducing Agent HQ Mission Control for GitHub Copilot
 author: GitHub
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this official video by GitHub, viewers are introduced to Agent HQ Mission Control, where AI-driven agents can be managed, monitored, and directed across GitHub and developer tools with a consistent interface.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-general-availability-of-agent-loop-in-azure-logic/ba-p/4470739
 title: 'Agent Loop in Azure Logic Apps: General Availability and New Capabilities'
 author: DivSwa
@@ -32,6 +32,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 DivSwa announces the general availability of Agent Loop in Azure Logic Apps, providing a comprehensive overview of its AI automation features, enterprise security, and extensibility for developers and IT teams.<!--excerpt_end-->
 

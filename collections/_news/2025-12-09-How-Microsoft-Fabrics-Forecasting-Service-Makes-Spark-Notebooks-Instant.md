@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/how-fabric-makes-spark-notebook-feel-instant-proactive-resource-provisioning-for-scalable-data-science-data-engineering/
 title: How Microsoft Fabric's Forecasting Service Makes Spark Notebooks Instant
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog authors detail how Forecasting Service uses hybrid AI and ML models to optimize Spark cluster provisioning, reducing latency and cloud cost for analytics workloads.<!--excerpt_end-->
 

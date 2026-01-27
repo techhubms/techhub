@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1mjui7y/dotnet_maui_pipeline/
 title: Troubleshooting Azure DevOps Pipeline for .NET MAUI Blazor Hybrid App
 author: Background_March7229
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Background_March7229 seeks help configuring an Azure DevOps pipeline for a .NET MAUI Blazor Hybrid app, describing errors encountered with runtime packages and pipeline tasks.<!--excerpt_end-->
 

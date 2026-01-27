@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/claude-3-7-now-available-in-github-copilot-for-visual-studio/
 title: Claude 3.7 Now Integrated in GitHub Copilot for Visual Studio 2022
 author: Rhea Patel
@@ -19,6 +19,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this post, Rhea Patel details the direct integration of Anthropic’s Claude 3.7 Sonnet model into GitHub Copilot for Visual Studio 2022, covering access steps and feature highlights.<!--excerpt_end-->
 

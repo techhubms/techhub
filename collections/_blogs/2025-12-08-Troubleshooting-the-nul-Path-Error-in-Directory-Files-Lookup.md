@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2025/Dec/08/What-the-heck-is-a-nul-path-and-why-is-it-breaking-my-Directory-Files-Lookup
 title: Troubleshooting the `\.\nul` Path Error in Directory Files Lookup
 author: Rick Strahl
@@ -22,6 +22,7 @@ tags:
 - Windows Devices
 section_names:
 - coding
+primary_section: coding
 ---
 Rick Strahl analyzes frequent `\\.\nul` device errors breaking file lookups in Markdown Monster, offering insights into the Windows filesystem and practical .NET solutions for developers.<!--excerpt_end-->
 

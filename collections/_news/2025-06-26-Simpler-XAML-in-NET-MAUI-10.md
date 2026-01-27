@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/simpler-xaml-in-dotnet-maui-10/
 title: Simpler XAML in .NET MAUI 10
 author: David Ortinau
@@ -22,6 +22,7 @@ tags:
 - XmlnsPrefix
 section_names:
 - coding
+primary_section: coding
 ---
 David Ortinau discusses new features in .NET MAUI 10 that streamline XAML development, focusing on implicit and global namespaces to minimize verbosity and improve maintainability.<!--excerpt_end-->
 

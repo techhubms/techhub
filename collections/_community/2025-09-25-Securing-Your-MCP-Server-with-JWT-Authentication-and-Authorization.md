@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/it-s-time-to-secure-your-mcp-servers-here-s-how/ba-p/4434308
 title: Securing Your MCP Server with JWT Authentication and Authorization
 author: wassimchegham
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: coding
 ---
 wassimchegham provides a practical tutorial on securing Node.js-based MCP servers using JWT authentication and authorization, emphasizing scalable, role-based security controls for AI-enabled architectures.<!--excerpt_end-->
 

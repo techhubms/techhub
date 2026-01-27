@@ -1,5 +1,4 @@
 using TechHub.TestUtilities;
-using Xunit;
 
 namespace TechHub.E2E.Tests.Api;
 

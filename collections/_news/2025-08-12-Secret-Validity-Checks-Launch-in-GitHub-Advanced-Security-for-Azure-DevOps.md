@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/hunting-living-secrets-secret-validity-checks-arrive-in-github-advanced-security-for-azure-devops/
 title: Secret Validity Checks Launch in GitHub Advanced Security for Azure DevOps
 author: Michael Omokoh
@@ -26,6 +26,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Michael Omokoh introduces the secret validity checks feature in GitHub Advanced Security for Azure DevOps, showing how developers and security teams can now prioritize remediation of live secrets and stay ahead of credential exposures.<!--excerpt_end-->
 

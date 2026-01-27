@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-conf-2025-announcing-the-call-for-content/
 title: '.NET Conf 2025 Call for Content: Share Your .NET 10 Expertise'
 author: Jeffrey T. Fritz
@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Jeffrey T. Fritz invites the global .NET developer community to propose sessions for .NET Conf 2025, a premier virtual event launching .NET 10. Share your insights and projects, whether in web, mobile, AI, DevOps or open source, and be part of this worldwide celebration.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-public-preview-of-agent-loop-in-azure-logic-apps/ba-p/4471056
 title: Agent Loop Public Preview Now Available in Azure Logic Apps Consumption
 author: Shree_Divya_M_V
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Shree_Divya_M_V announces that Agent Loop is now available in Azure Logic Apps Consumption, providing developers with frictionless, scalable AI agent automation and extensive integration capabilities.<!--excerpt_end-->
 

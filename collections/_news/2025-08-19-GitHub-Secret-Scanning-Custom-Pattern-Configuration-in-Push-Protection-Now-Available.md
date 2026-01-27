@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-19-secret-scanning-configuring-patterns-in-push-protection-is-now-generally-available
 title: 'GitHub Secret Scanning: Custom Pattern Configuration in Push Protection Now Available'
 author: Allison
@@ -19,6 +19,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison reports that GitHub Secret Protection now allows organizations to configure secret scanning patterns used in push protection, supporting stronger, customizable security policies.<!--excerpt_end-->
 

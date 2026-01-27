@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/accelerate-ai-applications-with-semantic-caching-on-azure-managed-redis/
 title: Accelerate AI Applications with Semantic Caching on Azure Managed Redis
 author: Satish
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 In this blog post, Satish discusses how to implement semantic caching on Azure Managed Redis for AI applications, combining vector search and caching strategies for enhanced performance.<!--excerpt_end-->
 

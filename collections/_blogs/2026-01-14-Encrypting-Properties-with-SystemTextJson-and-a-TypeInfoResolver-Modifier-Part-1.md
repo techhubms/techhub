@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-1
 title: Encrypting Properties with System.Text.Json and a TypeInfoResolver Modifier (Part 1)
 author: Steve Gordon
@@ -28,6 +28,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: coding
 ---
 Steve Gordon explains how to use System.Text.Json's TypeInfoResolver modifier for property-level encryption in C#, outlining a practical approach to securing sensitive data that paves the way for future integration with Azure Key Vault.<!--excerpt_end-->
 

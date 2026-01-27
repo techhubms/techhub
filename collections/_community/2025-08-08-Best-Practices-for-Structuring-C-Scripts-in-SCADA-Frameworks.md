@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mkiokh/c_script_best_practices/
 title: Best Practices for Structuring C# Scripts in SCADA Frameworks
 author: DouglasRoldan
@@ -20,6 +20,7 @@ tags:
 - SOLID
 section_names:
 - coding
+primary_section: coding
 ---
 DouglasRoldan initiates a thoughtful conversation on best practices for writing maintainable and reusable C# scripts within SCADA frameworks, gathering community insights about code structuring and optimization.<!--excerpt_end-->
 

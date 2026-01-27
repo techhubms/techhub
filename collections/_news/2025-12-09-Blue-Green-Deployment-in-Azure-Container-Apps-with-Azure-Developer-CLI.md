@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-blue-green-aca-deployment/
 title: Blue-Green Deployment in Azure Container Apps with Azure Developer CLI
 author: PuiChee (PC) Chan
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 PuiChee (PC) Chan provides a technical overview of blue-green deployment in Azure Container Apps using the Azure Developer CLI, with hands-on steps for setup, revision management, and CI/CD automation.<!--excerpt_end-->
 

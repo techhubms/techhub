@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/wOV0ebsqb88
 title: Create GitHub Copilot Instructions in Just One Click
 author: GitHub
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this GitHub video, the team demonstrates how developers can use the new 'Generate instructions' feature in GitHub Copilot. The video, presented by GitHub, highlights how providing full repository context leads to more targeted AI-powered coding assistance.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=6-UKEiqm53c
 title: 'Running AI on Azure Storage: Fast, Secure, and Scalable'
 author: Microsoft Events
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a hands-on Ignite 2025 session on optimizing Azure Storage for secure, scalable AI workloads. Speakers Vamshi Kommineni, Natalie Mao, and Saurabh Sensharma guide viewers through advanced techniques and integrations.<!--excerpt_end-->
 

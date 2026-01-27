@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/cross-platform-age-verification-dotnet-maui/
 title: Cross-Platform Age Verification in .NET MAUI Applications
 author: Gerald Versluis
@@ -26,6 +26,7 @@ tags:
 - Windows Age Consent
 section_names:
 - coding
+primary_section: coding
 ---
 Gerald Versluis presents a comprehensive guide to implementing age verification across Android, iOS, and Windows in .NET MAUI apps, with details on meeting upcoming legal compliance requirements.<!--excerpt_end-->
 

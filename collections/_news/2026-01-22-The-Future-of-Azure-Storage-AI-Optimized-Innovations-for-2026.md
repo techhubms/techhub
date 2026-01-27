@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Aung Oo and Maneesh Sah discuss how Azure Storage is evolving to support AI and cloud native workloads at unprecedented scale, enabling high-performance, cost-efficient, and intelligent storage for 2026 and beyond.<!--excerpt_end-->
 

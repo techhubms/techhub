@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke highlights Microsoft's new partnership with the Mercedes-AMG PETRONAS F1 Team, focusing on how Microsoft's technology will enable real-time analytics and performance optimization through advanced data processing.<!--excerpt_end-->
 

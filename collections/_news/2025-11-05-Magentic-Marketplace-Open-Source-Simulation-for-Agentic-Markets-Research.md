@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/research/blog/magentic-marketplace-an-open-source-simulation-environment-for-studying-agentic-markets/
 title: 'Magentic Marketplace: Open-Source Simulation for Agentic Markets Research'
 author: stclarke
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke introduces Magentic Marketplace, an open-source simulation from Microsoft for researching agentic markets. The article covers technical features, agent behavior findings, and practical guidance for researchers.<!--excerpt_end-->
 

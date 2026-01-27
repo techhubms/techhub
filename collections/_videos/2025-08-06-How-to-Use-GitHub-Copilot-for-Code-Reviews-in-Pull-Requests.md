@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/jYW9MorrE_w
 title: How to Use GitHub Copilot for Code Reviews in Pull Requests
 author: GitHub
@@ -19,6 +19,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this resource, GitHub explains how to utilize GitHub Copilot as your first code reviewer in pull requests. The guide outlines the workflow for leveraging Copilot to streamline reviews before involving your team.<!--excerpt_end-->
 

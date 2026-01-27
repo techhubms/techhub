@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-general-availability-ga-of-the-premium-v2-tier-of/ba-p/4471499
 title: Azure API Management Premium v2 Tier Now Generally Available
 author: Sreekanth_Thirthala
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Sreekanth_Thirthala presents the general availability of Azure API Management Premium v2 tier, detailing new enterprise-grade features, networking capabilities, and security improvements for API workloads.<!--excerpt_end-->
 

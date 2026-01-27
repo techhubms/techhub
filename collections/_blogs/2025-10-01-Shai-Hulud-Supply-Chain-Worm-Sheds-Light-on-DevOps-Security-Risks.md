@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/worms-in-the-supply-chain-shai-hulud-and-the-next-devops-reckoning/
 title: 'Shai-Hulud: Supply Chain Worm Sheds Light on DevOps Security Risks'
 author: Alan Shimel
@@ -31,6 +31,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Alan Shimel analyzes the Shai-Hulud supply chain worm’s impact, guiding DevOps professionals on strengthening pipeline security, credential hygiene, and artifact provenance to combat the latest wave of automated supply chain attacks.<!--excerpt_end-->
 

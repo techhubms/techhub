@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-fabric-iq-the-semantic-foundation-for-enterprise-ai/
 title: 'Fabric IQ: The Semantic Foundation for Enterprise AI'
 author: Microsoft Fabric Blog
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 The Microsoft Fabric Blog unveils Fabric IQ, highlighting how its Ontology feature provides enterprises with a semantic layer that connects data, meaning, and actions for reliable, governed, and actionable AI integration.<!--excerpt_end-->
 

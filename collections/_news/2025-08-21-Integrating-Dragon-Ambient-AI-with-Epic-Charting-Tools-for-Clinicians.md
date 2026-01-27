@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_aiinhealthcare-dragoncopilot-epic-activity-7364045330037817345-y8cF
 title: Integrating Dragon Ambient AI with Epic Charting Tools for Clinicians
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Satya Nadella shares an update on the collaboration between Microsoft and Epic, focusing on integrating Dragon’s ambient AI into Epic’s charting tools to improve clinician workflows.<!--excerpt_end-->
 

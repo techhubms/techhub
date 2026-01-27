@@ -1,4 +1,4 @@
-using TechHub.Core.DTOs;
+using TechHub.Core.Models;
 
 namespace TechHub.Core.Interfaces;
 

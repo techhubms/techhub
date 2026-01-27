@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-25-copilot-coding-agent-is-now-generally-available
 title: GitHub Copilot Coding Agent Now Generally Available
 author: Allison
@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the general availability of the GitHub Copilot coding agent, which empowers developers to delegate asynchronous coding tasks—such as feature implementation and bug fixes—directly from GitHub or VS Code.<!--excerpt_end-->
 

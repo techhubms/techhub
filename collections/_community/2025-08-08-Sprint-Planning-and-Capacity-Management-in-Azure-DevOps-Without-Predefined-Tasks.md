@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1mks3po/planning_without_tasks/
 title: Sprint Planning and Capacity Management in Azure DevOps Without Predefined Tasks
 author: TimePerfect8403
@@ -18,6 +18,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 TimePerfect8403 describes the challenge of migrating sprint planning to Azure DevOps, emphasizing story point forecasting over task-level estimation, and provides tips for agile, team-centric capacity management.<!--excerpt_end-->
 

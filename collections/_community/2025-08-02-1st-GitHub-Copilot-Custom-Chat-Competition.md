@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mfjlie/1st_github_copilot_custom_chat_competition/
 title: 1st GitHub Copilot Custom Chat Competition
 author: Outrageous_Permit154
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Outrageous_Permit154 introduces a GitHub Copilot Custom Chat Mode competition. This initiative invites the community to craft creative Custom Chat Modes using only official tools and included models.<!--excerpt_end-->
 

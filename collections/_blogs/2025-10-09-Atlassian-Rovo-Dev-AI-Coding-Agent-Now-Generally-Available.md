@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/atlassian-makes-ai-coding-agent-generally-available/
 title: 'Atlassian Rovo Dev: AI Coding Agent Now Generally Available'
 author: Mike Vizard
@@ -35,6 +35,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Mike Vizard introduces Atlassian's AI coding agent, Rovo Dev, explaining its features for code writing, code review, project planning, and integration with major DevOps tools.<!--excerpt_end-->
 

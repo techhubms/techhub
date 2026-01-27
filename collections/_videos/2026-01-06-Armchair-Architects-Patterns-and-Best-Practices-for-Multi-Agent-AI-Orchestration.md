@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Dwyx8GomVvQ
 title: 'Armchair Architects: Patterns and Best Practices for Multi-Agent AI Orchestration'
 author: Microsoft Developer
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Developer brings together Uli, Eric, and David—Armchair Architects—to explore multi-agent orchestration in enterprise environments, covering patterns, frameworks, and security practices for building secure and scalable AI agent solutions.<!--excerpt_end-->
 

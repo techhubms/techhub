@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2026/01/14/inside-redvds-how-a-single-virtual-desktop-provider-fueled-worldwide-cybercriminal-operations/
 title: 'Inside RedVDS: Investigating How a Criminal VDS Provider Empowered Global Cyberattacks'
 author: Microsoft Threat Intelligence
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Threat Intelligence, led by its Digital Crimes Unit, exposes the RedVDS criminal infrastructure that enabled widespread cyberattacks. The report by Microsoft Threat Intelligence offers technical insights, tracked malware tools, and recommended mitigations for security professionals.<!--excerpt_end-->
 

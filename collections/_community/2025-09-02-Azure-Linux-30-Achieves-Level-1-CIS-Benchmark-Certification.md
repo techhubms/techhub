@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/azure-linux-3-0-achieves-level-1-cis-benchmark-certification/ba-p/4450410
 title: Azure Linux 3.0 Achieves Level 1 CIS Benchmark Certification
 author: Sudhanva
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Sudhanva announces that Azure Linux 3.0 is now Level 1 CIS Benchmark certified, providing AKS users with secure, compliant Linux foundations on Azure.<!--excerpt_end-->
 

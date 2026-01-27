@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=E50EsAAd8qI
 title: Building an MCP Inside VS Code and Exploring AI's Impact with Kent C. Dodds
 author: Visual Studio Code
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Visual Studio Code's podcast, featuring Tyler Leonhardt and Kent C. Dodds, explores building MCP authentication into VS Code, developer workflow evolution, and the integration of AI and automation in modern coding practices.<!--excerpt_end-->
 

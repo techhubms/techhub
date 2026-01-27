@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-8-supporting-platform-specific-dotnet-tools-on-old-sdks/
 title: 'Supporting Platform-Specific .NET Tools on Older SDKs: .NET 10 Preview Deep Dive'
 author: Andrew Lock
@@ -25,6 +25,7 @@ tags:
 - Tool Packaging
 section_names:
 - coding
+primary_section: coding
 ---
 Andrew Lock provides a thorough guide on leveraging the new .NET 10 platform-specific tool features, highlighting technical strategies and trade-offs for maintaining compatibility with older .NET SDKs.<!--excerpt_end-->
 

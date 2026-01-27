@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/jfrog-unveils-devops-platform-for-the-agentic-ai-era/?utm_source=rss&utm_medium=rss&utm_campaign=jfrog-unveils-devops-platform-for-the-agentic-ai-era
 title: JFrog Unveils DevOps Platform for the Agentic AI Era
 author: Mike Vizard
@@ -31,6 +31,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Mike Vizard details JFrog’s launch of a new DevOps platform designed for the agentic AI era, outlining how the JFry platform supports AI agent integration and workflow governance for modern development teams.<!--excerpt_end-->
 

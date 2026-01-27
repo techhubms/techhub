@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-general-availability-of-scheduled-actions-for-azure/ba-p/4470797
 title: Announcing General Availability of Scheduled Actions for Azure Virtual Machines
 author: TravisCragg_MSFT
@@ -17,6 +17,7 @@ tags:
 - VM Management
 section_names:
 - azure
+primary_section: azure
 ---
 TravisCragg_MSFT presents Scheduled Actions for Azure Virtual Machines, outlining how this feature allows administrators to automate and scale VM power operations with simplified scheduling and retry logic.<!--excerpt_end-->
 

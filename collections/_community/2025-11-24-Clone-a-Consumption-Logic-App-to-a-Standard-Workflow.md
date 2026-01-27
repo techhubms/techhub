@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/clone-a-consumption-logic-app-to-a-standard-workflow/ba-p/4471175
 title: Clone a Consumption Logic App to a Standard Workflow
 author: WSilveira
@@ -21,6 +21,7 @@ tags:
 - Workflow Cloning
 section_names:
 - azure
+primary_section: azure
 ---
 WSilveira explains how to clone Azure Consumption Logic Apps into Standard workflows, offering tips for migration, modernization, and key limitations for Microsoft Azure users.<!--excerpt_end-->
 

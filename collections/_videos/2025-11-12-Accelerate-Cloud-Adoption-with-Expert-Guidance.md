@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=OZYgy2XTuR4
 title: Accelerate Cloud Adoption with Expert Guidance
 author: Microsoft Developer
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Microsoft Developer presents Thomas Maurer and Ravi Mangipudi exploring Cloud Accelerate Factory, a zero-cost initiative for expert-led Azure migrations and project acceleration.<!--excerpt_end-->
 

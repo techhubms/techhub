@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=gaejtW5dKsY
 title: Tackling Tech Debt with the GitHub Copilot Cloud Agent
 author: Microsoft Developer
@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer discusses how to tackle technical debt by leveraging GitHub Copilot Cloud Agent. The talk highlights practical approaches for modernizing codebases and demonstrates the use of AI agents in software development.<!--excerpt_end-->
 

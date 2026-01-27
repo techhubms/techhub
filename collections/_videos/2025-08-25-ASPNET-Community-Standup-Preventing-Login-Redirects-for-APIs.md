@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=csueqgXEroM
 title: 'ASP.NET Community Standup: Preventing Login Redirects for APIs'
 author: dotnet
@@ -26,6 +26,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 In this ASP.NET Community Standup, Daniel Roth and Stephen Halter discuss the improvements in ASP.NET Core for .NET 10 that eliminate login redirects for API endpoints. Presented by the dotnet team, this session is valuable for developers aiming to streamline API authentication workflows.<!--excerpt_end-->
 

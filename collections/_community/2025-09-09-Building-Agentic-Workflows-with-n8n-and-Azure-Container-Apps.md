@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/building-agentic-workflows-with-n8n-and-azure-container-apps/ba-p/4452362
 title: Building Agentic Workflows with n8n and Azure Container Apps
 author: simonjj
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 simonjj shows how to use n8n with Azure Container Apps and Azure OpenAI Service to build scalable, agentic workflows. Learn to deploy, scale, and integrate AI into your automations.<!--excerpt_end-->
 

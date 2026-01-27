@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/ansys-minerva-simulation-process-data-management-architecture-on/ba-p/4432098
 title: Ansys Minerva Simulation & Process Data Management Architecture on Azure
 author: Sunita_AZ0708
@@ -17,6 +17,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Sunita_AZ0708 examines the technical architecture and deployment strategies of Ansys Minerva’s Simulation and Process Data Management platform on Azure, addressing reliability, security, backup, and VM recommendations.<!--excerpt_end-->
 

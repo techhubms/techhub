@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/vibing-with-the-future-why-vibe-coding-is-the-next-big-wave-for-devops-and-ci-cd-teams/?utm_source=rss&utm_medium=rss&utm_campaign=vibing-with-the-future-why-vibe-coding-is-the-next-big-wave-for-devops-and-ci-cd-teams
 title: 'Vibe Coding: Transforming DevOps and CI/CD Teams with AI-Powered Collaboration'
 author: Alan Shimel
@@ -42,6 +42,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Alan Shimel introduces 'vibe coding,' showing how AI-powered collaboration is changing the way DevOps and CI/CD teams work. This article examines both the cultural and technical aspects of this trend.<!--excerpt_end-->
 

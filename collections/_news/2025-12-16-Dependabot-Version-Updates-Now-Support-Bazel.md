@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-bazel
 title: Dependabot Version Updates Now Support Bazel
 author: Allison
@@ -18,6 +18,7 @@ tags:
 - WORKSPACE
 section_names:
 - devops
+primary_section: devops
 ---
 Allison introduces Dependabot’s new capability to manage Bazel dependencies, highlighting collaboration with the Bazel community and outlining technical details for developers.<!--excerpt_end-->
 

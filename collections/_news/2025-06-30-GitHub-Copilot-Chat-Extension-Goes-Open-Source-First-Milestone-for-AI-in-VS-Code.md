@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2025/06/30/openSourceAIEditorFirstMilestone
 title: 'GitHub Copilot Chat Extension Goes Open Source: First Milestone for AI in VS Code'
 author: The VS Code team
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 The VS Code team, in this update, announces their first major milestone: open sourcing the GitHub Copilot Chat extension under the MIT license. This move invites the community to explore, contribute, and help shape the future of AI-powered development in VS Code.<!--excerpt_end-->
 

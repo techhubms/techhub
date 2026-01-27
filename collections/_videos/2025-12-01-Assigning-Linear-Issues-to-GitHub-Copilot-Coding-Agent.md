@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dI4H5ZyYOx0
 title: Assigning Linear Issues to GitHub Copilot Coding Agent
 author: GitHub
@@ -21,6 +21,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub's video, authored by their team, showcases the integration of Copilot coding agent with Linear, allowing developers to assign issues and automate code creation and pull requests using GitHub Copilot.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.stevejgordon.co.uk/efficient-dictionary-for-ipaddress-tracking-using-net-9-with-alternatelookup-and-ialternateequalitycomparer
 title: Efficient IP Address Tracking with .NET 9's AlternateLookup and IAlternateEqualityComparer
 author: Steve Gordon
@@ -23,6 +23,7 @@ tags:
 - Stackalloc
 section_names:
 - coding
+primary_section: coding
 ---
 In this in-depth article, Steve Gordon demonstrates enhancements in .NET 9 and C# 13 collections, focusing on building an efficient, low-allocation dictionary for IP address tracking using AlternateLookup and custom equality comparers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/github-copilot-for-azure-preview-launches-in-visual-studio-2022-with-azure-mcp-support/
 title: GitHub Copilot for Azure Public Preview Launched in Visual Studio 2022 with MCP
 author: Yun Jung Choi
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Yun Jung Choi brings news of the public preview launch of GitHub Copilot for Azure in Visual Studio 2022, highlighting how developers can now access Azure tools through Copilot Agent Mode with integrated Model Context Protocol support.<!--excerpt_end-->
 

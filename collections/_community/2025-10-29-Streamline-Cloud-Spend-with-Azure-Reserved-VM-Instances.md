@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/streamline-cloud-spend-with-azure-reserved-vm-instances/ba-p/4464773
 title: Streamline Cloud Spend with Azure Reserved VM Instances
 author: kyleikeda
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Kyle Ikeda presents a practical overview of optimizing GPU-driven AI workloads on Azure by leveraging Reserved VM Instances, with a step-by-step scenario focused on reducing costs while maintaining performance.<!--excerpt_end-->
 

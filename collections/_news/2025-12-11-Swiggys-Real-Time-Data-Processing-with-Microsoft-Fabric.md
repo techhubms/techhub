@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_real-time-intelligence-how-indias-swiggy-activity-7404753089972535299-0NPA
 title: Swiggy's Real-Time Data Processing with Microsoft Fabric
 author: stclarke
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 stclarke reports on how Swiggy uses Microsoft Fabric to process streaming data in near real time, enabling new capabilities in convenience delivery for millions of users.<!--excerpt_end-->
 

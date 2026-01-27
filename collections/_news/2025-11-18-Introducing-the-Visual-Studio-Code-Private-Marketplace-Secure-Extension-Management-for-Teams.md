@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2025/11/18/PrivateMarketplace
 title: 'Introducing the Visual Studio Code Private Marketplace: Secure Extension Management for Teams'
 author: Sean Iyer
@@ -21,6 +21,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Sean Iyer introduces the Private Marketplace for Visual Studio Code, providing enterprise teams with secure and curated management of extensions through GitHub Enterprise integration.<!--excerpt_end-->
 

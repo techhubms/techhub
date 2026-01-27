@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-database-for-mysql-blog/announcing-extended-support-for-azure-database-for-mysql/ba-p/4442924
 title: 'Extended Support for Azure Database for MySQL: What You Need to Know'
 author: Elendil
@@ -22,6 +22,7 @@ tags:
 - Upgrade Best Practices
 section_names:
 - azure
+primary_section: azure
 ---
 Elendil explains the new Extended Support program for Azure Database for MySQL, highlighting support timelines, automatic enrollment, and upgrade strategies for customers using older MySQL versions.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=2r2SxVa70JQ
 title: ASP.NET Community Standup - Razor Reloaded
 author: dotnet
@@ -23,6 +23,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 In this ASP.NET Community Standup, Daniel Roth and the team discuss upcoming Razor tooling and Hot Reload features for Visual Studio 2026 Insiders, providing .NET developers with insights into the latest platform enhancements.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/security/supply-chain-security/our-plan-for-a-more-secure-npm-supply-chain/
 title: GitHub's Roadmap for Strengthening npm Supply Chain Security
 author: Xavier René-Corail
@@ -24,6 +24,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Xavier René-Corail outlines GitHub's response to recent npm supply chain attacks, including plans for stricter authentication, granular tokens, and trusted publishing to help maintainers and organizations secure their npm projects.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=vdZeka_5-Ss
 title: 'Future-Proofing Academic Research: Secure AI Computing Workflows with Terawe ManageX on Azure'
 author: Microsoft Cloud
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Presented by Microsoft Cloud, this webinar explores how Terawe ManageX enables universities to build secure, AI-enabled research workflows on Azure, supporting scalable compute and compliance needs.<!--excerpt_end-->
 

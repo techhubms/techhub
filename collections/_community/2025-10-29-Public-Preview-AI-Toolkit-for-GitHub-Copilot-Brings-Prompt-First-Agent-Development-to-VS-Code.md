@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/announcing-public-preview-ai-toolkit-for-github-copilot-prompt/ba-p/4465069
 title: 'Public Preview: AI Toolkit for GitHub Copilot Brings Prompt-First Agent Development to VS Code'
 author: Lee_Stott
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Lee_Stott presents the public preview of the AI Toolkit for Visual Studio Code, unveiling prompt-first agent development powered by GitHub Copilot and Microsoft Agent Framework, designed for fast and seamless AI agent creation in VS Code.<!--excerpt_end-->
 

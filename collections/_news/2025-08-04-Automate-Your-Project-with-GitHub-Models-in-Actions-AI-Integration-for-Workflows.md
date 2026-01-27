@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/generative-ai/automate-your-project-with-github-models-in-actions/
 title: 'Automate Your Project with GitHub Models in Actions: AI Integration for Workflows'
 author: Kevin Lewis
@@ -25,6 +25,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Authored by Kevin Lewis, this article explores practical ways to automate your GitHub Actions workflows using GitHub Models. It guides readers through permissions and shows AI-powered automation for triaging issues, summarizing pull requests, and more.<!--excerpt_end-->
 

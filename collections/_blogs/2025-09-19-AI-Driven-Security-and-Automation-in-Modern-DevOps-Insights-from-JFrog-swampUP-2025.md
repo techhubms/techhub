@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/empowering-secure-agentic-software-delivery/
 title: 'AI-Driven Security and Automation in Modern DevOps: Insights from JFrog swampUP 2025'
 author: Alan Shimel
@@ -27,6 +27,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Alan Shimel interviews JFrog CTO Yoav Landman at swampUP 2025, exploring how AI, automation, and governance features like AppTrust and Fly are transforming secure software delivery.<!--excerpt_end-->
 

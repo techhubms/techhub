@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=V5ATFFuxYUo
 title: 'Agentic DevOps: Enhancing .NET Web Apps with Azure MCP'
 author: dotnet
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 dotnet shares insights on how .NET developers can use the Azure MCP server and AI-powered DevOps practices to build and modernize web applications on Azure more efficiently.<!--excerpt_end-->
 

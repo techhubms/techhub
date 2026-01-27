@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=tdF-_Qy7XDQ
 title: Driving Business Value with Agentic AI in Microsoft Environments
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 - Secure AI Platform
 section_names:
 - ai
+primary_section: ai
 ---
 Presented by Microsoft Events, this Microsoft Ignite session explores how NTT DATA leverages Microsoft agentic AI services to accelerate AI adoption and connect teams, agents, and automation for measurable results.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/build-a-smart-shopping-ai-agent-with-memory-using-the-azure-ai/ba-p/4450348
 title: Build a Smart Shopping AI Agent with Memory Using Azure AI Foundry Agent Service
 author: Bobur_Umurzokov
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Bobur Umurzokov showcases how to build a smart shopping assistant using Memori with the Azure AI Foundry Agent service, enabling AI agents to remember customer data and personalize interactions effectively.<!--excerpt_end-->
 

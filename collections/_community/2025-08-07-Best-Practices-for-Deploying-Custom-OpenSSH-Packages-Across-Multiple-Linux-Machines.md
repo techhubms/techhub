@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/devops/comments/1mk0byh/installing_packages_not_available_in_linux_repos/
 title: Best Practices for Deploying Custom OpenSSH Packages Across Multiple Linux Machines
 author: antonioefx
@@ -21,6 +21,7 @@ tags:
 - RPM
 section_names:
 - devops
+primary_section: devops
 ---
 antonioefx and community members outline practical steps for managing custom OpenSSH deployments on multiple Linux servers, emphasizing custom RPM creation, repository setup, and integrating with Chef for automation.<!--excerpt_end-->
 

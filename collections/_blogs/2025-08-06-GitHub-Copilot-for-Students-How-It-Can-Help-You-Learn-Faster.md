@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/github-copilot-for-students-how-it-can-help-you-learn-faster/
 title: 'GitHub Copilot for Students: How It Can Help You Learn Faster'
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny explains how students and self-learners can use GitHub Copilot as an AI-powered pair programmer to accelerate coding education, highlighting its features and offering tips for effective use.<!--excerpt_end-->
 

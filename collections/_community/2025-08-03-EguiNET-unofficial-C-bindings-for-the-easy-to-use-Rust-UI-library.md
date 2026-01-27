@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mgwnvs/eguinet_unofficial_c_bindings_for_the_easytouse/
 title: 'Egui.NET: unofficial C# bindings for the easy-to-use Rust UI library'
 author: The-Douglas
@@ -17,6 +17,7 @@ tags:
 - Vulkan
 section_names:
 - coding
+primary_section: coding
 ---
 In this article, The-Douglas shares the story behind Egui.NET—a C# wrapper for the egui Rust UI library—highlighting its technical foundations, design motivations, and sample usage for game engine UIs.<!--excerpt_end-->
 

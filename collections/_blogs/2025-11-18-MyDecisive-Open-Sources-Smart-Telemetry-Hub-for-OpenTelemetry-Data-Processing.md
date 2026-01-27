@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/mydecisive-open-sources-platform-for-processing-opentelemetry-data/
 title: MyDecisive Open Sources Smart Telemetry Hub for OpenTelemetry Data Processing
 author: Mike Vizard
@@ -33,6 +33,7 @@ tags:
 - Telemetry Overload
 section_names:
 - devops
+primary_section: devops
 ---
 Mike Vizard explores how MyDecisive's open-sourced Smart Telemetry Hub brings advanced telemetry filtering to DevOps teams, supporting efficient observability and lower costs.<!--excerpt_end-->
 

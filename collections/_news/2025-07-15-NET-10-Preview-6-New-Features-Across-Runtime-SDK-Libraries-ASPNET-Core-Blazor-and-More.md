@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-10-preview-6/
 title: '.NET 10 Preview 6: New Features Across Runtime, SDK, Libraries, ASP.NET Core, Blazor, and More'
 author: .NET Team
@@ -24,6 +24,7 @@ tags:
 - WPF
 section_names:
 - coding
+primary_section: coding
 ---
 In this announcement, the .NET Team details the latest features and improvements in .NET 10 Preview 6, covering updates to the core runtime, SDK, ASP.NET Core, Blazor, .NET MAUI, and more.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/now-in-public-preview-azure-virtual-desktop-regional-host-pools/ba-p/4474598
 title: Azure Virtual Desktop Regional Host Pools Public Preview
 author: TomHickling
@@ -21,6 +21,7 @@ tags:
 - Resiliency
 section_names:
 - azure
+primary_section: azure
 ---
 TomHickling presents the public preview of regional host pools for Azure Virtual Desktop, highlighting the infrastructure's resiliency improvements and deployment guidance for administrators.<!--excerpt_end-->
 

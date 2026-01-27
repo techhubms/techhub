@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/optimizing-azure-devops-jira-integration-5-practical-use-cases/m-p/4445837#M22123
 title: 'Optimizing Azure DevOps and Jira Integration: 5 Real-World Use Cases for DevOps Teams'
 author: tejabhutada
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 tejabhutada shares practical strategies for integrating Azure DevOps and Jira, presenting five actionable use cases that help DevOps teams reduce friction, improve cross-tool visibility, and streamline workflows.<!--excerpt_end-->
 

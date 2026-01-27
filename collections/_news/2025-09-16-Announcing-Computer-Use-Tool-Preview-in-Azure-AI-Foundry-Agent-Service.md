@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/announcing-computer-use-tool-preview-in-azure-ai-foundry-agent-service/
 title: Announcing Computer Use Tool (Preview) in Azure AI Foundry Agent Service
 author: Linda Li
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Linda Li announces the preview availability of the Computer Use tool in Azure AI Foundry Agent Service, offering developers new automation and agent capabilities integrated with advanced security features.<!--excerpt_end-->
 

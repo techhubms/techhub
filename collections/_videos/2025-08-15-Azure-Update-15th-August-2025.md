@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ggyEFocbRiQ
 title: Azure Update - 15th August 2025
 author: John Savill's Technical Training
@@ -27,6 +27,7 @@ tags:
 - Tenant Health Alerts
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill's Technical Training delivers the August 15th, 2025 Azure Update, highlighting new features and changes across App Service, Data Factory, PostgreSQL, Cosmos DB, and tools useful for cloud engineers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mgx5uj/cleaning_up_a_project/
 title: 'Cleaning Up Projects with GitHub Copilot: Seeking Reliable Code Cleanup Methods'
 author: MaxellVideocassette
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 MaxellVideocassette discusses the difficulties of using GitHub Copilot for cleaning up codebases, sharing observations and requesting advice from others who've tried automating code cleanup.<!--excerpt_end-->
 

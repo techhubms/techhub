@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/engineering/issueops-automate-ci-cd-and-more-with-github-issues-and-actions/
 title: 'IssueOps: Automate CI/CD (and more!) with GitHub Issues and Actions'
 author: Nick Alteen
@@ -20,6 +20,7 @@ tags:
 - Workflow Automation
 section_names:
 - devops
+primary_section: devops
 ---
 In this comprehensive article, Nick Alteen introduces the concept of IssueOps, showing how GitHub Issues can be leveraged to automate CI/CD workflows, approval processes, and more using GitHub Actions and pull requests.<!--excerpt_end-->
 

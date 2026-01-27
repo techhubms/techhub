@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/view-and-manage-security-in-the-onelake-catalog-now-in-preview/
 title: View and Manage Security in the OneLake Catalog (Preview)
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 The Microsoft Fabric Blog details how workspace owners and governance teams can use the Secure tab in the OneLake catalog to efficiently manage access and security roles. Author: Microsoft Fabric Blog.<!--excerpt_end-->
 

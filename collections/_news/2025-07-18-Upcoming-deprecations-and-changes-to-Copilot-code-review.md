@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-18-upcoming-deprecations-and-changes-to-copilot-code-review
 title: Upcoming deprecations and changes to Copilot code review
 author: Allison
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this article, Allison discusses forthcoming updates to Copilot's code review experience. The post highlights the transition from coding guidelines to a dedicated copilot-instructions.md file, improvements in the user interface to make the Copilot review request option more prominent, and hints at additional features to streamline development workflows.<!--excerpt_end-->
 

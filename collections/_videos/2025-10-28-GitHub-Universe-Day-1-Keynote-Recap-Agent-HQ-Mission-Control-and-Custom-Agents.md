@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/jH_ub5Trsi4
 title: 'GitHub Universe Day 1 Keynote Recap: Agent HQ, Mission Control, and Custom Agents'
 author: GitHub
@@ -23,6 +23,7 @@ tags:
 - VS Code
 section_names:
 - devops
+primary_section: devops
 ---
 GitHub recaps their Universe Day 1 keynote with author GitHub summarizing highlights like Agent HQ, Mission Control, and new support for custom agents, providing a quick overview of the latest updates for developers.<!--excerpt_end-->
 

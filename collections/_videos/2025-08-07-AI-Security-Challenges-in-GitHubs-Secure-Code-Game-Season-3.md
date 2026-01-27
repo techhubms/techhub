@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/MNrqRV3N2bY
 title: AI Security Challenges in GitHub's Secure Code Game Season 3
 author: GitHub
@@ -24,6 +24,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 In this video, GitHub invites viewers to tackle AI security challenges in the Secure Code Game Season 3. Hosted by the GitHub team, it encourages ethical hacking against language models and secure code remediation.<!--excerpt_end-->
 

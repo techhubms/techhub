@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-07-contributing-guidelines-now-visible-in-repository-tab-and-sidebar
 title: Contributing Guidelines Now Visible in GitHub Repository Tab and Sidebar
 author: Allison
@@ -17,6 +17,7 @@ tags:
 - Repository Overview
 section_names:
 - devops
+primary_section: devops
 ---
 Allison introduces a GitHub platform update that surfaces contributing guidelines in the repository overview tab and sidebar, improving new contributor onboarding and repository usability.<!--excerpt_end-->
 

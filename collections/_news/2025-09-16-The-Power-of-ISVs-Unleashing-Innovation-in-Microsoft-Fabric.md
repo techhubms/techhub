@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/the-power-of-isvs-unleashing-innovation-in-microsoft-fabric/
 title: 'The Power of ISVs: Unleashing Innovation in Microsoft Fabric'
 author: Microsoft Fabric Blog
@@ -32,6 +32,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 This news article from the Microsoft Fabric Blog details ISV-driven innovations and new integrations in Microsoft Fabric, providing insights into AI, data engineering, and analytics, authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 

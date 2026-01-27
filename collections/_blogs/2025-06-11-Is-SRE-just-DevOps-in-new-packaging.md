@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://roadtoalm.com/2025/06/11/is-sre-just-devops-in-new-packaging/
 title: Is SRE Just DevOps in New Packaging?
 author: Rene van Osnabrugge
@@ -20,6 +20,7 @@ tags:
 - Xebia
 section_names:
 - devops
+primary_section: devops
 ---
 Rene van Osnabrugge shares insights from the LEAD podcast, co-hosted with Geert van der Cruijsen, examining the real meaning of SRE and its interplay with DevOps in engineering organizations.<!--excerpt_end-->
 

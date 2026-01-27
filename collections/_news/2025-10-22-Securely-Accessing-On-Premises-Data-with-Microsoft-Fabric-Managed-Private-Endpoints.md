@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/securely-accessing-on-premises-data-with-fabric-data-engineering-workloads/
 title: Securely Accessing On-Premises Data with Microsoft Fabric Managed Private Endpoints
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog explains how organizations can securely connect Fabric Spark compute to on-premises and network-isolated data sources using Managed Private Endpoints. Learn about governance, setup via REST APIs, and practical security benefits.<!--excerpt_end-->
 

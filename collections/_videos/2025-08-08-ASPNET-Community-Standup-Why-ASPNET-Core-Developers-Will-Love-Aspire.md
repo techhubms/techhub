@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=aHqw6mPpJSc
 title: 'ASP.NET Community Standup: Why ASP.NET Core Developers Will Love Aspire'
 author: dotnet
@@ -29,6 +29,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 In this video, Daniel Roth and Maddy Montaquila guide ASP.NET Core developers through Aspire, covering its benefits, practical integration, and real-world tips, as shared on AspiriFridays.<!--excerpt_end-->
 

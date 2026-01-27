@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/designing-for-certainty-how-azure-capacity-reservations/m-p/4447901#M347
 title: 'Designing for Certainty: How Azure Capacity Reservations Safeguard Mission‑Critical Workloads'
 author: Goutham_Bandapati
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Goutham_Bandapati explores strategic use of Azure Capacity Reservations and Reserved Instances, detailing how they can be combined to reliably support mission-critical workloads while optimizing costs.<!--excerpt_end-->
 

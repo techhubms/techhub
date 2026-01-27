@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-copilot-observability-agent-intelligent-investigations/ba-p/4467360
 title: 'Azure Copilot Observability Agent: AI-Driven Investigations for Cloud Operations'
 author: EfratNauerman
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 EfratNauerman introduces the Azure Copilot observability agent, highlighting its AI-driven approach to troubleshooting and observability across Azure environments, with advanced features for automatic issue investigation and actionable remediation.<!--excerpt_end-->
 

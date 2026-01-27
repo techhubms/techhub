@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/building-resilient-applications-availability-resilience-patterns-in-aws-and-azure/
 title: 'Building Resilient Applications: Availability & Resilience Patterns in AWS and Azure'
 author: Dellenny
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 Dellenny details key cloud resilience and availability patterns, comparing their implementation between AWS and Microsoft Azure. Readers discover practical Azure tools and strategies for building robust applications capable of weathering system failures.<!--excerpt_end-->
 

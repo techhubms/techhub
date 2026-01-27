@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/transforming-data-migration-using-azure-copilot/ba-p/4476610
 title: Transforming Data Migration Decisions with Azure Copilot's Storage Migration Solutions Advisor
 author: madhurinrao
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 madhurinrao outlines how Azure Copilot’s Storage Migration Solutions Advisor leverages conversational AI to streamline storage and data migration decisions for Azure customers, offering step-by-step guidance and recommendations.<!--excerpt_end-->
 

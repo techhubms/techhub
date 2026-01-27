@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/company-news/github-availability-report-december-2025/
 title: 'GitHub Availability Report: December 2025'
 author: Jakub Oleksy
@@ -26,6 +26,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Jakub Oleksy provides a comprehensive account of GitHub's service stability in December 2025, covering incidents affecting GitHub Actions, Copilot, and core platform availability, along with mitigations and improvements.<!--excerpt_end-->
 

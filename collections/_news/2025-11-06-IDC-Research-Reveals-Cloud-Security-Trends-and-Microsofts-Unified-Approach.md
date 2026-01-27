@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/11/06/new-idc-research-highlights-a-major-cloud-security-shift/
 title: IDC Research Reveals Cloud Security Trends and Microsoft’s Unified Approach
 author: stclarke
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 stclarke distills the latest IDC research on cloud security, highlighting industry trends, new challenges, and Microsoft’s unified security solutions, including Defender for Cloud and AI-powered SecOps.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/features/with-microsoft-agent-365-one-startup-furthers-goal-of-making-ai-agents-more-intuitive/
 title: Integrating Genspark Agents with Microsoft Agent 365 for Secure Enterprise AI Workflows
 author: trith
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 trith reports on Mainfunc’s Genspark platform integrating with Microsoft Agent 365 to enable secure, scalable AI agent workflows for enterprise users—highlighting both technical management and practical use of agents.<!--excerpt_end-->
 

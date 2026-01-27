@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=koBGu8PNeds
 title: 'Blending AI Agents and Spreadsheets: No-Code Solutions in the Cozy AI Kitchen'
 author: Microsoft Developer
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft's Sarah DeAtley walks through how AI agents, leveraging GPT-4.1 and Azure OpenAI, can be integrated into spreadsheets with the no-code CalcLM tool, as featured in Mr. Maeda's Cozy AI Kitchen.<!--excerpt_end-->
 

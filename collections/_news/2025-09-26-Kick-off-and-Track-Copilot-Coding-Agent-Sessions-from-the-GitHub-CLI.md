@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-25-kick-off-and-track-copilot-coding-agent-sessions-from-the-github-cli
 title: Kick off and Track Copilot Coding Agent Sessions from the GitHub CLI
 author: Allison
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison explains how developers can use GitHub CLI 2.80.0 to manage Copilot coding agent sessions, enabling background code automation and review through new command-line integrations.<!--excerpt_end-->
 

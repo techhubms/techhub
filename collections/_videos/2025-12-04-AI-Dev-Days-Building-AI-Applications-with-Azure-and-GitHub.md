@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=kZqGsoeP0kU
 title: 'AI Dev Days: Building AI Applications with Azure and GitHub'
 author: Microsoft Developer
@@ -31,6 +31,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Microsoft Developer presents a day focused on building AI applications through Azure and GitHub, featuring Agentic DevOps, Microsoft Foundry, hands-on labs, and highlights from major industry events.<!--excerpt_end-->
 

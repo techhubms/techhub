@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/0F8tFJncsxQ
 title: 7 Essential Git Concepts Every Beginner Needs to Know
 author: GitHub
@@ -19,6 +19,7 @@ tags:
 - Version Control
 section_names:
 - devops
+primary_section: devops
 ---
 GitHub presents an accessible introduction to version control with Git, outlining key concepts for beginners. Authored by GitHub, this video demystifies foundational workflows essential for software collaboration.<!--excerpt_end-->
 

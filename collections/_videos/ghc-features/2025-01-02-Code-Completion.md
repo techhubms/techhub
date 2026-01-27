@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/EPXdLelATrE
 title: Code Completion
 author: Liuba Gonta
@@ -15,6 +15,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This video demonstrates GitHub Copilot's Code Completion feature. Enhance your coding experience with AI-powered code completions while you are typing. Also called 'suggestions'. These are the most common way of using Copilot as they show up as a suggestion while you are typing in your editor.<!--excerpt_end-->
 

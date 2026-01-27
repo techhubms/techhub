@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/azure-security-basics-network-security-groups-firewalls-and-defender-for-cloud/
 title: 'Azure Security Basics: Network Security Groups, Firewalls, and Defender for Cloud'
 author: Dellenny
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Dellenny provides a practitioner-focused walkthrough on securing Azure networks using Network Security Groups, Azure Firewall, and Defender for Cloud, outlining practical strategies and best practices for cloud security.<!--excerpt_end-->
 

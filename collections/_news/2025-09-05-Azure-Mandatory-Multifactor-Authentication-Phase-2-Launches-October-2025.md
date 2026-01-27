@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/azure-mandatory-multifactor-authentication-phase-2-starting-in-october-2025/
 title: 'Azure Mandatory Multifactor Authentication: Phase 2 Launches October 2025'
 author: Joy Shah and Neha Kulkarni
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Joy Shah and Neha Kulkarni explain Microsoft's rollout of Phase 2 mandatory multifactor authentication enforcement on Azure Resource Manager operations, with critical details on its October 2025 launch, technical scope, and customer action points.<!--excerpt_end-->
 

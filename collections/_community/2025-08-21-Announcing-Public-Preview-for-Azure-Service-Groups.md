@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/announcing-public-preview-for-azure-service-groups/ba-p/4446572
 title: Announcing Public Preview for Azure Service Groups
 author: kenieva
@@ -19,6 +19,7 @@ tags:
 - Tenant Level Resources
 section_names:
 - azure
+primary_section: azure
 ---
 kenieva introduces Azure Service Groups, now in public preview. This Azure feature allows flexible grouping and monitoring of resources at the tenant level, offering low-privilege management with support for varied hierarchies.<!--excerpt_end-->
 

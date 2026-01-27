@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mk1592/vscode_paper_cuts_for_net_dev/
 title: Common VSCode Papercuts for .NET Developers
 author: Sure-Natural-9086
@@ -22,6 +22,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Sure-Natural-9086 leads a community discussion on the usability gaps ('paper cuts') faced by .NET developers using VSCode, with practical suggestions and peer insights.<!--excerpt_end-->
 

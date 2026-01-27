@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mhgcod/beautiful_terminal_based_file_manager_now/
 title: 'Termix v1.2.0: .NET Terminal File Manager Adds Cut, Copy, Move, and Stable Fuzzy Search'
 author: amrohann
@@ -19,6 +19,7 @@ tags:
 - Termix
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, amrohann presents Termix v1.2.0, a .NET-powered terminal file manager, highlighting major new features and installation tips.<!--excerpt_end-->
 

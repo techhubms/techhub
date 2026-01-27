@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=zPvEYmj8Mi4
 title: Deploying and Comparing Models in Microsoft Foundry
 author: Microsoft Developer
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 April from Microsoft Developer demonstrates how to deploy and compare models in the Microsoft Foundry portal, guiding viewers through model benchmarking, deployment, interactive testing, and coding integrations.<!--excerpt_end-->
 

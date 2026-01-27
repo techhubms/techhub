@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=0BqIUtFL3KY
 title: Tutch Partners with Microsoft to Transform Retail with Agentic AI
 author: Microsoft Cloud
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Cloud showcases how Tutch applies Azure AI and agentic AI to retail, enabling partners like Beacon Lighting to achieve significant business growth through Microsoft's technology stack.<!--excerpt_end-->
 

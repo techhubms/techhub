@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=tyiDMlKXLwU
 title: Building Event-Driven Apps with Fabric Real-Time Intelligence and SQL
 author: Microsoft Developer
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 Microsoft Developer presents a practical guide to building event-driven applications using Microsoft Fabric Real-Time Intelligence and SQL, featuring live demos and insights from Anna Hoffman.<!--excerpt_end-->
 

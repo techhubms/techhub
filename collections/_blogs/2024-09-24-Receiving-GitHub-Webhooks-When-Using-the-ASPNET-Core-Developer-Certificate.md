@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.stevejgordon.co.uk/receiving-github-webhooks-when-using-the-aspnetcore-developer-certificate
 title: Receiving GitHub Webhooks When Using the ASP.NET Core Developer Certificate
 author: Steve Gordon
@@ -21,6 +21,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 In this detailed post, Steve Gordon shares practical steps for developing and testing GitHub webhooks locally within an ASP.NET Core app, detailing webhook setup, certificate management, and smee.io usage.<!--excerpt_end-->
 

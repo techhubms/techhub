@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/configuring-windows-firewall-for-maximum-safety/
 title: Configuring Windows Firewall for Maximum Safety
 author: John Edward
@@ -20,6 +20,7 @@ tags:
 - Windows Firewall
 section_names:
 - security
+primary_section: security
 ---
 John Edward explains how to maximize Windows Firewall’s protection through clear, practical steps, enabling users of all levels to better secure their Windows computers.<!--excerpt_end-->
 

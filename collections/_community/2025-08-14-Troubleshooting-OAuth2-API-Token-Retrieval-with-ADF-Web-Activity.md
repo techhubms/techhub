@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-data-factory/getting-an-oauth2-api-access-token-using-client-id-and-client/m-p/4443568#M936
 title: Troubleshooting OAuth2 API Token Retrieval with ADF Web Activity
 author: AzureNewbie1
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 AzureNewbie1 explains their attempts to obtain an OAuth2 access token for the iLevel API using Azure Data Factory, highlighting issues with client_id/client_secret usage and missing Authorization headers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/building-the-future-together-microsoft-and-nvidia-announce-ai-advancements-at-gtc-dc/
 title: Microsoft and NVIDIA Announce Major AI Advancements for Azure AI and Edge
 author: Omar Khan
@@ -31,6 +31,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Omar Khan explores the expanded collaboration between Microsoft and NVIDIA, describing new Azure AI Foundry services, advanced GPU integration, and key hybrid cloud AI orchestration innovations aimed at enterprise AI scalability and performance.<!--excerpt_end-->
 

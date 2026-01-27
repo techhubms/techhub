@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=6kr3LIlocsI
 title: Transforming Enterprise Workflows with C3 AI Agentic Process Automation
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 - Workflow Monitoring
 section_names:
 - ai
+primary_section: ai
 ---
 Presented by John Abelt and Nikhil Krishnan at Microsoft Ignite 2025, this session explores how C3 AI Agentic Process Automation enables scalable, intelligent enterprise workflows.<!--excerpt_end-->
 

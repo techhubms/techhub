@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=vxBpbNCLANM
 title: Understanding Shared Capacity Reservations in Azure
 author: John Savill's Technical Training
@@ -22,6 +22,7 @@ tags:
 - Subscription Management
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill provides an in-depth walkthrough of Azure's shared capacity reservations, outlining new scenarios for efficiently using reserved VM capacity across subscriptions.<!--excerpt_end-->
 

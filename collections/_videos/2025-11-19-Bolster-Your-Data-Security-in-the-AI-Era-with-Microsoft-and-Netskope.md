@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ogDdTHhDZSE
 title: Bolster Your Data Security in the AI Era with Microsoft and Netskope
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Unified Security
 section_names:
 - security
+primary_section: security
 ---
 Microsoft Events hosts a session led by Ankur Chadda at Ignite 2025, demonstrating how to align enterprise data security and regulatory compliance in the AI era using Microsoft Purview and Netskope integrations.<!--excerpt_end-->
 

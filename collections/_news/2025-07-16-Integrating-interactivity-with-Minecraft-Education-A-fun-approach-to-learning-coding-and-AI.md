@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/2025/07/15/integrating-interactive-and-collaborative-learning-solutions-with-minecraft-education-a-fun-approach-to-learn-coding-and-ai/
 title: Integrating interactivity with Minecraft Education - A fun approach to learning coding and AI
 author: stclarke
@@ -17,6 +17,7 @@ tags:
 - STEM
 section_names:
 - ai
+primary_section: ai
 ---
 In this article, stclarke discusses how educators can use Minecraft Education to teach coding and Microsoft AI concepts interactively. The post highlights how the gamified environment of Minecraft supports engagement and deeper understanding of computational thinking and modern AI within the classroom.<!--excerpt_end-->
 

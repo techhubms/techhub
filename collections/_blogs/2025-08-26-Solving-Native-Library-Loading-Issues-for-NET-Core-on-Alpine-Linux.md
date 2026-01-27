@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/fixing-an-old-dotnet-core-native-library-loading-issue-on-alpine/
 title: Solving Native Library Loading Issues for .NET Core on Alpine Linux
 author: Andrew Lock
@@ -26,6 +26,7 @@ tags:
 - Troubleshooting
 section_names:
 - coding
+primary_section: coding
 ---
 Andrew Lock walks through the real-world debugging process for a library loading failure on Alpine Linux when running older .NET Core apps, clearly explaining the steps and ultimate resolution.<!--excerpt_end-->
 

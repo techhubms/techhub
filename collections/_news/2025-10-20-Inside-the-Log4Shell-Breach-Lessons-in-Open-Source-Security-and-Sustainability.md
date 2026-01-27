@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/open-source/inside-the-breach-that-broke-the-internet-the-untold-story-of-log4shell/
 title: 'Inside the Log4Shell Breach: Lessons in Open Source Security and Sustainability'
 author: Gregg Cochran
@@ -24,6 +24,7 @@ tags:
 - Vulnerability Management
 section_names:
 - security
+primary_section: security
 ---
 Gregg Cochran shares the inside story of the Log4Shell vulnerability, focusing on the personal and technical challenges faced by Log4j maintainers and highlighting the critical need for open source security reforms.<!--excerpt_end-->
 

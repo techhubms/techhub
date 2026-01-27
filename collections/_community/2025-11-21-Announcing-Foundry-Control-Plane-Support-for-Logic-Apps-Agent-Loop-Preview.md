@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-foundry-control-plane-support-for-logic-apps-agent/ba-p/4472182
 title: Announcing Foundry Control Plane Support for Logic Apps Agent Loop (Preview)
 author: KentWeareMSFT
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 KentWeareMSFT details Microsoft’s preview of the Foundry Control Plane, bringing unified governance and observability to Logic Apps Agent Loop. The post provides practical steps for developers to manage agents at scale and highlights future telemetry enhancements.<!--excerpt_end-->
 

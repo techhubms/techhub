@@ -20,6 +20,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 Den Delimarsky, Harald Kirschner, and James Montemagno introduce developers to MCP Apps integration in Visual Studio Code, covering technical workflows and new MCP features.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/the-most-destructive-cloud-cost-pitfall-discounts-before-optimization/
 title: 'Avoiding Cloud Cost Traps: Optimize Workloads Before Negotiating Discounts'
 author: Andrew Hillier
@@ -30,6 +30,7 @@ tags:
 - Workload Analysis
 section_names:
 - devops
+primary_section: devops
 ---
 Andrew Hillier reveals why securing cloud discounts before optimizing workloads can lock in inefficiency, especially in Kubernetes environments, and shares actionable collaboration strategies for engineering and finance teams.<!--excerpt_end-->
 

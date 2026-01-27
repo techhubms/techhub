@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/advancing-full-stack-observability-with-azure-monitor-at-ignite/ba-p/4469041
 title: Advancing Full-Stack Observability with Azure Monitor at Ignite 2025
 author: Shiva_Sivakumar
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Shiva_Sivakumar shares updates from Ignite 2025 on how Azure Monitor and new AI-powered agents elevate observability and operational analytics for cloud and AI workloads.<!--excerpt_end-->
 

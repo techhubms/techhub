@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dTJD9krRln8
 title: Faster time-to-value for app modernization using NeuVantage AI | ODSP1432
 author: Microsoft Events
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Microsoft Events presents an in-depth session on Simform NeuVantage's AI-powered approach to accelerating application modernization on Azure, featuring insights from Hiren Dhaduk and Matthew Wendel.<!--excerpt_end-->
 

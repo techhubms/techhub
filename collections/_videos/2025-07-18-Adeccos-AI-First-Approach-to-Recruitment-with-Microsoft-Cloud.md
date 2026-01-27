@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=5N3FR8lzC3Q
 title: Adecco's AI-First Approach to Recruitment with Microsoft Cloud
 author: Microsoft Cloud
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Cloud presents Caroline Basyn from Adecco Group, who explains how the company is leveraging an AI-first approach using Microsoft technologies to modernize recruitment for both recruiters and job seekers.<!--excerpt_end-->
 

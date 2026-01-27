@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/08/20/post-quantum-resilience-building-secure-foundations/
 title: Microsoft Unveils Quantum Safe Program Strategy to Prepare for Post-Quantum Security Era
 author: sbaynes
@@ -29,6 +29,7 @@ tags:
 - X.509
 section_names:
 - security
+primary_section: security
 ---
 sbaynes details Microsoft's Quantum Safe Program Strategy, outlining the company's proactive approach to post-quantum cybersecurity and strategic partnerships with governments and industry to safeguard global digital infrastructure.<!--excerpt_end-->
 

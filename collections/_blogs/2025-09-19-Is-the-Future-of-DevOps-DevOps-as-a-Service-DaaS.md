@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/is-the-future-of-devops-daas/
 title: Is the Future of DevOps DevOps-as-a-Service (DaaS)?
 author: Alexander Williams
@@ -47,6 +47,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Alexander Williams examines the rise of DevOps-as-a-Service (DaaS), discussing its impact on software delivery, organizational structure, and the integration of AI-driven automation in modern DevOps practice.<!--excerpt_end-->
 

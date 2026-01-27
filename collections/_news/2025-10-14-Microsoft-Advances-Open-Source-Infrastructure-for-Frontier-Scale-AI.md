@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/accelerating-open-source-infrastructure-development-for-frontier-ai-at-scale/
 title: Microsoft Advances Open-Source Infrastructure for Frontier-Scale AI
 author: Rani Borkar and Saurabh Dighe
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Rani Borkar and Saurabh Dighe report on Microsoft’s work driving open-source standards for AI infrastructure, covering power, cooling, security, sustainability, and large-scale operations in partnership with the Open Compute Project community.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mhees0/group_source_of_authority_conversion/
 title: 'Group Source of Authority Conversion: Shifting from AD to Entra ID'
 author: JohnSavill
@@ -19,6 +19,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 In this community contribution, JohnSavill discusses group source of authority conversion from Active Directory to Entra ID, offering practical steps and critical considerations for a successful identity shift.<!--excerpt_end-->
 

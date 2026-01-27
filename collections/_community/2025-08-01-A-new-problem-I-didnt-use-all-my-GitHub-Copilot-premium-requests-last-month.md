@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mev008/a_new_problem_i_didnt_use_all_my_github_copilot/
 title: A new problem - I didn't use all my GitHub Copilot premium requests last month
 author: thehashimwarren
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this post, thehashimwarren discusses their GitHub Copilot premium request usage, exploring allocation resets and strategies for AI model usage management as a developer.<!--excerpt_end-->
 

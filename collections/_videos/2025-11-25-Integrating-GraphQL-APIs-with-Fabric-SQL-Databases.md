@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=uRL3_PMFM7Q
 title: Integrating GraphQL APIs with Fabric SQL Databases
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ml
 ---
 Presented by Microsoft Developer and MVP Nicky van Vroenhoven, this episode guides viewers through exposing Fabric SQL Databases via GraphQL APIs, covering integration setup and schema design for modern data-driven applications.<!--excerpt_end-->
 

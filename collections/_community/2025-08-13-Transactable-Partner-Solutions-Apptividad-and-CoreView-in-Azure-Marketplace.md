@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/marketplace-blog/apptividad-and-coreview-offer-transactable-partner-solutions-in/ba-p/4431278
 title: 'Transactable Partner Solutions: Apptividad and CoreView in Azure Marketplace'
 author: Luxmi_Nagaraj
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Luxmi_Nagaraj highlights two transact-capable partner offers in Azure Marketplace, detailing Apptividad’s biometric onboarding solution and CoreView’s governance platform for Microsoft 365 environments.<!--excerpt_end-->
 

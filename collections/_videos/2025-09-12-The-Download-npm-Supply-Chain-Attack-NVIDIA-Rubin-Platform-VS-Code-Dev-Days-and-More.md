@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=GQ0tqZXxaIk
 title: 'The Download: npm Supply Chain Attack, NVIDIA Rubin Platform, VS Code Dev Days & More'
 author: GitHub
@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 GitHub's The Download, hosted by the GitHub team, covers a high-profile npm supply chain attack, new AI platforms like NVIDIA Rubin, VS Code Dev Days, and major updates in coding, security, and DevOps.<!--excerpt_end-->
 

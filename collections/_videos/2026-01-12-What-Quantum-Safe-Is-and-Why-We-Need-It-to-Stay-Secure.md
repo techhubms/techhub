@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=5--yBhgDrXM
 title: What Quantum Safe Is and Why We Need It to Stay Secure
 author: John Savill's Technical Training
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 John Savill's Technical Training walks through the urgent need for quantum-safe cryptography, examining how classical and quantum computing impact security and highlighting actionable steps for organizations and individuals.<!--excerpt_end-->
 

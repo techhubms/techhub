@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=H_uAA5_h40E
 title: 'Building Omnichannel Voice AI Agents with Azure: Multilingual Multi-Agent Architecture'
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Developer hosts Pablo Salvador Lopez and Priyanka Vergadia in this episode, providing hands-on insights into building scalable omnichannel Voice AI agents with Azure’s Speech Services and multi-agent orchestration.<!--excerpt_end-->
 

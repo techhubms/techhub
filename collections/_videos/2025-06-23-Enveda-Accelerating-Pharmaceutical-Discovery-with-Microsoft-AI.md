@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=8JU5B4vTxsg
 title: 'Enveda: Accelerating Pharmaceutical Discovery with Microsoft AI'
 author: Microsoft Cloud
@@ -19,6 +19,7 @@ tags:
 - Viswa Colluru
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Cloud presents how Viswa Colluru, CEO of Enveda, uses Microsoft AI to accelerate and reinvent drug discovery, unlocking chemical insights and driving breakthrough innovation.<!--excerpt_end-->
 

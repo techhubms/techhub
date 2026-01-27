@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/ZnZBxZC8WSA
 title: 'The Coding Buddy That Lives in Your Command Line: GitHub Copilot CLI'
 author: GitHub
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents an overview of the GitHub Copilot CLI, showing how this AI-powered assistant extends Copilot’s capabilities directly into the terminal, enhancing code and workflow efficiency for developers.<!--excerpt_end-->
 

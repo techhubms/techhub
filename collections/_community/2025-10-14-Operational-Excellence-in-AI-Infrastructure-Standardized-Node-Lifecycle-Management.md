@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/operational-excellence-in-ai-infrastructure-fleets-standardized/ba-p/4460754
 title: 'Operational Excellence in AI Infrastructure: Standardized Node Lifecycle Management'
 author: Rama_Bhimanadhuni
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Rama_Bhimanadhuni, together with Choudary Maddukuri and Bhushan Mehendale, explores how Microsoft and partners are using open standards to create reliable, scalable, and vendor-neutral AI infrastructure management for cloud datacenters.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/anthropic-joins-the-multi-model-lineup-in-microsoft-copilot-studio/
 title: Anthropic Models Integrated with OpenAI in Microsoft Copilot Studio
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke shares how Microsoft Copilot Studio now supports Anthropic models alongside OpenAI models, allowing users and admins to choose and orchestrate AI models for agent development and automation.<!--excerpt_end-->
 

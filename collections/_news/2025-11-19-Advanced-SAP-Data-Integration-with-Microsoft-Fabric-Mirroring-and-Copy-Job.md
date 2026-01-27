@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-sap-connectivity-with-mirroring-and-copy-job-in-microsoft-fabric/
 title: 'Advanced SAP Data Integration with Microsoft Fabric: Mirroring and Copy Job'
 author: Microsoft Fabric Blog
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Ulrich Christ, Wilson Lee, Linda Wang, and Ye Xu introduce new SAP data connectivity features in Microsoft Fabric, detailing Mirroring and Copy Job for zero-ETL and scalable data integration for unified analytics and AI scenarios.<!--excerpt_end-->
 

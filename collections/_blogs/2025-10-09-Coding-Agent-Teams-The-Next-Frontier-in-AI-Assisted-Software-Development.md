@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/coding-agent-teams-the-next-frontier-in-ai-assisted-software-development/
 title: 'Coding Agent Teams: The Next Frontier in AI-Assisted Software Development'
 author: Derek Ashmore
@@ -46,6 +46,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Derek Ashmore discusses how teams of specialized AI coding agents are redefining software engineering, offering insights into frameworks like AutoGen and the impact on developer workflows.<!--excerpt_end-->
 

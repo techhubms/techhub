@@ -1,8 +1,7 @@
 using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
-using TechHub.Core.DTOs;
-using TechHub.TestUtilities;
+using TechHub.Core.Models;
 
 namespace TechHub.E2E.Tests.Api;
 
@@ -26,7 +25,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var content = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var content = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         content.Should().NotBeNull();
         content.Should().NotBeEmpty();
 
@@ -61,7 +60,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
         items!.Should().AllSatisfy(item => item.CollectionName.Should().Be("news"));
@@ -76,7 +75,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
         items.Should().AllSatisfy(item => item.CollectionName.Should().Be("videos"));
@@ -91,7 +90,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
         items.Should().AllSatisfy(item => item.CollectionName.Should().Be("blogs"));
@@ -106,7 +105,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
         items.Should().AllSatisfy(item => item.CollectionName.Should().Be("community"));
@@ -121,7 +120,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
         items.Should().AllSatisfy(item => item.CollectionName.Should().Be("roundups"));
@@ -140,7 +139,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
         items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("ai"));
@@ -155,7 +154,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
         items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("github-copilot"));
@@ -170,7 +169,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
         items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("azure"));
@@ -189,7 +188,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
         items.Should().AllSatisfy(item => item.SectionNames.Should().Contain("ai"));
@@ -204,7 +203,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
         items.Should().AllSatisfy(item =>
@@ -223,7 +222,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
         items!.Should().AllSatisfy(item =>
@@ -243,7 +242,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var items = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var items = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
 
@@ -309,7 +308,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
     {
         // Act
         var response = await _client.GetAsync("/api/content");
-        var content = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var content = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
 
         // Assert
         content!.Should().AllSatisfy(item =>
@@ -331,7 +330,7 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
     {
         // Act
         var response = await _client.GetAsync("/api/content");
-        var content = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var content = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
 
         // Assert
         content!.Should().AllSatisfy(item =>
@@ -350,14 +349,16 @@ public class ContentEndpointsE2ETests(ApiCollectionFixture fixture)
     {
         // Act
         var response = await _client.GetAsync("/api/content");
-        var content = await response.Content.ReadFromJsonAsync<List<ContentItemDto>>();
+        var content = await response.Content.ReadFromJsonAsync<List<ContentItem>>();
 
         // Assert
         content!.Should().AllSatisfy(item =>
         {
-            // URL should start with / and contain the collection and slug (lowercased)
+            // URL should start with / and contain the collection name and slug (lowercased)
+            // Subcollections are for filtering only, URLs always use collection name
             item.Url.Should().StartWith("/");
-            item.Url.Should().Contain(item.CollectionName.ToLowerInvariant());
+            item.Url.Should().Contain(item.CollectionName.ToLowerInvariant(),
+                $"URL '{item.Url}' should contain collection '{item.CollectionName}' (not subcollection '{item.SubcollectionName}')");
             item.Url.Should().Contain(item.Slug.ToLowerInvariant());
         });
     }

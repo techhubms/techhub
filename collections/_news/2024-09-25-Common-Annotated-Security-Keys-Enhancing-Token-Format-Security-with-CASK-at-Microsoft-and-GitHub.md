@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/engineering-at-microsoft/common-annotated-security-keys/
 title: 'Common Annotated Security Keys: Enhancing Token Format Security with CASK at Microsoft and GitHub'
 author: Michael C. Fanning
@@ -28,6 +28,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 In this article, Michael C. Fanning details how GitHub and Microsoft are advancing secure secret management through the Common Annotated Security Standard (CASK), outlining its technical features and its role in strengthening engineering and DevOps security.<!--excerpt_end-->
 

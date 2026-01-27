@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/startups/blog/catalysts-revolutionizing-healthcare-with-pangaea-data-microsoft-azure-and-nvidia/
 title: How startups are using AI to support healthcare providers and patients
 author: stclarke
@@ -13,6 +13,7 @@ tags:
 - Startups
 section_names:
 - ai
+primary_section: ai
 ---
 This article, written by stclarke, delves into the innovative ways startups are harnessing artificial intelligence (AI) to benefit healthcare providers and patients. The focus is on leveraging technology to address key challenges and improve outcomes for both professionals and recipients of healthcare services.
 <!--excerpt_end-->

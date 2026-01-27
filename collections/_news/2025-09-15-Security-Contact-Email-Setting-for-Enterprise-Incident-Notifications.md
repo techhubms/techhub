@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-14-security-contact-for-security-notification-emails-is-generally-available
 title: Security Contact Email Setting for Enterprise Incident Notifications
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - Security Practices
 section_names:
 - security
+primary_section: security
 ---
 Allison shares that GitHub enterprise admins can now configure a dedicated contact email for security incident notifications, helping organizations streamline their response workflows.<!--excerpt_end-->
 

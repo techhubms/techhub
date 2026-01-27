@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-20-linter-integration-with-copilot-code-review-now-in-public-preview
 title: Linter Integration Arrives in Copilot Code Review Public Preview
 author: Allison
@@ -23,6 +23,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison details the new GitHub Copilot code review integration with linters, showing how static analysis tools like ESLint, PMD, and CodeQL provide actionable feedback and explaining repository-level configuration.<!--excerpt_end-->
 

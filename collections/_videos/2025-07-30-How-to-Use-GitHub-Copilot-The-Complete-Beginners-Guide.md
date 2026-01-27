@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=SJqGYwRq0uc
 title: "How to Use GitHub Copilot: The Complete Beginner's Guide"
 author: GitHub
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a detailed video guide by their own team on mastering GitHub Copilot, showing developers how to leverage Copilot’s features in Visual Studio Code for building secure, production-quality software.<!--excerpt_end-->
 

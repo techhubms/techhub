@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=mc1jCt2HYAc
 title: Visual Studio Code and GitHub Copilot - What's new in 1.103
 author: Fokko Veegens
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Fokko Veegens explores VS Code 1.103 features including Checkpoints for time travel in Agent mode, Todo lists tracking AI tasks, GPT-5 model support, and enhanced terminal capabilities.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=JybSsLEJ-hg
 title: 'VS Code Live - Let it Cook: Building a Universal MCP Install Link'
 author: Visual Studio Code
@@ -21,6 +21,7 @@ tags:
 section_names:
 - devops
 - coding
+primary_section: coding
 ---
 In this episode, Sean Roberts, Burke Holland, and Pierce Boggan from Visual Studio Code discuss strategies to build a universal install link for MCPs to streamline developer installation workflows.<!--excerpt_end-->
 

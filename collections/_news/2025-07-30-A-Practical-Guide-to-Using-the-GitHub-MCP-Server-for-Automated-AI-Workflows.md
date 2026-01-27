@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/generative-ai/a-practical-guide-on-how-to-use-the-github-mcp-server/
 title: A Practical Guide to Using the GitHub MCP Server for Automated AI Workflows
 author: Andrea Griffiths
@@ -25,6 +25,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Andrea Griffiths explores the migration from a local MCP Docker image to GitHub's managed MCP server, streamlining authentication, automation, and security-focused AI workflows with GitHub Copilot integration.<!--excerpt_end-->
 

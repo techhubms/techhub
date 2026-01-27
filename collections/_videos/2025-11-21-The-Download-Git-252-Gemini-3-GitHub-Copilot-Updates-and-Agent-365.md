@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=wc2y1HS2a4I
 title: 'The Download: Git 2.52, Gemini 3, GitHub Copilot Updates & Agent 365'
 author: GitHub
@@ -24,6 +24,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Cassidy from GitHub presents the latest updates for developers, including Git 2.52 features, the Gemini 3 Pro integration with GitHub Copilot, and Microsoft's enterprise Agent 365. Contributors: GitHub.<!--excerpt_end-->
 

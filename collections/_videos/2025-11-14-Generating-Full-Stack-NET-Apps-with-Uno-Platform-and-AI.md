@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=g4A_3ZCwwWg
 title: Generating Full-Stack .NET Apps with Uno Platform and AI
 author: dotnet
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Presented by the dotnet team, this video showcases how Uno Platform and AI enable developers to quickly generate full-stack, cross-platform .NET applications, while highlighting new productivity features and the latest .NET advancements.<!--excerpt_end-->
 

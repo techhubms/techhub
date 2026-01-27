@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-extension-pack-for-visual-studio-code-ignite-2025/ba-p/4471050
 title: 'AI Toolkit Extension Pack for Visual Studio Code: Ignite 2025 Update'
 author: leoyao
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 leoyao presents the latest features of the AI Toolkit Extension Pack for Visual Studio Code, showcasing new agentic app workflows, Copilot-driven development, and end-to-end cloud deployment released at Ignite 2025.<!--excerpt_end-->
 

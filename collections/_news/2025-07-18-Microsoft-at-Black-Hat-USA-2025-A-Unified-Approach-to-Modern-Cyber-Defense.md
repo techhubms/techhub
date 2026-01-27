@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/blog/microsoft-security-blog/%E2%80%8B%E2%80%8Bmicrosoft-at-black-hat-usa-2025-a-unified-approach-to-modern-cyber-defense%E2%80%8B%E2%80%8B/4434292
 title: 'Microsoft at Black Hat USA 2025: A Unified Approach to Modern Cyber Defense'
 author: Elliot Volkman
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 In this announcement, author Elliot Volkman shares Microsoft’s plans for Black Hat USA 2025, focusing on AI-driven, unified security solutions. Learn what to expect and how to connect with Microsoft at this major cybersecurity event.<!--excerpt_end-->
 

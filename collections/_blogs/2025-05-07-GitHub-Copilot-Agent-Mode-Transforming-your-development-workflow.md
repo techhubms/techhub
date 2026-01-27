@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://hiddedesmet.com/github-copilot-agent-mode
 title: GitHub Copilot Agent Mode - Transforming your development workflow
 author: Hidde de Smet
@@ -18,6 +18,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Written by Hidde de Smet, this article explores GitHub Copilot's Agent Mode, highlighting how it transforms the coding workflow by supporting natural conversations, interactive problem-solving, and step-by-step guidance directly within your development environment.<!--excerpt_end-->
 

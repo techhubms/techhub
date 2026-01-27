@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=LPbKU_rs-P0
 title: Modernizing Oracle Workloads with Oracle Database@Azure and Native Azure AI Services
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events and Muneer Mirza present a Microsoft Ignite 2025 session showing how enterprises can modernize Oracle workloads on Azure, leveraging both Oracle and native Azure AI technologies for business transformation.<!--excerpt_end-->
 

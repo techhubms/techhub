@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/hosting-remote-mcp-server-on-azure-container-apps-aca-using/ba-p/4459263
 title: Hosting Remote MCP Server on Azure Container Apps Using HTTP Transport
 author: DeepGanguly
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 DeepGanguly presents a step-by-step guide to hosting a Model Context Protocol (MCP) server with HTTP transport on Azure Container Apps, enabling integration with external APIs and use in tools like VS Code Chat.<!--excerpt_end-->
 

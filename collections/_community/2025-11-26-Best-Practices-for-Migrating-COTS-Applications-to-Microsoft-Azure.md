@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/best-practices-for-migrating-cots-applications-to-microsoft/ba-p/4473323
 title: Best Practices for Migrating COTS Applications to Microsoft Azure
 author: srhulsus
@@ -34,6 +34,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 srhulsus explains essential best practices for planning and executing COTS application migrations to Microsoft Azure, covering operational, security, and modernization steps.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-arc-gateway-for-azure/ba-p/4456256
 title: Announcing the General Availability of Arc Gateway for Azure Local
 author: Cristian Edwards Sabathe
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Cristian Edwards Sabathe announces the general availability of Arc Gateway for Azure Local, explaining its impact on secure and unified connectivity for on-premises and edge environments connecting to Azure.<!--excerpt_end-->
 

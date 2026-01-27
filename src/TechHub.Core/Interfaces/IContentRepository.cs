@@ -1,94 +1,80 @@
-using TechHub.Core.DTOs;
 using TechHub.Core.Models;
 
 namespace TechHub.Core.Interfaces;
 
 /// <summary>
-/// Repository for accessing content items from markdown files.
-/// All methods return content sorted by date (DateEpoch) in descending order (newest first).
+/// Repository interface for content operations with database backing.
+/// Replaces filesystem-based repository with database-backed implementation.
 /// </summary>
 public interface IContentRepository
 {
-    /// <summary>
-    /// Initialize the repository by loading all data from disk.
-    /// Should be called once at application startup.
-    /// Returns the loaded collection for logging purposes.
-    /// </summary>
-    Task<IReadOnlyList<ContentItem>> InitializeAsync(CancellationToken cancellationToken = default);
+    // ==================== Initialization ====================
 
     /// <summary>
-    /// Get all content items across all collections
+    /// Initialize repository (database query after content sync completes).
+    /// Called once at startup after content sync.
     /// </summary>
-    /// <param name="includeDraft">If true, include draft items in results. Default is false.</param>
-    /// <param name="cancellationToken">Cancellation token</param>
-    Task<IReadOnlyList<ContentItem>> GetAllAsync(
-        bool includeDraft = false,
-        CancellationToken cancellationToken = default);
+    Task<IReadOnlyList<ContentItem>> InitializeAsync(CancellationToken ct = default);
+
+    // ==================== Existing Methods (Database-Backed) ====================
 
     /// <summary>
-    /// Get content items filtered by collection name.
-    /// Special case: collectionName="all" returns all content across all collections.
+    /// Get a single content item by slug and collection.
     /// </summary>
-    /// <param name="collectionName">Collection name to filter by</param>
-    /// <param name="includeDraft">If true, include draft items in results. Default is false.</param>
-    /// <param name="cancellationToken">Cancellation token</param>
-    Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
-        string collectionName,
-        bool includeDraft = false,
-        CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Get content items filtered by section name.
-    /// Matches against the Sections property which contains section names like "AI", "GitHub Copilot".
-    /// </summary>
-    /// <param name="sectionName">Section name to filter by</param>
-    /// <param name="includeDraft">If true, include draft items in results. Default is false.</param>
-    /// <param name="cancellationToken">Cancellationtoken</param>
-    Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
-        string sectionName,
-        bool includeDraft = false,
-        CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Get a single content item by slug within a collection
-    /// </summary>
-    /// <param name="collectionName">Collection name to search within</param>
-    /// <param name="slug">Content slug (filename without extension)</param>
-    /// <param name="includeDraft">If true, include draft items in results. Default is false.</param>
-    /// <param name="cancellationToken">Cancellation token</param>
     Task<ContentItem?> GetBySlugAsync(
         string collectionName,
         string slug,
         bool includeDraft = false,
-        CancellationToken cancellationToken = default);
+        CancellationToken ct = default);
 
     /// <summary>
-    /// Search content items by text query (title, excerpt, tags)
+    /// Get all content items across all collections.
     /// </summary>
-    /// <param name="query">Search query text</param>
-    /// <param name="includeDraft">If true, include draft items in results. Default is false.</param>
-    /// <param name="cancellationToken">Cancellation token</param>
-    Task<IReadOnlyList<ContentItem>> SearchAsync(
-        string query,
+    Task<IReadOnlyList<ContentItem>> GetAllAsync(
         bool includeDraft = false,
-        CancellationToken cancellationToken = default);
+        CancellationToken ct = default);
 
     /// <summary>
-    /// Get all unique tags across all content
+    /// Get all content items in a specific collection.
+    /// For "videos", returns all video subcollections (ghc-features, vscode-updates).
     /// </summary>
-    /// <param name="includeDraft">If true, include tags from draft items. Default is false.</param>
-    /// <param name="cancellationToken">Cancellation token</param>
-    Task<IReadOnlyList<string>> GetAllTagsAsync(
+    Task<IReadOnlyList<ContentItem>> GetByCollectionAsync(
+        string collectionName,
         bool includeDraft = false,
-        CancellationToken cancellationToken = default);
+        CancellationToken ct = default);
 
     /// <summary>
-    /// Filter content items by tags and/or date range with optional section/collection scoping
+    /// Get all content items in a specific section.
     /// </summary>
-    /// <param name="request">Filter request with tags, date range, and scope</param>
-    /// <param name="cancellationToken">Cancellation token</param>
-    /// <returns>Filtered content items</returns>
-    Task<IReadOnlyList<ContentItem>> FilterAsync(
-        FilterRequest request,
-        CancellationToken cancellationToken = default);
+    Task<IReadOnlyList<ContentItem>> GetBySectionAsync(
+        string sectionName,
+        bool includeDraft = false,
+        CancellationToken ct = default);
+
+    // ==================== New Search Methods ====================
+
+    /// <summary>
+    /// Search content with filters, facets, and pagination.
+    /// Supports full-text search, tag filtering, date ranges, and keyset pagination.
+    /// </summary>
+    Task<SearchResults<ContentItem>> SearchAsync(
+        SearchRequest request,
+        CancellationToken ct = default);
+
+    /// <summary>
+    /// Get facet counts for filtered content.
+    /// Returns counts for tags, collections, sections within the filtered scope.
+    /// </summary>
+    Task<FacetResults> GetFacetsAsync(
+        FacetRequest request,
+        CancellationToken ct = default);
+
+    /// <summary>
+    /// Get related articles based on tag overlap (Phase 1) or semantic similarity (Phase 2).
+    /// Returns articles ranked by shared tags.
+    /// </summary>
+    Task<IReadOnlyList<ContentItem>> GetRelatedAsync(
+        string articleId,
+        int count = 5,
+        CancellationToken ct = default);
 }

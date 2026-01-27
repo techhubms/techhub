@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/09/16/microsoft-30-billion-uk-ai-future/
 title: Microsoft Announces $30 Billion Investment in UK for AI Infrastructure
 author: sbaynes
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 sbaynes reports on Microsoft’s $30 billion commitment to expand AI infrastructure and operations in the UK, including datacenter investment, supercomputer deployment, and advancements in AI skills and research.<!--excerpt_end-->
 

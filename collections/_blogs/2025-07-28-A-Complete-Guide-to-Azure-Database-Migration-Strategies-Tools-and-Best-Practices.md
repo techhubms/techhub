@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/a-complete-guide-to-azure-database-migration-strategies-tools-and-best-practices/
 title: A Complete Guide to Azure Database Migration Strategies, Tools, and Best Practices
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 - SQL Server Migration Assistant
 section_names:
 - azure
+primary_section: azure
 ---
 Dellenny provides a detailed, actionable guide for database professionals on Azure database migration strategies, associated Microsoft tools, and operational best practices.<!--excerpt_end-->
 

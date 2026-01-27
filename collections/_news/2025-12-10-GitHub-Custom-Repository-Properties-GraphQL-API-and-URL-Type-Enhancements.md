@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-09-repository-custom-properties-graphql-api-and-url-type
 title: 'GitHub Custom Repository Properties: GraphQL API and URL Type Enhancements'
 author: Allison
@@ -20,6 +20,7 @@ tags:
 - Workflow Automation
 section_names:
 - devops
+primary_section: devops
 ---
 Allison reports on GitHub's new features for repository custom properties, including GraphQL API management and robust URL type validation for improved organizational workflows.<!--excerpt_end-->
 

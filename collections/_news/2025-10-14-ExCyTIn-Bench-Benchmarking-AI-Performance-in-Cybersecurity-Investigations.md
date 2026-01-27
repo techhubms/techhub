@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/14/microsoft-raises-the-bar-a-smarter-way-to-measure-ai-for-cybersecurity/
 title: 'ExCyTIn-Bench: Benchmarking AI Performance in Cybersecurity Investigations'
 author: Anand Mudgerikar
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Anand Mudgerikar presents ExCyTIn-Bench, Microsoft's open-source framework for evaluating AI systems in complex cybersecurity investigations, combining Azure SOC simulations and Sentinel logs for advanced, actionable model benchmarking.<!--excerpt_end-->
 

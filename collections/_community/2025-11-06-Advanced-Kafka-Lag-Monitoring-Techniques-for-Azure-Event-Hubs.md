@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/beyond-basics-tracking-kafka-lag-in-azure-event-hubs/ba-p/4457797
 title: Advanced Kafka Lag Monitoring Techniques for Azure Event Hubs
 author: Sunip
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Sunip examines the advanced challenges and strategies for reliable Kafka consumer lag monitoring in Azure Event Hubs, sharing practical techniques and code for practitioners.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-ga-of-cosmos-db-in-microsoft-fabric-and-cosmos-db-mirroring/
 title: Cosmos DB Mirroring General Availability in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog announces the GA of Cosmos DB Mirroring in Fabric, explained by the Fabric Blog team. The update details analytics, AI, and ML features—enabling live, unified data workflows for developers and data professionals.<!--excerpt_end-->
 

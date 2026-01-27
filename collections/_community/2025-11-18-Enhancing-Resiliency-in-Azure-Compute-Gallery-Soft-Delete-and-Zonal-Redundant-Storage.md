@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/enhancing-resiliency-in-azure-compute-gallery/ba-p/4470082
 title: 'Enhancing Resiliency in Azure Compute Gallery: Soft Delete and Zonal Redundant Storage'
 author: Sandeep-Raichura
@@ -22,6 +22,7 @@ tags:
 - ZRS
 section_names:
 - azure
+primary_section: azure
 ---
 Sandeep-Raichura reviews Azure Compute Gallery's latest features—Soft Delete and default Zonal Redundant Storage—demonstrating how they protect VM images and enhance operational resiliency for Azure users.<!--excerpt_end-->
 

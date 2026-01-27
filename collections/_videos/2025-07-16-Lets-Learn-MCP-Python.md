@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=qQZFvz4BTCY
 title: "Let's Learn MCP: Python"
 author: Visual Studio Code
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Visual Studio Code presents a workshop on the Model Context Protocol (MCP), hosted by Gwyneth Peña-Siguenza and Marlene Mhangami, introducing MCP fundamentals and practical Python demos.<!--excerpt_end-->
 

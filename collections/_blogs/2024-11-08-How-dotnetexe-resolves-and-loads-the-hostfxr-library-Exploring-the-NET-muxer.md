@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.stevejgordon.co.uk/how-dotnet-muxer-resolves-and-loads-the-hostfxr-library
 title: How dotnet.exe Resolves and Loads the hostfxr Library – Exploring the .NET Muxer
 author: Steve Gordon
@@ -22,6 +22,7 @@ tags:
 - Windows
 section_names:
 - coding
+primary_section: coding
 ---
 In this article, Steve Gordon explores how dotnet.exe resolves and loads the hostfxr library, shedding light on the .NET muxer's internal steps. The discussion is a part of his deep dive series into the .NET hosting architecture.<!--excerpt_end-->
 

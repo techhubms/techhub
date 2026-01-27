@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/transition-to-azure-functions-v2-on-azure-container-apps/ba-p/4457258
 title: 'Transition to Azure Functions V2 on Azure Container Apps: Migration Guide and Feature Overview'
 author: DeepGanguly
@@ -33,6 +33,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 DeepGanguly explains the migration from Azure Functions V1 to V2 on Azure Container Apps, highlighting technical improvements, resource model benefits, and a step-by-step guide for deploying serverless functions in container environments.<!--excerpt_end-->
 

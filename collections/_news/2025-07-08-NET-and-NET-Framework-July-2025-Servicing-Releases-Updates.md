@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-july-2025-servicing-updates/
 title: .NET and .NET Framework July 2025 Servicing Releases Updates
 author: Tara Overfield, Victor Israel-Bolarinwa
@@ -18,6 +18,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 Authored by Tara Overfield and Victor Israel-Bolarinwa, this article outlines the latest servicing updates released for .NET and .NET Framework in July 2025.<!--excerpt_end-->
 

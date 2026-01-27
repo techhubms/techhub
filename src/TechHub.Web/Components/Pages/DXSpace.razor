@@ -1,5 +1,5 @@
 @page "/devops/dx-space"
-@using TechHub.Core.DTOs
+@using TechHub.Core.Models
 @using TechHub.Web.Services
 @rendermode InteractiveServer
 
@@ -376,7 +376,7 @@
 }
 
 @code {
-    private SectionDto? sectionData;
+    private TechHub.Core.Models.Section? sectionData;
     private DXSpacePageData? pageData;
     private HashSet<int> expandedSections = new() { 0 }; // First section expanded by default
 

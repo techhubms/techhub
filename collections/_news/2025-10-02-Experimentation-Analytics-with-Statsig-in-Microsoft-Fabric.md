@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/27219/
 title: Experimentation Analytics with Statsig in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog presents an overview of Statsig Experimentation Analytics, explaining how product and analytics teams can run experiments, analyze data, and drive product decisions securely within the Fabric platform.<!--excerpt_end-->
 

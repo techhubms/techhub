@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-the-enhanced-query-diagnostics-in-azure-log/ba-p/4466993
 title: Enhanced Query Diagnostics in Azure Log Analytics
 author: Ron Frenkel
@@ -19,6 +19,7 @@ tags:
 - Troubleshooting
 section_names:
 - azure
+primary_section: azure
 ---
 Ron Frenkel introduces significant improvements to query diagnostics in Azure Log Analytics, offering actionable recommendations and deeper performance insights for users seeking to optimize and troubleshoot log queries within the Azure Portal.<!--excerpt_end-->
 

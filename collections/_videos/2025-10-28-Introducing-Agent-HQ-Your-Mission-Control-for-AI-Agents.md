@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/sP-SQEE7K-Y
 title: 'Introducing Agent HQ: Your Mission Control for AI Agents'
 author: GitHub
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 GitHub presents Agent HQ, an integrated platform for developers to manage AI agents across projects. This video, presented by the GitHub team, highlights enhanced task assignment, code reviews, and workflow flexibility.<!--excerpt_end-->
 

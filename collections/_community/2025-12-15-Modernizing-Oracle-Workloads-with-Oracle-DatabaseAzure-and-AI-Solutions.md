@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-hits-the-road-with-oracle-ai-world-tour-2026/ba-p/4477598
 title: Modernizing Oracle Workloads with Oracle Database@Azure and AI Solutions
 author: NadineSalem
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 NadineSalem presents Microsoft's involvement in the Oracle AI World Tour, detailing how Oracle Database@Azure, Copilot Studio, Microsoft Foundry, and integrated security solutions empower enterprises to modernize and secure Oracle workloads with AI on Azure.<!--excerpt_end-->
 

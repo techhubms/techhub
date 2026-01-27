@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ptMM56u6Ay0
 title: "Microsoft Entra: What's New in Secure Access on the AI Frontier"
 author: Microsoft Events
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events presents an overview of new secure access innovations in Microsoft Entra for AI environments, detailing governance insights and security controls from speakers Joy Chik, Nichole Peterson, and John Savill.<!--excerpt_end-->
 

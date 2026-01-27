@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/12/08/stronger-together-new-beazley-collaboration-enhances-cyber-resilience/
 title: Microsoft and Beazley Collaborate to Enhance Cyber Incident Response
 author: Aarti Borkar
@@ -22,6 +22,7 @@ tags:
 - Threat Intelligence
 section_names:
 - security
+primary_section: security
 ---
 Aarti Borkar presents an overview of Microsoft's collaboration with Beazley to streamline cyber incident response, highlighting how technical, insurance, and legal partnerships help organizations recover from cyberattacks more effectively.<!--excerpt_end-->
 

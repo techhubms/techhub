@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=aP-kn76-emI
 title: 'Azure Database for PostgreSQL: Flexible Server Deep Dive'
 author: John Savill's Technical Training
@@ -28,6 +28,7 @@ tags:
 - Virtual Endpoints
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill's Technical Training delivers a comprehensive breakdown of Azure Database for PostgreSQL, guiding viewers through the management, configuration, and operational best practices for running PostgreSQL on Azure.<!--excerpt_end-->
 

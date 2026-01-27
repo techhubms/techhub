@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=f0-ucs37ASQ
 title: 'Introduction to Game Development with C# in Godot: Beginner Essentials'
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet introduces newcomers to the essentials of game development with Godot and C#, providing practical lessons that guide users through building interactive games from scratch.<!--excerpt_end-->
 

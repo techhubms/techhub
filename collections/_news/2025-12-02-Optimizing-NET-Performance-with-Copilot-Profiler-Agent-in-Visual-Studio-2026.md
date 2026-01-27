@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/delegate-the-analysis-not-the-performance/
 title: Optimizing .NET Performance with Copilot Profiler Agent in Visual Studio 2026
 author: Nik Karpinsky
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Nik Karpinsky showcases the new Copilot Profiler Agent in Visual Studio 2026, guiding developers on leveraging AI-powered profiling to analyze and optimize performance bottlenecks in .NET applications.<!--excerpt_end-->
 

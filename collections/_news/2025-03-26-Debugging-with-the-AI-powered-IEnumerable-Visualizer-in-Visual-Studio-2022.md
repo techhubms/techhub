@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/debugging-with-the-ai-powered-ienumerable-visualizer/
 title: Debugging with the AI-powered IEnumerable Visualizer in Visual Studio 2022
 author: Junyu Wang
@@ -23,6 +23,7 @@ section_names:
 - ai
 - github-copilot
 - coding
+primary_section: github-copilot
 ---
 Junyu Wang introduces the AI-powered enhancements in Visual Studio 2022’s IEnumerable Visualizer, featuring Copilot Chat integration to streamline LINQ query debugging and refinement.<!--excerpt_end-->
 

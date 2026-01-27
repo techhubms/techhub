@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/10/azure-pricing-calculator-estimate-smarter-plan-confidently/
 title: 'Azure Pricing Calculator: Estimate Smarter, Plan Confidently'
 author: Thomas Maurer
@@ -25,6 +25,7 @@ tags:
 - Video
 section_names:
 - azure
+primary_section: azure
 ---
 In this Azure Essentials Show episode, Thomas Maurer guides readers through advanced use of the Azure Pricing Calculator with insights from Britt Henderson, focusing on how to confidently estimate and manage Azure costs.<!--excerpt_end-->
 

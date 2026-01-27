@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FTHUFYMIoj8
 title: 'Future-Proofing Academic Research: HPC Workflows and Secure Enclaves with Azure CycleCloud'
 author: Microsoft Cloud
@@ -27,6 +27,7 @@ tags:
 - ThinLinc
 section_names:
 - azure
+primary_section: azure
 ---
 Presented by Microsoft Cloud, this webinar shares best practices for orchestrating large-scale HPC environments in academic research using Azure CycleCloud and CCWS.<!--excerpt_end-->
 

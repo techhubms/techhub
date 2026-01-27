@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=lhpQBp9I80w
 title: GPT-5 and Claude 4.1 Arrive in GitHub Copilot, TypeScript 5.9 Updates, and Community News
 author: GitHub
@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents this week's developer news, spotlighting the integration of GPT-5 and Claude 4.1 into GitHub Copilot. Hosted by the GitHub team, the episode also covers TypeScript 5.9 updates and other key releases.<!--excerpt_end-->
 

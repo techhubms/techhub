@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=AEbJzTF03F0
 title: .NET Framework 4.8 to .NET 9 Step by Step Migration Guide
 author: dotnet
@@ -24,6 +24,7 @@ tags:
 - Windows Service
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet explains how their team successfully migrated a 12-year-old .NET Framework application to .NET 9, outlining each critical step and the technical considerations involved.<!--excerpt_end-->
 

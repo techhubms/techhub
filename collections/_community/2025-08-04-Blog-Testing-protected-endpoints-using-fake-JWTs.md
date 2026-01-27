@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mhd2xz/blog_testing_protected_endpoints_using_fake_jwts/
 title: (Blog) Testing protected endpoints using fake JWTs
 author: Kralizek82
@@ -18,6 +18,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 In this post, Kralizek82 explores methods to test protected endpoints in C# applications using fake JWT tokens, providing practical guidance for .NET developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=YK_MNYAmpVA
 title: Modernizing Windows Server Workloads with Azure Administration, AI, and Security Tools
 author: Microsoft Events
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Presented by Dan Cuomo and Jeff Woolsey at Microsoft Ignite, this advanced session details how to manage and modernize Windows Server workloads in Azure with AI, Copilot, and security tools.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/emea/features/tapping-into-africas-230-million-ai-powered-jobs-opportunity/
 title: AI Skilling Initiatives and Africa’s 230 Million Job Opportunity
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 - Workforce Development
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke examines how Microsoft and partners, through Kenya’s AI Skilling Initiative and cross-sector collaboration, are shaping Africa's AI ecosystem and preparing millions for the digital job market.<!--excerpt_end-->
 

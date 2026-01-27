@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/shove-left-dumping-downstream-tasks-onto-developers-a-recipe-for-failure/?utm_source=rss&utm_medium=rss&utm_campaign=shove-left-dumping-downstream-tasks-onto-developers-a-recipe-for-failure
 title: “Shove Left” – Dumping Downstream Tasks Onto Developers – A Recipe for Failure
 author: Peter Pickerill
@@ -26,6 +26,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Author Peter Pickerill warns against the 'Shove Left' anti-pattern in DevOps, illustrating how offloading tasks onto developers without real change can harm teams and outcomes.<!--excerpt_end-->
 

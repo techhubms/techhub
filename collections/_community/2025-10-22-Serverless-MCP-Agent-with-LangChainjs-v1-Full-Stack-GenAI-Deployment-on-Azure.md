@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/serverless-mcp-agent-with-langchain-js-v1-burgers-tools-and/ba-p/4463157
 title: 'Serverless MCP Agent with LangChain.js v1: Full-Stack GenAI Deployment on Azure'
 author: sinedied
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 sinedied presents a step-by-step technical walkthrough of building a production-ready serverless AI agent using LangChain.js v1 and MCP, fully deployed and observable on Microsoft Azure.<!--excerpt_end-->
 

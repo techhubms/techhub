@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcement-hack-the-future-of-data-with-microsoft-fabric/
 title: 'Hack the Future of Data with Microsoft Fabric: Global AI & Data Hackathon'
 author: Microsoft Fabric Blog
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 The Microsoft Fabric Blog announces a global hackathon inviting participants to build innovative AI and data solutions with Microsoft Fabric. This event features livestream training, prizes, and community support. Authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 

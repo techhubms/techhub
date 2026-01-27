@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=VvOWQQiSRxw
 title: Introducing GitHub Copilot Integration in SQL Server Management Studio 22
 author: Microsoft Developer
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer demonstrates the preview of GitHub Copilot integration in SSMS 22, showing how developers can use Copilot for T-SQL coding and database tasks within SQL Server Management Studio.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html
 title: Using GitHub Copilot Chat to Write Better Regex Patterns
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels demonstrates how to boost regex productivity in your editor using GitHub Copilot Chat for drafting, explaining, and testing patterns.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.mindbyte.nl/2025/06/02/dynamic-iis-server-deployments-github-actions.html
 title: Dynamic IIS Server Deployments with GitHub Actions
 author: Michiel van Oudheusden
@@ -17,6 +17,7 @@ tags:
 - Windows Server
 section_names:
 - devops
+primary_section: devops
 ---
 Michiel van Oudheusden explores a practical approach to deploying web apps across multiple IIS servers using GitHub Actions, focusing on scalable DevOps strategies for traditional cloud infrastructure.<!--excerpt_end-->
 

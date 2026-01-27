@@ -24,6 +24,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog explains how OneLake now allows fine-grained data access roles for Mirrored Databases. This upgrade helps organizations define roles at the table or folder level, enabling secure, efficient collaboration and governance across teams.<!--excerpt_end-->
 

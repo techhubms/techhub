@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/introducing-multi-agent-workflows-in-foundry-agent-service/
 title: Introducing Multi-Agent Workflows in Foundry Agent Service
 author: Mona Whalin
@@ -33,6 +33,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Mona Whalin presents Microsoft's multi-agent workflow capabilities in Foundry Agent Service, allowing enterprises to visually or programmatically orchestrate complex AI processes with end-to-end observability and integration in Visual Studio Code.<!--excerpt_end-->
 

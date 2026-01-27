@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=p_zslgBi06k
 title: 'Windows 365 Meets .NET Aspire: Boosting Multi-Repo Microservice Productivity'
 author: dotnet
@@ -22,6 +22,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 dotnet presents a .NET Conf 2025 session on how Windows 365 uses .NET Aspire and supporting extensions to enhance productivity and collaboration in multi-repo microservice engineering environments.<!--excerpt_end-->
 

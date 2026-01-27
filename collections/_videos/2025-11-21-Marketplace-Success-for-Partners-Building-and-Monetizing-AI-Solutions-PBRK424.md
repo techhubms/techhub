@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=tdouicsPTAk
 title: 'Marketplace Success for Partners: Building and Monetizing AI Solutions | PBRK424'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - SMB
 section_names:
 - ai
+primary_section: ai
 ---
 Presented by Microsoft Events, this Ignite 2025 session guides partners through building, shipping, and monetizing AI solutions via Microsoft Marketplace, featuring new tools, adoption insights, and real-world partner stories.<!--excerpt_end-->
 

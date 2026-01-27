@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-importance-of-streaming-for-llm-powered-chat-applications/ba-p/4459574
 title: How to Implement Streaming in Azure LLM-Powered Chat Applications
 author: Pamela_Fox
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Pamela Fox demonstrates the value and implementation of streaming for LLM-powered chat applications on Azure, guiding developers through backend and frontend techniques, complete with sample repositories and actionable tips.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/removing-azure-resource-manager-reliance-on-azure-devops-sign-ins/
 title: Removing Azure Resource Manager Reliance on Azure DevOps Sign-ins
 author: Angel Wong
@@ -23,6 +23,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Angel Wong announces important authentication updates for Azure DevOps, moving away from Azure Resource Manager dependence for Entra sign-ins. This guide helps administrators prepare for the coming changes in Conditional Access requirements.<!--excerpt_end-->
 

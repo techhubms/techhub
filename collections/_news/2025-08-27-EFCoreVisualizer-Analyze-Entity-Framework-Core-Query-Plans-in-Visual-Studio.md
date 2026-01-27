@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/ef-core-visualizer-view-entity-framework-core-query-plan-inside-visual-studio/
 title: 'EFCore.Visualizer: Analyze Entity Framework Core Query Plans in Visual Studio'
 author: Giorgi Dalakishvili
@@ -26,6 +26,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 Giorgi Dalakishvili details how the EFCore.Visualizer extension for Visual Studio helps developers analyze and optimize Entity Framework Core query execution plans directly from the IDE.<!--excerpt_end-->
 

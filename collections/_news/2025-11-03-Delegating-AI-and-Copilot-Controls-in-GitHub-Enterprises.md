@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-03-delegate-ai-controls-management-to-members-of-your-enterprise
 title: Delegating AI and Copilot Controls in GitHub Enterprises
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison discusses new GitHub Enterprise capabilities enabling owners to delegate setup and administration of AI and Copilot policies to specific members and teams using fine-grained permissions.<!--excerpt_end-->
 

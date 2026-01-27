@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mc7cof/copilot_is_lying_about_seeing_my_code/
 title: Copilot is Lying About Seeing My Code
 author: KingPvzYT
@@ -18,6 +18,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 KingPvzYT shares their doubts about GitHub Copilot's privacy claims after Copilot seemed to reference their exact code. This article delves into the experience and questions raised around code context and transparency.<!--excerpt_end-->
 

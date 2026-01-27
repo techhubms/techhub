@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/automate-repetitive-code-with-github-copilot.html
 title: Automate Repetitive Code with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels shares practical tips on using GitHub Copilot to automate repetitive coding tasks, highlighting how AI-powered code completion streamlines development and saves time.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=wTg9tFwjAOc
 title: 'Designing Effective AI Agents: Insights from Armchair Architects'
 author: Microsoft Developer
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Hosted by Uli Homann, Eric Charran, and David Blank-Edelman, this Armchair Architects episode dives deep into designing effective AI agents, covering architecture, memory, and governance for Microsoft enterprise solutions.<!--excerpt_end-->
 

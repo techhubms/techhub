@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Zy_kxJSeYGo
 title: Envision Next Generation DLP with Microsoft Purview and Copilot
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Presented by Microsoft Events at Ignite 2025, this session introduces how organizations can upgrade data protection with Microsoft Purview and Security Copilot, blending automated DLP with AI-driven governance.<!--excerpt_end-->
 

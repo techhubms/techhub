@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/5nffupc2peM
 title: 'GPT-5 Now Available in GitHub Copilot: Advanced Features and How to Enable'
 author: GitHub
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a detailed walkthrough of GPT-5 integration with GitHub Copilot, explaining the model's new capabilities for developers and how to activate them in your Copilot plan.<!--excerpt_end-->
 

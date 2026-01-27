@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/background-tasks-in-net/ba-p/4472341
 title: Building Reliable Background Processing with .NET BackgroundService and Exponential Backoff
 author: riturajjana
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 riturajjana explores .NET background processing with BackgroundService and exponential backoff, guiding developers through a resilient architecture for handling unreliable APIs, and providing complete, production-ready code samples.<!--excerpt_end-->
 

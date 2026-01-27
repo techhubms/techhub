@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=_kkIFY0G9FE
 title: 'Engineering the Future: AI, Cloud, and Robotics Transform Digital Product Innovation'
 author: Microsoft Events
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Microsoft Events bring together experts including Simon Floyd, Dennis Goetting, Heather Kerrick, and Alfonso Rodriguez to showcase how AI, cloud, and robotics are driving digital engineering innovation at Microsoft Ignite 2025.<!--excerpt_end-->
 

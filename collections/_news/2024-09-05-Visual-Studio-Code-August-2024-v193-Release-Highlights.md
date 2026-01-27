@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_93
 title: Visual Studio Code August 2024 (v1.93) Release Highlights
 author: Visual Studio Code Team
@@ -29,6 +29,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 The Visual Studio Code Team details the August 2024 (v1.93) update, highlighting new features in GitHub Copilot, DevOps workflows, code editing, and community contributions.<!--excerpt_end-->
 

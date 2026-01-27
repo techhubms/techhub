@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/ground-your-agents-faster-native-azure-ai-search-indexing-foundry/
 title: Ground Your Agents Faster with Native Azure AI Search Indexing in Foundry
 author: Farzad Sunavala
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Farzad Sunavala explains how Azure AI Foundry now lets developers instantly create Azure AI Search vector indexes from major cloud data sources, simplifying agent grounding and accelerating AI projects.<!--excerpt_end-->
 

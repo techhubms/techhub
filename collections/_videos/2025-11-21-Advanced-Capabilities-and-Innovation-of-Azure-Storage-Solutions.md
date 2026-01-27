@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=yFFMGDNVMZ8
 title: Advanced Capabilities and Innovation of Azure Storage Solutions
 author: Microsoft Events
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents an Ignite session featuring Yuemin Lu, Aung Oo, and Lena Ye, offering in-depth guidance on the latest Azure Storage innovations and their application in modern cloud and AI workloads.<!--excerpt_end-->
 

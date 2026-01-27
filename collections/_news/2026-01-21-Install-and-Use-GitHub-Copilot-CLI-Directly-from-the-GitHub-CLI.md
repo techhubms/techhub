@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison explains how developers can now run 'gh copilot' to install and use the GitHub Copilot CLI directly from the GitHub CLI, simplifying access to AI-powered terminal assistance.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-spark-run-series-analysis-generally-available/
 title: 'Fabric Spark Run Series Analysis: Enterprise-Scale Observability for Microsoft Fabric Spark Jobs'
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog presents Fabric Spark Run Series Analysis, a feature designed to enhance recurring Spark job observability and performance optimization within Microsoft Fabric's data engineering platform.<!--excerpt_end-->
 

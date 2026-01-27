@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=6JAurnFr5e4
 title: 'Migration & Modernization Strategies for Partners: Azure-Focused Growth at MS Ignite 2025'
 author: Microsoft Events
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events hosts a session at Ignite 2025 featuring Randy Holloway and colleagues, guiding partners through Azure migration, AI-driven modernization, and security practices for sustained growth.<!--excerpt_end-->
 

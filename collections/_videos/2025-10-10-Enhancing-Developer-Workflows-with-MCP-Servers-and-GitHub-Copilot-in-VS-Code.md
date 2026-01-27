@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=T58uRBMc9M8
 title: Enhancing Developer Workflows with MCP Servers and GitHub Copilot in VS Code
 author: Visual Studio Code
@@ -20,6 +20,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code demonstrates how MCP Servers combined with GitHub Copilot agent mode can boost developer productivity by providing richer AI-powered coding support.<!--excerpt_end-->
 

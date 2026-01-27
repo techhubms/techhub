@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-16-conda-ecosystem-support-for-dependabot-now-generally-available
 title: Dependabot Adds Conda Ecosystem Support for Automated Version Updates
 author: Allison
@@ -18,6 +18,7 @@ tags:
 - Supply Chain Security
 section_names:
 - devops
+primary_section: devops
 ---
 Allison announces that Dependabot now supports version updates for Conda's environment.yml files, helping teams automate the management of Conda dependencies on GitHub.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dotnetfoundation.org/news-events/detail/license-compatibility-guide
 title: .NET Foundation License Compatibility Guide
 author: .NET Foundation News and Blog
@@ -24,6 +24,7 @@ tags:
 - Software Business Models
 section_names:
 - coding
+primary_section: coding
 ---
 This .NET Foundation guide, authored by .NET Foundation News and Blog, explains which licenses are compatible, clarifies common licensing myths, and outlines supported commercial strategies for project maintainers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-secure-your-pro-code-custom-engine-agent-of-microsoft-365/ba-p/4440495
 title: 'Securing Your Pro-Code Custom Engine Agent for Microsoft 365 Copilot: Endpoint Protection Guide'
 author: daisami
@@ -26,6 +26,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: coding
 ---
 daisami presents a practical guide on securing pro-code custom engine agent endpoints for Microsoft 365 Copilot, detailing application-level controls, code samples, and Azure integration strategies.<!--excerpt_end-->
 

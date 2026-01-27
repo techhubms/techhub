@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/rxIjBKM-XvU
 title: 'Introducing Plan Mode: Build Better Plans with GitHub Copilot'
 author: GitHub
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub introduces Plan Mode for GitHub Copilot in VS Code, showcasing how developers can build step-by-step plans and write better code efficiently. Presented by the GitHub team.<!--excerpt_end-->
 

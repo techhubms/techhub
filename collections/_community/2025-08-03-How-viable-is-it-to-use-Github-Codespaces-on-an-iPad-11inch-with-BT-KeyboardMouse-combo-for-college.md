@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/github/comments/1mgg60v/how_viable_is_it_to_use_github_codespaces_on_an/
 title: How viable is it to use Github Codespaces on an iPad 11inch with BT Keyboard/Mouse combo for college?
 author: AalbatrossGuy
@@ -18,6 +18,7 @@ tags:
 - Web Based IDE
 section_names:
 - devops
+primary_section: devops
 ---
 AalbatrossGuy inquires about the feasibility of using GitHub Codespaces on an iPad with Bluetooth keyboard and mouse for college programming lectures, exploring the pros, cons, and necessary considerations.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/02/arc-jumpstart-drops-empowering-innovation-and-collaboration/
 title: 'Arc Jumpstart Drops: Enhancing Community Collaboration for Hybrid Cloud Automation'
 author: Thomas Maurer
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Authored by Thomas Maurer, this article presents Arc Jumpstart Drops, a Microsoft Azure Arc initiative that empowers community members to share scripts and tools for hybrid, multicloud, and edge deployments.<!--excerpt_end-->
 

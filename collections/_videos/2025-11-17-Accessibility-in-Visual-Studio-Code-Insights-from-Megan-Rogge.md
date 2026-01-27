@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=THF85BT8J7c
 title: 'Accessibility in Visual Studio Code: Insights from Megan Rogge'
 author: Visual Studio Code
@@ -20,6 +20,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 Visual Studio Code’s team, with insights from engineer Megan Rogge, shares practical approaches to accessibility—covering screen reader support, accessible interfaces, and culture-driven design decisions.<!--excerpt_end-->
 

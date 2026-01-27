@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=baPvHB27gwY
 title: 'Panel: Real-World Architectures and Lessons from Scaling AI Agents on Azure'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a panel discussion at Ignite 2025, featuring Mark Austin, Luis Héctor Chávez, Adam Orentlicher, and Naga Surendran as they share real-world approaches to architecting AI agents using Azure and open AI frameworks.<!--excerpt_end-->
 

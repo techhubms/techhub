@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/blogs/2025/04/07/agentMode
 title: Agent Mode Now Available to All VS Code Users with MCP Support
 author: Isidor Nikolic
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Isidor Nikolic from the VS Code team introduces Agent Mode, now accessible to all users. This update enables developers to automate coding tasks, customize workflows with MCP servers and extensions, and experience streamlined AI integration in Visual Studio Code.<!--excerpt_end-->
 

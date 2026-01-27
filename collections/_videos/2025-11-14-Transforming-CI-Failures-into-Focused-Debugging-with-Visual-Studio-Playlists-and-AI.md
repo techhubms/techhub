@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=6RNTltZuaFs
 title: Transforming CI Failures into Focused Debugging with Visual Studio Playlists and AI
 author: dotnet
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 dotnet presents a session on streamlining CI debugging by generating Visual Studio playlists from failed test results, highlighting the role of AI tools like GitHub Copilot in enhancing developer workflows.<!--excerpt_end-->
 

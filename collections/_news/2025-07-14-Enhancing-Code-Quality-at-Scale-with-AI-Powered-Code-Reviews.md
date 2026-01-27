@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/engineering-at-microsoft/enhancing-code-quality-at-scale-with-ai-powered-code-reviews/
 title: Enhancing Code Quality at Scale with AI-Powered Code Reviews
 author: Sneha Tuli
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Authored by Sneha Tuli, this article details how Microsoft's AI-powered code review assistant revolutionizes pull request workflows, boosts code quality, and shapes GitHub Copilot’s code review process to benefit developers worldwide.<!--excerpt_end-->
 

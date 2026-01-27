@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mk4hp1/high_ram_usage_aspnet_core_mvc/
 title: High RAM Usage Troubleshooting in ASP.NET Core MVC 8 Application
 author: scartus
@@ -22,6 +22,7 @@ tags:
 - Windows Server
 section_names:
 - coding
+primary_section: coding
 ---
 scartus initiates a discussion about high memory usage in an ASP.NET Core MVC 8 application, seeking recommendations and insights from the developer community.<!--excerpt_end-->
 

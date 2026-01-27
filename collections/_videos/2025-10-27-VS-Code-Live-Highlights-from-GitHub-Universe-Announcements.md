@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=u-YQ624i8qE
 title: 'VS Code Live: Highlights from GitHub Universe Announcements'
 author: Visual Studio Code
@@ -23,6 +23,7 @@ tags:
 - VS Code
 section_names:
 - devops
+primary_section: devops
 ---
 Visual Studio Code's Burke Holland and GitHub's April Yoho break down the key developer-focused announcements from GitHub Universe, sharing insights for the community.<!--excerpt_end-->
 

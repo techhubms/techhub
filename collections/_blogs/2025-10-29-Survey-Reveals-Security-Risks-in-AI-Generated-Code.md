@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/survey-surfaces-rising-tide-of-vulnerabilities-in-code-generated-by-ai/
 title: Survey Reveals Security Risks in AI-Generated Code
 author: Mike Vizard
@@ -26,6 +26,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Mike Vizard presents insights from a survey of IT professionals, revealing the widespread security vulnerabilities found in AI-generated code, and discussing the implications for DevOps and security teams.<!--excerpt_end-->
 

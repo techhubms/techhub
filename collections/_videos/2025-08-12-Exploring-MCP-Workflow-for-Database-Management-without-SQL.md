@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=0iROrkufO3E
 title: Exploring MCP Workflow for Database Management without SQL
 author: Microsoft Developer
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer presents an overview of using the Model Context Protocol (MCP) workflow for database management beyond SQL, showing how MCP tools can be integrated within VS Code and Azure AI Foundry Agent Service.<!--excerpt_end-->
 

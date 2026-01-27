@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=imTARwNQuA4
 title: AI-Powered Development with GitHub Copilot in Visual Studio
 author: dotnet
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Presented by dotnet, this video session demonstrates how developers can leverage GitHub Copilot’s AI-powered features in Visual Studio to write better code, refactor intelligently, and boost productivity using advanced prompting and practical integration techniques.<!--excerpt_end-->
 

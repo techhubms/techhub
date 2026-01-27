@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/api-gateway-pattern-in-azure-managing-apis-and-routing-requests-to-microservices/
 title: 'API Gateway Pattern in Azure: Managing APIs and Routing Requests to Microservices'
 author: Dellenny
@@ -28,6 +28,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Dellenny provides a hands-on guide to implementing the API Gateway pattern on Azure using API Management, explaining how to route, secure, and monitor requests to microservices for robust and maintainable architectures.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xG3py56UBUo
 title: 'Understanding AI Agents: Turning Plain Language into Code Execution'
 author: Microsoft Developer
@@ -17,6 +17,7 @@ tags:
 - Seth Juarez
 section_names:
 - ai
+primary_section: ai
 ---
 Seth Juarez from Microsoft Developer demystifies the term 'AI agent', explaining for viewers how these entities interpret human language and execute real code, supporting developers with insights into Microsoft AI technologies.<!--excerpt_end-->
 

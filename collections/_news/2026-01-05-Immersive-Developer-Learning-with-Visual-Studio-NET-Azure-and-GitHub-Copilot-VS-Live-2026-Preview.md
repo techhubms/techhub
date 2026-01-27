@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/vs-live-2026-immersive-learning-for-vs2026/
 title: 'Immersive Developer Learning with Visual Studio, .NET, Azure, and GitHub Copilot: VS Live! 2026 Preview'
 author: Jim Harrer
@@ -25,6 +25,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Jim Harrer discusses the major focus areas of developer growth in 2026, emphasizing immersive events like VS Live! that feature Visual Studio 2026, .NET, Azure, and GitHub Copilot. The post explores key learning themes, session highlights, and the value of hands-on experience.<!--excerpt_end-->
 

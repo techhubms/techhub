@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xFi_MtLlYpk
 title: 'Modernization Made Simple: Building Agentic Solutions in .NET'
 author: dotnet
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 dotnet presents a practical session on integrating the Agent Framework with .NET, showing developers how to modernize applications by enabling agentic features such as multi-agent collaboration and memory persistence.<!--excerpt_end-->
 

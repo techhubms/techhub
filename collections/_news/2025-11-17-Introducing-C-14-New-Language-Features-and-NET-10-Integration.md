@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/introducing-csharp-14/
 title: 'Introducing C# 14: New Language Features and .NET 10 Integration'
 author: Bill Wagner
@@ -25,6 +25,7 @@ tags:
 - Unbound Generic Types
 section_names:
 - coding
+primary_section: coding
 ---
 Bill Wagner introduces the key features of C# 14 shipped with .NET 10, emphasizing extension members, productivity boosters, and performance enhancements for developers.<!--excerpt_end-->
 

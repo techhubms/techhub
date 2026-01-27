@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=yIswUU7lKpk
 title: Modern C# Features to Enhance Your Coding Habits
 author: dotnet
@@ -20,6 +20,7 @@ tags:
 - Refactoring
 section_names:
 - coding
+primary_section: coding
 ---
 Dotnet presents a walkthrough of the latest C# language features from versions 12 to 14, designed to improve coding habits and productivity for developers.<!--excerpt_end-->
 

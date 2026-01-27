@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracledatabase-azure-expands-footprint-to-31-regions-and/ba-p/4471109
 title: Oracle Database@Azure Now Available in 31 Regions With Enhanced Security and AI Integration
 author: KalyanKaki
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 KalyanKaki outlines the global expansion and new security features of Oracle Database@Azure, including Azure Key Vault support, AI database integration, and enhanced governance for enterprise workloads.<!--excerpt_end-->
 

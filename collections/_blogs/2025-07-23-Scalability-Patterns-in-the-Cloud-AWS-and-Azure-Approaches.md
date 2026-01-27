@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/scalability-patterns-in-the-cloud-aws-azure-approaches/
 title: 'Scalability Patterns in the Cloud: AWS & Azure Approaches'
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 - Virtual Machine Scale Sets
 section_names:
 - azure
+primary_section: azure
 ---
 Dellenny outlines cloud scalability patterns—horizontal scaling, auto-scaling, and queue-based load leveling—showing how to implement each using Microsoft Azure services, with practical advice for technical readers.<!--excerpt_end-->
 

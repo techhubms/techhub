@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=QrYbHesIxpw
 title: 'AI Agent Memory: Building Self-Improving Agents'
 author: Microsoft Developer
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Developer presents a deep dive into AI agent memory systems, featuring memory management strategies, self-improvement, and code samples using Mem0, Semantic Kernel, and Azure AI Search.<!--excerpt_end-->
 

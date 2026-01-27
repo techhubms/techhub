@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/copilot-now-remembers-you-heres-why-that-matters/
 title: How GitHub Copilot's New Memory Feature Changes Your Coding Experience
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny explains how GitHub Copilot's new memory feature allows the AI assistant to remember your coding preferences and history, offering more personalized code suggestions and giving users transparency and control over their stored data.<!--excerpt_end-->
 

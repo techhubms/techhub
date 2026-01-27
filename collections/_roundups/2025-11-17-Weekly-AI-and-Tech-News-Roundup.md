@@ -1,4 +1,4 @@
----
+﻿---
 title: AI-Integrated Developer Tools, .NET 10 Release, and Cloud Updates Enhance Modern Workflows
 author: Tech Hub Team
 date: 2025-11-17 09:00:00 +00:00
@@ -21,6 +21,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: all
 ---
 Welcome to this week’s tech roundup, highlighting how AI-driven tools, cloud advancements, and updated productivity resources are changing the software development experience. Notable releases include extended GitHub Copilot support in Visual Studio 2026, wide deployment of .NET 10 as the new long-term support version, and new features throughout Azure, DevOps, and security platforms. As Copilot agents work more autonomously and AI model controls become more robust, development teams benefit from improved workflow oversight and flexibility. A range of tutorials and architectural changes reinforce that AI is transitioning from an optional addition to an essential part of everyday coding, reviews, and automation tasks.
 

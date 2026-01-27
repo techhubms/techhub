@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/open-source/social-impact/using-ai-to-map-hope-for-refugees-with-unhcr-the-un-refugee-agency/
 title: 'Using AI and Open Source to Map Refugee Settlements: The UNHCR and GitHub Story'
 author: Sidney Espinosa
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Sidney Espinosa details how UNHCR, in partnership with GitHub and Microsoft AI for Good Lab, used drone imagery, AI, and open source tools—including GitHub Copilot—to empower refugees in Kenya through intelligent mapping solutions.<!--excerpt_end-->
 

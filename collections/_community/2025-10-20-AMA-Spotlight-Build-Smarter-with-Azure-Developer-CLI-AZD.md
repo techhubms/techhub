@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ama-spotlight-build-smarter-with-azure-developer-cli-azd/ba-p/4462308
 title: "AMA Spotlight: Build Smarter with Azure Developer CLI 'AZD'"
 author: Lee_Stott
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Lee_Stott features a weekly AMA with Kristen Womack and the Azure Developer CLI engineering team, inviting developers to discuss deployment, automation, and scaling of AI-driven solutions using Azure tools and best practices.<!--excerpt_end-->
 

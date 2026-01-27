@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-your-foundation-for-an-ai-ready-data-estate/
 title: 'OneLake: your foundation for an AI-ready data estate'
 author: Microsoft Fabric Blog
@@ -28,6 +28,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 The Microsoft Fabric Blog team details how OneLake unifies organizational data for AI and analytics. Drawing on real enterprise deployments, this post covers security, data integration, governance, and AI-ready architecture—all authored by Microsoft Fabric experts.<!--excerpt_end-->
 

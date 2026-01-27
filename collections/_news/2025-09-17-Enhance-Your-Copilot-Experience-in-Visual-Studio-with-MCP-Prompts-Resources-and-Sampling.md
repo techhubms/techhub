@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/mcp-prompts-resources-sampling/
 title: Enhance Your Copilot Experience in Visual Studio with MCP Prompts, Resources, and Sampling
 author: Allie Barry, Praveen Sethuraman
@@ -37,6 +37,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allie Barry and Praveen Sethuraman introduce powerful new MCP features in Visual Studio, including prompts, resources, and sampling, to supercharge Copilot with deeper context and developer integrations.<!--excerpt_end-->
 

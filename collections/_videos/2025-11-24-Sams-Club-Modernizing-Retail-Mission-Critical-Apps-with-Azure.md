@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=NDdYyolB-PA
 title: 'Sam’s Club: Modernizing Retail Mission-Critical Apps with Azure'
 author: Microsoft Events
@@ -32,6 +32,7 @@ section_names:
 - coding
 - devops
 - ml
+primary_section: ml
 ---
 In this Microsoft Ignite session, Microsoft Events presents technical guidance from Sam’s Club’s modernization of retail apps on Azure, featuring resilience strategies and platform transformation techniques.<!--excerpt_end-->
 

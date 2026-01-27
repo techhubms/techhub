@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/exchange-team-blog/what-is-direct-send-and-how-to-secure-it/ba-p/4439865
 title: What is Direct Send and How to Secure It in Exchange Online
 author: The_Exchange_Team
@@ -18,6 +18,7 @@ tags:
 - Transport Rules
 section_names:
 - azure
+primary_section: azure
 ---
 Authored by The Exchange Team, this article delves into how Direct Send operates in Exchange Online, and offers practical guidance for organizations aiming to secure mail flow and monitor messages delivered without custom connectors.<!--excerpt_end-->
 

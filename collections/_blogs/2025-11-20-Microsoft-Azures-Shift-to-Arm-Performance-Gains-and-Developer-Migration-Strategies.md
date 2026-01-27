@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devclass.com/2025/11/20/inside-the-clouds-shift-to-arm-why-hyperscalers-and-the-industry-are-making-the-switch/
 title: "Microsoft Azure's Shift to Arm: Performance Gains and Developer Migration Strategies"
 author: David Gordon
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 David Gordon explores the major transition toward Arm-based architectures in cloud computing, focusing on Microsoft Azure's Cobalt series. The article outlines performance benchmarks, developer migration strategies, and efficiency gains for ML and AI workloads.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/assess-agentic-risks-with-the-ai-red-teaming-agent-in-microsoft-foundry/
 title: Assess Agentic Risks with the AI Red Teaming Agent in Microsoft Foundry
 author: Laurel Geisbush, Jenn Cockrell
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Laurel Geisbush and Jenn Cockrell introduce significant updates to Microsoft Foundry, highlighting the AI Red Teaming Agent and its role in automated, scalable risk assessment for AI models and agentic pipelines.<!--excerpt_end-->
 

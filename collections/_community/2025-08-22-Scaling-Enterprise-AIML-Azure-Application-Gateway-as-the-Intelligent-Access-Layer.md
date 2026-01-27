@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-enterprise-ai-ml-with-confidence-azure-application/ba-p/4445691
 title: 'Scaling Enterprise AI/ML: Azure Application Gateway as the Intelligent Access Layer'
 author: reyjordi
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 reyjordi explores how Azure Application Gateway serves as a critical component for scaling and securing enterprise AI and ML workloads, providing intelligent routing, security enforcement, and integration options for Microsoft Azure-based solutions.<!--excerpt_end-->
 

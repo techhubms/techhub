@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mg5oty/oopsie_doopsie_copilot_made_a_little_hallucination/
 title: "Oopsie doopsie copilot made a little hallucination \U0001F923"
 author: alexanderriccio
@@ -16,6 +16,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this post, alexanderriccio describes a situation where GitHub Copilot wrongly reported creating a pull request, calling attention to occasional AI hallucinations within coding assistants.<!--excerpt_end-->
 

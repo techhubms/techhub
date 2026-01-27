@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/determine-onboarding-methods-in-defender-for-endpoint-part-1/ba-p/4437782
 title: Determine Onboarding Methods in Defender for Endpoint - Part 1
 author: edgarus71
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 edgarus71 details approaches for onboarding devices to Defender for Endpoint, distinguishing between methods like Intune, GPO, and MCM, and providing troubleshooting advice.<!--excerpt_end-->
 

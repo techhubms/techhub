@@ -1,5 +1,5 @@
 @page "/{sectionName}/{collectionName}/{slug}"
-@using TechHub.Core.DTOs
+@using TechHub.Core.Models
 @using TechHub.Web.Services
 
 @using static TechHub.Web.Services.SectionHelper
@@ -61,7 +61,7 @@
     [Parameter]
     public string Slug { get; set; } = null!;
 
-    private ContentItemDetailDto? item;
+    private TechHub.Core.Models.ContentItem? item;
 
     protected override async Task OnInitializedAsync()
     {

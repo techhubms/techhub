@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=sNDZO9N4m9Y
 title: Build your first MCP server
 author: Microsoft Developer
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Microsoft Developer presents a video guide to building your first Model Context Protocol (MCP) server, covering environment setup, core development concepts, and cloud deployment.<!--excerpt_end-->
 

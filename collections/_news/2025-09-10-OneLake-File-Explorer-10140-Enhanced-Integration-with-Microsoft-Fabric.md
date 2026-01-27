@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-file-explorer-smarter-more-reliable-and-seamlessly-integrated/
 title: 'OneLake File Explorer 1.0.14.0: Enhanced Integration with Microsoft Fabric'
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog announces OneLake File Explorer version 1.0.14.0, featuring smarter sync, better stability, and .NET 8 migration for enhanced data workflow integration.<!--excerpt_end-->
 

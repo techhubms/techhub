@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=3lIrMl2Y8f0
 title: Overview of Managed Solutions and Secure Operations in Power Platform
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events presents an in-depth session on using Copilot Studio and Power Platform to secure, monitor, and govern enterprise solutions, with insights from Ryan Jones at Microsoft Ignite.<!--excerpt_end-->
 

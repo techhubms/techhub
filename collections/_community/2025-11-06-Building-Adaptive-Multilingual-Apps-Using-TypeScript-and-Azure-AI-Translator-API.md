@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-adaptive-multilingual-apps-using-typescript-and-azure/ba-p/4465267
 title: Building Adaptive Multilingual Apps Using TypeScript and Azure AI Translator API
 author: Julia_Muiruri
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Julia Muiruri guides developers through leveraging the 2025-05-01-preview Azure AI Translator API in TypeScript applications, with a focus on adaptive translation, LLM integration, and migration best practices.<!--excerpt_end-->
 

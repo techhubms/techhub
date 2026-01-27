@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mi1ek5/dealing_with_xml_and_transformations/
 title: Approaches for XML Transformation in .NET 8+ Environments
 author: technically_a_user
@@ -18,6 +18,7 @@ tags:
 - XSLT
 section_names:
 - coding
+primary_section: coding
 ---
 Authored by technically_a_user, this article delves into practical methods for transforming XML in .NET 8+ systems, comparing XSLT and code-based approaches.<!--excerpt_end-->
 

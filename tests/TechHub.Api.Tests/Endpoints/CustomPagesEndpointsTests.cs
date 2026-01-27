@@ -2,7 +2,7 @@ using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc.Testing;
-using TechHub.Core.DTOs;
+using TechHub.Core.Models;
 
 namespace TechHub.Api.Tests.Endpoints;
 

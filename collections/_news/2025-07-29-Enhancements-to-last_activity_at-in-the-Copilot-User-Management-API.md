@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-29-enhancements-to-last_activity_at-in-the-user-management-api
 title: Enhancements to last_activity_at in the Copilot User Management API
 author: Allison
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison outlines recent improvements to the `last_activity_at` field in the GitHub Copilot User Management API, increasing reliability in tracking user activity.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/setting-up-alerts-for-unusual-github-copilot-activity/
 title: Setting Up Security Alerts for Unusual GitHub Copilot Activity
 author: John Edward
@@ -24,6 +24,7 @@ section_names:
 - ai
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 John Edward presents a practical guide for enabling security alerts on unusual GitHub Copilot activity, detailing the risks, monitoring strategies, and key technical steps to help organizations secure their AI-powered developer workflows.<!--excerpt_end-->
 

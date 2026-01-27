@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=KZ5ePLtasAQ
 title: Deploying and Operating Power Platform Solutions with DevOps
 author: Microsoft Events
@@ -34,6 +34,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Microsoft Events presents a session on DevOps practices for Power Platform solutions, featuring Casey Burke and Austin Laugesen. The session details integrating ALM, automation, and monitoring in a low-code, AI-enhanced environment.<!--excerpt_end-->
 

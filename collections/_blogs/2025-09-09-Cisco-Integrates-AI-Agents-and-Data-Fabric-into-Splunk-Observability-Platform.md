@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/cisco-to-add-ai-agents-to-splunk-observability-platforms/?utm_source=rss&utm_medium=rss&utm_campaign=cisco-to-add-ai-agents-to-splunk-observability-platforms
 title: Cisco Integrates AI Agents and Data Fabric into Splunk Observability Platform
 author: Mike Vizard
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard examines Cisco’s integration of agentic AI features and Data Fabric into its Splunk Observability platform, presenting a deeper look at how these capabilities automate IT monitoring and analysis.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-for-fabric-data-agents-at-ignite-2025-unlocking-deeper-data-reasoning-and-seamless-ai-interoperability/
 title: 'What’s New for Fabric Data Agents: AI Interoperability and Enterprise Data Insights at Ignite 2025'
 author: Microsoft Fabric Blog
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog authors Nellie Gustafsson, Joanne Wong, Amir Jafari, Misha Desai, and Shreyas Canchi present new capabilities for Fabric data agents unveiled at Ignite 2025, emphasizing AI interoperability and modular enterprise data analytics.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-09-dependabot-dgs-for-go
 title: Dependabot-Based Dependency Graphs Enhance Supply Chain Security for Go Projects
 author: Allison
@@ -24,6 +24,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison summarizes GitHub's updates for Dependabot-based dependency graphs, highlighting enhanced supply chain security and better dependency tracking for Go projects.<!--excerpt_end-->
 

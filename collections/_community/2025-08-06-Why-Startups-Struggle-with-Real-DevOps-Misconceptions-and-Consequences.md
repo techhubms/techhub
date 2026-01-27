@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/devops/comments/1mj39oo/every_startup_wants_devops_until_they_realize/
 title: 'Why Startups Struggle with Real DevOps: Misconceptions and Consequences'
 author: Pichipaul
@@ -22,6 +22,7 @@ tags:
 - Zero Downtime Deployments
 section_names:
 - devops
+primary_section: devops
 ---
 Pichipaul discusses the common startup misconception that DevOps is a quick fix, emphasizing the cultural and technical depth required. Community voices share real-world challenges and highlight why organizational investment is crucial.<!--excerpt_end-->
 

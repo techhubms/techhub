@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/the-signals-loop-fine-tuning-for-world-class-ai-apps-and-agents/
 title: 'The Signals Loop: Fine-Tuning for World-Class AI Apps and Agents'
 author: Asha Sharma and Rolf Harms
@@ -31,6 +31,7 @@ section_names:
 - azure
 - github-copilot
 - ml
+primary_section: github-copilot
 ---
 Asha Sharma and Rolf Harms detail how signals loops, fine-tuning, and continuous feedback drive world-class AI apps and agents—exploring practical insights from Dragon Copilot, GitHub Copilot, and Azure AI Foundry.<!--excerpt_end-->
 

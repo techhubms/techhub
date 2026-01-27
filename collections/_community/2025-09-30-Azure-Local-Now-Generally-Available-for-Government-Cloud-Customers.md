@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-general-availability-of-azure-local-on-microsoft/ba-p/4458013
 title: Azure Local Now Generally Available for Government Cloud Customers
 author: meenagowdar
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 meenagowdar outlines the release of Azure Local's general availability for Azure Government, offering government agencies secure, compliant cloud capabilities with on-premises control and advanced infrastructure security.<!--excerpt_end-->
 

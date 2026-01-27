@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/how-to-safely-remove-secrets-from-your-git-history-the-right-way/ba-p/4464722
 title: How to Safely Remove Secrets from Your Git History (The Right Way)
 author: Sakshi_Gupta22
@@ -22,6 +22,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Sakshi_Gupta22 offers a thorough walkthrough on how developers can use git filter-repo to scrub sensitive files from Git repositories, enhancing security and reducing the risk of leaked secrets.<!--excerpt_end-->
 

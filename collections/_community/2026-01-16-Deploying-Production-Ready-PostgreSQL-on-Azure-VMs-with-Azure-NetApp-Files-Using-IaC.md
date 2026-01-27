@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/deploy-postgresql-on-azure-vms-with-azure-netapp-files/ba-p/4486114
 title: Deploying Production-Ready PostgreSQL on Azure VMs with Azure NetApp Files Using IaC
 author: GeertVanTeylingen
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 GeertVanTeylingen, with co-authors Prabu Arjunan and Asutosh Panda, presents a practical guide to automating PostgreSQL deployments on Azure VMs with Azure NetApp Files. Learn how Infrastructure as Code and Azure services streamline repeatable, secure, and high-performance database environments.<!--excerpt_end-->
 

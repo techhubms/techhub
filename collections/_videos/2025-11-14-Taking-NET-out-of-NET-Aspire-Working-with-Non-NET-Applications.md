@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FcAi-kqo3ps
 title: 'Taking .NET out of .NET Aspire: Working with Non-.NET Applications'
 author: dotnet
@@ -20,6 +20,7 @@ tags:
 - Service Orchestration
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet presents a session on extending .NET Aspire to support applications built with technologies like Python and Node.js, detailing integration tips and benefits for diverse software stacks.<!--excerpt_end-->
 

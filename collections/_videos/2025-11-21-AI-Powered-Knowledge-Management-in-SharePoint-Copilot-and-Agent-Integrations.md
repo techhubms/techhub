@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=uRit_4gcvDM
 title: 'AI-Powered Knowledge Management in SharePoint: Copilot and Agent Integrations'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents a session on how AI innovations in SharePoint, such as the Knowledge Agent and Copilot integrations, enable smarter knowledge management and automation for Microsoft 365 users.<!--excerpt_end-->
 

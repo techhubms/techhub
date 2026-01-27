@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-fabric-mcp-public-preview/
 title: 'Introducing Fabric MCP (Preview): Developer-Focused AI Integration for Microsoft Fabric'
 author: Microsoft Fabric Blog
@@ -29,6 +29,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 This article by Microsoft Fabric Blog introduces the Fabric MCP (Preview), a developer-centric, open-source protocol empowering AI agents and coders with secure access to Microsoft Fabric APIs, schemas, and best practices for streamlined data analytics development.<!--excerpt_end-->
 

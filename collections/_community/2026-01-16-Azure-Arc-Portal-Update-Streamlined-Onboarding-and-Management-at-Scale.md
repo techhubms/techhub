@@ -18,6 +18,7 @@ tags:
 - Secure Score
 section_names:
 - azure
+primary_section: azure
 ---
 MarcoB presents an overview of the refreshed Azure Arc portal, highlighting streamlined onboarding and new dashboard features aimed at making multi-cloud resource management simpler and more actionable.<!--excerpt_end-->
 

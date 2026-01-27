@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=iEMbetxAwvA
 title: 'Scripting Basics in Godot: Writing and Attaching C# Scripts (Part 5 of 9)'
 author: dotnet
@@ -23,6 +23,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet demonstrates C# scripting basics in Godot, guiding viewers through input handling, character movement, and smooth rotation—essential skills for building interactive game elements.<!--excerpt_end-->
 

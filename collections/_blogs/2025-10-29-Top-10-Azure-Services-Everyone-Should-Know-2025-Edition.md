@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/top-10-azure-services-everyone-should-know-2025-edition/
 title: Top 10 Azure Services Everyone Should Know (2025 Edition)
 author: Dellenny
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Dellenny provides a practical guide to the top 10 Azure services everyone in IT, development, or cloud architecture should know in 2025, outlining what they are, when to use them, and strategic considerations for mastering Microsoft’s evolving cloud platform.<!--excerpt_end-->
 

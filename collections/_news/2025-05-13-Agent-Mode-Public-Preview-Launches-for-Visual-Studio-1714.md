@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/agent-mode-has-arrived-in-preview-for-visual-studio/
 title: Agent Mode Public Preview Launches for Visual Studio 17.14
 author: Katie Savage, Aaron Yim
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Katie Savage and Aaron Yim introduce Agent mode in Visual Studio 17.14, which empowers developers to define and complete complex tasks in natural language using GitHub Copilot's autonomous planning and execution capabilities.<!--excerpt_end-->
 

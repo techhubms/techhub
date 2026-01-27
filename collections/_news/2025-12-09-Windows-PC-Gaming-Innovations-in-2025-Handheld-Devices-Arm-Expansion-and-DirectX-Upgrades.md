@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.windows.com/windowsexperience/2025/12/09/windows-pc-gaming-in-2025-handheld-innovation-arm-progress-and-directx-advances/
 title: 'Windows PC Gaming Innovations in 2025: Handheld Devices, Arm Expansion, and DirectX Upgrades'
 author: stclarke
@@ -33,6 +33,7 @@ section_names:
 - coding
 - ml
 - security
+primary_section: ai
 ---
 stclarke summarizes the 2025 Windows PC gaming landscape, covering innovations in handheld experiences, Arm compatibility, DirectX 12 upgrades, security improvements, and AI-powered graphics for gamers and developers.<!--excerpt_end-->
 

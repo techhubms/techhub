@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=hTV5jgjvYiY
 title: 'MCP In Production: Building Secure and Agent-Ready Model Context Protocol Servers'
 author: Microsoft Developer
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Developer, with experts from Arcade.dev, explores securing Model Context Protocol (MCP) servers in production. Learn from Nate and Wils about OAuth 2.1, token validation, agentic AI, and advanced mitigation techniques.<!--excerpt_end-->
 

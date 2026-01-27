@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=DJyIfUQ_OZQ
 title: 'Agentic AI in Action: Building Autonomous Agents with Microsoft Agent Framework'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Presented by Pavel Nasovich and Dmitry Tikhomirov at Microsoft Ignite, this talk explores agentic AI solutions built with Microsoft's Agent Framework, Copilot Studio, and Azure AI. The session details real-world integration, compliance, and development challenges.<!--excerpt_end-->
 

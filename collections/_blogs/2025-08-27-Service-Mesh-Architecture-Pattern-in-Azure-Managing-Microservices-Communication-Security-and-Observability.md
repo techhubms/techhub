@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/service-mesh-architecture-pattern-in-azure-handling-service-to-service-communication-security-and-observability/
 title: 'Service Mesh Architecture Pattern in Azure: Managing Microservices Communication, Security, and Observability'
 author: Dellenny
@@ -30,6 +30,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Dellenny discusses how Service Mesh architectures on Azure, using options like Istio and Open Service Mesh, streamline microservices communication, enhance security, and expand observability for cloud-native applications.<!--excerpt_end-->
 

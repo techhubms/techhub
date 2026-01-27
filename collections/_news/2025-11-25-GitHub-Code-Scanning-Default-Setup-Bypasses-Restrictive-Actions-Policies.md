@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-25-code-scanning-default-setup-bypasses-github-actions-policy-blocks
 title: GitHub Code Scanning Default Setup Bypasses Restrictive Actions Policies
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison summarizes a recent enhancement to GitHub code scanning, explaining how the default setup workflow now overrides restrictive GitHub Actions policies except for when actions are globally disabled.<!--excerpt_end-->
 

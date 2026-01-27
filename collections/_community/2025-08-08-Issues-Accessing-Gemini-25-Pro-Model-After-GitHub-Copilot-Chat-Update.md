@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mki944/lost_access_to_gemini_25_pro_after_update/
 title: Issues Accessing Gemini 2.5 Pro Model After GitHub Copilot Chat Update
 author: EchoingAngel
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 EchoingAngel shares concerns about losing access to Gemini 2.5 Pro after a GitHub Copilot Chat update in VS Code, detailing troubleshooting steps and community responses.<!--excerpt_end-->
 

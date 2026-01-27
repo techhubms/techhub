@@ -88,5 +88,4 @@ public class VSCodeUpdatesTests(PlaywrightCollectionFixture fixture) : IAsyncLif
 
         errors.Should().BeEmpty($"Expected no console errors on {PageUrl}, but found: {string.Join(", ", errors.Select(e => e.Text))}");
     }
-
 }

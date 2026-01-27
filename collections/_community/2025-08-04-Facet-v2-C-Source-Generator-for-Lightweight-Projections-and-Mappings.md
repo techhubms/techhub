@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mh7x1b/facet_v2_a_source_generator_for_projections_and/
 title: 'Facet v2: C# Source Generator for Lightweight Projections and Mappings'
 author: Voiden0
@@ -18,6 +18,7 @@ tags:
 - Source Generator
 section_names:
 - coding
+primary_section: coding
 ---
 Authored by Voiden0, this article introduces Facet v2, a C# source generator for creating projections and mappings efficiently, highlighting recent improvements driven by community feedback.<!--excerpt_end-->
 

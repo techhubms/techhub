@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/reimagining-vm-application-management-for-an-ai-powered-secure/ba-p/4470127
 title: Reimagining VM Application Management for an AI-Powered, Secure Future
 author: tanmay-gore
@@ -28,6 +28,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Tanmay Gore outlines how Azure VM Applications simplify and secure VM software deployment for AI-scale workloads, integrating CI/CD automation, versioning, and governance in the Azure ecosystem.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/implementing-zero-trust-architecture-in-an-azure-environment/
 title: Implementing Zero Trust Architecture in an Azure Environment
 author: Dellenny
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Dellenny offers a comprehensive walkthrough of Zero Trust implementation in Azure, illustrating practical use of Microsoft’s security tools and providing a step-by-step architecture roadmap for securing cloud environments.<!--excerpt_end-->
 

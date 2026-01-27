@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-25-copilot-can-create-issues-with-code-snippets-in-public-preview
 title: 'Copilot Can Create GitHub Issues with Code Snippets: Public Preview'
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison discusses how GitHub Copilot now enables developers to create issues with attached code snippets and files, improving workflows and issue context in public preview.<!--excerpt_end-->
 

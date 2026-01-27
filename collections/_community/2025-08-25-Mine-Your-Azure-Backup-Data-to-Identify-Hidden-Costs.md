@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/mine-your-azure-backup-data-it-could-save-you/m-p/4448003#M22143
 title: Mine Your Azure Backup Data to Identify Hidden Costs
 author: Adeelaziz
@@ -17,6 +17,7 @@ tags:
 - Virtual Machines
 section_names:
 - azure
+primary_section: azure
 ---
 Adeelaziz shares a practical method for identifying hidden costs in Azure by analyzing backup data with Power BI and PowerShell, providing tips for optimizing cloud storage spend.<!--excerpt_end-->
 

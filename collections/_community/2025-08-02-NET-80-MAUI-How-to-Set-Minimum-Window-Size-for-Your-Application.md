@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mfnu3z/net80_maui_size_of_my_applications_window/
 title: '.NET 8.0 MAUI: How to Set Minimum Window Size for Your Application'
 author: Vor__texx
@@ -18,6 +18,7 @@ tags:
 - XAML
 section_names:
 - coding
+primary_section: coding
 ---
 Vor__texx shares their struggle to set a minimum window size in a .NET 8.0 MAUI application, detailing the approaches tried and asking the community for help.<!--excerpt_end-->
 

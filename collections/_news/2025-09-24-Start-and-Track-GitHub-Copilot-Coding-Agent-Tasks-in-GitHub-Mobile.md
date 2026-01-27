@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-24-start-and-track-copilot-coding-agent-tasks-in-github-mobile
 title: Start and Track GitHub Copilot Coding Agent Tasks in GitHub Mobile
 author: Allison
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces new capabilities for GitHub Copilot coding agents on GitHub Mobile, allowing developers to start and track background coding tasks directly from their phones.<!--excerpt_end-->
 

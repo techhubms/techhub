@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/what-s-new-in-azure-event-grid/ba-p/4458299
 title: "What's New in Azure Event Grid: Security, MQTT, and Smart Factory Integration"
 author: Connected-Seth
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Connected-Seth explores Azure Event Grid's latest advancements, such as stronger MQTT security, broad event integration, and Sparkplug B support for smart factories, offering secure and scalable event-driven architectures on Azure.<!--excerpt_end-->
 

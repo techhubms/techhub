@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-12-openai-gpt-5-is-now-available-in-public-preview-in-visual-studio-jetbrains-ides-xcode-and-eclipse
 title: OpenAI GPT-5 Now Available to GitHub Copilot Users in Major IDEs
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison informs developers about the release of GPT-5 for GitHub Copilot users in Visual Studio, JetBrains IDEs, Xcode, and Eclipse, highlighting model improvements and steps to gain access.<!--excerpt_end-->
 

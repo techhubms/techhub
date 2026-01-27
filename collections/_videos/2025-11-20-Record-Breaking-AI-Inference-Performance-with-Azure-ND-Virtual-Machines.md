@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=hcleQSEfK9g
 title: Record-Breaking AI Inference Performance with Azure ND Virtual Machines
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events, with Hugo Affaticati and Nitin Nagarkatte, demonstrate how Azure ND Virtual Machines deliver record-setting AI inference throughput and efficiency through engineering innovations showcased at Ignite 2025.<!--excerpt_end-->
 

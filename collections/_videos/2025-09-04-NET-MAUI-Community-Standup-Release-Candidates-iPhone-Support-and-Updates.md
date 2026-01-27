@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Y8W56JPCqQo
 title: '.NET MAUI Community Standup: Release Candidates, iPhone Support, and Updates'
 author: dotnet
@@ -23,6 +23,7 @@ tags:
 - Release Candidate
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet presents a .NET MAUI Community Standup featuring David Ortinau and Gerald Versluis, sharing key updates about RC1, iPhone support, and more for cross-platform mobile developers.<!--excerpt_end-->
 

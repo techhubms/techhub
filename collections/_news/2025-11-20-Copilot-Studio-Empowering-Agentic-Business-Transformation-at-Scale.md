@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/why-microsoft-copilot-studio-is-the-foundation-for-agentic-business-transformation/
 title: 'Copilot Studio: Empowering Agentic Business Transformation at Scale'
 author: stclarke
@@ -28,6 +28,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke explains how Microsoft Copilot Studio unlocks agentic business transformation, offering tools for building, customizing, and governing AI-powered agents across enterprise workflows.<!--excerpt_end-->
 

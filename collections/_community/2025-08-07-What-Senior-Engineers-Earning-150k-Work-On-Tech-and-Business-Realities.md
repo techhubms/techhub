@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mkfsxw/those_of_you_who_are_making_150k_what_are_you/
 title: 'What Senior Engineers Earning 150k+ Work On: Tech and Business Realities'
 author: Legitimate-School-59
@@ -31,6 +31,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 Legitimate-School-59 shares a behind-the-scenes look at the technical and business realities for senior engineers earning over 150k, focusing on Azure migrations, large-scale codebase management, security enhancements, and more.<!--excerpt_end-->
 

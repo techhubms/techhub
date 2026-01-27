@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/top-7-azure-services-you-didnt-know-you-needed/
 title: Top 7 Azure Services You Didn’t Know You Needed
 author: Dellenny
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Dellenny highlights seven under-the-radar Azure services that can transform your cloud strategy, from enhanced security with Sentinel to automation with Logic Apps.<!--excerpt_end-->
 

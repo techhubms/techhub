@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-february-2025/
 title: Azure SDK Release Highlights and Notes for February 2025
 author: Hector Norzagaray
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 In this news update, Hector Norzagaray summarizes the key highlights and notes from the February 2025 Azure SDK release, including support advisories, new stable and beta library releases, and links to in-depth documentation.<!--excerpt_end-->
 

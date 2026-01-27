@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/deploying-third-party-firewalls-in-azure-landing-zones-design/ba-p/4458972
 title: 'Deploying Third-Party Firewalls in Azure Landing Zones: Design, Configuration, and Best Practices'
 author: PramodPalukuru
@@ -29,6 +29,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 PramodPalukuru delivers a comprehensive overview of deploying third-party firewalls in Azure Landing Zones, sharing actionable design, configuration, and security best practices for enterprise-scale cloud environments.<!--excerpt_end-->
 

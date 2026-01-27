@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/report-microsoft-aws-and-google-atop-software-development-platform-heap/
 title: Microsoft, AWS, and Google Lead as Top Software Development Platforms, Signal Report Finds
 author: Mike Vizard
@@ -35,6 +35,7 @@ tags:
 - The Futurum Group
 section_names:
 - devops
+primary_section: devops
 ---
 Mike Vizard reviews The Futurum Group’s latest Signal report, which ranks Microsoft, AWS, and Google as leading providers of software development and DevOps platforms, emphasizing their innovation and developer focus.<!--excerpt_end-->
 

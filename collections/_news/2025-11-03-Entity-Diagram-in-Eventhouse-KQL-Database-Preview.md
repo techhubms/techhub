@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/entity-diagram-in-eventhouse-kql-database-preview/
 title: Entity Diagram in Eventhouse KQL Database (Preview)
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces the Entity Diagram for Eventhouse KQL Database, providing developers and data engineers with a visual way to explore data flows, entity connections, and schema integrity within their KQL databases.<!--excerpt_end-->
 

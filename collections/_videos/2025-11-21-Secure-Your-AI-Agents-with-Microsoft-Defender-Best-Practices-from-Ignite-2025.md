@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=tcufxS5p1RM
 title: 'Secure Your AI Agents with Microsoft Defender: Best Practices from Ignite 2025'
 author: Microsoft Events
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 In this Microsoft Ignite 2025 session, Ramya Chitrakar, Moran Gutman, and Asaf Nakash demonstrate how to secure AI agents using Microsoft Defender, offering live demos and essential security strategies.<!--excerpt_end-->
 

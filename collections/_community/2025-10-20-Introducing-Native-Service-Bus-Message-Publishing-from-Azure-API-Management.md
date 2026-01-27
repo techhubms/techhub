@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-native-service-bus-message-publishing-from-azure-api/ba-p/4462644
 title: Introducing Native Service Bus Message Publishing from Azure API Management
 author: anishta
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 anishta introduces a native integration in Azure API Management, enabling direct, secure message publishing to Azure Service Bus using built-in policies and managed identities. This enhancement streamlines event-driven architectures and centralizes API governance.<!--excerpt_end-->
 

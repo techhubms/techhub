@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/setting-up-ransomware-protection-in-windows-11-a-simple-and-complete-guide/
 title: 'Setting Up Ransomware Protection in Windows 11: Step-by-Step Guide'
 author: John Edward
@@ -17,6 +17,7 @@ tags:
 - Windows Security
 section_names:
 - security
+primary_section: security
 ---
 John Edward presents a practical walkthrough for enabling ransomware protection on Windows 11, highlighting essential security settings and backup strategies to safeguard your files.<!--excerpt_end-->
 

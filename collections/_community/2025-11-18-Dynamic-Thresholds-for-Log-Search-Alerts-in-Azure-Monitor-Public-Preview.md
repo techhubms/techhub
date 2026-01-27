@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/public-preview-announcing-public-preview-of-dynamic-thresholds/ba-p/4467363
 title: 'Dynamic Thresholds for Log Search Alerts in Azure Monitor: Public Preview'
 author: Efrat_Ben_Porat
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 Efrat Ben-Porat presents the public preview of dynamic thresholds for log search alerts in Azure Monitor, showing how machine learning can simplify alerting and improve anomaly detection for cloud resources.<!--excerpt_end-->
 

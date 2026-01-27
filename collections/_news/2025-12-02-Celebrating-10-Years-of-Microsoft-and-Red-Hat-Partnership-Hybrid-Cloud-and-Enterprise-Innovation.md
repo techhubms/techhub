@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/a-decade-of-open-innovation-celebrating-10-years-of-microsoft-and-red-hat-partnership/
 title: 'Celebrating 10 Years of Microsoft and Red Hat Partnership: Hybrid Cloud and Enterprise Innovation'
 author: Brendan Burns
@@ -29,6 +29,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 Brendan Burns details the transformative impact of the Microsoft and Red Hat partnership in hybrid cloud, open innovation, and enterprise modernization over the past decade.<!--excerpt_end-->
 

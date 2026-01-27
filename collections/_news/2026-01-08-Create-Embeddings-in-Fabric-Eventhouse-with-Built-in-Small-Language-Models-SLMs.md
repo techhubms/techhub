@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/create-embeddings-in-fabric-eventhouse-with-built-in-small-language-models-slms/
 title: Create Embeddings in Fabric Eventhouse with Built-in Small Language Models (SLMs)
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog explains how slm_embeddings_fl lets users generate embeddings directly inside Fabric Eventhouse using local SLMs, with code samples and scenarios for RAG, semantic search, and large-scale analytics workflows.<!--excerpt_end-->
 

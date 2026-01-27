@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-connection-parameterization-expanded-cdc-and-connectors/
 title: Enhancements to Copy Job for Data Ingestion in Microsoft Fabric Data Factory
 author: Microsoft Fabric Blog
@@ -34,6 +34,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces major updates to Copy job in Data Factory, enabling connection parameterization, expanded CDC support, and enhanced connector options for flexible data integration workflows.<!--excerpt_end-->
 

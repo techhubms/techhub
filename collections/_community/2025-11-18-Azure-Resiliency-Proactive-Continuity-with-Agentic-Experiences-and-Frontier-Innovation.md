@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/azure-resiliency-proactive-continuity-with-agentic-experiences/ba-p/4469693
 title: 'Azure Resiliency: Proactive Continuity with Agentic Experiences and Frontier Innovation'
 author: molina_sharma
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 molina_sharma dives into Azure’s new resiliency framework, highlighting the Azure Copilot resiliency agent’s role in automating continuity and recovery with AI-driven workflows across infrastructure, data, and cyber resilience.<!--excerpt_end-->
 

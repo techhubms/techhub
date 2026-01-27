@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/join-us-at-azure-dev-summit-2025
 title: 'Join us at Azure Dev Summit 2025: Explore AI, .NET, and Cloud Innovation in Lisbon'
 author: Mike Hulme
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Written by Mike Hulme, this article announces Azure Dev Summit 2025—a major Microsoft event for developers focused on AI, Azure, DevOps, .NET, and innovative software design. Explore event highlights, speaker lineups, and session topics in this comprehensive overview.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/report-full-stack-observability-cuts-downtime-costs/
 title: 'Full-Stack Observability and AI: Mitigating IT Outage Costs'
 author: James Maguire
@@ -29,6 +29,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 James Maguire summarizes a New Relic survey on the value of full-stack observability and AI-driven monitoring in cutting IT outage costs, with insights into productivity, incident detection, and enterprise tooling strategies.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-30-secret-scanning-adds-validators-for-mongodb-meta-and-microsoft-azure
 title: GitHub Secret Scanning Now Validates Azure, MongoDB, and Meta Credentials
 author: Allison
@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Allison details GitHub's latest improvements to secret scanning, including new validators for Microsoft Azure, MongoDB, and Meta, helping DevOps teams better secure their credentials.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code-maze.com/efcore-global-query-filters/
 title: Global Query Filters in Entity Framework Core
 author: Gergő Vándor
@@ -23,6 +23,7 @@ tags:
 - Soft Delete
 section_names:
 - coding
+primary_section: coding
 ---
 Gergő Vándor presents a comprehensive guide to Entity Framework Core's global query filters, detailing their purpose, implementation, and key considerations for .NET developers.<!--excerpt_end-->
 

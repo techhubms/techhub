@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/revolutionizing-learning-with-immersive-ai/ba-p/4453680
 title: 'Revolutionizing Learning with Immersive AI: Avatar-Powered Education on Azure'
 author: Matt_Kazanowsky
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Matt Kazanowsky and contributors explore how Azure-powered immersive AI—combining neural voice, avatars, and robust security—reinvents education and content creation. This guide covers architecture and practical steps for secure, scalable, and responsible implementation.<!--excerpt_end-->
 

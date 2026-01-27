@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/microsoft-cloud/blog/2025/08/25/fyai-explore-the-microsoft-ai-for-good-lab-with-juan-m-lavista-ferres/
 title: 'Inside the Microsoft AI for Good Lab: Innovations and Global Impact with Juan M. Lavista Ferres'
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 - Synthetic Aperture Radar
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke examines the work of Juan M. Lavista Ferres and the Microsoft AI for Good Lab, showcasing how advanced AI research and global collaborations are driving positive societal change.<!--excerpt_end-->
 

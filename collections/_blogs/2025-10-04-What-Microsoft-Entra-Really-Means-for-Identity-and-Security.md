@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/what-microsoft-entra-really-means-for-identity-and-security/
 title: What Microsoft Entra Really Means for Identity and Security
 author: Dellenny
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Dellenny delivers a comprehensive look at Microsoft Entra and its central role in modern identity and security management for cloud and hybrid environments.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/supercharge-your-app-service-apps-with-ai-foundry-agents/ba-p/4444310
 title: Integrate Intelligent Agents with MCP and Azure AI Foundry on App Service
 author: jordanselig
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 jordanselig walks through how developers can connect Azure AI Foundry agents to any application using the Model Context Protocol (MCP) and App Service, with practical examples and deployment guidance.<!--excerpt_end-->
 

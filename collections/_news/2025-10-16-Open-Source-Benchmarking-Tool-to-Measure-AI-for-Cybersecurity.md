@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_microsoft-raises-the-bar-a-smarter-way-to-activity-7384329693614759936-VB0Z
 title: Open Source Benchmarking Tool to Measure AI for Cybersecurity
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 stclarke highlights Microsoft's release of an open source benchmarking tool designed to assess AI performance in cybersecurity scenarios, focusing on the reasoning and defense capabilities of modern AI solutions.<!--excerpt_end-->
 

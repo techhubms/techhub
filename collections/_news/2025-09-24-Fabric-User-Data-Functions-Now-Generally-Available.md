@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-fabric-user-data-functions-now-in-general-availability/
 title: Fabric User Data Functions Now Generally Available
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details the general availability of User Data Functions, allowing developers and data engineers to build, customize, and deploy reusable business logic across the Fabric platform.<!--excerpt_end-->
 

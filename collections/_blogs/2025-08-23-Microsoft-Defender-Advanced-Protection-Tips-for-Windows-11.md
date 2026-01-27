@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/microsoft-defender-advanced-protection-tips-for-windows-11/
 title: Microsoft Defender Advanced Protection Tips for Windows 11
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 - Windows Security
 section_names:
 - security
+primary_section: security
 ---
 Dellenny shares advanced tips for configuring Microsoft Defender Antivirus in Windows 11, empowering users to harden their PCs against evolving security threats using built-in protection features.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/send-signals-from-micronaut-native-image-applications-to-azure/ba-p/4443735
 title: Sending Metrics, Logs, and Traces from Micronaut Native Image Applications to Azure Monitor
 author: Logico_jp
@@ -24,6 +24,7 @@ tags:
 - OpenTelemetry
 section_names:
 - azure
+primary_section: azure
 ---
 Logico_jp explains how to enable metrics, log, and trace telemetry for Micronaut applications, including GraalVM Native Images, on Azure Monitor. The article discusses integration options and the recently introduced micronaut-azure-tracing dependency.<!--excerpt_end-->
 

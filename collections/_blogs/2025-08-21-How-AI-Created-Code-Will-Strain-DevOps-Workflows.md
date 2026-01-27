@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/how-ai-created-code-will-strain-devops-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=how-ai-created-code-will-strain-devops-workflows
 title: How AI-Created Code Will Strain DevOps Workflows
 author: Mike Vizard
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard shares insights from Nick Durkin on how the increasing reliance on AI-generated code impacts DevOps workflows, highlighting necessary pipeline changes and the importance of modern engineering governance.<!--excerpt_end-->
 

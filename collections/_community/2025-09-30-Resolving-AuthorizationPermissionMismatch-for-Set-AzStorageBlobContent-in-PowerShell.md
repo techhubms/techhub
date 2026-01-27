@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage/differences-between-powershell-and-browser-when-upload-file/m-p/4458068#M574
 title: Resolving AuthorizationPermissionMismatch for Set-AzStorageBlobContent in PowerShell
 author: Petri-X
@@ -22,6 +22,7 @@ tags:
 - Storage Permissions
 section_names:
 - azure
+primary_section: azure
 ---
 Petri-X reports an issue where uploading to Azure Storage works in the browser but fails via Set-AzStorageBlobContent in PowerShell, highlighting a permissions mismatch.<!--excerpt_end-->
 

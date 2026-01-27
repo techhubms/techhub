@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=21HSDwtkHNk
 title: AI-Powered Email Sorting with n8n and OpenAI
 author: Alireza Chegini | AI Skills for Your Career
@@ -22,6 +22,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Alireza Chegini shares a practical workflow to automate Gmail sorting using n8n and OpenAI, empowering viewers to boost productivity and manage email chaos efficiently.<!--excerpt_end-->
 

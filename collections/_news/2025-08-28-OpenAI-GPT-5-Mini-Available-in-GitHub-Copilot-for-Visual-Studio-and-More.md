@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-28-openai-gpt-5-mini-is-now-available-in-public-preview-in-visual-studio-jetbrains-ides-xcode-and-eclipse
 title: OpenAI GPT-5 Mini Available in GitHub Copilot for Visual Studio and More
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison details the public preview of GPT-5 mini within GitHub Copilot, allowing developers in Visual Studio, JetBrains IDEs, Xcode, and Eclipse to access advanced AI features and participate in community feedback.<!--excerpt_end-->
 

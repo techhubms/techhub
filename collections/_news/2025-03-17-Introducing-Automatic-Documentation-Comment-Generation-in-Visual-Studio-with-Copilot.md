@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/introducing-automatic-documentation-comment-generation-in-visual-studio/
 title: Introducing Automatic Documentation Comment Generation in Visual Studio with Copilot
 author: Sinem Akinci, Allie Barry
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this post, authors Sinem Akinci and Allie Barry introduce how GitHub Copilot now auto-generates documentation comments directly in the Visual Studio editor for C# and C++, providing developers with AI-powered assistance in their daily workflow.<!--excerpt_end-->
 

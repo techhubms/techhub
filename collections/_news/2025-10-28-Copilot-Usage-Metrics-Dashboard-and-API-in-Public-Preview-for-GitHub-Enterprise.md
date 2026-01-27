@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-28-copilot-usage-metrics-dashboard-and-api-in-public-preview
 title: Copilot Usage Metrics Dashboard and API in Public Preview for GitHub Enterprise
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces the public preview of GitHub Copilot usage metrics dashboard and API, offering GitHub Enterprise admins deeper insight into adoption and usage patterns of Copilot within their organizations.<!--excerpt_end-->
 

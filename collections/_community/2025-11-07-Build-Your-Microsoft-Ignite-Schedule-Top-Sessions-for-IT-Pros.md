@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-events/build-your-microsoft-ignite-schedule-top-sessions-for-it-pros/ba-p/4468165
 title: 'Build Your Microsoft Ignite Schedule: Top Sessions for IT Pros'
 author: GalimahB
@@ -22,6 +22,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 GalimahB curates a selection of can't-miss sessions for IT professionals at Microsoft Ignite 2025, with guidance for building your optimal Azure and cloud learning path.<!--excerpt_end-->
 

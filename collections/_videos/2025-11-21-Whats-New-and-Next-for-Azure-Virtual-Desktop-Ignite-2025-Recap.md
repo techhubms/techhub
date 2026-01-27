@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=qhEj-1ZolLs
 title: 'What’s New and Next for Azure Virtual Desktop: Ignite 2025 Recap'
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Events' session features speakers Roop Kiran Chevuri, Mark Douglas, and Eric Orman highlighting the latest capabilities in Azure Virtual Desktop, covering security, B2B access, auto-scaling, licensing innovations, and new migration tools.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://medium.com/@davidfowl/aspire-a-modern-devops-toolchain-fa5aac019d64?source=rss-8163234c98f0------2
 title: 'Aspire: A Modern DevOps Toolchain'
 author: David Fowler
@@ -26,6 +26,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Authored by David Fowler, this article explores Aspire’s role as a modern DevOps toolchain, detailing its design philosophy, core features, and broad support for polyglot distributed app development.<!--excerpt_end-->
 

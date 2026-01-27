@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/30438/
 title: 'Querying Database Backups in Microsoft Fabric: In-Place Analytics Without ETL'
 author: Microsoft Fabric Blog
@@ -28,6 +28,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 Microsoft Fabric Blog details how, in collaboration with Peleg Kazaz and Liore Shai, organizations can leverage Eon's integration to query multi-cloud database backups directly in Microsoft Fabric—empowering analytics, AI, and compliance without ETL or duplication.<!--excerpt_end-->
 

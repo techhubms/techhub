@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-31-deprecated-models-in-github-models
 title: 'Deprecation Notice: Updates to GitHub Models and Migration Guidance'
 author: Allison
@@ -22,6 +22,7 @@ tags:
 - Retired
 section_names:
 - ai
+primary_section: ai
 ---
 Allison provides a news update on the deprecation of several models within GitHub Models, detailing alternative options and migration steps for continued AI development.<!--excerpt_end-->
 

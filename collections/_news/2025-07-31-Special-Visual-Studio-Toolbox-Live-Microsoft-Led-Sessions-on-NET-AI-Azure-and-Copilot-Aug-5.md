@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/watch-live-visual-studio-toolbox-at-vs-live-redmond-2025/
 title: 'Special Visual Studio Toolbox Live: Microsoft-Led Sessions on .NET, AI, Azure, and Copilot – Aug 5'
 author: stclarke
@@ -23,6 +23,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Authored by stclarke, this post announces a special live edition of Visual Studio Toolbox with Microsoft experts, covering topics from .NET and AI to GitHub Copilot and Azure. Join for live demos, commentary, and behind-the-scenes access.<!--excerpt_end-->
 

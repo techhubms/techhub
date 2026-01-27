@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-to-build-frontier-ai-solutions-with-azure-ai-landing-zone/ba-p/4460199
 title: How to Build Frontier AI Solutions with Azure AI Landing Zone
 author: VimalVerma
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 VimalVerma outlines a practitioner-focused approach to building production-grade AI solutions using Azure AI Landing Zone, emphasizing the use of Microsoft's proven architectural frameworks and the Azure AI Foundry platform.<!--excerpt_end-->
 

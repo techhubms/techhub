@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-november-2025/
 title: 'Azure SDK November 2025 Release: Storage, Identity, Cosmos DB, and New Libraries'
 author: Ronnie Geraghty
@@ -31,6 +31,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 Ronnie Geraghty summarizes the new features and improvements in the Azure SDK November 2025 release, including updates for Storage, Identity, Cosmos DB, and a range of new and beta libraries for .NET, Java, Python, and more.<!--excerpt_end-->
 

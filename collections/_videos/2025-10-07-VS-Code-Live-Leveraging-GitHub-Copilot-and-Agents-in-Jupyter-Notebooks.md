@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=HhFdQS0TtGc
 title: 'VS Code Live: Leveraging GitHub Copilot and Agents in Jupyter Notebooks'
 author: Visual Studio Code
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code demonstrates with Liam Hampton and Sarah how GitHub Copilot and AI agents can supercharge Jupyter Notebooks for data science in VS Code.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-september-2025-release/
 title: 'On-premises Data Gateway September 2025 Release: New Features & Power BI Desktop Compatibility'
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details the September 2025 release of the on-premises data gateway, including support for Mirroring Google BigQuery and compatibility with Power BI Desktop.<!--excerpt_end-->
 

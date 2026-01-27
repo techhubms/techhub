@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=b9cwTqr1cKo
 title: Building Remote MCP Servers with .NET and Azure
 author: dotnet
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 dotnet introduces how to build remote Model Context Protocol (MCP) servers using .NET and Azure, highlighting new features and unlocking collaboration, automation, and scalable hosting options for developers.<!--excerpt_end-->
 

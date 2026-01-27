@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=hJsR0DOOVnE
 title: 'Azure Weekly Update: November 7, 2025'
 author: John Savill's Technical Training
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 John Savill's Technical Training delivers a weekly Azure update, highlighting new features like ExpressRoute resiliency, Cosmos DB improvements, and coding-related integrations for cloud professionals.<!--excerpt_end-->
 

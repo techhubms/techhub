@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/12/cloud-accelerate-factory-accelerate-cloud-adoption-with-expert-guidance/
 title: 'Cloud Accelerate Factory: Accelerate Azure Adoption with Expert Guidance'
 author: Thomas Maurer
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Thomas Maurer discusses how organizations can streamline Azure migration and modernization projects with expert support from Microsoft Cloud Accelerate Factory, featuring insights from Ravi of Microsoft Azure.<!--excerpt_end-->
 

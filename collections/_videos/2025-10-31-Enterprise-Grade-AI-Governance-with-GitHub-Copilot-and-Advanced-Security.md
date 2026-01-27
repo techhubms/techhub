@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=7YEi5SoVzNQ
 title: Enterprise-Grade AI Governance with GitHub Copilot and Advanced Security
 author: GitHub
@@ -22,6 +22,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub’s Mario Rodriguez, Kate Catlin, and Todd Manion demonstrate how enterprise admins can use GitHub Copilot Enterprise, Advanced Security, and new agent controls to balance innovation with security and governance at scale.<!--excerpt_end-->
 

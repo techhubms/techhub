@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/marketplace-blog/ai-data-governance-made-easy-how-microsoft-purview-tackles-genai/ba-p/4435237
 title: 'AI Data Governance Made Easy: How Microsoft Purview Tackles GenAI Risks and Builds Trust'
 author: vicperdana
@@ -24,6 +24,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 Authored by vicperdana, this article explores how Microsoft Purview streamlines AI data governance and compliance, mitigating GenAI risks for enterprises.<!--excerpt_end-->
 

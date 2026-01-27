@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=RZ9DvZC9g6E
 title: AI-Driven Agents Transforming Supply Chain Management at Blue Yonder
 author: Microsoft Cloud
@@ -22,6 +22,7 @@ tags:
 - Supply Chain Management
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Cloud hosts Chris Burchett from Blue Yonder for a session on how AI-driven agents are transforming supply chain management through automation, data integration, and real-world industry solutions.<!--excerpt_end-->
 

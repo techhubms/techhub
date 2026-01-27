@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=9G0B6xdn_4k
 title: 'Security Copilot: Empowering Security Teams with AI at Microsoft Ignite 2025'
 author: Microsoft Events
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events presents an in-depth Ignite 2025 breakout session with Dorothy Li, Fabrizio Dell'Oglio, and Dilip Radhakrishnan, showcasing how Security Copilot leverages generative AI to streamline security and IT operations.<!--excerpt_end-->
 

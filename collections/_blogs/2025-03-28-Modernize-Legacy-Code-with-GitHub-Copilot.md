@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/modernize-legacy-code-with-github-copilot.html
 title: Modernize Legacy Code with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels explains how to leverage GitHub Copilot to update and refactor legacy codebases, offering actionable prompts and stepwise workflows for modernizing outdated software.<!--excerpt_end-->
 

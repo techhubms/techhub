@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/unlocking-storage-optimizations-smart-tiering-for-blobs-and-adls/ba-p/4469811
 title: 'Smart Tiering for Azure Blob and Data Lake Storage: Automated Cost Optimization'
 author: BenedictBerger
@@ -26,6 +26,7 @@ tags:
 - Zonal Redundancy
 section_names:
 - azure
+primary_section: azure
 ---
 BenedictBerger outlines Smart Tier, a new automated tiering solution for Azure Blob and Data Lake storage, detailing its benefits, setup, and cost-saving features for cloud storage management.<!--excerpt_end-->
 

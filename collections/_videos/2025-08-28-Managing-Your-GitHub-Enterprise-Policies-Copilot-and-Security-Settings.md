@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ArHfPM4lnPA
 title: 'Managing Your GitHub Enterprise: Policies, Copilot, and Security Settings'
 author: GitHub
@@ -24,6 +24,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 GitHub presents an admin-focused video on managing enterprise, organization, and repository settings, including Copilot and security management. Hosted by GitHub, this resource helps administrators streamline governance.<!--excerpt_end-->
 

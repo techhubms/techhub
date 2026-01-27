@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://sswart.github.io/post/copilot-data-conversion/
 title: Copilot Data Conversion
 author: Jesse Swart Coding Blog
@@ -15,6 +15,7 @@ section_names:
 - ai
 - github-copilot
 - coding
+primary_section: github-copilot
 ---
 In this article, Jesse Swart's Blog discusses the practical use of GitHub Copilot for converting data exported from a table designer tool into working test files. <!--excerpt_end--> The article originates from a real client inquiry, questioning whether Copilot is capable of transforming table data into useful test files. The author points out that Copilot is indeed likely to help, provided the table designer tool can output its tables in a common textual format such as SQL, JSON, or CSV.
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mj96yf/nominal_union_types_were_demoted_at_vs_live_at/
 title: 'Discussion: Nominal Union Types Demoed at VS Live, Redmond'
 author: ThinksAboutTooMuch
@@ -19,6 +19,7 @@ tags:
 - VS Live
 section_names:
 - coding
+primary_section: coding
 ---
 ThinksAboutTooMuch shares insights from a VS Live Redmond session where Mads Torgerson demoed nominal union types for C#, exploring upcoming language features and community reactions.<!--excerpt_end-->
 

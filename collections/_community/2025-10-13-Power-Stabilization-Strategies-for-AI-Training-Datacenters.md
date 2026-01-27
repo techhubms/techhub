@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/power-stabilization-for-ai-training-datacenters/ba-p/4460937
 title: Power Stabilization Strategies for AI Training Datacenters
 author: BrijeshW
@@ -26,6 +26,7 @@ tags:
 - Utility Requirements
 section_names:
 - ai
+primary_section: ai
 ---
 BrijeshW explores how Microsoft, OpenAI, and Nvidia tackle power stabilization for AI training datacenters, introducing multi-layered engineering approaches to ensure reliable large-scale AI infrastructure.<!--excerpt_end-->
 

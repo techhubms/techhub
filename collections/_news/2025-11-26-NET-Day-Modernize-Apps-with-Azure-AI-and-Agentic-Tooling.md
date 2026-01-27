@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-day-on-agentic-modernization-coming-soon/
 title: '.NET Day: Modernize Apps with Azure, AI, and Agentic Tooling'
 author: Matt Soucoup
@@ -32,6 +32,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Matt Soucoup introduces a virtual event focused on practical ways to modernize .NET apps with Azure, AI, agentic frameworks, and developer-centric tools, featuring expert-led live demos and cutting-edge technical guidance.<!--excerpt_end-->
 

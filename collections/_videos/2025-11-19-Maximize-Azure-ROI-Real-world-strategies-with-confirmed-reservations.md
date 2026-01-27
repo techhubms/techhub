@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=-69mrx_ugJA
 title: 'Maximize Azure ROI: Real-world strategies with confirmed reservations'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Underperforming Commitment
 section_names:
 - azure
+primary_section: azure
 ---
 Microsoft Events hosts this Ignite 2025 session, featuring Joshua Corbett, to share strategic approaches and automation solutions for maximizing ROI on Azure through improved commitment management and cost savings.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/work-item-linking-for-advanced-security-alerts-now-available/
 title: Work Item Linking for GitHub Advanced Security Alerts in Azure DevOps Now Available
 author: Laura Jiang
@@ -23,6 +23,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Laura Jiang announces the general availability of work item linking for GitHub Advanced Security alerts in Azure DevOps, simplifying security tracking and resolution in engineering teams.<!--excerpt_end-->
 

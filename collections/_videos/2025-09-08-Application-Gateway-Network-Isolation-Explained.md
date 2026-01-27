@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/Gm4TZukbu8s
 title: Application Gateway Network Isolation Explained
 author: John Savill's Technical Training
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 John Savill's Technical Training presents a clear overview of the Azure Application Gateway's new Network Isolation capability, outlining its use in strengthening network security.<!--excerpt_end-->
 

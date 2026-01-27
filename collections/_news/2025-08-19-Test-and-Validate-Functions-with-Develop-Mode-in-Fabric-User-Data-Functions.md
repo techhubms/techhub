@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/test-and-validate-your-functions-with-develop-mode-in-fabric-user-data-functions-preview/
 title: Test and Validate Functions with Develop Mode in Fabric User Data Functions
 author: Microsoft Fabric Blog
@@ -19,6 +19,7 @@ tags:
 - User Data Functions
 section_names:
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog announces major improvements to User Data Functions, with a new Develop mode for testing and validating functions. This update provides developers with enhanced workflows, as explained and demonstrated by the Microsoft Fabric Blog team.<!--excerpt_end-->
 

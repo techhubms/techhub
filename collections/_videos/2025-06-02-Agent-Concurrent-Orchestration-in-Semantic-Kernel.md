@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=ixhQyZEpwWk
 title: 'Agent: Concurrent Orchestration in Semantic Kernel'
 author: Learn Microsoft AI
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Learn Microsoft AI presents an in-depth demo on concurrent orchestration in Semantic Kernel, showcasing how to run multiple AI agents in parallel and aggregate their results in .NET applications.<!--excerpt_end-->
 

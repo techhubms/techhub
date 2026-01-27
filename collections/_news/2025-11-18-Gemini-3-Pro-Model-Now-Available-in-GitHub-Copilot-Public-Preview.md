@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot
 title: Gemini 3 Pro Model Now Available in GitHub Copilot Public Preview
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison explains the rollout of Gemini 3 Pro, Google's AI model, for various GitHub Copilot subscriptions, detailing activation steps for administrators and individual users.<!--excerpt_end-->
 

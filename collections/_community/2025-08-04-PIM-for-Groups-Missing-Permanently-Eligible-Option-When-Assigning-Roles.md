@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mhegiy/pim_for_group_no_permanently_eligible_option/
 title: 'PIM for Groups: Missing "Permanently Eligible" Option When Assigning Roles'
 author: velkkor
@@ -18,6 +18,7 @@ tags:
 - User Administrator
 section_names:
 - azure
+primary_section: azure
 ---
 velkkor is troubleshooting an issue in Azure PIM where the "permanently eligible" option for group administrator roles is missing when assigning users, despite it being available previously.<!--excerpt_end-->
 

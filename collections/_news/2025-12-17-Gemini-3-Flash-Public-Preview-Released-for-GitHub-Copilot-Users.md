@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-17-gemini-3-flash-is-now-in-public-preview-for-github-copilot
 title: Gemini 3 Flash Public Preview Released for GitHub Copilot Users
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the rollout of Gemini 3 Flash in public preview for GitHub Copilot, highlighting how users across plans can enable the new, fast model and where it is accessible.<!--excerpt_end-->
 

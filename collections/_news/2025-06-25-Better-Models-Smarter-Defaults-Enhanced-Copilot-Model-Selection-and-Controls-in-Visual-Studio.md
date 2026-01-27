@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/better-models-smarter-defaults-claude-sonnet-4-gpt-4-1-and-more-control-in-visual-studio/
 title: 'Better Models, Smarter Defaults: Enhanced Copilot Model Selection and Controls in Visual Studio'
 author: Rhea Patel
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Rhea Patel presents substantial updates to GitHub Copilot in Visual Studio, including smarter default AI models, more options for model customization, and tools to monitor and manage usage, making the Copilot experience more responsive and transparent for developers.<!--excerpt_end-->
 

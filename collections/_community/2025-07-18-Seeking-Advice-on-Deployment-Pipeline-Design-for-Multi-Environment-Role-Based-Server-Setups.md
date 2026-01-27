@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m2vtfz/looking_for_advice_on_architecting_a_deployment/
 title: Seeking Advice on Deployment Pipeline Design for Multi-Environment, Role-Based Server Setups
 author: Effective_Being_8048
@@ -19,6 +19,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Effective_Being_8048 asks for practical advice on architecting a deployment pipeline that manages multiple environments, server roles, and application dependencies without hardcoding configurations. This summary explores their setup, challenges, and desired solutions.<!--excerpt_end-->
 

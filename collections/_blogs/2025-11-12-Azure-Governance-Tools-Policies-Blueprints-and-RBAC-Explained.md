@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/azure-governance-tools-policies-blueprints-and-role-based-access-control-rbac/
 title: 'Azure Governance Tools: Policies, Blueprints, and RBAC Explained'
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Dellenny presents a thorough guide covering Azure Policy, Blueprints, and RBAC—core tools for managing governance, security, and compliance in Microsoft Azure environments.<!--excerpt_end-->
 

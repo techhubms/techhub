@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/how-can-the-usage-of-ai-help-boost-devops-pipelines/
 title: How AI Enhances DevOps Pipelines for Smarter Automation
 author: Joydip Kanjilal
@@ -41,6 +41,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Joydip Kanjilal discusses how the integration of AI in DevOps pipelines enables smarter automation, intelligent CI/CD, predictive analytics, and enhanced security, helping teams deliver software faster and more securely.<!--excerpt_end-->
 

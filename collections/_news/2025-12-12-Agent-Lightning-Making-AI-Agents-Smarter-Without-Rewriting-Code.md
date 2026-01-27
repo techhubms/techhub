@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/research/blog/agent-lightning-adding-reinforcement-learning-to-ai-agents-without-code-rewrites/
 title: 'Agent Lightning: Making AI Agents Smarter Without Rewriting Code'
 author: stclarke
@@ -27,6 +27,7 @@ tags:
 - Text To SQL
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke introduces Agent Lightning, an open-source reinforcement learning framework from Microsoft Research Asia that lets developers train AI agents without code rewrites, highlighting real-world tasks and scalable system design.<!--excerpt_end-->
 

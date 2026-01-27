@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/devops-for-genai-toronto-edition-hackathon-unlocking-new-ai-market-opportunities/
 title: 'DevOps for GenAI Toronto Hackathon: Lifecycle Automation, MLOps, and Enterprise AI Security'
 author: Garima Bajpai
@@ -35,6 +35,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 Garima Bajpai charts the strategic evolution of the DevOps for GenAI Toronto Hackathon, spotlighting new automation, monitoring, MLOps, and enterprise AI security tracks tailored for hands-on developers, engineers, and data scientists.<!--excerpt_end-->
 

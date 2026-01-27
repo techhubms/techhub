@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-10-github-spark-improvements-dpa-coverage-dedicated-sku
 title: 'GitHub Spark: Improvements, Dedicated SKU, and DPA Coverage'
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison shares product updates for GitHub Spark—including DPA coverage, new billing controls, and improvements to agent and UI—giving organizations and developers more flexibility and reliability.<!--excerpt_end-->
 

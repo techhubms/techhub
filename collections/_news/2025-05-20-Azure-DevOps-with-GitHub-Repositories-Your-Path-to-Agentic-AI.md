@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/azure-devops-with-github-repositories-your-path-to-agentic-ai
 title: Azure DevOps with GitHub Repositories – Your Path to Agentic AI
 author: Aaron Hallberg
@@ -20,6 +20,7 @@ section_names:
 - azure
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Aaron Hallberg discusses the transformation of GitHub Copilot into an agentic AI teammate, focusing on its deep integration with Azure DevOps and GitHub Repositories.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=wh8xquMkVOE
 title: Preparing Enterprise Workflows for AI-Driven Transformation
 author: Microsoft Events
@@ -21,6 +21,7 @@ tags:
 - Workplace Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events brings together Citrix and Microsoft subject matter experts in this Ignite 2025 session to provide guidance for enterprises preparing for transformative shifts with AI-driven agents.<!--excerpt_end-->
 

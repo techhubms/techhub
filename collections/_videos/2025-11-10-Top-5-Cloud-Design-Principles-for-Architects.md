@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FWZvoFlChBs
 title: Top 5 Cloud Design Principles for Architects
 author: John Savill's Technical Training
@@ -23,6 +23,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 John Savill's Technical Training outlines the top 5 cloud design principles, with a strong focus on Azure, emphasizing core architectural best practices for consultants and architects.<!--excerpt_end-->
 

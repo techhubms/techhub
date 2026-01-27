@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/understanding-fabric-eventstream-pricing/
 title: Understanding Fabric Eventstream Pricing
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog provides an in-depth guide to understanding Eventstream pricing in Microsoft Fabric, helping technical users estimate costs and optimize architecture.<!--excerpt_end-->
 

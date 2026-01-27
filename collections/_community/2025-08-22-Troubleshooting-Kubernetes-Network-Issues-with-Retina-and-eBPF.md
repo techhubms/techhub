@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/troubleshooting-network-issues-with-retina/ba-p/4446071
 title: Troubleshooting Kubernetes Network Issues with Retina and eBPF
 author: kamilp
@@ -24,6 +24,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 kamilp provides a deep dive into network observability for Kubernetes clusters using Retina. The article explains distributed packet capture, persistent storage, and advanced eBPF-based network analysis using Retina and its accompanying shell tools.<!--excerpt_end-->
 

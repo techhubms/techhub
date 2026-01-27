@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-package-previews-graduations-deprecations/
 title: 'Semantic Kernel: Package Previews, Graduations & Deprecations'
 author: Sophia Lagerkrans-Pandey, Sergey Menshykh
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Authored by Sophia Lagerkrans-Pandey and Sergey Menshykh, this article details the latest Semantic Kernel .NET updates, highlighting package maturations, deprecations, and technical enhancements for developers.<!--excerpt_end-->
 

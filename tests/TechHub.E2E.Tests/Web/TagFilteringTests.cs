@@ -278,10 +278,14 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
         // Wait for content to update after tag filter
         // Use Playwright's polling to detect when content has finished loading
         await Page.WaitForBlazorReadyAsync();
-        // Wait for content list to stabilize (DOM updates after filter)
+
+        // Wait for URL to update with tag parameter (confirms navigation happened)
         await Page.WaitForFunctionAsync(
-            "() => document.querySelectorAll('.content-item-card').length >= 0",
-            new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
+            "() => window.location.search.includes('tags=')",
+            new PageWaitForFunctionOptions { Timeout = 5000 });
+
+        // Wait for cards to stabilize after Blazor re-render
+        await Page.WaitForTimeoutAsync(500);
 
         var itemsAfterFirstTag = await Page.Locator(".card").CountAsync();
         itemsAfterFirstTag.Should().BeLessThanOrEqualTo(allItems, "Filtering by one tag should reduce or maintain item count");
@@ -301,10 +305,9 @@ public class TagFilteringTests(PlaywrightCollectionFixture fixture) : IAsyncLife
 
             // Wait for content to update after second tag filter
             await Page.WaitForBlazorReadyAsync();
-            // Wait for content list to stabilize (DOM updates after filter)
-            await Page.WaitForFunctionAsync(
-                "() => document.querySelectorAll('.card').length >= 0",
-                new PageWaitForFunctionOptions { Timeout = 5000, PollingInterval = 100 });
+
+            // Wait for cards to stabilize after Blazor re-render
+            await Page.WaitForTimeoutAsync(500);
 
             var itemsAfterSecondTag = await Page.Locator(".card").CountAsync();
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/github/comments/1mgba7n/need_help_web_ai_agency/
 title: 'Order of Operations for Web Agency: Building, Deploying, and Transferring Client Websites'
 author: DoodleMoodle542
@@ -17,6 +17,7 @@ tags:
 - Website Deployment
 section_names:
 - devops
+primary_section: devops
 ---
 Authored by DoodleMoodle542, this article details a practical workflow for web agencies: from building client sites on Lovable.dev to deploying on Vercel, managing domains, and efficiently transferring ownership.<!--excerpt_end-->
 

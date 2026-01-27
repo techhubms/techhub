@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=vnJP6xWHhO0
 title: 'AI Agents and MCP in Production: Azure App Platform at Microsoft Ignite'
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - coding
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Presented by Microsoft Events, this Ignite 2025 session details AI agent deployment on Azure with MCP, featuring demos on GitHub Copilot modernization and Azure AI Foundry for secure, scalable operations.<!--excerpt_end-->
 

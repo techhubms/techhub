@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/observability-in-retail-how-to-monitor-and-manage-interactive-kiosk-fleets/?utm_source=rss&utm_medium=rss&utm_campaign=observability-in-retail-how-to-monitor-and-manage-interactive-kiosk-fleets
 title: 'Observability in Retail: How to Monitor and Manage Interactive Kiosk Fleets'
 author: Cheryl Lesniak
@@ -24,6 +24,7 @@ tags:
 - Telemetry
 section_names:
 - devops
+primary_section: devops
 ---
 In this article, Cheryl Lesniak discusses the unique observability and monitoring requirements for managing interactive kiosk fleets at scale in the retail sector.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=k3HASRvfpnE
 title: Power Next-Generation AI Workloads with NVIDIA Blackwell on Azure
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a session led by Dave Salvator, showcasing how NVIDIA Blackwell architecture and Azure cloud enable high-performance, secure, and scalable AI workloads for agentic and physical applications.<!--excerpt_end-->
 

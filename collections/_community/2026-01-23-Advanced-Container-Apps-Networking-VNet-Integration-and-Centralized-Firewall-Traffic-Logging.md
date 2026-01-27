@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Omid Vahedv explores how to route Azure Container Apps traffic through a centralized firewall for advanced filtering, inspection, and compliance, guiding readers through deployment and configuration best practices.<!--excerpt_end-->
 

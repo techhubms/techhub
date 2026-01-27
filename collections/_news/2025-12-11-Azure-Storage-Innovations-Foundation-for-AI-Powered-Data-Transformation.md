@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/azure-storage-innovations-unlocking-the-future-of-data/
 title: 'Azure Storage Innovations: Foundation for AI-Powered Data Transformation'
 author: Aung Oo
@@ -32,6 +32,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Aung Oo reviews the latest Azure Storage innovations, detailing their impact on AI-driven transformation, cloud scalability, and enterprise modernization for technical audiences.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=6_shqDBaOE0
 title: 'VS Code Live: Enhancing Presentations and Live Coding with Demo Time'
 author: Visual Studio Code
@@ -18,6 +18,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 In this session, Visual Studio Code and guests Liam Hampton and Elio Struyf present Demo Time, an extension designed to improve live coding and presentations in VS Code. The talk emphasizes integration with GitHub Copilot and other modern developer tools.<!--excerpt_end-->
 

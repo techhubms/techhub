@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-github-copilot-and-ai-agents-are-saving-legacy-systems/
 title: How GitHub Copilot and AI Agents Modernize Legacy COBOL Systems
 author: Andrea Griffiths
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Andrea Griffiths outlines how Julia Kordick and Microsoft’s team leverage GitHub Copilot, AI agents, and Semantic Kernel to modernize COBOL mainframe systems, with a practical, developer-focused framework.<!--excerpt_end-->
 

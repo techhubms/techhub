@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/azure-data-factory-sql-managed-instance-and-ssis-implementation/ba-p/4459525
 title: Enterprise-Scale Data Integration with Azure Data Factory, SQL Managed Instance, and SSIS
 author: PeterLo
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 PeterLo presents a thorough enterprise data integration guide using Azure Data Factory, SQL Managed Instance, and SSIS, guiding engineering teams through secure cloud deployment and end-to-end pipeline setup.<!--excerpt_end-->
 

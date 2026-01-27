@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://roadtoalm.com/2025/11/28/english-as-the-new-programming-language/
 title: 'English as the New Programming Language: Natural Language in Software Development'
 author: Rene van Osnabrugge
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Rene van Osnabrugge explores how English and AI coding assistants like GitHub Copilot and ChatGPT are changing software development, lowering barriers for teams and reshaping collaboration.<!--excerpt_end-->
 

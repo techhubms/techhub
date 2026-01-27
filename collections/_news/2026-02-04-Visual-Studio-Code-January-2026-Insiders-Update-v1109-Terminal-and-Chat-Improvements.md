@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_109
 title: 'Visual Studio Code January 2026 Insiders Update (v1.109): Terminal and Chat Improvements'
 author: Visual Studio Code Team
@@ -21,6 +21,7 @@ tags:
 - Win32 Input Mode
 section_names:
 - coding
+primary_section: coding
 ---
 Visual Studio Code Team shares the January 2026 Insiders update, covering robust terminal upgrades, chat session enhancements, new MCP Apps support, and improvements to extension APIs and settings.<!--excerpt_end-->
 

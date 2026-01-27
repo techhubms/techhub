@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=mgChCdqRxLw
 title: 'Optimizing Azure Investments with Citrix: Security, Cost, and Experience'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Events presents a session with Shawn Bass, Quentin DRION, and Hermann Pais highlighting how Citrix multiplies the value of Azure and Windows 365 by enhancing security, optimizing costs, and improving user experience.<!--excerpt_end-->
 

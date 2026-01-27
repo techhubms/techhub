@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/harness-delivers-on-ai-promise-for-devops/?utm_source=rss&utm_medium=rss&utm_campaign=harness-delivers-on-ai-promise-for-devops
 title: Harness AI-Powered DevOps Platform Launches to Automate Software Delivery
 author: Mike Vizard
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard covers how Harness has launched an AI-powered DevOps platform that uses knowledge graph–driven agents to automate a wide variety of tasks across the software delivery lifecycle, aimed at reducing manual effort and streamlining DevOps workflows.<!--excerpt_end-->
 

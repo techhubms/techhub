@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-new-innovations-for-fabric-data-factory-orchestration-at-fabric-conference-europe-2025/
 title: Innovations in Fabric Data Factory Orchestration Announced at Fabric Conference Europe 2025
 author: Microsoft Fabric Blog
@@ -26,6 +26,7 @@ section_names:
 - azure
 - devops
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog introduces new orchestration capabilities in Fabric Data Factory, detailed at FabCon Europe 2025. Authored by the Microsoft Fabric team, the article highlights AI-driven expression assistance, advanced pipeline activities, DevOps support, and deeper Airflow integration.<!--excerpt_end-->
 

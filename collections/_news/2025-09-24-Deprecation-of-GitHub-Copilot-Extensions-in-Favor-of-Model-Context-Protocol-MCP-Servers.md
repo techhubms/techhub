@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-24-deprecate-github-copilot-extensions-github-apps
 title: Deprecation of GitHub Copilot Extensions in Favor of Model Context Protocol (MCP) Servers
 author: Allison
@@ -25,6 +25,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison outlines the upcoming deprecation of GitHub Copilot Extensions as GitHub moves toward the Model Context Protocol (MCP), offering guidance for developers on transitioning to this universal standard.<!--excerpt_end-->
 

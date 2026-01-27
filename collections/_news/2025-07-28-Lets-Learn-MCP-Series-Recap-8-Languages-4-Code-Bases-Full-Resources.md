@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/lets-learn-mcp-series-recap-8-languages-4-code-bases-full-resources
 title: 'Let’s Learn MCP Series Recap: 8 Languages, 4 Code Bases, Full Resources'
 author: Katie Savage
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Authored by Katie Savage, this article offers an in-depth recap of Microsoft's Model Context Protocol (MCP) training series, highlighting multilingual resources, practical guides, and upcoming opportunities for developers adopting MCP.<!--excerpt_end-->
 

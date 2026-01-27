@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-16-track-organization-copilot-usage
 title: Track Organization Copilot Usage with Copilot Usage APIs
 author: Allison
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison outlines how organization and enterprise owners can enable and access Copilot usage metrics using GitHub's Copilot usage APIs, providing actionable guidance for managing and monitoring Copilot adoption.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/unlocking-the-future-azure-networking-updates-on-security-reliability-and-high-availability-2/
 title: 'Azure Networking Updates: Security, Resilience, and AI-Driven Scale'
 author: Narayan Annamalai
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Narayan Annamalai explores recent advancements in Azure Networking, detailing new features for security, resilience, AI-driven performance, and cloud-native application support crucial for enterprise cloud success.<!--excerpt_end-->
 

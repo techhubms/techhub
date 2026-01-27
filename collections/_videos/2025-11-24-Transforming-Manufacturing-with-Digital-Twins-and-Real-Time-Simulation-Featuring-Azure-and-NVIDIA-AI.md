@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=vVZvVpS0KMk
 title: Transforming Manufacturing with Digital Twins and Real-Time Simulation Featuring Azure and NVIDIA AI
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a panel featuring Teresa Conceicao and Ganesh Sivaraman who discuss the use of Azure, NVIDIA AI, and Omniverse technologies to empower manufacturers with digital twins and real-time simulation.<!--excerpt_end-->
 

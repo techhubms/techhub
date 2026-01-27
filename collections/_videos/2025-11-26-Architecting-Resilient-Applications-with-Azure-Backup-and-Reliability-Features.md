@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=UQRAs0k978k
 title: Architecting Resilient Applications with Azure Backup and Reliability Features
 author: Microsoft Events
@@ -32,6 +32,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Presented by Gargi Banerjee and Surya Sripathi Raju for Microsoft Events, this session details how to architect resilient applications using Azure backup, reliability, and advanced security features.<!--excerpt_end-->
 

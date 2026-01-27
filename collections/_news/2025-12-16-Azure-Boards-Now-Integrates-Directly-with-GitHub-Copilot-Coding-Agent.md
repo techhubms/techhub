@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/github-copilot-for-azure-boards/
 title: Azure Boards Now Integrates Directly with GitHub Copilot Coding Agent
 author: Dan Hellem
@@ -26,6 +26,7 @@ section_names:
 - azure
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Dan Hellem reports on the general availability of Azure Boards and GitHub Copilot integration, which streamlines work item automation and coding workflow for development teams.<!--excerpt_end-->
 

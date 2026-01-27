@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/outages-and-security-threats-in-devops-tooling-cracks-in-the-foundation/
 title: 'Outages and Security Threats in DevOps Tooling: Cracks in the Foundation'
 author: Alan Shimel
@@ -36,6 +36,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Alan Shimel highlights the risks of outages and breaches in DevOps toolchains and urges platform engineers to design for resilience and strengthen security measures for sustained delivery performance.<!--excerpt_end-->
 

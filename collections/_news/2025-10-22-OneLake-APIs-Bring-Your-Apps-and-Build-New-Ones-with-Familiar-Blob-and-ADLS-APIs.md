@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-apis-bring-your-apps-and-build-new-ones-with-familiar-blob-and-adls-apis/
 title: 'OneLake APIs: Bring Your Apps and Build New Ones with Familiar Blob and ADLS APIs'
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog explains how OneLake empowers developers and data engineers to integrate existing applications with Microsoft Fabric using familiar Blob and ADLS APIs, simplifying migration and supporting modern analytics.<!--excerpt_end-->
 

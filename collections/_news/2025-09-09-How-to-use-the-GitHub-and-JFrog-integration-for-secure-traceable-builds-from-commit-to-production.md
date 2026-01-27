@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/enterprise-software/devsecops/how-to-use-the-github-and-jfrog-integration-for-secure-traceable-builds-from-commit-to-production/
 title: How to use the GitHub and JFrog integration for secure, traceable builds from commit to production
 author: April Yoho
@@ -25,6 +25,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 April Yoho explains how developers can leverage the new GitHub and JFrog integration to create a secure, traceable build process, with unified security scanning and centralized artifact management from commit to production.<!--excerpt_end-->
 

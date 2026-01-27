@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/10/optimize-complex-workflows-using-multi-agent-ai-patterns/
 title: Optimize Complex Workflows Using Multi-Agent AI Patterns
 author: Thomas Maurer
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Thomas Maurer presents an in-depth look at multi-agent AI orchestration for enterprise workflows, with insights from Clayton Siemens. Learn how Microsoft Azure’s AI capabilities help optimize business processes.<!--excerpt_end-->
 

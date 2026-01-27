@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-native-previews/
 title: 'Announcing TypeScript Native Previews: A Faster, Native Compiler and Toolset'
 author: Daniel Rosenwasser
@@ -22,6 +22,7 @@ tags:
 - VS Code Extension
 section_names:
 - coding
+primary_section: coding
 ---
 In this detailed announcement, Daniel Rosenwasser unveils the TypeScript Native Previews—offering a natively compiled TypeScript compiler and toolset in Go. The article covers installation, new features, ongoing limitations, and an active roadmap for developers.<!--excerpt_end-->
 

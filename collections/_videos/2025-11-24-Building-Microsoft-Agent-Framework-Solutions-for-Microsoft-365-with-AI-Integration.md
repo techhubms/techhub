@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=gdi95CKeQL4
 title: Building Microsoft Agent Framework Solutions for Microsoft 365 with AI Integration
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Presented by Microsoft Events, this session guides advanced enterprise developers through building and securing AI-powered agents for Microsoft 365 with the Microsoft Agent Framework and Agent 365 SDK.<!--excerpt_end-->
 

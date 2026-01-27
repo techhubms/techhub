@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/agent-factory-creating-a-blueprint-for-safe-and-secure-ai-agents/
 title: 'Agent Factory: Blueprint for Safe and Secure Enterprise AI Agents Using Azure AI Foundry'
 author: Yina Arenas
@@ -31,6 +31,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Yina Arenas discusses how enterprises can use Azure AI Foundry to implement a secure and trustworthy AI agent blueprint, addressing identity, governance, and real-time security controls for agentic AI in production environments.<!--excerpt_end-->
 

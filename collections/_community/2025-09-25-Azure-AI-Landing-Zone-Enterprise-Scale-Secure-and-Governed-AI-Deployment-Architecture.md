@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/ai-azure-landing-zone-shared-capabilities-and-models-to-enable/ba-p/4455951
 title: 'Azure AI Landing Zone: Enterprise-Scale, Secure, and Governed AI Deployment Architecture'
 author: Rohon_Mohapatra
@@ -33,6 +33,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Rohon_Mohapatra presents a comprehensive enterprise architecture for deploying and governing AI workloads on Azure at scale, covering Landing Zone patterns, secure networking, scalable app hosting, and integration with Azure's AI ecosystem.<!--excerpt_end-->
 

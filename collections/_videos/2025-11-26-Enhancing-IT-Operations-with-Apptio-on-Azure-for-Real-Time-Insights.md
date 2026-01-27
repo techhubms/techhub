@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=nJk-O5DQzkI
 title: Enhancing IT Operations with Apptio on Azure for Real-Time Insights
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events hosts a session on leveraging Apptio on Azure, featuring Philip Alfano and Bill Primerano, highlighting strategies for operational efficiency and AI-driven cost optimization in enterprise IT environments.<!--excerpt_end-->
 

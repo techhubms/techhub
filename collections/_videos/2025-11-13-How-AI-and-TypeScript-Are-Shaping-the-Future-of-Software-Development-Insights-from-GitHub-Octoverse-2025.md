@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=MQOaBXwRfYo
 title: 'How AI and TypeScript Are Shaping the Future of Software Development: Insights from GitHub Octoverse 2025'
 author: GitHub
@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 In this GitHub video, Idan Gazit examines the 2025 Octoverse report, offering his professional perspective on rising software development trends, from TypeScript’s surge to AI’s growing influence on how and what we code.<!--excerpt_end-->
 

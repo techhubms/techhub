@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/developer-skills/career-growth/rediscovering-joy-in-learning-jason-lengstorf-on-the-state-of-development/
 title: 'Rediscovering Joy in Learning: Jason Lengstorf on AI, Open Source, and Developer Growth'
 author: Andrea Griffiths
@@ -29,6 +29,7 @@ tags:
 - Zod
 section_names:
 - ai
+primary_section: ai
 ---
 Andrea Griffiths interviews Jason Lengstorf on the GitHub Podcast, where he discusses joyful learning, AI's impact on developers, and the importance of supporting open source maintainers.<!--excerpt_end-->
 

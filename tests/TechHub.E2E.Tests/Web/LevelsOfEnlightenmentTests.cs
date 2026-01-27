@@ -128,5 +128,4 @@ public class LevelsOfEnlightenmentTests(PlaywrightCollectionFixture fixture) : I
         var target = await playlistLink.GetAttributeAsync("target");
         target.Should().Be("_blank", "Expected playlist link to open in new tab");
     }
-
 }

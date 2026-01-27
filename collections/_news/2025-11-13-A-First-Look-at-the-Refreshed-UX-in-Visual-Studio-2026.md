@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/a-first-look-at-the-all%e2%80%91new-ux-in-visual-studio-2026/
 title: A First Look at the Refreshed UX in Visual Studio 2026
 author: Ruben Rios
@@ -20,6 +20,7 @@ tags:
 - Windows Development
 section_names:
 - coding
+primary_section: coding
 ---
 Ruben Rios introduces the new Visual Studio 2026 user experience, highlighting features like refreshed design, improved accessibility, settings, and editor customization aimed at supporting developers’ modern workflows.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/protecting-your-fabric-data-using-purview-is-now-generally-available/
 title: Protecting Microsoft Fabric Data with Purview DLP and Sensitivity Labels
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Fabric Blog explains how to secure your data in Microsoft Fabric using Microsoft Purview's Data Loss Prevention policies and sensitivity labels, outlining benefits, setup steps, and governance improvements for organizations.<!--excerpt_end-->
 

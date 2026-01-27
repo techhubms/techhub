@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=OhmtV7-djMk
 title: Azure Update - 6th June 2025
 author: John Savill's Technical Training
@@ -27,6 +27,7 @@ section_names:
 - azure
 - security
 - ml
+primary_section: ai
 ---
 In this week's update, John Savill's Technical Training explores the latest Microsoft Azure changes, from Azure Files NFS support and database upgrades to an AI managed network RBAC enhancement and CrowdStrike-mapped threat actor naming. John points viewers to a rich set of Azure learning resources, recommends alternative venues for support, and provides a structured summary of the major technical topics discussed. The article is a helpful reference for cloud practitioners interested in staying current with weekly Azure developments.<!--excerpt_end-->
 

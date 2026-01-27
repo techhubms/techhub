@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=RQAUF-cLEBI
 title: 'Unlocking AI Practice Scale for Partners with Azure: Insights from MS Ignite'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events shares proven partner strategies for scaling AI practices, featuring Azure’s AI stack and actionable frameworks. Speakers Charlie Doubek, Swapnil Khopkar, and Kirill Kotlyarenko offer guidance from Microsoft Ignite.<!--excerpt_end-->
 

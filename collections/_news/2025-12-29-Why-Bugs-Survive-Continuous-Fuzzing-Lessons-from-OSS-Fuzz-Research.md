@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/security/vulnerability-research/bugs-that-survive-the-heat-of-continuous-fuzzing/
 title: 'Why Bugs Survive Continuous Fuzzing: Lessons from OSS-Fuzz Research'
 author: Antonio Morales
@@ -24,6 +24,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Antonio Morales of the GitHub Security Lab delves into why bugs can persist in projects that undergo continuous fuzzing, highlighting case studies and offering a five-step workflow for better vulnerability discovery.<!--excerpt_end-->
 

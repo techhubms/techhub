@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/make-more-sense-of-multithreaded-debugging/
 title: AI-Powered Thread Summaries and Copilot Chat in Visual Studio Parallel Stacks Window
 author: Junyu Wang
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Junyu Wang explores how Visual Studio leverages AI-powered thread summaries and Copilot Chat to enhance multithreaded debugging. This article explains new features to help developers quickly understand and resolve threading issues within complex applications.<!--excerpt_end-->
 

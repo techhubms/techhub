@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-14-clearer-pull-request-reviewer-status-and-enhanced-email-filtering
 title: Clearer Pull Request Reviewer Status and Enhanced Email Filtering in GitHub
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - Workflow Automation
 section_names:
 - devops
+primary_section: devops
 ---
 Allison introduces two improvements to GitHub: clearer distinctions for pull request reviewer status to improve accessibility, and added metadata in email notifications for easier filtering and issue tracking.<!--excerpt_end-->
 

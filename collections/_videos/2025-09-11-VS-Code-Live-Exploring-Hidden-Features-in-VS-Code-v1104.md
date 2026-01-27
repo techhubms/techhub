@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Vm12PGJtQNs
 title: 'VS Code Live: Exploring Hidden Features in VS Code v1.104'
 author: Visual Studio Code
@@ -26,6 +26,7 @@ tags:
 - Vscoderelease
 section_names:
 - coding
+primary_section: coding
 ---
 Pierce Boggan and James Montemagno from Visual Studio Code dive into v1.104’s new and hidden features, offering developers practical tips and deeper insights.<!--excerpt_end-->
 

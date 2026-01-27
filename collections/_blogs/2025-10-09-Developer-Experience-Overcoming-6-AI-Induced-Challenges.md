@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/developer-experience-overcoming-6-ai-induced-challenges/
 title: 'Developer Experience: Overcoming 6 AI-Induced Challenges'
 author: Yaniv Sayers
@@ -31,6 +31,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Yaniv Sayers examines six major challenges introduced by AI in developer experience, focusing on productivity, trust, and workflow integration, and offers actionable DevOps strategies for improvement.<!--excerpt_end-->
 

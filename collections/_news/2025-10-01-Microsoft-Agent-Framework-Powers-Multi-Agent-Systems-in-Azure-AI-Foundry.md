@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_introducing-microsoft-agent-framework-microsoft-activity-7379202146988318720-WDPf
 title: Microsoft Agent Framework Powers Multi-Agent Systems in Azure AI Foundry
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke summarizes Microsoft’s launch of the Agent Framework, a new enterprise-focused AI orchestration tool within Azure AI Foundry, designed for building and scaling multi-agent systems.<!--excerpt_end-->
 

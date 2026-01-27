@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/hugging-face-opens-github-copilot-chat-to-open-source-models/
 title: Hugging Face Opens GitHub Copilot Chat to Open-Source Models
 author: Tom Smith
@@ -35,6 +35,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Tom Smith discusses how Hugging Face’s new extension enables GitHub Copilot Chat users to access and test open-source language models in VS Code, broadening developers’ options for AI-assisted coding.<!--excerpt_end-->
 

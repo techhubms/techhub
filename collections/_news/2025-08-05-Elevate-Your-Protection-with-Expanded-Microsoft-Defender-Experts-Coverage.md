@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/blog/microsoftsecurityexperts/elevate-your-protection-with-expanded-microsoft-defender-experts-coverage/4439134
 title: Elevate Your Protection with Expanded Microsoft Defender Experts Coverage
 author: Henry Yan and Sylvie Liu
@@ -18,6 +18,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Authored by Henry Yan and Sylvie Liu, this post introduces new 24/7, expert-driven protections from Microsoft Defender Experts for protecting cloud workloads, including support for multicloud environments.<!--excerpt_end-->
 

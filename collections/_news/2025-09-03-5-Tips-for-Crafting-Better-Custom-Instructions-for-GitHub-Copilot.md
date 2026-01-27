@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/5-tips-for-writing-better-custom-instructions-for-copilot/
 title: 5 Tips for Crafting Better Custom Instructions for GitHub Copilot
 author: Christopher Harrison
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Christopher Harrison explains five key tips for writing custom instruction files for GitHub Copilot, showing developers how to optimize code suggestions and documentation using clear project and coding information.<!--excerpt_end-->
 

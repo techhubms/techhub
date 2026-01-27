@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/ssms-22-meets-fabric-data-warehouse-evolving-the-developer-experiences/
 title: 'SSMS 22 Meets Fabric Data Warehouse: Evolving the Developer Experiences'
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog presents a comprehensive overview of the SSMS 22 integration with Fabric Data Warehouse, highlighting new features that enhance SQL development workflows and align cross-platform experiences for developers.<!--excerpt_end-->
 

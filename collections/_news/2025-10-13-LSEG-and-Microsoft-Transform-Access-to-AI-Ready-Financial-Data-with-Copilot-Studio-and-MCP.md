@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/2025/10/12/lseg-and-microsoft-transform-access-to-ai-ready-financial-data-in-customer-workflows/
 title: LSEG and Microsoft Transform Access to AI-Ready Financial Data with Copilot Studio and MCP
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke presents a partnership update between LSEG and Microsoft, describing how Copilot Studio and the Model Context Protocol enable the secure integration of AI and LSEG-licensed financial data into customer workflows.<!--excerpt_end-->
 

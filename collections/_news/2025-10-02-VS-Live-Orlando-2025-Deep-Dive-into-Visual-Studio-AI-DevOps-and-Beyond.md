@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-live-orlando-2025/
 title: 'VS Live! Orlando 2025: Deep Dive into Visual Studio, AI, DevOps, and Beyond'
 author: Jim Harrer
@@ -32,6 +32,7 @@ section_names:
 - github-copilot
 - ml
 - security
+primary_section: github-copilot
 ---
 Jim Harrer details the learning opportunities at VS Live! Orlando 2025, an event brimming with sessions on Visual Studio, AI, GitHub Copilot, DevOps, and modern software engineering for Microsoft platform professionals.<!--excerpt_end-->
 

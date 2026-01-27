@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/rust-in-time-announcing-the-azure-sdk-for-rust-beta/
 title: Announcing the First Beta Release of the Azure SDK for Rust
 author: Ronnie Geraghty
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 In this post, Ronnie Geraghty announces the first beta release of the Azure SDK for Rust, providing official support for Rust developers working with Azure services like Identity, Key Vault, Event Hubs, and Cosmos DB.<!--excerpt_end-->
 

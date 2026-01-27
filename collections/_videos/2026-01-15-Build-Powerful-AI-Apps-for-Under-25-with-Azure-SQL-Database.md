@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=NY_ESU6GKM0
 title: Build Powerful AI Apps for Under $25 with Azure SQL Database
 author: Microsoft Developer
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 'Microsoft Developer' introduces the Budget Bytes series, showing practical ways to build real AI-powered apps with Azure SQL Database while keeping costs under $25.<!--excerpt_end-->
 

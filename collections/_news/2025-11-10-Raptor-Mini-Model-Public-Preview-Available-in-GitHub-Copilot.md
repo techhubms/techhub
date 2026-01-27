@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-10-raptor-mini-is-rolling-out-in-public-preview-for-github-copilot
 title: Raptor Mini Model Public Preview Available in GitHub Copilot
 author: Allison
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces the public preview rollout of Raptor mini, a new experimental model for GitHub Copilot users in Visual Studio Code, highlighting accessibility and ways to learn more.<!--excerpt_end-->
 

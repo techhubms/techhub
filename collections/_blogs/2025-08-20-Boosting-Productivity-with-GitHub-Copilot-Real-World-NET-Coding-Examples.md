@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/boosting-productivity-with-github-copilot-real-world-net-coding-examples/
 title: 'Boosting Productivity with GitHub Copilot: Real-World .NET Coding Examples'
 author: Dellenny
@@ -27,6 +27,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny demonstrates how developers can leverage GitHub Copilot as an AI coding assistant in the .NET ecosystem, showcasing real-world examples to boost productivity and reduce repetitive tasks.<!--excerpt_end-->
 

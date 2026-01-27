@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-02-github-enterprise-server-3-19-release-candidate-is-now-available
 title: 'GitHub Enterprise Server 3.19: New Release Candidate Features and Enhancements'
 author: Allison
@@ -22,6 +22,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison outlines the technical highlights in GitHub Enterprise Server 3.19, focusing on improved repository workflows, security policies, monitoring updates, and administration enhancements for enterprise DevOps teams.<!--excerpt_end-->
 

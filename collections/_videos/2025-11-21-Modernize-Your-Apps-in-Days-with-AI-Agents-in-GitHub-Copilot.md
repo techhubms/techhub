@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=j8tOnA7GcZw
 title: Modernize Your Apps in Days with AI Agents in GitHub Copilot
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Events presents a Microsoft Ignite 2025 session with Scott Hunter, Timothy Ng, and Kalpesh Sharma, focusing on rapid app modernization using AI agents in GitHub Copilot and Azure services.<!--excerpt_end-->
 

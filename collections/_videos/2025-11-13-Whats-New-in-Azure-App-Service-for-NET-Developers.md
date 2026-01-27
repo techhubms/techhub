@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=WSHMfrCHD0c
 title: What's New in Azure App Service for .NET Developers
 author: dotnet
@@ -29,6 +29,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 Byron Tardif presents the latest features of Azure App Service for .NET developers, covering deployment, monitoring, integration with DevOps tools, and strategies for optimizing and securing cloud applications.<!--excerpt_end-->
 

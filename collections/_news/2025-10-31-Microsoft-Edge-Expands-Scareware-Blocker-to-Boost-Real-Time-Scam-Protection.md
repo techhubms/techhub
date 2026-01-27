@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.windows.com/msedgedev/2025/10/31/protecting-more-edge-users-with-expanded-scareware-blocker-availability-and-real-time-protection/
 title: Microsoft Edge Expands Scareware Blocker to Boost Real-Time Scam Protection
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 - Windows
 section_names:
 - security
+primary_section: security
 ---
 stclarke details how Microsoft Edge's Scareware blocker now shields more users by default, integrating closely with Defender SmartScreen for faster, AI-driven detection and robust browser security.<!--excerpt_end-->
 

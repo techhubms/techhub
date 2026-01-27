@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-16-copilot-coding-agent-can-now-search-the-web
 title: Copilot Coding Agent Can Now Search the Web
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison covers the latest updates to the GitHub Copilot coding agent, highlighting its new ability to search the web, automate pull request creation, and assist developers by gathering current information for coding tasks.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=8o3_cirYV2U
 title: Accelerating R&D and Scientific Breakthroughs with Microsoft Discovery
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events presents an Ignite 2025 session on the Microsoft Discovery Platform, where John Link, Auloke Mathur, Julie Mijajlovic, and Prashant Varshney discuss the use of AI agents, Azure AI, and quantum computing to transform scientific research and development.<!--excerpt_end-->
 

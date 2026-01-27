@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fcdA1iVrrYw
 title: 'Azure Update – 25th July 2025: Latest Service Announcements and Enhancements'
 author: John Savill's Technical Training
@@ -31,6 +31,7 @@ section_names:
 - ml
 - devops
 - security
+primary_section: ml
 ---
 John Savill delivers an informative summary of recent advancements in Microsoft Azure, covering networking, security, analytics, and monitoring. Viewers will learn about the latest features and improvements relevant to Azure professionals.<!--excerpt_end-->
 

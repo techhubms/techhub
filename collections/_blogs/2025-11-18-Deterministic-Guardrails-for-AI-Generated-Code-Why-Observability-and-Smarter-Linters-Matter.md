@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/the-deterministic-future-of-ai-generated-code/
 title: 'Deterministic Guardrails for AI-Generated Code: Why Observability and Smarter Linters Matter'
 author: Yechezkel Rabinovich
@@ -35,6 +35,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 Yechezkel Rabinovich explores the shifting landscape of AI-generated code and DevOps, emphasizing the importance of deterministic verification and observability to maintain reliability and security.<!--excerpt_end-->
 

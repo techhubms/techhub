@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://hiddedesmet.com/ai-project-validation-framework-part1
 title: 'Is AI the Right Solution? Part 1: A Decision Framework for Validating AI Projects'
 author: Hidde de Smet
@@ -19,6 +19,7 @@ tags:
 - Strategic Alignment
 section_names:
 - ai
+primary_section: ai
 ---
 Hidde de Smet shares Part 1 of a 3-part series on validating AI initiatives, focusing on a decision tree framework that helps organizations determine if AI is the best fit for solving their business problems.<!--excerpt_end-->
 

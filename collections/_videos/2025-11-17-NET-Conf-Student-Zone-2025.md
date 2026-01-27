@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=MYaFPDjbd3k
 title: .NET Conf Student Zone 2025
 author: dotnet
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 dotnet presents a student-focused .NET Conf 2025 session, featuring demos and tutorials on AI, Copilot, Aspire, cross-platform capabilities, and core coding skills for new developers.<!--excerpt_end-->
 

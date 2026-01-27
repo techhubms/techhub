@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/ai-assisted-development-powered-by-local-models/
 title: Integrating Foundry Local with GitHub Copilot in Visual Studio Code
 author: Maanav Dalal
@@ -25,6 +25,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Maanav Dalal introduces a practical guide to integrating Foundry Local with GitHub Copilot in Visual Studio Code, highlighting privacy, local model flexibility, and setup benefits for developers.<!--excerpt_end-->
 

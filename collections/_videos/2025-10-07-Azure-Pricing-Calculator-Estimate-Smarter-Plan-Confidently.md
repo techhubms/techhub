@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=7b84OrcATUQ
 title: 'Azure Pricing Calculator: Estimate Smarter, Plan Confidently'
 author: Microsoft Developer
@@ -23,6 +23,7 @@ tags:
 - Workload Management
 section_names:
 - azure
+primary_section: azure
 ---
 In this Azure Essentials Show episode, Microsoft Developer hosts Thomas Maurer and Britt Henderson discuss the Azure Pricing Calculator's key features for estimating cloud costs and planning Azure workloads with confidence.<!--excerpt_end-->
 

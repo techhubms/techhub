@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/jfrog-ceo-ai-agents-require-practices-beyond-security-traceability/?utm_source=rss&utm_medium=rss&utm_campaign=jfrog-ceo-ai-agents-require-practices-beyond-security-traceability
 title: 'JFrog CEO: AI Agents Require Practices Beyond Security, Traceability'
 author: Jon Swartz
@@ -35,6 +35,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Jon Swartz highlights key takeaways from JFrog's swampUP 2025, discussing the adoption of AI agents, security and governance in the software supply chain, and partnerships with platforms like GitHub Copilot.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2025-gartner-magic-quadrant-for-distributed-hybrid-infrastructure/
 title: Microsoft Recognized as Leader in 2025 Gartner Magic Quadrant for Distributed Hybrid Infrastructure
 author: Dean Paron
@@ -26,6 +26,7 @@ tags:
 - Sovereign Cloud
 section_names:
 - azure
+primary_section: azure
 ---
 Dean Paron details Microsoft's recognition as a leader in the 2025 Gartner Magic Quadrant for Distributed Hybrid Infrastructure, focusing on how Azure Arc and Azure Local empower customers with unified cloud management, governance, and innovation.<!--excerpt_end-->
 

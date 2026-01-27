@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/finding-the-right-page-number-in-pdfs-with-ai-search/ba-p/4440758
 title: Extracting Page Numbers from PDFs with Azure AI Search and OCR
 author: samsarka
@@ -28,6 +28,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 samsarka describes how to use Azure AI Search and OCR to extract and index PDF page numbers, enabling fast and context-aware knowledge discovery in large document repositories.<!--excerpt_end-->
 

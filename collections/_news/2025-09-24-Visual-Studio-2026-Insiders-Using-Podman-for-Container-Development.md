@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/visual-studio-2026-insiders-using-podman-for-container-development
 title: 'Visual Studio 2026 Insiders: Using Podman for Container Development'
 author: Matt Hernandez
@@ -23,6 +23,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Matt Hernandez introduces Podman integration in Visual Studio 2026 Insiders, showing how developers can create, run, and debug containers securely within the Visual Studio environment.<!--excerpt_end-->
 

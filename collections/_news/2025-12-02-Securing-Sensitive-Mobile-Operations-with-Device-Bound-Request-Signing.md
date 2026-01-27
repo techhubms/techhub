@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/securing-sensitive-mobile-operations-with-device-bound-request-signing
 title: Securing Sensitive Mobile Operations with Device-Bound Request Signing
 author: Fernando de Oliveira, Daiane Galvão, Wesley Rodrigues
@@ -30,6 +30,7 @@ tags:
 - Zero Trust
 section_names:
 - security
+primary_section: security
 ---
 Fernando de Oliveira, Daiane Galvão, and Wesley Rodrigues present advanced strategies for securing mobile operations by linking requests to hardware-backed device keys, providing detailed threat modeling and practical architecture guidance.<!--excerpt_end-->
 

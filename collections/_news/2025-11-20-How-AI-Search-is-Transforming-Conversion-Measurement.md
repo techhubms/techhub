@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.bing.com/webmaster/November-2025/How-AI-Search-Is-Changing%E2%80%AFthe%E2%80%AFWay%E2%80%AFConversions%E2%80%AFare-Measured
 title: How AI Search is Transforming Conversion Measurement
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 - Zero Click Visibility
 section_names:
 - ai
+primary_section: ai
 ---
 Written by stclarke, this in-depth article outlines how Microsoft AI search tools and Copilot are shifting conversion measurement from traditional clicks to richer visibility and intent signals, offering actionable strategies for marketers and publishers.<!--excerpt_end-->
 

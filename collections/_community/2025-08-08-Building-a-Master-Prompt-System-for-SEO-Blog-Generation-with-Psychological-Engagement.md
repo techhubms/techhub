@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/ArtificialInteligence/comments/1mkqmeg/i_built_a_master_prompt_for_generating_seo_blogs/
 title: Building a Master Prompt System for SEO Blog Generation with Psychological Engagement
 author: Sajil_ali
@@ -21,6 +21,7 @@ tags:
 - Structured Prompts
 section_names:
 - ai
+primary_section: ai
 ---
 Sajil_ali shares their approach to developing a 'master prompt' for generating SEO blog posts with built-in psychological engagement, unpacking the workflow, structure, and techniques behind effective prompt engineering.<!--excerpt_end-->
 

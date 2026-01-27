@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/DYSBNLmtIfc
 title: Building Omnichannel Voice AI Agents with Azure
 author: Microsoft Developer
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer presents a demo session featuring Pablo Salvador Lopez, who illustrates the creation of real-time omnichannel voice AI agents on Azure, including architectural patterns and integration strategies.<!--excerpt_end-->
 

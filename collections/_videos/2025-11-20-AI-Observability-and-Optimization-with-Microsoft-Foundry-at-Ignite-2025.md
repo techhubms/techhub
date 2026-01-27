@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=LOLI0emzDb0
 title: AI Observability and Optimization with Microsoft Foundry at Ignite 2025
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - ai
 - azure
 - devops
+primary_section: ai
 ---
 This session featuring Abhi Bhatt, Sebastian Kohlmeier, and Sam Naghshineh from Microsoft Events explores how to achieve total visibility and optimization for AI agents using Microsoft Foundry, with practical demos and enterprise best practices.<!--excerpt_end-->
 

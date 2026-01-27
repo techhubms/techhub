@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-on-github-com-a-power-users-guide/
 title: 'How to Use GitHub Copilot on github.com: A Power User’s Guide'
 author: Andrea Griffiths
@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Andrea Griffiths shares practical strategies for using GitHub Copilot on github.com. The article covers automating tasks, assigning AI agents, prototyping with Spark, switching between models, and optimizing your development workflow—without relying on your IDE.<!--excerpt_end-->
 

@@ -19,6 +19,7 @@ tags:
 - Web Performance
 section_names:
 - devops
+primary_section: devops
 ---
 Allison announces major performance upgrades to GitHub Issues, enabling much faster load times for users across dashboards and project boards.<!--excerpt_end-->
 

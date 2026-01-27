@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-timeouts-to-triumph-optimizing-gpt-4o-mini-for-speed/ba-p/4461531
 title: 'From Timeouts to Triumph: Optimizing GPT-4o-mini for Speed, Efficiency, and Reliability'
 author: psundars
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 psundars presents a practical breakdown of optimizing GPT-4o-mini deployments on Azure OpenAI—addressing performance bottlenecks and enhancing reliability through data-driven engineering and architectural best practices.<!--excerpt_end-->
 

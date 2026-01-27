@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/devops/comments/1mfshis/kubeseal_built_a_small_tool_to_make_bitnamis/
 title: "[kubeseal] Built a small tool to make bitnami's sealed-secrets less painful in GitOps"
 author: MrFr0z01
@@ -17,6 +17,7 @@ tags:
 - Tooling
 section_names:
 - devops
+primary_section: devops
 ---
 MrFr0z01 shares a new tool designed to simplify working with Bitnami's sealed-secrets in GitOps scenarios, targeting Kubernetes DevOps practitioners.<!--excerpt_end-->
 

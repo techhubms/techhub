@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/22/the-ciso-imperative-building-resilience-in-an-era-of-accelerated-cyberthreats/
 title: Building Resilience in an Era of Accelerated Cyberthreats
 author: stclarke
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 stclarke reviews findings from the Microsoft Digital Defense Report 2025, highlighting the accelerated pace of threats and how CISOs can leverage AI, automation, and modern identity controls to build organizational resilience.<!--excerpt_end-->
 

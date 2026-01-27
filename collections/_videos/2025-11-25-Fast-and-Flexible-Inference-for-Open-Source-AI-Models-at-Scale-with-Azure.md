@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=mFG2hiMsR34
 title: Fast and Flexible Inference for Open-Source AI Models at Scale with Azure
 author: Microsoft Events
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events presents a detailed session from Ignite 2025 focused on deploying and scaling open-source AI models using Azure Container Apps and AKS. The speakers showcase robust strategies for running custom and OSS models efficiently.<!--excerpt_end-->
 

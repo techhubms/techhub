@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/a-step-by-step-guide-to-modernizing-java-projects-with-github-copilot-agent-mode/
 title: 'Modernizing Java Projects with GitHub Copilot Agent Mode: Step-by-Step Guide'
 author: Andrea Griffiths
@@ -31,6 +31,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Andrea Griffiths details how to modernize legacy Java projects by leveraging GitHub Copilot Agent Mode, automated upgrades, secure migrations, and direct Azure cloud deployments.<!--excerpt_end-->
 

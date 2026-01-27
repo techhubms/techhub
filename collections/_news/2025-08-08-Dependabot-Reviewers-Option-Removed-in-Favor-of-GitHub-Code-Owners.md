@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-08-dependabot-reviewers-configuration-option-is-replaced-by-code-owners
 title: Dependabot Reviewers Option Removed in Favor of GitHub Code Owners
 author: Allison
@@ -17,6 +17,7 @@ tags:
 - Workflow Automation
 section_names:
 - devops
+primary_section: devops
 ---
 Allison shares details on the removal of the Dependabot reviewers configuration on GitHub, explaining how users can transition to using code owners for repository management.<!--excerpt_end-->
 

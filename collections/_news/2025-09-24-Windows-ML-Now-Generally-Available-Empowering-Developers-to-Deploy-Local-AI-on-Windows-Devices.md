@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.windows.com/windowsdeveloper/2025/09/23/windows-ml-is-generally-available-empowering-developers-to-scale-local-ai-across-windows-devices/
 title: 'Windows ML Now Generally Available: Empowering Developers to Deploy Local AI on Windows Devices'
 author: stclarke
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 stclarke summarizes how Microsoft’s Windows ML is now generally available for developers to deploy, optimize, and manage AI models locally on Windows 11 devices, with deep integration across diverse hardware and tools.<!--excerpt_end-->
 

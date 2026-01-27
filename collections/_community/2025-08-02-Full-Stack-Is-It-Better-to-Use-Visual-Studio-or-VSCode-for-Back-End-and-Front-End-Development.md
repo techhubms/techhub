@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mfuefu/full_stack_visual_studio_or_vscode/
 title: 'Full Stack: Is It Better to Use Visual Studio or VSCode for Back-End and Front-End Development?'
 author: RankedMan
@@ -21,6 +21,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 In this post, RankedMan raises key questions for full-stack developers about IDE choices (Visual Studio vs. VSCode) for backend and frontend work, as well as preferences for organizing code repositories.<!--excerpt_end-->
 

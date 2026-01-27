@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-25-upcoming-deprecation-of-gh-copilot-cli-extension
 title: GitHub Copilot CLI Extension Deprecation Announcement
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison shares important news for GitHub CLI users: the gh-copilot extension will be deprecated in October 2025. Learn about new Copilot CLI features, migration advice, and implications for different user plans.<!--excerpt_end-->
 

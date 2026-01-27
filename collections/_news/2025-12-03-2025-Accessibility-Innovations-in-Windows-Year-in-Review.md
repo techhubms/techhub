@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.windows.com/windowsexperience/2025/12/03/2025-a-year-in-recap-windows-accessibility/
 title: '2025 Accessibility Innovations in Windows: Year in Review'
 author: stclarke
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 stclarke presents a comprehensive overview of Windows accessibility innovations from 2025, emphasizing AI-powered dictation and Voice Access improvements that benefit users with disabilities.<!--excerpt_end-->
 

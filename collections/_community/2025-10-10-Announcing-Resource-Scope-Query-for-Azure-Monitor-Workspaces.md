@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-resource-scope-query-for-azure-monitor-workspaces/ba-p/4460567
 title: Announcing Resource-Scope Query for Azure Monitor Workspaces
 author: Tyler_Kight
@@ -28,6 +28,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Tyler_Kight announces the public preview of resource-scope query for Azure Monitor Workspaces, detailing how it streamlines observability, access controls, and aligns metric querying with Azure-native experiences.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/spacelift-adds-open-source-ai-vibecoding-tool-to-provision-infrastructure/
 title: Spacelift Unveils Open Source AI Vibecoding Tool for Infrastructure Provisioning
 author: Mike Vizard
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard introduces Spacelift Intent, an AI-driven, open source framework that lets DevOps teams provision infrastructure using natural language, eliminating the need to manually write Terraform or OpenTofu code.<!--excerpt_end-->
 

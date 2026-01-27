@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2024/Nov/08/Getting-the-Current-TabItem-when-the-Tab-is-not-selected-in-WPF
 title: Getting the Current TabItem When the Tab Is Not Selected in WPF
 author: Rick Strahl
@@ -22,6 +22,7 @@ tags:
 - WPF
 section_names:
 - coding
+primary_section: coding
 ---
 In this article, Rick Strahl shares insights into handling hover detection in WPF TabControls, demonstrating how to access non-selected TabItems for context-sensitive operations.<!--excerpt_end-->
 

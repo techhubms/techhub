@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_104
 title: What's New in Visual Studio Code August 2025 (v1.104)
 author: Visual Studio Code Team
@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code Team's August 2025 release introduces AI-powered features and tighter GitHub Copilot integration, boosting developer productivity and security with expanded chat, coding agents, and model selection improvements.<!--excerpt_end-->
 

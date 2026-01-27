@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=pwtY8O_YvSI
 title: Best Practices for Architecting AI Agents in Enterprise Systems
 author: Microsoft Developer
@@ -21,6 +21,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Developer presents a discussion with Uli, Eric, and David on architecting AI agents in enterprise environments, covering identity, protocols, and secure deployment strategies.<!--excerpt_end-->
 

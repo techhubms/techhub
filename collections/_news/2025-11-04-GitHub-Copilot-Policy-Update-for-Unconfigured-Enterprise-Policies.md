@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-04-github-copilot-policy-update-for-unconfigured-policies
 title: GitHub Copilot Policy Update for Unconfigured Enterprise Policies
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison explains recent GitHub Copilot policy changes that refine how unconfigured enterprise policies cascade to organizations, giving enterprise admins more explicit control.<!--excerpt_end-->
 

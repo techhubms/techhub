@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/put-your-ai-to-the-test-with-microsoft-extensions-ai-evaluation
 title: Put your AI to the Test with Microsoft.Extensions.AI.Evaluation
 author: McKenna Barlow, Shyam Namboodiripad
@@ -32,6 +32,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 McKenna Barlow and Shyam Namboodiripad detail how developers can leverage Microsoft.Extensions.AI.Evaluation to systematically assess and improve the quality, safety, and relevance of AI outputs in .NET applications.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dBu3il7db0o
 title: Create an AI Agent with File Search in Azure AI Foundry (Portal)
 author: Microsoft Developer
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Developer presents a beginner-friendly walkthrough on creating an AI Agent with File Search in Azure AI Foundry, highlighting no-code agent creation and configuration techniques.<!--excerpt_end-->
 

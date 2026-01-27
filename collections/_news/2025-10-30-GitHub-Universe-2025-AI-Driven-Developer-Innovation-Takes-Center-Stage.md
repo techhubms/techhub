@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://azure.microsoft.com/en-us/blog/github-universe-2025-where-developer-innovation-took-center-stage/
 title: 'GitHub Universe 2025: AI-Driven Developer Innovation Takes Center Stage'
 author: stclarke
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 stclarke delivers a comprehensive recap of GitHub Universe 2025, examining the rise of AI-powered developer agents, integration of GitHub Copilot with Azure, and how Microsoft's latest innovations are transforming software engineering.<!--excerpt_end-->
 

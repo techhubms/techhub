@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/Nj2c3qPJ1Ng
 title: How to Get the Most Out of Your AI with Vibe Coding
 author: GitHub
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a video exploring 'vibe coding' with AI, emphasizing how author GitHub recommends using clear PRDs with tools like GitHub Copilot to maximize development efficiency.<!--excerpt_end-->
 

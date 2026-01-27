@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/federated-identity-in-azure-seamless-access-with-external-identity-providers/
 title: 'Federated Identity in Azure: Seamless Access with External Identity Providers'
 author: Dellenny
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Dellenny explains how Federated Identity is implemented on Microsoft Azure, focusing on secure authentication with external identity providers and the architectural benefits for organizations adopting hybrid and multi-cloud solutions.<!--excerpt_end-->
 

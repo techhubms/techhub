@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/Yhu2xzId2U0
 title: CLI Assistance
 author: Rob Bos
@@ -14,6 +14,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This video demonstrates GitHub Copilot's CLI Assistance feature. Streamline your command line tasks with Copilot's CLI assistance.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-security-is-now-available-in-public-preview/
 title: 'Announcing OneLake Security (Preview): Fine-Grained Data Access Control in Microsoft Fabric'
 author: Microsoft Fabric Blog
@@ -27,6 +27,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces the public preview of OneLake security, highlighting author-driven best practices for securing data lakes with advanced, unified access controls across Fabric workloads.<!--excerpt_end-->
 

@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 stclarke brings an in-depth look at Windows 365 for Agents, highlighting how Microsoft is evolving Cloud PC technology to securely support enterprise AI automation and agent-driven workflows.<!--excerpt_end-->
 

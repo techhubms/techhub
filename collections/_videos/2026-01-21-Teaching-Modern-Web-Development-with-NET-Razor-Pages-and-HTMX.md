@@ -32,6 +32,7 @@ tags:
 - Web Development
 section_names:
 - coding
+primary_section: coding
 ---
 In this video, dotnet (with guests Tomasz Osmanowski, Michał Siegień, and Tymoteusz Bielski) demonstrates how the .NET platform, Razor Pages, and HTMX can simplify and modernize web development education.<!--excerpt_end-->
 

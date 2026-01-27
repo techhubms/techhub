@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-real-time-intelligence-a-leader-in-the-2025-forrester-streaming-data-wave/
 title: 'Microsoft Fabric Real-Time Intelligence: Setting the Standard for Streaming Data Platforms'
 author: Microsoft Fabric Blog
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog explores how Real-Time Intelligence in Microsoft Fabric empowers enterprises with integrated streaming analytics, AI-driven decision-making, and unified data workflows for modern operational needs.<!--excerpt_end-->
 

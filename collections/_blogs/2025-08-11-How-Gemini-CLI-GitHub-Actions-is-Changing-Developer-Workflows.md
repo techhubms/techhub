@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/how-gemini-cli-github-actions-is-changing-developer-workflows/?utm_source=rss&utm_medium=rss&utm_campaign=how-gemini-cli-github-actions-is-changing-developer-workflows
 title: How Gemini CLI GitHub Actions is Changing Developer Workflows
 author: Tom Smith
@@ -31,6 +31,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Tom Smith examines how Gemini CLI GitHub Actions, an AI-powered automation tool, is transforming developer and DevOps workflows by streamlining issue management, code reviews, and collaboration on GitHub.<!--excerpt_end-->
 

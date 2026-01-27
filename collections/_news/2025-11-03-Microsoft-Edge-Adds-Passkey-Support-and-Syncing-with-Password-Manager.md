@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.windows.com/msedgedev/2025/11/03/microsoft-edge-introduces-passkey-saving-and-syncing-with-microsoft-password-manager/
 title: Microsoft Edge Adds Passkey Support and Syncing with Password Manager
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 stclarke details how Microsoft Edge introduces passkey saving and syncing with Microsoft Password Manager, providing improved passwordless security backed by Azure confidential ledger.<!--excerpt_end-->
 

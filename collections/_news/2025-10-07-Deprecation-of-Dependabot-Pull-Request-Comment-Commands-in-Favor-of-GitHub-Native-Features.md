@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-07-upcoming-changes-to-github-dependabot-pull-request-comment-commands
 title: Deprecation of Dependabot Pull Request Comment Commands in Favor of GitHub Native Features
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - Workflow Automation
 section_names:
 - devops
+primary_section: devops
 ---
 Allison announces key changes for developers: several Dependabot pull request comment commands will be deprecated in January 2026, with recommendations to use GitHub's built-in tools for PR workflows.<!--excerpt_end-->
 

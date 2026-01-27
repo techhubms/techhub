@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=T5eKHDwZe3M
 title: Understanding the New File Share Resource Type in Azure
 author: John Savill's Technical Training
@@ -22,6 +22,7 @@ tags:
 - Storage Management
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill explains the features and advantages of Azure's new File Share resource type, offering insights on creation, benefits, scalability, and billing for cloud professionals.<!--excerpt_end-->
 

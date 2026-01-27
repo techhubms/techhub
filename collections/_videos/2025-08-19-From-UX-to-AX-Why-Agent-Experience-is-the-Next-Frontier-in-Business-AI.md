@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=VC6nM0t-bUw
 title: 'From UX to AX: Why Agent Experience is the Next Frontier in Business AI'
 author: Microsoft Developer
@@ -33,6 +33,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this video, Microsoft Developer presents John Maeda discussing how AI-driven agents are changing business applications, highlighting the move from traditional chatbots to advanced agent experience (AX) and the importance of computational thinking.<!--excerpt_end-->
 

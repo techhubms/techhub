@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/using-entra-id-authentication-with-arc-enabled-sql-server-in-a/ba-p/4435168
 title: Using Entra ID Authentication with Arc-Enabled SQL Server in a .NET Windows Forms Application
 author: jpigott
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: coding
 ---
 jpigott details how developers can use Microsoft Entra ID authentication with Arc-enabled SQL Server in a .NET Windows Forms application, focusing on token management, secure connections, and MSAL integration.<!--excerpt_end-->
 

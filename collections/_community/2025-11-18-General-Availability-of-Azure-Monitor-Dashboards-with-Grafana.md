@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-general-availability-azure-monitor-dashboards-with/ba-p/4468972
 title: General Availability of Azure Monitor Dashboards with Grafana
 author: KayodePrince
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 KayodePrince introduces the general availability of Azure Monitor dashboards with Grafana, a new solution for building and managing cloud-native monitoring dashboards directly in the Azure portal.<!--excerpt_end-->
 

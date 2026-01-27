@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-auditing-for-fabric-sql-database/
 title: Auditing Features for Fabric SQL Database (Preview)
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog details new auditing features for Fabric SQL databases. This article shows how organizations can strengthen security, meet compliance, and gain operational insights using audit logs stored in OneLake.<!--excerpt_end-->
 

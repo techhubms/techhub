@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/azure-migrate-connected-experiences/ba-p/4454927
 title: 'Azure Migrate: Connected Experiences for Efficient Cloud Modernization'
 author: SShastri
@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Shiva Shastri presents the latest Azure Migrate capabilities, focusing on AI-powered assessment, Infrastructure as Code, security enhancements, and integration with GitHub Copilot to streamline safe and efficient cloud migrations.<!--excerpt_end-->
 

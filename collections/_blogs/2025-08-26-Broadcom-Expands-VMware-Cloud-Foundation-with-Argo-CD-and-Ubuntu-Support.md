@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/broadcom-adds-argo-and-ubuntu-support-to-vmware-cloud-foundation/?utm_source=rss&utm_medium=rss&utm_campaign=broadcom-adds-argo-and-ubuntu-support-to-vmware-cloud-foundation
 title: Broadcom Expands VMware Cloud Foundation with Argo CD and Ubuntu Support
 author: Mike Vizard
@@ -32,6 +32,7 @@ tags:
 - Vsphere Kubernetes Service
 section_names:
 - devops
+primary_section: devops
 ---
 Mike Vizard presents a summary of Broadcom's updates to VMware Cloud Foundation, including integrated Argo CD support, Ubuntu optimizations, and a stronger focus on developer services for unified DevOps and IT operations.<!--excerpt_end-->
 

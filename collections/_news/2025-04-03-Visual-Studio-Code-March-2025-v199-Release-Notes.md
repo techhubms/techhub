@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_99
 title: Visual Studio Code March 2025 (v1.99) Release Notes
 author: Visual Studio Code Team
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Visual Studio Code Team details the March 2025 (v1.99) release, showcasing features like agent mode with AI-assisted coding, unified chat, advanced notebook tools, and major improvements to developer productivity.<!--excerpt_end-->
 

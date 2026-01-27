@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=w2WRT2eXISU
 title: 'CVS Health’s Migration: Transforming Developer Experience with GitHub Actions'
 author: GitHub
@@ -23,6 +23,7 @@ tags:
 - Workflow Automation
 section_names:
 - devops
+primary_section: devops
 ---
 GitHub presents a panel featuring Irene Modeste, Jim Beyers, and Mitch Enderle from CVS Health, discussing their large-scale migration to GitHub Actions and how it impacted developer experience and engineering efficiency.<!--excerpt_end-->
 

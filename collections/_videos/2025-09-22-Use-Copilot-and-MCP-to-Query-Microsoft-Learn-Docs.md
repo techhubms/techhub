@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=JJJ6pbq7Aac
 title: Use Copilot and MCP to Query Microsoft Learn Docs
 author: Visual Studio Code
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code, with Carlotta Castelluccio, showcases how developers can use GitHub Copilot and the MCP server to programmatically interact with Microsoft Learn Docs for grounded, documentation-based AI answers.<!--excerpt_end-->
 

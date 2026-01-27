@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=2L4cSig9Y4Y
 title: Azure Update - 20th June 2025
 author: John Savill's Technical Training
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 In this update, John Savill summarizes key Microsoft Azure changes around services, feature deprecations, and enhancements announced on June 20, 2025.<!--excerpt_end-->
 

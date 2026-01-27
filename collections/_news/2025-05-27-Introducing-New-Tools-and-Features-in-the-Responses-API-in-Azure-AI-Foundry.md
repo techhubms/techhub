@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/introducing-new-tools-and-features-in-the-responses-api-in-azure-ai-foundry/
 title: Introducing New Tools and Features in the Responses API in Azure AI Foundry
 author: Rafal Rutyna
@@ -14,6 +14,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this article, Rafal Rutyna explores how Microsoft's new Responses API establishes a modern standard for AI development on Azure. <!--excerpt_end--> The API, debuting as a collaborative effort between OpenAI and Microsoft, is now a native part of Azure AI Foundry. It effectively merges the straightforward approach of the Chat Completions API with the sophisticated tool-calling functions that were previously accessible through the Assistants API.
 

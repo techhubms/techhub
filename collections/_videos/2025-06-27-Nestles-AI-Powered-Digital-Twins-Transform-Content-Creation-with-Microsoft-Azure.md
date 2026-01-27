@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=FO9fcsti9Vs
 title: Nestlé's AI-Powered Digital Twins Transform Content Creation with Microsoft Azure
 author: Microsoft Cloud
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Cloud shares how Aude Gandon, CMO of Nestlé, explains using Microsoft Azure and AI-driven digital twins for high-impact content creation.<!--excerpt_end-->
 

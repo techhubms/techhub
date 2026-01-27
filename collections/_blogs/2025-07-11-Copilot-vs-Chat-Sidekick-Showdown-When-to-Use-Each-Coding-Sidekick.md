@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html
 title: 'Copilot vs. Chat: Sidekick Showdown – When to Use Each Coding Sidekick'
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels compares GitHub Copilot's inline code suggestions with chatbot-based tools like Copilot Chat and ChatGPT, providing practical guidance on how to get the most out of each for daily software development tasks.<!--excerpt_end-->
 

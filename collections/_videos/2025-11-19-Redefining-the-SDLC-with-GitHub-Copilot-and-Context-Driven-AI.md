@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=S7NzOIiqU2E
 title: Redefining the SDLC with GitHub Copilot and Context-Driven AI
 author: Microsoft Events
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Events presents how Jon Perkins and Slalom used GitHub Copilot with enterprise context frameworks at Microsoft Ignite, showcasing improvements in code quality and SDLC alignment.<!--excerpt_end-->
 

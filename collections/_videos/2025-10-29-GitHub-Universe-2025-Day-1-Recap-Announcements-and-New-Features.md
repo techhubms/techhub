@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=nSwj2Ma0pnk
 title: 'GitHub Universe 2025 Day 1 Recap: Announcements and New Features'
 author: GitHub
@@ -24,6 +24,7 @@ tags:
 - Xai
 section_names:
 - devops
+primary_section: devops
 ---
 GitHub summarizes the major announcements from Universe 2025 Day 1, featuring Agent HQ, new developer tools, and enterprise features. Presented by GitHub.<!--excerpt_end-->
 

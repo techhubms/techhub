@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/announcing-azure-language-in-foundry-tools-for-deterministic-privacy-first-agents/
 title: Announcing Azure Language in Foundry Tools for Deterministic, Privacy-First Agents
 author: Xiaoying
@@ -40,6 +40,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Xiaoying breaks down the new Azure Language features in Foundry Tools, highlighting privacy-first AI agents, advanced PII redaction, and deterministic intent routing for developers building enterprise solutions on Azure.<!--excerpt_end-->
 

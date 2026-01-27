@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=n5ie6XBdlL8
 title: Distributed Applications with Microsoft Orleans and Event Sourcing Using Sekiban
 author: dotnet
@@ -26,6 +26,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 Hosted by dotnet with guest Tomohisa Takaoka, this discussion delves into developing distributed applications using Microsoft Orleans, event sourcing, and the Sekiban C# framework.<!--excerpt_end-->
 

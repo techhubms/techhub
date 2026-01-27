@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-databases-a-unified-saas-native-experience-for-modern-data-workloads-generally-available/
 title: 'Fabric Databases Now Generally Available: Unified Data Experience in Microsoft Fabric'
 author: Microsoft Fabric Blog
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog announces the general availability of Fabric databases, combining SQL and Cosmos DB features to deliver a unified, AI-optimized data platform for modern apps and analytics.<!--excerpt_end-->
 

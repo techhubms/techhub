@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/breaking-the-million-token-barrier-the-technical-achievement-of/ba-p/4466080
 title: 'Azure ND GB300 v6: Achieving Over 1 Million Tokens/sec on Llama2 70B Inference'
 author: HugoAffaticati
@@ -31,6 +31,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Hugo Affaticati and Mark Gitau detail Azure ND GB300 v6 VMs' record-breaking throughput for Llama2 70B inference, sharing technical benchmarks and a step-by-step Azure deployment guide.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-app-service-ai-scenarios-complete-sample-with-ai-foundry/ba-p/4473142
 title: 'Azure App Service AI Scenarios: Complete Sample with AI Foundry Integration'
 author: Nitesh_Jain
@@ -32,6 +32,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: ai
 ---
 Nitesh_Jain presents a comprehensive sample demonstrating how to add enterprise-grade Azure AI scenarios to Flask apps, including conversational, reasoning, and multimodal AI—all with secure App Service integration and automated deployment.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=X-Dh9R3Opn8
 title: Using Agentic Protocols (MCP, A2A, and NLWeb)
 author: Microsoft Developer
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Developer presents an overview of MCP, A2A, and NLWeb agentic protocols, explaining their use and code implementation for building AI agents, as part of the "AI Agents for Beginners" course.<!--excerpt_end-->
 

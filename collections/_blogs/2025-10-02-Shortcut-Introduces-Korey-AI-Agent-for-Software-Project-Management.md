@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/shortcut-adds-ai-agent-to-orchestrate-management-of-software-development-projects/
 title: Shortcut Introduces Korey AI Agent for Software Project Management
 author: Mike Vizard
@@ -32,6 +32,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard discusses how Korey, the new Shortcut AI agent, empowers DevOps and software engineering teams to streamline project planning and management through automation and intelligent workflow orchestration.<!--excerpt_end-->
 

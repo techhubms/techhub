@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=nHVwGyxP_Fg
 title: Embedding AI in Oracle Workloads with Oracle Database@Azure and Microsoft Fabric
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 In this Microsoft Ignite session, Sudhakar Dalavi, Venkataraman Ramakrishnan, and Rajya Laxmi Yellajosyula present concrete strategies for embedding AI into Oracle workloads using Azure services and Microsoft Fabric.<!--excerpt_end-->
 

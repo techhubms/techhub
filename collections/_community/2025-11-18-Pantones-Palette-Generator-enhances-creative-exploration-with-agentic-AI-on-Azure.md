@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-customer-innovation-blog/pantone-s-palette-generator-enhances-creative-exploration-with/ba-p/4469830
 title: Pantone’s Palette Generator enhances creative exploration with agentic AI on Azure
 author: mtoiba
@@ -29,6 +29,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 mtoiba details how Pantone's Palette Generator leverages Microsoft Azure AI, GitHub Copilot, and multi-agent systems to enable designers to generate color palettes in seconds, transforming creative workflows.<!--excerpt_end-->
 

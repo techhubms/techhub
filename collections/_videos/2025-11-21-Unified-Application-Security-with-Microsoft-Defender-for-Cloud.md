@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=SxZdqBZTqks
 title: Unified Application Security with Microsoft Defender for Cloud
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 This session by Giulio Astori and James P Brotsos at Microsoft Ignite 2025 demonstrates how Microsoft Defender for Cloud secures applications and cloud environments through proactive posture management and DevOps security integration.<!--excerpt_end-->
 

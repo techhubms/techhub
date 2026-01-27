@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/foundry-local-meets-more-silicon/
 title: 'Foundry Local Meets More Silicon: Expanded AI Runtime and NPU Support'
 author: Meng Tang
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Meng Tang details the new features in Foundry Local, Azure AI Foundry’s powerful local AI runtime. Learn about expanded hardware acceleration support and how to quickly install and deploy AI models on Windows and MacOS.<!--excerpt_end-->
 

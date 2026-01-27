@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/simplifying-file-share-management-and-control-for-azure-files/ba-p/4452634
 title: Introducing a File Share-Centric Management Model for Azure Files
 author: wmgries
@@ -20,6 +20,7 @@ tags:
 - Storage Accounts
 section_names:
 - azure
+primary_section: azure
 ---
 wmgries introduces a preview of the new file share-centric management model in Azure Files, where file shares are promoted to top-level Azure resources for easier, more flexible, and scalable management.<!--excerpt_end-->
 

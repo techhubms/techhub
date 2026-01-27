@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/startups/blog/could-your-startup-be-the-next-imagine-cup-world-champion/
 title: 'Argus and Azure AI: Inclusive Assistive Tech Triumphs at Imagine Cup'
 author: stclarke
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Written by stclarke, this piece details how Daniel Kim and Arjun Oberoi’s Argus device, powered by Azure AI, won the 2025 Microsoft Imagine Cup and advances inclusive tech for people with low vision.<!--excerpt_end-->
 

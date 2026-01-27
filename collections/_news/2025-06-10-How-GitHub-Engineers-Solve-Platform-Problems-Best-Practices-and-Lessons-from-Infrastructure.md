@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/engineering/infrastructure/how-github-engineers-tackle-platform-problems/
 title: 'How GitHub Engineers Solve Platform Problems: Best Practices and Lessons from Infrastructure'
 author: Fabian Aguilar Gomez
@@ -23,6 +23,7 @@ tags:
 - Testing
 section_names:
 - devops
+primary_section: devops
 ---
 Fabian Aguilar Gomez shares GitHub's approach to tackling platform problems, offering insights into best practices for engineers in large-scale infrastructure and platform teams.<!--excerpt_end-->
 

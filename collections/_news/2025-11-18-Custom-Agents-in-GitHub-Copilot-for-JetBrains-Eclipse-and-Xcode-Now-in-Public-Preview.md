@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-18-custom-agents-available-in-github-copilot-for-jetbrains-eclipse-and-xcode-now-in-public-preview
 title: Custom Agents in GitHub Copilot for JetBrains, Eclipse, and Xcode Now in Public Preview
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison explains how developers can try out the new custom agents feature in GitHub Copilot for JetBrains, Eclipse, and Xcode, providing guidance for configuration and feedback.<!--excerpt_end-->
 

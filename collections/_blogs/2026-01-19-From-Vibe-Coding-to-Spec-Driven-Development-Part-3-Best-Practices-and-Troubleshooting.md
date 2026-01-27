@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Hidde de Smet delivers a comprehensive field guide for developers mastering AI-assisted and spec-driven development. This post, Part 3 of his series, dives into debugging, best practices, troubleshooting, and automation for production-ready workflows.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/ushering-in-the-era-of-agentic-cloud-operations-with-azure/ba-p/4469664
 title: 'Agentic Cloud Operations and Azure Copilot: Intelligent Cloud Management'
 author: anniepearl
@@ -31,6 +31,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Anniepearl showcases the transformational role of Azure Copilot and agentic cloud operations, demonstrating how AI-driven agents streamline cloud management and ensure governance in Microsoft Azure environments.<!--excerpt_end-->
 

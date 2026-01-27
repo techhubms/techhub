@@ -20,6 +20,7 @@ tags:
 - Version Control
 section_names:
 - devops
+primary_section: devops
 ---
 This beginner-friendly GitHub video teaches the basics of switching branches and committing changes in git, with guidance from the GitHub team.<!--excerpt_end-->
 

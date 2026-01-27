@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/ignitedevsessions/
 title: Developer-Focused Azure AI Foundry Sessions at Microsoft Ignite 2025
 author: Sandra Perez
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Sandra Perez shares a comprehensive guide to Azure AI Foundry sessions at Microsoft Ignite 2025, highlighting developer-focused opportunities for hands-on learning and advanced AI agent development.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/open-source/maintainers/mcp-joins-the-linux-foundation-what-this-means-for-developers-building-the-next-era-of-ai-tools-and-agents/
 title: 'MCP Transitions to Linux Foundation: Impact on AI Tool and Agent Development'
 author: Martin Woodward
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Martin Woodward discusses the move of the Model Context Protocol (MCP) to the Linux Foundation, examining its significance for AI tool and agent developers and the evolving open source ecosystem.<!--excerpt_end-->
 

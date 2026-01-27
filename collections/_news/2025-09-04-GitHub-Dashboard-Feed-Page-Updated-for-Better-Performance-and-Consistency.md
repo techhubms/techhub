@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-04-the-dashboard-feed-page-gets-a-refreshed-faster-experience
 title: GitHub Dashboard Feed Page Updated for Better Performance and Consistency
 author: Allison
@@ -18,6 +18,7 @@ tags:
 - User Experience
 section_names:
 - devops
+primary_section: devops
 ---
 Allison outlines improvements to GitHub's dashboard-feed page, delivering a faster, more consistent user experience with new event types and tunable recommendations.<!--excerpt_end-->
 

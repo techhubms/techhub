@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-the-http-and-mongodb-cdc-connectors-for-eventstream-inspired-by-you/
 title: Introducing HTTP and MongoDB CDC Connectors for Fabric Eventstream
 author: Microsoft Fabric Blog
@@ -25,6 +25,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog announces new HTTP and MongoDB CDC connectors for Eventstream, enabling users to easily integrate and analyze real-time data within Fabric RTI.<!--excerpt_end-->
 

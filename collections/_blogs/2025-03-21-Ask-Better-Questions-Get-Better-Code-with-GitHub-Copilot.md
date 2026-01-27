@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://cooknwithcopilot.com/blog/ask-better-questions-get-better-code.html
 title: Ask Better Questions, Get Better Code with GitHub Copilot
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels explains how developers can get the most out of GitHub Copilot by improving the way they phrase their questions. The guide shares actionable advice for crafting more effective prompts and treating Copilot as a true coding collaborator.<!--excerpt_end-->
 

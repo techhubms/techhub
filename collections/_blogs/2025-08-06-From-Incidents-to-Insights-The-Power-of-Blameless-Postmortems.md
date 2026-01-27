@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/from-incidents-to-insights-the-power-of-blameless-postmortems/?utm_source=rss&utm_medium=rss&utm_campaign=from-incidents-to-insights-the-power-of-blameless-postmortems
 title: 'From Incidents to Insights: The Power of Blameless Postmortems'
 author: Jyostna Seelam
@@ -22,6 +22,7 @@ tags:
 - Team Collaboration
 section_names:
 - devops
+primary_section: devops
 ---
 In this insightful article, Jyostna Seelam discusses how blameless postmortems transform DevOps incidents into powerful learning and improvement opportunities, driving team resilience.<!--excerpt_end-->
 

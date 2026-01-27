@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 ayangupta explains how GitHub Copilot app modernization can automate and streamline upgrading Spring Framework 5 applications to 6.x. The article covers project analysis, automated transformations, security audits, and what developers need to check for a successful migration.<!--excerpt_end-->
 

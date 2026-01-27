@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/public-preview-refresh-announcement-site-manager/ba-p/4468929
 title: 'Azure Arc Site Manager Public Preview Refresh: Unified Management for Hybrid and Edge Environments'
 author: supriyobanerjee
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 supriyobanerjee announces the Azure Arc Site Manager Public Preview Refresh, detailing improved management, configuration, and security monitoring for hybrid and edge environments.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/azure-developer-cli-azure-container-apps-dev-to-prod-deployment-with-layered-infrastructure/
 title: 'Azure Developer CLI: Azure Container Apps Dev-to-Prod Deployment with Layered Infrastructure'
 author: PuiChee (PC) Chan
@@ -30,6 +30,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 PuiChee (PC) Chan shares a practical guide on using Azure Developer CLI v1.20.0 and Azure Container Apps to enable build-once, deploy-everywhere patterns with layered infrastructure and robust CI/CD pipelines.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=-6RoQm6Wwyo
 title: 'MS Ignite: SQL Server 2025, SQL Database in Fabric, and More Announced'
 author: Microsoft Developer
@@ -27,6 +27,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Presented by Microsoft Developer, this video covers all key SQL-related product announcements from Microsoft Ignite 2025, including SQL Server 2025 GA and SQL DB's integration with Microsoft Fabric.<!--excerpt_end-->
 

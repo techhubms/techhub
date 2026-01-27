@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-16-conda-ecosystem-support-for-dependabot-now-generally-available
 title: Dependabot Adds Support for Conda Environment Files
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison announces that Dependabot now supports Conda environment files, offering automated security and version updates for Conda-based Python projects and enhancing supply chain security on GitHub.<!--excerpt_end-->
 

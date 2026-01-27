@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/centralized-logging-in-azure-proven-observability-patterns-for-modern-apps/
 title: 'Centralized Logging in Azure: Proven Observability Patterns for Modern Apps'
 author: Dellenny
@@ -26,6 +26,7 @@ tags:
 - Stream Analytics
 section_names:
 - azure
+primary_section: azure
 ---
 Dellenny explores centralized logging strategies in Microsoft Azure, guiding readers through core architectures, key Azure observability services, and actionable best practices for achieving unified monitoring in distributed application environments.<!--excerpt_end-->
 

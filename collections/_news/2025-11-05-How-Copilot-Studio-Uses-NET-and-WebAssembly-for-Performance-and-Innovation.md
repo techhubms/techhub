@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/copilot-studio-dotnet-wasm/
 title: How Copilot Studio Uses .NET and WebAssembly for Performance and Innovation
 author: Daniel Roth
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Daniel Roth explores how Microsoft Copilot Studio utilizes .NET and WebAssembly to optimize the performance and scalability of conversational AI bots, highlighting significant platform enhancements for developers and organizations.<!--excerpt_end-->
 

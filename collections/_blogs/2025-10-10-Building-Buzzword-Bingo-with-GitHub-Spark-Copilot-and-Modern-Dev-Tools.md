@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://harrybin.de/posts/github-spark-buzzword-bingo/
 title: Building Buzzword Bingo with GitHub Spark, Copilot, and Modern Dev Tools
 author: Harald Binkle
@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Harald Binkle explores building a modern Buzzword Bingo app in 15 minutes using GitHub Spark’s AI-driven development tools, Copilot integration, and automated deployments, outlining real-world lessons for developers.<!--excerpt_end-->
 

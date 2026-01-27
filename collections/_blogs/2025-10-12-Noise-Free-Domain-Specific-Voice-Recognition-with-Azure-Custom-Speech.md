@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/when-words-matter-noise-free-domain-specific-voice-recognition-with-azure-custom-speech/
 title: Noise-Free, Domain-Specific Voice Recognition with Azure Custom Speech
 author: Dellenny
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Dellenny details how Azure Custom Speech enables developers to build noise-resilient, domain-specific speech recognition solutions, focusing on customization for real-world environments and technical vocabularies.<!--excerpt_end-->
 

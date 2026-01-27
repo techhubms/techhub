@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/azure-devops-to-github-migration-playbook-unlocking-agentic-devops/
 title: 'Azure DevOps to GitHub Migration Playbook: A Step-by-Step Guide for Agentic DevOps'
 author: Philippe Didiergeorges
@@ -30,6 +30,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Philippe Didiergeorges delivers a thorough migration playbook for moving from Azure DevOps to GitHub, demonstrating how to combine both platforms while unlocking AI-driven developer productivity with GitHub Copilot.<!--excerpt_end-->
 

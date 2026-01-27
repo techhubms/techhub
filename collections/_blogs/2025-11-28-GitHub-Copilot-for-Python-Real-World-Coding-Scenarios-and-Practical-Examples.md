@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/github-copilot-for-python-real-world-coding-scenarios-practical-examples/
 title: 'GitHub Copilot for Python: Real-World Coding Scenarios and Practical Examples'
 author: John Edward
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 John Edward demonstrates practical ways GitHub Copilot enhances Python development, from automating repetitive tasks to improving testing, debugging, and onboarding. The article delivers real-world coding examples for developers interested in AI-assisted workflows.<!--excerpt_end-->
 

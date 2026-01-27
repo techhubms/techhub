@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=BsVzhAT-1YQ
 title: Best Practices for Migration and Security with Azure VMware Solution
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Events hosts a Microsoft Ignite session offering essential best practices for securely migrating VMware workloads to Azure using Azure VMware Solution, with live demos and case studies.<!--excerpt_end-->
 

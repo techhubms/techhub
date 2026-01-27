@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/applying-devops-principles-on-lean-infrastructure-lessons-from/m-p/4476015#M22362
 title: 'Applying DevOps Principles on Lean Infrastructure: Lessons from Scaling to 102,000 Users and Planning Azure Migration'
 author: onoja5
@@ -28,6 +28,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 onoja5, a Microsoft Certified DevOps Engineer, shares insights from scaling a social commerce platform to over 100K users on VPS, detailing DevOps tactics and planning a multi-phase Azure migration while seeking advice from the Azure community.<!--excerpt_end-->
 

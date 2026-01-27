@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mk7faj/non_printable_space/
 title: Overlaying Strings in C# Console Applications Without Clearing Characters
 author: 06Hexagram
@@ -21,6 +21,7 @@ tags:
 - System.Console
 section_names:
 - coding
+primary_section: coding
 ---
 06Hexagram initiates a discussion about overlaying strings in C# console apps without overwriting non-space characters, with community members contributing practical solutions.<!--excerpt_end-->
 

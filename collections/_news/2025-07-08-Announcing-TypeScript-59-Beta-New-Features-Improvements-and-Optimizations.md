@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-9-beta/
 title: 'Announcing TypeScript 5.9 Beta: New Features, Improvements, and Optimizations'
 author: Daniel Rosenwasser
@@ -21,6 +21,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, Daniel Rosenwasser introduces TypeScript 5.9 Beta, highlighting important compiler and tooling updates. Developers are invited to try out new features and contribute feedback as TypeScript continues to evolve.<!--excerpt_end-->
 

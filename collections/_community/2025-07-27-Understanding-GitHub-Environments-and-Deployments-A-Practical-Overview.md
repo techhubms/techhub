@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/github/comments/1madm8p/i_finally_understand_what_are_github_environments/
 title: 'Understanding GitHub Environments and Deployments: A Practical Overview'
 author: NatoBoram
@@ -18,6 +18,7 @@ tags:
 - Workflow
 section_names:
 - devops
+primary_section: devops
 ---
 In this article, NatoBoram demystifies GitHub Environments and Deployments, describing what they are, how they work, and practical ways developers can use them for organizing secrets and deployment workflows.<!--excerpt_end-->
 

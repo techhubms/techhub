@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-10-rc-1/
 title: Announcing .NET 10 Release Candidate 1
 author: .NET Team
@@ -29,6 +29,7 @@ tags:
 - Windows Forms
 section_names:
 - coding
+primary_section: coding
 ---
 .NET Team presents the first release candidate of .NET 10, with new features and improvements for libraries, ASP.NET Core, Blazor, .NET MAUI, and more. Learn what's new for developers in this broad platform update.<!--excerpt_end-->
 

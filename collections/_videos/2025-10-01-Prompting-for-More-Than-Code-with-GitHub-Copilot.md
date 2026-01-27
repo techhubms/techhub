@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=9g8tJvCnWz4
 title: Prompting for More Than Code with GitHub Copilot
 author: Visual Studio Code
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code's Matt Soucoup showcases creative prompt-driven development using GitHub Copilot, illustrating new ways developers can build and iterate with AI beyond traditional code generation.<!--excerpt_end-->
 

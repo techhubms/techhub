@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=wurJ2LKmDs4
 title: 'Azure Service Groups: Flexible Resource Organization Explained'
 author: John Savill's Technical Training
@@ -25,6 +25,7 @@ tags:
 - Subscription
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill introduces Azure Service Groups, detailing how this new feature enables more adaptable and hierarchical resource organization in Azure, with deep dives into setup, permissions, and practical uses.<!--excerpt_end-->
 

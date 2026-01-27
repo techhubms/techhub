@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/streamlining-data-management-with-collation-settings-in-microsoft-fabric-warehouse-sql-analytics-endpoint/
 title: 'Streamlining Data Management: New Collation Settings in Microsoft Fabric Warehouse and SQL Endpoint'
 author: Microsoft Fabric Blog
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Authored by the Microsoft Fabric Blog, this article explores the upcoming enhancements to collation settings in Microsoft Fabric Warehouse and SQL Endpoint, offering practical insights into new configuration options and future capabilities.<!--excerpt_end-->
 

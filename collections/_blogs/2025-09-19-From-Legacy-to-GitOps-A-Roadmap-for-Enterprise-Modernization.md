@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/from-legacy-to-gitops-a-roadmap-for-enterprise-modernization/
 title: 'From Legacy to GitOps: A Roadmap for Enterprise Modernization'
 author: Ekambar Kumar Singirikonda
@@ -38,6 +38,7 @@ tags:
 - Terraform
 section_names:
 - devops
+primary_section: devops
 ---
 Ekambar Kumar Singirikonda provides a comprehensive roadmap for enterprises aiming to modernize legacy infrastructure using GitOps. The article covers essential phases, automation, governance, and technical best practices to support a successful GitOps transformation.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/june-patches-for-azure-devops-server-4/
 title: 'June Patches Released for Azure DevOps Server 2022.2: Improvements & Important Updates'
 author: Gloridel Morales
@@ -20,6 +20,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Gloridel Morales announces the June patches for Azure DevOps Server 2022.2, highlighting Test Plans enhancements and addressing an ongoing issue with Patch 6, along with installation recommendations and verification steps.<!--excerpt_end-->
 

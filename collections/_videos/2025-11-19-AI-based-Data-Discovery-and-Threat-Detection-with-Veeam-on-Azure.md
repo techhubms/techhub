@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=L8a_bbrVnqQ
 title: AI-based Data Discovery and Threat Detection with Veeam on Azure
 author: Microsoft Events
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events demonstrates how Veeam Data Cloud for Microsoft 365 leverages Azure and Azure AI for advanced threat detection and data intelligence, featuring live demos and practical scenarios for security teams.<!--excerpt_end-->
 

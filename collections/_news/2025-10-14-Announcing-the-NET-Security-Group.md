@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/announcing-dotnet-security-group/
 title: Announcing the .NET Security Group
 author: Jamshed Damkewala
@@ -29,6 +29,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 Jamshed Damkewala details the launch of the .NET Security Group, where organizations can work directly with Microsoft to distribute .NET security patches and receive early CVE information.<!--excerpt_end-->
 

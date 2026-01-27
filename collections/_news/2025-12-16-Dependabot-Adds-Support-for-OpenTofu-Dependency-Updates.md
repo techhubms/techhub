@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-opentofu
 title: Dependabot Adds Support for OpenTofu Dependency Updates
 author: Allison
@@ -17,6 +17,7 @@ tags:
 - Version Updates
 section_names:
 - devops
+primary_section: devops
 ---
 Allison highlights the new capability for Dependabot to automatically update OpenTofu dependencies, enabling developers to maintain secure and up-to-date project environments.<!--excerpt_end-->
 

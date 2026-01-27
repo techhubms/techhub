@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/logic-apps-aviators-newsletter-december-2025/ba-p/4474048
 title: Logic Apps Aviators Newsletter - December 2025
 author: WSilveira
@@ -32,6 +32,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 WSilveira assembles technical updates and community insights in the December 2025 Logic Apps Aviators Newsletter, with real-world guidance from architects and integration experts.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mcbkb8/forcing_cot_to_nonthinking_models_within_an_ai/
 title: Forcing Chain-of-Thought to Non-Thinking Models in AI IDEs like VS Code & Copilot
 author: Cobuter_Man
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Authored by Cobuter_Man, this article details a strategy for enhancing planning and brainstorming workflows in AI IDEs like VS Code with Copilot by applying Chain-of-Thought techniques to non-thinking models using the APM Agent Mode.<!--excerpt_end-->
 

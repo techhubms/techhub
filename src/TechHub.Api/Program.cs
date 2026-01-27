@@ -3,7 +3,6 @@ using TechHub.Api.Middleware;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Logging;
-using TechHub.Core.Services;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
 using TechHub.ServiceDefaults;
@@ -74,7 +73,6 @@ builder.Services.AddSingleton<IMarkdownService, MarkdownService>();
 builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepository>();
 builder.Services.AddTransient<IContentRepository, FileBasedContentRepository>();
 builder.Services.AddSingleton<IRssService, RssService>();
-builder.Services.AddSingleton<ISectionMappingService, SectionMappingService>();
 
 // Register filtering services
 builder.Services.AddSingleton<ITagCloudService, TagCloudService>();

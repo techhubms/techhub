@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-01-graphql-api-resource-limits
 title: GitHub GraphQL API Resource Limits Introduced
 author: Allison
@@ -17,6 +17,7 @@ tags:
 - Rate Limiting
 section_names:
 - devops
+primary_section: devops
 ---
 Allison details GitHub's introduction of execution resource limits in the GraphQL API, highlighting implications for developer integrations and guidance on avoiding new query restrictions.<!--excerpt_end-->
 

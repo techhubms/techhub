@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 08
 date: 2019-05-01 00:00:00 +00:00
 author: Xebia
@@ -23,6 +23,7 @@ section_names:
 - ml
 - ai
 - coding
+primary_section: ai
 ---
 XPRT Magazine 08 explores chaos engineering, DevOps for data science, enabling DevOps teams for Azure, serverless and Kubernetes, event sourcing, Xamarin Forms, resilient Azure Service Bus, and more. This issue provides practical strategies and technical insights for building robust, scalable, and innovative solutions.
 <!--excerpt_end-->

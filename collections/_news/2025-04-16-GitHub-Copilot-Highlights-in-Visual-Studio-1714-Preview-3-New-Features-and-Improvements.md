@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/github-copilot-highlights-in-visual-studio-17-14-preview-3-available-now/
 title: 'GitHub Copilot Highlights in Visual Studio 17.14 Preview 3: New Features and Improvements'
 author: Katie Savage
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Katie Savage outlines the new GitHub Copilot features in Visual Studio 17.14 Preview 3, providing developers with a detailed look at recent advancements in AI integration and coding assistance.<!--excerpt_end-->
 

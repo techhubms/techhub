@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/multi-region-expansion-for-azure-deployments/
 title: Multi-region Expansion Strategies for Azure Deployments in Financial Services
 author: Julian Tanushi
@@ -24,6 +24,7 @@ tags:
 - Thought Leadership
 section_names:
 - azure
+primary_section: azure
 ---
 Julian Tanushi outlines the strategic and technical considerations for financial services organizations expanding Azure workloads across multiple regions, emphasizing resiliency, compliance, cost efficiency, and future-proofing deployments.<!--excerpt_end-->
 

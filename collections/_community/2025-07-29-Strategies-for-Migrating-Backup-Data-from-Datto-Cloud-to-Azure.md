@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mccydp/moving_backup_data_from_datto_cloud_to_azure/
 title: Strategies for Migrating Backup Data from Datto Cloud to Azure
 author: Armlessbastard
@@ -16,6 +16,7 @@ tags:
 - VHDX Compatibility
 section_names:
 - azure
+primary_section: azure
 ---
 Armlessbastard outlines the challenges and considerations in moving backup data from Datto cloud or on-prem devices to Azure, seeking community advice and sharing preliminary solutions.<!--excerpt_end-->
 

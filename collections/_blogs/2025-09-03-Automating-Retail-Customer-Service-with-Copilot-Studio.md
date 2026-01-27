@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-retail-businesses-are-automating-customer-service-with-copilot-studio/
 title: Automating Retail Customer Service with Copilot Studio
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 - Returns Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny examines how Copilot Studio streamlines customer service in retail, providing detailed technical workflows and reviewing real business outcomes from automated order support to inventory checks.<!--excerpt_end-->
 

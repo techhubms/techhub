@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/how-data-empathy-and-visibility-are-redefining-devops-maturity/
 title: How Data, Empathy and Visibility Are Redefining DevOps Maturity
 author: Alan Shimel
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Alan Shimel summarizes Amy Carrillo Cotten’s perspective on how data, empathy, automation, and AI are shaping the future of DevOps, with a focus on people, processes, and effective collaboration.<!--excerpt_end-->
 

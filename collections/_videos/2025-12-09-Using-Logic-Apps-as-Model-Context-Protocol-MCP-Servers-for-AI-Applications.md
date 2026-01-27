@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=9z7x0u99J9s
 title: Using Logic Apps as Model Context Protocol (MCP) Servers for AI Applications
 author: John Savill's Technical Training
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 John Savill's Technical Training presents a step-by-step guide on using Azure Logic Apps as Model Context Protocol (MCP) servers for AI applications, highlighting actionable setup and integration strategies.<!--excerpt_end-->
 

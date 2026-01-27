@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/devops/comments/1mk0s1l/how_much_of_your_job_involves_administering_tools/
 title: DevOps Engineers and the Reality of Tool and User Management in SaaS-Heavy Orgs
 author: Coffeebrain695
@@ -21,6 +21,7 @@ tags:
 - Workload Management
 section_names:
 - devops
+primary_section: devops
 ---
 Coffeebrain695 and other community members share real-world experiences of DevOps engineers handling SaaS user management and tool administration due to shifting team roles.<!--excerpt_end-->
 

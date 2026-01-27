@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/generative-ai/spec-driven-development-using-markdown-as-a-programming-language-when-building-with-ai/
 title: 'Spec-driven Development with Markdown and GitHub Copilot: An Experimental AI Coding Workflow'
 author: Tomas Vesely
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Tomas Vesely introduces a practical workflow where GitHub Copilot compiles app logic directly from Markdown specifications, illustrating the approach using a Go-based CLI project. Learn how this spec-driven method synchronizes documentation and code.<!--excerpt_end-->
 

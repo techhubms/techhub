@@ -1,5 +1,5 @@
 @page "/ai/sdlc"
-@using TechHub.Core.DTOs
+@using TechHub.Core.Models
 @using TechHub.Web.Services
 @rendermode InteractiveServer
 
@@ -239,7 +239,7 @@
 }
 
 @code {
-    private SectionDto? sectionData;
+    private TechHub.Core.Models.Section? sectionData;
     private SDLCPageData? pageData;
     private HashSet<int> expandedPhases = new(); // No phases expanded by default
 

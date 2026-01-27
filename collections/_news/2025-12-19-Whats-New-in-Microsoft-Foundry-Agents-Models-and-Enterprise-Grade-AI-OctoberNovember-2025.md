@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-oct-nov-2025/
 title: "What's New in Microsoft Foundry: Agents, Models, and Enterprise-Grade AI (October–November 2025)"
 author: Jenn Cockrell
@@ -34,6 +34,7 @@ section_names:
 - coding
 - ml
 - security
+primary_section: ai
 ---
 Jenn Cockrell outlines the latest Microsoft Foundry enhancements, introducing powerful agent frameworks, model support, developer tools, and enterprise security features—all designed to accelerate AI innovation in the enterprise.<!--excerpt_end-->
 

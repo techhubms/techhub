@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2026-01-14-gpt-5-2-codex-is-now-generally-available-in-github-copilot
 title: GPT-5.2-Codex Now Available in GitHub Copilot
 author: Allison
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison reports on the general availability of GPT-5.2-Codex in GitHub Copilot, explaining supported plans, model selection steps, and access instructions for developers and organizations.<!--excerpt_end-->
 

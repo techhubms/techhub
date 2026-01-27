@@ -1,4 +1,4 @@
----
+﻿---
 title: XPRT Magazine 15
 date: 2023-10-01 00:00:00 +00:00
 author: Xebia
@@ -23,6 +23,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 Xpirit Magazine 15 brings together international voices to share knowledge on AI-driven content creation, sustainable software engineering, DevOps journeys, cloud security, value stream mapping, and more. This issue features hands-on guides, real-world stories, and technical deep-dives for modern software professionals.
 <!--excerpt_end-->

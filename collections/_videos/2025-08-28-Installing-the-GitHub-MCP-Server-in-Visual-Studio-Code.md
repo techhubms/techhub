@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/_NnAGjBc64Y
 title: Installing the GitHub MCP Server in Visual Studio Code
 author: Visual Studio Code
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code presents a guide to installing the GitHub MCP Server in VS Code, highlighting agent mode and workflows to enhance developer productivity with GitHub Copilot.<!--excerpt_end-->
 

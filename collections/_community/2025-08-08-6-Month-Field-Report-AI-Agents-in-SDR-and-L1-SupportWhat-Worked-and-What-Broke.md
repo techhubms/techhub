@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AI_Agents/comments/1mktrgm/from_hype_to_headcount_6month_field_report_ai/
 title: '6-Month Field Report: AI Agents in SDR & L1 Support—What Worked and What Broke'
 author: Wednesday_Inu
@@ -27,6 +27,7 @@ tags:
 - Twilio
 section_names:
 - ai
+primary_section: ai
 ---
 In this community report, Wednesday_Inu shares practical insights from six months deploying AI agents for sales and L1 support, highlighting key technology choices, business outcomes, and guardrails for reliability.<!--excerpt_end-->
 

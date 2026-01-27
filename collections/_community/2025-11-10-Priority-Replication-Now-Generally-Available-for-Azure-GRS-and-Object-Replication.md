@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/priority-replication-for-geo-redundant-storage-and-object/ba-p/4468607
 title: Priority Replication Now Generally Available for Azure GRS and Object Replication
 author: imanihall
@@ -20,6 +20,7 @@ tags:
 - SLA
 section_names:
 - azure
+primary_section: azure
 ---
 imanihall announces general availability of priority replication for Azure GRS and Object Replication, detailing SLA guarantees and new monitoring tools for accelerated and reliable cross-region replication.<!--excerpt_end-->
 

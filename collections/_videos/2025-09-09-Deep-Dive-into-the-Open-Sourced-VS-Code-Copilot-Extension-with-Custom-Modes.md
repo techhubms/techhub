@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/5Ffbk_hJWWI
 title: Deep Dive into the Open-Sourced VS Code Copilot Extension with Custom Modes
 author: Microsoft Developer
@@ -29,6 +29,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer, joined by Burke Holland, explains the features of the newly open-sourced VS Code Copilot Extension, exploring Custom Modes, Beast Mode, and ways to optimize your AI-powered coding workflows.<!--excerpt_end-->
 

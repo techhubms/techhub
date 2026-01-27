@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-27-copilot-code-review-generally-available-in-xcode-and-new-admin-control
 title: 'Copilot Code Review: Now Available in Xcode and Enterprise Admin Controls'
 author: Allison
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison reports on the general release of Copilot code review in Xcode and the introduction of new enterprise and organization-level controls, giving admins more direct management of the Copilot review experience.<!--excerpt_end-->
 

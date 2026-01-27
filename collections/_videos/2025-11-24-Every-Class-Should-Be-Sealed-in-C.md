@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=u79quQu4t_s
 title: Every Class Should Be Sealed in C#
 author: Nick Chapsas
@@ -18,6 +18,7 @@ tags:
 - Software Engineering
 section_names:
 - coding
+primary_section: coding
 ---
 Nick Chapsas explains the rationale behind sealing every class in C#, covering benefits, potential drawbacks, and its impact on code safety and maintainability.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=97BHmGoj0aE
 title: AI-powered Defense Strategies for Cloud Workloads with Microsoft Defender
 author: Microsoft Events
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events, with Parul Seth and Michael Withrow, presents an advanced session on using Microsoft Defender for Cloud and AI to detect and mitigate real-world cyberattacks in the cloud.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-events/your-guide-to-azure-community-activations-at-microsoft-ignite/ba-p/4455501
 title: Azure Community Highlights at Microsoft Ignite 2025
 author: GalimahB
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 GalimahB presents a detailed introduction to Azure-focused community activations at Microsoft Ignite 2025, highlighting sessions and opportunities for learning in infrastructure, AI, and data.<!--excerpt_end-->
 

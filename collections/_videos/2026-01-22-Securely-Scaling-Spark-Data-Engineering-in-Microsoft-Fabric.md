@@ -29,6 +29,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 In this Data Exposed episode, Anna Hoffman and Santhosh Kumar Ravindran show how data engineers can secure and scale Spark workloads in Microsoft Fabric, harnessing features like Managed Private Endpoints and the Native Execution Engine.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/signal/articles/can-ai-learn-the-language-of-biology-to-reimagine-medicine/
 title: How Microsoft Research Is Using AI to Decode the Language of Biology
 author: stclarke
@@ -22,6 +22,7 @@ tags:
 - Protein Design
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke shares insights from Ava Amini and Microsoft Research on applying AI to interpret biological data, with breakthroughs in protein design and challenges in achieving fully personalized medicine.<!--excerpt_end-->
 

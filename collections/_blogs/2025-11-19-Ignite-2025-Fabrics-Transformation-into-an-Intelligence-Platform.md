@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://zure.com/blog/ignite-2025-fabrics-evolution-from-data-platform-to-intelligence-platform
 title: 'Ignite 2025: Fabric’s Transformation into an Intelligence Platform'
 author: markus.lehtola@zure.com (Markus Lehtola)
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Markus Lehtola reviews key Microsoft Ignite 2025 updates, detailing Fabric’s shift to an intelligence platform and what it means for data and AI teams leveraging Microsoft’s cloud ecosystem.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/unable-to-revert-azure-devops-user-access-level/m-p/4442871#M22102
 title: Persistent Visual Studio Enterprise Access Level in Azure DevOps After License Removal
 author: dbenson
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 dbenson details an issue with Azure DevOps not updating a user's access level from Visual Studio Enterprise to Stakeholder after subscription removal, involving on-premises AD and Entra ID synchronization.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/announcing-the-public-preview-of-amlfs-20-azure-managed-lustre/ba-p/4470665
 title: 'Announcing Public Preview of AMLFS 20: New Azure Managed Lustre SKU for AI and HPC'
 author: wolfgangdesalvador
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Wolfgang De Salvador and the Azure Managed Lustre team announce AMLFS 20, offering massive scale, advanced metadata performance, and simplified management for AI and HPC workloads in Azure.<!--excerpt_end-->
 

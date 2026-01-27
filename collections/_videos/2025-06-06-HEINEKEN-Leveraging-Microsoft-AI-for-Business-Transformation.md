@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Vo647KQyMus
 title: 'HEINEKEN: Leveraging Microsoft AI for Business Transformation'
 author: Microsoft Cloud
@@ -20,6 +20,7 @@ tags:
 - Microsoft Cloud
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Cloud shares insights from Ronald den Elzen of HEINEKEN on how the company is using Microsoft AI to drive digital transformation and business growth.<!--excerpt_end-->
 

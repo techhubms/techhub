@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/exploring-dotnet-10-preview-features-1-exploring-the-dotnet-run-app.cs/
 title: Exploring Single-File .NET Apps with dotnet run app.cs in .NET 10 Preview
 author: Andrew Lock
@@ -22,6 +22,7 @@ tags:
 - VS Code
 section_names:
 - coding
+primary_section: coding
 ---
 Andrew Lock introduces and examines the new single-file .NET run experience in .NET 10, highlighting its features, scenarios, and emerging enhancements that simplify C# development.<!--excerpt_end-->
 

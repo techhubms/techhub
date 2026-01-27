@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/debugging-and-testing-your-copilot-studio-bots-efficiently/
 title: Debugging and Testing Your Copilot Studio Bots Efficiently
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 - Workflow
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny walks through practical strategies and best practices for efficiently debugging and testing bots built with Copilot Studio, offering valuable advice for conversational AI developers.<!--excerpt_end-->
 

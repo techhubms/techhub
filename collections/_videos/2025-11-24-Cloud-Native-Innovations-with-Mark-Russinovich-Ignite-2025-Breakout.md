@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=-xcNd5ZU0Z8
 title: 'Cloud Native Innovations with Mark Russinovich: Ignite 2025 Breakout'
 author: Microsoft Events
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: coding
 ---
 Microsoft Events features Mark Russinovich discussing core Azure innovations in cloud native computing, containers, security, and multi-cloud solutions as presented at Ignite 2025.<!--excerpt_end-->
 

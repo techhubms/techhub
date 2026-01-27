@@ -148,14 +148,14 @@ public class ContentDetailTests(PlaywrightCollectionFixture fixture) : IAsyncLif
 
         // Assert - URL should NOT contain date prefix pattern (YYYY-MM-DD-)
         Page.Url.Should().Contain("/videos/", "URL should include collection name");
-        
+
         // Extract slug from URL (everything after /videos/)
         var urlPattern = new Regex(@"/videos/([^/?#]+)");
         var match = urlPattern.Match(Page.Url);
         match.Success.Should().BeTrue("URL should match /videos/{slug} pattern");
-        
+
         var slug = match.Groups[1].Value;
-        slug.Should().NotMatchRegex(@"^\d{4}-\d{2}-\d{2}-", 
+        slug.Should().NotMatchRegex(@"^\d{4}-\d{2}-\d{2}-",
             "video URL slug should NOT start with date prefix (YYYY-MM-DD-)");
     }
 
@@ -168,16 +168,13 @@ public class ContentDetailTests(PlaywrightCollectionFixture fixture) : IAsyncLif
 
         // Act & Assert - Should get 404 or redirect behavior
         var response = await Page.GotoAsync($"{BaseUrl}{oldFormatUrl}");
-        
+
         // Either 404 status code or redirected away from the old URL pattern
-        if (response != null)
-        {
-            // If we get a response, it should be 404
-            response.Status.Should().Be(404, "old date-prefixed URLs should return 404");
-        }
-        
+        // If we get a response, it should be 404
+        response?.Status.Should().Be(404, "old date-prefixed URLs should return 404");
+
         // Or we should be redirected to a different page (not the old format)
-        Page.Url.Should().NotContain("/2026-01-12-", 
+        Page.Url.Should().NotContain("/2026-01-12-",
             "should not remain on old date-prefixed URL");
     }
 }

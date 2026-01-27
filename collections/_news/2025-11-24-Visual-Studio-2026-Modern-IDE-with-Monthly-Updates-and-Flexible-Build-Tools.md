@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-built-for-the-speed-of-modern-development/
 title: 'Visual Studio 2026: Modern IDE with Monthly Updates and Flexible Build Tools'
 author: Paul Chapman
@@ -30,6 +30,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Paul Chapman announces Visual Studio 2026, which introduces monthly updates, greater build tool flexibility, Modern Support Lifecycle adoption, and always up-to-date GitHub Copilot integration for developers.<!--excerpt_end-->
 

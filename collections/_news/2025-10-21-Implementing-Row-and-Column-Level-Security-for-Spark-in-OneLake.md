@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/how-spark-supports-onelake-security-with-row-and-column-level-security-policies/
 title: Implementing Row and Column Level Security for Spark in OneLake
 author: Microsoft Fabric Blog
@@ -24,6 +24,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog's team introduces new Row and Column Level Security for Spark in OneLake, explaining technical implementation and how these policies protect data access. Authored by the Microsoft Fabric Blog.<!--excerpt_end-->
 

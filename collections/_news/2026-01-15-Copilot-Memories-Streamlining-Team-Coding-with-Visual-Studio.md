@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/copilot-memories/
 title: 'Copilot Memories: Streamlining Team Coding with Visual Studio'
 author: Jessie Houghton
@@ -19,6 +19,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Jessie Houghton introduces Copilot Memories, a new feature for Visual Studio users that automates capturing, sharing, and maintaining coding standards and preferences for development teams.<!--excerpt_end-->
 

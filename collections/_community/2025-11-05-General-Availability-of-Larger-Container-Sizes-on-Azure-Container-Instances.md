@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-of-larger-container-sizes-on/ba-p/4463863
 title: General Availability of Larger Container Sizes on Azure Container Instances
 author: tysonfreeman
@@ -24,6 +24,7 @@ tags:
 - Virtual Networks
 section_names:
 - azure
+primary_section: azure
 ---
 tysonfreeman details the launch of larger container sizes on Azure Container Instances, explaining benefits like enhanced scalability, advanced workloads support, and how to deploy bigger containers using various Azure tools.<!--excerpt_end-->
 

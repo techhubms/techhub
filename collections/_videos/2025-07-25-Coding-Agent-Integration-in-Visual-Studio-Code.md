@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=xGYHPN5NNd0
 title: Coding Agent Integration in Visual Studio Code
 author: Visual Studio Code
@@ -20,6 +20,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code's team presents a walkthrough on integrating GitHub Copilot's coding agent within VS Code, showing developers how to delegate tasks and streamline workflows using AI-powered features.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/september-2025-fabric-feature-summary/
 title: 'Microsoft Fabric September 2025 Feature Summary: Data, AI, Engineering and Governance Enhancements'
 author: Microsoft Fabric Blog
@@ -40,6 +40,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 Compiled by the Microsoft Fabric Blog team, this detailed feature summary explores September 2025 advancements, including new AI, ML, security, and developer capabilities to empower data professionals.<!--excerpt_end-->
 

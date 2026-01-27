@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-08-defense-of-third-party-claims-added-for-volume-licensing-customers
 title: Indemnity and Liability Updates for GitHub Enterprise Pre-release Software
 author: Allison
@@ -17,6 +17,7 @@ tags:
 - Volume Licensing
 section_names:
 - devops
+primary_section: devops
 ---
 Allison explains recent changes to GitHub's pre-release license terms, highlighting added indemnity and changes to liability for enterprise volume licensing customers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=UhZE9sb-Odg
 title: Azure Update - 5th September 2025
 author: John Savill's Technical Training
@@ -26,6 +26,7 @@ tags:
 - MySQL Maintenance
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill delivers a weekly summary of recent Azure changes and announcements, offering technical insight into service updates, new features, and platform retirements.<!--excerpt_end-->
 

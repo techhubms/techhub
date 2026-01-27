@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/designing-multi-agent-intelligence
 title: 'Designing Multi-Agent Intelligence: Microsoft Reference Architecture and Enterprise Case Studies'
 author: Vinicius Souza, Maggie Liu, Thiago Rotta
@@ -31,6 +31,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Vinicius Souza, Maggie Liu, Thiago Rotta, and others from Microsoft AI Co-Innovation Labs present a detailed blueprint for enterprise-ready, multi-agent AI systems running on Azure. The article includes reference architectures, engineering guidelines, and real-world case studies.<!--excerpt_end-->
 

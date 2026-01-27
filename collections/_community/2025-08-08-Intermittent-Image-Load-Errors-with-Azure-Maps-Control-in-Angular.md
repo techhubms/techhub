@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-maps/could-not-load-image-because-of-out-of-range-source-coordinates/m-p/4441495#M153
 title: Intermittent Image Load Errors with Azure Maps Control in Angular
 author: JeroenBooij
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 JeroenBooij highlights an intermittent error encountered when initializing Azure Maps Control in an Angular application. This discussion offers firsthand insights into troubleshooting and handling SDK image loading issues.<!--excerpt_end-->
 

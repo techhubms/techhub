@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-17-share-read-only-sparks-with-controlled-data-access
 title: Share Read-Only Sparks with Controlled Data Access
 author: Allison
@@ -20,6 +20,7 @@ tags:
 - Workflow Improvements
 section_names:
 - devops
+primary_section: devops
 ---
 Allison details the new read-only sharing feature for Sparks on GitHub, offering developers greater data control and outlining related workflow improvements.<!--excerpt_end-->
 

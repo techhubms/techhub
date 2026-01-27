@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://zure.com/blog/microsoft-ignite-2024-key-updates-for-fabric/
 title: 'Microsoft Ignite 2024: Key Updates and Insights from the Microsoft Fabric Perspective'
 author: Samu Niemelä
@@ -23,6 +23,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 In this article, Samu Niemelä highlights the most significant Microsoft Fabric announcements from Ignite 2024, providing detailed insights for data and AI practitioners.<!--excerpt_end-->
 

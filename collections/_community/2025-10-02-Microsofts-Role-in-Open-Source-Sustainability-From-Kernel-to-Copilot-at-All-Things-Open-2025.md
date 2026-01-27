@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/the-open-source-paradox-how-microsoft-is-giving-back/ba-p/4458630
 title: "Microsoft's Role in Open-Source Sustainability: From Kernel to Copilot at All Things Open 2025"
 author: LachlanEvenson
@@ -28,6 +28,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Lachlan Evenson outlines Microsoft's recent strategies, tools, and community efforts in open-source at All Things Open 2025, focusing on contributions, sustainability, and cloud/AI-powered developer tools.<!--excerpt_end-->
 

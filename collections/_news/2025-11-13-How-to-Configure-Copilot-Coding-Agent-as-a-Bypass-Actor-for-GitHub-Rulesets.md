@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-13-configure-copilot-coding-agent-as-a-bypass-actor-for-rulesets
 title: How to Configure Copilot Coding Agent as a Bypass Actor for GitHub Rulesets
 author: Allison
@@ -23,6 +23,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison provides an overview of configuring the Copilot coding agent as a bypass actor in GitHub repository rulesets, detailing how this enables Copilot to operate in environments with strict commit rules while maintaining governance for human contributors.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-28-upcoming-deprecation-of-codeql-action-v3
 title: Upcoming Deprecation of CodeQL Action v3
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison announces the upcoming deprecation of CodeQL Action v3, detailing the introduction of v4 on Node.js 24 and explaining workflow update requirements for security and DevOps teams using GitHub Actions.<!--excerpt_end-->
 

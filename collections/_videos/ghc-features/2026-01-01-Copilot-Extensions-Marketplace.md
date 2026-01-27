@@ -1,4 +1,4 @@
----
+﻿---
 external_url: ''
 title: Copilot Extensions Marketplace
 author: TBD
@@ -12,6 +12,7 @@ tags: []
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 This content demonstrates GitHub Copilot's Copilot Extensions Marketplace feature. Install third-party extensions that extend Copilot's capabilities<!--excerpt_end-->
 

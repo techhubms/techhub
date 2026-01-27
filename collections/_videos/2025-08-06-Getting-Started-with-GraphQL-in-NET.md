@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=YL07NyBXC7M
 title: Getting Started with GraphQL in .NET
 author: Nick Chapsas
@@ -18,6 +18,7 @@ tags:
 - Nick Chapsas
 section_names:
 - coding
+primary_section: coding
 ---
 Nick Chapsas introduces Michael Staib as he demonstrates how to create GraphQL APIs in .NET using the HotChocolate library, helping developers start working with GraphQL in a Microsoft ecosystem.<!--excerpt_end-->
 

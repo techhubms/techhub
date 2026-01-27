@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=3Ui1Ol9lXmk
 title: Brillio's Agentic Data and Application Management Platform at Microsoft Ignite 2025
 author: Microsoft Events
@@ -22,6 +22,7 @@ tags:
 - Self Learning Systems
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events features Muthumari S presenting an overview of Brillio’s ADAM platform at Ignite 2025, focusing on advanced agentic AI solutions and operational management in enterprise contexts.<!--excerpt_end-->
 

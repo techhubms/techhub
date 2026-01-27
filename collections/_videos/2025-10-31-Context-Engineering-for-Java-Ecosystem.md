@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=kSElHY8MWwc
 title: Context Engineering for Java Ecosystem
 author: Microsoft Developer
@@ -31,6 +31,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer, featuring Ayan Gupta and Bruno Borges, showcases advanced context engineering techniques in Java using GitHub Copilot and Visual Studio Code to streamline developer workflows and AI interactions.<!--excerpt_end-->
 

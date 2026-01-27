@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-monitoring-coverage-assess-and-improve-your/ba-p/4470752
 title: 'Introducing Monitoring Coverage: Centralized Monitoring Enhancement in Azure Monitor'
 author: Nathan_Mangum
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Nathan Mangum details the preview release of Monitoring Coverage in Azure Monitor, outlining how organizations can assess and enhance monitoring across Azure resources using a unified, scalable approach.<!--excerpt_end-->
 

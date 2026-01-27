@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=8An3LobkPxI
 title: Advancing Mainframe Modernization with Slingshot and Microsoft Azure
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a session highlighting how Thanumoorthy Sundaresan and John Weston leveraged AI, Sapient Slingshot, and Azure to transform legacy mainframe systems for a US health company.<!--excerpt_end-->
 

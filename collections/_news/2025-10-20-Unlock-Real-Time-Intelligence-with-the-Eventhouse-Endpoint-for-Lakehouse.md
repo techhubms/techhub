@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/unlock-real-time-intelligence-with-the-eventhouse-endpoint-for-lakehouse/
 title: Unlock Real-Time Intelligence with the Eventhouse Endpoint for Lakehouse
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog highlights how the Eventhouse Endpoint brings real-time analytics and high-performance querying to Lakehouse tables, giving users instant insights and seamless analytics integration.<!--excerpt_end-->
 

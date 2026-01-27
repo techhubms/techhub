@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_95
 title: "What's New in Visual Studio Code October 2024 (v1.95): Copilot, Extensions & Productivity"
 author: Visual Studio Code Team
@@ -28,6 +28,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 The Visual Studio Code Team unveils version 1.95, packed with Copilot improvements, AI-driven code review, extension APIs for LLMs, productivity upgrades, Python tools, and new ways to collaborate through open source contributions.<!--excerpt_end-->
 

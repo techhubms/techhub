@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/spark-connector-for-sql-databases-preview/
 title: Fabric Spark Connector for SQL Databases Now Available (Preview)
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details the new Fabric Spark connector for SQL databases, explaining how Spark developers and data scientists can natively access and secure data across multiple Microsoft SQL platforms.<!--excerpt_end-->
 

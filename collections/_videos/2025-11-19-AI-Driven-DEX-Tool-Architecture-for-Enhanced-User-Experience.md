@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=sjowc3bdWdA
 title: AI-Driven DEX Tool Architecture for Enhanced User Experience
 author: Microsoft Events
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 In this Microsoft Ignite 2025 session, Microsoft Events present an overview of how TeamViewer's DEX tool leverages AI-driven architecture, distributed data, and advanced automation for better security and user experience.<!--excerpt_end-->
 

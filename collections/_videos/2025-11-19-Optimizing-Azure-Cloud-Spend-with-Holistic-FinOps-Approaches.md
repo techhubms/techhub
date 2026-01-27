@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fJ1qVlwfp1I
 title: Optimizing Azure Cloud Spend with Holistic FinOps Approaches
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Alexander Gahrmann presents a Microsoft Ignite session illustrating Finout’s unified management of cloud cost for Azure environments, including cost allocation, anomaly detection, and best practices for team efficiency.<!--excerpt_end-->
 

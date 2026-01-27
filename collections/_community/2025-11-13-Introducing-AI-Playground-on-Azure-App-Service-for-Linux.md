@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-ai-playground-on-azure-app-service-for-linux/ba-p/4469497
 title: Introducing AI Playground on Azure App Service for Linux
 author: TulikaC
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 TulikaC introduces AI Playground for Azure App Service on Linux, a built-in tool that lets developers test prompt interactions with Small Language Models, measure performance, and easily grab code samples for integration.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/extending-point-in-time-retention-in-fabric-sql-db-from-7-to-35-days/
 title: 'Extending Point-in-Time Retention in Fabric SQL DB: From 7 to 35 Days'
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 The Microsoft Fabric Blog team details the extension of point-in-time restore retention in Fabric SQL DB from 7 to 35 days, providing step-by-step guidance for database administrators to strengthen data protection strategies.<!--excerpt_end-->
 

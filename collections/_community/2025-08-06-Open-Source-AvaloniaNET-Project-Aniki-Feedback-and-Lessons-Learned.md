@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mji0tp/i_just_released_my_first_real_open_source_project/
 title: "Open Source Avalonia/.NET Project 'Aniki': Feedback and Lessons Learned"
 author: Loiuy123_
@@ -27,6 +27,7 @@ tags:
 - UI Framework
 section_names:
 - coding
+primary_section: coding
 ---
 Loiuy123_ shares insights and receives technical feedback on their first significant open source project, Aniki, a MyAnimeList client built with Avalonia and .NET.<!--excerpt_end-->
 

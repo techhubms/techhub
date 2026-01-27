@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=jSlfqAb2HEw
 title: 'Innovate with AI at Enterprise Scale: Microsoft Ignite Session BRK410'
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 - Startup Collaboration
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events presents a Microsoft Ignite session led by Surojit Chatterjee, Amee Desjourdy, Heena Purohit, and Hans Yang, discussing strategies for leveraging AI to drive impactful enterprise innovation, including responsible scaling and real-world success stories.<!--excerpt_end-->
 

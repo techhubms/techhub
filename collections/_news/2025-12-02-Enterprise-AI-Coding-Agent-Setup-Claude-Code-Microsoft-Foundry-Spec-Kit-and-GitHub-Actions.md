@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/claude-code-microsoft-foundry-enterprise-ai-coding-agent-setup/
 title: 'Enterprise AI Coding Agent Setup: Claude Code, Microsoft Foundry, Spec Kit, and GitHub Actions'
 author: Govind Kamtamneni
@@ -32,6 +32,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: ai
 ---
 Govind Kamtamneni provides an in-depth walkthrough on configuring Claude Code with Microsoft Foundry, integrating Spec Kit for requirements, securing with Entra ID, and automating agent workflows in enterprise-scale AI development.<!--excerpt_end-->
 

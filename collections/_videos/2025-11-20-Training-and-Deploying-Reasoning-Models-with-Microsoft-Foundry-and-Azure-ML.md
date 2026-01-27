@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=9TmsRYmb9NE
 title: Training and Deploying Reasoning Models with Microsoft Foundry and Azure ML
 author: Microsoft Events
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Presented by Vijay Aski, Chris Lauren, Ankit Parag Shah, and Wei Wei at Microsoft Ignite, this session explores practical approaches for training and deploying reasoning models using Azure ML and Microsoft Foundry.<!--excerpt_end-->
 

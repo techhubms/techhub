@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mi33ug/how_i_replaced_10_logic_app_conditions_with_1_c/
 title: How I Replaced 10 Logic App Conditions with 1 C# Script
 author: maverick-1009
@@ -18,6 +18,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 maverick-1009 explains a practical approach to consolidating Logic App conditions using C# Inline Code to streamline Azure workflows.<!--excerpt_end-->
 

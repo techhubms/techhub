@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/security-and-trust-in-visual-studio-marketplace
 title: 'Security and Trust in Visual Studio Marketplace: Safeguarding Extensions for Developers'
 author: Sean
@@ -23,6 +23,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 Authored by Sean, this article delivers a comprehensive overview of efforts to ensure extension security and developer trust in the Visual Studio Marketplace, outlining both current safeguards and planned investments.<!--excerpt_end-->
 

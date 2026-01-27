@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.cooknwithcopilot.com/blog/write-unit-tests-without-the-guesswork.html
 title: Write Unit Tests Without the Guesswork
 author: randy.pagels@xebia.com (Randy Pagels)
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels demonstrates how to use GitHub Copilot to quickly generate meaningful unit tests, helping developers in Python, JavaScript, and Java improve test coverage with AI-powered suggestions.<!--excerpt_end-->
 

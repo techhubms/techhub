@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/golazo-a-framework-for-streamlined-engineering/ba-p/4471142
 title: 'Introducing Golazo: Open-Source Framework for Transparent Engineering Teams'
 author: Ben Martens
@@ -24,6 +24,7 @@ tags:
 - Workflow Boards
 section_names:
 - devops
+primary_section: devops
 ---
 Ben Martens unveils Golazo, a new open-source engineering framework from Microsoft promoting design-first documentation, peer review, transparent collaboration, and agile team workflows.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/ai-agent-onboarding-is-now-a-critical-devops-function/?utm_source=rss&utm_medium=rss&utm_campaign=ai-agent-onboarding-is-now-a-critical-devops-function
 title: AI Agent Onboarding as a Core DevOps Responsibility
 author: Alexander Williams
@@ -44,6 +44,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Alexander Williams examines why DevOps teams must treat onboarding of AI agents as a top priority, providing structured processes to ensure operational safety and reliability.<!--excerpt_end-->
 

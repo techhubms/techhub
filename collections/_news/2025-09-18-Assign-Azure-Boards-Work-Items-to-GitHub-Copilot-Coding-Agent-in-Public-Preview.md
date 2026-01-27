@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-18-assign-azure-boards-work-items-to-copilot-coding-agent-in-public-preview
 title: Assign Azure Boards Work Items to GitHub Copilot Coding Agent in Public Preview
 author: Allison
@@ -25,6 +25,7 @@ section_names:
 - azure
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison details the public preview integration of Azure Boards with GitHub Copilot’s coding agent, enabling developers to assign and track work directly through automated background agents.<!--excerpt_end-->
 

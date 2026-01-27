@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mhi4mz/entra_connect_cloud_sync_one_way_wo_passwords/
 title: Entra Connect Cloud Sync One Way Without Passwords for Separate Tenant Access
 author: SisqoEngineer
@@ -16,6 +16,7 @@ tags:
 - User Management
 section_names:
 - azure
+primary_section: azure
 ---
 SisqoEngineer shares an approach for using Entra Connect Cloud Sync to provision users to a separate Azure tenant without syncing their passwords. This setup is aimed at maintaining distinct logins and automating account management tasks.<!--excerpt_end-->
 

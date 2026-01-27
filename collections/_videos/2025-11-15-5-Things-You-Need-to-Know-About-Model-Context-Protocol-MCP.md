@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/une3Ba19EQM
 title: 5 Things You Need to Know About Model Context Protocol (MCP)
 author: Visual Studio Code
@@ -16,6 +16,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Visual Studio Code presents a beginner-focused video where Chris Noring explains the essentials of the Model Context Protocol (MCP) and its impact on developer workflows.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-catalog-govern-for-fabric-admins/
 title: Govern in OneLake Catalog for Fabric Admins (Preview)
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog presents an overview of new governance capabilities in the OneLake catalog for Fabric admins, offering practical guidance and insights on securing and managing organizational data.<!--excerpt_end-->
 

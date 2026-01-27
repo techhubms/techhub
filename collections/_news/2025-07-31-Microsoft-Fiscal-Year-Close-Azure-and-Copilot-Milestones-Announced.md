@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.linkedin.com/posts/satyanadella_we-just-wrapped-our-earnings-call-it-was-activity-7356452669235875840-A-0W
 title: 'Microsoft Fiscal Year Close: Azure and Copilot Milestones Announced'
 author: stclarke
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Satya Nadella shares key Microsoft fiscal year achievements, highlighting Azure's record revenue and major growth in Copilot AI usage across the Microsoft ecosystem.<!--excerpt_end-->
 

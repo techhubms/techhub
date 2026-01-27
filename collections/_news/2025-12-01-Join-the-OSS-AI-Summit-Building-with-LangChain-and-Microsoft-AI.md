@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/join-the-oss-ai-summit-building-with-langchain-event
 title: 'Join the OSS AI Summit: Building with LangChain and Microsoft AI'
 author: Dan Wahlin
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Dan Wahlin announces the OSS AI Summit, exploring modern agent-based AI development using LangChain v1, Microsoft Foundry, and Azure OpenAI. The summit covers practical implementation with real-world projects and a panel of experts.<!--excerpt_end-->
 

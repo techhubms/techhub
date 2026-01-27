@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://hiddedesmet.com/from-vibe-coding-to-spec-driven-development
 title: 'From Vibe Coding to Spec-Driven Development: Why AI-Generated Code Needs Structure'
 author: Hidde de Smet
@@ -30,6 +30,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Hidde de Smet kicks off a deep-dive series on mastering AI-assisted development, highlighting why uncritical 'vibe coding' falls short and how specification-driven approaches like GitHub’s Spec-Kit help teams achieve robust production code.<!--excerpt_end-->
 

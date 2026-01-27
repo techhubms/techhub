@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/open-source/accelerate-developer-productivity-with-these-9-open-source-ai-and-mcp-projects/
 title: 9 Open Source MCP Projects Advancing AI-Native Developer Workflows
 author: Kevin Crosby
@@ -30,6 +30,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Kevin Crosby, with support from the GitHub Copilot and VS Code teams, introduces nine open source MCP projects that empower developers with AI-native tools, frameworks, and agentic capabilities designed to accelerate developer workflows.<!--excerpt_end-->
 

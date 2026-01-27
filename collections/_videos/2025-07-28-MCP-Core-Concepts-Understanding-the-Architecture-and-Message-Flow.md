@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=earDzWGtE84
 title: 'MCP Core Concepts: Understanding the Architecture and Message Flow'
 author: Microsoft Developer
@@ -16,6 +16,7 @@ tags:
 - Tools
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Developer presents an overview of MCP (Model Context Protocol), breaking down its core architectural concepts for viewers looking to understand message interactions and system components.<!--excerpt_end-->
 

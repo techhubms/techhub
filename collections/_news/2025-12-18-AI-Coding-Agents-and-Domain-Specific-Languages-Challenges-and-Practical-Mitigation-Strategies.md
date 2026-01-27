@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/all-things-azure/ai-coding-agents-domain-specific-languages/
 title: 'AI Coding Agents and Domain-Specific Languages: Challenges and Practical Mitigation Strategies'
 author: Chris Romp
@@ -26,6 +26,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Chris Romp examines the limitations of AI coding agents like GitHub Copilot with DSLs, outlining why these tools struggle and offering actionable mitigation strategies informed by research and Microsoft’s extensibility tools such as MCP and Azure Bicep.<!--excerpt_end-->
 

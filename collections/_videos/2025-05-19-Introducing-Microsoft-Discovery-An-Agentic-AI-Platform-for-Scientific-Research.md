@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=k3S4lPbUWng
 title: 'Introducing Microsoft Discovery: An Agentic AI Platform for Scientific Research'
 author: Microsoft Cloud
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Cloud introduces Microsoft Discovery, a new Azure-based platform designed to empower scientists and engineers with adaptive AI agents to accelerate research and development.<!--excerpt_end-->
 

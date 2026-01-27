@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/join-us-for-ai-devdays
 title: 'AI Dev Days 2025: Microsoft & GitHub Virtual Event for Developers'
 author: James Montemagno
@@ -32,6 +32,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 James Montemagno invites developers to AI Dev Days, a Microsoft and GitHub event showcasing hands-on workshops and technical sessions on AI, GitHub Copilot, Azure, and developer productivity.<!--excerpt_end-->
 

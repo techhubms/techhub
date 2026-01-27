@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=3UoDsdemIdA
 title: 'GenAI for Java Developers 2: Core Techniques Explained'
 author: Microsoft Developer
@@ -30,6 +30,7 @@ tags:
 - Retrieval Augmented Generation
 section_names:
 - ai
+primary_section: ai
 ---
 Ayan Gupta and Rory present hands-on generative AI techniques for Java developers. Learn LLM completions, chat interactions, RAG, and AI function calling with practical code and clear explanations.<!--excerpt_end-->
 

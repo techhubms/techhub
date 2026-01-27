@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/the-complete-playwright-end-to-end-story-tools-ai-and-real-world-workflows
 title: 'The Complete Playwright End-to-End Testing Story: Tools, AI Integration, and Real-World Workflows'
 author: Debbie O'Brien
@@ -31,6 +31,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Debbie O'Brien offers an in-depth look at Playwright’s modern testing ecosystem, highlighting end-to-end workflows, AI-powered tools, and integrations with GitHub Copilot and Azure App Testing.<!--excerpt_end-->
 

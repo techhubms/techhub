@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/announcing-preview-of-new-azure-dasv7-easv7-fasv7-series-vms/ba-p/4448360
 title: Announcing Preview of New Azure Dasv7, Easv7, and Fasv7-Series VMs Based on 5th Gen AMD EPYC™ ‘Turin’ Processors
 author: ArpitaChatterjee
@@ -23,6 +23,7 @@ tags:
 - VM Performance
 section_names:
 - azure
+primary_section: azure
 ---
 ArpitaChatterjee details Microsoft's preview launch of high-performance Azure Virtual Machines using 5th Gen AMD EPYC™ processors, highlighting advanced scaling, storage, and security features for demanding workloads.<!--excerpt_end-->
 

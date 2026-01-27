@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=fotUEeeC_H0
 title: "What's New in Microsoft Intune: AI-Driven Endpoint Security and IT Empowerment"
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Events, with speakers Eugenie Burrage and Jason Roszak, cover how Intune is integrating AI, Copilot, and enhanced security to empower IT and protect endpoints.<!--excerpt_end-->
 

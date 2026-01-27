@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/devops/upcoming-updates-for-azure-pipelines-agents-images/
 title: 'Upcoming Updates for Azure Pipelines Agent Images: Deprecation and Migration Guidance'
 author: Shubham Agarwal, Eric van Wijk
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Shubham Agarwal and Eric van Wijk outline critical updates for Azure Pipelines users, with step-by-step guidance on transitioning to new agent images to maintain secure and reliable CI/CD workflows.<!--excerpt_end-->
 

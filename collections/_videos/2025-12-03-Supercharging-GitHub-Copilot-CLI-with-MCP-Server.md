@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/vYuuCiAYOP4
 title: Supercharging GitHub Copilot CLI with MCP Server
 author: Visual Studio Code
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code showcases practical ways to enhance GitHub Copilot CLI using a kit-dev MCP server, offering developers live demos of advanced features such as symbol extraction and codebase search.<!--excerpt_end-->
 

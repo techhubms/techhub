@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-29-github-mcp-server-now-comes-with-server-instructions-better-tools-and-more
 title: 'Enhancements to GitHub MCP Server: Server Instructions and Multifunctional Tools'
 author: Allison
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Allison reports on the latest GitHub MCP Server update, detailing new server instructions for guiding models and the consolidation of tools to support more efficient developer workflows.<!--excerpt_end-->
 

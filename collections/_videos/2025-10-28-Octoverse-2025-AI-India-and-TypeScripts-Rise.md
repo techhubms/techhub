@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=4-u6dUg6IJk
 title: "Octoverse 2025: AI, India, and TypeScript's Rise"
 author: GitHub
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 This video from GitHub summarizes the top trends from the Octoverse 2025 report. The presentation, led by the GitHub team, covers the rapid normalization of generative AI in software engineering, TypeScript's new status as the #1 language, and the shifting global developer landscape.<!--excerpt_end-->
 

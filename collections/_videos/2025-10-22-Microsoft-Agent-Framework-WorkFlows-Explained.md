@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/QCHxTtHmtkU
 title: Microsoft Agent Framework WorkFlows Explained
 author: Microsoft Developer
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Developer delivers a comprehensive video guide to Microsoft Agent Framework Workflows, featuring demos and expert insights from Evan Mattson and Victor Dibia on building intelligent AI-driven automation.<!--excerpt_end-->
 

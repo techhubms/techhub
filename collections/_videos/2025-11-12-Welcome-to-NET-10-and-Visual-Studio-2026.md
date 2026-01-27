@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=kbW7qHMBM6A
 title: Welcome to .NET 10 & Visual Studio 2026!
 author: dotnet
@@ -24,6 +24,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 dotnet and the .NET team present a keynote introducing .NET 10, C# 14, and Visual Studio 2026, highlighting major new features and productivity upgrades for modern app development.<!--excerpt_end-->
 

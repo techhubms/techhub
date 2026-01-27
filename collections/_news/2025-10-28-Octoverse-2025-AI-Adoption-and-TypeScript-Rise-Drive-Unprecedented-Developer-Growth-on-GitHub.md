@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/
 title: 'Octoverse 2025: AI Adoption and TypeScript Rise Drive Unprecedented Developer Growth on GitHub'
 author: GitHub Staff
@@ -31,6 +31,7 @@ section_names:
 - devops
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 GitHub Staff explores the 2025 Octoverse, analyzing explosive global developer growth, AI integration through Copilot, the ascent of TypeScript, and transformative effects on productivity, open source, and security across the software development landscape.<!--excerpt_end-->
 

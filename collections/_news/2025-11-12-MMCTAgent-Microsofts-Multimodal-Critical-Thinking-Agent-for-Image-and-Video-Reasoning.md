@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/research/blog/mmctagent-enabling-multimodal-reasoning-over-large-video-and-image-collections/
 title: 'MMCTAgent: Microsoft’s Multimodal Critical Thinking Agent for Image and Video Reasoning'
 author: stclarke
@@ -30,6 +30,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke explores MMCTAgent, Microsoft Research’s agentic, multimodal AI framework for scalable reasoning over videos and images, describing its innovative architecture and Azure integration.<!--excerpt_end-->
 

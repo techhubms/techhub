@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=dPuLe0r96uU
 title: Premier League’s Data-Driven Fan Engagement at Scale
 author: Microsoft Events
@@ -31,6 +31,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events presents a Microsoft Ignite 2025 session with Darren Hardman, Simon Brown, Pedro Gomes, and Akash Jain, showcasing how the Premier League leverages Microsoft Fabric, AI, and robust data strategies to enhance fan engagement at scale.<!--excerpt_end-->
 

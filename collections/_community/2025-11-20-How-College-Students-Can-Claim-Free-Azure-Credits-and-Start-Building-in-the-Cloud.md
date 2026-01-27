@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/how-college-students-can-claim-free-azure-credits-and-start/m-p/4471767#M22343
 title: How College Students Can Claim Free Azure Credits and Start Building in the Cloud
 author: KalpanaGupta-3282
@@ -23,6 +23,7 @@ tags:
 - Student Technology
 section_names:
 - azure
+primary_section: azure
 ---
 KalpanaGupta-3282 provides a step-by-step guide for college students to claim $100 in free Azure credits, empowering them to experiment and build in the cloud without worrying about costs.<!--excerpt_end-->
 

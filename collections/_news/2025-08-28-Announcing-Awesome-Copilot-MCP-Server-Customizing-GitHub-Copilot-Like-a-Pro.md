@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/blog/announcing-awesome-copilot-mcp-server
 title: 'Announcing Awesome Copilot MCP Server: Customizing GitHub Copilot Like a Pro'
 author: Justin Yoo
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Justin Yoo demonstrates how developers can search, preview, and save custom GitHub Copilot chat modes, instructions, and prompts using the new Awesome Copilot MCP Server, streamlining Copilot customization workflows.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=CIuLieYAGcA
 title: Is .NET Legacy Tech? Scott Hanselman Explores the Modern .NET Platform
 author: dotnet
@@ -18,6 +18,7 @@ tags:
 - Xbox
 section_names:
 - coding
+primary_section: coding
 ---
 Scott Hanselman, in a #OneDevQuestion video, shares insights into whether .NET is legacy technology, discussing its maturity and ongoing modernization.<!--excerpt_end-->
 

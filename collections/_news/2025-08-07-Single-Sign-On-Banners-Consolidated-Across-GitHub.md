@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-07-single-sign-on-banners-consolidated-across-github
 title: Single Sign-On Banners Consolidated Across GitHub
 author: Allison
@@ -16,6 +16,7 @@ tags:
 - User Experience
 section_names:
 - devops
+primary_section: devops
 ---
 Allison details GitHub's new consolidated single sign-on banner experience, highlighting how it streamlines SSO notifications for organization members and improves account management.<!--excerpt_end-->
 

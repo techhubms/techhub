@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=6kz3XWCVij0
 title: What's New in .NET MAUI
 author: dotnet
@@ -23,6 +23,7 @@ tags:
 - XAML
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet presents an overview of the newest features in .NET MAUI for .NET 10, emphasizing performance, cross-platform development, and enhanced tooling for developers.<!--excerpt_end-->
 

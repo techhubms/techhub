@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/on-the-issues/2025/11/12/uplifting-and-empowering-young-people-for-an-ai-future/
 title: 'Empowering Youth in the Age of AI: Research, Policy, and the AI Futures Youth Council'
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 - Youth And Technology
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke explores Microsoft's initiatives for promoting youth empowerment and online safety in the AI era, introducing the AI Futures Youth Council and highlighting new research and policy recommendations.<!--excerpt_end-->
 

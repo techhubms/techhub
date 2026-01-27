@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/multi-agent-orchestration-with-azure-ai-foundry-from-idea-to/ba-p/4449925
 title: 'Multi-Agent Orchestration with Azure AI Foundry: From Idea to Production'
 author: lakshaymalik
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 lakshaymalik provides a thorough, practical guide to building multi-agent AI systems with Azure AI Foundry, detailing architectural patterns, workflow design, real-world scenarios, and best practices for enterprise-grade deployment.<!--excerpt_end-->
 

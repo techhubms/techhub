@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-august-2025/
 title: Azure Developer CLI (azd) August 2025 Release Overview
 author: PuiChee (PC) Chan
@@ -42,6 +42,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 PuiChee (PC) Chan shares the August 2025 Azure Developer CLI (azd) release summary, including important bug fixes, new documentation, improved templates for common developer scenarios, and enhanced security and AI integrations.<!--excerpt_end-->
 

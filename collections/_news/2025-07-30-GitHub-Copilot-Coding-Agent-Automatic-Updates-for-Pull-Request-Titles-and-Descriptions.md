@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-07-30-copilot-coding-agent-keeps-pull-request-titles-and-bodies-up-to-date
 title: 'GitHub Copilot Coding Agent: Automatic Updates for Pull Request Titles and Descriptions'
 author: Allison
@@ -18,6 +18,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison discusses how GitHub Copilot's coding agent now keeps pull request titles and bodies up to date, streamlining code review and collaboration.<!--excerpt_end-->
 

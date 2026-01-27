@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/pushing-a-whole-stack-of-branches-with-a-single-git-command/
 title: Pushing a Whole Stack of Branches with a Single Git Command
 author: Andrew Lock
@@ -17,6 +17,7 @@ tags:
 - Stacked Branches
 section_names:
 - devops
+primary_section: devops
 ---
 In this post, Andrew Lock introduces a method for pushing an entire stack of Git branches using a custom alias, streamlining PR workflows and branch management for large features or incremental development.<!--excerpt_end-->
 

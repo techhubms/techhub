@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=2GMKFbldb9c
 title: 'GitHub Copilot in JetBrains: Demo of MCP and Agent Mode'
 author: GitHub
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub showcases the enhanced GitHub Copilot integration in JetBrains IDEs, highlighting Model Context Protocol features such as agent mode, prompts, and elicitation for developers seeking improved coding workflows.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-20-pull-request-files-changed-public-preview-november-20-updates
 title: 'Pull Request “Files Changed” Public Preview: November 20 Updates'
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - Version Control
 section_names:
 - devops
+primary_section: devops
 ---
 Allison details the latest improvements to GitHub’s pull request workflow, focusing on new functionality in the 'Files changed' page and ongoing performance enhancements.<!--excerpt_end-->
 

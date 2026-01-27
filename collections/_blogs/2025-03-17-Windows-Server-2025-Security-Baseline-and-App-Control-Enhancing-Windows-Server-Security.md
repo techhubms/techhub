@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/03/windows-server-2025-security-baseline-and-app-control/
 title: 'Windows Server 2025 Security Baseline and App Control: Enhancing Windows Server Security'
 author: Thomas Maurer
@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 In this article, Thomas Maurer interviews Carlos Mayol Berral of Microsoft to showcase Windows Server 2025 Security Baseline and App Control, offering insights and demos for IT administrators and security professionals.<!--excerpt_end-->
 

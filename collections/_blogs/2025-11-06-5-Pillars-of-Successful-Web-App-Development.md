@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/5-pillars-of-successful-web-app-development/
 title: 5 Pillars of Successful Web App Development
 author: Roman Davydov
@@ -45,6 +45,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 Roman Davydov discusses best practices for web app development, emphasizing key pillars such as security, performance, and user-centric design. The article delivers insights valuable to development and DevOps teams.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/dz-hOAMAJhE
 title: Understanding the Connection Between Copilot Studio and Azure AI Foundry
 author: Microsoft Developer
@@ -18,6 +18,7 @@ tags:
 - Scott Durow
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Developer interviews Scott Durow to uncover how Copilot Studio and Azure AI Foundry relate, offering insights for anyone building Microsoft AI solutions.<!--excerpt_end-->
 

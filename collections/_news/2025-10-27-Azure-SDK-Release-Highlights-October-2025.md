@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-october-2025/
 title: Azure SDK Release Highlights – October 2025
 author: Ronnie Geraghty
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Ronnie Geraghty presents the October 2025 Azure SDK release highlights, detailing new and updated libraries for AI, search, and identity scenarios to help developers build and manage Azure-powered solutions.<!--excerpt_end-->
 

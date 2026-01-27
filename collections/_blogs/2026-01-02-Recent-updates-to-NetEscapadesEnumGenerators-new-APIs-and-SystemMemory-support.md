@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://andrewlock.net/updates-to-netescapaades-enumgenerators-new-apis-and-system-memory-support/
 title: 'Recent updates to NetEscapades.EnumGenerators: new APIs and System.Memory support'
 author: Andrew Lock
@@ -22,6 +22,7 @@ tags:
 - System.Memory
 section_names:
 - coding
+primary_section: coding
 ---
 Andrew Lock summarizes recent improvements to the NetEscapades.EnumGenerators package, including new APIs, advanced parsing options, and System.Memory support, offering insights for .NET developers seeking faster enum operations.<!--excerpt_end-->
 

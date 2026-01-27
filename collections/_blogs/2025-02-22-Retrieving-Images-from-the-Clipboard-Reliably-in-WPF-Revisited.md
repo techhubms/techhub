@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2025/Feb/21/Retrieving-Images-from-the-Clipboard-Reliably-in-WPF-Revisited
 title: Retrieving Images from the Clipboard Reliably in WPF Revisited
 author: Rick Strahl
@@ -22,6 +22,7 @@ tags:
 - WPF
 section_names:
 - coding
+primary_section: coding
 ---
 In this post, Rick Strahl reviews the long-standing problems with image data retrieval from the Windows clipboard in WPF, and demonstrates robust solutions using intermediary bitmaps and pixel format fixes. He includes code samples and performance notes for developers working with UI image handling.<!--excerpt_end-->
 

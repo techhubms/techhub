@@ -19,7 +19,7 @@ public class RssServiceTests
         Url = "/ai",
         Collections =
         [
-            new() { Name = "news", Title = "News", Url = "/ai/news", Description = "Latest AI news", IsCustom = false }
+            new() { Name = "news", Title = "News", Url = "/ai/news", Description = "Latest AI news", IsCustom = false, DisplayName = "" }
         ]
     };
 
@@ -37,6 +37,9 @@ public class RssServiceTests
             RenderedHtml = "<p>Test content 1</p>",
             Excerpt = "Test excerpt 1",
             ExternalUrl = null,
+            DateIso = "2024-01-15",
+            PrimarySectionName = "ai",
+            Url = "/ai/news/test-article"
             },
         new ContentItem
         {
@@ -49,7 +52,11 @@ public class RssServiceTests
             Tags = ["AI", "News", "Deep Learning"],
             RenderedHtml = "<p>Test content 2</p>",
             Excerpt = "Test excerpt 2",
-            ExternalUrl = "https://example.com/article-2",        }
+            ExternalUrl = "https://example.com/article-2",
+            DateIso = "2024-01-10",
+            PrimarySectionName = "ai",
+            Url = "/ai/news/test-article-2"
+        }
     ];
 
     [Fact]
@@ -103,7 +110,10 @@ public class RssServiceTests
                 Tags = ["test"],
                 RenderedHtml = $"<p>Content {i}</p>",
                 Excerpt = $"Excerpt {i}",
-                ExternalUrl = null
+                ExternalUrl = null,
+                DateIso = "2024-01-15",
+                PrimarySectionName = "ai",
+                Url = $"/ai/news/article-{i}"
             })
             .ToList();
 
@@ -212,6 +222,9 @@ public class RssServiceTests
                 RenderedHtml = "<p>Content</p>",
                 Excerpt = "Test excerpt",
                 ExternalUrl = null,
+            DateIso = "2024-01-15",
+            PrimarySectionName = "ai",
+            Url = "/ai/news/test-article",
                 Author = null
             }
         };
@@ -318,7 +331,7 @@ public class RssServiceTests
     public void SerializeToXml_WithNullChannel_ThrowsArgumentNullException()
     {
         // Arrange
-        Core.DTOs.RssChannelDto? channel = null;
+        Core.Models.RssChannel? channel = null;
 
         // Act
         var act = () => _rssService.SerializeToXml(channel!);
@@ -346,6 +359,9 @@ public class RssServiceTests
                 RenderedHtml = "<p>Content</p>",
                 Excerpt = "Excerpt with \"quotes\" & <tags>",
                 ExternalUrl = null,
+            DateIso = "2024-01-15",
+            PrimarySectionName = "ai",
+            Url = "/ai/news/test-article",
                 Author = null
             }
         };

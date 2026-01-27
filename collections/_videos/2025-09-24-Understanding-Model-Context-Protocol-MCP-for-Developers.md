@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/rTW1eM0T_90
 title: Understanding Model Context Protocol (MCP) for Developers
 author: Microsoft Developer
@@ -16,6 +16,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer’s Damian Brady explains Model Context Protocol (MCP), making it clear why this matters for developers using GitHub Copilot and similar AI-powered tools.<!--excerpt_end-->
 

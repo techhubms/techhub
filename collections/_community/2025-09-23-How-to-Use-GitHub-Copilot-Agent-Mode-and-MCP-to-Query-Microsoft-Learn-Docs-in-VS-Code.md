@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/use-copilot-and-mcp-to-query-microsoft-learn-docs/ba-p/4455835
 title: How to Use GitHub Copilot Agent Mode and MCP to Query Microsoft Learn Docs in VS Code
 author: carlottacaste
@@ -23,6 +23,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 carlottacaste explains how to leverage GitHub Copilot in Agent Mode with MCP servers to query Microsoft Learn Docs right inside VS Code. Learn practical setup steps, prompt file configuration, and how to create your own Python MCP client.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7-rc/
 title: 'Announcing TypeScript 5.7 RC: Key Features and Updates'
 author: Daniel Rosenwasser
@@ -26,6 +26,7 @@ tags:
 - Variable Initialization
 section_names:
 - coding
+primary_section: coding
 ---
 In this detailed announcement, Daniel Rosenwasser introduces the TypeScript 5.7 RC, outlining major feature enhancements and important changes for TypeScript developers.<!--excerpt_end-->
 

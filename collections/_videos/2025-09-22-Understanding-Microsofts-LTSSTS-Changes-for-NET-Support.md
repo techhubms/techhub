@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=3i6YASbyuHw
 title: Understanding Microsoft's LTS/STS Changes for .NET Support
 author: Nick Chapsas
@@ -18,6 +18,7 @@ tags:
 - Versioning
 section_names:
 - coding
+primary_section: coding
 ---
 Nick Chapsas explains recent LTS and STS support changes for .NET from Microsoft, addressing common developer concerns around support cycles and what the new policies mean for the .NET community.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/openrowset-and-external-tables-for-fabric-sql-databases/
 title: Data Virtualization and External Tables in Fabric SQL Databases (Preview)
 author: Microsoft Fabric Blog
@@ -30,6 +30,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog details new Data Virtualization features for Fabric SQL Databases, enabling real-time analytics and schema abstraction using OPENROWSET, External Tables, and Copilot integration.<!--excerpt_end-->
 

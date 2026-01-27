@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/2025/10/16/microsoft-extends-ai-advancements-in-dragon-copilot-to-nurses-and-partners-to-enhance-patient-care/
 title: Microsoft Expands Dragon Copilot AI Innovations for Nursing and Healthcare Partners
 author: stclarke
@@ -26,6 +26,7 @@ tags:
 - Virtual Care
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke presents details on Microsoft’s latest advancements in Dragon Copilot, bringing new AI-powered features to nursing and health partners for more efficient clinical workflows and improved patient care.<!--excerpt_end-->
 

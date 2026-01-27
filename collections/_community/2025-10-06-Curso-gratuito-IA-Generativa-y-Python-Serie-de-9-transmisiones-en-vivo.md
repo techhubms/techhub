@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/curso-oficial-y-gratuito-de-genai-y-python/ba-p/4459466
 title: 'Curso gratuito: IA Generativa y Python - Serie de 9 transmisiones en vivo'
 author: gwyneth-penas
@@ -33,6 +33,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: ai
 ---
 gwyneth-penas presenta una completa serie de transmisiones en vivo gratuitas sobre IA generativa y Python, cubriendo LLMs, embeddings, visión, RAG, herramientas de Microsoft, y seguridad para desarrolladores.<!--excerpt_end-->
 

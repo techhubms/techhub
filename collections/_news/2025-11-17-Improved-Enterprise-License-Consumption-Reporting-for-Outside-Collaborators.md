@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-11-17-improved-enterprise-license-consumption-reporting-for-outside-collaborators-now-generally-available
 title: Improved Enterprise License Consumption Reporting for Outside Collaborators
 author: Allison
@@ -21,6 +21,7 @@ tags:
 - Reporting
 section_names:
 - devops
+primary_section: devops
 ---
 Allison outlines an update to GitHub Enterprise Cloud licensing reports, making it easier for billing managers to track license consumption by outside collaborators across organizations.<!--excerpt_end-->
 

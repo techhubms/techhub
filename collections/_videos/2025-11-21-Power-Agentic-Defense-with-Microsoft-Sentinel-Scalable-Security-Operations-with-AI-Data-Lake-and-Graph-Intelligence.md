@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=3roUCNzZbwU
 title: 'Power Agentic Defense with Microsoft Sentinel: Scalable Security Operations with AI, Data Lake, and Graph Intelligence'
 author: Microsoft Events
@@ -28,6 +28,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Microsoft Events presents a Microsoft Ignite 2025 session featuring Krishna Kumar Parthasarathy, Reena Pathak, Evangeline White, and Scott Woodgate on scaling security operations with Microsoft Sentinel’s AI-driven, graph-integrated platform.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-capacity-events-in-real-time-hub-preview/
 title: Monitoring Microsoft Fabric Capacity with Real-Time Hub Events
 author: Microsoft Fabric Blog
@@ -26,6 +26,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces real-time event monitoring in Fabric’s Real-Time Hub, guiding capacity administrators on using new event types and automation tooling for operational visibility and control.<!--excerpt_end-->
 

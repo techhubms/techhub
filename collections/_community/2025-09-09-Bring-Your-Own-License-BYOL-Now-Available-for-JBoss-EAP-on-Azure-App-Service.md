@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/bring-your-own-license-byol-support-for-jboss-eap-on-azure-app/ba-p/4452152
 title: Bring Your Own License (BYOL) Now Available for JBoss EAP on Azure App Service
 author: Byron Tardif
@@ -22,6 +22,7 @@ tags:
 - Red Hat
 section_names:
 - azure
+primary_section: azure
 ---
 Byron Tardif announces BYOL support for JBoss EAP on Azure App Service, showing how enterprise customers can leverage existing Red Hat licenses for Java workloads on Azure, providing greater flexibility and potential cost savings.<!--excerpt_end-->
 

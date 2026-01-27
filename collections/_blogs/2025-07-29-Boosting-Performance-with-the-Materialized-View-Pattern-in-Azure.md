@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/boosting-performance-with-the-materialized-view-pattern-in-azure/
 title: Boosting Performance with the Materialized View Pattern in Azure
 author: Dellenny
@@ -30,6 +30,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Dellenny details how materialized views can enhance analytics performance on Azure services such as Synapse and Databricks. Practical code examples and architecture tips round out this must-read for data engineers.<!--excerpt_end-->
 

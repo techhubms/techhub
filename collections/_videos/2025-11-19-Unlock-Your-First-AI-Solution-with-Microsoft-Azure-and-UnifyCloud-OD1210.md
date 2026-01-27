@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Kd3KgJx0U1M
 title: Unlock Your First AI Solution with Microsoft Azure and UnifyCloud | OD1210
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents a session at Ignite 2025 where Vivek Bhatnagar and Joshua Huang show SMBs how to quickly implement AI using Azure, including Foundry Templates and marketplace solutions.<!--excerpt_end-->
 

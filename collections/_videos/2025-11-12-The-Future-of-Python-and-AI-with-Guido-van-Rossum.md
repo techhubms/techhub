@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=cMRvgR8EpOE
 title: The Future of Python and AI with Guido van Rossum
 author: Microsoft Developer
@@ -32,6 +32,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Microsoft Developer speaks with Guido van Rossum about Python's role in the AI era, leveraging Copilot and TypeAgent, and community-driven best practices.<!--excerpt_end-->
 

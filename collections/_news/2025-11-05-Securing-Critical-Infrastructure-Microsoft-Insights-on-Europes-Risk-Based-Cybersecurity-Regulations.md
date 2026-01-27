@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/11/05/securing-critical-infrastructure-why-europes-risk-based-regulations-matter/
 title: "Securing Critical Infrastructure: Microsoft Insights on Europe's Risk-Based Cybersecurity Regulations"
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 - Threat Intelligence
 section_names:
 - security
+primary_section: security
 ---
 Freddy Dezeure, Deputy CISO for Europe at Microsoft, discusses how NIS2 and DORA are reshaping critical infrastructure security, offering actionable advice and risk-based strategies for cybersecurity leaders.<!--excerpt_end-->
 

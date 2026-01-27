@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/emea/2025/12/microsoft-empowers-350000-more-nigerians-with-ai-skills/
 title: Microsoft Expands AI Skills Training to 350,000 More Nigerians
 author: stclarke
@@ -22,6 +22,7 @@ tags:
 - Skills Development
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke explores Microsoft's milestone of training over 350,000 Nigerians through the AI National Skills Initiative, highlighting collaborative skilling efforts with developers, business leaders, and the Nigerian government.<!--excerpt_end-->
 

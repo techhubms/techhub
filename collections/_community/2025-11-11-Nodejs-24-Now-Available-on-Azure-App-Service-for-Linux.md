@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/node-js-24-is-now-available-on-azure-app-service-for-linux/ba-p/4468801
 title: Node.js 24 Now Available on Azure App Service for Linux
 author: TulikaC
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - coding
+primary_section: coding
 ---
 TulikaC announces that Node.js 24 LTS is now supported on Azure App Service for Linux, enabling developers to deploy faster, modern JavaScript apps with improved testing and deployment capabilities.<!--excerpt_end-->
 

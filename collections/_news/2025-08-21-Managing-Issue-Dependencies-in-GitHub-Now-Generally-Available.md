@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-21-dependencies-on-issues
 title: Managing Issue Dependencies in GitHub Now Generally Available
 author: Allison
@@ -18,6 +18,7 @@ tags:
 - Workflow Automation
 section_names:
 - devops
+primary_section: devops
 ---
 Allison announces that issue dependencies are now generally available in GitHub, empowering teams to manage blocking relationships between issues and streamline project workflows.<!--excerpt_end-->
 

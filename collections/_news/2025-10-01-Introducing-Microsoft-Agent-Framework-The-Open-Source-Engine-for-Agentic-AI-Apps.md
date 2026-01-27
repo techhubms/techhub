@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/
 title: 'Introducing Microsoft Agent Framework: The Open-Source Engine for Agentic AI Apps'
 author: Takuto Higuchi, Shawn Henry, Elijah Straight
@@ -35,6 +35,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Takuto Higuchi, Shawn Henry, and Elijah Straight provide a deep dive into the Microsoft Agent Framework, showing how it helps developers build, manage, and scale AI agent systems with robust tools for enterprise, research, and production.<!--excerpt_end-->
 

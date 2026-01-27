@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/devops/comments/1mgl9tl/how_we_solved_environment_variable_chaos_for_40/
 title: How we solved environment variable chaos for 40+ microservices on ECS/Lambda/Batch with AWS Parameter Store
 author: compacompila
@@ -18,6 +18,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 In this post, compacompila describes how their team centralized environment variable management for over 40 AWS-based microservices using AWS Parameter Store, leading to enhanced security and streamlined operations.<!--excerpt_end-->
 

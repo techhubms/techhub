@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/cloud-and-ai-cost-efficiency-a-strategic-imperative-for-long/ba-p/4455955
 title: Maximizing Cost Efficiency with Azure Essentials for Cloud and AI Investments
 author: Fernando_Vasconcellos
@@ -34,6 +34,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Fernando Vasconcellos presents a comprehensive overview of how organizations can achieve long-term cost efficiency and business value by leveraging Azure Essentials, strategic frameworks, and Microsoft tools for cloud and AI investments.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/available-now-gpt-5-1-in-microsoft-copilot-studio/
 title: GPT-5.1 Experimental Model Now Available in Microsoft Copilot Studio
 author: stclarke
@@ -20,6 +20,7 @@ tags:
 - Release Announcement
 section_names:
 - ai
+primary_section: ai
 ---
 stclarke announces the availability of GPT-5.1 as an experimental AI model within Microsoft Copilot Studio, enabling early adopters to explore advanced chat and reasoning enhancements.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.thomasmaurer.ch/2025/10/azure-local-2510-release-and-new-preview-features/
 title: 'Azure Local 2510 Release: New Features for Edge, Security, and Hybrid Cloud'
 author: Thomas Maurer
@@ -24,6 +24,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Thomas Maurer details the Azure Local 2510 release, covering new security and deployment features for edge and hybrid cloud environments. The post is especially useful for architects and IT professionals working with Microsoft Azure Local.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/aiops-bringing-intelligence-to-it-operations/
 title: 'AIOps: Bringing Intelligence to IT Operations'
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Dellenny explores how AIOps leverages AI and automation to transform IT operations, focusing on actionable strategies for implementing intelligent, proactive systems management.<!--excerpt_end-->
 

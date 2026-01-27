@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/massive-vs-code-secrets-leak-puts-focus-on-extensions-ai-wiz/
 title: VS Code Marketplace Secret Leaks Highlight Risks in Extensions and AI Configurations
 author: Jeff Burt
@@ -32,6 +32,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: ai
 ---
 Jeff Burt provides an in-depth report on Wiz’s investigation into a major secrets leak in VS Code extension marketplaces, exposing critical risks for Microsoft developers and AI tool users.<!--excerpt_end-->
 

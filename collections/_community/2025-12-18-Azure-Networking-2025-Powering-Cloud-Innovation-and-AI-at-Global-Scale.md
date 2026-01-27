@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-networking-2025-powering-cloud-innovation-and-ai-at-global/ba-p/4479390
 title: 'Azure Networking 2025: Powering Cloud Innovation and AI at Global Scale'
 author: Sudha_Mahajan
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 Sudha_Mahajan delivers a comprehensive overview of Azure Networking’s 2025 advancements, highlighting how Microsoft’s innovations in networking and security empower AI workloads, hybrid connectivity, and cloud-native resiliency.<!--excerpt_end-->
 

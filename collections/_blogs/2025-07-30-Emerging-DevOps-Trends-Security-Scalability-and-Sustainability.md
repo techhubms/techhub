@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/emerging-devops-trends-security-scalability-and-sustainability/?utm_source=rss&utm_medium=rss&utm_campaign=emerging-devops-trends-security-scalability-and-sustainability
 title: 'Emerging DevOps Trends: Security, Scalability and Sustainability'
 author: Harikrishna Kundariya
@@ -23,6 +23,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Harikrishna Kundariya explores key trends in the DevOps landscape, addressing how security, scalability, and sustainability are influencing modern development practices.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-5-9-rc/
 title: "Announcing the Release Candidate of TypeScript 5.9: What's New and Improved"
 author: Daniel Rosenwasser
@@ -21,6 +21,7 @@ tags:
 - TypeScript 5.9
 section_names:
 - coding
+primary_section: coding
 ---
 Daniel Rosenwasser details the latest features and improvements in the TypeScript 5.9 Release Candidate. This update introduces new configuration defaults, deferred module imports, enhanced editor integration, and improvements based on community feedback.<!--excerpt_end-->
 

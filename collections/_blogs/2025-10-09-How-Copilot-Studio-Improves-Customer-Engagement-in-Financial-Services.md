@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-copilot-studio-improves-customer-engagement-in-financial-services/
 title: How Copilot Studio Improves Customer Engagement in Financial Services
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 - Power Platform
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny explains how Microsoft Copilot Studio allows financial organizations to improve customer engagement with custom AI agents, discussing core benefits, challenges, and practical best practices.<!--excerpt_end-->
 

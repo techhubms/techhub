@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/A2ERvKTml98
 title: How to find the right MCP server in seconds with GitHub MCP registry
 author: GitHub
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 GitHub presents the MCP Registry as a streamlined way for developers to find compatible MCP servers quickly. In this video, GitHub demonstrates how this tool can enhance AI agent interoperability with platforms like Figma and Postman.<!--excerpt_end-->
 

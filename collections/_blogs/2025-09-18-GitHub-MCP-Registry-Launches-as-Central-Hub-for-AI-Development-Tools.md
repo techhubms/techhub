@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/github-mcp-registry-launches-as-central-hub-for-ai-development-tools/
 title: GitHub MCP Registry Launches as Central Hub for AI Development Tools
 author: Tom Smith
@@ -33,6 +33,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Tom Smith examines the launch of the GitHub MCP Registry, spotlighting its role as a central hub for AI development tools and how it advances AI-powered workflows and DevOps practices.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-28-a-mission-control-to-assign-steer-and-track-copilot-coding-agent-tasks
 title: A Mission Control for Managing Copilot Coding Agent Tasks on GitHub
 author: Allison
@@ -23,6 +23,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison announces GitHub's new centralized mission control for Copilot coding agent tasks, enabling developers to assign, monitor, and guide Copilot-powered coding sessions more efficiently.<!--excerpt_end-->
 

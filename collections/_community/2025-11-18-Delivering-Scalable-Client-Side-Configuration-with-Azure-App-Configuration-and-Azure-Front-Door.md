@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/unlocking-client-side-configuration-at-scale-with-azure-app/ba-p/4470781
 title: Delivering Scalable Client-Side Configuration with Azure App Configuration and Azure Front Door
 author: mukta
@@ -26,6 +26,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: ai
 ---
 Mukta explains how Azure App Configuration combined with Azure Front Door enables developers to deliver dynamic client-side configuration at CDN scale, providing secure and flexible options for AI-powered and modern client applications.<!--excerpt_end-->
 

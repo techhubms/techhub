@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=DpyjAKmNwpI
 title: Getting Started with MCP (Model Context Protocol)
 author: Nick Chapsas
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Nick Chapsas presents a session by Dan Clarke introducing the Model Context Protocol (MCP), focusing on how developers can interface consistently with LLMs using Microsoft technologies such as C# and .NET.<!--excerpt_end-->
 

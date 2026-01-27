@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/developer-tier-apim-self-hosted-gateway/ba-p/4457556
 title: Exploring Developer Tier APIM with Self-hosted Gateway for Greater Flexibility
 author: reve
@@ -20,6 +20,7 @@ tags:
 - Virtual Network
 section_names:
 - azure
+primary_section: azure
 ---
 reve outlines the use of Azure API Management's Developer tier alongside a self-hosted gateway, highlighting its premium features, limitations, and scenarios where this setup can improve control and minimize service interruptions.<!--excerpt_end-->
 

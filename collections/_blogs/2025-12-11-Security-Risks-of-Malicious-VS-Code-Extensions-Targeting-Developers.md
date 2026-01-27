@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/malicious-vs-code-extensions-take-screenshots-steal-info/
 title: Security Risks of Malicious VS Code Extensions Targeting Developers
 author: Jeff Burt
@@ -29,6 +29,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Jeff Burt reports on the discovery of two malicious VS Code extensions targeting developers, detailing how these plugins exploited developer environments and posed significant software supply chain security risks.<!--excerpt_end-->
 

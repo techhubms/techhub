@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/11/03/sesameop-novel-backdoor-uses-openai-assistants-api-for-command-and-control/
 title: 'SesameOp: Novel Backdoor Abuses OpenAI Assistants API for Stealth Command and Control'
 author: Microsoft Incident Response
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Microsoft Incident Response’s DART team, led by their security researchers, uncovers and analyzes SesameOp—a covert backdoor abusing the OpenAI Assistants API for command and control, with detailed technical breakdown and defense guidance.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/pure-storage-cloud-azure-native-evolves-at-microsoft-ignite/ba-p/4470118
 title: 'Azure Native Pure Storage Cloud: Expanded VM Integration Announced at Ignite'
 author: Aung_Oo
@@ -23,6 +23,7 @@ tags:
 - Windows
 section_names:
 - azure
+primary_section: azure
 ---
 Aung_Oo introduces the expanded Azure Native Pure Storage Cloud integration, detailing how customers can provision volumes to Azure VMs and benefit from enterprise-class storage features, management improvements, and extensive partner support.<!--excerpt_end-->
 

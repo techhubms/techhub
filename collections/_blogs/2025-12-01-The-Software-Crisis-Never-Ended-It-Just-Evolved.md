@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://roadtoalm.com/2025/12/01/the-software-crisis-never-ended-it-just-evolved/
 title: The Software Crisis Never Ended, It Just Evolved
 author: Rene van Osnabrugge
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Rene van Osnabrugge traces the evolution of the software crisis from the birth of software engineering to the rise of DevOps and the modern challenges that AI now addresses in the development lifecycle.<!--excerpt_end-->
 

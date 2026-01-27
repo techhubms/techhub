@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/announcing-foundry-mcp-server-preview-speeding-up-ai-dev-with-microsoft-foundry/
 title: 'Accelerating AI Agent Development: Foundry MCP Server Preview Announced'
 author: SeokJin Han
@@ -27,6 +27,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: ai
 ---
 SeokJin Han details the launch of Foundry MCP Server in preview, highlighting how it simplifies AI agent development and integration, with robust security via Entra ID.<!--excerpt_end-->
 

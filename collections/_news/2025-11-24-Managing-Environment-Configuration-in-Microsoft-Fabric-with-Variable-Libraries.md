@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/manage-environment-configuration-in-fabric-user-data-functions-with-variable-libraries/
 title: Managing Environment Configuration in Microsoft Fabric with Variable Libraries
 author: Microsoft Fabric Blog
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog offers practical insights for data engineers on managing environment configuration with variable libraries in Fabric User Data Functions. The tutorial includes code examples for secure integration with Azure OpenAI and Azure Key Vault.<!--excerpt_end-->
 

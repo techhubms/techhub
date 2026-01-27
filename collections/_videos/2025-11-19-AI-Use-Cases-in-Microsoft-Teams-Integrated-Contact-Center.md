@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=IggA_sx3LzI
 title: AI Use Cases in Microsoft Teams Integrated Contact Center
 author: Microsoft Events
@@ -22,6 +22,7 @@ tags:
 - Supervisor Functionality
 section_names:
 - ai
+primary_section: ai
 ---
 Presented by Microsoft Events, this session at Microsoft Ignite showcases how AI can transform customer service within Teams Integrated Contact Centers through agent assist features, IVR improvements, and Power Platform integration.<!--excerpt_end-->
 

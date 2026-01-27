@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/sql-telemetry-intelligence-how-we-built-a-petabyte-scale-data-platform-with-fabric/
 title: Building a Petabyte-Scale Data Platform with Microsoft Fabric and SQL Telemetry
 author: Microsoft Fabric Blog
@@ -30,6 +30,7 @@ section_names:
 - coding
 - devops
 - ml
+primary_section: ml
 ---
 In this deep technical blog, the Microsoft Fabric Blog team explains how they engineered a robust, Petabyte-scale data platform on Microsoft Fabric, focusing on real-time telemetry and modern data engineering practices.<!--excerpt_end-->
 

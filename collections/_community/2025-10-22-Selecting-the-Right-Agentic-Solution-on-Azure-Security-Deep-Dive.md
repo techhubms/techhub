@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/selecting-the-right-agentic-solution-on-azure-part-2-security/ba-p/4461215
 title: Selecting the Right Agentic Solution on Azure – Security Deep Dive
 author: pranabpaul
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - security
+primary_section: ai
 ---
 pranabpaul explores the security landscape for agentic solutions on Azure, guiding readers through best practices around authentication, data protection, access control, secrets management, and safe orchestration of AI agents.<!--excerpt_end-->
 

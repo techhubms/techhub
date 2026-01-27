@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=cBZopiZeuL8
 title: .NET 10 Migration and New Features for Enterprise Blazor Applications
 author: dotnet
@@ -24,6 +24,7 @@ tags:
 - Web Development
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet presents a deep dive into migrating enterprise Blazor applications to .NET 10, emphasizing upgrade strategies, new features, and performance gains.<!--excerpt_end-->
 

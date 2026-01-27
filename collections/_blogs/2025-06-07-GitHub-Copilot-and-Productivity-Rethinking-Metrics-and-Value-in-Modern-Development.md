@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devopsjournal.io/blog/2025/06/07/Copilot-and-productivity
 title: 'GitHub Copilot & Productivity: Rethinking Metrics and Value in Modern Development'
 author: Rob Bos
@@ -21,6 +21,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this insightful post, Rob Bos critiques current productivity metrics in engineering teams—especially with GitHub Copilot in the mix—and offers practical strategies for embracing AI tools for real business value.<!--excerpt_end-->
 

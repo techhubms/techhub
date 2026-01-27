@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/foundry/azure-ai-foundry-mcp-server-may-2025/
 title: Azure AI Foundry MCP Server May 2025 Update - Adding Models, Knowledge & Evaluation
 author: Farzad Sunavala, SeokJin Han, Saumil
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 In this article by Farzad Sunavala, SeokJin Han, and Saumil, the major expansion of Azure AI Foundry MCP Server is discussed, focusing on new features that enhance developer experience. <!--excerpt_end--> The Azure AI Foundry MCP Server has introduced significant updates, incorporating new Models, Knowledge Management, and Evaluation capabilities. This builds on its robust Agent Services, allowing developers to interact seamlessly with Azure AI solutions through natural language interfaces.
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploy-langchain-applications-to-azure-app-service/ba-p/4440640
 title: Deploying LangChain Applications with Azure OpenAI on Azure App Service
 author: TulikaC
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 TulikaC guides readers through deploying a LangChain-powered conversational AI app on Azure App Service, highlighting secure authentication, streaming GPT-4o responses, and rapid deployment techniques.<!--excerpt_end-->
 

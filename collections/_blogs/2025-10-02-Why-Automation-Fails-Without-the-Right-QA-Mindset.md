@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/why-automation-fails-without-the-right-qa-mindset-2/
 title: Why Automation Fails Without the Right QA Mindset
 author: Imtiaz Shaik
@@ -31,6 +31,7 @@ tags:
 - User Experience Testing
 section_names:
 - devops
+primary_section: devops
 ---
 Imtiaz Shaik explores why automation without a quality assurance mindset often fails in DevOps environments, outlining the importance of QA-driven collaboration, adaptable test strategies, and human insight alongside automated pipelines.<!--excerpt_end-->
 

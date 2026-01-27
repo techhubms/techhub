@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=H0SGK1yPHD0
 title: 'ASP.NET Community Standup: Understanding the MCP Authorization Flow'
 author: dotnet
@@ -27,6 +27,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 Daniel Roth and Mike Kistler present a hands-on ASP.NET Community Standup covering the MCP (Model Context Protocol) authorization flow, demonstrating secure request authorization to GitHub MCP servers.<!--excerpt_end-->
 

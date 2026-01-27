@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Pi57sH7iuKY
 title: Visual Studio Code and GitHub Copilot - What's new in 1.107
 author: Fokko Veegens
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In VS Code 1.107 features like the new agent sessions integration with chat, better integration with background agents and the introduction of Claude skills were introduced. This video explains the new features by demoing them. Keep in mind that some features might not be available to you due to enterprise policies or a different pricing plan.<!--excerpt_end-->
 

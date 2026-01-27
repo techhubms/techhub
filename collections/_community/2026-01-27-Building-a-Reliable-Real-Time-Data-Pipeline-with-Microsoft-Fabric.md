@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 NaufalPrawironegoro shares engineering insights on building robust real-time data pipelines with Microsoft Fabric. Learn best practices for data quality, lag management, and operational foundations based on enterprise experiences.<!--excerpt_end-->
 

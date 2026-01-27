@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mjojrz/how_are_you_guys_upskilling/
 title: 'Community Insights: Upskilling Strategies for C# Developers'
 author: Ok_Finish_1661
@@ -26,6 +26,7 @@ tags:
 - YouTube Teaching
 section_names:
 - coding
+primary_section: coding
 ---
 Ok_Finish_1661 and fellow community members discuss diverse strategies for improving C# and .NET skills, recommending books, side projects, teaching, and advanced topic exploration.<!--excerpt_end-->
 

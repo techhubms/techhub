@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-july-2025-feature-summary/
 title: Fabric July 2025 Feature Summary
 author: Microsoft Fabric Blog
@@ -26,6 +26,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ai
 ---
 This article by Microsoft Fabric Blog offers a comprehensive summary of July 2025's new features in Microsoft Fabric, authored by Patrick LeBlanc. Key updates span data science, governance, Power BI, data connectors, and AI-driven integrations with Copilot Studio.<!--excerpt_end-->
 

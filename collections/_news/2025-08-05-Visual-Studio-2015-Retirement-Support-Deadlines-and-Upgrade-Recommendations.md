@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2015-retirement-support-reminder-for-older-versions-of-visual-studio/
 title: 'Visual Studio 2015 Retirement: Support Deadlines and Upgrade Recommendations'
 author: Paul Chapman
@@ -28,6 +28,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Paul Chapman discusses key support deadlines for Visual Studio editions, urging developers to upgrade to Visual Studio 2022 for modern features and security, including GitHub integration and AI-powered coding.<!--excerpt_end-->
 

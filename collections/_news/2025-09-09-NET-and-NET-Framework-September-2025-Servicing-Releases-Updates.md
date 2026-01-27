@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-september-2025-servicing-updates/
 title: .NET and .NET Framework September 2025 Servicing Releases Updates
 author: Tara Overfield, Victor Israel-Bolarinwa
@@ -23,6 +23,7 @@ tags:
 - Windows
 section_names:
 - coding
+primary_section: coding
 ---
 Tara Overfield and Victor Israel-Bolarinwa present a summary of the latest .NET and .NET Framework updates for September 2025, focusing on non-security fixes and resources for developers.<!--excerpt_end-->
 

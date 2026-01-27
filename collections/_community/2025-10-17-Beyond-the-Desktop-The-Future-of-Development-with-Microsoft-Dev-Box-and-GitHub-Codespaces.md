@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/beyond-the-desktop-the-future-of-development-with-microsoft-dev/ba-p/4459483
 title: 'Beyond the Desktop: The Future of Development with Microsoft Dev Box and GitHub Codespaces'
 author: owaino
@@ -28,6 +28,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Owain O. discusses how pairing Microsoft Dev Box with GitHub Codespaces enables a more flexible and productive developer experience, and shares practical cloud-first workflows for modern engineering teams.<!--excerpt_end-->
 

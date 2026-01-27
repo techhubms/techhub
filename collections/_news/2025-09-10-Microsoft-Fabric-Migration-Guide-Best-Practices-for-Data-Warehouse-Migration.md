@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/migrating-to-fabric-data-warehouse-guide-now-available/
 title: 'Microsoft Fabric Migration Guide: Best Practices for Data Warehouse Migration'
 author: Microsoft Fabric Blog
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 The Microsoft Fabric Blog shares a comprehensive migration guide authored by the Microsoft team, delivering practical steps and proven practices for moving data warehouses to Microsoft Fabric. Learn from tooling guidance and upcoming features.<!--excerpt_end-->
 

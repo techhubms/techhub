@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/autogen/microsofts-agentic-frameworks-autogen-and-semantic-kernel/
 title: 'Microsoft’s Agentic Frameworks: AutoGen and Semantic Kernel'
 author: Friederike Niedtner
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Authored by Friederike Niedtner, this article explores the collaboration between Microsoft's Semantic Kernel and AutoGen agentic AI frameworks, detailing their capabilities, integration roadmap, and resources to help developers choose and leverage these powerful tools.<!--excerpt_end-->
 

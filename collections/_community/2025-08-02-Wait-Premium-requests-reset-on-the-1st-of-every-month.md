@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mfg0ta/wait_premium_requests_reset_on_the_1st_of_every/
 title: Wait… Premium requests reset on the 1st of every month??!
 author: livejc
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this Reddit post, livejc discusses the billing and premium request reset policy for GitHub Copilot Pro+, raising concerns about transparency and fairness for users subscribing at different times during the month.<!--excerpt_end-->
 

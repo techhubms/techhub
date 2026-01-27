@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-18-codeql-2-23-7-and-2-23-8-add-security-queries-for-go-and-rust
 title: 'CodeQL 2.23.7 and 2.23.8 Released: Enhanced Security Queries for Go and Rust'
 author: Allison
@@ -26,6 +26,7 @@ tags:
 section_names:
 - devops
 - security
+primary_section: devops
 ---
 Allison details the latest CodeQL 2.23.7 and 2.23.8 releases, adding new security queries for Go and Rust, and highlighting broader improvements across languages for users of GitHub Code Scanning and Code Quality.<!--excerpt_end-->
 

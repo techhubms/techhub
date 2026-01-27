@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=HqqzOZA8Hs0
 title: "The Download: GitHub Copilot Agents, Actions Security, and Vite's npm Milestone"
 author: GitHub
@@ -23,6 +23,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 In this episode, GitHub shares major news for developers, with updates from AI-powered Copilot agents to strengthened security in GitHub Actions. Hosted by GitHub.<!--excerpt_end-->
 

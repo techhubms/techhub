@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=j1xslVn_dMU
 title: 'Copilot Studio Innovations and Roadmap: Building Agents and Future Features (BRK313)'
 author: Microsoft Events
@@ -32,6 +32,7 @@ tags:
 - What’s New in Copilot Studio And Roadmap | BRK313
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events hosts an in-depth Ignite 2025 session featuring Omar Aftab, Erez Altus, and Zac Cadi on Copilot Studio's latest features, agent development tools, and roadmap for enterprise-grade low-code AI solutions.<!--excerpt_end-->
 

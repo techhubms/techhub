@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-logic-apps-ushering-in-the-era-of-multi-agentic-business/ba-p/4452275
 title: 'Azure Logic Apps: Multi-Agentic Business Process Automation Platform Enhancements'
 author: DivSwa
@@ -25,6 +25,7 @@ section_names:
 - azure
 - coding
 - security
+primary_section: ai
 ---
 DivSwa details the evolution of Azure Logic Apps into a platform for building intelligent, multiagent workflows with advanced AI, security, and extensibility. Discover how these enhancements enable collaborative automation for developers.<!--excerpt_end-->
 

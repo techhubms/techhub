@@ -21,6 +21,7 @@ tags:
 - Uncore Power Management
 section_names:
 - azure
+primary_section: azure
 ---
 PulkitMisra highlights how Microsoft Azure and Intel collaborated to improve datacenter power efficiency through adaptive CPU uncore management with Efficiency Latency Control (ELC).<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-how-to-get-started/
 title: Getting Started with GitHub Copilot CLI in the Terminal
 author: Andrea Griffiths
@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Andrea Griffiths guides developers through using GitHub Copilot CLI, explaining how to install, authenticate, and bring powerful AI assistance to the command-line workflow.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=AqM5WLq2VtY
 title: 'Microsoft Foundry Workflows - Pt. 1: Creating a Sequential Multi-Agent Workflow'
 author: Microsoft Developer
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 April from Microsoft Developer presents a hands-on video tutorial introducing sequential multi-agent workflows in Microsoft Foundry, guiding viewers through portal setup, model deployment, and workflow configuration.<!--excerpt_end-->
 

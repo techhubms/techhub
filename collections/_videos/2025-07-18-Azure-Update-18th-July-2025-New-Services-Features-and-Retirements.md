@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=b65KgVInTNo
 title: 'Azure Update – 18th July 2025: New Services, Features & Retirements'
 author: John Savill's Technical Training
@@ -41,6 +41,7 @@ section_names:
 - ml
 - devops
 - security
+primary_section: ai
 ---
 John Savill delivers a comprehensive roundup of the latest Azure platform updates as of July 18th, 2025. This episode covers new Azure services, feature retirements, and key changes relevant for developers and IT professionals.<!--excerpt_end-->
 

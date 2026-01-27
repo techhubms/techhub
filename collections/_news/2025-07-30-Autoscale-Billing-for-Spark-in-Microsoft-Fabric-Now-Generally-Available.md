@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/now-generally-available-autoscale-billing-for-spark-in-microsoft-fabric/
 title: Autoscale Billing for Spark in Microsoft Fabric Now Generally Available
 author: Microsoft Fabric Blog
@@ -18,6 +18,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details the general availability of Autoscale Billing for Spark, enabling serverless, cost-effective workload management.<!--excerpt_end-->
 

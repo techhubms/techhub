@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://khalidabuhakmeh.com/add-ef-core-migrations-to-dotnet-aspire-solutions
 title: Add EF Core Migrations to .NET Aspire Solutions
 author: Khalid Abuhakmeh
@@ -20,6 +20,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 In this detailed guide, Khalid Abuhakmeh walks through bridging the development/runtime gap for managing EF Core migrations within .NET Aspire distributed solutions. The post explores solution structure, code snippets, and essential CLI commands.<!--excerpt_end-->
 

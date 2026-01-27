@@ -144,5 +144,4 @@ public class GenAIBasicsTests(PlaywrightCollectionFixture fixture) : IAsyncLifet
         var rel = await firstLink.GetAttributeAsync("rel");
         rel.Should().Contain("noopener", "Resource links should have rel='noopener' for security");
     }
-
 }

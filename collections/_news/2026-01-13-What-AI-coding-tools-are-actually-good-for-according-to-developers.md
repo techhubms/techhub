@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/generative-ai/what-ai-is-actually-good-for-according-to-developers/
 title: What AI coding tools are actually good for, according to developers
 author: Cassidy Williams
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Cassidy Williams highlights how developer experience and honest feedback drive the evolution of AI coding tools like GitHub Copilot, emphasizing the importance of control and workflow integration.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/welcome-to-fabric-data-warehouse/
 title: 'Introducing Fabric Data Warehouse: Next-Generation Cloud Data Warehousing'
 author: Microsoft Fabric Blog
@@ -26,6 +26,7 @@ section_names:
 - azure
 - coding
 - ml
+primary_section: ml
 ---
 This post from Microsoft Fabric Blog introduces Fabric Data Warehouse and its architectural, performance, and security advances for data professionals and developers, with contributions and insights from the Microsoft Fabric team.<!--excerpt_end-->
 

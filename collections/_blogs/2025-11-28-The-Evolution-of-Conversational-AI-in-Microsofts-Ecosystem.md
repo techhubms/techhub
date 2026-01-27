@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/the-evolution-of-conversational-ai-in-microsofts-ecosystem/
 title: The Evolution of Conversational AI in Microsoft’s Ecosystem
 author: John Edward
@@ -24,6 +24,7 @@ tags:
 - Windows Copilot
 section_names:
 - ai
+primary_section: ai
 ---
 John Edward examines the history and evolution of conversational AI in the Microsoft ecosystem, revealing key developments from Clippy to Copilot Studio and Azure OpenAI Service.<!--excerpt_end-->
 

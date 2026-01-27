@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-04-improved-file-navigation-and-editing-in-the-web-ui
 title: Improved File Navigation and Editing in the GitHub Web UI
 author: Allison
@@ -17,6 +17,7 @@ tags:
 - Web UI
 section_names:
 - devops
+primary_section: devops
 ---
 Allison outlines new GitHub web UI features that simplify file editing and navigation, especially for open source contributors, focusing on branch workflows and improved UI feedback.<!--excerpt_end-->
 

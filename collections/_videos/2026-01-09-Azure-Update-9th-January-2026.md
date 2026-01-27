@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=-yciYjpcG10
 title: Azure Update - 9th January 2026
 author: John Savill's Technical Training
@@ -24,6 +24,7 @@ tags:
 - TTS
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill’s Technical Training delivers an Azure update for January 2026, covering AKS pricing, geo-replication, hardware announcements, deprecations, and ecosystem developments for cloud professionals.<!--excerpt_end-->
 

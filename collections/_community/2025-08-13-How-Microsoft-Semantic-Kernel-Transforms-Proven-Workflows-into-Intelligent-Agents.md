@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/how-microsoft-semantic-kernel-transforms-proven-workflows-into/ba-p/4434731
 title: How Microsoft Semantic Kernel Transforms Proven Workflows into Intelligent Agents
 author: Abdulhamid_Onawole
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Abdulhamid_Onawole demonstrates how developers can leverage Microsoft Semantic Kernel to intelligently orchestrate existing business logic, preserving workflow reliability while adding natural language control.<!--excerpt_end-->
 

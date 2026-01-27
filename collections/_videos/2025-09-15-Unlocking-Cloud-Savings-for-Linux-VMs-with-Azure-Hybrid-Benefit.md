@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Y46PRzzqsMw
 title: Unlocking Cloud Savings for Linux VMs with Azure Hybrid Benefit
 author: Microsoft Developer
@@ -21,6 +21,7 @@ tags:
 - SUSE
 section_names:
 - azure
+primary_section: azure
 ---
 In this Azure Essentials episode, hosts Thomas Maurer and Shreya Bahati explain how to save on cloud costs and modernize infrastructure by migrating Linux VMs to Azure, highlighting practical strategies for licensing, migration, and maximizing savings.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/introducing-planning-in-visual-studio-public-preview/
 title: 'Introducing Planning in Visual Studio: Copilot Agent Mode Public Preview'
 author: Rhea Patel
@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Rhea Patel introduces the Planning feature in Visual Studio's Copilot Agent Mode, enabling developers to structure and track complex coding tasks for a more reliable, transparent workflow.<!--excerpt_end-->
 

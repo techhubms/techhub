@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/upgrade-msvc-improve-c-build-performance-and-refactor-c-code-with-github-copilot/
 title: Enhancing C++ Development in Visual Studio 2026 with GitHub Copilot
 author: Erika Sweet
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Erika Sweet details how Visual Studio 2026 brings new GitHub Copilot capabilities to C++ developers, supporting code refactoring, build performance improvements, and MSVC Build Tools upgrades.<!--excerpt_end-->
 

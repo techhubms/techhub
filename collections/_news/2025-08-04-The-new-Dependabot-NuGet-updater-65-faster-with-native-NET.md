@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/the-new-dependabot-nuget-updater/
 title: 'The new Dependabot NuGet updater: 65% faster with native .NET'
 author: Jamie Magee, Brett Forsgren
@@ -22,6 +22,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 Jamie Magee and Brett Forsgren share how Dependabot’s revamped NuGet updater uses .NET’s own tooling to bring faster, more reliable, and more secure dependency updates to developers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=v1pvCYAWpRE
 title: 'How to Contribute to MCP: Tools, Documentation, Code & More'
 author: Microsoft Developer
@@ -17,6 +17,7 @@ tags:
 - Tools
 section_names:
 - coding
+primary_section: coding
 ---
 Microsoft Developer shares how developers can actively contribute to the MCP (Model Context Protocol) community via code, documentation, and tools. This overview will help developers identify ways to participate and collaborate.<!--excerpt_end-->
 

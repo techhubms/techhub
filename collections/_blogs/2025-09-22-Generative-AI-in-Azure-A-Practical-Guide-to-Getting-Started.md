@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/generative-ai-in-azure-a-practical-guide-to-getting-started/
 title: 'Generative AI in Azure: A Practical Guide to Getting Started'
 author: Dellenny
@@ -29,6 +29,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Dellenny presents a practical overview of using generative AI in Azure, outlining essential services and actionable steps for developers and organizations to harness powerful AI capabilities in their applications.<!--excerpt_end-->
 

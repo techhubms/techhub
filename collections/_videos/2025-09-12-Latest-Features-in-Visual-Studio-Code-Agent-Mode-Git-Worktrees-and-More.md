@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=9qAkd2mGYCo
 title: 'Latest Features in Visual Studio Code: Agent Mode, Git Worktrees, and More'
 author: Visual Studio Code
@@ -19,6 +19,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 James Montemagno showcases the top new features in Visual Studio Code, introducing agent mode, enhanced Git workflows, and AI-powered improvements for developer productivity.<!--excerpt_end-->
 

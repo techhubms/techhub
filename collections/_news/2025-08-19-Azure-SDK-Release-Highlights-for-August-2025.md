@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-august-2025/
 title: Azure SDK Release Highlights for August 2025
 author: Ronnie Geraghty
@@ -29,6 +29,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 Ronnie Geraghty announces the latest Azure SDK updates, highlighting new AI Projects libraries, data movement improvements for .NET, and resource management tools for multiple programming languages. This release is focused on practical features for Azure developers.<!--excerpt_end-->
 

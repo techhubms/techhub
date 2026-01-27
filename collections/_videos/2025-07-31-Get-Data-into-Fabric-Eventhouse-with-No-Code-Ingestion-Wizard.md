@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=pABc7L9hWjU
 title: Get Data into Fabric Eventhouse with No-Code Ingestion Wizard
 author: Microsoft Developer
@@ -31,6 +31,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 In this Data Exposed episode, Microsoft Developer presents how to use the no-code Get Data wizard in Fabric Eventhouse to ingest and manage data efficiently for analytics and real-time processing.<!--excerpt_end-->
 

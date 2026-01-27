@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk63f2/understanding_usage_quotas_what_about_copilot/
 title: Understanding GitHub Copilot Usage Quotas and Agent Mode Requests
 author: ogpterodactyl
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 In this community discussion, ogpterodactyl explores the nuances of GitHub Copilot's request quotas, the impact of using Agent Mode, and how new AI models and actions like co-pilot edits affect billing.<!--excerpt_end-->
 

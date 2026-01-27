@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-observability/dependency-agent-alternatives/m-p/4438361#M4649
 title: Dependency Agent Alternatives
 author: Cory_Matieyshen
@@ -21,6 +21,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Authored by Cory_Matieyshen, this article addresses alternatives to the now-retired Azure Dependency Agent, sharing suggestions and key features of recommended solutions.<!--excerpt_end-->
 

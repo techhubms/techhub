@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code and Liam Hampton present a demo on integrating the GitHub Copilot Engine with Python, showcasing how developers can leverage the Copilot SDK within their projects.<!--excerpt_end-->
 

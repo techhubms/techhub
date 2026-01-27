@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-30-copilot-coding-agent-remembers-context-within-the-same-pull-request
 title: Copilot Coding Agent Now Remembers Context Within Pull Requests
 author: Allison
@@ -22,6 +22,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces a key enhancement to the GitHub Copilot coding agent: it now retains context between sessions in the same pull request, streamlining developer workflows and making automated coding support more efficient.<!--excerpt_end-->
 

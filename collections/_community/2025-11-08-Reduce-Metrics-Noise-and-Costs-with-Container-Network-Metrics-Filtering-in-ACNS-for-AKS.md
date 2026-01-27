@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/cut-the-noise-cost-with-container-network-metrics-filtering-in/ba-p/4468221
 title: Reduce Metrics Noise and Costs with Container Network Metrics Filtering in ACNS for AKS
 author: KhushbuP
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 KhushbuP presents an in-depth look at Container Network Metrics Filtering in ACNS for AKS, empowering teams to control Kubernetes network metrics and reduce cost and noise from unnecessary data.<!--excerpt_end-->
 

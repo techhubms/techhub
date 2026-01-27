@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/top-5-use-cases-for-copilot-studio-in-your-business/
 title: Top 5 Use Cases for Copilot Studio in Your Business
 author: Dellenny
@@ -23,6 +23,7 @@ tags:
 - Workflow Automation
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny breaks down the top business applications for Microsoft Copilot Studio, highlighting how organizations can develop custom copilots to automate support, enhance operations, and drive productivity through AI-driven workflows.<!--excerpt_end-->
 

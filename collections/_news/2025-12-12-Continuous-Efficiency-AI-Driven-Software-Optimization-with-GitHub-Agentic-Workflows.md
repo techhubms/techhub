@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/news-insights/policy-news-and-insights/the-future-of-ai-powered-software-optimization-and-how-it-can-help-your-team/
 title: 'Continuous Efficiency: AI-Driven Software Optimization with GitHub Agentic Workflows'
 author: Paull Young
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Paull Young examines how the GitHub Next and Sustainability teams are shaping the future of software optimization through AI-driven Continuous Efficiency, detailing the use of agentic workflows and collaborative automation for greener, higher-performing codebases.<!--excerpt_end-->
 

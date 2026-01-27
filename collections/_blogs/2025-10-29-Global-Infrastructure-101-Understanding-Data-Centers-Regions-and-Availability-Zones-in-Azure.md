@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/global-infrastructure-101-understanding-data-centers-regions-availability-zones-in-azure/
 title: 'Global Infrastructure 101: Understanding Data Centers, Regions, and Availability Zones in Azure'
 author: Dellenny
@@ -21,6 +21,7 @@ tags:
 - Resource Deployment
 section_names:
 - azure
+primary_section: azure
 ---
 Dellenny provides a clear overview of Azure's infrastructure, explaining how data centers, regions, and availability zones are structured to support resilience and compliance in cloud solutions.<!--excerpt_end-->
 

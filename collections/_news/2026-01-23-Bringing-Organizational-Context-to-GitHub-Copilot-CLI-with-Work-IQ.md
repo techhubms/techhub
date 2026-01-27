@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Satya Nadella introduces Work IQ for GitHub Copilot CLI, enabling developers to bring their team's context and organizational knowledge right into their development environment for more effective AI-powered workflows.<!--excerpt_end-->
 

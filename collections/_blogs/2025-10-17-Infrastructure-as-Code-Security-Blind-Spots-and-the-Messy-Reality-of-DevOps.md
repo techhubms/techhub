@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/infrastructure-as-code-security-blind-spots-and-the-messy-reality-of-devops/
 title: Infrastructure as Code, Security Blind Spots, and the Messy Reality of DevOps
 author: Marcin Wyszynski
@@ -26,6 +26,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Marcin Wyszynski draws on years of infrastructure and reliability engineering experience to dissect the messy reality of DevOps and security, highlighting the challenges with audits, automation, and the human element.<!--excerpt_end-->
 

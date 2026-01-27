@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/ai-agents-are-rewriting-the-app-modernization-playbook/ba-p/4470162
 title: AI Agents Accelerate App Modernization with GitHub Copilot and Azure
 author: Scott Hunter
@@ -45,6 +45,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Scott Hunter explains how AI agents, GitHub Copilot, and Azure unlock rapid, automated modernization for legacy applications, announcing new features and technical integrations at Ignite.<!--excerpt_end-->
 

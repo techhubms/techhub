@@ -24,6 +24,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 Tim Anderson highlights how attackers weaponize VS Code's tasks.json configuration to execute malicious code, detailing the risks for developers and the security implications.<!--excerpt_end-->
 

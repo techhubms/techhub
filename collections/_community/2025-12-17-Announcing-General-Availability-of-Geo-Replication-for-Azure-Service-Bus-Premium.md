@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/announcing-general-availability-of-geo-replication-for-azure/ba-p/4413164
 title: Announcing General Availability of Geo-Replication for Azure Service Bus Premium
 author: EldertGrootenboer
@@ -22,6 +22,7 @@ tags:
 - Synchronous Replication
 section_names:
 - azure
+primary_section: azure
 ---
 Eldert Grootenboer announces the GA release of Geo-Replication for Azure Service Bus Premium, outlining technical details on replication modes, region promotion, and disaster recovery approaches.<!--excerpt_end-->
 

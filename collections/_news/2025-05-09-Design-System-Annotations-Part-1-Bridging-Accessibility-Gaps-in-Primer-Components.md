@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/engineering/user-experience/design-system-annotations-part-1-how-accessibility-gets-left-out-of-components/
 title: 'Design System Annotations, Part 1: Bridging Accessibility Gaps in Primer Components'
 author: Jan Maarten
@@ -20,6 +20,7 @@ tags:
 - Web Standards
 section_names:
 - devops
+primary_section: devops
 ---
 Authored by Jan Maarten, this article discusses how GitHub’s Accessibility Design team developed a new system of annotations to address persistent accessibility challenges in design system components and streamline the collaborative product development process.<!--excerpt_end-->
 

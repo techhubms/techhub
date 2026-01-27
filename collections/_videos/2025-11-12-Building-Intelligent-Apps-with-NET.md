@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=N0DzWMkEnzk
 title: Building Intelligent Apps with .NET
 author: dotnet
@@ -27,6 +27,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Hosted by dotnet, this session guides developers on building intelligent apps with .NET, leveraging Microsoft.Extensions.AI and unified AI abstractions for features like semantic search and large language model integration.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/playerzero-adds-ability-to-simulate-code-to-ai-platform/?utm_source=rss&utm_medium=rss&utm_campaign=playerzero-adds-ability-to-simulate-code-to-ai-platform
 title: PlayerZero Introduces AI-Driven Code Simulation with CodeSim
 author: Mike Vizard
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - devops
+primary_section: ai
 ---
 Mike Vizard discusses PlayerZero's new CodeSim feature, which uses AI to simulate and analyze code, empowering DevOps teams to proactively address challenges in AI-driven software development.<!--excerpt_end-->
 

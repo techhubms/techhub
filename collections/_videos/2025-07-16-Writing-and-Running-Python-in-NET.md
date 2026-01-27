@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=6N2oFh6YTTc
 title: Writing and Running Python in .NET
 author: Nick Chapsas
@@ -19,6 +19,7 @@ tags:
 section_names:
 - coding
 - ml
+primary_section: ml
 ---
 Nick Chapsas guides viewers through integrating Python with .NET using Python.NET, providing practical steps for C# developers to leverage Python code.<!--excerpt_end-->
 

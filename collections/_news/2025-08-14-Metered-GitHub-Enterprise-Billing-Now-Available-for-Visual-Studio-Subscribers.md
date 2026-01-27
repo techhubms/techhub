@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-14-introducing-metered-github-enterprise-billing-for-visual-studio-subscriptions-with-github-enterprise
 title: Metered GitHub Enterprise Billing Now Available for Visual Studio Subscribers
 author: Allison
@@ -19,6 +19,7 @@ tags:
 - Visual Studio Subscriptions
 section_names:
 - devops
+primary_section: devops
 ---
 Allison announces support for metered, usage-based billing for GitHub Enterprise through Visual Studio subscriptions, offering administrators new automation APIs and improved compliance tools.<!--excerpt_end-->
 

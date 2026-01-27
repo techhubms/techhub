@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/copilot-for-sysadmins-automating-powershell-script-generation-from-plain-english-prompts/
 title: Automating PowerShell Scripts with GitHub Copilot Chat for SysAdmins
 author: Dellenny
@@ -26,6 +26,7 @@ section_names:
 - azure
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny demonstrates how sysadmins can use GitHub Copilot Chat to generate and refine PowerShell scripts from natural language prompts, enhancing automation in Microsoft 365 and Azure tasks.<!--excerpt_end-->
 

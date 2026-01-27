@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/excel/excel-at-40-week-1-days-1-3/m-p/4443674#M254078
 title: 'Excel at 40 Week 1: Days 1–3'
 author: OlufemiO
@@ -20,6 +20,7 @@ tags:
 - Timeline
 section_names:
 - ml
+primary_section: ml
 ---
 OlufemiO looks back on four decades of Excel, sharing technical lessons and practical tips from its early days through modern analytics and data integration with Microsoft Fabric and Power BI.<!--excerpt_end-->
 

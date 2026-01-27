@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-3-client-side-multi-agent-orchestration-on-azure-app/ba-p/4466728
 title: Client-Side Multi-Agent Orchestration with ChatClientAgent on Azure App Service
 author: jordanselig
@@ -24,6 +24,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 jordanselig explains how developers can build client-side multi-agent systems on Azure App Service using ChatClientAgent and the Microsoft Agent Framework, sharing architecture insights, code samples, and decision factors.<!--excerpt_end-->
 

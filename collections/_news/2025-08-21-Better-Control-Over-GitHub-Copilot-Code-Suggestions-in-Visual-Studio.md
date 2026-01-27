@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/visualstudio/better-control-over-your-copilot-code-suggestions/
 title: Better Control Over GitHub Copilot Code Suggestions in Visual Studio
 author: Simona Liao
@@ -19,6 +19,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Simona Liao presents updates that give developers more nuanced control over GitHub Copilot suggestions in Visual Studio. The article covers new options, shortcuts, and configurations improving focus and customization.<!--excerpt_end-->
 

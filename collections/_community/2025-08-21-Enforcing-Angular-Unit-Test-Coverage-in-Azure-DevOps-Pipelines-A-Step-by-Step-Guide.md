@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enforcing-angular-unit-test-coverage-in-azure-devops-pipelines-a/ba-p/4446485
 title: 'Enforcing Angular Unit Test Coverage in Azure DevOps Pipelines: A Step-by-Step Guide'
 author: Sakshi_Gupta22
@@ -24,6 +24,7 @@ section_names:
 - azure
 - coding
 - devops
+primary_section: coding
 ---
 Sakshi_Gupta22 provides a step-by-step guide to configuring Azure DevOps pipelines for Angular projects, ensuring 70%+ unit test coverage with automated reporting and quality gates for sustainable delivery.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=jxHVy6y82pI
 title: 'Agentic AI Drives Innovation in Financial Services: Insights from Microsoft Ignite Panel'
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 - Unified Experience Strategy
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events brings together financial industry leaders at Ignite 2025 to discuss the real-world impact of agentic AI, including customer experience enhancements, cloud migration strategies, and the deployment of Microsoft Copilot.<!--excerpt_end-->
 

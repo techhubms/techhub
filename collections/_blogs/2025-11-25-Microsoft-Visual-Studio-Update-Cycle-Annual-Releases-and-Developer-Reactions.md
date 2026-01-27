@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devclass.com/2025/11/25/microsoft-visual-studio-shifts-to-annual-releases-raising-cost-concerns/
 title: 'Microsoft Visual Studio Update Cycle: Annual Releases and Developer Reactions'
 author: Tim Anderson
@@ -23,6 +23,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Tim Anderson details Microsoft’s shift to annual Visual Studio releases, monthly updates, and the impact on developers' costs and workflows, alongside community feedback on licensing and usability.<!--excerpt_end-->
 

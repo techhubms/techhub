@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/GithubCopilot/comments/1lwosq7/why_i_changed_cursor_to_copilot_and_it_turned_out/
 title: Why I changed Cursor to Copilot and it turned out to be the best choice
 author: Cobuter_Man
@@ -21,6 +21,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Author Cobuter_Man, creator of APM, reflects on their year-long experience using AI-driven code editors. After switching from Cursor to VS Code with GitHub Copilot, they critique Cursor's opaque billing practices and praise Copilot's transparent limits and performance. The article discusses open-source AI code assistants, the rise of alternatives like Claude Code, and the importance of fair policies and user trust.<!--excerpt_end-->
 

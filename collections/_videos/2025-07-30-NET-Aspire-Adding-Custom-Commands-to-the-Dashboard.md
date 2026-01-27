@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=idXn50wKqhY
 title: .NET Aspire – Adding Custom Commands to the Dashboard
 author: dotnet
@@ -17,6 +17,7 @@ tags:
 - Team Collaboration
 section_names:
 - coding
+primary_section: coding
 ---
 In this video, Fritz guides viewers through the process of adding custom commands to the .NET Aspire dashboard, focusing on developer productivity and environment configuration tasks.<!--excerpt_end-->
 

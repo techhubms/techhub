@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-13-added-last_authenticated_at-to-the-copilot-user-management-api
 title: GitHub Copilot User Management API Adds last_authenticated_at Field
 author: Allison
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison reports on a new enhancement to the GitHub Copilot user management API, introducing a last_authenticated_at timestamp for tracking user authentication directly through the API.<!--excerpt_end-->
 

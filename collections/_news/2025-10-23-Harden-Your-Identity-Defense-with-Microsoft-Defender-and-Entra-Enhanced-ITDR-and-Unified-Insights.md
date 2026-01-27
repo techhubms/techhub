@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/23/harden-your-identity-defense-with-improved-protection-deeper-correlation-and-richer-context/
 title: 'Harden Your Identity Defense with Microsoft Defender and Entra: Enhanced ITDR and Unified Insights'
 author: Sharon Ben Yosef
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Sharon Ben Yosef outlines how Microsoft is strengthening enterprise identity defense with improved ITDR, including the new Defender for Identity unified sensor, enriched insights, and seamless integration with Entra ID for security teams.<!--excerpt_end-->
 

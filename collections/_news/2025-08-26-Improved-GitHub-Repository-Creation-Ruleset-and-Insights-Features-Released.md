@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-08-26-improved-repository-creation-generally-available-plus-ruleset-insights-improvements
 title: Improved GitHub Repository Creation, Ruleset, and Insights Features Released
 author: Allison
@@ -17,6 +17,7 @@ tags:
 - Workflow Improvements
 section_names:
 - devops
+primary_section: devops
 ---
 Allison highlights several GitHub improvements: a faster, more guided repository creation workflow, new options for merge queue bots in branch rulesets, and more accessible repository commit insights.<!--excerpt_end-->
 

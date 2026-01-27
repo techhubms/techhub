@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-registry-repository-permissions-with-attribute/ba-p/4467182
 title: Azure Container Registry Now Supports Entra ABAC for Repository and Namespace Permissions
 author: johshmsft
@@ -24,6 +24,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 johshmsft outlines the new support for Microsoft Entra ABAC in Azure Container Registry, showing how teams can enforce least-privilege boundaries for repositories and namespaces with fine-grained security controls.<!--excerpt_end-->
 

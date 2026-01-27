@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://weblog.west-wind.com/posts/2025/May/30/Configuring-MicrosoftAIExtension-with-multiple-providers
 title: 'Configuring Microsoft.Extensions.AI with Multiple Providers: OpenAI, Azure OpenAI, and Ollama'
 author: Rick Strahl
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - azure
+primary_section: ai
 ---
 In this comprehensive guide, Rick Strahl explores how to configure Microsoft.Extensions.AI with multiple providers such as OpenAI, Azure OpenAI, and Ollama, detailing the setup process and sharing practical code examples for streaming completions in .NET applications.<!--excerpt_end-->
 

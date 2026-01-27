@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 AbhinavPremsekhar introduces new reporting features in Playwright Workspaces, enabling streamlined test report access, artifact control, and Azure-integrated debugging for development teams.<!--excerpt_end-->
 

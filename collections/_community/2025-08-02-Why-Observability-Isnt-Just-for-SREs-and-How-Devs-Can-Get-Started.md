@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/devops/comments/1mfsvq8/why_observability_isnt_just_for_sres_and_how_devs/
 title: Why Observability Isn’t Just for SREs (and How Devs Can Get Started)
 author: elizObserves
@@ -18,6 +18,7 @@ tags:
 - Tracing
 section_names:
 - devops
+primary_section: devops
 ---
 Authored by elizObserves, this article advocates for making observability a core discipline for developers, not just SREs, and offers a practical entry point for those new to the topic.<!--excerpt_end-->
 

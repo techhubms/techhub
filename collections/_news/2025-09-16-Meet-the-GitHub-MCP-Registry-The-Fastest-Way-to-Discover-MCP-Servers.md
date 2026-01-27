@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/meet-the-github-mcp-registry-the-fastest-way-to-discover-mcp-servers/
 title: 'Meet the GitHub MCP Registry: The Fastest Way to Discover MCP Servers'
 author: Toby Padilla
@@ -24,6 +24,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Toby Padilla provides an overview of the GitHub MCP Registry, covering its role in simplifying discovery and integration of MCP servers for developers and AI agents working with platforms like GitHub Copilot.<!--excerpt_end-->
 

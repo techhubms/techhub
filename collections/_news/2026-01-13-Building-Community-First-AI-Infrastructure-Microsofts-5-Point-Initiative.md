@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/on-the-issues/2026/01/13/community-first-ai-infrastructure/
 title: 'Building Community-First AI Infrastructure: Microsoft’s 5-Point Initiative'
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke outlines Microsoft’s 5-point plan for building community-focused AI infrastructure, highlighting commitments to responsible datacenter expansion, sustainability, local economic support, and widespread AI education.<!--excerpt_end-->
 

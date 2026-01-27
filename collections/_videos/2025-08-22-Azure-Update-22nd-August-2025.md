@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=_rPU590e1xA
 title: Azure Update - 22nd August 2025
 author: John Savill's Technical Training
@@ -27,6 +27,7 @@ tags:
 - Microsoft Sentinel
 section_names:
 - azure
+primary_section: azure
 ---
 John Savill's Technical Training delivers a round-up of recent Azure updates, covering a variety of new features and changes. This summary highlights the most impactful items relevant to Azure practitioners.<!--excerpt_end-->
 

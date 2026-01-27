@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/creating-custom-plugins-and-connectors-in-copilot-studio/
 title: Creating Custom Plugins and Connectors in Copilot Studio
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 - Workflow
 section_names:
 - ai
+primary_section: ai
 ---
 Dellenny explains how to develop custom plugins and connectors in Copilot Studio, guiding developers through schema definition, integration best practices, and secure deployment of AI-driven copilots.<!--excerpt_end-->
 

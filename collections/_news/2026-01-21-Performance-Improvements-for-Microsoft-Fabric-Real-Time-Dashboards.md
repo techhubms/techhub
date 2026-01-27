@@ -17,6 +17,7 @@ tags:
 - User Experience
 section_names:
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog discusses new performance enhancements to Real-Time Dashboards, highlighting real-world improvements in speed and responsiveness for users working with live analytics.<!--excerpt_end-->
 

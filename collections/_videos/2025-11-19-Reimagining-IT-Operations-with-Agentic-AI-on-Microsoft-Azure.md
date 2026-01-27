@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=LO1fQDWt2iI
 title: Reimagining IT Operations with Agentic AI on Microsoft Azure
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events presents Deepraj Khot discussing TCS Autonomous Operations (TAO), an agentic AI solution on Microsoft Azure, demonstrating automated incident triage and resolution for IT operations.<!--excerpt_end-->
 

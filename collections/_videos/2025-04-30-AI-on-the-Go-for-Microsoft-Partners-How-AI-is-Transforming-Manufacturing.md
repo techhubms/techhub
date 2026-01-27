@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=aYsx-VibHW4
 title: 'AI on the Go for Microsoft Partners: How AI is Transforming Manufacturing'
 author: Microsoft Cloud
@@ -21,6 +21,7 @@ tags:
 - Partner Ecosystem
 section_names:
 - ai
+primary_section: ai
 ---
 In this episode of 'AI on the Go for Microsoft Partners,' Microsoft Cloud's Cyril Belikoff interviews CVP Dayan Rodriguez about the latest AI trends shaping the manufacturing industry.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/github-copilot/building-an-agentic-memory-system-for-github-copilot/
 title: Building an Agentic Memory System for GitHub Copilot
 author: Tiferet Gazit
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Tiferet Gazit explores how GitHub Copilot's new agentic memory system empowers multiple Copilot agents—coding, CLI, and code review—to share validated knowledge across a repository, streamlining developer workflows.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/gpt-5-will-it-rag/ba-p/4442676
 title: Evaluating GPT-5 Models for RAG on Azure AI Foundry
 author: Pamela_Fox
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Pamela Fox evaluates the performance of GPT-5 models in Retrieval-Augmented Generation use cases on Azure AI Foundry, providing practical insights on accuracy, relevance, and developer experience for AI practitioners.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/2025/11/17/levi-strauss-co-partners-with-microsoft-to-develop-next-gen-superagent/
 title: Levi Strauss & Co. Partners with Microsoft to Develop Next-Gen Superagent
 author: stclarke
@@ -28,6 +28,7 @@ section_names:
 - coding
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 stclarke reports on the strategic partnership between Levi Strauss & Co. and Microsoft, focusing on the deployment of advanced AI platforms and development tools to modernize retail operations and empower employees.<!--excerpt_end-->
 

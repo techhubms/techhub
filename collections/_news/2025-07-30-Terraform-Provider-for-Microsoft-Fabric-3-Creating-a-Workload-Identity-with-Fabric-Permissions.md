@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/terraform-provider-for-microsoft-fabric-3-creating-a-workload-identity-with-fabric-permissions/
 title: 'Terraform Provider for Microsoft Fabric: #3 Creating a Workload Identity with Fabric Permissions'
 author: Microsoft Fabric Blog
@@ -19,6 +19,7 @@ section_names:
 - devops
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog explores how to create a workload identity with proper Fabric permissions using Terraform, building upon earlier configuration and admin resource setup advice.<!--excerpt_end-->
 

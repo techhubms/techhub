@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=snnULnTWcNM
 title: Performance Improvements in .NET 10
 author: dotnet
@@ -26,6 +26,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 dotnet presents a deep dive into .NET 10's performance improvements, led by Stephen Toub, focusing on key optimizations in runtime, compilers, and libraries that benefit developers across application domains.<!--excerpt_end-->
 

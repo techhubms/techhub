@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=PvdptUZ3XeU
 title: Responsible Vibe Coding with GitHub Copilot and Model Context Protocol
 author: GitHub
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Rizel Scarlett from GitHub explains practical techniques for responsible AI coding with GitHub Copilot and MCP, focusing on safer prompt engineering and developer empowerment.<!--excerpt_end-->
 

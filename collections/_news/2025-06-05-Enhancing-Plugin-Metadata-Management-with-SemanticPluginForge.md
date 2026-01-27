@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/semantic-kernel/enhancing-plugin-metadata-management-with-semanticpluginforge/
 title: Enhancing Plugin Metadata Management with SemanticPluginForge
 author: Likhan Siddiquee
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 Author Likhan Siddiquee details how SemanticPluginForge offers developers dynamic and flexible metadata management for plugins in the Semantic Kernel ecosystem. The post explains traditional metadata challenges and provides practical steps for integrating the tool into modern .NET development workflows.<!--excerpt_end-->
 

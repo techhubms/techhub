@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=1l6bTK5iyoE
 title: On .NET Live | Supercharge your SQL Development with Modern .NET
 author: dotnet
@@ -18,6 +18,7 @@ tags:
 section_names:
 - coding
 - ml
+primary_section: ml
 ---
 In this video, Erik Ejlskov Jensen demonstrates how developers can leverage .NET tools and modern workflows to improve SQL Server development across platforms.<!--excerpt_end-->
 

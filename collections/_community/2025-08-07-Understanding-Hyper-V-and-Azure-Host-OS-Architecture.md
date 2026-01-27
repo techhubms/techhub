@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/AZURE/comments/1mjo656/is_hyperv_running_on_azure_host_os_or_azure_host/
 title: Understanding Hyper-V and Azure Host OS Architecture
 author: mogeko233
@@ -22,6 +22,7 @@ tags:
 - X86 Virtualization
 section_names:
 - azure
+primary_section: azure
 ---
 mogeko233 breaks down the architecture of Microsoft Azure by explaining the relationship between Hyper-V, the Azure Host OS, and virtualization concepts, referencing both community input and official documentation.<!--excerpt_end-->
 

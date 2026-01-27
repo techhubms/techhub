@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/21/the-new-microsoft-security-store-unites-partners-and-innovation/
 title: 'The New Microsoft Security Store: Unifying Partners and Innovation for Stronger Security'
 author: Dorothy Li
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Dorothy Li explores how the Microsoft Security Store brings together curated security solutions and AI agents from Microsoft and partners, streamlining discovery, purchase, and deployment for organizations looking to strengthen their security posture.<!--excerpt_end-->
 

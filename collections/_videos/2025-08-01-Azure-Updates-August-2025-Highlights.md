@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=-8sH0QFhvkQ
 title: 'Azure Updates: August 2025 Highlights'
 author: John Savill's Technical Training
@@ -33,6 +33,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 John Savill provides a comprehensive Azure update for August 2025, summarizing new features, major changes to data and security services, and enhancements for cloud professionals.<!--excerpt_end-->
 

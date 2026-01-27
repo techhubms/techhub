@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://code.visualstudio.com/updates/v1_106
 title: 'Visual Studio Code October 2025 Release (v1.106): New AI Agents, Copilot Chat, Terminal IntelliSense & More'
 author: Visual Studio Code Team
@@ -25,6 +25,7 @@ section_names:
 - coding
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 The Visual Studio Code Team details the October 2025 (v1.106) release, featuring major upgrades to Copilot Chat, the AI agent platform, coding tools, terminal experiences, and extensibility for developers.<!--excerpt_end-->
 

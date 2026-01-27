@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=bKFp2w2O6fM
 title: Generating Agent Code Using AI Toolkit and GitHub Copilot
 author: Microsoft Developer
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Microsoft Developer, featuring April, demonstrates how to generate and run agent code using AI Toolkit and GitHub Copilot, providing actionable steps and environment setup guidance for developers.<!--excerpt_end-->
 

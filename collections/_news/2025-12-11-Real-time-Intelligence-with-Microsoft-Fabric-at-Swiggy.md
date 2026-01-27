@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/asia/features/real-time-intelligence-how-indias-swiggy-serves-millions-with-microsoft-fabric/
 title: Real-time Intelligence with Microsoft Fabric at Swiggy
 author: stclarke
@@ -16,6 +16,7 @@ tags:
 section_names:
 - ai
 - ml
+primary_section: ai
 ---
 Chen May Yee explores Swiggy’s use of Microsoft Fabric for delivering real-time intelligence, emphasizing the adoption of AI and data engineering to serve millions of users.<!--excerpt_end-->
 

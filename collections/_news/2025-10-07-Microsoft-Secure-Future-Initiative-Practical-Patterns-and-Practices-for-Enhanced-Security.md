@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/security/blog/2025/10/07/new-microsoft-secure-future-initiative-sfi-patterns-and-practices-practical-guides-to-strengthen-security/
 title: 'Microsoft Secure Future Initiative: Practical Patterns and Practices for Enhanced Security'
 author: stclarke
@@ -23,6 +23,7 @@ tags:
 - Zero Trust
 section_names:
 - security
+primary_section: security
 ---
 stclarke outlines new practical patterns and practices from the Microsoft Secure Future Initiative, offering actionable advice for technical teams to strengthen organizational security across networks, engineering systems, and threat monitoring.<!--excerpt_end-->
 

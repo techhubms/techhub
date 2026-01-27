@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/microsoft/comments/1m9a3lz/do_you_have_the_enable_copilot_checkbox_in_your/
 title: Missing 'Enable Copilot' Checkbox in Word and PowerPoint Despite M365 Copilot License
 author: LynxV1
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 LynxV1 discusses a missing 'Enable Copilot' checkbox in Word and PowerPoint, despite holding the correct license, and highlights conflicting information from Microsoft’s documentation and support.<!--excerpt_end-->
 

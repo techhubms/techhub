@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-12-18-copilot-code-review-preview-features-now-supported-in-github-enterprise-cloud-with-data-residency
 title: GitHub Copilot Code Review Preview Features Now Available in Enterprise Cloud with Data Residency
 author: Allison
@@ -20,6 +20,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison reports on GitHub Copilot code review preview features now supported in GitHub Enterprise Cloud with data residency, outlining enhanced agentic capabilities for pull request reviews.<!--excerpt_end-->
 

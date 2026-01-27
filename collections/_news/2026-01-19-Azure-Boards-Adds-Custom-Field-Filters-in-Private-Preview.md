@@ -20,6 +20,7 @@ tags:
 section_names:
 - azure
 - devops
+primary_section: azure
 ---
 Dan Hellem introduces an Azure Boards private preview that enables filtering by additional custom fields on backlog and Kanban boards, offering teams more control and flexibility.<!--excerpt_end-->
 

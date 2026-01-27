@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://medium.com/@davidfowl/intent-vs-mechanics-the-power-of-abstraction-in-aspire-d14a33aab6bb?source=rss-8163234c98f0------2
 title: 'Intent vs. Mechanics: The Power of Abstraction in Aspire'
 author: David Fowler
@@ -26,6 +26,7 @@ section_names:
 - coding
 - devops
 - security
+primary_section: coding
 ---
 In this article, David Fowler explores how Aspire simplifies application development by abstracting environment-specific details, allowing developers to focus on intent, especially when managing secrets via Azure Key Vault.<!--excerpt_end-->
 

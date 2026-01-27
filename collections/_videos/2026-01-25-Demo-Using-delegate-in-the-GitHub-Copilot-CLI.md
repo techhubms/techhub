@@ -25,6 +25,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a demo featuring the /delegate command in the Copilot CLI. Hosted by @shanselman, this video explains how developers can leverage AI-driven agents to automate upgrades and testing while maintaining control of their workflow.<!--excerpt_end-->
 

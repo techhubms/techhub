@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/simplifying-outbound-connectivity-troubleshooting-in-aks-with/ba-p/4441200
 title: Simplifying Outbound Connectivity Troubleshooting in AKS with Connectivity Analysis (Preview)
 author: juliayin
@@ -31,6 +31,7 @@ tags:
 - VMSS
 section_names:
 - azure
+primary_section: azure
 ---
 Author juliayin presents an overview of the new Connectivity Analysis (Preview) tool for Azure Kubernetes Service, explaining how it simplifies network troubleshooting for AKS outbound connections.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/how-to-activate-and-use-the-scrum-assistant-agent-in-github-copilot/
 title: How to Activate and Use the Scrum Assistant Agent in GitHub Copilot
 author: Dellenny
@@ -27,6 +27,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Dellenny details how GitHub Copilot’s Scrum Assistant agent can automate and enhance Agile ceremonies, guiding development teams through daily standups, sprint planning, and more with AI-driven workflow support.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=Bkn78klGhtc
 title: AI-Powered Testing in Visual Studio
 author: dotnet
@@ -25,6 +25,7 @@ tags:
 section_names:
 - ai
 - coding
+primary_section: ai
 ---
 dotnet showcases how AI-enhanced features in Visual Studio assist developers in writing better tests, improving coverage, and automating quality assurance processes.<!--excerpt_end-->
 

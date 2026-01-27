@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=_rfg-YKhDVE
 title: 'Microsoft Ignite: Agents at Work and Copilot Studio for Business Process Automation'
 author: Microsoft Events
@@ -29,6 +29,7 @@ tags:
 - Security Integration
 section_names:
 - ai
+primary_section: ai
 ---
 Microsoft Events present an in-depth Ignite session with Bryan Goode, Dan Lewis, Aghogho Biakolo, and Kendra Springer showcasing Agent Builder and Copilot Studio for AI-driven business automation.<!--excerpt_end-->
 

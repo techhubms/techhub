@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blogs.microsoft.com/blog/2025/11/11/bridging-the-ai-divide-how-frontier-firms-are-transforming-business/
 title: How Frontier Firms Drive Business Transformation with Microsoft AI
 author: stclarke
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 stclarke reviews IDC’s 2025 study, commissioned by Microsoft, on how 'Frontier firms' use Microsoft’s AI technologies—like Azure AI and Copilot Studio—to achieve business transformation, compete strategically, and overcome key scaling challenges.<!--excerpt_end-->
 

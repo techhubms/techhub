@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/enterprise-software/collaboration/level-up-design-to-code-collaboration-with-githubs-open-source-annotation-toolkit/
 title: Enhance Design-to-Code Collaboration with GitHub's Annotation Toolkit
 author: Andrea Griffiths
@@ -25,6 +25,7 @@ tags:
 section_names:
 - coding
 - devops
+primary_section: coding
 ---
 Andrea Griffiths presents how GitHub’s Annotation Toolkit enables seamless design-to-code collaboration in Figma, helping developers and designers address accessibility and documentation challenges.<!--excerpt_end-->
 

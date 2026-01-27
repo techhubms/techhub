@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=pqc2g13vG0w
 title: Optimizing Cloud and AI ROI with Microsoft Marketplace Strategies
 author: Microsoft Events
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Matt Hillegass and Rajesh Ramankutty from Microsoft share practical approaches for maximizing cloud and AI return on investment through Microsoft Marketplace, focusing on governance, cost management, and rapid solution deployment.<!--excerpt_end-->
 

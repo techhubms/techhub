@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/unlocking-the-full-power-of-copilot-code-review-master-your-instructions-files/
 title: 'Mastering Copilot Code Review: Writing Effective Instructions Files'
 author: Ria Gopu
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Ria Gopu delivers a detailed guide to creating and optimizing instructions files for GitHub Copilot code review, complete with structure templates, practical tips, and prompts for developers.<!--excerpt_end-->
 

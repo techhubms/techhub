@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/adaptive-target-file-size-management-in-fabric-spark/
 title: Adaptive Target File Size Management in Fabric Spark
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog presents a technical overview of Adaptive Target File Size Management in Fabric Spark. The article, authored by Microsoft, details how these new features help data teams optimize performance and maintenance in Spark lakehouses automatically.<!--excerpt_end-->
 

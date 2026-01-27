@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=DcIlavh44bM
 title: Rubber Duck Thursdays - Build for the Love of Code
 author: GitHub
@@ -16,6 +16,7 @@ tags:
 - Streaming
 section_names:
 - coding
+primary_section: coding
 ---
 GitHub invites viewers to Rubber Duck Thursdays, a relaxed live coding stream where GitHub staff explore new coding ideas and build projects together.<!--excerpt_end-->
 

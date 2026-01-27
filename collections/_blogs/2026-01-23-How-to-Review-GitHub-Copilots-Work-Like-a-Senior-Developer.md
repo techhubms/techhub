@@ -21,6 +21,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Randy Pagels outlines actionable strategies for reviewing GitHub Copilot's code output with a senior developer's mindset, emphasizing intent, assumptions, and iterative improvement.<!--excerpt_end-->
 

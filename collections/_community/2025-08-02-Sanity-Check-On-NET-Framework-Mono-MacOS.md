@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/dotnet/comments/1mfy7yk/sanity_check_on_net_framework_mono_macos/
 title: Sanity Check On .NET Framework / Mono / MacOS
 author: tparikka
@@ -18,6 +18,7 @@ tags:
 - Unit Testing
 section_names:
 - coding
+primary_section: coding
 ---
 Author tparikka discusses the challenges of building and testing .NET Framework 4.8 services on MacOS using Mono, highlighting assembly compatibility issues.<!--excerpt_end-->
 

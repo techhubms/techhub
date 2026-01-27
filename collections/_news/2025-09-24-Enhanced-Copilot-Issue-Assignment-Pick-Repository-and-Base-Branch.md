@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-23-pick-the-repository-and-base-branch-when-assigning-issues-to-copilot
 title: 'Enhanced Copilot Issue Assignment: Pick Repository and Base Branch'
 author: Allison
@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces new options for enhancing GitHub Copilot assignments. Developers can now specify the repository, select the starting branch, and provide extra instructions when assigning issues to Copilot coding agents.<!--excerpt_end-->
 

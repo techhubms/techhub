@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=w1N_XEtpu4E
 title: Practical Introduction to Building Remote MCP Servers
 author: Microsoft Developer
@@ -27,6 +27,7 @@ section_names:
 - coding
 - devops
 - azure
+primary_section: ai
 ---
 Microsoft Developer presents a hands-on guide, with Toby P. and Joe Z. demonstrating how to build remote MCP servers and integrate MCP functionalities using open-source SDKs.<!--excerpt_end-->
 

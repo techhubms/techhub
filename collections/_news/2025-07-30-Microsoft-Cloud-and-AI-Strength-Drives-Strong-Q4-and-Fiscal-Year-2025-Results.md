@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://news.microsoft.com/source/2025/07/30/microsoft-cloud-and-ai-strength-fuels-fourth-quarter-results/
 title: Microsoft Cloud and AI Strength Drives Strong Q4 and Fiscal Year 2025 Results
 author: stclarke
@@ -19,6 +19,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Authored by stclarke, this article reviews Microsoft's Q4 and fiscal year 2025 financials, spotlighting the key role of cloud and AI services in delivering strong company performance.<!--excerpt_end-->
 

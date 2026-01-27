@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-ensure-seamless-data-recovery-and-deployment-in-microsoft/ba-p/4478395
 title: How to Ensure Seamless Data Recovery and Deployment in Microsoft Azure
 author: ravimodi
@@ -24,6 +24,7 @@ section_names:
 - azure
 - devops
 - ml
+primary_section: ml
 ---
 ravimodi demonstrates how teams can automate Azure Cosmos DB backups and enable instant data restoration before deployments using Azure Databricks, significantly improving agility and reducing downtime.<!--excerpt_end-->
 

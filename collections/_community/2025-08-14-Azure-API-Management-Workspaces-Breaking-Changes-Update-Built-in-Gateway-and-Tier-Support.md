@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/update-to-api-management-workspaces-breaking-changes-built-in/ba-p/4443668
 title: 'Azure API Management Workspaces Breaking Changes Update: Built-in Gateway & Tier Support'
 author: budzynski
@@ -22,6 +22,7 @@ tags:
 - Workspaces
 section_names:
 - azure
+primary_section: azure
 ---
 budzynski outlines the latest adjustments to Azure API Management workspace support, specifically regarding built-in gateway functionality and tier-based limitations. This update is crucial for developers and architects managing APIs across various Azure service tiers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-10-28-github-copilot-for-linear-available-in-public-preview
 title: GitHub Copilot Coding Agent for Linear Enters Public Preview
 author: Allison
@@ -21,6 +21,7 @@ section_names:
 - ai
 - devops
 - github-copilot
+primary_section: github-copilot
 ---
 Allison introduces the GitHub Copilot coding agent for Linear, now in public preview, outlining how developers can automate issue resolution and code contributions using AI-powered autonomous agents.<!--excerpt_end-->
 

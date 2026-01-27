@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=boFoMk9dEVk
 title: 'Building Accessible and Responsible AI: Agentic Systems at Microsoft Ignite BRK402'
 author: Microsoft Events
@@ -23,6 +23,7 @@ tags:
 - Visual Accessibility
 section_names:
 - ai
+primary_section: ai
 ---
 Presented by Jenny Lay-Flurrie and Natasha Crampton, this Microsoft Ignite session details Microsoft's approach to accessible and responsible AI, including developer tools, risk mitigation, and real-world use cases from the agentic AI landscape.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/Kff78AQ7m9s
 title: 'Do you security check AI models you pull from online repos?: Developer Security Quick Fire Questions'
 author: Microsoft Developer
@@ -24,6 +24,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 In this video, Microsoft Developer interviews Build 2025 attendees about security practices when sourcing AI models from online repositories, sharing insights into developer security.<!--excerpt_end-->
 

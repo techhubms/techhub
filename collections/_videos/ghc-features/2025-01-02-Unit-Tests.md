@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://youtu.be/RDpAJAjXkqo
 title: Unit Tests
 author: Randy Pagels
@@ -13,6 +13,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 This video demonstrates GitHub Copilot's Unit Tests feature. Automate your testing process with Copilot's unit test generation.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=O1nx8mve5RY
 title: Securely Managing Kubernetes Secrets with Secrets Store CSI Driver and Azure Key Vault
 author: Microsoft Developer
@@ -26,6 +26,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Microsoft Developer presents a walkthrough on securely managing Kubernetes secrets with the Secrets Store CSI Driver, featuring Anish and Ben discussing Azure Key Vault integrations and real-world DevOps security scenarios.<!--excerpt_end-->
 

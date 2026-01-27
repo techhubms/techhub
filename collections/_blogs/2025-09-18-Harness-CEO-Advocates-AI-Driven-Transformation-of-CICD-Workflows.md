@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devops.com/harness-ceo-calls-for-reimagining-of-ci-cd-workflows-in-the-ai-era/
 title: Harness CEO Advocates AI-Driven Transformation of CI/CD Workflows
 author: Mike Vizard
@@ -29,6 +29,7 @@ section_names:
 - ai
 - devops
 - security
+primary_section: ai
 ---
 Mike Vizard summarizes Harness CEO Jyoti Bansal’s vision for reimagining CI/CD and DevSecOps workflows using AI. The article explores automation of build, security, and developer operations with emerging AI-driven tools.<!--excerpt_end-->
 

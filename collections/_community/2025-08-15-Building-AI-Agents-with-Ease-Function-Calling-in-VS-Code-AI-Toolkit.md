@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/building-ai-agents-with-ease-function-calling-in-vs-code-ai/ba-p/4442637
 title: 'Building AI Agents with Ease: Function Calling in VS Code AI Toolkit'
 author: shreyanfern
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - coding
+primary_section: ai
 ---
 shreyanfern details how to build actionable AI agents using function calling in the VS Code AI Toolkit, including real examples and code for Azure integration.<!--excerpt_end-->
 

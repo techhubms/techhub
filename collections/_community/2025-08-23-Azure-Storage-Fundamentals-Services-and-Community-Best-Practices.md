@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure/azure-storage/m-p/4447460#M22137
 title: 'Azure Storage: Fundamentals, Services, and Community Best Practices'
 author: frankfalvey
@@ -22,6 +22,7 @@ tags:
 - Table Storage
 section_names:
 - azure
+primary_section: azure
 ---
 frankfalvey presents a practical guide to Azure Storage, outlining key storage types, cost optimization strategies, and real-world use cases for building reliable cloud applications.<!--excerpt_end-->
 

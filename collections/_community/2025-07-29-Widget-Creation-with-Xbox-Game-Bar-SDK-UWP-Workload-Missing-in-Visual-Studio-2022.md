@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/VisualStudio/comments/1mcle8w/widget_creation_with_xbox_game_bar_sdk_missing/
 title: 'Widget Creation with Xbox Game Bar SDK: UWP Workload Missing in Visual Studio 2022'
 author: Separate_Detective_9
@@ -17,6 +17,7 @@ tags:
 - Xbox Game Bar
 section_names:
 - coding
+primary_section: coding
 ---
 Separate_Detective_9 describes challenges building an Xbox Game Bar widget in C# due to the missing Universal Windows Platform (UWP) workload in Visual Studio 2022, and requests advice or alternatives.<!--excerpt_end-->
 

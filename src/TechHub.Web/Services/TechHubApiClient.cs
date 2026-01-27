@@ -1,4 +1,4 @@
-using TechHub.Core.DTOs;
+using TechHub.Core.Models;
 
 namespace TechHub.Web.Services;
 
@@ -16,12 +16,12 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// <summary>
     /// Get all sections with their collections
     /// </summary>
-    public virtual async Task<IEnumerable<SectionDto>?> GetAllSectionsAsync(CancellationToken cancellationToken = default)
+    public virtual async Task<IEnumerable<Section>?> GetAllSectionsAsync(CancellationToken cancellationToken = default)
     {
         try
         {
             _logger.LogInformation("Fetching all sections from API");
-            var sections = await _httpClient.GetFromJsonAsync<IEnumerable<SectionDto>>(
+            var sections = await _httpClient.GetFromJsonAsync<IEnumerable<Section>>(
                 "/api/sections",
                 cancellationToken);
 
@@ -38,7 +38,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// <summary>
     /// Get a specific section by name
     /// </summary>
-    public virtual async Task<SectionDto?> GetSectionAsync(string sectionName, CancellationToken cancellationToken = default)
+    public virtual async Task<Section?> GetSectionAsync(string sectionName, CancellationToken cancellationToken = default)
     {
         try
         {
@@ -53,7 +53,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
             }
 
             response.EnsureSuccessStatusCode();
-            var section = await response.Content.ReadFromJsonAsync<SectionDto>(cancellationToken: cancellationToken);
+            var section = await response.Content.ReadFromJsonAsync<Section>(cancellationToken: cancellationToken);
             return section;
         }
         catch (HttpRequestException ex)
@@ -66,14 +66,14 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// <summary>
     /// Get all items in a section
     /// </summary>
-    public virtual async Task<IEnumerable<ContentItemDto>?> GetSectionItemsAsync(
+    public virtual async Task<IEnumerable<ContentItem>?> GetSectionItemsAsync(
         string sectionName,
         CancellationToken cancellationToken = default)
     {
         try
         {
             _logger.LogInformation("Fetching items for section: {SectionName}", sectionName);
-            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItemDto>>(
+            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItem>>(
                 $"/api/sections/{sectionName}/items",
                 cancellationToken);
 
@@ -91,7 +91,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// <summary>
     /// Get items in a specific collection within a section
     /// </summary>
-    public virtual async Task<IEnumerable<ContentItemDto>?> GetSectionCollectionItemsAsync(
+    public virtual async Task<IEnumerable<ContentItem>?> GetSectionCollectionItemsAsync(
         string sectionName,
         string collectionName,
         CancellationToken cancellationToken = default)
@@ -100,7 +100,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
         {
             _logger.LogInformation("Fetching {CollectionName} items for section: {SectionName}",
                 collectionName, sectionName);
-            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItemDto>>(
+            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItem>>(
                 $"/api/sections/{sectionName}/collections/{collectionName}/items",
                 cancellationToken);
 
@@ -119,7 +119,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// <summary>
     /// Filter content by multiple criteria
     /// </summary>
-    public virtual async Task<IEnumerable<ContentItemDto>?> FilterContentAsync(
+    public virtual async Task<IEnumerable<ContentItem>?> FilterContentAsync(
         string? sections = null,
         string? collections = null,
         string? tags = null,
@@ -153,7 +153,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
             var url = $"/api/content/filter{queryString}";
 
             _logger.LogInformation("Filtering content with query: {QueryString}", queryString);
-            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItemDto>>(url, cancellationToken);
+            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItem>>(url, cancellationToken);
 
             _logger.LogInformation("Filter returned {Count} items", items?.Count() ?? 0);
             return items;
@@ -192,7 +192,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// Get content items by section and collection.
     /// Pass null for section to get all items in the collection regardless of section.
     /// </summary>
-    public virtual async Task<IEnumerable<ContentItemDto>?> GetContentAsync(
+    public virtual async Task<IEnumerable<ContentItem>?> GetContentAsync(
         string? sectionName,
         string collectionName,
         CancellationToken cancellationToken = default)
@@ -206,7 +206,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
                 ? $"/api/content?collectionName={Uri.EscapeDataString(collectionName)}"
                 : $"/api/content?sectionName={Uri.EscapeDataString(sectionName)}&collectionName={Uri.EscapeDataString(collectionName)}";
 
-            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItemDto>>(
+            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItem>>(
                 url,
                 cancellationToken);
 
@@ -225,14 +225,14 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// Get GitHub Copilot feature videos (ghc_feature=true), including drafts.
     /// This is the ONLY endpoint that returns draft content.
     /// </summary>
-    public virtual async Task<IEnumerable<ContentItemDto>?> GetGhcFeaturesAsync(
+    public virtual async Task<IEnumerable<ContentItem>?> GetGhcFeaturesAsync(
         CancellationToken cancellationToken = default)
     {
         try
         {
             _logger.LogInformation("Fetching GitHub Copilot features (including drafts)");
 
-            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItemDto>>(
+            var items = await _httpClient.GetFromJsonAsync<IEnumerable<ContentItem>>(
                 "/api/content?ghcFeature=true&collectionName=videos",
                 cancellationToken);
 
@@ -249,7 +249,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// <summary>
     /// Get detailed content item by sectionName, collectionName, and slug
     /// </summary>
-    public virtual async Task<ContentItemDetailDto?> GetContentDetailAsync(
+    public virtual async Task<ContentItem?> GetContentDetailAsync(
         string sectionName,
         string collectionName,
         string slug,
@@ -273,7 +273,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
             }
 
             response.EnsureSuccessStatusCode();
-            var item = await response.Content.ReadFromJsonAsync<ContentItemDetailDto>(cancellationToken: cancellationToken);
+            var item = await response.Content.ReadFromJsonAsync<ContentItem>(cancellationToken: cancellationToken);
             return item;
         }
         catch (HttpRequestException ex)
@@ -287,7 +287,7 @@ public class TechHubApiClient(HttpClient httpClient, ILogger<TechHubApiClient> l
     /// <summary>
     /// Get the latest items across all sections (for homepage sidebar)
     /// </summary>
-    public virtual async Task<IEnumerable<ContentItemDto>?> GetLatestItemsAsync(
+    public virtual async Task<IEnumerable<ContentItem>?> GetLatestItemsAsync(
         int count = 10,
         CancellationToken cancellationToken = default)
     {

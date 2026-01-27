@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-at-oracle-ai-world-2025-powering-the-next/ba-p/4460749
 title: 'Oracle Database@Azure Advances at Oracle AI World 2025: Integration, AI, and Security Enhancements'
 author: KalyanKaki
@@ -29,6 +29,7 @@ section_names:
 - devops
 - ml
 - security
+primary_section: ai
 ---
 KalyanKaki explores significant enhancements to Oracle Database@Azure announced at Oracle AI World 2025, focusing on AI-driven data integration, new security capabilities, automation tools, and expanded global availability.<!--excerpt_end-->
 

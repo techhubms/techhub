@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/demystifying-github-copilot-security-controls-easing-concerns/ba-p/4468193
 title: Demystifying GitHub Copilot Security Controls for Organizations
 author: jorgebalderas
@@ -23,6 +23,7 @@ section_names:
 - ai
 - github-copilot
 - security
+primary_section: github-copilot
 ---
 Jorge Balderas discusses key security and compliance features of GitHub Copilot, providing organizations with a practical guide to safely adopting AI-driven coding with confidence.<!--excerpt_end-->
 

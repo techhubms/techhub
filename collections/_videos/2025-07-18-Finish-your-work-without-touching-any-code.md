@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/shorts/VFv4YFCC1-4
 title: Finish your work without touching any code
 author: Visual Studio Code
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Visual Studio Code presents an overview of copilotCodingAgent, showing how developers can leverage automation to complete coding tasks without manual code writing.<!--excerpt_end-->
 

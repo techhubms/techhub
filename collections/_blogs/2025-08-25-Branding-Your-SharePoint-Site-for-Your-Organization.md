@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/branding-your-sharepoint-site-for-your-organization/
 title: Branding Your SharePoint Site for Your Organization
 author: Dellenny
@@ -22,6 +22,7 @@ tags:
 - Web Parts
 section_names:
 - coding
+primary_section: coding
 ---
 Dellenny provides a practical, step-by-step guide to branding your SharePoint site, covering customization, design best practices, and tips for creating a unified digital workspace that reflects your organization’s identity.<!--excerpt_end-->
 

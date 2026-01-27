@@ -23,6 +23,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Allison reports on GitHub Copilot's newly announced support for OpenCode, letting subscribers use their Copilot credentials to access AI-powered coding assistance directly within OpenCode environments.<!--excerpt_end-->
 

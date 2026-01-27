@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/azure-free-tier-cost-management-learn-azure-without-spending-a-dime/
 title: 'Learning Azure for Free: Maximizing Azure Free Tier and Cost Management'
 author: Dellenny
@@ -21,6 +21,7 @@ tags:
 - Virtual Machine
 section_names:
 - azure
+primary_section: azure
 ---
 Dellenny guides readers through effective strategies for learning Azure cloud skills without spending money, utilizing the Azure Free Tier and built-in cost management features.<!--excerpt_end-->
 

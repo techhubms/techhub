@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/gain-end-to-end-visibility-into-data-activity-using-onelake-diagnostics/
 title: Gain End-to-End Visibility into Data Activity Using OneLake Diagnostics
 author: Microsoft Fabric Blog
@@ -25,6 +25,7 @@ section_names:
 - azure
 - ml
 - security
+primary_section: ml
 ---
 Microsoft Fabric Blog introduces the general availability of OneLake diagnostics, empowering organizations with comprehensive visibility into data activity and governance across Fabric workspaces. Authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 

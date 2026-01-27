@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://harrybin.de/posts/parallel-github-copilot-workflow/
 title: Using GitHub Copilot for Multiple Tasks in Parallel
 author: Harald Binkle
@@ -22,6 +22,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Harald Binkle explores how developers can use GitHub Copilot, Copilot CLI, and the Copilot coding agent in parallel, unlocking greater productivity by handling multiple independent tasks simultaneously.<!--excerpt_end-->
 

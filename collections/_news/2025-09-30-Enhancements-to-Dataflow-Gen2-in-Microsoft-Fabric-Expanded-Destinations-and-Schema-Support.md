@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/new-dataflow-gen2-data-destinations-and-experience-improvements/
 title: 'Enhancements to Dataflow Gen2 in Microsoft Fabric: Expanded Destinations and Schema Support'
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 The Microsoft Fabric Blog outlines significant updates to Dataflow Gen2, led by the Microsoft Fabric team, introducing new data destinations and database schema support to empower data professionals and teams with flexible integration and advanced modeling features.<!--excerpt_end-->
 

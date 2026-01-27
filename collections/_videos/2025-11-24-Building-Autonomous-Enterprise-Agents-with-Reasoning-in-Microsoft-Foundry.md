@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=sqvxKIPB8W4
 title: Building Autonomous Enterprise Agents with Reasoning in Microsoft Foundry
 author: Microsoft Events
@@ -30,6 +30,7 @@ tags:
 section_names:
 - ai
 - azure
+primary_section: ai
 ---
 Microsoft Events hosts a session at Ignite 2025, featuring Ashish Agrawal, Alexander Hughes, Jennifer Marsman, Naomi Moneypenny, and Zachary Ziegler on building autonomous agents with advanced reasoning models in Microsoft Foundry.<!--excerpt_end-->
 

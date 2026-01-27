@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=LwqUp4Dc1mQ
 title: 'Extending AI Agents: Live Demo of GitHub MCP Server Integration'
 author: GitHub
@@ -24,6 +24,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 GitHub presents a live demonstration led by Sam Morrow and Toby Padilla, showcasing how developers can extend AI agent capabilities in VS Code using the GitHub MCP Server and Copilot agent mode.<!--excerpt_end-->
 

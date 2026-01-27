@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-file-access-in-openrowset-using-data-sources-and-relative-paths-preview/
 title: 'Simplifying File Access in OPENROWSET: Data Sources and Relative Paths (Preview)'
 author: Microsoft Fabric Blog
@@ -23,6 +23,7 @@ tags:
 section_names:
 - azure
 - ml
+primary_section: ml
 ---
 Microsoft Fabric Blog details how new data source and relative path features in OPENROWSET simplify file queries in Lakehouse and ADLS, making data engineering and analytics tasks cleaner and more flexible.<!--excerpt_end-->
 

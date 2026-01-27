@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/ai-and-ml/generative-ai/how-to-find-install-and-manage-mcp-servers-with-the-github-mcp-registry/
 title: How to Find, Install, and Manage MCP Servers with the GitHub MCP Registry
 author: Andrea Griffiths
@@ -26,6 +26,7 @@ section_names:
 - ai
 - coding
 - devops
+primary_section: ai
 ---
 Andrea Griffiths explains how developers and teams can discover, install, and manage Model Context Protocol (MCP) servers using the GitHub MCP Registry, including publishing your own server and setting up governance for enterprise environments.<!--excerpt_end-->
 

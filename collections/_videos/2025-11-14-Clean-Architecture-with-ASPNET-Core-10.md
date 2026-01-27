@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=rjefnUC9Z90
 title: Clean Architecture with ASP.NET Core 10
 author: dotnet
@@ -23,6 +23,7 @@ tags:
 - VS
 section_names:
 - coding
+primary_section: coding
 ---
 This video by the .NET team demonstrates how to apply clean architecture principles using ASP.NET Core 10, with guidance on project organization, code maintainability, and refactoring techniques.<!--excerpt_end-->
 

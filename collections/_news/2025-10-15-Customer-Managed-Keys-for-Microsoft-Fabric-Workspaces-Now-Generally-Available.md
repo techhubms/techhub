@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/customer-managed-keys-for-fabric-workspaces-generally-available/
 title: Customer-Managed Keys for Microsoft Fabric Workspaces Now Generally Available
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ tags:
 section_names:
 - azure
 - security
+primary_section: azure
 ---
 Microsoft Fabric Blog announces the general availability of customer-managed keys for Fabric workspaces, giving administrators enhanced encryption control. This update allows organizations to secure their data at rest using Azure Key Vault keys, addressing compliance and security needs.<!--excerpt_end-->
 

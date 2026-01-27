@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=LuA4WbZY7tw
 title: .NET MAUI Community Standup - .NET 10 Announcements Roundup
 author: dotnet
@@ -21,6 +21,7 @@ tags:
 - Software Development
 section_names:
 - coding
+primary_section: coding
 ---
 In this roundup, David Ortinau and Gerald Versluis present the latest .NET 10 and .NET MAUI updates, spotlighting major features and contributions from the developer community.<!--excerpt_end-->
 

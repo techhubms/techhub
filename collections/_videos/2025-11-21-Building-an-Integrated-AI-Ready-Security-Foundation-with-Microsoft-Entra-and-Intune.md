@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=tHnILyOs_8I
 title: Building an Integrated, AI-Ready Security Foundation with Microsoft Entra and Intune
 author: Microsoft Events
@@ -26,6 +26,7 @@ tags:
 section_names:
 - ai
 - security
+primary_section: ai
 ---
 Presented by Eric Sachs and Maayan Bar-Niv at Microsoft Ignite, this session demonstrates how Microsoft Entra and Intune underpin a secure, AI-ready identity foundation, with actionable security strategies and real-world demos.<!--excerpt_end-->
 

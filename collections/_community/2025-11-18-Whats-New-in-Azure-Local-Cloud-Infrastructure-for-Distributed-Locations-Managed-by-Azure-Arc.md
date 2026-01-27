@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/what-s-new-in-azure-local-cloud-infrastructure-for-distributed/ba-p/4469773
 title: 'What’s New in Azure Local: Cloud Infrastructure for Distributed Locations Managed by Azure Arc'
 author: meenagowdar
@@ -29,6 +29,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 meenagowdar presents a comprehensive overview of Azure Local, detailing its new features for distributed cloud infrastructure, enhanced security, and management via Azure Arc.<!--excerpt_end-->
 

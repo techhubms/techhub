@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://github.blog/changelog/2025-09-19-work-with-copilot-coding-agent-in-microsoft-teams
 title: Using GitHub Copilot Coding Agent with Microsoft Teams for Automated PRs
 author: Allison
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Allison outlines how developers can use the GitHub Copilot coding agent within Microsoft Teams to automate code tasks such as pull request generation, enhancing collaborative workflows.<!--excerpt_end-->
 

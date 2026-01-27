@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=rafl28faFec
 title: The Origins & Evolution of the GitHub MCP Registry with Toby Padilla
 author: Visual Studio Code
@@ -17,6 +17,7 @@ tags:
 section_names:
 - ai
 - github-copilot
+primary_section: github-copilot
 ---
 Toby Padilla joins Visual Studio Code to discuss the history and significance of the GitHub MCP Registry, offering insights on open standardization and how GitHub Copilot and VS Code integrate Model Context Protocol servers.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=AHgVlvPnpyk
 title: Supercharge Your SQL Development with Modern .NET | On .NET Live
 author: dotnet
@@ -20,6 +20,7 @@ tags:
 section_names:
 - coding
 - ml
+primary_section: ml
 ---
 Hosted by dotnet and featuring Erik Ejlskov Jensen, this On .NET Live episode demonstrates how to boost SQL Server development using modern .NET tools, NuGet packages, and static analysis.<!--excerpt_end-->
 

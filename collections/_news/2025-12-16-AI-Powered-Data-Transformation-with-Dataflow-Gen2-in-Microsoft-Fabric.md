@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/from-simple-prompts-to-complex-insights-ai-expands-the-boundaries-of-data-transformation/
 title: AI-Powered Data Transformation with Dataflow Gen2 in Microsoft Fabric
 author: Microsoft Fabric Blog
@@ -26,6 +26,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Fabric Blog outlines how Dataflow Gen2 integrates AI-powered prompts into data transformation, enabling users to automate complex analytics workflows without coding.<!--excerpt_end-->
 

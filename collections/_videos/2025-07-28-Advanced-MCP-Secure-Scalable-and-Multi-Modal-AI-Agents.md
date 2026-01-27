@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=4yjmGvJzYdY
 title: 'Advanced MCP: Secure, Scalable, and Multi-Modal AI Agents'
 author: Microsoft Developer
@@ -25,6 +25,7 @@ section_names:
 - security
 - devops
 - coding
+primary_section: ai
 ---
 In this advanced chapter, Microsoft Developer guides you through best practices and hands-on patterns for creating secure, scalable, and multi-modal MCP-based AI infrastructure, focusing on Microsoft technologies.<!--excerpt_end-->
 

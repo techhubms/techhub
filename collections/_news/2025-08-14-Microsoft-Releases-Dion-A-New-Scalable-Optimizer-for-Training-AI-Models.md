@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.microsoft.com/en-us/research/blog/dion-the-distributed-orthonormal-update-revolution-is-here/
 title: 'Microsoft Releases Dion: A New Scalable Optimizer for Training AI Models'
 author: stclarke
@@ -24,6 +24,7 @@ tags:
 - Tensor Parallelism
 section_names:
 - ai
+primary_section: ai
 ---
 This update from Microsoft Research explains Dion, a new distributed optimizer for efficient large-scale AI model training, and credits the work of the Dion team and Microsoft collaborators.<!--excerpt_end-->
 

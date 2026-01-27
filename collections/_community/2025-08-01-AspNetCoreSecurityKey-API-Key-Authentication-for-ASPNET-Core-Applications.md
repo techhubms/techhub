@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/csharp/comments/1mex14a/aspnetcoresecuritykey_security_api_key/
 title: 'AspNetCore.SecurityKey: API Key Authentication for ASP.NET Core Applications'
 author: pwelter34
@@ -19,6 +19,7 @@ tags:
 section_names:
 - coding
 - security
+primary_section: coding
 ---
 Authored by pwelter34, this article introduces AspNetCore.SecurityKey, a robust API key authentication library for ASP.NET Core. It examines installation steps, configuration options, and advanced customization for securing .NET applications.<!--excerpt_end-->
 

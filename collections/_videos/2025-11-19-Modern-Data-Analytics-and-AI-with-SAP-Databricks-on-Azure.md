@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=wsLgjpQZx6U
 title: Modern Data Analytics and AI with SAP Databricks on Azure
 author: Microsoft Events
@@ -25,6 +25,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 Microsoft Events presents a session on integrating SAP Databricks and Azure, featuring Anavi Nahar and Shanku Niyogi. The content covers advanced analytics, AI, ML, and BI on trusted SAP and third-party data, with live demonstrations and technical guidance.<!--excerpt_end-->
 

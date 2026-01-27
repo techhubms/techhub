@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://devblogs.microsoft.com/dotnet/github-copilot-diagnostics-toolset-for-dotnet-in-visual-studio/
 title: Copilot Diagnostics Toolset Enhances .NET Debugging in Visual Studio
 author: Harshada Hole
@@ -28,6 +28,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 Harshada Hole showcases the Copilot Diagnostics toolset, which leverages GitHub Copilot within Visual Studio to assist .NET developers with smarter debugging, profiling, and code analysis.<!--excerpt_end-->
 

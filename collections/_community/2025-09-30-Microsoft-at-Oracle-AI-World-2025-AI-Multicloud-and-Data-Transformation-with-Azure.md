@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-is-headed-to-oracle-ai-world-2025-in-las-vegas/ba-p/4457390
 title: 'Microsoft at Oracle AI World 2025: AI, Multicloud, and Data Transformation with Azure'
 author: AlexStairs
@@ -22,6 +22,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 AlexStairs presents a detailed preview of Microsoft’s technical sessions at Oracle AI World 2025, showing how Oracle Database@Azure, Fabric, Copilot Studio, and AI services power real-time analytics, AI integration, and data modernization for developers.<!--excerpt_end-->
 

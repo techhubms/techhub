@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.reddit.com/r/azuredevops/comments/1m886qz/pipeline_parameters/
 title: Managing Key Vault URIs Across Environments in GitHub Actions and Azure DevOps Pipelines
 author: Azure DevOps
@@ -21,6 +21,7 @@ section_names:
 - azure
 - devops
 - security
+primary_section: azure
 ---
 Azure DevOps shares practical advice on securely managing Key Vault URIs in CI/CD pipelines across dev and prod environments, highlighting different approaches for Azure DevOps and GitHub Actions.<!--excerpt_end-->
 

@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://blog.fabric.microsoft.com/en-US/blog/ai-powered-real-time-intelligence-with-anomaly-detection-preview/
 title: AI–Powered Real-Time Intelligence with Anomaly Detection in Microsoft Fabric (Preview)
 author: Microsoft Fabric Blog
@@ -22,6 +22,7 @@ section_names:
 - ai
 - azure
 - ml
+primary_section: ai
 ---
 The Microsoft Fabric Blog introduces a preview of anomaly detection in Real-Time Intelligence (RTI). Readers learn from Microsoft Fabric Blog how this AI-powered feature helps organizations uncover data irregularities, enabling proactive monitoring and alerting in real-time business scenarios.<!--excerpt_end-->
 

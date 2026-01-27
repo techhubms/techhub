@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://www.youtube.com/watch?v=I0yhGsozx8o
 title: Intro to Java and AI for Beginners
 author: Microsoft Developer
@@ -26,6 +26,7 @@ tags:
 - Software Development
 section_names:
 - ai
+primary_section: ai
 ---
 In this introductory session, Ayan Gupta and the Microsoft Developer team kick off a beginners’ series merging Java with artificial intelligence. The video promises a hands-on roadmap, expert guests, and a practical focus for aspiring AI-powered Java developers.<!--excerpt_end-->
 

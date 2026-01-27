@@ -1,4 +1,4 @@
----
+﻿---
 external_url: https://dellenny.com/turbocharge-your-coding-top-github-copilot-shortcuts-and-productivity-tips-for-vs-code/
 title: Top GitHub Copilot Shortcuts and Productivity Tips for VS Code
 author: John Edward
@@ -23,6 +23,7 @@ section_names:
 - ai
 - coding
 - github-copilot
+primary_section: github-copilot
 ---
 John Edward shares actionable GitHub Copilot shortcuts and productivity techniques for Visual Studio Code, helping developers use Copilot more effectively.<!--excerpt_end-->
 
