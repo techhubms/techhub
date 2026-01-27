@@ -11517,5 +11517,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/shorts/km3OuwyTz3c",
     "reason": "No categories found: Excluded all categories because, while this content discusses an AI agent called Goose and its use in detecting student frustration, there is no substantial focus on Microsoft technologies as required by the inclusion rules. The project highlighted is not described as being built with Microsoft AI services, Azure, .NET, or any other Microsoft platform—the mention of AI is generic and not specifically tied to Microsoft's stack. The video's source is GitHub, but it does not detail GitHub Copilot or any other Microsoft-integrated developer tool. As per the multi-platform content threshold and the AI category rules, only AI content with a specific Microsoft focus qualifies. Therefore, no categories are assigned."
+  },
+  {
+    "canonical_url": "https://dellenny.com/aws-certified-ai-practitioner-what-it-covers-and-how-to-achieve-it/",
+    "collection": "blogs",
+    "reason": "No categories found: All generic exclusion rules were applied first, as required. The content focuses entirely on an AWS certification (AWS Certified AI Practitioner) and does not discuss any Microsoft technology, platform, or tool. There is no mention of Azure, Microsoft AI services (such as Azure OpenAI or Copilot Studio), .NET, or any Microsoft developer ecosystem. Per Multi-Platform Content Threshold and Category Inclusion Rules, Microsoft technologies must comprise at least 40% of the substantive content or be central to the solution. As the content is fully AWS-centric and contains no relevant Microsoft technology, no categories are assigned.",
+    "timestamp": "2026-01-27 12:04:18 +00:00"
   }
 ]
