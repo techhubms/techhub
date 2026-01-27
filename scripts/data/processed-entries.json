@@ -24388,5 +24388,23 @@
     "collection": "news",
     "canonical_url": "https://github.blog/developer-skills/programming-languages-and-frameworks/7-learnings-from-anders-hejlsberg-the-architect-behind-c-and-typescript/",
     "timestamp": "2026-01-27 18:06:02 +00:00"
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/01/27/microsoft-announces-the-2026-security-excellence-awards-winners/",
+    "timestamp": "2026-01-27 19:09:59 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned 'Security' because the content centers on Microsoft Security products, security partners, and industry leadership, consistent with Security rules 1, 2, 3, and 9. Assigned 'AI' as the awards highlight innovation in AI-powered threat intelligence and solutions (AI rules 1 and 5), and several categories specifically mention the integration of AI with Microsoft Security tools. Did not assign DevOps, Coding, Azure, or ML because the article is focused on security innovation, compliance, identity, and AI applications—not on development, deployment, or data science/ML engineering. The content is not business strategy, job, or executive-focused and fits all quality requirements."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/visualstudio/visual-studio-january-update-enhanced-editor-experience/",
+    "timestamp": "2026-01-27 19:10:22 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned the Coding category because the content is focused on new features and productivity improvements in the Visual Studio development environment, which directly supports software development activities (Coding rule 5: Microsoft Development Tools). Although Copilot Chat is referenced, the content does not discuss GitHub Copilot functionality or AI integration in detail, so 'AI' or 'GitHub Copilot' categories are not appropriate. None of the generic exclusion rules apply, and the content centrally concerns customization and productivity features for developers."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-01-26-introducing-the-agents-tab-in-your-repository",
+    "timestamp": "2026-01-27 19:10:43 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Assigned AI category because Copilot coding agents and their management are part of Microsoft's AI developer tooling (AI inclusion rules 1 and 2). Assigned GitHub Copilot because the content centrally features Copilot coding agents (GitHub Copilot inclusion rule 1). Assigned DevOps because it addresses improvements in repository workflow management, session/task organization, and integrates with CLI tools, supporting developer operations (DevOps inclusion rules 2 and 5). Coding category was not assigned as the content focuses on workflow and tooling enhancements, not direct programming or code-level practices. No generic exclusion rules apply."
   }
 ]

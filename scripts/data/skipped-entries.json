@@ -11535,5 +11535,11 @@
     "collection": "videos",
     "canonical_url": "https://www.youtube.com/watch?v=uMqx8NNT4xY",
     "timestamp": "2026-01-27 18:06:34 +00:00"
+  },
+  {
+    "canonical_url": "https://news.xbox.com/en-us/2026/01/27/grounded-2-update-the-toxic-tangle-available-now/",
+    "timestamp": "2026-01-27 19:09:36 +00:00",
+    "collection": "news",
+    "reason": "No categories found: No categories assigned. This content is a news announcement about the release of the 'Toxic Tangle' update for the game Grounded 2. It focuses on new gameplay content, features, and mechanics for an Xbox/PC game. There is no substantial technical depth related to Microsoft developer tools, coding practices, Azure, DevOps, AI, ML, or security. The article does not discuss game development, modding, or engine-level customization but is strictly an end-user update and promotional information about a consumer gaming product. According to the generic exclusion rules, such end-user product updates, especially gaming news without a developer focus or technology stack discussion, are excluded and do not fit any predefined categories."
   }
 ]
